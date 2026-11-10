@@ -3,7 +3,7 @@ title: "Iterator : méthode forEach()"
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/forEach
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`forEach()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.forEach()")}}&nbsp;: elle exécute une fonction fournie une fois pour chaque élément produit par l'itérateur.
@@ -62,8 +62,8 @@ for (const v of new Set([1, 2, 3]).values()) {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.forEach` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.forEach` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.find()")}}
 - La méthode {{JSxRef("Iterator.prototype.map()")}}

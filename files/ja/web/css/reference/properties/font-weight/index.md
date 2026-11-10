@@ -1,8 +1,9 @@
 ---
-title: font-weight
+title: "`font-weight` プロパティ (CSS)"
+short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
@@ -81,9 +82,9 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-`font-weight` プロパティは、`<font-weight-absolute>` 値または以下の一覧にある相対的な太さの値で指定します。
-
 ### 値
+
+このプロパティは、以下のリストのいずれか一つの値として指定します。
 
 - `normal`
   - : 通常のフォントの太さです。 `400` と同じです。

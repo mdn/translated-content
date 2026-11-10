@@ -1,9 +1,9 @@
 ---
-title: Game distribution
+title: Game 分发
 slug: Games/Publishing_games/Game_distribution
 ---
 
-你已经跟着一两个[教程](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
+你已经跟着一两个[教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)做了一个 HTML5 游戏了——真棒 ! 这篇文章介绍了一些可以让你投放你的游戏的方式。包括自己建立网站，在公开的应用市场上线，或是发布到 Google Play 或 IOS 的 App Store。
 
 ## HTML5 相较于传统的好处
 
@@ -53,7 +53,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 
 顾名思义，开发商可以帮助你发行游戏，是否交给开发商则取决于你的游戏开发计划：你想在全平台发行么？或你只向[购买了游戏](/zh-CN/docs/Games/Publishing_games/Game_monetization)的用户开放游戏？这都取决于你，考虑各个选项，试验和结论。你可以在[游戏收益化](/zh-CN/docs/Games/Techniques/Publishing_games/Game_monetization/)这篇文章中得到更详细的关于发行商的解释。
 
-这里还有许多独立的门户网站收集 HTML5 游戏，例如 [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/), [Clay.io](http://clay.io/), or [Poki](https://developers.poki.com/) 你可以把你的游戏发布上去，它会得到一些自然的推广，因为这些网站吸引了大量的流量。一些网站会把你的文件放在他们的服务器上运营，而其他网站则只链接到你的网站或将你的游戏嵌入他们的网站，这样的曝光可能只是为你的游戏提供宣传，如果你的游戏旁边有广告 (或其他赚钱的选项)，它也可能为你的游戏提供收益化。
+这里还有许多独立的门户网站收集 HTML5 游戏，例如 [HTML5Games.com](http://html5games.com/)、[MarketJS.com](http://www.marketjs.com/)、[Clay.io](http://clay.io/) 或 [Poki](https://developers.poki.com/) 你可以把你的游戏发布上去，它会得到一些自然的推广，因为这些网站吸引了大量的流量。一些网站会把你的文件放在他们的服务器上运营，而其他网站则只链接到你的网站或将你的游戏嵌入他们的网站，这样的曝光可能只是为你的游戏提供宣传，如果你的游戏旁边有广告（或其他赚钱的选项），它也可能为你的游戏提供收益化。
 
 ### 网络和应用商店
 

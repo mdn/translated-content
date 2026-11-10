@@ -1,5 +1,5 @@
 ---
-title: HTML `<fencedframe>` フェンスフレーム要素
+title: "`<fencedframe>` フェンスフレーム要素"
 short-title: <fencedframe>
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:

@@ -93,5 +93,5 @@ linear(start, middle, end)
 ## Voir aussi
 
 - Autres fonctions d'assouplissement&nbsp;: {{CSSxRef("easing-function/cubic-bezier", "cubic-bezier()")}} et {{CSSxRef("easing-function/steps", "steps()")}}
-- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/CSS_easing_functions)
+- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
 - [Générateur d'assouplissement `linear()` <sup>(angl.)</sup>](https://linear-easing-generator.netlify.app/) par Jake Archibald

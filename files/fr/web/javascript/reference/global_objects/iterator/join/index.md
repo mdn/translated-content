@@ -3,10 +3,8 @@ title: "Iterator : méthode join()"
 short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/join
 l10n:
-  sourceCommit: e57e3fdd4ab6fb372ddc3d78e5b428f318202426
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{SeeCompatTable}}
 
 La méthode **`join()`** des instances de {{JSxRef("Iterator")}} est similaire à {{JSxRef("Array.prototype.join()")}}&nbsp;: elle retourne une chaîne de caractères qui est la concaténation de tous les éléments produits par l'itérateur, séparés par une virgule ou une chaîne de caractères de séparateur définie. Si l'itérateur n'a qu'un seul élément, cet élément est converti en chaîne de caractères sans utiliser le séparateur.
 
@@ -58,8 +56,8 @@ console.log(fibonacci().take(5).join(" - ")); // "1 - 1 - 2 - 3 - 5"
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Iterator.prototype.join` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-join)
-- [La prothèse d'émulation es-shims de `Iterator.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.join` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.join` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - la méthode {{JSxRef("Iterator.prototype.reduce()")}}
 - la méthode {{JSxRef("Array.prototype.join()")}}

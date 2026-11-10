@@ -1,12 +1,10 @@
 ---
-title: CSS `page-break-inside` プロパティ
+title: "`page-break-inside` プロパティ (CSS)"
 short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。

@@ -16,15 +16,15 @@ JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함
 
 모든 언어의 구성 요소인 타입을 살펴보는 것으로 시작하겠습니다. JavaScript 프로그램은 값을 조작하며, 이러한 값은 모두 타입에 속합니다. JavaScript는 7가지 기본 유형을 제공합니다.
 
-- [Number](/ko/docs/Web/JavaScript/Guide/Data_structures#number_type): 매우 큰 정수를 제외한 모든 숫자값(정수 및 부동 소수점)에 사용됩니다.
-- [BigInt](/ko/docs/Web/JavaScript/Guide/Data_structures#bigint_type): 임의의 큰 정수에 사용됩니다.
-- [String](/ko/docs/Web/JavaScript/Guide/Data_structures#string_type): 텍스트를 저장하는 데 사용됩니다.
-- [Boolean](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_type): `true` 및 `false`, 일반적으로 조건 논리에 사용됩니다.
-- [Symbol](/ko/docs/Web/JavaScript/Guide/Data_structures#symbol_type): 충돌하지 않는 고유 식별자를 만드는 데 사용됩니다.
-- [Undefined](/ko/docs/Web/JavaScript/Guide/Data_structures#undefined_type): 변수에 값이 할당되지 않았음을 나타냅니다.
-- [Null](/ko/docs/Web/JavaScript/Guide/Data_structures#null_type): 의도적으로 값이 없음을 나타냅니다.
+- [Number](/ko/docs/Web/JavaScript/Guide/Data_structures#number_타입): 매우 큰 정수를 제외한 모든 숫자값(정수 및 부동 소수점)에 사용됩니다.
+- [BigInt](/ko/docs/Web/JavaScript/Guide/Data_structures#bigint_타입): 임의의 큰 정수에 사용됩니다.
+- [String](/ko/docs/Web/JavaScript/Guide/Data_structures#string_타입): 텍스트를 저장하는 데 사용됩니다.
+- [Boolean](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_타입): `true` 및 `false`, 일반적으로 조건 논리에 사용됩니다.
+- [Symbol](/ko/docs/Web/JavaScript/Guide/Data_structures#symbol_타입): 충돌하지 않는 고유 식별자를 만드는 데 사용됩니다.
+- [Undefined](/ko/docs/Web/JavaScript/Guide/Data_structures#undefined_타입): 변수에 값이 할당되지 않았음을 나타냅니다.
+- [Null](/ko/docs/Web/JavaScript/Guide/Data_structures#null_타입): 의도적으로 값이 없음을 나타냅니다.
 
-다른 모든 것은 [객체](/ko/docs/Web/JavaScript/Guide/Data_structures#objects)라고 합니다. 일반적인 객체 타입은 다음과 같습니다.
+다른 모든 것은 [객체](/ko/docs/Web/JavaScript/Guide/Data_structures#객체)라고 합니다. 일반적인 객체 타입은 다음과 같습니다.
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -67,7 +67,7 @@ console.log(5.03e2); // 503
 console.log(-3n / 2n); // -1n
 ```
 
-더하기, 빼기, 나머지 산술 등을 포함한 표준 [산술 연산자](/ko/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)가 지원됩니다. BigInt와 숫자는 산술 연산에서 혼합될 수 없습니다.
+더하기, 빼기, 나머지 산술 등을 포함한 표준 [산술 연산자](/ko/docs/Web/JavaScript/Reference/Operators#산술_연산자)가 지원됩니다. BigInt와 숫자는 산술 연산에서 혼합될 수 없습니다.
 
 {{jsxref("Math")}} 객체는 표준 수학 함수와 상수를 제공합니다.
 
@@ -105,7 +105,7 @@ console.log("Hello"[1] === "e"); // true
 
 문자열의 길이([코드 단위](/ko/docs/Glossary/Code_unit))를 찾으려면, [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length) 속성에 접근하세요.
 
-문자열에는 문자열을 조작하고 문자열에 대한 정보에 접근하는 [유틸리티 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods)가 있습니다. 모든 원시 타입은 설계 상 변경할 수 없기 때문에, 이러한 메서드는 새 문자열을 반환합니다.
+문자열에는 문자열을 조작하고 문자열에 대한 정보에 접근하는 [유틸리티 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#인스턴스_메서드)가 있습니다. 모든 원시 타입은 설계 상 변경할 수 없기 때문에, 이러한 메서드는 새 문자열을 반환합니다.
 
 `+` 연산자는 문자열에 대해 오버로드됩니다. 피연산자 중 하나가 문자열이면, 숫자 추가 대신 문자열 연결을 수행합니다. 특별한 [템플릿 문자열](/ko/docs/Web/JavaScript/Reference/Template_literals) 구문을 사용하면 표현식이 포함된 문자열을 더 간결하게 작성할 수 있습니다. Python의 f-문자열이나 C#의 보간된 문자열과 달리, 템플릿 리터럴은 백틱(작은따옴표나 큰따옴표가 아님)을 사용합니다.
 
@@ -186,7 +186,7 @@ console.log(obj); // { a: 1 }
 
 값을 할당하지 않고 변수를 선언하면, 그 값은 `undefined`입니다. 어차피 나중에 변경할 수 없기 때문에, 초기화해주는 것없이 `const` 변수를 선언할 수 없습니다.
 
-`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [일시적 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
+`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [일시적 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#일시적_사각지대)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
 
 ```js
 function foo(x, condition) {
@@ -235,7 +235,7 @@ x = x + 5;
 
 무언가에 빈 문자열을 추가하는 것은 해당 값을 문자열로 바꾸는 요령입니다.
 
-JavaScript의 [비교](/ko/docs/Web/JavaScript/Reference/Operators#relational_operators)는 `<`, `>`, `<=` 및 `>=` 를 사용해 만들 수 있고, 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 동등성을 위해 [이중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality)는 다른 타입을 제공하는 경우 타입 강제 변환을 수행하며, 때로는 흥미로운 결과를 보여줍니다. 반면에, [삼중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)는 타입 강제 변환을 시도하지 않으며 일반적으로 선호하는 방법입니다.
+JavaScript의 [비교](/ko/docs/Web/JavaScript/Reference/Operators#관계_연산자)는 `<`, `>`, `<=` 및 `>=` 를 사용해 만들 수 있고, 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 동등성을 위해 [이중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Equality)는 다른 타입을 제공하는 경우 타입 강제 변환을 수행하며, 때로는 흥미로운 결과를 보여줍니다. 반면에, [삼중 등호 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)는 타입 강제 변환을 시도하지 않으며 일반적으로 선호하는 방법입니다.
 
 ```js
 123 == "123"; // true
@@ -247,7 +247,7 @@ JavaScript의 [비교](/ko/docs/Web/JavaScript/Reference/Operators#relational_op
 
 이중 등호와 삼중 등호에는 `!=` 와 `!==` 같은 부등호도 있습니다.
 
-JavaScript에는 [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) 및 [논리 연산자](/ko/docs/Web/JavaScript/Reference/Operators#binary_logical_operators)도 있습니다. 특히 논리 연산자는 불리언 값으로만 작동하지 않고 값의 "진실성"에 따라 작동합니다.
+JavaScript에는 [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators#비트_시프트_연산자) 및 [논리 연산자](/ko/docs/Web/JavaScript/Reference/Operators#이진_논리_연산자)도 있습니다. 특히 논리 연산자는 불리언 값으로만 작동하지 않고 값의 "진실성"에 따라 작동합니다.
 
 ```js
 const a = 0 && "Hello"; // 0은 "falsy" 이라서, 0입니다.
@@ -482,7 +482,7 @@ console.log(a.length); // 101
 console.log(a); // ['dog', 'cat', 'hen', empty × 97, 'fox']
 ```
 
-위에서 얻은 배열을 [희소 배열(_sparse array_)](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)라고 합니다. 중간에 비어있는 슬롯이 있기 때문이며 엔진이 배열에서 해시 테이블로 배열을 최적화하지 않기 때문입니다. 배열이 밀집되어 있는지 확인하세요!
+위에서 얻은 배열을 [희소 배열(_sparse array_)](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)라고 합니다. 중간에 비어있는 슬롯이 있기 때문이며 엔진이 배열에서 해시 테이블로 배열을 최적화하지 않기 때문입니다. 배열이 밀집되어 있는지 확인하세요!
 
 범위를 벗어난 인덱싱은 발생하지 않습니다. 존재하지 않는 배열 인덱스를 참조하려고 하면 `undefined`값이 반환됩니다.
 
@@ -630,7 +630,7 @@ const sum = (a, b, c) => a + b + c;
 })();
 ```
 
-IIFE의 사용 사례에 대해서는 [클로저를 이용해서 프라이빗 메서드 흉내내기](/ko/docs/Web/JavaScript/Guide/Closures#클로저를_이용해서_프라이빗_메소드_private_method_흉내내기)을 참조하세요.
+IIFE의 사용 사례에 대해서는 [클로저를 이용해서 프라이빗 메서드 흉내내기](/ko/docs/Web/JavaScript/Guide/Closures#클로저를_이용해서_비공개_메서드_private_method_흉내내기)을 참조하세요.
 
 ### 재귀 함수
 
@@ -814,7 +814,7 @@ Haskell, Python, Java 등과 달리 JavaScript 모듈 해석은 전적으로 호
 
 이 페이지 전체에 걸쳐, 특정 기능은 "언어 수준"이고 다른 기능은 "런타임 수준"이라고 지속적으로 언급이 되었습니다.
 
-JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log_static)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
+JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#핵심_언어_javascriptecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log_static)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
 
 런타임 또는 호스트는 JavaScript 엔진(인터프리터)에 데이터를 공급하고 추가 전역 속성을 제공하며, 엔진이 외부 세계와 상호 작용할 수 있도록 훅을 제공합니다. 모듈 확인, 데이터 읽기, 메시지 인쇄, 네트워크 요청 보내기 등은 모두 런타임 수준 작업입니다. JavaScript는 처음부터 브라우저([DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 API를 제공합니다), Node.js([파일 시스템 접근](https://nodejs.org/api/fs.html)과 같은 API를 제공합니다)와 같은 다양한 환경에서 채택되었습니다. JavaScript는 (가장 주요 목적인) 웹, 모바일 앱, 데스크탑 앱, 서버 측 앱, 서버리스, 임베디드 시스템 등에 성공적으로 통합되었습니다. JavaScript 핵심 기능에 대해 배우는 동안, 지식을 사용하기 위해 호스트에서 제공하는 기능을 이해하는 것도 중요합니다. 예를 들어, 브라우저 및 경우에 따라 비브라우저에 의해 구현되는 모든 [웹 플랫폼 API](/ko/docs/Web/API)에 대해 읽어볼 수 있습니다.
 

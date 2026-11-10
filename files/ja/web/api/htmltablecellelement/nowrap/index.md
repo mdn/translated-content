@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{APIRef("HTML DOM API")}}{{deprecated_header}}
+{{APIRef("HTML DOM API")}}
 
 **`noWrap`** は {{domxref("HTMLTableCellElement")}} インターフェイスのプロパティで、セルのテキストが複数行にまたがって表示されるかどうかを示す論理値を返します。
 

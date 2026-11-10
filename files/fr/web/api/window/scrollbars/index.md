@@ -1,36 +1,25 @@
 ---
-title: Window.scrollbars
+title: "Window : propriété scrollbars"
+short-title: scrollbars
 slug: Web/API/Window/scrollbars
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-La propriété **`Window.scrollbars`** renvoie l'objet `scrollbars`, dont la visibilité peut être vérifié.
+Retourne l'objet `scrollbars`.
 
-## Syntaxe
+Il s'agit de l'une des propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui sert à indiquer si une partie particulière de l'interface utilisateur d'un navigateur web est visible ou non.
 
-```js
-objRef = window.scrollbars;
-```
+Pour des raisons de confidentialité et d'interopérabilité, la valeur de la propriété `visible` est désormais `false` si cette `Window` est une fenêtre contextuelle, et `true` dans le cas contraire.
 
-## Exemple
+## Valeur
 
-L'exemple HTML complet suivant montre comment la propriété `visible` de l'objet scrollbars est utilisée.
+Un objet contenant une seule propriété&nbsp;:
 
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>Divers Tests DOM</title>
-    <script>
-      let visibleScrollbars = window.scrollbars.visible;
-    </script>
-  </head>
-  <body>
-    <p>Divers Tests DOM</p>
-  </body>
-</html>
-```
+- `visible` {{ReadOnlyInline}}
+  - : Une propriété booléenne, `false` si cette `Window` est une fenêtre contextuelle, et `true` dans le cas contraire.
 
 ## Spécifications
 
@@ -42,8 +31,8 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ## Voir aussi
 
-- {{domxref("window.locationbar")}}
-- {{domxref("window.menubar")}}
-- {{domxref("window.personalbar")}}
-- {{domxref("window.statusbar")}}
-- {{domxref("window.toolbar")}}
+- La propriété {{DOMxRef("window.locationbar")}}
+- La propriété {{DOMxRef("window.menubar")}}
+- La propriété {{DOMxRef("window.personalbar")}}
+- La propriété {{DOMxRef("window.statusbar")}}
+- La propriété {{DOMxRef("window.toolbar")}}

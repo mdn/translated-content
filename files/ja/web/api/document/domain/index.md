@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`domain`** は {{domxref("Document")}} インターフェイスのプロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
 

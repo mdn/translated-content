@@ -3,7 +3,7 @@ title: "Element : propriété ariaColIndexText"
 short-title: ariaColIndexText
 slug: Web/API/Element/ariaColIndexText
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 868de6e278b0e5c635cea5ee4bb06d35fbc3e11b
 ---
 
 {{APIRef("DOM")}}

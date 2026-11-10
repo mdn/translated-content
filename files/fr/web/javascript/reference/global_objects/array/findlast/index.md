@@ -3,7 +3,7 @@ title: "Array : méthode findLast()"
 short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`findLast()`** des instances de {{JSxRef("Array")}} parcourt le tableau en ordre inverse et retourne la valeur du premier élément qui satisfait la fonction de test fournie.
@@ -245,6 +245,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.findLast` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.findLast` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlast)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
@@ -255,5 +257,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.every()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("TypedArray.prototype.findLast()")}}
-- [Prothèse d'émulation pour Array.prototype.findLast dans la bibliothèque core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-find-from-last)
-- [Prothèse d'émulation es-shims pour Array.prototype.findLast <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlast)

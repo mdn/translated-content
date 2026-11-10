@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: attributeName プロパティ"
+short-title: attributeName
 slug: Web/API/MutationRecord/attributeName
 l10n:
   sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650

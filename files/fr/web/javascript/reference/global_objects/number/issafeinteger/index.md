@@ -3,7 +3,7 @@ title: "Number : méthode statique isSafeInteger()"
 short-title: isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.isSafeInteger()`** détermine si la valeur fournie est un nombre qui est un _entier sûr_.
@@ -55,7 +55,7 @@ Pour les entiers plus grands, envisagez d'utiliser le type {{JSxRef("BigInt")}}.
 
 ## Exemples
 
-### Utiliser `isSafeInteger()`
+### Utiliser la méthode `isSafeInteger()`
 
 ```js
 Number.isSafeInteger(3); // true
@@ -78,8 +78,8 @@ Number.isSafeInteger(3.0); // true
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isSafeInteger` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.isSafeInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.issafeinteger)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isSafeInteger` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isSafeInteger` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.issafeinteger)
 - L'objet natif {{JSxRef("Number")}}
 - La propriété statique {{JSxRef("Number.MIN_SAFE_INTEGER")}}
 - La propriété statique {{JSxRef("Number.MAX_SAFE_INTEGER")}}

@@ -1,5 +1,5 @@
 ---
-title: HTML `<cite>` 引用元要素
+title: "`<cite>` 引用元要素"
 short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 l10n:

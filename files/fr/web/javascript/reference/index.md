@@ -3,7 +3,7 @@ title: Référence JavaScript
 short-title: Référence
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: f693fdeb65be430fdf3b7fc5cdf44a10a13f2bbf
 ---
 
 La référence JavaScript sert de répertoire de faits sur le langage JavaScript. Le langage entier y est décrit en détail. Lorsque vous écrivez du code JavaScript, vous consultez souvent ces pages (d'où le titre «&nbsp;Référence JavaScript&nbsp;»).
@@ -121,6 +121,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 
 ### Réflexion
 
+- {{JSxRef("AbstractModuleSource")}}
 - {{JSxRef("Reflect")}}
 - {{JSxRef("Proxy")}}
 
@@ -184,7 +185,9 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 - {{JSxRef("Statements/Expression_statement", "Instruction d'expression", "", 1)}}
 - {{JSxRef("Statements/debugger", "debugger")}}
 - {{JSxRef("Statements/export", "export")}}
+- {{JSxRef("Statements/import/defer", "import defer")}}
 - {{JSxRef("Statements/import", "import")}}
+- {{JSxRef("Statements/import/source", "import source")}}
 - {{JSxRef("Statements/label", "label", "", 1)}}
 - {{JSxRef("Statements/with", "with")}} {{Deprecated_Inline}}
 
@@ -216,6 +219,8 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 - {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/import", "import()")}}
+- {{JSxRef("Operators/import/defer", "import.defer()")}}
+- {{JSxRef("Operators/import/source", "import.source()")}}
 
 ### Incrément & décrément
 
@@ -338,11 +343,11 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 - {{JSxRef("Classes/static", "static")}}
 - [Blocs d'initialisation statique](/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-## Expressions régulières
+## Expressions rationnelles
 
-[Expressions régulières JavaScript](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
+[Expressions rationnelles JavaScript](/fr/docs/Web/JavaScript/Reference/Regular_expressions)
 
-- [Référence arrière&nbsp;: `\1`, `\2`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [Rétro-référence&nbsp;: `\1`, `\2`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 - [Groupe capturant&nbsp;: `(...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Classe de caractères&nbsp;: `[...]`, `[^...]`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Échappement de classe de caractères&nbsp;: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
@@ -351,7 +356,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 - [Assertion de limite d'entrée&nbsp;: `^`, `$`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Caractère littéral&nbsp;: `a`, `b`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
 - [Assertion de prévisualisation&nbsp;: `(?=...)`, `(?!...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
-- [Assertion de rétrovisualisation&nbsp;: `(?<=...)`, `(?<!...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [Assertion de précédence&nbsp;: `(?<=...)`, `(?<!...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
 - [Modificateur&nbsp;: `(?ims-ims:...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
 - [Référence arrière nommée&nbsp;: `\k<name>`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
 - [Groupe capturant nommé&nbsp;: `(?<name>...)`](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

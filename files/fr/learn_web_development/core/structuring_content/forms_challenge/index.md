@@ -3,7 +3,7 @@ title: "Défi : Structurer un formulaire de retour d'expérience"
 short-title: "Défi : Formulaire de retour d'expérience"
 slug: Learn_web_development/Core/Structuring_content/Forms_challenge
 l10n:
-  sourceCommit: 8126a04c73f0c6821b2ac4e5571fa83320d3a65a
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
@@ -391,6 +391,14 @@ Votre HTML final doit ressembler à ceci&nbsp;:
     </form>
   </body>
 </html>
+```
+
+```js hidden live-sample___form-finished
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 Pour l'objectif supplémentaire, une meilleure façon d'ajouter des images décoratives à une page web consiste à utiliser les [images d'arrière-plan CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#images_darrière-plan). Supprimez l'élément `<img>` et utilisez la propriété CSS {{CSSxRef("background")}} pour placer l'image sur la page. Un bon élément pour placer l'image d'arrière-plan est l'élément `<form>`, et vous devez indiquer au navigateur de ne pas répéter l'image. Vous devez également fournir un peu de {{CSSxRef("margin")}} et de {{CSSxRef("padding")}} pour espacer l'image d'arrière-plan afin qu'elle ne chevauche pas le texte.

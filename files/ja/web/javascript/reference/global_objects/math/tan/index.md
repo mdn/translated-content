@@ -3,7 +3,7 @@ title: Math.tan()
 short-title: tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
 **`Math.tan()`** は静的メソッドで、数値の正接（タンジェント）を返します。
@@ -38,7 +38,7 @@ Math.tan(x)
 
 ### 返値
 
-`x` の正接（タンジェント）です。 `x` が {{jsxref("Infinity")}} の場合は `-Infinity`、 {{jsxref("NaN")}} の場合は {{jsxref("NaN")}} を返します。
+`x` の正接です。`x` が {{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合は、{{jsxref("NaN")}} を返します。
 
 > [!NOTE]
 > 浮動小数点の精度により、正確な値 π/2 を得ることはできないため、 `NaN` でなければ、結果は常に有限となります。
@@ -96,3 +96,4 @@ function getTanDeg(deg) {
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
+- CSS {{cssxref("tan()")}} 関数

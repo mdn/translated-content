@@ -3,7 +3,7 @@ title: En-tête No-Vary-Search
 short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 l10n:
-  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
+  sourceCommit: d260e0bf3f2ba3091e71ba1a7d0427c7d396e6ac
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`No-Vary-Search`** définit un ensemble de règles qui déterminent comment les paramètres de requête d'une URL affectent la correspondance du cache.
@@ -27,27 +27,35 @@ No-Vary-Search: key-order
 No-Vary-Search: params
 No-Vary-Search: params=("param1" "param2")
 No-Vary-Search: params, except=("param1" "param2")
-No-Vary-Search: key-order, params, except=("param1")
+No-Vary-Search: key-order, params, except=("param1" "param2")
 ```
 
 ## Directives
 
 - `key-order` {{Optional_Inline}}
-  - : Indique que les URL ne sont pas mises en cache comme des entrées distinctes si _l'ordre_ dans lequel les paramètres apparaissent dans l'URL est la seule différence.
-    La présence d'autres paramètres _entraîne_ la mise en cache distincte des URL.
+  - : Indique que le navigateur ne doit pas créer d'entrée de cache distincte pour une réponse si l'ordre dans lequel les paramètres apparaissent dans l'URL est la seule différence.
 - `params` {{Optional_Inline}}
   - : Soit un booléen, soit une liste de chaînes de caractères&nbsp;:
-    - En tant que booléen (`params`), cela indique que les URL qui ne diffèrent que par leurs paramètres ne sont pas mises en cache comme des entrées distinctes.
-    - Une liste interne de chaînes de caractères séparées par des espaces (`params=("param1" "param2")`).
-      Indique que les URL qui ne diffèrent que par les paramètres listés ne sont pas mises en cache comme des entrées distinctes.
-      La présence d'autres paramètres _entraîne_ leur mise en cache séparément.
+    - En tant que booléen (`params`), cela indique que le navigateur ne doit pas créer d'entrées de cache distinctes pour les réponses qui ne diffèrent que par la présence, l'ordre ou la valeur de n'importe quel paramètre.
+    - En tant que liste interne de chaînes de caractères séparées par des espaces (`params=("param1" "param2")`), cela indique que le navigateur ne doit pas créer d'entrées de cache distinctes pour les réponses qui ne diffèrent que par la présence, l'ordre ou la valeur des paramètres listés.
+      D'autres paramètres peuvent encore entraîner la mise en cache distincte de la réponse.
 - `except` {{Optional_Inline}}
-  - : Une liste interne de chaînes de caractères séparées par des espaces (`except=("param1" "param2")`).
-    Indique que les URL qui ne diffèrent que par les paramètres listés _sont_ mises en cache comme des entrées distinctes.
+  - : Une liste interne de chaînes de caractères séparées par des espaces (`except=("param1" "param2")`) qui indique les paramètres pour lesquels une valeur différente doit amener le navigateur à créer une entrée de cache distincte.
     Une directive booléenne `params` doit être incluse pour que cela prenne effet (`params, except=("param1" "param2")`).
-    La présence d'autres paramètres qui ne sont pas dans la liste `except=` _n'entraîne pas_ la mise en cache des URL comme des entrées distinctes.
+    La présence d'autres paramètres qui ne sont pas dans la liste `except=` ne doit pas amener le navigateur à créer une entrée de cache distincte.
 
 ## Description
+
+Par défaut, une réponse stockée pour une URL n'est réutilisée que pour une requête vers cette même URL exacte.
+Toute différence dans la chaîne de caractères de requête en fait une URL différente&nbsp;: une valeur de paramètre différente, un paramètre supplémentaire, ou même les mêmes paramètres écrits dans un ordre différent.
+
+Ceci est souvent plus strict que nécessaire.
+Les paramètres de requête sont fréquemment utilisés pour des éléments qui ne changent pas la réponse envoyée par le serveur, tels que les balises d'analyse et les valeurs sur lesquelles seul le JavaScript côté client agit.
+Une page peut également construire sa chaîne de caractères de requête dans un ordre de paramètres incohérent.
+Le navigateur n'a aucun moyen de savoir ce qui est pertinent, il récupère donc depuis le réseau et met en cache le résultat chaque fois qu'il voit une chaîne de caractères de requête qu'il n'a pas encore demandée.
+
+`No-Vary-Search` donne au serveur un moyen d'indiquer au navigateur si l'ordre des paramètres a de l'importance, et quels paramètres (le cas échéant) affectent la réponse retournée.
+Lorsque les règles le permettent, le navigateur peut alors fournir une réponse stockée pour une URL qu'il n'a pas encore récupérée.
 
 ### Relation avec l'API Speculation Rules
 
@@ -56,7 +64,7 @@ No-Vary-Search: key-order, params, except=("param1")
 > [!WARNING]
 > Il faut faire particulièrement attention lors de l'utilisation du pré-rendu avec `No-Vary-Search`, car la page peut être initialement pré-rendue avec des paramètres d'URL différents. `No-Vary-Search` concerne des paramètres d'URL qui fournissent la même ressource depuis le serveur, mais qui sont utilisés par le client pour diverses raisons (rendu côté client, paramètres UTM pour la mesure d'audience, etc.). Comme le pré-rendu initial peut concerner des paramètres d'URL différents, tout code dépendant de ceux-ci ne doit s'exécuter qu'après l'activation du pré-rendu.
 
-L'API Speculation Rules peut également inclure un champ `expects_no_vary_search`, qui indique au navigateur quelle sera la valeur attendue de `No-Vary-Search` (le cas échéant) pour les documents pour lesquels il reçoit des requêtes de préchargement/pré-rendu via les règles de spéculation. Le navigateur peut utiliser cela pour déterminer à l'avance s'il est plus utile d'attendre la fin d'un préchargement/pré-rendu existant, ou de lancer une nouvelle requête lorsque la règle de spéculation est satisfaite. Voir [l'exemple "expects_no_vary_search"](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#exemple_de_expects_no_vary_search) pour une explication de son utilisation.
+L'API Speculation Rules peut également inclure un champ `expects_no_vary_search`, qui indique au navigateur quelle est la valeur attendue de `No-Vary-Search` (le cas échéant) pour les documents pour lesquels il reçoit des requêtes de préchargement/pré-rendu par les règles de spéculation. Le navigateur peut utiliser cela pour déterminer à l'avance s'il est plus utile d'attendre la fin d'un préchargement/pré-rendu existant, ou de lancer une nouvelle requête lorsque la règle de spéculation est satisfaite. Voir [l'exemple "expects_no_vary_search"](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules#exemple_de_expects_no_vary_search) pour une explication de son utilisation.
 
 ## Exemples
 

@@ -3,7 +3,7 @@ title: Propriété CSS `cursor`
 short-title: cursor
 slug: Web/CSS/Reference/Properties/cursor
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.
@@ -95,11 +95,11 @@ cursor: revert-layer;
 cursor: unset;
 ```
 
-La propriété `cursor` peut être définie grâce à zéro ou plusieurs valeurs [`<url>`](#url) séparées par des virgules et suivi par un unique [mot-clé obligatoire](#mot-clé). Chaque `<url>` doit pointer vers un fichier image. Le navigateur essaiera de télécharger la première image indiquée et passera à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilisera le mot-clé final.
+La propriété `cursor` peut être définie grâce à zéro ou plusieurs valeurs [`<url>`](#url) séparées par des virgules et suivi par un unique [mot-clé obligatoire](#mot-clé). Chaque `<url>` doit pointer vers un fichier image. Le navigateur essaie de télécharger la première image indiquée et passe à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilise le mot-clé final.
 Chaque `<url>` doit pointer vers un fichier image.
-Le navigateur essaiera de charger la première image définie, en passant à la suivante si elle ne peut pas être chargée, et en revenant à la valeur du mot-clé si aucune image n'a pu être chargée (ou si aucune n'a été définie).
+Le navigateur essaie de charger la première image définie, en passant à la suivante si elle ne peut pas être chargée, et en revenant à la valeur du mot-clé si aucune image n'a pu être chargée (ou si aucune n'a été définie).
 
-Chaque `<url>` peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées `<x>` et `<y>` (abscisse puis ordonnée) du point d'action (_hotspot_) du curseur par rapport au coin en haut à gauche de l'image.
+Chaque `<url>` peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées `<x>` et `<y>` (abscisse puis ordonnée) du point d'action (<i lang="en">hotspot</i> en anglais) du curseur par rapport au coin en haut à gauche de l'image.
 
 ### Valeurs
 
@@ -128,7 +128,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td></td>
           <td>
             Le navigateur détermine le curseur à afficher en fonction du contexte
-            (par exemple, l'effet sera équivalent à <code>text</code> lors du survol
+            (par exemple, l'effet est équivalent à <code>text</code> lors du survol
             du texte).
           </td>
         </tr>
@@ -153,7 +153,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
         </tr>
         <tr style="cursor: help">
           <td><code>help</code></td>
-          <td><img src="help.gif" alt="grande flèche pointant vers le haut et versla gauche à côté d'un point d'interrogation" /></td>
+          <td><img src="help.gif" alt="grande flèche pointant vers le haut et vers la gauche à côté d'un point d'interrogation" /></td>
           <td>Le pointeur indique qu'une aide est disponible.</td>
         </tr>
         <tr style="cursor: pointer">
@@ -211,17 +211,17 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td rowspan="7" style="cursor: auto">Glisser/déposer</td>
           <td><code>alias</code></td>
           <td><img src="alias.gif" alt="large flèche pointant vers le haut et vers la gauche obscurcissant partiellement une petite icône de dossier avec une flèche courbée pointant vers le haut et vers la droite" /></td>
-          <td>Le pointeur indique qu'un alias ou qu'un raccourci sera créé.</td>
+          <td>Le pointeur indique qu'un alias ou qu'un raccourci est créé.</td>
         </tr>
         <tr style="cursor: copy">
           <td><code>copy</code></td>
           <td><img class="default" src="copy.gif" alt="large flèche pointant vers le haut et vers la gauche obscurcissant partiellement une petite icône de dossier avec un signe plus" /></td>
-          <td>Le pointeur indique que quelque chose devra être copié.</td>
+          <td>Le pointeur indique que quelque chose doit être copié.</td>
         </tr>
         <tr style="cursor: move">
           <td><code>move</code></td>
           <td><img src="move.gif" alt="symbole plus composé de deux lignes fines. Les quatre points sont de petites flèches pointant vers l'extérieur" /></td>
-          <td>L'objet survolé devra être déplacé.</td>
+          <td>L'objet survolé doit être déplacé.</td>
         </tr>
         <tr style="cursor: no-drop">
           <td><code>no-drop</code></td>
@@ -231,7 +231,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td>
             Le curseur indique qu'on ne peut pas déposer d'élément à cet endroit.
             <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=B75173"
-              >Boggue 275173 <sup>(angl.)</sup></a
+              >Bogues 275173 <sup>(angl.)</sup></a
             >
             pour Windows et Mac OS X, « <code>no-drop</code> a le même effet que
             <code>not-allowed</code> ».
@@ -266,10 +266,10 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
             Le curseur indique qu'on peut faire défiler le contenu dans n'importe
             quelle direction.
             <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=275174"
-              >Boggue 275174 <sup>(angl.)</sup></a
+              >Bogues 275174 <sup>(angl.)</sup></a
             >
-            pour Windows, « <code>all-scroll</code> a le même effet que
-            <code>move</code>".
+            pour Windows, «&nbsp;<code>all-scroll</code> a le même effet que
+            <code>move</code>&nbsp;».
           </td>
         </tr>
         <tr style="cursor: col-resize">
@@ -308,7 +308,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
           <td><code>e-resize</code></td>
           <td>
             <img
-              alt="Example d'un curseur de redimensionnement vers la droite"
+              alt="Exemple d'un curseur de redimensionnement vers la droite"
               src="e-resize.gif"
             />
           </td>
@@ -414,7 +414,7 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
 ### Limites de taille des icônes
 
 La spécification ne limite pas la taille de l'image `cursor`, {{Glossary("user agent", "les agents utilisateurs")}} les restreignent généralement pour éviter un usage abusif.
-Par exemple, sur Firefox et Chromium, les images de curseur sont limitées à 128x128 pixels par défaut, mais il est recommandé de limiter la taille de l'image du curseur à 32x32 pixels. Les changements de curseur qui utilisent des images plus grandes que la taille maximale prise en charge par l'agent utilisateur seront généralement ignorés.
+Par exemple, sur Firefox et Chromium, les images de curseur sont limitées à 128x128 pixels par défaut, mais il est recommandé de limiter la taille de l'image du curseur à 32x32 pixels. Les changements de curseur qui utilisent des images plus grandes que la taille maximale prise en charge par l'agent utilisateur sont généralement ignorés.
 
 ### Formats de fichiers image pris en charge
 
@@ -426,11 +426,11 @@ Les agents utilisateurs _peuvent_ prendre en charge à la fois des images SVG st
 
 ### iPadOS
 
-iPadOS prend en charge les dispositifs de pointage tels que les trackpads et les souris. Par défaut, le curseur de l'iPad est affiché sous la forme d'un cercle, et la seule valeur prise en charge qui modifiera l'apparence du pointeur est `text`.
+iPadOS prend en charge les dispositifs de pointage tels que les pavés tactiles et les souris. Par défaut, le curseur de l'iPad est affiché sous la forme d'un cercle, et la seule valeur prise en charge qui modifie l'apparence du pointeur est `text`.
 
 ### Autres notes
 
-Les changements de curseur qui intersectent les zones de la barre d'outils sont souvent bloqués pour éviter le spoofing.
+Les changements de curseur qui intersectent les zones de la barre d'outils sont souvent bloqués pour éviter l'usurpation d'identité.
 
 ## Exemples
 

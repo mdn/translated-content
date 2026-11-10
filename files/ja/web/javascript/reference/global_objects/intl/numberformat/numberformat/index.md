@@ -578,7 +578,7 @@ console.log(
 // "4.3"
 ```
 
-[`resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) を使用してフォーマッタ－を調べると、`maximumSignificantDigits` または `minimumSignificantDigits` が指定されている場合、返されるオブジェクトには `maximumFractionDigits` は含まれていないことがわかります。
+[`resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) を使用してフォーマッターを調べると、`maximumSignificantDigits` または `minimumSignificantDigits` が指定されている場合、返されるオブジェクトには `maximumFractionDigits` は含まれていないことがわかります。
 
 ```js
 console.log(

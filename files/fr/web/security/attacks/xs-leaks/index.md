@@ -2,7 +2,7 @@
 title: Fuites inter-sites (Fuites-XS)
 slug: Web/Security/Attacks/XS-Leaks
 l10n:
-  sourceCommit: 81bf621759d3a52fdf737c2d75f186a0073d1406
+  sourceCommit: b2a7378d76136b568fe9414f46abda899b2bf700
 ---
 
 Les fuites inter-sites, également appelées Fuites-XS (<i lang="en">Cross-Site Leaks</i> en anglais, raccourci <abbr lang="en">XS-Leaks</abbr>), sont une classe d'attaques dans laquelle le site d'un·e attaquant·e peut obtenir des informations sur le site cible, ou sur la relation de l'utilisateur·ice avec le site cible, en utilisant les API de la plateforme web qui permettent aux sites d'interagir entre eux. Les informations divulguées peuvent inclure, par exemple&nbsp;:
@@ -25,9 +25,9 @@ Dans ce guide, nous n'essayons pas de décrire toutes les attaques et défenses 
 
 Dans cette section, nous décrivons trois fuites inter-sites différentes, pour donner une idée de leur fonctionnement.
 
-- [Révéler l'existence d'une page à l'aide d'évènements d'erreur](#révéler_lexistence_dune_page_à_laide_dévènements_derreur)&nbsp;: dans cette attaque, un·e attaquant·e peut déterminer si certains points de terminaison du site cible retournent des codes d'erreur HTTP, en essayant de les charger en tant que ressources et en écoutant les événements {{DOMxRef("HTMLElement/error_event", "error")}} et {{DOMxRef("HTMLElement/load_event", "load")}}. Si certaines pages ne sont disponibles que pour les utilisateur·ice·s connectés, l'attaquant·e peut déterminer si l'utilisateur·ice est connecté·e au site cible.
+- [Révéler l'existence d'une page à l'aide d'évènements d'erreur](#révéler_lexistence_dune_page_à_laide_dévènements_derreur)&nbsp;: dans cette attaque, un·e attaquant·e peut déterminer si certains points de terminaison du site cible retournent des codes d'erreur HTTP, en essayant de les charger en tant que ressources et en écoutant les évènements {{DOMxRef("HTMLElement/error_event", "error")}} et {{DOMxRef("HTMLElement/load_event", "load")}}. Si certaines pages ne sont disponibles que pour les utilisateur·ice·s connectés, l'attaquant·e peut déterminer si l'utilisateur·ice est connecté·e au site cible.
 - [Compter les cadres en utilisant des références de fenêtre](#compter_les_cadres_en_utilisant_des_références_de_fenêtre)&nbsp;: dans cette attaque, un·e attaquant·e obtient une référence à un objet {{DOMxRef("Window")}} hébergeant une page du site cible, par exemple en tant que valeur de retour d'un appel à {{DOMxRef("Window.open()")}}. L'attaquant·e peut alors déterminer le nombre d'éléments {{HTMLElement("iframe")}} dans la page cible, ce qui peut à nouveau révéler si l'utilisateur·ice est connecté·e au site cible.
-- [Fuite de redirections avec une CSP](#fuite_de_redirections_avec_une_csp)&nbsp;: dans cette attaque, la page de l'attaquant·e dispose d'une [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) qui n'autorise le chargement que d'une page particulière du site cible, puis tente de charger cette page. Si le chargement de la page est bloqué, l'attaquant·e sait que le site cible a redirigé la requête. Cette redirection peut indiquer si l'utilisateur·ice était connecté·e (ou non) en fonction du fonctionnement du site.
+- [Fuite de redirections avec une CSP](#fuite_de_redirections_avec_une_csp)&nbsp;: dans cette attaque, la page de l'attaquant·e dispose d'une [politique de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) qui n'autorise le chargement que d'une page particulière du site cible, puis tente de charger cette page. Si le chargement de la page est bloqué, l'attaquant·e sait que le site cible a redirigé la requête. Cette redirection peut indiquer si l'utilisateur·ice est connecté·e (ou non) en fonction du fonctionnement du site.
 
 Ces trois attaques sont déployées de la même manière&nbsp;: l'attaquant·e crée une page qui met en œuvre l'attaque, puis persuade l'utilisateur·ice de visiter la page, par exemple en lui envoyant un courriel ou en partageant un post contenant le lien. Lorsque l'utilisateur·ice visite la page, l'attaque s'exécute automatiquement.
 
@@ -97,7 +97,7 @@ const cadres = cible.length;
 ### Fuite de redirections avec une CSP
 
 Sur certains sites web, le serveur redirige une requête, ou non, en fonction du fait que l'utilisateur·ice est connecté·e (ou a un statut spécial sur le site). Par exemple, imaginez un site qui montre aux administrateur·ice·s une page à `https://admin.example.org/`. Si l'utilisateur·ice n'est pas connecté·e et demande cette page, le serveur peut alors le·la rediriger vers `https://login.example.org/`.
-Cela signifie que si un·e attaquant·e pouvait déterminer si une tentative de chargement de `https://admin.example.org/` a conduit à une redirection, il·elle sait alors si l'utilisateur·ice est administrateur·ice sur le site.
+Cela signifie que si un·e attaquant·e peut déterminer si une tentative de chargement de `https://admin.example.org/` a conduit à une redirection, il·elle sait alors si l'utilisateur·ice est administrateur·ice sur le site.
 
 Dans l'attaque décrite ici, l'attaquant·e utilise la fonctionnalité [Politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) pour détecter si une requête inter-site a été redirigée.
 
@@ -128,8 +128,8 @@ Dans l'attaque décrite ici, l'attaquant·e utilise la fonctionnalité [Politiqu
 </html>
 ```
 
-- Si l'utilisateur·ice est connecté·e en tant qu'administrateur, alors un `<iframe>` se charge, et le navigateur ne déclenche pas `securitypolicyviolation`.
-- Si l'utilisateur·ice n'est pas connecté·e en tant qu'administrateur, le serveur redirige vers `https://login.example.org/`. Comme cette URL n'est pas autorisée par la CSP de l'attaquant·e, le navigateur bloque le `<iframe>` et déclenche l'évènement `securitypolicyviolation`, et le gestionnaire d'évènements de l'attaquant·e s'exécute.
+- Si l'utilisateur·ice est connecté·e en tant qu'administrateur·ice, alors un `<iframe>` se charge, et le navigateur ne déclenche pas `securitypolicyviolation`.
+- Si l'utilisateur·ice n'est pas connecté·e en tant qu'administrateur·ice, le serveur redirige vers `https://login.example.org/`. Comme cette URL n'est pas autorisée par la CSP de l'attaquant·e, le navigateur bloque le `<iframe>` et déclenche l'évènement `securitypolicyviolation`, et le gestionnaire d'évènements de l'attaquant·e s'exécute.
 
 Notez que cette attaque fonctionne même si le site cible interdit l'intégration en utilisant un mécanisme tel que {{CSP("frame-ancestors")}}.
 

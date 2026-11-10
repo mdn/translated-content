@@ -3,7 +3,7 @@ title: "Array : méthode unshift()"
 short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`unshift()`** des instances de {{JSxRef("Array")}} ajoute les éléments définis au début d'un tableau et retourne la nouvelle longueur du tableau.
@@ -69,7 +69,7 @@ La méthode `unshift()` est [générique](/fr/docs/Web/JavaScript/Reference/Glob
 
 ## Exemples
 
-### Utilisation de `unshift()`
+### Utiliser la méthode `unshift()`
 
 ```js
 const arr = [1, 2];
@@ -118,6 +118,8 @@ console.log(plainObj);
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.unshift` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.unshift` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.unshift)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.push()")}}
@@ -125,5 +127,3 @@ console.log(plainObj);
 - La méthode {{JSxRef("Array.prototype.shift()")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.splice()")}}
-- [Prothèse d'émulation de `Array.prototype.unshift` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.unshift` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.unshift)

@@ -3,7 +3,7 @@ title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
-{{JSRef}}{{Deprecated_header}}
+{{JSRef}}
 
 > **주의:** 객체의 `[[Prototype]]`을 변경하는 것은 최신 JavaScript 엔진이 속성 접근을 최적화하는 방식의 특성상 **모든** 브라우저 및 JavaScript 엔진에서 매우 느린 작업입니다. 상속 구조를 변경하는 것이 성능에 미치는 영향은 미묘하고 광범위하며, `obj.__proto__ = ...` 문에 소요되는 시간 뿐만 아니라 `[[Prototype]]`이 변경된 객체에 접근할 수 있는 **모든** 코드들에 대해서도 영향을 줄 수 있습니다. 성능에 관심이 있다면 객체의 `[[Prototype]]` 설정을 피해야 합니다. 대신 {{JSxRef("Object.create()")}}를 사용하여 원하는 `[[Prototype]]`으로 새 객체를 만드세요.
 

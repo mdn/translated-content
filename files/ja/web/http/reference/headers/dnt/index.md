@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-{{Deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 > [!NOTE]
 > DNT（Do Not Track）仕様は廃止されました。詳しくは、{{domxref("Navigator.doNotTrack")}} を参照してください。

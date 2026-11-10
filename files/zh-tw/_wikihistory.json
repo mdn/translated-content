@@ -18,7 +18,7 @@
       "MashKao"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
     "modified": "2019-03-23T22:47:44.181Z",
     "contributors": [
       "wbamberg",
@@ -29,7 +29,7 @@
       "RishYang"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
     "modified": "2019-03-23T22:42:23.279Z",
     "contributors": [
       "wbamberg",
@@ -41,7 +41,7 @@
       "EasonWang01"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
     "modified": "2019-07-06T06:25:00.544Z",
     "contributors": [
       "SLMT",
@@ -50,7 +50,7 @@
       "RishYang"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
     "modified": "2019-03-23T22:45:54.347Z",
     "contributors": [
       "wbamberg",

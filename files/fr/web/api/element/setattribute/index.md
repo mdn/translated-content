@@ -3,7 +3,7 @@ title: "Element : méthode setAttribute()"
 short-title: setAttribute()
 slug: Web/API/Element/setAttribute
 l10n:
-  sourceCommit: ff9dd829bb17d272b7d14c41a442f2c2e3680521
+  sourceCommit: 5a81c288fb7213b2ca2180cda687500981ecf9e1
 ---
 
 {{APIRef("DOM")}}

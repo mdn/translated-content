@@ -52,7 +52,7 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 
 ### JavaScript
 
-- Les expressions régulières ne sont plus appelable comme si il s'agissait de fonctions, ce changement a été fait de concert avec l'équipe de WebKit afin d'assurer la compatibilité (voir [la bogue WebKit 28285 <sup>(angl.)</sup>](https://webkit.org/b/28285)). Cette fonctionnalité existait depuis longtemps déjà mais n'a jamais été documentée (du moins, pas sur MDN).
+- Les expressions rationnelles ne sont plus appelable comme si il s'agissait de fonctions, ce changement a été fait de concert avec l'équipe de WebKit afin d'assurer la compatibilité (voir [la bogue WebKit 28285 <sup>(angl.)</sup>](https://webkit.org/b/28285)). Cette fonctionnalité existait depuis longtemps déjà mais n'a jamais été documentée (du moins, pas sur MDN).
 - La méthode `Function.prototype.isGenerator()` est désormais supportée, ce qui vous permet de déterminer si une fonction est [génératrice](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#fonctions_génératrices).
 - Les [mots suivants ont été réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés) étaient auparavant uniquement considérés comme réservés en mode strict&nbsp;; désormais, ils sont toujours considérés comme réservés&nbsp;: `class`, `enum`, `export`, `extends`, `import` et `super`.
 - Les documents DOM crées dans le chrome ne peuvent plus être exposés à des scripts en sandbox.

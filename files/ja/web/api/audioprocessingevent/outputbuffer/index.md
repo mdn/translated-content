@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef}}{{Deprecated_header}}
+{{APIRef}}
 
 **`outputBuffer`** は {{domxref("AudioProcessingEvent")}} インターフェイスの読み取り専用プロパティで、音声処理イベントの出力バッファーを表します。
 

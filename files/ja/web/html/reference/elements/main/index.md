@@ -1,5 +1,5 @@
 ---
-title: HTML `<main>` メイン要素
+title: "`<main>` メイン要素"
 short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 l10n:

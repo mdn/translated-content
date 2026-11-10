@@ -29,7 +29,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>autofocus</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Управление должно получить фокус ввода при загрузки страницы, пока
         пользователь не отменяет его, например, набирая на клавиатуре в другом
@@ -39,7 +39,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>disabled</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>Контроль выключен, что означает, он не принимает любых кликов.</td>
     </tr>
     <tr>
@@ -88,7 +88,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>formNoValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         <p>
           Показывает что форма не будет проверена при отправке. Если задано,
@@ -196,7 +196,7 @@ _Наследует свойства от его родителя, {{domxref("HT
     </tr>
     <tr>
       <td><code>willValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Indicates whether the button is a candidate for constraint validation.
         It is <code>false</code> if any conditions bar it from constraint
@@ -210,10 +210,10 @@ _Наследует свойства от его родителя, {{domxref("HT
 
 _Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
-| Name                                    | Return Type            | Description                        |
-| --------------------------------------- | ---------------------- | ---------------------------------- |
-| `checkValidity()`                       | {{domxref("Boolean")}} | Not supported for button elements. |
-| `setCustomValidity(in DOMString error)` | `void`                 | Not supported for button elements. |
+| Name                                    | Return Type           | Description                        |
+| --------------------------------------- | --------------------- | ---------------------------------- |
+| `checkValidity()`                       | {{jsxref("Boolean")}} | Not supported for button elements. |
+| `setCustomValidity(in DOMString error)` | `void`                | Not supported for button elements. |
 
 WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
 

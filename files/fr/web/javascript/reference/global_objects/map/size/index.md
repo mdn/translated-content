@@ -3,10 +3,10 @@ title: "Map : propriété size"
 short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
-La propriété d'accesseur **`size`** des instances de {{JSxRef("Map")}} retourne le nombre d'éléments dans cette map.
+La propriété d'accesseur **`size`** des instances de {{JSxRef("Map")}} retourne le nombre d'éléments dans ce tableau associatif.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.size")}}
 

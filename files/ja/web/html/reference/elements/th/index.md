@@ -1,5 +1,5 @@
 ---
-title: HTML `<th>` 表見出し要素
+title: "`<th>` 表見出し要素"
 short-title: <th>
 slug: Web/HTML/Reference/Elements/th
 l10n:

@@ -17,7 +17,12 @@ a::after {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css-nolint
+::after {
+  content: /* value */;
+  /* properties */
+}
+```
 
 > [!NOTE]
 > O CSS3 introduziu a notação `::after` (com dois sinais de dois pontos) para distinguir [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) dos [pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Os navegadores também aceitam `:after`, introduzido no CSS2.

@@ -1,21 +1,24 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
+l10n:
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
-Un objet **`String`** est utilisé afin de représenter et de manipuler une chaîne de caractères.
+Un objet **`String`** est utilisé afin de représenter et de manipuler une séquence de caractères.
 
 ## Description
 
-Les chaînes de caractères sont utiles pour stocker des données qui peuvent être représentées sous forme de texte. Parmi les opérations les plus utilisées pour manipuler les chaînes de caractères, on a : la vérification de leur longueur avec [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length), la construction et la concaténation avec [les opérateurs `+` et `+=`](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators), la recherche de sous-chaîne avec les méthodes [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ou [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) ou encore l'extraction de sous-chaînes avec la méthode [`substring()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+Les chaînes de caractères sont utiles pour contenir des données pouvant être représentées sous forme de texte. Certaines des opérations les plus utilisées sur les chaînes de caractères consistent à vérifier leur longueur ({{JSxRef("String/length", "length")}}), à les construire et à les concaténer en utilisant les opérateurs de chaîne de caractères [`+` et `+=`](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_de_chaîne_de_caractères), à vérifier l'existence ou la position de sous-chaînes de caractères avec la méthode {{JSxRef("String/indexOf", "indexOf()")}}, ou à extraire des sous-chaînes de caractères avec la méthode {{JSxRef("String/substring", "substring()")}}.
 
 ### Créer des chaînes de caractères
 
-Il est possible de créer des chaînes de caractères comme des valeurs primitives ou comme des objets avec le constructeur [`String()`](/fr/docs/Web/JavaScript/Reference/String/String) :
+Les chaînes de caractères peuvent être créées comme des valeurs primitives, à partir de littéraux de chaîne de caractères, ou comme des objets, en utilisant le constructeur
+{{JSxRef("String/String", "String()")}}&nbsp;:
 
-```js
+```js-nolint
 const string1 = "Une chaîne de caractères primitive";
-const string2 = "Là encore une valeur de chaîne de caractères primitive";
+const string2 = 'Là encore une valeur de chaîne de caractères primitive';
 const string3 = `Et ici aussi`;
 ```
 
@@ -23,279 +26,339 @@ const string3 = `Et ici aussi`;
 const string4 = new String("Un objet String");
 ```
 
-Les valeurs primitives ou les objets représentant des chaînes de caractères peuvent être utilisés de façon interchangeable dans la plupart des situations. Voir ci-après [Chaînes de caractères : valeurs primitives et objets](#string_primitives_and_string_objects).
+Les chaînes de caractères primitives et les objets de chaîne de caractères partagent de nombreux comportements, mais présentent d'autres différences et particularités importantes.
+Voir «&nbsp;[Chaîne de caractères primitive et objets de chaîne de caractères](#chaîne_de_caractères_primitive_et_objets_de_chaîne_de_caractères)&nbsp;» ci-dessous.
 
-Les valeurs littérales pour les chaînes de caractères peuvent être indiquées avec des simples quotes (<kbd>'</kbd>), des doubles quotes (<kbd>"</kbd>) ou encore par des accents graves (<kbd>`</kbd>). Cette dernière forme permet de définir un [littéral de gabarit de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals) avec lequel on pourra interpoler des expressions dans une chaîne de caractères.
+Les littéraux de chaîne de caractères peuvent être définis en utilisant des guillemets simples ou doubles, qui sont traités de manière identique, ou en utilisant le caractère backtick <kbd>`</kbd>. Cette dernière forme définit un [littéral de gabarit](/fr/docs/Web/JavaScript/Reference/Template_literals)&nbsp;: avec cette forme, vous pouvez interpoler des expressions. Pour plus d'informations sur la syntaxe des littéraux de chaîne de caractères, voir [la grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux_de_chaîne_de_caractères).
 
 ### Accéder à un caractère
 
-Il existe deux façons d'accéder à un caractère dans une chaîne. La première façon consiste à utiliser la méthode [`charAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) :
+Il existe deux façons d'accéder à un caractère individuel dans une chaîne de caractères. La première consiste à utiliser la méthode {{JSxRef("String/charAt", "charAt()")}}&nbsp;:
 
 ```js
-return "chat".charAt(2); // renvoie "a"
+"chat".charAt(2); // retourne "a"
 ```
 
-La seconde méthode, introduite avec ECMAScript 5, est de manipuler la chaîne comme un tableau, où les caractères sont les éléments du tableau et ont un indice correspondant à leur position :
+Une autre méthode consiste à considérer la chaîne de caractères comme un objet de type tableau, dans lequel chaque caractère correspond à un index numérique&nbsp;:
 
 ```js
-return "chat"[2]; // renvoie "a"
+"chat"[2]; // retourne "a"
 ```
 
-En utilisant la seconde notation, il est impossible de supprimer ou d'affecter une valeur à ces propriétés. En effet, les propriétés concernées ne sont ni accessibles en écriture ni configurables. Pour plus d'informations, voir la page de [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
+Lorsque vous utilisez la notation entre crochets pour accéder aux propriétés, toute tentative de suppression ou d'affectation d'une valeur à ces propriétés échoue. Les propriétés concernées ne sont ni modifiables ni configurables. (Voir {{JSxRef("Object.defineProperty()")}} pour plus d'informations.)
 
 ### Comparer des chaînes de caractères
 
-Les développeurs C utilisent la fonction `strcmp()` pour comparer des chaînes de caractères. En JavaScript, il est possible d'utiliser [les opérateurs inférieur et supérieur](/fr/docs/Web/JavaScript/Reference/Operators)&nbsp;:
+Utilisez les [opérateurs inférieur et supérieur](/fr/docs/Web/JavaScript/Reference/Operators) pour comparer des chaînes de caractères&nbsp;:
 
 ```js
-let a = "a";
-let b = "b";
+const a = "a";
+const b = "b";
 if (a < b) {
   // true
-  console.log(a + " est inférieure à " + b);
+  console.log(`${a} est inférieure à ${b}`);
 } else if (a > b) {
-  console.log(a + " est supérieure à " + b);
+  console.log(`${a} est supérieure à ${b}`);
 } else {
-  console.log(a + " et " + b + " sont égales.");
+  console.log(`${a} et ${b} sont égales.`);
 }
 ```
 
-On peut obtenir un résultat semblable avec la méthode [`localeCompare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) qui permet de prendre en compte la locale utilisée et qui est héritée par toutes les instances de `String`.
-
-On notera que `a == b` compare les chaînes de caractères `a` et `b` de façon sensible à la casse. Si on souhaite comparer des chaînes sans être sensible à la casse, on pourra utiliser une fonction semblable à&nbsp;:
+Notez que tous les opérateurs de comparaison, y compris [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality) et [`==`](/fr/docs/Web/JavaScript/Reference/Operators/Equality), comparent les chaînes de caractères en tenant compte de la casse. Une façon courante de comparer des chaînes de caractères sans tenir compte de la casse consiste à convertir les deux chaînes de caractères dans le même format (majuscule ou minuscule) avant de les comparer.
 
 ```js
-function isEqual(str1, str2) {
+function sontEgauxSansSensibiliteDeCasse(str1, str2) {
   return str1.toUpperCase() === str2.toUpperCase();
 }
 ```
 
-On utilise ici une conversion en majuscules plutôt qu'en minuscules, car cela cause certains problèmes de conversion pour certains caractères UTF-8.
+Le choix de transformer par [`toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) ou [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) est en grande partie arbitraire, et aucune des deux méthodes n'est entièrement robuste lorsqu'on s'étend au-delà de l'alphabet latin. Par exemple, la lettre minuscule allemande `ß` et `ss` sont toutes deux transformées en `SS` par `toUpperCase()`, tandis que la lettre turque `ı` est faussement signalée comme inégale à `I` par `toLowerCase()` sauf si l'on utilise spécifiquement [`toLocaleLowerCase("tr")`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase).
+
+```js
+const sontEgauxEnMajuscules = (str1, str2) =>
+  str1.toUpperCase() === str2.toUpperCase();
+const sontEgauxEnMinuscules = (str1, str2) =>
+  str1.toLowerCase() === str2.toLowerCase();
+
+sontEgauxEnMajuscules("ß", "ss"); // true ; doit être false
+sontEgauxEnMinuscules("ı", "I"); // false ; doit être true
+```
+
+Une solution robuste et tenant compte des paramètres régionaux pour tester l'égalité sans tenir compte de la casse consiste à utiliser l'API {{JSxRef("Intl.Collator")}} ou la méthode [`localeCompare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) de la chaîne de caractères — elles partagent la même interface — avec l'option [`sensitivity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) définie sur `"accent"` ou `"base"`.
+
+```js
+const sontEgaux = (str1, str2, locale = "en-US") =>
+  str1.localeCompare(str2, locale, { sensitivity: "accent" }) === 0;
+
+sontEgaux("ß", "ss", "de"); // false
+sontEgaux("ı", "I", "tr"); // true
+```
+
+La méthode `localeCompare()` permet de comparer des chaînes de caractères de manière similaire à `strcmp()` — elle permet de trier des chaînes de caractères en tenant compte des paramètres régionaux.
 
 ### Les différences entre les objets `String` et le type primitif pour les chaînes de caractères
 
-En JavaScript, on distingue d'une part les objets `String` et d'autre par les valeurs primitives qui sont des chaînes de caractères (il en va de même pour les booléens/[`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et les nombres/[`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)).
+Notez que JavaScript distingue entre les objets `String` et les valeurs {{Glossary("Primitive", "de chaîne de caractères primitive")}}. (Il en va de même pour {{JSxRef("Boolean")}} et {{JSxRef("Number")}}.)
 
-Les valeurs littérales (délimitées par des simples quotes, des doubles quotes ou des accents graves et les chaînes de caractères renvoyées par les appels à `String` sans le mot-clé [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) sont des chaînes de caractères primitives. JavaScript convertit automatiquement les valeurs primitives en objets `String` et il est donc possible d'utiliser les méthodes objet de `String` sur les chaînes de caractères primitives. Dans les contextes où une méthode est appelée sur une chaîne de caractères primitive ou alors qu'on recherche une propriété, JavaScript convertira implicitement la valeur primitive et appellera la méthode ou accèdera à la propriété correspondante.
+Les littéraux de chaînes de caractères (délimités par des quotes doubles ou simples) et les chaînes de caractères retournées par les appels à `String` dans un contexte non constructeur (c'est-à-dire appelés sans utiliser le mot-clé {{JSxRef("new")}}) sont des chaînes de caractères primitives. Dans les contextes où une méthode doit être invoquée sur une chaîne de caractères primitive ou qu'une recherche de propriété se produit, JavaScript enveloppe automatiquement la chaîne de caractères primitive et appelle la méthode ou effectue la recherche de propriété sur l'objet enveloppant à la place.
 
 ```js
-let s_prim = "toto";
-let s_obj = new String(s_prim);
+const strPrim = "toto"; // Un littéral est une chaîne de caractères primitive
+const strPrim2 = String(1); // Converti en chaîne de caractères primitive "1"
+const strPrim3 = String(true); // Converti en chaîne de caractères primitive "true"
+const strObj = new String(strPrim); // String avec new retourne un objet enveloppant de chaîne de caractères.
 
-console.log(typeof s_prim); // affiche "string"
-console.log(typeof s_obj); // affiche "object"
+console.log(typeof strPrim); // "string"
+console.log(typeof strPrim2); // "string"
+console.log(typeof strPrim3); // "string"
+console.log(typeof strObj); // "object"
 ```
 
-Les chaînes primitives et les objets `String` renvoient des résultats différents lorsqu'ils sont évalués avec [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Les chaînes primitives sont traitées comme du code source, tandis que les objets `String` sont traités comme tous les autres objets, en renvoyant l'objet. Par exemple :
+> [!WARNING]
+> Vous devez rarement utiliser `String` comme constructeur.
+
+Les chaînes de caractères primitives et les objets `String` donnent également des résultats différents lorsqu'ils sont utilisés avec {{JSxRef("Global_Objects/eval", "eval()")}}. Les primitives passées à `eval` sont traitées comme du code source&nbsp;; les objets `String` sont traités comme tous les autres objets, en renvoyant l'objet. Par exemple&nbsp;:
 
 ```js
-let s1 = "2 + 2"; // crée une chaîne primitive
-let s2 = new String("2 + 2"); // crée un objet String
-console.log(eval(s1)); // renvoie le nombre 4
-console.log(eval(s2)); // renvoie la chaîne "2 + 2"
+const s1 = "2 + 2"; // crée une chaîne de caractères primitive
+const s2 = new String("2 + 2"); // crée un objet String
+console.log(eval(s1)); // retourne le nombre 4
+console.log(eval(s2)); // retourne la chaîne de caractères "2 + 2"
 ```
 
-Pour ces raisons, il peut y avoir certains problèmes quand le code attend une chaîne primitive plutôt qu'un objet `String`. Toutefois, cette distinction est rarement nécessaire en pratique.
+Pour ces raisons, le code peut échouer lorsqu'il rencontre des objets `String` alors qu'il attend une chaîne de caractères primitive, bien que, de manière générale, les auteur·ice·s n'aient pas à se soucier de cette distinction.
 
-Un objet `String` peut toujours être converti en son équivalent primitif grâce à la méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf).
+Un objet `String` peut toujours être converti en son équivalent primitif grâce à la méthode {{JSxRef("String/valueOf", "valueOf()")}}.
 
 ```js
-console.log(eval(s2.valueOf())); // renvoie 4
+console.log(eval(s2.valueOf())); // retourne le nombre 4
 ```
 
-### Échappement des caractères
+### Conversion en chaîne de caractères
 
-En dehors des caractères classiques, des caractères spéciaux peuvent être encodés grâce à l'échappement :
+De nombreuses opérations intégrées qui attendent des chaînes de caractères convertissent d'abord leurs arguments en chaînes de caractères (ce qui explique en grande partie pourquoi les objets `String` se comportent de manière similaire aux chaînes de caractères primitives). [L'opération <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tostring) peut être résumée comme suit&nbsp;:
 
-| Code                                                                                                     | Résultat                                                                                                                |
-| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                     | Caractère nul (U+0000 NULL)                                                                                             |
-| `\'`                                                                                                     | simple quote (U+0027 APOSTROPHE)                                                                                        |
-| `\"`                                                                                                     | double quote (U+0022 QUOTATION MARK)                                                                                    |
-| `\\`                                                                                                     | barre oblique inversée (U+005C REVERSE SOLIDUS)                                                                         |
-| `\n`                                                                                                     | nouvelle ligne (U+000A LINE FEED; LF)                                                                                   |
-| `\r`                                                                                                     | retour chariot (U+000D CARRIAGE RETURN; CR)                                                                             |
-| `\v`                                                                                                     | tabulation verticale (U+000B LINE TABULATION)                                                                           |
-| `\t`                                                                                                     | tabulation (U+0009 CHARACTER TABULATION)                                                                                |
-| `\b`                                                                                                     | retour arrière (U+0008 BACKSPACE)                                                                                       |
-| `\f`                                                                                                     | saut de page (U+000C FORM FEED)                                                                                         |
-| `\uXXXX` (`XXXX` étant 4 chiffres hexadécimaux pour l'intervalle of 0x0000 - 0xFFFF)                     | Point de code Unicode entre U+0000 et U+FFFF (représente le plan Unicode multilingue basique)                           |
-| `\u{X}` ... `\u{XXXXXX}` (`X…XXXXXX` étant 1 à 6 chiffres hexadécimaux pour l'intervalle 0x0 - 0x10FFFF) | Point de code Unicode entre U+0000 et U+10FFFF (représente l'intégralité d'Unicode)                                     |
-| `\xXX` (`XX` étant 2 chiffres hexadécimaux pour l'intervalle 0x00 - 0xFF)                                | Point de code Unicode entre U+0000 et U+00FF (correspond à Basic Latin et Latin-1 supplement ; équivalent à ISO-8859-1) |
+- Les chaînes de caractères sont retournées telles quelles.
+- [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) se transforme en `"undefined"`.
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) se transforme en `"null"`.
+- `true` se transforme en `"true"`&nbsp;; `false` se transforme en `"false"`.
+- Les nombres se transforment avec le même algorithme que [`toString(10)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+- Les [grands entiers](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) se transforment avec le même algorithme que [`toString(10)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
+- Les [symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) lèvent une {{JSxRef("TypeError")}}.
+- Les objets sont d'abord [convertis en primitive](/fr/docs/Web/JavaScript/Guide/Data_structures#conversion_en_primitive) en appelant leurs méthodes [`[Symbol.toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (avec `"string"` comme indice), `toString()`, et `valueOf()`, dans cet ordre. La primitive résultante est ensuite convertie en chaîne de caractères.
 
-### Littéraux pour les chaînes longues
+Il existe plusieurs façons d'obtenir pratiquement le même effet en JavaScript.
 
-Il peut arriver que le code contienne des chaînes plutôt longues. Plutôt que d'avoir des lignes qui s'étirent sur tout le fichier et dans un éditeur de code, il est possible de casser la chaîne sur plusieurs lignes sans que cela modifie le contenu de la chaîne. Il existe deux façons de faire.
+- Les [littéraux de modèle](/fr/docs/Web/JavaScript/Reference/Template_literals)&nbsp;: `` `${x}` `` effectuent exactement les étapes de conversion de chaîne de caractères expliquées ci-dessus pour l'expression intégrée.
+- La fonction [`String()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/String)&nbsp;: `String(x)` utilise le même algorithme pour convertir `x`, sauf que les [symboles] (/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) ne provoquent pas de {{JSxRef("TypeError")}}, mais retournent `"Symbol(description)"`, où `description` est la [description](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) du symbole.
+- Utilisation de [l'opérateur `+`](/fr/docs/Web/JavaScript/Reference/Operators/Addition)&nbsp;: `"" + x` convertit son opérande en un _type primitif_ plutôt qu'en une _chaîne de caractères_ et, pour certains objets, présente un comportement totalement différent de la conversion habituelle en chaîne de caractères. Consultez sa [page de référence](/fr/docs/Web/JavaScript/Reference/Operators/Addition) pour plus de détails.
 
-#### Méthode 1
+Selon votre cas d'utilisation, vous pouvez utiliser `` `${x}` `` (pour imiter le comportement intégré) ou `String(x)` (pour gérer les valeurs de type symbole sans générer d'erreur), mais vous ne devez pas utiliser `"" + x`.
 
-```js
-let chaineLongue =
-  "Voici une très longue chaîne qui a besoin " +
-  " d'être passée à la ligne parce que sinon " +
-  " ça risque de devenir illisible.";
-```
+### Caractères UTF-16, points de code Unicode et groupes de graphèmes
 
-#### Méthode 2
+Les chaînes de caractères sont essentiellement représentées sous forme de séquences [d'unités de code UTF-16 <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/UTF-16). Dans le jeu de caractères UTF-16, chaque unité de code a une longueur exacte de 16 bits. Cela signifie qu'il existe au maximum 2<sup>16</sup>, soit 65 536 caractères possibles pouvant être représentés par des unités de code UTF-16 individuelles. Ce jeu de caractères est appelé [plan multilingue de base (BMP) <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>) et comprend les caractères les plus courants, tels que les alphabets latin, grec et cyrillique, ainsi que de nombreux caractères d'Asie de l'Est. Chaque unité de code peut être écrite dans une chaîne de caractères sous la forme `\u` suivie d'exactement quatre chiffres hexadécimaux.
 
-On peut sinon utiliser le caractère barre oblique inversée "\\" à la fin de chaque ligne pour indiquer que la chaîne continue sur la ligne suivante. Il faut bien faire attention à ce que la barre oblique soit bien le dernier caractère de la ligne avant le saut de ligne. Sinon, cela ne fonctionnera pas. Voilà comment se présente cette forme :
+Cependant, l'ensemble complet des caractères Unicode est bien, bien plus vaste que 65 536. Les caractères supplémentaires sont stockés en UTF-16 sous forme de _paires de substituts_, c'est-à-dire des paires d'unités de code de 16 bits représentant un seul caractère. Pour éviter toute ambiguïté, les deux parties de la paire doivent être comprises entre `0xD800` et `0xDFFF` et ces unités de code ne sont pas utilisées pour encoder des caractères à une seule unité de code. (Plus précisément, les substituts de tête, également appelés unités de code de substitut haut, ont des valeurs comprises entre `0xD800` et `0xDBFF` inclus, tandis que les substituts de queue, également appelés unités de code de substitut bas, ont des valeurs comprises entre `0xDC00` et `0xDFFF` inclus.) Chaque caractère Unicode, composé d'une ou deux unités de code UTF-16, est également appelé _point de code Unicode_. Chaque point de code Unicode peut être écrit dans une chaîne de caractères sous la forme `\u{xxxxxx}`, où `xxxxxx` représente 1 à 6 chiffres hexadécimaux.
 
-```js
-let chaineLongue =
-  "Voici une très longue chaîne qui a besoin \
-d'être passée à la ligne parce que sinon \
-ça risque de devenir illisible.";
-```
+Un «&nbsp;caractère de remplacement isolé&nbsp;» est une unité de code de 16 bits répondant à l'une des descriptions suivantes&nbsp;:
 
-#### Méthode 3
+- Il se situe dans la plage comprise entre `0xD800` et `0xDBFF`, incluant ces valeurs (c'est-à-dire qu'il s'agit d'un substitut de début), mais il s'agit de la dernière unité de code de la chaîne de caractères, ou l'unité de code suivante n'est pas un substitut de fin.
+- Elle se situe dans la plage comprise entre `0xDC00` et `0xDFFF`, incluant ces valeurs (c'est-à-dire qu'il s'agit d'un substitut de fin), mais elle est la première unité de code de la chaîne de caractères, ou l'unité de code précédente n'est pas un substitut de début.
 
-Si les sauts de ligne doivent faire partie du résultat, on peut utiliser l'accent grave comme délimiteur de chaîne. Celui-ci permet d'utiliser des sauts de ligne à l'intérieur de la valeur littérale.
+Les caractères de substitution isolés ne représentent aucun caractère Unicode. Bien que la plupart des méthodes intégrées de JavaScript les gèrent correctement, car elles fonctionnent toutes sur la base d'unités de code UTF-16, les caractères de substitution isolés ne constituent souvent pas des valeurs valides lors d'interactions avec d'autres systèmes — par exemple, [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) lève une exception {{JSxRef("URIError")}} pour les caractères de substitution isolés, car l'encodage URI utilise l'encodage UTF-8, qui ne prévoit aucun encodage pour ces caractères. Les chaînes de caractères ne contenant aucun caractère de substitution isolé sont dites _bien formées_ et peuvent être utilisées en toute sécurité avec des fonctions qui ne gèrent pas l'UTF-16 (telles que `encodeURI()` ou {{DOMxRef("TextEncoder")}}). Vous pouvez vérifier si une chaîne de caractères est bien formée à l'aide de la méthode {{JSxRef("String/isWellFormed", "isWellFormed()")}}, ou nettoyer les caractères de substitution isolés à l'aide de la méthode {{JSxRef("String/toWellFormed", "toWellFormed()")}}.
+
+Outre les caractères Unicode, il existe certaines séquences de caractères Unicode qui doivent être considérées comme une seule unité visuelle, appelée _groupe de graphèmes_. Les emojis en sont l'exemple le plus courant&nbsp;: de nombreux emojis, qui présentent toute une gamme de variantes, sont en réalité composés de plusieurs emojis, généralement reliés par le caractère \<ZWJ> (`U+200D`).
+
+Vous devez faire attention au niveau des caractères sur lequel vous effectuez la boucle. Par exemple, [`split("")`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) effectue une division par unités de code UTF-16 et sépare les paires de caractères de substitution. Les indices de chaîne de caractères font également référence à l'indice de chaque unité de code UTF-16. En revanche, [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) effectue une itération par points de code Unicode. Pour itérer sur des groupes de graphèmes, il faut utiliser du code personnalisé.
 
 ```js
-let chaineLongue = `Voici une très longue chaîne qui a besoin
-d'être passée à la ligne parce que sinon
-ça risque de devenir illisible.`;
+"😄".split(""); // ['\ud83d', '\ude04'] ; se divise en deux substituts isolés
+
+// « Main avec l'index pointant vers la droite : Teint foncé »
+[..."👉🏿"]; // ['👉', '🏿']
+// se divise en l'emoji de base « Main avec l'index pointant vers la droite » et
+// l'emoji « Teint foncé »
+
+// "Family: Man, Boy"
+[..."👨‍👦"]; // [ '👨', '‍', '👦' ]
+// se divise en les emojis « Homme » et « Garçon », reliés par un ZWJ
+
+// The United Nations flag
+[..."🇺🇳"]; // [ '🇺', '🇳' ]
+// se divise en deux lettres « indicateur de région » « U » et « N ».
+// Tous les emojis de drapeau sont formés en joignant deux lettres « indicateur de région »
 ```
 
 ## Constructeur
 
-- [`String()`](/fr/docs/Web/JavaScript/Reference/String/String)
+- {{JSxRef("String/String", "String()")}}
   - : Crée un nouvel `String`. S'il est appelé comme une fonction plutôt que comme un constructeur, il effectue une conversion de la valeur en chaîne de caractères.
 
 ## Méthodes statiques
 
-- [`String.fromCharCode(num1 [, ...[,numN]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
-  - : Renvoie une chaîne de caractères créée en utilisant la séquence indiquée de valeurs Unicode.
-- [`String.fromCodePoint(num1 [, ...[,numN]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint)
-  - : Renvoie une chaîne de caractères créée en utilisant la séquence indiquée de points de code.
-- [`String.raw()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/raw)
-  - : Renvoie une chaîne de caractères créée à partir d'un gabarit de chaîne de caractères brut.
+- {{JSxRef("String.fromCharCode()")}}
+  - : Retourne une chaîne de caractères créée à partir de la séquence définie de valeurs Unicode.
+- {{JSxRef("String.fromCodePoint()")}}
+  - : Retourne une chaîne de caractères créée à partir de la séquence de points de code définie.
+- {{JSxRef("String.raw()")}}
+  - : Retourne une chaîne de caractères créée à partir d'une chaîne de caractères brute de modèle.
 
-## Propriétés des instances
+## Propriétés d'instance
 
-- [`String.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length)
-  - : Cette propriété indique la longueur de la chaîne de caractères. Elle est en lecture seule.
+Ces propriétés sont définies sur `String.prototype` et partagées par toutes les instances de `String`.
 
-## Méthodes des instances
+- {{JSxRef("Object/constructor", "String.prototype.constructor")}}
+  - : La fonction de constructeur qui crée une instance de l'objet. Pour les instances de `String`, la valeur initiale est le constructeur {{JSxRef("String/String", "String()")}}.
 
-- [`String.prototype.at(index)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/at){{Experimental_Inline}}
-  - : Renvoie le caractère (exactement un seul codet UTF-16) à l'indice indiqué par `index`. Les indices négatifs sont acceptés, dans ce cas ils indiquent la position par rapport au dernier caractère.
-- [`String.prototype.charAt(index)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
-  - : Renvoie le caractère (exactement un seul codet UTF-16) à l'indice indiqué par `index`.
-- [`String.prototype.charCodeAt(index)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
-  - : Renvoie un nombre qui est la valeur du codet UTF-16 à l'indice indiqué par `index`.
-- [`String.prototype.codePointAt(pos)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt)
-  - : Renvoie un entier positif qui correspond à la valeur du codet UTF-16 à la position indiquée par `pos`.
-- [`String.prototype.concat(str [,...strN ])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
-  - : Combine le texte de deux (ou plusieurs) chaînes en une nouvelle chaîne de caractères.
-- [`String.prototype.includes(searchString [, position])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
-  - : Détermine si la chaîne de caractères courante contient `searchString`.
-- [`String.prototype.endsWith(searchString [, length])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith)
-  - : Détermine si la chaîne de caractères courante se termine par `searchString`.
-- [`String.prototype.indexOf(searchValue [, fromIndex])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
-  - : Renvoie l'indice, au sein de la chaîne courante, de la première occurrence de `searchValue` ou `-1` si ce motif n'est pas trouvé.
-- [`String.prototype.lastIndexOf(searchValue [, fromIndex])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
-  - : Renvoie l'indice, au sein de la chaîne courant, de la dernière occurrence de `searchValue` ou `-1` si ce motif n'est pas trouvé.
-- [`String.prototype.localeCompare(compareString [, locales [, options]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
-  - : Renvoie un nombre indiquant si la chaîne courante vient avant ou après (ou est équivalente à ) `compareString` pour l'ordre de tri.
-- [`String.prototype.match(regexp)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-  - : Permet de tester la correspondance d'une expression rationnelle entre `regexp` et la chaîne de caractères courante.
-- [`String.prototype.matchAll(regexp)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
-  - : Renvoie un itérateur contenant l'ensemble des correspondances de l'expression rationnelle `regexp` au sein de la chaîne de caractères courante.
-- [`String.prototype.normalize([form])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)
-  - : Renvoie la forme Unicode normalisée de la chaîne courante.
-- [`String.prototype.padEnd(targetLength [, padString])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
-  - : Complète la chaîne courante à la fin avec une chaîne donnée afin d'obtenir une longueur cible `targetLength` et renvoie la chaîne ainsi construite.
-- [`String.prototype.padStart(targetLength [, padString])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
-  - : Complète la chaîne courante au début avec une chaîne donnée afin d'obtenir une longueur cible `targetLength` et renvoie la chaîne ainsi construite.
-- [`String.prototype.repeat(count)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
-  - : Renvoie une chaîne de caractères qui est la répétition (`count` fois) de la chaîne de caractères courante.
-- [`String.prototype.replace(searchFor, replaceWith)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-  - : Remplace les occurrences de `searchFor` par `replaceWith`. `searchFor` peut être une chaîne de caractères ou une expression rationnelle et `replaceWith` peut être une chaîne de caractères ou une fonction.
-- [`String.prototype.replaceAll(searchFor, replaceWith)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)
-  - : Remplace toutes les occurrences de `searchFor` avec `replaceWith`. `searchFor` peut être une chaîne de caractères ou une expression rationnelle et `replaceWith` peut être une chaîne de caractères ou une fonction.
-- [`String.prototype.search(regexp)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/search)
-  - : Recherche une correspondance entre une expression rationnelle `regexp` et la chaîne de caractères courante.
-- [`String.prototype.slice(beginIndex[, endIndex])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
-  - : Extrait une section de la chaîne de caractères et renvoie une nouvelle chaîne de caractères.
-- [`String.prototype.split([sep [, limit] ])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)
-  - : Renvoie un tableau de chaînes de caractères composé des fragments de la chaîne courante scindée à chaque occurrence de la sous-chaîne `sep`.
-- [`String.prototype.startsWith(searchString [, length])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith)
-  - : Détermine si la chaîne courante commence par la chaîne de caractères indiquée en paramètre (`searchString`).
-- [`String.prototype.substring(indexStart [, indexEnd])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
-  - : Renvoie une nouvelle chaîne de caractères contenant les caractères de la chaîne courante, situés à partir de l'indice donné ou entre les indices donnés.
-- [`String.prototype.toLocaleLowerCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase)
-  - : Renvoie une conversion en minuscules de la chaîne de caractères courante qui respecte la locale indiquée.
+Ces propriétés sont des propriétés propres à chaque instance de `String`.
 
-    Pour la plupart des langues, cela renverra la même valeur que [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
+- {{JSxRef("String/length", "length")}} {{ReadOnlyInline}}
+  - : Reflète la longueur (`length`) de la chaîne de caractères.
 
-- [`String.prototype.toLocaleUpperCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase)
-  - : Renvoie une conversion en majuscules de la chaîne de caractères courante qui respecte la locale indiquée.
+## Méthodes d'instance
 
-    Pour la plupart des langues, cela renverra la même valeur que [`toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase).
+- {{JSxRef("String.prototype.at()")}}
+  - : Retourne le caractère (exactement une unité de code UTF-16) à un `index` défini. Accepte les entiers négatifs, qui comptent à rebours à partir du dernier caractère de la chaîne de caractères.
+- {{JSxRef("String.prototype.charAt()")}}
+  - : Retourne le caractère (exactement une unité de code UTF-16) à un `index` défini.
+- {{JSxRef("String.prototype.charCodeAt()")}}
+  - : Retourne un nombre qui est la valeur de l'unité de code UTF-16 à un `index` donné.
+- {{JSxRef("String.prototype.codePointAt()")}}
+  - : Retourne un nombre entier non négatif qui est la valeur du point de code de l'unité de code UTF-16 encodée commençant à la position (`pos`) définie.
+- {{JSxRef("String.prototype.concat()")}}
+  - : Combine le texte de deux chaînes de caractères (ou plus) et retourne une nouvelle chaîne de caractères.
+- {{JSxRef("String.prototype.endsWith()")}}
+  - : Détermine si une chaîne de caractères se termine par les caractères de la chaîne de caractères `searchString`.
+- {{JSxRef("String.prototype.includes()")}}
+  - : Détermine si la chaîne de caractères appelante contient `searchString`.
+- {{JSxRef("String.prototype.indexOf()")}}
+  - : Retourne l'indice, au sein de cette chaîne de caractères, de la première occurrence de `searchValue`, ou `-1` si celle-ci n'est pas trouvée.
+- {{JSxRef("String.prototype.isWellFormed()")}}
+  - : Retourne une valeur booléenne indiquant si cette chaîne de caractères contient des [substituts isolés](#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes).
+- {{JSxRef("String.prototype.lastIndexOf()")}}
+  - : Retourne l'indice, au sein de cette chaîne de caractères, de la dernière occurrence de `searchValue`, ou `-1` si celle-ci n'est pas trouvée.
+- {{JSxRef("String.prototype.localeCompare()")}}
+  - : Retourne un nombre indiquant si la chaîne de caractères de référence `compareString` précède, suit ou est équivalente à la chaîne de caractères donnée dans l'ordre de tri.
+- {{JSxRef("String.prototype.match()")}}
+  - : Permet de comparer l'expression régulière `regexp` à une chaîne de caractères.
+- {{JSxRef("String.prototype.matchAll()")}}
+  - : Retourne un itérateur contenant toutes les occurrences de `regexp`.
+- {{JSxRef("String.prototype.normalize()")}}
+  - : Retourne la forme de normalisation Unicode de la valeur de la chaîne de caractères appelée.
+- {{JSxRef("String.prototype.padEnd()")}}
+  - : Complète la chaîne de caractères actuelle par la fin avec une chaîne de caractères donnée et retourne une nouvelle chaîne de caractères de longueur `targetLength`.
+- {{JSxRef("String.prototype.padStart()")}}
+  - : Remplit la chaîne de caractères actuelle à partir du début avec une chaîne de caractères donnée et retourne une nouvelle chaîne de caractères d'une longueur de `targetLength`.
+- {{JSxRef("String.prototype.repeat()")}}
+  - : Retourne une chaîne de caractères composée des éléments de l'objet répétés `count` fois.
+- {{JSxRef("String.prototype.replace()")}}
+  - : Utilisé pour remplacer les occurrences de `searchFor` en utilisant `replaceWith`. `searchFor` peut être une chaîne de caractères ou une expression régulière, et `replaceWith` peut être une chaîne de caractères ou une fonction.
+- {{JSxRef("String.prototype.replaceAll()")}}
+  - : Utilisé pour remplacer toutes les occurrences de `searchFor` en utilisant `replaceWith`. `searchFor` peut être une chaîne de caractères ou une expression régulière, et `replaceWith` peut être une chaîne de caractères ou une fonction.
+- {{JSxRef("String.prototype.search()")}}
+  - : Recherche une correspondance entre une expression régulière `regexp` et la chaîne de caractères appelante.
+- {{JSxRef("String.prototype.slice()")}}
+  - : Extrait une section d'une chaîne de caractères et retourne une nouvelle chaîne de caractères.
+- {{JSxRef("String.prototype.split()")}}
+  - : Retourne un tableau de chaînes de caractères obtenu en scindant la chaîne de caractères appelante aux occurrences de la sous-chaîne de caractères `sep`.
+- {{JSxRef("String.prototype.startsWith()")}}
+  - : Détermine si la chaîne de caractères appelante commence par les caractères de la chaîne de caractères `searchString`.
+- {{JSxRef("String.prototype.substr()")}} {{Deprecated_Inline}}
+  - : Retourne une portion de la chaîne de caractères, en commençant à l'indice défini et en s'étendant sur un nombre donné de caractères par la suite.
+- {{JSxRef("String.prototype.substring()")}}
+  - : Retourne une nouvelle chaîne de caractères contenant les caractères de la chaîne de caractères appelante à partir de (ou entre) l'indice (ou les indices) défini(s).
+- {{JSxRef("String.prototype.toLocaleLowerCase()")}}
+  - : Les caractères d'une chaîne de caractères sont convertis en minuscules tout en respectant la locale actuelle.
 
-- [`String.prototype.toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
-  - : Renvoie la valeur de la chaîne de caractères, convertie en minuscules.
-- [`String.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString)
-  - : Renvoie une chaîne de caractères représentant l'objet courant. Surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`String.prototype.toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
-  - : Renvoie la valeur de la chaîne de caractères, convertie en majuscules.
-- [`String.prototype.trim()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
-  - : Retire les blancs situés au début et à la fin de la chaîne de caractères.
-- [`String.prototype.trimStart()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart)
-  - : Retire les blancs situés au début de la chaîne de caractères.
-- [`String.prototype.trimEnd()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
-  - : Retire les blancs situés à la fin de la chaîne de caractères.
-- [`String.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf)
-  - : Renvoie la valeur primitive de l'objet courant. Surcharge la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
-- [`String.prototype.@@iterator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
-  - : Renvoie un nouvel objet itérateur qui permet d'itérer sur les points de code composant la chaîne de caractère. Chaque point de code est renvoyé comme une chaîne de caractères.
+    Pour la plupart des langues, cela retourne le même résultat que {{JSxRef("String/toLowerCase", "toLowerCase()")}}.
+
+- {{JSxRef("String.prototype.toLocaleUpperCase()")}}
+  - : Les caractères d'une chaîne de caractères sont convertis en majuscules tout en respectant la locale actuelle.
+
+    Pour la plupart des langues, cela retourne le même résultat que {{JSxRef("String/toUpperCase", "toUpperCase()")}}.
+
+- {{JSxRef("String.prototype.toLowerCase()")}}
+  - : Retourne la valeur de la chaîne de caractères appelante convertie en minuscules.
+- {{JSxRef("String.prototype.toString()")}}
+  - : Retourne une chaîne de caractères représentant l'objet défini. Remplace la méthode {{JSxRef("Object.prototype.toString()")}}.
+- {{JSxRef("String.prototype.toUpperCase()")}}
+  - : Retourne la valeur de la chaîne de caractères appelante convertie en majuscules.
+- {{JSxRef("String.prototype.toWellFormed()")}}
+  - : Retourne une chaîne de caractères où tous les [substituts isolés](#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes) de cette chaîne de caractères sont remplacés par le caractère de remplacement Unicode U+FFFD.
+- {{JSxRef("String.prototype.trim()")}}
+  - : Supprime les espaces blancs au début et à la fin de la chaîne de caractères.
+- {{JSxRef("String.prototype.trimEnd()")}}
+  - : Supprime les espaces blancs à la fin de la chaîne de caractères.
+- {{JSxRef("String.prototype.trimStart()")}}
+  - : Supprime les espaces blancs au début de la chaîne de caractères.
+- {{JSxRef("String.prototype.valueOf()")}}
+  - : Retourne la valeur primitive de l'objet défini. Remplace la méthode {{JSxRef("Object.prototype.valueOf()")}}.
+- [`String.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
+  - : Retourne un nouvel objet itérateur qui parcourt les points de code d'une valeur de chaîne de caractères, en renvoyant chaque point de code sous forme de valeur de chaîne de caractères.
 
 ## Méthodes de conversion HTML
 
 > [!WARNING]
-> Ces méthodes sont dépréciées et ne doivent plus être utilisées.
+> Obsolète. Évitez d'utiliser ces méthodes.
 >
-> Elles ont des possibilités limitées et ne concernent qu'une petite sous-partie des éléments et attributs HTML disponibles.
+> Elles ont des possibilités limitées, car elles sont basées sur une norme HTML très ancienne et ne fournissent qu'un sous-ensemble des balises et attributs HTML actuellement disponibles. Beaucoup d'entre elles créent aujourd'hui un balisage obsolète ou non standard. De plus, elles effectuent une concaténation de chaînes de caractères sans aucune validation ni assainissement, ce qui en fait une menace potentielle pour la sécurité lorsqu'elles sont insérées directement à l'aide de [`innerHTML`](/fr/docs/Web/API/Element/innerHTML). Utilisez plutôt les [API DOM](/fr/docs/Web/API/Document_Object_Model) telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement).
 
-- [`String.prototype.anchor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/anchor)
+- {{JSxRef("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : [`<a name="name">`](/fr/docs/Web/HTML/Reference/Elements/a#name) (cible hypertexte)
-- [`String.prototype.big()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/big)
-  - : [`<big>`](/fr/docs/Web/HTML/Reference/Elements/big)
-- [`String.prototype.blink()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/blink)
-  - : [`<blink>`](/fr/docs/Web/HTML/Element/blink)
-- [`String.prototype.bold()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/bold)
-  - : [`<b>`](/fr/docs/Web/HTML/Reference/Elements/b)
-- [`String.prototype.fixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fixed)
-  - : [`<tt>`](/fr/docs/Web/HTML/Reference/Elements/tt)
-- [`String.prototype.fontcolor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fontcolor)
+- {{JSxRef("String.prototype.big()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("big")}}
+- {{JSxRef("String.prototype.blink()")}} {{Deprecated_Inline}}
+  - : `<blink>`
+- {{JSxRef("String.prototype.bold()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("b")}}
+- {{JSxRef("String.prototype.fixed()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("tt")}}
+- {{JSxRef("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
   - : [`<font color="color">`](/fr/docs/Web/HTML/Reference/Elements/font#color)
-- [`String.prototype.fontsize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fontsize)
+- {{JSxRef("String.prototype.fontsize()")}} {{Deprecated_Inline}}
   - : [`<font size="size">`](/fr/docs/Web/HTML/Reference/Elements/font#size)
-- [`String.prototype.italics()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/italics)
-  - : [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i)
-- [`String.prototype.link()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/link)
-  - : [`<a href="url">`](/fr/docs/Web/HTML/Reference/Elements/a#href) (lien d'une URL)
-- [`String.prototype.small()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/small)
-  - : [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small)
-- [`String.prototype.strike()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/strike)
-  - : [`<strike>`](/fr/docs/Web/HTML/Reference/Elements/strike)
-- [`String.prototype.sub()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/sub)
-  - : [`<sub>`](/fr/docs/Web/HTML/Reference/Elements/sub)
-- [`String.prototype.sup()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/sup)
-  - : [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup)
+- {{JSxRef("String.prototype.italics()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("i")}}
+- {{JSxRef("String.prototype.link()")}} {{Deprecated_Inline}}
+  - : [`<a href="url">`](/fr/docs/Web/HTML/Reference/Elements/a#href) (lien vers l'URL)
+- {{JSxRef("String.prototype.small()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("small")}}
+- {{JSxRef("String.prototype.strike()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("strike")}}
+- {{JSxRef("String.prototype.sub()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("sub")}}
+- {{JSxRef("String.prototype.sup()")}} {{Deprecated_Inline}}
+  - : {{HTMLElement("sup")}}
+
+Notez que ces méthodes ne vérifient pas si la chaîne de caractères elle-même contient des balises HTML, il est donc possible de créer du HTML invalide&nbsp;:
+
+```js
+"</b>".bold(); // <b></b></b>
+```
+
+La seule échappement qu'elles effectuent est de remplacer `"` dans la valeur de l'attribut (pour {{JSxRef("String/anchor", "anchor()")}}, {{JSxRef("String/fontcolor", "fontcolor()")}}, {{JSxRef("String/fontsize", "fontsize()")}} et {{JSxRef("String/link", "link()")}}) par `&quot;`.
+
+```js
+"toto".anchor('"Bonjour"'); // <a name="&quot;Bonjour&quot;">toto</a>
+```
 
 ## Exemples
 
 ### Conversion en chaîne de caractères
 
-Il est possible d'utiliser `String` comme une alternative à [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString) car cela permet de traiter les valeurs [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et les [symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Ainsi :
+La fonction `String()` est un moyen plus fiable de convertir des valeurs en chaînes de caractères que d'appeler la méthode `toString()` sur la valeur, car la première fonctionne lorsqu'elle est utilisée sur [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) et {{JSxRef("undefined")}}. Par exemple&nbsp;:
 
 ```js
-let chainesSortie = [];
-for (let i = 0, n = valeursEntree.length; i < n; ++i) {
-  chainesSortie.push(String(valeursEntree[i]));
-}
+// Vous ne pouvez pas accéder aux propriétés de null ou undefined
+
+const nullVar = null;
+nullVar.toString(); // TypeError: Cannot read properties of null
+String(nullVar); // "null"
+
+const undefinedVar = undefined;
+undefinedVar.toString(); // TypeError: Cannot read properties of undefined
+String(undefinedVar); // "undefined"
 ```
 
 ## Spécifications
@@ -308,7 +371,5 @@ for (let i = 0, n = valeursEntree.length; i < n; ++i) {
 
 ## Voir aussi
 
-- [Formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
-- [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
-- [Les chaînes binaires](/fr/docs/Web/API/Window/btoa)
+- Le guide [des nombres et chaînes de caractères](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
+- L'objet natif {{JSxRef("RegExp")}}

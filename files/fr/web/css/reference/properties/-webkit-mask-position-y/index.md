@@ -3,7 +3,7 @@ title: Propriété CSS `-webkit-mask-position-y`
 short-title: -webkit-mask-position-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-y
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -44,15 +44,17 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-position-y`** permet de d
 
 ### Valeurs
 
+Cette propriété est définie par une ou plusieurs valeurs séparées par une virgule&nbsp;:
+
 - `<length-percentage>`
-  - : Une longueur indiquant la position du haut de l'image à partir du bord haut de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension verticale de la boîte de remplissage (`0%` indique que le bord haut de l'image est aligné avec le bord haut de la boîte de remplissage et `100%` indique que le bord bas de l'image est aligné avec le bord bas de la boîte de remplissage).
+  - : Une longueur indiquant la position du haut de l'image à partir du bord haut de la boîte de remplissage. Les pourcentages sont calculés relativement à la dimension verticale de la boîte de remplissage (`0%` indique que le bord haut de l'image est aligné avec le bord haut de la boîte de remplissage et `100%` indique que le bord bas de l'image est aligné avec le bord bas de la boîte de remplissage).
 - `<length>`
-  - : Une longueur, mesurée à partir du bord haut de la boîte de remplissage (_padding_), qui indique la position verticale de l'image.
-- **`top`**
+  - : Une longueur, mesurée à partir du bord haut de la boîte de remplissage, qui indique la position verticale de l'image.
+- `top`
   - : Un mot-clé équivalent à `0%`.
-- **`bottom`**
+- `bottom`
   - : Un mot-clé équivalent à `100%`.
-- **`center`**
+- `center`
   - : Un mot-clé équivalent à `50%`.
 
 ## Définition formelle
@@ -69,12 +71,12 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-position-y`** permet de d
 
 ```css
 .exempleUn {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-y: bottom;
 }
 
 .exempleDeux {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-y: 25%;
 }
 ```

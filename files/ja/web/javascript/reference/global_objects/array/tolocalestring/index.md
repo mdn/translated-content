@@ -3,7 +3,7 @@ title: Array.prototype.toLocaleString()
 short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
 **`toLocaleString()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます（例えばカンマ "," など）。
@@ -30,7 +30,7 @@ toLocaleString(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag","BCP 47 言語タグ")}}の文字列か、その配列です。`locales` 引数の一般的な形式と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
   - : 設定プロパティのオブジェクトです。ここで渡すことができるものは、変換される要素によって異なります。例えば、数値の場合は {{jsxref("Number.prototype.toLocaleString()")}} を参照してください。
 

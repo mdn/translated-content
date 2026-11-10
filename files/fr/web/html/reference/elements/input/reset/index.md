@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="reset">`
 short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.
@@ -13,11 +13,10 @@ Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sou
 ```html interactive-example
 <form>
   <div class="controls">
-    <label for="id">Identifiant&nbsp;:</label>
-    <input type="text" id="id" name="id" />
+    <label for="comments">Commentaires&nbsp;:</label>
+    <textarea id="comments" name="comments"></textarea>
 
-    <input type="reset" value="Réinitialiser" />
-    <input type="submit" value="Envoyer" />
+    <input type="reset" value="Reset" />
   </div>
 </form>
 ```
@@ -26,7 +25,7 @@ Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sou
 .controls {
   padding-top: 1rem;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-template-columns: 1fr 2fr;
   gap: 0.7rem;
 }
@@ -36,8 +35,7 @@ label {
   justify-self: end;
 }
 
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"] {
   width: 5rem;
   justify-self: end;
 }
@@ -46,15 +44,7 @@ input[type="reset"] {
   grid-column: 2;
   grid-row: 2;
 }
-
-input[type="submit"] {
-  grid-column: 2;
-  grid-row: 3;
-}
 ```
-
-> [!NOTE]
-> Il est généralement peu recommandé d'inclure des boutons de réinitialisation dans les formulaires. En effet, ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement (souvent en essayant de cliquer sur le [bouton d'envoi](/fr/docs/Web/HTML/Reference/Elements/input/submit)).
 
 ## Valeur
 
@@ -80,6 +70,8 @@ Un élément `<input type="reset">` possède un attribut [`value`](/fr/docs/Web/
 
 Les boutons `<input type="reset">` sont utilisés pour réinitialiser les formulaires. Si vous souhaitez créer un bouton personnalisé et adapter son comportement grâce à JavaScript, il est préférable d'utiliser un élément `{{HTMLElement("input/button", "&lt;input type=\"button\"&gt;")}}`, ou mieux encore, un élément {{HTMLElement("button")}}.
 
+Vous devez généralement éviter d'inclure des boutons de réinitialisation dans vos formulaires. Ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement (souvent en essayant de cliquer sur le [bouton d'envoi](/fr/docs/Web/HTML/Reference/Elements/input/submit)).
+
 ### Un bouton simple de réinitialisation
 
 Commençons par créer un bouton de réinitialisation simple&nbsp;:
@@ -87,8 +79,8 @@ Commençons par créer un bouton de réinitialisation simple&nbsp;:
 ```html
 <form>
   <div>
-    <label for="example">Écrivez un texte pour essayer</label>
-    <input id="example" type="text" />
+    <label for="exemple">Écrivez un texte pour essayer</label>
+    <textarea id="exemple"></textarea>
   </div>
   <div>
     <input type="reset" value="Réinitialiser le formulaire" />
@@ -111,8 +103,8 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faut donc appuyer sur <k
 ```html
 <form>
   <div>
-    <label for="example">Saisir un peu de texte</label>
-    <input id="example" type="text" />
+    <label for="exemple">Saisir un peu de texte</label>
+    <textarea id="exemple"></textarea>
   </div>
   <div>
     <input type="reset" value="Réinitialiser le formulaire" accesskey="r" />

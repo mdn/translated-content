@@ -2,7 +2,7 @@
 title: WebDriver
 slug: Web/WebDriver
 l10n:
-  sourceCommit: a9005b03657fb1332dfa66515ff4f42f5a8bb56b
+  sourceCommit: f83c12ab41865e0e195dd36ad9cdcad511a36957
 ---
 
 WebDriver は、外部プログラムがブラウザーをリモートで監視・制御することができるブラウザー自動化インターフェイスです。これは、プラットフォームや言語に依存しない通信プロトコルであり、コマンドベースの自動化と、リアルタイムのイベント駆動型通信の両方を対応しています。

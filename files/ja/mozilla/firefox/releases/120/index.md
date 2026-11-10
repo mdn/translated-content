@@ -55,7 +55,7 @@ l10n:
 ### API
 
 - {{domxref("PublicKeyCredential")}} インターフェイスの {{domxref("PublicKeyCredential.authenticatorAttachment", "authenticatorAttachment")}} プロパティをサポートしました。
-  これはウェブアプリケーションのクライアントやサーバーのコードが、認証システムがウェブ認証を実行しているデバイスの一部であるか、デバイス間に渡ることができるかに応じて応じて自身を構成することを可能にします ([Firefox bug 1810851](https://bugzil.la/1810851))。
+  これはウェブアプリケーションのクライアントやサーバーのコードが、認証システムがウェブ認証を実行しているデバイスの一部であるか、デバイス間に渡ることができるかに応じて自身を構成することを可能にします ([Firefox bug 1810851](https://bugzil.la/1810851))。
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) の [Minimum PIN Length Extension (`minPinLength`)](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) をサポートしました。これは Relying Party のサーバーが認証システムに対して、PIN を作成または登録するときに最短の長さを要求できるようにします ([Firefox bug 1844450](https://bugzil.la/1844450))。
 - {{domxref("Navigator.userActivation")}} プロパティおよび {{domxref("UserActivation")}} インターフェイスをサポートしました。
   これらはユーザーがページと対話しているか、あるいはページが読み込まれてから対話したかを確認するために使用できます ([Firefox bug 1791079](https://bugzil.la/1791079))。

@@ -2,7 +2,7 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 l10n:
-  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Les objets **`Error`** sont levés lorsque des erreurs d'exécution se produisent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions définies par l'utilisateur·ice. Voir ci-dessous pour les types d'erreurs intégrés standards.
@@ -121,7 +121,7 @@ try {
 
 Il arrive parfois que des erreurs semblables (type et message identiques) nécessitent des traitements différents.
 
-Si vous ne maîtrisez pas l'origine des erreurs, vous pouvez les intercepter et renvoyer de nouveaux objets `Error` avec des messages plus spécifiques.
+Si vous ne maîtrisez pas l'origine des erreurs, vous pouvez les intercepter et retourner de nouveaux objets `Error` avec des messages plus spécifiques.
 L'erreur d'origine doit être passée au nouveau `Error` dans le paramètre [`options`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) du constructeur comme propriété `cause`. Cela garantit que l'erreur d'origine et la pile d'appels sont disponibles pour les blocs try/catch de plus haut niveau.
 
 Dans l'exemple qui suit, on illustre ceci pour deux méthodes qui échouent avec des erreurs similaires (`echecUneFacon()` et `echecAutreFacon()`)&nbsp;:
@@ -224,7 +224,7 @@ try {
 
 ## Voir aussi
 
-- [Prothèse d'émulation pour `Error` avec la prise en charge de `cause` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) pour `Error` avec la prise en charge de `cause` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
 - [Prothèse d'émulation es-shims de Error `cause` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
 - L'instruction {{JSxRef("Statements/throw", "throw")}}
 - L'instruction {{JSxRef("Statements/try...catch", "try...catch")}}

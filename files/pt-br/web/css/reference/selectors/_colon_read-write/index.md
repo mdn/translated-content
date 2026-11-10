@@ -21,7 +21,11 @@ p:read-write {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:read-write {
+  /* ... */
+}
+```
 
 ## Exemplos
 

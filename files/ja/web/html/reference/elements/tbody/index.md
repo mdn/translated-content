@@ -1,5 +1,5 @@
 ---
-title: HTML `<tbody>` テーブル本体要素
+title: "`<tbody>` テーブル本体要素"
 short-title: <tbody>
 slug: Web/HTML/Reference/Elements/tbody
 l10n:

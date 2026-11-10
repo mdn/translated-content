@@ -14,5 +14,5 @@ Un proxy peut être sur l'ordinateur local de l'utilisateur·ice, ou n'importe o
 
 ## Voir aussi
 
-- [Serveurs mandataires et tunnelisation](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [Serveurs mandataires et tunnelisation](/fr/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
 - [Proxy](https://fr.wikipedia.org/wiki/Proxy) sur Wikipédia

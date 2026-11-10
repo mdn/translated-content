@@ -1,5 +1,5 @@
 ---
-title: HTML `<output>` 出力要素
+title: "`<output>` 出力要素"
 short-title: <output>
 slug: Web/HTML/Reference/Elements/output
 l10n:

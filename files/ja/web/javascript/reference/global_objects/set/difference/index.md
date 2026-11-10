@@ -3,7 +3,7 @@ title: Set.prototype.difference()
 short-title: difference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/difference
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`difference()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を一つ受け取り、この Set に含まれており、与えられた集合に含まれない要素を含む新しい Set を返します。
@@ -67,7 +67,7 @@ console.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }
 
 ## 関連情報
 
-- [`Set.prototype.difference` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.difference` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.difference` のポリフィル](https://www.npmjs.com/package/set.prototype.difference)
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

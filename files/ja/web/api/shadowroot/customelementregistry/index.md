@@ -3,7 +3,7 @@ title: "ShadowRoot: customElementRegistry プロパティ"
 short-title: customElementRegistry
 slug: Web/API/ShadowRoot/customElementRegistry
 l10n:
-  sourceCommit: 9c4d4cb78a55340b46855e47aba76729a59e11ce
+  sourceCommit: 57ea7eecce9dee3bd3a874ce184a48cf993c0699
 ---
 
 {{APIRef("Web Components")}}
@@ -65,5 +65,5 @@ console.log(shadow.querySelector("my-element").textContent);
 - {{domxref("CustomElementRegistry")}}
 - {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} コンストラクター
 - {{domxref("Element.attachShadow()")}}
-- [カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)
+- [カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)の[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)

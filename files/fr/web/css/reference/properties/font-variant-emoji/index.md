@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-emoji`
 short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 l10n:
-  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-emoji`** permet de définir le style de présentation par défaut pour l'affichage des emojis.
@@ -34,9 +34,9 @@ Cette propriété est définie avec l'un des mots-clés suivants&nbsp;:
 - `normal`
   - : Permet au navigateur de choisir comment afficher l'emoji. Cela suit souvent le réglage du système d'exploitation.
 - `text`
-  - : Affiche l'emoji comme s'il utilisait le sélecteur de variante texte unicode (`U+FE0E`).
+  - : Affiche l'emoji comme s'il utilise le sélecteur de variante texte unicode (`U+FE0E`).
 - `emoji`
-  - : Affiche l'emoji comme s'il utilisait le sélecteur de variante emoji unicode (`U+FE0F`).
+  - : Affiche l'emoji comme s'il utilise le sélecteur de variante emoji unicode (`U+FE0F`).
 - `unicode`
   - : Affiche l'emoji conformément aux [propriétés de présentation Emoji <sup>(angl.)</sup>](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). Si le sélecteur de variante `U+FE0E` ou `U+FE0F` est présent, il remplace cette valeur.
 
@@ -101,6 +101,8 @@ Cet exemple montre comment afficher un emoji dans sa présentation `text` ou `em
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family:
+      "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
   }
   .emoji > div {
     font-size: 2rem;

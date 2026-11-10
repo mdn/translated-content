@@ -3,10 +3,10 @@ title: "KeyboardEvent: initKeyboardEvent() メソッド"
 short-title: initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent.initKeyboardEvent()`** メソッドは、キーボードイベントオブジェクトの属性を初期化します。このメソッドは DOM Level 3 Events の草案で導入されましたが、より新しい草案では非推奨とされています。Gecko はこの機能に対応していません。このメソッドを実験的に実装すると、既存のウェブアプリが壊れてしまうからです（[Firefox バグ 999645](https://bugzil.la/999645) を参照してください）。
 ウェブアプリケーションは、もしコンストラクターが使用できるのであれば、代わりに使用する必要があります。
@@ -50,7 +50,7 @@ initKeyboardEvent(type, canBubble, cancelable,
 
 {{Specifications}}
 
-`KeyboardEvent` インターフェイス仕様は多くの草稿を経ており、最初の DOM Events Level 2 では合意が得られなかったため削除され、次の DOM Events Level 3 で採用されました。このため、標準外の初期化メソッドが、初期の DOM Events Level 2 バージョンの {{domxref("KeyboardEvent.initKeyEvent()")}} が Gecko ブラウザーに、初期の DOM Events Level 3 バージョンの {{domxref("KeyboardEvent.initKeyboardEvent()")}} がその他のブラウザーに実装されました。両方とも、コンストラクター {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} の現代的な用法に置き換えられました。
+`KeyboardEvent` インターフェイス仕様は多くの草稿を経ており、最初の DOM Events Level 2 では合意が得られなかったため削除され、次の DOM Events Level 3 で採用されました。このため、標準外の初期化メソッドが、初期の DOM Events Level 2 バージョンの `KeyboardEvent.initKeyEvent()` が Gecko ブラウザーに、初期の DOM Events Level 3 バージョンの `KeyboardEvent.initKeyboardEvent()` がその他のブラウザーに実装されました。両方とも、コンストラクター {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} の現代的な用法に置き換えられました。
 
 ## ブラウザーの互換性
 

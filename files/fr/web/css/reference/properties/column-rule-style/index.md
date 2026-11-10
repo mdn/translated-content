@@ -3,10 +3,10 @@ title: Propriété CSS `column-rule-style`
 short-title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: 5fd3b03e9ad1ee4e8bc64d4f6888570690a7fbc8
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-style`** définit le style de ligne des lignes tracées entre les colonnes des dispositions en grille, flexible et multi-colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-style`** définit le style de ligne des lignes tracées entre les colonnes des dispositions en grille, flexible et à plusieurs colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-rule-style")}}
 
@@ -91,11 +91,11 @@ La propriété `column-rule-style` accepte une liste de valeurs séparées par d
   - : La fonction {{CSSxRef("repeat()")}}, avec le premier argument étant un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus, et les arguments suivants étant des valeurs {{CSSxRef("&lt;line-style&gt;")}}. L'entier définit combien de fois les valeurs `<line-style>` doivent être répétées.
 
 - `<auto-repeat-line-style>`
-  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-style>` comme arguments suivants. Les valeurs `<line-style>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-style>` comme arguments suivants. Les valeurs `<line-style>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ## Description
 
-La propriété `column-rule-style` définit le style des lignes de séparation tracées dans les espaces entre les colonnes dans les mises en page [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plusieurs colonnes.
+La propriété `column-rule-style` définit le style des lignes de séparation tracées dans les espaces entre les colonnes dans les mises en page [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plusieurs colonnes.
 
 La valeur est une liste de composants séparés par des virgules, pouvant inclure les types `<line-style>`, `<repeat-line-style>` et `<auto-repeat-line-style>`.
 
@@ -220,6 +220,8 @@ Comme il y a plus de valeurs (10) que de gouttières (8), les valeurs `none` et 
 
 Cet exemple montre que, lorsque la liste des styles contient moins de valeurs que de règles de colonne, les valeurs sont répétées.
 
+#### CSS
+
 En utilisant le même HTML et CSS que dans l'exemple précédent, nous incluons trois styles séparés par des virgules comme valeur de `column-rule-style`&nbsp;:
 
 ```css live-sample___repeat
@@ -228,17 +230,25 @@ ul {
 }
 ```
 
+#### Résultat
+
 {{EmbedLiveSample("repeat", "", 180)}}
 
 ### Utiliser la fonction `repeat()`
 
-Cet exemple montre l'utilisation de la fonction `repeat()` dans la valeur de la propriété `column-rule-style`. Nous utilisons le même HTML et CSS que dans les exemples précédents. Nous incluons une fonction `repeat()`, définissant la liste de deux valeurs `<line-style>` à répéter 3 fois.
+Cet exemple montre l'utilisation de la fonction `repeat()` dans la valeur de la propriété `column-rule-style`.
+
+#### CSS
+
+Nous utilisons le même HTML et CSS que dans les exemples précédents. Nous incluons une fonction `repeat()`, définissant la liste de deux valeurs `<line-style>` à répéter 3 fois.
 
 ```css live-sample___func live-sample___auto
 ul {
   column-rule-style: solid, repeat(3, inset, outset), solid;
 }
 ```
+
+#### Résultat
 
 {{EmbedLiveSample("func", "", 180)}}
 
@@ -248,6 +258,8 @@ Le conteneur flexible a six colonnes, donc cinq gouttières. La fonction `repeat
 
 Cet exemple montre l'utilisation de `auto` au lieu d'un entier dans la fonction `repeat()`.
 
+#### CSS
+
 En utilisant `repeat(auto, <line-style>)`, nous définissons toutes les règles de colonne sur `groove`, sauf la première et la dernière, que nous définissons sur `solid`.
 
 ```css live-sample___auto
@@ -255,6 +267,8 @@ ul {
   column-rule-style: solid, repeat(auto, groove), solid;
 }
 ```
+
+#### Résultat
 
 {{EmbedLiveSample("auto", "", 180)}}
 
@@ -288,4 +302,5 @@ ul {
 - La propriété raccourcie {{CSSxRef("column-rule")}}
 - La propriété raccourcie {{CSSxRef("row-rule")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)

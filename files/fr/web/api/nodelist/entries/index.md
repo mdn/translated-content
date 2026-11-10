@@ -1,44 +1,51 @@
 ---
-title: NodeList.entries()
+title: "NodeList : méthode entries()"
+short-title: entries()
 slug: Web/API/NodeList/entries
+l10n:
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.entries()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.
+La méthode **`entries()`** de l'interface {{DOMxRef("NodeList")}} retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}} permettant de parcourir toutes les paires clé/valeur contenues dans cet objet. Les valeurs sont des objets {{DOMxRef("Node")}}.
 
 ## Syntaxe
 
-```js
-list.entries();
+```js-nolint
+entries()
 ```
 
-### Valeur retournée
+### Paramètres
 
-renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
+Aucun.
 
-## Exemple
+### Valeur de retour
+
+Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}}.
+
+## Exemples
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+const noeud = document.createElement("div");
+const enfant1 = document.createElement("p");
+const enfant2 = document.createTextNode("hey");
+const enfant3 = document.createElement("span");
+noeud.appendChild(enfant1);
+noeud.appendChild(enfant2);
+noeud.appendChild(enfant3);
 
-var list = node.childNodes;
+const liste = noeud.childNodes;
 
-// Utiliser for..of
-for (var entry of list.entries()) {
-  console.log(entry);
+// Utiliser for...of
+for (const entree of liste.entries()) {
+  console.log(entree);
 }
 ```
 
-résultat :
+donne en résultat&nbsp;:
 
-```
+```plain
 Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
@@ -54,5 +61,6 @@ Array [ 2, <span> ]
 
 ## Voir aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [La prothèse d'émulation de `NodeList.prototype.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterable-dom-collections)
+- L'interface {{DOMxRef("Node")}}
+- L'interface {{DOMxRef("NodeList")}}

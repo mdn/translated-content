@@ -1,13 +1,13 @@
 ---
 title: ボールを動かす
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 l10n:
   sourceCommit: 2530db14de9ac226cf06f84540fa0101e804ca9b
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **2 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)で見ることができます。
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) の 10 ステップ中 **2 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)で見ることができます。
 
 前回のレッスンを一通りこなしてみてボールの描き方が分かりました。では今回はそれを動かしましょう。技術的には、ボールを描画し、またそれを消してからほんの少し違う位置に描画し直すという処理を毎フレームずつ行うことで動いているような印象を生み出します。ちょうど映画がどのように動くのかと同じです。
 
@@ -192,6 +192,6 @@ runButton.addEventListener("click", () => {
 
 ## 次のステップ
 
-ボールを描画して動くようにしましたが、そのままキャンバスの縁から消えていってしまいます。第 3 章ではどのように[ボールを壁で弾ませる](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)か探っていきます。
+ボールを描画して動くようにしましたが、そのままキャンバスの縁から消えていってしまいます。第 3 章ではどのように[ボールを壁で弾ませる](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)か探っていきます。
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

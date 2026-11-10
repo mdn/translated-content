@@ -2,7 +2,7 @@
 title: Injection SQL
 slug: Glossary/SQL_Injection
 l10n:
-  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
+  sourceCommit: 13ef67a4ffbdb929415dfa1b3d65ab1aa9ebe5da
 ---
 
 L'injection SQL tire parti des applications web qui ne parviennent pas à valider les entrées utilisateur·ice·s. Les pirates peuvent transmettre des commandes SQL avec l'application web de manière malveillante pour exécution par une base de données principale.
@@ -33,9 +33,9 @@ Si les informations d'identification sont correctes, l'utilisateur·ice est auto
 
 Les pirates utilisent une chaîne de caractères simple appelée chaîne de caractères magique, par exemple&nbsp;:
 
-**Utilisateur : _admin_**
+**Utilisateur&nbsp;: _admin_**
 
-**Mot de passe : _anything 'or'1'='1_**
+**Mot de passe&nbsp;: _anything 'or'1'='1_**
 
 Après avoir cliqué sur le bouton de connexion, la requête SQL fonctionne comme suit&nbsp;:
 
@@ -49,7 +49,7 @@ Regardez de plus près la section mot de passe de la requête ci-dessus.
 Password=' anything 'or'1'='1 '
 ```
 
-Le mot de passe n'est pas 'anything' (_n'importe quoi_), par conséquent mot de passe = tout aboutit à FAUX (`false`), mais '1' = '1' est une instruction VRAIE et retourne donc une valeur VRAI (`true`). Enfin, en raison de l'opérateur OR, la valeur (FALSE OR TRUE) est TRUE, de sorte que l'authentification est contournée avec succès. Juste en raison d'une chaîne de caractères simple (chaîne de caractères magique) la base de données entière est compromise.
+Le mot de passe n'est pas «&nbsp;anything&nbsp;» (_n'importe quoi_), par conséquent mot de passe = tout aboutit à FAUX (`false`), mais `'1' = '1'` est une instruction VRAIE et retourne donc une valeur VRAI (`true`). Enfin, en raison de l'opérateur OR, la valeur (FALSE OR TRUE) est TRUE, de sorte que l'authentification est contournée avec succès. Juste en raison d'une chaîne de caractères simple (chaîne de caractères magique) la base de données entière est compromise.
 
 ## Comment l'empêcher ?
 
@@ -68,4 +68,4 @@ Ainsi, en raison de (1) chaque guillemet simple (`'`) dans la chaîne de caract�
 ## Voir aussi
 
 - [Injection SQL](https://fr.wikipedia.org/wiki/Injection_SQL) sur Wikipédia
-- [Explication de l'injection SQL <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/SQL_Injection) sur OWASP (Open Web Application Security Project)
+- [Explication de l'injection SQL <sup>(angl.)</sup>](https://community.owasp.org/attacks/SQL_Injection) sur OWASP (Open Web Application Security Project)

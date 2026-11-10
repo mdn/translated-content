@@ -3,7 +3,7 @@ title: Propriété CSS `column-rule-visibility-items`
 short-title: column-rule-visibility-items
 slug: Web/CSS/Reference/Properties/column-rule-visibility-items
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 {{SeeCompatTable}}
@@ -85,11 +85,11 @@ Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
   - : La règle de colonne doit être peinte dans un segment d'espace si les deux zones adjacentes sont occupées par des éléments.
 
 - `normal`
-  - : Avec les conteneurs de type grille, se comporte de la même manière que `all`. Dans une mise en page multi-colonne, se comporte de la même manière que `between`. C'est la valeur par défaut.
+  - : Avec les conteneurs de type grille, se comporte de la même manière que `all`. Dans une disposition à plusieurs colonnes, se comporte de la même manière que `between`. C'est la valeur par défaut.
 
 ## Description
 
-La propriété `column-rule-visibility-items` définit si un segment de règle de colonne est peint dans les espaces de colonne adjacents aux zones vides dans les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) contenant plus d'une colonne.
+La propriété `column-rule-visibility-items` définit si un segment de règle de colonne est peint dans les espaces de colonne adjacents aux zones vides dans les conteneurs [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) contenant plus d'une colonne.
 
 Les propriétés `column-rule-visibility-items` et {{CSSxRef("row-rule-visibility-items")}} peuvent toutes deux être définies à l'aide du raccourci {{CSSxRef("rule-visibility-items")}}.
 

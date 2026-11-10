@@ -1,5 +1,5 @@
 ---
-title: HTML `<blockquote>` ブロック引用要素
+title: "`<blockquote>` ブロック引用要素"
 short-title: <blockquote>
 slug: Web/HTML/Reference/Elements/blockquote
 l10n:

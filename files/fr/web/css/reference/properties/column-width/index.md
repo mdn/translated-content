@@ -3,14 +3,10 @@ title: Propriété CSS `column-width`
 short-title: column-width
 slug: Web/CSS/Reference/Properties/column-width
 l10n:
-  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
+  sourceCommit: d1cf7346516383565b51a125c064ae3d5d893526
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`column-width`** définit la largeur optimale d'une colonne dans une mise en page multi-colonnes. Le conteneur comporte autant de colonnes que l'espace le permet, sans qu'aucune d'elles n'ait une largeur inférieure à la valeur `column-width`. Si la largeur du conteneur est inférieure à la valeur définie, la largeur de la colonne unique sera plus petite que la largeur déclarée.
-
-Cette propriété vous aide à créer des mises en page réactives adaptées à différentes tailles d'écran. En particulier, en présence de la propriété {{CSSxRef("column-count")}} (qui a la priorité), vous devez définir toutes les longueurs associées pour obtenir une largeur de colonne exacte. Dans le texte horizontal, il s'agit de {{CSSxRef('width')}}, `column-width`, {{CSSxRef('column-gap')}} et {{CSSxRef('column-rule-width')}}.
-
-La propriété raccourcie {{CSSxRef("columns")}} peut être utilisée pour définir les valeurs des propriétés `column-width`, {{CSSxRef("column-count")}} et {{CSSxRef("column-height")}} en une seule déclaration.
+La propriété [CSS](/fr/docs/Web/CSS) **`column-width`** définit la largeur optimale d'une colonne dans une disposition à plusieurs colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-width")}}
 
@@ -79,6 +75,14 @@ Cette propriété est définie par l'une des valeurs suivantes&nbsp;:
 - `auto`
   - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS, comme {{CSSxRef("column-count")}}.
 
+## Description
+
+La propriété `column-width` définit la largeur de colonne préférée dans une disposition à plusieurs colonnes. Le conteneur a autant de colonnes que possible sans qu'aucune d'entre elles n'ait une largeur inférieure à la valeur de `column-width`. Si la largeur du conteneur est inférieure à la valeur définie, la largeur de la colonne unique est inférieure à la largeur de colonne déclarée.
+
+Cette propriété peut vous aider à créer des conceptions réactives qui s'adaptent à différentes tailles d'écran. Surtout en présence de la propriété {{CSSxRef("column-count")}} (qui a la priorité), vous devez définir toutes les valeurs de longueur associées pour obtenir une largeur de colonne exacte. Dans le texte horizontal, il s'agit de {{CSSxRef("width")}}, `column-width`, {{CSSxRef("column-gap")}}, et {{CSSxRef("column-rule-width")}}.
+
+La propriété `column-width`, ainsi que les propriétés {{CSSxRef("column-height")}} et {{CSSxRef("column-count")}}, peut également être définie à l'aide du raccourci {{CSSxRef("columns")}}.
+
 ## Définition formelle
 
 {{CSSInfo}}
@@ -127,5 +131,5 @@ Cette propriété est définie par l'une des valeurs suivantes&nbsp;:
 - La propriété {{CSSxRef("column-count")}}
 - La propriété {{CSSxRef("column-height")}}
 - La propriété raccourcie {{CSSxRef("columns")}}
-- [Apprendre&nbsp;: La disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
+- [Apprendre&nbsp;: La disposition à plusieurs colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- [Les concepts de base pour la disposition à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

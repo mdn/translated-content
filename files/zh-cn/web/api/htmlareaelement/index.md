@@ -32,7 +32,7 @@ _从它的父对象{{domxref("HTMLElement")}}继承的，还有从{{domxref("URL
 - {{domxref("HTMLAreaElement.media")}}
   - : Is a {{jsxref("String")}} containing that reflects the [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/area#media) HTML attribute, indicating target media of the linked resource.
 - {{domxref("HTMLAreaElement.noHref")}} {{Deprecated_Inline}}
-  - : Is a {{domxref("Boolean")}} flag indicating if the area is inactive (`true`) or active (`false`).
+  - : Is a {{jsxref("Boolean")}} flag indicating if the area is inactive (`true`) or active (`false`).
 - {{domxref("URLUtils.password")}}
   - : Is a {{jsxref("String")}} containing the password specified before the domain name.
 - {{domxref("URLUtils.origin")}} {{readonlyInline}}

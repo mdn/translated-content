@@ -68,9 +68,9 @@ Pour créer un composant interactif avec une structure tabulaire, utilisez le mo
 - [`role="gridcell"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
   - : Une cellule dans une ligne d'une grille ou d'un treegrid.
 - [`role="columnheader"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
-  - : Une cellule d'en-tête de colonne, équivalente à l'élément HTML {{HTMLElement("th")}} avec portée colonne (`{{HTMLElement("tr", "&lt;tr scope="col"&gt;")}}`). Contrairement à une cellule classique, le rôle columnheader établit une relation avec toutes les cellules de la colonne correspondante.
+  - : Une cellule d'en-tête de colonne, équivalente à l'élément HTML {{HTMLElement("th")}} avec portée colonne (`{{HTMLElement('tr', '&lt;tr scope="col"&gt;')}}`). Contrairement à une cellule classique, le rôle columnheader établit une relation avec toutes les cellules de la colonne correspondante.
 - [`role="rowheader"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
-  - : Une cellule d'en-tête de ligne, équivalente à l'élément HTML {{HTMLElement("th")}} avec portée ligne (`{{HTMLElement("tr", "&lt;tr scope="row"&gt;")}}`). Contrairement à une cellule classique, le rôle rowheader établit une relation avec toutes les cellules de la ligne correspondante.
+  - : Une cellule d'en-tête de ligne, équivalente à l'élément HTML {{HTMLElement("th")}} avec portée ligne (`{{HTMLElement('tr', '&lt;tr scope="row"&gt;')}}`). Contrairement à une cellule classique, le rôle rowheader établit une relation avec toutes les cellules de la ligne correspondante.
 
 ### États et propriétés
 

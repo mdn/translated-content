@@ -51,6 +51,6 @@ Les interfaces suivantes ont été supprimées&nbsp;:
 ## Autres changements dignes de mention
 
 - Tous les composants binaires sous Windows doivent être compilés avec le support ASLR (pour «&nbsp;<i lang="en">address space layout randomization</i>&nbsp;» en anglais) activé. Bien que cela ne soit pas **encore** obligatoire, cela peut l'être à l'avenir, et ne pas l'activer entraîne une pénalité de performance.
-- Un bogue dans la gestion des expressions régulières introduit dans Firefox 7 a été corrigé. Cela peut changer le résultat de certaines expressions régulières, soyez donc vigilant.
+- Un bogue dans la gestion des expressions rationnelles introduit dans Firefox 7 a été corrigé. Cela peut changer le résultat de certaines expressions rationnelles, soyez donc vigilant.
 - Vous pouvez maintenant [charger et décharger dynamiquement des fichiers chrome.manifest dans les modules complémentaires amorçables <sup>(angl.)</sup>](https://web.archive.org/web/20210519000929/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest).
 - Les évènements `mouseenter` et `mouseleave` sont désormais pris en charge.

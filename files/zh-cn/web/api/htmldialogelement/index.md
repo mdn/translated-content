@@ -13,10 +13,10 @@ slug: Web/API/HTMLDialogElement
 
 _继承自父接口， {{domxref("HTMLElement")}}。_
 
-| 名称          | 类型                   | 描述                                                                                                      |
-| ------------- | ---------------------- | --------------------------------------------------------------------------------------------------------- |
-| `open`        | {{domxref("Boolean")}} | 来自[`open`](/zh-CN/docs/Web/HTML/Reference/Elements/dialog#open) HTML 属性，表示这个对话框可以进行互动。 |
-| `returnValue` | {{jsxref("String")}}   | 用户获取对话框的值                                                                                        |
+| 名称          | 类型                  | 描述                                                                                                      |
+| ------------- | --------------------- | --------------------------------------------------------------------------------------------------------- |
+| `open`        | {{jsxref("Boolean")}} | 来自[`open`](/zh-CN/docs/Web/HTML/Reference/Elements/dialog#open) HTML 属性，表示这个对话框可以进行互动。 |
+| `returnValue` | {{jsxref("String")}}  | 用户获取对话框的值                                                                                        |
 
 ## 方法
 

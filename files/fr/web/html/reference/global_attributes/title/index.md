@@ -3,7 +3,7 @@ title: "Attribut HTML universel : `title`"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
@@ -33,6 +33,8 @@ iframe {
 }
 ```
 
+## Description
+
 L'usage principal de l'attribut `title` est d'étiqueter les éléments {{HTMLElement("iframe")}} pour les technologies d'assistance.
 
 L'attribut `title` peut aussi être utilisé pour étiqueter les contrôles dans les [tables de données](/fr/docs/Web/HTML/Reference/Elements/table).
@@ -45,7 +47,7 @@ Bien que `title` puisse être utilisé pour fournir un label associé de manièr
 
 ## Titre sur plusieurs lignes
 
-Un attribut `title` peut contenir plusieurs lignes. Chaque caractère `U+000A LINE FEED` (`LF`) représentera un saut de ligne. Le fragment de code suivant représente donc un élément dont le titre est écrit sur deux lignes&nbsp;:
+Un attribut `title` peut contenir plusieurs lignes. Chaque caractère `U+000A LINE FEED` (`LF`) représente un saut de ligne. Le fragment de code suivant représente donc un élément dont le titre est écrit sur deux lignes&nbsp;:
 
 ### HTML
 
@@ -82,15 +84,14 @@ output.textContent = span.title;
 
 Si un élément ne possède pas d'attribut `title`, il l'hérite de son nœud parent, qui peut à son tour l'hériter de son parent, et ainsi de suite.
 
-Si cet attribut est défini sur la chaîne vide, cela signifie que les `title` de ses ancêtres sont sans objet et ne doivent pas être utilisés dans la bulle d'information de cet élément.
+Si cet attribut est défini sur la chaîne de caractères vide, cela signifie que les `title` de ses ancêtres sont sans objet et ne doivent pas être utilisés dans la bulle d'information de cet élément.
 
 ### HTML
 
 ```html
-<div title="Une bubulle">
+<div title="Une bulle">
   <p>
-    Si vous survolez cet élément, il y aura une bulle d'information "Une
-    bubulle".
+    Si vous survolez cet élément, il y a une bulle d'information "Une bulle".
   </p>
   <p title="">Et au-dessus de celui-ci, aucune info.</p>
 </div>

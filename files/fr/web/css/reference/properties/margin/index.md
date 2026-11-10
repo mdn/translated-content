@@ -3,7 +3,7 @@ title: Propriété CSS `margin`
 short-title: margin
 slug: Web/CSS/Reference/Properties/margin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) sur les quatre côtés d'un élément.
@@ -116,7 +116,7 @@ La propriété `margin` peut être définie avec une, deux, trois ou quatre vale
 
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille de la marge en valeur fixe.
-    - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une longueur ({{CSSxRef("&lt;length&gt;")}}) relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
+    - Pour les éléments positionnés par une ancre, la fonction {{CSSxRef("anchor-size()")}} donne une longueur ({{CSSxRef("&lt;length&gt;")}}) relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
@@ -186,7 +186,7 @@ margin: 5%; /* tous les côtés avec une marge de 5% */
 
 margin: 10px; /* tous les côtés avec une marge de 10px */
 
-margin: 1.6em 20px; /* haut et bas à 1.6em     */
+margin: 1.6em 20px; /* haut et bas à 1.6em */
 /* gauche et droite à 20px */
 
 margin: 10px 3% 1em; /* haut à 10px de marge */
@@ -198,7 +198,7 @@ margin: 10px 3px 30px 5px; /* haut à 10px de marge */
 /* bas à 30px de marge */
 /* gauche à 5px de marge */
 
-margin: 1em auto; /* marge de 1em en haut et en bas       */
+margin: 1em auto; /* marge de 1em en haut et en bas */
 /* la boîte est centrée horizontalement */
 
 margin: auto; /* boîte centrée horizontalement */

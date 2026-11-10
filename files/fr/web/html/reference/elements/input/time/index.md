@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="time">`
 short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`time`** permettent de créer des contrôles où l'utilisateur·ice peut saisir une heure (avec des minutes et éventuellement des secondes).
@@ -80,12 +80,10 @@ Par défaut, `<input type="time">` ne valide pas les valeurs saisies, autre que 
 L'utilisation la plus simple de `<input type="time">` implique une combinaison simple d'un élément `<input>` et d'un élément {{HTMLElement("label")}}, comme illustré ci-dessous&nbsp;:
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choisissez une heure de rendez-vous&nbsp;:
-  </label>
-  <input id="appointment-time" type="time" name="appointment-time" />
-</form>
+<label for="heure-rendez-vous">
+  Choisissez une heure de rendez-vous&nbsp;:
+</label>
+<input id="heure-rendez-vous" type="time" name="heure-rendez-vous" />
 ```
 
 {{EmbedLiveSample("Utilisation simple du type `time`", 600, 40)}}
@@ -95,20 +93,17 @@ L'utilisation la plus simple de `<input type="time">` implique une combinaison s
 Dans cet exemple, nous créons un élément d'interface pour choisir l'heure en utilisant le sélecteur natif créé avec `<input type="time">`&nbsp;:
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choisissez une heure de rendez-vous (heures d'ouverture 12:00 à
-    18:00)&nbsp;:
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00"
-    required />
-  <span class="validity"></span>
-</form>
+<label for="heure-rendez-vous">
+  Choisissez une heure de rendez-vous (heures d'ouverture 12:00 à 18:00)&nbsp;:
+</label>
+<input
+  id="heure-rendez-vous"
+  type="time"
+  name="heure-rendez-vous"
+  min="12:00"
+  max="18:00"
+  required />
+<span class="validite"></span>
 ```
 
 ```css
@@ -144,13 +139,13 @@ input:valid + span::after {
 Vous pouvez définir une valeur par défaut pour le champ en incluant une heure valide dans l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) lors de la création de l'élément `<input>`, comme suit&nbsp;:
 
 ```html
-<label for="appointment-time">
+<label for="heure-rendez-vous">
   Choisissez une heure de rendez-vous&nbsp;:
 </label>
 <input
-  id="appointment-time"
+  id="heure-rendez-vous"
   type="time"
-  name="appointment-time"
+  name="heure-rendez-vous"
   value="13:30" />
 ```
 
@@ -174,24 +169,22 @@ Dans cet exemple, vous pouvez voir la valeur du champ de l'heure en saisissant u
 Premièrement, regardons le HTML. Nous incluons un libellé et un champ de saisie, et ajoutons un élément {{HTMLElement("p")}} avec un {{HTMLElement("span")}} pour afficher la valeur du champ `time`&nbsp;:
 
 ```html
-<form>
-  <label for="startTime">Heure de début&nbsp;: </label>
-  <input type="time" id="startTime" />
-  <p>
-    Valeur du champ <code>time</code>&nbsp;:
-    <code>"<span id="value">n/a</span>"</code>.
-  </p>
-</form>
+<label for="heureDebut">Heure de début&nbsp;: </label>
+<input type="time" id="heureDebut" />
+<p>
+  Valeur du champ <code>time</code>&nbsp;:
+  <code>"<span id="valeur">n/a</span>"</code>.
+</p>
 ```
 
-Le code JavaScript ajoute un écouteur d'évènements au champ de l'heure pour surveiller l'évènement {{DOMxRef("Element/input_event", "input")}}, qui est déclenché chaque fois que le contenu d'un élément de saisie change. Lorsque cela se produit, le contenu du `<span>` est remplacé par la nouvelle valeur de l'élément input.
+Le code JavaScript ajoute un écouteur d'évènements au champ de l'heure pour surveiller l'évènement {{DOMxRef("Element/input_event", "input")}}, qui est déclenché chaque fois que le contenu d'un élément de saisie change. Lorsque cela se produit, le contenu du `<span>` est remplacé par la nouvelle valeur de l'élément de saisie.
 
 ```js
-const startTime = document.getElementById("startTime");
-const valueSpan = document.getElementById("value");
+const heureDebut = document.getElementById("heureDebut");
+const valeurSpan = document.getElementById("valeur");
 
-startTime.addEventListener("input", () => {
-  valueSpan.innerText = startTime.value;
+heureDebut.addEventListener("input", () => {
+  valeurSpan.innerText = heureDebut.value;
 });
 ```
 
@@ -206,12 +199,10 @@ Vous pouvez utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/in
 Il prend une valeur entière définissant le nombre de secondes que vous souhaitez incrémenter&nbsp;; la valeur par défaut est de 60 secondes. Avec cette valeur par défaut, la plupart des interfaces utilisateur de temps des agents utilisateurs affichent les heures et les minutes mais pas les secondes. Inclure l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) avec une valeur numérique autre qu'une valeur divisible par `60` ajoute des secondes à l'interface utilisateur, si la valeur `min` ou `max` n'a pas déjà rendu les secondes visibles.
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choisissez une heure de rendez-vous&nbsp;:
-  </label>
-  <input id="appointment-time" type="time" name="appointment-time" step="2" />
-</form>
+<label for="heure-rendez-vous">
+  Choisissez une heure de rendez-vous&nbsp;:
+</label>
+<input id="heure-rendez-vous" type="time" name="heure-rendez-vous" step="2" />
 ```
 
 {{EmbedLiveSample("Utiliser l'attribut `step`", 600, 40)}}
@@ -223,19 +214,17 @@ Pour définir des minutes ou des heures comme pas, définissez le nombre de minu
 Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les heures valides que l'utilisateur·ice peut choisir. Dans l'exemple suivant, nous définissons une heure minimale de `12:00` et une heure maximale de `18:00`&nbsp;:
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choisissez une heure de rendez-vous (heures d'ouverture de 12:00 à
-    18:00)&nbsp;:
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00" />
-  <span class="validity"></span>
-</form>
+<label for="heure-rendez-vous">
+  Choisissez une heure de rendez-vous (heures d'ouverture de 12:00 à
+  18:00)&nbsp;:
+</label>
+<input
+  id="heure-rendez-vous"
+  type="time"
+  name="heure-rendez-vous"
+  min="12:00"
+  max="18:00" />
+<span class="validite"></span>
 ```
 
 {{EmbedLiveSample("Définir les heures minimales et maximales", 600, 40)}}
@@ -300,23 +289,29 @@ Voyons un exemple&nbsp;; ici, nous avons défini des heures minimales et maximal
 ```html
 <form>
   <div>
-    <label for="appointment-time">
+    <label for="heure-rendez-vous">
       Choisissez une heure de rendez-vous (heures d'ouverture de 12:00 à
       18:00)&nbsp;:
     </label>
     <input
-      id="appointment-time"
+      id="heure-rendez-vous"
       type="time"
-      name="appointment-time"
+      name="heure-rendez-vous"
       min="12:00"
       max="18:00"
       required />
-    <span class="validity"></span>
+    <span class="validite"></span>
   </div>
   <div>
     <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Si vous essayez d'envoyer le formulaire avec une heure incomplète (ou avec une heure en dehors des limites définies), le navigateur affiche une erreur. Essayez de jouer avec l'exemple maintenant&nbsp;:

@@ -3,7 +3,7 @@ title: Propriété CSS `clip-path`
 short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule la zone spécifique de l'élément à l'intérieur de la région est affichée, le reste est masqué.
@@ -306,7 +306,7 @@ div {
 }
 ```
 
-Nous définissons ensuite l'`id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{CSSxRef("align-content")}}, sinon le texte est rogné, comme c'est le cas dans l'exemple `window`.
+Nous définissons ensuite un `id` du `<clipPath>` comme la `<clip-source>`. Nous centrons le texte dans l'exemple `cross` verticalement en utilisant {{CSSxRef("align-content")}}, sinon le texte est rogné, comme c'est le cas dans l'exemple `window`.
 
 ```css
 .window {

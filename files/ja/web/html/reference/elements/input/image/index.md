@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="image">` 属性値
+title: '`<input type="image">` 属性値 (HTML)'
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
@@ -151,7 +151,7 @@ input[type="image"] {
   width="100"
   height="30"
   alt="Login"
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
+  src="https://mdn.github.io/shared-assets/images/examples/login-button.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
@@ -191,9 +191,9 @@ input[type="image"] {
 
 ### 点の x および y のデータの使用
 
-`<input type="image">` で作成したボタンを使ってフォームを送信すると、ブラウザーが自動的に `x` と `y` という 2 つの追加データをサーバーに送信します。 [X Y 座標の例](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html)で、その様子を見ることができます。
+`<input type="image">` で作成したボタンを使ってフォームを送信すると、ブラウザーが自動的に `x` と `y` という 2 つの追加データをサーバーに送信します。 [X Y 座標の例](https://mdn.github.io/learning-area/html/forms/image-type-xy-coords/)で、その様子を見ることができます。
 
-画像をクリックしてフォームを送信すると、 `?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性がある場合、指定した名前はすべての属性の先頭に付くことに注意してください。したがって、`name` が `position` である場合、返される座標は URL で `?position.x=52&position.y=55` という書式となります。もちろん、これは他のすべての属性にも当てはまります。
+画像をクリックしてフォームを送信すると、`?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性が指定されている場合、指定された名前が、ドット区切りでそれぞれの座標項目の名前の前に付加されます。例えば、`name` が `position` の場合、返される座標は URL 上で `?position.x=52&position.y=55` という形式で表記されます。
 
 これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となり、画像のクリック以外で送信が発生した場合のデフォルト値もこれになります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
 
@@ -208,8 +208,6 @@ input[type="image"] {
 ### ログインフォーム
 
 次の例は、前と同じボタンを、典型的なログインフォームのコンテキストに含めて表示したものです。
-
-{{ EmbedLiveSample('A_login_form', 600, 170) }}
 
 #### HTML
 
@@ -228,7 +226,7 @@ input[type="image"] {
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="100" />
   </div>
@@ -252,11 +250,13 @@ label {
 }
 ```
 
+#### 結果
+
+{{ EmbedLiveSample('A_login_form', 600, 170) }}
+
 ### 画像の位置と大きさの調整
 
 この例では、前の例を応用して画像のための空間を確保し、 {{cssxref("object-fit")}} と {{cssxref("object-position")}} で実際の画像の大きさと位置を調整しています。
-
-{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
 #### HTML
 
@@ -275,7 +275,7 @@ label {
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="200"
       height="100" />
@@ -304,7 +304,11 @@ label {
 }
 ```
 
-ここでは、 `object-position` は画像4を要素の右上隅に描画するように設定され、 `object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
+#### 結果
+
+{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
+
+ここでは、 `object-position` は画像 4 を要素の右上隅に描画するように設定されており、`object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
 
 ## 技術的概要
 
@@ -341,10 +345,6 @@ label {
       <td>{{domxref("HTMLInputElement")}}</td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
-    </tr>
-     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>

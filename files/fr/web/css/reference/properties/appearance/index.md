@@ -3,7 +3,7 @@ title: Propriété CSS `appearance`
 short-title: appearance
 slug: Web/CSS/Reference/Properties/appearance
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`appearance`** définit l'apparence rendue des éléments de module d'interface utilisateur remplacés, tels que les contrôles de formulaire. Le plus souvent, ces éléments reçoivent une mise en forme native, spécifique à la plateforme, basée sur le thème du système d'exploitation, ou une apparence primitive avec des styles pouvant être remplacés à l'aide de CSS.
@@ -102,13 +102,13 @@ Certaines valeurs non standard sont également prises en charge dans certains na
 
 La propriété `appearance` permet d'afficher les éléments avec leur style natif du système d'exploitation selon le thème de ce dernier, ainsi que de supprimer toute mise en forme native de la plateforme avec la valeur `none`. Définir `appearance: none`, ou modifier l'apparence des modules d'interface utilisateur, ne change pas la fonctionnalité de l'élément.
 
-Alors que la plupart des éléments d'un document peuvent être entièrement mis en forme avec CSS, les contrôles d'interface (_modules_) sont généralement rendus par le navigateur en utilisant les styles natifs du système d'exploitation. Cette apparence _native_ varie selon les systèmes d'exploitation et les navigateurs. Dans cet état par défaut, les modules offrent peu, voire aucune, possibilité de mise en forme via CSS. Les éléments qui possèdent cette apparence native sont définis dans HTML.
+Alors que la plupart des éléments d'un document peuvent être entièrement mis en forme avec CSS, les contrôles d'interface (_modules_) sont généralement rendus par le navigateur en utilisant les styles natifs du système d'exploitation. Cette apparence _native_ varie selon les systèmes d'exploitation et les navigateurs. Dans cet état par défaut, les modules offrent peu, voire aucune, possibilité de mise en forme avec CSS. Les éléments qui possèdent cette apparence native sont définis dans HTML.
 
 La propriété `appearance` offre un certain contrôle sur l'apparence des modules HTML qui, par défaut, ressemblent à des contrôles natifs du système d'exploitation. Notamment, la valeur `none` supprime une partie de l'apparence native d'un module. Cela donne un aspect _primitif_ qui peut être mis en forme avec CSS tout en conservant la fonctionnalité et les interactions utilisateur natives.
 
-Certains modules disparaissent complètement lorsque `appearance: none` est appliqué. Les contrôles masqués restent cependant interactifs. Par exemple, cliquer sur un {{HTMLElement("label")}} associé à une case à cocher `appearance: none` activera ou désactivera l'état coché de la case.
+Certains modules disparaissent complètement lorsque `appearance: none` est appliqué. Les contrôles masqués restent cependant interactifs. Par exemple, cliquer sur un {{HTMLElement("label")}} associé à une case à cocher `appearance: none` active ou désactive l'état coché de la case.
 
-Comme `none` peut rendre un module invisible, la valeur `base` a été ajoutée pour fournir une apparence de base aux modules. Lorsqu'elle est prise en charge, la valeur `base` garantit que les modules conservent leur apparence native tout en permettant d'utiliser CSS pour modifier les styles qui ne sont pas modifiables par défaut. Contrairement à `none`, qui peut faire disparaître les boutons radio et les cases à cocher, `base` donne au module une apparence primitive avec des styles natifs par défaut utilisables et interopérables, tout en permettant un bon degré de personnalisation via CSS. Bien que cette valeur `base` ne soit pas encore prise en charge, les nombreuses valeurs `<compat-auto>` offrent une fonctionnalité similaire mais sont spécifiques à chaque type et non globales.
+Comme `none` peut rendre un module invisible, la valeur `base` a été ajoutée pour fournir une apparence de base aux modules. Lorsqu'elle est prise en charge, la valeur `base` garantit que les modules conservent leur apparence native tout en permettant d'utiliser CSS pour modifier les styles qui ne sont pas modifiables par défaut. Contrairement à `none`, qui peut faire disparaître les boutons radio et les cases à cocher, `base` donne au module une apparence primitive avec des styles natifs par défaut utilisables et interopérables, tout en permettant un bon degré de personnalisation avec CSS. Bien que cette valeur `base` ne soit pas encore prise en charge, les nombreuses valeurs `<compat-auto>` offrent une fonctionnalité similaire mais sont spécifiques à chaque type et non globales.
 
 ### Éléments de sélection personnalisables
 
@@ -118,7 +118,7 @@ Voir [les éléments de sélection personnalisables](/fr/docs/Learn_web_developm
 
 ### Valeurs non standard préfixées
 
-Avant la standardisation, les propriétés préfixées **`-moz-appearance`** et **`-webkit-appearance`** permettaient d'afficher les éléments comme des modules d'interface utilisateur tels que des boutons ou des cases à cocher. Les valeurs non standard suivantes peuvent être rencontrées dans des feuilles de style héritées, le plus souvent comme valeurs de composant d'arbre d'ombre pour les [pseudo-éléments préfixés](/fr/docs/Web/CSS/Reference/Webkit_extensions#pseudo-éléments).
+Avant la standardisation, les propriétés préfixées **`-moz-appearance`** et **`-webkit-appearance`** permettent d'afficher les éléments comme des modules d'interface utilisateur tels que des boutons ou des cases à cocher. Les valeurs non standard suivantes peuvent être rencontrées dans des feuilles de style héritées, le plus souvent comme valeurs de composant d'arbre d'ombre pour les [pseudo-éléments préfixés](/fr/docs/Web/CSS/Reference/Webkit_extensions#pseudo-éléments).
 
 <details>
 <summary>Valeurs non standard</summary>
@@ -291,7 +291,7 @@ label {
 }
 ```
 
-On applique des styles aux éléments HTML {{HTMLElement("input")}} de type `checkbox`&nbsp;; ces styles créent un carré rouge si l'élément est stylable. On définit `appearance: none` sur l'état d'interface utilisateur {{CSSxRef(":checked")}} pour tous les inputs (`checkbox` et `radio`), ainsi que pour les éléments avec la classe `.none`. Cela supprime toute la mise en forme du bouton radio et de la case à cocher, à l'exception des marges, et permet d'appliquer tous les styles définis. Aucun style alternatif n'est fourni pour les boutons radio ou les éléments `<select>` lorsque `none` est défini.
+On applique des styles aux éléments HTML {{HTMLElement("input")}} de type `checkbox`&nbsp;; ces styles créent un carré rouge si l'élément peut être mis en forme. On définit `appearance: none` sur l'état d'interface utilisateur {{CSSxRef(":checked")}} pour tous les inputs (`checkbox` et `radio`), ainsi que pour les éléments avec la classe `.none`. Cela supprime toute la mise en forme du bouton radio et de la case à cocher, à l'exception des marges, et permet d'appliquer tous les styles définis. Aucun style alternatif n'est fourni pour les boutons radio ou les éléments `<select>` lorsque `none` est défini.
 
 ```css
 [type="checkbox"] {
@@ -387,7 +387,7 @@ select {
 
 {{EmbedLiveSample("Définir l'apparence d'un sélecteur", 1050, 80)}}
 
-Bien que les styles {{CSSxRef("background-color")}} et {{CSSxRef("border")}} soient définis sur tous les éléments `<select>` et leurs sélecteurs, les styles `::picker(select)` n'affectent le sélecteur que lorsque le select et le sélecteur ont la propriété `appearance` définie à `base-select`. Le premier et le troisième select ont le même aspect car `menulist-button` est un mot-clé de compatibilité.
+Bien que les styles {{CSSxRef("background-color")}} et {{CSSxRef("border")}} soient définis sur tous les éléments `<select>` et leurs sélecteurs, les styles `::picker(select)` n'affectent le sélecteur que lorsque le select et le sélecteur ont la propriété `appearance` définie à `base-select`. Le premier et le troisième select ont le même aspect, car `menulist-button` est un mot-clé de compatibilité.
 
 Notez que, par défaut, la taille en incise du `<select>` correspond généralement à celle de `<option>` ayant le plus de texte, et que le sélecteur déroulant apparaît au-dessus de la page affichée lorsqu'il est ouvert, ce qui fait qu'il n'est pas contraint par la page environnante et donc entièrement visible. Ces affirmations ne sont plus vraies lorsque `base-select` est défini.
 

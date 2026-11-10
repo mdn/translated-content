@@ -3,7 +3,7 @@ title: Propriété CSS `cx`
 short-title: cx
 slug: Web/CSS/Reference/Properties/cx
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cx`** définit le point central sur l'axe des abscisses d'un élément SVG {{SVGElement("circle")}} ou {{SVGElement("ellipse")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("cx")}} de l'élément.
@@ -88,7 +88,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Définir la coordonnée de l'axe x d'un cercle et d'une ellipse", 300, 180)}}
 
-Le centre du cercle mis en forme est à `30px` du bord gauche de la zone d'affichage SVG et l'ellipse mise en forme est à `180px` de ce bord, comme défini dans les valeurs de la propriété CSS `cx`. Les centres des formes non stylisées sont à `50px` et `150px` du bord gauche de la zone d'affichage SVG, comme défini dans leurs valeurs d'attribut SVG `cx`.
+Le centre du cercle mis en forme est à `30px` du bord gauche de la zone d'affichage SVG et l'ellipse mise en forme est à `180px` de ce bord, comme défini dans les valeurs de la propriété CSS `cx`. Les centres des formes qui ne sont pas mises en forme sont à `50px` et `150px` du bord gauche de la zone d'affichage SVG, comme défini dans leurs valeurs d'attribut SVG `cx`.
 
 ### Coordonnées de l'axe x en pourcentage
 

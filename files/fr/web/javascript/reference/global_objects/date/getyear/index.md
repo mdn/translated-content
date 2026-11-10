@@ -3,7 +3,7 @@ title: "Date : méthode getYear()"
 short-title: getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`getYear()`** des instances de {{JSxRef("Date")}} retourne l'année pour cette date selon l'heure locale. Comme `getYear()` ne retourne pas les années complètes (problème de l'an 2000), elle est obsolète et a été remplacée par la méthode {{JSxRef("Date/getFullYear", "getFullYear()")}}.
@@ -77,8 +77,8 @@ const annee = noel.getYear(); // retourne 95
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Date.prototype.getYear` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-date)
-- [Prothèse d'émulation es-shims de `Date.prototype.getYear` <sup>(angl.)</sup>](https://www.npmjs.com/package/date.prototype.getyear)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Date.prototype.getYear` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Date.prototype.getYear` <sup>(angl.)</sup>](https://www.npmjs.com/package/date.prototype.getyear)
 - La méthode {{JSxRef("Date.prototype.getFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.getUTCFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.setYear()")}}

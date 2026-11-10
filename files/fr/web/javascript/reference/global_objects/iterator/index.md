@@ -2,7 +2,7 @@
 title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 l10n:
-  sourceCommit: d43ba33e72afa135ce782e2c0ca19fe32a93bb13
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 L'objet **`Iterator`** est un objet qui respecte le [protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») en fournissant une méthode `next()` qui retourne un objet résultat d'itérateur. Tous les itérateurs intégrés héritent de la classe `Iterator`. La classe `Iterator` fournit une méthode [`[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) qui retourne l'objet itérateur lui-même, rendant l'itérateur également [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). Elle propose aussi des méthodes utilitaires pour manipuler les itérateurs.
@@ -142,9 +142,9 @@ const monIterateur = Iterator.from({
   - : Crée un nouvel objet `Iterator` à partir d'une liste d'objets itérables. Le nouvel itérateur produit les valeurs de chacun des itérables d'entrée, en séquence.
 - {{JSxRef("Iterator.from()")}}
   - : Crée un nouvel objet `Iterator` à partir d'un itérateur ou d'un objet itérable.
-- {{JSxRef("Iterator.zip()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zip()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des tableaux contenant les éléments à la même position.
-- {{JSxRef("Iterator.zipKeyed()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.zipKeyed()")}}
   - : Crée un nouvel objet `Iterator` qui agrège les éléments de plusieurs objets itérables en produisant des objets contenant les éléments à la même position, avec des clés définies par l'entrée.
 
 ## Propriétés d'instance
@@ -175,7 +175,7 @@ Ces propriétés sont définies sur `Iterator.prototype` et partagées par toute
   - : Retourne un nouvel objet aide à l'itérateur qui prend chaque élément de l'itérateur d'origine, le passe dans une fonction de correspondance, et produit les éléments retournés par la fonction de correspondance (qui sont contenus dans un autre itérateur ou objet pouvant être parcouru).
 - {{JSxRef("Iterator.prototype.forEach()")}}
   - : Exécute une fonction fournie une fois pour chaque élément produit par l'itérateur.
-- {{JSxRef("Iterator.prototype.includes()")}} {{Experimental_Inline}}
+- {{JSxRef("Iterator.prototype.includes()")}}
   - : Retourne `true` si un élément produit par l'itérateur est égal à la valeur donnée. Sinon, si l'itérateur est épuisé sans trouver un tel élément, il retourne `false`.
 - {{JSxRef("Iterator.prototype.join()")}} {{Experimental_Inline}}
   - : Retourne une chaîne de caractères qui est la concaténation de tous les éléments produits par l'itérateur, séparés par des virgules ou une chaîne de caractères de séparateur définie.
@@ -220,7 +220,7 @@ for (const valeur of tableauIterateur) {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator` et des aides associées <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator` et des aides associées <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'instruction {{JSxRef("Statements/function*", "function*")}}
 - [Protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

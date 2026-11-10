@@ -1,52 +1,42 @@
 ---
-title: Primeros pasos en la Web
+title: Tu primer sitio web
 slug: Learn_web_development/Getting_started/Your_first_website
-original_slug: Learn/Getting_started_with_the_web
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
-_Introducción a la Web_ es una serie concisa que te presenta los aspectos prácticos del desarrollo web. Configurarás las herramientas que necesitas para construir una sencilla página web y publicar tu propio código.
+Este módulo te presenta los aspectos prácticos del desarrollo web. Reunirás los recursos y escribirás el código para construir una página web sencilla, y después la publicarás para que todo el mundo la vea.
 
-## La historia de tu primer sitio web
+Crear un sitio web profesional es mucho trabajo, así que si eres nuevo en el desarrollo web, te animamos a empezar poco a poco. No vas a construir otro Facebook de inmediato, pero no es difícil tener tu propio sitio web sencillo en línea, así que empezaremos por ahí.
 
-Es mucho trabajo crear un sitio web profesional, así que si eres nuevo en el desarrollo web, te animamos a que empieces poco a poco. No crearás otro Facebook de inmediato, pero no es difícil tener tu propio sitio web sencillo en línea, así que comenzaremos por ahí.
+## Requisitos previos
 
-Al trabajar en orden a través de los artículos que se enumeran a continuación, pasarás de la nada a tener tu primera página web en línea. ¡Comencemos nuestro viaje!
+Este módulo no asume ningún conocimiento previo de las tecnologías web, pero ya deberías sentirte cómodo usando tu sistema operativo, incluido el sistema de archivos, y navegando por la web. Deberías tener instalados un editor de código y varios navegadores web.
 
-### Instalación de software básico
+Si no es así, te sugerimos que primero completes el módulo [Configuración del entorno](/es/docs/Learn_web_development/Getting_started/Environment_setup).
 
-Cuando se trata de herramientas para crear un sitio web, hay mucho para elegir. Si recién estás comenzando, es posible que te sientas confundido por la variedad de editores de código, marcos de desarrollo y herramientas de prueba que existen. En [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), te mostramos paso a paso cómo instalar solo el software que necesitas para comenzar un desarrollo web básico.
+## Tutoriales
 
-### ¿Cuál será la apariencia de tu sitio web?
+- [¿Cuál será la apariencia de tu sitio web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
+  - : Antes de empezar a escribir el código de tu sitio web, primero deberías planificarlo. ¿Qué información vas a mostrar? ¿Qué fuentes y colores vas a usar? Aquí describimos un método sencillo que puedes seguir para planificar el contenido y el diseño de tu sitio.
 
-Antes de comenzar a escribir el código para tu sitio web, primero lo debes planificar. ¿Qué información estás mostrando?, ¿qué fuentes y colores estás usando?, en [¿cuál será la apariencia de tu sitio web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like), describimos un método simple que puedes seguir para planificar el contenido y modelado de tu sitio.
+- [Crear el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : HTML (**H**yper**T**ext **M**arkup **L**anguage, lenguaje de marcado de hipertexto) es el código que se usa para estructurar una página web y su contenido. Por ejemplo, el contenido puede estructurarse en un conjunto de párrafos, en una lista de viñetas o mediante imágenes y tablas de datos. Este artículo ofrece una comprensión básica de HTML y sus funciones, y te muestra cómo crear el contenido básico de tu primer sitio web.
 
-### Manejo de archivos
+- [Dar estilo al contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+  - : CSS (Cascading Style Sheets, hojas de estilo en cascada) es el código que da estilo al contenido web. _Dar estilo al contenido_ te explica lo que necesitas para empezar. Responderemos preguntas como: ¿cómo hago que el texto sea rojo? ¿Cómo hago que el contenido se muestre en un lugar concreto del diseño (de la página web)? ¿Cómo decoro mi página web con imágenes y colores de fondo?
 
-Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensata y asegurarte de que se puedan comunicar entre sí. [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) explica cómo configurar una estructura de archivos sensible para tu sitio web y qué problemas debes tener en cuenta.
+- [Añadir interactividad](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : JavaScript es un lenguaje de programación que añade interactividad a los sitios web. Esto ocurre en los juegos, en las respuestas al pulsar botones o al introducir datos en formularios, con estilos dinámicos, con animaciones, etc. Este artículo te ayuda a empezar con JavaScript y amplía tu comprensión de lo que es posible.
 
-### Conceptos básicos de HTML
+- [Publicar tu sitio web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+  - : Cuando termines de escribir el código y de organizar los archivos que forman tu sitio web, tienes que ponerlo todo en línea para que la gente pueda encontrarlo. Este artículo explica cómo publicar tu sitio web de ejemplo en línea con poco esfuerzo.
 
-El lenguaje de marcado de hipertexto (HTML) es el código que utilizas para estructurar tu contenido web y darle significado y propósito. Por ejemplo, ¿mi contenido es un conjunto de párrafos o una lista de viñetas?, ¿tengo imágenes insertadas en mi página?, ¿tengo una tabla de datos?; Sin abrumarte, [conceptos básicos de HTML](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) proporciona suficiente información para familiarizarte con HTML.
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
-### Conceptos básicos de CSS
+## Véase también
 
-Hojas de estilo en cascada (CSS) es el código que utilizas para aplicar estilo a tu sitio web. Por ejemplo, ¿desea que el texto sea negro o rojo?, ¿dónde se debe dibujar el contenido en la pantalla?, ¿qué imágenes de fondo y colores se deben utilizar para decorar tu sitio web?, [Conceptos básicos de CSS](/es/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) te indica lo que necesitas para empezar.
-
-### Conceptos básicos de JavaScript
-
-JavaScript es el lenguaje de programación que utilizas para agregar funciones interactivas a tu sitio web. Algunos ejemplos podrían ser juegos, cosas que suceden cuando se presionan botones o se ingresan datos en formularios, efectos de estilo dinámico, animación y mucho más. [Conceptos básicos de JavaScript](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) te da una idea de lo que es posible con este interesante lenguaje y cómo empezar.
-
-### Publicar tu sitio web
-
-Una vez que hayas terminado de escribir el código y organizado los archivos que componen tu sitio web, lo debes poner todo en línea para que la gente lo pueda encontrar. [Publica tu código de ejemplo](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) describe cómo publicar tu código de ejemplo en línea con el mínimo esfuerzo.
-
-### Cómo funciona la web
-
-Cuando accedes a tu sitio web favorito, suceden muchas cosas complicadas en segundo plano que quizás no conozcas. [Cómo funciona la web](/es/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) describe lo que sucede cuando ves una página web en tu dispositivo favorito.
-
-## Ve también
-
-- [La web desmitificada](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): Una gran serie de videos que explican los fundamentos de la web, dirigida a completamente novatos en el desarrollo web. Creada por [Jérémie Patonnier](https://twitter.com/JeremiePat).
-- [La web y sus estándares](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model): Este artículo proporciona algunos útiles antecedentes sobre la web: cómo surgió, qué son las tecnologías web estándar, cómo trabajan juntas, por qué "desarrollador web" es una gran carrera para elegir y qué tipo de mejores prácticas aprenderás a través del curso.
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>
+  - : La _Frontend Developer Career Path_ de [Scrimba](https://scrimba.com/?via=mdn) enseña todo lo que necesitas saber para ser un desarrollador web front-end competente, con lecciones y desafíos interactivos divertidos, profesores expertos y una comunidad de apoyo. ¡Pasa de cero a conseguir tu primer trabajo front-end! Muchos de los componentes del curso están disponibles como versiones gratuitas independientes.

@@ -3,7 +3,7 @@ title: "Math : méthode statique tanh()"
 short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.tanh()`** retourne la tangente hyperbolique d'un nombre. Autrement dit,
@@ -51,7 +51,7 @@ Puisque `tanh()` est une méthode statique de `Math`, elle doit toujours être u
 
 ## Exemples
 
-### Utiliser `Math.tanh()`
+### Utiliser la méthode `Math.tanh()`
 
 ```js
 Math.tanh(-Infinity); // -1
@@ -71,7 +71,7 @@ Math.tanh(Infinity); // 1
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Math.tanh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.tanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.atanh()")}}

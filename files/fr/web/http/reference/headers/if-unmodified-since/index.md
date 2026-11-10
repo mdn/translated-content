@@ -6,9 +6,9 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`If-Unmodified-Since`** rend la requête pour la ressource [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests).
-Le serveur enverra la ressource demandée (ou l'acceptera dans le cas d'une méthode {{HTTPMethod("POST")}} ou d'une autre méthode qui n'est pas {{Glossary("Safe/HTTP", "sûre")}}) uniquement si la ressource sur le serveur n'a pas été modifiée après la date dans l'en-tête de requête.
-Si la ressource a été modifiée après la date définie, la réponse sera une erreur {{HTTPStatus("412", "412 Precondition Failed")}}.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`If-Unmodified-Since`** rend la requête pour la ressource [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests).
+Le serveur envoie la ressource demandée (ou l'accepte dans le cas d'une méthode {{HTTPMethod("POST")}} ou d'une autre méthode qui n'est pas {{Glossary("Safe/HTTP", "sûre")}}) uniquement si la ressource sur le serveur n'a pas été modifiée après la date dans l'en-tête de requête.
+Si la ressource a été modifiée après la date définie, la réponse est une erreur {{HTTPStatus("412", "412 Precondition Failed")}}.
 
 L'en-tête `If-Unmodified-Since` est couramment utilisé dans les situations suivantes&nbsp;:
 

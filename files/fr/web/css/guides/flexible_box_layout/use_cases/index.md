@@ -1,84 +1,299 @@
 ---
-title: Cas d'utilisation classiques de flexbox
+title: Cas d'utilisation classiques de boîtes flexibles
+short-title: Cas d'utilisation classiques
 slug: Web/CSS/Guides/Flexible_box_layout/Use_cases
-original_slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 l10n:
-  sourceCommit: 39065429ffa608d6b486d599ce2ac9f156a32bd3
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
-Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.
+Dans ce guide, nous voyons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.
 
 ## Pourquoi choisir les boîtes flexibles ?
 
-Dans un monde où la compatibilité entre navigateurs serait un lointain souvenir, on pourrait choisir d'utiliser les boîtes flexibles lorsqu'on souhaite organiser un ensemble d'élément dans une direction ou dans une autre. Lorsqu'on place les éléments, on souhaite contrôler les dimensions de ces éléments dans cette direction ou contrôler l'espacement ainsi créé entre les éléments. C'est ce pourquoi les boîtes flexibles ont été conçues. Vous pouvez approfondir les différences entre les boîtes flexibles et la disposition en grille CSS avec [l'article sur les relations entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods) où nous voyons comment s'inscrivent les boîtes flexibles dans le paysage de CSS.
+Les boîtes flexibles constituent généralement la solution de disposition CSS appropriée lorsque vous souhaitez organiser un ensemble d'éléments dans une seule dimension ou contrôler l'espacement entre les éléments. Dans ce guide, nous examinons certains des cas d'utilisation classiques des boîtes flexibles.
 
-Dans la réalité, on utilise souvent les boîtes flexibles pour créer des organisations qu'il serait plus pertinent de construire avec une disposition en grille et pour lesquelles les boîtes flexibles sont une méthode de recours et offrent une certaine capacité d'alignement. Sur ce deuxième aspect, cela pourra évoluer lorsque l'alignement des boîtes sera implémenté dans la disposition en bloc. Dans ce guide, nous verrons quels sont les cas classiques où on utilise les boîtes flexibles aujourd'hui.
+## Navigation
 
-## La navigation
+Un motif souvent utilisé pour la navigation consiste à avoir une liste d'éléments affichés sous forme de barre horizontale. C'est probablement l'exemple le plus courant de l'utilisation des boîtes flexibles et peut être considéré comme un cas d'utilisation idéal.
 
-Un motif souvent utilisé pour la navigation consiste à avoir une liste d'objets qui forment une barre horizontale. Ce motif, bien que simple, était plutôt compliqué à obtenir avant l'apparition des boîtes flexibles. C'est l'exemple le plus simple pour les boîtes flexibles et cela constitue un cas d'utilisation idéal.
+Lorsque nous avons un ensemble d'éléments que nous voulons afficher horizontalement, il se peut que nous nous retrouvions avec de l'espace supplémentaire. Nous devons décider quoi faire de cet espace et avons quelques options. Nous pouvons soit afficher l'espace à l'extérieur des éléments — les espaçant ainsi avec de l'espace blanc entre ou autour d'eux — soit absorber l'espace supplémentaire à l'intérieur des éléments et donc avoir besoin d'une méthode permettant aux éléments de grandir et d'occuper cet espace.
 
-Lorsqu'on a un ensemble d'objets qu'on souhaite organiser horizontalement, on peut avoir plus d'espace que nécessaire. Il faut décider comment utiliser cet espace&nbsp;: on peut afficher cet espace entre les éléments afin de les espacer ou bien agrandir les objets. Dans ce dernier cas, il nous faut une méthode pour permettre aux objets de grandir et d'occuper cet espace.
+### Espace distribué en dehors des éléments
 
-### L'espace distribué en dehors des éléments
+Pour distribuer l'espace entre les éléments ou autour d'eux, nous utilisons les propriétés d'alignement dans les boîtes flexibles et la propriété {{CSSxRef("justify-content")}}. Vous pouvez en savoir plus sur cette propriété dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), qui traite de l'alignement des éléments sur l'axe principal.
 
-Pour répartir l'espace entre les éléments ou autour d'eux, on pourra utiliser les propriétés d'alignement des boîtes flexibles et la propriété [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content). Vous pouvez approfondir cette propriété avec le guide [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), qui décrit comment aligner des objets sur l'axe principal.
+Dans cet exemple, nous affichons les éléments à leur taille naturelle et utilisons `justify-content: space-between` pour répartir l'espace de manière égale entre les éléments. Vous pouvez modifier la répartition de l'espace en utilisant les valeurs `space-around` ou `space-evenly`. Vous pouvez également utiliser `start` pour placer l'espace à la fin des éléments, `end` pour le placer avant eux, ou `center` pour centrer les éléments de navigation.
 
-Dans l'exemple qui suit, on affiche les éléments en utilisant leur taille naturelle et on écrit `justify-content: space-between` afin de répartir l'espace équitablement entre chaque élément. Cette répartition de l'espace peut être modifiée en utilisant la valeur `space-around` ou, lorsqu'elle est prise en charge, la valeur `space-evenly`. On peut également utiliser `flex-start` afin de placer l'espace après les éléments ou encore `flex-end` pour placer l'espace avant les éléments voire `center` afin de centrer les éléments.
+```html live-sample___navigation
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 est plus longue</a></li>
+    <li><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}
+```css live-sample___navigation
+nav {
+  border: 2px solid #eeeeee;
+}
 
-### L'espace distribué au sein des éléments
+nav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
 
-On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés [`flex`](/fr/docs/Web/CSS/Reference/Properties/flex) afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+```
 
-Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera `flex: auto` qui correspond à la notation raccourcie de `flex: 1 1 auto`&nbsp;: tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.
+{{EmbedLiveSample("navigation")}}
 
-Dans l'exemple qui suit, vous pouvez modifier `flex: auto` pour utiliser `flex: 1` qui correspond à la notation raccourcie de `flex: 1 1 0` et qui permet d'avoir la même largeur pour chaque élément, car la base (`flex-basis`) vaut 0 et permet de répartir l'intégralité de l'espace de façon équitable.
+### Espace distribué au sein des éléments
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation-flex.html", '100%', 550)}}
+Un autre modèle pour la navigation consiste à répartir l'espace disponible au sein des éléments eux-mêmes, plutôt que de créer de l'espace entre eux. Les propriétés {{CSSxRef("flex")}} permettent aux éléments de grandir et de rétrécir proportionnellement les uns par rapport aux autres, comme décrit dans [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
 
-## La navigation séparée
+Si vous souhaitez respecter la propriété de taille de vos éléments de navigation tout en partageant l'espace disponible de manière égale entre eux, vous pouvez utiliser `flex: auto`, qui est la notation raccourcie de `flex: 1 1 auto` — tous les éléments grandissent et rétrécissent à partir d'une taille de base (`flex-basis`) de `auto`. Cela signifie que l'élément le plus long a plus d'espace parce qu'il part d'une taille plus grande, même si la même quantité d'espace disponible lui est attribuée que les autres.
+
+Dans l'exemple interactif ci-dessous, essayez de changer `flex: auto` en `flex: 1`. Cette notation raccourcie pour `flex: 1 1 0` fait en sorte que tous les éléments deviennent de la même largeur, car ils partent d'une `flex-basis` de `0`, ce qui permet de répartir l'espace disponible de manière égale.
+
+```html live-sample___navigation-flex
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 est plus longue</a></li>
+    <li><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___navigation-flex
+nav {
+  border: 2px solid #eeeeee;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
+
+nav li {
+  flex: auto;
+}
+```
+
+{{EmbedLiveSample("navigation-flex")}}
+
+## Navigation séparée
 
 Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite. Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans [Utiliser les marges automatiques pour l'alignement sur l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#utiliser_les_marges_automatiques_pour_aligner_sur_laxe_principal).
 
-Les éléments sont alignés sur l'axe principal avec `flex-start` car c'est le comportement initial de flexbox. La propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) a été utilisée pour créer des espaces entre les éléments. Nous alignons le dernier élément sur la droite en lui attribuant une marge gauche automatique. Vous pouvez déplacer la classe d'un élément à l'autre pour modifier l'emplacement de la séparation.
+Les éléments sont alignés sur l'axe principal avec `normal`, ce qui se comporte comme `start`, car c'est le comportement initial des boîtes flexibles. La propriété {{CSSxRef("gap")}} crée des espaces entre les éléments. Et nous alignons le dernier élément sur la droite en lui attribuant une valeur de `margin-left` automatique. Vous pouvez déplacer la classe d'un élément à l'autre pour modifier l'emplacement de la séparation.
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/split-navigation.html", '100%', 550)}}
+```html live-sample___split-navigation
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 est plus longue</a></li>
+    <li class="pousse-a-droite"><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
 
-## Centrer des éléments
+```css live-sample___split-navigation
+nav {
+  border: 2px solid #eeeeee;
+}
 
-Avant l'apparition des boîtes flexibles, une blague récurrente consistait à dire qu'un des défis majeur sur le Web était le centrage vertical des éléments. Disposant désormais des propriétés d'alignement pour les boîtes flexibles, surmonter ce défi est beaucoup plus accessible. Nous allons le voir dans l'exemple suivant.
+nav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
 
-Vous pouvez manipuler les propriétés d'alignement pour aligner les objets au début avec `flex-start` ou à la fin avec `flex-end`.
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
+.pousse-a-droite {
+  margin-left: auto;
+}
+```
 
-À l'avenir, il ne sera peut-être plus nécessaire d'utiliser un conteneur flexible afin de centrer un seul élément, car les propriétés d'alignement des boîtes auront également été implémentées pour la disposition en bloc. Mais aujourd'hui, si on souhaite correctement centrer un objet dans un centre, il faut utiliser les boîtes flexibles. On procède comme dans l'exemple ci-avant&nbsp;: on modifie le conteneur afin que ce soit un conteneur flexible puis on utilise la propriété `align-items` sur l'élément parent ou bien on cible l'élément voulu avec `align-self`.
+{{EmbedLiveSample("split-navigation")}}
 
-## Une disposition en cartes avec un pied ajustable
+## Centrer un élément
 
-Qu'on utilise les boîtes flexibles ou les grilles CSS afin d'organiser une liste de cartes, ces méthodes fonctionnent uniquement sur les éléments fils directs du conteneur flexible ou du conteneur de grille. Cela signifie que si on dispose d'une quantité de contenu variable, la carte s'étirera sur toute la hauteur de la grille ou sur toute la hauteur du conteneur flexible. Tout le contenu à l'intérieur utilise une disposition en bloc classique qui signifie que le pied de page d'une carte avec moins de contenu sera plus haut que celui d'une carte disposant de plus de contenu pour lequel le pied est bien aligné en bas de la carte.
+Une blague récurrente parmi les développeur·euse·s est que le problème le plus difficile en conception web est le centrage vertical. Le centrage vertical du contenu est très simple avec les propriétés d'alignement des boîtes flexibles, comme le montre l'exemple interactif suivant.
 
-![Deux composants "carte" montrant que l'élément contenant le texte ne s'étire pas.](flex-cards.png)
+Cliquez sur **«&nbsp;Exécuter&nbsp;»** et essayez de modifier l'alignement, par exemple en alignant l'élément au début avec `start` ou à la fin avec `end`&nbsp;:
 
-On peut résoudre ce problème avec les boîtes flexibles. Pour commencer, on transforme la carte en conteneur flexible avec [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction)`: column`. Ensuite, on affecte un coefficient `flex: 1` à la zone du contenu (ce qui correspond à la notation raccourcie `flex: 1 1 0`)&nbsp;: l'élément pourra s'étirer ou se rétrécir avec une base `0`. Comme c'est le seul élément de la carte qui peut grandir, il occupera tout l'espace encore disponible dans le conteneur flexible et poussera le pied en bas de carte. Dans l'exemple qui suit, si on retire la propriété `flex`, on peut voir le pied remonter pour être inscrit directement après le contenu.
+```html live-sample___center
+<div class="boite">
+  <div></div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}
+```css live-sample___center
+.boite {
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-## Les objets média
+.boite div {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 100px;
+  height: 100px;
+}
+```
 
-Un objet média est un motif classique en conception web. Dans ce motif, on a une image ou un autre média d'un côté et le texte associé à droite. Idéalement, on souhaite pouvoir inverser les deux composants et déplacer l'image à droite.
+{{EmbedLiveSample("center", "", 320)}}
 
-On peut voir ce motif utilisé avec les commentaires, les endroits où on affiche des images et leur description. Avec les boîtes flexibles, on peut dimensionner l'objet média en fonction des dimensions de l'image et occuper le reste de l'espace avec le contenu textuel.
+Avec les propriétés [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment), vous pouvez centrer verticalement un élément à l'intérieur d'un autre sans utiliser les boites flexibles. Dans l'exemple ci-dessus, essayez de supprimer les propriétés `flex` de la boite et d'ajouter `align-content: center`. Ajoutez ensuite `margin: auto` à l'élément que vous souhaitez centrer horizontalement.
 
-Dans l'exemple suivant, on utilise les propriétés d'alignement des objets sur l'axe secondaire avec `flex-start` puis on définit `.content` avec `flex: 1`. Comme vu dans l'exemple précédent, `flex: 1` signifie que cette partie de la carte peut grandir.
+## Disposition en cartes avec un pied de page ajustable
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
+Que vous utilisez les boîtes flexibles ou les grilles pour disposer une liste de composants de carte, ces méthodes de disposition ne fonctionnent que sur les enfants directs du composant flexible ou de la grille. Cela signifie que si vous avez des quantités variables de contenu, la carte s'étire à la hauteur de la zone de la grille ou du conteneur flexible. Tout contenu à l'intérieur utilise la disposition de bloc régulière, ce qui signifie que sur une carte avec moins de contenu, le pied de page remonte au bas du contenu plutôt que de rester collé au bas de la carte.
 
-Vous pouvez ici essayer d'appliquer les différentes contraintes relatives à votre conception.
+![Deux composants de carte montrant que les éléments internes du composant ne s'étirent pas avec l'élément englobant.](flex-cards.png)
 
-Pour empêcher l'image de devenir trop large, on pourra ajouter la propriété [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) à l'image. Cette dimension de l'objet utilisant les valeurs initiales des propriétés flexibles, elle pourra rétrécir mais pas grandir et elle utilisera `auto` comme valeur pour `flex-basis`. Toute largeur [`width`](/fr/docs/Web/CSS/Reference/Properties/width) ou `max-width` appliquée à l'image sera utilisée comme mesure pour `flex-basis`.
+On peut résoudre ce problème avec les boîtes flexibles. Pour commencer, on transforme la carte en conteneur flexible avec {{CSSxRef("flex-direction", "flex-direction: column")}}. Nous définissons ensuite la zone de contenu sur `flex: 1`, ce qui est le raccourci pour `flex: 1 1 0` — l'élément peut croître et rétrécir à partir d'une base flexible de `0`. Comme c'est le seul élément qui peut croître, il occupe tout l'espace disponible dans le conteneur flexible et pousse le pied de page vers le bas. Si vous supprimez la propriété `flex` de l'exemple en direct, vous voyez le pied de page remonter pour s'asseoir directement sous le contenu.
+
+```html live-sample___cards
+<div class="cartes">
+  <div class="carte">
+    <div class="contenu">
+      <p>Cette carte n'a pas beaucoup de contenu.</p>
+    </div>
+    <footer>Pied de carte</footer>
+  </div>
+  <div class="carte">
+    <div class="contenu">
+      <p>
+        Cette carte a beaucoup plus de contenu, ce qui signifie qu'elle définit
+        la hauteur du conteneur dans lequel se trouvent les cartes. J'ai disposé
+        les cartes en utilisant la grille, donc les cartes elles-mêmes s'étirent
+        pour avoir la même hauteur.
+      </p>
+    </div>
+    <footer>Pied de carte</footer>
+  </div>
+</div>
+```
+
+```css live-sample___cards
+body {
+  font-family: sans-serif;
+}
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.carte {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carte .contenu {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.carte footer {
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("cards", "", 280)}}
+
+## Objets média
+
+L'objet média — une image ou tout autre élément média accompagné d'un texte descriptif placé à côté — est un modèle courant dans la conception web. Les objets médias doivent pouvoir être inversés, c'est-à-dire que l'image doit pouvoir être déplacée d'un côté à l'autre.
+
+Ce modèle est utilisé pour les commentaires et d'autres contextes où des images sont placées à côté de leurs descriptions. Nous pouvons utiliser une boîte flexible pour permettre à la partie de l'objet média contenant l'image de tirer ses informations de dimensions de l'image, tandis que le contenu de l'objet média s'adapte pour occuper l'espace restant.
+
+Dans cet exemple, l'objet média est aligné sur `flex-start` et le `.contenu` est configuré pour s'étendre, avec un facteur de croissance défini sur `1`. Ces propriétés sont identiques à celles utilisées pour notre modèle de carte à mise en page en colonnes ci-dessus.
+
+```html live-sample___media
+<div class="media">
+  <div class="image">
+    <img
+      alt="Une montgolfière colorée contre un ciel bleu"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="contenu">
+    Ceci est le contenu de mon objet média. Les éléments directement à
+    l'intérieur du conteneur flexible sont alignés sur flex-start.
+  </div>
+</div>
+```
+
+```css live-sample___media
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.media {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
+
+.media .contenu {
+  flex: 1;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("media", "", 320)}}
+
+Certaines choses que vous pouvez vouloir essayer dans cet exemple en direct concernent les différentes façons dont vous pouvez vouloir contraindre l'objet média dans votre conception.
+
+Pour empêcher l'image de devenir trop large, vous devez ajouter une {{CSSxRef("max-width")}} à l'image. Comme ce côté de l'objet média utilise les valeurs initiales de boîte flexible, il peut rétrécir, mais pas grandir, et utilise un `flex-basis` automatique. Toute {{CSSxRef("width")}} ou `max-width` appliquée à l'image devient le `flex-basis`.
 
 ```css
 .image img {
@@ -86,10 +301,10 @@ Pour empêcher l'image de devenir trop large, on pourra ajouter la propriété [
 }
 ```
 
-On peut également permettre aux deux côtés de grandir/rétrécir proportionnellement. Si on paramètre les deux côtés avec `flex: 1`, ils grandiront/rétréciront à partir d'une base [`flex-basis`](/fr/docs/Web/CSS/Reference/Properties/flex-basis) égale à 0 et on obtiendra alors deux colonnes de même taille. Si on souhaite plutôt utiliser la taille du contenu comme base, on pourra utiliser `flex: auto` et les deux côtés grandiront/rétréciront à partir de la taille de leur contenu ou de toute taille qui leur serait explicitement appliquée en CSS (par exemple une largeur sur l'image).
+Vous pouvez également permettre aux deux côtés de grandir et de rétrécir proportionnellement. Si vous définissez les deux côtés sur `flex: 1`, ils s'agrandissent et se rétrécissent à partir d'un {{CSSxRef("flex-basis")}} de `0`, de sorte que vous obtenez deux colonnes de taille égale. Vous pouvez soit prendre le contenu comme guide et définir les deux sur `flex: auto`, auquel cas ils s'agrandissent et se rétrécissent à partir de la taille du contenu ou de toute taille appliquée directement aux éléments flexibles, comme une `width` sur l'image.
 
 ```css
-.media .content {
+.media .contenu {
   flex: 1;
   padding: 10px;
 }
@@ -99,10 +314,10 @@ On peut également permettre aux deux côtés de grandir/rétrécir proportionne
 }
 ```
 
-On pourrait aussi utiliser différents coefficients [`flex-grow`](/fr/docs/Web/CSS/Reference/Properties/flex-grow) pour chaque côté. Utiliser `flex: 1` pour le côté avec l'image et `flex: 3` pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base `flex-basis` de `0` et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de `flex-grow`. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
+Vous pouvez également donner à chaque côté des facteurs {{cssxref("flex-grow")}} différents, par exemple en définissant le côté avec l'image sur `flex: 1` et le côté avec le contenu sur `flex: 3`. Cela signifie qu'ils utilisent un `flex-basis` de `0` mais distribuent cet espace à des rythmes différents selon le facteur `flex-grow` que vous avez attribué. Les propriétés flexibles que nous utilisons pour ce faire sont décrites en détail dans le guide [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
 
 ```css
-.media .content {
+.media .contenu {
   flex: 3;
   padding: 10px;
 }
@@ -114,26 +329,98 @@ On pourrait aussi utiliser différents coefficients [`flex-grow`](/fr/docs/Web/C
 
 ### Inverser la position de l'objet média
 
-Si on souhaite échanger la position de l'image dans l'objet média pour l'afficher à droite avec le contenu textuel à gauche, on pourra utiliser la propriété `flex-direction` avec la valeur `row-reverse`. L'objet média est désormais affiché dans l'autre sens. Dans l'exemple, cela s'obtient grâce à l'ajout de la classe `flipped` (en plus de la classe existante `.media`). Vous pouvez donc annuler cet effet en retirant la classe dans le code HTML.
+Pour inverser l'affichage de l'objet média et avoir l'image à droite et le contenu à gauche, nous définissons la propriété `flex-direction` sur `row-reverse`.
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media-flipped.html", '100%', 650)}}
+Dans cet exemple, nous avons ajouté une classe `inverse` en plus de la classe `media`. Supprimez cette classe dans le code HTML pour voir comment l'affichage change.
 
-## Les contrôles de formulaire
+```html live-sample___media-flipped
+<div class="media inverse">
+  <div class="image">
+    <img
+      alt="Une montgolfière colorée contre un ciel bleu"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="contenu">
+    Ceci est le contenu de mon objet média. Les éléments directement à
+    l'intérieur du conteneur flexible sont alignés sur flex-start.
+  </div>
+</div>
+```
 
-Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) associé à un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
+```css live-sample___media-flipped
+img {
+  max-width: 100%;
+  display: block;
+}
 
-Les boîtes flexibles facilitent la construction de tels motifs. Dans l'exemple suivant, on enveloppe l'élément `<button>` et l'élément `<input>` dans un conteneur auquel on ajoute une bordure et pour lequel on a `display: flex`. On utilise ensuite les propriétés flexibles afin de permettre à l'élément `<input>` de grandir et de conserver la même taille pour le bouton. On a donc une paire d'éléments pour laquelle la zone de saisie s'ajuste en fonction de l'espace disponible.
+.media {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/input-button.html", '100%', 550)}}
+.inverse {
+  flex-direction: row-reverse;
+}
 
-On pourrait ajouter un libellé ou une icône à gauche aussi facilement qu'on a ajouté un bouton à droite. Dans la version suivante, on ajoute un libellé et d'autres règles de mise en forme pour l'arrière-plan. Il n'est pas nécessaire de modifier le reste de la disposition. Le champ de saisie adaptable possède désormais moins d'espace mais continue à consommer l'espace disponible après le placement des deux autres objets.
+.media .contenu {
+  flex: 1;
+  padding: 10px;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/label-input-button.html", '100%', 550)}}
+{{EmbedLiveSample("media-flipped", "", 320)}}
 
-De tels motifs facilitent la création d'une bibliothèque d'éléments de formulaires pour les différents documents d'un projet. On tire parti de la flexibilité des boîtes flexibles en mélangeant les éléments qui peuvent s'étendre et ceux qui restent à une taille constante.
+## Contrôles de formulaire
+
+Les boîtes flexibles sont particulièrement utiles lorsqu'il s'agit de mettre en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux petits éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément HTML {{htmlelement("label")}} et d'un élément HTML {{htmlelement("input")}} associé à un {{htmlelement("button")}}, par exemple pour un formulaire de recherche ou un formulaire d'inscription à une newsletter où l'on souhaite que le·la visiteur·euse saisisse son adresse électronique.
+
+Les boîtes flexibles permettent de réaliser ce type de mise en page avec seulement quelques déclarations. Les éléments `<label>`, `<input>` et `<button>` sont contenus dans un conteneur défini avec `display: flex`. Les propriétés de flexibilité permettent au champ `<input>` de s'étendre, tandis que le bouton et l'étiquette ne s'étendent pas. Le champ de saisie de texte s'étend et se réduit en fonction de l'espace disponible.
+
+```html live-sample___label-input-button
+<form class="exemple">
+  <div class="enveloppe">
+    <label for="texte">Étiquette</label>
+    <input id="texte" type="text" />
+    <input type="submit" value="Envoyer" />
+  </div>
+</form>
+```
+
+```css live-sample___label-input-button
+* {
+  font: 1.1em sans-serif;
+}
+
+.enveloppe {
+  display: flex;
+  border: 1px solid rgb(96 139 168);
+}
+.enveloppe > * {
+  padding: 10px;
+  border: none;
+  color: white;
+}
+.enveloppe > input[type="text"] {
+  background-color: rgb(96 139 168 / 0.5);
+  border-right: 1px solid rgb(96 139 168);
+  flex: 1 1 auto;
+}
+.enveloppe input[type="submit"] {
+  background-color: rgb(96 139 168);
+  color: white;
+}
+.enveloppe label {
+  background-color: #666666;
+}
+```
+
+{{EmbedLiveSample("label-input-button")}}
+
+Les modèles comme celui-ci peuvent faciliter la création d'une bibliothèque d'éléments de formulaire pour votre conception, qui s'adaptent facilement à l'ajout d'éléments supplémentaires. Vous tirez parti de la flexibilité de la boîte flexible en mélangeant des éléments qui ne grandissent pas avec ceux qui le font.
 
 ## Conclusion
 
-En explorant les motifs de ce guide, nous avons vu certaines des meilleures façons d'utiliser les boîtes flexibles pour obtenir le résultat souhaité. La plupart du temps, plusieurs choix s'offrent à nous. Mélanger des éléments qui peuvent s'étirer avec d'autres qui ne le peuvent pas, utiliser la taille du contenu comme point de départ ou encore permettre aux boîtes flexibles de gérer tout l'espace.
+En explorant les modèles présentés ci-dessus, vous avez, nous l'espérons, commencé à comprendre comment réfléchir à la meilleure façon d'utiliser les boîtes flexibles pour obtenir le résultat souhaité. Bien souvent, plusieurs options s'offrent à vous. Mélangez des éléments qui ne peuvent pas s'étirer avec ceux qui le peuvent, utilisez le contenu pour déterminer la taille, ou laissez les boîtes flexibles répartir l'espace de manière proportionnelle. C'est à vous de choisir.
 
-Pensez à la meilleure façon de présenter le contenu dont vous disposez, puis voyez comment les boîtes flexibles ou les autres méthodes de disposition peuvent vous aider à obtenir cette présentation.
+Réfléchissez à la meilleure façon de présenter votre contenu, puis voyez comment les boîtes flexibles ou d'autres méthodes de mise en page peuvent vous aider à y parvenir.

@@ -31,7 +31,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>autoplay</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         <p>
           表示 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay"><code>autoplay</code></a>
@@ -58,7 +58,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>controls</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         映射在 HTML
         标签。<a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#controls"><code>controls</code></a>
@@ -97,7 +97,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>defaultMuted</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         映射在 HTML 标签上。<a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#muted"><code>muted</code></a>
         属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用
@@ -125,7 +125,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>ended </code>{{readonlyinline}}</td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>表示媒体是否已经播放完毕。</td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>loop</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         会映射在 HTML 标签 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#loop"><code>loop</code></a> 属性
         , 决定该媒体是否循环播放。
@@ -240,7 +240,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>muted</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td><code>静音时为 true</code> ，否则是<code>false</code> .</td>
     </tr>
     <tr>
@@ -283,7 +283,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>paused </code>{{readonlyinline}}</td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>指示媒体元素是否被暂停。</td>
     </tr>
     <tr>
@@ -393,7 +393,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>seeking </code>{{readonlyinline}}</td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{jsxref("Boolean")}}</td>
       <td>
         Indicates whether the media is in the process of seeking to a new
         position.

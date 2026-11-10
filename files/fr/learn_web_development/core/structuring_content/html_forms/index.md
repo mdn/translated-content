@@ -3,7 +3,7 @@ title: Formulaires et boutons en HTML
 short-title: Formulaires et boutons
 slug: Learn_web_development/Core/Structuring_content/HTML_forms
 l10n:
-  sourceCommit: 7d93b0f639e37e9340ed707e3cb7f9a75c1b3048
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}
@@ -143,13 +143,21 @@ Voyons un exemple de base qui inclut les trois éléments ci-dessus. Ce formulai
 </html>
 ```
 
+```js hidden live-sample___form-anatomy live-sample___form-other-controls
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 Ceci est rendu comme suit&nbsp;:
 
-{{EmbedLiveSample("form-anatomy", "100%", 200, , , , , "allow-forms")}}
+{{EmbedLiveSample("form-anatomy", "100%", 200,,,,, "allow-forms")}}
 
-Si vous cliquez immédiatement sur «&nbsp;Inscrivez-moi&nbsp;!», vous voyez une erreur de validation, car aucune donnée n'a été saisie. Si vous remplissez les champs avec un nom et une adresse courriel, puis cliquez sur «&nbsp;Inscrivez-moi&nbsp;!», vous voyez un message d'erreur `404`.
+Si vous cliquez immédiatement sur «&nbsp;Inscrivez-moi&nbsp;!», vous voyez une erreur de validation, car vous n'avez saisi aucune donnée. Si vous remplissez les champs avec un nom et une adresse courriel, puis cliquez sur «&nbsp;Inscrivez-moi&nbsp;!», rien ne se passe — c'est parce que nous empêchons le formulaire de s'envoyer, ce qui vous fait quitter cette page en temps normal.
 
-Nous expliquerons pourquoi plus tard. Avant de continuer, copiez le code HTML précédent dans un nouveau fichier HTML en utilisant votre [éditeur de code](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) et ouvrez-le dans un nouvel onglet de navigateur.
+Avant de continuer, copiez le code HTML précédent dans un nouveau fichier HTML en utilisant votre [éditeur de code](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) et ouvrez-le dans un nouvel onglet de navigateur.
 
 ### L'élément `<form>`
 
@@ -175,7 +183,7 @@ Vous pouvez inclure n'importe quel élément HTML à l'intérieur d'un élément
 
 Dans notre exemple, nous avons inclus un [élément de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h2>`) pour décrire l'objectif du formulaire.
 
-Nous avons également placé chaque paire input/label et le bouton d'envoi à l'intérieur d'un {{HTMLElement("p")}} séparé, afin que chacun apparaisse sur une ligne distincte. Ces éléments sont tous en ligne par défaut, ce qui signifie que si nous ne faisions pas cela, ils seraient tous sur la même ligne.
+Nous avons également placé chaque paire input/label et le bouton d'envoi à l'intérieur d'un {{HTMLElement("p")}} séparé, afin que chacun apparaisse sur une ligne distincte. Ces éléments sont tous en incise par défaut, ce qui signifie que si nous ne faisons pas cela, ils sont tous sur la même ligne.
 
 Ceci est un schéma courant pour la structuration des formulaires. Certaines personnes utilisent des éléments `<p>` pour séparer leurs éléments de formulaire, d'autres utilisent {{HTMLElement("div")}}, {{HTMLElement("section")}}, ou même {{HTMLElement("li")}}. Cela n'a pas beaucoup d'importance, tant que les éléments utilisés ont un sens sémantique. Par exemple, il est logique de diviser les groupes d'éléments de formulaire en paragraphes ou sections de contenu distincts, ou même en éléments d'une liste. Il est moins logique de les représenter comme des [citations](/fr/docs/Web/HTML/Reference/Elements/blockquote), des [apartés](/fr/docs/Web/HTML/Reference/Elements/aside) ou des [adresses](/fr/docs/Web/HTML/Reference/Elements/address).
 

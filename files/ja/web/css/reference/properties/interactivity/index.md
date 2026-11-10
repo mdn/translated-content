@@ -1,5 +1,5 @@
 ---
-title: CSS `interactivity` プロパティ
+title: "`interactivity` プロパティ (CSS)"
 short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 l10n:

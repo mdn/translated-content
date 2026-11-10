@@ -3,7 +3,7 @@ title: "Array : accesseur statique [Symbol.species]"
 short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété accesseur statique **`Array[Symbol.species]`** retourne le constructeur utilisé pour créer les valeurs de retour des méthodes des tableaux.
@@ -34,14 +34,14 @@ class Array {
 }
 ```
 
-En raison de cette implémentation polymorphe, `[Symbol.species]` des sous-classes dérivées retournera également par défaut le constructeur lui-même.
+En raison de cette implémentation polymorphe, `[Symbol.species]` des sous-classes dérivées retourne également par défaut le constructeur lui-même.
 
 ```js
 class SubArray extends Array {}
 SubArray[Symbol.species] === SubArray; // true
 ```
 
-Lorsque vous appelez des méthodes de tableau qui ne modifient pas le tableau existant mais retournent une nouvelle instance de tableau (par exemple, [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) et [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)), le `constructor[Symbol.species]` du tableau sera utilisé. Le constructeur retourné servira à construire la valeur de retour de la méthode de tableau. Cela rend techniquement possible de faire retourner par les méthodes de tableau des objets qui ne sont pas des tableaux.
+Lorsque vous appelez des méthodes de tableau qui ne modifient pas le tableau existant mais retournent une nouvelle instance de tableau (par exemple, [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) et [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)), le `constructor[Symbol.species]` du tableau est utilisé. Le constructeur retourné sert à construire la valeur de retour de la méthode de tableau. Cela rend techniquement possible de faire retourner par les méthodes de tableau des objets qui ne sont pas des tableaux.
 
 ```js
 class NotAnArray {
@@ -69,11 +69,11 @@ Array[Symbol.species]; // [Function: Array]
 
 ### `Species` dans les objets dérivés
 
-Dans une instance d'une sous-classe personnalisée de `Array`, comme `MyArray`, le species de `MyArray` est le constructeur `MyArray`. Cependant, vous pouvez vouloir le redéfinir afin de retourner des objets `Array` parents dans les méthodes de votre classe dérivée&nbsp;:
+Dans une instance d'une sous-classe personnalisée de `Array`, comme `MonTableau`, l'espèce de `MonTableau` est le constructeur `MonTableau`. Cependant, vous pouvez vouloir le redéfinir afin de retourner des objets `Array` parents dans les méthodes de votre classe dérivée&nbsp;:
 
 ```js
-class MyArray extends Array {
-  // Redéfinit le species de MyArrayArray vers le constructeur parent Array
+class MonTableau extends Array {
+  // Redéfinit l'espèce de MonTableau vers le constructeur parent Array
   static get [Symbol.species]() {
     return Array;
   }
@@ -90,7 +90,7 @@ class MyArray extends Array {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array[Symbol.species]` et prise en charge de `[Symbol.species]` dans toutes les méthodes concernées de `Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La propriété {{JSxRef("Symbol.species")}}
-- [Prothèse d'émulation de `Array[Symbol.species]` et prise en charge de `[Symbol.species]` dans toutes les méthodes concernées de `Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

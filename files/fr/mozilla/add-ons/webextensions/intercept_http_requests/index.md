@@ -136,7 +136,7 @@ Pour tester cette extension, ouvrez une page de MDN qui contient des images (par
 ## Modifier les en-têtes de requêtes
 
 Dans ce dernier exemple, nous allons utiliser `webRequest` afin de modifier les en-têtes de requêtes.
-Dans cet exemple, on change l'en-tête [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) afin que le navigateur s'identifie comme Opera 12, uniquement lorsqu'on visite les pages situées sous `http://useragentstring.com/`.
+Dans cet exemple, on change l'en-tête [`User-Agent`](/fr/docs/Web/HTTP/Reference/Headers/User-Agent) afin que le navigateur s'identifie comme Opera 12, uniquement lorsqu'on visite les pages situées sous `http://useragentstring.com/`.
 
 Modifiez le fichier `manifest.json` afin d'inclure `http://useragentstring.com/` comme ceci&nbsp;:
 

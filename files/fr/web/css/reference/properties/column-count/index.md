@@ -3,12 +3,10 @@ title: Propriété CSS `column-count`
 short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: d1cf7346516383565b51a125c064ae3d5d893526
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-count`** divise le contenu d'un élément en le répartissant dans le nombre de colonnes à définir.
-
-La propriété raccourcie {{CSSxRef("columns")}} peut être utilisée pour définir les valeurs des propriétés `column-count`, {{CSSxRef("column-height")}} et {{CSSxRef("column-width")}} en une seule déclaration.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-count")}}
 
@@ -74,6 +72,12 @@ Cette propriété est définie par une valeur unique choisie parmi la liste suiv
   - : Le nombre de colonnes est déterminé par d'autres propriétés CSS, telles que {{CSSxRef("column-width")}}.
 - {{CSSxRef("&lt;integer&gt;")}}
   - : Est un entier ({{CSSxRef("&lt;integer&gt;")}}) strictement positif décrivant le nombre idéal de colonnes dans lesquelles le contenu de l'élément est réparti. Si la largeur de colonne ({{CSSxRef("column-width")}}) est également définie sur une valeur qui n'est pas `auto`, elle indique simplement le nombre maximal de colonnes autorisé.
+
+## Description
+
+Définir la propriété `column-count` sur une valeur supérieure à `1` crée une disposition multi-colonnes. Le contenu de l'élément est réparti de manière égale entre le nombre de colonnes définies.
+
+La propriété `column-count`, ainsi que les propriétés {{CSSxRef("column-height")}} et {{CSSxRef("column-width")}}, peut également être définie en utilisant la propriété raccourcie {{CSSxRef("columns")}}.
 
 ## Définition formelle
 

@@ -3,7 +3,7 @@ title: "BigInt : méthode statique asUintN()"
 short-title: asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 l10n:
-  sourceCommit: e142519e137b3a2ce99d5820c3f2049b6d83113d
+  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
 ---
 
 La méthode statique **`BigInt.asUintN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier qui n'est pas signé.

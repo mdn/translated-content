@@ -3,7 +3,7 @@ title: Cómo añadir imágenes, medios y recursos
 short-title: Añadir medios
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 Esta página describe cómo añadir imágenes y medios a las páginas de documentación de MDN.
@@ -76,7 +76,7 @@ Veamos un ejemplo:
    ```
 
 6. Ahora estás listo para crear tu
-   [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+   [pull request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
 
 ## Añadir texto alternativo a las imágenes
 
@@ -211,10 +211,6 @@ Los pasos de grabación con esta herramienta son bastante sencillos:
 5. Realiza las acciones que deseas grabar.
 6. Pulsa el botón _Detener_.
 7. Elige _Archivo_ > _Exportar como..._ > _1080p_ en el menú principal para guardar en alta definición.
-
-### Otros recursos
-
-- [Cómo agregar llamadas personalizadas a los videos de screencast en Screenflow (en inglés)](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ### Flujo de trabajo para crear videos
 

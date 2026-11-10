@@ -3,10 +3,10 @@ title: Pseudo-classe CSS `:modal`
 short-title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 31e1fcaa50ff25bb27d7093758fa7a7088fff1e0
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments sera actif et permettra de recevoir une saisie.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments est actif et permet de recevoir une saisie.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :modal", "tabbed-shorter")}}
 
@@ -56,13 +56,13 @@ showNumber.addEventListener("click", () => {
 
 ```css
 :modal {
-  /* ... */
+  /* … */
 }
 ```
 
 ## Notes d'utilisation
 
-Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui pourront être ciblés par la pseudo-classe&nbsp;:
+Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui peuvent être ciblés par la pseudo-classe&nbsp;:
 
 - L'élément {{HTMLElement("dialog")}} lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
 - Un élément ciblé par la pseudo-classe {{CSSxRef(":fullscreen")}} lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
@@ -71,15 +71,15 @@ Voici des exemples d'éléments qui peuvent empêcher une interaction avec le re
 
 ### Mettre en forme une boîte de dialogue
 
-Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lorsqu'on active le bouton «&nbsp;Mettre à jour les détails&nbsp;». Cet exemple est construit à partir de [l'exemple présent sur la page de l'élément `<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog#exemple_avancé).
+Dans cet exemple, on met en forme une boîte de dialogue bloquante qui s'ouvre lorsqu'on active le bouton «&nbsp;Afficher la boîte de dialogue&nbsp;». Cet exemple est adapté de [l'exemple présent sur la page de l'élément `<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog#exemple_avancé).
 
 ```html hidden
-<!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
-<dialog id="favDialog">
+<!-- Boîte de dialogue bloquante contenant un formulaire -->
+<dialog id="dialogueFavoris">
   <form method="dialog">
     <p>
-      <label
-        >Animal préféré&nbsp;:
+      <label>
+        Animal préféré&nbsp;:
         <select>
           <option></option>
           <option>Crevette en saumure</option>
@@ -89,20 +89,22 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
       </label>
     </p>
     <menu>
-      <button value="cancel">Annuler</button>
-      <button id="confirmBtn" value="default">Confirmer</button>
+      <button>Annuler</button>
+      <button>Confirmer</button>
     </menu>
   </form>
 </dialog>
 
 <menu>
-  <button id="updateDetails">Mettre à jour les détails</button>
+  <button id="afficherDialogue">Afficher la boîte de dialogue</button>
 </menu>
 
 <output></output>
 ```
 
 #### CSS
+
+La pseudo-classe `:modal` sélectionné le dialogue qui est ouvert avec `showModal()`, lui donnant une bordure rouge, une couleur d'arrière-plan jaune et une ombre.
 
 ```css
 :modal {
@@ -113,37 +115,11 @@ Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lors
 ```
 
 ```js hidden
-const updateButton = document.getElementById("updateDetails");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
+const boutonAfficher = document.getElementById("afficherDialogue");
+const dialogueFavoris = document.getElementById("dialogueFavoris");
 
-// Si un navigaeur ne prend pas en charge, on masque le contenu
-// de la boîte de dialogue par défaut.
-if (typeof favDialog.showModal !== "function") {
-  favDialog.hidden = true;
-  /* un script alternatif pour les navigateurs historiques.
-   */
-}
-// Le bouton "Mettre à jour les détails" ouvre <dialog> en modal
-updateButton.addEventListener("click", () => {
-  if (typeof favDialog.showModal === "function") {
-    favDialog.showModal();
-  } else {
-    outputBox.value =
-      "Désolé, l'API <dialog> n'est pas prise en charge par ce navigateur.";
-  }
-});
-// Le champ "Animal préféré" définit la valeur du bouton d'envoi
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
-});
-// Le bouton "Confirmer" du formulaire déclenche la fermeture de la boîte avec [method="dialog"]
-favDialog.addEventListener("close", () => {
-  outputBox.value = `Bouton ${
-    favDialog.returnValue
-  } cliqué - ${new Date().toString()}`;
+boutonAfficher.addEventListener("click", () => {
+  dialogueFavoris.showModal();
 });
 ```
 

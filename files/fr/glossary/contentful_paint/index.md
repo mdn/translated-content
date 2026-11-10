@@ -2,7 +2,7 @@
 title: Rendu de contenu
 slug: Glossary/Contentful_paint
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 1a2a5b56a689b441ebf3be91b90f15746c5a5a01
 ---
 
 Plusieurs indicateurs de performance tels que {{Glossary("First_contentful_paint", "Premier rendu de contenu (FCP)")}} et {{Glossary("Largest_contentful_paint", "Plus grand rendu de contenu (LCP)")}} utilisent le concept de «&nbsp;rendu de contenu&nbsp;».
@@ -15,7 +15,7 @@ Les types de rendus considérés comme du contenu diffèrent également légère
 
 - Le FCP est destiné à mesurer le moment où la page commence à se charger. Il [inclut donc la plupart des éléments qui se peignent <sup>(angl.)</sup>](https://w3c.github.io/paint-timing/#contentful) y compris {{HTMLElement("canvas")}} et les éléments `<svg>`. Les écrans squelettes utilisant uniquement des éléments `<div>` ne sont pas considérés comme du contenu.
 - Le LCP est destiné à mesurer le moment où la page est principalement chargée et prête pour l'utilisateur·ice, il essaie donc de s'assurer qu'il y a un contenu significatif avant de se déclencher. Il a des critères plus stricts que le FCP, ne comptant comme contenu que les éléments [éligibles au minutage <sup>(angl.)</sup>](https://w3c.github.io/paint-timing/#timing-eligible). Il n'inclut donc pas les éléments `<canvas>` ou `<svg>`, car il est plus difficile de mesurer quand (ou même si) ils représentent le plus grand contenu affiché sur la page. De plus, le LCP exclut également les images à faible entropie.
-- D'autres indicateurs comme le [rendu de contenu d'interaction](/fr/docs/Web/API/InteractionContentfulPaint), la [navigation douce](/fr/docs/Web/API/PerformanceSoftNavigation), le [minutage des éléments](/fr/docs/Web/API/PerformanceElementTiming), et le prochain [minutage des conteneurs <sup>(angl.)</sup>](https://github.com/WICG/container-timing) sont plus proches du modèle LCP avec quelques petites différences, comme le fait que les images à faible entropie ne sont pas exclues.
+- D'autres indicateurs comme le [rendu de contenu d'interaction](/fr/docs/Web/API/InteractionContentfulPaint), la [navigation douce](/fr/docs/Web/API/PerformanceSoftNavigation), le [minutage des éléments](/fr/docs/Web/API/PerformanceElementTiming), et le prochain [minutage des conteneurs <sup>(angl.)</sup>](https://github.com/w3c/container-timing) sont plus proches du modèle LCP avec quelques petites différences, comme le fait que les images à faible entropie ne sont pas exclues.
 
 ## Voir aussi
 

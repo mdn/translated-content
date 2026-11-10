@@ -8,7 +8,7 @@ l10n:
 
 **`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
 
-{{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :lang()", "tabbed-shorter")}}
 
 ```css interactive-example
 *:lang(en-US) {

@@ -197,4 +197,5 @@ original_slug: Web/HTML/Element/script
 ## 같이 보기
 
 - {{domxref("document.currentScript")}}
-- [Ryan Grove의 `<script>`와 `<link>` 노드 이벤트 호환성 차트](https://pie.gd/test/script-link-events/)
+- [JavaScript를 효율적으로 불러오는 방법과 `async`, `defer`의 차이를 설명하는 Flavio Copes의 글](https://thevalleyofcode.com/javascript-async-defer/)
+- [JavaScript 모듈](/ko/docs/Web/JavaScript/Guide/Modules) 안내서

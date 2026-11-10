@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`fixed()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("tt")}} 要素に埋め込み (`<tt>str</tt>`)、この文字列が固定幅フォントで表示されるような文字列を生成します。
 
 > [!NOTE]

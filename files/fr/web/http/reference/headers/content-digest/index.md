@@ -3,7 +3,7 @@ title: En-tête Content-Digest
 short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 l10n:
-  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
+  sourceCommit: f4174abd45aefde55b6d45144c57ec3c2dc037a1
 ---
 
 L'en-tête HTTP **`Content-Digest`** {{Glossary("request header", "en-tête de requête")}} et {{Glossary("response header", "en-tête de réponse")}} fournit un {{Glossary("hash function", "digest")}} calculé à l'aide d'un algorithme de hachage appliqué au contenu du message.
@@ -205,4 +205,4 @@ Les développeur·euse·s peuvent définir et obtenir des en-têtes HTTP à l'ai
 - L'en-tête {{HTTPHeader("Want-Content-Digest")}} pour demander un condensé de contenu
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} pour les en-têtes de condensé de représentation
 - L'en-tête {{HTTPHeader("ETag")}}
-- [Guide SDK sur les signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) utilise les `Content-Digest` pour les signatures numériques dans les appels HTTP (developer.ebay.com)
+- [Guide SDK sur les signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) utilise les `Content-Digest` pour les signatures numériques dans les appels HTTP (developer.ebay.com)

@@ -1,5 +1,5 @@
 ---
-title: HTML `<u>` 非言語的注釈（下線）要素
+title: "`<u>` 非言語的注釈（下線）要素"
 short-title: <u>
 slug: Web/HTML/Reference/Elements/u
 l10n:

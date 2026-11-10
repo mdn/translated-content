@@ -1,5 +1,5 @@
 ---
-title: CSS `scroll-initial-target` プロパティ
+title: "`scroll-initial-target` プロパティ (CSS)"
 short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 l10n:

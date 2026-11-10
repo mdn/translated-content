@@ -3,10 +3,12 @@ title: Propriété CSS `margin-right`
 short-title: margin-right
 slug: Web/CSS/Reference/Properties/margin-right
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-right`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à droite d'un élément. Une valeur positive l'éloigne de ses voisins, tandis qu'une valeur négative la rapproche.
+
+Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin-right")}}
 
@@ -58,8 +60,6 @@ margin-right: 0;
 }
 ```
 
-Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
-
 ## Syntaxe
 
 ```css
@@ -87,7 +87,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
 
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille de la marge en valeur fixe.
-    - Pour les éléments positionnés par ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
+    - Pour les éléments positionnés par une ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
 
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
@@ -157,7 +157,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
         </tr>
         <tr>
           <th>
-            <em>ni'mporte quelle autre sauf <code>flex</code>,</em>
+            <em>n'importe quelle autre sauf <code>flex</code>,</em>
             <code>inline-flex</code><em> ou </em><code>table-*</code>
           </th>
           <th><em>n'importe laquelle</em></th>
@@ -167,7 +167,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
           <td>
             <code>0</code> sauf si <code>margin-left</code> et
             <code>margin-right</code> valent <code>auto</code>. Dans ce cas, la
-            valeur utilisée sera celle qui permet de centrer la boîte de bordure
+            valeur utilisée est celle qui permet de centrer la boîte de bordure
             dans la zone de largeur disponible si elle fixée.
           </td>
           <td>Positionnement absolu.</td>
@@ -178,7 +178,7 @@ La valeur de la propriété `margin-right` peut être le mot-clé `auto`, une lo
           <th><em>n'importe laquelle</em></th>
           <td>
             <code>0</code>, sauf s'il reste de l'espace horizontal libre. Dans ce
-            cas, l'espace restant sera distribué de façon équitable entre toutes les
+            cas, l'espace restant est distribué de façon équitable entre toutes les
             marges avec <code>auto</code>.
           </td>
           <td>Boîtes flexibles.</td>

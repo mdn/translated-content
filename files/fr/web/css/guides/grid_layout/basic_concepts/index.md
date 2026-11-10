@@ -1,22 +1,22 @@
 ---
-title: Les concepts de base des grilles CSS
+title: Les concepts de base des grilles
+short-title: Concepts de base
 slug: Web/CSS/Guides/Grid_layout/Basic_concepts
-original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 l10n:
-  sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
+  sourceCommit: 0f31456d7b82342100cef65812b413ec6f2fa352
 ---
 
-[Le module de spécification CSS pour les dispositions en grilles (<i lang="en">Grid Layout</i> en anglais)](/fr/docs/Web/CSS/Guides/Grid_layout) ajoute un système de grille en deux dimensions à CSS. Les grilles peuvent être utilisées pour agencer des pages entières ou de petits éléments d'interface. Cet article présente ce module de grille, et introduit la terminologie de la spécification de niveau 1 des grilles CSS. Les fonctionnalités évoquées dans cet aperçu seront expliquées plus en détails dans le reste du guide.
+La [disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) introduit un système de grille en deux dimensions dans CSS. Les grilles peuvent être utilisées pour agencer des zones principales de la page ou de petits éléments d'interface utilisateur. Ce guide présente la disposition en grille CSS et la terminologie qui fait partie de la spécification de la disposition en grille CSS. Les fonctionnalités présentées dans cet aperçu sont ensuite expliquées plus en détail dans les autres guides de cette série.
 
-## Qu'est-ce qu'une grille&nbsp;?
+## Qu'est-ce qu'une grille ?
 
-Une grille est un ensemble de lignes horizontales et verticales qui se croisent&nbsp;: les premières définissant les rangées, et les secondes les colonnes. Les éléments sont placés sur la grille en fonction de ces rangées et colonnes. Nous allons voir les fonctionnalités offertes par les dispositions en grille.
+Une grille est un ensemble de lignes horizontales et verticales qui se croisent et définissent des rangées et des colonnes. Les éléments peuvent être placés sur la grille, à l'intérieur de ces colonnes et rangées. La mise en page en grille CSS présente les caractéristiques suivantes&nbsp;:
 
 ### Pistes à taille fixe ou variable
 
-On peut créer une grille avec des pistes à taille fixes en utilisant une unité comme le pixel. Pour les pistes à taille variable on peut utiliser le pourcentage ou l'unité `fr` créée à cet effet.
+On peut créer une grille avec des pistes à taille fixe — en utilisant par exemple des pixels. Cela définit la grille à la taille de pixel définie, ce qui correspond à la mise en page souhaitée. On peut également créer une grille avec des tailles flexibles en utilisant des pourcentages ou l'unité [`fr`](#lunité_fr) conçue à cet effet.
 
-### Placement des éléments
+### Placement d'élément
 
 Pour placer les éléments sur la grille, on peut utiliser le numéro ou le nom d'une ligne, ou cibler une zone particulière. La grille contient aussi un algorithme pour placer les éléments qui n'ont pas été placés explicitement.
 
@@ -26,22 +26,22 @@ Lorsqu'une grille explicite n'est pas définie, la spécification prend en charg
 
 ### Contrôle de l'alignement
 
-On peut contrôler l'alignement des éléments dans une zone de la grille, ainsi que celui de l'ensemble de la grille.
+Les fonctionnalités de disposition en grille CSS et [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) permettent de contrôler l'alignement des éléments une fois placés dans une zone de grille, ainsi que l'alignement de la grille entière.
 
 ### Contrôle des contenus qui se chevauchent
 
-Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index).
+Plus d'un élément peut être placé dans une cellule ou une zone de la grille et ils peuvent se chevaucher partiellement. Cette superposition peut ensuite être contrôlée avec la propriété {{CSSxRef("z-index")}}.
 
-La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/Guides/Flexible_box_layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
+La grille est un puissant module de mise en page qui, lorsqu'il est combiné avec d'autres parties de CSS telles que [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout), peut vous aider à créer des mises en page réactives, flexibles et accessibles. Tout commence par la création d'une grille dans votre **{{Glossary("grid container", "conteneur de grille")}}**.
 
-## Conteneur
+## Conteneur de grille
 
-À partir du moment où on crée un _conteneur_ en déclarant la propriété `display: grid` ou `display: inline-grid` sur un élément, tous les _enfants directs_ de cet élément deviennent des _éléments de grille_.
+Nous créons un _conteneur de grille_ en déclarant `display: grid` ou `display: inline-grid` sur un élément. À partir du moment où on fait cela, tous les _enfants directs_ de cet élément deviennent des _éléments de grille_.
 
-Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec une classe `.wrapper`, avec cinq éléments enfants.
+Dans cet exemple, nous avons un élément `<div>` contenant avec une classe `enveloppe`. À l'intérieur, il y a cinq éléments enfants.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -50,10 +50,10 @@ Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/d
 </div>
 ```
 
-On transforme `.wrapper` en conteneur.
+Nous transformons `.enveloppe` en conteneur de grille en utilisant `display: grid;`.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
 }
 ```
@@ -63,13 +63,13 @@ On transforme `.wrapper` en conteneur.
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -78,32 +78,32 @@ On transforme `.wrapper` en conteneur.
 }
 ```
 
-{{EmbedLiveSample('', '200', '330')}}
+{{EmbedLiveSample("Conteneur de grille", 200, 300)}}
 
-Tous les enfants directs sont maintenant des éléments de grille. On ne voit pas la différence dans un navigateur, car la grille n'a qu'une seule colonne. Vous trouverez sans doute utile de travailler avec Firefox, qui propose un [inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement. En inspectant la grille dans Firefox, vous pouvez voir une petite icône à côté de la valeur `grid`. Un clic dessus permet d'afficher la grille correspondante dans le navigateur.
+Tous les enfants directs sont maintenant des éléments de grille. Dans un navigateur web, vous ne voyez pas de différence dans la façon dont ces éléments sont affichés avant de les transformer en grille, car la grille a créé une grille à une seule colonne pour les éléments. Si vous inspectez la grille dans les outils de développement de votre navigateur, vous pouvez voir une petite icône à côté de la valeur `grid`. Cliquez dessus et, dans la plupart des navigateurs, la grille sur cet élément est superposée dans la fenêtre du navigateur.
 
-![Utilisation de l'inspecteur de grille dans les outils de développement de Firefox pour observer une grille](1-grid-inspector.png)
+![Utilisation du surligneur de grille dans les outils de développement de Firefox pour observer une grille](1-grid-inspector.png)
 
-Grâce aux indications visuelles, cet outil vous permettra de mieux comprendre le fonctionnement des grilles CSS, tout au long de votre apprentissage.
+Au fur et à mesure que vous apprenez et travaillez avec la mise en page de grille CSS, les outils de votre navigateur vous donnent une meilleure idée de ce qui se passe visuellement avec vos grilles.
 
-Pour que notre exemple ressemble vraiment à une grille nous devons ajouter des pistes pour les colonnes.
+Si nous voulons commencer à rendre cela plus semblable à une grille, nous devons ajouter des pistes pour les colonnes.
 
-## Pistes
+## Pistes de grille
 
-Les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows) permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une _piste_ est l'espace entre deux lignes adjacentes d'une grille. L'image ci-dessous colore une piste de la grille, correspondant à la première rangée de la grille.
+Nous définissons les lignes et les colonnes de notre grille avec les propriétés {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}}. Celles-ci définissent les {{Glossary("grid tracks")}}. Une _piste de grille_ est l'espace entre deux lignes adjacentes de la grille. L'image ci-dessous montre une piste mise en évidence — il s'agit de la piste de la première rangée de notre grille.
 
-![Une boite avec 3 éléments de grille. Au-dessus des trois éléments, une zone de même longueur est mise en valeur : il s'agit de la piste.](1_grid_track.png)
+![Une boîte avec 3 éléments de grille. Au-dessus des trois éléments se trouve une zone verte claire solide qui représente la piste.](1_grid_track.png)
 
-Les pistes sont définies dans la grille explicite à l'aide des propriétés `grid-template-columns` et `grid-template-rows`, ou des propriétés raccourcies `grid` ou `grid-template`. Les pistes sont aussi créées dans la grille implicite en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
+Les pistes de grille sont définies dans la [grille explicite](#grille_implicite_et_grille_explicite) en utilisant les propriétés `grid-template-columns` et `grid-template-rows` ou les propriétés raccourcies `grid` ou `grid-template`. Des pistes sont également créées dans la grille implicite en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
 
 ### Exemple simple
 
-On peut ajouter la propriété `grid-template-columns` à notre exemple précédent, pour définir la taille des colonnes.
+Nous pouvons ajouter des pistes de colonnes à notre exemple précédent en ajoutant la propriété `grid-template-columns`, puis en définissant la taille des pistes de colonnes.
 
-Nous avons ici créé une grille avec trois pistes de 200 pixels de large. Chaque élément sera disposé dans l'une des cellules de la grille.
+Nous avons maintenant créé une grille avec trois pistes de colonnes de 200 pixels de large. Les éléments enfants sont disposés sur cette grille, un dans chaque cellule de la grille.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -113,7 +113,7 @@ Nous avons ici créé une grille avec trois pistes de 200 pixels de large. Chaqu
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }
@@ -124,13 +124,13 @@ Nous avons ici créé une grille avec trois pistes de 200 pixels de large. Chaqu
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -139,14 +139,14 @@ Nous avons ici créé une grille avec trois pistes de 200 pixels de large. Chaqu
 }
 ```
 
-{{EmbedLiveSample('', '2610', '140')}}
+{{EmbedLiveSample("Exemple simple", 610, 130)}}
 
 ### L'unité `fr`
 
-Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesure. Les grilles proposent aussi une nouvelle unité de mesure pour aider à la création de pistes flexibles. Cette unité, `fr`, représente une fraction de l'espace disponible dans le conteneur de la grille. Le code suivant crée trois colonnes égales qui se redimensionnent en fonction de l'espace disponible.
+Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesure. Les grilles proposent aussi une nouvelle unité de mesure pour aider à la création de pistes flexibles. L'unité [`fr`](/fr/docs/Web/CSS/Reference/Values/flex_value) représente une fraction de l'espace disponible dans le conteneur de la grille. La définition de grille suivante crée trois pistes de largeur égale qui se redimensionnent en fonction de l'espace disponible.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -156,7 +156,7 @@ Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesur
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -167,13 +167,13 @@ Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesur
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -182,14 +182,14 @@ Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesur
 }
 ```
 
-{{EmbedLiveSample('', '220', '140') }}
+{{EmbedLiveSample("L'unité `fr`", 220, 130)}}
 
 ### Tailles différentes
 
 L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes de `1fr`. L'espace disponible est divisé en quatre. Les deux premières fractions sont allouées à la première colonne, et chacune des colonnes suivante dispose d'une fraction.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -199,7 +199,7 @@ L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes d
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
@@ -210,13 +210,13 @@ L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes d
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -225,14 +225,14 @@ L'exemple suivant crée une grille avec une colonne de `2fr`, et deux colonnes d
 }
 ```
 
-{{EmbedLiveSample('', '220', '140')}}
+{{EmbedLiveSample("Tailles différentes", 220, 130)}}
 
 ### Mélanger des tailles flexibles et absolues
 
-Dans ce dernier exemple, nous utilisons à la fois des dimensions absolues et relatives pour les pistes. La première piste faisant 500px, cette valeur est soustraite de l'espace disponible. L'espace restant est divisé en trois et alloué proportionnellement aux deux colonnes spécifiées avec l'unité relative `fr`.
+Dans ce dernier exemple, nous mélangeons des pistes de taille absolue avec des unités `fr`. La première piste fait `500px`, donc cette largeur fixe est soustraite de l'espace disponible. L'espace restant est divisé en trois et attribué proportionnellement aux deux pistes flexibles.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -242,7 +242,7 @@ Dans ce dernier exemple, nous utilisons à la fois des dimensions absolues et re
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }
@@ -253,13 +253,13 @@ Dans ce dernier exemple, nous utilisons à la fois des dimensions absolues et re
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -268,14 +268,14 @@ Dans ce dernier exemple, nous utilisons à la fois des dimensions absolues et re
 }
 ```
 
-{{EmbedLiveSample('', '220', '140')}}
+{{EmbedLiveSample("Mélanger des tailles flexibles et absolues", 220, 130)}}
 
 ### Utiliser la notation `repeat()` pour définir les pistes
 
-Pour les grilles comprenant de nombreuses pistes, on peut utiliser la notation `repeat()` pour répéter toute ou une partie des pistes définies. Par exemple la définition de grille&nbsp;:
+Pour les grilles comprenant de nombreuses pistes, on peut utiliser la notation {{CSSxRef("repeat()")}} pour répéter toute ou une partie des pistes définies. Par exemple la définition de grille&nbsp;:
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -284,25 +284,25 @@ Pour les grilles comprenant de nombreuses pistes, on peut utiliser la notation `
 Peut également s'écrire&nbsp;:
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 ```
 
-Dans l'exemple suivant on crée une grille avec une première colonne de |`20px` de large, puis une section répétant 6 fois une piste de `1fr`, et enfin on termine par une colonne de `20px` de large.
+La notation de répétition peut être utilisée pour une partie de la liste des pistes. Dans cet exemple, nous créons une grille à 8 colonnes&nbsp;; la première piste fait `20px`, puis une section répétant 6 fois une piste de `1fr`, et enfin une piste finale de `20px`.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: 20px repeat(6, 1fr) 20px;
 }
 ```
 
-Cette notation accepte une liste de pistes, on peut donc l'utiliser pour répéter un motif. Dans l'exemple qui suit la grille aura 10 colonnes&nbsp;: une colonne de `1fr` suivie d'une colonne de `2fr`, ceci répété 5 fois.
+La notation de répétition (`repeat()`) utilise la liste des pistes pour créer un motif répétitif de pistes. Dans cet exemple, la grille a 10 pistes&nbsp;; une piste de `1fr` est suivie d'une piste de `2fr`, ce motif étant répété cinq fois.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(5, 1fr 2fr);
 }
@@ -310,16 +310,19 @@ Cette notation accepte une liste de pistes, on peut donc l'utiliser pour répét
 
 ### Grille implicite et grille explicite
 
-Dans ces exemples, nous avons défini nos colonnes à l'aide de la propriété [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns), et nous avons laissé la grille créer les rangées. Ces rangées font partie de la grille implicite. La grille explicite est constituée des pistes définies par les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows).
+Lorsque nous créons notre grille d'exemple, nous définissons spécifiquement nos pistes de colonnes avec la propriété {{CSSxRef("grid-template-columns")}}, la grille créant des rangées au besoin pour s'adapter au contenu. Les colonnes définissent la grille explicite tandis que les rangées font partie de la grille implicite.
 
-Si un élément est placé en dehors de la grille ainsi définie, ou que la quantité de contenu nécessite d'étendre la grille, alors la grille ajoute implicitement des colonnes et rangées. Les dimensions de ces pistes auront par défaut la valeur `auto`, c'est-à dire qu'elles s'ajusteront à leur contenu.
+La _grille explicite_ est constituée des rangées et colonnes définies avec {{CSSxRef("grid-template-columns")}} ou {{CSSxRef("grid-template-rows")}}.
+La _grille implicite_ étend la grille explicite définie lorsque du contenu est placé en dehors de cette grille, par exemple dans les rangées en traçant des rangées de grille supplémentaires.
 
-On peut définir une taille pour les pistes de la grille implicite grâce aux propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns).
+Si vous placez quelque chose en dehors de la grille définie ou, en raison de la quantité de contenu, que davantage de pistes de grille sont nécessaires, alors la grille crée des rangées et des colonnes dans la _grille implicite_. Ces pistes implicites sont dimensionnées automatiquement par défaut, ce qui signifie que la taille des rangées ou colonnes créées est influencée à la fois par leur contenu et par l'espace libre disponible dans le conteneur de la grille. Le mot-clé `auto` permet aux pistes générées de s'adapter au contenu tout en partageant l'espace restant.
 
-Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées de la grille implicite aient une hauteur de 200 pixels.
+Vous pouvez également définir une taille fixe pour les pistes créées dans la grille implicite avec les propriétés {{CSSxRef("grid-auto-rows")}} et {{CSSxRef("grid-auto-columns")}}.
+
+Dans cet exemple, nous définissons `grid-auto-rows: 200px`, garantissant que les pistes créées dans cette grille implicite ont une hauteur de `200px`.
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -329,7 +332,7 @@ Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées d
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
@@ -341,13 +344,13 @@ Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées d
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -356,16 +359,16 @@ Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées d
 }
 ```
 
-{{EmbedLiveSample('', '230', '450')}}
+{{EmbedLiveSample("Grille implicite et grille explicite", 230, 420)}}
 
-### Dimensionner une piste avec `minmax`
+### Dimensionner une piste avec `minmax()`
 
-Que l'on crée une grille explicite, ou que l'on définisse la taille des pistes créées implicitement, il peut être utile d'assigner une taille minimum, qui s'agrandit pour s'adapter au contenu. Par exemple on peut souhaiter que les rangées ne soient jamais moins hautes que 100 pixels, mais qu'elles aillent jusqu'à 300 pixels de haut si le contenu le nécessite.
+Lors de la configuration d'une grille explicite ou de la définition de la taille des lignes ou colonnes créées automatiquement, nous pouvons vouloir donner aux pistes une taille minimale, tout en nous assurant qu'elles s'étendent pour s'adapter à tout contenu ajouté. Par exemple, nous pouvons vouloir que nos lignes ne s'effondrent jamais en dessous de 100 pixels, mais si notre contenu s'étend à 300 pixels de hauteur, nous voudrions que la ligne s'étende à cette hauteur. Cela est résolu par la fonction {{CSSxRef("minmax()")}}.
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
+Dans cet exemple, nous utilisons `minmax()` dans la valeur de la propriété `grid-auto-rows`. En définissant `grid-auto-rows: minmax(100px, auto);`, les lignes créées automatiquement ont une hauteur minimale de `100px` et un maximum de `auto`. Définir `auto` comme valeur maximale permet à la piste de s'agrandir pour accueillir son contenu (jusqu'à sa taille `max-content`) tout en partageant également tout espace libre disponible dans le conteneur de la grille.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -377,13 +380,13 @@ La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) permet ce com
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -393,7 +396,7 @@ La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) permet ce com
 ```
 
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>
     Deux
@@ -406,7 +409,7 @@ La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) permet ce com
 </div>
 ```
 
-{{EmbedLiveSample('', '240', '470')}}
+{{EmbedLiveSample("Dimensionner une piste avec `minmax()`", 240, 260)}}
 
 ## Lignes de grille
 
@@ -414,41 +417,41 @@ Il faut noter que l'on définit les pistes d'une grille, et pas les lignes qui e
 
 ![Diagramme illustrant les lignes de la grille numérotées.](1_diagram_numbered_grid_lines.png)
 
-Les lignes sont numérotées selon le sens de lecture du document. Dans un langage qui se lit de gauche à droite, la ligne 1 est située à gauche, dans un langage qui se lit de droite à gauche elle est située à droite. Les lignes peuvent aussi être nommées, comme nous le verrons plus loin dans ces pages.
+Les lignes sont numérotées selon le sens de lecture du document. Dans un langage qui se lit de gauche à droite, la ligne 1 est située à gauche, dans un langage qui se lit de droite à gauche elle est située à droite. Les lignes peuvent aussi être nommées, comme nous le voyons dans le guide [de disposition de grille avec des lignes de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines).
 
 ### Positionnement des éléments sur les lignes
 
-Nous explorerons le placement sur les lignes de manière détaillée dans un prochain article. L'exemple qui suit montre comment l'utiliser de façon simple. Ici, lorsque nous plaçons un élément nous ciblons une ligne plutôt qu'une piste.
+L'exemple suivant illustre le placement de base basé sur les lignes&nbsp;; lorsque nous plaçons un élément, nous ciblons la ligne plutôt que la piste. Nous explorons cela plus en détail dans le guide [de disposition de grille avec placement basé sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement).
 
-Nous plaçons ici les deux premiers éléments en utilisant les propriétés [`grid-column-start`](/fr/docs/Web/CSS/Reference/Properties/grid-column-start), [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end), [`grid-row-start`](/fr/docs/Web/CSS/Reference/Properties/grid-row-start) et [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end). En allant de gauche à droite, le premier élément est placé sur la ligne de colonne 1, et va jusqu'à la ligne de colonne 4, qui dans ce cas est la dernière. Il est placé sur la ligne de rangée 1, et va jusqu'à la ligne 3, s'étendant ainsi sur deux rangées.
+Dans cet exemple, les deux premiers éléments de notre grille à trois colonnes sont placés en utilisant les propriétés {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}, {{CSSxRef("grid-row-start")}} et {{CSSxRef("grid-row-end")}}. En allant de gauche à droite, le premier élément est placé sur la ligne de colonne 1, et s'étend jusqu'à la ligne de colonne 4, qui dans notre cas est la ligne la plus à droite de la grille. Il commence à la ligne de rangée 1 et se termine à la ligne de rangée 3, s'étendant ainsi sur deux pistes de rangée.
 
-Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule piste. C'est la largeur par défaut, donc il n'est pas nécessaire de spécifier la ligne de fin. Il s'étend aussi sur deux rangées de la ligne 3 à la ligne 5. Les autres éléments se placeront dans les espaces vides de la grille.
+Le deuxième élément commence sur la ligne de colonne 1 et s'étend sur une piste. C'est la valeur par défaut, donc nous n'avons pas besoin de définir la ligne de fin. Il s'étend également sur deux pistes de rangée, de la ligne de rangée 3 à la ligne de rangée 5. Les autres éléments se placent dans les espaces vides de la grille.
 
 ```html
-<div class="wrapper">
-  <div class="box1">Un</div>
-  <div class="box2">Deux</div>
-  <div class="box3">Trois</div>
-  <div class="box4">Quatre</div>
-  <div class="box5">Cinq</div>
+<div class="enveloppe">
+  <div class="boite1">Un</div>
+  <div class="boite2">Deux</div>
+  <div class="boite3">Trois</div>
+  <div class="boite4">Quatre</div>
+  <div class="boite5">Cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
-.box2 {
+.boite2 {
   grid-column-start: 1;
   grid-row-start: 3;
   grid-row-end: 5;
@@ -460,13 +463,13 @@ Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -475,67 +478,61 @@ Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule
 }
 ```
 
-{{EmbedLiveSample('', '230', '450')}}
+{{EmbedLiveSample("Positionnement des éléments sur les lignes", 230, 420)}}
 
-> [!NOTE]
-> Pensez à utiliser [l'inspecteur de grille](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) dans les outils de développement de Firefox pour voir comment les éléments se placent sur les lignes d'une grille.
+Utilisez l'inspecteur de grille dans vos outils de développement pour voir comment les éléments se positionnent par rapport aux lignes de la grille.
 
 ### Raccourcis de positionnement sur ligne
 
-Les valeurs détaillées utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec [`grid-column`](/fr/docs/Web/CSS/Reference/Properties/grid-column) et une ligne pour les rangées avec [`grid-row`](/fr/docs/Web/CSS/Reference/Properties/grid-row). L'exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d'après représente la ligne de fin.
+Les valeurs détaillées utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec le raccourci {{CSSxRef("grid-column")}}, et en une ligne pour les rangées avec le raccourci {{CSSxRef("grid-row")}}. L'exemple suivant donne le même positionnement que dans le code précédent, mais avec beaucoup moins de CSS. La valeur avant le caractère barre oblique (`/`) est la ligne de début, la valeur après est la ligne de fin.
 
 Vous pouvez omettre la valeur de la ligne de fin si la zone ne recouvre qu'une piste.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 
-.box1 {
+.boite1 {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
 }
 
-.box2 {
+.boite2 {
   grid-column: 1;
   grid-row: 3 / 5;
 }
 ```
 
-## Les cellules
+## Cellules de grille
 
-Une _cellule_ est la plus petite unité sur une grille, conceptuellement similaire à une cellule de tableau. Comme nous l'avons vu lorsqu'une grille est définie sur un élément ses enfants viennent se positionner chacun dans l'une des cellules de la grille. Dans l'image ci-dessous la première cellule est colorée.
+Une _cellule de grille_ est la plus petite unité sur une grille. Conceptuellement, c'est comme une cellule de tableau. Comme nous l'avons vu dans nos exemples précédents, une fois qu'une grille est définie sur un élément parent, les éléments enfants se positionnent chacun dans une cellule de la grille définie. Dans l'image ci-dessous, la première cellule de la grille est mise en avant.
 
 ![La première cellule de la grille est mise en avant](1_grid_cell.png)
 
-## Les zones
+## Zones de grille
 
-Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colonne, et cela crée une _zone_. Les zones doivent être rectangulaires — on ne peut pas créer de forme en L par exemple. La zone colorée ci-dessous s'étend sur deux rangées et deux colonnes.
+Un élément peut s'étendre sur une ou plusieurs cellules, que ce soit par ligne ou par colonne, et cela crée une _zone de grille_. Les zones de grille doivent être rectangulaires — il n'est pas possible de créer une zone en forme de L par exemple. La zone de grille mise en avant s'étend sur deux lignes et deux colonnes.
 
 ![Une zone de grille](1_grid_area.png)
 
-## Les gouttières
+## Gouttières
 
-Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) et [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), ou de la propriété raccourcie [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap). Dans l'exemple ci-dessous, nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de `1em` de hauteur entre les rangées.
+Les _gouttières_ ou _allées_ entre les cellules de la grille peuvent être créées à l'aide des propriétés {{CSSxRef("column-gap")}} et {{CSSxRef("row-gap")}}, ou de la propriété raccourcie {{CSSxRef("gap")}}. Dans l'exemple ci-dessous, nous ajoutons une gouttière de 10 pixels entre les colonnes et une gouttière de `1em` entre les lignes.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
+  column-gap: 10px;
+  row-gap: 1em;
 }
 ```
 
-> [!NOTE]
-> Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) et [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
->
-> Les navigateurs prennent désormais en charge les valeurs sans préfixe. Toutefois, les versions préfixées sont conservées comme synonymes à des fins de compatibilité.
-
 ```html
-<div class="wrapper">
+<div class="enveloppe">
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
@@ -549,7 +546,7 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   column-gap: 10px;
   row-gap: 1em;
   border: 2px solid #f76707;
@@ -557,7 +554,7 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [
   background-color: #fff4e6;
 }
 
-.wrapper > div {
+.enveloppe > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -566,9 +563,9 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [
 }
 ```
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Gouttières")}}
 
-L'espace utilisé par les gouttières sera pris en compte avant l'assignation de la place restante aux pistes définies avec l'unité `fr`. La taille des gouttières est calculée comme celle des pistes, mais on ne peut pas placer d'élément dans une gouttière. Au niveau du positionnement des éléments sur les lignes, la gouttière se comporte comme une ligne épaisse.
+L'espace utilisé par les gouttières est pris en compte avant l'assignation de la place restante aux pistes définies avec l'unité `fr`. La taille des gouttières est calculée comme celle des pistes, mais on ne peut pas placer d'élément dans une gouttière. Au niveau du positionnement des éléments sur les lignes, la gouttière se comporte comme une ligne épaisse et transparente.
 
 ## Grilles imbriquées
 
@@ -578,30 +575,19 @@ Un élément placé dans une grille peut aussi être le conteneur d'une autre gr
 
 ### Imbrication sans sous-grille
 
-En définissant la propriété `display: grid` sur l'élément `box1`, il devient lui-même une grille et ses enfants se positionnent sur cette grille.
-
-```css
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
+En définissant la propriété `display: grid` sur l'élément `boite1`, il devient lui-même une grille et ses enfants se positionnent sur cette grille.
 
 ```html hidden
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+<div class="enveloppe">
+  <div class="boite boite1">
+    <div class="imbrique">a</div>
+    <div class="imbrique">b</div>
+    <div class="imbrique">c</div>
   </div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+  <div class="boite boite2">Deux</div>
+  <div class="boite boite3">Trois</div>
+  <div class="boite boite4">Quatre</div>
+  <div class="boite boite5">Cinq</div>
 </div>
 ```
 
@@ -610,7 +596,7 @@ En définissant la propriété `display: grid` sur l'élément `box1`, il devien
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   gap: 3px;
@@ -619,7 +605,7 @@ En définissant la propriété `display: grid` sur l'élément `box1`, il devien
   grid-template-columns: repeat(3, 1fr);
 }
 
-.box {
+.boite {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -627,11 +613,16 @@ En définissant la propriété `display: grid` sur l'élément `box1`, il devien
   color: #d9480f;
 }
 
-.box1 {
-  grid-column: 1 / 4;
+.boite1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.nested {
+.imbrique {
   border: 2px solid #ffec99;
   border-radius: 5px;
   background-color: #fff9db;
@@ -639,18 +630,18 @@ En définissant la propriété `display: grid` sur l'élément `box1`, il devien
 }
 ```
 
-{{EmbedLiveSample('', '600', '340')}}
+{{EmbedLiveSample("Imbrication sans sous-grille", 600, 220)}}
 
-Dans ce cas, la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des gouttières paramétrées avec [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap), et ses lignes ne s'alignent pas avec celles de la grille parent.
+Dans ce cas, la grille imbriquée n'a aucun lien avec la grille parente. Comme vous pouvez le voir dans l'exemple, elle n'a pas hérité du {{CSSxRef("gap")}} de la grille parente et les lignes de la grille imbriquée ne s'alignent pas avec celles de la grille parente.
 
 ### Sous-grille
 
-En complément des grilles classiques, _les sous-grilles_ permettent de créer des grilles imbriquées qui utilisent la définition des pistes de la grille parente.
+En plus des grilles régulières, nous pouvons créer une _sous-grille_. La valeur `subgrid` nous permet de créer des grilles imbriquées qui utilisent la définition des pistes de la grille parente.
 
-Pour utiliser les sous-grilles, nous allons adapter notre exemple précédent pour changer la définition des pistes et la passer de `grid-template-columns: repeat(3, 1fr)`, à `grid-template-columns: subgrid`. La grille imbriquée utilise alors les pistes de la grille parente pour disposer ses éléments.
+Pour les utiliser, nous modifions l'exemple de grille imbriquée ci-dessus pour changer la définition des pistes de `grid-template-columns: repeat(3, 1fr)` en `grid-template-columns: subgrid`. La grille imbriquée utilise alors les pistes de la grille parente pour disposer les éléments.
 
 ```css
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -662,37 +653,37 @@ Pour utiliser les sous-grilles, nous allons adapter notre exemple précédent po
 
 ## Superposer les éléments avec `z-index`
 
-Plusieurs éléments peuvent être placés dans la même cellule d'une grille. Dans ce cas, il faut utiliser la propriété [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) pour contrôler l'ordre dans lequel les éléments se chevauchent.
+Les éléments de la grille peuvent occuper la même cellule, et dans ce cas, nous pouvons utiliser la propriété {{CSSxRef("z-index")}} pour contrôler l'ordre dans lequel les éléments se superposent.
 
 ### Chevauchement sans `z-index`
 
 Si nous reprenons notre exemple avec les éléments positionnés par numéros de ligne, nous pouvons modifier cela pour que deux éléments se chevauchent.
 
 ```html
-<div class="wrapper">
-  <div class="box box1">Un</div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+<div class="enveloppe">
+  <div class="boite boite1">Un</div>
+  <div class="boite boite2">Deux</div>
+  <div class="boite boite3">Trois</div>
+  <div class="boite boite4">Quatre</div>
+  <div class="boite boite5">Cinq</div>
 </div>
 ```
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
-.box2 {
+.boite2 {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 4;
@@ -704,13 +695,13 @@ Si nous reprenons notre exemple avec les éléments positionnés par numéros de
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.box {
+.boite {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -719,22 +710,22 @@ Si nous reprenons notre exemple avec les éléments positionnés par numéros de
 }
 ```
 
-{{EmbedLiveSample('', '230', '460')}}
+{{EmbedLiveSample("Chevauchement sans `z-index`", 230, 420)}}
 
-L'élément `box2` chevauche maintenant `box1`&nbsp;; il s'affiche par-dessus parce qu'il arrive après dans le code source.
+L'élément `boite2` chevauche maintenant `boite1`, il s'affiche par-dessus parce qu'il arrive après dans le code source.
 
 ### Contrôler l'ordre de superposition
 
-On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la propriété `z-index`. Si nous donnons à `box2` un `z-index` inférieur à celui de `box1`, l'élément `box2` s'affichera sous `box1` dans la pile.
+Nous pouvons contrôler l'ordre dans lequel les éléments s'empilent en utilisant la propriété `z-index`. Si nous donnons à `boite2` un `z-index` inférieur à celui de `boite1`, l'élément `boite2` s'affiche sous `boite1` dans la pile.
 
 ```css
-.wrapper {
+.enveloppe {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 
-.box1 {
+.boite1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -742,7 +733,7 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
   z-index: 2;
 }
 
-.box2 {
+.boite2 {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 4;
@@ -751,12 +742,12 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
 ```
 
 ```html hidden
-<div class="wrapper">
-  <div class="box box1">Un</div>
-  <div class="box box2">Deux</div>
-  <div class="box box3">Trois</div>
-  <div class="box box4">Quatre</div>
-  <div class="box box5">Cinq</div>
+<div class="enveloppe">
+  <div class="boite boite1">Un</div>
+  <div class="boite boite2">Deux</div>
+  <div class="boite boite3">Trois</div>
+  <div class="boite boite4">Quatre</div>
+  <div class="boite boite5">Cinq</div>
 </div>
 ```
 
@@ -765,13 +756,13 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
   box-sizing: border-box;
 }
 
-.wrapper {
+.enveloppe {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.box {
+.boite {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -780,8 +771,8 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
 }
 ```
 
-{{EmbedLiveSample('', '230', '460')}}
+{{EmbedLiveSample("Contrôler l'ordre de superposition", 230, 420)}}
 
-## La suite
+## Prochaines étapes
 
-Dans cet article nous avons parcouru rapidement ce qu'il est possible de construire avec les grilles CSS. Expérimentez et jouez avec les exemples, avant de passer [à la suite de ce guide](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods) pour commencer à vraiment plonger dans le détail des dispositions en grille.
+Dans cet article nous avons parcouru rapidement ce qu'il est possible de construire avec les grilles CSS. Expérimentez et jouez avec les exemples, avant de passer [à la suite de ce guide](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods) pour commencer à vraiment plonger dans le détail des dispositions en grille CSS.

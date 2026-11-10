@@ -159,6 +159,6 @@ DNS データベースは世界中のすべての DNS サーバーに格納さ�
 さて、私たちはプロセスとアーキテクチャについて多くのことを話しました。そろそろ次に進みましょう。
 
 - 実際にやってみたいのであれば、そろそろ[ウェブページの構造](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)の設計と構造を探求するのがよいでしょう。
-- また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照してください。
+- また、ウェブサイトを構築するためのいくつかの面で費用がかかることも注目に値します。[ウェブサイトを構築するのにかかる費用](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)を参照してください。
 - あるいはウィキペディアで[ドメイン名](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D)についてもっと読んでください。
 - [DNS がどのように機能するか](https://howdns.works/)（英語）のチュートリアルには、楽しくカラフルな説明があります。

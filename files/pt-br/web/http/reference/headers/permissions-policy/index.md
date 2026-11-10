@@ -42,7 +42,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}
   - : Controla se o documento atual é permitido de coletar informação sobre a quantidade de luz no ambiente ao redor do dispositivo através da interface {{DOMxRef("AmbientLightSensor")}}.
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
-  - : Controla se o documento atual é permitido de tocar a mídia requisitada automaticamente através da interface {{domxref("HTMLMediaElement")}}. Quando esta política é desabilitada e não há ação do usuário, o {{domxref("Promise")}} retornado pelo {{domxref("HTMLMediaElement.play()")}} irá rejeitar com uma {{domxref("DOMException")}}. O atributo _autoplay_ em elementos {{HTMLELement("audio")}} e {{HTMLElement("video")}} será ignorado.
+  - : Controla se o documento atual é permitido de tocar a mídia requisitada automaticamente através da interface {{domxref("HTMLMediaElement")}}. Quando esta política é desabilitada e não há ação do usuário, o {{jsxref("Promise")}} retornado pelo {{domxref("HTMLMediaElement.play()")}} irá rejeitar com uma {{domxref("DOMException")}}. O atributo _autoplay_ em elementos {{HTMLELement("audio")}} e {{HTMLElement("video")}} será ignorado.
 - {{httpheader('Feature-Policy/battery','battery')}}
   - : Controla se o uso da [API de Status de Bateria](/pt-BR/docs/Web/API/Battery_Status_API) é permitido. Quando esta política está desabilitada, o {{JSxRef("Promise")}} retornado pelo{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}
@@ -52,7 +52,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/document-domain','document-domain')}}
   - : Controle se o documento atual é permitido de colocar {{domxref("document.domain")}}. Quando esta política está desabilitada, tentativas em colocar {{domxref("document.domain")}} irão falhar e causar uma {{DOMxRef("SecurityError")}} {{domxref("DOMException")}} a ser jogada.
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
-  - : Controla se o documento atual é permitido de usar a API [Extensões de Mídias Encriptadas (_Encrypted Media Extensions_)](/pt-BR/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quando esta política é desabilitada, a {{domxref("Promise")}} retornada pelo {{domxref("Navigator.requestMediaKeySystemAccess()")}} irá rejeitar com um {{domxref("DOMException")}}.
+  - : Controla se o documento atual é permitido de usar a API [Extensões de Mídias Encriptadas (_Encrypted Media Extensions_)](/pt-BR/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quando esta política é desabilitada, a {{jsxref("Promise")}} retornada pelo {{domxref("Navigator.requestMediaKeySystemAccess()")}} irá rejeitar com um {{domxref("DOMException")}}.
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
   - : Controla se as tarefas devem ser executadas em enquadramentos enquanto não são renderizados (e.g. se um enquadramento é [`hidden`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/hidden) ou `display: none`).
 - {{httpheader('Feature-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}

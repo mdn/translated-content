@@ -25,7 +25,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS
 
 ## Description
 
-Le pseudo-élément `::picker()` cible la partie sélecteur d'un contrôle de formulaire, c'est‑à‑dire la partie contextuelle qui apparaît pour permettre une sélection lorsque l'on presse le bouton de contrôle. Il n'est disponible à la sélection que lorsque l'élément d'origine possède un sélecteur et que l'apparence de base lui est appliquée via la valeur `base-select` de la propriété {{CSSxRef("appearance")}}.
+Le pseudo-élément `::picker()` cible la partie sélecteur d'un contrôle de formulaire, c'est‑à‑dire la partie contextuelle qui apparaît pour permettre une sélection lorsque l'on presse le bouton de contrôle. Il n'est disponible à la sélection que lorsque l'élément d'origine possède un sélecteur et que l'apparence de base lui est appliquée avec la valeur `base-select` de la propriété {{CSSxRef("appearance")}}.
 
 Le sélecteur `::picker(select)` cible tous les descendants d'un élément `<select>` personnalisable à l'exception du premier enfant `<button>`&nbsp;; ces descendants sont groupés par le navigateur et rendus comme le sélecteur. Le premier `<button>` enfant représente le bouton de contrôle qui ouvre le sélecteur lorsqu'il est pressé.
 
@@ -33,11 +33,11 @@ Cela permet de cibler l'ensemble du contenu du sélecteur comme une seule entit�
 
 ### Comportement du sélecteur en tant que popover
 
-L'élément `<select>` et le sélecteur ont automatiquement une relation implicite invocateur/popover, telle que définie par l'[API Popover](/fr/docs/Web/API/Popover_API). Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour plus de détails sur le comportement des popovers, et voir [Animer le menu du sélecteur à l'aide des états de popover](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) pour un cas d'usage typique rendu possible par cette association implicite.
+L'élément `<select>` et le sélecteur ont automatiquement une relation implicite invocateur/fenêtre contextuelle, telle que définie par l'[API Popover](/fr/docs/Web/API/Popover_API). Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour plus de détails sur le comportement des fenêtres contextuelles, et voir [Animer le menu du sélecteur à l'aide des états de la fenêtre contextuelle](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select#animer_le_sélecteur_selon_létat_de_la_fenêtre_contextuelle) pour un cas d'usage typique rendu possible par cette association implicite.
 
-### Positionnement par ancre du sélecteur
+### Positionnement par une ancre du sélecteur
 
-Autre effet de la relation implicite invocateur/popover évoquée ci‑dessus&nbsp;: l'élément `<select>` et le sélecteur ont aussi une ancre implicite en référence, ce qui signifie que le sélecteur est automatiquement à l'élément via le [positionnement par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning). Cela présente plusieurs avantages, notamment&nbsp;:
+Autre effet de la relation implicite invocateur/fenêtre contextuelle évoquée ci‑dessus&nbsp;: l'élément `<select>` et le sélecteur ont aussi une ancre implicite en référence, ce qui signifie que le sélecteur est automatiquement à l'élément avec le [positionnement par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning). Cela présente plusieurs avantages, notamment&nbsp;:
 
 - Les styles par défaut du navigateur positionnent le sélecteur relativement au bouton (l'ancre) et vous pouvez personnaliser cette position comme expliqué dans [Positionner des éléments relativement à leur ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). À titre de référence, les styles par défaut associés sont les suivants&nbsp;:
 

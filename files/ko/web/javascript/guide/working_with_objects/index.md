@@ -510,7 +510,7 @@ fruit.name = "포도";
 console.log(fruitbear); // 출력: { name: "사과" }가 아니라 { name: "포도" }
 ```
 
-비교 연산에 대한 더 자세한 정보는 [동일 연산자](/ko/docs/Web/JavaScript/Reference/Operators#동일_연산자)에서 더 알아보세요.
+비교 연산에 대한 더 자세한 정보는 [동일 연산자](/ko/docs/Web/JavaScript/Reference/Operators#같음_연산자)에서 더 알아보세요.
 
 ## 같이 보기
 

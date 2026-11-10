@@ -3,10 +3,12 @@ title: Pseudo-classe CSS `:visited`
 short-title: :visited
 slug: Web/CSS/Reference/Selectors/:visited
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:visited`** s'applique une fois que le lien a été visité par l'utilisateur·ice. Pour des raisons de vie privée, les styles pouvant être modifiés avec ce sélecteur sont très limités. La pseudo-classe `:visited` s'applique uniquement aux éléments HTML {{HTMLElement("a")}} et {{HTMLElement("area")}} qui possèdent un attribut `href`.
+
+Les styles définis par les pseudo-classes `:visited` et non-visitées {{CSSxRef(":link")}} peuvent être écrasés par toute pseudo-classe d'action utilisateur suivante ({{CSSxRef(":hover")}} ou {{CSSxRef(":active")}}) ayant une spécificité au moins égale. Pour mettre en forme les liens correctement, placez la règle `:visited` après la règle `:link` mais avant les règles `:hover` et `:active`, comme défini par _l'ordre LVHA_&nbsp;: `:link` — `:visited` — `:hover` — `:active`. La pseudo-classe `:visited` et la pseudo-classe `:link` sont mutuellement exclusives.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :visited", "tabbed-shorter")}}
 
@@ -42,18 +44,16 @@ a:visited {
 </ul>
 ```
 
-Les styles définis par les pseudo-classes `:visited` et non-visitées {{CSSxRef(":link")}} peuvent être écrasés par toute pseudo-classe d'action utilisateur suivante ({{CSSxRef(":hover")}} ou {{CSSxRef(":active")}}) ayant une spécificité au moins égale. Pour mettre en forme les liens correctement, placez la règle `:visited` après la règle `:link` mais avant les règles `:hover` et `:active`, comme défini par _l'ordre LVHA_&nbsp;: `:link` — `:visited` — `:hover` — `:active`. La pseudo-classe `:visited` et la pseudo-classe `:link` sont mutuellement exclusives.
-
 ## Restrictions de vie privée
 
 Pour des raisons de vie privée, les navigateurs limitent les propriétés qui peuvent être appliquées à cette pseudo-classe&nbsp;:
 
 - Les propriétés CSS autorisées sont {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("border-bottom-color")}}, {{CSSxRef("border-left-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("column-rule-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, et {{CSSxRef("text-emphasis-color")}}.
 - Les attributs SVG autorisés sont {{SVGAttr("fill")}} et {{SVGAttr("stroke")}}.
-- La composante alpha des styles autorisés sera ignorée. La composante alpha de l'état inverse de `:visited` de l'élément sera utilisée à la place. Dans Firefox, lorsque la composante alpha est `0`, le style défini dans `:visited` sera totalement ignoré.
-- Bien que ces styles puissent changer l'apparence des couleurs pour l'utilisateur·ice final·e, la méthode {{DOMxRef("window.getComputedStyle")}} mentira et retournera toujours la valeur de la couleur de l'état inverse de `:visited`.
+- La composante alpha des styles autorisés est ignorée. La composante alpha de l'état inverse de `:visited` de l'élément est utilisée à la place. Dans Firefox, lorsque la composante alpha est `0`, le style défini dans `:visited` est totalement ignoré.
+- Bien que ces styles puissent changer l'apparence des couleurs pour l'utilisateur·ice final·e, la méthode {{DOMxRef("window.getComputedStyle()")}} ment et retourne toujours la valeur de la couleur de l'état inverse de `:visited`.
 - L'élément HTML {{HTMLElement("link")}} n'est jamais ciblé par `:visited`.
-- Les méthodes DOM qui ciblent des éléments via des sélecteurs CSS — comme {{DOMxRef("Document.querySelector", "querySelector()")}} et {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} — retourneront toujours un résultat «&nbsp;vide&nbsp;» même s'il existe des liens visités dans un document. Pour les méthodes mentionnées, ce sera `null` ou une liste de nœuds ({{DOMxRef("NodeList")}}) vide, respectivement.
+- Les méthodes DOM qui ciblent des éléments avec des sélecteurs CSS — comme {{DOMxRef("Document.querySelector", "querySelector()")}} et {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} — retournent toujours un résultat «&nbsp;vide&nbsp;» même s'il existe des liens visités dans un document. Pour les méthodes mentionnées, c'est `null` ou une liste de nœuds ({{DOMxRef("NodeList")}}) vide, respectivement.
 
 > [!NOTE]
 > Pour d'autres informations sur ces limitations et leurs raisons d'être, se référer à l 'article [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited).
@@ -62,13 +62,13 @@ Pour des raisons de vie privée, les navigateurs limitent les propriétés qui p
 
 ```css
 :visited {
-  /* ... */
+  /* … */
 }
 ```
 
 ## Exemples
 
-Les propriétés qui n'auraient autrement aucune couleur ou seraient transparentes ne peuvent pas être modifiées avec `:visited`. Parmi les propriétés qui peuvent être définies avec cette pseudo-classe, votre navigateur a probablement une valeur par défaut pour `color` et `column-rule-color` uniquement. Ainsi, si vous souhaitez modifier les autres propriétés, vous devrez leur donner une valeur de base en dehors du sélecteur `:visited`.
+Les propriétés qui n'ont autrement aucune couleur ou sont transparentes ne peuvent pas être modifiées avec `:visited`. Parmi les propriétés qui peuvent être définies avec cette pseudo-classe, votre navigateur a probablement une valeur par défaut pour `color` et `column-rule-color` uniquement. Ainsi, si vous souhaitez modifier les autres propriétés, vous devez leur donner une valeur de base en dehors du sélecteur `:visited`.
 
 ### HTML
 
@@ -82,9 +82,8 @@ Les propriétés qui n'auraient autrement aucune couleur ou seraient transparent
 
 ```css
 a {
-  /* Définir des valeurs par défaut non transparentes pour
-     certaines propriétés, permettant de les styliser avec
-     l'état :visited */
+  /* Définir des valeurs par défaut non transparentes pour certaines
+  propriétés, permettant de les mettre en forme avec l'état :visited */
   background-color: white;
   border: 1px solid white;
 }
@@ -112,7 +111,7 @@ a:visited {
 
 - [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - Les pseudo-classes relatives aux liens&nbsp;:
-  - {{CSSxRef(":link")}},
-  - {{CSSxRef(":visited")}},
-  - {{CSSxRef(":hover")}},
-  - {{CSSxRef(":active")}}.
+  - {{CSSxRef(":link")}}
+  - {{CSSxRef(":visited")}}
+  - {{CSSxRef(":hover")}}
+  - {{CSSxRef(":active")}}

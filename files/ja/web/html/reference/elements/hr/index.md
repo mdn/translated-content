@@ -1,5 +1,5 @@
 ---
-title: HTML `<hr>` 主題区切り（水平線）要素
+title: "`<hr>` 主題区切り（水平線）要素"
 short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: HTML `<script>` スクリプト要素
+title: "`<script>` スクリプト要素"
 short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 l10n:

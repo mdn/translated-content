@@ -14,7 +14,7 @@ slug: Web/HTTP/Reference/Headers/Trailer
 
 ## 语法
 
-```plain
+```http
 Trailer: header-names
 ```
 

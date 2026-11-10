@@ -3,12 +3,12 @@ title: "HTML : HyperText Markup Language"
 short-title: HTML
 slug: Web/HTML
 l10n:
-  sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
+  sourceCommit: 8e2fe58f37aad757276d6bfdfa8f2a57aac73749
 ---
 
 **HTML** signifie «&nbsp;_HyperText Markup Language_&nbsp;» qu'on peut traduire par «&nbsp;langage de balises pour l'hypertexte&nbsp;». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
 
-L'«&nbsp;hypertexte&nbsp;» désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette «&nbsp;toile&nbsp;» (ce mot est traduit par <i lang="en">web</i> en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
+«&nbsp;L'hypertexte&nbsp;» désigne des textes contenant des liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette «&nbsp;toile&nbsp;» (ce mot est traduit par <i lang="en">web</i> en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
 
 Le langage HTML utilise des «&nbsp;balises&nbsp;» pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des «&nbsp;éléments&nbsp;» spéciaux tels que {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} et bien d'autres.
 

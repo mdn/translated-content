@@ -3,7 +3,7 @@ title: "Request: referrer プロパティ"
 short-title: referrer
 slug: Web/API/Request/referrer
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -19,11 +19,11 @@ l10n:
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、リクエストのリファラーを変数に保存しています。
+次のスニペットでは、{{domxref("Request.Request", "Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、リクエストのリファラーを変数に保存しています。
 
 ```js
 const myRequest = new Request("flowers.jpg");
-const myReferrer = myRequest.referrer; // 既定では "about:client" を返す
+const myReferrer = myRequest.referrer; // デフォルトでは "about:client" を返す
 ```
 
 ## 仕様書

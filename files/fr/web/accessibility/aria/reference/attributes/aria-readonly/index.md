@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-readonly"
 short-title: aria-readonly
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-readonly
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: 96758f3d8ce1e5fbd9d58053bdef103eec1de108
 ---
 
 L'attribut `aria-readonly` indique que l'élément n'est pas modifiable, mais reste utilisable.
@@ -14,13 +14,13 @@ Lorsque vous souhaitez indiquer qu'un élément interactif fonctionne mais n'est
 
 Quand `aria-readonly` est défini à `true`, cela signifie que l'utilisateur·ice peut lire mais pas modifier la valeur du composant. Les éléments en lecture seule restent pertinents pour l'utilisateur·ice&nbsp;: il ne faut pas empêcher la navigation vers l'élément ou ses descendants sélectionnables, ni la copie de la valeur.
 
-Exemples&nbsp;:
+Les exemples incluent&nbsp;:
 
-- Éléments de formulaire qui ne doivent pas être modifiés.
-- En-têtes de ligne et de colonne dans un tableur.
+- Les éléments de formulaire qui ne doivent pas être modifiés.
+- Les en-têtes de ligne et de colonne dans un tableur.
 - La valeur totale dans un panier d'achat.
 
-Si la valeur non modifiable ne doit pas pouvoir recevoir la sélection, utilisez [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) à la place.
+Si l'élément n'est pas disponible pour l'interaction, utilisez [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) à la place.
 
 > [!NOTE]
 > Lorsque vous utilisez des contrôles de formulaire HTML sémantiques, si vous définissez l'attribut `readonly`, il n'est pas nécessaire d'ajouter `aria-readonly="true"`.

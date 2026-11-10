@@ -273,7 +273,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
 
 - [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) est une proposition de Mozilla, conçu pour aider les concepteur·ice·s de sites Web et les administrateur·ice·s de serveur en définissant comment le contenu sur leurs sites Web agit. L'objectif est d'aider à détecter et à atténuer les attaques incluant les scripts intersites et des attaques par injection de données.
-- [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security est un dispositif de sécurité qui permet à un site web d'indiquer au navigateur d'utiliser une connexion sécurisée (HTTPS) à la place du protocole HTTP.
 - [L'en-tête de réponse `X-FRAME-OPTIONS`](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : L'en-tête de réponse X-FRAME-OPTIONS HTTP introduite dans Internet Explorer 8 est désormais pris en charge par Firefox. Cela permet aux sites d'indiquer si leurs pages peuvent être utilisées dans des frames ou si l'utilisation de la page doit être restreinte.

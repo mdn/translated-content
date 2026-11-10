@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`WorkerNavigator.appName`** プロパティの値は、どのブラウザーでも常に "`Netscape`" です。 このプロパティは互換性のためにのみ残されています。
 

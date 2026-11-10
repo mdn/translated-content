@@ -672,7 +672,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">デフォルト値</th>
-      <td><code>auto</code>（画像の内在的なtreated as the intrinsic height of the image)</td>
+      <td><code>auto</code>（画像の内在的な高さとして扱われる）</td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -801,7 +801,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">デフォルト値</th>
-      <td><code>auto</code> (treated as <code>100%</code>)</td>
+      <td><code>auto</code>（<code>100%</code> として扱われる）</td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

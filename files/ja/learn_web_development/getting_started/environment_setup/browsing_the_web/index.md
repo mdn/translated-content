@@ -2,7 +2,7 @@
 title: ウェブの閲覧
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -10,7 +10,7 @@ l10n:
 このモジュールのこの時点では、少なくとも 2 つのウェブブラウザーをコンピューターにインストールしておく必要があります。この記事では、ブラウザーの使用についてもう少し詳しく説明し、ウェブブラウザーの作業方法、操作する一般的なアイテムの一部の違い、情報検索方法について見ていきます。
 
 > [!NOTE]
-> 端末に既定でインストールされているブラウザー以外に何も持っていない場合は、いくつか取得してください。[最新のウェブブラウザーのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#最新のウェブブラウザーのインストール)を参照してください。
+> 端末に既定でインストールされているブラウザー以外に何も持っていない場合は、いくつか取得してください。[現行のウェブブラウザー](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#現行のウェブブラウザー)を参照してください。
 
 他の分野と同様、ウェブにも多くの専門用語や技術用語があります。心配しないでください。ここでは、すべてを一度に説明することはありません（興味があれば、[用語集](/ja/docs/Glossary)を調べることができます）。ただし、常に耳にする表現であるため、最初から理解しておく必要がある基本的な用語がいくつかあります。以下に、重要な用語をいくつか紹介します。
 
@@ -194,6 +194,6 @@ AI が生成した検索結果は、情報を受け取るための非常に一�
   - `intitle:cheese` は、ページのメインタイトルに "cheese" が含まれる結果のみを返します。
 
   > [!NOTE]
-  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax)、[高度な検索オプション](https://support.microsoft.com/ja-JP/bing/advanced-search-options)などがあります。
+  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax)、[高度な検索オプション](https://support.microsoft.com/ja-jp/bing/advanced-search-options)などがあります。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

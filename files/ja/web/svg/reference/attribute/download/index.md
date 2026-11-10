@@ -18,7 +18,7 @@ l10n:
 - 値が指定されていない場合（論理属性形式）、ブラウザーはダウンロード用のファイル名と拡張子を提案として提示しますが、これらは以下のソースに基づいて決定されることがあります。
   - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
   - URL [パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-  - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、[`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の最初、 [`blob:` URL](/ja/docs/Web/URI/Reference/Schemes/blob) の {{domxref("Blob.type")}} のいずれか
+  - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、[`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の最初、 [`blob:` URL](/ja/docs/Web/URI/Reference/Schemes/blob) の {{domxref("Blob.type")}} のいずれか）
 - 文字列が指定された場合、ブラウザーはその文字列をダウンロード時のファイル名の提案として使用します。`/` および `\` 文字はアンダースコア (`_`) に変換されます。ファイルシステムによっては、ファイル名に他の文字の使用が禁止されている場合があるため、ブラウザーは必要に応じて候補となるファイル名を調整します。
 
 ## 解説

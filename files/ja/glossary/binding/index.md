@@ -1,11 +1,9 @@
 ---
-title: Binding （バインド）
+title: Binding (バインド)
 slug: Glossary/Binding
 l10n:
-  sourceCommit: 1c4869cdb1a9a9c3cafba87a2cd9469591f7aa47
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
-
-{{GlossarySidebar}}
 
 プログラミングにおいて**バインド**とは、{{glossary("identifier","識別子")}}と値の関連付けのことです。バインドは{{glossary("variable", "変数")}}だけとは限りません。例えば、関数の{{glossary("parameter", "引数")}}や {{jsxref("Statements/try...catch", "catch (e)")}} ブロックで作成されるバインドは、厳密な意味での「変数」ではありません。さらに、一部のバインドは言語によって暗黙に作成されます。例えば、 JavaScript の {{jsxref("this")}} や [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) などです。
 

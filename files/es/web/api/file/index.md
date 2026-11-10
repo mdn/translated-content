@@ -9,7 +9,7 @@ La interfaz **`File`** provee información acerca de los archivos y permite que 
 
 Los objetos `File` son generalmente recuperados a través de un objeto {{domxref("FileList")}} retornado como resultado de un usuario seleccionado archivos por medio de un elemento {{ HTMLElement("input") }} , desde las operaciones drag y drop de un objeto {{domxref("DataTransfer")}} , o desde la API `mozGetAsFile()` en un {{ domxref("HTMLCanvasElement") }}. En Gecko, desde código con privilegios es posible crear objetos `File` representando cualquier archivo local sin esperar la interacción del usuario (ver [Implementation notes](#implementation_notes) para más información.)
 
-Un objeto `File` es una especie específica de {{DOMxRef("Blob")}}, y puede ser utilizada en cualquier contexto que un Blob puede ser usado. En particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, y {{DOMxRef("XMLHttpRequest", "", "send()")}} aceptan tanto `Blob`s y `File`s.
+Un objeto `File` es una especie específica de {{DOMxRef("Blob")}}, y puede ser utilizada en cualquier contexto que un Blob puede ser usado. En particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, y {{DOMxRef("XMLHttpRequest", "", "#send()")}} aceptan tanto `Blob`s y `File`s.
 
 Ver [Utilizando archivos desde aplicaciones web (Using files from web applications)](/es/docs/Web/API/File_API/Using_files_from_web_applications) para más información y ejemplos.
 
@@ -49,7 +49,7 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 - {{DOMxRef("Blob.text()")}}
   - : Transforma el archivo `File` en una corriente (_stream_) para leerse hasta completarse. Retorna una promesa que se resuelve con un {{jsxref("String")}} (texto).
 - {{DOMxRef("Blob.arrayBuffer()")}}
-  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{DOMxRef("ArrayBuffer")}}.
+  - : Transforma el archivo `File` en una corriente y leerlo hasta completarse. Devuelve una promesa que resuelve con un {{jsxref("ArrayBuffer")}}.
 
 ## Especificaciones
 

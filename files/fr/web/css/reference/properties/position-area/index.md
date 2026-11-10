@@ -105,7 +105,7 @@ Par exemple, si le `writing-mode` est défini sur `horizontal-tb`, `position-are
 
 #### Propriétés d'encart et valeurs
 
-Lorsque un élément positionné par ancre est positionné à l'aide de la propriété `position-area`, toutes les {{Glossary("inset properties", "propriétés d'encart")}} définies, telles que {{CSSxRef("top")}} ou {{CSSxRef("inset-inline-end")}}, définissent des décalages par rapport à la zone de position. Certaines autres valeurs de propriété, comme [`max-block-size: 100%`](/fr/docs/Web/CSS/Reference/Properties/max-block-size), sont également relatives à la zone de position. Toutes les propriétés d'encart définies ou par défaut sur `auto` se comportent comme si leur valeur est définie sur `0`.
+Lorsque un élément positionné par une ancre est positionné à l'aide de la propriété `position-area`, toutes les {{Glossary("inset properties", "propriétés d'encart")}} définies, telles que {{CSSxRef("top")}} ou {{CSSxRef("inset-inline-end")}}, définissent des décalages par rapport à la zone de position. Certaines autres valeurs de propriété, comme [`max-block-size: 100%`](/fr/docs/Web/CSS/Reference/Properties/max-block-size), sont également relatives à la zone de position. Toutes les propriétés d'encart définies ou par défaut sur `auto` se comportent comme si leur valeur est définie sur `0`.
 
 ### Digression sur la largeur des éléments positionnés
 
@@ -448,6 +448,6 @@ Essayez de sélectionner de nouvelles valeurs de `position-area` dans le menu `<
 - La propriété {{CSSxRef("position-try-fallbacks")}}
 - La fonction {{CSSxRef("anchor()")}}
 - Le type de donnée {{CSSxRef("position-area_value", "&lt;position-area&gt;")}}
-- Le guide [d'utilisation du positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- Le guide [d'utilisation du positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
 - Le guide [des options de repli et de masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
-- Le module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- Le module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)

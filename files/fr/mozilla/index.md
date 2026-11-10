@@ -2,7 +2,7 @@
 title: Mozilla
 slug: Mozilla
 l10n:
-  sourceCommit: 7dcd1a300afce3509445dae18888997c30a0bdaf
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 Les articles ci-dessous intègrent des contenus à propos du téléchargement et de la compilation du code de Mozilla. De plus, vous trouvez des articles utiles expliquant le fonctionnement du code et indiquant les modalités de construction d'extensions pour les applications Mozilla et semblables.

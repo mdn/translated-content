@@ -3,7 +3,7 @@ title: "Element : évènement securitypolicyviolation"
 short-title: securitypolicyviolation
 slug: Web/API/Element/securitypolicyviolation_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: f37e438c6dece2b381d2b9f35dc53af21a916a75
 ---
 
 {{APIRef("Reporting API")}}

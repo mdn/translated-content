@@ -51,7 +51,7 @@ _Активное изучение пока не доступно. [Пожалу
 
 По всем этим причинам поиск хорошего хостинг-провайдера является ключевой частью создания вашего сайта. Рассмотрите многочисленные предложения компаний и выберите то, что соответствует вашим потребностям и бюджету (предложения варьируются от бесплатных до тысяч долларов в месяц). Вы можете найти подробности в [этой статье.](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting)
 
-Как только вы решили проблему с хостингом, вам понадобится только [загрузить свои файлы на ваш веб-сервер](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
+Как только вы решили проблему с хостингом, вам понадобится только [загрузить свои файлы на ваш веб-сервер](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
 ### Связь по HTTP
 
@@ -90,6 +90,6 @@ HTTP задаёт строгие правила взаимодействия к�
 
 Теперь, когда вы познакомились с веб-серверами, вы можете:
 
-- прочитать [насколько сложно делать что-либо в веб](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- узнать больше о [разнообразии ПО, которое может пригодиться для создания веб-сайта](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- двигаться к практике: например, [узнать как загружать файлы на веб-сервер](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
+- прочитать [насколько сложно делать что-либо в веб](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- узнать больше о [разнообразии ПО, которое может пригодиться для создания веб-сайта](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- двигаться к практике: например, [узнать как загружать файлы на веб-сервер](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).

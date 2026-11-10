@@ -3,8 +3,6 @@ title: "Warning: -file- is being assigned a //# sourceMappingURL, but already ha
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```

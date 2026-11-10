@@ -2,10 +2,10 @@
 title: AsyncDisposableStack
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-L'objet **`AsyncDisposableStack`** représente une pile de [libérateurs asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/await_using) à exécuter lorsque la pile elle‑même est libérée. Les fonctions de libération sont exécutées dans l'ordre inverse de leur enregistrement, avec des garanties strictes de gestion des erreurs. L'appel de sa méthode `move()` transfère la responsabilité d'appeler les libérateurs actuellement enregistrés vers une nouvelle instance d'`AsyncDisposableStack` et empêche l'enregistrement de libérateurs supplémentaires.
+L'objet **`AsyncDisposableStack`** représente une pile de [libérateurs asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/await_using) à exécuter lorsque la pile elle‑même est libérée. Les fonctions de libération sont exécutées dans l'ordre inverse de leur enregistrement, avec des garanties strictes de gestion des erreurs. L'appel de sa méthode `move()` transfère la responsabilité d'appeler les libérateurs actuellement enregistrés vers une nouvelle instance de `AsyncDisposableStack` et empêche l'enregistrement de libérateurs supplémentaires.
 
 Voir {{JSxRef("DisposableStack")}} pour des informations générales sur l'utilisation des piles de ressources.
 
@@ -16,12 +16,12 @@ Voir {{JSxRef("DisposableStack")}} pour des informations générales sur l'utili
 
 ## Propriétés d'instance
 
-Ces propriétés sont définies sur `AsyncDisposableStack.prototype` et sont partagées par toutes les instances d'`AsyncDisposableStack`.
+Ces propriétés sont définies sur `AsyncDisposableStack.prototype` et sont partagées par toutes les instances de `AsyncDisposableStack`.
 
 - {{JSxRef("Object/constructor", "AsyncDisposableStack.prototype.constructor")}}
-  - : La fonction constructeur qui a créé l'objet instance. Pour les instances d'`AsyncDisposableStack`, la valeur initiale est le constructeur {{JSxRef("AsyncDisposableStack/AsyncDisposableStack", "AsyncDisposableStack")}}.
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `AsyncDisposableStack`, la valeur initiale est le constructeur {{JSxRef("AsyncDisposableStack/AsyncDisposableStack", "AsyncDisposableStack")}}.
 - {{JSxRef("AsyncDisposableStack.prototype.disposed")}} {{ReadOnlyInline}}
-  - : Retourne `true` si l'`AsyncDisposableStack` a été libéré, sinon `false`.
+  - : Retourne `true` si un `AsyncDisposableStack` a été libéré, sinon `false`.
 - `AsyncDisposableStack.prototype[Symbol.toStringTag]`
   - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"AsyncDisposableStack"`. Cette propriété est utilisée par {{JSxRef("Object.prototype.toString()")}}.
 
@@ -32,9 +32,9 @@ Ces propriétés sont définies sur `AsyncDisposableStack.prototype` et sont par
 - {{JSxRef("AsyncDisposableStack.prototype.disposeAsync()")}}
   - : Libère cette pile en appelant tous les libérateurs qui y sont enregistrés, dans l'ordre inverse de leur enregistrement.
 - {{JSxRef("AsyncDisposableStack.prototype.defer()")}}
-  - : Enregistre une fonction de rappel qui sera appelée lorsque la pile sera libérée.
+  - : Enregistre une fonction de rappel qui est appelée lorsque la pile est libérée.
 - {{JSxRef("AsyncDisposableStack.prototype.move()")}}
-  - : Crée une nouvelle instance d'`AsyncDisposableStack` contenant les mêmes libérateurs que cette pile, puis marque cette pile comme libérée sans appeler les libérateurs.
+  - : Crée une nouvelle instance de `AsyncDisposableStack` contenant les mêmes libérateurs que cette pile, puis marque cette pile comme libérée sans appeler les libérateurs.
 - {{JSxRef("AsyncDisposableStack.prototype.use()")}}
   - : Enregistre une valeur qui implémente le protocole de libération asynchrone dans la pile.
 - [`AsyncDisposableStack.prototype[Symbol.asyncDispose]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose)
@@ -50,8 +50,8 @@ Ces propriétés sont définies sur `AsyncDisposableStack.prototype` et sont par
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `AsyncDisposableStack` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources en JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - La propriété {{JSxRef("Symbol.asyncDispose")}}
 - L'instruction {{JSxRef("Statements/await_using", "await using")}}
 - L'objet natif {{JSxRef("DisposableStack")}}
-- [Prothèse d'émulation de `AsyncDisposableStack` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#explicit-resource-management)

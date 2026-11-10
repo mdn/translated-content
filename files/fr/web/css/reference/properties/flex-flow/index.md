@@ -3,7 +3,7 @@ title: Propriété CSS `flex-flow`
 short-title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS **`flex-flow`**) définit la direction d'un conteneur flexible ainsi que son comportement de retour à la ligne.
@@ -103,7 +103,12 @@ flex-flow: unset;
 
 ### Valeurs
 
-Voir {{CSSxRef("flex-direction")}} et {{CSSxRef("flex-wrap")}} pour plus d'informations sur les valeurs que peuvent prendre ces deux propriétés.
+Cette propriété est définie comme une liste de mots-clés séparés par des espaces des types suivants&nbsp;:
+
+- {{CSSxRef("flex-direction")}}
+  - : Un mot-clé définissant l'axe principal et la direction selon laquelle les éléments flexibles sont placés dans le conteneur flexible.
+- {{CSSxRef("flex-wrap")}}
+  - : Un ou deux mots-clés définissant si les éléments flexibles peuvent passer à plusieurs lignes et, si le retour à la ligne est autorisé, définissant la direction dans laquelle les lignes sont empilées et si elles sont équilibrées.
 
 ## Description
 

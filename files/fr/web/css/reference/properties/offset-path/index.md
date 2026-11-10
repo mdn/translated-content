@@ -126,7 +126,7 @@ La propriété `offset-path` prend comme valeur une valeur `<offset-path>`, une 
 - `<offset-path>`
   - : Une fonction `ray()`, une valeur `<url>`, ou une valeur `<basic-shape>` qui définit le chemin de décalage géométrique. Si omis, la forme du chemin pour la valeur `<coord-box>` est `inset(0 round X)`, où `X` est la valeur de {{CSSxRef("border-radius")}} de l'élément qui établit le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
     - {{CSSxRef("ray()")}}
-      - : Définit une ligne commençant à une position définie, d'une longueur définie, et s'étendant à l'angle spécifié. La fonction `ray()` accepte jusqu'à quatre paramètres — un {{CSSxRef("angle")}}, une valeur de taille optionnelle, le mot-clé optionnel `contain`, et un `at <position>` optionnel.
+      - : Définit une ligne commençant à une position définie, d'une longueur définie, et s'étendant à l'angle défini. La fonction `ray()` accepte jusqu'à quatre paramètres — un {{CSSxRef("angle")}}, une valeur de taille optionnelle, le mot-clé optionnel `contain`, et un `at <position>` optionnel.
 
     - {{CSSxRef("url_value", "&lt;url&gt;")}}
       - : Définit l'ID d'un [élément de forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes). Le chemin est la forme de l'élément SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, ou {{SVGElement("rect")}} référencé par son `id` dans la fonction `url()`. Si l'URL ne référence pas un élément de forme ou est autrement invalide, la valeur résolue pour le chemin de décalage est `path("M0,0")` (qui est une valeur `<basic-shape>` valide).
@@ -141,7 +141,7 @@ La propriété `offset-path` prend comme valeur une valeur `<offset-path>`, une 
 
 La propriété `offset-path` définit un chemin que peut suivre un élément animé. Un chemin de décalage est soit un chemin défini avec un ou plusieurs sous-chemins, soit la géométrie d'une forme de base qui n'est pas mise en forme. La position exacte de l'élément sur le chemin de décalage est déterminée par la propriété {{CSSxRef("offset-distance")}}. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée de `0` pour {{CSSxRef("offset-distance")}} et une direction initiale qui définit la rotation de l'objet vers la position initiale.
 
-Les premières versions de la spécification appelaient cette propriété `motion-path`. Elle a été renommée en `offset-path` car la propriété décrit des positions statiques, et non un mouvement.
+Les premières versions de la spécification appellent cette propriété `motion-path`. Elle a été renommée en `offset-path`, car la propriété décrit des positions statiques, et non un mouvement.
 
 ## Définition formelle
 
@@ -158,9 +158,9 @@ Les premières versions de la spécification appelaient cette propriété `motio
 Cet exemple montre l'utilisation de différentes valeurs `<coord-box>` dans la propriété `offset-path`.
 
 ```html hidden
-<div class="box blueBox"></div>
-<div class="box redBox"></div>
-<div class="box greenBox"></div>
+<div class="boite boiteBleu"></div>
+<div class="boite boiteRouge"></div>
+<div class="boite boiteVerte"></div>
 ```
 
 ```css hidden
@@ -176,25 +176,25 @@ body {
 ```
 
 ```css
-.box {
+.boite {
   width: 40px;
   height: 20px;
   animation: move 8000ms infinite ease-in-out;
 }
 
-.blueBox {
+.boiteBleu {
   background-color: blue;
   offset-path: border-box;
   offset-distance: 5%;
 }
 
-.greenBox {
+.boiteVerte {
   background-color: green;
   offset-path: padding-box;
   offset-distance: 8%;
 }
 
-.redBox {
+.boiteRouge {
   background-color: red;
   offset-path: content-box;
   offset-distance: 12%;
@@ -222,7 +222,7 @@ Dans cet exemple, les marges, les bordures et les espacements ont été volontai
 
 ### Créer un chemin de décalage en utilisant `path()`
 
-Dans cet exemple, l'élément {{SVGElement("svg")}} crée une maison avec une cheminée et définit également deux moitiés d'une paire de ciseaux. La maison et la cheminée sont composées de rectangles et de polygones, et les moitiés des ciseaux sont représentées par deux éléments `<path>` distincts. Dans le code CSS, la propriété `offset-path` est utilisée pour spécifier un chemin à suivre pour les deux moitiés des ciseaux. Ce chemin défini en CSS est identique à celui représenté par l'élément `<path>` dans le SVG, qui est le contour de la maison incluant la cheminée.
+Dans cet exemple, l'élément {{SVGElement("svg")}} crée une maison avec une cheminée et définit également deux moitiés d'une paire de ciseaux. La maison et la cheminée sont composées de rectangles et de polygones, et les moitiés des ciseaux sont représentées par deux éléments `<path>` distincts. Dans le code CSS, la propriété `offset-path` est utilisée pour définir un chemin à suivre pour les deux moitiés des ciseaux. Ce chemin défini en CSS est identique à celui représenté par l'élément `<path>` dans le SVG, qui est le contour de la maison incluant la cheminée.
 
 ```html live-sample___offset_path_path
 <svg
@@ -315,7 +315,7 @@ Dans cet exemple, l'élément {{SVGElement("svg")}} crée une maison avec une ch
 
 #### Résultat
 
-Sans la propriété `offset-path`, les deux moitiés des ciseaux seraient positionnées par défaut dans le coin supérieur gauche du canevas. Cependant, en utilisant `offset-path`, les deux moitiés des ciseaux sont alignées avec le point de départ du chemin SVG, ce qui leur permet de se déplacer le long de celui-ci.
+Sans la propriété `offset-path`, les deux moitiés des ciseaux sont positionnées par défaut dans le coin supérieur gauche du canevas. Cependant, en utilisant `offset-path`, les deux moitiés des ciseaux sont alignées avec le point de départ du chemin SVG, ce qui leur permet de se déplacer le long de celui-ci.
 
 {{EmbedLiveSample("offset_path_path", "100%", 450)}}
 

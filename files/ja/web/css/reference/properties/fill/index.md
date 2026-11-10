@@ -1,9 +1,9 @@
 ---
-title: CSS `fill` プロパティ
+title: "`fill` プロパティ (CSS)"
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、SVG のテキストコンテンツおよび SVG の図形の内部キャンバスをどのように塗りつぶすか、または描画するかを定義します。存在する場合、要素の {{SVGAttr("fill")}} 属性を上書きします。
@@ -18,7 +18,7 @@ SVG の図形やテキストの輪郭の内部領域は塗りつぶされます�
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 fill: none;
 fill: context-fill;
 fill: context-stroke;
@@ -44,6 +44,8 @@ fill: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のリストから 1 つの値を指定するか、`<url>` を使用する場合は 2 つの値を指定します。
 
 - `none`
   - : `fill` は描画されません。ストローク内の領域は、もしあれば、透明になります。
@@ -76,7 +78,7 @@ fill: unset;
 
 #### HTML
 
-SVG には、2 巣の複雑な図形を、 {{SVGElement("polygon")}} および {{SVGElement("path")}} 要素を使用して定義してあります。両方の `fill` 属性は既定では `black` に設定されています。濃い灰色（`#666666`）のストロークを SVG の {{SVGAttr("stroke")}} 属性を使用して追加していますが、代わりに {{CSSXRef("stroke")}} プロパティを使用することができます。
+SVG には、2 巣の複雑な図形を、 {{SVGElement("polygon")}} および {{SVGElement("path")}} 要素を使用して定義してあります。両方の `fill` 属性は既定では `black` に設定されています。濃い灰色 (`#666666`) のストロークを SVG の {{SVGAttr("stroke")}} 属性を使用して追加していますが、代わりに {{CSSXRef("stroke")}} プロパティを使用することができます。
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">

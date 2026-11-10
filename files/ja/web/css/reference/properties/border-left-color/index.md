@@ -1,5 +1,5 @@
 ---
-title: CSS `border-left-color` プロパティ
+title: "`border-left-color` プロパティ (CSS)"
 short-title: border-left-color
 slug: Web/CSS/Reference/Properties/border-left-color
 l10n:

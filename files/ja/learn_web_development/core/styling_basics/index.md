@@ -11,7 +11,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 
 ## 前提知識
 
-このモジュールを始める前に、[基本的なソフトウェアのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)で説明されている基本的な作業環境と、[ファイルの扱い](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解しておいてください。また、 HTML に親しんでおいてください（まだの場合は [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)を一通りやっておいてください。
+このモジュールを始める前に、[基本的なソフトウェアのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)で説明されている基本的な作業環境と、[ファイルの扱い](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解しておいてください。また、 HTML に親しんでおいてください（まだの場合は [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)を一通りやっておいてください）。
 
 > [!NOTE]
 > ファイルが作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみてください。

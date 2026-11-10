@@ -54,7 +54,7 @@ Cela vous permet, en substance, de définir une courbe d'accélération afin que
 
 Cette courbe d'accélération est définie à l'aide d'une {{CSSxRef("easing-function")}} pour chaque propriété à faire transiter.
 
-Vous pouvez définir plusieurs fonctions d'accélération&nbsp;; chacune sera appliquée à la propriété correspondante telle que définie par la propriété {{CSSxRef("transition-property")}}, qui agit comme une liste de `transition-property`. Si moins de fonctions d'accélération sont définies que d'éléments dans la liste `transition-property`, l'agent utilisateur doit calculer la valeur utilisée en répétant la liste de valeurs jusqu'à ce qu'il y en ait une pour chaque propriété en transition. Si davantage de fonctions d'accélération sont définies, la liste est tronquée à la bonne taille. Dans les deux cas, la déclaration CSS reste valide.
+Vous pouvez définir plusieurs fonctions d'accélération&nbsp;; chacune est appliquée à la propriété correspondante telle que définie par la propriété {{CSSxRef("transition-property")}}, qui agit comme une liste de `transition-property`. Si moins de fonctions d'accélération sont définies que d'éléments dans la liste `transition-property`, l'agent utilisateur doit calculer la valeur utilisée en répétant la liste de valeurs jusqu'à ce qu'il y en ait une pour chaque propriété en transition. Si davantage de fonctions d'accélération sont définies, la liste est tronquée à la bonne taille. Dans les deux cas, la déclaration CSS reste valide.
 
 ## Syntaxe
 
@@ -96,7 +96,7 @@ transition-timing-function: unset;
 - `<easing-function>`
   - : Chaque valeur {{CSSxRef("&lt;easing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{CSSxRef("transition-property")}}.
 
-    Les valeurs des mots-clés qui ne sont pas des étapes (`ease`, `linear`, `ease-in-out`, etc.) représentent chacune une courbe de Bézier cubique avec quatre points de contrôle fixes, tandis que la fonction `cubic-bezier()` permet d'utiliser une valeur non prédéfinie. Les fonctions d'accélération par étapes divisent la durée d'entrée en un nombre spécifié d'intervalles de durée égale. Elles sont définies par un nombre d'étapes et une position d'étape.
+    Les valeurs des mots-clés qui ne sont pas des étapes (`ease`, `linear`, `ease-in-out`, etc.) représentent chacune une courbe de Bézier cubique avec quatre points de contrôle fixes, tandis que la fonction `cubic-bezier()` permet d'utiliser une valeur non prédéfinie. Les fonctions d'accélération par étapes divisent la durée d'entrée en un nombre défini d'intervalles de durée égale. Elles sont définies par un nombre d'étapes et une position d'étape.
     - `ease`
       - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.
     - `linear`
@@ -106,7 +106,7 @@ transition-timing-function: unset;
     - `ease-out`
       - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)`, la transition commence rapidement puis ralentit jusqu'à la fin.
     - `ease-in-out`
-      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)`, la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.
+      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)`, la transition commence lentement, accélère puis ralentit à nouveau avant la fin.
     - `cubic-bezier(p1, p2, p3, p4)`
       - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
     - `steps( n, <jumpterm>)`

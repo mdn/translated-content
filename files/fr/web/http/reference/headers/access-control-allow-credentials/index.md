@@ -6,10 +6,10 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Access-Control-Allow-Credentials`** indique aux navigateurs si le serveur autorise l'inclusion de justificatifs dans les requêtes HTTP inter-origines.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Access-Control-Allow-Credentials`** indique aux navigateurs si le serveur autorise l'inclusion de justificatifs dans les requêtes HTTP inter-origines.
 
 Les justificatifs incluent les cookies, les certificats client {{Glossary("TLS", "Transport Layer Security (TLS)")}}, ou les en-têtes d'authentification contenant un nom d'utilisateur·ice et un mot de passe.
-Par défaut, ces justificatifs ne sont pas envoyés dans les requêtes inter-origines, et le faire peut rendre un site vulnérable aux attaques de {{Glossary("CSRF", "Cross-Site Request Forgery (CSRF)")}}.
+Par défaut, ces justificatifs ne sont pas envoyés dans les requêtes inter-origines, et le faire peut rendre un site vulnérable aux attaques de {{Glossary("CSRF", "Falsification de requête inter-sites (CSRF)")}}.
 
 Un client peut demander l'inclusion de justificatifs dans les requêtes inter-sites de plusieurs façons&nbsp;:
 
@@ -20,8 +20,8 @@ Un client peut demander l'inclusion de justificatifs dans les requêtes inter-si
 Lorsque des justificatifs sont inclus&nbsp;:
 
 - Pour les requêtes {{Glossary("Preflight_request", "préliminaires")}}&nbsp;: la requête préliminaire n'inclut pas de justificatifs.
-  Si la réponse du serveur à la requête préliminaire définit l'en-tête `Access-Control-Allow-Credentials` à `true`, alors la requête réelle inclura les justificatifs&nbsp;; sinon, le navigateur signale une erreur réseau.
-- Pour les requêtes non préliminaires&nbsp;: la requête inclura les justificatifs, et si la réponse du serveur ne définit pas l'en-tête `Access-Control-Allow-Credentials` à `true`, le navigateur signale une erreur réseau.
+  Si la réponse du serveur à la requête préliminaire définit l'en-tête `Access-Control-Allow-Credentials` à `true`, alors la requête réelle inclut les justificatifs&nbsp;; sinon, le navigateur signale une erreur réseau.
+- Pour les requêtes non préliminaires&nbsp;: la requête inclut les justificatifs, et si la réponse du serveur ne définit pas l'en-tête `Access-Control-Allow-Credentials` à `true`, le navigateur signale une erreur réseau.
 
 <table class="properties">
   <tbody>

@@ -3,7 +3,7 @@ title: Propriété CSS `clip-rule`
 short-title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-rule`** détermine, lorsque des parties du chemin se superposent à d'autres, quels pixels dans la boîte du masque sont à l'intérieur de la forme de découpe définie par un [chemin de découpe](/fr/docs/Web/CSS/Reference/Properties/clip-path) et lesquels sont à l'extérieur.
@@ -114,7 +114,7 @@ Cet exemple montre que, bien que la propriété `clip-rule` n'ait aucun effet su
 
 #### HTML
 
-Nous incluons un SVG avec deux éléments `<clipPath>` qui définissent des formes d'étoile, identiques à l'exception de la valeur de leur attribut `id`. Nous incluons également deux éléments `<div>` qui contiendront nos formes d'étoile.
+Nous incluons un SVG avec deux éléments `<clipPath>` qui définissent des formes d'étoile, identiques à l'exception de la valeur de leur attribut `id`. Nous incluons également deux éléments `<div>` qui contiennent nos formes d'étoile.
 
 ```html
 <svg height="0" width="0">
@@ -225,7 +225,7 @@ Pour les chemins de découpe appliqués aux rectangles découpés, la propriét�
 }
 ```
 
-Comme les parties intérieure et extérieure du chemin se déplacent toutes deux dans le sens horaire (de gauche à droite), la forme de découpe résultante sera différente selon la règle de découpe. Pour `nonzero`, tout rayon à l'intérieur de la partie extérieure de la forme aura une valeur supérieure à zéro, car il rencontrera un ou plusieurs fragments de chemin allant de gauche à droite. Pour `even-odd`, les points situés entre les deux parties du chemin auront un total impair, tandis que tout point à l'intérieur du chemin intérieur ou à l'extérieur de la partie extérieure aura un total pair.
+Comme les parties intérieure et extérieure du chemin se déplacent toutes deux dans le sens horaire (de gauche à droite), la forme de découpe résultante est différente selon la règle de découpe. Pour `nonzero`, tout rayon à l'intérieur de la partie extérieure de la forme a une valeur supérieure à zéro, car il rencontre un ou plusieurs fragments de chemin allant de gauche à droite. Pour `even-odd`, les points situés entre les deux parties du chemin ont un total impair, tandis que tout point à l'intérieur du chemin intérieur ou à l'extérieur de la partie extérieure a un total pair.
 
 {{EmbedLiveSample("Choisir entre les règles pour un chemin avec tous les tracés dans le sens horaire", 500, 200)}}
 
@@ -269,7 +269,7 @@ Nous appliquons le même CSS qu'auparavant.
 }
 ```
 
-Dans ce cas, comme la partie extérieure du chemin se déplace dans le sens horaire (de gauche à droite) et que la partie intérieure du chemin se déplace dans le sens antihoraire (de droite à gauche), la forme de découpe résultante sera identique quelle que soit la règle de découpe utilisée.
+Dans ce cas, comme la partie extérieure du chemin se déplace dans le sens horaire (de gauche à droite) et que la partie intérieure du chemin se déplace dans le sens antihoraire (de droite à gauche), la forme de découpe résultante est identique quelle que soit la règle de découpe utilisée.
 
 {{EmbedLiveSample("Choisir entre les règles pour un chemin avec des tracés de sens différents", 500, 200)}}
 

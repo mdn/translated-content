@@ -13,7 +13,7 @@ slug: Web/API/RTCPeerConnection/setRemoteDescription
 
 ## 语法
 
-```plain
+```js-nolint
 aPromise = pc.setRemoteDescription(sessionDescription);
 
 pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);

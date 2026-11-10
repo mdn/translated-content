@@ -3,7 +3,7 @@ title: Firefox 36 note de version pour les développeurs
 short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 Firefox 36 a été publié le 24 février 2015. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -56,9 +56,9 @@ Points forts&nbsp;:
   - `Number("0b11")` retourne désormais `3`, et non `NaN`.
   - `"0o11" == 9` retourne désormais `true`, et non `false`.
 
-- La déclaration {{JSxRef("Statements/const", "const")}} est désormais limitée au bloc et nécessite un initialiseur ([bogue Firefox 611388 <sup>(angl.)</sup>](https://bugzil.la/611388)). Elle ne peut plus non plus être redéclarée ([bogue Firefox 1095439 <sup>(angl.)</sup>](https://bugzil.la/1095439)).
+- La déclaration {{JSxRef("Statements/const", "const")}} est désormais limitée au bloc et nécessite une initialisation ([bogue Firefox 611388 <sup>(angl.)</sup>](https://bugzil.la/611388)). Elle ne peut plus non plus être redéclarée ([bogue Firefox 1095439 <sup>(angl.)</sup>](https://bugzil.la/1095439)).
   - `{const a=1}; a;` génère désormais une {{JSxRef("ReferenceError")}} et ne retourne plus `1` en raison de la portée du bloc.
-  - `const a;` génère désormais une {{JSxRef("SyntaxError")}} («&nbsp;missing = in const declaration&nbsp;»)&nbsp;: un initialiseur est requis.
+  - `const a;` génère désormais une {{JSxRef("SyntaxError")}} («&nbsp;missing = in const declaration&nbsp;»)&nbsp;: une initialisation est requise.
   - `const a = 1; a = 2;` génère également une {{JSxRef("SyntaxError")}} («&nbsp;invalid assignment to const a&nbsp;»).
 
 - La méthode ES2016 {{JSxRef("Array.prototype.includes")}} a été implémentée, mais pour l'instant, elle n'est activée que dans les versions Nightly ([bogue Firefox 1069063 <sup>(angl.)</sup>](https://bugzil.la/1069063)).

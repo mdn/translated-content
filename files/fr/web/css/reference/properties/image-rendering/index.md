@@ -3,10 +3,12 @@ title: Propriété CSS `image-rendering`
 short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui doit être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies avec les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
+
+{{Glossary("user agent", "L'agent utilisateur")}} agrandit ou réduit une image lorsque l'auteur·ice de la page définit des dimensions différentes de sa taille naturelle. Un redimensionnement peut aussi se produire lors d'une interaction utilisateur·ice (zoom). Par exemple, si la taille naturelle d'une image est de `100×100px`, mais que ses dimensions réelles sont de `200×200px` (ou `50×50px`), alors l'image est agrandie (ou réduite) en utilisant l'algorithme défini par `image-rendering`. Cette propriété n'a aucun effet sur les images non redimensionnées.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: image-rendering")}}
 
@@ -41,8 +43,6 @@ image-rendering: pixelated;
   object-fit: cover;
 }
 ```
-
-{{Glossary("user agent", "L'agent utilisateur")}} agrandit ou réduit une image lorsque l'auteur·ice de la page définit des dimensions différentes de sa taille naturelle. Un redimensionnement peut aussi se produire lors d'une interaction utilisateur·ice (zoom). Par exemple, si la taille naturelle d'une image est de `100×100px`, mais que ses dimensions réelles sont de `200×200px` (ou `50×50px`), alors l'image est agrandie (ou réduite) en utilisant l'algorithme défini par `image-rendering`. Cette propriété n'a aucun effet sur les images non redimensionnées.
 
 ## Syntaxe
 

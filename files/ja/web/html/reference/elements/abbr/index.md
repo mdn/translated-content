@@ -1,5 +1,5 @@
 ---
-title: HTML `<abbr>` 略語要素
+title: "`<abbr>` 略語要素"
 short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 l10n:
@@ -149,7 +149,7 @@ abbr {
     <tr>
       <th scope="row">
         <a href="/ja/docs/Web/HTML/Guides/Content_categories"
-          >コンテンツカテゴリ－</a
+          >コンテンツカテゴリー</a
         >
       </th>
       <td>

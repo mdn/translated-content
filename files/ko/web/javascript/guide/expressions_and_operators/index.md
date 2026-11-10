@@ -968,7 +968,7 @@ if (theDay instanceof Date) {
 | 쉼표               | `,`                                                                                       |
 
 각각의 연산자로 향하는 링크를 포함한 더 자세한 표는
-[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)에서 찾을 수
+[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#표)에서 찾을 수
 있습니다.
 
 ## 표현식

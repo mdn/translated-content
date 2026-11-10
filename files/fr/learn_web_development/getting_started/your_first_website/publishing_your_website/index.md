@@ -3,7 +3,7 @@ title: Publier votre site web
 short-title: Publication
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 l10n:
-  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
@@ -11,7 +11,7 @@ l10n:
 Une fois que vous avez terminé d'écrire le code et d'organiser les fichiers qui composent votre site web, il faut le mettre en ligne pour que tout le monde puisse le trouver. Cet article explique comment mettre votre site d'exemple en ligne très simplement.
 
 > [!NOTE]
-> Vous aurez besoin d'un site d'exemple disponible sur votre ordinateur pour suivre cet article. Il doit contenir au moins un fichier `index.html` valide. Si ce n'est pas déjà fait, nous vous conseillons d'en créer un en suivant les articles précédents de ce module, en commençant par [À quoi ressemblera le site web&nbsp;?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like).
+> Vous avez besoin d'un site d'exemple disponible sur votre ordinateur pour suivre cet article. Il doit contenir au moins un fichier `index.html` valide. Si ce n'est pas déjà fait, nous vous conseillons d'en créer un en suivant les articles précédents de ce module, en commençant par [À quoi ressemble le site web&nbsp;?](/fr/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like).
 
 <table>
   <tbody>
@@ -78,10 +78,10 @@ Il existe plusieurs applications web qui simulent un environnement de développe
 
 Testez certains de ces exemples pour voir lequel vous convient le mieux&nbsp;:
 
-- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
-- [JSFiddle](https://jsfiddle.net/)
-- [JSBin](https://jsbin.com/)
-- [CodePen](https://codepen.io/)
+- [Scrimba <sup>(angl.)</sup>](https://scrimba.com/new?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+- [JSFiddle <sup>(angl.)</sup>](https://jsfiddle.net/)
+- [JSBin <sup>(angl.)</sup>](https://jsbin.com/)
+- [CodePen <sup>(angl.)</sup>](https://codepen.io/)
 
 ## Publier sur GitHub
 
@@ -114,6 +114,6 @@ Pour en savoir plus, consultez [Bien démarrer avec GitHub Pages](https://docs.g
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Comprendre les noms de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 - [Combien ça coûte de faire quelque chose sur le Web&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va un peu plus loin et qui montre quelques techniques supplémentaires.
+- [Déployer un site web <sup>(angl.)</sup>](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va un peu plus loin et qui montre quelques techniques supplémentaires.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

@@ -1,21 +1,19 @@
 ---
-title: ServiceWorkerRegistration.active
+title: "ServiceWorkerRegistration: active プロパティ"
+short-title: active
 slug: Web/API/ServiceWorkerRegistration/active
 l10n:
   sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-**`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
+**`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
 
 クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("Client")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された `scope` オプション）。
 
 > [!NOTE]
-> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
-
-> [!NOTE]
-> アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
+> アクティブなワーカーが `activating` 状態になると、ランタイムスクリプトエラーが発生しても、アクティブなワーカーが強制終了されても、そのアクティブなワーカーが `activated` 状態になることを妨げることはありません。
 
 ## 値
 
@@ -32,7 +30,5 @@ l10n:
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) <sup>(英語)</sup>
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<meta name="viewport">`
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 l10n:
-  sourceCommit: 4c58f4735f986a91bee1b77e336143630df727a2
+  sourceCommit: 1402df2877308c09ea2aa1460f1c97c634bd7624
 ---
 
 La valeur **`viewport`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) d'un élément HTML {{HTMLElement("meta")}} donne des indications sur la façon dont la {{Glossary("viewport", "zone d'affichage")}} doit être dimensionnée.
@@ -22,7 +22,7 @@ Un élément `<meta name="viewport">` possède les attributs supplémentaires su
     - `height`
       - : Contrôle la hauteur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `height=400`) ou sur la valeur spéciale `device-height`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vh`](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives_à_la_zone_daffichage).
     - `initial-scale`
-      - : Définit le ratio entre la largeur de l'appareil (`device-width` en mode portrait ou `device-height` en mode paysage) et la taille de la zone d'affichage. Elle peut être un nombre compris entre `0.0` et `10.0`.
+      - : Définit la proportion entre la largeur de l'appareil (`device-width` en mode portrait ou `device-height` en mode paysage) et la taille de la zone d'affichage. Elle peut être un nombre compris entre `0.0` et `10.0`.
     - `maximum-scale`
       - : Définit le niveau de zoom maximal. Il doit être supérieur ou égal à `minimum-scale`, sinon le comportement est indéfini. Les paramètres du navigateur peuvent ignorer cette règle, et iOS 10+ l'ignore par défaut. Elle peut être un nombre compris entre `0.0` et `10.0`.
     - `minimum-scale`
@@ -61,9 +61,9 @@ Le paramètre recommandé est la suivante, qui définit la zone d'affichage pour
 ```
 
 > [!NOTE]
-> Inclure `initial-scale=1.0` était historiquement nécessaire pour éviter des comportements de zoom inattendus dans les anciens navigateurs mobiles. Bien que les navigateurs modernes n'exigent pas `initial-scale` pour résoudre ce comportement, `initial-scale` n'est pas entièrement redondant et reste utile lors de la définition de valeurs par défaut de mise à l'échelle personnalisées ou de largeurs de mise en page fixes.
+> Cet exemple omet `initial-scale=1`, une pratique courante qui est généralement inutile. Lorsqu'il est omis, le navigateur détermine automatiquement le niveau de zoom initial et peut effectuer un zoom arrière lorsque le contenu dépasse la zone d'affichage. La quantité de mise à l'échelle dépend du navigateur et peut dépendre à la fois de la largeur et de la hauteur du contenu. Ajoutez `initial-scale=1` si le contenu débordant provoque un rétrécissement indésirable et que vous souhaitez que la page commence à un zoom de 100%&nbsp;; cependant, vous devez généralement éviter le contenu débordant horizontalement.
 
-Les sites peuvent définir leur zone d'affichage sur une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à un petit écran de téléphone en mode portrait. Cela peut poser problème lorsque le navigateur affiche une page à une taille plus grande. Pour résoudre ce problème, les navigateurs élargissent la largeur de la zone d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran.
+Les sites peuvent définir leur zone d'affichage sur une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à un petit écran de téléphone en mode portrait. Cela peut poser problème lorsque le navigateur affiche une page à une taille plus grande. Pour résoudre ce problème, les navigateurs élargissent la largeur de la zone d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. C'est particulièrement utile sur les appareils à grand écran.
 
 Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` correspond en réalité à une largeur minimale de zone d'affichage. Par exemple, si votre mise en page nécessite au moins 500 pixels de largeur, vous pouvez utiliser le balisage suivant. Lorsque l'écran fait plus de 500 pixels de large, le navigateur élargit la zone d'affichage (plutôt que de zoomer) pour remplir l'écran&nbsp;:
 
@@ -77,7 +77,7 @@ Les résolutions d'écran ont tellement augmenté que les pixels individuels son
 
 Sur les écrans à haute densité de pixels (<i lang="en">high dpi</i>), les pages avec `initial-scale=1` sont effectivement agrandies par les navigateurs. Le texte est net et lisse, mais les images bitmap peuvent ne pas profiter de toute la résolution de l'écran. Pour obtenir des images plus nettes sur ces écrans, les développeur·euse·s web peuvent concevoir des images — ou des mises en page entières — à une échelle supérieure à leur taille finale, puis les réduire à l'aide du CSS ou des propriétés de la zone d'affichage (<i lang="en">viewport</i> en anglais).
 
-Le ratio de pixels par défaut dépend de la densité d'affichage. Sur un écran avec une densité inférieure à 200dpi, le ratio est de 1,0. Sur les écrans avec une densité comprise entre 200 et 300dpi, le ratio est de 1,5. Pour les écrans avec une densité supérieure à 300dpi, le ratio est l'entier inférieur de (_densité_/150dpi). Notez que ce ratio par défaut n'est valable que lorsque l'échelle de la zone d'affichage est égale à 1. Sinon, la relation entre les pixels CSS et les {{Glossary("device pixel", "pixels physiques")}} dépend du niveau de zoom actuel.
+La proportion de pixels par défaut dépend de la densité d'affichage. Sur un écran avec une densité inférieure à 200dpi, la proportion est de 1,0. Sur les écrans avec une densité comprise entre 200 et 300dpi, la proportion est de 1,5. Pour les écrans avec une densité supérieure à 300dpi, la proportion est l'entier inférieur de (_densité_/150dpi). Notez que cette proportion par défaut n'est valable que lorsque l'échelle de la zone d'affichage est égale à 1. Sinon, la relation entre les pixels CSS et les {{Glossary("device pixel", "pixels physiques")}} dépend du niveau de zoom actuel.
 
 ## Exemples
 

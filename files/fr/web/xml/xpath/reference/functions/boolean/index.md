@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/boolean
 original_slug: Web/XPath/Functions/boolean
 ---
 
-{{XsltSidebar}}
-
 la fonction `boolean` évalue une expression et retourne `true` ou `false`.
 
 ### Syntaxe

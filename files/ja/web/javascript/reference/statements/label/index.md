@@ -1,28 +1,31 @@
 ---
-title: ラベル
+title: ラベル付き文
 slug: Web/JavaScript/Reference/Statements/label
 l10n:
-  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
+  sourceCommit: 5c8d0ac21db572edebbd4ad428efca0af3ec1734
 ---
-
-{{jsSidebar("Statements")}}
 
 **ラベル付き文**は、任意の[文](/ja/docs/Web/JavaScript/Reference/Statements)に接頭辞として識別子を付けたものです。ラベル付き文の中にネストされた {{jsxref("Statements/break", "break")}} 文や {{jsxref("Statements/continue", "continue")}} 文を使用すると、このラベルにジャンプすることができます。
 
-{{InteractiveExample("JavaScript デモ: Statement - Label")}}
+{{InteractiveExample("JavaScript デモ: ラベル付き文", "taller")}}
 
 ```js interactive-example
-let str = "";
+let i, j;
 
-loop1: for (let i = 0; i < 5; i++) {
-  if (i === 1) {
-    continue loop1;
+loop1: for (i = 0; i < 3; i++) {
+  loop2: for (j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
   }
-  str = str + i;
 }
 
-console.log(str);
-// 予想される結果: "0234"
+// 予想される結果:
+// "i = 0, j = 0"
+// "i = 0, j = 1"
+// "i = 0, j = 2"
+// "i = 1, j = 0"
 ```
 
 ## 構文
@@ -33,9 +36,9 @@ console.log(str);
 ```
 
 - `ラベル`
-  - : 予約語ではない任意の JavaScript の[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)。
+  - : 予約語ではない任意の JavaScript の[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)で、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#予約語)ではないもの。
 - `文`
-  - : JavaScript の文。 `break` は任意のラベル付き文で使うことができ、 `continue` はループのラベル付き文で使うことができます。
+  - : JavaScript の文。`break` は任意のラベル付き文で使うことができ、 `continue` はループのラベル付き文で使うことができます。
 
 ## 解説
 
@@ -223,7 +226,7 @@ console.log("swap");
 
 ### ラベル付き関数宣言
 
-ラベルが適用できるのは[文だけであり、宣言は含まれません](/ja/docs/Web/JavaScript/Reference/Statements#文と宣言の違いについて)。厳格モードでない場合、関数宣言をコードでラベル付けできる古い文法があります。
+ラベルが適用できるのは[文だけであり、宣言は含まれません](/ja/docs/Web/JavaScript/Reference/Statements#文、宣言、式とは)。厳格モードでない場合、関数宣言をコードでラベル付けできる古い文法があります。
 
 ```js
 L: function F() {}
@@ -231,7 +234,9 @@ L: function F() {}
 
 ただし、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)のコードでは {{jsxref("SyntaxError")}} が発生します。
 
-```js example-bad
+<!-- cSpell:ignore labelled -->
+
+```js-nolint example-bad
 "use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -239,7 +244,7 @@ L: function F() {}
 
 [ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)や[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)は、厳格モードであってもなくてもラベル付けすることはできません。
 
-```js example-bad
+```js-nolint example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

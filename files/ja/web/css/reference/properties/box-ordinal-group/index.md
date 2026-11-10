@@ -1,12 +1,12 @@
 ---
-title: CSS `box-ordinal-group` プロパティ
+title: "`box-ordinal-group` プロパティ (CSS)"
 short-title: box-ordinal-group
 slug: Web/CSS/Reference/Properties/box-ordinal-group
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。

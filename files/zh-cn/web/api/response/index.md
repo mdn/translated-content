@@ -38,7 +38,7 @@ slug: Web/API/Response
 - {{domxref("Response.body")}} {{readonlyInline}}
   - : 一个简单的 getter，用于暴露一个 {{domxref("ReadableStream")}} 类型的 body 内容。
 - {{domxref("Response.bodyUsed")}} {{readonlyInline}}
-  - : 包含了一个{{domxref("Boolean", "布尔值")}}来标示该 Response 是否读取过 {{domxref("Body")}}。
+  - : 包含了一个{{jsxref("Boolean", "布尔值")}}来标示该 Response 是否读取过 {{domxref("Body")}}。
 
 ## 方法
 
@@ -52,13 +52,13 @@ slug: Web/API/Response
 `Response` 实现了 {{domxref("Body")}} 接口，所以以下方法同样可用：
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("ArrayBuffer")}} 格式的 Promise 对象。
+  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{jsxref("ArrayBuffer")}} 格式的 Promise 对象。
 - {{domxref("Body.blob()")}}
   - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("Blob")}} 格式的 Promise 对象。
 - {{domxref("Body.formData()")}}
   - : 读取{{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("FormData")}} 格式的 Promise 对象。
 - {{domxref("Body.json()")}}
-  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{domxref("JSON")}} 格式的 Promise 对象。
+  - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{jsxref("JSON")}} 格式的 Promise 对象。
 - {{domxref("Body.text()")}}
   - : 读取 {{domxref("Response")}} 对象并且将它设置为已读（因为 Responses 对象被设置为了 stream 的方式，所以它们只能被读取一次），并返回一个被解析为 {{jsxref("String")}} 格式的 Promise 对象。
 

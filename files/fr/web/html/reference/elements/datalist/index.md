@@ -3,7 +3,7 @@ title: "Élément HTML `<datalist>` : l'élément de liste des données"
 short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 l10n:
-  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<datalist>`** contient un ensemble d'éléments HTML {{HTMLElement("option")}} qui représentent les options permises ou recommandées à choisir dans d'autres contrôles.
@@ -30,6 +30,12 @@ label {
 }
 ```
 
+## Attributs
+
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+## Notes d'utilisation
+
 Pour lier l'élément `<datalist>` au contrôle, on lui donne un identifiant unique avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), puis on ajoute l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) à l'élément HTML {{HTMLElement("input")}} avec le même identifiant en valeur.
 Seuls certains types de {{HTMLElement("input")}} prennent en charge ce comportement, et cela peut aussi varier selon le navigateur.
 
@@ -37,10 +43,6 @@ Chaque élément `<option>` doit avoir un attribut `value`, qui représente une 
 
 > [!NOTE]
 > `<datalist>` n'est pas un remplacement de {{HTMLElement("select")}}. Un `<datalist>` ne représente pas un champ de saisie en soi&nbsp;; il s'agit d'une liste de valeurs suggérées pour un contrôle associé. Le contrôle peut toujours accepter toute valeur qui passe la validation, même si elle n'est pas dans cette liste de suggestions.
-
-## Attributs
-
-Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Accessibilité
 

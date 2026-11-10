@@ -1,5 +1,5 @@
 ---
-title: HTML `<aside>` 余談要素
+title: "`<aside>` 余談要素"
 short-title: <aside>
 slug: Web/HTML/Reference/Elements/aside
 l10n:

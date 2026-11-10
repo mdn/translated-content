@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 
 ## 语法
 
-```plain
+```js-nolint
 regexObj.compile(pattern, flags)
 ```
 

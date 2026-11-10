@@ -3,7 +3,7 @@ title: Cours express sur l'invite de commande
 short-title: Ligne de commande
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 l10n:
-  sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -39,7 +39,7 @@ Le terminal est une interface textuelle permettant d'exécuter des programmes en
 
 De nombreux outils peuvent être utilisés en tapant des commandes dans l'invite de commande&nbsp;: beaucoup sont préinstallés sur votre système, et un grand nombre d'autres sont installables avec des registres de paquets.
 Les registres de paquets sont comme des boutiques d'applications, mais (principalement) pour des outils et logiciels en ligne de commande.
-Nous verrons comment installer certains outils plus loin dans ce chapitre, et nous approfondirons les registres de paquets dans le chapitre suivant.
+Nous voyons comment installer certains outils plus loin dans ce chapitre, et nous approfondissons les registres de paquets dans le chapitre suivant.
 
 L'un des reproches majeurs faits à l'invite de commande est son manque d'ergonomie.
 Découvrir l'invite de commande pour la première fois peut être intimidant&nbsp;: un écran vide, un curseur clignotant, et très peu d'aide visible.
@@ -239,7 +239,7 @@ Une bonne habitude est d'écrire votre commande dans un éditeur de texte, de r�
 
 Si vous n'êtes pas à l'aise pour tester des commandes sur votre propre machine, il existe des terminaux en ligne qui offrent un environnement sûr pour s'entraîner sans risque&nbsp;:
 
-- Notre partenaire d'apprentissage, [Scrimba](https://scrimba.com/home?via=mdn), propose un terminal dans son environnement d'apprentissage. Un bon exemple est leur cours [Command Line Basics <sup>(angl.)</sup>](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>, qui propose une introduction interactive à la navigation dans l'arborescence et à la manipulation de fichiers et dossiers via le terminal.
+- Notre partenaire d'apprentissage, [Scrimba](https://scrimba.com/home?via=mdn), propose un terminal dans son environnement d'apprentissage. Un bon exemple est leur cours [Command Line Basics <sup>(angl.)</sup>](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>, qui propose une introduction interactive à la navigation dans l'arborescence et à la manipulation de fichiers et dossiers avec le terminal.
 - Le [Command-line playground <sup>(angl.)</sup>](https://sandbox.bio/playgrounds/terminal) sur sandbox.bio est un bon endroit pour essayer des commandes et se familiariser avec les interfaces en ligne de commande et les shells courants comme Bash.
 
 Une excellente ressource pour avoir un aperçu rapide de commandes spécifiques est [tldr.sh <sup>(angl.)</sup>](https://tldr.sh/). C'est un service de documentation communautaire, similaire à MDN, mais dédié aux commandes du terminal.
@@ -367,7 +367,7 @@ Prettier peut&nbsp;:
 - Vous éviter de devoir uniformiser le style à la main dans tous vos fichiers&nbsp;: Prettier le fait automatiquement.
 - Aider les débutant·e·s à formater leur code selon les bonnes pratiques.
 - Être installé sur n'importe quel système d'exploitation et même intégré dans les outils du projet, garantissant que vos collègues utilisent le même style de code.
-- Être configuré pour s'exécuter à l'enregistrement, à la frappe, ou avant la publication du code (avec des outils complémentaires que nous verrons plus tard).
+- Être configuré pour s'exécuter à l'enregistrement, à la frappe, ou avant la publication du code (avec des outils complémentaires que nous le voyons plus tard).
 
 Pour cet article, nous allons installer Prettier localement, comme suggéré dans le [guide d'installation de Prettier <sup>(angl.)</sup>](https://prettier.io/docs/install.html).
 
@@ -386,10 +386,10 @@ Pour cet article, nous allons installer Prettier localement, comme suggéré dan
 Votre sortie doit ressembler à&nbsp;:
 
 ```bash
-Usage: prettier [options] [file/glob ...]
+Utilisation : prettier [options] [file/glob ...]
 
-By default, output is written to stdout.
-Stdin is read if it is piped to Prettier and no files are given.
+Par défaut, la sortie est écrite sur stdout.
+L'entrée standard est lue si elle est transmise à Prettier et qu'aucun fichier n'est fourni.
 
 …
 ```
@@ -481,6 +481,6 @@ Notez que certains de ces outils doivent être installés avec npm, comme nous l
 
 ## Résumé
 
-Nous arrivons à la fin de notre tour d'horizon du terminal/ligne de commande, et du module de configuration de l'environnement. La suite vous fera créer votre premier site web simple, pour découvrir le développement web.
+Nous arrivons à la fin de notre tour d'horizon du terminal/ligne de commande, et du module de configuration de l'environnement. La suite vous fait créer votre premier site web simple, pour découvrir le développement web.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}

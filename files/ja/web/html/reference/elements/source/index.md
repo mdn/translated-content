@@ -1,5 +1,5 @@
 ---
-title: HTML `<source>` メディアまたは画像のソース要素
+title: "`<source>` メディアまたは画像のソース要素"
 short-title: <source>
 slug: Web/HTML/Reference/Elements/source
 l10n:

@@ -3,7 +3,7 @@ title: En-tête Accept-Patch
 short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Accept-Patch`** indique quels [types de média](/fr/docs/Web/HTTP/Guides/MIME_types) le serveur est capable de comprendre dans une requête {{HTTPMethod("PATCH")}}.
@@ -13,7 +13,7 @@ L'en-tête doit apparaître dans les requêtes {{HTTPMethod("OPTIONS")}} vers un
 Un en-tête `Accept-Patch` dans une réponse à n'importe quelle méthode de requête signifie implicitement qu'un `PATCH` est autorisé sur la ressource cible de la requête.
 
 > [!NOTE]
-> L'IANA maintient [une liste des codages de contenu officiels <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> L'IANA maintient [une liste des codages de contenu officiels <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters#content-coding).
 > Les codages `bzip` et `bzip2` ne sont pas standards mais peuvent être utilisés dans certains cas, notamment pour la compatibilité avec des systèmes anciens.
 
 <table class="properties">

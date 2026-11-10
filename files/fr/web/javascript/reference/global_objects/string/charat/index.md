@@ -1,210 +1,102 @@
 ---
-title: String.prototype.charAt()
+title: "String : méthode charAt()"
+short-title: charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16) à la position indiquée en argument.
+La méthode **`charAt()`** de valeurs {{JSxRef("String")}} retourne une nouvelle chaîne de caractères contenant l'unité de code UTF-16 unique à l'indice donné.
 
-{{InteractiveExample("JavaScript Demo: String.charAt()")}}
+`charAt()` indexe toujours la chaîne de caractères comme une séquence [d'unités de code UTF-16](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes), donc elle peut retourner des substituts isolés. Pour obtenir le point de code Unicode complet à l'indice donné, utilisez {{JSxRef("String.prototype.codePointAt()")}} et {{JSxRef("String.fromCodePoint()")}}.
+
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.charAt()", "shorter")}}
 
 ```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+const sentence = "Le rapide renard brun saute par-dessus le chien paresseux.";
 
 const index = 4;
 
-console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
-// Expected output: "The character at index 4 is q"
+console.log(`Le caractère d'indice ${index} est ${sentence.charAt(index)}`);
+// Résultat attendu : "Le caractère d'indice 4 est a"
 ```
 
 ## Syntaxe
 
-```js
-str.charAt(index);
+```js-nolint
+charAt(index)
 ```
 
 ### Paramètres
 
 - `index`
-  - : Un entier entre 0 et la longueur de la chaîne - 1. Si aucun index n'est fourni (ce qui correspond à fournir {{jsxref("undefined")}}) ou si l'index ne peut pas être converti en entier, la recherche sera effectuée à l'index 0 et le premier caractère sera donc renvoyé.
+  - : Un entier représentant l'indice basé sur zéro du caractère à retourner. [Converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier) — `undefined` est converti en 0.
 
 ### Valeur de retour
 
-Une chaîne de caractères qui représente le point de code UTF-16 à la position indiquée. Si la position est dehors de la chaîne, ce sera une chaîne vide.
+Une chaîne de caractères représentant le caractère (exactement une unité de code UTF-16) à l'indice (`index`) défini. Si `index` est en dehors de l'intervalle de `0` à `str.length - 1`, `charAt()` retourne une chaîne de caractères vide.
 
 ## Description
 
-Les caractères d'une chaîne sont indexés de la gauche vers la droite. L'indice du premier caractère est 0 et l'indice du dernier caractère est la longueur de la chaîne moins un (par exemple, si on a une chaîne `toto`, le dernier caractère de la chaine aura l'indice `toto.length - 1`). Si l'indice fourni est en dehors de cet intervalle, la méthode renverra une chaîne vide. Si aucun indice n'est fourni, la valeur par défaut utilisée sera 0.
+Les caractères d'une chaîne de caractères sont indexés de la gauche vers la droite. L'indice du premier caractère est `0` et l'indice du dernier caractère d'une chaîne de caractères appelée `str` est `str.length - 1`.
+
+Les points de code Unicode vont de `0` à `1114111` (`0x10FFFF`). `charAt()` retourne toujours un caractère dont la valeur est inférieure à `65536`, car les points de code les plus élevés sont représentés par _une paire_ de pseudo-caractères de substitution de 16 bits. Par conséquent, pour obtenir un caractère complet dont la valeur est supérieure à `65535`, il est nécessaire de récupérer non seulement `charAt(i)`, mais aussi `charAt(i + 1)` (comme si l'on manipule une chaîne de caractères avec deux caractères), ou d'utiliser {{JSxRef("String/codePointAt", "codePointAt(i)")}} et {{JSxRef("String.fromCodePoint()")}} à la place. Pour plus d'informations sur Unicode, voir [Caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes).
+
+`charAt()` est très similaire à l'utilisation de la [notation entre crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets) pour accéder à un caractère à l'indice définit. Les principales différences sont&nbsp;:
+
+- `charAt()` tente de convertir `index` en nombre entier, contrairement à la notation entre crochets, qui utilise directement `index` comme nom de propriété.
+- `charAt()` retourne une chaîne de caractères vide si `index` est hors de la plage autorisée, tandis que la notation entre crochets retourne `undefined`.
 
 ## Exemples
 
-### Afficher les caractères situés à différentes positions d'une chaîne
+### Utiliser la méthode `charAt()`
 
-L'exemple suivant affiche les caractères à différentes positions de la chaîne "`Coucou tout le monde`" :
-
-```js
-var uneChaîne = "Coucou tout le monde";
-
-console.log("La caractère d'indice 0 est '" + uneChaîne.charAt(0) + "'");
-console.log("La caractère d'indice 1 est '" + uneChaîne.charAt(1) + "'");
-console.log("La caractère d'indice 2 est '" + uneChaîne.charAt(2) + "'");
-console.log("La caractère d'indice 3 est '" + uneChaîne.charAt(3) + "'");
-console.log("La caractère d'indice 4 est '" + uneChaîne.charAt(4) + "'");
-console.log("La caractère d'indice 999 est '" + uneChaîne.charAt(999) + "'");
-```
-
-Ces lignes afficheront respectivement :
+L'exemple suivant affiche des caractères situés à différents emplacements dans la chaîne de caractères `"Un nouveau monde"`&nbsp;:
 
 ```js
-La caractère d'indice 0 est 'C'
-La caractère d'indice 1 est 'o'
-La caractère d'indice 2 est 'u'
-La caractère d'indice 3 est 'c'
-La caractère d'indice 4 est 'o'
-La caractère d'indice 999 est ''
+const uneChaine = "Un nouveau monde";
+console.log(`Le caractère à l'indice 0   est '${uneChaine.charAt()}'`);
+// Aucun indice n'a été fourni, 0 est utilisé par défaut
+
+console.log(`Le caractère à l'indice 0   est '${uneChaine.charAt(0)}'`);
+console.log(`Le caractère à l'indice 1   est '${uneChaine.charAt(1)}'`);
+console.log(`Le caractère à l'indice 2   est '${uneChaine.charAt(2)}'`);
+console.log(`Le caractère à l'indice 3   est '${uneChaine.charAt(3)}'`);
+console.log(`Le caractère à l'indice 4   est '${uneChaine.charAt(4)}'`);
+console.log(`Le caractère à l'indice 999 est '${uneChaine.charAt(999)}'`);
 ```
 
-### Obtenir des caractères complets
+Ces lignes affichent ce qui suit&nbsp;:
 
-Le code qui suit permet de s'assurer qu'on récupère des caractères complets et ce même si la chaîne de caractères contient des caractères en dehors du plan multilingue de base (BMP) (qui sont donc représentés sur deux unités de code/codets) :
+```plain
+Le caractère à l'indice 0   est 'U'
+
+Le caractère à l'indice 0   est 'U'
+Le caractère à l'indice 1   est 'n'
+Le caractère à l'indice 2   est ' '
+Le caractère à l'indice 3   est 'n'
+Le caractère à l'indice 4   est 'o'
+Le caractère à l'indice 999 est ''
+```
+
+`charAt()` peut retourner des substituts isolés, qui ne sont pas des caractères Unicode valides.
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // On pourrait aussi utiliser un caractère hors du BMP directement
-for (var i=0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
-    continue;
-  } // On adapte cette ligne pour chaque boucle, en passant la chaîne de caractères
-    // et on renvoie une variable représentant le caractère individuel
-
-  console.log(chr);
-}
-
-function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
-
-  if (Number.isNaN(code)) {
-    return ''; // la position n'a pas pu être trouvée
-  }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return str.charAt(i);
-  }
-
-  // On traite ici le demi codet supérieur (high surrogate)
-  // La borne supérieure du test pourrait être 0xDB7F afin de prendre en compte
-  // les demi-codets privés comme des caractères uniques
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i+1))  {
-      throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
-    }
-    var next = str.charCodeAt(i+1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
-      }
-      return str.charAt(i)+str.charAt(i+1);
-  }
-  // on gère le demi codet inférieur (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
-  }
-  var prev = str.charCodeAt(i-1);
-
-  // (la borne supérieure pourrait être modifiée en 0xDB7F afin de traiter
-  // les demi-codets supérieurs privés comme des caractètres uniques)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
-  }
-  // on peut passer des demis codets inférieurs comme deuxième composant
-  // d'une paire déjà traitée
-  return false;
-}
+const chaine = "𠮷𠮾";
+console.log(chaine.charAt(0)); // "\ud842", qui n'est pas un caractère Unicode valide
+console.log(chaine.charAt(1)); // "\udfb7", qui n'est pas un caractère Unicode valide
 ```
 
-Dans un environnement ECMAScript 2016 qui permet d'utiliser l'affectation par décomposition, on peut obtenir une version plus succincte et flexible :
+Pour obtenir le point de code Unicode complet à l'indice donné, utilisez une méthode d'indexation qui divise par points de code Unicode, comme {{JSxRef("String.prototype.codePointAt()")}} et [la propagation des chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) dans un tableau de points de code Unicode.
 
 ```js
-var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i);
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
-
-  console.log(chr);
-}
-
-function getWholeCharAndI(str, i) {
-  var code = str.charCodeAt(i);
-
-  if (Number.isNaN(code)) {
-    return ""; // Position not found
-  }
-  if (code < 0xd800 || code > 0xdfff) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
-  }
-
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
-    }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
-    }
-    return [str.charAt(i) + str.charAt(i + 1), i + 1];
-  }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
-  }
-  var prev = str.charCodeAt(i - 1);
-
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
-  }
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1];
-}
+const chaine = "𠮷𠮾";
+console.log(String.fromCodePoint(chaine.codePointAt(0))); // "𠮷"
+console.log([...chaine][0]); // "𠮷"
 ```
 
-### Créer une version de `charAt` qui permet de supporter des caractères hors du plan basique multilingue (BMP)
-
-Si on souhaite récupérer les paires de codets des caractères hors du plan classique, on peut utiliser le code suivant :
-
-```js
-function fixedCharAt(str, idx) {
-  var ret = "";
-  str += "";
-  var end = str.length;
-
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
-
-  if (idx >= end || idx < 0) {
-    return "";
-  }
-
-  ret += str.charAt(idx);
-
-  if (
-    /[\uD800-\uDBFF]/.test(ret) &&
-    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
-  ) {
-    // On avance d'un puisque l'un des caractères fait partie de la paire
-    ret += str.charAt(idx + 1);
-  }
-  return ret;
-}
-```
+> [!NOTE]
+> Évitez de réimplémenter les solutions ci-dessus en utilisant `charAt()`. La détection des substituts isolés et leur appariement est complexe, et les API intégrées peuvent être plus performantes, car elles utilisent directement la représentation interne de la chaîne de caractères. Installez une prothèse d'émulation pour les API mentionnées ci-dessus si nécessaire.
 
 ## Spécifications
 
@@ -216,10 +108,10 @@ function fixedCharAt(str, idx) {
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- [JavaScript a un problème avec Unicode](https://mathiasbynens.be/notes/javascript-unicode), billet de Mathias Bynens (en anglais)
+- La méthode {{JSxRef("String.prototype.indexOf()")}}
+- La méthode {{JSxRef("String.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("String.prototype.charCodeAt()")}}
+- La méthode {{JSxRef("String.prototype.codePointAt()")}}
+- La méthode {{JSxRef("String.prototype.split()")}}
+- La méthode statique {{JSxRef("String.fromCodePoint()")}}
+- [JavaScript a un problème avec Unicode <sup>(angl.)</sup>](https://mathiasbynens.be/notes/javascript-unicode) par Mathias Bynens (2013)

@@ -24,7 +24,11 @@ original_slug: Web/CSS/::slotted
 
 ## Синтаксис
 
-{{csssyntax}}
+```css-nolint
+::slotted(<compound-selector>) {
+  /* ... */
+}
+```
 
 ## Примеры
 

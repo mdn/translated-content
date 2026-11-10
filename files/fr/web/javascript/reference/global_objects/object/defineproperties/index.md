@@ -3,7 +3,7 @@ title: "Object : méthode statique defineProperties()"
 short-title: defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.defineProperties()`** définit de nouvelles propriétés ou modifie des propriétés existantes directement sur un objet, en renvoyant l'objet.
@@ -70,7 +70,7 @@ L'objet passé à la fonction, éventuellement modifié.
 
 ## Exemples
 
-### Utiliser `Object.defineProperties()`
+### Utiliser la méthode `Object.defineProperties()`
 
 ```js
 const obj = {};
@@ -97,8 +97,8 @@ Object.defineProperties(obj, {
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.defineProperties` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.defineProperties` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.defineproperties)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.defineProperties` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.defineProperties` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.defineproperties)
 - La méthode statique {{JSxRef("Object.defineProperty()")}}
 - La méthode statique {{JSxRef("Object.keys()")}}
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

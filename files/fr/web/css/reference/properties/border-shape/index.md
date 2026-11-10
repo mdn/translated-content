@@ -3,7 +3,7 @@ title: Propriété CSS `border-shape`
 short-title: border-shape
 slug: Web/CSS/Reference/Properties/border-shape
 l10n:
-  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 {{SeeCompatTable}}
@@ -13,7 +13,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`border-shape`** définit la forme de l
 ## Syntaxe
 
 ```css
-/* Mot-clé */
+/* Valeurs avec un mot-clé */
 border-shape: none;
 
 /* Une seule valeur <basic-shape> */

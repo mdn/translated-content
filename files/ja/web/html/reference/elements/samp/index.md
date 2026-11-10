@@ -1,5 +1,5 @@
 ---
-title: HTML `<samp>` サンプル出力要素
+title: "`<samp>` サンプル出力要素"
 short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 l10n:

@@ -58,7 +58,7 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 関連情報
 
-- [Cross-Origin Resource Policy (CORP) の説明](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+- [Cross-Origin Resource Policy (CORP) の説明](/ja/docs/Web/Security/Practical_implementation_guides/CORP)
 - [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Access-Control-Allow-Origin")}}

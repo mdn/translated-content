@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 original_slug: Web/JavaScript/JavaScript_technologies_overview
 ---
 
-{{JsSidebar("Introductory")}}
-
 ## Introduction
 
 [HTML](/fr/docs/Web/HTML) est utilisé pour définir la structure et le contenu d'une page web, [CSS](/fr/docs/Web/CSS) permet de définir la mise en forme, le style graphique avec lequel afficher le contenu. [JavaScript](/fr/docs/Web/JavaScript) permet quant à lui d'ajouter des fonctionnalités d'interaction pour créer des applications web riches en contenu.

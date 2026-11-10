@@ -3,13 +3,13 @@ title: "Attribut HTML universel : `lang`"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: 8ed465762d06fa17f7cc6adb3e2be9b57df03e9b
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`lang`** aide à définir la langue d'un élément&nbsp;: la langue dans laquelle les éléments non modifiables sont écrits, ou la langue dans laquelle les éléments modifiables doivent être écrits par l'utilisateur·ice. L'attribut contient une seule {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}.
 
 > [!NOTE]
-> Si la valeur de `lang` est est définie avec une chaîne de caractères vide, ça signifie que la langue est explicitement inconnue. Il est donc recommandé de toujours définir une valeur appropriée pour cet attribut.
+> La langue est dans un état inconnu s'il n'y a aucune indication de langue nulle part. Il est recommandé de toujours définir une valeur appropriée pour cet attribut, en particulier en raison des [problèmes d'accessibilité](#problèmes_daccessibilité).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: lang", "tabbed-shorter")}}
 
@@ -35,11 +35,17 @@ p::before {
 }
 ```
 
-Si la valeur de l'attribut est la _chaîne vide_ (`lang=""`), la langue est définie comme _inconnue_&nbsp;; si la balise de langue n'est pas valide selon BCP47, elle est définie comme _invalide_.
+## Valeurs
 
-Même si l'attribut `lang` est défini, il peut ne pas être pris en compte, car l'attribut `xml:lang` a priorité.
+L'attribut contient une seule {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}. Si la valeur de l'attribut est la _chaîne de caractères vide_ (`lang=""`), la langue est définie comme _inconnue_&nbsp;; si la balise de langue n'est pas valide selon BCP47, elle est définie comme _invalide_.
+
+Si l'attribut `xml:lang` est également défini, la spécification HTML exige que les valeurs des attributs `lang` et `xml:lang` soient égales, sans tenir compte de la casse. L'attribut `xml:lang` a priorité.
 
 Pour la pseudo-classe CSS {{CSSxRef(":lang")}}, deux noms de langues invalides sont différents si leurs noms sont différents. Ainsi, `:lang(es)` correspond à `lang="es-ES"` et `lang="es-419"`, `:lang(xyzzy)` ne correspond _pas_ à `lang="xyzzy-Zorp!"`.
+
+### Héritage
+
+Si un élément n'a pas d'attribut `lang` ou `xml:lang`, il hérite généralement de la langue de son [élément parent](/fr/docs/Web/API/Node/parentElement), ou de l'hôte ({{DOMxRef("ShadowRoot/host", "host")}}) si le nœud parent est une racine d'ombre ({{DOMxRef("ShadowRoot")}}). Si aucun ancêtre ne définit de langue, la langue peut également être définit par [`<meta http-equiv="content-language">`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv#content-language) ou l'en-tête HTTP {{HTTPHeader("Content-Language")}}. Si aucune langue de contenu unique ne peut être déterminée à partir de ces indices, la valeur par défaut est la chaîne de caractères vide (avec _inconnue_ comme langue de contenu).
 
 ## Problèmes d'accessibilité
 
@@ -140,19 +146,15 @@ Par exemple, le menu de langue sur ce site (MDN) inclut un attribut **`lang`** p
     </li>
     <li>
       <a
-        href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang"
+        href="/fr/docs/Web/HTML/Reference/Global_attributes/lang"
         rel="nofollow"
         id="translations-add">
-        Add a translation
+        Ajouter une traduction
       </a>
     </li>
   </ul>
 </div>
 ```
-
-## Héritage
-
-Si un élément n'a pas d'attribut `lang`, il héritera de la valeur `lang` définie sur son [nœud parent](/fr/docs/Glossary/Node/DOM), qui peut à son tour l'hériter de son parent, et ainsi de suite.
 
 ## Spécifications
 

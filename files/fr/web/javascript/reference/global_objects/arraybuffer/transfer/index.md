@@ -3,7 +3,7 @@ title: "ArrayBuffer : méthode transfer()"
 short-title: transfer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer
 l10n:
-  sourceCommit: 16f462ee43bbd7fd39561a480e3e323d1c542966
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`transfer()`** des instances de {{JSxRef("ArrayBuffer")}} crée un nouveau tableau de mémoire tampon (<i lang="en">array buffer</i> en anglais) contenant les mêmes octets que ce tableau, puis détache ce tableau.
@@ -36,11 +36,11 @@ Un nouvel objet {{JSxRef("ArrayBuffer")}}. Son contenu est initialisé avec le c
 
 ## Description
 
-La méthode `transfer()` effectue la même opération que l'[algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Elle copie les octets de ce `ArrayBuffer` dans un nouveau `ArrayBuffer`, puis détache ce `ArrayBuffer`. Voir [transfert des ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transfert_des_arraybuffer) pour plus d'informations.
+La méthode `transfer()` effectue la même opération que [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Elle copie les octets de ce `ArrayBuffer` dans un nouveau `ArrayBuffer`, puis détache ce `ArrayBuffer`. Voir [transfert des ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transfert_des_arraybuffer) pour plus d'informations.
 
 `transfer()` préserve la capacité de redimensionnement de ce `ArrayBuffer`. Si vous souhaitez que le nouveau `ArrayBuffer` ne soit pas redimensionnable, utilisez plutôt {{JSxRef("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}}. Il n'existe aucun moyen de transférer un buffer qui rend un `ArrayBuffer` à longueur fixe redimensionnable.
 
-`transfer()` est très efficace car les implémentations peuvent réaliser cette méthode comme un déplacement sans copie ou un `realloc` — il n'est pas nécessaire de copier effectivement les données.
+`transfer()` est très efficace, car les implémentations peuvent réaliser cette méthode comme un déplacement sans copie ou un `realloc` — il n'est pas nécessaire de copier effectivement les données.
 
 ## Exemples
 
@@ -115,8 +115,8 @@ buffer3.transfer(20); // RangeError: Invalid array buffer length
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `ArrayBuffer.prototype.transfer` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `ArrayBuffer.prototype.transfer` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfer)
 - L'objet natif {{JSxRef("ArrayBuffer")}}
 - La propriété {{JSxRef("ArrayBuffer.prototype.detached")}}
 - La méthode {{JSxRef("ArrayBuffer.prototype.transferToFixedLength()")}}
-- [Prothèse d'émulation de `ArrayBuffer.prototype.transfer` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
-- [Prothèse d'émulation es-shims de `ArrayBuffer.prototype.transfer` <sup>(angl.)</sup>](https://www.npmjs.com/package/arraybuffer.prototype.transfer)

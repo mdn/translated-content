@@ -3,7 +3,7 @@ title: AbortController
 slug: Web/API/AbortController
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController`** 인터페이스는 하나 이상의 웹 요청을 취소할 수 있게 해준다.
 

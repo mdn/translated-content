@@ -1,8 +1,9 @@
 ---
-title: font-kerning
+title: "`font-kerning` プロパティ (CSS)"
+short-title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
@@ -24,7 +25,7 @@ font-kerning: none;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+    "We took Tracy to see 'THE WATERFALL' in W. Virginia."
   </div>
 </section>
 ```
@@ -58,8 +59,10 @@ font-kerning: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかで指定します。
+
 - `auto`
-  - : このキーワードは、カーニングを使用するかをブラウザーに任せます。フォントサイズが小さい場合はカーニングが不自然になることがあるため、ブラウザーは無効化するでしょう。これは既定値です。
+  - : このキーワードは、カーニングを使用するかをブラウザーに任せます。フォントサイズが小さい場合はカーニングが不自然になることがあるため、ブラウザーは無効化するでしょう。これはデフォルト値です。
 - `normal`
   - : このキーワードは、カーニングを適用するよう要求します。
 - `none`

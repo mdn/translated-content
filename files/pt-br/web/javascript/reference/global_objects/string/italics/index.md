@@ -3,7 +3,7 @@ title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 O método `italics()` cria um elemento HTML [`<i>`](/pt-BR/docs/Web/HTML/Reference/Elements/i) que faz com que uma string fique em itálico.
 

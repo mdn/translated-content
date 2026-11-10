@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`segment()`** は {{jsxref("Intl.Segmenter")}} インスタンスンのメソッドで、この `Intl.Segmenter` オブジェクトのロケールおよび粒度に従って文字列を分割します。
+**`segment()`** は {{jsxref("Intl.Segmenter")}} インスタンスのメソッドで、この `Intl.Segmenter` オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
 {{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.segment()")}}
 

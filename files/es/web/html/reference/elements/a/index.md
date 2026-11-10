@@ -1,14 +1,16 @@
 ---
-title: "<a>: El elemento ancla"
+title: "`<a>`: elemento de ancla HTML"
+short-title: <a>
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
+l10n:
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{HTMLSidebar}}
+El elemento **`<a>`** de [HTML](/es/docs/Web/HTML) (o elemento _ancla_), junto con [su atributo `href`](#href), crea un hipervínculo a páginas web, archivos, direcciones de correo electrónico, ubicaciones dentro de la misma página o cualquier otra cosa que una URL pueda direccionar.
 
-El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.
+El contenido dentro de cada `<a>` _debe_ indicar el destino del enlace. Si el atributo `href` está presente, presionar la tecla Enter con el elemento `<a>` enfocado lo activará.
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>You can reach Michael at:</p>
@@ -26,171 +28,335 @@ li {
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Categorías de contenido</th>
-      <td>
-        Contenido de flujo, contenido de párrafo, contenido interactivo,
-        contenido palpable
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenido permitido</th>
-      <td>
-        <a
-          href="/es/docs/Web/HTML/Guides/Content_categories#Transparent_content_model"
-          title="HTML/Content_categories#Transparent_content_model"
-          >Transparente, que contiene contenido de flujo (excluyendo contenido
-          interactivo) o contenido de párrafo.</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omisión de etiquetas</th>
-      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
-    </tr>
-    <tr>
-      <th scope="row">Elementos principales permitidos</th>
-      <td>
-        Cualquier elemento que acepte contenido de párrafo o cualquier elemento
-        que acepte contenido de flujo, sin embargo simpre excluyendo los
-        elementos &#x3C;a> (de acuerdo con el principio lógico de simetría, si
-        una etiqueta &#x3C;a> como padre, no puede contener contenido
-        interactivo, entonces el mismo contenido de &#x3C;a> no puede tener una
-        etiqueta &#x3C;a> como su padre).
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Roles ARIA permitidos</th>
-      <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Interfaz DOM</th>
-      <td>{{domxref("HTMLAnchorElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
+
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
+  - : Especifica que quieres que el navegador envíe una cabecera {{httpheader("Attribution-Reporting-Eligible")}}. En el lado del servidor, esto se usa para activar el envío de una cabecera {{httpheader("Attribution-Reporting-Register-Source")}} en la respuesta, con el fin de registrar una [fuente de atribución basada en navegación](/es/docs/Web/API/Attribution_Reporting_API/Registering_sources).
+
+    El navegador almacena los datos de la fuente asociados a la fuente de atribución basada en la navegación (tal como se proporcionan en la cabecera de respuesta {{httpheader("Attribution-Reporting-Register-Source")}}) cuando el usuario hace clic en el enlace. Consulta la [Attribution Reporting API](/es/docs/Web/API/Attribution_Reporting_API) para más detalles.
+
+    Existen dos versiones de este atributo que puedes establecer:
+    - Booleana, es decir, solo el nombre `attributionsrc`. Esto especifica que quieres que la cabecera {{httpheader("Attribution-Reporting-Eligible")}} se envíe al mismo servidor al que apunta el atributo `href`. Esto es adecuado cuando gestionas el registro de la fuente de atribución en el mismo servidor.
+    - Un valor que contiene una o más URL, por ejemplo:
+
+      ```html
+      attributionsrc="https://a.example/register-source
+      https://b.example/register-source"
+      ```
+
+      Esto es útil cuando el recurso solicitado no está en un servidor que controlas, o simplemente quieres gestionar el registro de la fuente de atribución en un servidor distinto. En este caso, puedes especificar una o más URL como valor de `attributionsrc`. Cuando ocurre la solicitud del recurso, la cabecera {{httpheader("Attribution-Reporting-Eligible")}} se enviará a las URL especificadas en `attributionsrc`, además de al origen del recurso. Estas URL pueden entonces responder con la cabecera {{httpheader("Attribution-Reporting-Register-Source")}} para completar el registro.
+
+      > [!NOTE]
+      > Especificar varias URL permite registrar múltiples fuentes de atribución para una misma funcionalidad. Por ejemplo, podrías tener distintas campañas cuyo éxito quieras medir, lo que implica generar diferentes informes con distintos datos.
+
+    Los elementos `<a>` no se pueden usar como disparadores de atribución, solo como fuentes.
 
 - `download`
-  - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
+  - : Hace que el navegador trate la URL enlazada como una descarga. Se puede usar con o sin un valor `filename`:
+    - Sin un valor, el navegador sugerirá un nombre de archivo o extensión, generado a partir de varias fuentes:
+      - La cabecera HTTP {{HTTPHeader("Content-Disposition")}}
+      - El último segmento en la [ruta](/es/docs/Web/API/URL/pathname) de la URL
+      - El {{Glossary("MIME_type", "tipo de medio")}} (a partir de la cabecera {{HTTPHeader("Content-Type")}}, el inicio de una [`data:` URL](/es/docs/Web/URI/Reference/Schemes/data), o {{domxref("Blob.type")}} para una [`blob:` URL](/es/docs/Web/URI/Reference/Schemes/blob))
+
+    - `filename`: definir un valor lo sugiere como nombre de archivo. Los caracteres `/` y `\` se convierten en guiones bajos (`_`). Es posible que los sistemas de archivos no permitan otros caracteres en los nombres de archivo, por lo que los navegadores ajustarán el nombre sugerido si es necesario.
 
     > [!NOTE]
     >
-    > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Defenses/Same-origin_policy).
-    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Reference/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
-    > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Reference/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
-    > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
+    > - `download` solo funciona para [URL del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy), o con los esquemas `blob:` y `data:`.
+    > - La forma en que los navegadores gestionan las descargas varía según el navegador, la configuración del usuario y otros factores. Es posible que se pida confirmación al usuario antes de iniciar una descarga, que el archivo se guarde automáticamente, o que se abra automáticamente, ya sea en una aplicación externa o en el propio navegador.
+    > - Si la cabecera `Content-Disposition` tiene información distinta a la del atributo `download`, el comportamiento resultante puede variar:
+    >   - Si la cabecera especifica un `filename`, este tiene prioridad sobre el nombre de archivo especificado en el atributo `download`.
+    >   - Si la cabecera especifica una disposición `inline`, Chrome y Firefox priorizan el atributo y lo tratan como una descarga. Las versiones antiguas de Firefox (anteriores a la 82) priorizan la cabecera y muestran el contenido en línea.
 
 - `href`
-  - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
-    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Reference/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
-    Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
+  - : La URL a la que apunta el hipervínculo. Los enlaces no se limitan a las URL basadas en HTTP: pueden usar cualquier esquema de URL compatible con los navegadores:
+    - Números de teléfono con URLs `tel:`
+    - Direcciones de correo electrónico con URLs `mailto:`
+    - Mensajes de texto SMS con URLs `sms:`
+    - Código ejecutable con [URLs `javascript:`](/es/docs/Web/URI/Reference/Schemes/javascript)
+    - Aunque es posible que los navegadores web no admitan otros esquemas de URL, los sitios web pueden hacerlo mediante [`registerProtocolHandler()`](/es/docs/Web/API/Navigator/registerProtocolHandler)
 
-    > [!NOTE]
-    > Puede ser utilizado `href="#top"` o un fragmento vacío `href="#"` para enlazar a la parte superior de la página actual. [Este comportamiento está especficado en HTML5](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid).
+    Además, otras características de las URL permiten ubicar partes específicas del recurso, incluyendo:
+    - Secciones de una página mediante fragmentos de documento
+    - Porciones de texto específicas mediante [fragmentos de texto](/es/docs/Web/URI/Reference/Fragment/Text_fragments)
+    - Fragmentos de archivos multimedia mediante fragmentos de medios
 
 - `hreflang`
-  - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
-- `referrerpolicy` {{experimental_inline}}
-  - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Reference/Headers/Referer) enviar cuado la URL es recuperada:
-    - `'no-referrer'` significa `Referer:` el encabezado no será enviado.
-    - `'no-referrer-when-downgrade'` significa sin `Referer:` el encabezado será enviado cuando se navega a un origen (`origin`) sin HTTPS. Este es un comportamiento por defecto.
-    - `'origin'` significa que el "referrer" estará en el [origen](/es/docs/Glossary/Origin) (`origin`) de la página, no incluye la información posterior al dominio.
-    - `'origin-when-cross-origin'` significa que la navegación a otros orígenes (_origins_) será limitada al esquema (_scheme_), el host y el puerto, mientras que la navegación en el mismo origen (origin) incuirá la trayectoria de referencia (_referrer's path_).
-    - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
+  - : Indica el idioma humano de la URL enlazada. No tiene funcionalidad integrada. Los valores permitidos son los mismos que los del [atributo global `lang`](/es/docs/Web/HTML/Reference/Global_attributes/lang).
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
+  - : Define el elemento `<a>` como un **invocador de interés** (interest invoker). Su valor es el `id` del elemento objetivo, que se verá afectado de alguna manera (normalmente mostrándose u ocultándose) cuando se muestre o se pierda el interés en el elemento invocador (por ejemplo, al pasar o quitar el cursor, o al enfocarlo o desenfocarlo). Consulta [Uso de invocadores de interés](/es/docs/Web/API/Popover_API/Using_interest_invokers) para más detalles y ejemplos.
+- `ping`
+  - : Una lista de URLs separadas por espacios. Cuando se sigue el enlace, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` a las URLs. Normalmente se usa para seguimiento (tracking).
+- `referrerpolicy`
+  - : Cuánta información del [referrer](/es/docs/Web/HTTP/Reference/Headers/Referer) enviar al seguir el enlace.
+    - `no-referrer`: La cabecera {{HTTPHeader("Referer")}} no se enviará.
+    - `no-referrer-when-downgrade`: La cabecera {{HTTPHeader("Referer")}} no se enviará a {{Glossary("origin", "orígenes")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`: El referrer enviado se limitará al origen de la página que hace referencia: su [esquema](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}} y {{Glossary("port", "puerto")}}.
+    - `origin-when-cross-origin`: El referrer enviado a otros orígenes se limitará al esquema, el host y el puerto. La navegación dentro del mismo origen seguirá incluyendo la ruta.
+    - `same-origin`: Se enviará un referrer para el {{Glossary("Same-origin policy", "mismo origen")}}, pero las solicitudes de origen cruzado no contendrán información de referrer.
+    - `strict-origin`: Solo se envía el origen del documento como referrer cuando el nivel de seguridad del protocolo se mantiene igual (HTTPS→HTTPS), pero no se envía a un destino menos seguro (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (predeterminado): Se envía una URL completa al hacer una solicitud del mismo origen, solo se envía el origen cuando el nivel de seguridad del protocolo se mantiene igual (HTTPS→HTTPS), y no se envía ninguna cabecera a un destino menos seguro (HTTPS→HTTP).
+    - `unsafe-url`: El referrer incluirá el origen _y_ la ruta (pero no el [fragmento](/es/docs/Web/API/HTMLAnchorElement/hash), la [contraseña](/es/docs/Web/API/HTMLAnchorElement/password) ni el [nombre de usuario](/es/docs/Web/API/HTMLAnchorElement/username)). **Este valor no es seguro**, ya que filtra orígenes y rutas desde recursos protegidos por TLS hacia orígenes inseguros.
 
-- `rel`
-  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Reference/Attributes/rel).
+- [`rel`](/es/docs/Web/HTML/Reference/Attributes/rel)
+  - : La relación de la URL enlazada, expresada como tipos de enlace separados por espacios.
 - `target`
-  - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
-    - `_self`: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.
-    - `_blank`: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.
-    - `_parent`: Carga la URL en el contexto de navegación padre (_parent_) del actual. Si no existe el padre, este se comporta del mismo modo que `_self`.
-    - `_top`: Carga la URL en el contexto más alto de navegación (el cual es un ancestro del actual, y no tiene padre (_parent_)). Si no hay padre (_parent_), este se comporta del mismo modo que `_self`.
+  - : Dónde mostrar la URL enlazada, especificado mediante el nombre de un _contexto de navegación_ (una pestaña, ventana o {{HTMLElement("iframe")}}). Las siguientes palabras clave tienen significados especiales sobre dónde cargar la URL:
+    - `_self`: El contexto de navegación actual. (Predeterminado)
+    - `_blank`: Normalmente una pestaña nueva, pero los usuarios pueden configurar los navegadores para que abran una ventana nueva en su lugar.
+    - `_parent`: El contexto de navegación padre del actual. Si no hay padre, se comporta como `_self`.
+    - `_top`: El contexto de navegación de nivel superior. Concretamente, esto significa el contexto "más alto" que es ancestro del actual. Si no hay ancestros, se comporta como `_self`.
+    - `_unfencedTop`: Permite que los [fenced frames](/es/docs/Web/API/Fenced_frame_API) incrustados naveguen en el marco de nivel superior (es decir, ir más allá de la raíz del fenced frame, a diferencia de los demás destinos reservados). Ten en cuenta que la navegación seguirá funcionando si esto se usa fuera del contexto de un fenced frame, pero no se comportará como una palabra clave reservada.
 
     > [!NOTE]
-    > Cuando se utiliza `target`, considera agregar `rel="noopener noreferrer"` para evitar el uso de la API `window.opener`.
+    > Establecer `target="_blank"` en elementos `<a>` proporciona implícitamente el mismo comportamiento que establecer [`rel="noopener"`](/es/docs/Web/HTML/Reference/Attributes/rel/noopener), que no establece `window.opener`.
 
 - `type`
-  - : Especifica el tipo de medio (_media type_) en la forma de {{Glossary("MIME type")}} para la URL enlazada. Esto es únicamente informativo, sin ninguna funcionalidad incorporada.
+  - : Indica el formato de la URL enlazada mediante un {{Glossary("MIME type", "tipo MIME")}}. No tiene funcionalidad incorporada.
 
 ### Atributos obsoletos
 
 - `charset` {{Deprecated_Inline}}
-  - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/Character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
+  - : Indicaba la {{Glossary("character encoding", "codificación de caracteres")}} de la URL enlazada.
 
     > [!NOTE]
-    > Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Reference/Headers/Content-Type) en la URL enlazada.
+    > Este atributo está obsoleto y **no deberían usarlo los autores**. En su lugar, usa la cabecera HTTP {{HTTPHeader("Content-Type")}} en la URL enlazada.
 
 - `coords` {{Deprecated_Inline}}
-  - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
+  - : Se usaba con [el atributo `shape`](#shape). Una lista de coordenadas separadas por comas.
 - `name` {{Deprecated_Inline}}
-  - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
+  - : Era necesario para definir una posible ubicación de destino en una página. En HTML 4.01, `id` y `name` podían usarse ambos en `<a>`, siempre que tuvieran valores idénticos.
 
     > [!NOTE]
-    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/Web/HTML/Reference/Global_attributes#attr-id) en su lugar.
+    > Usa el atributo global [`id`](/es/docs/Web/HTML/Reference/Global_attributes/id) en su lugar.
 
 - `rev` {{Deprecated_Inline}}
-  - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
+  - : Especificaba un enlace inverso; lo opuesto a [el atributo `rel`](#rel). Quedó obsoleto por resultar muy confuso.
 - `shape` {{Deprecated_Inline}}
-  - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
+  - : La forma de la región del enlace en un mapa de imagen.
 
     > [!NOTE]
-    > Utilice el [atributo `usemap`](/es/docs/Web/HTML/Reference/Elements/img#attr-usemap) para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (_hotspots_) en lugar del atributo `shape`.
+    > Usa el elemento {{HTMLElement("area")}} para los mapas de imagen en su lugar.
 
-## Ejemplos
+## Accesibilidad
 
-### Enlazando a una ubicación externa
+### Texto de enlace descriptivo
 
-```html
-<!-- anclaje a un archivo externo -->
-<a href="https://www.mozilla.com/">Enlace externo</a>
+**El contenido de un enlace debería indicar hacia dónde conduce**, incluso fuera de contexto.
+
+#### Texto de enlace débil e inaccesible
+
+Un error lamentablemente común es enlazar únicamente las palabras "haz clic aquí" o "aquí":
+
+```html example-bad
+<p>
+  Obtén más información sobre nuestros productos <a href="/products">aquí</a>.
+</p>
 ```
 
-#### Resultado
+##### Resultado
 
-[Enlace externo](https://www.mozilla.com/)
+{{EmbedLiveSample('Texto de enlace débil e inaccesible', '100%', '50')}}
 
-### Enlazando a otra sección de la misma página
+#### Texto de enlace descriptivo y accesible
 
-```html
-<!-- enlace a un elemento en esta página con id="attr-href" -->
-<a href="#attr-href">Descripción de enlaces de la misma página</a>
+Por suerte, esto tiene una solución fácil, ¡y de hecho es más corta que la versión inaccesible!
+
+```html example-good
+<p>Obtén más información <a href="/products">sobre nuestros productos</a>.</p>
 ```
 
-#### Resultado
+##### Resultado
 
-[Descripción de enlaces de la misma página](#attr-href)
+{{EmbedLiveSample('Texto de enlace descriptivo y accesible', '100%', '50')}}
 
-### Creando una imagen clicable
+El software de asistencia cuenta con atajos para listar todos los enlaces de una página. Sin embargo, un texto de enlace descriptivo beneficia a todos los usuarios: el atajo de "listar todos los enlaces" emula la forma en que las personas videntes recorren rápidamente las páginas.
 
-Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La página de inicio se abrirá en un contexto de navegación nuevo, esto es, en una nueva página o nueva ventana.
+### Eventos onclick
+
+Los elementos de ancla suelen usarse incorrectamente como botones falsos, estableciendo su `href` a `#` o a [`javascript:void(0)`](/es/docs/Web/URI/Reference/Schemes/javascript) para evitar que la página se recargue, y luego detectando sus eventos `click`.
+
+Estos valores de `href` ficticios provocan un comportamiento inesperado al copiar o arrastrar enlaces, al abrirlos en una pestaña o ventana nueva, al guardarlos como marcadores, o cuando JavaScript se está cargando, falla o está deshabilitado. Además, transmiten semántica incorrecta a las tecnologías de asistencia, como los lectores de pantalla.
+
+Usa un {{HTMLElement("button")}} en su lugar. En general, **solo deberías usar un hipervínculo para navegar a una URL real**.
+
+### Enlaces externos y enlaces a recursos que no son HTML
+
+Los enlaces que se abren en una pestaña o ventana nueva mediante `target="_blank"`, o los enlaces que apuntan a un archivo de descarga, deben indicar qué ocurrirá al seguir el enlace.
+
+Las personas con baja visión, quienes navegan con la ayuda de tecnología de lectura de pantalla, o quienes tienen dificultades cognitivas, pueden confundirse si se abre inesperadamente una nueva pestaña, ventana o aplicación. Algunos lectores de pantalla antiguos incluso podrían no anunciar este comportamiento.
+
+#### Enlace que abre una nueva pestaña o ventana
 
 ```html
-<a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png" alt="MDN logo" />
+<a target="_blank" href="https://www.wikipedia.org">
+  Wikipedia (se abre en una pestaña nueva)
 </a>
 ```
 
-#### Resulta
+##### Resultado
 
-{{EmbedLiveSample("Creating_a_clickable_image", "320", "64")}}
+{{EmbedLiveSample('Enlace que abre una nueva pestaña o ventana')}}
 
-### Creando un enlace de correo
+#### Enlace a un recurso que no es HTML
 
-Es común crear enlaces que abren el programa de correo del usuario para permitir enviar un nuevo mensaje. Esto se hace con un enlace `mailto:`. Aquí tenemos un ejemplo:
+Si se utiliza un icono para indicar el comportamiento del enlace, asegúrate de que tenga un [atributo `alt`](/es/docs/Web/HTML/Reference/Elements/img#alt) que describa su propósito. En caso de que falte el icono, el contenido del atributo `alt` seguirá comunicando el comportamiento del enlace.
+
+```html
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(Se abre en una pestaña nueva)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    Informe anual 2017
+    <img src="powerpoint.svg" width="14" alt="(Archivo de PowerPoint)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img
+      src="missing-icon.svg"
+      width="14"
+      alt="(Se abre en una pestaña nueva)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    Informe anual 2017
+    <img src="missing-icon.svg" width="14" alt="(Archivo de PowerPoint)" />
+  </a>
+</p>
+```
+
+##### Resultado
+
+{{EmbedLiveSample('Enlace a un recurso que no es HTML')}}
+
+- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
+- [MDN / Comprendiendo las WCAG, Pauta 3.2](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
+### Enlaces de salto
+
+Un **enlace de salto** (skip link) es un enlace situado lo más al principio posible del contenido de {{HTMLElement("body")}}, que apunta al inicio del contenido principal de la página. Por lo general, CSS oculta el enlace de salto fuera de la pantalla hasta que recibe el foco.
+
+```html
+<body>
+  <a href="#content" class="skip-link">Saltar al contenido principal</a>
+
+  <header>…</header>
+
+  <!-- El enlace de salto dirige a este punto -->
+  <main id="content"></main>
+</body>
+```
+
+```css
+.skip-link {
+  position: absolute;
+  top: -3em;
+  background: white;
+}
+.skip-link:focus {
+  top: 0;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample('Enlaces de salto')}}
+
+Los enlaces de salto permiten a los usuarios que navegan mediante teclado omitir contenido que se repite en varias páginas, como la navegación de la cabecera.
+
+Los enlaces de salto son especialmente útiles para las personas que navegan con ayuda de tecnología de asistencia como switch control, comandos de voz o punteros de cabeza o boca, ya que desplazarse por enlaces repetitivos puede resultar una tarea tediosa.
+
+- [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+- [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
+- [MDN / Comprendiendo las WCAG, explicaciones de la Pauta 2.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+- [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+
+### Tamaño y proximidad
+
+#### Tamaño
+
+Los elementos interactivos, como los enlaces, deben ofrecer un área lo suficientemente grande para que sea fácil activarlos. Esto ayuda a una gran variedad de personas, incluyendo a quienes tienen problemas de control motor y a quienes usan dispositivos de entrada imprecisos, como una pantalla táctil. Se recomienda un tamaño mínimo de 44×44 [píxeles CSS](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels).
+
+Los enlaces de solo texto dentro de un párrafo están exentos de este requisito, pero sigue siendo una buena idea asegurarte de que el texto vinculado tenga la extensión suficiente para facilitar su activación.
+
+- [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets](https://www.a11yproject.com/posts/large-touch-targets/)
+
+#### Proximidad
+
+Los elementos interactivos, como los enlaces, situados muy cerca visualmente entre sí deben contar con espacio de separación. El espaciado ayuda a las personas con problemas de control motor, quienes de otro modo podrían activar accidentalmente el contenido interactivo equivocado.
+
+El espaciado puede definirse mediante propiedades CSS como {{CSSxRef("margin")}}.
+
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+
+## Ejemplos
+
+### Enlazar a una URL absoluta
+
+#### HTML
+
+```html
+<a href="https://www.mozilla.com">Mozilla</a>
+```
+
+#### Resultado
+
+{{EmbedLiveSample('Enlazar_a_una_URL_absoluta')}}
+
+### Enlazar a URLs relativas
+
+#### HTML
+
+```html
+<a href="//example.com">URL relativa al esquema</a>
+<a href="/es/docs/Web/HTML">URL relativa al origen</a>
+<a href="p">URL relativa al directorio</a>
+<a href="./p">URL relativa al directorio</a>
+<a href="../p">URL relativa al directorio padre</a>
+```
+
+```css hidden
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample('Enlazar_a_URLs_relativas')}}
+
+### Enlazar a un elemento en la misma página
+
+```html
+<!-- El elemento <a> enlaza a la sección de abajo -->
+<p><a href="#Sección_más_abajo">Ir al encabezado de más abajo</a></p>
+
+<!-- Encabezado al que se enlaza -->
+<h2 id="Sección_más_abajo">Sección más abajo</h2>
+```
+
+#### Resultado
+
+{{EmbedLiveSample('Enlazar a un elemento en la misma página')}}
+
+> [!NOTE]
+> Puedes usar `href="#top"` o el fragmento vacío (`href="#"`) para enlazar a la parte superior de la página actual, [tal como se define en la especificación HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+
+### Enlazar a una dirección de correo electrónico
+
+Para crear enlaces que se abran en el programa de correo del usuario y le permitan enviar un mensaje nuevo, usa el esquema `mailto:`:
 
 ```html
 <a href="mailto:nowhere@mozilla.org">Enviar correo a nowhere</a>
@@ -198,49 +364,197 @@ Es común crear enlaces que abren el programa de correo del usuario para permiti
 
 #### Resultado
 
-[Envia un correo a: nowhere](mailto:nowhere@mozilla.org)
+{{EmbedLiveSample('Enlazar a una dirección de correo electrónico')}}
 
-Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) o {{RFC(6068)}}.
+Para más detalles sobre las URL `mailto:`, como incluir un asunto o un cuerpo, consulta [Enlaces de correo](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#enlace_a_correo_electrónico) o {{RFC(6068)}}.
 
-### Creando un enlace a un número de teléfono
-
-Ofrecer enlaces a números de teléfono es muy útil para los ususarios que observan documentos de internet desde computadoras portátiles conectadas a teléfonos o desde teléfonos celulares (móviles)
+### Enlazar a números de teléfono
 
 ```html
-<a href="tel:+491570156">+49 157 0156</a>
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
 ```
 
-Para detalles adicionales acerca del esquema de la URL `tel`, consultar {{RFC(2806)}} y {{RFC(2396)}}.
+#### Resultado
 
-### Utilizando el atributo `download` para guardar un `<canvas>` como PNG
+{{EmbedLiveSample('Enlazar a números de teléfono')}}
 
-Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo `download` y la información canvas como un archivo URL:
+El comportamiento de los enlaces `tel:` varía según las capacidades del dispositivo:
+
+- Los dispositivos celulares marcan el número automáticamente.
+- La mayoría de los sistemas operativos tienen programas que pueden realizar llamadas, como Skype o FaceTime.
+- Los sitios web pueden realizar llamadas telefónicas con {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, como `web.skype.com`.
+- Otros comportamientos incluyen guardar el número en los contactos, o enviarlo a otro dispositivo.
+
+Consulta {{RFC(3966)}} para conocer la sintaxis, características adicionales y otros detalles sobre el esquema de URL `tel:`.
+
+### Usar el atributo download para guardar un \<canvas> como PNG
+
+Para guardar el contenido de un elemento {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace cuyo `href` sean los datos del canvas como una URL `data:` creada con JavaScript, y el atributo `download` especifique el nombre de archivo para el PNG descargado:
+
+#### Ejemplo de aplicación de dibujo con enlace de guardado
+
+##### HTML
+
+```html
+<p>
+  Pinta manteniendo presionado el botón del mouse y moviéndolo.
+  <a href="" download="mi_pintura.png">Descargar mi pintura</a>
+</p>
+
+<canvas width="300" height="300"></canvas>
+```
+
+##### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+canvas {
+  background: white;
+  border: 1px dashed;
+}
+a {
+  display: inline-block;
+  background: #6699cc;
+  color: white;
+  padding: 5px 10px;
+}
+```
+
+##### JavaScript
 
 ```js
-var link = document.createElement("a");
-link.innerHTML = "download image";
+const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
+let isDrawing;
 
-link.addEventListener(
-  "click",
-  function (ev) {
-    link.href = canvas.toDataURL();
-    link.download = "mypainting.png";
-  },
-  false,
+function draw(x, y) {
+  if (isDrawing) {
+    c.beginPath();
+    c.arc(x, y, 10, 0, Math.PI * 2);
+    c.closePath();
+    c.fill();
+  }
+}
+
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
 );
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.body.appendChild(link);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
-Puedes ver como funciona en: [jsfiddle.net/codepo8/V6ufG/2/](https://jsfiddle.net/codepo8/V6ufG/2/).
+##### Resultado
 
-## Notas
+{{EmbedLiveSample('Ejemplo de aplicación de dibujo con enlace de guardado', '100%', '400')}}
 
-HTML 3.2 define sólo los atributos `name`, `href`, `rel`, `rev`, y `title`.
+## Seguridad y privacidad
 
-### Recomendaciones de accesibilidad
+Los elementos `<a>` pueden tener consecuencias para la seguridad y la privacidad de los usuarios. Consulta [Cabecera `Referer`: consideraciones de privacidad y seguridad](/es/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) para más información.
 
-Se abusa frecuntemente de las etiquetas de ancla (_anchor tags_) con el uso de los eventos `onclick` para crear pseudo-botones ajustando **href** a `"#"` o `"javascript:void(0)"` para prevenir la recarga de la página. Estos valores provocan comportamientos inesperados con los enlaces de copiado/dibujado, la apertura de enlaces en nuevas pestañas/ventanas, el guardado de enlaces (_bookmarking_), y cuando JavaScript está aún descargando, esto arroja errores, o es deshabilitado. Esto tambíen lleva a semánticas (_semantics_) incorrectas para tecnologías de asistencia (p.ej., lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, sólo se debe utilizar una ancla (_anchor_) para navegación utilizando una URL adecuada.
+Usar `target="_blank"` sin [`rel="noreferrer"`](/es/docs/Web/HTML/Reference/Attributes/rel/noreferrer) ni [`rel="noopener"`](/es/docs/Web/HTML/Reference/Attributes/rel/noopener) hace que el sitio web sea vulnerable a ataques de explotación de la API {{domxref("window.opener")}}, aunque cabe destacar que, en las versiones más recientes de los navegadores, establecer `target="_blank"` proporciona implícitamente la misma protección que establecer `rel="noopener"`. Consulta [compatibilidad con navegadores](#compatibilidad_con_navegadores) para más detalles.
+
+## Resumen técnico
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_flujo"
+          >Contenido de flujo</a
+        >,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_frase"
+          >contenido de frase</a
+        >,
+        <a
+          href="/es/docs/Web/HTML/Guides/Content_categories#contenido_interactivo"
+          >contenido interactivo</a
+        >, contenido palpable.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        <a
+          href="/es/docs/Web/HTML/Guides/Content_categories#modelo_de_contenido_transparente"
+          >Transparente</a
+        >, excepto que ningún descendiente puede ser
+        <a
+          href="/es/docs/Web/HTML/Guides/Content_categories#contenido_interactivo"
+          >contenido interactivo</a
+        > ni un elemento
+        <code>&lt;a&gt;</code>, y ningún descendiente puede tener un
+        atributo
+        <a
+          href="/es/docs/Web/HTML/Reference/Global_attributes/tabindex"
+          >tabindex</a
+        > especificado.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiquetas</th>
+      <td>Ninguna, tanto la etiqueta de apertura como la de cierre son obligatorias.</td>
+    </tr>
+    <tr>
+      <th scope="row">Elementos padres permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_flujo"
+          >contenido de flujo</a
+        >, pero no otros elementos <code>&lt;a&gt;</code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rol ARIA implícito</th>
+      <td>
+        <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> cuando el atributo <code>href</code> está
+        presente; en caso contrario,
+        <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>
+        <p>Cuando el atributo <code>href</code> está presente:</p>
+        <ul>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
+        </ul>
+        <p>Cuando el atributo <code>href</code> no está presente:</p>
+        <ul>
+          <li>cualquiera</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz DOM</th>
+      <td>{{DOMxRef("HTMLAnchorElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Especificaciones
 
@@ -252,4 +566,8 @@ Se abusa frecuntemente de las etiquetas de ancla (_anchor tags_) con el uso de l
 
 ## Véase también
 
-- Otros elementos comunicando a nivel semántico de texto [(text-level semantics)](/es/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- {{HTMLElement("link")}} es similar a `<a>`, pero se usa para hipervínculos de metadatos que son invisibles para los usuarios.
+- {{CSSxRef(":link")}} es una pseudoclase CSS que coincide con elementos `<a>` cuya URL en el atributo `href` aún no ha sido visitada por el usuario.
+- {{CSSxRef(":visited")}} es una pseudoclase CSS que coincide con elementos `<a>` cuya URL en el atributo `href` ya fue visitada por el usuario en el pasado.
+- {{CSSxRef(":any-link")}} es una pseudoclase CSS que coincide con elementos `<a>` que tienen el atributo `href`.
+- Los [fragmentos de texto](/es/docs/Web/URI/Reference/Fragment/Text_fragments) son instrucciones para el agente de usuario, añadidas a las URL, que permiten a los autores de contenido enlazar a un texto específico de una página sin necesidad de ID.

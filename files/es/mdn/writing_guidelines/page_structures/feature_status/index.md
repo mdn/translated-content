@@ -2,7 +2,7 @@
 title: Estado de una característica
 slug: MDN/Writing_guidelines/Page_structures/Feature_status
 l10n:
-  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 El estado de una característica indica, en términos generales, el estado de implementación y estandarización entre navegadores de una característica particular de la plataforma web, como un método de API web o una propiedad CSS.
@@ -15,14 +15,14 @@ Es uno de los siguientes:
 
 > [!WARNING]
 > No actualices manualmente los estados de las características en el repositorio `mdn/content`.
-> La documentación se [actualiza automáticamente](#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características) a partir de la información del repositorio `mdn/browser-compat-data` en GitHub.
+> La documentación se [actualiza automáticamente](#cómo_se_agregan_o_actualizan_los_estados_de_las_características) a partir de la información del repositorio `mdn/browser-compat-data` en GitHub.
 
-Si no se aplica ninguno de los estados anteriores, la característica se considera _estable y estándar_.
+Si no se aplica ninguno de los estados anteriores, la característica se considera una característica _estable y estándar_.
 Para más información sobre estos términos, consulta la página ["Experimental, obsoleta y en desuso"](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
 
 Para obtener información sobre cómo se determina el estado de una característica, consulta la sección [choosing status properties](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#choosing-status-properties) en el repositorio `@mdn/browser-compat-data` (BCD).
 
-## ¿Cómo se agregan o actualizan los estados de las características?
+## Cómo se agregan o actualizan los estados de las características
 
 Los estados de todas las características documentadas en MDN se rastrean en su repositorio adjunto [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD). Una automatización _actualiza automáticamente_ los estados en el repositorio `mdn/content` cada vez que se publica una nueva [versión de BCD](https://github.com/mdn/browser-compat-data/releases).
 
@@ -52,10 +52,10 @@ browser-compat: api.feature
 
 ### Banners de estado en las páginas
 
-Las siguientes macros se utilizan para renderizar los banners de estado en los encabezados de las páginas:
+> [!WARNING]
+> Ya no es necesario usar la macro `\{{Deprecated_Header}}` para generar un banner de **Estado obsoleto**. La plataforma ahora genera el banner automáticamente usando la propiedad `status` del front matter (ver [iconos de estado en las barras laterales](#iconos_de_estado_en_las_barras_laterales)) o los datos de [web-features](https://github.com/web-platform-dx/web-features).
 
-- `\{{Deprecated_Header}}`
-  - : Para el estado `deprecated`. Genera un banner de **Estado obsoleto**:
+Las siguientes macros se utilizan para renderizar los banners de estado en los encabezados de las páginas:
 
 - `\{{SeeCompatTable}}`
   - : Para el estado `experimental`. Genera un banner de **Estado experimental**:

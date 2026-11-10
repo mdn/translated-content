@@ -1,12 +1,10 @@
 ---
-title: HTML `<frameset>` フレームセット要素
+title: "`<frameset>` フレームセット要素"
 short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
-
-{{Deprecated_header}}
 
 **`<frameset>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("frame")}} 要素を保持するために使用します。
 

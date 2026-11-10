@@ -3,7 +3,7 @@ title: "Iterator : méthode take()"
 short-title: take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`take()`** des instances de {{JSxRef("Iterator")}} retourne un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator#objets_daide_à_litérateur) qui produit le nombre donné d'éléments dans cet itérateur, puis se termine.
@@ -26,7 +26,7 @@ Un nouvel [objet d'aide à l'itérateur](/fr/docs/Web/JavaScript/Reference/Globa
 ### Exceptions
 
 - {{JSxRef("RangeError")}}
-  - : Levée si `limit` devient {{JSxRef("NaN")}} ou négatif lorsqu'il est [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+  - : Levée si `limit` devient {{JSxRef("NaN")}} ou négatif lorsqu'il est [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier).
 
 ## Exemples
 
@@ -68,7 +68,7 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-Comme `fibonacci()` est un itérateur infini, utiliser une boucle `for` pour l'itérer sans aucune logique pour sortir tôt (comme une instruction {{JSxRef("Statements/break", "break")}}) entraînerait une boucle infinie.
+Comme `fibonacci()` est un itérateur infini, utiliser une boucle `for` pour l'itérer sans aucune logique pour sortir tôt (comme une instruction {{JSxRef("Statements/break", "break")}}) entraîne une boucle infinie.
 
 ### Combiner `drop()` avec `take()`
 
@@ -128,7 +128,7 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.take` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.take` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.take` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.take` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode {{JSxRef("Iterator.prototype.drop()")}}

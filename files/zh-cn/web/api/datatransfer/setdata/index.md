@@ -21,7 +21,7 @@ setData(format, data)
 ### 参数
 
 - `format`
-  - : 表示要添加到 {{domxref("DataTransfer"}} 的拖动数据的类型。
+  - : 表示要添加到 {{domxref("DataTransfer")}} 的拖动数据的类型。
 - `data`
   - : 表示要添加到 {{domxref("DataTransfer")}} 的数据。
 

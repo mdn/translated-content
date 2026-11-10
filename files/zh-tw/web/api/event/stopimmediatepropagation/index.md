@@ -9,8 +9,8 @@ slug: Web/API/Event/stopImmediatePropagation
 
 ## 語法
 
-```plain
-event.stopImmediatePropagation();
+```js-nolint
+stopImmediatePropagation();
 ```
 
 ## 備註

@@ -3,7 +3,7 @@ title: "Element : méthode requestFullscreen()"
 short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 l10n:
-  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
+  sourceCommit: 3957d6261191fdf1252362e7d2092b5d59daca89
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -207,7 +207,7 @@ kbd {
 }
 ```
 
-{{EmbedLiveSample("Demander le mode plein écran", , 400, "", "", "", "fullscreen")}}
+{{EmbedLiveSample("Demander le mode plein écran",, 400,,,, "fullscreen")}}
 
 ### Utiliser le verrouillage du clavier
 
@@ -290,7 +290,7 @@ kbd {
 Sélectionnez le cadre et appuyez sur <kbd>Shift+F</kbd>.
 Lorsque la page s'affiche en plein écran, notez la notification temporaire en haut de la page qui explique comment quitter le mode plein écran.
 
-{{EmbedLiveSample("Utiliser le verrouillage du clavier", , 400, "", "", "", "fullscreen")}}
+{{EmbedLiveSample("Utiliser le verrouillage du clavier",, 400,,,, "fullscreen")}}
 
 ### Utiliser `navigationUI`
 

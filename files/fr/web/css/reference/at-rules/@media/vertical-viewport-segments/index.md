@@ -6,19 +6,19 @@ l10n:
   sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre définit de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).
 
-En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions réactives adaptées aux appareils multi-vues&nbsp;: des appareils dont l'écran est divisé en segments de zone d'affichage logiquement séparés, comme les appareils pliables ou à charnière.
+En lien avec [l'API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions réactives adaptées aux appareils multi-vues&nbsp;: des appareils dont l'écran est divisé en segments de zone d'affichage logiquement séparés, comme les appareils pliables ou à charnière.
 
 ## Syntaxe
 
 La caractéristique `vertical-viewport-segments` s'exprime comme une valeur {{CSSxRef("integer", "entier")}} supérieure ou égale à `1`, représentant le nombre de segments verticaux de la zone d'affichage de l'appareil.
 
-- La valeur sera `1` pour&nbsp;:
+- La valeur est `1` pour&nbsp;:
   - Un appareil non pliable (par exemple, un smartphone ou une tablette à écran unique standard).
   - Un appareil pliable qui est soit déplié, soit fermé (en [posture d'appareil `continuous`](/fr/docs/Web/API/Device_Posture_API#continuous)).
   - Un appareil à deux écrans à charnière ou un appareil pliable actuellement plié et orienté horizontalement, de sorte que les segments soient côte à côte.
-- La valeur sera `2` pour un appareil à deux écrans à charnière ou un appareil pliable actuellement plié (en [posture d'appareil `folded`](/fr/docs/Web/API/Device_Posture_API#folded)) et orienté verticalement, de sorte que les segments soient l'un au-dessus de l'autre.
+- La valeur est `2` pour un appareil à deux écrans à charnière ou un appareil pliable actuellement plié (en [posture d'appareil `folded`](/fr/docs/Web/API/Device_Posture_API#folded)) et orienté verticalement, de sorte que les segments soient l'un au-dessus de l'autre.
 - La valeur peut être supérieure à `2` pour les appareils pliables comportant plus d'un pli.
 
 ## Exemples
@@ -32,21 +32,21 @@ On définit la hauteur du conteneur supérieur égale à la hauteur du segment s
 Pour calculer la hauteur occupée par le pli entre les deux, on soustrait la position du bas du conteneur supérieur à la position du haut du conteneur inférieur (`calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));`).
 
 ```css
-.wrapper {
+.enveloppe {
   height: 100%;
   display: flex;
 }
 
 @media (vertical-viewport-segments: 2) {
-  .wrapper {
+  .enveloppe {
     flex-direction: column;
   }
 
-  .list-view {
+  .vue-liste {
     height: env(viewport-segment-height 0 0);
   }
 
-  .fold {
+  .pli {
     width: 100%;
     height: calc(
       env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0)
@@ -54,7 +54,7 @@ Pour calculer la hauteur occupée par le pli entre les deux, on soustrait la pos
     background-color: black;
   }
 
-  .detail-view {
+  .vue-detail {
     height: env(viewport-segment-height 0 1);
   }
 }
@@ -73,5 +73,5 @@ Consultez notre [démo de l'API Viewport Segments <sup>(angl.)</sup>](https://md
 ## Voir aussi
 
 - La caractéristique média {{CSSxRef("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
-- L'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
+- [L'API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API)
 - [Expérimentation origin pour les API Foldable <sup>(angl.)</sup>](https://developer.chrome.com/blog/foldable-apis-ot) sur developer.chrome.com
