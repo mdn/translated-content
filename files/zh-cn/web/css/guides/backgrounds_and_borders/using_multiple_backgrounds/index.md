@@ -57,7 +57,6 @@ l10n:
 
 与下面的情况等价：
 
-
 ```css
 .element {
   background-position:
