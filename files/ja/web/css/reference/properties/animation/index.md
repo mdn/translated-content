@@ -3,10 +3,10 @@ title: "`animation` プロパティ"
 short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
-  sourceCommit: 84058a6d6c891f39718617e98db2a6db1387096b
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
-**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、スタイル間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
+**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、スタイル間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}} の一括指定です。
 
 {{InteractiveExample("CSS デモ: animation")}}
 
@@ -66,17 +66,30 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timeline")}}
 
+### リセットのみのサブプロパティ
+
+このプロパティは、以下の CSS プロパティを初期値にリセットします。
+
+- {{cssxref("animation-range-end")}}
+- {{cssxref("animation-range-start")}}
+- {{cssxref("animation-delay-end")}}
+- {{cssxref("animation-composition")}}
+- {{cssxref("animation-trigger")}}
+
 ## 構文
 
 ```css
-/* @keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name */
+/* 再生時間 | イージング関数 | 遅延 |
+反復回数 | 方向 | 塗りつぶしモード | 再生状態 | 名前 */
 animation: 3s ease-in 1s 2 reverse both paused slide-in;
 
-/* @keyframes duration | easing-function | delay | name */
+/* 再生時間 | イージング関数 | 遅延 | 名前 */
 animation: 3s linear 1s slide-in;
 
-/* 2 つのアニメーション */
+/* 再生時間 | 名前 */
+animation: 3s slide-in;
+
+/* 複数のアニメーション */
 animation:
   3s linear slide-in,
   3s ease-out 5s slide-out;
@@ -89,7 +102,7 @@ animation:
 - `<keyframes-name>` または `none`
   - : 要素に適用するアニメーションを指定する {{cssxref("@keyframes")}} アットルールの名前です。{{cssxref("animation-name")}} の初期値は `none` です。
 - `<animation-duration>`
-  - : アニメーションが1サイクル分を完了するまでの時間を指定します。値は、{{cssxref("animation-duration")}} で利用できる値のいずれかでなければなりません。初期値は `0s` です。
+  - : アニメーションが 1 サイクルを完了するまでの時間を指定します。値は、{{cssxref("animation-duration")}} で利用できる値のいずれかでなければなりません。初期値は `0s` です。
 - `<easing-function>`
   - : 推移の種類を決定します。値は {{cssxref("animation-timing-function")}} で利用できる値のいずれかでなければなりません。初期値は `ease` です。
 - `<animation-delay>`
@@ -99,35 +112,38 @@ animation:
 - `<single-animation-iteration-count>`
   - : アニメーションが実行される回数です。{{cssxref("animation-iteration-count")}} で利用できる値のいずれかでなければなりません。{{cssxref("animation-iteration-count")}} の初期値は `1` です。
 - `<single-animation-fill-mode>`
-  - : アニメーションの実行の前後にどのようにスタイルが適用されるかを定めます。 {{cssxref("animation-fill-mode")}} で利用できる値のいずれかでなければなりません。
+  - : アニメーションの実行前と実行後に、対象のスタイルをどのように適用するかを定めます。{{cssxref("animation-fill-mode")}} で利用できる値のいずれかでなければなりません。初期値は `none` です。
 - `<single-animation-play-state>`
-  - : アニメーションが実行中かどうかを定めます。 {{cssxref("animation-play-state")}} で利用できる値のいずれかでなければなりません。{{cssxref("animation-play-state")}} の初期値は `running` です。
+  - : アニメーションが再生中かどうかを定めます。{{cssxref("animation-play-state")}} で利用できる値のいずれかでなければなりません。初期値は `running` です。
 - `<single-animation-timeline>`
   - : アニメーションの進行を制御するために使用するタイムラインを指定します。この値は、{{cssxref("animation-timeline")}} で利用できる値のいずれかでなければなりません。初期値は `auto` です。
 
 ## 解説
 
-`animation` プロパティは、カンマで区切られた 1 つ以上の単一のアニメーションとして指定されます。カンマ区切りのアニメーションリストに含まれるそれぞれの `animation` は、{{cssxref("animation-name")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-timing-function")}}、{{cssxref("animation-delay")}}、 {{cssxref("animation-iteration-count")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}} を設定します。いずれかの要素が `animation` 宣言に含まれていない場合、その要素の値は初期値に設定されます。
+`animation` プロパティは、カンマで区切られた 1 つ以上の単一のアニメーションとして指定されます。カンマ区切りのアニメーションリストに含まれるそれぞれの `animation` は、{{cssxref("animation-name")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-timing-function")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}} を設定します。いずれかの要素が `animation` 宣言に含まれていない場合、その要素の値は初期値に設定されます。
+
+> [!NOTE]
+> `animation` 一括指定プロパティは、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}}、{{cssxref("animation-trigger")}} プロパティを、それぞれ初期値の `normal`、`normal`、`none` にリセットします。これらのリセットのみのサブプロパティは `animation` 一括指定では設定できず、これらを含めると宣言全体が無効になります。`animation` 宣言はこれらのプロパティを初期値に設定するため、`animation` 一括指定の後に宣言するか、より高い[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)で宣言する必要があります。
 
 ### animation-name
 
 それぞれのアニメーションの `<animation-name>` 成分は、アニメーションの名前であり、`none`、{{cssxref("&lt;custom-ident&gt;")}}、{{cssxref("&lt;string&gt;")}} のいずれかになります。`animation-name` の初期値は `none` です。つまり、`animation` 一括指定プロパティで `animation-name` の値が宣言されていない場合、どのプロパティに対してもアニメーションは適用されません。
 
-アニメーション定義内のその他の値の順序は、{{cssxref("animation-name")}} の値を他の値から区別する上で重要です。`animation` 一括指定内にある値が、`animation-name` 以外のアニメーションプロパティの値として解釈される場合、その値は `animation-name` ではなく、そのプロパティにまず適用されます。このため、`animation` 一括指定を使用する際は、`animation-name` の値を値リストの最後に指定することを推奨します。これは、`animation` 一括指定を使用してカンマ区切りで複数のアニメーションを指定する場合でも同様です。
+アニメーション定義内のその他の値の順序は、{{cssxref("animation-name")}} の値を他の値から区別する上で重要です。`animation` 一括指定内にある値が、`animation-name` 以外のアニメーションプロパティの値として解釈される場合、その値は `animation-name` ではなく、そのプロパティに先に適用されます。このため、`animation` 一括指定を使用する際は、`animation-name` の値を値リストの最後に指定することを推奨します。これは、`animation` 一括指定を使用してカンマ区切りで複数のアニメーションを指定する場合でも同様です。
 
 ### 時間値
 
 アニメーションごとに、{{cssxref("&lt;time&gt;")}} の値を 0 回、1 回、または 2 回含めることができます。それぞれのアニメーション定義内での時間値の順序は重要です。{{cssxref("&lt;time&gt;")}} として構文解析可能な 1 つ目の値は {{cssxref("animation-duration")}} に、2 つ目となる値は {{cssxref("animation-delay")}} に代入されます。
 
-`animation-duration` 値が `animation` 一括指定プロパティにおいて除外された場合、このプロパティの値は `0s` が既定値となります。この場合、アニメーションは発生しますが（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントは発行されますが）、アニメーションは表示されません。
+`animation` 一括指定プロパティで `animation-duration` の値を指定しない場合、デフォルトで `0s` になります。この場合もアニメーションイベント（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event)）は発生しますが、アニメーションはユーザーに表示されません。
 
 ### animation-timeline
 
 `<animation-timeline>` が `animation` 一括指定に含まれていない場合、その一括指定の宣言によって、以前に宣言された `animation-timeline` の値はすべて `auto` にリセットされます。これにより、タイムラインはデフォルトの {{domxref("documentTimeline")}} に設定されます。
 
-`<animation-timeline>` の値が含まれているものの、ユーザーエージェントが一括指定内の `<animation-timeline>` の値に対応していない場合、`animation` 宣言全体が無効とみなされ、無視されます。このため、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する場合、 `animation` 一括指定の後で `animation-timeline` プロパティを宣言しなければ効果を得ることはできません。
+`<animation-timeline>` の値を含めていても、ユーザーエージェントが一括指定内の `<animation-timeline>` の値に対応していない場合、`animation` 宣言全体が無効になり、無視されます。そのため、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する場合は、効果が得られるように、`animation` 一括指定の後で `animation-timeline` プロパティを宣言する必要があります。
 
-あるいは、`<animation-timeline>` を `animation` 一括指定内で設定するものを CSS の {{cssxref("@supports")}} ブロック内で宣言することも可能です。例えば、次のようにします。
+また、CSS の {{cssxref("@supports")}} ブロック内で、`animation` 一括指定に `<animation-timeline>` を設定することもできます。例えば、次のようにします。
 
 ```css
 @supports (animation: view()) {
@@ -141,9 +157,9 @@ animation:
 
 ## アクセシビリティ
 
-点滅を伴うアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持つ人々に問題を起こす可能性があります。加えて、特定の種類の動きが、前庭障害、てんかん、片頭痛、視覚的刺激への過敏性などの引き金になることもあります。
+点滅を伴うアニメーションは、注意欠陥・多動性障害 (ADHD) などの認知上の課題を抱える人々にとって問題となる場合があります。加えて、特定の種類の動きが、前庭障害、てんかん、片頭痛、視覚的刺激への過敏性などの引き金になることもあります。
 
-アニメーションを停止したり無効にしたりする仕組みを、できれば[動きを縮小するメディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)を使用して、アニメーションを削減した操作の設定を表明したユーザーの希望を叶えるように作成することができます。
+アニメーションを停止または無効にする方法を用意することを検討してください。また、[動きを縮小するメディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)を使って、アニメーションの少ない表示を希望するユーザーに配慮することも検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) via A List Apart (2015)
 - [An Introduction to the Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/) via CSS-Tricks (2017)
@@ -166,7 +182,7 @@ animation:
 
 ### 基本的な使い方: 日の出
 
-この例では、`animation` 一括指定の使い方として、水色の空を横切る黄色い太陽のアニメーションを例に挙げます。太陽はビューポートの中央まで昇り、その後、画面から消えていきます。
+この例では、`animation` 一括指定の基本的な使い方として、水色の空を横切る黄色い太陽をアニメーションさせます。太陽はビューポートの中央まで昇り、その後、視界から消えていきます。
 
 #### HTML
 
