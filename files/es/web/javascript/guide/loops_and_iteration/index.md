@@ -221,7 +221,7 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log("Bucles externos: ", x);
+  console.log("Bucles externos:", x);
   x += 1;
   z = 1;
   while (true) {
