@@ -2,7 +2,7 @@
 title: Macros de enlace
 slug: MDN/Writing_guidelines/Page_structures/Links
 l10n:
-  sourceCommit: abc914f085fb9913c41c4cd4453da432e9d4e761
+  sourceCommit: c37d4a5c0a0e464242d54ee7378d8adb2c9c5a4f
 ---
 
 MDN ofrece numerosas macros para crear enlaces siempre actualizados a su contenido. En esta guía, aprenderás sobre las macros de referencia cruzada de MDN, las cuales puedes usar para incluir un único enlace a otra página o una lista de enlaces a todas las subpáginas de un documento.
@@ -75,7 +75,7 @@ Por ejemplo:
 - `\{{CSSxRef("pow")}}` enlaza a la página de la función en `Web/CSS/Reference/Values/pow`.
 - `\{{CSSxRef("<color>")}}` enlaza a la página del tipo de dato en `Web/CSS/Reference/Values/color_value`.
 
-Al igual que la macro `HTMLElement`, la macro `CSSxRef` añade el estilo adecuado al texto del enlace según el tipo de característica. Así, `\{{CSSxRef("acos")}}` añade corchetes angulares al texto del enlace resultante, como en {{CSSxRef("acos")}}.
+Al igual que la macro `HTMLElement`, la macro `CSSxRef` añade el estilo adecuado al texto del enlace según el tipo de característica. Así, `\{{CSSxRef("acos")}}` añade paréntesis al texto del enlace resultante, como en {{CSSxRef("acos")}}.
 
 Otros comportamientos de la macro `CSSxRef` que vale la pena mencionar incluyen:
 
