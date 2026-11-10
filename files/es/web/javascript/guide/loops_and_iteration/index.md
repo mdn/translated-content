@@ -322,7 +322,7 @@ function dumpProps(obj, objName) {
 
 Para un objeto `car` con propiedades `make` y `model`, `result` sería:
 
-```
+```plain
 car.make = Ford
 car.model = Mustang
 ```
