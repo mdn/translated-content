@@ -184,7 +184,7 @@ label:
   instrucción
 ```
 
-El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `declaración` que identifica a una etiqueta puede ser cualquier enunciado. Para ejemplos de uso de declaraciones etiquetadas, mira los ejemplos de `break` y `continue` más abajo.
+El valor de `label` puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La `instrucción` que identificas con una etiqueta puede ser cualquier instrucción. Para ejemplos de uso de declaraciones etiquetadas, mira los ejemplos de `break` y `continue` más abajo.
 
 ## Declaración `break`
 
