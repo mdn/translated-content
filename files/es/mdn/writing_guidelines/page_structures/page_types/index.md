@@ -324,7 +324,7 @@ Si la propiedad está disponible de forma estática en una clase o un espacio de
 
 ### Página de propiedad de acceso de instancia de JavaScript
 
-Una **página de propiedad de acceso de instancia de JavaScript** ofrece información sobre una propiedad de acceso de una instancia de una clase de JavaScript. Una propiedad de acceso consta de un getter y, a veces, de un setter, y casi siempre se define en el prototipo de la instancia. La especificación usa la sintaxis `get Constructor.prototype.propertyName` para definir una propiedad de acceso. Casi todas las propiedades de acceso de instancia no heredadas del núcleo del lenguaje JavaScript solo tienen getter, lo que las hace de solo lectura.
+Una **página de propiedad de acceso de instancia de JavaScript** ofrece información sobre una propiedad de acceso de una instancia de una clase de JavaScript. Una propiedad de acceso consta de un getter y, a veces, de un setter, y casi siempre se define en el prototipo de la instancia. La especificación usa la sintaxis `get Constructor.prototype.propertyName` para definir una propiedad de acceso. Casi todas las propiedades de acceso de instancia modernas del núcleo del lenguaje JavaScript solo tienen getter, lo que las hace de solo lectura.
 
 Si la propiedad tiene como valor una función, usa en su lugar la plantilla de [página de método de instancia de JavaScript](#página_de_método_de_instancia_de_javascript).
 
@@ -355,7 +355,7 @@ Si la propiedad tiene como valor una función, usa en su lugar la plantilla de [
 
 ### Página de método de instancia de JavaScript
 
-Una **página de método de instancia de JavaScript** ofrece información sobre un método de una instancia de una clase de JavaScript. Un método es una propiedad de la instancia cuyo valor es una función. En general, un método es una propiedad de datos definida en el prototipo de la instancia, pero hay algunas excepciones heredadas, como [`Intl.DateTimeFormat.prototype.format()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), que es una propiedad de acceso que devuelve una función enlazada. Para que a quien lee le resulten familiares, las tratamos como métodos normales.
+Una **página de método de instancia de JavaScript** ofrece información sobre un método de una instancia de una clase de JavaScript. Un método es una propiedad de la instancia cuyo valor es una función. En general, un método es una propiedad de datos definida en el prototipo de la instancia, pero hay algunas excepciones antiguas, como [`Intl.DateTimeFormat.prototype.format()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), que es una propiedad de acceso que devuelve una función enlazada. Para que a quien lee le resulten familiares, las tratamos como métodos normales.
 
 #### Ejemplos
 
