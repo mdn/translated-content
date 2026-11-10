@@ -22,4 +22,3 @@ slug: Web/HTTP/Reference/Status/500
 - [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 - [HTTP Error 500 on WordPress](https://kinsta.com/blog/500-internal-server-error/)
 - [500 server error](https://www.exai.com/blog/http-error-500-wordpress)
-- [500 server error on Joomla](https://www.joomla-monster.com/documentation/joomla-tutorials/500-internal-server-error-on-joomla-website)
