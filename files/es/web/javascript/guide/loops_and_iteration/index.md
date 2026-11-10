@@ -195,7 +195,7 @@ Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un buc
 
 La sintaxis de la instrucción `break` se ve así:
 
-```js
+```js-nolint
 break;
 break label;
 ```
