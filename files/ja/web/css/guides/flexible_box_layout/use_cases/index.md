@@ -3,7 +3,7 @@ title: フレックスボックスの典型的な用途
 short-title: 典型的な用途
 slug: Web/CSS/Guides/Flexible_box_layout/Use_cases
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 このガイドでは、フレックスボックスの一般的な使用用途（フレックスボックスが他のレイアウト方法よりも有意義である場合）について見ていきます。
@@ -112,7 +112,7 @@ nav li {
 
 主軸（横軸）でアイテムを整列するもうひとつの方法は、マージンを auto にすることです。これにより、一方のアイテム群を左揃えにして別のアイテム群を右揃えにする、というナビゲーションバーのデザインパターンが可能になります。下記の例では、 [auto マージンを使用した主軸上での配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#auto_マージンを使用した主軸上での配置)に書かれている、マージンを auto にする技法を使っています。
 
-アイテムは、フレックスボックスの初期動作である `normal` であり、これが `start` として動作します。 [`gap`](/ja/docs/Web/CSS/Reference/Properties/gap) プロパティを使用してアイテム間にすき間を作成しています。そして、 `margin-left` を `auto` にすることで、最後のアイテムを右に配置しています。このクラスをあるアイテムから別のアイテムに移動させることで、分割される位置を変更することができます。
+アイテムは、フレックスボックスの初期動作である `normal` で配置され、これは `start` として動作します。{{cssxref("gap")}} プロパティはアイテム間に隙間を作ります。また、`margin-left` の値を `auto` にして、最後のアイテムを右側に配置しています。クラスをあるアイテムから別のアイテムに移動すると、分割位置を変更できます。
 
 ```html-nolint live-sample___split-navigation
 <nav>
@@ -370,16 +370,14 @@ img {
 
 フレックスボックスはフォームコントロールのスタイル指定に関しては特に便利です。フォームにはいくつもの小さな要素があり、それらを互いに整列したいと考えるはずです。よくあるパターンは {{htmlelement("label")}} と {{htmlelement("input")}} の組みと、さらに {{htmlelement("button")}} との組み合わせで、おそらく検索フォームやメールマガジンの登録フォームなどの、来訪者がメールアドレスを入力する局面などで使用されます。
 
-フレックスボックスならばこのようなレイアウトを簡単に実現できます。 `<label>`、`<input>`、`<button>` を、 `display: flex` が設定されたラッパーに入れます。 `<input>` フィールドを引き伸ばすために flex プロパティを使いますが、ボタントラベルは引き伸ばしません。テキスト入力フィールドは、利用できる空間に応じて伸縮します。
+フレックスボックスなら、わずかな宣言でこのようなレイアウトを実現できます。`<label>`、`<input>`、`<button>` を、`display: flex` が設定されたラッパーに入れます。flex プロパティを使うと、`<input>` フィールドは伸びますが、ボタンとラベルは伸びません。テキスト入力フィールドは、利用できる空間に応じて伸縮します。
 
 ```html live-sample___label-input-button
-<form class="example">
-  <div class="wrapper">
-    <label for="text">ラベル</label>
-    <input id="text" type="text" />
-    <input type="submit" value="送る" />
-  </div>
-</form>
+<div class="wrapper">
+  <label for="text">ラベル</label>
+  <input id="text" type="text" />
+  <button type="button">送信</button>
+</div>
 ```
 
 ```css live-sample___label-input-button
@@ -401,7 +399,7 @@ img {
   border-right: 1px solid rgb(96 139 168);
   flex: 1 1 auto;
 }
-.wrapper input[type="submit"] {
+.wrapper button {
   background-color: rgb(96 139 168);
   color: white;
 }
@@ -412,7 +410,7 @@ img {
 
 {{EmbedLiveSample("label-input-button")}}
 
-このようなパターンのおかげで、デザインに合わせたフォーム要素のライブラリーを簡単に作れます。要素の追加にも簡単に対応できます。伸縮するアイテムとしないアイテムを組み合わせる用途では、フレックスボックスの柔軟性の恩恵を存分に受けることができるのです。
+このようなパターンを使うと、デザインに合わせたフォーム要素のライブラリーを作りやすくなり、要素の追加にも簡単に対応できます。伸縮するアイテムとしないアイテムを組み合わせることで、フレックスボックスの柔軟性を活用できます。
 
 ## まとめ
 
