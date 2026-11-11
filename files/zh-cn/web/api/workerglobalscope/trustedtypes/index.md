@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers("worker")}}
 
-{{domxref("WorkerGlobalScope")}} 接口的 **`trustedTypes`** 只读属性返回与全局对象关联的 {{domxref("TrustedTypePolicyFactory")}} 对象，同时该对象为使用{{domxref("Trusted Types API", "", "#可信类型 API", "nocode")}} 提供了入口点。
+{{domxref("WorkerGlobalScope")}} 接口的 **`trustedTypes`** 只读属性返回与全局对象关联的 {{domxref("TrustedTypePolicyFactory")}} 对象，同时该对象为使用{{domxref("Trusted Types API", "可信类型 API", "", "nocode")}} 提供了入口点。
 
 ## 值
 
