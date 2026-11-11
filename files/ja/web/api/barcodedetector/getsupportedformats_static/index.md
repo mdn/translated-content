@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-{{domxref("BarcodeDetector")}} インターフェイスの静的メソッド **`getSupportedFormats()`** は、サポートされているバーコード形式の種類の {{jsxref('Array')}} を返す {{jsxref('Promise')}} を返します。
+{{domxref("BarcodeDetector")}} インターフェイスの静的メソッド **`getSupportedFormats()`** は、サポートされているバーコード形式の種類の {{jsxref('Array')}} で履行される {{jsxref('Promise')}} を返します。
 
 ## 構文
 
