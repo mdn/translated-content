@@ -297,7 +297,7 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `VALIDATE_STATUS`                  | 0x8B83 | 调用 `validateProgram` 后传给 `getProgramParameter`，确定其是否有效。发现错误则返回 false。                                        |
 | `ATTACHED_SHADERS`                 | 0x8B85 | 调用 `attachShader` 后传给 `getProgramParameter`，确定着色器是否正确附加。发生错误则返回 false。                                   |
 | `ACTIVE_ATTRIBUTES`                | 0x8B89 | 传给 `getProgramParameter`，获取程序中活动的属性数量。                                                                             |
-| `ACTIVE_UNIFORMS`                  | 0x8B86 | 传给 `getProgramParameter`，获取程序中活动的统一变量数量。                                                                         |
+| `ACTIVE_UNIFORMS`                  | 0x8B86 | 传给 `getProgramParameter`，获取程序中活动的一致变量数量。                                                                         |
 | `MAX_VERTEX_ATTRIBS`               | 0x8869 | 顶点属性列表中可能的最大条目数。                                                                                                   |
 | `MAX_VERTEX_UNIFORM_VECTORS`       | 0x8DFB |                                                                                                                                    |
 | `MAX_VARYING_VECTORS`              | 0x8DFC |                                                                                                                                    |
@@ -371,7 +371,7 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `CLAMP_TO_EDGE`               | 0x812F          |                      |
 | `MIRRORED_REPEAT`             | 0x8370          |                      |
 
-### 统一变量类型
+### 一致变量类型
 
 | 常量名         | 值     | 描述 |
 | -------------- | ------ | ---- |
@@ -724,7 +724,7 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER`  | 0x8CD4 |      |
 | `FRAMEBUFFER_INCOMPLETE_MULTISAMPLE`    | 0x8D56 |      |
 
-### 统一变量
+### 一致变量
 
 | 常量名                                        | 值     | 描述 |
 | --------------------------------------------- | ------ | ---- |
@@ -882,7 +882,7 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 | 常量名           | 值     | 描述                  |
 | ---------------- | ------ | --------------------- |
-| `HALF_FLOAT_OES` | 0x8D61 | 半浮点类型（16 位）。 |
+| `HALF_FLOAT_OES` | 0x8D61 | 半精度浮点类型（16 位）。 |
 
 更多信息，请参见 {{domxref("OES_texture_half_float")}}。
 
@@ -910,8 +910,8 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 | 常量名                                      | 值     | 描述                                                |
 | ------------------------------------------- | ------ | --------------------------------------------------- |
-| `SRGB_EXT`                                  | 0x8C40 | 未指定尺寸的 sRGB 格式，精度由驱动决定。            |
-| `SRGB_ALPHA_EXT`                            | 0x8C42 | 未指定尺寸的 sRGB 格式，带未指定尺寸的 alpha 分量。 |
+| `SRGB_EXT`                                  | 0x8C40 | 未指定位数的 sRGB 格式，精度由驱动决定。            |
+| `SRGB_ALPHA_EXT`                            | 0x8C42 | 未指定位数的 sRGB 格式，带未指定位数的 alpha 分量。 |
 | `SRGB8_ALPHA8_EXT`                          | 0x8C43 | 指定尺寸（8 位）的 sRGB 和 alpha 格式。             |
 | `FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT` | 0x8210 | 返回帧缓冲区的颜色编码。                            |
 
