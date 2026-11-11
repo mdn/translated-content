@@ -1,5 +1,5 @@
 ---
-title: "HTMLScriptElement：type 属性"
+title: HTMLScriptElement：type 属性
 short-title: type
 slug: Web/API/HTMLScriptElement/type
 l10n:
