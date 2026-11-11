@@ -1,8 +1,9 @@
 ---
-title: view-transition-name
+title: "`view-transition-name` プロパティ"
+short-title: view-transition-name
 slug: Web/CSS/Reference/Properties/view-transition-name
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`view-transition-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素が参加する [ビュー遷移](/ja/docs/Web/API/View_Transition_API)のスナップショットを指定します。これにより、ビュー遷移中にデフォルトのクロスフェードアニメーションを使用することができるページの他の部分とは別に、それらの要素をアニメーションさせることができます。これにより、これらの要素に対して独自のアニメーションスタイルを定義することができます。
@@ -448,7 +449,7 @@ checkboxElem.addEventListener("change", () => {
 
 同時に、デフォルトでチェックされているチェックボックスがあり、これにより `view-transition-name: match-element` が適用されます。チェックボックスのチェックを外し、もう一度見出しをクリックすると、`view-transition-name: match-element` がない場合のビュー遷移がどのように動作するかを確認できます。
 
-{{EmbedLiveSample("using_the-match-element_value", "", "400")}}
+{{EmbedLiveSample("using_the_match-element_value", "", "400")}}
 
 ## 仕様書
 
