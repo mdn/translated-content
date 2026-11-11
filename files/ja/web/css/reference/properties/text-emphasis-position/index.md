@@ -1,8 +1,9 @@
 ---
-title: text-emphasis-position
+title: "`text-emphasis-position` プロパティ"
+short-title: text-emphasis-position
 slug: Web/CSS/Reference/Properties/text-emphasis-position
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Reference/Elements/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
@@ -265,7 +266,7 @@ position.addEventListener("change", updateClass);
 
 「圏点の位置」のドロップダウンを使用して、強調マークの位置を選べます。ドロップダウンで `preferred` オプションは、[解説](#解説)の節で説明したように、優先位置を使用します。
 
-{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
+{{EmbedLiveSample("adding_emphasis_mark_positions", 450, 250)}}
 
 ### ルビを圏点より優先させる場合
 

@@ -1,9 +1,9 @@
 ---
-title: "`animation-composition` プロパティ (CSS)"
+title: "`animation-composition` プロパティ"
 short-title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`animation-composition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数のアニメーションが同じプロパティに同時に影響する場合に使用する{{Glossary("composite operation", "合成演算")}}を指定します。
@@ -36,15 +36,15 @@ animation-composition: unset;
 - `replace`
   - : 効果値がプロパティの基盤値を上書きします。これがデフォルト値です。
 - `add`
-  - : 効果値は、プロパティの基盤値の上に構築されます。この演算は加算効果をもたらします。加算演算が可換でない種類のアニメーションの場合、オペランドの順序は、基礎値の後に効果値が続きます。
+  - : 効果値は、プロパティの基盤値の上に構築されます。この演算は加算効果をもたらします。加算演算が可換でない種類のアニメーションの場合、オペランドの順序は、基盤値の後に効果値が続きます。
 - `accumulate`
-  - : 効果値と基礎値は結合されます。加算処理が可換でない種類のアニメーションでは、オペランドの順序は基礎値の後に効果値が続きます。
+  - : 効果値と基盤値は結合されます。加算処理が可換でない種類のアニメーションでは、オペランドの順序は基盤値の後に効果値が続きます。
 
 ## 解説
 
-[@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) アットルールが対象とする各プロパティは、効果スタックに関連付けられています。効果スタックの値は、 CSS スタイルルールのプロパティの基礎値 (_underlying value_) と、キーフレームのプロパティの効果値 (_effect value_) を組み合わせて計算されます。 `animation-composition` プロパティは、基礎値と効果値の合成方法を指定するのに役立ちます。
+[@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) アットルールが対象とする各プロパティは、効果スタックに関連付けられています。効果スタックの値は、 CSS スタイルルールのプロパティの基盤値 (_underlying value_) と、キーフレームのプロパティの効果値 (_effect value_) を組み合わせて計算されます。 `animation-composition` プロパティは、基盤値と効果値の合成方法を指定するのに役立ちます。
 
-例えば、下記の CSS の場合、 `blur(5px)` が基盤値で、 `blur(10px)` が効果値です。 `animation-composition` プロパティは、基礎値と効果値の効果を合成した後、最終的な効果値を生成する処理を指定します。
+例えば、下記の CSS の場合、 `blur(5px)` が基盤値で、 `blur(10px)` が効果値です。 `animation-composition` プロパティは、基盤値と効果値の効果を合成した後、最終的な効果値を生成する処理を指定します。
 
 ```css
 .icon:hover {
@@ -74,7 +74,7 @@ animation-composition: unset;
 
 ### 複数の値
 
-複数の値をカンマ区切りで `animation-*` プロパティに指定すると、{{cssxref("animation-name")}}が出現した順にアニメーションに適用されます。アニメーションと合成の数が異なる場合、`animation-composition` プロパティに列挙されている値は、最初の `animation-name` から最後の `animation-name` まで循環し、すべてのアニメーションに `animation-composition` 値が割り当てるまで繰り返されます。より詳しい情報は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定)を参照してください。
+複数の値をカンマ区切りで `animation-*` プロパティに指定すると、{{cssxref("animation-name")}} が出現した順にアニメーションに適用されます。アニメーションと合成値の数が異なる場合、`animation-composition` プロパティに列挙された値は、最初の `animation-name` から最後の `animation-name` まで循環します。すべてのアニメーションに `animation-composition` の値が割り当てられるまで、この繰り返しが続きます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定)を参照してください。
 
 ## 公式定義
 
@@ -161,7 +161,7 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Reversing the animation direction","100%","250")}}
+{{EmbedLiveSample("understanding_the_animation-composition_values","100%","250")}}
 
 すべての場合で、`transform` プロパティの基盤となる値は `translateX(30px) rotate(45deg)` です。`animation-composition` の各値による効果は以下の通りです。
 

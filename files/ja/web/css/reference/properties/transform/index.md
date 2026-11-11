@@ -1,9 +1,9 @@
 ---
-title: "`transform` プロパティ (CSS)"
+title: "`transform` プロパティ"
 short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:
-  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
@@ -211,7 +211,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Transform_order", "400", "460")}}
+{{EmbedLiveSample("comparing_the_order_of_transform_functions", "400", "460")}}
 
 - ボックス 1（先に `translateX()`、次に `rotate()`）: 座標空間が先に X 軸に沿って `200px` 移動し、その後、その移動後の空間内で `135deg` 回転させるため、要素は元の位置より右側に、回転した状態で配置されます。
 - ボックス 2（先に `rotate()`、次に `translateX()`）: 座標系がまず `135deg` 回転させるため、要素はその後、点線で示された方向に沿って、回転した軸に沿って `200px` 移動されます。

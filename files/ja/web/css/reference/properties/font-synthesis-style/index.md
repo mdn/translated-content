@@ -1,9 +1,9 @@
 ---
-title: "`font-synthesis-style` プロパティ (CSS)"
+title: "`font-synthesis-style` プロパティ"
 short-title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`font-synthesis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに斜体書体がない場合に、ブラウザーが斜体書体を合成するかどうかを指定します。
@@ -80,7 +80,7 @@ font-synthesis-style: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Disabling synthesis of bold typeface', '', '100')}}
+{{EmbedLiveSample('disabling_synthesis_of_oblique_typeface', '', '100')}}
 
 ### font-synthesis-style 値の比較
 

@@ -1,9 +1,9 @@
 ---
-title: "`r` プロパティ (CSS)"
+title: "`r` プロパティ"
 short-title: r
 slug: Web/CSS/Reference/Properties/r
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`r`** は [CSS](/ja/docs/Web/CSS) のプロパティで、円の半径を定義します。これは SVG の {{SVGElement("circle")}} 要素でのみ使用されます。存在する場合、その円の {{SVGAttr("r")}} 属性を上書きします。
@@ -57,7 +57,7 @@ r: unset;
 </svg>
 ```
 
-CSS を使用して、最初の円のみスタイルを設定し、 2 番目の円にはデフォルトのスタイルを使用します（{{cssxref("fill")}} のデフォルト値は黒）。 `r` プロパティを使用して SVG の {{SVGAttr("r")}} 属性の値を上書きし、 `fill` と {{cssxref("stroke")}} を指定します。 SVG のデフォルトのサイズは、幅が `300px`、高さが `150px`です。
+CSS を使用して、最初の円のみスタイルを設定し、2 番目の円にはデフォルトのスタイルを使用します（{{cssxref("fill")}} のデフォルト値は黒）。`r` プロパティを使用して SVG の {{SVGAttr("r")}} 属性の値を上書きし、`fill` と {{cssxref("stroke")}} を指定します。SVG のデフォルトのサイズは、幅が `300px`、高さが `150px` です。
 
 ```css
 svg {
@@ -71,7 +71,7 @@ circle:first-of-type {
 }
 ```
 
-{{EmbedLiveSample("Defining a circle's radius", "300", "180")}}
+{{EmbedLiveSample("defining_the_radius_of_a_circle", "300", "180")}}
 
 ### ViewBox とビューポートのピクセル
 

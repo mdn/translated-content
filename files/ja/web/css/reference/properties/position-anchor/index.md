@@ -1,19 +1,22 @@
 ---
-title: position-anchor
+title: "`position-anchor` プロパティ"
+short-title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
-**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティで設定された要素）のアンカー名を指定します。
+**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素のデフォルトの**アンカー要素**を指定します。このデフォルトアンカーは、{{cssxref("position-area")}} と {{cssxref("position-try")}}、および {{cssxref("anchor()")}} と {{cssxref("anchor-size()")}} の各関数で、関数に `<anchor-name>` 引数が指定されていない場合に使用されます。
 
 ## 構文
 
 ```css
 /* 単一の値 */
+position-anchor: normal;
 position-anchor: auto;
 position-anchor: none;
 position-anchor: --anchor-name;
+position-anchor: match-parent;
 
 /* グローバル値 */
 position-anchor: inherit;
@@ -25,14 +28,20 @@ position-anchor: unset;
 
 ### 値
 
+- `normal`
+  - : {{cssxref("position-area")}} が `none` の場合は `none` として、それ以外の場合は `auto` として動作します。
+
 - `auto`
   - : 位置指定要素を、暗黙のアンカー要素（存在する場合）に関連付けます。例えば、標準外の HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性で設定されたものなどです。
 
 - `none`
-  - : 初期値（デフォルト値）。位置指定要素をアンカー要素に関連付けません。
+  - : 位置指定要素をアンカー要素に関連付けません。
 
 - {{cssxref("dashed-ident")}}
-  - : 位置指定要素を関連付けるアンカー要素の名前。アンカー要素の {{cssxref("anchor-name")}} プロパティに掲載されているもの。これは**既定のアンカー指定子**として知られています。
+  - : 位置指定要素を関連付けるアンカー要素の名前。アンカー要素の {{cssxref("anchor-name")}} プロパティに掲載されているもの。これは**デフォルトのアンカー指定子**として知られています。
+
+- `match-parent`
+  - : 親要素と同じデフォルトのアンカー要素を使用します。対象が[擬似要素](/ja/docs/Glossary/Pseudo-element)の場合は、その元となる要素と同じアンカー要素を使用します。ただし、それがアンカーとして許容される[ツリー構造準拠擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#ツリー構造準拠擬似要素)である場合に限ります。それ以外の場合、デフォルトのアンカー要素はありません。
 
 ## 解説
 
@@ -47,6 +56,8 @@ position-anchor: unset;
 アンカー位置指定要素とアンカーの間に以前設定された関連付けを取り消すには、アンカー位置指定要素の `position-anchor` 値を `none` に設定します。
 
 位置指定要素をアンカーに固定するには、アンカー要素に対して相対的に配置しなければなりません。これにはアンカー位置指定機能（例: {{cssxref("anchor()")}} 関数（{{glossary("inset properties", "インセットプロパティ")}}の値として設定）や {{cssxref("position-area")}} プロパティ）を使用します。
+
+[暗黙的なアンカー](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#暗黙的なアンカーの関連付け)を基準に `anchor()` を使用して要素を配置する場合は、アンカー位置指定要素に `position-anchor: auto` を設定して、暗黙的な関連付けを有効にしてください。詳しくは[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアンカー位置指定)を参照してください。
 
 関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
 
@@ -294,7 +305,7 @@ input.addEventListener("input", (event) => {
 
 出力はつまみに固定されています。値を変更してください。 ブラウザーがアンカー位置指定に対応している場合、値はスライダー上の位置に関係なく、つまみの右上に表示されます。
 
-{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+{{ EmbedLiveSample("using_a_slider_thumb_as_an_anchor", "100%", "225") }}
 
 > [!NOTE]
 > このデモのアンカー位置指定 CSS は現在 Firefox では動作しません。Firefox ではスライダーのつまみを {{cssxref("::-moz-range-thumb")}} 擬似要素で対象にできますが、現在アンカーとして利用できません（[Firefox バグ 1993699](https://bugzil.la/1993699) 参照）。

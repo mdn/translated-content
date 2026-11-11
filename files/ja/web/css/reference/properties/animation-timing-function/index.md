@@ -1,9 +1,9 @@
 ---
-title: "`animation-timing-function` プロパティ (CSS)"
+title: "`animation-timing-function` プロパティ"
 short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
@@ -135,7 +135,7 @@ animation-timing-function: unset;
 - {{cssxref("easing-function")}}
   - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
 
-    ステップのないキーワードの値 （`ease`、`linear`、`ease-in-out` など）はそれぞれ、 4 つの点が修正された 3 次べジェ曲線を表しますが、 `cubic-bezier()` 関数の値では、定義されていない値を指定することができます。 `steps()` イージング関数は、入力時間を指定した等間隔の区間に分割します。この関数の引数には、ステップ数とステップ位置の 2 つが記載されています。
+    ステップのないキーワードの値 （`ease`、`linear`、`ease-in-out` など）はそれぞれ、 4 つの点が修正された三次ベジェ曲線を表しますが、 `cubic-bezier()` 関数の値では、定義されていない値を指定することができます。 `steps()` イージング関数は、入力時間を指定した等間隔の区間に分割します。この関数の引数には、ステップ数とステップ位置の 2 つが記載されています。
     - `linear`
       - : `cubic-bezier(0.0, 0.0, 1.0, 1.0)` と同じで、等しい速度でアニメーションします。
     - `ease`
@@ -324,7 +324,7 @@ btn.addEventListener("click", () => {
 
 出力は前方または後方に進む場合がありますのでご注意ください。
 
-### 3 次ベジェの例
+### 三次ベジェの例
 
 この例では、さまざまなベジェ曲線のイージング関数の効果を示しています。
 
@@ -338,7 +338,7 @@ btn.addEventListener("click", () => {
   <div class="cb">cubic-bezier(.5, -0.5, 1, 1.5)</div>
 </div>
 <div class="x-axis"><span>50%</span></div>
-<button>Play animation</button>
+<button>アニメーションを再生</button>
 ```
 
 ```js hidden
@@ -426,9 +426,9 @@ btn.addEventListener("click", () => {
 }
 ```
 
-{{EmbedLiveSample("Cubic-Bezier_examples", 600, 250)}}
+{{EmbedLiveSample("cubic-bézier_examples", 600, 250)}}
 
-次の画像は、この例で使用したすべての 3 次ベジェ関数の値のグラフを表示しています。入力の進行状況 （時間） の範囲は 0 から 1 まで、出力の進行状況の範囲は 0 から 1 までです。
+次の画像は、この例で使用したすべての三次ベジェ関数の値のグラフを表示しています。入力の進行状況 （時間） の範囲は 0 から 1 まで、出力の進行状況の範囲は 0 から 1 までです。
 
 ![関数 'cubic-bezier' のグラフを示す画像](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/cubic-bezier-function-graphs.png)
 

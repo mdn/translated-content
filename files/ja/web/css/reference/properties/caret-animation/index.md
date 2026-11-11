@@ -1,15 +1,19 @@
 ---
-title: caret-animation
+title: "`caret-animation` プロパティ"
+short-title: caret-animation
 slug: Web/CSS/Reference/Properties/caret-animation
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 {{SeeCompatTable}}
 
 **`caret-animation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、**挿入キャレット**の点滅動作を有効または無効にするために使用します。挿入キャレットとは、編集可能な要素に現れる可視マーカーであり、次の文字が挿入または削除される位置を示すものです。
 
-キャレットに独自のアニメーションを適用する際は、アニメーションの妨げにならないよう、既定の点滅を停止させる必要があります。
+`caret-animation` プロパティは、{{cssxref("caret")}} 一括指定プロパティの一部として設定することもできます。
+
+> [!NOTE]
+> キャレットに独自のアニメーションを適用する際は、アニメーションの妨げにならないよう、デフォルトの点滅を停止させてください。
 
 ## 構文
 
@@ -28,10 +32,10 @@ caret-animation: unset;
 
 ### 値
 
-`caret-animation` プロパティは、以下に挙げるキーワード値のいずれかとして指定します。
+このプロパティは、次のキーワード値のいずれかとして指定します。
 
 - `auto`
-  - : キャレットが点滅します。これがデフォルト値です。
+  - : キャレットが点滅します。これがデフォルト（初期）値です。
 - `manual`
   - : キャレットが点灯・消灯で点滅しません。
 
@@ -155,7 +159,7 @@ input {
 
 レンダリング結果は次のようになります。
 
-{{EmbedLiveSample('caret-aniamtion-custom', 'auto', 260)}}
+{{EmbedLiveSample('caret-animation-custom', 'auto', 260)}}
 
 まず最初の 2 つの要素にフォーカスを当て、独自のキャレットアニメーションがどのようになるか確認してみてください。3 つ目の要素にフォーカスを当てると、デフォルトの点滅するキャレットと比較することができます。
 

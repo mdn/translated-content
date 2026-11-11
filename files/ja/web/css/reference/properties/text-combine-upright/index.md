@@ -1,8 +1,9 @@
 ---
-title: text-combine-upright
+title: "`text-combine-upright` プロパティ"
+short-title: text-combine-upright
 slug: Web/CSS/Reference/Properties/text-combine-upright
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`text-combine-upright`** は [CSS](/ja/docs/Web/CSS) のプロパティで、一文字分の空間に挿入する文字の組み合わせを設定します。組み合わせたテキストが 1em の幅より広い場合、ユーザーエージェントはコンテンツを 1em の幅に収めなければなりません。合成結果は、レイアウトおよび装飾においてグリフ一文字として扱われます。このプロパティは、縦書きモードでのみ効果があります。
@@ -54,6 +55,8 @@ text-combine-upright: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかで指定します。
+
 - `none`
   - : 何も特別な処理をしません。
 - `all`
@@ -101,7 +104,7 @@ html {
 
 #### 結果
 
-{{EmbedLiveSample('横書きテキストでの "all" の使用', 250, 200)}}
+{{EmbedLiveSample('using_all_with_horizontal_text', 250, 200)}}
 
 ## 仕様書
 

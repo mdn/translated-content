@@ -1,21 +1,17 @@
 ---
-title: text-box-trim
+title: "`text-box-trim` プロパティ"
+short-title: text-box-trim
 slug: Web/CSS/Reference/Properties/text-box-trim
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7cabe7010a0ccfcf587ddac1571963eba102090d
 ---
 
 **`text-box-trim`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト要素のブロックコンテナーからテキストコンテンツの上端と下端のどちらを切り取るかを指定します。
 
-フォントによって縦の余白が異なるため、ウェブではこれまで、文字の配置を統一することが困難でした。 `text-box-trim` プロパティと、切り取る余白の量を指定する対応プロパティ {{cssxref("text-box-edge")}} を使用すると、テキストの縦の余白を統一しやすくなります。
-
-> [!NOTE]
-> 一括指定プロパティの {{cssxref("text-box")}} を使用すると、 `text-box-trim` および `text-box-edge` の値を 1 つの宣言で指定することができます。
-
 ## 構文
 
 ```css
-/* キーワード */
+/* キーワード値 */
 text-box-trim: none;
 text-box-trim: trim-both;
 text-box-trim: trim-start;
@@ -34,7 +30,7 @@ text-box-trim: unset;
 `text-box-trim` プロパティの値は、次のキーワードのいずれかで指定できます。
 
 - `none`
-  - : 既定値です。テキストから余白は切り取られません。
+  - : デフォルト値です。テキストから余白は切り取られません。
 - `trim-both`
   - : 先頭（上端）と末尾（下端）の端が両方切り取られます。
 - `trim-start`
@@ -44,11 +40,17 @@ text-box-trim: unset;
 
 ## 解説
 
+`text-box-trim` プロパティは、テキスト要素のブロックコンテナーからテキストコンテンツの上端と下端のどちらを切り取るかを指定します。
+
+フォントによって縦の余白が異なるため、ウェブではこれまで文字の配置を統一することが困難でした。`text-box-trim` プロパティと、切り取る余白の量を指定する対応プロパティ {{cssxref("text-box-edge")}} を使用すると、テキストの縦の余白を統一しやすくなります。
+
 テキストのみのコンテンツの高さは、フォントの高さに対して相対的です。デジタルフォントファイルでは、高さには大文字、アセンダー、ディセンダーなど、文字の全体が含まれます。フォントによってベースラインの高さが異なるため、同じ `font-size` を指定しても、テキストの行の高さが異なり、行間の間隔の外観に影響します。
 
 `text-box-trim` プロパティを使用すると、テキストのブロックコンテナーの上端と下端を切り取って、ブロック方向のテキストの空間をより簡単に制御することができます。
 
 実際に切り取られる余白の大きさは、 {{cssxref("text-box-edge")}} プロパティを使用して指定します。例えば、フォントの大文字または小文字に合わせて上端を切り取り、下端をフォントのベースラインに合わせて切り取ることを選択することができます。
+
+`text-box-trim` プロパティは、{{cssxref("text-box-edge")}} プロパティとともに、{{cssxref("text-box")}} 一括指定を使用して設定することもできます。
 
 ## 公式定義
 
@@ -113,7 +115,7 @@ p {
 
 出力は次のとおりです。それぞれの段落の上部と下部に境界線を設置しましたので、それぞれのケースで余白がどのように切り取られたかを確認できます。
 
-{{EmbedLiveSample("Basic `text-box-edge` usage","100%","360")}}
+{{EmbedLiveSample("basic_text-box-trim_usage","100%","360")}}
 
 ### 対話的な `text-box-trim` および `text-box-edge` の値の比較
 
@@ -269,7 +271,7 @@ trimUnderSelect.addEventListener("change", setEdgeTrim);
 
 出力結果は次の通りです。
 
-{{EmbedLiveSample("`text-box-trim` value comparison","100%","520")}}
+{{EmbedLiveSample("interactive_text-box-trim_and_text-box-edge_value_comparison","100%","520")}}
 
 `text-box-trim` は、最初は `trim-both` に設定されています。これは、段落の上端と下端が切り取られることを意味しています。 `text-box-edge` は、最初は `cap alphabetic` に設定されています。これは、テキストが、先頭の端では大文字の上端と、末尾の端ではベースラインと揃うように切り取られることを意味しています。
 
