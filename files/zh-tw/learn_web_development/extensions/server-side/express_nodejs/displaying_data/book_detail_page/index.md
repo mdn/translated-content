@@ -3,7 +3,9 @@ title: 書本詳情頁面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 
-*書本細節頁面*需要呈現一本指定書本(`Book`)的信息, 使用它的 `_id` 字段值(自動產生)做為識別，接著是圖書館中書本實例(`BookInstance`)的信息。無論我們在哪裡呈現一個作者、種類、或書本實例，都應該連結到它的細節頁面。
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
+*書本細節頁面*需要呈現一本指定書本（`Book`）的信息，使用它的 `_id` 字段值（自動產生）做為識別，接著是圖書館中書本實例（`BookInstance`）的信息。無論我們在哪裡呈現一個作者、種類或書本實例，都應該連結到它的細節頁面。
 
 ## Controller 控制器
 
@@ -110,7 +112,4 @@ block content
 
 ![Book Detail Page - Express Local Library site](locallibary_express_book_detail.png)
 
-## 下一步
-
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下一個部分: [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
