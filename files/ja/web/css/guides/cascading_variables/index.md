@@ -111,7 +111,7 @@ input {
 - [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
   - : CSS や JavaScript でカスタムプロパティを使用する方法を、未定義値や不正な値の処理、代替値、継承などのヒントを交えて解説します。
 
-- [不正なカスタムプロパティ](/ja/docs/Web/CSS/Guides/Syntax/Error_handling#不正なカスタムプロパティ)
+- [不正なカスタムプロパティ](/ja/docs/Web/CSS/Guides/Syntax/Error_handling#無効なカスタムプロパティ)
   - : カスタムプロパティの値がそのプロパティにとって不正なデータ型であった場合に、ブラウザーがプロパティ値を処理する方法について説明します。
 
 ## 関連概念

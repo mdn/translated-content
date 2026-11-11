@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:has()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素と一致する場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
+**`:has()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素と一致する場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
 
 ```css
 /* h1 見出し要素の直後に段落要素がある場合、

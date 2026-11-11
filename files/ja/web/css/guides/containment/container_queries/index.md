@@ -28,10 +28,10 @@ l10n:
 これらの値は以下のような効果があります。
 
 - `size`
-  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
+  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック次元とインライン次元)軸の寸法に基づきます。
     レイアウト、スタイル設定、サイズ[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)をコンテナーに適用します。
 - `inline-size`
-  - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
+  - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック次元とインライン次元)軸の寸法に基づきます。
     その要素にレイアウト、スタイル設定、インラインサイズ抑制を適用します。
 - `normal`
   - : デフォルト値。この要素は、コンテナーサイズクエリーのクエリコンテナーとはなりませんが、[名前のみのコンテナークエリー](#名前のみのコンテナークエリー)やコンテナースタイルクエリーについては、クエリーコンテナーとして使用することができます。
