@@ -1,8 +1,9 @@
 ---
-title: align-items
+title: "`align-items` プロパティ"
+short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("cross axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("grid areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
@@ -92,6 +93,8 @@ align-items: unset;
 
 ### 値
 
+このプロパティは、次のキーワード値の 1 つまたは 2 つで指定します。
+
 - `normal`
   - : このキーワードの効果は現在のレイアウトモードに依存します。
     - 絶対位置指定レイアウトでは、このキーワードは置換絶対位置指定ボックスにおける `start` のように動作し、他のすべての絶対位置指定ボックスでは `stretch` として動作します。
@@ -150,9 +153,65 @@ align-items: unset;
 
 この例では、6 つの子要素を持つコンテナーを持っています。 {{htmlelement("select")}} ドロップダウンメニューで、コンテナーの {{cssxref("display")}} を `grid` と `flex` の間で切り替えることができます。 2 つ目のメニューでは、コンテナーの `align-items` プロパティの値を変更できます。
 
+### HTML
+
+コンテナーの {{htmlelement("div")}} とその中に `<div>` を 6 つ設置します。フォームの HTML とコンテナーのクラスを変更する JavaScript は、簡潔にするために隠してあります。
+
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4<br />2 行目</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
+```
+
+```html hidden
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
+
+<div class="row">
+  <label for="values">align-items: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="baseline">baseline</option>
+    <option value="stretch">stretch</option>
+
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="self-start">self-start</option>
+    <option value="self-end">self-end</option>
+
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
+
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe self-end">safe self-end</option>
+    <option value="unsafe self-end">unsafe self-end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
+
 ### CSS
 
-コンテナーとアイテムに対して、確実に 2 行または 1 列、またはアイテムを保有しているようにスタイル設定します。 `.flex` および `.grid` クラスを定義し、 JavaScript でコンテナーに適用します。これらはコンテナーの {{cssxref("display")}} 値を設定し、背景色と境界線を変更することで、レイアウトが変更されたことを示す追加のインジケーターを提供します。 6 つのフレックスアイテムの背景色はそれぞれ異なり、 4 番目のアイテムは 2 行に、 6 番目のアイテムはフォントが拡大されています。
+コンテナーとアイテムには、アイテムが 2 行または 2 列に並ぶようスタイルを設定します。 `.flex` および `.grid` クラスを定義し、 JavaScript でコンテナーに適用します。これらはコンテナーの {{cssxref("display")}} 値を設定し、背景色と境界線を変更することで、レイアウトが変更されたことを示す追加のインジケーターを提供します。 6 つのフレックスアイテムの背景色はそれぞれ異なり、 4 番目のアイテムは 2 行に、 6 番目のアイテムはフォントが拡大されています。
 
 ```css
 .flex,
@@ -227,62 +286,6 @@ div > div {
   align-items: center;
   justify-content: center;
 }
-```
-
-### HTML
-
-コンテナーの {{htmlelement("div")}} とその中に `<div>` を 6 つ設置します。フォームの HTML とコンテナーのクラスを変更する JavaScript は、簡潔にするために隠してあります。
-
-```html
-<div id="container" class="flex">
-  <div id="item1">1</div>
-  <div id="item2">2</div>
-  <div id="item3">3</div>
-  <div id="item4">4<br />2 行目</div>
-  <div id="item5">5</div>
-  <div id="item6">6</div>
-</div>
-```
-
-```html hidden
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
-</div>
-
-<div class="row">
-  <label for="values">align-items: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="baseline">baseline</option>
-    <option value="stretch">stretch</option>
-
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="self-start">self-start</option>
-    <option value="self-end">self-end</option>
-
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
-
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe self-end">safe self-end</option>
-    <option value="unsafe self-end">unsafe self-end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
-</div>
 ```
 
 ```js hidden

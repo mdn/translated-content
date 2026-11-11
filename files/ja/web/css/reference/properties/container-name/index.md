@@ -3,7 +3,7 @@ title: "`container-name` プロパティ"
 short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 l10n:
-  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
@@ -42,14 +42,6 @@ container-name: unset;
     - 制作者が定義する識別子（例: `--container-name`）を意図するダッシュ記号は許可されています。
     - 空白で区切られた複数の名前のリストが許可されます。
 
-## 公式定義
-
-{{CSSInfo}}
-
-## 形式文法
-
-{{CSSSyntax}}
-
 ## 解説
 
 名前が指定されていない場合は、コンテナークエリーは、直近の[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)のある祖先の[サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナーサイズクエリー)や[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)などの属性に基づいて、要素にスタイルを適用します。
@@ -60,6 +52,14 @@ container-name: unset;
 コンテナーコンテキストに名前が指定されている場合、{{Cssxref("@container")}} アットルールにその名前を設定することで、そのコンテナーコンテキストを具体的に指定することができます。
 
 要素に `container-name` を割り当てることでクエリーコンテナーを生成し、関連付けられた `@container` アットルールではクエリー式を指定せずに、その名前の存在のみを照会することができます。これら、いわゆる[**名前のみのコンテナークエリー**](/ja/docs/Web/CSS/Guides/Containment/Container_queries#名前のみのコンテナークエリー)を使用すると、特定の `container-name` が設定された祖先要素を持つかどうかのみに基づいて、要素にスタイルを選択的に適用することができます。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -151,7 +151,7 @@ container-name: unset;
 
 #### HTML
 
-{{htmlelement("div")}} 要素の `id` を `container` 西、3 つの {{htmlelement("p")}} 要素を、2 つはコンテナー内に、1 つはコンテナーの外に配置します。
+{{htmlelement("div")}} 要素の `id` を `container` にし、3 つの {{htmlelement("p")}} 要素のうち、2 つをコンテナー内に、1 つをコンテナーの外に配置します。
 
 ```html live-sample_name-only
 <div id="container">
@@ -187,7 +187,7 @@ container-name: unset;
 
 #### 結果
 
-{{embedlivesample("name-only", "100%", 300)}}
+{{embedlivesample("using_a_name-only_container_query", "100%", 300)}}
 
 指定されたスタイルは、1 つ目と 2 つ目の {{htmlelement("p")}} 要素にのみ適用し、3 つ目には適用しません。
 

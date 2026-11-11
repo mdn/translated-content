@@ -1,9 +1,9 @@
 ---
-title: "`word-spacing` プロパティ (CSS)"
+title: "`word-spacing` プロパティ"
 short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
+  sourceCommit: c4e64810ce10fb5cb1eebfcd8b6f526866fd0982
 ---
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグ間や単語間の間隔を設定します。
@@ -91,6 +91,14 @@ word-spacing: unset;
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{CSSSyntax}}
+
 ## 例
 
 ### HTML
@@ -124,7 +132,7 @@ word-spacing: unset;
 
 この例は次のように表示されます。
 
-{{ EmbedLiveSample("live-sample___basic-usage", "100%", "100") }}
+{{ EmbedLiveSample("basic-usage", "100%", "100") }}
 
 ### word-spacing 文字間隔の設定を、長さとパーセント値で比較
 
@@ -203,14 +211,6 @@ p:has(~ form > input:checked) {
 {{ EmbedLiveSample("percentage-versus-length", "100%", 460) }}
 
 まず、初期の文字間隔の値は、大きなフォントサイズでは問題なく見えますが、小さなフォントサイズでは見栄えが良くないことにご注目ください。次に、チェックボックスを切り替えてみてください。パーセント値の文字間隔は、フォントサイズに合わせて変倍されるため、すべての行で適切に見えることにご注目ください。
-
-## 公式定義
-
-{{CSSInfo}}
-
-## 形式文法
-
-{{CSSSyntax}}
 
 ## 仕様書
 
