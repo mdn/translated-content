@@ -47,6 +47,6 @@ Retry-After: 120
 
 ## 参见
 
-- [Google Webmaster blog: How to deal with planned site downtime](https://developers.google.com/search/blog/2011/01/how-to-deal-with-planned-site-downtime)
+- [Google Webmaster blog: How to deal with planned site downtime](https://developers.google.cn/search/blog/2011/01/how-to-deal-with-planned-site-downtime)
 - {{HTTPStatus(503)}} (Service Unavailable)
 - {{HTTPStatus(301)}} (Moved Permanently)
