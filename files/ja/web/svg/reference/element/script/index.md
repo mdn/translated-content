@@ -2,7 +2,7 @@
 title: <script>
 slug: Web/SVG/Reference/Element/script
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 **`<script>`** は [SVG](/ja/docs/Web/SVG) の要素で、スクリプトを SVG 文書に追加することができます。
@@ -16,9 +16,15 @@ l10n:
 
 ## 属性
 
+- `async` {{experimental_inline}}
+  - : `async` 属性がある場合、外部スクリプトは文書の構文解析と並行して取得され、取得でき次第評価されます。HTML の {{HTMLElement('script')}} 要素の [`async`](/ja/docs/Web/HTML/Reference/Elements/script#async) 属性と同等です。
+    _値の型_: **論理値**; _デフォルト値_: _なし_; _アニメーション_: **不可**
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/script#crossorigin)
   - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素と同様に定義します。
     _値の型_: [**[ anonymous | use-credentials ]?**](/ja/docs/Web/CSS/Reference/Values/string); _デフォルト値_: `?`; _アニメーション_: **可**
+- `defer` {{experimental_inline}}
+  - : `defer` 属性がある場合、文書の構文解析が完了した後、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前に外部スクリプトが実行されます。HTML の {{HTMLElement('script')}} 要素の [`defer`](/ja/docs/Web/HTML/Reference/Elements/script#defer) 属性と同等です。
+    _値の型_: **論理値**; _デフォルト値_: _なし_; _アニメーション_: **不可**
 - {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
   - : 外部スクリプトを取得する際に使用する相対的な優先順位に対するヒントを提供します。
     利用可能な値は次の通りです。
