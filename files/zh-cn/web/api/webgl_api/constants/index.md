@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("WebGL")}}
 
-**WebGL 常量**是 [WebGL：web 中的 2D 的 3D 图形](/zh-CN/docs/Web/API/WebGL_API)里传给函数或由函数返回的一组取值。所有常量的类型都是 {{domxref("WebGL_API/Types", "GLenum")}}。
+**WebGL 常量**是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 提供的一组取值，会传给函数或由函数返回。所有常量的类型都是 {{domxref("WebGL_API/Types", "GLenum")}}。
 
-标准 WebGL 常量安装在 {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} 对象上，因此你可以写成 `gl.CONSTANT_NAME`：
+标准 WebGL 常量安装在 {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} 对象上，因此你可以使用 `gl.CONSTANT_NAME`：
 
 ```js
 const canvas = document.getElementById("myCanvas");
@@ -18,14 +18,14 @@ const gl = canvas.getContext("webgl");
 gl.getParameter(gl.LINE_WIDTH);
 ```
 
-[使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)也会提供一些常量。下文给出一份[列表](#webgl_扩展中定义的常量)。
+部分常量也由 [WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 提供。下文给出一份[列表](#webgl_扩展中定义的常量)。
 
 ```js
 const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
 const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-[WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)提供了更多入门信息、示例和资源。
+[WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 提供了更多关于如何开始使用 WebGL 的信息、示例和资源。
 
 ## 目录
 
@@ -880,8 +880,8 @@ const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 ### OES_texture_half_float
 
-| 常量名           | 值     | 描述                  |
-| ---------------- | ------ | --------------------- |
+| 常量名           | 值     | 描述                      |
+| ---------------- | ------ | ------------------------- |
 | `HALF_FLOAT_OES` | 0x8D61 | 半精度浮点类型（16 位）。 |
 
 更多信息，请参见 {{domxref("OES_texture_half_float")}}。
