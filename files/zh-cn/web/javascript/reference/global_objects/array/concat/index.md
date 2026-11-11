@@ -8,7 +8,7 @@ l10n:
 
 {{jsxref("Array")}} 实例的 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
-{{InteractiveExample("JavaScript Demo: Array.prototype.concat()", "shorter")}}
+{{InteractiveExample("JavaScript 演示：Array.prototype.concat()", "shorter")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -16,7 +16,7 @@ const array2 = ["d", "e", "f"];
 const array3 = array1.concat(array2);
 
 console.log(array3);
-// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+// 期望输出：Array ["a", "b", "c", "d", "e", "f"]
 ```
 
 ## 语法
@@ -157,8 +157,8 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype.concat` 的 Polyfill，修复其中的问题并实现新特性，例如支持 `Symbol.isConcatSpreadable`](https://core-js.io/docs/features/ecmascript/array)
-- [`Array.prototype.concat` 的 es-shims Polyfill](https://www.npmjs.com/package/array.prototype.concat)
+- [`core-js` 中 `Array.prototype.concat` 的 polyfill，修复其中的问题并实现新特性，例如支持 `Symbol.isConcatSpreadable`](https://core-js.io/docs/features/ecmascript/array)
+- [`Array.prototype.concat` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.concat)
 - [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
