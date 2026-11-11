@@ -377,7 +377,7 @@
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/conflicting/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
@@ -424,6 +424,7 @@
 /zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started	/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries
 /zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/conflicting/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/MDN/About	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Community/Contributing/Getting_started	/zh-TW/docs/MDN/Community/Getting_started
 /zh-TW/docs/MDN/Community/Contributing/Translated_content	/zh-TW/docs/MDN/Community/Translated_content

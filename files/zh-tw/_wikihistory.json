@@ -1609,12 +1609,6 @@
       "edgar-chen"
     ]
   },
-  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
-    "modified": "2020-07-16T22:38:37.729Z",
-    "contributors": [
-      "edgar-chen"
-    ]
-  },
   "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template": {
     "modified": "2020-07-16T22:38:35.227Z",
     "contributors": [
@@ -6047,6 +6041,12 @@
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": [
       "Aries0d0f"
+    ]
+  },
+  "conflicting/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page": {
+    "modified": "2020-07-16T22:38:37.729Z",
+    "contributors": [
+      "edgar-chen"
     ]
   }
 }
