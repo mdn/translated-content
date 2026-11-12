@@ -2,7 +2,7 @@
 title: クリッピングとマスク
 slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}
@@ -18,10 +18,7 @@ l10n:
 `circle` 要素をもとにして、先に述べた半円を作成しましょう。
 
 ```html
-<svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -45,12 +42,7 @@ l10n:
 マスクの効果は、グラデーションと共に適用するともっとも印象的です。要素をフェードアウトしたい場合は、マスクを用いることですぐにその効果を得ることができます。
 
 ```html
-<svg
-  width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="black" />
@@ -81,12 +73,7 @@ l10n:
 上記の矩形は、半透明で描画します。fill および stroke について分けられた 2 つの属性 `fill-opacity` と `stroke-opacity` があり、それぞれのプロパティの不透明度を分けて制御します。なお、ストロークは塗りつぶしの上層に描画することに注意してください。このために塗りつぶしもある要素でストロークの不透明度を設定した場合は、ストロークの半分で塗りつぶしが透けて見え、また同時に残り半分で背景が透けて見えます。
 
 ```html
-<svg
-  width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
   <circle
     cx="100"
