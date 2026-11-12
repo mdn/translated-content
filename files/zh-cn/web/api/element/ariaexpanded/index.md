@@ -23,11 +23,11 @@ l10n:
 
 ## 示例
 
-在这个示例中，ID 为 `animal` 的元素上的 `aria-expanded` 属性被设置为 "false"。我们使用 `ariaExpanded` 将值更新为 "true"。
+在这个示例中，ID 为 `animal` 的元素上的 `aria-expanded` 属性被设置为“false”。我们使用 `ariaExpanded` 将值更新为“true”。
 
 ```html
 <div class="animals-combobox">
-  <label for="animal">Animal</label>
+  <label for="animal">动物</label>
   <input
     id="animal"
     type="text"
@@ -35,10 +35,10 @@ l10n:
     aria-autocomplete="list"
     aria-expanded="false"
     aria-haspopup="true" />
-  <button id="animals-button" tabindex="-1" aria-label="Open">▽</button>
-  <ul id="animals-listbox" role="listbox" aria-label="Animals">
-    <li id="animal-cat" role="option">Cat</li>
-    <li id="animal-dog" role="option">Dog</li>
+  <button id="animals-button" tabindex="-1" aria-label="展开">▽</button>
+  <ul id="animals-listbox" role="listbox" aria-label="动物列表">
+    <li id="animal-cat" role="option">猫</li>
+    <li id="animal-dog" role="option">狗</li>
   </ul>
 </div>
 ```
