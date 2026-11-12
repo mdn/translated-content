@@ -5,12 +5,17 @@ slug: Web/HTTP/Reference/Headers/Retry-After
 
 在 HTTP 协议中，响应首部 **`Retry-After`** 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：
 
-- 当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。
-- 当与重定向响应一起发送的时候，比如 {{HTTPStatus(301)}} (Moved Permanently，永久迁移)，表示用户代理在发送重定向请求之前需要等待的最短时间。
+- 当与 {{HTTPStatus("503", "503 Service Unavailable")}} 响应一起发送的时候，表示服务下线的预期时长。
+- 当与重定向响应一起发送的时候，比如 {{HTTPStatus("301", "301 Moved Permanently")}}，表示用户代理在发送重定向请求之前需要等待的最短时间。
 
-| Header type                              | {{Glossary("Response header")}} |
-| ---------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden request header")}} | no                              |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
@@ -21,9 +26,9 @@ Retry-After: <delay-seconds>
 
 ## 指令
 
-- \<http-date>
+- `<http-date>`
   - : 表示在此时间之后可以重新尝试。参见 {{HTTPHeader("Date")}} 首部来获取 HTTP 协议中关于日期格式的细节信息。
-- \<delay-seconds>
+- `<delay-seconds>`
   - : 一个非负的十进制整数，表示在重试之前需要等待的秒数。
 
 ## 示例
@@ -47,6 +52,6 @@ Retry-After: 120
 
 ## 参见
 
-- [Google Webmaster blog: How to deal with planned site downtime](https://developers.google.cn/search/blog/2011/01/how-to-deal-with-planned-site-downtime)
-- {{HTTPStatus(503)}} (Service Unavailable)
-- {{HTTPStatus(301)}} (Moved Permanently)
+- {{HTTPStatus("503", "503 Service Unavailable")}}
+- {{HTTPStatus("301", "301 Moved Permanently")}}
+- [如何处理计划中的网站关闭事件](https://developers.google.cn/search/blog/2011/01/how-to-deal-with-planned-site-downtime)，载于 developers.google.cn（2011）
