@@ -9,11 +9,11 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 > [!WARNING]
-> 该属性表示被加载到 script 元素中的外部脚本的 URI，由脚本的 {{domxref("HTMLScriptElement/type","type")}}决定，它可能是可以执行的。
+> 该属性表示被加载到 script 元素中的外部脚本的 URI，其内容是否可执行取决于脚本的 {{domxref("HTMLScriptElement/type","type")}}。
 > 这类 API 被称为[注入汇聚点](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)，可能成为[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)攻击的载体。
 >
-> 你可以通过设置[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)来限制脚本的加载位置，并始终赋值 {{domxref("TrustedScriptURL")}} 对象而不是字符串，以及[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用-csp-强制执行可信类型)，以此缓解该风险。
-> 更多信息请参阅[安全考量](#安全考量)。
+> 你可以通过设置[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)来限制脚本的加载位置，并始终赋值 {{domxref("TrustedScriptURL")}} 对象而不是字符串，以及[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_强制执行可信类型)，以此缓解该风险。
+> 更多信息请参阅[安全考虑](#安全考虑)。
 
 {{domxref("HTMLScriptElement")}} 接口的 **`src`** 属性是一个表示外部脚本 URL 的字符串；它可以用作在文档中直接嵌入脚本的替代方案。
 
@@ -28,20 +28,20 @@ l10n:
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 当[由 CSP 强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用-csp-强制执行可信类型)且未定义默认策略时，若以字符串形式设置该属性，则抛出此异常。
-    如果获取的 URL 无法按其指定的类型（例如模块或 importmap）成功解析，也会抛出此异常。
+  - : 当[由 CSP 强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_强制执行可信类型)且未定义默认策略时，若以字符串形式设置该属性，则抛出此异常。
+    如果获取的 URL 无法按其指定的类型（例如模块或导入映射）成功解析，也会抛出此异常。
 
 ## 描述
 
 **`src`** 属性表示外部脚本的 URL。如果设置了该属性，则通过文本类属性 {{domxref("HTMLScriptElement.text","text")}}、{{domxref("HTMLScriptElement.textContent","textContent")}} 或 {{domxref("HTMLScriptElement.textContent","innerText")}} 提供的脚本会被忽略。
 
-### 安全考量
+### 安全考虑
 
 `src` 属性用于加载并运行外部脚本。获取到的脚本会在当前页面的上下文中运行，因此它可以做你的网站代码能做的任何事情（即使该 URL 与你的站点并非同源）。如果输入由用户提供，这可能是[跨站脚本（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)攻击的载体。
 
 接受并执行来自不受信任来源的任意 URL 是极其危险的。网站应使用带有 [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 指令的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)（或 [`default-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) 中定义的兜底策略）来控制允许运行哪些脚本。这可以将脚本限制为来自当前源、特定的一组源，甚至特定的文件。
 
-如果你在使用该属性并[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用-csp-强制执行可信类型)（使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令），就需要始终赋值 {{domxref("TrustedScriptURL")}} 对象而不是字符串。这可确保输入会经过一个转换函数，从而有机会在注入之前拒绝或修改该 URL。
+如果你在使用该属性并[强制执行可信类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_强制执行可信类型)（使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令），就需要始终赋值 {{domxref("TrustedScriptURL")}} 对象而不是字符串。这可确保输入会经过一个转换函数，从而有机会在注入之前拒绝或修改该 URL。
 
 即使资源在你的网站看来是可信的，它仍可能在[供应链攻击](/zh-CN/docs/Web/Security/Attacks/Supply_chain_attacks)中被破坏。为了缓解此类攻击，应使用[子资源完整性](/zh-CN/docs/Web/Security/Attacks/Supply_chain_attacks#using_subresource_integrity)特性。
 
@@ -49,7 +49,7 @@ l10n:
 
 ### 使用 TrustedScriptURL
 
-为了缓解 XSS 风险，我们应该始终为 `src` 属性赋值 `TrustedScriptURL` 实例。如果我们出于其他原因强制执行可信类型，并且希望允许某些已被（`CSP: script-src`）许可的脚本源，也需要这样做。
+为了缓解 XSS 风险，我们应该始终为 `src` 属性赋值 `TrustedScriptURL` 实例。如果我们出于其他原因强制执行可信类型，并且希望允许某些（由 CSP 的 `script-src` 指令）许可的脚本源，也需要这样做。
 
 并非所有浏览器都支持可信类型，因此我们先定义[可信类型微型兼容实现](/zh-CN/docs/Web/API/Trusted_Types_API#可信类型微型兼容实现)。它充当可信类型 JavaScript API 的透明替代品：
 
