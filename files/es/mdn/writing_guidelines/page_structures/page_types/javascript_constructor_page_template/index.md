@@ -98,7 +98,7 @@ En los constructores, incluye también la siguiente nota:
 > [!NOTE]
 > `Constructor()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` lanza un {{jsxref("TypeError")}}.
 
-(Algunos constructores heredados tienen una nota distinta, pero esa lista no va a crecer, así que no los incluimos en la plantilla).
+(Algunos constructores antiguos tienen una nota distinta, pero esa lista no va a crecer, así que no los incluimos en la plantilla).
 
 ### Parámetros
 
