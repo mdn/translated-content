@@ -2,7 +2,7 @@
 title: SVG におけるグラデーション
 slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 27bb49e1849433e05c964c8a645c448f184380ce
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
@@ -18,7 +18,7 @@ l10n:
 ### 基本的な例
 
 ```html
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
       <stop class="stop1" offset="0%" />
@@ -61,13 +61,13 @@ l10n:
 
 {{ EmbedLiveSample('Linear_Gradient','120','280') }}
 
-上記の例では、 `<rect>` 要素に線形グラデーションを適用します。線形グラデーションの中には複数の {{SVGElement('stop')}} ノードがあります。これらのノードは、グラデーションのある位置における色を、位置については `offset` 属性、色については `stop-color` 属性で指定します。この属性は、直接指定することも、 CSS で指定することもできます。この例では、 2 つの方法を混在させています。具体的には、グラデーションに対して赤色から開始し、中間で透明な黒に変化し、そして青色で終了するよう指示しています。必要に応じて美しくも醜くもある混色を作ることができますが、オフセットは常に 0% (または % 記号を削除したい場合は 0) から 100% (または 1) まで増加させる必要があります。重複した値は、 XML ツリーの一番下に割り当てられている色経由点を使用します。また、塗りつぶしや線と同様に、 `stop-opacity` 属性を指定することで、その位置での不透明度を設定することができます (FF3 では、 rgba 値を使って行うこともできます)。
+上記の例では、`<rect>` 要素に線形グラデーションを適用しています。線形グラデーション内の複数の {{SVGElement('stop')}} （色経由点）ノードは、グラデーションの各位置の色を指定します。位置は `offset` 属性で、色は `stop-color` 属性で指定します。これらの属性は直接指定することも、CSS で指定することもできます。この例では 2 つの方法を組み合わせています。グラデーションは赤から始まり、中間で透明な黒に変化し、青で終わります。必要に応じて、さまざまな色の混合を作成できますが、オフセットは常に 0%（または `%` 記号を省略して `0`）から 100%（または `1`）へ増加する必要があります。値が重複している場合、XML ツリー内で後にある色経由点の色が使用されます。また、塗りつぶしやストロークと同様に、`stop-opacity` 属性でその位置の不透明度を設定できます。
 
 ```svg
 <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-グラデーションを使用するには、オブジェクトの `fill` または `stroke` 属性から参照する必要があります。これは、 CSS で要素を参照するのと同様に、 `url` を使って行います。今回の場合は、 url はグラデーションへの参照であり、クリエイティブ ID として "Gradient1" を与えました。これを参照するには、 `fill` を `url("#Gradient1")` に設定してください。これでオブジェクトが多色になりました。 `stroke` でも同じことができます。
+グラデーションを使用するには、オブジェクトの `fill` または `stroke` 属性から参照します。CSS で要素を参照する場合と同様に、`url` を使用します。この場合、URL はクリエイティブ ID が "Gradient1" のグラデーションへの参照です。適用するには、`fill` を `url("#Gradient1")` に設定します。これでオブジェクトを複数の色で塗ることができます。`stroke` にも同様に設定できます。
 
 ```svg
 <style>
@@ -84,7 +84,7 @@ l10n:
 ```
 
 > [!NOTE]
-> グラデーションに `href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての色経由点を再作成する必要はありません。
+> グラデーションに `href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や色経由点を別のグラデーションに含めることができます。上記の例では、Gradient2 のすべての色経由点を再作成する必要はありません。
 >
 > ```html
 > <linearGradient id="Gradient1">
@@ -98,11 +98,8 @@ l10n:
 >   x2="0"
 >   y1="0"
 >   y2="1"
->   xmlns:xlink="http://www.w3.org/1999/xlink"
 >   href="#Gradient1" />
 > ```
->
-> ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG)に述べます。
 
 ## 放射グラデーション
 
@@ -111,8 +108,7 @@ l10n:
 ### 基本的な例
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="RadialGradient1">
       <stop offset="0%" stop-color="red" />
@@ -152,9 +148,7 @@ l10n:
 ### 中心と焦点
 
 ```html
-<?xml version="1.0" standalone="no"?>
-
-<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="0%" stop-color="red" />
@@ -173,13 +167,7 @@ l10n:
     stroke="black"
     stroke-width="2" />
 
-  <circle
-    cx="60"
-    cy="60"
-    r="50"
-    fill="transparent"
-    stroke="white"
-    stroke-width="2" />
+  <circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="2" />
   <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
   <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
   <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">
@@ -200,9 +188,7 @@ l10n:
 ### spreadMethod
 
 ```html
-<?xml version="1.0" standalone="no"?>
-
-<svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="220" height="220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient
       id="GradientPad"

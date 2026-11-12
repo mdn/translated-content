@@ -2,7 +2,7 @@
 title: テキスト
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 27bb49e1849433e05c964c8a645c448f184380ce
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations") }}
@@ -53,9 +53,9 @@ SVG でのテキストについて説明するにあたり、これをほとん�
 tspan 要素には、以下のカスタム属性があります。
 
 - `x`
-  - : 包含しているテキストの新たな絶対 `x` 座標を設定します。これはテキストの既定の現在位置を上書きします。またこの属性は数値のリストを含むことができ、その値は一つずつ、 `tspan` 要素内の各文字に適用されます。
+  - : 包含しているテキストの新たな絶対 `x` 座標を設定します。これはテキストのデフォルトの現在位置を上書きします。またこの属性は数値のリストを含むことができ、その値は一つずつ、`tspan` 要素内の各文字に適用されます。
 - `dx`
-  - : テキストの描画開始位置を、既定の現在位置から水平方向に移動させるオフセット `dx` の値です。こちらも各文字に適用される値のリストを持つことができ、 従って次第にオフセットは累積していきます。
+  - : テキストの描画をデフォルトの現在位置から水平方向に `dx` だけずらして開始します。こちらも各文字に適用する値のリストを指定でき、その場合、オフセットは文字ごとに累積します。
 
     これらと同様に、垂直方向の移動量を示す **`y`** 属性や **`dy`** 属性もあります。
 
@@ -66,15 +66,13 @@ tspan 要素には、以下のカスタム属性があります。
 
 ### textPath
 
-この要素は `href` 属性を通して任意のパスを取り出し、そのパスに沿って囲むように文字を並べます。
+この要素は `href` 属性で任意のパスを参照し、そのパスに沿って文字を配置します。
 
 ```html
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="none" />
   <text>
-    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" href="#my_path">
-      曲がるよ
-    </textPath>
+    <textPath href="#my_path">曲線です。</textPath>
   </text>
 
   <style>
