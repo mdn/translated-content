@@ -3,10 +3,10 @@ title: "`column-rule-color` プロパティ (CSS)"
 short-title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
 l10n:
-  sourceCommit: 5cf8432d980cbe9b7e5611d647d8566b5c4ff3ed
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-**`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックス、段組みレイアウトで列間・段間に引かれる罫線の色を設定します。
+**`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックスボックス、段組みレイアウトで列や段の間に引かれる罫線の色を設定します。
 
 {{InteractiveExample("CSS デモ: column-rule-color")}}
 
@@ -83,7 +83,7 @@ column-rule-color: unset;
 
 ## 解説
 
-`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間のギャップに描画される罫線の色を定義します。
+`column-rule-color` プロパティは、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のコンテナーに複数の列・段がある場合に、列・段間の隙間に描画される罫線の色を定義します。
 
 この値は、カンマで区切られた一連の成分からなり、`<line-color>`、`<repeat-line-color>`、`<auto-repeat-line-color>` といった型を含めることができます。
 
@@ -259,7 +259,7 @@ ul {
     color-mix(in lch decreasing hue, var(--base) 58%, var(--mixin));
 }
 li {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 ```
 
@@ -274,11 +274,11 @@ li {
 
 この例では、`repeat()` 関数内で整数の代わりに `auto` を使用する方法を示しています。
 
-前回の例と同じ HTML と CSS を使用しますが、`column-rule-color` の値を上書きしています。ここでは、`repeat(auto, <color>)` を使用して、最初と最後の行を除き、すべての行をほぼ透明な黒 (`#0003`) に設定し、最初と最後の行は不透明な `black` に設定します。
+前回の例と同じ HTML と CSS を使用しますが、`column-rule-color` の値を上書きしています。ここでは、`repeat(auto, <color>)` を使用して、最初と最後の罫線を除き、すべての罫線をほぼ透明な黒 (`#00000033`) に設定し、最初と最後の罫線は不透明な `black` に設定します。
 
 ```css live-sample___auto
 ul {
-  column-rule-color: black, repeat(auto, #0003), black;
+  column-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 
@@ -317,4 +317,5 @@ ul {
 - {{cssxref("column-rule")}} 一括指定
 - {{cssxref("rule-color")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール

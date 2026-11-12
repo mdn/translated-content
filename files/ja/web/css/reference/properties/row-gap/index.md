@@ -1,5 +1,6 @@
 ---
-title: row-gap
+title: "`row-gap` プロパティ"
+short-title: row-gap
 slug: Web/CSS/Reference/Properties/row-gap
 l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
