@@ -3,22 +3,18 @@ title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
 ---
 
-**`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头是用来给浏览器指示允许一个页面可否在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免[点击劫持](/zh-CN/docs/Web/Security/Attacks#click-jacking)攻击。
+**`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应标头是用来给浏览器指示允许一个页面可否在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免[点击劫持](/zh-CN/docs/Web/Security/Attacks#点击劫持)攻击。
 
 仅当访问文档的用户使用支持 `X-Frame-Options` 的浏览器时，此附加的安全性才会被提供。
 
 > [!NOTE]
-> {{HTTPHeader("Content-Security-Policy")}} HTTP 响应头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，支持这一指令的浏览器已经[废弃](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了 `X-Frame-Options` 响应头。
+> {{HTTPHeader("Content-Security-Policy")}} HTTP 响应标头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，支持这一指令的浏览器已经[废弃](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了 `X-Frame-Options` 响应标头。
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">首部类型</th>
-      <td>{{Glossary("Response header", "响应首部")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的消息首部")}}</th>
-      <td>否</td>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
     </tr>
   </tbody>
 </table>
@@ -106,19 +102,17 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 ### 配置 Express
 
-要配置 Express 以发送 `X-Frame-Options` 响应头，你可以使用借助了 [frameguard](https://helmet.js.org/#x-frame-options) 的 [helmet](https://helmetjs.github.io/) 来设置首部。在你的服务器配置里面添加：
+要配置 Express 以发送 `X-Frame-Options` 响应头，你可以使用借助了 [Helmet](https://helmet.js.org/) 来设置标头。在你的服务器配置里面添加：
 
 ```js
-const helmet = require("helmet");
+import helmet from "helmet";
+
 const app = express();
-app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
-```
-
-或者，你也可以直接用 frameguard：
-
-```js
-const frameguard = require("frameguard");
-app.use(frameguard({ action: "SAMEORIGIN" }));
+app.use(
+  helmet({
+    xFrameOptions: { action: "sameorigin" },
+  }),
+);
 ```
 
 ## 规范
