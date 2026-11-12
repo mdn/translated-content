@@ -1,6 +1,7 @@
 ---
 title: SVGAnimateColorElement
-slug: Web/API/SVGAnimateColorElement
+slug: Web/API/SVGAnimationElement
+original_slug: Web/API/SVGAnimateColorElement
 l10n:
   sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
