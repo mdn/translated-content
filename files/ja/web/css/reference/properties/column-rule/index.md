@@ -1,12 +1,12 @@
 ---
-title: "`column-rule` プロパティ (CSS)"
+title: "`column-rule` プロパティ"
 short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 l10n:
-  sourceCommit: 5cf8432d980cbe9b7e5611d647d8566b5c4ff3ed
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-**`column-rule`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックス、段組みレイアウトで列・段の間に引かれる罫線の太さ、スタイル、色を設定します。
+**`column-rule`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、複数列のグリッド、フレックス、段組みレイアウトで列・段の間に引かれる罫線の太さ、スタイル、色を設定します。
 
 {{InteractiveExample("CSS デモ: column-rule")}}
 
@@ -92,7 +92,7 @@ column-rule: unset;
 
 ### 値
 
-`column-rule` プロパティは、次の値のカンマ区切りのリストで指定します。
+このプロパティは、カンマ区切りの値のリストとして指定します。各値は、次の値型のいずれかです。
 
 - `<gap-rule>`
   - : 以下の値の一覧の中から 1 つ、2 つ、3 つを、順不同で指定します。
@@ -302,4 +302,5 @@ ul {
 - {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
