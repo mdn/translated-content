@@ -1,11 +1,12 @@
 ---
-title: margin-inline
+title: "`margin-inline` プロパティ"
+short-title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
 l10n:
-  sourceCommit: c3c0f615b9b35e1ce3c799927eb21732b2f05926
+  sourceCommit: 7484d45816002fbf082a59c5d95c38a1eb2b2e4b
 ---
 
-**`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
+**`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のインライン方向における論理的な先頭側と末尾側のマージンを定義します。これらのマージンは、要素の書字方向、文字の方向、テキストの向きに応じて物理的なマージンに変換されます。
 
 {{InteractiveExample("CSS デモ: margin-inline")}}
 
@@ -111,6 +112,17 @@ margin-inline: unset;
 
 ### インライン方向の先頭と末尾のマージンを設定
 
+#### HTML
+
+```html
+<div>
+  <p>テキストの例</p>
+</div>
+<div class="verticalExample">
+  <p>テキストの例</p>
+</div>
+```
+
 #### CSS
 
 ```css
@@ -130,17 +142,6 @@ p {
 .verticalExample {
   writing-mode: vertical-rl;
 }
-```
-
-#### HTML
-
-```html
-<div>
-  <p>テキストの例</p>
-</div>
-<div class="verticalExample">
-  <p>テキストの例</p>
-</div>
 ```
 
 #### 結果
