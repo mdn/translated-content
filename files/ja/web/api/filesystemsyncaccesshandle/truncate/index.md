@@ -1,13 +1,17 @@
 ---
-title: FileSystemSyncAccessHandle.truncate()
+title: "FileSystemSyncAccessHandle: truncate() メソッド"
+short-title: truncate()
 slug: Web/API/FileSystemSyncAccessHandle/truncate
 l10n:
-  sourceCommit: 4b9377a26bb7094a8f13551cf328865a6457f5ee
+  sourceCommit: 7cac5cc51350b7688903656bb36d79152f82d01f
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} インターフェイスの **`truncate()`** メソッドは、ハンドルに対応するファイルのサイズを指定のバイト数にします。
+**`truncate()`** は {{domxref("FileSystemSyncAccessHandle")}} インターフェイスのメソッドで、ハンドルに対応するファイルのサイズを指定のバイト数にします。
+
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、`truncate()` は誤って非同期メソッドとして規定されていました。一部のブラウザーの古いバージョンでは、これらのメソッドがそのように実装されています。しかし、これらのメソッドに対応する現行のブラウザーでは、すべて同期メソッドとして実装されています。
 
 ## 構文
 
@@ -18,24 +22,26 @@ truncate(newSize)
 ### 引数
 
 - `newSize`
-  - : ファイルのリサイズ後のバイト数です。
+  - : ファイルの変更後のサイズをバイト数で指定します。
 
 ### 返値
 
-`undefined` で解決する {{jsxref('Promise')}} を返します。
+なし ({{jsxref('undefined')}})。
 
 ### 例外
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 対応するアクセスハンドルが既に閉じられているか、ファイルのバイナリーデータの変更が失敗したとき投げられます。
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : `newSize` がファイルのもとのサイズより大きく、ブラウザーの[ストレージ制限](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を超えるとき投げられます。
+  - : 対応するアクセスハンドルがすでに閉じられている場合、またはファイルのバイナリーデータの変更が失敗した場合に発生します。
+- {{domxref("QuotaExceededError")}}
+  - : `newSize` がファイルの元のサイズより大きく、ブラウザーの[ストレージ制限](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を超える場合に発生します。
+- {{jsxref("TypeError")}}
+  - : 基盤となるファイルシステムが、ファイルサイズを新しいサイズに設定することに対応していない場合に発生します。
 
 ## 例
 
 ```js
 async function truncateFile() {
-  // draft ファイルのハンドルを取得する
+  // 下書きファイルのハンドルを取得する
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // 同期式アクセスハンドルを取得する
@@ -52,9 +58,6 @@ async function truncateFile() {
 }
 ```
 
-> [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・`truncate()` は誤って非同期のメソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
-
 ## 仕様書
 
 {{Specifications}}
@@ -65,5 +68,5 @@ async function truncateFile() {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) <sup>(英語)</sup>
