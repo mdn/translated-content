@@ -1,15 +1,17 @@
 ---
-title: Progressive web apps (プログレッシブウェブアプリ)
+title: Progressive web applications (プログレッシブウェブアプリ)
 slug: Glossary/Progressive_web_apps
+l10n:
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
-{{GlossarySidebar}}
+**プログレッシブウェブアプリ** (**PWAs**) は、ウェブプラットフォーム技術を使用して構築され、プラットフォーム固有のアプリのようなユーザー体験を提供するアプリケーションです。
 
-プログレッシブウェブアプリは、ウェブアプリ開発の現代的な姿を表す用語です。これには検索エンジンによる見つけやすさ、{{Glossary("URL")}} を使用したリンク、複数の形式要素で動作することなど、ウェブのあらゆる優れた部分を活用した標準的なウェブサイト/アプリを利用し、最新の API ([Service Workers](/ja/docs/Web/API/Service_Worker_API) や [Push](/ja/docs/Web/API/Push_API) など) やネイティブアプリに由来するさまざまな利点をより一般的にもたらす機能を提供すること含みます。
+このようなアプリは、検索エンジンから見つけやすいこと、{{Glossary("URL")}} でリンクできること、複数のフォームファクターで動作することなど、ウェブの優れた点を活用できます。また、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[プッシュ API](/ja/docs/Web/API/Push_API)などの最新 API を使って、段階的に機能を強化できます。
 
-これらの機能は、インストール可能で、オフラインで動作し、簡単に同期できてユーザーがサーバーに簡単に再接続できます。
+こうした機能には、インストール可能であること、オフラインで動作すること、サーバーと同期すること、サーバーからユーザーに再び働きかけることが含まれます。
 
-## 詳細情報
+## 関連情報
 
-- MDN 上の [アプリセンター](/ja/docs/Web/Progressive_web_apps)
-- Google Developers 上の [Progressive web apps](https://developers.google.com/web/progressive-web-apps)
+- [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) - MDN
+- [プログレッシブウェブアプリ](https://web.dev/explore/progressive-web-apps)<sup>(英語)</sup> - web.dev
