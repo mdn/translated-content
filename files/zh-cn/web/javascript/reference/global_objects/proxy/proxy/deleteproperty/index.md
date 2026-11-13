@@ -3,7 +3,7 @@ title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
 
-**`handler.deleteProperty()`** 方法用于拦截对对象属性的 {{jsxref("Operators/delete", "delete")}} 操作。
+**`handler.deleteProperty()`** 方法用于拦截对对象属性的 {{jsxref("delete")}} 操作。
 
 ## 语法
 
@@ -28,7 +28,7 @@ var p = new Proxy(target, {
 
 ## 描述
 
-**`handler.deleteProperty()`** 方法可以拦截 {{jsxref("Operators/delete", "delete")}} 操作。
+**`handler.deleteProperty()`** 方法可以拦截 {{jsxref("delete")}} 操作。
 
 ### 拦截
 
@@ -45,7 +45,7 @@ var p = new Proxy(target, {
 
 ## 示例
 
-以下代码演示了对 {{jsxref("Operators/delete", "delete")}} 操作的拦截。
+以下代码演示了对 {{jsxref("delete")}} 操作的拦截。
 
 ```js
 var p = new Proxy(
@@ -72,6 +72,6 @@ delete p.a; // "called: a"
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/delete", "delete")}} 操作符
+- {{jsxref("Proxy/Proxy", "handler")}}
+- {{jsxref("delete")}} 操作符
 - {{jsxref("Reflect.deleteProperty()")}}

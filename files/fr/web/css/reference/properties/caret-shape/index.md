@@ -1,13 +1,16 @@
 ---
-title: caret-shape
+title: Propriété CSS `caret-shape`
+short-title: caret-shape
 slug: Web/CSS/Reference/Properties/caret-shape
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`caret-shape`** définit la forme du **curseur d'insertion**, le marqueur visible qui apparaît dans les éléments éditables pour indiquer où le prochain caractère sera inséré ou supprimé.
+La propriété [CSS](/fr/docs/Web/CSS) **`caret-shape`** définit la forme du **curseur d'insertion**, le marqueur visible qui apparaît dans les éléments éditables pour indiquer où le prochain caractère est inséré ou supprimé.
+
+La propriété `caret-shape` peut également être définie dans le cadre de la propriété abrégée {{CSSxRef("caret")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: caret-shape")}}
 
@@ -67,6 +70,8 @@ caret-shape: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mot-clés suivants&nbsp;:
+
 - `auto`
   - : Valeur par défaut. Le navigateur détermine la forme du curseur. Cela suit généralement les conventions de la plateforme et peut changer selon le contexte.
 
@@ -81,7 +86,7 @@ caret-shape: unset;
 
 ## Description
 
-Le curseur d'insertion est le curseur clignotant qui indique où le texte sera inséré lors de la saisie. Différentes formes de curseur peuvent fournir un retour visuel sur le mode d'édition en cours ou offrir une personnalisation visuelle.
+Le curseur d'insertion est le curseur clignotant qui indique où le texte est inséré lors de la saisie. Différentes formes de curseur peuvent fournir un retour visuel sur le mode d'édition en cours ou offrir une personnalisation visuelle.
 
 ### Modes d'édition et formes de curseur
 

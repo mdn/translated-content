@@ -14,7 +14,7 @@ Eventos são ações ou ocorrências que acontecem no sistema que estamos desenv
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimentos básicos em informática, conhecimento básico em HTML e CSS,
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting"
           >JavaScript, primeiros passos</a
         >.
       </td>

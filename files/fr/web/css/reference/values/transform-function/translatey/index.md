@@ -1,8 +1,9 @@
 ---
-title: translateY()
+title: Fonction CSS `translateY()`
+short-title: translateY()
 slug: Web/CSS/Reference/Values/transform-function/translateY
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`translateY()`** repositionne un élément verticalement sur le plan 2D. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.

@@ -1,8 +1,9 @@
 ---
-title: corner-inline-end-shape
+title: Propriété CSS `corner-inline-end-shape`
+short-title: corner-inline-end-shape
 slug: Web/CSS/Reference/Properties/corner-inline-end-shape
 l10n:
-  sourceCommit: 133c1628ead5b32660a0096ea7b3881637dc355c
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
@@ -13,7 +14,7 @@ Pour une description complète du comportement des formes de coins et plusieurs 
 
 ## Propriétés constitutives
 
-La propriété `corner-inline-end-shape` est une forme raccourcie pour les propriétés logiques suivantes&nbsp;:
+Cette propriété est une forme raccourcie pour les propriétés logiques suivantes&nbsp;:
 
 - {{CSSxRef("corner-start-end-shape")}}
 - {{CSSxRef("corner-end-end-shape")}}

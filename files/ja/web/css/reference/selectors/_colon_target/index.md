@@ -1,9 +1,9 @@
 ---
-title: :target
+title: CSS `:target` 擬似クラス
+short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
-original_slug: Web/CSS/:target
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書内のターゲット要素を選択します。文書が読み込まれたとき、ターゲット要素は文書の [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して導出されます。
@@ -109,3 +109,4 @@ p:target i {
 ## 関連情報
 
 - [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/Guides/Selectors/Using_:target)
+- {{cssxref("::target-text")}}（テキストフラグメントの強調表示）

@@ -1,8 +1,9 @@
 ---
-title: "<title> : l'élément de titre du document"
+title: "Élément HTML `<title>` : l'élément de titre du document"
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 l10n:
-  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du {{Glossary("Browser", "navigateur")}} ou dans l'onglet de la page). Il ne contient que du texte&nbsp;; les balises HTML présentes dans l'élément, le cas échéant, sont également traitées comme du texte brut.
@@ -21,7 +22,7 @@ L'élément `<title>` est toujours utilisé au sein de l'élément {{HTMLElement
 
 ### Titres de page et référencement (SEO)
 
-Le contenu du titre d'une page peut avoir des implications importantes pour l'optimisation pour les moteurs de recherche ({{Glossary("SEO")}}). En général, un titre long et descriptif fonctionne mieux que des titres courts ou génériques. Le contenu du titre est l'un des éléments utilisés par les algorithmes des moteurs de recherche pour décider de l'ordre d'affichage des pages dans les résultats. De plus, le titre est la première «&nbsp;accroche&nbsp;» qui attire l'attention des lecteurs·rices parcourant la page de résultats.
+Le contenu du titre d'une page peut avoir des implications importantes pour l'optimisation pour les moteurs de recherche ({{Glossary("SEO")}}). En général, un titre long et descriptif fonctionne mieux que des titres courts ou génériques. Le contenu du titre est l'un des éléments utilisés par les algorithmes des moteurs de recherche pour décider de l'ordre d'affichage des pages dans les résultats. De plus, le titre est la première «&nbsp;accroche&nbsp;» qui attire l'attention des lecteur·ice·s parcourant la page de résultats.
 
 Quelques conseils pour composer de bons titres&nbsp;:
 
@@ -34,7 +35,7 @@ Quelques conseils pour composer de bons titres&nbsp;:
 
 Il est important de fournir un titre précis et concis pour décrire l'objectif de la page.
 
-Une technique de navigation courante pour les utilisateurs·rices de technologies d'assistance consiste à lire le titre de la page et à en déduire le contenu. En effet, naviguer dans une page pour en déterminer le contenu peut être long et source de confusion. Les titres doivent être uniques pour chaque page d'un site, en mettant idéalement en avant le but principal de la page en premier, suivi du nom du site. Suivre ce modèle permet de s'assurer que le but principal de la page est annoncé en premier par un lecteur d'écran. Cela offre une bien meilleure expérience que d'entendre d'abord le nom du site avant le titre unique de la page, pour chaque page visitée sur un même site.
+Une technique de navigation courante pour les utilisateur·ice·s de technologies d'assistance consiste à lire le titre de la page et à en déduire le contenu. En effet, naviguer dans une page pour en déterminer le contenu peut être long et source de confusion. Les titres doivent être uniques pour chaque page d'un site, en mettant idéalement en avant le but principal de la page en premier, suivi du nom du site. Suivre ce modèle permet de s'assurer que le but principal de la page est annoncé en premier par un lecteur d'écran. Cela offre une bien meilleure expérience que d'entendre d'abord le nom du site avant le titre unique de la page, pour chaque page visitée sur un même site.
 
 ### Exemple
 

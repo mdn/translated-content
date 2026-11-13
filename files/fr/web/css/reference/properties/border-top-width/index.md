@@ -1,8 +1,9 @@
 ---
-title: border-top-width
+title: Propriété CSS `border-top-width`
+short-title: border-top-width
 slug: Web/CSS/Reference/Properties/border-top-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-top-width`** permet de définir l'épaisseur de la bordure supérieure d'un élément.
@@ -71,14 +72,8 @@ border-top-width: unset;
 
 ### Valeurs
 
-- `<line-width>`
-  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le haut de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes&nbsp;:
-    - `thin` (fin)
-    - `medium` (intermédiaire)
-    - `thick` (épais)
-
-> [!NOTE]
-> La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Les mots-clés possibles sont&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

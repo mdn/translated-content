@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLMetaElement.scheme`** プロパティは {{domxref("HTMLMetaElement.content")}} 属性の値のスキームを定義します。
 `scheme` プロパティは、`content` プロパティの値を解釈するために使用する追加情報を提供できるようにするために作成されました。`scheme` プロパティはスキーム形式（`YYYY-MM-DD` など）、スキーム形式名（`ISBN` など）、またはスキーム形式に関する詳細情報を提供する URI を値として導きます。スキームは `content` 属性の値の形式を定義します。

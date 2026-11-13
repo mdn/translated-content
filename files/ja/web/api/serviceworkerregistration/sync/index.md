@@ -1,11 +1,12 @@
 ---
-title: ServiceWorkerRegistration.sync
+title: "ServiceWorkerRegistration: sync プロパティ"
+short-title: sync
 slug: Web/API/ServiceWorkerRegistration/sync
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`sync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、バックグラウンド同期プロセスを管理する {{domxref("SyncManager")}} インターフェイスへの参照を返します。
 

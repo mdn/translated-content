@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/leading
 original_slug: Web/EXSLT/set/leading
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `set:leading()` devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.
 

@@ -1,8 +1,9 @@
 ---
-title: hyphenate-character
+title: Propriété CSS `hyphenate-character`
+short-title: hyphenate-character
 slug: Web/CSS/Reference/Properties/hyphenate-character
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`hyphenate-character`** définit le caractère (ou la chaîne de caractères) utilisé à la fin d'une ligne avant une coupure par trait d'union.
@@ -67,7 +68,7 @@ La valeur définit soit la chaîne de caractères à utiliser à la place d'un t
 
 ## Exemples
 
-Cet exemple montre deux blocs de texte identiques qui ont {{CSSxRef("hyphens")}} définie pour garantir qu'ils se coupent où cela est nécessaire, y compris sur les coupures conditionnelles (créées avec `&shy;`).
+Cet exemple montre deux blocs de texte identiques qui ont {{CSSxRef("hyphens")}} définie pour garantir qu'ils se coupent où c'est nécessaire, y compris sur les coupures conditionnelles (créées avec `&shy;`).
 Le premier bloc a la valeur du trait d'union modifiée en symbole égal (`=`).
 Le second bloc n'a pas de valeur définie pour `hyphenate-character`, ce qui équivaut à `hyphenate-character: auto` pour les agents utilisateur qui prennent en charge cette propriété.
 

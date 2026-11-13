@@ -11,7 +11,7 @@ slug: Web/API/WebGLRenderingContext/clearColor
 
 ## 句法
 
-```plain
+```js-nolint
 void gl.clearColor(red, green, blue, alpha);
 ```
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`displayId`** は {{domxref("Gamepad")}} インターフェイスの読み取り専用プロパティで、 {{domxref("VRDisplay")}} に関連付けられた {{domxref("VRDisplay.displayId")}} を返します。 `VRDisplay` は表示されるシーンをそのゲームパッドで操作します。
 

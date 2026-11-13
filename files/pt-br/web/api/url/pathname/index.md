@@ -5,7 +5,7 @@ slug: Web/API/URL/pathname
 
 {{ApiRef("URL API")}}
 
-A propriedade **`pathname`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} qeu contém uma inicial `'/'` seguido pelo caminho da URL não incluindo a query string ou fragmento (ou a string vazia se não houver caminho).
+A propriedade **`pathname`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} qeu contém uma inicial `'/'` seguido pelo caminho da URL não incluindo a query string ou fragmento (ou a string vazia se não houver caminho).
 
 O caminho da URL é uma sequência de segmentos delimitada por `/`, que pode ser um de `.`, `..` ou uma string com zero ou mais caracteres excluindo `/`, `?` e `#` .
 
@@ -17,7 +17,7 @@ Alguns sistemas usam os caracteres `;` e `=` para delimitar parâmetros e valore
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

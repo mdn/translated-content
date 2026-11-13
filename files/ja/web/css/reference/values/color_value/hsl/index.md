@@ -1,12 +1,13 @@
 ---
-title: hsl()
+title: CSS `hsl()` 関数
+short-title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
-> `hsla()` 関数記法は `hsl()` の別名です。両社はまったく同じです。`hsl()` を使用することが推奨されています。
+> `hsla()` 関数記法は `hsl()` の別名です。両者はまったく同じです。`hsl()` を使用することが推奨されています。
 
 **`hsl()`** 関数記法は、{{glossary("RGB", "sRGB")}} {{glossary("color space", "色空間")}}において、色相、彩度、明度の成分によって色を表現します。オプションのアルファ成分は、その色の透明度を表します。
 
@@ -71,7 +72,7 @@ hsl(120deg, 75%, 25%, 0.8)
 
 ### 値
 
-下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に対してすることができる値の説明です。
+下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に使える値の説明です。
 
 #### 絶対的な値の構文
 

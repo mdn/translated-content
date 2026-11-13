@@ -3,8 +3,6 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 ---
 
-{{AddonSidebar}}
-
 Ajoute un nouveau panneau aux devtools.
 
 Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 
 ## 语法
 
-```plain
+```js-nolint
 Math.sign(x);
 ```
 

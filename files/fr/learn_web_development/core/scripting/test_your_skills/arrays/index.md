@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 ---
 
-{{learnsidebar}}
-
 L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn_web_development/Core/Scripting/Arrays).
 
 > [!NOTE]

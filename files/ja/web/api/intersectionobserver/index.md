@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Intersection Observer API")}}
 
-**`IntersectionObserver`** は[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) のインターフェイスで、対象となる要素と祖先要素または文書の最上位の{{Glossary('viewport', 'ビューポート')}}とがの交差状態（重なり合っている状態）の変化を非同期に監視する方法を提供します。その祖先要素またはビューポートはルートと呼ばれます。
+**`IntersectionObserver`** は[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) のインターフェイスで、対象となる要素と祖先要素または文書の最上位の{{Glossary('viewport', 'ビューポート')}}との交差状態（重なり合っている状態）の変化を非同期に監視する方法を提供します。その祖先要素またはビューポートはルートと呼ばれます。
 
 `IntersectionObserver` が生成されると、ルート内での可視部分の比率を監視するように構成されます。この構成はいったん `IntersectionObserver` が生成されると変更できませんので、与えられたオブザーバーオブジェクトは可視性の特定の変化を監視する場合にのみ利用できます。しかし、同じオブザーバーで複数の対象要素を監視することができます。
 

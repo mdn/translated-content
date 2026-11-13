@@ -2,10 +2,10 @@
 title: SMIL による SVG アニメーション
 slug: Web/SVG/Guides/SVG_animation_with_SMIL
 l10n:
-  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
+  sourceCommit: 69ff5fe627a17cf397ebd7b0f88a83c272c0bce5
 ---
 
-SMIL [(Synchronized Multimedia Integration Language)](https://www.w3.org/TR/REC-smil/) は、対話型マルチメディアプレゼンテーションを作成するための XML ベースの言語です。
+SMIL ([Synchronized Multimedia Integration Language](https://www.w3.org/TR/SMIL/)) は、対話型マルチメディアプレゼンテーションを作成するための XML ベースの言語です。
 制作者は、他の XML ベースの言語で SMIL 構文を使用して、アニメーションの要素のタイミングやレイアウトを定義することができます。
 
 SMIL では次のようなことができます。
@@ -51,7 +51,7 @@ SMIL では次のようなことができます。
 
 ## transform 属性のアニメーション
 
-{{ SVGElement("animateTransform") }} 要素により、 [transform](/ja/docs/Web/SVG/Reference/Attribute/transform) 属性のアニメーションができます。数値をとる [x](/ja/docs/Web/SVG/Reference/Attribute/x) のような、単純な属性のアニメーションを行うのではないため、この新しい要素が必要です。 rotation 属性は `rotation(theta, x, y)` のようになります。ここで `theta` は角度、`x` および `y` は絶対位置を示します。以下の例では、回転の中心位置と角度のアニメーションを行います。
+{{ SVGElement("animateTransform") }} 要素により、 [transform](/ja/docs/Web/SVG/Reference/Attribute/transform) 属性のアニメーションができます。数値をとる [x](/ja/docs/Web/SVG/Reference/Attribute/x) のような、単純な属性のアニメーションを行うのではないため、この新しい要素が必要です。 回転属性は `rotate(theta, x, y)` のようになります。ここで `theta` は角度、`x` および `y` は絶対位置を示します。以下の例では、回転の中心位置と角度のアニメーションを行います。
 
 ```html
 <svg width="300" height="100">
@@ -79,9 +79,9 @@ SMIL では次のようなことができます。
 
 {{ EmbedLiveSample('Animating_the_transform_attributes', '100%', 120) }}
 
-## パスを追跡するアニメーション
+## パスをたどるアニメーション
 
-The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素の位置や回転のアニメーションを可能にします。パスは {{ SVGElement("path") }} と同じ方法で定義されます。オブジェクトがパスの接線に沿って回転するかを定義する属性を設定することができます。
+{{ SVGElement("animateMotion") }} 要素は、パスをたどる SVG 要素の位置や回転のアニメーションを可能にします。パスは {{ SVGElement("path") }} と同じ方法で定義されます。オブジェクトがパスの接線に沿って回転するかを定義する属性を設定することができます。
 
 ### 例 1: 直線的な移動
 
@@ -131,5 +131,5 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
 ## 関連情報
 
 - [SVG](/ja/docs/Web/SVG)
-- [SVG アニメーション仕様書](https://www.w3.org/TR/SVG/animate.html)（英語）
-- [SMIL 仕様書](https://www.w3.org/TR/REC-smil)（英語）
+- [SVG アニメーション仕様書](https://w3c.github.io/svgwg/svg2-draft/animate.html)<sup>(英語)</sup>
+- [SMIL 仕様書](https://www.w3.org/TR/SMIL/)<sup>(英語)</sup>

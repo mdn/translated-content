@@ -1,8 +1,9 @@
 ---
-title: size-adjust
+title: Descripteur de règle CSS `size-adjust`
+short-title: size-adjust
 slug: Web/CSS/Reference/At-rules/@font-face/size-adjust
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size-adjust`** CSS définit un multiplicateur destiné aux contours des glyphes et aux mesures associées à la police. Cela facilite l'harmonisation de l'apparence des polices lorsqu'elles sont rendues avec la même taille.

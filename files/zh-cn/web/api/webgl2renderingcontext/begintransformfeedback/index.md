@@ -9,7 +9,7 @@ slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.beginTransformFeedback(primitiveMode);
 ```
 

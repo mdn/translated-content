@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-position
+title: Propriété CSS `font-synthesis-position`
+short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -29,6 +30,8 @@ font-synthesis-position: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Indique que la variante de position manquante peut être synthétisée par le navigateur si besoin.
@@ -87,7 +90,7 @@ Cet exemple montre comment désactiver la synthèse des variantes d'exposant et 
 
 #### Résultat
 
-{{EmbedLiveSample('Disabling synthesis of position typeface', '', '100')}}
+{{EmbedLiveSample("Désactiver la synthèse des variantes de position", "", 100)}}
 
 ## Spécifications
 

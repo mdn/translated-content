@@ -1,16 +1,14 @@
 ---
-title: overflow-y
+title: Propriété CSS `overflow-y`
+short-title: overflow-y
 slug: Web/CSS/Reference/Properties/overflow-y
-original_slug: Web/CSS/overflow-y
 l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-y`** définit ce qui s'affiche lorsque le contenu dépasse les bords supérieur et inférieur d'un élément de niveau bloc. Cela peut être rien, une barre de défilement ou le contenu débordant. Cette propriété peut également être définie en utilisant la propriété raccourcie {{CSSxRef("overflow")}}.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow).
-
-{{InteractiveExample("CSS Demo: overflow-y")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: overflow-y")}}
 
 ```css interactive-example-choice
 overflow-y: visible;
@@ -35,9 +33,10 @@ overflow-y: auto;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <p id="example-element">
-    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
-    Inn Hall. Implacable November weather. As much mud in the streets as if the
-    waters had but newly retired from the face of the earth.
+    Le trimestre de la Saint-Michel vient de s'achever, et le Lord Chancelier
+    siège à Lincoln's Inn Hall. Le temps de novembre est implacable. Il y a
+    autant de boue dans les rues que si les eaux venaient à peine de se retirer
+    de la surface de la terre.
   </p>
 </section>
 ```
@@ -70,25 +69,25 @@ overflow-y: revert-layer;
 overflow-y: unset;
 ```
 
-La propriété `overflow-y` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
+La propriété `overflow-y` est définie avec une seule valeur de mot-clé {{CSSxRef("overflow_value", "&lt;overflow&gt;")}}.
 
-Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), la valeur calculée sera implicitement `auto`.
+Si {{CSSxRef("overflow-x")}} est `hidden`, `scroll` ou `auto`, et que la propriété `overflow-y` est `visible` (par défaut), la valeur sera calculée implicitement comme `auto`.
 
 ### Valeurs
 
 - `visible`
-  - : Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (<i lang="en">padding box</i>) en haut et en bas malgré le manque d'espace. La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
+  - : Le contenu débordant n'est pas rogné et peut être visible en dehors du remplissage de la boîte de l'élément sur les bords supérieur et inférieur. La boîte de l'élément n'est pas un {{Glossary("scroll container", "conteneur de défilement")}}.
 - `hidden`
-  - : Le contenu est rogné afin de tenir verticalement dans la boîte de remplissage (<i lang="en">padding box</i>) et aucun ascenseur vertical n'est affiché.
+  - : Le contenu débordant est rogné si nécessaire pour tenir verticalement dans le remplissage de la boîte de l'élément. Aucune barre de défilement n'est fournie.
 - `clip`
-  - : Le contenu qui dépasse est rogné sur _le bord de la limite de dépassement_ définie avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin). Ainsi, le contenu dépasse de la boîte de remplissage de l'élément d'autant que la longueur fournie par `overflow-clip-margin` ou de `0px` si cette dernière n'est pas définie. Contrairement à `hidden`, `clip` interdit tout défilement, y compris celui qui proviendrait d'un script. Aucun contexte de formatage supplémentaire n'est créé. Pour établir un contexte de formatage, il faudra utiliser `overflow: clip` avec [`display: flow-root`](/fr/docs/Web/CSS/Reference/Properties/display#flow-root). La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
+  - : Le contenu débordant est rogné au niveau du _bord de rognage du dépassement_ qui est défini à l'aide de la propriété {{CSSxRef("overflow-clip-margin")}}. En conséquence, le contenu déborde du remplissage de la boîte de l'élément de la valeur {{CSSxRef("&lt;length&gt;")}} de `overflow-clip-margin` ou de `0px` si elle n'est pas définie. La différence entre `clip` et `hidden` est que le mot-clé `clip` interdit également tout défilement, y compris le défilement programmatique. Aucun nouveau contexte de formatage n'est créé. Pour établir un contexte de formatage, utilisez `overflow: clip` avec {{CSSxRef("display", "display: flow-root", "#flow-root")}}. La boîte de l'élément n'est pas un contenant de défilement.
 - `scroll`
-  - : Le contenu est rogné afin de tenir verticalement au sein de la boîte de remplissage (<i lang="en">padding box</i>) et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.
+  - : Le contenu débordant est rogné si nécessaire pour tenir verticalement dans le remplissage de la boîte de l'élément. Les navigateurs affichent des barres de défilement dans la direction verticale, que du contenu soit effectivement rogné ou non. (Cela empêche les barres de défilement d'apparaître ou de disparaître lorsque le contenu change.) Les imprimantes peuvent tout de même imprimer le contenu débordant.
 - `auto`
-  - : Le contenu qui dépasse est rogné dans la boîte de contenu et on peut le faire défiler pour le faire apparaître. À la différence de `scroll`, les agents utilisateur afficheront les ascenseurs uniquement si le contenu dépasse et les masqueront par défaut. Si le contenu tient dans la boîte de remplissage de l'élément, cette valeur aura le même effet que `visible` et établira un nouveau contexte de formatage de bloc. Les navigateurs de bureau fournissent des barres de défilement si le contenu dépasse.
+  - : Le contenu débordant est rogné au niveau du remplissage de la boîte de l'élément, et le contenu débordant peut être défilé pour être affiché. Contrairement à `scroll`, les agents utilisateurs affichent des barres de défilement _uniquement si_ le contenu déborde et masquent les barres de défilement par défaut. Si le contenu tient dans le remplissage de la boîte de l'élément, cela ressemble à `visible`, mais crée tout de même un nouveau contexte de formatage de bloc.
 
 > [!NOTE]
-> La valeur `overlay` est un synonyme historique de `auto`. Avec `overlay`, les barres de défilement étaient dessinées au-dessus du contenu plutôt que de prendre de l'espace.
+> La valeur de mot-clé `overlay` est une valeur d'alias héritée pour `auto`. Avec `overlay`, les barres de défilement sont dessinées au-dessus du contenu au lieu de prendre de la place.
 
 ## Définition formelle
 
@@ -100,12 +99,14 @@ Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden
 
 ## Exemples
 
-### HTML
+### Définir le comportement de `overflow-y`
+
+#### HTML
 
 ```html
 <ul>
   <li>
-    <code>overflow-y:hidden</code> — cache le texte en dehors de la boîte
+    <code>overflow-y: hidden</code> — cache le texte en dehors de la boîte
     <div id="div1">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -116,7 +117,7 @@ Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden
   </li>
 
   <li>
-    <code>overflow-y:scroll</code> — ajoute toujours un ascenseur
+    <code>overflow-y: scroll</code> — ajoute toujours un ascenseur
     <div id="div2">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -127,7 +128,7 @@ Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden
   </li>
 
   <li>
-    <code>overflow-y:visible</code> — affiche le texte en dehors de la boîte si
+    <code>overflow-y: visible</code> — affiche le texte en dehors de la boîte si
     besoin
     <div id="div3">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -139,7 +140,7 @@ Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden
   </li>
 
   <li>
-    <code>overflow-y:auto</code> — sur la plupart des navigateurs, cela sera
+    <code>overflow-y: auto</code> — sur la plupart des navigateurs, cela sera
     équivalent à <code>scroll</code>
     <div id="div4">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -152,7 +153,7 @@ Si [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -179,9 +180,9 @@ div {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("", "100%", "780")}}
+{{EmbedLiveSample("Définir le comportement de `overflow-y`", "100%", 780)}}
 
 ## Spécifications
 
@@ -193,9 +194,6 @@ div {
 
 ## Voir aussi
 
-- [`clip`](/fr/docs/Web/CSS/Reference/Properties/clip)
-- [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
-- [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
-- [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/Guides/Overflow)
-- [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- Les propriétés {{CSSxRef("clip")}}, {{CSSxRef("display")}}, {{CSSxRef("text-overflow")}}, {{CSSxRef("white-space")}}
+- Le module [de débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
+- [Apprendre&nbsp;: Contenu débordant](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

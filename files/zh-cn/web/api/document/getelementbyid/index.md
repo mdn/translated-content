@@ -1,8 +1,9 @@
 ---
 title: Document：getElementById() 方法
+short-title: getElementById()
 slug: Web/API/Document/getElementById
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{ ApiRef("DOM") }}
@@ -37,16 +38,9 @@ getElementById(id)
 ### HTML
 
 ```html
-<html lang="zh">
-  <head>
-    <title>getElementById 示例</title>
-  </head>
-  <body>
-    <p id="para">这里有一些文本</p>
-    <button onclick="changeColor('blue');">蓝色</button>
-    <button onclick="changeColor('red');">红色</button>
-  </body>
-</html>
+<p id="para">这里有一些文本</p>
+<button>蓝色</button>
+<button>红色</button>
 ```
 
 ### JavaScript
@@ -56,6 +50,16 @@ function changeColor(newColor) {
   const elem = document.getElementById("para");
   elem.style.color = newColor;
 }
+
+document.querySelectorAll("button").forEach((button) => {
+  const colors = {
+    蓝色: "blue",
+    红色: "red",
+  };
+  button.addEventListener("click", (event) => {
+    changeColor(colors[event.target.textContent]);
+  });
+});
 ```
 
 ### 结果
@@ -69,27 +73,17 @@ function changeColor(newColor) {
 ### 示例
 
 ```html
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <title>文档</title>
-  </head>
-  <body>
-    <div id="parent-id">
-      <p>你好世界 1</p>
-      <p id="test1">你好世界 2</p>
-      <p>你好世界 3</p>
-      <p>你好世界 4</p>
-    </div>
-    <script>
-      const parentDOM = document.getElementById("parent-id");
-      const test1 = parentDOM.getElementById("test1");
-      // 抛出错误
-      // Uncaught TypeError: parentDOM.getElementById is not a function
-    </script>
-  </body>
-</html>
+<div id="parent-id">
+  <p>你好世界 1</p>
+  <p id="test1">你好世界 2</p>
+  <p>你好世界 3</p>
+  <p>你好世界 4</p>
+</div>
+```
+
+```js
+const parentDOM = document.getElementById("parent-id");
+const test1 = parentDOM.getElementById("test1");
 ```
 
 如果没有查找到给定 `id` 的元素，这个方法会返回 `null`。注意 `id` 参数是大小写敏感的，所以 `document.getElementById("Main")` 会返回 `null` 而不是元素 `<div id="main">`，因为“M”和“m”对于这个方法而言是不一样的。
@@ -98,8 +92,8 @@ function changeColor(newColor) {
 
 ```js
 const element = document.createElement("div");
-element.id = "testqq";
-const el = document.getElementById("testqq"); // el 会是 null！
+element.id = "test";
+const el = document.getElementById("test"); // el 会是 null！
 ```
 
 对于非 HTML 文档，DOM 的实现必须说明哪个属性是 ID 类型。只有文档的 DTD 定义了这个属性名是“id”时，“id”才会被认为是 ID 类型。在 [XHTML](/zh-CN/docs/Glossary/XHTML)、XUL 或者其他文档中，“id”通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这预期会返回 `null`。
@@ -114,6 +108,6 @@ const el = document.getElementById("testqq"); // el 会是 null！
 
 ## 参见
 
-- {{domxref("Document")}}，其他可用于获取文档中的元素的方法和属性。
+- {{domxref("Document")}}，有关其他方法和属性的参考，可用于获取文档中元素的引用。
 - {{domxref("Document.querySelector()")}} 用于类似于 `'div.myclass'` 这样的查询的选择器
-- [xml:id](https://www.w3.org/TR/xml-id/)——有一个允许 `getElementById()` 在 XML 文档（例如通过 Ajax 调用返回的文档）中获取 'xml:id' 的工具方法。
+- {{domxref("Document.evaluate()")}}——有一个可以在 {{glossary("XML")}} 文档中通过 `xml:id` 来查询的实用方法。

@@ -3,7 +3,7 @@ title: VRFrameData.leftProjectionMatrix
 slug: Web/API/VRFrameData/leftProjectionMatrix
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`leftProjectionMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用される射影を表します。
 

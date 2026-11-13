@@ -39,7 +39,7 @@ Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Trans
 Algumas ferramentas permitem que você publique seu site online:
 
 - [Github](https://github.com/) é um site de "codificação social". Ele permite que você faça upload de repositórios de código para armazenamento no **sistema de controle de versão** [Git](http://git-scm.com/)**.** Você pode então colaborar em projetos de código, e o sistema é open-source por padrão, o que significa que todo mundo pode encontrar seu código Github, usá-lo, aprender com ele e se aprimorar. O Gitub tem um recurso muito útil chamado [GitHub Pages](https://pages.github.com/), que permite expor o código do site ao vivo na web.
-- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) Para maiores informações.
+- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) Para maiores informações.
 
 Diferente da maioria das hospedagens, essas ferramentas geralmentre são gratuitas, mas você tem um conjunto limitado de recursos.
 

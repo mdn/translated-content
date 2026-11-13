@@ -26,7 +26,7 @@ objectURL = URL.createObjectURL(object);
 
 ### Valeur de retour
 
-Une {{domxref("DOMString")}} contenant une URL d'objet, pouvant être utilisée comme une référence vers l'objet source `object` spécifié.
+Une {{jsxref("String")}} contenant une URL d'objet, pouvant être utilisée comme une référence vers l'objet source `object` spécifié.
 
 ## Exemple
 

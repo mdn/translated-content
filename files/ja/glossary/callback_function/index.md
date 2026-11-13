@@ -2,10 +2,8 @@
 title: Callback function (コールバック関数)
 slug: Glossary/Callback_function
 l10n:
-  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
+  sourceCommit: bc0796927a1f937dc8ba92afde355fb2d7c05306
 ---
-
-{{GlossarySidebar}}
 
 **コールバック関数**は、引数として他の関数に渡され、外側の関数の中で呼び出されて、何らかのルーチンやアクションを完了させる関数のことです。
 
@@ -22,12 +20,24 @@ doSomething(() => {
   value = 2;
 });
 
-console.log(value);
+console.log(value); // 1 or 2?
 ```
 
 もし `doSomething` がコールバックを同期的に呼び出すのであれば、`value = 2` が同期的に実行されるので、最後の文は `2` をログ出力します。もしコールバックが非同期的であれば、`value = 2` が実行されるのは `console.log` 文の後なので、最後の文は `1` をログ出力します。
 
-同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。
+同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、{{domxref("Window.setTimeout", "setTimeout()")}} や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。 以下は、コールバックを同期的および非同期的に呼び出す `doSomething` の実装例です。
+
+```js
+// 同期
+function doSomething(callback) {
+  callback();
+}
+
+// 非同期
+function doSomething(callback) {
+  setTimeout(callback, 0);
+}
+```
 
 [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises#タイミング)ガイドには、非同期コールバックのタイミングについての詳しい情報があります。
 

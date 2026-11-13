@@ -1,11 +1,12 @@
 ---
-title: border-inline-width
+title: Propriété CSS `border-inline-width`
+short-title: border-inline-width
 slug: Web/CSS/Reference/Properties/border-inline-width
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-width`** définit la largeur des bordures logiques en ligne d'un élément, qui correspond à une largeur de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-width")}} et {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}} et {{CSSxRef("border-right-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-width`** définit la largeur des bordures logiques en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à une largeur de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-width")}} et {{CSSxRef("border-bottom-width")}}, ou {{CSSxRef("border-left-width")}} et {{CSSxRef("border-right-width")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 La largeur de bordure dans l'autre dimension peut être définie avec {{CSSxRef("border-block-width")}}, qui définit {{CSSxRef("border-block-start-width")}} et {{CSSxRef("border-block-end-width")}}.
 
@@ -50,7 +51,7 @@ direction: rtl;
 ## Syntaxe
 
 ```css
-/* Valeurs de type <'border-width'> */
+/* Valeurs de type <'line-width'> */
 border-inline-width: 5px 10px;
 border-inline-width: 5px;
 border-inline-width: thick;
@@ -65,8 +66,8 @@ border-inline-width: unset;
 
 ### Valeur
 
-- `<'border-width'>`
-  - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Les mots-clés possibles sont&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 

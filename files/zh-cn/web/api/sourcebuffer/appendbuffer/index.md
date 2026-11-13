@@ -16,7 +16,7 @@ appendBuffer(source)
 ### 参数
 
 - `source`
-  - : 一个 {{domxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或一个 {{jsxref("DataView")}} 对象，其中包含了你想要添加到 `SourceBuffer` 的媒体片段数据。
+  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或一个 {{jsxref("DataView")}} 对象，其中包含了你想要添加到 `SourceBuffer` 的媒体片段数据。
 
 ### 返回值
 

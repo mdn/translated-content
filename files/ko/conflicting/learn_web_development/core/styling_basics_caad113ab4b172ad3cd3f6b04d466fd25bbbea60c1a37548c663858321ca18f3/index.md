@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics", "conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3", "Learn_web_development/Core/Styling_basics")}}
 
 좋은 인상을 남기고 싶다면, 멋진 편지지 양식에 편지를 쓰는 것이 좋은 시작이 될 수 있습니다. 이번 평가에서는 좋은 느낌을 줄 수 있는 온라인 템플릿을 만들어 보도록 하겠습니다.
 
@@ -84,4 +84,4 @@ l10n:
    - 평가받거나 도움이 필요한 예제에 대한 온라인 공유 가능 편집기 링크(위 1단계에서 설명한 대로)를 포함하세요. 코드를 볼 수 없다면 코딩 문제가 있는 사람을 도와주기 어렵기 때문에 이 방법을 사용하는 것이 좋습니다.
    - 실제 과제 또는 평가 페이지로 연결되는 링크를 통해 도움을 원하는 문제를 찾을 수 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics", "conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3", "Learn_web_development/Core/Styling_basics")}}

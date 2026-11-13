@@ -69,6 +69,6 @@ inputForm.onsubmit = (event) => {
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

@@ -1,8 +1,9 @@
 ---
-title: corner-left-shape
+title: Propriété CSS `corner-left-shape`
+short-title: corner-left-shape
 slug: Web/CSS/Reference/Properties/corner-left-shape
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
@@ -13,7 +14,7 @@ Pour une description complète du comportement des formes de coins et plusieurs 
 
 ## Propriétés constitutives
 
-La propriété `corner-left-shape` est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
+Cette propriété est une forme raccourcie pour les propriétés physiques suivantes&nbsp;:
 
 - {{CSSxRef("corner-top-left-shape")}}
 - {{CSSxRef("corner-bottom-left-shape")}}

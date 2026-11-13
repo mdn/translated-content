@@ -26,7 +26,7 @@ isHTML(value)
 
 ### 返値
 
-論理値 ({{jsxref("boolean")}}) で、オブジェクトが有効な {{domxref("TrustedHTML")}} オブジェクトであれば true です。
+論理値 ({{jsxref("Boolean")}}) で、オブジェクトが有効な {{domxref("TrustedHTML")}} オブジェクトであれば true です。
 
 ## 例
 

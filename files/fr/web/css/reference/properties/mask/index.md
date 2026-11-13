@@ -1,11 +1,12 @@
 ---
-title: mask
+title: Propriété CSS `mask`
+short-title: mask
 slug: Web/CSS/Reference/Properties/mask
 l10n:
-  sourceCommit: 7b291dab974ec1ceb97c83f45ce76c3afada2e63
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask`** applique un masque à un élément (partiellement ou totalement) en masquant ou en rognant une zone définie de l'image. Il s'agit d'une propriété raccourcie pour toutes les propriétés [`mask-*`](#propriétés_constitutives). La propriété accepte une ou plusieurs valeurs séparées par des virgules, où chaque valeur correspond à un [`<mask-layer>`](#mask-layer).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask`** applique un masque à un élément (partiellement ou totalement) en masquant ou en rognant une zone définie de l'image. Il s'agit d'une propriété raccourcie pour toutes les propriétés [`mask-*`](#propriétés_constitutives). La propriété accepte une ou plusieurs valeurs séparées par des virgules, où chaque valeur correspond à un [`<mask-layer>`](#mask-layer).
 
 ## Propriétés constitutives
 
@@ -67,7 +68,7 @@ mask: unset;
     - `<repeat-style>`
       - : Cette valeur définit le mode de répétition de l'image du masque. Voir {{CSSxRef("mask-repeat")}}.
     - `<geometry-box>`
-      - : Si une seule valeur `<geometry-box>` est fournie, elle définira les valeurs de {{CSSxRef("mask-origin")}} et {{CSSxRef("mask-clip")}}. Si deux valeurs sont fournies, la première sera utilisée pour définir {{CSSxRef("mask-origin")}} et la deuxième pour définir {{CSSxRef("mask-clip")}}.
+      - : Si une seule valeur `<geometry-box>` est fournie, elle définit les valeurs de {{CSSxRef("mask-origin")}} et {{CSSxRef("mask-clip")}}. Si deux valeurs sont fournies, la première est utilisée pour définir {{CSSxRef("mask-origin")}} et la deuxième pour définir {{CSSxRef("mask-clip")}}.
     - `<geometry-box> | no-clip`
       - : Cette valeur définit la zone qui est impactée par l'image du masque. Voir {{CSSxRef("mask-clip")}}.
     - `<compositing-operator>`
@@ -77,7 +78,7 @@ mask: unset;
 
 La propriété raccourcie `mask` applique un masque sur une partie ou la totalité de l'élément auquel elle est appliquée. Les parties de l'élément qui ont un masque, visibles ou partiellement affichées dépendent soit de l'opacité (canal alpha du masque), soit de la luminosité (luminance) du masque. En masquage alpha, les zones opaques du masque révèlent l'élément, et les zones transparentes le masquent. En masquage luminance, les zones claires et opaques du masque révèlent l'élément, et les zones sombres ou transparentes le masquent.
 
-Bien que toutes les propriétés constitutives du masque ne doivent pas être déclarées, toute valeur omise prendra sa valeur initiale, qui est&nbsp;:
+Bien que toutes les propriétés constitutives du masque ne doivent pas être déclarées, toute valeur omise prend sa valeur initiale, qui est&nbsp;:
 
 ```css
 mask-image: none;

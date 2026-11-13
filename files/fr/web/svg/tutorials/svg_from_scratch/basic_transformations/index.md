@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
 original_slug: Web/SVG/Tutorial/Basic_Transformations
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}
 
 Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais avant toute chose, il faut vous présenter l'élément `<g>`. Cet assistant va vous permettre d'assigner des attributs à un ensemble d'éléments. En fait, c'est bien son seul rôle. Par exemple :

@@ -1,8 +1,9 @@
 ---
-title: -moz-orient
+title: Propriété CSS `-moz-orient`
+short-title: -moz-orient
 slug: Web/CSS/Reference/Properties/-moz-orient
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -24,6 +25,8 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-moz-orient`** définit l'orientation 
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `inline`
   - : L'élément est affiché dans la même direction que l'axe du texte&nbsp;: il est horizontal si le mode d'écriture est horizontal et vertical pour un mode d'écriture vertical.

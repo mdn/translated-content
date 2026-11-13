@@ -175,7 +175,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
 
 ### Encontrando uma substring dentro de uma string e extraindo-a
 
-1. Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
+1. Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
 
    ```js
    browserType.indexOf("zilla");
@@ -199,7 +199,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
    }
    ```
 
-3. Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
+3. Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref("String.prototype.slice()", "slice()")}} pode ser usado para extrair isto. Tente o seguinte:
 
    ```js
    browserType.slice(0, 3);

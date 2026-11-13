@@ -1,8 +1,9 @@
 ---
-title: -webkit-box-reflect
+title: Propriété CSS `-webkit-box-reflect`
+short-title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -34,6 +35,8 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-box-reflect`** peut être util
 
 ### Valeurs
 
+Cette propriété est définie comme une liste de valeurs séparées par des espaces&nbsp;:
+
 - `above`, `below`, `right`, `left`
   - : Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement&nbsp;: au-dessus, en-dessous, à droite, à gauche).
 - {{CSSxRef("&lt;length&gt;")}}
@@ -51,7 +54,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-box-reflect`** peut être util
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard, mais on pourra utiliser la fonction CSS standardisée {{CSSxRef("element()")}}.
+Cette propriété ne fait partie d'aucun standard, mais on peut utiliser la fonction CSS standardisée {{CSSxRef("element()")}}.
 
 ## Compatibilité des navigateurs
 

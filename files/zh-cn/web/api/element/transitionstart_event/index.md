@@ -1,59 +1,57 @@
 ---
-title: HTMLElement：transitionstart 事件
+title: Element：transitionstart 事件
+short-title: transitionstart
 slug: Web/API/Element/transitionstart_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef}}
 
-**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/Guides/Transitions/Using) 实际开始的时候触发，或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
+**`transitionstart`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)实际开始时触发，也即在任何 {{cssxref("transition-delay")}} 结束之后。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">是否冒泡</th>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">是否可取消</th>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("TransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理器属性</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+此事件不可取消。
+
+## 语法
+
+在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+
+```js-nolint
+addEventListener("transitionstart", (event) => { })
+
+ontransitionstart = (event) => { }
+```
+
+## 事件类型
+
+{{domxref("TransitionEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("TransitionEvent")}}
 
 ## 示例
 
-下列代码对 `transitionstart` 事件添加了一个监听器：
+以下代码为 `transitionstart` 事件添加监听器：
 
 ```js
 element.addEventListener("transitionstart", () => {
-  console.log("transition 开始");
+  console.log("过渡已开始");
 });
 ```
 
-一样的代码，但是使用 [`ontransitionstart`](/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionstart) 属性来替代 `addEventListener()`：
+同样的效果，但使用 `ontransitionstart` 属性而非 `addEventListener()`：
 
 ```js
 element.ontransitionstart = () => {
-  console.log("transition 开始");
+  console.log("过渡已开始");
 };
 ```
 
 ### 运行实例
 
-在下面的例子中，我们有一个简单的 {{htmlelement("div")}} 元素，并设置了一个包含 delay 的 transition 样式。
+在下面的示例中，我们有一个简单的 {{htmlelement("div")}} 元素，并为其设置了包含延迟的过渡样式：
 
 ```html
-<div class="transition">Hover over me</div>
+<div class="transition">将鼠标悬停在我上方</div>
 <div class="message"></div>
 ```
 
@@ -61,7 +59,7 @@ element.ontransitionstart = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -69,35 +67,35 @@ element.ontransitionstart = () => {
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+  background: transparent;
 }
 ```
 
-对此，我们再添加一些 JavaScript 代码来指出 {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} 和 {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} 事件在哪里触发。
+对此，我们再添加一些 JavaScript，以标明 `transitionstart` 和 {{domxref("Element/transitionrun_event", "transitionrun")}} 事件在何处触发。
 
 ```js
 const transition = document.querySelector(".transition");
 const message = document.querySelector(".message");
 
-transition.addEventListener("transitionrun", function () {
-  message.textContent = "transitionrun 触发了";
+transition.addEventListener("transitionrun", () => {
+  message.textContent = "transitionrun 已触发";
 });
 
-transition.addEventListener("transitionstart", function () {
-  message.textContent = "transitionstart 触发了";
+transition.addEventListener("transitionstart", () => {
+  message.textContent = "transitionstart 已触发";
 });
 
-transition.addEventListener("transitionend", function () {
-  message.textContent = "transitionend 触发了";
+transition.addEventListener("transitionend", () => {
+  message.textContent = "transitionend 已触发";
 });
 ```
 
-{{ EmbedLiveSample('运行实例', '100%', '150px') }}
+{{ EmbedLiveSample('运行实例', '100%', '170') }}
 
-不同的地方是：
+二者的区别在于：
 
-- transitionrun 在 transition 创建的时候被触发。（或者说在某个 delay 开始的时候）
-- transitionstart 在动画实际开始的时候被触发。 (或者说在某个 delay 结束的时候)
+- `transitionrun` 在过渡创建时触发（即在任意延迟开始时）。
+- `transitionstart` 在实际动画开始时触发（即在任意延迟结束时）。
 
 ## 规范
 
@@ -109,9 +107,6 @@ transition.addEventListener("transitionend", function () {
 
 ## 参见
 
-- {{domxref("GlobalEventHandlers.ontransitionstart")}} 事件处理器
 - {{domxref("TransitionEvent")}} 接口
-- CSS 属性：{{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- 相关的事件：{{domxref("HTMLElement/transitionend_event", "transitionend")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
-- 在 {{domxref("Document")}} targets 上的此事件：{{domxref("Document/transitionstart_event", "transitionstart")}}
-- 在 {{domxref("Window")}} targets 上的此事件：{{domxref("Window/transitionstart_event", "transitionstart")}}
+- CSS 属性：{{cssxref("transition")}}、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}}
+- 相关事件：{{domxref("Element/transitionend_event", "transitionend")}}、{{domxref("Element/transitionrun_event", "transitionrun")}}、{{domxref("Element/transitioncancel_event", "transitioncancel")}}

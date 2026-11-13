@@ -1,11 +1,12 @@
 ---
-title: border-inline-end
+title: Propriété CSS `border-inline-end`
+short-title: border-inline-end
 slug: Web/CSS/Reference/Properties/border-inline-end
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline-end`** permet de définir les valeurs individuelles des propriétés logiques de bordure en ligne de fin à un seul endroit dans la feuille de style.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline-end`** permet de définir les valeurs individuelles des propriétés logiques de bordure en incise (<i lang="en">inline</i> en anglais) de fin à un seul endroit dans la feuille de style.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-inline-end")}}
 
@@ -75,9 +76,9 @@ Les propriétés associées sont {{CSSxRef("border-block-start")}}, {{CSSxRef("b
 
 Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 
-- `<'border-width'>`
+- {{CSSxRef("&lt;line-width&gt;")}}
   - : La largeur de la bordure pour ce côté. Voir {{CSSxRef("border-width")}}.
-- `<'border-style'>`
+- {{CSSxRef("&lt;line-style&gt;")}}
   - : Le style de la ligne utilisé pour la bordure de ce côté. Voir {{CSSxRef("border-style")}}.
 - {{CSSxRef("&lt;color&gt;")}}
   - : La couleur de la bordure.

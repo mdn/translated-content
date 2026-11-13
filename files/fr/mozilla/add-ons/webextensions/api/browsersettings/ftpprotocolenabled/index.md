@@ -3,8 +3,6 @@ title: browserSettings.ftpProtocolEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le protocole FTP est activé dans le navigateur.
 
 La valeur sous-jaccente est un booléen.

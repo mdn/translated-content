@@ -3,7 +3,7 @@ title: Отправка данных формы
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 В этой статье рассматривается, что происходит, когда пользователь отправляет форму - куда передаются данные и как мы их обрабатываем, когда они туда попадают? Мы также рассмотрим некоторые проблемы безопасности, связанные с отправкой данных формы.
 
@@ -320,4 +320,4 @@ SQL -вброс представляет собой тип атак, при ко
 - [Открытый проект обеспечения веб-безопасности приложений (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [Веб-безопасность от Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
-{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

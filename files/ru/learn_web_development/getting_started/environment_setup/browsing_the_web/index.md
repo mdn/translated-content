@@ -3,7 +3,7 @@ title: Веб-страницы, веб-сайты, веб серверы и по
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В этой статье мы расскажем о различных понятиях связанных с Веб: о веб-страницах, веб-сайтах, веб-серверах и о поисковых системах. Эти термины часто ставят в тупик как начинающих работу с Веб, так и людей, редко пользующихся сетью. Давайте же разберёмся, что именно эти понятия означают!
 

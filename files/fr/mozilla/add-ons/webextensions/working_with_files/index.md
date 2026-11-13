@@ -3,8 +3,6 @@ title: Travailler avec des fichiers
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
 
-{{AddonSidebar}}
-
 Votre extension de navigateur peut avoir besoin de fichiers pour offrir des fonctionnalités complètes. Cet article examine les cinq mécanismes permettant de gérer les fichiers :
 
 - Téléchargement de fichiers dans le dossier de téléchargement sélectionné de l'utilisateur.

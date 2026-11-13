@@ -16,9 +16,9 @@ storage.setItem(keyName, keyValue);
 ### Parâmetros
 
 - _keyName_
-  - : Um {{domxref("DOMString")}} contendo o nome da chave que você deseja criar ou alterar.
+  - : Um {{jsxref("String")}} contendo o nome da chave que você deseja criar ou alterar.
 - _keyValue_
-  - : Um {{domxref("DOMString")}} contendo o valor da chave que você está criando ou atualizando.
+  - : Um {{jsxref("String")}} contendo o valor da chave que você está criando ou atualizando.
 
 ### Retornos
 

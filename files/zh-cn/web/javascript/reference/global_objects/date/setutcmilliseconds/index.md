@@ -21,7 +21,7 @@ console.log(date1.getUTCMilliseconds());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.setUTCMilliseconds(millisecondsValue)
 ```
 

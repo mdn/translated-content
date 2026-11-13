@@ -60,9 +60,9 @@ HTML は、あらゆるウェブサイトのコンテンツと構造を定義す
 - [HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : HTML を書くのはいいのですが、何かがうまくいかず、コードのどこに誤りがあるのかがわからなくなったらどうしますか。この記事では、 HTML のエラーを探し、修正するのに役立つツールをいくつか紹介します。
 
-## スキルテスト
+## 確認テスト
 
-チュートリアル記事の間に「スキルテスト」記事が配置されています。これらは、次に移動する前に最も重要な情報を理解できているかを確認するためのものです。これらを一斉に確認したい場合は、[スキルテスト: HTML](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) に一覧が掲載されています。
+チュートリアル記事の間に「確認テスト」記事が配置されています。これらは、次に移動する前に最も重要な情報を理解できているかを確認するためのものです。これらを一斉に確認したい場合は、[確認テスト: HTML](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) に一覧が掲載されています。
 
 ## その他のチュートリアル
 
@@ -75,11 +75,11 @@ HTML は、あらゆるウェブサイトのコンテンツと構造を定義す
 
 ## 関連情報
 
-- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn HTML and CSS_ コースでは、知識豊富な講師陣による楽しい対話形式のレッスンと課題を通じて、 5 つの素晴らしいプロジェクトを構築し展開しながら、HTML と CSS を学んでいきます。
 - [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
   - : HTML の基本を学ぶのに役立つ他のリソースです。
-- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : この対話型のレッスンでは、HTML は有益な記述を提供しており、その意味論的な側面がなぜ重要なのかという具体的な説明に重点を置いています。
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}

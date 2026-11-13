@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/503
 
 ## 状态
 
-```plain
+```http
 503 Service Unavailable
 ```
 

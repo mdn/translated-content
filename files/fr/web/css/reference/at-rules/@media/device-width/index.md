@@ -1,11 +1,10 @@
 ---
-title: device-width
+title: Caractéristique média CSS `device-width`
+short-title: device-width
 slug: Web/CSS/Reference/At-rules/@media/device-width
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!NOTE]
 > Pour interroger la largeur de la zone d'affichage, il faut utiliser la caractéristique média {{CSSxRef("@media/width", "width")}}.

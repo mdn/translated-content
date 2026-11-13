@@ -1,8 +1,9 @@
 ---
-title: font-family
+title: Propriété CSS `font-family`
+short-title: font-family
 slug: Web/CSS/Reference/Properties/font-family
 l10n:
-  sourceCommit: 5a8de324f0aa3873d757f68e4fcaf6bbc0104711
+  sourceCommit: 0631b5e26979eca4d1505d4762fd3ad77fb329de
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-family`** définit une liste priorisée d'un ou plusieurs noms de famille de police et/ou de noms de famille génériques pour l'élément sélectionné.
@@ -52,9 +53,9 @@ section {
 }
 ```
 
-Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle {{CSSxRef("@font-face")}} définie.
+Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisit la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée avec la règle {{CSSxRef("@font-face")}} définie.
 
-Pour fixer `font-family` et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{CSSxRef("font")}}.
+Pour fixer `font-family` et d'autres propriétés liées aux polices de caractères, on peut utiliser la propriété raccourcie {{CSSxRef("font")}}.
 
 Les auteur·ice·s doivent toujours inclure au moins un nom de famille générique dans une liste `font-family`, car il n'est pas garanti qu'une police donnée soit disponible. Cela permet au navigateur de choisir une police de secours acceptable si nécessaire.
 
@@ -107,7 +108,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     Voir aussi [Validité des noms de famille](#validité_des_noms_de_famille).
 
 - `<generic-name>`
-  - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur·ice lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis&nbsp;:
+  - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur·ice lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique doit être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis&nbsp;:
     - `serif`
       - : Les glyphes possèdent des terminaisons, des extrémités évasées ou effilées, ou de véritables empattements.
 
@@ -122,6 +123,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : Tous les glyphes ont la même largeur fixe.
 
         Par exemple&nbsp;: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
+
+        > [!NOTE]
+        > Lorsque `font-family` est défini sur le mot-clé unique `monospace` et qu'aucune `font-size` n'est définie, les navigateurs utilisent la préférence de taille de police monospace de l'utilisateur·ice, qui est souvent plus petite que la taille utilisée pour les polices proportionnelles. Voir [la taille de police monospace](#taille_de_police_monospace) pour plus de détails et comment la contrôler.
 
     - `cursive`
       - : Les glyphes des polices cursives possèdent généralement des terminaisons jointives ou d'autres caractéristiques cursives au-delà de celles des polices italiques. Les glyphes sont partiellement ou complètement reliés, et le résultat ressemble davantage à une écriture manuscrite au stylo ou au pinceau qu'à des lettres imprimées.
@@ -146,7 +150,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `ui-rounded`
       - : La police par défaut de l'interface utilisateur avec des caractéristiques arrondies.
     - `math`
-      - : Ceci concerne les besoins stylistiques particuliers de la représentation des mathématiques&nbsp;: exposant et indice, accolades sur plusieurs lignes, expressions imbriquées, et glyphes doublement barrés avec des significations distinctes.
+      - : Police qui répond aux besoins de mise en forme particuliers de la représentation des mathématiques&nbsp;: exposant et indice, accolades sur plusieurs lignes, expressions imbriquées, et glyphes doublement barrés avec des significations distinctes.
         Les feuilles de style de l'agent utilisateur peuvent définir `math { font-family: math }` afin que l'élément MathML {{MathMLElement("math")}} utilise par défaut des polices appropriées.
     - `fangsong`
       - : Un style de caractères chinois particulier se situant entre le style serif Song et la forme cursive Kai. Ce style est généralement utilisé pour les documents officiels du gouvernement.
@@ -168,7 +172,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
   font-family: "Times", "Times New Roman", "Georgia", serif;
 }
 
-.sansserif {
+.sans-serif {
   font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
@@ -202,7 +206,7 @@ div {
 ```html hidden
 <div class="serif">Ceci est un exemple de police avec empattement.</div>
 
-<div class="sansserif">Ceci est un exemple de police sans empattement.</div>
+<div class="sans-serif">Ceci est un exemple de police sans empattement.</div>
 
 <div class="monospace">Ceci est un exemple de police à chasse fixe.</div>
 
@@ -220,6 +224,42 @@ div {
 ### Résultat
 
 {{EmbedLiveSample("Quelques familles de polices courantes", 600, 220)}}
+
+### Taille de police monospace
+
+Les navigateurs maintiennent des préférences de taille de police par défaut distinctes pour les polices proportionnelles (telles que `serif` et `sans-serif`) et pour les polices monospace. Les valeurs par défaut typiques sont `16px` pour les polices proportionnelles et `13px` pour les polices monospace.
+
+Lorsque `font-family` est défini sur le mot-clé unique `monospace`, les navigateurs appliquent la préférence de taille monospace. Si les utilisateur·ice·s n'ont pas modifié leurs préférences de navigateur et que {{CSSxRef("font-size")}} n'est pas défini explicitement, le texte monospace peut être rendu plus petit que le contenu environnant. La même réduction s'applique aux éléments dont la feuille de style de l'agent utilisateur définit `font-family: monospace`, tels que {{HTMLElement("code")}} et {{HTMLElement("pre")}}.
+
+Si la valeur de `font-family` inclut plus d'une famille, même si la valeur est `monospace, monospace`, les navigateurs n'appliquent pas la préférence de taille de police monospace et rendent le texte à la `font-size` héritée. Déclarer `font-family: monospace, monospace` (ou une police monospace nommée suivie de `monospace`) rend donc à la même taille que le texte proportionnel environnant. Ce comportement n'est pas défini dans CSS, mais il est interopérable entre les principaux moteurs de navigateur.
+
+```html
+<p class="proportionnel">
+  Ce texte proportionnel est à la taille par défaut&nbsp;; généralement 16px.
+</p>
+<p class="mono-only">
+  Ce texte monospace est à la taille préférée pour les polices monospace&nbsp;;
+  généralement 13px.
+</p>
+<p class="mono-list">
+  Ce texte est en police «&nbsp;monospace, monospace&nbsp;», rendu à la même
+  taille que le texte proportionnel&nbsp;; généralement 16px.
+</p>
+```
+
+```css
+.mono-only {
+  font-family: monospace;
+}
+
+.mono-list {
+  font-family: monospace, monospace;
+}
+```
+
+{{EmbedLiveSample("Taille de police monospace", 600, 120)}}
+
+Si vous n'avez pas modifié la taille de police dans les paramètres de votre navigateur, le premier et le dernier paragraphes ont la même taille de police, rendue à la taille de police préférée du navigateur. Le paragraphe du milieu est rendu à la taille de police monospace préférée, qui est généralement définie pour être plus petite que la taille de police préférée pour les autres textes.
 
 ### Validité des noms de famille
 

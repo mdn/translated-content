@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/substring-after
 original_slug: Web/XPath/Functions/substring-after
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `substring-after` 함수는 첫 번째 인수에서 두 번째 인수가 나타난 다음의 나머지를 반환합니다.
 

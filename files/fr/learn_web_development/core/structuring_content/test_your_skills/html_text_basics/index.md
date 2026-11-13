@@ -13,7 +13,7 @@ Le but de ce test de compétences est de vous aider à évaluer si vous comprene
 > [!NOTE]
 > Pour obtenir de l'aide, lisez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez aussi nous contacter via l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
-## Les bases du texte 1
+## Les bases du texte n°1
 
 Dans cette tâche, nous vous demandons de baliser le HTML fourni en utilisant des éléments sémantiques de titre et de paragraphe.
 
@@ -67,8 +67,6 @@ h2 {
 }
 ```
 
-<!-- Code d'exemple spécifique -->
-
 ```css hidden live-sample___text-basics-1 live-sample___text-basics-1-finished
 h1,
 h2 {
@@ -81,14 +79,14 @@ p {
 }
 ```
 
-Le contenu mis à jour devrait ressembler à ceci&nbsp;:
+Le contenu mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("text-basics-1-finished", "100%", 320)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___text-basics-1-finished
 <h1>Animaux en HTML simple</h1>
@@ -113,7 +111,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
 </details>
 
-## Les bases du texte 2
+## Les bases du texte n°2
 
 Dans cette tâche, nous vous demandons de transformer la première liste non balisée en liste non ordonnée, et la seconde en liste ordonnée.
 
@@ -164,14 +162,14 @@ ul {
 }
 ```
 
-Le contenu mis à jour devrait ressembler à ceci&nbsp;:
+Le contenu mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("text-basics-2-finished", "100%", 400)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___text-basics-2-finished
 <h1>Regard sur les listes</h1>
@@ -199,7 +197,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
 </details>
 
-## Les bases du texte 3
+## Les bases du texte n°3
 
 Dans cette tâche, nous vous demandons de transformer les animaux et leurs définitions en une liste de description.
 
@@ -236,14 +234,14 @@ dt {
 }
 ```
 
-Le contenu mis à jour devrait ressembler à ceci&nbsp;:
+Le contenu mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("text-basics-3-finished", "100%", 260)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___text-basics-3-finished
 <h1>Animaux en HTML avancés</h1>
@@ -266,7 +264,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
 </details>
 
-## Les bases du texte 4
+## Les bases du texte n°4
 
 Dans cette tâche, un paragraphe vous est fourni et votre objectif est d'utiliser des éléments en ligne pour baliser quelques mots appropriés avec une forte importance, et d'autres avec une emphase.
 
@@ -302,14 +300,14 @@ em {
 }
 ```
 
-Le contenu mis à jour devrait ressembler à ceci&nbsp;:
+Le contenu mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample('text-basics-4-finished', "100%", 140)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___text-basics-4-finished
 <h1>Importance et emphase</h1>

@@ -3,12 +3,12 @@ title: "HTMLCanvasElement : évènement webglcontextcreationerror"
 short-title: webglcontextcreationerror
 slug: Web/API/HTMLCanvasElement/webglcontextcreationerror_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebGL API")}}
 
-L'évènement **`webglcontextcreationerror`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur ne parvient pas à créer un contexte {{DOMxRef("WebGLRenderingContext")}}.
+L'évènement **`webglcontextcreationerror`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur ne parvient pas à créer un contexte {{DOMxRef("WebGLRenderingContext")}}.
 
 Cet évènement possède une propriété {{DOMxRef("WebGLContextEvent.statusMessage")}}, qui peut contenir une chaîne de caractères dépendant de la plateforme avec plus d'informations sur l'échec.
 
@@ -29,13 +29,6 @@ onwebglcontextcreationerror = (event) => { }
 Un {{DOMxRef("WebGLContextEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("WebGLContextEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de son interface parente, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("WebGLContextEvent.statusMessage")}}
-  - : Une propriété en lecture seule contenant des informations supplémentaires sur l'évènement.
 
 ## Exemple
 

@@ -1,11 +1,12 @@
 ---
-title: "<q> : l'élément de citation en incise"
+title: "Élément HTML `<q>` : l'élément de citation en incise"
+short-title: <q>
 slug: Web/HTML/Reference/Elements/q
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b0a05c1384211e0eff34e9917c84086eedf9e909
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
+L'élément [HTML](/fr/docs/Web/HTML) **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilise l'élément {{HTMLElement("blockquote")}}.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;q&gt;", "tabbed-shorter")}}
 
@@ -37,7 +38,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ```html
 <p>
-  Chaque fois que Kenny est tué, Stan dira
+  Chaque fois que Kenny est tué, Stan dit
   <q cite="https://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
     Oh mon Dieu, ils ont tué Kenny !
   </q>

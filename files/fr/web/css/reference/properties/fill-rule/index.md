@@ -1,8 +1,9 @@
 ---
-title: fill-rule
+title: Propriété CSS `fill-rule`
+short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill-rule`** définit la règle utilisée pour déterminer quelles parties de la zone de dessin d'une forme SVG sont incluses à l'intérieur d'une forme à remplir. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill-rule")}} de l'élément.
@@ -28,6 +29,8 @@ fill-rule: unset;
 ```
 
 ### Valeurs
+
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `nonzero`
   - : Pour chaque point de la forme, un rayon est tracé dans une direction aléatoire au-delà des bords extérieurs de la forme. Chaque rayon est examiné pour déterminer les endroits où il croise la forme. En partant d'un compteur à zéro, ajoutez un à chaque fois qu'un segment de chemin croise le rayon de gauche à droite et soustrayez un à chaque fois qu'un segment de chemin croise le rayon de droite à gauche. Après avoir compté les croisements, si le résultat est zéro, le point est à l'extérieur du chemin. Sinon, il est à l'intérieur.

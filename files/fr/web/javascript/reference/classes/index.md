@@ -3,8 +3,6 @@ title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
 
-{{JsSidebar("Classes")}}
-
 Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.
 
 ## Définir des classes
@@ -399,8 +397,8 @@ Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et
 ## Voir aussi
 
 - [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
-- {{jsxref("Instructions/class", "Les déclarations de classes","",1)}}
-- {{jsxref("Opérateurs/class", "Les expressions de classes","",1)}}
-- {{jsxref("Opérateurs/super", "super")}}
+- {{jsxref("Statements/class", "Les déclarations de classes","",1)}}
+- {{jsxref("Operators/class", "Les expressions de classes","",1)}}
+- {{jsxref("Operators/super", "super")}}
 - [Billet sur les classes (traduction en français)](https://tech.mozfr.org/post/2015/07/29/ES6-en-details-%3A-les-classes)
 - [Champs publics et privés pour les classes (proposition de niveau 3)](https://github.com/tc39/proposal-class-fields)

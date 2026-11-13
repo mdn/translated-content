@@ -1,38 +1,50 @@
 ---
-title: Node.isEqualNode()
+title: "Node : méthode isEqualNode()"
+short-title: isEqualNode()
 slug: Web/API/Node/isEqualNode
+l10n:
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Node.isEqualNode()`** permet de tester l'égalité entre deux éléments du DOM. Deux noeuds sont équivalents s'ils ont le même type, les mêmes caractéristiques de définition (ID, nombre d'enfants et autres), des attributs qui correspondent etc. L'ensemble spécifique de points des données qui doit correspondre varie en fonction des types de nœuds.
+La méthode **`isEqualNode()`** de l'interface {{DOMxRef("Node")}} permet de tester l'égalité entre deux nœuds.
+Deux nœuds sont égaux lorsqu'ils ont le même type, les mêmes caractéristiques définissant le nœud (pour les éléments, cela inclut leur ID, le nombre d'enfants, etc.), leurs attributs correspondent, et ainsi de suite. L'ensemble spécifique de points de données qui doit correspondre varie en fonction des types de nœuds.
 
 ## Syntaxe
 
-```js
-var isEqualNode = node.isEqualNode(otherNode);
+```js-nolint
+isEqualNode(otherNode)
 ```
 
-- `otherNode` : Le noeud à comparer.
+### Paramètres
 
-## Exemple
+- `otherNode`
+  - : L'objet {{DOMxRef("Node")}} à comparer pour l'égalité.
+    > [!NOTE]
+    > Ce paramètre n'est pas optionnel, mais peut être défini sur `null`.
 
-Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Alors, nous éxécutons du JavaScript pour comparer les noeuds en utilisant `isEqualNode()` et sortons les résultats.
+### Valeur de retour
+
+Une valeur booléenne qui est `true` si les deux nœuds sont égaux, ou sinon `false`.
+Si `otherNode` est `null`, `isEqualNode()` retourne toujours faux.
+
+## Exemples
+
+Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, tandis que le second est différent. Ensuite, nous exécutons du JavaScript pour comparer les nœuds en utilisant `isEqualNode()` et afficher les résultats.
 
 ### HTML
 
 ```html
-<div>This is the first element.</div>
-<div>This is the second element.</div>
-<div>This is the first element.</div>
+<div>Ceci est le premier élément.</div>
+<div>Ceci est le deuxième élément.</div>
+<div>Ceci est le troisième élément.</div>
 
-<p id="output"></p>
+<p id="sortie"></p>
 ```
 
-### CSS
-
-```css
-#output {
+```css hidden
+#sortie {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
@@ -45,20 +57,20 @@ Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et
 ### JavaScript
 
 ```js
-let output = document.getElementById("output");
+let sortie = document.getElementById("sortie");
 let divList = document.getElementsByTagName("div");
 
-output.innerHTML +=
-  "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+sortie.innerHTML +=
+  "div 0 est égal à div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
+sortie.innerHTML +=
+  "div 0 est égal à div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
+sortie.innerHTML +=
+  "div 0 est égal à div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
 ```
 
 ### Résultats
 
-{{ EmbedLiveSample('Exemple', 480) }}
+{{EmbedLiveSample("Exemples", "100%", 210)}}
 
 ## Spécifications
 
@@ -70,4 +82,4 @@ output.innerHTML +=
 
 ## Voir aussi
 
-- {{domxref("Node.isSameNode()")}}
+- La méthode {{DOMxRef("Node.isSameNode()")}}

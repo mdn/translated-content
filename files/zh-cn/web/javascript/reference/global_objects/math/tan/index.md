@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 
 ## 语法
 
-```plain
+```js-nolint
 Math.tan(x)
 ```
 

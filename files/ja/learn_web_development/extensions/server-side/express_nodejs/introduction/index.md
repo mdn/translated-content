@@ -87,7 +87,7 @@ Node HTTP パッケージを使用することで、Node.js で簡単な ウェ�
 最後に、ウェブブラウザーで `http://localhost:8000` に移動します。テキスト以外は空の ウェブページの左上に "**Hello World**" というテキストが表示されます。
 
 > [!NOTE]
-> ローカル環境をセットアップせずに Node.js コードを試したい場合、Scrimba の [Aside: The HTTP module](https://scrimba.com/learn-nodejs-c00ho9qqh6/~07du?via=MDN) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> が提供するインタラクティブな手順を追って説明するチュートリアルで、Node HTTP パッケージを使った基本サーバーの設定を学べます。
+> ローカル環境をセットアップせずに Node.js コードを試したい場合、Scrimba の [Aside: The HTTP module](https://scrimba.com/learn-nodejs-c00ho9qqh6/~07du?via=MDN) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> が提供するインタラクティブな手順を追って説明するチュートリアルで、Node HTTP パッケージを使った基本サーバーの設定を学べます。
 
 ## ウェブフレームワーク
 
@@ -229,7 +229,7 @@ module.exports = {
 
 ### 非同期 API の使用
 
-JavaScript コードでは、操作に同期 API よりも非同期 API が頻繁に使用されるため、処理に時間がかかることがあります。 同期 API は、各操作を完了してから次の操作を開始できる API です。 たとえば、次のログ関数は同期的で、テキストをコンソールに順番に印刷します(First、Second)。
+JavaScript コードでは、完了までに時間がかかる可能性のある操作に、同期 API よりも非同期 API が頻繁に使用されます。同期 API は、各操作を完了してから次の操作を開始できる API です。たとえば、次のログ関数は同期的で、テキストをコンソールに順番に出力します(First、Second)。
 
 ```js
 console.log("First");
@@ -534,8 +534,8 @@ Express は、構造や使用するコンポーネントに関しては何も想
 
 ## 関連情報
 
-- [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>) はによる、楽しくインタラクティブな Node.js 入門を提供します。
-- [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>) は前のリンクを基に、Express フレームワークを使ってサーバーサイドのウェブサイトを構築する方法を示しています。
+- [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>) はによる、楽しくインタラクティブな Node.js 入門を提供します。
+- [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) (Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>) は前のリンクを基に、Express フレームワークを使ってサーバーサイドのウェブサイトを構築する方法を示しています。
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/ja)（ホームページ）
 - [基本的なルーティング](https://expressjs.com/ja/starter/basic-routing.html)（Express ドキュメント）

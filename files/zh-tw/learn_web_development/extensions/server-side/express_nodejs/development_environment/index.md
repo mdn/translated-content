@@ -289,7 +289,7 @@ This example may not look any shorter than the original command, but you can inc
 
 The [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool generates an Express application "skeleton". Install the generator using NPM as shown (the `-g` flag installs the tool globally so that you can call it from anywhere):
 
-```plain
+```bash
 npm install express-generator -g
 ```
 

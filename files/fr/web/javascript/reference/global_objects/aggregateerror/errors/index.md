@@ -44,6 +44,6 @@ try {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("AggregateError")}}
+- L'objet natif {{JSxRef("AggregateError")}}
 - [Guide sur le contrôle du flux et la gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [`Error`&nbsp;: `cause`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/cause)

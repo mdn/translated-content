@@ -1,9 +1,9 @@
 ---
-title: Firefox 145 pour les développeurs
+title: Firefox 145 note de version pour les développeurs
 short-title: Firefox 145
 slug: Mozilla/Firefox/Releases/145
 l10n:
-  sourceCommit: 08f01e6cd0103ac0a472f9e3cf2482bb9fc2f25a
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Cet article présente les informations concernant les changements de Firefox 145 qui concernent les développeur·euse·s.
@@ -34,11 +34,19 @@ Aucun changement notable.
 - Les en-têtes HTTP {{HTTPHeader("Integrity-Policy")}} et {{HTTPHeader("Integrity-Policy-Report-Only")}} sont désormais pris en charge pour les ressources de type script. Ils permettent aux sites web d'appliquer des [garanties d'intégrité de sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) pour les _scripts_.
   Notez que la clé [`endpoints`](/fr/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) n'est pas encore prise en charge (les violations sont consignées dans la console) ([bogue Firefox 1984973 <sup>(angl.)</sup>](https://bugzil.la/1984973)).
 
+### Sécurité
+
+- Lorsque la protection contre le suivi par rebond (BTP) est activée, elle fonctionne désormais en mode «&nbsp;sans état&nbsp;» par défaut.
+  En mode «&nbsp;sans état&nbsp;», le navigateur ne signale plus uniquement les sites faisant partie d'un «&nbsp;rebond&nbsp;» qui définissent des informations d'état (comme un cookie)&nbsp;; il signale _tous_ les sites faisant partie d'un «&nbsp;rebond&nbsp;». Voir [Atténuations du suivi par rebond](/fr/docs/Web/Privacy/Guides/Bounce_tracking_mitigations) pour plus d'informations sur le fonctionnement de BTP.
+  ([bogue Firefox 1990831 <sup>(angl.)</sup>](https://bugzil.la/1990831)).
+
 ### APIs
 
 - La propriété {{DOMxRef("ToggleEvent/source", "source")}} de l'interface {{DOMxRef("ToggleEvent")}} est désormais prise en charge.
-  Si un [popover](/fr/docs/Web/API/Popover_API) est ouvert ou fermé par un élément HTML tel qu'un {{HTMLElement("button")}}, la propriété `source` de l'événement contiendra l'élément qui a déclenché le popover ([bogue Firefox 1968987 <sup>(angl.)</sup>](https://bugzil.la/1968987)).
-- Une instance de {{DOMxRef("CSSStyleProperties")}} est désormais retournée pour la propriété `style` sur {{DOMxRef("HTMLElement.style", "HTMLElement")}}, {{DOMxRef("MathMLElement.style", "MathMLElement")}}, {{DOMxRef("SVGElement.style", "SVGElement")}} et {{DOMxRef("CSSStyleRule.style", "CSSStyleRule")}}, ainsi que par la méthode {{DOMxRef("Window.getComputedStyle()")}}. Auparavant, une instance de {{DOMxRef("CSSStyleDeclaration")}} était retournée ([bogue Firefox 1989925 <sup>(angl.)</sup>](https://bugzil.la/1989925)).
+  Si une [fenêtre contextuelle](/fr/docs/Web/API/Popover_API) est ouvert ou fermé par un élément HTML tel qu'un {{HTMLElement("button")}}, la propriété `source` de l'évènement contient l'élément qui a déclenché la fenêtre contextuelle.
+  ([bogue Firefox 1968987 <sup>(angl.)</sup>](https://bugzil.la/1968987)).
+- Une instance de {{DOMxRef("CSSStyleProperties")}} est désormais retournée pour la propriété `style` sur {{DOMxRef("HTMLElement.style", "HTMLElement")}}, {{DOMxRef("MathMLElement.style", "MathMLElement")}}, {{DOMxRef("SVGElement.style", "SVGElement")}} et {{DOMxRef("CSSStyleRule.style", "CSSStyleRule")}}, ainsi que par la méthode {{DOMxRef("Window.getComputedStyle()")}}. Auparavant, une instance de {{DOMxRef("CSSStyleDeclaration")}} était retournée.
+  ([bogue Firefox 1989925 <sup>(angl.)</sup>](https://bugzil.la/1989925)).
 
 #### Média, WebRTC et Web Audio
 
@@ -50,13 +58,13 @@ Aucun changement notable.
 
 #### WebDriver BiDi
 
-- Implémentation de la commande `emulation.setUserAgentOverride`, qui permet de remplacer la chaîne user-agent utilisée par le navigateur pour un ensemble de contextes, des contextes utilisateur ou globalement. ([bogue Firefox 1987935 <sup>(angl.)</sup>](https://bugzil.la/1987935)).
-- Implémentation de l'événement `browsingContext.downloadEnd`, émis lorsqu'un téléchargement se termine (qu'il soit réussi ou annulé) ([bogue Firefox 1970293 <sup>(angl.)</sup>](https://bugzil.la/1970293)).
-- Mise à jour de la propriété `destination` de l'événement `network.beforeRequestSent` à `document` pour les navigations de niveau supérieur. ([bogue Firefox 1985552 <sup>(angl.)</sup>](https://bugzil.la/1985552)).
-- Mise à jour des événements de téléchargement `browsingContext` pour réutiliser le même identifiant de navigation que l'événement précédent `browsingContext.navigationStarted`. ([bogue Firefox 1986938 <sup>(angl.)</sup>](https://bugzil.la/1986938)).
+- Implémentation de la commande `emulation.setUserAgentOverride`, qui vous permet de remplacer la chaîne de caractères user-agent utilisée par le navigateur pour un ensemble de contextes, des contextes utilisateur ou globalement. ([bogue Firefox 1987935 <sup>(angl.)</sup>](https://bugzil.la/1987935)).
+- Implémentation de l'évènement `browsingContext.downloadEnd`, émis lorsqu'un téléchargement se termine (qu'il soit réussi ou annulé) ([bogue Firefox 1970293 <sup>(angl.)</sup>](https://bugzil.la/1970293)).
+- Mise à jour de la propriété `destination` de l'évènement `network.beforeRequestSent` à `document` pour les navigations de niveau supérieur. ([bogue Firefox 1985552 <sup>(angl.)</sup>](https://bugzil.la/1985552)).
+- Mise à jour des évènements de téléchargement `browsingContext` pour réutiliser le même identifiant de navigation que l'évènement précédent `browsingContext.navigationStarted`. ([bogue Firefox 1986938 <sup>(angl.)</sup>](https://bugzil.la/1986938)).
 - Correction d'un bogue lors de la collecte de données réseau, où les caractères non-ASCII dans les corps de réponse n'étaient pas correctement encodés. ([bogue Firefox 1986022 <sup>(angl.)</sup>](https://bugzil.la/1986022)).
 - Correction d'un bogue avec la commande `network.getData`, qui échouait pour les requêtes avec un corps de réponse vide. ([bogue Firefox 1986025 <sup>(angl.)</sup>](https://bugzil.la/1986025)).
-- Correction d'un bogue où certains événements `network` pouvaient être signalés comme bloqués alors qu'ils ne l'étaient pas. ([bogue Firefox 1989919 <sup>(angl.)</sup>](https://bugzil.la/1989919)).
+- Correction d'un bogue où certains évènements `network` pouvaient être signalés comme bloqués alors qu'ils ne l'étaient pas. ([bogue Firefox 1989919 <sup>(angl.)</sup>](https://bugzil.la/1989919)).
 
 ## Changements pour les développeur·euse·s d'extensions
 
@@ -85,13 +93,13 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **API Trusted Types** pour les scripts (Nightly/Early Beta)&nbsp;: `dom.security.trusted_types.enabled`
 
-  L'[API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) est désormais activée dans les versions bêta précoces ([bogue Firefox 1976656 <sup>(angl.)</sup>](https://bugzil.la/1976656)).
+  [L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) est désormais activée dans les versions bêta précoces ([bogue Firefox 1976656 <sup>(angl.)</sup>](https://bugzil.la/1976656)).
 
   Les changements incluent&nbsp;:
   - Ajout des interfaces {{DOMxRef("TrustedTypePolicyFactory")}}, {{DOMxRef("TrustedTypePolicy")}}, {{DOMxRef("TrustedHTML")}}, {{DOMxRef("TrustedScript")}}, {{DOMxRef("TrustedScriptURL")}} et de la propriété `trustedTypes` sur {{DOMxRef("Window/trustedTypes", "Window")}} et {{DOMxRef("WorkerGlobalScope/trustedTypes", "WorkerGlobalScope")}}.
   - Mises à jour des API [d'interfaces de point d'injection (<i lang="en">injection sink interfaces</i>)](/fr/docs/Web/API/Trusted_Types_API#interfaces_de_points_dinjection), telles que {{DOMxRef("Element.innerHTML")}} et {{DOMxRef("Document.write()", "document.write()")}}, pour permettre le passage de `TrustedHTML`, `TrustedScript`, `TrustedScriptURL` ainsi que des chaînes de caractères.
   - Prise en charge des directives [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) et [`trusted-types`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) et du mot-clé [`'trusted-types-eval'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) de l'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}}.
-    Ceux-ci peuvent être utilisés pour imposer les types de confiance à la place des chaînes, nommer les politiques spécifiques autorisées, et permettre l'utilisation de [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) et de fonctions similaires lorsque [Trusted Types](/fr/docs/Web/API/Trusted_Types_API) sont pris en charge et appliqués.
+    Ceux-ci peuvent être utilisés pour imposer les types de confiance à la place des chaînes de caractères, nommer les politiques spécifiques autorisées, et permettre l'utilisation de [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) et de fonctions similaires lorsque [Trusted Types](/fr/docs/Web/API/Trusted_Types_API) sont pris en charge et appliqués.
 
 - **En-têtes Storage Access** (Nightly)&nbsp;: `dom.storage_access.headers.enabled`.
-  Les en-têtes HTTP {{HTTPHeader("Sec-Fetch-Storage-Access")}} et {{HTTPHeader("Activate-Storage-Access")}} sont désormais pris en charge, permettant un flux de travail plus efficace avec l'[API Storage Access](/fr/docs/Web/API/Storage_Access_API) ([bogue Firefox 1991688 <sup>(angl.)</sup>](https://bugzil.la/1991688)).
+  Les en-têtes HTTP {{HTTPHeader("Sec-Fetch-Storage-Access")}} et {{HTTPHeader("Activate-Storage-Access")}} sont désormais pris en charge, permettant un flux de travail plus efficace avec [l'API Storage Access](/fr/docs/Web/API/Storage_Access_API) ([bogue Firefox 1991688 <sup>(angl.)</sup>](https://bugzil.la/1991688)).

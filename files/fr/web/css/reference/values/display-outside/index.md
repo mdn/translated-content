@@ -1,9 +1,9 @@
 ---
-title: <display-outside>
+title: Type CSS `<display-outside>`
+short-title: <display-outside>
 slug: Web/CSS/Reference/Values/display-outside
-original_slug: Web/CSS/display-outside
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-outside>`** définit le type d'affichage externe ({{CSSxRef("display")}}) d'un élément, c'est-à-dire son rôle dans le flux de mise en page. Ces mots-clés sont utilisés comme valeurs de la propriété `display` et peuvent, pour des raisons historiques, être utilisés seuls ou, comme défini dans la spécification de niveau 3, en combinaison avec une valeur parmi les mots-clés {{CSSxRef("&lt;display-inside&gt;")}}.

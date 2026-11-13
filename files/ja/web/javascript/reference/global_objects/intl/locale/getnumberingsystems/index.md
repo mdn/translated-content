@@ -1,12 +1,15 @@
 ---
 title: Intl.Locale.prototype.getNumberingSystems()
+short-title: getNumberingSystems()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Intl.Locale")}} インスタンスの **`getNumberingSystems()`** メソッドは、`Locale` の 1 つ以上の固有の[記数法](https://en.wikipedia.org/wiki/Numeral_system)識別子の配列を返します。
+**`getNumberingSystems()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、個のロケールの 1 つ以上の固有の[記数法](https://en.wikipedia.org/wiki/Numeral_system)識別子の配列を返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `numberingSystems` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.numberingSystems === locale.numberingSystems` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
+> 一部のブラウザーの一部のバージョンでは、このメソッドが `numberingSystems` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しい配列を返すため、`locale.numberingSystems === locale.numberingSystems` が常に `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 

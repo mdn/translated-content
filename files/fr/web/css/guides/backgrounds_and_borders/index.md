@@ -1,9 +1,9 @@
 ---
 title: Arrière-plans et bordures CSS
+short-title: Arrière-plans et bordures
 slug: Web/CSS/Guides/Backgrounds_and_borders
-original_slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: 3dcdca5a04e1a40d0fe8ed0f9694c57cfb138a4f
+  sourceCommit: f9761309e0fe3f22822e63903439d8d6130b535f
 ---
 
 Le module de spécification **Arrière-plans et bordures CSS** (<i lang="en">CSS backgrounds and borders</i> en anglais) fournit des propriétés permettant d'ajouter des bordures, des coins arrondis et des ombres aux éléments.
@@ -73,63 +73,65 @@ div:first-of-type {
 
 {{EmbedLiveSample("backgrounds", "", "450px")}}
 
-Les images d'arrière-plan sont définies avec la propriété CSS {{cssxref("background-image")}}. Les images sont centrées avec la propriété {{cssxref("background-position")}}. Différentes valeurs de la propriété {{cssxref("background-clip")}} pour les images d'arrière-plan multiples sont utilisées pour faire en sorte que les images d'arrière-plan restent à l'intérieur de la boîte de contenu. La couleur d'arrière-plan est découpée dans le cadre de remplissage, ce qui empêche l'arrière-plan d'apparaître à travers les sections transparentes pour les propriétés {{cssxref("border-image")}} et {{cssxref("border-image")}} avec la valeur {{cssxref("border-style", "dotted")}}. Les coins arrondis de l'élément de droite sont créés à l'aide de la propriété {{cssxref("border-image")}}. Une seule déclaration {{cssxref("box-shadow")}} est utilisée pour définir toutes les ombres, tant à l'intérieur qu'à l'extérieur.
+Les images d'arrière-plan sont définies avec la propriété CSS {{CSSxRef("background-image")}}. Les images sont centrées avec la propriété {{CSSxRef("background-position")}}. Différentes valeurs de la propriété {{CSSxRef("background-clip")}} pour les images d'arrière-plan multiples sont utilisées pour faire en sorte que les images d'arrière-plan restent à l'intérieur de la boîte de contenu. La couleur d'arrière-plan est découpée dans le cadre de remplissage, ce qui empêche l'arrière-plan d'apparaître à travers les sections transparentes pour les propriétés {{CSSxRef("border-image")}} et {{CSSxRef("border-image")}} avec la valeur {{CSSxRef("border-style", "dotted")}}. Les coins arrondis de l'élément de droite sont créés à l'aide de la propriété {{CSSxRef("border-image")}}. Une seule déclaration {{CSSxRef("box-shadow")}} est utilisée pour définir toutes les ombres, tant à l'intérieur qu'à l'extérieur.
 
 Cliquez sur «&nbsp;Play&nbsp;» dans l'exemple ci-dessus pour voir ou modifier le code de l'animation dans _MDN Playground_.
 
 ## Référence
 
-### Propriétés CSS
+### Propriétés
 
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
-- {{cssxref("background")}} (version courte)
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom")}} (version courte)
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left")}} (version courte)
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right")}} (version courte)
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top")}} (version courte)
-- {{cssxref("border-color")}} (version courte)
-- {{cssxref("border-style")}} (version courte)
-- {{cssxref("border-width")}} (version courte)
-- {{cssxref("border")}} (version courte)
-- {{cssxref("border-bottom-left-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
-- {{cssxref("border-radius")}} (version courte)
-- {{cssxref("border-image-outset")}}
-- {{cssxref("border-image-repeat")}}
-- {{cssxref("border-image-slice")}}
-- {{cssxref("border-image-source")}}
-- {{cssxref("border-image-width")}}
-- {{cssxref("border-image")}} (version courte)
-- {{cssxref("box-shadow")}}
+- {{CSSxRef("background-attachment")}}
+- {{CSSxRef("background-clip")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("background-image")}}
+- {{CSSxRef("background-origin")}}
+- {{CSSxRef("background-position")}}
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
+- {{CSSxRef("background-repeat")}} (raccourcie)
+- {{CSSxRef("background-size")}}
+- {{CSSxRef("background")}} (raccourcie)
+- {{CSSxRef("background-position-x")}}
+- {{CSSxRef("background-position-y")}}
+- {{CSSxRef("border-bottom-color")}}
+- {{CSSxRef("border-bottom-style")}}
+- {{CSSxRef("border-bottom-width")}}
+- {{CSSxRef("border-bottom")}} (raccourcie)
+- {{CSSxRef("border-left-color")}}
+- {{CSSxRef("border-left-style")}}
+- {{CSSxRef("border-left-width")}}
+- {{CSSxRef("border-left")}} (raccourcie)
+- {{CSSxRef("border-right-color")}}
+- {{CSSxRef("border-right-style")}}
+- {{CSSxRef("border-right-width")}}
+- {{CSSxRef("border-right")}} (raccourcie)
+- {{CSSxRef("border-top-color")}}
+- {{CSSxRef("border-top-style")}}
+- {{CSSxRef("border-top-width")}}
+- {{CSSxRef("border-top")}} (raccourcie)
+- {{CSSxRef("border-color")}} (raccourcie)
+- {{CSSxRef("border-style")}} (raccourcie)
+- {{CSSxRef("border-width")}} (raccourcie)
+- {{CSSxRef("border")}} (raccourcie)
+- {{CSSxRef("border-bottom-left-radius")}}
+- {{CSSxRef("border-bottom-right-radius")}}
+- {{CSSxRef("border-top-left-radius")}}
+- {{CSSxRef("border-top-right-radius")}}
+- {{CSSxRef("border-radius")}} (raccourcie)
+- {{CSSxRef("border-image-outset")}}
+- {{CSSxRef("border-image-repeat")}}
+- {{CSSxRef("border-image-slice")}}
+- {{CSSxRef("border-image-source")}}
+- {{CSSxRef("border-image-width")}}
+- {{CSSxRef("border-image")}} (raccourcie)
+- {{CSSxRef("box-shadow")}}
 
-Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y` et `background-tbd`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
+Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline` et `background-tbd`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
 
 ### Types de données
 
-- Le type énuméré {{cssxref("line-style")}}
+- Le type énuméré {{CSSxRef("line-style")}}
 
 ## Guides
 
@@ -148,29 +150,29 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 
 ## Notions associées
 
-- {{cssxref("border-block-end-color")}}
-- {{cssxref("border-block-start-color")}}
-- {{cssxref("border-inline-end-color")}}
-- {{cssxref("border-inline-start-color")}}
-- {{cssxref("border-block-end-style")}}
-- {{cssxref("border-block-start-style")}}
-- {{cssxref("border-inline-end-style")}}
-- {{cssxref("border-inline-start-style")}}
-- {{cssxref("border-block-end-width")}}
-- {{cssxref("border-block-start-width")}}
-- {{cssxref("border-inline-end-width")}}
-- {{cssxref("border-inline-start-width")}}
-- {{cssxref("border-start-start-radius")}}
-- {{cssxref("border-start-end-radius")}}
-- {{cssxref("border-end-start-radius")}}
-- {{cssxref("border-end-end-radius")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("box-decoration-break")}}
-- {{cssxref("text-shadow")}}
-- Le type de donnée {{cssxref("url_value", "&lt;url&gt;")}}
-- Le type de donnée {{cssxref("url")}}
-- Le type de donnée {{cssxref("image")}}
-- Le type de donnée {{cssxref("position")}}
+- {{CSSxRef("border-block-end-color")}}
+- {{CSSxRef("border-block-start-color")}}
+- {{CSSxRef("border-inline-end-color")}}
+- {{CSSxRef("border-inline-start-color")}}
+- {{CSSxRef("border-block-end-style")}}
+- {{CSSxRef("border-block-start-style")}}
+- {{CSSxRef("border-inline-end-style")}}
+- {{CSSxRef("border-inline-start-style")}}
+- {{CSSxRef("border-block-end-width")}}
+- {{CSSxRef("border-block-start-width")}}
+- {{CSSxRef("border-inline-end-width")}}
+- {{CSSxRef("border-inline-start-width")}}
+- {{CSSxRef("border-start-start-radius")}}
+- {{CSSxRef("border-start-end-radius")}}
+- {{CSSxRef("border-end-start-radius")}}
+- {{CSSxRef("border-end-end-radius")}}
+- {{CSSxRef("box-sizing")}}
+- {{CSSxRef("box-decoration-break")}}
+- {{CSSxRef("text-shadow")}}
+- Le type de donnée {{CSSxRef("url_value", "&lt;url&gt;")}}
+- La fonction {{CSSxRef("url_function", "url()")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;position&gt;")}}
 - Le mot-clé [`currentcolor`](/fr/docs/Web/CSS/Reference/Values/color_value#le_mot_clé_currentcolor)
 
 ## Spécifications
@@ -179,9 +181,11 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 
 ## Voir aussi
 
-- {{cssxref("filter")}}
-- {{cssxref("backdrop-filter")}}
+- La propriété {{CSSxRef("filter")}}
+- La propriété {{CSSxRef("backdrop-filter")}}
 - Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Générateur pour `border-image`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
-- [Générateur pour `border-radius`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+- Outils&nbsp;:
+  - [Générateur pour `border-image`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Générateur pour `border-radius`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+  - [Générateur pour `box-shadow`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)

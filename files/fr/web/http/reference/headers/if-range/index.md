@@ -6,13 +6,13 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`If-Range`** rend une requête de plage [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests).
-Si la condition est remplie, une [requête de plage](/fr/docs/Web/HTTP/Guides/Range_requests) est émise, et le serveur renvoie une réponse {{HTTPStatus("206", "206 Partial Content")}} avec une partie (ou des parties) de la ressource dans le corps.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`If-Range`** rend une requête de plage [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests).
+Si la condition est remplie, une [requête de plage](/fr/docs/Web/HTTP/Guides/Range_requests) est émise, et le serveur retourne une réponse {{HTTPStatus("206", "206 Partial Content")}} avec une partie (ou des parties) de la ressource dans le corps.
 Si la condition n'est pas remplie, la ressource complète est renvoyée avec un statut {{HTTPStatus("200", "200 OK")}}.
 
 Cet en-tête peut être utilisé soit avec le validateur {{HTTPHeader("Last-Modified")}}, soit avec {{HTTPHeader("ETag")}}, mais pas avec les deux.
 
-Le cas d'utilisation le plus courant est de reprendre un téléchargement en garantissant que la ressource sur le serveur n'a pas été modifiée depuis que la dernière partie a été reçue par le·la client·e.
+Le cas d'utilisation le plus courant est de reprendre un téléchargement en garantissant que la ressource sur le serveur n'a pas été modifiée depuis que la dernière partie a été reçue par le client.
 
 <table class="properties">
   <tbody>

@@ -11,7 +11,7 @@ HTTP **`206 Partial Content`** 成功状态响应代码表示请求已成功，�
 
 ## 状态
 
-```plain
+```http
 206 Partial Content
 ```
 
@@ -19,7 +19,7 @@ HTTP **`206 Partial Content`** 成功状态响应代码表示请求已成功，�
 
 只包含一个数据区间的响应：
 
-```plain
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
@@ -32,7 +32,7 @@ Content-Type: image/gif
 
 包含多个数据区间的响应：
 
-```plain
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT

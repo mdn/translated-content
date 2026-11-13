@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("CanvasRenderingContext2D")}} の **`getImageData()`** は Canvas 2D API のメソッドで、キャンバスの指定の部分に対応するピクセルデータを表す {{domxref("ImageData")}} オブジェクトを返します。
 
-このメソッドは、キャンバスの変換行列の影響を受けません。指定された矩形がキャンパスの境界の外にはみ出る場合は、返される `ImageData` オブジェクトのキャンバスの外側の部分は透明な黒になります。
+このメソッドは、キャンバスの変換行列の影響を受けません。指定された矩形がキャンバスの境界の外にはみ出る場合は、返される `ImageData` オブジェクトのキャンバスの外側の部分は透明な黒になります。
 
 > [!NOTE]
 > 画像データは、{{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} メソッドでキャンバスに描画できます。

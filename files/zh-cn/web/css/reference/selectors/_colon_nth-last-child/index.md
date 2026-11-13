@@ -3,7 +3,7 @@ title: :nth-last-child
 slug: Web/CSS/Reference/Selectors/:nth-last-child
 ---
 
-**`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素
+**`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)从兄弟节点中从后往前匹配处于某些位置的元素
 
 ```css
 /* 在所有兄弟节点中，从后往前
@@ -20,21 +20,36 @@ slug: Web/CSS/Reference/Selectors/:nth-last-child
 
 `nth-last-child`伪类接受一个参数，用来作为一个模式，从后往前匹配元素。
 
-### Keyword values
+### 关键字值
 
 - `odd`
   - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如：1, 3, 5 等。
 - `even`
   - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如：2, 4, 6 等。
 
-### Functional notation
+### 函数符号
 
 - `<An+B>`
-  - : 代表一些元素，它们在所在兄弟节点中的数字位置满足模式 `An+B`, `n`是 0 或者任意的正整数。从结尾开始计算的第一个元素的索引值是`1`. `A` 和 `B` 必须都是 {{cssxref("&lt;integer&gt;")}}.
+  - : 代表一些元素，它们在所在兄弟节点中的数字位置满足模式 `An+B`, `n`是 0 或者任意的正整数。从结尾开始计算的第一个元素的索引值是`1`. `A` 和 `B` 必须都是 {{cssxref("&lt;integer&gt;")}}。
 
-### Formal syntax
+### `of <selector>` 语法
 
-{{csssyntax}}
+通过传递一个选择器参数，我们可以选择与该选择器匹配的**倒数第 n 个**元素。例如，以下选择器会匹配最后三个被赋予 `class="important"` 的 _important_ 列表项。
+
+```css
+:nth-last-child(-n + 3 of li.important) {
+}
+```
+
+> [!NOTE]
+> 这与将选择器移到函数外部不同，例如：
+
+```css
+li.important:nth-last-child(-n + 3) {
+}
+```
+
+如果列表项位于最后三个子项之中，则该选择器会为其应用样式。
 
 ## 示例
 
@@ -57,7 +72,7 @@ slug: Web/CSS/Reference/Selectors/:nth-last-child
 - `p:nth-last-child(1)` or `p:nth-last-child(0n+1)`
   - : 表示所有处于兄弟节点中倒数第一位的元素`<p>`。这与{{cssxref(":last-child")}}选择器相同。
 
-### Table example
+### 列表示例
 
 #### HTML
 
@@ -108,11 +123,11 @@ tr:nth-last-child(2) {
 
 #### 结果
 
-{{EmbedLiveSample('Table_example', 300,150)}}
+{{EmbedLiveSample('列表示例', 300,150)}}
 
-### Quantity query
+### 数量查询
 
-数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator).的功能来实现的
+数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合 `nth-last-child` 和[通用兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)的功能来实现的
 
 #### HTML
 
@@ -143,9 +158,9 @@ li:nth-last-child(n + 3) ~ li {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Quantity_query', '100%', 270)}}
+{{EmbedLiveSample('数量查询', '100%', 270)}}
 
 ## 规范
 
@@ -158,4 +173,4 @@ li:nth-last-child(n + 3) ~ li {
 ## 参见
 
 - {{ Cssxref(":nth-child") }}
-- [Quantity Queries for CSS](https://alistapart.com/article/quantity-queries-for-css)
+- [CSS 数量查询](https://alistapart.com/article/quantity-queries-for-css)

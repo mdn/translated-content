@@ -2,7 +2,7 @@
 title: 428 Precondition Required
 slug: Web/HTTP/Reference/Status/428
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`428 Precondition Required`** indique que le serveur exige que la requête soit [conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests).

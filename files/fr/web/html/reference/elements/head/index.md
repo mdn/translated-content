@@ -1,9 +1,9 @@
 ---
-title: "<head> : l'élément de métadonnées (en-tête) du document"
+title: "Élément HTML `<head>` : l'élément de métadonnées (en-tête) du document"
+short-title: <head>
 slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations générales ({{Glossary("metadata", "métadonnées")}}) sur le document, incluant son [titre](/fr/docs/Web/HTML/Reference/Elements/title), [scripts](/fr/docs/Web/HTML/Reference/Elements/script), et [feuilles de style](/fr/docs/Web/HTML/Reference/Elements/style). Il ne peut y avoir qu'un seul élément `<head>` dans un document HTML.
@@ -16,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations gén
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `profile` {{Deprecated_Inline}}
-  - : L'{{Glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
+  - : Une {{Glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
 
 ## Exemples
 
@@ -49,7 +49,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       <th scope="row">Contenu autorisé</th>
       <td>
         Si le document est un document {{HTMLElement("iframe")}}
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou si des informations de titre sont disponibles via un protocole de
+        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou si des informations de titre sont disponibles avec un protocole de
         plus haut niveau (comme l'objet d'un courriel HTML), zéro ou plusieurs
         éléments de contenu de métadonnées.
       </td>

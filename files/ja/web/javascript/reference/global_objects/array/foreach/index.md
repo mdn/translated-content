@@ -3,10 +3,10 @@ title: Array.prototype.forEach()
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。
+**`forEach()`** は {{jsxref("Array")}} インスタンスのメソッドで、与えられた関数を、配列の各要素に対して一度ずつ実行します。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.forEach()")}}
 
@@ -145,7 +145,7 @@ console.log(obj.sum); // 16
 `thisArg` 引数 (`this`) が `forEach()` に提供されているため、`callbackFn` の呼び出しのたびにこれが渡されます。コールバックはこれを `this` の値として使用します。
 
 > [!NOTE]
-> コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
+> コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("this")}} の値に結び付けられているため省略可能です。
 
 ### オブジェクトをコピーする関数
 
@@ -260,7 +260,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 
 ## 関連情報
 
-- [`Array.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.forEach` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.forEach` のポリフィル](https://www.npmjs.com/package/array.prototype.foreach)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

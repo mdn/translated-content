@@ -1,11 +1,14 @@
 ---
-title: grid-template-areas
+title: Propriété CSS `grid-template-areas`
+short-title: grid-template-areas
 slug: Web/CSS/Reference/Properties/grid-template-areas
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-areas`** définit les {{Glossary("grid areas", "zones de grille")}} nommées, établit les cellules de la grille et leur attribue des noms.
+
+Ces zones ne sont pas associées à un objet de la grille mais peuvent être utilisées avec les propriétés de placement&nbsp;: {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}} et les méthodes de raccourci correspondantes {{CSSxRef("grid-row")}}, {{CSSxRef("grid-column")}} et {{CSSxRef("grid-area")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: grid-template-areas")}}
 
@@ -71,8 +74,6 @@ grid-template-areas:
 }
 ```
 
-Ces zones ne sont pas associées à un objet de la grille mais peuvent être utilisées avec les propriétés de placement : {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}} et les méthodes de raccourci correspondantes {{CSSxRef("grid-row")}}, {{CSSxRef("grid-column")}} et {{CSSxRef("grid-area")}}.
-
 ## Syntaxe
 
 ```css
@@ -98,7 +99,7 @@ grid-template-areas: unset;
 - `none`
   - : Le conteneur de grille ne définit aucune zone de grille nommée.
 - {{CSSxRef("&lt;string&gt;")}}
-  - : Une ligne est créée pour chaque chaîne distincte listée, et une colonne est créée pour chaque cellule dans la chaîne. Plusieurs cellules portant le même nom, sur une ou plusieurs lignes, créent une seule zone de grille nommée qui s'étend sur les cellules correspondantes. Si ces cellules ne forment pas un rectangle, la déclaration est invalide.
+  - : Une ligne est créée pour chaque chaîne de caractères distincte listée, et une colonne est créée pour chaque cellule dans la chaîne de caractères. Plusieurs cellules portant le même nom, sur une ou plusieurs lignes, créent une seule zone de grille nommée qui s'étend sur les cellules correspondantes. Si ces cellules ne forment pas un rectangle, la déclaration est invalide.
 
     Toutes les zones non nommées restantes dans une grille peuvent être référencées à l'aide de _jetons de cellule nulle_. Un jeton de cellule nulle est une séquence d'un ou plusieurs caractères `.` (U+002E FULL STOP), par exemple `.`, `...` ou `.....` etc. Un jeton de cellule nulle peut être utilisé pour créer des espaces vides dans la grille.
 

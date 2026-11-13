@@ -1,8 +1,9 @@
 ---
-title: -webkit-text-stroke-width
+title: Propriété CSS `-webkit-text-stroke-width`
+short-title: -webkit-text-stroke-width
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.
@@ -31,6 +32,8 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-width`** permet de
 ```
 
 ### Valeurs
+
+Cette propriété est définie avec la valeur suivante&nbsp;:
 
 - `<line-width>`
   - : La largeur du trait utilisé pour entourer les lettres du texte.

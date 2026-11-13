@@ -33,7 +33,7 @@ Symbol(description)
 ```
 
 > [!NOTE]
-> `Symbol()` 只能在没有 {{jsxref("Operators/new", "new")}} 的情况下调用，尝试用 `new` 构造会抛出 {{jsxref("TypeError")}}。
+> `Symbol()` 只能在没有 {{jsxref("new")}} 的情况下调用，尝试用 `new` 构造会抛出 {{jsxref("TypeError")}}。
 
 ## 参数
 
@@ -60,7 +60,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将会抛出一个 {{jsxref("TypeError")}}：
+下面带有 {{jsxref("new")}} 运算符的语法将会抛出一个 {{jsxref("TypeError")}}：
 
 ```js
 const sym = new Symbol(); // TypeError

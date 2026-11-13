@@ -16,7 +16,7 @@ audio.loop = true;
 
 ### 返回值
 
-一个布尔值 {{domxref("Boolean")}}.
+一个布尔值 {{jsxref("Boolean")}}.
 
 ## 示例
 

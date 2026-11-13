@@ -51,7 +51,7 @@ label {
 
 ![](datetime-local-picker-edge2.png)
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                                                                      |
+| **[Value](#value)**             | A {{jsxref("String")}} representing a date and time, or empty.                                                                                                                                                                                                          |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **события**                     | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event).                                                                                                                                                                |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step). |
@@ -60,7 +60,7 @@ label {
 
 ## Значение
 
-{{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) атрибута, как:
+{{jsxref("String")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) атрибута, как:
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>

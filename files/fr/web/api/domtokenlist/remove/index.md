@@ -16,7 +16,7 @@ tokenList.remove(token1[, token2[, ...]]);
 ### Paramètres
 
 - tokenN...
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que vous voulez supprimer sur la liste. Si la chaîne de caractères n'existe pas sur la liste, aucune erreur n'est levée et rien ne se passe.
+  - : Une {{jsxref("String")}} (_chaîne de caractères_) représentant la marque que vous voulez supprimer sur la liste. Si la chaîne de caractères n'existe pas sur la liste, aucune erreur n'est levée et rien ne se passe.
 
 ### Valeur retournée
 

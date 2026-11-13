@@ -144,7 +144,7 @@ scriptElem.addEventListener("load", () => {
 document.head.append(scriptElem);
 ```
 
-可以使用 {{jsxref("operators/import", "import()")}} 函数动态加载 JavaScript 模块：
+可以使用 {{jsxref("Operators/import", "import()")}} 函数动态加载 JavaScript 模块：
 
 ```js
 import("./modules/myModule.js").then((module) => {

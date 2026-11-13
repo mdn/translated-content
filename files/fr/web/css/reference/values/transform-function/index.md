@@ -1,8 +1,9 @@
 ---
-title: <transform-function>
+title: Type CSS `<transform-function>`
+short-title: <transform-function>
 slug: Web/CSS/Reference/Values/transform-function
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<transform-function>`** représente une transformation qui affecte l'apparence d'un élément. Les [fonctions](/fr/docs/Web/CSS/Reference/Values/Functions) de transformation peuvent faire pivoter, redimensionner, déformer ou déplacer un élément en 2D ou 3D. Ce type est utilisé dans la propriété {{CSSxRef("transform")}}.

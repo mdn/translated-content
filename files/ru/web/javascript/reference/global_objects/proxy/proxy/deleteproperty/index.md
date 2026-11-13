@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 
 {{JSRef}}
 
-Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.
+Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("delete")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
 
@@ -59,7 +59,7 @@ var p = new Proxy(target, {
 
 ## Описание
 
-Метод **`handler.deleteProperty()`** является "ловушкой" для оператора {{jsxref("Operators/delete", "delete")}}.
+Метод **`handler.deleteProperty()`** является "ловушкой" для оператора {{jsxref("delete")}}.
 
 ### Перехваты
 
@@ -76,7 +76,7 @@ var p = new Proxy(target, {
 
 ## Примеры
 
-Следующий код перехватывает действие оператора {{jsxref("Operators/delete", "delete")}}.
+Следующий код перехватывает действие оператора {{jsxref("delete")}}.
 
 ```js
 var p = new Proxy(
@@ -119,6 +119,6 @@ console.log(result); // false
 ## Смотрите также
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/delete", "delete")}} operator
+- {{jsxref("Proxy/Proxy", "handler")}}
+- {{jsxref("delete")}} operator
 - {{jsxref("Reflect.deleteProperty()")}}

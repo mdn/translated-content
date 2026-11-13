@@ -1,8 +1,9 @@
 ---
-title: "<blockquote> : l'élément de bloc de citation"
+title: "Élément HTML `<blockquote>` : l'élément de bloc de citation"
+short-title: <blockquote>
 slug: Web/HTML/Reference/Elements/blockquote
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<blockquote>`** indique que le texte qu'il contient est une citation longue. Habituellement, cela s'affiche visuellement par une indentation (voir [Notes](#notes_dutilisation) pour savoir comment la modifier). Une URL pour la source de la citation peut être donnée avec l'attribut `cite`, tandis qu'une représentation textuelle de la source peut être donnée avec l'élément HTML {{HTMLElement("cite")}}.
@@ -56,7 +57,7 @@ Selon la spécification, l'attribution de la citation, si elle existe, doit êtr
 
 Pour modifier l'indentation appliquée au texte cité, utilisez les propriétés {{Glossary("CSS")}} {{CSSxRef("margin-left")}} et/ou {{CSSxRef("margin-right")}}, ou la propriété raccourcie {{CSSxRef("margin")}}.
 
-Pour inclure des citations plus courtes en ligne plutôt que dans un bloc séparé, utilisez l'élément {{HTMLElement("q")}} (citation).
+Pour inclure des citations plus courtes en incise plutôt que dans un bloc séparé, utilisez l'élément {{HTMLElement("q")}} (citation).
 
 ## Exemples
 

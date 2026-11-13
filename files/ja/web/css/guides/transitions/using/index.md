@@ -351,7 +351,7 @@ main {
 
 ### トランジションの開始と完了の検出
 
-{{domxref("Element/transitionend_event", "transitionend")}} イベントを使用することでで、アニメーションの実行が終了したことを検出することができます。これは {{domxref("TransitionEvent")}} オブジェクトで、通常の {{domxref("Event")}} オブジェクトに 2 つのプロパティを追加したものです。
+{{domxref("Element/transitionend_event", "transitionend")}} イベントを使用することで、アニメーションの実行が終了したことを検出することができます。これは {{domxref("TransitionEvent")}} オブジェクトで、通常の {{domxref("Event")}} オブジェクトに 2 つのプロパティを追加したものです。
 
 - `propertyName`
   - : 文字列で、トランジションが完了した CSS プロパティの名前を示します。

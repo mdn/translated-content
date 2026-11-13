@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-weight
+title: Propriété CSS `font-synthesis-weight`
+short-title: font-synthesis-weight
 slug: Web/CSS/Reference/Properties/font-synthesis-weight
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-synthesis-weight`** permet de définir si le navigateur peut synthétiser la variante grasse lorsqu'elle n'est pas définie dans la famille de polices.
@@ -25,6 +26,8 @@ font-synthesis-weight: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Indique que la variante grasse manquante peut être synthétisée par le navigateur si besoin.

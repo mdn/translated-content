@@ -1,9 +1,8 @@
 ---
 title: z-index
 slug: Web/CSS/Reference/Properties/z-index
-original_slug: Web/CSS/z-index
 l10n:
-  sourceCommit: e48b828fa5386202eb60303cde48eeea8f79203c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/Reference/Properties/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
@@ -32,7 +31,7 @@ z-index: 7;
 
 ```html interactive-example
 <section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
+  <div id="example-element">この z-index を変更</div>
   <div class="block blue position1">z-index: 6</div>
   <div class="block blue position2">z-index: 4</div>
   <div class="block blue position3">z-index: 2</div>
@@ -49,7 +48,7 @@ z-index: 7;
   width: 180px;
   height: 230px;
   position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
+  /* z-index が auto に設定されていてもテキストが見えるように中央に配置 */
   line-height: 215px;
   font-family: monospace;
   background-color: #fcfbe5;
@@ -75,7 +74,7 @@ z-index: 7;
 .blue {
   background-color: #e5e8fc;
   border: solid 5px #112382;
-  /* move text to the bottom of the box */
+  /* テキストをボックスの下部に移動 */
   line-height: 55px;
 }
 
@@ -169,7 +168,7 @@ z-index: unset;
 
 #### HTML
 
-```html live-sample___visually_layering_elements
+```html
 <div class="wrapper">
   <div class="dashed-box">破線のボックス</div>
   <div class="gold-box">金色のボックス</div>
@@ -179,7 +178,7 @@ z-index: unset;
 
 #### CSS
 
-```css live-sample___visually_layering_elements
+```css
 .wrapper {
   position: relative;
 }
@@ -214,7 +213,7 @@ z-index: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
+{{EmbedLiveSample('視覚的な階層を持つ要素', '550', '200')}}
 
 ## 仕様書
 

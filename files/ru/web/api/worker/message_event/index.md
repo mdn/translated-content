@@ -5,7 +5,7 @@ slug: Web/API/Worker/message_event
 
 {{APIRef("Web Workers API")}}
 
-Свойство **`onmessage`** интерфейса {{domxref("Worker")}} представляет собой обработчик [`event handler`](/ru/docs/Web/Events/Event_handlers), который будет вызван когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event). Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .
+Свойство **`onmessage`** интерфейса {{domxref("Worker")}} представляет собой обработчик [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), который будет вызван когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event). Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .
 
 > [!NOTE]
 > Данные события доступны в свойстве data события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event).

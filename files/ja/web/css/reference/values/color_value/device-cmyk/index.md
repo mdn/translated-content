@@ -1,8 +1,9 @@
 ---
-title: device-cmyk()
+title: CSS `device-cmyk()` 関数
+short-title: device-cmyk()
 slug: Web/CSS/Reference/Values/color_value/device-cmyk
 l10n:
-  sourceCommit: 7d0031545bb606d2ff7fb033180f9cec451a6f8d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`device-cmyk()`** 関数記法は、機器依存の形で CMYK 色を表現するために使用します。シアン、マゼンタ、黄色、黒の成分を指定します。

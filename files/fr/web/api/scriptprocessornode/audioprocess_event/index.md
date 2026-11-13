@@ -40,7 +40,7 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
     </tr>
     <tr>
       <td><code>type</code> {{ReadOnlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>Le type de l'événement.</td>
     </tr>
     <tr>

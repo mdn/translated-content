@@ -3,12 +3,12 @@ title: "ServiceWorkerRegistration: pushManager プロパティ"
 short-title: pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-**`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、プッシュサブスクリプションを管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、サブスクリプションへの参加、アクティブなサブスクリプションの取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。
+**`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションを管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、サブスクリプションへの参加、アクティブなサブスクリプションの取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。
 
 ## 構文
 
@@ -31,7 +31,7 @@ navigator.serviceWorker
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // アプリケーションサーバーが必要としているプッシュサブスクリプションの
-        // 詳細はここから使用できます。たとえば、XMLHttpRequest を使用して
+        // 詳細はここから使用できます。たとえば、fetch() API を使用して
         // これを送信できます。
       },
       (error) => {

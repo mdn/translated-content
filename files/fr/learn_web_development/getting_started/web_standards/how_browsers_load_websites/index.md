@@ -21,7 +21,7 @@ Dans l'article précédent, nous avons examiné un [aperçu des technologies](/f
       <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         <ul>
-          <li>Les différents types de ressources qui sont renvoyées dans une réponse HTTP.</li>
+          <li>Les différents types de ressources qui sont retournées dans une réponse HTTP.</li>
           <li>Comment les différents fichiers sont assemblés par le navigateur pour afficher une page web à l'utilisateur·ice.</li>
           <li>Pourquoi le navigateur est parfois considéré comme un environnement de programmation hostile, mais aussi comme un environnement formidable.</li>
         </ul>
@@ -30,21 +30,21 @@ Dans l'article précédent, nous avons examiné un [aperçu des technologies](/f
   </tbody>
 </table>
 
-## Quels fichiers sont renvoyés dans les réponses HTTP ?
+## Quels fichiers sont retournés dans les réponses HTTP ?
 
-Pour résumer l'[aperçu des technologies web](/fr/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#panorama_des_technologies_web_modernes) vu dans l'article précédent, les réponses HTTP (aux requêtes pour une page web) contiennent généralement certains des types de fichiers suivants&nbsp;:
+Pour résumer [l'aperçu des technologies web](/fr/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#panorama_des_technologies_web_modernes) vu dans l'article précédent, les réponses HTTP (aux requêtes pour une page web) contiennent généralement certains des types de fichiers suivants&nbsp;:
 
-- Fichiers HTML, qui spécifient le contenu de la page web et sa structure.
-- Fichiers CSS, qui spécifient les informations de style et de mise en page.
-- Fichiers JavaScript, qui spécifient le comportement des parties interactives de la page web.
+- Fichiers HTML, qui définissent le contenu de la page web et sa structure.
+- Fichiers CSS, qui définissent les informations de style et de mise en page.
+- Fichiers JavaScript, qui définissent le comportement des parties interactives de la page web.
 - Ressources médias comme des images, vidéos, fichiers audio, {{Glossary("PDF")}} et {{Glossary("SVG")}}, qui sont intégrés dans les pages web ou affichés par le navigateur.
 - D'autres types de fichiers que le navigateur ne peut pas gérer nativement et qu'il confie donc à une application appropriée sur l'appareil pour les afficher, par exemple des documents Word ou Pages, des présentations PowerPoint et des fichiers Open Office.
 
 ## Rendu de la page web
 
-Lorsque l'utilisateur·ice navigue vers une nouvelle page web (en cliquant sur un lien ou en saisissant une adresse web dans la barre d'adresse du navigateur), plusieurs requêtes HTTP sont envoyées, et plusieurs fichiers sont renvoyés dans les réponses HTTP. Les fichiers reçus dans ces réponses sont traités par le navigateur et assemblés pour former une page web avec laquelle l'utilisateur·ice peut interagir. Ce processus d'assemblage des éléments en une page web s'appelle le **rendu**.
+Lorsque l'utilisateur·ice navigue vers une nouvelle page web (en cliquant sur un lien ou en saisissant une adresse web dans la barre d'adresse du navigateur), plusieurs requêtes HTTP sont envoyées, et plusieurs fichiers sont retournés dans les réponses HTTP. Les fichiers reçus dans ces réponses sont traités par le navigateur et assemblés pour former une page web avec laquelle l'utilisateur·ice peut interagir. Ce processus d'assemblage des éléments en une page web s'appelle le **rendu**.
 
-Les sections suivantes donnent une explication générale de la façon dont un navigateur effectue le rendu d'une page web. Gardez à l'esprit qu'il s'agit d'une description simplifiée, et que différents navigateurs gèrent le processus de différentes manières. Cependant, cela vous donnera tout de même une idée du fonctionnement général.
+Les sections suivantes donnent une explication générale de la façon dont un navigateur effectue le rendu d'une page web. Gardez à l'esprit qu'il s'agit d'une description simplifiée, et que différents navigateurs gèrent le processus de différentes manières. Cependant, cela vous donne tout de même une idée du fonctionnement général.
 
 ## Traitement du HTML
 
@@ -59,7 +59,7 @@ Pour commencer, le fichier HTML qui contient le contenu de la page web et défin
 </p>
 ```
 
-Chaque élément, attribut et morceau de texte du HTML devient un **nœud DOM** dans la structure arborescente. Les nœuds sont définis par leur relation avec d'autres nœuds DOM. Certains éléments sont parents de nœuds enfants, et les nœuds enfants ont des frères et sœurs. Le navigateur va analyser ce HTML et créer l'arbre DOM suivant&nbsp;:
+Chaque élément, attribut et morceau de texte du HTML devient un **nœud DOM** dans la structure arborescente. Les nœuds sont définis par leur relation avec d'autres nœuds DOM. Certains éléments sont parents de nœuds enfants, et les nœuds enfants ont des voisins. Le navigateur va analyser ce HTML et créer l'arbre DOM suivant&nbsp;:
 
 ```plain
 P
@@ -92,7 +92,7 @@ Certains éléments HTML, lorsqu'ils sont analysés, vont entraîner d'autres re
 
 Ensuite, le CSS est traité.
 
-1. Le navigateur analyse le CSS trouvé sur la page (soit inclus dans le fichier HTML, soit récupéré à partir de feuilles de style externes), et trie les différentes règles de style CSS dans différents «&nbsp;compartiments&nbsp;» selon les éléments HTML (représentés dans le DOM par des éléments appelés **nœuds**) auxquels elles s'appliqueront. Le navigateur applique ensuite les styles aux différents éléments selon les besoins (cette étape intermédiaire s'appelle l'arbre de rendu).
+1. Le navigateur analyse le CSS trouvé sur la page (soit inclus dans le fichier HTML, soit récupéré à partir de feuilles de style externes), et trie les différentes règles de style CSS dans différents «&nbsp;compartiments&nbsp;» selon les éléments HTML (représentés dans le DOM par des éléments appelés **nœuds**) auxquels elles s'appliquent. Le navigateur applique ensuite les styles aux différents éléments selon les besoins (cette étape intermédiaire s'appelle l'arbre de rendu).
 2. L'arbre de rendu est mis en page dans la structure qu'il doit avoir après application des règles. Cela inclut toutes les images et autres fichiers médias à intégrer dans la page.
 3. L'affichage visuel de la page est présenté à l'écran (cette étape s'appelle la peinture).
 
@@ -151,8 +151,8 @@ span {
 const spans = document.querySelectorAll("span");
 // Pour chaque élément <span>, inverse le texte
 spans.forEach((span) => {
-  const reversedText = span.textContent.split("").reverse().join("");
-  span.textContent = reversedText;
+  const texteInverse = span.textContent.split("").reverse().join("");
+  span.textContent = texteInverse;
 });
 ```
 
@@ -170,9 +170,9 @@ Vous en apprendrez davantage à ce sujet plus tard, dans notre module [Accessibi
 
 ## Le navigateur : un environnement de programmation hostile _et_ formidable
 
-Le développement web côté client peut parfois être frustrant, et certain·e·s considèrent le navigateur comme un environnement de programmation hostile. En effet, contrairement à d'autres environnements, il est bien plus difficile de garantir l'environnement sur lequel votre code s'exécutera. Vous ne pouvez pas connaître à l'avance toutes les combinaisons possibles de système d'exploitation, navigateur, langue, localisation, connexion réseau, CPU, GPU, mémoire, autonomie, etc., que vos utilisateur·ice·s auront, donc vous ne pouvez pas garantir une expérience parfaite pour tout le monde.
+Le développement web côté client peut parfois être frustrant, et certain·e·s considèrent le navigateur comme un environnement de programmation hostile. En effet, contrairement à d'autres environnements, il est bien plus difficile de garantir l'environnement sur lequel votre code s'exécute. Vous ne pouvez pas connaître à l'avance toutes les combinaisons possibles de système d'exploitation, navigateur, langue, localisation, connexion réseau, CPU, GPU, mémoire, autonomie, etc., que vos utilisateur·ice·s ont, donc vous ne pouvez pas garantir une expérience parfaite pour tout le monde.
 
-Les navigateurs modernes ont tendance à implémenter les standards web de façon assez cohérente, mais il reste beaucoup d'incertitudes à gérer. En tant que développeur·euse web, vous devrez accepter cette incertitude, programmer de façon défensive et rester prudent·e sur les fonctionnalités utilisées. Cela repose sur le respect des [bonnes pratiques](/fr/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#bonnes_pratiques_du_web) présentées dans l'article précédent.
+Les navigateurs modernes ont tendance à implémenter les standards web de façon assez cohérente, mais il reste beaucoup d'incertitudes à gérer. En tant que développeur·euse web, vous devez accepter cette incertitude, programmer de façon défensive et rester prudent·e sur les fonctionnalités utilisées. Cela repose sur le respect des [bonnes pratiques](/fr/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#bonnes_pratiques_du_web) présentées dans l'article précédent.
 
 À l'inverse, le web est aussi un environnement de programmation formidable, pour de nombreuses raisons.
 

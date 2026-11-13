@@ -35,7 +35,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
   - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline()}}{{Deprecated_inline}}{{Readonlyinline}}
-  - : Devuelve un {{domxref("DOMString")}} representando el valor del carácter de la tecla. Si la tecla corresponde con un carácter imprimible, este valor es una cadena Unicode no vacía que contiene este carácter. Si la tecla no tiene una representación imprimible, esta es una cadena vacía.
+  - : Devuelve un {{jsxref("String")}} representando el valor del carácter de la tecla. Si la tecla corresponde con un carácter imprimible, este valor es una cadena Unicode no vacía que contiene este carácter. Si la tecla no tiene una representación imprimible, esta es una cadena vacía.
 
     > [!NOTE]
     > Si la tecla es usada como una macro que inserta múltiples caracteres, If the key is used as a macro that inserts multiple characters, el valor de este atributo es la cadena completa, no solo el primer carácter.
@@ -50,14 +50,14 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
     > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
+  - : Returns a {{jsxref("String")}} with the code value of the key represented by the event.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing the key value of the key represented by the event.
+  - : Returns a {{jsxref("String")}} representing the key value of the key represented by the event.
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline()}}{{Readonlyinline}}
   - : Returns an `unsigned long` representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
@@ -65,7 +65,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
     > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-  - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
+  - : Returns a {{jsxref("String")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > [!NOTE]
     > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.

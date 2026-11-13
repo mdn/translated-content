@@ -125,4 +125,4 @@ regex.test("foobar"); //false
 
 - [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype")}}
+- {{jsxref("RegExp")}}

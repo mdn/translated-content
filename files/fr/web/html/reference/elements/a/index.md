@@ -1,14 +1,14 @@
 ---
-title: "<a> : l'élément d'ancre"
+title: "Élément HTML `<a>` : l'élément d'ancre"
+short-title: <a>
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: d8a98813a991199d24cf40bc74298850d8b41e37
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément d'_ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
+L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément _d'ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.
 
-Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `href` est présent, appuyer sur la touche Entrée lorsque l'élément `<a>` est sélectionné l'active.
+Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `href` est présent, appuyer sur la touche Entrée lorsque l'élément `<a>` est sélectionné (<i lang="en">focus</i> en anglais) l'active.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;a&gt;")}}
 
@@ -16,8 +16,8 @@ Le contenu de chaque `<a>` doit indiquer la destination du lien. Si l'attribut `
 <p>Vous pouvez contacter Michaël&nbsp;:</p>
 
 <ul>
-  <li><a href="https://exemple.fr">Site web</a></li>
-  <li><a href="mailto:m.bluth@exemple.fr">Courriel</a></li>
+  <li><a href="https://example.com">Site web</a></li>
+  <li><a href="mailto:m.bluth@example.com">Courriel</a></li>
   <li><a href="tel:+123456789">Téléphone</a></li>
 </ul>
 ```
@@ -32,10 +32,10 @@ li {
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `attributionsrc` {{Deprecated_Inline}}
+- `attributionsrc` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une [source d'attribution basée sur la navigation](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
-    Le navigateur stocke les données de la source associée à la source d'attribution basée sur la navigation (telles que fournies dans l'en-tête de réponse {{HTTPHeader("Attribution-Reporting-Register-Source")}}) lorsque l'utilisateur·ice clique sur le lien. Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+    Le navigateur stocke les données de la source associée à la source d'attribution basée sur la navigation (telles que fournies dans l'en-tête de réponse {{HTTPHeader("Attribution-Reporting-Register-Source")}}) lorsque l'utilisateur·ice clique sur le lien. Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
     Il existe deux versions de cet attribut&nbsp;:
     - Booléen, c'est-à-dire, uniquement le nom `attributionsrc`. Cela indique que vous souhaitez que l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} soit envoyé au même serveur que celui indiqué par l'attribut `href`. Cela convient lorsque vous gérez l'enregistrement de la source d'attribution sur le même serveur.
@@ -46,7 +46,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       https://b.example/register-source"
       ```
 
-      Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionsrc`. Lorsque la requête de ressource a lieu, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) définie(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{HTTPHeader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
+      Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionsrc`. Lorsque la requête de ressource a lieu, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} est envoyé à l'(aux) URL(s) définie(s) dans `attributionsrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{HTTPHeader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
 
       > [!NOTE]
       > Définir plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées sur la même fonctionnalité. Par exemple, vous pouvez avoir différentes campagnes dont vous souhaitez mesurer le succès, ce qui implique de générer différents rapports sur différentes données.
@@ -55,20 +55,18 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `download`
   - : Fait en sorte que le navigateur traite l'URL liée comme un téléchargement. Peut être utilisé avec ou sans valeur `filename`&nbsp;:
-    - Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources&nbsp;:
+    - Sans valeur, le navigateur propose un nom de fichier/extension, généré à partir de diverses sources&nbsp;:
       - L'en-tête HTTP {{HTTPHeader("Content-Disposition")}}
       - Le segment final dans l'URL&nbsp;: [path](/fr/docs/Web/API/URL/pathname)
       - Le {{Glossary("MIME_type", "type MIME")}} (depuis l'en-tête {{HTTPHeader("Content-Type")}}, le début d'une URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data), ou {{DOMxRef("Blob.type")}} pour une URL [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob))
 
-    - `filename`&nbsp;: définir une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
+    - `filename`&nbsp;: définir une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajustent donc le nom suggéré si nécessaire. Cet ajustement se produit lorsque le téléchargement est déclenché et n'est pas observable avec la propriété {{DOMxRef("HTMLAnchorElement.download")}}.
 
     > [!NOTE]
     >
-    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ou les schémas `blob:` et `data:`.
+    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), [`blob:`](/fr/docs/Web/URI/Reference/Schemes/blob) de même origine, et les schémas [`data:`](/fr/docs/Web/URI/Reference/Schemes/data). Pour les autres URLs, l'attribut `download` est ignoré et une navigation normale se produit, bien que la page cible puisse toujours utiliser `Content-Disposition` pour indiquer un téléchargement.
     > - Le comportement du téléchargement varie selon le navigateur, les paramètres utilisateur·ice·s et d'autres facteurs. L'utilisateur·ice peut être invité·e avant le début du téléchargement, ou le fichier peut être enregistré automatiquement, ou il peut s'ouvrir automatiquement, soit dans une application externe, soit dans le navigateur lui-même.
-    > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer&nbsp;:
-    >   - Si l'en-tête spécifie un `nom de fichier`, il a priorité sur un nom de fichier défini dans l'attribut `download`.
-    >   - Si l'en-tête spécifie une disposition de `inline`, Chrome et Firefox donnent la priorité à l'attribut et le traitent comme un téléchargement. Les anciennes versions de Firefox (avant 82) donnent la priorité à l'en-tête et affichent le contenu en ligne.
+    > - L'attribut `download`, lorsqu'il est pris en compte, remplace le comportement `Content-Disposition: inline`, mais le paramètre `filename` de `Content-Disposition` remplace le nom dans l'attribut `download`.
 
 - `href`
   - : L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP&nbsp;: ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs&nbsp;:
@@ -88,17 +86,17 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `ping`
   - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes {{HTTPMethod("POST")}} avec le corps `PING` lorsque l'utilisateur·ice suit le lien. Cet attribut est généralement utilisé pour tracer un·e utilisateur·ice.
 - `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
+  - : Définit l'élément `<a>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est un `id` de l'élément cible, qui est affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection (<i lang="en">focus/blur</i> en anglais)). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `referrerpolicy`
   - : Détermine la quantité d'informations du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referer) à envoyer lors du suivi du lien.
-    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
-    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`&nbsp;: Le référent envoyé sera limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
-    - `origin-when-cross-origin`&nbsp;: Le référent envoyé à d'autres origines sera limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluront toujours le chemin.
-    - `same-origin`&nbsp;: Un référent sera envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiendront aucune information de référent.
+    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
+    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`&nbsp;: Le référent envoyé est limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
+    - `origin-when-cross-origin`&nbsp;: Le référent envoyé à d'autres origines est limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluent toujours le chemin.
+    - `same-origin`&nbsp;: Un référent est envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiennent aucune information de référent.
     - `strict-origin`&nbsp;: N'envoie l'origine du document comme référent que lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), mais ne l'envoie pas vers une destination moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (par défaut)&nbsp;: Envoie une URL complète lors d'une requête de même origine, n'envoie que l'origine lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), et n'envoie aucun en-tête vers une destination moins sécurisée (HTTPS→HTTP).
-    - `unsafe-url`&nbsp;: Le référent inclura l'origine _et_ le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur est non sécurisée**, car elle divulgue les origines et les chemins de ressources protégées par TLS vers des origines non sécurisées.
+    - `unsafe-url`&nbsp;: Le référent inclut l'origine _et_ le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur est non sécurisée**, car elle divulgue les origines et les chemins de ressources protégées par TLS vers des origines non sécurisées.
 
 - [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
   - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Reference/Attributes/rel) séparés par des espaces.
@@ -108,7 +106,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `_blank`&nbsp;: généralement un nouvel onglet, mais les utilisateur·ice·s peuvent configurer les navigateurs pour ouvrir une nouvelle fenêtre à la place.
     - `_parent`&nbsp;: le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
     - `_top`&nbsp;: le contexte de navigation le plus haut (le contexte «&nbsp;le plus haut&nbsp;» qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
-    - `_unfencedTop`&nbsp;: Autorise les [cadres protégés](/fr/docs/Web/API/Fenced_frame_API) intégrés à naviguer vers la fenêtre de niveau supérieur (c'est-à-dire à dépasser la racine du cadre protégé, contrairement aux autres destinations réservées). Notez que la navigation fonctionnera toujours si cela est utilisé en dehors d'un contexte de cadre protégé, mais cela n'agira pas comme un mot-clé réservé.
+    - `_unfencedTop`&nbsp;: Autorise les [cadres protégés](/fr/docs/Web/API/Fenced_frame_API) intégrés à naviguer vers la fenêtre de niveau supérieur (c'est-à-dire à dépasser la racine du cadre protégé, contrairement aux autres destinations réservées). Notez que la navigation fonctionne toujours si cela est utilisé en dehors d'un contexte de cadre protégé, mais cela n'agit pas comme un mot-clé réservé.
 
     > [!NOTE]
     > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
@@ -178,11 +176,11 @@ Les ancres sont souvent détournées avec l'évènement `onclick` afin de créer
 
 Ces valeurs produisent des résultats inadéquats lorsqu'on copie/déplace des liens, qu'on ouvre des liens dans de nouveaux onglets ou fenêtres, qu'on ajoute des marque-pages ou lorsque le JavaScript est encore en train d'être téléchargé. De plus, la sémantique exposée par le document, utilisée par les outils d'assistance, est incorrecte.
 
-Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton {{HTMLElement("button")}}. De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
+Dans ces cas, on privilégie plutôt l'utilisation d'un bouton {{HTMLElement("button")}}. De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
 
 ### Liens externes, liens vers des ressources non-HTML
 
-Les liens qui ouvrent un nouvel onglet ou une nouvelle fenêtre grâce à `target="_blank"`, ainsi que les liens qui ouvrent des fichiers devraient fournir une indication sur ce qui se produira lorsqu'on cliquera sur ces liens.
+Les liens qui ouvrent un nouvel onglet ou une nouvelle fenêtre grâce à `target="_blank"`, ainsi que les liens qui ouvrent des fichiers doivent fournir une indication sur ce qui se produit lorsqu'on clique sur ces liens.
 
 Les personnes qui utilisent des outils d'assistance à la navigation comme des lecteurs d'écran et/ou qui souffrent de troubles de la vision, cognitifs peuvent être confuses lorsqu'un nouvel onglet, fichier ou une nouvelle fenêtre s'ouvre de façon inattendue. Les anciennes versions des lecteurs d'écran peuvent également ne pas annoncer ce comportement.
 
@@ -239,7 +237,7 @@ Les personnes qui utilisent des outils d'assistance à la navigation comme des l
 
 ### _Skip links_ — liens pour l'accès rapide au contenu
 
-Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et qui renvoie au début du contenu principal de la page.
+Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et qui envoie au début du contenu principal de la page.
 
 ```html
 <body>
@@ -247,7 +245,7 @@ Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est
 
   <header>…</header>
 
-  <main id="content"><!-- Le lien "skip" renvoie vers ici --></main>
+  <main id="content"><!-- Le lien "skip" envoie vers ici --></main>
 </body>
 ```
 
@@ -279,7 +277,7 @@ Les _skip links_ sont particulièrement utiles pour les personnes qui naviguent 
 
 #### La taille
 
-Les éléments interactifs tels que les liens doivent fournir une surface suffisamment grande pour qu'il soit facile de les activer. Cela facilitera la tâche à une variété de personnes&nbsp;: celles qui ont des problèmes moteur, celles qui utilisent des dispositifs de pointage peu précis (doigt ou stylet). La taille interactive minimale recommandée est de 44x44 [pixels CSS <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG21/#dfn-css-pixels).
+Les éléments interactifs tels que les liens doivent fournir une surface suffisamment grande pour qu'il soit facile de les activer. Cela facilite la tâche à une variété de personnes&nbsp;: celles qui ont des problèmes moteur, celles qui utilisent des dispositifs de pointage peu précis (doigt ou stylet). La taille interactive minimale recommandée est de 44x44 [pixels CSS <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG21/#dfn-css-pixels).
 
 Les liens en texte seul dans le contenu en prose sont exemptés de cette exigence, mais il est toujours bon de s'assurer qu'il y a suffisamment de texte hyperlié pour être facilement activé.
 

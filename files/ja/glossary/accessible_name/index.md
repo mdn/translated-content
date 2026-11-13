@@ -2,10 +2,8 @@
 title: Accessible name (アクセシブル名)
 slug: Glossary/Accessible_name
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **アクセシブル名**とは、ユーザーインターフェイス要素の名前のことで、支援技術のユーザーに要素のラベル付けを提供する HTML 要素に関連付けられたテキストのことです。
 

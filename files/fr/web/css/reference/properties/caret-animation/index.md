@@ -1,15 +1,19 @@
 ---
-title: caret-animation
+title: Propriété CSS `caret-animation`
+short-title: caret-animation
 slug: Web/CSS/Reference/Properties/caret-animation
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 {{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`caret-animation`** permet d'activer ou de désactiver le clignotement du **curseur d'insertion**, le marqueur visible qui apparaît dans les éléments éditables pour indiquer où le prochain caractère sera inséré ou supprimé.
+La propriété [CSS](/fr/docs/Web/CSS) **`caret-animation`** permet d'activer ou de désactiver le clignotement du **curseur d'insertion**, le marqueur visible qui apparaît dans les éléments éditables pour indiquer où le prochain caractère est inséré ou supprimé.
 
-Lorsque vous appliquez une animation personnalisée au curseur, vous devez désactiver le clignotement par défaut afin qu'il n'interfère pas avec l'animation.
+La propriété `caret-animation` peut également être définie dans le cadre de la propriété abrégée {{CSSxRef("caret")}}.
+
+> [!NOTE]
+> Lors de l'application d'une animation personnalisée au curseur, vous devez arrêter le clignotement par défaut afin qu'il n'interfère pas avec l'animation.
 
 ## Syntaxe
 
@@ -28,7 +32,7 @@ caret-animation: unset;
 
 ### Valeurs
 
-La propriété `caret-animation` est définie avec l'une des valeurs de mot-clé listées ci-dessous.
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Le curseur clignote. Il s'agit de la valeur par défaut (initiale).
@@ -55,11 +59,11 @@ Le balisage comporte deux éléments HTML {{HTMLElement("p")}} avec l'attribut [
 
 ```html live-sample___caret-animation-basic
 <p contenteditable="true">
-  Mon curseur s'anime car <code>caret-animation</code> est défini sur
+  Mon curseur s'anime, car <code>caret-animation</code> est défini sur
   <code>auto</code>.
 </p>
 <p contenteditable="true">
-  Mon curseur ne s'anime pas car <code>caret-animation</code> est défini sur
+  Mon curseur ne s'anime pas, car <code>caret-animation</code> est défini sur
   <code>manual</code>.
 </p>
 ```
@@ -159,7 +163,7 @@ input {
 
 Le résultat rendu ressemble à ceci&nbsp;:
 
-{{EmbedLiveSample('caret-aniamtion-custom', 'auto', 260)}}
+{{EmbedLiveSample("caret-animation-custom", "auto", 260)}}
 
 Essayez de sélectionner les deux premiers éléments pour voir à quoi ressemble l'animation personnalisée du curseur. Pour comparer avec le curseur clignotant par défaut, vous pouvez sélectionner le troisième élément.
 

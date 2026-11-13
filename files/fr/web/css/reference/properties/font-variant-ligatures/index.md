@@ -1,8 +1,9 @@
 ---
-title: font-variant-ligatures
+title: Propriété CSS `font-variant-ligatures`
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-ligatures`** contrôle quelles {{Glossary("ligature", "ligatures")}} et formes contextuelles sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.
@@ -24,7 +25,7 @@ font-variant-ligatures: common-ligatures;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>La difficulté des gauffres</p>
+    <p>La difficulté des gaufres</p>
   </div>
 </section>
 ```
@@ -76,9 +77,9 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-La propriété `font-variant-ligatures` se définit avec le mot-clé `normal`, `none` ou un ou plusieurs autres types de valeurs listés ci-dessous. Les espaces séparent les valeurs multiples.
-
 ### Valeurs
+
+Cette propriété se définit comme une liste de valeurs séparées par des espaces parmi les valeurs suivantes&nbsp;:
 
 - `normal`
   - : Cette valeur active les ligatures et les formes contextuelles courantes pour un rendu correct. Les ligatures et formes activées dépendent de la police utilisée, de la langue et de certains scripts. C'est la valeur par défaut.

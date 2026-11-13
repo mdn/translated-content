@@ -16,12 +16,10 @@ l10n:
 
 ```html interactive-example
 <textarea spellcheck="true">
-This exampull will be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will be checkd fur spellung when you try to edit it.</textarea>
 
 <textarea spellcheck="false">
-This exampull will nut be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea>
 ```
 
 它可以有以下幾個值：

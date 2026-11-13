@@ -1,8 +1,9 @@
 ---
-title: "<ol> : l'élément de liste ordonnée"
+title: "Élément HTML `<ol>` : l'élément de liste ordonnée"
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ol>`** représente une liste ordonnée, généralement affichée sous forme de liste numérotée.
@@ -113,7 +114,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_de_lattribut_start", 400, 100)}}
+{{EmbedLiveSample("Utilisation de l'attribut start", 400, 100)}}
 
 ### Listes imbriquées
 
@@ -136,7 +137,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("listes_imbriquées", 400, 150)}}
+{{EmbedLiveSample("Listes imbriquées", 400, 150)}}
 
 ### Liste non ordonnée dans une liste ordonnée
 
@@ -159,7 +160,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("liste_non_ordonnée_dans_une_liste_ordonnée", 400, 150)}}
+{{EmbedLiveSample("Liste non ordonnée dans une liste ordonnée", 400, 150)}}
 
 ## Résumé technique
 
@@ -167,34 +168,26 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Guides/Content_categories"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#palpable_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >
         si les enfants de l'élément <code>&#x3C;ol></code> incluent au moins un
-        élément <a href="/fr/docs/Web/HTML/Reference/Elements/li"><code>&#x3C;li></code></a
-        >.
+        élément {{HTMLElement("li")}}.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Zéro ou plusieurs éléments {{ HTMLElement("li") }},
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&#x3C;script></code></a
-        > et
-        <a href="/fr/docs/Web/HTML/Reference/Elements/template"
-          ><code>&#x3C;template></code></a
-        >.
+        Zéro ou plusieurs éléments {{HTMLElement("li")}},
+        {{HTMLElement("script")}} et {{HTMLElement("template")}}.
       </td>
     </tr>
     <tr>
@@ -205,7 +198,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#flow_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
@@ -233,11 +226,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLOListElement"
-          ><code>HTMLOListElement</code></a
-        >
-      </td>
+      <td>{{DOMxRef("HTMLOListElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -254,7 +243,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 - Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>`&nbsp;:
-  - {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
+  - La propriété CSS {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
   - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer les listes imbriquées complexes,
-  - {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
-  - {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.
+  - La propriété CSS {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
+  - La propriété CSS {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.

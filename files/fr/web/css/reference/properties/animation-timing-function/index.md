@@ -1,8 +1,9 @@
 ---
-title: animation-timing-function
+title: Propriété CSS `animation-timing-function`
+short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timing-function`** définit la façon dont une animation progresse pendant la durée de chaque cycle.

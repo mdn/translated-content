@@ -1,9 +1,9 @@
 ---
-title: "<sup> : l'élément de mise en exposant"
+title: "Élément HTML `<sup>` : l'élément de mise en exposant"
+short-title: <sup>
 slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément HTML **`<sup>`** permet d'afficher du texte en exposant, uniquement pour des raisons typographiques. Le texte est alors positionné plus haut que la ligne de base et généralement en plus petit.
@@ -37,7 +37,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 L'élément `<sup>` doit être utilisé uniquement pour des raisons typographiques&nbsp;: il sert à modifier la position du texte afin de respecter les conventions ou normes typographiques, et non simplement pour des raisons de présentation ou d'apparence.
 
-Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilisera par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
+Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilise par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
 
 Les cas d'utilisation appropriés de `<sup>` incluent (sans s'y limiter)&nbsp;:
 
@@ -171,6 +171,6 @@ Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i 
 
 ## Voir aussi
 
-- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faut utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}}.
 - La propriété CSS {{CSSxRef("vertical-align")}}.

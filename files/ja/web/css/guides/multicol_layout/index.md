@@ -3,7 +3,7 @@ title: CSS 段組みレイアウト
 short-title: 段組みレイアウト
 slug: Web/CSS/Guides/Multicol_layout
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
 ---
 
 **CSS 段組みレイアウト** (CSS multi-column layout) モジュールを使用すると、コンテンツを複数の段に分割することができます。このモジュールのプロパティを使用すると、段の推奨数と幅、段間の間隔、およびオプションで段の分割線（段間罫と呼ばれる）の外観を定義することができます。また、コンテンツが段から段へどのように流れるか、および段間でコンテンツをどのように分割するかを定義することもできます。
@@ -26,8 +26,8 @@ l10n:
   <p>
     For I have known you when your forests were mine; when they gave me my meat
     and my clothing. I have known you in your fruits and rivers where your fish
-    flashed and danced in the sun, where the waters said ‘come and eat of my
-    abundance.’ I have known you in the freedom of your winds. And my spirit,
+    flashed and danced in the sun, where the waters said 'come and eat of my
+    abundance.' I have known you in the freedom of your winds. And my spirit,
     like your winds, once roamed this good lands.
   </p>
   <blockquote>
@@ -37,7 +37,7 @@ l10n:
     </p>
   </blockquote>
   <p>
-    The white man’s strange customs I could not understand, pressed down upon me
+    The white man's strange customs I could not understand, pressed down upon me
     until I could no longer breathe.
   </p>
   <p>
@@ -66,7 +66,7 @@ l10n:
   </p>
   <p>
     Oh god, like the thunderbird of old, I shall rise again out of the sea. I
-    shall grab the instruments of the white man’s success – his education, his
+    shall grab the instruments of the white man's success – his education, his
     skills, and with these new tools I shall build my race into the proudest
     segment of your society. And, before I follow the great chiefs who have gone
     before us, I shall see these things come to pass.
@@ -179,12 +179,12 @@ breakP.addEventListener("change", () => {
 
 function showAndHideMenu() {
   if (legendBtn.getAttribute("aria-expanded") === "true") {
-    // close it
+    // 閉じる
     legendBtn.setAttribute("aria-expanded", "false");
     legend.classList.add("closed");
     legend.classList.remove("open");
   } else {
-    // open it
+    // 開く
     legendBtn.setAttribute("aria-expanded", "true");
     legend.classList.remove("closed");
     legend.classList.add("open");
@@ -291,7 +291,9 @@ blockquote p::after {
   - {{cssxref("column-rule-width")}}
 - {{cssxref("columns")}} 一括指定
   - {{cssxref("column-count")}}
+  - {{cssxref("column-height")}}
   - {{cssxref("column-width")}}
+- {{cssxref("column-wrap")}}
 
 > [!NOTE]
 > コンテナーの高さと行の長さを設定すると、視覚障碍や認知障碍のある方にとって操作が困難になる場合があることにご注意ください。 [WCAG 達成基準 1.4.8](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では、テキストサイズが 2 倍になっても、コンテンツをスクロールする必要がなくなるようにすべきであると規定されています。

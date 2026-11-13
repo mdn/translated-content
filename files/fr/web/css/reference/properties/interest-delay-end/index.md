@@ -1,8 +1,9 @@
 ---
-title: interest-delay-end
+title: Propriété CSS `interest-delay-end`
+short-title: interest-delay-end
 slug: Web/CSS/Reference/Properties/interest-delay-end
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -28,6 +29,8 @@ interest-delay-end: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par une valeur `<time>` ou le mot-clé `normal`&nbsp;:
 
 - `normal`
   - : Définit le délai par défaut du navigateur. Il s'agit de la valeur initiale.
@@ -65,7 +68,7 @@ Le balisage inclut un {{HTMLElement("button")}}, un {{HTMLElement("p")}} et un {
 
 #### CSS
 
-Dans le CSS, nous définissons une règle avec le sélecteur `.delay` qui applique une valeur `interest-delay-end` de `2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquerons cette classe au `<button>` lorsque la case à cocher sera cochée, avec JavaScript.
+Dans le CSS, nous définissons une règle avec le sélecteur `.delay` qui applique une valeur `interest-delay-end` de `2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquons cette classe au `<button>` lorsque la case à cocher est cochée, avec JavaScript.
 
 ```css live-sample___interest-invoker-delay
 .delay {

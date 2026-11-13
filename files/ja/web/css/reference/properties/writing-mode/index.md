@@ -1,11 +1,12 @@
 ---
-title: writing-mode
+title: "`writing-mode` プロパティ (CSS)"
+short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
 l10n:
-  sourceCommit: dd7de10dc91e9f2df29b80fec20da303439b6215
+  sourceCommit: e57e3fdd4ab6fb372ddc3d78e5b428f318202426
 ---
 
-**`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。
+**`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、テキストのフロー方向をどの方向にするかを設定します。
 
 {{InteractiveExample("CSS デモ: writing-mode")}}
 
@@ -55,8 +56,6 @@ writing-mode: sideways-lr;
 }
 ```
 
-このプロパティは、ブロックのフロー方向を指定します。これは、ブロックレベルコンテナーが積まれる方向と、インラインレベルのコンテンツがブロックコンテナー内でフローする方向です。このように、 `writing-mode` プロパティはブロックレベルのコンテンツの順序も決定します。
-
 ## 構文
 
 ```css
@@ -75,9 +74,9 @@ writing-mode: revert-layer;
 writing-mode: unset;
 ```
 
-`writing-mode` プロパティは、以下のいずれかの値として指定されます。横書きの場合は[その文字体系の書字方向](https://www.w3.org/International/questions/qa-scripts.en)も影響し、左書き (`ltr`、英語やその他の多くの言葉) や右書き (`rtl`、ヘブライ語やアラビア語) のどちらかになります。
-
 ### 値
+
+このプロパティは以下のキーワードのいずれかで指定します。
 
 - `horizontal-tb`
   - : `ltr` の言語では、コンテンツは左から右へ水平に流れます。`rtl` の言語では、コンテンツは右から左へ水平に流れます。次の水平の行は、前の行の下に配置されます。
@@ -101,6 +100,14 @@ writing-mode: unset;
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-lr` を代わりに使用してください。
 - `tb-rl`
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
+
+## 解説
+
+`writing-mode` プロパティは、テキストの行を水平方向に配置するか垂直方向に配置するかを設定します。これはブロックフローの方向を指定するもので、ブロックレベルコンテナーが積み重ねられる方向、およびブロックコンテナー内でインラインレベルコンテンツが流れる方向を指します。したがって、このプロパティはブロックレベルコンテンツの順序も決定します。
+
+横書きの文字のフロー方向は、[その文字体系の書字方向](https://www.w3.org/International/questions/qa-scripts.en)も影響し、左書き (`ltr`、英語やその他の多くの言葉) や右書き (`rtl`、ヘブライ語やアラビア語) のどちらかになります。
+
+文書全体に対して設定する場合は、ルート要素（HTML 文書の場合は `html` 要素）に設定する必要があります。
 
 ## 公式定義
 

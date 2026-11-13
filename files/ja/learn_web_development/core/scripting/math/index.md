@@ -1,15 +1,14 @@
 ---
 title: JavaScript での基本演算 — 数値と演算子
+short-title: 数値と演算子
 slug: Learn_web_development/Core/Scripting/Math
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 9d3d642daf9df9ece138fa39972edc5f7d6dcd6b
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
-
-今回は JavaScript での数学的処理についてです。我々の命令を実行するために上手く数値を操作するのにどのように {{Glossary("Operator","演算子")}} や、その他の機能を使用できるのかを見ていきましょう。
+ここでは、JavaScript の演算について解説します。具体的には、{{Glossary("Operator","演算子")}}やその他の機能を使用し、数値を自在に操作して目的を達成する方法について学びます。
 
 <table>
   <tbody>
@@ -74,7 +73,7 @@ l10n:
    myFloat;
    ```
 
-2. 数値には引用符が不要です。次に進む前にもう少し変数の宣言と初期化をしてみてください。
+2. 数値には引用符は不要です。次に進む前にもう少し変数の宣言と初期化をしてみてください。
 3. さて、それでは上で入力した 2 つの変数が同じデータ型であるか確認してみましょう。 JavaScript では、{{jsxref("Operators/typeof", "typeof")}} という演算子を使用することで、データ型を確認することができます。次の 2 行を入力してみましょう。
 
    ```js
@@ -86,12 +85,12 @@ l10n:
 
 ### 便利な Number のメソッド
 
-[`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトは、あなたが JavaScript を使う時すべての基本的な数値を表現するインスタンスですが、その中には、数値を操作するための沢山の便利なメソッドがあります。この記事では、簡単な紹介と基本的な要点だけまとめたいので、詳しくは割愛しますが、この段落を何回か読んだら、オブジェクトリファレンスページに行って、どんなメソッドが使えるのかを勉強するのが良いと思います。
+[`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトは、JavaScript を使う時すべての基本的な数値を表現するインスタンスですが、その中には、数値を操作するための沢山の便利なメソッドがあります。この記事では、簡単な紹介と基本的な要点だけまとめたいので、詳しくは割愛しますが、この段落を何回か読んだら、オブジェクトリファレンスページに行って、どんなメソッドが使えるのかを勉強するのが良いと思います。
 
 例えば、数値を固定の桁数に丸めるには [`toFixed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) メソッドを使用します。ブラウザーの[コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)に次の行を入力します。
 
 ```js
-const lotsOfDecimal = 1.766584958675746364;
+const lotsOfDecimal = 1.7665849587;
 lotsOfDecimal;
 const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
 twoDecimalPlaces;
@@ -108,13 +107,13 @@ let myNumber = "74";
 myNumber += 3;
 ```
 
-答えは 743 です。77 ではありません。 なぜなら `myNumber` は文字列として定義されているからです。以下の命令で確認することができます。
+答えは 743 です。77 ではありません。 なぜなら `myNumber` は文字列として定義されているからです。次のように入力すると確認することができます。
 
 ```js
 typeof myNumber;
 ```
 
-これは以下のようにして修正することができます。
+この計算を補正するには、このようにすることができます。
 
 ```js
 let myNumber = "74";
@@ -244,7 +243,7 @@ num2 + num1 / 8 + 2;
 (num2 + num1) / (8 + 2);
 ```
 
-実際に実行し、結果を見てみてください。
+この行をコンソールに入力して、確認してみてください。
 
 > [!NOTE]
 > JavaScript の演算子とその優先順位については[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)で確認することができます。
@@ -362,24 +361,40 @@ x *= y; // x は 12 になる
 > [!NOTE]
 > もっとたくさんの[代入演算子があります](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)が、とりあえず今は基本的なものだけ知っておけばよいでしょう。
 
-## アクティブラーニング: キャンバスのボックスのサイズを変更する
+## キャンバスのボックスのサイズ変更
 
 練習として、数値と演算子を使用してボックスのサイズを変更してみましょう。ブラウザーの{{domxref("Canvas API", "キャンバス API", "", "true")}} を使用してボックスを描きます。どうやって描くかについて気にする必要はありません。今は計算に集中しましょう。ボックスの幅と高さ (ピクセル単位で) 変数 `x` と `y` で宣言しています。最初は 50 になっています。
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}
+```html hidden live-sample___canvas-exercise
+<canvas id="canvas" width="400" height="200"></canvas>
+<p></p>
+```
 
-**[新しいウィンドウで開く](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
+```js live-sample___canvas-exercise
+const canvas = document.getElementById("canvas");
+const para = document.querySelector("p");
+const ctx = canvas.getContext("2d");
 
-上の編集可能なコードには、変更すべき 2 つの行にコメントが書かれています。その行を適切な演算子および値を用いて変更し、拡大縮小させてください。それではやってみましょう。
+// 以下の 2 行だけを変更してください
+let x = 50;
+let y = 50;
 
-- ボックスの幅を 50px としたまま x の値を求める行を変更してください。ただし、50 を 43 と 7、算術演算子を一つ使って演算によって求めてください。
-- ボックスの高さを 75px になるよう y の値を求める行を変更してください。ただし、75 を 25 と 3、算術演算子を一つ使用して演算によって求めてください。
-- ボックスの幅を 250px になるように x の値を求める行を変更してください。ただし、250 は 2 つの数値と、剰余演算子を使用して演算によって求めてください。
-- ボックスの高さを 150px になるように y の値を求める行を変更してください。ただし 150 は 3 つの数値と減算演算子および除算演算子を使用して演算によって求めてください。
-- ボックスの幅が 200px になるように x の値を求める行を変更してください。ただし 200 は 4 と代入演算子を一つ使用して演算によって求めてください。
-- ボックスの高さが 200px になるように y の値を求める行を変更してください。ただし 200 は 50 と 3 と乗算演算子、加算演算子を使用して求めてください。
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = "green";
+ctx.fillRect(10, 10, x, y);
+para.textContent = `この矩形の幅は ${x}px で高さは ${y}px です。`;
+```
 
-コードを完全に壊してしまっても大丈夫です。いつでもリセットボタンを押すことで何度でも最初から実行できます。上の問題に全問正解したら、もう少し遊んでみてもいいですし、自分で問題を作ってみてもいいですね。
+{{EmbedLiveSample("canvas-exercise", '100%', 300)}}
+
+MDN Playground で上記の例を開くには、**"Play"** ボタンをクリックしてください。その後、以下の手順に従って、それぞれの場合で特定の演算子や値を使用し、ボックスを特定のサイズに拡大縮小させてみてください。
+
+- `x` の値を求める行を変更し、ボックスの幅を `50px` のままになるようにしてください。ただし、50 は 43 と 7、算術演算子 1 つを使って計算で求めてください。
+- `y` の値を求める行を変更し、ボックスの高さを `75px` になるようにしてください。ただし、75 は 25 と 3、算術演算子 1 つを使用して計算で求めてください。
+- `x` の値を求める行を変更し、ボックスの幅を `100px` になるようにしてください。ただし、100 は 2 つの数値と、剰余演算子を使用して計算で求めてください。
+- `y` の値を求める行を変更し、ボックスの高さが `200px` になるようにしてください。ただし、200 は 2 と `x` と、乗算演算子を使用して計算で求めてください。
+
+コードを間違えても心配しないでください。いつでも Reset ボタンを押して、最初からやり直すことができます。
 
 ## 比較演算子
 
@@ -406,12 +421,12 @@ x *= y; // x は 12 になる
 
 後の記事にて、条件文でどのようにロジックをコーディングするのかを見ていきます。とりあえずの簡易な例で見てみましょう。
 
-```html
+```html live-sample___conditional
 <button>起動する</button>
 <p>マシンは停止中です。</p>
 ```
 
-```js
+```js live-sample___conditional
 const btn = document.querySelector("button");
 const txt = document.querySelector("p");
 
@@ -428,28 +443,22 @@ function updateBtn() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/conditional.html", '100%', 100)}}
-
-**[新しいウィンドウで開く](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
+{{EmbedLiveSample("conditional", '100%', 100)}}
 
 等価演算子が `updateBtn()` 関数の中で使用されていることがわかりますね。今回の場合は数値が同じ値かを判定するためには使用していません。ボタンの内容として設定されている文字列が、特定の文字列であるかどうかを比較しています。ただし、原理的には同じ働きです。もしボタンに「起動する」と書かれていれば、押されたときにボタンのラベルが「停止する」に代わります。もしボタンに「停止する」と書かれていれば、再度入れ替わって元に戻ります。
 
 > [!NOTE]
 > 2 つの状態を行き来するこのような操作を一般的に**トグル**といいます。スイッチの ON/OFF のように、ある状態がもう一つの状態にトグル (切り替え) するといいます。
 
-## スキルテスト
-
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math) を見てください。
-
 ## まとめ
 
 この記事では、 JavaScript で数字について知っておくべき基本的な情報について、とりあえず扱いました。 JavaScript を学習していく中で、数値はすべて何度も使用することになるので、今のうちに取得しておくのはよい考えです。もしあなたが数学を楽しめない人であれば、この章はかなり短かったので安心してください。
 
-次の章では文字列と、文字列を JavaScript で操作する方法について見ていきます。
+次の記事では、この情報をどれだけ理解し、覚えているかを調べるためのテストをいくつかご紹介します。
 
 ## 関連情報
 
 - [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting")}}

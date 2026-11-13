@@ -63,7 +63,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-以下のように {{jsxref("Operators/new", "new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
+以下のように {{jsxref("new")}} 演算子を伴う構文では、 {{jsxref("TypeError")}} が発生します。
 
 ```js example-bad
 const sym = new Symbol(); // TypeError

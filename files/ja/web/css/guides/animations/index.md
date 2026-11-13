@@ -3,7 +3,7 @@ title: CSS アニメーション
 short-title: アニメーション
 slug: Web/CSS/Guides/Animations
 l10n:
-  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 **CSS アニメーション** (CSS animations) モジュールを使用すると、キーフレームを使用して、background-position や transform などの CSS プロパティの値を、時間に応じてアニメーションさせることができます。各キーフレームは、アニメーションシーケンスの指定された時間に、アニメーションする要素をどのようにレンダリングするかを記述します。アニメーションモジュールでは、アニメーションの再生時間、繰り返し回数、開始の遅延、その他のアニメーションの要素を制御するためのプロパティを使用することができます。
@@ -242,12 +242,10 @@ input:checked + label::after {
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-> [!NOTE]
-> CSS animations モジュールレベル 2 では、 `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, `animation-trigger-type` の各プロパティを導入しています。これらはまだ実装されていません。
-
 ### アットルールと記述子
 
 - {{cssxref("@keyframes")}}
+- [`<keyframe-selector>`](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
 ### イベント
 
@@ -277,10 +275,34 @@ input:checked + label::after {
 
 ## 関連概念
 
-- CSS の {{cssxref("will-change")}} プロパティ
-- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function) データ型
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} 一括指定
+  - {{cssxref("timeline-trigger-activation-range")}} 一括指定
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} 一括指定
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+  - {{cssxref("animation-range")}} 一括指定
+    - {{cssxref("animation-range-end")}}
+    - {{cssxref("animation-range-start")}}
+  - {{cssxref("scroll-timeline")}} 一括指定
+    - {{cssxref("scroll-timeline-axis")}}
+    - {{cssxref("scroll-timeline-name")}}
+  - {{cssxref("timeline-scope")}}
+  - {{cssxref("view-timeline")}} 一括指定
+    - {{cssxref("view-timeline-axis")}}
+    - {{cssxref("view-timeline-inset")}}
+    - {{cssxref("view-timeline-name")}}
+- CSS {{cssxref("will-change")}} プロパティ
+- {{cssxref("easing-function")}} データ型
 - [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリー
-- {{glossary("Bezier curve", "ベジェ曲線")}}
+- {{glossary("Bezier curve", "ベジェ曲線")}} 用語
 
 ## 仕様書
 
@@ -289,7 +311,8 @@ input:checked + label::after {
 ## 関連情報
 
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
-- CSS [トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュールのプロパティは、ユーザーの操作に基づいてアニメーションを起動します。
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - {{cssxref("interpolate-size")}} プロパティと {{cssxref("calc-size()")}} 関数で、[内在的なサイズの値](/ja/docs/Glossary/Intrinsic_Size)を起点または終点としたアニメーションが利用できます。
 - HTML の {{htmlelement("canvas")}} 要素と[キャンバス API](/ja/docs/Web/API/Canvas_API) および [WebGL API](/ja/docs/Web/API/WebGL_API) でグラフィックとアニメーションを描画できます。
 - {{domxref("SVGAnimationElement")}} インターフェイスはすべてのアニメーション関連要素、例えば {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, {{domxref("SVGAnimateTransformElement")}} に使用します。

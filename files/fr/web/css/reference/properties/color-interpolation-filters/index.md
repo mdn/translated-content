@@ -1,8 +1,9 @@
 ---
-title: color-interpolation-filters
+title: Propriété CSS `color-interpolation-filters`
+short-title: color-interpolation-filters
 slug: Web/CSS/Reference/Properties/color-interpolation-filters
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`color-interpolation-filters`** définit l'espace colorimétrique utilisé pour les opérations d'imagerie réalisées par les effets de filtre SVG. Si elle est explicitement déclarée, la valeur de la propriété CSS remplace toute valeur donnée dans l'attribut {{SVGAttr("color-interpolation-filters")}} de l'élément.
@@ -29,6 +30,8 @@ color-interpolation-filters: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `linearRGB`
   - : Indique que l'interpolation des couleurs doit se faire dans l'espace colorimétrique RGB linéarisé tel que décrit dans [la spécification sRGB <sup>(angl.)</sup>](https://webstore.iec.ch/en/publication/6169). Il s'agit de la valeur par défaut de la propriété.

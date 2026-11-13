@@ -3,7 +3,7 @@ title: Comment créer, modifier, déplacer ou supprimer des pages
 short-title: Créer, modifier, déplacer ou supprimer des pages
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 l10n:
-  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
+  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
 ---
 
 Cet article décrit comment créer, déplacer, supprimer ou modifier une page.
@@ -50,7 +50,7 @@ Le processus général de création d'une page, étape par étape, est le suivan
 
 ## Déplacer des pages
 
-Déplacer un ou plusieurs documents, ou tout un arbre de documents, est simple car une commande spéciale a été créée pour gérer tous les détails&nbsp;:
+Déplacer un ou plusieurs documents, ou tout un arbre de documents, est simple, car une commande spéciale a été créée pour gérer tous les détails&nbsp;:
 
 ```bash
 npm run content move <identifiant-source> <identifiant-cible> [langue]
@@ -58,7 +58,7 @@ npm run content move <identifiant-source> <identifiant-cible> [langue]
 
 Vous devez simplement indiquer l'identifiant d'URL du document existant que vous souhaitez déplacer (par exemple&nbsp;: `Web/HTTP/Guides/Authentication`), ainsi que l'identifiant d'URL de sa nouvelle localisation (par exemple&nbsp;: `Web/HTTP/Guides/Auth`), suivi éventuellement de la locale du document existant (par défaut&nbsp;: `en-US`).
 
-Si le document existant que vous souhaitez déplacer possède des documents enfants (c'est-à-dire qu'il représente un arbre de documents), la commande `npm run content move` déplacera l'ensemble de l'arbre.
+Si le document existant que vous souhaitez déplacer possède des documents enfants (c'est-à-dire qu'il représente un arbre de documents), la commande `npm run content move` déplace l'ensemble de l'arbre.
 
 Par exemple, si vous souhaitez déplacer tout l'arbre `/en-US/Web/HTTP/Guides/Authentication` vers `/en-US/Web/HTTP/Guides/Auth`, procédez ainsi&nbsp;:
 
@@ -73,7 +73,7 @@ Par exemple, si vous souhaitez déplacer tout l'arbre `/en-US/Web/HTTP/Guides/Au
    git checkout -b mon-déplacement
    ```
 
-2. Effectuez le déplacement (cela supprimera et modifiera les fichiers existants, et en créera de nouveaux).
+2. Effectuez le déplacement (cela supprime et modifie les fichiers existants, et en crée de nouveaux).
 
    ```bash
    npm run content move Web/HTTP/Guides/Authentication Web/HTTP/Guides/Auth
@@ -102,6 +102,9 @@ Par exemple, si vous souhaitez déplacer tout l'arbre `/en-US/Web/HTTP/Guides/Au
 
 Les documents ne doivent être supprimés de MDN Web Docs que dans des circonstances particulières. Si vous envisagez de supprimer des pages, veuillez en discuter d'abord avec l'équipe MDN Web Docs sur les [salons de discussion MDN Web Docs](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion).
 
+> [!NOTE]
+> Cette section couvre la suppression de pages individuelles ou d'arbres de pages. Si vous devez retirer une section entière du contenu de MDN, consultez le guide [Retirer du contenu](/fr/docs/MDN/Writing_guidelines/Howto/Retiring_content).
+
 Supprimer un ou plusieurs documents, ou tout un arbre de documents, est aussi simple que déplacer des pages, car une commande spéciale a été créée pour gérer tous les détails&nbsp;:
 
 ```bash
@@ -115,7 +118,7 @@ Lorsque vous ajoutez une redirection, la page cible peut être une URL externe o
 
 Vous devez simplement définir l'identifiant d'URL du document existant que vous souhaitez supprimer (par exemple&nbsp;: `Web/HTTP/Guides/Authentication`), suivi éventuellement de la locale du document existant (par défaut&nbsp;: `en-US`).
 
-Si le document existant que vous souhaitez supprimer possède des documents enfants (c'est-à-dire qu'il représente un arbre de documents), vous devez également définir l'option `-r, --recursive`, sinon la commande échouera.
+Si le document existant que vous souhaitez supprimer possède des documents enfants (c'est-à-dire qu'il représente un arbre de documents), vous devez également définir l'option `-r, --recursive`, sinon la commande échoue.
 
 Par exemple, si vous souhaitez supprimer tout l'arbre `/en-US/Web/HTTP/Guides/Authentication`, procédez ainsi&nbsp;:
 
@@ -152,7 +155,7 @@ Par exemple, si vous souhaitez supprimer tout l'arbre `/en-US/Web/HTTP/Guides/Au
 > npm run content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)" -- --redirect <identifiant-cible-ou-url>
 > ```
 
-La suppression de contenu de MDN Web Docs entraînera inévitablement la mise à jour du contenu existant. De nombreux articles font référence à d'autres, le contenu supprimé sera donc probablement référencé ailleurs. Ajouter une redirection atténuera l'impact de la suppression&nbsp;; cependant, il est recommandé de modifier le contenu pour refléter le changement et d'inclure les modifications de contenu avec la requête de suppression.
+La suppression de contenu de MDN Web Docs entraîne inévitablement la mise à jour du contenu existant. De nombreux articles font référence à d'autres, le contenu supprimé est donc probablement référencé ailleurs. Ajouter une redirection atténue l'impact de la suppression&nbsp;; cependant, il est recommandé de modifier le contenu pour refléter le changement et d'inclure les modifications de contenu avec la requête de suppression.
 
 ## Modifier des pages existantes
 
@@ -160,8 +163,8 @@ Pour modifier une page, vous devez trouver la source de la page dans nos dépôt
 
 ### Prévisualiser les modifications
 
-Si vous modifiez la page localement, pour voir à quoi ressemblent vos changements, vous pouvez aller dans le dossier du dépôt de contenu, exécuter la commande CLI `npm start`, aller à `localhost:5042` dans votre navigateur, puis naviguer jusqu'à la page pour la consulter. Entrez le titre dans la barre de recherche pour la trouver facilement. La page prévisualisée se mettra à jour dans le navigateur au fur et à mesure que vous modifierez la source.
+Si vous modifiez la page localement, pour voir à quoi ressemblent vos changements, vous pouvez aller dans le dossier du dépôt de contenu, exécuter la commande CLI `npm start`, aller à `localhost:5042` dans votre navigateur, puis naviguer jusqu'à la page pour la consulter. Entrez le titre dans la barre de recherche pour la trouver facilement. La page prévisualisée se met à jour dans le navigateur au fur et à mesure que vous modifiez la source.
 
 ### Joindre des fichiers
 
-Pour joindre un fichier à votre article, il vous suffit de l'inclure dans le même répertoire que le fichier `index.md` de l'article. Incluez le fichier dans votre page, généralement via un élément HTML {{HTMLElement("a")}}.
+Pour joindre un fichier à votre article, il vous suffit de l'inclure dans le même répertoire que le fichier `index.md` de l'article. Incluez le fichier dans votre page, généralement avec un élément HTML {{HTMLElement("a")}}.

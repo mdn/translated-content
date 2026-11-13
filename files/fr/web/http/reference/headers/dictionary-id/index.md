@@ -8,11 +8,11 @@ l10n:
 
 {{SeeCompatTable}}
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Dictionary-ID`** fait référence à un dictionnaire qui peut être utilisé dans le {{Glossary("Compression Dictionary Transport", "transport de dictionnaire de compression")}} pour compresser la réponse du serveur.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Dictionary-ID`** fait référence à un dictionnaire qui peut être utilisé dans le {{Glossary("Compression Dictionary Transport", "transport de dictionnaire de compression")}} pour compresser la réponse du serveur.
 
 Un serveur peut indiquer qu'une ressource peut être utilisée comme dictionnaire en envoyant l'en-tête {{HTTPHeader("Use-As-Dictionary")}} dans la réponse. Le serveur peut inclure une directive `id` dans l'en-tête `Use-As-Dictionary`, attribuant ainsi une valeur d'identifiant au dictionnaire. Si le serveur fait cela, alors lorsque le navigateur demande une ressource pouvant être compressée avec le dictionnaire, la requête doit inclure l'en-tête `Dictionary-ID`, et sa valeur doit correspondre à l'identifiant donné dans `Use-As-Dictionary`.
 
-Ceci permet au serveur d'identifier et de retrouver un dictionnaire référencé par une clé arbitraire, plutôt que d'utiliser la {{Glossary("hash function", "fonction de hachage")}} comme clé (si cette méthode est utilisée, le serveur devra hacher chaque réponse qui inclut l'en-tête `Use-As-Dictionary` au cas où la ressource pourrait éventuellement être utilisée comme dictionnaire).
+Ceci permet au serveur d'identifier et de retrouver un dictionnaire référencé par une clé arbitraire, plutôt que d'utiliser la {{Glossary("hash function", "fonction de hachage")}} comme clé (si cette méthode est utilisée, le serveur doit hacher chaque réponse qui inclut l'en-tête `Use-As-Dictionary` au cas où la ressource peut éventuellement être utilisée comme dictionnaire).
 
 Notez que même si le serveur peut identifier et localiser le dictionnaire grâce à son `Dictionary-ID`, il doit toujours vérifier le hachage provenant de l'en-tête `Available-Dictionary` pour confirmer qu'il s'agit d'une correspondance correcte.
 
@@ -27,7 +27,7 @@ Dictionary-ID: "<string-identifier>"
 ## Directives
 
 - `<string-identifier>`
-  - : Une chaîne représentant l'identifiant attribué au dictionnaire par le serveur.
+  - : Une chaîne de caractères représentant l'identifiant attribué au dictionnaire par le serveur.
 
 ## Exemples
 
