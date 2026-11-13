@@ -2,22 +2,25 @@
 title: FileSystemSyncAccessHandle
 slug: Web/API/FileSystemSyncAccessHandle
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: d65517535ae067fa876d5fae83626dff838e9796
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("File System Access API", "File System Access API", "", "nocode")}} の **`FileSystemSyncAccessHandle`** インターフェイスは、ファイルシステムのエントリーを扱う同期式のハンドルを表します。ファイルの読み書きにおける同期式であるという性質は、[WebAssembly](/ja/docs/WebAssembly) などの非同期操作が高いオーバーヘッドに繋がる状況における重要なメソッドのパフォーマンスを高めることができます。
+**`FileSystemSyncAccessHandle`** は{{domxref("File System API", "ファイルシステム API", "", "nocode")}} のインターフェイスで、ファイルシステムの項目を同期的に操作するハンドルを表します。
 
-このクラスは、それ用の [Web Workers](/ja/docs/Web/API/Web_Workers_API) 内で[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)にあるファイルを操作するときのみアクセスできます。
+このクラスには、専用[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)内からのみアクセスできます。これは、このクラスのメソッドがメインスレッドの実行をブロックしないようにするためです。対象となるのは、エンドユーザーには見えない[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API/Origin_private_file_system)内のファイルです。
+
+その結果、これらのメソッドは、ユーザーに表示されるファイルシステム内のファイルを操作するメソッドと同じセキュリティチェックの対象にならず、パフォーマンスが大幅に向上します。そのため、[SQLite](https://sqlite.org/wasm) <sup>(英語)</sup> データベースの変更など、大規模なファイル更新に適しています。
 
 このインターフェイスは {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} メソッド経由でアクセスされます。
 
-{{InheritanceDiagram}}
+> [!NOTE]
+> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとして規定されていました。一部のブラウザーの古いバージョンでは、これらのメソッドがそのように実装されています。しかし、これらのメソッドに対応する現行のブラウザーでは、すべて同期メソッドとして実装されています。
 
 ## インスタンスプロパティ
 
-なし
+なし。
 
 ## インスタンスメソッド
 
@@ -49,7 +52,7 @@ onmessage = async (e) => {
   // メインスクリプトからの処理対象のメッセージを取得する
   const message = e.data;
 
-  // draft ファイルのハンドルを取得する
+  // 下書きファイルのハンドルを取得する
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // 同期式アクセスハンドルを取得する
@@ -74,9 +77,6 @@ onmessage = async (e) => {
 };
 ```
 
-> [!NOTE]
-> 仕様書の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期のメソッドとされていました。これは現在は[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
-
 ## 仕様書
 
 {{Specifications}}
@@ -87,5 +87,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) <sup>(英語)</sup>
