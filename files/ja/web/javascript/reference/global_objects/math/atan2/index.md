@@ -3,10 +3,10 @@ title: Math.atan2()
 short-title: atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-**`Math.atan2()`** は静的メソッドで、`Math.atan2(y, x)` に対して点 (0, 0) から点 (x, y) までの半直線と、正の x 軸の間の平面上での角度（ラジアン単位）を返します。
+**`Math.atan2()`** は静的メソッドで、`Math.atan2(y, x)` に対して、点 (0, 0) を始点として点 (x, y) を通る半直線と正の x 軸との間の平面上の角度（ラジアン単位）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.atan2()")}}
 
@@ -40,15 +40,15 @@ Math.atan2(y, x)
 
 ### 返値
 
-正の x 軸と (0, 0) から (x, y) への半直線との間の角度のラジアン（-π ～ π で両端を含む）です。
+正の x 軸と、(0, 0) から (x, y) へ向かう半直線との間のラジアン単位の角度（-π から π まで、両端を含む）です。
 
 ## 解説
 
-`Math.atan2()` メソッドは、正の x 軸と `(x, y)` 座標の角度 θ をラジアンで表す計測します。なお、この関数への引数は、先に y 座標、次に x 座標であることに注意してください。
+`Math.atan2()` メソッドは、正の x 軸と、原点から座標 `(x, y)` へ向かう半直線との間で反時計回りに測った角度 θ をラジアン単位で返します。この関数には、先に y 座標、次に x 座標の順に引数を渡すことに注意してください。
 
 ![atan2(y, x) から返される角度を表す図](atan2.png)
 
-`Math.atan2()` は、`x` と `y` を別々に受け取るのに対し、 [`Math.atan()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) は 2 つの引数の比率を受け取ります。 `Math.atan2(y, x)` は以下の場合に `Math.atan(y / x)` とは異なります。
+`Math.atan2()` は `x` と `y` を別々に受け取りますが、[`Math.atan()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) は 2 つの引数の比を受け取ります。`Math.atan2(y, x)` は、以下の場合に `Math.atan(y / x)` とは異なる結果を返します。
 
 | `x`                 | `y`         | `Math.atan2(y, x)` | `Math.atan(y / x)` |
 | ------------------- | ----------- | ------------------ | ------------------ |
@@ -65,7 +65,7 @@ Math.atan2(y, x)
 | `-Infinity`         | < 0         | -π                 | 0                  |
 | -0                  | < 0         | -π / 2             | π / 2              |
 
-さらに、第二、第三象限（`x < 0`）の点については、 `Math.atan2()` は <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> より小さい角度や、 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> より大きな角度を出力します。
+さらに、第二象限と第三象限（`x < 0`）の点については、`Math.atan2()` は <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> より小さい角度や、<math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> より大きい角度を返します。
 
 `atan2()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.atan2()` として使用するようにしてください（`Math` はコンストラクターではありません）。
 
@@ -167,3 +167,4 @@ for (const x of [-Infinity, -1, -0, 0, 1, Infinity]) {
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan2()")}} 関数

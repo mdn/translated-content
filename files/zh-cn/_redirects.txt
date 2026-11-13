@@ -1370,7 +1370,7 @@
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
 /zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
@@ -1479,6 +1479,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
+/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
@@ -2138,6 +2139,7 @@
 /zh-CN/docs/Web/API/Response/error	/zh-CN/docs/Web/API/Response/error_static
 /zh-CN/docs/Web/API/Response/redirect	/zh-CN/docs/Web/API/Response/redirect_static
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
+/zh-CN/docs/Web/API/SVGAnimateColorElement	/zh-CN/docs/Web/API/SVGAnimationElement
 /zh-CN/docs/Web/API/SVGEvent	/zh-CN/docs/Web/API/Event
 /zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength

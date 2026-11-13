@@ -3,7 +3,7 @@ title: Function.prototype.caller
 short-title: caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{Non-standard_Header}}
@@ -39,10 +39,10 @@ ECMAScript 仕様で規定されているのは、`Function.prototype` が初期
   }
 })();
 
-// In Chrome:
+// Chrome の場合:
 // caller is an own property with descriptor {value: null, writable: false, enumerable: false, configurable: false}
 
-// In Firefox:
+// Firefox の場合:
 // f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller
 // null
 ```
@@ -53,7 +53,7 @@ ECMAScript 仕様で規定されているのは、`Function.prototype` が初期
 
 ## 例
 
-### 関数の呼び出し側プロパティの値を調べる
+### 関数の caller プロパティの値を調べる
 
 次のコードは、関数の `caller` プロパティの値を調べます。
 
@@ -130,12 +130,12 @@ function calleeFunc() {
 (function () {
   callerFunc();
 })();
-// Logs [Function: callerFunc]
+// ログ出力: [Function: callerFunc]
 
 (function () {
   strictCallerFunc();
 })();
-// Logs null
+// ログ出力: null
 ```
 
 ## 仕様書

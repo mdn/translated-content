@@ -3,7 +3,7 @@ title: Function.prototype.arguments
 short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
 {{Non-standard_Header}}
@@ -17,11 +17,11 @@ l10n:
 
 `arguments` の値は、関数に渡した引数に対応する配列風のオブジェクトです。
 
-再帰呼び出しの場合、すなわちコールスタックに関数 `f` が複数回現れる場合に、`f.arguments` はもっとも直近に実行された関数に対応する引数を表します。
+再帰呼び出しの場合、すなわちコールスタックに関数 `f` が複数回現れる場合に、`f.arguments` は直近の関数呼び出しに対応する引数を表します。
 
-関数の呼び出しが完了し、実行中の呼び出しがない場合、`arguments` プロパティの値は通常 {{jsxref("null")}} です。
+関数が呼び出されてからまだ戻っていない呼び出しがない場合、`arguments` プロパティの値は通常 {{jsxref("null")}} です。
 
-ECMAScript 仕様で規定されているのは、`Function.prototype` が初期 `arguments` アクセサーを持ち、`get` または `set` の要求に対して無条件に {{jsxref("TypeError")}} を発生させること（「毒薬アクセサー」として知られています）だけです。非厳格モードの通常の関数を除き、実装はこの動作を変更できません。エラーを発生させる以外の `arguments` プロパティの動作は、実装によって定義されます。例えば、Chrome はこのプロパティを関数自身のデータプロパティとして定義しています。一方、Firefox と Safari は初期の毒薬アクセサーである `Function.prototype.arguments` を拡張し、`this` の値が非厳格モードの関数である場合を特別に処理しています。
+ECMAScript 仕様で規定されているのは、`Function.prototype` が初期 `arguments` アクセサーを持ち、`get` または `set` の要求に対して無条件に {{jsxref("TypeError")}} を発生させること（「毒薬アクセサー」として知られています）だけです。厳格モードでない通常の関数を除き、実装はこの動作を変更できません。エラーを発生させる以外の `arguments` プロパティの動作は、実装によって定義されます。例えば、Chrome はこのプロパティを関数自身のデータプロパティとして定義しています。一方、Firefox と Safari は初期の毒薬アクセサーである `Function.prototype.arguments` を拡張し、`this` の値が厳格モードでない関数である場合を特別に処理しています。
 
 ```js
 (function f() {
@@ -53,7 +53,7 @@ ECMAScript 仕様で規定されているのは、`Function.prototype` が初期
 
 ## 例
 
-### arguments オブジェクトの使用
+### arguments プロパティの使用
 
 ```js
 function f(n) {

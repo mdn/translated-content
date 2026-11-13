@@ -3,7 +3,7 @@ title: Math.atanh()
 short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.atanh()`** は静的メソッドで、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
@@ -39,7 +39,7 @@ Math.atanh(x)
 ### 引数
 
 - `x`
-  - : -1 ～ 1 の間で両端を含む数値です。
+  - : -1 以上 1 以下の数値です。
 
 ### 返値
 
@@ -73,7 +73,7 @@ Math.atanh(2); // NaN
 
 ## 関連情報
 
-- [`Math.atanh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.atanh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.atanh` のポリフィル](https://www.npmjs.com/package/math.atanh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

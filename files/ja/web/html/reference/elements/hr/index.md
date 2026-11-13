@@ -3,10 +3,10 @@ title: "`<hr>` 主題区切り（水平線）要素"
 short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-**`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
+**`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、要素間のテーマ上の区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
 {{InteractiveExample("HTML デモ: &lt;hr&gt;", "tabbed-shorter")}}
 
@@ -37,10 +37,6 @@ hr::after {
 }
 ```
 
-過去には、`<hr>`要素は常に水平線として表示されてきました。視覚的なブラウザーでは現在も水平線として表示される場合がありますが、この要素は現在、表現上の観点ではなく、意味づけの観点から定義されています。したがって、水平線を描画したい場合は、CSSを使用して既存の要素に境界線を追加することで実現する必要があります。
-
-`border-*` プロパティ（例えば、{{cssxref("border-style")}} や {{cssxref("border-color")}} など）を使用すると、`<hr>` 要素をカスタマイズする場合でも、別の要素に描画された境界線をカスタマイズする場合でも、線の外観を大幅にカスタマイズすることができます。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
@@ -56,27 +52,96 @@ hr::after {
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 区切り線の幅をピクセル数、あるいはパーセント値で指定します。
 
+## 使用上の注意
+
+歴史的に、`<hr>` 要素は常に水平線として表示されてきました。視覚的なブラウザーでは現在も水平線として表示されることがありますが、この要素は現在、表示上ではなく意味上の観点から定義されています。そのため、水平線を描画したい場合は、CSS を使用して既存の要素に境界線を追加してください。
+
+{{cssxref("border-style")}} や {{cssxref("border-color")}} などの `border-*` プロパティを使うと、`<hr>` 要素や、別の要素に描画する境界線の外観を大幅にカスタマイズできます。
+
 ## 例
 
-### HTML
+### 段落間のテーマ上の区切り
+
+次の例では、段落レベルの要素間にテーマ上の区切りを追加します。
+
+#### HTML
 
 ```html
-<p>
-  これは第一段落のテキストです。これは第一段落のテキストです。
-  これは第一段落のテキストです。これは第一段落のテキストです。
-</p>
-
-<hr />
-
-<p>
-  これは第二段落のテキストです。これは第二段落のテキストです。
-  これは第二段落のテキストです。これは第二段落のテキストです。
-</p>
+<article>
+  <p>
+    これは第一段落のテキストです。これは第一段落のテキストです。
+    これは第一段落のテキストです。これは第一段落のテキストです。
+  </p>
+  <hr />
+  <p>
+    これは第二段落のテキストです。これは第二段落のテキストです。
+    これは第二段落のテキストです。これは第二段落のテキストです。
+  </p>
+</article>
 ```
 
-### 結果
+#### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Thematic_break_between_paragraphs")}}
+
+### リスト項目間のテーマ上の区切り
+
+`<hr>` タグは、視覚的に分離するためにリスト項目内に配置し、リストの各セクション間に区切り線を作成できます。
+
+#### HTML
+
+```html
+<ul>
+  <li>切り取り</li>
+  <li>コピー</li>
+  <li>貼り付け</li>
+  <li role="presentation"><hr /></li>
+  <li>削除</li>
+</ul>
+```
+
+```css hidden
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100px;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid lightgrey;
+}
+hr {
+  margin-block: 0.2rem;
+  color: lightgrey;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Thematic_break_between_list_items")}}
+
+### select の選択肢間のテーマ上の区切り
+
+`<hr>` 要素は `<select>` 要素内で使用でき、`<option>` 要素間に視覚的な区切りを作成します。
+
+#### HTML
+
+```html
+<select>
+  <option value="">--選択してください--</option>
+  <hr />
+  <option value="option1">選択肢 1</option>
+  <option value="option2">選択肢 2</option>
+  <hr />
+  <option value="option3">選択肢 3</option>
+  <option value="option4">選択肢 4</option>
+</select>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Thematic_break_between_select_options")}}
 
 ## 技術的概要
 

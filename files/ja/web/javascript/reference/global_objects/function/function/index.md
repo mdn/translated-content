@@ -3,17 +3,17 @@ title: Function() コンストラクター
 short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 06f8ebf948372dfb6c3c22d26d4f672c99cd4e0d
 ---
 
 > [!WARNING]
-> このコンストラクターに渡された引数は、JavaScript として動的に構文解析され実行されます。このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使用法)と呼ばれ、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となる可能性があります。
+> このコンストラクターに渡された引数は、JavaScript として動的に構文解析され実行されます。このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS) 攻撃の経路となる可能性があります。
 >
 > 文字列の代わりに {{domxref("TrustedScript")}} オブジェクトを常に渡し、[信頼型を強制](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)することで、このリスクを軽減できます。
 >
 > 詳しくは[セキュリティ上の注意事項](#セキュリティ上の注意事項)をご覧ください。
 
-**`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を作成できますが、{{jsxref("Global_Objects/eval", "eval()")}} と同様のセキュリティ上の問題と、規模ははるかに小さいものの同様の性能上の問題があります。ただし `eval` とは異なり、`Function` コンストラクターが生成する関数はグローバルスコープでのみ実行されます。
+**`Function()`** コンストラクターは、新しい {{jsxref("Function")}} オブジェクトを生成します。コンストラクターを直接呼び出すと動的に関数を作成できますが、{{jsxref("Global_Objects/eval", "eval()")}} と同様のセキュリティ上の問題と、重要性ははるかに低いものの同様のパフォーマンス上の問題があります。ただし、ローカルスコープにアクセスできる場合がある `eval` とは異なり、`Function` コンストラクターが生成する関数はグローバルスコープでのみ実行されます。
 
 {{InteractiveExample("JavaScript デモ: Function() コンストラクター", "shorter")}}
 
@@ -21,7 +21,7 @@ l10n:
 const sum = new Function("a", "b", "return a + b");
 
 console.log(sum(2, 6));
-// 期待される出力結果: 8
+// 予想される結果: 8
 ```
 
 ## 構文
@@ -121,7 +121,7 @@ Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_a
 
 ## 例
 
-簡潔にするため、以下の例では信頼型の使用を省略しています。推奨される方法を示すコードは、`eval()` の[「TrustedScript の使用」](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#trustedscript-の使用)をご覧ください。
+簡潔にするため、以下の例では信頼型の使用を省略しています。推奨される方法を示すコードは、`eval()` の[「TrustedScript の使用」](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#trustedscript_の使用)をご覧ください。
 
 ### Function コンストラクターに引数を指定する
 
@@ -145,7 +145,7 @@ adder(2, 6);
 ```js
 // function コンストラクターは、セミコロンで区切られた複数の文を受け取ることができます。関数式では、関数名付きの return 文が要求されます。
 
-// 新しい関数が呼び出されることを監視します。これは、その後すぐに作成した関数を呼び出すことができるようにするためです。
+// new Function が呼び出されていることに注目してください。これは、作成した関数をその直後に呼び出せるようにするためです。
 const sumOfArray = new Function(
   "const sumArray = (arr) => arr.reduce((previousValue, currentValue) => previousValue + currentValue); return sumArray",
 )();
@@ -154,7 +154,7 @@ const sumOfArray = new Function(
 sumOfArray([1, 2, 3, 4]);
 // 10
 
-// 新しい関数を呼び出す際にこの点を考慮しない場合、 Function.call() メソッドを使用して関数を呼び出すことができます。
+// 作成時に new Function を呼び出さない場合は、Function.call() メソッドを使用して呼び出せます。
 const findLargestNumber = new Function(
   "function findLargestNumber (arr) { return Math.max(...arr) }; return findLargestNumber",
 );
@@ -183,7 +183,7 @@ sayHello("world");
 
 ## 関連情報
 
-- [`eval()` における Function コンストラクターの使用](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#function-コンストラクターの使用)
+- [`eval()` における Function コンストラクターの使用](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval#function_コンストラクターの使用)
 - [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Functions", "関数", "", 1)}}

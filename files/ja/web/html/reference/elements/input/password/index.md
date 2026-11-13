@@ -3,7 +3,7 @@ title: '`<input type="password">` 属性値'
 short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 `<input>` 要素の **`password`** 型は、パスワードを安全に入力する方法を提供します。
@@ -37,14 +37,6 @@ label {
   margin-top: 1rem;
 }
 ```
-
-入力時の正確な動作は、ブラウザーによって異なる場合があります。
-ブラウザーによっては、入力された文字を一瞬だけ表示して見えなくするものや、ユーザーがプレーンテキストの表示のオン・オフを切り替えられるものがあります。
-どちらの手法も、ユーザーが意図したとおりのパスワードが入力されたかどうかを調べるのに役立ちますが、モバイル端末では特に難しい場合があります。
-
-> [!NOTE]
-> パスワードのような機密情報が含まれているフォーム（ログインフォームなど）は、 HTTPS で送信するべきです。
-> 多くのブラウザーで、安全ではないログインフォームに対して警告を行う仕組みが実装されています。
 
 ## 値
 
@@ -110,6 +102,14 @@ label {
 ## パスワード入力欄の使用
 
 パスワード入力ボックスは通常、他のテキスト入力ボックスのように動作します。主な違いは、ユーザーの近くにいる人がパスワードを読み取ることを防ぐために、その内容を隠すことです。
+
+入力時の正確な動作は、ブラウザーによって異なる場合があります。
+ブラウザーによっては、入力された文字を隠す前に一瞬表示するものもあれば、プレーンテキストの表示をユーザーが切り替えられるものもあります。
+どちらの方法も、意図したパスワードを入力できたか確認するのに役立ちます。これは、特にモバイル端末では難しいことがあります。
+
+> [!NOTE]
+> パスワードなどの機密情報を扱うフォーム（ログインフォームなど）は、HTTPS 経由で提供する必要があります。
+> 現在、多くのブラウザーには、安全でないログインフォームについて警告する仕組みが実装されています。
 
 ### 基本的なパスワード入力欄
 
@@ -312,14 +312,6 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
