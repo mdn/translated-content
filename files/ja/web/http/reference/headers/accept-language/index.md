@@ -11,7 +11,7 @@ HTTP の **`Accept-Language`** {{Glossary("request header", "リクエストヘ�
 ブラウザーは、アクティブなユーザーインターフェイス言語に基づいて、このヘッダーに要求される値を設定します。
 ユーザーはブラウザー設定を通じて、その他の優先言語を追加で設定することも可能です。
 
-`Accept-Language` ヘッダーには通常、{{domxref("navigator.languages")}} プロパティと同じロケールが、`q` 値（[品質値](/ja/docs/Glossary/Quality_values)）が低い順に列挙されます。Chrome や Safari などの一部のブラウザーは、`Accept-Language` に言語のみの代替タグを追加します。例えば、`navigator.languages` が `["en-US", "zh-CN"]` の場合、`en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7` となります。プライバシー保護（{{Glossary("fingerprinting", "フィンガープリンティング")}}の低減）のため、`Accept-Language` と `navigator.languages` の両方において、ユーザーの環境設定の完全なリストが含まれない場合が考えられます。例えば、Safari（常に）や Chrome のシークレットモードでは、言語が 1 つしか含まれません。
+`Accept-Language` ヘッダーには通常、{{domxref("navigator.languages")}} プロパティと同じロケールが、`q` 値（[品質値](/ja/docs/Glossary/Quality_values)）が高い順に列挙されます。Chrome や Safari などの一部のブラウザーは、`Accept-Language` に言語のみの代替タグを追加します。例えば、`navigator.languages` が `["en-US", "zh-CN"]` の場合、`en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7` となります。プライバシー保護（{{Glossary("fingerprinting", "フィンガープリンティング")}}の低減）のため、`Accept-Language` と `navigator.languages` の両方において、ユーザーの環境設定の完全なリストが含まれない場合が考えられます。例えば、Safari（常に）や Chrome のシークレットモードでは、言語が 1 つしか含まれません。
 
 このヘッダーは、サーバーが他の方法（例えば、明示的なユーザーの決定に依存する特定の URL の使用など）で対象コンテンツの言語を判別できない場合のヒントとして機能します。
 サーバーは、ユーザーが明示的に選択した言語設定を絶対に上書きしてはなりません。`Accept-Language` ヘッダーの内容は、ユーザーが制御できない場合（例えば旅行中など）がよくあります。
