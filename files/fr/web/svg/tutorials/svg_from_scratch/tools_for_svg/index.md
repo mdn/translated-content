@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
 original_slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}
 
 Maintenant que nous avons vu les notions de base en SVG, nous allons nous intéresser à quelques outils qui permettent d'éditer des fichiers SVG.

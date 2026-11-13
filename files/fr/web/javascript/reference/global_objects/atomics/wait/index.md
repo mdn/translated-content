@@ -3,10 +3,10 @@ title: "Atomics : méthode statique wait()"
 short-title: wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
-La méthode statique **`wait()`** de l'objet {{JSxRef("Atomics")}} vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
+La méthode statique **`Atomics.wait()`** vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
 
 `Atomics.wait()` et {{JSxRef("Atomics.notify()")}} sont utilisés ensemble pour permettre la synchronisation des processus basée sur une valeur en mémoire partagée. Un processus peut continuer immédiatement si la valeur de synchronisation a changé, ou attendre la notification d'un autre processus lorsqu'il atteint le point de synchronisation.
 
@@ -49,18 +49,21 @@ Une chaîne de caractères qui vaut `"ok"`, `"not-equal"` ou `"timed-out"` selon
 
 ## Exemples
 
-### Utilisation de `wait()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser la méthode `Atomics.wait()`
 
 Étant donné un `Int32Array` partagé&nbsp;:
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
 Un processus de lecture est en sommeil et attend l'emplacement 0 parce que la `value` fournie correspond à ce qui est stocké à un `index` donné.
 Le processus de lecture ne reprend pas l'exécution tant que le processus d'écriture n'a pas appelé `Atomics.notify()` sur la position 0 du `typedArray` fourni.
-Remarquez que si, après le réveil, la valeur de l'emplacement 0 n'a pas été modifiée par le processus d'écriture, le processus de lecture **ne** se remettra **pas** en sommeil, mais continuera son exécution.
+Remarquez que si, après le réveil, la valeur de l'emplacement 0 n'a pas été modifiée par le processus d'écriture, le processus de lecture **ne** se remet **pas** en sommeil, mais continue son exécution.
 
 ```js
 Atomics.wait(int32, 0, 0);
@@ -85,6 +88,6 @@ Atomics.notify(int32, 0, 1);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.waitAsync()")}}
 - La méthode {{JSxRef("Atomics.notify()")}}

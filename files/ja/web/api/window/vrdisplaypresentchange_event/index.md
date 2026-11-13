@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb8221e061bba27dbdbe5a3698b6c69febf0bc70
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 **`vrdisplaypresentchange`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベtので、 VR 機器の表示状態が変化したときに発行されます。つまり、表示状態から非表示になったとき、あるいはその逆のケースです。
 

@@ -11,4 +11,4 @@ En CSS, un selector de **pseudo-clase** apunta a elementos dependiendo de su est
 
 ### Referencía técnica
 
-- [Pseudo-class documentación](/es/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-class documentación](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

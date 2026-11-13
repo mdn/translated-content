@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/svg
 original_slug: Web/SVG/Element/svg
 ---
 
-{{SVGRef}}
-
 L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/Web) et système de coordonnée.
 
 ## Contexte d'utilisation

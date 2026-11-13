@@ -2,7 +2,7 @@
 title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`410 Gone`** indique que la ressource cible n'est plus disponible sur le serveur d'origine et que cette situation est probablement permanente.
@@ -25,7 +25,7 @@ La requête `GET` suivante concerne une page dont le contenu promotionnel n'est 
 
 ```http
 GET /promotions/summer-2023 HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 ```http

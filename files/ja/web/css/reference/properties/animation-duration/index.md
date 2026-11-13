@@ -1,8 +1,9 @@
 ---
-title: animation-duration
+title: "`animation-duration` プロパティ (CSS)"
+short-title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
@@ -88,7 +89,7 @@ button.addEventListener("click", () => {
 
 ```css
 /* 単一のアニメーション */
-animation-duration: auto; /* 既定値 */
+animation-duration: auto; /* デフォルト値 */
 animation-duration: 6s;
 animation-duration: 120ms;
 
@@ -106,13 +107,15 @@ animation-duration: unset;
 
 ### 値
 
+このプロパティは、以下の値をカンマ区切りで並べたリストとして指定します。
+
 - `auto`
   - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
 - {{cssxref("&lt;time&gt;")}}
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 
-    値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する {{cssxref("animation-fill-mode")}} の値によります。
+    値が指定されなかった場合、デフォルト値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する {{cssxref("animation-fill-mode")}} の値によります。
     - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが {{cssxref("animation-delay")}} のカウントダウン中に表示されます。
     - `animation-fill-mode` が `forwards` または `both` に設定した場合、アニメーションの最後のフレームは `animation-delay` が経過した後に、 `animation-direction` で定義したように表示されます。
     - `animation-fill-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。

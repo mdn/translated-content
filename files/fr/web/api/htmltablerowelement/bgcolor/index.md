@@ -3,10 +3,10 @@ title: "HTMLTableRowElement : propriété bgColor"
 short-title: bgColor
 slug: Web/API/HTMLTableRowElement/bgColor
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`bgColor`** de l'interface {{DOMxRef("HTMLTableRowElement")}} permet de définir la couleur d'arrière-plan d'une ligne ou de récupérer la valeur de l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Reference/Elements/tr#bgcolor), si présent.
 
@@ -21,7 +21,7 @@ On peut utiliser l'un des types de valeurs suivants&nbsp;:
 - un code hexadécimal, comme `#0000dd`
 
 > [!NOTE]
-> Les valeurs acceptées ici sont un sous-ensemble des valeurs de couleur CSS. Vous pouvez réutiliser les valeurs de couleur HTML en CSS, mais pas l'inverse&nbsp;: les couleurs inconnues pourraient s'afficher différemment de ce qui est attendu.
+> Les valeurs acceptées ici sont un sous-ensemble des valeurs de couleur CSS. Vous pouvez réutiliser les valeurs de couleur HTML en CSS, mais pas l'inverse&nbsp;: les couleurs inconnues peuvent s'afficher différemment de ce qui est attendu.
 
 ## Exemples
 

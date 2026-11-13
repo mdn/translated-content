@@ -3,7 +3,7 @@ title: Directives de participation de la communauté
 short-title: Règles de conduite
 slug: MDN/Community/Community_Participation_Guidelines
 l10n:
-  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 Participer aux projets MDN Web Docs signifie adhérer aux [Directives de participation de la communauté Mozilla](https://www.mozilla.org/fr/about/governance/policies/participation/) (ou CPG pour <i lang="en">Community Participation Guidelines</i>).
@@ -20,7 +20,7 @@ Ce document décrit comment signaler des violations et ce qui se passe en foncti
 
 ## Violations des Directives de participation de la communauté et échelle d'application
 
-L'équipe de gestion de la communauté MDN ([`@mdn/community`](https://github.com/orgs/mdn/teams/community) sur GitHub) enquête sur la gravité du comportement en fonction d'un rapport, puis détermine et met en œuvre des actions, si nécessaire.
+L'équipe de gestion de la communauté MDN ([`@mdn/community` <sup>(angl.)</sup>](https://github.com/orgs/mdn/teams/community) sur GitHub) enquête sur la gravité du comportement en fonction d'un rapport, puis détermine et met en œuvre des actions, si nécessaire.
 Les violations suivent un processus d'escalade étape par étape, et la personne faisant l'objet du rapport est informée des conséquences à chaque niveau.
 Dans les cas graves, l'application des règles peut sauter des niveaux jusqu'à inclure une interdiction immédiate et permanente.
 
@@ -75,7 +75,7 @@ Pour signaler une violation ou un abus sur GitHub, voir [le guide de signalement
 L'option **"Report to repository admins"** doit être cochée pour que l'équipe MDN puisse voir un rapport de contenu.
 
 Inclure tous les détails pertinents, y compris la date, l'heure et la description de la violation.
-Inclure des informations d'identification de l'auteur et des captures d'écran, si possible.
+Inclure des informations d'identification de l'auteur·ice et des captures d'écran, si possible.
 
 ### Investigation
 
@@ -93,25 +93,25 @@ Les appels sont examinés par un panel séparé et impartial.
 
 ### Documentation et tenue de dossiers
 
-Tous les incidents seront documentés pour garantir la cohérence et l'équité.
+Tous les incidents sont documentés pour garantir la cohérence et l'équité.
 Les dossiers des violations et des actions entreprises sont conservés de manière privée et accessibles uniquement par le MDN Community Management.
 
 ## Questions Fréquemment Posées (FAQs)
 
 Les questions courantes sont répondues ci-dessous.
-Si quoi que ce soit d'autre concernant les rapports et les processus CPG n'est pas clair ou sans réponse, contactez-nous via l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
+Si quoi que ce soit d'autre concernant les rapports et les processus CPG n'est pas clair ou sans réponse, contactez-nous avec l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
 ### Que se passe-t-il si une violation implique un scénario particulier ?
 
 Les comportements inappropriés qui ne sont pas explicitement décrits par le Code de conduite du projet sont évalués individuellement.
-L'équipe d'application prendra une décision basée sur le contexte et les principes d'équité, de transparence et de proportionnalité.
+L'équipe d'application prend une décision basée sur le contexte et les principes d'équité, de transparence et de proportionnalité.
 
 Les exemples incluent&nbsp;:
 
 - **Signalements anonymes&nbsp;:** Ces rapports sont examinés avec une attention particulière pour valider les allégations tout en maintenant l'équité.
-- **Rapports impliquant des membres de la direction&nbsp;:** Un panel impartial séparé s'occupera de ces cas pour éviter les conflits d'intérêts.
+- **Rapports impliquant des membres de la direction&nbsp;:** Un panel impartial séparé s'occupe de ces cas pour éviter les conflits d'intérêts.
 - **Interactions pendant les périodes de refroidissement&nbsp;:** Les violations pendant une période de refroidissement, telles que des interactions en ligne non intentionnelles, peuvent être considérées différemment, en mettant l'accent sur l'intention et le préjudice causé.
 
 ### Comment le CPG est-il maintenu au fil du temps ?
 
-Le processus CPG est un document vivant qui évolue avec la communauté. Les retours sont les bienvenus sur [GitHub Discussions <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions), [Discord <sup>(angl.)</sup>](https://mdn.dev/discord), et les changements seront communiqués sur la page de la communauté.
+Le processus CPG est un document vivant qui évolue avec la communauté. Les retours sont les bienvenus sur [GitHub Discussions <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions), [Discord <sup>(angl.)</sup>](https://mdn.dev/discord), et les changements sont communiqués sur la page de la communauté.

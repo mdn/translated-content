@@ -169,7 +169,7 @@ function escapeRegExp(string) {
 
 ### 괄호 사용하기
 
-정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#%ea%b7%b8%eb%a3%b9_%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0) 문서에서 자세히 알아보세요.
+정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups) 문서에서 자세히 알아보세요.
 
 ## JavaScript에서 정규 표현식 사용하기
 

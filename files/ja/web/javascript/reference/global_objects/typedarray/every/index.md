@@ -3,7 +3,7 @@ title: TypedArray.prototype.every()
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 l10n:
-  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`every()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、提供された関数で実装されたテストに、型付き配列内のすべての要素が合格するかどうかをテストします。これは論理値を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。
@@ -35,7 +35,7 @@ every(callbackFn, thisArg)
     - `element`
       - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 現在処理されている型付き配列の要素の添字です。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
       - : `every()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
@@ -73,7 +73,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 
 ## 関連情報
 
-- [`TypedArray.prototype.every` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.every` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

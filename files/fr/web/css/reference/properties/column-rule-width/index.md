@@ -1,76 +1,164 @@
 ---
-title: column-rule-width
+title: Propriété CSS `column-rule-width`
+short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
-original_slug: Web/CSS/column-rule-width
+l10n:
+  sourceCommit: d3a0fd9820ca27a3f17642841af8426735cb4ec3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-width`** définit la largeur des lignes tracées entre les colonnes des dispositions en grille, flexible et à plusieurs colonnes.
 
-La propriété **`column-rule-width`** permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.
-
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule-width")}}
 
 ```css interactive-example-choice
 column-rule-width: thin;
 ```
 
 ```css interactive-example-choice
-column-rule-width: medium;
+column-rule-width: 4px;
 ```
 
 ```css interactive-example-choice
-column-rule-width: thick;
+column-rule-width: thin, medium, thick;
 ```
 
 ```css interactive-example-choice
-column-rule-width: 12px;
+column-rule-width: repeat(2, 1px, thick), 10px;
+```
+
+```css interactive-example-choice
+column-rule-width: 10px, repeat(auto, 1px, 2px), 10px;
 ```
 
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Noël vient de s'achever, et Lord George siège à
+    Lincoln's Inn Hall. Le temps est magnifique en ce mois de mai. Il y a autant
+    de boue dans les rues que si les eaux venaient tout juste de se retirer de
+    la surface de la terre, et il ne serait pas étonnant de croiser un
+    ornithorynque, d'environ deux pieds de long, se dandinant comme un lézard
+    sur Morgan Hill.
   </p>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+  columns: 6;
+  column-rule-style: solid;
+  column-rule-color: teal;
+  gap: 7px;
 }
 ```
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
+/* Valeurs avec des mots-clés */
 column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
+column-rule-width: thin, medium, thick;
+column-rule-width: thick, repeat(5, thin), thick;
+column-rule-width: thick, repeat(auto, thin, medium), thick;
 
-/* Valeurs de longueurs */
-/* Type <length>        */
-column-rule-width: 1px;
-column-rule-width: 2.5em;
+/* Valeurs de type <length> */
+column-rule-width: 0.1em;
+column-rule-width: 5px;
+column-rule-width: 1px, 3px, 5px;
+column-rule-width: 0.1rem, repeat(auto, 1px), 10px, 0.5rem;
+column-rule-width: 5px, repeat(5, 1px, 3px), 5px;
 
 /* Valeurs globales */
 column-rule-width: inherit;
 column-rule-width: initial;
+column-rule-width: revert;
+column-rule-width: revert-layer;
 column-rule-width: unset;
 ```
 
-La propriété `column-rule-width` est définie grâce à une valeur de type `<br-width>`.
-
 ### Valeurs
 
-- `<br-width>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{cssxref("border-width")}}.
+La propriété `column-rule-width` accepte une liste de valeurs séparées par des virgules, y compris&nbsp;:
+
+- `<line-width>`
+  - : Une largeur de ligne ({{CSSxRef("&lt;line-width&gt;")}})&nbsp;: Cela peut être l'un des mots-clés `thin`, `medium` ou `thick`, ou une valeur positive de type {{CSSxRef("&lt;length&gt;")}}, représentant la largeur de la ligne. La valeur par défaut est `medium`.
+
+- `<repeat-line-width>`
+  - : La fonction {{CSSxRef("repeat()")}}, avec le premier argument étant un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus, et une ou plusieurs valeurs {{CSSxRef("&lt;line-width&gt;")}} comme arguments suivants. L'entier définit combien de fois les valeurs `<line-width>` doivent être répétées.
+
+- `<auto-repeat-line-width>`
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<line-width>` comme arguments suivants. Les valeurs `<line-width>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
+
+## Description
+
+La propriété `column-rule-width` définit la largeur des lignes de règle de colonne tracées dans les gouttières entre les colonnes adjacentes dans les conteneurs [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) contenant plus d'une colonne.
+
+> [!NOTE]
+> `column-rule-width` définit uniquement la largeur des lignes tracées dans les gouttières. Ces lignes n'ont aucun effet sur le [modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction) ou la mise en page. La taille de la gouttière est définie par la propriété {{CSSxRef("gap")}}&nbsp;; la valeur par défaut étant `1em` pour les conteneurs à plusieurs colonnes et `0` dans tous les autres contextes. Si la largeur d'une règle est supérieure à celle de la {{CSSxRef("gap")}}, la ligne est tracée derrière le contenu de la colonne.
+
+La valeur est une liste de composants séparés par des virgules, qui peut inclure des types `<line-width>`, `<repeat-line-width>` et `<auto-repeat-line-width>`.
+
+La règle de largeur de colonne (`column-rule-width`), ainsi que les propriétés {{CSSxRef("column-rule-color")}} et {{CSSxRef("column-rule-style")}}, peut également être définie à l'aide du raccourci {{CSSxRef("column-rule")}}, tandis que {{CSSxRef("rule-width")}} est un raccourci qui définit à la fois la `column-rule-width` et les propriétés {{CSSxRef("row-rule-width")}}.
+
+Une largeur de ligne (`<line-width>`) peut être déclarée comme toute valeur CSS valide de type {{CSSxRef("&lt;line-width&gt;")}}&nbsp;: les mots-clés `thin`, `medium` ou `thick`, ou une valeur positive de type {{CSSxRef("&lt;length&gt;")}}. Les valeurs en pourcentage sont invalides.
+
+Si la valeur de la propriété ne consiste qu'en une seule largeur de ligne (`<line-width>`), toutes les règles de colonne sont cette largeur. Par exemple, si nous déclarons ce qui suit, toutes les règles de colonne ont une largeur de `2px`&nbsp;:
+
+```css
+column-rule-width: 2px;
+```
+
+Lorsque plus d'une largeur de ligne (`<line-width>`) est déclarée, elles sont appliquées aux règles de colonne dans l'ordre défini. S'il y a plus de règles de colonne que de valeurs `<line-width>`, la liste des largeurs de ligne est répétée jusqu'à ce que chaque règle ait une largeur. Par exemple, si nous déclarons ce qui suit, toutes les règles impaires sont `thick`, et toutes les règles paires sont `0.25rem`.
+
+```css
+column-rule-width: thick, 0.25rem;
+```
+
+### Répéter les largeurs de ligne
+
+La fonction `repeat()`, avec un entier de `1` ou plus comme premier argument, peut être utilisée pour répéter une liste valide de valeurs CSS {{CSSxRef("&lt;line-width&gt;")}} passées comme arguments suivants le nombre de fois défini. Cela permet de répéter la même largeur un certain nombre de fois sans répéter plusieurs fois le même `<line-width>`. Les déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+column-rule-width: 1rem, thick, thin, thick, thin, thick, thin;
+column-rule-width: 1rem, repeat(3, thick, thin);
+```
+
+Vous pouvez utiliser n'importe quelle valeur `<line-width>`, y compris les propriétés personnalisées qui se résolvent en une largeur de ligne (`<line-width>`). L'utilisation de `repeat()` peut rendre les valeurs plus faciles à écrire, en particulier lors de l'utilisation de calculs de longueurs complexes. Elle permet d'écrire un motif récurrent en utilisant une seule fonction, quel que soit le nombre de colonnes. Les déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+column-rule-width:
+  1rem, min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondaire) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondaire) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondaire) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondaire) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondaire) - 30px)), thin;
+column-rule-width:
+  1rem,
+  repeat(
+    5,
+    min(calc(var(--base) - 3px), 10px),
+    abs(calc(var(--secondaire) - 30px))
+  ),
+  thin;
+```
+
+Cela crée une liste de 12 largeurs. Si le nombre de largeurs dans la liste de largeurs de la valeur `column-rule-width` dépasse le nombre de gouttières entre les colonnes, les largeurs excédentaires sont ignorées. Si le conteneur a trois colonnes, la règle dans la première gouttière a une largeur de `1rem`, et la seconde est déterminée par la fonction {{CSSxRef("min()")}}.
+
+Si le nombre de gouttières est supérieur au nombre de largeurs, la liste des largeurs est répétée. Si le conteneur a 13 ou 25 colonnes, cette séquence de largeurs est répétée une ou deux fois, respectivement, la dernière règle étant `thin`. Pour tout autre nombre de colonnes, jusqu'à 25, la dernière règle n'est pas `thin`.
+
+### Répéter automatiquement les largeurs de ligne
+
+La fonction `repeat()` accepte également `auto` comme premier argument au lieu d'un entier positif. Avec `auto` comme premier argument, la liste des valeurs `<line-width>` passées en arguments suivants est répétée autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
+
+```css
+column-rule-width: 10px, repeat(auto, thin), 10px;
+```
+
+Dans ce cas, la première règle de colonne est `10px`, la dernière est `10px`, et toutes les autres sont `thin`. Peu importe si le conteneur a 3, 6, 11, 16 ou 21 colonnes, les première et dernière colonnes font toujours `10px`. Cela signifie que, s'il n'y a que 2 ou 3 colonnes, aucune règle de colonne n'a la largeur `thin`.
+
+Le mot-clé `auto` dans la fonction `repeat()` crée un répéteur automatique qui fournit des valeurs aux largeurs de ligne des règles de ligne qui autrement ne reçoivent aucune valeur des autres parties de la liste, ce qui empêche la liste de recommencer. Une valeur `column-rule-width` peut inclure au maximum un `repeat(auto, <line-width>)`.
 
 ## Définition formelle
 
@@ -82,34 +170,153 @@ La propriété `column-rule-width` est définie grâce à une valeur de type `<b
 
 ## Exemples
 
-### CSS
+### Exemple simple
 
-```css
-.exemple {
-  border: 10px solid #000000;
-  columns: 3;
-  column-rule-width: thick;
-  column-rule-color: blue;
-  column-rule-style: dashed;
-}
-```
+Cet exemple montre l'utilisation d'une seule valeur de mot-clé, définissant toutes les règles de colonne à la même taille.
 
-### HTML
+#### HTML
+
+Nous incluons un paragraphe de texte:
 
 ```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
+<p>
+  Ceci est un texte réparti en trois colonnes. La propriété `column-rule-width`
+  est utilisée pour modifier la largeur de la ligne tracée entre les colonnes.
+  N'est-ce pas merveilleux ?
 </p>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples")}}
+Nous créons un conteneur à plusieurs colonnes avec la propriété {{CSSxRef("column-count")}}. Comme la propriété {{CSSxRef("column-rule-style")}} a pour valeur par défaut `none`, nous devons la définir sur une valeur visible pour que les règles de colonne soient tracées. Nous définissons ensuite la `column-rule-width` sur `thick`, en laissant la propriété {{CSSxRef("column-rule-color")}} par défaut sur `currentcolor`.
+
+```css
+p {
+  column-count: 3;
+  column-rule-style: solid;
+
+  column-rule-width: thick;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple simple")}}
+
+Dans les dispositions à plusieurs colonnes, la propriété {{CSSxRef("gap")}} a pour valeur par défaut `1em`, ce qui est plus large que notre `column-rule-width`, donc les lignes ne sont pas tracées sur notre contenu.
+
+### Plusieurs valeurs
+
+Cet exemple montre l'utilisation de plusieurs valeurs pour la propriété `column-rule-width`. Il montre également que les règles qui débordent des gouttières sont peintes derrière le contenu.
+
+#### HTML
+
+Nous incluons une liste d'auteur·ice·s&nbsp;:
+
+```html live-sample___basic live-sample___repeat live-sample___func live-sample___auto
+<ul>
+  <li>Kimberlé Crenshaw</li>
+  <li>Angela Y. Davis</li>
+  <li>Bernardine Evaristo</li>
+  <li>Audre Lorde</li>
+  <li>Cathy Park Hong</li>
+  <li>Zoya Patel</li>
+  <li>Juno Mac</li>
+  <li>Molly Smith</li>
+  <li>Tara Westover</li>
+</ul>
+```
+
+#### CSS
+
+Nous définissons la liste comme un conteneur flexible, créant des colonnes en définissant la direction du conteneur ({{CSSxRef("flex-direction")}}) sur `row` à l'aide du raccourci {{CSSxRef("flex-flow")}}. Nous incluons une `column-rule-width` avec dix valeurs `<line-width>`, chacune plus grande que la précédente.
+
+```css live-sample___basic live-sample___repeat live-sample___func live-sample___auto
+ul {
+  display: flex;
+  flex-flow: row;
+  list-style-type: none;
+  column-rule-style: solid;
+  column-rule-color: teal;
+
+  column-rule-width: 1px, 2px, 3px, 4px, 5px, 6px, 7px, 8px, 9px, 10px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("basic", "", 180)}}
+
+Comme il y a plus de valeurs (10) que de gouttières (8), les valeurs `9px` et `10px` ne sont pas utilisées.
+
+La propriété {{CSSxRef("gap")}} a pour valeur par défaut `normal`, ce qui se résout à `0` dans les conteneurs flexibles. La propriété `column-rule-width` ne définit que la largeur d'une ligne tracée et n'a pas d'impact sur la mise en page. Les lignes sont tracées derrière le contenu.
+
+### Valeurs répétées
+
+Cet exemple montre comment, lorsque la liste des largeurs contient moins de valeurs que de règles de colonne, les valeurs sont répétées.
+
+En utilisant le même HTML et le même CSS que dans l'exemple précédent, nous incluons trois largeurs séparées par des virgules comme valeur de `column-rule-width`&nbsp;:
+
+```css live-sample___repeat
+ul {
+  column-rule-width: 1px, 5px, 10px;
+}
+```
+
+{{EmbedLiveSample("repeat", "", 180)}}
+
+### Utiliser la fonction `repeat()`
+
+Cet exemple montre l'utilisation de la fonction `repeat()` dans la valeur de la propriété `column-rule-width` et comment cette fonction peut aider à réduire la verbosité des déclarations de valeurs.
+
+Nous utilisons le même HTML et le même CSS que dans les exemples précédents. Pour démontrer comment les valeurs peuvent devenir verbeuses et l'utilité de la fonction `repeat()`, nous déclarons deux propriétés personnalisées, que nous utilisons dans les déclarations de fonction `repeat()`. La fonction `repeat()` définit la liste de deux valeurs `<line-width>` à répéter 3 fois.
+
+```css live-sample___func live-sample___auto
+ul {
+  --base: 0.5vw;
+  --secondaire: 1vw;
+  column-rule-width:
+    15px,
+    repeat(
+      4,
+      min(calc(var(--secondaire) + 3px), 10px),
+      abs(calc(var(--base) - 2px))
+    ),
+    15px;
+}
+```
+
+{{EmbedLiveSample("func", "", 180)}}
+
+Le conteneur flexible comporte neuf colonnes, donc huit gouttières. La fonction `repeat()` répète quatre fois deux valeurs de largeur, ce qui crée une liste de dix valeurs de largeur. Comme il y a moins de gouttières de colonne que de largeurs totales, les deux dernières valeurs de la liste sont supprimées.
+
+### Utiliser `auto` dans `repeat()`
+
+Cet exemple montre l'utilisation de l'argument `auto` à la place d'un entier dans la fonction `repeat()`.
+
+En utilisant `repeat(auto, <line-width>)`, nous définissons toutes les règles de colonne sur `1px`, à l'exception de la première et de la dernière, que nous définissons sur `5px`.
+
+```css live-sample___auto
+ul {
+  column-rule-width: 5px, repeat(auto, 1px), 5px;
+}
+```
+
+{{EmbedLiveSample("auto", "", 180)}}
+
+```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
+@layer no-support {
+  @supports not (column-rule: thin, thick) {
+    body::before {
+      content: "Votre navigateur ne prend pas en charge plusieurs valeurs pour la propriété column-rule";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+```
 
 ## Spécifications
 
@@ -118,3 +325,12 @@ La propriété `column-rule-width` est définie grâce à une valeur de type `<b
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+- La propriété {{CSSxRef("column-rule-color")}}
+- La propriété {{CSSxRef("column-rule-style")}}
+- La propriété raccourcie {{CSSxRef("column-rule")}}
+- La propriété {{CSSxRef("row-rule-width")}}
+- La propriété raccourcie {{CSSxRef("rule-width")}}
+- La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)

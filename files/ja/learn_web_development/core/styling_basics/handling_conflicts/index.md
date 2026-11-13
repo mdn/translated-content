@@ -19,7 +19,7 @@ l10n:
         HTML の基本（
         <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >基本的な HTML の構文</a
-        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター<a>。
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター</a>。
       </td>
     </tr>
     <tr>

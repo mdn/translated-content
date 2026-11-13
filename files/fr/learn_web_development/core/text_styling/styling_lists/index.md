@@ -276,7 +276,7 @@ Parfois, vous pouvez vouloir numéroter différemment une liste ordonnée — pa
 
 ### Numéro de départ
 
-L'attribut [`start`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
+L'attribut [`start`](/fr/docs/Web/HTML/Reference/Elements/ol#start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
 
 ```html
 <ol start="4">
@@ -301,7 +301,7 @@ L'attribut [`start`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-start) vous pe
 
 ### Numérotation inversée
 
-L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-reversed) inverse la numérotation de la liste.
+L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#reversed) inverse la numérotation de la liste.
 
 ```html
 <ol start="4" reversed>
@@ -329,7 +329,7 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-reversed) i
 
 ### Valeurs individualisées
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/ol#value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
 
 ```html
 <ol>
@@ -387,8 +387,7 @@ Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le 
       <li>la statue du lutin.</li>
     </ol>
   </li>
-</ul></textarea
-  >
+</ul></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea

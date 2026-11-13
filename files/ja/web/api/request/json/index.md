@@ -3,7 +3,7 @@ title: "Request: json() メソッド"
 short-title: json()
 slug: Web/API/Request/json
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 562051c4ad20e9ecb5faf905286cdfca545a340d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -26,6 +26,15 @@ json()
 ### 返値
 
 JavaScript のオブジェクトに解決する {{jsxref("Promise")}} です。このオブジェクトは、オブジェクト、配列、文字列、数値など、JSON で表せるものであれば何でもかまいません。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 以下のどちらかの理由で発生します。
+    - リクエストの本文が[変更中またはロック済み](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)である。
+    - 本文のコンテンツをデコードする際にエラーが発生した（例えば、{{httpheader("Content-Encoding")}} ヘッダーが正しくないなど）。
+- {{jsxref("SyntaxError")}}
+  - : このリクエスト本文は JSON として解釈できません。
 
 ## 例
 

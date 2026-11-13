@@ -5,7 +5,7 @@ slug: Web/API/URL/port
 
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의 **`port`** 속성은 URL의 포트 숫자를 담은 {{domxref("USVString")}}입니다. URL이 명시적인 포트 번호를 포함하고 있지 않으면 빈 문자열(`''`)입니다.
+{{domxref("URL")}} 인터페이스의 **`port`** 속성은 URL의 포트 숫자를 담은 {{jsxref("String")}}입니다. URL이 명시적인 포트 번호를 포함하고 있지 않으면 빈 문자열(`''`)입니다.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ url.port = newPortNumber;
 
 ### 값
 
-A {{domxref("USVString")}}.
+A {{jsxref("String")}}.
 
 ## 예제
 

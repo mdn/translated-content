@@ -3,7 +3,7 @@ title: "HTMLTableElement : méthode deleteRow()"
 short-title: deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,8 +19,7 @@ deleteRow(index)
 ### Paramètres
 
 - `index`
-  - : `index` est un entier représentant la ligne à supprimer.
-    Cependant, l'index spécial `-1` peut être utilisé pour supprimer la toute dernière ligne d'un tableau.
+  - : L'index de la ligne à supprimer dans la collection {{DOMxRef("HTMLTableElement.rows", "rows")}}. Si `index` est `-1`, la dernière ligne est supprimée.
 
 ### Valeur de retour
 
@@ -29,7 +28,7 @@ Aucune ({{JSxRef("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{DOMxRef("DOMException")}}
-  - : Levée si `index` est supérieur ou égal au nombre de lignes disponibles ou est une valeur négative autre que `-1`.
+  - : Levée si `index` est supérieur ou égal au nombre de lignes ou est inférieur à `-1`.
 
 ## Exemples
 
@@ -62,7 +61,7 @@ Cet exemple utilise JavaScript pour supprimer la deuxième ligne d'un tableau.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 
 // Supprimer la deuxième ligne
 table.deleteRow(1);
@@ -82,4 +81,5 @@ table.deleteRow(1);
 
 ## Voir aussi
 
+- La méthode {{DOMxRef("HTMLTableRowElement.deleteCell()")}}
 - La méthode {{DOMxRef("HTMLTableSectionElement.deleteRow()")}}

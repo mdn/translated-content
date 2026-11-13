@@ -1,8 +1,9 @@
 ---
-title: symbols()
+title: CSS `symbols()` 関数
+short-title: symbols()
 slug: Web/CSS/Reference/Values/symbols
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`symbols()`** は [CSS](/ja/docs/Web/CSS) の関数で、 {{cssxref("list-style")}} などのプロパティの値として、カウンタースタイルをインラインで直接定義することができます。これは、カウンタースタイルを定義する {{cssxref("@counter-style")}} メソッドよりも機能は劣りますが、よりシンプルな代替手段です。

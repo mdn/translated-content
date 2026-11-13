@@ -10,7 +10,7 @@ Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede v
 ## Constructor
 
 - {{jsxref("Function/Function", "Function()", "", 1)}}
-  - : Crea un nuevo objeto `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de `eval`, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
+  - : Crea un nuevo objeto `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("Global_Objects/eval", "eval")}}. Sin embargo, a diferencia de `eval`, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
 
 ## Propiedades de la instancia
 
@@ -35,7 +35,7 @@ Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede v
   - : Crea una nueva función que, cuando se llama, tiene su `this` configurado en el `thisArg`. Opcionalmente, una determinada secuencia de argumentos se antepondrá a los argumentos siempre que se llame a la función recién invocada.
 - {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
   - : Llama a una función y establece su `this` en el valor proporcionado. Los argumentos se pueden pasar tal cual.
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
+- {{jsxref("Function.prototype.toString()")}}
   - : Devuelve una cadena que representa el código fuente de la función.
     Redefine el método {{jsxref("Object.prototype.toString()")}}.
 
@@ -43,7 +43,7 @@ Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede v
 
 ### Diferencia entre el constructor Function y la declaración function
 
-Las funciones creadas con el constructor `Function` no crean cierres para sus contextos de creación; siempre se crean en el ámbito global. Al ejecutarlos, solo podrán acceder a sus propias variables locales y globales, no a las del ámbito en el que se creó el constructor `Function`. Esto es diferente de usar {{jsxref("eval")}} con código para una expresión de función.
+Las funciones creadas con el constructor `Function` no crean cierres para sus contextos de creación; siempre se crean en el ámbito global. Al ejecutarlos, solo podrán acceder a sus propias variables locales y globales, no a las del ámbito en el que se creó el constructor `Function`. Esto es diferente de usar {{jsxref("Global_Objects/eval", "eval")}} con código para una expresión de función.
 
 ```js
 var x = 10;

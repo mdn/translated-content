@@ -18,7 +18,7 @@ _L'interface `GeolocationPosition` n'hérite d'aucune propriété._
 
 ## Méthodes
 
-**L'interface* `GeolocationPosition` *n'implémente ni n'hérite d'aucune méthode.**
+_*L'interface* `GeolocationPosition` *n'implémente ni n'hérite d'aucune méthode.*_
 
 ## Spécifications
 

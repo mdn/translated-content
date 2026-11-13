@@ -8,7 +8,7 @@ l10n:
 
 **`Uint8Array.fromHex()`** は静的メソッドで、新しい {{jsxref("Uint8Array")}} オブジェクトを 16 進文字列から作成します。
 
-このメソッドは、文字列をバイト配列に解釈します。文字列を単一の数値に変換するには、代わりに {{jsxref("Global_Objects/parseInt", "parseInt()")}} 関数を、 `radix` を `16` に設定して使用してください。
+このメソッドは、文字列をバイト配列に解釈します。文字列を単一の数値に変換するには、代わりに {{jsxref("parseInt()")}} 関数を、 `radix` を `16` に設定して使用してください。
 
 ## 構文
 
@@ -70,4 +70,4 @@ console.log(bytes); // Uint8Array [ 202, 254, 208, 13 ]
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.prototype.setFromHex()")}}
 - {{jsxref("Uint8Array.prototype.toHex()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}

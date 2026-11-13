@@ -1,12 +1,12 @@
 ---
-title: "Attribut HTML universel : autocorrect"
+title: "Attribut HTML universel : `autocorrect`"
 short-title: autocorrect
 slug: Web/HTML/Reference/Global_attributes/autocorrect
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocorrect`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si la correction automatique du texte éditable est activée pour les erreurs d'orthographe et/ou de ponctuation.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocorrect`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si la correction automatique du texte éditable est activée pour les erreurs d'orthographe et/ou de ponctuation.
 
 Le comportement précis de la correction automatique, y compris les mots qui sont substitués, dépend de l'agent utilisateur et des services fournis par l'appareil sous‑jacent. Par exemple, sur macOS, un agent utilisateur peut s'appuyer sur [texte et ponctuation de remplacement enregistrés <sup>(angl.)</sup>](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac). D'autres appareils et navigateurs peuvent adopter une approche différente.
 
@@ -113,7 +113,7 @@ Le code vérifie si `autocorrect` est pris en charge en testant sa présence sur
 S'il n'est pas présent, un message est écrit dans le journal.
 S'il est présent, la valeur de la propriété `autocorrect` pour chacun des éléments de saisie est consignées dans le journal.
 
-Un gestionnaire d'événement est ajouté au bouton, permettant de réinitialiser le texte saisi et le journal.
+Un gestionnaire d'évènement est ajouté au bouton, permettant de réinitialiser le texte saisi et le journal.
 
 ```js
 const resetButton = document.querySelector("#reset");

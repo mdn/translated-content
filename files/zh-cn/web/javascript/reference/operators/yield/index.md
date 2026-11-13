@@ -26,7 +26,7 @@ console.log(iterator.next().value);
 
 ## 语法
 
-```plain
+```js-nolint
 [rv] = yield [expression];
 ```
 

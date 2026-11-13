@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/copy-of
 original_slug: Web/XSLT/Element/copy-of
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:copy-of>` 요소는 select 속성이 출력 문서에 무엇을 지정하든지 (자손 노드를 포함하여) 깊게 복사(deep copy)합니다.
 

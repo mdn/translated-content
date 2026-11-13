@@ -17,7 +17,7 @@ original_slug: Web/HTTP/Headers/Content-Type
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -86,4 +86,4 @@ Content-Type: text/plain
 - {{HTTPHeader("Accept")}}과 {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Content-Disposition")}}
 - {{HTTPStatus("206")}} Partial Content
-- {{HTTPStatus("X-Content-Type-Options")}}
+- {{HTTPHeader("X-Content-Type-Options")}}

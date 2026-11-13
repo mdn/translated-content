@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 O método **`getTime()`** retorna o valor numérico correspondente ao horário da data especificada de acordo com o horário universal.
 
-Você pode usar este método para atribuir uma data e horário a outro objeto {{jsxref("Date")}}. Este método é funcionalmente equivalente ao método {{jsxref("Date.valueof", "valueOf()")}}.
+Você pode usar este método para atribuir uma data e horário a outro objeto {{jsxref("Date")}}. Este método é funcionalmente equivalente ao método {{jsxref("Date.valueOf", "valueOf()")}}.
 
 ## Sintaxe
 

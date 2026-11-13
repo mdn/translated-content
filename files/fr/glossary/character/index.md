@@ -2,10 +2,10 @@
 title: Caractère
 slug: Glossary/Character
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: df9652f304077e033f6217ac06874c3bc9565062
 ---
 
-Un **caractère** peut être un symbole (lettre, chiffre, ponctuation) ou un caractère de «&nbsp;contrôle&nbsp;» (par exemple un retour chariot ou un trait d'union conditionnel). {{Glossary("UTF-8")}} est le jeu de caractères le plus courant. Il comprend les graphèmes des langues les plus répandues.
+Un **caractère** peut être un symbole (lettre, chiffre, ponctuation) ou un caractère de «&nbsp;contrôle&nbsp;» (par exemple un retour chariot ou un trait d'union conditionnel). {{Glossary("Unicode")}} est le jeu de caractères le plus courant. Il comprend les graphèmes des langues les plus répandues.
 
 ## Voir aussi
 

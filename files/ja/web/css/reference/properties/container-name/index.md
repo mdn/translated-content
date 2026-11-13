@@ -1,17 +1,12 @@
 ---
-title: container-name
+title: "`container-name` プロパティ"
+short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
-original_slug: Web/CSS/container-name
 l10n:
-  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
+  sourceCommit: 737b931225e92e0cba47e57a150878b1a78ee45a
 ---
 
 **container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
-コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
-コンテナーコンテキストの名前が指定されたとき、コンテナーコンテキストのある最も近い祖先の代わりに、 {{Cssxref("@container")}} アットルールを用いて固有のターゲットを指定することができます。
-
-> [!NOTE]
-> {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
@@ -19,10 +14,10 @@ l10n:
 container-name: none;
 
 /* 単一の名前 */
-container-name: myLayout;
+container-name: my-layout;
 
 /* 複数の名前 */
-container-name: myPageLayout myComponentLibrary;
+container-name: my-page-layout my-component-library;
 
 /* グローバル値 */
 container-name: inherit;
@@ -34,8 +29,10 @@ container-name: unset;
 
 ### 値
 
+このプロパティは、`<custom-ident>` の値の空白区切りリスト、またはキーワード `none` として指定します。
+
 - `none`
-  - : 既定値。クエリコンテナーには名前がありません。
+  - : デフォルト値。クエリコンテナーには名前がありません。
 
 - {{cssxref("custom-ident")}}
   - : コンテナーを識別するために使用する、大文字と小文字を区別する文字列です。
@@ -43,7 +40,7 @@ container-name: unset;
     - 名前は有効な {{cssxref("custom-ident")}} であれば何でもかまいませんが、`default` と等しくあってはいけません。
     - 名前の値は引用符で囲んではいけません。
     - 制作者が定義する識別子（例: `--container-name`）を意図するダッシュ記号は許可されています。
-    - スペースで区切られた複数の名前のリストが許可されます。
+    - 空白で区切られた複数の名前のリストが許可されます。
 
 ## 公式定義
 
@@ -52,6 +49,17 @@ container-name: unset;
 ## 形式文法
 
 {{CSSSyntax}}
+
+## 解説
+
+名前が指定されていない場合は、コンテナークエリーは、直近の[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)のある祖先の[サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナーサイズクエリー)や[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)などの属性に基づいて、要素にスタイルを適用します。
+
+> [!NOTE]
+> コンテナーの子要素のサイズ設定には、[コンテナークエリーの長さ単位](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナークエリーの長さ単位)を使用できます。
+
+コンテナーコンテキストに名前が指定されている場合、{{Cssxref("@container")}} アットルールにその名前を設定することで、そのコンテナーコンテキストを具体的に指定することができます。
+
+要素に `container-name` を割り当てることでクエリーコンテナーを生成し、関連付けられた `@container` アットルールではクエリー式を指定せずに、その名前の存在のみを照会することができます。これら、いわゆる[**名前のみのコンテナークエリー**](/ja/docs/Web/CSS/Guides/Containment/Container_queries#名前のみのコンテナークエリー)を使用すると、特定の `container-name` が設定された祖先要素を持つかどうかのみに基づいて、要素にスタイルを選択的に適用することができます。
 
 ## 例
 
@@ -63,11 +71,11 @@ container-name: unset;
 <div class="card">
   <div class="post-meta">
     <h2>カードのタイトル</h2>
-    <p>My post details.</p>
+    <p>投稿の詳細</p>
   </div>
   <div class="post-excerpt">
     <p>
-      A preview of my <a href="https://example.com">blog post</a> about cats.
+      ネコに関する<a href="https://example.com">ブログ投稿</a>のプレビュー。
     </p>
   </div>
 </div>
@@ -94,13 +102,13 @@ container-name: unset;
 次の例では、 `.post-excerpt` 要素のコンテンツのみに適用するコンテナークエリーと、 `.post-meta` と `.post-excerpt` のコンテンツ両方に適用するコンテナークエリーの 2 つがあります。
 
 ```css
-@container excerpt (min-width: 400px) {
+@container excerpt (width >= 400px) {
   p {
     visibility: hidden;
   }
 }
 
-@container (min-width: 400px) {
+@container (width >= 400px) {
   p {
     font-size: 2rem;
   }
@@ -124,18 +132,64 @@ container-name: unset;
 これは、複数のコンテナークエリーで同じコンテナーを対象としたい場合に有益です。
 
 ```css
-@container meta (max-width: 500px) {
+@container meta (width <= 500px) {
   p {
     visibility: hidden;
   }
 }
 
-@container card (max-height: 200px) {
+@container card (width <= 200px) {
   h2 {
     font-size: 1.5em;
   }
 }
 ```
+
+### 名前のみのコンテナークエリーの使用
+
+この例では、[名前のみのコンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries#名前のみのコンテナークエリー)の使用方法を示しています。
+
+#### HTML
+
+{{htmlelement("div")}} 要素の `id` を `container` 西、3 つの {{htmlelement("p")}} 要素を、2 つはコンテナー内に、1 つはコンテナーの外に配置します。
+
+```html live-sample_name-only
+<div id="container">
+  <p>これはコンテナー内です。</p>
+  <p>これもコンテナー内です。</p>
+</div>
+<p>これはコンテナー内ではありません。</p>
+```
+
+#### CSS
+
+コンテナーに名前を割り当てます。
+
+```css live-sample_name-only
+#container {
+  container-name: my-container;
+}
+```
+
+こうすることで、次のスニペットに示すように、その名前が設定されたコンテナーの中に存在する要素にのみ、スタイルを選択的に適用することができます。
+
+```css live-sample_name-only
+@container my-container {
+  p {
+    background-color: lime;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
+    font-family: sans-serif;
+  }
+}
+```
+
+#### 結果
+
+{{embedlivesample("name-only", "100%", 300)}}
+
+指定されたスタイルは、1 つ目と 2 つ目の {{htmlelement("p")}} 要素にのみ適用し、3 つ目には適用しません。
 
 ## 仕様書
 

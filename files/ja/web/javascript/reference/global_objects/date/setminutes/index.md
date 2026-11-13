@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.setMinutes()
+short-title: setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
 
-{{JSRef}}
-
-**`setMinutes()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「分」を設定します。
+**`setMinutes()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の「分」を設定します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.setMinutes()")}}
 
@@ -21,7 +20,7 @@ console.log(event.getMinutes());
 
 console.log(event);
 // 予想される結果: "Tue Aug 19 1975 23:45:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+// メモ: タイムゾーンは変わる可能性があります
 ```
 
 ## 構文
@@ -50,6 +49,10 @@ setMinutes(minutesValue, secondsValue, msValue)
 `secondsValue` および `msValue` 引数を指定しない場合、{{jsxref("Date/getSeconds", "getSeconds()")}} と {{jsxref("Date/getMilliseconds", "getMilliseconds()")}} メソッドから返される値が使われます。
 
 指定した値が期待される日時の範囲外の場合、それに応じて `setMinutes()` が {{jsxref("Date")}} オブジェクトの日付情報の更新を試みます。例えば、`secondsValue` に 100 を指定した場合、分に 1 が加算 (`minutesValue + 1`) され、秒が 40 になります。
+
+`setMinutes()` は現地時間を基に動作するため、夏時間 (DST) の境界を越えると、予想外の経過時間が算出されることがあります。例えば、日付の設定によって「春の移行期間（1 時間遅れる）」を跨ぐ場合、新しい日付と古い日付のタイムスタンプの差は、名目上の日数の差に24時間を掛けた値よりも 1 時間少なくなります。逆に、夏時間終了（1 時間進む）の移行期間を越えた場合は、1 時間分多く加算されます。日付を一定の時間分調整する必要がある場合は、{{jsxref("Date/setUTCMinutes", "setUTCMinutes()")}} または {{jsxref("Date/setTime", "setTime()")}} を考えてみることを検討してください。
+
+新しい現地時刻がオフセットの移行期間内に該当する場合、正確な時刻は `Temporal` の [`disambiguation: "compatible"`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#現地時間から協定世界時_utc_への変換に伴う曖昧さや不一致) オプションと同じ動作を使用して算出されます。つまり、現地時刻が 2 つの瞬間に該当する場合は、より早い方が選択されます。現地時刻が存在しない場合（ギャップがある場合）、ギャップの期間分だけ先へ進みます。
 
 ## 例
 

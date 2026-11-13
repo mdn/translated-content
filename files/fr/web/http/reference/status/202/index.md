@@ -25,7 +25,7 @@ Dans l'exemple suivant, nous souhaitons lancer un processus d'automatisation pou
 
 ```http
 POST /tasks HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
 {
   "message": "Demande acceptée. Démarrage du traitement de la tâche.",
   "taskId": "123",
-  "monitorUrl": "http://exemple.com/tasks/123/status"
+  "monitorUrl": "http://example.com/tasks/123/status"
 }
 ```
 

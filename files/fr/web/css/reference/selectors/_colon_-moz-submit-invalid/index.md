@@ -1,8 +1,9 @@
 ---
-title: :-moz-submit-invalid
+title: Pseudo-classe CSS `:-moz-submit-invalid`
+short-title: :-moz-submit-invalid
 slug: Web/CSS/Reference/Selectors/:-moz-submit-invalid
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_Header}}

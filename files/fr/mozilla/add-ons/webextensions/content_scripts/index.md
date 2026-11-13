@@ -3,8 +3,6 @@ title: Scripts de contenu
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
-{{AddonSidebar}}
-
 Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s'exécute dans le contexte d'une page web donnée (par opposition aux scripts d'arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
 
 Les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) peuvent accéder à l'ensemble des [API WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) mais ils ne peuvent pas accéder directement au contenu des pages web. Aussi, si votre extension doit manipuler le contenu des pages web, vous devrez utiliser les scripts de contenu.
@@ -45,13 +43,13 @@ Il est possible de charger un script de contenu dans une page web de trois mani�
 
 1. **Lors de la phase d'installation, pour les pages qui correspondent à certains motifs d'URL :** en utilisant la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) dans le fichier `manifest.json`, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 2. **Lors de l'exécution, pour les pages qui correspondent à certains motifs d'URL :** en utilisant l'API {{WebExtAPIRef("contentScripts")}}, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Cette méthode est la version dynamique de la première méthode.
-3. **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action)).
+3. **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)).
 
 Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.
 
 À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`]() ou [`about:addons`]()).
+En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`](<>) ou [`about:addons`](<>)).
 
 ## Environnement des scripts de contenu
 
@@ -145,17 +143,17 @@ En plus des API standard du DOM, les scripts de contenu peuvent utiliser les API
 
 Depuis l'API [`extension`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension)&nbsp;:
 
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/extension#getURL()>)
+- [`getURL()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/extension#getURL()>)
 - [`inIncognitoContext`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
 
 Depuis l'API [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime)&nbsp;:
 
-- [`connect()`](</fr/Add-ons/WebExtensions/API/runtime#connect()>)
-- [`getManifest()`](</fr/Add-ons/WebExtensions/API/runtime#getManifest()>)
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/runtime#getURL()>)
+- [`connect()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#connect()>)
+- [`getManifest()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#getManifest()>)
+- [`getURL()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#getURL()>)
 - [`onConnect`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onconnect)
 - [`onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage)
-- [`sendMessage()`](</fr/Add-ons/WebExtensions/API/runtime#sendMessage()>)
+- [`sendMessage()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
 Depuis l'API [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n)&nbsp;:
 
@@ -201,14 +199,14 @@ Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
       <th scope="row">Envoyer un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -218,14 +216,14 @@ Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
       <th scope="row">Recevoir un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
@@ -427,7 +425,7 @@ Pour un exemple complet et fonctionnel, [visitez la page de démo sur Github](ht
 
 ## Utilisation de `eval()` dans les scripts de contenu
 
-Dans Chrome, {{jsxref("Objets_globaux/eval","eval()")}} exécute toujours le code dans le contexte du script de contenu et pas dans le contexte de la page.
+Dans Chrome, {{JSxRef("Global_Objects/eval", "eval()")}} exécute toujours le code dans le contexte du script de contenu et pas dans le contexte de la page.
 
 Dans Firefox&nbsp;:
 

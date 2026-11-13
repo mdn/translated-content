@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}
 
 **`Window.blur()`** 方法不起任何作用。
 

@@ -20,7 +20,7 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ### Parametros
 
 - `thisArg`
-  - : Es un valor que será enviado a la función destino cuando se llame a la función de enlace. Este valor será ignorado si la función de enlace es construida usando el operador {{jsxref("Operators/new", "new")}}.
+  - : Es un valor que será enviado a la función destino cuando se llame a la función de enlace. Este valor será ignorado si la función de enlace es construida usando el operador {{jsxref("new")}}.
 - `arg1, arg2, ...`
   - : Son los argumentos que se enviarán además de los provistos a la función de enlace cuando se invoque la función destino.
 
@@ -30,7 +30,7 @@ Una copia de la función entregada con el valor especificado `this` y los argume
 
 ## Descripción
 
-La función `bind()` crea una nueva función (**función ligada**) con el mismo cuerpo (propiedad interna {{jsxref("Function.prototype.call", "call")}} en términos de ECMAScript 5) como la función que será llamada (la **función objetivo** de la función ligada) con la referencia `this` asociada al primer argumento de `bind()`, el cual no podrá ser sobreescrito. `bind()` también acepta parámetros predeterminados que antecederán al resto de los parámetros específicos cuando la función objetivo sea llamada. Una función ligada también puede ser construída utilizando el operador {{jsxref("Operators/new", "new")}}: al hacerlo, actuará como si en su lugar hubiera sido construída la función objetivo.
+La función `bind()` crea una nueva función (**función ligada**) con el mismo cuerpo (propiedad interna {{jsxref("Function.prototype.call", "call")}} en términos de ECMAScript 5) como la función que será llamada (la **función objetivo** de la función ligada) con la referencia `this` asociada al primer argumento de `bind()`, el cual no podrá ser sobreescrito. `bind()` también acepta parámetros predeterminados que antecederán al resto de los parámetros específicos cuando la función objetivo sea llamada. Una función ligada también puede ser construída utilizando el operador {{jsxref("new")}}: al hacerlo, actuará como si en su lugar hubiera sido construída la función objetivo.
 
 En este último caso, el parámetro correspondiente para `this` será ignorado, aunque los parámetros predeterminados que antecederán al resto sí serán provistos para la función emulada.
 
@@ -101,7 +101,7 @@ LateBloomer.prototype.declare = function () {
 > [!WARNING]
 > **Advetencia:** Esta sección demuestra las capacidades de JavaScript y documenta algunos usos extremos del método `bind()`. Los métodos mostrados a continuación no son la mejor forma de hacer las cosas y probablemente no deberían ser utilizados en ningún ambiente productivo.
 
-Las funciones ligadas son automáticamente adecuadas para usarse con el operador {{jsxref("Operators/new", "new")}} para construir nuevas instancias creadas por la función objetivo. Cuando una función ligada es utilizada para construir un valor, el parámetro enviado para reemplazar la referencia `this` es ignorado. De cualquier forma, los argumentos iniciales sí son tomados en consideración y antecederán a los parámetros que se envíen al constructor:
+Las funciones ligadas son automáticamente adecuadas para usarse con el operador {{jsxref("new")}} para construir nuevas instancias creadas por la función objetivo. Cuando una función ligada es utilizada para construir un valor, el parámetro enviado para reemplazar la referencia `this` es ignorado. De cualquier forma, los argumentos iniciales sí son tomados en consideración y antecederán a los parámetros que se envíen al constructor:
 
 ```js
 function Point(x, y) {
@@ -130,7 +130,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 ```
 
-Note que no necesita hacer nada especial para crear una función ligada para usarse con {{jsxref("Operators/new", "new")}}. El razonamiento es que usted no necesita hacer nada especial para crear una función ligada para ser llamada planamente, aún si usted prefiriera requerir que la función ligada sea llamada únicamente utilizando {{jsxref("Operators/new", "new")}}.
+Note que no necesita hacer nada especial para crear una función ligada para usarse con {{jsxref("new")}}. El razonamiento es que usted no necesita hacer nada especial para crear una función ligada para ser llamada planamente, aún si usted prefiriera requerir que la función ligada sea llamada únicamente utilizando {{jsxref("new")}}.
 
 ```js
 // Ejemplo que puede ser ejecutado directamente en tu consola JavaScript
@@ -144,7 +144,7 @@ emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
-Si desea utilizar una función ligada únicamente usando {{jsxref("Operators/new", "new")}}, o únicamente mediante una llamada directa, la función objetivo debe forzar esa restricción.
+Si desea utilizar una función ligada únicamente usando {{jsxref("new")}}, o únicamente mediante una llamada directa, la función objetivo debe forzar esa restricción.
 
 ### Ejemplo: Crear atajos
 
@@ -160,7 +160,7 @@ var slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-Con `bind()`, esto puede ser simplificado. En el siguiente fragmento de código, `slice` es una función ligada a la función {{jsxref("Function.prototype.call()", "call()")}} de {{jsxref("Function.prototype")}}, con la referencia `this` setteada a la función {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Esto significa que llamadas adicionales a `call()` pueden omitirse:
+Con `bind()`, esto puede ser simplificado. En el siguiente fragmento de código, `slice` es una función ligada a la función {{jsxref("Function.prototype.call()", "call()")}} de {{jsxref("Function")}}, con la referencia `this` setteada a la función {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array")}}. Esto significa que llamadas adicionales a `call()` pueden omitirse:
 
 ```js
 // same as "slice" in the previous example
@@ -208,7 +208,7 @@ if (!Function.prototype.bind) {
 Algunas de las muchas diferencias (bien podría haber otras, en tanto la siguiente lista no intenta ser exhaustiva) entre este algoritmo y el algoritmo de la especificación son:
 
 - La implementación parcial se basa en {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} y {{jsxref("Function.prototype.apply()")}}, métodos incorporados para tener sus valores originales.
-- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("Global_Objects/TypeError", "TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) y [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) ).
+- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) y [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) ).
 - La implementación parcial crea funciones que tienen una propiedad `prototype`. (Las funciones ligadas no tienen ninguna).
 - La implementación parcial crea funciones ligadas cuya propiedad {{jsxref("Function.length", "length")}} no coincide con la indicada por ECMA-262: ésta crea funciones con longitud 0, mientras que la implementación completa, dependiendo de la longitud de la función objetivo y del número de argumentos pre-especificados, podría regresar una longitud mayor a zero.
 
@@ -228,4 +228,4 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

@@ -3,8 +3,6 @@ title: Accesseurs de propriétés
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
-{{jsSidebar("Operators")}}
-
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets
 
 {{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
@@ -114,7 +112,7 @@ Pour plus d'informations, consultez la page sur [l'opérateur `this` et les liai
 
 ### Note concernant `eval`
 
-Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("eval", "eval()")}} alors que la notation avec crochets pourrait être utilisée. Par exemple, la syntaxe suivante est utilisée dans de nombreux scripts.
+Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("Global_Objects/eval", "eval()")}} alors que la notation avec crochets pourrait être utilisée. Par exemple, la syntaxe suivante est utilisée dans de nombreux scripts.
 
 ```js
 x = eval("document.formulaire." + controle + ".value");

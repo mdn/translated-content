@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 
 ## 语法
 
-```plain
+```js-nolint
 Math.sinh(x)
 ```
 

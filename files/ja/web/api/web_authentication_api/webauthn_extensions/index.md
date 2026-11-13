@@ -67,7 +67,7 @@ navigator.credentials
 
 上記のコードスニペットが示すように、出力拡張機能の結果を確認できる場所は 2 か所あります。
 
-1. クライアント（ユーザーエージェント）拡張処理の結果は、{{domxref("PublicKeyCredential.getClientExtensionResults()")}} メソッドを呼び出すことで取得できます。これにより、各エントリーが拡張機能の識別子文字列をキーとし、クライアントによる拡張処理の出力を値とする {{jsxref("Map", "map")}} が返されます。上記の例では、ブラウザーが `credProps` 拡張機能に対応しており、それが正しく処理された場合、`myClientExtResults` マップオブジェクトには `"credProps"` というエントリーが 1 つ含まれ、その値は `{ rk: true }` となります。これにより、作成された資格情報が実際に検出可能であることが確認されます。
+1. クライアント（ユーザーエージェント）拡張処理の結果は、{{domxref("PublicKeyCredential.getClientExtensionResults()")}} メソッドを呼び出すことで取得できます。これにより、各エントリーが拡張機能の識別子文字列をキーとし、クライアントによる拡張処理の出力を値とする {{jsxref("Map")}} が返されます。上記の例では、ブラウザーが `credProps` 拡張機能に対応しており、それが正しく処理された場合、`myClientExtResults` マップオブジェクトには `"credProps"` というエントリーが 1 つ含まれ、その値は `{ rk: true }` となります。これにより、作成された資格情報が実際に検出可能であることが確認されます。
 
 2. この操作の認証データで、認証拡張機能処理の結果を確認できます。
    - `create()` 呼び出しが成功して返された `PublicKeyCredential` の場合、これは {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "publicKeyCredential.response.getAuthenticatorData()")}} の呼び出しによって返すことができます。

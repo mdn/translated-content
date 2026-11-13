@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`fontcolor()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("font")}} 要素に埋め込み (`<font color="...">str</font>`)、この文字列が指定されたフォント色で表示されるようにする文字列を生成します。
 
 > [!NOTE]

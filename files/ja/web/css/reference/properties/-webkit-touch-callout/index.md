@@ -1,14 +1,18 @@
 ---
-title: -webkit-touch-callout
+title: "`-webkit-touch-callout` プロパティ (CSS)"
+short-title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
-original_slug: Web/CSS/-webkit-touch-callout
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 `-webkit-touch-callout` は [CSS](/ja/docs/Web/CSS) のプロパティで、対象を長押しすることで現れるコールアウト表示を制御します。
 
-iOS 上で対象が長押しされたとき、 Safari はそのリンクに関する情報をコールアウトで表示します。このプロパティではそういった挙動を無効にすることができます。
+iOS 上で対象が長押しされたとき、 Safari はそのリンクに関する情報をコールアウトで表示します。このプロパティではそういった挙動を無効にできます。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -18,10 +22,10 @@ iOS 上で対象が長押しされたとき、 Safari はそのリンクに関�
 /* グローバル値 */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -36,7 +40,7 @@ iOS 上で対象が長押しされたとき、 Safari はそのリンクに関�
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-touch-callout = default | none`)}}
 
 ## 例
 

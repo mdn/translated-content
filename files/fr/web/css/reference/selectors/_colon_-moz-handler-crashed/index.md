@@ -1,8 +1,9 @@
 ---
-title: :-moz-handler-crashed
+title: Pseudo-classe CSS `:-moz-handler-crashed`
+short-title: :-moz-handler-crashed
 slug: Web/CSS/Reference/Selectors/:-moz-handler-crashed
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_Header}}

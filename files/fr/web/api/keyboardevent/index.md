@@ -63,7 +63,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
     sous OS X) était active quand l'évènement touche a été généré.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
-  - : Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.
+  - : Renvoie une {{jsxref("String")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.
 
     > [!NOTE]
     > Si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
@@ -78,7 +78,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
     > Cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} avec la valeur du code de la touche représentée par l'événement.
+  - : Retourne une {{jsxref("String")}} avec la valeur du code de la touche représentée par l'événement.
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
   - : Retourne un {{jsxref ("Boolean")}} qui est `true` si la touche
 
@@ -89,7 +89,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Renvoie un {{jsxref ("Boolean")}} qui est `true` si l'événement est déclenché après `compositionstart` et avant `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} représentant la valeur de touche de la touche représentée par l'événement.
+  - : Retourne une {{jsxref("String")}} représentant la valeur de touche de la touche représentée par l'événement.
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
   - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.
 
@@ -101,7 +101,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : C'est un alias obsolète non standard pour {{domxref("KeyboardEvent.location")}}. Il faisait partie d'une ancienne version de DOM Level 3 Events.
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-  - : Retourne une {{domxref("DOMString")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.
+  - : Retourne une {{jsxref("String")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.
 
     > [!NOTE]
     > Cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.
@@ -124,7 +124,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
     )) était active quand l'évènement touche a été généré.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-  - : Retourne un {{jsxref("Booléen")}} qui est `true` si la touche est maintenue enfoncée de telle sorte qu'elle se répète automatiquement.
+  - : Retourne un {{jsxref("Boolean", "Booléen")}} qui est `true` si la touche est maintenue enfoncée de telle sorte qu'elle se répète automatiquement.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
   - : Retourne un {{jsxref("Boolean")}} qui est `true` si la touche
 

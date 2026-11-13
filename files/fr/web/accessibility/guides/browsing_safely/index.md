@@ -3,7 +3,7 @@ title: "Accessibilité : Quelle personnalisation aide à naviguer plus en sécur
 short-title: Personnalisation pour une navigation sécurisée
 slug: Web/Accessibility/Guides/Browsing_safely
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 813a03e3affaad31a6c975628a1b705fa568f095
 ---
 
 Cet article explique comment rendre le contenu web accessible aux personnes souffrant de troubles vestibulaires, ainsi qu'à celles qui les accompagnent, en tirant parti des options de personnalisation et d'accessibilité intégrées aux systèmes d'exploitation. Utiliser ces réglages permet d'éviter l'exposition à des contenus pouvant provoquer des crises ou d'autres réactions physiques.
@@ -90,4 +90,4 @@ La plupart des systèmes d'exploitation permettent d'activer ce réglage sur le 
 
 ### Remerciements
 
-Un grand merci à Eric Eggert de [Knowbility](https://knowbility.org/) pour ses échanges et son aide précieuse sur ce sujet.
+Un grand merci à Eric Eggert de [Knowbility <sup>(angl.)</sup>](https://knowbility.org/) pour ses échanges et son aide précieuse sur ce sujet.

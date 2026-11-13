@@ -34,7 +34,7 @@ x ||= y
 左辺が偽値でない場合、[論理和](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR)演算子の短絡が発生するため代入は実行されません。例えば、 `x` が `const` であっても、以下のコードはエラーが発生しません。
 
 ```js
-const x = 0;
+const x = 1;
 x ||= 2;
 ```
 

@@ -17,7 +17,7 @@ Animation.id = newIdString;
 
 ### Valor
 
-Un {{domxref("DOMString")}} que se puede usar para identificar la animación, o `null` si la animación no tiene `id`.
+Un {{jsxref("String")}} que se puede usar para identificar la animación, o `null` si la animación no tiene `id`.
 
 ## Ejemplos
 

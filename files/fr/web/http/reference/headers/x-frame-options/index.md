@@ -1,125 +1,121 @@
 ---
-title: X-Frame-Options
+title: En-tête X-Frame-Options
+short-title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
-original_slug: Web/HTTP/Headers/X-Frame-Options
+l10n:
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
-L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur devrait être autorisé à afficher une page au sein d'un élément [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) ou [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object). Les sites peuvent utiliser cet en-tête afin d'éviter les attaques de _[clickjacking](https://fr.wikipedia.org/wiki/Clickjacking)_ (ou «&nbsp;détournement de clic&nbsp;») pour s'assurer que leur contenu ne soit pas embarqué dans d'autres sites.
-
-Ce complément de sécurité est uniquement valable lorsque l'utilisateur final visite le document avec un navigateur prenant en charge `X-Frame-Options`.
-
 > [!NOTE]
-> L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
+> Pour des options plus complètes que celles offertes par cet en-tête, voir la directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} dans un en-tête {{HTTPHeader("Content-Security-Policy")}}.
+
+{{Glossary("response Header", "L'en-tête de réponse")}} HTTP **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur doit être autorisé à afficher le document dans un {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} ou {{HTMLElement("object")}}. Les sites peuvent utiliser cet en-tête afin d'éviter les attaques _[d'usurpation de clic](https://en.wikipedia.org/wiki/Clickjacking)_ et certaines [fuites inter-sites](/fr/docs/Web/Security/Attacks/XS-Leaks), en s'assurant que leur contenu n'est pas intégré dans d'autres sites.
+
+Si cet en-tête n'est pas envoyé, et que le site web n'a pas mis en place d'autres mécanismes pour restreindre l'intégration (comme la directive CSP {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}), alors le navigateur permet à d'autres sites d'intégrer ce document.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossary/Response_header">En-tête de réponse</a></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden_request_header", "En-tête de requête interdit")}}</th>
-      <td>Non</td>
+      <td>{{Glossary("Response header", "En-tête de réponse")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-Il existe deux directives pour `X-Frame-Options`&nbsp;:
-
-```
+```http
 X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 ```
 
 ### Directives
 
-Si on utilise `DENY`, le chargement de la page dans une _frame_ échouera sur un site tiers mais aussi sur un site de la même origine. En revanche, si on utilise `SAMEORIGIN`, on peut toujours utiliser le document dans une _frame_ si celle-ci partage la même origine.
-
 - `DENY`
-  - : La page ne peut pas être affichée dans une _frame_, quand bien même un site tiers tenterait de la charger.
+  - : Le document ne peut pas être chargé dans un cadre, quelle que soit son origine (l'intégration à la fois de la même origine et d'origines croisées est bloquée).
 - `SAMEORIGIN`
-  - : La page ne peut être affichée que dans une _frame_ avec une origine qui est la même que la page elle-même. La spécification laisse le choix au navigateur de décider si cela s'applique au niveau le plus haut, au conteneur parent ou à l'ensemble de la chaîne des _frames_ potentiellement imbriquées. Il est parfois avancé que cette option n'est pas très utile à moins que l'ensemble des ancêtres partage la même origine (cf. [bug 725490](https://bugzilla.mozilla.org/show_bug.cgi?id=725490)). Voir aussi [le tableau de compatibilité](#compatibilité_des_navigateurs) ci-après pour plus de détails sur la prise en charge de cette directive.
-- `ALLOW-FROM uri` {{deprecated_inline}}
-  - : Une directive obsolète qui ne fonctionne plus dans les navigateurs récents et qui ne doit donc plus être utilisée. Pour les navigateurs historiques, cette directive permettait d'indiquer une origine via une URI afin d'autoriser l'affichage du document dans les _frames_ chargées depuis cette origine. Pour les anciennes versions de Firefox, on a le même problème qu'avec `SAMEORIGIN`&nbsp;: il n'y a pas de vérifications des différents ancêtres pour voir s'ils partagent la même origine. À la place, on utilisera la directive [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) de l'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy).
+  - : Le document ne peut être intégré que si tous les cadres ancêtres ont la même {{Glossary("origin", "origine")}} que la page elle-même.
+- `ALLOW-FROM origin` {{Deprecated_Inline}}
+  - : Il s'agit d'une directive obsolète. Les navigateurs modernes qui rencontrent des en-têtes de réponse avec cette directive ignorent complètement l'en-tête. L'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}} possède une directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que vous devez utiliser à la place.
 
 ## Exemples
 
-> [!NOTE]
-> La balise `<meta>` est inutile ici&nbsp;! `<meta http-equiv="X-Frame-Options" content="deny">` n'aura aucun effet et mieux vaut donc ne pas l'utiliser. L'en-tête `X-FRAME-OPTIONS` ne fonctionne que si vous l'utilisez dans la configuration HTTP comme dans les exemples ci-dessous.
+> [!WARNING]
+> Définir `X-Frame-Options` dans l'élément HTML {{HTMLElement("meta")}} (par exemple, `<meta http-equiv="X-Frame-Options" content="deny">`) n'a aucun effet. `X-Frame-Options` n'est appliqué qu'avec les en-têtes HTTP, comme le montrent les exemples ci-dessous.
 
 ### Configurer Apache
 
-On peut configurer Apache afin d'envoyer l'en-tête `X-Frame-Options` pour toutes les pages. Dans la configuration, on ajoutera&nbsp;:
+Pour configurer Apache afin d'envoyer l'en-tête `X-Frame-Options` pour toutes les pages, ajoutez ceci à la configuration de votre site&nbsp;:
 
-```
+```apacheconf
 Header always set X-Frame-Options "SAMEORIGIN"
 ```
 
-Si on veut utiliser la valeur `DENY`, on pourra utiliser ceci dans la configuration&nbsp;:
+Pour configurer Apache afin de définir `X-Frame-Options` sur `DENY`, ajoutez ceci à la configuration de votre site&nbsp;:
 
-```
+```apacheconf
 Header set X-Frame-Options "DENY"
 ```
 
-### Configurer nginx
+### Configurer Nginx
 
-Avec nginx, on pourra ajouter la ligne suivante à la configuration HTTP, serveur ou à la configuration de l'emplacement (<i lang="en">location</i>)&nbsp;:
+Pour configurer Nginx afin d'envoyer l'en-tête `X-Frame-Options`, ajoutez ceci soit à la configuration HTTP, serveur ou à la configuration de l'emplacement&nbsp;:
 
-```
+```nginx
 add_header X-Frame-Options SAMEORIGIN always;
+```
+
+Pour définir l'en-tête `X-Frame-Options` sur `DENY`, utilisez&nbsp;:
+
+```nginx
+add_header X-Frame-Options DENY always;
 ```
 
 ### Configurer IIS
 
-Pour IIS, ajoutez ce qui suit au fichier `Web.config` de votre site&nbsp;:
+Pour configurer IIS afin d'envoyer l'en-tête `X-Frame-Options`, ajoutez ceci au fichier `Web.config` de votre site&nbsp;:
 
 ```xml
 <system.webServer>
-  ...
-
+  …
   <httpProtocol>
     <customHeaders>
       <add name="X-Frame-Options" value="SAMEORIGIN" />
     </customHeaders>
   </httpProtocol>
-
-  ...
+  …
 </system.webServer>
 ```
 
-Consultez [cet article Microsoft](https://support.microsoft.com/fr-fr/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) pour configurer IIS via l'interface du gestionnaire IIS (<i lang="en">IIS manager</i>).
+Pour plus d'information, voir [l'article du support technique Microsoft sur la mise en place de cette configuration à l'aide du Gestionnaire IIS <sup>(angl.)</sup>](https://support.microsoft.com/en-us/security/mitigating-framesniffing-with-the-x-frame-options-header) depuis son interface utilisateur.
 
 ### Configurer HAProxy
 
-Pour HAProxy, on ajoutera la ligne suivante à la configuration du _frontend_, du _listen_ ou du _backend_&nbsp;:
+Pour configurer HAProxy afin qu'il envoie l'en-tête `X-Frame-Options`, ajoutez la ligne suivante à la configuration de votre partie avant du site (site), écouteur ou partie arrière du site (serveur)&nbsp;:
 
-```
+```plain
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
-Dans les versions plus récentes, voici la forme équivalente&nbsp;:
+Dans les versions plus récentes, utilisez&nbsp;:
 
-```
+```plain
 http-response set-header X-Frame-Options SAMEORIGIN
 ```
 
 ### Configurer Express
 
-Si on utilise Express, on pourra utiliser le module [helmet](https://helmetjs.github.io/) qui tire parti de [frameguard](https://helmetjs.github.io/docs/frameguard/) afin de régler l'en-tête `X-Frame-Options`. Ajoutez ceci à la configuration serveur&nbsp;:
+Pour définir `X-Frame-Options` sur `SAMEORIGIN` en utilisant [Helmet <sup>(angl.)</sup>](https://helmet.js.org/), ajoutez ce qui suit à la configuration de votre serveur&nbsp;:
 
 ```js
-const helmet = require("helmet");
+import helmet from "helmet";
+
 const app = express();
-app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
-```
-
-On pourra également utiliser [frameguard](https://helmetjs.github.io/docs/frameguard/) directement&nbsp;:
-
-```js
-const frameguard = require("frameguard");
-app.use(frameguard({ action: "SAMEORIGIN" }));
+app.use(
+  helmet({
+    xFrameOptions: { action: "sameorigin" },
+  }),
+);
 ```
 
 ## Spécifications
@@ -132,7 +128,6 @@ app.use(frameguard({ action: "SAMEORIGIN" }));
 
 ## Voir aussi
 
-- [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) lié à la configuration de la stratégie CSP via [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [L'en-tête HTTP `X-Frame-Options` - RFC 7034 (en anglais)](https://datatracker.ietf.org/doc/html/rfc7034)
-- [Protéger contre le détournement de clic - IEBlog (en anglais)](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Lutter contre le détournement de clic avec l'en-tête `X-Frame-Options` - IEInternals (en anglais)](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- La directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} de {{HTTPHeader("Content-Security-Policy")}}
+- [Défenses contre l'usurpation de clic - IEBlog <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Lutter contre le détournement de clic avec l'en-tête `X-Frame-Options` - IEInternals <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

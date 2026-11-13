@@ -345,4 +345,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - {{HTMLElement("input")}} 과 그를 구현하는 {{domxref("HTMLInputElement")}} 인터페이스
 - {{cssxref(":checked")}} 그리고 현재 상태를 기반으로 체크박스를 꾸밀 수 있는 {{cssxref(":indeterminate")}} CSS 선택자
-- [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 속성 호환성](/ko/docs/Learn_web_development/Extensions/Forms)

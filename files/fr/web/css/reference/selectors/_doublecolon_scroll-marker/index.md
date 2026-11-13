@@ -1,8 +1,9 @@
 ---
-title: ::scroll-marker
+title: Pseudo-élément CSS `::scroll-marker`
+short-title: ::scroll-marker
 slug: Web/CSS/Reference/Selectors/::scroll-marker
 l10n:
-  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}
@@ -27,7 +28,7 @@ En termes d'accessibilité, le groupe de marqueurs de défilement et les marqueu
 
 ## Exemples
 
-Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) pour d'autres exemples utilisant le pseudo-élément `::scroll-marker`.
+Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) pour d'autres exemples utilisant le pseudo-élément `::scroll-marker`.
 
 ### Créer des marqueurs de défilement de carrousel
 
@@ -189,7 +190,7 @@ Pour améliorer l'expérience utilisateur, nous appliquons une couleur différen
 - Le pseudo-élément {{CSSxRef("::scroll-button()")}}
 - Le pseudo-élément {{CSSxRef("::scroll-marker-group")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
-- [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
 - Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

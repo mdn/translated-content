@@ -1,13 +1,12 @@
 ---
-title: "<center> : l'élément de texte centré"
+title: "Élément HTML `<center>` : l'élément de texte centré"
+short-title: <center>
 slug: Web/HTML/Reference/Elements/center
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}
-
-L'élément [HTML](/fr/docs/Web/HTML) **`<center>`** est un [élément de type bloc](/fr/docs/Glossary/Block-level_content) qui affiche son contenu de type bloc ou en ligne centré horizontalement dans son élément conteneur. Le conteneur est généralement, mais pas obligatoirement, {{HTMLElement("body")}}.
+L'élément [HTML](/fr/docs/Web/HTML) **`<center>`** est un [élément de type bloc](/fr/docs/Glossary/Block-level_content) qui affiche son contenu de type bloc ou en incise centré horizontalement dans son élément conteneur. Le conteneur est généralement, mais pas obligatoirement, {{HTMLElement("body")}}.
 
 Cette balise a été dépréciée dans HTML 4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef("text-align")}}, qui peut être appliquée à l'élément {{HTMLElement("div")}} ou à un {{HTMLElement("p")}} individuel. Pour centrer des blocs, utilisez d'autres propriétés CSS comme {{CSSxRef("margin-left")}} et {{CSSxRef("margin-right")}} et définissez-les sur `auto` (ou définissez {{CSSxRef("margin")}} à `0 auto`).
 
@@ -19,12 +18,12 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ```html
 <center>
-  Ce texte sera centré.
+  Ce texte est centré.
   <p>Ainsi que ce paragraphe.</p>
 </center>
 ```
 
-### Result
+### Résultat
 
 {{EmbedLiveSample("Exemple 1")}}
 
@@ -32,7 +31,7 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ```html
 <div class="center">
-  Ce texte sera centré.
+  Ce texte est centré.
   <p>Ainsi que ce paragraphe.</p>
 </div>
 ```
@@ -43,7 +42,7 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 }
 ```
 
-### Result
+### Résultat
 
 {{EmbedLiveSample("Exemple 2 (alternative CSS)")}}
 
@@ -51,7 +50,7 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ```html
 <p class="center">
-  Cette ligne sera centrée.<br />
+  Cette ligne est centrée.<br />
   Ainsi que cette ligne.
 </p>
 ```
@@ -62,7 +61,7 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 }
 ```
 
-### Result
+### Résultat
 
 {{EmbedLiveSample("Exemple 3 (alternative CSS)")}}
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Your_first_form
 original_slug: Learn/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 시리즈의 첫 번째 글에서는 간단한 폼 디자인하기, 적절한 HTML 폼 컨트롤과 다른 HTML 요소를 사용하여 폼 구현하기, CSS로 매우 간단한 스타일 추가하기, 데이터가 서버로 전송되는 방법 설명하기 등 웹 폼 만들기에 대한 첫 번째 경험을 제공합니다. 이 모듈의 뒷부분에서 각 하위 주제에 대해 더 자세히 설명하겠습니다.
 
@@ -13,7 +13,7 @@ original_slug: Learn/Forms/Your_first_form
     <tr>
       <th scope="row">사전 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML에 대한 기본적인 이해</a
         >.
       </td>
@@ -105,7 +105,7 @@ original_slug: Learn/Forms/Your_first_form
 
 폼 코드를 위와 같이 업데이트하세요.
 
-{{HTMLelement("li")}} 요소는 코드를 편리하게 구성하고 스타일을 더 쉽게 지정하기 위한 것입니다 (이 글의 뒷 부분을 참조하세요). 사용성과 접근성을 위해서 각 폼 컨트롤에 명시적인 label을 포함했습니다. 모든 {{HTMLelement("label")}} 요소에 [`for`](/ko/docs/Web/HTML/Attributes/for) 속성을 사용하는 것에 주목하세요. 이 속성은 연결된 폼 컨트롤의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id)를 값으로 사용하기 때문에 폼 컨트롤을 label과 연결할 수 있습니다.
+{{HTMLelement("li")}} 요소는 코드를 편리하게 구성하고 스타일을 더 쉽게 지정하기 위한 것입니다 (이 글의 뒷 부분을 참조하세요). 사용성과 접근성을 위해서 각 폼 컨트롤에 명시적인 label을 포함했습니다. 모든 {{HTMLelement("label")}} 요소에 [`for`](/ko/docs/Web/HTML/Reference/Attributes/for) 속성을 사용하는 것에 주목하세요. 이 속성은 연결된 폼 컨트롤의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id)를 값으로 사용하기 때문에 폼 컨트롤을 label과 연결할 수 있습니다.
 
 이렇게 label을 폼 컨트롤과 연결하면 큰 이점이 있습니다. 마우스, 트랙패드, 터치 장치 사용자가 label을 클릭하면 일치하는 컨트롤을 활성화할 수 있습니다. 그리고 스크린 리더의 사용자가 읽을 수 있는 접근 가능한 이름을 스크린 리더에게 제공할 수 있는 큰 이점도 있습니다. 폼 label에 대한 자세한 내용은 [웹 폼 구조화 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)에서 확인할 수 있습니다.
 
@@ -372,10 +372,10 @@ button {
 
 그러나 이것은 시작에 불과합니다. 이제 더 자세히 살펴볼 차례입니다. 폼에는 여기서 살펴본 것보다 훨씬 더 많은 기능이 있으며 이 모듈의 다른 문서가 나머지 기능을 익히는 데 도움이 될 것입니다.
 
-{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 ### 고급 주제
 
 - [커스텀 폼 컨트롤을 작성하는 방법](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [JavaScript를 통해 폼 전송하기](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [폼 위젯의 속성 호환성 표](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [폼 위젯의 속성 호환성 표](/ko/docs/Learn_web_development/Extensions/Forms)

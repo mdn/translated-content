@@ -11,13 +11,13 @@ HTTP 协议首部字段 {{HTTPHeader("Content-Security-Policy")}} (CSP) 中的 *
 
 ## 语法
 
-```plain
+```http
 Content-Security-Policy: block-all-mixed-content;
 ```
 
 ## 示例
 
-```plain
+```http
 Content-Security-Policy: block-all-mixed-content;
 
 <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
@@ -25,7 +25,7 @@ Content-Security-Policy: block-all-mixed-content;
 
 为了在更细粒度上限制对 http 资源的访问，你可以将个别指令的值设置为 "https:"。例如，为了限制对不安全的走 http 协议的图片的访问，可以这么做：
 
-```plain
+```http
 Content-Security-Policy: img-src https:
 ```
 

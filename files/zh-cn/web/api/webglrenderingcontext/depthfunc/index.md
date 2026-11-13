@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/depthFunc
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.depthFunc(func);
 ```
 

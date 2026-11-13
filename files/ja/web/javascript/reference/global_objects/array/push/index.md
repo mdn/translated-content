@@ -3,7 +3,7 @@ title: Array.prototype.push()
 short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`push()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の末尾に指定された要素を追加します。また返値として配列の新しい長さを返します。
@@ -80,7 +80,7 @@ vegetables.push(...moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-2 つの配列の結合は、 {{jsxref("Array.prototype.concat()", "concat()")}} メソッドでも行うことができます。
+2つの配列の結合は、{{jsxref("Array/concat", "concat()")}} メソッドを使用して行うことも可能ですが、この場合は元の配列に要素を追加するのではなく、新しい結合配列が作成されます。スプレッド構文は、配列の要素数がエンジンで許可されている関数の引数の最大数より少ない場合にのみ機能します。要素数の多い配列の場合は、`concat()` を使用するか、ループ内で `push()` を複数回呼び出してください。
 
 ### 配列以外のオブジェクトに対する push() の呼び出し
 
@@ -138,7 +138,7 @@ console.log(obj.length); // 2
 
 ## 関連情報
 
-- [このメソッドの修正を含んだ `Array.prototype.push` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [このメソッドの修正を含んだ `Array.prototype.push` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.push` のポリフィル](https://www.npmjs.com/package/array.prototype.push)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.pop()")}}

@@ -3,7 +3,7 @@ title: Array.prototype.indexOf()
 short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`indexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、引数に与えられた内容と同じ内容を持つ最初の配列要素の添字を返します。存在しない場合は -1 を返します。
@@ -39,11 +39,11 @@ indexOf(searchElement, fromIndex)
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
     - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
     - `fromIndex < -array.length` または `fromIndex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
-    - `fromIndex >= array.length` の場合、配列の検索は行われず、 `false` が返されます。
+    - `fromIndex >= array.length` の場合、配列の検索は行われず、 `-1` が返されます。
 
 ### 返値
 
-配列内にある最初の `searchElement` のインデックスです。見つからなかった場合は `-1`` です。
+配列内にある最初の `searchElement` のインデックスです。見つからなかった場合は `-1` です。
 
 ## 解説
 
@@ -146,7 +146,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 
 ## 関連情報
 
-- [`Array.prototype.indexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.indexOf` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.indexOf` のポリフィル](https://www.npmjs.com/package/array.prototype.indexof)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

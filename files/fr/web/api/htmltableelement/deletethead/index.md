@@ -3,12 +3,12 @@ title: "HTMLTableElement : méthode deleteTHead()"
 short-title: deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`deleteTHead()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime l'élément HTML {{HTMLElement("thead")}} d'un tableau ({{HTMLElement("table")}}) donné.
+La méthode **`deleteTHead()`** de l'interface {{DOMxRef("HTMLTableElement")}} supprime le premier élément {{HTMLElement("thead")}} enfant d'un tableau ({{HTMLElement("table")}}) donné, s'il en existe un.
 
 ## Syntaxe
 
@@ -54,7 +54,7 @@ Cet exemple utilise JavaScript pour supprimer l'en-tête d'un tableau.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteTHead();
 ```
 
@@ -69,3 +69,9 @@ table.deleteTHead();
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("HTMLTableElement.createTHead()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteTFoot()")}}

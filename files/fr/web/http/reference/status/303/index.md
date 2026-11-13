@@ -2,7 +2,7 @@
 title: 303 See Other
 slug: Web/HTTP/Reference/Status/303
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de redirection](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection) HTTP **`303 See Other`** indique que le navigateur doit se rediriger vers l'URL indiquée dans l'en-tête {{HTTPHeader("Location")}} au lieu d'afficher la ressource demandée.
@@ -18,24 +18,24 @@ La méthode pour récupérer la ressource redirigée est toujours {{HTTPMethod("
 
 ## Exemples
 
-### Réponse 303 lors de la soumission d'un formulaire
+### Réponse 303 lors de l'envoie d'un formulaire
 
-Dans cet exemple, le client envoie une requête {{HTTPMethod("POST")}} pour soumettre un formulaire à une inscription générique.
+Dans cet exemple, le client envoie une requête {{HTTPMethod("POST")}} pour envoyer un formulaire à une inscription générique.
 
 ```http
 POST /subscribe HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 50
 
-name=Sandra%20Smith&email=sandra.smith%40exemple.com
+name=Sandra%20Smith&email=sandra.smith%40example.com
 ```
 
 Le serveur peut renvoyer une réponse avec un statut `303` et une page de confirmation dans l'en-tête {{HTTPHeader("Location")}}, afin que l'utilisateur·ice soit redirigé·e après avoir reçu la réponse.
 
 ```http
 HTTP/1.1 303 See Other
-Location: https://www.exemple.com/confirmation/event/123
+Location: https://www.example.com/confirmation/event/123
 Content-Type: text/html; charset=UTF-8
 Content-Length: 0
 ```

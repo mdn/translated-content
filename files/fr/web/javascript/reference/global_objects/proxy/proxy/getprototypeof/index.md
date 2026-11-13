@@ -3,8 +3,6 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
-{{JSRef}}
-
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
 {{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
@@ -64,7 +62,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 ### Invariants
 
@@ -141,6 +139,6 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

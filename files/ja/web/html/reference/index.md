@@ -3,10 +3,8 @@ title: HTML リファレンス
 short-title: リファレンス
 slug: Web/HTML/Reference
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 この [HTML](/ja/docs/Web/HTML) リファレンスは、 HTML のすべての**要素**と**属性**、およびすべての要素に適用される**グローバル属性**について書かれています。
 

@@ -1,8 +1,9 @@
 ---
-title: prefers-color-scheme
+title: CSS `prefers-color-scheme` メディア特性
+short-title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 **`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Guides/Media_queries/Using#メディア特性を対象にする)で、ユーザーがシステムに要求した配色が明色か暗色かを検出するために使用します。
@@ -27,7 +28,7 @@ SVG で `prefers-color-scheme` を使用している例については、「[埋
 
 ### ダークテーマかライトテーマかの検出
 
-一般的な使用法は、既定で明るい配色を使用し、`prefers-color-scheme: dark` を使用して、色を暗い色調に上書きすることです。その逆も実現可能です。
+一般的な使用法は、デフォルトで明るい配色を使用し、`prefers-color-scheme: dark` を使用して、色を暗い色調に上書きすることです。その逆も実現可能です。
 
 この例では、両方のオプションを示しています。テーマ A は明るい色を使用しますが、暗い色に変更することができます。テーマ B は暗い色を使用しますが、明るい色に変更することができます。結局、ブラウザーが `prefers-color-scheme` に対応している場合、それぞれのテーマが明るい色、暗い色になります。
 
@@ -56,7 +57,7 @@ div.box {
 }
 ```
 
-テーマ A （茶色）は、既定では明るい配色を使用していますが、メディアクエリーに基づいて暗い配色に切り替わります。
+テーマ A （茶色）は、デフォルトでは明るい配色を使用していますが、メディアクエリーに基づいて暗い配色に切り替わります。
 
 ```css
 .theme-a {
@@ -72,7 +73,7 @@ div.box {
 }
 ```
 
-テーマ B （青） は、既定では暗い配色を使用していますが、メディアクエリーに基づいて明るい配色に切り替わります。
+テーマ B （青） は、デフォルトでは暗い配色を使用していますが、メディアクエリーに基づいて明るい配色に切り替わります。
 
 ```css
 .theme-b {
@@ -161,5 +162,5 @@ for (const img of document.querySelectorAll("img")) {
 - HTTP の {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} ヘッダーによる[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)
 - [Firefox での prefers-color-scheme のシミュレーション](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [動画: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
-- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode/)
 - 色スキームの変更: [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/)、[macOS](https://developer.apple.com/design/human-interface-guidelines/dark-mode)、[Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019)、[その他のプラットフォーム](https://support.mozilla.org/ja/questions/1271928)

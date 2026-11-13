@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-progress-inner-element
+title: Pseudo-élément CSS `::-webkit-progress-inner-element`
+short-title: ::-webkit-progress-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-inner-element
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{Non-standard_Header}}
@@ -48,9 +49,9 @@ progress {
 
 ### Résultat
 
-{{EmbedLiveSample("ajouter_une_bordure_noire_autour_de_la_barre_de_progression", 200, 50)}}
+{{EmbedLiveSample("Ajouter une bordure noire autour de la barre de progression", 200, 50)}}
 
-Une barre de progression avec la mise en forme ci-avant sera affichée de cette façon&nbsp;:
+Une barre de progression avec la mise en forme ci-avant est affichée de cette façon&nbsp;:
 
 ![La barre de progression est une longue boîte verte et grise avec une bordure noire. Les 20 % gauches de la boîte sont verts. Les 80 % droits sont gris.](-webkit-progress-inner-element_example.png)
 

@@ -1,8 +1,9 @@
 ---
-title: font-variant-east-asian
+title: "`font-variant-east-asian` プロパティ (CSS)"
+short-title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語や中国語のような東アジアの字形の違いを制御するために使用します。
@@ -68,6 +69,8 @@ font-variant-east-asian: unset;
 ```
 
 ### 値
+
+このプロパティは、`normal` または `ruby` のどちらか、あるいは以下の値の空白区切りリストとして指定します。
 
 - `normal`
   - : このキーワードは、別形式の表記の使用を無効にします。

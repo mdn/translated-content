@@ -2,19 +2,19 @@
 title: スクリプト処理
 slug: Web/SVG/Guides/Scripting
 l10n:
-  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 JavaScript を使用して SVG を作成および操作するには、いくつかの方法があります。
 この記事では、イベント処理、対話機能、および埋め込み SVG コンテンツの操作について記述しています。
 
-ブラウザーの既定の動作を `evt.preventDefault()` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
+ブラウザーのデフォルトの動作を `evt.preventDefault()` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
 
-### イベントコードの既定の挙動を防ぐ
+## イベントコードのデフォルトの挙動を防ぐ
 
-ドラッグ＆ドロップのコードを書いていると、ページのテキストをドラッグ中に誤って付随的に選択してしまうことがあります。もしくは自分のコードの中でバックスペースキーを使いたい場合、バックスペースキーを押下したときに前のページへ戻るという、ブラウザーの既定の振る舞いを上書きしたくなるでしょう。このようなことは、 `evt.preventDefault()` メソッドで実現することができます。
+ドラッグ＆ドロップのコードを書いていると、ページのテキストをドラッグ中に誤って付随的に選択してしまうことがあります。もしくは自分のコードの中でバックスペースキーを使いたい場合、バックスペースキーを押下したときに前のページへ戻るという、ブラウザーのデフォルトの振る舞いを上書きしたくなるでしょう。このようなことは、 `evt.preventDefault()` メソッドで実現することができます。
 
-### オブジェクトに `eventListener` を使う
+## オブジェクトにイベントリスナーを使う
 
 `addEventListener()` や `removeEventListener()` は、対話的な SVG を書くときとても有効です。これらのメソッドの第 2 引数として、 `handleEvent` インターフェイスを実装するオブジェクトを渡すことができます。
 
@@ -29,7 +29,7 @@ function myRect(x, y, w, h, message) {
   this.rect.setAttributeNS(null, "height", h);
   document.documentElement.appendChild(this.rect);
 
-  this.rect.addEventListener("click", this, false);
+  this.rect.addEventListener("click", this);
 
   this.handleEvent = (evt) => {
     switch (evt.type) {
@@ -41,7 +41,9 @@ function myRect(x, y, w, h, message) {
 }
 ```
 
-## 文書間のスクリプト処理 - 埋め込み SVG の参照
+## 文書間のスクリプト処理
+
+### 埋め込み SVG の参照
 
 HTML 内で SVG を使用する場合、Adobe の SVG Viewer 3.0 は自動的に `svgDocument` という SVG 文書を指すウィンドウのプロパティを含みます。これは、Mozilla のネイティブ SVG 実装には当てはまりません。したがって、 `window.svgDocument` を使用しても Mozilla ではうまくいきません。その代わりに、
 
@@ -64,7 +66,7 @@ const svgDoc = document.getElementById("iframe_element").contentDocument;
 > [!NOTE]
 > `SVGDocument` インターフェイスに言及しているドキュメントを見かけることがあります。 SVG 2 より前は、 SVG 文書はこのインターフェイスを使って表現されていました。しかし、現在では SVG 文書は代わりに {{domxref("XMLDocument")}} インターフェイスを用いて表現されています。
 
-### 文書をまたがるスクリプト処理 - JavaScript 関数の呼び出し
+### JavaScript 関数の呼び出し
 
 HTML 文書に埋め込まれた SVG ファイルから HTML ファイルの中にある JavaScript 関数を呼び出すとき、その関数を参照するには `parent.functionName()` を使うべきです。Adobe SVG viewer プラグインは `functionName()` の利用を許可していますが、このようなことを行うには適していません。
 
@@ -73,10 +75,10 @@ HTML 文書に埋め込まれた SVG ファイルから HTML ファイルの中�
 
 更なる情報といくつかの例は [SVG wiki inter-document scripting page](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) で見つかります。
 
-### `setProperty` には 3 つの引数がある
+## `setProperty` には 3 つの引数がある
 
 `svgElement.style.setProperty("fill-opacity", "0.0")` と関数を呼び出すと、 Mozilla では DOMException が `SYNTAX ERR` で発生します。この挙動は W3C によって DOM Level 2 Style 仕様の中で定められています。 `setProperty` 関数は 3 つの引数を持つ関数として定義されています。上記のものは、 `'svgElement.style.setProperty("fill-opacity", "0.0", "")'` で置き換えることができ、これが標準に準拠しています。
 
-### リンク
+## リンク
 
-[SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)
+- [SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)

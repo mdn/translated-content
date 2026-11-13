@@ -1,9 +1,9 @@
 ---
-title: <meta name="referrer">
+title: Valeur d'attribut HTML `<meta name="referrer">`
 short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`referrer`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} contrôle l'en-tête HTTP {{HTTPHeader("Referer")}} des requêtes envoyées depuis le document.
@@ -35,7 +35,7 @@ Un élément `<meta name="referrer">` possède les attributs supplémentaires su
     - `origin-when-cross-origin`
       - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin, mais n'envoie que l'origine dans les autres cas.
     - `same-origin`
-      - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin. Les requêtes cross-origin n'auront pas d'en-tête référent.
+      - : Envoie l'URL complète (sans les paramètres) pour les requêtes same-origin. Les requêtes cross-origin n'ont pas d'en-tête référent.
     - `strict-origin`
       - : Envoie l'origine lorsque la destination est au moins aussi sécurisée que la page actuelle (HTTP(S)→HTTPS), mais n'envoie aucun référent si elle est moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin`

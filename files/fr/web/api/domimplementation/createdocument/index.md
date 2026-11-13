@@ -20,12 +20,12 @@ doc = document.implementation.createDocument(
 ### Paramètres
 
 - _namespaceURI_
-  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URI de l'espace de noms du document à créer, `ou null` si le document n'appartient à aucun espace de noms.
+  - : Est une {{jsxref("String")}} _(chaîne de caractères)_ contenant l'URI de l'espace de noms du document à créer, `ou null` si le document n'appartient à aucun espace de noms.
 
 <!---->
 
 - _qualifiedNameStr_
-  - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le nom qualifié, c'est-à-dire optionnellement un préfixe et deux points, plus le nom local de l'élément racine, du document à créer.
+  - : Est une {{jsxref("String")}} _(chaîne de caractères)_ contenant le nom qualifié, c'est-à-dire optionnellement un préfixe et deux points, plus le nom local de l'élément racine, du document à créer.
 
 <!---->
 

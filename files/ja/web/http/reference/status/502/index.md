@@ -2,7 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 l10n:
-  sourceCommit: dd0fe980a26938d585691d1429c8a941fa6824ff
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`502 Bad Gateway`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、ゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として機能しているサーバーが上流のサーバーから不正なレスポンスを受け取ったことを示しています。

@@ -1,8 +1,9 @@
 ---
-title: :local-link
+title: Pseudo-classe CSS `:local-link`
+short-title: :local-link
 slug: Web/CSS/Reference/Selectors/:local-link
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e59d26003fa9f0a91ae316fad08c5977cf69908b
 ---
 
 {{SeeCompatTable}}
@@ -20,7 +21,7 @@ a:local-link {
 
 ```css
 :local-link {
-  /* ... */
+  /* … */
 }
 ```
 

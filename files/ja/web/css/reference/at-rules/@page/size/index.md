@@ -1,14 +1,13 @@
 ---
 title: size
 slug: Web/CSS/Reference/At-rules/@page/size
-original_slug: Web/CSS/@page/size
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`size`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)記述子で、 {{cssxref("@page")}} アットルールで使用され、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
+**`size`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)記述子で、{{cssxref("@page")}} アットルールで使用され、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
 
-寸法は「拡縮可能な」キーワード (この場合、ページの有効な大きさ全体を使用します) 又は絶対的な長さのどちらかで定義します。
+寸法は「拡縮可能な」キーワード (この場合、ページの有効な大きさ全体を使用します) または絶対的な大きさのどちらかで定義します。
 
 ## 構文
 

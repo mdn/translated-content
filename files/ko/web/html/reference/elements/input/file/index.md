@@ -36,7 +36,7 @@ label {
       <td>
         <strong><a href="#값">값</a></strong>
       </td>
-      <td>선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}.</td>
+      <td>선택한 파일의 경로를 나타내는 {{jsxref("String")}}.</td>
     </tr>
     <tr>
       <td><strong>이벤트</strong></td>
@@ -54,10 +54,10 @@ label {
     <tr>
       <td><strong>추가 특성</strong></td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#accept"><code>accept</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#capture"><code>capture</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#files"><code>files</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ label {
 
 ## 값
 
-파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{domxref("DOMString")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
+파일 입력 칸의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 선택한 파일의 경로를 나타내는 {{jsxref("String")}}을 담습니다. 사용자가 여러 개의 파일을 선택한 경우 `value`는 파일 목록의 첫 번째 파일을 가리키며, 나머지 파일은 요소의 {{domxref("HTMLInputElement.files")}} 속성으로 가져올 수 있습니다.
 
 > [!NOTE]
 >
@@ -483,4 +483,4 @@ function returnFileSize(number) {
 ## 같이 보 기
 
 - [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications) — `<input type="file">`과 File API에 대한 유용한 예제를 더 가지고 있습니다.
-- [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 속성 호환성](/ko/docs/Learn_web_development/Extensions/Forms)

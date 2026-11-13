@@ -1,11 +1,10 @@
 ---
-title: "<acronym> : l'élément d'acronyme"
+title: "Élément HTML `<acronym>` : l'élément d'acronyme"
+short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<acronym>`** permet aux auteur·ice·s d'indiquer clairement une suite de caractères qui compose un acronyme ou une abréviation pour un mot.
 
@@ -35,7 +34,7 @@ Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ## Style par défaut
 
-Bien que le but de cette balise ne soit simplement qu'un avantage pratique pour l'auteur, son style par défaut varie selon les navigateurs&nbsp;:
+Bien que le but de cette balise ne soit simplement qu'un avantage pratique pour l'auteur·ice, son style par défaut varie selon les navigateurs&nbsp;:
 
 - Opera, Firefox, et quelques autres ajoutent une ligne pointillée sous le contenu de l'élément.
 - Quelques navigateurs ajoutent une ligne pointillée en dessous et mettent le contenu en petites majuscules. Pour éviter ce comportement, il est possible d'ajouter {{CSSxRef("font-variant", "font-variant: none")}} à la feuille de style CSS.

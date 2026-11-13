@@ -1,8 +1,9 @@
 ---
-title: "<cite> : l'élément de citation"
+title: "Élément HTML `<cite>` : l'élément de citation"
+short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<cite>`** est utilisé pour baliser le titre d'une œuvre créative. La référence peut être sous forme abrégée selon les conventions appropriées au contexte liées aux métadonnées de citation.
@@ -41,7 +42,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-Voici des exemples d'œuvres auxquelles on pourrait faire référence grâce à un élément `<cite>`&nbsp;:
+Voici des exemples d'œuvres auxquelles on peut faire référence grâce à un élément `<cite>`&nbsp;:
 
 - Un livre
 - Un article de recherche
@@ -159,4 +160,4 @@ En général, les navigateurs appliquent un style italique au contenu d'un élé
 ## Voir aussi
 
 - L'élément {{HTMLElement("blockquote")}} pour les citations longues.
-- L'élément {{HTMLElement("q")}} pour les citations en ligne et l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/q#cite).
+- L'élément {{HTMLElement("q")}} pour les citations en incise et l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/q#cite).

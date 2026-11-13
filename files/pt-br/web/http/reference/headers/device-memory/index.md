@@ -15,7 +15,7 @@ O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>?</td>
     </tr>
   </tbody>

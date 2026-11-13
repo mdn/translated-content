@@ -1,6 +1,6 @@
 ---
-title: <meta> http-equiv 属性
-short-title: <meta> http-equiv
+title: "`<meta http-equiv>` 属性"
+short-title: <meta http-equiv>
 slug: Web/HTML/Reference/Elements/meta/http-equiv
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
@@ -82,7 +82,7 @@ HTTP ヘッダーの一部のみが `http-equiv` 値として対応していま�
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-同じ制限は、HTTP {{httpheader(「Content-Security-Policy」)}} ヘッダーを使用して適用することができます。
+同じ制限は、HTTP {{httpheader("Content-Security-Policy")}} ヘッダーを使用して適用することができます。
 
 ```http
 Content-Security-Policy: default-src https:

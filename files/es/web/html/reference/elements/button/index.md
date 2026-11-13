@@ -264,7 +264,7 @@ Es el elemento crea botones marcadores.
       </td>
       <td>
         Define una tecla de acceso rápido. Importante para la
-        <a href="/es/docs/Accesibilidad" title="Accesibilidad">Accesibilidad</a
+        <a href="/es/docs/Web/Accessibility" title="Accesibilidad">Accesibilidad</a
         >.
       </td>
       <td>

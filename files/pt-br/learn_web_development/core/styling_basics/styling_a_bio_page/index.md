@@ -16,7 +16,7 @@ Com o que você aprendeu nas últimas lições, você deve perceber que pode for
         Antes de tentar esta avaliação você deve ter passado pelo resto do
         módulo básico de CSS, além de também possuir uma compreensão básica de
         HTML (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >).
       </td>

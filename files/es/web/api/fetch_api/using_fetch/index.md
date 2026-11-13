@@ -284,7 +284,7 @@ Las propiedades de response que usarás son:
 
 - {{domxref("Response.status")}} — Entero (por defecto con valor 200) que contiene el código de estado de las respuesta.
 - {{domxref("Response.statusText")}} — Cadena (con valor por defecto "OK"), el cual corresponde al mensaje del estado de código HTTP.
-- {{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{domxref("Boolean")}}, siendo `true` si lo anterior se cumple y `false` en otro caso.
+- {{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{jsxref("Boolean")}}, siendo `true` si lo anterior se cumple y `false` en otro caso.
 
 Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}}, cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:
 
@@ -309,8 +309,8 @@ El constructor {{domxref("Response.Response","Response()")}} toma dos argurmento
 
 Tanto las peticiones como las respuestas pueden contener datos body. Body es una instancia de cualquiera de los siguientes tipos:
 
-- {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array y amigos)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}} (Uint8Array y amigos)
 - {{domxref("Blob")}}/File
 - string
 - {{domxref("URLSearchParams")}}

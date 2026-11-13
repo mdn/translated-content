@@ -1,12 +1,13 @@
 ---
-title: rgb()
+title: CSS `rgb()` 関数
+short-title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
-> `rgba()` 関数記法は `rgb()` の別名です。両社はまったく同じです。`rgb()` を使用することが推奨されています。
+> `rgba()` 関数記法は `rgb()` の別名です。両者はまったく同じです。`rgb()` を使用することが推奨されています。
 
 **`rgb()`** 関数記法は、{{glossary("RGB", "sRGB")}} {{glossary("color space", "色空間")}}において、赤、緑、青の成分によって色を表現します。オプションのアルファ成分は、色の透明度を表します。
 

@@ -45,10 +45,10 @@ cargo install wasm-pack
 
 Чтобы создать npm-аккаунт, посетите [npm signup](https://www.npmjs.com/signup) станицу и заполните форму.
 
-Дальше запустите в командой строке `npm adduser`:
+Дальше запустите в командой строке `npm login`:
 
 ```bash
-> npm adduser
+> npm login
 Username: yournpmusername
 Password:
 Email: (this IS public) you@example.com

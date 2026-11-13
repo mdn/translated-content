@@ -3,8 +3,6 @@ title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 ---
 
-{{AddonSidebar}}
-
 Beaucoup de gens ont besoin ou veulent interagir avec le web en utilisant plusieurs personnages. Ils peuvent avoir des comptes pour le travail sur le Web et le courrier électronique personnel. Ils peuvent se déconnecter de leurs comptes de médias sociaux avant d'accéder aux achats en ligne, afin de s'assurer que les scripts de suivi sur les sites d'achat ne peuvent pas prendre en charge leur activité de médias sociaux. Pour répondre à ces exigences, les utilisateurs finissent souvent par utiliser une fenêtre de navigateur standard et privée ou deux navigateurs différents.
 
 Pour répondre à ce besoin, Firefox inclut une fonctionnalité connue sous le nom d'identités contextuelles, d'onglets de conteneurs ou de conteneurs de comptes. Cette fonctionnalité permet la création d'un conteneur de cookies pour chacune des identités que l'utilisateur souhaite utiliser dans son navigateur. Les onglets peuvent être associés à l'une de ces identités, en conservant les cookies distincts de ceux des autres identités dans le navigateur. Le résultat pratique est que, par exemple, un utilisateur peut avoir une identité personnelle et professionnelle. Ils peuvent ensuite utiliser l'identité personnelle dans un onglet, où ils se connectent à leur messagerie Web personnelle, et l'identité professionnelle dans un autre onglet, où ils se connectent à leur messagerie Web professionnelle.

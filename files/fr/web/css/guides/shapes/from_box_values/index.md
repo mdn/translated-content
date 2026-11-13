@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Shapes/From_box_values
 original_slug: Web/CSS/CSS_shapes/From_box_values
 ---
 
-{{CSSRef}}
-
 Une méthode permettant de créer des formes consiste à utiliser les valeurs provenant du modèle de boîte CSS. Dans cet article, nous verrons comment les utiliser.
 
 Les [valeurs de boîte](https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values) qui sont autorisées pour les formes sont :

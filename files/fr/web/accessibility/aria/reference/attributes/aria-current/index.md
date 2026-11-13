@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-current"
 short-title: aria-current
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-current
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
 L'attribut d'état `aria-current` non nul sur un élément indique que cet élément représente l'élément courant au sein d'un conteneur ou d'un ensemble d'éléments liés.
@@ -70,10 +70,10 @@ Si l'élément représentant la page courante dans le fil d'Ariane n'est pas un 
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaCurrent")}}
-  - : La propriété [`ariaCurrent`](/fr/docs/Web/API/Element/ariaCurrent), qui fait partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-current`.
-- {{domxref("ElementInternals.ariaCurrent")}}
-  - : La propriété [`ariaCurrent`](/fr/docs/Web/API/ElementInternals/ariaCurrent), qui fait partie de l'interface {{domxref("ElementInternals")}}, reflète la valeur de l'attribut `aria-current`.
+- {{DOMxRef("Element.ariaCurrent")}}
+  - : La propriété [`ariaCurrent`](/fr/docs/Web/API/Element/ariaCurrent), qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-current`.
+- {{DOMxRef("ElementInternals.ariaCurrent")}}
+  - : La propriété [`ariaCurrent`](/fr/docs/Web/API/ElementInternals/ariaCurrent), qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-current`.
 
 ## Rôles associés
 
@@ -86,5 +86,5 @@ Utilisable dans tous les rôles, sauf pour les éléments ayant le rôle [`gridc
 ## Voir aussi
 
 - L'attribut ARIA [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-- {{cssxref(':local-link')}}
+- La pseudo-classe CSS {{CSSxRef(':local-link')}}
 - [Navigation en fil d'Ariane avec `aria-current`](/fr/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)

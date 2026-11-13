@@ -3,8 +3,6 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
-{{AddonSidebar}}
-
 La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
 
 > [!WARNING]
@@ -23,7 +21,7 @@ var removingBookmark = browser.bookmarks.remove(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
+  - : Un {{jsxref("String")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
 
 ### Valeur retournée
 

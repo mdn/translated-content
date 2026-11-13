@@ -20,15 +20,15 @@ var sharePromise = window.navigator.share(data);
 
 <!---->
 
-- `url`: Un {{domxref("USVString")}} représentant l'URL à partager.
-- `text`: Un {{domxref("USVString")}} représentant le texte à partager.
-- `title`: Un {{domxref("USVString")}} représentant le titre à partager.
+- `url`: Un {{jsxref("String")}} représentant l'URL à partager.
+- `text`: Un {{jsxref("String")}} représentant le texte à partager.
+- `title`: Un {{jsxref("String")}} représentant le titre à partager.
 
 <!---->
 
 ### Valeur retournée
 
-Une {{domxref("Promise")}} qui sera résolue une fois que l'utilisateur aura finalisé son action de partage. Elle sera rejetée immédiatement si le paramètre _data_ n'est pas correctement spécifié.
+Une {{jsxref("Promise")}} qui sera résolue une fois que l'utilisateur aura finalisé son action de partage. Elle sera rejetée immédiatement si le paramètre _data_ n'est pas correctement spécifié.
 
 Par exemple, sur Chrome pour Android, la `Promise` retournée sera résolue après que l'utilisateur ait choisi une application vers où partager ses données.
 

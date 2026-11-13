@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cdb23fdf261a071951e1e46a0a6c7bc6daa691ff
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableRowElement.bgColor`** 属性用于设置行的背景色或者检索已弃用的 [`bgColor`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#bgcolor) 属性的值（如果存在）。
 

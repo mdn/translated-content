@@ -1,8 +1,9 @@
 ---
-title: "<samp> : l'élément d'échantillon en sortie"
+title: "Élément HTML `<samp>` : l'élément d'échantillon en sortie"
+short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](<https://fr.wikipedia.org/wiki/Courier_(police_d'écriture)>) ou en Lucida Console).
@@ -43,7 +44,7 @@ samp {
 ```
 
 > [!NOTE]
-> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser {{HTMLElement("output")}} plutôt que `<samp>`.
+> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devez utiliser {{HTMLElement("output")}} plutôt que `<samp>`.
 
 ## Exemples
 
@@ -53,8 +54,8 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 
 ```html
 <p>
-  Lorsque le traitement est terminé, l'outil affichera le texte
-  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pourrez alors
+  Lorsque le traitement est terminé, l'outil affiche le texte
+  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pouvez alors
   passer à l'étape suivante.
 </p>
 ```
@@ -65,7 +66,7 @@ Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un 
 
 ### Sortie incluant une entrée utilisateur
 
-Il est possible d'imbriquer un élément {{HTMLElement("kbd")}} dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on pourra utiliser le code suivant.
+Il est possible d'imbriquer un élément {{HTMLElement("kbd")}} dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on peut utiliser le code suivant.
 
 #### HTML
 
@@ -79,7 +80,7 @@ MD5 ("Coucou monde") = b961d9fb0ef48ff051fb67625abd0022
 </pre>
 ```
 
-On notera l'utilisation de {{HTMLElement("span")}} qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). On notera également l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
+Notez que l'utilisation de {{HTMLElement("span")}} qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). Notez également que l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
 
 #### CSS
 

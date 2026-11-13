@@ -1,9 +1,9 @@
 ---
 title: 論理的プロパティと値の基本概念
+short-title: 基本概念
 slug: Web/CSS/Guides/Logical_properties_and_values/Basic_concepts
-original_slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS 論理的プロパティと値モジュール](/ja/docs/Web/CSS/Guides/Logical_properties_and_values#プロパティ)は、CSS の数多くの{{glossary("physical properties", "物理的プロパティ")}}と、値のフローに関連した対応付けを定義しています。この記事では、このモジュールについて説明し、{{glossary("flow relative values", "フロー関連値")}}とプロパティについて解説します。

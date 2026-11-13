@@ -30,11 +30,11 @@ performance.measure(name, undefined, endMark);
 ### Arguments
 
 - `name`
-  - : Une {{domxref("DOMString")}} représentant le nom de la mesure.
+  - : Une {{jsxref("String")}} représentant le nom de la mesure.
 - `startMark` {{optional_inline}}
-  - : Une {{domxref("DOMString")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, l'heure de début sera celle de la navigation.
+  - : Une {{jsxref("String")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, l'heure de début sera celle de la navigation.
 - `endMark` {{optional_inline}}
-  - : Une {{domxref("DOMString")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, le temps actuel est utilisé.
+  - : Une {{jsxref("String")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, le temps actuel est utilisé.
 
 ### Valeur de retour
 

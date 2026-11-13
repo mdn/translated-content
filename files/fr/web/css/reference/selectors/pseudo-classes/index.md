@@ -1,12 +1,11 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Reference/Selectors/Pseudo-classes
-original_slug: Web/CSS/Pseudo-classes
 l10n:
-  sourceCommit: e35c1a8397220f5aa1a9063c5e62444899d3aa26
+  sourceCommit: c62181855c91ac0435dea5fa759a250e1dea4f8b
 ---
 
-Une **_pseudo-classe_** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de styliser un état spécifique des éléments sélectionnés. Par exemple, la pseudo-classe {{CSSxRef(":hover")}} peut être utilisée pour sélectionner un bouton lorsque le pointeur de l'utilisateur·ice survole le bouton, et ce bouton sélectionné peut ensuite être stylisé.
+Une **_pseudo-classe_** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de sélectionner des éléments en fonction d'informations qui se trouvent en dehors de l'arbre de documents, telles qu'un état spécifique des éléments sélectionnés. Par exemple, la pseudo-classe {{CSSxRef(":hover")}} peut être utilisée pour mettre en forme un bouton lorsque le pointeur de l'utilisateur·ice survole le bouton.
 
 ```css
 /* Tout bouton sur lequel le pointeur de l'utilisateur·ice est en survol */
@@ -20,7 +19,7 @@ Une pseudo-classe consiste en un deux-points (`:`) suivi du nom de la pseudo-cla
 Les pseudo-classes vous permettent d'appliquer un style à un élément non seulement par rapport au contenu de l'arbre de documents, mais aussi par rapport à des facteurs externes tels que l'historique du navigateur ({{CSSxRef(":visited")}}, par exemple), l'état de son contenu (comme {{CSSxRef(":checked")}} sur certains éléments de formulaire) ou la position de la souris (comme {{CSSxRef(":hover")}}, qui vous indique si la souris est au-dessus d'un élément ou non).
 
 > [!NOTE]
-> Contrairement aux pseudo-classes, les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) peuvent être utilisés pour styliser une _partie spécifique_ d'un élément.
+> Contrairement aux pseudo-classes, les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) peuvent être utilisés pour mettre en forme une _partie spécifique_ d'un élément.
 
 ## Pseudo-classes élémentaires
 
@@ -38,13 +37,15 @@ Ces pseudo-classes permettent de sélectionner des éléments en fonction de leu
 - {{CSSxRef(":open")}}
   - : Correspond à un élément qui peut être ouvert ou fermé et qui est actuellement ouvert.
 - {{CSSxRef(":popover-open")}}
-  - : Correspond à un élément popover qui est actuellement dans l'état affiché.
+  - : Correspond à un élément de fenêtre contextuelle qui est actuellement dans l'état affiché.
 - {{CSSxRef(":modal")}}
   - : Correspond à un élément qui est dans un état dans lequel il exclut toute interaction avec les éléments à l'extérieur jusqu'à ce que l'interaction ait été rejetée.
 - {{CSSxRef(":fullscreen")}}
   - : Correspond à un élément qui est actuellement en mode plein écran.
 - {{CSSxRef(":picture-in-picture")}}
   - : Correspond à un élément qui est actuellement en mode image dans l'image.
+- {{CSSxRef(":xr-overlay")}}
+  - : Correspond à l'élément de superposition DOM pendant une session AR ou VR immersive.
 
 ## Pseudo-classes d'entrée de formulaire
 
@@ -55,13 +56,13 @@ Ces pseudo-classes se rapportent aux éléments de formulaire et permettent de s
 - {{CSSxRef(":disabled")}}
   - : Correspond à un élément de l'interface utilisateur qui est dans un état désactivé.
 - {{CSSxRef(":read-only")}}
-  - : Correspond à tout élément qui ne peut pas être modifié par l'utilisateur.
+  - : Correspond à tout élément qui ne peut pas être modifié par l'utilisateur·ice.
 - {{CSSxRef(":read-write")}}
-  - : Correspond à tout élément qui est modifiable par l'utilisateur.
+  - : Correspond à tout élément qui est modifiable par l'utilisateur·ice.
 - {{CSSxRef(":placeholder-shown")}}
-  - : Correspond à un élément de saisie qui affiche un texte d'espace réservé. Par exemple, cela correspond à l'attribut `placeholder` dans les éléments {{htmlelement("input")}} et {{htmlelement("textarea")}}.
+  - : Correspond à un élément de saisie qui affiche un texte d'espace réservé. Par exemple, cela correspond à l'attribut `placeholder` dans les éléments {{HTMLElement("input")}} et {{HTMLElement("textarea")}}.
 - {{CSSxRef(":autofill")}}
-  - : Correspond à un élément {{htmlelement("input")}} qui a été rempli automatiquement par le navigateur.
+  - : Correspond à un élément {{HTMLElement("input")}} qui a été rempli automatiquement par le navigateur.
 - {{CSSxRef(":default")}}
   - : Correspond à un ou plusieurs éléments de l'interface utilisateur qui sont par défaut parmi un ensemble d'éléments.
 - {{CSSxRef(":checked")}}
@@ -69,7 +70,7 @@ Ces pseudo-classes se rapportent aux éléments de formulaire et permettent de s
 - {{CSSxRef(":indeterminate")}}
   - : Correspond à des éléments de l'interface utilisateur lorsqu'ils sont dans un état indéterminé.
 - {{CSSxRef(":blank")}}
-  - : Correspond à un élément de saisie utilisateur qui est vide, contenant une chaîne vide ou une autre entrée nulle.
+  - : Correspond à un élément de saisie utilisateur·ice qui est vide, contenant une chaîne de caractères vide ou une autre entrée nulle.
 - {{CSSxRef(":valid")}}
   - : Correspond à un élément avec un contenu valide. Par exemple, un élément de saisie avec le type 'email' qui contient une adresse email correctement formée ou une valeur vide si le contrôle n'est pas requis.
 - {{CSSxRef(":invalid")}}
@@ -91,9 +92,9 @@ Ces pseudo-classes se rapportent aux éléments de formulaire et permettent de s
 
 Ces pseudo-classes reflètent la langue du document et permettent de sélectionner des éléments en fonction de la langue ou de la direction du script.
 
-- {{CSSxRef(":dir", ":dir()")}}
+- {{CSSxRef(":dir()")}}
   - : La pseudo-classe de direction sélectionne un élément en fonction de sa direction telle que déterminée par la langue du document.
-- {{CSSxRef(":lang", ":lang()")}}
+- {{CSSxRef(":lang()")}}
   - : Sélectionne un élément en fonction de sa langue de contenu.
 
 ## Pseudo-classes de liens
@@ -118,7 +119,7 @@ Ces pseudo-classes se rapportent aux liens et aux éléments ciblés dans le doc
 
 ## Pseudo-classes d'état des ressources
 
-Ces pseudo-classes s'appliquent aux médias qui peuvent être dans un état où ils seraient décrits comme étant en lecture, comme une vidéo.
+Ces pseudo-classes s'appliquent aux médias qui peuvent être dans un état où ils sont décrits comme étant en lecture, comme une vidéo.
 
 - {{CSSxRef(":playing")}}
   - : Représente un élément lisible qui est en lecture.
@@ -127,9 +128,9 @@ Ces pseudo-classes s'appliquent aux médias qui peuvent être dans un état où 
 - {{CSSxRef(":seeking")}}
   - : Représente un élément lisible qui recherche actuellement une position de lecture dans la ressource multimédia.
 - {{CSSxRef(":buffering")}}
-  - : Représente un élément lisible qui est en lecture mais qui est temporairement bloqué car il télécharge la ressource multimédia.
+  - : Représente un élément lisible qui est en lecture mais qui est temporairement bloqué, car il télécharge la ressource multimédia.
 - {{CSSxRef(":stalled")}}
-  - : Représente un élément lisible qui est en lecture mais qui est bloqué car il ne peut pas télécharger la ressource multimédia.
+  - : Représente un élément lisible qui est en lecture mais qui est bloqué, car il ne peut pas télécharger la ressource multimédia.
 - {{CSSxRef(":muted")}}
   - : Représente un élément produisant du son qui est muet.
 - {{CSSxRef(":volume-locked")}}
@@ -154,28 +155,28 @@ Ces pseudo-classes se rapportent à l'emplacement d'un élément dans l'arbre du
   - : Représente un élément qui est la racine du document. Dans HTML, il s'agit généralement de l'élément `<html>`.
 - {{CSSxRef(":empty")}}
   - : Représente un élément sans enfants autres que des caractères d'espace blanc.
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments frères.
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments frères, en comptant à rebours depuis la fin de la liste.
+- {{CSSxRef(":nth-child()")}}
+  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments voisins.
+- {{CSSxRef(":nth-last-child()")}}
+  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments voisins, en comptant à rebours depuis la fin de la liste.
 - {{CSSxRef(":first-child")}}
-  - : Représente un élément qui est le premier de ses frères.
+  - : Représente un élément qui est le premier de ses voisins.
 - {{CSSxRef(":last-child")}}
-  - : Représente un élément qui est le dernier de ses frères.
+  - : Représente un élément qui est le dernier de ses voisins.
 - {{CSSxRef(":only-child")}}
-  - : Représente un élément qui n'a pas de frères. Par exemple, un élément de liste sans d'autres éléments de liste dans cette liste.
-- {{CSSXRef(":heading_function", ":heading()")}}
+  - : Représente un élément qui n'a pas de voisins. Par exemple, un élément de liste sans d'autres éléments de liste dans cette liste.
+- {{CSSxRef(":heading_function", ":heading()")}}
   - : Utilise la notation `An+B` pour sélectionner des éléments d'en-tête (`<h1>`-`<h6>`).
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
-  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments frères qui correspondent à un certain type.
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments frères qui correspondent à un certain type, en comptant à rebours depuis la fin de la liste.
+- {{CSSxRef(":nth-of-type()")}}
+  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments voisins qui correspondent à un certain type.
+- {{CSSxRef(":nth-last-of-type()")}}
+  - : Utilise la notation `An+B` pour sélectionner des éléments d'une liste d'éléments voisins qui correspondent à un certain type, en comptant à rebours depuis la fin de la liste.
 - {{CSSxRef(":first-of-type")}}
-  - : Représente un élément qui est le premier de ses frères et qui correspond également à un certain sélecteur de type.
+  - : Représente un élément qui est le premier de ses voisins et qui correspond également à un certain sélecteur de type.
 - {{CSSxRef(":last-of-type")}}
-  - : Représente un élément qui est le dernier de ses frères et qui correspond également à un certain sélecteur de type.
+  - : Représente un élément qui est le dernier de ses voisins et qui correspond également à un certain sélecteur de type.
 - {{CSSxRef(":only-of-type")}}
-  - : Représente un élément qui n'a pas de frères du type choisi.
+  - : Représente un élément qui n'a pas de voisins du type choisi.
 
 ## Pseudo-classes structurelles fantômes
 
@@ -185,7 +186,7 @@ Ces pseudo-classes se rapportent au DOM fantôme.
   - : Représente l'hôte de l'arbre fantôme.
 - {{CSSxRef(":host_function", ":host()")}}
   - : Représente un élément qui correspond à {{CSSxRef(":host")}} et à l'un des sélecteurs de la liste fournie.
-- {{CSSxRef(":host-context", ":host-context()")}}
+- {{CSSxRef(":host-context()")}}
   - : Sélectionne des éléments en dehors de l'arbre fantôme dans le contexte de l'hôte fantôme.
 - {{CSSxRef(":has-slotted")}}
   - : Représente les éléments de slot qui ont été assignés du contenu.
@@ -199,33 +200,80 @@ Ces pseudo-classes nécessitent une interaction de l'utilisateur·ice pour s'app
 - {{CSSxRef(":active")}}
   - : Représente un élément lorsqu'il est activé par l'utilisateur·ice. Par exemple, lorsque l'élément est cliqué.
 - {{CSSxRef(":focus")}}
-  - : Représente un élément lorsqu'il a le focus.
+  - : Représente un élément lorsqu'il a la sélection.
 - {{CSSxRef(":focus-visible")}}
-  - : Représente un élément lorsqu'il a le focus et que l'agent utilisateur identifie que l'élément doit être visiblement en focus.
+  - : Représente un élément lorsqu'il a la sélection et que l'agent utilisateur identifie que l'élément doit être visiblement sélectionné.
 - {{CSSxRef(":focus-within")}}
   - : Représente un élément auquel {{CSSxRef(":focus")}} s'applique, plus tout élément qui a un descendant auquel {{CSSxRef(":focus")}} s'applique.
 - {{CSSxRef(":target-current")}}
-  - : Représente le pseudo-élément {{cssxref("::scroll-marker")}} d'un {{cssxref("scroll-marker-group")}} qui est actuellement défilé, en d'autres termes, le **marqueur de défilement actif**.
+  - : Représente le pseudo-élément {{CSSxRef("::scroll-marker")}} d'un {{CSSxRef("scroll-marker-group")}} qui est actuellement défilé, en d'autres termes, le **marqueur de défilement actif**.
+
+### Limite de correspondance des ancêtres de la couche supérieure
+
+Lors de la définition de styles à l'aide d'un sélecteur de pseudo-classe `:hover`, `:active` ou `:focus-within`, le sélecteur correspond à un ensemble imbriqué d'éléments dans l'arborescence DOM. Si la hiérarchie inclut un élément dans la {{Glossary("top layer", "couche supérieure")}} (par exemple, une [fenêtre contextuelle](/fr/docs/Web/API/Popover_API) ou un [`<select>` personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)), la correspondance s'arrête à cet élément de couche supérieure.
+
+Par exemple, le code suivant présente un élément `<select>` personnalisable et une fenêtre contextuelle. Nous avons défini que chaque élément de la page ait une bordure ({{CSSxRef("border")}}) bleue épaisse en pointillés au survol.
+
+```html live-sample___matching-boundary
+<main>
+  <select>
+    <option>Un</option>
+    <option>Deux</option>
+    <option>Trois</option>
+  </select>
+
+  <div>
+    <button popovertarget="mafenetre">Basculer la fenêtre contextuelle</button>
+    <section id="mafenetre" popover>
+      <p>Je suis une fenêtre contextuelle</p>
+      <button>Je suis un bouton de fenêtre contextuelle</button>
+    </section>
+  </div>
+</main>
+```
+
+```css hidden live-sample___matching-boundary
+* {
+  padding: 5px;
+}
+```
+
+```css live-sample___matching-boundary
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+:hover {
+  border: 5px dashed blue;
+}
+```
+
+{{EmbedLiveSample("matching-boundary", "100%", 200)}}
+
+Notez que lorsque vous survolez l'élément `<select>` ou le bouton de basculement de la fenêtre contextuelle, tous les ancêtres de ces éléments obtiennent la bordure. Cependant, une fois que le sélecteur de `<select>` ou la fenêtre contextuelle est ouvert, le survol de l'un de ses descendants applique la bordure uniquement jusqu'à l'élément de couche supérieure lui-même (le sélecteur de `<select>` ou la fenêtre contextuelle), c'est-à-dire que la correspondance s'arrête à cet élément.
+
+Ce comportement empêche la correspondance de la pseudo-classe de déborder d'un composant de couche supérieure vers la page environnante, ce qui peut autrement donner à l'interface utilisateur un aspect cassé.
 
 ## Pseudo-classes fonctionnelles
 
 Ces pseudo-classes acceptent une [liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) ou une [liste de sélecteurs indulgente](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_indulgente) comme paramètre.
 
-- {{CSSxRef(":is", ":is()")}}
+- {{CSSxRef(":is()")}}
   - : La pseudo-classe matches-any correspond à tout élément qui correspond à l'un des sélecteurs de la liste fournie. La liste est tolérante.
-- {{CSSxRef(":not", ":not()")}}
+- {{CSSxRef(":not()")}}
   - : La pseudo-classe de négation, ou matches-none, représente tout élément qui n'est pas représenté par son argument.
-- {{CSSxRef(":where", ":where()")}}
+- {{CSSxRef(":where()")}}
   - : La pseudo-classe d'ajustement de spécificité correspond à tout élément qui correspond à l'un des sélecteurs de la liste fournie sans ajouter de poids de spécificité. La liste est tolérante.
-- {{CSSxRef(":has", ":has()")}}
+- {{CSSxRef(":has()")}}
   - : La pseudo-classe relationnelle représente un élément si l'un des sélecteurs relatifs correspond lorsqu'il est ancré par rapport à l'élément attaché.
 
 ## Pseudo-classes d'état personnalisé
 
 Ces pseudo-classes s'appliquent aux éléments personnalisés.
 
-- {{CSSxRef(":state", ":state()")}}
-  - : Correspond à des éléments personnalisés qui ont l'état personnalisé spécifié.
+- {{CSSxRef(":state()")}}
+  - : Correspond à des éléments personnalisés qui ont l'état personnalisé défini.
 
 ## Pseudo-classes de page
 
@@ -244,10 +292,10 @@ Ces pseudo-classes se rapportent aux pages d'un document imprimé et sont utilis
 
 Ces pseudo-classes se rapportent aux éléments impliqués dans une [transition de vue](/fr/docs/Web/API/View_Transition_API).
 
-- {{cssxref(":active-view-transition")}}
+- {{CSSxRef(":active-view-transition")}}
   - : Correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_and_usage) est en cours (_active_) et cesse de correspondre une fois la transition terminée.
-- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
-  - : Correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_and_usage) spécifiée est en cours (_active_) et cesse de correspondre une fois la transition terminée.
+- {{CSSxRef(":active-view-transition-type()")}}
+  - : Correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_and_usage) définie est en cours (_active_) et cesse de correspondre une fois la transition terminée.
 
 ## Syntaxe
 
@@ -267,13 +315,13 @@ A
 
 - {{CSSxRef(":active")}}
 - {{CSSxRef(":active-view-transition")}}
-- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
+- {{CSSxRef(":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
 B
 
-- {{CSSxRef(":blank")}} (input) {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} (saisie) {{Experimental_Inline}}
 - `:blank` (page)
 - {{CSSxRef(":buffering")}}
 
@@ -309,19 +357,21 @@ H
 
 - {{CSSxRef(":has-slotted")}}
 - {{CSSxRef(":has", ":has()")}}
-- {{CSSXRef(":heading")}}
-- {{CSSXRef(":heading_function", ":heading()")}}
+- {{CSSxRef(":heading")}}
+- {{CSSxRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host_function", ":host()")}}
-- {{CSSxRef(":host-context", ":host-context()")}}
+- {{CSSxRef(":host()")}}
+- {{CSSxRef(":host-context()")}}
 - {{CSSxRef(":hover")}}
 
 I
 
 - {{CSSxRef(":in-range")}}
 - {{CSSxRef(":indeterminate")}}
+- {{CSSxRef(":interest-source")}}
+- {{CSSxRef(":interest-target")}}
 - {{CSSxRef(":invalid")}}
-- {{CSSxRef(":is", ":is()")}}
+- {{CSSxRef(":is()")}}
 
 L
 
@@ -340,10 +390,10 @@ M
 N
 
 - {{CSSxRef(":not", ":not()")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
+- {{CSSxRef(":nth-child()")}}
+- {{CSSxRef(":nth-last-child()")}}
+- {{CSSxRef(":nth-last-of-type()")}}
+- {{CSSxRef(":nth-of-type()")}}
 
 O
 
@@ -375,12 +425,14 @@ S
 - {{CSSxRef(":scope")}}
 - {{CSSxRef(":seeking")}}
 - {{CSSxRef(":stalled")}}
-- {{CSSxRef(":state", ":state()")}}
+- {{CSSxRef(":state()")}}
 
 T
 
 - {{CSSxRef(":target")}}
+- {{CSSxRef(":target-after")}}
 - {{CSSxRef(":target-current")}}
+- {{CSSxRef(":target-before")}}
 
 U
 
@@ -395,7 +447,33 @@ V
 
 W
 
-- {{CSSxRef(":where", ":where()")}}
+- {{CSSxRef(":where()")}}
+
+X
+
+- {{CSSxRef(":xr-overlay")}} {{Experimental_Inline}}
+
+### Pseudo-classes non standard
+
+Les pseudo-classes non standard avec préfixe fournisseur incluent&nbsp;:
+
+#### préfixe `-moz-`
+
+- {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef(":-moz-drag-over")}}
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
+- {{CSSxRef(":-moz-last-node")}}
+- {{CSSxRef(":-moz-loading")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-only-whitespace")}}
+- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
+- {{CSSxRef(":-moz-user-disabled")}}
+- {{CSSxRef(":-moz-window-inactive")}}
 
 ## Spécifications
 
@@ -403,4 +481,4 @@ W
 
 ## Voir aussi
 
-- Les [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- Les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

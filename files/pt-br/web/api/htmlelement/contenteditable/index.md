@@ -11,7 +11,7 @@ A propriedade **`HTMLElement.contentEditable`** é usada para indicar se o eleme
 - `"false"` Indica que o elemento não pode ser editável;
 - `"inherit"` Indica que o elemento herda o status editável de seu pai.
 
-Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para testar o valor calculado {{domxref ("Boolean")}} desta propriedade.
+Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para testar o valor calculado {{jsxref("Boolean")}} desta propriedade.
 
 ## Sintaxe
 
@@ -30,5 +30,5 @@ editable = element.contentEditable element.contentEditable= "true"
 ## Veja também
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [contenteditable](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- The [contenteditable](/pt-BR/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute.
 - [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)

@@ -2,9 +2,8 @@
 title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: baa785abec7bc852b909f1c827510731ada5ff4f
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -108,6 +107,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Un texte alternatif à afficher lorsque l'élément ne peut pas être
         affiché.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        Tous les éléments
+      </td>
+      <td>
+        Modifie l'état ou les propriétés d'un élément dans l'arborescence d'accessibilité. L'applicabilité dépend de l'attribut <a href="/fr/docs/Web/Accessibility/ARIA">ARIA</a> spécifique.
       </td>
     </tr>
     <tr>
@@ -556,6 +566,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{HTMLElement("img")}},
+        {{HTMLElement("link")}},
+        {{HTMLElement("script")}}
+      </td>
+      <td>Signale que le téléchargement d'une image particulière tôt dans le processus de chargement a plus ou moins d'impact sur l'expérience utilisateur que ce qu'un navigateur peut raisonnablement déduire lors de l'attribution d'une priorité interne.</td>
+    </tr>
+    <tr>
+      <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/for"><code>for</code></a>
       </td>
       <td>{{HTMLElement("label")}}, {{HTMLElement("output")}}</td>
@@ -721,16 +742,12 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity"
-          ><code>integrity</code></a
-        >
+        <a href="/fr/docs/Web/HTML/Reference/Attributes/integrity"><code>integrity</code></a>
       </td>
       <td>{{HTMLElement("link")}}, {{HTMLElement("script")}}</td>
       <td>
         <p>
-          Définit une valeur
-          <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>
-          qui permet aux navigateurs de vérifier ce qu'ils récupèrent.
+          Cet attribut contient un ou plusieurs {{Glossary("Hash_function", "hachages")}} de la ressource, et est utilisé pour s'assurer que le contenu de la ressource est conforme à ce que le développeur attend, et n'a pas été remplacé par une copie malveillante dans le cadre d'une <a href="/fr/docs/Web/Security/Attacks/Supply_chain_attacks">attaque de la chaîne d'approvisionnement</a>.
         </p>
       </td>
     </tr>
@@ -1055,7 +1072,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>Cet attribut indique si l'élément peut être édité.</td>
     </tr>
     <tr>
-      <td><code>referrerpolicy</code></td>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
       <td>
         {{HTMLElement("a")}}, {{HTMLElement("area")}},
         {{HTMLElement("iframe")}}, {{HTMLElement("img")}},
@@ -1450,14 +1467,34 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions&nbsp;: si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
 
-## Attributs du gestionnaire d'événements
+## Attributs du gestionnaire d'évènements
 
 > [!WARNING]
-> L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
+> L'utilisation des attributs de contenu du gestionnaire d'évènements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'évènements peut également être bloquée par les politiques de sécurité du contenu.
 
-En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+> [!WARNING]
+> Bien que cela ne soit pas visible en appelant la méthode `Function.prototype.toString()` sur le gestionnaire, les attributs du gestionnaire d'évènements enveloppent implicitement le code à l'intérieur de 2 instructions `with`, et peuvent produire des résultats inattendus. Par exemple&nbsp;:
+>
+> ```html
+> <div onclick="console.log(new URL(location))">Mauvais exemple</div>
+> ```
+>
+> Cela devient essentiellement&nbsp;:
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' fait maintenant référence à document.URL au lieu de window.URL
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
 
-Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'évènements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+
+Tous les attributs du gestionnaire d'évènements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'évènements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
 
 ```html
 <div onclick="console.log(event)">Cliquez sur moi !</div>

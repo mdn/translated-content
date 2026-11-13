@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Streams")}}
 
-**TransformStreamDefaultController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、関連する {{domxref("ReadableStream")}} と {{domxref("WritableStream")}} を操作するメソッドを提供します。
+**`TransformStreamDefaultController`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、関連する {{domxref("ReadableStream")}} と {{domxref("WritableStream")}} を操作するメソッドを提供します。
 
 {{domxref("TransformStream")}} を作成すると、 `TransformStreamDefaultController` が作成されます。そのため、コンストラクターはありません。 `TransformStreamDefaultController` のインスタンスを取得するには、 {{domxref("TransformStream.TransformStream", "TransformStream()")}} のコールバックメソッドを使用します。
 

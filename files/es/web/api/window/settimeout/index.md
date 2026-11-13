@@ -26,7 +26,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ### Parámetros
 
 - `functionRef`
-  - : Una {{jsxref("function","función")}} que se ejecutará después de que expire el temporizador.
+  - : Una {{jsxref("Operators/function","función")}} que se ejecutará después de que expire el temporizador.
 - `code`
   - : Una sintaxis alternativa que le permite incluir una cadena en lugar de una función, que se compila y ejecuta cuando expira el temporizador. Esta sintaxis **no se recomienda** por las mismas razones que hacen que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo para la seguridad.
 - `delay` {{optional_inline}}

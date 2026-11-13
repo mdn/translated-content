@@ -1,11 +1,10 @@
 ---
-title: "<param> : l'élément paramètre d'un objet"
+title: "Élément HTML `<param>` : l'élément paramètre d'un objet"
+short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<param>`** définit des paramètres pour un élément {{HTMLElement("object")}}.
 
@@ -16,13 +15,13 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<param>`** définit des paramètres pou
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `name` {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Le nom du paramètre.
-- `value` {{Deprecated_Inline}}
+- `value` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit la valeur du paramètre.
-- `type` {{Deprecated_Inline}}
+- `type` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `ref`. Il définit le type MIME des valeurs trouvées à l'URI.
-- `valuetype` {{Deprecated_Inline}}
+- `valuetype` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont&nbsp;:
     - `data`&nbsp;: la valeur par défaut. La valeur est passée sous la forme d'une chaîne de caractères.
     - `ref`&nbsp;: la valeur est une URI vers une ressource où sont stockées les valeurs de l'exécution.

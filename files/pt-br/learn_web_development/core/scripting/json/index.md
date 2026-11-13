@@ -16,14 +16,14 @@ JavaScript Object Notation (JSON) é um formato baseado em texto padrão para re
         <p>
           Conhecimento básico em informática, conhecimento básico de HTML e CSS,
           conhecimento básico de JavaScript veja
-          <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting"
             >Primeiros passos</a
           >
           e
-          <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
             >Construindo blocos</a
           >) e o básico de OOJS (veja
-          <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics"
             >Introdução a objetos</a
           >).
         </p>

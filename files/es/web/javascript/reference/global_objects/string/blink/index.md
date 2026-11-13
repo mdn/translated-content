@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Causa que una cadena parpadee como si estuviese en una etiqueta `<blink>`.

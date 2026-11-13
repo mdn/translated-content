@@ -3,10 +3,10 @@ title: "HTMLTableCellElement : propriété bgColor"
 short-title: bgColor
 slug: Web/API/HTMLTableCellElement/bgColor
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`bgColor`** de l'interface {{DOMxRef("HTMLTableCellElement")}} permet de définir la couleur de fond d'une cellule ou d'obtenir la valeur de l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Reference/Elements/td#bgcolor), si présent.
 

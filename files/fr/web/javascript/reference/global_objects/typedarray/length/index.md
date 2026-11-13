@@ -3,8 +3,6 @@ title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 ---
 
-{{JSRef}}
-
 La propriété **`length`** est un accesseur qui permet de représenter la longueur, en nombre d'éléments, d'un tableau typé.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.length")}}

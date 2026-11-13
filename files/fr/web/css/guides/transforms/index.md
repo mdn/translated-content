@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Transforms
 original_slug: Web/CSS/CSS_transforms
 ---
 
-{{CSSRef}}
-
 Le module **_CSS Transforms_** (ou module des transformations CSS) est un module de la spécification CSS qui définit comment les éléments mis en forme avec CSS peuvent être transformés dans un espace à deux ou à trois dimensions.
 
 ## Référence

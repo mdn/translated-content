@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT
 original_slug: Web/EXSLT
 ---
 
-{{ XsltRef() }} EXSLT는 [XSLT](/ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
+EXSLT는 [XSLT](/ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
 
 - [Common](#common) (`exsl`)
   - : 기본적인 확장 요소와 함수를 제공합니다.

@@ -1,14 +1,14 @@
 ---
-title: "Attribut HTML universel : anchor"
+title: "Attribut HTML universel : `anchor`"
 short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 {{Non-standard_Header}}{{SeeCompatTable}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`anchor`** permet d'associer un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous voulez arrimer l'élément positionné. L'élément positionné peut ensuite être placé à l'aide de la [mise en position par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`anchor`** permet d'associer un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous voulez arrimer l'élément positionné. L'élément positionné peut ensuite être placé à l'aide de la [mise en position par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 > [!NOTE]
 > Vous pouvez également associer un élément positionné à un élément d'ancre avec CSS, en utilisant les propriétés {{CSSxRef("anchor-name")}} et {{CSSxRef("position-anchor")}}. Si les deux techniques d'ancrage sont appliquées au même élément, la technique CSS prévaut sur la technique HTML.
@@ -83,12 +83,12 @@ body {
 }
 ```
 
-Le CSS est utilisé pour convertir l'élément `boite-info` en un _élément positionné par ancre_ et le positionner par rapport à son ancre. On définit&nbsp;:
+Le CSS est utilisé pour convertir l'élément `boite-info` en un _élément positionné par une ancre_ et le positionner par rapport à son ancre. On définit&nbsp;:
 
 - la propriété {{CSSxRef("position")}} à `fixed`, ce qui transforme l'élément en élément positionné pour qu'il puisse être placé relativement à la position de l'ancre&nbsp;;
 - la propriété {{CSSxRef("left")}} à une fonction {{CSSxRef("anchor()")}} avec la valeur `right`. Cela rattache l'élément positionné à son ancre, en alignant son bord gauche sur le bord droit de l'ancre&nbsp;;
 - la propriété {{CSSxRef("align-self")}} à [`anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrage_sur_lancre_à_laide_de_anchor-center). Cela centre la boîte d'information par rapport au centre de l'ancre dans la direction en ligne&nbsp;;
-- la propriété {{CSSxRef("margin-left")}} à `10px`, créant un espace entre l'élément positionné par ancre et son ancre.
+- la propriété {{CSSxRef("margin-left")}} à `10px`, créant un espace entre l'élément positionné par une ancre et son ancre.
 
 ```css
 .boite-info {
@@ -107,7 +107,7 @@ Faites défiler l'exemple pour voir comment la boîte d'information est arrimée
 
 ## Spécifications
 
-Cet attribut ne fait pas encore partie de la spécification HTML. Consultez la discussion sur l'ajout de l'attribut `anchor` à [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144).
+Cet attribut ne fait pas encore partie de la spécification HTML. Consultez la discussion sur l'ajout de l'attribut `anchor` à <https://github.com/whatwg/html/pull/9144>.
 
 ## Compatibilité des navigateurs
 

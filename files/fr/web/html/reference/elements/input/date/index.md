@@ -1,8 +1,9 @@
 ---
-title: <input type="date">
+title: Valeur d'attribut HTML `<input type="date">`
+short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de **`type="date"`** créent des champs de saisie permettant à l'utilisateur·ice d'entrer une date. L'apparence de l'interface du sélecteur de date varie selon le navigateur et le système d'exploitation. La valeur est normalisée au format `yyyy-mm-dd`.
@@ -39,7 +40,7 @@ label {
 
 ## Valeur
 
-Une chaîne de caractères représentant la date saisie dans le champ. La date est formatée selon le [format des chaînes de date](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates).
+Une chaîne de caractères représentant la date saisie dans le champ. La date est formatée selon le [format des chaînes de caractères de date](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_dates).
 
 Vous pouvez définir une valeur par défaut pour le champ en indiquant une date dans l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
@@ -85,7 +86,7 @@ L'attribut `step` est un nombre qui définit la granularité à laquelle la vale
 
 Pour les champs de type `date`, la valeur de `step` est donnée en jours et est traitée comme un nombre de millisecondes égal à 86 400 000 fois la valeur de `step` (la valeur numérique sous-jacente est en millisecondes). La valeur par défaut est 1, ce qui indique 1 jour.
 
-Une valeur de chaîne de caractères `any` signifie qu'aucun pas n'est impliqué, et que n'importe quelle valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs de type `date` car l'interface du sélecteur ne permet de sélectionner que des jours entiers.
+Une valeur de chaîne de caractères `any` signifie qu'aucun pas n'est impliqué, et que n'importe quelle valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `1` pour les champs de type `date`, car l'interface du sélecteur ne permet de sélectionner que des jours entiers.
 
 > [!NOTE]
 > Lorsque la donnée saisie par l'utilisateur·ice ne respecte pas la configuration du pas, le {{Glossary("user agent", "agent utilisateur")}} peut arrondir à la valeur valide la plus proche, en privilégiant les nombres dans le sens positif lorsqu'il y a deux options aussi proches.
@@ -101,36 +102,30 @@ Dans cette section, nous allons examiner des utilisations simples puis plus comp
 Dans son expression la plus simple `<input type="date">` s'utilise avec un élément `<input>` et un élément {{HTMLElement("label")}}&nbsp;:
 
 ```html
-<form action="https://example.com">
-  <label>
-    Veuillez saisir votre date de naissance&nbsp;:
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Envoyer</button></p>
-</form>
+<label>
+  Veuillez saisir votre date de naissance&nbsp;:
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample("Utilisation simple", 600, 40)}}
 
-Ce fragment de HTML envoie la date saisie avec la clé `bday` vers `https://example.com`, ce qui donne une URL résultante comme `https://example.com/?bday=1955-06-08`.
+Si ce champ de saisie est inclus dans un formulaire envoyé à `https://example.com` en utilisant la méthode `GET`, la date saisie est envoyée sous la clé `bday` — ce qui donne une URL comme `https://example.com/?bday=1955-06-08`.
 
 ### Paramétrer une date maximale et une date minimale
 
 On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) afin de restreindre les dates qui peuvent être saisies par l'utilisateur·ice. Dans l'exemple suivant, on indique une date minimum au premier avril 2017 (`2017-04-01`) et une date maximale au 30 avril 2017 (`2017-04-30`)&nbsp;:
 
 ```html
-<form>
-  <label
-    >Veuillez choisir la meilleure date pour la soirée&nbsp;:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label
+  >Veuillez choisir la meilleure date pour la soirée&nbsp;:
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample("Paramétrer une date maximale et une date minimale", 600, 40)}}
 
-On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du contrôle consacrée aux jours sera éditable et on ne pourra pas sélectionner d'autres mois ou années.
+On ne peut donc ici que sélectionner une date en avril 2017. Seule la partie du contrôle consacrée aux jours est éditable et on ne peut pas sélectionner d'autres mois ou années.
 
 Vous pouvez utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) pour faire varier le nombre de jours sautés à chaque incrémentation de la date (par exemple, pour ne rendre sélectionnables que les samedis).
 
@@ -142,9 +137,9 @@ Vous pouvez utiliser l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/in
 
 Par défaut, `<input type="date">` ne valide pas la valeur saisie au-delà de son format. Les interfaces ne permettent généralement pas de saisir autre chose qu'une date — ce qui est utile.
 
-Si vous utilisez [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Paramétrer une date maximale et une date minimale](#paramétrer_une_date_maximale_et_une_date_minimale)), le contrôle du formulaire désactive les dates invalides et affichera une erreur si vous essayez de soumettre une date hors limites.
+Si vous utilisez [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Paramétrer une date maximale et une date minimale](#paramétrer_une_date_maximale_et_une_date_minimale)), le contrôle du formulaire désactive les dates invalides et affiche une erreur si vous essayez d'envoyer une date hors limites.
 
-Vous pouvez aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date obligatoire — une erreur sera affichée si vous essayez de soumettre un champ date vide.
+Vous pouvez aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date obligatoire — une erreur est affichée si vous essayez d'envoyer un champ date vide.
 
 Voyons un exemple de dates minimale et maximale, et rendons aussi le champ obligatoire&nbsp;:
 
@@ -167,7 +162,13 @@ Voyons un exemple de dates minimale et maximale, et rendons aussi le champ oblig
 </form>
 ```
 
-Si on essaie de soumettre le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le message affichera une erreur. Vous pouvez essayer ici&nbsp;:
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+Si on essaie d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le message affiche une erreur. Vous pouvez essayer ici&nbsp;:
 
 {{EmbedLiveSample("Validation", 600, 100)}}
 
@@ -204,13 +205,11 @@ Dans cet exemple, nous créons un sélecteur de date en utilisant le sélecteur 
 Le HTML ressemble à ceci&nbsp;:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Entrez votre date de naissance&nbsp;:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">Entrez votre date de naissance&nbsp;:</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS
@@ -236,9 +235,9 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Valeur</a></strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne représentant une date au format YYYY-MM-DD, ou vide
+        Une chaîne de caractères représentant une date au format YYYY-MM-DD, ou vide
       </td>
     </tr>
     <tr>
@@ -268,14 +267,6 @@ input:valid + span::after {
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
-        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

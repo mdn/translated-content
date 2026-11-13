@@ -11,7 +11,7 @@ L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web
 
 ## Propriétés
 
-- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) _lecture seule_ {{ExperimentalBadge}}
+- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming) _lecture seule_
   - : Retourne une séquence d'instances [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming).
 
 ## Spécifications

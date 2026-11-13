@@ -18,7 +18,7 @@ var elements = element.getElementsByClassName(names);
 ### Parâmetros
 
 - `names`
-  - : Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.
+  - : Uma {{jsxref("String")}} contendo um ou mais nomes de classes separados por espaço em branco.
 
 ### Valor de retorno
 
@@ -31,7 +31,7 @@ Habitualmente, o conjunto de elementos retornado será atualizado simultaneament
 O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em `name` serão removidos instantaneamente do conjunto.
 
 > [!NOTE]
-> No modo [quirks](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
+> No modo [quirks](/pt-BR/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
 
 ## Exemplos
 
@@ -85,7 +85,7 @@ This code finds descendant elements with the `"colorbox"` class, adds the class 
 
 ### Filtering the results using array methods
 
-We can also use methods of {{jsxref("Array.prototype")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
+We can also use methods of {{jsxref("Array")}} on any {{ domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
 var testElements = document.getElementsByClassName("test");

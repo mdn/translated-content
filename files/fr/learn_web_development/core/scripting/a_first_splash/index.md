@@ -2,14 +2,13 @@
 title: Notre premier code JavaScript
 short-title: Présentation de JavaScript
 slug: Learn_web_development/Core/Scripting/A_first_splash
-original_slug: Learn/JavaScript/First_steps/A_first_splash
 l10n:
-  sourceCommit: 693106d7bc9aa28f22a3f234455f5496efd728c4
+  sourceCommit: 4fa9407fe174a12ecdc50b680560b16021300bc1
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
-Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle «&nbsp;Deviner un nombre&nbsp;».
+Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle «&nbsp;Deviner un nombre&nbsp;».
 
 <table>
   <tbody>
@@ -36,14 +35,14 @@ Ne vous attendez pas à comprendre tout le code en détail immédiatement — no
 
 ## Présentation de notre exemple : « Deviner un nombre »
 
-Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous :
+Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous&nbsp;:
 
 ```html hidden live-sample___guess-the-number
 <h1>Deviner un nombre</h1>
 
 <p>
   Nous avons sélectionné un nombre aléatoire entre 1 et 100. Essayez de le
-  deviner en 10 tentatives ou moins. Nous vous indiquerons si votre proposition
+  deviner en 10 tentatives ou moins. Nous vous indiquons si votre proposition
   est trop grande ou trop petite.
 </p>
 
@@ -165,34 +164,34 @@ Essayez de jouer — familiarisez-vous avec le jeu avant de continuer.
 
 L'une des choses les plus difficiles à apprendre en programmation n'est pas la syntaxe, mais la façon de l'appliquer pour résoudre des problèmes concrets. Il faut commencer à penser comme un·e programmeur·euse — cela consiste généralement à examiner les descriptions de ce que votre programme doit faire, à déterminer quelles fonctionnalités du code sont nécessaires pour y parvenir, et comment les faire fonctionner ensemble.
 
-Cela demande un mélange de travail, d'expérience avec la syntaxe du langage et de pratique — ainsi qu'un peu de créativité. Plus vous codez, plus vous progresserez. Nous ne pouvons pas vous promettre que vous développerez un «&nbsp;cerveau de programmeur·euse&nbsp;» en cinq minutes, mais nous vous donnerons de nombreuses occasions de vous entraîner à penser comme un·e programmeur·euse ici et tout au long du cours.
+Cela demande un mélange de travail, d'expérience avec la syntaxe du langage et de pratique — ainsi qu'un peu de créativité. Plus vous codez, plus vous progressez. Nous ne pouvons pas vous promettre que vous développez un «&nbsp;cerveau de programmeur·euse&nbsp;» en cinq minutes, mais nous vous donnons de nombreuses occasions de vous entraîner à penser comme un·e programmeur·euse ici et tout au long du cours.
 
 ## Le cahier des charges initial
 
 Imaginons que votre responsable vous ait donné le cahier des charges suivant pour créer ce jeu&nbsp;:
 
-> Je veux que vous créiez un jeu simple de type «&nbsp;deviner un nombre&nbsp;». Il doit choisir un nombre aléatoire entre 1 et 100, puis défier le joueur de deviner ce nombre en 10 essais. Après chaque essai, le joueur doit savoir s'il a trouvé ou non, et si ce n'est pas le cas, si la proposition était trop petite ou trop grande. Le joueur doit aussi pouvoir voir les nombres déjà proposés. Le jeu se termine dès que le joueur trouve le bon nombre ou qu'il n'a plus d'essais. À la fin de la partie, le joueur doit avoir la possibilité de recommencer une nouvelle partie.
+> Je veux que vous créiez un jeu simple de type «&nbsp;deviner un nombre&nbsp;». Il doit choisir un nombre aléatoire entre 1 et 100, puis défier le·la joueur·se de deviner ce nombre en 10 essais. Après chaque essai, le·la joueur·se doit savoir s'il a trouvé ou non, et si ce n'est pas le cas, si la proposition est trop petite ou trop grande. Le·la joueur·se doit aussi pouvoir voir les nombres déjà proposés. Le jeu se termine dès que le·la joueur·se trouve le bon nombre ou qu'il n'a plus d'essais. À la fin de la partie, le·la joueur·se doit avoir la possibilité de recommencer une nouvelle partie.
 
 En lisant ce cahier des charges, la première chose à faire est de le découper en tâches simples et actionnables, avec un état d'esprit de programmeur·euse&nbsp;:
 
 1. Générer un nombre aléatoire entre 1 et 100.
 2. Stocker le nombre de tours déjà joués. Commencer par 1.
-3. Fournir au joueur ou à la joueuse le moyen de saisir un nombre.
-4. Stocker l'ensemble des propositions de nombres pour que le·a joueur·euse puisse les consulter.
-5. Vérifier si le nombre saisi par le·a joueur·euse est correct.
+3. Fournir au joueur·se ou à la joueuse le moyen de saisir un nombre.
+4. Stocker l'ensemble des propositions de nombres pour que le·a joueur·se puisse les consulter.
+5. Vérifier si le nombre saisi par le·a joueur·se est correct.
 6. S'il·elle a trouvé le bon nombre&nbsp;:
    1. Afficher un message de félicitations.
-   2. Empêcher que le·a joueur·euse saisisse de nouveau un nombre.
-   3. Afficher un contrôle pour que le·a joueur·euse puisse rejouer.
+   2. Empêcher que le·a joueur·se saisisse de nouveau un nombre.
+   3. Afficher un contrôle pour que le·a joueur·se puisse rejouer.
 7. S'il·elle n'a pas trouvé et qu'il·elle a encore des tours à jouer&nbsp;:
-   1. Informer le·a joueur·euse que sa proposition de nombre est fausse.
+   1. Informer le·a joueur·se que sa proposition de nombre est fausse.
    2. Lui permettre d'entrer une nouvelle proposition de nombre.
    3. Incrémenter le nombre de tours de 1.
 8. S'il·elle n'a pas trouvé et qu'il·elle n'a plus de tours à jouer&nbsp;:
-   1. Informer le·a joueur·euse qu'il·elle a perdu et que la partie est finie.
-   2. Empêcher que le·a joueur·euse saisisse de nouveau un nombre.
-   3. Afficher un contrôle pour que le·a joueur·euse puisse rejouer.
-9. Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape&nbsp;1.
+   1. Informer le·a joueur·se qu'il·elle a perdu et que la partie est finie.
+   2. Empêcher que le·a joueur·se saisisse de nouveau un nombre.
+   3. Afficher un contrôle pour que le·a joueur·se puisse rejouer.
+9. Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.
 
 Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous allons développer cet exemple et explorer les fonctionnalités JavaScript au fur et à mesure.
 
@@ -236,7 +235,7 @@ Pour commencer ce didacticiel, nous vous invitons à faire une copie locale du c
 
     <p>
       Nous avons sélectionné un nombre aléatoire entre 1 et 100. Essayez de le
-      deviner en 10 tentatives ou moins. Nous vous indiquerons si votre
+      deviner en 10 tentatives ou moins. Nous vous indiquons si votre
       proposition est trop grande ou trop petite.
     </p>
 
@@ -267,7 +266,7 @@ Pour commencer ce didacticiel, nous vous invitons à faire une copie locale du c
 
 ### Ajouter des variables pour stocker les données
 
-Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément HTML {{htmlelement ("script")}}&nbsp;:
+Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément HTML {{HTMLElement ("script")}}&nbsp;:
 
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -312,7 +311,7 @@ Dans notre exemple&nbsp;:
   <input type="submit" value="Proposer" class="guessSubmit" />
   ```
 
-- Nos deux dernières variables stockent un nombre de suppositions qui vaut initialement 1 (utilisées pour garder une trace du nombre de suppositions que le joueur a faite) et une référence à un bouton de réinitialisation qui n'existe pas encore.
+- Nos deux dernières variables stockent un nombre de suppositions qui vaut initialement 1 (utilisées pour garder une trace du nombre de suppositions que le·la joueur·se a faite) et une référence à un bouton de réinitialisation qui n'existe pas encore.
 
 ### Fonctions
 
@@ -334,11 +333,11 @@ Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez da
 checkGuess();
 ```
 
-Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître«&nbsp;Je suis un espace réservé&nbsp;» de journalisé dans la console&nbsp;; nous avons défini une fonction dans notre code créant un journal à chaque fois que nous l'appelons.
+Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devez voir apparaître«&nbsp;Je suis un espace réservé&nbsp;» de journalisé dans la console&nbsp;; nous avons défini une fonction dans notre code créant un journal à chaque fois que nous l'appelons.
 
 ## Chaînes de caractères de texte
 
-Les chaînes de caractères servent à représenter du texte. Nous avons déjà vu une variable de type chaîne&nbsp;: dans le code suivant, `"Je suis un espace réservé"` est une chaîne de caractères&nbsp;:
+Les chaînes de caractères servent à représenter du texte. Nous avons déjà vu une variable de type chaîne de caractères&nbsp;: dans le code suivant, `"Je suis un espace réservé"` est une chaîne de caractères&nbsp;:
 
 ```js
 function checkGuess() {
@@ -346,9 +345,9 @@ function checkGuess() {
 }
 ```
 
-Vous pouvez déclarer des chaînes en utilisant des guillemets doubles (`"`) ou simples (`'`), mais il faut utiliser le même type de guillemet au début et à la fin d'une même déclaration&nbsp;: vous ne pouvez pas écrire `"Je suis un espace réservé'`.
+Vous pouvez déclarer des chaînes de caractères en utilisant des guillemets doubles (`"`) ou simples (`'`), mais il faut utiliser le même type de guillemet au début et à la fin d'une même déclaration&nbsp;: vous ne pouvez pas écrire `"Je suis un espace réservé'`.
 
-Vous pouvez aussi déclarer des chaînes à l'aide d'accent grave (backtick&nbsp;: `` ` ``). Les chaînes ainsi déclarées sont appelées _littéraux de gabarit_ et possèdent des propriétés particulières. En particulier, vous pouvez y intégrer d'autres variables ou même des expressions&nbsp;:
+Vous pouvez aussi déclarer des chaînes de caractères à l'aide d'accent grave (backtick&nbsp;: `` ` ``). Les chaînes de caractères ainsi déclarées sont appelées _littéraux de gabarit_ et possèdent des propriétés particulières. En particulier, vous pouvez y intégrer d'autres variables ou même des expressions&nbsp;:
 
 ```js
 const name = "Mahalia";
@@ -362,7 +361,7 @@ Cela vous permet de concaténer facilement des chaînes de caractères.
 
 Les blocs de code **conditionnels** permettent d'exécuter du code de manière sélective, selon qu'une certaine condition est vraie ou non. Ils ressemblent un peu à une fonction, mais ils sont différents. Explorons les structures conditionnelles en les ajoutant à notre exemple.
 
-Je pense qu'il est raisonnable de dire que nous ne voulons pas que notre fonction `checkGuess()` se contente d'afficher un message d'espace réservé. Nous voulons qu'elle vérifie si la proposition du joueur est correcte ou non, et qu'elle réagisse en conséquence.
+Je pense qu'il est raisonnable de dire que nous ne voulons pas que notre fonction `checkGuess()` se contente d'afficher un message d'espace réservé. Nous voulons qu'elle vérifie si la proposition du·de la joueur·se est correcte ou non, et qu'elle réagisse en conséquence.
 
 À ce stade, remplacez votre fonction `checkGuess()` actuelle par cette version&nbsp;:
 
@@ -401,7 +400,7 @@ function checkGuess() {
 Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce qu'elle fait.
 
 - La première ligne déclare une constante appelée `userGuess` et lui attribue la valeur actuellement saisie dans le champ texte. Nous passons aussi cette valeur par le constructeur natif `Number()` afin de nous assurer qu'il s'agit bien d'un nombre.
-- Ensuite, nous rencontrons notre premier bloc de code conditionnel. La forme la plus simple d'un bloc conditionnel commence par le mot-clé `if`, puis des parenthèses, puis des accolades. À l'intérieur des parenthèses, on place un test. Si le test renvoie `true`, le code à l'intérieur des accolades est exécuté. Sinon, il ne l'est pas, et on passe au morceau de code suivant. Dans ce cas, on teste si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit du premier essai du joueur ou non)&nbsp;:
+- Ensuite, nous rencontrons notre premier bloc de code conditionnel. La forme la plus simple d'un bloc conditionnel commence par le mot-clé `if`, puis des parenthèses, puis des accolades. À l'intérieur des parenthèses, on place un test. Si le test retourne `true`, le code à l'intérieur des accolades est exécuté. Sinon, il ne l'est pas, et on passe au morceau de code suivant. Dans ce cas, on teste si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit du premier essai du·de la joueur·se ou non)&nbsp;:
 
   ```js
   guessCount === 1;
@@ -411,15 +410,15 @@ Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce 
 
 - Ensuite, nous utilisons un littéral de gabarit pour ajouter la valeur courante de `userGuess` à la fin du paragraphe `guesses`, avec un espace vide entre chaque valeur.
 - Le bloc suivant effectue plusieurs vérifications&nbsp;:
-  - Le premier `if (){ }` vérifie si la proposition de l'utilisateur·rice est égale au `randomNumber` défini en haut de notre JavaScript. Si c'est le cas, le·la joueur·euse a deviné correctement et la partie est gagnée&nbsp;: on affiche donc un message de félicitations en vert, on efface le contenu de la boîte d'information «&nbsp;plus grand/plus petit&nbsp;» et on exécute une fonction appelée `setGameOver()`, que nous aborderons plus loin.
-  - Ensuite, nous chaînons un autre test à la fin du précédent à l'aide d'une structure `else if (){ }`. Celui-ci vérifie s'il s'agit du dernier tour de l'utilisateur·rice. Si c'est le cas, le programme fait la même chose que dans le bloc précédent, mais avec un message de fin de partie au lieu d'un message de félicitations.
-  - Le dernier bloc chaîné à la fin de ce code (le `else { }`) contient du code qui n'est exécuté que si aucun des deux autres tests ne renvoie _vrai_ (le·la joueur·euse n'a pas deviné juste, mais il·elle a encore des essais restants). Dans ce cas, on lui indique que sa proposition est incorrecte, puis on effectue un autre test conditionnel pour vérifier si la proposition était supérieure ou inférieure à la bonne réponse, et on affiche un message approprié pour indiquer «&nbsp;plus grand&nbsp;» ou «&nbsp;plus petit&nbsp;».
+  - Le premier `if (){ }` vérifie si la proposition de l'utilisateur·ice est égale au `randomNumber` défini en haut de notre JavaScript. Si c'est le cas, le·la joueur·se a deviné correctement et la partie est gagnée&nbsp;: on affiche donc un message de félicitations en vert, on efface le contenu de la boîte d'information «&nbsp;plus grand/plus petit&nbsp;» et on exécute une fonction appelée `setGameOver()`, que nous abordons plus loin.
+  - Ensuite, nous chaînons un autre test à la fin du précédent à l'aide d'une structure `else if (){ }`. Celui-ci vérifie s'il s'agit du dernier tour de l'utilisateur·ice. Si c'est le cas, le programme fait la même chose que dans le bloc précédent, mais avec un message de fin de partie au lieu d'un message de félicitations.
+  - Le dernier bloc chaîné à la fin de ce code (le `else { }`) contient du code qui n'est exécuté que si aucun des deux autres tests ne retourne _vrai_ (le·la joueur·se n'a pas deviné juste, mais il·elle a encore des essais restants). Dans ce cas, on lui indique que sa proposition est incorrecte, puis on effectue un autre test conditionnel pour vérifier si la proposition est supérieure ou inférieure à la bonne réponse, et on affiche un message approprié pour indiquer «&nbsp;plus grand&nbsp;» ou «&nbsp;plus petit&nbsp;».
 
-- Les trois dernières lignes de la fonction préparent l'envoi de la prochaine proposition. On ajoute 1 à la variable `guessCount` pour que le·la joueur·euse utilise un tour (`++` est une opération d'incrémentation — ajout de 1), puis on vide la valeur du champ texte du formulaire et on lui redonne le focus, prêt·e pour la prochaine proposition.
+- Les trois dernières lignes de la fonction préparent l'envoi de la prochaine proposition. On ajoute 1 à la variable `guessCount` pour que le·la joueur·se utilise un tour (`++` est une opération d'incrémentation — ajout de 1), puis on vide la valeur du champ texte du formulaire et on lui redonne le focus, prêt·e pour la prochaine proposition.
 
-## Événements
+## Évènements
 
-À ce stade, nous avons une fonction `checkGuess()` bien implémentée, mais elle ne fait encore rien car nous ne l'avons pas appelée. Idéalement, nous voulons l'appeler lorsque le bouton «&nbsp;Proposer&nbsp;» est pressé, et pour cela nous devons utiliser un **événement**. Les événements sont des actions qui se produisent dans le navigateur — un clic sur un bouton, le chargement d'une page, la lecture d'une vidéo, etc. — auxquelles nous pouvons réagir en exécutant des blocs de code. Les **écouteurs d'événements** surveillent des événements spécifiques et appellent des **fonctions gestionnaires d'événements**, qui s'exécutent en réponse au déclenchement d'un événement.
+À ce stade, nous avons une fonction `checkGuess()` bien implémentée, mais elle ne fait encore rien, car nous ne l'avons pas appelée. Idéalement, nous voulons l'appeler lorsque le bouton «&nbsp;Proposer&nbsp;» est pressé, et pour cela nous devons utiliser un **évènement**. Les évènements sont des actions qui se produisent dans le navigateur — un clic sur un bouton, le chargement d'une page, la lecture d'une vidéo, etc. — auxquelles nous pouvons réagir en exécutant des blocs de code. Les **écouteurs d'évènements** surveillent des évènements spécifiques et appellent des **fonctions gestionnaires d'évènements**, qui s'exécutent en réponse au déclenchement d'un évènement.
 
 Ajoutez la ligne suivante sous votre fonction `checkGuess()`&nbsp;:
 
@@ -427,9 +426,9 @@ Ajoutez la ligne suivante sous votre fonction `checkGuess()`&nbsp;:
 guessSubmit.addEventListener("click", checkGuess);
 ```
 
-Ici, nous ajoutons un écouteur d'événement au bouton `guessSubmit`. Il s'agit d'une méthode qui prend deux valeurs d'entrée (appelées _arguments_) — le type d'événement à écouter (dans ce cas, `click`) sous forme de chaîne de caractères, et la fonction à exécuter lorsque l'événement se produit (ici, `checkGuess()`). Notez qu'il n'est pas nécessaire d'ajouter les parenthèses lors de l'écriture dans {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Ici, nous ajoutons un écouteur d'évènement au bouton `guessSubmit`. Il s'agit d'une méthode qui prend deux valeurs d'entrée (appelées _arguments_) — le type d'évènement à écouter (dans ce cas, `click`) sous forme de chaîne de caractères, et la fonction à exécuter lorsque l'évènement se produit (ici, `checkGuess()`). Notez qu'il n'est pas nécessaire d'ajouter les parenthèses lors de l'écriture dans {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}.
 
-Enregistrez et actualisez votre code&nbsp;: votre exemple devrait maintenant fonctionner — jusqu'à un certain point. Le seul problème, c'est que si vous trouvez la bonne réponse ou que vous n'avez plus d'essais, le jeu va «&nbsp;casser&nbsp;» car nous n'avons pas encore défini la fonction `setGameOver()` qui doit être exécutée à la fin de la partie. Ajoutons maintenant ce code manquant pour compléter la fonctionnalité de l'exemple.
+Enregistrez et actualisez votre code&nbsp;: votre exemple doit maintenant fonctionner — jusqu'à un certain point. Le seul problème, c'est que si vous trouvez la bonne réponse ou que vous n'avez plus d'essais, le jeu va «&nbsp;casser&nbsp;», car nous n'avons pas encore défini la fonction `setGameOver()` qui doit être exécutée à la fin de la partie. Ajoutons maintenant ce code manquant pour compléter la fonctionnalité de l'exemple.
 
 ## Finir les fonctionnalités du jeu
 
@@ -446,9 +445,9 @@ function setGameOver() {
 }
 ```
 
-- Les deux premières lignes désactivent le champ texte du formulaire et le bouton en définissant leur propriété `disabled` à `true`. C'est nécessaire, car sinon l'utilisateur·rice pourrait soumettre d'autres propositions après la fin du jeu, ce qui fausserait tout.
-- Les trois lignes suivantes génèrent un nouvel élément HTML {{htmlelement("button")}}, définissent son libellé sur «&nbsp;Démarrer une nouvelle partie&nbsp;» et l'ajoutent en bas du HTML existant.
-- La dernière ligne ajoute un écouteur d'événement sur ce nouveau bouton&nbsp;: lorsqu'il est cliqué, une fonction appelée `resetGame()` est exécutée.
+- Les deux premières lignes désactivent le champ texte du formulaire et le bouton en définissant leur propriété `disabled` à `true`. C'est nécessaire, car sinon l'utilisateur·ice peut envoyer d'autres propositions après la fin du jeu, ce qui fausse tout.
+- Les trois lignes suivantes génèrent un nouvel élément HTML {{HTMLElement("button")}}, définissent son libellé sur «&nbsp;Démarrer une nouvelle partie&nbsp;» et l'ajoutent en bas du HTML existant.
+- La dernière ligne ajoute un écouteur d'évènement sur ce nouveau bouton&nbsp;: lorsqu'il est cliqué, une fonction appelée `resetGame()` est exécutée.
 
 Nous devons maintenant définir `resetGame()` également&nbsp;! Ajoutez le code suivant, toujours à la fin de votre JavaScript&nbsp;:
 
@@ -474,18 +473,18 @@ function resetGame() {
 }
 ```
 
-Ce bloc de code assez long réinitialise complètement tous les paramètres comme au début du jeu, afin que le·la joueur·euse puisse rejouer.
+Ce bloc de code assez long réinitialise complètement tous les paramètres comme au début du jeu, afin que le·la joueur·se puisse rejouer.
 
 Plus précisément, il&nbsp;:
 
 - Remet la variable `guessCount` à 1.
-- Vide tous les paragraphes d'information. On sélectionne tous les paragraphes à l'intérieur de `<div class="resultParas"></div>`, puis on les parcourt pour mettre leur `textContent` à `""` (une chaîne vide).
+- Vide tous les paragraphes d'information. On sélectionne tous les paragraphes à l'intérieur de `<div class="resultParas"></div>`, puis on les parcourt pour mettre leur `textContent` à `""` (une chaîne de caractères vide).
 - Supprime le bouton de réinitialisation du code.
-- Réactive les éléments du formulaire, vide et met le focus sur le champ texte, prêt pour une nouvelle proposition.
+- Réactive les éléments du formulaire, vide et met la sélection sur le champ texte, prêt pour une nouvelle proposition.
 - Supprime la couleur d'arrière-plan du paragraphe `lastResult`.
 - Génère un nouveau nombre aléatoire pour ne pas deviner le même nombre à nouveau&nbsp;!
 
-**À ce stade, vous devriez avoir un jeu (simple) entièrement fonctionnel — félicitations&nbsp;!**
+**À ce stade, vous devez avoir un jeu (simple) entièrement fonctionnel — félicitations&nbsp;!**
 
 Pour finir, il nous reste à aborder quelques autres fonctionnalités importantes du code que vous avez déjà rencontrées, sans forcément vous en rendre compte.
 
@@ -493,7 +492,7 @@ Pour finir, il nous reste à aborder quelques autres fonctionnalités importante
 
 Plus haut, nous avons mentionné les **boucles**, un concept très important en programmation, qui permet d'exécuter un morceau de code plusieurs fois de suite, jusqu'à ce qu'une certaine condition soit remplie.
 
-Explorons un exemple basique pour illustrer ce principe. Retournez dans la [console JavaScript des outils de développement de votre navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), collez le code suivant, puis appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>&nbsp;:
+Explorons un exemple basique pour vous montrer ce que cela signifie. Retournez dans la [console JavaScript des outils de développement de votre navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), collez le code suivant, puis appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>&nbsp;:
 
 ```js
 const fruits = ["pommes", "bananes", "cerises"];
@@ -521,7 +520,7 @@ for (const resetPara of resetParas) {
 }
 ```
 
-Ce code crée une variable contenant la liste de tous les paragraphes à l'intérieur de `<div class="resultParas">` en utilisant la méthode {{domxref("Document.querySelectorAll", "querySelectorAll()")}}, puis il parcourt chacun d'eux pour supprimer leur contenu textuel.
+Ce code crée une variable contenant la liste de tous les paragraphes à l'intérieur de `<div class="resultParas">` en utilisant la méthode {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}}, puis il parcourt chacun d'eux pour supprimer leur contenu textuel.
 
 Notez que même si `resetPara` est une constante, il est possible d'en modifier les propriétés internes comme `textContent`.
 
@@ -529,6 +528,6 @@ Notez que même si `resetPara` est une constante, il est possible d'en modifier 
 
 Voilà, vous avez terminé la construction de l'exemple&nbsp;: bravo&nbsp;! Essayez votre code final ou [testez notre version terminée ici <sup>(angl.)</sup>](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si votre version ne fonctionne pas, comparez-la avec le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
-La prochaine leçon pourra aussi vous aider&nbsp;: nous y discuterons de ce qui peut mal se passer lors de l'écriture de code JavaScript, en nous référant au jeu «&nbsp;Deviner un nombre&nbsp;».
+La prochaine leçon peut aussi vous aider&nbsp;: nous y discutons de ce qui peut mal se passer lors de l'écriture de code JavaScript, en nous référant au jeu «&nbsp;Deviner un nombre&nbsp;».
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

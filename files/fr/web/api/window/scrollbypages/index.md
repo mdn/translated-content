@@ -1,37 +1,51 @@
 ---
-title: Window.scrollByPages()
+title: "Window : méthode scrollByPages()"
+short-title: scrollByPages()
 slug: Web/API/Window/scrollByPages
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{ ApiRef() }}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_Header}}
 
-Fait défiler le document du nombre de pages spécifié.
+La méthode **`scrollByPages()`** de l'interface {{DOMxRef("Window")}} fait défiler le document du nombre de pages défini.
 
-### Syntaxe
+## Syntaxe
 
-```js
-window.scrollByPages(pages);
+```js-nolint
+scrollByPages(pages)
 ```
 
 ### Paramètres
 
-- `pages` est le nombre de pages à faire défiler.
-- `pages` peut être un entier positif ou négatif.
+- `pages`
+  - : Le nombre de pages de défilement du document. Il peut s'agir d'un entier positif ou négatif.
 
-### Exemples
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
+
+## Exemples
 
 ```js
-// fait défiler le document d'une page vers le bas
+// Fait défiler le document d'une page vers le bas
 window.scrollByPages(1);
 
-// fait défiler le document d'une page vers le haut
+// Fait défiler le document d'une page vers le haut
 window.scrollByPages(-1);
 ```
 
-### Notes
+## Spécification
 
-Voir aussi [window.scrollBy](/fr/docs/Web/API/Window/scrollByPages), [window.scrollByLines](/fr/docs/Web/API/Window/scrollByPages), [window.scroll](/fr/docs/Web/API/Window/scroll), [window.scrollTo](/fr/docs/Web/API/Window/scrollTo).
+DOM Niveau 0. Ne fait pas partie d'une spécification.
 
-### Spécification
+## Compatibilité des navigateurs
 
-DOM Niveau 0. Ne fait pas partie de la spécification.
+{{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("window.scroll()")}}
+- La méthode {{DOMxRef("window.scrollBy()")}}
+- La méthode {{DOMxRef("window.scrollByLines()")}}
+- La méthode {{DOMxRef("window.scrollTo()")}}

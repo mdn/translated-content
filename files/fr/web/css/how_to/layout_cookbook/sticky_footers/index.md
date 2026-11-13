@@ -2,7 +2,7 @@
 title: Bas de page adhérant
 slug: Web/CSS/How_to/Layout_cookbook/Sticky_footers
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Un motif de bas de page adhérant est un motif où le pied de page de votre page «&nbsp;colle&nbsp;» au bas de la zone d'affichage (<i lang="en">viewport</i> en anglais) lorsque le contenu est plus court que la hauteur de la zone d'affichage. Nous allons examiner quelques techniques pour en créer un dans cette recette.
@@ -69,7 +69,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("sticky-footer-example", "", "400px")}}
+{{EmbedLiveSample("sticky-footer-example", "", 400)}}
 
 > [!NOTE]
 > Dans cet exemple et le suivant, nous utilisons un conteneur principal avec `min-height: 100%`. Vous pouvez aussi obtenir ce résultat pour une page entière en appliquant {{CSSxRef("min-height")}} à `100vh` sur l'élement HTML {{HTMLElement("body")}} et en l'utilisant comme conteneur de grille.
@@ -141,7 +141,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
+{{EmbedLiveSample("sticky-footer-flexbox-example", "", 400)}}
 
 L'exemple flexbox commence de la même manière, mais nous utilisons `display:flex` au lieu de `display:grid` sur le `.wrapper`&nbsp;; nous appliquons aussi {{CSSxRef("flex-direction")}} à `column`. Ensuite, nous appliquons [`flex-grow: 1`](/fr/docs/Web/CSS/Reference/Properties/flex-grow) au contenu principal et [`flex-shrink: 0`](/fr/docs/Web/CSS/Reference/Properties/flex-shrink) aux deux autres éléments — cela les empêche de rétrécir lorsque le contenu remplit la zone principale.
 

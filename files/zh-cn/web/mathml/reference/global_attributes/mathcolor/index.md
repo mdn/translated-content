@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{Deprecated_Header}}
-
 **`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[颜色](/zh-CN/docs/Web/CSS/Reference/Properties/color)。
 
 > [!NOTE]

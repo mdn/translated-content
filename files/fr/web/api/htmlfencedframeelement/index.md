@@ -2,31 +2,31 @@
 title: HTMLFencedFrameElement
 slug: Web/API/HTMLFencedFrameElement
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
-L'interface **`HTMLFencedFrameElement`** représente un élément {{htmlelement("fencedframe")}} en JavaScript et fournit des propriétés de configuration.
+L'interface **`HTMLFencedFrameElement`** représente un élément {{HTMLElement("fencedframe")}} en JavaScript et fournit des propriétés de configuration.
 
 {{InheritanceDiagram}}
 
 ## Propriétés d'instance
 
-_Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLFencedFrameElement.allow")}} {{experimental_inline}}
+- {{DOMxRef("HTMLFencedFrameElement.allow")}} {{Experimental_Inline}}
   - : Obtient et définit la valeur de l'attribut `allow` correspondant sur `<fencedframe>`, qui représente une [politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy) appliquée au contenu lors de sa première intégration.
-- {{domxref("HTMLFencedFrameElement.config")}} {{experimental_inline}}
-  - : Un objet {{domxref("FencedFrameConfig")}}, qui représente la navigation d'un {{htmlelement("fencedframe")}}, c'est-à-dire le contenu qui y sera affiché. Un `FencedFrameConfig` est renvoyé par une source telle que l'[API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr).
-- {{domxref("HTMLFencedFrameElement.height")}} {{experimental_inline}}
+- {{DOMxRef("HTMLFencedFrameElement.config")}} {{Experimental_Inline}}
+  - : Un objet {{DOMxRef("FencedFrameConfig")}}, qui représente la navigation d'un {{HTMLElement("fencedframe")}}, c'est-à-dire le contenu qui y est affiché. Un `FencedFrameConfig` est renvoyé par une source telle que [l'API Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr).
+- {{DOMxRef("HTMLFencedFrameElement.height")}} {{Experimental_Inline}}
   - : Obtient et définit la valeur de l'attribut `height` correspondant sur `<fencedframe>`, qui définit la hauteur de l'élément.
-- {{domxref("HTMLFencedFrameElement.width")}} {{experimental_inline}}
+- {{DOMxRef("HTMLFencedFrameElement.width")}} {{Experimental_Inline}}
   - : Obtient et définit la valeur de l'attribut `width` correspondant sur `<fencedframe>`, qui définit la largeur de l'élément.
 
 ## Exemples
 
-Pour définir le contenu affiché dans un `<fencedframe>`, une API d'utilisation (comme [Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr) ou [Shared Storage](https://privacysandbox.google.com/private-advertising/shared-storage?hl=fr)) génère un objet {{domxref("FencedFrameConfig")}}, qui est ensuite affecté à la propriété `config` du `<fencedframe>`.
+Pour définir le contenu affiché dans un `<fencedframe>`, une API d'utilisation (comme [Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr) ou [Shared Storage](https://privacysandbox.google.com/private-advertising/shared-storage?hl=fr)) génère un objet {{DOMxRef("FencedFrameConfig")}}, qui est ensuite affecté à la propriété `config` du `<fencedframe>`.
 
 L'exemple suivant récupère un `FencedFrameConfig` depuis une enchère publicitaire de l'API Protected Audience, qui est ensuite utilisé pour afficher la publicité gagnante dans un `<fencedframe>`&nbsp;:
 
@@ -41,7 +41,7 @@ frame.config = frameConfig;
 ```
 
 > [!NOTE]
-> Il faut passer `resolveToConfig: true` à l'appel de `runAdAuction()` pour obtenir un objet `FencedFrameConfig`. Si ce n'est pas le cas, la {{jsxref("Promise")}} résultante renverra un URN qui ne peut être utilisé que dans un {{htmlelement("iframe")}}.
+> Il faut passer `resolveToConfig: true` à l'appel de `runAdAuction()` pour obtenir un objet `FencedFrameConfig`. Si ce n'est pas le cas, la {{JSxRef("Promise")}} résultante retourne un URN qui ne peut être utilisé que dans un {{HTMLElement("iframe")}}.
 
 ## Spécifications
 

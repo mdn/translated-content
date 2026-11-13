@@ -1,20 +1,15 @@
 ---
 title: Codec (コーデック)
 slug: Glossary/Codec
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**コーデック**（"**co**der-**dec**oder" から派生したかばん語）は、データストリームを符号化または復号するプログラム、アルゴリズム、機器です。特定のコーデックは、特定の符号化または圧縮技術の取扱方法を知っています。
 
-コーデック（"_**co**\_der-_**dec**\_oder" から派生したかばん語）は、データストリームを符号化または復号するプログラム、アルゴリズム、またはデバイスです。特定のコーデックは、特定の符号化または圧縮技術の取扱方法を知っています。
+## 関連情報
 
-## より詳しく知る
-
-### 一般知識
-
-- Wikipedia 上の [コーデック](https://ja.wikipedia.org/wiki/コーデック)
-
-### 技術文書
-
+- [コーデック](https://ja.wikipedia.org/wiki/コーデック) - ウィキペディア
 - [ウェブ動画コーデックガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
-- [HTML の audio および video で対応しているメディア形式](/ja/docs/Web/Media/Guides/Formats)
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
+- [ウェブオーディオコーデックガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)
+- [ウェブのメディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)

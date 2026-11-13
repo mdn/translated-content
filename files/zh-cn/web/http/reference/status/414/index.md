@@ -13,7 +13,7 @@ slug: Web/HTTP/Reference/Status/414
 
 ## 状态
 
-```plain
+```http
 414 URI Too Long
 ```
 

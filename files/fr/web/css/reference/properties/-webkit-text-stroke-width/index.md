@@ -1,10 +1,12 @@
 ---
-title: -webkit-text-stroke-width
+title: Propriété CSS `-webkit-text-stroke-width`
+short-title: -webkit-text-stroke-width
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-width
-original_slug: Web/CSS/-webkit-text-stroke-width
+l10n:
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.
 
 ## Syntaxe
 
@@ -31,6 +33,8 @@ La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur d
 
 ### Valeurs
 
+Cette propriété est définie avec la valeur suivante&nbsp;:
+
 - `<line-width>`
   - : La largeur du trait utilisé pour entourer les lettres du texte.
 
@@ -40,7 +44,7 @@ La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur d
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,7 +82,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("varier_lépaisseur_du_trait", "450px", "230px")}}
+{{EmbedLiveSample("Varier l'épaisseur du trait", 450, 230)}}
 
 ## Spécifications
 
@@ -92,6 +96,6 @@ p {
 
 - [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité <sup>(angl.)</sup>](https://www.webkit.org/blog/85/introducing-text-stroke/)
 - [L'article de CSS-Tricks à propos de cette fonctionnalité <sup>(angl.)</sup>](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-stroke-color")}}
-- {{cssxref("-webkit-text-stroke")}}
-- {{cssxref("-webkit-text-fill-color")}}
+- La propriété {{CSSxRef("-webkit-text-stroke-color")}}
+- La propriété {{CSSxRef("-webkit-text-stroke")}}
+- La propriété {{CSSxRef("-webkit-text-fill-color")}}

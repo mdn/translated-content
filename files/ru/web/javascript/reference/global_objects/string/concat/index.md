@@ -39,7 +39,7 @@ console.log(hello.concat("Кевин", ", удачного дня."));
 
 ## Производительность
 
-Настоятельно рекомендуется вместо метода `concat()` использовать {{jsxref("Operators/Assignment_Operators", "операторы присваивания", "", 1)}} (`+`, `+=`). Смотрите это [сравнение производительности](http://jsperf.com/concat-vs-plus-vs-join).
+Настоятельно рекомендуется вместо метода `concat()` использовать {{jsxref("Operators", "операторы присваивания", "Assignment_operators", 1)}} (`+`, `+=`). Смотрите это [сравнение производительности](http://jsperf.com/concat-vs-plus-vs-join).
 
 ## Спецификации
 
@@ -52,4 +52,4 @@ console.log(hello.concat("Кевин", ", удачного дня."));
 ## Смотрите также
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Операторы присваивания", "", 1)}}
+- {{jsxref("Operators", "Операторы присваивания", "Assignment_operators", 1)}}

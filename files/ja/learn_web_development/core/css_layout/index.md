@@ -35,9 +35,9 @@ l10n:
 - [メディアクエリーの初心者向けガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)
   - : **CSS メディアクエリー**は、ブラウザーや端末の環境が、指定したルールに合致した場合にのみ CSS を適用する方法です。メディアクエリーは、ビューポートの大きさに応じて異なるレイアウトを作成することができるため、レスポンシブウェブデザインの重要な要素となっています。このレッスンでは、まずメディアクエリーで使用される構文について学び、次にメディアクエリーを使用して、シンプルなデザインをどのようにレスポンシブにするかを示す実例を見ていきます。
 
-## スキルテスト
+## 確認テスト
 
-チュートリアル記事の間に「スキルテスト」記事が配置されています。これらは、次に進む前に最も重要な情報を理解できているかを調べるためのものです。これらを一斉に確認したい場合は、[スキルテスト: CSS レイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills)に一覧が掲載されています。
+チュートリアル記事の間に「確認テスト」記事が配置されています。これらは、次に進む前に最も重要な情報を理解できているかを調べるためのものです。これらを一斉に確認したい場合は、[確認テスト: CSS レイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills)に一覧が掲載されています。
 
 ## 追加のチュートリアル
 
@@ -56,7 +56,7 @@ l10n:
 
 - [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)
   - : CSSレイアウトの料理帳は、一般的なレイアウトパターンのレシピをまとめることを目的としています。自分のプロジェクトの出発点として使用することができるコードを提供するだけでなく、これらのレシピは、レイアウト仕様を使用するさまざまな方法と、開発者として行うことができる選択を強調します。
-- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) および [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn Flexbox](https://scrimba.com/learn-flexbox-c0k?via=mdn) および [Learn CSS Grid](https://scrimba.com/learn-css-grid-c02k?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : Scrimba のこれらのコースでは、フレックスボックスとグリッドについて知っておく必要があるすべてをインタラクティブなレッスンで学べます。
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

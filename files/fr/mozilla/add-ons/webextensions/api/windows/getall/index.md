@@ -3,8 +3,6 @@ title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 ---
 
-{{AddonSidebar}}
-
 Obtient des informations sur toutes les fenêtres ouvertes, en les passant dans un rappel.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
