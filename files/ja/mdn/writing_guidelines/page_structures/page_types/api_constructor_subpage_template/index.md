@@ -2,7 +2,7 @@
 title: API コンストラクターサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -29,13 +29,13 @@ l10n:
 > - **title**
 >   - : タイトルの見出しは、ページの最上部に表示されます。
 >     書式は `NameOfTheParentInterface: NameOfTheConstructor() コンストラクター` です。
->     例えば、 [Request()](/ja/docs/Web/API/Request/Request) コンストラクターの _title_ は `Request: Request() コンストラクター` となります。
+>     例えば、[Request()](/ja/docs/Web/API/Request/Request) コンストラクターの _title_ は `Request: Request() コンストラクター` となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/NameOfTheParentInterface/NameOfTheConstructor` のような形式になります。
 >     なお、スラッグでのコンストラクター関数名は括弧を省略してください（末尾は `NameOfTheConstructor` であり `NameOfTheConstructor()` ではありません）。
 > - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+>   - : （翻訳記事のみ）翻訳元の英語版記事の GitHub コミット ID を記述します。GitHub 上で英語版記事のコミット ID を確認してください。
 >
 > ---
 >
@@ -43,10 +43,9 @@ l10n:
 >
 > コンテンツ部の上部（ページのフロントマターの直下）には、いくつかのマクロ呼び出しが現れます。
 >
-> **訳注:** 英語版では以下のバナーは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のバナーに合わせてください。
+> **訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
 >
-> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
-> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術が[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
+> - `\{{SeeCompatTable}}` — これは **実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、[Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
@@ -58,15 +57,15 @@ l10n:
 >   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
 >   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
 > - `\{{APIRef("GroupDataName")}}` — これは、現在のページに関連するクイックリファレンスリンクを示す左側のリファレンスサイドバーを生成します。
->   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。
->   API に適したサイドバーを生成するには、 KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。
->   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。
+>   例えば、[WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。
+>   API に適したサイドバーを生成するには、GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。
+>   この方法については、[API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
-> _公開する前に、この説明文全体を削除することを忘れないでください。_
+> _この説明文全体を削除してから公開してください。_
 
 {{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
@@ -81,7 +80,7 @@ l10n:
 
 - `parameter1` {{optional_inline}}
   - : ここでは、引数の簡単な説明とその役割を記載してください。各引数につき 1 つの用語と定義を記載してください。
-    引数が省略可能でない場合は、 \\{{optional_inline}} マクロ呼び出しを削除してください。
+    引数が省略可能でない場合は、\\{{optional_inline}} マクロ呼び出しを削除してください。
 - `parameter2`
   - : 同様です。
 
@@ -90,23 +89,23 @@ l10n:
 コンストラクターの返値について、データ型や何を表すかなどの説明を記載してください。
 普通は単に「`\{{domxref("NameOfTheParentInterface")}}` オブジェクトのインスタンスです。」となります。
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ### 例外
 
-このコンストラクターが発生させる可能性がある例外の一覧をすべて記述します。例外ごとに 1 つずつ用語と定義を記述してください。
+このコンストラクターで発生する可能性がある例外をすべて列挙します。例外ごとに用語と定義を 1 つずつ記述してください。
 
 - `Exception1`
-  - : どのような場合に例外が発生するかをの説明を記述してください。
+  - : どのような場合に例外が発生するかを説明してください。
 - `Exception2`
-  - : どのような場合に例外が発生するかをの説明を記述してください。
+  - : どのような場合に例外が発生するかを説明してください。
 
 例外には、{{domxref("DOMException")}} オブジェクトと、{{jsxref("TypeError")}} や {{jsxref("RangeError")}} のような通常の JavaScript 例外の 2 種類があることに注意してください。ウェブ開発者は以下のことを知っておく必要があります。
 
-- どちらのオブジェクトが送出されるか
+- どの種類のオブジェクトとして例外が発生するか
 - `DOMException` オブジェクトである例外の場合、その例外の `name`。
 
-以下は、あるメソッドが `IndexSizeError` という名前の `DOMException`、`InvalidNodeTypeError` という名前の 2 つ目の `DOMException`、および `TypeError` 型の JavaScript 例外を発生させる可能性がある例です。
+以下は、あるコンストラクターで、`IndexSizeError` という名前の `DOMException`、`InvalidNodeTypeError` という名前の 2 つ目の `DOMException`、および `TypeError` 型の JavaScript 例外が発生する可能性がある場合の例です。
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : … で発生します。
@@ -119,7 +118,7 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出しがなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -144,7 +143,7 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
@@ -156,17 +155,17 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## 関連情報
 
-現在の API に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在の API に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2
