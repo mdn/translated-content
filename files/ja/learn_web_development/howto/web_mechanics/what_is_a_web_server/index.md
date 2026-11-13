@@ -2,7 +2,7 @@
 title: ウェブサーバーとは
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 l10n:
-  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
+  sourceCommit: 2a563c927890794b513523649ccfbbe48d336465
 ---
 
 この記事では、ウェブサーバーとは何か、ウェブサーバーの仕組み、なぜウェブサーバーが重要なのかを説明します。
@@ -18,7 +18,7 @@ l10n:
     <tr>
       <th scope="row">目標:</th>
       <td>
-        ウェブサーバーとは何かを学び、その仕組みに関して全般的な理解すること。
+        ウェブサーバーとは何かを学び、その仕組みについて全般的に理解すること。
       </td>
     </tr>
   </tbody>
@@ -58,9 +58,9 @@ l10n:
 - 専用ウェブサーバーは、いつでも IP アドレスが同じです。これは**専用 IP アドレス**と呼ばれています。（すべての{{Glossary("ISP", "プロバイダー")}}が家庭用の回線に固定 IP アドレスを提供しているとは限りません。）
 - 専用ウェブサーバーは、通常、サードパーティによって管理されています。
 
-これらすべての理由から、良いホスティングのプロバイダーを探すことは、ウェブサイトを構築する上で重要な部分です。様々なサービス会社が提供するものを探し、ニーズや予算に合う一つを選択しましょう（無料のものから月当たり数千ドルまでのサービスがあります）。詳しくは[この記事](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#ホスティング)にあります。
+これらすべての理由から、適切なホスティングプロバイダーを探すことは、ウェブサイトを構築する上で重要です。各社のサービスを比較し、ニーズや予算に合うものを選びましょう。詳しくは、[ホスティングとドメイン名を手に入れる](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#ホストとドメイン名を手に入れる)を参照してください。
 
-ウェブのホスティングサービスを契約したら、後は[ウェブサーバーにファイルをアップロードする](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)だけです。
+ウェブホスティングサービスを契約したら、[ウェブサイトを公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)するために、ファイルをウェブサーバーにアップロードしましょう。
 
 ### HTTP による通信
 
@@ -101,11 +101,3 @@ HTTP はクライアントとサーバーがどのように通信するかにつ
 しかし、独自のサーバーを作成する必要がある場合、おそらくサーバーフレームワークを使用し、既存のコードとライブラリーを活用し、用途に合うように必要な部分だけを拡張することを望むでしょう。
 完全にゼロからサーバーを開発する必要があるのは、比較的少数の開発者だけです。例えば、組み込みシステムでリソースの厳しい制約を満たすためなどです。
 サーバーの構築を試してみたい場合は、[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)の学習パスのリソースに目を通してください。
-
-## 次のステップ
-
-ウェブサーバーのことがよく分かったら、次のステップに進みましょう。
-
-- [ウェブ上で何かをするためにどれくらいコストがかかるか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)を知る
-- [ウェブサイトを作成するのに必要な様々なソフトウェア](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)についてもっと学ぶ
-- [ファイルをウェブサーバーにアップロードするには](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)のような、実践的な記事を読む

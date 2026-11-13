@@ -21,7 +21,7 @@ Un conocimiento básico de conceptos de programación (o de un lenguaje de progr
 Necesitarás entender "cómo tabaja la web". Te recomendamos que leas primero los siguientes temas:
 
 - [¿Qué es un servidor web?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [¿Qué software necesito para construir un sitio web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [¿Qué software necesito para construir un sitio web?](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
 - [¿Cómo subo ficheros a un servidor web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 Con ese conocimiento básico estarás preparado para recorrer el camino a través de los módulos de esta sección.

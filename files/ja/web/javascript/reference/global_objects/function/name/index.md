@@ -3,10 +3,10 @@ title: "Function: name"
 short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`name`** は {{jsxref("Function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
+**`name`** は {{jsxref("Function")}} インスタンスのデータプロパティで、作成時に付けられた関数の名前を示します。無名で作成された関数の場合は、`anonymous` または `''` （空文字列）になることもあります。
 
 {{InteractiveExample("JavaScript デモ: Function: name")}}
 
@@ -18,10 +18,10 @@ const object = {
 };
 
 console.log(func1.name);
-// 期待される出力結果: "func1"
+// 予想される結果: "func1"
 
 console.log(object.func2.name);
-// 期待される出力結果: "func2"
+// 予想される結果: "func2"
 ```
 
 ## 値
@@ -163,7 +163,7 @@ o.foo.name; // "foo";
 
 ### バインドされた関数
 
-{{jsxref("Function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
+{{jsxref("Function.prototype.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
 
 ```js
 function foo() {}
@@ -312,7 +312,7 @@ if (b.constructor.name === "Foo") {
 }
 ```
 
-非圧縮版では、プログラムは "'foo' は 'Foo' のインスタンスである" とログ出力し、真値側の分岐を実行します。一方、圧縮版では動作が異なり、 else 側の分岐を実行します。例えば上記のように、 `name` プロパティに依存している場合は、ビルドパイプラインで関数名が変更されないようにするか、関数に具体的な名前があるとは仮定しないようにしてください。
+非圧縮版では、プログラムは「'foo' は 'Foo' のインスタンスである」とログ出力し、真値側の分岐を実行します。一方、圧縮版では動作が異なり、else 側の分岐を実行します。例えば上記のように、`name` プロパティに依存している場合は、ビルドパイプラインで関数名が変更されないようにするか、関数に具体的な名前があるとは仮定しないようにしてください。
 
 ## 仕様書
 
@@ -324,6 +324,6 @@ if (b.constructor.name === "Foo") {
 
 ## 関連情報
 
-- [`Function: name` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/function)
-- [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
+- [`Function: name` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/function)<sup>(英語)</sup>
+- [`Function.prototype.name` のポリフィル (`es-shims`)](https://www.npmjs.com/package/function.prototype.name)<sup>(英語)</sup>
 - {{jsxref("Function")}}
