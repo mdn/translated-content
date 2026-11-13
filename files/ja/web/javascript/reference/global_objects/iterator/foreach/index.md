@@ -1,11 +1,10 @@
 ---
 title: Iterator.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/forEach
 l10n:
-  sourceCommit: a71768c124d1bb2dceef873c0bda266e9f714e4c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`forEach()`** は {{jsxref("Iterator")}} インスタンスのメソッドで、 {{jsxref("Array.prototype.forEach()")}} と似ています。指定された関数を、イテレーターによって生成されたそれぞれの要素に対して 1 回ずつ指定された関数を実行します。
 
@@ -64,6 +63,7 @@ for (const v of new Set([1, 2, 3]).values()) {
 ## 関連情報
 
 - [`Iterator.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator.prototype.forEach` のポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}
 - {{jsxref("Iterator.prototype.map()")}}

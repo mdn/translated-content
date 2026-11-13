@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b7f958a920837661f65caa6bc003ae050757945
 ---
 
-{{GlossarySidebar}}
-
 在{{glossary("cryptography", "密码学")}}领域，**解密**是指把{{glossary("ciphertext", "密文")}}转换成{{glossary("Plaintext", "明文")}}的过程。
 
 解密是通过使用一种称作{{glossary("cipher", "密码算法")}}的密码学算法，把加密信息转换成密文的操作。正如加密一样，解密在当代密码学领域也是通过特有的算法，结合称作 {{glossary("key")}} 的密钥来工作。

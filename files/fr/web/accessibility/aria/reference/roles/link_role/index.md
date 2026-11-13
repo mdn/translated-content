@@ -1,15 +1,15 @@
 ---
-title: "ARIA : le rôle link"
+title: "ARIA : rôle link"
+short-title: link
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
-original_slug: Web/Accessibility/ARIA/Roles/link_role
+l10n:
+  sourceCommit: b5437b737639d6952d18b95ebd1045ed73e4bfa7
 ---
-
-{{AccessibilitySidebar}}
 
 Un rôle ARIA `link` fournit une référence interactive à une ressource. La ressource cible peut être externe ou locale, c'est-à-dire à l'intérieur ou à l'extérieur de la page ou de l'application active.
 
 > [!NOTE]
-> Dans la mesure du possible, il est recommandé d'utiliser un élément natif [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
+> Dans la mesure du possible, il est recommandé d'utiliser un élément natif {{HTMLElement("a")}} plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs {{HTMLElement("a")}} prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
 
 ## Description
 
@@ -20,11 +20,11 @@ Lorsque le HTML sémantique n'est pas utilisé dans le but prévu, les fonctions
 Utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) avec une valeur à `0` pour vous assurer que le lien est dans l'ordre correct de ciblage avec la tabulation.
 
 > [!WARNING]
-> Appliquer le rôle `link` à un élément n'amènera pas les navigateurs à améliorer l'élément avec l'apparence ou les comportements standards des liens, comme le soulignement, les anneaux de ciblage, la navigation vers la cible du lien, ou les actions du menu contextuel. C'est à la responsabilité du développeur.
+> Appliquer le rôle `link` à un élément n'amène pas les navigateurs à améliorer l'élément avec l'apparence ou les comportements standards des liens, comme le soulignement, les anneaux de ciblage, la navigation vers la cible du lien, ou les actions du menu contextuel. C'est à la responsabilité du·de la développeur·euse.
 
 ## Exemple
 
-Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
+Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un {{HTMLElement("a")}}, vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
 
 ```html
 <span data-href="https://mozilla.org" tabindex="0" role="link">
@@ -62,7 +62,7 @@ for (const lien of fauxLiens) {
   lien.addEventListener("keydown", navigateLink);
 }
 
-// prend en charge les événements de clic et de clavier sur le lien
+// prend en charge les évènements de clic et de clavier sur le lien
 function navigateLink(e) {
   if (e.type === "click" || e.key === "Enter") {
     const ref = e.target ?? e.srcElement;
@@ -73,7 +73,7 @@ function navigateLink(e) {
 }
 ```
 
-Si l'élément avec `role="link"` reçoit un événement du clavier <kbd>ENTREZ</kbd>, cela exécute le lien, en allant à la page liée ou en déplaçant la vue vers la zone cible de la page.
+Si l'élément avec `role="link"` reçoit un évènement du clavier <kbd>ENTREZ</kbd>, cela exécute le lien, en allant à la page liée ou en déplaçant la vue vers la zone cible de la page.
 
 Facultativement, <kbd>SHIFT</kbd> + <kbd>F10</kbd> ouvre un menu contextuel pour le lien.
 
@@ -81,14 +81,14 @@ Facultativement, <kbd>SHIFT</kbd> + <kbd>F10</kbd> ouvre un menu contextuel pour
 
 Les différents rôles sont utilisés pour définir des modèles interactifs communs. Semblable aux rôles document-structure, certains de ces rôles, y compris le rôle `link`, dupliquent la sémantique des éléments HTML natifs qui sont bien pris en charge et ne doivent pas être utilisés.
 
-Évitez d'utiliser `link`, que nous avons inclus par souci d'exhaustivité. L'équivalent sémantique [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) a une interactivité accessible qui est disponible et pris en charge.
+Évitez d'utiliser `link`, que nous avons inclus par souci d'exhaustivité. L'équivalent sémantique {{HTMLElement("a")}} a une interactivité accessible qui est disponible et pris en charge.
 
 ### Utilisez le HTML
 
-Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a).
+Utilisez de préférence l'élément {{HTMLElement("a")}}.
 
 > [!NOTE]
-> Il n'est pas nécessaire d'inclure `role="lien"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
+> Il n'est pas nécessaire d'inclure `role="link"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
 
 ## Spécifications
 
@@ -96,7 +96,7 @@ Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Element
 
 ## Voir aussi
 
-- L'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)
-- L'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
-- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-- [Bonnes pratiques ARIA - Rôle `link` (en anglais)](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
+- L'élément HTML {{HTMLElement("a")}}
+- L'élément HTML {{HTMLElement("button")}}
+- L'attribut ARIA [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [Bonnes pratiques ARIA - Rôle `link` <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)

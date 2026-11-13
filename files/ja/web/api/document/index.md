@@ -2,12 +2,12 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 41018309bf920684054c0c2d81d362365b543493
+  sourceCommit: 793bcbe2dd88fc553d2c4c918c4dec4899704022
 ---
 
 {{APIRef("DOM")}}
 
-**`Document`** インターフェイスはブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_ツリーとは？)であるウェブページのコンテンツへの入口としての役割を果たします。
+**`Document`** インターフェイスは、ブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_Object_Model#dom_ツリーとは)であるウェブページのコンテンツへの入口としての役割を果たします。
 
 DOM ツリーには {{HTMLElement("body")}} や {{HTMLElement("table")}} など、[多数の要素](/ja/docs/Web/HTML/Reference/Elements)があります。これはページの URL を取得したり文書で新たな要素を作成するなど、文書全体に関わる機能を提供します。
 
@@ -26,6 +26,8 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
 
 - {{DOMxRef("Document.activeElement")}} {{ReadOnlyInline}}
   - : 現在フォーカスのある {{DOMxRef('Element')}} を返します。
+- {{DOMxRef("Document.activeViewTransition")}} {{ReadOnlyInline}}
+  - : この文書上でアクティブになっている[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を表す {{DOMxRef("ViewTransition")}} インスタンスを返します。アクティブなビュー遷移がない場合は `null` を返します。
 - {{DOMxRef("Document.adoptedStyleSheets")}}
   - : 文書で使用するために構築したスタイルシートの配列を追加します。
     これらのスタイルシートは、同じ文書のシャドウ DOM のサブツリーと共有されます。
@@ -43,6 +45,8 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 現在の文書の MIME ヘッダーから Content-Type を返します。
 - {{DOMxRef("Document.currentScript")}} {{ReadOnlyInline}}
   - : {{HTMLElement("script")}} 要素のうち、現在処理中で、かつ [JavaScript モジュールでないもの](https://github.com/whatwg/html/issues/997)を返します。
+- {{DOMxRef("Document.customElementRegistry")}} {{ReadOnlyInline}}
+  - : この文書に関連付けらえた {{domxref("CustomElementRegistry")}} オブジェクト、または設定されていない場合は `null` です。
 - {{DOMxRef("Document.doctype")}} {{ReadOnlyInline}}
   - : 現在の文書の文書型宣言 (DTD) を返します。
 - {{DOMxRef("Document.documentElement")}} {{ReadOnlyInline}}
@@ -51,7 +55,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 文書の場所を文字列で返します。
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で、現在の文書に含まれる埋め込まれた {{HTMLElement('embed')}} 要素のリストを返します。
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : 文書に適用されている機能ポリシーを {{DOMxRef("FeaturePolicy")}} インターフェイスで返します。
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : 現在の文書における最初の子要素を返します。
@@ -94,7 +98,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.timeline")}} {{ReadOnlyInline}}
   - : タイムラインを {{domxref("DocumentTimeline")}} の特別なインスタンスで返します。これはページの読み込み時に自動的に生成されます。
 - {{DOMxRef("Document.visibilityState")}} {{ReadOnlyInline}}
-  - : 文書の可視性を表す文字列を返します。 `visible`, `hidden`, `prerender`, `unloaded` のいずれかの値になります。
+  - : 文書の可視性を表す文字列を返します。 `visible`, `hidden`, `unloaded` のいずれかの値になります。
 
 ### HTML 文書向けの拡張
 
@@ -169,7 +173,7 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 訪問済みのハイパーリンクの色を取得/設定します。
 - {{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}
   - : XML 宣言によって決められたエンコーディングを返します。
-- {{DOMxRef("Document.xmlStandalone")}} {{Deprecated_Inline}}
+- `Document.xmlStandalone` {{Deprecated_Inline}}
   - : XML 宣言で文書がスタンドアロンである（_例_: DTD の外部パートが文書のコンテンツに影響する）場合に `true` を、そうでない場合に `false` を返します。
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : XML 宣言で指定されたバージョン番号、または宣言が省略されている場合に `"1.0"` を返します。
@@ -182,9 +186,11 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 外部文書からノードを取り込みます。
 - {{DOMxRef("Document.append()")}}
   - : 文書の最後の子の後に {{domxref("Node")}} オブジェクトまたは文字列の集合を挿入します。
-- {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{DOMxRef("Document.ariaNotify()")}}
+  - : 指定されたテキスト文字列をスクリーンリーダーで読み上げさせるように指定します。
+- {{DOMxRef("Document.browsingTopics()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : 過去 3 つのエポックのそれぞれから 1 つずつ、ユーザーのトップトピックを表すオブジェクトの配列で履行されるプロミスを返します。既定では、このメソッドは、呼び出し側が監視している現在のページの訪問をブラウザーに記録させるので、後でページのホスト名をトピックの計算に使用することができます。詳細は[トピック API](/ja/docs/Web/API/Topics_API) を参照してください。
-- {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
+- `Document.captureEvents()` {{Deprecated_Inline}}
   - : {{DOMxRef("Window.captureEvents")}} をご覧ください。
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
   - : キャレットを含む DOM ノードと、そのノード内でのキャレットの文字オフセットを含む {{DOMxRef('CaretPosition')}} オブジェクトを返します。
@@ -234,7 +240,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : ポインターロックを解放します。
 - {{DOMxRef("Document.getAnimations()")}}
   - : 現在実行中であるすべての {{DOMxRef("Animation")}} オブジェクトの配列を返します。この対象要素は、`document` の子孫要素です。
-- {{domxref("Document.getBoxQuads()")}} {{Experimental_Inline}}
+- `Document.getBoxQuads()` {{Experimental_Inline}}
   - : このノードの CSS フラグメントを表す {{domxref("DOMQuad")}} オブジェクトのリストを返します。
 - {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
   - : 識別された要素のオブジェクト参照を返します。
@@ -246,13 +252,17 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定されたタグ名と名前空間を持つ要素のリストを返します。
 - {{DOMxRef("Document.getSelection()")}}
   - : ユーザーが現在選択しているテキスト範囲、または現在のキャレットの位置を表す {{DOMxRef('Selection')}} オブジェクトを返します。
+- {{domxref("Document.hasPrivateToken()")}} {{experimental_inline}}
+  - : 特定の発行元から格納された [プライベート状態トークン](/ja/docs/Web/API/Private_State_Token_API) をブラウザーが保有しているかどうかを示す論理値で履行されるプロミスを返します。
+- {{domxref("Document.hasRedemptionRecord()")}} {{experimental_inline}}
+  - : 特定の発行元から発行された[利用履歴](/ja/docs/Web/API/Private_State_Token_API/Using#redeeming_tokens)をブラウザーが保有しているかどうかを示す論理値を返すプロミスです。
 - {{DOMxRef("Document.hasStorageAccess()")}}
   - : 文書に分離されていないクッキーへのアクセスがあるかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
 - {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}
   - : {{DOMxRef("Document.hasStorageAccess()")}} の新しい名前です。
 - {{DOMxRef("Document.importNode()")}}
   - : 外部文書のノードの複製を返します。
-- {{DOMxRef("Document.moveBefore()")}} {{Experimental_Inline}}
+- {{DOMxRef("Document.moveBefore()")}}
   - : 指定された {{domxref("Node")}} を、ノードを除去して挿入し直すことなく、指定された参照ノードの前に、直接の子として `Document` DOM ノード内に移動します。
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : 指定した要素 ID の背景画像として使用している要素を変更することができます。
@@ -264,14 +274,14 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したセレクターに一致する、文書内のすべての要素ノードのリストを返します。
 - {{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}
   - : この文書内の要素でマウスキャプチャを行っている場合、マウスキャプチャを解放します。
-- {{DOMxRef("Document.releaseEvents()")}} {{Deprecated_Inline}}
+- `Document.releaseEvents()` {{Deprecated_Inline}}
   - : {{DOMxRef("Window.releaseEvents()")}} をご覧ください。
 - {{DOMxRef("Document.replaceChildren()")}}
   - : 文書の既存の子を、指定された新しい子の集合で置き換えます。
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : サードパーティのコンテキスト（すなわち、 {{htmlelement("iframe")}} に埋め込まれたもの）に読み込まれた文書が、分離されていないクッキーへのアクセスを要求できるようにします。これはユーザーエージェントが既定で、プライバシーを改善するためにサードパーティコンテキストで読み込まれたサイトによる分離されていないクッキーへのアクセスをブロックしている場合に使用します。
-- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
-  - : 最上位のサイトが、同じ[関連ウェブサイト設定](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)内の別のウェブサイトから発信された埋め込みコンテンツの代わりに、サードパーティクッキーへのアクセスをリクエストできるようにします。
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : 最上位のサイトが、同じ[関連ウェブサイト設定](https://privacysandbox.google.com/cookies/related-website-sets-integration)内の別のウェブサイトから発信された埋め込みコンテンツの代わりに、サードパーティクッキーへのアクセスをリクエストできるようにします。
 - {{domxref("Document.startViewTransition()")}}
   - : 新しい{{domxref("View Transition API", "ビュー遷移", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
 
@@ -292,7 +302,7 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
   - : このメソッドは何もしません。
 - {{DOMxRef("Document.close()")}}
   - : 書き込み用の文書ストリームを閉じます。
-- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : 編集可能な文書で、フォーマットコマンドを実行します。
 - {{DOMxRef("Document.getElementsByName()")}}
   - : (引数で) 与えられた名前 (name) を持つ要素のリストを返します。
@@ -302,13 +312,13 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
   - : 書き込み用の文書ストリームを開きます。
 - {{DOMxRef("Document.queryCommandEnabled()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドを実行できる場合に、 true を返します。
-- {{DOMxRef("Document.queryCommandIndeterm()")}} {{Deprecated_Inline}}
+- `Document.queryCommandIndeterm()` {{Deprecated_Inline}} {{non-standard_inline}}
   - : 現在の領域でフォーマットコマンドの状態が不確定である場合に true を返します。
 - {{DOMxRef("Document.queryCommandState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドを実行した場合に true を返します。
 - {{DOMxRef("Document.queryCommandSupported()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の領域でフォーマットコマンドをサポートしている場合に、true を返します。
-- {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
+- `Document.queryCommandValue()` {{Deprecated_Inline}} {{non-standard_inline}}
   - : 指定したフォーマットコマンドについて、現在の領域における値を返します。
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : 文書にテキストを書き込みます。
@@ -319,7 +329,7 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
 
 _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("EventTarget")}} インターフェイスから継承したメソッドもあります。_
 
-- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} {{experimental_inline}}
   - : XSS 対策とサニタイズを行った、HTML の文字列から新しい `Document` オブジェクトを作成します。
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : サニタイズ処理を行わずに、HTML の文字列から新しい `Document` オブジェクトを作成します。
@@ -410,11 +420,11 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
 - {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
 - {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
 - {{domxref("HTMLMediaElement/ended_event", "ended")}}
-- {{domxref("Element/error_event", "error")}}
+- {{domxref("HTMLElement/error_event", "error")}}
 - {{domxref("Element/focus_event", "focus")}}
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
 - {{domxref("Element/input_event", "input")}}
-- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 - {{domxref("Element/keydown_event", "keydown")}}
 - {{domxref("Element/keypress_event", "keypress")}}
 - {{domxref("Element/keyup_event", "keyup")}}
@@ -442,7 +452,7 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
 - {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
 - {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
-- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLInputElement/select_event", "select")}}
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
 - {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
 - {{domxref("HTMLFormElement/submit_event", "submit")}}

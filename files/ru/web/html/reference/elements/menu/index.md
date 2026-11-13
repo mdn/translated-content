@@ -42,8 +42,6 @@ This element was deprecated in HTML4, but reintroduced in HTML5.1 and the HTML l
 
 ### Context menu
 
-{{Deprecated_header}}
-
 #### HTML
 
 ```html
@@ -77,7 +75,8 @@ div {
 > [!WARNING]
 > Menu buttons haven't been implemented in any known browsers yet. The [`type`](#type) attribute on the `<menu>` element is now obsolete.
 
-> **Предупреждение:** {{HTMLElement("menuitem")}} element is obsolete.
+> [!WARNING]
+> {{HTMLElement("menuitem")}} element is obsolete.
 
 #### HTML
 

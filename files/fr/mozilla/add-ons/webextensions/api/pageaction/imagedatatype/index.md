@@ -3,8 +3,6 @@ title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 ---
 
-{{AddonSidebar}}
-
 Données en pixel pour une image.
 
 ## Type

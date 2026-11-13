@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.find()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.find()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -19,7 +18,7 @@ function isNegative(element, index, array) {
 const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
 
 console.log(int8.find(isNegative));
-// Expected output: -10
+// 予想される結果: -10
 ```
 
 ## 構文
@@ -44,7 +43,7 @@ find(callbackFn, thisArg)
 
 ### 返値
 
-テストを満たした配列の要素の位置を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
+テストを満たした型付き配列の最初の要素を返します。それ以外の場合は、 {{jsxref("undefined")}} を返します。
 
 ## 解説
 
@@ -52,24 +51,32 @@ find(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列内の素数を探す
+### 型付き配列内の最初の素数を探す
 
-次の例では、型付き配列内で素数である要素を探します（または、素数がない場合は {{jsxref("undefined")}} を返します）。
+次の例では、型付き配列内の最初の素数を返します。素数が存在しない場合は {{jsxref("undefined")}} を返します。
 
 ```js
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
+
+> [!NOTE]
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、計算の繰り返しを避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用するアルゴリズムを使用するとよいでしょう。
 
 ## 仕様書
 
@@ -81,7 +88,7 @@ console.log(uint8.find(isPrime)); // 5
 
 ## 関連情報
 
-- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.find` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

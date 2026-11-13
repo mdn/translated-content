@@ -1,27 +1,32 @@
 ---
 title: Gérer du texte — les chaînes de caractères en JavaScript
+short-title: Les chaînes de caractères
 slug: Learn_web_development/Core/Scripting/Strings
 original_slug: Learn/JavaScript/First_steps/Strings
+l10n:
+  sourceCommit: fdfe2889acd02623047231e39c9dee5df1bd646e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Connaissance de base en informatique, une compréhension basique de HTML
-        et CSS et savoir ce qu'est JavaScript.
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Une compréhension de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et des <a href="/fr/docs/Learn_web_development/Core/Styling_basics">fondamentaux de CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        Devenir familier avec les fondamentaux pour manipuler les chaînes de
-        caractères en JavaScript.
+        <ul>
+          <li>Créer des littéraux de chaîne de caractères.</li>
+          <li>Comprendre la nécessité d'utiliser des guillemets appariés.</li>
+          <li>Concaténer des chaînes de caractères.</li>
+          <li>Échapper des caractères dans une chaîne.</li>
+          <li>Utiliser les littéraux de gabarit, y compris l'insertion de variables et les chaînes multilignes.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -33,279 +38,233 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
 
 À peu près tous les programmes que nous vous avons montrés jusqu'ici ont impliqué des manipulations de chaînes de caractères.
 
-## Chaînes de caractères — les bases
+## Déclarer des chaînes de caractères
 
-À première vue, les chaînes se traitent de la même manière que les nombres&nbsp;; mais si vous approfondissez la chose, vous commencerez à percevoir des différences notables. Entrons sur la console quelques lignes simples pour nous familiariser avec la chose. À propos de la console, nous en avons placé une ci‑dessous (ou utiliser [l'explorateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)&nbsp;; comme vous préférez).
+À première vue, les chaînes de caractères se manipulent comme les nombres, mais en y regardant de plus près, on remarque des différences notables. Commençons par saisir quelques lignes simples dans la [console JavaScript des outils de développement du navigateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour nous familiariser.
 
-```html hidden
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
-      }
-
-      body {
-        max-width: 700px;
-      }
-
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
-      }
-
-      .input p {
-        margin-right: 1%;
-      }
-
-      .output p {
-        width: 100%;
-      }
-
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0c323d;
-        color: #809089;
-      }
-
-      div {
-        clear: both;
-      }
-    </style>
-  </head>
-  <body></body>
-
-  <script>
-    let geval = eval;
-    function createInput() {
-      let inputDiv = document.createElement("div");
-      let inputPara = document.createElement("p");
-      let inputForm = document.createElement("input");
-
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
-      }
-
-      inputForm.addEventListener("change", executeCode);
-    }
-
-    function executeCode(e) {
-      try {
-        let result = geval(e.target.value);
-      } catch (e) {
-        let result = "error — " + e.message;
-      }
-
-      let outputDiv = document.createElement("div");
-      let outputPara = document.createElement("p");
-
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
-
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
-
-      createInput();
-    }
-
-    createInput();
-  </script>
-</html>
-```
-
-{{ EmbedLiveSample('Chaînes_de_caractères_—_les_bases', '100%', 300) }}
-
-### Créer une chaîne de texte
-
-1. Pour débuter, entrez les lignes suivantes&nbsp;:
-
-   ```js
-   let string = "La révolution ne sera pas télévisée.";
-   string;
-   ```
-
-   Comme nous l'avons fait avec les nombres, nous déclarons une variable, l'initialisons avec une valeur de chaîne, puis renvoyons la valeur. La seule différence ici est que lorsque nous écrivons une chaîne, nous la mettons entre guillemets.
-
-2. Si vous ne le faites pas, ou si vous oubliez un des guillemets, vous déclenchez une erreur. Essayez d'entrer une de ces lignes&nbsp;:
-
-   ```js example-bad
-   let badString = Voici un test;
-   let badString = 'Voici un test;
-   let badString = Voici un test';
-   ```
-
-   Ces lignes de code ne fonctionnent pas parce que toute chaîne de texte qui n'est pas écrite entre guillemets est considérée comme un nom de variable, un nom de propriété, un mot réservé ou quelque chose de semblable. Quand l'interpréteur ne parvient pas à trouver la déclaration de ladite variable, une erreur est déclenchée (par ex. «&nbsp;missing ; before statement »). Si l'interpréteur voit le début d'une chaîne mais ne trouve pas sa fin, comme dans la ligne 2, il se plaint en émettant une erreur (avec «&nbsp;_unterminated string literal_ »). Si votre programme produit de telles erreurs, revoyez‑le et vérifiez qu'aucun guillemet ne manque.
-
-3. L'assertion suivante fonctionne si la variable `string` a été préalablement définie — essayez maintenant&nbsp;:
-
-   ```js
-   let badString = string;
-   badString;
-   ```
-
-   `badString` est maintenant défini avec la même valeur que `string`.
-
-### Guillemets simples vs guillemets doubles
-
-1. En JavaScript, vous pouvez envelopper vos chaînes entre des guillemets simples ou doubles. Les deux expressions suivantes sont correctes&nbsp;:
-
-   ```js
-   let sgl = "Guillemet simple.";
-   let dbl = "Guillemets doubles.";
-   sgl;
-   dbl;
-   ```
-
-2. Il y a une toute petite différence entre les deux, et celle que vous retenez relève de la préférence personnelle. Prenez-en une, et tenez‑vous y toutefois&nbsp;: du code avec des mises entre guillemets diversifiées peut amener des confusions, en particulier si vous utilisez les deux sortes dans la même chaîne&nbsp;! Ce qui suit renvoie une erreur&nbsp;:
-
-   ```js example-bad
-   let badQuotes = 'Quoi sur Terre&nbsp;?";
-   ```
-
-3. L'interpréteur pensera que la chaîne n'a pas été fermée, car le type de guillemet autre ne servant pas à délimiter les chaînes peut y être employé. Par exemple, ces deux assertions sont valables&nbsp;:
-
-   ```js
-   let sglDbl = 'Mangeriez‑vous un "souper de poisson"?';
-   let dblSgl = "J'ai le blues.";
-   sglDbl;
-   dblSgl;
-   ```
-
-4. Bien entendu, vous ne pouvez pas inclure dans la chaîne le même type de guillemet que celui qui est utilisé pour la délimiter. Ce qui suit conduit à une erreur, car l'explorateur ne peut pas déterminer là où se termine la chaîne&nbsp;:
-
-   ```js example-bad
-   let bigmouth = 'Je n'ai pas eu droit à prendre place...';
-   ```
-
-   Voilà qui nous amène naturellement au prochain sujet.
-
-### Échappement de caractères dans une chaîne
-
-Pour corriger l'erreur dans notre ligne de code précédente, il nous suffit d'échapper au problème que pose le guillemet. «&nbsp;Échapper des caractères&nbsp;» signifie que nous les marquons de manière à ce qu'ils soient reconnus comme partie intégrante du texte, et non pas comme symbole de code. Dans JavaScript, nous le faisons en mettant une barre oblique inverse juste avant le caractère. Essayons&nbsp;:
+Pour commencer, entrez les lignes suivantes&nbsp;:
 
 ```js
-let bigmouth = "Je n'ai pas eu droit à prendre place...";
-bigmouth;
+const string = "La révolution ne sera pas télévisée.";
+console.log(string);
 ```
 
-Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. `\"`, et il y a certains codes spéciaux à côté. Voyez [Notations d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) pour plus de détails.
+Comme pour les nombres, on déclare une variable, on l'initialise avec une valeur de chaîne de caractères, puis on affiche la valeur. La seule différence ici est que, pour écrire une chaîne de caractères, il faut entourer la valeur de guillemets.
 
-## Concaténation de chaînes
+Si vous ne le faites pas, ou si vous oubliez un guillemet, vous obtiendrez une erreur. Essayez d'entrer les lignes suivantes&nbsp;:
 
-1. Concaténer est un terme de programmation du genre chic qui signifie «&nbsp;attacher ensemble&nbsp;». Pour attacher des chaînes en JavaScript, on utilise l'opérateur plus (+) , le même que l'on utilise pour ajouter deux nombres, mais dans ce contexte il fait quelque chose de différent. Voyons un exemple dans la console.
-
-   ```js
-   let one = "Hello, ";
-   let two = "comment allez‑vous&nbsp;?";
-   let joined = one + two;
-   joined;
-   ```
-
-   Il en résulte que la variable nommée `joined` contient la valeur "Hello, comment allez‑vous&nbsp;?".
-
-2. Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe `+` entre chacune. Essayez ceci&nbsp;:
-
-   ```js
-   let multiple = one + one + one + one + two;
-   multiple;
-   ```
-
-3. Vous pouvez aussi mélanger des variables avec des vraies chaînes. Regardez&nbsp;:
-
-   ```js
-   let response = one + "Je vais bien — et vous " + two;
-   response;
-   ```
-
-> [!NOTE]
-> Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle **chaîne littérale**.
-
-### Concaténation dans un contexte
-
-Examinons une concaténation dans une action — voici un exemple tiré en amont de ce cours&nbsp;:
-
-```html
-<button>Pressez‑moi</button>
+```js example-bad
+const badString1 = Ceci est un test;
+const badString2 = 'Ceci est un test;
+const badString3 = Ceci est un test';
 ```
+
+Ces lignes ne fonctionnent pas car tout texte non entouré de guillemets est interprété comme un nom de variable, un nom de propriété, un mot réservé ou autre. Si le navigateur ne reconnaît pas le texte non entouré de guillemets, une erreur est levée (par exemple «&nbsp;missing; before statement&nbsp;»). Si le navigateur détecte le début d'une chaîne de caractères mais pas sa fin (à cause d'un guillemet manquant), il peut signaler une erreur «&nbsp;unterminated string literal&nbsp;» ou, dans la console, passer à une nouvelle ligne en attendant que vous terminiez la chaîne de caractères. Si votre programme génère de telles erreurs, vérifiez que toutes vos chaînes de caractères sont bien fermées par des guillemets.
+
+Ce qui suit fonctionnera si vous avez déjà défini la variable `string` — essayez maintenant&nbsp;:
 
 ```js
-let button = document.querySelector("button");
-
-button.onclick = function () {
-  let name = prompt("Quel est votre nom&nbsp;?");
-  alert("Hello " + name + ", sympa de vous voir&nbsp;!");
-};
+const badString = string;
+console.log(badString);
 ```
 
-{{ EmbedLiveSample('Concaténation_dans_un_contexte', '100%', 50) }}
+`badString` a maintenant la même valeur que `string`.
 
-Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.prompt()")}}, qui demande à l'utilisateur de répondre à une question par l'intermédiaire d'une boîte de dialogue, puis qui stocke le texte entré dans une variable donnée — dans ce cas `name`. En ligne 5, nous nous servons de la fonction {{domxref("Window.alert()", "Window.alert()")}} pour afficher un dialogue contenant une chaîne assemblée à partir de deux chaînes littérales et de la variable `name`, par concaténation.
+### Guillemets simples, doubles et backticks
 
-### Nombres vs chaînes
+En JavaScript, vous pouvez choisir d'entourer vos chaînes de caractères avec des guillemets simples (`'`), des guillemets doubles (`"`) ou des backticks (accent grave&nbsp;: `` ` ``). Toutes les écritures suivantes sont valides&nbsp;:
 
-1. Que se passe-t-il quand nous essayons d'additionner (ou concaténer) une chaîne et un nombre&nbsp;? Essayons dans la console&nbsp;:
+```js-nolint
+const simple = 'Guillemets simples';
+const double = "Guillemets doubles";
+const backtick = `Backtick`;
 
-   ```js
-   "Front " + 242;
-   ```
+console.log(simple);
+console.log(double);
+console.log(backtick);
+```
 
-   Vous vous attendriez à déclencher une erreur, mais cela fonctionne parfaitement. Essayer de représenter une chaîne comme un nombre n'a vraiment aucun sens, mais représenter un nombre par une chaîne en a, donc le navigateur convertit adroitement le nombre en chaîne et concatène les deux chaînes.
+Vous devez utiliser le même caractère pour ouvrir et fermer une chaîne de caractères, sinon vous obtiendrez une erreur&nbsp;:
 
-2. Vous pouvez même faire cela avec deux nombres — vous forcez un nombre à devenir une chaîne en le mettant entre guillemets. Essayez ce qui suit (nous nous servons de l'opérateur `typeof` pour vérifier si la variable est un nombre ou une chaîne):
+```js-nolint example-bad
+const badQuotes = 'Ceci n'est pas autorisé!";
+```
 
-   ```js
-   let myDate = "19" + "67";
-   typeof myDate;
-   ```
+Les chaînes de caractères entourées de guillemets simples ou doubles sont équivalentes, le choix relève de la préférence personnelle — il est cependant conseillé de choisir un style et de s'y tenir pour garder un code cohérent.
 
-3. Si vous avez une variable numérique que vous souhaitez convertir en chaîne sans autre modification, ou une variable numérique que vous voulez convertir en chaîne sans autre modification, vous pouvez utiliser les constructions suivantes&nbsp;:
-   - L'objet {{jsxref("Number")}} convertit tout ce qui lui est passé en nombre, si c'est possible. Essayez&nbsp;:
+Les chaînes de caractères entourées de backticks sont un type particulier appelé _littéraux de gabarit_ (<i lang="en">template literals</i>). Les littéraux de gabarit se comportent globalement comme les chaînes de caractères classiques, mais possèdent des propriétés particulières&nbsp;:
 
-     ```js
-     let myString = "123";
-     let myNum = Number(myString);
-     typeof myNum;
-     ```
+- Vous pouvez [intégrer du JavaScript](#intégrer_du_javascript) à l'intérieur.
+- Vous pouvez écrire des chaînes de caractères multilignes [facilement](#chaînes_de_caractères_multilignes).
 
-   - D'autre part, tout nombre possède une méthode nommée [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) qui le convertit en chaîne équivalente. Essayez&nbsp;:
+## Intégrer du JavaScript
 
-     ```js
-     let myNum = 123;
-     let myString = myNum.toString();
-     typeof myString;
-     ```
+Dans un littéral de gabarit, vous pouvez insérer des variables ou des expressions JavaScript à l'intérieur de `${ }`&nbsp;: le résultat sera inclus dans la chaîne de caractères&nbsp;:
 
-   Ces constructions peuvent être vraiment utiles en certaines circonstances. Par exemple, si un utilisateur entre un nombre dans un champ texte d'un formulaire, c'est une chaîne. Mais si vous voulez ajouter ce nombre à autre chose, il est nécessaire qu'il soit du type `number`, donc vous pouvez le faire passer par la méthode `Number()` pour gérer cela. C'est exactement ce que nous avons fait dans le jeu [Devinez un nombre, à la ligne 63](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L63).
+```js
+const name = "Chris";
+const greeting = `Bonjour, ${name}`;
+console.log(greeting); // "Bonjour, Chris"
+```
+
+Vous pouvez utiliser la même technique pour assembler deux variables&nbsp;:
+
+```js
+const one = "Bonjour, ";
+const two = "comment ça va ?";
+const joined = `${one}${two}`;
+console.log(joined); // "Bonjour, comment ça va ?"
+```
+
+Assembler des chaînes de caractères de cette façon s'appelle la _concaténation_.
+
+### Concaténation en contexte
+
+Voyons la concaténation en action&nbsp;:
+
+```html live-sample___string-concat
+<button>Pressez-moi</button>
+<div id="greeting"></div>
+```
+
+```js live-sample___string-concat
+const button = document.querySelector("button");
+
+function greet() {
+  const name = prompt("Quel est votre nom ?");
+  const greeting = document.querySelector("#greeting");
+  greeting.textContent = `Bonjour ${name}, ravi·e de vous voir !`;
+}
+
+button.addEventListener("click", greet);
+```
+
+{{EmbedLiveSample('string-concat', , '50', , , , , 'allow-modals')}}
+
+Ici, nous utilisons la fonction {{domxref("window.prompt()", "window.prompt()")}}, qui invite l'utilisateur·ice à répondre à une question via une boîte de dialogue, puis stocke le texte saisi dans une variable — ici `name`. Nous affichons ensuite une chaîne de caractères qui insère ce nom dans un message d'accueil générique.
+
+### Concaténation avec `+`
+
+Vous ne pouvez utiliser `${}` qu'avec les littéraux de gabarit, pas avec les chaînes de caractères classiques. Pour concaténer des chaînes de caractères classiques, on utilise l'opérateur `+`&nbsp;:
+
+```js
+const greeting2 = "Bonjour";
+const name2 = "Bob";
+console.log(greeting2 + ", " + name2); // "Bonjour, Bob"
+```
+
+Les littéraux de gabarit rendent généralement le code plus lisible&nbsp;:
+
+```js
+const greeting3 = "Salut";
+const name3 = "Ramesh";
+console.log(`${greeting3}, ${name3}`); // "Salut, Ramesh"
+```
+
+### Insérer des expressions dans une chaîne de caractères
+
+Vous pouvez insérer des expressions JavaScript dans un littéral de gabarit, pas seulement des variables&nbsp;: le résultat sera inclus dans la chaîne de caractères&nbsp;:
+
+```js
+const song = "Fight the Youth";
+const score = 9;
+const highestScore = 10;
+const output = `J'aime la chanson ${song}. Je lui ai donné une note de ${
+  (score / highestScore) * 100
+}%`;
+console.log(output); // "J'aime la chanson Fight the Youth. Je lui ai donné une note de 90%."
+```
+
+## Chaînes de caractères multilignes
+
+Les littéraux de gabarit respectent les retours à la ligne dans le code source, vous pouvez donc écrire des chaînes de caractères sur plusieurs lignes comme ceci&nbsp;:
+
+```js
+const newline = `Un jour, tu as enfin su
+ce que tu devais faire, et tu as commencé,`;
+console.log(newline);
+
+/*
+Un jour, tu as enfin su
+ce que tu devais faire, et tu as commencé,
+*/
+```
+
+Pour obtenir le même résultat avec une chaîne de caractères classique, il faut insérer des caractères de saut de ligne (`\n`) dans la chaîne&nbsp;:
+
+```js
+const newline2 =
+  "Un jour, tu as enfin su\nce que tu devais faire, et tu as commencé,";
+console.log(newline2);
+
+/*
+Un jour, tu as enfin su
+ce que tu devais faire, et tu as commencé,
+*/
+```
+
+Consultez notre page de référence sur les [littéraux de gabarit](/fr/docs/Web/JavaScript/Reference/Template_literals) pour plus d'exemples et de détails sur les fonctionnalités avancées.
+
+## Inclure des guillemets dans une chaîne de caractères
+
+Puisqu'on utilise des guillemets pour délimiter les chaînes de caractères, comment inclure de vrais guillemets dans une chaîne de caractères&nbsp;? Ceci ne fonctionnera pas&nbsp;:
+
+```js-nolint example-bad
+const badQuotes = "Elle a dit "Je pense que oui!"";
+```
+
+Une solution courante est d'utiliser un autre type de guillemet pour délimiter la chaîne de caractères&nbsp;:
+
+```js-nolint
+const goodQuotes1 = 'Elle a dit "Je pense que oui!"';
+const goodQuotes2 = `Elle a dit "Je n'irai pas là-dedans!"`;
+```
+
+Une autre solution consiste à _échapper_ le guillemet problématique. Échapper un caractère signifie qu'on le marque pour qu'il soit reconnu comme du texte et non comme du code. En JavaScript, on place une barre oblique inverse juste avant le caractère. Essayez&nbsp;:
+
+```js-nolint
+const bigmouth = 'Je n\'ai pas le droit de prendre ma place…';
+console.log(bigmouth);
+```
+
+Vous pouvez utiliser la même technique pour insérer d'autres caractères spéciaux. Consultez [les séquences d'échappement](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séquences_déchappement) pour plus de détails.
+
+## Nombres et chaînes de caractères
+
+Que se passe-t-il si on essaie de concaténer une chaîne de caractères et un nombre&nbsp;? Essayons dans la console&nbsp;:
+
+```js
+const coolBandName = "Front ";
+const number = 242;
+console.log(coolBandName + number); // "Front 242"
+```
+
+On pourrait s'attendre à une erreur, mais cela fonctionne très bien. La façon dont les nombres doivent être affichés en tant que chaînes de caractères est bien définie, donc le navigateur convertit automatiquement le nombre en chaîne de caractères et concatène les deux.
+
+Si vous avez une variable numérique à convertir en chaîne de caractères, ou une chaîne de caractères à convertir en nombre, vous pouvez utiliser les deux constructions suivantes&nbsp;:
+
+- La fonction {{jsxref("Number/Number", "Number()")}} convertit ce qu'on lui passe en nombre si possible. Essayez&nbsp;:
+
+  ```js
+  const myString = "123";
+  const myNum = Number(myString);
+  console.log(typeof myNum);
+  // number
+  ```
+
+- Inversement, la fonction {{jsxref("String/String", "String()")}} convertit son argument en chaîne de caractères. Essayez&nbsp;:
+
+  ```js
+  const myNum2 = 123;
+  const myString2 = String(myNum2);
+  console.log(typeof myString2);
+  // string
+  ```
+
+Ces constructions sont très utiles dans certaines situations. Par exemple, si un·e utilisateur·ice saisit un nombre dans un champ texte d'un formulaire, c'est une chaîne de caractères. Mais si vous voulez additionner ce nombre à autre chose, il doit être de type `number`, donc vous pouvez le passer par `Number()` pour le convertir. C'est exactement ce que nous avons fait dans notre [jeu Deviner un nombre](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html), dans la fonction `checkGuess`.
 
 ## Conclusion
 
-Voilà donc les bases de la manipulation des chaînes de caractères en JavaScript. Dans le prochain article, nous allons bâtir sur ces éléments en examinant certaines méthodes intégrées disponibles pour les chaînes de caractères dans JavaScript et en les utilisant pour mettre les chaînes de caractères dans la forme voulue.
+Voilà, vous connaissez maintenant les bases des chaînes de caractères en JavaScript. Dans l'article suivant, nous irons plus loin en découvrant quelques méthodes intégrées aux chaînes et comment les utiliser pour manipuler le texte selon vos besoins.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

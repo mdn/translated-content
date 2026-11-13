@@ -2,7 +2,7 @@
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 このページでは、 JavaScript での字句文法を説明します。JavaScript のソーステキストは、単なる文字の列です。これをインタープリターに理解させるためには、文字列をより構造化された表現に解釈させる必要があります。構文解析の最初の手順は[字句解析](https://ja.wikipedia.org/wiki/字句解析)と呼ばれ、テキストを左から右へスキャンして、個々の原子的な入力要素の列に変換します。一部の入力要素、例えば[ホワイトスペース](#ホワイトスペース)や[コメント](#コメント)はインタープリターにとって重要ではないので、この手順の後で取り除かれます。それ以外の、例えば[識別子](#識別子)、[キーワード](#キーワード)、[リテラル](#リテラル)、区切り記号（主に[演算子](/ja/docs/Web/JavaScript/Reference/Operators)）は、その後の構文解析に使用します。[改行文字](#改行文字)や複数行のコメントも構文的には重要ではありませんが、不正なトークン列を有効にするために[自動セミコロン挿入](#自動セミコロン挿入)の処理のガイドとなります。
@@ -210,7 +210,7 @@ const els\u{65} = 1;
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -222,13 +222,13 @@ const els\u{65} = 1;
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
+- {{jsxref("null")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - [`true`](#論理値リテラル)
 - {{jsxref("Statements/try...catch", "try")}}

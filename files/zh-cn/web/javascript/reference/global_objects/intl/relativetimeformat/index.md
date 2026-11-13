@@ -3,8 +3,6 @@ title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
 
-{{JSRef}}
-
 **`Intl.RelativeTimeFormat`** 对象用于语言敏感的相对时间的格式化。
 
 {{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}

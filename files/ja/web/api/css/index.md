@@ -2,7 +2,7 @@
 title: CSS
 slug: Web/API/CSS
 l10n:
-  sourceCommit: 930683b0618a36a5bb497cfaedced2f4de767889
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 {{APIRef("CSSOM")}}
@@ -11,9 +11,9 @@ l10n:
 
 ### 静的プロパティ
 
-- {{DOMxRef("CSS.highlights_static", "CSS.highlights")}} {{Experimental_Inline}}
+- {{DOMxRef("CSS/highlights_static", "CSS.highlights")}}
   - : `HighlightRegistry` へのアクセスを提供します。これは任意のテキスト範囲を {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}} を使用してスタイル設定するために使用するものです。
-- {{DOMxRef("CSS.paintWorklet_static", "CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{DOMxRef("CSS/paintWorklet_static", "CSS.paintWorklet")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 描画に関するすべてのクラスを担当するワークレットへのアクセスを提供します。
 
 ## メソッド
@@ -24,13 +24,13 @@ _CSS インターフェイスはユーティリティインターフェイスで
 
 _継承している静的メソッドはありません。_
 
-- {{DOMxRef("CSS.registerProperty_static", "CSS.registerProperty()")}}
-  - : {{cssxref('--*', 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無を指定します。
-- {{DOMxRef("CSS.supports_static", "CSS.supports()")}}
+- {{DOMxRef("CSS/registerProperty_static", "CSS.registerProperty()")}}
+  - : [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を登録し、プロパティ型のチェック、既定値、値の継承の有無を指定します。
+- {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
   - : 引数で与えられた*プロパティと値*の組や条件に対応しているかどうかを示す論理値を返します。
-- {{DOMxRef("CSS.escape_static", "CSS.escape()")}}
+- {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
   - : 主に CSS セレクターの一部として使用するための文字列をエスケープするのに使用できます。
-- {{DOMxRef("CSS/factory_functions_static", 'CSS ファクトリー関数')}}
+- [CSS ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)
   - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) を返すために使用できます。
 
     ```js

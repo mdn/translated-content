@@ -3,7 +3,7 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 
-{{AddonSidebar}}Si votre extension a défini une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), cette méthode l'ouvre.
+Si votre extension a défini une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), cette méthode l'ouvre.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

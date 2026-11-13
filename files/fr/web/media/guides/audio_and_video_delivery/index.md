@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery
 original_slug: Web/Media/Audio_and_video_delivery
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières, du fichier média statique au <i lang="en">live stream</i> (flux en direct) adaptatif. Cet article se veut être le point de départ pour explorer les différents mécanismes de diffusion de média sur le web et la compatiblité avec les navigateurs populaires.
 
 ## Les éléments audio et vidéo
@@ -95,7 +93,8 @@ myAudio.play();
 
 On définit la source de l'audio en fonction du type de fichier audio pris en charge par le navigateur, puis nous plaçons la tête de lecture à 5 secondes et essayons de lire le fichier.
 
-> **Note :** `play()` sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.
+> [!NOTE]
+> `play()` sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.
 
 Il est également possible de donner un fichier WAV encodé en base64 à l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), permettant ainsi de générer de l'audio à la volée&nbsp;:
 

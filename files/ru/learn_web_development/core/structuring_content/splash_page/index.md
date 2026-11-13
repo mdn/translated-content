@@ -3,13 +3,13 @@ title: Страница о Mozilla
 slug: Learn_web_development/Core/Structuring_content/Splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn_web_development/Core/Structuring_content")}}
 
 В этом задании мы проверим ваши знания приёмов, рассмотренных в статьях этого модуля, через добавление изображений и видео на забавную страницу о Mozilla!
 
-| Предпосылки: | Прежде чем приступить к этому заданию, вы должны проработать остальную часть [модуля мультимедиа и встраивания.](/ru/docs/Learn/HTML/Multimedia_and_embedding) |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Для проверки знаний о встраивании изображений и видео в веб-страницы, фреймы и методы визуального восприятия HTML.                                             |
+| Предпосылки: | Прежде чем приступить к этому заданию, вы должны проработать остальную часть [модуля мультимедиа и встраивания.](/ru/docs/Learn_web_development/Core/Structuring_content) |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:      | Для проверки знаний о встраивании изображений и видео в веб-страницы, фреймы и методы визуального восприятия HTML.                                                        |
 
 ## Отправная точка
 
@@ -58,7 +58,7 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 Убедитесь, что вы использовали изображения, соответствующие ссылкам.
 
 > [!NOTE]
-> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Web/HTML/Guides/Responsive_images#useful_developer_tools).
+> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn_web_development/Core/Version_control) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Web/HTML/Guides/Responsive_images#useful_developer_tools).
 
 ### Искусственно изменённая красная панда
 
@@ -76,4 +76,4 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 
 Если вы выполняете это задание как часть организованного курса вам следует передать вашу работу учителю/наставнику для оценки. Если вы обучаетесь самостоятельно, то вы легко можете получить отметку [в ветке форума этого упражнения](https://discourse.mozilla.org/t/mozilla-splash-page-assessment/24679), либо в IRC канале [#mdn](irc://irc.mozilla.org/mdn) на [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте выполнить упражнение - жульничеством ничего не добиться!
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn_web_development/Core/Structuring_content")}}

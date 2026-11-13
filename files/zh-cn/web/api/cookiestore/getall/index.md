@@ -49,7 +49,7 @@ getAll(options)
   - : 记录 cookie 名称的字符串。
 
 - `partitioned`
-  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)。
 
 - `path`
   - : 记录 cookie 路径的字符串。

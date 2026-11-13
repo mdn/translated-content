@@ -3,8 +3,6 @@ title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
 
-{{AddonSidebar}}
-
 Action quand une extension est installée.
 
 Cette API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".

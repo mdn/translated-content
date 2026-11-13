@@ -51,5 +51,5 @@ do {
 
 ## Vea También
 
-- {{jsxref("Sentencias/while", "while")}}
-- {{jsxref("Sentencias/for", "for")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

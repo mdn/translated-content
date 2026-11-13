@@ -1,22 +1,22 @@
 ---
-title: "<ol> : l'élément de liste ordonnée"
+title: "Élément HTML `<ol>` : l'élément de liste ordonnée"
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<ol>`** représente une liste ordonnée, généralement affichée sous forme de liste numérotée.
 
-L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
-
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;ol&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <ol>
-  <li>Mix flour, baking powder, sugar, and salt.</li>
-  <li>In another bowl, mix eggs, milk, and oil.</li>
-  <li>Stir both mixtures together.</li>
-  <li>Fill muffin tray 3/4 full.</li>
-  <li>Bake for 20 minutes.</li>
+  <li>Mélangez la farine, la levure chimique, le sucre et le sel.</li>
+  <li>Dans un autre bol, mélangez les œufs, le lait et l'huile.</li>
+  <li>Incorporez les deux préparations.</li>
+  <li>Remplissez les moules à muffins aux 3/4.</li>
+  <li>Faites cuire pendant 20&nbsp;minutes.</li>
 </ol>
 ```
 
@@ -29,133 +29,42 @@ li {
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
-          ></dfn
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >
-        si les enfants de l'élément <code>&#x3C;ol></code> incluent au moins un
-        élément <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        Zéro, un, ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a> (qui
-        peuvent imbriquer d'autres éléments
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a> ou
-        <a href="/fr/docs/Web/HTML/Element/ul"><code>&#x3C;ul></code></a
-        >),
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
-        >
-        ou
-        <a href="/fr/docs/Web/HTML/Element/template"
-          ><code>&#x3C;template></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>
-        <a href="https://w3c.github.io/aria/#directory">directory</a>,
-        <a href="https://w3c.github.io/aria/#group">group</a>,
-        <a href="https://w3c.github.io/aria/#listbox">listbox</a>,
-        <a href="https://w3c.github.io/aria/#menu">menu</a>,
-        <a href="https://w3c.github.io/aria/#menubar">menubar</a>,
-        <a href="https://w3c.github.io/aria/#none">none</a>,
-        <a href="https://w3c.github.io/aria/#presentation">presentation</a>,
-        <a href="https://w3c.github.io/aria/#radiogroup">radiogroup</a>,
-        <a href="https://w3c.github.io/aria/#tablist">tablist</a>,
-        <a href="https://w3c.github.io/aria/#toolbar">toolbar</a>,
-        <a href="https://w3c.github.io/aria/#tree">tree</a>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLOListElement"
-          ><code>HTMLOListElement</code></a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributs
 
-À l'instar des autres éléments HTML, il est possible d'utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
+- `compact` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Cet attribut booléen suggère que la liste doit être affichée dans un style compact. L'interprétation de cet attribut dépend du navigateur. Utilisez plutôt le [CSS](/fr/docs/Web/CSS)&nbsp;: pour obtenir un effet similaire à l'attribut `compact`, la propriété CSS {{CSSxRef("line-height")}} peut être utilisée avec une valeur de `80%`.
 - **`reversed`**
   - : Cet attribut booléen indique que les éléments de la liste sont dans l'ordre inverse. Les éléments sont numérotés de haut en bas.
 - **`start`**
   - : Un nombre entier à partir duquel on commence à compter pour les éléments de la liste. Toujours un chiffre arabique (1, 2, 3, etc.), même lorsque le `type` de numérotation est constitué de lettres ou de chiffres romains. Par exemple, pour commencer à numéroter les éléments à partir de la lettre "d" ou du chiffre romain "iv", utilisez `start="4"`.
 - **`type`**
-  - : Définit le type de numérotation :
+  - : Définit le type de numérotation&nbsp;:
     - `a` pour les lettres minuscules
     - `A` pour les lettres majuscules
     - `i` pour les chiffres romains minuscules
     - `I` pour les chiffres romains majuscules
     - `1` pour les chiffres (par défaut)
 
-    Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Reference/Elements/li#attr-type) est utilisé sur un élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) fermé.
+    Le type défini est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Reference/Elements/li#type) est utilisé sur un élément {{HTMLElement("li")}} fermé.
 
     > [!NOTE]
-    > À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+    > À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS {{CSSxRef("list-style-type")}}.
 
 ## Note d'utilisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/Reference/Selectors/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
 
-Les éléments `<ol>` et [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` comme vous le souhaitez.
+Les éléments `<ol>` et {{HTMLElement("ul")}} (ou le synonyme {{HTMLElement("menu")}}) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` (ou `<menu>`) comme vous le souhaitez.
 
-Les éléments `<ol>` et [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) représentent tous deux une liste d'éléments. La différence est qu'avec l'élément `<ol>`, l'ordre est significatif. Par exemple :
+Les éléments `<ol>` et {{HTMLElement("ul")}} représentent tous deux une liste d'éléments. La différence est qu'avec l'élément `<ol>`, l'ordre est significatif. Par exemple&nbsp;:
 
 - Étapes d'une recette
 - Instructions détaillées
 - La liste des ingrédients en proportion décroissante sur les étiquettes d'information nutritionnelle
 
-Pour déterminer la liste à utiliser, essayez de modifier l'ordre des éléments de la liste ; si le sens change, utilisez l'élément `<ol>` - sinon, vous pouvez utiliser [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul).
+Pour déterminer la liste à utiliser, essayez de modifier l'ordre des éléments de la liste&nbsp;; si le sens change, utilisez l'élément `<ol>` — sinon, vous pouvez utiliser {{HTMLElement("ul")}}.
 
 ## Exemples
 
@@ -172,7 +81,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("", 400, 140)}}
+{{EmbedLiveSample("exemple_simple", 400, 100)}}
 
 ### Utilisation des chiffres romains
 
@@ -186,14 +95,14 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("", 400, 120)}}
+{{EmbedLiveSample("utilisation_des_chiffres_romains", 400, 100)}}
 
 ### Utilisation de l'attribut start
 
 ```html
 <p>
   Les places d'arrivée des concurrents qui ne sont pas dans le cercle des
-  gagnants :
+  gagnants&nbsp;:
 </p>
 
 <ol start="4">
@@ -205,7 +114,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("", 400, 210)}}
+{{EmbedLiveSample("Utilisation de l'attribut start", 400, 100)}}
 
 ### Listes imbriquées
 
@@ -228,7 +137,7 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("", 400, 200)}}
+{{EmbedLiveSample("Listes imbriquées", 400, 150)}}
 
 ### Liste non ordonnée dans une liste ordonnée
 
@@ -251,7 +160,76 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 #### Résultat
 
-{{EmbedLiveSample("", 400, 210)}}
+{{EmbedLiveSample("Liste non ordonnée dans une liste ordonnée", 400, 150)}}
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >,
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
+          >contenu tangible</a
+        >
+        si les enfants de l'élément <code>&#x3C;ol></code> incluent au moins un
+        élément {{HTMLElement("li")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        Zéro ou plusieurs éléments {{HTMLElement("li")}},
+        {{HTMLElement("script")}} et {{HTMLElement("template")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >contenu de flux</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>{{DOMxRef("HTMLOListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -263,9 +241,9 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux listes : [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li), [`<menu>`](/fr/docs/Web/HTML/Reference/Elements/menu)
-- Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>` :
-  - [`list-style`](/fr/docs/Web/CSS/list-style) qui permet de choisir comment les nombres ordinaux sont affichés,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), utiles pour gérer les listes imbriquées complexes,
-  - [`line-height`](/fr/docs/Web/CSS/line-height) qui permet d'obtenir le même effet que l'attribut [`compact`](#attr-compact) qui est déprécié,
-  - [`margin`](/fr/docs/Web/CSS/margin) qui permet de contrôler l'indentation de la liste.
+- Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
+- Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>`&nbsp;:
+  - La propriété CSS {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer les listes imbriquées complexes,
+  - La propriété CSS {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
+  - La propriété CSS {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.

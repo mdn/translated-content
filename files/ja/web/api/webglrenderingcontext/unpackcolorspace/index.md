@@ -3,12 +3,12 @@ title: "WebGLRenderingContext: unpackColorSpace プロパティ"
 short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+  sourceCommit: fe3f1f2dfaf44fcbe868b91b6a429270d2055716
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-**`WebGLRenderingContext.unpackColorSpace`** プロパティは、テクスチャをインポートする際に変換する色空間を指定します。既定値 (`srgb`) の他に、 `display-p3` 色空間も使用することができます。
+**`WebGLRenderingContext.unpackColorSpace`** プロパティは、テクスチャをインポートする際に変換する色空間を指定します。デフォルト値 (`srgb`) の他に、 `display-p3` 色空間も使用することができます。
 
 テクスチャ画像のソースとしては、以下のものが利用できます。
 
@@ -26,12 +26,12 @@ l10n:
 
 ## 値
 
-This property can have the following values:
+このプロパティは次の値を取ることができます。
 
-- `"srgb"` selects the [sRGB color space](https://ja.wikipedia.org/wiki/色空間#sRGB). This is the default value.
-- `"display-p3"` selects the [display-p3 color space](https://ja.wikipedia.org/wiki/DCI-P3).
+- `"srgb"` は [sRGB 色空間](https://ja.wikipedia.org/wiki/色空間#sRGB)を選択します。これはデフォルト値です。
+- `"display-p3"` は [display-p3 色空間](https://ja.wikipedia.org/wiki/DCI-P3)を選択します。
 
-If an invalid value is specified, then the value of `unpackColorSpace` will remain unchanged.
+無効な値が指定された場合、`unpackColorSpace` の値は変更されません。
 
 ## 例
 
@@ -44,8 +44,8 @@ const gl = canvas.getContext("webgl");
 gl.drawingBufferColorSpace = "display-p3";
 gl.unpackColorSpace = "display-p3";
 
-// Some sRGB ImageData
-// Will be converted from sRGB to Display P3
+// 一部の sRGB ImageData は、
+// sRGB から Display P3 へ変換される
 const imageData = new ImageData(data, 32, 32);
 
 const tex = gl.createTexture();

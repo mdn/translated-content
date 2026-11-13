@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
+{{ ApiRef("HTML DOM") }}
 
 **`Navigator.productSub`** 只读属性返回当前浏览器的构建版本号。
 

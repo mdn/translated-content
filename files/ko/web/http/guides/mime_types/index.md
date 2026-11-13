@@ -74,7 +74,7 @@ multipart 타입은 여러 컴포넌트 조각으로 구성된 문서를 나타�
     일반적인 예로`image/jpeg`, `image/png` 및 `image/svg+xml`를 들 수 있습니다.
     [(IANA에서 이미지 타입 레지스트리를 확인하세요)](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
 - `model`
-  - : 3D 객체 또는 화면에 대한 모델 데이터입니다. 일반적인 예로 `model/3mf` 및 `model/vrml`를 들 수 있습니다..
+  - : 3D 객체 또는 화면에 대한 모델 데이터입니다. 일반적인 예로 `model/3mf` 및 `model/vrml`를 들 수 있습니다.
     [(IANA에서 모델 타입 레지스트리를 확인하세요)](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
 - `text`
   - : 사람이 읽을 수 있는 콘텐츠, 소스 코드 또는 쉼표로 구분된 값 (CSV) 형태 데이터와 같은, 텍스트 형식의 데이터를 가지는 텍스트 전용 데이터입니다.
@@ -114,7 +114,8 @@ multipart 타입은 여러 컴포넌트 조각으로 구성된 문서를 나타�
 
 이것은 텍스트 파일에 대한 기본값입니다. 실제로 '알려지지 않은 텍스트' 파일일지라도 브라우저들은 그것을 보여줄 수 있다고 가정합니다.
 
-> **참고:** `text/plain`이 '모든 종류의 텍스트 데이터'를 의미하지는 않습니다.
+> [!NOTE]
+> `text/plain`이 '모든 종류의 텍스트 데이터'를 의미하지는 않습니다.
 > 만약 브라우저가 특정 종류의 텍스트 데이터를 예상한 경우, 반드시 일치한다고 간주하지 않을 겁니다.
 > 특히, CSS 파일을 선언한 {{HTMLElement("link")}} 요소로부터 `text/plain` 파일을 다운로드할 경우, `text/plain`으로 표현된다면 브라우저는 그것을 유효한 CSS 파일로 감지하지 않을 겁니다.
 > CSS의 MIME 타입인 `text/css`이 사용되어야만 합니다.

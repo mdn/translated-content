@@ -26,14 +26,14 @@ ruby {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
     </tr>
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -69,6 +69,8 @@ ruby {
 
 다음 예제는 {{htmlelement("ruby")}} 요소를 사용해 한자의 발음을 표기합니다.
 
+### 루비를 지원하는 경우
+
 ```html
 <ruby> 漢 <rt>한</rt> 字 <rt>자</rt> </ruby>
 ```
@@ -81,7 +83,9 @@ body {
 
 결과는 다음과 같습니다.
 
-{{EmbedLiveSample("with-ruby", 600, 60)}}
+{{EmbedLiveSample("루비를 지원하는 경우", 600, 60)}}
+
+### 루비를 지원하지 않는 경우
 
 브라우저가 루비를 지원하지 않는 경우엔 다음처럼 보일 것입니다.
 
@@ -95,7 +99,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("without-ruby", 600, 60)}}
+{{EmbedLiveSample("루비를 지원하지 않는 경우", 600, 60)}}
 
 ## 명세
 

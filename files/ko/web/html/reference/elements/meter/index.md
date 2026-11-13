@@ -29,16 +29,16 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능"
           >레이블 가능</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -46,7 +46,7 @@ label {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >. 단, 다른 <code>&#x3C;meter></code> 요소는 사용할 수 없습니다.
       </td>
@@ -58,7 +58,7 @@ label {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -81,7 +81,8 @@ label {
 - `value`
   - : 현재의 값. 최소와 최댓값(`min`과 `max` 특성)을 지정한 경우, 그 사이여야 합니다. 지정하지 않았거나 잘못된 값인 경우 `0`으로 간주합니다. 지정했으나 범위 바깥인 경우, 범위에 맞춰 나머지 값을 버립니다.
 
-    > **참고:**`value`가 `0` 이상 `1` 이하가 아닌 이상, `min`과 `max`를 정의해 `value` 값이 그 안에 들어가도록 해야 합니다.
+    > [!NOTE]
+    > `value`가 `0` 이상 `1` 이하가 아닌 이상, `min`과 `max`를 정의해 `value` 값이 그 안에 들어가도록 해야 합니다.
 
 - `min`
   - : 측정 범위의 가능한 최솟값. 지정할 경우 최댓값(`max` 특성) 미만이어야 합니다. 지정하지 않은 경우 `0`입니다.

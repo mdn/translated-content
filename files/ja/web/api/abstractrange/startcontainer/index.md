@@ -3,12 +3,14 @@ title: "AbstractRange: startContainer プロパティ"
 short-title: startContainer
 slug: Web/API/AbstractRange/startContainer
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: f314991b236fce81b712a6df59e4643de0f98449
 ---
 
 {{APIRef("DOM")}}
 
 **`startContainer`** は {{domxref("AbstractRange")}} インターフェイスの読み取り専用プロパティで、範囲の先頭の {{domxref("Node")}} を返します。
+
+先頭の位置を変更するには、{{domxref("Range.setStart()")}} メソッドなどを使用してください。
 
 ## 値
 
@@ -17,7 +19,11 @@ l10n:
 ## 例
 
 ```js
-let startNode = range.startContainer;
+const range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+
+const startRangeNode = range.startContainer;
 ```
 
 ## 仕様書

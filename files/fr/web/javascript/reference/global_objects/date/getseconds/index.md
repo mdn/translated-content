@@ -1,40 +1,45 @@
 ---
-title: Date.prototype.getSeconds()
+title: "Date : méthode getSeconds()"
+short-title: getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getSeconds()`** des instances de {{JSxRef("Date")}} retourne les secondes pour la date renseignée d'après l'heure locale.
 
-La méthode **`getSeconds()`** renvoie les secondes pour la date renseignée d'après l'heure locale.
-
-{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getSeconds()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 00:20:18");
 
 console.log(moonLanding.getSeconds());
-// Expected output: 18
+// Résultat attendu : 18
 ```
 
 ## Syntaxe
 
-```js
-dateObj.getSeconds();
+```js-nolint
+getSeconds()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-La valeur renvoyée par `getSeconds()` est un entier entre 0 et 59 correspondant au nombre de secondes pour la date donnée selon l'heure locale.
+Un entier, entre 0 et 59, représentant les secondes pour la date indiquée selon l'heure locale. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Exemples
 
-### Utiliser `getSeconds()`
+### Utiliser la méthode `getSeconds()`
 
-La seconde instruction ci-dessous assigne la valeur 30 à la variable `secondes`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+La variable `secondes` a pour valeur `30`, d'après la valeur de l'objet {{JSxRef("Date")}} `noel95`.
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:30");
-var secondes = noel95.getSeconds();
+const noel95 = new Date("1995-12-25T23:15:30");
+const secondes = noel95.getSeconds();
 
 console.log(secondes); //30
 ```
@@ -49,5 +54,5 @@ console.log(secondes); //30
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCSeconds()")}}
+- La méthode {{JSxRef("Date.prototype.setSeconds()")}}

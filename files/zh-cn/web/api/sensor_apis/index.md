@@ -19,7 +19,7 @@ slug: Web/API/Sensor_APIs
 
 因此，传感器 API 的功能检测必须包含 API 本身的检测以及[防御性编程策略（见下）](#defensive_programming)（defensive programming strategies）。
 
-下面的例子展示了检测传感器 API 的三种方法。此外你还可以把对象实例化部分放在一个{{jsxref('statements/try...catch', 'try...catch')}} 块中。注意通过你并不能通过{{domxref('Navigator')}} 接口来实现传感器检测。
+下面的例子展示了检测传感器 API 的三种方法。此外你还可以把对象实例化部分放在一个{{jsxref('Statements/try...catch', 'try...catch')}} 块中。注意通过你并不能通过{{domxref('Navigator')}} 接口来实现传感器检测。
 
 ```js
 if (typeof Gyroscope === "function") {
@@ -101,7 +101,7 @@ magSensor.start();
 - 使用中要侦听抛出的错误。
 - 正确处理错误以提升用户体验而非相反
 
-下面的示例代码说明以上原则。{{jsxref('statements/try...catch', 'try...catch')}}代码块捕捉在实例化传感器时抛出的错误。它实现了一个{{domxref('Sensor.onerror')}}处理函数以捕捉使用中抛出的错误。它只在以下情况下提示用户：需要请求[权限](/zh-CN/docs/Web/API/Permissions_API)时，以及所请求的传感器类型在设备上不支持时。
+下面的示例代码说明以上原则。{{jsxref('Statements/try...catch', 'try...catch')}}代码块捕捉在实例化传感器时抛出的错误。它实现了一个{{domxref('Sensor.onerror')}}处理函数以捕捉使用中抛出的错误。它只在以下情况下提示用户：需要请求[权限](/zh-CN/docs/Web/API/Permissions_API)时，以及所请求的传感器类型在设备上不支持时。
 
 > [!NOTE]
 > 如果一个权限策略（permission policy）阻止了对某功能的使用，这是因为你的代码与你的服务器上设置的策略不一致。这种情况是不应该显示给用户看的。具体实现请参见 {{httpheader('Permissions-Policy')}}。

@@ -10,7 +10,7 @@ l10n:
 
 **`anchorElement`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、この要素のアンカー要素への参照を返します。これは、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性でアンカーに関連付けられた要素の場合にのみ動作し、CSS の {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティでアンカーに関連付けられた要素では動作しません。
 
-アンカーの機能と使用法の詳細情報については、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)のガイドを参照してください。
+アンカーの機能と使用法の詳細情報については、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)のガイドを参照してください。
 
 ## 値
 
@@ -71,5 +71,5 @@ try {
 
 - HTML [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性
 - CSS {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティ
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)のガイド
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)のガイド

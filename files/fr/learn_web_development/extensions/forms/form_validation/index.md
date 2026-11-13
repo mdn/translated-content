@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 original_slug: Learn/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
 
@@ -14,9 +14,9 @@ Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les don
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs, une bonne compréhension du
-        <a href="/fr/docs/Learn/HTML">HTML</a>, des
-        <a href="/fr/docs/Learn/CSS">CSS</a> et de
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, des
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et de
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -243,7 +243,8 @@ Voici cet exemple s'exécutant en «&nbsp;live&nbsp;»&nbsp;:
 
 {{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}
 
-> **Note :** `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
+> [!NOTE]
+> `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
 
 ### Exemple complet
 
@@ -369,7 +370,7 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 </form>
 ```
 
-En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>):
+En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/Web/HTML/Guides/Constraint_validation#Constraint_APIs_element.setCustomValidity()>):
 
 ```js
 var email = document.getElementById("mail");
@@ -774,4 +775,4 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Être tolérant sur le format des données à envoyer.
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}

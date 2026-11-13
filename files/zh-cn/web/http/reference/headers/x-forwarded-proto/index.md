@@ -7,13 +7,13 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
 
 HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化版本。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 
-```plain
+```http
 X-Forwarded-Proto: <protocol>
 ```
 
@@ -24,13 +24,13 @@ X-Forwarded-Proto: <protocol>
 
 ## 示例
 
-```plain
+```http
 X-Forwarded-Proto: https
 ```
 
 其他非标准形式：
 
-```plain
+```http
 # Microsoft
 Front-End-Https: on
 

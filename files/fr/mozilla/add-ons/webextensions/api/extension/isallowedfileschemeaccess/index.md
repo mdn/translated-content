@@ -3,7 +3,7 @@ title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 ---
 
-{{AddonSidebar}}Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.
+Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

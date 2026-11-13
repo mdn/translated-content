@@ -2,7 +2,7 @@
 title: ウェブの閲覧
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -10,7 +10,7 @@ l10n:
 このモジュールのこの時点では、少なくとも 2 つのウェブブラウザーをコンピューターにインストールしておく必要があります。この記事では、ブラウザーの使用についてもう少し詳しく説明し、ウェブブラウザーの作業方法、操作する一般的なアイテムの一部の違い、情報検索方法について見ていきます。
 
 > [!NOTE]
-> 端末に既定でインストールされているブラウザー以外に何も持っていない場合は、いくつか取得してください。[最新のウェブブラウザーのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#最新のウェブブラウザーのインストール)を参照してください。
+> 端末にデフォルトでインストールされているブラウザー以外に何も持っていない場合は、いくつか取得してください。[現行のウェブブラウザー](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#現行のウェブブラウザー)を参照してください。
 
 他の分野と同様、ウェブにも多くの専門用語や技術用語があります。心配しないでください。ここでは、すべてを一度に説明することはありません（興味があれば、[用語集](/ja/docs/Glossary)を調べることができます）。ただし、常に耳にする表現であるため、最初から理解しておく必要がある基本的な用語がいくつかあります。以下に、重要な用語をいくつか紹介します。
 
@@ -52,7 +52,7 @@ l10n:
 
 公立図書館に簡単に例えてみましょう。図書館に行ったときに一般的に行うことは次の通りです。
 
-1. 検索インデックスを探して、読みたい書籍のタイトルを探します。
+1. 検索目録を探して、読みたい書籍のタイトルを探します。
 2. その書籍のカタログ番号をメモします。
 3. 書籍が収蔵されている特定の書架へ行き、カタログ番号を見つけて、本を入手します。
 
@@ -61,7 +61,7 @@ l10n:
 - 図書館はウェブサーバーのようなものです。いくつかの書架があり、複数のウェブサイトをホスティングしているウェブサーバーに似ています。
 - 図書館の様々な書架（科学、数学、歴史など）はウェブサイトのようなものです。それぞれの書架は個々のウェブサイトのようなものです（同じ本が複数の書架にあることはありません）。
 - それぞれの書架にある書籍はウェブページのようなものです。1 つのウェブサイトに複数のウェブページがあることがあります。例えば、科学の書架（ウェブサイト）には、熱、音、熱力学、人間生物学などに関する書籍が存在します。
-- 検索インデックスは検索エンジンのようなものです。それぞれの書籍は図書館内にカタログ番号で特定できる独自の場所にあります（同じ場所に 2 冊の本を保管することはできません）。
+- 検索目録は検索エンジンのようなものです。それぞれの書籍は図書館内にカタログ番号で特定できる独自の場所にあります（同じ場所に 2 冊の本を保管することはできません）。
 
 それでは、それぞれの用語について、もう少し詳しく見ていくことにしましょう。
 
@@ -148,7 +148,7 @@ l10n:
 
 特定のウェブ技術に関する一般的な情報を探している場合は、 MDN 検索ボックスにその名前を入力してください。たとえば、検索ボックスに `ボックスモデル`、`fetch()`、`video 要素` などと入力して、何が表示されるか確認してください。必要な情報が見つからない場合は、検索範囲を広げて、検索エンジンで検索語句を試してください。
 
-`Javascript でフィボナッチ数列を生成する方法` や `その数が素数であるかどうかをJavaScript で判定する方法`など、特定の問題の解決法を探している場合は、プログラミングに関する問題解決に特化したコミュニティである [StackOverflow](https://stackoverflow.com) などのウェブサイトで検索することをお勧めします。
+`Javascript でフィボナッチ数列を生成する方法` や `その数が素数であるかどうかをJavaScript で判定する方法`など、特定の問題の解決法を探している場合は、プログラミングに関する問題解決に特化したコミュニティである [Stack Overflow](https://stackoverflow.com) などのウェブサイトで検索することをお勧めします。
 繰り返しになりますが、特定のサイトで役立つ回答が得られなかった場合は、一般的な検索エンジンを使用してみてください。
 
 先に進む前に、自分自身で学びたいトピックをいくつか探してみてください。より具体的な検索や、より一般的な検索、関連する異なる用語を使用して、何が最も効果的か試してみてください。試すべきその他の方法については、[検索のコツ](#検索のコツ) をご覧ください。
@@ -186,7 +186,7 @@ AI が生成した検索結果は、情報を受け取るための非常に一�
 - 上記の例で示したように、検索語句には使用している言語を含めるべきです。単に `フィボナッチ数列を出力する方法`と入力すると、Python、C++、Java、Ruby など、さまざまな言語での解決策が表示されてしまいます。 JavaScript を学ぼうとしているときには、あまり役立ちません。
 - 役立つ回答を見つけたら、後で再び見つけられるようにブックマークするか、どこかにコピーを保存しておきましょう。同じ問題に何度も遭遇することに驚くはずです。
 - コードが特定のエラーメッセージを返す場合は、そのエラーを検索エンジンやAIプロンプトに入力してみてください。他の人々も過去に同じエラーに直面し、解決策をどこかに公開している可能性が高いです。
-- 可能な限り、 MDN や [StackOverflow](https://stackoverflow.com) のような推奨サイトを利用しましょう。
+- 可能な限り、 MDN や [Stack Overflow](https://stackoverflow.com) のような推奨サイトを利用しましょう。
 - 検索エンジンには、単純な検索語句以上の結果を得られる高度な検索テクニックが多くあります。 `ant fish cheese` のような単純な検索語句を入力すると、それらの単語の任意の組み合わせを含む結果が返されます。しかし、ほとんどの検索エンジンは以下のような形式に対応しています。
   - `"ant fish cheese"`（引用符付き）と入力すると、そのフレーズを正確に含む結果のみが返されます。
   - `ant cheese -fish` は、 `ant` や `cheese` を含むが、 `fish` を含まない結果を返します。
@@ -194,6 +194,6 @@ AI が生成した検索結果は、情報を受け取るための非常に一�
   - `intitle:cheese` は、ページのメインタイトルに "cheese" が含まれる結果のみを返します。
 
   > [!NOTE]
-  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/)、[高度な検索オプション](https://support.microsoft.com/ja-jp/topic/高度な検索オプション-b92e25f1-0085-4271-bdf9-14aaea720930)などがあります。
+  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax)、[高度な検索オプション](https://support.microsoft.com/ja-jp/bing/advanced-search-options)などがあります。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

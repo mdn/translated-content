@@ -3,15 +3,14 @@ title: "AbortSignal: timeout() 静的メソッド"
 short-title: timeout()
 slug: Web/API/AbortSignal/timeout_static
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: 58163fc9e99e2ea7eb6c2b698f02343009351dd9
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortSignal.timeout()`** は静的メソッドで、指定した時間が経過すると自動的に中止する {{domxref("AbortSignal")}} を返すものです。
 
-このシグナルは、タイムアウト時には `TimeoutError` {{domxref("DOMException")}} で、ブラウザーの停止ボタン（または他の組み込まれた「停止」処理）を押した場合には `AbortError` {{domxref("DOMException")}} で中止されます。
-これにより、通常ユーザーへの通知が必要なタイムアウトエラーと、そうでないユーザーによる中止の発生を UI で区別できます。
+このシグナルは、タイムアウト時には `TimeoutError` {{domxref("DOMException")}} で中止されます。
 
 タイムアウトは経過時間ではなく活動時間に基づきます。コードが実行されているワーカーがサスペンドされている場合や、文書がバックフォワードキャッシュ ("[bfcache](https://web.dev/articles/bfcache)") にある場合は、事実上一時停止されます。
 
@@ -27,6 +26,7 @@ AbortSignal.timeout(time)
 
 - `time`
   - : 返された {{domxref("AbortSignal")}} が中止するまでの「アクティブ」な時間をミリ秒単位で指定します。
+    この値は 0 と {{jsxref("Number.MAX_SAFE_INTEGER")}} の間でなければなりません。
 
 ### 返値
 
@@ -36,7 +36,7 @@ AbortSignal.timeout(time)
 
 ## 例
 
-フェッチ処理に失敗した場合、5 秒後にタイムアウトする単純な例を下記に示します。
+フェッチ処理に失敗した場合、5 秒後にタイムアウトする例を下記に示します。
 このメソッドが対応していない場合、ブラウザーの「停止」ボタンが押された場合、他にも何らかの理由で失敗する可能性があることに注意してください。
 
 ```js
@@ -48,15 +48,17 @@ try {
   // …
 } catch (err) {
   if (err.name === "TimeoutError") {
-    console.error("Timeout: It took more than 5 seconds to get the result!");
+    // この例外は、中止シグナルによるもの
+    console.error("タイムアウト: 結果を取得するまで 5 秒以上かかりました。");
   } else if (err.name === "AbortError") {
+    // この例外はフェッチ処理そのものから発生した
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+      "ユーザー操作（ブラウザーの停止ボタン、タブの閉じなど）によりフェッチが中止されました。",
     );
   } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
+    console.error("AbortSignal.timeout() メソッドに対応していません");
   } else {
-    // A network error, or some other problem.
+    // ネットワークエラー、またはその他の問題
     console.error(`Error: type: ${err.name}, message: ${err.message}`);
   }
 }

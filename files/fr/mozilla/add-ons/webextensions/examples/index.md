@@ -3,8 +3,6 @@ title: Exemples de WebExtensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
 ---
 
-{{AddonSidebar}}
-
 Pour illustrer la manière d'utiliser les API WebExtension, nous disposons d'un répertoire d'exemples d'extensions sur le site <https://github.com/mdn/webextensions-examples>. Cet article décrit comment exécuter ces exemples et énumère les exemples ainsi que les API WebExtension qu'ils illustrent.
 
 Ces exemples fonctionnent dans Firefox Nightly : la plupart travaillent dans les versions antérieures de Firefox, mais vérifiez la version minimum [strict_min_version](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans le fichier manifest.json de l'extension pour en être sur.

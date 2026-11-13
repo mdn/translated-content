@@ -78,11 +78,11 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
 
 - {{domxref("MouseEvent.which")}} {{readonlyinline}}
   - : Le bouton qui est pressé alors que l'événement est lancé.
-- MouseEvent.mozPressure {{non-standard_inline()}} {{readonlyinline}}
+- MouseEvent.mozPressure {{non-standard_inline}} {{readonlyinline}}
   - : La quantité de pression appliquée à un appareil tactile ou tablette lors de la génération de l'événement ; l'amplitude de cette valeur se situe entre 0.0 (pression minimum) et 1.0 (pression maximum).
-- MouseEvent.mozInputSource {{non-standard_inline()}} {{readonlyinline}}
+- MouseEvent.mozInputSource {{non-standard_inline}} {{readonlyinline}}
   - : Le type d'appareil qui a généré l'événement (une des constantes `MOZ_SOURCE_*` listées ci-dessous). Ceci permet, par exemple, de déterminer si un événement de pointeur est généré par une souris ou par un événement tactile (qui pourrait affecter le degré de précision avec lequel il est possible d'interpréter les coordonnées associées à l'événement).
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline}} {{readonlyinline}}
   - : La quantité de pression appliquée en cliquant.
 - {{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}
   - : Alias pour {{domxref("MouseEvent.clientX")}}.

@@ -50,7 +50,7 @@ WebVR API - фантастическое дополнение к набору и
 При просмотре исходного кода [основного JavaScript файла нашего примера](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), вы легко сможете найти части, относящиеся к WebVR, по предваряющим их комментариям. Просто забейте в строку поиска по документу строчку "WebVR".
 
 > [!NOTE]
-> Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
+> Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn_web_development/Core/Scripting) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
 
 ## Как это работает?
 
@@ -420,7 +420,7 @@ The last part of the rendering loop involves us calling {{domxref("VRDisplay.sub
 
 In this section we'll discuss the `displayPoseStats()` function, which displays our updated pose data on each frame. The function is fairly simple.
 
-First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{domxref("Float32Array")}}.
+First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{jsxref("Float32Array")}}.
 
 ```js
 function displayPoseStats(pose) {

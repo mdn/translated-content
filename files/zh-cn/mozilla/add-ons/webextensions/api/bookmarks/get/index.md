@@ -20,7 +20,7 @@ let getBookmarks = browser.bookmarks.get(
 ### 参数
 
 - `idOrIdList`
-  - : 一个{{jsxref("string", "字符串", "", 1)}}或字符串{{jsxref("array", "数组", "", 1)}}，指定一个或多个要检索的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID。
+  - : 一个{{jsxref("String", "字符串", "", 1)}}或字符串{{jsxref("Array", "数组", "", 1)}}，指定一个或多个要检索的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 对象的 ID。
 
 ### 返回值
 

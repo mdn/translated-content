@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.
 
@@ -133,7 +133,7 @@ La majorité des attaques citées précédement réusissent lorsque l'applicatio
 Quelques autres points que vous pouvez mettre en place :
 
 - Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).
-- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/HTTPS) et [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
+- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/HTTPS) et [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
 - Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/Web)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
 - Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
 - Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.
@@ -146,4 +146,4 @@ Cet article a présenté le concept de sécurité web et quelques-unes des menac
 
 C'est la fin de [ce module](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

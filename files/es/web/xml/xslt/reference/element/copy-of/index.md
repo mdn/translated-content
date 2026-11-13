@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/copy-of
 original_slug: Web/XSLT/Reference/Element/copy-of
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:copy-of>` crea una copia completa (incluyendo nodos descendientes) en el documento de salida de lo que sea que indique el atributo.
 

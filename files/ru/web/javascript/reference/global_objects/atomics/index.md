@@ -46,7 +46,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 
 - {{jsxref("Atomics.wait()")}}
   - : Проверяет, содержится в указанной позиции массива все ещё представленное значение и спит в ожидании или тайм-аут. Возвращает `"ok"`, `"not-equal"` или `"timed-out"`. Если ожидание не разрешено в вызывающем агенте, тогда выбросит ошибку исключения (большинство браузеров не разрешают `wait()` в главном потоке браузера).
-- {{jsxref("Atomics.wake()")}}
+- {{jsxref("Atomics.notify()", "Atomics.wake()")}}
   - : Пробуждает некоторых агентов, которые спят в очереди ожидания в указанной позиции массива. Возвращает количество агентов, которые были разбужены.
 - {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
   - : Оптимизационный примитив, который может быть использован для определения использовать ли блокирующие операции или атомарные. Возвращает `true`, если атомарные операции над массивами с указанным размерами элементов будут выполнены с использованием аппаратных атомарных операций (как противоположность блокирующим). Только для специалистов.
@@ -64,9 +64,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 До SpiderMonkey 48, финальные имена API и семантика не были ещё реализованы. Изменения между Firefox v. 46 и v. 48:
 
 - Методы `Atomics.futexWakeOrRequeue()` и `Atomics.fence()` полностью удалены ([Firefox bug 1259544](https://bugzil.la/1259544) и [Firefox bug 1225028](https://bugzil.la/1225028)).
-- Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.wake()")}} были названы `Atomics.futexWait()` и `Atomics.futexWake()` ([Firefox bug 1260910](https://bugzil.la/1260910)). Примечание: старые имена были удалены в версии 49 и младше ([Firefox bug 1262062](https://bugzil.la/1262062)).
+- Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.notify()", "Atomics.wake()")}} были названы `Atomics.futexWait()` и `Atomics.futexWake()` ([Firefox bug 1260910](https://bugzil.la/1260910)). Примечание: старые имена были удалены в версии 49 и младше ([Firefox bug 1262062](https://bugzil.la/1262062)).
 - Свойства `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` были удалены. {{jsxref("Atomics.wait()")}} метод теперь возвращает строки "ok", "timed-out" и "not-equal" ([Firefox bug 1260835](https://bugzil.la/1260835)).
-- Параметр `count` метода {{jsxref("Atomics.wake()")}} изменился: теперь он по умолчанию равен `+Infinity`, а не `0` ([Firefox bug 1253350](https://bugzil.la/1253350)).
+- Параметр `count` метода {{jsxref("Atomics.notify()", "Atomics.wake()")}} изменился: теперь он по умолчанию равен `+Infinity`, а не `0` ([Firefox bug 1253350](https://bugzil.la/1253350)).
 
 ## Смотрите также
 

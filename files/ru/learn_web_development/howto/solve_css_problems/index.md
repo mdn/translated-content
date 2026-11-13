@@ -59,8 +59,8 @@ Beyond the basics, CSS is allows very advanced design techniques. These articles
 
 ### Разметка
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Using CSS multi-column layouts](/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Using CSS multi-column layouts](/ru/docs/Web/CSS/Guides/Multicol_layout/Using)
 - [Using CSS generated content](/ru/docs/Learn/CSS/Howto/Generated_content)
 
 ## Смотрите также

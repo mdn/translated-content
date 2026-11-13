@@ -1,32 +1,33 @@
 ---
-title: Référence des événements
+title: Évènements DOM
+short-title: Travailler avec des évènements
 slug: Web/API/Document_Object_Model/Events
-original_slug: Web/Events
+l10n:
+  sourceCommit: de189c9ecabb11ee95043a801729050c624723a7
 ---
 
-Les [événements DOM](/fr/docs/Learn_web_development/Core/Scripting/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
+{{DefaultAPISidebar("DOM")}}
 
-Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
+Les [évènements DOM](/fr/docs/Learn_web_development/Core/Scripting/Events) sont déclenchés pour notifier au code des «&nbsp;changements intéressants&nbsp;» qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur·ice, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des évènements médiatiques provenant du système d'exploitation), et d'autres causes.
 
-Cette rubrique fournit un index des principales _sortes_ d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.
+Chaque évènement est représenté par un objet implémentant l'interface {{DOMxRef("Event")}}, et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque évènement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'évènement associé et d'autres informations pertinentes. Une liste complète des différents types d'évènements est donnée dans [Event > Interfaces basées sur Event](/fr/docs/Web/API/Event#introduction).
 
-> [!NOTE]
-> Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
+Cette rubrique fournit un index des principales _sortes_ d'évènements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'évènements. À la fin se trouve une liste exhaustive de tous les évènements documentés.
 
-## Index des événements
+## Index des évènements
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th>Type d'événement</th>
-      <th>Description</th>
+      <th>Type d'évènement</th>
+      <th style="width: 50%">Description</th>
       <th>Documentation</th>
     </tr>
     <tr>
       <td>Animation</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/Web_Animations_API">Web Animation API</a>.
         </p>
         <p>
@@ -35,30 +36,30 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
       </td>
       <td>
-        Événements d'animation déclenchés sur
-        <a href="/fr/docs/Web/API/Document#animation_events"
+        Évènements d'animation déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_danimation"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/Window#animation_events"
+        <a href="/fr/docs/Web/API/Window#évènements_danimation"
           ><code>Window</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLElement#animation_events"
+        <a href="/fr/docs/Web/API/HTMLElement#évènements_danimation"
           ><code>HTMLElement</code></a
         >.
       </td>
     </tr>
     <tr>
       <td>Récupération asynchrone des données</td>
-      <td><p>Événements liés à l'extraction des données.</p></td>
+      <td><p>Évènements liés à l'extraction des données.</p></td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/AbortSignal#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/AbortSignal#évènements"
           ><code>AbortSignal</code></a
         >,
-        <a href="/fr/docs/Web/API/XMLHttpRequest#events"
+        <a href="/fr/docs/Web/API/XMLHttpRequest#évènements"
           ><code>XMLHttpRequest</code></a
         >,
-        <a href="/fr/docs/Web/API/FileReader#events"><code>FileReader</code></a
+        <a href="/fr/docs/Web/API/FileReader#évènements"><code>FileReader</code></a
         >.
       </td>
     </tr>
@@ -66,7 +67,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Presse-papiers</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/Clipboard_API">Clipboard API</a>.
         </p>
         <p>
@@ -74,14 +75,14 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#clipboard_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_de_presse-papiers"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/Element#clipboard_events"
+        <a href="/fr/docs/Web/API/Element#évènements_de_presse-papiers"
           ><code>Element</code></a
         >,
-        <a href="/fr/docs/Web/API/Window#clipboard_events"
+        <a href="/fr/docs/Web/API/Window#évènements_de_presse-papiers"
           ><code>Window</code></a
         >.
       </td>
@@ -90,19 +91,19 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Composition</td>
       <td>
         <p>
-          Événements liés à la composition ; saisie "indirecte" du texte (au
+          Évènements liés à la composition&nbsp;; saisie «&nbsp;indirecte&nbsp;» du texte (au
           lieu d'utiliser les touches normales du clavier).
         </p>
         <p>
-          Par exemple, un texte saisi via un moteur de conversion de la parole
+          Par exemple, un texte saisi par un moteur de conversion de la parole
           en texte, ou l'utilisation de combinaisons de touches spéciales qui
           modifient les pressions sur le clavier pour représenter de nouveaux
           caractères dans une autre langue.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Element#composition_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Element#évènements_de_composition"
           ><code>Element</code></a
         >.
       </td>
@@ -111,23 +112,23 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Transition CSS</td>
       <td>
         <p>
-          Événements liés aux
-          <a href="/fr/docs/Web/CSS/CSS_Transitions">Transitions CSS</a>.
+          Évènements liés aux
+          <a href="/fr/docs/Web/CSS/Guides/Transitions">Transitions CSS</a>.
         </p>
         <p>
-          Fournit des événements de notification lorsque les transitions CSS
+          Fournit des évènements de notification lorsque les transitions CSS
           commencent, s'arrêtent, sont annulées, etc.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#transition_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_de_transition"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLElement#transition_events"
+        <a href="/fr/docs/Web/API/HTMLElement#évènements_de_transition"
           ><code>HTMLElement</code></a
         >,
-        <a href="/fr/docs/Web/API/Window#transition_events"
+        <a href="/fr/docs/Web/API/Window#évènements_de_transition"
           ><code>Window</code></a
         >.
       </td>
@@ -136,35 +137,58 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Base de données</td>
       <td>
         <p>
-          Événements liés aux opérations de la base de données : ouverture,
+          Évènements liés aux opérations de la base de données&nbsp;: ouverture,
           fermeture, transactions, erreurs, etc.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/IDBDatabase#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/IDBDatabase#évènements"
           ><code>IDBDatabase</code></a
         >,
-        <a href="/fr/docs/Web/API/IDBOpenDBRequest#events"
+        <a href="/fr/docs/Web/API/IDBOpenDBRequest#évènements"
           ><code>IDBOpenDBRequest</code></a
         >,
-        <a href="/fr/docs/Web/API/IDBRequest#events"><code>IDBRequest</code></a
+        <a href="/fr/docs/Web/API/IDBRequest#évènements"><code>IDBRequest</code></a
         >,
-        <a href="/fr/docs/Web/API/IDBTransaction#events"
+        <a href="/fr/docs/Web/API/IDBTransaction#évènements"
           ><code>IDBTransaction</code></a
         >.
+      </td>
+    </tr>
+    <tr>
+      <td>Mutation du DOM</td>
+      <td>
+        <p>
+          Évènements liés aux modifications de la hiérarchie et des nœuds du
+          Document Object Model (DOM).
+        </p>
+      </td>
+      <td>
+        <div class="notecard warning">
+          <p>
+            <strong>Avertissement&nbsp;:</strong>
+            <a href="/fr/docs/Web/API/MutationEvent">Mutation Events</a> sont
+            dépréciés.
+            L'API
+            <a href="/fr/docs/Web/API/MutationObserver"
+              >Mutation Observers</a
+            >
+            doit être utilisé à la place.
+          </p>
+        </div>
       </td>
     </tr>
     <tr>
       <td>Glisser/Déposer, Roue</td>
       <td>
         <p>
-          Les événements liés à l'utilisation de l'API
+          Les évènements liés à l'utilisation de l'API
           <a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API">Glisser/Déposer</a>
           et <a href="/fr/docs/Web/API/WheelEvent">WheelEvent</a>.
         </p>
         <p>
-          Les événements Glisser/Déposer et Roue sont dérivés des événements de
+          Les évènements Glisser/Déposer et Roue sont dérivés des évènements de
           la souris. Bien qu'ils soient déclenchés lors de l'utilisation de la
           molette de la souris ou du glisser/déposer, ils peuvent également être
           utilisés avec d'autres matériels appropriés.
@@ -172,32 +196,32 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       </td>
       <td>
         <p>
-          Les événements de Glisser/Déposer déclenchés sur
-          <a href="/fr/docs/Web/API/Document#drag_drop_events"
+          Les évènements de Glisser/Déposer déclenchés sur
+          <a href="/fr/docs/Web/API/Document#évènements_de_glisser_déposer"
             ><code>Document</code></a
           >
         </p>
         <p>
-          Les événements de la Roue déclenchés sur
-          <a href="/fr/docs/Web/API/Document/wheel_event"
+          Les évènements de la Roue déclenchés sur
+          <a href="/fr/docs/Web/API/Element#évènements_de_roue"
             ><code>Document</code></a
           >
           et
-          <a href="/fr/docs/Web/API/Element/wheel_event"
+          <a href="/fr/docs/Web/API/Element#évènements_de_roue"
             ><code>Element</code></a
           >
         </p>
       </td>
     </tr>
     <tr>
-      <td>Focus</td>
+      <td>Ciblage</td>
       <td>
-        <p>Les événements liés aux éléments qui gagnent et perdent le focus.</p>
+        <p>Les évènements liés aux éléments qui gagnent et perdent la sélection.</p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Element#focus_events"><code>Element</code></a
-        >, <a href="/fr/docs/Web/API/Window#focus_events"><code>Window</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Element#évènements_de_sélection"><code>Element</code></a
+        >, <a href="/fr/docs/Web/API/Window#évènements_de_sélection"><code>Window</code></a
         >.
       </td>
     </tr>
@@ -205,13 +229,13 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Formulaire</td>
       <td>
         <p>
-          Événements liés à la construction, la réinitialisation et la
-          soumission de formulaires.
+          Évènements liés à la construction, la réinitialisation et
+          l'envoi de formulaires.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLFormElement#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/HTMLFormElement#évènements"
           ><code>HTMLFormElement</code></a
         >.
       </td>
@@ -220,7 +244,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Plein écran</td>
       <td>
         <p>
-          Evénements relatifs à l'API
+          Évènements relatifs à l'API
           <a href="/fr/docs/Web/API/Fullscreen_API">Fullscreen API</a>.
         </p>
         <p>
@@ -230,11 +254,11 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#fullscreen_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_liés_au_mode_plein_écran"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/Element#fullscreen_events"
+        <a href="/fr/docs/Web/API/Element#évènements_liés_au_mode_plein_écran"
           ><code>Element</code></a
         >.
       </td>
@@ -243,29 +267,66 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Manette de jeu</td>
       <td>
         <p>
-          Evénements relatifs à l'API
+          Évènements relatifs à l'API
           <a href="/fr/docs/Web/API/Gamepad_API">Gamepad API</a>.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#gamepad_events"><code>Window</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_de_manette_de_jeu"><code>Window</code></a
         >.
+      </td>
+    </tr>
+    <tr>
+      <td>Gestes</td>
+      <td>
+        <p>
+          <a href="/fr/docs/Web/API/Touch_events">Les évènements tactiles</a> sont
+          recommandés pour la mise en œuvre des gestes.
+        </p>
+      </td>
+      <td>
+        <p>
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/Document#évènements_tactiles"><code>Document</code></a
+          >,
+          <a href="/fr/docs/Web/API/Element#évènements_tactiles"
+            ><code>Element</code></a
+          >.
+        </p>
+        <p>En outre, il existe un certain nombre d'évènements de geste non standard&nbsp;:</p>
+        <ul>
+          <li>
+            Évènements spécifiques à WebKit non standard sur
+            <a href="/fr/docs/Web/API/Element#évènements_tactiles"
+              ><code>Element</code></a
+            >&nbsp;:
+            les évènements <a href="/fr/docs/Web/API/Element/gesturestart_event"
+              ><code>gesturestart</code></a
+            >,
+            <a href="/fr/docs/Web/API/Element/gesturechange_event"
+              ><code>gesturechange</code></a
+            >,
+            <a href="/fr/docs/Web/API/Element/gestureend_event"
+              ><code>gestureend</code></a
+            >.
+          </li>
+        </ul>
       </td>
     </tr>
     <tr>
       <td>Historique</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/History_API"
             >de Manipulation de l'historique du navigateur</a
           >.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#history_events"><code>Window</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_liés_à_lhistorique"><code>Window</code></a
         >.
       </td>
     </tr>
@@ -273,19 +334,19 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Gestion de l'affichage du contenu des éléments HTML</td>
       <td>
         <p>
-          Événements liés à la modification de l'état d'un élément d'affichage
+          Évènements liés à la modification de l'état d'un élément d'affichage
           ou textuel.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLDetailsElement#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/HTMLDetailsElement#évènements"
           ><code>HTMLDetailsElement</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLDialogElement#events"
+        <a href="/fr/docs/Web/API/HTMLDialogElement#évènements"
           ><code>HTMLDialogElement</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLSlotElement#events"
+        <a href="/fr/docs/Web/API/HTMLSlotElement#évènements"
           ><code>HTMLSlotElement</code></a
         >.
       </td>
@@ -294,23 +355,23 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Entrées</td>
       <td>
         <p>
-          Événements liés aux éléments d'entrée HTML, par ex.
-          <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a
+          Évènements liés aux éléments d'entrée HTML, par ex.
+          <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&#x3C;input></code></a
           >,
-          <a href="/fr/docs/Web/HTML/Element/select"
+          <a href="/fr/docs/Web/HTML/Reference/Elements/select"
             ><code>&#x3C;select></code></a
           >, ou
-          <a href="/fr/docs/Web/HTML/Element/textarea"
+          <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
             ><code>&#x3C;textarea></code></a
           >.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLElement#input_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/HTMLElement#évènements_liés_à_la_saisie"
           ><code>HTMLElement</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLInputElement#events"
+        <a href="/fr/docs/Web/API/HTMLInputElement#évènements"
           ><code>HTMLInputElement</code></a
         >.
       </td>
@@ -319,7 +380,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Clavier</td>
       <td>
         <p>
-          Événements liés à l'utilisation d'un
+          Évènements liés à l'utilisation d'un
           <a href="/fr/docs/Web/API/KeyboardEvent">clavier</a>.
         </p>
         <p>
@@ -328,44 +389,26 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#keyboard_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_relatifs_au_clavier"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/Element#keyboard_events"
+        <a href="/fr/docs/Web/API/Element#évènements_relatifs_au_clavier"
           ><code>Element</code></a
         >.
-      </td>
-    </tr>
-    <tr>
-      <td>Chargement/déchargement des documents</td>
-      <td>
-        <p>Événements liés au chargement et au déchargement des documents.</p>
-      </td>
-      <td>
-        <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Document#load_unload_events"
-            ><code>Document</code></a
-          >
-          et
-          <a href="/fr/docs/Web/API/Window#load_unload_events"
-            ><code>Window</code></a
-          >.
-        </p>
       </td>
     </tr>
     <tr>
       <td>Manifeste</td>
       <td>
         <p>
-          Événements liés à l'installation de
-          <a href="/fr/docs/Web/Manifest">Manifeste des applications web</a>.
+          Évènements liés à l'installation de
+          <a href="/fr/docs/Web/Progressive_web_apps/Manifest">Manifeste des applications web</a>.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#manifest_events"><code>Window</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_de_manifeste"><code>Window</code></a
         >.
       </td>
     </tr>
@@ -373,65 +416,65 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Médias</td>
       <td>
         <p>
-          Événements liés à l'utilisation des médias (y compris l'<a
-            href="/fr/docs/Web/API/Media_Streams_API#events"
+          Évènements liés à l'utilisation des médias (y compris l'<a
+            href="/fr/docs/Web/API/Media_Capture_and_Streams_API#évènements"
             >API de capture et de diffusion de médias</a
-          >, <a href="/fr/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,
-          <a href="/fr/docs/Web/API/Picture-in-Picture_API#events"
+          >, <a href="/fr/docs/Web/API/Web_Audio_API#évènements">Web Audio API</a>,
+          <a href="/fr/docs/Web/API/Picture-in-Picture_API#évènements"
             >Picture-in-Picture API</a
           >, etc.).
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/ScriptProcessorNode#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/ScriptProcessorNode#évènements"
           ><code>ScriptProcessorNode</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLMediaElement#events"
+        <a href="/fr/docs/Web/API/HTMLMediaElement#évènements"
           ><code>HTMLMediaElement</code></a
         >,
-        <a href="/fr/docs/Web/API/AudioTrackList#events"
+        <a href="/fr/docs/Web/API/AudioTrackList#évènements"
           ><code>AudioTrackList</code></a
         >,
-        <a href="/fr/docs/Web/API/AudioScheduledSourceNode#events"
+        <a href="/fr/docs/Web/API/AudioScheduledSourceNode#évènements"
           ><code>AudioScheduledSourceNode</code></a
         >,
-        <a href="/fr/docs/Web/API/MediaRecorder#events"
+        <a href="/fr/docs/Web/API/MediaRecorder#évènements"
           ><code>MediaRecorder</code></a
         >,
-        <a href="/fr/docs/Web/API/MediaStream#events"
+        <a href="/fr/docs/Web/API/MediaStream#évènements"
           ><code>MediaStream</code></a
         >,
         <a href="/fr/docs/Web/API/MediaStreamTrack"
           ><code>MediaStreamTrack</code></a
         >,
-        <a href="/fr/docs/Web/API/VideoTrackList#events"
+        <a href="/fr/docs/Web/API/VideoTrackList#évènements"
           ><code>VideoTrackList</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLTrackElement#events"
+        <a href="/fr/docs/Web/API/HTMLTrackElement#évènements"
           ><code>HTMLTrackElement</code></a
         >,
-        <a href="/fr/docs/Web/API/OfflineAudioContext#events"
+        <a href="/fr/docs/Web/API/OfflineAudioContext#évènements"
           ><code>OfflineAudioContext</code></a
-        >, <a href="/fr/docs/Web/API/TextTrack#events"><code>TextTrack</code></a
+        >, <a href="/fr/docs/Web/API/TextTrack#évènements"><code>TextTrack</code></a
         >,
-        <a href="/fr/docs/Web/API/TextTrackList#events"
+        <a href="/fr/docs/Web/API/TextTrackList#évènements"
           ><code>TextTrackList</code></a
-        >, <a href="/fr/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/fr/docs/Web/HTML/Element/video#events">Element/video</a>.
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/audio#évènements">Element/audio</a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/video#évènements">Element/video</a>.
       </td>
     </tr>
     <tr>
       <td>Messagerie</td>
       <td>
         <p>
-          Événements liés à la réception par une fenêtre d'un message provenant
+          Évènements liés à la réception par une fenêtre d'un message provenant
           d'un autre contexte de navigation.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#messaging_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_de_messagerie"
           ><code>Window</code></a
         >.
       </td>
@@ -440,43 +483,43 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Souris</td>
       <td>
         <p>
-          Événements liés à l'utilisation d'une
+          Évènements liés à l'utilisation d'une
           <a href="/fr/docs/Web/API/MouseEvent">souris d'ordinateur</a>.
         </p>
         <p>
           Utilisé pour notifier le clic de la souris, le double-clic, les
-          événements haut et bas, le clic droit, le déplacement dans et hors
+          évènements haut et bas, le clic droit, le déplacement dans et hors
           d'un élément, la sélection de texte, etc.
         </p>
         <p>
-          Les événements de type pointeur constituent une alternative aux
-          événements de type souris, indépendamment du matériel utilisé. Les
-          événements de type "glisser" et "roue" sont dérivés des événements de
+          Les évènements de type pointeur constituent une alternative aux
+          évènements de type souris, indépendamment du matériel utilisé. Les
+          évènements de type "glisser" et "roue" sont dérivés des évènements de
           type "souris".
         </p>
       </td>
       <td>
-        Les événements de souris déclenchés sur
-        <a href="/fr/docs/Web/API/Element#mouse_events"><code>Element</code></a>
+        Les évènements de souris déclenchés sur
+        <a href="/fr/docs/Web/API/Element#évènements_de_souris"><code>Element</code></a>
       </td>
     </tr>
     <tr>
       <td>Réseau/Connexion</td>
       <td>
         <p>
-          Événements liés à l'obtention et à la perte d'une connexion réseau.
+          Évènements liés à l'obtention et à la perte d'une connexion réseau.
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Window#connection_events"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/Window#évènements_de_connexion"
             ><code>Window</code></a
           >.
         </p>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/NetworkInformation#event_handler"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/NetworkInformation#gestionnaire_dévènements"
             ><code>NetworkInformation</code></a
           >
           (<a href="/fr/docs/Web/API/Network_Information_API"
@@ -489,18 +532,18 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Paiements</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/Payment_Request_API">Payment Request API</a
           >.
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/PaymentRequest#events"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/PaymentRequest#évènements"
             ><code>PaymentRequest</code></a
           >,
-          <a href="/fr/docs/Web/API/PaymentResponse#events"
+          <a href="/fr/docs/Web/API/PaymentResponse#évènements"
             ><code>PaymentResponse</code></a
           >.
         </p>
@@ -510,22 +553,14 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Performance</td>
       <td>
         <p>
-          Événements liés aux APIs
-          <a href="/fr/docs/Web/API/Performance_API">Performance API</a>,
-          <a href="/fr/docs/Web/API/Performance_Timeline"
-            >Performance Timeline API</a
-          >,
-          <a href="/fr/docs/Web/API/Navigation_timing_API"
-            >Navigation Timing API</a
-          >, <a href="/fr/docs/Web/API/User_Timing_API">User Timing API</a>, et
-          <a href="/fr/docs/Web/API/Resource_Timing_API">Resource Timing API</a
-          >.
+          Évènements liés aux APIs
+          <a href="/fr/docs/Web/API/Performance_API">Performance API</a>.
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Performance#events"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/Performance#évènements"
             ><code>Performance</code></a
           >.
         </p>
@@ -535,7 +570,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Pointeur</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/Pointer_events">Pointer Events API</a>.
         </p>
         <p>
@@ -545,21 +580,21 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#pointer_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_de_pointeur"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLElement#pointer_events"
+        <a href="/fr/docs/Web/API/HTMLElement#évènements_de_pointeur"
           ><code>HTMLElement</code></a
         >.
       </td>
     </tr>
     <tr>
       <td>Impression</td>
-      <td><p>Événements liés à l'impression.</p></td>
+      <td><p>Évènements liés à l'impression.</p></td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#print_events"><code>Window</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_dimpression"><code>Window</code></a
         >.
       </td>
     </tr>
@@ -567,13 +602,13 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Rejet de promesse</td>
       <td>
         <p>
-          Événements envoyés au contexte global du script lorsqu'une promesse
+          Évènements envoyés au contexte global du script lorsqu'une promesse
           JavaScript est rejetée.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#promise_rejection_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Window#évènements_de_rejet_de_promesse"
           ><code>Window</code></a
         >.
       </td>
@@ -582,29 +617,29 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Sockets</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/WebSockets_API">WebSockets API</a>.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/WebSocket#events"><code>Websocket</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/WebSocket#évènements"><code>Websocket</code></a
         >.
       </td>
     </tr>
     <tr>
       <td>SVG</td>
-      <td><p>Événements liés aux images SVG.</p></td>
+      <td><p>Évènements liés aux images SVG.</p></td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/SVGElement#events"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/SVGElement#évènements"
             ><code>SVGElement</code></a
           >,
-          <a href="/fr/docs/Web/API/SVGAnimationElement#events"
+          <a href="/fr/docs/Web/API/SVGAnimationElement#évènements"
             ><code>SVGAnimationElement</code></a
           >,
-          <a href="/fr/docs/Web/API/SVGGraphicsElement#events"
+          <a href="/fr/docs/Web/API/SVGGraphicsElement#évènements"
             ><code>SVGGraphicsElement</code></a
           >.
         </p>
@@ -614,14 +649,14 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Sélection de texte</td>
       <td>
         <p>
-          Événements liés à la
+          Évènements liés à la
           <a href="/fr/docs/Web/API/Selection">sélection du texte</a>.
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Document#selection_events"
+          Évènements déclenchés sur
+          <a href="/fr/docs/Web/API/Document#évènements_de_sélection"
             ><code>Document</code></a
           >.
         </p>
@@ -631,24 +666,24 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Tactile</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Touch_events">Événements tactiles</a>.
+          Les évènements liés à l'API
+          <a href="/fr/docs/Web/API/Touch_events">Évènements tactiles</a>.
         </p>
         <p>
-          Fournit des événements de notification provenant de l'interaction avec
+          Fournit des évènements de notification provenant de l'interaction avec
           un écran tactile (c'est-à-dire l'utilisation d'un doigt ou d'un
           stylet). Non lié à l'API
-          <a href="/fr/docs/Web/API/Force_Touch_events#events"
+          <a href="/fr/docs/Web/API/Force_Touch_events#évènements"
             >Force Touch API</a
           >.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#touch_events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/Document#évènements_tactiles"
           ><code>Document</code></a
         >,
-        <a href="/fr/docs/Web/API/Element#touch_events"><code>Element</code></a
+        <a href="/fr/docs/Web/API/Element#évènements_tactiles"><code>Element</code></a
         >.
       </td>
     </tr>
@@ -656,26 +691,26 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Réalité virtuelle</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.
         </p>
         <div class="note">
           <p>
-            <strong>Note :</strong> L'API
+            <strong>Note&nbsp;:</strong> L'API
             <a href="/fr/docs/Web/API/WebVR_API">WebVR API</a> (et les
-            événements associés à
-            <a href="/fr/docs/Web/API/Window#webvr_events"
+            évènements associés à
+            <a href="/fr/docs/Web/API/Window#évènements_de_réalité_virtuelle"
               ><code>Window</code></a
             >) sont dépréciés.
           </p>
         </div>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/XRSystem#events"><code>XRSystem</code></a
-        >, <a href="/fr/docs/Web/API/XRSession#events"><code>XRSession</code></a
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/XRSystem#évènements"><code>XRSystem</code></a
+        >, <a href="/fr/docs/Web/API/XRSession#évènements"><code>XRSession</code></a
         >,
-        <a href="/fr/docs/Web/API/XRReferenceSpace#events"
+        <a href="/fr/docs/Web/API/XRReferenceSpace#évènements"
           ><code>XRReferenceSpace</code></a
         >.
       </td>
@@ -684,38 +719,38 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>RTC (communication en temps réel)</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/WebRTC_API">WebRTC API</a>.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/RTCDataChannel#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/RTCDataChannel#évènements"
           ><code>RTCDataChannel</code></a
         >,
-        <a href="/fr/docs/Web/API/RTCDTMFSender#events"
+        <a href="/fr/docs/Web/API/RTCDTMFSender#évènements"
           ><code>RTCDTMFSender</code></a
         >,
-        <a href="/fr/docs/Web/API/RTCIceTransport#events"
+        <a href="/fr/docs/Web/API/RTCIceTransport#évènements"
           ><code>RTCIceTransport</code></a
         >,
-        <a href="/fr/docs/Web/API/RTCPeerConnection#events"
+        <a href="/fr/docs/Web/API/RTCPeerConnection#évènements"
           ><code>RTCPeerConnection</code></a
         >.
       </td>
     </tr>
     <tr>
-      <td>Événements envoyés par le serveur</td>
+      <td>Évènements envoyés par le serveur</td>
       <td>
         <p>
-          Les événements liés à l'<a href="/fr/docs/Web/API/Server-sent_events"
-            >API des événements envoyés par le serveur</a
+          Les évènements liés à l'<a href="/fr/docs/Web/API/Server-sent_events"
+            >API des évènements envoyés par le serveur</a
           >.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/EventSource#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/EventSource#évènements"
           ><code>EventSource</code></a
         >.
       </td>
@@ -724,13 +759,13 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Synthèse vocale</td>
       <td>
         <p>
-          Les événements liés à l'API
+          Les évènements liés à l'API
           <a href="/fr/docs/Web/API/Web_Speech_API">Web Speech API</a>.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/SpeechSynthesisUtterance#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/SpeechSynthesisUtterance#évènements"
           ><code>SpeechSynthesisUtterance</code></a
         >.
       </td>
@@ -739,7 +774,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>Workers</td>
       <td>
         <p>
-          Les événements liés aux APIs
+          Les évènements liés aux APIs
           <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers API</a>,
           <a href="/fr/docs/Web/API/Service_Worker_API">Service Worker API</a>,
           <a href="/fr/docs/Web/API/Broadcast_Channel_API"
@@ -752,34 +787,34 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         <p>
           Utilisé pour répondre aux nouveaux messages et aux erreurs d'envoi de
           messages. Les travailleurs de service peuvent également être notifiés
-          d'autres événements, notamment les notifications push, les
-          utilisateurs qui cliquent sur les notifications affichées, le fait que
+          d'autres évènements, notamment les notifications push, les
+          utilisateur·ice·s qui cliquent sur les notifications affichées, le fait que
           l'abonnement push a été invalidé, la suppression d'éléments de l'index
           de contenu, etc.
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope#events"
+        Évènements déclenchés sur
+        <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope#évènements"
           ><code>ServiceWorkerGlobalScope</code></a
         >,
-        <a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope#events"
+        <a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope#évènements"
           ><code>DedicatedWorkerGlobalScope</code></a
         >,
-        <a href="/fr/docs/Web/API/SharedWorkerGlobalScope#events"
+        <a href="/fr/docs/Web/API/SharedWorkerGlobalScope#évènements"
           ><code>SharedWorkerGlobalScope</code></a
         >,
-        <a href="/fr/docs/Web/API/WorkerGlobalScope#events"
+        <a href="/fr/docs/Web/API/WorkerGlobalScope#évènements"
           ><code>WorkerGlobalScope</code></a
-        >, <a href="/fr/docs/Web/API/Worker#events"><code>Worker</code></a
+        >, <a href="/fr/docs/Web/API/Worker#évènements"><code>Worker</code></a
         >,
-        <a href="/fr/docs/Web/API/WorkerGlobalScope#events"
+        <a href="/fr/docs/Web/API/WorkerGlobalScope#évènements"
           ><code>WorkerGlobalScope</code></a
         >,
-        <a href="/fr/docs/Web/API/BroadcastChannel#events"
+        <a href="/fr/docs/Web/API/BroadcastChannel#évènements"
           ><code>BroadcastChannel</code></a
         >,
-        <a href="/fr/docs/Web/API/MessagePort#events"
+        <a href="/fr/docs/Web/API/MessagePort#évènements"
           ><code>MessagePort</code></a
         >.
       </td>
@@ -787,478 +822,244 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
   </tbody>
 </table>
 
-## Listing des événements
+## Créer et déclencher des évènements
 
-Cette section répertorie les événements qui ont _leurs propres_ pages de référence sur MDN. Si vous êtes intéressé par un événement qui n'est pas listé ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste de MDN.
+En plus des évènements déclenchés par les interfaces intégrées, vous pouvez créer et déclencher vous-même des évènements DOM. Ces évènements sont couramment appelés _évènements synthétiques_, par opposition aux évènements déclenchés par le navigateur.
 
-- {{DOMxRef("AbortSignal")}}
-  - [abort](/fr/docs/Web/API/AbortSignal/abort_event)
+### Créer des évènements personnalisés
 
-- {{DOMxRef("AudioScheduledSourceNode")}}
-  - [ended](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event)
+Les évènements peuvent être créés avec le constructeur [`Event`](/fr/docs/Web/API/Event) comme suit&nbsp;:
 
-- {{DOMxRef("AudioTrackList")}}
-  - [addtrack](/fr/docs/Web/API/AudioTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/AudioTrackList/change_event)
-  - [removetrack](/fr/docs/Web/API/AudioTrackList/removetrack_event)
+```js
+const event = new Event("build");
 
-- {{DOMxRef("BroadcastChannel")}}
-  - [messageerror](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
-  - [message](/fr/docs/Web/API/BroadcastChannel/message_event)
+// Écouter l'évènement.
+elem.addEventListener("build", (e) => {
+  /* … */
+});
 
-- {{DOMxRef("DedicatedWorkerGlobalScope")}}
-  - [messageerror](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
-  - [message](/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
+// Déclencher l'évènement.
+elem.dispatchEvent(event);
+```
 
-- {{DOMxRef("Document")}}
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [copy](/fr/docs/Web/API/Document/copy_event)
-  - [cut](/fr/docs/Web/API/Document/cut_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [dragend](/fr/docs/Web/API/HTMLElement/dragend_event)
-  - [dragenter](/fr/docs/Web/API/HTMLElement/dragenter_event)
-  - [dragleave](/fr/docs/Web/API/HTMLElement/dragleave_event)
-  - [dragover](/fr/docs/Web/API/HTMLElement/dragover_event)
-  - [dragstart](/fr/docs/Web/API/HTMLElement/dragstart_event)
-  - [drag](/fr/docs/Web/API/HTMLElement/drag_event)
-  - [drop](/fr/docs/Web/API/HTMLElement/drop_event)
-  - [fullscreenchange](/fr/docs/Web/API/Document/fullscreenchange_event)
-  - [fullscreenerror](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - [keydown](/fr/docs/Web/API/Element/keydown_event)
-  - [keypress](/fr/docs/Web/API/Element/keypress_event)
-  - [keyup](/fr/docs/Web/API/Element/keyup_event)
-  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - [paste](/fr/docs/Web/API/Document/paste_event)
-  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
-  - [pointerlockchange](/fr/docs/Web/API/Document/pointerlockchange_event)
-  - [pointerlockerror](/fr/docs/Web/API/Document/pointerlockerror_event)
-  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
-  - [readystatechange](/fr/docs/Web/API/Document/readystatechange_event)
-  - [scroll](/fr/docs/Web/API/Document/scroll_event)
-  - [selectionchange](/fr/docs/Web/API/Document/selectionchange_event)
-  - [selectstart](/fr/docs/Web/API/Node/selectstart_event)
-  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Element/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
-  - [visibilitychange](/fr/docs/Web/API/Document/visibilitychange_event)
-  - [wheel](/fr/docs/Web/API/Element/wheel_event)
+Cet exemple utilise la méthode {{DOMxRef("EventTarget.dispatchEvent()")}}.
 
-- {{DOMxRef("Element")}}
-  - [afterscriptexecute](/fr/docs/Web/API/Element/afterscriptexecute_event)
-  - [auxclick](/fr/docs/Web/API/Element/auxclick_event)
-  - [beforescriptexecute](/fr/docs/Web/API/Element/beforescriptexecute_event)
-  - [blur](/fr/docs/Web/API/Element/blur_event)
-  - [click](/fr/docs/Web/API/Element/click_event)
-  - [compositionend](/fr/docs/Web/API/Element/compositionend_event)
-  - [compositionstart](/fr/docs/Web/API/Element/compositionstart_event)
-  - [compositionupdate](/fr/docs/Web/API/Element/compositionupdate_event)
-  - [contextmenu](/fr/docs/Web/API/Element/contextmenu_event)
-  - [copy](/fr/docs/Web/API/Element/copy_event)
-  - [cut](/fr/docs/Web/API/Element/cut_event)
-  - [dblclick](/fr/docs/Web/API/Element/dblclick_event)
-  - [DOMActivate](/fr/docs/Web/API/Element/DOMActivate_event)
-  - [DOMMouseScroll](/fr/docs/Web/API/Element/DOMMouseScroll_event)
-  - [error](/fr/docs/Web/API/HTMLElement/error_event)
-  - [focusin](/fr/docs/Web/API/Element/focusin_event)
-  - [focusout](/fr/docs/Web/API/Element/focusout_event)
-  - [focus](/fr/docs/Web/API/Element/focus_event)
-  - [fullscreenchange](/fr/docs/Web/API/Element/fullscreenchange_event)
-  - [fullscreenerror](/fr/docs/Web/API/Element/fullscreenerror_event)
-  - [gesturechange](/fr/docs/Web/API/Element/gesturechange_event)
-  - [gestureend](/fr/docs/Web/API/Element/gestureend_event)
-  - [gesturestart](/fr/docs/Web/API/Element/gesturestart_event)
-  - [keydown](/fr/docs/Web/API/Element/keydown_event)
-  - [keypress](/fr/docs/Web/API/Element/keypress_event)
-  - [keyup](/fr/docs/Web/API/Element/keyup_event)
-  - [mousedown](/fr/docs/Web/API/Element/mousedown_event)
-  - [mouseenter](/fr/docs/Web/API/Element/mouseenter_event)
-  - [mouseleave](/fr/docs/Web/API/Element/mouseleave_event)
-  - [mousemove](/fr/docs/Web/API/Element/mousemove_event)
-  - [mouseout](/fr/docs/Web/API/Element/mouseout_event)
-  - [mouseover](/fr/docs/Web/API/Element/mouseover_event)
-  - [mouseup](/fr/docs/Web/API/Element/mouseup_event)
-  - [mousewheel](/fr/docs/Web/API/Element/mousewheel_event)
-  - [msContentZoom](/fr/docs/Web/API/Element/msContentZoom_event)
-  - [MSGestureChange](/fr/docs/Web/API/Element/MSGestureChange_event)
-  - [MSGestureEnd](/fr/docs/Web/API/Element/MSGestureEnd_event)
-  - [MSGestureHold](/fr/docs/Web/API/Element/MSGestureHold_event)
-  - [MSGestureStart](/fr/docs/Web/API/Element/MSGestureStart_event)
-  - [MSGestureTap](/fr/docs/Web/API/Element/MSGestureTap_event)
-  - [MSInertiaStart](/fr/docs/Web/API/Element/MSInertiaStart_event)
-  - [MSManipulationStateChanged](/fr/docs/Web/API/Element/MSManipulationStateChanged_event)
-  - [overflow](/fr/docs/Web/API/Element/overflow_event)
-  - [paste](/fr/docs/Web/API/Element/paste_event)
-  - [scroll](/fr/docs/Web/API/Element/scroll_event)
-  - [select](/fr/docs/Web/API/HTMLInputElement/select_event)
-  - [show](/fr/docs/Web/API/Element/show_event)
-  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Element/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
-  - [underflow](/fr/docs/Web/API/Element/underflow_event)
-  - [webkitmouseforcechanged](/fr/docs/Web/API/Element/webkitmouseforcechanged_event)
-  - [webkitmouseforcedown](/fr/docs/Web/API/Element/webkitmouseforcedown_event)
-  - [webkitmouseforceup](/fr/docs/Web/API/Element/webkitmouseforceup_event)
-  - [webkitmouseforcewillbegin](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event)
-  - [wheel](/fr/docs/Web/API/Element/wheel_event)
+### Ajouter des données personnalisées - CustomEvent()
 
-- {{DOMxRef("EventSource")}}
-  - [error](/fr/docs/Web/API/EventSource/error_event)
-  - [message](/fr/docs/Web/API/EventSource/message_event)
-  - [open](/fr/docs/Web/API/EventSource/open_event)
+Pour ajouter des données à l'objet évènement, l'interface [CustomEvent](/fr/docs/Web/API/CustomEvent) existe et la propriété **detail** permet de transmettre des données personnalisées.
+Par exemple, l'évènement peut être créé ainsi&nbsp;:
 
-- {{DOMxRef("FileReader")}}
-  - [abort](/fr/docs/Web/API/FileReader/abort_event)
-  - [error](/fr/docs/Web/API/FileReader/error_event)
-  - [loadend](/fr/docs/Web/API/FileReader/loadend_event)
-  - [loadstart](/fr/docs/Web/API/FileReader/loadstart_event)
-  - [load](/fr/docs/Web/API/FileReader/load_event)
-  - [progress](/fr/docs/Web/API/FileReader/progress_event)
+```js
+const event = new CustomEvent("build", { detail: elem.dataset.time });
+```
 
-- {{DOMxRef("HTMLCanvasElement")}}
-  - [webglcontextcreationerror](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
-  - [webglcontextlost](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
-  - [webglcontextrestored](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+Vous pouvez alors accéder à ces données supplémentaires dans l'écouteur d'évènement&nbsp;:
 
-- {{DOMxRef("HTMLDetailsElement")}}
-  - [toggle](/fr/docs/Web/API/HTMLElement/toggle_event)
+```js
+function eventHandler(e) {
+  console.log(`L'heure est&nbsp;: ${e.detail}`);
+}
+```
 
-- {{DOMxRef("HTMLDialogElement")}}
-  - [cancel](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
-  - [close](/fr/docs/Web/API/HTMLDialogElement/close_event)
+### Ajouter des données personnalisées - sous-classer Event
 
-- {{DOMxRef("HTMLElement")}}
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [beforeinput](/fr/docs/Web/API/Element/beforeinput_event)
-  - [change](/fr/docs/Web/API/HTMLElement/change_event)
-  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - [input](/fr/docs/Web/API/Element/input_event)
-  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
-  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
+L'interface [`Event`](/fr/docs/Web/API/Event) peut aussi être sous-classée. Cela est utile pour la réutilisation, pour des données personnalisées plus complexes, ou même pour ajouter des méthodes à l'évènement.
 
-- {{DOMxRef("HTMLFormElement")}}
-  - [formdata](/fr/docs/Web/API/HTMLFormElement/formdata_event)
-  - [reset](/fr/docs/Web/API/HTMLFormElement/reset_event)
-  - [submit](/fr/docs/Web/API/HTMLFormElement/submit_event)
+```js
+class BuildEvent extends Event {
+  #buildTime;
 
-- {{DOMxRef("HTMLInputElement")}}
-  - [invalid](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - [search](/fr/docs/Web/API/HTMLInputElement/search_event)
+  constructor(buildTime) {
+    super("build");
+    this.#buildTime = buildTime;
+  }
 
-- {{DOMxRef("HTMLMediaElement")}}
-  - [abort](/fr/docs/Web/API/HTMLMediaElement/abort_event)
-  - [canplaythrough](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-  - [canplay](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
-  - [durationchange](/fr/docs/Web/API/HTMLMediaElement/durationchange_event)
-  - [emptied](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
-  - [ended](/fr/docs/Web/API/HTMLMediaElement/ended_event)
-  - [error](/fr/docs/Web/API/HTMLMediaElement/error_event)
-  - [loadeddata](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
-  - [loadedmetadata](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-  - [loadstart](/fr/docs/Web/API/HTMLMediaElement/loadstart_event)
-  - [pause](/fr/docs/Web/API/HTMLMediaElement/pause_event)
-  - [playing](/fr/docs/Web/API/HTMLMediaElement/playing_event)
-  - [play](/fr/docs/Web/API/HTMLMediaElement/play_event)
-  - [progress](/fr/docs/Web/API/HTMLMediaElement/progress_event)
-  - [ratechange](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
-  - [seeked](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
-  - [seeking](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
-  - [stalled](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
-  - [suspend](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
-  - [timeupdate](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
-  - [volumechange](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
-  - [waiting](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
+  get buildTime() {
+    return this.#buildTime;
+  }
+}
+```
 
-- {{DOMxRef("HTMLSlotElement")}}
-  - [slotchange](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
+Ce code définit une classe `BuildEvent` avec une propriété en lecture seule et un type d'évènement fixe.
 
-- {{DOMxRef("HTMLTrackElement")}}
-  - [cuechange](/fr/docs/Web/API/HTMLTrackElement/cuechange_event)
+L'évènement peut alors être créé ainsi&nbsp;:
 
-- {{DOMxRef("HTMLVideoElement")}}
-  - [enterpictureinpicture](/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
-  - [leavepictureinpicture](/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
+```js
+const event = new BuildEvent(elem.dataset.time);
+```
 
-- {{DOMxRef("IDBDatabase")}}
-  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
-  - [close](/fr/docs/Web/API/IDBDatabase/close_event)
-  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
-  - [versionchange](/fr/docs/Web/API/IDBDatabase/versionchange_event)
+Les données supplémentaires sont accessibles dans les écouteurs avec les propriétés personnalisées&nbsp;:
 
-- {{DOMxRef("IDBOpenDBRequest")}}
-  - [blocked](/fr/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - [upgradeneeded](/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
+```js
+function eventHandler(e) {
+  console.log(`L'heure est&nbsp;: ${e.buildTime}`);
+}
+```
 
-- {{DOMxRef("IDBRequest")}}
-  - [error](/fr/docs/Web/API/IDBRequest/error_event)
-  - [success](/fr/docs/Web/API/IDBRequest/success_event)
+### Propagation des évènements (bubbling)
 
-- {{DOMxRef("IDBTransaction")}}
-  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
-  - [complete](/fr/docs/Web/API/IDBTransaction/complete_event)
-  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
+Il est souvent utile de déclencher un évènement depuis un élément enfant et de le capter sur un ancêtre&nbsp;; vous pouvez aussi transmettre des données avec l'évènement&nbsp;:
 
-- {{DOMxRef("MediaDevices")}}
-  - [devicechange](/fr/docs/Web/API/MediaDevices/devicechange_event)
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
 
-- {{DOMxRef("MediaRecorder")}}
-  - [error](/fr/docs/Web/API/MediaRecorder/error_event)
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
-- {{DOMxRef("MediaStream")}}
-  - [addtrack](/fr/docs/Web/API/MediaStream/addtrack_event)
-  - [removetrack](/fr/docs/Web/API/MediaStream/removetrack_event)
+// Créer un nouvel évènement, autoriser la propagation, et transmettre des données avec la propriété "detail"
+const eventAwesome = new CustomEvent("awesome", {
+  bubbles: true,
+  detail: { text: () => textarea.value },
+});
 
-- {{DOMxRef("MediaStreamTrack")}}
-  - [ended](/fr/docs/Web/API/MediaStreamTrack/ended_event)
-  - [mute](/fr/docs/Web/API/MediaStreamTrack/mute_event)
-  - [unmute](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
+// Le formulaire écoute l'évènement personnalisé "awesome" et affiche la valeur transmise
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
-- {{DOMxRef("MessagePort")}}
-  - [messageerror](/fr/docs/Web/API/MessagePort/messageerror_event)
-  - [message](/fr/docs/Web/API/MessagePort/message_event)
+// À chaque saisie, la textarea déclenche l'évènement à partir d'elle-même
+textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
+```
 
-- {{DOMxRef("OfflineAudioContext")}}
-  - [complete](/fr/docs/Web/API/OfflineAudioContext/complete_event)
+### Créer et déclencher dynamiquement des évènements
 
-- {{DOMxRef("PaymentRequest")}}
-  - [merchantvalidation](/fr/docs/Web/API/PaymentRequest/merchantvalidation_event)
-  - [paymentmethodchange](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event)
-  - [shippingaddresschange](/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event)
-  - [shippingoptionchange](/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event)
+Les éléments peuvent écouter des évènements qui n'ont pas encore été créés&nbsp;:
 
-- {{DOMxRef("PaymentResponse")}}
-  - [payerdetailchange](/fr/docs/Web/API/PaymentResponse/payerdetailchange_event)
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
 
-- {{DOMxRef("Performance")}}
-  - [resourcetimingbufferfull](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
-- {{DOMxRef("PictureInPictureWindow")}}
-  - [resize](/fr/docs/Web/API/PictureInPictureWindow/resize_event)
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
-- {{DOMxRef("RTCDataChannel")}}
-  - [bufferedamountlow](/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event)
-  - [close](/fr/docs/Web/API/RTCDataChannel/close_event)
-  - [closing](/fr/docs/Web/API/RTCDataChannel/closing_event)
-  - [error](/fr/docs/Web/API/RTCDataChannel/error_event)
-  - [message](/fr/docs/Web/API/RTCDataChannel/message_event)
-  - [open](/fr/docs/Web/API/RTCDataChannel/open_event)
+textarea.addEventListener("input", function () {
+  // Créer et déclencher un évènement à la volée
+  // Remarque&nbsp;: on utilise ici une fonction classique pour que "this" représente l'élément
+  this.dispatchEvent(
+    new CustomEvent("awesome", {
+      bubbles: true,
+      detail: { text: () => textarea.value },
+    }),
+  );
+});
+```
 
-- {{DOMxRef("RTCDtlsTransport")}}
-  - [error](/fr/docs/Web/API/RTCDtlsTransport/error_event)
+## Déclencher des évènements natifs
 
-- {{DOMxRef("RTCDTMFSender")}}
-  - [tonechange](/fr/docs/Web/API/RTCDTMFSender/tonechange_event)
+Cet exemple montre comment simuler un clic (c'est-à-dire générer un évènement click par programmation) sur une case à cocher à l'aide des méthodes DOM. [Voir l'exemple en action <sup>(angl.)</sup>](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
 
-- {{DOMxRef("RTCIceTransport")}}
-  - [gatheringstatechange](/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event)
-  - [selectedcandidatepairchange](/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event)
-  - [statechange](/fr/docs/Web/API/RTCIceTransport/statechange_event)
+```js
+function simulateClick() {
+  const event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+  });
+  const cb = document.getElementById("checkbox");
+  const cancelled = !cb.dispatchEvent(event);
 
-- {{DOMxRef("RTCPeerConnection")}}
-  - [addstream](/fr/docs/Web/API/RTCPeerConnection/addstream_event)
-  - [connectionstatechange](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
-  - [datachannel](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
-  - [icecandidateerror](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
-  - [icecandidate](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
-  - [iceconnectionstatechange](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
-  - [icegatheringstatechange](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
-  - [negotiationneeded](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
-  - [removestream](/fr/docs/Web/API/RTCPeerConnection/removestream_event)
-  - [signalingstatechange](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
-  - [track](/fr/docs/Web/API/RTCPeerConnection/track_event)
+  if (cancelled) {
+    // Un gestionnaire a appelé preventDefault.
+    alert("annulé");
+  } else {
+    // Aucun gestionnaire n'a appelé preventDefault.
+    alert("non annulé");
+  }
+}
+```
 
-- {{DOMxRef("ScriptProcessorNode")}}
-  - [audioprocess](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+## Enregistrer des gestionnaires d'évènements
 
-- {{DOMxRef("ServiceWorkerContainer")}}
-  - [message](/fr/docs/Web/API/ServiceWorkerContainer/message_event)
+Il existe deux méthodes recommandées pour enregistrer des gestionnaires. Le code du gestionnaire peut être exécuté lorsqu'un évènement est déclenché soit en l'assignant à la propriété _onevent_ correspondante de l'élément cible, soit en enregistrant le gestionnaire comme écouteur à l'aide de la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Dans les deux cas, le gestionnaire reçoit un objet conforme à [l'interface `Event`](/fr/docs/Web/API/Event) (ou à une [interface dérivée](/fr/docs/Web/API/Event#interfaces_basées_sur_event)). La principale différence est que plusieurs gestionnaires peuvent être ajoutés (ou supprimés) avec les méthodes d'écouteur d'évènements.
 
-- {{DOMxRef("ServiceWorkerGlobalScope")}}
-  - [activate](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
-  - [contentdelete](/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event)
-  - [install](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
-  - [message](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event)
-  - [notificationclick](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
-  - [pushsubscriptionchange](/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)
-  - [push](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
+> [!WARNING]
+> Une troisième méthode, qui consiste à utiliser les attributs HTML onevent, n'est pas recommandée&nbsp;! Ils alourdissent le balisage, le rendent moins lisible et plus difficile à déboguer. Pour plus d'informations, voir [Gestionnaires d'évènements en incise](/fr/docs/Learn_web_development/Core/Scripting/Events#gestionnaires_dévènements_en_incise_à_éviter).
 
-- {{DOMxRef("SharedWorkerGlobalScope")}}
-  - [connect](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)
+### Utiliser les propriétés onevent
 
-- {{DOMxRef("SpeechRecognition")}}
-  - [audioend](/fr/docs/Web/API/SpeechRecognition/audioend_event)
-  - [audiostart](/fr/docs/Web/API/SpeechRecognition/audiostart_event)
-  - [end](/fr/docs/Web/API/SpeechRecognition/end_event)
-  - [error](/fr/docs/Web/API/SpeechRecognition/error_event)
-  - [nomatch](/fr/docs/Web/API/SpeechRecognition/nomatch_event)
-  - [result](/fr/docs/Web/API/SpeechRecognition/result_event)
-  - [soundend](/fr/docs/Web/API/SpeechRecognition/soundend_event)
-  - [soundstart](/fr/docs/Web/API/SpeechRecognition/soundstart_event)
-  - [speechend](/fr/docs/Web/API/SpeechRecognition/speechend_event)
-  - [speechstart](/fr/docs/Web/API/SpeechRecognition/speechstart_event)
-  - [start](/fr/docs/Web/API/SpeechRecognition/start_event)
+Par convention, les objets JavaScript qui déclenchent des évènements possèdent des propriétés "onevent" (nommées en préfixant "on" au nom de l'évènement). Ces propriétés sont appelées pour exécuter le code du gestionnaire associé lorsque l'évènement est déclenché, et peuvent aussi être appelées directement par votre code.
 
-- {{DOMxRef("SpeechSynthesis")}}
-  - [voiceschanged](/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event)
+Pour définir le code du gestionnaire, il suffit de l'assigner à la propriété onevent appropriée. Un seul gestionnaire peut être assigné pour chaque évènement sur un élément. Si besoin, le gestionnaire peut être remplacé en assignant une autre fonction à la même propriété.
 
-- {{DOMxRef("SpeechSynthesisUtterance")}}
-  - [boundary](/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
-  - [end](/fr/docs/Web/API/SpeechSynthesisUtterance/end_event)
-  - [error](/fr/docs/Web/API/SpeechSynthesisUtterance/error_event)
-  - [mark](/fr/docs/Web/API/SpeechSynthesisUtterance/mark_event)
-  - [pause](/fr/docs/Web/API/SpeechSynthesisUtterance/pause_event)
-  - [resume](/fr/docs/Web/API/SpeechSynthesisUtterance/resume_event)
-  - [start](/fr/docs/Web/API/SpeechSynthesisUtterance/start_event)
+L'exemple suivant montre comment définir une fonction `greet()` pour l'évènement `click` en utilisant la propriété `onclick`.
 
-- {{DOMxRef("SVGAnimationElement")}}
-  - [beginEvent](/fr/docs/Web/API/SVGAnimationElement/beginEvent_event)
-  - [endEvent](/fr/docs/Web/API/SVGAnimationElement/endEvent_event)
-  - [repeatEvent](/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event)
+```js
+const btn = document.querySelector("button");
 
-- {{DOMxRef("SVGElement")}}
-  - [abort](/fr/docs/Web/API/SVGElement/abort_event)
-  - [error](/fr/docs/Web/API/SVGElement/error_event)
-  - [load](/fr/docs/Web/API/SVGElement/load_event)
-  - [resize](/fr/docs/Web/API/SVGElement/resize_event)
-  - [scroll](/fr/docs/Web/API/SVGElement/scroll_event)
-  - [unload](/fr/docs/Web/API/SVGElement/unload_event)
+function greet(event) {
+  console.log("greet:", event);
+}
 
-- {{DOMxRef("SVGGraphicsElement")}}
-  - [copy](/fr/docs/Web/API/SVGGraphicsElement/copy_event)
-  - [cut](/fr/docs/Web/API/SVGGraphicsElement/cut_event)
-  - [paste](/fr/docs/Web/API/SVGGraphicsElement/paste_event)
+btn.onclick = greet;
+```
 
-- {{DOMxRef("TextTrack")}}
-  - [cuechange](/fr/docs/Web/API/TextTrack/cuechange_event)
+Notez qu'un objet représentant l'évènement est passé comme premier argument au gestionnaire. Cet objet implémente ou dérive de l'interface {{DOMxRef("Event")}}.
 
-- {{DOMxRef("TextTrackList")}}
-  - [addtrack](/fr/docs/Web/API/TextTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/TextTrackList/change_event)
-  - [removeTrack](/fr/docs/Web/API/TextTrackList/removeTrack_event)
+### EventTarget.addEventListener
 
-- {{DOMxRef("VideoTrackList")}}
-  - [addtrack](/fr/docs/Web/API/VideoTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/VideoTrackList/change_event)
-  - [removetrack](/fr/docs/Web/API/VideoTrackList/removetrack_event)
+La façon la plus flexible de définir un gestionnaire d'évènement sur un élément est d'utiliser la méthode {{DOMxRef("EventTarget.addEventListener")}}. Cette approche permet d'assigner plusieurs écouteurs à un élément et de les _supprimer_ si besoin, à l'aide de {{DOMxRef("EventTarget.removeEventListener")}}.
 
-- {{DOMxRef("VisualViewport")}}
-  - [resize](/fr/docs/Web/API/VisualViewport/resize_event)
-  - [scroll](/fr/docs/Web/API/VisualViewport/scroll_event)
+> [!NOTE]
+> La possibilité d'ajouter et de supprimer des gestionnaires permet, par exemple, d'utiliser le même bouton pour différentes actions selon le contexte. De plus, dans des programmes plus complexes, nettoyer les anciens gestionnaires inutilisés peut améliorer l'efficacité.
 
-- {{DOMxRef("WebSocket")}}
-  - [close](/fr/docs/Web/API/WebSocket/close_event)
-  - [error](/fr/docs/Web/API/WebSocket/error_event)
-  - [message](/fr/docs/Web/API/WebSocket/message_event)
-  - [open](/fr/docs/Web/API/WebSocket/open_event)
+L'exemple suivant montre comment une fonction `greet()` peut être définie comme écouteur/gestionnaire pour l'évènement `click` (vous pouvez utiliser une fonction anonyme si vous le souhaitez). Notez à nouveau que l'évènement est passé comme premier argument au gestionnaire.
 
-- {{DOMxRef("Window")}}
-  - [afterprint](/fr/docs/Web/API/Window/afterprint_event)
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [appinstalled](/fr/docs/Web/API/Window/appinstalled_event)
-  - [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
-  - [beforeunload](/fr/docs/Web/API/Window/beforeunload_event)
-  - [blur](/fr/docs/Web/API/Window/blur_event)
-  - [copy](/fr/docs/conflicting/Web/API/Element/copy_event)
-  - [cut](/fr/docs/Web/API/Element/cut_event)
-  - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
-  - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [error](/fr/docs/Web/API/Window/error_event)
-  - [focus](/fr/docs/Web/API/Window/focus_event)
-  - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)
-  - [gamepaddisconnected](/fr/docs/Web/API/Window/gamepaddisconnected_event)
-  - [hashchange](/fr/docs/Web/API/Window/hashchange_event)
-  - [languagechange](/fr/docs/Web/API/Window/languagechange_event)
-  - [load](/fr/docs/Web/API/Window/load_event)
-  - [messageerror](/fr/docs/Web/API/Window/messageerror_event)
-  - [message](/fr/docs/Web/API/Window/message_event)
-  - [offline](/fr/docs/Web/API/Window/offline_event)
-  - [online](/fr/docs/Web/API/Window/online_event)
-  - [orientationchange](/fr/docs/Web/API/Window/orientationchange_event)
-  - [pagehide](/fr/docs/Web/API/Window/pagehide_event)
-  - [pageshow](/fr/docs/Web/API/Window/pageshow_event)
-  - [paste](/fr/docs/Web/API/Element/paste_event)
-  - [popstate](/fr/docs/Web/API/Window/popstate_event)
-  - [rejectionhandled](/fr/docs/Web/API/Window/rejectionhandled_event)
-  - [resize](/fr/docs/Web/API/Window/resize_event)
-  - [storage](/fr/docs/Web/API/Window/storage_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
-  - [unhandledrejection](/fr/docs/Web/API/Window/unhandledrejection_event)
-  - [unload](/fr/docs/Web/API/Window/unload_event)
-  - [vrdisplayactivate](/fr/docs/Web/API/Window/vrdisplayactivate_event)
-  - [vrdisplayblur](/fr/docs/Web/API/Window)
-  - [vrdisplayconnect](/fr/docs/Web/API/Window/vrdisplayconnect_event)
-  - [vrdisplaydeactivate](/fr/docs/Web/API/Window/vrdisplaydeactivate_event)
-  - [vrdisplaydisconnect](/fr/docs/Web/API/Window/vrdisplaydisconnect_event)
-  - [vrdisplayfocus](/fr/docs/Web/API/Window)
-  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window)
-  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window)
-  - [vrdisplaypresentchange](/fr/docs/Web/API/Window/vrdisplaypresentchange_event)
+```js
+const btn = document.querySelector("button");
 
-- {{DOMxRef("Worker")}}
-  - [messageerror](/fr/docs/Web/API/Worker/messageerror_event)
-  - [message](/fr/docs/Web/API/Worker/message_event)
+function greet(event) {
+  console.log("greet:", event);
+}
 
-- {{DOMxRef("WorkerGlobalScope")}}
-  - [languagechange](/fr/docs/Web/API/WorkerGlobalScope/languagechange_event)
+btn.addEventListener("click", greet);
+```
 
-- {{DOMxRef("XMLHttpRequest")}}
-  - [abort](/fr/docs/Web/API/XMLHttpRequestEventTarget/abort_event)
-  - [error](/fr/docs/Web/API/XMLHttpRequest/error_event)
-  - [loadend](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
-  - [loadstart](/fr/docs/Web/API/XMLHttpRequest/loadstart_event)
-  - [load](/fr/docs/Web/API/XMLHttpRequest/load_event)
-  - [progress](/fr/docs/Web/API/XMLHttpRequest/progress_event)
-  - [timeout](/fr/docs/Web/API/XMLHttpRequest/timeout_event)
+La méthode peut aussi prendre des arguments/options supplémentaires pour contrôler la capture ou la suppression des évènements. Plus d'informations sont disponibles sur la page de référence de {{DOMxRef("EventTarget.addEventListener")}}.
 
-- {{DOMxRef("XRReferenceSpace")}}
-  - [reset](/fr/docs/Web/API/XRReferenceSpace/reset_event)
+#### Utiliser AbortSignal
 
-- {{DOMxRef("XRSession")}}
-  - [end](/fr/docs/Web/API/XRSession/end_event)
-  - [inputsourceschange](/fr/docs/Web/API/XRSession/inputsourceschange_event)
-  - [selectend](/fr/docs/Web/API/XRSession/selectend_event)
-  - [selectstart](/fr/docs/Web/API/XRSession/selectstart_event)
-  - [select](/fr/docs/Web/API/XRSession/select_event)
-  - [squeezeend](/fr/docs/Web/API/XRSession/squeezeend_event)
-  - [squeezestart](/fr/docs/Web/API/XRSession/squeezestart_event)
-  - [squeeze](/fr/docs/Web/API/XRSession/squeeze_event)
-  - [visibilitychange](/fr/docs/Web/API/XRSession/visibilitychange_event)
+Une fonctionnalité notable des écouteurs d'évènements est la possibilité d'utiliser un signal d'abandon pour supprimer plusieurs gestionnaires en même temps.
 
-- {{DOMxRef("XRSystem")}}
-  - [devicechange](/fr/docs/Web/API/XRSystem/devicechange_event)
+Cela se fait en passant le même objet {{DOMxRef("AbortSignal")}} à l'appel de {{DOMxRef("EventTarget/addEventListener()", "addEventListener()")}} pour tous les gestionnaires que vous souhaitez pouvoir supprimer ensemble. Vous pouvez ensuite appeler {{DOMxRef("AbortController/abort()", "abort()")}} sur le contrôleur propriétaire du signal, ce qui supprime tous les gestionnaires ajoutés avec ce signal. Par exemple, pour ajouter un gestionnaire que l'on peut supprimer avec un `AbortSignal`&nbsp;:
+
+```js
+const controller = new AbortController();
+
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal },
+); // on passe un AbortSignal à ce gestionnaire
+```
+
+Ce gestionnaire peut ensuite être supprimé ainsi&nbsp;:
+
+```js
+controller.abort(); // supprime tous les gestionnaires associés à ce contrôleur
+```
+
+### Interaction de plusieurs gestionnaires d'évènements
+
+La propriété IDL `onevent` (par exemple, `element.onclick = ...`) et l'attribut HTML `onevent` (par exemple, `<button onclick="...">`) ciblent tous deux le même emplacement de gestionnaire unique. Le HTML est chargé avant que JavaScript puisse accéder au même élément, donc en général JavaScript remplace ce qui est défini dans le HTML. Les gestionnaires ajoutés avec {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} sont indépendants. Utiliser `onevent` ne supprime ni ne remplace les écouteurs ajoutés avec `addEventListener()`, et inversement.
+
+Lorsqu'un évènement est déclenché, les écouteurs sont appelés en plusieurs phases. Il y a deux phases&nbsp;: _capture_ et _propagation_. En phase de capture, l'évènement part de l'ancêtre le plus haut et descend l'arbre DOM jusqu'à la cible. En phase de bulle, l'évènement remonte en sens inverse. Par défaut, les écouteurs écoutent en phase de bulle, mais ils peuvent écouter en phase de capture en passant `capture: true` à `addEventListener()`. Dans une même phase, les écouteurs sont appelés dans l'ordre où ils ont été enregistrés. Le gestionnaire `onevent` est enregistré la première fois qu'il devient non nul&nbsp;; les réaffectations ultérieures ne changent que sa fonction de rappel, pas sa position dans l'ordre.
+
+Appeler {{DOMxRef("Event.stopPropagation()")}} empêche l'appel des écouteurs sur d'autres éléments plus loin dans la chaîne de propagation. {{DOMxRef("Event.stopImmediatePropagation()")}} empêche aussi l'appel des autres écouteurs sur le même élément.
+
+## Spécifications
+
+{{Specifications}}
+
+## Voir aussi
+
+- [Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- [Propagation des évènements](/fr/docs/Learn_web_development/Core/Scripting/Event_bubbling)

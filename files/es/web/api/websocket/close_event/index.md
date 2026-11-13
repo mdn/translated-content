@@ -27,7 +27,7 @@ El manejador `close` es ejecutado cuando una conexión con un websocket es cerra
 | Property                        | Type                       | Description                                                    |
 | ------------------------------- | -------------------------- | -------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | El objetivo del evento (el objetivo superior en el árbol DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                             |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | El tipo de evento.                                             |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si el evento normalmente burbujea o no.                        |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si el evento es cancelable o no.                               |
 

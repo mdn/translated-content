@@ -37,7 +37,7 @@ String.prototype                   // код ES6
 
 ## Примечания
 
-В ES5, если параметр `obj` не является объектом, будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6, параметр будет приведён к объекту {{jsxref("Global_Objects/Object", "Object")}}.
+В ES5, если параметр `obj` не является объектом, будет выброшено исключение {{jsxref("TypeError")}}. В ES6, параметр будет приведён к объекту {{jsxref("Object")}}.
 
 ```js
 > Object.getPrototypeOf('foo')

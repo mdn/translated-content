@@ -3,7 +3,7 @@ title: 정규 표현식
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}
 
 정규 표현식, 또는 정규식은 문자열에서 특정 문자 조합을 찾기 위한 패턴입니다. JavaScript에서는 정규 표현식도 객체로서, {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec()")}}와 {{jsxref("RegExp.test", "test()")}} 메서드를 사용할 수 있습니다. {{jsxref("String")}}의 {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.split", "split()")}} 메서드와도 함께 사용할 수 있습니다. 이 장에서는 JavaScript의 정규 표현식을 설명합니다.
 
@@ -169,7 +169,7 @@ function escapeRegExp(string) {
 
 ### 괄호 사용하기
 
-정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#%ea%b7%b8%eb%a3%b9_%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0) 문서에서 자세히 알아보세요.
+정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups) 문서에서 자세히 알아보세요.
 
 ## JavaScript에서 정규 표현식 사용하기
 
@@ -439,4 +439,4 @@ form.addEventListener("submit", (event) => {
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : 시각적 정규 표현식 테스터입니다.
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}

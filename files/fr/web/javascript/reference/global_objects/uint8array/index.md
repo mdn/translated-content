@@ -3,8 +3,6 @@ title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
 
-{{JSRef}}
-
 Le tableau typé **`Uint8Array`** représente un tableau d'entiers non signés, représentés sur 8 bits. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
 
 ## Constructeur

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode statique **`WebAssembly.compileStreaming()`** permet de compiler un module WebAssembly (c'est-à-dire un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module)) depuis un flux source. Cette fonction est utile si on doit compiler un module avant de l'instancier séparement, sinon on utilisera plutôt [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static).
 
 > [!NOTE]

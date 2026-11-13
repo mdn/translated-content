@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 在{{Glossary("computer programming", "计算机编程")}}中，**抽象编程**是一种在复杂的软件系统中，降低复杂度、实现系统高效设计与实现的方法。它将系统各功能实现的技术细节隐藏在相对简单的 {{Glossary("API", "API 接口")}}中。
 
 ## 数据抽象的好处

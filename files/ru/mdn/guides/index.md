@@ -7,7 +7,7 @@ slug: MDN/Guides
 
 - [Изучение HTML: руководства и уроки](/ru/docs/Learn_web_development/Core/Structuring_content)
   - : **Язык гипертекстовой разметки HTML (HyperText Markup Language)** — это основной язык практически для всего веб-контента. Многое из того, что вы видите в окне браузера, описано с помощью HTML.
-- [Изучение CSS](/ru/docs/Learn/CSS)
+- [Изучение CSS](/ru/docs/Learn_web_development/Core/Styling_basics)
   - : Каскадные таблицы стилей CSS (Cascading Style Sheets) — язык стилей, используемый для описания внешнего вида документа HTML.
 - [Доставка аудио и видео контента](/ru/docs/Web/Media/Audio_and_video_delivery)
   - : Мы можем доставлять аудио и видео контент различными способами. Это могут быть как статичные медиа файлы, так и потоковые данные. Эта статья является отправной точкой в изучении различных механизмов доставки медиа ресурсов и совместимости работы с популярными браузерами.
@@ -37,7 +37,7 @@ slug: MDN/Guides
   - : Создаваемые вами современные веб-приложения и сайты должны иметь хорошую производительность - работать быстро и эффективно, как на персональных компьютерах (десктоп), так и на менее мощных мобильных устройствах.
 - [Прямая и обратная обработка XML](/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML)
   - : Различные методы обработки XML с помощью web платформы.
-- [The Web Open Font Format (WOFF)](/ru/docs/Web/CSS/CSS_fonts/WOFF)
+- [The Web Open Font Format (WOFF)](/ru/docs/Web/CSS/Guides/Fonts/WOFF)
   - : WOFF — бесплатный файловый формат шрифтов.
 - [Использование объектов FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
   - : Объект [`FormData`](/ru/docs/Web/API/FormData) позволяет создать набор пар ключ/значение и передать их, используя `XMLHttpRequest.` Объект [`FormData`](/ru/docs/Web/API/FormData) предназначен для передачи данных форм, однако может быть использован для передачи пар ключ/значение независимо от форм. Данные передаются в том же формате, как и данные, передаваемые методом `{{domxref("HTMLFormElement.submit","submit()")}}` формы, с установленной кодировкой `enctype="multipart/form-data"`.

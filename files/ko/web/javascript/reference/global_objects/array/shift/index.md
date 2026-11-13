@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.shift()
+short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
 
@@ -7,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 **`shift()`** 메서드는 배열에서 첫 번째 요소를 제거하고, 제거된 요소를 반환합니다. 이 메서드는 배열의 길이를 변하게 합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.shift()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];

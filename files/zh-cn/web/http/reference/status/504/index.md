@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/504
 
 ## 状态
 
-```plain
+```http
 504 Gateway Timeout
 ```
 

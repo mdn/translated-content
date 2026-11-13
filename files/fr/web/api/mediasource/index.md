@@ -52,7 +52,7 @@ _Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
 ## Méthodes statiques
 
 - {{domxref("MediaSource.isTypeSupported()")}}
-  - : Renvoie une valeur {{domxref ("Boolean")}} indiquant si le type MIME donné est pris en charge par l'agent utilisateur actuel - c'est-à-dire s'il parvient à créer des objets {{domxref ("SourceBuffer")}} pour ce type MIME .
+  - : Renvoie une valeur {{jsxref("Boolean")}} indiquant si le type MIME donné est pris en charge par l'agent utilisateur actuel - c'est-à-dire s'il parvient à créer des objets {{domxref ("SourceBuffer")}} pour ce type MIME .
 
 ## Exemples
 

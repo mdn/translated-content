@@ -3,7 +3,7 @@ title: "SVGAnimatedEnumeration: baseVal プロパティ"
 short-title: baseVal
 slug: Web/API/SVGAnimatedEnumeration/baseVal
 l10n:
-  sourceCommit: b7c9a25bc747b8a4a3dfd91a37ac1b2193414c3a
+  sourceCommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
 ---
 
 {{APIRef("SVG")}}

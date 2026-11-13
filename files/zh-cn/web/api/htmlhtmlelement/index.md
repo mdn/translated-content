@@ -9,14 +9,14 @@ slug: Web/API/HTMLHtmlElement
 
 你可以通过读取 {{domxref("document.documentElement")}} 属性的值来获取文档的 `HTMLHtmlElement` 对象。
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
 _继承 {{domxref("HTMLElement")}}的属性。_
 
 - {{domxref("HTMLHtmlElement.version")}} {{Deprecated_Inline}}
-  - : 这是一个用于表示管理此文档的**HTML 文档类型定义（DTD）**版本的 {{domxref("DOMString")}}。但此属性不应再使用，因为它不符合要求。请仅忽略它。
+  - : 这是一个用于表示管理此文档的**HTML 文档类型定义（DTD）**版本的 {{jsxref("String")}}。但此属性不应再使用，因为它不符合要求。请仅忽略它。
 
 ## 方法
 

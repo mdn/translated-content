@@ -64,7 +64,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-这里使用 {{jsxref("await")}} 来进行异步等待 `getDisplayMedia()`来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到 WebRTC 调用来从流中添加视频轨道。
+这里使用 {{jsxref("Operators/await", "await")}} 来进行异步等待 `getDisplayMedia()`来进行 {{domxref("MediaStream")}}解析，其中包含指定选项所请求的显示内容。之后，流被返回给调用者以供其使用，可能是使用 {{domxref("RTCPeerConnection.addTrack()")}}添加到 WebRTC 调用来从流中添加视频轨道。
 
 ## 规范
 

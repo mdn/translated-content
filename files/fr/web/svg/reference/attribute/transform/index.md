@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/transform
 original_slug: Web/SVG/Attribute/transform
 ---
 
-{{SVGRef}}
-
 L'attribut **`transform`** définit une liste de définitions de transformation qui sont appliquées à l'élément ainsi qu'à ses éléments fils.
 
 ## Exemple
@@ -54,7 +52,7 @@ Pour des raisons historiques liées à SVG 1.1, {{SVGElement('linearGradient')}}
       <td>
         <code
           ><strong
-            ><a href="/fr/docs/Web/SVG/Content_type#Transform-list"
+            ><a href="/fr/docs/Web/SVG/Guides/Content_type#Transform-list"
               >&#x3C;transform-list></a
             ></strong
           ></code

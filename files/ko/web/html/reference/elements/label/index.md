@@ -59,7 +59,8 @@ original_slug: Web/HTML/Element/label
 - `for`
   - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
 
-    > **참고:** `<label>` 요소는 `for` 속성과 제어control 요소를 동시에 가질 수 있습니다. 이 때 `for` 속성은 포함되어있는 제어control 요소를 가리키고 있어야 합니다.
+    > [!NOTE]
+    > `<label>` 요소는 `for` 속성과 제어control 요소를 동시에 가질 수 있습니다. 이 때 `for` 속성은 포함되어있는 제어control 요소를 가리키고 있어야 합니다.
 
 - `form`
   - : label과 연관된 {{htmlelement ( "form")}} 요소(_양식 소유자 form owner_). 이 속성이 지정된 경우, 이 속성 값은 동일한 문서의 {{HTMLElement ( "form")}} 요소의 id입니다. 따라서 label 요소를 양식 요소의 자손이 아닌 문서의 어느 곳에나 배치 할 수 있습니다.
@@ -149,19 +150,19 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#대화형_콘텐츠"
           >대화형 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#양식_관련_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#양식_관련_콘텐츠"
           >양식 관련 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -169,11 +170,11 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >. 단, 다른 <code>&#x3C;label></code> 요소는 자손으로 올 수 없습니다.
         레이블을 지정한 컨트롤 외의 다른
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능"
           >레이블 가능</a
         >
         요소는 자손으로 사용할 수 없습니다.
@@ -186,7 +187,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

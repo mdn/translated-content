@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e7d2e2780b992b4afa847e7d5a3b3e7b4a5805a1
 ---
 
-{{GlossarySidebar}}
-
 在 Web 开发中，**可替换元素**（replaced element）是指其内容由外部资源或文档结构外部定义的内容替换的 HTML 元素，并且在 CSS 渲染模型中不被视为常规内容。它们是外部对象，其表现独立于 CSS 格式化模型。
 
 以下元素通常为可替换元素：

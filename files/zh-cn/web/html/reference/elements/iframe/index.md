@@ -113,7 +113,7 @@ iframe {
     - `allow-presentation`
       - : 允许主文档控制是否允许 iframe 开启[演示会话](/zh-CN/docs/Web/API/PresentationRequest)。
     - `allow-same-origin`
-      - : 如果没有使用该关键字，资源将被视为来自一个特殊的源（始终使{{Glossary("same-origin policy", "同源策略")}}失败）。（可以阻止对[数据存储/cookie](/zh-CN/docs/Web/Security/Same-origin_policy#跨源数据存储访问) 和一些 JavaScript API 的潜在访问）。
+      - : 如果没有使用该关键字，资源将被视为来自一个特殊的源（始终使{{Glossary("same-origin policy", "同源策略")}}失败）。（可以阻止对[数据存储/cookie](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy#跨源数据存储访问) 和一些 JavaScript API 的潜在访问）。
     - `allow-scripts`
       - : 允许页面运行脚本（但不能创建弹窗）。如果没有使用该关键字，则不允许该操作。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
@@ -134,7 +134,7 @@ iframe {
     > 在带有 `sandbox` 属性的 `<iframe>` 嵌入的页面中，当用户被重定向，打开一个弹出窗口或者打开一个新标签页时，新的浏览上下文同样受到 `sandbox` 的限制。这可能会产生问题——例如，如果一个页面被嵌入到没有设置 `sandbox="allow-forms"` 或 `sandbox="allow-popups-to-escape-sandbox"` 属性的 `<iframe>` 时，当这个页面在独立的标签页中打开一个新站点，这个页面的表单提交将会静默失败。
 
 - `src`
-  - : 被嵌入的页面的 URL 地址。使用 `about:blank` 值可以嵌入一个遵从[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的空白页。还需要注意的是，在 Firefox（版本 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 `iframe` 的 src 属性（例如通过 {{domxref("Element.removeAttribute()")}}）会导致 `about:blank` 被载入框架。
+  - : 被嵌入的页面的 URL 地址。使用 `about:blank` 值可以嵌入一个遵从[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)的空白页。还需要注意的是，在 Firefox（版本 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 `iframe` 的 src 属性（例如通过 {{domxref("Element.removeAttribute()")}}）会导致 `about:blank` 被载入框架。
 
     > [!NOTE]
     > 在解析任何相对 URL（例如锚点链接）时，`about:blank` 页面会使用嵌入的文档的 URL 作为它的基准 URL。
@@ -179,7 +179,7 @@ iframe {
 
 在框架内部，脚本可以通过 {{domxref("window.parent")}} 获取父窗口的引用。
 
-脚本访问框架内容必须遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。脚本无法访问非同源的 `window` 对象的几乎所有属性（包括框架中的脚本访问框架的父级文档的情况）。跨源通信可以通过 {{domxref("Window.postMessage()")}} 来实现。
+脚本访问框架内容必须遵守[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)。脚本无法访问非同源的 `window` 对象的几乎所有属性（包括框架中的脚本访问框架的父级文档的情况）。跨源通信可以通过 {{domxref("Window.postMessage()")}} 来实现。
 
 ## 定位和缩放
 

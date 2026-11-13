@@ -7,7 +7,7 @@ slug: Web/API/Window/matchMedia
 
 ## Сводка
 
-Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/Web/CSS/Guides/Media_queries/Using).
 
 ## Синтаксис
 
@@ -29,7 +29,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Данный код позволяет обрабатывать поведение по другому, когда размер окна очень узкий.
 
-Смотрите [Использование медиавыражений из кода](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries) для дополнительных примеров.
+Смотрите [Использование медиавыражений из кода](/ru/docs/Web/CSS/Guides/Media_queries/Testing) для дополнительных примеров.
 
 ## Совместимость с браузерами
 
@@ -41,7 +41,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 ## Смотрите также
 
-- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/ru/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/ru/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

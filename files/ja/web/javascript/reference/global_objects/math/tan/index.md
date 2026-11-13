@@ -1,13 +1,12 @@
 ---
 title: Math.tan()
+short-title: tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
-
-**`Math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
+**`Math.tan()`** は静的メソッドで、数値の正接（タンジェント）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.tan()")}}
 
@@ -17,13 +16,13 @@ function getTanFromDegrees(degrees) {
 }
 
 console.log(getTanFromDegrees(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(getTanFromDegrees(45));
-// Expected output: 0.9999999999999999
+// 予想される結果: 0.9999999999999999
 
 console.log(getTanFromDegrees(90));
-// Expected output: 16331239353195370
+// 予想される結果: 16331239353195370
 ```
 
 ## 構文
@@ -39,7 +38,7 @@ Math.tan(x)
 
 ### 返値
 
-`x` の正接（タンジェント）です。 `x` が {{jsxref("Infinity")}} の場合は `-Infinity`、 {{jsxref("NaN")}} の場合は {{jsxref("NaN")}} を返します。
+`x` の正接です。`x` が {{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合は、{{jsxref("NaN")}} を返します。
 
 > [!NOTE]
 > 浮動小数点の精度により、正確な値 π/2 を得ることはできないため、 `NaN` でなければ、結果は常に有限となります。
@@ -63,7 +62,7 @@ Math.tan(Infinity); // NaN
 
 ### Math.tan() および π/2
 
-正確に `tan(π/2)` を計算することはでいません。
+正確に `tan(π/2)` を計算することはできません。
 
 ```js
 Math.tan(Math.PI / 2); // 16331239353195370
@@ -97,3 +96,4 @@ function getTanDeg(deg) {
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
+- CSS {{cssxref("tan()")}} 関数

@@ -7,7 +7,7 @@ slug: Web/API/URL/createObjectURL_static
 
 {{APIRef("URL API")}}
 
-O método estático **`URL.createObjectURL()`** cria um {{domxref("DOMString")}} contendo a URL representando o objeto passado como parâmetro.
+O método estático **`URL.createObjectURL()`** cria um {{jsxref("String")}} contendo a URL representando o objeto passado como parâmetro.
 
 O tempo de vida da URL é vinculado ao {{domxref("document")}} da janela onde ele foi criado. O novo objeto URL represenda o objeto {{domxref("File")}} especificado ou o objeto {{domxref("Blob")}}.
 
@@ -31,7 +31,7 @@ const objectURL = URL.createObjectURL(object);
 
 ### Retorno de valor
 
-Uma {{domxref("DOMString")}} contendo o objeto URL e pode ser usado para referenciar o conteúdo especificado na origem do `object`.
+Uma {{jsxref("String")}} contendo o objeto URL e pode ser usado para referenciar o conteúdo especificado na origem do `object`.
 
 ## Exemplos
 

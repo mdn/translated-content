@@ -106,6 +106,6 @@ Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de 
 ### Manifest keys
 
 - [Resumen del manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-- [Compatibilidad del navegador para el manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilidad del navegador para el manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
 {{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}

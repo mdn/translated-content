@@ -3,8 +3,6 @@ title: NON binaire (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et fournit la valeur ainsi obtenue. À l'instar des autres opérateurs binaires, il convertit son opérande en un entier signé sur 32 bits.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}

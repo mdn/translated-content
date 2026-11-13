@@ -3,15 +3,11 @@ title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.tan()`** 方法返回一个数值的正切值。
 
 ## 语法
 
-```plain
+```js-nolint
 Math.tan(x)
 ```
 

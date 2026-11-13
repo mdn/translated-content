@@ -48,7 +48,8 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 HTTP Strict Transport Security 헤더는 브라우저가 HTTP를 사용하여 사이트를 불러와서는 안 되며 대신 HTTP를 사용하여 사이트에 접근하려는 모든 시도를 HTTPS 요청으로 자동 변환해야 함을 알립니다.
 
-> **참고:** `Strict-Transport-Security` 헤더가 사이트가 HTTP를 통해서만 접근할 수 있다면 브라우저에 의해 **무시됩니다**.
+> [!NOTE]
+> `Strict-Transport-Security` 헤더가 사이트가 HTTP를 통해서만 접근할 수 있다면 브라우저에 의해 **무시됩니다**.
 > 인증서 오류 없이 HTTPS를 통해 사이트에 액세스할 수 있다면 브라우저는 사이트가 HTTPS를 사용할 수 있음을 인식하고 `Strict-Transport-Security` 헤더를 준수합니다.
 > 브라우저는 공격자가 사이트에 대한 HTTP 연결을 가로채서 헤더를 삽입하거나 제거할 수 있으므로 이 작업을 수행합니다.
 
@@ -104,8 +105,8 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ## 같이 보기
 
 - 블로그 포스트: [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- 플로그 포스트: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- 블로그 포스트: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP 문서: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 위키백과: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 - [HSTS 프리로드 서비스](https://hstspreload.org/)
-- [보안 컨텍스트로 제한된 기능](/ko/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [보안 컨텍스트로 제한된 기능](/ko/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

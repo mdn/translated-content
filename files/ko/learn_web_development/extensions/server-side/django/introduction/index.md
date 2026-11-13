@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Introduction
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Django의 첫번째 문서에서는 "Django가 뭐지?"라는 질문에 답해보고, Django 웹 프레임워크의 특별한 부분에 대해 전반적으로 살펴봅니다. 우리가 이 수업에서 자세히 다루지는 않을 고급 기능들까지 포함하여 간단하게 전반적인 부분을 살펴 볼겁니다. 또한, Django 애플리케이션을 구성하는 중요한 요소도 살펴보겠습니다. (물론 지금 시점에서는 테스트를 할 개발환경을 가지고 있지 않겠지만요.)
 
@@ -17,11 +17,11 @@ Django의 첫번째 문서에서는 "Django가 뭐지?"라는 질문에 답해�
       <td>
         기본적인 컴퓨터 지식.
         <a
-          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >server-side website 프로그래밍</a
         >에 대한 전반적인 이해, 그리고 웹사이트의
         <a
-          href="/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >client-server interactions</a
         >
         의 매커니즘에 대한 특정한 지식.
@@ -182,7 +182,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3, choices=TEAM_LEVELS, default='U11')
 ```
 
-> **참고:** **참고 : 파이썬에 대해**
+> [!NOTE]
+> **참고 : 파이썬에 대해**
 >
 > 파이썬은 코드를 객체로 구성하는 프로그래밍 스타일인 "객체 지향 프로그래밍"을 지원합니다. 여기에는 관련 데이터 및 해당 데이터를 조작하기위한 함수가 포함됩니다. 객체는 다른 객체로부터 상속, 확장, 파생할 수 있어 관련 객체 간의 공통 동작을 공유 할 수 있습니다. 파이썬에서는 키워드 클래스를 사용하여 객체의 "청사진"을 정의합니다. 클래스의 모델을 기반으로 객체 유형의 여러 특정 인스턴스를 만들 수 있습니다.
 >
@@ -253,4 +254,4 @@ def index(request):
 
 위의 실제 장고 코드를 이미 보았지만 클라이언트 측 코드와 달리 실행하기 위해서는 개발 환경을 설정해야합니다. 그것이 우리의 다음 단계입니다.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

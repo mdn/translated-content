@@ -60,7 +60,7 @@ dd {
     <tr>
       <th scope="row">
         <a
-          href="/ko/docs/Web/HTML/Content_categories"
+          href="/ko/docs/Web/HTML/Guides/Content_categories"
           >콘텐츠 카테고리</a
         >
       </th>
@@ -69,7 +69,7 @@ dd {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >. 단, {{htmlelement("header")}},
         {{htmlelement("footer")}}, 구획 콘텐츠, 제목 콘텐츠 자손은

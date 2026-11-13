@@ -3,8 +3,6 @@ title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 
-{{JSRef}}
-
 静态方法 **`Reflect.apply()`** 通过指定的参数列表发起对目标 (target) 函数的调用。
 
 {{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
@@ -29,7 +27,7 @@ console.log(Reflect.apply("".charAt, "ponies", [3]));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.apply(target, thisArgument, argumentsList)
 ```
 

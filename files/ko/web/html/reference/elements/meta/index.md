@@ -20,15 +20,15 @@ original_slug: Web/HTML/Element/meta
       <td>
         메타데이터 콘텐츠.
         <code
-          ><a href="/ko/docs/Web/HTML/Global_attributes/itemprop"
+          ><a href="/ko/docs/Web/HTML/Reference/Global_attributes/itemprop"
             >itemprop</a
           ></code
         >이 존재하면
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >
         및
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -50,7 +50,7 @@ original_slug: Web/HTML/Element/meta
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>인
         경우 {{htmlelement("head")}} 요소.
-        <a href="/ko/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a>가 인코딩 선언이
+        <a href="/ko/docs/Web/HTML/Reference/Elements/meta#http-equiv"><code>http-equiv</code></a>가 인코딩 선언이
         아닌 경우 <code>&#x3C;head></code> 내의
         {{htmlelement("noscript")}} 요소도 가능합니다.
       </td>
@@ -85,7 +85,8 @@ original_slug: Web/HTML/Element/meta
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-> **참고:** [`name`](#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](#itemprop) 특성을 [`name`](#name), [`http-equiv`](#http-equiv) 또는 [`charset`](#charset) 특성과 함께 설정할 수 없습니다.
+> [!NOTE]
+> [`name`](#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](#itemprop) 특성을 [`name`](#name), [`http-equiv`](#http-equiv) 또는 [`charset`](#charset) 특성과 함께 설정할 수 없습니다.
 
 - `charset`
   - : 페이지의 문자 인코딩을 선언합니다. 이 특성이 존재할 경우, 그 값은 반드시 문자열 "`utf-8`"의 대소문자 구분 없는 {{glossary("ASCII")}} 표현이어야 합니다.

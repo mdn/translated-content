@@ -15,7 +15,7 @@ var isItSecure = self.isSecureContext; // or just isSecureContext
 
 ### Valor
 
-Un {{domxref("Boolean")}}.
+Un {{jsxref("Boolean")}}.
 
 ## Especificaciones
 

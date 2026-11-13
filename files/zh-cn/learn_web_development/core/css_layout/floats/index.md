@@ -233,7 +233,7 @@ body {
 
 {{EmbedLiveSample('让浮动效果可视化', '100%', 500)}}
 
-目标元素的[行内盒子](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#行内盒子)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
+目标元素的[行内盒子](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model#行内盒子)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
 
 ## 清除浮动
 
@@ -583,7 +583,7 @@ body {
 
 一个较为现代的方案是使用 `display` 属性的 `flow-root` 值。它可以无需小技巧来创建块格式化上下文（BFC），在使用上没有副作用。
 
-从 `.wrapper` 中移除 `overflow: auto` 规则并添加 `display: flow-root`。如果你的浏览器支持该属性（[支持的浏览器列表](/zh-CN/docs/Web/CSS/display#浏览器兼容性)），盒子就会停止浮动。
+从 `.wrapper` 中移除 `overflow: auto` 规则并添加 `display: flow-root`。如果你的浏览器支持该属性（[支持的浏览器列表](/zh-CN/docs/Web/CSS/Reference/Properties/display#浏览器兼容性)），盒子就会停止浮动。
 
 ```css
 .wrapper {

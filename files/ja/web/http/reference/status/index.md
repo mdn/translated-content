@@ -2,7 +2,7 @@
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Reference/Status
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: cd8ed9bfa89d5ced4fd6c2083d7d90bcda41e441
 ---
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
@@ -25,7 +25,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : これは暫定レスポンスで、その時点までのすべてに問題がなく、クライアントはリクエストを継続してよい、またもしリクエストが完了している場合はレスポンスを無視してよいことを示します。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : このコードはクライアントからの {{HTTPHeader("Upgrade")}} リクエストヘッダーのレスポンスとして送信され、サーバーはプロトコルを切り替えていることを示します。
-- {{HTTPStatus(102, "102 Processing")}} {{deprecated_inline}}
+- `102 Processing` {{deprecated_inline}}
   - : このコードは {{Glossary("WebDAV")}} のコンテキストで使用され、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)させたりします。
@@ -38,7 +38,6 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
     - {{HTTPMethod("HEAD")}}: メッセージ本文がなく、表現ヘッダーがレスポンスに含まれている。
     - {{HTTPMethod("PUT")}} または {{HTTPMethod("POST")}}: 操作の結果を表すリソースがメッセージ本文で送信される。
     - {{HTTPMethod("TRACE")}}: メッセージ本文に、サーバーが受け取ったリクエストメッセージが含まれている。
-
 - {{HTTPStatus(201, "201 Created")}}
   - : リクエストは成功し、その結果新たなリソースが作成されたことを示します。これは一般的に、 {{HTTPMethod("POST")}} リクエストや、一部の {{HTTPMethod("PUT")}} リクエストを送信した後のレスポンスになります。
 - {{HTTPStatus(202, "202 Accepted")}}
@@ -162,7 +161,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : オリジンサーバーはリクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)になることを要求しています。
     このレスポンスは、クライアントがリソースの状態を {{HTTPMethod("GET")}} し、それを変更してサーバーに {{HTTPMethod("PUT")}} するまでの間に、第三者がサーバー上の状態を変更することで競合が発生する「更新の損失」の問題を防ぐためのものです。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
-  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限" )}}。
+  - : ユーザーは一定の時間内に大量のリクエストを送信しました（{{Glossary("Rate_limit","レート制限")}}）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
   - : ヘッダーフィールドが大きすぎるため、サーバーはリクエストの処理を望みません。
     ヘッダーフィールドのサイズを削減した後に、リクエストを再送信できます。
@@ -175,7 +174,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
   - : サーバー側で処理方法がわからない事態が発生したことを示します。
     このエラーは汎用的なエラーで、サーバーが応答に適切な `5XX` ステータスコードを見つけることができないことを示しています。
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : リクエストメソッドをサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは {{HTTPMethod("GET")}} と {{HTTPMethod("HEAD")}} だけです。
+  - : そのリクエストメソッドにサーバーが対応しておらず、扱えないことを示します。サーバーが対応しなければならない (従って、このコードを返してはならない) メソッドは {{HTTPMethod("GET")}} と {{HTTPMethod("HEAD")}} だけです。
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : このエラーレスポンスは、リクエストの処理に必要なレスポンスを受け取るゲートウェイとして動作するサーバーが無効なレスポンスを受け取ったことを示します。
 - {{HTTPStatus(503, "503 Service Unavailable")}}
@@ -205,5 +204,5 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 ## 関連情報
 
-- [HTTP ステータスコードの一覧 (Wikipedia)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [HTTP ステータスコードの一覧（ウィキペディア）](https://ja.wikipedia.org/wiki/HTTPステータスコード)
+- [HTTP ステータスコードの、IANA 公式レジストリー](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)<sup>(英語)</sup>

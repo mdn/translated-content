@@ -3,8 +3,6 @@ title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une notification est fermée, soit par le système, soit par l'utilisateur.
 
 ## Syntaxe

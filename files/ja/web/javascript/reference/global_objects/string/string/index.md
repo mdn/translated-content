@@ -25,7 +25,7 @@ String(thing)
 
 ### 返値
 
-`String()` が関数として（[`new`] (/ja/docs/Web/JavaScript/Reference/Operators/new) なしで）呼び出された場合、 `value` が[文字列プリミティブに変換されたもの](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への変換)を返します。特に、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)値は、例外を発生させるのではなく、 `"Symbol(description)"` に変換されます。ここで、`description` は、このシンボルのの[説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)です。
+`String()` が関数として（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) なしで）呼び出された場合、 `value` が[文字列プリミティブに変換されたもの](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への変換)を返します。特に、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)値は、例外を発生させるのではなく、 `"Symbol(description)"` に変換されます。ここで、`description` は、このシンボルのの[説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)です。
 
 `String` がコンストラクターとして（`new` 付きで）呼び出された場合、 `value` を（シンボルの特別扱いなしで）文字列プリミティブに変換し、 {{jsxref("String")}} オブジェクトでラップして返します。これはプリミティブでは**ありません**。
 

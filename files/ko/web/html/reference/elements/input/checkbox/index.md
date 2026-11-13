@@ -41,7 +41,8 @@ input {
 }
 ```
 
-> **참고:** [라디오 버튼](/ko/docs/Web/HTML/Element/input/radio) 은 체크박스와 비슷하지만 중요한 차이점이 하나 있습니다. 여러 라디오 버튼은 하나의 집합으로 그룹화되어 그 안에서 단 하나만 선택될 수 있지만, 체크박스의 경우는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나의 요소에 대한 선택만을 허용하고, 체크박스는 여러 개의 요소가 선택되는 것을 허용합니다.
+> [!NOTE]
+> [라디오 버튼](/ko/docs/Web/HTML/Element/input/radio) 은 체크박스와 비슷하지만 중요한 차이점이 하나 있습니다. 여러 라디오 버튼은 하나의 집합으로 그룹화되어 그 안에서 단 하나만 선택될 수 있지만, 체크박스의 경우는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나의 요소에 대한 선택만을 허용하고, 체크박스는 여러 개의 요소가 선택되는 것을 허용합니다.
 
 ## Value
 
@@ -344,4 +345,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - {{HTMLElement("input")}} 과 그를 구현하는 {{domxref("HTMLInputElement")}} 인터페이스
 - {{cssxref(":checked")}} 그리고 현재 상태를 기반으로 체크박스를 꾸밀 수 있는 {{cssxref(":indeterminate")}} CSS 선택자
-- [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 속성 호환성](/ko/docs/Learn_web_development/Extensions/Forms)

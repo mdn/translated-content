@@ -19,14 +19,14 @@ slug: Web/JavaScript/Reference
 ### 函數屬性
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
 
 ### 基礎物件
 
@@ -104,24 +104,24 @@ slug: Web/JavaScript/Reference
 ### 國際化
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Locale", "Intl.Locale")}}
+- {{JSxRef("Intl/Collator", "Intl.Collator")}}
+- {{JSxRef("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{JSxRef("Intl/PluralRules", "Intl.PluralRules")}}
+- {{JSxRef("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl/Locale", "Intl.Locale")}}
 
 ### WebAssembly
 
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
+- [`WebAssembly`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ## 敘述句
 
@@ -174,7 +174,7 @@ slug: Web/JavaScript/Reference
 
 ### 主要運算式
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -182,99 +182,99 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/yield*", "yield*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{JSxRef("Operators/null", "null")}}
 
 ### 左手邊運算式
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
+- {{JSxRef("new")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
 ### 遞增與遞減
 
-- {{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+- {{JSxRef("Operators", "A++", "#Increment")}}
+- {{JSxRef("Operators", "A--", "#Decrement")}}
+- {{JSxRef("Operators", "++A", "#Increment")}}
+- {{JSxRef("Operators", "--A", "#Decrement")}}
 
 ### 一元運算子
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
-- {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
-- {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+- {{JSxRef("Operators", "+", "#Unary_plus")}}
+- {{JSxRef("Operators", "-", "#Unary_negation")}}
+- {{JSxRef("Operators", "~", "#Bitwise_NOT")}}
+- {{JSxRef("Operators", "!", "#Logical_NOT")}}
 
 ### 算術運算子
 
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+- {{JSxRef("Operators", "+", "#Addition")}}
+- {{JSxRef("Operators", "-", "#Subtraction")}}
+- {{JSxRef("Operators", "/", "#Division")}}
+- {{JSxRef("Operators", "*", "#Multiplication")}}
+- {{JSxRef("Operators", "%", "#Remainder")}}
+- {{JSxRef("Operators", "**", "#Exponentiation")}}
 
 ### 關係運算子
 
 - {{JSxRef("Operators/in", "in")}}
 - {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{JSxRef("Operators", "&lt;", "#Less_than_operator")}}
+- {{JSxRef("Operators", "&gt;", "#Greater_than_operator")}}
+- {{JSxRef("Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+- {{JSxRef("Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
 
 ### 相等運算子
 
-- {{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}
-- {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}
-- {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}
-- {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+- {{JSxRef("Operators", "==", "#Equality")}}
+- {{JSxRef("Operators", "!=", "#Inequality")}}
+- {{JSxRef("Operators", "===", "#Identity")}}
+- {{JSxRef("Operators", "!==", "#Nonidentity")}}
 
 ### 位元移位運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{JSxRef("Operators", "&lt;&lt;", "#Left_shift")}}
+- {{JSxRef("Operators", "&gt;&gt;", "#Right_shift")}}
+- {{JSxRef("Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
 
 ### 二元位元運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
-- {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
-- {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+- {{JSxRef("Operators", "&amp;", "#Bitwise_AND")}}
+- {{JSxRef("Operators", "|", "#Bitwise_OR")}}
+- {{JSxRef("Operators", "^", "#Bitwise_XOR")}}
 
 ### 二元邏輯運算子
 
-- {{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
-- {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}
+- {{JSxRef("Operators", "&amp;&amp;", "#Logical_AND")}}
+- {{JSxRef("Operators", "||", "#Logical_OR")}}
 
 ### 條件(三元)運算子
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 賦值運算子
 
-- {{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators", "=", "#Assignment")}}
+- {{JSxRef("Operators", "*=", "#Multiplication_assignment")}}
+- {{JSxRef("Operators", "/=", "#Division_assignment")}}
+- {{JSxRef("Operators", "%=", "#Remainder_assignment")}}
+- {{JSxRef("Operators", "+=", "#Addition_assignment")}}
+- {{JSxRef("Operators", "-=", "#Subtraction_assignment")}}
+- {{JSxRef("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{JSxRef("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{JSxRef("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{JSxRef("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{JSxRef("Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{JSxRef("Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
 
 ## 函數
 

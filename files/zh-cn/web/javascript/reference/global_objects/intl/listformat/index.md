@@ -3,8 +3,6 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 
-{{JSRef}}
-
 **`Intl.ListFormat`** 是一个语言相关的列表格式化构造器。
 
 {{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}
@@ -54,12 +52,12 @@ new Intl.ListFormat([locales[, options]])
 
 ### 属性
 
-- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+- {{jsxref("Intl/ListFormat", "Intl.ListFormat.prototype")}}
   - : 允许增加一个属性到列表中的所有对象。
 
 ### 方法
 
-- {{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
   - : 返回一个包含指定的被支持区域设置的数组，没有时使用运行环境默认区域设置
 
 ## 示例

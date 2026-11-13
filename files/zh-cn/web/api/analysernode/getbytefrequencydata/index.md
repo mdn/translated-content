@@ -20,7 +20,7 @@ analyser.getByteFrequencyData(dataArray); // 调用 getByteFrequencyData 方法�
 
 ### 返回值
 
-一个 {{domxref("Uint8Array")}}（无符号字节数组）.
+一个 {{jsxref("Uint8Array")}}（无符号字节数组）.
 
 ## 例子
 
@@ -69,7 +69,7 @@ draw();
 ## 参数
 
 - array (数组)
-  - : 必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内。
+  - : 必须为{{jsxref("Uint8Array")}}, 频域数据将复制到该数组内。
 
 ## 规范
 

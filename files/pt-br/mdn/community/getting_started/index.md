@@ -40,7 +40,7 @@ Para contribuir, você precisará de uma conta GitHub. Se você ainda não tem u
 
 Algumas oportunidades de contribuição específicas de redação exigirão um entendimento razoável do idioma inglês. Dito isso, não deixe que o perfeito seja inimigo do "suficientemente bom". Mesmo que sua gramática não seja boa, não se preocupe! Temos uma equipa de pessoas que visam garantir que os conteúdos do MDN são os melhores possíveis. Além disso, alguém estará junto para garantir que seu trabalho esteja organizado e bem escrito.
 
-Depois de decidir em que tipo de tarefa deseja trabalhar, é hora de ir para o [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1), escolha um problema e informe-nos comentando sobre o problema e marcando a equipe `@mdn/mdn-community-engagement`. Alguém da equipe responderá e atribuirá o problema a você.
+Depois de decidir em que tipo de tarefa deseja trabalhar, é hora de ir para o [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1), escolha um problema e informe-nos comentando sobre o problema e marcando a equipe `@mdn/community`. Alguém da equipe responderá e atribuirá o problema a você.
 
 Isso garante que duas pessoas não trabalhem no mesmo problema e você saberá com quem entrar em contato caso fique preso.
 

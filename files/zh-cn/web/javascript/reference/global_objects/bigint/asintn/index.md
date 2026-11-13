@@ -3,8 +3,6 @@ title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
 
-{{JSRef}}
-
 **`BigInt.asIntN`** 静态方法将 `BigInt` 值转换为一个 -`2^(width-1)` 与 `2^(width-1)-1` 之间的有符号整数。
 
 {{InteractiveExample("JavaScript Demo: BigInt.asIntN()")}}
@@ -26,7 +24,7 @@ console.log(BigInt.asIntN(64, -I64_CEIL * -42n));
 
 ## 语法
 
-```plain
+```js-nolint
 BigInt.asIntN(width, bigint);
 ```
 

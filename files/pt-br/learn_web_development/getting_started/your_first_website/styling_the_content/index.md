@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_conte
 original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (Folha de Estilo em Cascata) é o código que você usa para dar estilo à sua página Web. _CSS básico_ apresenta tudo que você precisa para começar. Responderemos a perguntas do tipo: Como mudo meu texto para preto ou vermelho? Como faço para que meu conteúdo apareça em determinados lugares na tela? Como decoro minha página com imagens e cores de fundo?
 
@@ -186,9 +186,9 @@ body {
 Agora para o elemento {{htmlelement ("body")}}. Há algumas declarações aqui, então vamos passar por elas uma a uma:
 
 - `width: 600px;` — Isso força o corpo a ter 600 pixels de largura.
-- `margin: 0 auto;` — Quando você define dois valores em uma propriedade como `margin` ou `padding`, o primeiro valor afeta a parte superior do elemento **e** a parte inferior (tornando-os `0` nesse caso), e no segundo valor os lados esquerdo **e** direito (aqui, `auto` é um valor especial que divide o espaço horizontal uniformemente entre esquerda e direita). Você também pode utilizar um, três ou quatro valores, como documentado [aqui](/pt-BR/docs/Web/CSS/margin#sintaxe).
+- `margin: 0 auto;` — Quando você define dois valores em uma propriedade como `margin` ou `padding`, o primeiro valor afeta a parte superior do elemento **e** a parte inferior (tornando-os `0` nesse caso), e no segundo valor os lados esquerdo **e** direito (aqui, `auto` é um valor especial que divide o espaço horizontal uniformemente entre esquerda e direita). Você também pode utilizar um, três ou quatro valores, como documentado [aqui](/pt-BR/docs/Web/CSS/Reference/Properties/margin#sintaxe).
 - `background-color: #FF9500;` — como antes, isso define a cor de fundo do elemento. Usamos um tipo de laranja avermelhado no corpo, para opor ao azul escuro no elemento {{htmlelement ("html")}}, mas fique à vontade para ir em frente e experimentar.
-- `padding: 0 20px 20px 20px;` — temos quatro valores definidos no padding, para criar um pouco de espaço em torno do nosso conteúdo. Dessa vez, estamos definindo sem padding na parte superior do corpo, e 20 pixels no lado esquerdo, na parte inferior e no lado direito. Os valores definem a parte superior, o lado direito, a parte inferior e o lado esquerdo, nessa ordem. Como com a `margin`, você também pode usar um, dois, ou três valores, conforme documentado na [sintaxe do padding](/pt-BR/docs/Web/CSS/padding#sintaxe).
+- `padding: 0 20px 20px 20px;` — temos quatro valores definidos no padding, para criar um pouco de espaço em torno do nosso conteúdo. Dessa vez, estamos definindo sem padding na parte superior do corpo, e 20 pixels no lado esquerdo, na parte inferior e no lado direito. Os valores definem a parte superior, o lado direito, a parte inferior e o lado esquerdo, nessa ordem. Como com a `margin`, você também pode usar um, dois, ou três valores, conforme documentado na [sintaxe do padding](/pt-BR/docs/Web/CSS/Reference/Properties/padding#sintaxe).
 - `border: 5px solid black;` — isso simplesmente define uma borda preta sólida de 5 pixels de largura em todos os lados do corpo.
 
 ### Posicionando e estilizando o título da nossa página principal
@@ -230,7 +230,7 @@ Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos
 > As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
 
 > [!NOTE]
-> Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
+> Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/Reference/Properties/display).
 
 ## Conclusão
 
@@ -242,4 +242,4 @@ Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [ex
 
 Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`forEach()`** 메서드는 각 배열 요소에 대해 제공된 함수를 한 번씩 실행합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -180,7 +181,7 @@ console.log(obj.sum); // 16
 > 콜백 함수를 전달할 때
 > [화살표 함수 표현식](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하는 경우,
 > 모든 화살표 함수가 이 값을 문법적으로(lexical) 바인딩하므로
-> {{jsxref("Operators/this", "this")}} 매개 변수를 생략할 수 있습니다.
+> {{jsxref("this")}} 매개 변수를 생략할 수 있습니다.
 
 ### 객체 복사 함수
 

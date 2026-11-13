@@ -1,13 +1,12 @@
 ---
 title: Math.sinh()
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
-
-**`Math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
+**`Math.sinh()`** は静的メソッドで、数値の双曲線正弦（ハイパーボリックサイン）を返します。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -19,16 +18,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.sinh(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+// 予想される結果: 1.1752011936438014
 
 console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+// 予想される結果: -1.1752011936438014
 
 console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+// 予想される結果: 3.626860407847019
 ```
 
 ## 構文
@@ -52,7 +51,7 @@ Math.sinh(x)
 
 ## 例
 
-### Using Math.sinh() の使用
+### Math.sinh() の使用
 
 ```js
 Math.sinh(-Infinity); // -Infinity
@@ -72,7 +71,7 @@ Math.sinh(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.sinh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.sinh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

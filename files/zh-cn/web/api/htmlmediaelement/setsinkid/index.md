@@ -39,7 +39,7 @@ setSinkId(sinkId)
 
 对此 API 的访问受以下约束：
 
-- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
+- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中调用。
 - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的控制。
 - 需要用户的授权才能访问非默认设备。用户通过在 {{domxref("MediaDevices.selectAudioOutput()")}} 显示的提示中选择与 ID 相关联的设备来授予权限。
 

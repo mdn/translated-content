@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 ## Sumário
 
-Retorna uma referência para a função {{jsxref("Global_Objects/Object", "Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas _read-only_ para valores primitivos como `1`, `true` e `"test"`.
+Retorna uma referência para a função {{jsxref("Object")}} que cria a instância do protótipo. Note que o valor desse protótipo é uma referência para a própria função, não uma string contendo o nome da função. O valor é apenas _read-only_ para valores primitivos como `1`, `true` e `"test"`.
 
 ## Descrição
 

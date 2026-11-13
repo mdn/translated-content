@@ -3,8 +3,6 @@ title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
 
-{{JSRef}}
-
 **`Object.getOwnPropertySymbols()`** 静态方法返回一个包含给定对象所有自有 Symbol 属性的数组。
 
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}

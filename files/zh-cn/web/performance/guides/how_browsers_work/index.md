@@ -162,7 +162,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 不会被显示的元素，如 [`<head>`](/zh-CN/docs/Web/HTML/Reference/Elements/head) 元素及其子元素，以及任何带有 `display: none` 的节点，如用户代理样式表中的 `script { display: none; }`，都不会包含在渲染树中，因为它们不会出现在渲染输出中。应用了 `visibility: hidden` 的节点会包含在渲染树中，因为它们会占用空间。由于我们没有给出任何指令来覆盖用户代理默认值，因此上述代码示例中的 `script` 节点不会包含在渲染树中。
 
-每个可见节点都应用了 CSSOM 规则。渲染树包含所有可见节点的内容和计算样式，将所有相关样式与 DOM 树中的每个可见节点匹配起来，并根据 [CSS 级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)，确定每个节点的计算样式。
+每个可见节点都应用了 CSSOM 规则。渲染树包含所有可见节点的内容和计算样式，将所有相关样式与 DOM 树中的每个可见节点匹配起来，并根据 [CSS 级联](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)，确定每个节点的计算样式。
 
 ### 布局
 
@@ -180,7 +180,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 为了确保平滑滚动和动画效果，包括计算样式、回流和绘制等占用主线程的所有操作，必须在不超过 16.67 毫秒的时间内完成。在 2048 x 1536 分辨率下，iPad 需要将超过 314.5 万个像素绘制到屏幕上。这是非常多的像素，必须要非常快速地绘制出来。为了确保重绘能够比初始绘制更快地完成，绘制到屏幕的操作通常被分解成几个图层。如果发生这种情况，浏览器则需要进行合成。
 
-绘制可以将布局树中的元素分解为多个层。将内容提升到 GPU 上的层（而不是 CPU 上的主线程）可以提高绘制和重新绘制性能。有一些特定的属性和元素可以实例化一个层，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas)，任何 CSS 属性为 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 、3D [`transform`](/zh-CN/docs/Web/CSS/transform)、[`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素，还有一些其他元素。这些节点将与子节点一起绘制到它们自己的层上，除非子节点由于上述一个（或多个）原因需要自己的层。
+绘制可以将布局树中的元素分解为多个层。将内容提升到 GPU 上的层（而不是 CPU 上的主线程）可以提高绘制和重新绘制性能。有一些特定的属性和元素可以实例化一个层，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas)，任何 CSS 属性为 [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity) 、3D [`transform`](/zh-CN/docs/Web/CSS/Reference/Properties/transform)、[`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 的元素，还有一些其他元素。这些节点将与子节点一起绘制到它们自己的层上，除非子节点由于上述一个（或多个）原因需要自己的层。
 
 分层确实可以提高性能，但在内存管理方面成本较高，因此不应作为 Web 性能优化策略的过度使用。
 

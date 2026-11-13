@@ -1,127 +1,151 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
+l10n:
+  sourceCommit: 73ca80b86a348f88f51fdb8f9441c114b76e94f1
 ---
 
-{{DefaultAPISidebar}}
+{{DefaultAPISidebar("Service Workers API")}}{{AvailableInWorkers}}
 
-Los Service workers actúan esencialmente como proxy servers asentados entre las aplicaciones web, el navegador y la red (cuando está accesible). Están destinados, entre otras cosas, a permitir la creación de experiencias offline efectivas, interceptando peticiones de red y realizando la acción apropiada si la conexión de red está disponible y hay disponibles contenidos actualizados en el servidor. También permitirán el acceso a notificaciones tipo push y APIs de sincronización en segundo plano.
-
-## Conceptos y uso de Service worker
-
-Un service worker es un [worker](/es/docs/Web/API/Worker) manejado por eventos registrado para una fuente y una ruta. Consiste en un fichero JavaScript que controla la página web (o el sitio) con el que está asociado, interceptando y modificando la navegación y las peticiones de recursos, y cacheando los recursos de manera muy granular para ofrecer un control completo sobre cómo la aplicación debe comportarse en ciertas situaciones (la mas obvia es cuando la red no está disponible).
-
-Un service worker se ejecuta en un contexto worker: por lo tanto no tiene acceso al DOM, y se ejecuta en un hilo distinto al JavaScript principal de la aplicación, de manera que no es bloqueante. Está diseñado para ser completamente asíncrono, por lo que APIs como el [XHR](/es/docs/Web/API/XMLHttpRequest) asíncrono y [localStorage](/es/docs/Web/API/Web_Storage_API) no se pueden usar dentro de un service worker.
-
-Los service workers solo funcionan sobre HTTPS, por razones de seguridad. Modificar las peticiones de red en abierto permitiría ataques man in the middle realmente peligrosos. En Firefox, las APIs de service worker se ocultan y no pueden ser empleadas cuando el usuario está en [modo de navegación en privado](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
+Los service workers actúan esencialmente como servidores proxy que se sitúan entre las aplicaciones web, el navegador y la red (cuando está disponible). Están destinados, entre otras cosas, a permitir la creación de experiencias offline efectivas, interceptar peticiones de red y realizar la acción apropiada según si la red está disponible y si hay contenidos actualizados en el servidor. También permiten el acceso a notificaciones push y APIs de sincronización en segundo plano.
 
 > [!NOTE]
-> Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
+> Los service workers son un tipo de web worker. Consulte [Web workers](/es/docs/Web/API/Web_Workers_API) para información general sobre los tipos de workers y casos de uso.
+
+## Conceptos y uso de service workers
+
+Un service worker es un [worker](/es/docs/Web/API/Worker) controlado por eventos, registrado para un origen y una ruta. Consiste en un archivo JavaScript que puede controlar la página web o sitio con el que está asociado, interceptando y modificando las peticiones de navegación y recursos, y almacenando en caché los recursos de manera muy granular para ofrecer un control completo sobre cómo se comporta la aplicación en ciertas situaciones (la más obvia es cuando la red no está disponible).
+
+Los service workers se ejecutan en un contexto worker: por lo tanto, no tienen acceso al DOM y se ejecutan en un hilo distinto al JavaScript principal que alimenta la aplicación. Son no bloqueantes y están diseñados para ser completamente asíncronos. Como consecuencia, APIs como [XHR](/es/docs/Web/API/XMLHttpRequest) síncrono y [Web Storage](/es/docs/Web/API/Web_Storage_API) no se pueden usar dentro de un service worker.
+
+Los service workers no pueden importar módulos JavaScript dinámicamente, y [`import()`](/es/docs/Web/JavaScript/Reference/Operators/import) lanzará un error si se invoca en el ámbito global de un service worker. Las importaciones estáticas usando la sentencia [`import`](/es/docs/Web/JavaScript/Reference/Statements/import) sí están permitidas.
+
+Los service workers solo están disponibles en [contextos seguros](/es/docs/Web/Security/Defenses/Secure_Contexts): esto significa que su documento se sirve sobre HTTPS, aunque los navegadores también tratan `http://localhost` como un contexto seguro para facilitar el desarrollo local. Las conexiones HTTP son susceptibles a inyección de código malicioso mediante ataques de {{Glossary("MitM", "intermediario")}}, y tales ataques podrían ser peores si se permitiera acceso a estas potentes APIs.
 
 > [!NOTE]
-> Los Service workers hace un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), por lo que generalmente esperarán a que lleguen las respuestasas correspondientes, tras lo cual responderán con una acción de éxito o de fracaso. La arquitectura de promesas es ideal en este caso.
+> En Firefox, para realizar pruebas se pueden ejecutar service workers sobre HTTP (de forma insegura); simplemente marque la opción **Habilitar Service Workers sobre HTTP (cuando la caja de herramientas esté abierta)** en el menú de opciones/engranaje de las herramientas de desarrollo de Firefox.
+
+> [!NOTE]
+> A diferencia de intentos anteriores en esta área como [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/), los service workers no hacen suposiciones sobre lo que se intenta hacer para luego fallar cuando esas suposiciones no son exactamente correctas. En su lugar, los service workers ofrecen un control mucho más granular.
+
+> [!NOTE]
+> Los service workers hacen un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), ya que generalmente esperarán a que lleguen las respuestas y luego responderán con una acción de éxito o fracaso. La arquitectura de promesas es ideal para esto.
 
 ### Registro
 
-Un service worker se registra primero mediante el método {{domxref("ServiceWorkerContainer.register()")}}. Si ha habido éxito, el service worker se descargará al cliente e intentará la instalación/activación (ver más abajo) de las URLs accedidas por el usuario dentro de todo su origen de datos, o dentro de algún subconjunto especificado por el autor.
+Un service worker se registra primero mediante el método {{DOMxRef("ServiceWorkerContainer.register()")}}. Si tiene éxito, el service worker se descargará en el cliente e intentará la instalación/activación (ver más abajo) para las URLs accedidas por el usuario dentro de todo el origen, o un subconjunto especificado.
 
 ### Descarga, instalación y activación
 
-En este punto, su service worker observará el siguiente ciclo de vida:
+En este punto, el service worker seguirá el siguiente ciclo de vida:
 
 1. Descarga
 2. Instalación
 3. Activación
 
-El service worker se descaga inmediatamente cuando un usuario accede por primera vez a un sitio controlado por el mismo.
+El service worker se descarga inmediatamente cuando un usuario accede por primera vez a un sitio/página controlados por un service worker.
 
-Después de esto se descarga cada 24 horas aproximadamente. Se puede descargar con más frecuencia, pero **debe** ser descargado cada 24 horas para prevenir que una mala programación sea molesta durante mucho tiempo.
+Después de eso, se actualiza cuando:
 
-La instalación se realiza cuando el fichero descargado es nuevo, es decir, diferente a otro service worker existente (comparado byte a byte), o si es el primero descargado para esta página/sitio.
+- Se produce una navegación a una página dentro del alcance.
+- Se dispara un evento en el service worker y no se ha descargado en las últimas 24 horas.
 
-Si es la primera vez que el service worker está disponible se intenta la instalación, y tras una instalación satisfactoria se activa.
+La instalación se intenta cuando el archivo descargado resulta ser nuevo, ya sea diferente a un service worker existente (comparado byte a byte), o el primer service worker encontrado para esta página/sitio.
 
-Si ya existe un service worker disponible la nueva versión se instala en segundo plano, pero no se activa -en ese momento se llama _worker in waiting._ Sólo se activa cuando ya no hay más páginas cargadas que utilicen el antiguo service worker. En cuanto no hay más páginas de este estilo cargadas, el nuevo service worker se activa (pasando a ser el _active worker)._ La activación se puede realizar antes mediante {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} y las páginas existentes se pueden llamar por el active worker usando {{domxref("Clients.claim()")}}.
+Si es la primera vez que un service worker está disponible, se intenta la instalación; tras una instalación exitosa, se activa.
 
-Presta atención a {{domxref("InstallEvent")}}; es habitual preparar tu service worker para usarlo cuando se dispara, por ejemplo creando una caché que utilice la API incorporada de almacenamiento, y colocando los contenidos dentro de ella para poder usarlos con la aplicación offline.
+Si ya hay un service worker existente disponible, la nueva versión se instala en segundo plano, pero aún no se activa; en ese momento se le llama _worker en espera_. Solo se activa cuando ya no hay páginas cargadas que aún usen el service worker antiguo. En cuanto no quedan más páginas por cargar, el nuevo service worker se activa (convirtiéndose en el _worker activo_). La activación puede ocurrir antes usando {{DOMxRef("ServiceWorkerGlobalScope.skipWaiting()")}} y las páginas existentes pueden ser reclamadas por el worker activo usando {{DOMxRef("Clients.claim()")}}.
 
-También hay un evento `activate`. El momento en el que este evento se activa es, en general, un bueno momento para limpiar viejas cachés y demás cosas asociadas con la versión previa de tu service worker.
+Se puede escuchar el evento {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}; una acción estándar es preparar el service worker para su uso cuando se dispara, por ejemplo creando una caché usando la API de almacenamiento incorporada, y colocando dentro los recursos que se necesitarán para ejecutar la aplicación sin conexión.
 
-Tu service worker puede responder a las peticiones usando el evento {{domxref("FetchEvent")}}. Puedes modificar la respuesta a estas peticiones de la manera que quieras, usando el método {{domxref("FetchEvent.respondWith") }}.
+También existe un evento {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}. El momento en que se dispara este evento es generalmente un buen momento para limpiar cachés antiguas y otras cosas asociadas con la versión anterior del service worker.
+
+El service worker puede responder a peticiones usando el evento {{DOMxRef("FetchEvent")}}. Se puede modificar la respuesta a estas peticiones de cualquier manera deseada, usando el método {{DOMxRef("FetchEvent.respondWith()")}}.
 
 > [!NOTE]
-> Dado que `oninstall`/`onactivate` puede tardar un poco en completarse, la especificación de service worker spec provee un método `waitUntil` que, cuando es llamado `oninstall` o `onactivate`, pasa una promesa. Los eventos funcionales no se envían al service worker hasta que la promesa se resuelve con éxito.
+> Dado que los eventos `install`/`activate` pueden tardar un tiempo en completarse, la especificación de service workers proporciona un método {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}}. Una vez invocado en eventos `install` o `activate` con una promesa, los eventos funcionales como `fetch` y `push` esperarán hasta que la promesa se resuelva exitosamente.
 
-Para un tutorial completo que muestra cómo construir tu primer ejemplo básico, lee [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+Para un tutorial completo que muestra cómo construir un primer ejemplo básico, lea [Uso de Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
-## Otras posibilidades
+### Uso de enrutamiento estático para controlar cómo se obtienen los recursos
 
-Los service workers también pueden usarse para cosas como:
+Los service workers pueden incurrir en un costo de rendimiento innecesario: cuando una página se carga por primera vez después de un tiempo, el navegador tiene que esperar a que el service worker se inicie y ejecute para saber qué contenido cargar y si debe provenir de una caché o de la red.
 
-- Sincronización de datos en background
-- Responder a peticiones de recursos desde otros orígenes
-- Recibir actualizaciones centralizadas de datos costosos de calcular tales como geolocalización o giroscopio, de manera que muchas páginas puedan hacer uso de un mismo conjunto de datos
-- Compilación Client-side y gestión de dependencias de CoffeeScript, less, CJS/AMD modules, etc. para desarrollo
-- Enlace para servicios en background
-- Plantillas personalizadas basadas en ciertos patrones URL
-- Mejoras de rendimiento, por ejemplo pre-fetching de recursos que es probable que el usuario requiera en un futuro próximo, como las próximas imágenes de un album de fotos.
+Si ya se sabe de antemano de dónde deben obtenerse ciertos contenidos, se puede omitir el service worker por completo y obtener los recursos de forma inmediata. El método {{domxref("InstallEvent.addRoutes()")}} se puede usar para implementar este caso de uso y más.
 
-En el futuro, los service workers podrán hacer una cantidad de cosas útiles para la plataforma web que estarán muy próximos a las aplicaciones nativas. Interesantement, otras especificacions pueden comenzar y lo harán a hacer uso del contexto de service worker, por ejemplo:
+## Otras ideas de casos de uso
 
-- [Sincronización en background](https://github.com/slightlyoff/BackgroundSync): Pone en marcha un service worker aunque el usuario no esté en el sitio de manera que las cachés se puedan actualizar, etc.
-- [Reacción a mensajes tipo push](/es/docs/Web/API/Push_API): Pone en marcha un service worker para enviar a los usuarios un mensaje para notificarles de que hay disponible nuevos contenidos.
-- Reacción ante una fecha y hora determinados.
-- Creación de geo-fronteras
+Los service workers también están pensados para usarse en cosas como:
+
+- Sincronización de datos en segundo plano.
+- Responder a peticiones de recursos desde otros orígenes.
+- Recibir actualizaciones centralizadas de datos costosos de calcular, como geolocalización o giroscopio, de manera que múltiples páginas puedan usar un mismo conjunto de datos.
+- Compilación del lado del cliente y gestión de dependencias de CoffeeScript, Less, módulos CJS/AMD, etc., para desarrollo.
+- Hooks para servicios en segundo plano.
+- Plantillas personalizadas basadas en ciertos patrones de URL.
+- Mejoras de rendimiento, por ejemplo, pre-obtención de recursos que el usuario probablemente necesitará pronto, como las siguientes imágenes de un álbum de fotos.
+- Simulación de APIs.
+
+En el futuro, los service workers podrán hacer varias cosas útiles para la plataforma web que la acercarán a la viabilidad de aplicaciones nativas. Resulta interesante que otras especificaciones pueden y van a empezar a hacer uso del contexto de service workers, por ejemplo:
+
+- [Sincronización en segundo plano](https://github.com/WICG/background-sync): Iniciar un service worker aunque no haya usuarios en el sitio, para que las cachés se puedan actualizar, etc.
+- [Reacción a mensajes push](/es/docs/Web/API/Push_API): Iniciar un service worker para enviar a los usuarios un mensaje indicando que hay nuevo contenido disponible.
+- Reacción ante una fecha y hora determinadas.
+- Entrada en una geocerca.
 
 ## Interfaces
 
-- {{domxref("Cache") }}
-  - : Representa el almacenamiento para un par de objetos {{domxref("Request")}} / {{domxref("Response")}} que son cacheados como parte del ciclo de vida de {{domxref("ServiceWorker")}}.
-- {{domxref("CacheStorage") }}
-  - : Representa el almacenamiento de objetos {{domxref("Cache")}}. Proporciona un directorio maestro de todos los nombres de caché a los que puede acceder un {{domxref("ServiceWorker")}} y mantiene un mapa de nombres (strings) correspondientes a objetos {{domxref("Cache")}}.
-- {{domxref("Client") }}
-  - : Representa el ámbito de un cliente service worker. Un cliente service worker es bien un documento en un contexto de navador, bien un {{domxref("SharedWorker")}}, que está controlado por un worker activo.
-- {{domxref("Clients") }}
-  - : Representa un contenedor para una lista de objetos {{domxref("Client")}}; principal vía de acceso de los clientes service worker al origen actual.
-- {{domxref("ExtendableEvent") }}
-  - : Extiende el tiempo de vida de los eventos `install` y `activate` lanzados en {{domxref("ServiceWorkerGlobalScope")}} como parte del ciclo de vida del service worker. Esto asegura que cualquier evento funcional (como {{domxref("FetchEvent")}}) no se despachan al {{domxref("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, borra entradas de caché antiguas, etc.
-- {{domxref("ExtendableMessageEvent") }}
-  - : Es el objeto evento de un [`message`](</es/docs/Web/Reference/Events/message_(ServiceWorker)>) lanzado en un service worker (cuando se recibe un mensaje en el {{domxref("ServiceWorkerGlobalScope")}} desde otro contexto) — extiende el tiempo de vida de tales eventos.
-- {{domxref("FetchEvent") }}
-  - : Parametro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` representa una acción de consulta (fetch) despachada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Contiene información sobre la petición y respuesta resultante, y proporciona el método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, que nos permite proporcionar una respuesta arbitraria a la página controlada.
-- {{domxref("InstallEvent") }}
-  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}}, el interfaz `InstallEvent` representa una acctión de instalación realizada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Como hijo de {{domxref("ExtendableEvent")}}, asegura que los eventos funcionales como {{domxref("FetchEvent")}} no se llevan a cabo durante la instalación.
-- {{domxref("Navigator.serviceWorker") }}
-  - : Devuelve un objeto {{domxref("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{domxref("ServiceWorker")}} para el [documento asociado](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{domxref("NotificationEvent") }}
-  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, el interfaz `NotificationEvent` representa una notificación del evento click ejecutado en {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorker") }}
-  - : Representa un service worker. Multiples contextos de navegación (e.g. pages, workers, etc.) se pueden asociar con el mismo objeto `ServiceWorker`.
-- {{domxref("ServiceWorkerContainer") }}
-  - : Proporciona un objeto que representa el service worker como una unidad en el ecosistema de red, incluyendo servicios para registrar, eliminar y actualizar los service workers, y acceder al estado de los service workers y sus registros.
-- {{domxref("ServiceWorkerGlobalScope") }}
-  - : Representa el contexto global de ejecución de un service worker.
-- {{domxref("ServiceWorkerMessageEvent")}} {{deprecated_inline}}
-  - : Representa un mensaje envaido a un{{domxref("ServiceWorkerGlobalScope")}}. Observese que este interfaz está considerado obsoleto en navegadores modernos. Los mensajes de service worker no podrán utilizar el interfaz {{domxref("MessageEvent")}}, por consistencia con otras características de mensajería web.
-- {{domxref("ServiceWorkerRegistration") }}
-  - : Representa un registro service worker.
-- {{domxref("SyncEvent")}} {{non-standard_inline}}
-  - : El interfaz SyncEvent representa una acción sync ejecutada en el {{domxref("ServiceWorkerGlobalScope")}} de un ServiceWorker.
-- {{domxref("SyncManager")}} {{non-standard_inline}}
-  - : Proporciona un interfaz para registrar y listar registros sync.
-- {{domxref("WindowClient") }}
-  - : Representa el ámbito de un cliente service worker que es un documento en un contexto de navegador, controlado por un worker activo. Es un tipo especial de objeto {{domxref("Client")}}, con algunos métodos y propiedades adicionales disponibles.
+- {{DOMxRef("Cache")}}
+  - : Representa el almacenamiento para pares de objetos {{DOMxRef("Request")}} / {{DOMxRef("Response")}} que se almacenan en caché como parte del ciclo de vida del {{DOMxRef("ServiceWorker")}}.
+- {{DOMxRef("CacheStorage")}}
+  - : Representa el almacenamiento para objetos {{DOMxRef("Cache")}}. Proporciona un directorio maestro de todas las cachés nombradas a las que puede acceder un {{DOMxRef("ServiceWorker")}}, y mantiene una correspondencia de nombres de cadena a los objetos {{DOMxRef("Cache")}} correspondientes.
+- {{DOMxRef("Client")}}
+  - : Representa el ámbito de un cliente de service worker. Un cliente de service worker es un documento en un contexto de navegador o un {{DOMxRef("SharedWorker")}}, controlado por un worker activo.
+- {{DOMxRef("Clients")}}
+  - : Representa un contenedor para una lista de objetos {{DOMxRef("Client")}}; la vía principal para acceder a los clientes de service worker activos en el origen actual.
+- {{DOMxRef("ExtendableEvent")}}
+  - : Extiende el tiempo de vida de los eventos `install` y `activate` despachados en el {{DOMxRef("ServiceWorkerGlobalScope")}}, como parte del ciclo de vida del service worker. Esto asegura que los eventos funcionales (como {{DOMxRef("FetchEvent")}}) no se despachan al {{DOMxRef("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, elimina entradas de caché obsoletas, etc.
+- {{DOMxRef("ExtendableMessageEvent")}}
+  - : El objeto de evento de un evento {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} disparado en un service worker (cuando se recibe un mensaje de canal en el {{DOMxRef("ServiceWorkerGlobalScope")}} desde otro contexto), extiende el tiempo de vida de tales eventos.
+- {{DOMxRef("FetchEvent")}}
+  - : El parámetro pasado al controlador {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}}, `FetchEvent` representa una acción de fetch despachada en el {{DOMxRef("ServiceWorkerGlobalScope")}} de un {{DOMxRef("ServiceWorker")}}. Contiene información sobre la petición y la respuesta resultante, y proporciona el método {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, que permite proporcionar una respuesta arbitraria a la página controlada.
+- {{DOMxRef("InstallEvent")}}
+  - : El parámetro pasado a la función controladora de un evento {{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}}, la interfaz `InstallEvent` representa una acción de instalación despachada en el {{DOMxRef("ServiceWorkerGlobalScope")}} de un {{DOMxRef("ServiceWorker")}}. Como hijo de {{DOMxRef("ExtendableEvent")}}, asegura que los eventos funcionales como {{DOMxRef("FetchEvent")}} no se despachan durante la instalación.
+- {{DOMxRef("NavigationPreloadManager")}}
+  - : Proporciona métodos para gestionar la precarga de recursos con un service worker.
+- {{DOMxRef("ServiceWorker")}}
+  - : Representa un service worker. Múltiples contextos de navegación (por ejemplo, páginas, workers, etc.) pueden estar asociados con el mismo objeto `ServiceWorker`.
+- {{DOMxRef("ServiceWorkerContainer")}}
+  - : Proporciona un objeto que representa el service worker como una unidad global en el ecosistema de red, incluyendo servicios para registrar, dar de baja y actualizar service workers, y acceder al estado de los service workers y sus registros.
+- {{DOMxRef("ServiceWorkerGlobalScope")}}
+  - : Representa el contexto de ejecución global de un service worker.
+- {{DOMxRef("ServiceWorkerRegistration")}}
+  - : Representa un registro de service worker.
+- {{DOMxRef("WindowClient")}}
+  - : Representa el ámbito de un cliente de service worker que es un documento en un contexto de navegador, controlado por un worker activo. Es un tipo especial de objeto {{DOMxRef("Client")}}, con algunos métodos y propiedades adicionales disponibles.
+
+### Extensiones a otras interfaces
+
+- {{DOMxRef("Window.caches")}} y {{domxref("WorkerGlobalScope.caches")}}
+  - : Devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual.
+- {{DOMxRef("Navigator.serviceWorker")}} y {{DOMxRef("WorkerNavigator.serviceWorker")}}
+  - : Devuelve un objeto {{DOMxRef("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{DOMxRef("ServiceWorker")}} para el [documento asociado](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Ver también
+## Véase también
 
-- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Best Practices for using the VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
+- [Uso de Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Ciclo de vida de Service Worker](https://web.dev/articles/service-worker-lifecycle)
+- [Ejemplo básico de código de service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- APIs web relacionadas con Service Worker API:
+  - {{domxref("Background Fetch API", "", "", "nocode")}}
+  - {{domxref("Background Synchronization API", "", "", "nocode")}}
+  - {{domxref("Content Index API", "", "", "nocode")}}
+  - {{domxref("Cookie Store API", "", "", "nocode")}}
+  - {{domxref("Notifications API", "", "", "nocode")}}
+  - {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
+  - {{domxref("Push API", "", "", "nocode")}}
+  - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b2d7042b0f02dd7f6ecc2b2dfbb169bae8a4724
 ---
 
-{{GlossarySidebar}}
-
 Java 是一个{{glossary("Compile", "编译的")}}、{{glossary("OOP", "面向对象的")}}、高度可移植的{{glossary("computer programming", "计算机程序设计")}}语言。
 
 Java 是静态类型的，提供与 C 类似的语法。它拥有大量现成可用的函数库——Java 软件开发工具包（SDK）。

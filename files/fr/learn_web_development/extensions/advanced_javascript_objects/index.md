@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 72d4c8678b172f558eca279d98abf23395e0d9a4
 ---
 
-{{LearnSidebar}}
-
 En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils proviennent des fonctionnalités natives du langage, comme les tableaux, ou qu'ils soient fournis par les API du navigateur. Il est aussi possible de créer ses propres objets qui contiendront des propriétés avec des données ou des fonctions. JavaScript est un langage orienté objet et la compréhension de cette notion est nécessaire pour approfondir ses connaissances dans ce langage. Nous avons donc construit un module pour vous aider, où nous vous apprendrons la théorie du modèle objet et les détails de la syntaxe JavaScript associée. Nous verrons ensuite comment créer ses propres objets.
 
 > [!CALLOUT]
@@ -20,9 +18,9 @@ En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils provie
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/docs/Glossary/HTML) et de [CSS](/fr/docs/Glossary/CSS). Nous vous conseillons de réaliser les modules [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) avant de commencer celui-ci sur JavaScript.
+Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/docs/Glossary/HTML) et de [CSS](/fr/docs/Glossary/CSS). Nous vous conseillons de réaliser les modules [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [Introduction à CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) avant de commencer celui-ci sur JavaScript.
 
-Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting) et [Blocs de construction de JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580).
+Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting) et [Blocs de construction de JavaScript](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript).
 
 > [!NOTE]
 > Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

@@ -5,7 +5,7 @@ slug: Web/API/URL/hash
 
 {{ APIRef("URL API") }}
 
-A propriedade **`hash`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o `'#'` seguido pelo identificador de fragmento da URL.
+A propriedade **`hash`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} contendo o `'#'` seguido pelo identificador de fragmento da URL.
 
 O fragmento não é [percent-decoded](/pt-BR/docs/Glossary/percent-encoding). Se a URL não tem o framento de identificação, esta propriedade contém uma string vazia - `""`.
 
@@ -13,7 +13,7 @@ O fragmento não é [percent-decoded](/pt-BR/docs/Glossary/percent-encoding). Se
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

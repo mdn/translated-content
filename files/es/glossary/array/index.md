@@ -1,32 +1,26 @@
 ---
-title: Arreglos (Matrices)
+title: Array
 slug: Glossary/Array
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un **array** (arreglo) es una colección ordenada de datos (ya sean {{Glossary("primitive", "primitivos")}} u {{Glossary("object", "objetos")}}, según el lenguaje). Los arrays se usan para almacenar varios valores bajo un solo nombre de variable. Una variable común, por el contrario, solo puede almacenar un valor.
 
-Un arreglo (matriz) es una colección ordenada de datos (tanto {{glossary("Primitivo", "primitivos")}} u {{glossary("Object", "objetos")}} dependiendo del lenguaje). Los arreglos (matrices) se emplean para almacenar multiples valores en una sola variable, frente a las variables que sólo pueden almacenar un valor (por cada variable).
+Cada elemento de un array tiene asociado un número, denominado índice numérico, que te permite acceder a él. En JavaScript, los arrays empiezan en el índice cero y se pueden manipular con diversos {{Glossary("Method", "métodos")}}.
 
-Cada elemento del arreglo (matriz) tiene un número al que está asociado, llamado **"índice numérico"** (numeric index), que permite acceder a él.
-
-En JavaScript, los arreglos (matrices) comienzan a partir del índice cero y pueden ser manipulados con varios {{glossary("Método", "métodos")}}.
-
-Un arreglo (matriz) en JavaScript se ve de esta forma:
+Así se ven los arrays en JavaScript:
 
 ```js
-var myArray = [1, 2, 3, 4];
+// Los arrays en JavaScript pueden contener distintos tipos de datos
+const myArray = [1, 2, 3, 4];
+const barbieDollNamesArray = ["Barbie", "Ken", "Midge", "Allan", "Skipper"];
 
-var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
-
-//Los arreglos en Javascript pueden guardar distintos tipos de datos como se muestra anteriormente
+// Los índices de un array empiezan en 0.
+console.log(myArray[0]); // salida: 1
+console.log(barbieDollNamesArray[2]); // salida: "Midge"
 ```
 
-## Saber más
+## Véase también
 
-### Conocimiento general
-
-- [Array](https://es.wikipedia.org/wiki/Array_data_structure) en Wikipedia
-
-### Referencia técnica
-
-- JavaScript {{jsxref("Array")}} en MDN
+- {{jsxref("Array")}} en JavaScript
