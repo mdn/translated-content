@@ -24,7 +24,7 @@ setPathData(pathData)
     - `type`
       - : [パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)です。
       - : [パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド)です。
-        [`options.normalize`](#normalize) が true であれば、これは絶対コマンド（`'M'`, `'L'`, `'C'`, `'Z'`）のいずれかになります。
+        [`options.normalize`](/ja/docs/Web/API/SVGPathElement/getPathData#normalize) が true であれば、これは絶対コマンド（`'M'`, `'L'`, `'C'`, `'Z'`）のいずれかになります。
     - `values`
   - : コマンドに対応する引数の入った配列または値です。
 

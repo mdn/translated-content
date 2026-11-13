@@ -120,7 +120,7 @@ request.onupgradeneeded = (event) => {
 
 ### データベースを構築する
 
-次に、データベースを構築します。IndexedDB はテーブルではなくオブジェクトストアを使用しており、ひとつのデータベースに複数のオブジェクトストアを含めることができます。値をオブジェクトストアへ保存するたびに、値がキーと関連付けられます。オブジェクトストアで[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath)を使用するか[キージェネレーター](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator)を使用するかに応じて、キーを供給する方法がいくつか存在します。
+次に、データベースを構築します。IndexedDB はテーブルではなくオブジェクトストアを使用しており、ひとつのデータベースに複数のオブジェクトストアを含めることができます。値をオブジェクトストアへ保存するたびに、値がキーと関連付けられます。オブジェクトストアで[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#キーパス)を使用するか[キージェネレーター](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#キージェネレーター)を使用するかに応じて、キーを供給する方法がいくつか存在します。
 
 以下の表で、キーを供給するさまざまな方法を示します。
 
@@ -272,7 +272,7 @@ request.onupgradeneeded = (event) => {
 トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します。
 
 - スコープを定義するときは、必要なオブジェクトストアのみ指定します。これにより、同時にスコープが重なり合うことなく、複数のトランザクションを実行できます。
-- `readwrite` トランザクションモードは、必要な場合に限り指定します。`readonly` トランザクションはスコープが重なっても複数同時に実行できますが、`readwrite` トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、[IndexedDB の主な特徴と基本用語](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology)の記事で [トランザクション](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction)の定義をご覧ください。
+- `readwrite` トランザクションモードは、必要な場合に限り指定します。`readonly` トランザクションはスコープが重なっても複数同時に実行できますが、`readwrite` トランザクションはオブジェクトストアに対して 1 個しか実行できません。詳しくは、[IndexedDB の主な特徴と基本用語](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology)の記事で [トランザクション](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#トランザクション)の定義をご覧ください。
 
 ### データベースにデータを追加する
 

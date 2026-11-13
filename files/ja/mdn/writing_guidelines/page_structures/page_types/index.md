@@ -2,7 +2,7 @@
 title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。
@@ -19,8 +19,8 @@ MDN には大きく分けて 3 種類のページがありますが、いくつ�
 新しい文書を追加するのは比較的簡単です。特に、類似のトピックから `index.md` ファイルをコピーして始めることが可能であれば、なおさらです。
 いくつか留意すべきことがあります。
 
-- ドキュメントは、`index.md` ファイルにマークダウン形式で記述します。
-- 例えば、`foo` という名前の HTTP ヘッダーに関する新しいドキュメントを作成する場合は、`files/ja/web/http/reference/headers/foo` に新しいフォルダーを生成し、そのフォルダー内にマークダウンファイルを配置してください（`files/ja/web/http/reference/headers/foo/index.md`）。
+- ドキュメントは、`index.md` ファイルに Markdown 形式で記述します。
+- 例えば、`foo` という名前の HTTP ヘッダーに関する新しいドキュメントを作成する場合は、`files/ja/web/http/reference/headers/foo` に新しいフォルダーを生成し、そのフォルダー内に Markdown ファイルを配置してください（`files/ja/web/http/reference/headers/foo/index.md`）。
 - ドキュメントの `index.md` ファイルは、`title`、`slug`、そして多くの場合 `page-type` を定義するフロントマターで始まる必要があります。
   類似するドキュメントの `index.md` 内のフロントマターを参照すると、役立つかもしれません。
 
@@ -36,7 +36,7 @@ MDN には大きく分けて 3 種類のページがありますが、いくつ�
 ## 古い様式のページレイアウト
 
 時々、ここで紹介するテンプレートとは明らかに異なる古い様式のリファレンスページを見かけることがあります。
-例えば、古い様式のインターフェイスページでは、インターフェイスの全てのメンバーの詳細が 1 つのページ上にあり、個々のメソッド/プロパティ/コンストラクター/イベントリスナーページは存在しませんでした。
+例えば、古い様式のインターフェイスページでは、インターフェイスのすべてのメンバーの詳細が 1 つのページ上にあり、個々のメソッド/プロパティ/コンストラクター/イベントリスナーページは存在しませんでした。
 
 もし、古い様式のページを見つけたら、ぜひ新しい様式に更新してください。
 しかし、これは大変な作業となる可能性があることを承知しています。
@@ -46,7 +46,7 @@ MDN には大きく分けて 3 種類のページがありますが、いくつ�
 
 - どの程度古い情報なのか？
 - その情報はどの程度古いか、どの程度品質が低いか
-- その特集はどの程度人気があるか？その情報はどの程度求められているか？
+- その機能はどの程度人気があるか？その情報はどの程度求められているか？
 
 もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Community/Communication_channels)までお問い合わせください。
 
@@ -72,6 +72,20 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [ARIA リファレンスページ](#aria_リファレンスページ)
 - [概念ページ](#概念ページ)
 - [用語集の項目](#用語集ページ)
+- [JavaScript クラスページ](#javascript_クラスページ)
+- [JavaScript コンストラクターページ](#javascript_コンストラクターページ)
+- [JavaScript エラーページ](#javascript_エラーページ)
+- [JavaScript 関数ページ](#javascript_関数ページ)
+- [JavaScript グローバルプロパティページ](#javascript_グローバルプロパティページ)
+- [JavaScript インスタンスアクセサープロパティページ](#javascript_インスタンスアクセサープロパティページ)
+- [JavaScript インスタンスデータプロパティページ](#javascript_インスタンスデータプロパティページ)
+- [JavaScript インスタンスメソッドページ](#javascript_インスタンスメソッドページ)
+- [JavaScript 名前空間ページ](#javascript_名前空間ページ)
+- [JavaScript 演算子ページ](#javascript_演算子ページ)
+- [JavaScript 文ページ](#javascript_文ページ)
+- [JavaScript 静的アクセサープロパティページ](#javascript_静的アクセサープロパティページ)
+- [JavaScript 静的データプロパティページ](#javascript_静的データプロパティページ)
+- [JavaScript 静的メソッドページ](#javascript_静的メソッドページ)
 - [ランディングページ](#ランディングページ)
 - [ウェブ開発の学習ページ](#ウェブ開発の学習ページ)
 
@@ -80,13 +94,13 @@ MDN ページの種類を明確に識別するために、フロントマター�
 ### API ランディングページ
 
 **{{Glossary("API")}} ランディングページ**では、特定の API が行うことの概要と、その API が提供する各インターフェイス、グローバル、関数などのドキュメントへのリンクが提供されます。
-概要テキストのコンテキストを除いて、 API のクラス内の特定のメソッドやプロパティに直接リンクすることはありません。
-このページは主に*ナビゲーション*ページですが、 API の一目でわかる*リファレンス*ページとしても機能します。
+概要テキストのコンテキストを除いて、API のクラス内の特定のメソッドやプロパティに直接リンクすることはありません。
+このページは主に*ナビゲーション*ページですが、API の一目でわかる*リファレンス*ページとしても機能します。
 
-複数の API が存在し、それぞれ独自の仕様で定義されていますが、それらは密接に関連しているため、 1 つの API ランディングページでカバーすることが理にかなっている場合があります。
-例えば、 [Generic Sensor API](https://w3c.github.io/sensors/) は一般的なセンサーに関する事項をカバーしていますが、より具体的な事項は [Ambient Light Sensor](https://w3c.github.io/ambient-light/) や [Motion Sensor](https://w3c.github.io/motion-sensors/) など、他の API でカバーされています。
+複数の API が存在し、それぞれ独自の仕様で定義されていますが、それらは密接に関連しているため、1 つの API ランディングページでカバーすることが理にかなっている場合があります。
+例えば、[Generic Sensor API](https://w3c.github.io/sensors/) は一般的なセンサーに関する事項をカバーしていますが、より具体的な事項は [Ambient Light Sensor](https://w3c.github.io/ambient-light/) や [Motion Sensor](https://w3c.github.io/motion-sensors/) など、他の API でカバーされています。
 このような場合、高レベルの概念の多くが同じであるため、複数のランディングページにわたってそれらを繰り返すことは意味がありません。
-そのような場合は、 1 つの「ウェブセンサー」ランディングページですべてをカバーする方が、繰り返しの意味でも見つけやすさの意味でも理にかなっています。
+そのような場合は、1 つの「ウェブセンサー」ランディングページですべてをカバーする方が、繰り返しの意味でも見つけやすさの意味でも理にかなっています。
 
 #### 例
 
@@ -115,7 +129,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 ### API リファレンスサブページ
 
-**API リファレンスサブページ**は、 API リファレンスページの子ページです。
+**API リファレンスサブページ**は、API リファレンスページの子ページです。
 これは、インターフェイスの単一のメンバーを詳細に記述します。
 
 #### 例
@@ -123,7 +137,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [`count()` メソッド](/ja/docs/Web/API/IDBIndex/count)（[IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイス、[IndexedDB API](/ja/docs/Web/API/IndexedDB_API) の一部）
 - [capabilities プロパティ](/ja/docs/Web/API/VRDisplay/capabilities)（[VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイス、[WebVR API](/ja/docs/Web/API/WebVR_API) の一部）
 - [Request() コンストラクター](/ja/docs/Web/API/Request/Request)（[Request](/ja/docs/Web/API/Request) インターフェイス、[Fetch API](/ja/docs/Web/API/Fetch_API) の一部）
-- [vrdisplaypresentchange イベント](/ja/docs/Web/API/Window/vrdisplaypresentchange_event)（[WebVR API](/ja/docs/Web/API/WebVR_API) の一部、 [Window](/ja/docs/Web/API/Window) インターフェイスにぶら下がっている）
+- [vrdisplaypresentchange イベント](/ja/docs/Web/API/Window/vrdisplaypresentchange_event)（[WebVR API](/ja/docs/Web/API/WebVR_API) の一部、[Window](/ja/docs/Web/API/Window) インターフェイスにぶら下がっている）
 
 #### テンプレート
 
@@ -134,7 +148,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 ### HTML 要素リファレンスページ
 
-**HTML リファレンスページ**は、 HTML 要素で利用可能なすべての属性を列挙し、要素の目的や使用方法を説明し、例やブラウザーの互換性情報、その他の重要なデータを提供します。
+**HTML リファレンスページ**は、HTML 要素で利用可能なすべての属性を列挙し、要素の目的や使用方法を説明し、例やブラウザーの互換性情報、その他の重要なデータを提供します。
 
 #### 例
 
@@ -161,7 +175,7 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 
 ### SVG 要素リファレンスページ
 
-**SVG リファレンスページ**は、 SVG 要素で利用可能なすべての属性の一覧、要素の目的および使用法の説明、例、ブラウザーの互換性情報、その他の重要なデータを提供するものです。
+**SVG リファレンスページ**は、SVG 要素で利用可能なすべての属性の一覧、要素の目的および使用法の説明、例、ブラウザーの互換性情報、その他の重要なデータを提供するものです。
 
 #### 例
 
@@ -173,12 +187,12 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 
 ### CSS モジュールページ
 
-それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、 [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/Guides/Box_model#仕様書)を表します。
+それぞれの **[CSS](/ja/docs/Web/CSS) モジュール**は、CSS の特定の機能や実装に対応する CSS 仕様書を表します。例えば、[CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュールは、CSS のボックスの中や周りに空間を作成するための margin および padding プロパティを記述する[仕様書](/ja/docs/Web/CSS/Guides/Box_model#仕様書)を表します。
 
-**CSS モジュールページ**は、モジュールが提供する機能の概要を提供し、モジュールが提供するすべてのプロパティ、データ型、CSS 関数などを一覧表示します。可能な場合、 CSS モジュールのランディングページでは、モジュールのプロパティを使用することで、どのようなことが実現できるかを対話式の例で簡単に示すことができます。モジュールページは主にナビゲーションページとして機能しますが、モジュールの一目でわかるリファレンスページとしても機能します。
+**CSS モジュールページ**は、モジュールが提供する機能の概要を提供し、モジュールが提供するすべてのプロパティ、データ型、CSS 関数などを一覧表示します。可能な場合、CSS モジュールのランディングページでは、モジュールのプロパティを使用することで、どのようなことが実現できるかを対話式の例で簡単に示すことができます。モジュールページは主にナビゲーションページとして機能しますが、モジュールの一目でわかるリファレンスページとしても機能します。
 
 他のモジュール内のプロパティや機能であっても、文書化するモジュールが提供する機能と密接に関連しているものについては、「関連概念」の節で扱うことができます。
-例えば、 `<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/Guides/Animations#関連概念)の節で強調するとよいでしょう。
+例えば、`<easing-function>` データ型と `prefers-reduced-motion` メディアクエリーは CSS アニメーションモジュールでは扱われていませんが、CSS アニメーションと密接に関連しているため、CSS アニメーションモジュールのランディングページの[関連概念](/ja/docs/Web/CSS/Guides/Animations#関連概念)の節で強調するとよいでしょう。
 
 #### 例
 
@@ -209,7 +223,7 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 
 ### HTTP ヘッダーリファレンスページ
 
-**HTTP ヘッダーのリファレンスページ**は、 HTTP ヘッダーが含むことのできるすべてのディレクティブを列挙し、ヘッダーの目的と使用法を説明します。
+**HTTP ヘッダーのリファレンスページ**は、HTTP ヘッダーが含むことのできるすべてのディレクティブを列挙し、ヘッダーの目的と使用法を説明します。
 また、例やブラウザーの互換性、その他の重要な説明も含まれています。
 
 #### 例
@@ -233,11 +247,219 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 
 - [ARIA ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
+### JavaScript クラスページ
+
+**JavaScript クラスページ**は、JavaScript クラスの目的や使用法の概要を示し、そのクラスの静的およびインスタンスのすべてのメソッドとプロパティを列挙します。JavaScript のクラスは、`prototype` プロパティを持ち、その値がすべてのインスタンスで共有される内在的な関数オブジェクトとして定義されます。この定義では、`new` で呼び出せない `BigInt` もクラスです。
+
+#### 例
+
+- [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Intl.Collator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Temporal.ZonedDateTime`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime)
+
+#### テンプレート
+
+- [JavaScript クラスページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_class_page_template)
+
+### JavaScript コンストラクターページ
+
+**JavaScript コンストラクターページ**は、JavaScript クラスのコンストラクターと、その呼び出し方について説明します。クラスのコンストラクターは、関数オブジェクト自体として定義されます。例えば、`new` で呼び出せなくても `BigInt()` はコンストラクターです。文書化する価値のあるコンストラクターを持たないクラスもあります。例えば、{{jsxref("TypedArray")}} クラスは抽象クラスで、呼び出すと必ず例外が発生するため、独自のページはありません。
+
+#### 例
+
+- [`Array()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
+- [`Intl.Collator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+- [`Temporal.ZonedDateTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime)
+
+#### テンプレート
+
+- [JavaScript コンストラクターページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template)
+
+### JavaScript エラーページ
+
+**JavaScript エラーページ**は、JavaScript エラーがいつ発生するか、またその修正方法について説明します。主に開発者ツールのリファレンスとして使われます。エラーリファレンスは主に Firefox のエラーメッセージを基準にしており、1 ページにつき 1 つのエラーメッセージを扱います。[エラーの文書化方法](/ja/docs/MDN/Writing_guidelines/Howto/Document_web_errors)も参照してください。
+
+#### 例
+
+- [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)
+
+#### テンプレート
+
+- [JavaScript エラーページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_error_page_template)
+
+### JavaScript 関数ページ
+
+**JavaScript 関数ページ**は、クラスや名前空間に属さない JavaScript 関数について説明します。関数の目的、引数、返値について記載します。
+
+関数がクラスまたは名前空間で静的に利用できる場合は、[JavaScript 静的メソッドページ](#javascript_静的メソッドページ)のテンプレートを使用してください。`prototype` プロパティを持つためクラスとみなせる関数の場合は、[JavaScript クラスページ](#javascript_クラスページ)のテンプレートを使用してください。グローバル関数ページのテンプレートを使う主な目安は、プロパティの値が関数であり、小文字で始まることです。
+
+#### 例
+
+- [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`encodeURIComponent()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+#### テンプレート
+
+- [JavaScript 関数ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_function_page_template)
+
+### JavaScript グローバルプロパティページ
+
+**JavaScript グローバルプロパティページ**は、クラスや名前空間に属さない JavaScript のグローバルプロパティについて、その目的や使用法を説明します。
+
+プロパティがクラスまたは名前空間で静的に利用できる場合は、[JavaScript 静的データプロパティページ](#javascript_静的データプロパティページ)のテンプレートを使用してください。プロパティの値が関数の場合は、[JavaScript 関数ページ](#javascript_関数ページ)のテンプレートを使用してください。他のプロパティを保持することを主な目的とする単純なオブジェクトの場合は、[JavaScript 名前空間ページ](#javascript_名前空間ページ)のテンプレートを使用してください。グローバルプロパティページのテンプレートを使う主な目安は、プロパティがプリミティブ値を持つか、小文字で始まり関数ではないことです。
+
+#### 例
+
+- [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+#### テンプレート
+
+- [JavaScript グローバルプロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_global_property_page_template)
+
+### JavaScript インスタンスアクセサープロパティページ
+
+**JavaScript インスタンスアクセサープロパティページ**は、JavaScript クラスのインスタンスのアクセサープロパティについて説明します。アクセサープロパティはゲッターから構成され、セッターを持つ場合もあります。ほとんどの場合、インスタンスのプロトタイプに定義されます。仕様書では、アクセサープロパティを定義するために `get Constructor.prototype.propertyName` という構文を使用します。JavaScript 言語の中核にある、レガシーではないインスタンスアクセサープロパティのほぼすべてはゲッターのみを持つため、読み取り専用です。
+
+プロパティの値が関数の場合は、[JavaScript インスタンスメソッドページ](#javascript_インスタンスメソッドページ)のテンプレートを使用してください。
+
+#### 例
+
+- [`Map.prototype.size`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
+
+#### テンプレート
+
+- [JavaScript インスタンスアクセサープロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_accessor_property_page_template)
+
+### JavaScript インスタンスデータプロパティページ
+
+**JavaScript インスタンスデータプロパティページ**は、JavaScript クラスのインスタンスのデータプロパティについて説明します。データプロパティは値と書き込み可能フラグから構成され、インスタンスのプロトタイプまたはインスタンス自体に定義されます。
+
+すべてのインスタンスには、インスタンスを作成したコンストラクター関数を指す `constructor` というデータプロパティがあります。このデータプロパティはクラスのメインページで言及しますが、クラスごとに個別のページでは説明しません。
+
+プロパティの値が関数の場合は、[JavaScript インスタンスメソッドページ](#javascript_インスタンスメソッドページ)のテンプレートを使用してください。
+
+#### 例
+
+- [`Array`: `length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`Error.prototype.name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+
+#### テンプレート
+
+- [JavaScript インスタンスデータプロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_data_property_page_template)
+
+### JavaScript インスタンスメソッドページ
+
+**JavaScript インスタンスメソッドページ**は、JavaScript クラスのインスタンスのメソッドについて説明します。メソッドはインスタンスの関数プロパティです。一般に、メソッドはインスタンスのプロトタイプに定義されたデータプロパティですが、レガシーな例外もあります。例えば、[`Intl.DateTimeFormat.prototype.format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) は、束縛された関数を返すアクセサープロパティです。読者にとって分かりやすいよう、これらも通常のメソッドとして扱います。
+
+#### 例
+
+- [`Array.prototype.push()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
+#### テンプレート
+
+- [JavaScript インスタンスメソッドページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_method_page_template)
+
+### JavaScript 名前空間ページ
+
+**JavaScript 名前空間ページ**は、JavaScript 名前空間の目的や使用法の概要を示し、その名前空間のすべてのメソッドとプロパティを列挙します。JavaScript 名前空間は、他のプロパティを保持する単純なオブジェクトとして定義されます。
+
+#### 例
+
+- [`Intl`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [`Temporal`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+- [`Temporal.Now`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now)
+
+#### テンプレート
+
+- [JavaScript 名前空間ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_namespace_page_template)
+
+### JavaScript 演算子ページ
+
+**JavaScript 演算子ページ**は、JavaScript 演算子の目的や使用法について説明します。「演算子」という用語に広く合意された定義はありません。MDN では、1 つ以上のオペランドをパラメーターとする構文として定義します。通常、オペランドは式または式に似た構造です。
+
+#### 例
+
+- [加算 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await)
+- [`class`](/ja/docs/Web/JavaScript/Reference/Operators/class)
+
+#### テンプレート
+
+- [JavaScript 演算子ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_operator_page_template)
+
+### JavaScript 文ページ
+
+**JavaScript 文ページ**は、JavaScript の文または宣言の目的、構文、使用法について説明します。文の構文要素と、プログラムの実行に与える影響や束縛の導入方法を記載します。
+
+関数式やクラス式などの式形式については、[JavaScript 演算子ページ](#javascript_演算子ページ)のテンプレートを使用してください。
+
+#### 例
+
+- [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)
+
+#### テンプレート
+
+- [JavaScript 文ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_statement_page_template)
+
+### JavaScript 静的アクセサープロパティページ
+
+**JavaScript 静的アクセサープロパティページ**は、JavaScript クラスまたは名前空間に直接アクセスするアクセサープロパティについて説明します。ゲッターが返す値と、セッターがある場合は受け入れる値および代入の効果を記載します。
+
+インスタンスのアクセサープロパティについては、[JavaScript インスタンスアクセサープロパティページ](#javascript_インスタンスアクセサープロパティページ)のテンプレートを使用してください。
+
+#### 例
+
+- [`Array[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`RegExp.input`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+
+#### テンプレート
+
+- [JavaScript 静的アクセサープロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_accessor_property_page_template)
+
+### JavaScript 静的データプロパティページ
+
+**JavaScript 静的データプロパティページ**は、JavaScript クラスまたは名前空間に直接アクセスするデータプロパティについて説明します。プロパティの値、属性、目的、使用法を記載します。
+
+プロパティがアクセサープロパティの場合は、[JavaScript 静的アクセサープロパティページ](#javascript_静的アクセサープロパティページ)のテンプレートを使用してください。プロパティの値が関数の場合は、[JavaScript 静的メソッドページ](#javascript_静的メソッドページ)のテンプレートを使用してください。プロパティとして公開されているクラスや名前空間には、それぞれ独自の[クラスページ](#javascript_クラスページ)または[名前空間ページ](#javascript_名前空間ページ)があります。
+
+#### 例
+
+- [`Math.PI`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+- [`Number.MAX_SAFE_INTEGER`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+#### テンプレート
+
+- [JavaScript 静的データプロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_data_property_page_template)
+
+### JavaScript 静的メソッドページ
+
+**JavaScript 静的メソッドページ**は、JavaScript クラスまたは名前空間に直接呼び出すメソッドについて説明します。メソッドの目的、構文、引数、返値、例外を記載します。
+
+インスタンスのメソッドについては、[JavaScript インスタンスメソッドページ](#javascript_インスタンスメソッドページ)のテンプレートを使用してください。グローバル関数については、[JavaScript 関数ページ](#javascript_関数ページ)のテンプレートを使用してください。
+
+#### 例
+
+- [`Array.from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- [`Temporal.Now.instant()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant)
+
+#### テンプレート
+
+- [JavaScript 静的メソッドページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_method_page_template)
+
 ### 概念ページ
 
 **概念ページ**は、何かを説明したり教えたりする*ガイド*ページです。
 一般に、あるページが主に散文で書かれており、他のページ種別に分類されない場合、それはおそらく概念ページです。
-あるトピックに関する幅広い議論は、複数の概念ページにまたがり、 [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) と [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) マクロを使用してリンクされるかもしれません。
+あるトピックに関する幅広い議論は、複数の概念ページにまたがり、[Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) と [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) マクロを使用してリンクされるかもしれません。
 
 #### 例
 
@@ -248,7 +470,7 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 ### 用語集ページ
 
 **用語集ページ**は、用語、トピック、概念の簡単な説明を含んでいます。
-最初の段落は、その用語の簡単で自己完結した説明であるべきで、 2 文以下でなければなりません。
+最初の段落は、その用語の簡単で自己完結した説明であるべきで、2 文以下でなければなりません。
 その後に、さらに詳しい情報へのリンクを **関連情報** セクションに記述することができます。
 ページが画面いっぱいになるほど大きくなる場合は、長すぎるので、概念ページに変換する必要があります。詳しくは、[用語集の項目の書き方と参照方法](/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)を参照してください。
 
@@ -268,11 +490,11 @@ HTML 属性のページでは、その属性に存在するすべての値が掲
 ランディングページのレイアウトは、通常、特定のトピックに関するページのツリーのルートページに使用されます。
 トピックの簡単な要約で始まり、サブページへのリンクの構造化されたリストが表示され、オプションとして読者に役立つ追加資料が表示されます。
 
-サブページのリストは、 [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) テンプレートを使用して自動的に生成することができます。しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
+サブページのリストは、[`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) テンプレートを使用して自動的に生成することができます。しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
 
 ### ウェブ開発の学習ページ
 
-MDNの「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は、ウェブ開発の基礎を学んでいる人々を対象としており、仕様上、 MDN の他のコンテンツとは異なる手法が要求されます。 ガイドラインの詳細については、「[ウェブ開発の学習の執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/Learning_content)」をご覧ください。
+MDN の「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は、ウェブ開発の基礎を学んでいる人々を対象としており、仕様上、MDN の他のコンテンツとは異なる手法が要求されます。ガイドラインの詳細については、「[ウェブ開発の学習の執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/Learning_content)」をご覧ください。
 
 「ウェブ開発の学習」にあるページの種類はいくつかしかありません。
 
