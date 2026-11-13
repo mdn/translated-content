@@ -1,11 +1,14 @@
 ---
-title: margin-top
+title: "`margin-top` プロパティ"
+short-title: margin-top
 slug: Web/CSS/Reference/Properties/margin-top
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 **`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+
+このプロパティは、{{glossary("Replaced elements", "置換要素")}}ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
 
 {{InteractiveExample("CSS デモ: margin-top")}}
 
@@ -59,15 +62,13 @@ margin-top: 0;
 }
 ```
 
-このプロパティは、{{glossary("Replaced elements", "置換要素")}}ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
-
 ## 構文
 
 ```css
 /* <length> 値 */
-margin-top: 10px; /* 絶対的な寸法 */
-margin-top: 1em; /* 文字の寸法からの相対 */
-margin-top: 5%; /* 直近のブロックコンテナーの幅からの相対 */
+margin-top: 10px; /* 絶対的な長さ */
+margin-top: 1em; /* テキストのサイズに対する相対値 */
+margin-top: 5%; /* 直近のブロックコンテナーの幅に対する相対値 */
 margin-top: anchor-size(height);
 margin-top: calc(anchor-size(--my-anchor self-inline, 25px) / 4);
 

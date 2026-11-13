@@ -1,11 +1,12 @@
 ---
-title: margin-block-start
+title: "`margin-block-start` プロパティ"
+short-title: margin-block-start
 slug: Web/CSS/Reference/Properties/margin-block-start
 l10n:
-  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
+**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向における論理的な先頭側のマージンを定義します。このマージンは、要素の書字方向、文字の方向、テキストの向きに応じて物理的なマージンに対応づけられます。
 
 {{InteractiveExample("CSS デモ: margin-block-start")}}
 
