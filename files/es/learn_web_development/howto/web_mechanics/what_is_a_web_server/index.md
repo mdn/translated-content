@@ -113,5 +113,5 @@ Si te gustaría experimentar creando un servidor, echa un vistazo a los recursos
 Ahora que ya conoces los servidores web, podrías:
 
 - leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- aprender más sobre [los diversos programas que necesitas para crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- aprender más sobre [los diversos programas que necesitas para crear un sitio web](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
 - pasar a algo práctico como [cómo subir archivos a un servidor web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).

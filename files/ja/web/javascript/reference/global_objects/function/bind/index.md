@@ -3,7 +3,7 @@ title: Function.prototype.bind()
 short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`bind()`** は {{jsxref("Function")}} インスタンスのメソッドで、新しい関数を生成します。この関数を呼び出すと、元の関数を、`this` を指定された値に設定し、指定された引数を呼び出し時に渡された引数より前に置いて呼び出します。
@@ -20,11 +20,11 @@ const module = {
 
 const unboundGetX = module.getX;
 console.log(unboundGetX()); // グローバルスコープで関数を呼び出す
-// 期待される出力結果: undefined
+// 予想される結果: undefined
 
 const boundGetX = unboundGetX.bind(module);
 console.log(boundGetX());
-// 期待される出力結果: 42
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -45,11 +45,11 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 
 ### 返値
 
-指定された `this` の値と（指定された場合は）先頭に渡す引数を備えた、新しい関数です。
+指定された `this` の値と（指定された場合は）先頭に渡す引数を備えた、元の関数のコピーです。
 
 ## 解説
 
-`bind()` は新しい「バインド済み関数 (_bound function_)」を生成します。バインド済み関数を呼び出すと、通常はラップされた関数（「ターゲット関数 (_target function_)」とも呼ばれます）が実行されます。バインド済み関数は、`this` の値や先頭に渡す引数など、渡された値を内部状態としてあらかじめ格納します。これらの値は呼び出し時ではなく、バインド時に保存されます。一般に、`const boundFn = fn.bind(thisArg, arg1, arg2)` は、呼び出したときの効果については `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` と同等だと考えられます（ただし、`boundFn` を作成したときに実行されるわけではありません）。
+`bind()` は新しい「バインド済み関数 (_bound function_)」を生成します。バインド済み関数を呼び出すと、通常はラップされた関数（「ターゲット関数 (_target function_)」とも呼ばれます）が実行されます。バインド済み関数は、`this` の値や先頭に渡す引数など、渡された値を内部状態としてあらかじめ格納します。これらの値は呼び出し時ではなく、バインド時に保存されます。一般に、`const boundFn = fn.bind(thisArg, arg1, arg2)` は、呼び出したときの効果については `const boundFn = (...restArgs) => fn.call(thisArg, arg1, arg2, ...restArgs)` と同等だと考えられます（ただし、`boundFn` をコンストラクターとして使用する場合は同等ではありません）。
 
 `boundFn.bind(thisArg, /* その他の引数 */)` を呼び出すと、バインド済み関数をさらにバインドし、別のバインド済み関数 `boundFn2` を作成できます。新しい `thisArg` は無視されます。`boundFn2` のターゲット関数である `boundFn` には、すでに `this` がバインドされているためです。`boundFn2` を呼び出すと `boundFn` が呼び出され、さらに `fn` が呼び出されます。最終的に `fn` が受け取る引数の順序は、`boundFn` にバインドされた引数、`boundFn2` にバインドされた引数、`boundFn2` の呼び出し時に渡された引数です。
 
@@ -142,11 +142,11 @@ console.log(boundGetX()); // 81
 >
 > Node.js の CommonJS モジュール内で実行すると、厳格モードかどうかにかかわらず、最上位の `this` は `globalThis` ではなく `module.exports` を指します。ただし、関数内でバインドされていない `this` は、厳格モードでない場合は `globalThis`、厳格モードの場合は `undefined` を指します。したがって、厳格モードでない場合（デフォルト）は、`this.x = 9` が `getX` の読み取り先である `globalThis` ではなく `module.exports` に書き込むため、`retrieveX()` は `undefined` を返します。
 
-実際、いくつかの組み込みの「メソッド」はバインド済み関数を返すゲッターでもあります。注目すべき例は [`Intl.NumberFormat.prototype.format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#using_format_with_map) で、アクセスすると、コールバックとして直接渡すことのできる、バインド済み関数を返します。
+実際、いくつかの組み込みの「メソッド」はバインド済み関数を返すゲッターでもあります。注目すべき例は [`Intl.NumberFormat.prototype.format()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format#format_と_map_の使用) で、アクセスすると、コールバックとして直接渡すことのできる、バインド済み関数を返します。
 
 ### 部分的に適用された関数
 
-もう一つの `bind()` の使い方は、あらかじめ引数が指定された関数を生成することです。
+もう一つの `bind()` の使い方は、あらかじめ先頭の引数が指定された関数を生成することです。
 
 これらの引数は（指定されている場合）指定された `this` の値に続いてバインドされ、ターゲット関数に渡される引数の先頭に挿入されます。その後に、バインド済み関数の呼び出し時に渡された引数が続きます。
 
@@ -190,7 +190,7 @@ class LateBloomer {
     setTimeout(this.declare.bind(this), 1000);
   }
   declare() {
-    console.log(`わたしは花びらが ${this.petalCount} 枚の綺麗な花です！`);
+    console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
   }
 }
 
@@ -312,7 +312,7 @@ slice(arguments);
 
 ## 関連情報
 
-- [`Function.prototype.bind` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/function)
+- [`Function.prototype.bind` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/function)<sup>(英語)</sup>
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
 - {{jsxref("Functions", "関数", "", 1)}}

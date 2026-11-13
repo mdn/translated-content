@@ -286,4 +286,4 @@ input:checked + label::before {
 - {{Experimental_Inline}} CSS 滚动时间线 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性，以及 {{cssxref('scroll-timeline')}} 简写属性，创建与滚动容器的滚动偏移相关的动画。
 - [CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transitions)模块中的属性根据用户的动作触发动画。
 - HTML {{htmlelement("canvas")}} 元素与 [canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)一起用来绘制图形和动画。
-- 所有动画相关元素的 {{domxref("SVGAnimationElement")}} 接口，包括 {{domxref("SVGAnimateElement")}}、{{domxref("SVGSetElement")}}、{{domxref("SVGAnimateColorElement")}}、{{domxref("SVGAnimateMotionElement")}} 以及 {{domxref("SVGAnimateTransformElement")}}。
+- 所有动画相关元素的 {{domxref("SVGAnimationElement")}} 接口，包括 {{domxref("SVGAnimateElement")}}、{{domxref("SVGSetElement")}}、{{domxref("SVGAnimateMotionElement")}} 以及 {{domxref("SVGAnimateTransformElement")}}。

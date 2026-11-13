@@ -3,7 +3,7 @@ title: JavaScript のサンプルコードの作成ガイドライン
 short-title: JavaScript の例
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
 l10n:
-  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 以下のガイドラインは MDN Web Docs の JavaScript のサンプルコードの書き方について述べたものです。この記事は、可能な限り多くの人が理解できるような簡潔な例を書くためのルールをまとめたものです。
@@ -20,9 +20,11 @@ MDN Web Docs では、コードスタイルの一貫性を保つために（そ�
 
 Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 
-### 最新の JavaScript 機能の使用
+### 対応している最新の JavaScript 機能を使う
 
-Chrome、Edge、Firefox、Safari といった主要なブラウザーが対応していれば、新しい機能を使用することができます。
+新しい機能は、Chrome、Edge、Firefox、Safari のすべての主要ブラウザーが対応したら（{{glossary("Baseline")}}）使用できます。
+
+このルールは、そのページで文書化している JavaScript 機能には適用されません（その機能は代わりに[採用基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)に従います）。例えば、[標準外または実験的な機能](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)を文書化し、その動作を示す完全な例を書くことはできます。ただし、ウェブ API など、関連のない別の機能のデモでそのような機能を使うのは避けてください。
 
 ## 配列
 
@@ -64,7 +66,7 @@ pets[pets.length] = "cat";
 
 ## 非同期メソッド
 
-非同期コードを書くとパフォーマンスが向上するので、可能な場合は使用しましょう。具体的な方法としては、以下を使用することができます。
+非同期コードを書くとパフォーマンスが向上するので、可能な場合は使用してください。具体的な方法としては、以下を使用することができます。
 
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/ja/docs/Web/JavaScript/Reference/Operators/await)
@@ -114,7 +116,7 @@ pets[pets.length] = "cat";
 
 単一行のコメントは `//` でマークされ、ブロックコメントは `/* … */` で囲まれます。
 
-一般的に、コードをコメントを書くには単一の行のコメントを使用します。コメントアウトされたコードを視覚的に認識しやすくするためです。さらに、この慣例により、デバッグ中に `/* … */` を使用してコードの一部をコメントアウトすることができます。
+一般に、コードにコメントを書くには単一行コメントを使用します。コメントアウトされたコードを視覚的に認識しやすくするためです。さらに、この慣例により、デバッグ中に `/* … */` を使用してコードの一部をコメントアウトできます。
 
 - スラッシュとコメントの間には空白を入れてください。文のように大文字で始めますが、コメントをピリオドで終わらせないでください。
 
@@ -270,15 +272,15 @@ function doIt() {
   こちらは推奨される方法です。
 
   ```js example-good
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce((a, b) => a + b);
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce((a, b) => a + b);
   ```
 
   次のように書かないでください。
 
   ```js example-bad
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce(function (a, b) {
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce(function (a, b) {
     return a + b;
   });
   ```
@@ -710,7 +712,7 @@ age != 25;
 
 - 短い識別子を使用し、一般的でない略語は避けてください。良い変数名は通常 3 文字から 10 文字の長さですが、あくまでヒントです。例えば、 `accelerometer` は文字数のために `acclmtr` と略すよりも説明的です。
 - 各変数に明確な意味づけがあるような、実世界に関連した例を使用するようにしてください。 `foo` や `bar` のようなプレースホルダーの名前に戻るのは、例が単純で作為的な場合だけにしてください。
-- [ハンガリー記法](https://ja.wikipedia.org/wiki/ハンガリアン記法)は使用しないでください。変数名の接頭辞に型を付けないでください。例えば、`bBought = oCar.sBuyer != null` ではなく `bought = car.buyer !== null` と書いたり、`sName = "John Doe"` ではなく `name = "John Doe"` と書いたりします。
+- [ハンガリー記法](https://ja.wikipedia.org/wiki/ハンガリアン記法)は使用しないでください。変数名の接頭辞に型を付けないでください。例えば、`bBought = oCar.sBuyer != null` ではなく `bought = car.buyer !== null` と書いたり、`sName = "Maria Sanchez"` ではなく `name = "Maria Sanchez"` と書いたりします。
 - 集合の場合、リスト、配列、キューなどの型を名前に入力することは避けてください。コンテンツ名は複数形で使用します。例えば、車の配列の場合は `carArray` や `carList` ではなく `cars` を使用します。具体的なアプリケーションのコンテキストなしで機能の抽象的な形を表示させたい場合など、例外があるかもしれません。
 - プリミティブ値には、小文字から始まる _camelCase_ を使用します。と:`_` は使用しないでください。適切な場合には、簡潔で読みやすく、意味づけされた名前を使用してください。例えば、 `currency_name` ではなく `currencyName` を使用してください。
 - 冠詞や所有格を使用することは避けてください。例えば、 `myCar` や `aCar` の代わりに `car` を使用します。実用的なコンテキストがなく、一般的な機能を記述する場合などは例外があるかもしれません。

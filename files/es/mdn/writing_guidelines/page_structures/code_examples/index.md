@@ -3,7 +3,7 @@ title: Ejemplos de código en MDN
 short-title: Ejemplos de código
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 l10n:
-  sourceCommit: 74ab773eebccc1f7fe27c2c4abd4998cc074186b
+  sourceCommit: f99d00a1c3697e26a679925954e26564e7e79b98
 ---
 
 En MDN encontrarás numerosos ejemplos de código que muestran cómo usar las características de la plataforma web que documentamos.
@@ -53,7 +53,7 @@ Hay consideraciones de estilo y contenido que debes tener en cuenta al añadir o
 ## Ejemplos estáticos
 
 Los ejemplos estáticos son bloques de código que muestran cómo se ve una característica en el código fuente.
-Estos se colocan en una página utilizando "delimitadores de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks).
+Estos se colocan en una página utilizando "delimitadores de código" de Markdown, como se describe en [Bloques de código de ejemplo](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#bloques_de_código_de_ejemplo).
 Cuando se utilizan en páginas de documentación, tienen este aspecto:
 
 ```js
@@ -69,7 +69,7 @@ Están pensados para los lectores que quieren probar un ejemplo sin tener que le
 
 La macro `InteractiveExample` acepta un título para el ejemplo como cadena de texto, seguido de una palabra clave que especifica la altura del ejemplo.
 Los bloques de código que se incluyen en el ejemplo aparecen después de la llamada a la macro y contienen la palabra clave `interactive-example` en la cadena de información después del lenguaje del bloque de código.
-El uso de [`Array.concat()` en JavaScript](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#try_it) es un buen ejemplo de esta macro; así es como aparece en el código fuente Markdown:
+El uso de [`Array.concat()` en JavaScript](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat#pruébalo) es un buen ejemplo de esta macro; así es como aparece en el código fuente Markdown:
 
 ````md
 \{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
@@ -108,10 +108,10 @@ La macro tiene tres parámetros:
 2. El ancho del `<iframe>`, que puede expresarse como porcentaje o en píxeles.
 3. La altura del `<iframe>`, que puede expresarse como porcentaje o en píxeles.
 
-Veamos un ejemplo. Supongamos que queremos insertar el código en <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. Podríamos usar la siguiente llamada:
+Veamos un ejemplo. Supongamos que queremos insertar el código en <https://mdn.github.io/learning-area/html/introduction-to-html/getting-started/>. Podríamos usar la siguiente llamada:
 
-\\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+\\{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
 
 Así es como se ve al renderizarlo:
 
-{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}

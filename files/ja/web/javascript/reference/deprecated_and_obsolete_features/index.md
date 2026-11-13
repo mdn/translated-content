@@ -161,7 +161,7 @@ console.log(a); // 1
 
 ### String
 
-- 標準外の String の汎用メソッド、たとえば `String.slice(myStr, 0, 12)`, `String.replace(myStr, /./g, "!")` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 53 で非推奨となり、そして Firefox 68 で廃止されました。代わりに {{jsxref("String", "String.prototype", "instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
+- 標準外の String の汎用メソッド、たとえば `String.slice(myStr, 0, 12)`, `String.replace(myStr, /./g, "!")` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 53 で非推奨となり、そして Firefox 68 で廃止されました。代わりに {{jsxref("String", "String.prototype", "#instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
 - `String.prototype.quote` は Firefox 37 で削除されました。
 - 標準外の `flags` 引数は {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, {{jsxref("String.prototype.replace")}} で廃止されました。
 
@@ -175,7 +175,7 @@ console.log(a); // 1
 
 ### Array
 
-- 標準外の Array の汎用メソッド、例えば `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 68 で非推奨となり、Firefox 71 で削除されました。代わりに {{jsxref("Array", "Array.prototype", "instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
+- 標準外の Array の汎用メソッド、例えば `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 68 で非推奨となり、Firefox 71 で削除されました。代わりに {{jsxref("Array", "Array.prototype", "#instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
 
 | プロパティ          | 説明                                   | 代替                |
 | ------------------- | -------------------------------------- | ------------------- |

@@ -1,27 +1,25 @@
 ---
 title: Element：clientLeft 属性
+short-title: clientLeft
 slug: Web/API/Element/clientLeft
 l10n:
-  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
+  sourceCommit: 1e0a16464b11cde9eddbb9795fe74e737dba0598
 ---
 
 {{ APIRef("DOM") }}
 
-元素左侧边框的宽度（像素）。如果元素的文本方向为从右到左，并且内容溢出导致渲染了左侧的垂直滚动条，则该值包含垂直滚动条的宽度。`clientLeft` 不包含左外边距或左内边距的值。`clientLeft` 是只读属性。
+{{domxref("Element")}} 接口的 **`clientLeft`** 只读属性返回元素左边框的宽度（像素）。如果元素的文本方向为从右到左，并且内容溢出导致渲染了左侧的垂直滚动条，则该值包含垂直滚动条的宽度。`clientLeft` 不包含左外边距或左内边距的值。
 
 > [!NOTE]
-> 此属性将会对值取整。如果需要小数值，请使用 {{ domxref("element.getBoundingClientRect()") }}。
-
-> [!NOTE]
-> 当元素的属性为 `display: inline` 时，无论元素是否有边框，`clientLeft` 都会返回 `0`。
+> 当元素的 `display` 为 `inline` 时，无论元素是否有边框，`clientLeft` 都会返回 `0`。
 
 ## 值
 
-数字。
+一个整数。
 
 ## 示例
 
-在以下示例中，视口区域具有白色背景和一个 24 像素宽的黑色 `border-left`。`clientLeft` 的值是从外边距（黄色）区域结束到内边距和内容区域（白色）开始的距离：即 24 像素。
+在以下示例中，客户端区域具有白色背景和一个 24 像素宽的黑色 `border-left`。`clientLeft` 的值是从外边距（黄色）区域结束到内边距和内容区域（白色）开始的距离：即 24 像素。
 
 ### HTML
 
@@ -64,3 +62,13 @@ l10n:
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [确定元素的尺寸](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

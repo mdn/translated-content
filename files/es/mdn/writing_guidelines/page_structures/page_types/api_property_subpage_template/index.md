@@ -2,7 +2,7 @@
 title: Plantilla de subpágina de propiedades de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 l10n:
-  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
+  sourceCommit: 977386fc14a76dec21374aef1e0571900b28dab4
 ---
 
 > [!NOTE]
@@ -61,7 +61,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — esto genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si es experimental y la tecnología está oculta tras una preferencia en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsoleto) el uso de la tecnología.
 > - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar** que indica que la característica no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros según las indicaciones a continuación:
@@ -94,7 +93,7 @@ _Si necesitas más de un par de párrafos, deberías añadirlos en una sección 
 
 ## Valor
 
-Un \{{domxref("SomeDataType" }}.
+Un \{{domxref("SomeDataType")}}.
 
 _Normalmente, solo el tipo de dato y los valores permitidos para ese tipo de dato si es relevante._
 _Si la propiedad tiene un comportamiento diferente para los métodos setter y getter, esto normalmente debería explicarse en oraciones separadas._
