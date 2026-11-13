@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext/compileShader
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.compileShader(shader);
 ```
 

@@ -1,14 +1,13 @@
 ---
 title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
-original_slug: Web/CSS/interpolate-size
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{seecompattable}}
 
-**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)を行うときに、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と、`auto`、[`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値との間で行うことができます。
+**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)を、{{cssxref("&lt;length-percentage&gt;")}} 値と、{{glossary("intrinsic size", "内在サイズ")}}、{{cssxref("fit-content")}}。{{cssxref("max-content")}} との間で行うことができます。
 
 このプロパティは通常、 {{cssxref("width")}} や {{cssxref("height")}} を、 `<length-percentage>` とそのコンテンツのフルサイズの間（つまり、「閉じた」と「開いた」状態、あるいは「非表示」と「表示」状態の間）でアニメーションさせる場合に使用します。 {{cssxref("transform")}} など、ボックスモデル以外の CSS プロパティをアニメーション化する場合、これは実行可能な解決策ではありません。
 
@@ -33,13 +32,13 @@ interpolate-size: unset;
 ### 値
 
 - `allow-keywords`
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と内在サイズ値の間の[補間処理](/ja/docs/Glossary/Interpolation)を有効にし、 2 つの間のアニメーションを可能にします。
+  - : [補間処理](/ja/docs/Glossary/Interpolation)を {{cssxref("length-percentage")}} 値と内在サイズ値との間で有効にし、 2 つの間のアニメーションを可能にします。
 - `numeric-only`
   - : 既定の動作では、内在サイズ値は補間処理できません。
 
 ## 解説
 
-`interpolate-size: allow-keywords` を設定すると、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と内在サイズ値の間の補間処理が可能になります。2 つの内在サイズ値間のアニメーションは有効にならないことに注意してください。アニメーションの一方の端は `<length-percentage>` でなければなりません。
+`interpolate-size: allow-keywords` を設定すると、{{cssxref("length-percentage")}} 値と内在サイズ値の間の補間処理が可能になります。2 つの内在サイズ値間のアニメーションは有効にならないことに注意してください。アニメーションの一方の端は `<length-percentage>` でなければなりません。
 
 `interpolate-size` の値は継承されるため、文書ルートで設定することで、文書全体に対して内在サイズ値への（または内在サイズ値からの）アニメーションを有効にすることができます。
 
@@ -113,7 +112,7 @@ HTML には、キーボードのフォーカスを受け取ることができる
 }
 
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 175px;
   border-radius: 5px;
   background: #eeeeee;
@@ -133,7 +132,7 @@ main {
 
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
   letter-spacing: 1px;

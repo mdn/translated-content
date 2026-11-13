@@ -1,9 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/Reference/Properties/text-transform
-original_slug: Web/CSS/text-transform
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: 0cd011cb371ea646c7c2beaaff7e95b835756cd3
 ---
 
 **`text-transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
@@ -97,8 +96,8 @@ text-transform: unset;
 - `capitalize`
   - : それぞれの単語の最初の*文字*を強制的に大文字に変換させるキーワードです。ほかの文字は変更しません。すなわち、要素のテキストで記載した元の表記を維持します。文字とは、文字または数字の一般カテゴリーの一部である任意の Unicode 文字です。単語の先頭にある句読点や記号は無視されます。
 
-    > [!NOTE]
-    > `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。
+    > [!WARNING]
+    > 多くの言語では、タイトルや名前であっても、文中のすべての単語を大文字で始めることは誤りと考えています。テキストの言語が不明な場合、`capitalize`の使用は避けてください。さらに、`capitalize`はタイトル用の大文字表記を作成しません。これは、英語における記事の省略など、言語特定の規則を適用しないためです。
 
     > [!NOTE]
     > `capitalize` キーワードは CSS 1 および CSS 2.1 で定義されていたものでした。この結果、最初の文字を計算する方法は、ブラウザーによって異なっていました（Firefox は `-` および `_` を文字として捉えていましたが、他はそうではありませんでした。 Webkit 及び Gecko は `ⓐ` のような文字から作られた記号を、誤って文字として認識していました）。正しいふるまいを詳細に定義したので、 CSS Text Level 3 ではこれを一掃しました。ブラウザーの互換性表の `capitalize` の行は、それぞれのエンジンがこの詳細に定義された振る舞いに対応し始めたバージョンを記載しています。
@@ -122,7 +121,7 @@ text-transform: unset;
 テキストの長い区間に `text-transform` の値を `uppercase` で設定すると、失読症のような認知障碍を持つ人にとって読むのが難しくなることがあります。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## 公式定義
 
@@ -138,7 +137,7 @@ text-transform: unset;
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>
@@ -168,7 +167,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>
@@ -198,7 +197,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong
     >(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize?
     ?¡transform!</strong
@@ -232,7 +231,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong>
 </p>
 <p>
@@ -258,7 +257,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong>
 </p>
 <p>
@@ -288,7 +287,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>
@@ -318,7 +317,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong>
 </p>
 <p>
@@ -346,7 +345,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</strong>
 </p>
 <p>
@@ -376,7 +375,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong>
 </p>
 <p>
@@ -406,7 +405,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>Ĩ is a Lithuanian LETTER as is J́</strong>
 </p>
 <p>
@@ -432,16 +431,16 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong
-    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;&lt;=&gt;?@{|}~</strong
   >
 </p>
 <p>
   text-transform: full-width
   <strong
     ><span
-      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
+      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;&lt;=&gt;?@{|}~</span
     ></strong
   >
 </p>
@@ -465,7 +464,7 @@ strong {
 
 ```html
 <p>
-  Initial String
+  初期文字列
   <strong>ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強</strong>
 </p>
 <p>

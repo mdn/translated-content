@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
 original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1","Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}
 
 ## Deuxième exemple
 
@@ -111,4 +111,4 @@ span.bold {
 </div>
 ```
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}
+{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1","Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}

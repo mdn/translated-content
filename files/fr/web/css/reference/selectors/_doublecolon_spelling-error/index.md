@@ -1,12 +1,12 @@
 ---
-title: ::spelling-error
+title: Pseudo-élément CSS `::spelling-error`
+short-title: ::spelling-error
 slug: Web/CSS/Reference/Selectors/::spelling-error
-original_slug: Web/CSS/::spelling-error
 l10n:
-  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{Glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.
 
 Le pseudo-élément `::spelling-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de surlignage. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
@@ -14,14 +14,14 @@ Le pseudo-élément `::spelling-error` suit un modèle d'héritage spécial comm
 
 Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle dont le sélecteur contient `::spelling-error`&nbsp;:
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} et les propriétés détaillées correspondantes.
-- {{cssxref("text-decoration")}} et les propriétés détaillées correspondantes.
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("cursor")}}
+- {{CSSxRef("caret-color")}}
+- {{CSSxRef("outline")}} et les propriétés détaillées correspondantes.
+- {{CSSxRef("text-decoration")}} et les propriétés détaillées correspondantes.
+- {{CSSxRef("text-emphasis-color")}}
+- {{CSSxRef("text-shadow")}}
 
 ## Syntaxe
 
@@ -67,5 +67,5 @@ Dans cet exemple, les navigateurs éventuellement compatibles devraient mettre e
 
 ## Voir aussi
 
-- {{cssxref("::grammar-error")}}
-- {{cssxref("text-decoration-line")}}
+- Le pseudo-élément {{CSSxRef("::grammar-error")}}
+- La propriété {{CSSxRef("text-decoration-line")}}

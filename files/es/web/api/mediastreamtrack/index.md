@@ -14,11 +14,11 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 - {{domxref("MediaStreamTrack.enabled")}}
   - : Es un valor Booleano con un valor de `true` si la pista está habilitada, que se permite para renderizar el fujo fuente del medio; o `false` si está desactivado, ue no está rederizando el flujo de la fuente de medios que el silencio y la oscuridad. Si la pista se ha desconectado, este valor puede ser cambiado, pero no tiene más efecto.
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} que contiene un identificador único (GUID) para la pista; que es generado por le navegador.
+  - : Retorna un {{jsxref("String")}} que contiene un identificador único (GUID) para la pista; que es generado por le navegador.
 - {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} se establece en `"audio"` si la pista es un audio y para `"video"`, si es una pista de video. Este no cambia si la pista se disociada de su fuente.
+  - : Retorna un {{jsxref("String")}} se establece en `"audio"` si la pista es un audio y para `"video"`, si es una pista de video. Este no cambia si la pista se disociada de su fuente.
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} que contiene una etiqueta agente-asignado por el usuario que identifica la fuente de la pista, como en `"internal microphone"`. La cadena puede dejarse vacío y está vacía, siempre y cuando ninguna fuente haya sido conectada. Cuando la pista está disociada de la fuente, la etiqueta no cambia.
+  - : Retorna un {{jsxref("String")}} que contiene una etiqueta agente-asignado por el usuario que identifica la fuente de la pista, como en `"internal microphone"`. La cadena puede dejarse vacío y está vacía, siempre y cuando ninguna fuente haya sido conectada. Cuando la pista está disociada de la fuente, la etiqueta no cambia.
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
   - : Retorna un valor booleano con un valor de `true` si la pista esta silenciada, de lo contrario `false`.
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}

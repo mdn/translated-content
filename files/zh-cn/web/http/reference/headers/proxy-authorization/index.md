@@ -5,13 +5,13 @@ slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 
 **`Proxy-Authorization`** 是一个请求首部，其中包含了用户代理提供给代理服务器的用于身份验证的凭证。这个首部通常是在服务器返回了 {{HTTPStatus("407")}} `Proxy Authentication Required` 响应状态码及 {{HTTPHeader("Proxy-Authenticate")}} 首部后发送的。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 
-```plain
+```http
 Proxy-Authorization: <type> <credentials>
 ```
 
@@ -29,7 +29,7 @@ Proxy-Authorization: <type> <credentials>
 
 ## 示例
 
-```plain
+```http
 Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 

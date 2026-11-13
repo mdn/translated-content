@@ -40,7 +40,7 @@ console.log(regex.lastIndex);
   - `exec()` が一致するものを見つけた場合 `lastIndex` は入力の中の一致する文字列の末尾の位置に設定されます。
   - `exec()` が一致するものを見つけられなかった場合、 `lastIndex` は 0 に設定されます。
 
-他の正規表現関連のメソッド、{{jsxref("RegExp.prototype.test()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.replace()")}} などは `exec()` を呼び出しので、`lastIndex` における影響は異なります。詳細はそれぞれのページを参照してください。
+他の正規表現関連のメソッド、{{jsxref("RegExp.prototype.test()")}}、{{jsxref("String.prototype.match()")}}、{{jsxref("String.prototype.replace()")}} などは `exec()` を呼び出し、それぞれ `lastIndex` に影響を及ぼします。詳細はそれぞれのページを参照してください。
 
 ## 例
 

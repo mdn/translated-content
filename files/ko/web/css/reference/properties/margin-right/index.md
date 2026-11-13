@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/margin-right
 original_slug: Web/CSS/margin-right
 ---
 
-**`margin-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`margin-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
 
 {{InteractiveExample("CSS Demo: margin-right")}}
 

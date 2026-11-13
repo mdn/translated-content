@@ -1,9 +1,9 @@
 ---
-title: overflow-inline
+title: Caractéristique média CSS `overflow-inline`
+short-title: overflow-inline
 slug: Web/CSS/Reference/At-rules/@media/overflow-inline
-original_slug: Web/CSS/@media/overflow-inline
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-inline`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) initial selon l'axe en ligne.

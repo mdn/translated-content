@@ -30,7 +30,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}
   - : {{glossary("WindowProxy")}} で、中にある閲覧コンテキストのウィンドウプロキシーを返します。
 - {{domxref("HTMLIFrameElement.credentialless")}} {{Experimental_Inline}}
-  - : 論理値で `<iframe>` が無信頼であることを示し、そのコンテンツは新しい、一時的なコンテキストで読み込まれることを意味します。このコンテキストは、親コンテキストの共有ストレージと資格情報にアクセスすることはできません。その代わり {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールが解除されるいため、COEP を設定した文書でもそうでないサードパーティ文書を埋め込むことができます。より詳しい説明は、[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
+  - : 論理値で `<iframe>` が無信頼であることを示し、そのコンテンツは新しい、一時的なコンテキストで読み込まれることを意味します。このコンテキストは、親コンテキストの共有ストレージと資格情報にアクセスすることはできません。その代わり {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールが解除されるいため、COEP を設定した文書でもそうでないサードパーティ文書を埋め込むことができます。より詳しい説明は、[無信頼の iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless) を参照してください。
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : 埋め込み文書が自分自身に適用することに同意しなければならないコンテンツセキュリティポリシーを指定します。
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -43,7 +43,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : この iframe を即座に (`eager`) 読み込むべきか、または必要に応じて (`lazy`) 読み込むべきであるというヒントをブラウザーに提供する文字列。
     これは、HTML の [`loading`](/ja/docs/Web/HTML/Reference/Elements/iframe#loading) 属性を反映します。
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
-  - : フレームの長い説明文の URI をが入った文字列です。
+  - : フレームの長い説明文の URI が入った文字列です。
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
   - : フレームのマージンの高さである文字列です。
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}

@@ -1,12 +1,11 @@
 ---
 title: base-palette
 slug: Web/CSS/Reference/At-rules/@font-palette-values/base-palette
-original_slug: Web/CSS/@font-palette-values/base-palette
 l10n:
-  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
 
-**`base-palette`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、新しいパレットを作成する際に使用する定義済みパレットの名前またはインデックスを指定するために使用します。指定された `base-palette` が存在しない場合、インデックス 0 で定義されたパレットが使用されます。
+**`base-palette`** は [CSS](/ja/docs/Web/CSS) の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、新しいパレットを作成する際に使用する定義済みパレットの名前またはインデックスを指定するために使用します。指定された `base-palette` が存在しない場合、インデックス 0 で定義されたパレットが使用されます。
 
 ## 構文
 
@@ -54,7 +53,7 @@ l10n:
 }
 
 h2 {
-  font-family: "Rocher";
+  font-family: "Rocher", fantasy;
 }
 
 @font-palette-values --two {
@@ -78,7 +77,7 @@ h2 {
 
 #### 結果
 
-![Example showing 3 different base-palettes of Rocher color font](./rocher-color-font-alt-base-palettes.jpg)
+![ロシェ色フォントの 3 種類のベースパレット表示させてみた例](./rocher-color-font-alt-base-palettes.jpg)
 
 ## 仕様書
 
@@ -90,8 +89,8 @@ h2 {
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}} 記述子
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} 記述子
-- {{cssxref("font-palette/", "font-palette")}} プロパティ
+- {{cssxref("font-palette")}} プロパティ
 - {{domxref("CSSFontPaletteValuesRule.basePalette")}}

@@ -6,7 +6,7 @@ original_slug: Web/CSS/margin-left
 
 {{CSSRef}}
 
-Свойство [CSS](/en-US/CSS) **`margin-left`** устанавливает [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) слева от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
+Свойство [CSS](/en-US/CSS) **`margin-left`** устанавливает [внешний отступ](/ru/docs/Web/CSS/Guides/Box_model/Introduction) слева от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
 {{InteractiveExample("CSS Demo: margin-left")}}
 
@@ -58,7 +58,7 @@ margin-left: 0;
 }
 ```
 
-Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется [схлопыванием внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется [схлопыванием внешних отступов](/ru/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 В редких случаях, когда ширина (т.е., когда все значения `width`, `margin-left`, `border`, `padding`, область содержимого, и `margin-right` определены), `margin-left` игнорируется, и будет иметь такое же расчётное значение, как и `auto` .
 

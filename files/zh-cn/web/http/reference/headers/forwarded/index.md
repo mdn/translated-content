@@ -9,13 +9,13 @@ slug: Web/HTTP/Reference/Headers/Forwarded
 
 这个消息首部会被用来进行调试和统计，以及生成基于位置的定制化内容，按照设计的目的，它会暴露一定的隐私和敏感信息，比如客户端的 IP 地址。所以在应用此消息首部的时候，需要将用户的隐私问题考虑在内。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 
-```plain
+```http
 Forwarded: by=<identifier>; for=<identifier>; host=<host>; proto=<http|https>
 ```
 
@@ -40,7 +40,7 @@ Forwarded: by=<identifier>; for=<identifier>; host=<host>; proto=<http|https>
 
 ### 使用 `Forwarded`
 
-```plain
+```http
 Forwarded: for="_mdn"
 
 # 大小写不敏感
@@ -57,7 +57,7 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 
 如果应用、服务器或是代理支持标准格式的 Forwarded 的首部的话，那么 {{HTTPHeader("X-Forwarded-For")}} 可以被替换。需要注意的是，在 Forwarded 中 ipv6 地址需要包含在方括号里面，同时用引号括起来。
 
-```plain
+```http
 X-Forwarded-For: 123.34.567.89
 Forwarded: for=123.34.567.89
 

@@ -1,9 +1,9 @@
 ---
-title: hover
+title: Caractéristique média CSS `hover`
+short-title: hover
 slug: Web/CSS/Reference/At-rules/@media/hover
-original_slug: Web/CSS/@media/hover
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`hover`** est utilisée pour tester si le _mécanisme_ de saisie principal de l'utilisateur·ice peut survoler des éléments.
@@ -58,4 +58,4 @@ a:hover {
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

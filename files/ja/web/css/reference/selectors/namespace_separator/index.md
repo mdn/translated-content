@@ -1,9 +1,8 @@
 ---
 title: 名前空間区切り文字
 slug: Web/CSS/Reference/Selectors/Namespace_separator
-original_slug: Web/CSS/Namespace_separator
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **名前空間区切り文字** (`|`) は、セレクターと名前空間を区切り、要素型セレクターの{{glossary("namespace", "名前空間")}}を識別したり、存在しないこと識別したりします。
@@ -181,7 +180,7 @@ p {
 
 ## 関連情報
 
-- [`@namespace`](/ja/docs/Web/CSS/Reference/At-rules/@namespace)
+- {{cssxref("@namespace")}}
 - [`Document.createElementNS()`](/ja/docs/Web/API/Document/createElementNS) メソッド
 - [`Element.namespaceURI`](/ja/docs/Web/API/Element/namespaceURI) プロパティ
 - [CSS 要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)

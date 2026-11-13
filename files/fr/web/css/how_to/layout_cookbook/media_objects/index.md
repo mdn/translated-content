@@ -2,7 +2,7 @@
 title: Objets avec média
 slug: Web/CSS/How_to/Layout_cookbook/Media_objects
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le motif _Media Object_ («&nbsp;objet média&nbsp;») est un modèle que l'on retrouve partout sur le Web. Il s'agit d'une boîte à deux colonnes avec une image d'un côté et un texte descriptif de l'autre, par exemple dans une publication sur un réseau social.

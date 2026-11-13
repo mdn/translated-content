@@ -3,8 +3,6 @@ title: Que faire ensuite ?
 slug: Mozilla/Add-ons/WebExtensions/What_next
 ---
 
-{{AddonSidebar}}
-
 Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses qui vous aides à en faire une.
 
 Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cette page sur [l'atelier d'extension](https://extensionworkshop.com), un site web dédié à vous aider à écrire, tester, publier et distribuer des extensions pour Firefox.

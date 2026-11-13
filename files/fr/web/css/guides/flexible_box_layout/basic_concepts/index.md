@@ -1,126 +1,219 @@
 ---
-title: Les concepts de base pour flexbox
+title: Concepts de base pour les boîtes flexibles
+short-title: Concepts de base
 slug: Web/CSS/Guides/Flexible_box_layout/Basic_concepts
-original_slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+l10n:
+  sourceCommit: 3143a6094e7b87cf1a96b61f9551fb4d95049777
 ---
 
-{{CSSRef}}
+Le module [de disposition des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) (<i lang="en">flexbox</i> en anglais), a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous voyons les fonctionnalités principales des boîtes flexibles que nous approfondissons ensuite dans d'autres articles.
 
-Le module des boîtes flexibles, aussi appelé « _flexbox_ », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des _flexbox_ que nous approfondirons ensuite dans d'autres articles.
-
-Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les _flexbox_ gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille (CSS Grid)](/fr/docs/Web/CSS/Guides/Grid_layout) qui contrôle à la fois les colonnes et les lignes.
+Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les boîtes flexibles gèrent une seule dimension à la fois — une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) qui contrôle à la fois les colonnes et les lignes.
 
 ## Les deux axes des boîtes flexibles
 
-Lorsqu'on travaille avec les boîtes flexibles, deux axes interviennent : l'axe principal (_main axis_ en anglais) et l'axe secondaire (_cross axis_ en anglais). L'axe principal est défini par la propriété {{cssxref("flex-direction")}} et l'axe secondaire est l'axe qui lui est perpendiculaire. Tout ce que nous manipulons avec les boîtes flexibles fera référence à ces axes.
+Lorsqu'on travaille avec les boîtes flexibles, deux axes interviennent — [l'axe principal](#laxe_principal) (<i lang="en">main axis</i> en anglais) et l'axe transversal (<i lang="en">cross axis</i> en anglais). L'axe principal est défini par la propriété {{CSSxRef("flex-direction")}} et l'axe transversal est l'axe qui lui est perpendiculaire. Tout ce que nous manipulons avec les boîtes flexibles fait référence à ces axes.
 
 ### L'axe principal
 
-L'axe principal est défini par la propriété `flex-direction` qui peut prendre quatre valeurs :
+{{Glossary("main axis", "L'axe principal")}} est défini par la propriété `flex-direction` qui peut prendre quatre valeurs&nbsp;:
 
 - `row`
 - `row-reverse`
 - `column`
 - `column-reverse`
 
-Si on choisit la valeur `row` ou `row-reverse`, l'axe principal sera aligné avec la direction « en ligne » (_inline_ direction) (c'est la direction logique qui suit le sens d'écriture du document).
+Si on choisit la valeur `row` ou `row-reverse`, l'axe principal est aligné avec la **direction en incise** (<i lang="en">inline</i> en anglais).
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
+![Si flex-direction est réglé sur row, l'axe principal suit la ligne dans la direction en incise.](basics1.svg)
 
-Si on choisit la valeur `column` ou `column-reverse`, l'axe principal suivra la direction de bloc (_block direction_) et progressera le long de l'axe perpendiculaire au sens d'écriture.
+Si on choisit la valeur `column` ou `column-reverse`, l'axe principal suit la **direction de bloc** (<i lang="en">block</i> en anglais) et progresse le long de l'axe perpendiculaire au sens d'écriture.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
+![Si flex-direction est réglé sur column, l'axe principal suit la direction de bloc.](basics2.svg)
 
-### L'axe secondaire (_cross axis_)
+### L'axe transversal
 
-L'axe secondaire est perpendiculaire à l'axe principal. Ainsi, si `flex-direction` vaut `row` ou `row-reverse`, l'axe secondaire suivra l'axe des colonnes.
+L'axe transversal est perpendiculaire à l'axe principal. Ainsi, si `flex-direction` vaut `row` ou `row-reverse`, l'axe transversal suit l'axe des colonnes.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
+![Si flex-direction est réglé sur row, l'axe transversal suit la direction de bloc.](basics3.svg)
 
-Si l'axe principale est `column` ou `column-reverse`, l'axe secondaire suivra celui des lignes (horizontales).
+Si l'axe principal est `column` ou `column-reverse`, l'axe transversal suit celui des lignes (horizontales).
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
-
-Comprendre les liens entre les différents axes est crucial lorsqu'on commence à aligner/justifier des éléments flexibles sur un axe ou l'autre grâce aux fonctionnalités et propriétés des boîtes flexibles.
+![Si flex-direction est réglé sur column, l'axe transversal suit la direction en incise.](basics4.svg)
 
 ## Les lignes de début et de fin
 
-Une autre notion fondamentale est l'absence d'hypothèse sur le mode d'écriture du document. Pour les modèles de disposition précédents, CSS était fortement orienté vers les modes d'écritures de droite à gauche et de gauche à droite. Les modèles de disposition modernes permettent de gérer naturellement les différents modes d'écriture et ne reposent plus sur l'idée qu'une ligne de texte commencera en haut à gauche d'un document puis progressera vers la droite et que chaque nouvelle ligne apparaîtra sous la précédente.
+Un autre point essentiel à comprendre est qu'une boîte flexible ne fait aucune supposition sur le mode d'écriture du document. Les boîtes flexibles ne partent pas du principe que toutes les lignes de texte commencent en haut à gauche d'un document et se dirigent vers la droite, avec de nouvelles lignes apparaissant les unes sous les autres. Au contraire, elles prennent en charge tous les modes d'écriture, comme les autres [propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values).
 
-Nous verrons plus tard les détails des relations entre les spécifications des boîtes flexibles et celles des modes d'écriture. Toutefois, décrivons ici pourquoi on ne parlera plus de gauche ou de droite et de bas ou de haut lorsque nous évoquerons la direction dans laquelle s'organisent les éléments flexibles.
+Vous pouvez [en savoir plus sur la relation entre les boîtes flexibles et les modes d'écriture](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods#les_modes_décritures_writing_modes) dans un article ultérieur&nbsp;; cependant, la description suivante doit aider à comprendre pourquoi nous ne parlons pas de gauche et de droite ni de haut et de bas lorsque nous décrivons la direction dans laquelle nos éléments flexibles s'organisent.
 
-Si `flex-direction` vaut `row` et que nous travaillons sur un document écrit en français, la ligne de début de l'axe principal sera située à gauche et la ligne de fin sera située à droite.
+Si `flex-direction` vaut `row` et que nous travaillons sur un document écrit en français, la ligne de début de l'axe principal est située à gauche et la ligne de fin est située à droite.
 
-![Working in English the start edge is on the left.](basics5.svg)
+![Travailler en français, la ligne de début est à gauche.](basics5.svg)
 
-Si on travaille sur un document écrit dans une langue arabe, la ligne de début de l'axe principal sera à droite et la ligne de fin à gauche.
+Si on travaille sur un document écrit dans une langue arabe, la ligne de début de l'axe principal est à droite et la ligne de fin à gauche.
 
-![The start edge in a RTL language is on the right.](basics6.svg)
+![La ligne de début dans une langue RTL est à droite.](basics6.svg)
 
-Dans les deux cas, la ligne de début de l'axe secondaire est située en haut et la ligne de fin de cet axe est située en bas car ces deux langues sont écrites horizontalement.
+Dans les deux cas, la ligne de début de l'axe secondaire est située en haut et la ligne de fin de cet axe est située en bas, car ces deux langues sont écrites horizontalement.
 
-Nous verrons qu'au fur et à mesure, il devient naturel de parler de début et de fin plutôt que de gauche et de droite. De plus, ce niveau d'abstraction sera utile pour comprendre d'autres méthodes de disposition comme les grilles CSS car il y est également utilisé.
+Nous voyons qu'au fur et à mesure, il devient naturel de parler de début et de fin plutôt que de gauche et de droite. De plus, ce niveau d'abstraction est utile pour comprendre d'autres méthodes de disposition comme les grilles CSS, car il y est également utilisé.
 
 ## Le conteneur flexible
 
-La zone d'un document sujette au modèle de disposition _flexbox_ est appelée un **conteneur flexible**. Pour créer un conteneur flexible, il faut que la valeur de la propriété {{cssxref("display")}} de cet élément soit `flex` ou `inline-flex`. Dès que c'est le cas, les éléments « enfants » directs deviennent des **éléments flexibles (_flex items_)**. Comme pour les autres propriétés CSS, certaines valeurs initiales sont définies, aussi, lorsqu'on crée un conteneur flexible, tous les éléments flexibles se comporteront de la façon suivante :
+Une zone d'un document qui est disposée à l'aide d'une boîte flexible est appelée un **conteneur flexible**. Pour créer un {{Glossary("flex container", "conteneur flexible")}}, définissez la propriété {{CSSxRef("display")}} de la zone à `flex`. Lorsque nous faisons cela, les enfants directs de ce conteneur deviennent des **éléments flexibles**. Vous pouvez contrôler explicitement si le conteneur lui-même est affiché en contexte en incise ou en contexte de formatage en bloc en utilisant `inline flex` ou `inline-flex` pour les conteneurs flexibles en incise ou `block flex` ou `flex` pour les conteneurs flexibles de niveau bloc.
 
-- Les éléments s'afficheront en lignes horizontales (la valeur par défaut de la propriété `flex-direction` est `row`).
-- Les éléments seront placés à partir de la ligne de début de l'axe principal.
-- Les éléments ne s'étireront pas le long de l'axe principal mais pourront se rétrécir si nécessaire.
-- Les éléments seront étirés le long de l'axe secondaire afin d'occuper l'espace sur cet axe.
-- La propriété {{cssxref("flex-basis")}} vaut `auto`.
-- La propriété {{cssxref("flex-wrap")}} vaut `nowrap`.
+### Valeurs initiales
 
-Autrement dit, tous les éléments formeront une ligne en utilisant la taille de leur contenu. S'il y a plus d'éléments que le conteneur peut en contenir, ils ne formeront pas une nouvelle ligne mais dépasseront du conteneur. Si certains éléments sont plus grands (selon l'axe secondaire) que d'autres, tous les éléments s'étireront sur l'axe secondaire afin d'avoir la plus grande taille.
+Comme pour toutes les propriétés en CSS, certaines valeurs initiales sont définies, donc le contenu d'un nouveau conteneur flexible se comporte de la façon suivante&nbsp;:
 
-Vous pouvez étudier l'exemple qui suit pour voir le résultat obtenu. N'hésitez pa à éditer les éléments ou à en ajouter d'autres pour tester ce comportement initial.
+- Les éléments s'affichent en incise (la valeur par défaut de la propriété {{CSSxRef("flex-direction")}} est `row`).
+- Les éléments commencent à partir du bord de début de l'axe principal.
+- Les éléments ne s'étirent pas sur la dimension principale mais peuvent rétrécir (la valeur par défaut de la propriété {{CSSxRef("flex-grow")}} d'un élément flexible est `0` et celle de {{CSSxRef("flex-shrink")}} est `1`).
+- Les éléments s'étirent pour remplir la taille de l'axe secondaire (la valeur par défaut de la propriété {{CSSxRef("align-items")}} est `stretch`).
+- La valeur par défaut de la propriété {{CSSxRef("flex-basis")}} d'un élément flexible est `auto`. Cela signifie que, dans chaque cas, elle est égale à la propriété {{CSSxRef("width")}} de l'élément flexible en mode d'écriture horizontal, et à la propriété {{CSSxRef("height")}} de l'élément flexible en mode d'écriture vertical. Si la propriété `width`/`height` correspondante est également définie sur `auto`, la valeur `content` de `flex-basis` est utilisée à la place.
+- Tous les éléments sont sur une seule ligne (la valeur par défaut de la propriété {{CSSxRef("flex-wrap")}} est `nowrap`), débordant de leur conteneur si la somme de leur `width`/`height` dépasse la `width`/`height` de l'élément contenant.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 510)}}
+Autrement dit, tous les éléments forment une ligne en utilisant la taille de leur contenu. S'il y a plus d'éléments que le conteneur peut en contenir, ils ne forment pas une nouvelle ligne mais dépassent du conteneur. Si certains éléments sont plus grands (selon l'axe secondaire) que d'autres, tous les éléments s'étirent sur l'axe secondaire afin d'avoir la plus grande taille.
+
+Vous pouvez voir dans l'exemple interactif ci-dessous à quoi cela ressemble. Cliquez sur «&nbsp;Exécuter&nbsp;» pour ouvrir l'exemple dans le MDN Playground et modifier les éléments ou en ajouter de nouveaux pour tester le comportement initial de boîte flexible&nbsp;:
+
+```html live-sample___the-flex-container
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois <br />a <br />du <br />texte <br />supplémentaire</div>
+</div>
+```
+
+```css live-sample___the-flex-container
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("the-flex-container")}}
 
 ### Modifier `flex-direction`
 
-En ajoutant la propriété {{cssxref("flex-direction")}} au conteneur flexible, on peut modifier la direction dans laquelle les éléments flexibles seront affichés. En utilisant `flex-direction: row-reverse`, les éléments seront affichés le long d'une ligne horizontale mais les lignes de début et de fin seront inversées.
+L'ajout de la propriété {{CSSxRef("flex-direction")}} au conteneur flexible nous permet de changer la direction dans laquelle nos éléments flexibles s'affichent. Définir `flex-direction: row-reverse` maintient les éléments affichés le long de la ligne, cependant les lignes de début et de fin sont inversées.
 
-Si on utilise `column` comme valeur de `flex-direction`, l'axe principal est modifié et les éléments sont affichés sur une colonne. Si on utilise `column-reverse`, les lignes de début et de fin seront également inversées.
+Si nous changeons `flex-direction` en `column`, l'axe principal change et nos éléments s'affichent maintenant en colonne. Définissez `column-reverse` et les lignes de début et de fin sont à nouveau inversées.
 
-Dans l'exemple suivant, on utilise `flex-direction` avec la valeur `row-reverse`. Vous pouvez utiliser d'autres valeurs — `row`, `column` et `column-reverse` — afin de voir le résultat produit.
+L'exemple interactif ci-dessous a `flex-direction` défini sur `row-reverse`. Essayez les autres valeurs — `row`, `column` et `column-reverse` — pour voir ce qui arrive au contenu.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}
+```html live-sample___flex-direction
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+</div>
+```
+
+```css live-sample___flex-direction
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+{{EmbedLiveSample("flex-direction")}}
 
 ## Créer un conteneur flexible sur plusieurs lignes avec `flex-wrap`
 
-Bien que le modèle des boîtes flexibles soit organisé sur une dimension, il est possible d'organiser les éléments flexibles afin que ceux-ci s'étendent sur plusieurs lignes ou colonnes (plutôt que de dépasser). Lorsque c'est le cas, chaque nouvelle ligne ou colonne agit comme un nouveau conteneur flexible. La distribution de l'espace sur cette ligne/colonne ne tiendra pas compte des autres lignes/colonnes.
+Bien que les boîtes flexibles sont un modèle unidimensionnel, il est possible de faire passer les éléments flexibles sur plusieurs lignes. Si vous faites cela, vous devez considérer chaque ligne comme un nouveau conteneur flexible. Toute distribution d'espace se produit sur chaque ligne, sans référence aux lignes précédentes ou suivantes.
 
-Pour obtenir ce « passage à la ligne », on ajoute la propriété {{cssxref("flex-wrap")}} avec la valeur `wrap`. Désormais, si les éléments sont trop grands pour tenir sur une seule ligne, ils passeront sur une autre ligne. L'exemple suivant illustre le résultat obtenu lorsque la somme des tailles des éléments dépasse celle du conteneur. Avec `flex-wrap` qui vaut `wrap`, les éléments passent à la ligne. Si on modifie la valeur avec `nowrap` (qui correspond à la valeur initiale), les éléments seront rétrécis pour tenir sur une ligne (car les valeurs initiales des boîtes flexibles permettent aux éléments d'être ainsi redimensionnés). Si on utilise `nowrap` et que les éléments ne peuvent pas être redimensionnés (ou pas suffisamment), cela causera un dépassement.
+Pour obtenir ce comportement de passage à la ligne, ajoutez la propriété {{CSSxRef("flex-wrap")}} avec la valeur `wrap`. Désormais, si vos éléments sont trop grands pour être tous affichés sur une seule ligne, ils passent à la ligne suivante. L'exemple interactif ci-dessous contient des éléments auxquels une `width` a été attribuée. La largeur totale des éléments est trop grande pour le conteneur flexible. Comme `flex-wrap` est défini sur `wrap`, les éléments passent sur plusieurs lignes. Si vous le définissez sur `nowrap`, qui est la valeur initiale, ils rétrécissent pour s'adapter au conteneur. Ils rétrécissent, car ils utilisent les valeurs initiales de boîtes flexibles, y compris `flex-shrink: 1`, qui permet aux éléments de rétrécir. Utiliser `nowrap` provoque un [dépassement](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow) si les éléments ne peuvent pas rétrécir, ou ne peuvent pas rétrécir suffisamment pour tenir.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
+```html live-sample___flex-wrap
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+</div>
+```
+
+```css live-sample___flex-wrap
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+{{EmbedLiveSample("flex-wrap")}}
 
 Pour approfondir ces notions, vous pouvez consulter l'article [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items).
 
 ## La propriété raccourcie `flex-flow`
 
-Il est possible de synthétiser les propriétés `flex-direction` et `flex-wrap` avec la propriété raccourcie {{cssxref("flex-flow")}}. La première valeur de cette propriété sera utilisée pour `flex-direction` et la seconde pour `flex-wrap`.
+Vous pouvez combiner les deux propriétés `flex-direction` et `flex-wrap` dans la propriété raccourcie {{CSSxRef("flex-flow")}}.
 
-Dans l'exemple qui suit, vous pouvez changer les valeurs de `flex-direction` en utilisant `row`, `row-reverse`, `column` ou `column-reverse` pour la première et `wrap` ou `nowrap` pour la seconde.
+Dans l'exemple interactif ci-dessous, essayez de changer la première valeur pour l'une des valeurs autorisées pour `flex-direction` — `row`, `row-reverse`, `column` ou `column-reverse`, et changez aussi la seconde pour `wrap` et `nowrap`.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-flow.html", '100%', 400)}}
+```html live-sample___flex-flow
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+</div>
+```
+
+```css live-sample___flex-flow
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+{{EmbedLiveSample("flex-flow")}}
 
 ## Les propriétés appliquées aux éléments flexibles
 
-Pour mieux contrôler les éléments flexibles, on peut les cibler directement avec trois propriétés :
+Pour mieux contrôler les éléments flexibles, on peut les cibler directement avec trois propriétés&nbsp;:
 
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-basis")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}
+- {{CSSxRef("flex-basis")}}
 
-Nous verrons ici un rapide aperçu de ces propriétés que nous approfondirons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
+Nous voyons ici un rapide aperçu de ces propriétés que nous approfondissons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
 
-Avant de revenir à ces propriétés, il nous faut définir le concept d'**espace disponible**. Lorsque nous modifierons l'une de ces propriétés, cela modifiera la façon dont l'espace disponible est distribué parmi les éléments. Ce concept est également important lorsqu'on aligne les éléments.
+Avant de revenir à ces propriétés, il nous faut définir le concept **d'espace disponible**. Lorsque nous modifions l'une de ces propriétés, cela modifie la façon dont l'espace disponible est distribué parmi les éléments. Ce concept est également important lorsqu'on aligne les éléments.
 
-Prenons un conteneur de 500 pixels de large et qui contient trois éléments de 100 pixels de large. Il faut donc 300 pixels pour disposer ces éléments et il reste ainsi 200 pixels d'espace disponible. Si on ne modifie pas les valeurs initiales, l'espace disponible sera placé après le dernier élément.
+Prenons un conteneur de 500 pixels de large et qui contient trois éléments de 100 pixels de large. Il faut donc 300 pixels pour disposer ces éléments et il reste ainsi 200 pixels d'espace disponible. Si on ne modifie pas les valeurs initiales, l'espace disponible est placé après le dernier élément.
 
-![This flex container has available space after laying out the items.](basics7.svg)
+![Ce conteneur flexible a de l'espace disponible après avoir disposé les éléments.](basics7.svg)
 
 Si on préfère que les éléments s'étirent pour occuper l'espace restant, il nous faut une méthode pour distribuer cet espace parmi les éléments. C'est le rôle des propriétés `flex-` qui s'appliquent aux éléments.
 
@@ -132,47 +225,111 @@ Si les éléments n'ont pas de taille définie, c'est la taille du contenu qui e
 
 ### La propriété `flex-grow`
 
-La propriété `flex-grow` est un entier positif qui, lorsqu'elle est définie, permet aux éléments flexibles de s'étendre à partir de la mesure de `flex-basis`. Ainsi, l'élément sera étiré et occupera l'espace disponible sur cet axe ou une part de cet espace si les autres éléments peuvent s'étendre également.
+Lorsque la propriété `flex-grow` est définie sur un entier positif, s'il y a de l'espace disponible, l'élément flexible peut grandir le long de l'axe principal à partir de sa valeur `flex-basis`. Le fait que l'élément s'étire pour occuper tout l'espace disponible sur cet axe, ou seulement une partie de l'espace disponible, dépend si les autres éléments sont également autorisés à grandir et de la valeur de leur propriété `flex-grow`.
 
-Si on utilise `flex-grow: 1` pour les différents éléments de l'exemple précédent, l'espace disponible sera alors partagé de façon égale entre les éléments qui seront alors étirés pour occuper l'ensemble du conteneur le long de l'axe principal.
-
-La propriété `flex-grow` permet de répartir l'espace disponible en « parts ». Si, pour le premier élément, on indique `flex-grow` avec une valeur de 2 et, pour les autres éléments, `flex-grow` avec une valeur de 1, deux « parts » de l'espace disponible seront données au premier élément (il recevra donc 100 pixels parmi les 200 pixels restants) et une part sera fournie à chacun des autres éléments (soit 50 pixels chacun parmi les 200 pixels restants).
+Chaque élément avec une valeur positive consomme une portion de l'espace disponible en fonction de sa valeur `flex-grow`. Si nous donnons à tous nos éléments dans l'exemple ci-dessus une valeur `flex-grow` de 1, alors l'espace disponible dans le conteneur flexible est partagé également entre nos éléments et ils s'étirent pour remplir le conteneur sur l'axe principal. Si nous donnons à notre premier élément une valeur `flex-grow` de 2, et aux autres éléments une valeur de 1 chacun, il y a un total de 4 parts&nbsp;; 2 parts de l'espace disponible sont données au premier élément (100px sur 200px dans le cas de l'exemple ci-dessus) et 1 part à chacun des deux autres (50px chacun sur les 200px au total).
 
 ### La propriété `flex-shrink`
 
-La propriété `flex-grow` permet de gérer la façon dont l'espace est ajouté sur l'axe principal. La propriété `flex-shrink` permet quant à elle de contrôler la façon dont l'espace est réduit. S'il n'y a pas suffisamment d'espace dans le conteneur pour disposer les éléments et que `flex-shrink` est un entier positif, l'élément peut alors devenir plus petit que la taille définie par `flex-basis`. De façon analogue à `flex-grow`, il est possible d'affecter différents coefficients aux différents éléments afin que ceux-ci rétrécissent plus fortement que d'autres. Plus la valeur de `flex-shrink` sera élevée, plus l'élément ciblé rétrécira (si les éléments voisins ont une valeur de `flex-shrink` plus faibles).
+Alors que la propriété `flex-grow` gère l'ajout d'espace sur l'axe principal, la propriété `flex-shrink` contrôle la façon dont il est retiré. Si nous n'avons pas assez d'espace dans le conteneur pour disposer nos éléments, et que `flex-shrink` est défini sur un entier positif, alors l'élément peut devenir plus petit que le `flex-basis`. Comme pour `flex-grow`, différentes valeurs peuvent être attribuées afin de faire rétrécir un élément plus rapidement que d'autres — un élément avec une valeur plus élevée pour `flex-shrink` rétrécit plus vite que ses voisins ayant des valeurs plus faibles.
 
-La taille minimale de l'élément sera prise en compte lors du rétrécissement. Cela signifie que `flex-shrink` peut être moins cohérent que `flex-grow` selon les cas aux limites. Nous verrons plus en détails comment cet algorithme fonctionne dans l'article Contrôler les proportions des éléments le long de l'axe principal.
+Un élément peut rétrécir jusqu'à sa taille {{CSSxRef("min-content")}}. Cette taille minimale est prise en compte lors du calcul de la quantité réelle de rétrécissement qui a lieu, ce qui signifie que `flex-shrink` peut sembler moins cohérent que `flex-grow` dans son comportement. Nous examinons donc plus en détail le fonctionnement de cet algorithme dans l'article [Contrôler les proportions des éléments le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
 
 > [!NOTE]
-> Les valeurs de `flex-grow` et `flex-shrink` sont des proportions. Autrement dit, si tous les éléments ont `flex: 1 1 200px` et qu'on souhaite qu'un d'eux grandissent deux fois plus, on utiliserait `flex: 2 1 200px` pour cet élément. Mais avoir `flex: 10 1 200px` d'une part et `flex: 20 1 200px` d'autre part fonctionnerait exactement de la même façon.
+> Ces valeurs pour `flex-grow` et `flex-shrink` sont des proportions. Typiquement, si nous avons tous nos éléments définis sur `flex: 1 1 200px` et que nous voulons qu'un élément grandisse deux fois plus vite, nous définirions cet élément sur `flex: 2 1 200px`. Cependant, vous pouvez aussi utiliser `flex: 10 1 200px` et `flex: 20 1 200px` si vous le souhaitiez.
 
 ### La propriété raccourcie `flex` et les valeurs synthétiques
 
-On voit rarement `flex-grow`, `flex-shrink` et `flex-basis` utilisées individuellement mais plutôt combinées avec la propriété raccourcie {{cssxref("flex")}}. La propriété raccourcie `flex` permet de définir les valeurs de cette propriété dans cet ordre : `flex-grow`, `flex-shrink`, `flex-basis`.
+On voit rarement `flex-grow`, `flex-shrink` et `flex-basis` utilisées individuellement&nbsp;; mais plutôt combinées avec la propriété raccourcie {{CSSxRef("flex")}}. La propriété raccourcie `flex` permet de définir les valeurs de cette propriété dans cet ordre — `flex-grow`, `flex-shrink`, `flex-basis`.
 
-L'exemple suit vous permet de tester différentes valeurs pour `flex`. La première valeur est `flex-grow` et un coefficient positif permettra à l'élément de grandir, la deuxième valeur est `flex-shrink` et un coefficient positif permettra de rétrécir l'élément s'il dépasse du conteneur sur l'axe principal. Enfin, la troisième valeur sert à `flex-basis` qui indique la taille de base à partir de laquelle l'élément sera étendu ou rétréci.
+L'exemple interactif ci-dessous vous permet de tester les différentes valeurs de la propriété raccourcie `flex`&nbsp;; rappelez-vous que la première valeur est `flex-grow`. Lui donner une valeur positive signifie que l'élément peut grandir. La seconde est `flex-shrink` — avec une valeur positive, les éléments peuvent rétrécir, mais seulement si leurs valeurs totales dépassent l'axe principal. La dernière valeur est `flex-basis`&nbsp;; c'est la valeur que les éléments utilisent comme valeur de base pour grandir et rétrécir.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-properties.html", '100%', 400)}}
+```html live-sample___flex-properties
+<div class="boite">
+  <div class="un">Un</div>
+  <div class="deux">Deux</div>
+  <div class="trois">Trois</div>
+</div>
+```
 
-Cette propriété permet également d'utiliser des valeurs synthétiques qui couvrent la majorité des scénarios. Vous verrez souvent ces valeurs utilisées dans les tutoriels et, dans de nombreux cas, celles-ci suffiront :
+```css live-sample___flex-properties
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.un {
+  flex: 1 1 auto;
+}
+
+.deux {
+  flex: 1 1 auto;
+}
+
+.trois {
+  flex: 1 1 auto;
+}
+```
+
+{{EmbedLiveSample("flex-properties")}}
+
+Cette propriété permet également d'utiliser des valeurs synthétiques qui couvrent la majorité des scénarios. Vous voyez souvent ces valeurs utilisées dans les tutoriels et, dans de nombreux cas, celles-ci suffisent&nbsp;:
 
 - `flex: initial`
 - `flex: auto`
 - `flex: none`
-- `flex: <nombre-positif>`
+- `flex: <positive-number>`
 
-Avec `flex: initial`, les éléments récupèrent les valeurs initiales pour les différentes propriétés du modèle de boîte flexible. Cette valeur permettra d'obtenir le même comportement que `flex: 0 1 auto`. Ici, `flex-grow` vaut 0 et les éléments ne s'agrandiront pas au-delà de la taille `flex-basis`. `flex-shrink` vaut 1 et les éléments pourront rétrécir si besoin plutôt que de dépasser du conteneur. `flex-basis` vaut `auto` et les éléments utiliseront donc la taille qui leur a été définie sur l'axe principale ou la taille déterminée à partir du contenu.
+La valeur `initial` est un [mot-clé global CSS](/fr/docs/Web/CSS/Reference/Values/Data_types#mots-clés_globaux_css) qui représente la valeur initiale d'une propriété. Définir `flex: initial` réinitialise l'élément aux [valeurs initiales](#valeurs_initiales) des trois propriétés longues, ce qui est équivalent à `flex: 0 1 auto`. La valeur initiale de `flex-grow` est `0`, donc les éléments ne grandissent pas au-delà de leur taille `flex-basis`. La valeur initiale de `flex-shrink` est `1`, donc les éléments peuvent rétrécir si besoin plutôt que de dépasser. La valeur initiale de `flex-basis` est `auto`. Les éléments utilisent soit toute taille définie sur l'élément dans la dimension principale, soit ils obtiennent leur taille à partir de la taille du contenu.
 
-Avec `flex: auto`, on obtient le même comportement que `flex: 1 1 auto`, la seule différence avec `flex:initial` est que les éléments peuvent s'étirer si besoin.
+Utiliser `flex: auto` revient à utiliser `flex: 1 1 auto`&nbsp;; c'est similaire à `flex: initial`, sauf que les éléments peuvent grandir et remplir le conteneur ainsi que rétrécir si besoin.
 
-Avec `flex: none`, les éléments ne seront pas flexibles. Cette valeur est synonyme de `flex: 0 0 auto`. Les éléments ne peuvent ni s'agrandir, ni se rétrécir mais seront disposés avec `flex-basis: auto`.
+Utiliser `flex: none` crée des éléments flexibles totalement inflexibles. C'est comme si vous écriviez `flex: 0 0 auto`. Les éléments ne peuvent ni grandir ni rétrécir et sont disposés avec les boîtes flexibles avec un `flex-basis` de `auto`.
 
-On voit aussi souvent des valeurs comme `flex: 1` ou `flex: 2`, etc. Cela correspond à `flex: 1 1 0`. Les éléments peuvent s'agrandir ou bien rétrécir à partir d'une taille de base égale à 0.
+La propriété raccourcie que vous voyez souvent dans les tutoriels est `flex: 1` ou `flex: 2`, etc. Cela revient à écrire respectivement `flex: 1 1 0` ou `flex: 2 1 0`, etc. Les éléments obtiennent une taille minimale grâce à `flex-basis: 0` puis grandissent proportionnellement pour occuper l'espace disponible. Dans ce cas, la valeur `flex-shrink` de `1` est redondante, car les éléments commencent avec une taille minimale — aucune taille ne leur est attribuée qui peut les faire dépasser du conteneur flexible.
 
-Vous pouvez utiliser ces valeurs synthétiques dans l'exemple suivant :
+Essayez ces valeurs raccourcies dans l'exemple interactif ci-dessous.
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-shorthands.html", '100%', 510)}}
+```html live-sample___flex-shorthands
+<div class="boite">
+  <div class="un">Un</div>
+  <div class="deux">Deux</div>
+  <div class="trois">Trois</div>
+</div>
+```
+
+```css live-sample___flex-shorthands
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.un {
+  flex: 1;
+}
+
+.deux {
+  flex: 1;
+}
+
+.trois {
+  flex: 1;
+}
+```
+
+{{EmbedLiveSample("flex-shorthands")}}
 
 ## Alignement, justification et distribution de l'espace disponible entre les éléments
 
@@ -180,38 +337,102 @@ Une fonctionnalité majeure des boîtes flexibles est de permettre l'alignement 
 
 ### `align-items`
 
-La propriété {{cssxref("align-items")}} permet d'aligner les éléments le long de l'axe secondaire.
+La propriété {{CSSxRef("align-items")}} permet d'aligner les éléments le long de l'axe secondaire.
 
-La valeur initiale de cette propriété est `stretch`, ce qui explique pourquoi, par défaut, les éléments flexibles sont étirés sur l'axe perpendiculaire afin d'avoir la même taille que l'élément le plus grand dans cet axe (qui définit la taille du conteneur sur cet axe).
+La valeur initiale de cette propriété est `stretch`, ce qui explique pourquoi, par défaut, les éléments flexibles sont étirés à la hauteur du conteneur flexible (ou à la largeur si `flex-direction` est défini sur `column` ou `column-reverse`). Cette hauteur peut provenir de l'élément le plus haut du conteneur ou de la taille définie sur le conteneur flexible lui-même.
 
-On peut également utiliser la valeur `flex-start` afin que les éléments soient alignés sur la ligne de début de l'axe secondaire, la valeur `flex-end` afin que les éléments soient alignés sur la ligne de fin de l'axe secondaire ou bien `center` pour les aligner au centre. Vous pouvez utiliser les valeurs suivantes dans l'exemple (on a donné un hauteur fixe au conteneur afin de pouvoir observer la façon dont les éléments se déplacent à l'intérieur) :
+Vous pouvez à la place définir `align-items` sur `flex-start`, ou simplement `start`, afin d'aligner les éléments au début du conteneur flexible, `flex-end`, ou simplement `end`, pour les aligner à la fin, ou `center` pour les aligner au centre. Essayez cela dans l'exemple interactif — j'ai donné une hauteur au conteneur flexible afin que vous puissiez voir comment les éléments peuvent être déplacés à l'intérieur du conteneur. Voyez ce qui se passe si vous définissez la valeur de `align-items` sur&nbsp;:
 
 - `stretch`
 - `flex-start`
 - `flex-end`
+- `start`
+- `end`
 - `center`
+- `baseline`
+- `last baseline`
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/align-items.html", '100%', 520)}}
+```html live-sample___align-items
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois <br />a <br />du <br />texte <br />supplémentaire</div>
+</div>
+```
+
+```css live-sample___align-items
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  width: 500px;
+  height: 130px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
+```
+
+{{EmbedLiveSample("align-items")}}
+
+La propriété `align-items` est définie sur le conteneur flexible et impacte tous les éléments flexibles. Si vous souhaitez aligner un élément flexible différemment des autres, vous pouvez définir la propriété {{CSSxRef("align-self")}} sur l'élément flexible.
 
 ### `justify-content`
 
-La propriété {{cssxref("justify-content")}} est utilisée afin d'aligner les éléments le long de l'axe principal dans la direction définie par `flex-direction`. La valeur initiale est `flex-start` qui place les éléments à partir de la ligne de début du conteneur sur l'axe principal. La valeur `flex-end` permet de les placer vers la fin et la valeur `center` permet de les centrer le long de l'axe principal.
+La propriété {{CSSxRef("justify-content")}} est utilisée pour aligner les éléments sur l'axe principal, la direction dans laquelle `flex-direction` a défini le flux. La valeur initiale est `flex-start`, ce qui aligne les éléments sur le bord de début du conteneur, mais vous pouvez aussi définir la valeur sur `flex-end` pour les aligner à la fin, ou `center` pour les aligner au centre.
 
-On peut également utiliser la valeur `space-between` afin de répartir l'espace disponible de façon égale entre chaque élément. Si on souhaite que l'espace soit également réparti autour des éléments, y compris au début et à la fin, on pourra utiliser la valeur `space-around` (il y aura alors un demi espace à la fin et au début). Si on souhaite que l'espace soit également réparti et qu'il y ait un espace entier au début et à la fin, on utilisera la valeur `space-evenly`.
+Vous pouvez aussi utiliser la valeur `space-between` pour répartir tout l'espace restant après la disposition des éléments, et le partager également entre les éléments afin qu'il y ait un espace égal entre chaque élément. Pour obtenir un espace égal à droite et à gauche (ou en haut et en bas pour les colonnes) de chaque élément, utilisez la valeur `space-around`. Avec `space-around`, les éléments ont un espace de demi-taille à chaque extrémité. Ou, pour que les éléments aient un espace égal autour d'eux, utilisez la valeur `space-evenly`. Avec `space-evenly`, les éléments ont un espace de taille entière à chaque extrémité.
 
-Vous pouvez essayer les valeurs suivantes dans l'exemple suivant :
+Essayez les valeurs suivantes de `justify-content` dans l'exemple interactif&nbsp;:
 
+- `start`
+- `end`
+- `left`
+- `right`
+- `normal`
 - `flex-start`
 - `flex-end`
 - `center`
 - `space-around`
 - `space-between`
 - `space-evenly`
+- `stretch`
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
+```html live-sample___justify-content
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+</div>
+```
 
-Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), nous verrons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
+```css live-sample___justify-content
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  justify-content: flex-start;
+}
+```
+
+{{EmbedLiveSample("justify-content")}}
+
+Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), nous voyons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
+
+### `place-items` et `place-content`
+
+La propriété {{CSSxRef("place-items")}} est une propriété raccourcie pour `align-items` et `justify-items`. Si elle est définie sur un conteneur flexible, elle définit l'alignement mais pas la justification, car `justify-items` est ignorée dans les boîtes flexibles.
+
+Il existe une autre propriété raccourcie, {{CSSxRef("place-content")}}, qui définit les propriétés {{CSSxRef("align-content")}} et `justify-content`. La propriété `align-content` n'affecte que les conteneurs flexibles qui passent à la ligne, et elle est abordée dans [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items).
 
 ## Prochaines étapes
 
-Avec cet article, vous devriez comprendre les différentes fonctionnalités et concepts relatifs aux _flexbox_. Dans le prochain article, nous verrons [comment cette spécification s'articule avec les autres modules CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods).
+Avec cet article, vous devez comprendre les différentes fonctionnalités et concepts relatifs aux boîtes flexibles. Dans le prochain article, nous voyons [comment cette spécification s'articule avec les autres modules CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods).

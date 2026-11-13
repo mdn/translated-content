@@ -1,18 +1,17 @@
 ---
 title: font-weight
 slug: Web/CSS/Reference/At-rules/@font-face/font-weight
-original_slug: Web/CSS/@font-face/font-weight
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`font-weight`** は CSS の {{cssxref("@font-face")}} 記述子で、作成者は、{{cssxref("@font-face")}} アットルールで指定したフォントに対して、単一のフォントの太さ、またはフォントの太さの範囲を指定することができます。これは、CSS ルールで目的の[フォントの太さ](/ja/docs/Web/CSS/Reference/Properties/font-weight)が設定されたときに、ブラウザーが適切なフォントを選択するために使用されます。
+**`font-weight`** は [CSS](/ja/docs/Web/CSS) の {{cssxref("@font-face")}} 記述子で、作成者は、{{cssxref("@font-face")}} アットルールで指定したフォントに対して、単一のフォントの太さ、またはフォントの太さの範囲を指定することができます。これは、CSS ルールで目的の[フォントの太さ](/ja/docs/Web/CSS/Reference/Properties/font-weight)が設定されたときに、ブラウザーが適切なフォントを選択するために使用されます。
 
-通常、開発者は、単一のフォントファミリーのフォントをさまざまな太さで使うことを望むでしょう。従来の、あるいは「静的」フォントでは、単一のフォントファイルには、特定の太さとスタイルを持つフォントファミリーの文字が含まれています。例えば、 "Helvetica bold italic" などです。 `font-weight` プロパティが特定のウェイトを呼び出すときに、ライト、レギュラー、ボールド、またはエクストラボールドのフォントを表示できるようにするには、同じファミリーに対して複数の {{cssxref("@font-face")}} アットルールを定義します（すべて同じ {{cssxref("@font-face/font-family", "font-family")}} 記述子の値を持つ）を、それぞれの太さまたは太さの範囲ごとに 1 つずつ定義します。
+通常、開発者は、単一のフォントファミリーのフォントをさまざまな太さで使うことを望むでしょう。従来の、あるいは「静的」フォントでは、単一のフォントファイルには、特定の太さとスタイルを持つフォントファミリーの文字が含まれています。例えば、 "Helvetica bold italic" などです。 `font-weight` プロパティが特定の太さを呼び出すときに、ライト、レギュラー、ボールド、またはエクストラボールドのフォントを表示できるようにするには、同じファミリーに対して複数の {{cssxref("@font-face")}} アットルールを定義します（すべて同じ {{cssxref("@font-face/font-family", "font-family")}} 記述子の値を持つ）を、それぞれの太さまたは太さの範囲ごとに 1 つずつ定義します。
 
 一連のフォントの太さに使用するフォントを宣言するには、`font-weight` 記述子の値として、空白で区切られた 2 つの`font-weight` 値を指定します。CSS ルールで、{{cssxref("font-weight")}} プロパティまたは {{cssxref("font")}} 一括指定プロパティを設定してフォントの太さを設定すると、適切なフォントが使用されます。
 
-例えば、記述子が `font-weight: 400 600;` の場合、プロパティが `font-weight: 450` または `font-weight: 550` であるときは、そのフォントが font-family に使用されます。
+例えば、記述子が `font-weight: 400 600;` の場合、プロパティが `font-weight: 450` または `font-weight: 550` であるときは、そのフォントがその font-family に使用されます。
 フォントが静的フォントであるか、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)であるかにかかわらず、範囲と一致するフォントが使用されます。この場合、フォントが静的フォントである場合、`450` と `550` は同じように現れます。フォントが可変フォントである場合、後者は太字になります。
 
 記述子はすべてのフォントで同じですが、可変フォントに設定する範囲は通常より大きく、場合によっては `1 1000` にして、すべてのフォントの太さプロパティ値に同じフォントを使用することもできます。
@@ -135,7 +134,7 @@ p.two {
 
 ### font-weight の範囲の設定
 
-この例は、同じ `font-family` 値に対応する複数の `@font-face` 宣言を記述することで、作成者が複数のフォントウェイト（およびフォントスタイル）に複数のフォントを含めることができることを示しています。 1 から 1000 までの範囲を使用して `font-weight` 記述子をスタイルシートの残りの部分で設定することにより、`font-weight` （または `font-style`）を宣言し、適切なフォントが使用されることを確認することができます。
+この例では、複数の `@font-face` 宣言を同じ `font-family` 値で記述することで、フォントの太さ（およびフォントスタイル）の違いによって異なるフォントを含めることができます。`font-weight` 記述子を 1 から 1000 までの範囲で設定することにより、スタイルシートの残りの部分で `font-weight` （または `font-style`）を宣言したときに、適切なフォントが使用されることを確認することができます。
 
 #### HTML
 
@@ -150,15 +149,15 @@ p.two {
 
 #### CSS
 
-この例では、`FireSans` フォントファミリーから 4 つの異なるフォント用に 4 つの `@font-face` 宣言を記載しています。それぞれの宣言は、異なるフォントウェイト値の範囲に設定されていますが、すべて同じフォント名を使用しています。
+この例では、`FireSans` フォントファミリーから 4 つの異なるフォント用に 4 つの `@font-face` 宣言を記載しています。それぞれの宣言は、様々なフォントの太さの値の範囲に設定されていますが、すべて同じフォント名を使用しています。
 
 最初の宣言では `FiraSans-Regular` を使用しており、関連付けられた `font-weight` の範囲には、使用可能なフォントの太さの値の全範囲が含まれています。
 
 それ以外の 3 つの宣言は、フォントのライト、ボールド、およびエクストラボールドのバージョンを使用しており、それらに関連付けられた `font-weight` の範囲は、次のように範囲のサブセットを定義しています。
 
 - 細字フォントは、 1～300 の範囲に関連付けられています。
-- 太字のフォントは、 500-700 の範囲に対応しています。
-- 極太字のフォントは、 700-1000 の範囲に関連付けられています。
+- 太字のフォントは、 500～700 の範囲に対応しています。
+- 極太字のフォントは、 700～1000 の範囲に関連付けられています。
 
 CSS の [カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction) により、後者の 3 つの宣言は、`FiraSans-Regular` 宣言で設定された範囲の一部を確実に上書きします。
 
@@ -227,9 +226,9 @@ p.nine {
 
 ### 可変フォントの範囲の設定
 
-この例では、可変フォントを使用する際に設定できるウェイトの範囲を制限するために、`font-weight` 記述子を使用しています。
+この例では、可変フォントを使用する際に設定できる太さの範囲を制限するために、`font-weight` 記述子を使用しています。
 
-単一の `@font-face` アットルールを使用して、可変フォント ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono) を含めます。使用可能なウェイトの範囲を効果的に制限するために、 `font-weight: 300 700` という値を使用しています。CSS ルールが "League Mono" フォントを使用している場合、この範囲外のウェイトを指定すると、取得されるウェイトは範囲内に制限されます。
+単一の `@font-face` アットルールを使用して、可変フォント ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono) を含めます。使用可能な太さの範囲を効果的に制限するために、 `font-weight: 300 700` という値を使用しています。CSS ルールが "League Mono" フォントを使用している場合、この範囲外の太さを指定すると、取得される太さは範囲内に制限されます。
 
 #### HTML
 
@@ -242,7 +241,7 @@ p.nine {
 <p id="example">LeagueMono, font-weight: <output>400</output> （例）</p>
 <p>LeagueMono, font-weight: 700 （比較用）</p>
 <label
-  >フォントのウェイトを変更:
+  >フォントの太さを変更:
   <input type="range" min="50" max="1000" step="50" value="400" />
 </label>
 ```
@@ -253,13 +252,13 @@ p.nine {
 
 ```css
 @font-face {
-  font-family: LeagueMono;
+  font-family: "LeagueMono";
   src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
   font-weight: 300 700;
 }
 
 p {
-  font-family: LeagueMono, serif;
+  font-family: "LeagueMono", serif;
   font-size: 1.5rem;
 }
 

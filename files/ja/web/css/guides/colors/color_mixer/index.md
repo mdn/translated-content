@@ -1,9 +1,8 @@
 ---
 title: カラーミキサー
 slug: Web/CSS/Guides/Colors/Color_mixer
-original_slug: Web/CSS/CSS_colors/Color_mixer
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このツールは、任意の色空間で {{cssxref("color_value/color-mix")}} 関数を使用して 2 つの色を混合し、結果の色を任意の CSS カラー形式でコピーできます。
@@ -48,7 +47,7 @@ l10n:
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
-  <label for="color-space">色空間: </label>
+  <label for="color-space">Color space: </label>
   <select id="color-space">
     <option value="srgb">sRGB</option>
     <option value="srgb-linear">sRGB-linear</option>
@@ -63,7 +62,7 @@ l10n:
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    色相の補間方法:
+    Hue interpolation method:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -73,28 +72,30 @@ l10n:
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>色の選択</div>
+    <div>Pick a color</div>
     <table>
-      <tr>
-        <td><label for="color-text">色を入力:</label></td>
-        <td><input type="text" id="color-text" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-input">色を選択:</label></td>
-        <td><input type="color" id="color-input" value="#bada55" /></td>
-      </tr>
-      <tr>
-        <td><label for="color-opacity">不透明度を選択:</label></td>
-        <td>
-          <input
-            type="range"
-            id="color-opacity"
-            value="1"
-            min="0"
-            max="1"
-            step="0.01" />
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><label for="color-text">Enter color:</label></td>
+          <td><input type="text" id="color-text" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-input">Pick color:</label></td>
+          <td><input type="color" id="color-input" value="#bada55" /></td>
+        </tr>
+        <tr>
+          <td><label for="color-opacity">Select an opacity:</label></td>
+          <td>
+            <input
+              type="range"
+              id="color-opacity"
+              value="1"
+              min="0"
+              max="1"
+              step="0.01" />
+          </td>
+        </tr>
+      </tbody>
     </table>
     <div><button id="picker-ok-button">Ok</button></div>
   </dialog>
@@ -108,7 +109,7 @@ l10n:
     <tr id="rgb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/rgb"
           target="_blank">
           RGB
         </a>
@@ -118,7 +119,7 @@ l10n:
     <tr id="hex">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/hex-color"
           target="_blank"
           >HEX</a
         >
@@ -128,7 +129,7 @@ l10n:
     <tr id="hsl-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hsl"
           target="_blank">
           HSL
         </a>
@@ -138,7 +139,7 @@ l10n:
     <tr id="hwb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hwb"
           target="_blank">
           HWB
         </a>
@@ -148,7 +149,7 @@ l10n:
     <tr id="color-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/color"
           target="_blank">
           color()
         </a>
@@ -158,7 +159,7 @@ l10n:
     <tr id="lab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lab"
           target="_blank">
           Lab
         </a>
@@ -168,7 +169,7 @@ l10n:
     <tr id="lch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lch"
           target="_blank">
           LCH
         </a>
@@ -178,7 +179,7 @@ l10n:
     <tr id="oklab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklab"
           target="_blank">
           Oklab
         </a>
@@ -188,7 +189,7 @@ l10n:
     <tr id="oklch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklch"
           target="_blank">
           OkLCh
         </a>
@@ -198,7 +199,7 @@ l10n:
     <tr id="xyz-d50-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz-d50"
           target="_blank">
           XYZ D50
         </a>
@@ -208,7 +209,7 @@ l10n:
     <tr id="xyz-d65-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz"
           target="_blank">
           XYZ D65
         </a>

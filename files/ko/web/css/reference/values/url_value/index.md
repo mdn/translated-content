@@ -6,7 +6,7 @@ original_slug: Web/CSS/url_value
 
 {{ CssRef() }}
 
-**`<url>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 이미지나 글꼴 등 리소스를 가리키는 문자열을 나타냅니다. URL은 {{ Cssxref("background-image") }}, {{ Cssxref("cursor") }}, {{ cssxref("list-style") }} 등 다양한 속성에서 사용할 수 있습니다.
+**`<url>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 이미지나 글꼴 등 리소스를 가리키는 문자열을 나타냅니다. URL은 {{ Cssxref("background-image") }}, {{ Cssxref("cursor") }}, {{ cssxref("list-style") }} 등 다양한 속성에서 사용할 수 있습니다.
 
 > [!NOTE]
 > **URI와 URL** [URI](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier)와 [URL](http://en.wikipedia.org/wiki/Uniform_Resource_Locator)은 다릅니다. URI는 단순히 리소스의 식별자입니다. URL은 URI의 종류 중 하나로, 리소스의 **위치**를 표현합니다. URI는 URL일 수도 있고, 리소스의 이름([URN](http://en.wikipedia.org/wiki/Uniform_Resource_Name))일 수도 있습니다.

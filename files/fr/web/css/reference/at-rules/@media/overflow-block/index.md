@@ -1,9 +1,9 @@
 ---
-title: overflow-block
+title: Caractéristique média CSS `overflow-block`
+short-title: overflow-block
 slug: Web/CSS/Reference/At-rules/@media/overflow-block
-original_slug: Web/CSS/@media/overflow-block
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-block`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) initial selon l'axe du bloc.
@@ -66,4 +66,4 @@ La caractéristique `overflow-block` est définie avec un mot-clé de la liste s
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

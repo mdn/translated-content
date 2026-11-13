@@ -1,12 +1,12 @@
 ---
-title: :any-link
+title: Pseudo-classe CSS `:any-link`
+short-title: :any-link
 slug: Web/CSS/Reference/Selectors/:any-link
-original_slug: Web/CSS/:any-link
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{CSSxRef(":link")}} ou à {{CSSxRef(":visited")}}.
 
 {{InteractiveExample("Démontrastion CSS&nbsp;: :any-link", "tabbed-shorter")}}
 
@@ -92,5 +92,5 @@ a:-webkit-any-link {
 - [Création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - Associé aux éléments HTML&nbsp;: {{HTMLElement("a")}} et {{HTMLElement("area")}} avec un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href)
 - Sélecteurs CSS associés&nbsp;:
-  - {{cssxref(":visited")}}
-  - {{cssxref(":link")}}
+  - {{CSSxRef(":visited")}}
+  - {{CSSxRef(":link")}}

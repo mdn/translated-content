@@ -1,9 +1,9 @@
 ---
-title: "@font-face"
+title: "`@font-face` アットルール (CSS)"
+short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
-original_slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
@@ -15,9 +15,8 @@ l10n:
   font-family: "Trickster";
   src:
     local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-    url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+    url("trickster-outline.woff2") format("woff2");
 }
 ```
 
@@ -28,11 +27,11 @@ l10n:
 - {{cssxref("@font-face/descent-override", "descent-override")}}
   - : フォントのディセンダーの寸法を定義します。
 - {{cssxref("@font-face/font-display", "font-display")}}
-  - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを特定します。
+  - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを指定します。
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : font プロパティのフォントフェイス値で使われる名前を指定します。 `@font-face` ルールが有効であるためには、 `font-family` 名が必要です。
+  - : font プロパティのフォントフェイス値で使われる名前を指定します。 `@font-face` ルールを有効にするためには、 `font-family` 名が必要です。
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-  - : {{cssxref("font-stretch")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
+  - : {{cssxref("font-stretch")}} 値です。フォントフェイスで対応する範囲を指定するために、`font-stretch: 50% 200%;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : {{cssxref("font-style")}} 値です。フォントフェイスで対応する範囲を指定するために、 `font-style: oblique 20deg 50deg;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-weight", "font-weight")}}
@@ -41,6 +40,8 @@ l10n:
   - : OpenType フォントで高度な印刷機能を制御することができるようにします。
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : OpenType または TrueType フォントの種類を低レベルで制御するために、変化形の特徴を表す 4 文字の軸名を、種類の値と共に指定します。
+- {{cssxref("@font-face/font-width", "font-width")}}
+  - : 作成者が、指定されたフォントについて、通常、圧縮、伸長された書体を指定することができるようにします。
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
   - : フォントの行間の寸法を定義します。
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
@@ -59,10 +60,12 @@ l10n:
 ブラウザーはリストの宣言順にリソースを読み込もうとするので、 通常は `local()` を `url()` の前に書くべきです。どちらの関数もオプションなので、 `url()` を使用せずに `local()` のみを 1 つ以上格納したルールブロックも可能です。
 `format()` または `tech()` の値を持つより詳細なフォントを使用したい場合は、これらの値を持たないバージョンよりも前に記載してください。そうしないと、より詳細度の低いフォントが最初に試され、使用されてしまいます。
 
+ウェブ配信においては、一般的に WOFF2 形式でフォントを提供するのが最適です。これは、WOFF や OpenType といった従来の形式よりも効率的にフォントを圧縮できるため、ファイルサイズを縮小し、読み込み時間を短縮できるからです。また、WOFF2 は現行のブラウザーで広く対応されているため、ほとんどのウェブサイトにおいて、安心してデフォルトの選択肢として採用できます。
+
 `@font-face` で作者が独自のフォントを提供できるようになることで、「ウェブセーフ」フォント (つまり、広く利用できると考えられるほど一般的なフォント) と呼ばれる制限なしにコンテンツをデザインすることができます。ローカルにインストールされているフォントを、名前を指定して検索し使用することができる機能により、インターネット接続に頼らなくてもフォントを基本的なものからカスタマイズすることができるようになります。
 
 > [!NOTE]
-> Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#specifying_fallbacks_for_older_browsers).
+> 古いブラウザーでのフォント読み込みの代替戦略については、[`src` 記述子のページ](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#古いブラウザー向けの代替の指定)で説明されています。
 
 `@font-face` アットルールは、 CSS の最上位だけでなく、 [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/Guides/Conditional_rules#アットルール)の中でも使用することができます。
 
@@ -86,7 +89,7 @@ l10n:
       font-family: "MyHelvetica";
       src:
         local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url("MgOpenModernaBold.ttf");
+        url("MgOpenModernaBold.woff2");
       font-weight: bold;
     }
   }
@@ -111,7 +114,7 @@ l10n:
 ```css live-sample___web-font-example
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 body {
@@ -123,14 +126,14 @@ body {
 
 ### ローカルフォントの代替を指定
 
-この例では、ユーザーのローカルにある "Helvetica Neue Bold" が使用されます。もしユーザーがそのフォントをインストールしていない場合は (2 つの異なる名前が試されます)、代わりに "MgOpenModernaBold.ttf" という名前のダウンロードフォントが使用されます。
+この例では、ユーザーのローカルにある "Helvetica Neue Bold" が使用されます。もしユーザーがそのフォントをインストールしていない場合は (2 つの異なる名前が試されます)、代わりに "MgOpenModernaBold.woff2" という名前のダウンロードフォントが使用されます。
 
 ```css
 @font-face {
   font-family: "MyHelvetica";
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
+    url("MgOpenModernaBold.woff2");
   font-weight: bold;
 }
 ```
@@ -146,6 +149,6 @@ body {
 ## 関連情報
 
 - [WOFF について](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Transfonter webfont generator](https://transfonter.org/)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

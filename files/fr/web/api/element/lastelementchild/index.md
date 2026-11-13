@@ -1,32 +1,36 @@
 ---
-title: Element.lastElementChild
+title: "Element : propriété lastElementChild"
+short-title: lastElementChild
 slug: Web/API/Element/lastElementChild
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Element.lastElementChild`** renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant au dernier élément enfant de l'élément courant (celui sur lequel on a appelé la propriété), ou `null` s'il n'y a pas d'éléments enfants.
+La propriété en lecture seule **`lastElementChild`** de l'interface {{DOMxRef("Element")}} retourne le dernier élément {{DOMxRef("Element")}} enfant, ou `null` s'il n'y a pas d'éléments enfants.
 
-`Element.lastElementChild` ne porte que sur les nœuds qui sont des éléments. Pour consulter l'ensemble des nœuds enfants, y compris ceux qui ne sont pas des éléments comme les nœuds de texte et de commentaires, il faudra utiliser [`Node.lastChild`](/fr/docs/Web/API/Node/lastChild).
+`Element.lastElementChild` n'inclut que les nœuds qui sont des éléments.
+Pour obtenir tous les nœuds enfants, y compris ceux qui ne sont pas des éléments comme les nœuds de texte et de commentaires, utilisez {{DOMxRef("Node.lastChild")}}.
 
 ## Valeur
 
-Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`
+Un objet {{DOMxRef("Element")}}, ou `null`.
 
 ## Exemples
 
 ```html
-<ul id="list">
+<ul id="liste">
   <li>Premier (1)</li>
-  <li>Deuxième (2)</li>
+  <li>Second (2)</li>
   <li>Troisième (3)</li>
 </ul>
+```
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.lastElementChild.textContent);
-  // Troisième  (3)
-</script>
+```js
+const liste = document.getElementById("liste");
+console.log(liste.lastElementChild.textContent);
+// affiche "Troisième (3)"
 ```
 
 ## Spécifications
@@ -39,5 +43,5 @@ Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`
 
 ## Voir aussi
 
-- [`Element.previousElementSibling`](/fr/docs/Web/API/Element/previousElementSibling)
-- [`Element.firstElementChild`](/fr/docs/Web/API/Element/firstElementChild)
+- La propriété {{DOMxRef("Element.previousElementSibling")}}
+- La propriété {{DOMxRef("Element.firstElementChild")}}

@@ -1,12 +1,11 @@
 ---
 title: grid-area
 slug: Web/CSS/Reference/Properties/grid-area
-original_slug: Web/CSS/grid-area
 l10n:
-  sourceCommit: b692821c494fd3a25dd883b6fe14998fa2621f7b
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
+**`grid-area`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
 
 {{InteractiveExample("CSS デモ: grid-area")}}
 
@@ -49,12 +48,12 @@ grid-area: 2 / 1 / 2 / 4;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -73,10 +72,10 @@ grid-area: 2 / 1 / 2 / 4;
 
 このプロパティは下記の CSS プロパティの一括指定です。
 
-- [`grid-row-start`](/ja/docs/Web/CSS/Reference/Properties/grid-row-start)
-- [`grid-column-start`](/ja/docs/Web/CSS/Reference/Properties/grid-column-start)
-- [`grid-row-end`](/ja/docs/Web/CSS/Reference/Properties/grid-row-end)
-- [`grid-column-end`](/ja/docs/Web/CSS/Reference/Properties/grid-column-end)
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column-end")}}
 
 ## 構文
 

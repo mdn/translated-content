@@ -1,15 +1,13 @@
 ---
-title: ISP
+title: ISP (インターネットサービスプロバイダー)
 slug: Glossary/ISP
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+ISP （Internet Service Provider, インターネットサービスプロバイダー）は、インターネット接続を提供する事業を行っています。また、メールやウェブホスティング、VoIP (IP 電話) などのサービスを提供していることもあります。これらは、(かつて主流の方式であった) 電話回線を使ったダイアルアップ接続や、ケーブルモデムまたは DSL (デジタルサービス回線) などの広帯域接続により提供されます。
 
-ISP (Internet Service Provider, インターネットサービスプロバイダー) は、インターネット接続を提供する事業を行っています。また、メールやウェブホスティング、VoIP (IP 電話) などのサービスを提供していることもあります。これらは、(かつて主流の方式であった) 電話回線を使ったダイアルアップ接続や、ケーブルモデムまたは DSL (デジタルサービス回線) などの広帯域接続により提供されます。
+## 関連情報
 
-## さらに学ぶ
-
-### 一般的な知識
-
-- [どのようにしてインターネットが動いているのか](/ja/docs/Learn/How_the_Internet_works) (初心者のための説明)
-- Wikipedia の [Internet service provider](https://ja.wikipedia.org/wiki/Internet_Service_Provider)
+- [どのようにしてインターネットが動いているのか](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (初心者のための説明)
+- [Internet service provider](https://ja.wikipedia.org/wiki/Internet_Service_Provider) - ウィキペディア

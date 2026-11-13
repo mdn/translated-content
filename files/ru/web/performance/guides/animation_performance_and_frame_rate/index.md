@@ -3,7 +3,7 @@ title: Производительность анимации и частота �
 slug: Web/Performance/Guides/Animation_performance_and_frame_rate
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 Анимация в Вебе может быть сделана с помощью {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, включая {{htmlelement('canvas')}} и {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, анимированных GIF и даже с помощью анимированных PNG и других типов изображений. Производительность CSS-анимации может отличаться от одного CSS-свойства к другому, а попытка анимировать некоторые "дорогие" CSS-свойства может привести к зависаниям ({{glossary('jank')}}), даже несмотря на то, что браузер борется за то, чтобы смягчить частоту смены кадров {{glossary('frame rate')}}.
 
@@ -19,7 +19,7 @@ slug: Web/Performance/Guides/Animation_performance_and_frame_rate
 
 Графики [frame rate](https://profiler.firefox.com/docs/) и [waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) из встроенных инструментов браузера дают информацию о том, как браузер выполняет работу по анимации. Используя эти инструменты, вы можете измерить fps приложения и диагностировать узкие места, в которых fps уменьшается.
 
-С помощью [CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations) вы указываете [ключевые кадры (keyframes)](/ru/docs/Web/CSS/@keyframes), каждый из которых использует определённые CSS-свойства, чтобы определить внешний вид элемента в конкретный (ключевой) момент анимации. Браузер создаёт анимации с помощью плавных переходов от одного ключевого кадра к следующему.
+С помощью [CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using) вы указываете [ключевые кадры (keyframes)](/ru/docs/Web/CSS/@keyframes), каждый из которых использует определённые CSS-свойства, чтобы определить внешний вид элемента в конкретный (ключевой) момент анимации. Браузер создаёт анимации с помощью плавных переходов от одного ключевого кадра к следующему.
 
 Если сравнивать анимацию с помощью JavaScript и CSS, вы увидите, что CSS-анимации проще создать. Более того, CSS-анимации гарантируют лучшую производительность, так как они автоматически делегируют некоторые задачи браузеру. Например, в случае CSS браузер сам решает, когда нужно отрендерить кадр, а когда пропустить кадр, если это необходимо.
 

@@ -1,9 +1,8 @@
 ---
 title: transform-style
 slug: Web/CSS/Reference/Properties/transform-style
-original_slug: Web/CSS/transform-style
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`transform-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の子要素を 3D 空間に配置するのか、平面化して要素の平面に配置するのかを設定します。
@@ -21,7 +20,7 @@ transform-style: preserve-3d;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all layer" id="example-element">
-    <p>Parent</p>
+    <p>親</p>
     <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
   </div>
 </section>
@@ -38,7 +37,7 @@ transform-style: preserve-3d;
 .numeral {
   background-color: #ffba08;
   border-radius: 0.2rem;
-  color: #000;
+  color: black;
   margin: 1rem;
   padding: 0.2rem;
   transform: rotate3d(1, 1, 1, 45deg);
@@ -70,6 +69,21 @@ transform-style: unset;
   - : 要素の子要素を要素自身の平面上に配置することを示します。
 - `preserve-3d`
   - : 要素の子要素を 3D 空間に配置することを示します。
+
+## 解説
+
+仕様書にはいくつかの[グループ化プロパティ値](https://drafts.csswg.org/css-transforms-2/#grouping-property-values)が掲載されており、これらは適用前に子孫要素の平坦化された表現を生成することをユーザーエージェントに要求するため、`preserve-3d` が指定されている場合でも、要素に[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値) `transform-style: flat` を強制します。これらのプロパティ値には以下のものがあります。
+
+- {{cssxref("overflow")}}: `visible` または `clip` 以外の任意の値。
+- {{cssxref("opacity")}}: `1` 未満の任意の値。
+- {{cssxref("filter")}}: `none` 以外の任意の値。
+- {{cssxref("clip")}}: `auto` 以外の任意の値。
+- {{cssxref("clip-path")}}: `none` 以外の任意の値。
+- {{cssxref("isolation")}}: `isolate` の使用値。
+- {{cssxref("mask-image")}}: `none` 以外の任意の値。
+- {{cssxref("mask-border-source")}}: `none` 以外の任意の値。
+- {{cssxref("mix-blend-mode")}}: `normal` 以外の任意の値。
+- {{cssxref("contain")}}: `paint` および描画の抑制を発生させるその他のプロパティと値の組み合わせ。これには、`contain` プロパティの使用されている値に影響を与えるあらゆるプロパティ、例えば `content-visibility: hidden` などが含まれます。
 
 ## 公式定義
 
@@ -125,36 +139,36 @@ transform-style: unset;
   position: absolute;
   backface-visibility: inherit;
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 70%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 70%);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```

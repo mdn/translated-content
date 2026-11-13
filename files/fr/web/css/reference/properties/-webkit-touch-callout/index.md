@@ -1,12 +1,14 @@
 ---
-title: -webkit-touch-callout
+title: Propriété CSS `-webkit-touch-callout`
+short-title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
-original_slug: Web/CSS/-webkit-touch-callout
+l10n:
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende affichée par défaut lorsque le toucher est maintenu sur un élément.
 
 Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.
 
@@ -27,6 +29,8 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `default`
   - : La légende par défaut est activée.
 - `none`
@@ -42,6 +46,8 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ## Exemples
 
+### Désactiver la légende tactile
+
 ```css
 .exemple {
   -webkit-touch-callout: none;
@@ -50,7 +56,7 @@ Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
+Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
 ## Compatibilité des navigateurs
 
@@ -59,4 +65,4 @@ Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la r�
 ## Voir aussi
 
 - [Extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)
-- [-webkit-touch-callout dans la documentation Apple <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)
+- [`-webkit-touch-callout` dans la documentation Apple <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

@@ -1,16 +1,16 @@
 ---
-title: resolution
+title: Caractéristique média CSS `resolution`
+short-title: resolution
 slug: Web/CSS/Reference/At-rules/@media/resolution
-original_slug: Web/CSS/@media/resolution
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`resolution`** peut être utilisée pour tester la densité de pixels de l'appareil de sortie.
 
 ## Syntaxe
 
-La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolution&gt;")}} qui représente la densité de pixels de l'appareil d'affichage. C'est une caractéristique d'intervalle, cela signifie qu'on peut utiliser les variantes préfixées **`min-resolution`** et **`max-resolution`** afin d'établir des règles selon un minimum ou un maximum.
+La caractéristique `resolution` est une valeur de type {{CSSxRef("&lt;resolution&gt;")}} qui représente la densité de pixels de l'appareil d'affichage. C'est une caractéristique d'intervalle, cela signifie qu'on peut utiliser les variantes préfixées **`min-resolution`** et **`max-resolution`** afin d'établir des règles selon un minimum ou un maximum.
 
 ## Exemples
 
@@ -59,5 +59,5 @@ La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolutio
 
 ## Voir aussi
 
-- {{domxref("window.devicePixelRatio")}}
-- La propriété {{cssxref("image-resolution")}}
+- La propriété API {{DOMxRef("window.devicePixelRatio")}}
+- La propriété {{CSSxRef("image-resolution")}}

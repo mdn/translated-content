@@ -51,5 +51,5 @@ animation-duration: 10s, 30s, 230ms;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

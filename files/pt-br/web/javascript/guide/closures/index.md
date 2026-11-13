@@ -338,7 +338,7 @@ setupHelp();
 
 Este exemplo usa `const` em vez de `var`, portanto cada closure vincula a variável com escopo de bloco, o que significa que nenhuma closure adicional é necessária.
 
-Outra alternativa poderia ser usar `forEach()` para iterar sobre o array `helpText` e anexar um ouvinte a cada [`<input>`](/pt-BR/docs/Web/HTML/Element/input), conforme mostrado:
+Outra alternativa poderia ser usar `forEach()` para iterar sobre o array `helpText` e anexar um ouvinte a cada [`<input>`](/pt-BR/docs/Web/HTML/Reference/Elements/input), conforme mostrado:
 
 ```js
 function showHelp(help) {

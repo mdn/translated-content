@@ -1,12 +1,12 @@
 ---
-title: border-block-end-color
+title: "`border-block-end-color` プロパティ (CSS)"
+short-title: border-block-end-color
 slug: Web/CSS/Reference/Properties/border-block-end-color
-original_slug: Web/CSS/border-block-end-color
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`border-block-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-block-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向末尾側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-block-end-color")}}
 
@@ -21,12 +21,12 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-block-end-color: rgb(170, 50, 220, 0.6);
+border-block-end-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 ```
 
 ```css interactive-example-choice
-border-block-end-color: hsl(60, 90%, 50%, 0.8);
+border-block-end-color: hsl(60 90% 50% / 0.8);
 writing-mode: vertical-lr;
 ```
 
@@ -40,8 +40,8 @@ writing-mode: vertical-lr;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -64,7 +64,7 @@ border-block-end-color: revert-layer;
 border-block-end-color: unset;
 ```
 
-関連するプロパティとしては、 {{cssxref("border-block-start-color")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}} が要素の他の境界色を定義します。
+関連するプロパティとしては、{{cssxref("border-block-start-color")}}、{{cssxref("border-inline-start-color")}}、{{cssxref("border-inline-end-color")}} が要素の他の境界色を定義します。
 
 ### 値
 
@@ -81,7 +81,7 @@ border-block-end-color: unset;
 
 ## 例
 
-### 垂直テキストの境界線の色
+### 縦書きテキストの境界線の色
 
 #### HTML
 
@@ -109,7 +109,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("垂直テキストの境界線の色", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線の色", 140, 140)}}
 
 ## 仕様書
 
@@ -122,5 +122,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のうちの一つに対応づけられます
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- このプロパティは {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}} のいずれかに対応づけられます
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

@@ -2,20 +2,20 @@
 title: Espace de couleur
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
 Les **espaces de couleur** (<i lang="en">color spaces</i> en anglais) sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSxRef("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
 
 Les espaces de couleur catégorisent et définissent des gammes spécifiques de couleurs. Chaque espace de couleur est défini par un modèle mathématique et un ensemble de règles associées. Chaque espace de couleur a un {{Glossary("Gamut", "gamut")}} défini, qui fait référence à la gamme spécifique de couleurs qu'il peut représenter. Ces règles permettent une représentation cohérente et reproductible des couleurs sur différents appareils et logiciels.
 
-L'espace de couleur _sRGB_ (rouge, vert et bleu standard) a été créé pour le web, mais nous ne sommes plus limités à cet espace de couleur. Le [Module de couleur CSS de niveau 4](https://drafts.csswg.org/css-color-4) spécifie plusieurs espaces de couleur prédéfinis, et le [Module de couleur CSS de niveau 5](https://drafts.csswg.org/css-color-5/) va plus loin, spécifiant des fonctionnalités pour définir des espaces de couleur personnalisés.
+L'espace de couleur _sRGB_ (rouge, vert et bleu standard) a été créé pour le web, mais nous ne sommes plus limités à cet espace de couleur. Le [Module de couleur CSS de niveau 4 <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-4) définit plusieurs espaces de couleur prédéfinis, et le [Module de couleur CSS de niveau 5 <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-5/) va plus loin, définissant des fonctionnalités pour définir des espaces de couleur personnalisés.
 
 ## Espaces de couleur nommés
 
-Les [espaces de couleur RGB](#espaces_de_couleur_rgb) prédéfinis incluent `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, et `rec2020`. Les [espaces de couleur CIELAB](#espaces_de_couleur_cielab) prédéfinis incluent `lab-d50` et `lab-d65`. Les [espaces de couleur XYZ](#espaces_de_couleur_xyz) prédéfinis incluent `xyz-d50`, et `xyz-d65` (et `xyz`, un alias pour `xyz-d65`).
+Les [espaces de couleur RGB](#espaces_de_couleur_rgb) prédéfinis incluent `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, et `rec2020`. Les [espaces de couleur CIELAB](#espaces_de_couleur_cielab) prédéfinis incluent `lab-d50` et `lab-d65`. Les [espaces de couleur XYZ](#espaces_de_couleur_xyz) prédéfinis incluent `xyz-d50`, et `xyz-d65` (et `xyz`, un alias pour `xyz-d65`).
 
-Les espaces de couleur sont soit [rectangulaires soit polaires <sup>(angl.)</sup>](https://ericportis.com/posts/2024/okay-color-spaces/). Les espaces de couleur rectangulaires incluent `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, et `xyz-d65` (ou `xyz`). Les espaces de couleur polaires incluent `hsl`, `hwb`, `lch`, et `oklch`.
+Les espaces de couleur sont soit [rectangulaires soit polaires <sup>(angl.)</sup>](https://ericportis.com/posts/2024/okay-color-spaces/). Les espaces de couleur rectangulaires incluent `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, et `xyz-d65` (ou `xyz`). Les espaces de couleur polaires incluent `hsl`, `hwb`, `lch`, et `oklch`.
 
 ### Espaces de couleur RGB
 
@@ -27,7 +27,7 @@ Les valeurs CSS `<color>` dans les espaces de couleur sRGB incluent {{CSSxRef("h
 
 L'espace de couleur HSV (teinte, saturation et valeur), et son synonyme HSB (teinte, saturation et luminosité), sont représentés en CSS comme {{CSSxRef("color_value/hwb", "hwb()")}}. Les couleurs nommées sont simplement des mots-clés mappés à des valeurs hexadécimales spécifiques. La conversion de ces diverses notations de couleur vers sRGB est mathématiquement simple. Notez que {{CSSxRef("&lt;color&gt;","currentColor","#mot-clé_currentcolor")}} peut être n'importe quelle couleur — elle n'est pas restreinte à sRGB.
 
-La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur [`HSL`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) (_teinte-saturation-luminosité_) ou [`HWB`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
+La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur {{CSSxRef("color_value/hsl", "HSL")}} (_teinte-saturation-luminosité_) ou {{CSSxRef("color_value/hwb", "HWB")}} (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
 
 - Espace de couleur `srgb`
   - : L'espace de couleur sRGB, ou «&nbsp;RGB standard&nbsp;», est l'espace de couleur RGB (rouge, vert, bleu) standard. Il a été créé pour être utilisé sur les moniteurs, imprimantes et le Web. C'est l'espace de couleur le plus largement utilisé et il est pris en charge par la plupart des systèmes d'exploitation, programmes logiciels, moniteurs et imprimantes. sRGB est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
@@ -36,10 +36,13 @@ La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut r
   - : L'espace de couleur sRGB à éclairage linéaire prédéfini, `srgb-linear`, est le même que `srgb` sauf que la fonction de transfert est à éclairage linéaire sans codage gamma. L'espace de couleur `srgb-linear` accepte les trois valeurs `r`, `g`, et `b` comme paramètres numériques, avec des couleurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
 
 - Espace de couleur `display-p3`
-  - : Défini par Apple, l'espace de couleur [**Display P3** <sup>(angl.)</sup>](https://www.color.org/chardata/rgb/DisplayP3.xalter) combine le gamut de couleur DCI-P3, le point blanc D65 et la courbe gamma sRGB. C'est un espace à large gamut typique des moniteurs à large gamut actuels, permettant des verts et des rouges plus vibrants que le gamut de couleur sRGB. Le `display-p3` est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
+  - : Défini par Apple, l'espace de couleur [**Display P3** <sup>(angl.)</sup>](https://registry.color.org/rgb-registry/displayp3) combine le gamut de couleur DCI-P3, le point blanc D65 et la courbe gamma sRGB. C'est un espace à large gamut typique des moniteurs à large gamut actuels, permettant des verts et des rouges plus vibrants que le gamut de couleur sRGB. L'espace `display-p3` est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
+
+- Espace de couleur `display-p3-linear`
+  - : L'espace de couleur prédéfini `display-p3-linear` est similaire à `display-p3`, sauf qu'il utilise une fonction de transfert à lumière linéaire et n'a pas de codage gamma, ce qui permet une plus grande précision dans les couleurs affichées. L'espace `display-p3-linear` est basé sur les canaux `r`, `g` et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
 
 - Espace de couleur `a98-rgb`
-  - : `a98-rgb` est l'espace de couleur Adobe® 1998 RGB conçu pour représenter toutes les couleurs CMYK en RGB. Environ 50% des couleurs visibles spécifiées par l'[espace de couleur CIELab](#espaces_de_couleur_cielab) peuvent être atteintes, englobant plus de teintes cyan-vert que d'autres espaces de couleur RGB. Les valeurs `r`, `g`, et `b` dans le gamut vont de `0` à `1`. La courbe de transfert est une fonction gamma, proche mais pas exactement 1/2.2. Le point blanc est D65.
+  - : `a98-rgb` est l'espace de couleur Adobe® 1998 RGB conçu pour représenter toutes les couleurs CMYK en RGB. Environ 50% des couleurs visibles définies par [l'espace de couleur CIELab](#espaces_de_couleur_cielab) peuvent être atteintes, englobant plus de teintes cyan-vert que d'autres espaces de couleur RGB. Les valeurs `r`, `g`, et `b` dans le gamut vont de `0` à `1`. La courbe de transfert est une fonction gamma, proche mais pas exactement 1/2.2. Le point blanc est D65.
 
 - `prophoto-rgb`
   - : Développé par Kodak, l'espace de couleur `prophoto-rgb` peut représenter toutes les couleurs susceptibles de se produire dans la nature et environ 90% des [couleurs CIElab](#espaces_de_couleur_cielab). Les valeurs `r`, `g`, et `b` dans le gamut vont de `0` à `1`. La courbe de transfert est une fonction gamma, avec une valeur de 1/1.8, et une petite portion linéaire près du noir. Le point blanc est D50, le même que celui utilisé par CIELab.
@@ -54,7 +57,7 @@ La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut r
 
 L'espace de couleur CIELAB (ou CIELab), également appelé L\*a\*b* (ou Lab* en abrégé), représente toute la gamme de couleurs que les humain·e·s peuvent voir. Cet espace de couleur a été défini par la Commission internationale de l'éclairage (CIE). Il exprime la couleur comme trois valeurs&nbsp;: L\* pour la luminosité perceptuelle, et a\* et b\* pour les quatre couleurs uniques de la vision humaine&nbsp;: rouge, vert, bleu et jaune.
 
-Lab est un système de coordonnées rectangulaires, avec un axe central de luminosité `L`. Les valeurs positives le long de l'axe `a` sont un rouge pourpre tandis que les valeurs négatives sont le complément&nbsp;: vert. Les valeurs positives le long de l'axe `b` sont jaunes et les négatives sont bleues/violettes. Les couleurs désaturées ont de petites valeurs pour `a` et `b` avec des valeurs absolues plus grandes étant plus saturées.
+Lab est un système de coordonnées rectangulaires, avec un axe central de luminosité `L`. Les valeurs positives le long de l'axe `a` sont un rouge pourpre tandis que les valeurs négatives sont le complément&nbsp;: vert. Les valeurs positives le long de l'axe `b` sont jaunes et les négatives sont bleues/violettes. Les couleurs dé-saturées ont de petites valeurs pour `a` et `b` avec des valeurs absolues plus grandes étant plus saturées.
 
 Les fonctions de couleur CIELab incluent {{CSSxRef("color_value/lab", "lab()")}} (luminosité, axe a, axe b) et {{CSSxRef("color_value/lch", "lch()")}} (luminosité, chroma, teinte) ainsi que {{CSSxRef("color_value/oklab", "oklab()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}. Les valeurs de luminosité sont les mêmes, mais `lch()` et `oklch` sont des systèmes de coordonnées polaires, cylindriques, qui utilisent des coordonnées polaires `C` (chroma) et `H` (teinte) plutôt que des axes.
 
@@ -79,7 +82,7 @@ Bien que les combinaisons de rouge, vert et bleu fonctionnent bien pour représe
 Les personnes avec une vision normale ont trois types de cellules coniques qui détectent la lumière, ayant des pics de sensibilité spectrale à différentes longueurs d'onde. Les paramètres CIE X, Y et Z correspondent aux niveaux de stimuli des trois types de cellules coniques qui, en principe, décrivent chaque couleur visible. Le canal `Y` représente la luminance d'une couleur. Le canal `Z` reflète la quantité de bleu dans la couleur mais n'est pas le même que le `B` en RGB. L'axe `X` est orthogonal aux axes Y et Z du système de coordonnées 3D de couleur XYZ.
 
 - Espaces de couleur `xyz` et `xyz-d65`
-  - : L'identifiant `xyz` est un synonyme pour l'espace de couleur `xyz-d65`. Les axes ne sont pas limités à une plage de `0` à `1` car l'espace de couleur n'est pas lié à cette plage&nbsp;; ces valeurs ne sont utilisées que comme points de référence pour définir les entrées et sorties de pourcentage. Le point blanc est D65.
+  - : L'identifiant `xyz` est un synonyme pour l'espace de couleur `xyz-d65`. Les axes ne sont pas limités à une plage de `0` à `1`, car l'espace de couleur n'est pas lié à cette plage&nbsp;; ces valeurs ne sont utilisées que comme points de référence pour définir les entrées et sorties de pourcentage. Le point blanc est D65.
 
 - Espace de couleur `xyz-d50`
   - : `xyz-d50` est le même que `xyz-d65` sauf qu'il utilise D50 comme point blanc.

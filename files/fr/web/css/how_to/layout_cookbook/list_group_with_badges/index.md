@@ -2,7 +2,7 @@
 title: Liste de groupes avec indicateurs
 slug: Web/CSS/How_to/Layout_cookbook/List_group_with_badges
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Dans cette recette, vous allez créer un motif de liste de groupes avec des indicateurs affichant un nombre.
@@ -89,6 +89,6 @@ Pour aligner le contenu horizontalement, j'utilise la propriété {{CSSxRef("a
 
 ## Voir aussi
 
-- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Modèle de boîte flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Modèle de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)

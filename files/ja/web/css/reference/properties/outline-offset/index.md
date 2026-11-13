@@ -1,9 +1,8 @@
 ---
 title: outline-offset
 slug: Web/CSS/Reference/Properties/outline-offset
-original_slug: Web/CSS/outline-offset
 l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`outline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の辺や境界線と[輪郭線](/ja/docs/Web/CSS/Reference/Properties/outline)との空間の量を設定します。
@@ -26,7 +25,7 @@ outline: 5px dashed blue;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    これは周囲に輪郭線があるボックスです。
   </div>
 </section>
 ```

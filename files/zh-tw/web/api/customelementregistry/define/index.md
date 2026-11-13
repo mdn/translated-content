@@ -2,7 +2,7 @@
 title: CustomElementRegistry：define() 方法
 slug: Web/API/CustomElementRegistry/define
 l10n:
-  sourceCommit: 66b6d40a37daef8aa0013c44c310eeb2f0bcd7e1
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Web Components")}}

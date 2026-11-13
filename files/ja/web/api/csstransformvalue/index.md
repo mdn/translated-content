@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-**`CSSTransformValue`** は {{domxref('CSS_Object_Model#css_型付きオブジェクトモデル_experimental','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、 CSS の {{CSSxref('transform')}} プロパティで使用される `transform-list` の値を表します。
+**`CSSTransformValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model) のインターフェイスで、 CSS の {{CSSxref('transform')}} プロパティで使用される `transform-list` の値を表します。
 
 {{InheritanceDiagram}}
 
@@ -34,7 +34,7 @@ l10n:
 - {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}}
   - : `CSSTransformValue` に格納されている座標変換コンポーネントの数を返します。
 - {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}}
-  - : 変換が 2D か 3D かを示す論理値を返します。
+  - : 座標変換が 2D か 3D かを示す論理値を返します。
 
 ## インスタンスメソッド
 
@@ -42,13 +42,13 @@ _祖先である {{domxref('CSSStyleValue')}} からメソッドを継承して�
 
 - {{domxref("CSSTransformValue.toMatrix()")}}
   - : 新しい {{domxref('DOMMatrix')}} オブジェクトを返します。
-- {{domxref('CSSUnparsedValue.entries()')}}
+- {{domxref('CSSTransformValue.entries()')}}
   - : 指定されたオブジェクト自身で列挙可能なプロパティ `[key, value]` のペアを、 {{jsxref("Statements/for...in", "for...in")}} ループが提供するのと同じ順序で配列にして返します（for-in ループはプロトタイプチェーン内のプロパティも同様に列挙する点が異なります）。
-- {{domxref('CSSUnparsedValue.forEach()')}}
+- {{domxref('CSSTransformValue.forEach()')}}
   - : 指定された関数を `CSSTransformValue` オブジェクトの各要素に対して一度だけ実行します。
-- {{domxref('CSSUnparsedValue.keys()')}}
-  - : CSSTransformValue` オブジェクトの各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
-- {{domxref('CSSUnparsedValue.values()')}}
+- {{domxref('CSSTransformValue.keys()')}}
+  - : `CSSTransformValue` オブジェクトの各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
+- {{domxref('CSSTransformValue.values()')}}
   - : `CSSTransformValue` オブジェクトの個々の位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
 
 ## 例

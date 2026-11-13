@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 ウェブサイトのセキュリティでは、ウェブサイトのデザインと使用方法のあらゆる面で警戒が必要です。この入門記事だけではウェブサイトのセキュリティの第一人者にはなれませんが、脅威がどこから発生するのか、そして最も一般的な攻撃に対してウェブアプリケーションを強化するために何ができるのかを理解するのに役立ちます。
 
@@ -135,7 +135,7 @@ CSRF 攻撃は、悪意のあるユーザーが他のユーザーの資格情報
 あなたが取れる他の具体的な対策はいくつかあります：
 
 - より効果的なパスワード管理を使用してください。定期的に変更される強力なパスワードを推奨します。パスワードに加えてユーザーが別の認証コード (通常は、自分の電話に送信される SMS のコードなど、ユーザーだけが所有する物理的なハードウェアを介して配信されるもの) を入力する必要があるように、サイトの 2 要素認証を検討してください。
-- [HTTPS](/ja/docs/Glossary/HTTPS) および [HTTP Strict Transport Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) (HSTS) を使用するようにを設定します。HTTPS は、クライアントとサーバー間で送信されるデータを暗号化します。これにより、ログイン認証情報、Cookie、`POST` リクエストデータ、およびヘッダー情報が攻撃者に容易に利用されないようになります。
+- [HTTPS](/ja/docs/Glossary/HTTPS) および [HTTP Strict Transport Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) (HSTS) を使用するように設定します。HTTPS は、クライアントとサーバー間で送信されるデータを暗号化します。これにより、ログイン認証情報、Cookie、`POST` リクエストデータ、およびヘッダー情報が攻撃者に容易に利用されないようになります。
 - 最も一般的な脅威 ([現在の OWASP リストはこちら](https://owasp.org/www-project-top-ten/)) を追跡し、最も一般的な脆弱性を最初に解決します。
 - サイトで自動セキュリティテストを実行するには、[脆弱性スキャンツール](https://owasp.org/www-community/Vulnerability_Scanning_Tools)を使用してください。後で、非常に成功したウェブサイトも [Mozilla がここでしているような](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)バグ報奨金を提供することによってバグが見つかるかもしれません。
 - 必要なデータのみを保存して表示してください。たとえば、ユーザーがクレジットカード情報などの機密情報を保存する必要がある場合は、ユーザーが識別できるだけの十分なカード番号を表示してください。そうすれば攻撃者がそれをコピーして別のサイトで使用することはできません。現時点で最も一般的なパターンは、クレジットカード番号の最後の 4 桁だけを表示することです。
@@ -148,4 +148,4 @@ CSRF 攻撃は、悪意のあるユーザーが他のユーザーの資格情報
 
 この記事で、[モジュール](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)の終わりに来ました。サーバーサイドのウェブサイトプログラミングの最初のステップをカバーしました。これらの基本概念を学んで楽しんでいただければ幸いです。これでウェブフレームワークを選択してプログラミングを開始する準備が整いました。
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

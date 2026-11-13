@@ -1,10 +1,10 @@
 ---
 title: Gérer les problèmes courants en HTML et CSS
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+original_slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 ---
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Extensions/Testing")}}
 
 Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le [linting code](https://stackoverflow.com/questions/8503559/what-is-linting), la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des [polyfills](/fr/docs/Glossary/Polyfill) pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.
 
@@ -15,12 +15,12 @@ Maintenant que les bases sont posées, nous allons nous concentrer sur les probl
       <td>
         <p>
           Connaissances avec le noyau des langages
-          <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>, et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut
+          <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
+          <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a> ; une idée du haut
           niveau des
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+            href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction"
             >principes du test en navigateur croisé</a
           >.
         </p>
@@ -485,7 +485,7 @@ Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs
 
 Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/Guides/Media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
-La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/docs/Web/Apps/Progressive/Responsive/Mobile_first), aux plus complexes [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes).
+La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), aux plus complexes [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes).
 
 Une autre difficulté qui peut présenter des problèmes c'est le support des fonctionnalités par les navigateurs qui rendent les techniques suscitées possibles. Les media queries ne sont pas supportés sur IE 8 ou plus vieux, donc si vous voulez utiliser une disposition mobile en premier lieu puis une disposition pour ordinateur de bureau qui applique aux vieilles versions d'IE, vous devrez appliquer un media querie {{glossary("polyfill")}} à votre page, comme [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/) ou [Respond.js](https://github.com/scottjehl/Respond).
 
@@ -511,4 +511,4 @@ Par ailleurs, essayez de chercher votre moteur de recherche favori pour trouver 
 
 Vous devriez maintenant être familier avec les problèmes principaux en navigateur croisé avec HTML et CSS que vous rencontrerez en développement web, et comment faire pour les résoudre.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Extensions/Testing")}}

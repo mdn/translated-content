@@ -1,37 +1,34 @@
 ---
-title: prefers-reduced-data
+title: Caractéristique média CSS `prefers-reduced-data`
+short-title: prefers-reduced-data
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-data
-original_slug: Web/CSS/@media/prefers-reduced-data
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 294f2e4cedd4de0d99948f3bf9b451454387fe35
 ---
 
 {{SeeCompatTable}}
 
-> [!NOTE]
+> [!WARNING]
 > Cette fonctionnalité n'est prise en charge par aucun agent utilisateur et ses spécificités sont susceptibles d'évoluer.
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-data`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web consomme moins de données internet.
 
+Le navigateur obtient généralement cette information en interrogeant les préférences du système d'exploitation sous-jacent pour la réduction des données.
+
 ## Syntaxe
 
 - `no-preference`
-  - : Indique qu'aucune préférence n'a été exprimée par l'utilisateur·ice dans le système. Cette valeur-clé est évaluée à faux dans un contexte booléen.
+  - : Indique qu'aucune préférence n'a été exprimée par l'utilisateur·ice dans le système. Ce mot-clé est évalué à faux dans un contexte booléen.
 - `reduce`
   - : Indique que l'utilisateur·ice a exprimé une préférence pour un contenu alternatif allégé.
 
-## Préférences utilisateur
-
-Actuellement, aucun agent utilisateur·ice n'implémente cette fonctionnalité, bien que divers systèmes d'exploitation prennent en charge ce type de préférence. Si cette requête média est un jour prise en charge, les agents utilisateur·ice·s s'appuieront probablement sur les réglages du système d'exploitation.
-
 ## Exemples
 
-> [!NOTE]
-> Aucun navigateur n'implémente actuellement cette fonctionnalité, l'exemple suivant ne fonctionnera donc pas.
+### Utilisation simple
 
-Dans cet exemple, le fichier de police `montserrat-regular.woff2` ne sera ni préchargé ni téléchargé si l'utilisateur·ice préfère réduire la consommation de données. Dans ce cas, la [«&nbsp;pile de polices système&nbsp;» <sup>(angl.)</sup>](https://css-tricks.com/snippets/css/system-font-stack/) servira de police de secours&nbsp;:
+Dans cet exemple, le fichier de police `montserrat-regular.woff2` n'est ni préchargé ni téléchargé si l'utilisateur·ice préfère réduire la consommation de données&nbsp;; dans ce cas, la [«&nbsp;pile de polices système&nbsp;» <sup>(angl.)</sup>](https://css-tricks.com/snippets/css/system-font-stack/) sert de police de secours&nbsp;:
 
-### HTML
+#### HTML
 
 ```html
 <head>
@@ -45,7 +42,7 @@ Dans cet exemple, le fichier de police `montserrat-regular.woff2` ne sera ni pr�
 </head>
 ```
 
-### CSS
+#### CSS
 
 ```css
 @media (prefers-reduced-data: no-preference) {

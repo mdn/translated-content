@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes
 original_slug: Learn/CSS/Howto/Create_fancy_boxes
 ---
 
-{{LearnSidebar}}
-
 Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
 
 Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction).
@@ -327,7 +325,3 @@ Nous allons ici créer un effet d'ombre portée. La propriété {{cssxref("box-s
 ```
 
 {{EmbedLiveSample("Assemblage", '100%', '100')}}
-
-## La suite
-
-Pour de nombreux cas, on utilisera des couleurs et des images d'arrière-plans pour composer de belles boîtes. Nous vous invitons donc [à approfondir la gestion des couleurs et des images](/fr/docs/Apprendre/CSS/Comment/Gérer_les_couleurs_et_les_images). Par ailleurs, rien ne sert de créer de belles boîtes si celles-ci ne font pas partie d'une disposition bien organisée. Aussi, si vous ne l'avez pas encore lu, nous vous conseillons de parcourir [les bases de la disposition](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction).

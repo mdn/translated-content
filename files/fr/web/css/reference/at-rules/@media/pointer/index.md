@@ -1,9 +1,9 @@
 ---
-title: pointer
+title: Caractéristique média CSS `pointer`
+short-title: pointer
 slug: Web/CSS/Reference/At-rules/@media/pointer
-original_slug: Web/CSS/@media/pointer
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`pointer`** permet de tester si l'utilisateur·ice dispose d'un dispositif de pointage (comme une souris) et, le cas échéant, d'évaluer la précision du dispositif de pointage principal.

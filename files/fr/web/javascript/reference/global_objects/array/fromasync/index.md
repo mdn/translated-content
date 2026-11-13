@@ -3,10 +3,10 @@ title: "Array : méthode statique fromAsync()"
 short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode statique **`Array.fromAsync()`** crée une nouvelle instance d'`Array` (copie superficielle) à partir d'un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#itérateur_asynchrone_et_les_protocoles_itérables_asynchrones), d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
+La méthode statique **`Array.fromAsync()`** crée une nouvelle instance de `Array` (copie superficielle) à partir d'un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone), d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
 
 ## Syntaxe
 
@@ -23,7 +23,7 @@ Array.fromAsync(items, mapFn, thisArg)
 - `mapFn` {{Optional_Inline}}
   - : Une fonction appelée sur chaque élément du tableau. Si elle est fournie, chaque valeur à ajouter au tableau est d'abord transmise à cette fonction, et la valeur de retour de `mapFn` est ajoutée au tableau à la place (après avoir été [attendue](/fr/docs/Web/JavaScript/Reference/Operators/await)). La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
-      - : L'élément en cours de traitement dans le tableau. Si `items` est un itérable synchrone ou un objet semblable à un tableau, tous les éléments sont d'abord [attendus](/fr/docs/Web/JavaScript/Reference/Operators/await), et `element` ne sera jamais un [thenable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables). Si `items` est un itérable asynchrone, chaque valeur produite est transmise telle quelle.
+      - : L'élément en cours de traitement dans le tableau. Si `items` est un itérable synchrone ou un objet semblable à un tableau, tous les éléments sont d'abord [attendus](/fr/docs/Web/JavaScript/Reference/Operators/await), et `element` n'est jamais une [semi-promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#semi-promesse). Si `items` est un itérable asynchrone, chaque valeur produite est transmise telle quelle.
     - `index`
       - : L'indice de l'élément en cours de traitement dans le tableau.
 - `thisArg` {{Optional_Inline}}
@@ -37,23 +37,23 @@ Une nouvelle promesse ({{JSxRef("Promise")}}) dont la valeur de retour est une n
 
 `Array.fromAsync()` permet de créer des tableaux à partir&nbsp;:
 
-- [d'objets itérables asynchrones](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#itérateur_asynchrone_et_les_protocoles_itérables_asynchrones) (des objets comme {{DOMxRef("ReadableStream")}} et {{JSxRef("AsyncGenerator")}})&nbsp;; ou, si l'objet n'est pas un itérable asynchrone,
+- [d'objets itérables asynchrones](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) (des objets comme {{DOMxRef("ReadableStream")}} et {{JSxRef("AsyncGenerator")}})&nbsp;; ou, si l'objet n'est pas un itérable asynchrone,
 - [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (des objets comme {{JSxRef("Map")}} et {{JSxRef("Set")}})&nbsp;; ou, si l'objet n'est pas itérable,
 - d'objets semblables à des tableaux (objets avec une propriété `length` et des éléments indexés).
 
 `Array.fromAsync()` parcourt l'itérable asynchrone d'une manière très similaire à {{JSxRef("Statements/for-await...of", "for await...of")}}. `Array.fromAsync(items)` est généralement équivalent au code suivant, si `items` est un itérable asynchrone ou synchrone&nbsp;:
 
 ```js
-const result = [];
+const resultat = [];
 for await (const element of items) {
-  result.push(element);
+  resultat.push(element);
 }
 ```
 
 `Array.fromAsync()` est presque équivalent à {{JSxRef("Array.from()")}} en termes de comportement, à l'exception des points suivants&nbsp;:
 
 - `Array.fromAsync()` gère les objets itérables asynchrones.
-- `Array.fromAsync()` retourne une promesse ({{JSxRef("Promise")}}) qui se résout en une instance de tableau.
+- `Array.fromAsync()` retourne une promesse ({{JSxRef("Promise")}}) qui se complète en une instance de tableau.
 - Si `Array.fromAsync()` est appelée avec un objet itérable non asynchrone, chaque élément ajouté au tableau est d'abord [attendu](/fr/docs/Web/JavaScript/Reference/Operators/await).
 - Si un `mapFn` est fourni, sa sortie est également attendue en interne.
 
@@ -101,7 +101,7 @@ Array.fromAsync(createAsyncIter()).then((array) => console.log(array));
 ```
 
 > [!NOTE]
-> En pratique, il est rare de rencontrer un objet itérable asynchrone qui produit des promesses, car si vous l'implémentez avec une [fonction génératrice asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function*), l'expression [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) désempaquète automatiquement les promesses.
+> En pratique, il est rare de rencontrer un objet itérable asynchrone qui produit des promesses, car si vous l'implémentez avec une [fonction génératrice asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function*), l'expression [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) désenveloppe automatiquement les promesses.
 
 ### Tableau à partir d'un objet itérable synchrone
 
@@ -196,9 +196,9 @@ function* makeIterableOfPromises() {
 })();
 ```
 
-### Absence de gestion d'erreur pour les objets itérables synchrones
+### Fermer les itérables synchrones en cas de rejet
 
-Comme pour [`for await...of`](/fr/docs/Web/JavaScript/Reference/Statements/for-await...of#itération_sur_les_itérables_et_générateurs_synchrones), si l'objet parcouru est un objet itérable synchrone et qu'une erreur est levée pendant l'itération, la méthode `return()` de l'itérateur sous-jacent ne sera pas appelée, donc l'itérateur ne sera pas fermé.
+Comme pour [`for await...of`](/fr/docs/Web/JavaScript/Reference/Statements/for-await...of#itérer_sur_des_itérables_synchrones_et_des_générateurs), si l'objet parcouru est un itérable synchrone et qu'une promesse produite est rejetée, la méthode `return()` de l'itérateur sous-jacent est appelée, si elle existe, afin de permettre à l'itérateur d'effectuer son nettoyage.
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -206,7 +206,7 @@ function* generatorWithRejectedPromises() {
     yield 0;
     yield Promise.reject(new Error("error"));
   } finally {
-    console.log("called finally");
+    console.log("appel final");
   }
 }
 
@@ -217,25 +217,8 @@ function* generatorWithRejectedPromises() {
     console.log("caught", e);
   }
 })();
+// appel final
 // intercepté Error: error
-// Aucun message "called finally"
-```
-
-Si vous devez fermer l'itérateur, vous devez utiliser une boucle {{JSxRef("Statements/for...of", "for...of")}} à la place, et attendre chaque valeur manuellement.
-
-```js
-(async () => {
-  const arr = [];
-  try {
-    for (const val of generatorWithRejectedPromises()) {
-      arr.push(await val);
-    }
-  } catch (e) {
-    console.log("caught", e);
-  }
-})();
-// appelé finally
-// intercepté 3
 ```
 
 ## Spécifications
@@ -248,10 +231,10 @@ Si vous devez fermer l'itérateur, vous devez utiliser une boucle {{JSxRef("Stat
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.fromAsync` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
 - La méthode {{JSxRef("Array.of()")}}
 - La méthode {{JSxRef("Array.from()")}}
 - L'instruction {{JSxRef("Statements/for-await...of", "for await...of")}}
-- [Prothèse d'émulation de `Array.fromAsync` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#arrayfromasync)

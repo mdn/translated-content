@@ -6,7 +6,7 @@ original_slug: Web/CSS/margin-right
 
 {{CSSRef}}
 
-Свойство [CSS](/en-US/CSS) **`margin-right`** устанавливает [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) справа от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
+Свойство [CSS](/en-US/CSS) **`margin-right`** устанавливает [внешний отступ](/ru/docs/Web/CSS/Guides/Box_model/Introduction) справа от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
 
 {{InteractiveExample("CSS Demo: margin-right")}}
 
@@ -58,7 +58,7 @@ margin-right: 0;
 }
 ```
 
-Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется [схлопыванием внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+Вертикальные внешние отступы двух соседних блоков могут схлопнуться. Это называется [схлопыванием внешних отступов](/ru/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 ## Синтаксис
 

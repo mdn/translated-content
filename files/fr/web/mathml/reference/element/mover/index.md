@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/mover
 original_slug: Web/MathML/Element/mover
 ---
 
-{{MathMLRef()}}
-
 L'élément MathML `<mover>` est utilisé pour attacher un accent ou une limite au-dessus d'une expression. La syntaxe est la suivante: `<mover> base overscript </mover>`
 
 ## Attributs
@@ -20,9 +18,9 @@ L'élément MathML `<mover>` est utilisé pour attacher un accent ou une limite 
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 
 ## Exemples
 

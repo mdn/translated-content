@@ -1,9 +1,8 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/Reference/Values/time-percentage
-original_slug: Web/CSS/time-percentage
 l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<time-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。
@@ -20,7 +19,7 @@ l10n:
 
 ### calc() での使用
 
-許可されている型として `<time-percentage>` が指定されているところでは、これはパーセント値が時間として解決されるので、 {{Cssxref("calc", "calc()")}} の式で利用することができます。
+許可されている型として `<time-percentage>` が指定されているところでは、これはパーセント値が時間として解決されるので、 {{cssxref("calc()")}} の式で利用することができます。
 
 ### 有効なパーセント値
 
@@ -59,12 +58,8 @@ l10n:
 
 {{Specifications}}
 
-## ブラウザーの互換性
-
-{{Compat}}
-
 ## 関連情報
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;time&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

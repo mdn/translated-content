@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-placeholder"
 short-title: aria-placeholder
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 76824348ac7be05f30c32f29e9495e7b29f71876
 ---
 
 L'attribut `aria-placeholder` définit une courte indication (un mot ou une phrase brève) destinée à aider l'utilisateur·ice lors de la saisie de données quand un contrôle de formulaire n'a pas de valeur. L'indication peut être une valeur d'exemple ou une brève description du format attendu.

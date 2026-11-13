@@ -1,15 +1,15 @@
 ---
-title: rgb()
+title: Fonction CSS `rgb()`
+short-title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
-original_slug: Web/CSS/color_value/rgb
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
 > La notation fonctionnelle `rgba()` est un alias de `rgb()`. Elles sont strictement équivalentes. Il est recommandé d'utiliser `rgb()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans l'{{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans {{Glossary("color space", "l'espace de couleur")}} {{Glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rgb()")}}
 
@@ -68,7 +68,7 @@ rgb(0, 255, 255, 50%)
 
 ### Valeurs
 
-Vous trouverez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors).
+Vous trouverez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 #### Syntaxe des valeurs absolues
 
@@ -79,12 +79,12 @@ rgb(R G B[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `R`, `G`, `B`
-  - : Chaque valeur peut être un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `255`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Ces valeurs représentent respectivement les canaux rouge, vert et bleu.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Chaque valeur peut être un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `255`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Ces valeurs représentent respectivement les canaux rouge, vert et bleu.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composantes de couleur manquantes](/fr/docs/Web/CSS/Reference/Values/color_value#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -95,11 +95,11 @@ rgb(from <color> R G B[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la **couleur d'origine**&nbsp;: il s'agit de la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la **couleur d'origine**&nbsp;: il s'agit de la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `R`, `G`, `B`
-  - : Chaque valeur peut être un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `255`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Ces valeurs représentent respectivement les canaux rouge, vert et bleu de la couleur de sortie.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Chaque valeur peut être un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `255`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Ces valeurs représentent respectivement les canaux rouge, vert et bleu de la couleur de sortie.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
 > Pour permettre la représentation complète du spectre visible, la sortie des fonctions de couleur relative `rgb()` est sérialisée en `color(srgb)`. Cela signifie qu'interroger la valeur de couleur de sortie via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur sous la forme [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
@@ -160,7 +160,7 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie en représentation `rgb()` — `rgb(255 0 0)`. Des calculs {{cssxref("calc")}} sont appliqués aux valeurs `R`, `G`, `B` et `A`. Après calcul, les valeurs R, G, B et A sont respectivement `127.5`, `25`, `175` et `0.9`. La couleur de sortie finale est l'équivalent de `rgb(127.5 25 175 / 0.9)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
+Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie en représentation `rgb()` — `rgb(255 0 0)`. Des calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `R`, `G`, `B` et `A`. Après calcul, les valeurs R, G, B et A sont respectivement `127.5`, `25`, `175` et `0.9`. La couleur de sortie finale est l'équivalent de `rgb(127.5 25 175 / 0.9)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
@@ -177,7 +177,7 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 
 ### Syntaxe de base
 
-Dans cet exemple, nous avons trois éléments {{htmlelement("div")}} avec différentes couleurs d'arrière-plan affichées sur un fond rayé.
+Dans cet exemple, nous avons trois éléments HTML {{HTMLElement("div")}} avec différentes couleurs d'arrière-plan affichées sur un fond rayé.
 
 #### HTML
 
@@ -191,7 +191,7 @@ Dans cet exemple, nous avons trois éléments {{htmlelement("div")}} avec diffé
 
 #### CSS
 
-Les couleurs d'arrière-plan sont définies à l'aide de la fonction de couleur `rgb()`. Les trois couleurs sont identiques. La troisième est semi-transparente, donc nous avons inclus un {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} sur le {{htmlelement("body")}} pour mieux démontrer la transparence des canaux alpha.
+Les couleurs d'arrière-plan sont définies à l'aide de la fonction de couleur `rgb()`. Les trois couleurs sont identiques. La troisième est semi-transparente, donc nous avons inclus un {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} sur le {{HTMLElement("body")}} pour mieux démontrer la transparence des canaux alpha.
 
 ```css hidden
 div {
@@ -226,11 +226,11 @@ body {
 
 #### Résultat
 
-{{ EmbedLiveSample("Syntaxe de base", "100%", "75") }}
+{{EmbedLiveSample("Syntaxe de base", "100%", 75)}}
 
 ### Utilisation des couleurs relatives avec `rgb()`
 
-Cet exemple met en forme trois éléments {{htmlelement("div")}} avec différentes couleurs d'arrière-plan. Celui de gauche reçoit la `--base-color` non modifiée, tandis que les deux autres reçoivent des variantes de cette `--base-color` qui retirent progressivement du rouge et ajoutent du bleu.
+Cet exemple met en forme trois éléments HTML {{HTMLElement("div")}} avec différentes couleurs d'arrière-plan. Celui de gauche reçoit la `--base-color` non modifiée, tandis que les deux autres reçoivent des variantes de cette `--base-color` qui retirent progressivement du rouge et ajoutent du bleu.
 
 Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `rgb()`, et la couleur de sortie a ses canaux rouge et bleu modifiés pour obtenir l'effet désiré via des fonctions `calc()`, tandis que le canal vert reste inchangé.
 
@@ -261,7 +261,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 ```css
 :root {
   --base-color: orange;
-  /* equal to rgb(255 165 0) */
+  /* égal à rgb(255 165 0) */
 }
 
 #one {
@@ -270,17 +270,15 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 
 #two {
   background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
-  /* 76.5 is 30% of 255 */
+  /* 76.5 est 30% de 255 */
 }
 
 #three {
   background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
-  /* 153 is 60% of 255 */
+  /* 153 est 60% de 255 */
 }
 
-/* Use @supports to add in support for old syntax that requires r g b values to
-   be specified as percentages (with units) in calculations. This is required
-   for Safari 16.4+. */
+/* Utilisation de @supports pour ajouter la prise en charge de l'ancienne syntaxe qui nécessite que les valeurs r g b soient spécifiées en pourcentages (avec unités) dans les calculs. Cela est requis pour Safari 16.4+. */
 @supports (color: rgb(from red r g calc(b + 30%))) {
   #two {
     background-color: rgb(from var(--base-color) calc(r - 30%) g calc(b + 30%));
@@ -294,7 +292,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 
 #### Résultat
 
-{{ EmbedLiveSample("Utilisation des couleurs relatives avec `rgb()`", "100%", "200") }}
+{{EmbedLiveSample("Utilisation des couleurs relatives avec `rgb()`", "100%", 200)}}
 
 ### Syntaxe héritée : valeurs séparées par des virgules
 
@@ -327,7 +325,7 @@ div.comma-separated {
 
 #### Résultat
 
-{{EmbedLiveSample('Syntaxe héritée : valeurs séparées par des virgules', '100%', '150px')}}
+{{EmbedLiveSample("Syntaxe héritée : valeurs séparées par des virgules", "100%", 150)}}
 
 ## Spécifications
 
@@ -339,7 +337,7 @@ div.comma-separated {
 
 ## Voir aussi
 
-- Le type de données {{CSSXref("&lt;color&gt;")}} pour une liste de toutes les notations de couleur
+- Le type de données {{CSSxRef("&lt;color&gt;")}} pour une liste de toutes les notations de couleur
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
+- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- Le module [des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)

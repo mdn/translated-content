@@ -89,7 +89,7 @@ font-feature-settings: initial;
 font-feature-settings: unset;
 ```
 
-가능하다면 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)인 {{cssxref("font-variant")}} 속성을 사용하거나, 각각의 피처와 연관된 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} 등을 사용하는 것이 `font-feature-settings`를 직접 사용하는 것에 비해 더 효율적이고, 예측 가능하게 동작하며 이해하기도 쉽습니다.
+가능하다면 [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)인 {{cssxref("font-variant")}} 속성을 사용하거나, 각각의 피처와 연관된 {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}} 등을 사용하는 것이 `font-feature-settings`를 직접 사용하는 것에 비해 더 효율적이고, 예측 가능하게 동작하며 이해하기도 쉽습니다.
 
 이는 `font-feature-settings`는 원래 작은 대문자(Small caps)와 같이 접근할 수 있는 다른 방법이 없는 오픈타입 피처를 제어하기 위해 만들어진 저수준의 기능이기 때문입니다.
 

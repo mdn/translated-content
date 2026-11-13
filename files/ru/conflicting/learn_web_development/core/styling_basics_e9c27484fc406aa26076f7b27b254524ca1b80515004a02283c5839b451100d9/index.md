@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076
 original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Вы многое прошли в этом модуле, и должно быть вас посетило это прекрасное чувство, что дошли до конца! Последний шаг перед тем, как двигаться дальше, это попытка пройти проверку по материалам модуля — это включает в себя ряд соответствующих упражнений, которые должны быть выполнены для того, чтобы создать заключительный проект — визитка, карточка игрока, профиль в социальной сети.
 
@@ -75,4 +75,4 @@ original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_compreh
 
 Если вы проходите эту проверку в рамках организованного курса, у вас должна быть возможность отдать свою работу своему учителю/наставнику для оценки. Если вы самообучаетесь, то вы можете получить руководство по оценке достаточно простым путём: спросив в [теме обсуждения об этом упражнении](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682), или в канале [#mdn](irc://irc.mozilla.org/mdn) IRC на [Mozilla IRC](https://wiki.mozilla.org/IRC). Но сначала попробуйте выполнить упражнение — вы ничего не выиграете путём обмана!
 
-{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

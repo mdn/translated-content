@@ -1,12 +1,15 @@
 ---
 title: CSS 値と単位
+short-title: 値と単位
 slug: Web/CSS/Guides/Values_and_units
-original_slug: Web/CSS/CSS_values_and_units
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: c8522f47d8123fe529f39851b13b9fc01345ffbf
 ---
 
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。すべてのプロパティは、CSS 全体で有効な値も受け入れます。CSS 値と単位モジュールでは、CSS プロパティが受け入れる値と単位というデータの型を定義しています。このモジュールでは、CSS プロパティと関数に対して有効な値の設定するには、CSS 値定義構文、つまり形式文法を定義します。
+
+> [!NOTE]
+> このページでは CSS のモジュールを説明しています。すべての値、型、関数について、CSS 仕様が定義する完全な一覧を調べるには、[値](/ja/docs/Web/CSS/Reference/Values)リファレンスページを参照してください。
 
 ## リファレンス
 
@@ -36,6 +39,8 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
 - {{cssxref("min()")}}
 - {{cssxref("mod()")}}
 - {{cssxref("pow()")}}
+- {{cssxref("progress()")}}
+- {{cssxref("random()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
 - {{cssxref("sibling-count()")}}
@@ -46,42 +51,39 @@ CSS 宣言はすべて、プロパティと値のペアから成っています�
 - {{cssxref("tan()")}}
 - {{cssxref("url_function", "url()")}}
 
-CSS 値と単位モジュールでは、 `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, `toggle()` の関数も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
+CSS 値と単位モジュールでは、 `calc-mix()`, `first-valid()`, `integrity()`, `random-item()`, `src()`, `type()`, `toggle()` の各関数も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 
 ### データ型
 
-- [`<angle-percentage>`](/ja/docs/Web/CSS/Reference/Values/angle-percentage)
-- [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle)
-- [`<animation-timeline>`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- {{cssxref("angle-percentage")}}
+- {{cssxref("angle")}}
 - [`<attr-name>`](/ja/docs/Web/CSS/Reference/Values/attr#attr-name)
 - [`<attr-type>`](/ja/docs/Web/CSS/Reference/Values/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
 - [`<calc-size-basis>`](/ja/docs/Web/CSS/Reference/Values/calc-size#calc-size-basis)
-- [`<calc-sum>`](/ja/docs/Web/CSS/Reference/Values/calc-sum)
-- [`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident)
-- [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident)
-- [`<dimension>`](/ja/docs/Web/CSS/Reference/Values/dimension)
-- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function)
-- [`<first-valid()>`](/ja/docs/Web/CSS)
-- [`<ident>`](/ja/docs/Web/CSS/Reference/Values/ident)
-- [`<integer>`](/ja/docs/Web/CSS/Reference/Values/integer)
-- [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage)
-- [`<length>`](/ja/docs/Web/CSS/Reference/Values/length)
-- [`<number>`](/ja/docs/Web/CSS/Reference/Values/number)
-- [`<percentage>`](/ja/docs/Web/CSS/Reference/Values/percentage)
-- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position)
-- [`<ratio>`](/ja/docs/Web/CSS/Reference/Values/ratio)
-- [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution)
+- {{cssxref("calc-sum")}}
+- {{cssxref("custom-ident")}}
+- {{cssxref("dashed-ident")}}
+- {{cssxref("dimension")}}
+- {{cssxref("easing-function")}}
+- {{cssxref("ident")}}
+- {{cssxref("integer")}}
+- {{cssxref("length-percentage")}}
+- {{cssxref("length")}}
+- {{cssxref("number")}}
+- {{cssxref("percentage")}}
+- {{cssxref("&lt;position&gt;")}}
+- {{cssxref("ratio")}}
+- {{cssxref("resolution")}}
 - [`<rounding-strategy>`](/ja/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
-- [`<string>`](/ja/docs/Web/CSS/Reference/Values/string)
+- {{cssxref("string")}}
 - [`<syntax>`](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
-- [`<time-percentage>`](/ja/docs/Web/CSS/Reference/Values/time-percentage)
-- [`<time>`](/ja/docs/Web/CSS/Reference/Values/time)
-- [`<url>`](/ja/docs/Web/CSS/Reference/Values/url_value)
+- {{cssxref("time-percentage")}}
+- {{cssxref("time")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - [`<url-modifier>`](/ja/docs/Web/CSS/Reference/Values/url_function#url-modifier)
-- [`<view-timeline-name>`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
-CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/Reference/Values/frequency) および [`<frequency-percentage>`](/ja/docs/Web/CSS/Reference/Values/frequency-percentage) データ型も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
+CSS の値と単位のモジュールでは、{{cssxref("frequency")}} および {{cssxref("frequency-percentage")}} データ型も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 
 #### 単位
 
@@ -142,22 +144,22 @@ CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/
 - [`vw`](/ja/docs/Web/CSS/Reference/Values/length#vw)
 - [`x`](/ja/docs/Web/CSS/Reference/Values/resolution#x)
 
-[フレックス単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#フレックス単位) (`fr`) および[コンテナー単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#コンテナー単位) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) が、それぞれ [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)および [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュールで定義されています。
+[フレックス単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#フレックス単位) (`fr`) および[コンテナー単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#コンテナー単位) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) が、それぞれ [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)や [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュールで定義されています。
 
 #### 単位の分類
 
 - [絶対的な長さの単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#絶対的な長さの単位) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
 - [角度の単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#角度の単位) (`deg`, `grad`, `rad`, `turn`)
-- [既定ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#既定ビューポートサイズ) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [動的ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポートサイズ) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
+- [既定ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#デフォルトビューポート単位) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [動的ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポート単位) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
 - [周期の単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#周期の単位) (`Hz`, `kHz`)
-- [大ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#大ビューポートサイズ) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
+- [大ビューポートパーセント単位](/ja/docs/Web/CSS/Reference/Values/length#大ビューポート単位) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
 - [ローカルフォント相対長](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ローカルフォント相対長) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
 - [物理的な単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#絶対的な長さの単位) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
 - [相対的な長さの単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
 - [解像度の単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#解像度の単位) (`dpcm`, `dpi` , `dppx`, `x`)
 - [ルートフォント相対長](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ルートフォント相対長) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
-- [小ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#小ビューポートサイズ) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
+- [小ビューポートパーセント単位](/ja/docs/Web/CSS/Reference/Values/length#小ビューポート単位) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
 - [時間の単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#時間の単位) (`ms`, `s`)
 - [ビューポート単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ビューポート単位) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
 - [視覚角度単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#絶対的な長さの単位) (`px`)
@@ -201,8 +203,14 @@ CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/
 - [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : CSS プロパティおよび関数の有効な値の設定するには、使用されている形式文法。
 
+- [CSS 型付き演算](/ja/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
+  - : CSSの型付き算術演算子の動作と、それによって可能となる用途を解説します。
+
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
   - : 最も頻繁に使用される値の型を見ていき、それらが何なのか、また、これがどのように動作するのかを見ていきます。
+
+- [CSS 値のシリアライズ](/ja/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : [CSSOM API](/ja/docs/Web/API/CSS_Object_Model) が色やその他の値を標準化されたの文字列表現にシリアライズする方法です。
 
 ## 関連事項
 
@@ -227,8 +235,8 @@ CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/
   - [`color-mix()`](/ja/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
 - [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
-  - {{cssxref("&lt;image&gt;")}}
-  - {{cssxref("&lt;gradient&gt;")}}
+  - {{cssxref("image")}}
+  - {{cssxref("gradient")}}
 
 ## 仕様書
 

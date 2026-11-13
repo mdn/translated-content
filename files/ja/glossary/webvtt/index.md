@@ -1,21 +1,16 @@
 ---
 title: WebVTT
 slug: Glossary/WebVTT
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+WebVTT (Web Video Text Tracks) は {{Glossary("W3C")}} 規格で、HTML の {{HTMLElement("track")}} 要素とともに文字データのマークアップを行うファイル形式を策定します。
 
-WebVTT (Web Video Text Tracks) は HTML {{HTMLElement("track")}} 要素とともに文字データのマークアップを行うファイルフォーマットを策定する {{Glossary("W3C")}} 規格です。
+WebVTT ファイルでは、動画のキャプションや字幕、動画の説明テキスト、コンテンツナビゲーション用チャプターなどが、音声や動画の再生時間に合わせたメタデータとして表現されています。
 
-WebVTT ファイルでは、動画の字幕やサブタイトル・動画の説明テキスト・コンテンツナビゲーション用チャプターなどが、音声や動画の再生時間に合わせたメタデータとして表現されています。
+## 関連情報
 
-## 関連項目
-
-### 一般知識
-
-- ウィキペディアの「[WebVTT](https://ja.wikipedia.org/wiki/WebVTT)」の記事(英語)
-
-### 技術リファレンス
-
-- MDN の「[WebVTT](/ja/docs/Web/API/WebVTT_API)」の記事
-- [W3C 規格文書](https://www.w3.org/TR/webvtt1/)
+- [WebVTT](https://ja.wikipedia.org/wiki/WebVTT) - ウィキペディア
+- [WebVTT](/ja/docs/Web/API/WebVTT_API) - MDN
+- [仕様書](https://w3c.github.io/webvtt/)<sup>(英語)</sup>

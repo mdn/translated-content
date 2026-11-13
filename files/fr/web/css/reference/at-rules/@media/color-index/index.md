@@ -1,16 +1,16 @@
 ---
-title: color-index
+title: Caractéristique média CSS `color-index`
+short-title: color-index
 slug: Web/CSS/Reference/At-rules/@media/color-index
-original_slug: Web/CSS/@media/color-index
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-index`** est utilisée pour tester le nombre d'entrées dans la table de recherche des couleurs du périphérique de sortie.
 
 ## Syntaxe
 
-La caractéristique `color-index` est définie sous la forme d'un entier (type {{cssxref("&lt;integer&gt;")}}) et représente le nombre d'entrées de la palette de couleurs de l'appareil d'affichage (ou zéro si l'appareil n'utilise pas une telle palette). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-color-index`** et **`max-color-index`** afin cibler des règles en fonction d'un minimum ou d'un maximum.
+La caractéristique `color-index` est définie sous la forme d'un entier (type {{CSSxRef("&lt;integer&gt;")}}) et représente le nombre d'entrées de la palette de couleurs de l'appareil d'affichage (ou zéro si l'appareil n'utilise pas une telle palette). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-color-index`** et **`max-color-index`** afin cibler des règles en fonction d'un minimum ou d'un maximum.
 
 ## Exemples
 
@@ -69,4 +69,4 @@ Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les ap
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

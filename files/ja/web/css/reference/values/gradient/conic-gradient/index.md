@@ -1,12 +1,12 @@
 ---
-title: conic-gradient()
+title: CSS `conic-gradient()` 関数
+short-title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
-original_slug: Web/CSS/gradient/conic-gradient
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: conic-gradient()")}}
 
@@ -55,7 +55,10 @@ background: conic-gradient(
 ## 構文
 
 ```css
-/* 45度回転した扇形グラデーション、
+/* 単一色の赤のグラデーション */
+conic-gradient(red)
+
+/* 45 度回転した扇形グラデーション、
    青で始まり赤で終わる */
 conic-gradient(from 45deg, blue, red)
 
@@ -84,12 +87,12 @@ conic-gradient(
 
 ### 値
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
-  - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
+  - : {{cssxref("background-position")}} プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
 - `<angular-color-stop>`
-  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。
+  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{cssxref("angle")}}) が続きます。
 - `<color-hint>`
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する{{Glossary("interpolation","補間")}}のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
@@ -98,7 +101,7 @@ conic-gradient(
 
 ## 解説
 
-他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
+他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
 
 繰り返して 360 度の回転を埋める扇形グラデーションを生成するには、代わりに {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 関数を使用してください。
 
@@ -121,7 +124,7 @@ conic-gradient(
 
 #### グラデーションのカスタマイズ
 
-グラデーション円弧上に角度のついた色経由点をさらに追加することで、複数の色の間で高度なカスタマイズされた遷移を行うことができます。色経由点の位置は、 {{CSSxRef("&lt;angle&gt;")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、前の色経由点と後の色経由点の中間に配置されます。最初の色経由点と最後の色経由点に角度を指定しない場合、その値はそれぞれ 0deg と 360deg です。次の2つのグラデーションは同等です。
+グラデーション円弧上に角度のついた色経由点をさらに追加することで、複数の色の間で高度なカスタマイズされた遷移を行うことができます。色経由点の位置は、 {{cssxref("angle")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、前の色経由点と後の色経由点の中間に配置されます。最初の色経由点と最後の色経由点に角度を指定しない場合、その値はそれぞれ 0deg と 360deg です。次の2つのグラデーションは同等です。
 
 ```css
 conic-gradient(red, orange, yellow, green, blue);
@@ -134,11 +137,11 @@ conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg)
 conic-gradient(red 40grad, 80grad, blue 360grad);
 ```
 
-2 つ以上の色経由点が同じ場所にある場合、その場所で宣言された最初の色と最後の色の間に不連続の (硬い) 色変化として表示されます。扇形グラデーションを使用して円グラフを作成するには、 — 背景画像はアクセシビリティが確保できないため、正しい方法ではありませんが — 隣接する 2 つの色経由点の色経由点の角度が同じである、硬い色経由点を使用します。これを実現する最も簡単な方法は、複数のポジションの色経由点を使用することです。次の 2 つの宣言は等価です。
+2 つ以上の色経由点が同じ場所にある場合、その場所で宣言された最初の色と最後の色の間に不連続の (硬い) 色変化として表示されます。扇形グラデーションを使用して円グラフを作成するには、 — 背景画像はアクセシビリティが確保できないため、正しい方法ではありませんが — 隣接する 2 つの色経由点の角度が同じである、硬い色経由点を使用します。これを実現する最も簡単な方法は、複数のポジションの色経由点を使用することです。次の 2 つの宣言は等価です。
 
 ```css
-conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
-conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);
+conic-gradient(white 0.09turn, #bbbbbb 0.09turn, #bbbbbb 0.27turn, #666666 0.27turn, #666666 0.54turn, black 0.54turn);
+conic-gradient(white 0turn 0.09turn, #bbbbbb 0.09turn 0.27turn, #666666 0.27turn 0.54turn, black 0.54turn 1turn);
 ```
 
 色経由点は、昇順に並べる必要があります。後続の色経由点がより低い値であった場合、前の色経由点の値を上書きし、硬い (不連続の) 色変化を生成します。次の例では、 30% の地点で赤から黄色に変化し、グラデーションの 35% の地点で黄色から青に変化しています。
@@ -150,11 +153,11 @@ conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
 扇形グラデーションでは、他にもさまざまな効果を作り出すことができます。奇しくも市松模様もその一つです。左上と右下の白、左下と右上の黒で四分円を作り、グラデーションを16回 (横に4回、下に4回) 繰り返すと市松模様になります。
 
 ```css
-conic-gradient(#fff 90deg, #000 0.25turn 0.5turn, #fff 1rad 1.5rad, #000 300grad);
+conic-gradient(white 90deg, black 0.25turn 0.5turn, white calc(pi * 1rad) calc(pi * 1.5rad), black 300grad);
 background-size: 25% 25%;
 ```
 
-そして、そうですね、異なる角度のユニットを混ぜて使うこともできますが、やめておきましょう。以上、読みにくかったですね。
+そして、そうですね、異なる角度の単位を混ぜて使うこともできますが、やめておきましょう。上記のものは読みにくいですね。
 
 ## 形式文法
 
@@ -165,7 +168,7 @@ background-size: 25% 25%;
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えられません。扇形グラデーションを使って円グラフや市松模様などの効果を出すことは可能ですが、 CSS 画像は代替テキストを割り当てるネイティブな方法を提供していないため、扇形グラデーションで表現された画像はスクリーンリーダーのユーザーが認知することはできません。ページの全体的な目的を理解するために重要な情報が画像に含まれている場合は、文書内で意味的に記述する方が良いでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 例
 
@@ -184,7 +187,7 @@ div {
 
 ```css live-sample___gradient_at_40-degrees
 div {
-  background-image: conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, white, black);
 }
 ```
 
@@ -251,10 +254,10 @@ div {
 ```css live-sample___checkerboard
 div {
   background: conic-gradient(
-      #fff 0.25turn,
-      #000 0.25turn 0.5turn,
-      #fff 0.5turn 0.75turn,
-      #000 0.75turn
+      white 0.25turn,
+      black 0.25turn 0.5turn,
+      white 0.5turn 0.75turn,
+      black 0.75turn
     )
     top left / 25% 25% repeat;
   border: 1px solid;
@@ -323,10 +326,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
+- {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

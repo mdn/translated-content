@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Logical_properties_and_values
 original_slug: Web/CSS/CSS_logical_properties_and_values
 ---
 
-{{CSSRef}}
-
 **_CSS Logical Properties_** (les propriétés logiques CSS) est un module CSS qui définit une correspondance logique vers les propriétés physiques de contrôle de la mise en page selon le sens de lecture et l'orientation du texte. On aura deux directions logiques : _block_ et _inline_, perpendiculaires, qui dépendent du sens de l'orientation du document.
 
 Ce module définit également les propriétés logiques et les valeurs pour les propriétés précédemment définies avec CSS 2.1. Les propriétés logiques sont des propriétés dont l'orientation est relative au mode d'écriture du document et possèdent des propriétés physiques équivalentes.

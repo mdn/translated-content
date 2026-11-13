@@ -23,7 +23,7 @@ navigate(url)
 
 ### 返回值
 
-如果该 URL 与 service worker 同源，则返回一个兑现为现有 {{domxref("WindowClient")}} 的 {{jsxref("Promise")}}；否则返回 {{jsxref("Operators/null", "null")}}。
+如果该 URL 与 service worker 同源，则返回一个兑现为现有 {{domxref("WindowClient")}} 的 {{jsxref("Promise")}}；否则返回 {{jsxref("null")}}。
 
 ## 规范
 

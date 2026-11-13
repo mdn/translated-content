@@ -1,12 +1,12 @@
 ---
-title: repeating-radial-gradient()
+title: CSS `repeating-radial-gradient()` 関数
+short-title: repeating-radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-radial-gradient
-original_slug: Web/CSS/gradient/repeating-radial-gradient
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
+**`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: repeating-radial-gradient()")}}
 
@@ -21,10 +21,10 @@ background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```css interactive-example-choice
 background: repeating-radial-gradient(
   circle at 100%,
-  #333,
-  #333 10px,
-  #eee 10px,
-  #eee 20px
+  #333333,
+  #333333 10px,
+  #eeeeee 10px,
+  #eeeeee 20px
 );
 ```
 
@@ -83,9 +83,9 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<color-stop>`
   - : 色経由点の {{cssxref("&lt;color&gt;")}} 値と、それに続く省略可能な経由位置 (グラデーション軸沿いの {{cssxref("&lt;percentage&gt;")}} または {{cssxref("&lt;length&gt;")}}) です。 percentage が `0%`、または length が `0` の場合は、グラデーションの中心を表します。 `100%` は終端の形状と仮想グラデーション光の交点を表します。その間のパーセント値は仮想グラデーション光における直線的な位置です。
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 例
 
@@ -216,10 +216,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
+- {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

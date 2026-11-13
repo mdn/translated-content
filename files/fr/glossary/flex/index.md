@@ -2,7 +2,7 @@
 title: Flex
 slug: Glossary/Flex
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 5ba55a6939c0aaf988fc4d34ad7e51c52373a2a6
 ---
 
 `flex` est une nouvelle valeur ajoutée à la propriété CSS {{CSSxRef("display")}}. De même qu'`inline-flex`, elle transforme l'élément auquel elle s'applique en un {{Glossary("Flex Container","conteneur flexible")}} et les enfants de l'élément en {{Glossary("Flex Item","éléments flexible")}}. Les éléments participent alors à la mise en page flexible, et toutes les propriétés définies dans [le module de mise en page de boîte flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout) peuvent être appliquées.

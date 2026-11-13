@@ -1,9 +1,8 @@
 ---
 title: place-self
 slug: Web/CSS/Reference/Properties/place-self
-original_slug: Web/CSS/place-self
 l10n:
-  sourceCommit: b505d75f1dbc5f31dd06eecab86e0b86159a4caa
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
@@ -47,7 +46,7 @@ place-self: end center;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -56,8 +55,8 @@ place-self: end center;
 
 根のプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-self`](/ja/docs/Web/CSS/Reference/Properties/align-self)
-- [`justify-self`](/ja/docs/Web/CSS/Reference/Properties/justify-self)
+- {{cssxref("align-self")}}
+- {{cssxref("justify-self")}}
 
 ## 構文
 
@@ -128,9 +127,9 @@ place-self: unset;
 
 ## 例
 
-### 簡単なデモ
+### 基本的なデモ
 
-以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) および [`align-items`](/ja/docs/Web/CSS/Reference/Properties/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
+以下の例では 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには {{cssxref("justify-items")}} および {{cssxref("align-items")}} の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
 2 番目、3 番目、4 番目のグリッドアイテムは、別々な `place-self` の値を指定し、これらが既定の配置をオーバーライドする様子を表示します。これらの値はグリッドアイテムの幅や高さを内容物の幅や高さに設定し、セルごとにブロック方向とインライン方向の両方で異なる位置に配置しています。
 
@@ -149,7 +148,7 @@ place-self: unset;
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -191,7 +190,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## 仕様書
 
@@ -207,5 +206,5 @@ span {
 - {{cssxref("justify-self")}}
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

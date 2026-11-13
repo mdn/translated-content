@@ -2,7 +2,7 @@
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/Reference/JavaScript_interface/compileStreaming_static
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.compileStreaming()`** 静态方法直接将流式传输的底层源码编译为一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。如果在实例化模块之前必须要对其进行编译，那么这个函数就是有用的（否则，应该使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 函数）。
@@ -89,6 +89,6 @@ WebAssembly.compileStreaming(fetch("log-concat.wasm"), compileOptions)
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

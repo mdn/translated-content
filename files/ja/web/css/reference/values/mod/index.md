@@ -1,9 +1,9 @@
 ---
-title: mod()
+title: CSS `mod()` 関数
+short-title: mod()
 slug: Web/CSS/Reference/Values/mod
-original_slug: Web/CSS/mod
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`mod()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、最初の引数を 2 つ目の引数で割ったときのモジュラスを返します。これは、JavaScript の[剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) と似ています。モジュラスは、1 つのオペランド（被除数）を 2 つ目のオペランド（除数）で割ったときに残る値です。常に除数の符号を取ります。

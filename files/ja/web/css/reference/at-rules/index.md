@@ -3,10 +3,10 @@ title: CSS アットルール
 short-title: アットルール
 slug: Web/CSS/Reference/At-rules
 l10n:
-  sourceCommit: 55ace19185180eaaec2faa470d044d7c2cea7cd7
+  sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
 ---
 
-**アットルール**は CSS がどのように動作するかを指示する [CSS 文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)です。これらは、スタイルルールやその他のアットルールをグループ化・構造化するため、選択されたコンテンツと直接関連しないスタイル情報を宣言するため、およびインポートや名前空間キーワードマッピングといった構文構造を管理するために使用されます。アット記号 `@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。
+**アットルール**は CSS がどのように動作するかを指示する [CSS 文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の文)です。これらは、スタイルルールやその他のアットルールをグループ化・構造化するため、選択されたコンテンツと直接関連しないスタイル情報を宣言するため、およびインポートや名前空間キーワードマッピングといった構文構造を管理するために使用されます。アット記号 `@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。
 
 ## アットルールとアットルール記述子の索引
 
@@ -24,6 +24,7 @@ l10n:
   - {{cssxref("@counter-style/suffix")}}
   - {{cssxref("@counter-style/symbols")}}
   - {{cssxref("@counter-style/system")}}
+- {{cssxref("@custom-media")}}
 - {{cssxref("@document")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
   - {{cssxref("@font-face/ascent-override")}}

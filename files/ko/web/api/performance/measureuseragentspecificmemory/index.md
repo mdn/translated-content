@@ -99,7 +99,7 @@ measureUserAgentSpecificMemory()
 
 ## 보안 요구사항
 
-이 메서드를 사용하려면 문서가 [보안 환경](/ko/docs/Web/Security/Secure_Contexts)에 존재하고, {{domxref("Window.crossOriginIsolated","교차 출처 격리","","nocode")}} 되어야 합니다.
+이 메서드를 사용하려면 문서가 [보안 환경](/ko/docs/Web/Security/Defenses/Secure_Contexts)에 존재하고, {{domxref("Window.crossOriginIsolated","교차 출처 격리","","nocode")}} 되어야 합니다.
 
 {{domxref("Window.crossOriginIsolated")}}와 {{domxref("WorkerGlobalScope.crossOriginIsolated")}} 속성을 사용하여 문서가 교차 출처 격리되어 있는지 확인할 수 있습니다:
 

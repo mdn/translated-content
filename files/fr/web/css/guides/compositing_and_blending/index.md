@@ -1,9 +1,9 @@
 ---
 title: Composition et fusion CSS
+short-title: Composition et fusion
 slug: Web/CSS/Guides/Compositing_and_blending
-original_slug: Web/CSS/CSS_compositing_and_blending
 l10n:
-  sourceCommit: 6cd62fb4482a2d6927cebd0223bf8d0386095340
+  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
 ---
 
 Le module **Composition et fusion CSS** définit comment les couches d'arrière-plan d'un élément qui peuvent être fusionnées, comment un élément peut être fusionné avec son conteneur, et si l'élément doit créer un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
@@ -80,7 +80,7 @@ span {
 }
 ```
 
-{{EmbedLiveSample("compositing", "", "450px")}}
+{{EmbedLiveSample("compositing", "", 450)}}
 
 Remarquez comment l'arrière-plan, la bordure et le contenu sont tous impactés par la fusion.
 Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modifier le code de l'animation dans le MDN Playground.
@@ -89,21 +89,21 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modi
 
 ### Propriétés
 
-- {{cssxref("background-blend-mode")}}
-- {{cssxref("isolation")}}
-- {{cssxref("mix-blend-mode")}}
+- {{CSSxRef("background-blend-mode")}}
+- {{CSSxRef("isolation")}}
+- {{CSSxRef("mix-blend-mode")}}
 
 ## Concepts associés
 
-- Le type de donnée {{cssxref("blend-mode")}}
-- La propriété CSS {{cssxref("backdrop-filter")}}
-- La propriété CSS {{cssxref("filter")}}
-- La propriété CSS {{cssxref("mask-composite")}}
-- La propriété CSS {{cssxref("background-color")}}
-- La propriété CSS {{cssxref("background-image")}}
-- Le terme du glossaire {{glossary("stacking context")}}
-- La primitive de filtre SVG {{ SVGElement("feBlend")}}
-- La primitive de filtre SVG {{ SVGElement("feComposite")}}
+- Le type de donnée {{CSSxRef("&lt;blend-mode&gt;")}}
+- La propriété CSS {{CSSxRef("backdrop-filter")}}
+- La propriété CSS {{CSSxRef("filter")}}
+- La propriété CSS {{CSSxRef("mask-composite")}}
+- La propriété CSS {{CSSxRef("background-color")}}
+- La propriété CSS {{CSSxRef("background-image")}}
+- Le terme du glossaire {{Glossary("stacking context", "Contexte d'empilement")}}
+- La primitive de filtre SVG {{SVGElement("feBlend")}}
+- La primitive de filtre SVG {{SVGElement("feComposite")}}
 
 ## Spécifications
 

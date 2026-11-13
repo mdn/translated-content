@@ -1,9 +1,9 @@
 ---
-title: scripting
+title: Caractéristique média CSS `scripting`
+short-title: scripting
 slug: Web/CSS/Reference/At-rules/@media/scripting
-original_slug: Web/CSS/@media/scripting
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scripting`** permet de tester si les scripts (comme JavaScript) sont disponibles.
@@ -75,4 +75,4 @@ p {
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

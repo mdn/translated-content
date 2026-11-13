@@ -1,9 +1,9 @@
 ---
-title: round()
+title: CSS `round()` 関数
+short-title: round()
 slug: Web/CSS/Reference/Values/round
-original_slug: Web/CSS/round
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`round()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、選択した丸め方法に基づいて、丸めた数値を返します。

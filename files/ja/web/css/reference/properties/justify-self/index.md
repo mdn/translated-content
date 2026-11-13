@@ -1,9 +1,8 @@
 ---
 title: justify-self
 slug: Web/CSS/Reference/Properties/justify-self
-original_slug: Web/CSS/justify-self
 l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。
@@ -47,7 +46,7 @@ justify-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -157,9 +156,9 @@ justify-self: unset;
 
 ## 例
 
-### 簡単なデモ
+### 基本的なデモ
 
-以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには `justify-items` の値を `stretch` に — 既定値に — 設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
+以下の例では 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには `justify-items` の値を `stretch` に — デフォルト値に — 設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
 2 番目、3 番目、4 番目のグリッドアイテムは、別々な `justify-self` の値を指定し、これらが `justify-items` の値をオーバーライドする様子を表示します。これらの値はグリッドアイテムを内容物の幅に設定し、セルごとに異なる位置に配置しています。
 
@@ -178,7 +177,7 @@ justify-self: unset;
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -221,7 +220,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 200)}}
 
 ## 仕様書
 
@@ -233,6 +232,8 @@ span {
 
 ## 関連情報
 
-- {{CSSxRef("justify-items")}}
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- {{CSSxRef("justify-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("place-self")}}

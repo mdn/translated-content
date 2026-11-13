@@ -54,4 +54,4 @@ p ~ span {
 
 ## 같이 보기
 
-- [인접 형제 결합자](/ko/docs/Web/CSS/Next-sibling_combinator)
+- [인접 형제 결합자](/ko/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)

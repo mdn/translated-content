@@ -1,9 +1,9 @@
 ---
-title: :local-link
+title: Pseudo-classe CSS `:local-link`
+short-title: :local-link
 slug: Web/CSS/Reference/Selectors/:local-link
-original_slug: Web/CSS/:local-link
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: e59d26003fa9f0a91ae316fad08c5977cf69908b
 ---
 
 {{SeeCompatTable}}
@@ -21,7 +21,7 @@ a:local-link {
 
 ```css
 :local-link {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -57,8 +57,8 @@ Cette fonctionnalité est une proposition intégrée dans la spécification. Act
 ## Voir aussi
 
 - Pseudo-classes relatives aux liens&nbsp;:
-  - {{cssxref(":link")}}
-  - {{cssxref(":visited")}}
-  - {{cssxref(":hover")}}
-  - {{cssxref(":active")}}
+  - {{CSSxRef(":link")}}
+  - {{CSSxRef(":visited")}}
+  - {{CSSxRef(":hover")}}
+  - {{CSSxRef(":active")}}
 - Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

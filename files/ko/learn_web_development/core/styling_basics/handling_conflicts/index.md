@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 이 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
 
@@ -25,11 +25,11 @@ original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/ko/docs/Learn/CSS/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -336,7 +336,7 @@ h2 {
 > [!NOTE]
 > 범용 선택자 (`*`), 결합자 (`+`, `>`, `~`, ' ') 및 부정 pseudo-class (`:not`) 는 우선 순위에 영향을 미치지 않습니다.
 
-다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/CSS_selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
+다음 표는 기분을 전환하기 위해 몇 가지 분리된 예를 보여줍니다. 이것들을 살펴보고 왜 그들이 우리에게 그들에게 주어진 우선 순위를 가지고 있는지 이해하도록 하십시오. 선택자는 아직 자세히 다루지 않았지만, MDN [선택자 참조](/ko/docs/Web/CSS/Guides/Selectors) 에서 각 선택자의 세부 정보를 찾을 수 있습니다.
 
 | 선택자                                                                                                        | Thousands | Hundreds | Tens | Ones | Total specificity |
 | ------------------------------------------------------------------------------------------------------------- | --------- | -------- | ---- | ---- | ----------------- |
@@ -543,4 +543,4 @@ p#addSpecificity {
 
 스타일이 예상대로 적용되지 않는 이상한 문제가 발생하면 여기를 다시 참조 하십시오. 우선 순위 문제일 수 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Cascade_layers", "Learn_web_development/Core/Styling_basics")}}

@@ -2,10 +2,8 @@
 title: 実践的な位置指定の例
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
-
-{{LearnSidebar}}
 
 この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。
 
@@ -162,7 +160,7 @@ body {
 
 ```css
 .info-box [role="tab"] {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   line-height: 3rem;
   background: white;
   color: #b60000;
@@ -357,7 +355,7 @@ body {
 </button>
 
 <aside id="info-panel" aria-labelledby="menu-button">
-…
+  …
 </aside>
 ```
 

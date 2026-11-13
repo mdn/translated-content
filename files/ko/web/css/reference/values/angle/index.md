@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/angle
 original_slug: Web/CSS/angle
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<angle>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 각도의 값을 도, 그레이드, 라디안 또는 회전수로 표현합니다. {{cssxref("&lt;gradient&gt;")}}나 일부 {{cssxref("transform")}} 함수에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<angle>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 각도의 값을 도, 그레이드, 라디안 또는 회전수로 표현합니다. {{cssxref("&lt;gradient&gt;")}}나 일부 {{cssxref("transform")}} 함수에서 사용합니다.
 
 {{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 

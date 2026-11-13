@@ -2,7 +2,7 @@
 title: 属性の反映
 slug: Web/API/Document_Object_Model/Reflected_attributes
 l10n:
-  sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
+  sourceCommit: 94e900db86109d76e8a1e120e3b135db0d543c87
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -191,7 +191,7 @@ console.log(attributeValue);
 上記の例を続けます。
 
 ```js
-inputElement.setAttribute("aria-labelledby", "input1");
+inputElement.setAttribute("aria-labelledby", "label_1");
 
 attributeValue = inputElement.getAttribute("aria-labelledby");
 console.log(attributeValue);

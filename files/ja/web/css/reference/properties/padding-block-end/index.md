@@ -1,9 +1,8 @@
 ---
 title: padding-block-end
 slug: Web/CSS/Reference/Properties/padding-block-end
-original_slug: Web/CSS/padding-block-end
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`padding-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な末尾側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。

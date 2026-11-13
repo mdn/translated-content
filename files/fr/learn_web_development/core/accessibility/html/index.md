@@ -4,28 +4,18 @@ slug: Learn_web_development/Core/Accessibility/HTML
 original_slug: Learn/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Une grande partie des contenus web peut être rendue accessible simplement en s'assurant d'utiliser les éléments HTML appropriés systématiquement. Cet article détaille comment HTML peut être utilisé pour un maximum d'accessibilité.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Compétences informatiques de base, compréhension basique de HTML (voir<a
-          href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          > </a
-        ><a href="/fr/docs/Learn/HTML/Introduction_to_HTML">I</a
-        ><a href="/fr/Apprendre/HTML/Introduction_à_HTML">ntroduction à HTML</a
-        >), et compréhension de
-        <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"
-          >Qu'est ce que l'accessibilité ?</a
-        >
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Connaissance de base de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et une <a href="/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">compréhension des concepts fondamentaux de l'accessibilité</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif d'apprentissage&nbsp;:</th>
       <td>
         Se familiariser avec les fonctionnalités de HTML qui bénéficient à
         l'accessibilité, et comment les utiliser de manière appropriée dans vos
@@ -565,4 +555,4 @@ La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait q
 
 Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s'occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l'accessibilité est affectée par leur bon ou mauvais usage.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}

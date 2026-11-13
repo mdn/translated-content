@@ -15,7 +15,7 @@ slug: Web/API/ServiceWorkerGlobalScope
 
 该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}.
 
-{{InheritanceDiagram(700, 85, 20)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

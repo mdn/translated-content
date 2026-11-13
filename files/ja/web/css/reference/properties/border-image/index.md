@@ -1,12 +1,14 @@
 ---
 title: border-image
 slug: Web/CSS/Reference/Properties/border-image
-original_slug: Web/CSS/border-image
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/Reference/Properties/border)を置き換えます。
+
+> [!NOTE]
+> 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
 
 {{InteractiveExample("CSS デモ: border-image")}}
 
@@ -35,7 +37,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">これは周囲に境界があるボックスです。</div>
 </section>
 ```
 
@@ -48,7 +50,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -56,18 +58,15 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 }
 ```
 
-> [!NOTE]
-> 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-image-outset`](/ja/docs/Web/CSS/Reference/Properties/border-image-outset)
-- [`border-image-repeat`](/ja/docs/Web/CSS/Reference/Properties/border-image-repeat)
-- [`border-image-slice`](/ja/docs/Web/CSS/Reference/Properties/border-image-slice)
-- [`border-image-source`](/ja/docs/Web/CSS/Reference/Properties/border-image-source)
-- [`border-image-width`](/ja/docs/Web/CSS/Reference/Properties/border-image-width)
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
 
 ## 構文
 
@@ -102,20 +101,20 @@ border-image: unset;
 - `<'border-image-source'>`
   - : 元となる画像です。 {{cssxref("border-image-source")}} を参照してください。
 - `<'border-image-slice'>`
-  - : source の画像を領域に分割する座標です。4つまでの値が指定できます。 {{cssxref("border-image-slice")}} を参照してください。
+  - : source の画像を領域に分割する座標です。4 つまでの値が指定できます。 {{cssxref("border-image-slice")}} を参照してください。
 - `<'border-image-width'>`
-  - : 境界画像の幅です。4つまでの値が指定できます。 {{cssxref("border-image-width")}} を参照してください。
+  - : 境界画像の幅です。4 つまでの値が指定できます。 {{cssxref("border-image-width")}} を参照してください。
 - `<'border-image-outset'>`
-  - : 要素の縁から境界画像までの間隔です。4つまでの値が指定できます。 {{cssxref("border-image-outset")}} を参照してください。
+  - : 要素の縁から境界画像までの間隔です。4 つまでの値が指定できます。 {{cssxref("border-image-outset")}} を参照してください。
 - `<'border-image-repeat'>`
-  - : source の画像の辺の領域を境界画像の寸法にどのように合わせるかを定義します。2つまでの値が指定できます。 {{cssxref("border-image-repeat")}} を参照してください。
+  - : source の画像の辺の領域を境界画像の寸法にどのように合わせるかを定義します。2 つまでの値が指定できます。 {{cssxref("border-image-repeat")}} を参照してください。
 
 ## アクセシビリティ
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 公式定義
 
@@ -148,7 +147,7 @@ border-image: unset;
 ```css
 #bitmap {
   width: 200px;
-  background-color: #ffa;
+  background-color: #ffffaa;
   border: 36px solid orange;
   margin: 30px;
   padding: 10px;
@@ -178,7 +177,8 @@ border-image: unset;
 #gradient {
   width: 200px;
   border: 30px solid;
-  border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
+  border-image: repeating-linear-gradient(45deg, #ff3333, #33bbff, #ff3333 30px)
+    60;
   padding: 20px;
 }
 ```
@@ -204,7 +204,7 @@ border-image: unset;
 ```css
 #rounded {
   width: 200px;
-  /* Use transparent so the background image is visible */
+  /* 背景画像が見えるように透明を使用する */
   border: 10px solid transparent;
   padding: 20px;
   border-radius: 20px;

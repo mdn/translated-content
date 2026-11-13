@@ -1,12 +1,12 @@
 ---
-title: brightness()
+title: CSS `brightness()` 関数
+short-title: brightness()
 slug: Web/CSS/Reference/Values/filter-function/brightness
-original_slug: Web/CSS/filter-function/brightness
 l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`brightness()`** は [CSS](/ja/docs/Web/CSS) のフィルター関数 ({{cssxref("filter-function")}}) で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。
 
 {{InteractiveExample("CSS デモ: brightness()")}}
 
@@ -44,44 +44,45 @@ brightness(amount)
 
 ### 引数
 
-- `amount`
-  - : 明るさで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。値が `100%` 未満の場合は入力画像または要素が暗くなり、 `100%` を超える場合は明るくなります。値が `0%` の場合は完全に黒い画像または要素が作成され、 `100%` の場合は入力が変更されません。 `0%` から `100%` までの他の値は、線形の乗算効果があります。 `100%` を超える値も許可されており、明るい結果を提供します。{{Glossary("interpolation","補間")}}の初期値は `1` です。負の値は許可されていません。何も指定しない場合の既定値は `1` です。
+- `amount` {{Optional_Inline}}
+  - : 明るさで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。値が `100%` 未満の場合は入力画像または要素が暗くなり、 `100%` を超える場合は明るくなります。値が `0%` の場合は完全に黒い画像または要素が作成され、 `100%` の場合は入力が変更されません。 `0%` から `100%` までの他の値は、線形の乗算効果があります。 `100%` を超える値も許可されており、明るい結果を提供します。{{Glossary("interpolation","補間")}}の初期値は `1` です。負の値は許可されていません。デフォルト値は `1` です。
 
 以下は、等価な値のペアです。
 
 ```css
-brightness(0) /* 輝度がゼロに縮小されるため、入力が黒くなる */
+brightness(0)   /* 輝度がゼロに縮小されるため、入力が黒くなる */
 brightness(0%)
 
 brightness(0.4) /* 入力の明るさが40%に縮小されるため、入力は60%暗くなる */
 brightness(40%)
 
-brightness(1) /* 入力の明るさは変更されない */
+brightness()     /* 入力の明るさは変更されない */
+brightness(1)
 brightness(100%)
 
 brightness(2) /* 入力の明るさが 2 倍に */
 brightness(200%)
 ```
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 例
 
 ### backdrop-filter プロパティを用いた brightness の適用
 
-この例は、段落に `brightness()` フィルターを、 [`backdrop-filter`](/ja/docs/Web/CSS/Reference/Properties/backdrop-filter) プロパティを介して適用する方法を示します。
+この例は、段落に `brightness()` フィルターを、{{cssxref("backdrop-filter")}} プロパティを介して適用する方法を示します。
 
 #### CSS
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat right / contain #d4d5b2;
+  background: url("be_fierce.jpg") no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);
-  text-shadow: 2px 2px #ffffff;
+  text-shadow: 2px 2px white;
 }
 ```
 
@@ -92,14 +93,14 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #000000;
+  color: black;
   font-size: 2rem;
   font-family: sans-serif;
 }
 ```
 
 ```html hidden
-<div class="container" style="background-image: url(be_fierce.jpg);">
+<div class="container">
   <p>
     画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティに欠ける場合があります。
   </p>
@@ -114,7 +115,7 @@ p {
 
 ### 数値とパーセント値を用いた brightness の設定
 
-例えば、 `brightness()` フィルターが、 [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter) プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
+例えば、 `brightness()` フィルターが、{{cssxref("filter")}} プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
 
 ```css
 p:first-of-type {
@@ -157,16 +158,7 @@ SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果�
 
 次のコードがあったとします。
 
-```css hidden
-.filter {
-  filter: brightness(0.75);
-}
-svg {
-  position: absolute;
-}
-```
-
-```html
+```html live-sample___svg_filter
 <svg role="none">
   <filter id="darken25" color-interpolation-filters="sRGB">
     <feComponentTransfer>
@@ -182,14 +174,14 @@ svg {
 
 ```css
 filter: brightness(75%);
-filter: url(#darken25); /* 埋め込み SVG による */
-filter: url(folder/fileName.svg#darken25); /* 外部 SVG フィルター定義 */
+filter: url("#darken25"); /* 埋め込み SVG による */
+filter: url("folder/fileName.svg#darken25"); /* 外部 SVG フィルター定義 */
 ```
 
 下記の画像では、最初の画像は `brightness()` フィルター機能が適用され、 2 つ目の画像は同様の SVG 明るさ機能が適用され、 3 つ目は比較用の元画像です。
 
-```html hidden
-<table cellpadding="5">
+```html hidden live-sample___svg_filter
+<table>
   <thead>
     <tr>
       <th>ライブサンプル</th>
@@ -201,13 +193,13 @@ filter: url(folder/fileName.svg#darken25); /* 外部 SVG フィルター定義 *
     <tr>
       <td>
         <img
-          class="filter"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>
       <td>
         <img
-          style="filter: url(#darken25)"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>
@@ -221,7 +213,24 @@ filter: url(folder/fileName.svg#darken25); /* 外部 SVG フィルター定義 *
 </table>
 ```
 
-{{EmbedLiveSample('blur','100%','280')}}
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: brightness(0.75);
+}
+.svg-filter {
+  filter: url("#darken25");
+}
+
+th,
+td {
+  padding: 5px;
+}
+svg:not(:root) {
+  display: none;
+}
+```
+
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ## 仕様書
 
@@ -234,7 +243,7 @@ filter: url(folder/fileName.svg#darken25); /* 外部 SVG フィルター定義 *
 ## 関連情報
 
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュール
-- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}
   - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

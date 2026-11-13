@@ -39,7 +39,7 @@ container-type: unset;
 `container-type` 속성은 아래 목록 중 하나의 값만 지정할 수도 있고, 두 개의 값을 지정할 수도 있습니다. 이때 두 값을 지정할 경우 하나는 반드시 `스크롤 상태`여야 하며, 다른 하나는 `inline-size` 또는 `size`가 될 수 있습니다. 즉, 요소는 크기 쿼리 컨테이너, 스크롤 상태 쿼리 컨테이너, 둘 다, 또는 둘 다 아닌 상태로 설정할 수 있습니다.
 
 - `inline-size`
-  - : 컨테이너의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions)(가로 방향)에 대한 크기 쿼리를 위한 쿼리 컨테이너를 설정합니다.
+  - : 컨테이너의 [인라인 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions)(가로 방향)에 대한 크기 쿼리를 위한 쿼리 컨테이너를 설정합니다.
     해당 요소에는 layout, style, inline-size 컨테인먼트가 적용됩니다.
 
     요소에 인라인 크기 컨테인먼트가 적용되어, 자식 요소를 무시하고 요소 자체의 인라인 크기만 [독립적으로 계산](/ko/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment)할 수 있습니다(자세한 내용은 [CSS 컨테인먼트 사용하기](/ko/docs/Web/CSS/CSS_containment/Using_CSS_containment) 참고).
@@ -51,7 +51,7 @@ container-type: unset;
   - : 컨테이너의 스크롤 상태 쿼리를 위한 쿼리 컨테이너를 설정합니다. 이 경우, 요소의 크기는 독립적으로 계산되지 않으며, 어떠한 컨테인먼트도 적용되지 않습니다.
 
 - `size`
-  - : 컨테이너의 [인라인과 블록](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) 방향 모두에 대한 크기 쿼리를 위한 쿼리 컨테이너를 설정합니다.
+  - : 컨테이너의 [인라인과 블록](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) 방향 모두에 대한 크기 쿼리를 위한 쿼리 컨테이너를 설정합니다.
     컨테이너에는 레이아웃 컨테인먼트, 스타일 컨테인먼트, 크기 컨테인먼트가 모두 적용됩니다.
 
     요소에는 인라인과 블록 방향 모두에 크기 컨테인먼트가 적용되어, 자식 요소를 무시하고 요소 자체의 크기만 독립적으로 계산할 수 있습니다.
@@ -117,7 +117,7 @@ container-type: unset;
 ```
 
 컨테이너 맥락을 생성하려면 요소에 `container-type` 속성을 추가하면 됩니다.
-아래 예시는 `inline-size` 값을 사용하여 컨테이너의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions)에 대한 컨테인먼트 맥락을 생성하는 방법을 보여줍니다.
+아래 예시는 `inline-size` 값을 사용하여 컨테이너의 [인라인 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions)에 대한 컨테인먼트 맥락을 생성하는 방법을 보여줍니다.
 
 ```css
 .container {

@@ -3,7 +3,7 @@ title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 La méthode **`CustomEvent.initCustomEvent()`** initialise un objet `CustomEvent`. Si l'évènement a déjà été distribué, cette méthode ne change rien.
 
@@ -23,7 +23,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 ### Paramètres
 
 - `type`
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom de l'évènement.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant le nom de l'évènement.
 - _`canBubble`_
   - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si l'événement passe à travers le DOM ou non.
 - `cancelable`

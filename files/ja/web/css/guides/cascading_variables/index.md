@@ -1,9 +1,9 @@
 ---
 title: カスケード変数のための CSS カスタムプロパティ
+short-title: カスケード変数のためのカスタムプロパティ
 slug: Web/CSS/Guides/Cascading_variables
-original_slug: Web/CSS/CSS_cascading_variables
 l10n:
-  sourceCommit: 948ade920e17ec0b9351e2d1983ec6fec79d87d2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **カスケード変数のための CSS カスタムプロパティ**モジュールは、CSS プロパティにカスケード変数の対応を追加し、カスタム変数を定義するためのカスタムプロパティを作成し、カスタムプロパティを他にも CSS プロパティの値として使用することができます。
@@ -90,7 +90,7 @@ input {
 }
 ```
 
-{{EmbedLiveSample("",600,160)}}
+{{EmbedLiveSample("Custom properties in action",600,160)}}
 
 これらの色見本では、 {{cssxref("background-color")}} は {{cssxref("color_value/hsl", "hsl()")}} の {{cssxref("&lt;color&gt;")}} 関数を使用して、 `hsl(var(--hue) 50% 50%)` のように設定します。
 `calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` などのように、色相 ({{cssxref("hue")}}) の値を 10 度ずつ増加します。
@@ -117,7 +117,7 @@ input {
 ## 関連概念
 
 - [CSS プロパティと値 API](/ja/docs/Web/CSS/Guides/Properties_and_values_API) モジュール
-  - [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルール
+  - {{cssxref("@property")}} アットルール
   - [`CSS.registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッド
 
 ## 仕様書

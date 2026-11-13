@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/color_value
 original_slug: Web/CSS/color_value
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
 
 `<color>`는 다음 방법으로 정의할 수 있습니다.
 
@@ -1199,7 +1199,7 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 보간
 
-애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
+애니메이션과 [그레이디언트](/ko/docs/Web/CSS/Guides/Images/Using_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 접근성 고려사항
 

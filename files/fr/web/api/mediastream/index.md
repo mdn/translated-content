@@ -10,7 +10,7 @@ L'interface `MediaStream` représente le contenu d'un flux de média. Un flux es
 ## Attributs
 
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.
+  - : {{jsxref("String")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.
 - {{domxref("MediaStream.ended")}} {{readonlyInline}}
   - : Booléen dont la valeur est `true` si l'évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou `false` si la fin du flux n'à pas été atteinte.
 

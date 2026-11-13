@@ -149,7 +149,7 @@ clip-path: unset;
   - : Область не создается.
 
 > [!NOTE]
-> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
+> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
 
 ## Формальное определение
 
@@ -209,8 +209,7 @@ clip-path: unset;
       A 0.25,0.25,1,1,1,1,0.3
       C 1,0.7,0.5,1,0.5,1 Z" /&gt;
   &lt;/clipPath&gt;
-&lt;/svg&gt;</pre
-      >
+&lt;/svg&gt;</pre>
     </div>
     <div class="row">
       <div class="cell">

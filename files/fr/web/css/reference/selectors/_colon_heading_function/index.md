@@ -1,9 +1,9 @@
 ---
-title: :heading()
+title: Pseudo-classe CSS `:heading()`
+short-title: :heading()
 slug: Web/CSS/Reference/Selectors/:heading_function
-original_slug: Web/CSS/:heading_function
 l10n:
-  sourceCommit: 1a1fe4efc4bfa6147f084aad12cf9908130f76ab
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}
@@ -11,46 +11,31 @@ l10n:
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:heading()`** représente tous les [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui correspondent à une valeur calculée à l'aide de la notation `An+B`. Cela vous permet de mettre en forme des éléments à des niveaux de titre spécifiques en même temps, plutôt que de les correspondre et de les mettre en forme individuellement.
 
 > [!NOTE]
-> La fonction `:heading()` a la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading()` aurait une spécificité de `0-1-0`, et `section:heading()` aurait une spécificité de `0-1-1`.
+> La fonction `:heading()` a la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity#détermination_de_la_spécificité) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading()` aurait une spécificité de `0-1-0`, et `section:heading()` aurait une spécificité de `0-1-1`.
 
 ## Syntaxe
 
 ```css-nolint
-:heading([ <An+B> [, <An+B>]* | even | odd ]) {
+:heading( <integer># ) {
   /* ... */
 }
 ```
 
 ### Paramètres
 
-La fonction pseudo-classe `:heading()` prend une liste séparée par des virgules d'expressions `An+B` ou de valeurs de mots-clés qui décrivent un modèle pour faire correspondre les éléments de titre.
+La fonction de pseudo-classe `:heading()` prend une liste séparée par des virgules d'entiers ({{CSSxRef("&lt;integer&gt;")}}) qui représentent les niveaux de titre à mettre en forme.
 
-#### Valeurs de mots-clés
+## Notes d'utilisation
 
-- `odd`
-  - : Représente les éléments de titre dont la position numérique est impaire&nbsp;: `<h1>`, `<h3>`, et `<h5>`.
-- `even`
-  - : Représente les éléments de titre dont la position numérique est paire&nbsp;: `<h2>`, `<h4>`, et `<h6>`.
+La pseudo-classe fonctionnelle `:heading()` ne correspond qu'aux éléments qui sont sémantiquement reconnus comme des titres. Elle ne correspond pas aux éléments qui utilisent les attributs [`role="heading"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) ou ['aria-level'](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level).
 
-#### Notation fonctionnelle
-
-- `<An+B>`
-  - : Représente les éléments de titre dont la position numérique correspond au modèle `An+B`, pour chaque valeur entière positive ou nulle de `n`, où&nbsp;:
-    - `A` est une taille de pas entière,
-    - `B` est un décalage entier,
-    - `n` est tous les entiers non négatifs, à partir de 0.
-
-    Cela peut être lu comme le `An+B`-ème élément d'une liste. Les valeurs de `A` et `B` doivent toutes deux avoir des valeurs {{cssxref("&lt;integer&gt;")}}.
-
-## Remarques d'utilisation
-
-La fonction pseudo-classe `:heading()` ne correspond qu'aux éléments qui sont sémantiquement reconnus comme des titres. Elle ne correspond pas aux éléments avec un attribut [`role="heading"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role), ni ne respecte l'attribut ARIA ['aria-level'](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level).
+Le niveau de titre utilisé par `:heading()` peut être différent du [sélecteur de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) d'un élément dans les cas où le navigateur calcule un niveau de titre exposé différent. Par exemple, `h1:heading(3)` correspondra à tout élément `<h1>` exposé comme un titre de niveau 3.
 
 ## Exemples
 
-### Utilisation de paramètres de mots-clés
+### Sélectionner un titre spécifique
 
-Dans cet exemple, le mot-clé `odd` correspond aux titres avec des niveaux impairs, qui sont `<h1>` et `<h3>`. Le mot-clé `even` est utilisé pour cibler les niveaux de titre pairs, `<h2>` et `<h4>`.
+Dans cet exemple, une liste de valeurs séparées par des virgules est utilisée pour cibler les titres de niveaux impairs (`<h1>` et `<h3>`) et de niveaux pairs (`<h2>` et `<h4>`).
 
 ```html
 <h1>Entête 1</h1>
@@ -60,61 +45,15 @@ Dans cet exemple, le mot-clé `odd` correspond aux titres avec des niveaux impai
 ```
 
 ```css
-:heading(odd) {
+:heading(1, 3) {
   color: tomato;
 }
-:heading(even) {
+:heading(2, 4) {
   color: slateblue;
 }
 ```
 
-{{EmbedLiveSample("Utilisation_de_parametres_de_mots-cles", "", "215")}}
-
-### Utilisation de la notation `An+B`
-
-```html
-<h1>Science</h1>
-<h2>Physiques</h2>
-<h3>Physique atomique, moléculaire et optique</h3>
-<h4>Physique optique</h4>
-<h5>Raysons X</h5>
-<h6>Découverte</h6>
-```
-
-```css hidden
-main {
-  display: flex;
-  justify-content: space-around;
-}
-```
-
-```css
-/* Cible les titres <h3> et <h4> */
-:heading(3, 4) {
-  font-weight: 100;
-}
-/* Cible les titres dans l'ordre inverse à partir de <h3> */
-:heading(-n + 3) {
-  color: tomato;
-}
-/* Cible chaque troisième titre à partir de <h1> */
-:heading(3n + 1) {
-  font-style: italic;
-}
-/* Cible les titres après le niveau 5 */
-:heading(n + 5) {
-  color: slateblue;
-}
-```
-
-Dans cet exemple&nbsp;:
-
-- `:heading(3, 4)` correspond aux éléments `<h3>` et `<h4>`
-- `:heading(-n + 3)` correspond aux éléments de titre dans l'ordre inverse, donc `<h3>`, `<h2>` et `<h1>`
-- `:heading(3n + 1)` correspond à chaque troisième élément de titre (`3n`) à partir de `<h1>`, donc cela inclurait `<h1>` et `<h4>`
-- `:heading(n + 5)` correspond aux éléments de titre à partir de `<h5>` et inclura `<h6>`
-
-{{EmbedLiveSample("Functional_notation_example", "", "292")}}
+{{EmbedLiveSample("Sélectionner un titre spécifique", "", 215)}}
 
 ## Spécifications
 
@@ -126,4 +65,4 @@ Dans cet exemple&nbsp;:
 
 ## Voir aussi
 
-- Le sélecteur {{CSSXRef(":heading")}}
+- La pseudo-classe {{CSSxRef(":heading")}}

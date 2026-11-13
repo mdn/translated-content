@@ -1,12 +1,12 @@
 ---
-title: font-display
+title: Descripteur de règle CSS `font-display`
+short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
-original_slug: Web/CSS/@font-face/font-display
 l10n:
-  sourceCommit: 7c5497422bc7ec41f0aa1caf940c2e1fd6083941
+  sourceCommit: 91e08923c809ca8deded3e3294f49bbe1a4a00b3
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.
 
 ## Syntaxe
 
@@ -45,21 +45,19 @@ La chronologie d'affichage de la police est basée sur un minuteur qui commence 
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ```css
 @font-face {
-  font-family: FonteExemple;
-  src:
-    url("/chemin/vers/fonts/example-font.woff") format("woff"),
-    url("/chemin/vers/fonts/example-font.eot") format("embedded-opentype");
-  font-weight: 400;
+  font-family: "ExampleFont";
+  src: url("/path/to/fonts/example-font.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: fallback;
 }
@@ -75,11 +73,11 @@ La chronologie d'affichage de la police est basée sur un minuteur qui commence 
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}

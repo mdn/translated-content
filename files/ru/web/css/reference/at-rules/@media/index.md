@@ -7,14 +7,14 @@ slug: Web/CSS/Reference/At-rules/@media
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/CSS_syntax/At-rules) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/Guides/Syntax/At-rules) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/ru/docs/Web/CSS/Guides/Media_queries/Using).
 
 > [!NOTE]
 > В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
 
 ## Синтаксис
 
-@-правило `@media` можно разместить на верхнем уровне CSS или внутри любого фрагмента [условной группы @-правил](/ru/docs/Web/CSS/CSS_syntax/At-rules#conditional_group_rules).
+@-правило `@media` можно разместить на верхнем уровне CSS или внутри любого фрагмента [условной группы @-правил](/ru/docs/Web/CSS/Guides/Syntax/At-rules#conditional_group_rules).
 
 ```css
 /* На верхнем уровне кода */
@@ -34,7 +34,7 @@ slug: Web/CSS/Reference/At-rules/@media
 }
 ```
 
-Для рассмотрения синтаксиса медиавыражений, см. [Использование медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+Для рассмотрения синтаксиса медиавыражений, см. [Использование медиавыражений](/ru/docs/Web/CSS/Guides/Media_queries/Using#syntax).
 
 ### Формальный синтаксис
 
@@ -47,7 +47,7 @@ A `<media-query>` is composed of a optional media type and/or a number of media 
 - all
   - : Подходит для всех устройств.
 - print
-  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/ru/docs/Web/CSS/CSS_paged_media), and the [media section of the Getting Started tutorial](/ru/docs/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
+  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/ru/docs/Web/CSS/Guides/Paged_media), and the [media section of the Getting Started tutorial](/ru/docs/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
 - screen
   - : Предназначен в первую очередь для цветных компьютерных экранов.
 - speech
@@ -127,5 +127,5 @@ Each _media feature_ tests for one specific feature of the browser or device.
 
 ## Смотрите также
 
-- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/ru/docs/Web/CSS/Guides/Media_queries/Using)
 - The CSSOM {{ domxref("CSSMediaRule") }} associated with this at-rule.

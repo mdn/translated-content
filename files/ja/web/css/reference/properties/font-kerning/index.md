@@ -1,9 +1,9 @@
 ---
-title: font-kerning
+title: "`font-kerning` プロパティ (CSS)"
+short-title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
-original_slug: Web/CSS/font-kerning
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
@@ -25,7 +25,7 @@ font-kerning: none;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+    "We took Tracy to see 'THE WATERFALL' in W. Virginia."
   </div>
 </section>
 ```
@@ -36,7 +36,7 @@ section {
 }
 ```
 
-*カーニング*は、文字の間隔をどれだけ取るかを定義します。_well-kerned_ フォントでは、この機能は文字間を他と比較してより整った読みやすい間隔にします。
+「カーニング」は、文字同士の間隔に作用します。適切にカーニングされたフォントでは、この機能により特定の文字組み合わせ間の空白が縮小され、文字間隔がより均一で読みやすいものになります。
 
 例えば、下の画像では、左の例ではカーニングが使われていませんが、右の例ではカーニングが使われています。
 
@@ -59,8 +59,10 @@ font-kerning: unset;
 
 ### 値
 
+このプロパティは、以下のキーワード値のいずれかで指定します。
+
 - `auto`
-  - : このキーワードは、カーニングを使用するかをブラウザーに任せます。フォントサイズが小さい場合はカーニングが不自然になることがあるため、ブラウザーは無効化するでしょう。これは既定値です。
+  - : このキーワードは、カーニングを使用するかをブラウザーに任せます。フォントサイズが小さい場合はカーニングが不自然になることがあるため、ブラウザーは無効化するでしょう。これはデフォルト値です。
 - `normal`
   - : このキーワードは、カーニングを適用するよう要求します。
 - `none`

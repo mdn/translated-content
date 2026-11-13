@@ -1,9 +1,9 @@
 ---
-title: rotate()
+title: CSS `rotate()` 関数
+short-title: rotate()
 slug: Web/CSS/Reference/Values/transform-function/rotate
-original_slug: Web/CSS/transform-function/rotate
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: 80ab11f9d757b49325122071a8a6210440ec6551
 ---
 
 **`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -36,11 +36,12 @@ transform: rotate(3.142rad);
 </section>
 ```
 
-要素が回転する中心となる特定の点 — 前述 — は、**変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
+要素が回転する中心となる特定の点 — 前述 — は、**座標変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
+
+> [!NOTE]
+> SVG の [`transform`](/ja/docs/Web/SVG/Reference/Attribute/transform) 属性には独自の文法があり、その中では `rotate()` が、`rotate(45, 50, 50)` のように、回転の中心を示す 2 つのオプションの追加値を受け入れます。この形式は属性内でのみ有効であり、CSS では無効です。CSS の `rotate()` 関数は角度のみを受け取り、中心は {{cssxref("transform-origin")}} で設定します。
 
 ## 構文
-
-`rotate()` で生成される回転の量は、 {{cssxref("&lt;angle&gt;")}} で指定します。正の数であれば、移動は時計回りです。負の数であれば、反時計回りになります。180 度で回転したものは*点対称*と呼ばれます。
 
 ```css
 rotate(a)
@@ -50,12 +51,12 @@ rotate(a)
 
 - _a_
   - : {{ cssxref("&lt;angle&gt;") }} で、回転する角度を表します。回転方向は書字方向に依存します。
-    左書きの文脈では、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きの文脈では 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
+    左書きのコンテキストでは、正の角度は時計回りの回転を、負の角度は反時計回りの回転を表します。右書きのコンテキストでは 正の角度は反時計回りの回転を、負の角度は時計回りの回転を表します。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -64,152 +65,24 @@ rotate(a)
   <tbody>
     <tr>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>-</mo>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo>
-                </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo></mtd
-                ></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr><mtr><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} \cos(a) & -\sin(a) \\ \sin(a) & \cos(a) \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>-</mo>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} \cos(a) & -\sin(a) & 0 \\ \sin(a) & \cos(a) & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>-</mo>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} \cos(a) & -\sin(a) & 0 \\ \sin(a) & \cos(a) & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>-</mo>
-                  <mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>sin</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd
-                  ><mo>cos</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>-</mo><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>sin</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mo>cos</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} \cos(a) & -\sin(a) & 0 & 0 \\ \sin(a) & \cos(a) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -218,6 +91,10 @@ rotate(a)
   </tbody>
 </table>
 
+## 形式文法
+
+{{CSSSyntax}}
+
 ## 例
 
 ### 基本的な例
@@ -225,8 +102,8 @@ rotate(a)
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+<div>通常</div>
+<div class="rotated">回転</div>
 ```
 
 #### CSS
@@ -255,10 +132,10 @@ div {
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="rotate">Rotated</div>
-<div class="rotate-translate">Rotated + Translated</div>
-<div class="translate-rotate">Translated + Rotated</div>
+<div>通常</div>
+<div class="rotate">回転</div>
+<div class="rotate-translate">回転 + 移動</div>
+<div class="translate-rotate">移動 + 回転</div>
 ```
 
 #### CSS
@@ -307,4 +184,4 @@ div {
 - {{cssxref("transform")}} プロパティ
 - {{cssxref("rotate")}} プロパティ
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("transform-function/rotate3d")}}

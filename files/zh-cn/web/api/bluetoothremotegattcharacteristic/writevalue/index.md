@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fd5cc8885286bfa5bae8b3e9970e1eab26e941d
 ---
 
-{{APIRef("Bluetooth API")}}{{Deprecated_header}}{{SecureContext_Header}}
+{{APIRef("Bluetooth API")}}{{SecureContext_Header}}
 
 请改用 {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} 和 {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}}。
 

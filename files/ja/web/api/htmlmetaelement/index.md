@@ -62,7 +62,7 @@ meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);
 ```
 
-ビューポートの設定について詳しくは、[ビューポートの基本](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#ビューポートの基本)を参照してください。
+ビューポートの設定について詳しくは、[ビューポートの基本](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport#ビューポートの基本)を参照してください。
 
 ## 仕様書
 

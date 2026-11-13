@@ -1,9 +1,9 @@
 ---
-title: overscroll-behavior-inline
+title: "`overscroll-behavior-inline` CSS プロパティ"
+short-title: overscroll-behavior-inline
 slug: Web/CSS/Reference/Properties/overscroll-behavior-inline
-original_slug: Web/CSS/overscroll-behavior-inline
 l10n:
-  sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`overscroll-behavior-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。

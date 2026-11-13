@@ -1,15 +1,13 @@
 ---
-title: device-width
+title: CSS `device-width` メディア特性
+short-title: device-width
 slug: Web/CSS/Reference/At-rules/@media/device-width
-original_slug: Web/CSS/@media/device-width
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{deprecated_header}}
-
 > [!NOTE]
-> ビューポートの幅を問い合わせる場合、開発者は代わりに [`width`](/ja/docs/Web/CSS/Reference/At-rules/@media/width) メディア特性を使用してください。
+> ビューポートの幅を問い合わせる場合は、代わりに [`width`](/ja/docs/Web/CSS/Reference/At-rules/@media/width) メディア特性を使用してください。
 
 **`device-width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器の描画面の幅を調べるために使用することができます。
 
@@ -25,7 +23,7 @@ l10n:
 <link
   rel="stylesheet"
   media="screen and (max-device-width: 799px)"
-  href="http://foo.bar.com/narrow-styles.css" />
+  href="https://cdn.example.com/narrow-styles.css" />
 ```
 
 ## 仕様書

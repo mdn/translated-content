@@ -1,9 +1,8 @@
 ---
 title: transition
 slug: Web/CSS/Reference/Properties/transition
-original_slug: Web/CSS/transition
 l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
@@ -36,16 +35,16 @@ transition:
 transition: all 1s ease-out;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -54,8 +53,8 @@ transition: all 1s ease-out;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -66,11 +65,11 @@ transition: all 1s ease-out;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) {{experimental_inline}}
-- [`transition-delay`](/ja/docs/Web/CSS/Reference/Properties/transition-delay)
-- [`transition-duration`](/ja/docs/Web/CSS/Reference/Properties/transition-duration)
-- [`transition-property`](/ja/docs/Web/CSS/Reference/Properties/transition-property)
-- [`transition-timing-function`](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function)
+- {{cssxref("transition-behavior")}}
+- {{cssxref("transition-delay")}}
+- {{cssxref("transition-duration")}}
+- {{cssxref("transition-property")}}
+- {{cssxref("transition-timing-function")}}
 
 ## 構文
 
@@ -119,9 +118,9 @@ transition: unset;
   - {{cssxref("&lt;custom-ident&gt;")}} は単体のプロパティを表します。
   - 特別な値 `all` は、要素の状態が変化したときに変化するすべてのプロパティにトランジションを適用することを指定します。
   - 値を指定しない場合、値は `all` とみなされ、指定したトランジションは変化するすべてのプロパティに適用されます。
-- 使用するイージング関数を表す 0 ～ 1 個の {{cssxref("&lt;easing-function&gt;")}} の値。
+- 使用するイージング関数を表す 0 ～ 1 個の {{cssxref("easing-function")}} の値。
 - 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる再生時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
-- アニメーション動作が[離散的](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
+- アニメーション動作が[離散的](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 個の値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
 
 単体プロパティのトランジションに、 `all` をトランジションするプロパティとして指定したものの、その後で {{cssxref("&lt;custom-ident&gt;")}} の値によって単体のプロパティを指定した場合、後のトランジションが先のものを上書きします。例えば次のように指定されていたとします。
 
@@ -133,7 +132,7 @@ transition:
 
 この場合、要素の状態が変わると変化するプロパティは、 {{cssxref("opacity")}} を除き、すべて 200ms の再生時間でトランジションします。
 
-プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/Guides/Transitions/Using#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
+プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/Guides/Transitions/Using#プロパティ値のリストの長さが異なる場合)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
 
 ## 公式定義
 
@@ -147,7 +146,7 @@ transition:
 
 ### 基本的な例
 
-この例では、ユーザーが要素の上にポインターを当てたとき、 4 秒間の `font-size` のトランジションが起こるまでに 1 秒の待ち時間があります。
+この例では、ユーザーが要素の上にポインターを当てたとき、0.5 秒間 (`500ms`) の待ち時間の後に 2 秒間の `background-color` のトランジションが発生します。
 
 #### HTML
 
@@ -161,12 +160,13 @@ transition:
 
 ```css
 .target {
-  font-size: 14px;
-  transition: font-size 4s 1s;
+  font-size: 2rem;
+  background-color: palegoldenrod;
+  transition: background-color 2s 500ms;
 }
 
 .target:hover {
-  font-size: 36px;
+  background-color: darkorange;
 }
 ```
 

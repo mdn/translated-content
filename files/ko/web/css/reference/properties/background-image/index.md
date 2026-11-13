@@ -70,7 +70,7 @@ background-image:
 - `none`
   - : 배경 이미지의 부재를 나타내는 키워드입니다.
 - {{cssxref("&lt;image&gt;")}}
-  - : 배경으로 사용할 이미지입니다. [여러 개의 배경 이미지](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)를 사용할 땐 쉼표로 구분한 다수의 값을 지정하세요.
+  - : 배경으로 사용할 이미지입니다. [여러 개의 배경 이미지](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)를 사용할 땐 쉼표로 구분한 다수의 값을 지정하세요.
 
 ## 접근성 고려사항
 
@@ -138,7 +138,7 @@ div {
 
 ## 같이 보기
 
-- [CSS로 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [CSS로 이미지 스프라이트 구현하기](/ko/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
 - {{HTMLElement("img")}}
 - 이미지 관련 자료형: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - 이미지 관련 함수: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}, {{cssxref("_image", "image()")}}, {{cssxref("image-set")}}, {{cssxref("url", "url()")}}

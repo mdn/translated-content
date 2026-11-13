@@ -1,9 +1,9 @@
 ---
-title: :link
+title: Pseudo-classe CSS `:link`
+short-title: :link
 slug: Web/CSS/Reference/Selectors/:link
-original_slug: Web/CSS/:link
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:link`** représente un élément qui n'a pas encore été visité. Il correspond à chaque élément {{HTMLElement('a')}} ou {{HTMLElement('area')}} non visité qui possède un attribut `href`.
@@ -42,10 +42,10 @@ a:link {
 </ul>
 ```
 
-Les styles définis par les pseudo-classes `:link` et [`:visited`](/fr/docs/Web/CSS/Reference/Selectors/:visited) peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{cssxref(':hover')}} ou {{cssxref(':active')}}) ayant au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
+Les styles définis par les pseudo-classes `:link` et {{CSSxRef(":visited")}} peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{CSSxRef(':hover')}} ou {{CSSxRef(":active")}}) ayant au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
 
 > [!NOTE]
-> On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
+> On utilisera {{CSSxRef(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
 
 ## Syntaxe
 
@@ -57,7 +57,7 @@ Les styles définis par les pseudo-classes `:link` et [`:visited`](/fr/docs/Web/
 
 ## Exemples
 
-Par défaut, la plupart des navigateurs appliquent une valeur spéciale {{cssxref("color")}} aux liens visités. Ainsi, les liens de cet exemple auront probablement des couleurs de police spéciales uniquement avant que vous ne les visitiez. (Après cela, vous devrez effacer votre historique de navigation pour les voir à nouveau.) Cependant, les valeurs {{cssxref("background-color")}} sont susceptibles de rester, car la plupart des navigateurs ne définissent pas cette propriété sur les liens visités par défaut.
+Par défaut, la plupart des navigateurs appliquent une valeur spéciale {{CSSxRef("color")}} aux liens visités. Ainsi, les liens de cet exemple auront probablement des couleurs de police spéciales uniquement avant que vous ne les visitiez. (Après cela, vous devrez effacer votre historique de navigation pour les voir à nouveau.) Cependant, les valeurs {{CSSxRef("background-color")}} sont susceptibles de rester, car la plupart des navigateurs ne définissent pas cette propriété sur les liens visités par défaut.
 
 ### HTML
 
@@ -78,7 +78,7 @@ a:link {
 
 ### Résultat
 
-{{EmbedLiveSample("exemples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -90,7 +90,4 @@ a:link {
 
 ## Voir aussi
 
-- Les pseudo-classes de lien&nbsp;:
-  - {{cssxref(":visited")}}
-  - {{cssxref(":hover")}}
-  - {{cssxref(":active")}}
+- Les pseudo-classes associées&nbsp;: {{CSSxRef(":visited")}}, {{CSSxRef(":hover")}}, {{CSSxRef(":active")}}

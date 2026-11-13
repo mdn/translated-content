@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/floor
 original_slug: Web/XPath/Functions/floor
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `floor` 함수는 10진수를 평가하고 10진수보다 크지 않는(작거나 같은) 가장 큰 정수를 반환합니다.
 

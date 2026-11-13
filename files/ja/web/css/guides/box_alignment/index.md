@@ -1,9 +1,9 @@
 ---
 title: CSS ボックス配置
+short-title: ボックス配置
 slug: Web/CSS/Guides/Box_alignment
-original_slug: Web/CSS/CSS_box_alignment
 l10n:
-  sourceCommit: f3d3298130d8e22fb89ba123a0648ad3cb7b3655
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS ボックス配置** (CSS box alignment) モジュールは、コンテナー内のボックスの配置に関する CSS 機能を指定します。ブロックレイアウト、表レイアウト、フレキシブルボックスレイアウト （フレックスボックス）、グリッドレイアウトなど、さまざまな CSS ボックスレイアウトモデルにおける配置を定義し、 CSS 全体で一貫した配置方法を作成します。
@@ -46,7 +46,7 @@ l10n:
 - [ベースライン揃え](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#ベースライン揃え)
 - [分配配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#分配配置)
 - {{Glossary("Fallback alignment", "代替配置")}}
-- [位置指定配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#positional_alignment)
+- [位置揃え](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#位置揃え)
 
 ## ガイド
 

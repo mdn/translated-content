@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Events
 original_slug: Learn/JavaScript/Building_blocks/Events
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 이벤트(event)란 여러분이 프로그래밍하고 있는 시스템에서 일어나는 사건(action) 혹은 발생(occurrence)인데, 이는 여러분이 원한다면 그것들에 어떠한 방식으로 응답할 수 있도록 시스템이 말해주는 것입니다. 예를 들자면, 만약 유저가 웹페이지에 있는 버튼을 고른다면, 여러분은 그 사건에 인포메이션 박스를 표시함으로써 응답하기를 원할지도 모릅니다. 이 문서에서는, 우리는 이벤트에 대한 몇몇 중요한 개념을 논하고, 그것들이 브라우저에서 어떻게 작동하는지 살펴봅니다. 이것은 완전한 공부가 되지 않을 것입니다; 단지 지금 단계에서 여러분이 알아야 할 필요가 있는 것입니다.
 
@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/Building_blocks/Events
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 활용 능력, HTML, CSS,
-        <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">JavaScript 첫걸음</a
         >에 대한 기본적인 이해
       </td>
     </tr>
@@ -44,7 +44,7 @@ original_slug: Learn/JavaScript/Building_blocks/Events
 - 비디오가 재생되거나, 멈추거나, 혹은 끝났습니다.
 - 오류가 발생했습니다.
 
-여러분은 이것으로부터 (그리고 MDN [이벤트 레퍼런스](/ko/docs/Web/Events)를 흘낏 보는 것으로부터) 응답되어질 수 있는 **많은** 이벤트들이 있다는 것을 알 수 있습니다.
+여러분은 이것으로부터 (그리고 MDN [이벤트 레퍼런스](/ko/docs/Web/API/Document_Object_Model/Events)를 흘낏 보는 것으로부터) 응답되어질 수 있는 **많은** 이벤트들이 있다는 것을 알 수 있습니다.
 
 각각의 이용가능한 이벤트들은 **이벤트 핸들러**(event handler)를 가지고 있는데, 이는 이벤트가 발생되면 실행되는 코드 블럭 (보통 여러분과 같은 프로그래머가 만드는 JavaScript 함수)입니다. 그러한 코드 블럭이 이벤트에 응답해서 실행되기 위해 정의되었을 때, 우리는 **이벤트 핸들러를 등록**(register)했다고 말합니다. 알림: 이벤트 핸들러는 때때로 **이벤트 리스너**(event listener)라고 불립니다 — 이것들은 우리의 목적을 위해 꽤 교체할수 있지만, 그러나 엄밀히 말하자면, 그들은 같이 동작합니다. 리스너는 발생되는 이벤트에 대해 듣고, 핸들러는 발생되는 이벤트에 응답해서 실행되는 코드입니다.
 
@@ -642,8 +642,8 @@ video.onclick = function (e) {
 ## 같이 보기
 
 - [domevents.dev](https://domevents.dev/) — 탐험을 통해 DOM 이벤트 시스템의 움직임에 대한 배울 수 있는 매우 유용한 인터랙티브 놀이터 앱
-- [이벤트 참고서](/ko/docs/Web/Events)
+- [이벤트 참고서](/ko/docs/Web/API/Document_Object_Model/Events)
 - [이벤트 순서](https://www.quirksmode.org/js/events_order.html) (캡처링과 버블링에 대한 논의) — Peter-Paul Koch가 작성한 뛰어나게 상세한 글
 - [이벤트 접근](https://www.quirksmode.org/js/events_access.html) (이벤트 객체에 대한 논의) — Peter-Paul Koch가 작성한 또 다른 뛰어나게 상세한 글
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

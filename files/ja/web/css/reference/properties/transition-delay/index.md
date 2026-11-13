@@ -1,9 +1,8 @@
 ---
 title: transition-delay
 slug: Web/CSS/Reference/Properties/transition-delay
-original_slug: Web/CSS/transition-delay
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/Guides/Transitions/Using)が始まるまでの待ち時間を指定します。
@@ -30,16 +29,16 @@ transition-delay: 1s, 250ms;
 transition-property: margin-right, color;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -48,8 +47,8 @@ transition-property: margin-right, color;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -97,13 +96,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-<div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 秒</div>
 
-<div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 秒</div>
 
-<div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 秒</div>
 
-<button id="change">Change</button>
+<button id="change">変更</button>
 ```
 
 #### CSS

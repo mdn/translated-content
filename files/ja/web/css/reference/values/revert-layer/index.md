@@ -1,9 +1,8 @@
 ---
 title: revert-layer
 slug: Web/CSS/Reference/Values/revert-layer
-original_slug: Web/CSS/revert-layer
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
 **`revert-layer`** は [CSS 全体のキーワード](/ja/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords)で、[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)内のプロパティの値を、前回カスケードレイヤー内の要素に一致した CSS ルール内のプロパティの値にロールバックします。このキーワードが指定されたプロパティの値は、現在のカスケードレイヤーで対象とする要素にルールを指定していないものとして再計算されます。

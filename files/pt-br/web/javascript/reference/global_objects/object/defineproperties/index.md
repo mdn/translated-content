@@ -29,7 +29,7 @@ Object.defineProperties(obj, props)
       - : O valor associado com a propriedade. Pode ser qualquer valor válido em JavaScript value (número, objeto, função, etc).
         **Valor padrão é {{jsxref("undefined")}}.**
     - `writable`
-      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}.
+      - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators", "assignment operator", "Assignment_operators", 1)}}.
         **Valor padrão é `false`.**
     - `get`
       - : Uma função a qual serve com um getter para a propriedade, ou {{jsxref("undefined")}} se não existe getter. A retorno da função será usado como o valor da propriedade.

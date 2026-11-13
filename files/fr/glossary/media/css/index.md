@@ -1,25 +1,19 @@
 ---
 title: Média (CSS)
 slug: Glossary/Media/CSS
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{GlossarySidebar}}
+Dans le contexte de {{Glossary("CSS")}} (Cascading Style Sheets), le terme **_média_** désigne la destination sur laquelle le document doit être affiché par le {{Glossary("Engine/Rendering", "moteur de rendu")}}.
 
-Dans le contexte de {{Glossary("CSS")}} (Cascading Style Sheets), le terme **_média_** fait référence à la destination vers laquelle le document doit être dessiné par le {{Glossary("rendering engine")}}. Il s'agit généralement d'un écran—mais il peut également s'agir d'une imprimante, d'un synthétiseur vocal, d'un afficheur Braille ou d'un autre type de périphérique.
+Il s'agit généralement d'un écran — mais cela peut aussi être une imprimante, un afficheur Braille ou un autre type de dispositif.
 
-CSS offre plusieurs fonctionnalités qui vous permettent d'ajuster les styles de votre document—ou même d'offrir différents styles—en fonction du **type** de support (tel que l'écran ou impression, pour n'en nommer que deux) ou des **capacités** de support (telles que la largeur, la résolution ou d'autres valeurs) de l'appareil du spectateur.
+CSS propose plusieurs fonctionnalités permettant d'ajuster les styles de votre document — ou même d'offrir des styles différents — selon le **type** de média (comme écran ou impression, pour n'en citer que deux) ou les **capacités** du média (comme la largeur, la résolution ou d'autres valeurs) du dispositif de visualisation.
 
-## Apprendre plus
-
-### Culture générale
+## Voir aussi
 
 - [Utilisation des requêtes multimédias](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-
-### Référence technique
-
 - [Requêtes médias](/fr/docs/Web/CSS/Guides/Media_queries)
-  - : Définissez un ensemble de caractéristiques ou de paramètres requis pour appliquer les styles CSS qui sont spécifiés entre les accolades de la requête multimédia; par exemple: appliquer uniquement certains styles CSS pour les appareils inférieurs à 768 pixels.
-- {{cssxref("@media")}} [at-rule](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
-  - : Appliquez conditionnellement une partie d'une [feuille de style](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html), en fonction du résultat d'une requête multimédia.
-- {{domxref("Window.matchMedia()")}}
-  - : Testez le périphérique de visualisation par rapport à une requête multimédia.
+- [La règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@media")}}&nbsp;: Appliquez conditionnellement une partie d'une feuille de style, en fonction du résultat d'une requête multimédia.
+- {{DOMxRef("Window.matchMedia()")}}&nbsp;: Testez le périphérique de visualisation par rapport à une requête multimédia.

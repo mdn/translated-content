@@ -1,12 +1,12 @@
 ---
-title: contrast()
+title: Fonction CSS `contrast()`
+short-title: contrast()
 slug: Web/CSS/Reference/Values/filter-function/contrast
-original_slug: Web/CSS/filter-function/contrast
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: contrast()")}}
 
@@ -45,7 +45,7 @@ contrast(amount)
 ### Valeurs
 
 - `amount` {{Optional_Inline}}
-  - : Contraste du résultat, indiqué sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` diminue le contraste, tandis qu'une valeur supérieure à `100%` l'augmente. Une valeur de `0` ou `0%` rend l'image complètement grise, tandis qu'une valeur de `1` ou `100%` laisse l'entrée inchangée. Les valeurs négatives ne sont pas autorisées. La valeur initiale pour l'{{Glossary("interpolation")}} est `1`. La valeur par défaut est `1`.
+  - : Contraste du résultat, indiqué sous la forme d'un nombre ({{CSSxRef("&lt;number&gt;")}}) ou d'un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` diminue le contraste, tandis qu'une valeur supérieure à `100%` l'augmente. Une valeur de `0` ou `0%` rend l'image complètement grise, tandis qu'une valeur de `1` ou `100%` laisse l'entrée inchangée. Les valeurs négatives ne sont pas autorisées. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
 
 Voici des paires de valeurs équivalentes&nbsp;:
 
@@ -72,7 +72,7 @@ contrast(200%)
 
 ### Avec la propriété `backdrop-filter`
 
-Cet exemple applique un filtre `contrast()` via la propriété CSS {{cssxref("backdrop-filter")}} au paragraphe et au texte à chasse fixe, modifiant les couleurs de la zone derrière les éléments `<p>` et `<code>`.
+Cet exemple applique un filtre `contrast()` avec la propriété CSS {{CSSxRef("backdrop-filter")}} au paragraphe et au texte à chasse fixe, modifiant les couleurs de la zone derrière les éléments `<p>` et `<code>`.
 
 ```css
 .container {
@@ -111,11 +111,11 @@ p {
 </div>
 ```
 
-{{EmbedLiveSample('Avec la propriété `backdrop-filter`','100%','260')}}
+{{EmbedLiveSample("Avec la propriété `backdrop-filter`", "100%", 260)}}
 
 ### Avec la propriété `filter`
 
-Cet exemple applique un filtre `contrast()` via la propriété CSS {{cssxref("filter")}}, modifiant le contraste en ajustant les couleurs de l'ensemble de l'élément, y compris le contenu, la bordure, l'arrière-plan et les ombres.
+Cet exemple applique un filtre `contrast()` avec la propriété CSS {{CSSxRef("filter")}}, modifiant le contraste en ajustant les couleurs de l'ensemble de l'élément, y compris le contenu, la bordure, l'arrière-plan et les ombres.
 
 ```css
 p:first-of-type {
@@ -148,7 +148,7 @@ p {
 <p>Ce paragraphe a un contraste augmenté.</p>
 ```
 
-{{EmbedLiveSample('Avec la propriété `filter`','100%','320')}}
+{{EmbedLiveSample("Avec la propriété `filter`", "100%", 320)}}
 
 ### Avec `url()` et un filtre SVG `contrast`
 
@@ -228,7 +228,7 @@ svg:not(:root) {
 }
 ```
 
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample("svg_filter", "100%", 280)}}
 
 ## Spécifications
 
@@ -241,13 +241,13 @@ svg:not(:root) {
 ## Voir aussi
 
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
-- Les autres fonctions {{cssxref("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} incluent&nbsp;:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- Les autres fonctions {{CSSxRef("&lt;filter-function&gt;")}} disponibles pour être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} incluent&nbsp;:
+  - {{CSSxRef("filter-function/blur", "blur()")}}
+  - {{CSSxRef("filter-function/brightness", "brightness()")}}
+  - {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/opacity", "opacity()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}

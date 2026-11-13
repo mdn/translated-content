@@ -112,4 +112,4 @@ p {
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
-- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)

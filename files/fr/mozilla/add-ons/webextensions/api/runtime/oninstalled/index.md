@@ -3,8 +3,6 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 
 Notez que `runtime.onInstalled` n'est pas la même chose {{WebExtAPIRef("management.onInstalled")}}. L'événement `runtime.onInstalled` est déclenché uniquement pour votre extension. L'événement `browser.management.onInstalled` est déclenché pour toutes les extensions.

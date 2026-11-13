@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/CSS_syntax/At-rules) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
+[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/Guides/Syntax/At-rules) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 

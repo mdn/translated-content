@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/polygon
 original_slug: Web/SVG/Element/polygon
 ---
 
-{{SVGRef}}
-
 L'élément **`<polygon>`** délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.
 
 ## Exemple
@@ -34,10 +32,10 @@ svg {
 
 - {{SVGAttr('points')}}
   - : Cette attribut défini une liste de point (paire de coordonnées absolue x et y ) nécessaire pour dessiner le polygone.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
 - {{SVGAttr("pathLength")}}
   - : Cet attribut spécifie la taille totale pour le chemin dans l'unité de l'utilisateur.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
+    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
 
 ### Attributs Globaux
 

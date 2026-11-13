@@ -107,7 +107,7 @@ Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 6. 如果你的第三方 cookie 仅在少数相关的已知网站之间使用，你可以使用[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 和/或[相关网站集](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)仅允许这些特定网站的跨站 cookie 访问。存储访问会提示用户为每个框架提供权限，以便网站使用第三方 cookie。
    - 如果你已经为 Firefox 或 Safari 实现了使用存储访问 API 的解决方案，那么现在是检查你的实现与 Chrome 行为的好时机，Chrome 在版本 119 中更新以提供完全支持。
    - 相关网站集可以被视为存储访问 API 的渐进增强：该 API 可以以相同的方式使用，但集合中的网站将不会提示用户提供访问第三方 cookie 的权限。
-7. 如果你的第三方 cookie 与生成它们的顶级网站是一对一关系，你可以使用[具有独立分区状态的 cookie](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)（CHIPS，即分区 cookie），将你的 cookie 选择加入分区存储，每个顶级网站都有一个单独的 cookie 桶。这只需要向你现有的跨站 cookie 添加 `partitioned` 属性。这样，它们可以不受限制地使用，但不能与其他网站共享。请注意，CHIPS 目前仅限于 Chromium。
+7. 如果你的第三方 cookie 与生成它们的顶级网站是一对一关系，你可以使用[具有独立分区状态的 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)（CHIPS，即分区 cookie），将你的 cookie 选择加入分区存储，每个顶级网站都有一个单独的 cookie 桶。这只需要向你现有的跨站 cookie 添加 `partitioned` 属性。这样，它们可以不受限制地使用，但不能与其他网站共享。请注意，CHIPS 目前仅限于 Chromium。
 
 ## 替换第三方 cookie
 

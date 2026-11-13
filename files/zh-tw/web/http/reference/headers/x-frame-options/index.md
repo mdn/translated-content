@@ -17,7 +17,7 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 - `DENY`
   - : 表示網頁無論如何都無法被嵌入到 frame 中，即使於相同網域內嵌入也不允許。
 - `SAMEORIGIN`
-  - : 唯有當符合[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)下，才能被嵌入到 frame 中。
+  - : 唯有當符合[同源政策](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)下，才能被嵌入到 frame 中。
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : 唯有列表許可的 URI 才能嵌入到 frame 中。新版瀏覽器已不再支援此指令。
 
@@ -25,7 +25,7 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 
 請加入以下指令到網站組態設定檔：
 
-```plain
+```apacheconf
 Header always append X-Frame-Options SAMEORIGIN
 ```
 
@@ -41,7 +41,7 @@ add_header X-Frame-Options SAMEORIGIN;
 
 請加入以下指令到網站的 Web.config 檔:
 
-```plain
+```xml
 <system.webServer>
   ...
 

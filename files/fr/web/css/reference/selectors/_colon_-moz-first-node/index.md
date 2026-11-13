@@ -1,12 +1,14 @@
 ---
-title: :-moz-first-node
+title: Pseudo-classe CSS `:-moz-first-node`
+short-title: :-moz-first-node
 slug: Web/CSS/Reference/Selectors/:-moz-first-node
-original_slug: Web/CSS/:-moz-first-node
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{CSSxRef(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).
 
 > [!NOTE]
 > Tout blanc qui serait au début d'un élément est ignoré pour la détermination de `:-moz-last-node`.
@@ -56,5 +58,5 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref(":-moz-last-node")}}
-- {{cssxref(":last-child")}}
+- La pseudo-classe {{CSSxRef(":-moz-last-node")}}
+- La pseudo-classe {{CSSxRef(":last-child")}}

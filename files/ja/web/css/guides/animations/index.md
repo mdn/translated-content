@@ -1,14 +1,14 @@
 ---
 title: CSS アニメーション
+short-title: アニメーション
 slug: Web/CSS/Guides/Animations
-original_slug: Web/CSS/CSS_animations
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 **CSS アニメーション** (CSS animations) モジュールを使用すると、キーフレームを使用して、background-position や transform などの CSS プロパティの値を、時間に応じてアニメーションさせることができます。各キーフレームは、アニメーションシーケンスの指定された時間に、アニメーションする要素をどのようにレンダリングするかを記述します。アニメーションモジュールでは、アニメーションの再生時間、繰り返し回数、開始の遅延、その他のアニメーションの要素を制御するためのプロパティを使用することができます。
 
-### アニメーションの実際
+## アニメーションの実際
 
 下のボックスでアニメーションを見るには、 'Play the animation' チェックボックスをクリックするか、ボックスにカーソルを当てるかしてください。アニメーションが有効になると、上部の雲の図形が変わり、雪片が降り、下部の雪の高さが高くなります。アニメーションを一時停止するには、チェックボックスのチェックを外すか、ボックスからカーソルを離してください。
 
@@ -18,7 +18,7 @@ l10n:
   type="checkbox"
   id="animate"
   aria-label="アニメーションの再生状態をトグル切り替え" />
-<label for="animate">the animation</label>
+<label for="animate">アニメーション</label>
 <div class="root">
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
   ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
@@ -37,7 +37,7 @@ i {
   width: 16px;
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
-  /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
+  /* 雪片は CSS の線形グラデーションで作られている (https://developer.mozilla.org/ja/docs/Web/CSS/Guides/Images/Using_gradients) */
   background-image:
     linear-gradient(180deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(90deg, transparent 40%, white 40% 60%, transparent 60%),
@@ -45,7 +45,7 @@ i {
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);
 }
 i:nth-of-type(4n) {
-  /* Using tree structural pseudo-classes to create randomness - https://developer.mozilla.org/ja/docs/Web/CSS/:nth-of-type */
+  /* 木構造擬似クラスを用いたランダム性の生成 - https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Selectors/:nth-of-type */
   height: 30px;
   width: 30px;
   transform-origin: right -30px;
@@ -143,7 +143,7 @@ i:nth-of-type(7n + 1) {
 .cloud {
   width: 100%;
   height: 150px;
-  background: #ffffff;
+  background: white;
   border-radius: 0 0 90px 33% / 0 0 45px 50px;
   box-shadow:
     5px 15px 15px white,
@@ -155,11 +155,11 @@ i:nth-of-type(7n + 1) {
 }
 .ground {
   bottom: 0;
-  background-image: linear-gradient(to top, #fff 97%, 99%, #bbb 100%);
+  background-image: linear-gradient(to top, white 97%, 99%, #bbbbbb 100%);
   background-position: center 580px;
   animation: snowfall linear 300s forwards;
   border: 1px solid grey;
-  /* Put the ground into a 3D rendering context (because the snow flakes are in a 3d rendering context) */
+  /* 地面を 3D レンダリングコンテキストに配置する（雪片が 3D レンダリングコンテキスト内にあるため） */
   transform: translate3d(0, 0, 0);
 }
 
@@ -199,24 +199,24 @@ i:nth-of-type(7n + 1) {
   }
 }
 
-/* By default, the animations are paused. */
+/* デフォルトでは、アニメーションは停止状態 */
 i,
 div[class] {
   animation-play-state: paused;
 }
-/* When the div is hovered, the animation plays. Also,
-when the input is checked, the animation coming after the checked checkbox plays */
+/* div にホバーするとアニメーションが再生される。また、入力がチェックされた場合、
+チェックされたチェックボックスの後に続くアニメーションが再生されます。 */
 div:hover *,
 input:checked ~ div * {
   animation-play-state: running;
 }
 
-/* Change the content of the label that comes right after the input. Included aria-label on the label to improve accessibility. */
-input + label::before {
-  content: "Play ";
+/* 入力の直後に表示されるラベルの内容を変更する。アクセシビリティ向上のため、ラベルに aria-label を付与。 */
+input + label::after {
+  content: "を再生";
 }
-input:checked + label::before {
-  content: "Pause ";
+input:checked + label::after {
+  content: "を停止";
 }
 ```
 
@@ -242,12 +242,10 @@ input:checked + label::before {
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-> [!NOTE]
-> CSS Animations モジュールレベル 2 では、 `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, `animation-trigger-type` の各プロパティを導入しています。これらはまだ実装されていません。
-
-### アットルール
+### アットルールと記述子
 
 - {{cssxref("@keyframes")}}
+- [`<keyframe-selector>`](/ja/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
 ### イベント
 
@@ -270,15 +268,41 @@ input:checked + label::before {
 
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
   - : CSS を使用してアニメーションを作成する方法についての一歩一歩進むチュートリアルです。この記事では、関連する CSS プロパティとアットルール、それに互いにどのように関係するのかを説明します。
+- [アニメーション可能な CSS プロパティ](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties)
+  - : さまざまな CSS プロパティをアニメーション化する方法の概要。アニメーションの種類と補間手法を含みます。
 - [ウェブアニメーション API の使用](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : JavaScript で数行で解決できる一般的なアニメーションの要件です。
 
 ## 関連概念
 
-- CSS の {{cssxref("will-change")}} プロパティ
-- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function) データ型
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} 一括指定
+  - {{cssxref("timeline-trigger-activation-range")}} 一括指定
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} 一括指定
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+  - {{cssxref("animation-range")}} 一括指定
+    - {{cssxref("animation-range-end")}}
+    - {{cssxref("animation-range-start")}}
+  - {{cssxref("scroll-timeline")}} 一括指定
+    - {{cssxref("scroll-timeline-axis")}}
+    - {{cssxref("scroll-timeline-name")}}
+  - {{cssxref("timeline-scope")}}
+  - {{cssxref("view-timeline")}} 一括指定
+    - {{cssxref("view-timeline-axis")}}
+    - {{cssxref("view-timeline-inset")}}
+    - {{cssxref("view-timeline-name")}}
+- CSS {{cssxref("will-change")}} プロパティ
+- {{cssxref("easing-function")}} データ型
 - [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリー
-- {{glossary("Bezier curve", "ベジェ曲線")}}
+- {{glossary("Bezier curve", "ベジェ曲線")}} 用語
 
 ## 仕様書
 
@@ -287,7 +311,8 @@ input:checked + label::before {
 ## 関連情報
 
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
-- CSS [トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュールのプロパティは、ユーザーの操作に基づいてアニメーションを起動します。
+- [CSS アニメーショントリガー](/ja/docs/Web/CSS/Guides/Animation_triggers)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - {{cssxref("interpolate-size")}} プロパティと {{cssxref("calc-size()")}} 関数で、[内在的なサイズの値](/ja/docs/Glossary/Intrinsic_Size)を起点または終点としたアニメーションが利用できます。
 - HTML の {{htmlelement("canvas")}} 要素と[キャンバス API](/ja/docs/Web/API/Canvas_API) および [WebGL API](/ja/docs/Web/API/WebGL_API) でグラフィックとアニメーションを描画できます。
 - {{domxref("SVGAnimationElement")}} インターフェイスはすべてのアニメーション関連要素、例えば {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, {{domxref("SVGAnimateTransformElement")}} に使用します。

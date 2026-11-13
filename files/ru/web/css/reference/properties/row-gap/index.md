@@ -173,4 +173,4 @@ row-gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)_

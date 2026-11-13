@@ -16,7 +16,7 @@ button:hover {
 의사 클래스를 사용하면 문서 트리 콘텐츠와 관련된 경우 뿐만 아니라 탐색기 히스토리({{cssxref(":visited")}} 등), 콘텐츠의 상태(특정 폼 요소에 적용한 {{cssxref(":checked")}} 등), 마우스의 위치(커서가 마우스 위인지 아닌지 알 수 있는 {{cssxref(":hover")}} 등)처럼 외부 인자와 관련된 경우에도 스타일을 적용할 수 있습니다.
 
 > [!NOTE]
-> [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 의사 클래스와 달리 요소의 **특정 부분**에 스타일을 적용할 때 사용합니다.
+> [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 의사 클래스와 달리 요소의 **특정 부분**에 스타일을 적용할 때 사용합니다.
 
 ## 구문
 
@@ -98,4 +98,4 @@ selector:pseudo-class {
 
 ## 같이 보기
 
-- [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)
+- [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

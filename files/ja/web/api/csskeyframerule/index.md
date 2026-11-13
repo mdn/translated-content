@@ -2,12 +2,12 @@
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/Web/CSS/Guides/Syntax/At-rules) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。
+**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。 {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)の 1 つのキーフレームに対応しています。
 
 {{InheritanceDiagram}}
 
@@ -27,10 +27,10 @@ _固有のメソッドはありません。祖先である {{domxref("CSSRule")}
 ## 例
 
 この CSS には、 keyframes アットルールが含まれています。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームのための個別の `CSSKeyFrame` オブジェクトが格納されます。
+`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、その中に各キーフレームのための個別の `CSSKeyFrameRule` オブジェクトが格納されます。
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }
@@ -43,8 +43,8 @@ _固有のメソッドはありません。祖先である {{domxref("CSSRule")}
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0]); // a CSSKeyframeRule representing an individual keyframe.
+let keyframes = myRules[0]; // CSSKeyframesRule
+console.log(keyframes[0]); // 個別のキーフレームを表す CSSKeyframeRule
 ```
 
 ## 仕様書

@@ -1,20 +1,20 @@
 ---
-title: ::-webkit-meter-bar
+title: Pseudo-élément CSS `::-webkit-meter-bar`
+short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
-original_slug: Web/CSS/::-webkit-meter-bar
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf7ff749b987d530e9a6c07f23ac66f94d968e57
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_Header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'arrière-plan d'un élément HTML {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
 
 ## Syntaxe
 
 ```css
 ::-webkit-meter-bar {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -83,10 +83,9 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}}&nbsp;:
-  - {{cssxref("::-webkit-meter-inner-element")}}
-  - {{cssxref("::-webkit-meter-even-less-good-value")}}
-  - {{cssxref("::-webkit-meter-optimum-value")}}
-  - {{cssxref("::-webkit-meter-suboptimum-value")}}
-
+- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément HTML {{HTMLElement("meter")}}&nbsp;:
+  - {{CSSxRef("::-webkit-meter-inner-element")}}
+  - {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+  - {{CSSxRef("::-webkit-meter-optimum-value")}}
+  - {{CSSxRef("::-webkit-meter-suboptimum-value")}}
 - [Les extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)

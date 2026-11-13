@@ -1,12 +1,14 @@
 ---
-title: animation-name
+title: "`animation-name` プロパティ (CSS)"
+short-title: animation-name
 slug: Web/CSS/Reference/Properties/animation-name
-original_slug: Web/CSS/animation-name
 l10n:
-  sourceCommit: dfd18cb9ee7c6195d07cd937d206b53246f7507e
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 **`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframes` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframes` アットルールにも一致しない場合、プロパティはアニメーションしません。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-name")}}
 
@@ -36,7 +38,7 @@ animation-name: bounce;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -71,8 +73,6 @@ animation-name: bounce;
 }
 ```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
-
 ## 構文
 
 ```css
@@ -100,6 +100,8 @@ animation-name: unset;
 ```
 
 ### 値
+
+このプロパティは、カンマで区切られた 1 つ以上の値として指定します。
 
 - `none`
   - : キーフレームがないことを示す特別なキーワード。他の識別子の順序を変更せずにアニメーションを非アクティブにする、またはカスケードからのアニメーションを非アクティブにするために使用できます。

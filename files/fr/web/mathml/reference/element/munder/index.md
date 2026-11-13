@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/munder
 original_slug: Web/MathML/Element/munder
 ---
 
-{{MathMLRef()}}
-
 L'élément MathML `<munder>` est utilisé pour attacher un accent ou une limite sous une expression. La syntaxe est la suivante: `<munder> base script-en-dessous </munder>`
 
 ## Attributs
@@ -20,9 +18,9 @@ L'élément MathML `<munder>` est utilisé pour attacher un accent ou une limite
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 
 ## Exemples
 

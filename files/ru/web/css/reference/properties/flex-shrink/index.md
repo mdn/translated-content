@@ -127,4 +127,4 @@ flex-shrink: unset;
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Using CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

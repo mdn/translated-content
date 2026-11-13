@@ -3,7 +3,7 @@ title: "Руководство часть 9: Работа с формами"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 На этом уроке мы покажем вам процесс работы с HTML-формами в Django. В частности, продемонстрируем самый простой способ построения формы для создания, обновления и удаления экземпляров модели. При этом мы расширим сайт [местной библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), чтобы библиотекари могли обновлять книги, создавать, обновлять и удалять авторов, используя наши собственные формы (а не возможности приложения администратора).
 
@@ -641,4 +641,4 @@ urlpatterns += [
 - [Создание форм из моделей](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/) (Django docs)
 - [Обобщённые отображения для редактирования](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

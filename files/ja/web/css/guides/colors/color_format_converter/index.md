@@ -1,9 +1,8 @@
 ---
 title: 色形式コンバーター
 slug: Web/CSS/Guides/Colors/Color_format_converter
-original_slug: Web/CSS/CSS_colors/Color_format_converter
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 このツールでは、色を入力または選択し、対応する値を任意の CSS [色形式](/ja/docs/Web/CSS/Reference/Values/color_value)でコピーできます。生成された色値は、CSSで {{cssxref("color_value", "&lt;color&gt;")}} データ型が対応している場所ならどこでも使用できます。同時に、このツールは様々な色表記の構文を理解するのにも役立ちます。
@@ -45,7 +44,7 @@ l10n:
         <tr id="rgb-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/rgb"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/rgb"
               target="_blank">
               RGB
             </a>
@@ -55,7 +54,7 @@ l10n:
         <tr id="hex">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/hex-color"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/hex-color"
               target="_blank">
               HEX
             </a>
@@ -65,7 +64,7 @@ l10n:
         <tr id="hsl-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/hsl"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hsl"
               target="_blank">
               HSL
             </a>
@@ -75,7 +74,7 @@ l10n:
         <tr id="hwb-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/hwb"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hwb"
               target="_blank">
               HWB
             </a>
@@ -85,7 +84,7 @@ l10n:
         <tr id="color-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/color"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/color"
               target="_blank">
               color()
             </a>
@@ -95,7 +94,7 @@ l10n:
         <tr id="lab-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/lab"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lab"
               target="_blank">
               Lab
             </a>
@@ -105,7 +104,7 @@ l10n:
         <tr id="lch-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/lch"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lch"
               target="_blank">
               LCH
             </a>
@@ -115,7 +114,7 @@ l10n:
         <tr id="oklab-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/oklab"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklab"
               target="_blank">
               Oklab
             </a>
@@ -125,7 +124,7 @@ l10n:
         <tr id="oklch-function">
           <th>
             <a
-              href="https://developer.mozilla.org/ja/docs/Web/CSS/color_value/oklch"
+              href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklch"
               target="_blank">
               OkLCh
             </a>
@@ -164,7 +163,7 @@ dialog {
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
   background-color: white;
-  font-family: segue, arial, helvetica, sans-serif;
+  font-family: "Segue", "Helvetica", "Arial", sans-serif;
   margin-top: 5vh;
   width: 550px;
 }
@@ -306,7 +305,7 @@ function multiplyByMatrix(matrix, tuple) {
 }
 
 function rgbToLinear(c) {
-  return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
 }
 
 function intToHex(i) {
@@ -329,9 +328,9 @@ function rgbaToHEXAText(color) {
 function rgbaToHSLA(color) {
   let { r, g, b, alpha } = color;
   // Let's have r, g, b in the range [0, 1]
-  r = r / 255;
-  g = g / 255;
-  b = b / 255;
+  r /= 255;
+  g /= 255;
+  b /= 255;
   const min = Math.min(r, g, b);
   const max = Math.max(r, g, b);
   const delta = max - min;
@@ -414,7 +413,7 @@ const D65 = [0.3457 / 0.3585, 1, 0.2958 / 0.3585];
 function xyzToLab(color) {
   let { x, y, z, alpha } = color;
   [x, y, z] = [x, y, z].map((v, i) => {
-    v = v / D65[i];
+    v /= D65[i];
     return v > 0.0088564516 ? Math.cbrt(v) : v * 903.2962962962963 + 16 / 116;
   });
   return { l: 116 * y - 16, a: 500 * (x - y), b: 200 * (y - z), alpha };
@@ -562,8 +561,8 @@ init();
 ## 関連情報
 
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
-- [CSS 色の値](/ja/docs/Web/CSS/CSS_colors/Color_values)
-- [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [CSS 色の値](/ja/docs/Web/CSS/Guides/Colors/Color_values)
+- [賢い色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [色と明るさの理解](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1: 色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

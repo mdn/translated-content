@@ -3,8 +3,6 @@ title: downloads.BooleanDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 ---
 
-{{AddonSidebar}}
-
 Le type `BooleanDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux booléens.
 
 ## Type

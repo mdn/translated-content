@@ -1,9 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/Reference/Properties/aspect-ratio
-original_slug: Web/CSS/aspect-ratio
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素ボックスの望ましい幅と高さの比率を定義することができます。つまり、親コンテナーやビューポートのサイズが変更されても、ブラウザーは要素の寸法を調整して、指定された幅と高さの比率を維持します。指定された{{glossary("aspect ratio","アスペクト比")}}は、auto のサイズやその他のレイアウト機能の計算に使用されます。
@@ -64,14 +63,14 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
+このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が{{ glossary("replaced elements", "置換要素")}}（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
 
 要素が置換要素でない場合は、指定された `ratio` が使用されます。
 
 ### 値
 
 - `auto`
-  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
+  - : 内在的なアスペクト比がある{{glossary("Replaced elements", "置換要素")}}の場合は、そのアスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
 
 - {{cssxref("&lt;ratio&gt;")}}
   - : ボックスの推奨アスペクト比は、`width` / `height` で指定された比率です。`height` とそれに先立つスラッシュ文字が省略された場合、`height` の既定値は `1` です。推奨アスペクト比を含む寸法の計算では、`box-sizing` で指定されたボックスの寸法で行われます。
@@ -169,7 +168,7 @@ img {
 
 ## 関連情報
 
-- [アスペクト比を理解する](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

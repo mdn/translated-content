@@ -69,7 +69,7 @@ l10n:
 
 ### TLS 1.0 和 1.1 已被移除
 
-- 所有浏览器都不再支持[传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)（TLS）协议的 1.0 和 1.1 版本。阅读 [TLS 1.0 和 1.1 删除更新](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/)以获取先前的公告，以及如果受到影响应采取的措施（[Firefox bug 1643229](https://bugzil.la/1643229)）。
+- 所有浏览器都不再支持[传输层安全](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security)（TLS）协议的 1.0 和 1.1 版本。阅读 [TLS 1.0 和 1.1 删除更新](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/)以获取先前的公告，以及如果受到影响应采取的措施（[Firefox bug 1643229](https://bugzil.la/1643229)）。
 
 ## 为附加组件开发者带来的变化
 

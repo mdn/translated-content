@@ -16,7 +16,7 @@ l10n:
 _也继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 
 - {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : 一个 {{domxref("Boolean")}}，表示与之通信的请求是否被中止（`true`）或未中止（`false`）。
+  - : 一个 {{jsxref("Boolean")}}，表示与之通信的请求是否被中止（`true`）或未中止（`false`）。
 - {{domxref("AbortSignal.reason")}} {{readonlyInline}}
   - : 一旦信号被中止，提供一个使用 JavaScript 值表示的中止原因。
 

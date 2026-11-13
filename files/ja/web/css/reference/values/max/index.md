@@ -1,12 +1,11 @@
 ---
 title: max()
 slug: Web/CSS/Reference/Values/max
-original_slug: Web/CSS/max
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
+**`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
 
 {{InteractiveExample("CSS デモ: max()")}}
 
@@ -46,7 +45,7 @@ max(1px, 2px, 3px)
 
 `max()` 関数は、引数としてカンマで区切った 1 つ以上の式を取り、もっとも大きい (最も正である) 式の値をプロパティに割り当てられた値として使用します。
 
-式は、 (算術演算子を用いた) 数式、リテラル値、あるいは、有効な引数の型 ({{CSSxRef("&lt;length&gt;")}} など) に評価される {{CSSxRef("attr", "attr()")}} などの式や、ネストされた {{CSSxRef("min", "min()")}} や `max()` 関数を用いることができます。
+式は、 (算術演算子を用いた) 数式、リテラル値、あるいは、有効な引数の型 ({{CSSxRef("&lt;length&gt;")}} など) に評価される {{cssxref("attr()")}} などの式や、ネストされた {{cssxref("min()")}} や `max()` 関数を用いることができます。
 
 式の各値に異なる単位を使用することができます。必要に応じて、計算順序を決めるために括弧を使用することもできます。
 
@@ -63,7 +62,7 @@ max(1px, 2px, 3px)
 
 ## アクセシビリティ
 
-`max()` を使用してテキストのサイズを制御する場合は、テキストが常に十分に読める大きさであることを確認してください。提案としては、 {{CSSxRef("min", "min()")}} 関数を `max()` の中で入れ子にして使用し、その二番目の値として常に十分な大きさの[相対的な長さの単位](/ja/docs/Web/CSS/Reference/Values/length#相対的な長さの単位)を持つようにします。
+`max()` を使用してテキストのサイズを制御する場合は、テキストが常に十分に読める大きさであることを確認してください。提案としては、 {{cssxref("min()")}} 関数を `max()` の中で入れ子にして使用し、その二番目の値として常に十分な大きさの[相対的な長さの単位](/ja/docs/Web/CSS/Reference/Values/length#相対的な長さの単位)を持つようにします。
 
 ```css
 small {
@@ -116,7 +115,7 @@ h1.responsive {
 
 ## 関連情報
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("min", "min()")}}
+- {{cssxref("calc()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("min()")}}
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

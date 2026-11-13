@@ -3,7 +3,7 @@ title: Как начать разрабатывать свой сайт?
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Эта статья покрывает первый и крайне важный шаг в создании любого проекта: определить, что вы хотите получить.
 

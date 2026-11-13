@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_manipulation
 original_slug: Web/Media/Audio_and_video_manipulation
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
 
 ## Manipulation Vidéo
@@ -160,8 +158,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -258,8 +255,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden

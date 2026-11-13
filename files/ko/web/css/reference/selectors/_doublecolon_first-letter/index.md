@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`::first-letter`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [블록 컨테이너](/ko/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers)의 첫 번째 줄에 있는 첫 글자에 스타일을 적용합니다. 단, 그 앞에 다른 콘텐츠(이미지나 인라인 테이블)가 없는 경우에만 적용됩니다.
+**`::first-letter`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 [블록 컨테이너](/ko/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers)의 첫 번째 줄에 있는 첫 글자에 스타일을 적용합니다. 단, 그 앞에 다른 콘텐츠(이미지나 인라인 테이블)가 없는 경우에만 적용됩니다.
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 
@@ -38,7 +38,7 @@ p::first-letter {
 - {{ cssxref("::before") }} 의사 요소와 {{ cssxref("content") }} 속성을 조합해 요소 앞에 텍스트를 삽입할 수 있습니다. 이 경우 `::first-letter`는 삽입된 콘텐츠의 첫 글자를 매칭합니다.
 
 > [!NOTE]
-> CSS는 [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 `::first-letter`와 같이 콜론 두 개(`::`)를 사용하는 표기법을 도입했습니다. 하위 호환성을 위해 브라우저는 이전에 도입된 단일 콜론(`:first-letter`) 표기도 지원합니다.
+> CSS는 [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)를 구분하기 위해 `::first-letter`와 같이 콜론 두 개(`::`)를 사용하는 표기법을 도입했습니다. 하위 호환성을 위해 브라우저는 이전에 도입된 단일 콜론(`:first-letter`) 표기도 지원합니다.
 >
 > 네덜란드어 `IJ` 같은 이중 문자에 대한 브라우저 지원은 미흡합니다. 아래 호환성 표에서 현재 상태를 확인하세요.
 

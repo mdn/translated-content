@@ -1,9 +1,9 @@
 ---
-title: <display-box>
+title: Type CSS `<display-box>`
+short-title: <display-box>
 slug: Web/CSS/Reference/Values/display-box
-original_slug: Web/CSS/display-box
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-box>`** définit si un élément génère des boîtes d'affichage ou aucune.
@@ -57,7 +57,7 @@ p.secret {
 
 ### `display: contents`
 
-Dans cet exemple, l'élément {{htmlelement("div")}} externe a une bordure rouge sur 2 pixels et mesure 300 pixels de large. Toutefois, cet élément est ciblé avec `display: contents` et l'élément `<div>` ne sera pas affiché tel quel : la bordure et la largeur ne s'appliqueront pas et l'élément fils sera affiché comme si le parent n'avait pas existé.
+Dans cet exemple, l'élément {{HTMLElement("div")}} externe a une bordure rouge sur 2 pixels et mesure 300 pixels de large. Toutefois, cet élément est ciblé avec `display: contents` et l'élément `<div>` ne sera pas affiché tel quel : la bordure et la largeur ne s'appliqueront pas et l'élément fils sera affiché comme si le parent n'avait pas existé.
 
 #### HTML
 

@@ -1,12 +1,11 @@
 ---
 title: descent-override
 slug: Web/CSS/Reference/At-rules/@font-face/descent-override
-original_slug: Web/CSS/@font-face/descent-override
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-**`descent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのディセンダーの寸法を定義します。ディセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの下の高さです。
+**`descent-override`** は [CSS](/ja/docs/Web/CSS) の {{cssxref("@font-face")}} アットルールの記述子で、フォントのディセンダーの寸法を定義します。ディセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの下の高さです。
 
 ## 構文
 
@@ -38,12 +37,12 @@ descent-override: 90%;
 
 ```css
 @font-face {
-  font-family: web-font;
+  font-family: "web-font";
   src: url("https://example.com/font.woff");
 }
 
 @font-face {
-  font-family: local-font;
+  font-family: "local-font";
   src: local("Local Font");
   descent-override: 125%;
 }

@@ -1,9 +1,9 @@
 ---
-title: border-color
+title: "`border-color` プロパティ (CSS)"
+short-title: border-color
 slug: Web/CSS/Reference/Properties/border-color
-original_slug: Web/CSS/border-color
 l10n:
-  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262-
 ---
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
@@ -19,11 +19,11 @@ border-color: red #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+border-color: red rgb(170 50 220 / 0.6) green;
 ```
 
 ```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+border-color: red yellow green hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -33,15 +33,15 @@ border-color: red yellow green transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これはボックスと、それを囲む境界線です。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -49,18 +49,14 @@ border-color: red yellow green transparent;
 }
 ```
 
-各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
-
-境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color#境界線_2)にあります。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-color`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-color)
-- [`border-left-color`](/ja/docs/Web/CSS/Reference/Properties/border-left-color)
-- [`border-right-color`](/ja/docs/Web/CSS/Reference/Properties/border-right-color)
-- [`border-top-color`](/ja/docs/Web/CSS/Reference/Properties/border-top-color)
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-top-color")}}
 
 ## 構文
 
@@ -96,6 +92,12 @@ border-color: unset;
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : 境界線の色を定義します。
+
+## 解説
+
+各辺を個々に設定する場合は、{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}} を使用します。
+
+境界線の色についての詳細な情報は、[HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color#境界線)にあります。
 
 ## 公式定義
 

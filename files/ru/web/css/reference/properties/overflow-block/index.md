@@ -147,4 +147,4 @@ overflow-block: unset;
 
 - Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
 - [Логические свойства CSS](/ru/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Режимы письма](/ru/docs/Web/CSS/CSS_writing_modes)
+- [Режимы письма](/ru/docs/Web/CSS/Guides/Writing_modes)

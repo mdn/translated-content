@@ -81,7 +81,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - **`:heading`** および **`:heading()`**: `layout.css.heading-selector.enabled`
 
-  CSS の {{CSSXRef(":heading")}} 擬似クラスはすべての [見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) へ、個々の要素を対象にするのではなく一度にスタイルを設定できます。{{CSSXRef(":heading_function", ":heading()")}} 関数擬似クラスは、[`<An+B>`](/ja/docs/Web/CSS/:heading_function#functional_notation) 表記にマッチする見出し要素にスタイルを設定できます ([Firefox bug 1974386](https://bugzil.la/1974386))。
+  CSS の {{CSSXRef(":heading")}} 擬似クラスはすべての [見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) へ、個々の要素を対象にするのではなく一度にスタイルを設定できます。{{CSSXRef(":heading_function", ":heading()")}} 関数擬似クラスは、[`<An+B>`](/ja/docs/Web/CSS/Reference/Selectors/:heading_function#functional_notation) 表記にマッチする見出し要素にスタイルを設定できます ([Firefox bug 1974386](https://bugzil.la/1974386))。
 
 - **`view-transition-name: match-element`** (Nightly): `dom.viewTransitions.enabled`
 
@@ -89,7 +89,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - スクリプト向けの **`Integrity-Policy` および `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
 
-  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがスクリプトの [サブリソース完全性の保証](/ja/docs/Web/Security/Subresource_Integrity) を強制する、またはポリシー違反の報告のみ行うことができます ([Firefox bug 1976656](https://bugzil.la/1976656))。
+  {{httpheader("Integrity-Policy")}} および {{httpheader("Integrity-Policy-Report-Only")}} HTTP ヘッダーを、スクリプトリソース向けにサポートしました。これらはそれぞれ、ウェブサイトがスクリプトの [サブリソース完全性の保証](/ja/docs/Web/Security/Defenses/Subresource_Integrity) を強制する、またはポリシー違反の報告のみ行うことができます ([Firefox bug 1976656](https://bugzil.la/1976656))。
 
 - スタイルシート向けの **`Integrity-Policy` および `Integrity-Policy-Report-Only`** : `security.integrity_policy.stylesheet.enabled`
 

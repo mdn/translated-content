@@ -116,8 +116,8 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### セキュリティ
 
-- {{domxref("Geolocation")}} API が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
-- {{domxref("Storage API")}} が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
+- {{domxref("Geolocation")}} API が、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
+- {{domxref("Storage API")}} が、[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
 - localhost で、混在コンテンツの読み込みを許可しました ([Firefox バグ 903966](https://bugzil.la/903966))。
 - リモートの JAR ファイルの読み込みを再び無効化しました ([Firefox バグ 1329336](https://bugzil.la/1329336))。詳しくは [Security and the jar protocol](/ja/docs/Mozilla/Security/Security_and_the_jar_protocol) をご覧ください。
 

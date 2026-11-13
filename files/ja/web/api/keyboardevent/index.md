@@ -2,7 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("UI Events")}}
@@ -138,8 +138,6 @@ _このインターフェイスには、親である {{domxref("UIEvent")}} お�
 
 ### 古いメソッド
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : `KeyboardEvent` オブジェクトを初期化します。これは Firefox でのみ実装されていたものですが、もう Firefox でも対応していません。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
   - : `KeyboardEvent` オブジェクトを初期化します。これは非推奨になりました。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 
@@ -205,47 +203,39 @@ GTK を用いた環境の中には、自動リピート時にネイティブの 
 ## 例
 
 ```js
-document.addEventListener(
-  "keydown",
-  (event) => {
-    const keyName = event.key;
+document.addEventListener("keydown", (event) => {
+  const keyName = event.key;
 
-    if (keyName === "Control") {
-      // do not alert when only Control key is pressed.
-      return;
-    }
+  if (keyName === "Control") {
+    // Ctrl キーのみが押されている場合はアラートを表示しない
+    return;
+  }
 
-    if (event.ctrlKey) {
-      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-      alert(`Combination of ctrlKey + ${keyName}`);
-    } else {
-      alert(`Key pressed ${keyName}`);
-    }
-  },
-  false,
-);
+  if (event.ctrlKey) {
+    // event.key が 'Control' でなくても（例えば 'a' が押されている）、
+    // event.ctrlKey は同時に Ctrl キーが押されていれば true になる
+    alert(`ctrlKey + ${keyName} の組み合わせ`);
+  } else {
+    alert(`${keyName} キーが押された`);
+  }
+});
 
-document.addEventListener(
-  "keyup",
-  (event) => {
-    const keyName = event.key;
+document.addEventListener("keyup", (event) => {
+  const keyName = event.key;
 
-    // As the user releases the Ctrl key, the key is no longer active,
-    // so event.ctrlKey is false.
-    if (keyName === "Control") {
-      alert("Control key was released");
-    }
-  },
-  false,
-);
+  // ユーザーが Ctrl キーを話したら、キーはアクティブではなくなるので、
+  // event.ctrlKey は false になる
+  if (keyName === "Control") {
+    alert("Ctrl キーが離された");
+  }
+});
 ```
 
 ## 仕様書
 
 {{Specifications}}
 
-`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた {{domxref("KeyboardEvent.initKeyEvent()")}} が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
+`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた `KeyboardEvent.initKeyEvent()` が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
 
 ## ブラウザーの互換性
 

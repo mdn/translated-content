@@ -121,4 +121,4 @@ form {
 ## Смотрите также
 
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/Guides/Box_model/Introduction), {{ Cssxref("box-sizing") }}

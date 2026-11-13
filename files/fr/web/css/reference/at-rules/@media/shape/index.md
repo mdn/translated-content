@@ -1,9 +1,9 @@
 ---
-title: shape
+title: Caractéristique média CSS `shape`
+short-title: shape
 slug: Web/CSS/Reference/At-rules/@media/shape
-original_slug: Web/CSS/@media/shape
 l10n:
-  sourceCommit: 10f562a8a12f7bbf4b35b21de449c721ed756eb4
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 {{SeeCompatTable}}
@@ -75,7 +75,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}
 - Le module d'[affichage arrondi CSS](/fr/docs/Web/CSS/CSS_round_display)
-- [Utiliser les variables d'environnement](/fr/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
-- Le module des [variables d'environnement CSS](/fr/docs/Web/CSS/CSS_environment_variables)
+- [Utiliser les variables d'environnement](/fr/docs/Web/CSS/Guides/Environment_variables/Using)
+- Le module des [variables d'environnement CSS](/fr/docs/Web/CSS/Guides/Environment_variables)

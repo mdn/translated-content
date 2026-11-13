@@ -1,9 +1,8 @@
 ---
 title: <url>
 slug: Web/CSS/Reference/Values/url_value
-original_slug: Web/CSS/url_value
 l10n:
-  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`<url>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、リソースを指します。リソースには画像、動画、CSS ファイル、フォントファイル、SVG 機能などがあります。
@@ -11,7 +10,7 @@ l10n:
 ## 構文
 
 ```plain
-<url> = <url()> | <src()>
+<url> = <url()>
 ```
 
 ### 値
@@ -19,9 +18,10 @@ l10n:
 値は以下のどちらかです。
 
 - [`<url()>`](/ja/docs/Web/CSS/Reference/Values/url_function)
-  - : `url()` 関数は、URL のリテラル文字列のみを受け付けます。
-- `<src()>`
-  - : この関数は、URL 文字列または [CSS 変数](/ja/docs/Web/CSS/Reference/Values/var)を受け取ることができます。
+  - : `url()` 関数は、URL のリテラル文字列（引用符はあってもなくてもよい）のみを受け付けます。
+
+> [!NOTE]
+> 仕様書では、他にも `src()` という別な関数を定義しています。これは URL 文字列または [CSS 変数](/ja/docs/Web/CSS/Reference/Values/var)を受け入れます。しかし、現時点でこの関数を実装しているウェブブラウザーはありません。
 
 ## 仕様書
 

@@ -1,12 +1,12 @@
 ---
-title: repeating-linear-gradient()
+title: CSS `repeating-linear-gradient()` 関数
+short-title: repeating-linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient
 l10n:
-  sourceCommit: 8e2465af7cac389b70e83d54eeb288448f2ae08d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
+**`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: repeating-linear-gradient()")}}
 
@@ -43,7 +43,7 @@ background:
 
 繰り返すグラデーションの長さは、最初の色経由点と最後の色経由点の間の距離です。最初の色に color-stop-length がない場合、 color-stop-length の既定値は 0 になります。それぞれの繰り返しにおいて、色経由点の位置は基本的な線形グラデーションの長さの倍数だけずらしたものになります。この結果、グラデーションの最初と最後の色は常に隣り合わせになります。二つが異なる色であれば、視覚的に明確な変わり目ができるでしょう。これは最初の色を最後の色として再び使用することで修正することができます。
 
-他のグラデーションと同じく、線形反復グラデーションも[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、本来の寸法も優先される寸法も、優先されるアスペクト比も持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
+他のグラデーションと同じく、線形反復グラデーションも[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、本来の寸法も優先される寸法も、優先されるアスペクト比も持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
 
 `<gradient>` は CSS の `<image>` データ型に所属しますので、 `<image>` が使用できるところでのみ使用できます。このため、 `repeating-linear-gradient()` は {{Cssxref("background-color")}} や、その他の {{cssxref("&lt;color&gt;")}} を要求するプロパティでは動作しません。
 
@@ -85,7 +85,7 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
 
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : グラデーション線の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。
 - `<linear-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} の値であり、任意でその後に停止位置を指定します(グラデーションの軸に沿った {{CSSxRef("&lt;percentage&gt;")}} または {{CSSxRef("&lt;length&gt;")}} の位置)。 `0%` のパーセント値または `0` の長さは、グラデーションの先頭を表します。 `100%` の値は画像の寸法の 100% であり、つまりグラデーションは反復されません。
@@ -95,9 +95,9 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 > [!NOTE]
 > 反復線形グラデーションにおける色経由点は、[線形グラデーションにおける色経由点](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient#線形グラデーションの構成)と同じルールに従います。
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 例
 
@@ -181,7 +181,7 @@ body {
 ```css hidden live-sample___interpolating_with_hue
 div {
   height: 50vh;
-  color: #330;
+  color: #333300;
   font-weight: bolder;
   padding-left: 1.5rem;
 }
@@ -226,10 +226,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
+- {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

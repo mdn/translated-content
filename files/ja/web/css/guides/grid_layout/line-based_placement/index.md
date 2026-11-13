@@ -1,13 +1,12 @@
 ---
-title: 線ベースの配置を使用したグリッドレイアウト
-short-title: 線ベースの配置の使い方
+title: 線に基づく配置を使用したグリッドレイアウト
+short-title: 線に基づく配置の使い方
 slug: Web/CSS/Guides/Grid_layout/Line-based_placement
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)ガイドでは、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
+[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)ガイドでは、線番号を使ってグリッド上にアイテムを配置する方法を紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
 
 グリッドの探索は、番号が付けられた線から始めるのが最も論理的です。グリッドレイアウトを使用する場合、常に番号が付けられた線があるからです。線は列と行に番号が付けられ、`1` から順に番号が振られます。なお、グリッドは、文書の書字方向に従って番号が振られます。英語などの左書きの言語では、1 本目はグリッドの左側にあります。アラビア語などの右書きの言語で作業している場合、1 本目はグリッドの右側にあります。書字方向とグリッドの相互作用の詳細については、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)のガイドで学びます。
 

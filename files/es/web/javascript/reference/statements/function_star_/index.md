@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 {{jsSidebar("Statements")}}
 
-La declaración **`function*`** (la palabra clave `function` seguida de un asterisco) define una _función generadora_, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.
+La declaración **`function*`** (la palabra clave `function` seguida de un asterisco) define una _función generadora_, que devuelve un objeto {{jsxref("Generator")}}.
 
 También puedes definir funciones generadoras usando el constructor {{jsxref("GeneratorFunction")}} y una {{jsxref("Operators/function*", "function* expression")}}.
 
@@ -93,7 +93,7 @@ console.log(gen.next().value); // 20
 - {{jsxref("Function")}} object
 - {{jsxref("Statements/function", "function declaration")}}
 - {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions", "Functions and function scope")}}
 - Other web resources:
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)

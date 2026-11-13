@@ -64,7 +64,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 {{domxref("DataTransfer")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
 
-{{domxref("DataTransfer")}} 的 {{domxref("DataTransfer.types","types")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) 或 [`image/jpeg`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store) 中。
+{{domxref("DataTransfer")}} 的 {{domxref("DataTransfer.types","types")}} 属性返回一个类似 {{jsxref("String")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) 或 [`image/jpeg`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store) 中。
 
 一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 [`text/plain`](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) 类型的普通文本数据，即一些简单的文本表示。
 

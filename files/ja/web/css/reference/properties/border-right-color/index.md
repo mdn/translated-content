@@ -1,12 +1,12 @@
 ---
-title: border-right-color
+title: "`border-right-color` プロパティ (CSS)"
+short-title: border-right-color
 slug: Web/CSS/Reference/Properties/border-right-color
-original_slug: Web/CSS/border-right-color
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-**`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
+**`border-right-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
 
 {{InteractiveExample("CSS デモ: border-right-color")}}
 
@@ -19,11 +19,11 @@ border-right-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-right-color: rgb(170, 50, 220, 0.6);
+border-right-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-right-color: hsl(60, 90%, 50%, 0.8);
+border-right-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -33,15 +33,15 @@ border-right-color: transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -57,7 +57,7 @@ border-right-color: red;
 border-right-color: #ffbb00;
 border-right-color: rgb(255 0 0);
 border-right-color: hsl(100deg 50% 25% / 75%);
-border-right-color: currentcolor;
+border-right-color: currentColor;
 border-right-color: transparent;
 
 /* グローバル値 */
@@ -68,12 +68,12 @@ border-right-color: revert-layer;
 border-right-color: unset;
 ```
 
-`border-right-color` プロパティは 1 つの値で指定します。
-
 ### 値
 
+このプロパティは 1 つの値で指定します。
+
 - {{cssxref("&lt;color&gt;")}}
-  - : 右の境界線の色を定義します。
+  - : 右側の境界線の色を定義します。
 
 ## 公式定義
 
@@ -85,11 +85,11 @@ border-right-color: unset;
 
 ## 例
 
-### 境界線が付いた単純な div
+### 境界線が付いた div
 
 #### HTML
 
-```html-nolint live-sample___a_simple_div_with_a_border
+```html-nolint
 <div class="my-box">
   <p>
     これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span class="red-text">赤</span>になっています。
@@ -99,7 +99,7 @@ border-right-color: unset;
 
 #### CSS
 
-```css live-sample___a_simple_div_with_a_border
+```css
 .my-box {
   border: solid 0.3em gold;
   border-right-color: red;
@@ -113,7 +113,7 @@ border-right-color: unset;
 
 #### 結果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('境界線が付いた div')}}
 
 ## 仕様書
 
@@ -125,7 +125,7 @@ border-right-color: unset;
 
 ## 関連情報
 
-- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}
-- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}
-- 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}
-- 既定値の [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) カラー値
+- 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}、{{cssxref("border-right")}}、{{cssxref("border-color")}}
+- 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-top-color")}}
+- 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}、{{cssxref("border-right-width")}}
+- デフォルト値の [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) カラー値

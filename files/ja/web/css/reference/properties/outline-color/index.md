@@ -1,9 +1,8 @@
 ---
 title: outline-color
 slug: Web/CSS/Reference/Properties/outline-color
-original_slug: Web/CSS/outline-color
 l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`outline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線の色を設定します。
@@ -19,21 +18,21 @@ outline-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline-color: rgba(170, 50, 220, 0.6);
+outline-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-outline-color: hsla(60, 90%, 50%, 0.8);
+outline-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
-outline-color: currentcolor;
+outline-color: currentColor;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    これは周囲に輪郭線があるボックスです。
   </div>
 </section>
 ```
@@ -70,7 +69,7 @@ outline-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 輪郭線の色であり、`<color>` で指定します。
 
-仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
+仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) に計算されます。ただし、{{cssxref("outline-style")}} が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
 
 ## 解説
 
@@ -111,7 +110,7 @@ outline-color: unset;
 ```css live-sample___setting_a_solid_blue_outline
 p {
   outline: 2px solid; /* 輪郭線の幅と種類 */
-  outline-color: #0000ff; /* 輪郭線を青にする */
+  outline-color: blue; /* 輪郭線を青にする */
   margin: 5px;
 }
 ```

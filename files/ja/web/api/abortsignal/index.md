@@ -2,7 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 l10n:
-  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
+  sourceCommit: 9187ced76026d7784a8600296c4e04b0e6f72382
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -54,10 +54,14 @@ _親インターフェイスである {{DOMxRef("EventTarget")}} から継承し
 
 次のコードでは、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して動画をダウンロードします。
 
-まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。
+まず、`AbortController` 用の変数を定義します。
 
-[フェッチリクエスト](/ja/docs/Web/API/Window/fetch) が初期化すると、 `AbortSignal` をリクエストのオプションオブジェクト（下記 `{signal}` を参照）の内部のオプションとして渡します。これによりシグナルと読み込みリクエストのコントローラーが関連付き、{{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
-下記では、フェッチ処理が 2 つ目のイベントリスナーで中止されていることがわかります。このイベントリスナーは、中止ボタン (`abortBtn`) がクリックされたときに起動します。
+それぞれの[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)の前に、{{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用して新しいコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して、それに関連付けられた `AbortSignal` オブジェクトへの参照を取得します。
+
+> [!NOTE]
+> `AbortSignal` は 1 回しか使用できません。一度中止されると、同じシグナルを使用したフェッチ呼び出しはすべて即座に拒否されます。
+
+[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が行われると、 `AbortSignal` をリクエストのオプションオブジェクト（下記 `{ signal }` を参照）の内部のオプションとして渡します。これにより、シグナルと読み込みリクエストのコントローラーが関連付けられ、{{domxref("AbortController.abort()")}} を呼び出すことで、下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
 
 `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` という名前の `DOMException` で拒否されます。
 
@@ -116,7 +120,7 @@ async function get() {
 これは、指定のミリ秒後に自動的にタイムアウトする `AbortSignal` を返すものです。
 
 下記のコードでは、ファイルのダウンロードに成功するか、 5 秒後にタイムアウトエラーが発生した場合にどのように処理するかを示しています。
-タイムアウトが発生した場合、`fetch()` のプロミスは "`TimeoutError`" `DOMException` で拒否されることに注意してください。
+タイムアウトが発生した場合、`fetch()` のプロミスは `TimeoutError` `DOMException` で拒否されることに注意してください。
 これにより、タイムアウト(おそらくユーザーへの通知が必要)とユーザーによる中止をコードで区別することができます。
 
 ```js
@@ -128,16 +132,14 @@ try {
   // …
 } catch (err) {
   if (err.name === "TimeoutError") {
-    console.error("Timeout: It took more than 5 seconds to get the result!");
+    console.error("タイムアウト: 結果を取得するまで 5 秒以上かかりました。");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+      "フェッチはユーザー操作（ブラウザーの停止ボタン、タブを閉じたなど）により中止されました",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
-    // A network error, or some other problem.
-    console.error(`Error: type: ${err.name}, message: ${err.message}`);
+    // ネットワークエラー、またはその他の問題
+    console.error(`エラー: 型: ${err.name}, メッセージ: ${err.message}`);
   }
 }
 ```
@@ -183,24 +185,27 @@ try {
 function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // シグナルがすでに中止されている場合は、プロミスを拒否するために直ちに例外を発生
-    if (signal.aborted) {
-      reject(signal.reason);
-    }
+    signal.throwIfAborted();
 
     // API の主目的を実行
     // 終了したら resolve(result) を呼び出す。
 
     // 'abort' シグナルを監視
-    signal.addEventListener("abort", () => {
-      // 主な処理を停止
-      // 中止される理由でプロミスを拒否する
-      reject(signal.reason);
-    });
+    // `once: true` を指定することで、abort が呼び出された後にこの Promise がガベージコレクションの対象となるようにする
+    signal.addEventListener(
+      "abort",
+      () => {
+        // メイン操作を停止
+        // 中止理由を添えてプロミスを拒否
+        reject(signal.reason);
+      },
+      { once: true },
+    );
   });
 }
 ```
 
-このAPIは、次のように使用します。
+この API は、次のように使用します。
 処理を中止するために {{domxref("AbortController.abort()")}} が呼び出されていることに注意しましょう。
 
 ```js

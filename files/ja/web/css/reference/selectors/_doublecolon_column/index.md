@@ -1,9 +1,8 @@
 ---
 title: ::column
 slug: Web/CSS/Reference/Selectors/::column
-original_slug: Web/CSS/::column
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -26,7 +25,7 @@ CSS の段組みレイアウトを使用してコンテナーのコンテンツ�
 
 `::column` 擬似要素は、 {{cssxref("::scroll-marker")}} 擬似要素を持つことができます。 {{cssxref("::before")}} や {{cssxref("::after")}} などのその他の擬似要素は、 `::column` では生成されません。 `::column::scroll-marker` を適用すると、元の[スクロールコンテナー](/ja/docs/Glossary/Scroll_container)のすべての段にマーカーが作成され、 `::scroll-marker` 擬似要素は、 `::column` 擬似要素そのものではなく、 `::column` 擬似要素の元の要素から継承されます。
 
-これは [CSS カルーセル](/ja/docs/Web/CSS/Guides/Overflow/Carousels)で役立ちます。 `::column` を使用して、それぞれの段の `::scroll-marker` 擬似要素を生成し、[CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用してそれらを[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として設定することができます。
+これは [CSS カルーセル](/ja/docs/Web/CSS/Guides/Overflow/Carousels)で役立ちます。 `::column` を使用して、それぞれの段の `::scroll-marker` 擬似要素を生成し、それらを[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)として [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用するよう設定することができます。
 
 `::column` に適用できるスタイル設定はとても制限されていますが、将来は拡大される可能性があります。将来対応されるプロパティおよび値は、レイアウトに影響を与えないものに限定されます。
 
@@ -111,7 +110,7 @@ HTML は、[順序なしリスト](/ja/docs/Web/HTML/Reference/Elements/ul)で�
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 ```
 
@@ -145,8 +144,8 @@ li {
   width: 200px;
   text-align: left;
 
-  background-color: #eee;
-  outline: 1px solid #ddd;
+  background-color: #eeeeee;
+  outline: 1px solid #dddddd;
   padding: 0 20px;
   margin: 0 10px;
 }
@@ -215,7 +214,7 @@ ul::column::scroll-marker:target-current {
 
 スクロールマーカーを押して、各ページに直接移動してみてください。現在のマーカーが強調表示されていることに注意してください。これにより、ページ内の現在の位置を確認することができます。また、スクロールマーカーグループまでタブキーを押してから、カーソルキーを使用して各ページを順番に表示してみてください。
 
-他のカルーセルの例は、 [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)を参照してください。
+他のカルーセルの例は、 [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)を参照してください。
 
 ## 仕様書
 
@@ -231,7 +230,7 @@ ul::column::scroll-marker:target-current {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
-- [CSS カルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール
 - [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

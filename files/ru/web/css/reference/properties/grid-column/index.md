@@ -6,7 +6,7 @@ original_slug: Web/CSS/grid-column
 
 {{CSSRef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
+[Сокращённое CSS-свойство](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
 
 {{InteractiveExample("CSS Demo: grid-column")}}
 
@@ -195,5 +195,5 @@ grid-column: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
-- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
 - Обучающее видео: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

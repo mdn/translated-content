@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 
 ## 语法
 
-```plain
+```js-nolint
 Math.cbrt(x)
 ```
 

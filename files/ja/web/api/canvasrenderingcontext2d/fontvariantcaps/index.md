@@ -3,14 +3,14 @@ title: "CanvasRenderingContext2D: fontVariantCaps プロパティ"
 short-title: fontVariantCaps
 slug: Web/API/CanvasRenderingContext2D/fontVariantCaps
 l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.fontVariantCaps`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、描画するテキストの大文字化を変更します。
 
-これは、 CSS の [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps) プロパティに相当します。
+これは、 CSS の {{cssxref("font-variant-caps")}} プロパティに相当します。
 
 ## 値
 
@@ -37,7 +37,7 @@ l10n:
 
 このプロパティを使用して、フォントの大文字化値を取得したり設定したりすることができます。
 
-なお、これらのいくつかにはアクセシビリティ上の問題があり、相当する [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps#accessibility_concerns) のトピックで概説されています。
+なお、これらのいくつかにはアクセシビリティ上の問題があり、相当する [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps#アクセシビリティ) のトピックで概説されています。
 
 ## 例
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2
 original_slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 ---
 
-« [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
 
 ### 쌓임 맥락 예제2
 

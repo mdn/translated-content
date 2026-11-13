@@ -169,7 +169,7 @@ console.log(obj.sum); // 16
 因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callbackFn` 函数，作为它的 `this` 值。
 
 > [!NOTE]
-> 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
+> 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("this")}} 值。
 
 ### 对象复制函数
 

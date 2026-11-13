@@ -2,7 +2,7 @@
 title: CSSStartingStyleRule
 slug: Web/API/CSSStartingStyleRule
 l10n:
-  sourceCommit: 8b199a6a0272d77f1583d7fdc3faaecfd8234ff8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{ APIRef("CSSOM") }}
@@ -13,11 +13,11 @@ l10n:
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("CSSGroupingRule")}} から継承したプロパティがあります。_
+_このインターフェイスには、祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したプロパティがあります。_
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("CSSGroupingRule")}} から継承したメソッドがあります。_
+_このインターフェイスには、祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

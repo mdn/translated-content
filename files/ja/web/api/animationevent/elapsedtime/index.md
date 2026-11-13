@@ -3,7 +3,7 @@ title: "AnimationEvent: elapsedTime プロパティ"
 short-title: elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}

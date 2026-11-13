@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/template
 original_slug: Web/XSLT/Element/template
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:template>` 요소는 출력 생성 템플릿을 정의합니다. 이 요소는 match 속성이나 name 속성 집합이 있어야 합니다.
 

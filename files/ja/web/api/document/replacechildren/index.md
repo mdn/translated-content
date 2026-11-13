@@ -36,7 +36,7 @@ replaceChildren(param1, param2, /* …, */ paramN)
 
 ### 文書を空にする
 
-replaceChildren()`は、文書の子要素をすべて空にするとても便利なメカニズムを提供します。引数を指定しないで、文書に対して呼び出すのです。
+`replaceChildren()`は、文書の子要素をすべて空にするとても便利なメカニズムを提供します。引数を指定しないで、文書に対して呼び出すのです。
 
 ```js
 document.replaceChildren();

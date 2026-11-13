@@ -52,7 +52,7 @@ article::before {
 }
 ```
 
-CSS의 [속성 선택자](/ko/docs/Web/CSS/Attribute_selectors)도 데이터에 따라 스타일을 변경하는 데 사용할 수 있습니다.
+CSS의 [속성 선택자](/ko/docs/Web/CSS/Reference/Selectors/Attribute_selectors)도 데이터에 따라 스타일을 변경하는 데 사용할 수 있습니다.
 
 ```css
 article[data-columns="3"] {

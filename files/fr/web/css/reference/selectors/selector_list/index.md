@@ -1,12 +1,11 @@
 ---
 title: Liste de sélecteurs
 slug: Web/CSS/Reference/Selectors/Selector_list
-original_slug: Web/CSS/Selector_list
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**Une liste de sélecteurs** (`,`) permet de cibler tous les nœuds correspondants à l'une des conditions.
+Une **liste de sélecteurs** (`,`) permet de cibler tous les nœuds correspondants à l'une des conditions.
 
 ## Description
 
@@ -46,7 +45,7 @@ Cet exemple montre le groupement de sélecteurs sur une seule ligne à l'aide d'
 
 ```css-nolint
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial;
+  font-family: "Helvetica", "Arial";
 }
 ```
 
@@ -65,7 +64,7 @@ h1 + p {
 
 ## Listes de sélecteurs valides et invalides
 
-Un sélecteur invalide ne correspond à rien. Lorsqu'une liste de sélecteurs contient un sélecteur invalide, tout le bloc de style est ignoré, sauf pour les pseudo-classes {{CSSxRef(":is", ":is()")}} et {{CSSxRef(":where", ":where()")}} qui acceptent des [listes de sélecteurs tolérantes](#liste_de_sélecteurs_tolérante).
+Un sélecteur invalide ne correspond à rien. Lorsqu'une liste de sélecteurs contient un sélecteur invalide, tout le bloc de style est ignoré, sauf pour les pseudo-classes {{CSSxRef(":is()")}} et {{CSSxRef(":where()")}} qui acceptent des [listes de sélecteurs tolérantes](#liste_de_sélecteurs_tolérante).
 
 ### Liste de sélecteurs invalide
 
@@ -93,11 +92,11 @@ h3 {
 }
 ```
 
-Ces deux ensembles ne sont pas équivalents. Dans le premier, les styles seront appliqués aux éléments `h1` et `h3`, mais la règle `h2:invalid-pseudo` ne sera pas interprétée. Dans le second, puisqu'un sélecteur de la liste est invalide, l'ensemble de la règle ne sera pas interprété. Ainsi, aucun style ne sera appliqué à `h1` et `h3`&nbsp;: dès qu'un sélecteur d'une liste est invalide, tout le bloc de style est ignoré.
+Elles ne sont pas équivalentes. Dans le premier ensemble de règles, les styles seront appliqués sur les éléments `h1` et `h3`, mais la règle `h2:invalid-pseudo` ne sera pas analysée. Dans le second ensemble de règles, comme un sélecteur de la liste est invalide, l'ensemble de la règle ne sera pas analysé. À cause de cela, aucun style ne sera appliqué aux éléments `h1` et `h3` car lorsque qu'un sélecteur d'une liste de sélecteurs est invalide, l'ensemble du bloc de style est ignoré.
 
 ### Liste de sélecteurs tolérante
 
-Pour remédier au problème de la [liste de sélecteurs invalide](#liste_de_sélecteurs_invalide), on peut utiliser les pseudo-classes {{CSSxRef(":is", ":is()")}} ou {{CSSxRef(":where", ":where()")}}, qui acceptent une liste de sélecteurs tolérante. Chaque sélecteur de la liste est analysé individuellement&nbsp;: les sélecteurs invalides sont ignorés et seuls les valides sont utilisés.
+Pour remédier au problème de la [liste de sélecteurs invalide](#liste_de_sélecteurs_invalide), on peut utiliser les pseudo-classes {{CSSxRef(":is()")}} ou {{CSSxRef(":where()")}}, qui acceptent une liste de sélecteurs tolérante. Chaque sélecteur de la liste est analysé individuellement. De ce fait, les sélecteurs invalides sont ignorés et seuls les valides sont utilisés.
 
 En reprenant l'exemple précédent, les deux ensembles de règles CSS suivants sont alors équivalents&nbsp;:
 
@@ -123,7 +122,7 @@ La différence entre les deux est que la spécificité de `:is()` correspond à 
 
 ### Liste de sélecteurs relatifs
 
-Une liste de sélecteurs relatifs est une liste de sélecteurs séparés par des virgules, analysée comme des [sélecteurs relatifs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_relatif), qui commencent par un combinateur explicite ou implicite.
+Une liste de sélecteurs relatifs est une liste de sélecteurs séparés par des virgules, analysée comme des [sélecteurs relatifs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_relatif), qui commencent par un combinateur explicite ou implicite.
 
 ```css
 h2:has(+ p, + ul.red) {
@@ -131,7 +130,7 @@ h2:has(+ p, + ul.red) {
 }
 ```
 
-Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` immédiatement suivi d'un paragraphe `<p>` ou d'une liste `<ul class="red">`. À noter&nbsp;: les pseudo-éléments et le sélecteur `:has()` ne sont pas valides à l'intérieur de la liste de sélecteurs relatifs de [`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has).
+Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` immédiatement suivi d'un paragraphe `<p>` ou d'une liste `<ul class="red">`. À noter&nbsp;: les pseudo-éléments et le sélecteur `:has()` ne sont pas valides à l'intérieur de la liste de sélecteurs relatifs de {{CSSxRef(":has()")}}.
 
 ## Spécifications
 
@@ -143,7 +142,8 @@ Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` im
 
 ## Voir aussi
 
-- Les pseudo-classes {{CSSxRef(":is", ":is()")}} et {{CSSxRef(":where", ":where()")}} acceptent des listes de sélecteurs tolérantes.
-- La pseudo-classe {{CSSxRef(":not", ":not()")}} accepte une liste de sélecteurs classique.
-- La pseudo-classe {{CSSxRef(":has", ":has()")}} accepte une liste de sélecteurs relative.
-- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- Les pseudo-classes {{CSSxRef(":is()")}} et {{CSSxRef(":where()")}} acceptent des listes de sélecteurs tolérantes.
+- La pseudo-classe {{CSSxRef(":not()")}} accepte une liste de sélecteurs classique.
+- La pseudo-classe {{CSSxRef(":has()")}} accepte une liste de sélecteurs relative.
+- Le module [des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- [Sélecteurs et combinateurs](/fr/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)

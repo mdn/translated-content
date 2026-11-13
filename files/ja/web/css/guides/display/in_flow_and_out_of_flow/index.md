@@ -1,9 +1,8 @@
 ---
 title: フロー内とフローの外
 slug: Web/CSS/Guides/Display/In_flow_and_out_of_flow
-original_slug: Web/CSS/CSS_display/In_flow_and_out_of_flow
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [前のガイド](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
@@ -94,7 +93,7 @@ body {
   font: 1.2em sans-serif;
 }
 p {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .float {
@@ -148,7 +147,7 @@ p {
 .abspos {
   position: absolute;
   background-color: green;
-  color: #fff;
+  color: white;
   top: 30px;
   right: 30px;
   width: 400px;
@@ -199,7 +198,7 @@ p {
 .relative {
   position: relative;
   background-color: green;
-  color: #fff;
+  color: white;
   bottom: 50px;
   left: 50px;
   width: 400px;

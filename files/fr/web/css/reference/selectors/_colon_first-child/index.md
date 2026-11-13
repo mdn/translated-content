@@ -1,9 +1,9 @@
 ---
-title: :first-child
+title: Pseudo-classe CSS `:first-child`
+short-title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
-original_slug: Web/CSS/:first-child
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.
@@ -66,14 +66,15 @@ li:first-child {
   </p>
   <p>
     En revanche, ce paragraphe n'est pas mis en forme car ce n'est pas le
-    premier !
+    premier&nbsp;!
   </p>
 </div>
 
 <div>
   <h2>Ce titre h2 n'est pas mis en forme car ce n'est pas un paragraphe.</h2>
   <p>
-    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier fils !
+    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier
+    fils&nbsp;!
   </p>
 </div>
 ```
@@ -90,7 +91,7 @@ p:first-child {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_simple', 500, 200)}}
+{{EmbedLiveSample("Exemple simple", 500, 200)}}
 
 ### Utiliser les listes non ordonnées
 
@@ -136,7 +137,7 @@ ul li:first-child {
 
 ## Voir aussi
 
-- {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- La pseudo-classe {{CSSxRef(":-moz-first-node")}}
+- La pseudo-classe {{CSSxRef(":first-of-type")}}
+- La pseudo-classe {{CSSxRef(":last-child")}}
+- La pseudo-classe {{CSSxRef(":nth-child()")}}

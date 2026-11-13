@@ -5,7 +5,7 @@ slug: Web/CSS/Reference/At-rules/@media/inverted-colors
 
 {{cssref}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
+[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Guides/Media_queries/Using) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
 
 ## Синтаксис
 

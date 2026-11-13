@@ -179,102 +179,6 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
-    "modified": "2019-03-23T22:19:01.932Z",
-    "contributors": [
-      "wbamberg",
-      "jiii",
-      "jswisher"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
-    "modified": "2019-03-23T22:15:46.459Z",
-    "contributors": [
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "jackblackevo",
-      "jiii"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2019-01-17T01:49:49.827Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim",
-      "SphinxKnight"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2019-01-17T02:24:24.007Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim",
-      "ziyunfei",
-      "Trendymen"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
-    "modified": "2019-03-23T22:16:30.455Z",
-    "contributors": [
-      "Somehow",
-      "wbamberg",
-      "DHecarim",
-      "ziyunfei",
-      "jiii"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2020-03-04T06:46:31.914Z",
-    "contributors": [
-      "zmx0142857"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2020-10-06T22:02:12.248Z",
-    "contributors": [
-      "phone-burner",
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "usernameisMan"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2020-03-04T06:03:22.539Z",
-    "contributors": [
-      "zmx0142857"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
-    "modified": "2019-03-23T22:16:32.351Z",
-    "contributors": [
-      "wbamberg",
-      "SwithunHan",
-      "Ende93",
-      "Heroor",
-      "xrr2016",
-      "jiii",
-      "ziyunfei"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2019-01-17T00:34:32.812Z",
-    "contributors": [
-      "wbamberg",
-      "xrr2016",
-      "varcat",
-      "longzhengxiong",
-      "lixuanh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
-    "modified": "2019-01-17T03:03:35.918Z",
-    "contributors": [
-      "wbamberg",
-      "DHecarim"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2019-03-23T22:13:33.607Z",
     "contributors": [
@@ -312,13 +216,6 @@
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection": {
-    "modified": "2019-01-17T01:43:12.147Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives": {
     "modified": "2019-01-17T01:43:04.678Z",
     "contributors": [
@@ -339,13 +236,6 @@
       "wbamberg",
       "hnliuzesen",
       "Haruhi"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen": {
-    "modified": "2019-01-17T01:43:00.734Z",
-    "contributors": [
-      "wbamberg",
-      "j787701730"
     ]
   },
   "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball": {
@@ -377,26 +267,92 @@
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Scaling": {
-    "modified": "2019-01-17T01:43:02.878Z",
-    "contributors": [
-      "wbamberg",
-      "hnliuzesen",
-      "j787701730"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/The_score": {
+  "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
     "modified": "2019-01-17T01:43:04.496Z",
     "contributors": [
       "wbamberg",
       "j787701730"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game": {
-    "modified": "2019-01-17T01:43:17.617Z",
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
+    "modified": "2019-03-23T22:19:01.932Z",
     "contributors": [
       "wbamberg",
-      "j787701730"
+      "jiii",
+      "jswisher"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+    "modified": "2019-03-23T22:15:46.459Z",
+    "contributors": [
+      "wbamberg",
+      "xrr2016",
+      "varcat",
+      "jackblackevo",
+      "jiii"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2019-01-17T01:49:49.827Z",
+    "contributors": [
+      "wbamberg",
+      "DHecarim",
+      "SphinxKnight"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives": {
+    "modified": "2020-03-04T06:46:31.914Z",
+    "contributors": [
+      "zmx0142857"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2020-10-06T22:02:12.248Z",
+    "contributors": [
+      "phone-burner",
+      "wbamberg",
+      "xrr2016",
+      "varcat",
+      "usernameisMan"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
+    "modified": "2019-03-23T22:16:30.455Z",
+    "contributors": [
+      "Somehow",
+      "wbamberg",
+      "DHecarim",
+      "ziyunfei",
+      "jiii"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
+    "modified": "2019-03-23T22:16:32.351Z",
+    "contributors": [
+      "wbamberg",
+      "SwithunHan",
+      "Ende93",
+      "Heroor",
+      "xrr2016",
+      "jiii",
+      "ziyunfei"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2019-01-17T00:34:32.812Z",
+    "contributors": [
+      "wbamberg",
+      "xrr2016",
+      "varcat",
+      "longzhengxiong",
+      "lixuanh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
+    "modified": "2019-01-17T03:03:35.918Z",
+    "contributors": [
+      "wbamberg",
+      "DHecarim"
     ]
   },
   "Glossary": {
@@ -2782,49 +2738,6 @@
       "syj300"
     ]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_first_component": {
-    "modified": "2020-12-04T03:44:08.883Z",
-    "contributors": [
-      "wang_liang"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-12-11T06:35:44.409Z",
-    "contributors": [
-      "amai0w0",
-      "wang_liang",
-      "zisedelinghun",
-      "ZhangNing",
-      "MRzhangzhenhua",
-      "929721152",
-      "xyjk0917"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models": {
-    "modified": "2020-09-22T07:48:03.161Z",
-    "contributors": [
-      "helldealer"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists": {
-    "modified": "2020-09-22T04:42:41.746Z",
-    "contributors": [
-      "helldealer"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_resources": {
-    "modified": "2020-12-01T12:40:05.687Z",
-    "contributors": [
-      "zisedelinghun",
-      "Hzbmangguo"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_styling": {
-    "modified": "2020-10-15T23:41:44.939Z",
-    "contributors": [
-      "ygxwdls"
-    ]
-  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:31:11.083Z",
     "contributors": [
@@ -4745,12 +4658,6 @@
       "edgar-chen"
     ]
   },
-  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
-    "modified": "2020-07-16T22:38:37.610Z",
-    "contributors": [
-      "edgar-chen"
-    ]
-  },
   "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
     "modified": "2020-07-16T22:38:38.748Z",
     "contributors": [
@@ -5396,54 +5303,6 @@
       "yuyx91"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.753Z",
-    "contributors": [
-      "A-rise"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-10-06T06:46:00.886Z",
-    "contributors": [
-      "kuailekai",
-      "Chor"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-11-12T06:17:33.350Z",
-    "contributors": [
-      "咸鱼快去读书",
-      "kidonng",
-      "SirnoChan",
-      "Yang_Hanlin",
-      "Geno1024",
-      "bingxl",
-      "xiwusheng",
-      "JohnJiangLA",
-      "sher",
-      "ArcherGrey"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:42.078Z",
-    "contributors": [
-      "bingxl",
-      "xiwusheng",
-      "PokimLee",
-      "summerstarlee",
-      "ArcherGrey"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:52.151Z",
-    "contributors": [
-      "WoodCube",
-      "TeabugCC",
-      "zhangtianle",
-      "zhuangyin",
-      "Bernie_Lai"
-    ]
-  },
   "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-08-09T19:35:32.533Z",
     "contributors": [
@@ -5454,13 +5313,6 @@
       "wth",
       "ziyunfei",
       "zhaoy875"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.819Z",
-    "contributors": [
-      "What-username-will-make-you-feel-cute",
-      "GHLgh"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
@@ -17169,13 +17021,6 @@
       "enem"
     ]
   },
-  "Web/API/Range/collapsed": {
-    "modified": "2019-03-23T22:22:29.507Z",
-    "contributors": [
-      "GentleMint",
-      "Smart"
-    ]
-  },
   "Web/API/Range/commonAncestorContainer": {
     "modified": "2020-10-15T22:16:13.137Z",
     "contributors": [
@@ -17192,19 +17037,6 @@
     "modified": "2019-03-18T21:44:16.852Z",
     "contributors": [
       "lbwa"
-    ]
-  },
-  "Web/API/Range/endContainer": {
-    "modified": "2019-03-18T21:42:17.127Z",
-    "contributors": [
-      "Hyiker"
-    ]
-  },
-  "Web/API/Range/endOffset": {
-    "modified": "2020-10-15T22:04:46.141Z",
-    "contributors": [
-      "Carllllo",
-      "gnepnaiL-oahZ"
     ]
   },
   "Web/API/Range/extractContents": {
@@ -17277,21 +17109,6 @@
     "modified": "2020-10-15T22:18:37.906Z",
     "contributors": [
       "loszer"
-    ]
-  },
-  "Web/API/Range/startContainer": {
-    "modified": "2019-03-23T22:02:05.516Z",
-    "contributors": [
-      "li5454yong"
-    ]
-  },
-  "Web/API/Range/startOffset": {
-    "modified": "2020-10-15T21:28:32.328Z",
-    "contributors": [
-      "Carllllo",
-      "teoli",
-      "khalid32",
-      "Losses"
     ]
   },
   "Web/API/Range/surroundContents": {
@@ -30144,16 +29961,16 @@
       "luna666"
     ]
   },
-  "Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials": {
-    "modified": "2020-09-18T12:19:26.611Z",
-    "contributors": [
-      "Cooper-Kou"
-    ]
-  },
   "Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound": {
     "modified": "2019-08-27T04:22:52.153Z",
     "contributors": [
       "laingke"
+    ]
+  },
+  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials": {
+    "modified": "2020-09-18T12:19:26.611Z",
+    "contributors": [
+      "Cooper-Kou"
     ]
   },
   "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin": {
@@ -42336,34 +42153,13 @@
       "Freeopen"
     ]
   },
-  "Web/Security/Certificate_Transparency": {
+  "Web/Security/Defenses/Certificate_Transparency": {
     "modified": "2020-10-15T22:15:40.587Z",
     "contributors": [
       "Yayure"
     ]
   },
-  "Web/Security/Practical_implementation_guides": {
-    "modified": "2019-05-30T06:18:16.799Z",
-    "contributors": [
-      "Qos",
-      "Roscoe93",
-      "keep2zero",
-      "xgqfrms-GitHub",
-      "hashedhyphen"
-    ]
-  },
-  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
-    "modified": "2020-06-26T14:51:08.712Z",
-    "contributors": [
-      "Clarkkkk",
-      "zhangchen",
-      "nick-ChenZe",
-      "tsejx",
-      "1010Tech",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/Security/Same-origin_policy": {
+  "Web/Security/Defenses/Same-origin_policy": {
     "modified": "2020-04-07T00:07:57.795Z",
     "contributors": [
       "H3lloTom",
@@ -42398,13 +42194,13 @@
       "Ghostheaven"
     ]
   },
-  "Web/Security/Secure_Contexts": {
+  "Web/Security/Defenses/Secure_Contexts": {
     "modified": "2020-09-16T05:44:30.532Z",
     "contributors": [
       "gjc9620"
     ]
   },
-  "Web/Security/Subresource_Integrity": {
+  "Web/Security/Defenses/Subresource_Integrity": {
     "modified": "2020-06-01T06:08:59.407Z",
     "contributors": [
       "asmoker",
@@ -42415,11 +42211,32 @@
       "xgqfrms-GitHub"
     ]
   },
-  "Web/Security/Transport_Layer_Security": {
+  "Web/Security/Defenses/Transport_Layer_Security": {
     "modified": "2020-05-16T23:45:09.100Z",
     "contributors": [
       "Unequaled804",
       "msforest"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides": {
+    "modified": "2019-05-30T06:18:16.799Z",
+    "contributors": [
+      "Qos",
+      "Roscoe93",
+      "keep2zero",
+      "xgqfrms-GitHub",
+      "hashedhyphen"
+    ]
+  },
+  "Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion": {
+    "modified": "2020-06-26T14:51:08.712Z",
+    "contributors": [
+      "Clarkkkk",
+      "zhangchen",
+      "nick-ChenZe",
+      "tsejx",
+      "1010Tech",
+      "xgqfrms-GitHub"
     ]
   },
   "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {

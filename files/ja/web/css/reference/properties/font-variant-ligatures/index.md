@@ -1,12 +1,12 @@
 ---
-title: font-variant-ligatures
+title: "`font-variant-ligatures` プロパティ (CSS)"
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
-original_slug: Web/CSS/font-variant-ligatures
 l10n:
-  sourceCommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-**`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
+**`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}およびその場に応じて変わる字形を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
 {{InteractiveExample("CSS デモ: font-variant-ligatures")}}
 
@@ -77,12 +77,12 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-`font-variant-ligatures` プロパティは、 `normal`、`none` または以下の一覧のキーワード値のうちのいずれかで指定します。
-
 ### 値
 
+このプロパティは、単一のキーワード、または以下の値の空白区切りリストとして指定します。
+
 - `normal`
-  - : このキーワードは、正しいレンダリングに必要な通常の合字や文脈書式を有効にします。有効になる合字と書式は、フォント、言語、および書法の種類によって異なります。これが既定値です。
+  - : このキーワードは、正しいレンダリングに必要な通常の合字や文脈書式を有効にします。有効になる合字と書式は、フォント、言語、および書法の種類によって異なります。これがデフォルト値です。
 - `none`
   - : 。このキーワードは、一般的なものであっても、すべての合字や文脈書式を無効にします。
 - _`<common-lig-values>`_
@@ -167,7 +167,7 @@ font-variant-ligatures: unset;
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-family: "Lora", serif;
 }
 .normal {
   font-variant-ligatures: normal;
@@ -224,10 +224,10 @@ p {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
 - [CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)

@@ -2,7 +2,7 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
 l10n:
-  sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`308 Permanent Redirect`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示請求的資源已永久移動到由 {{HTTPHeader("Location")}} 標頭所提供的 URL。

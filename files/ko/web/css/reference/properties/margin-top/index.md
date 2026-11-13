@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/margin-top
 original_slug: Web/CSS/margin-top
 ---
 
-**`margin-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`margin-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/Guides/Box_model/Introduction)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
 
 {{InteractiveExample("CSS Demo: margin-top")}}
 
@@ -58,7 +58,7 @@ margin-top: 0;
 }
 ```
 
-{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)non-replaced 인라인 요소에는 효과가 없습니다.
+{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)non-replaced 인라인 요소에는 효과가 없습니다.
 
 ## 구문
 

@@ -1,9 +1,8 @@
 ---
 title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
-original_slug: Web/CSS/::slotted
 l10n:
-  sourceCommit: cebbd9095ac12557c55157355181672027fffc14
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`::slotted()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください)。
@@ -13,7 +12,7 @@ l10n:
 {{InteractiveExample("CSS デモ: ::slotted()", "tabbed-shorter")}}
 
 ```css interactive-example
-/* This CSS is being applied inside the shadow DOM. */
+/* この CSS はシャドウ DOM の内部に適用されます。 */
 
 ::slotted(.content) {
   background-color: aqua;
@@ -27,14 +26,14 @@ h2 ::slotted(span) {
 ```html interactive-example
 <template id="card-template">
   <div>
-    <h2><slot name="caption">title goes here</slot></h2>
-    <slot name="content">content goes here</slot>
+    <h2><slot name="caption">タイトルがここに来ます</slot></h2>
+    <slot name="content">コンテンツがここに来ます</slot>
   </div>
 </template>
 
 <my-card>
-  <span slot="caption">Error</span>
-  <p class="content" slot="content">Build failed!</p>
+  <span slot="caption">エラー</span>
+  <p class="content" slot="content">構築に失敗しました!</p>
 </my-card>
 ```
 
@@ -47,7 +46,7 @@ customElements.define(
 
       const template = document.getElementById("card-template");
       const shadow = this.attachShadow({ mode: "open" });
-      shadow.appendChild(template.content.cloneNode(true));
+      shadow.appendChild(document.importNode(template.content, true));
 
       const elementStyle = document.createElement("style");
       elementStyle.textContent = `
@@ -117,12 +116,11 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("person-template");
-      let templateContent = template.content;
+      const template = document.getElementById("person-template");
 
       const shadowRoot = this.attachShadow({ mode: "open" });
 
-      let style = document.createElement("style");
+      const style = document.createElement("style");
       style.textContent =
         "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
         "h2 { margin: 0 0 10px; }" +
@@ -132,7 +130,7 @@ customElements.define(
         "::slotted(span) {text-decoration: underline;} ";
 
       shadowRoot.appendChild(style);
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      shadowRoot.appendChild(document.importNode(template.content, true));
     }
   },
 );
@@ -177,8 +175,9 @@ customElements.define(
 ## 関連情報
 
 - {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
+- {{cssxref(":has-slotted")}}
 - [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - HTML [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 - HTML {{HTMLElement("slot")}} 要素

@@ -1,9 +1,9 @@
 ---
-title: "@page"
+title: Règle CSS `@page`
+short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
-original_slug: Web/CSS/@page
 l10n:
-  sourceCommit: c699955e1e368bd42d6ea9318a6afc9256c3036f
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
@@ -45,14 +45,14 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 La règle `@page` ne peut contenir que des descripteurs de page et des [règles de marge](#règles_de_marge). Les descripteurs suivants ont été implémentés par au moins un navigateur&nbsp;:
 
-- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
-  - : Définit les marges de la page. Les propriétés individuelles [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) et [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) peuvent aussi être utilisées.
+- {{CSSxRef("margin")}}
+  - : Définit les marges de la page. Les propriétés individuelles {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} et {{CSSxRef("margin-left")}} peuvent aussi être utilisées.
 - [`page-orientation`](/fr/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : Définit l'orientation de la page. Cela n'affecte pas la mise en page&nbsp;: la rotation est appliquée après la mise en page sur le support de sortie.
 - [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size)
   - : Définit la taille cible et l'orientation du bloc englobant de la boîte de page. Dans le cas général, où une boîte de page est rendue sur une feuille de page, cela indique aussi la taille de la feuille de destination.
 
-La spécification mentionne que les propriétés CSS suivantes pourraient s'appliquer aux boîtes de page via la règle @page. Cependant, elles ne sont _pas encore prises en charge_ par les navigateurs.
+La spécification mentionne que les propriétés CSS suivantes peuvent s'appliquer aux boîtes de page avec la règle @page. Cependant, elles ne sont _pas encore prises en charge_ par les navigateurs.
 
 <details>
 <summary>Propriétés de page restantes</summary>
@@ -130,21 +130,21 @@ La spécification mentionne que les propriétés CSS suivantes pourraient s'appl
 
 ## Description
 
-La règle @page définit les propriétés de la boîte de page. La règle `@page` est accessible via l'interface du modèle objet CSS {{domxref("CSSPageRule")}}.
+La règle @page définit les propriétés de la boîte de page. La règle `@page` est accessible via l'interface du modèle objet CSS {{DOMxRef("CSSPageRule")}}.
 
 > [!NOTE]
-> Le W3C discute de la gestion des unités {{cssxref("&lt;length&gt;")}} liées à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;: `vh`, `vw`, `vmin` et `vmax`. En attendant, il est déconseillé de les utiliser dans une règle `@page`.
+> Le W3C discute de la gestion des unités {{CSSxRef("&lt;length&gt;")}} liées à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;: `vh`, `vw`, `vmin` et `vmax`. En attendant, il est déconseillé de les utiliser dans une règle `@page`.
 
 ### Propriétés associées
 
-La règle `@page` permet d'attribuer un nom à la règle, qui pourra ensuite être utilisé dans une déclaration via la propriété `page`.
+La règle `@page` permet d'attribuer un nom à la règle, qui peut ensuite être utilisé dans une déclaration avec la propriété `page`.
 
-- {{Cssxref("page")}}
+- {{CSSxRef("page")}}
   - : Permet à un sélecteur d'utiliser une **page nommée** définie par l'utilisateur·ice.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 Où `<page-body>` inclut&nbsp;:
 
@@ -153,10 +153,10 @@ Où `<page-body>` inclut&nbsp;:
 
 et `<pseudo-page>` représente ces pseudo-classes&nbsp;:
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- {{CSSxRef(":blank")}}
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":right")}}
 
 ## Règles de marge
 
@@ -278,31 +278,31 @@ Les propriétés de marge de page sont l'ensemble des propriétés CSS pouvant �
 
 Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/Guides/Fragmentation) de manière déclarative lors de l'impression.
 
-Les pages nommées peuvent être appliquées à l'aide de la propriété {{Cssxref("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
+Les pages nommées peuvent être appliquées à l'aide de la propriété {{CSSxRef("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
-Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/page#exemples).
+Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/Reference/Properties/page#exemples).
 
 ## Exemples
 
 ### Utiliser la propriété size pour changer l'orientation de la page
 
 Cet exemple montre comment diviser les `<section>` en pages individuelles au format `landscape`, chaque page ayant une marge de 20&nbsp;% lors de l'impression.
-Cliquer sur le bouton d'impression ouvrira la boîte de dialogue d'impression avec les sections HTML réparties sur des pages distinctes.
+Cliquer sur le bouton d'impression ouvre la boîte de dialogue d'impression avec les sections HTML réparties sur des pages distinctes.
 
 ```html live-sample___page-size
-<button>Print page</button>
+<button>Page d'impression</button>
 <article>
   <section>
-    <h2>Header one</h2>
-    <p>Paragraph one.</p>
+    <h2>En-tête un</h2>
+    <p>Paragraphe un.</p>
   </section>
   <section>
-    <h2>Header two</h2>
-    <p>Paragraph two.</p>
+    <h2>En-tête deux</h2>
+    <p>Paragraphe deux.</p>
   </section>
   <section>
-    <h2>Header three</h2>
-    <p>Paragraph three.</p>
+    <h2>En-tête trois</h2>
+    <p>Paragraphe trois.</p>
   </section>
 </article>
 ```
@@ -358,16 +358,16 @@ section {
 }
 ```
 
-{{EmbedLiveSample('utiliser_la_propriété_size_pour_changer_lorientation_de_la_page', '100%', '540', , , , , "allow-modals")}}
+{{EmbedLiveSample("Utiliser la propriété size pour changer l'orientation de la page", "100%", 540,,,,, "allow-modals")}}
 
-### Exemples de pseudo-classes @page
+### Exemples de pseudo-classes `@page`
 
 Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de `@page` pour des exemples.
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- {{CSSxRef(":blank")}}
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":right")}}
 
 ## Spécifications
 
@@ -379,7 +379,7 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseu
 
 ## Voir aussi
 
-- La propriété {{cssxref("page")}}
+- La propriété {{CSSxRef("page")}}
 - Le descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) de `@page`
-- Le module [Médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
+- Le module [des médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
 - Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)

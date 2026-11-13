@@ -242,7 +242,7 @@ docCookies.removeItem(name[, path],domain)
 
 - `name`
   - : 要移除的 cookie 名 ([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)).
-- `path` *(*可选*)*
+- `path` _(*可选*)_
   - : 例如 '/', '/mydir'。如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。路径必须为绝对路径（参见 [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#using_relative_urls_in_the_path_parameter)。
 - `domain` (可选)
   - : 例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com'。如果没有定义，默认为当前文档位置的路径的域名部分 (`string` 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null))。
@@ -314,7 +314,7 @@ alert(docCookies.getItem("test1;="));
 
 ## 安全
 
-路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)保护其不被读取。
+路径限制并**不能**阻止从其他路径访问 cookie. 使用简单的 DOM 即可轻易地绕过限制 (比如创建一个指向限制路径的，隐藏的[iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe), 然后访问其 `contentDocument.cookie` 属性). 保护 cookie 不被非法访问的唯一方法是将它放在另一个域名/子域名之下，利用[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)保护其不被读取。
 
 Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会话。因此通过窃听这些 cookie，就可以劫持已登录用户的会话。窃听的 cookie 的常见方法包括社会工程和 XSS 攻击 -
 

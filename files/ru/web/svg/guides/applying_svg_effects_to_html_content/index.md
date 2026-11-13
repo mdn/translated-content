@@ -10,7 +10,7 @@ slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/Reference/Properties/clip-path), и [`filter`](/ru/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
-> Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
+> Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Defenses/Same-origin_policy) , что и ссылочный документ.
 
 ## Использование встроенного SVG
 

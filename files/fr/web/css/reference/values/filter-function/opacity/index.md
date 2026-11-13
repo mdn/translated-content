@@ -1,12 +1,12 @@
 ---
-title: opacity()
+title: Fonction CSS `opacity()`
+short-title: opacity()
 slug: Web/CSS/Reference/Values/filter-function/opacity
-original_slug: Web/CSS/filter-function/opacity
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`opacity()`** permet de modifier la transparence de l'image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`opacity()`** permet de modifier la transparence de l'image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: opacity()")}}
 
@@ -41,7 +41,7 @@ filter: opacity(0);
 ```
 
 > [!NOTE]
-> Cette fonction est proche de la propriété {{Cssxref("opacity")}} mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
+> Cette fonction est proche de la propriété {{CSSxRef("opacity")}} mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
 
 ## Syntaxe
 
@@ -52,7 +52,7 @@ opacity(amount)
 ### Paramètres
 
 - `amount` {{Optional_Inline}}
-  - : Niveau de transparence, exprimé en nombre ({{cssxref("&lt;number&gt;")}}) ou en pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur de `0%` rend l'image complètement transparente, tandis qu'une valeur de `100%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
+  - : Niveau de transparence, exprimé en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `0%` rend l'image complètement transparente, tandis qu'une valeur de `100%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `1`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 
@@ -64,7 +64,7 @@ opacity(amount)
 
 ```css
 opacity(0%)   /* Complètement transparente */
-opacity(50%)  /* TTransparent à 50% */
+opacity(50%)  /* Transparente à 50% */
 
 opacity()     /* Aucun effet */
 opacity(1)
@@ -80,14 +80,14 @@ opacity(1)
 
 ## Voir aussi
 
-- Les autres fonctions {{cssxref("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} sont&nbsp;:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
-- La propriété CSS {{cssxref("opacity")}}
+- Les autres fonctions {{CSSxRef("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} sont&nbsp;:
+  - {{CSSxRef("filter-function/blur", "blur()")}}
+  - {{CSSxRef("filter-function/brightness", "brightness()")}}
+  - {{CSSxRef("filter-function/contrast", "contrast()")}}
+  - {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}
+- La propriété CSS {{CSSxRef("opacity")}}

@@ -176,7 +176,7 @@ HTML에 적용해보겠습니다.
 
 ## 사용자 지정 속성 대안 값
 
-주어진 변수가 아직 정의되지 않았을 때, [var()](/ko/docs/Web/CSS/var) 를 이용하여 여러 개의 **대체 변수**를 정의할 수 있다. 이는 사용자 정의 요소(Custom Element)및 섀도우 돔(Shadow DOM)으로 작업할 때 유용하게 쓸 수 있다.
+주어진 변수가 아직 정의되지 않았을 때, [var()](/ko/docs/Web/CSS/Reference/Values/var) 를 이용하여 여러 개의 **대체 변수**를 정의할 수 있다. 이는 사용자 정의 요소(Custom Element)및 섀도우 돔(Shadow DOM)으로 작업할 때 유용하게 쓸 수 있다.
 
 함수에 있어서의 첫번째 논쟁은 대체될 [사용자 속성](https://www.w3.org/TR/css-variables/#custom-property)의 이름이다. 두번째는 아래와 같이 잘못된 [사용자 속성](https://www.w3.org/TR/css-variables/#custom-property)을 참조하였을 때 대신 사용할 수 있는 대체 변수이다:
 

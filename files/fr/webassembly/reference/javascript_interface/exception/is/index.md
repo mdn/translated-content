@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Exception/is
 original_slug: WebAssembly/JavaScript_interface/Exception/is
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode **`is()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception), peut être utilisée afin de déterminer si l'objet `Exception` correspond à une balise donnée.
 
 La méthode peut être utilisée afin de tester si une balise est correcte avant de la passer à [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) pour obtenir les valeurs passées à l'exception. Elle peut être utilisée pour les balises créées côté JavaScript ou créées dans du code WebAssembly qui les exporte en JavaScript.

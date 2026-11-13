@@ -6,7 +6,7 @@ original_slug: Web/CSS/border
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
+Свойство [CSS](/ru/docs/Web/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Guides/Cascade/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: border")}}
 

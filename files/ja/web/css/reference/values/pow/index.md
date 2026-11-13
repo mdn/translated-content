@@ -1,9 +1,9 @@
 ---
-title: pow()
+title: CSS `pow()` 関数
+short-title: pow()
 slug: Web/CSS/Reference/Values/pow
-original_slug: Web/CSS/pow
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`pow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の累乗の値を返す指数関数です。

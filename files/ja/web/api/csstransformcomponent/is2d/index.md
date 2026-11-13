@@ -1,17 +1,18 @@
 ---
-title: CSSTransformComponent.is2D
+title: "CSSTransformComponent: is2D プロパティ"
+short-title: is2D
 slug: Web/API/CSSTransformComponent/is2D
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
-**`is2D`** は {{domxref("CSSTransformComponent")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2D と 3D のどちらかであるかを示します。
+**`is2D`** は {{domxref("CSSTransformComponent")}} インターフェイスの読み取り専用プロパティで、この座標変換が二次元と三次元のどちらかであるかを示します。
 
 ## 値
 
-論理値です。true はこの座標変換が 2D 変換であることを示し、false は 3D 変換であることを示します。
+論理値です。true はこの座標変換が二次元変換であることを示し、false は三次元変換であることを示します。
 
 ## 例
 

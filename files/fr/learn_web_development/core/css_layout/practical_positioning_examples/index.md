@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 
-{{LearnSidebar}}
-
 Cet article illustre comment construire quelques exemples concrets de ce qu'on peut réaliser avec le positionnement.
 
 <table class="standard-table">
@@ -14,10 +12,10 @@ Cet article illustre comment construire quelques exemples concrets de ce qu'on p
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux en HTML (étudier
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Une introduction au HTML</a
         >), et une idée du fonctionnement du CSS (étudier
-        <a href="/fr/docs/Learn/CSS/First_steps">Une introduction à CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Une introduction à CSS</a>.)
       </td>
     </tr>
     <tr>

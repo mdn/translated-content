@@ -1,9 +1,9 @@
 ---
-title: "@starting-style"
+title: CSS `@starting-style` アットルール
+short-title: "@starting-style"
 slug: Web/CSS/Reference/At-rules/@starting-style
-original_slug: Web/CSS/@starting-style
 l10n:
-  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@starting-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、トランジションさせる要素に設定されるプロパティ群の開始値を定義するために使用します。これらのプロパティは、最初に要素のスタイルが更新されたとき、つまり要素が前回読み込まれたページに最初に表示されたときに設定されるものです。
@@ -23,18 +23,19 @@ l10n:
 2. 既存のルールセット内に入れ子にする方法。この場合、そのルールセットによってすでに選択されている要素のプロパティ値を定義する 1 つ以上の宣言が入ります。
 
    ```css
-   selector { /* 既存のルールセット */
+   selector {
+     /* 既存のルールセット */
      /* ... */
 
      @starting-style {
-       宣言
+       /* 宣言 */
      }
    }
    ```
 
 ## 解説
 
-予期しない動作を避けるため、既定では [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions) は要素の初期スタイル更新時や、 {{CSSxRef("display")}} 型が `none` から別の値に変わった時には発生しません。開始スタイル設定のトランジションを有効にするには、 `@starting-style` ルールが必要です。これは前回状態を持たない要素に開始スタイルを提供し、トランジションするプロパティ値を定義します。
+予期しない動作を避けるため、デフォルトでは [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions) は要素の初期スタイル更新時や、 {{CSSxRef("display")}} 型が `none` から別の値に変わった時には発生しません。開始スタイル設定のトランジションを有効にするには、 `@starting-style` ルールが必要です。これは前回状態を持たない要素に開始スタイルを提供し、トランジションするプロパティ値を定義します。
 
 `@starting-style` は、{{glossary("top layer","最上位レイヤー")}}に表示される要素（[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) など）、 `display: none` に変更される要素、 DOM に追加されたり除去されたりする要素の出現・消滅トランジションを作成する場合に特に有益です。
 
@@ -64,7 +65,7 @@ l10n:
 ```
 
 > [!NOTE]
-> `@starting-style` アットルールと「元ルール」の{{cssxref("specificity", "詳細度")}}は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
+> `@starting-style` アットルールと「元ルール」の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
 
 入れ子方式を使用してポップオーバーの開始スタイルを指定するには、 `@starting-style` ブロックを「元ルール」の中に入れます。
 
@@ -82,13 +83,13 @@ l10n:
 
 ### 開始スタイルは正確にはいつ使われるのか
 
-要素が `@starting-style` のスタイルからトランジションするのは、要素が最初に DOM で表示されるとき、または {{cssxref("display", "display: none")}} から可視値にトランジションするときであることを理解しておくことが重要です。初期状態が表示状態である場合にトランジションで戻る場合は、すでに DOM で表示されているので `@starting-style` スタイルは使用されません。代わりに、その要素の既定の状態に存在するスタイル設定に戻ります。
+要素が `@starting-style` のスタイルからトランジションするのは、要素が最初に DOM で表示されるとき、または {{cssxref("display", "display: none")}} から可視値にトランジションするときであることを理解しておくことが重要です。初期状態が表示状態である場合にトランジションで戻る場合は、すでに DOM で表示されているので `@starting-style` スタイルは使用されません。代わりに、その要素のデフォルトの状態に存在するスタイル設定に戻ります。
 
-効果として、このような状況で管理すべきスタイル状態には、開始スタイルの状態、トランジション後の状態、既定の状態の 3 つがあります。このような場合、 "to" と "from" のトランジションは異なるものになる可能性があります。下記[開始スタイルを使用する場合のデモ](#開始スタイルを使用する場合のデモ)の例で、その証拠を見ることができます。
+効果として、このような状況で管理すべきスタイル状態には、開始スタイルの状態、トランジション後の状態、デフォルトの状態の 3 つがあります。このような場合、 "to" と "from" のトランジションは異なるものになる可能性があります。下記[開始スタイルを使用する場合のデモ](#開始スタイルを使用する場合のデモ)の例で、その証拠を見ることができます。
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## 例
 
@@ -132,9 +133,9 @@ l10n:
 
 この例では、ボタンを押して {{htmlelement("div")}} 要素を作成し、`class` に `showing` を与えて DOM に追加しています。
 
-`showing` には `@starting-style` として `background-color: red` を指定しており、トランジション先としては `background-color: blue` を指定しています。既定の `div` ルールセットには `background-color: yellow` をしており、 `transition` も設定しています。
+`showing` には `@starting-style` として `background-color: red` を指定しており、トランジション先としては `background-color: blue` を指定しています。デフォルトの `div` ルールセットには `background-color: yellow` をしており、 `transition` も設定しています。
 
-まず `<div>` が DOM に追加されると、背景が赤から青に変化するのがわかります。タイムアウト後、 JavaScript で `<div>` から `showing` クラスを除去します。この点で、背景は赤ではなく青から黄色に戻ります。これは、要素が最初に DOM にレンダリングされるときにのみ、開始スタイルが使用されることを表しています。一度現れた要素は、設定した既定のスタイルに戻ります。
+まず `<div>` が DOM に追加されると、背景が赤から青に変化するのがわかります。タイムアウト後、 JavaScript で `<div>` から `showing` クラスを除去します。この点で、背景は赤ではなく青から黄色に戻ります。これは、要素が最初に DOM にレンダリングされるときにのみ、開始スタイルが使用されることを表しています。一度現れた要素は、設定したデフォルトのスタイルに戻ります。
 
 さらにタイムアウトしたら、 DOM から `<div>` を完全に除去し、例を初期状態にリセットして、再び実行できるようにしています。
 
@@ -226,7 +227,7 @@ btn.addEventListener("click", () => {
 
 ```css
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover]:popover-open {
@@ -261,7 +262,7 @@ html {
 
 /* ポップオーバーの背後のトランジション */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -278,12 +279,12 @@ html {
 独立した開始スタイルのブロックを指定します。 */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
 
-これを実現するために、これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態を（`[popover]` で選択して）設定し、終了状態にはポップオーバー要素が開いた状態を（{{cssxref(":popover-open")}} 擬似クラスで選択して）設定しています。
+これを実現するために、これらのプロパティの開始状態にはポップオーバー要素のデフォルトの非表示状態を（`[popover]` で選択して）設定し、終了状態にはポップオーバー要素が開いた状態を（{{cssxref(":popover-open")}} 擬似クラスで選択して）設定しています。
 
 そして、 {{cssxref("transition")}} プロパティを設定し、 2 つの状態の間でアニメーションを行います。アニメーションの始める状態には `@starting-style` アットルールを記載して、アニメーションの初期状態を設定しています。
 
@@ -302,7 +303,7 @@ html {
 {{ EmbedLiveSample("Animating a popover", "100%", "200") }}
 
 > [!NOTE]
-> ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態からデフォルトの `[popover]` 状態に遷移します。
 
 > [!NOTE]
 > {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)で探すことができます。
@@ -328,17 +329,18 @@ const sectionElem = document.querySelector("section");
 
 btn.addEventListener("click", createColumn);
 
-function randomColor() {
+function randomBackground() {
   function randomNum() {
     return Math.floor(Math.random() * 255);
   }
+  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
 
-  return `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
 }
 
 function createColumn() {
   const divElem = document.createElement("div");
-  divElem.style.backgroundColor = randomColor();
+  divElem.style.background = randomBackground();
 
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "✖";
@@ -398,11 +400,6 @@ div {
   flex: 1;
   border: 1px solid gray;
   position: relative;
-  background: linear-gradient(
-    to right,
-    rgb(255 255 255 / 0%),
-    rgb(255 255 255 / 50%)
-  );
   opacity: 1;
   scale: 1 1;
 
@@ -446,7 +443,7 @@ div > button {
 
 - `div { ... }` ルールにトランジションさせたいプロパティの終了状態を指定します。
 - `@starting-style` ブロック内のプロパティでトランジションの開始状態を指定します。
-- `.fade-out` ルールの中で消滅アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に `display: none` を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
+- `.fade-out` ルールの中で消滅アニメーションを指定します。これは、閉じるボタンが押されたときに JavaScript が `<div>` 要素に割り当てるクラスです。透明度と変倍の終了状態を設定するほかに、 `<div>` 要素に [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) を設定します。 UI から除去されたときにすぐに利用できなくなるようにします。
 - {{cssxref("transition")}} のリストを `div { ... }` ルールの中で指定し、 `opacity`、`scale`、`display` をアニメーションさせます。 `display` については、アニメーションするように一括指定によって {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} の値も設定されることに注意してください。
 
 #### 結果

@@ -1,12 +1,12 @@
 ---
-title: ::file-selector-button
+title: Pseudo-élément CSS `::file-selector-button`
+short-title: ::file-selector-button
 slug: Web/CSS/Reference/Selectors/::file-selector-button
-original_slug: Web/CSS/::file-selector-button
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::file-upload-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::file-selector-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::file-selector-button", "tabbed-shorter")}}
 

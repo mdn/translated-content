@@ -1,12 +1,11 @@
 ---
 title: 相対色の使用
 slug: Web/CSS/Guides/Colors/Using_relative_colors
-original_slug: Web/CSS/CSS_colors/Relative_colors
 l10n:
-  sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
+  sourceCommit: d9b5b8a024347a17498356d6b7825cc4ff96d693
 ---
 
-[CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)は、**相対的な色構文**を定義しており、 CSS の {{cssxref("&lt;color&gt;")}} 値を他の色に関連して定義することができます。これは、既存の色の補色（明度、彩度、半透明、反転など）を簡単に作成できる強力な機能であり、より効果的なカラーパレットの作成を可能にします。
+[CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)は、**相対的な色構文**を定義しており、 CSS の {{cssxref("&lt;color&gt;")}} 値を他の色に関連して定義することができます。これは、既存の色の補色（明度、彩度、半透明、反転など）をプログラム的に作成できる強力な機能であり、より効果的なカラーパレットの作成を可能にします。
 
 この記事では、相対色の構文について説明し、異なるオプションが何であるかを示し、いくつかの例を示して見ていきます。
 
@@ -29,7 +28,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
 3. [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/Reference/Values/color_value/color#colorspace)_（色空間）を指定します。
 4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/Guides/Colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
-5. オプションとして、出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
+5. オプションとして、{{CSSXref("&lt;alpha-value&gt;")}} 型の出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
 
 ブラウザーは、元の色を色関数と互換性のある構文に変換し、それを部分色チャンネル（元の色にアルファチャンネル (`alpha`) がある場合はアルファチャンネルも）に構造化します。これらは、色関数内で適切な名前付きの値として利用できます。 `rgb()` 関数の場合は `r`、`g`、`b` と `alpha`、 `lab()` 関数の場合は `l`、`a`、`b` と `alpha`、 `hwb()` の場合は `h`、`w`、`b` と `alpha` などです。新しい出力チャンネル値を計算するために使用することができます。
 
@@ -62,7 +61,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 }
 
 #two {
-  background-color: rgb(from red 200 g b);
+  background-color: rgb(from red 200 g b / alpha);
 }
 ```
 
@@ -70,7 +69,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 
 {{ EmbedLiveSample("simple-relative-color", "100%", "200") }}
 
-相対色は [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数を使用し、 `red` を元の色として、それと等価な `rgb()` 色 (`rgb(255 0 0)`) に変換し、新しい色を赤チャンネルの値が `200` で、緑と青のチャンネルの値が元の色と同じである色として定義します（ブラウザーによって関数の内部でで利用できる `g` と `b` の値はどちらも `0` です）。
+相対色は [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数を使用し、 `red` を元の色として、それと等価な `rgb()` 色 (`rgb(255 0 0)`) に変換し、新しい色を赤チャンネルの値が `200` で、緑と青のチャンネルの値が元の色と同じである色として定義します（ブラウザーによって関数の内部で利用できる `g` と `b` の値はどちらも `0` で、`alpha` は `100%` です）。
 
 この結果、 `rgb(200 0 0)` という出力が得られます。これは、少し暗めの赤です。赤チャンネルの値を `255` （または `r` 値のみ）と指定した場合、出力される色は入力値とまったく同じになります。ブラウザーの最終的な出力色（計算値）は、 `rgb(200 0 0)` と等価な sRGB `color()` 値、つまり `color(srgb 0.784314 0 0)` です。
 
@@ -80,14 +79,28 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 > - 古い sRGB の色関数は、可視色の全スペクトルを表現することができません。（[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)）の出力色は、これらの制限を避けるために `color(srgb)` にシリアライズされます。 つまり、 {{domxref("HTMLElement.style")}} プロパティまたは {{domxref("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色値を問い合わせると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 値として返されるということです。
 > - より最近の色関数（`lab()`、`oklab()`、`lch()`、`oklch()`）では、相対的な色出力値は使用する色関数と同じ構文で表現されます。例えば、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) 色関数を使用している場合、出力色は `lab()` 値となります。
 
-これら 5 行はすべて、等価な出力色を生成します。
+以下の行はすべて、等価な出力色を生成します。
 
 ```css
 red
 rgb(255 0 0)
-rgb(from red r g b)
-rgb(from red 255 g b)
 rgb(from red 255 0 0)
+rgb(from red 255 0 0 / 1)
+rgb(from red 255 0 0 / 100%)
+
+rgb(from red 255 g b)
+rgb(from red r 0 0)
+rgb(from red r g b / 1)
+rgb(from red r g b / 100%)
+
+rgb(from red r g b)
+rgb(from red r g b / alpha)
+
+/* `red` では、g と b が同じであるため、入れ替えが可能 */
+rgb(from red r g g)
+rgb(from red r b b)
+rgb(from red 255 g g)
+rgb(from red 255 b b)
 ```
 
 ## 構文の柔軟性
@@ -116,7 +129,7 @@ rgb(from red 0 0 255)
 
 ```css
 rgb(from rgb(200 0 0) r r r)
-/* 出力職は rgb(200 200 200)、薄い灰色に等しい */
+/* 出力色は rgb(200 200 200)、薄い灰色に等しい */
 ```
 
 次の例では、出力色の `r`、`g`、`b` のチャンネル値として元の色のチャンネル値を使用していますが、逆順で使用しています。
@@ -279,14 +292,69 @@ rgb(from red r g b / alpha)
 
 {{ EmbedLiveSample("Using math functions", "100%", "200") }}
 
+## アルファチャンネルの操作
+
+この例は、名前付きカラーのアルファチャンネルを変更する方法を示しています。ここでは、`teal` 色の背景を持つコンテナに囲まれたアイテムがあります。背景を区別するため、相対色機能、[`calc()` 関数](/ja/docs/Web/CSS/Reference/Values/calc)、および[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を使用してアルファチャンネルの値を変化させています。
+
+```html
+<div class="container">
+  <div class="item"></div>
+</div>
+```
+
+```css hidden
+.container {
+  padding: 60px;
+}
+
+.item {
+  height: 60px;
+}
+```
+
+```css
+div {
+  background-color: rgb(
+    from teal r g b / calc(alpha * var(--alpha-multiplier))
+  );
+}
+
+.container {
+  --alpha-multiplier: 0.3;
+}
+
+.item {
+  --alpha-multiplier: 1;
+}
+```
+
+アルファチャンネルは `alpha` キーワードで参照されます。この場合、`calc(alpha * var(--alpha-multiplier))` 式は `alpha` を `--alpha-multiplier` カスタムプロパティ値で乗算することでアルファチャンネル値を変更します。乗数 `0.3` が `1.0` 未満であるため、コンテナーは半透明の背景になります。
+
+出力結果は次のようになります。
+
+{{ EmbedLiveSample("Manipulating alpha channel", "100%", "200") }}
+
 ## `<number>` 値に解決するチャンネル値
 
 相対色でチャンネル値計算を機能させるには、すべての元の色チャンネル値を適切な {{cssxref("&lt;number&gt;")}} 値に変換します。例えば、上記の `lch()` の例では、元の色の `l` チャンネル値から数値を加算または減算して、新しい明度値を計算しています。もし `calc(l + 20%)` を実行しようとすると、不正な色が生成されます。 `l` は `<number>` であるため、加算する{{cssxref("&lt;percentage&gt;")}} を指定することはできません。
 
 - チャンネル値を元々 `<percentage>` で指定した場合、出力色関数に適した `<number>` に解決されます。
-- チャンネル値を元々 {{cssxref("&lt;hue&gt;")}} 角度として指定した場合、 `0` から `360` （両端を含む）の範囲の角度の数値に置き換わります。
+- チャンネル値を元々 {{cssxref("hue")}} 角度として指定した場合、 `0` から `360` （両端を含む）の範囲の角度の数値に置き換わります。
 
 元のチャンネル値がどのような仕様になっているかについては、それぞれの[色関数ページ](/ja/docs/Web/CSS/Guides/Colors#関数)を調べてください。
+
+## sRGB 色域外の元の色
+
+元の色を出力色空間に変換しても、その色空間の通常の範囲に各チャンネルがクランプされることはありません。次の例では、`color(display-p3 1 0.5 0.5)` は Display P3 の色域内ですが、sRGB の範囲外にあります。`rgb()` スケールで表された赤チャンネルは約 `273.88` であり、これは `255` より大きい値です。`background-color` の計算ではこの範囲外の値が使用されるため、赤の値は最終的に `272.88` となります。この計算では、常にクランプ処理は現れません。最終的な背景色が正確にレンダリングできるかどうかは、ディスプレイの性能に依存します。
+
+```css
+.very-red {
+  --origin: color(display-p3 1 0.5 0.5);
+  background-color: rgb(from var(--origin) calc(r - 1) g b);
+}
+```
+
+絶対表記の `rgb()` は引数の値をクランプするため、`--origin: rgb(273.88 117.95 123.15)` と記述した場合、赤チャンネルの始まる値は `255` となり、背景色の赤チャンネルは `254` になります。
 
 ## ブラウザーの対応チェック
 
@@ -309,7 +377,7 @@ rgb(from red r g b / alpha)
 
 この例では、ベース色と色のパレットの種別を選ぶことができます。 ブラウザーは、選ばれたベース色に基づいて適切な色のパレットを表示します。 色のパレットの選択肢は次の通りです。
 
-- **補色**: 色相環の反対側に位置する 2 色、または反対の色相が含まれます（色相と色相環の詳細については、 {{cssxref("&lt;hue&gt;")}} データ型を参照してください）。 2 色はそれぞれ、ベース色と、ベース色に色相チャンネルを 180 度加えた色として定義されます。
+- **補色**: 色相環の反対側に位置する 2 色、または反対の色相が含まれます（色相と色相環の詳細については、 {{cssxref("hue")}} データ型を参照してください）。 2 色はそれぞれ、ベース色と、ベース色に色相チャンネルを 180 度加えた色として定義されます。
 - **トライアド**: 色相環上の等間隔の 3 色が含まれます。 3 色は、ベース色、ベース色に色相チャンネルを 120 度減じた色、 120 度加えた色として定義されます。
 - **テトラッド**: 色相環上の等間隔の 4 色が含まれます。 4 色は、ベース色、ベース色に色相チャンネルを 90 度、 180 度、 270 度加えた色を定義します。
 - **単色**: 同じ色相で明度の異なる複数の色が含まれます。例えば、この例では単色のパレットに5色を定義しています。ベース色、およびベース色に明度チャンネルに-20、-10、+10、+20 した色です。
@@ -318,7 +386,7 @@ rgb(from red r g b / alpha)
 
 参考として、以下に HTML の全文を掲載します。最も興味深い部分は次の通りです。
 
-- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)) として設定されています。JavaScript で簡単に値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
+- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)) として設定されています。JavaScript で値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
 - ベース色のピッカーは、 [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) コントロールを使用して作成されます。このコントロールに新しい値が設定されると、 JavaScript で `--base-color` カスタムプロパティにこの値が設定され、新しい色パレットが生成されます。表示される色はすべて、 `--base-color` をベースにした相対色です。
 - 一連の [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio) コントロールにより、生成する色パレットの種類を選択することができます。ここで新しい値が選択されると、JavaScript を使用して、選択されたパレットを表す新しいクラスを `container` の `<div>` に設定します。 CSS では、子の `<div>` （`.comp :nth-child(1)` など）を対象とするために子孫セレクターを使用します。これにより、正しい色を適用し、使用されていない `<div>` ノードを非表示にすることができます。
 - `container` の `<div>` は、生成されたパレットの色を表示する子の `<div>` を含んでいます。初期クラスとして `comp` が設定されていることに注意してください。これにより、ページが最初に読み込まれた際に補色の配色が表示されるようになります。
@@ -374,7 +442,7 @@ rgb(from red r g b / alpha)
       </fieldset>
     </div>
   </form>
-  <div id="container" class="comp" style="--base-color: #ff0000;">
+  <div id="container" class="comp">
     <div></div>
     <div></div>
     <div></div>
@@ -405,7 +473,7 @@ h1 {
   margin-left: 16px;
 }
 
-/* シンプルなフォームのスタイル設定 */
+/* 基本的なフォームのスタイル設定 */
 
 #color-picker {
   margin-left: 16px;
@@ -433,6 +501,9 @@ fieldset {
 /* パレットコンテナーのスタイル設定 */
 
 #container {
+  /* デフォルト値 */
+  --base-color: red;
+
   display: flex;
   width: 100vw;
   height: 250px;
@@ -600,7 +671,7 @@ function setBaseColor(e) {
 
 出力は次のようになります。これは、 CSS の相対色の力を表示し始めます。複数の色を定義し、単一のカスタムプロパティを調整することでライブで更新されるパレットを生成します。
 
-{{ EmbedLiveSample("Color palette generator", "100%", "470") }}
+{{ EmbedLiveSample("Color palette generator", "100%", "500") }}
 
 ### ライブの UI 配色更新ツール
 
@@ -622,14 +693,10 @@ function setBaseColor(e) {
 ```html
 <main>
   <section>
-    <h1>A love of colors</h1>
+    <h1>色への愛</h1>
     <p>
-      Colors, the vibrant essence of our surroundings, are truly awe-inspiring.
-      From the fiery warmth of reds to the calming coolness of blues, they bring
-      unparalleled richness to our world. Colors stir emotions, ignite
-      creativity, and shape perceptions, acting as a universal language of
-      expression. In their brilliance, colors create a visually enchanting
-      tapestry that invites admiration and sparks joy.
+      色彩は、私たちの周囲に満ちる鮮やかな本質であり、まさに畏敬の念を抱かせるものです。
+      赤の燃えるような温かさから青の心を落ち着かせる涼やかさまで、色彩は世界に比類なき豊かさをもたらします。色彩は感情をかき立て、創造性を刺激し、認識を形作り、表現の普遍的な言語として機能します。その輝きの中で、色彩は視覚的に魅惑的なタペストリーを創り出し、賞賛を誘い、喜びを呼び起こすのです。
     </p>
   </section>
   <form>
@@ -655,7 +722,7 @@ CSS の `:root` には既定で `--hue` 値が設定されており、相対 [`l
 - `--bg-color`: 背景色として使用することを意図した、 `--base-color` のかなり明るい色。これは `--base-color` の元の色を取り、その明度値に 40 を加えて作成します。
 - `--complementary-color`: `--base-color` から色相環を 180 度回った補色。これは、 `--base-color` の元の色を取り、その色相値に 180 を加えることで作成します。
 
-これで残りの CSS を見て、これらの色が使用されている場所をすべてメモしてください。これには[背景](/ja/docs/Web/CSS/Reference/Properties/background)、[境界線](/ja/docs/Web/CSS/Reference/Properties/border)、[`text-shadow`](/ja/docs/Web/CSS/Reference/Properties/text-shadow)、そしてスライダーの [`accent-color`](/ja/docs/Web/CSS/Reference/Properties/accent-color) まで含まれます。
+これで残りの CSS を見て、これらの色が使用されている場所をすべてメモしてください。これには[背景](/ja/docs/Web/CSS/Reference/Properties/background)、[境界線](/ja/docs/Web/CSS/Reference/Properties/border)、{{cssxref("text-shadow")}}、そしてスライダーの {{cssxref("accent-color")}} まで含まれます。
 
 > [!NOTE]
 > 簡潔にするため、相対色の使用に関連する CSS の部分のみを掲載しています。
@@ -763,12 +830,12 @@ function setHue(e) {
 
 出力は下記のように表示されます。相対 CSS 色は、 UI 全体の配色を制御するために使用することができます。相対 CSS 色は、 1 つの値を変更するたびにライブで調整することができます。
 
-{{ EmbedLiveSample("Live UI color scheme updater", "100%", "400") }}
+{{ EmbedLiveSample("Live UI color scheme updater", "100%", "450") }}
 
 ## 関連情報
 
 - {{CSSXref("&lt;color&gt;")}} データ型
 - [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール
-- [sRGB](https://en.wikipedia.org/wiki/SRGB) (Wikipedia)
-- [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) (Wikipedia)
+- [sRGB](https://ja.wikipedia.org/wiki/SRGB) （ウィキペディア）
+- [CIELAB](https://ja.wikipedia.org/wiki/Lab色空間) (Wikipedia)
 - [CSS relative color syntax](https://developer.chrome.com/blog/css-relative-color-syntax) (developer.chrome.com, 2023)

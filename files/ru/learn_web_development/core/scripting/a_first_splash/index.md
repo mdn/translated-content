@@ -3,7 +3,7 @@ title: Первое погружение в JavaScript
 slug: Learn_web_development/Core/Scripting/A_first_splash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/What_is_JavaScript", "Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Теперь, когда вы получили [базовое представление о JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript) — самое время познакомиться с ним на практике! В данной статье представлен ускоренный практический курс, демонстрирующий основные возможности JavaScript. В этом курсе, шаг за шагом, вы создадите простую игру «Угадай число».
 
@@ -524,4 +524,4 @@ guessField.focus();
 
 Итак, на этом пример закончился - отлично, вы добрались до конца! Попробуйте свой финальный код или [поиграйте с нашей готовой версией здесь](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Если вы не можете запустить этот пример, сверьтесь с [исходным кодом.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/What_is_JavaScript", "Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -117,6 +117,6 @@ var p = new Proxy(obj, {
 ## 其他
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Operators/in", "in")}} operator
 - {{jsxref("Reflect.has()")}}

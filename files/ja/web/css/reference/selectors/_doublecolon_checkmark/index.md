@@ -1,9 +1,9 @@
 ---
-title: ::checkmark
+title: CSS `::checkmark` 擬似要素
+short-title: ::checkmark
 slug: Web/CSS/Reference/Selectors/::checkmark
-original_slug: Web/CSS/::checkmark
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}

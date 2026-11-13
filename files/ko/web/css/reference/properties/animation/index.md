@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e50172e0d7844ebf17e0eac05d5274a7df26d180
 ---
 
-**`animation`** [단축](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
+**`animation`** [단축](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
 {{InteractiveExample("CSS Demo: animation")}}
 
@@ -145,7 +145,7 @@ animation:
 ## 예제
 
 > [!NOTE]
-> [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/Reference/Properties/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
+> [CSS 박스 모델](/ko/docs/Web/CSS/Guides/Box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/Reference/Properties/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
 
 ### 해 뜨기
 
@@ -329,7 +329,7 @@ animation:
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-추가 예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples)를 참조하세요.
+추가 예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using#examples)를 참조하세요.
 
 ## 명세서
 
@@ -341,5 +341,5 @@ animation:
 
 ## 같이 보기
 
-- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -91,7 +91,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 ## 설명
 
-다른 그라데이션 방식처럼, 선형 그라데이션은 [자체적인 크기 정보가 없습니다](/ko/docs/Web/CSS/image#description). 즉, 선호되는 크기나 비율에 대한 정보가 없습니다. 그라데이션의 구체적인 크기는 해당 그라데이션이 적용되는 요소의 크기에 맞추어집니다.
+다른 그라데이션 방식처럼, 선형 그라데이션은 [자체적인 크기 정보가 없습니다](/ko/docs/Web/CSS/Reference/Values/image#description). 즉, 선호되는 크기나 비율에 대한 정보가 없습니다. 그라데이션의 구체적인 크기는 해당 그라데이션이 적용되는 요소의 크기에 맞추어집니다.
 
 컨테이너를 반복하면서 채우는 선형 그라데이션을 생성하기 위해서는 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 함수를 사용하세요.
 
@@ -208,7 +208,7 @@ body {
 
 ### 더 많은 선형 그라데이션 예제
 
-더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)를 참조하세요.
+더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/Guides/Images/Using_gradients)를 참조하세요.
 
 ## 명세서
 
@@ -220,7 +220,7 @@ body {
 
 ## 같이 보기
 
-- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/Guides/Images/Using_gradients)
 - 다른 그라데이션 함수들: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("&lt;image&gt;")}}
 - {{cssxref("element", "element()")}}

@@ -1,71 +1,67 @@
 ---
-title: String.fromCharCode()
+title: "String : méthode statique fromCharCode()"
+short-title: fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`String.fromCharCode()`** retourne une chaîne de caractères créée à partir de la séquence définie d'unités de code UTF-16.
 
-La méthode statique **`String.fromCharCode()`** renvoie une chaîne de caractères créée à partir de points de code UTF-16.
-
-{{InteractiveExample("JavaScript Demo: String.fromCharCode()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.fromCharCode()", "shorter")}}
 
 ```js interactive-example
 console.log(String.fromCharCode(189, 43, 190, 61));
-// Expected output: "½+¾="
+// Résultat attendu : "½+¾="
 ```
 
 ## Syntaxe
 
-```js
-String.fromCharCode(num1, ..., numN)
+```js-nolint
+String.fromCharCode()
+String.fromCharCode(num1)
+String.fromCharCode(num1, num2)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### Paramètres
 
-- `num1, ..., numN`
-  - : Une séquence de nombres représentant des points de code UTF-16 entre 0 et 65535 (`0xFFFF`). Les nombres supérieurs à `0xFFFF` sont tronqués.
+- `num1`, …, `numN`
+  - : Un nombre compris entre `0` et `65535` (`0xFFFF`) représentant une unité de code UTF-16. Les nombres supérieurs à `0xFFFF` sont tronqués aux 16 derniers bits. Aucune vérification de validité n'est effectuée.
 
 ### Valeur de retour
 
-Une chaîne de caractères qui contient les caractères correspondants à la série de points de code UTF-16.
+Une chaîne de caractères de longueur `N` composée des `N` unités de code UTF-16 définies.
 
 ## Description
 
-Cette méthode renvoie une chaîne de caractère et non un objet {{jsxref("String")}}.
+Étant donné que `fromCharCode()` est une méthode statique de `String`, vous l'utilisez toujours sous la forme `String.fromCharCode()`, plutôt qu'en tant que méthode d'une valeur `String` que vous avez créée.
 
-La méthode `fromCharCode()` étant une méthode statique de l'objet `String`, elle doit toujours être utilisée avec la syntaxe `String.fromCharCode()` plutôt qu'en appelant la méthode à partir d'un objet `String` construit sur mesure.
+Les points de code Unicode vont de `0` à `1114111` (`0x10FFFF`). `charCodeAt()` retourne toujours une valeur inférieure à `65536`, car les points de code supérieurs sont représentés par _une paire_ de pseudo-caractères substituts de 16 bits. Par conséquent, afin de produire un caractère complet dont la valeur est supérieure à `65535`, il est nécessaire de fournir deux unités de code (comme si l'on manipule une chaîne de caractères de deux caractères). Pour plus d'informations sur Unicode, voir [Caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes).
+
+Étant donné que `fromCharCode()` ne fonctionne qu'avec des valeurs sur 16 bits (comme la séquence d'échappement `\u`), une paire de substituts est nécessaire pour retourner un caractère supplémentaire. Par exemple, `String.fromCharCode(0xd83c, 0xdf03)` et `"\ud83c\udf03"` retournent tous deux le point de code `U+1F303` «&nbsp;Nuit étoilée&nbsp;». Bien qu'il existe une relation mathématique entre la valeur du point de code supplémentaire (par exemple, `0x1f303`) et les deux valeurs de substituts qui le représentent (par exemple, `0xd83c` et `0xdf03`), il est nécessaire de calculer ou de rechercher les valeurs de la paire de substituts chaque fois qu'un point de code supplémentaire doit être utilisé. Pour cette raison, il est plus pratique d'utiliser {{JSxRef("String.fromCodePoint()")}}, qui permet de retourner des caractères supplémentaires en fonction de leur valeur réelle de point de code. Par exemple, `String.fromCodePoint(0x1f303)` retourne le point de code `U+1F303` «&nbsp;Nuit étoilée&nbsp;».
 
 ## Exemples
 
-Pour les caractères du plan multilingue de base, UTF-16 utilise une seule unité de code :
+### Utiliser la méthode `fromCharCode()`
+
+Les caractères du plan multilingue de base (BMP), en UTF-16, utilisent une seule unité de code&nbsp;:
 
 ```js
-String.fromCharCode(65, 66, 67); // ABC
-String.fromCharCode(0x2014); // "—"
-String.fromCharCode(0x12014); // "—" également, le 1 a été tronqué
-String.fromCharCode(8212); // renvoie également "—" car 8212
-// est la forme décimale
+String.fromCharCode(65, 66, 67); // retourne "ABC"
+String.fromCharCode(0x2014); // retourne "—"
+String.fromCharCode(0x12014); // retourne également "—" ; le chiffre 1 est tronqué et ignoré
+String.fromCharCode(8212); // retourne également "—" ; 8212 est la forme décimale de 0x2014
 ```
 
-Les caractères hors de ce plan utilisent deux unités de code (on parle de _surrogate pair_) :
+Les caractères supplémentaires, en UTF-16, nécessitent deux unités de code (c'est-à-dire une paire de substituts)&nbsp;:
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // Point de code U+1F303 pour l'émoji nuit étoilée
+String.fromCharCode(0xd83c, 0xdf03); // Point de code U+1F303 "Nuit avec
+String.fromCharCode(55356, 57091); // étoiles" === "\uD83C\uDF03"
 
-// Forme décimale équivalente :
-String.fromCharCode(55356, 57091);
-
-String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07);
-// "\uD834\uDF06a\uD834\uDF07"
+String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07); // "\uD834\uDF06a\uD834\uDF07"
 ```
-
-## Utiliser des valeurs Unicode plus grandes
-
-En UTF-16, les caractères les plus communs sont représentables sur une seule valeur de 16 bits. Toutefois, cet ensemble de caractères (aussi appelé plan multilingue de base ou BMP en anglais) ne représente qu'1/17e de l'espace total représenté par les caractères Unicode. Le reste des points de code, sur l'intervalle 65536 (0x010000) à 1114111 (0x10FFFF) sont des caractères additionnels qui sont représentés par deux valeurs sur 16 bits qu'on appelle _surrogate pairs_ en anglais.
-
-La méthode `fromCharCode()` ne fonctionne qu'avec des valeurs sur 16 bits et il faudra donc fournir une paire de codets pour obtenir certains caractères. Ainsi, `String.fromCharCode(0xD83C, 0xDF03)` renvoie le point de code U+1F303 qui représente l'émoji « nuit étoilée ».
-
-Bien qu'il y ait une relation mathématique entre la valeur composée et les deux codets qui forment la paire, on a besoin d'une étape supplémentaire à chaque fois. Aussi, il sera plus pratique d'utiliser {{jsxref("String.fromCodePoint()")}} (ES2015 / ES6) qui permet de manipuler les codes des caractères hors BMP : on pourra ainsi écrire `String.fromCodePoint(0x1F303)` pour renvoyer le caractère U+1F303 (émoji « nuit étoilée »).
 
 ## Spécifications
 
@@ -77,7 +73,7 @@ Bien qu'il y ait une relation mathématique entre la valeur composée et les deu
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- La méthode statique {{JSxRef("String.fromCodePoint()")}}
+- La méthode {{JSxRef("String.prototype.charAt()")}}
+- La méthode {{JSxRef("String.prototype.charCodeAt()")}}
+- La méthode {{JSxRef("String.prototype.codePointAt()")}}

@@ -1,12 +1,12 @@
 ---
-title: base-palette
+title: Descripteur de règle CSS `base-palette`
+short-title: base-palette
 slug: Web/CSS/Reference/At-rules/@font-palette-values/base-palette
-original_slug: Web/CSS/@font-palette-values/base-palette
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour spécifier le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 sera utilisée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour définir le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 est utilisée.
 
 ## Syntaxe
 
@@ -16,7 +16,7 @@ Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base
 }
 ```
 
-Le descripteur `base-palette` se spécifie avec un index basé sur zéro des palettes créées par le·la créateur·ice de la police.
+Le descripteur `base-palette` se définit avec un index basé sur zéro des palettes créées par le·la créateur·ice de la police.
 
 ### Valeurs
 
@@ -25,11 +25,11 @@ Le descripteur `base-palette` se spécifie avec un index basé sur zéro des pal
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -41,8 +41,8 @@ En utilisant la [police couleur Rocher <sup>(angl.)</sup>](https://www.harbortyp
 
 ```html
 <h2>palette de base par défaut</h2>
-<h2 class="two">palette de base à l'index 2</h2>
-<h2 class="five">palette de base à l'index 5</h2>
+<h2 class="deux">palette de base à l'index 2</h2>
+<h2 class="cinq">palette de base à l'index 5</h2>
 ```
 
 #### CSS
@@ -57,22 +57,22 @@ h2 {
   font-family: "Rocher", fantasy;
 }
 
-@font-palette-values --two {
+@font-palette-values --deux {
   font-family: "Rocher";
   base-palette: 2;
 }
 
-@font-palette-values --five {
+@font-palette-values --cinq {
   font-family: "Rocher";
   base-palette: 5;
 }
 
-.two {
-  font-palette: --two;
+.deux {
+  font-palette: --deux;
 }
 
-.five {
-  font-palette: --five;
+.cinq {
+  font-palette: --cinq;
 }
 ```
 
@@ -80,7 +80,7 @@ h2 {
 
 ![Exemple montrant 3 palettes de base différentes de la police couleur Rocher](./rocher-color-font-alt-base-palettes.jpg)
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
@@ -90,8 +90,8 @@ h2 {
 
 ## Voir aussi
 
-- {{cssxref("@font-palette-values", "@font-palette-values")}}
-- Le descripteur {{cssxref("@font-palette-values/font-family", "font-family")}}
-- Le descripteur {{cssxref("@font-palette-values/override-colors", "override-colors")}}
-- La propriété {{cssxref("font-palette", "font-palette")}}
-- {{domxref("CSSFontPaletteValuesRule.basePalette")}}
+- La règle {{CSSxRef("@font-palette-values")}}
+- Le descripteur {{CSSxRef("@font-palette-values/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-palette-values/override-colors", "override-colors")}}
+- La propriété {{CSSxRef("font-palette")}}
+- La propriété API {{DOMxRef("CSSFontPaletteValuesRule.basePalette")}}

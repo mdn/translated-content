@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Un _codec_ (terme formé à partir de "**_co_**deur-**_déc_**odeur") est un programme, un algorithme ou un dispositif qui code ou décode un flux de données. Un codec donné sait comment gérer une technologie d'encodage ou de compression spécifique.
+Un _codec_ (terme formé à partir de "***co***deur-***déc***odeur") est un programme, un algorithme ou un dispositif qui code ou décode un flux de données. Un codec donné sait comment gérer une technologie d'encodage ou de compression spécifique.
 
 ## Voir aussi
 

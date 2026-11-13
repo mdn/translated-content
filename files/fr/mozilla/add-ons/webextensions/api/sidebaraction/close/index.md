@@ -3,8 +3,6 @@ title: sidebarAction.close()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 ---
 
-{{AddonSidebar}}
-
 Ferme la barre latérale dans la fenêtre active, s'il s'agit de la barre latérale de l'extension.
 
 Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).

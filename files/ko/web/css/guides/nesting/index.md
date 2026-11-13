@@ -16,21 +16,21 @@ CSS 중첩은 스타일시트를 더 읽기 쉽게, 모듈화하며, 그리고 �
 
 ### 선택자
 
-- [`&` 중첩 선택자](/ko/docs/Web/CSS/Nesting_selector)
+- [`&` 중첩 선택자](/ko/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 
 ## 안내서
 
-- [CSS 중첩 사용하기](/ko/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [CSS 중첩 사용하기](/ko/docs/Web/CSS/Guides/Nesting/Using)
   - : CSS 중첩 사용 방법에 대해 설명합니다.
-- [CSS 중첩 @-규칙](/ko/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [CSS 중첩 @-규칙](/ko/docs/Web/CSS/Guides/Nesting/At-rules)
   - : @-규칙을 어떻게 중첩하는지 설명합니다.
-- [CSS 중첩과 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 중첩과 명시도](/ko/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
   - : 중첩 CSS 를 사용할 때의 명시도가 어떻게 다른지 설명합니다.
 
 ## 연관 개념
 
 - [선택자와 혼합자](/ko/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [가상 선택자](/ko/docs/Web/CSS/Pseudo-classes)
+- [가상 선택자](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS 전처리기](/ko/docs/Glossary/CSS_preprocessor)
 
 ## 명세서
@@ -39,6 +39,6 @@ CSS 중첩은 스타일시트를 더 읽기 쉽게, 모듈화하며, 그리고 �
 
 ## 같이 보기
 
-- [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
+- [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)
 - [CSS 캐스케이드와 모듈 상속](/ko/docs/Web/CSS/CSS_cascade)
-- [CSS 선택자 모듈](/ko/docs/Web/CSS/CSS_selectors)
+- [CSS 선택자 모듈](/ko/docs/Web/CSS/Guides/Selectors)

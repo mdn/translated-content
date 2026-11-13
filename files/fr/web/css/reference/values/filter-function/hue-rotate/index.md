@@ -1,12 +1,12 @@
 ---
-title: hue-rotate()
+title: Fonction CSS `hue-rotate()`
+short-title: hue-rotate()
 slug: Web/CSS/Reference/Values/filter-function/hue-rotate
-original_slug: Web/CSS/filter-function/hue-rotate
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hue-rotate()")}}
 
@@ -45,7 +45,7 @@ hue-rotate(angle)
 ### Paramètres
 
 - `angle` {{Optional_Inline}}
-  - : Le changement relatif de la teinte de l'échantillon d'entrée, exprimé avec un {{cssxref("&lt;angle&gt;")}}. Une valeur de `0deg` laisse l'entrée inchangée. Une rotation positive augmente la valeur de la teinte, tandis qu'une rotation négative la diminue. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `0`. Il n'y a pas de valeur minimale ou maximale. L'effet des valeurs supérieures à `360deg` est, pour `hue-rotate(Ndeg)`, équivalent à `N` modulo 360. La valeur par défaut est `0deg`.
+  - : Le changement relatif de la teinte de l'échantillon d'entrée, exprimé avec un {{CSSxRef("&lt;angle&gt;")}}. Une valeur de `0deg` laisse l'entrée inchangée. Une rotation positive augmente la valeur de la teinte, tandis qu'une rotation négative la diminue. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `0`. Il n'y a pas de valeur minimale ou maximale. L'effet des valeurs supérieures à `360deg` est, pour `hue-rotate(Ndeg)`, équivalent à `N` modulo 360. La valeur par défaut est `0deg`.
 
 Le type de données CSS `<angle>` représente une valeur d'angle exprimée en degrés, en grades, en radians ou en tours. Les éléments suivants sont équivalents&nbsp;:
 
@@ -65,7 +65,7 @@ hue-rotate(0.5turn)
 
 ### Avec la propriété `backdrop-filter`
 
-Cet exemple applique un filtre `hue-rotate()` via la propriété CSS `backdrop-filter` au paragraphe, ce qui modifie la teinte de la zone située derrière le `<p>`.
+Cet exemple applique un filtre `hue-rotate()` avec la propriété CSS `backdrop-filter` au paragraphe, ce qui modifie la teinte de la zone située derrière le `<p>`.
 
 ```css
 .container {
@@ -100,11 +100,11 @@ p {
 </div>
 ```
 
-{{EmbedLiveSample('Avec la propriété `backdrop-filter`','100%','280')}}
+{{EmbedLiveSample("Avec la propriété `backdrop-filter`", "100%", 280)}}
 
 ### Avec la propriété `filter`
 
-Cet exemple applique un filtre `hue-rotate()` via la propriété CSS `filter`, ce qui modifie la teinte de l'ensemble de l'élément, y compris le contenu, la bordure et l'image d'arrière-plan.
+Cet exemple applique un filtre `hue-rotate()` avec la propriété CSS `filter`, ce qui modifie la teinte de l'ensemble de l'élément, y compris le contenu, la bordure et l'image d'arrière-plan.
 
 ```css
 p {
@@ -132,7 +132,7 @@ p {
 <p>La personne qui a écrit cet exemple n'est pas designer, heureusement.</p>
 ```
 
-{{EmbedLiveSample('Avec la propriété `filter`','100%','220')}}
+{{EmbedLiveSample("Avec la propriété `filter`", "100%", 220)}}
 
 ### Avec `url()` et le filtre SVG `hue-rotate`
 
@@ -206,7 +206,7 @@ svg:not(:root) {
 }
 ```
 
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample("svg_filter", "100%", 280)}}
 
 ### `hue-rotate()` ne préserve pas la saturation ni la luminosité
 
@@ -266,13 +266,13 @@ for (let i = 0; i < 360; i++) {
 ## Voir aussi
 
 - Le module des [effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
-- Les autres fonctions {{cssxref("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} sont&nbsp;:
-  - {{cssxref("filter-function/blur", "blur()")}}
-  - {{cssxref("filter-function/brightness", "brightness()")}}
-  - {{cssxref("filter-function/contrast", "contrast()")}}
-  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - {{cssxref("filter-function/invert", "invert()")}}
-  - {{cssxref("filter-function/opacity", "opacity()")}}
-  - {{cssxref("filter-function/saturate", "saturate()")}}
-  - {{cssxref("filter-function/sepia", "sepia()")}}
+- Les autres fonctions {{CSSxRef("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} sont&nbsp;:
+  - {{CSSxRef("filter-function/blur", "blur()")}}
+  - {{CSSxRef("filter-function/brightness", "brightness()")}}
+  - {{CSSxRef("filter-function/contrast", "contrast()")}}
+  - {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+  - {{CSSxRef("filter-function/invert", "invert()")}}
+  - {{CSSxRef("filter-function/opacity", "opacity()")}}
+  - {{CSSxRef("filter-function/saturate", "saturate()")}}
+  - {{CSSxRef("filter-function/sepia", "sepia()")}}

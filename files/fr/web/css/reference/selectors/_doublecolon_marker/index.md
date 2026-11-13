@@ -1,12 +1,12 @@
 ---
-title: ::marker
+title: Pseudo-élément CSS `::marker`
+short-title: ::marker
 slug: Web/CSS/Reference/Selectors/::marker
-original_slug: Web/CSS/::marker
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/Reference/Properties/display), tel que les éléments {{htmlelement("li")}} et {{htmlelement("summary")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/Reference/Properties/display), tel que les éléments {{HTMLElement("li")}} et {{HTMLElement("summary")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::marker", "tabbed-shorter")}}
 
@@ -88,9 +88,9 @@ ul li::marker {
 ## Voir aussi
 
 - Les éléments HTML comportant un marqueur par défaut&nbsp;:
-  - {{htmlelement("ol")}}
-  - {{htmlelement("li")}}
-  - {{htmlelement("summary")}}
+  - {{HTMLElement("ol")}}
+  - {{HTMLElement("li")}}
+  - {{HTMLElement("summary")}}
 - Le module [Contenu généré par CSS](/fr/docs/Web/CSS/Guides/Generated_content)
 - Le module [Listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
 - Le module [Styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

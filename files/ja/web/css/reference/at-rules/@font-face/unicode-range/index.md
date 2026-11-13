@@ -1,12 +1,11 @@
 ---
 title: unicode-range
 slug: Web/CSS/Reference/At-rules/@font-face/unicode-range
-original_slug: Web/CSS/@font-face/unicode-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-**`unicode-range`** は CSS の記述子で、 {{cssxref("@font-face")}} を用いて定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。
+**`unicode-range`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@font-face")}} を用いて定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。
 
 ## 構文
 
@@ -65,7 +64,7 @@ CSS において、1 つの文字だけを含んだ完全に別個の {{cssxref(
 
 div {
   font-size: 4em;
-  font-family: Ampersand, Helvetica, sans-serif;
+  font-family: "Ampersand", "Helvetica", sans-serif;
 }
 ```
 

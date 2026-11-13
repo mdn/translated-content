@@ -150,7 +150,7 @@ var var2 = 4;
 
 概念上来讲，位逻辑运算符工作流程如下：
 
-- 操作数被转换为 32bit 整數，以位序列（0 和 1 组成）表示。若超過 32bits，則取低位 32bit，如下所示：
+- 操作数被转换为 32bit 整数，以位序列（0 和 1 组成）表示。若超过 32bits，则取低位 32bit，如下所示：
 
 ```plain
   Before: 11100110111110100000000000000110000000000001
@@ -337,7 +337,7 @@ if (3 in trees) {
 }
 ```
 
-如果想让数组中存在一个元素但是是`undefined`值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
+如果想让数组中存在一个元素但是 `undefined` 值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -597,9 +597,9 @@ a * c + b * c; // 9
 
 Comprehensions 是一个带有实验性质的 JavaScript 特性，计划将在未来的 ECMAScript 版本中加入该特性。有两种类型的 comprehensions:
 
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : 数列数值推导（非标准用法）
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : 生成器数值推导（译者注：生成器数值推导标准化可能不大，推荐使用 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)）
 
 Comprehensions 特性被许多编程语言所采用，该特性能够使你快速地通过一个已有的数组来创建出一个新的数组，比如：

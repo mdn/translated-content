@@ -1,9 +1,8 @@
 ---
 title: サブグリッド
 slug: Web/CSS/Guides/Grid_layout/Subgrid
-original_slug: Web/CSS/CSS_grid_layout/Subgrid
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュールは、 `subgrid` の値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しています。このガイドでは、サブグリッドでできること、いくつかの使用例と、この機能で解決されるデザインパターンを詳述します。

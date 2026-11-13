@@ -1,9 +1,9 @@
 ---
-title: forced-colors
+title: CSS `forced-colors` メディア特性
+short-title: forced-colors
 slug: Web/CSS/Reference/At-rules/@media/forced-colors
-original_slug: Web/CSS/@media/forced-colors
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
@@ -17,9 +17,9 @@ l10n:
 - `none`
   - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/Reference/Values/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/Reference/Values/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します（詳細は [color adjust spec](https://drafts.csswg.org/css-color-adjust-1/#forced) を参照してください）。
 
-## 使用上の注意
+## 使用上のメモ
 
 ### 強制カラーモードの影響を受けるプロパティ
 
@@ -54,7 +54,7 @@ l10n:
 
 これらの調整に加えて、ブラウザーはテキストの後ろに「バックプレート」を描くことで、テキストの読みやすさを確保します。これは、テキストが画像の上に配置されている場合にコントラストを保つために特に重要です。
 
-ユーザーエージェントが上記のプロパティの値を強制的に変更しないケースがいくつかあります。 {{cssxref("forced-color-adjust")}} 値が `none` の要素に適用されている場合と、製作者がシステム色を指定している場合です。
+ユーザーエージェントが上記のプロパティの値を強制的に変更しないケースがいくつかあります。
 
 要素で {{cssxref("forced-color-adjust")}} が `none` に設定されている場合は、強制カラーの値は適用されず、製作者の指定したスタイルが通常どおり適用されます。また、テキストのバックプレートは無効になります。
 
@@ -66,7 +66,7 @@ l10n:
 
 ### アクセシビリティの考慮
 
-一般的に、ウェブ制製作者は `forced-colors` メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することは**すべきではありません**。この機能は、既定の強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
+一般的に、ウェブ制製作者は `forced-colors` メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することは**すべきではありません**。この機能は、デフォルトの強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
 
 強制カラーモードの縮小されたパレットとテキストバックプレートによる高いコントラストは、一部のユーザーがウェブサイトを読んだり利用したりするのに不可欠な場合が多いため、コンテンツに影響を与える調整は慎重に行い、他の方法では読み取れないコンテンツを対象とする必要があります。
 

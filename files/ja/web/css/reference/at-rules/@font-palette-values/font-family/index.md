@@ -1,12 +1,11 @@
 ---
 title: font-family
 slug: Web/CSS/Reference/At-rules/@font-palette-values/font-family
-original_slug: Web/CSS/@font-palette-values/font-family
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
 
-[@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) の[記述子](/ja/docs/Glossary/CSS_Descriptor)である **`font-family`** は、どのフォントファミリーのパレット値を適用するかを指定するために使用します。これは、 CSS の [font-family](/ja/docs/Web/CSS/Reference/Properties/font-family)を設定するときに使用する値と正確に一致する必要があります。
+[@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) の[記述子](/ja/docs/Glossary/CSS_Descriptor)である **`font-family`** は、どのフォントファミリーのパレット値を適用するかを指定するために使用します。これは、 CSS の [font-family](/ja/docs/Web/CSS/Reference/Properties/font-family) を設定するときに使用する値と正確に一致する必要があります。
 
 ## 構文
 
@@ -48,16 +47,16 @@ l10n:
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 @font-palette-values --bungee-extra-spicy {
   font-family: "Bungee Spice";
   override-colors:
-    0 DarkRed,
-    1 Red;
+    0 darkred,
+    1 red;
 }
 
 h2 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2.extra-spicy {
@@ -71,7 +70,7 @@ h2.extra-spicy {
 
 ### 複数のフォントファミリーに対して同じパレット識別子を使用
 
-この例では、 2 つの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールが 2 つのフォントファミリーに設定されていますが、どちらのアットルールも同じ dashed-ident 識別子である `--Dark Mode` を使用しています。これは、複数の要素（この場合 `h1` と `h2`）に対して同時に [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティを設定するのに役立ちます。これは、サイトのブランディングに一致するようにフォントの色を更新したいときに有益なことができます。
+この例では、 2 つの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールが 2 つのフォントファミリーに設定されていますが、どちらのアットルールも同じ dashed-ident 識別子である `--Dark-Mode` を使用しています。これは、複数の要素（この場合 `h1` と `h2`）に対して同時に [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティを設定するのに役立ちます。これは、サイトのブランディングに一致するようにフォントの色を更新したいときに有益なことができます。
 
 ```css
 @font-palette-values --Dark-Mode {
@@ -80,7 +79,7 @@ h2.extra-spicy {
 }
 
 @font-palette-values --Dark-Mode {
-  font-family: Bixa;
+  font-family: "Bixa";
   /* Bixa のためのパレット設定 */
 }
 
@@ -90,11 +89,11 @@ h2 {
 }
 
 h1 {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
 }
 
 h2 {
-  font-family: Bixa;
+  font-family: "Bixa", fantasy;
 }
 ```
 
@@ -109,7 +108,7 @@ h2 {
 ## 関連情報
 
 - {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} 記述子
-- {{cssxref("font-palette/", "font-palette")}} プロパティ
+- {{cssxref("font-palette")}} プロパティ
 - {{domxref("CSSFontPaletteValuesRule.fontFamily")}}

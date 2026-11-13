@@ -1,9 +1,9 @@
 ---
-title: <calc-keyword>
+title: CSS `<calc-keyword>` データ型
+short-title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
-original_slug: Web/CSS/calc-keyword
 l10n:
-  sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
@@ -28,7 +28,7 @@ l10n:
 
 ### メモ
 
-[`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
+{{cssxref("calc()")}} 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
 
 - ゼロで割ると、割られる数の符号に応じて正または負の `infinity` を返します。
 - 何かに対して `infinity` を加算、減算、乗算すると、 `NaN` を生成しない限り、 `infinity` を返します（下記参照）。
@@ -109,7 +109,7 @@ NAN
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: start;
   width: 200px;
 }
 .container > div {
@@ -158,12 +158,12 @@ const eValue = document.querySelector("#e-value");
 const piValue = document.querySelector("#pi-value");
 
 eInput.addEventListener("input", function () {
-  e.style.transform = "rotate(calc(1deg * pow(" + this.value + ", e)))";
+  e.style.transform = `rotate(calc(1deg * pow(${this.value}, e)))`;
   eValue.textContent = e.style.transform;
 });
 
 piInput.addEventListener("input", function () {
-  pi.style.rotate = "calc(sin(" + this.value + " * pi) * 100deg)";
+  pi.style.rotate = `calc(sin(${this.value} * pi) * 100deg)`;
   piValue.textContent = pi.style.rotate;
 });
 ```

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fef5d3c2b35846676218d5c9f7c5cfad10aa94b
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:disabled`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 모든 비활성 요소를 나타냅니다. 비활성 요소란 활성(선택, 클릭, 입력 등등)하거나 포커스를 받을 수 없는 요소를 말합니다. 반대 상태인 활성 요소도 존재합니다.
+[CSS](/ko/docs/Web/CSS) **`:disabled`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 모든 비활성 요소를 나타냅니다. 비활성 요소란 활성(선택, 클릭, 입력 등등)하거나 포커스를 받을 수 없는 요소를 말합니다. 반대 상태인 활성 요소도 존재합니다.
 
 {{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}
 

@@ -18,7 +18,7 @@ window.URL.revokeObjectURL(objectURL);
 ### Paramètres
 
 - `objectURL`
-  - : Une {{domxref("DOMString")}} représentant une URL d'objet qui a été précédemment créée par un appel à {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+  - : Une {{jsxref("String")}} représentant une URL d'objet qui a été précédemment créée par un appel à {{domxref("URL.createObjectURL", "createObjectURL()") }}.
 
 ### Valeur de retour
 
@@ -26,7 +26,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## Exemple
 
-Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images).
+Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_lobjet_urls_pour_afficher_des_images).
 
 ## Spécifications
 
@@ -39,5 +39,5 @@ Voir [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/Fil
 ## Voir aussi
 
 - [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_l'objet_urls_pour_afficher_des_images)
+- [Utilisation de l'objet URLs pour afficher des images](/fr/docs/Web/API/File_API/Using_files_from_web_applications#exemple_utilisation_de_lobjet_urls_pour_afficher_des_images)
 - {{domxref("URL.createObjectURL()") }}

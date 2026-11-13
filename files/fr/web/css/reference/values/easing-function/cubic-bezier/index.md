@@ -1,13 +1,13 @@
 ---
-title: cubic-bezier()
+title: Fonction CSS `cubic-bezier()`
+short-title: cubic-bezier()
 slug: Web/CSS/Reference/Values/easing-function/cubic-bezier
-original_slug: Web/CSS/easing-function/cubic-bezier
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`cubic-bezier()`** permet de créer une transition fluide à l'aide d'une [courbe de Bézier](/fr/docs/Glossary/Bezier_curve) cubique.
-En tant que {{cssxref("&lt;easing-function&gt;")}}, elle permet d'adoucir le début et la fin de l'{{Glossary("interpolation")}}.
+En tant que {{CSSxRef("&lt;easing-function&gt;")}}, elle permet d'adoucir le début et la fin de {{Glossary("interpolation", "l'interpolation")}}.
 
 ## Syntaxe
 
@@ -22,36 +22,36 @@ cubic-bezier(0, 0, 1, 1)
 La fonction accepte les quatre paramètres suivants, qui représentent les coordonnées de deux points de contrôle&nbsp;:
 
 - `<x1>`
-  - : Un {{cssxref("&lt;number&gt;")}} représentant la coordonnée x du premier point de contrôle.
+  - : Un {{CSSxRef("&lt;number&gt;")}} représentant la coordonnée x du premier point de contrôle.
     Elle doit être comprise dans l'intervalle `[0, 1]`.
 - `<y1>`
-  - : Un {{cssxref("&lt;number&gt;")}} représentant la coordonnée y du premier point de contrôle.
+  - : Un {{CSSxRef("&lt;number&gt;")}} représentant la coordonnée y du premier point de contrôle.
 - `<x2>`
-  - : Un {{cssxref("&lt;number&gt;")}} représentant la coordonnée x du second point de contrôle.
+  - : Un {{CSSxRef("&lt;number&gt;")}} représentant la coordonnée x du second point de contrôle.
     Elle doit être comprise dans l'intervalle `[0, 1]`.
 - `<y2>`
-  - : Un {{cssxref("&lt;number&gt;")}} représentant la coordonnée y du second point de contrôle.
+  - : Un {{CSSxRef("&lt;number&gt;")}} représentant la coordonnée y du second point de contrôle.
 
 ## Description
 
-Les fonctions de Bézier cubique, souvent appelées fonctions d'assouplissement «&nbsp;smooth&nbsp;», mettent en relation une progression d'entrée et une progression de sortie, toutes deux exprimées en {{cssxref("&lt;number&gt;")}}, où `0.0` représente l'état initial et `1.0` l'état final.
+Les fonctions de Bézier cubique, souvent appelées fonctions d'assouplissement «&nbsp;smooth&nbsp;», mettent en relation une progression d'entrée et une progression de sortie, toutes deux exprimées en {{CSSxRef("&lt;number&gt;")}}, où `0.0` représente l'état initial et `1.0` l'état final.
 Si la courbe de Bézier cubique est invalide, CSS ignore toute la propriété.
 
 Une courbe de Bézier cubique est définie par quatre points&nbsp;: P0, P1, P2 et P3. Les points P0 et P3 représentent le début et la fin de la courbe. En CSS, le point de départ P0 est fixé à `(0, 0)` et le point d'arrivée P3 à `(1, 1)`, tandis que les points intermédiaires P1 et P2 sont définis par les paramètres de la fonction `(<x1>, <y1>)` et `(<x2>, <y2>)` respectivement. L'axe x représente la progression d'entrée et l'axe y la progression de sortie.
 
 ![Graphique de la progression d'entrée vers la progression de sortie montrant une courbe en S partant de l'origine vers (1, 1) avec les points de contrôle Bézier P1(0.1, 0.6) et P2(0.7, 0.2).](cubic-bezier.svg)
 
-Toutes les courbes de Bézier cubique ne conviennent pas comme fonctions d'assouplissement, car toutes ne sont pas des [fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)>)&nbsp;: c'est-à-dire des courbes qui, pour une valeur de l'axe x donnée, ont zéro ou une valeur. Avec P0 et P3 fixés comme défini par CSS, une courbe de Bézier cubique est une fonction, et donc valide, si et seulement si les coordonnées x de P1 et P2 sont toutes deux dans l'intervalle `[0, 1]`.
+Toutes les courbes de Bézier cubique ne conviennent pas comme fonctions d'assouplissement, car toutes ne sont pas des [fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)>)&nbsp;: c'est-à-dire des courbes qui, pour une valeur de l'axe x donnée, ont zéro ou une valeur. Avec P0 et P3 fixés comme défini par CSS, une courbe de Bézier cubique est une fonction, et est valide lorsque les coordonnées de l'axe horizontal pour P1 et P2 sont toutes deux dans l'intervalle `[0, 1]`.
 
 Les courbes de Bézier cubique dont l'ordonnée de P1 ou P2 sort de l'intervalle `[0, 1]` peuvent faire dépasser la valeur finale puis revenir. En animation, cela crée un effet de «&nbsp;rebond&nbsp;».
 
 ![Graphiques de la fonction d'assouplissement cubic-bezier(0.3, 0.2, 0.2, 1.4), dont l'un montre la progression de sortie dépassant 1 à partir d'une certaine progression d'entrée, l'autre montre la progression de sortie atteignant puis restant à 1.](cubic-bezier_out_of_range.svg)
 
-Cependant, certaines propriétés limitent la sortie si elle sort d'une plage autorisée. Par exemple, une composante de couleur supérieure à `255` ou inférieure à `0` dans {{CSSXref("color_value/rgb", "rgb()")}} sera ramenée à la valeur autorisée la plus proche (`255` ou `0`). Certaines valeurs de `cubic-bezier()` présentent ce comportement.
+Cependant, certaines propriétés limitent la sortie si elle sort d'une plage autorisée. Par exemple, une composante de couleur supérieure à `255` ou inférieure à `0` dans {{CSSxRef("color_value/rgb", "rgb()")}} est ramenée à la valeur autorisée la plus proche (`255` ou `0`). Certaines valeurs de `cubic-bezier()` présentent ce comportement.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -141,6 +141,6 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 
 ## Voir aussi
 
-- Autres fonctions d'assouplissement&nbsp;: {{cssxref("easing-function/linear", "linear()")}} et {{cssxref("easing-function/steps", "steps()")}}
-- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/CSS_easing_functions)
+- Autres fonctions d'assouplissement&nbsp;: {{CSSxRef("easing-function/linear", "linear()")}} et {{CSSxRef("easing-function/steps", "steps()")}}
+- Le module des [fonctions d'assouplissement CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
 - [cubic-bezier.com <sup>(angl.)</sup>](https://cubic-bezier.com/) par Lea Verou

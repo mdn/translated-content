@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_ove
 original_slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 이제 서버 측 프로그래밍의 목적과 잠재적 이점을 알았으니 서버가 브라우저에서 "동적 요청"을받을 때 어떤 일이 발생하는지 자세히 살펴 보겠습니다. 대부분의 웹 사이트 서버 측 코드는 요청 및 응답을 비슷한 방식으로 처리하므로 대부분의 코드를 작성할 때 수행해야 할 작업을 이해하는 데 도움이됩니다
 
@@ -306,4 +306,4 @@ def junior(request):
 
 다음 모듈에서는 당신이 첫 번째 사이트에 가장 적합한 웹 프레임 워크를 선택할 수 있도록 도와 드리겠습니다
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

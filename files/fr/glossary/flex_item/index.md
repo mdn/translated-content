@@ -2,7 +2,7 @@
 title: Éléments flexibles
 slug: Glossary/Flex_Item
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Les enfants directs d'un {{Glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).

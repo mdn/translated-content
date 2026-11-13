@@ -49,12 +49,12 @@ new Set([iterable]);
   - : The value of the `length` property is 0.
 - [`Set[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : The constructor function that is used to create derived objects.
-- {{jsxref("Set.prototype")}}
+- {{jsxref("Set")}}
   - : Represents the prototype for the `Set` constructor. Allows the addition of properties to all `Set` objects.
 
 ## `Set` 物件實體
 
-All `Set` instances inherit from {{jsxref("Set.prototype")}}.
+All `Set` instances inherit from {{jsxref("Set")}}.
 
 ### 屬性
 

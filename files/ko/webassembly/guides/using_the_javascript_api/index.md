@@ -43,7 +43,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 ### 웹어셈블리 모듈을 스트리밍하기
 
-Firefox 58의 새로운 기능으로 기본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화하는 기능이 있습니다. 이는 {{jsxref("WebAssembly.compileStreaming()")}} 와 {{jsxref("WebAssembly.instantiateStreaming()")}} 메소드를 사용하여 수행됩니다. 이 메소드는 바이트 코드를 직접 `Module`/`Instance` 인스턴스로 변환 할 수 있기 때문에 스트리밍이 아닌 방식의 메소드보다 작성이 쉽습니다. 별도로 {{domxref("Response")}}를 {{domxref("ArrayBuffer")}}로 호출할 필요성을 없애줍니다.
+Firefox 58의 새로운 기능으로 기본 소스에서 직접 WebAssembly 모듈을 컴파일하고 인스턴스화하는 기능이 있습니다. 이는 [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) 와 [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 메소드를 사용하여 수행됩니다. 이 메소드는 바이트 코드를 직접 `Module`/`Instance` 인스턴스로 변환 할 수 있기 때문에 스트리밍이 아닌 방식의 메소드보다 작성이 쉽습니다. 별도로 {{domxref("Response")}}를 {{jsxref("ArrayBuffer")}}로 호출할 필요성을 없애줍니다.
 
 이 예제는 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모와 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)를 보세요) `instantiateStreaming()`을 사용하여 wasm 모듈을 가져오고, JavaScript 함수를 가져오고, 컴파일하고 인스턴스화하며, 내 보낸 함수에 액세스하는 방법을 한번에 보여줍니다.
 
@@ -62,9 +62,9 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ### 스트리밍하지 않고 웹어셈블리 모듈 로드
 
-위에서 설명한 스트리밍 방법을 사용할 수 없거나 사용하지 않으려면 스트리밍하지 않는 메서드{{jsxref("WebAssembly.compile")}} / {{jsxref("WebAssembly.instantiate")}}를 대신 사용할 수 있습니다.
+위에서 설명한 스트리밍 방법을 사용할 수 없거나 사용하지 않으려면 스트리밍하지 않는 메서드[`WebAssembly.compile`](/ko/docs/WebAssembly/Reference/JavaScript_interface/compile) / [`WebAssembly.instantiate`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate)를 대신 사용할 수 있습니다.
 
-이 메소드는 바이트 코드에 직접 액세스하지 않으므로 wasm 모듈을 컴파일 / 인스턴스화하기 전에 응답을 {{domxref ( "ArrayBuffer")}}로 변환하는 추가 단계가 필요합니다.
+이 메소드는 바이트 코드에 직접 액세스하지 않으므로 wasm 모듈을 컴파일 / 인스턴스화하기 전에 응답을 {{jsxref("ArrayBuffer")}}로 변환하는 추가 단계가 필요합니다.
 
 이와 동등한 코드는 다음과 같습니다.
 
@@ -91,7 +91,7 @@ WebAssembly의 저수준 메모리 모델에서 메모리는 [Linear Memory](htt
 
 그러나 네이티브 C / C ++ 프로그램과 달리 사용 가능한 메모리 범위가 전체 프로세스에 걸쳐있는 경우 특정 WebAssembly 인스턴스가 액세스 할 수있는 메모리는 WebAssembly 메모리 객체에 포함 된 특정 범위 (잠재적으로 매우 작은 범위)로 제한됩니다. 이를 통해 단일 웹 응용 프로그램은 WebAssembly를 내부적으로 사용하는 여러 독립 라이브러리를 사용하여 서로 완전히 격리 된 별도의 메모리를 가질 수 있습니다.
 
-자바 스크립트에서 Memory 인스턴스는 크기를 조정할 수있는 ArrayBuffer로 생각할 수 있으며, ArrayBuffers와 마찬가지로 하나의 웹 앱에서 많은 독립적 인 Memory 객체를 만들 수 있습니다. {{jsxref("WebAssembly.Memory()")}} 생성자를 사용하여 생성 할 수 있습니다. 생성자는 인수로 초기 크기와 (선택적으로) 최대 크기를 인수로 취합니다.
+자바 스크립트에서 Memory 인스턴스는 크기를 조정할 수있는 ArrayBuffer로 생각할 수 있으며, ArrayBuffers와 마찬가지로 하나의 웹 앱에서 많은 독립적 인 Memory 객체를 만들 수 있습니다. [`WebAssembly.Memory()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory) 생성자를 사용하여 생성 할 수 있습니다. 생성자는 인수로 초기 크기와 (선택적으로) 최대 크기를 인수로 취합니다.
 
 빠르게 예제를 살펴봅시다.
 
@@ -120,15 +120,15 @@ WebAssembly의 저수준 메모리 모델에서 메모리는 [Linear Memory](htt
 
 ### 메모리의 확장
 
-메모리 인스턴스는 {{jsxref("Memory.prototype.grow()")}}를 호출하여 확장 할 수 있습니다. 여기서 인수는 WebAssembly 페이지 단위로 입력합니다.
+메모리 인스턴스는 [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)를 호출하여 확장 할 수 있습니다. 여기서 인수는 WebAssembly 페이지 단위로 입력합니다.
 
 ```js
 memory.grow(1);
 ```
 
-메모리 인스턴스 생성시 최대 값이 제공되었을 때 이 최대 값을 초과하여 증가하려고 시도하면 {{jsxref("WebAssembly.RangeError")}} 예외가 발생합니다. 엔진은 이 상한값을 이용하여 미리 메모리를 예약하므로 크기를 보다 효율적으로 조정할 수 있습니다.
+메모리 인스턴스 생성시 최대 값이 제공되었을 때 이 최대 값을 초과하여 증가하려고 시도하면 [`WebAssembly.RangeError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RangeError) 예외가 발생합니다. 엔진은 이 상한값을 이용하여 미리 메모리를 예약하므로 크기를 보다 효율적으로 조정할 수 있습니다.
 
-{{domxref("ArrayBuffer")}}의 byteLength는 불변이므로, {{jsxref("Memory.prototype.grow()")}} 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
+{{jsxref("ArrayBuffer")}}의 byteLength는 불변이므로, [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
 
 함수와 마찬가지로 선형 메모리를 모듈 내부에서 정의하거나 가져올 수 있습니다. 마찬가지로 모듈은 메모리를 선택적으로 내보낼수도 있습니다. 즉, JavaScript는 새 WebAssembly.Memory를 만들고 가져 오기로 전달하거나 [`Instance.prototype.exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports)를 통해 메모리 내보내기를 하여 WebAssembly 인스턴스의 메모리에 액세스 할 수 있습니다.
 
@@ -164,7 +164,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer))에서 {{domxref ("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
+Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer))에서 {{jsxref("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
 
 메모리 가져 오기는 함수 가져 오기와 마찬가지로 작동하며 메모리 개체 만 JavaScript 함수 대신 값으로 전달됩니다. 메모리 가져 오기는 다음과 같은 두 가지 이유로 유용합니다.
 
@@ -221,9 +221,9 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 ## Globals
 
-WebAssembly는 하나 이상의 {{jsxref ( "WebAssembly.Module")}} 인스턴스 전체에서 JavaScript와 가져오기 / 내보내기가 가능한 전역 변수 인스턴스를 생성 할 수 있습니다. 이는 여러 모듈을 동적으로 연결할 수 있으므로 매우 유용합니다.
+WebAssembly는 하나 이상의 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 인스턴스 전체에서 JavaScript와 가져오기 / 내보내기가 가능한 전역 변수 인스턴스를 생성 할 수 있습니다. 이는 여러 모듈을 동적으로 연결할 수 있으므로 매우 유용합니다.
 
-JavaScript 내부에서 WebAssembly 전역 인스턴스를 만들려면 다음과 같은 {{jsxref ( "WebAssembly.Global ()")}} 생성자를 사용합니다.
+JavaScript 내부에서 WebAssembly 전역 인스턴스를 만들려면 다음과 같은 [`WebAssembly.Global ()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Global) 생성자를 사용합니다.
 
 ```js
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);

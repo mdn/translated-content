@@ -3,24 +3,24 @@ title: "HTMLLinkElement : propriété imageSizes"
 short-title: imageSizes
 slug: Web/API/HTMLLinkElement/imageSizes
 l10n:
-  sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`imageSizes`** de l'interface {{domxref("HTMLLinkElement")}} indique la taille et les conditions pour les images préchargées définies par la propriété {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}}. Elle reflète la valeur de l'attribut [`imagesizes`](/fr/docs/Web/HTML/Reference/Elements/link#imagesizes) de l'élément HTML {{htmlelement("link")}}. Cette propriété permet d'obtenir ou de définir la valeur de l'attribut `imagesizes`.
+La propriété **`imageSizes`** de l'interface {{DOMxRef("HTMLLinkElement")}} indique la taille et les conditions pour les images préchargées définies par la propriété {{DOMxRef("HTMLLinkElement.imageSrcset", "imageSrcset")}}. Elle reflète la valeur de l'attribut [`imagesizes`](/fr/docs/Web/HTML/Reference/Elements/link#imagesizes) de l'élément HTML {{HTMLElement("link")}}. Cette propriété permet d'obtenir ou de définir la valeur de l'attribut `imagesizes`.
 
-L'attribut `imagesizes` de l'élément `<link>` est identique à l'attribut `sizes` de l'élément {{htmlelement("img")}}&nbsp;: une liste de **tailles sources** séparées par des virgules. Chaque taille source inclut une [condition média](/fr/docs/Web/CSS/Guides/Media_queries), la taille de l'image en tant que {{cssxref("length")}}, ou le mot-clé `auto`, qui doit apparaître en premier. Pour plus d'informations sur la syntaxe de l'attribut `sizes`, voir [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#sizes).
+L'attribut `imagesizes` de l'élément `<link>` est identique à l'attribut `sizes` de l'élément {{HTMLElement("img")}}&nbsp;: une liste de **tailles sources** séparées par des virgules. Chaque taille source inclut une [condition média](/fr/docs/Web/CSS/Guides/Media_queries), la taille de l'image en tant que {{CSSxRef("length")}}, ou le mot-clé `auto`, qui doit apparaître en premier. Pour plus d'informations sur la syntaxe de l'attribut `sizes`, voir [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#sizes).
 
 Les attributs `imagesrcset` et `imagesizes` ne sont pertinents que sur les éléments `<link>` qui possèdent à la fois un attribut `rel` défini sur `preload` et un attribut `as` défini sur `image`.
 
 ## Valeur
 
-Une chaîne de caractères composée de tailles sources séparées par des virgules, ou la chaîne de caractères vide `""` si non spécifiée.
+Une chaîne de caractères composée de tailles sources séparées par des virgules, ou la chaîne de caractères vide `""` si elle n'est pas définie.
 
 ## Exemples
 
-Given the following `<link>` element:
+Étant donné l'élément `<link>` suivant&nbsp;:
 
 ```html
 <link
@@ -54,14 +54,14 @@ function log(text) {
 
 ```js
 const link = document.querySelector("link");
-log(`Original: ${link.imageSizes}`);
+log(`Original : ${link.imageSizes}`);
 
 // Changer la valeur
 link.imageSizes = "50vw";
 log(`Mis à jour : ${link.imageSizes}`);
 ```
 
-{{EmbedLiveSample('Examples',"","80")}}
+{{EmbedLiveSample("Exemples", "", 80)}}
 
 ## Spécifications
 
@@ -73,7 +73,7 @@ log(`Mis à jour : ${link.imageSizes}`);
 
 ## Voir aussi
 
-- La propriété {{domxref("HTMLLinkElement.imageSrcset")}}
-- La propriété {{domxref("HTMLImageElement.sizes")}}
-- Les [Requêtes média](/fr/docs/Web/CSS/Guides/Media_queries)
+- La propriété {{DOMxRef("HTMLLinkElement.imageSrcset")}}
+- La propriété {{DOMxRef("HTMLImageElement.sizes")}}
+- Les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries)
 - [Utiliser les attributs `srcset` et `sizes`](/fr/docs/Web/HTML/Reference/Elements/img#utiliser_les_attributs_srcset_et_sizes)

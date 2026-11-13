@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 
 O símbolo **`Symbol.replace`** é conhecido por especificar o método que substitui as substrings conrrespondentes de uma string. Essa função é chamada pelo método {{jsxref("String.prototype.replace()")}}.
 
-Para mais informações, veja {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.
+Para mais informações, veja {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}} e {{jsxref("String.prototype.replace()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.replace")}}
 
@@ -58,4 +58,4 @@ console.log("football".replace(new CustomReplacer("foo")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}

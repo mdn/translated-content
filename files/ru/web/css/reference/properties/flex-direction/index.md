@@ -180,5 +180,5 @@ flex-direction: unset;
 ## Смотрите также
 
 - CSS {{CSSXRef("flex-flow")}} — краткая запись CSS-свойств `flex-direction` и {{CSSXRef("flex-wrap")}}.
-- Руководство по CSS Flexbox: _[Основные идеи Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Руководство по CSS Flexbox: _[Основные идеи Flexbox](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - Руководство по CSS Flexbox: _[Упорядочивание flex-элементов](/ru/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_

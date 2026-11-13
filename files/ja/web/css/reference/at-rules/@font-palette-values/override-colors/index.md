@@ -1,12 +1,11 @@
 ---
 title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
-original_slug: Web/CSS/@font-palette-values/override-colors
 l10n:
-  sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
 
-**`override-colors`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
+**`override-colors`** は [CSS](/ja/docs/Web/CSS) の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
 
 ## 構文
 
@@ -18,22 +17,16 @@ override-colors: <index of color> <color>;
 override-colors: 0 red;
 
 /* 16 進色の使用 */
-override-colors: 0 #f00;
+override-colors: 0 #ff0000;
 
 /* rgb の使用 */
 override-colors: 0 rgb(255 0 0);
 
 /* 複数の色のオーバーライド */
 override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
-
-/* 複数の色のオーバーライドを読みやすく */
-override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
+  0 red,
+  1 green,
+  2 blue;
 ```
 
 `override-colors` [記述子](/ja/docs/Glossary/CSS_Descriptor)は、色インデックスと新しい色値をカンマで区切ったリストを取ります。
@@ -86,17 +79,17 @@ override-colors:
 }
 ```
 
-```css-nolint
+```css
 @font-face {
   font-family: "Noto Color Emoji";
   font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+  font-weight: normal;
+  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
     format("woff2");
 }
 
 .emoji {
-  font-family: "Noto Color Emoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
 }
 @font-palette-values --red {
@@ -136,7 +129,7 @@ override-colors:
   src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
 }
 h2 {
-  font-family: "Rocher";
+  font-family: "Rocher", fantasy;
 }
 @font-palette-values --override-palette {
   font-family: "Rocher";
@@ -171,8 +164,8 @@ h2 {
 
 ## 関連情報
 
-- {{cssxref("@font-palette-values/", "@font-palette-values")}}
+- {{cssxref("@font-palette-values")}}
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
-- {{cssxref("font-palette/", "font-palette")}}
+- {{cssxref("font-palette")}}
 - {{domxref("CSSFontPaletteValuesRule.overrideColors")}}

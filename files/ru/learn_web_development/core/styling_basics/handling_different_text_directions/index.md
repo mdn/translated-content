@@ -3,7 +3,7 @@ title: Изменение направления текста
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 Многие свойства и значения, с которыми мы столкнулись до сих пор при изучении CSS, были привязаны к физическим размерам нашего экрана. Мы создаём границы, например, сверху, справа, снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, который просматривается по горизонтали, и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, английский или французский) лучше, чем языки с письмом справа налево (например, арабский).
 
@@ -109,7 +109,7 @@ The concepts explained in this lesson are becoming increasingly important in CSS
 
 In the next module we will take a good look at overflow in CSS.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 

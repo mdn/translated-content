@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/length-percentage
 original_slug: Web/CSS/length-percentage
 ---
 
-**`<length-percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 {{Cssxref("&lt;length&gt;")}} 또는 {{Cssxref("&lt;percentage&gt;")}}인 값을 나타냅니다.
+**`<length-percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 {{Cssxref("&lt;length&gt;")}} 또는 {{Cssxref("&lt;percentage&gt;")}}인 값을 나타냅니다.
 
 ## 구문
 

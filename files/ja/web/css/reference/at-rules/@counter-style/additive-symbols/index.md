@@ -1,9 +1,8 @@
 ---
 title: additive-symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/additive-symbols
-original_slug: Web/CSS/@counter-style/additive-symbols
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`additive-symbols`** は {{cssxref('@counter-style')}} アットルールの記述子で、 `@counter-style` の {{cssxref('@counter-style/system', 'system')}} 記述子の値が `additive` に設定されている場合に、カウンター記号を指定するために使用されます。加算システムは、ローマ数字などの[符号値記数法](https://en.wikipedia.org/wiki/Sign-value_notation)を構築するために使用されます。
@@ -18,7 +17,7 @@ additive-symbols: 3 "*";
 additive-symbols:
   3 "0",
   2 "\2E\20",
-  1 url(symbol.png);
+  1 url("symbol.png");
 
 /* 2 進カウンター */
 additive-symbols:
@@ -49,7 +48,7 @@ additive-symbols:
 
 ## 解説
 
-`additive-symbols` 記述子は、カンマで区切られた加算タプルののリストを定義します。それぞれの加算タプルには、空間で区切られた非負の整数とカウンター記号が含まれています。有効であるためには、リストは整数の降順で並んでいる必要があります。整数と記号は連結されて、カウンター記号を形成します。
+`additive-symbols` 記述子は、カンマで区切られた加算タプルのリストを定義します。それぞれの加算タプルには、空間で区切られた非負の整数とカウンター記号が含まれています。有効であるためには、リストは整数の降順で並んでいる必要があります。整数と記号は連結されて、カウンター記号を形成します。
 
 `system` 記述子が `cyclic`, `numeric`, `alphabetic`, `symbolic`, `fixed` の場合は、 {{cssxref('symbols')}} 記述子を `additive-symbols` の代わりに使用してください。
 
@@ -126,5 +125,5 @@ ul {
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
+- {{cssxref("symbols()")}} 関数、無名のカウンタースタイルを作成するために使用
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

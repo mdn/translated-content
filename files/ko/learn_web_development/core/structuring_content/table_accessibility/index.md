@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bda6da832e5682d6247e1c20790e7b0aa0ec45e1
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 이 과정의 두 번째 기사에서, 우리는 HTML 테이블의 좀 더 고급 기능들을 살펴볼 것입니다. 예를 들어, 캡션/요약과 행을 테이블 헤드, 바디, 푸터 섹션으로 그룹화하는 것과 시각 장애인을 위한 테이블의 접근성을 살펴볼 것입니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML 기초
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 확인하세요).
       </td>
@@ -325,4 +325,4 @@ HTML에서 테이블에 대해 알아야 할 몇 가지 다른 것들이 있지�
 
 만약 CSS를 배우고 싶다면, [CSS 학습 영역](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)을 확인하세요!
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

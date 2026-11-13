@@ -1,15 +1,15 @@
 ---
-title: font-family
+title: Descripteur de règle CSS `font-family`
+short-title: font-family
 slug: Web/CSS/Reference/At-rules/@font-face/font-family
-original_slug: Web/CSS/@font-face/font-family
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** définit la famille de polices pour une police spécifiée dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}}.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** définit la famille de polices pour une police définie dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}.
 
 La valeur est utilisée pour la correspondance de noms contre un `@font-face` particulier lors du style des éléments utilisant la propriété [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
-N'importe quel nom peut être utilisé, et cela remplace tout nom spécifié dans les données de police sous-jacentes.
+N'importe quel nom peut être utilisé, et cela remplace tout nom défini dans les données de police sous-jacentes.
 
 ## Syntaxe
 
@@ -57,11 +57,11 @@ font-family: exemplepolice;
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}

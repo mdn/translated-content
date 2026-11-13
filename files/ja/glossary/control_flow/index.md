@@ -1,21 +1,21 @@
 ---
 title: Control flow (制御フロー)
 slug: Glossary/Control_flow
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-_制御フロー_（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
+**制御フロー**（制御の流れ）は、コンピューターがスクリプト内の文を実行する順序です。
 
 条件やループなどの（非常によく出てくる）制御フローを変更する構造にコンピューターが出合わない限り、コードはファイルの最初の行から順に最後の行まで実行します。
 
 たとえば、ウェブページのフォームからのユーザーのデータを検証するために使用されるスクリプトを想像してみてください。 スクリプトは有効なデータを送信しますが、ユーザーが必要なフィールドを空のままにしておくと、スクリプトはそれを入力するように要求します。 これを行うには、スクリプトは{{Glossary("Conditional", "条件付き")}}構造または `if...else` を使用し、フォームが完全であるかどうかによって異なるコードを実行します。
 
-```
-if (field==empty) {
-    promptUser();
+```js
+if (isEmpty(field)) {
+  promptUser();
 } else {
-    submitForm();
+  submitForm();
 }
 ```
 
@@ -25,16 +25,8 @@ if (field==empty) {
 
 制御フローとは、スクリプトを読むときに、最初から最後まで読むだけでなく、プログラムの構造や実行順序にどのように影響するかを調べる必要があることを意味します。
 
-## より詳しく知る
+## 関連情報
 
-### 一般知識
-
-- Wikipedia 上の [制御構造](https://ja.wikipedia.org/wiki/制御構造)
-
-### 技術文書
-
-- MDN の [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#control_flow)
-
-### それについて学ぶ
-
-- MDN の [文（制御フロー）](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [JavaScript リファレンス - 制御フロー](/ja/docs/Web/JavaScript/Reference#control_flow)
+- [制御フローとエラー処理](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [制御構造](https://ja.wikipedia.org/wiki/制御構造) - ウィキペディア

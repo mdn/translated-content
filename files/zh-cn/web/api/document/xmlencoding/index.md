@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 返回由 XML 声明确定的编码。如果未指定或未知，则返回 `null`。
 

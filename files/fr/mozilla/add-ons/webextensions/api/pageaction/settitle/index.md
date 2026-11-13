@@ -3,8 +3,6 @@ title: pageAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
 ---
 
-{{AddonSidebar}}
-
 Définit le titre de la page action. Le titre est affiché dans une info-bulle lorsque l'utilisateur survole l'action de la page
 
 ## Syntaxe

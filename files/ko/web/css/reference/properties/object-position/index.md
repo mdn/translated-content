@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/object-position
 original_slug: Web/CSS/object-position
 ---
 
-[CSS](/ko/docs/Web/CSS) **`object-position`** 속성은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)의 콘텐츠 정렬 방식을 지정합니다. 대체 요소의 객체가 덮지 않은 부분은 요소의 배경이 보이게 됩니다.
+[CSS](/ko/docs/Web/CSS) **`object-position`** 속성은 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)의 콘텐츠 정렬 방식을 지정합니다. 대체 요소의 객체가 덮지 않은 부분은 요소의 배경이 보이게 됩니다.
 
 대체 요소 객체의 고유 크기(수정을 가하지 않은 원래 크기)를 조정해 요소 박스에 맞추는 방법은 {{cssxref("object-fit")}} 속성으로 지정할 수 있습니다.
 

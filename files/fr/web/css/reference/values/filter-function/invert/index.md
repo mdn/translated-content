@@ -1,12 +1,12 @@
 ---
-title: invert()
+title: Fonction CSS `invert()`
+short-title: invert()
 slug: Web/CSS/Reference/Values/filter-function/invert
-original_slug: Web/CSS/filter-function/invert
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: invert()")}}
 
@@ -58,8 +58,8 @@ invert(60%)
 
 ### Paramètres
 
-- {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} {{Optional_Inline}}
-  - : Définit le niveau d'inversion. Une valeur de `100%` inverse complètement l'image, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
+- {{CSSxRef("&lt;number&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}} {{Optional_Inline}}
+  - : Définit le niveau d'inversion. Une valeur de `100%` inverse complètement l'image, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet proportionnel. Les valeurs supérieures à `100%` sont autorisées, mais l'effet est limité à `100%`. Les valeurs négatives ne sont pas autorisées. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 
@@ -139,7 +139,7 @@ On ajoute du CSS qui inverse les éléments selon leur classe `filter` ou `svgFi
         <img
           class="svgFilter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
       <td>
         <svg id="svg" height="220" width="220" overflow="visible">
@@ -159,7 +159,7 @@ On ajoute du CSS qui inverse les éléments selon leur classe `filter` ou `svgFi
       <td>
         <img
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
     </tr>
   </tbody>
@@ -178,14 +178,14 @@ On ajoute du CSS qui inverse les éléments selon leur classe `filter` ou `svgFi
 
 ## Voir aussi
 
-Les autres fonctions {{cssxref("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} sont&nbsp;:
+Les autres fonctions {{CSSxRef("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} sont&nbsp;:
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{CSSxRef("filter-function/blur", "blur()")}}
+- {{CSSxRef("filter-function/brightness", "brightness()")}}
+- {{CSSxRef("filter-function/contrast", "contrast()")}}
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+- {{CSSxRef("filter-function/grayscale", "grayscale()")}}
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+- {{CSSxRef("filter-function/opacity", "opacity()")}}
+- {{CSSxRef("filter-function/saturate", "saturate()")}}
+- {{CSSxRef("filter-function/sepia", "sepia()")}}

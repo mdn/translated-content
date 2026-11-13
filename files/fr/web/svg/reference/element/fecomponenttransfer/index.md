@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feComponentTransfer
 original_slug: Web/SVG/Element/feComponentTransfer
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComponentTransfer>`** permet d'effectuer un remappage des composantes de couleur (rouge, bleu, vert et alpha) de chaque pixel. Cela permet notamment de régler la luminosité, le constraste, la balance des couleurs ou encore le seuillage.
 
 Les calculs sont effectués sur les valeurs de couleur non prémultipliées. Chaque canal de couleur est modifié en utilisant le résultat des éléments {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, et {{SVGElement("feFuncA")}} placés à l'intérieur de la balise.

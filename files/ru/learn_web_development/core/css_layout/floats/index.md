@@ -3,7 +3,7 @@ title: Float
 slug: Learn_web_development/Core/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 Первоначально используемое для "обтекания" картинок текстом, свойство {{cssxref("float")}} стало одним из наиболее часто используемых инструментов для создания макетов из нескольких столбцов на веб-страницах. С появлением flexbox и grid оно снова используется как задумывалось в начале, о чем подробнее в этой статье.
 
@@ -233,7 +233,7 @@ body {
 
 {{ EmbedLiveSample('Float_2', '100%', 500) }}
 
-[Линейные блоки](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#line_boxes) нашего последующего элемента были сокращены так что текст располагается вокруг обтекаемого объекта, но из-за того, что обтекаемый объект удаляется из нормального потока блок вокруг параграфа все ещё остаётся в полную ширину.
+[Линейные блоки](/ru/docs/Web/CSS/Guides/Display/Visual_formatting_model#line_boxes) нашего последующего элемента были сокращены так что текст располагается вокруг обтекаемого объекта, но из-за того, что обтекаемый объект удаляется из нормального потока блок вокруг параграфа все ещё остаётся в полную ширину.
 
 ## Очистка обтекания
 
@@ -667,4 +667,4 @@ body {
 
 Теперь вы знаете все, что нужно знать о float в современной веб-разработке. См. Статью об [устаревших методах макета](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) устаревших методах макета для получения информации о том, как они использовались раньше, что может быть полезно, если вы работаете над старыми проектами.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

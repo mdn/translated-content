@@ -1,13 +1,13 @@
 ---
-title: scale3d()
+title: CSS `scale3d()` 関数
+short-title: scale3d()
 slug: Web/CSS/Reference/Values/transform-function/scale3d
-original_slug: Web/CSS/transform-function/scale3d
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
-変倍量はベクトルで定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、三次元空間において要素を変倍する座標変換を定義します。
+変倍量はベクトル [sx, sy, sz] で定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scale3d()")}}
 
@@ -67,43 +67,41 @@ transform: scale3d(-1.4, 0.4, 0.7);
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-この変倍座標変換は、三次元ののベクトルであることが特徴です。この座標は、それぞれの方向にどれだけ変倍を行うかを定義します。3 つすべての座標が等しい場合、変倍は一様 (_等方的_) で、要素の形が保たれます (これは[相似変換](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E7%9B%B8%E4%BC%BC)です)。
+この変倍座標変換は、三次元のベクトルであることが特徴です。この座標は、それぞれの方向にどれだけ変倍を行うかを定義します。3 つすべての座標が等しい場合、変倍は一様 (_等方的_) で、要素の形が保たれます (これは[相似変換](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E7%9B%B8%E4%BC%BC)です)。
 
-座標の値が \[-1, 1] の範囲外の場合、変倍は、その座標の方向に要素を拡大します。この範囲内の場合、変倍は、要素をその座標の方向に縮小します。負の場合、変倍は [点対称化](https://ja.wikipedia.org/wiki/点対称) と大きさの変更を行います。1 と等しい場合、変倍は何もしません。
+座標の値が \[-1, 1] の範囲外の場合、変倍は、その座標の方向に要素を拡大します。この範囲内の場合、変倍は、要素をその座標の方向に縮小します。負の場合、変倍は[点対称化](https://ja.wikipedia.org/wiki/点対称)と大きさの変更を行います。1 と等しい場合、変倍は何もしません。
 
 ## 構文
-
-`scale3d()` 関数は 3 つの値で指定され、それぞれの値はそれぞれの方向に適用される変倍率を表します。
 
 ```css
 scale3d(sx, sy, sz)
@@ -112,16 +110,16 @@ scale3d(sx, sy, sz)
 ### 値
 
 - `sx`
-  - : {{cssxref("&lt;number&gt;")}} で、変倍ベクトルの横軸を表します。
+  - : {{cssxref("&lt;number&gt;")}} で、変倍ベクトルの横軸（水平、X 成分）を表します。
 - `sy`
-  - : {{cssxref("&lt;number&gt;")}} で、変倍ベクトルの縦軸を表します。
+  - : {{cssxref("&lt;number&gt;")}} で、変倍ベクトルの縦軸（垂直、Y 成分）を表します。
 - `sz`
   - : {{cssxref("&lt;number&gt;")}} で、変倍ベクトルの Z 成分を表します。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -130,50 +128,25 @@ scale3d(sx, sy, sz)
   <tbody>
     <tr>
       <td colspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+        この座標変換は三次元空間に適用され、平面で表すことはできません。
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>sz</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>sz</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & sz \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>sz</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>sx</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>sy</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi>sz</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} sx & 0 & 0 & 0 \\ 0 & sy & 0 & 0 \\ 0 & 0 & sz & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -182,8 +155,8 @@ scale3d(sx, sy, sz)
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+<div>通常</div>
+<div class="scaled">変倍</div>
 ```
 
 #### CSS
@@ -210,8 +183,8 @@ div {
 #### HTML
 
 ```html
-<div>Normal</div>
-<div class="scaled">Scaled</div>
+<div>通常</div>
+<div class="scaled">変倍</div>
 ```
 
 #### CSS
@@ -248,7 +221,7 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`scaleZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("transform-function/rotate3d")}}
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

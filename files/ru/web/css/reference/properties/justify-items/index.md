@@ -59,7 +59,7 @@ justify-items: end;
 - Используя разметку с помощью блоков (block-level layout), элементы выравниваются внутри содержащего их блока по внутренней оси.
 - Для абсолютно позиционированых элементов выравнивание происходит внутри содержащего их блока по внутренней оси, учитывая значения смещения сверху, слева, снизу и справа.
 - Используя разметку с помощью ячеек таблицы (table cell layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) о выравнивании в блочной структуре, абсолютном позиционировании и о табличной разметке).
-- Используя разметку с помощью гибких или адаптивных блоков (flexbox layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox) о выравнивании в разметке flexbox).
+- Используя разметку с помощью гибких или адаптивных блоков (flexbox layout), этот атрибут игнорируется ([подробнее](/ru/docs/Web/CSS/Guides/Box_alignment/In_flexbox) о выравнивании в разметке flexbox).
 - Используя разметку с помощью сетки (grid layout), элементы выравниваются внутри их сеточной области по внутренней оси ([подробнее](/ru/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) о выравнивании в разметке grid).
 
 ## Синтаксис
@@ -165,8 +165,8 @@ justify-items: unset;
 
 ## Смотрите также
 
-- CSS Руководство по Grid: _[Выравнивание блоков в разметке Grid](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Выравнивание блоков](/ru/docs/Web/CSS/CSS_box_alignment)
+- CSS Руководство по Grid: _[Выравнивание блоков в разметке Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS Выравнивание блоков](/ru/docs/Web/CSS/Guides/Box_alignment)
 - Сокращённый атрибут {{CSSxRef("place-items")}}
 - Атрибут {{CSSxRef("justify-self")}}
 - Атрибут {{CSSxRef("align-items")}}

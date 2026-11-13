@@ -1,9 +1,9 @@
 ---
-title: log()
+title: CSS `log()` 関数
+short-title: log()
 slug: Web/CSS/Reference/Values/log
-original_slug: Web/CSS/log
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`log()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の対数を返す指数関数です。

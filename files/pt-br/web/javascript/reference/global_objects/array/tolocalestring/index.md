@@ -44,7 +44,7 @@ console.log(resultado);
 // se estiver no Brasil com o fuso horario GMT-0300 (BRT) de Brasília.
 ```
 
-Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}}.
+Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, e {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 
 ## Especificações
 

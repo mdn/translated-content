@@ -4,8 +4,6 @@ slug: Web/MathML/Reference/Element/maction
 original_slug: Web/MathML/Element/maction
 ---
 
-{{MathMLRef}}
-
 L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
 L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
 
@@ -24,9 +22,9 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-clés).
 - selection
   - : L'élément fils auquel s'applique l'action. La valeur par défaut est `1`, ce qui correspond au premier élément fils.
 
