@@ -316,14 +316,14 @@ car1.color = "black";
 objectName.methodName = functionName;
 
 const myObj = {
-  myMethod: function(params) {
+  myMethod: function (params) {
     // 뭔가 하기...
-  }
+  },
 
   // 이렇게도  동작해요
   myOtherMethod(params) {
     // 뭔가 다른거 하기...
-  }
+  },
 };
 ```
 
