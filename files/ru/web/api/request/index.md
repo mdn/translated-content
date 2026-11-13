@@ -46,7 +46,7 @@ slug: Web/API/Request
 - {{domxref("Body.body", "body")}} {{readonlyInline}}
   - : Простой getter используемый для раскрытия {{domxref("ReadableStream")}} "тела" (body) содержимого.
 - {{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}
-  - : Хранит {{domxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.
+  - : Хранит {{jsxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.
 
 ## Методы
 
@@ -56,15 +56,15 @@ slug: Web/API/Request
 `Request` имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Возвращает промис, который выполняется, возвращая {{domxref("ArrayBuffer")}} репрезентацию тела запроса.
+  - : Возвращает промис, который выполняется, возвращая {{jsxref("ArrayBuffer")}} репрезентацию тела запроса.
 - {{domxref("Body.blob()")}}
   - : Возвращает promise
 - {{domxref("Body.formData()")}}
   - : Возвращает promise который разрешается с помощью {{domxref("FormData")}} представления тела запроса.
 - {{domxref("Body.json()")}}
-  - : Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.
+  - : Returns a promise that resolves with a {{jsxref("JSON")}} representation of the request body.
 - {{domxref("Body.text()")}}
-  - : Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.
+  - : Returns a promise that resolves with an {{jsxref("String")}} (text) representation of the request body.
 
 > [!NOTE]
 > The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
@@ -106,7 +106,7 @@ const bodyUsed = request.bodyUsed;
 ```
 
 > [!NOTE]
-> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
+> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
 
 Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("fetch()")}}, например, и получить ответ:
 

@@ -3,8 +3,6 @@ title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
 
-{{JSRef}}
-
 **`getUTCHours()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
 
 {{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
@@ -22,7 +20,7 @@ console.log(date2.getUTCHours());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCHours()
 ```
 

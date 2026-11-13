@@ -71,7 +71,7 @@ l10n:
 
 ## 解説
 
-マニフェストメンバーの `orientation` を理解するには、次の方向関連の概念にを理解することが重要です。
+マニフェストメンバーの `orientation` を理解するには、次の方向関連の概念を理解することが重要です。
 
 - **端末の方向**: 端末を物理的に保持または設置する方法を定義します。
 - **画面の方向**: 端末の画面の物理的な方向を定義します。
@@ -306,5 +306,5 @@ l10n:
 
 - [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API)
 - [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [学習: レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

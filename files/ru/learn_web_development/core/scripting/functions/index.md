@@ -3,7 +3,7 @@ title: Функции — Переиспользуемые блоки кода
 slug: Learn_web_development/Core/Scripting/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 Другая важная концепция в кодировании — **функции** — позволяют хранить фрагмент кода, который выполняет одну задачу внутри определённого блока, а затем вызывать этот код всякий раз, когда вам это нужно, используя одну короткую команду, вместо того, чтобы вводить один и тот же код несколько раз.
 
@@ -368,7 +368,8 @@ function greeting() {
 > [!NOTE]
 > Те же правила определения не применяются к циклу (например, `for() { ... }`) и условным блокам (например, `if() { ... }`) - они выглядят очень похожими, но это не одно и то же! Старайтесь не путать их.
 
-> **Примечание:** [ReferenceError: "x" is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined). Ошибка - это одна из наиболее распространённых проблем, с которой вы столкнётесь. Если вы получите эту ошибку, и вы уверены, что определили эту переменную, проверьте, в какой области она находится.
+> [!NOTE]
+> [ReferenceError: "x" is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined). Ошибка - это одна из наиболее распространённых проблем, с которой вы столкнётесь. Если вы получите эту ошибку, и вы уверены, что определили эту переменную, проверьте, в какой области она находится.
 
 ### Функции внутри функций
 
@@ -432,4 +433,4 @@ function subFunction3(value) {
 
 <!---->
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

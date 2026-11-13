@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`validationMessage`** は {{domxref("HTMLTextAreaElement")}} インターフェイスの読み取り専用プロパティで、この {{htmlelement("textarea")}} コントロールが満たしていない検証制約をを記述したローカライズされたメッセージを表す文字列を（もしあれば）返します。 コントロールが制約検証の対象ではない場合（{{domxref("HTMLTextAreaElement.willValidate")}} が `false` の場合）、または制約を満たしている場合は、空文字列が返されます。
+**`validationMessage`** は {{domxref("HTMLTextAreaElement")}} インターフェイスの読み取り専用プロパティで、この {{htmlelement("textarea")}} コントロールが満たしていない検証制約を記述したローカライズされたメッセージを表す文字列を（もしあれば）返します。 コントロールが制約検証の対象ではない場合（{{domxref("HTMLTextAreaElement.willValidate")}} が `false` の場合）、または制約を満たしている場合は、空文字列が返されます。
 
 もし、この `<textarea>` 要素が制約検証の対象（`willValidate` が `true`）であり、制約が満たされていない場合（{{domxref("HTMLInputElement.validity")}} オブジェクトの `valid` プロパティが `false`）、値は検証中にユーザーに表示されるエラーメッセージとなります。
 

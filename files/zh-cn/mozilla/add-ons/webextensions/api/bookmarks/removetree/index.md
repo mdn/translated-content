@@ -23,7 +23,7 @@ let removingTree = browser.bookmarks.removeTree(
 ### 参数
 
 - `id`
-  - : {{jsxref("string", "字符串", "", 1)}}，指定要删除的文件夹（以及其后代节点）的 ID。
+  - : {{jsxref("String", "字符串", "", 1)}}，指定要删除的文件夹（以及其后代节点）的 ID。
 
 ### 返回值
 

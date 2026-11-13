@@ -3,7 +3,7 @@ title: Créer une animation colorée
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}
 
 Dans cet exemple, on crée une animation avec des couleurs en appliquant chaque seconde une couleur aléatoire dans le contexte de rendu {{Glossary("WebGL")}}.
 
@@ -134,4 +134,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}

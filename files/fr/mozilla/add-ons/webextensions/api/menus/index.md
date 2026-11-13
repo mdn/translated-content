@@ -3,8 +3,6 @@ title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 ---
 
-{{AddonSidebar}}
-
 Ajoutez des éléments au système de menus du navigateur.
 
 Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.

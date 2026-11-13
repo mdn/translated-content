@@ -3,21 +3,21 @@ title: Array.prototype.findLast()
 short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`findLast()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列を逆順に反復処理し、指定されたテスト関数を満たす最初の要素の値を返します。
-テスト関数を満たす要素がない場合は {{jsxref("undefined")}} が返されます。
+**`findLast()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列を逆順に反復処理し、指定された判定関数を満たす最初の要素の値を返します。
+判定関数を満たす要素がない場合は {{jsxref("undefined")}} が返されます。
 
 検索を行う場合は以下のメソッドが必要です。
 
 - 一致する最初の要素を得るには、 {{jsxref("Array/find", "find()")}} を使用してください。
 - 配列内で一致する最後の位置を得るには、 {{jsxref("Array/findLastIndex", "findLastIndex()")}} を使用してください。
 - 値の位置を得るには、 {{jsxref("Array/indexOf", "indexOf()")}} を使用してください。
-  （これは {{jsxref("Array/findIndex", "findIndex()")}} に似ていますが、テスト関数を使用するのではなく、それぞれの要素が値と等しいかどうかを調べます。）
+  （これは {{jsxref("Array/findIndex", "findIndex()")}} に似ていますが、判定関数を使用するのではなく、それぞれの要素が値と等しいかどうかを調べます。）
 - 配列に値が存在するかどうかを調べるには、 {{jsxref("Array/includes", "includes()")}} を使用してください。
-  こちらも、テスト関数を使用する代わりに、各要素が値と等しいかどうかを調べます。
-- 指定されたテスト関数を満たす要素を得るには {{jsxref("Array/some", "some()")}} を使用してください。
+  こちらも、判定関数を使用する代わりに、各要素が値と等しいかどうかを調べます。
+- 指定された判定関数を満たす要素を得るには {{jsxref("Array/some", "some()")}} を使用してください。
 
 {{InteractiveExample("JavaScript デモ: Array.prototype.findLast()", "shorter")}}
 
@@ -52,7 +52,7 @@ findLast(callbackFn, thisArg)
 
 ### 返値
 
-指定されたテスト関数を満たす、配列中の最も大きいインデックス値を持つ要素の値。一致する要素が見つからない場合は {{jsxref("undefined")}} となります。
+指定された判定関数を満たす、配列中の最も大きいインデックス値を持つ要素の値。一致する要素が見つからない場合は {{jsxref("undefined")}} となります。
 
 ## 解説
 
@@ -128,7 +128,27 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
 > [!NOTE]
-> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
+
+### 最後に完了したタスクを探す
+
+この例は、時系列データを取り扱う際の `findLast()` の実用的な使用例を示しています。これは、`timestamp` で既にソート済みのリストから、最も最近完了したタスクを検索します。
+
+```js
+const tasks = [
+  { name: "Setup project", completed: true, timestamp: 1609459200000 },
+  { name: "Write tests", completed: false, timestamp: 1609545600000 },
+  { name: "Fix bug #42", completed: true, timestamp: 1609632000000 },
+  { name: "Deploy to staging", completed: true, timestamp: 1609718400000 },
+  { name: "Review PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask.name); // Deploy to staging
+```
+
+これは、配列を逆順にして `find()` を使用するよりも効率的です。なぜなら、新しい配列の作成を避けることができるからです。
 
 ### callbackFn の第 3 引数の使用
 
@@ -217,7 +237,7 @@ console.log(
 
 ## 関連情報
 
-- [`Array.prototype.findLast` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#array-find-from-last)
+- [`Array.prototype.findLast` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.findLast` のポリフィル](https://www.npmjs.com/package/array.prototype.findlast)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

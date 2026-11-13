@@ -2,12 +2,26 @@
 title: <clipPath>
 slug: Web/SVG/Reference/Element/clipPath
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<clipPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGAttr("clip-path")}} プロパティで使用されるクリッピングパスを定義します。
 
 クリッピングパスは、描画が適用される領域を制限する。概念的には、クリッピングパスで囲まれた領域の外にある部分は描画されません。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("clipPathUnits")}}
+  - : `<clipPath>` 要素のコンテンツの座標系を定義します。
+    _値の型_: `userSpaceOnUse` | `objectBoundingBox`; _デフォルト値_: `userSpaceOnUse`; _アニメーション_: **可**
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGClipPathElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -23,28 +37,27 @@ svg {
 <svg viewBox="0 0 100 100">
   <clipPath id="myClip">
     <!--
-      Everything outside the circle will be
-      clipped and therefore invisible.
+      円の外側にあるものはすべて切り取られるため、
+      見えなくなります。
     -->
     <circle cx="40" cy="35" r="35" />
   </clipPath>
 
-  <!-- The original black heart, for reference -->
+  <!-- 参照用の元の黒いハート -->
   <path
     id="heart"
     d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
-    Only the portion of the red heart
-    inside the clip circle is visible.
+    クリップの円の中にある赤いハートの一部だけが、
+    見えるようになっています。
   -->
   <use clip-path="url(#myClip)" href="#heart" fill="red" />
 </svg>
 ```
 
 ```css
-/* With a touch of CSS for browsers who *
- * implemented the r Geometry Property. */
+/* r 幾何プロパティを実装しているブラウザー向けに CSS を少し追加 */
 
 @keyframes openYourHeart {
   from {
@@ -62,19 +75,9 @@ svg {
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素の*レンダリング*に影響を与えますが、要素の*固有の形状*には影響を与えません。クリッピングされた要素（`<clipPath>` 要素を {{SVGAttr("clip-path")}} プロパティで参照している要素、または参照している要素の子）のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
+クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素のレンダリングに影響を与えますが、要素の内在的な形状には影響を与えません。クリッピングされた要素（`<clipPath>` 要素を {{SVGAttr("clip-path")}} プロパティで参照している要素、または参照している要素の子）のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
 
-既定では、クリップされた領域では {{cssxref("pointer-events")}} が発行されません。例えば、半径 `10` の円が半径 `5` の円でクリッピングされている場合、小さい方の半径の外側では "click" イベントを受け取ることはありません。
-
-## 属性
-
-- {{SVGAttr("clipPathUnits")}}
-  - : `<clipPath>` 要素の内容物の座標系を定義します。
-    _値の型_: `userSpaceOnUse` | `objectBoundingBox`; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
-
-## 利用メモ
-
-{{svginfo}}
+デフォルトでは、クリップされた領域では {{cssxref("pointer-events")}} が発行されません。例えば、半径 `10` の円が半径 `5` の円でクリッピングされている場合、小さい方の半径の外側では "click" イベントを受け取ることはありません。
 
 ## 仕様書
 
@@ -87,4 +90,6 @@ svg {
 ## 関連情報
 
 - クリッピングとマスクの SVG 要素: {{SVGElement("mask")}}
-- CSS プロパティ: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- CSS の {{cssxref("clip-path")}} プロパティ
+- [CSS クリッピング入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking/Clipping)モジュール

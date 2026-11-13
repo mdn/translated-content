@@ -3,7 +3,7 @@ title: Использование промисов
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 {{jsxref("Promise")}} (промис) - это объект, представляющий результат успешного или неудачного завершения асинхронной операции. Так как большинство людей пользуются уже созданными промисами, это руководство начнём с объяснения использования вернувшихся промисов до объяснения принципов создания.
 

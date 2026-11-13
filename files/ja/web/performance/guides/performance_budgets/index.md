@@ -32,11 +32,11 @@ l10n:
 
 エラーレベルは上限の制限であり、この値を超える変更は悪影響を存在させ、顕著な問題を引き起こします。
 
-始めるためには、最初に、ユーザーが使用する端末と接続速度（例： 3G 接続の約 200 ドル相当の Android 端末）を複数の[ツール](/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)を用いて測定する必要があります。これらの時点ベースの指標は、ファイルサイズの予算に対応させます。
+始めるためには、最初に、ユーザーが使用する端末と接続速度（例： 3G 接続の約 200 ドル相当の Android 端末）を複数の[ツール](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)を用いて測定する必要があります。これらの時点ベースの指標は、ファイルサイズの予算に対応させます。
 
 直帰率を低減するための既定の基準値は、[Time to Interactive を 3G/4G 環境で 5 秒未満、その後の読み込みでは 2 秒未満に達成すること](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)です。ただし、サイトの特定の目標やコンテンツによっては、他の指標に重点を置く選択も可能です。
 
-ブログやニュースサイトのようなテキスト中心のサイトでは、[First Contentful Paint](/ja/docs/Glossary/First_contentful_paint) 指標がユーザー行動をより正確に反映する可能性があります（つまり、ユーザーが読み始められるまでの時間）。これにより、ファイル固有の予算（例：フォントサイズ）とその最適化方針が明確になります。（例： [font-display](/ja/docs/Web/CSS/@font-face/font-display) を使用して[知覚パフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)を改善する）。
+ブログやニュースサイトのようなテキスト中心のサイトでは、[First Contentful Paint](/ja/docs/Glossary/First_contentful_paint) 指標がユーザー行動をより正確に反映する可能性があります（つまり、ユーザーが読み始められるまでの時間）。これにより、ファイル固有の予算（例：フォントサイズ）とその最適化方針が明確になります。（例： [font-display](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-display) を使用して[知覚パフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)を改善する）。
 
 パフォーマンス予算の究極的な価値は、パフォーマンスがビジネス目標や製品目標に与える影響を関連付けることです。指標を定義する際には、[ユーザー体験](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)に焦点を当てるべきです。これは直帰率やコンバージョン率だけでなく、そのユーザーが再訪する可能性も左右するからです。
 

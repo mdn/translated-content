@@ -3,7 +3,7 @@ title: Lazy loading
 slug: Web/Performance/Guides/Lazy_loading
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ru/docs/Web/Performance")}}
 
 **Lazy loading (ленивая загрузка)** - это стратегия, направленная на определение ресурсов как неблокирующих (не критических) для того, чтобы отложить загрузку этих ресурсов на тот момент, когда они действительно необходимы. Так можно сократить длину [критических этапов рендеринга](/ru/docs/Web/Performance/Guides/Critical_rendering_path), что приводит к уменьшению времени загрузки приложения.
 
@@ -48,7 +48,7 @@ JavaScript, CSS и HTML могут быть разделены на неболь
 
 По умолчанию, загрузка шрифтов откладывается на тот момент, пока дерево рендера (render tree) не сформировано полностью. Это приводит к тому, что текст страницы может появиться не сразу.
 
-Вы можете переопределить такое поведение и загрузить шрифты заранее, используя `<link rel="preload">`, [CSS font-display свойство](/ru/docs/Web/CSS/@font-face/font-display) или [Font Loading API](/ru/docs/Web/API/CSS_Font_Loading_API).
+Вы можете переопределить такое поведение и загрузить шрифты заранее, используя `<link rel="preload">`, [CSS font-display свойство](/ru/docs/Web/CSS/Reference/At-rules/@font-face/font-display) или [Font Loading API](/ru/docs/Web/API/CSS_Font_Loading_API).
 
 Смотрите также: [Element Link](/ru/docs/Web/HTML/Reference/Elements/link)
 

@@ -1,11 +1,10 @@
 ---
-title: <input type="date">
+title: '`<input type="date">` 属性値'
+short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`type="date"`** は、ユーザーが日付を入力できる入力フィールドを作成します。 日付選択入力 UI の表示は、ブラウザーやオペレーティングシステムによって異なります。 値は `yyyy-mm-dd` 形式に正規化されます。
 
@@ -43,7 +42,7 @@ label {
 
 入力欄に入力された日付を表す文字列です。日付は[日付文字列形式](/ja/docs/Web/HTML/Guides/Date_and_time_formats#日付文字列)に従って書式化されます。
 
-次のように、日付の入力欄の既定値を [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に設定することができます。
+次のように、日付の入力欄のデフォルト値を [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に設定することができます。
 
 ```html
 <input type="date" value="2017-06-01" />
@@ -67,7 +66,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 要素に共通する属性は `date` 入力型にも適用されますが、その表示に影響を与えないかもしれません。例えば、 `size` や `placeholder` は動作しないかもしれません。 `date` 入力には以下の追加属性があります。
+[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) およびすべての {{HTMLElement("input")}} 要素に共通する [input 属性](/ja/docs/Web/HTML/Reference/Elements/input#attributes)に加え、`date` 入力は以下の属性に対応しています。
 
 ### max
 
@@ -83,17 +82,14 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### step
 
-`step` 属性は値が準拠する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも提供されていなければ適切な既定値）に等しい値のみが有効となります。
+`step` 属性は値が準拠する粒度を指定する数値、または後述する特殊な値 `any` です。段階の基準値から整数倍の値のみが有効です。段階の基準値は（指定されていれば）[`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも提供されていなければ `0` （UNIX 元期、`1970-01-01`）です。
 
-文字列値の `any` は刻みがないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。
+`date` 入力の場合、`step` の値は日単位で指定され、`step` の値に 86,400,000 を掛けた値に相当するミリ秒数として扱われます（実際の数値はミリ秒単位です）。デフォルト値は 1 で、これは 1 日を示します。
 
-> [!NOTE]
-> ユーザーによって入力されたデータが step 設定に従っていない場合、{{Glossary("User agent", "ユーザーエージェント")}}は最も近い有効な値に丸める可能性があり、同じ距離の値が 2 つあった場合は、正の方向の値を優先します。
-
-`date` 入力欄では、 `step` の値は日単位で指定します。また、 86,400,000 に `step` を乗じた値に等しいミリ秒数として扱われます（数値はミリ秒単位であるため）。 `step` の既定値は `1` であり、 1 日を表します。
+文字列値の `any` は段階がないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。実際には、ピッカー UI では 1 日単位での選択しかできないため、`date` 入力では `1` と同じ効果になります。
 
 > [!NOTE]
-> `any` を `step` 属性の値として指定すると、 `1` を `date` 入力欄に設定したのと同じ効果になります。
+> ユーザーがデータを入力したときには段階の設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 ## date 入力欄の使用
 
@@ -106,31 +102,25 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 もっとも基本的な `<input type="date">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
-<form action="https://example.com">
-  <label>
-    誕生日を入力してください。
-    <input type="date" name="bday" />
-  </label>
-
-  <p><button>Submit</button></p>
-</form>
+<label>
+  誕生日を入力してください。
+  <input type="date" name="bday" />
+</label>
 ```
 
 {{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
 
-この HTML は入力された日付を `bday` キーに入れて `https://example.com` に送ります。 — 結果の URL は `https://example.com/?bday=1955-06-08` のようになります。
+この入力欄を `GET` メソッドで `https://example.com` に送信するフォームに含めると、入力された日付は `bday` キーで送られます。結果の URL は `https://example.com/?bday=1955-06-08` のようになります。
 
 ### 日付の最大値と最小値の設定
 
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
 
 ```html
-<form>
-  <label
-    >希望するパーティーの日を選んでください。
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
-  </label>
-</form>
+<label>
+  希望するパーティーの日を選んでください。
+  <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
+</label>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -145,7 +135,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ## 検証
 
-既定で、 `<input type="date">` は入力された値をその書式を超えて検証しません。インターフェイスは一般的に、日付でないものの入力をさせないからです。 — これは便利です。
+デフォルトで、 `<input type="date">` は入力された値をその書式を超えて検証しません。インターフェイスは一般的に、日付でないものの入力をさせないからです。 — これは便利です。
 
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、このフォームコントロールでは不正な日付を無効化し、範囲を外れた日付を送信しようとしたときにエラーを表示するでしょう。
 
@@ -172,11 +162,17 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 不完全な日付 (または設定した範囲を外れた日付) を送信しようとすると、ブラウザーはエラーを表示します。例を実行してみましょう。
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
-上記の例で使用されている CSS です。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を使用して、現在の値が妥当かどうかで入力欄の隣にアイコンを追加しています。アイコンは入力欄そのものではなく、入力欄の隣の {{htmlelement("span")}} に置くようにしないと、 Chrome ではコントロールの内側にコンテンツを生成するので、正しく整形したり表示したりすることができません。
+上記の例で使用されている CSS です。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を使用して、現在の値が妥当かどうかで入力欄の隣にアイコンを追加しています。アイコンは入力欄そのものではなく、入力欄の隣の {{htmlelement("span")}} に置くようにしないと、Chrome ではコントロールの内側にコンテンツを生成するので、正しく整形したり表示したりすることができません。
 
 ```css
 label {
@@ -209,13 +205,11 @@ input:valid + span::after {
 HTML は次のようになります。
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
-  </div>
-</form>
+<div class="nativeDatePicker">
+  <label for="bday">誕生日を入力してください。</label>
+  <input type="date" id="bday" name="bday" />
+  <span class="validity"></span>
+</div>
 ```
 
 ### CSS
@@ -264,9 +258,9 @@ input:valid + span::after {
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
-        <code>valueAsDate</code>,
-        <code>valueAsNumber</code>
+        <a href="/ja/docs/Web/API/HTMLInputElement/value"><code>value</code></a>,
+        <a href="/ja/docs/Web/API/HTMLInputElement/valueAsDate"><code>valueAsDate</code></a>,
+        <a href="/ja/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>
@@ -274,16 +268,8 @@ input:valid + span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>

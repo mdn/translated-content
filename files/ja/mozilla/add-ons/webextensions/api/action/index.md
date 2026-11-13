@@ -11,7 +11,7 @@ manifest.json の [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.jso
 
 [browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)はブラウザーツールバーのボタンを指します。
 
-ボタンとポップアップの関連付けができます。ウェブページのようにポップアップを HTML や CSS, JavaScript で記述できます。ポップアップ内部で動く Javascript はバックグランドスクリプトと同じ WebExtension API へのアクセスを持ちますが、グローバルコンテキストは現在ブラウザー上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
+ボタンとポップアップの関連付けができます。ウェブページのようにポップアップを HTML や CSS, JavaScript で記述できます。ポップアップ内部で動く Javascript はバックグラウンドスクリプトと同じ WebExtension API へのアクセスを持ちますが、グローバルコンテキストは現在ブラウザー上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
 ウェブページに作用させたい場合、 [messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) を通した操作する必要があります。
 
 ポップアップを明示した場合、ユーザーがクリックした際にポップアップが出現しコンテンツが読み込まれます。

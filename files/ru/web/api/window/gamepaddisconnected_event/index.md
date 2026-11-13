@@ -27,7 +27,7 @@ slug: Web/API/Window/gamepaddisconnected_event
 | Свойство                        | Тип                        | Описание                                                                          |
 | ------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (самый верхний элемент DOM дерева).                                  |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                                                      |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | Тип события.                                                                      |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Является ли событие всплывающим.                                                  |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Является ли событие отменяемым.                                                   |
 | `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |

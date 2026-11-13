@@ -3,8 +3,6 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`has()`** 方法返回一个布尔值来指示对应的值是否存在于该集合中。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}

@@ -21,7 +21,7 @@ slug: MDN/Community
 
 这是本章节的指南和页面列表。
 
-- [参与贡献](/zh-CN/docs/MDN/Community/Contributing)
+- [参与贡献](/zh-CN/docs/MDN/Community)
   - : 本节说明了你如何开始贡献，以及我们接受的贡献的类型。本节涵盖以下主题：
     - [入门](/zh-CN/docs/MDN/Community/Getting_started)
     - [我们的仓库](/zh-CN/docs/MDN/Community/Our_repositories)

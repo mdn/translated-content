@@ -3,7 +3,7 @@ title: document.execCommand
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand`** 方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)的元素。
 
@@ -25,7 +25,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### 参数
 
 - `aCommandName`
-  - : 一个 {{domxref("DOMString")}} ，命令的名称。可用命令列表请参阅 [命令](#命令) 。
+  - : 一个 {{jsxref("String")}} ，命令的名称。可用命令列表请参阅 [命令](#命令) 。
 - `aShowDefaultUI`
   - : 一个 {{jsxref("Boolean")}}，是否展示用户界面，一般为 false。Mozilla 没有实现。
 - `aValueArgument`

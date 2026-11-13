@@ -138,14 +138,14 @@ li li {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>。
+        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容">可感知内容</a>。
       </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ li li {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>
@@ -170,7 +170,7 @@ li li {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >
@@ -202,6 +202,6 @@ li li {
 - 其他列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}
 - 可能对 `<ul>` 元素的样式特别有用的 CSS 属性：
   - {{CSSxRef("list-style")}} 属性，用于选择显示序数的方法。
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于操作复杂的嵌套列表。
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于操作复杂的嵌套列表。
   - {{CSSxRef("line-height")}} 属性，用于模拟过时的 [`compact`](#compact) 属性。
   - {{CSSxRef("margin")}} 属性，用于控制列表的缩进。

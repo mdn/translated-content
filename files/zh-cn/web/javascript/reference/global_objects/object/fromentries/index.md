@@ -3,8 +3,6 @@ title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
 
-{{JSRef}}
-
 **`Object.fromEntries()`** 静态方法将键值对列表转换为一个对象。
 
 {{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}

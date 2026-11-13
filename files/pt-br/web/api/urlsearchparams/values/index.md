@@ -5,7 +5,7 @@ slug: Web/API/URLSearchParams/values
 
 {{APIRef("URL API")}}
 
-O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.
+O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{jsxref("String")}}.
 
 > [!NOTE]
 > Esse método está disponível no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).

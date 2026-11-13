@@ -22,7 +22,7 @@ slug: Mozilla/Firefox/Releases/103
 - {{CSSxRef("backdrop-filter")}} プロパティ (要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用するために使用できます) がデフォルトで有効になりました。以前は設定項目で無効にしていました ([Firefox バグ 1578503](https://bugzil.la/1578503))。
 - {{CSSxRef("scroll-snap-stop")}} プロパティが使用可能になりました ([Firefox バグ 1312165](https://bugzil.la/1312165))。速くスクロールするときでもスナップ位置を通り過ぎることを許可するかどうかを指定するために、このプロパティの値 `always` および `normal` を使用できます。
 - {{CSSxRef(":modal")}} 擬似クラスをサポートしました。これはインタラクションが却下されるまでの間、他の要素とのすべてのインタラクションを除外する状態にある要素を選択します ([Firefox バグ 1768535](https://bugzil.la/1768535))。
-- `contain` プロパティの値 [`style`](/ja/docs/Web/CSS/contain#style) をサポートしました。この値は、ある要素とその子孫以外に影響を及ぼす可能性のあるプロパティに対して、包含している要素の外に影響を与えないようにするために使用できます。詳しくは [Firefox バグ 1463600](https://bugzil.la/1463600) をご覧ください。
+- `contain` プロパティの値 [`style`](/ja/docs/Web/CSS/Reference/Properties/contain#style) をサポートしました。この値は、ある要素とその子孫以外に影響を及ぼす可能性のあるプロパティに対して、包含している要素の外に影響を与えないようにするために使用できます。詳しくは [Firefox バグ 1463600](https://bugzil.la/1463600) をご覧ください。
 
 #### 廃止
 
@@ -50,7 +50,7 @@ slug: Mozilla/Firefox/Releases/103
   転送後は、元のオブジェクトを使用できなくなります。
   詳しくは [Firefox バグ 1659025](https://bugzil.la/1659025) をご覧ください。
 
-- [`caches`](/ja/docs/Web/API/Window/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) が必要になりました。保護されていないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
+- [`caches`](/ja/docs/Web/API/Window/caches)、[`CacheStorage`](/ja/docs/Web/API/CacheStorage)、[`Cache`](/ja/docs/Web/API/Cache) で [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) が必要になりました。保護されていないコンテキストで使用すると、プロパティやインターフェイスが定義されません。
   以前の `cache` は、保護されたコンテキストの外で使用すると例外が発生する `CacheStorage` を返していました。
   詳しくは [Firefox バグ 1112134](https://bugzil.la/1112134) をご覧ください。
 

@@ -3,8 +3,6 @@ title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
 
-{{JSRef}}
-
 **`Symbol.unscopables`** 指用于指定对象值，其对象自身和继承的从关联对象的 with 环境绑定中排除的属性名称。
 
 {{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}

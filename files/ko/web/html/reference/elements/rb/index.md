@@ -12,7 +12,7 @@ original_slug: Web/HTML/Element/rb
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
     </tr>
@@ -94,7 +94,8 @@ body {
 
 {{EmbedLiveSample("without-ruby", "100%", 60)}}
 
-> **참고:** {{HTMLElement("ruby")}} 요소 참고서를 방문해 다른 예제도 살펴보세요.
+> [!NOTE]
+> {{HTMLElement("ruby")}} 요소 참고서를 방문해 다른 예제도 살펴보세요.
 
 ## 명세
 

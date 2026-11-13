@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 > [!WARNING]
 > 当前的 HTTP/1.1 规范中不再提及实体、实体标头和实体主体。这中的有些字段现在被称为{{glossary("Representation header", "表示标头")}}。
 
@@ -14,7 +12,7 @@ l10n:
 
 在下面的例子中，{{HTTPHeader("Content-Length")}} 是实体标头，而 {{HTTPHeader("Host")}} 和 {{HTTPHeader("User-Agent")}} 是请求标头。
 
-```plain
+```http
 POST /myform.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0

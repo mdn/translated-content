@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56c7d77cdb42a21cdd1b7ca7767c9d0bf8b7462e
 ---
 
-{{GlossarySidebar}}
-
 **面包屑导航**（面包屑路径）是一种导航辅助工具，通常放置在网站的页眉和主要内容之间，以显示当前页面相对于网站结构的层次结构（从顶层到当前页面，或用户访问当前页面时所跟踪的链接列表，按访问顺序排列）。
 
 当前文档的位置面包屑导航可能如下所示：
@@ -20,7 +18,7 @@ l10n:
 
 ## 参见
 
-- [面包屑导航](/zh-CN/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [面包屑导航](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)
 - [Google 搜索中心：面包屑结构化数据](https://developers.google.cn/search/docs/appearance/structured-data/breadcrumb)
 - [APG 指南：Breadcrumb 示例](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
 - [理解成功标准 2.4.8 | W3C 理解 WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/location)

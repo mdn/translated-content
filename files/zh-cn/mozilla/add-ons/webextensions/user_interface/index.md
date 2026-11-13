@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button"
           >浏览器工具栏按钮</a
         >(浏览器行为)
       </td>

@@ -1,21 +1,28 @@
 ---
-title: Selection.collapseToStart()
+title: Selection：collapseToStart() 方法
+short-title: collapseToStart()
 slug: Web/API/Selection/collapseToStart
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
-**`Selection.collapseToStart()`** 方法的作用是取消当前选区，并把光标定位在原选区的最开始处，如果此时光标所处的位置是可编辑的，且它获得了焦点，则光标会在原地闪烁。
+**`Selection.collapseToStart()`** 方法会将选区折叠到选区中第一个范围的起始位置。如果选区内容处于可编辑并获得焦点的状态，光标会在该位置闪烁。
 
 ## 语法
 
-```plain
-sel.collapseToStart()
+```js-nolint
+collapseToStart()
 ```
 
 ### 参数
 
-_无。_
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
@@ -27,4 +34,4 @@ _无。_
 
 ## 参见
 
-- 此方法所属的接口，{{domxref("Selection")}}。
+- 所属的 {{domxref("Selection")}} 接口。

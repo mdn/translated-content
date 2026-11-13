@@ -3,8 +3,6 @@ title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 
-{{AddonSidebar}}
-
 Désinstalle l'appel de l'extension.
 
 Cette API _ne requiert pas_ la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"

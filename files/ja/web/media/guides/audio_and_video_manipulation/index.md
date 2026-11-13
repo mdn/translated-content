@@ -119,7 +119,7 @@ processor.doLoad();
 
 ### 動画と WebGL
 
-[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
+[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクスチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
@@ -163,8 +163,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -258,8 +257,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden
@@ -396,5 +394,3 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - [AudioContext](/ja/docs/Web/API/AudioContext)
 - More info on [Spatial Audio](/ja/docs/Web/API/BaseAudioContext/createPanner)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Apps/Fundamentals/")}}

@@ -43,7 +43,7 @@ numObj.toPrecision([precision]);
 
 ### 예외
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("RangeError")}}
   - : `precision(정밀도)`가 1에서 100 사이가 아닌 경우 {{jsxref("RangeError")}}가 발생합니다. 구현은 더 큰 값과 더 작은 값을 지원할 수 있습니다. ECMA-262는 최대 21 자리의 정밀도 만을 요구합니다.
 
 ## 예제

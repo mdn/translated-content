@@ -3,8 +3,6 @@ title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
 
-{{AddonSidebar}}
-
 Obtient toutes les alarmes actives pour le poste.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

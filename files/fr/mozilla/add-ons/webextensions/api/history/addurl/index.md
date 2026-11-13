@@ -3,8 +3,6 @@ title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
 
-{{AddonSidebar}}
-
 Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

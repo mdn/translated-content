@@ -1,9 +1,9 @@
 ---
-title: HTML tabindex グローバル属性
+title: "`tabindex` グローバル属性"
 short-title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 **`tabindex`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、開発者が HTML 要素をフォーカス可能にし、（ふつうは名前の由来である <kbd>Tab</kbd> キーによる）順番にフォーカスすることを許可または防止し、順番にフォーカスするための相対順序を決定することができるようにします。
@@ -55,20 +55,20 @@ div:focus {
 - もし `tabindex` 属性が値なしで記述された場合、その要素をフォーカス可能にするかどうかは、ユーザーエージェントが決定します。
 
   > [!WARNING]
-  > `tabindex` の値として、`0` と `-1` のみを使用することをお勧めします。`tabindex` の値を `0` より大きくしたり、フォーカス可能な HTML 要素の順序を変更できる CSS プロパティ（[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)）を使用したりしないようにしましょう。これは、キーボードによるナビゲーションや支援技術を使用している人にとって、ページのコンテンツを操作することが難しくなります。代わりに、論理的な順序で要素を記述してください。
+  > `tabindex` の値として、`0` と `-1` のみを使用することをお勧めします。`tabindex` の値を `0` より大きくしたり、フォーカス可能な HTML 要素の順序を変更できる CSS プロパティ（[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)）を使用したりしないようにしましょう。これは、キーボードによるナビゲーションや支援技術を使用している人にとって、ページのコンテンツを操作することが難しくなります。代わりに、論理的な順序で要素を記述してください。
 
 フォーカス可能な HTML 要素の中には、[ユーザーエージェント](/ja/docs/Glossary/User_agent)によって、`tabindex` に `0` の既定値が与えられるものがあります。これらの要素は `href` 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}}、{{HTMLElement("button")}}、{{HTMLElement("frame")}} {{deprecated_inline}}、{{HTMLElement("iframe")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}、SVG の {{SVGElement("a")}} 要素、あるいは {{HTMLElement("details")}} 要素の概要を提供する {{HTMLElement("summary")}} 要素があります。開発者は既定の動作を変更しない限り、これらの要素に `tabindex` 属性を追加しないでください（例えば、負の値を記載すると、フォーカスされたナビゲーション順序から要素が削除されます）。
 
 > [!WARNING]
 > tabindex 属性は {{HTMLElement("dialog")}} 要素に使用してはいけません。
 
-## アクセシビリティの考慮事項
+## アクセシビリティの注意事項
 
 キーボード入力で対話的にフォーカスを設定できるようにするために、 [対話型コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ)ではないものに `tabindex` 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。
 
 対話的要素でないものを使用して対話的コンポーネントを記述すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに（{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("details")}}、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} などの）対話型要素を使用して意味的に記述するべきです。これらの要素には、 [ARIA](/ja/docs/Web/Accessibility/ARIA) によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。
 
-- [Using the tabindex attribute | The Paciello Group](https://www.tpgi.com/using-the-tabindex-attribute/)
+- [Using the tabindex attribute | Vispero](https://vispero.com/resources/using-the-tabindex-attribute/)
 
 ## 仕様書
 

@@ -5,13 +5,13 @@ slug: Web/API/URL/href
 
 {{ApiRef("URL API")}}
 
-A propriedade **`href`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo toda a URL
+A propriedade **`href`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} contendo toda a URL
 
 {{AvailableInWorkers}}
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

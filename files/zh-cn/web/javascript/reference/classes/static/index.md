@@ -172,7 +172,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### 从类的构造函数和其他方法中调用静态成员
 
-静态成员不能使用 {{jsxref("Operators/this", "this")}} 关键字从非静态方法直接访问静态成员。你需要使用类名来调用 `classname.static_method_name()` 或 `CLASSNAME.STATIC_PROPERTY_NAME`，或将 `this.constructor.STATIC_Method_NAME()` 或 `this.constructor.STATIC_PROPERTY_NAME` 来作为 `constructor` 的属性调用。
+静态成员不能使用 {{jsxref("this")}} 关键字从非静态方法直接访问静态成员。你需要使用类名来调用 `classname.static_method_name()` 或 `CLASSNAME.STATIC_PROPERTY_NAME`，或将 `this.constructor.STATIC_Method_NAME()` 或 `this.constructor.STATIC_PROPERTY_NAME` 来作为 `constructor` 的属性调用。
 
 ```js
 class StaticMethodCall {

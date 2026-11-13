@@ -1,8 +1,9 @@
 ---
 title: "ARIA: menuitem ロール"
+short-title: menuitem
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitem_role
 l10n:
-  sourceCommit: 22cf84fc5704222a2e2e5ac67b95b02dcfea08ff
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 `menuitem` ロールは、要素が `menu` または `menubar` に含まれる選択肢セットの中のオプションであることを示します。

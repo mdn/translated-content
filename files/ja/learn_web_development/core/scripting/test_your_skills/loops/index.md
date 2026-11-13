@@ -1,15 +1,17 @@
 ---
-title: "スキルテスト: ループ"
-short-title: ループ
+title: "確認テスト: ループ"
+short-title: "テスト: ループ"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、あなたが[ループするコード](/ja/docs/Learn_web_development/Core/Scripting/Loops)を理解したかどうかを判定することです。
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+
+この確認テストの目的は、あなたが[ループするコード](/ja/docs/Learn_web_development/Core/Scripting/Loops)を理解したかどうかを判定することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## DOM 操作: 有益なもの
 
@@ -23,11 +25,11 @@ l10n:
 
 <!-- Code shared across examples -->
 
-```html hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3
+```html hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3 live-sample___loops-1-finish live-sample___loops-2-finish live-sample___loops-3-finish
 <section></section>
 ```
 
-```css hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3
+```css hidden live-sample___loops-1 live-sample___loops-2 live-sample___loops-3 live-sample___loops-1-finish live-sample___loops-2-finish live-sample___loops-3-finish
 * {
   box-sizing: border-box;
 }
@@ -40,6 +42,12 @@ p {
 
 <!-- Example-specific code -->
 
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("loops-1", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
 ```js live-sample___loops-1
 const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
 const list = document.createElement("ul");
@@ -51,7 +59,9 @@ section.appendChild(list);
 // ここにコードを追加
 ```
 
-{{ EmbedLiveSample("loops-1", "100%", 60) }}
+更新後の出力の初期状態は、次のようになるはずです。
+
+{{ EmbedLiveSample("loops-1-finish", "100%", 150) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -61,6 +71,19 @@ section.appendChild(list);
 ```js
 // ...
 // 以上のコードは編集しないでください。
+
+for (let item of myArray) {
+  const listItem = document.createElement("li");
+  listItem.textContent = item;
+  list.appendChild(listItem);
+}
+```
+
+```js hidden live-sample___loops-1-finish
+const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
+const list = document.createElement("ul");
+const section = document.querySelector("section");
+section.appendChild(list);
 
 for (let item of myArray) {
   const listItem = document.createElement("li");
@@ -90,6 +113,12 @@ for (let item of myArray) {
 2. `name` が見つかったら、それを関連付けられた `number` とともに、指定された段落 (`para`) の `textContent` に「&lt;name> の電話番号は &lt;number> です」という形で書き込みます。その後、ループが実行を完了する前にループを終了してください。
 3. `name` を指定されたオブジェクトが 1 つも含まれていない場合、指定された段落の `textContent` に「電話帳に名前が見つかりません」と表示してください。
 
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("loops-2", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
 ```js live-sample___loops-2
 const name = "Mustafa";
 const para = document.createElement("p");
@@ -113,7 +142,9 @@ section.appendChild(para);
 // ここにコードを追加
 ```
 
-{{ EmbedLiveSample("loops-2", "100%", 60) }}
+更新後の出力の初期状態は、次のようになるはずです。
+
+{{ EmbedLiveSample("loops-2-finish", "100%", 60) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -123,6 +154,36 @@ section.appendChild(para);
 ```js
 // ...
 // 以上のコードは編集しないでください。
+
+for (let i = 0; i < phonebook.length; i++) {
+  if (phonebook[i].name === name) {
+    para.textContent = `${phonebook[i].name} の電話番号は ${phonebook[i].number} です。`;
+    break;
+  }
+
+  if (i === phonebook.length - 1) {
+    para.textContent = "電話帳に名前が見つかりません";
+  }
+}
+```
+
+```js hidden live-sample___loops-2-finish
+const name = "Mustafa";
+const para = document.createElement("p");
+
+const phonebook = [
+  { name: "Chris", number: "1549" },
+  { name: "Li Kang", number: "9634" },
+  { name: "Anne", number: "9065" },
+  { name: "Francesca", number: "3001" },
+  { name: "Mustafa", number: "6888" },
+  { name: "Tina", number: "4312" },
+  { name: "Bert", number: "7780" },
+  { name: "Jada", number: "2282" },
+];
+
+const section = document.querySelector("section");
+section.appendChild(para);
 
 for (let i = 0; i < phonebook.length; i++) {
   if (phonebook[i].name === name) {
@@ -155,6 +216,12 @@ for (let i = 0; i < phonebook.length; i++) {
 
 前回までの 2 つの課題では使用しなかった種類のループを使用しましょう。
 
+この課題の出発点は次のようなものです（まだ何も見えません）。
+
+{{ EmbedLiveSample("loops-3", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
 ```js live-sample___loops-3
 let i = 500;
 const para = document.createElement("p");
@@ -176,7 +243,9 @@ function isPrime(num) {
 section.appendChild(para);
 ```
 
-{{ EmbedLiveSample("loops-3", "100%", 60) }}
+更新後の出力の初期状態は、次のようになるはずです。
+
+{{ EmbedLiveSample("loops-3-finish", "100%", 120) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -198,4 +267,29 @@ do {
 // ...
 ```
 
+```js hidden live-sample___loops-3-finish
+let i = 500;
+const para = document.createElement("p");
+const section = document.querySelector("section");
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+do {
+  if (isPrime(i)) {
+    para.textContent += `${i}, `;
+  }
+  i--;
+} while (i > 1);
+
+section.appendChild(para);
+```
+
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

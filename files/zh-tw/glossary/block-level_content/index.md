@@ -3,8 +3,6 @@ title: 區塊級元素
 slug: Glossary/Block-level_content
 ---
 
-{{GlossarySidebar}}
-
 HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/Glossary/Inline-level_content)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵.
 
 瀏覽器預設以在元素前後換行的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。
@@ -112,6 +110,6 @@ The following is a complete list of all HTML block level elements (although "blo
 ### 參閱
 
 - [行內級元素](/zh-TW/docs/Glossary/Inline-level_content)
-- [Block formatting context](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [區塊格式化上下文](/zh-TW/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - {{cssxref("display")}}
-- [`writing-mode`](/zh-TW/docs/Web/CSS/writing-mode)
+- [`writing-mode`](/zh-TW/docs/Web/CSS/Reference/Properties/writing-mode)

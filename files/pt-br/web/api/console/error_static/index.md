@@ -18,7 +18,8 @@ console.exception(obj1 [, obj2, ..., objN]);
 console.exception(msg [, subst1, ..., substN]);
 ```
 
-> **Nota:** `console.exception()` é um alias para `console.error()`; as funcionalidades deles são identicas.
+> [!NOTE]
+> `console.exception()` é um alias para `console.error()`; as funcionalidades deles são identicas.
 
 ### Parâmetros
 

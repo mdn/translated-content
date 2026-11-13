@@ -3,7 +3,7 @@ title: Array.of()
 short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Array.of()`** 静的メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
@@ -92,7 +92,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ## 関連情報
 
-- [`Array.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.of` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.of` のポリフィル](https://www.npmjs.com/package/array.of)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

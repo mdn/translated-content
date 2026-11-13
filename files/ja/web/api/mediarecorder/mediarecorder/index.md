@@ -1,15 +1,16 @@
 ---
-title: MediaRecorder()
+title: "MediaRecorder: MediaRecorder() コンストラクター"
+short-title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: 5171221f068cc28af3d9a11e9a757c718db8bb38
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder()`** コンストラクターは、新しい {{domxref("MediaRecorder")}} オブジェクトを作成します。これが指定された {{domxref("MediaStream")}} を記録します。
+**`MediaRecorder()`** コンストラクターは、新しい {{domxref("MediaRecorder")}} オブジェクトを作成します。これが指定された {{domxref("MediaStream")}} を収録します。
 
-オブジェクトは、オプションとして、特定のメディアコンテナー（ファイル形式）を使用して記録するように構成することができ、さらに、[`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter) を指定して、使用するコーデックとコーデック構成を正確に指定することができます。
+オブジェクトは、オプションとして、特定のメディアコンテナー（ファイル形式）を使用して記録するように構成することができ、さらに、[`codecs` 引数](/ja/docs/Web/Media/Guides/Formats/codecs_parameter) を指定して、使用するコーデックとコーデック構成を正確に指定することができます。
 
 ## 構文
 
@@ -21,21 +22,35 @@ new MediaRecorder(stream, options)
 ### 引数
 
 - `stream`
-  - : 記録される {{domxref("MediaStream")}}。 このソースメディアは、{{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を使用して作成したストリーム、または {{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("canvas")}} 要素から取得できます。
+  - : 記録される {{domxref("MediaStream")}}。
+    このソースメディアは、{{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} を使用して作成したストリーム、または {{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("canvas")}} 要素から取得できます。
 - `options` {{optional_inline}}
   - : 以下のプロパティを含むことができる辞書オブジェクト。
-    - `mimeType`
-      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs`引数](/ja/docs/Web/Media/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
-        アプリケーションは `mimeType` が {{Glossary("user agent") }} で対応しているかどうかを事前に調べることができます。そのためには {{domxref("MediaRecorder.isTypeSupported()")}} を呼び出す必要があります。
-    - `audioBitsPerSecond`
+    - `mimeType` {{optional_inline}}
+      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs` 引数](/ja/docs/Web/Media/Guides/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
+        アプリケーションは `mimeType` が {{Glossary("user agent")}} で対応しているかどうかを事前に調べることができます。そのためには {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}} を呼び出す必要があります。
+        デフォルト値は空文字列です。
+    - `audioBitsPerSecond` {{optional_inline}}
       - : メディアの音声コンポーネントに選択したビットレート。
-    - `videoBitsPerSecond`
+    - `videoBitsPerSecond` {{optional_inline}}
       - : メディアの映像コンポーネントに選択したビットレート。
-    - `bitsPerSecond`
-      - : メディアの音声コンポーネントおよび映像コンポーネントに選択したビットレート。 上記の 2 つのプロパティの代わりにこれを指定することができます。 これを上記のプロパティのいずれかと一緒に指定している場合、これは指定していないものに使用されます。
+    - `bitsPerSecond` {{optional_inline}}
+      - : メディアの音声コンポーネントおよび映像コンポーネントに選択したビットレート。
+        上記の 2 つのプロパティの代わりにこれを指定することができます。 これを上記のプロパティのいずれかと一緒に指定している場合、これは指定していないものに使用されます。
+    - `audioBitrateMode` {{optional_inline}}
+      - : 音声のエンコードに使用するべきビットレートモード。
+        `constant` に設定すると、レコーダーは固定ビットレートでエンコードを行います。一方、`variable` に設定すると、レコーダーは可変ビットレートでエンコードを行い、複雑な信号にはより多くの空間を割り当て、複雑度の低い信号にはより少ない空間を割り当てるようになります。
+        デフォルトは `variable` です。
+    - `videoKeyFrameIntervalDuration` {{optional_inline}}
+      - : エンコードされた動画ストリームにおけるキーフレーム間の名目上の時間間隔です。
+        {{glossary("user agent", "ユーザーエージェント")}}は、このオプションと `videoKeyFrameIntervalCount` オプションに基づいて、キーフレームの生成を制御します。
+    - `videoKeyFrameIntervalCount` {{optional_inline}}
+      - : エンコードされた動画ストリームにおいて、キーフレーム間のフレーム数による間隔。
+        {{glossary("user agent", "ユーザーエージェント")}}は、このオプションと `videoKeyFrameIntervalDuration` オプションに基づいて、キーフレームの生成を制御します。
 
     > [!NOTE]
-    > 映像や音声にビット/秒の値を指定していない場合、映像が採用している既定値は 2.5Mbps ですが、音声の既定値はサンプルレートとチャネル数に応じて決まります。
+    > 映像や音声にビット/秒の値を指定していない場合、映像が採用しているデフォルト値は 2.5Mbps ですが、音声のデフォルト値はサンプリングレートとチャネル数に応じて決まります。
+    > 音声のデフォルト設定は、サンプリングレートとチャンネル数に応じて自動的に調整されるようになっています。
 
     > [!NOTE]
     > 映像の解像度やフレームレートなどの設定は {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を呼び出す際に制約として指定され、ここでの MediaRecorder API では指定されません。
@@ -47,7 +62,8 @@ new MediaRecorder(stream, options)
 
 ## 例
 
-この例では、音声のビットレートを 128 K ビット/秒に設定し、映像のビットレートを 2.5 M ビット/秒に設定して、指定したストリーム用のメディアレコーダーを作成する方法を示します。 記録したメディアデータは MP4 ラッパーに保存されます（従って、メディアデータのチャンクを集めてディスクに保存すると、それらは MP4 ファイルになります）。
+この例では、音声のビットレートを 128 K ビット/秒に設定し、映像のビットレートを 2.5 M ビット/秒に設定して、指定したストリーム用のメディアレコーダーを作成する方法を示します。
+記録したメディアデータは MP4 ラッパーに保存されます（従って、メディアデータのチャンクを集めてディスクに保存すると、それらは MP4 ファイルになります）。
 
 ```js
 if (navigator.mediaDevices.getUserMedia) {
@@ -79,6 +95,7 @@ if (navigator.mediaDevices.getUserMedia) {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 著。<sup>(英語)</sup>
 - {{domxref("MediaDevices.getUserMedia")}}
+- [MediaRecorder Video Bitrates](https://blog.addpipe.com/mediarecorder-video-bitrates/)

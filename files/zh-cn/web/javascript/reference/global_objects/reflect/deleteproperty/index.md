@@ -3,13 +3,11 @@ title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 
-{{JSRef}}
-
 静态方法 **`Reflect.deleteProperty()`** 允许用于删除属性。它很像 [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) ，但它是一个函数。
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.deleteProperty(target, propertyKey)
 ```
 

@@ -36,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **참고:** `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
+> [!NOTE]
+> `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
 > `new`와 함께 생성하려하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
@@ -65,7 +66,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-{{jsxref("Operators/new", "new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
+{{jsxref("new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
 
 ```js example-bad
 const sym = new Symbol(); // TypeError

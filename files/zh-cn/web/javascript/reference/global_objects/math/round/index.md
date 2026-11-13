@@ -3,13 +3,11 @@ title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 
-{{JSRef}}
-
 **`Math.round()`** 函数返回一个数字四舍五入后最接近的整数。
 
 ## 语法
 
-```plain
+```js-nolint
 Math.round(x)
 ```
 

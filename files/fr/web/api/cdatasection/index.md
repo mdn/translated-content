@@ -1,45 +1,43 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
+l10n:
+  sourceCommit: 327710f973e1d6d1cad19faac9a95134c6027d08
 ---
 
 {{APIRef("DOM")}}
 
-L'interface **`CDATASection`** représente une section CDATA qui peut être utilisée dans un document XML afin d'inclure des portions de texte qui ne sont pas échappées (les symboles < et & présents dans ces portions n'ont pas besoin d'être échappés comme ils doivent l'être normalement dans un document XML).
+L'interface **`CDATASection`** représente une section CDATA qui peut être utilisée dans XML pour inclure de longues portions de texte non échappé. À l'intérieur d'une section CDATA, les symboles `<` et `&` n'ont pas besoin d'être échappés comme c'est normalement le cas.
 
-En termes de balisage, une section CDATA a la forme suivante :
+En XML, une section CDATA ressemble à&nbsp;:
 
-```html
-<![CDATA[ ... ]]>
+```xml
+<![CDATA[ … ]]>
 ```
 
-Par exemple :
+Par exemple&nbsp;:
 
 ```xml
 <toto>
   Voici une section CDATA :
-  <![CDATA[  < > & ]]> dans laquelle
-  le texte n'est pas échappé.
+  <![CDATA[  < > & ]]> dans laquelle le texte n'est pas échappé.
 </toto>
 ```
 
-La seule séquence qui n'est pas autorisée dans une section CDATA est le délimiteur de fin d'une séquence CDATA lui-même :
+La seule séquence qui n'est pas autorisée dans une section CDATA est le délimiteur de fin d'une séquence CDATA lui-même, `]]>`.
 
-```xml
-<![CDATA[  ]]> causera une erreur   ]]>
-```
+> [!NOTE]
+> Les sections CDATA ne doivent pas être utilisées dans des documents HTML. Elles sont considérées comme des commentaires et ne sont pas affichées.
 
-On notera que les sections ne doivent pas être utilisées dans des documents HTML.
+{{InheritanceDiagram}}
 
-{{InheritanceDiagram(600,120)}}
+## Propriétés d'instance
 
-## Propriétés
+_Cette interface ne dispose pas de propriétés spécifiques et implémente celles de son parent {{DOMxRef("Text")}}._
 
-_Cette interface ne dispose pas de propriétés spécifiques et implémente celles de son parent : {{domxref("Text")}}._
+## Méthodes d'instance
 
-## Méthodes
-
-_Cette interface ne dispose pas de méthodes spécifiques et implémente celles de son parent : {{domxref("Text")}}._
+_Cette interface ne dispose pas de méthodes spécifiques et implémente celles de son parent {{DOMxRef("Text")}}._
 
 ## Spécifications
 
@@ -48,3 +46,7 @@ _Cette interface ne dispose pas de méthodes spécifiques et implémente celles 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("Document.createCDATASection()")}}

@@ -54,7 +54,7 @@ self.addEventListener("rejectionhandled", (event) => {
 
 ## 関連情報
 
-- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミスの拒否イベント)
+- [プロミス拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミス拒否イベント)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}

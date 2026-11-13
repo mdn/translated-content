@@ -11,7 +11,7 @@ Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされまし
 
 - [アクセシビリティインスペクターの情報バー](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items) が、ページ上のテキストや画像の色のコントラスト比に関する情報を表示するようになりました ([Firefox バグ 1473037](https://bugzil.la/1473037))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で選択したデバイスが、セッションをまたいで保存されるようになりました ([Firefox バグ 1248619](https://bugzil.la/1248619))。
-- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Guides/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コードの入力や評価の機能が向上しました:
   - コンソールの式の [オートコンプリート](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) が、大文字・小文字を区別しないようになりました ([Firefox バグ 672733](https://bugzil.la/672733))。
   - bash のような reverse search によって [コンソールの式の履歴](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) をたどれるようになりました ([Firefox バグ 1024913](https://bugzil.la/1024913))。
@@ -31,10 +31,10 @@ _変更なし。_
 
 ### CSS
 
-- [CSS Scrollbars](/ja/docs/Web/CSS/CSS_scrollbars_styling) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
-- [`pointer:coarse`](/ja/docs/Web/CSS/@media/pointer) を含む、Interaction Media Features を実装しました ([Firefox バグ 1035774](https://bugzil.la/1035774))。[`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) および [`any-hover`](/ja/docs/Web/CSS/@media/any-hover) の実装については、[Firefox バグ 1483111](https://bugzil.la/1483111) をご覧ください。
-- [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性を Android 版 Firefox でサポートしました ([Firefox バグ 1478505](https://bugzil.la/1478505))。
-- CSS の {{cssxref("&lt;gradient&gt;")}} 値で複数の color stop を持つ構文をサポートしました。例えば `yellow 25%, yellow 50%` を `yellow 25% 50%` と書くことができます ([Firefox バグ 1352643](https://bugzil.la/1352643))。
+- [CSS Scrollbars](/ja/docs/Web/CSS/Guides/Scrollbars_styling) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
+- [`pointer:coarse`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を含む、Interaction Media Features を実装しました ([Firefox バグ 1035774](https://bugzil.la/1035774))。[`any-pointer`](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) および [`any-hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/any-hover) の実装については、[Firefox バグ 1483111](https://bugzil.la/1483111) をご覧ください。
+- [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性を Android 版 Firefox でサポートしました ([Firefox バグ 1478505](https://bugzil.la/1478505))。
+- CSS の {{cssxref("gradient")}} 値で複数の color stop を持つ構文をサポートしました。例えば `yellow 25%, yellow 50%` を `yellow 25% 50%` と書くことができます ([Firefox バグ 1352643](https://bugzil.la/1352643))。
 - {{cssxref("text-transform")}} プロパティで `full-size-kana` 値を受け入れるようになりました ([Firefox バグ 1498148](https://bugzil.la/1498148))。
 - ウェブ互換性の問題を緩和するため、{{cssxref("appearance", "-webkit-appearance")}} をサポートしました ([Firefox バグ 1368555](https://bugzil.la/1368555))。
 - 上記の更新に関連して、Firefox 固有の `-moz-appearance` の大半の値を削除しました ([Firefox バグ 1496720](https://bugzil.la/1496720))。
@@ -45,8 +45,8 @@ _変更なし。_
 #### 廃止
 
 - {{CSSxRef("display")}} の非標準の値である [`-moz-box` および `-moz-inline-box`](/ja/docs/Mozilla/Gecko/Chrome/CSS/display-xul) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 非標準の {{CSSxRef("::-moz-tree")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/CSS_filter_effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
+- 非標準の {{CSSxRef("::-moz-tree")}} [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
+- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/Guides/Filter_effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
 - {{cssxref("overflow")}} の 2 値構文で block を 1 番目、inline を 2 番目に入れ替えた変更 ([Firefox バグ 1481866](https://bugzil.la/1481866)) を元に戻しました ([Firefox バグ 1492567](https://bugzil.la/1492567))。理由は [Bug 1481866 の comment 14](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14) をご覧ください。
 
 ### SVG
@@ -57,7 +57,7 @@ _変更なし。_
 
 - {{jsxref("JSON.stringify")}} が正しくない Unicode 文字列を返すのを避けるため、TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) 提案を実装しました ([Firefox バグ 1469021](https://bugzil.la/1469021))。
 - Proxy 化した関数を {{jsxref("Function.prototype.toString")}}`.call()` に渡すことが可能になりました ([Firefox バグ 1440468](https://bugzil.la/1440468))。
-- {{jsxref("WebAssembly.Global")}} コンストラクターで、何も値を指定しない場合に型付きの値 0 を使用するようになりました。これは [`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue) で示されています ([Firefox バグ 1490286](https://bugzil.la/1490286))。
+- [`WebAssembly.Global`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターで、何も値を指定しない場合に型付きの値 0 を使用するようになりました。これは [`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue) で示されています ([Firefox バグ 1490286](https://bugzil.la/1490286))。
 
 ### API
 

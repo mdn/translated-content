@@ -64,7 +64,7 @@ svg|a:active {
 {{EmbedLiveSample("Пример", 100, 100)}}
 
 > [!WARNING]
-> Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Reference/Elements/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
+> Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Reference/Elements/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/Reference/At-rules/@namespace), чтобы разделять их.
 
 ## Атрибуты
 

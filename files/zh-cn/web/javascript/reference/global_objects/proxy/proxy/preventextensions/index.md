@@ -3,8 +3,6 @@ title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
 
-{{JSRef}}
-
 **`handler.preventExtensions()`** 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截
 
 {{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
@@ -114,6 +112,6 @@ Object.preventExtensions(p); // 抛出类型错误
 ## 参考
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

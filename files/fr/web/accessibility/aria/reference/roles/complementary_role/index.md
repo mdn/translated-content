@@ -3,10 +3,10 @@ title: "ARIA : rôle complementary"
 short-title: complementary
 slug: Web/Accessibility/ARIA/Reference/Roles/complementary_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 63e6075c870f818291e857d0ad5b291d1b5afe5b
 ---
 
-Le [rôle de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) `complementary` est utilisé pour désigner une section de soutien qui se rapporte au contenu principal, mais qui peut se suffire à elle-même lorsqu'elle est séparée. Ces sections sont souvent présentées sous forme de barres latérales ou de boîtes d'appel. Si possible, utilisez l'[élément HTML \<aside>](/fr/docs/Web/HTML/Reference/Elements/aside) à la place.
+Le [rôle de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) `complementary` est utilisé pour désigner une section de soutien qui se rapporte au contenu principal, mais qui peut se suffire à elle-même lorsqu'elle est séparée. Ces sections sont souvent présentées sous forme de barres latérales ou de boîtes d'appel. Si possible, utilisez [l'élément HTML `<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside) à la place.
 
 ```html
 <div role="complementary">
@@ -22,7 +22,7 @@ Ceci est une barre latérale contenant des liens vers les sponsors du projet.
 Le rôle `complementary` est [un rôle de repère](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_repères). Les repères peuvent être utilisés par les technologies d'assistance pour identifier et naviguer rapidement vers de grandes sections du document. Le contenu répertorié dans un conteneur avec le rôle de repère `complementary` doit avoir du sens s'il est séparé du contenu principal du document.
 
 > [!NOTE]
-> L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement qu'une section a un rôle de `complementary`. Les développeurs devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
+> L'utilisation de l'élément {{HTMLElement("aside")}} a un rôle implicite de `complementary`, sauf s'il n'a pas de {{Glossary("accessible name", "nom accessible")}} et qu'il est imbriqué dans [un élément de contenu sectionnant](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant). Les développeur·euse·s doivent toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA.
 
 ## Exemples
 
@@ -67,13 +67,13 @@ Le rôle `complementary` est [un rôle de repère](/fr/docs/Web/Accessibility/AR
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement qu'une section a un rôle de `complementary`. Si possible, préférez l'utiliser à la place.
+L'utilisation de l'élément {{HTMLElement("aside")}} a un rôle implicite de `complementary`, sauf s'il n'a pas de {{Glossary("accessible name", "nom accessible")}} et qu'il est imbriqué dans [un élément de contenu sectionnant](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant). Si possible, privilégiez l'utilisation de l'élément sémantique `<aside>` plutôt que le rôle `complementary`.
 
 ### Étiquetage des repères
 
 #### Plusieurs repères
 
-S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement('aside')}} dans un document, fournissez une étiquette pour chaque repère à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), ou, si l'élément aside a un titre suffisamment descriptif, pointez-y avec l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Cette étiquette permettra à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement l'objectif de chaque repère.
+S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement("aside")}} dans un document, fournissez une étiquette pour chaque repère à l'aide de l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), ou, si l'élément aside a un titre suffisamment descriptif, pointez-y avec l'attribut [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Cette étiquette permet à un·e utilisateur·ice de technologie d'assistance de comprendre rapidement l'objectif de chaque repère.
 
 ```html
 <aside aria-label="Note d'usage">
@@ -89,7 +89,7 @@ S'il y a plus d'un rôle de repère `complementary` ou élément {{HTMLElement('
 
 #### Descriptions redondantes
 
-Les lecteurs d'écran annonceront le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="complementary"` avec un `aria-label="Barre latérale"` peut être annoncée de manière redondante comme, «&nbsp;barre latérale complémentaire&nbsp;».
+Les lecteurs d'écran annoncent le type de rôle du repère. De ce fait, vous n'avez pas besoin de décrire ce qu'est le repère dans son étiquette. Par exemple, une déclaration de `role="complementary"` avec un `aria-label="Barre latérale"` peut être annoncée de manière redondante comme, «&nbsp;barre latérale complémentaire&nbsp;».
 
 ### Avantages supplémentaires
 
@@ -103,9 +103,8 @@ Certaines technologies, telles que les extensions de navigateur, peuvent génér
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement('aside')}}
+- L'élément HTML {{HTMLElement("aside")}}
 - [Utiliser des sections HTML et des plans](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Rôles des repères&nbsp;: Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_repères)
-- [Utiliser des repères WAI-ARIA - 2013 | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisité | HTML5 Doctor <sup>(angl.)</sup>](https://html5doctor.com/aside-revisited/)

@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 original_slug: Learn/CSS/Howto/Generated_content
 ---
 
-{{LearnSidebar}}
-
 Cet article décrit différentes façons d'utiliser CSS afin d'ajouter du contenu à un document affiché. Vous pouvez modifier votre feuille de style afin d'ajouter du contenu textuel ou des images.
 
 L'un des avantages majeurs de CSS est qu'il permet de séparer la forme du contenu. Toutefois, il existe des situations où il est pertinent d'indiquer du contenu dans la feuille de style et pas dans le document. Il est possible d'indiquer du contenu textuel ou des images dans une feuille de style lorsque ce contenu est fortement couplé à la structure du document.

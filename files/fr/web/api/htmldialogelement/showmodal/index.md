@@ -1,101 +1,90 @@
 ---
-title: Window.showModalDialog()
+title: "HTMLDialogElement : méthode showModal()"
+short-title: showModal()
 slug: Web/API/HTMLDialogElement/showModal
-original_slug: Web/API/Window/showModalDialog
+l10n:
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
-{{deprecated_header}}{{APIRef}}
+{{ APIRef("HTML DOM") }}
 
-> [!WARNING]
-> Cette fonctionnalité a été retirée. Veuillez corriger les sites ou applications web sous votre responsabilité qui l'utiliseraient encore.
->
-> Cette méthode a été retirée avec Chrome 43 et Firefox 56.
+La méthode **`showModal()`** de l'interface {{domxref("HTMLDialogElement")}} affiche la boîte de dialogue en mode bloquante, au-dessus de toute autre boîte de dialogue présente.
 
-La méthode **`Window.showModalDialog()`** permettait de créer et d'afficher une boîte de dialogue modale contenant un document HTML indiqué.
+Une boîte de dialogue bloquante s'affiche dans la {{glossary("top layer")}}, accompagnée d'un pseudo-élément {{cssxref('::backdrop')}}.
+Les éléments du même document que la boîte de dialogue, à l'exception de celle-ci et de ses descendants, deviennent _inertes_ (comme si l'attribut [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) était défini).
+Seul le document contenant est bloqué&nbsp;: si la boîte de dialogue est affichée dans une iframe, le reste de la page reste interactif.
 
 ## Syntaxe
 
-```js
-showModalDialog(uri);
-showModalDialog(uri, arguments);
-showModalDialog(uri, arguments, options);
+```js-nolint
+showModal()
 ```
 
 ### Paramètres
 
-- `uri`
-  - : L'URL du document à afficher dans la boîte de dialogue.
-- `arguments` {{optional_inline}}
-  - : Les valeurs passées comme propriétés à la boîte de dialogue.
-- `options` {{optional_inline}}
-  - : Une chaîne de caractères indiquant l'aspect de l'interface utilisateur pour la boîte de dialogue en utilisant une ou plusieurs valeurs, séparées par des points-virgules&nbsp;:
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Syntaxe</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>center: {on | off | yes | no | 1 | 0 }</code></td>
-      <td>
-        Si la valeur est <code>on</code>, <code>yes</code>, ou <code>1</code>, la boîte de dialogue est centrée à l'écran. Sinon, elle est cachée. La valeur par défaut est <code>yes</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>dialogheight: <em>height</em></code>
-      </td>
-      <td>La hauteur de la boîte de dialogue, exprimée en pixels.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>dialogleft: <em>left</em></code>
-      </td>
-      <td>La distance de la boîte de dialogue par rapport au bord gauche de l'écran.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>dialogwidth: <em>width</em></code>
-      </td>
-      <td>La largeur de la boîte de dialogue, exprimée en pixels.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>dialogtop: <em>top</em></code>
-      </td>
-      <td>La distance de la boîte de dialogue par rapport au bord haut de l'écran.</td>
-    </tr>
-    <tr>
-      <td><code>resizable: {on | off | yes | no | 1 | 0 }</code></td>
-      <td>
-        Si cet argument vaut <code>on</code>, <code>yes</code>, ou <code>1</code>, la fenêtre de la boîte de dialogue peut être redimensionnée, sinon sa taille est fixe. La valeur par défaut est <code>no</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>scroll: {on | off | yes | no | 1 | 0 }</code></td>
-      <td>
-        Si cet argument vaut <code>on</code>, <code>yes</code>, ou <code>1</code>, la boîte de dialogue dispose de barres de défilement, sinon sa taille est fixe. La valeur par défaut est <code>no</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> Firefox n'implémente pas les arguments `dialogHide`, `edge`, `status`, ou `unadorned`.
+Aucun.
 
 ### Valeur de retour
 
-Contient la propriété `returnValue` telle que définie par le document ciblé par `uri`.
+Aucune ({{JSxRef("undefined")}}).
 
-## Notes
+### Exceptions
 
-`showModalDialog()` fut brièvement standardisée en HTML5. Le troisième argument pour les options additionnelles ne faisait pas partie de la version HTML5.
+- `InvalidStateError` {{DOMxRef("DOMException")}}
+  - : Levée si la boîte de dialogue est déjà ouverte et non modale (c'est-à-dire si elle a déjà été ouverte avec {{DOMxRef("HTMLDialogElement.show()")}}).
+
+## Exemples
+
+### Utilisation simple
+
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} avec la méthode `showModal()`.
+
+Lorsque la boîte de dialogue est ouverte, vous ne pouvez pas interagir avec le reste de la page, y compris cliquer sur le bouton _Cliquez-moi_ qui déclenche autrement une alerte.
+
+Vous pouvez cliquer sur le bouton _Fermer la boîte de dialogue_ pour fermer la boîte de dialogue (avec la méthode {{DOMxRef("HTMLDialogElement.close()", "close()")}}).
+
+#### HTML
+
+```html
+<dialog id="dialogue">
+  <button type="button" id="fermer">Fermer la boîte de dialogue</button>
+</dialog>
+
+<p><button id="ouvrir">Ouvrir la boîte de dialogue</button></p>
+<p><button id="alerte">Déclencher une alerte</button></p>
+```
+
+#### JavaScript
+
+```js
+const dialogue = document.getElementById("dialogue");
+const ouvrirButton = document.getElementById("ouvrir");
+const fermerButton = document.getElementById("fermer");
+const alerteButton = document.getElementById("alerte");
+
+// Le bouton ouvrir ouvre une boîte de dialogue bloquante
+ouvrirButton.addEventListener("click", () => {
+  dialogue.showModal();
+});
+
+// Le bouton alerte déclenche une alerte
+alerteButton.addEventListener("click", () => {
+  alert("vous m'avez cliqué !");
+});
+
+// Le bouton fermer ferme la boîte de dialogue
+fermerButton.addEventListener("click", () => {
+  dialogue.close();
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Utilisation simple", "100%", 250)}}
 
 ## Spécifications
 
-- [MSDN page
-  for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -103,5 +92,5 @@ Contient la propriété `returnValue` telle que définie par le document ciblé 
 
 ## Voir aussi
 
-- [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) qui remplace `window.showModalDialog()`.
-- [Une prothèse d'émulation pour `showModalDialog()`](https://github.com/niutech/showModalDialog) qui utilise [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) et [les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*)
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{DOMxRef("HTMLDialogElement.show()")}}

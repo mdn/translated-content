@@ -1,21 +1,24 @@
 ---
-title: CanvasRenderingContext2D.rect()
+title: "CanvasRenderingContext2D: rect() メソッド"
+short-title: rect()
 slug: Web/API/CanvasRenderingContext2D/rect
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.rect()`** はキャンバス 2D API のメソッドで、現在のパスに矩形を追加します。
 
-現在のパスを変更する他のメソッドと同様に、このメソッドも直接何かを描画するわけではありません。 矩形をキャンバスに描画するには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用することができます。
+現在のパスを変更する他のメソッドと同様に、このメソッドも直接何かを描画するわけではありません。 矩形をキャンバスに描画するには、{{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用することができます。
 
 > [!NOTE]
 > 矩形の作成とレンダリングを一度に行うには、 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} または {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} メソッドを使用してください。
 
 ## 構文
 
-```js
-void ctx.rect(x, y, width, height);
+```js-nolint
+rect(x, y, width, height)
 ```
 
 `rect()` メソッドは、 `(x, y)` を始点とし、 `width` と `height` で大きさを指定した矩形のパスを作成します。
@@ -30,6 +33,10 @@ void ctx.rect(x, y, width, height);
   - : 矩形の幅です。正の値の場合は右側に、負の値の場合は左側になります。
 - `height`
   - : 矩形の高さです。正の値の場合は下側に、負の値の場合は上側になります。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -50,8 +57,9 @@ void ctx.rect(x, y, width, height);
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.rect(10, 20, 150, 100);
-ctx.fill();
+ctx.beginPath(); // 新しいパスを開始
+ctx.rect(10, 20, 150, 100); // 矩形を現在のパスに追加
+ctx.fill(); // パスを描画
 ```
 
 #### 結果

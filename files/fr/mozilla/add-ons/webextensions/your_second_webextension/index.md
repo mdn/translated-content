@@ -54,7 +54,7 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
   "name": "Beastify",
   "version": "1.0",
 
-  "description": "Ajoute une icône à la barre d'outil pour une action navigateur. Cliquez sur le bouton pour choisir une bête. Le contenu de l'onglet actif sera alors remplacé par une image de la bête choisie. Voir https://developer.mozilla.org/fr/Add-ons/WebExtensions/Examples#beastify",
+  "description": "Ajoute une icône à la barre d'outil pour une action navigateur. Cliquez sur le bouton pour choisir une bête. Le contenu de l'onglet actif sera alors remplacé par une image de la bête choisie. Voir https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/Examples#beastify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
@@ -93,7 +93,7 @@ Il est à noter que tous les chemins sont relatifs au fichier manifest.json.
 
 L'extension doit posséder une icône qui sera affichée dans le catalogue des extensions et dans la liste des extensions du navigateur (vous pouvez afficher le gestionnaire en ouvrant l'URL «&nbsp;about:addons&nbsp;»). Le fichier manifest.json a déclaré une icône pour la barre d'outils, `icons/beasts-48.png`.
 
-Créez le répertoire «&nbsp;icons&nbsp;» et enregistrez-y une icône nommée `beasts-48.png`. Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), provenant du jeu d'icônes de [Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) et utilisable selon les termes de sa [licence](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Créez le répertoire «&nbsp;icons&nbsp;» et enregistrez-y une icône nommée `beasts-48.png`. Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), provenant du jeu d'icônes de [Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) et utilisable selon les termes de sa licence.
 
 Si vous décidez de fournir votre propre icône, sa taille devra être de 48 pixels par 48 pixels. Il vous est aussi possible de fournir une icône de taille 96 pixels par 96 pixels, adaptée aux affichages haute résolution, et, devra dans ce cas, être spécifiée par la propriété `96` de l'objet `icons` du manifeste&nbsp;:
 
@@ -457,4 +457,4 @@ Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouv
 - [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage).
+- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_dapprentissage).

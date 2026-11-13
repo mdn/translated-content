@@ -3,8 +3,6 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`var`** (pour variable) permet de déclarer une variable et éventuellement d'initialiser sa valeur.
 
 {{InteractiveExample("JavaScript Demo: Statement - Var")}}
@@ -210,5 +208,5 @@ console.log(typeof y); // "undefined" car y est local à la fonction a
 
 ## Voir aussi
 
-- {{jsxref("Instructions/let","let")}}
-- {{jsxref("Instructions/const","const")}}
+- {{jsxref("Statements/let","let")}}
+- {{jsxref("Statements/const","const")}}

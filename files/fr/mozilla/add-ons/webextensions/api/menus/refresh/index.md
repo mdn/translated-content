@@ -3,8 +3,6 @@ title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
 
-{{AddonSidebar}}
-
 Actualise un menu affiché.
 
 Met à jour les éléments de menu de l'extension dans le menu affiché par le navigateur, y compris les modifications effectuées depuis l'affichage du menu. N'a aucun effet si le menu n'est pas affiché. La reconstruction d'un menu affiché est une opération coûteuse. N'utilisez cette méthode que lorsque cela est nécessaire.

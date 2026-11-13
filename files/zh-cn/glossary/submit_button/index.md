@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c9a87fc4010cef73c21c5f46662431f3c8ad2d28
 ---
 
-{{GlossarySidebar}}
-
 **提交按钮**是一种可用于提交{{HTMLElement("form", "表单")}}的 HTML {{Glossary("element", "元素")}}。原生的提交按钮元素包括：
 
 - {{HtmlElement("button")}}（其默认 `type` 为 `"submit"`）

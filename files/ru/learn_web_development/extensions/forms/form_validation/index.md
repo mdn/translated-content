@@ -3,13 +3,13 @@ title: Валидация форм на стороне клиента
 slug: Learn_web_development/Extensions/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 Перед отправкой данных на сервер важно убедиться, что все обязательные поля формы заполнены данными в корректном формате. Это называется **валидацией на стороне клиента** и помогает убедиться, что данные, введённые в каждый элемент формы, соответствуют требованиям. Данная статья проведёт вас через основные концепци и примеры валидации на стороне клиента.
 
-| Начальные требования: | Владение компьютером, достаточное понимание [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript). |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                 | Понять, что такое валидация на стороне клиента, почему это важно и как применять различные техники для её реализации.                                                              |
+| Начальные требования: | Владение компьютером, достаточное понимание [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting). |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                 | Понять, что такое валидация на стороне клиента, почему это важно и как применять различные техники для её реализации.                                                                                                                  |
 
 Валидация на стороне клиента — это первичная проверка введённых данных, которая существенно улучшает удобство взаимодействия с интерфейсом; обнаружение некорректных данных на стороне клиента позволяет пользователю немедленно их исправить. Если же проверка происходит только на сервере, процесс заполнения может быть более трудоёмким, так как требует повторения одних и тех же действий отправки данных на сервер для получения обратного ответа с сообщением о том, что нужно исправить.
 
@@ -257,7 +257,8 @@ div {
 > [!NOTE]
 > Рабочий пример можно найти на GitHub по адресу [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html).)
 
-> **Примечание:** `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
+> [!NOTE]
+> `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
 
 ### Полный пример
 
@@ -436,7 +437,8 @@ email.addEventListener("input", function (event) {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Примечание:**: Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
+> [!NOTE]
+> Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
 
 #### Более подробный пример
 
@@ -548,7 +550,7 @@ email.addEventListener("input", function (event) {
 });
 
 form.addEventListener("submit", function (event) {
-  // Если поле email валдно, позволяем форме отправляться
+  // Если поле email валидно, позволяем форме отправляться
 
   if (!email.validity.valid) {
     // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
@@ -580,7 +582,7 @@ function showError() {
 
 Комментарии объясняют логику хорошо, но кратко:
 
-- При каждом изменении значения поля, мы производим его валидацию. Если данные валидны, удаляем ранее отображаемые сообщения об ошибках. Если данные не валдны, запускаем `showError()`, чтобы показать соответствующую ошибку.
+- При каждом изменении значения поля, мы производим его валидацию. Если данные валидны, удаляем ранее отображаемые сообщения об ошибках. Если данные не валидны, запускаем `showError()`, чтобы показать соответствующую ошибку.
 - При каждой попытке отправить форму, мы снова производим валидацию. Если данные валидны, позволяем отправку формы. Если данные не валидны, запускам `showError()`, чтобы показать соответствующее сообщение об ошибке, а также предотвращаем отправку формы с помощью [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault).
 - Функция `showError()` использует различные свойства объекта `validity` поля ввода, чтобы определить тип ошибки и отобразить соответсвущее сообщение.
 
@@ -777,7 +779,7 @@ addEvent(form, "submit", function () {
 
 ## Проверьте свои навыки!
 
-Вы дошли до конца этой статьи, но можете ли вы вспомнить самую важную информацию? Вы можете найти дополнительные тесты, чтобы убедиться, что вы сохранили эту информацию, прежде чем двигаться дальше — [Test your skills: Form validation](/ru/docs/Learn/Forms/Test_your_skills:_Form_validation).
+Вы дошли до конца этой статьи, но можете ли вы вспомнить самую важную информацию? Вы можете найти дополнительные тесты, чтобы убедиться, что вы сохранили эту информацию, прежде чем двигаться дальше — [Test your skills: Form validation](/ru/docs/Learn_web_development/Extensions/Forms).
 
 ## Заключение
 
@@ -789,7 +791,7 @@ addEvent(form, "submit", function () {
 
 После того, как вы убедились, что форма заполнена правильно, ее можно отправлять. Дальше мы рассмотрим [отправку данных формы](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data).
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 ## In this module
 
@@ -800,7 +802,7 @@ addEvent(form, "submit", function () {
 - [Другие элементы формы](/ru/docs/Learn/Forms/Other_form_controls)
 - [Стилизация веб-форм](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Продвинутая стилизация форм](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [UI псевдоклассы](/ru/docs/Learn/Forms/UI_pseudo-classes)
+- [UI псевдоклассы](/ru/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 - [Валидация форм на стороне клиента](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Отправка данных формы](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
@@ -808,4 +810,4 @@ addEvent(form, "submit", function () {
 
 - [Как создавать кастомные элементы формы](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Отправка форм с помощью JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [Таблица совместимости CSS-свойств для элементов формы](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Таблица совместимости CSS-свойств для элементов формы](/ru/docs/Learn_web_development/Extensions/Forms)

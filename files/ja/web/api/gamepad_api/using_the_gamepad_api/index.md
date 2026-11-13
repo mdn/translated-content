@@ -48,7 +48,7 @@ window.addEventListener("gamepaddisconnected", (e) => {
 });
 ```
 
-ゲームパッドの {{domxref("Gamepad.index", "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} から返される {{jsxref("Array")}} のイデックスとして機能します。
+ゲームパッドの {{domxref("Gamepad.index", "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} から返される {{jsxref("Array")}} のインデックスとして機能します。
 
 ```js
 const gamepads = {};

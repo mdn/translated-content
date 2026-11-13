@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feMergeNode
 original_slug: Web/SVG/Element/feMergeNode
 ---
 
-{{SVGRef}}
-
 L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElement("feMerge") }}. Il prend en entrée le résultat d'un filtre afin qu'il soit traité par son parent.
 
 ## Contexte d'utilisation

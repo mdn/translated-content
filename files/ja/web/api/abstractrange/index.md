@@ -2,7 +2,7 @@
 title: AbstractRange
 slug: Web/API/AbstractRange
 l10n:
-  sourceCommit: a099faec8924e48de30a5aa06d086432915ae420
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 {{APIRef("DOM")}}
@@ -10,7 +10,7 @@ l10n:
 **`AbstractRange`** は抽象インターフェイスで、すべての {{Glossary("DOM")}} の範囲型を定義するための基本クラスです。 **range** は、文書内のコンテンツの区間の開始点と終了点を示すオブジェクトです。
 
 > [!NOTE]
-> 抽象インターフェイスなので、 `AbstractRange` タイプのオブジェクトを直接インスタンス化することはありません。代わりに {{domxref("Range")}} または {{domxref("StaticRange")}} インターフェイスを使用してください。これら 2 つのインターフェイスの異なる点を理解し、自分のニーズに合ったものを選ぶには、それぞれのインターフェイスのドキュメントを参照してください。
+> 抽象インターフェイスであるため、 `AbstractRange` 型のオブジェクトを直接インスタンス化することはありません。代わりに {{domxref("Range")}} または {{domxref("StaticRange")}} インターフェイスを使用してください。これら 2 つのインターフェイスの異なる点を理解し、自分のニーズに合ったものを選ぶには、それぞれのインターフェイスのドキュメントを参照してください。
 
 {{InheritanceDiagram}}
 
@@ -21,15 +21,15 @@ l10n:
 - {{domxref("AbstractRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
   - : `endOffset` プロパティで指定された範囲の末尾がある場所の {{domxref("Node")}} オブジェクトです。
 - {{domxref("AbstractRange.endOffset", "endOffset")}} {{ReadOnlyInline}}
-  - : ノードの内容の先頭から、この範囲オブジェクトで表す範囲の先頭までのオフセットを文字数で表した整数値です。この値は `endContainer` ノードの長さよりも小さくなければなりません。
+  - : 整数値で、ノードのコンテンツの先頭から、この範囲オブジェクトが表す範囲の末尾の文字までのオフセットを文字単位で示します。この値は `endContainer` ノードの長さより小さくなければなりません。
 - {{domxref("AbstractRange.startContainer", "startContainer")}} {{ReadOnlyInline}}
   - : `startOffset` プロパティで指定された範囲の先頭がある場所の {{domxref("Node")}} オブジェクトです。
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
-  - : ノードの内容の先頭から、範囲オブジェクトが参照する内容の先頭の文字までのオフセットを文字数で表した整数値です。この値は `startContainer` で示すノードの長さよりも小さくなければなりません。
+  - : 整数値で、ノードのコンテンツの先頭から、この範囲オブジェクトが参照する内容の先頭の文字までのオフセットを文字単位で示します。この値は、`startContainer` で示されるノードの長さより小さくなければなりません。
 
 ## インスタンスメソッド
 
-_`AbstractRange` メソッドを提供していません。_
+_`AbstractRange` インターフェイスはメソッドを提供していません。_
 
 ## 使用上の注意
 
@@ -58,7 +58,7 @@ const contents = range.cloneContents();
 document.body.appendChild(contents);
 ```
 
-この例では、新しい範囲 `range` を作成し、その始点をクラスが `elementclass` である最初の要素の 3 つ目の子ノードに設定します。終点は span の最初の子の中央に設定し、その後、範囲のコンテンツをコピーするために使用しています。
+この例では、新しい範囲 `range` を作成し、その先頭を最初の要素の 3 つ目の子ノードに設定します。終点は span の最初の子の中央に設定し、その後、範囲のコンテンツをコピーするために使用しています。
 
 ### 範囲と DOM の階層構造
 
@@ -75,7 +75,7 @@ document.body.appendChild(contents);
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo" />
+    <img src="..." alt="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
@@ -94,7 +94,7 @@ document.body.appendChild(contents);
 
 HTML を読み込んで文書の DOM 表現を構築すると、結果の DOM ツリーは次のようになります。
 
-[![単純なウェブページの DOM 図](simpledom.svg)](simpledom.svg)
+![単純なウェブページの DOM 図](simpledom.svg)
 
 この図では、 HTML 要素を表すノードを緑色で表示しています。その下の各行は、 DOM ツリーの次の階層を表示させます。青いノードはテキストノードで、画面に表示させるテキストを格納します。各要素のコンテンツはツリーの下記でリンクされており、要素が他の要素やテキストノードを含めるために、その下に一連の分岐を生む可能性があります。
 

@@ -15,11 +15,11 @@ var aValue = storage.getItem(keyName);
 ### Paramètre
 
 - _`keyName`_
-  - : Une {{domxref("DOMString")}} contenant le nom de la clé voulue.
+  - : Une {{jsxref("String")}} contenant le nom de la clé voulue.
 
 ### Renvoi
 
-Une {{domxref("DOMString")}} contenant la valeur de la clé. `null` est renvoyé si aucune correspondance n'est trouvée.
+Une {{jsxref("String")}} contenant la valeur de la clé. `null` est renvoyé si aucune correspondance n'est trouvée.
 
 ## Exemple
 

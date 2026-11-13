@@ -27,13 +27,13 @@ dfn {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -41,7 +41,7 @@ dfn {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >. 단, 다른 {{htmlelement("dfn")}} 요소는 불가능.
       </td>
@@ -53,7 +53,7 @@ dfn {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>
@@ -89,7 +89,8 @@ dfn {
 2. `<dfn>`이 다른 텍스트는 없이 하나의 자식만 가지는데, 그 자식이 `title` 특성을 가진{{htmlelement("abbr")}}인 경우, 자식 `<abbr>`의 `title` 특성 값을 현재 용어로 간주합니다.
 3. 모두 아닌 경우 `<dfn>`의 텍스트 콘텐츠를 현재 용어로 간주합니다. [아래의 첫 번째 예제](#기본적인_용어_식별)에서 확인할 수 있습니다.
 
-> **참고:** `<dfn>` 요소가 `title` 특성을 가진 경우, 그 값은 정의 중인 용어여야 하며 다른 텍스트는 들어가선 안됩니다.
+> [!NOTE]
+> `<dfn>` 요소가 `title` 특성을 가진 경우, 그 값은 정의 중인 용어여야 하며 다른 텍스트는 들어가선 안됩니다.
 
 ### `<dfn>` 요소를 가리키는 링크
 

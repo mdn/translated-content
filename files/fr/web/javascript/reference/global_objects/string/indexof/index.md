@@ -1,134 +1,154 @@
 ---
-title: String.prototype.indexOf()
+title: "String : méthode indexOf()"
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`indexOf()`** des valeurs {{JSxRef("String")}} recherche dans cette chaîne de caractères et retourne l'indice de la première occurrence de la sous-chaîne de caractères définie. Elle prend une position de départ optionnelle et retourne la première occurrence de la sous-chaîne de caractères définie à un indice supérieur ou égal au nombre défini.
 
-La méthode **`indexOf()`** renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de `indexDébut`). Elle renvoie -1 si la valeur cherchée n'est pas trouvée.
-
-{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.indexOf()", "taller")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph =
+  "Je pense que le chien de Ruth est plus mignon que ton chien !";
 
-const searchTerm = "dog";
+const searchTerm = "chien";
 const indexOfFirst = paragraph.indexOf(searchTerm);
 
-console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
-// Expected output: "The index of the first "dog" is 15"
+console.log(
+  `L'indice de la première occurrence de « ${searchTerm} » est ${indexOfFirst}`,
+);
+// Résultat attendu : "L'indice de la première occurrence de « chien » est 16"
 
 console.log(
-  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+  `L'indice de la deuxième occurrence de « ${searchTerm} » est ${paragraph.indexOf(
     searchTerm,
     indexOfFirst + 1,
   )}`,
 );
-// Expected output: "The index of the second "dog" is 38"
+// Résultat attendu : "L'indice de la deuxième occurrence de « chien » est 54"
 ```
-
-> [!NOTE]
-> Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
 
 ## Syntaxe
 
-```js
-str.indexOf(valeurRecherchée);
-str.indexOf(valeurRecherchée, indexDébut);
+```js-nolint
+indexOf(searchString)
+indexOf(searchString, position)
 ```
 
 ### Paramètres
 
-- `valeurRecherchée`
-  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement, [`valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
-- `indexDébut`
-  - : Paramètre optionnel. L'indice à partir duquel commencer la recherche, effectuée du début vers la fin de la liste. Cela peut être n'importe quel entier. La valeur par défaut est 0. Si `indexDébut < 0` la chaîne sera parcourue en entier (ce qui équivaut à utiliser 0). Si `indexDébut >= str.length`, la méthode renverra -1 sauf si `valeurRecherchée` est la chaîne vide, auquel cas, la méthode renverra `str.length`.
+- `searchString`
+  - : La sous-chaîne de caractères à rechercher. Toutes les valeurs sont [converties en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères), donc l'omission de ce paramètre ou le passage de `undefined` fait que `indexOf()` recherche la chaîne de caractères `"undefined"`, ce qui est rarement ce que vous voulez.
+
+- `position` {{Optional_Inline}}
+  - : La méthode retourne l'indice de la première occurrence de la sous-chaîne de caractères définie à une position supérieure ou égale à `position`, qui par défaut vaut `0`. Si `position` est supérieure à la longueur de la chaîne de caractères appelante, la méthode ne recherche pas du tout dans la chaîne de caractères appelante. Si `position` est inférieure à zéro, la méthode se comporte comme si `position` vaut `0`.
+    - `'le monde bonjour'.indexOf('o', -5)` retourne `4` — parce que cela fait que la méthode se comporte comme si le deuxième argument vaut `0`, et la première occurrence de `o` à une position supérieure ou égale à `0` est à la position `4`.
+
+    - `'le monde bonjour'.indexOf('monde', 12)` retourne `-1` — parce que, bien qu'il soit vrai que la sous-chaîne de caractères `monde` se trouve à l'indice `11`, cette position n'est pas supérieure ou égale à `12`.
+
+    - `'le monde bonjour'.indexOf('o', 99)` retourne `-1` — parce que `99` est supérieur à la longueur de `le monde bonjour`, ce qui fait que la méthode ne recherche pas du tout dans la chaîne de caractères.
 
 ### Valeur de retour
 
-L'indice de la première occurrence de la valeur indiquée, `-1` si elle n'est pas trouvée. Si la valeur recherchée est la chaîne vide, une correspondance sera trouvée à n'importe quel index entre `0` et `str.length`.
+L'indice de la première occurrence de `searchString` trouvée, ou `-1` si rien n'est trouvé.
+
+#### Valeur de retour lors de l'utilisation d'une chaîne de caractères de recherche vide
+
+La recherche d'une chaîne de caractères de recherche vide produit des résultats étranges. Sans second argument, ou avec un second argument dont la valeur est inférieure à la longueur de la chaîne de caractères appelante, la valeur de retour est la même que celle du second argument&nbsp;:
+
+```js
+"bonjour le monde".indexOf(""); // retourne 0
+"bonjour le monde".indexOf("", 0); // retourne 0
+"bonjour le monde".indexOf("", 3); // retourne 3
+"bonjour le monde".indexOf("", 8); // retourne 8
+```
+
+Cependant, si le deuxième argument a une valeur supérieure ou égale à la longueur de la chaîne de caractères, la valeur retournée correspond à la longueur de cette chaîne de caractères&nbsp;:
+
+```js
+"bonjour le monde".indexOf("", 16); // retourne 16
+"bonjour le monde".indexOf("", 19); // retourne 16
+"bonjour le monde".indexOf("", 22); // retourne 16
+```
+
+Dans le premier cas, la méthode se comporte comme si elle trouve une chaîne de caractères vide juste après la position définie dans le deuxième argument. Dans le second cas, la méthode se comporte comme si elle trouve une chaîne de caractères vide à la fin de la chaîne de caractères d'appel.
 
 ## Description
 
-Les caractères dans une chaîne de caractères sont indexés de la gauche à la droite. L'indice du premier caractère est 0, celui du dernier caractère (d'une chaîne `str`) est `str.length - 1.`
+Les chaînes de caractères sont indexées à partir de zéro&nbsp;: l'indice du premier caractère d'une chaîne de caractères est `0`, et l'indice du dernier caractère d'une chaîne de caractères est la longueur de la chaîne de caractères moins 1.
 
 ```js
-"Blue Whale".indexOf("Blue"); // retourne 0
-"Blue Whale".indexOf("Blute"); // retourne -1
-"Blue Whale".indexOf("Whale", 0); // retourne 5
-"Blue Whale".indexOf("Whale", 5); // retourne 5
-"Blue Whale".indexOf(""); // retourne 0
-"Blue Whale".indexOf("", 9); // retourne 9
-"Blue Whale".indexOf("", 10); // retourne 10
-"Blue Whale".indexOf("", 11); // retourne 10
+"Baleine Bleue".indexOf("Baleine"); // retourne  0
+"Baleine Bleue".indexOf("Licorne"); // retourne -1
+"Baleine Bleue".indexOf("Bleue", 0); // retourne  8
+"Baleine Bleue".indexOf("Bleue", 5); // retourne  8
+"Baleine Bleue".indexOf("Baleine", 7); // retourne -1
+"Baleine Bleue".indexOf(""); // retourne  0
+"Baleine Bleue".indexOf("", 9); // retourne  9
+"Baleine Bleue".indexOf("", 11); // retourne 11
+"Baleine Bleue".indexOf("", 15); // retourne 13
 ```
 
-### Sensibilité à la casse
-
-La méthode `indexOf()` est sensible à la casse. Par exemple, l'expression suivante retourne -1 :
+La méthode `indexOf()` tient compte de la casse. Par exemple, l'expression suivante retourne `-1`&nbsp;:
 
 ```js
-"Blue Whale".indexOf("blue"); // retourne -1
+"Baleine Bleue".indexOf("bleue"); // returns -1
 ```
 
-Attention : `0` n'est pas une valeur qui peut être évaluée à `true` et `-1` n'est pas une valeur qui peut être évaluée à `false`. Ainsi, si on souhaite tester si une chaîne de caractères existe au sein d'une autre chaîne de caractères, on procèdera de cette façon (ou on utilisera {{jsxref("String.prototype.includes()")}}
+### Vérifier les occurrences
+
+Lorsqu'on vérifie si une sous-chaîne de caractères spécifique se trouve dans une chaîne de caractères, la manière correcte de le faire est de tester si la valeur de retour est `-1`&nbsp;:
 
 ```js
-"Blue Whale".indexOf("Blue") != -1; // true
-"Blue Whale".indexOf("Bloe") != -1; // false
+"Baleine Bleue".indexOf("Bleue") !== -1; // true ; a trouvé 'Bleue' dans 'Baleine Bleue'
+"Baleine Bleue".indexOf("Licorne") !== -1; // false ; il n'y a pas de 'Licorne' dans 'Baleine Bleue'
 ```
 
 ## Exemples
 
-### Utiliser `indexOf()` et `lastIndexOf()`
+### Utiliser la méthode `indexOf()`
 
-L'exemple suivant utilise `indexOf()` et `lastIndexOf()` pour localiser différentes valeurs dans la chaîne de caractères "`Brave new world`".
+L'exemple suivant utilise `indexOf()` pour localiser des sous-chaînes de caractères dans la chaîne de caractères `"Un nouveau monde"`.
 
 ```js
-const uneChaîne = "Brave new world";
+const chaine = "Un nouveau monde";
 
-console.log("Indice du premier w " + uneChaîne.indexOf("w"));
-// Affiche 8
-console.log("Indice du dernier w " + uneChaîne.lastIndexOf("w"));
-// Affiche 10
-
-console.log("Indice du premier 'new' " + uneChaîne.indexOf("new"));
-// Affiche 6
-console.log("Indice du dernier 'new' " + uneChaîne.lastIndexOf("new"));
-// Affiche 6
+console.log(chaine.indexOf("n")); // 1
+console.log(chaine.indexOf("nouveau")); // 3
 ```
 
-### `indexOf()` et la sensibilité à la casse
+### `indexOf()` et la sensibilité de la casse
 
-L'exemple suivant définit 2 chaînes de caractères. Ces variables contiennent la meme chaîne de caractères sauf que la seconde chaîne de caractères contient des lettres majuscules. La première méthode `writeln` affiche 19. Cependant, comme la méthode `indexOf` est sensible à la casse, la chaîne de caractères "`cheddar`" n'est pas trouvée dans `myCapString`, donc le second résultat affiche -1.
+L'exemple suivant définit deux variables de type chaîne de caractères.
+
+Les variables contiennent la même chaîne de caractères, sauf que la deuxième chaîne de caractères contient des lettres majuscules. La première méthode {{DOMxRef("console/log_static", "console.log()")}} affiche `19`. Mais comme la méthode `indexOf()` est sensible à la casse, la chaîne de caractères `"cheddar"` n'est pas trouvée dans `maChaineCaracteresMaj`, donc la deuxième méthode `console.log()` affiche `-1`.
 
 ```js
-const maChaîne = "brie, reblochon, cheddar";
-const maChaîneMajuscules = "Brie, Reblochon, Cheddar";
+const maChaineCaracteres = "brie, pepper jack, cheddar";
+const maChaineCaracteresMaj = "Brie, Pepper Jack, Cheddar";
 
-console.log('maChaîne.indexOf("cheddar") is ' + maChaîne.indexOf("cheddar"));
-// Affiche 19
-console.log(
-  'maChaîneMajuscules.indexOf("cheddar") is ' +
-    maChaîneMajuscules.indexOf("cheddar"),
-);
-// Affiche -1
+console.log(maChaineCaracteres.indexOf("cheddar")); // 19
+console.log(maChaineCaracteresMaj.indexOf("cheddar")); // -1
 ```
 
-### Utiliser `indexOf()` pour compter le nombre d'occurences dans une chaîne de caractères
+### Utiliser `indexOf()` pour compter les occurrences d'une lettre dans une chaîne de caractères
 
-L'exemple suivant utilise la variable `count` pour stocker le nombre d'occurences de la lettre `x` dans la chaîne de caractère `str` :
+L'exemple suivant assigne à `compte` le nombre d'occurrences de la lettre `e` dans la chaîne de caractères `chaine`&nbsp;:
 
 ```js
-const str = "Chaîne x de test x";
-let count = 0;
-let pos = str.indexOf("x");
+const chaine = "Être, ou ne pas être, telle est la question.";
+let compte = 0;
+let position = chaine.indexOf("e");
 
-while (pos != -1) {
-  count++;
-  pos = str.indexOf("x", pos + 1);
+while (position !== -1) {
+  compte++;
+  position = chaine.indexOf("e", position + 1);
 }
-console.log(count); // Affiche 2
+
+console.log(compte); // 7
 ```
 
 ## Spécifications
@@ -141,8 +161,8 @@ console.log(count); // Affiche 2
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- La méthode {{JSxRef("String.prototype.charAt()")}}
+- La méthode {{JSxRef("String.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("String.prototype.includes()")}}
+- La méthode {{JSxRef("String.prototype.split()")}}
+- La méthode {{JSxRef("Array.prototype.indexOf()")}}

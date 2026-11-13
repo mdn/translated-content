@@ -58,7 +58,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### 廃止
 
-- メディア特性 [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の値 `no-preference` が、[media queries 仕様書](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme) および Firefox から削除されました ([Firefox バグ 1643656](https://bugzil.la/1643656))。
+- メディア特性 [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の値 `no-preference` が、[media queries 仕様書](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme) および Firefox から削除されました ([Firefox バグ 1643656](https://bugzil.la/1643656))。
 
 ### JavaScript
 

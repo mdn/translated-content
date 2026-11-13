@@ -5,7 +5,7 @@ slug: Web/API/Element/animationiteration_event
 
 {{APIRef}}
 
-**`animationiteration`** 事件会在一次 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)迭代的结束和另一次迭代的开始时触发。此事件不会与 {{domxref("Element/animationend_event", "animationend")}} 事件同时发生，因此其不会发生在 `animation-iteration-count` 为 1 的动画上。
+**`animationiteration`** 事件会在一次 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)迭代的结束和另一次迭代的开始时触发。此事件不会与 {{domxref("Element/animationend_event", "animationend")}} 事件同时发生，因此其不会发生在 `animation-iteration-count` 为 1 的动画上。
 
 ## 语法
 

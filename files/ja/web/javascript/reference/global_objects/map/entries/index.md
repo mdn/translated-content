@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`entries()`** は {{jsxref("Map")}} インスタンスのメソッドで、挿入順でこの `Map` オブジェクトのそれぞれの要素に対する `[キー, 値]` のペアを含む新しい[マップイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
+**`entries()`** は {{jsxref("Map")}} インスタンスのメソッドで、挿入順でこの対応表 (`Map`) オブジェクトのそれぞれの要素に対する `[キー, 値]` のペアを含む新しい[対応表イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.entries()")}}
 

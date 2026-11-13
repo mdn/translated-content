@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 정렬 속도와 복잡도는 각 구현방식에 따라 다를 수 있습니다.
 
-{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.sort()")}}
 
 ```js interactive-example
 const months = ["March", "Jan", "Feb", "Dec"];
@@ -72,7 +73,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-sort 메소드는 {{jsxref ( "연산자 / 함수", "함수식", "", 1)}} (및 클로저)와 함께 편리하게 사용할 수 있습니다.
+sort 메소드는 {{jsxref ( "Operators/function", "함수식", "", 1)}} (및 클로저)와 함께 편리하게 사용할 수 있습니다.
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

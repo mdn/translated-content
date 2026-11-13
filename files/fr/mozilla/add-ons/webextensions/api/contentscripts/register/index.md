@@ -3,8 +3,6 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
-{{AddonSidebar}}
-
 Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.
 
 Il accepte un paramètre, qui est un objet avec des propriétés similaires aux objets donnés dans la clé du manifest [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) (mais notez que `content_scripts` est un tableau d'objets, tandis que l'argument de `register()` est un simple objet).

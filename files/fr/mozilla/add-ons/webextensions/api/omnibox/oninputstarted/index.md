@@ -3,8 +3,6 @@ title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'utilisateur commence à interagir avec votre extension en entrant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
 Cela sera envoyé avant tout événement {{WebExtAPIRef("omnibox.onInputChanged")}} events.

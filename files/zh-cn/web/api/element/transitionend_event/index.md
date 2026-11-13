@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionend_event
 
 {{APIRef}}
 
-**`transitionend`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成的时候触发。如果过渡在完成前就被移除，比如删除 {{cssxref("transition-property")}} 或者将 {{cssxref("display")}} 设置为 `none`，那么该事件就不会生成。
+**`transitionend`** 事件会在 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)完成的时候触发。如果过渡在完成前就被移除，比如删除 {{cssxref("transition-property")}} 或者将 {{cssxref("display")}} 设置为 `none`，那么该事件就不会生成。
 
 `transitionend` 事件在两个方向上触发：当它完成从初始状态到过渡状态的过渡时，以及当它完全恢复到默认或非过渡状态时。如果没有设置过渡延迟或持续时间，或者两者都是 0 秒或都没有声明，则没有过渡，且不会触发任何过渡事件。如果触发了 `transitioncancel` 事件，`transitionend` 事件就不会触发。
 
@@ -36,7 +36,7 @@ _同样继承来自父级 {{domxref("Event")}} 的属性_。
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : 一个 `float` 类型的数值，表示在事件触发时过渡已经运行的时间，以秒为单位。该值不受 {{cssxref("transition-delay")}} 属性的影响。
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 一个以 `::` 开始的字符串，包含运行动画效果的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)名称。如果过渡效果并不是在伪元素上运行的，则该值是空字符串 `''`。
+  - : 一个以 `::` 开始的字符串，包含运行动画效果的[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)名称。如果过渡效果并不是在伪元素上运行的，则该值是空字符串 `''`。
 
 ## 示例
 

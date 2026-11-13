@@ -2,13 +2,12 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
 l10n:
-  sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
+  sourceCommit: a44f198025a4efab10df30201b59793b8e0fd38c
 ---
 
 HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダー内の URL のリソースをリクエストし、ユーザーを新しいページにリダイレクトします。
-このレスポンスを受け取った検索エンジンは、リンクを元の URL からリダイレクトされたリソースへと関連付けするため、 {{Glossary("SEO")}} の値を新しい URL に移行させます。
 
 リダイレクトされたリクエストでは、クライアントによってリクエストメソッドと本体が**変更されることはありません**。
 {{HTTPStatus("301", "301 Moved Permanently")}} では、リダイレクトが実行された際にリクエストメソッドと本体を変更しないことが要求されますが、古いクライアントでは、これに誤って対応して代わりに {{HTTPMethod("GET")}} メソッドを使用してしまいます。

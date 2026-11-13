@@ -18,7 +18,7 @@ dump("Mon message\n");
 
 ### Paramètre
 
-Une {{domxref("DOMString")}} contenant le message que vous voulez envoyer.
+Une {{jsxref("String")}} contenant le message que vous voulez envoyer.
 
 ### Retour
 

@@ -20,7 +20,7 @@ location.assign(url);
 ### Parâmetros
 
 - _url_
-  - : É uma {{domxref("DOMString")}} contendo a URL da página destino.
+  - : É uma {{jsxref("String")}} contendo a URL da página destino.
 
 ## Exemplos
 

@@ -69,5 +69,5 @@ iframeElem.src =
 
 ## 関連情報
 
-- [視覚情報のない iframe](/ja/docs/Web/Security/IFrame_credentialless)
+- [視覚情報のない iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless)
 - {{htmlelement("iframe")}}

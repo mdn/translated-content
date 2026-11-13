@@ -21,7 +21,8 @@ l10n:
 
 {{HTTPHeader("Access-Control-Expose-Headers")}}를 사용하여 허용 목록에 부가적인 헤더를 추가할 수 있습니다.
 
-> **참고:** {{HTTPHeader("Content-Length")}}헤더는 허용된 원래 응답 헤더 집합의 일부가 아닙니다. \[[ref](https://github.com/whatwg/fetch/pull/626)]를 참고해주세요.
+> [!NOTE]
+> {{HTTPHeader("Content-Length")}}헤더는 허용된 원래 응답 헤더 집합의 일부가 아닙니다. \[[ref](https://github.com/whatwg/fetch/pull/626)]를 참고해주세요.
 
 ## 예제
 

@@ -21,7 +21,7 @@ O cabeçalho `Access-Control-Allow-Credentials` funciona em conjunto com a propr
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

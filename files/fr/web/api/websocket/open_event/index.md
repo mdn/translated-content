@@ -1,36 +1,28 @@
 ---
 title: "WebSocket : évènement open"
+short-title: open
 slug: Web/API/WebSocket/open_event
+l10n:
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-L'évènement `open` est déclenché lorsqu'une connexion avec une `WebSocket` est ouverte.
+L'évènement `open` de l'interface {{DOMxRef("WebSocket")}} est déclenché lorsqu'une connexion avec une `WebSocket` est ouverte.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bouillonne/Remonte</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        <a href="/fr/docs/Web/API/Event"><code>Event</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
-      <td>
-        <a href="/fr/docs/Web/API/WebSocket/onopen"><code>onopen</code></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
+
+```js-nolint
+addEventListener("open", (event) => { })
+
+onopen = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet générique {{DOMxRef("Event")}}.
 
 ## Exemples
 
@@ -54,7 +46,7 @@ socket.addEventListener("open", (event) => {
 
 ## Voir aussi
 
-- [WebSocket : évènement `close`](/fr/docs/Web/API/WebSocket/close_event)
-- [WebSocket : évènement `error`](/fr/docs/Web/API/WebSocket/error_event)
-- [WebSocket : évènement `message`](/fr/docs/Web/API/WebSocket/message_event)
+- [WebSocket&nbsp;: évènement `close`](/fr/docs/Web/API/WebSocket/close_event)
+- [WebSocket&nbsp;: évènement `error`](/fr/docs/Web/API/WebSocket/error_event)
+- [WebSocket&nbsp;: évènement `message`](/fr/docs/Web/API/WebSocket/message_event)
 - [Écrire des applications clientes WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

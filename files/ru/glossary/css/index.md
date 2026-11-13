@@ -28,7 +28,7 @@ p {
 
 ### Базовые знания
 
-- [Изучение CSS](/ru/docs/Learn/CSS)
+- [Изучение CSS](/ru/docs/Learn_web_development/Core/Styling_basics)
 
 ### Техническая документация
 

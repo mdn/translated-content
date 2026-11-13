@@ -3,8 +3,6 @@ title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
 
-{{JSRef}}
-
 **`Number.MIN_VALUE`** 静态数据属性表示在 JavaScript 中可表示的最小正数值。
 
 {{InteractiveExample("JavaScript Demo: Number.MIN_VALUE")}}

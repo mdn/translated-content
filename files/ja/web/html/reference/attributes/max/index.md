@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: max"
+title: "`max` 属性"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
 l10n:
-  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`max`** 属性は、その属性を含む入力に対して許容可能で有効な最大値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)) がこれより大きい場合、その要素は[制約検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に失敗します。この値は、 [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性の値以上でなければなりません。 `max` 属性が存在していても、指定されていないか無効であった場合、 `max` 値は適用されません。 `max` 属性が有効で、値が空でなく、 `max` 属性によって許容される最大値よりも大きい場合、制約検証によってフォームの送信が阻止されます。
 
@@ -59,14 +57,14 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -95,7 +93,7 @@ l10n:
   <tbody>
     <tr>
       <td>{{HTMLElement("progress")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;progress id="file" max="100" value="70"> 70%
@@ -105,7 +103,7 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"
@@ -132,7 +130,6 @@ l10n:
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
-- 他の meter の属性: [`low`](/ja/docs/Web/HTML/Reference/Attributes/low), [`high`](/ja/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Reference/Attributes/optimum)
 - [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}

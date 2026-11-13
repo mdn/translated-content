@@ -1,48 +1,46 @@
 ---
 title: "Element : évènement mousemove"
+short-title: mousemove
 slug: Web/API/Element/mousemove_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement `mousemove` est déclenché à partir d'un élément lorsqu'un dispositif de pointage (ex. une souris) est déplacé lorsque le curseur est à l'intérieur de l'élément.
+L'évènement `mousemove` est déclenché sur un élément lorsqu'un dispositif de pointage (généralement une souris) est déplacé alors que le point chaud du curseur se trouve à l'intérieur de celui-ci.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Se propage/remonte dans le DOM</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MouseEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+Ces évènements se produisent que des boutons de la souris soient enfoncés ou non. Ils peuvent se déclencher à un rythme très élevé, en fonction de la rapidité avec laquelle l'utilisateur·ice déplace la souris, de la rapidité de la machine, des autres tâches et processus en cours, etc.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("mousemove", (event) => { })
+
+onmousemove = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("MouseEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("MouseEvent")}}
 
 ## Exemples
 
-Dans l'exemple suivant, on utilise les évènements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), [`mousemove`](/fr/docs/Web/API/Element/mousemove_event) et [`mouseup`](/fr/docs/Web/API/Element/mouseup_event) pour permettre à l'utilisateur de dessiner sur un [canevas](/fr/docs/Web/API/Canvas_API) HTML (le dessin est simple : une ligne dont l'épaisseur vaut 1 et dont la couleur est toujours noire).
+L'exemple suivant utilise les évènements {{DOMxRef("Element/mousedown_event", "mousedown")}}, `mousemove` et {{DOMxRef("Element/mouseup_event", "mouseup")}} pour permettre à l'utilisateur·ice de dessiner sur un [canevas](/fr/docs/Web/API/Canvas_API) HTML. Le dessin est simple&nbsp;: une ligne dont l'épaisseur vaut 1 et dont la couleur est toujours noire.
 
-Lors du chargement de la page, les constantes `myPics` et `context` sont créées comme références au canevas et au contexte 2D qui seront utilisés pour le dessin. Enfin, la constante `rect` permet de stocker les coordonnées relatives du canevas par rapport à la page.
+Lorsque la page se charge, les constantes `mesImages` et `contexte` sont créées pour stocker une référence au canevas et au contexte 2D que nous utilisons pour dessiner.
 
-Le dessin commence quand l'évènement `mousedown` est déclenché. On stocke les coordonnées du pointeur dans les variables `x` et `y` puis on passe la variable `isDrawing` à `true` pour indiquer qu'un dessin est en cours.
+Le dessin commence lorsque l'évènement `mousedown` est déclenché. On stocke d'abord les coordonnées x et y du pointeur de la souris dans les variables `x` et `y`, puis on passe `isDrawing` à true.
 
-Lorsque le pointeur se déplace sur la page, l'évènement `mousemove` est déclenché. Si `isDrawing` vaut `true`, le gestionnaire d'évènement appelle la fonction `drawLine()` afin de dessiner une ligne entre le point de coordonnées `x` et `y` (stockées dans ces variables) et la position actuelle (N.B. les coordonnées `x` et `y` sont "corrigées" avec la constante `rect` pour tenir compte du décalage entre le canevas et la page).
+Lorsque la souris se déplace sur la page, l'évènement `mousemove` est déclenché. Si `isDrawing` vaut true, le gestionnaire d'évènement appelle la fonction `dessinerLigne` pour dessiner une ligne entre les coordonnées `x` et `y` stockées et la position actuelle.
 
-Lorsque la fonction `drawLine()` a fini son exécution, on ajuste les coordonnées courante en les stockant dans `x` et `y`.
+Lorsque la fonction `dessinerLigne()` a fini son exécution, on ajuste les coordonnées et on les stocke dans `x` et `y`.
 
-Lorsque l'évènement `mouseup` est déclenché, on dessine le segment final du dessin en cours, on passe `x` et `y` à `0` puis on arrête le dessin en passant `isDrawing` à `false`.
+L'évènement `mouseup` dessine le segment final, passe `x` et `y` à `0` et arrête le dessin en passant `isDrawing` à `false`.
 
 ### HTML
 
@@ -64,45 +62,41 @@ canvas {
 ### JavaScript
 
 ```js
-// Un booléen qui, lorsqu'il est vrai, indique que le déplacement de
-// la souris entraîne un dessin sur le canevas
+// Lorsque true, déplacez la souris dessine sur le canevas
 let isDrawing = false;
 let x = 0;
 let y = 0;
 
-const myPics = document.getElementById("myPics");
-const context = myPics.getContext("2d");
+const mesImages = document.getElementById("myPics");
+const context = mesImages.getContext("2d");
 
-// On récupère le décalage du canevas en x et y par rapport aux bords
-// de la page
-const rect = myPics.getBoundingClientRect();
+// event.offsetX, event.offsetY donne le décalage (x,y) par rapport au bord du canevas.
 
-// On ajoute les gestionnaires d'évènements pour mousedown, mousemove
-// et mouseup
-myPics.addEventListener("mousedown", (e) => {
-  x = e.clientX - rect.left;
-  y = e.clientY - rect.top;
+// Ajout des écouteurs d'évènements pour mousedown, mousemove et mouseup
+mesImages.addEventListener("mousedown", (e) => {
+  x = e.offsetX;
+  y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener("mousemove", (e) => {
-  if (isDrawing === true) {
-    drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
-    x = e.clientX - rect.left;
-    y = e.clientY - rect.top;
+mesImages.addEventListener("mousemove", (e) => {
+  if (isDrawing) {
+    dessinerLigne(context, x, y, e.offsetX, e.offsetY);
+    x = e.offsetX;
+    y = e.offsetY;
   }
 });
 
 window.addEventListener("mouseup", (e) => {
-  if (isDrawing === true) {
-    drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
+  if (isDrawing) {
+    dessinerLigne(context, x, y, e.offsetX, e.offsetY);
     x = 0;
     y = 0;
     isDrawing = false;
   }
 });
 
-function drawLine(context, x1, y1, x2, y2) {
+function dessinerLigne(context, x1, y1, x2, y2) {
   context.beginPath();
   context.strokeStyle = "black";
   context.lineWidth = 1;
@@ -127,14 +121,14 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
-- D'autres évènements connexes
-  - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mouseup_event", "mouseup")}}
+- L'évènement {{DOMxRef("Element/click_event", "click")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mouseover_event", "mouseover")}}
+- L'évènement {{DOMxRef("Element/mouseout_event", "mouseout")}}
+- L'évènement {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+- L'évènement {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/pointermove_event", "pointermove")}}

@@ -3,8 +3,6 @@ title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 ---
 
-{{JSRef}}
-
 **`getUTCDate()`** 方法以世界时为标准，返回一个指定的日期对象为一个月中的第几天
 
 {{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
@@ -22,7 +20,7 @@ console.log(date2.getUTCDate());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCDate()
 ```
 

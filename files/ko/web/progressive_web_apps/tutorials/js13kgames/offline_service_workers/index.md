@@ -3,7 +3,7 @@ title: Service worker를 사용해 PWA를 오프라인에서 동작하게 만들
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 ---
 
-{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps")}}
 
 우리는 js13kPWA의 구조와 기본적인 shell을 만들고 실행하는 것에 대해 살펴보았습니다. 이제 Service Worker를 사용해 오프라인 기능을 구현하는 방법에 대해 살펴봅시다. 이 문서에서는 [js13kPWA 예제](https://mdn.github.io/pwa-examples/js13kpwa/)([소스 코드도 있습니다](https://github.com/mdn/pwa-examples/tree/master/js13kpwa))에서 어떻게 사용되었는지와 오프라인 기능을 추가하는 방법을 살펴봅니다.
 
@@ -222,4 +222,4 @@ self.addEventListener("activate", function (e) {
 
 Service Worker는 [푸시 알림](/ko/docs/Web/API/Push_API)을 처리할 때에도 사용됩니다. 이는 이어지는 문서에서 설명할 것입니다.
 
-{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps")}}

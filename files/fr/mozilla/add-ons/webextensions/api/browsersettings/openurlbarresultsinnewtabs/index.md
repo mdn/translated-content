@@ -3,8 +3,6 @@ title: browserSettings.openUrlbarResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
 ---
 
-{{AddonSidebar}}
-
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
 Quand l'utilisateur facalise la barre d'adresse et commence à taper, le navigateur propose des suggestions de saisie semi-automatique : une liste déroulante de pages web basée sur l'entrée incomplète de l'utilisateur et son historique de navigation.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
-{{jsSidebar("Objects")}}{{Deprecated_Header}}
+{{jsSidebar("Objects")}}
 
 > [!NOTE]
 > `unescape()` no es una función estándar implementada por los navegadores y solo se estandarizó para la compatibilidad entre motores. No es necesario que todos los motores de JavaScript lo implementen y es posible que no funcione en todas partes. Use {{jsxref("decodeURIComponent()")}} o {{jsxref("decodeURI()")}} si es posible.

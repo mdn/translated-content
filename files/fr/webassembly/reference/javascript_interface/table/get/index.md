@@ -1,17 +1,16 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/Reference/JavaScript_interface/Table/get
-original_slug: WebAssembly/JavaScript_interface/Table/get
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-{{WebAssemblySidebar}}
-
-La méthode **`get()`**, rattachéee au prototype de {{jsxref("WebAssembly.Table()")}}, permet de récupérer une référence à une fonction stockée dans le tableau WebAssembly grâce à sa position. dans le tableau.
+La méthode **`get()`** du prototype de [`WebAssembly.Table()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table) permet de récupérer l'élément stocké à un index donné.
 
 ## Syntaxe
 
-```js
-var funcRef = table.get(index);
+```js-nolint
+get(index)
 ```
 
 ### Paramètres
@@ -21,25 +20,27 @@ var funcRef = table.get(index);
 
 ### Valeur de retour
 
-Une référence de fonction, c'est-à-dire [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Guides/Exported_functions) qui est une enveloppe JavaScript pour manipuler la fonction WebAssembly sous-jacente.
+Selon le type d'élément du tableau, cela peut être une référence de fonction — il s'agit d'une [fonction WebAssembly exportée](/fr/docs/WebAssembly/Guides/Exported_functions), d'une enveloppe JavaScript pour une fonction Wasm sous-jacente, ou d'une référence d'hôte.
 
 ### Exceptions
 
-Si `index` est supérieur ou égal à {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, la méthode lèvera une exception {{jsxref("RangeError")}}.
+Si `index` est supérieur ou égal à [`Table.prototype.length`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/length), la méthode lèvera une exception {{JSxRef("RangeError")}}.
 
 ## Exemples
 
-Dans l'exemple suivant (cf. le fichier [`table.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)), on compile et on instancie le _bytecode_ chargé, `table.wasm`, grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}. On récupère ensuite les références stockées dans le tableau d'export.
+### Utiliser la méthode `get()`
+
+L'exemple suivant (voir [table.html <sup>(angl.)</sup>](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html) sur GitHub, et [le voir en direct <sup>(angl.)</sup>](https://mdn.github.io/webassembly-examples/js-api-examples/table.html) également) compile et instancie le code binaire «&nbsp;table.wasm&nbsp;» chargé à l'aide de la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static). Il récupère ensuite les références stockées dans le tableau exporté.
 
 ```js
-WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
-  var tbl = obj.instance.exports.tbl;
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
+  const tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)()); // 13
   console.log(tbl.get(1)()); // 42
 });
 ```
 
-On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après l'accesseur pour récupérer le valeur stockée dans la référence (autrement dit, on utilise `get(0)()` plutôt que `get(0)`). La valeur exportée est une fonction plutôt qu'une valeur simple.
+Remarquez qu'il faut inclure un second opérateur d'appel de fonction à la fin de l'accesseur pour réellement obtenir la valeur stockée dans la référence (par exemple, `get(0)()` plutôt que `get(0)`) — il s'agit d'une fonction et non d'une simple valeur.
 
 ## Spécifications
 
@@ -51,6 +52,6 @@ On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après
 
 ## Voir aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- Un aperçu de [WebAssembly](/fr/docs/WebAssembly)
+- [Les concepts associés à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

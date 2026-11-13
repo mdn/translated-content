@@ -150,7 +150,7 @@ console.log(object[bar]);
 
 ### ブラケット記法と eval()
 
-JavaScript 初心者はしばしば、代わりにブラケット記法を使えるところで {{jsxref("eval", "eval()")}} を使用してしまう間違いを犯します。
+JavaScript 初心者はしばしば、代わりにブラケット記法を使えるところで {{jsxref("Global_Objects/eval", "eval()")}} を使用してしまう間違いを犯します。
 
 例えば、以下のような構文がたくさんのスクリプトで見られます。
 

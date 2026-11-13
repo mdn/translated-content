@@ -83,11 +83,11 @@ Object.create(
 ```js
 function superclass() {}
 superclass.prototype = {
-  // 여기에 슈퍼 클래스의 생성자, 매서드, 속성을 정의합니다.
+  // 여기에 슈퍼 클래스의 생성자, 메서드, 속성을 정의합니다.
 };
 function subclass() {}
 subclass.prototype = Object.create(superclass.prototype, {
-  // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
+  // 여기에 서브클래스의 생성자, 메서드, 속성을 정의합니다.
 });
 ```
 
