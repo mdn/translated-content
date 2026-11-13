@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke-dashoffset
 original_slug: Web/SVG/Attribute/stroke-dashoffset
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke-dashoffset`** décale la position de départ des pointillés sur les lignes SVG.
 
 > [!NOTE]

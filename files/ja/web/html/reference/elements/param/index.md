@@ -1,12 +1,10 @@
 ---
-title: HTML `<param>` オブジェクト引数要素
+title: "`<param>` オブジェクト引数要素"
 short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
-
-{{Deprecated_Header}}
 
 **`<param>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("object")}} 要素の引数を定義します。
 

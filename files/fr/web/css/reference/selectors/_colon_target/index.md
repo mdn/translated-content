@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:target`
 short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 42f8ef9d26f9a76723a0379a2e7c946db496f27e
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.
@@ -22,7 +22,7 @@ Par exemple, l'URL suivante comporte un identifiant de fragment (indiqué par le
 https://example.com/chemin/document.html#section2
 ```
 
-L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente&nbsp;:
+L'élément suivant est donc ciblé par le sélecteur `:target` avec l'URL précédente&nbsp;:
 
 ```html
 <section id="section2">Exemple</section>
@@ -40,10 +40,10 @@ L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL pré
 
 Quand un document HTML est chargé, le navigateur définit son élément cible. L'élément est identifié à l'aide de l'identifiant de fragment d'URL. Sans l'identifiant de fragment d'URL, le document n'a pas d'élément cible. La pseudo-classe `:target` permet de mettre en forme l'élément cible du document. L'élément peut être mis au point, mis en évidence, animé, etc.
 
-L'élément cible est défini au chargement du document et lors des appels de méthodes [`history.back()`](/fr/docs/Web/API/History/back), [`history.forward()`](/fr/docs/Web/API/History/forward) et [`history.go()`](/fr/docs/Web/API/History/forward). Mais il n'est _pas_ modifié lorsque les méthodes [`history.pushState()`](/fr/docs/Web/API/History/pushState) et [`history.replaceState()`](/fr/docs/Web/API/History/replaceState) sont appelées.
+L'élément cible est défini au chargement du document et lors des appels de méthodes [`history.back()`](/fr/docs/Web/API/History/back), [`history.forward()`](/fr/docs/Web/API/History/forward) et [`history.go()`](/fr/docs/Web/API/History/go). Mais il n'est _pas_ modifié lorsque les méthodes [`history.pushState()`](/fr/docs/Web/API/History/pushState) et [`history.replaceState()`](/fr/docs/Web/API/History/replaceState) sont appelées.
 
 > [!NOTE]
-> En raison d'un [bug possible dans la spécification CSS <sup>(angl.)</sup>](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/), `:target` ne fonctionne pas dans un [composant web](/fr/docs/Web/API/Web_components) car [la racine fantôme](/fr/docs/Web/API/ShadowRoot) ne transmet pas l'élément cible à l'arbre fantôme.
+> En raison d'un [bogue possible dans la spécification CSS <sup>(angl.)</sup>](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/), `:target` ne fonctionne pas dans un [composant web](/fr/docs/Web/API/Web_components), car [la racine fantôme](/fr/docs/Web/API/ShadowRoot) ne transmet pas l'élément cible à l'arbre fantôme.
 
 ## Exemples
 
@@ -59,7 +59,7 @@ La pseudo-classe `:target` peut être utilisée pour mettre en évidence la part
   <li><a href="#p1">Aller au premier paragraphe&nbsp;!</a></li>
   <li><a href="#p2">Aller au deuxième paragraphe&nbsp;!</a></li>
   <li>
-    <a href="#nowhere">
+    <a href="#nulle-part">
       Ce lien ne mène nulle part, car la cible n'existe pas.
     </a>
   </li>

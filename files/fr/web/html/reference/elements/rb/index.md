@@ -3,10 +3,8 @@ title: "Élément HTML `<rb>` : l'élément de base ruby"
 short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<rb>`** est utilisé pour délimiter le composant de texte de base d'une annotation {{HTMLElement("ruby")}}, c'est-à-dire le texte annoté. Un élément `<rb>` doit entourer chaque segment atomique distinct du texte de base.
 
@@ -40,7 +38,7 @@ Remarquez que nous avons inclus deux éléments `<rb>` pour délimiter les deux 
 
 ### Annotations séparées
 
-Notez que l'on pourrait aussi écrire cet exemple avec les deux parties du texte de base annotées complètement séparément. Dans ce cas, il n'est pas nécessaire d'inclure les éléments `<rb>`&nbsp;:
+Notez que l'on peut aussi écrire cet exemple avec les deux parties du texte de base annotées complètement séparément. Dans ce cas, il n'est pas nécessaire d'inclure les éléments `<rb>`&nbsp;:
 
 ```html
 <ruby>

@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/last
 original_slug: Web/XPath/Functions/last
 ---
 
-{{XsltSidebar}}
-
 La fonction `last` retourne un nombre égal à la taille du contexte dans le contexte d'évaluation d'expression.
 
 ### Syntaxe

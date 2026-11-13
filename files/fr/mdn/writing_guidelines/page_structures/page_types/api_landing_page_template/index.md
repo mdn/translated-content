@@ -2,7 +2,7 @@
 title: Modèle de page d'accueil d'API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -50,7 +50,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — cela génère une bannière **Ceci est une technologie expérimentale** qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si elle est expérimentale et que la technologie est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — cela génère une bannière **Obsolète** qui indique que l'utilisation de la technologie est [découragée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — cela génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Vous devez mettre à jour ou supprimer les macros suivantes selon les conseils ci-dessous&nbsp;:
@@ -94,7 +93,7 @@ l10n:
 >
 > _N'oubliez pas de supprimer cette note explicative avant de publier_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Commencez le contenu de la page par un paragraphe introductif — commencez par nommer l'API et dire ce qu'elle fait. Cela doit idéalement être une ou deux phrases courtes.
 
@@ -104,14 +103,14 @@ Dans cette section, décrivez l'objectif de l'API et ses cas d'utilisation de ma
 Quels problèmes résout-elle&nbsp;? Quels concepts implique-t-elle&nbsp;? Comment l'utiliser, d'un point de vue général&nbsp;?
 
 N'entrez pas dans les détails dans cette section et n'incluez pas d'exemples de code.
-S'il y a beaucoup de concepts à expliquer autour de cette API, vous deviez les expliquer dans un article séparé «&nbsp;Fondamentaux&nbsp;» ou «&nbsp;Concepts&nbsp;» (par exemple, [Fondamentaux de WebXR](/fr/docs/Web/API/WebXR_Device_API/Fundamentals)).
-Pour un guide pratique avec des exemples de code, vous deviez inclure un article «&nbsp;Utilisation…&nbsp;» dans votre documentation API (par exemple, [Utilisation de l'API WebVR](/fr/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
+S'il y a beaucoup de concepts à expliquer autour de cette API, vous devez les expliquer dans un article séparé «&nbsp;Fondamentaux&nbsp;» ou «&nbsp;Concepts&nbsp;» (par exemple, [Fondamentaux de WebXR](/fr/docs/Web/API/WebXR_Device_API/Fundamentals)).
+Pour un guide pratique avec des exemples de code, vous devez inclure un article «&nbsp;Utilisation…&nbsp;» dans votre documentation API (par exemple, [Utilisation de l'API WebVR](/fr/docs/Web/API/WebVR_API/Using_the_WebVR_API)).
 
 ## Guides
 
 Ajoutez une liste des pages de guide sous cette page d'accueil. Chaque DT doit être lié à la page de guide. Cette section est facultative&nbsp;; s'il n'y a qu'un seul guide "Utilisation", ainsi que quelques autres guides conceptuels, vous pouvez trouver plus pratique de les lier sous forme de paragraphe à la fin de la section "Concepts et utilisation". Cette section peut être plus utile s'il y a tellement de guides que le texte devient difficile à parcourir.
 
-- Utiliser l'API ...
+- Utiliser l'API …
   - : Paragraphe d'introduction de cette page de guide
 - Guide 2
   - : Paragraphe d'introduction de cette page de guide

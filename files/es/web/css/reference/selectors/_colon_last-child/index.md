@@ -19,7 +19,11 @@ p:last-child {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:last-child {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

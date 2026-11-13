@@ -151,6 +151,6 @@ const end = start.add({ years: 1 }, { overflow: "reject" }); // RangeError: inva
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainYearMonth/subtract", "Temporal.PlainYearMonth.prototype.subtract()")}}

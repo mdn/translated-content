@@ -1,40 +1,38 @@
 ---
 title: "Element : évènement mouseup"
+short-title: mouseup
 slug: Web/API/Element/mouseup_event
+l10n:
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement **`mouseup`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'un bouton d'un dispositif de pointage (une souris ou un pavé tactile par exemple) est relâché lorsque le pointeur est sur cet élément.
+L'évènement **`mouseup`** est déclenché à partir d'un objet {{DOMxRef("Element")}} lorsqu'un bouton d'un dispositif de pointage (comme une souris ou un pavé tactile) est relâché lorsque le pointeur est sur cet élément.
 
-L'évènement `mouseup` peut être vu comme le contrepoint de l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) qui se produit lorsqu'on _appuie_ sur un bouton.
+Les évènements `mouseup` sont le comportement inverse des évènements {{DOMxRef("Element.mousedown_event", "mousedown")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bouillonne</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/MouseEvent"><code>MouseEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
-      <td>
-        <a href="/fr/docs/Web/API/Element/mouseup_event"><code>onmouseup</code></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+Ce comportement est différent de celui des évènements {{DOMxRef("Element/pointerup_event", "pointerup")}}. Lors de l'utilisation d'une souris physique, les évènements `mouseup` se déclenchent chaque fois qu'un bouton de la souris est relâché. Les évènements `pointerup` ne se déclenchent que lors du relâchement du dernier bouton&nbsp;; les relâchements des boutons précédents, alors que d'autres boutons sont maintenus enfoncés, ne déclenchent pas d'évènement `pointerup`.
+
+## Syntaxe
+
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("mouseup", (event) => { })
+
+onmouseup = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("MouseEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et de {{DOMxRef("Event")}}.
+
+{{InheritanceDiagram("MouseEvent")}}
 
 ## Exemples
 
-Voir [la page sur l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_event#exemples) pour un exemple de code.
+Voir la page sur [l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_event#exemples) pour un exemple de code.
 
 ## Spécifications
 
@@ -46,14 +44,14 @@ Voir [la page sur l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
-- D'autres évènements connexes&nbsp;:
-  - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
-  - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
-  - [`click`](/fr/docs/Web/API/Element/click_event)
-  - [`dblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`mouseover`](/fr/docs/Web/API/Element/mouseover_event)
-  - [`mouseout`](/fr/docs/Web/API/Element/mouseout_event)
-  - [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)
-  - [`mouseleave`](/fr/docs/Web/API/Element/mouseleave_event)
-  - [`contextmenu`](/fr/docs/Web/API/Element/contextmenu_event)
+- [Apprendre&nbsp;: Introduction aux évènements](/fr/docs/Learn_web_development/Core/Scripting/Events)
+- L'évènement {{DOMxRef("Element/mousedown_event", "mousedown")}}
+- L'évènement {{DOMxRef("Element/mousemove_event", "mousemove")}}
+- L'évènement {{DOMxRef("Element/click_event", "click")}}
+- L'évènement {{DOMxRef("Element/dblclick_event", "dblclick")}}
+- L'évènement {{DOMxRef("Element/mouseover_event", "mouseover")}}
+- L'évènement {{DOMxRef("Element/mouseout_event", "mouseout")}}
+- L'évènement {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
+- L'évènement {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
+- L'évènement {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
+- L'évènement {{DOMxRef("Element/pointerup_event", "pointerup")}}

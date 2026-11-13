@@ -3,10 +3,10 @@ title: Propriété CSS `box-orient`
 short-title: box-orient
 slug: Web/CSS/Reference/Properties/box-orient
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) pour plus d'informations à propos du standard actuel.
@@ -30,20 +30,22 @@ box-orient: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `horizontal`
   - : La boîte organise son contenu horizontalement.
 - `vertical`
   - : La boîte organise son contenu verticalement.
 - `inline-axis` (HTML)
-  - : La boîte affiche ses enfants le long de l'axe en ligne.
+  - : La boîte affiche ses enfants le long de l'axe en incise.
 - `block-axis` (HTML)
   - : La boîte affiche ses enfants le long de l'axe de bloc.
 
-Les axes en ligne et de bloc dépendent du mode d'écriture pour l'anglais, ils correspondront, respectivement, à `horizontal` et `vertical`.
+Les axes en incise (<i lang="en">inline</i> en anglais) et de bloc dépendent du mode d'écriture pour l'anglais, ils correspondent, respectivement, à `horizontal` et `vertical`.
 
 ## Description
 
-Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne. Cette propriété CSS s'appliquera uniquement aux éléments HTML pour lesquels la propriété CSS {{CSSxRef("display")}} vaut `box` ou `inline-box`.
+Les éléments HTML disposent par défaut leur contenu le long de l'axe en incise. Cette propriété CSS s'applique uniquement aux éléments HTML pour lesquels la propriété CSS {{CSSxRef("display")}} vaut `box` ou `inline-box`.
 
 ## Définition formelle
 
@@ -57,14 +59,14 @@ Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne
 
 ### Définir une orientation de boîte horizontale
 
-Dans cet exemple, la propriété `box-orient` placera les deux paragraphes {{HTMLElement("p")}} sur la même ligne.
+Dans cet exemple, la propriété `box-orient` place les deux paragraphes {{HTMLElement("p")}} sur la même ligne.
 
 #### HTML
 
 ```html
 <div class="exemple">
-  <p>Je serai à gauche de mon voisin.</p>
-  <p>Je serai à droite de mon voisin.</p>
+  <p>Je suis à gauche de mon voisin.</p>
+  <p>Je suis à droite de mon voisin.</p>
 </div>
 ```
 
@@ -76,7 +78,7 @@ div.exemple {
   display: -webkit-box; /* WebKit */
   display: box; /* Comme défini */
 
-  /* Les enfants devraient s'orienter verticalement */
+  /* Les enfants doivent s'orienter verticalement */
   -moz-box-orient: horizontal; /* Mozilla */
   -webkit-box-orient: horizontal; /* WebKit */
   box-orient: horizontal; /* Comme défini */

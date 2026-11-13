@@ -31,7 +31,7 @@ slug: Web/API/MessageEvent
 _继承其父类 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : 返回 {{jsxref("String")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。
+  - : 返回 {{jsxref("String")}}, {{domxref("Blob")}} 或者 {{jsxref("ArrayBuffer")}}，包含来自发送者的数据。
 - {{domxref("MessageEvent.origin")}}
   - : 返回一个表示消息发送者来源的{{jsxref("String")}}
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}

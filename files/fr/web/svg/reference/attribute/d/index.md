@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
-{{SVGRef}}
-
 L'attribut **`d`** définit un tracé à dessiner.
 
 La définition d'un tracé est une liste de [commandes de tracé](#commandes_de_tracé) où chaque commande est composée d'une lettre pour la commande, et de nombres qui représentent les paramètres de la commande. Les commandes sont détaillées [ci-dessous](#commandes_de_tracé).

@@ -1,5 +1,5 @@
 ---
-title: HTML `<figcaption>` 図キャプション要素
+title: "`<figcaption>` 図キャプション要素"
 short-title: <figcaption>
 slug: Web/HTML/Reference/Elements/figcaption
 l10n:

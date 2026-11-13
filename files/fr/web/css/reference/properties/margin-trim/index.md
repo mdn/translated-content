@@ -3,10 +3,8 @@ title: Propriété CSS `margin-trim`
 short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: bf7ff749b987d530e9a6c07f23ac66f94d968e57
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
 
@@ -31,26 +29,28 @@ margin-trim: unset;
 
 ### Valeurs
 
-- `none` {{Experimental_Inline}}
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
+- `none`
   - : Les marges ne sont pas rognées par le conteneur.
 
-- `block` {{Experimental_Inline}}
+- `block`
   - : Les marges des enfants de type bloc qui sont adjacentes aux bords du conteneur sont rognées à zéro sans affecter les marges du conteneur lui-même.
 
-- `block-start` {{Experimental_Inline}}
+- `block-start`
   - : La marge du premier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
-- `block-end` {{Experimental_Inline}}
+- `block-end`
   - : La marge du dernier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
-- `inline` {{Experimental_Inline}}
-  - : Les marges des enfants en ligne qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
+- `inline`
+  - : Les marges des enfants en incise (<i lang="en">inline</i> en anglais) qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
 
-- `inline-start` {{Experimental_Inline}}
-  - : La marge entre le bord du conteneur et le premier enfant en ligne est rognée à zéro.
+- `inline-start`
+  - : La marge entre le bord du conteneur et le premier enfant en incise est rognée à zéro.
 
-- `inline-end` {{Experimental_Inline}}
-  - : La marge entre le bord du conteneur et le dernier enfant en ligne est rognée à zéro.
+- `inline-end`
+  - : La marge entre le bord du conteneur et le dernier enfant en incise est rognée à zéro.
 
 ## Définition formelle
 
@@ -64,9 +64,9 @@ margin-trim: unset;
 
 ### Utilisation simple
 
-Une fois la prise en charge de cette propriété implémentée, elle fonctionnera probablement ainsi&nbsp;:
+Une fois la prise en charge de cette propriété implémentée, elle fonctionne probablement ainsi&nbsp;:
 
-Lorsque vous avez un conteneur avec des enfants en ligne et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pourriez faire quelque chose comme ceci&nbsp;:
+Lorsque vous avez un conteneur avec des enfants en incise et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pouvez faire quelque chose comme ceci&nbsp;:
 
 ```css
 article {
@@ -86,7 +86,7 @@ article > span {
 }
 ```
 
-Le problème ici est que vous vous retrouveriez avec 20px de trop à droite de la ligne, donc vous pourriez faire ceci pour corriger&nbsp;:
+Le problème ici est que vous vous retrouvez avec 20px de trop à droite de la ligne, donc vous pouvez faire ceci pour corriger&nbsp;:
 
 ```css
 span:last-child {
@@ -95,7 +95,7 @@ span:last-child {
 }
 ```
 
-C'est pénible d'avoir à écrire une autre règle pour obtenir ce résultat, et ce n'est pas très flexible. À la place, `margin-trim` pourrait corriger cela&nbsp;:
+C'est pénible d'avoir à écrire une autre règle pour obtenir ce résultat, et ce n'est pas très flexible. À la place, `margin-trim` peut corriger cela&nbsp;:
 
 ```css
 article {

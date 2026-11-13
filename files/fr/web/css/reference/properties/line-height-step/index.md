@@ -3,7 +3,7 @@ title: Propriété CSS `line-height-step`
 short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 {{SeeCompatTable}}
@@ -24,11 +24,9 @@ line-height-step: revert-layer;
 line-height-step: unset;
 ```
 
-La propriété `line-height-step` peut être définie par l'une des valeurs suivantes&nbsp;:
-
-- une `<length>`.
-
 ### Valeurs
+
+Cette propriété est définie avec la valeur suivante&nbsp;:
 
 - {{CSSxRef("&lt;length&gt;")}}
   - : La longueur ({{CSSxRef("&lt;length&gt;")}}) définie est utilisée dans le calcul du _pas_ de hauteur de la boîte de ligne.
@@ -76,4 +74,4 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 - La propriété {{CSSxRef("font")}}
 - La propriété {{CSSxRef("font-size")}}
 - La propriété {{CSSxRef("line-height")}}
-- La psécification [de dimensionnement rythmique CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-rhythm/)
+- La spécification [de dimensionnement rythmique CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-rhythm/)

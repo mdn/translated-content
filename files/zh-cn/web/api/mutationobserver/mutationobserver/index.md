@@ -9,7 +9,7 @@ DOM 规范中的 `MutationObserver()` 构造函数——是 {{domxref("MutationO
 
 ## 语法
 
-```plain
+```js-nolint
 var observer = new MutationObserver(callback);
 ```
 

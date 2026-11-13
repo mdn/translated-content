@@ -11,10 +11,18 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Abrir un Pull Request](#abrir-un-pull-request)
   - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
   - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
+- [Levanta el entorno local (opcional)](#levanta-el-entorno-local-opcional)
 - [Traducir un documento](#traducir-un-documento)
+- [Imágenes y otros archivos](#imágenes-y-otros-archivos)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
+  - [Términos técnicos](#términos-técnicos)
+  - [Marcadores en línea](#marcadores-en-línea)
+  - [Formato matemático](#formato-matemático)
+  - [Macros de glosario](#macros-de-glosario)
+  - [Elegir el macro de referencia correcto](#elegir-el-macro-de-referencia-correcto)
   - [Estilo de escritura](#estilo-de-escritura)
+  - [Notas pendientes (`TODO`)](#notas-pendientes-todo)
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
@@ -112,6 +120,12 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 ---
 
+## Levanta el entorno local (opcional)
+
+Si quieres **ver tus traducciones renderizadas en tu propia computadora** mientras trabajas, sigue nuestra guía paso a paso: [Levanta el entorno local de MDN](./entorno-local.md). No es obligatorio para contribuir (el bot genera una previsualización en cada PR), pero es más cómodo para revisar enlaces, macros y formato en vivo.
+
+---
+
 ## Traducir un documento
 
 1. Ubica la versión en inglés dentro de [`mdn/content/files/en-us/`](https://github.com/mdn/content/tree/main/files/en-us).
@@ -123,6 +137,9 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 
 3. Traduce manteniendo intacto lo siguiente:
    - Identificadores del código (APIs, propiedades, métodos, variables, funciones).
+     - Los nombres propios de APIs conservan su forma en inglés: no se traducen **ni se reordenan**.
+       Escribe `Canvas API`, `WebVR API`, `WebXR Device API`, no «API Canvas» ni «API WebXR Device».
+       El artículo en español va delante del nombre completo: «la Canvas API quedó obsoleta».
    - Macros de Kumascript como `{{domxref(...)}}`, `{{jsxref(...)}}`, `{{Glossary(...)}}`.
    - Bloques de código: sólo traduce comentarios y cadenas dirigidas al usuario final.
    - Enlaces externos (GitHub, web.dev, etc.).
@@ -130,25 +147,26 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
 4. Cambia los enlaces internos de `/en-US/` a `/es/`.
 
    **¿Por qué `/es/` aunque la página no exista en español?**
-   MDN renderiza el contenido en inglés como respaldo (_fallback_) para las secciones o páginas que aún no han sido traducidas, pero siempre bajo la URL `/es/`. Un enlace como `/es/docs/Web/API/Fetch_API` funciona correctamente aunque la página no tenga traducción completa: el lector verá el contenido en inglés dentro del contexto de la interfaz en español.
+   Por coherencia de idioma del proyecto, no por un respaldo automático: si `files/es/…/index.md` no existe, la URL `/es/docs/…` devuelve `404`. MDN no sirve el artículo completo en inglés como sustituto de una página en español inexistente, y tampoco rellena con inglés las secciones que falten dentro de una página ya traducida: el texto en inglés que se ve en una traducción parcial está escrito en el propio archivo de `files/es/`. Aun así, el enlace **debe** escribirse en `/es/`: es la convención del proyecto, y así queda correcto automáticamente en cuanto la página destino se traduzca.
 
-   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. Si la página de destino no existe en español, el sistema la muestra en inglés de forma transparente. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
+   Por eso la regla general es: **usa siempre `/es/` en los enlaces internos absolutos de MDN**, sin excepción. No conserves `/en-US/` "para que funcione": un enlace en `/en-US/` saca al lector del contexto de su idioma preferido, incluso si la traducción sí existe.
 
-   **Anclas (`#fragmento`): deben coincidir con el encabezado que se renderiza**
+   **Anclas (`#fragmento`): deben coincidir con un encabezado real de la página destino en español**
 
-   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID del encabezado **tal como se renderiza en la página destino**. No es simplemente "español si la URL es `/es/`": lo que importa es qué contenido sirve MDN en esa URL.
+   Cuando un enlace incluye un fragmento (`#`), la ancla debe coincidir con el ID de un encabezado que exista **en la página en español** (asumiendo que la página ya está traducida; si no lo está, aplica la regla anterior del error 404). Un fragmento que no coincide con ningún ID no rompe el enlace (el navegador simplemente lo ignora y carga la página desde el inicio), pero deja al lector en la parte superior en lugar de la sección esperada.
 
-   | Caso                    | URL de destino               | Página destino              | Ancla correcta                                      |
-   | ----------------------- | ---------------------------- | --------------------------- | --------------------------------------------------- |
-   | Página _sin_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve inglés (fallback) | Ancla en inglés: `#browser_compatibility`           |
-   | Página _con_ traducción | `/es/docs/Web/API/Fetch_API` | MDN sirve español           | Ancla en español: `#compatibilidad_con_navegadores` |
-   | Misma página            | `#fragmento`                 | El archivo actual           | Ancla del encabezado traducido                      |
+   | Caso                                | Qué hacer con la ancla                                                            |
+   | ----------------------------------- | --------------------------------------------------------------------------------- |
+   | La página destino está traducida    | Usa el ID del encabezado **traducido**: `#compatibilidad_con_navegadores`         |
+   | La página destino no está traducida | Quita el fragmento y deja solo el enlace a la página; agrégalo cuando se traduzca |
+   | Enlace dentro de la misma página    | Usa el ID del encabezado traducido de este archivo                                |
 
-   **Ejemplo del problema frecuente:** el inglés tiene `/en-US/docs/Web/API/Fetch_API#browser_compatibility`. Al traducir la página que contiene ese enlace, es tentador cambiar ambas partes a la vez: `/es/docs/Web/API/Fetch_API#compatibilidad_con_navegadores`. Pero si esa página no tiene traducción española, MDN la sirve en inglés y el encabezado `#compatibilidad_con_navegadores` no existe: el lector llega a la página pero sin desplazarse a la sección correcta.
+   **Ejemplo del problema frecuente:** dado el enlace en inglés `/en-US/docs/Web/API/Fetch_API#browser_compatibility`, al traducir, cambiar solo el prefijo (`/es/docs/Web/API/Fetch_API#browser_compatibility`) deja una ancla en inglés que no existe en la página en español, donde ese encabezado se renderiza como `#compatibilidad_con_navegadores`. En sentido contrario, copiar una ancla ya traducida hacia una página que aún no tiene traducción al español tampoco funciona.
 
-   La solución es verificar antes de cambiar la ancla:
-   - ¿Existe `files/es/…/Fetch_API/index.md` en el repositorio con ese encabezado ya traducido? → usa la ancla en español.
-   - ¿No existe o la sección puntual sigue en inglés? → cambia la URL a `/es/` pero **conserva la ancla en inglés**: `/es/docs/Web/API/Fetch_API#browser_compatibility`.
+   La solución es verificar antes de escribir la ancla:
+   - ¿Existe `files/es/…/Fetch_API/index.md` con ese encabezado ya traducido? → usa la ancla en español.
+   - ¿No existe la página en español? → deja solo `/es/docs/Web/API/Fetch_API`, sin fragmento.
+   - ¿Existe la página pero esa sección puntual aún no está traducida? → usa el ID tal como aparece renderizado actualmente en la página en español (puede seguir en inglés).
 
    Para los **enlaces dentro de la misma página** (`[ver más](#cómo_funciona)`), la ancla debe coincidir con el ID generado por el encabezado traducido. Si tradujiste `## How it works` como `## Cómo funciona`, el enlace debe ser `#cómo_funciona`.
 
@@ -163,6 +181,63 @@ Ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
    Abre la página en `http://localhost:5042/es/docs/...`, inspecciona el encabezado con las herramientas de desarrollo del navegador y copia el `id` real generado por el _build_. Ese es el único valor confiable; no lo derives manualmente del texto del encabezado.
 
 5. Revisa el _front-matter_ YAML (`title`, `slug`, `l10n.sourceCommit`) como se describe en la siguiente sección.
+
+---
+
+## Imágenes y otros archivos
+
+**Regla corta: no copies a `files/es/` las imágenes que ya existen en `mdn/content`.**
+
+Cuando una página en español referencia una imagen que sólo existe en la carpeta en inglés, el _build_ resuelve automáticamente el `src` hacia la ruta de `en-US`. Basta con conservar en el Markdown la misma referencia relativa que usa el original:
+
+```md
+![Descripción de la imagen traducida al español](default-vite.png)
+```
+
+Y el HTML publicado en la página en español queda así:
+
+```html
+<img
+  src="/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started/default-vite.png"
+  alt="Descripción de la imagen traducida al español" />
+```
+
+Es decir: **traduce el texto del `alt`, pero no subas el archivo binario.**
+
+### ¿Por qué no duplicarlas?
+
+- **Tamaño del repositorio.** Git no puede calcular diferencias (_diff_) sobre un `.png` o un `.jpg`: cada commit que toque el archivo suma su peso completo al historial, para siempre.
+- **Desincronización silenciosa.** Si la imagen en inglés se actualiza o se renombra, la copia en español queda obsoleta sin que nada falle en CI. Es un problema real: la versión anterior de [Primeros pasos en React][react-getting-started] seguía mostrando una captura de `create-react-app` mucho después de que el original en inglés cambiara a Vite.
+- **No aporta nada.** Una copia idéntica byte por byte se renderiza exactamente igual que la referencia al original.
+
+De hecho, en todo `files/es/` hay apenas un puñado de imágenes, y casi todas son capturas propias que no existen en inglés.
+
+### ¿Cuándo sí se agrega una imagen a `files/es/`?
+
+Sólo cuando el **contenido de la imagen** es específico del idioma, por ejemplo:
+
+- Una captura de pantalla de una interfaz en español (el navegador, un formulario, un panel de herramientas de desarrollo).
+- Un diagrama cuyas etiquetas están en inglés en el original y aportan al lector verlas en español.
+
+En ese caso, colócala en la misma carpeta del documento (`files/es/<ruta>/mi-imagen.png`), usa el mismo nombre de archivo que el original para que sea evidente qué está reemplazando, y comprímela antes de subirla:
+
+```bash
+# Desde tu clon de mdn/content
+npm run filecheck ../translated-content/files/es/<ruta>/mi-imagen.png --save-compression
+```
+
+### Cómo verificar cómo quedó resuelta una imagen
+
+Cualquier página de MDN expone su HTML ya renderizado en `index.json`, lo que permite comprobar el `src` final sin levantar el sitio:
+
+```bash
+curl -sL "https://developer.mozilla.org/es/docs/<Slug>/index.json" | grep -oE '<img[^>]{0,140}'
+```
+
+Si el resultado apunta a `/en-US/...`, el respaldo funcionó correctamente y no hace falta hacer nada más.
+
+> [!NOTE]
+> Antes de agregar una imagen nueva, revisa el repositorio [mdn/shared-assets](https://github.com/mdn/shared-assets): funciona como biblioteca de recursos compartidos y quizá ya exista algo que puedas reutilizar. Los detalles generales están en [Cómo agregar imágenes y medios][guia-imagenes].
 
 ---
 
@@ -272,6 +347,43 @@ Cuando en inglés aparece `{{Glossary("TLD")}}` y el término natural en españo
 
 > Excepción: si la frase en español ya explica el término justo después del macro (por ejemplo, `{{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel`), deja el macro con un solo argumento para evitar duplicar el texto renderizado.
 
+### Elegir el macro de referencia correcto
+
+Cada macro de referencia construye la URL sobre un subárbol fijo de la documentación. Si eliges el equivocado, el enlace apunta a una página que no existe, o que sólo funciona por una redirección, y nada en el PR lo delata: la macro se renderiza igual y el CI pasa en verde.
+
+| Macro                        | Enlaza a                                 | Úsalo para                                                 |
+| ---------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| `{{domxref("X")}}`           | `/es/docs/Web/API/X`                     | Interfaces, métodos, propiedades y eventos de las APIs web |
+| `{{jsxref("X")}}`            | `/es/docs/Web/JavaScript/Reference/…/X`  | Objetos globales y sintaxis de JavaScript                  |
+| `{{cssxref("X")}}`           | `/es/docs/Web/CSS/Reference/…/X`         | Propiedades, tipos de valor, funciones y pseudoclases CSS  |
+| `{{HTMLElement("X")}}`       | `/es/docs/Web/HTML/Reference/Elements/X` | Elementos HTML                                             |
+| `{{httpheader("X")}}`        | `/es/docs/Web/HTTP/Reference/Headers/X`  | Cabeceras HTTP                                             |
+| `{{SVGElement("X")}}`        | `/es/docs/Web/SVG/Reference/Element/X`   | Elementos SVG                                              |
+| `{{SVGAttr("X")}}`           | `/es/docs/Web/SVG/Reference/Attribute/X` | Atributos SVG                                              |
+| `{{Glossary("X", "texto")}}` | `/es/docs/Glossary/X`                    | Términos del glosario                                      |
+
+**Los argumentos no son iguales en todas.** Esto se presta a error porque la forma se parece:
+
+- `domxref`, `jsxref`, `cssxref`, `HTMLElement` y `httpheader` aceptan `(página, texto a mostrar, ancla)`.
+- **`Glossary` acepta sólo `(término, texto a mostrar)`**, sin ancla. Un tercer argumento no hace nada.
+- **`SVGElement` y `SVGAttr` aceptan sólo el nombre**; no tienen parámetro de texto a mostrar.
+
+**El error más frecuente es usar `domxref` para tipos de JavaScript.** Aparecen en las páginas de APIs web, así que es natural tratarlos como parte del DOM, pero sus páginas viven en la referencia de JavaScript. `/es/docs/Web/API/DOMString` devuelve un 404; `Web/API/Boolean`, `Web/API/Promise` y `Web/API/USVString` responden 200 sólo porque redirigen a la referencia de JavaScript, es decir, el enlace funciona por accidente y con un salto de más.
+
+Los tipos de WebIDL además no se enlazan con su propio nombre, porque no tienen página propia: se enlazan al tipo de JavaScript que representan, y el texto mostrado cambia con ellos.
+
+| En la fuente en inglés                                                              | Qué usar                              |
+| ----------------------------------------------------------------------------------- | ------------------------------------- |
+| `DOMString`, `USVString`, `ByteString`, `CSSOMString`                               | `{{jsxref("String")}}`                |
+| `ArrayBufferView`                                                                   | `{{jsxref("TypedArray")}}`            |
+| `Boolean`, `Promise`, `Number`, `JSON`, `ArrayBuffer`, `Float32Array`, `Uint8Array` | `{{jsxref("…")}}` con el mismo nombre |
+
+Si necesitas conservar el nombre traducido en el texto visible, va como segundo argumento y la página sigue siendo la inglesa: `{{jsxref("Promise", "Promesa")}}`.
+
+**Para un macro que no esté en la tabla**, la fuente autorizada es [rari](https://github.com/mdn/rari), el motor que renderiza MDN hoy: cada macro es un archivo en `crates/rari-doc/src/templ/templs/`, y ahí están tanto la ruta base como los argumentos que acepta. Por ejemplo, `links/svgattr.rs` declara `svgattr(name: String)`, que es de donde sale que sólo admita un argumento.
+
+Conviene saber que `kumascript/macros/` en [Yari](https://github.com/mdn/yari) **ya no es la implementación que se usa al renderizar**, aunque los archivos sigan ahí. Por ejemplo, `HTMLElement.ejs` construye `Web/HTML/Element/`, mientras que la página publicada enlaza a `Web/HTML/Reference/Elements/`. Si consultas Yari para resolver una duda sobre macros, puedes acabar con una ruta que no coincide con la real.
+
 ### Estilo de escritura
 
 #### Tuteo (tú) en lugar de usted
@@ -318,6 +430,42 @@ Rari/Yari distingue mayúsculas en los nombres de macro. Usa exactamente la capi
 
 ---
 
+### Notas pendientes (`TODO`)
+
+A veces, al traducir, queda una duda que no se puede resolver en el momento: un ancla cuyo destino todavía no existe en español, o un término sin equivalente acordado. Para esos casos usamos un marcador en el propio archivo, con **este formato exacto**:
+
+```md
+<!-- TODO(l10n-es): enlace sin ancla; #compatibilidad_con_navegadores depende de que se sincronice Web/API/Fetch_API -->
+```
+
+**El prefijo `TODO(l10n-es)` no es decorativo.** Buscar sólo `TODO` en `files/es/` no es fiable: también encuentra la palabra española _TODOS_ (`Elimina el contorno de TODOS los enlaces`) y títulos de enlaces en inglés (`A simple TODO list using HTML5 IndexedDB`). Con el prefijo, un solo comando da el inventario completo del locale:
+
+```bash
+grep -rn 'TODO(l10n-es)' files/es/
+```
+
+#### Antes de dejar un marcador, intenta resolver la duda
+
+La mayoría se responden en el momento, y un marcador resuelto vale más que un marcador registrado. Para el caso más común, un ancla, hay cuatro escenarios y sólo uno termina en `TODO`:
+
+1. **El fragmento apunta a un identificador técnico.** No se traduce, así que no hay nada que esperar: corrige el enlace con el ancla en inglés y sigue. Los encabezados en prosa sí cambian (`#deprecated` → `#obsoleto`), pero un identificador no: `#display-p3` convive con `srgb`, `oklab` y `rec2020`, son valores de la función CSS `color()` y sobreviven igual a la traducción.
+2. **La página destino ya está traducida.** Usa el `id` que renderiza hoy esa página, que puede seguir en inglés si esa sección concreta aún no se tradujo. No lo deduzcas de memoria: compruébalo contra la página real (ver la sección de anclas más arriba).
+3. **Un PR abierto ya crea ese `id`.** Pasa a menudo cuando alguien traduce dos páginas relacionadas: no hace falta marcador ni issue, sólo apuntar al ancla que ese PR va a crear y decir en la conversación del PR cuál de los dos se fusiona primero.
+4. **La página destino no existe en español, o existe pero está desactualizada y no tiene esa sección.** Este sí es el caso del marcador. Ver abajo.
+
+#### Si la duda depende de otra página
+
+Deja **el enlace sin el fragmento** (un ancla que no coincide con nada deja al lector arriba de la página, igual que si no hubiera ancla), agrega el marcador, y **abre el issue sobre la página destino**, no sobre la que lleva el marcador: un issue para _traducir_ o _sincronizar_ `Web/API/Fetch_API`, listando en su cuerpo los enlaces que están esperando.
+
+El sentido importa. Nadie que vaya a traducir una página busca antes qué otras páginas le enlazan, así que un issue abierto sobre el archivo que lleva el marcador se quedaría dormido exactamente igual que el marcador. Puesto en la página destino, agrupa varios marcadores en un solo issue y le pone la lista de arreglos delante a quien puede resolverlos.
+
+#### Dos límites
+
+- **Los marcadores se publican.** Los comentarios HTML llegan al HTML renderizado. No se ven al leer, pero quedan en el código fuente de la página publicada. Por eso el marcador debe ser breve y describir la duda concreta, no ser un apunte personal.
+- **Un `TODO` no es para contenido sin traducir.** Si a una sección le falta el texto, eso no es una duda pendiente sino una traducción incompleta, y el camino es una sub-tarea de sincronización de esa página. Marcadores como `<!-- TODO: add content -->` o `!!TODO!!` dejados en medio de la prosa acaban publicándose y se leen como un error en la página.
+
+---
+
 ## Arreglar "flaws" (defectos)
 
 Al ejecutar `npm start` en tu clon de `mdn/content` puedes previsualizar localmente los cambios. La misma previsualización está disponible en la URL que genera el bot al abrir un PR. En ambas vistas, la parte superior del documento muestra los _flaws_ detectados automáticamente (enlaces rotos, macros mal usadas, etc.). Muchos se pueden corregir con un clic o aplicando una sugerencia.
@@ -349,3 +497,5 @@ Al ejecutar `npm start` en tu clon de `mdn/content` puedes previsualizar localme
 Más información en [la discusión general de la comunidad de español](https://github.com/mdn/translated-content/discussions/4029).
 
 [guia-contribucion]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guia-imagenes]: https://developer.mozilla.org/es/docs/MDN/Writing_guidelines/Howto/Images_media
+[react-getting-started]: https://developer.mozilla.org/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started

@@ -1,5 +1,5 @@
 ---
-title: "Élément HTML `<code>` : l'élément de code en ligne"
+title: "Élément HTML `<code>` : l'élément de code en incise"
 short-title: <code>
 slug: Web/HTML/Reference/Elements/code
 l10n:

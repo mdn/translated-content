@@ -3,10 +3,8 @@ title: "Élément HTML `<strike>` : l'élément obsolète de texte barré"
 short-title: <strike>
 slug: Web/HTML/Reference/Elements/strike
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 

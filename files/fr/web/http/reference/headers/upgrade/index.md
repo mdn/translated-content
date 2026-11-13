@@ -3,7 +3,7 @@ title: En-tête Upgrade
 short-title: Upgrade
 slug: Web/HTTP/Reference/Headers/Upgrade
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 44a853a7fce4ef042b6eeddc96f0a587f25704d3
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "de réponse")}} HTTP **`Upgrade`** peuvent être utilisés pour basculer une connexion client/serveur déjà établie sur un autre protocole (en conservant le même protocole de transport). Par exemple, un client peut utiliser cet en-tête pour mettre à niveau une connexion HTTP/1.1 vers HTTP/2, ou une connexion HTTP(S) vers une connexion WebSocket.
@@ -69,7 +69,7 @@ Si le serveur décide de mettre à niveau la connexion, il doit&nbsp;:
 
 2. Envoyer une réponse à la requête originelle _en utilisant le nouveau protocole_ (le serveur ne peut basculer sur un protocole que s'il est en mesure de répondre à la requête originelle avec celui-ci).
 
-Un serveur peut également envoyer cet en-tête lors d'une réponse {{HTTPStatus("426")}} `Upgrade Required` pour indiquer que le serveur ne traitera pas la requête avec le protocole actuel, mais peut le faire si le protocole est changé. Le client peut alors initier un changement de protocole comme vu ci-avant.
+Un serveur peut également envoyer cet en-tête lors d'une réponse {{HTTPStatus("426")}} `Upgrade Required` pour indiquer que le serveur ne traite pas la requête avec le protocole actuel, mais peut le faire si le protocole est changé. Le client peut alors initier un changement de protocole comme vu ci-avant.
 
 Pour plus de détails et d'exemples, voir [l'article sur le mécanisme de mise à niveau du protocole](/fr/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 

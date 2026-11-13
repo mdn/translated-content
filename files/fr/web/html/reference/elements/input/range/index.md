@@ -3,12 +3,14 @@ title: Valeur d'attribut HTML `<input type="range">`
 short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`range`** permettent à l'utilisateur·ice d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de `{{HTMLElement("input/number", "number")}}` par exemple).
 
 Ce genre de composant n'étant pas précis, ce type ne doit pas être utilisé lorsque la valeur exacte fournie est importante.
+
+Si le navigateur de l'utilisateur·ice ne prend pas en charge le type `range`, il utilise le type `{{HTMLElement("input/text", "text")}}` à la place.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
@@ -45,8 +47,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-Si le navigateur de l'utilisateur·ice ne prend pas en charge le type `range`, il utilise le type `{{HTMLElement('input/text', 'text')}}` à la place.
 
 ## Valeur
 
@@ -151,7 +151,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 
 #### Utiliser l'attribut `step` avec `any`
 
-Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step)&nbsp;:
+Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on peut utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step)&nbsp;:
 
 ##### HTML
 
@@ -177,7 +177,7 @@ Cet exemple permet à l'utilisateur·ice de choisir n'importe quelle valeur entr
 
 ### Ajouter des marques
 
-Pour ajouter des marques à un contrôle d'intervalle, incluez l'attribut `list`, en lui donnant l'`id` d'un élément {{HTMLElement("datalist")}} qui définit une série de marques sur le contrôle. Chaque point est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) correspond à la valeur de l'intervalle à laquelle une marque doit être dessinée.
+Pour ajouter des marques à un contrôle d'intervalle, incluez l'attribut `list`, en lui donnant un `id` d'un élément {{HTMLElement("datalist")}} qui définit une série de marques sur le contrôle. Chaque point est représenté par un élément {{HTMLElement("option")}} dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) correspond à la valeur de l'intervalle à laquelle une marque doit être dessinée.
 
 #### HTML
 
@@ -367,7 +367,7 @@ Voir [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Wri
 - [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - L'élément {{HTMLElement("input")}} et l'interface {{DOMxRef("HTMLInputElement")}} sur laquelle l'élément du DOM correspondant est basé
 - L'élément [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number)
-- Les propriétés {{DOMxRef('validityState.rangeOverflow')}} et {{DOMxRef('validityState.rangeUnderflow')}}
+- Les propriétés {{DOMxRef("validityState.rangeOverflow")}} et {{DOMxRef("validityState.rangeUnderflow")}}
 - [Contrôler plusieurs paramètres avec `ConstantSourceNode`](/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Mettre en forme un contrôle d'intervalle <sup>(angl.)</sup>](https://css-tricks.com/sliding-nightmare-understanding-range-input/)

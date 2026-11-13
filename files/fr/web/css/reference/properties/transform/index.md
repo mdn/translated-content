@@ -3,7 +3,7 @@ title: Propriété CSS `transform`
 short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 l10n:
-  sourceCommit: b069bf45c0a5706f838f9e46d8494cd7babd605a
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform`** permet de faire pivoter, redimensionner, incliner ou déplacer un élément.
@@ -16,7 +16,7 @@ Vous pouvez également utiliser les propriétés de transformation individuelles
 
 > [!WARNING]
 > Seuls certains éléments peuvent être transformés.
-> Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model#les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/colgroup) ne peuvent pas être transformés.
+> Les éléments dont la disposition est gérée avec des [boîtes en incise (<i lang="en">inline</i> en anglais) qui ne sont pas remplacées](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model#les_éléments_en_incise_et_les_boîtes_en_incise), des [colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Reference/Elements/colgroup) ne peuvent pas être transformés.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: transform")}}
 
@@ -95,9 +95,9 @@ transform: revert-layer;
 transform: unset;
 ```
 
-La propriété `transform` peut être définie avec une valeur ayant pour mot-clé `none` ou avec une ou plusieurs valeurs de type `<transform-function>`.
-
 ### Valeurs
+
+La propriété `transform` peut être définie avec une valeur ayant pour mot-clé `none` ou avec une ou plusieurs valeurs de type `<transform-function>`&nbsp;:
 
 - {{CSSxRef("&lt;transform-function&gt;")}}
   - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/Reference/Values/transform-function) à appliquer.

@@ -3,14 +3,12 @@ title: Constructeur Temporal.PlainDateTime()
 short-title: Temporal.PlainDateTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/PlainDateTime
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
-
-{{SeeCompatTable}}
 
 Le constructeur **`Temporal.PlainDateTime()`** crée des objets {{JSxRef("Temporal.PlainDateTime")}}.
 
-Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devriez généralement créer des objets `Temporal.PlainDateTime` en utilisant la méthode statique {{JSxRef("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}, qui peut gérer une variété de types d'entrée.
+Ce constructeur permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devez généralement créer des objets `Temporal.PlainDateTime` en utilisant la méthode statique {{JSxRef("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}, qui peut gérer une variété de types d'entrée.
 
 ## Syntaxe
 
@@ -85,5 +83,5 @@ console.log(dt2.toString()); // 2021-07-01T00:00:00[u-ca=hebrew]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
 - La méthode statique {{JSxRef("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}

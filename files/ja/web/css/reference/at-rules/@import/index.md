@@ -1,8 +1,9 @@
 ---
-title: "@import"
+title: CSS `@import` アットルール
+short-title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。

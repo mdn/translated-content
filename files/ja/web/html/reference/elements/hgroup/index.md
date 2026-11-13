@@ -1,5 +1,5 @@
 ---
-title: HTML `<hgroup>` 見出しグループ要素
+title: "`<hgroup>` 見出しグループ要素"
 short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 l10n:

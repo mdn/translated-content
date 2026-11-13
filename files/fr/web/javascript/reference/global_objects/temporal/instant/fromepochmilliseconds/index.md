@@ -55,7 +55,7 @@ console.log(sts1Liftoff.toString()); // 1981-04-12T12:00:04Z
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La propriété {{JSxRef("Temporal/Instant/epochMilliseconds", "Temporal.Instant.prototype.epochMilliseconds")}}
 - La méthode statique {{JSxRef("Temporal/Instant/from", "Temporal.Instant.from()")}}
 - La méthode statique {{JSxRef("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}

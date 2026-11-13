@@ -68,7 +68,7 @@ console.log(meetingTimeInParis.toString()); // 2021-08-01T12:00:00+02:00[Europe/
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/withCalendar", "Temporal.ZonedDateTime.prototype.withCalendar()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/withPlainTime", "Temporal.ZonedDateTime.prototype.withPlainTime()")}}

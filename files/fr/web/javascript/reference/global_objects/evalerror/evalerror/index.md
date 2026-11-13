@@ -68,5 +68,5 @@ try {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Error")}}
+- L'objet natif {{JSxRef("Error")}}
 - La fonction {{JSxRef("Global_Objects/eval", "eval()")}}

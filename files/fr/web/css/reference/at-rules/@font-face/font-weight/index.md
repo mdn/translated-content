@@ -3,19 +3,19 @@ title: Descripteur de règle CSS `font-weight`
 short-title: font-weight
 slug: Web/CSS/Reference/At-rules/@font-face/font-weight
 l10n:
-  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
+  sourceCommit: c66cecb0ec58ddea1bd624aa89dd355d9b90b5c3
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}. La propriété {{CSSxRef("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
 
 En général, un·e développeur·euse souhaite utiliser des polices d'une même famille avec différentes graisses. Avec les polices traditionnelles ou _statiques_, un fichier de police contient les caractères d'une famille dans une graisse et un style précis&nbsp;: par exemple, «&nbsp;Helvetica bold italic&nbsp;». Pour permettre l'affichage de polices fines, normales, grasses ou extra-grasses lorsque la propriété `font-weight` demande une graisse spécifique, vous pouvez définir plusieurs règles {{CSSxRef("@font-face")}} pour la même famille (toutes avec la même valeur de descripteur {{CSSxRef("@font-face/font-family", "font-family")}}), une pour chaque graisse ou plage de graisses.
 
-Pour déclarer la police à utiliser pour une plage de graisses, indiquez une paire de valeurs de graisse séparées par un espace comme valeur du descripteur `font-weight`. Lorsque les règles CSS définissent une graisse via la propriété {{CSSxRef("font-weight")}} ou la propriété raccourcie {{CSSxRef("font")}}, la police appropriée sera alors utilisée.
+Pour déclarer la police à utiliser pour une plage de graisses, indiquez une paire de valeurs de graisse séparées par un espace comme valeur du descripteur `font-weight`. Lorsque les règles CSS définissent une graisse avec la propriété {{CSSxRef("font-weight")}} ou la propriété raccourcie {{CSSxRef("font")}}, la police appropriée est alors utilisée.
 
-Par exemple, si le descripteur est `font-weight: 400 600;`, lorsque la propriété est `font-weight: 450` ou `font-weight: 550`, cette police sera utilisée pour cette famille de polices.
-Que la police soit statique ou une [police variable](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts), la police correspondant à la plage sera utilisée. Dans ce cas, si la police est statique, `450` et `550` apparaîtront identiques. Si la police est variable, la seconde sera plus grasse.
+Par exemple, si le descripteur est `font-weight: 400 600;`, lorsque la propriété est `font-weight: 450` ou `font-weight: 550`, cette police est utilisée pour cette famille de polices.
+Que la police soit statique ou une [police variable](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts), la police correspondant à la plage est utilisée. Dans ce cas, si la police est statique, `450` et `550` apparaissent identiques. Si la police est variable, la seconde est plus grasse.
 
-Le descripteur est le même pour toutes les polices, mais la plage que vous définirez pour une police variable sera généralement plus large, parfois même `1 1000` pour utiliser la même police pour toutes les valeurs de la propriété font-weight.
+Le descripteur est le même pour toutes les polices, mais la plage que vous définissez pour une police variable est généralement plus large, parfois même `1 1000` pour utiliser la même police pour toutes les valeurs de la propriété font-weight.
 
 ## Syntaxe
 
@@ -128,7 +128,7 @@ p.two {
 
 ### Définir des plages de `font-weight`
 
-Cet exemple montre comment inclure plusieurs polices pour différentes graisses (et styles), en incluant plusieurs déclarations `@font-face` avec la même valeur de `font-family`. En définissant les descripteurs `font-weight` avec des plages de 1 à 1000, dans le reste de vos feuilles de style, vous pouvez déclarer une valeur de `font-weight` (ou de `font-style`), et être assuré·e que la police appropriée sera utilisée.
+Cet exemple montre comment inclure plusieurs polices pour différentes graisses (et styles), en incluant plusieurs déclarations `@font-face` avec la même valeur de `font-family`. En définissant les descripteurs `font-weight` avec des plages de 1 à 1000, dans le reste de vos feuilles de style, vous pouvez déclarer une valeur de `font-weight` (ou de `font-style`), et être assuré·e que la police appropriée est utilisée.
 
 #### HTML
 
@@ -216,17 +216,17 @@ p.neuf {
 
 Le paragraphe `sept` utilise la police extra-bold. Bien que `font-weight: 700` corresponde aux déclarations `FiraSans-Bold` et `FiraSans-ExtraBold`, comme `FiraSans-ExtraBold` est déclarée plus tard, elle remplace `FiraSans-Bold` pour cette valeur.
 
-De même, les valeurs `100` et `300` utilisent la police light&nbsp;; bien que `FiraSans-Regular` et `FiraSans-Light` incluent `300` dans leurs plages, `FiraSans-Light` est déclarée plus tard. On pourrait aussi déclarer `FiraSans-Regular` après `FiraSans-Light`, mais il faudrait alors modifier la plage du descripteur font-weight.
+De même, les valeurs `100` et `300` utilisent la police light&nbsp;; bien que `FiraSans-Regular` et `FiraSans-Light` incluent `300` dans leurs plages, `FiraSans-Light` est déclarée plus tard. On peut aussi déclarer `FiraSans-Regular` après `FiraSans-Light`, mais il faut alors modifier la plage du descripteur font-weight.
 
 ### Définir une plage pour une police variable
 
 Dans cet exemple, nous utilisons le descripteur `font-weight` pour restreindre la plage de graisses utilisables avec une police variable.
 
-Nous incluons une police variable, [«&nbsp;League Mono&nbsp;»](https://www.theleagueofmoveabletype.com/league-mono), via une seule règle `@font-face`. Nous utilisons la valeur `font-weight: 300 700` pour limiter effectivement la plage de graisses disponibles. Si une règle CSS utilise notre police «&nbsp;League Mono&nbsp;», alors si elle spécifie une graisse hors de cette plage, la valeur sera ramenée dans la plage.
+Nous incluons une police variable, [«&nbsp;League Mono&nbsp;»](https://www.theleagueofmoveabletype.com/league-mono), avec une seule règle `@font-face`. Nous utilisons la valeur `font-weight: 300 700` pour limiter effectivement la plage de graisses disponibles. Si une règle CSS utilise notre police «&nbsp;League Mono&nbsp;», alors si elle définit une graisse hors de cette plage, la valeur est ramenée dans la plage.
 
 #### HTML
 
-Nous incluons un paragraphe avec `<output>` initialisé à `400`, valeur par défaut pour le texte non stylisé. Ce paragraphe est placé entre deux autres, pour comparer le rendu des graisses.
+Nous incluons un paragraphe avec `<output>` initialisé à `400`, valeur par défaut pour le texte qui n'est pas mis en forme. Ce paragraphe est placé entre deux autres, pour comparer le rendu des graisses.
 
 Nous incluons un {{HTMLElement("input/range")}} de type `range`, dans un {{HTMLElement("label")}}, avec un `step` à `50`.
 
@@ -284,7 +284,7 @@ plage.addEventListener("change", () => {
 
 {{EmbedLiveSample("Définir une plage pour une police variable", "", 400)}}
 
-Changez la graisse du paragraphe via le curseur.
+Changez la graisse du paragraphe avec le curseur.
 Notez que le paragraphe exemple n'est pas plus fin que le paragraphe `300` au-dessus ni plus gras que le paragraphe `700` en dessous&nbsp;; la graisse est limitée à la plage définie par le descripteur `font-weight`.
 
 ## Spécifications

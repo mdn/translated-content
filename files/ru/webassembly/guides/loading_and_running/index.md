@@ -11,9 +11,9 @@ slug: WebAssembly/Guides/Loading_and_running
 
 WebAssembly ещё не интегрирована с `<script type='module'>` или ES2015 оператором `import`, поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.
 
-Старые методы [`WebAssembly.compile`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate) требуют создания {{domxref("ArrayBuffer")}}, содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр. Это аналог `new Function(string)`, за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).
+Старые методы [`WebAssembly.compile`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate) требуют создания {{jsxref("ArrayBuffer")}}, содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр. Это аналог `new Function(string)`, за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).
 
-Более новые методы [`WebAssembly.compileStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) намного эффективнее - они выполняют свои действия непосредственно с необработанным потоком байтов, поступающих из сети, избавление от необходимости шага {{domxref("ArrayBuffer")}}.
+Более новые методы [`WebAssembly.compileStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) намного эффективнее - они выполняют свои действия непосредственно с необработанным потоком байтов, поступающих из сети, избавление от необходимости шага {{jsxref("ArrayBuffer")}}.
 
 Итак, как мы можем получить эти байты в буфер массива и скомпилировать? Следующие разделы объясняют.
 
@@ -31,7 +31,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-Если бы мы использовали более старый метод [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate), который не работает в прямом потоке, нам потребовался бы дополнительный шаг преобразования преобразованного байт-кода в {{domxref("ArrayBuffer")}}, вот так:
+Если бы мы использовали более старый метод [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate), который не работает в прямом потоке, нам потребовался бы дополнительный шаг преобразования преобразованного байт-кода в {{jsxref("ArrayBuffer")}}, вот так:
 
 ```js
 fetch("module.wasm")

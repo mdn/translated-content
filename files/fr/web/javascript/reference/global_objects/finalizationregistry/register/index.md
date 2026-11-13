@@ -66,4 +66,4 @@ registry.register(cible, { utile: "info à propos de la cible" });
 
 ## Voir aussi
 
-- L'objet {{JSxRef("FinalizationRegistry")}}
+- L'objet natif {{JSxRef("FinalizationRegistry")}}

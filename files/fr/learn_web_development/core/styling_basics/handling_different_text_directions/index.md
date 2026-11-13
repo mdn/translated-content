@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordures en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web a tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le français) que celles qui se lisent de droite à gauche (comme l'arabe).
 

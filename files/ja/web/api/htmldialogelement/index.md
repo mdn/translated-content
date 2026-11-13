@@ -145,8 +145,8 @@ cancelButton.addEventListener("click", () => {
 });
 ```
 
-`close()` を呼び出しすと、 {{domxref("HTMLDialogElement/close_event", "close")}} イベントも発生します。下記でダイアログの返値をログ出力することでこれを実装します。
-［確認］ボタンがクリックされた場合、このこれはダイアログで選択された値であるべきです。そうでない場合は `null` であるべきです。
+`close()` を呼び出すと、 {{domxref("HTMLDialogElement/close_event", "close")}} イベントも発生します。下記でダイアログの返値をログ出力することでこれを実装します。
+［確認］ボタンがクリックされた場合、これはダイアログで選択された値であるべきです。そうでない場合は `null` であるべきです。
 
 ```js
 dialog.addEventListener("close", (event) => {

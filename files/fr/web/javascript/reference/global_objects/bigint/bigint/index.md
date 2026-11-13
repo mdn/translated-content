@@ -3,7 +3,7 @@ title: Constructeur BigInt()
 short-title: BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 690498c3dbaebcf8b9a21220fbb23d192a30a225
 ---
 
 Le constructeur **`BigInt()`** retourne des valeurs primitives de type `BigInt`.
@@ -35,7 +35,7 @@ Une valeur {{JSxRef("BigInt")}}. Les valeurs numériques doivent être des entie
     - Le paramètre ne peut pas être converti en primitif.
     - Après conversion en primitif, le résultat est {{JSxRef("undefined")}}, {{JSxRef("null")}}, {{JSxRef("Symbol")}}.
 - {{JSxRef("SyntaxError")}}
-  - : Levée si le paramètre est une chaîne de caractère qui ne peut pas être interprété comme un `BigInt`.
+  - : Levée si le paramètre est une chaîne de caractères qui ne peut pas être interprétée comme un `BigInt`.
 
 ## Exemples
 
@@ -45,7 +45,7 @@ Une valeur {{JSxRef("BigInt")}}. Les valeurs numériques doivent être des entie
 
 ```js
 BigInt(123); // 123n
-BigInt(123.3); // RangeError : le nombre 123.3 ne peut pas être converti en BigInt car ce n'est pas un entier
+BigInt(123.3); // RangeError : le nombre 123.3 ne peut pas être converti en BigInt, car ce n'est pas un entier
 ```
 
 ### Utiliser des chaînes de caractères

@@ -3,7 +3,7 @@ title: "HTMLAllCollection : propriété length"
 short-title: length
 slug: Web/API/HTMLAllCollection/length
 l10n:
-  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
+  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
 ---
 
 {{APIRef("DOM")}}

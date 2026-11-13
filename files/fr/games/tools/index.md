@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
-Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils de développement de jeux, qui visent finalement à couvrir les frameworks, compilateurs et outils de débogage.
+Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils de développement de jeux, qui visent finalement à couvrir les cadriciels, compilateurs et outils de débogage.
 
 - [asm.js](/fr/docs/Games/Tools/asm.js)
   - : Asm.js est un sous-ensemble très limité du langage JavaScript, qui peut être considérablement optimisée et exécutée dans un moteur de compilation à l'avance (AOT), pour des performances beaucoup plus rapides que vos performances JavaScript typiques. C'est, bien sûr, idéal pour les jeux.
@@ -14,7 +14,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
 - [Firefox Profiler <sup>(angl.)</sup>](https://profiler.firefox.com/docs/#/)
   - : Le profileur Firefox vous permet de déterminer les performances de votre code afin d'identifier les problèmes et d'optimiser la vitesse d'exécution de votre jeu.
 - Outils pour le développement et le débogage de jeux
-  - : En quoi cela diffère-t-il du débogage normal d'une application web&nbsp;? Quels sont les outils spécialisés disponibles&nbsp;? Will abordera une grande partie de ces questions dans [outils <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mais ici, nous devrions fournir une sorte de tutoriel pratique sur les outils de débogage des jeux, avec des liens vers les ressources de Will&nbsp;:
+  - : En quoi cela diffère-t-il du débogage normal d'une application web&nbsp;? Quels sont les outils spécialisés disponibles&nbsp;? Will aborde une grande partie de ces questions dans [outils <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mais ici, nous fournissons une sorte de tutoriel pratique sur les outils de débogage des jeux, avec des liens vers les ressources de Will&nbsp;:
     - Présentation des outils de base
     - [Éditeur de shader <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Outils de performance (toujours en production, estimés début 2014)
@@ -43,14 +43,14 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
     <tr>
       <td><strong>Entrée</strong></td>
       <td>
-        <a href="/fr/docs/Web/API/Touch_events">Événements touchés</a>,
-        <a href="https://www.khronos.org/opengles/">OpenGL ES</a> 2.0)
+        <a href="/fr/docs/Web/API/Touch_events">Évènements touchés</a>
+        (<a href="https://www.khronos.org/opengles/">OpenGL ES <sup>(angl.)</sup></a> 2.0)
       </td>
     </tr>
     <tr>
       <td><strong>Entrée</strong></td>
       <td>
-        <a href="/fr/docs/Web/API/Touch_events">Événements touchés</a>,
+        <a href="/fr/docs/Web/API/Touch_events">Évènements touchés</a>,
         <a href="/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">API GamePad</a>,
         capteurs de l'appareil,
         <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a>,
@@ -63,7 +63,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
       <td>
         <a href="/fr/docs/Web/JavaScript">JavaScript</a> (ou C/C++ en utilisant
         <a href="/fr/docs/Web/API/WebGL_API">WebGL</a> (<a href="https://www.khronos.org/opengles/">OpenGL ES <sup>(angl.)</sup></a> 2.0)
-        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten</a> un compilateur vers JavaScript)
+        <a href="https://github.com/emscripten-core/emscripten/wiki">Emscripten <sup>(angl.)</sup></a> un compilateur vers JavaScript)
       </td>
     </tr>
     <tr>
@@ -97,26 +97,26 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
 - [L'API GamePad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
   - : Utilisez des GamePads ou d'autres contrôleurs de jeu.
 - [HTML](/fr/docs/Web/HTML) et [CSS](/fr/docs/Web/CSS)
-  - : Construisez, stylisez et agencez l'interface utilisateur de votre jeu.
+  - : Construisez, mettez en forme et agencez l'interface utilisateur de votre jeu.
 - [Audio HTML](/fr/docs/Web/HTML/Reference/Elements/audio)
   - : Jouez facilement des effets sonores simples et de la musique.
-- [Indexédb](/fr/docs/Web/API/IndexedDB_API)
-  - : Stocker les données des utilisateurs sur leur propre ordinateur ou appareil.
+- [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
+  - : Stocker les données des utilisateur·ice·s sur leur propre ordinateur ou appareil.
 - [Javascript](/fr/docs/Web/JavaScript)
   - : Langue de programmation Web rapide pour écrire le code de votre jeu.
     Pour porter facilement vos jeux existants [Emscripten](https://github.com/emscripten-core/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/)
 - [L'API de verrouillage du pointeur](/fr/docs/Web/API/Pointer_Lock_API)
   - : Verrouiller la souris ou un autre appareil de pointage dans l'interface de votre jeu.
 - [SVG](/fr/docs/Web/SVG) (Graphiques vectoriels évolutifs)
-  - : Créez des graphiques vectoriels qui s'adaptent parfaitement, quelle que soit la taille ou la résolution de l'écran de l'utilisateur.
+  - : Créez des graphiques vectoriels qui s'adaptent parfaitement, quelle que soit la taille ou la résolution de l'écran de l'utilisateur·ice.
 - [Tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : Accédez aux données binaires brutes depuis JavaScrip&nbsp;; manipulez les textures GL, les données de jeu ou tout autre élément.
+  - : Accédez aux données binaires brutes depuis JavaScript&nbsp;; manipulez les textures GL, les données de jeu ou tout autre élément.
 - [L'API audio Web](/fr/docs/Web/API/Web_Audio_API)
   - : Contrôlez la lecture, la synthèse et la manipulation de l'audio en temps réel.
 - [WebGL](/fr/docs/Web/API/WebGL_API)
   - : Créez des graphiques 3D (et 2D) à haute performance et avec l'accélération matérielle. [OpenGL ES](https://www.khronos.org/opengles/) 2.0.
 - [WebRTC](/fr/docs/Web/API/WebRTC_API)
-  - : Communications en temps réel pour contrôler les données audio et vidéo, y compris les téléconférences et la transmission d'autres données d'application entre deux utilisateurs, comme le chat.
+  - : Communications en temps réel pour contrôler les données audio et vidéo, y compris les téléconférences et la transmission d'autres données d'application entre deux utilisateur·ice·s, comme le chat.
 - [Sockets websockets](/fr/docs/Web/API/WebSockets_API)
   - : Connectez votre application ou votre site à un serveur pour transmettre des données dans les deux sens en temps réel. Parfait pour l'action de jeu multijoueur, les services de chat, etc.
 - [Travailleurs du Web](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
@@ -124,7 +124,7 @@ Sur cette page, vous pouvez trouver des liens vers nos articles sur les outils d
 
 ## Transférer des jeux natifs vers le Web
 
-Si vous êtes un développeur natif (par exemple, vous écrivez des jeux en C++) et que vous souhaitez savoir comment porter vos jeux sur le Web, vous devriez en savoir plus sur notre outil [Emscripten](https://emscripten.org/index.html) - il s'agit d'un compilateur LLVM vers JavaScript qui prend le bytecode LLVM (généré par exemple à partir de C/C++ à l'aide de Clang ou d'un autre langage) et le compile en [asm.js](/fr/docs/Games/Tools/asm.js), qui peut être exécuté sur le Web.
+Si vous êtes un·e développeur·euse natif·ve (par exemple, vous écrivez des jeux en C++) et que vous souhaitez savoir comment porter vos jeux sur le Web, vous devez en savoir plus sur notre outil [Emscripten](https://emscripten.org/index.html) - il s'agit d'un compilateur LLVM vers JavaScript qui prend le bytecode LLVM (généré par exemple à partir de C/C++ à l'aide de Clang ou d'un autre langage) et le compile en [asm.js](/fr/docs/Games/Tools/asm.js), qui peut être exécuté sur le Web.
 
 Pour commencer, regardez les ressources suivantes&nbsp;:
 

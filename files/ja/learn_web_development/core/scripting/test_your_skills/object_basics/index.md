@@ -277,7 +277,7 @@ const cat = {
 // ここにコードを追加
 ```
 
-We've not provided finished content for this task, as it doesn't print anything to the DOM. The output is all logged to the console.
+この課題では DOM に何も出力されないため、完成したコンテンツは用意していません。出力はすべてコンソールに記録されます。
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>

@@ -3,10 +3,10 @@ title: "Document : propriété styleSheetSets"
 short-title: styleSheetSets
 slug: Web/API/Document/styleSheetSets
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 La propriété en lecture seule **`styleSheetSets`** de l'interface {{DOMxRef("Document")}} retourne une liste active de tous les jeux de feuilles de styles actuellement disponibles.
 

@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 35be74828a1a06cdd0a1bf0a20c16d29b8adb11f
+  sourceCommit: e5cd1cab36e2fdcf5dfe28e10b0a7cb235354e62
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.
@@ -124,7 +124,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Registres d'éléments personnalisés à portée limitée**&nbsp;: `dom.scoped-custom-element-registries.enabled`
 
   La propriété {{DOMxRef("CustomElementRegistry","customElementRegistry")}} est prise en charge sur {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("ShadowRoot")}}.
-  Cela permet la définition de [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_déléments_personnalisés_à_portée_limitée).
+  Cela permet la définition de [registres d'éléments personnalisés avec portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée).
   ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900)).
 
 - **Tableaux associatifs d'importations multiples**&nbsp;: `dom.multiple_import_maps.enabled`

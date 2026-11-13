@@ -6,10 +6,10 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`math-depth`** décrit une notion de _profondeur_ pour chaque élément d'une formule mathématique, par rapport au conteneur de niveau supérieur de cette formule. Cela est utilisé pour mettre à l'échelle la valeur calculée de la [taille de police](/fr/docs/Web/CSS/Reference/Properties/font-size) des éléments lorsque `font-size: math` est appliqué.
+La propriété [CSS](/fr/docs/Web/CSS) **`math-depth`** décrit une notion de _profondeur_ pour chaque élément d'une formule mathématique, par rapport au conteneur de niveau supérieur de cette formule. C'est utilisé pour mettre à l'échelle la valeur calculée de la [taille de police](/fr/docs/Web/CSS/Reference/Properties/font-size) des éléments lorsque `font-size: math` est appliqué.
 
 > [!NOTE]
-> `font-size: math` est la valeur par défaut pour les éléments `<math>` dans [la feuille de style de l'agent utilisateur](https://w3c.github.io/mathml-core/#user-agent-stylesheet) du coeur MathML, il n'est donc pas nécessaire de la définir explicitement.
+> `font-size: math` est la valeur par défaut pour les éléments `<math>` dans [la feuille de style de l'agent utilisateur <sup>(angl.)</sup>](https://w3c.github.io/mathml-core/#user-agent-stylesheet) du cœur MathML, il n'est donc pas nécessaire de la définir explicitement.
 
 ## Syntaxe
 

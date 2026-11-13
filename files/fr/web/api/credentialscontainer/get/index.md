@@ -31,7 +31,7 @@ var promise = CredentialsContainer.get([options]);
 
     - `publicKey` : un objet {{domxref("PublicKeyCredentialRequestOptions")}} contenant les conditions que doivent respecter les informations d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API) qui seront renvoyées.
     - `mediation` : une chaîne de caractères {{jsxref("String")}} qui indique si l'utilisateur devra se reconnecter à chaque visite sur le site. Les valeurs valides sont `"silent"`, `"optional"` ou `"required"`.
-    - `unmediated` : {{deprecated_inline()}} un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée ne devrait pas nécessiter de médiation avec l'utilisateur.
+    - `unmediated` : {{deprecated_inline}} un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée ne devrait pas nécessiter de médiation avec l'utilisateur.
 
 ### Valeur de retour
 

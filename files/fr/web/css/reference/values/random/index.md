@@ -3,7 +3,7 @@ title: Fonction CSS `random()`
 short-title: random()
 slug: Web/CSS/Reference/Values/random
 l10n:
-  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
+  sourceCommit: ba3c8980510073ee92674aa71cb2c8c5b71294ab
 ---
 
 {{SeeCompatTable}}
@@ -186,7 +186,7 @@ Dans cet exemple, comme `--tailleParDefaut` est enregistrée, `.a`, `.b` et `.c`
 
 ## Accessibilité
 
-Comme `random()` peut générer une valeur inconnue dans une plage, vous n'avez pas un contrôle total sur ce que vous obtenez. Cela peut conduire à des résultats inaccessibles. Par exemple, si vous utilisez `random()` pour générer la couleur du texte, vous pourriez obtenir une valeur ayant un faible contraste avec son arrière-plan. Il est important de tenir compte du contexte dans lequel `random()` est utilisé, en veillant à ce que vos résultats soient toujours accessibles.
+Comme `random()` peut générer une valeur inconnue dans une plage, vous n'avez pas un contrôle total sur ce que vous obtenez. Cela peut conduire à des résultats inaccessibles. Par exemple, si vous utilisez `random()` pour générer la couleur du texte, vous pouvez obtenir une valeur ayant un faible contraste avec son arrière-plan. Il est important de tenir compte du contexte dans lequel `random()` est utilisé, en veillant à ce que vos résultats soient toujours accessibles.
 
 ## Syntaxe formelle
 

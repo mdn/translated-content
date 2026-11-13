@@ -3,7 +3,7 @@ title: Fragment d'une URI
 short-title: Fragment
 slug: Web/URI/Reference/Fragment
 l10n:
-  sourceCommit: 224631999df9097fb7f5fa861a4ec534aa598eb2
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le **fragment** d'une URI est la dernière partie de l'URI, commençant par le caractère `#`. Il sert à identifier une partie spécifique de la ressource, comme une section d'un document ou une position dans une vidéo. Le fragment n'est pas envoyé au serveur lors de la requête de l'URI&nbsp;; il est traité par le client (par exemple, le navigateur) après la récupération de la ressource.

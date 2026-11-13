@@ -3,11 +3,11 @@ title: Caractéristique média CSS `prefers-color-scheme`
 short-title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 l10n:
-  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-color-scheme`** permet de détecter si un·e utilisateur·ice a demandé un thème clair ou sombre.
-L'utilisateur·ice indique sa préférence via un réglage du système d'exploitation (par exemple, mode clair ou sombre) ou via un paramètre de l'agent utilisateur.
+L'utilisateur·ice indique sa préférence avec un réglage du système d'exploitation (par exemple, mode clair ou sombre) ou avec un paramètre de l'agent utilisateur.
 
 ## Éléments embarqués
 
@@ -31,7 +31,7 @@ Pour en savoir plus sur les SVG, consultez la [documentation SVG](/fr/docs/Web/S
 
 L'usage courant consiste à utiliser un thème clair par défaut, puis à utiliser `prefers-color-scheme: dark` pour appliquer des couleurs plus sombres. Il est aussi possible de faire l'inverse.
 
-Cet exemple montre les deux options&nbsp;: le thème A utilise des couleurs claires par défaut, mais peut être remplacé par des couleurs sombres. Le thème B utilise des couleurs sombres par défaut, mais peut être remplacé par des couleurs claires. Au final, si le navigateur prend en charge `prefers-color-scheme`, les deux thèmes seront soit clairs, soit sombres.
+Cet exemple montre les deux options&nbsp;: le thème A utilise des couleurs claires par défaut, mais peut être remplacé par des couleurs sombres. Le thème B utilise des couleurs sombres par défaut, mais peut être remplacé par des couleurs claires. Au final, si le navigateur prend en charge `prefers-color-scheme`, les deux thèmes sont soit clairs, soit sombres.
 
 #### HTML
 
@@ -96,17 +96,17 @@ Le thème B (bleu) utilise un schéma de couleurs sombre par défaut, mais bascu
 
 #### Résultat
 
-Les boîtes de gauche montrent le thème A et le thème B tels qu'ils apparaîtraient sans la requête média `prefers-color-scheme`. Les boîtes de droite montrent les mêmes thèmes, mais l'un d'eux sera modifié en version sombre ou claire selon le schéma de couleurs actif de l'utilisateur·ice. Le contour d'une boîte sera en pointillés ou en tirets si le changement dépend de votre navigateur ou du système d'exploitation.
+Les boîtes de gauche montrent le thème A et le thème B tels qu'ils apparaissent sans la requête média `prefers-color-scheme`. Les boîtes de droite montrent les mêmes thèmes, mais l'un d'eux est modifié en version sombre ou claire selon le schéma de couleurs actif de l'utilisateur·ice. Le contour d'une boîte est en pointillés ou en tirets si le changement dépend de votre navigateur ou du système d'exploitation.
 
-{{EmbedLiveSample("détecter_un_thème_sombre_ou_clair", "100%", "200px")}}
+{{EmbedLiveSample("Détecter un thème sombre ou clair", "100%", 200)}}
 
 ### Héritage du schéma de couleurs dans les éléments embarqués
 
 L'exemple suivant montre comment utiliser la caractéristique média `prefers-color-scheme` dans un élément embarqué pour hériter d'un schéma de couleurs depuis un élément parent.
-Un script est utilisé pour définir la source des éléments `<img>` et leurs attributs `alt`. Normalement, cela se ferait en HTML avec `<img src="circle.svg" alt="circle" />`.
+Un script est utilisé pour définir la source des éléments `<img>` et leurs attributs `alt`. Normalement, cela se fait en HTML avec `<img src="circle.svg" alt="circle" />`.
 
-Vous devriez voir trois cercles, dont un dessiné dans une couleur différente.
-Le premier cercle hérite du `color-scheme` du système d'exploitation et peut être modifié via le sélecteur de thème du système.
+Vous devez voir trois cercles, dont un dessiné dans une couleur différente.
+Le premier cercle hérite du `color-scheme` du système d'exploitation et peut être modifié avec le sélecteur de thème du système.
 
 Le deuxième et le troisième cercle héritent du `color-scheme` de l'élément parent&nbsp;; la requête `@media` permet de définir les styles du contenu SVG en fonction du `color-scheme` de l'élément parent.
 Dans ce cas, l'élément parent avec la propriété CSS `color-scheme` est un `<div>`.
@@ -151,7 +151,7 @@ for (let img of document.querySelectorAll("img")) {
 }
 ```
 
-{{EmbedLiveSample("héritage_du_schéma_de_couleurs_dans_les_éléments_embarqués")}}
+{{EmbedLiveSample("Héritage du schéma de couleurs dans les éléments embarqués")}}
 
 ## Spécifications
 
@@ -166,7 +166,7 @@ for (let img of document.querySelectorAll("img")) {
 - La propriété {{CSSxRef("color-scheme")}}
 - [L'élément `<meta name="color-scheme">`](/fr/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
 - L'en-tête HTTP {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} [Indication client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indication_client_de_lagent_utilisateur)
-- [Simuler prefers-color-scheme dans Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
+- [Simuler `prefers-color-scheme` dans Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [Vidéo&nbsp;: coder un mode sombre pour votre site <sup>(angl.)</sup>](https://www.youtube.com/watch?v=jmepqJ5UbuM)
-- [Adapter votre produit ou site au mode sombre <sup>(angl.)</sup>](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- [Adapter votre produit ou site au mode sombre <sup>(angl.)</sup>](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode/)
 - [Changer le schéma de couleurs dans Windows <sup>(angl.)</sup>](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS <sup>(angl.)</sup>](https://developer.apple.com/design/human-interface-guidelines/dark-mode), [Android <sup>(angl.)</sup>](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019) ou [autres plateformes <sup>(angl.)</sup>](https://support.mozilla.org/en-US/questions/1271928).

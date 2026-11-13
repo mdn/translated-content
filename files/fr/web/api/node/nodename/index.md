@@ -3,7 +3,7 @@ title: "Node : propriété nodeName"
 short-title: nodeName
 slug: Web/API/Node/nodeName
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
 ---
 
 {{APIRef("DOM")}}

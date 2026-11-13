@@ -103,7 +103,7 @@ console.log(zdt.toString({ timeZoneName: "critical", offset: "never" })); // '20
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode statique {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toJSON", "Temporal.ZonedDateTime.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}

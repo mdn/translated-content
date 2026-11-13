@@ -3,7 +3,7 @@ title: Propriété CSS `word-spacing`
 short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.
@@ -76,6 +76,8 @@ word-spacing: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme le mot-clé `normal` ou une `<length-percentage>`&nbsp;:
+
 - `normal`
   - : L'espacement normal entre les mots, tel qu'il est défini par la police courante et/ou le navigateur.
 - {{CSSxRef("length-percentage")}}
@@ -83,7 +85,7 @@ word-spacing: unset;
 
 ## Accessibilité
 
-Utiliser des valeurs trop importantes (positives ou négatives) pour `word-spacing` rend le texte illisible. Si l'espacement utilisé est trop grand, la structure visuelle ne permettra plus d'identifier une phrase. Si l'espacement est trop petit, les mots se chevaucheront et on ne pourra plus distinguer le début et la fin de chaque mot.
+Utiliser des valeurs trop importantes (positives ou négatives) pour `word-spacing` rend le texte illisible. Si l'espacement utilisé est trop grand, la structure visuelle ne permet plus d'identifier une phrase. Si l'espacement est trop petit, les mots se chevauchent et on ne peut plus distinguer le début et la fin de chaque mot.
 
 La bonne valeur à utiliser pour `word-spacing` doit être déterminée au cas par cas, en fonction du type de police utilisé et de la largeur de celle-ci.
 
@@ -141,7 +143,7 @@ Le code affiche plusieurs paragraphes ayant le même `word-spacing` appliqué à
 
 #### HTML
 
-Le HTML contient plusieurs éléments HTML {{HTMLElement("p")}} contenant du texte, ainsi qu'un `{{HTMLElement("input/checkbox", "&lt;input type=\"checkbox\"&gt;")}}` que nous utiliserons pour basculer entre une valeur de `word-spacing` en longueur et une valeur en pourcentage.
+Le HTML contient plusieurs éléments HTML {{HTMLElement("p")}} contenant du texte, ainsi qu'un `{{HTMLElement("input/checkbox", "&lt;input type=\"checkbox\"&gt;")}}` que nous utilisons pour basculer entre une valeur de `word-spacing` en longueur et une valeur en pourcentage.
 
 ```html live-sample___percentage-versus-length
 <p class="x-small">X-small font-size (0.8em)</p>

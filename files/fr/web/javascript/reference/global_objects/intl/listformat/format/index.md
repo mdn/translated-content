@@ -89,4 +89,4 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.ListFormat")}}
+- L'objet natif {{JSxRef("Intl.ListFormat")}}

@@ -2,7 +2,7 @@
 title: Qué escribimos
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 MDN Web Docs contiene documentación _neutral respecto al navegador_ que permite a los desarrolladores web escribir código _agnóstico al navegador_. En este artículo, encontrarás información sobre si un tema o tipo de contenido determinado debe incluirse o no en MDN Web Docs.
@@ -13,7 +13,7 @@ Esta sección describe las políticas que el equipo de Mozilla MDN ha establecid
 
 ### Relevancia
 
-Todo el contenido de MDN Web Docs debe ser relevante para la sección de tecnología en la que aparece. Nunca aceptaremos spam (publicidad comercial) ni otro tipo de contenido irrelevante en el sitio. El personal de Mozilla MDN podrá, bajo su criterio, banear a los colaboradores que intenten enviar spam de forma persistente.
+Todo el contenido de MDN Web Docs debe ser relevante para la sección de tecnología en la que aparece. Nunca aceptaremos spam (publicidad comercial) ni otro tipo de contenido irrelevante en el sitio. Lo mismo se aplica al contenido de bajo esfuerzo, como el texto generado que repite lo que ya hay en la página o que no se ha comprobado en cuanto a su precisión. El personal de Mozilla MDN podrá, bajo su criterio, banear a los colaboradores que insistan en enviar ese tipo de contenido.
 
 Evaluaremos caso por caso los enlaces salientes a sitios comerciales que sean relevantes para el tema desde el que se enlazan. Su valor para ayudar a los desarrolladores web debe ser mayor que el beneficio comercial para el sitio enlazado.
 
@@ -27,6 +27,11 @@ Los artículos en MDN Web Docs deben mantener un [punto de vista neutral](https:
 ### Estandarización
 
 Las tecnologías web que documentamos en MDN Web Docs deben estar en vías de estandarización, y al menos un motor de renderizado debe implementarlas. Documentamos las variaciones en el soporte de los navegadores en la sección de [compatibilidad con navegadores](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) de cada artículo.
+
+### Responsabilidad
+
+Eres responsable de todo el contenido que envías, incluidas las sugerencias y los borradores.
+Una persona debe revisar cada contribución antes de enviarla, sean cuales sean las herramientas que se hayan utilizado para crearla.
 
 ## Sugerir contenido
 

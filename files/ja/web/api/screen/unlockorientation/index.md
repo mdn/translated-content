@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
+{{APIRef("Screen Orientation API")}}
 
 **`Screen.unlockOrientation()`** メソッドは、ページやアプリによって設定されているすべての画面のロックを除去します。代わりに {{DOMxRef("ScreenOrientation.unlock()")}} を使用してください。
 

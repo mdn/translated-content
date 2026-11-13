@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: attributeNamespace プロパティ"
+short-title: attributeNamespace
 slug: Web/API/MutationRecord/attributeNamespace
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48

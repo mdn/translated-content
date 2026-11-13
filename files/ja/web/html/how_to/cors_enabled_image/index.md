@@ -1,12 +1,10 @@
 ---
-title: 別オリジンの画像を持つ <img> と <canvas> の使用
-short-title: 別オリジンの画像の利用
+title: キャンバス内で別オリジンの画像の使用
+short-title: 別オリジンの画像の使用
 slug: Web/HTML/How_to/CORS_enabled_image
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
 ---
-
-{{HTMLSidebar}}
 
 HTML では画像に [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性を提供し、適切な {{Glossary("CORS")}} ヘッダーと組み合わせることで、 {{ HTMLElement("img") }} 要素で定義されている他のオリジンから読み込まれた画像を、 {{HTMLElement("canvas")}} の中で現在のオリジンから読み込まれた画像であるかのように扱うことができます。
 
@@ -39,7 +37,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 
 [Apache](https://httpd.apache.org/) を使用してサイトを提供してみましょう。 HTML5 Boilerplate の [CORS 画像のための Apache サーバー構成ファイル](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf)を考えてみましょう。
 
-```xml
+```apacheconf
 <IfModule mod_setenvif.c>
   <IfModule mod_headers.c>
     <FilesMatch "\.(avifs?|bmp|cur|gif|ico|jpe?g|jxl|a?png|svgz?|webp)$">
@@ -64,13 +62,12 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 
 ```js
 function startDownload() {
-  let imageURL =
-    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
-  let imageDescription = "The Mozilla logo";
+  let imageURL = "https://mdn.github.io/shared-assets/images/examples/mdn.svg";
+  let imageDescription = "Logo of a dinosaur in front of a map";
 
   downloadedImg = new Image();
   downloadedImg.crossOrigin = "anonymous";
-  downloadedImg.addEventListener("load", imageReceived, false);
+  downloadedImg.addEventListener("load", imageReceived);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > オブジェクトの `[[Prototype]]` を変更することは、現行の JavaScript エンジンがプロパティアクセスを最適化する性質上、どのブラウザーや JavaScript エンジンでも現在とても遅い処理となります。さらに、継承を変更することの効果は微妙で広範囲に及び、 `obj.__proto__ = ...` 文に費やされる時間に限らず、`[[Prototype]]` が変更されたオブジェクトにアクセスする**あらゆる**コードに及ぶ可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) で説明されています。
 

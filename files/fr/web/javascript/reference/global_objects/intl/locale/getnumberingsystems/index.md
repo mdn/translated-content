@@ -53,6 +53,6 @@ console.log(ja.getNumberingSystems()); // ["latn"]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La propriété {{JSxRef("Intl.Locale.prototype.numberingSystem")}}
 - [Détails du standard Unicode sur les systèmes de numération <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)

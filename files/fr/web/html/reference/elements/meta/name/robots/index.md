@@ -18,7 +18,7 @@ Par exemple, pour indiquer aux robots qu'une page doit être exclue de leurs ind
 > [!NOTE]
 > Seuls les robots coopératifs suivent ces règles.
 > Un robot doit tout de même accéder à la ressource pour lire les en-têtes et les éléments meta (voir [X-Robots-Tag&nbsp;: Interaction avec robots.txt](/fr/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#interaction_avec_robots.txt)).
-> Si vous souhaitez éviter la consommation de bande passante par les robots, un fichier {{Glossary("robots.txt")}} restrictif est plus efficace que des règles d'indexation car il bloque totalement l'exploration des ressources.
+> Si vous souhaitez éviter la consommation de bande passante par les robots, un fichier {{Glossary("robots.txt")}} restrictif est plus efficace que des règles d'indexation, car il bloque totalement l'exploration des ressources.
 
 ## Notes d'utilisation
 

@@ -96,8 +96,8 @@ console.log(duration.toString()); // "P30D"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/subtract", "Temporal.PlainDateTime.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/until", "Temporal.PlainDateTime.prototype.until()")}}

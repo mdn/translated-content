@@ -3,7 +3,7 @@ title: "Window : évènement pageshow"
 short-title: pageshow
 slug: Web/API/Window/pageshow_event
 l10n:
-  sourceCommit: 76bec44d5e9842f9ce4789303b989c36fd708cb8
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("HTML DOM")}}
@@ -17,7 +17,7 @@ Cela inclut&nbsp;:
 - Restauration d'une page gelée sur les systèmes d'exploitation mobiles.
 - Retour à la page en utilisant les boutons «&nbsp;précédent&nbsp;» ou «&nbsp;suivant&nbsp;» du navigateur (y compris lorsqu'elle est restaurée depuis le {{Glossary("bfcache")}}).
 - Ouverture d'une page dans un onglet en arrière-plan.
-- {{Glossary("Prerender", "Prérendu")}} d'une page, même avant qu'elle ne soit activée.
+- {{Glossary("Prerender", "Pré-rendu")}} d'une page, même avant qu'elle ne soit activée.
 
 > [!WARNING]
 > Malgré son nom, l'évènement `pageshow` ne se déclenche pas lorsque la page est réellement _affichée_ à l'utilisateur·ice. Par exemple, elle peut être ouverte dans un onglet en arrière-plan ou pré-rendue. Si vous souhaitez réagir à l'affichage de la page à l'utilisateur·ice, utilisez les évènements suivants&nbsp;:
@@ -44,11 +44,6 @@ onpageshow = (event) => { }
 Un objet {{DOMxRef("PageTransitionEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("PageTransitionEvent")}}
-
-## Propriétés de l'évènement
-
-- {{DOMxRef("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
-  - : Indique si le document est chargé depuis un cache.
 
 ## Alias des gestionnaires d'évènements
 
@@ -91,7 +86,7 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
   Ouvrez la console et observez la sortie lorsque vous naviguez vers et depuis
   cette page. Essayez de charger de nouvelles pages dans cet onglet, puis
   naviguez en avant et en arrière dans l'historique, en notant la sortie des
-  événements dans le journal.
+  évènements dans le journal.
 </p>
 ```
 

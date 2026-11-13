@@ -3,7 +3,7 @@ title: Sélecteurs CSS de base
 short-title: Sélecteurs de base
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 l10n:
-  sourceCommit: bb4be34c00686ddc46a1cef3123cdf825e9495ec
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
@@ -213,7 +213,7 @@ body {
 
 ## Sélecteurs d'ID
 
-Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essentiellement utilisé de la même manière qu'un sélecteur de classe. Une ID ne peut cependant être utilisée qu'une seule fois par document. Le sélecteur cible l'élément avec l'`id` associée&nbsp;; on peut faire précéder l'ID d'un sélecteur de type pour ne cibler l'élément que si l'élément et l'ID correspondent. Voyons ces deux utilisations dans l'exemple suivant&nbsp;:
+Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essentiellement utilisé de la même manière qu'un sélecteur de classe. Une ID ne peut cependant être utilisée qu'une seule fois par document. Le sélecteur cible l'élément avec un `id` associée&nbsp;; on peut faire précéder l'ID d'un sélecteur de type pour ne cibler l'élément que si l'élément et l'ID correspondent. Voyons ces deux utilisations dans l'exemple suivant&nbsp;:
 
 ```html live-sample___id
 <h1 id="heading">Sélecteur d'ID</h1>
@@ -391,7 +391,7 @@ Ce type de comportement peut parfois être observé dans les «&nbsp;feuilles de
 
 ### Utiliser le sélecteur universel pour rendre vos sélecteurs plus lisibles
 
-Une utilisation du sélecteur universel consiste à rendre les sélecteurs plus lisibles et plus intuitifs. Par exemple, si nous voulons sélectionner tous les éléments descendants d'un élément `<article>` qui sont le premier enfant de leur parent, y compris les enfants directs, nous pourrions utiliser la pseudo-classe {{CSSxRef(":first-child")}}. Nous en apprendrons davantage sur cela dans [pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)&nbsp;:
+Une utilisation du sélecteur universel consiste à rendre les sélecteurs plus lisibles et plus intuitifs. Par exemple, si nous voulons sélectionner tous les éléments descendants d'un élément `<article>` qui sont le premier enfant de leur parent, y compris les enfants directs, nous pourrions utiliser la pseudo-classe {{CSSxRef(":first-child")}}. Nous en apprenons davantage sur cela dans [pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)&nbsp;:
 
 ```css
 article :first-child {
@@ -416,7 +416,7 @@ Les deux sont équivalents, mais certaines personnes trouvent la deuxième optio
 
 ## Résumé
 
-Dans cet article, nous avons récapitulé les sélecteurs CSS, qui vous permettent de cibler des éléments HTML particuliers, en examinant les sélecteurs de type, de classe et d'ID un peu plus en détail que précédemment. Dans le prochain article, nous aborderons les sélecteurs d'attributs.
+Dans cet article, nous avons récapitulé les sélecteurs CSS, qui vous permettent de cibler des éléments HTML particuliers, en examinant les sélecteurs de type, de classe et d'ID un peu plus en détail que précédemment. Dans le prochain article, nous abordons les sélecteurs d'attributs.
 
 > [!NOTE]
 > Pour une liste complète des sélecteurs, consultez notre [référence des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).

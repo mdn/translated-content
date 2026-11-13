@@ -3,14 +3,14 @@ title: "HTMLFencedFrameElement : propriété height"
 short-title: height
 slug: Web/API/HTMLFencedFrameElement/height
 l10n:
-  sourceCommit: a6c32a2d0add510c95ef74e85bd8e17551d508b6
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
-La propriété **`height`** de l'interface {{domxref("HTMLFencedFrameElement")}} obtient et définit la valeur de l'attribut `height` correspondant sur l'élément HTML {{htmlelement("fencedframe")}}, qui spécifie la hauteur de l'élément.
+La propriété **`height`** de l'interface {{DOMxRef("HTMLFencedFrameElement")}} obtient et définit la valeur de l'attribut `height` correspondant sur l'élément HTML {{HTMLElement("fencedframe")}}, qui définit la hauteur de l'élément.
 
-La taille du contenu intégré peut être définie par les propriétés internes `contentWidth` et `contentHeight` de l'objet {{domxref("HTMLFencedFrameElement.config", "config")}} du `<fencedframe>`. Dans ce cas, modifier la {{domxref("HTMLFencedFrameElement.width", "width")}} ou la `height` du `<fencedframe>` changera la taille du conteneur intégré sur la page, mais le document à l'intérieur du conteneur sera visuellement mis à l'échelle pour s'adapter. La largeur et la hauteur rapportées du document intégré (c'est-à-dire {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}) resteront inchangées.
+La taille du contenu intégré peut être définie par les propriétés internes `contentWidth` et `contentHeight` de l'objet {{DOMxRef("HTMLFencedFrameElement.config", "config")}} du `<fencedframe>`. Dans ce cas, modifier la {{DOMxRef("HTMLFencedFrameElement.width", "width")}} ou la `height` du `<fencedframe>` change la taille du conteneur intégré sur la page, mais le document à l'intérieur du conteneur est visuellement mis à l'échelle pour s'adapter. La largeur et la hauteur rapportées du document intégré (c'est-à-dire {{DOMxRef("Window.innerWidth")}} et {{DOMxRef("Window.innerHeight")}}) restent inchangées.
 
 ## Valeur
 

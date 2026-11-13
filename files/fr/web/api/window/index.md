@@ -2,10 +2,10 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: d678295b8c67d19354bca1db406af1b6bc8cf1c6
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 L'interface **`Window`** représente une fenêtre contenant un document {{Glossary("DOM")}}&nbsp;; la propriété `document` pointe vers le [document DOM](/fr/docs/Web/API/Document) chargé dans cette fenêtre.
 
@@ -36,7 +36,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Retourne un objet {{DOMxRef("CrashReportContext")}} qui permet d'enregistrer des données arbitraires pour le contexte de navigation de niveau supérieur actuel, qui sont ensuite ajoutées à un {{DOMxRef("CrashReport")}} et envoyées à un point de rapport en cas de plantage du navigateur.
 - {{DOMxRef("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Retourne un booléen indiquant si le document courant a été chargé dans une {{HTMLElement("iframe")}} sans identifiants. Voir [IFrame credentialless](/fr/docs/Web/Security/IFrame_credentialless) pour plus de détails.
+  - : Retourne un booléen indiquant si le document courant a été chargé dans une {{HTMLElement("iframe")}} sans identifiants. Voir [IFrame credentialless](/fr/docs/Web/HTTP/Guides/IFrame_credentialless) pour plus de détails.
 - {{DOMxRef("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Retourne un booléen indiquant si le site web est en état d'isolation inter-origine.
 - {{DOMxRef("Window.crypto")}} {{ReadOnlyInline}}
@@ -49,7 +49,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne une référence vers le document contenu dans la fenêtre.
 - {{DOMxRef("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Retourne une référence vers la fenêtre [Picture-in-Picture du document](/fr/docs/Web/API/Document_Picture-in-Picture_API) pour le contexte du document courant.
-- {{DOMxRef("Window.fence")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("Window.fence")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Retourne une instance de l'objet {{DOMxRef("Fence")}} pour le contexte du document courant. Disponible uniquement pour les documents intégrés dans une {{HTMLElement("fencedframe")}}.
 - {{DOMxRef("Window.frameElement")}} {{ReadOnlyInline}}
   - : Retourne l'élément dans lequel la fenêtre est intégrée, ou null si la fenêtre n'est pas intégrée.
@@ -76,7 +76,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.location")}}
   - : Obtient ou définit l'emplacement (URL courante) de l'objet window.
 - {{DOMxRef("Window.locationbar")}} {{ReadOnlyInline}}
-  - : Retourne l'objet locationbar.
+  - : Retourne l'objet `locationbar`.
 - {{DOMxRef("Window.menubar")}} {{ReadOnlyInline}}
   - : Retourne l'objet menubar.
 - {{DOMxRef("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -108,15 +108,15 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.performance")}} {{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Performance")}}, qui inclut les attributs {{DOMxRef("Performance.timing", "timing")}} et {{DOMxRef("Performance.navigation", "navigation")}}, chacun fournissant des données [liées aux performances](/fr/docs/Web/API/Performance_API/Navigation_timing). Voir aussi [Utiliser Navigation Timing](/fr/docs/Web/API/Performance_API/Navigation_timing) pour plus d'informations et d'exemples.
 - {{DOMxRef("Window.personalbar")}} {{ReadOnlyInline}}
-  - : Retourne l'objet personalbar.
+  - : Retourne l'objet `personalbar`.
 - {{DOMxRef("Window.scheduler")}} {{ReadOnlyInline}}
   - : Retourne l'objet {{DOMxRef("Scheduler")}} associé au contexte courant. Point d'entrée pour utiliser [l'API Prioritized Task Scheduling](/fr/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{DOMxRef("Window.screen")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet screen associé à la fenêtre.
-- {{DOMxRef("Window.screenX")}} and {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Les deux propriétés Retournent la distance horizontale entre le bord gauche de la zone d'affichage (<i lang="en">viewport</i> en anglais) du navigateur de l'utilisateur·ice et le bord gauche de l'écran.
-- {{DOMxRef("Window.screenY")}} and {{DOMxRef("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Les deux propriétés Retournent la distance verticale entre le bord supérieur de la zone d'affichage (<i lang="en">viewport</i> en anglais) du navigateur de l'utilisateur·ice et le bord supérieur de l'écran.
+- {{DOMxRef("Window.screenX")}} et {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
+  - : Les deux propriétés Retournent la distance horizontale entre le bord gauche de la fenêtre du navigateur de l'utilisateur·ice et le bord gauche de l'écran.
+- {{DOMxRef("Window.screenY")}} et {{DOMxRef("Window.screenTop")}} {{ReadOnlyInline}}
+  - : Les deux propriétés Retournent la distance verticale entre le bord supérieur de la fenêtre du navigateur de l'utilisateur·ice et le bord supérieur de l'écran.
 - {{DOMxRef("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Retourne l'objet scrollbars.
 - {{DOMxRef("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -129,7 +129,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne le nombre de pixels déjà défilés verticalement dans le document.
 - {{DOMxRef("Window.self")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet window lui-même.
-- {{DOMxRef("Window.sessionStorage")}}
+- {{DOMxRef("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet de stockage de session utilisé pour stocker des données accessibles uniquement par l'origine qui les a créées.
 - {{DOMxRef("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Retourne l'objet {{DOMxRef("WindowSharedStorage")}} pour l'origine courante. Point d'entrée principal pour écrire des données dans le stockage partagé avec [l'API Shared Storage](/fr/docs/Web/API/Shared_Storage_API).
@@ -162,7 +162,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 ### Propriétés dépréciées
 
 - {{DOMxRef("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Retourne l'**évènement courant**, c'est-à-dire l'évènement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun évènement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'évènements.
+  - : Retourne **l'évènement courant**, c'est-à-dire l'évènement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun évènement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'évènements.
 - {{DOMxRef("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Retourne un objet avec des fonctions permettant d'ajouter des fournisseurs de recherche externes au navigateur.
 - {{DOMxRef("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -175,13 +175,13 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Window.atob()")}}
-  - : Décode une chaîne de données encodée en base 64.
+  - : Décode une chaîne de caractères de données encodée en base 64.
 - {{DOMxRef("Window.alert()")}}
   - : Affiche une boîte de dialogue d'alerte.
 - {{DOMxRef("Window.blur()")}} {{Deprecated_Inline}}
   - : Retire la sélection de la fenêtre.
 - {{DOMxRef("Window.btoa()")}}
-  - : Crée une chaîne ASCII encodée en base 64 à partir d'une chaîne de données binaires.
+  - : Crée une chaîne de caractères ASCII encodée en base 64 à partir d'une chaîne de caractères de données binaires.
 - {{DOMxRef("Window.cancelAnimationFrame()")}}
   - : Permet d'annuler un rappel précédemment planifié avec {{DOMxRef("Window.requestAnimationFrame")}}.
 - {{DOMxRef("Window.cancelIdleCallback()")}}
@@ -215,7 +215,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.getSelection()")}}
   - : Retourne l'objet de sélection représentant l'élément ou les éléments sélectionnés.
 - {{DOMxRef("Window.matchMedia()")}}
-  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de requête média définie.
+  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de caractères de requête média définie.
 - {{DOMxRef("Window.moveBy()")}}
   - : Déplace la fenêtre courante d'une certaine distance.
 - {{DOMxRef("Window.moveTo()")}}
@@ -223,7 +223,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.open()")}}
   - : Ouvre une nouvelle fenêtre.
 - {{DOMxRef("Window.postMessage()")}}
-  - : Permet à une fenêtre d'envoyer de façon sécurisée une chaîne de données à une autre fenêtre, même si elle n'est pas du même domaine.
+  - : Permet à une fenêtre d'envoyer de façon sécurisée une chaîne de caractères de données à une autre fenêtre, même si elle n'est pas du même domaine.
 - {{DOMxRef("Window.print()")}}
   - : Ouvre la boîte de dialogue d'impression pour imprimer le document courant.
 - {{DOMxRef("Window.prompt()")}}
@@ -238,6 +238,8 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
   - : Indique au navigateur qu'une animation est en cours et demande de planifier un rafraîchissement de la fenêtre pour la prochaine image d'animation.
 - {{DOMxRef("Window.requestIdleCallback()")}}
   - : Permet de planifier des tâches pendant les périodes d'inactivité du navigateur.
+- {{DOMxRef("Window.requestResize()")}} {{Experimental_Inline}}
+  - : Met à jour les informations de taille partagées par un document intégré avec son parent d'intégration, mais uniquement si le document intégré a choisi de partager ses informations de taille.
 - {{DOMxRef("Window.resizeBy()")}}
   - : Redimensionne la fenêtre courante d'une certaine valeur.
 - {{DOMxRef("Window.resizeTo()")}}
@@ -320,9 +322,9 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 ### Évènements de ciblage
 
 - {{DOMxRef("Window/blur_event", "blur")}}
-  - : Se déclenche lorsqu'un élément perd la sélection.
+  - : Se déclenche lorsqu'une fenêtre perd la sélection.
 - {{DOMxRef("Window/focus_event", "focus")}}
-  - : Se déclenche lorsqu'un élément reçoit la sélection.
+  - : Se déclenche lorsqu'une fenêtre reçoit la sélection.
 
 ### Évènements de manette de jeu
 
@@ -525,7 +527,7 @@ document.body.onresize = (e) => console.log(e.currentTarget);
 <body onresize="console.log(event.currentTarget)"></body>
 ```
 
-Dans les trois cas, vous verrez l'objet `Window` affiché comme `currentTarget`.
+Dans les trois cas, vous allez voir l'objet `Window` affiché comme `currentTarget`.
 
 ## Spécifications
 

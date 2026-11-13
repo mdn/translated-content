@@ -3,7 +3,7 @@ title: "Élément HTML `<mark>` : l'élément de marquage du texte"
 short-title: <mark>
 slug: Web/HTML/Reference/Elements/mark
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 32eceacf42b6bff41d9605298eba143cb7e199a1
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<mark>`** représente du texte qui est **marqué** ou **surligné** à des fins de référence ou de notation, en raison de la pertinence du passage marqué dans le contexte qui l'entoure.
@@ -40,43 +40,13 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 Cas d'utilisation typiques de `<mark>`&nbsp;:
 
-- Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
-- Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur·ice (par exemple lorsqu'il recherche un terme en particulier).
-- `<mark>` ne doit pas être utilisé pour de la coloration syntaxique, c'est l'élément {{HTMLElement("span")}} qui devra être utilisé.
+- Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur·ice ne considère pas ce texte comme important.
+- Au sein du texte principal, le texte surligné marque du texte d'une pertinence particulière pour l'utilisateur·ice (par exemple lorsqu'il recherche un terme en particulier).
+- `<mark>` ne doit pas être utilisé pour de la coloration syntaxique, c'est l'élément {{HTMLElement("span")}} qui doit être utilisé.
 - `<mark>` ne doit pas être confondu avec {{HTMLElement("strong")}}. L'élément {{HTMLElement("strong")}} est utilisé afin d'indiquer des fragments de texte _importants_ alors que `<mark>` est utilisé afin d'indiquer des fragments de texte _pertinents_.
 
 > [!NOTE]
 > Ne confondez pas `<mark>` avec l'élément {{HTMLElement("strong")}}&nbsp;; `<mark>` sert à indiquer un contenu ayant un certain degré de _pertinence_, tandis que `<strong>` indique des portions de texte _importantes_.
-
-## Accessibilité
-
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `mark`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
-
-```css
-mark::before,
-mark::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-mark::before {
-  content: " [Début du marquage]";
-}
-
-mark::after {
-  content: " [Fin du marquage] ";
-}
-```
-
-Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été marqué.
-
-- [Réglage des styles de texte, reprise <sup>(angl.)</sup>](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html) par Adrian Roselli (2025)
-- [Brève note sur la manière de se démarquer (de manière plus accessible) <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/) par Vispero (2017)
 
 ## Exemples
 

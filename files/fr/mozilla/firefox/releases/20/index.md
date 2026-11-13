@@ -3,7 +3,7 @@ title: Firefox 20 note de version pour les développeurs
 short-title: Firefox 20
 slug: Mozilla/Firefox/Releases/20
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeur·euse·s.
@@ -44,7 +44,7 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 - L'interface {{DOMxRef("CaretPosition")}} a été implémentée dans la méthode CSSOM {{DOMxRef("document.caretPositionFromPoint()")}}.
 - L'argument index des méthodes {{DOMxRef("HTMLTableRowElement.insertCell()")}} et {{DOMxRef("HTMLTableElement.insertRow()")}} est désormais optionnel conformément à la spécification HTML.
 - {{DOMxRef("Navigator.getUserMedia")}}, toujours préfixé en tant que `Navigator.mozGetUserMedia`, est maintenant activé par défaut.
-- Le troisième argument optionnel `transfer` de {{DOMxRef("Window.postMessage")}} est désormais pris en charge. Il permet de transférer une séquence [d'objets transférables](/fr/docs/Web/API/Web_Workers_API/Transferable_objects) vers la destination ([bogue Firefox 822094 <sup>(angl.)</sup>](https://bugzil.la/822094)).
+- Le troisième argument optionnel `transfer` de {{DOMxRef("Window.postMessage")}} est désormais pris en charge. Il vous permet de transférer une séquence [d'objets transférables](/fr/docs/Web/API/Web_Workers_API/Transferable_objects) vers la destination ([bogue Firefox 822094 <sup>(angl.)</sup>](https://bugzil.la/822094)).
 - La méthode non standard {{DOMxRef("Window.sizeToContent()")}} limite désormais la taille minimale&nbsp;: la fenêtre ne peut plus être forcée à des tailles trop petites, empêchant l'utilisateur·ice d'interagir avec elle ([bogue Firefox 764240 <sup>(angl.)</sup>](https://bugzil.la/764240)).
 - Les modes de fusion, tels que `overlay`, `color-burn`, `hue`, etc., ont été ajoutés à la propriété {{DOMxRef("CanvasRenderingContext2D.globalCompositeOperation")}} de Canvas ([bogue Firefox 748433 <sup>(angl.)</sup>](https://bugzil.la/748433)).
 - La version préfixée de {{DOMxRef("Window.indexedDB")}} — `window.mozIndexedDB` — a été réintroduite dans Gecko, afin que le mauvais code préfixé inter-navigateurs (comme `var indexedDB = window.indexedDB || window.webkitIndexedDB …`) ne casse pas dans Firefox. Une meilleure approche est `window.indexedDB = window.indexedDB || window.webkitIndexedDB …` (voir [bogue Firefox 770844 <sup>(angl.)</sup>](https://bugzil.la/770844)).

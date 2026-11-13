@@ -92,6 +92,6 @@ console.log(instant3.epochMilliseconds); // 1730696400000
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Instant/subtract", "Temporal.Instant.prototype.subtract()")}}

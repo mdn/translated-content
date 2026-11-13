@@ -57,7 +57,7 @@ console.log(newDT3.toString()); // "2021-07-01T00:00:00"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/toPlainTime", "Temporal.PlainDateTime.prototype.toPlainTime()")}}

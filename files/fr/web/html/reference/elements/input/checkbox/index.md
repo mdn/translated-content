@@ -3,10 +3,10 @@ title: Valeur d'attribut HTML `<input type="checkbox">`
 short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pouvez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).
+Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pouvez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à envoyer dans un formulaire (ou pas).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
@@ -39,9 +39,6 @@ input {
 }
 ```
 
-> [!NOTE]
-> [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs [d'un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#définir_un_groupe_de_boutons_radio) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
-
 ## Valeur
 
 Une chaîne de caractères représentant la valeur de la case à cocher. Celle-ci n'est pas affichée côté client, mais côté serveur, c'est la `value` donnée aux données envoyées avec le `name` de la case à cocher. Prenez l'exemple suivant&nbsp;:
@@ -66,7 +63,7 @@ Une chaîne de caractères représentant la valeur de la case à cocher. Celle-c
 
 Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données sont transmises sous la forme `subscribe=newsletter`.
 
-Si l'attribut `value` n'était pas renseigné, la valeur par défaut est `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
+Si l'attribut `value` n'était pas renseigné, la valeur par défaut est `on` (dans l'exemple, les données envoyées au serveur ont eu la forme `subscribe=on`).
 
 > [!NOTE]
 > Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution peut être d'utiliser du JavaScript pour créer un élément `{{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}`.
@@ -95,7 +92,7 @@ En plus des [attributs communs](/fr/docs/Web/HTML/Reference/Elements/input#attri
 
 ## Utiliser les cases à cocher
 
-Nous avons déjà couvert l'utilisation la plus basique des cases à cocher ci-dessus. Voyons maintenant les autres fonctionnalités et techniques courantes liées aux cases à cocher dont vous avez besoin.
+Les cases à cocher sont similaires aux [boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio), mais avec une distinction importante — les [boutons radio portant le même nom](/fr/docs/Web/HTML/Reference/Elements/input/radio#définir_des_groupes_de_radio) sont regroupés en un ensemble dans lequel un seul bouton radio peut être sélectionné à la fois, tandis que les cases à cocher vous permettent d'activer ou de désactiver des valeurs individuelles. Lorsqu'il existe plusieurs contrôles portant le même nom, les boutons radio permettent d'en sélectionner un seul parmi tous, tandis que les cases à cocher permettent de sélectionner plusieurs valeurs.
 
 ### Gérer plusieurs cases à cocher
 
@@ -146,20 +143,17 @@ Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer 
 L'exemple suivant montre comment faire en sorte qu'une case à cocher ressemble et se comporte comme un interrupteur marche/arrêt.
 
 ```html
-<form>
-  <fieldset>
-    <legend>Réglez vos paramètres</legend>
-    <div>
-      <label for="theme">Mode sombre</label>
-      <input type="checkbox" name="theme" id="theme" switch checked />
-    </div>
-    <div>
-      <label for="notifications">Notifications</label>
-      <input type="checkbox" name="notifications" id="notifications" switch />
-    </div>
-    <button type="submit">Soumettre</button>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Réglez vos paramètres</legend>
+  <div>
+    <label for="theme">Mode sombre</label>
+    <input type="checkbox" name="theme" id="theme" switch checked />
+  </div>
+  <div>
+    <label for="notifications">Notifications</label>
+    <input type="checkbox" name="notifications" id="notifications" switch />
+  </div>
+</fieldset>
 ```
 
 > [!NOTE]
@@ -230,37 +224,35 @@ function updateDisplay() {
 ```
 
 ```html live-sample___indeterminate_state
-<form>
-  <fieldset>
-    <legend>Complétez la recette</legend>
-    <div>
-      <input type="checkbox" id="enchantment" name="enchantment" />
-      <label for="enchantment">Table d'enchantement</label>
-      <ul>
-        <li>
-          <input type="checkbox" id="book" name="ingredient" value="book" />
-          <label for="book">Livre</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="diamonds"
-            name="ingredient"
-            value="diamonds" />
-          <label for="diamonds">Diamants (x2)</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="obsidian"
-            name="ingredient"
-            value="obsidian" />
-          <label for="obsidian">Bloc d'obsidienne (x4)</label>
-        </li>
-      </ul>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Complétez la recette</legend>
+  <div>
+    <input type="checkbox" id="enchantment" name="enchantment" />
+    <label for="enchantment">Table d'enchantement</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="book" name="ingredient" value="book" />
+        <label for="book">Livre</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="diamonds"
+          name="ingredient"
+          value="diamonds" />
+        <label for="diamonds">Diamants (x2)</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="obsidian"
+          name="ingredient"
+          value="obsidian" />
+        <label for="obsidian">Bloc d'obsidienne (x4)</label>
+      </li>
+    </ul>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample("indeterminate_state", "", 200)}}
@@ -276,55 +268,50 @@ L'exemple suivant est une version étendue de l'exemple «&nbsp;plusieurs cases 
 ### HTML
 
 ```html
-<form>
-  <fieldset>
-    <legend>Veuillez sélectionner vos intérêts</legend>
-    <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        Développement
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        Musique
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        Art
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        Sports
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        Cuisine
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        Autre
-      </label>
-      <input
-        type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Autres intérêts" />
-    </div>
-    <div>
-      <button type="submit">Envoyer le formulaire</button>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Veuillez sélectionner vos intérêts</legend>
+  <div>
+    <label>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      Développement
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      Musique
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="art" name="interest" value="art" />
+      Art
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      Sports
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
+      Cuisine
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="other" name="interest" value="other" />
+      Autre
+    </label>
+    <input
+      type="text"
+      id="otherValue"
+      name="other"
+      aria-label="Autres intérêts" />
+  </div>
+</fieldset>
 ```
 
 ### CSS
@@ -334,16 +321,13 @@ html {
   font-family: sans-serif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
 div {
   margin-bottom: 10px;
 }
 
 fieldset {
+  width: 600px;
+  margin: 0 auto;
   background: cyan;
   border: 5px solid blue;
 }

@@ -72,8 +72,8 @@ console.log(end.toString()); // 2020-10-07T07:28:48.992
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/since", "Temporal.PlainDateTime.prototype.since()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/until", "Temporal.PlainDateTime.prototype.until()")}}

@@ -2,7 +2,7 @@
 title: La clave page-type de front matter
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: bd8f07e677d3bf6d5ebb0bccec3afb48f52921b5
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 La clave `page-type` de front matter describe el tipo de una página de MDN.

@@ -1,5 +1,5 @@
 ---
-title: CSS `stroke-dasharray` プロパティ
+title: "`stroke-dasharray` プロパティ (CSS)"
 short-title: stroke-dasharray
 slug: Web/CSS/Reference/Properties/stroke-dasharray
 l10n:

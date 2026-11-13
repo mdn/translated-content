@@ -3,7 +3,7 @@ title: Fonction CSS `rotate()`
 short-title: rotate()
 slug: Web/CSS/Reference/Values/transform-function/rotate
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 80ab11f9d757b49325122071a8a6210440ec6551
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`rotate()`** définit une transformation qui fait pivoter un élément autour d'un point fixe du plan 2D, sans le déformer. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
@@ -37,6 +37,9 @@ transform: rotate(3.142rad);
 ```
 
 Le point fixe autour duquel l'élément pivote — mentionné ci-dessus — est aussi appelé **origine de transformation**. Par défaut, il s'agit du centre de l'élément, mais vous pouvez définir votre propre origine de transformation à l'aide de la propriété {{CSSxRef("transform-origin")}}.
+
+> [!NOTE]
+> L'attribut SVG [`transform`](/fr/docs/Web/SVG/Reference/Attribute/transform) a sa propre syntaxe, dans laquelle `rotate()` accepte deux valeurs supplémentaires optionnelles donnant le centre de rotation, comme dans `rotate(45, 50, 50)`. Cette forme n'est valide que dans l'attribut, pas en CSS&nbsp;: la fonction CSS `rotate()` prend uniquement un angle, et le centre est défini avec {{CSSxRef("transform-origin")}}.
 
 ## Syntaxe
 
@@ -125,7 +128,7 @@ div {
 
 ### Combiner une rotation avec une autre transformation
 
-Si vous souhaitez appliquer plusieurs transformations à un élément, faites attention à l'ordre dans lequel vous définissez les transformations. Par exemple, si vous effectuez une rotation avant une translation, la translation s'effectuera le long du nouvel axe de rotation&nbsp;!
+Si vous souhaitez appliquer plusieurs transformations à un élément, faites attention à l'ordre dans lequel vous définissez les transformations. Par exemple, si vous effectuez une rotation avant un déplacement, le déplacement s'effectue le long du nouvel axe de rotation&nbsp;!
 
 #### HTML
 

@@ -48,7 +48,7 @@ console.log(newTime.toString()); // 12:34:56.0001
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode {{JSxRef("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/add", "Temporal.PlainTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}

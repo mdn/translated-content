@@ -65,7 +65,7 @@ order: 2;
 
 Dans la démonstration ci-dessus, sélectionnez les options sur le côté gauche pour changer la valeur de la propriété `order` de la boîte rose. Les boîtes bleu clair ont des valeurs `order` fixes.
 
-Gardez à l'esprit l'effet de l'ordre dans le code source. Par exemple, lorsque `order: 2;` est sélectionné, la boîte rose est placée avant les deux boîtes bleues avec `order: 2;`. Cela est dû au fait que la boîte rose apparaît avant les boîtes bleues dans le code source.
+Gardez à l'esprit l'effet de l'ordre dans le code source. Par exemple, lorsque `order: 2;` est sélectionné, la boîte rose est placée avant les deux boîtes bleues avec `order: 2;`. C'est dû au fait que la boîte rose apparaît avant les boîtes bleues dans le code source.
 
 ## Syntaxe
 
@@ -84,7 +84,7 @@ order: unset;
 
 Puisque `order` est uniquement destiné à affecter _l'ordre visuel_ des éléments et non leur ordre logique ou de tabulation, il ne doit pas être utilisé sur des médias non visuels tels que la [voix <sup>(angl.)</sup>](https://drafts.csswg.org/css-speech/).
 
-Défini dans le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display), cette propriété n'affecte que les éléments de grille et flexible. Lorsque `order` est défini sur un élément dont la propriété {{CSSxRef("display")}} du parent ne crée pas un conteneur flex ou grille, il n'a aucun effet.
+Défini dans le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display), cette propriété n'affecte que les éléments de grille et flexible. Lorsque `order` est défini sur un élément dont la propriété {{CSSxRef("display")}} du parent ne crée pas un conteneur flexible ou grille, il n'a aucun effet.
 
 ### Valeurs
 
@@ -93,7 +93,7 @@ Défini dans le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display), cette
 
 ## Accessibilité
 
-L'utilisation de la propriété `order` crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela affectera négativement les utilisateur·ice·s malvoyant·e·s naviguant à l'aide de technologies d'assistance telles qu'un lecteur d'écran. Si l'ordre visuel diffère de l'ordre du DOM, vos utilisateur·ice·s auront des expériences différentes en fonction de la manière dont ils accèdent à votre contenu.
+L'utilisation de la propriété `order` crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela affecta négativement les utilisateur·ice·s malvoyant·e·s naviguant à l'aide de technologies d'assistance telles qu'un lecteur d'écran. Si l'ordre visuel diffère de l'ordre du DOM, vos utilisateur·ice·s ont des expériences différentes en fonction de la manière dont ils accèdent à votre contenu.
 
 - [Les boîtes flexibles & la déconnexion de la navigation au clavier <sup>(angl.)</sup>](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) sur Tink (2016)
 - [L'ordre du code source importe <sup>(angl.)</sup>](https://adrianroselli.com/2015/09/source-order-matters.html) par Adrian Roselli (2015)
@@ -116,7 +116,7 @@ Dans cet exemple, nous créons une disposition classique à deux barres latéral
 
 #### HTML
 
-Nous incluons un en-tête, un pied de page et une zone de contenu principale. La zone de contenu principale comprend un article et deux barres latérales. Notez leur ordre&nbsp;! Nous utiliserons la propriété CSS `order` pour modifier leur ordre visuel.
+Nous incluons un en-tête, un pied de page et une zone de contenu principale. La zone de contenu principale comprend un article et deux barres latérales. Notez leur ordre&nbsp;! Nous utilisons la propriété CSS `order` pour modifier leur ordre visuel.
 
 ```html
 <header>En-tête</header>
@@ -130,7 +130,7 @@ Nous incluons un en-tête, un pied de page et une zone de contenu principale. La
 
 #### CSS
 
-Nous mettons en forme la zone principale en utilisant les fonctionnalités du module [de mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout)&nbsp;; en définissant {{CSSxRef("display")}} sur `flex`, l'élément HTML {{HTMLElement("main")}} devient un conteneur flex. Par défaut, cela crée des éléments flex de taille verticale égale. Les barres latérales reçoivent toutes deux une {{CSSxRef("width")}} absolue, tandis que l'élément HTML {{HTMLElement("article")}} consommera tout [l'espace libre positif](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#espace_libre_positif_et_négatif) avec un facteur {{CSSxRef("flex-grow")}} défini via le raccourci {{CSSxRef("flex")}}.
+Nous mettons en forme la zone principale en utilisant les fonctionnalités du module [de mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout)&nbsp;; en définissant {{CSSxRef("display")}} sur `flex`, l'élément HTML {{HTMLElement("main")}} devient un conteneur flex. Par défaut, cela crée des éléments flexible de taille verticale égale. Les barres latérales reçoivent toutes deux une {{CSSxRef("width")}} absolue, tandis que l'élément HTML {{HTMLElement("article")}} consomme tout [l'espace libre positif](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#espace_libre_positif_et_négatif) avec un facteur {{CSSxRef("flex-grow")}} défini par le raccourci {{CSSxRef("flex")}}.
 
 Nous définissons ensuite différentes valeurs de la propriété `order` sur chacun des trois enfants du conteneur flex&nbsp;; cela signifie que le CSS définit l'ordre visuel de ce composant plutôt que l'ordre dans lequel il apparaît dans le HTML.
 

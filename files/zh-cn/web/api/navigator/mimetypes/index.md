@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }}{{deprecated_header}}
+{{ ApiRef("HTML DOM") }}
 
 返回一个 {{domxref("MimeTypeArray")}} 对象，该对象包含一个 {{domxref("MimeType")}} 对象列表，表示浏览器识别和支持的 MIME 类型。可以通过查询该数组来获取有关用于处理指定类型文件的启用插件的信息。返回对象的具名属性不可枚举（仅在非常老的浏览器版本中除外）。
 

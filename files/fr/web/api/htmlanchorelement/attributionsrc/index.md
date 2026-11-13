@@ -3,10 +3,10 @@ title: "HTMLAnchorElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLAnchorElement/attributionSrc
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLAnchorElement")}} permet d'obtenir et de définir l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/a#attributionsrc) sur un élément HTML {{HTMLElement("a")}} de façon programmatique, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une [source d'attribution basée sur la navigation](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 

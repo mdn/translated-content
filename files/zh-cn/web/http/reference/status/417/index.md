@@ -9,7 +9,7 @@ HTTP 协议中的 **`417 Expectation Failed`** 状态码表示客户端错误，
 
 ## 状态码
 
-```plain
+```http
 417 Expectation Failed
 ```
 

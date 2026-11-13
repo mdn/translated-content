@@ -48,5 +48,5 @@ console.log(locale.collation); // "zhuyin"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Locale")}}
+- L'objet natif {{JSxRef("Intl.Locale")}}
 - La méthode {{JSxRef("Intl.Locale.prototype.getCollations()")}}

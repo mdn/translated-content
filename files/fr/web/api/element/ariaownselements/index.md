@@ -3,7 +3,7 @@ title: "Element : propriété ariaOwnsElements"
 short-title: ariaOwnsElements
 slug: Web/API/Element/ariaOwnsElements
 l10n:
-  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
+  sourceCommit: 3b4a7a32fc2fe8cb6bd9a1e62f4ca52e002599ef
 ---
 
 {{APIRef("DOM")}}

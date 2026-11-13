@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/number
 original_slug: Web/XPath/Functions/number
 ---
 
-{{XsltSidebar}}
-
 La fonction `number` convertit un objet en un nombre et retourne ce nombre.
 
 ### Syntaxe

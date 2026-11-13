@@ -133,7 +133,7 @@ nombres.push(5); // TypeError : Cannot assign to read only property 'length' of 
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La propriété {{JSxRef("TypedArray.prototype.length")}}
 - La propriété {{JSxRef("String.length")}}
 - [RangeError&nbsp;: longueur de tableau invalide](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

@@ -62,5 +62,5 @@ Atomics.load(ta, 0); // 36, la nouvelle/valeur actuelle
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.add()")}}

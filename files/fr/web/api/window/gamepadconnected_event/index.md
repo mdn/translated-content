@@ -3,10 +3,10 @@ title: "Window : évènement gamepadconnected"
 short-title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("Gamepad API")}}
 
 L'évènement `gamepadconnected` de l'interface {{DOMxRef("Window")}} est déclenché lorsque le navigateur détecte qu'une manette a été connectée ou la première fois qu'un bouton ou un axe de la manette est utilisé.
 

@@ -3,7 +3,7 @@ title: Propriété CSS `font-optical-sizing`
 short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-optical-sizing`** définit si le rendu du texte est optimisé pour l'affichage à différentes tailles.
@@ -35,7 +35,7 @@ font-optical-sizing: none;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -71,10 +71,12 @@ font-optical-sizing: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `none`
-  - : Le navigateur ne modifiera pas la forme des glyphes pour une vue optimale.
+  - : Le navigateur ne modifie pas la forme des glyphes pour une vue optimale.
 - `auto`
-  - : Le navigateur modifiera la forme des glyphes pour une vue optimale.
+  - : Le navigateur modifie la forme des glyphes pour une vue optimale.
 
 ## Description
 
@@ -101,15 +103,14 @@ Lorsque le dimensionnement optique est utilisé, les petites tailles de texte so
 </p>
 
 <p class="no-optical-sizing">
-  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
-  une différence avec les navigateurs qui prennent en charge cette
-  fonctionnalité.
+  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devez voir une
+  différence avec les navigateurs qui prennent en charge cette fonctionnalité.
 </p>
 ```
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
+  src: url("AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -125,7 +126,7 @@ p {
 ```
 
 > [!NOTE]
-> La police utilisée dans cet exemple — qui possède un dimensionnement optique et est disponible sous licence libre — est un bon moyen de tester. Vous pouvez le trouver [en téléchargement sur GitHub <sup>(angl.)</sup>](https://github.com/googlefonts/amstelvar/releases).
+> La police utilisée dans cet exemple — qui possède un dimensionnement optique et est disponible sous licence libre — est un bon moyen de tester. Vous pouvez le trouver [en téléchargement sur GitHub <sup>(angl.)</sup>](https://github.com/googlefonts/amstelvar-beta/releases).
 
 ## Spécifications
 
@@ -135,7 +136,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - La propriété {{CSSxRef("font-size")}}
 - La propriété {{CSSxRef("font-size-adjust")}}

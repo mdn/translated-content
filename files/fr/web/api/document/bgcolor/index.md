@@ -3,10 +3,10 @@ title: "Document : propriété bgColor"
 short-title: bgColor
 slug: Web/API/Document/bgColor
 l10n:
-  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 La propriété obsolète **`bgColor`** de l'interface {{DOMxRef("Document")}} retourne ou définit la couleur de fond du document courant.
 
@@ -26,7 +26,7 @@ document.bgColor = "darkblue";
 
 La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff` en hexadécimal).
 
-`document.bgColor` est obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-bgcolor). L'alternative recommandée est l'utilisation du style CSS {{CSSxRef("background-color")}} qui peut être accessible via le DOM avec `document.body.style.backgroundColor`.
+`document.bgColor` est obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-bgcolor). L'alternative recommandée est l'utilisation du style CSS {{CSSxRef("background-color")}} qui peut être accessible par le DOM avec `document.body.style.backgroundColor`.
 
 ## Spécifications
 

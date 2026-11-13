@@ -3,10 +3,10 @@ title: "HTMLMediaElement : méthode seekToNextFrame()"
 short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 La méthode **`seekToNextFrame()`** de l'interface {{DOMxRef("HTMLMediaElement")}} avance de manière asynchrone la position de lecture actuelle vers l'image suivante dans le média.
 

@@ -3,10 +3,10 @@ title: "HTMLFontElement : propriété color"
 short-title: color
 slug: Web/API/HTMLFontElement/color
 l10n:
-  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété obsolète **`color`** de l'interface {{DOMxRef("HTMLFontElement")}} est une chaîne de caractères qui reflète l'attribut HTML [`color`](/fr/docs/Web/HTML/Reference/Elements/font#color), contenant soit un nom de couleur, soit une couleur définie au format hexadécimal #RRVVBB.
 

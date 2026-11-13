@@ -1,8 +1,9 @@
 ---
 title: "MutationRecord: addedNodes プロパティ"
+short-title: addedNodes
 slug: Web/API/MutationRecord/addedNodes
 l10n:
-  sourceCommit: 373fcd42528fc9eafa3703dc99927cc56c75fa8d
+  sourceCommit: be591971235a485fb10778eb990118eb1223a8e7
 ---
 
 {{APIRef("DOM")}}

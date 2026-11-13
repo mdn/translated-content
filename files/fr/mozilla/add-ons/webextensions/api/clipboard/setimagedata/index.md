@@ -3,8 +3,6 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 
-{{AddonSidebar}}
-
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
 L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.

@@ -2,15 +2,15 @@
 title: Trouver un emploi
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 l10n:
-  sourceCommit: 6b8cc29eba06c8f83bbd7b7db3acf78edfe308e8
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 
-Les entretiens d'embauche techniques peuvent être très exigeants, et certains ont des attentes très spécifiques. Trouver les bons emplois auxquels postuler peut déjà être un défi&nbsp;! Cet article propose quelques conseils et ressources pour vous aider dans le processus, de la recherche d'offres à la réussite des entretiens. Le processus décrit ci-dessous ne convient pas forcément à tout le monde tel quel&nbsp;: vous trouverez peut-être qu'une approche ou un ordre légèrement différent vous convient mieux — mais la plupart y trouvent des éléments utiles.
+Les entretiens d'embauche techniques peuvent être très exigeants, et certains ont des attentes très spécifiques. Trouver les bons emplois auxquels postuler peut déjà être un défi&nbsp;! Cet article propose quelques conseils et ressources pour vous aider dans le processus, de la recherche d'offres à la réussite des entretiens. Le processus décrit ci-dessous ne convient pas forcément à tout le monde tel quel&nbsp;: vous trouvez peut-être qu'une approche ou un ordre légèrement différent vous convient mieux — mais la plupart y trouvent des éléments utiles.
 
 > [!NOTE]
-> Vous n'avez peut-être même pas envie de réfléchir à l'emploi que vous souhaitez pour l'instant&nbsp;; vous voulez peut-être simplement vous concentrer sur l'apprentissage du code. C'est très bien&nbsp;: vous pouvez toujours revenir à cet article plus tard, quand le moment sera venu.
+> Vous n'avez peut-être même pas envie de réfléchir à l'emploi que vous souhaitez pour l'instant&nbsp;; vous voulez peut-être simplement vous concentrer sur l'apprentissage du code. C'est très bien&nbsp;: vous pouvez toujours revenir à cet article plus tard, quand le moment est venu.
 
 <table>
   <tbody>
@@ -44,7 +44,7 @@ Si vous lisez ce site, vous êtes probablement intéressé·e par un emploi dans
 
 - Type exact de poste&nbsp;: souhaitez-vous être plutôt&nbsp;:
   - Web designer&nbsp;: utiliser HTML, CSS et des logiciels graphiques pour concevoir des interfaces utilisateur.
-  - Développeur·euse JavaScript&nbsp;: implémenter des fonctionnalités avec JavaScript et des frameworks.
+  - Développeur·euse JavaScript&nbsp;: implémenter des fonctionnalités avec JavaScript et des cadriciels.
   - Relations développeur·euse·s ou ingénieur·e avant-vente&nbsp;: échanger avec les client·e·s, les enthousiasmer pour la technologie, les aider à résoudre des problèmes et à développer des solutions.
   - Rédacteur·ice technique&nbsp;: rédiger la documentation pour expliquer le fonctionnement de la technologie et son utilisation.
   - Développeur·euse polyvalent·e.
@@ -110,7 +110,7 @@ Voici quelques conseils généraux pour la rédaction d'un CV&nbsp;:
 - Utilisez un langage professionnel&nbsp;: n'utilisez pas de langage familier ou d'argot — vous devez montrer que vous prenez votre candidature au sérieux.
 - Relisez attentivement pour éviter les fautes d'orthographe et de grammaire&nbsp;: utilisez un service comme [Scribens](https://www.scribens.fr/) pour ne rien laisser passer et obtenir des suggestions d'amélioration. Les responsables du recrutement écartent souvent un CV contenant une faute — cela montre un manque de professionnalisme et d'attention aux détails.
 - N'incluez pas forcément toutes vos expériences professionnelles dans votre CV&nbsp;: si vous avez beaucoup d'expérience, ne mettez que les plus importantes ou les plus récentes. Vous voulez rester concis·e, mais vous ne voulez pas non plus donner l'impression qu'il y a des trous suspects dans votre parcours, ce qui peut susciter des questions. Mettez la liste complète de vos expériences sur votre profil LinkedIn et ne mettez qu'un résumé dans votre CV.
-- Incluez les compétences générales&nbsp;: comme mentionné dans la section [Développer les qualités recherchées par les employeurs](#développer_les_qualités_recherchées_par_les_employeurs), les compétences générales sont importantes et méritent d'être mentionnées dans votre CV. Réfléchissez à celles qui sont pertinentes — les employeurs ne sont pas intéressés par des pages de description de votre gentillesse, mais ils veulent savoir que vous êtes un·e bon·ne joueur·euse d'équipe, calme sous pression et avec des compétences en résolution de problèmes.
+- Incluez les compétences générales&nbsp;: comme mentionné dans la section [Développer les qualités recherchées par les employeurs](#développer_les_qualités_recherchées_par_les_employeurs), les compétences générales sont importantes et méritent d'être mentionnées dans votre CV. Réfléchissez à celles qui sont pertinentes — les employeurs ne sont pas intéressés par des pages de description de votre gentillesse, mais ils veulent savoir que vous êtes un·e bon·ne joueur·se d'équipe, calme sous pression et avec des compétences en résolution de problèmes.
 - Références sur demande&nbsp;: les employeurs demandent toujours des références pour avoir un second avis sur vous et vos compétences, idéalement une personne avec qui vous avez travaillé et avec qui vous avez de bonnes relations, comme un·e ancien·ne responsable ou enseignant·e. Si vous ne savez pas encore qui sont vos références, écrivez simplement «&nbsp;Références disponibles sur demande.&nbsp;» en bas de votre CV.
 - Mettez à jour votre CV régulièrement&nbsp;: vérifiez-le chaque année pour voir si vous devez ajouter de nouvelles informations ou en retirer.
 
@@ -173,23 +173,23 @@ Voyons maintenant le processus de candidature à un emploi.
 Il existe différentes façons d'aborder la recherche d'emploi, et une combinaison de plusieurs méthodes fonctionne souvent le mieux&nbsp;:
 
 - Inscrivez-vous sur des sites où les offres d'emploi sont publiées, comme LinkedIn (il existe aussi des sites spécifiques à votre région) et choisissez de recevoir régulièrement des listes d'offres disponibles.
-- Rendez-vous sur vos [réseaux communautaires](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#rejoindre_un_réseau_communautaire), cherchez des annonces d'emploi et demandez à vos contacts s'ils connaissent des offres qui pourraient vous intéresser.
+- Rendez-vous sur vos [réseaux communautaires](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#rejoindre_un_réseau_communautaire), cherchez des annonces d'emploi et demandez à vos contacts s'ils connaissent des offres qui peuvent vous intéresser.
 - Renseignez-vous sur les entreprises pour lesquelles vous aimeriez travailler, consultez leurs pages d'offres et voyez ce qui est proposé.
 - Participez à des évènements de réseautage et à des salons de l'emploi pour rencontrer des employeurs potentiels.
 
-Les critères que vous avez définis dans la section [«&nbsp;Déterminer le type d'emploi souhaité&nbsp;»](#déterminer_le_type_demploi_souhaité) devraient vous aider à cibler les entreprises et les postes qui vous correspondent le mieux.
+Les critères que vous avez définis dans la section [«&nbsp;Déterminer le type d'emploi souhaité&nbsp;»](#déterminer_le_type_demploi_souhaité) doivent vous aider à cibler les entreprises et les postes qui vous correspondent le mieux.
 
 ### Avant de postuler
 
 Avant de commencer à postuler, voici quelques étapes utiles pour vous préparer&nbsp;:
 
-- Vérifiez la description du poste pour vous assurer qu'il vous correspond. Par exemple, il zqr inutile de postuler à un poste qui exige de travailler à temps plein dans un bureau en Californie si vous vivez en France et ne souhaitez pas déménager. De même, vous n'avez pas l'expérience requise pour un poste de développeur·euse web senior si vous n'apprenez JavaScript que depuis 3 mois.
+- Vérifiez la description du poste pour vous assurer qu'il vous correspond. Par exemple, il est inutile de postuler à un poste qui exige de travailler à temps plein dans un bureau en Californie si vous vivez en France et ne souhaitez pas déménager. De même, vous n'avez pas l'expérience requise pour un poste de développeur·euse web senior si vous n'apprenez JavaScript que depuis 3 mois.
   > [!NOTE]
   > Si vous ne savez pas si vous devez postuler à un poste, ou si vous souhaitez savoir si l'entreprise propose d'autres postes plus adaptés, trouvez les coordonnées du·de la recruteur·euse et posez-lui la question. Cette personne peut vous être utile plus tard, même si ce n'est pas le cas maintenant.
 - Essayez de trouver des contacts qui travaillent déjà dans l'entreprise, par exemple avec votre réseau communautaire ou sur LinkedIn, et engagez la conversation avec eux. Demandez-leur comment c'est de travailler dans cette entreprise et s'il y a des éléments spécifiques à connaître pour le poste. Si vous n'êtes pas adapté·e à ce poste, demandez s'il y a d'autres postes plus adaptés à venir prochainement. Évitez de contacter trop de personnes dans la même entreprise&nbsp;: choisissez plutôt une ou deux personnes qui semblent les plus proches du poste visé.
 - Faites d'autres recherches sur l'entreprise — lisez leur site/blog, renseignez-vous sur leur histoire et leurs objectifs. Prenez le temps d'utiliser leurs produits et de vous familiariser avec leur fonctionnement — par exemple, installez leur logiciel et utilisez-le pour créer une démo, ou développez un site qui utilise leurs API.
   > [!NOTE]
-  > Pour aller plus loin, essayez d'identifier un problème qu'ils cherchent à résoudre ou un bug dans leur produit, et proposez une solution avec une démo ou des extraits de code.
+  > Pour aller plus loin, essayez d'identifier un problème qu'ils cherchent à résoudre ou un bogue dans leur produit, et proposez une solution avec une démo ou des extraits de code.
 - Adaptez votre CV à ce poste précis. Analysez la description du poste et mettez en avant vos compétences et expériences les plus pertinentes, tout en minimisant ou supprimant les éléments moins adaptés. Mettez aussi en avant, dans votre portfolio, les démos ou exemples les plus pertinents pour ce poste, par exemple en les plaçant en haut de votre portfolio.
 
 ### Candidater à l'emploi
@@ -203,7 +203,7 @@ Avant tout&nbsp;:
 
 Toutes les candidatures ne demandent pas les mêmes éléments&nbsp;; il vous faut probablement&nbsp;:
 
-- Remplir des informations dans un formulaire en ligne. Rédigez vos réponses localement (par exemple dans VSCode) ou dans un document en ligne (par exemple un fichier Google Docs) avant de les copier dans le formulaire, au cas où un problème (plantage du navigateur, etc.) vous ferait perdre votre travail. Cela peut vous faire gagner beaucoup de temps et facilite la relecture ou les retours si vous partagez le texte ailleurs.
+- Remplir des informations dans un formulaire en ligne. Rédigez vos réponses localement (par exemple dans VSCode) ou dans un document en ligne (par exemple un fichier Google Docs) avant de les copier dans le formulaire, au cas où un problème (plantage du navigateur, etc.) vous fait perdre votre travail. Cela peut vous faire gagner beaucoup de temps et facilite la relecture ou les retours si vous partagez le texte ailleurs.
 - Téléversez votre CV.
 - Rédiger et envoyer une lettre de motivation. Il existe de nombreux guides pour rédiger une lettre efficace, mais en général, elle doit expliquer pourquoi&nbsp;:
   - Vous souhaitez travailler pour l'entreprise.
@@ -255,7 +255,7 @@ Une fois que l'entreprise a étudié votre candidature et vous considère comme 
 
 À ce stade, soyez sympathique et ouvert·e. Mais ne parlez pas trop&nbsp;: restez naturel·le et laissez le·la recruteur·euse guider la conversation. Indiquez vos disponibilités pour les prochains entretiens, soyez aussi flexible que possible et prêt·e à adapter votre emploi du temps.
 
-Ne soyez pas trop confiant·e&nbsp;: vous ne savez pas à l'avance quelles questions vous seront posées à ce stade. Prenez ce premier entretien aussi au sérieux que les suivants.
+Ne soyez pas trop confiant·e&nbsp;: vous ne savez pas à l'avance quelles questions vous sont posées à ce stade. Prenez ce premier entretien aussi au sérieux que les suivants.
 
 ### L'entretien principal
 
@@ -263,7 +263,7 @@ En général, la majeure partie du processus consiste en un ou plusieurs entreti
 
 - Il peut n'y avoir qu'un seul entretien principal, mais il est plus courant d'en avoir plusieurs, chacun testant un aspect différent du poste (travail technique, travail en équipe, organisation, documentation/communication, gestion de conflit, etc.).
 - Les entretiens peuvent se faire avec une seule personne ou plusieurs (entretien en panel).
-- Certains entretiens sont plus exploratoires ou conceptuels («&nbsp;décrivez le processus que vous utiliseriez pour livrer x&nbsp;», «&nbsp;quels sont selon vous les principaux problèmes de cette solution&nbsp;»), d'autres sont plus techniques ou pratiques («&nbsp;écrivez un programme JavaScript qui résout ce problème&nbsp;»).
+- Certains entretiens sont plus exploratoires ou conceptuels («&nbsp;décrivez le processus que vous utilisez pour livrer x&nbsp;», «&nbsp;quels sont selon vous les principaux problèmes de cette solution&nbsp;»), d'autres sont plus techniques ou pratiques («&nbsp;écrivez un programme JavaScript qui résout ce problème&nbsp;»).
 
 #### Questions basées sur l'expérience
 
@@ -271,7 +271,7 @@ Les entretiens comportent inévitablement des questions basées sur l'expérienc
 
 - «&nbsp;Donnez un exemple de situation où vous avez dû faire un retour négatif à un·e collègue sur son code. Comment avez-vous géré cela&nbsp;?&nbsp;»
 - «&nbsp;Racontez une fois où vous avez découvert en cours de projet que votre approche ne fonctionne pas. Comment avez-vous réagi et quelles mesures avez-vous prises&nbsp;?&nbsp;»
-- «&nbsp;Corriger de petits bugs est souvent difficile à intégrer dans le processus d'une équipe — la pile s'accumule et finit par être négligée. Comment avez-vous géré cela dans vos équipes précédentes&nbsp;?&nbsp;»
+- «&nbsp;Corriger de petits bogues est souvent difficile à intégrer dans le processus d'une équipe — la pile s'accumule et finit par être négligée. Comment avez-vous géré cela dans vos équipes précédentes&nbsp;?&nbsp;»
 
 Préparez un ensemble d'anecdotes à utiliser pour répondre à ce type de questions. Cela devient plus facile avec l'expérience.
 
@@ -280,7 +280,7 @@ Préparez un ensemble d'anecdotes à utiliser pour répondre à ce type de quest
 Certains entretiens sont techniques et visent à tester votre capacité à résoudre des problèmes de code. Par exemple&nbsp;:
 
 - «&nbsp;Écrivez une fonction JavaScript qui prend x et y en entrée et retourne z.&nbsp;»
-- «&nbsp;Un·e collègue a écrit le composant React suivant, mais il comporte des bugs. Pouvez-vous identifier le problème et le réécrire pour le corriger&nbsp;?&nbsp;»
+- «&nbsp;Un·e collègue a écrit le composant React suivant, mais il comporte des bogues. Pouvez-vous identifier le problème et le réécrire pour le corriger&nbsp;?&nbsp;»
 - «&nbsp;Regardez ce code et décrivez ce qu'il fait.&nbsp;»
 - «&nbsp;Écrivez un algorithme qui génère les `n` premiers termes de la suite de Fibonacci, où `n` est un nombre positif.&nbsp;»
 
@@ -320,8 +320,8 @@ Soyez patient·e. Même les meilleur·e·s candidat·e·s reçoivent plusieurs r
 ## Voir aussi
 
 - [Être embauché·e <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn) sur Scrimba
-- [Technical Interviewing 101&nbsp;: Ultimate Guide to Acing Your Tech Interview <sup>(angl.)</sup>](https://learntocodewith.me/posts/technical-interview/) sur learntocodewith.me (2022)
-- [30 Technical Interview Questions and Tips for Answering <sup>(angl.)</sup>](https://www.coursera.org/articles/technical-interview-questions) sur Coursera (2023)
+- [101 des questions d'entretien technique&nbsp;: Le guide ultime pour réussir votre entretien technique <sup>(angl.)</sup>](https://learntocodewith.me/posts/technical-interview/) sur learntocodewith.me (2022)
+- [30 astuces pour les questions d'entretien technique et conseils pour y répondre <sup>(angl.)</sup>](https://www.coursera.org/articles/technical-interview-questions) sur Coursera (2023)
 - [Comment décrocher son premier poste de développeur·euse](/fr/blog/how-to-land-your-first-developer-job/) sur le blog MDN (2024)
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}

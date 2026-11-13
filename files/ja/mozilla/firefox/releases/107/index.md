@@ -1,13 +1,14 @@
 ---
-title: Firefox 107 for developers
+title: Firefox 107 開発者向けリリースノート
+short-title: Firefox 107
 slug: Mozilla/Firefox/Releases/107
 l10n:
-  sourceCommit: 27ae7e9c347490290a7327a48842575d333b2f31
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-このページでは、開発者に影響する Firefox 107 の変更点をまとめています。Firefox 107 は、2022 年 11 月 15 日にリリースされました。
+このページでは、開発者に影響する Firefox 107 の変更点をまとめています。Firefox 107 は、米国時間 2022 年 11 月 15 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -20,9 +21,9 @@ l10n:
 
 ### CSS
 
-- [`contain-intrinsic-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) ショートハンド CSS プロパティを、[サイズ拘束](/ja/docs/Web/CSS/Guides/Containment#%e3%82%b5%e3%82%a4%e3%82%ba%e6%8b%98%e6%9d%9f) の対象になる UI 要素のサイズを指定するために適用できるようになりました。
+- [`contain-intrinsic-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) 一括指定 CSS プロパティを、[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)の対象になる UI 要素のサイズを指定するために適用できるようになりました。
   これはユーザーエージェントが、子要素をレンダリングせずに要素のサイズを特定することを可能にします。
-  ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-inline-size) もサポートしました ([Firefox バグ 1597529](https://bugzil.la/1597529))。
+  一括指定プロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-inline-size) もサポートしました ([Firefox バグ 1597529](https://bugzil.la/1597529))。
 - [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) によって、カラーフォントをサポートしました ([Firefox バグ 1791558](https://bugzil.la/1791558))。また、[@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) CSS アットルールと、その記述子である [font-family](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/font-family)、[base-palette](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)、[override-colors](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) でも、カラーフォントをサポートしました。これらを合わせて、カラーパレットの定義を支援します ([Firefox バグ 1791558](https://bugzil.la/1791558))。
 
 ### JavaScript
@@ -57,12 +58,6 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-### 廃止
-
 ### その他
 
 - {{WebExtAPIRef("scripting.executeScript")}} でエラーが発生したときに返される `error` プロパティが、メッセージプロパティを持つオブジェクトだけでなく、スクリプトがスローしたり拒否拒否したりした任意の値を表すようになりました ([Firefox バグ 1740608](https://bugzil.la/1740608))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(106)}}

@@ -2,7 +2,7 @@
 title: Utiliser les requêtes de taille et de style des conteneurs
 slug: Web/CSS/Guides/Containment/Container_size_and_style_queries
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Les [requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries) permettent d'appliquer des styles aux éléments imbriqués dans un conteneur spécifique en fonction des caractéristiques de ce conteneur. La requête retourne vrai ou faux selon que la condition de la requête est vraie pour le conteneur.
@@ -31,7 +31,7 @@ Il existe cinq types de requêtes de conteneur&nbsp;:
   - : Les requêtes de conteneur en fonction de l'état de défilement permettent d'appliquer sélectivement des règles CSS aux descendants d'un conteneur en fonction des conditions d'état de défilement, telles que si l'élément interrogé est partiellement défilé ou si le conteneur est aligné sur un conteneur de défilement. Les éléments contenant doivent être explicitement déclarés comme _requêtes d'état des conteneurs de défilement_.
 
 - **[Requêtes de conteneur ancrés](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)**
-  - : Les requêtes de conteneur ancrés permettent de vérifier si le conteneur est [positionné par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et dispose d'une [option de repli `position-try`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
+  - : Les requêtes de conteneur ancrés permettent de vérifier si le conteneur est [positionné par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et dispose d'une [option de repli `position-try`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) appliquée.
 
 Dans ce guide, nous apprenons les bases des requêtes de conteneur en examinant&nbsp;:
 

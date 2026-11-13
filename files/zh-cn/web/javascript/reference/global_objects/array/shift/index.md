@@ -33,7 +33,7 @@ shift()
 
 `shift` 方法移除索引为 0 的元素，并将后续元素的下标依次向前移动，然后返回被移除的元素。如果 {{jsxref("Array.length", "length")}} 属性的值为 0，则返回 {{jsxref("undefined")}}。
 
-{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是是作用于数组的最后一个元素上的。
+{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是作用于数组的最后一个元素上的。
 
 `shift()` 方法是一个改变方法。它改变了 `this` 的内容和长度。如果你希望保持 `this` 的值不变，但返回一个删除了第一个元素的新数组，你可以使用 [`arr.slice(1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)。
 

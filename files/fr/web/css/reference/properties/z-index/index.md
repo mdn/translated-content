@@ -3,7 +3,7 @@ title: Propriété CSS `z-index`
 short-title: z-index
 slug: Web/CSS/Reference/Properties/z-index
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`z-index`** définit l'ordre d'empilement sur l'axe Z d'un élément [positionné](/fr/docs/Web/CSS/Reference/Properties/position) et de ses descendants ou des éléments flexibles et de grille. Les éléments qui se chevauchent avec un `z-index` plus élevé recouvrent ceux avec un `z-index` plus faible.
@@ -147,9 +147,9 @@ z-index: revert-layer;
 z-index: unset;
 ```
 
-La propriété `z-index` est spécifiée soit par le mot-clé `auto`, soit par un entier (`<integer>`).
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : La boîte ne crée pas de nouveau contexte d'empilement local. Le niveau d'empilement de la boîte générée dans le contexte d'empilement courant est `0`.

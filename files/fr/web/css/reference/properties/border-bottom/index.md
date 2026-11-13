@@ -3,7 +3,7 @@ title: Propriété CSS `border-bottom`
 short-title: border-bottom
 slug: Web/CSS/Reference/Properties/border-bottom
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-bottom`** définit la bordure inférieure d'un élément. Elle définit les valeurs de {{CSSxRef("border-bottom-width")}}, {{CSSxRef("border-bottom-style")}} et {{CSSxRef("border-bottom-color")}}.

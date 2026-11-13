@@ -107,7 +107,7 @@ shape-margin: unset;
   économiques de la société sont incertaines pour tout le monde, sauf pour
   certains individus qui tentent de les exposer&nbsp;; mais avant que le monde
   ne soit façonné, le carré sur l'hypoténuse était égal à la somme des carrés
-  sur les deux autres côtés d'un triangle rectangle, et il en sera de même après
+  sur les deux autres côtés d'un triangle rectangle, et il en est de même après
   la mort de ce monde&nbsp;; et l'habitant de Mars, s'il en existe un, connaît
   probablement sa vérité comme nous la connaissons.
 </section>
@@ -131,7 +131,7 @@ section {
 }
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Ajouter une marge à un polygone", 500, 250)}}
 

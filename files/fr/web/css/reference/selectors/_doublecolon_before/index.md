@@ -65,7 +65,7 @@ Par défaut, les pseudo-éléments `::before` et `::after` partagent le même co
 
 ## Accessibilité
 
-Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteur·ice·s d'écran.
+Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteurs d'écran.
 
 ## Exemples
 
@@ -197,7 +197,7 @@ Voici le code ci-dessus en action. Notez qu'aucune icône n'est utilisée, et qu
 
 ### Séquences d'échappement Unicode
 
-Comme le contenu généré est CSS, et non HTML, vous **ne pouvez pas** utiliser d'entités de balisage dans les valeurs de contenu. Si vous devez utiliser un caractère spécial et que vous ne pouvez pas l'entrer littéralement dans votre chaîne de contenu CSS, utilisez une séquence d'échappement unicode. Cela consiste en un antislash suivi de la valeur unicode hexadécimale du caractère.
+Comme le contenu généré est CSS, et non HTML, vous **ne pouvez pas** utiliser d'entités de balisage dans les valeurs de contenu. Si vous devez utiliser un caractère spécial et que vous ne pouvez pas l'entrer littéralement dans votre chaîne de caractères de contenu CSS, utilisez une séquence d'échappement unicode. Cela consiste en un antislash suivi de la valeur unicode hexadécimale du caractère.
 
 #### HTML
 
@@ -234,9 +234,9 @@ li[aria-current="step"]::before {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('séquences_déchappement_unicode', 400, 200)}}
+{{EmbedLiveSample("Séquences d'échappement Unicode", 400, 200)}}
 
 ### Les pseudo-éléments imbriqués `::before::marker`
 

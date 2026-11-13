@@ -2,7 +2,7 @@
 title: Ressources et spécifications sur HTTP
 slug: Web/HTTP/Reference/Resources_and_specifications
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: f0311fa176576faf8be270e23eaf25b725740d87
 ---
 
 HTTP a été défini pour la première fois au début des années 1990. Conçu dans un souci d'extensibilité, il a fait l'objet de nombreux ajouts au fil des ans, ce qui a entraîné la dispersion de sa spécification dans de nombreux documents de spécification (au milieu d'extensions expérimentales abandonnées). Cette page répertorie les ressources pertinentes sur HTTP.
@@ -19,7 +19,7 @@ HTTP a été défini pour la première fois au début des années 1990. Conçu d
 | {{RFC(6265)}}                                                                                                                                                         | Mécanisme de gestion d'état HTTP _Définit les cookies_                                                                                                                                                                                                                  | Proposition de norme       |
 | [Brouillon de spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-prefixes-00)                                          | Préfixes de cookie                                                                                                                                                                                                                                                      | Brouillon IETF             |
 | [Brouillon de spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00)                                         | Cookies même-site                                                                                                                                                                                                                                                       | Brouillon IETF             |
-| [Brouillon de spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01)                                             | Déprécier la modification des cookies 'secure' depuis des origines non sécurisées                                                                                                                                                                                       | Brouillon IETF             |
+| [Brouillon de spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01)                                             | Déprécier la modification des cookies `secure` depuis des origines non sécurisées                                                                                                                                                                                       | Brouillon IETF             |
 | {{RFC(2145)}}                                                                                                                                                         | Utilisation et interprétation des numéros de version HTTP                                                                                                                                                                                                               | Informationnel             |
 | {{RFC(6585)}}                                                                                                                                                         | Codes d'état HTTP supplémentaires                                                                                                                                                                                                                                       | Proposition de norme       |
 | {{RFC(7725)}}                                                                                                                                                         | Un code d'état HTTP pour signaler des obstacles juridiques                                                                                                                                                                                                              | En cours de normalisation  |
@@ -52,12 +52,14 @@ HTTP a été défini pour la première fois au début des années 1990. Conçu d
 | [L'API de rapport <sup>(angl.)</sup>](https://wicg.github.io/reporting/)                                                                                              | `Report-To` header                                                                                                                                                                                                                                                      | Brouillon                  |
 | [Brouillon de spécification <sup>(angl.)</sup>](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)                                                | Extension Expect-CT pour HTTP                                                                                                                                                                                                                                           | Brouillon IETF             |
 | {{RFC(7486)}}                                                                                                                                                         | Authentification liée à l'origine HTTP (HOBA)                                                                                                                                                                                                                           | Expérimental               |
+| {{RFC(7240)}}                                                                                                                                                         | L'en-être `Prefer`pour HTTP                                                                                                                                                                                                                                             | Proposition de norme       |
+| {{RFC(3229)}}                                                                                                                                                         | L'encodage delta dans HTTP                                                                                                                                                                                                                                              | Proposition de norme       |
 
 ## Voir aussi
 
 - [Évolution du protocole HTTP](/fr/docs/Web/HTTP/Guides/Evolution_of_HTTP)
 - Termes du glossaire&nbsp;:
-  - {{Glossary('HTTP')}}
-  - {{Glossary('HTTP_2', 'HTTP/2')}}
-  - {{Glossary('QUIC')}}
-  - {{Glossary('TCP', 'Transmission Control Protocol (TCP)')}}
+  - {{Glossary("HTTP")}}
+  - {{Glossary("HTTP_2", "HTTP/2")}}
+  - {{Glossary("QUIC")}}
+  - {{Glossary("TCP", "Transmission Control Protocol (TCP)")}}

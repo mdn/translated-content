@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5e207965797b3672d3c06b65298de551d1eac515
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Après avoir organisé nos composants, il est maintenant temps de faire évoluer l'interface utilisateur de notre application afin que celle-ci ne soit plus statique mais interactive et permette de modifier les choses. C'est ce que nous allons faire dans cet article, en nous penchant sur les évènements et l'état, pour aboutir à une application dans laquelle nous pouvons ajouter des tâches, les supprimer et les marquer comme terminées.
 

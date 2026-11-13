@@ -160,7 +160,7 @@ const min = minimumDuTableau([5, 6, 2, 3, 7]);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Functions/arguments", "arguments")}}
+- L'objet natif {{JSxRef("Functions/arguments", "arguments")}}
 - La méthode {{JSxRef("Function.prototype.bind()")}}
 - La méthode {{JSxRef("Function.prototype.call()")}}
 - La méthode {{JSxRef("Reflect.apply()")}}

@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/key
 original_slug: Web/XSLT/Element/key
 ---
 
-{{XsltSidebar}}
-
 L'élément `<xsl:key>` déclare une clef nommée qui peut être utilisée dans toute la feuille de styles à l'aide de la fonction `key( )`.
 
 ### Syntaxe

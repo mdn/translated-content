@@ -121,7 +121,7 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 
 HTTP 请求如下：
 
-```plain
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -153,7 +153,7 @@ Host: foo.com
 
 当使用`POST`方法提交表单时，没有数据会附加到 URL，HTTP 请求看起来是这样的，而请求主体中包含的数据是这样的：
 
-```plain
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -217,7 +217,7 @@ HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要�
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
 这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
-```plain
+```python
 from flask import Flask, render_template, request
 app = Flask(__name__)
 

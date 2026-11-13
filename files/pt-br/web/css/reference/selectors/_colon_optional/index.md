@@ -22,7 +22,11 @@ Esta pseudo-classe é utilizada para estilizar campos do formulário que não s�
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:optional {
+  /* ... */
+}
+```
 
 ## Exemplos
 

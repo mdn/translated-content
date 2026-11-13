@@ -3,10 +3,10 @@ title: Pseudo-classe CSS `:state()`
 short-title: :state()
 slug: Web/CSS/Reference/Selectors/:state
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:state()`** correspond aux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) qui ont l'état personnalisé spécifié.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:state()`** correspond aux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) qui ont l'état personnalisé défini.
 
 ## Syntaxe
 
@@ -24,15 +24,15 @@ La pseudo-classe `:state()` prend en argument un identifiant personnalisé qui r
 
 Les éléments peuvent passer d'un état à un autre en raison de l'interaction de l'utilisateur·ice et d'autres facteurs.
 Par exemple, un élément peut être dans l'état "hover" lorsqu'un·e utilisateur·ice survole l'élément, ou un lien peut être dans l'état "visited" après qu'un·e utilisateur·ice a cliqué dessus.
-Les éléments fournis par les navigateurs peuvent être stylisés en fonction de ces états à l'aide de pseudo-classes CSS telles que {{CSSxRef(":hover")}} et {{CSSxRef(":visited")}}.
+Les éléments fournis par les navigateurs peuvent être mis en forme en fonction de ces états à l'aide de pseudo-classes CSS telles que {{CSSxRef(":hover")}} et {{CSSxRef(":visited")}}.
 De même, [les éléments personnalisés autonomes](/fr/docs/Web/API/Web_components/Using_custom_elements#types_délément_personnalisés) (éléments personnalisés qui ne sont pas dérivés d'éléments intégrés) peuvent exposer leurs états, permettant aux pages qui utilisent les éléments de les mettre en forme à l'aide de la pseudo-classe CSS `:state()`.
 
-Les états d'un élément personnalisé sont représentés par des valeurs de chaîne.
+Les états d'un élément personnalisé sont représentés par des valeurs de chaîne de caractères.
 Ces valeurs sont ajoutées ou supprimées d'un objet {{DOMxRef("CustomStateSet")}} associé à l'élément.
 La pseudo-classe CSS `:state()` correspond à un élément lorsque l'identifiant, passé en argument, est présent dans le `CustomStateSet` de l'élément.
 
 La pseudo-classe `:state()` peut également être utilisée pour correspondre à des états personnalisés dans l'implémentation d'un élément personnalisé.
-Cela se fait en utilisant `:state()` dans la fonction pseudo-classe {{CSSxRef(":host_function", ":host()")}}, qui correspond à un état uniquement dans le shadow DOM de l'élément personnalisé actuel.
+Cela se fait en utilisant `:state()` dans la fonction pseudo-classe {{CSSxRef(":host_function", ":host()")}}, qui correspond à un état uniquement dans le DOM d'ombre de l'élément personnalisé actuel.
 
 De plus, le pseudo-élément {{CSSxRef("::part()")}} suivi de la pseudo-classe `:state()` permet de correspondre aux [parties d'ombre (<i lang="en">shadow parts</i> en anglais)](/fr/docs/Web/CSS/CSS_shadow_parts) d'un élément personnalisé qui sont dans un état particulier. (**Les parties d'ombre** sont des parties de l'arbre d'ombre d'un élément personnalisé qui sont explicitement exposées à une page contenant à des fins de style.)
 

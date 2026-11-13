@@ -8,7 +8,7 @@ l10n:
 
 **`::details-content`** [CSS](/ja/docs/Web/CSS) [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) は、{{HTMLElement("details")}} 要素の展開・折りたたみ可能なコンテンツを表します。
 
-{{InteractiveExample("CSS Demo: ::details-content", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::details-content", "tabbed-shorter")}}
 
 ```css interactive-example
 details[open]::details-content {

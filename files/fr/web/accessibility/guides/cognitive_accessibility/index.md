@@ -2,12 +2,12 @@
 title: Accessibilité cognitive
 slug: Web/Accessibility/Guides/Cognitive_accessibility
 l10n:
-  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
+  sourceCommit: 051d02b402b7f76c2078b12283aa18318c34c38b
 ---
 
 L'accessibilité cognitive concerne les aspects d'accessibilité pour les personnes ayant des troubles cognitifs et des difficultés d'apprentissage. Ce document présente l'accessibilité cognitive et explique comment améliorer l'accessibilité du Web pour les personnes ayant des différences cognitives et d'apprentissage.
 
-Le handicap cognitif recouvre un large éventail de situations, allant des personnes avec une déficience intellectuelle (qui peuvent avoir les capacités affaiblies) aux troubles liés à l'âge (problèmes de mémoire ou de réflexion). Cela inclut aussi les personnes ayant des troubles psychiques, comme la dépression ou la schizophrénie, ainsi que les personnes avec des troubles d'apprentissage, comme la dyslexie ou le trouble du déficit de l'attention avec ou sans hyperactivité (TDAH).
+Le handicap cognitif recouvre un large éventail de situations, allant des personnes avec une déficience intellectuelle (qui peuvent avoir les capacités affaiblies) aux troubles liés à l'âge (problèmes de mémoire ou de réflexion). Cela inclut aussi les personnes ayant des troubles psychiques, comme la dépression ou la schizophrénie, ainsi que les personnes avec des troubles d'apprentissage, comme la dyslexie ou le trouble du déficit de l'attention avec ou sans hyperactivité (<abbr>TDAH</abbr>).
 
 Bien qu'il existe une grande diversité dans les définitions cliniques des troubles cognitifs, les personnes concernées rencontrent un ensemble commun de difficultés fonctionnelles. Ces difficultés incluent la compréhension du contenu, la mémorisation des étapes à suivre pour accomplir une tâche, ou la confusion causée par des mises en page web incohérentes ou non conventionnelles. Dans ce document, nous nous concentrons sur les actions que les développeur·euse·s doivent entreprendre pour améliorer l'accessibilité cognitive de leurs sites web et applications.
 
@@ -55,22 +55,22 @@ Toutes les recommandations suivantes profitent à bien plus qu'aux seules person
 
 ## Adaptabilité
 
-La [règle 1.3 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) indique que «&nbsp;le contenu doit être **adaptable**&nbsp;». Créez un contenu qui peut être présenté de différentes manières sans perte d'information ni de structure. Par exemple, proposez des mises en page {{Glossary('responsive web design', 'adaptatives')}} avec un affichage mobile en colonne unique.
+La [règle 1.3 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) indique que «&nbsp;le contenu doit être **adaptable**&nbsp;». Créez un contenu qui peut être présenté de différentes manières sans perte d'information ni de structure. Par exemple, proposez des mises en page {{Glossary("responsive web design", "adaptatives")}} avec un affichage mobile en colonne unique.
 
-Toutes les informations, y compris la structure et les relations véhiculées par la présentation, doivent être disponibles sous une forme perceptible par tou·te·s les utilisateur·ice·s pour atteindre cet objectif. Par exemple, l'information peut être lue à voix haute par un outil de synthèse vocale. Rendre votre contenu compréhensible par les logiciels est un bon moyen de garantir qu'il pourra être utilisé dans d'autres modes de présentation.
+Toutes les informations, y compris la structure et les relations véhiculées par la présentation, doivent être disponibles sous une forme perceptible par tou·te·s les utilisateur·ice·s pour atteindre cet objectif. Par exemple, l'information peut être lue à voix haute par un outil de synthèse vocale. Rendre votre contenu compréhensible par les logiciels est un bon moyen de garantir qu'il peut être utilisé dans d'autres modes de présentation.
 
 ## Temps
 
 Il est important de laisser aux utilisateur·ice·s le temps nécessaire pour accomplir leurs tâches. La [règle 2.2 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/enough-time) indique qu'il faut «&nbsp;donner aux utilisateur·ice·s suffisamment de **temps** pour lire et utiliser le contenu&nbsp;».
 
-Une **limite de temps** est tout processus qui se produit sans intervention de l'utilisateur·ice après un certain délai ou de façon périodique, comme une déconnexion après 30 minutes ou le fait d'avoir 15 minutes pour effectuer un achat. Les personnes ayant des troubles cognitifs peuvent avoir besoin de plus de temps pour lire le contenu ou remplir des formulaires. Les solutions incluent le fait d'accorder plus de temps pour terminer les tâches ou de supprimer complètement les contraintes de temps.
+Une **limite de temps** est n'importe quel processus qui se produit sans intervention de l'utilisateur·ice après un certain délai ou de façon périodique, comme une déconnexion après 30 minutes ou le fait d'avoir 15 minutes pour effectuer un achat. Les personnes ayant des troubles cognitifs peuvent avoir besoin de plus de temps pour lire le contenu ou remplir des formulaires. Les solutions incluent le fait d'accorder plus de temps pour terminer les tâches ou de supprimer complètement les contraintes de temps.
 
 ### Minuteries
 
 Options pour ajuster les exigences de temps&nbsp;:
 
 - Permettre à l'utilisateur·ice de désactiver ou d'ajuster la limite de temps jusqu'à 10 fois la limite initiale avant d'y être confronté·e.
-- Avertir l'utilisateur·ice et fournir un délai d'au moins 20 secondes pour prolonger la durée du délai d'expiration d'un facteur 10 via une action, comme appuyer sur la barre d'espace.
+- Avertir l'utilisateur·ice et fournir un délai d'au moins 20 secondes pour prolonger la durée du délai d'expiration d'un facteur 10 avec une action, comme appuyer sur la barre d'espace.
 
 Proposez un bouton ou une option permettant d'activer une durée de session plus longue, voire aucune limite de session. Exemples de contenus chronométrés&nbsp;: formulaires, exercices de lecture chronométrés, supports de formation. Si la limite de temps dépasse 20 heures, aucune adaptation n'est requise.
 
@@ -78,14 +78,14 @@ Proposez un bouton ou une option permettant d'activer une durée de session plus
 
 Il est important de ne pas distraire les utilisateur·ice·s, en particulier celles et ceux ayant des troubles cognitifs.
 
-Si des informations en mouvement, clignotantes, défilantes ou se mettant à jour automatiquement démarrent sans intervention, durent plus de cinq secondes et sont présentées en parallèle avec d'autres contenus, l'utilisateur·ice doit pouvoir les mettre en pause, les arrêter, les masquer ou les contrôler, sauf si cela est essentiel au fonctionnement. «&nbsp;Essentiel&nbsp;» signifie que retirer ces informations modifierait fondamentalement le sens du contenu et/ou la fonctionnalité, **et** que l'information ou la fonctionnalité ne peut être obtenue d'aucune autre manière conforme. Cela inclut les GIF animés, si l'animation dure plus de 5 secondes.
+Si des informations en mouvement, clignotantes, défilantes ou se mettant à jour automatiquement démarrent sans intervention, durent plus de cinq secondes et sont présentées en parallèle avec d'autres contenus, l'utilisateur·ice doit pouvoir les mettre en pause, les arrêter, les masquer ou les contrôler, sauf si cela est essentiel au fonctionnement. «&nbsp;Essentiel&nbsp;» signifie que retirer ces informations modifie fondamentalement le sens du contenu et/ou la fonctionnalité, **et** que l'information ou la fonctionnalité ne peut être obtenue d'aucune autre manière conforme. Cela inclut les GIF animés, si l'animation dure plus de 5 secondes.
 
 Autres critères temporels à prendre en compte&nbsp;:
 
-- Les personnes ayant des limitations cognitives ou linguistiques peuvent avoir besoin de plus de temps pour lire et comprendre. Pour une meilleure accessibilité, supprimez toute limite de temps. Le contenu chronométré doit aussi être évité, sauf pour les médias synchronisés non interactifs et les événements en temps réel.
+- Les personnes ayant des limitations cognitives ou linguistiques peuvent avoir besoin de plus de temps pour lire et comprendre. Pour une meilleure accessibilité, supprimez toute limite de temps. Le contenu chronométré doit aussi être évité, sauf pour les médias synchronisés non interactifs et les évènements en temps réel.
 - Les personnes ayant des troubles de l'attention doivent pouvoir se concentrer sans distraction. L'utilisateur·ice doit pouvoir reporter ou supprimer les interruptions, sauf en cas d'urgence. Cela permet aux personnes concernées de se concentrer sur l'objectif principal du contenu. Permettez de différer les mises à jour de contenu en proposant un moyen de les demander plutôt qu'une mise à jour automatique. Proposez aussi de rendre les alertes non essentielles optionnelles.
 - Veillez à ce que les utilisateur·ice·s puissent poursuivre une activité sans perte de données après une reconnexion suite à une session expirée, par exemple en sauvegardant l'état d'un questionnaire. Les données doivent être enregistrées de façon à pouvoir être modifiées après reconnexion. Avant la reconnexion, encodez les données comme cachées ou chiffrées.
-- Prévoyez des avertissements en cas d'inactivité pouvant entraîner une perte de données. Lorsqu'un délai d'expiration est utilisé, indiquez précisément combien de temps entraînera la fin de session et la perte de données. L'exception concerne la conservation des données pendant plus de 20 heures sans action de l'utilisateur·ice.
+- Prévoyez des avertissements en cas d'inactivité pouvant entraîner une perte de données. Lorsqu'un délai d'expiration est utilisé, indiquez précisément combien de temps entraîne la fin de session et la perte de données. L'exception concerne la conservation des données pendant plus de 20 heures sans action de l'utilisateur·ice.
 
 ## Navigation
 
@@ -109,33 +109,33 @@ Les titres sont des repères de navigation plus évidents que d'autres méthodes
 
 Différent·e·s utilisateur·ice·s préfèrent différentes méthodes pour trouver l'information, il est donc important de proposer plusieurs moyens d'accéder au contenu de votre site.
 
-Fournir plus d'une façon de naviguer sur votre site peut aider à trouver l'information plus rapidement. Certain·e·s préféreront une table des matières, un plan du site ou une fonction de recherche plutôt que de parcourir plusieurs pages. D'autres préféreront explorer le site de manière séquentielle, en passant de page en page pour mieux comprendre la structure, le contenu et les concepts du site.
+Fournir plus d'une façon de naviguer sur votre site peut aider à trouver l'information plus rapidement. Certain·e·s préfèrent une table des matières, un plan du site ou une fonction de recherche plutôt que de parcourir plusieurs pages. D'autres préfèrent explorer le site de manière séquentielle, en passant de page en page pour mieux comprendre la structure, le contenu et les concepts du site.
 
-### Ability to bypass blocks of content
+### Pouvoir contourner les blocs de contenu
 
-Providing a mechanism, such as a [skip link](/fr/docs/Web/HTML/Reference/Elements/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
+Fournissez un mécanisme, comme un [lien d'évitement](/fr/docs/Web/HTML/Reference/Elements/a#liens_dévitement), pour contourner les blocs de contenu répétés sur plusieurs pages web.
 
-### Focus order makes sense
+### Garantir un ordre de sélection logique
 
-The order of focus for interactive elements should make sense. To achieve this, the DOM order should match the visual order, which in turn should match the tabbing order. If the tab order jumps around, especially in a way that does not match the visual order when navigating with a keyboard, users can become disoriented.
+L'ordre de sélection des éléments interactifs doit être logique. Pour cela, l'ordre du DOM doit correspondre à l'ordre visuel, qui doit lui-même correspondre à l'ordre de navigation avec la touche de tabulation. Si l'ordre de tabulation passe d'un endroit à l'autre, notamment d'une manière qui ne correspond pas à l'ordre visuel lors de la navigation au clavier, les utilisateur·ice·s peuvent perdre leurs repères.
 
-### Focused elements should be visibly focused
+### Rendre la sélection des éléments visible
 
-When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default [`:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus) styling, unless you're making focus even more obvious.
+Quand un·e utilisateur·ice navigue au clavier, l'interface doit indiquer clairement quel élément possède actuellement la sélection. Ne modifiez pas et ne supprimez pas la mise en forme [`:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus) par défaut du navigateur, sauf si vous rendez la sélection encore plus visible.
 
-### Link text conveys meaning
+### Donner du sens au texte des liens
 
-The link's text should clearly and concisely communicate what the user should expect to be navigated to next if they choose to activate it. Poorly phrased link text may confuse users as to its purpose or destination.
+Le texte du lien doit indiquer clairement et précisément vers quoi l'utilisateur·ice s'attend à être dirigé·e s'iel choisit de l'activer. Un texte de lien mal formulé peut semer la confusion quant à son objectif ou à sa destination.
 
-Some forms of assistive technology allow users to navigate by lists of all the links present on the page. Links will be removed from the context of their surrounding non-link content, making the need for understandable link text even more important. An example of a poor experience is a page full of links whose text reads, "Click here". Without indicating where "here" will take you, the link's purpose is unclear.
+Certaines technologies d'assistance permettent aux utilisateur·ice·s de naviguer à l'aide de listes regroupant tous les liens présents sur la page. Les liens sont séparés du contexte du contenu environnant qui n'est pas un lien, ce qui rend un texte de lien compréhensible encore plus important. Une mauvaise expérience peut être une page remplie de liens dont le texte indique «&nbsp;Cliquez ici&nbsp;». Sans préciser où «&nbsp;ici&nbsp;» vous mène, l'objectif du lien n'est pas clair.
 
-For screen readers, it is vital that linked text describes the purpose of each link. If you have added content to links for screen readers, and that content is verbose and potentially confusing to sighted readers, consider clipping the added text to visually hide it from those not using assistive technologies.
+Pour les lecteurs d'écran, il est essentiel que le texte lié décrive l'objectif de chaque lien. Si vous avez ajouté du contenu aux liens pour les lecteurs d'écran et que ce contenu est verbeux et potentiellement déroutant pour les personnes voyantes, envisagez de tronquer le texte ajouté afin de le masquer visuellement aux personnes qui n'utilisent pas de technologies d'assistance.
 
-### Current location is available
+### Indiquer l'emplacement actuel
 
-Users should be able to orient themselves within a site or application. This is especially important and helpful for people with short attention spans who may become confused when following a long series of navigation steps.
+Les utilisateur·ice·s doivent pouvoir se repérer dans un site ou une application. Cela est particulièrement important et utile pour les personnes ayant une capacité d'attention réduite, qui peuvent se perdre lorsqu'elles suivent une longue série d'étapes de navigation.
 
-All users benefit from information about where they are in a site's hierarchy, especially for sites or applications with large amounts of content or many subsections. [Breadcrumbs](/fr/docs/Glossary/Breadcrumb), [site maps](/fr/docs/Glossary/Site_map), and identifying the current page in the navigation as "current" are all techniques that help communicate the current location.
+Toutes les personnes bénéficient d'informations sur leur emplacement dans la hiérarchie d'un site, en particulier pour les sites ou les applications contenant beaucoup de contenu ou de nombreuses sous-sections. Les [fils d'Ariane](/fr/docs/Glossary/Breadcrumb), les [plans de site](/fr/docs/Glossary/Site_map) et l'identification de la page actuelle dans la navigation comme étant «&nbsp;actuelle&nbsp;» sont autant de techniques qui aident à communiquer l'emplacement actuel.
 
 ## Lisibilité
 
@@ -173,9 +173,9 @@ Le contenu doit être rédigé aussi clairement que possible. Une bonne règle c
 - Utilisez la voix active au présent de l'indicatif.
 - Respectez la grammaire et l'orthographe.
 
-Il est utile pour les personnes ayant des troubles cognitifs de fournir un résumé du texte (parfois appelé TL;DR, ou «&nbsp;trop long&nbsp;; pas lu&nbsp;») à un niveau de lecture facile. Une autre technique consiste à proposer des visuels pour aider à expliquer les idées, événements et processus.
+Il est utile pour les personnes ayant des troubles cognitifs de fournir un résumé du texte (parfois appelé TL;DR, ou «&nbsp;trop long&nbsp;; pas lu&nbsp;») à un niveau de lecture facile. Une autre technique consiste à proposer des visuels pour aider à expliquer les idées, évènements et processus.
 
-Il existe des outils qui peuvent évaluer le niveau de difficulté de votre contenu. Par exemple, ce document a un niveau moyen d'environ 11, ce qui signifie qu'il devrait être facilement compris par une personne francophone de 16 à 17 ans. Certains outils peuvent même suggérer des moyens de le simplifier.
+Il existe des outils qui peuvent évaluer le niveau de difficulté de votre contenu. Par exemple, ce document a un niveau moyen d'environ 11, ce qui signifie qu'il doit être facilement compris par une personne francophone de 16 à 17 ans. Certains outils peuvent même suggérer des moyens de le simplifier.
 
 ### Prononciation
 
@@ -196,7 +196,7 @@ La [règle 3.2 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/p
 
 ### Utiliser l'activation, pas la sélection, pour changer de contexte
 
-Le changement de contexte doit être intentionnel. Ainsi, lorsqu'une fonctionnalité de l'interface reçoit la sélection ([focus](/fr/docs/Web/API/HTMLElement/focus)), elle ne doit pas déclencher d'autres actions visibles par l'utilisateur·ice. L'utilisateur·ice doit activer la fonctionnalité pour provoquer le changement.
+Le changement de contexte doit être intentionnel. Ainsi, lorsqu'une fonctionnalité de l'interface reçoit [la sélection](/fr/docs/Web/API/HTMLElement/focus), elle ne doit pas déclencher d'autres actions visibles par l'utilisateur·ice. L'utilisateur·ice doit activer la fonctionnalité pour provoquer le changement.
 
 ### Changer un paramètre suite à une action explicite
 
@@ -229,10 +229,10 @@ Les utilisateur·ice·s doivent être averti·e·s en cas d'erreur et informé·
 - Décrivez l'erreur dans le texte.
 - Rendez le message d'erreur aussi précis que possible.
 - Indiquez les champs obligatoires non remplis et fournissez une description textuelle si une valeur saisie est invalide.
-- Si l'erreur empêche la soumission d'un formulaire, placez le focus sur l'erreur. S'il y a plusieurs erreurs, fournissez un résumé, chaque erreur étant liée au champ concerné.
+- Si l'erreur empêche l'envoi d'un formulaire, placez la sélection sur l'erreur. S'il y a plusieurs erreurs, fournissez un résumé, chaque erreur étant liée au champ concerné.
 - Ajoutez du texte en plus des icônes, images, couleurs, etc. Certaines personnes ont du mal à comprendre la signification des icônes ou autres indices visuels.
 - D'autres peuvent avoir du mal à comprendre la version textuelle du message d'erreur. Pour ces personnes, proposez aussi des icônes et des couleurs.
-- Prévoyez également un retour positif lors d'une soumission réussie.
+- Prévoyez également un retour positif lors d'un envoi réussi.
 
 ### Fournir des instructions pour la saisie
 
@@ -248,11 +248,11 @@ Proposez une saisie suggérée à l'utilisateur·ice si une erreur est détecté
 
 ### Prévenir les catastrophes
 
-Pour les soumissions qui entraînent ou peuvent entraîner des conséquences juridiques, financières ou autres conséquences importantes, assurez-vous que les soumissions puissent être relues, confirmées et/ou annulées.
+Pour les envois qui entraînent ou peuvent entraîner des conséquences juridiques, financières ou autres conséquences importantes, assurez-vous que les envois puissent être relues, confirmées et/ou annulées.
 
-Les données saisies doivent être vérifiées avant la soumission, et l'utilisateur·ice doit pouvoir les corriger. Il·Elle doit pouvoir relire, confirmer et corriger les informations avant l'envoi final. Prévoyez aussi une case à cocher de confirmation en plus du bouton d'envoi.
+Les données saisies doivent être vérifiées avant l'envoi, et l'utilisateur·ice doit pouvoir les corriger. Il·Elle doit pouvoir relire, confirmer et corriger les informations avant l'envoi final. Prévoyez aussi une case à cocher de confirmation en plus du bouton d'envoi.
 
-Si une soumission entraîne une transaction juridique ou financière, indiquez un délai pendant lequel la demande peut être modifiée ou annulée.
+Si un envoi entraîne une transaction juridique ou financière, indiquez un délai pendant lequel la demande peut être modifiée ou annulée.
 
 ### Fournir de l'aide
 

@@ -3,7 +3,7 @@ title: "Window : méthode getDefaultComputedStyle()"
 short-title: getDefaultComputedStyle()
 slug: Web/API/Window/getDefaultComputedStyle
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
@@ -22,7 +22,7 @@ getDefaultComputedStyle(element, pseudoElt)
 - `element`
   - : Un objet {{DOMxRef("Element")}} pour lequel obtenir la mise en forme calculée.
 - `pseudoElt` {{Optional_Inline}}
-  - : Une chaîne de caractères définissant le pseudo-élément à correspondre. Doit être `null` (ou non spécifié) pour les éléments ordinaires.
+  - : Une chaîne de caractères définissant le pseudo-élément à correspondre. Doit être `null` (ou ne pas être défini) pour les éléments ordinaires.
 
 ### Valeur de retour
 
@@ -75,14 +75,14 @@ h3::after {
 
 ```js
 const h3 = document.querySelector("h3");
-const result = getDefaultComputedStyle(h3, "::after").content;
+const resultat = getDefaultComputedStyle(h3, "::after").content;
 
-console.log("le contenu généré est : ", result); // returns 'none'
+console.log("le contenu généré est : ", resultat); // returns 'none'
 ```
 
 ## Notes
 
-La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé fuite de l'historique CSS, les navigateurs peuvent expressément «&nbsp;mentir&nbsp;» sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si un·e utilisateur·ice n'avait jamais visité le site lié, et/ou limiter les styles qui peuvent être appliqués via l'utilisation du pseudo-sélecteur `:visited`. Voir [https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/ <sup>(angl.)</sup>](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) et [https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/ <sup>(angl.)</sup>](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour des exemples de la manière dont cela est mis en œuvre.
+La valeur retournée est, dans certains cas connus, expressément incorrecte par intention délibérée. En particulier, pour éviter le problème de sécurité appelé fuite de l'historique CSS, les navigateurs peuvent expressément «&nbsp;mentir&nbsp;» sur la valeur utilisée pour un lien et toujours retourner des valeurs comme si un·e utilisateur·ice n'a jamais visité le site lié, et/ou limiter les styles qui peuvent être appliqués avec l'utilisation du pseudo-sélecteur `:visited`. Voir [https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/ <sup>(angl.)</sup>](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) et [https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/ <sup>(angl.)</sup>](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) pour des exemples de la manière dont cela est mis en œuvre.
 
 ## Spécifications
 

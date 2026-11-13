@@ -3,7 +3,7 @@ title: "Array : méthode values()"
 short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`values()`** des instances de {{JSxRef("Array")}} retourne un nouvel objet _[itérateur de tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui itère sur la valeur de chaque élément du tableau.
@@ -45,7 +45,7 @@ Un nouvel [objet d'itérateur itérable](/fr/docs/Web/JavaScript/Reference/Globa
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 ```
 
-Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `values()` itère sur les cases vides comme si elles avaient la valeur indéfinie (`undefined`).
+Lorsqu'elle est utilisée sur un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux), la méthode `values()` itère sur les cases vides comme si elles ont la valeur non définie (`undefined`).
 
 La méthode `values()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à indices entiers.
 
@@ -97,7 +97,7 @@ for (const letter of values) {
 for (const letter of values) {
   console.log(letter);
 }
-// undefined
+// Pas de sortie
 ```
 
 Si vous utilisez une instruction {{JSxRef("Statements/break", "break")}} pour arrêter l'itération prématurément, l'itérateur peut reprendre à la position courante lors de la prochaine itération.
@@ -132,7 +132,7 @@ arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
-Contrairement aux [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives), l'itérateur de tableau ne mémorise pas la longueur du tableau à sa création, mais la lit à chaque itération. Ainsi, si le tableau grandit pendant l'itération, l'itérateur visitera aussi les nouveaux éléments. Cela peut entraîner des boucles infinies.
+Contrairement aux [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives), l'itérateur de tableau ne mémorise pas la longueur du tableau à sa création, mais la lit à chaque itération. Ainsi, si le tableau grandit pendant l'itération, l'itérateur visite aussi les nouveaux éléments. Cela peut entraîner des boucles infinies.
 
 ```js
 const arr = [1, 2, 3];
@@ -144,7 +144,7 @@ for (const e of arr) {
 
 ### Itération sur les tableaux creux
 
-`values()` visitera les cases vides comme si elles valaient `undefined`.
+`values()` visite les cases vides comme si elles valent `undefined`.
 
 ```js
 for (const element of [, "a"].values()) {
@@ -164,7 +164,7 @@ const objetSimilaireTableau = {
   0: "a",
   1: "b",
   2: "c",
-  3: "d", // ignoré par values() car length vaut 3
+  3: "d", // ignoré par values(), car length vaut 3
 };
 for (const entry of Array.prototype.values.call(objetSimilaireTableau)) {
   console.log(entry);
@@ -184,12 +184,12 @@ for (const entry of Array.prototype.values.call(objetSimilaireTableau)) {
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.values` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.values` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.values)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.entries()")}}
 - La méthode {{JSxRef("Array.prototype.keys()")}}
 - La méthode [`Array.prototype[Symbol.iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - La méthode {{JSxRef("TypedArray.prototype.values()")}}
 - [Protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Prothèse d'émulation de `Array.prototype.values` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.values` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.values)

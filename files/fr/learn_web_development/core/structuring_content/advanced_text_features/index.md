@@ -2,7 +2,7 @@
 title: Fonctions avancées du texte
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 l10n:
-  sourceCommit: 65c873fda639b035b94db77dd0f9373f38549aa0
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}
@@ -41,7 +41,7 @@ Il existe de nombreux autres éléments HTML pour définir la sémantique du tex
 
 ## Citations
 
-HTML contient des fonctionnalités pour baliser des citations&nbsp;; l'élément que vous utilisez dépend si vous balisez une citation en bloc ou en ligne.
+HTML contient des fonctionnalités pour baliser des citations&nbsp;; l'élément que vous utilisez dépend si vous balisez une citation en bloc ou en incise.
 
 ### Blocs de citation
 
@@ -72,9 +72,9 @@ La mise en forme par défaut du navigateur affiche ceci comme un paragraphe inde
 
 {{EmbedLiveSample("Blocs de citation", "100%", 200)}}
 
-### Citations en ligne
+### Citations en incise
 
-Les citations en ligne fonctionnent exactement de la même manière, sauf qu'elles utilisent l'élément HTML {{HTMLElement("q")}}. Par exemple, le balisage ci-dessous contient une citation de la page MDN `<q>`&nbsp;:
+Les citations en incise fonctionnent exactement de la même manière, sauf qu'elles utilisent l'élément HTML {{HTMLElement("q")}}. Par exemple, le balisage ci-dessous contient une citation de la page MDN `<q>`&nbsp;:
 
 ```html
 <p>
@@ -85,9 +85,9 @@ Les citations en ligne fonctionnent exactement de la même manière, sauf qu'ell
 </p>
 ```
 
-Le navigateur l'affichera par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci&nbsp;:
+Le navigateur l'affiche par défaut comme du texte normal entre guillemets pour indiquer une citation, comme ceci&nbsp;:
 
-{{EmbedLiveSample("Citations en ligne", "100%", 78)}}
+{{EmbedLiveSample("Citations en incise", "100%", 78)}}
 
 ### Citations
 
@@ -134,7 +134,7 @@ Il est temps d'une autre tâche&nbsp;! Dans cet exemple, nous aimerions que&nbsp
 
 1. Cliquez sur **«&nbsp;Exécuter&nbsp;»** dans le bloc de code ci‑dessous pour modifier l'exemple dans le MDN Playground.
 2. Transformez le paragraphe du milieu en bloc de citation, qui inclut un attribut `cite`.
-3. Transformez «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» dans le troisième paragraphe en une citation en ligne, et incluez un attribut `cite`.
+3. Transformez «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» dans le troisième paragraphe en une citation en incise, et incluez un attribut `cite`.
 4. Entourez le titre de chaque source avec des balises `<cite>` et transformez chacun en lien vers cette source.
 
 Les sources de citation dont vous avez besoin sont&nbsp;:
@@ -261,7 +261,7 @@ Votre HTML final doit ressembler à peu près au code suivant&nbsp;:
 ```
 
 - On peut soutenir que l'acronyme NASA doit être développé lors de sa première occurrence, car il s'agit d'une information utile que tout le monde doit pouvoir trouver dans le texte.
-- Les acronymes tels que «&nbsp;LGTM&nbsp;», en revanche, sont utilisés uniquement pour gagner de la place et du temps. Il n'est donc pas logique de les écrire en toutes lettres, d'où leur inclusion dans l'attribut `title`. Dans une application réelle, vous ne le ferez probablement pas à la main, mais vous utilisez un script pour les ajouter automatiquement aux termes connus.
+- Les acronymes tels que «&nbsp;LGTM&nbsp;», en revanche, sont utilisés uniquement pour gagner de la place et du temps. Il n'est donc pas logique de les écrire en toutes lettres, d'où leur inclusion dans l'attribut `title`. Dans une application réelle, vous ne le faites probablement pas à la main, mais vous utilisez un script pour les ajouter automatiquement aux termes connus.
 
 </details>
 
@@ -302,7 +302,7 @@ Notez que ce type de balisage est également acceptable, si la page liée conten
 ```
 
 > [!NOTE]
-> L'élément HTML {{HTMLElement("address")}} doit uniquement être utilisé pour fournir les coordonnées du document contenu par l'élément HTML {{HTMLElement("article")}} ou {{HTMLElement("body")}} le plus proche. Il est correct de l'utiliser dans le pied de page d'un site pour inclure les coordonnées de l'ensemble du site, ou à l'intérieur d'un article pour les coordonnées de l'auteur, mais pas pour baliser une liste d'adresses sans rapport avec le contenu de cette page.
+> L'élément HTML {{HTMLElement("address")}} doit uniquement être utilisé pour fournir les coordonnées du document contenu par l'élément HTML {{HTMLElement("article")}} ou {{HTMLElement("body")}} le plus proche. Il est correct de l'utiliser dans le pied de page d'un site pour inclure les coordonnées de l'ensemble du site, ou à l'intérieur d'un article pour les coordonnées de l'auteur·ice, mais pas pour baliser une liste d'adresses sans rapport avec le contenu de cette page.
 
 ## Exposants et indices
 
@@ -331,9 +331,7 @@ HTML met à votre disposition un certain nombre d'éléments pour marquer du cod
 - {{HTMLElement("kbd")}}&nbsp;: Pour marquer les touches de clavier (et autres types d'entrée) saisies sur l'ordinateur.
 - {{HTMLElement("samp")}}&nbsp;: Pour marquer la sortie d'un programme informatique.
 
-Voyons des exemples de ces éléments et comment ils servent à représenter du code informatique.
-Si vous souhaitez voir le fichier complet, consultez le fichier d'exemple [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html).
-Vous pouvez télécharger le fichier et l'ouvrir dans votre navigateur pour voir par vous-même, mais voici un extrait du code&nbsp;:
+Voyons des exemples de ces éléments et comment ils servent à représenter du code informatique&nbsp;:
 
 ```html
 <pre><code>const para = document.querySelector('p');
@@ -361,7 +359,7 @@ para.onclick = function() {
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 ```
 
-Ce code se présente ainsi&nbsp;:
+Ce code est rendu ainsi&nbsp;:
 
 {{EmbedLiveSample("Représentation du code informatique", "100%", 350)}}
 
@@ -418,6 +416,6 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 
 Nous voici arrivés à la fin de notre étude de la sémantique des textes HTML moins courants. Ce que vous avez vu dans ce cours ne constitue pas une liste exhaustive des éléments texte HTML — nous avons essayé de couvrir les éléments essentiels, ainsi que certains des plus courants que vous rencontrez dans la nature.
 
-Ensuite, nous vous proposerons quelques tests pour vérifier dans quelle mesure vous avez compris et retenu les informations fournies sur les fonctionnalités de texte HTML moins courantes.
+Ensuite, nous vous proposons quelques tests pour vérifier dans quelle mesure vous avez compris et retenu les informations fournies sur les fonctionnalités de texte HTML moins courantes.
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}

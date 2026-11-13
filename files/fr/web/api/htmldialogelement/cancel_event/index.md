@@ -3,7 +3,7 @@ title: "HTMLDialogElement : évènement cancel"
 short-title: cancel
 slug: Web/API/HTMLDialogElement/cancel_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("HTML DOM")}}

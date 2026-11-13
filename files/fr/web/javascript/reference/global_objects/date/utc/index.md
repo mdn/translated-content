@@ -97,4 +97,4 @@ Date.UTC(2017); // 1483228800000
 ## Voir aussi
 
 - La méthode statique {{JSxRef("Date.parse()")}}
-- L'objet {{JSxRef("Date")}}
+- L'objet natif {{JSxRef("Date")}}

@@ -8,7 +8,7 @@ l10n:
 
 **`Intl.ListFormat()`** コンストラクターは {{jsxref("Intl.ListFormat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat() コンストラクター", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

@@ -2,7 +2,7 @@
 title: Plantilla de página de atributo HTML
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 Los atributos HTML se dividen en dos categorías: **atributos específicos de elementos**, que se aplican solo a ciertos elementos (p. ej., el atributo `accept` en `<input type="file">`), y **atributos globales**, que pueden usarse en cualquier elemento HTML (p. ej., `class`, `id`). Los primeros deben ubicarse en `HTML/Reference/Attributes`, mientras que los segundos deben ir en `HTML/Reference/Global_attributes`.
@@ -62,7 +62,6 @@ Ten en cuenta que la mayoría de los atributos específicos no necesitan artícu
 >
 > - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
@@ -71,7 +70,7 @@ Ten en cuenta que la mayoría de los atributos específicos no necesitan artícu
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 >
-> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Non-standard_Header}}
 >
 > Comienza presentando al lector el atributo y su uso.
 > Por ejemplo: El **`nombre-del-atributo`** [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) describe o manipula [insertar descripción de uso].

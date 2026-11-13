@@ -57,7 +57,7 @@ Selon la spécification, l'attribution de la citation, si elle existe, doit êtr
 
 Pour modifier l'indentation appliquée au texte cité, utilisez les propriétés {{Glossary("CSS")}} {{CSSxRef("margin-left")}} et/ou {{CSSxRef("margin-right")}}, ou la propriété raccourcie {{CSSxRef("margin")}}.
 
-Pour inclure des citations plus courtes en ligne plutôt que dans un bloc séparé, utilisez l'élément {{HTMLElement("q")}} (citation).
+Pour inclure des citations plus courtes en incise plutôt que dans un bloc séparé, utilisez l'élément {{HTMLElement("q")}} (citation).
 
 ## Exemples
 

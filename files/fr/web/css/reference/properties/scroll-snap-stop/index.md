@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-snap-stop`
 short-title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-stop`** définit si le conteneur de défilement est autorisé ou non à «&nbsp;passer sur&nbsp;» les positions d'accrochage possibles.
@@ -100,6 +100,8 @@ scroll-snap-stop: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : Lorsque la {{Glossary("viewport", "zone d'affichage")}} du conteneur défile, elle peut «&nbsp;passer sur&nbsp;» certaines positions d'accroche.
@@ -275,7 +277,7 @@ div > div {
 
 Faites défiler de gauche à droite et de haut en bas dans les boîtes X et Y ci-dessous, respectivement. Dans les boîtes X et Y où la propriété `scroll-snap-stop` est définie sur `always`, le défilement est forcé de s'arrêter au point d'accrochage même lorsque vous faites défiler rapidement. Cependant, dans les boîtes où la propriété `scroll-snap-stop` est définie sur `normal`, les points d'accrochage sont ignorés lorsque vous faites défiler rapidement.
 
-Si nécessaire, vous pouvez être sélectif quant aux éléments qui sont toujours arrêtés à l'intérieur du conteneur de défilement. Cela est démontré dans l'exemple ci-dessous en ciblant les éléments impairs et pairs&nbsp;; vous pouvez choisir une stratégie différente en fonction de vos besoins. Dans l'exemple ci-dessous, le défilement ne «&nbsp;passe pas&nbsp;» sur les éléments impairs et pairs dans les deuxième et troisième boîtes, respectivement.
+Si nécessaire, vous pouvez être sélectif quant aux éléments qui sont toujours arrêtés à l'intérieur du conteneur de défilement. C'est démontré dans l'exemple ci-dessous en ciblant les éléments impairs et pairs&nbsp;; vous pouvez choisir une stratégie différente en fonction de vos besoins. Dans l'exemple ci-dessous, le défilement ne «&nbsp;passe pas&nbsp;» sur les éléments impairs et pairs dans les deuxième et troisième boîtes, respectivement.
 
 {{EmbedLiveSample("Définir différents arrêts d'accrochage", "100%", 1080)}}
 

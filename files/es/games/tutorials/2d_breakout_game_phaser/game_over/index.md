@@ -1,42 +1,129 @@
 ---
-title: Game over
+title: Fin del juego
 slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
+l10n:
+  sourceCommit: 69937a446786abf5a58d4214b4192597d0b3cdc6
 ---
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}
 
-Este es el paso numero **ocho** de los 16 del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente de como debería verse, después de haber completado esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson08.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson08.html).
-
-Para hacer el juego más interesante podemos introducir la habilidad de perder --- si no golpeas la pelota antes de que alcance el borde inferior de la pantalla, se acabará el juego.
+Este es el **paso 6** de los 12 del [tutorial para crear un juego Breakout con Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Para que el juego sea más interesante, podemos introducir la posibilidad de perder: si no golpeas la pelota antes de que llegue al borde inferior de la pantalla, será el fin del juego.
 
 ## Cómo perder
 
-Para proporcionar la habilidad de perder, deberemos inhabilitar las bolas que colisionen con el borde inferior de la pantalla. Añade el siguiente código dentro de la función `create()`; justo después de definir los atributos de las bolas está bien:
+Para introducir la posibilidad de perder, desactivaremos la colisión de la pelota con el borde inferior de la pantalla. Añade el código siguiente dentro del método `create()`, al principio del todo:
 
 ```js
-game.physics.arcade.checkCollision.down = false;
+this.physics.world.checkCollision.down = false;
 ```
 
-Esto hará que a las tres paredes(arriba, izquierda y derecha) les rebote la bola, pero la cuarta pared (abajo) desaparecerá, dejando que la bola caiga fuera de la pantalla si la pala no lo alcanza. Necesitamos una forma de detectar esto y actuar en consecuencia. Añade las siguientes lineas justo debajo de la nueva linea, añadida anteriormente:
+Así, las tres paredes (superior, izquierda y derecha) harán rebotar la pelota, pero la cuarta (inferior) desaparecerá, lo que deja que la pelota caiga fuera de la pantalla si la paleta no la alcanza. Necesitamos una forma de detectarlo y actuar en consecuencia. Añade las líneas siguientes al final del método `update()`:
 
 ```js
-ball.checkWorldBounds = true;
-ball.events.onOutOfBounds.add(function () {
-  alert("Game over!");
+const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
+  this.physics.world.bounds,
+  this.ball.getBounds(),
+);
+if (ballIsOutOfBounds) {
+  // Lógica de fin del juego
+  alert("¡Fin del juego!");
   location.reload();
-}, this);
+}
 ```
 
-Añadiendo esas lineas conseguiremos que la bola compruebe los límites de su mundo(en nuestro caso la pantalla) y ejecute la función vinculada al evento `onOutOfBounds`. Cuando hagas click en el mensaje de alerta resultante, la página se reseteará, asi podrás jugar otra vez.
+Con esas líneas se comprueba si la pelota se sale de los límites del mundo (en nuestro caso, del canvas) y, en ese caso, se muestra una alerta. Al hacer clic en la alerta, la página se recarga y puedes volver a jugar.
+
+> [!NOTE]
+> La experiencia de usuario aquí es bastante mejorable, porque [`alert()`](/es/docs/Web/API/Window/alert) muestra un cuadro de diálogo del sistema y bloquea el juego. En un juego real, probablemente querrías diseñar tu propio cuadro de diálogo modal con {{HTMLElement("dialog")}}.
+>
+> Además, más adelante añadiremos un [botón "Start"](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons), pero por ahora el juego empieza en cuanto se carga la página, así que podrías "perder" antes incluso de empezar a jugar. Para evitar el molesto cuadro de diálogo, a partir de ahora quitaremos la llamada a `alert()`.
 
 ## Compara tu código
 
-Puedes comprobar el código final para esta lección en la demo de abajo, y jugar con ello para entender mejor como funciona:
+Esto es lo que deberías tener hasta ahora, funcionando en vivo. Para ver su código fuente, haz clic en el botón "Play".
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/436bckb7/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
 
-## Siguientes pasos
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
 
-Ahora el juego básico está hecho, hagamos mas interesante el caso introduciendo ladrillos para romper --- es hora de [construir el campo de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field).
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  ball;
+  paddle;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+    this.load.image("paddle", "paddle.png");
+  }
+  create() {
+    this.physics.world.checkCollision.down = false;
+
+    this.ball = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 25,
+      "ball",
+    );
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, -150);
+    this.ball.body.setCollideWorldBounds(true, 1, 1);
+    this.ball.body.setBounce(1);
+
+    this.paddle = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 5,
+      "paddle",
+    );
+    this.paddle.setOrigin(0.5, 1);
+    this.physics.add.existing(this.paddle);
+    this.paddle.body.setImmovable(true);
+  }
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
+      this.physics.world.bounds,
+      this.ball.getBounds(),
+    );
+    if (ballIsOutOfBounds) {
+      // Lógica de fin del juego
+      location.reload();
+    }
+  }
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("compara tu código", "", 480, , , , , "allow-modals")}}
+
+## Próximos pasos
+
+Ahora que ya tenemos la jugabilidad básica, hagámosla más interesante añadiendo ladrillos que romper: es hora de [construir el muro de ladrillos](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field).
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}

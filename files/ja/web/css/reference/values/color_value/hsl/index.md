@@ -72,7 +72,7 @@ hsl(120deg, 75%, 25%, 0.8)
 
 ### 値
 
-下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に対してすることができる値の説明です。
+下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に使える値の説明です。
 
 #### 絶対的な値の構文
 

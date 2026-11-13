@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="password">`
 short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 Les éléments `<input>` de type **`password`** permettent à l'utilisateur·ice de saisir un mot de passe de manière sécurisée.
@@ -37,14 +37,6 @@ label {
   margin-top: 1rem;
 }
 ```
-
-Le comportement précis du processus de saisie peut varier d'un navigateur à l'autre.
-Certains navigateurs affichent le caractère tapé pendant un court instant avant de le masquer, tandis que d'autres permettent à l'utilisateur·ice d'afficher ou de masquer le texte en clair.
-Ces deux approches aident l'utilisateur·ice à vérifier qu'il·elle a bien saisi le mot de passe souhaité, ce qui peut être particulièrement difficile sur les appareils mobiles.
-
-> [!NOTE]
-> Les différents formulaires qui permettent d'envoyer des informations sensibles (comme des mots de passe) doivent être servis sur HTTPS.
-> De nombreux navigateurs implémentent désormais des mécanismes pour avertir contre les formulaires de connexion non sécurisés.
 
 ## Valeur
 
@@ -83,13 +75,13 @@ Si le motif défini n'est pas présent ou est invalide, aucune expression ration
 > [!NOTE]
 > Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences du motif. Vous devez aussi inclure un texte explicatif à proximité du champ.
 
-L'utilisation d'un motif est fortement recommandée pour les champs de mot de passe, afin d'aider à garantir que des mots de passe valides utilisant une grande variété de classes de caractères soient choisis et utilisés par les utilisateur·ices. Avec un motif, vous pouvez imposer des règles de casse, exiger l'utilisation d'un certain nombre de chiffres et/ou de caractères de ponctuation, etc. Voir la section [Validation](#validation) pour plus de détails et un exemple.
+L'utilisation d'un motif est fortement recommandée pour les champs de mot de passe, afin d'aider à garantir que des mots de passe valides utilisant une grande variété de classes de caractères soient choisis et utilisés par les utilisateur·ice·s. Avec un motif, vous pouvez imposer des règles de casse, exiger l'utilisation d'un certain nombre de chiffres et/ou de caractères de ponctuation, etc. Voir la section [Validation](#validation) pour plus de détails et un exemple.
 
 ### `placeholder`
 
 L'attribut `placeholder` est une chaîne de caractères qui fournit un indice bref à l'utilisateur·ice sur le type d'information attendu dans le champ. Il doit s'agir d'un mot ou d'une courte phrase qui illustre le type de donnée attendu, plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de retours chariot ou de sauts de ligne.
 
-Si le contenu du contrôle a une directionnalité ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais que le texte du placeholder doit être présenté dans la direction opposée, il est possible d'utiliser les caractères de formatage de l'algorithme bidirectionnel Unicode pour forcer la directionnalité à l'intérieur du placeholder&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle a une direction ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) mais que le texte du placeholder doit être présenté dans la direction opposée, il est possible d'utiliser les caractères de formatage de l'algorithme bidirectionnel Unicode pour forcer la direction à l'intérieur du placeholder&nbsp;; voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
 > Évitez d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile sémantiquement que d'autres moyens d'expliquer votre formulaire, et peut provoquer des problèmes techniques inattendus avec votre contenu. Voir [libellés `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
@@ -110,6 +102,14 @@ Ceci ne définit _pas_ de limite au nombre de caractères que l'utilisateur·ice
 ## Utiliser les contrôles de saisie de mot de passe
 
 Les champs de saisie de mot de passe fonctionnent généralement comme les autres champs de saisie de texte&nbsp;; la principale différence est que le contenu est masqué afin d'empêcher les personnes proches de l'utilisateur·ice de lire le mot de passe.
+
+Le comportement précis du processus de saisie peut varier d'un navigateur à l'autre.
+Certains navigateurs affichent le caractère tapé pendant un court instant avant de le masquer, tandis que d'autres permettent à l'utilisateur·ice d'afficher ou de masquer le texte en clair.
+Ces deux approches aident l'utilisateur·ice à vérifier qu'il·elle a bien saisi le mot de passe souhaité, ce qui peut être particulièrement difficile sur les appareils mobiles.
+
+> [!NOTE]
+> Les différents formulaires qui permettent d'envoyer des informations sensibles (comme des mots de passe) doivent être servis sur HTTPS.
+> De nombreux navigateurs implémentent désormais des mécanismes pour avertir contre les formulaires de connexion non sécurisés.
 
 ### Un contrôle basique
 

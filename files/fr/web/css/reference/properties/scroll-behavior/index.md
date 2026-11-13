@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-behavior`
 short-title: scroll-behavior
 slug: Web/CSS/Reference/Properties/scroll-behavior
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
@@ -62,7 +62,7 @@ scroll-page {
 }
 ```
 
-Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i> en anglais). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage.
+Pour les autres défilements, tels que ceux appliqués par l'utilisateur·ice, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i> en anglais). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage.
 
 Les agents utilisateur peuvent choisir d'ignorer cette propriété.
 
@@ -81,9 +81,9 @@ scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
-La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : La boîte de défilement progresse de façon instantanée.

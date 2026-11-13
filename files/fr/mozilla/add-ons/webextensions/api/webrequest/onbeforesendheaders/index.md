@@ -3,8 +3,6 @@ title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 ---
 
-{{AddonSidebar}}
-
 Cet événement est déclenché avant l'envoi de données HTTP, mais après que tous les en-têtes HTTP soient disponibles. C'est un bon endroit pour écouter si vous voulez modifier les en-têtes de requête HTTP.
 
 Pour que les en-têtes de requête soient passés dans l'écouteur avec le reste des données de requête, passez `"requestHeaders"` dans un tableau `extraInfoSpec`.

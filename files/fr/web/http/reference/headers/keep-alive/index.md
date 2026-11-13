@@ -3,7 +3,7 @@ title: En-tête Keep-Alive
 short-title: Keep-Alive
 slug: Web/HTTP/Reference/Headers/Keep-Alive
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
 ---
 
 {{Glossary("request header", "L'en-tête de requête")}} et {{Glossary("response header", "l'en-tête de réponse")}} HTTP **`Keep-Alive`** permettent à l'émetteur d'indiquer comment une connexion peut être utilisée en termes de délai d'expiration et de nombre maximal de requêtes.

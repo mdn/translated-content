@@ -112,7 +112,7 @@ zdt.toLocaleString("ja-JP", {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toJSON", "Temporal.ZonedDateTime.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toString", "Temporal.ZonedDateTime.prototype.toString()")}}

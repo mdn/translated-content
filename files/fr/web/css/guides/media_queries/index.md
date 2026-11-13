@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 50e215d730cd173d93b9bf75785c0d8ed2f67cb0
 ---
 
-{{CSSRef}}
-
 Les **requêtes média CSS**, plus souvent appelées **<i lang="en">media queries</i>**, sont un outil de [<i lang="en">responsive design</i>](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) qui permet d'adapter la feuille de styles CSS en fonction de différents paramètres ou caractéristiques de l'appareil.
 
 Par exemple, on pourra appliquer différentes mises en forme selon la taille de [la zone d'affichage](/fr/docs/Glossary/Viewport) pour que la disposition soit correcte selon les tailles d'écran des appareils.

@@ -26,7 +26,7 @@ Une chaîne de caractères représentant l'URL de base du nœud ({{DOMxRef("Node
 
 ## Exemples
 
-### Sans \<base>
+### Sans `<base>`
 
 ```html
 <output>Pas calculé</output>
@@ -37,9 +37,9 @@ const sortie = document.querySelector("output");
 sortie.value = sortie.baseURI;
 ```
 
-{{EmbedLiveSample("Sans \<base>", "100%", 40)}}
+{{EmbedLiveSample("Sans `<base>`", "100%", 40)}}
 
-### Avec \<base>
+### Avec `<base>`
 
 ```html
 <base href="https://developer.mozilla.org/modified_base_uri/" />
@@ -51,7 +51,7 @@ const sortie = document.querySelector("output");
 sortie.value = sortie.baseURI;
 ```
 
-{{EmbedLiveSample("Avec \<base>", "100%", 40)}}
+{{EmbedLiveSample("Avec `<base>`", "100%", 40)}}
 
 ## Spécifications
 

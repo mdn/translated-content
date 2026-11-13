@@ -1,6 +1,6 @@
 ---
-title: How-to ガイド
-short-title: How-to
+title: 手引き
+short-title: 手引き
 slug: MDN/Writing_guidelines/Howto
 l10n:
   sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51

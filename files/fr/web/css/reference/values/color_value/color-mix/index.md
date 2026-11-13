@@ -3,7 +3,7 @@ title: Fonction CSS `color-mix()`
 short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend une ou plusieurs valeurs de type {{CSSxRef("&lt;color&gt;")}} et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
@@ -23,17 +23,18 @@ color-mix(in lab, plum 60%, #123456 50%)
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
-/* Avec plus de deux couleurs */
+/* Avec une liste de couleurs en argument */
 color-mix(in oklab, teal, olive, blue)
 color-mix(in oklab, teal 20%, olive 30%, blue 50%)
+color-mix(in oklab, teal, olive, blue, purple)
 ```
 
 ### Valeurs
 
 La notation `color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` accepte les paramètres suivants&nbsp;:
 
-- {{CSSxRef("&lt;color-interpolation-method&gt;")}}
-  - : Définit la méthode d'interpolation à utiliser pour mélanger les couleurs. Elle consiste en le mot-clé `in` suivi d'un {{Glossary("color space", "espace de couleur")}} (un des espaces colorimétriques listés dans la [syntaxe formelle](#syntaxe_formelle)), et, éventuellement, d'un {{CSSxRef("&lt;hue-interpolation-method&gt;")}}.
+- {{CSSxRef("&lt;color-interpolation-method&gt;")}} {{Optional_Inline}}
+  - : Définit la méthode d'interpolation à utiliser pour mélanger les couleurs. Elle consiste en le mot-clé `in` suivi d'un {{Glossary("color space", "espace de couleur")}} (un des espaces colorimétriques listés dans la [syntaxe formelle](#syntaxe_formelle), par défaut sur `oklab`), et, éventuellement, d'un {{CSSxRef("&lt;hue-interpolation-method&gt;")}}, qui par défaut est `shorter hue`.
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : Une couleur à mélanger&nbsp;; peut être n'importe quelle valeur de type `<color>` valide.
@@ -71,18 +72,36 @@ La catégorie [`<rectangular-color-space>`](/fr/docs/Web/CSS/Reference/Values/co
 
 La catégorie `<polar-color-space>` inclut [`hsl`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) et [`oklch`](/fr/docs/Web/CSS/Reference/Values/color_value/oklch). Avec ces espaces, vous pouvez éventuellement suivre le nom de l'espace colorimétrique avec une {{CSSxRef("&lt;hue-interpolation-method&gt;")}}. Cette valeur par défaut est `shorter hue`, mais peut également être définie sur `longer hue`, `increasing hue` ou `decreasing hue`.
 
+### Espace colorimétrique par défaut et méthode d'interpolation
+
+Lors du mélange de couleurs sans définir d'espace colorimétrique, l'espace colorimétrique `oklab` est utilisé.
+
+Les deux déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+```
+
+Lors de l'utilisation d'un espace colorimétrique polaire tel que `oklch`, la méthode d'interpolation de teinte par défaut est `shorter hue`. Les deux déclarations suivantes sont équivalentes&nbsp;:
+
+```css
+background-color: color-mix(in oklch, red, blue);
+background-color: color-mix(in oklch shorter hue, red, blue);
+```
+
 ### Couleurs proportionnelles
 
 Chaque couleur peut être déclarée avec une valeur `<percentage>` comprise entre `0%` et `100%`, ce qui définit la quantité de la couleur correspondante à mélanger. Les pourcentages sont normalisés si la valeur totale des pourcentages déclarés n'est pas égale à `100%`.
 
-Lorsque deux couleurs sont mélangées, les deux pourcentages de couleur (que nous appellerons `p1` et `p2`) sont normalisés comme suit&nbsp;:
+Lorsque deux couleurs sont mélangées, les deux pourcentages de couleur (que nous appelons `p1` et `p2`) sont normalisés comme suit&nbsp;:
 
 - Si `p1` et `p2` sont omis, alors `p1 = p2 = 50%`.
 - Si `p1` est omis, alors `p1 = 100% - p2`.
 - Si `p2` est omis, alors `p2 = 100% - p1`.
 - Si `p1 = p2 = 0%`, la fonction est invalide.
 - Si `p1 + p2 ≠ 100%`, alors `p1' = p1 / (p1 + p2)` et `p2' = p2 / (p1 + p2)`, où `p1'` et `p2'` sont les résultats de la normalisation.
-  - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. Cela est similaire au mélange dans [`transparent`](/fr/docs/Web/CSS/Reference/Values/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
+  - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. C'est similaire au mélange dans [`transparent`](/fr/docs/Web/CSS/Reference/Values/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
 
 ## Syntaxe formelle
 
@@ -162,6 +181,75 @@ li:nth-child(6) {
 {{EmbedLiveSample("Mélanger deux couleurs", "100%", 120)}}
 
 La valeur totale des deux couleurs dans une fonction `color-mix()` est de 100%, même si les valeurs définies par le·la développeur·euse ne totalisent pas 100%. Dans cet exemple, comme une seule couleur a un pourcentage attribué, l'autre couleur se voit implicitement attribuer une valeur en pourcentage afin que le total combiné soit égal à 100%. Dans le dernier {{HTMLElement("li")}}, où aucune couleur n'a de pourcentage attribué, les deux couleurs par défaut sont de 50%.
+
+Lorsqu'on mélange des couleurs sans espace colorimétrique ni méthode d'interpolation des teintes, c'est l'espace colorimétrique `oklab` qui est utilisé, avec la méthode d'interpolation des teintes `shorter`. Les trois déclarations suivantes sont équivalentes&nbsp;:
+
+### Mélanger une liste de couleurs
+
+Cet exemple montre comment passer une liste d'arguments de couleur à `color-mix()`. La fonction accepte un nombre quelconque de couleurs, pas seulement deux, et chacune d'elles peut éventuellement se voir attribuer un pourcentage.
+
+#### HTML
+
+```html
+<ul>
+  <li>1 couleur</li>
+  <li>3 couleurs, avec pourcentages</li>
+  <li>4 couleurs, sans pourcentages</li>
+</ul>
+```
+
+#### CSS
+
+Le premier {{HTMLElement("li")}} mélange une seule couleur, ce qui revient à cette couleur. Le deuxième mélange trois couleurs dont les pourcentages totalisent 100 %. Le troisième mélange quatre couleurs sans pourcentage, donc chacune obtient une part égale.
+
+```css hidden
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-align: center;
+}
+```
+
+```css
+li:nth-child(1) {
+  background-color: color-mix(in oklab, teal);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in oklab, teal 20%, olive 30%, blue 50%);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in oklab, teal, olive, blue, purple);
+}
+```
+
+```css hidden
+@supports not (color: color-mix(in oklab, red, white, blue)) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge les listes de couleurs dans la fonction color-mix().";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Mélanger une liste de couleurs", "100%", 180)}}
 
 ### Ajouter de la transparence
 
@@ -398,7 +486,7 @@ li:nth-child(6) {
 
 {{EmbedLiveSample("Utiliser l'interpolation de teinte avec `color-mix()`", "100%", 440)}}
 
-Avec `longer hue`, les incréments ou décréments entre les couleurs seront toujours supérieurs ou égaux à ceux obtenus avec `shorter hue`. Utilisez `increasing hue` ou `decreasing hue` lorsque la direction du changement de la valeur de teinte est plus importante que la distance entre les valeurs.
+Avec `longer hue`, les incréments ou décréments entre les couleurs sont toujours supérieurs ou égaux à ceux obtenus avec `shorter hue`. Utilisez `increasing hue` ou `decreasing hue` lorsque la direction du changement de la valeur de teinte est plus importante que la distance entre les valeurs.
 
 ## Spécifications
 

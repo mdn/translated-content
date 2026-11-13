@@ -3,17 +3,17 @@ title: En-tête Attribution-Reporting-Register-Trigger
 short-title: Attribution-Reporting-Register-Trigger
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Trigger`** enregistre une fonctionnalité de page comme [déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers). Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}.
 
 Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
-> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, l'en-tête `Attribution-Reporting-Register-Trigger` est ignoré et les déclencheurs d'attribution ne sont pas enregistrés.
+> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox#inscription) réussi, l'en-tête `Attribution-Reporting-Register-Trigger` est ignoré et les déclencheurs d'attribution ne sont pas enregistrés.
 
 <table class="properties">
   <tbody>

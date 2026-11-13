@@ -41,11 +41,11 @@ _这个接口不继承任何属性。_
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : 返回一个用来选择相关节点的 {{domxref("NodeFilter")}} .
 - {{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}
-  - : Is a {{domxref("Boolean")}} indicating if, when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
+  - : Is a {{jsxref("Boolean")}} indicating if, when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline() }}
   - : 返回当前遍历到的 {{domxref("Node")}} .
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{ experimental_inline() }}
-  - : Returns a {{domxref("Boolean")}} flag that indicates whether the {{domxref("NodeIterator")}} is anchored before, the flag being `true`, or after, the flag being `false`, the anchor node.
+  - : Returns a {{jsxref("Boolean")}} flag that indicates whether the {{domxref("NodeIterator")}} is anchored before, the flag being `true`, or after, the flag being `false`, the anchor node.
 
 ## 方法
 

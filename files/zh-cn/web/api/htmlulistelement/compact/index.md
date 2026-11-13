@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6183d512fe034687017c4e216c7cbf54a16a528a
 ---
 
-{{ApiRef("HTML DOM")}}{{Deprecated_Header}}
+{{ApiRef("HTML DOM")}}
 
 {{domxref("HTMLUListElement")}} 接口的 **`compact`** 属性表明列表项之间的间距应减小。`compact` 属性的具体处理方式因浏览器而异。建议改用 CSS {{cssxref("line-height")}}，而非使用该属性。
 

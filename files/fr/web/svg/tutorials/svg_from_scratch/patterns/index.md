@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Patterns
 original_slug: Web/SVG/Tutorial/Patterns
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Gradients", "Web/SVG/Tutorials/SVG_from_scratch/Texts") }}
 
 Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissages les plus complexes à utiliser en SVG. Ce sont également des outils très puissants, ils méritent donc d'être abordés pour que vous en connaissiez les fondamentaux. Comme les dégradés, l'élément {{SVGElement('pattern')}} doit être placé dans la section `<defs>` du fichier SVG.

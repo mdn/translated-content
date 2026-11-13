@@ -95,7 +95,7 @@ date.toLocaleString("fr-FR", { year: "numeric", month: "long" }); // août 2021
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toJSON", "Temporal.PlainDate.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toString", "Temporal.PlainDate.prototype.toString()")}}

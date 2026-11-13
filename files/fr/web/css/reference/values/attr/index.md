@@ -3,7 +3,7 @@ title: Fonction CSS `attr()`
 short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 l10n:
-  sourceCommit: 3e21789c23062f7cfffa6fd7e24bd9dfc2c38551
+  sourceCommit: e2c34c75df6238fbeff790100cea1ab7e552e49e
 ---
 
 > [!NOTE]

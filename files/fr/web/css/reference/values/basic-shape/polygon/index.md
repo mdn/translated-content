@@ -3,7 +3,7 @@ title: Fonction CSS `polygon()`
 short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: 6edb918a9e6bd17858d48dcfa5d76aa5ed5b9659
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`polygon()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle permet de dessiner un [polygone](https://fr.wikipedia.org/wiki/Polygone) en fournissant une ou plusieurs paires de coordonnées, chacune représentant un sommet de la forme.
@@ -47,56 +47,139 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 ## Syntaxe
 
 ```css-nolint
-/* Définie comme liste de coordonnées */
-/* polygon(<length-percentage> <length-percentage>, ... )*/
+/* Liste de coordonnées */
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
 polygon(0px 0px, 200px 100px, 0px 200px)
 polygon(0% 0px, 100% 100px, 0% 100%)
 polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%)
 
-/* Définie comme liste de coordonnées et règle de remplissage */
-/* polygon(<fill-rule> <length-percentage> <length-percentage>, ... )*/
+/* Liste de coordonnées avec règle de remplissage et/ou arrondi des valeurs */
 polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
-polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
+polygon(round 20px, 0% 0%, 50% 50%, 0% 100%)
+polygon(evenodd round 2em, 0% 0%, 50% 50%, 0% 100%)
 ```
-
-Les paramètres de `polygon()` sont séparés par une virgule et des espaces optionnels. Le premier paramètre est une valeur optionnelle [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule). Les paramètres suivants sont des points qui définissent le polygone. Chaque point est une paire de coordonnées x/y {{CSSxRef("length-percentage")}} séparées par un espace, par exemple «&nbsp;0 0&nbsp;» et «&nbsp;100% 100%&nbsp;» pour les coins en haut à gauche et en bas à droite.
-
-Remarque&nbsp;: l'élément SVG [`<polygon>`](/fr/docs/Web/SVG/Reference/Element/polygon) possède des attributs séparés pour [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) et [`points`](/fr/docs/Web/SVG/Reference/Attribute/points), et `points` accepte indifféremment les espaces ou les virgules comme séparateurs. En CSS, les règles de séparation de `polygon()` sont strictes.
 
 ### Paramètres
 
+La fonction `polygon()` accepte un premier paramètre facultatif contenant des valeurs qui modifient l'apparence du polygone — un mot-clé {{SVGAttr("fill-rule")}}, le mot-clé `round` suivi d'une valeur {{CSSxRef("&lt;length&gt;")}}, ou les deux. Les composants du premier paramètre sont séparés par des espaces. Les autres paramètres sont des paires de coordonnées x/y de valeurs {{CSSxRef("&lt;length-percentage&gt;")}} séparées par des espaces.
+
 - [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{Optional_Inline}}
-  - : Valeur optionnelle `nonzero` (par défaut si omise) ou `evenodd`, qui définit la règle de remplissage.
-- {{CSSxRef("length-percentage")}}
-  - : Chaque sommet du polygone est représenté par une paire de valeurs `<length-percentage>`, qui donne les coordonnées x/y du sommet par rapport à la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) de la forme.
+  - : Un mot-clé égal à `nonzero` (la valeur par défaut) ou `evenodd`, qui définit l'algorithme utilisé pour remplir la forme du polygone.
+- `round <length>` {{Optional_Inline}}
+  - : Le mot-clé `round` définit que le polygone possède des coins arrondis, et la valeur {{CSSxRef("length")}} associée définit le rayon de ces coins.
+- {{CSSxRef("&lt;length-percentage&gt;")}}
+  - : Chaque sommet, ou point, du polygone est représenté par une paire de valeurs `<length-percentage>` séparées par une espace et définissant les coordonnées x/y du sommet par rapport à la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#la_boîte_de_référence) de la forme.
 
 ### Valeur de retour
 
-Retourne une valeur {{CSSxRef("basic-shape")}}.
+Une valeur {{CSSxRef("basic-shape")}}.
 
 ## Description
 
-Vous pouvez créer presque n'importe quelle forme avec la fonction `polygon()` en définissant les coordonnées de ses points. L'ordre dans lequel vous définissez les points a de l'importance et peut produire des formes différentes. La fonction `polygon()` exige au moins 3 points (ce qui crée un triangle), mais il n'y a pas de limite supérieure.
-
-La fonction `polygon()` accepte des coordonnées ou points séparés par des virgules. Chaque point est représenté par une paire de valeurs `x` et `y` séparées par un espace, qui indiquent les coordonnées du point dans le polygone.
+Vous pouvez créer presque n'importe quelle forme avec la fonction `polygon()` en définissant les coordonnées x/y de ses sommets, ou points, sous forme de paires de valeurs {{CSSxRef("length-percentage")}} séparées par des virgules&nbsp;:
 
 <code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
-La correspondance des coordonnées du conteneur peut être visualisée ainsi&nbsp;:
+Bien qu'un seul point suffise pour créer une valeur valide de la fonction `polygon()`, au moins 3 points sont nécessaires pour créer une forme (un triangle). Le nombre de points définissables n'a pas de limite supérieure. La forme est dessinée en reliant les points définis dans l'ordre où ils apparaissent dans la fonction, une dernière ligne étant automatiquement dessinée entre le dernier et le premier point pour fermer la forme.
 
-| axis | point 1 | point 2 | point 3 | point 4 | point n       |
-| ---- | ------- | ------- | ------- | ------- | ------------- |
-| x    | 0%      | 100%    | 100%    | 0%      | x<sub>n</sub> |
-| y    | 0%      | 0%      | 100%    | 100%    | y<sub>n</sub> |
+Vous pouvez définir les coordonnées d'une forme triangulaire comme ceci&nbsp;:
 
-En appliquant ces coordonnées à la propriété CSS {{CSSxRef("clip-path")}} avec la fonction `polygon()`&nbsp;:
+| axe | point 1 | point 2 | point 3 |
+| --- | ------- | ------- | ------- |
+| x   | 0%      | 100%    | 100%    |
+| y   | 0%      | 0%      | 100%    |
+
+Vous pouvez appliquer ces coordonnées à la propriété CSS {{CSSxRef("clip-path")}} dans une fonction `polygon()` comme suit&nbsp;:
+
+```css
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+```
+
+Cela crée une forme triangulaire qui couvre la moitié de la surface de son conteneur parent en définissant les coordonnées de trois de ses quatre coins&nbsp;: en haut à gauche (`0% 0%`), en haut à droite (`100% 0%`) et en bas à droite (`100% 100%`). Si vous supposez un conteneur de 200x200px avec un arrière-plan vert&nbsp;:
+
+```html hidden live-sample___basic
+<div class="boite"></div>
+```
+
+```css hidden live-sample___basic
+.boite {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+```
+
+{{EmbedLiveSample("basic", "100%", 200)}}
+
+### L'effet de l'ordre des points
+
+L'ordre dans lequel vous définissez les points peut produire des formes différentes. Par exemple, les deux déclarations `clip-path` suivantes utilisent une fonction `polygon()` avec des paires de coordonnées X/Y pour les quatre coins du conteneur, mais dans un ordre différent.
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 100% 100%);
 ```
 
-Cela crée un rectangle de la taille de son parent en définissant les coordonnées de ses quatre coins&nbsp;: en haut à gauche (`0% 0%`), en haut à droite (`100% 0%`), en bas à droite (`100% 100%`) et en bas à gauche (`0% 100%`).
+```html hidden live-sample___different-order
+<div class="boite"></div>
+<div class="boite boite2"></div>
+```
+
+```css hidden live-sample___different-order
+body {
+  display: flex;
+  gap: 20px;
+}
+
+.boite {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.boite2 {
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 100% 100%);
+}
+```
+
+La première fonction dessine un carré, tandis que la seconde dessine une forme de sablier.
+
+{{EmbedLiveSample("different-order", "100%", 200)}}
+
+### Définir les modificateurs d'un polygone
+
+La fonction `polygon()` accepte un premier paramètre facultatif qui modifie le rendu de la forme obtenue. La valeur du paramètre peut inclure l'un ou l'autre des éléments suivants, ou les deux, séparés par des espaces&nbsp;:
+
+- Un mot-clé [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) égal à `nonzero` (la valeur par défaut) ou `evenodd`, qui définit l'algorithme utilisé pour remplir la forme du polygone. Cela n'a un effet que lorsque les lignes tracées entre les valeurs de coordonnées se chevauchent.
+- Le mot-clé `round` suivi d'une valeur {{CSSxRef("length")}}. Cela définit que le polygone possède des coins arrondis, la valeur `<length>` définissant le rayon de ces coins.
+
+Par exemple, vous pouvez compléter l'exemple précédent du triangle et ajouter des coins arrondis&nbsp;:
+
+```css
+clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%);
+```
+
+```html hidden live-sample___basic-rounded
+<div class="boite"></div>
+```
+
+```css hidden live-sample___basic-rounded
+.boite {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%);
+}
+```
+
+Le résultat est la même forme triangulaire, mais avec des coins arrondis d'un rayon de `20px`&nbsp;:
+
+{{EmbedLiveSample("basic-rounded", "100%", 200)}}
+
+> [!NOTE]
+> Dans chaque cas, le rayon des coins est limité afin de ne jamais dépasser la moitié de la longueur d'un segment de ligne. Le rayon maximal des coins est limité à la plus petite des valeurs de `tan(corner-angle/2) * (segment-length / 2)` évaluées par rapport aux deux segments de ligne qui forment le coin. [La spécification <sup>(angl.)</sup>](https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-polygon) contient davantage de détails pour les personnes intéressées.
 
 ## Syntaxe formelle
 
@@ -110,13 +193,13 @@ Dans cet exemple, un triangle est formé en définissant les coordonnées de ses
 
 #### HTML
 
-```html
+```html live-sample___triangle
 <div class="triangle"></div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___triangle
 .triangle {
   width: 400px;
   height: 400px;
@@ -127,17 +210,74 @@ Dans cet exemple, un triangle est formé en définissant les coordonnées de ses
 
 #### Résultat
 
-{{EmbedLiveSample("Créer un triangle", "100%", 400)}}
+{{EmbedLiveSample("triangle", "100%", 400)}}
 
 Les coordonnées du triangle sont le coin en haut à droite (`100% 0%`), le point central (`50% 50%`) et le coin en bas à droite (`100% 100%`) du conteneur.
+
+### Créer une étoile arrondie
+
+Dans cet exemple, nous créons une forme d'étoile et utilisons le mot-clé `round` pour arrondir ses coins.
+
+#### HTML
+
+```html live-sample___star
+<div class="etoile"></div>
+```
+
+#### CSS
+
+```css live-sample___star
+.etoile {
+  width: 400px;
+  height: 400px;
+  background-color: hotpink;
+  clip-path: polygon(
+    round 20px,
+    50% 5%,
+    60.85% 27.48%,
+    85.22% 21.99%,
+    74.38% 44.44%,
+    93.88% 60.01%,
+    69.57% 65.56%,
+    69.53% 90.55%,
+    50% 75%,
+    30.47% 90.55%,
+    30.43% 65.56%,
+    6.12% 60.01%,
+    25.62% 44.44%,
+    14.78% 21.99%,
+    39.15% 27.48%
+  );
+}
+```
+
+```css hidden live-sample___basic-rounded live-sample___star
+@supports not (clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%)) {
+  body::before {
+    font-family: sans-serif;
+    content: "Votre navigateur ne prend pas en charge le mot-clé round de la fonction polygon().";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("star", "100%", 400)}}
 
 ### Définir un polygone pour `shape-outside`
 
 Dans cet exemple, une forme est créée pour que le texte la suive grâce à la propriété {{CSSxRef("shape-outside")}}.
 
-```html
-<div class="box">
-  <div class="shape"></div>
+```html live-sample___shape-outside
+<div class="boite">
+  <div class="forme"></div>
   <p>
     Une nuit de novembre en 1782, paraît‑il, deux frères étaient assis près de
     leur feu d'hiver dans la petite ville française d'Annonay, observant les
@@ -152,12 +292,12 @@ Dans cet exemple, une forme est créée pour que le texte la suive grâce à la 
 </div>
 ```
 
-```css
-.box {
+```css live-sample___shape-outside
+.boite {
   width: 250px;
 }
 
-.shape {
+.forme {
   float: left;
   shape-outside: polygon(
     0 5%,
@@ -181,7 +321,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Définir un polygone pour `shape-outside`", "100%", 400)}}
+{{EmbedLiveSample("shape-outside", "100%", 400)}}
 
 ## Spécifications
 

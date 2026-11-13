@@ -32,7 +32,7 @@ Parmi celles-ci&nbsp;:
     Ne peut être utilisé que dans les documents servis avec le type de média `text/html` — pas dans les documents XML (`application/xml` ou `application/xhtml+xml`).
     Voir l'en-tête HTTP {{HTTPHeader("Content-Type")}}.
 - `content-security-policy`
-  - : Permet à l'auteur·ice de la page de définir une politique de sécurité de contenu (<abbr title="Content Security Policy">CSP</abbr>) pour la page courante, généralement pour spécifier les origines autorisées et les points d'accès aux scripts afin de se protéger contre les attaques XSS.
+  - : Permet à l'auteur·ice de la page de définir une politique de sécurité de contenu (<abbr title="Content Security Policy">CSP</abbr>) pour la page courante, généralement pour définir les origines autorisées et les points d'accès aux scripts afin de se protéger contre les attaques XSS.
     Voir l'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}}.
 - `default-style`
   - : Définit le nom de la [feuille de style CSS](/fr/docs/Web/CSS) par défaut.
@@ -76,13 +76,13 @@ Une mise à jour abrupte et sans avertissement de la page peut également désor
 ### Désactiver le code inline non sécurisé et n'autoriser que les ressources HTTPS
 
 Cet élément HTML `<meta>` définit la politique CSP par défaut pour n'autoriser le chargement des ressources (images, polices, scripts, etc.) qu'en HTTPS.
-Comme les directives `unsafe-inline` et `unsafe-eval` ne sont pas définies, les scripts inline seront bloqués&nbsp;:
+Comme les directives `unsafe-inline` et `unsafe-eval` ne sont pas définies, les scripts inline sont bloqués&nbsp;:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-Les mêmes restrictions peuvent être appliquées via l'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}}&nbsp;:
+Les mêmes restrictions peuvent être appliquées avec l'en-tête HTTP {{HTTPHeader("Content-Security-Policy")}}&nbsp;:
 
 ```http
 Content-Security-Policy: default-src https:

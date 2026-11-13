@@ -18,7 +18,7 @@ slug: Web/HTTP/Reference/Headers/If-Match
 
 ## 语法
 
-```plain
+```http
 If-Match: <etag_value>
 If-Match: <etag_value>, <etag_value>, …
 ```
@@ -32,7 +32,7 @@ If-Match: <etag_value>, <etag_value>, …
 
 ## 示例
 
-```plain
+```http
 If-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
 If-Match: W/"67ab43", "54ed21", "7892dd"

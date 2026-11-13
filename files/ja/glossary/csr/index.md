@@ -2,7 +2,7 @@
 title: Client-side rendering (クライアントサイドレンダリング) (CSR)
 slug: Glossary/CSR
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 238b07dfeb8c347c590bd02a63140867525d511c
 ---
 
 **クライアントサイドレンダリング** (CSR) はブラウザー内で JavaScript を使用して HTML コンテンツを作る手法を指します。 CSR は、サーバーが HTML コンテンツを作る {{glossary("SSR", "サーバーサイドレンダリング")}} と対照的です。これらの 2 つの技術は互いに排他的でなく、同じアプリケーションで使えます。
@@ -19,7 +19,7 @@ l10n:
   <body>
     <div id="root"></div>
     <noscript>
-      <p>このアプリはJavaScriptの実行が必要です。</p>
+      <p>このアプリを実行するには JavaScript が必要です。</p>
     </noscript>
   </body>
 </html>
@@ -34,7 +34,7 @@ CSR のメリットは以下の通りです。
 
 SSR と CSR はどちらもパフォーマンス上のトレードオフがあり、SSR と CSR を組み合わせることで互いの技術のメリットを活かすことができます。例えば、サーバー側で空のプレースホルダーを含むページ骨組みを生成し、クライアント側で追加データを取って必要に応じてページを書き換えられます。
 
-{{glossary("SPA", "単一ページアプリケーション")}} は、サイトが CSR で無くても良いことに気をつけてください。[React](/ja/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started), や [Svelte](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started) のようなモダンなフレームワークでは、SSR 機能を備えた SPA を作るために使えます。
+{{glossary("SPA", "単一ページアプリケーション")}} は、サイトが CSR で無くても良いことに気をつけてください。[React](/ja/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](https://ja.vuejs.org/), や [Svelte](https://svelte.dev/)<sup>(英語)</sup> のような最近のフレームワークでは、SSR 機能を備えた SPA を作るために使えます。
 
 ## 関連情報
 

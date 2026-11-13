@@ -19,10 +19,10 @@ map.set(1, "truc");
 const iterator = map.entries();
 
 console.log(iterator.next().value);
-// Sortie attendue : Array ["0", "toto"]
+// Résultat attendu : Array ["0", "toto"]
 
 console.log(iterator.next().value);
-// Sortie attendue : Array [1, "truc"]
+// Résultat attendu : Array [1, "truc"]
 ```
 
 ## Syntaxe

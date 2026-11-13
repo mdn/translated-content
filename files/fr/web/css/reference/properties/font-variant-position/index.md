@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-position`
 short-title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-position`** permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).
@@ -30,9 +30,9 @@ font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
-La propriété `font-variant-position` se définit avec l'une des valeurs par mot-clé listées ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : Les glyphes alternatifs sont désactivés.

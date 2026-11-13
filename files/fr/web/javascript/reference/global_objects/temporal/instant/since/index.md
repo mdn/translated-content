@@ -73,8 +73,8 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Instant/add", "Temporal.Instant.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/Instant/subtract", "Temporal.Instant.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/Instant/until", "Temporal.Instant.prototype.until()")}}

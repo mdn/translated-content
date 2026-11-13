@@ -3,10 +3,8 @@ title: Propriété CSS `page-break-inside`
 short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > Cette propriété a été remplacée par la propriété {{CSSxRef("break-inside")}}.
@@ -84,6 +82,8 @@ page-break-inside: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto` {{Deprecated_Inline}}
   - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
 - `avoid` {{Deprecated_Inline}}
@@ -93,7 +93,7 @@ page-break-inside: unset;
 
 La propriété `page-break-inside` a désormais été remplacée par la propriété {{CSSxRef("break-inside")}}.
 
-Pour des raisons de compatibilité, `page-break-inside` devrait être considérée par les navigateurs comme synonyme de `break-inside`. De cette façon, les sites utilisant `page-break-inside` pourront continuer de fonctionner. Voici un sous-ensemble des valeurs de cette propriété et des correspondances
+Pour des raisons de compatibilité, `page-break-inside` doit être considérée par les navigateurs comme synonyme de `break-inside`. De cette façon, les sites utilisant `page-break-inside` peuvent continuer de fonctionner. Voici un sous-ensemble des valeurs de cette propriété et des correspondances
 
 | `page-break-inside` | `break-inside` |
 | ------------------- | -------------- |

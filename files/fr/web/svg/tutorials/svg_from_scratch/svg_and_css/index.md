@@ -4,8 +4,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
 original_slug: Web/SVG/Tutorial/SVG_and_CSS
 ---
 
-{{SVGRef}}
-
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.

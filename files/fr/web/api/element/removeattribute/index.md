@@ -27,15 +27,15 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Notes d'utilisation
 
-`removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` que ce soit directement ou en appelant {{DOMxRef("Element.setAttribute", "setAttribute()")}}.
-De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
+`removeAttribute()` doit être utilisée plutôt que de passer la valeur de l'attribut à `null` que ce soit directement ou en appelant {{DOMxRef("Element.setAttribute", "setAttribute()")}}.
+De nombreux attributs ne fonctionnent pas comme espéré si on les passe à `null`.
 
 ## Exemple
 
 ```js
-// Si initialement on a : <div id="div1" disabled width="200px">
+// Étant donné : <div id="div1" disabled width="200px">
 document.getElementById("div1").removeAttribute("disabled");
-// Après on aura : <div id="div1" width="200px">
+// Est devenu : <div id="div1" width="200px">
 ```
 
 ## Spécifications

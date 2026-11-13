@@ -3,18 +3,21 @@ title: Pseudo-classe CSS `:checked`
 short-title: :checked
 slug: Web/CSS/Reference/Selectors/:checked
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`).
 
-{{InteractiveExample("Démonstration CSS&nbsp;: :checked", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :checked", "tabbed-standard")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
-  margin-top: 1em;
+  margin-top: 0.5em;
+}
+
+fieldset {
+  margin-top: 0.5em;
 }
 
 input:checked {
@@ -24,26 +27,38 @@ input:checked {
 ```
 
 ```html interactive-example
-<form>
-  <p>Comment avez-vous entendu parler de nous ?</p>
-  <label
-    ><input name="origin" type="radio" value="google" checked /> Google</label
-  >
-  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Veuillez accepter nos conditions :</p>
+<label for="name">Nom (requis)&nbsp;:</label>
+<input id="name" name="name" type="text" required />
 
-  <label
-    ><input name="newsletter" type="checkbox" checked /> Je souhaite m'abonner à
-    une newsletter personnalisée.</label
-  >
+<label for="birth">Date de naissance&nbsp;:</label>
+<input id="birth" name="birth" type="date" />
 
-  <label
-    ><input name="privacy" type="checkbox" /> J'ai lu et j'accepte la Politique
-    de confidentialité.</label
-  >
+<label for="origin"
+  >Comment avez-vous entendu parler de nous&nbsp;? (requis)</label
+>
+<select id="origin" name="origin" required>
+  <option value="">Choisissez une option</option>
+  <option value="google">Google</option>
+  <option value="facebook">Facebook</option>
+  <option value="advertisement">Publicité</option>
+</select>
 
-  <input type="submit" value="Soumettre le formulaire" />
-</form>
+<fieldset>
+  <legend>Méthode de contact privilégiée&nbsp;:</legend>
+  <label>
+    <input name="contact" type="radio" value="email" checked /> Courriel
+  </label>
+  <label><input name="contact" type="radio" value="phone" /> Téléphone</label>
+</fieldset>
+
+<label>
+  <input name="newsletter" type="checkbox" checked /> Je souhaite m'abonner à
+  une lettre d'information personnalisée.
+</label>
+<label>
+  <input name="privacy" type="checkbox" required /> J'ai lu et j'accepte la
+  Politique de confidentialité (obligatoire).
+</label>
 ```
 
 L'utilisateur·ice peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
@@ -55,7 +70,7 @@ L'utilisateur·ice peut modifier cet état en cliquant sur l'élément ou en sé
 
 ```css
 :checked {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -118,7 +133,7 @@ option:checked {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple")}}
+{{EmbedLiveSample("Exemple simple")}}
 
 ### Basculer des éléments à l'aide d'une case à cocher masquée
 
@@ -206,7 +221,7 @@ Cet exemple utilise la pseudo-classe `:checked` pour permettre à l'utilisateur�
 
 #### Résultat
 
-{{EmbedLiveSample("basculer_des_éléments_à_laide_dune_case_à_cocher_masquée", "auto", 220)}}
+{{EmbedLiveSample("Basculer des éléments à l'aide d'une case à cocher masquée", "auto", 220)}}
 
 ## Spécifications
 
@@ -218,7 +233,7 @@ Cet exemple utilise la pseudo-classe `:checked` pour permettre à l'utilisateur�
 
 ## Voir aussi
 
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
+- [Table de compatibilité des propriétés pour les composants de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Mise en forme des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - Les éléments HTML associés&nbsp;: [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), {{HTMLElement("select")}} et {{HTMLElement("option")}}
 - L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}

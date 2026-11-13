@@ -3,7 +3,7 @@ title: Propriété CSS `line-break`
 short-title: line-break
 slug: Web/CSS/Reference/Properties/line-break
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`line-break`** définit la façon de couper les lignes de texte chinois, japonais ou coréen (CJK) lors du traitement de la ponctuation et des symboles.
@@ -63,6 +63,8 @@ line-break: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie avec l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Coupe le texte en utilisant la règle de saut de ligne par défaut.

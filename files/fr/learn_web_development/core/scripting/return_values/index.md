@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&nbsp;: **les valeurs de retour**. Certaines fonctions ne renvoient pas de valeur significative, mais d'autres le font. Il est important de comprendre quelles sont leurs valeurs, comment les utiliser dans votre code et comment faire en sorte que les fonctions renvoient des valeurs utiles. Nous allons aborder ces différents sujets dans cet article.
 

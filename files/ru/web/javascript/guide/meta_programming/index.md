@@ -286,12 +286,12 @@ console.log(p.a, p.b); // 1, 42
     </tr>
     <tr>
       <td>
-        {{jsxref("Proxy/Proxy/enumerate", "handler.enumerate()")}}
+        <code>handler.enumerate()</code>
       </td>
       <td>
         Property enumeration / for...in:
         <code>for (var name in proxy) {...}</code
-        ><br />{{jsxref("Reflect.enumerate()")}}
+        ><br /><code>Reflect.enumerate()</code>
       </td>
       <td>
         <code

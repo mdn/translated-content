@@ -37,4 +37,4 @@ console.log(date3.calendarId); // "hebrew"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}

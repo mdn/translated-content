@@ -3,7 +3,7 @@ title: "Node : méthode cloneNode()"
 short-title: cloneNode()
 slug: Web/API/Node/cloneNode
 l10n:
-  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
+  sourceCommit: 11ec5c2a7635fd5a724abf59e4088075a940bdb6
 ---
 
 {{APIRef("DOM")}}
@@ -35,6 +35,8 @@ cloneNode(deep)
     Le sous-arbre, y compris tout texte que le nœud contient, n'est pas cloné.
 
     Notez que `deep` n'a aucun effet sur les {{Glossary("void element", "éléments vides")}}, tels que les éléments HTML {{HTMLElement("img")}} et {{HTMLElement("input")}}.
+
+    Est par défaut `false`.
 
 ## Exemples
 

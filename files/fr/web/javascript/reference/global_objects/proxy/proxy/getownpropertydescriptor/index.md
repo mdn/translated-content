@@ -3,8 +3,6 @@ title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 ---
 
-{{JSRef}}
-
 La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour intercepter {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}

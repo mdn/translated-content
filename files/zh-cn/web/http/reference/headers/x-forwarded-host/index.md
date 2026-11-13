@@ -17,7 +17,7 @@ HTTP 协议中的 {{HTTPHeader("Forwarded")}} 是这个消息首部的标准化�
 
 ## 语法
 
-```plain
+```http
 X-Forwarded-Host: <host>
 ```
 
@@ -28,7 +28,7 @@ X-Forwarded-Host: <host>
 
 ## 示例
 
-```plain
+```http
 X-Forwarded-Host: id42.example-cdn.com
 ```
 

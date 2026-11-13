@@ -98,6 +98,6 @@ Ces propriétés sont définies sur `Temporal.PlainTime.prototype` et partagées
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}

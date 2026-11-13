@@ -3,10 +3,10 @@ title: Propriété CSS `writing-mode`
 short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: e57e3fdd4ab6fb372ddc3d78e5b428f318202426
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément `html` pour les documents HTML).
+La propriété [CSS](/fr/docs/Web/CSS) **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon le flux textuel.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: writing-mode")}}
 
@@ -56,8 +56,6 @@ writing-mode: sideways-lr;
 }
 ```
 
-La propriété définit la _direction du flux du bloc_, c'est-à-dire la direction dans laquelle les conteneurs de niveau bloc sont empilés, et la direction dans laquelle le contenu de niveau en ligne s'écoule à l'intérieur d'un conteneur de bloc. Ainsi, elle détermine également l'ordre du contenu de niveau bloc.
-
 ## Syntaxe
 
 ```css
@@ -76,9 +74,9 @@ writing-mode: revert-layer;
 writing-mode: unset;
 ```
 
-La propriété `writing-mode` est définie comme l'une des valeurs listées ci-dessous. La direction du flux dans les systèmes d'écritures horizontaux est également affectée par la [directionnalité de ce système <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-scripts.en), soit de gauche à droite (`ltr`, comme le français et la plupart des autres langues) ou de droite à gauche (`rtl`, comme l'hébreu ou l'arabe).
-
 ### Valeurs
+
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
 - `horizontal-tb`
   - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule horizontalement de gauche à droite. Pour les systèmes d'écritures `rtl`, le contenu s'écoule horizontalement de droite à gauche. La ligne horizontale suivante est positionnée sous la ligne précédente.
@@ -90,18 +88,26 @@ La propriété `writing-mode` est définie comme l'une des valeurs listées ci-d
   - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de haut en bas. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de bas en haut. Tous les glyphes, même ceux des systèmes d'écritures verticaux, sont orientés de côté vers la droite.
 - `sideways-lr`
   - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de bas en haut. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de haut en bas. Tous les glyphes, même ceux des systèmes d'écritures verticaux, sont orientés de côté vers la gauche.
-- `lr` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `lr-tb` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `rl` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `tb` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
-- `tb-lr` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-lr`.
-- `tb-rl` {{Deprecated_Inline}}
-  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
+- `lr`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
+- `lr-tb`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
+- `rl`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
+- `tb`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
+- `tb-lr`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-lr`.
+- `tb-rl`
+  - : Valeur obsolète, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
+
+## Description
+
+La propriété `writing-mode` définit si les lignes de texte sont disposées horizontalement ou verticalement. Elle définit la _direction du flux de bloc_, qui est la direction dans laquelle les conteneurs de niveau bloc sont empilés, et la direction dans laquelle le contenu de niveau inline s'écoule à l'intérieur d'un conteneur de bloc. Ainsi, elle détermine également l'ordre du contenu de niveau bloc.
+
+La direction du flux dans les scripts horizontaux est également affectée par la [direction de ce script](https://www.w3.org/International/questions/qa-scripts.en), soit de gauche à droite (`ltr`, comme l'anglais et la plupart des autres langues), soit de droite à gauche (`rtl`, comme l'hébreu ou l'arabe).
+
+Lorsqu'elle est définie pour l'ensemble d'un document, elle doit être appliquée à l'élément racine (élément `html` pour les documents HTML).
 
 ## Définition formelle
 

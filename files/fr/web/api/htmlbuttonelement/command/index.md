@@ -3,7 +3,7 @@ title: "HTMLButtonElement : propriété command"
 short-title: command
 slug: Web/API/HTMLButtonElement/command
 l10n:
-  sourceCommit: b5a6d8bc5fd751032f70b88e7ec1ec61339937de
+  sourceCommit: 4ad860d817cf6d8ca24f41b3846b29e158934d27
 ---
 
 {{APIRef("Invoker Commands API")}}
@@ -41,7 +41,7 @@ toggleBtn.command = "show-popover";
 
 ### Utilisation de valeurs personnalisées pour les commandes
 
-Dans cet exemple, trois boutons ont été créés en utilisant des [valeurs personnalisées](/fr/docs/Web/HTML/Reference/Elements/button#custom_values) pour `command`.
+Dans cet exemple, trois boutons ont été créés en utilisant des [valeurs personnalisées](/fr/docs/Web/HTML/Reference/Elements/button#valeurs_personnalisées) pour `command`.
 Chaque bouton cible la même image à l'aide de l'attribut `commandfor`.
 
 ```html
@@ -67,7 +67,7 @@ Chaque bouton cible la même image à l'aide de l'attribut `commandfor`.
 }
 ```
 
-Un écouteur d'évènement est attaché à l'image en utilisant l'[évènement `command`](/fr/docs/Web/API/CommandEvent).
+Un écouteur d'évènement est attaché à l'image en utilisant [l'évènement `command`](/fr/docs/Web/API/CommandEvent).
 Lorsqu'un des boutons est cliqué, l'écouteur exécute du code en fonction de la valeur personnalisée de `command` assignée au bouton, fait pivoter l'image et met également à jour son texte `alt` pour indiquer le nouvel angle de l'image.
 
 ```js
@@ -89,7 +89,7 @@ image.addEventListener("command", (event) => {
 });
 ```
 
-{{EmbedLiveSample('Utilisation de valeurs personnalisées pour les commandes', '100%', 220)}}
+{{EmbedLiveSample("Utilisation de valeurs personnalisées pour les commandes", "100%", 220)}}
 
 ## Spécifications
 
@@ -101,7 +101,7 @@ image.addEventListener("command", (event) => {
 
 ## Voir aussi
 
-- {{DOMxRef("Invoker Commands API", "L'API Invoker Commands", "", "nocode")}}
+- {{DOMxRef("Invoker Commands API", "L'API Invoker Commands", "", 1)}}
 - La propriété {{DOMxRef("HTMLButtonElement.commandForElement")}}
 - L'interface {{DOMxRef("CommandEvent")}}
 - [L'attribut `command` de `<button>`](/fr/docs/Web/HTML/Reference/Elements/button#command)

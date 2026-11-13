@@ -2,7 +2,7 @@
 title: Plantilla de página de elemento SVG
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
-  sourceCommit: 39d45a2e71cee2c107a026a59ba0d9229a511592
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 {{MDNSidebar}}
@@ -60,7 +60,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — esto genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si es experimental y la tecnología está oculta mediante una preferencia en Firefox, también debes completar su entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features)
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > Consulta ["como se agregan o actualizan los estados de las funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para más información.
@@ -69,7 +68,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando qué hace.
 Lo ideal sería que sea de una o dos oraciones cortas.

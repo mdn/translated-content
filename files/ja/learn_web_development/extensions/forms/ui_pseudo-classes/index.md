@@ -46,7 +46,7 @@ l10n:
   必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
 - {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML の [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が設定された要素など）を対象にします。
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性が設定されているものなどが対象です。）
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックも解除もされていない）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性が設定されているものなどが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
 

@@ -3,7 +3,7 @@ title: "Element : propriété ariaFlowToElements"
 short-title: ariaFlowToElements
 slug: Web/API/Element/ariaFlowToElements
 l10n:
-  sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
+  sourceCommit: 3b4a7a32fc2fe8cb6bd9a1e62f4ca52e002599ef
 ---
 
 {{APIRef("DOM")}}

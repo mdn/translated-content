@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLImageElement/attributionSrc
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 7b9f3c730d1909846f80c70d84ac265d93d82af2
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLImageElement")}} permet d'indiquer que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête d'image. Elle reflète l'attribut de contenu [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc) de l'élément HTML `<img>`.
 
@@ -36,8 +36,8 @@ imgElem.attributionSrc = "";
 ```
 
 ```js
-// Encoder les URL au cas où elles contiendraient des caractères spéciaux
-// comme '=' qui seraient mal interprétés.
+// Encoder les URL au cas où elles contiennent des caractères spéciaux
+// comme '=' qui sont mal interprétés.
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
 

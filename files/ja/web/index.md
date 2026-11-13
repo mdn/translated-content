@@ -62,7 +62,7 @@ l10n:
 - [XSLT](/ja/docs/Web/XML/XSLT)
   - : 拡張スタイルシート言語変換は、[XML](/ja/docs/Web/XML/Guides/XML_introduction) 文書を変換するために、特殊な処理ソフトウェアと組み合わせて使用される XML ベースの言語です。
 - [XPath](/ja/docs/Web/XML/XPath)
-  - : XPath は、[XML](/ja/docs/Web/XML/Guides/XML_introduction) 文書内のさまざまな部分へのアドレス指定（ポインタ－）の柔軟な方法を提供するために、XML 以外の構文を使用しています。また、文書内のアドレス指定されたノードがパターンと一致するかどうかを検査するためにも使用できます。
+  - : XPath は、[XML](/ja/docs/Web/XML/Guides/XML_introduction) 文書内のさまざまな部分へのアドレス指定（ポインター）の柔軟な方法を提供するために、XML 以外の構文を使用しています。また、文書内のアドレス指定されたノードがパターンと一致するかどうかを検査するためにも使用できます。
 - [EXSLT](/ja/docs/Web/XML/EXSLT)
   - : EXSLT は [XSLT](/ja/docs/Web/XML/XSLT) の一連の拡張です。
 

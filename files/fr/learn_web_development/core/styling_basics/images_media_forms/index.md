@@ -3,7 +3,7 @@ title: Images, média et éléments de formulaire
 short-title: Images, média, formulaires
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 l10n:
-  sourceCommit: b4f137d4d70f66de2b5b979f719a4dd4229fd6e6
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
@@ -191,7 +191,7 @@ img {
 
 ## Les éléments remplacés dans la mise en page
 
-Lorsque vous utilisez diverses techniques de mise en page CSS sur des éléments remplacés, vous constaterez peut-être qu'ils se comportent légèrement différemment des autres éléments. Par exemple, dans une mise en page en grille, les éléments sont étirés par défaut pour remplir entièrement leurs {{Glossary("grid areas", "zones de grille")}}. Les images ne s'étirent pas&nbsp;; elles sont alignées au début de leurs zones de grille.
+Lorsque vous utilisez diverses techniques de mise en page CSS sur des éléments remplacés, vous constatez peut-être qu'ils se comportent légèrement différemment des autres éléments. Par exemple, dans une mise en page en grille, les éléments sont étirés par défaut pour remplir entièrement leurs {{Glossary("grid areas", "zones de grille")}}. Les images ne s'étirent pas&nbsp;; elles sont alignées au début de leurs zones de grille.
 
 Vous pouvez voir cela dans l'exemple ci-dessous où nous avons un conteneur de grille à deux colonnes et deux lignes, qui contient quatre éléments. Tous les éléments `<div>` ont une couleur de fond et s'étirent pour remplir la ligne et la colonne. L'image, cependant, ne s'étire pas.
 
@@ -222,7 +222,7 @@ Vous pouvez voir cela dans l'exemple ci-dessous où nous avons un conteneur de g
 
 {{EmbedLiveSample("layout", "", 220)}}
 
-Vous n'aborderez la mise en page que dans un module ultérieur. Pour l'instant, gardez simplement à l'esprit que les éléments remplacés, lorsqu'ils font partie d'un système de mise en page spécifique tel que les grilles ou les boîtes flexibles, ont des comportements par défaut différents, essentiellement pour éviter qu'ils ne soient étirés de manière étrange par la mise en page.
+Vous n'abordez la mise en page que dans un module ultérieur. Pour l'instant, gardez simplement à l'esprit que les éléments remplacés, lorsqu'ils font partie d'un système de mise en page spécifique tel que les grilles ou les boîtes flexibles, ont des comportements par défaut différents, essentiellement pour éviter qu'ils ne soient étirés de manière étrange par la mise en page.
 
 ## Éléments de formulaire
 
@@ -238,24 +238,24 @@ Les éléments qui permettent la saisie de texte, tels que `<input type="text">`
 
 Dans l'exemple suivant, nous avons mis en forme certains champs de texte en utilisant CSS. Vous pouvez voir que des éléments tels que les bordures, les marges et le remplissage s'appliquent comme prévu. Nous utilisons des sélecteurs d'attributs pour cibler les différents types de champs de saisie.
 
-Essayez de modifier l'exemple pour changer l'apparence du formulaire en ajustant les bordures, en ajoutant des couleurs de fond aux champs et en modifiant les polices et les marges.
+Essayez de modifier l'exemple pour changer l'apparence des contrôles en ajustant les bordures, en ajoutant des couleurs de fond aux champs et en modifiant les polices et les marges.
 
 ```html live-sample___form
-<form>
+<div class="controles">
   <div><label for="nom">Nom</label> <input id="nom" type="text" /></div>
   <div>
     <label for="courriel">Courriel</label> <input id="courriel" type="email" />
   </div>
 
-  <div class="boutons"><input type="submit" value="Envoyer" /></div>
-</form>
+  <div class="boutons"><input type="button" value="Envoyer" /></div>
+</div>
 ```
 
 ```css hidden live-sample___form
 body {
   font-family: sans-serif;
 }
-form > div {
+.controles > div {
   display: flex;
 }
 
@@ -277,7 +277,7 @@ input[type="email"] {
   width: 80%;
 }
 
-input[type="submit"] {
+input[type="button"] {
   border: 3px solid #333333;
   background-color: #999999;
   border-radius: 5px;
@@ -286,8 +286,8 @@ input[type="submit"] {
   color: white;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="button"]:hover,
+input[type="button"]:focus {
   background-color: #333333;
 }
 ```
@@ -319,7 +319,7 @@ textarea {
 
 ### Éléments de formulaire et `box-sizing`
 
-Dans différents navigateurs, les éléments de formulaire utilisent des règles de dimensionnement de boîte différentes pour différents widgets. Vous avez appris la propriété `box-sizing` dans [notre leçon sur le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et vous pouvez utiliser cette connaissance lors du style des formulaires pour garantir une expérience cohérente lors de la définition des largeurs et des hauteurs des éléments de formulaire.
+Dans différents navigateurs, les éléments de formulaire utilisent des règles de dimensionnement de boîte différentes pour différents composants. Vous avez appris la propriété `box-sizing` dans [notre leçon sur le modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et vous pouvez utiliser cette connaissance lors du style des formulaires pour garantir une expérience cohérente lors de la définition des largeurs et des hauteurs des éléments de formulaire.
 
 Pour plus de cohérence, il est conseillé de définir les marges et les remplissages à `0` sur tous les éléments, puis de les ré-ajouter lors du style des contrôles particuliers&nbsp;:
 
@@ -372,7 +372,7 @@ textarea {
 
 Cette leçon a mis en évidence certaines des différences que vous rencontrez lors du travail avec des images, des médias et d'autres éléments inhabituels en CSS.
 
-Dans le prochain article, nous vous proposerons quelques tests que vous pourrez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur la gestion des images et des éléments de formulaire en CSS.
+Dans le prochain article, nous vous proposons quelques tests que vous pouvez utiliser pour vérifier dans quelle mesure vous avez compris et retenu les informations que nous avons fournies sur la gestion des images et des éléments de formulaire en CSS.
 
 ## Voir aussi
 

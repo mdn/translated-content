@@ -3,7 +3,7 @@ title: "ARIA : rôle tablist"
 short-title: tablist
 slug: Web/Accessibility/ARIA/Reference/Roles/tablist_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Le rôle `tablist` identifie l'élément qui sert de conteneur pour un ensemble d'onglets (`tabs`). Le contenu des onglets est appelé éléments `tabpanel`.

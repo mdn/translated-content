@@ -3,8 +3,6 @@ title: Classes de caractères
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 Les classes de caractères permettent de distinguer différents ensembles de caractères dans les expressions rationnelles (par exemple les chiffres d'une part et les lettres d'autre part).
 
 ## Types

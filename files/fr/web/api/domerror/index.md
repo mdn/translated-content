@@ -3,7 +3,7 @@ title: DOMError
 slug: Web/API/DOMError
 ---
 
-{{ APIRef("DOM") }}{{deprecated_header}}
+{{ APIRef("DOM") }}
 
 L'interface **`DOMError`** décrit un objet d'erreur contenant le nom de l'erreur.
 

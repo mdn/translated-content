@@ -3,10 +3,10 @@ title: "Window : propriété closed"
 short-title: closed
 slug: Web/API/Window/closed
 l10n:
-  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`closed`** de l'interface {{DOMxRef("Window")}} indique si la fenêtre référencée est fermée ou non.
 

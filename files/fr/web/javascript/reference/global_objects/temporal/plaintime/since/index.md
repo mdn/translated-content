@@ -81,8 +81,8 @@ console.log(duration.toString()); // "PT15S"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainTime/add", "Temporal.PlainTime.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/until", "Temporal.PlainTime.prototype.until()")}}

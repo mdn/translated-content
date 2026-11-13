@@ -46,7 +46,7 @@ console.log(d4Balanced.months); // 0
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La propriété {{JSxRef("Temporal/Duration/months", "Temporal.Duration.prototype.months")}}
 - La propriété {{JSxRef("Temporal/Duration/weeks", "Temporal.Duration.prototype.weeks")}}
 - La propriété {{JSxRef("Temporal/Duration/days", "Temporal.Duration.prototype.days")}}

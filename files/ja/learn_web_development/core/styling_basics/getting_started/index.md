@@ -212,11 +212,9 @@ li {
 
 {{EmbedLiveSample("started-types", "", "240px")}}
 
-<!--
-The following interactive lesson teaches basic CSS concepts and provides some practice.
+以下の対話型レッスンでは、CSS の基本的な考え方を学び、少し練習することもできます。
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~015" scrimtitle="Write your first lines of CSS!"></scrim-inline>
--->
 
 ### クラスの追加
 

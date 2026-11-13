@@ -2,7 +2,7 @@
 title: Modèle de page de sélecteur CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: 8d9cda4e9080e9c324a521f40c7e0704ef94ce07
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -36,7 +36,7 @@ l10n:
 >   - : La fin du chemin de l'URL après `https://developer.mozilla.org/fr/docs/`). C'est formaté comme `Web/CSS/Reference/Selectors/:name-of-the-selector`.
 >     Par exemple, le slug du sélecteur {{CSSxRef(":hover")}} est `Web/CSS/Reference/Selectors/:hover`.
 > - **page-type** (pages anglaises uniquement)
->   - : La clé `page-type` pour les propriétés CSS est l'une des suivantes&nbsp;: `css-selector`, `css-pseudo-class` ou `css-pseudo-element`, selon que le sélecteur est une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), un [combinateur](/fr/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators), ou un [sélecteur simple](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector).
+>   - : La clé `page-type` pour les propriétés CSS est l'une des suivantes&nbsp;: `css-selector`, `css-pseudo-class` ou `css-pseudo-element`, selon que le sélecteur est une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), un [combinateur](/fr/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinateurs), ou un [sélecteur simple](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_simple).
 > - **status** (pages anglaises uniquement)
 >   - : Indique le statut de cette fonctionnalité. Un tableau qui peut contenir une ou plusieurs des valeurs suivantes&nbsp;: `experimental`, `deprecated`, `non-standard`. Cette clé ne doit pas être définie manuellement&nbsp;: elle est définie automatiquement en fonction des valeurs dans les données de compatibilité des navigateurs pour la fonctionnalité. Voir [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour).
 > - **browser-compat** (pages anglaises uniquement)
@@ -58,14 +58,13 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — Cette macro génère une bannière **Expérimentale**, qui indique que la technologie est [expérimentale](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#expérimental).
 >   Si la technologie est expérimentale et est cachée derrière une préférence dans Firefox, vous devez également remplir une entrée pour elle dans la page [Fonctionnalités expérimentales dans Firefox](/fr/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — Cette macro génère une bannière **Obsolète**, qui indique que l'utilisation de la technologie est [déconseillée](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsolète).
 > - `\{{Non-standard_Header}}` — Cette macro génère une bannière **Non standard** qui indique que la fonctionnalité ne fait partie d'aucune spécification.
 >
 > Ne fournissez pas manuellement les macros d'en-tête de statut&nbsp;:
 >
 > Reportez-vous à la section [«&nbsp;Comment les statuts des fonctionnalités sont ajoutés ou mis à jour&nbsp;»](/fr/docs/MDN/Writing_guidelines/Page_structures/Feature_status#comment_les_statuts_sont-ils_ajoutés_ou_mis_à_jour) pour ajouter ces statuts à la page.
 >
-> Des exemples des bannières **Expérimentale**, **Obsolète** et **Non standard** sont présentés juste après ce bloc de notes.
+> Des exemples des bannières **Expérimentale** et **Non standard** sont présentés juste après ce bloc de notes.
 >
 > ---
 >
@@ -77,7 +76,7 @@ l10n:
 >
 > _Supprimez cette note explicative avant de publier_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Le paragraphe de résumé — commencez par nommer le sélecteur et expliquer ce qu'il fait. Idéalement, cela doit être une ou deux phrases courtes.
 

@@ -3,8 +3,6 @@ title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
 
-{{JSRef}}
-
 La méthode **`TypedArray.from()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un objet itérable ou d'un objet semblable à un tableau. Cette méthode est similaire à {{jsxref("Array.from()")}}.
 
 ## Syntaxe

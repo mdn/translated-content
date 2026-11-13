@@ -65,8 +65,8 @@ Pour plus d'exemples, voir {{JSxRef("Temporal/PlainDate/add", "add()")}}.
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/since", "Temporal.PlainDate.prototype.since()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/until", "Temporal.PlainDate.prototype.until()")}}

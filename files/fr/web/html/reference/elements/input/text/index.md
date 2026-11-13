@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="text">`
 short-title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.
@@ -80,9 +80,9 @@ Voir [la section sur l'utilisation d'un motif de validation](#utiliser_un_motif_
 
 ### `placeholder`
 
-L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
+L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut doit être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle respecte une direction donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
 > [!NOTE]
 > On évite, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire, et qu'il peut causer certains problèmes avec le contenu. Voir [les problèmes d'accessibilité des `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#acessibilité) pour plus d'informations.
@@ -102,7 +102,7 @@ Cet attribut _ne_ définit _pas_ la limite du nombre de caractères saisissables
 
 ### `spellcheck`
 
-L'attribut universl [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck) est utilisé afin d'indiquer si la vérification orthographique doit être utilisée pour un élément. Il peut être utilisé pour n'importe quel contenu éditable mais possède certaines spécificités pour les éléments {{HTMLElement("input")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
+L'attribut universel [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck) est utilisé afin d'indiquer si la vérification orthographique doit être utilisée pour un élément. Il peut être utilisé pour n'importe quel contenu éditable mais possède certaines spécificités pour les éléments {{HTMLElement("input")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
 
 - `false`
   - : La vérification orthographique est désactivée pour cet élément.
@@ -113,7 +113,7 @@ L'attribut universl [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes
 
 Un champ de saisie peut avoir la vérification orthographique activée s'il ne possède pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par l'attribut `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique si certaines préférences de {{Glossary("user agent", "l'agent utilisateur")}} surchargent le paramétrage par défaut.
+La valeur retournée par l'attribut `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique si certaines préférences de {{Glossary("user agent", "l'agent utilisateur")}} surchargent le paramétrage par défaut.
 
 ## Utiliser les champs de texte
 
@@ -122,45 +122,31 @@ Les éléments `<input>` de type `text` sont utilisés pour créer des champs te
 ### Exemple simple
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input type="text" id="uname" name="name" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input type="text" id="uname" name="name" />
+</div>
 ```
 
 Voici ce qui est obtenu&nbsp;:
 
 {{EmbedLiveSample("Exemple simple", 600, 90)}}
 
-Lorsque le formulaire est envoyé, la paire nom/valeur est envoyée au serveur sous la forme `uname=Chris` (si «&nbsp;Chris&nbsp;» était le texte qui avait été saisi avant d'envoyer le formulaire). Il faut veiller à bien avoir un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name) pour l'élément {{HTMLElement("input")}}, car sinon, rien n'est envoyé.
+Si ce champ de saisie est inclus dans un formulaire et envoyé, la paire nom/valeur est envoyée au serveur sous la forme `uname=Chris` (si «&nbsp;Chris&nbsp;» est le texte qui est saisi avant d'envoyer le formulaire). Il faut veiller à bien avoir un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name) pour l'élément {{HTMLElement("input")}}, car sinon, rien n'est envoyé.
 
 ### Utiliser des textes indicatifs
 
 Il est possible de fournir un texte indicatif (<i lang="en">placeholder</i> en anglais) qui est affiché dans le champ lorsqu'aucune valeur n'a été saisie. Pour cela, on utilise l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder). Par exemple&nbsp;:
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Un seul mot, en minuscules" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Un seul mot, en minuscules" />
+</div>
 ```
 
 Voici le résultat qui est obtenu&nbsp;:
@@ -174,22 +160,15 @@ Le texte indicatif est généralement affiché dans une couleur plus claire que 
 La taille physique du champ de saisie peut être adaptée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Sa valeur correspond au nombre de caractères qui sont affichés simultanément. Voici par exemple, un fragment de code HTML où la contrôle de saisie affiche au plus 30 caractères en même temps (on peut saisir un texte plus long mais toutes les lettres ne sont pas affichées)&nbsp;:
 
 ```html
-<form>
-  <div>
-    <label for="uname">
-      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
-    </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Un seul mot, en minuscules"
-      size="30" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="uname"> Veuillez choisir un nom d'utilisateur·ice&nbsp;: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="Un seul mot, en minuscules"
+    size="30" />
+</div>
 ```
 
 {{EmbedLiveSample("Contrôler la taille physique du champ", 600, 90)}}
@@ -199,7 +178,7 @@ La taille physique du champ de saisie peut être adaptée grâce à l'attribut [
 Les éléments `<input>` de type `text` ne possèdent pas de mécanisme de validation automatique. En revanche, il est possible d'ajouter certaines contraintes qui sont vérifiées côté client et que nous allons voir ici.
 
 > [!NOTE]
-> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) pourraient causer des dommages à votre base de données.
+> La validation des données de formulaire HTML _ne doit pas_ remplacer des scripts de vérification côté serveur. En effet, il est très facile à modifier le code HTML du site pour outrepasser ou même désactiver les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur sans passer par le formulaire. Si votre serveur ne valide pas les données reçues, des données potentiellement mal formatées (ou trop abondantes, du mauvais type et ainsi de suite) peuvent causer des dommages à votre base de données.
 
 ### Un aparté sur la mise en forme
 
@@ -247,6 +226,12 @@ On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/in
     <button>Envoyer</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -304,6 +289,12 @@ Dans l'exemple suivant, pour que le texte soit valide, il faut qu'il soit plus l
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -335,14 +326,16 @@ Si vous essayez d'envoyer le formulaire avec un nom d'utilisateur·ice plus cour
 
 ### Utiliser un motif de validation
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction à la validation des données avec les expressions rationnelles).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression rationnelle](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction à la validation des données avec les expressions rationnelles).
 
 Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un texte en minuscules (pour lequel seules les lettres de `a` à `z` sont autorisées) et qui mesure entre 4 et 8 caractères.
 
 ```html
 <form>
   <div>
-    <label for="uname">Veuillez choisir un nom d'utilisateur&nbsp;:</label>
+    <label for="uname">
+      Veuillez choisir un nom d'utilisateur·ice&nbsp;:
+    </label>
     <input
       type="text"
       id="uname"
@@ -351,12 +344,20 @@ Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un tex
       size="45"
       pattern="[a-z]{4,8}" />
     <span class="validity"></span>
-    <p>Un nom d'utilisateur doit être en minuscules sur 4 à 8 caractères.</p>
+    <p>
+      Un nom d'utilisateur·ice doit être en minuscules sur 4 à 8 caractères.
+    </p>
   </div>
   <div>
     <button>Envoyer</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

@@ -1,5 +1,5 @@
 ---
-title: HTML `<script type="speculationrules">` 属性値
+title: '`<script type="speculationrules">` 属性値'
 short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 l10n:

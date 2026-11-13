@@ -43,7 +43,7 @@ console.log(d4Balanced.microseconds); // 1
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La propriété {{JSxRef("Temporal/Duration/years", "Temporal.Duration.prototype.years")}}
 - La propriété {{JSxRef("Temporal/Duration/months", "Temporal.Duration.prototype.months")}}
 - La propriété {{JSxRef("Temporal/Duration/weeks", "Temporal.Duration.prototype.weeks")}}

@@ -3,10 +3,10 @@ title: "Window : évènement focus"
 short-title: focus
 slug: Web/API/Window/focus_event
 l10n:
-  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 L'évènement **`focus`** est déclenché lorsqu'un élément reçoit la sélection.
 
@@ -29,13 +29,6 @@ onfocus = (event) => { }
 Un {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite aussi des propriétés de son parent {{DOMxRef("UIEvent")}}, et indirectement de {{DOMxRef("Event")}}._
-
-- {{DOMxRef("FocusEvent.relatedTarget")}}
-  - : Un {{DOMxRef("EventTarget")}} représentant une cible secondaire pour cet évènement. Dans certains cas (comme lors d'un passage par tabulation dans ou hors d'une page), cette propriété peut être définie sur `null` pour des raisons de sécurité.
 
 ## Exemples
 

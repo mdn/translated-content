@@ -10,7 +10,7 @@ l10n:
 
 La propriété **`disabled`** de l'interface {{DOMxRef("HTMLLinkElement")}} est une valeur booléenne qui indique si le lien est désactivé. Elle n'a d'effet que sur les liens de feuille de style (propriété `rel` définie à `stylesheet`).
 
-Si l'attribut `disabled` est défini dans le HTML lors du chargement, la feuille de style ne est pas chargée au chargement de la page. Elle ne est chargée que lorsque la propriété `disabled` est définie à `false` ou supprimée. Définir la propriété `disabled` en JavaScript provoque la suppression de la feuille de style de la liste {{DOMxRef("Document.styleSheets")}} du document.
+Si l'attribut `disabled` est défini dans le HTML lors du chargement, la feuille de style n'est pas chargée au chargement de la page. Elle n'est chargée que lorsque la propriété `disabled` est définie à `false` ou supprimée. Définir la propriété `disabled` en JavaScript provoque la suppression de la feuille de style de la liste {{DOMxRef("Document.styleSheets")}} du document.
 
 Elle reflète l'attribut `disabled` de l'élément HTML {{HTMLElement("link")}}.
 

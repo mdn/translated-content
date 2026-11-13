@@ -4,8 +4,6 @@ slug: Web/XML/XPath/Reference/Functions/system-property
 original_slug: Web/XPath/Functions/system-property
 ---
 
-{{XsltSidebar}}
-
 La fonction `system-property()` retourne un objet représentant la propriété système donnée.
 
 ### Syntaxe

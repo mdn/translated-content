@@ -58,6 +58,6 @@ console.log(date2.toString()); // 2019-07-01[u-ca=japanese]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}

@@ -2,7 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
+  sourceCommit: 7c2fdcaace1ab622a1055b7cc710297c452ce9ee
 ---
 
 **`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
@@ -325,7 +325,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.indexOf()")}}
   - : 指定された値と等しい値を持つ最初の（添字の一番小さい）要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.join()")}}
-  - : 配列のすべての要素を結合した文字列を返します。
+  - : この配列内のすべての要素を、カンマまたは指定された区切り文字列で区切って連結した新しい文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
   - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-L'{{Glossary("representation header", "en-tête de représentation")}} HTTP **`Content-Language`** est utilisé pour décrire la ou les langues destinées au public, afin que les utilisateur·ice·s puissent la différencier selon leur propre langue préférée.
+{{Glossary("representation header", "L'en-tête de représentation")}} HTTP **`Content-Language`** est utilisé pour décrire la ou les langues destinées au public, afin que les utilisateur·ice·s puissent la différencier selon leur propre langue préférée.
 
 Par exemple, `Content-Language: de-DE` indique que le document est destiné aux personnes germanophones. Le document peut être rédigé en anglais, et non en allemand, dans le cadre d'un cours de langue pour germanophones. Pour indiquer la langue dans laquelle le document est **rédigé**, utilisez plutôt l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang).
 

@@ -3,7 +3,7 @@ title: Pseudo-élément CSS `::-moz-range-progress`
 short-title: ::-moz-range-progress
 slug: Web/CSS/Reference/Selectors/::-moz-range-progress
 l10n:
-  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{Non-standard_Header}}
@@ -11,7 +11,7 @@ l10n:
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-progress`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la partie inférieure de la _piste_ (c'est-à-dire la rainure) dans laquelle l'indicateur glisse dans un élément {{HTMLElement("input")}} de type `range`. Cette partie correspond aux valeurs inférieures à la valeur actuellement sélectionnée par le _curseur_ (c'est-à-dire le bouton virtuel).
 
 > [!NOTE]
-> Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.
+> Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'a aucun effet.
 
 ## Syntaxe
 
@@ -42,7 +42,7 @@ input[type="range"]::-moz-range-progress {
 
 {{EmbedLiveSample("Exemples", 300, 50)}}
 
-Une barre de progression mise en forme avec cette déclaration devrait ressembler à&nbsp;:
+Une barre de progression mise en forme avec cette déclaration doit ressembler à&nbsp;:
 
 ![La barre de progression est un carré vert épais à gauche du curseur et une fine ligne grise à droite. Le curseur est un cercle dont le diamètre correspond à la hauteur de la zone verte.](screen_shot_2015-12-04_at_20.14.48.png)
 

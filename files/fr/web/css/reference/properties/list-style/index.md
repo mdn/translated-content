@@ -3,10 +3,10 @@ title: Propriété CSS `list-style`
 short-title: list-style
 slug: Web/CSS/Reference/Properties/list-style
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c2375c58cf5a6f0fd7053f3cee7cba8bd88a2bbe
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`list-style`** permet de définir toutes les propriétés de style de liste en une seule fois.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`list-style`** permet de définir toutes les propriétés de style de liste en une seule fois.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: list-style")}}
 
@@ -85,8 +85,6 @@ hr {
 }
 ```
 
-Les valeurs de cette propriété sont appliquées aux éléments de liste, y compris les éléments HTML {{HTMLElement("li")}} et les éléments avec {{CSSxRef("display", "display: list-item;")}}. Parce que cette propriété est héritée, elle peut être définie sur un élément parent (normalement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour que la même mise en forme de liste s'applique à tous les éléments imbriqués.
-
 ## Propriétés constitutives
 
 Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
@@ -129,25 +127,60 @@ La propriété `list-style` est définie avec une, deux ou trois valeurs dans n'
 ### Valeurs
 
 - {{CSSxRef("list-style-type")}}
-  - : Un style de compteur (`<counter-style>`), une chaîne de caractères ({{CSSxRef("string")}}), ou `none`. Si omise dans la propriété raccourcie, la valeur par défaut `disc` est utilisée. Voir {{CSSxRef("list-style-type")}}.
+  - : Un style de compteur (`<counter-style>`), une chaîne de caractères ({{CSSxRef("string")}}), ou `none`. Si omise dans la propriété raccourcie, par défaut est `disc`. Voir {{CSSxRef("list-style-type")}}.
 - {{CSSxRef("list-style-image")}}
-  - : Une {{CSSxRef("image")}} ou `none`. Si omise, la valeur par défaut `none` est utilisée. Voir {{CSSxRef("list-style-image")}}.
+  - : Une {{CSSxRef("image")}} ou `none`. Si omise, par défaut est `none`. Voir {{CSSxRef("list-style-image")}}.
 - {{CSSxRef("list-style-position")}}
-  - : `inside` ou `outside`. Si omise, la valeur par défaut `outside` est utilisée. Voir {{CSSxRef("list-style-position")}}.
+  - : `inside` ou `outside`. Si omise, par défaut est `outside`. Voir {{CSSxRef("list-style-position")}}.
 - `none`
   - : Aucun style n'est utilisé.
 
-## Définition formelle
+## Description
 
-{{CSSInfo}}
+La propriété `list-style` permet de personnaliser l'apparence des éléments de liste. Les valeurs de cette propriété sont appliquées aux éléments de liste, y compris les éléments {{HTMLElement("li")}} et les éléments avec `{{CSSxRef("display")}}: list-item;`.
 
-## Syntaxe formelle
+### Héritage du style de liste
 
-{{CSSSyntax}}
+Comme la propriété abrégée {{CSSxRef("list-style-type")}} est héritée, `list-style` peut être définie sur un élément parent (normalement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour appliquer le même style de liste à ses éléments de liste. Cependant, les feuilles de style des agents utilisateurs définissent `list-style-type` sur les éléments `<ul>`, `<ol>` et {{HTMLElement("menu")}}, de sorte que les listes imbriquées utilisent ces valeurs par défaut au lieu d'hériter du `list-style` de la liste parente. Les valeurs {{CSSxRef("list-style-position")}} et {{CSSxRef("list-style-image")}} sont normalement héritées dans les listes imbriquées. Pour que les listes imbriquées héritent également du type de marqueur, définissez `list-style` ou `list-style-type` sur `inherit` pour les éléments de liste imbriqués.
+
+Par exemple, dans des cas comme celui-ci&nbsp;:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>
+    Trois
+    <ul>
+      <li>Quatre</li>
+      <li>Cinq</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Lorsque qu'un style personnalisé est défini sur la liste externe&nbsp;:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style: square;
+}
+```
+
+La liste interne n'hérite pas du style personnalisé à moins que vous ne la définissiez sur inherit&nbsp;:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style: inherit;
+}
+```
+
+{{EmbedLiveSample("list-style-inherit", "100%", 200)}}
 
 ## Accessibilité
 
-Safari ne reconnait pas les listes ordonnées ou non ordonnées comme des listes dans l'arbre d'accessibilité si elles ont une valeur `list-style` de `none`, sauf si la liste est imbriquée dans l'élément de navigation {{HTMLElement("nav")}}. Ce [comportement est intentionnel <sup>(angl.)</sup>](https://webkit.org/b/170179#c1) et n'est pas considéré comme un bug.
+Safari ne reconnait pas les listes ordonnées ou non ordonnées comme des listes dans l'arbre d'accessibilité si elles ont une valeur `list-style` de `none`, sauf si la liste est imbriquée dans l'élément de navigation {{HTMLElement("nav")}}. Ce [comportement est intentionnel <sup>(angl.)</sup>](https://webkit.org/b/170179#c1) et n'est pas considéré comme un bogue.
 
 Pour que les listes soient annoncées comme des listes, ajoutez [`role="list"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) aux éléments {{HTMLElement("ol")}} et {{HTMLElement("ul")}}, surtout si la liste n'est pas imbriquée dans un `<nav>`. Cela restaure la sémantique de liste sans affecter le design&nbsp;:
 
@@ -170,7 +203,7 @@ ul li::before {
 }
 ```
 
-Une déclaration de `content: "";` (une chaîne vide) est ignorée, tout comme les valeurs de `content` qui ne contiennent que des espaces, telles que `content: " ";`.
+Une déclaration de `content: "";` (une chaîne de caractères vide) est ignorée, tout comme les valeurs de `content` qui ne contiennent que des espaces, telles que `content: " ";`.
 
 Ces solutions CSS ne doivent être utilisées que lorsque la solution HTML n'est pas disponible, et uniquement après avoir vérifié qu'elles ne produisent pas de comportements inattendus pouvant nuire à l'expérience utilisateur.
 
@@ -178,6 +211,14 @@ Ces solutions CSS ne doivent être utilisées que lorsque la solution HTML n'est
 - [VoiceOver et `list-style-type: none`](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
 - [Comprendre les règles WCAG&nbsp;: Créer du contenu pouvant être présenté de différentes manières](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
 - [Comprendre le critère de succès 1.3.1&nbsp;: Informations et relations | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 

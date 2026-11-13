@@ -3,8 +3,6 @@ title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).
 

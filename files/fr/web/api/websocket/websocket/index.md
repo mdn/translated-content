@@ -3,12 +3,12 @@ title: "WebSocket : constructeur WebSocket()"
 short-title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 {{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-Le constructeur **`WebSocket()`** renvoie un nouvel objet {{DOMxRef("WebSocket")}} et tente immédiatement d'établir une connexion vers l'URL WebSocket spécifiée.
+Le constructeur **`WebSocket()`** retourne un nouvel objet {{DOMxRef("WebSocket")}} et tente immédiatement d'établir une connexion vers l'URL WebSocket définie.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ new WebSocket(url, protocols)
     Si une URL relative est fournie, elle est relative à l'URL de base du script appelant.
 
 - `protocols` {{Optional_Inline}}
-  - : Une chaîne unique ou un tableau de chaînes représentant les [sous-protocoles](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#les_sous-protocoles) que le client souhaite utiliser, par ordre de préférence.
+  - : Une chaîne de caractères unique ou un tableau de chaînes de caractères représentant les [sous-protocoles](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#les_sous-protocoles) que le client souhaite utiliser, par ordre de préférence.
     Si cette valeur est omise, un tableau vide est utilisé par défaut, c'est-à-dire `[]`.
 
     Un serveur unique peut implémenter plusieurs sous-protocoles WebSocket, et gérer différents types d'interactions en fonction de la valeur définie.
@@ -36,7 +36,7 @@ new WebSocket(url, protocols)
 
     > [!NOTE]
     > La connexion n'est pas établie tant que le sous-protocole n'a pas été négocié avec le serveur.
-    > Le protocole sélectionné peut ensuite être lu via {{DOMxRef("WebSocket.protocol")}}&nbsp;: il sera la chaîne vide si une connexion ne peut être établie.
+    > Le protocole sélectionné peut ensuite être lu avec {{DOMxRef("WebSocket.protocol")}}&nbsp;: c'est la chaîne de caractères vide si une connexion ne peut être établie.
 
 ### Exceptions
 
@@ -63,7 +63,7 @@ wssWebSocket.close();
 ```
 
 Le code pour se connecter à une URL HTTPS est presque identique.
-Sous le capot, le navigateur résout cela en une connexion «&nbsp;WSS&nbsp;», donc {{DOMxRef("WebSocket.url")}} aura le schéma `wss:`.
+Sous le capot, le navigateur résout cela en une connexion «&nbsp;WSS&nbsp;», donc {{DOMxRef("WebSocket.url")}} a le schéma `wss:`.
 
 ```js
 const httpsWebSocket = new WebSocket("https://websocket.example.org");
@@ -75,7 +75,7 @@ httpsWebSocket.close();
 ```
 
 On peut aussi résoudre des URL relatives.
-L'URL absolue dépendra de l'URL de base du contexte dans lequel l'appel est effectué.
+L'URL absolue dépend de l'URL de base du contexte dans lequel l'appel est effectué.
 
 ```js
 relativeWebSocket = new WebSocket("/local/url");
@@ -95,4 +95,4 @@ relativeWebSocket.close();
 
 ## Voir aussi
 
-- [RFC 6455 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc6455.html) (la spécification du protocole WebSocket)
+- [RFC 6455 <sup>(angl.)</sup>](https://www.rfc-editor.org/info/rfc6455/) (la spécification du protocole WebSocket)

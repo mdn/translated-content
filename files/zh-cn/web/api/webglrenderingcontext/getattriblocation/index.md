@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getAttribLocation
 
 ## 语法
 
-```plain
+```js
 GLint gl.getAttribLocation(program, name);
 ```
 

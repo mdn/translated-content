@@ -126,7 +126,7 @@ Dans notre HTML, nous incluons trois éléments principaux&nbsp;:
 
 - Trois éléments HTML {{HTMLElement("select")}} permettant de définir quels bords du paragraphe doivent être supprimés (la valeur `text-box-trim`) et combien d'espace doit être supprimé des bords de début et de fin du bloc du paragraphe (la valeur {{CSSxRef("text-box-edge")}}).
 - Un élément HTML {{HTMLElement("p")}} contenant du texte, auquel les valeurs `text-box-*` sont appliquées. Ce paragraphe a l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) défini afin que vous puissiez modifier le texte.
-- Un élément HTML {{HTMLElement("output")}} qui affiche les déclarations `text-box-*` appliquées au paragraphe. Cela est mis à jour lorsqu'une sélection est effectuée.
+- Un élément HTML {{HTMLElement("output")}} qui affiche les déclarations `text-box-*` appliquées au paragraphe. C'est mis à jour lorsqu'une sélection est effectuée.
 
 Nous importons également une police depuis le service Google Fonts pour l'appliquer au texte de notre démonstration.
 
@@ -291,5 +291,5 @@ Essayez de changer les valeurs des `<select>` pour voir l'effet qu'elles ont sur
 ## Voir aussi
 
 - Les propriétés {{CSSxRef("text-box")}}, {{CSSxRef("text-box-edge")}}
-- Le module [de disposition en ligne CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
+- Le module [de disposition en incise CSS](/fr/docs/Web/CSS/Guides/Inline_layout)
 - [La propriété CSS text-box-trim <sup>(angl.)</sup>](https://developer.chrome.com/blog/css-text-box-trim) sur developer.chrome.com (2025)

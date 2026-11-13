@@ -3,11 +3,11 @@ title: Pour commencer avec le MDN Web Docs
 short-title: Pour commencer
 slug: MDN/Community/Getting_started
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 Nous sommes une communauté ouverte de développeur·euse·s, rédacteur·ice·s techniques et apprenant·e·s qui construisent des ressources pour un Web meilleur, indépendamment de la marque, du navigateur ou de la plateforme.
-Tout le monde peut contribuer, et chaque personne qui contribue a un impact sur des millions de lecteurs.
+Tout le monde peut contribuer, et chaque personne qui contribue a un impact sur des millions de lecteur·ice·s.
 Découvrez comment contribuer et stimuler l'innovation sur le Web ouvert.
 
 ## Que puis-je faire pour aider ?
@@ -34,14 +34,14 @@ Si vous êtes nouveau sur GitHub, nous vous encourageons à suivre les cours gra
 - [Utiliser Markdown <sup>(angl.)</sup>](https://github.com/skills/communicate-using-markdown)
 
 > [!NOTE]
-> Le cours «&nbsp;Introduction à GitHub&nbsp;» devrait suffire pour vous aider à démarrer.
+> Le cours «&nbsp;Introduction à GitHub&nbsp;» doit suffire pour vous aider à démarrer.
 > N'hésitez pas à passer à l'étape suivante et à revenir aux autres documents plus tard.
 
 Nous vous recommandons également de lire le matériel d'apprentissage suivant&nbsp;:
 
 - [Étiquette de base pour les projets open source](/fr/docs/MDN/Community/Open_source_etiquette)&nbsp;: Si vous n'avez jamais contribué à un projet open source auparavant, nous vous encourageons à lire ce document.
 - [Apprendre le développement web](/fr/docs/Learn_web_development)&nbsp;: Si vous êtes nouveau en HTML, CSS, JavaScript, nous avons d'excellents contenus pour vous aider à démarrer.
-- [Collaboration à l'aide de demandes de tirage](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests)
+- [Collaboration à l'aide de demandes de tirage](https://docs.github.com/fr/pull-requests)
 
 Certaines opportunités de contribution spécifiques à l'écriture nécessitent une compréhension raisonnable de la langue anglaise.
 Cela dit, ne vous inquiétez pas si votre grammaire n'est pas parfaite&nbsp;: nous avons une équipe de personnes qui examine votre écriture et vous aide à l'améliorer.

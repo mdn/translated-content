@@ -3,10 +3,8 @@ title: "Élément HTML `<dir>` : l'élément de répertoire"
 short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dir>`** est utilisé comme conteneur pour un répertoire de fichiers et/ou de dossiers, éventuellement avec des styles et des icônes appliqués par {{Glossary("user agent", "l'agent utilisateur")}}. N'utilisez pas cet élément obsolète&nbsp;; utilisez plutôt l'élément {{HTMLElement("ul")}} pour les listes, y compris les listes de fichiers.
 

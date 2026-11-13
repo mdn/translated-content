@@ -3,7 +3,7 @@ title: Firefox 153 note de version pour les développeurs
 short-title: Firefox 153
 slug: Mozilla/Firefox/Releases/153
 l10n:
-  sourceCommit: cb5a9829f49b8ef7a28311ca419538194fd6525e
+  sourceCommit: f398f522d05bb8bfe739ac2417b00712b7888494
 ---
 
 Cet article présente les informations concernant les changements de Firefox 153 qui concernent les développeur·euse·s.
@@ -119,6 +119,10 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Prise en charge des images JPEG XL** (Nightly)&nbsp;: `image.jxl.enabled`
 
   Le décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) basé sur Rust est désormais activé par défaut dans Nightly. ([bogue Firefox 2040074 <sup>(angl.)</sup>](https://bugzil.la/2040074)).
+
+- **Les attributs HTML `headingoffset` et `headingreset`**&nbsp;: `dom.headingoffset.enabled`
+
+  L'attribut universel [`headingoffset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingoffset) augmente le niveau de titre calculé des [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à l'intérieur de l'élément sur lequel il est défini, de sorte qu'un composant puisse utiliser le même balisage de titre où qu'il apparaisse dans une page. L'attribut [`headingreset`](/fr/docs/Web/HTML/Reference/Global_attributes/headingreset) empêche les décalages des éléments ancêtres de s'appliquer aux titres à l'intérieur de l'élément sur lequel il est défini. ([bogue Firefox 1974383 <sup>(angl.)</sup>](https://bugzil.la/1974383)).
 
 - **Fonctions CSS de comptage d'arbres**&nbsp;: `layout.css.tree-counting-functions.enabled`
 

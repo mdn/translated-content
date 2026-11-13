@@ -8,7 +8,7 @@ l10n:
 
 {{SecureContext_Header}}
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Accept-CH`** peut être défini par un serveur pour indiquer quels en-têtes de [suggestion client](/fr/docs/Web/HTTP/Guides/Client_hints) doivent être inclus par le client dans les requêtes suivantes.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Accept-CH`** peut être défini par un serveur pour indiquer quels en-têtes de [suggestion client](/fr/docs/Web/HTTP/Guides/Client_hints) doivent être inclus par le client dans les requêtes suivantes.
 Pour garantir que les suggestions client sont envoyées de manière fiable, l'en-tête `Accept-CH` doit être conservé pour toutes les requêtes sécurisées.
 
 <table class="properties">

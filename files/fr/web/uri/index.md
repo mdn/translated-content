@@ -3,7 +3,7 @@ title: Identifiants Uniformes de Ressources (URIs)
 short-title: URIs
 slug: Web/URI
 l10n:
-  sourceCommit: 9aa03132f4c0aebc474995a234f4e52c64fcc6b4
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Les **Identifiants Uniformes de Ressources (URI)** sont utilisés pour identifier les «&nbsp;ressources&nbsp;» sur le Web. Les URI sont couramment utilisés comme cibles de requêtes [HTTP](/fr/docs/Web/HTTP), auquel cas l'URI représente l'emplacement d'une ressource, telle qu'un document, une photo ou des données binaires. Le type d'URI le plus courant est l'identifiant uniforme de ressource ({{Glossary("URL")}}), également appelé _adresse Web_.

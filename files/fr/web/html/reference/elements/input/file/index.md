@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="file">`
 short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -65,13 +65,12 @@ L'attribut [`capture`](/fr/docs/Web/HTML/Reference/Attributes/capture) est une c
 
 Lorsque l'attribut booléen [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) est défini, le champ de fichier permet à l'utilisateur·ice de sélectionner plusieurs fichiers.
 
-## Attribut non-standard
-
-En complément des attributs précédents, les éléments `<input type="file">` peuvent utiliser les attributs spécifiques suivants. Ces attributs ne sont pas standard et ne devraient donc pas être utilisés.
-
 ### `webkitdirectory`
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que seuls les répertoires doivent être disponibles pour être sélectionnés par l'utilisateur·ice dans l'interface de sélection de fichiers. Voir {{DOMxRef("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
+
+> [!NOTE]
+> `webkitdirectory` est défini dans [l'API File and Directory Entries](/fr/docs/Web/API/File_and_Directory_Entries_API). Il est nommé `webkitdirectory` en raison de ses origines en tant qu'API spécifique à Chrome. Il est maintenant disponible dans tous les navigateurs.
 
 ## Identifiants de type de fichier uniques
 
@@ -94,15 +93,10 @@ L'attribut `accept` prend comme valeur une chaîne de caractères contenant un o
 ### Un exemple simple
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">Sélectionner le fichier à envoyer</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="file">Sélectionner le fichier à envoyer</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -113,10 +107,7 @@ div {
 
 Ce fragment de code HTML produit le résultat suivant&nbsp;:
 
-{{EmbedLiveSample('Un exemple simple', 650, 90)}}
-
-> [!NOTE]
-> Vous pouvez également trouver cet exemple sur GitHub — voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), et aussi [voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+{{EmbedLiveSample("Un exemple simple", 650, 90)}}
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur·ice, le champ de fichier fournit un bouton qui ouvre une boîte de dialogue permettant de choisir un fichier.
 
@@ -155,19 +146,14 @@ Vous pouvez définir les types de fichiers acceptables avec l'attribut [`accept`
 Voyons un exemple plus complet&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Sélectionnez le fichier à utiliser</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>Envoyer</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">Sélectionnez le fichier à utiliser</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -178,10 +164,7 @@ div {
 
 Voici le résultat produit&nbsp;:
 
-{{EmbedLiveSample('Restreindre les types de fichiers acceptés', 650, 90)}}
-
-> [!NOTE]
-> Vous pouvez également consulter cet exemple sur GitHub — voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html) et aussi [voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+{{EmbedLiveSample("Restreindre les types de fichiers acceptés", 650, 90)}}
 
 Le résultat peut sembler similaire, mais si vous essayez de sélectionner un fichier avec ce champ, vous voyez que le sélecteur ne permet de choisir que les types de fichiers définis dans la valeur de l'attribut `accept` (l'interface exacte varie selon les navigateurs et les systèmes d'exploitation).
 
@@ -222,23 +205,24 @@ elem.click();
 
 ## Exemples
 
+### Exemple complet de fichier
+
 Dans l'exemple qui suit, on présente un sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
 
-> [!NOTE]
-> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
+#### HTML
 
-Tout d'abord, voici le fragment de code HTML utilisé&nbsp;:
+Le code HTML ressemble à ceci&nbsp;:
 
 ```html
-<form method="post" enctype="multipart/form-data">
+<div class="selecteur-fichier">
   <div>
-    <label for="image_uploads"
+    <label for="televerser_fichier"
       >Sélectionner des images à téléverser (PNG, JPG)</label
     >
     <input
       type="file"
-      id="image_uploads"
-      name="image_uploads"
+      id="televerser_fichier"
+      name="televerser_fichier"
       accept=".jpg, .jpeg, .png"
       multiple />
   </div>
@@ -246,9 +230,9 @@ Tout d'abord, voici le fragment de code HTML utilisé&nbsp;:
     <p>Aucun fichier sélectionné pour le moment</p>
   </div>
   <div>
-    <button>Envoyer</button>
+    <button type="button">Envoyer</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -256,18 +240,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.selecteur-fichier {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.selecteur-fichier ol {
   padding-left: 0;
 }
 
-form li,
+.selecteur-fichier li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -277,18 +261,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.selecteur-fichier img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.selecteur-fichier p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.selecteur-fichier label,
+.selecteur-fichier button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -297,22 +281,22 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.selecteur-fichier label:hover,
+.selecteur-fichier button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.selecteur-fichier label:active,
+.selecteur-fichier button:active {
   background-color: #0d3f8f;
   color: white;
 }
 ```
 
-Pour l'instant, le fragment HTML ressemble à ce que nous avons déjà vu avant, rien de spécial.
+Ceci est similaire à ce que nous avons vu précédemment, donc nous ne passons pas plus de temps à le décrire. De plus, nous avons masqué le CSS appliqué à l'exemple, car il n'est pas pertinent pour comprendre l'élément `<input>` de type fichier ou le JavaScript qui le pilote.
 
-Voyons maintenant le code JavaScript utilisé.
+#### JavaScript
 
 Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}}, car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice sait comment interagir avec le document pour téléverser des fichiers.
 
@@ -324,7 +308,7 @@ input.style.opacity = 0;
 ```
 
 > [!NOTE]
-> La propriété {{CSSxRef("opacity")}} est utilisée pour masquer l'élément `<input>` plutôt que {{CSSxRef("visibility", "visibility: hidden")}} ou {{CSSxRef("display", "display: none")}}. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> La propriété {{CSSxRef("opacity")}} est utilisée pour masquer l'élément `<input>` plutôt que {{CSSxRef("visibility", "visibility: hidden")}} ou {{CSSxRef("display", "display: none")}}. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprennent que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrivons juste après.
 
@@ -424,18 +408,17 @@ function returnFileSize(number) {
 > Les unités «&nbsp;Ko&nbsp;» et «&nbsp;Mo&nbsp;» utilisées ici respectent la convention de [préfixe SI](https://fr.wikipedia.org/wiki/Pr%C3%A9fixe_binaire) selon laquelle 1 Ko = 1 000 octets, comme sous macOS. Différents systèmes représentent différemment la taille des fichiers. Par exemple, Ubuntu utilise les préfixes IEC où 1 Ko = 1024 octets, tandis que les spécifications RAM utilisent souvent les préfixes SI pour représenter les puissances de deux (1 Ko = 1024 octets). C'est pourquoi nous avons utilisé `1e3` (`1000`) et `1e6` (`1000000`) au lieu de `1024` et `1048576`. Dans votre application, vous devez communiquer clairement le système d'unités à vos utilisateur·ice·s si la taille exacte est importante.
 
 ```js hidden
-const button = document.querySelector("form button");
+const button = document.querySelector(".selecteur-fichier button");
 button.addEventListener("click", (e) => {
-  e.preventDefault();
   const para = document.createElement("p");
   para.append("Image téléversée !");
   preview.replaceChildren(para);
 });
 ```
 
-Et voici le résultat&nbsp;:
+#### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', 200)}}
+{{EmbedLiveSample("Exemple complet de fichier", "100%", 200)}}
 
 ## Résumé technique
 

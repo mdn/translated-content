@@ -3,8 +3,6 @@ title: Ajouter une page de paramètres
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 
-{{AddonSidebar}}
-
 Une page de paramètres donne aux utilisateurs la possiblité de voir et de changer les paramètres (parfois aussi appelée "préférences" ou "options") de l'extension.
 
 Avec les WebExtensions, les paramètres sont généralement stockés en utilisant l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage). L'ajout d'une page de paramètres se fait en trois étapes :

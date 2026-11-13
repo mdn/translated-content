@@ -73,7 +73,7 @@ padding-inline-end: unset;
 - {{CSSxRef("&lt;length&gt;")}}
   - : La taille de remplissage en tant que valeur fixe. Cette valeur doit être positive.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de remplissage en pourcentage, relative à [la taille en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_largeur_ dans une langue horizontale) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
+  - : La taille de remplissage en pourcentage, relative à [la taille en incise](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_largeur_ dans une langue horizontale) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur doit être positive.
 
 ## Description
 

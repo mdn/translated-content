@@ -2,7 +2,7 @@
 title: Plantilla de página de referencia de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -52,7 +52,6 @@ l10n:
 > Estas macros se añaden automáticamente mediante la cadena de herramientas (no es necesario añadirlas ni eliminarlas):
 >
 > - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Si es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada en la página [Funcionalidades experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que la tecnología está [obsoleta](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros según las indicaciones a continuación:
@@ -67,9 +66,11 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 El párrafo de resumen: comienza nombrando la interfaz, indicando a qué API pertenece y qué hace. Idealmente debería ser una o dos frases cortas. Puedes copiar gran parte de esto desde el resumen de la interfaz en la página de aterrizaje de la API correspondiente.
+
+Mantén breve el contenido introductorio. Todas las demás explicaciones deben incluirse en la sección «Descripción», antes de la sección «Ejemplos».
 
 `\{{InheritanceDiagram}}`
 
@@ -138,6 +139,10 @@ Escucha estos eventos usando {{DOMxRef("EventTarget.addEventListener", "addEvent
   - : Se dispara cuando (incluye la descripción de cuándo se dispara el evento).
     También disponible a través de la propiedad `oneventname2`.
     Si el evento no es experimental/obsoleto/no estándar, elimina las llamadas a macros correspondientes.
+
+## Descripción
+
+Esta es una sección opcional. Si es necesario, incluye aquí una explicación más detallada de la interfaz.
 
 ## Ejemplos
 

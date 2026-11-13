@@ -1,19 +1,21 @@
 ---
-title: HTML `<input type="number">` 属性値
+title: '`<input type="number">` 属性値'
 short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLElement("input")}} 要素の **`number`** 型は、ユーザーに数値を入力させるために使用されます。数値以外の入力を除外するための値検証機能を内蔵しています。
+{{HTMLElement("input")}} 要素の **`number`** 型は、ユーザーが数値を入力するために使用します。数値以外の入力を除外する値検証機能を内蔵しています。
 
-ブラウザーによっては、マウスや指先のタップを使用して、値をユーザーが値を増減させるための矢印を提供していることもあります。
+ブラウザーによっては、ユーザーがマウスや指先で操作して値を増減できる矢印を表示することもあります。
+
+`number` 型に対応していないブラウザーでは、 `number` 入力欄は `text` 入力欄で代替されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="tentacles">Number of tentacles (10-100):</label>
+<label for="tentacles">触手の数 (10-100):</label>
 
 <input type="number" id="tentacles" name="tentacles" min="10" max="100" />
 ```
@@ -31,8 +33,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-`number` 型に対応していないブラウザーでは、 `number` 入力欄は `text` 入力欄で代替されます。
 
 ## 値
 
@@ -253,6 +253,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("Validation", 600, 110)}}
 
 様々な違反する値を入力して、フォームを送信しようとしてみてください。例えば、値なし、 0 未満または 100 を超えた値、 10 の倍数ではない値、数値でない値などです。そして、それぞれにおいてブラウザーがどのようなエラーメッセージを表示するかを確認してください。
@@ -318,7 +324,7 @@ HTML は次のようになります。
       name="meters"
       step="0.01"
       min="0"
-      placeholder="e.g. 1.78"
+      placeholder="例: 1.78"
       required />
     <span class="validity"></span>
   </div>
@@ -340,7 +346,13 @@ HTML は次のようになります。
 </form>
 ```
 
-これまでの記事ですでに見てきた属性の多くを使用していることがわかります。センチメートル単位のメートル値を受け入れるため、 `step` の値を `0.01` に設定して、 _1.78_ のような値が無効とされないようにしました。また、その入力欄のプレイスホルダーも提供しました。
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+これまでの記事ですでに見てきた属性の多くを使用していることがわかります。メートル単位で身長を入力できるようにし、センチメートル単位の精度にするため、 `step` の値を `0.01` に設定して、 _1.78_ のような値が無効とされないようにしました。また、その入力欄にプレイスホルダーも設定しました。
 
 最初はフィートとインチの入力欄を `style="display: none;"` を使用して非表示にしているため、デフォルトはメートルでの入力です。
 
@@ -459,14 +471,6 @@ switchBtn.addEventListener("click", () => {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

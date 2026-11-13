@@ -1,5 +1,5 @@
 ---
-title: HTML `<noscript>` スクリプト無し要素
+title: "`<noscript>` スクリプト無し要素"
 short-title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
 l10n:

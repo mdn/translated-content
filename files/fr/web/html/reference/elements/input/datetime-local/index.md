@@ -3,10 +3,12 @@ title: Valeur d'attribut HTML `<input type="datetime-local">`
 short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
+
+L'interface utilisateur du contrôle varie généralement d'un navigateur à l'autre. Le contrôle est destiné à représenter _une date et une heure locales_, pas nécessairement _la date et l'heure locales de l'utilisateur·ice_. Autrement dit, le champ autorise toute combinaison valide d'année, de mois, de jour, d'heure et de minute — même si une telle combinaison est invalide dans le fuseau horaire local de l'utilisateur·ice (comme l'heure qui tombe dans le saut d'une heure lors du passage à l'heure d'été).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
@@ -37,8 +39,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-L'interface utilisateur du contrôle varie généralement d'un navigateur à l'autre. Le contrôle est destiné à représenter _une date et une heure locales_, pas nécessairement _la date et l'heure locales de l'utilisateur·ice_. Autrement dit, le champ autorise toute combinaison valide d'année, de mois, de jour, d'heure et de minute — même si une telle combinaison est invalide dans le fuseau horaire local de l'utilisateur·ice (comme l'heure qui tombe dans le saut d'une heure lors du passage à l'heure d'été).
 
 ## Valeur
 
@@ -132,7 +132,7 @@ Dans les deux cas, les valeurs de date/heure et de fuseau horaire sont envoyées
 
 ## Validation
 
-Par défaut, `<input type="datetime-local">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir autre chose qu'une date et une heure — ce qui est utile — mais un·e utilisateur·ice peut tout de même laisser le champ vide et soumettre, ou saisir une date et/ou une heure invalide (par exemple le 33 décembre).
+Par défaut, `<input type="datetime-local">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateur ne permettent généralement pas de saisir autre chose qu'une date et une heure — ce qui est utile — mais un·e utilisateur·ice peut tout de même laisser le champ vide et envoyer, ou saisir une date et/ou une heure invalide (par exemple le 33 décembre).
 
 Vous pouvez utiliser [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates disponibles (voir [Définir des dates et heures maximales et minimales](#définir_des_dates_et_heures_maximales_et_minimales)), et vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de la date et de l'heure obligatoire. Ainsi, les navigateurs affichent une erreur si vous essayez d'envoyer une date en dehors de l'intervalle ou un champ vide.
 
@@ -158,6 +158,12 @@ Voyons un exemple&nbsp;; ici, nous avons défini des valeurs minimales et maxima
     <input type="submit" value="Réserver !" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 Si vous essayez d'envoyer le formulaire avec une date incomplète (ou en dehors de l'intervalle indiqué), le navigateur affiche une erreur. Essayez de tester l'exemple maintenant&nbsp;:
@@ -202,13 +208,11 @@ input:valid + span::after {
 L'utilisation la plus simple de `<input type="datetime-local">` consiste en une combinaison basique d'un élément `<input>` et d'un élément {{HTMLElement("label")}}, comme ci-dessous&nbsp;:
 
 ```html
-<form>
-  <label for="party"
-    >Veuillez saisir une date et une heure pour la réservation de votre
-    fête&nbsp;:</label
-  >
-  <input id="party" type="datetime-local" name="party-date" />
-</form>
+<label for="party"
+  >Veuillez saisir une date et une heure pour la réservation de votre
+  fête&nbsp;:</label
+>
+<input id="party" type="datetime-local" name="party-date" />
 ```
 
 {{EmbedLiveSample("Utilisation simple de `datetime-local`", 600, 40)}}
@@ -218,18 +222,16 @@ L'utilisation la plus simple de `<input type="datetime-local">` consiste en une 
 Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les dates et heures pouvant être choisies par l'utilisateur·ice. Dans l'exemple suivant, nous définissons une date et heure minimale à `2025-06-01T08:30` et une date et heure maximale à `2025-06-30T16:30`&nbsp;:
 
 ```html
-<form>
-  <label for="party"
-    >Veuillez saisir une date et une heure pour la réservation de votre
-    fête&nbsp;:</label
-  >
-  <input
-    id="party"
-    type="datetime-local"
-    name="party-date"
-    min="2025-06-01T08:30"
-    max="2025-06-30T16:30" />
-</form>
+<label for="party"
+  >Veuillez saisir une date et une heure pour la réservation de votre
+  fête&nbsp;:</label
+>
+<input
+  id="party"
+  type="datetime-local"
+  name="party-date"
+  min="2025-06-01T08:30"
+  max="2025-06-30T16:30" />
 ```
 
 {{EmbedLiveSample("Définir des dates et heures maximales et minimales", 600, 40)}}

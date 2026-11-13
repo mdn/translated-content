@@ -60,7 +60,7 @@ l10n:
 この節では、フェッチ API の例をいくつか見てみましょう。
 
 下記にある例はある程度の複雑さを持ち、Fetch APIを実際のコンテキストでどのように使用するかを示しています。これまでフェッチを使用したことがない場合は、 Scrimba の [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>
-[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
+[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
 
 ### テキストコンテンツの読み取り
 
@@ -149,7 +149,7 @@ verseChoose.value = "Verse 1";
 
 #### 例をサーバーから提供する
 
-現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)をお読みください)。
+現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)をお読みください）。
 
 これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルテストサーバーを設定するためのガイド](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を読んでください。
 

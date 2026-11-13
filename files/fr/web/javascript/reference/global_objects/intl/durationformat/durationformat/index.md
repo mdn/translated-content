@@ -157,6 +157,6 @@ console.log(new Intl.DurationFormat("pt", { style: "long" }).format(duration));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}
 - La méthode {{JSxRef("Intl.supportedValuesOf()")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

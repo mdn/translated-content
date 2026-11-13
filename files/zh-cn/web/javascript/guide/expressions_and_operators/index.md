@@ -150,7 +150,7 @@ var var2 = 4;
 
 概念上来讲，位逻辑运算符工作流程如下：
 
-- 操作数被转换为 32bit 整數，以位序列（0 和 1 组成）表示。若超過 32bits，則取低位 32bit，如下所示：
+- 操作数被转换为 32bit 整数，以位序列（0 和 1 组成）表示。若超过 32bits，则取低位 32bit，如下所示：
 
 ```plain
   Before: 11100110111110100000000000000110000000000001
@@ -337,7 +337,7 @@ if (3 in trees) {
 }
 ```
 
-如果想让数组中存在一个元素但是是`undefined`值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
+如果想让数组中存在一个元素但是 `undefined` 值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");

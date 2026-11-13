@@ -3,7 +3,7 @@ title: Valeurs et unités CSS
 short-title: Valeurs et unités
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fixing_blog_styles", "Learn_web_development/Core/Styling_basics/Test_your_skills/Values", "Learn_web_development/Core/Styling_basics")}}
@@ -45,7 +45,7 @@ Les valeurs CSS définissent quels types de valeurs sont valides pour chaque pro
 
 Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pouvez identifier les types de valeurs, car ils sont entourés par des chevrons (`<`, `>`) — tels que {{CSSxRef("&lt;color&gt;")}} ou {{CSSxRef("&lt;length&gt;")}}. Quand vous voyez le type de valeur `<color>` comme valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de {{CSSxRef("&lt;color&gt;")}}.
 
-Parfois, les types de valeurs et les propriétés peuvent avoir les mêmes noms ou des noms similaires — par exemple, il existe une propriété {{CSSxRef("color")}} et un type de donnée {{CSSxRef("&lt;color&gt;")}}. Vous pouvez utiliser les chevrons pour déterminer lequel vous étudiez dans chaque cas. Les éléments HTML utilisent également des chevrons, mais il devrait être clair d'après le contexte lequel vous regardez. Si vous n'êtes pas sûr, essayez de le rechercher sur MDN.
+Parfois, les types de valeurs et les propriétés peuvent avoir les mêmes noms ou des noms similaires — par exemple, il existe une propriété {{CSSxRef("color")}} et un type de donnée {{CSSxRef("&lt;color&gt;")}}. Vous pouvez utiliser les chevrons pour déterminer lequel vous étudiez dans chaque cas. Les éléments HTML utilisent également des chevrons, mais il doit être clair d'après le contexte lequel vous regardez. Si vous n'êtes pas sûr, essayez de le rechercher sur MDN.
 
 > [!NOTE]
 > Vous allez voir les types de valeurs CSS appelés _types de données_. Les termes sont essentiellement interchangeables — lorsque vous voyez quelque chose en CSS appelée type de données, c'est en réalité juste une manière sophistiquée de dire type de valeur. Le terme _valeur_ fait référence à toute expression particulière prise en charge par un type de valeur que vous choisissez d'utiliser.
@@ -102,7 +102,7 @@ Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. 
         Une dimension (<code>&#x3C;dimension></code>) est un nombre (<code>&#x3C;number></code>) avec une
         unité attachée. Par exemple, <code>45deg</code>, <code>5s</code>,
         ou <code>10px</code>. <code>&#x3C;dimension></code> est une catégorie
-        englobante qui inclut les {{CSSxRef("length")}}, <code><a href="/fr/docs/Web/CSS/Reference/Values/angle">&#x3C;angle></a></code
+        englobante qui inclut les longueurs ({{CSSxRef("&lt;length&gt;")}}), <code><a href="/fr/docs/Web/CSS/Reference/Values/angle">&#x3C;angle></a></code
         >, <code><a href="/fr/docs/Web/CSS/Reference/Values/time">&#x3C;time></a></code
         >, et
         <code
@@ -125,7 +125,7 @@ Il existe plusieurs types de valeur numérique que vous pouvez utiliser en CSS. 
 
 ### Longueurs
 
-Le type numérique que vous rencontrez le plus souvent est {{CSSxRef("length")}}. Par exemple, `10px` (pixels) ou `30em`. Il existe deux types de longueurs en CSS — les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiennent.
+Le type numérique que vous rencontrez le plus souvent est {{CSSxRef("&lt;length&gt;")}}. Par exemple, `10px` (pixels) ou `30em`. Il existe deux types de longueurs en CSS — les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiennent.
 
 #### Unités de longueur absolue
 
@@ -211,9 +211,9 @@ L'exemple suivant est un ensemble de listes imbriquées — nous avons deux list
 
 Pour commencer, on définit la taille de la police à 16px sur l'élément `<html>`.
 
-Pour récapituler, l'unité `em` signifie **"la taille de police de l'élément parent"** si elle est utilisée pour `font-size`, et **"ma propre taille de police"** lorsqu'elle est utilisée pour autre chose. Les éléments HTML {{HTMLElement("li")}} à l'intérieur des {{HTMLElement("ul")}} avec une `class` de `ems` prennent leur taille de leur parent. Ainsi, chaque niveau successif d'imbrication devient progressivement plus grand, chaque élément ayant sa taille de police définie à `1.3em` — 1,3 fois la taille de police de son élément parent.
+Pour récapituler, l'unité `em` signifie **«&nbsp;la taille de police de l'élément parent&nbsp;»** si elle est utilisée pour `font-size`, et **«&nbsp;ma propre taille de police&nbsp;»** lorsqu'elle est utilisée pour autre chose. Les éléments HTML {{HTMLElement("li")}} à l'intérieur des {{HTMLElement("ul")}} avec une `class` de `ems` prennent leur taille de leur parent. Ainsi, chaque niveau successif d'imbrication devient progressivement plus grand, chaque élément ayant sa taille de police définie à `1.3em` — 1,3 fois la taille de police de son élément parent.
 
-Pour récapituler, l'unité `rem` signifie **"la taille de police de l'élément racine"** (rem signifie "root em"). Les éléments HTML {{HTMLElement("li")}} à l'intérieur des {{HTMLElement("ul")}} avec une `class` de `rems` prennent leur taille de l'élément racine (`<html>`). Cela signifie que chaque niveau successif d'imbrication ne devient pas plus grand.
+Pour récapituler, l'unité `rem` signifie **"la taille de police de l'élément racine"** (rem signifie «&nbsp;root em&nbsp;»). Les éléments HTML {{HTMLElement("li")}} à l'intérieur des {{HTMLElement("ul")}} avec une `class` de `rems` prennent leur taille de l'élément racine (`<html>`). Cela signifie que chaque niveau successif d'imbrication ne devient pas plus grand.
 
 Cependant, si vous modifiez la taille de la police de l'élément `<html>` dans le CSS, vous pouvez voir que tout le reste change en fonction de celle-ci — que ce soit du texte dimensionné en `rem` ou en `em`. Essayez cela maintenant dans MDN Playground.
 
@@ -551,7 +551,7 @@ Essayez de modifier les valeurs du canal alpha pour voir comment cela affecte le
 
 Si vous voulez aller au-delà des mots-clés, des valeurs hexadécimales et de {{CSSxRef("color_value/rgb")}} pour les couleurs, vous pouvez essayer d'utiliser {{CSSxRef("hue")}}.
 La teinte est le type de valeur qui nous permet de distinguer ou de rapprocher des couleurs comme le rouge, l'orange, le jaune, le vert, le bleu, etc.
-Le concept clé est que vous pouvez définir une teinte dans un angle ({{CSSxRef("angle")}}), car la plupart des modèles de couleurs décrivent les teintes en utilisant une {{Glossary("color wheel", "roue des couleurs")}}.
+Le concept clé est que vous pouvez définir une teinte dans un angle ({{CSSxRef("&lt;angle&gt;")}}), car la plupart des modèles de couleurs décrivent les teintes en utilisant une {{Glossary("color wheel", "roue des couleurs")}}.
 
 Il existe plusieurs fonctions de couleur qui incluent un composant {{CSSxRef("hue")}}, y compris {{CSSxRef("color_value/hsl")}}, {{CSSxRef("color_value/hwb")}}, et {{CSSxRef("color_value/lch")}}. D'autres fonctions de couleur, comme {{CSSxRef("color_value/lab")}}, définissent les couleurs en fonction de ce que les humains peuvent percevoir.
 

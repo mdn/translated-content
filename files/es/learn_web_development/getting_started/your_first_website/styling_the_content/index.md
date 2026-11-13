@@ -1,61 +1,112 @@
 ---
-title: CSS básico
+title: "CSS: Dar estilo al contenido"
+short-title: Dar estilo al contenido
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
+l10n:
+  sourceCommit: b5ee197a87ea18acbc4dd9544efa8c0e46253785
 ---
 
-{{LearnSideBar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity","Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
-CSS (_Hojas de Estilo en Cascada_) es el código que usas para dar estilo a tu página web. _CSS Básico_ te lleva a través de lo que tú necesitas para empezar. Contestará a preguntas del tipo: ¿Cómo hago mi texto rojo o negro? ¿Cómo hago que mi contenido se muestre en tal y tal lugar de la pantalla? ¿Cómo decoro mi página web con imágenes de fondo y colores?
+CSS (Cascading Style Sheets, hojas de estilo en cascada) es el código que da estilo al contenido web. Este artículo te guía para que entiendas lo básico de CSS: cómo funciona y cómo mejorar el aspecto de la estructura de contenido que creaste en el artículo anterior.
 
-## Entonces ¿qué es CSS, realmente?
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Requisitos previos:</th>
+      <td>
+        Familiaridad básica con el sistema operativo de tu computadora, el software básico que usarás para construir un sitio web y los sistemas de archivos.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Resultados de aprendizaje:</th>
+      <td>
+        <ul>
+          <li>El propósito y la función de CSS.</li>
+          <li>Las partes básicas de la sintaxis de CSS: conjuntos de reglas, selectores, declaraciones, propiedades y valores de las propiedades.</li>
+          <li>Funcionalidades habituales de CSS, como el modelo de caja, cambiar los colores y las fuentes, y posicionar los elementos HTML.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Como HTML, CSS (_Cascading Style Sheets_) u Hojas de estilo en cascada en español, no es realmente un lenguaje de programación, tampoco es un lenguaje de marcado. Es un _lenguaje de hojas de estilo,_ es decir, te permite aplicar estilos de manera selectiva a elementos en documentos HTML. Por ejemplo, para seleccionar **todos** los elementos de párrafo en una página HTML y volver el texto dentro de ellos de color rojo, has de escribir este CSS:
+## ¿Qué es CSS?
 
-```css
+Al igual que HTML, CSS no es un lenguaje de programación. Tampoco es un lenguaje de marcado. **CSS es un lenguaje de hojas de estilo.** CSS se usa para dar estilo a los elementos HTML: seleccionas los elementos a los que quieres dar estilo y estableces valores para sus propiedades de estilo, que definen cómo se verán.
+
+Volvamos al ejemplo básico de HTML del artículo [Crear el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content):
+
+```html live-sample___basic-html live-sample___basic-css
+<p>Instrucciones para la vida:</p>
+
+<ul>
+  <li>Comer</li>
+  <li>Dormir</li>
+  <li>Repetir</li>
+</ul>
+```
+
+Por sí solo, se ve así:
+
+{{EmbedLiveSample("basic-html", "100%", "140px")}}
+
+Si añadimos algo de CSS, podemos cambiar el aspecto del HTML. El siguiente fragmento selecciona el elemento {{htmlelement("p")}} y le da una [fuente](/es/docs/Web/CSS/Reference/Properties/font-family) distinta y un {{cssxref("color")}} de texto rojo. Después selecciona todos los elementos {{htmlelement("li")}} y le da a cada uno un {{cssxref("background-color")}} amarillo verdoso, un {{cssxref("border")}} negro sólido de 1 píxel y un [margen inferior](/es/docs/Web/CSS/Reference/Properties/margin-bottom) de 5 píxeles:
+
+```css live-sample___basic-css
 p {
+  font-family: sans-serif;
   color: red;
+}
+
+li {
+  background-color: greenyellow;
+  border: 1px solid black;
+  margin-bottom: 5px;
 }
 ```
 
-Vas a probarlo: pega estas tres líneas de CSS en un nuevo archivo en tu editor de texto y guarda este archivo como `style.css` en tu directorio `styles` (estilos).
+Con el CSS aplicado al HTML, la demostración ahora se ve así:
 
-Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) y [HTML básico](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) para averiguar qué necesitas hacer primero.)
+{{EmbedLiveSample("basic-css", "100%", "160px")}}
 
-1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
+Como ves, con solo un poco de CSS hemos podido cambiar el aspecto de una lista sencilla.
 
-   ```html
-   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+CSS tiene muchas otras funciones, desde especificar imágenes y degradados de fondo, hasta controlar la tipografía y el comportamiento del desplazamiento, añadir animaciones y construir diseños de página web completos.
+
+## Aplicar CSS a tu HTML
+
+Al usar CSS, lo primero que hay que hacer bien es asegurarse de que el CSS se aplica correctamente al HTML. En esta sección, añadiremos una **hoja de estilo** CSS a tu `first-website` y la aplicaremos a tu página.
+
+1. Dentro de tu carpeta `first-website`, crea otra carpeta nueva llamada `styles`.
+2. Con un editor de texto, pega el siguiente CSS en un archivo nuevo; dará a tus elementos `<p>` un color de texto rojo. Es útil empezar con algo así para comprobar si tu hoja de estilo se aplica correctamente al HTML.
+
+   ```css
+   p {
+     color: red;
+   }
    ```
 
-2. Guarda el archivo `index.html` y cárgalo en tu navegador. Debes ver algo como esto:
+3. Guarda el archivo en la carpeta `styles` con el nombre `style.css`.
+4. Abre tu archivo `index.html`. Pega la siguiente línea dentro de la cabecera del HTML (entre las etiquetas {{HTMLElement("head")}} y `</head>`):
 
-![Un logo de Mozilla y algunos párrafos. El texto del párrafo ha sido estilizado en rojo por nuestro css.](website-screenshot-styled.png)Si tu texto del párrafo ahora es rojo, ¡felicitaciones, ya has escrito tu primer CSS de forma exitosa!
+   ```html
+   <link href="styles/style.css" rel="stylesheet" />
+   ```
 
-### Anatomía de una regla CSS
+5. Guarda `index.html` y cárgalo en tu navegador. Deberías ver algo así:
 
-Observa el código CSS de arriba, un poco más a detalle:
+![Un logotipo de Mozilla y algunos párrafos. Nuestro CSS ha puesto en rojo el texto de los párrafos.](website-screenshot-styled.png)
 
-![Partes de una declaracion de css](css-declaration-small.png)
+Si el texto de tus párrafos está en rojo, ¡enhorabuena! Tu CSS funciona. Si no, repasa los pasos anteriores y comprueba con cuidado que has seguido cada uno correctamente.
 
-La estructura completa es llamada **regla predeterminada** (pero a menudo «regla» para abreviar). Nota también los nombres de las partes individuales:
+## Conceptos básicos de la sintaxis de CSS
 
-- Selector
-  - : El elemento HTML en el que comienza la regla. Esta selecciona el(los) elemento(s) a dar estilo (en este caso, los elementos {{htmlelement("p")}} ). Para dar estilo a un elemento diferente, solo cambia el selector.
-- Declaración
-  - : Una sola regla como `color: red;` especifica a cuál de las **propiedades** del elemento quieres dar estilo.
-- Propiedades
-  - : Maneras en las cuales puedes dar estilo a un elemento HTML. (En este caso, `color` es una propiedad del elemento {{htmlelement("p")}} ). En CSS, seleccionas qué propiedad quieres afectar en tu regla.
-- Valor de la propiedad
-  - : A la derecha de la propiedad, después de los dos puntos (:), tienes el **valor de la propiedad**, para elegir una de las muchas posibles apariencias para una propiedad determinada (hay muchos valores para `color` además de `red`).
+En el ejemplo de CSS anterior, `p` se llama **selector**: selecciona los elementos a los que se dará estilo. En concreto, `p` selecciona todos los párrafos del HTML. La línea entre llaves (`{ }`) se llama **declaración**: establece un valor para una propiedad concreta. En este caso, la **propiedad** es `color`, que controla el color del texto de los párrafos, y el **valor de la propiedad** establecido es `red`.
 
-Nota las otras partes importantes de la sintaxis:
+La estructura completa se llama **conjunto de reglas**. (Al _conjunto de reglas_ a menudo se le llama simplemente _regla_).
 
-- Cada una de las reglas (aparte del selector) deben estar encapsuladas entre llaves (`{}`).
-- Dentro de cada declaración, debes usar los dos puntos (`:`) para separar la propiedad de su valor.
-- Dentro de cada regla, debes usar el punto y coma (`;`) para separar una declaración de la siguiente.
-
-De este modo para modificar varios valores de propiedad a la vez, solo necesitas escribirlos separados por punto y coma (;), así:
+Veamos otro conjunto de reglas, esta vez con varias declaraciones:
 
 ```css
 p {
@@ -65,60 +116,64 @@ p {
 }
 ```
 
-### Seleccionar varios elementos
+Dentro de un conjunto de reglas, tienes que usar un punto y coma (`;`) para separar una declaración de la siguiente. Dentro de cada declaración, tienes que usar dos puntos (`:`) para separar la propiedad de su valor.
 
-También puedes seleccionar varios elementos y aplicar una sola regla a todos ellos. Incluye varios selectores separados por comas (,). Por ejemplo:
+También puedes incluir varios selectores en una regla, separados por comas, para seleccionar varios elementos. Por ejemplo:
 
 ```css
 p,
-li,
-h1 {
+.my-class,
+#my-id {
   color: red;
 }
 ```
 
-### Diferentes tipos de selectores
+En esta regla CSS, hemos incluido un selector de **elemento** (o de **tipo**), que selecciona un elemento HTML concreto. También hemos incluido otros dos tipos de selectores, que no son relevantes para el resto de este tutorial. Si tienes curiosidad por saber qué hacen, consulta nuestra guía de [selectores básicos](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
-Existen muchos tipos diferentes de selectores. Antes, solo viste los **selectores de elementos**, los cuales seleccionan todos los elementos de un tipo dado en los documentos HTML. Sin embargo puedes hacer selecciones más específicas que esas. En seguida están algunos de los tipos de selectores más comunes:
+> [!NOTE]
+> La lección [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> ofrece una introducción interactiva útil a la sintaxis de CSS.
 
-| Nombre del selector                                                      | Qué selecciona                                                                                                             | Ejemplo                                                                           |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Selector de elemento (llamado algunas veces selector de etiqueta o tipo) | Todos los elementos HTML del tipo especificado.                                                                            | `p`<br> Selecciona `<p>`                                                          |
-| Selector de identificación (ID)                                          | El elemento en la página con el ID especificado (en una página HTML dada, solo se permite un único elemento por ID).       | `#mi-id`<br> Selecciona `<p id="mi-id">` y `<a id="mi-id">`                       |
-| Selector de clase                                                        | Los elementos en la página con la clase especificada (una clase puede aparecer varias veces en una página).                | `.mi-clase`<br> Selecciona `<p class="mi-clase">` y `<a class="mi-clase">`        |
-| Selector de atributo                                                     | Los elementos en una página con el atributo especificado.                                                                  | `img[src]`<br> Selecciona `<img src="mimagen.png">` pero no `<img>`               |
-| Selector de pseudoclase                                                  | Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él. | `a:hover`<br> Selecciona `<a>`, pero solo cuando el puntero esté sobre el enlace. |
+## Mejorar el texto
 
-Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+Volvamos a nuestro ejemplo y usemos CSS para mejorar el aspecto del texto. Estableceremos una fuente nueva para la página y cambiaremos algunos ajustes de texto de distintos elementos.
 
-## Fuentes y texto
-
-Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo `style.css` para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.
-
-1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
+1. Primero, busca el [resultado de Google Fonts](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#elegir_una_fuente) que guardaste antes. Si todavía no has elegido una fuente, sigue el enlace y hazlo ahora.
+2. Añade los elementos {{htmlelement("link")}} dentro del {{HTMLElement("head")}} de tu `index.html`, justo antes de la etiqueta de cierre `</head>`. Deberían verse más o menos así:
 
    ```html
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <link
-     href="https://fonts.googleapis.com/css2?family=Open+Sans"
-     rel="stylesheet"
-     type="text/css" />
+     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+     rel="stylesheet" />
    ```
 
-2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
-3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
+   Este código enlaza tu página con una hoja de estilo alojada en el servicio Google Fonts, que carga la fuente que elegiste.
+
+3. A continuación, ve a tu archivo `style.css` y borra la regla existente. Ya no queremos que nuestros párrafos sean rojos.
+4. Añade las siguientes líneas a `style.css`:
 
    ```css
    html {
-     font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
-     font-family:
-       "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
+     /* px significa "píxeles". El tamaño de fuente base ahora mide 10 píxeles de alto */
+     font-size: 10px;
+     /* Reemplaza PLACEHOLDER por el valor de la propiedad font-family que obtuviste de Google Fonts */
+     font-family: PLACEHOLDER;
    }
    ```
 
    > [!NOTE]
-   > Se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
+   > Todo lo que en CSS está entre `/*` y `*/` es un **comentario de CSS**, que el navegador ignora. Los comentarios de CSS son una forma de incluir notas útiles sobre tu código o tu lógica sin afectar a cómo se representa tu página web.
 
-4. Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
+5. Reemplaza la línea de marcador de posición de `font-family` por la línea `font-family` de tu código de Google Fonts, por ejemplo:
+
+   ```css
+   font-family: "Roboto", sans-serif;
+   ```
+
+   La propiedad `font-family` establece las fuentes que quieres aplicar a tu HTML. Esta regla define una fuente base global y un tamaño de fuente para toda la página. Todos los elementos dentro del elemento {{HTMLElement("html")}} heredarán el mismo `font-size` y `font-family`.
+
+6. Ahora vamos a establecer algunos estilos de fuente y de texto en nuestros elementos [`<h1>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements), {{htmlelement("li")}} y {{htmlelement("p")}}. Estableceremos nuevos valores de {{cssxref("font-size")}} para cada elemento. También centraremos el encabezado con {{cssxref("text-align")}} y aumentaremos el {{cssxref("line-height")}} y el {{cssxref("letter-spacing")}} de los párrafos y los elementos de la lista para que el contenido del cuerpo sea más legible.
 
    ```css
    h1 {
@@ -134,35 +189,43 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
    }
    ```
 
-Puedes ajustar estos valores en px para lograr que tu diseño luzca como desees, pero por lo general tu diseño debe verse así:
+7. Guarda tu código y carga tu HTML en un navegador (recárgalo si ya lo tenías abierto). Tu trabajo en curso debería verse parecido a esto:
 
-![Un logo de Mozilla y algunos párrafos. se ha establecido una fuente sans-serif, se han ajustado los tamaños de las fuentes, la altura de las líneas y el espaciado de las letras, y se ha centrado el encabezamiento de la página principal.](website-screenshot-font-small.png)
+   ![Un logotipo de Mozilla y algunos párrafos. Se ha establecido una fuente sans-serif, se han ajustado los tamaños de fuente, la altura de línea y el espaciado entre letras, y el encabezado principal de la página está centrado](website-screenshot-font-small.png)
 
-## Cajas, cajas, todo se trata de cajas
+   > [!NOTE]
+   > Prueba a ajustar los valores en `px` hasta conseguir tamaños de fuente que te gusten para el encabezado y el texto del cuerpo.
 
-Una cosa que notarás sobre la escritura de CSS es que trata mucho sobre cajas —ajustando su tamaño, color, posición, etc—. Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra.
+## En CSS todo son cajas
 
-![Una gran pila de cajas o cajones puestos uno encima del otro.](boxes.jpg)
+Algo que notarás sobre CSS a medida que lo uses más es que gran parte trata de cajas. La mayoría de los elementos HTML de una página pueden considerarse cajas que se colocan encima de (o junto a) otras cajas. Puedes establecer valores en estas cajas para el tamaño, el color, el posicionamiento, etc. A esto se le llama [**modelo de caja**](/es/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
-No es de extrañar que el diseño de CSS esté basado principalmente en el _modelo de caja_. Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:
+![Tres cajas una dentro de otra. De fuera hacia dentro, están etiquetadas como margin, border y padding](box-model.png)
 
-- `padding` (relleno), el espacio alrededor del contenido. En el ejemplo siguiente, es el espacio alrededor del texto del párrafo.
-- `border` (marco), la línea que se encuentra fuera del relleno.
-- `margin` (margen), el espacio fuera del elemento que lo separa de los demás.
+Cada caja que ocupa espacio en tu página tiene propiedades como:
 
-![tres cajas puestas una dentro de otra. De fuera a dentro están etiquetadas con el margen, el borde y el relleno](box-model.png)
+- {{cssxref("padding")}}: el espacio alrededor del contenido. En el ejemplo anterior, es el espacio alrededor del texto del párrafo.
+- {{cssxref("border")}}: la línea sólida justo por fuera del relleno (_padding_).
+- {{cssxref("margin")}}: el espacio por fuera del borde.
 
-En esta sección también se utiliza:
+En esta sección, también usamos las siguientes propiedades, algunas de las cuales ya has visto:
 
-- `width` (ancho del elemento)
-- `background-color`, el color de fondo del contenido y del relleno
-- `color`, el color del contenido del elemento (generalmente texto)
-- `text-shadow`: coloca una sombra difuminada en el texto dentro del elemento
-- `display`: selecciona el modo de visualización para el elemento (no te preocupes de esto por ahora)
+- {{cssxref("width")}}: el ancho de un elemento.
+- {{cssxref("background-color")}}: el color detrás del contenido y el relleno de un elemento.
+- {{cssxref("color")}}: el color del contenido de un elemento (normalmente, el texto).
+- {{cssxref("text-shadow")}}: una sombra paralela en el texto de un elemento.
+- {{cssxref("display")}}: el modo de visualización de un elemento (que básicamente se refiere a cómo aparece o se dispone en la página web).
 
-Bien, ¡continúa y agrega más código CSS a la página! Sigue añadiendo estas reglas nuevas al final de la página, y no temas experimentar cambiando los valores para ver cómo resulta.
+En cada una de las secciones siguientes:
 
-### Cambiar el color de la página
+1. Añade el código CSS proporcionado al final de tu archivo `style.css`.
+2. Guarda el archivo y recarga el navegador para ver cómo ha afectado el CSS a la representación del HTML.
+3. Lee la explicación proporcionada para entender cómo funciona el CSS.
+4. Si te sientes aventurero, experimenta cambiando los valores de las propiedades para personalizar aún más tu página.
+
+## Cambiar el color de la página
+
+Añade lo siguiente:
 
 ```css
 html {
@@ -170,9 +233,11 @@ html {
 }
 ```
 
-Esta regla asigna un color de fondo a la página entera. Puedes cambiar el código de color por cualquiera [como el que elegiste usar en tu proyecto](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#color_de_tema).
+Esta regla establece un color de fondo para toda la página. Cambia el código de color por el color que elegiste en [¿Cuál será la apariencia de tu sitio web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#elegir_un_color_de_tema).
 
-### Dar estilo al cuerpo del documento
+## Dar estilo al cuerpo
+
+A continuación, añade esta regla:
 
 ```css
 body {
@@ -184,15 +249,31 @@ body {
 }
 ```
 
-Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Reference/Elements/body). Revisa una por una:
+El código anterior establece nuevos valores para varias propiedades del elemento {{htmlelement("body")}}. Veámoslas línea por línea:
 
-- `width: 600px;` — esto hará que el cuerpo siempre tenga 600 píxeles de ancho.
-- `margin: 0 auto;` — cuando seleccionas dos valores dentro de propiedades como `margin` o `padding`, el primer valor afectará los lados superior (top) **e** inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) **y** derecho (right) (aquí, `auto` es un valor especial que divide el espacio disponible entre derecha e izquierda). Puedes usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/Reference/Properties/padding#sintaxis).
-- `background-color: #FF9500;` — como antes, este selecciona el color de fondo de un elemento. Se ha usado un naranja rojizo para el elemento `body` en contraste con el azul oscuro del elemento {{htmlelement("html")}}. Sigue y experimenta. Siéntete libre de usar `white` o cualquiera que sea de tu agrado.
-- `padding: 0 20px 20px 20px;` — tienes 4 valores puestos en el relleno, para dar un poco de espacio alrededor del contenido. Esta vez no pondrás relleno en la parte de arriba de `body`, 20 píxeles a la izquierda, abajo y derecha. Los valores se ponen: arriba, derecha, abajo e izquierda, en ese orden. Como con `margin` usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/Reference/Properties/padding#sintaxis).
-- `border: 5px solid black;` — este simplemente pone un borde de 5 píxeles de ancho, continuo y de color negro alrededor del elemento `body`.
+- `width: 600px;`: obliga a que el cuerpo mida siempre 600 píxeles de ancho.
+- `margin: 0 auto;`: cuando estableces dos valores en una propiedad como `margin` o `padding`, el primer valor afecta a los lados superior _e_ inferior del elemento (en este caso, los pone a `0`); el segundo valor afecta a los lados izquierdo _y_ derecho. `auto` es un valor especial que reparte el espacio horizontal disponible a partes iguales entre la izquierda y la derecha.
+- `background-color: #FF9500;`: establece el color de fondo del elemento. Nuestro proyecto usa un naranja rojizo como color de fondo del `<body>`, para que contraste con el azul oscuro que se usa en el elemento {{htmlelement("html")}}.
+- `padding: 0 20px 20px 20px;`: establece cuatro valores de relleno. El objetivo es dejar algo de espacio alrededor del contenido. En este ejemplo, no hay relleno en la parte superior del cuerpo, y hay 20 píxeles a la derecha, abajo y a la izquierda. Los valores establecen el relleno superior, derecho, inferior e izquierdo, en ese orden.
+- `border: 5px solid black;`: establece los valores del ancho, el estilo y el color del borde. En este caso, es un borde negro sólido de 5 píxeles de ancho alrededor de todos los lados del cuerpo.
 
-### Posicionar y dar estilo al título principal de la página
+### Un inciso sobre las propiedades abreviadas
+
+Los valores de propiedades CSS que establecen varias propiedades de una vez se llaman **propiedades abreviadas**. Por ejemplo, `padding: 0 20px 20px 20px` equivale a las cuatro propiedades siguientes:
+
+```css
+padding-top: 0;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+```
+
+> [!NOTE]
+> La lección [Margin/padding shorthand](https://scrimba.com/frontend-path-c0j/~0g?via=mdn) de Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup> es una lección interactiva que ofrece un recorrido práctico por el uso de las propiedades abreviadas de margen y relleno.
+
+## Posicionar y dar estilo al título principal de la página
+
+Ahora añade esto:
 
 ```css
 h1 {
@@ -203,46 +284,51 @@ h1 {
 }
 ```
 
-Puedes haber notado que hay un hueco horrible en la parte superior de _body_. Esto sucede porque los navegadores vienen con estilos por defecto, ¡incluso cuando aún no se ha aplicado ningún archivo CSS! Esto podría parecer una mala idea, pero se quiere que aun una página sin estilizar sea legible. Para deshacerte de este espacio elimina el estilo por defecto, agregando `margin: 0;`.
+Quizá hayas notado un hueco horrible en la parte superior del cuerpo. Ocurre porque los navegadores aplican un estilo predeterminado al elemento `<h1>`. Puede parecer mala idea, pero la intención es dar una legibilidad básica a las páginas sin estilo. Para eliminar el hueco, sobrescribimos el estilo predeterminado del navegador con el ajuste `margin: 0;`.
 
-Enseguida, se ha puesto un relleno arriba y abajo del título de 20 píxeles, y se hizo que el color del texto sea el mismo que el color de fondo de `html`.
+Después, establecemos el relleno superior e inferior del encabezado en 20 píxeles, y hacemos que el texto del encabezado tenga el mismo color que el color de fondo del HTML.
 
-Una propiedad muy interesante que se ha usado aquí es `text-shadow`, que aplica una sombra al texto del elemento. Sus cuatro valores son como sigue:
+Por último, `text-shadow` aplica una sombra al contenido de texto del elemento:
 
-- El primer valor en píxeles asigna el **desplazamiento horizontal** de la sombra desde el texto —qué tan lejos la mueve a la derecha—. Un valor negativo la moverá a la izquierda.
-- El segundo valor en píxeles asigna el **desplazamiento vertical** de la sombra desde el texto —qué tan lejos la mueve hacia abajo—. En este ejemplo, un valor negativo la desplazaría hacia arriba.
-- El tercer valor en píxeles asigna **radio de desenfoque** de la sombra —un valor grande es igual a una sombra borrosa—.
-- El cuarto valor asigna el color base de la sombra.
+- El primer valor en píxeles establece el **desplazamiento horizontal** de la sombra respecto al texto: cuánto se desplaza hacia el lado.
+- El segundo valor en píxeles establece el **desplazamiento vertical** de la sombra respecto al texto: cuánto se desplaza hacia abajo.
+- El tercer valor en píxeles establece el **radio de desenfoque** de la sombra. Un valor mayor produce una sombra más difuminada.
+- El cuarto valor establece el color base de la sombra.
 
-Una vez más, trata de experimentar con diferentes valores para ver cómo resulta.
+## Centrar la imagen
 
-### Centrar la imagen
+Por último, inserta esta regla:
 
 ```css
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 ```
 
-Finalmente, centra la imagen para hacer que luzca mejor. Puedes usar nuevamente el truco de `margin: 0 auto` que usaste antes para `body`, pero existen diferencias que requieren que hagas algo más para que el código CSS funcione.
+A continuación, centramos la imagen para que se vea mejor. Podemos usar el mismo truco de `margin: 0 auto` que usamos para el cuerpo, pero hay diferencias que exigen un ajuste adicional para que el CSS funcione.
 
-El elemento {{htmlelement("body")}} es un elemento en nivel de bloque (**block-level**), lo que significa que tomará espacio en la página y que puede tener otros valores de espacio aplicables como margen. Las imágenes, por otra parte, son elementos **inline**, lo que quiere decir que no puedes aplicarles márgenes, debes dar a la imagen un comportamiento de _block-level_ usando `display: block;`.
+El elemento {{htmlelement("body")}} es un elemento de **bloque**, lo que significa que ocupa espacio en la página y admite márgenes, relleno y otras propiedades de caja. En cambio, los elementos {{htmlelement("img")}} (imagen) son elementos **en línea**: de forma predeterminada, no admiten los valores de margen igual que los elementos de bloque. Para que el truco del margen automático funcione en esta imagen, tenemos que darle un comportamiento de bloque con `display: block;`.
+
+Por último, establecemos la propiedad {{cssxref("max-width")}} en `100%` para asegurarnos de que, si la imagen es más grande que el `width` establecido en el cuerpo (600 píxeles), se limite a `600px` y no se estire más.
 
 > [!NOTE]
-> Las instrucciones anteriores asumen que estás usando una imagen más pequeña que el ancho establecido en `body` (600 píxeles). Si tu imagen es más grande, desbordará el cuerpo, derramándose en el resto de la página. Para solucionar esto, puedes hacer lo siguiente: 1) reducir el ancho de la imagen usando un [editor gráfico](https://es.wikipedia.org/wiki/Editor_de_gráficos_rasterizados), o 2) usar CSS para dimensionar la imagen estableciendo la propiedad {{cssxref("width")}} en el elemento `<img>` con un valor menor.
-
-> [!NOTE]
-> No te preocupes si aún no entiendes `display: block;` y la diferencia entre un elemento de bloque y un elemento _inline_. Lo entenderás en tanto estudies CSS a profundidad. Puedes encontrar más en cuanto a los diferentes valores disponibles para _display_ en la [página de referencia de display](/es/docs/Web/CSS/Reference/Properties/display).
+> No te preocupes demasiado si no entiendes del todo `display: block;` y las diferencias entre un elemento de bloque y uno en línea, o `max-width: 100%;`. Tendrán más sentido a medida que sigas estudiando CSS.
 
 ## Conclusión
 
-Si has seguido las instrucciones de esta publicación, deberías terminar con una página que luce algo así (también puedes [ver nuestra versión aquí](https://mdn.github.io/beginner-html-site-styled/)):
+Si has seguido todas las instrucciones de este artículo, deberías tener una página parecida a esta:
 
-![El logo de Mozilla centrado con título y párrafos. Ahora se ve muy bien de estilo, con un fondo azul para toda la página y un fondo naranja para la franja de contenido principal centrada.](website-screenshot-final.png)
+![Un logotipo de Mozilla centrado, y un encabezado y párrafos. Ahora tiene un estilo atractivo, con un fondo azul para toda la página y un fondo naranja para la franja central de contenido principal.](website-screenshot-final.png)
 
-Si te atoraste, puedes comparar tu trabajo con el [código del ejemplo finalizado en GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
+Puedes [ver nuestra versión aquí](https://mdn.github.io/beginner-html-site-styled/). Si te quedas atascado, siempre puedes comparar tu trabajo con nuestro [código de ejemplo terminado en GitHub](https://github.com/mdn/beginner-html-site-styled/blob/main/styles/style.css).
 
-Aquí, solo has arañado la superficie de CSS. Si quieres encontrar más, puedes ir a la [página de aprendizaje de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
+En este artículo apenas hemos arañado la superficie de CSS. Aprenderás mucho más en nuestro módulo principal [Fundamentos de estilo con CSS](/es/docs/Learn_web_development/Core/Styling_basics), más adelante en el curso.
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity","Learn_web_development/Getting_started/Your_first_website")}}
+## Véase también
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#enlaces_externos_o_embebidos)</sup>
+  - : El curso _Learn HTML and CSS_ de [Scrimba](https://scrimba.com?via=mdn) te enseña HTML y CSS construyendo y desplegando cinco proyectos geniales, con lecciones y desafíos interactivos divertidos impartidos por profesores expertos.
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

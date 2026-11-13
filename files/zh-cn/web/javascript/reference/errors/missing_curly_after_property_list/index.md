@@ -1,46 +1,51 @@
 ---
 title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-## 信息
+JavaScript 异常 **`missing } after property list`** 会在[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)语法某处出错时发生。实际上可能是少了花括号，也可能是少了逗号。
+
+## 错误信息
 
 ```plain
-SyntaxError: missing } after property list
+SyntaxError: missing } after property list (Firefox)
+SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```
 
 ## 错误类型
 
 {{jsxref("SyntaxError")}}
 
-## 哪里出错了？
+## 什么地方出错了？
 
-在[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的时候语法出错了。可能是遗漏了一个大括号，也可能是遗漏了逗号。还要检查是否以正确的顺序关闭了大括号或括号。缩进或格式化代码也许可以更好帮助你看清这些芜杂的。
+[对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)语法某处出错了。实际上可能是少了花括号，但也可能是少了逗号。另外请检查右花括号或圆括号的顺序是否正确。把代码缩进或格式化得更整齐一些，也有助于看清结构。
 
 ## 示例
 
-### 遗漏的逗号
+### 遗漏逗号
 
-很多情况下，对象初始值代码会中缺少逗号：
+对象初始化器代码里常常少了一个逗号：
 
-```js example-bad
-var obj = {
+```js-nolint example-bad
+const obj = {
   a: 1,
   b: { myProp: 2 }
   c: 3
 };
 ```
 
-正确的是：
+正确写法是：
 
 ```js example-good
-var obj = {
+const obj = {
   a: 1,
   b: { myProp: 2 },
   c: 3,
 };
 ```
 
-## 相关
+## 参见
 
-- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [对象初始化器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)

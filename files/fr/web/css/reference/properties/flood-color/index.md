@@ -3,7 +3,7 @@ title: Propriété CSS `flood-color`
 short-title: flood-color
 slug: Web/CSS/Reference/Properties/flood-color
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flood-color`** définit la couleur de la sous-région primitive du filtre en cours dans les éléments SVG {{SVGElement("feFlood")}} et {{SVGElement("feDropShadow")}} à l'intérieur d'un {{SVGElement("filter")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("flood-color")}} de l'élément.
@@ -29,8 +29,10 @@ flood-color: unset;
 
 ### Valeurs
 
-- {{CSSxRef("color_value", "&lt;color>")}}
-  - : La couleur du remplissage. Cela peut être n'importe quelle valeur CSS {{CSSxRef("color_value", "&lt;color>")}} valide.
+Cette propriété est définie comme une seule valeur `<color>`&nbsp;:
+
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur du remplissage. Cela peut être n'importe quelle valeur CSS {{CSSxRef("&lt;color&gt;")}} valide.
 
 ## Définition formelle
 
@@ -48,7 +50,7 @@ Cet exemple montre le cas d'utilisation basique de `flood-color`, et comment la 
 
 #### HTML
 
-Nous avons un SVG avec deux éléments {{SVGElement("filter")}}, chacun contenant un enfant {{SVGElement("feFlood")}}. Chaque élément `<feFlood>` inclut l'attribut SVG `flood-color` qui définit la couleur du remplissage à `seagreen`. Nous avons inclus deux éléments {{SVGElement("rect")}} avec un attribut de filtre&nbsp;; c'est là que les filtres seront affichés.
+Nous avons un SVG avec deux éléments {{SVGElement("filter")}}, chacun contenant un enfant {{SVGElement("feFlood")}}. Chaque élément `<feFlood>` inclut l'attribut SVG `flood-color` qui définit la couleur du remplissage à `seagreen`. Nous avons inclus deux éléments {{SVGElement("rect")}} avec un attribut de filtre&nbsp;; c'est là que les filtres sont affichés.
 
 ```html
 <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +97,7 @@ Nous appliquons ensuite différentes valeurs de couleur de remplissage aux élé
 
 {{EmbedLiveSample("Définir la couleur du remplissage d'un filtre", 300, 220)}}
 
-Les attributs définissaient les carrés en vert marin, mais ces valeurs ont été remplacées par les valeurs CSS `flood-color`.
+Les attributs définissent les carrés en vert marin, mais ces valeurs ont été remplacées par les valeurs CSS `flood-color`.
 
 ## Spécifications
 

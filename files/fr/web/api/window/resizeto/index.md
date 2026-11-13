@@ -3,10 +3,10 @@ title: "Window : méthode resizeTo()"
 short-title: resizeTo()
 slug: Web/API/Window/resizeTo
 l10n:
-  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La méthode **`resizeTo()`** de l'interface {{DOMxRef("Window")}} redimensionne dynamiquement la fenêtre.
 
@@ -49,8 +49,8 @@ function quart() {
 Note&nbsp;: Il n'est pas possible de redimensionner une fenêtre ou un onglet qui n'a pas été créé par **`window.open()`**. Il n'est également pas possible de redimensionner lorsque la fenêtre contient plusieurs onglets.
 
 > [!NOTE]
-> Cette fonction pourrait ne pas redimensionner la fenêtre de manière synchrone.
-> Dans certains environnements (comme les mobiles), elle pourrait ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.
+> Cette fonction peut ne pas redimensionner la fenêtre de manière synchrone.
+> Dans certains environnements (comme les mobiles), elle peut ne pas redimensionner la fenêtre du tout. Vous pouvez écouter l'évènement {{DOMxRef("Window/resize_event", "resize")}} pour voir si/quand la fenêtre a été redimensionnée.
 
 ## Voir aussi
 

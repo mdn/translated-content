@@ -3,7 +3,7 @@ title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 La méthode **`CustomEvent.initCustomEvent()`** initialise un objet `CustomEvent`. Si l'évènement a déjà été distribué, cette méthode ne change rien.
 

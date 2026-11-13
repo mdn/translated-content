@@ -104,5 +104,5 @@ rtf.formatToParts(100, "day");
 ## Voir aussi
 
 - [Une prothèse d'émulation pour `Intl.RelativeTimeFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}
 - [`Intl.RelativeTimeFormat` <sup>(angl.)</sup>](https://v8.dev/features/intl-relativetimeformat) sur v8.dev (2018)

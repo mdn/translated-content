@@ -3,7 +3,7 @@ title: "Testez vos compétences : Audio et vidéo"
 short-title: "Test : Audio et vidéo"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 l10n:
-  sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
@@ -89,7 +89,7 @@ Pour compléter cette tâche&nbsp;:
 3. Informez le navigateur à l'avance des formats vidéo vers lesquels les sources pointent, afin qu'il puisse faire un choix éclairé sur celui à télécharger en premier.
 4. Donnez à la balise `<video>` une largeur et une hauteur égales à sa taille intrinsèque (320 par 240 pixels).
 5. Mettez la vidéo en sourdine par défaut.
-6. Affichez les pistes de texte contenues dans le dossier `media`, dans un fichier appelé `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt`, lorsque la vidéo est en cours de lecture. Vous devez explicitement définir le type comme sous-titres et la langue des sous-titres en anglais.
+6. Affichez les pistes de texte contenues dans le fichier `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt` lorsque la vidéo est en cours de lecture. Vous devez explicitement définir le type comme sous-titres et la langue des sous-titres en anglais.
 7. Assurez-vous que les lecteurs peuvent identifier la langue des sous-titres lorsqu'ils utilisent les contrôles par défaut.
 
 Le point de départ de la tâche ressemble à ceci&nbsp;:

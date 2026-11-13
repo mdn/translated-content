@@ -108,5 +108,5 @@ formatOrdinals(103); // '103rd'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.PluralRules")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl.PluralRules")}}
+- L'objet natif {{JSxRef("Intl")}}

@@ -3,14 +3,14 @@ title: "Window : propriété locationbar"
 short-title: locationbar
 slug: Web/API/Window/locationbar
 l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`locationbar`** de l'interface {{DOMxRef("Window")}} retourne l'objet `locationbar`.
 
-Ceci fait partie d'un groupe de propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui représentait autrefois si une partie particulière de l'interface utilisateur d'un navigateur web était visible ou non.
+Ceci fait partie d'un groupe de propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui représente autrefois si une partie particulière de l'interface utilisateur d'un navigateur web est visible ou non.
 
 Pour des raisons de confidentialité et d'interopérabilité, la valeur de la propriété `visible` est maintenant `false` si cette `Window` est une fenêtre contextuelle, et `true` sinon.
 

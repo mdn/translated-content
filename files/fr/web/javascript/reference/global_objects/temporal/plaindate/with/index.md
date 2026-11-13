@@ -71,7 +71,7 @@ Pour plus d'exemples, consultez la documentation des propriétés individuelles 
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - La méthode {{JSxRef("Temporal/PlainDate/withCalendar", "Temporal.PlainDate.prototype.withCalendar()")}}
 - La méthode statique {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}

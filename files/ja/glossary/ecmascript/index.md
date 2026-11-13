@@ -1,18 +1,13 @@
 ---
 title: ECMAScript
 slug: Glossary/ECMAScript
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**ECMAScript** は {{glossary("JavaScript")}} のベースとなっているスクリプト言語仕様です。[Ecma International](https://ecma-international.org/) が ECMAScript の標準化を担当しています。
 
-**ECMAScript** は {{glossary("JavaScript")}} のベースとなっているスクリプト言語仕様です。[Ecma International](https://www.ecma-international.org) が ECMAScript の標準化を担当しています。
+## 関連情報
 
-## 詳細情報
-
-### 基礎知識
-
-- Wikipedia 上の記事「[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript)」
-
-### 技術リファレンス
-
-- [ECMAScript](http://www.ecmascript.org/)
+- [ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript) - ウィキペディア
+- [ECMAScript](https://ecma-international.org/publications-and-standards/standards/ecma-262/)<sup>(英語)</sup>

@@ -3,10 +3,10 @@ title: Propriété CSS `text-align`
 short-title: text-align
 slug: Web/CSS/Reference/Properties/text-align
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`text-align`** définit l'alignement horizontal du contenu de niveau en ligne à l'intérieur d'un élément de bloc ou d'une boîte de cellule de tableau. Cela signifie qu'elle fonctionne comme {{CSSxRef("vertical-align")}}, mais dans la direction horizontale.
+La propriété [CSS](/fr/docs/Web/CSS) **`text-align`** définit l'alignement horizontal du contenu de niveau en incise (<i lang="en">inline</i> en anglais) à l'intérieur d'un élément de bloc ou d'une boîte de cellule de tableau. Cela signifie qu'elle fonctionne comme {{CSSxRef("vertical-align")}}, mais dans la direction horizontale.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: text-align")}}
 
@@ -76,22 +76,22 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-La propriété `text-align` peut être définie grâce à l'un des mots-clés de la liste qui suit.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `start`
   - : Identique à `left` si la direction est de gauche à droite et à `right` si la direction est de droite à gauche.
 - `end`
   - : Identique à `right` si la direction est de gauche à droite et à `left` si la direction est de droite à gauche.
 - `left`
-  - : Les contenus en ligne sont alignés sur le bord gauche de la boîte de ligne.
+  - : Les contenus en incise sont alignés sur le bord gauche de la boîte de ligne.
 - `right`
-  - : Les contenus en ligne sont alignés sur le bord droit de la boîte de ligne.
+  - : Les contenus en incise sont alignés sur le bord droit de la boîte de ligne.
 - `center`
-  - : Les contenus en ligne sont centrés horizontalement dans la boîte de ligne.
+  - : Les contenus en incise sont centrés horizontalement dans la boîte de ligne.
 - `justify`
-  - : Les contenus en ligne sont justifiés. Les espaces sont répartis pour que les bords gauche et droit du contenu soient alignés avec les bords gauche et droit de la boîte de ligne, sauf pour la dernière ligne.
+  - : Les contenus en incise sont justifiés. Les espaces sont répartis pour que les bords gauche et droit du contenu soient alignés avec les bords gauche et droit de la boîte de ligne, sauf pour la dernière ligne.
 - `match-parent`
   - : Semblable à `inherit`, mais les valeurs `start` et `end` sont calculées selon la propriété {{CSSxRef("direction")}} du parent et sont remplacées par la valeur `left` ou `right` appropriée.
 

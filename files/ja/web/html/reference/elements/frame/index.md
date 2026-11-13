@@ -1,12 +1,10 @@
 ---
-title: HTML `<frame>` フレーム要素
+title: "`<frame>` フレーム要素"
 short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
-
-{{Deprecated_Header}}
 
 **`<frame>`** は [HTML](/ja/docs/Web/HTML) の要素で、別の HTML 文書を表示できる特定の領域を定義します。 frame 要素は {{HTMLElement("frameset")}} の内部で使用してください。
 

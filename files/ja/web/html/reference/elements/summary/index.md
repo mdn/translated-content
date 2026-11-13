@@ -1,5 +1,5 @@
 ---
-title: HTML `<summary>` 概要明示要素
+title: "`<summary>` 概要明示要素"
 short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
 l10n:

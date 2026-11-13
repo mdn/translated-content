@@ -3,7 +3,7 @@ title: Fonction CSS `blur()`
 short-title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: cff28ac91efd68d0809779c81902bd080f614a1d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`blur()`** permet d'appliquer [un flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien) sur l'image d'entrée. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -45,7 +45,7 @@ blur(1.17rem)  /* Flou avec un rayon de 1.17rem */
 ### Paramètres
 
 - {{CSSxRef("length")}} {{Optional_Inline}}
-  - : Définit le rayon du flou. Il correspond à la valeur de l'écart-type de la fonction gaussienne, c'est-à-dire le nombre de pixels de l'écran qui se mélangent entre eux. Plus la valeur est grande, plus le flou est prononcé. Une valeur de `0` laisse l'entrée inchangée. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `0`. Les valeurs en pourcentage ne sont pas valides. La valeur par défaut est `0`.
+  - : Définit le rayon du flou. Il correspond à la valeur de l'écart-type de la fonction gaussienne, c'est-à-dire le nombre de pixels de l'écran qui se mélangent entre eux. Plus la valeur est grande, plus le flou est prononcé. Une valeur de `0` laisse l'entrée inchangée. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `0`. Les valeurs en pourcentage et les valeurs négatives ne sont pas valides. La valeur par défaut est `0`.
 
 ## Filtre SVG
 
@@ -118,7 +118,7 @@ svg:not([height]) {
         <img
           class="filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
       <td>
         <svg id="svg" height="220" width="220" overflow="visible">
@@ -134,7 +134,7 @@ svg:not([height]) {
       <td>
         <img
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-          alt="Pride flag" />
+          alt="Drapeau des fiertés" />
       </td>
     </tr>
   </tbody>

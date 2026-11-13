@@ -1,11 +1,12 @@
 ---
-title: "CSP: script-src"
+title: "Content-Security-Policy: script-src ディレクティブ"
+short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)のようなものも含まれます。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の有効なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)なども含まれます。
 
 <table class="properties">
   <tbody>
@@ -58,8 +59,8 @@ Content-Security-Policy: script-src https://example.com/
 
 なお、インラインのイベントハンドラーも同様にブロックされます。
 
-```html
-<button id="btn" onclick="doSomething()"></button>
+```html-nolint
+<button id="btn" onclick="doSomething()">ここをクリック</button>
 ```
 
 これを {{domxref("EventTarget.addEventListener", "addEventListener")}} の呼び出しに置き換えてください。
@@ -145,8 +146,8 @@ Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
 すべてのインラインスクリプトを許可することは、セキュリティ上のリスクがあると考えられるので、代わりに nonce-source または hash-source を使用することが推奨されます。
-nonce-source を使用してインラインスクリプトとスタイル設定を許可するには、（暗号的に安全なランダムトークン生成器を使用して）ランダムなノンス値を生成し、ポリシーに記載する必要があります。
-これにはメモが必要ですが、このノンス値は HTTP リクエストごとに一意である必要があるため、動的に生成する必要があります。
+nonce-source を使用してインラインスクリプトとスタイル設定を許可するには、（暗号的に安全なランダムトークン生成器を使用して）ランダムな{{Glossary("Nonce", "ノンス")}}値を生成し、ポリシーに含める必要があります。
+これは重要なことですが、このノンス値は HTTP リクエストごとに一意である必要があるため、動的に生成する必要があります。
 
 ```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'

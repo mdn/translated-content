@@ -16,7 +16,7 @@ var myFile = new File(bits, name[, options]);
 ### 參數
 
 - _bits_
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, or {{jsxref("String")}} objects — 或是由這些物件組成的集合。這是以 UTF-8 編碼的檔案內容。
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{domxref("Blob")}}, or {{jsxref("String")}} objects — 或是由這些物件組成的集合。這是以 UTF-8 編碼的檔案內容。
 - _name_
   - : 檔案名稱或檔案的路徑（{{jsxref("String")}}）。
 - _options_ {{optional_inline}}

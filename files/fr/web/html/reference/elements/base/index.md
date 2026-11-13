@@ -23,7 +23,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Les URL absolues et relatives sont autorisées.
     Les URL [`data:`](/fr/docs/Web/URI/Reference/Schemes/data) et [`javascript:`](/fr/docs/Web/URI/Reference/Schemes/javascript) ne sont pas autorisées.
 - `target`
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du {{Glossary("browsing context", "contexte de navigation")}} par défaut pour afficher les résultats de la navigation à partir des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("form")}} sans attribut `target` explicite. Les mots-clés suivants ont des significations particulières&nbsp;:
+  - : Un **mot-clé** ou un **nom défini par l'auteur·ice** du {{Glossary("browsing context", "contexte de navigation")}} par défaut pour afficher les résultats de la navigation à partir des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("form")}} sans attribut `target` explicite. Les mots-clés suivants ont des significations particulières&nbsp;:
     - `_self` (par défaut)&nbsp;: Affiche le résultat dans le contexte de navigation courant.
     - `_blank`&nbsp;: Affiche le résultat dans un nouveau contexte de navigation sans nom.
     - `_parent`&nbsp;: Affiche le résultat dans le contexte de navigation parent du contexte courant, si la page courante est dans un cadre. S'il n'y a pas de parent, agit comme `_self`.

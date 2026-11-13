@@ -6,9 +6,9 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Forwarded`** contient des informations qui peuvent être ajoutées par des [serveurs mandataires inverses](/fr/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling) (équilibreurs de charge, CDN, etc.) et qui seraient autrement modifiées ou perdues lorsque des serveurs mandataires sont impliqués dans le chemin de la requête.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Forwarded`** contient des informations qui peuvent être ajoutées par des [serveurs mandataires inverses](/fr/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling) (équilibreurs de charge, CDN, etc.) et qui sont autrement modifiées ou perdues lorsque des serveurs mandataires sont impliqués dans le chemin de la requête.
 
-Par exemple, si un client se connecte à un serveur web via un proxy HTTP (ou un équilibreur de charge), les journaux du serveur ne contiendront que l'adresse IP, l'adresse hôte et le protocole du proxy&nbsp;; cet en-tête peut être utilisé pour identifier l'adresse IP, l'hôte et le protocole de la requête d'origine.
+Par exemple, si un client se connecte à un serveur web par un mandataire HTTP (ou un équilibreur de charge), les journaux du serveur ne contiennent que l'adresse IP, l'adresse hôte et le protocole du mandataire&nbsp;; cet en-tête peut être utilisé pour identifier l'adresse IP, l'hôte et le protocole de la requête d'origine.
 L'en-tête est optionnel et peut être ajouté, modifié ou supprimé par n'importe quel serveur mandataire sur le chemin vers le serveur.
 
 Cet en-tête est utilisé pour le débogage, les statistiques et la génération de contenu dépendant de la localisation.
@@ -98,4 +98,4 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 - L'en-tête {{HTTPHeader("X-Forwarded-For")}}
 - L'en-tête {{HTTPHeader("X-Forwarded-Host")}}
 - L'en-tête {{HTTPHeader("X-Forwarded-Proto")}}
-- L'en-tête {{HTTPHeader("Via")}} — fournit des informations sur le proxy lui-même, et non sur le client qui s'y connecte.
+- L'en-tête {{HTTPHeader("Via")}} — fournit des informations sur le mandataire lui-même, et non sur le client qui s'y connecte.

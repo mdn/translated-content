@@ -18,7 +18,11 @@ input:focus {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:focus {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

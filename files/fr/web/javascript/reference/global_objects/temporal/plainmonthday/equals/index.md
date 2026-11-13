@@ -52,4 +52,4 @@ console.log(md1.equals(md4)); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}

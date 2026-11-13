@@ -3,12 +3,12 @@ title: "Window : évènement blur"
 short-title: blur
 slug: Web/API/Window/blur_event
 l10n:
-  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
+  sourceCommit: 8b77a013c518ef1b62534a8446a60732d582a24b
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement **`blur`** est déclenché lorsqu'un élément perd la sélection.
+L'évènement **`blur`** est déclenché lorsque la fenêtre a perdu la sélection, par exemple lorsque l'utilisateur·ice déplace la sélection de la page vers la barre d'adresse. La sélection peut être sur la zone d'affichage du document ou sur un élément à l'intérieur de celle-ci.
 
 L'opposé de `blur` est {{DOMxRef("Window/focus_event", "focus")}}.
 
@@ -29,13 +29,6 @@ onblur = (event) => { }
 Un {{DOMxRef("FocusEvent")}}. Hérite de {{DOMxRef("UIEvent")}} et {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite aussi des propriétés de son parent {{DOMxRef("UIEvent")}}, et indirectement de {{DOMxRef("Event")}}._
-
-- {{DOMxRef("FocusEvent.relatedTarget")}}
-  - : Un {{DOMxRef("EventTarget")}} représentant une cible secondaire pour cet évènement. Dans certains cas (comme lors d'un passage par tabulation dans ou hors d'une page), cette propriété peut être définie sur `null` pour des raisons de sécurité.
 
 ## Exemples
 
@@ -89,8 +82,6 @@ window.addEventListener("focus", play);
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-La valeur de {{DOMxRef("Document.activeElement")}} varie selon les navigateurs pendant le traitement de cet évènement ([bogue Firefox 452307 <sup>(angl.)</sup>](https://bugzil.la/452307))&nbsp;: IE10 la définit sur l'élément qui recevra la sélection, tandis que Firefox et Chrome la définissent souvent sur le `body` du document.
 
 ## Voir aussi
 

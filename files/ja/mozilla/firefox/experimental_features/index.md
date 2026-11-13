@@ -3,17 +3,17 @@ title: Firefox における実験的機能
 short-title: 実験的機能
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: 97a6738de30dbb1072346dca78f24dca67da9eca
+  sourceCommit: 3e280ba0985e16f5cc48136b3c812ec506ac9735
 ---
 
 このページには、Firefox の実験的機能および部分的に実装されている機能、および開発中または提案中のウェブプラットフォーム標準が記載されています。
-以下の各項目には、その機能が含まれているビルド（Nightly、Beta、Developer Edition、Release）、その機能が既定で有効になっているかどうか、およびその機能を有効化または設定するために使用できる**環境設定**の名前に関する情報が記載されています。
+以下の各項目には、その機能が含まれているビルド（Nightly、Beta、Developer Edition、Release）、その機能がデフォルトで有効になっているかどうか、およびその機能を有効化または設定するために使用できる**環境設定**の名前に関する情報が記載されています。
 それぞれの機能の説明には、その機能を実装または有効にする [Bugzilla のバグ](https://bugzilla.mozilla.org)へのリンクも記載されています。
 この情報により、実験的な機能を試して、正式にリリースされる前にフィードバックを提供することができます。
 
-ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、既定で有効になっています。
+ライフサイクルの観点では、新しい機能は通常、 [Nightly](https://www.firefox.com/ja/channel/desktop/#nightly) で最初に現れます。ここでは、早期のフィードバックや検査のために、多くの場合、デフォルトで有効になっています。
 大きな問題が見当たらない場合、 [Beta](https://www.firefox.com/ja/channel/desktop/#beta) および [Developer Edition](https://www.firefox.com/ja/developer/) のプレリリースビルドに含められます。最後に、承認された機能は、 [stable Release](https://www.firefox.com/ja/) チャネルで提供されます。
-リリースビルドにおいて既定で有効化された機能は、もはや実験的なものではないので、このページから除去されます。
+リリースビルドにおいてデフォルトで有効化された機能は、もはや実験的なものではないので、このページから除去されます。
 
 これらの機能を有効にするには、Firefox のアドレスバーに `about:config` と入力し、関連付けられた**環境設定**を検索してその値を変更します。通常、この値は `true` と `false` のどちらかです。
 機能によっては、変更を有効にするためにブラウザーを再起動する必要がある場合があります。
@@ -25,12 +25,12 @@ Firefox の環境設定の管理に関する詳細については、[Firefox の
 
 `input type="search"` のレイアウトが更新されました。これにより、何らかの入力を始めたときに、他のブラウザーの実装と同様にクリアアイコンが現れるようになります。 (詳しくは [Firefox バグ 558594](https://bugzil.la/558594) を参照してください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 81                   | No               |
-| Developer Edition  | 81                   | No               |
-| Beta               | 81                   | No               |
-| Release            | 81                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 81             | No               |
+| Developer Edition  | 81             | No               |
+| Beta               | 81             | No               |
+| Release            | 81             | No               |
 
 - `layout.forms.input-type-search.enabled`
   - : 有効にするには `true` に設定してください。
@@ -39,12 +39,12 @@ Firefox の環境設定の管理に関する詳細については、[Firefox の
 
 HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([Firefox バグ 502258](https://bugzil.la/502258))。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 96                   | No               |
-| Developer Edition  | 96                   | No               |
-| Beta               | 96                   | No               |
-| Release            | 96                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 96             | No               |
+| Developer Edition  | 96             | No               |
+| Beta               | 96             | No               |
+| Release            | 96             | No               |
 
 - `layout.forms.reveal-password-button.enabled`
   - : 有効にするには `true` に設定してください。
@@ -53,12 +53,12 @@ HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HT
 
 HTML の [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) および [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time) 要素が時刻ピッカーに対応しました。 ([Firefox バグ 1726108](https://bugzil.la/1726108))
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 144                  | No               |
-| Developer Edition  | 144                  | No               |
-| Beta               | 144                  | No               |
-| Release            | 144                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 144            | No               |
+| Developer Edition  | 144            | No               |
+| Beta               | 144            | No               |
+| Release            | 144            | No               |
 
 - `dom.forms.datetime.timepicker`
   - : 有効にするには `true` に設定してください。
@@ -67,28 +67,87 @@ HTML の [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/
 
 HTML の [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) 要素は [`alpha`](/ja/docs/Web/HTML/Reference/Elements/input/color#alpha) と [`colorspace`](/ja/docs/Web/HTML/Reference/Elements/input/color#colorspace) 属性に対応しました ([Firefox バグ 1919718](https://bugzil.la/1919718))。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 149                  | Yes              |
-| Developer Edition  | -                    | -                |
-| Beta               | -                    | -                |
-| Release            | -                    | -                |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 149            | Yes              |
+| Developer Edition  | -              | -                |
+| Beta               | -              | -                |
+| Release            | -              | -                |
 
 - `dom.forms.html_color_picker.enabled`
   - : 有効にするには `true` に設定してください。
 
+### `headingoffset` および `headingreset` 属性
+
+[`headingoffset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingoffset) グローバル属性は、設定された要素内の[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)の計算された見出しレベルを上昇させるため、コンポーネントはページ内のどこに表示されても同一の見出しマークアップを使用することができます。[`headingreset`](/ja/docs/Web/HTML/Reference/Global_attributes/headingreset) 属性は、設定された要素内の見出しに対して、親要素のオフセットが適用されるのを防ぎます（[Firefox バグ 1974383](https://bugzil.la/1974383)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 153            | No               |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
+
+- `dom.headingoffset.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `<script type="speculationrules">`
+
+[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) は、リンクに対するユーザーの行動などの要因に基づいて、どのリソースが先読みされるかまたは事前レンダリングされるかを指定することで、今後のナビゲーションのパフォーマンスを改善する仕組みを提供します。
+
+当初の対応では、[`prefetch`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#prefetch) のみが含まれており、リソースは [`urls`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#urls) リストで指定され、[`immediate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#immediate) の即時実行モードが適用されていました。これには、{{domxref("PerformanceResourceTiming.deliveryType")}} プロパティの `navigational-prefetch` 値に対する対応も含まれます（[Firefox バグ 2041381](https://bugzil.la/2041381)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
+
+- `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
+#### 中間の積極性
+
+Firefox 158 では、[`moderate`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules#moderate) という積極性への対応が追加されました。これにより、ユーザーがリンクにカーソルを短時間（デフォルトで 200 ミリ秒）合わせると、該当する先読みが開始されます。([Firefox バグ 2061013](https://bugzil.la/2061013))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `dom.speculation_rules.enabled`
+  - : 有効にするには `true` に設定してください。
+
 ## CSS
+
+### `circle()` と `ellipse()` で `farthest-corner` と `closest-corner` キーワードが使用可能に
+
+`farthest-corner` および `closest-corner` キーワードが、CSS 基本シェイプの [`ellipse()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/ellipse) および [`circle()`] (/ja/docs/Web/CSS/Reference/Values/basic-shape/circle) 半径値を指定するために使用できるようになりました。
+（詳細については、[Firefox バグ 2037673](https://bugzil.la/2037673) を参照してください。）
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 153            | Yes              |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
+
+- `layout.css.ellipse-corners.enabled`
+  - : 有効にするには `true` に設定してください。
 
 ### 迷子の制御文字を表示するための 16 進ボックス
 
 この機能は、予期せずタブ (`U+0009`)、行送り (`U+000A`)、ページ送り (`U+000C`)、復改 (`U+000D`) 以外の制御文字 (Unicode の Cc カテゴリー) が現れていない場合に 16 進数で表示します。 (詳細は [Firefox バグ 1099557](https://bugzil.la/1099557) を参照してください)。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 43                   | Yes              |
-| Developer Edition  | 43                   | No               |
-| Beta               | 43                   | No               |
-| Release            | 43                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 43             | Yes              |
+| Developer Edition  | 43             | No               |
+| Beta               | 43             | No               |
+| Release            | 43             | No               |
 
 - `layout.css.control-characters.visible`
   - : 有効にするには `true` に設定してください。
@@ -97,12 +156,12 @@ HTML の [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/col
 
 CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インラインレイアウト](https://drafts.csswg.org/css-inline/)仕様書に含まれており、先頭文字の表示方法を dropped, raise, sunken から指定することができます。 (詳細は [Firefox バグ 1223880](https://bugzil.la/1223880) を参照してください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 50                   | No               |
-| Developer Edition  | 50                   | No               |
-| Beta               | 50                   | No               |
-| Release            | 50                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 50             | No               |
+| Developer Edition  | 50             | No               |
+| Beta               | 50             | No               |
+| Release            | 50             | No               |
 
 - `layout.css.initial-letter.enabled`
   - : 有効にするには `true` に設定してください。
@@ -111,38 +170,14 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 [`fit-content()`](/ja/docs/Web/CSS/Reference/Values/fit-content_function) 関数は {{cssxref("width")}} やその他の寸法のプロパティに適用します。この関数は、 CSS グリッドレイアウトのトラックのサイズ調整ですでに十分対応しています。(詳細は [Firefox バグ 1312588](https://bugzil.la/1312588) を参照してください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 91                   | No               |
-| Developer Edition  | 91                   | No               |
-| Beta               | 91                   | No               |
-| Release            | 91                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 91             | No               |
+| Developer Edition  | 91             | No               |
+| Beta               | 91             | No               |
+| Release            | 91             | No               |
 
 - `layout.css.fit-content-function.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### スクロール駆動アニメーション
-
-以前は「スクロールリンクアニメーション」と呼ばれていた[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)は、時間やその他の次元ではなく、スクロールバーのスクロール位置に依存します。
-{{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティ（および {{cssxref('scroll-timeline')}} 一括指定プロパティ）を使用すると、特定の名前付きコンテナー内の特定のスクロールバーを、スクロール駆動アニメーションのソースとして使用できることを指定できます。
-スクロールタイムラインを[アニメーション](/ja/docs/Web/CSS/Guides/Animations)に関連付けするには、 {{cssxref('animation-timeline')}} プロパティを `scroll-timeline-name` で定義した名前の値に設定します。
-
-{{cssxref('scroll-timeline')}} 一括指定プロパティを使用する場合、プロパティ値の順序は {{cssxref('scroll-timeline-name')}} の後に {{cssxref('scroll-timeline-axis')}} を指定する必要があります。
-個別指定プロパティと一括指定プロパティは、設定で両方利用できます。
-あるいは、{{cssxref("animation-timeline/scroll", "scroll()")}} 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
-
-詳細については、[Firefox バグ 1807685](https://bugzil.la/1807685)、[Firefox バグ 1804573](https://bugzil.la/1804573)、[Firefox バグ 1809005](https://bugzil.la/1809005)、[Firefox バグ 1676791](https://bugzil.la/1676791), [Firefox バグ 1754897](https://bugzil.la/1754897)、[Firefox バグ 1817303](https://bugzil.la/1817303)、[Firefox バグ 1737918](https://bugzil.la/1737918) を参照してください。
-
-{{cssxref('timeline-scope')}}、{{cssxref('animation-range-start')}}、{{cssxref('animation-range-end')}} の各プロパティ（および {{cssxref('animation-range')}} 一括指定プロパティ）にはまだ対応していません。詳細については、[Firefox バグ 1676779](https://bugzil.la/1676779) を参照してください。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 136                  | Yes              |
-| Developer Edition  | 110                  | No               |
-| Beta               | 110                  | No               |
-| Release            | 110                  | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### prefers-reduced-transparency メディア特性
@@ -150,12 +185,12 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 CSS の {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}} メディア特性を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
 詳細については、[Firefox バグ 1736914](https://bugzil.la/1736914) をご覧ください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 113                  | No               |
-| Developer Edition  | 113                  | No               |
-| Beta               | 113                  | No               |
-| Release            | 113                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 113            | No               |
+| Developer Edition  | 113            | No               |
+| Beta               | 113            | No               |
+| Release            | 113            | No               |
 
 - `layout.css.prefers-reduced-transparency.enabled`
   - : 有効にするには `true` に設定してください。
@@ -165,46 +200,14 @@ CSS の {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transp
 CSS の {{cssxref("@media/inverted-colors", "inverted-colors")}} メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
 詳しくは [Firefox バグ 1794628](https://bugzil.la/1794628) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 114                  | No               |
-| Developer Edition  | 114                  | No               |
-| Beta               | 114                  | No               |
-| Release            | 114                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 114            | No               |
+| Developer Edition  | 114            | No               |
+| Beta               | 114            | No               |
+| Release            | 114            | No               |
 
 - `layout.css.inverted-colors.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 名前付きビュー進行タイムラインプロパティ
-
-CSS の {{cssxref("view-timeline-name")}} プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
-この名前は `animation-timeline` に代入することができ、これにより、関連付けられた要素は、その祖先のスクロールバーの表示領域内を移動する際にアニメーションします。
-詳しくは [Firefox バグ 1737920](https://bugzil.la/1737920) を参照してください。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 136                  | Yes              |
-| Developer Edition  | 114                  | No               |
-| Beta               | 114                  | No               |
-| Release            | 114                  | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 無名ビュー進行タイムライン関数
-
-CSS の {{cssxref("animation-timeline/view", "view()")}} 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
-この関数は、アニメーションのタイムラインを提供する親要素の軸と、アニメーションの開始位置および開始する可視領域内のインセットを定義します。
-詳しくは ([Firefox バグ 1808410](https://bugzil.la/1808410)) を参照してください。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 136                  | Yes              |
-| Developer Edition  | 114                  | No               |
-| Beta               | 114                  | No               |
-| Release            | 114                  | No               |
-
-- `layout.css.scroll-driven-animations.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### ベンダー接頭辞付き座標変換プロパティ
@@ -220,12 +223,12 @@ CSS の {{cssxref("animation-timeline/view", "view()")}} 関数を使用する�
 - `-moz-transform-origin`
 - `-moz-transform-style`
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 120                  | Yes              |
-| Developer Edition  | 120                  | Yes              |
-| Beta               | 120                  | Yes              |
-| Release            | 120                  | Yes              |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 120            | Yes              |
+| Developer Edition  | 120            | Yes              |
+| Beta               | 120            | Yes              |
+| Release            | 120            | Yes              |
 
 - `layout.css.prefixes.transforms`
   - : 有効にするには `true` に設定してください。
@@ -235,12 +238,12 @@ CSS の {{cssxref("animation-timeline/view", "view()")}} 関数を使用する�
 CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した文字間隔を各文字の両辺に均等に分割します。これは、主に片側に空白が追加される現在の動作とは異なります。この手法により、特に書字方向が混合したテキストで、テキストの間隔を改善することができます。
 （[Firefox バグ 1891446](https://bugzil.la/1891446)）
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 128                  | Yes              |
-| Developer Edition  | 128                  | Yes              |
-| Beta               | 127                  | No               |
-| Release            | 127                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 128            | Yes              |
+| Developer Edition  | 128            | Yes              |
+| Beta               | 127            | No               |
+| Release            | 127            | No               |
 
 - `layout.css.letter-spacing.model`
   - : 有効にするには `true` に設定してください。
@@ -255,23 +258,23 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 擬似要素 `::file-selector-button` は、まだ要素ベースの擬似要素としてマークされていないため、これを検査する方法は現在ありません。
 （[Firefox バグ 1953557](https://bugzil.la/1953557)、[Firefox バグ 1941406](https://bugzil.la/1941406)）
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 138                  | No               |
-| Developer Edition  | 138                  | No               |
-| Beta               | 138                  | No               |
-| Release            | 138                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 138            | No               |
+| Developer Edition  | 138            | No               |
+| Beta               | 138            | No               |
+| Release            | 138            | No               |
 
 ### `:heading` および `:heading()` 擬似クラス
 
 {{cssxref(":heading")}} 擬似クラスを使用すると、個々に対象とする代わりに、すべての[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) をまとめてスタイル設定することができます。{{cssxref(":heading()")}} 擬似クラスを使用すると、見出しレベルに一致する整数のカンマ区切りリストに一致する見出し要素にスタイルを適用することができます。([Firefox バグ 1974386](https://bugzil.la/1974386) & [Firefox バグ 1984310](https://bugzil.la/1984310))。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 142                  | No               |
-| Developer Edition  | 142                  | No               |
-| Beta               | 142                  | No               |
-| Release            | 142                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 142            | No               |
+| Developer Edition  | 142            | No               |
+| Beta               | 142            | No               |
+| Release            | 142            | No               |
 
 - `layout.css.heading-selector.enabled`
   - : 有効にするには `true` に設定してください。
@@ -280,58 +283,30 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 
 {{cssxref("@custom-media")}} CSS アットルールは、長くて複雑なメディアクエリーの別名を定義します。複数の `@media` アットルールで同じハードコードされた `<media-query-list>` を繰り返す代わりに、`@custom-media` アットルールで一度定義し、必要に応じてこのスタイルシート全体で参照できます。([Firefox バグ 1744292](https://bugzil.la/1744292))
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 148                  | No               |
-| Developer Edition  | 148                  | No               |
-| Beta               | 148                  | No               |
-| Release            | 148                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 148            | No               |
+| Developer Edition  | 148            | No               |
+| Beta               | 148            | No               |
+| Release            | 148            | No               |
 
 - `layout.css.custom-media.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### CSS `attr()` 関数における `<attr-type>` 値
-
-CSS {{cssxref("attr")}} 関数は、[`<attr-type>`](/ja/docs/Web/CSS/Reference/Values/attr#attr-type) の値に対応するようになりました。これにより、属性値がどのように CSS 値として構文解析されるかを指定し、[`data-*`](/ja/docs/Web/HTML/How_to/Use_data_attributes) からそれらの値を直接取ることができるようになります。([Firefox バグ 1986631](https://bugzil.la/1986631)、[Firefox バグ 1998245](https://bugzil.la/1998245))
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | Yes              |
-| Developer Edition  | 149                  | No               |
-| Beta               | 149                  | No               |
-| Release            | 149                  | No               |
-
-- `layout.css.attr.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### CSS `appearance` プロパティの `base-select` 値
 
 CSS の {{cssxref("appearance")}} プロパティの [`base-select`](/ja/docs/Web/CSS/Reference/Properties/appearance#base-select) 値は、{{htmlelement("select")}} 要素および {{cssxref("::picker()", "::picker(select)")}} 擬似要素にのみ適用され、これらを自由にスタイル設定できるようにします。現在、`<select>` 要素のスタイル設定のみに対応しています。`::picker(select)` 擬似要素のスタイル設定は、将来のバージョンで追加される予定です。この機能は、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)に関する取り組みの一環です。この機能を使用するには、2つの設定を有効にする必要があります。([Firefox バグ 1974787](https://bugzil.la/1974787))。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 149                  | No               |
-| Developer Edition  | 149                  | No               |
-| Beta               | 149                  | No               |
-| Release            | 149                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 149            | No               |
+| Developer Edition  | 149            | No               |
+| Beta               | 149            | No               |
+| Release            | 149            | No               |
 
 - `dom.select.customizable_select.enabled`
   - : 有効にするには `true` に設定してください。
 - `layout.css.appearance-base.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### CSS `attr()` 関数における名前空間属性
-
-CSS {{cssxref("attr")}} 関数は、[名前空間付き属性](/ja/docs/Web/CSS/Reference/Values/attr#名前空間)を受け入れるようになりました。これにより、[XML](/ja/docs/Web/XML) ベースの言語（[SVG](/ja/docs/Web/SVG) など）の要素から属性を取得し、それに応じてスタイルを設定することができます。([Firefox バグ 2014060](https://bugzil.la/2014060)。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 150                  | No               |
-| Developer Edition  | 150                  | No               |
-| Beta               | 150                  | No               |
-| Release            | 150                  | No               |
-
-- `layout.css.attr.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### 段組みのコンテナー内における絶対位置指定要素と印刷
@@ -340,12 +315,12 @@ CSS {{cssxref("attr")}} 関数は、[名前空間付き属性](/ja/docs/Web/CSS/
 これにより、他のブラウザーとの互換性が向上し、テキストの重なりやコンテンツの欠落といったレイアウト上の課題が防止されます。
 ([Firefox バグ 2018797](https://bugzil.la/2018797)).
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 150                  | Yes              |
-| Developer Edition  | 150                  | No               |
-| Beta               | 150                  | No               |
-| Release            | 150                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 150            | Yes              |
+| Developer Edition  | 150            | No               |
+| Beta               | 150            | No               |
+| Release            | 150            | No               |
 
 - `layout.abspos.fragmentainer-aware-positioning.enabled`
   - : 有効にするには `true` に設定してください。
@@ -354,56 +329,100 @@ CSS {{cssxref("attr")}} 関数は、[名前空間付き属性](/ja/docs/Web/CSS/
 
 CSS の [`@container`](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールにおける [`style()`](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー) クエリーが、範囲構文に対応するようになりました。これにより、コンテナーに有効な CSS カスタムプロパティがあるかどうかを確認し、その値を `>`、`<`、`>=`、`<=` などの比較演算子で比較して、その結果に応じて子要素にスタイルを適用できるようになります。（[Firefoxバグ 2024601](https://bugzil.la/2024601)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 151                  | No               |
-| Developer Edition  | 151                  | No               |
-| Beta               | 151                  | No               |
-| Release            | 151                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 151            | No               |
+| Developer Edition  | 151            | No               |
+| Beta               | 151            | No               |
+| Release            | 151            | No               |
 
 - `layout.css.attr.enabled`
   - : 有効にするには `true` に設定してください。
 
-### 入れ子のスクロール可能な領域に関する修正
+### 外部リソースの属性の更新
 
-この実装は、スクロール可能なコンテンツにアクセスできないという問題を修正するために追加されました。スクロールバーが `display: none;` または `width: 0;` に設定されている場合、入れ子にされたスクロール可能な領域のスクロールバーが互いに重なり合うことになり、その結果、一部のコンテンツにアクセスできなくなる可能性があります。ただし、これにより、[`::-webkit-scrollbar`](/ja/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) 擬似要素が実際には未対応であるにもかかわらず、`@supports selector(::-webkit-scrollbar)` のチェックが `true`を 返すことになります。([Firefox バグ 1977511](https://bugzil.la/1977511))。
+CSS の {{cssxref("link-parameters")}} プロパティおよび {{cssxref("param")}} 関数に対応するようになりました。これにより、ユーザーは、CSS の {{cssxref("env")}} 関数で属性が設定されている SVG などの外部リソースの属性を更新することができます。つまり、色やその他の値だけが異なる複数のバリエーションを生成する代わりに、単一の外部リソースを使用することができます（[Firefox バグ 2046153](https://bugzil.la/2046153)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 151                  | Yes              |
-| Developer Edition  | 151                  | No               |
-| Beta               | 151                  | No               |
-| Release            | 151                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 154            | Yes              |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
 
-- `layout.css.fake-webkit-scrollbar.enabled`
+- `layout.css.link-parameters.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `<timeline-range-name>` 値
+### `line-clamp` によるコンテンツの切り詰め
 
-CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} および一括指定プロパティの {{cssxref("animation-range")}} は、[`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Values/timeline-range-name) の値を指定できるようになりました。これらの [`<timeline-range-name>`](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) 値を使用することで、スクロール駆動アニメーションがどの区間内で実行されるかを正確に指定できます。([Firefox バグ 1804775](https://bugzil.la/1804775))。
+CSS の {{cssxref("line-clamp")}} プロパティは、`-webkit-` ベンダー接頭辞を付けなくても動作するようになりましたが、現時点では `no-ellipsis` および `<string>` の値には対応していません。（[Firefox バグ 2042986](https://bugzil.la/2042986)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 151                  | Yes              |
-| Developer Edition  | 151                  | No               |
-| Beta               | 151                  | No               |
-| Release            | 151                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 154            | No               |
+| Developer Edition  | 154            | No               |
+| Beta               | 154            | No               |
+| Release            | 154            | No               |
 
-- `layout.css.scroll-driven-animations.enabled`
+- `layout.css.line-clamp.enabled`
   - : 有効にするには `true` に設定してください。
 
-### `@keyframes` セレクターにおける `<timeline-range-name>` 値
+### `text-decoration-inset` のパーセント値
 
-{{cssxref("@keyframes")}} アットルールは、[`<timeline-range-name>`](/ja/docs/Web/CSS/Reference/Values/timeline-range-name) の値に対応するようになりました。これらの[値](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names)を使用すると、スクロール駆動型アニメーションが行われる範囲を指定できます。（[Firefox バグ 1824875](https://bugzil.la/1824875)）。
+CSS の {{cssxref("text-decoration-inset")}} プロパティは、値としてパーセント値に対応するようになりました。このパーセント値は、{{cssxref("box-decoration-break")}} の値に応じて、装飾ボックスのインラインサイズ、またはそれぞれのボックスフラグメントのインラインサイズに対するインセットのサイズをパーセントで指定します。（[Firefox バグ 2044602](https://bugzil.la/2044602)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | Yes              |
-| Developer Edition  | 152                  | No               |
-| Beta               | 152                  | No               |
-| Release            | 152                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 154            | No               |
+| Developer Edition  | 154            | No               |
+| Beta               | 154            | No               |
+| Release            | 154            | No               |
 
-- `layout.css.scroll-driven-animations.enabled`
+- `layout.css.text-decoration-inset-percentage.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `named-feature()` 対応クエリー
+
+`named-feature()` 関数を {{cssxref("@supports")}} アットルール内で使用すると、他の方法で検出できない構文を持つ機能がブラウザーで対応しているかどうかをテストできます。例えば、`@supports named-feature(anchor-position-follows-transforms)` などです。
+([Firefox バグ 2042977](https://bugzil.la/2042977) および [Firefox バグ 2055354](https://bugzil.la/2055354))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 156            | No               |
+| Developer Edition  | 156            | No               |
+| Beta               | 156            | No               |
+| Release            | 156            | No               |
+
+- `layout.css.anchor-positioning.follows-transforms.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### CSS `random()` 関数
+
+CSS {{cssxref("random")}} 関数は、指定された範囲内でランダムな値を生成し、必要に応じて、その範囲内の値をステップサイズごとの間隔に制限することができます。オプションの `<random-key>` 引数は、どの `random()` 関数がランダム値を共有するかを制御します。例えば、要素間やプロパティ間で共有する場合などです（[Firefox バグ 2071165](https://bugzil.la/2071165)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `layout.css.random.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### `corner-shape` プロパティ
+
+{{cssxref("corner-shape")}} 一括指定プロパティおよびそれを構成する個別指定プロパティに、Nightly が対応するようになりました。これらのプロパティを使用すると、{{cssxref("corner-shape-value")}} キーワード値のいずれか、または {{cssxref("superellipse")}} 関数を用いて、角の形状をカスタマイズできます。
+([Firefox バグ 2070927](https://bugzil.la/2070927))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `layout.css.corner-shape.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## SVG
@@ -416,34 +435,45 @@ CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}
 
 この機能を有効にすると、[`href`](/ja/docs/Web/MathML/Reference/Global_attributes/href) グローバル属性は、`<a>` 以外の MathML 要素に対してハイパーリンクを作成しなくなり、Firefox は [MathML Core 仕様書](https://w3c.github.io/mathml-core/# the-a-element)に準拠するようになります。同仕様では、`<a>`要素でのみハイパーリンクが定義されています。（[Firefox バグ 2026848](https://bugzil.la/2026848)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 151                  | Yes              |
-| Developer Edition  | 151                  | No               |
-| Beta               | 151                  | No               |
-| Release            | 151                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 151            | Yes              |
+| Developer Edition  | 151            | No               |
+| Beta               | 151            | No               |
+| Release            | 151            | No               |
 
 - `mathml.href_link_on_non_anchor_element.disabled`
   - : 有効にするには `true` に設定してください。
 
-## JavaScript
+### `MathMLAnchorElement` インターフェイスの実装
 
-### TC39 Iterator の includes の提案
+この機能が有効になっている場合、MathML の [`<a>`](/ja/docs/Web/MathML/Reference/Element/a) 要素は、汎用的な [`MathMLElement`](/ja/docs/Web/API/MathMLElement) インターフェイスではなく、[`MathMLAnchorElement`](/ja/docs/Web/API/MathMLAnchorElement) インターフェイスによって DOM 内で正しく表されます。([Firefox バグ 2059312](https://bugzil.la/2059312))。
 
-[`Iterator.prototype.includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) メソッドは、`Iterator` インスタンスが指定された値を生成するかどうかを検証します。
-この比較には、[SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)が使用されます。
-このアルゴリズムは、厳密な等価性 `===` （`-0` と `+0` が等しいとみなされる）と似ていますが、{{jsxref("NaN")}} がそれ自体と等しいとみなされる点で異なります。
-([Firefox バグ 2025779](https://bugzil.la/2025779)).
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 155            | No               |
+| Beta               | 155            | No               |
+| Release            | 155            | No               |
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | No               |
-| Developer Edition  | 152                  | No               |
-| Beta               | 152                  | No               |
-| Release            | 152                  | No               |
-
-- `javascript.options.experimental.iterator_includes`
+- `mathml.a.element.enabled`
   - : 有効にするには `true` に設定してください。
+
+### 新しい `MathMLAnchorElement` プロパティ
+
+{{domxref("MathMLAnchorElement")}} インターフェイスが、{{domxref("MathMLAnchorElement.download", "download")}}、{{domxref("MathMLAnchorElement.ping", "ping")}}、{{domxref("MathMLAnchorElement.rel", "rel")}}、{{domxref("MathMLAnchorElement.relList", "relList")}}、{{domxref("MathMLAnchorElement.referrerPolicy", "referrerPolicy")}} の各プロパティに対応するようになりました。（[Firefox バグ 2064612](https://bugzil.la/2064612)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 159            | Yes              |
+| Developer Edition  | 159            | No               |
+| Beta               | 159            | No               |
+| Release            | 159            | No               |
+
+- `mathml.a.element.enabled`
+  - : 有効にするには `true` に設定してください。
+
+## JavaScript
 
 ### TC39 Intl.Locale の info の提案
 
@@ -451,31 +481,15 @@ CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}
 これには、`Intl.Locale` の "get" で始まるすべてのインスタンスメソッドが含まれます。 — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}} です。
 ([Firefox バグ 1693576](https://bugzil.la/1693576)).
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | No               |
-| Developer Edition  | —                    | —                |
-| Beta               | —                    | —                |
-| Release            | —                    | —                |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 152            | No               |
+| Developer Edition  | —              | —                |
+| Beta               | —              | —                |
+| Release            | —              | —                |
 
 - `javascript.options.experimental.intl_locale_info`
   - : Nightly で有効にするには `true` に設定してください。
-
-### テキストモジュールインポート
-
-`with` 節の [`{ type: "text" }`](/ja/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) を使用すると、モジュールのソースを文字列値としてインポートすることができます。
-レスポンスのメディア種別は無視され、ソースにスクリプトやその他の実行可能コードが含まれている場合でも、コンテンツはテキストとして解釈されます。
-([Firefox バグ 2024854](https://bugzil.la/2024854))。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | No               |
-| Developer Edition  | 152                  | No               |
-| Beta               | 152                  | No               |
-| Release            | 152                  | No               |
-
-- `javascript.options.experimental.import_text`
-  - : 有効にするには `true` に設定してください。
 
 ### 複数のインポートマップ
 
@@ -483,15 +497,63 @@ CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}
 これにより、開発者は JavaScript モジュールの構成や読み込みにおいてより柔軟に対応できるようになります。なぜなら、すべてのモジュールマッピングを事前に把握しておく必要がなくなり、モジュールを読み込む際に単一のインポートマップでそれらを宣言すればよいからです。
 ([Firefox バグ 1916277](https://bugzil.la/1916277))。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 150                  | No               |
-| Developer Edition  | 150                  | No               |
-| Beta               | 150                  | No               |
-| Release            | 150                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 150            | No               |
+| Developer Edition  | 150            | No               |
+| Beta               | 150            | No               |
+| Release            | 150            | No               |
 
 - `dom.multiple_import_maps.enabled`
   - : 有効にするには `true` に設定してください。
+
+### 正規表現におけるバッファー境界のアサーション
+
+[`\A`, `\z`, `\Z` のバッファー境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion)に対応するようになりました。
+`\A` および `\z` を使用すると、入力全体の先頭または末尾に一致することができますが、`\Z` は改行文字を無視して入力の末尾に一致します。
+これらのアサーションは、[`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) フラグの影響を受けません（`^` や `$` とは異なります）。また、[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)で使用できます（`u` または `v` フラグを設定した場合）でのみ使用できます。
+([Firefox バグ 2047706](https://bugzil.la/2047706))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | No               |
+| Developer Edition  | —              | —                |
+| Beta               | —              | —                |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.regexp_buffer_boundaries`
+  - : Nightly で有効にするには `true` に設定してください。
+
+### TC39 `*` デフォルトエクスポートに関する提案
+
+[TC39 `*` デフォルトエクスポートに関する提案](https://github.com/tc39/proposal-export-star-default)では、[`export * from`](/ja/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) 宣言によって、モジュールの名前付きエクスポートとともにデフォルトエクスポートを再エクスポートすることができるようになります。これがなければ、`export * from` はモジュールのデフォルトエクスポートをスキップしてしまいます。
+([Firefox バグ 2065611](https://bugzil.la/2065611))。
+
+なお、この提案はとても初期の段階にあり、変更される可能性があることにご留意ください。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | No               |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.export_star_default`
+  - : 有効にするには `true` に設定してください。
+
+### TC39 によるモジュールの評価の延期に関する提案
+
+[TC39 によるモジュール評価の遅延に関する提案](https://github.com/tc39/proposal-defer-import-eval)では、 [`import defer`](/ja/docs/Web/JavaScript/Reference/Statements/import/defer) 宣言と [`import.defer()`](/ja/docs/Web/JavaScript/Reference/Operators/import/defer) 構文を追加します。この方法でインポートされたモジュールは、その依存関係とともに事前に読み込まれますが、そのコードが実行されるのは、そのエクスポートのいずれかに最初にアクセスされたときのみです。そのため、すぐに必要とされないモジュールによって起動が遅くなることはありません。最上位で `await` を使用するモジュールは、引き続き即座に実行されます。（[Firefox バグ 1952263](https://bugzil.la/1952263)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | No               |
+| Developer Edition  | —              | —                |
+| Beta               | —              | —                |
+| Release            | —              | —                |
+
+- `javascript.options.experimental.defer_import_eval`
+  - : Nightly で有効にするには `true` に設定してください。
 
 ## API
 
@@ -501,51 +563,76 @@ CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}
 なお、Firefox では、レポート本文内に {{domxref("CrashReportContext")}} を指定することには対応していません。
 ([Firefox bug 2036160](https://bugzil.la/2036160)).
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 152                  | Yes              |
-| Developer Edition  | 152                  | No               |
-| Beta               | 152                  | No               |
-| Release            | 152                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 152            | Yes              |
+| Developer Edition  | 152            | No               |
+| Beta               | 152            | No               |
+| Release            | 152            | No               |
 
 - `dom.reporting.crash.enabled`
   - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
 
-### スコープ付きカスタム要素レジストリー
-
-[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) に対応します。
-スコープ付きレジストリーを使用すると、シャドウツリーが独立した {{domxref("CustomElementRegistry")}} を生成でき、その定義はその特定の DOM サブツリーにのみ適用されます。
-これにより、複数のウェブコンポーネントが同じ名前の要素を宣言した場合の競合を避けることができます。
-
-実装内容には次のものがあります。
-
-- `customElementRegistry` プロパティ（{{domxref("Document")}}, {{domxref("Element")}}, {{domxref("ShadowRoot")}}）
-  ([Firefox バグ 2018900](https://bugzil.la/2018900))。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 150                  | No               |
-| Developer Edition  | 150                  | No               |
-| Beta               | 150                  | No               |
-| Release            | 150                  | No               |
-
-- `dom.scoped-custom-element-registries.enabled`
-  - : 有効にするには `true` に設定してください。
-
 ### CSS Typed Object Model Level 1
 
-[CSS Typed OM Level 1](https://drafts.css-houdini.org/css-typed-om/) の実装作業が始まりました。
-例えば、{{domxref("CSSNumericValue")}} インターフェイスの {{domxref("CSSNumericValue/to","to()")}} メソッドは、CSS の数値をある単位から別の単位に変換するために対応しています。
-([Firefox バグ 1278697](https://bugzil.la/1278697)).
+[CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API) は Nightly に実装されています。
+これにより、CSS 値が文字列ではなく型付き JavaScript オブジェクトとして公開されるため、CSS プロパティの操作が簡素化されます。
+([Firefox バグ 1278697](https://bugzil.la/1278697))
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 149                  | No               |
-| Developer Edition  | 149                  | No               |
-| Beta               | 149                  | No               |
-| Release            | 149                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 154            | Yes              |
+| Developer Edition  | 149            | No               |
+| Beta               | 149            | No               |
+| Release            | 149            | No               |
 
 - `layout.css.typed-om.enabled`
+  - : 有効にするには `true` に設定してください。
+
+#### ワーカーおよびワークレットで公開される CSS の数値ファクトリー関数
+
+{{domxref("CSS")}} 名前空間の[数値ファクトリー関数](/ja/docs/Web/API/CSS/factory_functions_static)（例: `CSS.px()`）は、`Window` だけでなく、ワーカーやペイントワークレットでも公開されるようになりました。これらは [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_型付きオブジェクトモデル_API)の一部であるため、Nightly 版以外では、`layout.css.typed-om.enabled` 環境設定を `true` に設定する必要があります。（[Firefoxバグ 2079188](https://bugzil.la/2079188)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 159            | No               |
+| Developer Edition  | 159            | No               |
+| Beta               | 159            | No               |
+| Release            | 159            | No               |
+
+- `layout.css.namespace.exposed-in-workers-and-worklets`
+  - : 有効にするには `true` に設定してください。
+- `layout.css.typed-om.enabled`
+  - : 有効にするには `true` に設定してください（Nightly ではデフォルトで有効）。
+
+### 端末内音声認識
+
+[端末内音声認識](/ja/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#on-device_speech_recognition)が、Nightly 版（デスクトップ版のみ）で対応するようになりました。これにより、クラウドサービスに頼ることなく、ブラウザー上で直接[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) を介して音声認識を行うことができるようになります。
+([Firefox bug 2069803](https://bugzil.la/2069803)).
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `media.webspeech.recognition.enable`
+  - : 有効にするには `true` に設定してください。
+
+### ストリーミングリクエスト本体
+
+{{domxref("ReadableStream")}} をリクエスト本体として設定できるようになりました（例えば、{{domxref("Request.Request", "Request()")}} コンストラクターや {{domxref("Window.fetch()")}} メソッドなどを通じて）。これにより、リクエスト本体全体が利用できるのを待つ必要がなく、アップロードデータを段階的にストリーミングできるようになります。
+([Firefox バグ 1594633](https://bugzil.la/1594633))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 158            | Yes              |
+| Developer Edition  | 158            | No               |
+| Beta               | 158            | No               |
+| Release            | 158            | No               |
+
+- `dom.fetch.streaming_upload`
   - : 有効にするには `true` に設定してください。
 
 ### グラフィック: Canvas, WebGL, WebGPU
@@ -562,12 +649,12 @@ CSS の {{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}
 Linux や Intel Silicon 搭載 macOS などのその他のプラットフォームでは、nightly ビルドで有効化されています。
 この API の進捗については [Firefox バグ 1602129](https://bugzil.la/1602129) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | Enabled by default?                                                           |
-| ------------------ | -------------------- | ----------------------------------------------------------------------------- |
-| Nightly            | 141                  | Yes                                                                           |
-| Developer Edition  | 141                  | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
-| Beta               | 141                  | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
-| Release            | 141                  | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| リリースチャンネル | 追加バージョン | デフォルトで有効                                                              |
+| ------------------ | -------------- | ----------------------------------------------------------------------------- |
+| Nightly            | 141            | Yes                                                                           |
+| Developer Edition  | 141            | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Beta               | 141            | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Release            | 141            | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
 
 - `dom.webgpu.enabled`
   - : 有効にするには `true` に設定してください（Nightly ビルドおよび Windows のすべてのリリースで有効）
@@ -576,18 +663,32 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 
 ### WebRTC とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
+[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)、[暗号化メディア拡張 API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
+
+#### オーディオセッション API
+
+[オーディオセッション API](/ja/docs/Web/API/Audio_Session_API) は、ウェブアプリケーションが、自身のオーディオと端末上で再生されている他のオーディオとの相互作用を制御するための仕組みを提供します。（[Firefoxのバグ 2055710](https://bugzil.la/2055710)）。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 155            | Yes              |
+| Developer Edition  | 153            | No               |
+| Beta               | 153            | No               |
+| Release            | 153            | No               |
+
+- `dom.audio_session.enabled`
+  - : 有効にするには `true` に設定してください。
 
 #### HTMLMediaElement のプロパティ: audioTracks および videoTracks
 
 この機能を有効にすると、すべての HTML メディア要素に {{domxref("HTMLMediaElement.audioTracks")}} および {{domxref("HTMLMediaElement.videoTracks")}} プロパティが追加されます。ただし、Firefox は現在複数の音声と映像トラックに対応していないため、これらのプロパティの最も一般的な使用例は機能せず、デフォルトで両方とも無効化されています。詳細は [Firefox バグ 1057233](https://bugzil.la/1057233) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 33                   | No               |
-| Developer Edition  | 33                   | No               |
-| Beta               | 33                   | No               |
-| Release            | 33                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 33             | No               |
+| Developer Edition  | 33             | No               |
+| Beta               | 33             | No               |
+| Release            | 33             | No               |
 
 - `media.track.enabled`
   - : 有効にするには `true` に設定してください。
@@ -596,12 +697,12 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 
 これにより、メディアソースバッファーを追加および削除するためのプロミスベースのメソッド {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} および {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} が {{domxref("SourceBuffer")}} インターフェイスに追加されます。詳細については、 [Firefox バグ 1280613](https://bugzil.la/1280613) および [Firefox バグ 778617](https://bugzil.la/778617) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 62                   | No               |
-| Developer Edition  | 62                   | No               |
-| Beta               | 62                   | No               |
-| Release            | 62                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 62             | No               |
+| Developer Edition  | 62             | No               |
+| Beta               | 62             | No               |
+| Release            | 62             | No               |
 
 - `media.mediasource.experimental.enabled`
   - : 有効にするには `true` に設定してください。
@@ -611,40 +712,23 @@ Linux や Intel Silicon 搭載 macOS などのその他のプラットフォー�
 `image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
 これにより、 Firefox ユーザーは、他のいくつかのブラウザーでレンダリングされる画像を、たとえ厳密に準拠していなくても表示することができます。
 
-| リリースチャンネル | 追加されたバージョン | Default value |
-| ------------------ | -------------------- | ------------- |
-| Nightly            | 92                   | 1             |
-| Developer Edition  | 92                   | 1             |
-| Beta               | 92                   | 1             |
-| Release            | 92                   | 1             |
+| リリースチャンネル | 追加バージョン | Default value |
+| ------------------ | -------------- | ------------- |
+| Nightly            | 92             | 1             |
+| Developer Edition  | 92             | 1             |
+| Beta               | 92             | 1             |
+| Release            | 92             | 1             |
 
 - `image.avif.compliance_strictness`
   - : 厳格度レベルを示す数値。指定可能な値は次のとおりです。
     - `0`: 推奨 ("should" 言語) と要求 ("shall" 言語) の両方で仕様違反のある画像でも、安全に、あるいは曖昧さを排除して解釈できるのであれば、受け付けます。
-    - `1` **（既定値）**: 要件違反は却下し、勧告違反は許可する。
+    - `1` **（デフォルト値）**: 要件違反は却下し、勧告違反は許可する。
     - `2`: 厳格。要件や推奨事項の違反は一切認めません。
-
-#### JPEG XL 対応
-
-Firefox は、JPEG の後継となる最新の画像形式である [JPEG XL](https://jpeg.org/jpegxl/) に対応しています。この形式は、圧縮率と画質の向上に加え、透明度、アニメーション、HDR 対応などの新機能も備えています。
-詳細は [Firefox バグ 1539075](https://bugzil.la/1539075) および [Firefox バグ 2016688](https://bugzil.la/2016688) を参照してください。
-
-Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画像デコーダーが、Rust ベースの `jxl-rs` ライブラリーを使用した新しい実装に置き換えました（[Firefox バグ 1986393](https://bugzil.la/1986393)）。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 90                   | Yes              |
-| Developer Edition  | 152                  | No               |
-| Beta               | 152                  | No               |
-| Release            | 152                  | No               |
-
-- `image.jxl.enabled`
-  - : 有効にするには `true` に設定してください。
 
 ### WebVR API （無効化）
 
 非推奨化された [WebVR API](/ja/docs/Web/API/WebVR_API) は削除途上にあります。
-これは既定ですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
+これはデフォルトですべてのビルドで無効化されています [Firefox バグ 1750902](https://bugzil.la/1750902)。
 
 | リリースチャンネル | Version removed | デフォルトで有効 |
 | ------------------ | --------------- | ---------------- |
@@ -660,12 +744,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 `GeometryUtils` の `convertPointFromNode()`、`convertRectFromNode()`、`convertQuadFromNode()` の各メソッドは、指定された点、矩形、または四角形を、呼び出された {{domxref("Node")}} から別のノードにマッピングします。 (詳細は [Firefox バグ 918189](https://bugzil.la/918189) を参照してください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 31                   | No               |
-| Developer Edition  | 31                   | No               |
-| Beta               | 31                   | No               |
-| Release            | 31                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 31             | No               |
+| Developer Edition  | 31             | No               |
+| Beta               | 31             | No               |
+| Release            | 31             | No               |
 
 - `layout.css.convertFromNode.enabled`
   - : 有効にするには `true` に設定してください。
@@ -674,12 +758,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 `GeometryUtils` の `getBoxQuads()` メソッドは、他のノードやビューポートとの相対的な {{domxref("Node")}} の CSS ボックスを返します。(詳細は [Firefox バグ 917755](https://bugzil.la/917755) を参照してください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 31                   | No               |
-| Developer Edition  | 31                   | No               |
-| Beta               | 31                   | No               |
-| Release            | 31                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 31             | No               |
+| Developer Edition  | 31             | No               |
+| Beta               | 31             | No               |
+| Release            | 31             | No               |
 
 - `layout.css.getBoxQuads.enabled`
   - : 有効にするには `true` に設定してください。
@@ -690,12 +774,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 55                   | No               |
-| Developer Edition  | 55                   | No               |
-| Beta               | 55                   | No               |
-| Release            | 55                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 55             | No               |
+| Developer Edition  | 55             | No               |
+| Beta               | 55             | No               |
+| Release            | 55             | No               |
 
 - `dom.payments.request.enabled`
   - : 有効にするには `true` に設定してください。
@@ -707,28 +791,89 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API) は、サイトのファイル、URL、その他のデータを共有することができます。
 この機能は、 Android ではすべてのビルドで有効になっていますが、デスクトップでは（以下で指定されていない限り）設定で隠されています。
 
-| リリースチャンネル | Version changed | Enabled by default?                         |
-| ------------------ | --------------- | ------------------------------------------- |
-| Nightly            | 71              | No (default). Yes (Windows from version 92) |
-| Developer Edition  | 71              | No                                          |
-| Beta               | 71              | No                                          |
-| Release            | 71              | No (Desktop). Yes (Android).                |
+| リリースチャンネル | 変更バージョン | デフォルトで有効                            |
+| ------------------ | -------------- | ------------------------------------------- |
+| Nightly            | 71             | No (default). Yes (Windows from version 92) |
+| Developer Edition  | 71             | No                                          |
+| Beta               | 71             | No                                          |
+| Release            | 71             | No (Desktop). Yes (Android).                |
 
 - `dom.webshare.enabled`
   - : 有効にするには `true` に設定してください。
 
 ### 通知 API
 
-通知には、Windows システムおよび Nightly リリースでは、既定で [`requireInteraction`](/ja/docs/Web/API/Notification/requireInteraction) プロパティが true に設定されています。 ([Firefox バグ 1794475](https://bugzil.la/1794475)).
+通知には、Windows システムおよび Nightly リリースでは、デフォルトで [`requireInteraction`](/ja/docs/Web/API/Notification/requireInteraction) プロパティが true に設定されています。 ([Firefox バグ 1794475](https://bugzil.la/1794475)).
 
-| リリースチャンネル | Version changed | デフォルトで有効 |
-| ------------------ | --------------- | ---------------- |
-| Nightly            | 117             | Yes              |
-| Developer Edition  | 117             | No               |
-| Beta               | 117             | No               |
-| Release            | 117             | Windows only     |
+| リリースチャンネル | 変更バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 117            | Yes              |
+| Developer Edition  | 117            | No               |
+| Beta               | 117            | No               |
+| Release            | 117            | Windows only     |
 
 - `dom.webnotifications.requireinteraction.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 通知の `navigate` オプション
+
+`navigate` オプションを {{domxref("Notification.Notification", "Notification()")}} コンストラクターおよび {{domxref("ServiceWorkerRegistration.showNotification()")}} に設定すると、ユーザーが通知をクリックした際に開く URL を指定できます。そのため、ページを開くためのクリックハンドラーを用意する必要がなくなりました。新しい読み取り専用の {{domxref("Notification.navigate")}} プロパティは、その URL を返します。このオプションが設定されると、その通知に対して {{domxref("Notification.click_event", "click")}} および {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} イベントは発生しなくなります。{{domxref("Notification.actions", "actions")}} オプションのそれぞれの項目は、独自の `navigate` URL を設定できます。また、URL が設定されていないアクションボタンは、通知の URL を使用するのではなく、引き続き `notificationclick` が発生します。
+([Firefox bug 2066184](https://bugzil.la/2066184)).
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | No               |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `dom.webnotifications.navigate.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### コンテナータイミング API
+
+コンテナータイミング API は、コンテナー要素のコンテンツが描画された時点を報告するため、ビューポート全体ではなく、ページの一部の領域のレンダリング時間を測定することができます。
+([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+| リリースチャンネル | 変更バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 156            | No               |
+| Developer Edition  | 156            | No               |
+| Beta               | 156            | No               |
+| Release            | 156            | No               |
+
+- `dom.enable_container_timing`
+  - : 有効にするには `true` に設定してください。
+
+### ウェブ暗号における鍵のカプセル化
+
+[ウェブ暗号 API](/ja/docs/Web/API/Web_Crypto_API) は、2 つの当事者が共有秘密鍵について合意を形成できるアルゴリズムである ML-KEM を対応しており、量子コンピュータによる攻撃に対しても安全性を維持するように設計されています。一方の当事者は、相手方の公開鍵を {{domxref("SubtleCrypto")}} のメソッド `encapsulateKey()` または `encapsulateBits()` に渡します。これらのメソッドは、共有鍵と、相手方に送信する暗号文を返します。それ以外にも、もう一方の当事者は、その暗号文と自分自身で持っている秘密鍵を `decapsulateKey()` または `decapsulateBits()` に渡すことで、同じ共有鍵を導き出します。
+
+`ML-KEM-512`、`ML-KEM-768`、`ML-KEM-1024` というアルゴリズム名が、対応する{{domxref("CryptoKey.usages", "usages")}}、および {{domxref("SubtleCrypto.importKey()")}} と {{domxref("SubtleCrypto.exportKey()")}} 向けの新しい `raw-public` および `raw-seed` キー書式に対応しています ([Firefox バグ 1943614](https://bugzil.la/1943614))。
+
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 157            | Yes              |
+| Developer Edition  | 157            | No               |
+| Beta               | 157            | No               |
+| Release            | 157            | No               |
+
+- `dom.webcrypto.encapsulation.enabled`
+  - : 有効にするには `true` に設定してください。
+
+### 非同期クリップボード API におけるウェブ独自形式
+
+[クリップボード API](/ja/docs/Web/API/Clipboard_API) は、独自のクリップボード形式に対応しており、ウェブアプリが {{domxref("Clipboard.write()")}} メソッドおよび {{domxref("Clipboard.read()")}} メソッドを使用して、それぞれ `"web "` で始まる独自の MIME タイプを書き込んだり読み込んだりすることができます。
+この機能は、デスクトップ版では Firefox 154 以降で対応しており、Android 版では Firefox 156 以降で対応しています（[Firefox バグ 1956304](https://bugzil.la/1956304) および [Firefox バグ 2048545](https://bugzil.la/2048545)）。
+
+| リリースチャンネル | 変更バージョン | デフォルトで有効       |
+| ------------------ | -------------- | ---------------------- |
+| Nightly            | 154            | Yes (デスクトップのみ) |
+| Developer Edition  | 154            | No                     |
+| Beta               | 154            | No                     |
+| Release            | 154            | No                     |
+
+- `dom.clipboard.customFormatSupport.enabled`
   - : 有効にするには `true` に設定してください。
 
 ## セキュリティとプライバシー
@@ -737,12 +882,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 この 2 つの環境設定では、安全でない方法でページが読み込まれた場合 ({{Glossary("HTTPS")}} ではなく {{Glossary("HTTP")}} を使用した場合) に、従来のロックアイコンの隣に「Not secure」というテキストラベルがアドレスバーに追加されます。 `browser.urlbar.trimHttps` 環境設定は、アドレスバーの URL から `https:` という接頭辞を削除します。詳細については、 [Firefox バグ 1853418](https://bugzil.la/1853418) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 121                  | Yes              |
-| Developer Edition  | 60                   | No               |
-| Beta               | 60                   | No               |
-| Release            | 60                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 121            | Yes              |
+| Developer Edition  | 60             | No               |
+| Beta               | 60             | No               |
+| Release            | 60             | No               |
 
 - `security.insecure_connection_text.enabled`
   - : 通常の閲覧モードでテキストラベルを有効にするには、`true` に設定します。
@@ -753,7 +898,7 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 ### `<meta name="rating">` によるアダルトコンテンツの制限
 
-標準外の [`<meta name="rating">`](/ja/docs/Web/HTML/Reference/Elements/meta) は、ウェブページに記載することで、そのページのコンテンツが制限付き/成人向けであることを示すことができます。執筆時点では、`content` 属性に設定可能な値は 2 つあり、`adult`（[Google 定義](https://developers.google.com/search/docs/specialty/explicit/guidelines# add-metadata) と `RTA-5042-1996-1400-1577-RTA` ([ASACP 定義](https://www.rtalabel.org/?content=howto#top)) の 2 つが利用可能であり、これらは同等の効果を持ちます（将来的に追加される可能性があります）。
+標準外の [`<meta name="rating">`](/ja/docs/Web/HTML/Reference/Elements/meta) は、ウェブページに記載することで、そのページのコンテンツが制限付き/成人向けであることを示すことができます。執筆時点では、`content` 属性に設定可能な値は 2 つあり、`adult` ([Google 定義](https://developers.google.com/search/docs/specialty/explicit/guidelines#add-metadata)) と `RTA-5042-1996-1400-1577-RTA` ([ASACP 定義](https://www.rtalabel.org/?content=howto#top)) の 2 つが利用可能であり、これらは同等の効果を持ちます（将来的に追加される可能性があります）。
 
 次の `<meta>` 要素は同等です。
 
@@ -766,12 +911,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 詳しくは [Firefox バグ 1991135](https://bugzil.la/1991135) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 146                  | No               |
-| Developer Edition  | 146                  | No               |
-| Beta               | 146                  | No               |
-| Release            | 146                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 146            | No               |
+| Developer Edition  | 146            | No               |
+| Beta               | 146            | No               |
+| Release            | 146            | No               |
 
 - `security.restrict_to_adults.always`
   - : `true` に設定すると、`<meta name="rating">` 要素を記載して成人向けと自己申告するウェブページへのアクセスを制限します。
@@ -785,12 +930,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 ユーザー環境設定が設定されていなくても、`<iframe>` 要素の [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性で対応しているポリシーを設定できることに注意してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 65                   | No               |
-| Developer Edition  | 65                   | No               |
-| Beta               | 65                   | No               |
-| Release            | 65                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 65             | No               |
+| Developer Edition  | 65             | No               |
+| Beta               | 65             | No               |
+| Release            | 65             | No               |
 
 - `dom.security.featurePolicy.header.enabled`
   - : 有効にするには `true` に設定してください。
@@ -799,12 +944,12 @@ Firefox 149 では、従来の C++ 製 [JPEG XL](https://jpeg.org/jpegxl/) 画�
 
 [PPA API](https://support.mozilla.org/ja/kb/privacy-preserving-attribution) は、 `saveImpression()` および `measureConversion()` メソッドを備えた新しい `navigator.privateAttribution` オブジェクトを使用して、広告の属性情報を追跡する代替手段を提供します。 PPA の詳細については、[元の説明](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment)および[提案仕様](https://w3c.github.io/ppa/)をご覧ください。この実験は、 [origin trial](https://wiki.mozilla.org/Origin_Trials) またはブラウザーの環境設定を 1に設定することで、ウェブサイトで有効にすることができます。（[Firefox バグ 1900929](https://bugzil.la/1900929)）。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 128                  | No               |
-| Developer Edition  | 128                  | No               |
-| Beta               | 128                  | No               |
-| Release            | 128                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 128            | No               |
+| Developer Edition  | 128            | No               |
+| Beta               | 128            | No               |
+| Release            | 128            | No               |
 
 - `dom.origin-trials.private-attribution.state`
   - : 有効にするには `true` に設定してください。
@@ -818,12 +963,12 @@ Firefox はレポートエンドポイントを無視し、違反を開発者コ
 `Integrity-Policy` が使用されている場合、ブラウザーは {{HTMLElement("link")}} 要素の [`rel="stylesheet"`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet) で参照され、[`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性が指定されていないか、完全性ハッシュがサーバー上のリソースと一致しないスタイルの読み込みをブロックします。
 ([Firefox バグ 1976656](https://bugzil.la/1976656)).
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 142                  | No               |
-| Developer Edition  | 142                  | No               |
-| Beta               | 142                  | No               |
-| Release            | 142                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 142            | No               |
+| Developer Edition  | 142            | No               |
+| Beta               | 142            | No               |
+| Release            | 142            | No               |
 
 - `security.integrity_policy.stylesheet.enabled`
   - : 有効にするには `true` に設定してください。
@@ -838,41 +983,27 @@ Firefox は、ページ側のクライアントコードによって既に追加
 
 ([Firefox バグ 1830022](https://bugzil.la/1830022)).
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 135                  | No               |
-| Developer Edition  | 135                  | No               |
-| Beta               | 135                  | No               |
-| Release            | 135                  | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 135            | No               |
+| Developer Edition  | 135            | No               |
+| Beta               | 135            | No               |
+| Release            | 135            | No               |
 
 - `network.http.idempotencyKey.enabled`
   - : 有効にするには `true` に設定してください。
 
-### MIME タイプ image/jxl の Accept ヘッダー
+### デフォルトで SameSite=Lax
 
-[既定のリクエストおよび画像リクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)の HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーは、`image/jxl` MIME タイプに対応していることを示す環境設定で構成できます。
-
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 128                  | No               |
-| Developer Edition  | 128                  | No               |
-| Beta               | 128                  | No               |
-| Release            | 128                  | No               |
-
-- `image.jxl.enabled`
-  - : 有効にするには `true` に設定してください。
-
-### 既定で SameSite=Lax
-
-[SameSite クッキー](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)の既定値は Lax です。この設定では、クッキーは、ユーザーが元のサイトに移動する場合にのみ送信され、サードパーティのサイトに画像やフレームを読み込むためのサイト間サブリクエストなどには送信されません。
+[SameSite クッキー](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)のデフォルト値は Lax です。この設定では、クッキーは、ユーザーが元のサイトに移動する場合にのみ送信され、サードパーティのサイトに画像やフレームを読み込むためのサイト間サブリクエストなどには送信されません。
 詳しくは、 [Firefox バグ 1617609](https://bugzil.la/1617609) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 69                   | No               |
-| Developer Edition  | 69                   | No               |
-| Beta               | 69                   | No               |
-| Release            | 69                   | No               |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 69             | No               |
+| Developer Edition  | 69             | No               |
+| Beta               | 69             | No               |
+| Release            | 69             | No               |
 
 - `network.cookie.sameSite.laxByDefault`
   - : 有効にするには `true` に設定してください。
@@ -882,16 +1013,16 @@ Firefox は、ページ側のクライアントコードによって既に追加
 [`Access-Control-Allow-Headers`](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Headers) は、 [CORS プリフライトリクエスト](/ja/docs/Glossary/Preflight_request)に対するレスポンスヘッダーで、最終リクエストに含めることができるリクエストヘッダーを指定します。
 レスポンスディレクティブには、ワイルドカード (`*`) を含めることができます。これは、最終リクエストに `Authorization` ヘッダーを除くすべてのヘッダーを含めることができることを示します。
 
-既定では、Firefox は、 `Access-Control-Allow-Headers: *` という応答を受け取った後、最終リクエストに `Authorization` ヘッダーを含めます。
+デフォルトでは、Firefox は、 `Access-Control-Allow-Headers: *` という応答を受け取った後、最終リクエストに `Authorization` ヘッダーを含めます。
 Firefox が `Authorization` ヘッダーを含めないようにするには、環境設定を `false` に設定してください。
 詳しくは [Firefox バグ 1687364](https://bugzil.la/1687364) を参照してください。
 
-| リリースチャンネル | 追加されたバージョン | デフォルトで有効 |
-| ------------------ | -------------------- | ---------------- |
-| Nightly            | 115                  | Yes              |
-| Developer Edition  | 115                  | Yes              |
-| Beta               | 115                  | Yes              |
-| Release            | 115                  | Yes              |
+| リリースチャンネル | 追加バージョン | デフォルトで有効 |
+| ------------------ | -------------- | ---------------- |
+| Nightly            | 115            | Yes              |
+| Developer Edition  | 115            | Yes              |
+| Beta               | 115            | Yes              |
+| Release            | 115            | Yes              |
 
 - `network.cors_preflight.authorization_covered_by_wildcard`
   - : 有効にするには `true` に設定してください。

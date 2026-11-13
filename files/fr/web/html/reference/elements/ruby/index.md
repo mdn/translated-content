@@ -8,7 +8,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ruby>`** représente de petites annotations affichées au-dessus, en dessous ou à côté du texte de base, généralement utilisées pour indiquer la prononciation des caractères d'Asie orientale. Il peut aussi servir à annoter d'autres types de texte, mais cet usage est moins courant.
 
-Le terme _ruby_ vient d'[une unité de mesure utilisée par les typographes <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Agate_(typography)>), représentant la plus petite taille à laquelle un texte peut être imprimé sur du papier journal tout en restant lisible.
+Le terme _ruby_ vient [d'une unité de mesure utilisée par les typographes <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Agate_(typography)>), représentant la plus petite taille à laquelle un texte peut être imprimé sur du papier journal tout en restant lisible.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;ruby&gt;", "tabbed-shorter")}}
 

@@ -99,7 +99,7 @@ dt.toLocaleString("fr-FR", {
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/toJSON", "Temporal.PlainDateTime.prototype.toJSON()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/toString", "Temporal.PlainDateTime.prototype.toString()")}}

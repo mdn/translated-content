@@ -173,6 +173,6 @@ Temporal.PlainMonthDay.from(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
 - Le constructeur {{JSxRef("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}}
 - La méthode {{JSxRef("Temporal/PlainMonthDay/with", "Temporal.PlainMonthDay.prototype.with()")}}

@@ -3,8 +3,6 @@ title: L'opérateur get
 slug: Web/JavaScript/Reference/Functions/get
 ---
 
-{{jsSidebar("Functions")}}
-
 La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
 {{InteractiveExample("JavaScript Demo: Functions Getter")}}

@@ -80,7 +80,7 @@ _変更なし。_
 #### DOM イベント
 
 - {{domxref("InputEvent.inputType")}} プロパティを実装しました ([Firefox バグ 1447239](https://bugzil.la/1447239))。
-- {{domxref("Window.event")}} および {{domxref("Event.returnValue")}} プロパティ (元は IE の独自機能であり、互換性の理由でほかのブラザーもサポートしました) を、Firefox 66 で再導入しました。それぞれバージョン 63 や 64 で追加した後、互換性の問題で再び削除していました。
+- {{domxref("Window.event")}} および {{domxref("Event.returnValue")}} プロパティ (元は IE の独自機能であり、互換性の理由でほかのブラウザーもサポートしました) を、Firefox 66 で再導入しました。それぞれバージョン 63 や 64 で追加した後、互換性の問題で再び削除していました。
 - バージョン 66 より、{{domxref("Element/keypress_event", "keypress")}} イベントオブジェクトの {{domxref("KeyboardEvent.keyCode")}} プロパティが 0 であるとき、値が {{domxref("KeyboardEvent.charCode")}} と同じになります。逆に `charCode` が 0 であるときは、`keyCode` と同じ値になります。このミラーリング動作はほかのブラウザーと一致しており、これに関連する互換性の問題のほとんどが解決すると思われます。ただし 一部の JavaScript ライブラリーで、ブラウザー検出によって新たな問題が発生する可能性があります。仕様書の用語では、_split model_ から _conflated model_ に切り替えました (UI Event 仕様書の [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) をご覧ください)。
 
 #### メディア、ウェブオーディオ、WebRTC

@@ -21,7 +21,11 @@ p:only-child {
 
 ## Sintaxe
 
-{{csssyntax}}
+```css
+:only-child {
+  /* ... */
+}
+```
 
 ## Exemplos
 

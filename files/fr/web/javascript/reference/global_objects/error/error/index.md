@@ -3,7 +3,7 @@ title: Constructeur Error()
 short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Error`** permet de créer des objets {{JSxRef("Error")}}.
@@ -30,7 +30,7 @@ Error(message, fileName, lineNumber)
 ### Paramètres
 
 - `message` {{Optional_Inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
+  - : Une description de l'erreur, compréhensible par un·e humain·e.
 - `options` {{Optional_Inline}}
   - : Un objet avec les propriétés suivantes&nbsp;:
     - `cause` {{Optional_Inline}}
@@ -44,13 +44,13 @@ Error(message, fileName, lineNumber)
 
 ### Appeler une fonction ou un nouveau constructeur
 
-Lorsque `Error` est utilisé comme une fonction, c'est-à-dire sans {{JSxRef("new")}}, il renverra un objet `Error`.
-Ainsi, un simple appel à `Error` produira le même résultat que la construction d'un objet `Error` avec le mot-clé `new`.
+Lorsque `Error` est utilisé comme une fonction, c'est-à-dire sans {{JSxRef("new")}}, il retourne un objet `Error`.
+Ainsi, un simple appel à `Error` produit le même résultat que la construction d'un objet `Error` avec le mot-clé `new`.
 
 ```js
 const x = Error("J'ai été créé avec un appel de fonction !");
 
-// la ligne au-dessus aura le même effet que la suivante
+// la ligne au-dessus a le même effet que la suivante
 const y = new Error(`J'ai été construite avec le mot-clé "new" !`);
 ```
 
@@ -97,8 +97,8 @@ console.log("cause" in erreur3); // false
 
 ## Voir aussi
 
-- [Prothèse d'émulation pour `Error`, avec `cause` pris en charge dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-error)
-- [Prothèse d'émulation es-shims pour la propriété `cause` de `Error` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Error` avec la pris en charge de `cause` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/error)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `cause` de l'objet `Error` <sup>(angl.)</sup>](https://www.npmjs.com/package/error-cause)
 - L'instruction {{JSxRef("Statements/throw", "throw")}}
 - L'instruction {{JSxRef("Statements/try...catch", "try...catch")}}
 - [Causes d'erreur <sup>(angl.)</sup>](https://v8.dev/features/error-cause) sur v8.dev (2021)

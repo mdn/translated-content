@@ -10,7 +10,11 @@ original_slug: Web/CSS/:-moz-only-whitespace
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
+```
 
 ## Пример
 

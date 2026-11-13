@@ -3,7 +3,7 @@ title: "FormData : constructeur FormData()"
 short-title: FormData()
 slug: Web/API/FormData/FormData
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
 ---
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}

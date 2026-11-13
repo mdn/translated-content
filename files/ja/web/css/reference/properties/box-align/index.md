@@ -1,12 +1,12 @@
 ---
-title: CSS `box-align` プロパティ
+title: "`box-align` プロパティ (CSS)"
 short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > このプロパティは、当初の CSS flexible box layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。

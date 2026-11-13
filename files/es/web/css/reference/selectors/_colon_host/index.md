@@ -18,7 +18,11 @@ La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/es
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:host {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

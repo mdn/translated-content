@@ -6,8 +6,6 @@ l10n:
   sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{LearnSidebar}}
-
 Les formulaires HTML peuvent envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) de façon déclarative. Il est aussi possible d'utiliser les formulaires afin de préparer des requêtes HTTP qu'on enverra avec JavaScript, par exemple avec `XMLHttpRequest` ou `Fetch`. Dans cet article, nous verrons en quoi consiste cette approche.
 
 ## Un formulaire parfois détourné

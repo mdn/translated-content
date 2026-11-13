@@ -3,10 +3,10 @@ title: "Document : évènement afterscriptexecute"
 short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
 L'évènement `afterscriptexecute` de l'interface {{DOMxRef("Document")}} est déclenché lorsqu'un élément HTML {{HTMLElement("script")}} statique termine l'exécution de son script. Il n'est pas déclenché si l'élément est ajouté dynamiquement, par exemple avec la méthode {{DOMxRef("Node.appendChild()", "appendChild()")}}.
 

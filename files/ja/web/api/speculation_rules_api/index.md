@@ -373,7 +373,7 @@ JavaScript はアクティブになるまで実行されないため、ページ
 
 包含する文書の {{domxref("Document.visibilityState")}} が `"visible"` であることが要求される API:
 
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible" または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
+- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible"` または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
 - [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### 他の制限されている機能

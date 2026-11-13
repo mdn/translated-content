@@ -44,8 +44,8 @@ console.log(instant.toString()); // 2021-07-01T16:34:56.987654321Z
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toPlainTime", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/toPlainDateTime", "Temporal.ZonedDateTime.prototype.toPlainDateTime()")}}

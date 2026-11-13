@@ -2,7 +2,7 @@
 title: Ce sur quoi nous écrivons
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
+  sourceCommit: de5b264fa7bf6bb49811bf79f8f28f10835bfb79
 ---
 
 MDN contient une documentation sur le Web, _neutre_ pour les différents navigateurs, pour permettre aux développeur·euse·s d'écrire du code «&nbsp;agnostique&nbsp;» aux différents navigateurs. Dans cet article, vous pouvez trouver des informations pour savoir si un sujet ou un type de contenu a sa place pour être inclus dans MDN.
@@ -30,7 +30,7 @@ Les technologies web documentées sur MDN doivent être définies de façon ouve
 
 ## Suggestion de contenus
 
-Si vous souhaitez suggérer un nouveau contenu pour MDN, veuillez lire cette page avant votre soumission afin de vérifier qu'elle est pertinente.
+Si vous souhaitez suggérer un nouveau contenu pour MDN, veuillez lire cette page avant votre envoi afin de vérifier qu'elle est pertinente.
 
 Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `mdn-community` <sup>(angl.)</sup>](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
 
@@ -42,7 +42,7 @@ MDN documente en général les technologies web ouvertes. Cela inclut les foncti
 
 Si une fonctionnalité est implémentée par plusieurs navigateurs et acceptée comme standard ou en voie de standardisation, sa documentation a toute sa place sur MDN. Si une fonctionnalité est encore expérimentale et pas implémentée par plusieurs navigateurs ou si elle est sujette à changements, sa documentation peut être incluse sur MDN, mais n'est pas considérée comme prioritaire.
 
-Autrement dit, les technologies web qui peuvent être documentées sur MDN devraient respecter les critères suivants&nbsp;:
+Autrement dit, les technologies web qui peuvent être documentées sur MDN doivent respecter les critères suivants&nbsp;:
 
 - Être en voie de standardisation.
 - Être définie par un organisme de spécification reconnu.
@@ -86,7 +86,7 @@ Nous ne documentons pas une nouvelle technologie si&nbsp;:
 
 ## Les sujets qui n'ont pas leur place sur MDN
 
-En règle générale, tout ce qui n'est pas standardisé de façon ouverte pour le Web n'a pas sa place sur MDN. Les publicités commerciales et autres contenus hors-sujet ne sont jamais acceptés sur le site. Toute personne qui contribue en soumettant du spam à plusieurs reprises peut être bannie à la discrétion de l'équipe MDN employée par Mozilla.
+En règle générale, tout ce qui n'est pas standardisé de façon ouverte pour le Web n'a pas sa place sur MDN. Les publicités commerciales et autres contenus hors-sujet ne sont jamais acceptés sur le site. Toute personne qui contribue en envoyant du spam à plusieurs reprises peut être bannie à la discrétion de l'équipe MDN employée par Mozilla.
 
 Voici différents exemples de sujets non-pertinents pour MDN&nbsp;:
 

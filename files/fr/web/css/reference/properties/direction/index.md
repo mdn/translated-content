@@ -3,11 +3,11 @@ title: Propriété CSS `direction`
 short-title: direction
 slug: Web/CSS/Reference/Properties/direction
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 8c21ceeff860d7b9f64b177115e3897543e7fcab
 ---
 
 > [!WARNING]
-> Dans la mesure du possible, il est recommandé aux autrices et auteurs d'éviter d'utiliser la propriété CSS `direction` et de préférer l'attribut global HTML [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir).
+> Dans la mesure du possible, il est recommandé aux auteur·ice·s d'éviter d'utiliser la propriété CSS `direction` et de préférer l'attribut global HTML [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir).
 
 La propriété [CSS](/fr/docs/Web/CSS) **`direction`** définit le sens du texte, des colonnes de tableau et de grille, ainsi que du débordement horizontal. Utilisez `rtl` pour les langues écrites de droite à gauche (comme l'hébreu ou l'arabe), et `ltr` pour celles écrites de gauche à droite (comme l'anglais et la plupart des autres langues).
 
@@ -67,12 +67,14 @@ direction: unset;
 
 ### Valeurs
 
+La propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `ltr`
   - : La valeur par défaut qui correspond à une disposition de la gauche vers la droite pour le texte et les autres éléments.
 - `rtl`
   - : Le texte et les autres éléments vont de la droite vers la gauche.
 
-Afin que la propriété `direction` ait un effet sur les éléments en ligne, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
+Afin que la propriété `direction` ait un effet sur les éléments en incise, il faut que la valeur de la propriété {{CSSxRef("unicode-bidi")}} soit `embed` ou `override`.
 
 ## Description
 
@@ -94,7 +96,7 @@ Les propriétés `direction` et {{CSSxRef("unicode-bidi")}} sont les deux seules
 
 ### Définir la direction de droite à gauche
 
-Dans l'exemple ci-dessous, deux chaînes de texte sont affichées avec `direction: rtl`. Le texte en arabe s'affiche correctement avec ce réglage, mais le texte en anglais affiche maintenant un point final à un emplacement inhabituel.
+Dans l'exemple ci-dessous, deux chaînes de caractères de texte sont affichées avec `direction: rtl`. Le texte en arabe s'affiche correctement avec ce réglage, mais le texte en anglais affiche maintenant un point final à un emplacement inhabituel.
 
 ```css
 blockquote {
@@ -109,12 +111,10 @@ blockquote {
     Ce paragraphe est en français mais s'affiche incorrectement de droite à
     gauche.
   </p>
-  <p></p>
 </blockquote>
 
 <blockquote>
   <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
-  <p></p>
 </blockquote>
 ```
 

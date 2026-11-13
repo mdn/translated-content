@@ -3,8 +3,6 @@ title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 ---
 
-{{AddonSidebar}}
-
 La fonction **`search()`** de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

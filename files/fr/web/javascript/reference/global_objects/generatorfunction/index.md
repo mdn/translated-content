@@ -74,7 +74,7 @@ _Hérite des méthodes d'instance de son parent {{JSxRef("Function")}}._
 
 - La déclaration {{JSxRef("Statements/function*", "function*")}}
 - [L'expression `function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-- L'objet {{JSxRef("Function")}}
-- L'objet {{JSxRef("AsyncFunction")}}
-- L'objet {{JSxRef("AsyncGeneratorFunction")}}
+- L'objet natif {{JSxRef("Function")}}
+- L'objet natif {{JSxRef("AsyncFunction")}}
+- L'objet natif {{JSxRef("AsyncGeneratorFunction")}}
 - {{JSxRef("Functions", "Les fonctions", "", 1)}}

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/pattern
 original_slug: Web/SVG/Element/pattern
 ---
 
-{{SVGRef}}
-
 L'élément **`<pattern>`** définit un objet graphique qui peut être redessiné à des intervalles de coordonnées x et y répétés ("en mosaïque") pour couvrir une surface.
 
 Le **`<pattern>`** est référéne par les attributs {{SVGAttr("fill")}} et {{SVGAttr("stroke")}} sur les autres éléments graphiques, pour appliquer un remplissage ou une bordure sur ces éléments avec le motif référencé.

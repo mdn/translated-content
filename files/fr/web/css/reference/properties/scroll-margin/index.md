@@ -3,10 +3,10 @@ title: Propriété CSS `scroll-margin`
 short-title: scroll-margin
 slug: Web/CSS/Reference/Properties/scroll-margin
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `scroll-margin` définit toutes les marges de défilement d'un élément en une seule fois, en attribuant des valeurs de la même manière que la propriété {{CSSxRef("margin")}} le fait pour les marges d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `scroll-margin` définit toutes les marges de défilement d'un élément en une seule fois, en attribuant des valeurs de la même manière que la propriété {{CSSxRef("margin")}} le fait pour les marges d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: scroll-margin")}}
 
@@ -101,7 +101,7 @@ scroll-margin: unset;
 
 ## Description
 
-Vous pouvez voir l'effet de `scroll-margin` en faisant défiler le contenu de la «&nbsp;pages&nbsp;» jus'à un point intermédiaraire dans l'exemple. La valeur définie pour `scroll-margin` détermine combien de la page qui est principalement en dehors du [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage) doit rester visible.
+Vous pouvez voir l'effet de `scroll-margin` en faisant défiler le contenu de la «&nbsp;pages&nbsp;» jus'à un point intermédiaire dans l'exemple. La valeur définie pour `scroll-margin` détermine combien de la page qui est principalement en dehors du [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage) doit rester visible.
 
 Ainsi, les valeurs de `scroll-margin` représentent des marges définissant la zone d'accrochage utilisée pour aligner cette boîte avec le port d'accrochage. La zone d'accrochage est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les marges définies.
 
@@ -151,7 +151,7 @@ Parlons du CSS. Le conteneur externe est mis en forme comme ceci&nbsp;:
 }
 ```
 
-Les parties principales pertinentes pour l'accrochage au défilement sont `overflow-x: scroll`, qui garantit que le contenu défilera et ne sera pas masqué, et `scroll-snap-type: x mandatory`, qui dicte que l'accrochage au défilement doit se produire le long de l'axe horizontal, et que le défilement s'arrêtera toujours sur un point d'accrochage.
+Les parties principales pertinentes pour l'accrochage au défilement sont `overflow-x: scroll`, qui garantit que le contenu défile et n'est pas masqué, et `scroll-snap-type: x mandatory`, qui dicte que l'accrochage au défilement doit se produire le long de l'axe horizontal, et que le défilement s'arrête toujours sur un point d'accrochage.
 
 Les éléments enfants sont mis en forme comme suit&nbsp;²:
 
@@ -188,16 +188,16 @@ Enfin, nous définissons les valeurs de marge de défilement, une différente po
 }
 ```
 
-Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accrochera à `1rem` en dehors du bord gauche du deuxième `<div>`, et à `2rems` en dehors du bord gauche du troisième `<div>`.
+Cela signifie que lorsque vous faites défiler les éléments enfants du milieu, le défilement s'accroche à `1rem` en dehors du bord gauche du deuxième `<div>`, et à `2rem` en dehors du bord gauche du troisième `<div>`.
 
 > [!NOTE]
-> Ici, nous définissons `scroll-margin` sur tous les côtés à la fois, mais seul le bord de début est vraiment pertinent. Il serait tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline-start: 1rem`, ou `scroll-margin: 0 0 0 1rem`.
+> Ici, nous définissons `scroll-margin` sur tous les côtés à la fois, mais seul le bord de début est vraiment pertinent. Il est tout aussi efficace de ne définir une marge de défilement que sur ce bord, par exemple avec `scroll-margin-inline-start: 1rem`, ou `scroll-margin: 0 0 0 1rem`.
 
 #### Résultat
 
 Essayez par vous-même&nbsp;:
 
-{{EmbedLiveSample("Basic_demonstration", "100%", 300)}}
+{{EmbedLiveSample("Démonstration simple", "100%", 300)}}
 
 ## Spécifications
 

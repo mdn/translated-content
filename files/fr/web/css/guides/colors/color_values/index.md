@@ -3,14 +3,14 @@ title: Valeurs de couleur CSS
 short-title: Valeurs de couleur
 slug: Web/CSS/Guides/Colors/Color_values
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 Pour représenter une couleur dans le CSS, vous devez trouver un moyen de traduire le concept analogique de «&nbsp;couleur&nbsp;» en une forme numérique qu'un ordinateur peut utiliser. Cela se fait généralement en décomposant la couleur en composantes, tels que les quantités de différentes couleurs primaires à mélanger, ou la luminosité et la teinte. Les modèles de couleur définis garantissent que les couleurs apparaissent de la même manière, quel que soit l'endroit où elles sont affichées.
 
 Un modèle de couleur est un modèle mathématique qui représente les couleurs à l'aide de valeurs numériques. Les modèles de couleur décrivent comment créer les couleurs disponibles dans un espace colorimétrique. {{Glossary("RGB")}} a été le premier modèle de couleur pour le web. L'espace colorimétrique `sRGB` du modèle de couleur RGB — l'espace colorimétrique standard rouge, vert et bleu — a été créé en 1996 pour les moniteurs d'ordinateur et le web. Un {{Glossary("color space", "espace colorimétrique")}} est un système de regroupement des couleurs afin que la description de toute couleur donnée soit cohérente. Si vous transformez une couleur entre deux espaces colorimétriques différents, elle doit apparaître identique dans les deux.
 
-À l'origine, les moniteurs étaient limités quant au nombre de couleurs qu'ils pouvaient afficher, et les couleurs CSS étaient limitées par ces contraintes, s'étendant à mesure que les capacités s'amélioraient. Avec les appareils modernes n'étant plus limités au RGB, nous avons maintenant également des modèles de couleur basés sur la perception humaine, offrant une gamme beaucoup plus large de couleurs. Nous pouvons maintenant décrire la couleur en CSS de plusieurs manières, et les options continuent de s'élargir.
+À l'origine, les moniteurs sont limités quant au nombre de couleurs qu'ils peuvent afficher, et les couleurs CSS sont limitées par ces contraintes, s'étendant à mesure que les capacités s'améliorent. Avec les appareils modernes n'étant plus limités au RGB, nous avons maintenant également des modèles de couleur basés sur la perception humaine, offrant une gamme beaucoup plus large de couleurs. Nous pouvons maintenant décrire la couleur en CSS de plusieurs manières, et les options continuent de s'élargir.
 
 Ce guide présente les différents types de valeurs {{CSSxRef("&lt;color&gt;")}}. Pour une discussion plus détaillée, consultez les liens de référence fournis ci-dessous.
 
@@ -32,7 +32,7 @@ Il existe deux principales façons de définir une couleur {{Glossary("RGB")}} p
 
 La notation sous forme de chaîne de caractères hexadécimale (hex) utilise une valeur hexadécimale pour représenter chaque composante (rouge, vert et bleu) d'une couleur RVB. Elle peut également inclure une quatrième composante&nbsp;: le canal alpha (ou opacité).
 
-Une couleur en notation hexadécimale commence toujours par le caractère `"#"`. Ensuite, viennent les chiffres hexadécimaux du code couleur. La chaîne n'est pas sensible à la casse.
+Une couleur en notation hexadécimale commence toujours par le caractère `"#"`. Ensuite, viennent les chiffres hexadécimaux du code couleur. La chaîne de caractères n'est pas sensible à la casse.
 
 - `"#rrggbb"`
   - : Définit une couleur entièrement opaque dont la composante rouge est le nombre hexadécimal `0xrr`, la composante verte est `0xgg` et la composante bleue est `0xbb`.
@@ -83,7 +83,7 @@ Cet exemple permet de choisir une couleur. Une fois un choix effectué, la coule
 </div>
 ```
 
-Le HTML crée une boîte contenant un contrôle de sélection de couleur (avec une étiquette créée à l'aide de l'élément HTML {{HTMLElement("label")}}) et un élément HTML {{HTMLElement("output")}} vide dans lequel nous affichons la valeur de la couleur à l'aide de JavaScript. La valeur de l'entrée de couleur est toujours une chaîne hexadécimale.
+Le HTML crée une boîte contenant un contrôle de sélection de couleur (avec une étiquette créée à l'aide de l'élément HTML {{HTMLElement("label")}}) et un élément HTML {{HTMLElement("output")}} vide dans lequel nous affichons la valeur de la couleur à l'aide de JavaScript. La valeur de l'entrée de couleur est toujours une chaîne de caractères hexadécimale.
 
 {{EmbedLiveSample("Type de saisie de couleur HTML", 525, 120)}}
 

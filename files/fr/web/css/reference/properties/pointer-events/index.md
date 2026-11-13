@@ -3,7 +3,7 @@ title: Propriété CSS `pointer-events`
 short-title: pointer-events
 slug: Web/CSS/Reference/Properties/pointer-events
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: b9c07e549a6e66272c589a254ebcd5a8c91f37a5
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances (le cas échéant) dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
@@ -96,9 +96,9 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 ### Valeurs
 
 - `auto`
-  - : L'élément se comporte comme si la propriété `pointer-events` n'était pas définie. Pour le contenu SVG, cette valeur et la valeur `visiblePainted` ont le même effet.
+  - : L'élément se comporte comme si la propriété `pointer-events` n'est pas définie. Pour le contenu SVG, cette valeur et la valeur `visiblePainted` ont le même effet.
 - `none`
-  - : L'élément, à lui seul, n'est jamais la [cible](/fr/docs/Web/API/Event/target) des évènements de pointeur. Cependant, son sous-arbre peut rester ciblable en définissant `pointer-events` sur une autre valeur. Dans ces circonstances, les évènements de pointeur déclencheront les gestionnaires d'évènements sur cet élément parent comme approprié, lors de leur cheminement vers ou depuis le descendant pendant la phase de capture et la phase de [bouillonnement](/fr/docs/Web/API/Event/bubbles).
+  - : L'élément n'est généralement pas la [cible](/fr/docs/Web/API/Event/target) des évènements de pointeur, à l'exception des évènements `pointerenter` et `pointerleave` déclenchés sur l'élément ou ses descendants. Notez que les évènements de pointeur ciblant les descendants (qui ne définissent pas `pointer-events` sur `none`) déclenchent toujours les écouteurs d'évènements sur cet élément parent pendant la phase de capture et la phase de [propagation](/fr/docs/Web/API/Event/bubbles).
 
     > [!NOTE]
     > Les évènements `pointerenter` et `pointerleave` sont déclenchés lorsqu'un dispositif de pointage est déplacé dans un élément ou l'un de ses descendants. Ainsi, même si `pointer-events: none` est défini sur le parent et non sur les enfants, les évènements sont déclenchés sur le parent après que le pointeur est entré ou sorti d'un descendant.
@@ -126,13 +126,13 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 
 ## Description
 
-Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`.
+Lorsque cette propriété n'est pas définie pour le contenu SVG, on a le même effet qu'avec la valeur `visiblePainted`.
 
-Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'évènement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en dessous/derrière&nbsp;».
+Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'évènement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui peuvent être «&nbsp;en dessous/derrière&nbsp;».
 
-L'utilisation de `pointer-events` peut empêcher que des évènements soient directement déclenchés sur l'élément avec les pointeurs. Cela _ne signifie en aucun cas_ que les gestionnaires d'évènement de cet élément ne pourront pas être déclenchés&nbsp;! Si l'un des éléments descendants possède une valeur explicite de `pointer-events` qui lui _permet_ de recevoir des évènements de pointeur, les évènements qui parcourent les ancêtres pourront déclencher les gestionnaires d'évènements associés. Bien entendu, tout pointage qui a lieu sur un endroit de l'écran qui est couvert par le parent, mais pas par l'élément descendant, ne déclenchera pas d'évènement. L'évènement passera «&nbsp;au travers&nbsp;» du parent et ciblera le contenu qui est en dessous.
+L'utilisation de `pointer-events` peut empêcher que des évènements soient directement déclenchés sur l'élément avec les pointeurs. Cela _ne signifie en aucun cas_ que les gestionnaires d'évènement de cet élément ne peuvent pas être déclenchés&nbsp;! Si l'un des éléments descendants possède une valeur explicite de `pointer-events` qui lui _permet_ de recevoir des évènements de pointeur, les évènements qui parcourent les ancêtres peuvent déclencher les gestionnaires d'évènements associés. Bien entendu, tout pointage qui a lieu sur un endroit de l'écran qui est couvert par le parent, mais pas par l'élément descendant, ne déclenche pas d'évènement. L'évènement passe «&nbsp;au travers&nbsp;» du parent et cible le contenu qui est en dessous.
 
-Les éléments avec `pointer-events: none` continueront de recevoir le focus via la navigation au clavier avec la touche <kbd>Tab</kbd>.
+Les éléments avec `pointer-events: none` continuent de recevoir la sélection avec la navigation au clavier avec la touche <kbd>Tab</kbd>.
 
 ## Définition formelle
 

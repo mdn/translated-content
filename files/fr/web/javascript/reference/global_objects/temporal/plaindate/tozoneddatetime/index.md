@@ -76,9 +76,9 @@ console.log(springTime.toString()); // 2021-03-01T00:00:00-05:00[America/New_Yor
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainYearMonth", "Temporal.PlainDate.prototype.toPlainYearMonth()")}}

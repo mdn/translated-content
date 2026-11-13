@@ -3,10 +3,12 @@ title: Pseudo-classe CSS `:focus-within`
 short-title: :focus-within
 slug: Web/CSS/Reference/Selectors/:focus-within
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-within`** correspond à un élément si celui-ci ou l'un de ses descendants est sélectionné. En d'autres termes, elle représente un élément qui est lui-même correspondant à la pseudo-classe {{CSSxRef(":focus")}} ou qui a un descendant correspondant à `:focus`. (Cela inclut les descendants dans le [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
+
+Ce sélecteur est notamment utile lorsqu'on veut, par exemple, mettre en avant l'ensemble d'un formulaire {{HTMLElement("form")}} lorsque l'utilisateur·ice passe la sélection sur l'un de ses éléments {{HTMLElement("input")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-within", "tabbed-shorter")}}
 
@@ -22,22 +24,18 @@ label:focus-within {
 ```
 
 ```html interactive-example
-<form>
-  <p>Quelle saveur souhaitez-vous commander ?</p>
-  <label>Nom complet : <input name="firstName" type="text" /></label>
-  <label
-    >Saveur :
-    <select name="flavor">
-      <option>Cerise</option>
-      <option>Thé vert</option>
-      <option>Vanille et beurre salé</option>
-      <option>Pépites de menthe</option>
-    </select>
-  </label>
-</form>
+<p>Quelle saveur souhaitez-vous commander ?</p>
+<label>Nom complet : <input name="firstName" type="text" /></label>
+<label
+  >Saveur :
+  <select name="flavor">
+    <option>Cerise</option>
+    <option>Thé vert</option>
+    <option>Vanille et beurre salé</option>
+    <option>Pépites de menthe</option>
+  </select>
+</label>
 ```
-
-Ce sélecteur est notamment utile lorsqu'on veut, par exemple, mettre en avant l'ensemble d'un formulaire {{HTMLElement("form")}} lorsque l'utilisateur·ice passe le focus sur l'un de ses éléments {{HTMLElement("input")}}.
 
 ## Syntaxe
 
@@ -49,14 +47,14 @@ Ce sélecteur est notamment utile lorsqu'on veut, par exemple, mettre en avant l
 
 ## Exemples
 
-Dans cet exemple, le formulaire recevra des styles de coloration spéciaux lorsque l'un des champs de saisie de texte sera sélectionné.
+Dans cet exemple, le formulaire reçoit des styles de coloration spéciaux lorsque l'un des champs de saisie de texte est sélectionné.
 
 ### HTML
 
 ```html
 <p>
-  L'élément div ci-après aura un fond jaune si l'un des deux champs de saisie a
-  le focus.
+  L'élément div ci-après a un fond jaune si l'un des deux champs de saisie a la
+  sélection.
 </p>
 <form>
   <label for="prenom">Prénom :</label>
@@ -100,6 +98,6 @@ input {
 
 ## Voir aussi
 
-- {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}}
-- [Captez l'attention de vos utilisateur·ice·s grâce au sélecteur focus-within <sup>(angl.)</sup>](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)
+- La pseudo-classe {{CSSxRef(":focus")}}
+- La pseudo-classe {{CSSxRef(":focus-visible")}}
+- [Captez l'attention de vos utilisateur·ice·s grâce au sélecteur `focus-within` <sup>(angl.)</sup>](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

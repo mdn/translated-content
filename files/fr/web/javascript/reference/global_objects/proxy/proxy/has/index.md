@@ -3,8 +3,6 @@ title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
-{{JSRef}}
-
 La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}

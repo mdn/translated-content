@@ -29,7 +29,11 @@ Por motivos de privacidad, los navegadores limitan estrictamente los estilos que
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:visited {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

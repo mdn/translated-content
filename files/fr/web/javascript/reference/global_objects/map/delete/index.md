@@ -59,7 +59,7 @@ console.log(maMap.has("truc")); // Retourne false. L'élément "truc" n'est plus
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Map")}}
+- L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.clear()")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}

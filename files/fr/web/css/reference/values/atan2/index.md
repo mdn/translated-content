@@ -3,7 +3,7 @@ title: Fonction CSS `atan2()`
 short-title: atan2()
 slug: Web/CSS/Reference/Values/atan2
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: daa035392f8466e6d75f290d9ffa4317adca4070
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`atan2()`** est une fonction trigonométrique qui retourne l'arc tangente de deux valeurs comprises entre `-∞` et `+∞`. La fonction accepte deux arguments et retourne un angle ({{CSSxRef("&lt;angle&gt;")}}) compris entre `-180deg` et `180deg`, sans impliquer d'unité spécifique comme les radians.

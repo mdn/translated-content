@@ -42,7 +42,7 @@ console.log(time.toString()); // '12:34:56'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDateTime.prototype.toZonedDateTime()")}}

@@ -9,7 +9,7 @@ slug: Web/API/WebGL2RenderingContext/createSampler
 
 ## 句法
 
-```plain
+```js
 WebGLSampler gl.createSampler();
 ```
 

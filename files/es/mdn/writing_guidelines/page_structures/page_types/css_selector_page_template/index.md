@@ -2,7 +2,7 @@
 title: Plantilla de página de selector CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -57,7 +57,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es experimental.
 >   Si es experimental y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página de funcionalidades experimentales de Firefox.
-> - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está desaconsejado.
 > - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con las recomendaciones a continuación:
@@ -76,7 +75,7 @@ l10n:
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Párrafo de resumen: comienza nombrando el selector y explicando qué hace. Lo ideal es que sea una o dos frases cortas.
 

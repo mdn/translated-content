@@ -23,7 +23,7 @@ En este artículo vamos a ver cómo se tratan ciertos elementos especiales en CS
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>

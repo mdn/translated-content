@@ -4,8 +4,6 @@ short-title: Service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 ---
 
-{{PWASidebar}}
-
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 Jusqu'à présent, nous avons écrit le HTML, le CSS et le JavaScript de l'application CycleTracker. Nous avons ajouté un fichier de manifeste qui définit les couleurs, icônes, URL et d'autres fonctionnalités de l'application. Notre application web est fonctionnelle&nbsp;! Toutefois, ce n'est pas encore une application web progressive. Dans cette section, nous écrirons le JavaScript nécessaire pour que notre application web devienne une PWA qui puisse être distribuée comme une application à part entière et qui fonctionne hors-ligne.

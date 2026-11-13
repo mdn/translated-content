@@ -42,8 +42,8 @@ console.log(yearMonth.toString()); // 2021-07
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}

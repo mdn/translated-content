@@ -6,10 +6,10 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<u>`** représente une portion de texte en ligne devant être rendue de manière à indiquer qu'elle comporte une annotation non textuelle. Par défaut, il est affiché avec un unique soulignement continu, mais cela peut être modifié via CSS.
+L'élément [HTML](/fr/docs/Web/HTML) **`<u>`** représente une portion de texte en incise devant être rendue de manière à indiquer qu'elle comporte une annotation non textuelle. Par défaut, il est affiché avec un unique soulignement continu, mais cela peut être modifié avec CSS.
 
 > [!WARNING]
-> Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{CSSxRef("text-decoration")}} avec la valeur `"underline"`.
+> Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faut pas utiliser cet élément mais la propriété CSS {{CSSxRef("text-decoration")}} avec la valeur `"underline"`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;u&gt;", "tabbed-shorter")}}
 
@@ -41,7 +41,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 Comme d'autres éléments purement liés à la mise en forme, l'élément HTML d'origine `<u>` (soulignement) a été déprécié dans HTML 4&nbsp;; cependant, `<u>` a été réintroduit dans HTML5 avec une nouvelle signification sémantique&nbsp;: marquer un texte comme ayant une annotation non textuelle appliquée.
 
 > [!NOTE]
-> Évitez d'utiliser l'élément `<u>` avec sa mise en forme par défaut (texte souligné) d'une manière qui pourrait être confondue avec un lien hypertexte, également souligné par défaut.
+> Évitez d'utiliser l'élément `<u>` avec sa mise en forme par défaut (texte souligné) d'une manière qui peut être confondue avec un lien hypertexte, également souligné par défaut.
 
 ### Cas d'utilisation
 
@@ -51,14 +51,14 @@ Vous ne devez _pas_ utiliser `<u>` pour souligner du texte à des fins de prése
 
 ### Autres éléments pouvant être utilisés
 
-Dans la plupart des cas, il faudra utiliser un autre élément que `<u>`&nbsp;:
+Dans la plupart des cas, il faut utiliser un autre élément que `<u>`&nbsp;:
 
 - {{HTMLElement("em")}} afin d'indiquer une emphase
 - {{HTMLElement("b")}} afin d'indiquer une attention particulière
 - {{HTMLElement("mark")}} afin de marquer certains mots-clés ou phrases
 - {{HTMLElement("strong")}} afin d'indiquer que le texte a une importance particulière
 - {{HTMLElement("cite")}} afin d'indiquer le titre d'une œuvre ou d'une publication
-- {{HTMLElement("i")}} afin d'indiquer un terme technique, des noms de navires, des pensées ou des translitérations au sein d'un texte occidental.
+- {{HTMLElement("i")}} afin d'indiquer un terme technique, des noms de navires, des pensées ou des translittérations au sein d'un texte occidental.
 
 Pour fournir des annotations textuelles (par opposition aux annotations non textuelles créées avec `<u>`), utilisez l'élément {{HTMLElement("ruby")}}.
 
@@ -97,7 +97,7 @@ La plupart du temps, ce n'est pas l'élément `<u>` qu'il faut utiliser. Voici q
 
 #### Souligner pour la simple mise en forme
 
-Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS {{CSSxRef("text-decoration")}} et la valeur `"underline"`&nbsp;:
+Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilise un élément {{HTMLElement("span")}} qu'on met en forme avec la propriété CSS {{CSSxRef("text-decoration")}} et la valeur `"underline"`&nbsp;:
 
 ##### HTML
 

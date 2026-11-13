@@ -6,11 +6,11 @@ l10n:
   sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
-L'attribut **`maxlength`** définit la [longueur maximale de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length) que l'utilisateur·rice peut saisir dans un élément HTML {{HTMLElement("input")}} ou un élément {{HTMLElement("textarea")}}. L'attribut doit avoir une valeur entière supérieure ou égale à 0.
+L'attribut **`maxlength`** définit la [longueur maximale de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length) que l'utilisateur·ice peut saisir dans un élément HTML {{HTMLElement("input")}} ou un élément {{HTMLElement("textarea")}}. L'attribut doit avoir une valeur entière supérieure ou égale à 0.
 
 La longueur est mesurée en {{Glossary("UTF-16", "unités de code UTF-16")}}, ce qui correspond souvent, mais pas toujours, au nombre de caractères. Si aucun `maxlength` n'est défini, ou si une valeur invalide est définie, la saisie n'a pas de longueur maximale.
 
-Toute valeur de `maxlength` doit être supérieure ou égale à la valeur de [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength), si elle est présente et valide. Le champ échouera à la validation des contraintes si la longueur du texte saisi dépasse le nombre d'unités de code UTF-16 autorisé par `maxlength`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·rice.
+Toute valeur de `maxlength` doit être supérieure ou égale à la valeur de [`minlength`](/fr/docs/Web/HTML/Reference/Attributes/minlength), si elle est présente et valide. Le champ échouera à la validation des contraintes si la longueur du texte saisi dépasse le nombre d'unités de code UTF-16 autorisé par `maxlength`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur·ice.
 
 ## Validation des contraintes
 

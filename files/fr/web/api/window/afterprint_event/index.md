@@ -3,10 +3,10 @@ title: "Window : évènement afterprint"
 short-title: afterprint
 slug: Web/API/Window/afterprint_event
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement **`afterprint`** de l'interface {{DOMxRef("Window")}} est déclenché après que le document associé a commencé à s'imprimer ou que l'aperçu avant impression a été fermé.
 

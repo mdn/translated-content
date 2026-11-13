@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Math
 original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 À ce point du didacticiel, nous parlerons des mathématiques en JavaScript, de comment utiliser les [opérateurs](/fr/docs/Glossary/Operator) et d'autres fonctionnalités pour manipuler les nombres à notre guise.
 

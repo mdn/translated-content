@@ -11,7 +11,7 @@ slug: Web/API/MutationObserver/observe
 
 ## 语法
 
-```plain
+```js-nolint
 mutationObserver.observe(target[, options])
 ```
 

@@ -3,16 +3,26 @@ title: "Window : propriété customElements"
 short-title: customElements
 slug: Web/API/Window/customElements
 l10n:
-  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
+  sourceCommit: 26c6aca187b3718498886f9fba6c1cc4f4833b5d
 ---
 
 {{APIRef("Web Components")}}
 
-La propriété en lecture seule **`customElements`** de l'interface {{DOMxRef("Window")}} retourne une référence à l'objet {{DOMxRef("CustomElementRegistry")}}, qui peut être utilisé pour enregistrer de nouveaux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) et obtenir des informations sur les éléments personnalisés déjà enregistrés.
+La propriété en lecture seule **`customElements`** de l'interface {{DOMxRef("Window")}} retourne une référence à l'objet global {{DOMxRef("CustomElementRegistry")}}, qui peut être utilisé pour enregistrer de nouveaux [éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) et obtenir des informations sur les éléments personnalisés déjà enregistrés.
+
+Le registre global est utilisé pour enregistrer des éléments personnalisés par défaut, mais une racine d'ombre peut choisir d'utiliser un [registre d'éléments personnalisés avec portée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_avec_portée) afin d'éviter d'éventuels conflits dans les noms d'éléments définis.
+
+## Valeur
+
+Un objet {{DOMxRef("CustomElementRegistry")}}.
 
 ## Exemples
 
-L'exemple le plus courant d'utilisation de cette propriété que vous verrez sera d'obtenir l'accès à la méthode {{DOMxRef("CustomElementRegistry.define()")}} pour définir et enregistrer un nouvel élément personnalisé, par exemple&nbsp;:
+### Utilisation simple
+
+L'exemple le plus courant que vous voyez de cette propriété utilisée est d'accéder à la méthode {{DOMxRef("CustomElementRegistry.define()")}} pour définir et enregistrer un nouvel élément personnalisé.
+
+Par exemple&nbsp;:
 
 ```js
 let registreElementsPersonnalises = window.customElements;
@@ -22,7 +32,7 @@ registreElementsPersonnalises.define(
 );
 ```
 
-Cependant, il est généralement raccourci en quelque chose comme&nbsp;:
+Notez que la classe d'élément personnalisé est couramment définie directement à l'intérieur de l'appel `define()`, comme illustré&nbsp;:
 
 ```js
 customElements.define(

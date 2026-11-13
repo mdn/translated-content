@@ -52,5 +52,5 @@ console.log(ym1.equals(ym4)); // false
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainYearMonth")}}
+- L'objet natif {{JSxRef("Temporal.PlainYearMonth")}}
 - La méthode statique {{JSxRef("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}}

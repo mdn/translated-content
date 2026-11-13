@@ -3,7 +3,7 @@ title: "HTMLImageElement : propriété sizes"
 short-title: sizes
 slug: Web/API/HTMLImageElement/sizes
 l10n:
-  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
+  sourceCommit: fde38492f4490cb442affcf2a31e66defa9d76f6
 ---
 
 {{APIRef("HTML DOM")}}
@@ -178,7 +178,7 @@ L'exemple est mieux {{LiveSampleLink("Sélection d'une image adaptée à la larg
 
 1. Faites défiler le cadre pour afficher l'image.
    L'étiquette en bas de l'image montre la largeur actuelle du conteneur.
-2. Redimensionnez la fenêtre — vous devriez voir l'image changer aux points de rupture des media queries de l'attribut `sizes`.
+2. Redimensionnez la fenêtre — vous devez voir l'image changer aux points de rupture des media queries de l'attribut `sizes`.
 
    Notez que l'image sélectionnée peut être plus grande que la largeur du conteneur ne le suggère.
    De nombreux écrans, sinon la plupart, ont un [rapport de pixels de l'appareil (DPR)](/fr/docs/Web/API/Window/devicePixelRatio) supérieur à un.
@@ -191,7 +191,7 @@ L'exemple est mieux {{LiveSampleLink("Sélection d'une image adaptée à la larg
 {{EmbedLiveSample("Sélection d'une image adaptée à la largeur de la fenêtre", "", 600)}}
 
 Le journal fournit des informations lorsque l'évènement `load` se déclenche pour l'image et lorsqu'elle intersecte la fenêtre d'affichage visible.
-Notez que l'image est chargée de manière paresseuse, donc l'évènement `load` devrait se déclencher juste avant que l'image n'entre dans la fenêtre d'affichage.
+Notez que l'image est chargée de manière paresseuse, donc l'évènement `load` doit se déclencher juste avant que l'image n'entre dans la fenêtre d'affichage.
 
 ### Sélection automatique d'image pour les images chargées de manière paresseuse
 
@@ -405,14 +405,14 @@ Le reste du CSS et le JavaScript qui alimentent le curseur, la journalisation, e
 #### Résultat
 
 Faites défiler le cadre pour afficher les trois images.
-Le navigateur devrait avoir sélectionné une image différente pour chacune en fonction des différentes contraintes de largeur.
+Le navigateur doit avoir sélectionné une image différente pour chacune en fonction des différentes contraintes de largeur.
 Vous pouvez utiliser le curseur pour modifier la taille du conteneur de la première image.
 Notez que le navigateur peut ou non sélectionner une nouvelle image à afficher lorsque la taille du conteneur change, car les implémentations ne sont pas tenues de réagir aux changements dynamiques.
 
 {{EmbedLiveSample("Sélection automatique d'image pour les images chargées de manière paresseuse", "", 600)}}
 
 Le journal fournit des informations lorsque l'évènement `load` se déclenche pour chaque image, et lorsque une image intersecte la zone d'affichage visible.
-Notez que les images sont chargées de manière paresseuse, donc l'évènement `load` devrait se déclencher juste avant que l'image n'entre dans la zone d'affichage.
+Notez que les images sont chargées de manière paresseuse, donc l'évènement `load` doit se déclencher juste avant que l'image n'entre dans la zone d'affichage.
 Notez également que l'évènement `load` se déclenche également lorsque vous modifiez la taille du conteneur pour la première image, indiquant quand le navigateur a recalculé la mise en page (pas nécessairement qu'une nouvelle image a été chargée).
 
 ### Exemple de blog
@@ -484,7 +484,7 @@ article img {
 
 #### JavaScript
 
-Le code JavaScript gère les deux boutons qui permettent d'alterner la troisième option de largeur entre 40em et 50em&nbsp;; cela se fait en gérant l'évènement {{DOMxRef("Element.click_event", "click")}} et en utilisant la méthode JavaScript {{JSxRef("String.replace", "replace()")}} pour remplacer la partie concernée de la chaîne `sizes`.
+Le code JavaScript gère les deux boutons qui permettent d'alterner la troisième option de largeur entre 40em et 50em&nbsp;; cela se fait en gérant l'évènement {{DOMxRef("Element.click_event", "click")}} et en utilisant la méthode JavaScript {{JSxRef("String.replace", "replace()")}} pour remplacer la partie concernée de la chaîne de caractères `sizes`.
 
 ```js
 const image = document.querySelector("article img");
@@ -506,7 +506,7 @@ break50.addEventListener(
 
 La page est mieux {{LiveSampleLink("Exemple de blog", "affichée dans sa propre fenêtre")}}, afin de pouvoir ajuster pleinement les tailles, et l'exemple n'est pas contraint par son cadre contenant.
 
-1. Activez les outils de développement et changez la largeur de la page — vous devriez voir l'image changer (et sauter en taille) aux points de rupture des requêtes média de tailles&nbsp;: `640px` (`40em`), et `800px` (`50em`).
+1. Activez les outils de développement et changez la largeur de la page — vous devez voir l'image changer (et sauter en taille) aux points de rupture des requêtes média de tailles&nbsp;: `640px` (`40em`), et `800px` (`50em`).
 2. Réglez la largeur entre `50em` (`800px`) et `60em` (`960px`) afin que la dernière requête média soit sélectionnée.
    Ensuite, appuyez alternativement sur chacun des boutons et notez comment la taille de l'image change.
 

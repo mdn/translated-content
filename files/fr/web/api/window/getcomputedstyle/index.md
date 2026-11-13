@@ -3,7 +3,7 @@ title: "Window : méthode getComputedStyle()"
 short-title: getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 l10n:
-  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
+  sourceCommit: 0f059575d32845cd649c7c4434485b34740c1db5
 ---
 
 {{APIRef("CSSOM")}}
@@ -50,22 +50,22 @@ Un objet {{DOMxRef("CSSStyleProperties")}} _dynamique_, qui se met à jour autom
 
 La méthode retourne un objet {{DOMxRef("CSSStyleProperties")}} dynamique et en lecture seule contenant les [valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue) de toutes les propriétés CSS d'un élément, après application des feuilles de style actives et résolution de toute computation que ces valeurs peuvent contenir.
 
-L'objet retourné peut être utilisé pour inspecter les styles de l'élément — y compris ceux définis en ligne, à l'aide d'un élément `<style>`, ou via une feuille de style externe.
+L'objet retourné peut être utilisé pour inspecter les styles de l'élément — y compris ceux définis en ligne, à l'aide d'un élément `<style>`, ou par une feuille de style externe.
 Comme l'objet est en lecture seule, vous ne pouvez pas l'utiliser pour définir les styles d'un élément.
-Cependant, comme il est «&nbsp;dynamique&nbsp;», si vous mettez à jour les styles de l'élément à l'aide d'une autre API (comme {{DOMxRef("HTMLElement.style")}}), l'objet retourné sera mis à jour avec la valeur résolue correspondante.
+Cependant, comme il est «&nbsp;dynamique&nbsp;», si vous mettez à jour les styles de l'élément à l'aide d'une autre API (comme {{DOMxRef("HTMLElement.style")}}), l'objet retourné est mis à jour avec la valeur résolue correspondante.
 
 La distinction selon laquelle l'objet contient des [valeurs résolues](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_résolue) est importante.
-Pour la plupart des propriétés, en particulier celles qui dépendent de la mise en page comme `display`, `font-size` ou `line-height`, la valeur résolue est la valeur calculée.
+Pour la plupart des propriétés, en particulier celles qui ne dépendent pas de la mise en page, comme `display`, `font-size` ou `line-height`, la valeur résolue est la valeur calculée.
 Pour les propriétés qui dépendent de la mise en page, la valeur utilisée peut différer légèrement de la valeur calculée, et c'est cette valeur qui est retournée comme valeur résolue.
-Pour une propriété animée, il s'agira de la valeur calculée au point courant de l'animation.
+Pour une propriété animée, il s'agit de la valeur calculée au point courant de l'animation.
 
 L'objet retourné possède des propriétés nommées avec des tirets et les propriétés correspondantes en {{Glossary("camel_case", "camel-case")}} pour **toutes** les [propriétés CSS](/fr/docs/Web/CSS/Reference/Properties) prises en charge par le navigateur, y compris les propriétés [raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) et les propriétés longues.
 
 Les propriétés CSS raccourcies de l'élément sont développées en leurs propriétés longues correspondantes.
-Par exemple, un élément avec le style `"border-top: 1px solid black"` serait représenté dans l'objet retourné par les propriétés nommées {{CSSxRef("border-top")}} et `borderTop`, ainsi que les propriétés longues correspondantes {{CSSxRef("border-top-color")}} et `borderTopColor`, {{CSSxRef("border-top-style")}} et `borderTopStyle`, et {{CSSxRef("border-top-width")}} et `borderTopWidth`.
+Par exemple, un élément avec le style `"border-top: 1px solid black"` est représenté dans l'objet retourné par les propriétés nommées {{CSSxRef("border-top")}} et `borderTop`, ainsi que les propriétés longues correspondantes {{CSSxRef("border-top-color")}} et `borderTopColor`, {{CSSxRef("border-top-style")}} et `borderTopStyle`, et {{CSSxRef("border-top-width")}} et `borderTopWidth`.
 
 Notez que l'objet retourné est du même type que celui retourné par la propriété {{DOMxRef("HTMLElement/style", "style")}} de l'élément.
-Cependant, l'objet `element.style` peut aussi être utilisé pour **définir** des styles sur cet élément, et ne retourne que les styles en ligne ou ceux définis via JavaScript.
+Cependant, l'objet `element.style` peut aussi être utilisé pour **définir** des styles sur cet élément, et ne retourne que les styles en ligne ou ceux définis avec JavaScript.
 
 ### Valeurs de couleur
 

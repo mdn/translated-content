@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="search">`
 short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`search`** sont des champs de texte conçus pour que l'utilisateur·ice puisse saisir des requêtes de recherche. Ils sont fonctionnellement identiques aux champs [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), mais peuvent être mis en forme différemment par {{Glossary("user agent", "l'agent utilisateur")}}.
@@ -33,7 +33,7 @@ label {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères représentant la valeur contenue dans le champ de recherche. Vous pouvez récupérer cette valeur en utilisant la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement/value) en JavaScript.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères représentant la valeur contenue dans le champ de recherche. Vous pouvez récupérer cette valeur en utilisant la propriété {{DOMxRef("HTMLInputElement.value")}} en JavaScript.
 
 ```js
 termesRecherche = monChampSearch.value;
@@ -63,9 +63,9 @@ L'entrée de formulaire échoue à la [validation des contraintes](/fr/docs/Web/
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est défini, est une expression régulière que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression régulière JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression régulière afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
+L'attribut `pattern`, lorsqu'il est défini, est une expression rationnelle que la valeur de l'élément [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) doit correspondre pour que la valeur passe la [validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Il doit s'agir d'une expression rationnelle JavaScript valide, telle qu'utilisée par le type {{JSxRef("RegExp")}}, et comme documenté dans notre [guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)&nbsp;; le drapeau `'u'` est défini lors de la compilation de l'expression rationnelle afin que le modèle soit traité comme une séquence de points de code Unicode, au lieu de {{Glossary("ASCII")}}. Aucune barre oblique ne doit être définie autour du texte du modèle.
 
-Si le motif défini n'est pas défini ou est invalide, aucune expression régulière n'est appliquée et cet attribut est complètement ignoré.
+Si le motif défini n'est pas défini ou est invalide, aucune expression rationnelle n'est appliquée et cet attribut est complètement ignoré.
 
 > [!NOTE]
 > Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir un texte que la plupart des navigateurs affichent comme info-bulle pour expliquer les exigences de correspondance du motif. Vous devez également inclure d'autres textes explicatifs à proximité.
@@ -107,7 +107,7 @@ Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent �
 
 Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
-La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple, si des préférences au sein de {{Glossary("user agent", "l'agent utilisateur")}} surchargent ce paramètre).
+La valeur retournée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple, si des préférences au sein de {{Glossary("user agent", "l'agent utilisateur")}} surchargent ce paramètre).
 
 ## Attributs non standard
 
@@ -135,19 +135,14 @@ Les éléments `<input>` de type `search` sont semblables aux éléments de type
 ### Exemple simple
 
 ```html
-<form>
-  <div>
-    <input type="search" id="maRecherche" name="q" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input type="search" id="maRecherche" name="q" />
 ```
 
 Cet exemple produit le résultat suivant&nbsp;:
 
 {{EmbedLiveSample("Exemple simple", 600, 40)}}
 
-`q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Lorsque le formulaire est envoyé, les données envoyées au serveur ont la forme `q=termederecherche`.
+`q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Si ce champ est inclus dans un formulaire et que celui-ci est envoyé, les données envoyées au serveur ont la forme `q=termederecherche`.
 
 > [!NOTE]
 > Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/input#name), sinon aucune valeur n'est envoyée.
@@ -167,16 +162,11 @@ De plus, les navigateurs modernes proposent souvent une auto-complétion basée 
 Il est possible de fournir un texte indicatif dans le champ de recherche afin de fournir une indication quant aux recherches qu'il est possible de faire. Pour cela, on ajoute un texte avec l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder). Par exemple&nbsp;:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…" />
 ```
 
 Voici le résultat obtenu avec ce fragment HTML&nbsp;:
@@ -185,27 +175,22 @@ Voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ### Les champs de recherche et l'accessibilité
 
-Un des problèmes posés par les formulaires de recherche est leur accessibilité. En effet, dans la plupart des situations, il n'est pas nécessaire de fournir une étiquette indiquant le rôle de la recherche, car le placement du champ rend son rôle clair ([cet exemple montre un motif commun <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+Un des problèmes posés par les formulaires de recherche est leur accessibilité. En effet, dans la plupart des situations, il n'est pas nécessaire de fournir une étiquette indiquant le rôle de la recherche, car le placement du champ rend son rôle clair ([cet exemple montre un motif visuel commun](#formulaire_de_recherche_accessible)).
 
 Cela peut toutefois prêter à confusion pour les utilisateur·ice·s de lecteurs d'écran, car ceux-ci ne reçoivent aucune indication vocale sur la nature du champ de recherche. Une solution qui n'a pas d'incidence sur la conception visuelle consiste à utiliser des [éléments de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role).
 
 - Enveloppez toute la fonctionnalité de recherche dans un élément {{HTMLElement("search")}}, ce qui crée une région de repère que les technologies d'assistance peuvent annoncer et naviguer rapidement. Si votre `<input>` est déjà dans un `<form>`, vous pouvez alternativement ajouter [`role="search"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) à l'élément `<form>`, ce qui fait également du `<form>` un repère de recherche. L'élément `<search>` utilise la sémantique HTML native, tandis que `role="search"` bénéficie d'un meilleur support et peut être plus concis à taper si vous avez déjà un `<form>` englobant.
 - Si cela ne suffit pas, vous pouvez utiliser un attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) sur le {{HTMLElement("input")}} lui-même. Il s'agit d'une étiquette textuelle descriptive qui est lue par le lecteur d'écran&nbsp;; elle est utilisée comme équivalent non visuel de `<label>`.
 
-Prenons un exemple&nbsp;:
+Prenons un exemple minimaliste&nbsp;:
 
 ```html
-<form role="search">
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…"
-      aria-label="Rechercher parmi le contenu du site" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…"
+  aria-label="Rechercher parmi le contenu du site" />
 ```
 
 Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
@@ -215,24 +200,19 @@ Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
 Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposent de plus d'informations.
 
 > [!NOTE]
-> Voir [Panneaux/points de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
+> Voir [Panneaux/points de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#panneauxpoints_de_repère) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
 
 ### Paramétrer la taille physique
 
 Il est possible de contrôler la taille physique du champ de saisie grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Cet attribut permet d'indiquer le nombre de caractères qui peuvent être affichés simultanément à l'intérieur du champ. Ainsi, dans l'exemple qui suit, la zone de recherche peut contenir 30 caractères&nbsp;:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="maRecherche"
-      name="q"
-      placeholder="Rechercher sur le site…"
-      size="30" />
-    <button>Rechercher</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="maRecherche"
+  name="q"
+  placeholder="Rechercher sur le site…"
+  size="30" />
 ```
 
 On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
@@ -244,7 +224,7 @@ On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
 Les éléments `<input>` de type `search` possèdent les mêmes fonctionnalités de validation que les éléments `<input type="text">`. Il existe peu de raison de contraindre les termes d'une recherche mais voici quelques cas.
 
 > [!NOTE]
-> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
+> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées peuvent causer des dommages aux bases de données et autres composants sensibles.
 
 ### Une note sur la mise en forme
 
@@ -264,7 +244,7 @@ input:valid ~ span::after {
 }
 ```
 
-Vous pouvez ici voir qu'on utilise un élément {{HTMLElement("span")}} placé après l'élément de formulaire, qui sert de conteneur pour les icônes. Cela était nécessaire, car certains types d'éléments de saisie, sur certains navigateurs, n'affichent pas correctement les icônes placées directement après eux.
+Vous pouvez ici voir qu'on utilise un élément {{HTMLElement("span")}} placé après l'élément de formulaire, qui sert de conteneur pour les icônes. C'est nécessaire, car certains types d'éléments de saisie, sur certains navigateurs, n'affichent pas correctement les icônes placées directement après eux.
 
 ### Rendre le champ obligatoire
 
@@ -283,6 +263,12 @@ Il est possible d'utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/E
     <span class="validite"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -322,9 +308,7 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 ```html
 <form>
   <div>
-    <label for="maRecherche">
-      Rechercher une utilisatrice ou un utilisateur
-    </label>
+    <label for="maRecherche"> Rechercher un·e utilisateur·ice </label>
     <input
       type="search"
       id="maRecherche"
@@ -338,6 +322,12 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
     <span class="validite"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -366,9 +356,9 @@ Si vous essayez d'envoyer une valeur qui est plus petite que 4 caractères, vous
 
 ### Indiquer un motif
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression rationnelle](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_rationnelle) pour une introduction).
 
-Regardons un exemple. Imaginons que nous voulions fournir un formulaire de recherche par identifiant de produit, et que les identifiants soient tous des codes composés de deux lettres suivies de quatre chiffres. L'exemple suivant couvre ce cas&nbsp;:
+Regardons un exemple. Imaginons que nous voulons fournir un formulaire de recherche par identifiant de produit, et que les identifiants soient tous des codes composés de deux lettres suivies de quatre chiffres. L'exemple suivant couvre ce cas&nbsp;:
 
 ```html
 <form>
@@ -386,6 +376,12 @@ Regardons un exemple. Imaginons que nous voulions fournir un formulaire de reche
     <span class="validite"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -412,7 +408,106 @@ Voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ## Exemples
 
-Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [`website-aria-roles` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) ([voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+### Formulaire de recherche accessible
+
+Cet exemple montre un menu typique avec {{HTMLElement("nav")}} qui inclut un formulaire de recherche. Les fonctionnalités [WAI-ARIA](/fr/docs/Web/Accessibility/ARIA) sont utilisées pour rendre le formulaire plus accessible aux technologies d'assistance (<abbr lang="en" title="Assistive Technology">AT</abbr>).
+
+#### HTML
+
+Les principaux éléments de navigation sont composés d'une liste de liens. Le formulaire de recherche {{HTMLElement("form")}} se voit attribuer un [`role="search"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role), ce qui fait du `<form>` un point de repère de recherche, annoncé aux technologies d'assistance. Nous donnons également à l'élément `<input type="search">` un [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) pour lui fournir une étiquette claire qui est lue par les lecteurs d'écran.
+
+```html live-sample___accessible-search
+<nav>
+  <ul>
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <form role="search">
+    <input
+      type="search"
+      name="q"
+      placeholder="Requête de recherche"
+      aria-label="Rechercher dans le contenu du site" />
+    <button>Rechercher !</button>
+  </form>
+</nav>
+```
+
+```css hidden live-sample___accessible-search
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+input[type="search"] {
+  flex: 3;
+  height: 30px;
+}
+
+button {
+  flex: 1;
+  height: 30px;
+  padding: 0 1em;
+  background: #333333;
+  border: 0;
+  color: white;
+}
+```
+
+Nous avons masqué le CSS et le JavaScript de l'exemple pour plus de concision, car ils ne sont pas pertinents pour comprendre le HTML. Vous pouvez les consulter en appuyant sur le bouton «&nbsp;Exécuter&nbsp;» dans l'exemple interactif ci-dessous.
+
+```js hidden live-sample___accessible-search
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("accessible-search", "100%", 70)}}
 
 ## Résumé technique
 

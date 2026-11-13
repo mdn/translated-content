@@ -2,7 +2,7 @@
 title: 400 Bad Request
 slug: Web/HTTP/Reference/Status/400
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 88d5d5230dc9f67cbfa37cea178f0eccd6632a8b
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`400 Bad Request`** indique que le serveur ne traite pas la requête en raison d'une erreur que le serveur considère comme une erreur du côté client.
@@ -29,8 +29,7 @@ Content-Type: application/json
 Content-Length: 38
 
 {
-  "email": "s@example.com
-",
+  "email": "s@example.com",
   "username": "s.smith"
 }
 ```

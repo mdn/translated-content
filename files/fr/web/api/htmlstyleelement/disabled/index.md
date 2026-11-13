@@ -3,7 +3,7 @@ title: "HTMLStyleElement : propriété disabled"
 short-title: disabled
 slug: Web/API/HTMLStyleElement/disabled
 l10n:
-  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
+  sourceCommit: 4ad860d817cf6d8ca24f41b3846b29e158934d27
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,14 +22,14 @@ Définir la propriété à `true` lorsqu'il n'y a pas de feuille de style associ
 
 ## Exemples
 
-### Désactiver un style en ligne
+### Désactiver un style en incise
 
 Cet exemple montre comment définir par programmation la propriété disabled sur un style défini dans le HTML à l'aide de l'élément HTML {{HTMLElement("style")}}.
 Vous pouvez également accéder à toutes les feuilles de style du document à l'aide de {{DOMxRef("Document.styleSheets")}}.
 
 #### HTML
 
-Le HTML contient un élément {{HTMLElement("style")}} qui rend les éléments paragraphe bleus, un élément paragraphe, et un bouton qui sera utilisé pour activer et désactiver le style.
+Le HTML contient un élément HTML {{HTMLElement("style")}} qui rend les éléments paragraphe bleus, un élément paragraphe, et un bouton qui est utilisé pour activer et désactiver le style.
 
 ```html
 <button>Activer</button>
@@ -72,7 +72,7 @@ button.addEventListener("click", () => {
 Le résultat est affiché ci-dessous.
 Appuyez sur le bouton pour basculer la valeur de la propriété `disabled` sur le style utilisé pour le texte du paragraphe.
 
-{{EmbedLiveSample("Désactiver un style en ligne")}}
+{{EmbedLiveSample("Désactiver un style en incise")}}
 
 ### Désactiver un style défini par programmation
 
@@ -105,8 +105,8 @@ document.body.appendChild(style);
 ```
 
 On peut ensuite désactiver le style comme ci-dessous.
-Notez que c'est le premier moment où définir la propriété à `true` fonctionnera.
-Avant ce point, le document n'avait pas de style associé, donc la valeur par défaut est `false`.
+Notez que c'est le premier moment où définir la propriété à `true` fonctionne.
+Avant ce point, le document n'a pas de style associé, donc la valeur par défaut est `false`.
 
 ```js
 // Désactiver le style

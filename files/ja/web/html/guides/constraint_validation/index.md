@@ -3,7 +3,7 @@ title: HTML フォーム検証と制約検証 API の使用
 short-title: 制約検証
 slug: Web/HTML/Guides/Constraint_validation
 l10n:
-  sourceCommit: 6f889a782a6663e055bbfaf29a4b0be895866b9d
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は制約検証 API を使用して検査することができます。
@@ -307,6 +307,12 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 これは以下のように表示されます。
 
 {{EmbedLiveSample("Constraint_combining_several_fields_Postal_code_validation")}}
@@ -436,7 +442,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型。それ以外のボタンは制約検証の対象にはなりません。
+  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型で作成したもの）。それ以外のボタンは制約検証の対象にはなりません。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の `validity` プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。

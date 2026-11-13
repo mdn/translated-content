@@ -20,7 +20,7 @@ console.log(view.getInt8(1));
 
 ## 语法
 
-```plain
+```js-nolint
 dataview.getInt8(byteOffset)
 ```
 

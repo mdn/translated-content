@@ -3,7 +3,7 @@ title: Tutoriels de développement web
 short-title: Tutoriels
 slug: MDN/Tutorials
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 Les liens de cette page mènent à divers tutoriels et ressources d'apprentissage.
@@ -59,7 +59,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 ### Sujets CSS intermédiaires
 
 - [Mise en page CSS](/fr/docs/Learn_web_development/Core/CSS_layout)
-  - : Après avoir vu les bases de CSS, la mise en forme du texte et la manipulation des boîtes, il est temps d'apprendre à placer vos boîtes par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais) et entre elles. Nous avons couvert les prérequis nécessaires, vous pouvez donc plonger dans la mise en page CSS, explorer les différents modes d'affichage, les méthodes traditionnelles (float, positionnement) et les nouveaux outils comme flexbox.
+  - : Après avoir vu les bases de CSS, la mise en forme du texte et la manipulation des boîtes, il est temps d'apprendre à placer vos boîtes par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais) et entre elles. Nous avons couvert les prérequis nécessaires, vous pouvez donc plonger dans la mise en page CSS, explorer les différents modes d'affichage, les méthodes traditionnelles (float, positionnement) et les nouveaux outils comme les boîtes flexibles.
 - [Référence CSS](/fr/docs/Web/CSS/Reference)
   - : Référence complète de CSS, avec détails sur la compatibilité Firefox et autres navigateurs.
 - [Grilles fluides <sup>(angl.)</sup>](https://alistapart.com/article/fluidgrids/)
@@ -87,7 +87,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 - [Codecademy <sup>(angl.)</sup>](https://www.codecademy.com/)
   - : Codecademy est une façon simple d'apprendre à coder en JavaScript. C'est interactif et vous pouvez le faire avec vos ami·e·s.
 - [freeCodeCamp <sup>(angl.)</sup>](https://www.freecodecamp.org/)
-  - : freeCodeCamp enseigne divers langages et frameworks pour le développement web. Il propose aussi un [forum <sup>(angl.)</sup>](https://forum.freecodecamp.org/), une [radio en ligne <sup>(angl.)</sup>](https://coderadio.freecodecamp.org/) et un [blog <sup>(angl.)</sup>](https://www.freecodecamp.org/news).
+  - : freeCodeCamp enseigne divers langages et cadriciels pour le développement web. Il propose aussi un [forum <sup>(angl.)</sup>](https://forum.freecodecamp.org/), une [radio en ligne <sup>(angl.)</sup>](https://coderadio.freecodecamp.org/) et un [blog <sup>(angl.)</sup>](https://www.freecodecamp.org/news).
 
 ### Sujets JavaScript intermédiaires
 
@@ -99,7 +99,7 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
   - : Un guide complet des méthodologies JavaScript intermédiaires et avancées.
 - [Speaking JavaScript <sup>(angl.)</sup>](https://exploringjs.com/es5/)
   - : Pour les programmeur·euse·s souhaitant apprendre JavaScript rapidement et correctement, ou approfondir leurs connaissances.
-- [Essential JavaScript Design Patterns <sup>(angl.)</sup>](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [Essential JavaScript Design Patterns <sup>(angl.)</sup>](https://patterns.addy.ie/)
   - : Introduction aux patrons de conception JavaScript essentiels.
 - [JavaScript.info - Le tutoriel JavaScript moderne <sup>(angl.)</sup>](https://javascript.info/)
   - : Partie 1&nbsp;: Le langage. Partie 2&nbsp;: Travailler avec les navigateurs.
@@ -124,4 +124,4 @@ Ces tutoriels sont créés par des entreprises et des développeur·euse·s web 
 ### Développement d'extensions
 
 - [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions est un système multiplateforme pour développer des modules complémentaires de navigateur. Il est largement compatible avec [l'API d'extension <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionnent généralement dans Firefox ou [Microsoft Edge <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) avec [quelques adaptations <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). L'API est aussi totalement compatible avec [Firefox multiprocessus <sup>(angl.)</sup>](https://wiki.mozilla.org/Firefox/multiprocess).
+  - : WebExtensions est un système multiplateforme pour développer des modules complémentaires de navigateur. Il est largement compatible avec [l'API d'extension <sup>(angl.)</sup>](https://developer.chrome.com/docs/extensions/reference/) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionnent généralement dans Firefox ou [Microsoft Edge <sup>(angl.)</sup>](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) avec [quelques adaptations <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). L'API est aussi totalement compatible avec [Firefox multi-processus <sup>(angl.)</sup>](https://wiki.mozilla.org/Firefox/multiprocess).

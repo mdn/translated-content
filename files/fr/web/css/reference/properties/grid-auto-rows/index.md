@@ -3,10 +3,12 @@ title: Propriété CSS `grid-auto-rows`
 short-title: grid-auto-rows
 slug: Web/CSS/Reference/Properties/grid-auto-rows
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-auto-rows`** définit la taille d'une ligne de grille créée implicitement, d'une {{Glossary("grid tracks", "piste")}} ou d'un motif de pistes.
+
+Si un élément de la grille est positionné sur une ligne dont la taille n'est pas explicitement définie avec {{CSSxRef("grid-template-rows")}}, une piste implicite de la {{Glossary("grid", "grille")}} est créée pour le contenir. Cela peut se produire soit en positionnant explicitement un élément sur une ligne hors plage, soit lorsque l'algorithme de placement automatique crée des lignes supplémentaires.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: grid-auto-rows")}}
 
@@ -61,8 +63,6 @@ grid-auto-rows: minmax(30px, auto);
 }
 ```
 
-Si un élément de la grille est positionné sur une ligne dont la taille n'est pas explicitement définie avec {{CSSxRef("grid-template-rows")}}, une piste implicite de la {{Glossary("grid", "grille")}} est créée pour le contenir. Cela peut se produire soit en positionnant explicitement un élément sur une ligne hors plage, soit lorsque l'algorithme de placement automatique crée des lignes supplémentaires.
-
 ## Syntaxe
 
 ```css
@@ -112,7 +112,7 @@ grid-auto-rows: unset;
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) positif indiquant la taille de la ligne relativement à la taille du bloc qui contient la grille. Si la taille de ce bloc n'est pas définie, la valeur exprimée en pourcents est considérée comme `auto`.
 - {{CSSxRef("&lt;flex&gt;")}}
-  - : Une dimension positive dont l'unité `fr` indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec `<flex>` occupera une partie de l'espace restant en fonction de ce facteur.
+  - : Une dimension positive dont l'unité `fr` indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec `<flex>` occupe une partie de l'espace restant en fonction de ce facteur.
 
     Lorsque cette valeur apparaît en dehors de la notation `minmax()`, la valeur minimale `auto` est implicite (la valeur signifie `minmax(auto, <flex>)`).
 
@@ -130,7 +130,7 @@ grid-auto-rows: unset;
     Si utilisé en dehors de la notation {{CSSxRef("minmax()")}}, `auto` représente l'intervalle entre le minimum et le maximum décrit ci-dessus. Cela se comporte de façon similaire à `minmax(min-content,max-content)` dans la plupart des cas.
 
     > [!NOTE]
-    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}. Par défaut, une piste dimensionnée en `auto` occupera tout l'espace restant dans le conteneur de la grille.
+    > Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}. Par défaut, une piste dimensionnée en `auto` occupe tout l'espace restant dans le conteneur de la grille.
 
 ## Définition formelle
 

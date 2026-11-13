@@ -3,7 +3,7 @@ title: Propriété CSS `text-justify`
 short-title: text-justify
 slug: Web/CSS/Reference/Properties/text-justify
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-justify`** définit le type de justification à appliquer au texte lorsque {{CSSxRef("text-align", "text-align: justify;")}} est défini sur un élément.
@@ -27,14 +27,16 @@ text-justify: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `none`
-  - : Le texte ne sera pas justifié— cela aura le même effet que de ne pas définir {{CSSxRef("text-align")}}, mais cela peut se révéler utile pour activer ou désactiver globalement la justification.
+  - : Le texte n'est pas justifié — cela a le même effet que de ne pas définir {{CSSxRef("text-align")}}, mais cela peut se révéler utile pour activer ou désactiver globalement la justification.
 - `auto`
-  - : Le navigateur choisira la meilleure justification pour la situation, en se basant sur le rapport entre performance et qualité, mais également sur la valeur la plus appropriée par rapport à la langue (français, langues CJK, etc.). C'est la propriété par défaut, qui est appliquée lorsque `text-justify` n'est pas définie.
+  - : Le navigateur choisit la meilleure justification pour la situation, en se basant sur le rapport entre performance et qualité, mais également sur la valeur la plus appropriée par rapport à la langue (français, langues CJK, etc.). C'est la propriété par défaut, qui est appliquée lorsque `text-justify` n'est pas définie.
 - `inter-word`
   - : Le texte est justifié en ajustant les espaces entre les mots (en faisant varier {{CSSxRef("word-spacing")}}), cette propriété est appropriée pour les langues qui séparent les mots avec des espaces, comme le Français ou le Coréen.
 - `inter-character`
-  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{CSSxRef("letter-spacing")}}) ; cette propritété est plus appropriée pour des langues comme le Japonais.
+  - : Le texte est justifié en ajustant les espaces entre les caractères (en faisant varier {{CSSxRef("letter-spacing")}})&nbsp;; cette propriété est plus appropriée pour des langues comme le Japonais.
 - `distribute` {{Deprecated_Inline}}
   - : Même effet que `inter-character`&nbsp;; cette valeur sert uniquement à de fins de compatibilité.
 

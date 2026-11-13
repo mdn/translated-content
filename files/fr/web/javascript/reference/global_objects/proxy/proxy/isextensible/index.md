@@ -3,8 +3,6 @@ title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
 
-{{JSRef}}
-
 La méthode **`handler.isExtensible()`** est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}

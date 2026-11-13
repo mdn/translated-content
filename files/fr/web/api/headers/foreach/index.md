@@ -3,7 +3,7 @@ title: "Headers : méthode forEach()"
 short-title: forEach()
 slug: Web/API/Headers/forEach
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -64,6 +64,10 @@ compression ==> gzip
 content-type ==> application/json
 cookie ==> Ceci est un cookie de démonstration
 ```
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

@@ -131,6 +131,6 @@ console.log(t3.toString()); // "12:00:00"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}
 - Le constructeur {{JSxRef("Temporal/PlainTime/PlainTime", "Temporal.PlainTime()")}}
 - La méthode {{JSxRef("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}}

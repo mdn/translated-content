@@ -6,9 +6,9 @@ l10n:
   sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor-size()`** permet de definir la [taille](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#dimensionner_les_éléments_selon_la_taille_de_lancre), la [position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_position_dun_élément_selon_la_taille_de_lancre) et les [marges](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre) d'un element positionne par ancre relativement aux dimensions des elements d'ancre. Elle retourne la `<length>` d'un cote defini de l'element d'ancre cible. `anchor-size()` n'est valide que lorsqu'elle est utilisee dans la valeur des [proprietes de taille, d'encart et de marge](#propriétés_acceptant_des_valeurs_de_fonction_anchor-size) d'elements positionnes par ancre.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor-size()`** permet de définir la [taille](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#dimensionner_les_éléments_selon_la_taille_de_lancre), la [position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_position_dun_élément_selon_la_taille_de_lancre) et les [marges](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre) d'un élément positionné par une ancre relativement aux dimensions des éléments d'ancre. Elle retourne la `<length>` d'un côté défini de l'élément d'ancre cible. `anchor-size()` n'est valide que lorsqu'elle est utilisée dans la valeur des [propriétés de taille, d'encart et de marge](#propriétés_acceptant-des-valeurs-de-fonction_anchor-size) d'éléments positionnés par une ancre.
 
-Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+Pour plus d'informations sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ## Syntaxe
 
@@ -55,7 +55,7 @@ Les paramètres sont&nbsp;:
     > Indiquer un `<anchor-name>` dans une fonction `anchor-size()` n'associe ni n'attache un élément à une ancre&nbsp;; cela définit uniquement l'ancre par rapport à laquelle les valeurs des propriétés de l'élément doivent être calculées.
 
 - `<anchor-size>` {{Optional_Inline}}
-  - : Définit la dimension de l'élément d'ancre à laquelle les valeurs des propriétés de l'élément positionné seront rattachées. Les valeurs valides incluent&nbsp;:
+  - : Définit la dimension de l'élément d'ancre à laquelle les valeurs des propriétés de l'élément positionné sont rattachées. Les valeurs valides incluent&nbsp;:
     - `width`
       - : La largeur de l'élément d'ancre.
 
@@ -89,7 +89,7 @@ Retourne une valeur {{CSSxRef("length")}}.
 
 ## Description
 
-La fonction `anchor-size()` permet d'exprimer les valeurs de dimension, de position et de marge d'un élément positionné en fonction des dimensions d'un élément d'ancre&nbsp;; elle retourne une valeur {{CSSxRef("length")}} représentant la dimension d'un élément d'ancre spécifique à laquelle les valeurs des propriétés de l'élément positionné sont rattachées. Il s'agit d'une valeur valide pour les [propriétés de taille, d'encart et de marge](#propriétés_acceptant_des_valeurs_de_fonction_anchor-size) appliquées aux éléments positionnés par ancre.
+La fonction `anchor-size()` permet d'exprimer les valeurs de dimension, de position et de marge d'un élément positionné en fonction des dimensions d'un élément d'ancre&nbsp;; elle retourne une valeur {{CSSxRef("length")}} représentant la dimension d'un élément d'ancre spécifique à laquelle les valeurs des propriétés de l'élément positionné sont rattachées. Il s'agit d'une valeur valide pour les [propriétés de taille, d'encart et de marge](#propriétés_acceptant_des_valeurs_de_fonction_anchor-size) appliquées aux éléments positionnés par une ancre.
 
 La longueur retournée correspond à la taille verticale ou horizontale d'un élément d'ancre ou de son bloc englobant. La dimension utilisée est définie par le paramètre `<anchor-size>`. Si ce paramètre est omis, la dimension utilisée correspond à l'axe de la propriété de dimension, de position ou de marge sur laquelle la fonction est appliquée. Par exemple&nbsp;:
 
@@ -101,13 +101,13 @@ L'élément d'ancre utilisé comme base pour la longueur de dimension est celui 
 
 Si aucun paramètre `<anchor-name>` n'est inclus dans l'appel de fonction, **l'ancre par défaut** de l'élément, référencée dans sa propriété {{CSSxRef("position-anchor")}}, ou associée à l'élément avec l'attribut HTML [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor), est utilisée.
 
-Si un paramètre `<anchor-name>` est inclus et qu'aucun élément ne correspond à ce nom d'ancre, la valeur de repli est utilisée. Si aucune valeur de repli n'est fournie, la déclaration est ignorée. Par exemple, si `width: anchor-size(--foo width, 50px); height: anchor-size(--foo width);` est utilisé sur l'élément positionné mais qu'aucune ancre nommée `--foo` n'existe dans le DOM, la `width` sera `50px` et la déclaration `height` n'aura aucun effet.
+Si un paramètre `<anchor-name>` est inclus et qu'aucun élément ne correspond à ce nom d'ancre, la valeur de repli est utilisée. Si aucune valeur de repli n'est fournie, la déclaration est ignorée. Par exemple, si `width: anchor-size(--foo width, 50px); height: anchor-size(--foo width);` est utilisé sur l'élément positionné mais qu'aucune ancre nommée `--foo` n'existe dans le DOM, la `width` est `50px` et la déclaration `height` n'aura aucun effet.
 
-Si un élément possède des propriétés de dimension, de position ou de marge utilisant des valeurs `anchor-size()`, mais qu'il n'est pas un élément positionné par ancre (il n'a pas sa propriété {{CSSxRef("position")}} définie à `absolute` ou `fixed` ou n'a pas d'ancre associée par sa propriété `position-anchor`), la valeur de repli sera utilisée si elle est disponible. Si aucune valeur de repli n'est disponible, la déclaration est ignorée.
+Si un élément possède des propriétés de dimension, de position ou de marge utilisant des valeurs `anchor-size()`, mais qu'il n'est pas un élément positionné par une ancre (il n'a pas sa propriété {{CSSxRef("position")}} définie à `absolute` ou `fixed` ou n'a pas d'ancre associée par sa propriété `position-anchor`), la valeur de repli est utilisée si elle est disponible. Si aucune valeur de repli n'est disponible, la déclaration est ignorée.
 
-Par exemple, si `width: anchor-size(width, 50px);` est utilisé sur l'élément positionné mais qu'aucune ancre n'est associée, la valeur de repli sera utilisée, donc `width` aura une valeur calculée de `50px`.
+Par exemple, si `width: anchor-size(width, 50px);` est utilisé sur l'élément positionné mais qu'aucune ancre n'est associée, la valeur de repli est utilisée, donc `width` aura une valeur calculée de `50px`.
 
-Pour plus d'informations détaillées sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+Pour plus d'informations détaillées sur les fonctionnalités et l'utilisation des ancres, consultez le module [Positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [Utiliser le positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 ### Propriétés acceptant des valeurs de fonction `anchor-size()`
 
@@ -287,7 +287,7 @@ Nous définissons certaines valeurs de propriétés distinctes sur les élément
 
 {{EmbedLiveSample("Utilisation simple de `anchor-size()`", "100%", 240)}}
 
-Utilisez les outils de développement de votre navigateur pour inspecter les éléments positionnés par ancre. La première boîte d'information aura une hauteur de `50px` et une largeur de `200px`, tandis que la seconde boîte d'information aura une hauteur de `40px`, avec la `width` par défaut à {{CSSxRef("max-content")}}.
+Utilisez les outils de développement de votre navigateur pour inspecter les éléments positionnés par une ancre. La première boîte d'information a une hauteur de `50px` et une largeur de `200px`, tandis que la seconde boîte d'information a une hauteur de `40px`, avec la `width` par défaut à {{CSSxRef("max-content")}}.
 
 ### Exemple de position et de marge
 

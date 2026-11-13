@@ -21,7 +21,11 @@ Los elementos agrupados que permiten selecciones múltiples también pueden tene
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:default {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

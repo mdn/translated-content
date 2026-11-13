@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-emoji`
 short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: b7e9f482c51817d3a885e26092f8219fd0d9d278
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-emoji`** permet de définir le style de présentation par défaut pour l'affichage des emojis.
@@ -27,18 +27,18 @@ font-variant-emoji: revert-layer;
 font-variant-emoji: unset;
 ```
 
-La propriété `font-variant-emoji` se définit avec un seul mot-clé de la liste ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie avec l'un des mots-clés suivants&nbsp;:
 
 - `normal`
   - : Permet au navigateur de choisir comment afficher l'emoji. Cela suit souvent le réglage du système d'exploitation.
 - `text`
-  - : Affiche l'emoji comme s'il utilisait le sélecteur de variante texte unicode (`U+FE0E`).
+  - : Affiche l'emoji comme s'il utilise le sélecteur de variante texte unicode (`U+FE0E`).
 - `emoji`
-  - : Affiche l'emoji comme s'il utilisait le sélecteur de variante emoji unicode (`U+FE0F`).
+  - : Affiche l'emoji comme s'il utilise le sélecteur de variante emoji unicode (`U+FE0F`).
 - `unicode`
-  - : Affiche l'emoji conformément aux [propriétés de présentation Emoji <sup>(angl.)</sup>](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). Si le sélecteur de variante `U+FE0E` ou `U+FE0F` est présent, il remplacera cette valeur.
+  - : Affiche l'emoji conformément aux [propriétés de présentation Emoji <sup>(angl.)</sup>](https://www.unicode.org/reports/tr51/tr51-23.html#Emoji_Presentation). Si le sélecteur de variante `U+FE0E` ou `U+FE0F` est présent, il remplace cette valeur.
 
 ## Définition formelle
 
@@ -52,7 +52,7 @@ La propriété `font-variant-emoji` se définit avec un seul mot-clé de la list
 
 Bien que l'utilisation d'emojis puisse sembler amusante, il faut prendre en compte leur impact sur l'accessibilité, notamment pour les utilisateur·ice·s ayant des déficiences visuelles ou cognitives. Tenez compte des points suivants lors de l'utilisation d'emojis&nbsp;:
 
-- Affichage sur les lecteurs d'écran&nbsp;: Les lecteurs d'écran liront le texte alternatif d'un emoji. Gardez cela à l'esprit pour la position de l'emoji dans le contenu. Une utilisation répétée et excessive des emojis aura un effet négatif pour les utilisateur·ice·s de lecteurs d'écran. Il est préférable d'utiliser des emojis plutôt que des émoticônes&nbsp;; les émoticônes seront lues comme des caractères de ponctuation.
+- Affichage sur les lecteurs d'écran&nbsp;: Les lecteurs d'écran lisent le texte alternatif d'un emoji. Gardez cela à l'esprit pour la position de l'emoji dans le contenu. Une utilisation répétée et excessive des emojis a un effet négatif pour les utilisateur·ice·s de lecteurs d'écran. Il est préférable d'utiliser des emojis plutôt que des émoticônes&nbsp;; les émoticônes sont lues comme des caractères de ponctuation.
 
 - Contraste avec l'arrière-plan&nbsp;: Lorsque vous utilisez des emojis, tenez compte de leurs couleurs et de leur contraste avec l'arrière-plan, surtout si vous avez des couleurs d'arrière-plan qui peuvent changer, comme les modes clair/sombre.
 
@@ -101,6 +101,8 @@ Cet exemple montre comment afficher un emoji dans sa présentation `text` ou `em
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family:
+      "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
   }
   .emoji > div {
     font-size: 2rem;

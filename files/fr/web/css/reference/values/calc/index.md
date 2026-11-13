@@ -3,7 +3,7 @@ title: Fonction CSS `calc()`
 short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 l10n:
-  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`calc()`** permet d'effectuer des calculs lors de la définition des valeurs des propriétés CSS. Elle peut être utilisée avec les valeurs {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} et {{CSSxRef("color_value", "&lt;color-function&gt;")}}.
@@ -104,7 +104,7 @@ Lorsque qu'un entier ({{CSSxRef("&lt;integer&gt;")}}) est attendu, l'expression 
 - `calc()` ne peut pas effectuer de calculs sur des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size) telles que {{CSSxRef("width#auto", "auto")}} et {{CSSxRef("fit-content")}}. Utilisez plutôt la fonction {{CSSxRef("calc-size()")}}.
 - Les opérateurs `*` et `/` ne nécessitent pas d'espaces, mais il est recommandé d'en ajouter pour des raisons de cohérence.
 - Il est permis d'imbriquer des fonctions `calc()`, auquel cas les fonctions internes sont traitées comme de simples parenthèses.
-- Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` était défini.
+- Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` est défini.
 - Voir {{CSSxRef("&lt;calc-sum&gt;")}} pour plus d'informations sur la syntaxe des expressions `+` et `-`.
 
 ### Arithmétique typée CSS
@@ -137,7 +137,7 @@ h1 {
 }
 ```
 
-Cela garantit que la taille du texte s'adaptera si la page est zoomée.
+Cela garantit que la taille du texte s'adapte si la page est zoomée.
 
 - [Comprendre le WCAG sur MDN, Explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
 - [Comprendre le critère de succès 1.4.4&nbsp;: Redimensionner le texte | WAI | W3C <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
@@ -188,15 +188,13 @@ input {
 }
 ```
 
-Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons `calc()` pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini&nbsp;:
+Dans ce cas, le conteneur est défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons `calc()` pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini&nbsp;:
 
 ```html
-<form>
-  <div id="boite-formulaire">
-    <label for="misc">Tapez quelque chose&nbsp;:</label>
-    <input type="text" id="misc" name="misc" />
-  </div>
-</form>
+<div id="boite-formulaire">
+  <label for="misc">Tapez quelque chose&nbsp;:</label>
+  <input type="text" id="misc" name="misc" />
+</div>
 ```
 
 {{EmbedLiveSample("Dimensionner automatiquement les champs d'un formulaire pour s'ajuster au conteneur", "100%", 80)}}

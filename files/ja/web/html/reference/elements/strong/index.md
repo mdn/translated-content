@@ -1,5 +1,5 @@
 ---
-title: HTML `<strong>` 強い重要性要素
+title: "`<strong>` 強い重要性要素"
 short-title: <strong>
 slug: Web/HTML/Reference/Elements/strong
 l10n:

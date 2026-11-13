@@ -2,23 +2,23 @@
 title: フロントマターの page-type キー
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: 676631fd27c8096c3ae3ceb2a6b4ffd6f687055f
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 > [!CALLOUT]
 > **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
-これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
+これにより、MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
 
-他のフロントマターキーと同様に、 `page-type` キーは "index.md" の始めにある YAML で指定します。
+他のフロントマターキーと同様に、`page-type` キーは "index.md" の始めにある YAML で指定します。
 
 ```md
 ---
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.100
 sidebar: http
 ---
 ```
@@ -52,7 +52,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### アクセシビリティのページ型
 
-この節では、 [Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role) など。
 - `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) など。
@@ -114,7 +114,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `javascript-instance-data-property`: オブジェクトインスタンスのデータプロパティ。例えば [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length) プロパティ（`Array`）など。
 - `javascript-instance-method`: オブジェクトインスタンスのメソッド。例えば [`Array.prototype.at()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/at) など。
 - `javascript-language-feature`: 他のカテゴリーに合わない JavaScript 構文。例えば[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) など。
-- `javascript-namespace`: オブジェクトのうち、インスタンス化できず性的メンバーのみがあるもの。例えば [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) など。
+- `javascript-namespace`: オブジェクトのうち、インスタンス化できず静的メンバーのみがあるもの。例えば [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) など。
 - `javascript-operator`: 演算子。例えば [Addition (+)](/ja/docs/Web/JavaScript/Reference/Operators/Addition) など。
 - `javascript-statement`: 文。例えば [`switch`](/ja/docs/Web/JavaScript/Reference/Statements/switch) など。
 - `javascript-static-accessor-property`: 静的アクセサープロパティ。例えば [`RegExp.lastMatch`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) など。
@@ -126,7 +126,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/MathML](/ja/docs/Web/MathML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `mathml-attribute`: MathML 属性。例えば [`mathcolor`](/ja/docs/Web/MathML/Reference/Global_attributes/mathcolor) など。
-- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
+- `mathml-element`: MathML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
 
 ### SVG のページ型
 
@@ -154,13 +154,13 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では [WebAssembly/](/ja/docs/WebAssembly) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記に掲載されている値のいずれかでなければなりません。
 
-- `webassembly-function`: グローバル関数のうち、 `WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) など。
+- `webassembly-function`: グローバル関数のうち、`WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) など。
 - `webassembly-constructor`: コンストラクター。例えば [`WebAssembly.Exception()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/Exception) など。
 - `webassembly-interface`: WebAssembly インターフェイス。例えば [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) など。
 - `webassembly-instance-property`: インスタンスプロパティ。例えば [`WebAssembly.Instance.exports`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) など。
 - `webassembly-instance-method`: インスタンスメソッド。例えば [`WebAssembly.Exception.getArg()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/getArg) など。
 - `webassembly-static-method`: 静的メソッド。例えば [`WebAssembly.Module.exports()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static) など。
-- `webassembly-instruction`: 命令または命令の集合。例えば [`wrap`](/ja/docs/WebAssembly/Reference/Numeric/wrap) など。
+- `webassembly-instruction`: 命令または命令の集合。例えば [`wrap`](/ja/docs/WebAssembly/Reference/Numeric/wrap_i64) など。
 
 ### WebDriver のページ型
 
@@ -203,7 +203,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/EXSLT](/ja/docs/Web/XML/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set) など。
+- `exslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set) など。
 
 ### Firefox のページ型
 

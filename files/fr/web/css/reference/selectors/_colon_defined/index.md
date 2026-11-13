@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:defined`
 short-title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode {{DOMxRef("CustomElementRegistry.define()")}}).
@@ -32,11 +32,11 @@ simple-custom:defined {
 
 ### Masquer les éléments jusqu'à ce qu'ils soient définis
 
-Dans cette démonstration, nous définissons un élément personnalisé de base nommé `<element-personnalise>` et utilisons les sélecteurs `:not(:defined)` et `:defined` pour mettre en forme l'élément avant et après sa définition. Cela est utile si vous avez un élément personnalisé complexe qui prend un certain temps à se charger dans la page — vous pouvez alors masquer les instances de l'élément jusqu'à ce que la définition soit terminée afin d'éviter que des éléments non stylisés n'apparaissent de manière inesthétique sur la page.
+Dans cette démonstration, nous définissons un élément personnalisé de base nommé `<element-personnalise>` et utilisons les sélecteurs `:not(:defined)` et `:defined` pour mettre en forme l'élément avant et après sa définition. Cela est utile si vous avez un élément personnalisé complexe qui prend un certain temps à se charger dans la page — vous pouvez alors masquer les instances de l'élément jusqu'à ce que la définition soit terminée afin d'éviter que des éléments qui ne sont pas mis en forme n'apparaissent de manière inesthétique sur la page.
 
 #### HTML
 
-Le code HTML suivant utilise l'élément personnalisé, mais celui-ci n'a pas encore été défini. Nous incluons également un élément HTML {{HTMLElement("button")}} qui définira l'élément personnalisé lorsqu'on cliquera dessus, ce qui vous permettra de voir son état avant et après la définition.
+Le code HTML suivant utilise l'élément personnalisé, mais celui-ci n'a pas encore été défini. Nous incluons également un élément HTML {{HTMLElement("button")}} qui définit l'élément personnalisé lorsqu'on clique dessus, ce qui vous permet de voir son état avant et après la définition.
 
 ```html
 <element-personnalise>
@@ -105,7 +105,7 @@ element-personnalise:defined::before {
 }
 ```
 
-Nous avons également utilisé le pseudo-élément {{CSSxRef("::before")}} pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le {{CSSxRef("content")}} sur une chaîne vide.
+Nous avons également utilisé le pseudo-élément {{CSSxRef("::before")}} pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le {{CSSxRef("content")}} sur une chaîne de caractères vide.
 
 #### JavaScript
 

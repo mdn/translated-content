@@ -111,7 +111,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
 ## Notes d'utilisation
 
 - Si présent, l'élément `<caption>` doit être le premier enfant de son élément parent {{HTMLElement("table")}}.
-- Lorsqu'un tableau (`<table>`) est imbriqué dans un élément HTML {{HTMLElement("figure")}} comme unique contenu de la figure, il doit être légendé via un {{HTMLElement("figcaption")}} pour le `<figure>` au lieu d'un `<caption>` imbriqué dans le `<table>`.
+- Lorsqu'un tableau (`<table>`) est imbriqué dans un élément HTML {{HTMLElement("figure")}} comme unique contenu de la figure, il doit être légendé avec un {{HTMLElement("figcaption")}} pour le `<figure>` au lieu d'un `<caption>` imbriqué dans le `<table>`.
 - Toute couleur {{CSSxRef("background-color")}} appliquée à un tableau ne s'applique pas à sa légende. Ajoutez aussi un `background-color` à l'élément `<caption>` si vous souhaitez que la même couleur soit appliquée aux deux.
 
 ## Exemples

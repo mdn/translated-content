@@ -3,10 +3,10 @@ title: "Window : évènement beforeprint"
 short-title: beforeprint
 slug: Web/API/Window/beforeprint_event
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 L'évènement **`beforeprint`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque le document associé est sur le point d'être imprimé ou prévisualisé pour l'impression.
 

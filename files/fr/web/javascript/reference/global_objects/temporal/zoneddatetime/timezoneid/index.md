@@ -65,7 +65,7 @@ console.log(dt2.timeZoneId); // "+07:00"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/withTimeZone", "Temporal.ZonedDateTime.prototype.withTimeZone()")}}
 - La propriété {{JSxRef("Temporal/ZonedDateTime/offset", "Temporal.ZonedDateTime.prototype.offset")}}
 - La propriété {{JSxRef("Temporal/ZonedDateTime/offsetNanoseconds", "Temporal.ZonedDateTime.prototype.offsetNanoseconds")}}

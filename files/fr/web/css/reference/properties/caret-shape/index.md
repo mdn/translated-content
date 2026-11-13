@@ -3,14 +3,14 @@ title: Propriété CSS `caret-shape`
 short-title: caret-shape
 slug: Web/CSS/Reference/Properties/caret-shape
 l10n:
-  sourceCommit: 00da2fc19d0c8c7cd2e91c78cf55e204cd94cf2b
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caret-shape`** définit la forme du **curseur d'insertion**, le marqueur visible qui apparaît dans les éléments éditables pour indiquer où le prochain caractère est inséré ou supprimé.
 
-La propriété `caret-shape` peut également être définie dans le cadre de la propriété abrégée {{cssxref("caret")}}.
+La propriété `caret-shape` peut également être définie dans le cadre de la propriété abrégée {{CSSxRef("caret")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: caret-shape")}}
 
@@ -69,6 +69,8 @@ caret-shape: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie comme l'un des mot-clés suivants&nbsp;:
 
 - `auto`
   - : Valeur par défaut. Le navigateur détermine la forme du curseur. Cela suit généralement les conventions de la plateforme et peut changer selon le contexte.

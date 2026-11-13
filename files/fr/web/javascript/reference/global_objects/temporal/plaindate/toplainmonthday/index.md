@@ -44,8 +44,8 @@ console.log(monthDay.toString()); // 07-01
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
-- L'objet {{JSxRef("Temporal.PlainMonthDay")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainMonthDay")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toPlainYearMonth", "Temporal.PlainDate.prototype.toPlainYearMonth()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}

@@ -3,7 +3,7 @@ title: "Array : méthode forEach()"
 short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`forEach()`** des instances de {{JSxRef("Array")}} exécute une fonction fournie une fois pour chaque élément du tableau.
@@ -15,9 +15,9 @@ const array = ["a", "b", "c"];
 
 array.forEach((element) => console.log(element));
 
-// Sortie attendue : "a"
-// Sortie attendue : "b"
-// Sortie attendue : "c"
+// Résultat attendu : "a"
+// Résultat attendu : "b"
+// Résultat attendu : "c"
 ```
 
 ## Syntaxe
@@ -46,7 +46,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 ## Description
 
-La méthode `forEach()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Contrairement à {{JSxRef("Array/map", "map()")}}, `forEach()` renvoie toujours {{JSxRef("undefined")}} et n'est pas chaînable. L'usage typique est d'exécuter des effets de bord à la fin d'une chaîne. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
+La méthode `forEach()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Contrairement à {{JSxRef("Array/map", "map()")}}, `forEach()` retourne toujours {{JSxRef("undefined")}} et ne peut pas être chaînée. L'usage typique est d'exécuter des effets de bord à la fin d'une chaîne de caractères. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
 La fonction `callbackFn` est appelée uniquement pour les indices du tableau qui ont une valeur attribuée. Elle n'est pas appelée pour les cases vides dans [un tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
@@ -69,7 +69,7 @@ notes.forEach(async (note) => {
 });
 
 console.log(somme);
-// Sortie attendue : 14
+// Résultat attendu : 14
 // Sortie réelle : 0
 ```
 
@@ -148,10 +148,7 @@ Puisque le paramètre `thisArg` (`this`) est fourni à
 La fonction de rappel l'utilise comme valeur de `this`.
 
 > [!NOTE]
-> Si la fonction de rappel passée était une
-> [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
-> le paramètre `thisArg` pourrait être omis,
-> car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("this")}}.
+> Si la fonction de rappel passée était une [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), le paramètre `thisArg` peut être omis, car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("this")}}.
 
 ### Fonction de copie d'objet
 
@@ -246,7 +243,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 5, // ignoré par forEach() car length vaut 3
+  3: 5, // ignoré par forEach(), car length vaut 3
 };
 Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 // 2
@@ -264,8 +261,10 @@ Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.forEach` dans core-js <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.foreach)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.filter()")}}
@@ -274,5 +273,3 @@ Array.prototype.forEach.call(objetSimilaireTableau, (x) => console.log(x));
 - La méthode {{JSxRef("TypedArray.prototype.forEach()")}}
 - La méthode {{JSxRef("Map.prototype.forEach()")}}
 - La méthode {{JSxRef("Set.prototype.forEach()")}}
-- [Prothèse d'émulation de `Array.prototype.forEach` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.forEach` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.foreach)

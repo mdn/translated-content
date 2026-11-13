@@ -3,7 +3,7 @@ title: Évènements DOM
 short-title: Travailler avec des évènements
 slug: Web/API/Document_Object_Model/Events
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: de189c9ecabb11ee95043a801729050c624723a7
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -229,8 +229,8 @@ Cette rubrique fournit un index des principales _sortes_ d'évènements qui peuv
       <td>Formulaire</td>
       <td>
         <p>
-          Évènements liés à la construction, la réinitialisation et la
-          soumission de formulaires.
+          Évènements liés à la construction, la réinitialisation et
+          l'envoi de formulaires.
         </p>
       </td>
       <td>
@@ -980,7 +980,7 @@ function simulateClick() {
 Il existe deux méthodes recommandées pour enregistrer des gestionnaires. Le code du gestionnaire peut être exécuté lorsqu'un évènement est déclenché soit en l'assignant à la propriété _onevent_ correspondante de l'élément cible, soit en enregistrant le gestionnaire comme écouteur à l'aide de la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}. Dans les deux cas, le gestionnaire reçoit un objet conforme à [l'interface `Event`](/fr/docs/Web/API/Event) (ou à une [interface dérivée](/fr/docs/Web/API/Event#interfaces_basées_sur_event)). La principale différence est que plusieurs gestionnaires peuvent être ajoutés (ou supprimés) avec les méthodes d'écouteur d'évènements.
 
 > [!WARNING]
-> Une troisième méthode, qui consiste à utiliser les attributs HTML onevent, n'est pas recommandée&nbsp;! Ils alourdissent le balisage, le rendent moins lisible et plus difficile à déboguer. Pour plus d'informations, voir [Gestionnaires d'évènements en ligne](/fr/docs/Learn_web_development/Core/Scripting/Events#gestionnaires_dévènements_en_ligne_à_éviter).
+> Une troisième méthode, qui consiste à utiliser les attributs HTML onevent, n'est pas recommandée&nbsp;! Ils alourdissent le balisage, le rendent moins lisible et plus difficile à déboguer. Pour plus d'informations, voir [Gestionnaires d'évènements en incise](/fr/docs/Learn_web_development/Core/Scripting/Events#gestionnaires_dévènements_en_incise_à_éviter).
 
 ### Utiliser les propriétés onevent
 
@@ -1051,7 +1051,7 @@ controller.abort(); // supprime tous les gestionnaires associés à ce contrôle
 
 La propriété IDL `onevent` (par exemple, `element.onclick = ...`) et l'attribut HTML `onevent` (par exemple, `<button onclick="...">`) ciblent tous deux le même emplacement de gestionnaire unique. Le HTML est chargé avant que JavaScript puisse accéder au même élément, donc en général JavaScript remplace ce qui est défini dans le HTML. Les gestionnaires ajoutés avec {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} sont indépendants. Utiliser `onevent` ne supprime ni ne remplace les écouteurs ajoutés avec `addEventListener()`, et inversement.
 
-Lorsqu'un évènement est déclenché, les écouteurs sont appelés en plusieurs phases. Il y a deux phases&nbsp;: _capture_ et _bulle_ (bubbling). En phase de capture, l'évènement part de l'ancêtre le plus haut et descend l'arbre DOM jusqu'à la cible. En phase de bulle, l'évènement remonte en sens inverse. Par défaut, les écouteurs écoutent en phase de bulle, mais ils peuvent écouter en phase de capture en passant `capture: true` à `addEventListener()`. Dans une même phase, les écouteurs sont appelés dans l'ordre où ils ont été enregistrés. Le gestionnaire `onevent` est enregistré la première fois qu'il devient non nul&nbsp;; les réaffectations ultérieures ne changent que sa fonction de rappel, pas sa position dans l'ordre.
+Lorsqu'un évènement est déclenché, les écouteurs sont appelés en plusieurs phases. Il y a deux phases&nbsp;: _capture_ et _propagation_. En phase de capture, l'évènement part de l'ancêtre le plus haut et descend l'arbre DOM jusqu'à la cible. En phase de bulle, l'évènement remonte en sens inverse. Par défaut, les écouteurs écoutent en phase de bulle, mais ils peuvent écouter en phase de capture en passant `capture: true` à `addEventListener()`. Dans une même phase, les écouteurs sont appelés dans l'ordre où ils ont été enregistrés. Le gestionnaire `onevent` est enregistré la première fois qu'il devient non nul&nbsp;; les réaffectations ultérieures ne changent que sa fonction de rappel, pas sa position dans l'ordre.
 
 Appeler {{DOMxRef("Event.stopPropagation()")}} empêche l'appel des écouteurs sur d'autres éléments plus loin dans la chaîne de propagation. {{DOMxRef("Event.stopImmediatePropagation()")}} empêche aussi l'appel des autres écouteurs sur le même élément.
 

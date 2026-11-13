@@ -58,7 +58,7 @@ console.log(date4.year); // 5781 ; le calendrier hébraïque utilise l'époque A
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDate")}}
+- L'objet natif {{JSxRef("Temporal.PlainDate")}}
 - La méthode {{JSxRef("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
 - La méthode {{JSxRef("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}

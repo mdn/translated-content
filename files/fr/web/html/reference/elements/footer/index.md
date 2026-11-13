@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<footer>`** représente un pied de page pour sa [section de contenu](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant) ou [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#libeller_le_contenu_des_sections) la plus proche. Un `<footer>` contient généralement des informations sur l'auteur·ice de la section, des données de droit d'auteur ou des liens vers des documents associés.
+L'élément [HTML](/fr/docs/Web/HTML) **`<footer>`** représente un pied de page pour sa [section de contenu](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant) ou [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#libeller_le_contenu_des_sections) la plus proche. Un `<footer>` contient généralement des informations sur l'auteur·ice de la section, des données de droit d'auteur·ice ou des liens vers des documents associés.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;footer&gt;", "tabbed-standard")}}
 
@@ -46,13 +46,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Notes d'utilisation
 
-- Les informations sur l'autrice ou l'auteur doivent être placées dans un élément {{HTMLElement("address")}} et incluses dans l'élément `<footer>`.
+- Les informations sur l'auteur·ice doivent être placées dans un élément {{HTMLElement("address")}} et incluses dans l'élément `<footer>`.
 - Lorsque l'élément de sectionnement ou la racine de sectionnement ancêtre la plus proche est l'élément body, le footer s'applique à toute la page.
 - L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements).
 
 ## Accessibilité
 
-Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver <sup>(angl.)</sup>](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark sera correctement exposé.
+Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver <sup>(angl.)</sup>](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark est correctement exposé.
 
 - En rapport&nbsp;: [WebKit Bugzilla&nbsp;: 146930 - AX&nbsp;: Les éléments natifs HTML (header, footer, main, aside, nav) devraient fonctionner de la même manière que les points de repère ARIA, parfois ce n'est pas le cas <sup>(angl.)</sup>](https://webkit.org/b/146930)
 

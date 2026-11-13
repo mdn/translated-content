@@ -87,5 +87,5 @@ console.log(dateTimes.map((d) => d.toString()));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}
 - La méthode {{JSxRef("Temporal/PlainDateTime/equals", "Temporal.PlainDateTime.prototype.equals()")}}

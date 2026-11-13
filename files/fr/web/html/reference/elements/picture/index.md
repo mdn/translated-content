@@ -84,13 +84,13 @@ Vous pouvez échanger les ressources d'image pour les thèmes clair et sombre en
 
 L'attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/source#srcset) est utilisé pour proposer une liste d'images possibles en fonction de la taille ou de la densité de pixels de l'écran.
 
-Il est composé d'une liste dcripteurs d'image séparés par des virgules. Chaque descripteur d'image est composé d'une URL de l'image, et _soit_&nbsp;:
+Il est constitué d'une liste de descripteurs d'images séparés par des virgules. Chaque descripteur d'image est composé d'une URL de l'image, et _soit_&nbsp;:
 
 - un _descripteur de largeur_, suivi d'un `w` (par exemple `300w`)&nbsp;;
   _OU_
 - un _descripteur de densité de pixels_, suivi d'un `x` (par exemple `2x`) pour servir une image haute résolution sur les écrans à haute densité de pixels.
 
-Prennez en compte que&nbsp;:
+Prenez en compte que&nbsp;:
 
 - les descripteurs de largeur et de densité de pixels ne doivent pas être utilisés ensemble
 - un descripteur de densité de pixels manquant implique 1x
@@ -139,9 +139,9 @@ Dans cet exemple&nbsp;:
 - Si la zone d'affichage (<i lang="en">viewport</i> en anglais) fait 600px de large ou moins, la taille de l'emplacement est de 400px&nbsp;; sinon, elle est de 800px.
 - Le navigateur multiplie la taille de l'emplacement par le ratio de pixels de l'appareil pour déterminer la largeur idéale de l'image, puis choisit l'image disponible la plus proche dans `srcset`.
 
-Sans `sizes`, le navigateur utilisera la taille par défaut de l'image telle que définie par ses dimensions en pixels. Cela peut ne pas convenir à tous les appareils, surtout si l'image est affichée sur différentes tailles d'écran ou dans différents contextes.
+Sans `sizes`, le navigateur utilise la taille par défaut de l'image telle que définie par ses dimensions en pixels. Cela peut ne pas convenir à tous les appareils, surtout si l'image est affichée sur différentes tailles d'écran ou dans différents contextes.
 
-Veuillez noter que `sizes` n'aura d'effet que si des descripteurs de largeur sont fournis avec srcset au lieu de valeurs de ratio de pixels (par exemple 200w au lieu de 2x).
+Veuillez noter que `sizes` n'a d'effet que si des descripteurs de largeur sont fournis avec srcset au lieu de valeurs de ratio de pixels (par exemple 200w au lieu de 2x).
 Pour plus d'informations sur l'utilisation de `srcset`, consultez la documentation [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images).
 
 ### L'attribut `type`

@@ -3,14 +3,14 @@ title: "Window : propriété fence"
 short-title: fence
 slug: Web/API/Window/fence
 l10n:
-  sourceCommit: a6c32a2d0add510c95ef74e85bd8e17551d508b6
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
 La propriété en lecture seule `fence` de l'interface {{DOMxRef("Window")}} retourne une instance d'objet {{DOMxRef("Fence")}} pour le contexte du document courant.
 
-Les objets `Fence` ne sont disponibles que dans les documents intégrés dans des éléments HTML {{HTMLElement("fencedframe")}} (chargés via des {{DOMxRef("FencedFrameConfig")}}) ou des éléments HTML {{HTMLElement("iframe")}} (chargés via des URN opaques).
+Les objets `Fence` ne sont disponibles que dans les documents intégrés dans des éléments HTML {{HTMLElement("fencedframe")}} (chargés avec des {{DOMxRef("FencedFrameConfig")}}) ou des éléments HTML {{HTMLElement("iframe")}} (chargés avec des URN opaques).
 
 > [!NOTE]
 > Voir [Fonctionnement des `<fencedframe>`](/fr/docs/Web/API/Fenced_frame_API#fonctionnement_des_fencedframe) pour une description des `FencedFrameConfig` et des URN opaques.

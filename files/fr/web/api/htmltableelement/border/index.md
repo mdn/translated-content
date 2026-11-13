@@ -3,10 +3,10 @@ title: "HTMLTableElement : propriété border"
 short-title: border
 slug: Web/API/HTMLTableElement/border
 l10n:
-  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`border`** de l'interface {{DOMxRef("HTMLTableElement")}} représente la largeur de la bordure de l'élément HTML {{HTMLElement("table")}}.
 

@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="submit">` 属性値
+title: '`<input type="submit">` 属性値'
 short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき（ふつうはユーザーがボタンをクリックしたとき）、{{Glossary("User agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
@@ -64,13 +64,13 @@ l10n:
 - `post`
   - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
-  - : このメソッドは、入力欄が関連付けられたダイアログを閉じるだけで、フォームのデータをまったく送信しない場合ことを表すために使用します。
+  - : このメソッドは、入力欄に関連付けられたダイアログを閉じ、フォームデータを送信しないことを示します。
 
 この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formnovalidate
 
-論理属性で、存在する場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、自分自身で形成するフォームの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性の値より優先されます。
+論理属性で、存在する場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、この入力欄を所有するフォームの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性の値より優先されます。
 
 この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
@@ -81,7 +81,7 @@ l10n:
 タブ、ウィンドウ、インラインフレームなどの実際の名前の他に、使用できる特別なキーワードがいくつかあります。
 
 - `_self`
-  - : レスポンスを、形式を形成しているのと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換わります。これは、何も指定されなかった場合に使用されるデフォルト値です。
+  - : レスポンスをフォームと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換わります。これは、何も指定されなかった場合に使用されるデフォルト値です。
 - `_blank`
   - : レスポンスを新しい、名前のない、閲覧コンテキストに読み込みます。これは通常、現在の文書内の同じウィンドウの新しいタブですが、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって異なる形となる場合があります。
 - `_parent`
@@ -113,6 +113,12 @@ l10n:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 次のように表示されます。
 
 {{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
@@ -123,9 +129,9 @@ l10n:
 
 ### 送信ボタンへのキーボードショートカットの追加
 
-キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性を使用してください。
+キーボードショートカットは、アクセスキーとも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを操作できるようにします。送信ボタンにキーボードショートカットを追加するには、適切な他の {{HTMLElement("input")}} と同様に、[`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性を使用してください。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピューター上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) を参照してください。
+この例では、<kbd>s</kbd> をアクセスキーとして指定しています（<kbd>s</kbd> と、ブラウザーと OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント独自のキーボードショートカットとの競合を避けるため、アクセスキーにはホストコンピューター上の他のショートカットとは異なる修飾キーが使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) を参照してください。
 
 以下は、前回の例に <kbd>s</kbd> アクセスキーを追加した例です。
 
@@ -141,11 +147,17 @@ l10n:
 </form>
 ```
 
-例えば、 Mac 版 Firefox では <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> を押すと送信ボタンを起動しますが、Windows 版 Chrome では <kbd>Alt</kbd>+<kbd>S</kbd> を使用します。
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+例えば、Mac 版 Firefox では <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> を押すと「送信」ボタンが作動しますが、Windows 版 Chrome では <kbd>Alt</kbd>+<kbd>S</kbd> を使用します。
 
 {{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
-上の例の問題点は、ユーザーがアクセスキーが何であるかを知らないということです。 特に、競合を避けるために変更する修飾子は通常標準的でないため、このようなことが起こります。サイトを構築する際には、サイトのデザインを邪魔しないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーが何であるかについての情報を指し示す、簡単にアクセスできるリンクを提供する）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を使用する）こともできますが、アクセシビリティの観点からは完全な解決策とは言えません。
+上の例の問題点は、ユーザーにアクセスキーが何であるか伝わらないことです。特に、競合を避けるために修飾キーを変更するため、標準的な組み合わせにならないことが多く、この問題が起こります。サイトを構築する際には、デザインを損なわない方法でこの情報を提供してください（例えば、サイトのアクセスキーに関する情報へのリンクを簡単に見つけられる場所に設置します）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を使用する）方法もありますが、アクセシビリティの観点から完全な解決策ではありません。
 
 ### 送信ボタンの無効化と有効化
 
@@ -194,10 +206,6 @@ l10n:
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

@@ -3,8 +3,6 @@ title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
 
-{{jsSidebar("Operators")}}
-
 Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
 
 {{InteractiveExample("JavaScript Demo: Expressions - yield")}}

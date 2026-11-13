@@ -3,10 +3,8 @@ title: "Élément HTML `<frame>` : l'élément de cadre"
 short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément {{HTMLElement("frameset")}}.
 

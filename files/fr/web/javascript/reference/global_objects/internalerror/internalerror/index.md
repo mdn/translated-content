@@ -61,4 +61,4 @@ Ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Error")}}
+- L'objet natif {{JSxRef("Error")}}

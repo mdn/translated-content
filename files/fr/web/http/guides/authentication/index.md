@@ -2,7 +2,7 @@
 title: Authentification HTTP
 slug: Web/HTTP/Guides/Authentication
 l10n:
-  sourceCommit: 3a50bf634f24f832d97e3e2add4a4633ab255217
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Le HTTP fournit un cadre général pour le contrôle d'accès et l'authentification.
@@ -10,7 +10,7 @@ Cette page est une introduction au cadre HTTP pour l'authentification et montre 
 
 ## La structure d'authentification HTTP
 
-Le RFC {{RFC("7235")}} définit le cadre d'authentification HTTP, qui peut être utilisé par un serveur pour {{Glossary("challenge", "défier")}} une requête client, et par un client pour fournir des informations d'authentification.
+Le RFC {{RFC(7235)}} définit le cadre d'authentification HTTP, qui peut être utilisé par un serveur pour {{Glossary("challenge", "défier")}} une requête client, et par un client pour fournir des informations d'authentification.
 
 Le flux de défi et de réponse fonctionne comme suit&nbsp;:
 
@@ -25,24 +25,24 @@ Les informations contenues dans les en-têtes et leur mode de codage changent be
 
 > [!WARNING]
 > Le schéma d'authentification «&nbsp;basique&nbsp;» utilisé dans le diagramme ci-dessus envoie les informations d'identification encodées mais non chiffrées.
-> Cela serait complètement insecure à moins que l'échange ne se fasse sur une connexion sécurisée (HTTPS/TLS).
+> C'est complètement insécurisé à moins que l'échange ne se fasse sur une connexion sécurisée (HTTPS/TLS).
 
 ### Authentification par procuration
 
 Le même mécanisme de défi-réponse peut être utilisé pour _l'authentification par procuration_.
-Comme l'authentification des ressources et l'authentification par procuration peuvent coexister, un autre jeu d'en-têtes et de codes de réponse est nécessaire. Dans le cas des proxys, le code de statut de défi est {{HTTPStatus("407")}} (Proxy Authentication Required), l'en-tête de réponse {{HTTPHeader("Proxy-Authenticate")}} contient au moins un défi applicable au mandataire, et l'en-tête de requête {{HTTPHeader("Proxy-Authorization")}} est utilisé pour fournir les informations d'identification au serveur mandataire.
+Comme l'authentification des ressources et l'authentification par procuration peuvent coexister, un autre jeu d'en-têtes et de codes de réponse est nécessaire. Dans le cas des proxys, le code de statut de défi est {{HTTPStatus(407, "407 Proxy Authentication Required")}}, l'en-tête de réponse {{HTTPHeader("Proxy-Authenticate")}} contient au moins un défi applicable au mandataire, et l'en-tête de requête {{HTTPHeader("Proxy-Authorization")}} est utilisé pour fournir les informations d'identification au serveur mandataire.
 
 ### Accès interdit
 
-Si un serveur (ou un serveur mandataire) reçoit des identifiants _invalides_, il doit répondre avec un code de statut {{HTTPStatus("401")}} `Unauthorized` ou avec un code de statut {{HTTPStatus("407")}} `Proxy Authentication Required`, et l'utilisateur·ice peut envoyer une nouvelle requête ou remplacer le champ d'en-tête {{HTTPHeader("Authorization")}}.
+Si un serveur (ou un serveur mandataire) reçoit des identifiants _invalides_, il doit répondre avec un code de statut {{HTTPStatus(401)}} `Unauthorized` ou avec un code de statut {{HTTPStatus(407)}} `Proxy Authentication Required`, et l'utilisateur·ice peut envoyer une nouvelle requête ou remplacer le champ d'en-tête {{HTTPHeader("Authorization")}}.
 
-Si un serveur (ou un serveur mandataire) reçoit des identifiants valides mais _inappropriés_ pour accéder à une ressource donnée, le serveur doit répondre avec le code de statut {{HTTPStatus("403")}} `Forbidden`. Contrairement aux codes {{HTTPStatus("401")}} `Unauthorized` ou {{HTTPStatus("407")}} `Proxy Authentication Required`, l'authentification est impossible pour cet·te utilisateur·ice et les navigateurs ne proposent pas une nouvelle tentative.
+Si un serveur (ou un serveur mandataire) reçoit des identifiants valides mais _inappropriés_ pour accéder à une ressource donnée, le serveur doit répondre avec le code de statut {{HTTPStatus(403)}} `Forbidden`. Contrairement aux codes {{HTTPStatus(401)}} `Unauthorized` ou {{HTTPStatus(407)}} `Proxy Authentication Required`, l'authentification est impossible pour cet·te utilisateur·ice et les navigateurs ne proposent pas une nouvelle tentative.
 
-Dans tous les cas, le serveur peut préférer retourner un code de statut {{HTTPStatus("404")}} `Not Found`, afin de masquer l'existence de la page à un·e utilisateur·ice sans privilèges adéquats ou non correctement authentifié.
+Dans tous les cas, le serveur peut préférer retourner un code de statut {{HTTPStatus(404)}} `Not Found`, afin de masquer l'existence de la page à un·e utilisateur·ice sans privilèges adéquats ou non correctement authentifié.
 
 ### Authentification des images multi-origines
 
-Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de [Firefox 59](/fr/docs/Mozilla/Firefox/Releases/59) et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue ([bogue Firefox 1423146 <sup>(angl.)</sup>](https://bugzil.la/1423146)) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateur·ice·s si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.
+Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de [Firefox 59](/fr/docs/Mozilla/Firefox/Releases/59) et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue ([bogue Firefox 1423146 <sup>(angl.)</sup>](https://bugzil.la/1423146)) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateur·ice·s si des personnes mal-intentionnées sont en mesure d'embarquer une image aléatoire dans une page.
 
 ### Encodage de caractère de l'authentification HTTP
 
@@ -61,7 +61,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-Ici, `<type>` est le schéma d'authentification («&nbsp;Basic&nbsp;» est le plus courant des schémas, et est [présenté ci-dessous](#schéma_dauthentification_basique)). Le `realm` («&nbsp;_domaine_&nbsp;» en français) est utilisé pour décrire la zone protégée ou pour indiquer la portée de la protection. Cela pourrait être un message, par exemple «&nbsp;Accès au site de pré-production&nbsp;», pour que l'utilisateur·ice puisse savoir à quel espace il est en train d'accéder.
+Ici, `<type>` est le schéma d'authentification («&nbsp;Basic&nbsp;» est le plus courant des schémas, et est [présenté ci-dessous](#schéma_dauthentification_basique)). Le `realm` («&nbsp;_domaine_&nbsp;» en français) est utilisé pour décrire la zone protégée ou pour indiquer la portée de la protection. Cela peut être un message, par exemple «&nbsp;Accès au site de pré-production&nbsp;», pour que l'utilisateur·ice puisse savoir à quel espace il est en train d'accéder.
 
 ### En-têtes `Authorization` et `Proxy-Authorization`
 
@@ -76,7 +76,7 @@ Proxy-Authorization: <type> <credentials>
 
 Le cadre général de l'authentification HTTP est la base de plusieurs schémas d'authentification.
 
-IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais il existe d'autres schémas proposés par des services d'hébergement, tels qu'Amazon AWS.
+IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes), mais il existe d'autres schémas proposés par des services d'hébergement, tels qu'Amazon AWS.
 
 Certains schémas d'authentification courants incluent&nbsp;:
 
@@ -97,7 +97,7 @@ Certains schémas d'authentification courants incluent&nbsp;:
 - **SCRAM**
   - : Voir {{RFC(7804)}}
 - **AWS4-HMAC-SHA256**
-  - : Voir [la documentation AWS <sup>(angl.)</sup>](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). Ce schéma est utilisé pour l'authentification des serveurs AWS3.
+  - : Voir [la documentation AWS <sup>(angl.)</sup>](https://docs.aws.amazon.com/AmazonS3/latest/developerguide/sigv4-auth-using-authorization-header.html). Ce schéma est utilisé pour l'authentification des serveurs AWS3.
 
 Les schémas peuvent différer en termes de sécurité et de disponibilité dans les logiciels clients ou serveurs.
 
@@ -113,7 +113,7 @@ Le schéma d'authentification «&nbsp;basique&nbsp;» est défini dans la {{RFC(
 Comme l'ID utilisateur·ice et le mot de passe transitent sur le réseau en clair (ils sont encodés en base64, mais le base64 est un encodage réversible), le schéma d'authentification basique n'est pas sécurisé.
 HTTPS/TLS doit être utilisé avec l'authentification basique pour éviter l'interception des identifiants.
 
-De plus, les sites qui utilisent l'authentification HTTP basique sont particulièrement vulnérables aux attaques de [falsification de requête intersites (CSRF)](/fr/docs/Glossary/CSRF), car les identifiants utilisateur·ice sont envoyés dans toutes les requêtes, quel que soit l'origine (ce qui diffère des mécanismes d'authentification basés sur les cookies, car les cookies sont généralement bloqués dans les requêtes intersites).
+De plus, les sites qui utilisent l'authentification HTTP basique sont particulièrement vulnérables aux attaques de [falsification de requête inter-sites (CSRF)](/fr/docs/Glossary/CSRF), car les identifiants utilisateur·ice sont envoyés dans toutes les requêtes, quel que soit l'origine (ce qui diffère des mécanismes d'authentification basés sur les cookies, car les cookies sont généralement bloqués dans les requêtes inter-sites).
 Les sites doivent toujours utiliser les requêtes `POST` lors de la modification des données et inclure des [jetons CSRF](/fr/docs/Web/Security/Attacks/CSRF).
 
 Sans ces améliorations de sécurité, l'authentification basique ne doit pas être utilisée pour protéger des informations sensibles ou précieuses.
@@ -166,5 +166,5 @@ Cette syntaxe n'est plus autorisée dans les navigateurs modernes&nbsp;; le nom 
 - L'en-tête {{HTTPHeader("Authorization")}}
 - L'en-tête {{HTTPHeader("Proxy-Authorization")}}
 - L'en-tête {{HTTPHeader("Proxy-Authenticate")}}
-- Les codes de statut {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- Les codes de statut {{HTTPStatus(401)}}, {{HTTPStatus(403)}}, {{HTTPStatus(407)}}
 - [Les bonnes pratiques de sécurité HTTP](/fr/docs/Web/Security)

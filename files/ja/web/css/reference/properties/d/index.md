@@ -1,5 +1,5 @@
 ---
-title: CSS `d` プロパティ
+title: "`d` プロパティ (CSS)"
 short-title: d
 slug: Web/CSS/Reference/Properties/d
 l10n:

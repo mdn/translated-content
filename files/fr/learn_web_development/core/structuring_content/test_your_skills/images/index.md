@@ -3,7 +3,7 @@ title: "Testez vos compétences : Images HTML"
 short-title: "Test : Images"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 l10n:
-  sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09
+  sourceCommit: 2066cc916dfdcbb782340bf0ce562b230e947cba
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}

@@ -19,7 +19,11 @@ p:only-of-type {
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:only-of-type {
+  /* ... */
+}
+```
 
 ## Ejemplo
 

@@ -3,10 +3,10 @@ title: Mot-clé CSS `revert-rule`
 short-title: revert-rule
 slug: Web/CSS/Reference/Values/revert-rule
 l10n:
-  sourceCommit: c8990ddd46c4605793660e16edf6dda79300ca90
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
-Le [mot-clé global CSS](/fr/docs/Web/CSS/Reference/Values/Data_types#mots-clés_globaux_css) **`revert-rule`** annule la valeur d'une propriété dans une [règle CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#ensembles_de_règles_css) pour revenir à la valeur que la propriété aurait eue si la règle CSS actuelle n'avait pas été présente. La cascade détermine ensuite la valeur à partir des déclarations restantes — cela peut être une autre règle dans la même [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer), une règle dans une couche différente, une [origine de style](/fr/docs/Glossary/Style_origin) différente ou une [valeur par défaut](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#application_des_valeurs_par_défaut) (`inherited` ou `initial`).
+Le [mot-clé global CSS](/fr/docs/Web/CSS/Reference/Values/Data_types#mots-clés_globaux_css) **`revert-rule`** annule la valeur d'une propriété dans une [règle CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#ensembles_de_règles_css) pour revenir à la valeur que la propriété a eue si la règle CSS actuelle n'avait pas été présente. La cascade détermine ensuite la valeur à partir des déclarations restantes — cela peut être une autre règle dans la même [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer), une règle dans une couche différente, une [origine de style](/fr/docs/Glossary/Style_origin) différente ou une [valeur par défaut](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#application_des_valeurs_par_défaut) (`inherited` ou `initial`).
 
 Lorsqu'il est utilisé dans une [animation CSS](/fr/docs/Web/CSS/Guides/Animations) (l'origine de l'animation), le mot-clé `revert-rule` se comporte comme {{CSSxRef("revert-layer")}}.
 
@@ -60,7 +60,7 @@ p {
 
 p.special {
   color: revert-rule;
-  border: 1px solid currentcolor;
+  border: 1px solid currentColor;
 }
 ```
 
@@ -119,7 +119,9 @@ Si plusieurs règles utilisent `revert-rule` pour la même propriété, la casca
 #### HTML
 
 ```html
-<p class="a b">Ce texte est stylé par une chaîne de valeurs revert-rule.</p>
+<p class="a b">
+  Ce texte est mis en forme par une chaîne de valeurs revert-rule.
+</p>
 ```
 
 #### CSS

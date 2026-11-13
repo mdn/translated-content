@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/transform
 original_slug: Web/SVG/Attribute/transform
 ---
 
-{{SVGRef}}
-
 L'attribut **`transform`** définit une liste de définitions de transformation qui sont appliquées à l'élément ainsi qu'à ses éléments fils.
 
 ## Exemple

@@ -1,95 +1,75 @@
 ---
 title: EXSLT
 slug: Web/XML/EXSLT
-original_slug: Web/EXSLT
+l10n:
+  sourceCommit: 049e8715d907f47677e85637b5f8292d5376a9f1
 ---
 
-EXSLT est un ensemble d'extensions à [XSLT](/fr/XSLT). Un certain nombre de modules existent&nbsp;; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
+EXSLT est un ensemble d'extensions à [XSLT](/fr/docs/Web/XML/XSLT) organisé en modules qui fournissent des fonctions pour effectuer des transformations sur un document XML.
+Pour utiliser une fonction EXSLT, il faut déclarer l'espace de noms dans lequel se trouve la fonction, puis utiliser le préfixe approprié lors de l'appel de la fonction.
 
-- [Common](#common) (`exsl`)
-  - : Fournit des éléments et des fonctions basiques d'extension.
-- [Math](#math) (`math`)
-  - : Fournit des routines de comparaison de nœuds.
-- [Expressions rationnelles](#expressions_rationnelles) (`regexp`)
-  - : Fournit des facilités pour l'utilisation d'expressions rationnelles dans la syntaxe JavaScript.
-- [Sets](#sets) (`set`)
-  - : Fournit des routines pour la manipulation d'ensembles.
-- [Strings](#strings) (`str`)
-  - : Fournit des fonctions de manipulation de chaînes.
-
-### Utilisation de EXSLT
-
-Pour utiliser une fonction EXSLT, il faut déclarer son espace de noms comme espace de noms d'extension dans votre feuille de style. Par exemple, pour utiliser le package regexp&nbsp;:
+Par exemple, pour utiliser le module des expressions rationnelles&nbsp;:
 
 ```xml
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:regexp="http://exslt.org/regular-expressions">
-
   <xsl:template match="/">
-    …
+    <!-- … -->
     <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
-    …
+    <!-- … -->
   </xsl:template>
-
 </xsl:stylesheet>
 ```
 
-### Common
+## Référence
 
-Le package EXSLT Common fournit des fonctions de base qui étendent les capacités de XSLT. L'espace de noms pour le package Common est `http://exslt.org/common`.
+La [référence EXSLT](/fr/docs/Web/XML/EXSLT/Reference) décrit les espaces de noms et les fonctions pour les opérations courantes, les mathématiques, les expressions rationnelles, la manipulation d'ensembles et la manipulation de chaînes de caractères.
 
-#### Fonctions
+### Commun
 
-- [exsl:node-set](/fr/EXSLT/exsl/node-set)
-- [exsl:object-type](/fr/EXSLT/exsl/object-type)
+Le module commun d'EXSLT fournit des fonctions de base qui étendent les capacités de XSLT. L'espace de noms du module commun est `http://exslt.org/common`.
 
-### Math
+- [`exsl:node-set()`](/fr/docs/Web/XML/EXSLT/Reference/exsl/node-set)
+- [`exsl:object-type()`](/fr/docs/Web/XML/EXSLT/Reference/exsl/object-type)
 
-Le package EXSLT Math fournit des fonctions permettant de travailler avec des valeurs numériques et de comparer des nœuds. L'espace de noms pour le package Math est `http://exslt.org/math`.
+### Mathématiques
 
-#### Fonctions
+Le module mathématique d'EXSLT fournit des fonctions pour manipuler des valeurs numériques et comparer des nœuds. L'espace de noms du module mathématique est `http://exslt.org/math`.
 
-- [math:highest](/fr/EXSLT/math/highest)
-- [math:lowest](/fr/EXSLT/math/lowest)
-- [math:max](/fr/EXSLT/math/max)
-- [math:min](/fr/EXSLT/math/min)
+- [`math:highest()`](/fr/docs/Web/XML/EXSLT/Reference/math/highest)
+- [`math:lowest()`](/fr/docs/Web/XML/EXSLT/Reference/math/lowest)
+- [`math:max()`](/fr/docs/Web/XML/EXSLT/Reference/math/max)
+- [`math:min()`](/fr/docs/Web/XML/EXSLT/Reference/math/min)
 
 ### Expressions rationnelles
 
-Le package EXSLT Expressions rationnelles fournit des fonctions permettant de tester, chercher et remplace du texte à l'aide d'expressions rationnelles de style JavaScript.
+Le module des expressions rationnelles d'EXSLT fournit des fonctions qui permettent de tester, de rechercher et de remplacer du texte à l'aide d'expressions rationnelles de style JavaScript.
+L'espace de noms du module des expressions rationnelles d'EXSLT est `http://exslt.org/regular-expressions`.
 
-L'espace de noms pour le package Expressions rationnelles est `http://exslt.org/regular-expressions`.
+- [`regexp:match()`](/fr/docs/Web/XML/EXSLT/Reference/regexp/match)
+- [`regexp:replace()`](/fr/docs/Web/XML/EXSLT/Reference/regexp/replace)
+- [`regexp:test()`](/fr/docs/Web/XML/EXSLT/Reference/regexp/test)
 
-#### Fonctions
+### Ensembles
 
-- [regexp:match](/fr/EXSLT/regexp/match)
-- [regexp:replace](/fr/EXSLT/regexp/replace)
-- [regexp:test](/fr/EXSLT/regexp/test)
+Le module des ensembles d'EXSLT propose des fonctions qui permettent de manipuler des ensembles. L'espace de noms de ces fonctions est `http://exslt.org/sets`.
 
-### Sets
+- [`set:difference()`](/fr/docs/Web/XML/EXSLT/Reference/set/difference)
+- [`set:distinct()`](/fr/docs/Web/XML/EXSLT/Reference/set/distinct)
+- [`set:intersection()`](/fr/docs/Web/XML/EXSLT/Reference/set/intersection)
+- [`set:has-same-node()`](/fr/docs/Web/XML/EXSLT/Reference/set/has-same-node)
+- [`set:leading()`](/fr/docs/Web/XML/EXSLT/Reference/set/leading)
+- [`set:trailing()`](/fr/docs/Web/XML/EXSLT/Reference/set/trailing)
 
-Le package EXSLT Sets fournit des fonctions permettant des manipulations d'ensembles. L'espace de noms pour ces fonctions est `http://exslt.org/sets`.
+### Chaînes de caractères
 
-#### Fonctions
+Le module des chaînes de caractères d'EXSLT fournit des fonctions qui permettent la manipulation des chaînes de caractères. L'espace de noms pour ce module est `http://exslt.org/strings`.
 
-- [set:difference](/fr/EXSLT/set/difference)
-- [set:distinct](/fr/EXSLT/set/distinct)
-- [set:intersection](/fr/EXSLT/set/intersection)
-- [set:has-same-node](/fr/EXSLT/set/has-same-node)
-- [set:leading](/fr/EXSLT/set/leading)
-- [set:trailing](/fr/EXSLT/set/trailing)
+- [`str:concat()`](/fr/docs/Web/XML/EXSLT/Reference/str/concat)
+- [`str:split()`](/fr/docs/Web/XML/EXSLT/Reference/str/split)
+- [`str:tokenize()`](/fr/docs/Web/XML/EXSLT/Reference/str/tokenize)
 
-### Strings
+## Voir aussi
 
-Le package EXSLT Strings fournit des fonctions permettant la manipulation de chaînes. L'espace de noms pour le package Strings est `http://exslt.org/strings`.
-
-#### Fonctions
-
-- [str:concat](/fr/EXSLT/str/concat)
-- [str:split](/fr/EXSLT/str/split)
-- [str:tokenize](/fr/EXSLT/str/tokenize)
-
-### Voir aussi
-
-- [Site Web d'EXSLT](http://www.exslt.org/)
+- [Site web d'EXSLT <sup>(angl.)</sup>](https://exslt.github.io/)

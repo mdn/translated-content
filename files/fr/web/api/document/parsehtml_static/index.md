@@ -3,10 +3,10 @@ title: "Document : méthode statique parseHTML()"
 short-title: parseHTML()
 slug: Web/API/Document/parseHTML_static
 l10n:
-  sourceCommit: cda9415220ba812ba2ee24e0af1c8e8001ab9924
+  sourceCommit: 9cf3002bd29376c15d49df6fab2e6a264285abf6
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 La méthode statique **`parseHTML()`** de l'interface {{DOMxRef("Document")}} fournit une méthode sécurisée contre les XSS pour analyser et assainir une chaîne de caractères HTML afin de créer une nouvelle instance de {{DOMxRef("Document")}}.
 
@@ -55,12 +55,12 @@ Un assainisseur personnalisé ou une configuration d'assainissement peut être d
 Notez que même si des options non sécurisées sont autorisées par l'assainisseur, elles sont néanmoins supprimées lors de l'utilisation de cette méthode (qui appelle implicitement {{DOMxRef('Sanitizer.removeUnsafe()')}}).
 
 Le HTML d'entrée peut inclure des [racines d'ombre déclaratives](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif).
-Si la chaîne HTML définit plus d'une [racine d'ombre déclarative](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif) dans un hôte d'ombre donné, seule la première {{DOMxRef("ShadowRoot")}} est créée — les déclarations suivantes sont analysées comme des éléments {{HTMLElement("template")}} à l'intérieur de cette racine d'ombre.
+Si la chaîne de caractères HTML définit plus d'une [racine d'ombre déclarative](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif) dans un hôte d'ombre donné, seule la première {{DOMxRef("ShadowRoot")}} est créée — les déclarations suivantes sont analysées comme des éléments {{HTMLElement("template")}} à l'intérieur de cette racine d'ombre.
 
 `parseHTML()` doit être utilisé plutôt que {{DOMxRef("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}, sauf s'il existe un besoin spécifique d'autoriser des éléments et attributs non sécurisés.
-Si le HTML à analyser n'a pas besoin de contenir des entités HTML non sécurisées, vous devriez utiliser `Document.parseHTML()`.
+Si le HTML à analyser n'a pas besoin de contenir des entités HTML non sécurisées, vous devez utiliser `Document.parseHTML()`.
 
-Notez que, comme cette méthode assainit toujours les chaînes d'entrée contenant des entités non sécurisées au regard des XSS, elle n'est pas sécurisée ni validée à l'aide de [l'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API).
+Notez que, comme cette méthode assainit toujours les chaînes de caractères d'entrée contenant des entités non sécurisées au regard des XSS, elle n'est pas sécurisée ni validée à l'aide de [l'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API).
 
 ## Spécifications
 

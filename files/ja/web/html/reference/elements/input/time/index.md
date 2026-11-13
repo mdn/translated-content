@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="time">` 属性値
+title: '`<input type="time">` 属性値'
 short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{htmlelement("input")}} 要素の **`time`** 型は、ユーザーが簡単に時刻（時と分、任意で秒）を入力できるように設計された入力欄を生成します。
@@ -88,10 +88,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 もっとも基本的な `<input type="time">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
-<form>
-  <label for="appointment-time">予約時刻を選んでください: </label>
-  <input id="appointment-time" type="time" name="appointment-time" />
-</form>
+<label for="appointment-time">予約時刻を選んでください: </label>
+<input id="appointment-time" type="time" name="appointment-time" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_time', 600, 40)}}
@@ -101,19 +99,17 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 この例では、`<input type="time">` で作成されたネイティブのピッカーを使用して時刻が選択できます。
 
 ```html
-<form>
-  <label for="appointment-time">
-    予約時刻を選んでください (営業時間 12:00～18:00):
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00"
-    required />
-  <span class="validity"></span>
-</form>
+<label for="appointment-time">
+  予約時刻を選んでください (営業時間 12:00～18:00):
+</label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  min="12:00"
+  max="18:00"
+  required />
+<span class="validity"></span>
 ```
 
 ```css
@@ -177,14 +173,12 @@ timeControl.value = "15:30";
 最初に、 HTML を見てください。ラベルと入力欄を設置しており、 {{HTMLElement("p")}} 要素と、 `time` 入力欄の値を表示する {{HTMLElement("span")}} を追加しています。
 
 ```html
-<form>
-  <label for="startTime">開始時刻: </label>
-  <input type="time" id="startTime" />
-  <p>
-    <code>time</code> 入力欄の値:
-    <code>"<span id="value">n/a</span>"</code>
-  </p>
-</form>
+<label for="startTime">開始時刻: </label>
+<input type="time" id="startTime" />
+<p>
+  <code>time</code> 入力欄の値:
+  <code>"<span id="value">n/a</span>"</code>
+</p>
 ```
 
 JavaScript コードは、 time 入力欄に {{domxref("Element/input_event", "input")}} イベントを監視するコードを追加し、 input 要素の中身が変更されるたびに呼び出されるようにします。これが発生すると、 `<span>` 要素の中身が input 要素の新しい値で置き換えられます。
@@ -209,10 +203,8 @@ startTime.addEventListener("input", () => {
 増加する秒数を定義する整数値を指定します。デフォルト値は 60 秒です。デフォルトでは、ほとんどのユーザーエージェントの時刻 UI は時分を表示しますが、秒は表示しません。 UI に秒数を追加するには、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性に `60` で割り切れない数値を指定するか、 `min` 値または `max` 値によって秒数を指定します。
 
 ```html
-<form>
-  <label for="appointment-time">予約時刻を選んでください: </label>
-  <input id="appointment-time" type="time" name="appointment-time" step="2" />
-</form>
+<label for="appointment-time">予約時刻を選んでください: </label>
+<input id="appointment-time" type="time" name="appointment-time" step="2" />
 ```
 
 {{EmbedLiveSample('Using_the_step_attribute', 600, 40)}}
@@ -224,18 +216,16 @@ startTime.addEventListener("input", () => {
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択できる時刻を制限することができます。次の例では、時刻の最小値を `12:00` に、時刻の最大値を `18:00` に設定しています。
 
 ```html
-<form>
-  <label for="appointment-time">
-    予約時刻を選んでください (営業時間 12:00～18:00):
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00" />
-  <span class="validity"></span>
-</form>
+<label for="appointment-time">
+  予約時刻を選んでください (営業時間 12:00～18:00):
+</label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  min="12:00"
+  max="18:00" />
+<span class="validity"></span>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_times', 600, 40) }}
@@ -318,6 +308,12 @@ if (input.validity.valid && input.type === "time") {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 フォームに不完全な時刻（または設定された範囲外の時刻）を設定して送信しようとすると、ブラウザーはエラーを表示します。例を実行してみてください。
 
 {{ EmbedLiveSample('Making_times_required', 600, 120) }}
@@ -363,14 +359,6 @@ if (input.validity.valid && input.type === "time") {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
-      </td>
-    </tr>
-     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>

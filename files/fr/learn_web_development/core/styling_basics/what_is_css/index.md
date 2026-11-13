@@ -2,7 +2,7 @@
 title: Qu'est-ce que le CSS ?
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 l10n:
-  sourceCommit: 79b46675e64c9b3e7c4333c17b21b692f78b39ec
+  sourceCommit: 013458b2380d3c68e0df0002ec151f3d8eeb84c0
 ---
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
@@ -50,7 +50,7 @@ Ce que vous voyez, ce sont les styles par défaut du navigateur — une mise en 
 
 ![Les styles par défaut utilisés par un navigateur](html-example.png)
 
-Le web serait un endroit ennuyeux si tous les sites web ressemblaient à ça. C'est pourquoi vous devez apprendre le CSS.
+Le web est un endroit ennuyeux si tous les sites web ressemblent à ça. C'est pourquoi vous devez apprendre le CSS.
 
 ## À quoi sert le CSS ?
 
@@ -68,7 +68,7 @@ CSS peut être utilisé à de nombreuses fins liées à l'apparence et à la con
 - Création de mises en page, telles que des [grilles](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) ou des [mises en page à colonnes multiples](/fr/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts).
 - Effets spéciaux tels que [l'animation](/fr/docs/Web/CSS/Guides/Animations).
 
-Le langage CSS est organisé en _modules_ qui contiennent des fonctionnalités liées. Par exemple, jetez un œil aux pages de référence MDN pour le module [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) pour découvrir son objectif et les propriétés et fonctionnalités qu'il contient. Dans nos pages de module, vous trouverez également des liens vers les _Spécifications_ qui définissent les technologies.
+Le langage CSS est organisé en _modules_ qui contiennent des fonctionnalités liées. Par exemple, jetez un œil aux pages de référence MDN pour le module [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) pour découvrir son objectif et les propriétés et fonctionnalités qu'il contient. Dans nos pages de module, vous trouvez également des liens vers les _Spécifications_ qui définissent les technologies.
 
 ## Bases de la syntaxe CSS
 
@@ -84,8 +84,8 @@ h1 {
 ```
 
 - Dans l'exemple ci-dessus, la règle CSS commence par un {{Glossary("CSS Selector", "sélecteur")}}. Cela _sélectionne_ les éléments HTML que nous allons mettre en forme. Dans ce cas, nous stylisons les titres de niveau un (`{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`).
-- Nous incluons ensuite un ensemble d'accolades — `{ }`.
-- Les accolades contiennent une ou plusieurs **déclarations**, qui prennent la forme de paires **propriété** et **valeur**. Nous spécifions la propriété (par exemple, `color` dans l'exemple ci-dessus) avant les deux-points, et nous spécifions la valeur de la propriété après les deux-points (`red` est la valeur définie pour la propriété `color`).
+- Nous incluons ensuite un ensemble d'accolades (`{ }`) pour créer un **bloc de déclaration**.
+- Le bloc de déclaration contient une ou plusieurs **déclarations**, qui prennent la forme de paires **propriété** et **valeur**. Nous spécifions la propriété (par exemple, `color` dans l'exemple ci-dessus) avant les deux-points, et nous spécifions la valeur de la propriété après les deux-points (`red` est la valeur définie pour la propriété `color`).
 - Cet exemple contient deux déclarations, une pour `color` et une autre pour `font-size`.
 
 Les différentes {{Glossary("property/CSS", "propriétés CSS")}} ont des valeurs autorisées différentes. Dans notre exemple, nous avons la propriété `color`, qui peut prendre différentes [valeurs de couleur](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleur). Nous avons également la propriété `font-size`. Cette propriété peut prendre différentes [unités de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#nombres_longueurs_et_pourcentages) comme valeur.

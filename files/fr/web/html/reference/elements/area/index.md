@@ -72,7 +72,7 @@ Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/
     - `circle`&nbsp;: la valeur est `x,y,radius`. La valeur définit les coordonnées du centre du cercle et le rayon.
       Par exemple&nbsp;: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`.
     - `poly`&nbsp;: la valeur est `x1,y1,x2,y2,..,xn,yn`. La valeur définit les coordonnées des bords du polygone.
-      Si la première et la dernière paire de coordonnées ne sont pas les mêmes, le navigateur ajoutera la dernière paire de coordonnées pour fermer le polygone.
+      Si la première et la dernière paire de coordonnées ne sont pas les mêmes, le navigateur ajoute la dernière paire de coordonnées pour fermer le polygone.
 
     Les valeurs sont des nombres de pixels CSS. Notre [générateur de formes](/fr/docs/Web/CSS/Guides/Shapes/Shape_generator) peut vous aider à générer la syntaxe `coords` en sélectionnant des points sur une image que vous téléchargez.
 
@@ -84,26 +84,26 @@ Les attributs de cet élément incluent les [attributs universels](/fr/docs/Web/
     Sa valeur est une URL valide.
     Cet attribut peut être omis&nbsp;; dans ce cas, l'élément `<area>` ne représente pas un lien hypertexte.
 - `interestfor` {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Définit l'élément `<area>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est l'`id` de l'élément cible, qui sera affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
+  - : Définit l'élément `<area>` comme un **invocateur d'intérêt** (<i lang="en">interest invoker</i>). Sa valeur est un `id` de l'élément cible, qui est affecté d'une manière ou d'une autre (généralement affiché ou masqué) lorsque l'intérêt est montré ou perdu sur l'élément invocateur (par exemple au survol/fin de survol ou à la sélection/perte de sélection (<i lang="en">focus/blur</i> en anglais)). Voir [Utilisation des invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) pour plus de détails et d'exemples.
 - `ping`
-  - : Contient une liste d'URL séparées par des espaces vers lesquelles, lors du suivi du lien, des requêtes {{HTTPMethod("POST")}} avec le corps `PING` seront envoyées par le navigateur (en arrière-plan).
+  - : Contient une liste d'URL séparées par des espaces vers lesquelles, lors du suivi du lien, des requêtes {{HTTPMethod("POST")}} avec le corps `PING` sont envoyées par le navigateur (en arrière-plan).
     Généralement utilisé pour le pistage.
 - `referrerpolicy`
   - : Une chaîne de caractères indiquant le référent à utiliser lors de la récupération de la ressource&nbsp;:
-    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
-    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`&nbsp;: Le référent envoyé sera limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
-    - `origin-when-cross-origin`&nbsp;: Le référent envoyé vers d'autres origines sera limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluront toujours le chemin.
-    - `same-origin`&nbsp;: Un référent sera envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiendront aucune information de référent.
+    - `no-referrer`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
+    - `no-referrer-when-downgrade`&nbsp;: L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé vers des {{Glossary("origin", "origines")}} sans {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`&nbsp;: Le référent envoyé est limité à l'origine de la page référente&nbsp;: son [schéma](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, et {{Glossary("port")}}.
+    - `origin-when-cross-origin`&nbsp;: Le référent envoyé vers d'autres origines est limité au schéma, à l'hôte et au port. Les navigations sur la même origine incluent toujours le chemin.
+    - `same-origin`&nbsp;: Un référent est envoyé pour la {{Glossary("Same-origin policy", "même origine")}}, mais les requêtes inter-origines ne contiennent aucune information de référent.
     - `strict-origin`&nbsp;: N'envoie l'origine du document comme référent que lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), mais ne l'envoie pas vers une destination moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (par défaut)&nbsp;: Envoie une URL complète lors d'une requête même origine, n'envoie que l'origine lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS), et n'envoie aucun en-tête vers une destination moins sécurisée (HTTPS→HTTP).
-    - `unsafe-url`&nbsp;: Le référent envoyé inclura l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)).
+    - `unsafe-url`&nbsp;: Le référent envoyé inclut l'origine et le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), le [mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou le [nom d'utilisateur·ice](/fr/docs/Web/API/HTMLAnchorElement/username)).
       **Cette valeur n'est pas sûre**, car elle divulgue des origines et des chemins de ressources protégées par TLS vers des origines non sécurisées.
 
 - [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
   - : Pour les ancres contenant l'attribut [`href`](#href), cet attribut définit la relation de l'objet cible à l'objet du lien.
     La valeur est une liste de types de liens séparés par des espaces.
-    Les valeurs et leur signification seront enregistrées par une autorité qui pourrait avoir une signification pour l'auteur·ice du document.
+    Les valeurs et leur signification sont enregistrées par une autorité qui peut avoir une signification pour l'auteur·ice du document.
     La relation par défaut, si aucune autre n'est donnée, est vide. Utilisez cet attribut uniquement si l'attribut [`href`](#href) est présent.
 - `shape`
   - : La forme de la zone associée. Les spécifications HTML définissent les valeurs `rect`, qui définit une région rectangulaire&nbsp;; `circle`, qui définit une région circulaire&nbsp;; `poly`, qui définit un polygone&nbsp;; et `default`, qui indique toute la région au-delà des formes définies.

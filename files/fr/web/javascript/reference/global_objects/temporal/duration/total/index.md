@@ -74,5 +74,5 @@ console.log(
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}
 - La méthode {{JSxRef("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}

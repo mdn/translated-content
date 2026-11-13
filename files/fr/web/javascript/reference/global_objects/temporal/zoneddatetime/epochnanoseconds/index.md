@@ -44,5 +44,5 @@ console.log(zdt.toString()); // 2021-08-01T12:34:56.789+00:00[UTC]
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - La propriété {{JSxRef("Temporal/ZonedDateTime/epochMilliseconds", "Temporal.ZonedDateTime.prototype.epochMilliseconds")}}

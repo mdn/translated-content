@@ -3,7 +3,7 @@ title: Firefox 34 note de version pour les développeurs
 short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 34 a été publié le 1er décembre 2014. Cet article répertorie les principaux changements utiles non seulement pour les développeur·euse·s web, mais aussi pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'extensions.
@@ -55,7 +55,7 @@ _Pas de changement._
 
 - La méthode expérimentale `TypedArray.prototype.move()` (disponible uniquement dans les anciens canaux Nightly et Aurora) a été remplacée par la méthode standard ES2015 {{JSxRef("TypedArray.prototype.copyWithin()")}} désormais ajoutée ([bogue Firefox 1021379 <sup>(angl.)</sup>](https://bugzil.la/1021379)).
 - En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), définir un [nom de propriété en double dans les littéraux d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) ne déclenche plus de `SyntaxError` conformément à la spécification ES2015 ([bogue Firefox 1041128 <sup>(angl.)</sup>](https://bugzil.la/1041128)).
-- Dans les expressions régulières (y compris `String.replace`), le texte correspondant à un groupe capturant est désormais `undefined` au lieu de la chaîne de caractères vide lorsque ce groupe capturant n'a pas été consulté en raison des quantificateurs qui ont empêché son exercice (voir [bogue Firefox 369778 <sup>(angl.)</sup>](https://bugzil.la/369778) et [cet exemple de code](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#notes_spécifiques_à_firefox)). Notez qu'en raison de la compatibilité Web, `RegExp.$N` retourne toujours une chaîne de caractères vide ([bogue Firefox 1053944 <sup>(angl.)</sup>](https://bugzil.la/1053944)).
+- Dans les expressions rationnelles (y compris `String.replace`), le texte correspondant à un groupe capturant est désormais `undefined` au lieu de la chaîne de caractères vide lorsque ce groupe capturant n'a pas été consulté en raison des quantificateurs qui ont empêché son exercice (voir [bogue Firefox 369778 <sup>(angl.)</sup>](https://bugzil.la/369778) et [cet exemple de code](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#notes_spécifiques_à_firefox)). Notez qu'en raison de la compatibilité Web, `RegExp.$N` retourne toujours une chaîne de caractères vide ([bogue Firefox 1053944 <sup>(angl.)</sup>](https://bugzil.la/1053944)).
 - [L'opérateur de propagation](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ES2015 est désormais pris en charge dans la [déstructuration](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) ([bogue Firefox 933276 <sup>(angl.)</sup>](https://bugzil.la/933276)).
 - L'opérateur de [destructuration](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring) utilise désormais le protocole d'itérateur au lieu du protocole de type tableau ([bogue Firefox 933276 <sup>(angl.)</sup>](https://bugzil.la/933276)).
 - {{JSxRef("Proxy.revocable()")}} a été ajouté ([bogue Firefox 978279 <sup>(angl.)</sup>](https://bugzil.la/978279)).
@@ -72,7 +72,7 @@ _Pas de changement._
 - Notre implémentation expérimentale de l'EME continue. La méthode `MediaKeySession.getUsableKeyIds()` a été ajoutée ([bogue Firefox 1057171 <sup>(angl.)</sup>](https://bugzil.la/1057171)).
 - Concernant [WebRTC](/fr/docs/Web/API/WebRTC_API)&nbsp;:
   - une implémentation expérimentale de `RTPSender` et `RTPReceiver` fonctionnant avec {{DOMxRef("RTCPeerConnection")}} a été mise en place ([bogue Firefox 1032835 <sup>(angl.)</sup>](https://bugzil.la/1032835)).
-  - le partage de fenêtre d'application a été ajouté à {{DOMxRef("Navigator.getUserMedia()")}} ([bogue Firefox 1036653 <sup>(angl.)</sup>](https://bugzil.la/1036653)) et `MediaTrackConstraintSet` prend désormais en charge `browserWindow` et `scrollWithPage`, permettant de choisir l'onglet d'une fenêtre à partager sans afficher la boîte de dialogue de sélection d'onglet ([bogue Firefox 1041700 <sup>(angl.)</sup>](https://bugzil.la/1041700)).
+  - le partage de fenêtre d'application a été ajouté à {{DOMxRef("Navigator.getUserMedia()")}} ([bogue Firefox 1036653 <sup>(angl.)</sup>](https://bugzil.la/1036653)) et `MediaTrackConstraintSet` prend désormais en charge `browserWindow` et `scrollWithPage`, vous permettant de choisir l'onglet d'une fenêtre à partager sans afficher la boîte de dialogue de sélection d'onglet ([bogue Firefox 1041700 <sup>(angl.)</sup>](https://bugzil.la/1041700)).
   - `"browser"` est désormais une valeur acceptée de MediaSourceEnum, utilisée pour définir les contraintes ([bogue Firefox 1041493 <sup>(angl.)</sup>](https://bugzil.la/1041493)).
 
 - Pour les Web Components, le changement de cible des évènements est désormais implémenté ([bogue Firefox 887541 <sup>(angl.)</sup>](https://bugzil.la/887541)).

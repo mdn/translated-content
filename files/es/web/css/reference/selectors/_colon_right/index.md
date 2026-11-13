@@ -22,7 +22,11 @@ Que una página dada sea "izquierda" o "derecha" está determinada por la direcc
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:right {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

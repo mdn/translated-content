@@ -3,7 +3,7 @@ title: Règle CSS `@page`
 short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
@@ -52,7 +52,7 @@ La règle `@page` ne peut contenir que des descripteurs de page et des [règles 
 - [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size)
   - : Définit la taille cible et l'orientation du bloc englobant de la boîte de page. Dans le cas général, où une boîte de page est rendue sur une feuille de page, cela indique aussi la taille de la feuille de destination.
 
-La spécification mentionne que les propriétés CSS suivantes pourraient s'appliquer aux boîtes de page via la règle @page. Cependant, elles ne sont _pas encore prises en charge_ par les navigateurs.
+La spécification mentionne que les propriétés CSS suivantes peuvent s'appliquer aux boîtes de page avec la règle @page. Cependant, elles ne sont _pas encore prises en charge_ par les navigateurs.
 
 <details>
 <summary>Propriétés de page restantes</summary>
@@ -137,7 +137,7 @@ La règle @page définit les propriétés de la boîte de page. La règle `@page
 
 ### Propriétés associées
 
-La règle `@page` permet d'attribuer un nom à la règle, qui pourra ensuite être utilisé dans une déclaration via la propriété `page`.
+La règle `@page` permet d'attribuer un nom à la règle, qui peut ensuite être utilisé dans une déclaration avec la propriété `page`.
 
 - {{CSSxRef("page")}}
   - : Permet à un sélecteur d'utiliser une **page nommée** définie par l'utilisateur·ice.
@@ -287,22 +287,22 @@ Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/
 ### Utiliser la propriété size pour changer l'orientation de la page
 
 Cet exemple montre comment diviser les `<section>` en pages individuelles au format `landscape`, chaque page ayant une marge de 20&nbsp;% lors de l'impression.
-Cliquer sur le bouton d'impression ouvrira la boîte de dialogue d'impression avec les sections HTML réparties sur des pages distinctes.
+Cliquer sur le bouton d'impression ouvre la boîte de dialogue d'impression avec les sections HTML réparties sur des pages distinctes.
 
 ```html live-sample___page-size
-<button>Print page</button>
+<button>Page d'impression</button>
 <article>
   <section>
-    <h2>Header one</h2>
-    <p>Paragraph one.</p>
+    <h2>En-tête un</h2>
+    <p>Paragraphe un.</p>
   </section>
   <section>
-    <h2>Header two</h2>
-    <p>Paragraph two.</p>
+    <h2>En-tête deux</h2>
+    <p>Paragraphe deux.</p>
   </section>
   <section>
-    <h2>Header three</h2>
-    <p>Paragraph three.</p>
+    <h2>En-tête trois</h2>
+    <p>Paragraphe trois.</p>
   </section>
 </article>
 ```
@@ -358,9 +358,9 @@ section {
 }
 ```
 
-{{EmbedLiveSample("Utiliser la propriété size pour changer l'orientation de la page", "100%", 540, , , , , "allow-modals")}}
+{{EmbedLiveSample("Utiliser la propriété size pour changer l'orientation de la page", "100%", 540,,,,, "allow-modals")}}
 
-### Exemples de pseudo-classes @page
+### Exemples de pseudo-classes `@page`
 
 Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de `@page` pour des exemples.
 

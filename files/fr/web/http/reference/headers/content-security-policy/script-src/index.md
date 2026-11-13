@@ -3,7 +3,7 @@ title: "Content-Security-Policy : directive script-src"
 short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: ad01ed9218be15d7aeaa0666ec0bc2a2d17f3574
 ---
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** définit les sources valides pour du code JavaScript. Cela inclut les URL chargées directement par les éléments HTML {{HTMLElement("script")}}, mais aussi les scripts embarqués, les attributs de gestion d'évènements (par exemple `onclick`) et [les feuilles de style XSLT](/fr/docs/Web/XML/XSLT) pouvant déclencher l'exécution de scripts.
@@ -21,7 +21,7 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`
     <tr>
       <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        Oui, si cette directive est absente, l'agent utilisateur consulte la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -51,36 +51,36 @@ Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 Content-Security-Policy: script-src https://example.com/
 ```
 
-le script suivant est bloqué et ne sera ni chargé ni exécuté&nbsp;:
+le script suivant est bloqué et n'est ni chargé ni exécuté&nbsp;:
 
 ```html
 <script src="https://hors-example.com/js/library.js"></script>
 ```
 
-On notera que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:
+Notez que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:
 
 ```html
 <button id="btn" onclick="faireQuelquechose()">Cliquez sur moi</button>
 ```
 
-Vous devriez les remplacer par des appels à la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener")}}&nbsp;:
+Vous devez les remplacer par des appels à la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener")}}&nbsp;:
 
 ```js
 document.getElementById("btn").addEventListener("click", faireQuelquechose);
 ```
 
-Si vous ne pouvez pas remplacer les gestionnaires d'évènements en ligne, vous pouvez utiliser l'expression de source `'unsafe-hashes'` pour les autoriser.
+Si vous ne pouvez pas remplacer les gestionnaires d'évènements en incise, vous pouvez utiliser l'expression de source `'unsafe-hashes'` pour les autoriser.
 Voir [Hachages non sécurisés](#hachages_non_sécurisés) pour plus d'informations.
 
 ### Autoriser les scripts externes à l'aide de hachages
 
 Autoriser les domaines de confiance, comme montré dans la section ci-dessus, est une approche générale pour définir les emplacements à partir desquels le code peut être chargé en toute sécurité.
-C'est une approche pragmatique, en particulier lorsque votre site utilise de nombreuses ressources et que vous avez confiance que le site de confiance ne sera pas compromis.
+C'est une approche pragmatique, en particulier lorsque votre site utilise de nombreuses ressources et que vous avez confiance que le site de confiance n'est pas compromis.
 
 Une méthode alternative consiste à définir les scripts autorisés en utilisant des hachages de fichiers.
 Avec cette approche, un fichier externe dans un élément `<script>` ne peut être chargé et exécuté que si toutes les valeurs de hachage valides dans son attribut [`integrity`](/fr/docs/Web/HTML/Reference/Elements/script#integrity) correspondent aux valeurs autorisées dans l'en-tête CSP.
 La fonctionnalité [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) vérifie en outre que le fichier téléchargé possède la valeur de hachage indiquée, et n'a donc pas été modifié.
-C'est plus sûr que de faire confiance à un domaine, car les fichiers ne seront utilisés que s'ils ne sont pas modifiés, même s'ils sont chargés à partir d'un site compromis.
+C'est plus sûr que de faire confiance à un domaine, car les fichiers ne sont utilisés que s'ils ne sont pas modifiés, même s'ils sont chargés à partir d'un site compromis.
 Cependant, c'est plus granulaire, et nécessite que les valeurs de hachage soient mises à jour dans le CSP et les éléments script chaque fois que les scripts associés sont modifiés.
 
 L'en-tête CSP ci-dessous illustre cette approche.
@@ -90,7 +90,7 @@ Il permet les scripts pour lesquels le hachage SHA384 est `oqVuAfXRKap7fdgcCY5uy
 Content-Security-Policy: script-src 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC' 'sha256-fictional_value'
 ```
 
-Le script `exemple-framework.js` ci-dessous devrait se charger car la valeur de hachage dans son attribut `integrity` est également présente dans le CSP (à condition que le fichier ait effectivement ce hachage une fois téléchargé&nbsp;!)
+Le script `exemple-framework.js` ci-dessous doit se charger, car la valeur de hachage dans son attribut `integrity` est également présente dans le CSP (à condition que le fichier ait effectivement ce hachage une fois téléchargé&nbsp;!)
 
 ```html
 <script
@@ -101,7 +101,7 @@ Le script `exemple-framework.js` ci-dessous devrait se charger car la valeur de 
 
 L'attribut `integrity` peut avoir plusieurs valeurs, chacune fournissant un hachage pour le fichier calculé à l'aide d'un algorithme différent.
 Pour qu'un script externe soit chargé, le CSP exige que _toutes_ les valeurs de hachage valides dans l'attribut soient également présentes dans la déclaration `script-src` du CSP.
-Le script ci-dessous ne se chargera donc pas, car le deuxième hachage n'est pas présent dans l'en-tête CSP ci-dessus.
+Le script ci-dessous ne se charge donc pas, car le deuxième hachage n'est pas présent dans l'en-tête CSP ci-dessus.
 
 ```html
 <script
@@ -111,7 +111,7 @@ Le script ci-dessous ne se chargera donc pas, car le deuxième hachage n'est pas
 ```
 
 Cette règle ne s'applique qu'aux valeurs de hachage _valides_.
-Les valeurs qui ne sont pas reconnues comme des hachages par le navigateur sont ignorées, donc le script suivant devrait se charger&nbsp;:
+Les valeurs qui ne sont pas reconnues comme des hachages par le navigateur sont ignorées, donc le script suivant doit se charger&nbsp;:
 
 ```html
 <script
@@ -125,18 +125,18 @@ Les valeurs qui ne sont pas reconnues comme des hachages par le navigateur sont 
 ### Scripts embarqués non fiables
 
 > [!NOTE]
-> Interdire les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> Interdire les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettent de les autoriser.
 > Les hachages s'appliquent aux scripts et styles embarqués, mais pas aux gestionnaires d'évènements.
 > Voir [Hachages non sécurisés](#hachages_non_sécurisés) pour plus d'informations.
 
-Pour autoriser les scripts et styles embarqués, vous pouvez définir `'unsafe-inline'`, une source de nonce ou une source de hachage correspondant au bloc embarqué.
-La politique de sécurité de contenu suivante permettra tous les éléments HTML {{HTMLElement("script")}} embarqués&nbsp;:
+Pour autoriser les scripts et styles embarqués, vous pouvez définir `'unsafe-inline'`, une source de nombre unique ou une source de hachage correspondant au bloc embarqué.
+La politique de sécurité de contenu suivante permet tous les éléments HTML {{HTMLElement("script")}} embarqués&nbsp;:
 
 ```http
 Content-Security-Policy: script-src 'unsafe-inline';
 ```
 
-Cette directive CSP autorisera tous les scripts {{HTMLElement("script")}} embarqués à même le HTML&nbsp;:
+Cette directive CSP autorise tous les scripts {{HTMLElement("script")}} embarqués à même le HTML&nbsp;:
 
 ```html
 <script>
@@ -145,15 +145,15 @@ Cette directive CSP autorisera tous les scripts {{HTMLElement("script")}} embarq
 </script>
 ```
 
-Autoriser tous les scripts embarqués est considéré comme un risque de sécurité, il est donc recommandé d'utiliser une source de nonce ou une source de hachage à la place.
-Pour autoriser les scripts et styles embarqués avec une source de nonce, vous devez générer une valeur {{Glossary("Nonce", "unique")}} aléatoire (en utilisant un générateur de jetons aléatoires cryptographiquement sécurisé) et l'inclure dans la politique.
-Il est important de noter que cette valeur de nonce doit être générée dynamiquement car elle doit être unique pour chaque requête HTTP&nbsp;:
+Autoriser tous les scripts embarqués est considéré comme un risque de sécurité, il est donc recommandé d'utiliser une source de nombre unique ou une source de hachage à la place.
+Pour autoriser les scripts et styles embarqués avec une source de nombre unique, vous devez générer une valeur {{Glossary("Nonce", "unique")}} aléatoire (en utilisant un générateur de jetons aléatoires cryptographiquement sécurisé) et l'inclure dans la politique.
+Il est important de noter que cette valeur de nombre unique doit être générée dynamiquement, car elle doit être unique pour chaque requête HTTP&nbsp;:
 
 ```http
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
-Ce nonce doit alors être utilisé sur l'élément {{HTMLElement("script")}}&nbsp;:
+Ce nombre unique doit alors être utilisé sur l'élément {{HTMLElement("script")}}&nbsp;:
 
 ```html
 <script nonce="2726c7f26c">
@@ -187,7 +187,7 @@ Les politiques pour les ressources inline avec des hachages comme `script-src 's
 </script>
 
 <!-- CSP : script-src 'sha256-{HASHED_EVENT_HANDLER}'
-      ne permettra pas ce gestionnaire d'évènement -->
+      ne permet pas ce gestionnaire d'évènement -->
 <button onclick="monScript()">Envoyer</button>
 ```
 
@@ -207,7 +207,7 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 
 ### Expression `unsafe-eval`
 
-La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code JavaScript à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `script-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
+La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code JavaScript à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas définie avec la directive `script-src`, ces méthodes sont bloquées et n'ont aucun effet&nbsp;:
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("Function()")}}
@@ -232,9 +232,9 @@ Content-Security-Policy: script-src 'wasm-unsafe-eval'
 
 ### `strict-dynamic`
 
-La valeur `'strict-dynamic'` indique que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'une empreinte, doit être propagée à tous les scripts chargés par celui-ci. Par conséquent, toute liste de permissions ou expressions de sources telles que `'self'` ou `'unsafe-inline'` sera ignorée.
+La valeur `'strict-dynamic'` indique que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'une empreinte, doit être propagée à tous les scripts chargés par celui-ci. Par conséquent, toute liste de permissions ou expressions de sources telles que `'self'` ou `'unsafe-inline'` est ignorée.
 
-Par exemple, une règle telle que `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` autoriserait le chargement de scripts comme `<script nonce="R4nd0m" src="https://example.com/loader.js">` et s'appliquerait ensuite à tous les scripts chargés par `loader.js`, mais interdirait les scripts chargés depuis `https://allowlisted.example.com/` à moins qu'ils soient accompagnés d'un nonce ou chargés depuis un script dont la source est de confiance.
+Par exemple, une règle telle que `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` autorise le chargement de scripts comme `<script nonce="R4nd0m" src="https://example.com/loader.js">` et s'applique ensuite à tous les scripts chargés par `loader.js`, mais interdit les scripts chargés depuis `https://allowlisted.example.com/` à moins qu'ils soient accompagnés d'un nombre unique ou chargés depuis un script dont la source est de confiance.
 
 ```http
 Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
@@ -252,7 +252,7 @@ Il est possible de déployer `strict-dynamic` de manière rétrocompatible, sans
 Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
 ```
 
-fonctionnera comme `'unsafe-inline' https:` pour les navigateurs prenant en charge CSP1, `https: 'nonce-abcdefg'` pour ceux prenant en charge CSP2 et comme `'nonce-abcdefg' 'strict-dynamic'` pour ceux prenant en charge CSP3.
+fonctionne comme `'unsafe-inline' https:` pour les navigateurs prenant en charge CSP1, `https: 'nonce-abcdefg'` pour ceux prenant en charge CSP2 et comme `'nonce-abcdefg' 'strict-dynamic'` pour ceux prenant en charge CSP3.
 
 ### Autoriser les règles de spéculation
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-Utilisez l'élément HTML **`<canvas>`** avec soit l'[API de script Canvas](/fr/docs/Web/API/Canvas_API), soit l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
+Utilisez l'élément HTML **`<canvas>`** avec soit [l'API de script Canvas](/fr/docs/Web/API/Canvas_API), soit [l'API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 
 ## Attributs
 
@@ -15,7 +15,7 @@ Comme les autres éléments HTML, cet élément possède les [attributs globaux]
 - **`height`**
   - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
 - **`moz-opaque`** {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard {{DOMxRef("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} à la place.
+  - : Cet attribut permet d'indiquer s'il y a de la transparence ou non. Si le canevas sait qu'il n'y a pas de transparence, les performances de rendu peuvent être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard {{DOMxRef("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} à la place.
 - **`width`**
   - : La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.
 
@@ -23,7 +23,7 @@ Comme les autres éléments HTML, cet élément possède les [attributs globaux]
 
 ### Contenu alternatif
 
-Vous devez fournir un contenu alternatif à l'intérieur du bloc `<canvas>`. Ce contenu sera affiché à la fois par les navigateurs plus anciens qui ne prennent pas en charge cet élément et par les navigateurs où JavaScript est désactivé.
+Vous devez fournir un contenu alternatif à l'intérieur du bloc `<canvas>`. Ce contenu est affiché à la fois par les navigateurs plus anciens qui ne prennent pas en charge cet élément et par les navigateurs où JavaScript est désactivé.
 
 ### Balise `</canvas>` obligatoire
 
@@ -31,22 +31,22 @@ Vous devez fournir un contenu alternatif à l'intérieur du bloc `<canvas>`. Ce 
 
 ### Dimensionnement du canevas : CSS ou HTML
 
-On peut modifier la taille affichée du canevas grâce à une feuille de style. L'image est mise à l'échelle lors du rendu pour correspondre à la taille indiquée par le style. Toutefois, cela pourra distordre l'image lors du rendu final.
+On peut modifier la taille affichée du canevas grâce à une feuille de style. L'image est mise à l'échelle lors du rendu pour correspondre à la taille indiquée par le style. Toutefois, cela peut distordre l'image lors du rendu final.
 
-Mieux vaut utiliser les attributs explicites `width` et `height` de l'élément en HTML (ou via du code JavaScript).
+Mieux vaut utiliser les attributs explicites `width` et `height` de l'élément en HTML (ou avec du code JavaScript).
 
 ### Taille maximale d'un canevas
 
 La taille maximale exacte d'un élément `<canvas>` dépend du navigateur et de l'environnement. Dans la plupart des cas, les dimensions maximales dépassent 10 000 × 10 000 pixels, mais certains appareils — notamment iOS — limitent la taille du canevas à 4 096 × 4 096 pixels. Voir [limitations de taille du canevas selon les navigateurs et les appareils <sup>(angl.)</sup>](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
 
 > [!NOTE]
-> Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
+> Si on dépasse les dimensions ou l'aire maximale, le canevas devient inutilisable et les commandes de dessin ne fonctionnent pas.
 
 ## Accessibilité
 
 ### Contenu alternatif
 
-L'élément `<canvas>` pris isolément n'est qu'une image matricielle et ne fournit aucune information sur les objets dessinés. Le contenu d'un canevas n'est pas exposé aux outils d'accessibilité comme le serait du HTML sémantique. De façon générale, évitez d'utiliser `<canvas>` pour produire un site ou une application accessibles. Les guides suivants peuvent aider à en améliorer l'accessibilité.
+L'élément `<canvas>` pris isolément n'est qu'une image matricielle et ne fournit aucune information sur les objets dessinés. Le contenu d'un canevas n'est pas exposé aux outils d'accessibilité comme l'est du HTML sémantique. De façon générale, évitez d'utiliser `<canvas>` pour produire un site ou une application accessibles. Les guides suivants peuvent aider à en améliorer l'accessibilité.
 
 - [Cas d'utilisation pour l'accessibilité de `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Problèmes d'accessibilité de l'élément `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
@@ -56,7 +56,7 @@ L'élément `<canvas>` pris isolément n'est qu'une image matricielle et ne four
 
 ### HTML
 
-Le fragment de code suivant ajoute un élément `canvas` au document. Un texte alternatif est fourni au cas où le navigateur ne peut pas afficher ce canevas. Un texte alternatif ou bien des éléments internes permettront de rendre le canevas plus accessible.
+Le fragment de code suivant ajoute un élément `canvas` au document. Un texte alternatif est fourni au cas où le navigateur ne peut pas afficher ce canevas. Un texte alternatif ou bien des éléments internes permettent de rendre le canevas plus accessible.
 
 ```html
 <canvas width="300" height="100">

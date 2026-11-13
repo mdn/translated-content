@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 
-{{LearnSidebar}}
-
 Cet article illustre comment construire quelques exemples concrets de ce qu'on peut réaliser avec le positionnement.
 
 <table class="standard-table">

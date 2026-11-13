@@ -3,7 +3,7 @@ title: "Element : évènement animationcancel"
 short-title: animationcancel
 slug: Web/API/Element/animationcancel_event
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("Web Animations")}}
@@ -27,17 +27,6 @@ onanimationcancel = (event) => { }
 Un objet {{DOMxRef("AnimationEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("AnimationEvent")}}
-
-## Propriétés de l'évènement
-
-_Hérite également des propriétés de son parent {{DOMxRef("Event")}}_.
-
-- {{DOMxRef("AnimationEvent.animationName")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères contenant la valeur de la propriété {{CSSxRef("animation-name")}} qui a généré l'animation.
-- {{DOMxRef("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : Un `float` indiquant la durée pendant laquelle l'animation a été exécutée, en secondes, lorsque cet évènement a été déclenché, à l'exclusion de tout temps pendant lequel l'animation était en pause. Pour un évènement `animationstart`, `elapsedTime` est `0.0` sauf s'il y avait une valeur négative pour {{CSSxRef("animation-delay")}}, auquel cas l'évènement est déclenché avec `elapsedTime` contenant `(-1 * delay)`.
-- {{DOMxRef("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères, commençant par `'::'`, contenant le nom du [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) sur lequel l'animation s'applique. Si l'animation ne s'applique pas à un pseudo-élément mais à l'élément lui-même, une chaîne de caractères vide&nbsp;: `''`.
 
 ## Exemples
 

@@ -3,10 +3,10 @@ title: En-tête Attribution-Reporting-Register-Source
 short-title: Attribution-Reporting-Register-Source
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Source`** enregistre une fonctionnalité de page comme [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources).
 Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Il fournit les informations que le navigateur doit stocker lorsqu'un·e utilisateur·ice interagit avec la source d'attribution. Les informations que vous incluez dans cet en-tête déterminent également les types de rapports que le navigateur peut générer.
@@ -14,7 +14,7 @@ Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{
 Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
-> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, l'en-tête `Attribution-Reporting-Register-Source` est ignoré et les sources d'attribution ne sont pas enregistrées.
+> Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox#inscription) réussi, l'en-tête `Attribution-Reporting-Register-Source` est ignoré et les sources d'attribution ne sont pas enregistrées.
 
 <table class="properties">
   <tbody>

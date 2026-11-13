@@ -21,7 +21,11 @@ Los elementos seleccionados por este selector son:
 
 ## Sintaxis
 
-{{csssyntax}}
+```css
+:indeterminate {
+  /* ... */
+}
+```
 
 ## Ejemplos
 

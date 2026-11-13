@@ -3,12 +3,12 @@ title: "Document : méthode ariaNotify()"
 short-title: ariaNotify()
 slug: Web/API/Document/ariaNotify
 l10n:
-  sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
+  sourceCommit: 3d7c7d4e151ff1b578bef4eff10c201b761a9d7d
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-La méthode **`ariaNotify()`** de l'interface {{DOMxRef("Document")}} définit qu'une chaîne de caractères de texte doit être annoncée par un {{Glossary("screen reader", "lecteur d'écran")}} si disponible et activé.
+La méthode **`ariaNotify()`** de l'interface {{DOMxRef("Document")}} met en file d'attente une chaîne de texte pour qu'elle soit annoncée par un {{Glossary("screen reader", "lecteur d'écran")}}.
 
 ## Syntaxe
 
@@ -26,9 +26,11 @@ ariaNotify(announcement, options)
     - `priority`
       - : Une valeur énumérée définissant la priorité de l'annonce. Les valeurs possibles sont&nbsp;:
         - `normal`
-          - : L'annonce a une priorité normale. Elle sera lue après toute annonce qu'un lecteur d'écran est en train de faire.
+          - : L'annonce a une priorité normale.
+            Elle est lue après toute annonce qu'un lecteur d'écran est en train de faire.
         - `high`
-          - : L'annonce a une priorité élevée. Elle sera lue immédiatement, interrompant toute annonce qu'un lecteur d'écran est en train de faire.
+          - : L'annonce a une priorité élevée.
+            Elle est lue immédiatement, interrompant toute annonce qu'un lecteur d'écran est en train de faire.
 
 ### Valeur de retour
 
@@ -41,9 +43,9 @@ La méthode **`ariaNotify()`** peut être utilisée pour déclencher de manière
 - Les régions dynamiques ne peuvent faire des annonces qu'après des modifications du DOM, tandis qu'une annonce `ariaNotify()` peut être faite à tout moment.
 - Les annonces des régions dynamiques impliquent la lecture du contenu mis à jour du nœud DOM modifié, tandis que le contenu de l'annonce `ariaNotify()` peut être défini indépendamment du contenu du DOM.
 
-Les développeur·euse·s contournent souvent les limitations des régions dynamiques en utilisant des nœuds DOM cachés avec des régions dynamiques définies dessus, dont le contenu est mis à jour avec le contenu à annoncer. Cela est inefficace et sujet aux erreurs, et `ariaNotify()` offre un moyen d'éviter ces problèmes.
+Les développeur·euse·s contournent souvent les limitations des régions dynamiques en utilisant des nœuds DOM cachés avec des régions dynamiques définies dessus, dont le contenu est mis à jour avec le contenu à annoncer. C'est inefficace et sujet aux erreurs, et `ariaNotify()` offre un moyen d'éviter ces problèmes.
 
-Certains lecteurs d'écran liront plusieurs annonces `ariaNotify()` dans l'ordre, mais cela ne peut pas être garanti sur tous les lecteurs d'écran et toutes les plateformes. Normalement, seule l'annonce la plus récente est lue. Il est plus fiable de combiner plusieurs annonces en une seule.
+Certains lecteurs d'écran lisent plusieurs annonces `ariaNotify()` dans l'ordre, mais cela ne peut pas être garanti sur tous les lecteurs d'écran et toutes les plateformes. Normalement, seule l'annonce la plus récente est lue. Il est plus fiable de combiner plusieurs annonces en une seule.
 
 Par exemple, les appels suivants&nbsp;:
 
@@ -58,7 +60,7 @@ peuvent être mieux combinées&nbsp;:
 document.ariaNotify("Bonjour ici. Il est maintenant 8 heures.");
 ```
 
-Les annonces `ariaNotify()` ne nécéssient pas {{Glossary("transient activation", "d'activation transitoire")}}&nbsp;; vous devez veiller à ne pas inonder les utilisateur·ice·s de lecteurs d'écran avec trop de notifications, car cela pourrait créer une mauvaise expérience utilisateur.
+Les annonces `ariaNotify()` ne nécessitent pas {{Glossary("transient activation", "d'activation transitoire")}}&nbsp;; vous devez veiller à ne pas inonder les utilisateur·ice·s de lecteurs d'écran avec trop de notifications, car cela peut créer une mauvaise expérience utilisateur.
 
 ### Priorités d'annonce
 
@@ -69,7 +71,7 @@ Les annonces `ariaNotify()` sont approximativement équivalentes aux annonces de
 - `ariaNotify()` `priority: high`: `aria-live="assertive"`.
 - `ariaNotify()` `priority: normal`: `aria-live="polite"`.
 
-Cependant, les annonces `aria-live` auront la priorité sur les annonces `ariaNotify()`.
+Cependant, les annonces `aria-live` ont la priorité sur les annonces `ariaNotify()`.
 
 ### Sélection de la langue
 
@@ -79,7 +81,7 @@ Les lecteurs d'écran choisissent une voix appropriée pour lire les annonces `a
 
 L'utilisation de `ariaNotify()` dans un document ou un {{HTMLElement("iframe")}} peut être contrôlée par une [Politique de permissions](/fr/docs/Web/HTTP/Guides/Permissions_Policy) {{HTTPHeader("Permissions-Policy/aria-notify", "aria-notify")}}.
 
-Plus précisément, lorsqu'une politique définie bloque l'utilisation, toutes les annonces créées à l'aide de `ariaNotify()` échouent silencieusement (elles ne seront pas envoyées).
+Plus précisément, lorsqu'une politique définie bloque l'utilisation, toutes les annonces créées à l'aide de `ariaNotify()` échouent silencieusement (elles ne sont pas envoyées).
 
 ## Exemples
 
@@ -116,11 +118,11 @@ Le résultat est le suivant&nbsp;:
 
 {{EmbedLiveSample("basic-arianotify", "100%", 60, , , , "aria-notify")}}
 
-Essayez d'activer un lecteur d'écran, puis appuyez sur le bouton. Vous devriez entendre «&nbsp;Bonjour, je suis Ed Winchester.&nbsp;» prononcé par le lecteur d'écran.
+Essayez d'activer un lecteur d'écran, puis appuyez sur le bouton. Vous devez entendre «&nbsp;Bonjour, je suis Ed Winchester.&nbsp;» prononcé par le lecteur d'écran.
 
 ### Exemple de liste de courses accessible
 
-Cet exemple est une liste de courses qui vous permet d'ajouter et de supprimer des articles, et de suivre le coût total de tous les articles. Lorsqu'un article est ajouté ou supprimé, les lecteurs d'écran liront une annonce pour indiquer quel article a été ajouté/supprimé et quel est le total mis à jour.
+Cet exemple est une liste de courses qui vous permet d'ajouter et de supprimer des articles, et de suivre le coût total de tous les articles. Lorsqu'un article est ajouté ou supprimé, les lecteurs d'écran lisent une annonce pour indiquer quel article a été ajouté/supprimé et quel est le total mis à jour.
 
 #### HTML
 
@@ -283,7 +285,7 @@ La sortie est la suivante&nbsp;:
 
 {{EmbedLiveSample("shopping-list", "100%", 500, , , , "aria-notify")}}
 
-Essayez d'activer un lecteur d'écran, puis d'ajouter et de supprimer des articles. Vous devriez les entendre annoncés par le lecteur d'écran.
+Essayez d'activer un lecteur d'écran, puis d'ajouter et de supprimer des articles. Vous devez les entendre annoncés par le lecteur d'écran.
 
 ## Spécifications
 

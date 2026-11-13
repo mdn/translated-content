@@ -3,10 +3,10 @@ title: Propriété CSS `border-top`
 short-title: border-top
 slug: Web/CSS/Reference/Properties/border-top
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-top`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) supérieure d'un élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-top`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) supérieure d'un élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: border-top")}}
 
@@ -127,6 +127,6 @@ div {
 
 ## Voir aussi
 
-- {{CSSxRef("border")}}
-- {{CSSxRef("border-block")}}
-- {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("border")}}
+- La propriété {{CSSxRef("border-block")}}
+- La propriété {{CSSxRef("outline")}}

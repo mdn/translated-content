@@ -3,10 +3,10 @@ title: "Document : méthode createEvent()"
 short-title: createEvent()
 slug: Web/API/Document/createEvent
 l10n:
-  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 > [!WARNING]
 > De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.

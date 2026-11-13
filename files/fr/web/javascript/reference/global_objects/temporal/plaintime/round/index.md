@@ -66,4 +66,4 @@ console.log(nextHour.toString()); // 13:00:00
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainTime")}}

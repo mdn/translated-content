@@ -3,7 +3,7 @@ title: Propriété CSS `overflow-anchor`
 short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-anchor`** permet de désactiver le comportement d'ancrage du défilement du navigateur, qui ajuste la position de défilement pour minimiser les déplacements de contenu.
@@ -117,10 +117,12 @@ overflow-anchor: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : L'élément peut devenir une ancre lorsque la position de défilement est ajustée.
 - `none`
-  - : L'élément ne sera pas sélectionné comme ancre.
+  - : L'élément n'est pas sélectionné comme ancre.
 
 ## Définition formelle
 

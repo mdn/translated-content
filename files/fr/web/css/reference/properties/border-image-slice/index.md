@@ -3,7 +3,7 @@ title: Propriété CSS `border-image-slice`
 short-title: border-image-slice
 slug: Web/CSS/Reference/Properties/border-image-slice
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: edb731bcb1ee26be7a4da56cc5b79e552b78865a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-slice`** divise l'image définie par {{CSSxRef("border-image-source")}} en régions. Ces régions forment les composants de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
@@ -79,7 +79,7 @@ border-image-slice: unset;
 
 La propriété `border-image-slice` peut être définie avec une à quatre valeurs `<number-percentage>` qui représentent les emplacements de chaque découpe sur l'image. Les valeurs négatives sont valides et les valeurs supérieures aux dimensions de l'image sont ramenées à `100%`.
 
-- Lorsqu'**une** position est indiquée, les quatre découpages sont effectués à la même distance de chaque bord.
+- **Lorsqu'une** position est indiquée, les quatre découpages sont effectués à la même distance de chaque bord.
 - Lorsque **deux** positions sont indiquées, la première valeur indique la distance de découpage pour les côtés **haut et bas**, la seconde valeur indique la distance de découpage pour les côtés **gauche et droit**.
 - Lorsque **trois** positions sont indiquées, la première valeur indique la distance pour le découpage par rapport au bord **haut**, la seconde indique la distance pour le découpage depuis les bords **gauche et droit**, la troisième valeur correspond à la distance de découpage pour le côté **bas**.
 - Lorsque **quatre** positions sont indiquées, elles indiquent respectivement la distance de découpage pour les bords **haut**, **droit**, **bas**, et **gauche** (soit le sens des aiguilles d'une montre).
@@ -89,7 +89,7 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 ### Valeurs
 
 - {{CSSxRef("&lt;number&gt;")}}
-  - : Représente un décalage par rapport au bord, exprimé en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément plutôt qu'à la taille de l'image source. Aussi, dans ce cas de figure, on utilisera plutôt les pourcentages.
+  - : Représente un décalage par rapport au bord, exprimé en _pixels_ pour les images matricielles et en _coordonnées_ pour les images vectorielles. Pour les images vectorielles, le nombre est relatif à la taille de l'élément plutôt qu'à la taille de l'image source. Aussi, dans ce cas de figure, on utilise plutôt les pourcentages.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
 - `fill`
@@ -123,9 +123,9 @@ Les propriétés {{CSSxRef("border-image-repeat")}}, {{CSSxRef("border-image-wid
 
 Dans l'exemple suivant, on utilise un simple élément `<div>` avec une image de bordure sur lui. L'image source utilisée pour les bordures est la suivante&nbsp;:
 
-![Des losanges de plusieurs couleurs](border-diamonds.png)
+![Neuf losanges multicolores disposés en trois rangées et trois colonnes](/shared-assets/images/examples/border-diamonds.png)
 
-Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour {{CSSxRef("border-width")}} et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
+Les losanges de l'image source mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour {{CSSxRef("border-width")}} et `border-image-slice`, on a des losanges complets et nets&nbsp;:
 
 ```css
 border-width: 30px;
@@ -136,7 +136,7 @@ Ce sont les valeurs par défaut que nous avons utilisées dans cet exemple. Nous
 
 `border-image-slice` change la taille de la portion d'image échantillonnée pour chaque bordure et coin de bordure (et la zone du contenu si le mot-clé `fill` est utilisé). En utilisant des valeurs autour de 30, on voit que la bordure devient plutôt irrégulière.
 
-`border-width` change la largeur de la bordure. La taille de l'image échantillonnée est mise à l'échelle pour s'inscrire dans la bordure. Ainsi, si la largeur est supérieure à la taille de la portion utilisée, l'image pourra avoir l'air pixelisée (à moins d'avoir utilisé une image SVG).
+`border-width` change la largeur de la bordure. La taille de l'image échantillonnée est mise à l'échelle pour s'inscrire dans la bordure. Ainsi, si la largeur est supérieure à la taille de la portion utilisée, l'image peut avoir l'air pixelisée (à moins d'avoir utilisé une image SVG).
 
 #### HTML
 
@@ -221,5 +221,5 @@ sliceSlider.addEventListener("input", () => {
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)
+- [Description illustrée de la syntaxe multi-valeurs](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties#quelques_cas_aux_limites_épineux)
 - [Images de bordure dans CSS&nbsp;: un domaine clé pour l'Interop 2023](/fr/blog/border-images-interop-2023/) sur le blog MDN (2023)

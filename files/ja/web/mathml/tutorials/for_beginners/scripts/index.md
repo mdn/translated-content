@@ -12,7 +12,7 @@ l10n:
 
 ## 下付き文字と上付き文字
 
-[前回の記事](/ja/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots)で見たものと同様に、`<msub>`、`<msup>`、`<msubsup>` は、ちょうど 2 つの要素（`<msub>`、`<msup>`の場合）、または 3 つの要素（`<msubsup>` の場合）ガ指定された特別な構造があります。
+[前回の記事](/ja/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots)で見たものと同様に、`<msub>`、`<msup>`、`<msubsup>` は、ちょうど 2 つの要素（`<msub>`、`<msup>`の場合）、または 3 つの要素（`<msubsup>` の場合）が指定された特別な構造があります。
 
 ```html
 <p>
@@ -66,7 +66,7 @@ l10n:
 
 ### 真下・真上付き文字を理解する
 
-次の例では、謎の要素（疑問符で書かれています）の名前を推測してください。解決策を確認するには、ボタンを押してください。
+次の例では、謎の要素（疑問符で書かれています）の名前を推測してください。解答を確認するには、ボタンを押してください。
 
 ```html-nolint hidden
 <p>

@@ -3,8 +3,6 @@ title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 ---
 
-{{jsSidebar("Statements")}}
-
 L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Statements/block","bloc","",1)}} d'instructions).
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}

@@ -3,10 +3,10 @@ title: "Window : propriété devicePixelRatio"
 short-title: devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 l10n:
-  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 La propriété **`devicePixelRatio`** de l'interface {{DOMxRef("Window")}} retourne le ratio de la résolution exprimée en _pixels physiques_ par rapport à la résolution exprimée en _pixels CSS_ pour l'appareil d'affichage courant.
 
@@ -26,7 +26,7 @@ Les écrans modernes des appareils mobiles — qui offrent des résolutions d'af
 
 ### Corriger la résolution dans un élément `<canvas>`
 
-Un élément HTML {{HTMLElement("canvas")}} pourra apparaître flou sur un écran Retina.
+Un élément HTML {{HTMLElement("canvas")}} peut apparaître flou sur un écran Retina.
 Utilisez `window.devicePixelRatio` afin de déterminer la densité de pixel supplémentaire qui peut être ajoutée pour obtenir une image plus nette.
 
 #### HTML
@@ -78,12 +78,12 @@ Dans cet exemple, nous allons utiliser une requête média pour observer lorsque
 
 #### HTML
 
-Le HTML crée les boîtes contenant les instructions et la boîte `pixel-ratio` qui affichera les informations sur le ratio de pixel courant.
+Le HTML crée les boîtes contenant les instructions et la boîte `pixel-ratio` qui affiche les informations sur le ratio de pixel courant.
 
 ```html
 <div class="container">
   <p>
-    Cet exemple illustre les effets d'un zooom ou d'un dézoom de la page (mais
+    Cet exemple illustre les effets d'un zoom ou d'un dézoom de la page (mais
     aussi du déplacement de la fenêtre vers un écran avec un autre facteur
     d'échelle) sur la valeur de la propriété
     <code>Window.devicePixelRatio</code>.
@@ -114,7 +114,7 @@ body {
 
 La chaîne de caractères `mqString` est définie comme une requête média qui vérifie si la résolution d'affichage actuelle correspond à un nombre spécifique de points de l'appareil par `px`.
 
-La variable `media` est un objet {{DOMxRef("MediaQueryList")}} initialisé avec la chaîne de caractères de la requête média. Lorsque le résultat de l'exécution de `mqString` sur le document change, l'événement `change` de l'objet `media` se déclenche et le code enregistre la nouvelle résolution.
+La variable `media` est un objet {{DOMxRef("MediaQueryList")}} initialisé avec la chaîne de caractères de la requête média. Lorsque le résultat de l'exécution de `mqString` sur le document change, l'évènement `change` de l'objet `media` se déclenche et le code enregistre la nouvelle résolution.
 
 Notez qu'à chaque changement de résolution, l'exemple doit créer une nouvelle requête média basée sur la nouvelle résolution, ainsi qu'une nouvelle instance de `MediaQueryList`.
 

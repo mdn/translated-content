@@ -3,7 +3,7 @@ title: Fonction CSS `oklch()`
 short-title: oklch()
 slug: Web/CSS/Reference/Values/color_value/oklch
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSxRef("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).
@@ -25,7 +25,7 @@ oklch(from var(--color) l c h / calc(alpha - 0.1))
 
 ### Valeurs
 
-Vous trouverez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
+Vous trouvez ci-dessous les descriptions des valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors).
 
 > [!NOTE]
 > Habituellement, lorsque les valeurs de pourcentage ont un équivalent numérique en CSS, `100%` est égal au nombre `1`.
@@ -92,9 +92,9 @@ Lors de l'utilisation de la syntaxe de couleur relative dans une fonction `oklch
 - La valeur du canal `h` est résolue en une valeur `<number>` entre `0` et `360`, inclus.
 - Le canal `alpha` est résolu en une valeur `<number>` entre `0` et `1`, inclus.
 
-Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons différentes. Ci-dessous, nous étudierons quelques exemples pour illustrer cela.
+Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons différentes. Ci-dessous, nous étudions quelques exemples pour illustrer cela.
 
-Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous seriez peu susceptible d'utiliser cela dans une vraie base de code, et utiliseriez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe relative `oklch()`.
+Dans les deux premiers exemples ci-dessous, nous utilisons la syntaxe de couleur relative. Cependant, le premier produit la même couleur que la couleur d'origine et le second produit une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Vous êtes peu susceptible d'utiliser cela dans une vraie base de code, et utilisez probablement simplement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe relative `oklch()`.
 
 Commençons par une couleur d'origine de `hsl(0 100% 50%)` (équivalent à `red`). La fonction suivante produit la même couleur que la couleur d'origine — elle utilise les valeurs de canal `l`, `c`, et `h` de la couleur d'origine (`0.627966`, `0.257704`, et `29.2346`) comme valeurs de canal de sortie&nbsp;:
 
@@ -148,7 +148,7 @@ oklch(from hsl(0 100% 50%) calc(l + 0.2) calc(c + 0.1) calc(h - 20) / calc(alpha
 ```
 
 > [!NOTE]
-> Étant donné que les valeurs de canal de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepterait normalement `<percentage>`, `<angle>`, ou d'autres types de valeurs. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
+> Étant donné que les valeurs de canal de couleur d'origine sont résolues en valeurs `<number>`, vous devez leur ajouter des nombres lors de leur utilisation dans des calculs, même dans les cas où un canal accepte normalement `<percentage>`, `<angle>`, ou d'autres types de valeurs. Ajouter un `<percentage>` à un `<number>`, par exemple, ne fonctionne pas.
 
 ## Syntaxe formelle
 
@@ -310,7 +310,7 @@ div {
 
 {{EmbedLiveSample("Ajustement de l'intensité de couleur sur la chroma", "", 200)}}
 
-Si nous avions utilisé `0` au lieu de `0.01` et `2%`, avec les mêmes valeurs de clarté, les couleurs auraient toutes été de la même nuance de gris. Dans cet exemple, elles sont presque grises.
+Si nous avions utilisé `0` au lieu de `0.01` et `2%`, avec les mêmes valeurs de clarté, les couleurs ont toutes été de la même nuance de gris. Dans cet exemple, elles sont presque grises.
 
 ### Teintes dans OkLCh
 

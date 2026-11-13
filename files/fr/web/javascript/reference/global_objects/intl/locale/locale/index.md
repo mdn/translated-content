@@ -93,5 +93,5 @@ console.log(locale.hourCycle); // "h12"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}
 - [Les identifiants de locale Unicode canoniques <sup>](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) dans la spécification du langage de balisage des données de locale Unicode

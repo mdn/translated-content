@@ -157,6 +157,6 @@ Pour plus d'exemples, notamment concernant différents calendriers et paramètre
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.ZonedDateTime")}}
+- L'objet natif {{JSxRef("Temporal.ZonedDateTime")}}
 - Le constructeur {{JSxRef("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}}
 - La méthode {{JSxRef("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 **`HTMLMediaElement.mediaGroup`** 属性反映了 `mediagroup` HTML 属性，指示该元素所属的媒体组的名称。一组媒体元素共享一个公共的控制器（`controller`）。
 

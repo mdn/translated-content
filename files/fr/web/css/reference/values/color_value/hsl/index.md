@@ -3,13 +3,15 @@ title: Fonction CSS `hsl()`
 short-title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 > [!NOTE]
 > La notation fonctionnelle `hsla()` est un alias de `hsl()`. Elles sont exactement équivalentes. Il est recommandé d'utiliser `hsl()`.
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{Glossary("color space", "espace de couleur")}} {{Glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
+
+Il est facile d'utiliser des _couleurs complémentaires_ avec `hsl()`, car celles-ci sont positionnées à l'opposé du cercle de couleur utilisé par la teinte. Ainsi, si `theta` est l'angle de la teinte d'une couleur, on peut obtenir la couleur complémentaire avec l'angle `180deg-theta`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hsl()")}}
 
@@ -42,8 +44,6 @@ background: hsl(0 80% 50% / 25%);
   padding: 10%;
 }
 ```
-
-Il est facile d'utiliser des _couleurs complémentaires_ avec `hsl()`, car celles-ci sont positionnées à l'opposé du cercle de couleur utilisé par la teinte. Ainsi, si `theta` est l'angle de la teinte d'une couleur, on pourra obtenir la couleur complémentaire avec l'angle `180deg-theta`.
 
 ## Syntaxe
 
@@ -110,7 +110,7 @@ hsl(from <color> H S L[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot‑clé `from` est toujours présent pour définir une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la couleur d'**origine**. Il s'agit de la couleur de départ sur laquelle se base la couleur relative. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot‑clé `from` est toujours présent pour définir une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la couleur **d'origine**. Il s'agit de la couleur de départ sur laquelle se base la couleur relative. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `H`
   - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un {{CSSxRef("&lt;angle&gt;")}} ou le mot‑clé `none` (équivalent à `0deg` dans ce cas) représentant l'angle de {{CSSxRef("&lt;hue&gt;")}} de la couleur de sortie.
 - `S`
@@ -121,7 +121,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
-> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur avec la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} renvoie la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
+> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur avec la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 #### Définition des composantes de canal de sortie pour les couleurs relatives
 
@@ -133,9 +133,9 @@ Lorsqu'on utilise la syntaxe de couleur relative à l'intérieur d'une fonction 
 
 Lors de la définition d'une couleur relative, les différents canaux de la couleur de sortie peuvent être exprimés de plusieurs façons. Ci‑dessous, nous étudions quelques exemples pour illustrer ces cas.
 
-Dans les deux premiers exemples ci‑dessous, nous utilisons la syntaxe de couleur relative. Toutefois, le premier renvoie la même couleur que la couleur d'origine et le second renvoie une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Il est peu probable que vous utilisiez ces exemples dans un vrai projet, et vous utiliseriez vraisemblablement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe relative de `hsl()`.
+Dans les deux premiers exemples ci‑dessous, nous utilisons la syntaxe de couleur relative. Toutefois, le premier retourne la même couleur que la couleur d'origine et le second retourne une couleur qui n'est pas du tout basée sur la couleur d'origine. Ils ne créent pas vraiment de couleurs relatives&nbsp;! Il est peu probable que vous utilisiez ces exemples dans un vrai projet, et vous utilisez vraisemblablement une valeur de couleur absolue à la place. Nous avons inclus ces exemples comme point de départ pour apprendre la syntaxe relative de `hsl()`.
 
-Prenons comme couleur d'origine `rgb(255 0 0)` (équivalent à `hsl(0 100% 50%)`). La fonction suivante renvoie la même couleur que la couleur d'origine — elle utilise les valeurs de canal `h`, `s` et `l` de la couleur d'origine (`0`, `100%` et `50%`) comme valeurs de canal de sortie&nbsp;:
+Prenons comme couleur d'origine `rgb(255 0 0)` (équivalent à `hsl(0 100% 50%)`). La fonction suivante retourne la même couleur que la couleur d'origine — elle utilise les valeurs de canal `h`, `s` et `l` de la couleur d'origine (`0`, `100%` et `50%`) comme valeurs de canal de sortie&nbsp;:
 
 ```css
 hsl(from rgb(255 0 0) h s l)
@@ -180,7 +180,7 @@ hsl(from rgb(255 0 0 / 0.8) h s l / 0.5)
 /* Couleur de sortie calculée : color(srgb 1 0 0 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `rgb()` est à nouveau convertie en une représentation `hsl()` — `hsl(0 100% 50% / 0.8)`. Des calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `H`, `S`, `L` et `A`, et la couleur de sortie finale est l'équivalent de `hsl(60 80% 30% / 0.7)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.72 0.72 0.08 / 0.7)`.
+Dans l'exemple suivant, la couleur d'origine `rgb()` est à nouveau convertie en une représentation `hsl()` — `hsl(0 100% 50% / 0.8)`. Des calculs {{CSSxRef("calc()")}} sont appliqués aux valeurs `H`, `S`, `L` et `A`, et la couleur de sortie finale est l'équivalent de `hsl(60 80% 30% / 0.7)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.72 0.72 0.08 / 0.7)`.
 
 ```css
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
@@ -226,11 +226,11 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample('utiliser_hsl_avec_conic-gradient', '100%', '140px')}}
+{{EmbedLiveSample("Utiliser `hsl()` avec `conic-gradient()`", "100%", 140)}}
 
 ### Utiliser les couleurs relatives avec `hsl()`
 
-Cet exemple met en forme trois éléments {{HTMLElement("div")}} avec des couleurs d'arrière-plan différentes. Celui du milieu reçoit la variable `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
+Cet exemple met en forme trois éléments HTML {{HTMLElement("div")}} avec des couleurs d'arrière-plan différentes. Celui du milieu reçoit la variable `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
 
 Ces variantes sont définies à l'aide de couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est transmise à une fonction `hsl()`, et la couleur de sortie a son canal de luminosité modifié pour obtenir l'effet souhaité avec une fonction `calc()`, tandis que la teinte et la saturation restent inchangées. La couleur éclaircie ajoute 20% au canal de luminosité, et la couleur assombrie soustrait 20% à ce canal.
 
@@ -292,7 +292,7 @@ Ces variantes sont définies à l'aide de couleurs relatives — la [propriété
 
 Le résultat est le suivant&nbsp;:
 
-{{ EmbedLiveSample("utiliser_les_couleurs_relatives_avec_hsl", "100%", "200") }}
+{{EmbedLiveSample("Utiliser les couleurs relatives avec `hsl()`", "100%", 200)}}
 
 ### Syntaxe historique : valeurs séparées par des virgules
 
@@ -325,7 +325,7 @@ div.comma-separated {
 
 #### Résultat
 
-{{EmbedLiveSample("syntaxe_historique_valeurs_séparées_par_des_virgules", "100%", 150)}}
+{{EmbedLiveSample("Syntaxe historique : valeurs séparées par des virgules", "100%", 150)}}
 
 ### Syntaxe historique versus syntaxe moderne
 
@@ -382,7 +382,7 @@ div.legacyHSLA {
 
 #### Résultat
 
-{{EmbedLiveSample("syntaxe_historique_versus_syntaxe_moderne", "100%", 70)}}
+{{EmbedLiveSample("Syntaxe historique versus syntaxe moderne", "100%", 70)}}
 
 ## Spécifications
 

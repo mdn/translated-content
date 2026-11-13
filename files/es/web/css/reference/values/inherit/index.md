@@ -8,7 +8,7 @@ original_slug: Web/CSS/inherit
 
 ### Resumen
 
-**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de la propiedad de su elemento padre.
+**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing#valor_calculado) de la propiedad de su elemento padre.
 
 #### Para propiedades heredadas
 

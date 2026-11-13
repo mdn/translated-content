@@ -146,4 +146,4 @@ formatOrdinals(103); // '103rd'
 ## Voir aussi
 
 - [Une prothèse d'émulation pour `Intl.ListFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.io/docs/polyfills/intl-numberformat)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

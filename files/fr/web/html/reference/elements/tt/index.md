@@ -3,19 +3,17 @@ title: "Élément HTML `<tt>` : l'élément de texte de téléscripteur"
 short-title: <tt>
 slug: Web/HTML/Reference/Elements/tt
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}
-
-L'élément [HTML](/fr/docs/Web/HTML) **`<tt>`** crée du texte en ligne présenté avec la police monospace par défaut de {{Glossary("user agent", "l'agent utilisateur")}}. Cet élément a été conçu pour rendre du texte tel qu'il serait affiché sur un dispositif à largeur fixe, comme un téléscripteur, un écran texte ou une imprimante ligne.
+L'élément [HTML](/fr/docs/Web/HTML) **`<tt>`** crée du texte en incise présenté avec la police monospace par défaut de {{Glossary("user agent", "l'agent utilisateur")}}. Cet élément a été conçu pour rendre du texte tel qu'il est affiché sur un dispositif à largeur fixe, comme un téléscripteur, un écran texte ou une imprimante ligne.
 
 Les termes **non proportionnel**, **monotype** et **monospace** sont utilisés de façon interchangeable et ont le même sens général&nbsp;: ils décrivent une police dont tous les caractères ont le même nombre de pixels en largeur.
 
-Cependant, cet élément est obsolète. Vous devriez utiliser les éléments plus sémantiquement appropriés {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pour le texte en ligne devant être présenté en monospace, ou la balise {{HTMLElement("pre")}} pour du contenu devant être présenté comme un bloc séparé.
+Cependant, cet élément est obsolète. Vous devez utiliser les éléments plus sémantiquement appropriés {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pour le texte en incise devant être présenté en monospace, ou la balise {{HTMLElement("pre")}} pour du contenu devant être présenté comme un bloc séparé.
 
 > [!NOTE]
-> Si aucun des éléments sémantiques n'est approprié à votre cas d'utilisation (par exemple, si vous devez afficher du contenu dans une police non proportionnelle), envisagez d'utiliser l'élément {{HTMLElement("span")}}, en le stylant via CSS selon vos besoins. La propriété {{CSSxRef("font-family")}} est un bon point de départ.
+> Si aucun des éléments sémantiques n'est approprié à votre cas d'utilisation (par exemple, si vous devez afficher du contenu dans une police non proportionnelle), envisagez d'utiliser l'élément {{HTMLElement("span")}}, en le mettant en forme avec CSS selon vos besoins. La propriété {{CSSxRef("font-family")}} est un bon point de départ.
 
 ## Attributs
 
@@ -74,7 +72,7 @@ Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à cha
 > [!NOTE]
 > Les règles de style propres à l'utilisateur·ice sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
 
-Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
+Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme avec CSS. L'élément `<tt>` est désormais obsolète en HTML5.
 
 ## Résumé technique
 

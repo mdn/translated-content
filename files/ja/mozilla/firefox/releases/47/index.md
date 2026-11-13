@@ -49,7 +49,7 @@ _変更なし。_
 
 - ES2017 の {{jsxref("Object.values()")}} および {{jsxref("Object.entries()")}} メソッドを実装しました ([Firefox バグ 1232639](https://bugzil.la/1232639))。
 - 非推奨の古い プロキシー API (`Proxy.create` および `Proxy.createFunction`) は、コンソールで警告を表示するようになりました。また、将来のバージョンで削除する予定です。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ([Firefox バグ 892903](https://bugzil.la/892903))。
-- リリース版以外の以外のビルドで、非推奨かつ非標準である `flags` 引数を {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} から廃止しました ([Firefox バグ 1245801](https://bugzil.la/1245801))。
+- リリース版以外のビルドで、非推奨かつ非標準である `flags` 引数を {{jsxref("String.prototype.match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} から廃止しました ([Firefox バグ 1245801](https://bugzil.la/1245801))。
 - 新たな ES2016 仕様に従い、[`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) 用の {{jsxref("Proxy")}} 列挙トラップを削除しました ([Firefox バグ 1246318](https://bugzil.la/1246318))。
 - ECMAScript 仕様に従い、{{jsxref("Array.prototype.indexOf()")}} および {{jsxref("Array.prototype.lastIndexOf()")}} メソッド (および {{jsxref("TypedArray")}} の同等メソッド) を、`-0` を返さないように更新しました ([Firefox バグ 1242043](https://bugzil.la/1242043))。
 

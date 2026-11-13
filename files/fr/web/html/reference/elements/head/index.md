@@ -16,7 +16,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations gén
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `profile` {{Deprecated_Inline}}
-  - : L'{{Glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
+  - : Une {{Glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
 
 ## Exemples
 
@@ -49,7 +49,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       <th scope="row">Contenu autorisé</th>
       <td>
         Si le document est un document {{HTMLElement("iframe")}}
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou si des informations de titre sont disponibles via un protocole de
+        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou si des informations de titre sont disponibles avec un protocole de
         plus haut niveau (comme l'objet d'un courriel HTML), zéro ou plusieurs
         éléments de contenu de métadonnées.
       </td>

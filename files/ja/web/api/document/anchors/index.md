@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 10609d35e92f68f2dacbb1be07d31e736a2b487a
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`anchors`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。
 

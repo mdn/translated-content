@@ -1,10 +1,8 @@
 ---
-title: Rattachement et caractère énumérable des propriétés
+title: Énumérable et rattachement des propriétés
 slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
 original_slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
-
-{{JsSidebar("More")}}
 
 Les propriétés dites « énumérables » sont celles pour lesquelles la caractéristique interne `[[Enumerable]]` vaut `true`. C'est le cas par défaut pour les propriétés qui sont créées grâce à une affectation simple ou grâce à un initialisateur de propriété. Les propriétés définies avec des méthodes analogues à {{jsxref("Object.defineProperty()")}} auront `[[Enumerable]]` à `false`). Les propriétés énumérables sont celles qui seront parcourues dans une boucle {{jsxref("Statements/for...in","for..in")}} (sauf si le nom de la propriété est un {{jsxref("Symbol")}}).
 

@@ -43,5 +43,5 @@ console.log(instant1.equals(instant2)); // true
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.Instant")}}
+- L'objet natif {{JSxRef("Temporal.Instant")}}
 - La méthode statique {{JSxRef("Temporal/Instant/compare", "Temporal.Instant.compare()")}}

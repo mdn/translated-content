@@ -2,7 +2,7 @@
 title: Banners y avisos
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 Los banners y avisos se muestran en algunas páginas, en particular en la referencia de la API, para destacar factores importantes que afectarán el uso del contenido descrito.
@@ -42,7 +42,6 @@ Debes añadir las siguientes macros de forma manual:
 Las siguientes macros se añaden automáticamente al contenido para que coincidan con los estados almacenados en el repositorio [browser compat data](https://github.com/mdn/browser-compat-data):
 
 - `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
-- `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que el uso de la tecnología no forma parte de una especificación formal, incluso si está implementada en varios navegadores.
 
 [Actualiza el estado de la característica en el repositorio browser-compat-data](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para modificar estos valores.
@@ -51,7 +50,7 @@ Las siguientes macros se añaden automáticamente al contenido para que coincida
 > Aunque puedes actualizar manualmente estas macros en el contenido, los valores que no coincidan con los datos de compatibilidad de navegadores serán reemplazados o eliminados.
 
 > [!NOTE]
-> Las páginas que tengan los banners `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}` o `\{{Non-standard_Header}}` también tendrán los valores de estado `experimental`, `deprecated` y `non-standard` correspondientes en los metadatos de la página.
+> Las páginas que tengan los banners `\{{SeeCompatTable}}` o `\{{Non-standard_Header}}` también tendrán los valores de estado `experimental` y `non-standard` correspondientes en los metadatos de la página.
 > Los metadatos se actualizan automáticamente al mismo tiempo que los encabezados.
 > Las macros de banner no dependen de estos metadatos de estado (aunque en el futuro podrían generarse a partir de ellos).
 

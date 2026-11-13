@@ -3,10 +3,10 @@ title: Propriété CSS `place-self`
 short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-self`** permet d'aligner un élément individuel à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}). Cette propriété s'applique aux boîtes de niveau bloc, aux boîtes positionnées absolument et aux éléments de grille. Si la deuxième valeur n'est pas présente, la première valeur est également utilisée pour elle.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-self`** permet d'aligner un élément individuel à la fois dans les directions bloc et en incise (c'est-à-dire les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}}). Cette propriété s'applique aux boîtes de niveau bloc, aux boîtes positionnées absolument et aux éléments de grille. Si la deuxième valeur n'est pas présente, la première valeur est également utilisée pour elle.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: place-self")}}
 
@@ -83,6 +83,8 @@ place-self: unset;
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `auto`
   - : Calcule la valeur en fonction de la propriété {{CSSxRef("align-items")}} du parent.
 - `normal`
@@ -102,14 +104,14 @@ place-self: unset;
 - `flex-end`
   - : Le bord de marge de fin transversal de l'élément flexible est aligné avec le bord de fin transversal de la ligne.
 - `center`
-  - : La boîte de marge de l'élément flexible est centrée dans la ligne sur l'axe transversal. Si la taille transversale de l'élément est plus grande que celle du conteneur flexible, elle débordera également dans les deux directions.
+  - : La boîte de marge de l'élément flexible est centrée dans la ligne sur l'axe transversal. Si la taille transversale de l'élément est plus grande que celle du conteneur flexible, elle déborde également dans les deux directions.
 - `baseline`, `first baseline`, `last baseline`
   - : Définit la participation à l'alignement sur la première ou la dernière ligne de base&nbsp;: aligne la ligne de base d'alignement du premier ou du dernier ensemble de lignes de base de la boîte avec la ligne de base correspondante dans l'ensemble partagé de première ou dernière ligne de base de toutes les boîtes de son groupe de partage de lignes de base.
     L'alignement de repli pour `first baseline` est `start`, celui pour `last baseline` est `end`.
 - `stretch`
   - : Si la taille combinée des éléments le long de l'axe transversal est inférieure à la taille du conteneur d'alignement et que l'élément est de taille `auto`, sa taille est augmentée de manière égale (et non proportionnelle), tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou fonctionnalité équivalente), de sorte que la taille combinée de tous les éléments de taille `auto` remplisse exactement le conteneur d'alignement le long de l'axe transversal.
 - `anchor-center`
-  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en ligne. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
+  - : Dans le cas des éléments [positionnés par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancrage associé dans la direction bloc et en incise. Voir [Centrer sur l'ancre en utilisant `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 
 ## Définition formelle
 
@@ -125,7 +127,7 @@ place-self: unset;
 
 Dans l'exemple suivant, nous avons une grille de 2 x 2. Initialement, le conteneur de la grille a des valeurs de {{CSSxRef("justify-items")}} et {{CSSxRef("align-items")}} de `stretch` — les valeurs par défaut — ce qui fait que les éléments de la grille s'étendent sur toute la largeur de leurs cellules.
 
-Les deuxième, troisième et quatrième éléments de la grille se voient ensuite attribuer différentes valeurs de `place-self`, pour montrer comment celles-ci remplacent les placements par défaut. Ces valeurs font que les éléments de la grille ne s'étendent que sur la largeur/hauteur de leur contenu, et s'alignent à différentes positions dans leurs cellules, dans les directions bloc et en ligne.
+Les deuxième, troisième et quatrième éléments de la grille se voient ensuite attribuer différentes valeurs de `place-self`, pour montrer comment celles-ci remplacent les placements par défaut. Ces valeurs font que les éléments de la grille ne s'étendent que sur la largeur/hauteur de leur contenu, et s'alignent à différentes positions dans leurs cellules, dans les directions bloc et en incise.
 
 #### HTML
 

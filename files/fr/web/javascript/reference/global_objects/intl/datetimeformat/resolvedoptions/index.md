@@ -104,4 +104,4 @@ systemOptions.locale; // par exemple, "nl-BE" ou "ar-SA"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}

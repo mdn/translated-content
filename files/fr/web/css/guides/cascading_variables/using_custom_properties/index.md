@@ -3,14 +3,14 @@ title: Utiliser des propriétés personnalisées CSS (variables)
 short-title: Utiliser des propriétés personnalisées
 slug: Web/CSS/Guides/Cascading_variables/Using_custom_properties
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Les **propriétés personnalisées** (parfois appelées **variables CSS** ou **variables en cascade**) sont des entités définies par les auteur·ice·s CSS qui représentent des valeurs spécifiques à réutiliser dans tout un document. Elles sont définies à l'aide de la règle {{CSSxRef("@property")}} ou de la [syntaxe des propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*) (par exemple, **`--primary-color: blue;`**). Les propriétés personnalisées sont accessibles avec la fonction CSS {{CSSxRef("var()")}} (par exemple, **`color: var(--primary-color);`**).
 
 Les sites web complexes ont souvent de grandes quantités de CSS, ce qui entraîne souvent de nombreuses valeurs répétées. Par exemple, il est courant de voir la même couleur utilisée dans des centaines d'endroits différents dans les feuilles de style. Changer une couleur qui a été dupliquée à plusieurs endroits nécessite une recherche et un remplacement dans toutes les règles et fichiers CSS. Les propriétés personnalisées permettent de définir une valeur à un endroit, puis de la référencer à plusieurs autres endroits, ce qui facilite le travail. Un autre avantage est la lisibilité et la sémantique. Par exemple, `--couleur-principale-texte` est plus facile à comprendre que la couleur hexadécimale `#00ff00`, surtout si la couleur est utilisée dans différents contextes.
 
-Les propriétés personnalisées définies [en utilisant deux tirets (`--`)](/fr/docs/Web/CSS/Reference/Properties/--*) sont soumises à la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) et héritent de leur valeur de leur parent.
+Les propriétés personnalisées définies [en utilisant deux tirets (`--`)](/fr/docs/Web/CSS/Reference/Properties/--*) sont envoyées à la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) et héritent de leur valeur de leur parent.
 La règle {{CSSxRef("@property")}} permet un contrôle plus précis sur la propriété personnalisée et vous permet de définir si elle hérite de sa valeur d'un parent, quelle est la valeur initiale et quelles contraintes de type doivent s'appliquer.
 
 > [!NOTE]
@@ -35,7 +35,7 @@ section {
 }
 ```
 
-Le sélecteur donné à l'ensemble de règles ({{HTMLElement("section")}}) dans l'exemple ci-dessus) définit la portée dans laquelle la propriété personnalisée peut être utilisée.
+Le sélecteur donné à l'ensemble de règles ({{HTMLElement("section")}} dans l'exemple ci-dessus) définit la portée dans laquelle la propriété personnalisée peut être utilisée.
 Pour cette raison, une pratique courante consiste à définir les propriétés personnalisées sur la pseudo-classe {{CSSxRef(":root")}}, afin qu'elles puissent être référencées globalement&nbsp;:
 
 ```css
@@ -67,7 +67,7 @@ Vous pouvez en savoir plus sur son fonctionnement sur la page de [l'API des prop
 
 ### Référencer les propriétés personnalisées avec `var()`
 
-Quelle que soit la méthode choisie pour définir une propriété personnalisée, vous les utilisez en référencant la propriété dans une fonction {{CSSxRef("var()")}} à la place d'une valeur de propriété standard&nbsp;:
+Quelle que soit la méthode choisie pour définir une propriété personnalisée, vous les utilisez en référençant la propriété dans une fonction {{CSSxRef("var()")}} à la place d'une valeur de propriété standard&nbsp;:
 
 ```css
 details {
@@ -296,7 +296,7 @@ L'exemple suivant crée une propriété personnalisée en utilisant la règle `@
 L'héritage est désactivé, un type de données {{CSSxRef("&lt;color&gt;")}} est défini, et une valeur initiale de `teal` est définie.
 
 L'élément parent définit `--couleur-boite` à une valeur de `green` et utilise `--couleur-boite` comme valeur pour sa couleur de fond.
-L'élément enfant utilise également `background-color: var(--couleur-boite)`, et nous nous attendrions à ce qu'il ait la couleur `green` si l'héritage était activé (ou si elle était définie en utilisant la syntaxe à double tiret).
+L'élément enfant utilise également `background-color: var(--couleur-boite)`, et nous nous attendrions à ce qu'il ait la couleur `green` si l'héritage est activé (ou si elle est définie en utilisant la syntaxe à double tiret).
 
 ```html live-sample___at-property-inheritance
 <div class="parent">
@@ -339,7 +339,7 @@ div {
 }
 ```
 
-Parce que `inherits: false;` est défini dans la règle `@property`, et qu'une valeur pour la propriété `--couleur-boite` n'est pas déclarée dans la portée de `.enfant`, la valeur initiale de `teal` est utilisée à la place de `green` qui aurait été héritée du parent&nbsp;:
+Parce que `inherits: false;` est défini dans la règle `@property`, et qu'une valeur pour la propriété `--couleur-boite` n'est pas déclarée dans la portée de `.enfant`, la valeur initiale de `teal` est utilisée à la place de `green` qui a été héritée du parent&nbsp;:
 
 {{EmbedLiveSample("at-property-inheritance", "100%", 250)}}
 
@@ -450,7 +450,7 @@ div {
 Chaque propriété CSS peut se voir attribuer un [ensemble de valeurs](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) défini.
 Si vous essayez d'attribuer une valeur à une propriété qui est en dehors de son ensemble de valeurs valides, elle est considérée comme _invalide_.
 
-Lorsque le navigateur rencontre une valeur invalide pour une propriété CSS normale (par exemple, une valeur de `16px` pour la propriété {{CSSxRef("color")}}), il ignore la déclaration, et les éléments se voient attribuer les valeurs qu'ils auraient eues si la déclaration n'existait pas.
+Lorsque le navigateur rencontre une valeur invalide pour une propriété CSS normale (par exemple, une valeur de `16px` pour la propriété {{CSSxRef("color")}}), il ignore la déclaration, et les éléments se voient attribuer les valeurs qu'ils ont eues si la déclaration n'existe pas.
 Dans l'exemple suivant, nous voyons ce qui se passe lorsqu'une déclaration CSS normale est invalide&nbsp;; `color: 16px;` est ignoré et la règle précédente `color: blue` est appliquée à la place&nbsp;:
 
 ```html live-sample___invalid-property
@@ -472,7 +472,7 @@ p {
 {{EmbedLiveSample("invalid-property", 100, 50)}}
 
 Cependant, lorsque les valeurs des propriétés personnalisées sont analysées, le navigateur ne sait pas encore où elles sont utilisées, il doit donc considérer presque toutes les valeurs comme _valides_.
-Malheureusement, ces valeurs valides peuvent être utilisées, avec la notation fonctionnelle `var()`, dans un contexte où elles pourraient ne pas avoir de sens.
+Malheureusement, ces valeurs valides peuvent être utilisées, avec la notation fonctionnelle `var()`, dans un contexte où elles peuvent ne pas avoir de sens.
 Les propriétés et les variables personnalisées peuvent conduire à des déclarations CSS invalides, ce qui conduit au concept de _valide au moment du calcul_.
 
 Lorsque le navigateur rencontre une substitution `var()` invalide, la valeur [initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) ou [héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance) de la propriété est utilisée.
@@ -505,7 +505,7 @@ p {
 
 {{EmbedLiveSample("invalid-custom-property", 100, 50)}}
 
-Pour de tels cas, la règle `@property` peut prévenir des résultats inattendus en permettant de définir la valeur initiale de la propriété&nbsp;:
+Pour de tels cas, la règle `@property` peut prévenir des résultats inattendus en vous permettant de définir la valeur initiale de la propriété&nbsp;:
 
 ```html live-sample___invalid-custom-property-fallbacks
 <p>Ce paragraphe est initialement en noir.</p>

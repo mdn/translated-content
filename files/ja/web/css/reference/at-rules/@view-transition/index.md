@@ -1,8 +1,9 @@
 ---
-title: "@view-transition"
+title: CSS `@view-transition` アットルール
+short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 l10n:
-  sourceCommit: b88f711ce4944f97162d7f1a7bcb8283af06f690
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。

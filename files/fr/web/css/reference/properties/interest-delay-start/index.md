@@ -3,7 +3,7 @@ title: Propriété CSS `interest-delay-start`
 short-title: interest-delay-start
 slug: Web/CSS/Reference/Properties/interest-delay-start
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -29,6 +29,8 @@ interest-delay-start: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par une valeur `<time>` ou le mot-clé `normal`&nbsp;:
 
 - `normal`
   - : Définit le délai par défaut du navigateur. Il s'agit de la valeur initiale.
@@ -66,7 +68,7 @@ Le balisage inclut un {{HTMLElement("button")}}, un {{HTMLElement("p")}} et un {
 
 #### CSS
 
-Dans le CSS, nous définissons une règle avec le sélecteur `.delay` qui applique une valeur `interest-delay-start` de `2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquerons cette classe au `<button>` lorsque la case à cocher sera cochée, avec JavaScript.
+Dans le CSS, nous définissons une règle avec le sélecteur `.delay` qui applique une valeur `interest-delay-start` de `2s` à tout invocateur d'intérêt auquel la classe `delay` est appliquée. Nous appliquons cette classe au `<button>` lorsque la case à cocher est cochée, avec JavaScript.
 
 ```css live-sample___interest-invoker-delay
 .delay {
@@ -94,13 +96,13 @@ Ceci s'affiche ainsi&nbsp;:
 
 Essayez de montrer de l'intérêt pour le bouton (par exemple, en le survolant ou en le sélectionnant), puis de cesser de montrer de l'intérêt pour observer l'affichage et la disparition de la fenêtre contextuelle. Par défaut, la fenêtre contextuelle s'affiche et disparaît après un très court délai.
 
-Cochez maintenant la case et refaites les mêmes actions. Cette fois, la fenêtre contextuelle devrait apparaître après un délai de `2s` lorsque l'intérêt est montré. Le délai après la perte d'intérêt ne doit pas être modifié.
+Cochez maintenant la case et refaites les mêmes actions. Cette fois, la fenêtre contextuelle doit apparaître après un délai de `2s` lorsque l'intérêt est montré. Le délai après la perte d'intérêt ne doit pas être modifié.
 
 ### Retirer `interest-delay-start` après que l'intérêt a été montré
 
 Dans cet exemple, nous montrons comment retirer `interest-delay-start` de plusieurs éléments invocateurs d'intérêt après que l'intérêt a été montré sur l'un d'eux.
 
-Il s'agit d'une technique utile. Faire apparaître une fenêtre contextuelle dès que l'intérêt est montré sur un invocateur créerait une expérience utilisateur gênante et distrayante, c'est pourquoi les navigateurs ajoutent un petit délai par défaut (voir la [description de `interest-delay`](/fr/docs/Web/CSS/Reference/Properties/interest-delay#description) pour plus de détails). Cependant, une fois que les utilisateur·ice·s ont montré de l'intérêt pour un invocateur, il est pratique de leur permettre de passer rapidement à d'autres invocateurs sans délai.
+Il s'agit d'une technique utile. Faire apparaître une fenêtre contextuelle dès que l'intérêt est montré sur un invocateur crée une expérience utilisateur·ice gênante et distrayante, c'est pourquoi les navigateurs ajoutent un petit délai par défaut (voir la [description de `interest-delay`](/fr/docs/Web/CSS/Reference/Properties/interest-delay#description) pour plus de détails). Cependant, une fois que les utilisateur·ice·s ont montré de l'intérêt pour un invocateur, il est pratique de leur permettre de passer rapidement à d'autres invocateurs sans délai.
 
 #### HTML
 
@@ -143,7 +145,7 @@ Ceci s'affiche ainsi&nbsp;:
 
 {{EmbedLiveSample("interest-delay-remove-on-interest", "100%", 100)}}
 
-Essayez de montrer de l'intérêt pour n'importe quel bouton et remarquez que, lorsque vous montrez immédiatement de l'intérêt pour un autre bouton, la fenêtre contextuelle apparaît sans délai. Si vous cessez de montrer de l'intérêt pour les boutons puis recommencez, le délai initial reviendra.
+Essayez de montrer de l'intérêt pour n'importe quel bouton et remarquez que, lorsque vous montrez immédiatement de l'intérêt pour un autre bouton, la fenêtre contextuelle apparaît sans délai. Si vous cessez de montrer de l'intérêt pour les boutons puis recommencez, le délai initial revient.
 
 ## Spécifications
 

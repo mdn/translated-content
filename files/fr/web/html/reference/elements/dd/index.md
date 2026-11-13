@@ -85,8 +85,7 @@ Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/
         Un {{HTMLElement("dl")}} ou un
         {{HTMLElement("div")}} enfant d'un
         {{HTMLElement("dl")}}.<br />Cet élément peut être utilisé après un
-        {{HTMLElement("dt")}} ou un autre élément <code>&lt;dd&gt;</code>
-        .
+        {{HTMLElement("dt")}} ou un autre élément <code>&lt;dd&gt;</code>.
       </td>
     </tr>
     <tr>

@@ -66,4 +66,4 @@ console.log(nextDay.toString()); // 2021-07-02T00:00:00
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Temporal.PlainDateTime")}}
+- L'objet natif {{JSxRef("Temporal.PlainDateTime")}}

@@ -1,13 +1,16 @@
 ---
-title: Object.freeze()
+title: "Object : méthode statique freeze()"
+short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
+l10n:
+  sourceCommit: 7aba7d7cba898fe4d4a88df73183bb05f71a19a2
 ---
 
-{{JSRef}}
+La méthode statique **`Object.freeze()`**_gèle_ un objet. Geler un objet [empêche les extensions](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) et rend les propriétés existantes non modifiables et non configurables. Un objet gelé ne peut plus être modifié&nbsp;: de nouvelles propriétés ne peuvent pas être ajoutées, les propriétés existantes ne peuvent pas être supprimées, leur caractère énumérable, configurable, modifiable ou leur valeur ne peut pas être changé, et le prototype de l'objet ne peut pas être réassigné. `freeze()` retourne le même objet qui a été passé en argument.
 
-La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on empêche d'ajouter de nouvelles propriétés, de supprimer ou d'éditer des propriétés existantes, y compris en ce qui concerne leur caractère énumérable, configurable ou pour l'accès en écriture. L'objet devient ainsi immuable. La méthode renvoie l'objet ainsi « gelé ».
+Geler un objet est le niveau d'intégrité le plus élevé que JavaScript offre.
 
-{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.freeze()")}}
 
 ```js interactive-example
 const obj = {
@@ -17,16 +20,16 @@ const obj = {
 Object.freeze(obj);
 
 obj.prop = 33;
-// Throws an error in strict mode
+// Lève une exception en mode strict
 
 console.log(obj.prop);
-// Expected output: 42
+// Résultat attendu : 42
 ```
 
 ## Syntaxe
 
-```js
-Object.freeze(obj);
+```js-nolint
+Object.freeze(obj)
 ```
 
 ### Paramètres
@@ -40,61 +43,85 @@ L'objet qui a été passé à la fonction.
 
 ## Description
 
-Rien ne pourra être ajouté ou supprimé dans l'ensemble des propriétés de l'objet gelé. Toute tentative échouera, silencieusement ou via une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Strict_mode", "mode strict", "", 1)}}).
+Le gel d'un objet revient à [empêcher les extensions](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), puis à définir tous les [descripteurs de propriétés](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) `configurable` à `false` — et pour les propriétés de données, `writable` à `false` également. Rien ne peut être ajouté ou supprimé de l'ensemble des propriétés d'un objet gelé. Toute tentative en ce sens échoue, soit silencieusement, soit en levant une exception {{JSxRef("TypeError")}} (le plus souvent, mais pas exclusivement, lorsque l'on se trouve dans {{JSxRef("Strict_mode", "mode strict", "", 1)}}).
 
-Les propriétés qui sont des données ne pourront pas être changées et les attributs `writable` et `configurable` vaudront `false`. Les propriétés qui sont des accesseurs ou des mutateurs fonctionneront de la même façon (et ne changeront pas la valeur associée malgré le fait qu'il n'y ait pas d'erreur). Les propriétés dont les valeurs sont des objets pourront être modifiées si ces objets ne sont pas gelés. Les tableaux peuvent également être gelés ce qui empêche alors d'ajouter ou de retirer des éléments ou de modifier les éléments existants si ceux-ci ne sont pas des objets.
+En ce qui concerne les propriétés de données d'un objet gelé, leurs valeurs ne peuvent pas être modifiées puisque les attributs `writable` et `configurable` sont définis sur `false`. Les propriétés des accesseurs (accesseurs et mutateurs) fonctionnent de la même manière — la valeur de la propriété retournée par l'accesseur peut toujours changer, et le mutateur peut toujours être appelé sans générer d'erreur lors de la définition de la propriété. Notez que les valeurs qui sont des objets peuvent toujours être modifiées, à moins qu'elles ne sont également gelées. En tant qu'objet, un tableau peut être gelé&nbsp;; une fois gelé, ses éléments ne peuvent plus être modifiés et aucun élément ne peut être ajouté ou supprimé du tableau.
 
-La fonction renvoie l'objet passé en argument, elle ne crée pas une copie « gelée ».
+Les [éléments privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements) ne sont pas des propriétés et ne relèvent pas du concept de descripteurs de propriétés. Le gel d'un objet comportant des éléments privés n'empêche pas la modification des valeurs de ces éléments privés. (Le gel des objets est généralement considéré comme une mesure de sécurité contre le code externe, mais celui-ci ne peut de toute façon pas accéder aux éléments privés.) Les éléments privés ne peuvent être ni ajoutés ni supprimés de l'objet, que celui-ci soit gelé ou non.
+
+`freeze()` retourne le même objet que celui qui a été passé à la fonction. Elle _ne_ crée _pas_ de copie gelée.
+
+Un tableau typé ({{JSxRef("TypedArray")}}) ou une vue de donnée ({{JSxRef("DataView")}}) contenant des éléments provoque une erreur {{JSxRef("TypeError")}}, car il s'agit de vues sur la mémoire, ce qui entraîne inévitablement d'autres problèmes potentiels&nbsp;:
+
+```js
+Object.freeze(new Uint8Array(0)); // Pas d'éléments
+// Uint8Array []
+
+Object.freeze(new Uint8Array(1)); // A des éléments
+// TypeError: Cannot freeze array buffer views with elements
+
+Object.freeze(new DataView(new ArrayBuffer(32))); // Pas d'éléments
+// DataView {}
+
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 0)); // Pas d'éléments
+// Float64Array []
+
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // Has elements
+// TypeError: Cannot freeze array buffer views with elements
+```
+
+Notez que comme les trois propriétés standard (`buf.byteLength`, `buf.byteOffset` et `buf.buffer`) sont en lecture seule (tout comme celles d'un {{JSxRef("ArrayBuffer")}} ou d'un {{JSxRef("SharedArrayBuffer")}}), il n'y a aucune raison de tenter de geler ces propriétés.
+
+Contrairement à {{JSxRef("Object.seal()")}}, les propriétés existantes des objets gelés avec `Object.freeze()` deviennent immuables et les propriétés de données ne peuvent pas être réassignées.
 
 ## Exemples
 
 ### Geler des objets
 
 ```js
-var obj = {
-  prop: function () {},
+const obj = {
+  prop() {},
   toto: "truc",
 };
 
-// On peut ajouter de nouvelles propriétés,
-// éditer ou supprimer celles existantes
+// Avant le gel : de nouvelles propriétés peuvent être ajoutées,
+// et les propriétés existantes peuvent être modifiées ou supprimées
 obj.toto = "machin";
-obj.bidule = "woof";
+obj.bidule = "waf";
 delete obj.prop;
 
-// L'argument et la valeur renvoyée correspondent au
-// même objet.
-// Il n'est pas nécessaire d'utiliser la valeur renvoyée
-// pour geler l'objet original.
-var o = Object.freeze(obj);
+// Gelé.
+const o = Object.freeze(obj);
 
+// La valeur retournée est exactement le même objet que celui passé en paramètre.
 o === obj; // true
-Object.isFrozen(obj); // true
 
-// Maintenant que l'objet est gelé, les changements échoueront
+// L'objet est devenu gelé.
+Object.isFrozen(obj); // === true
+
+// Maintenant que l'objet est gelé, les changements échouent
 obj.toto = "eheh"; // échoue silencieusement
-obj.roxor = "ga bu zo meu"; // échoue silencieusement et n'ajoute
-// pas la propriété
+// échoue silencieusement et n'ajoute pas la propriété
+obj.roxor = "comme la guilde";
 
-// ...en mode strict, l'échec se traduira par une exception TypeErrors
+// En mode strict, l'échec se traduit par des exceptions TypeErrors
 function echec() {
   "use strict";
-  obj.toto = "bipbip"; // renvoie une TypeError
-  delete obj.toto; // renvoie une TypeError
-  delete obj.roxor; // renvoie true car l'attribut n' a pas été ajouté
-  obj.bipbip = "arf"; // renvoie une TypeError
+  obj.toto = "bipbip"; // retourne une TypeError
+  delete obj.toto; // retourne une TypeError
+  delete obj.roxor; // retourne true, car l'attribut n'a pas été ajouté
+  obj.bipbip = "arf"; // retourne une TypeError
 }
 
 echec();
 
-// Les changements via Object.defineProperty échoueront également
-// renvoie une TypeError
+// Tentatives de modification à l'aide de Object.defineProperty ;
+// les deux instructions ci-dessous génèrent une erreur TypeError.
 Object.defineProperty(obj, "ohoh", { value: 17 });
-// renvoie une TypeError
 Object.defineProperty(obj, "toto", { value: "eit" });
 
-// Il est également impossible de modifier le prototype.
-// Les deux instructions suivantes déclencheront une TypeError.
+// Il est également impossible de modifier le prototype
+// deux instructions suivantes lèvent une TypeError.
 Object.setPrototypeOf(obj, { x: 20 });
 obj.__proto__ = { x: 20 };
 ```
@@ -102,28 +129,27 @@ obj.__proto__ = { x: 20 };
 ### Geler un tableau
 
 ```js
-let a = [0];
-Object.freeze(a);
-// Le tableau ne peut plus être modifié
+const a = [0];
+Object.freeze(a); // Le tableau ne peut plus être modifié
 
 a[0] = 1; // échoue silencieusement
-a.push(2); // échoue silencieusement
 
-// en mode strict, de telles tentatives
-// déclencheront des exceptions TypeError
+// en mode strict, ça lève des exceptions TypeError
 function echec() {
   "use strict";
   a[0] = 1;
-  a.push(2);
 }
 
 echec();
+
+// Tente de pousser
+a.push(2); // lève une TypeError
 ```
 
-L'exemple qui suit illustre comment les propriétés qui sont des objets peuvent être éditées (la méthode `freeze` ne s'applique que sur l'objet courant et de façon superficielle).
+L'objet gelé devient _immuable_. Cependant, il n'est pas nécessairement _constant_. L'exemple suivant montre qu'un objet gelé n'est pas constant (le gel est superficiel).
 
 ```js
-obj1 = {
+const obj1 = {
   internal: {},
 };
 
@@ -133,14 +159,14 @@ obj1.internal.a = "valeurA";
 obj1.internal.a; // 'valeurA'
 ```
 
-L'objet qui est gelé est immuable mais ce n'est pas nécessairement une constante. Pour obtenir une constante, il faut que l'ensemble des références (directes et indirectes) pointe vers des objets immuables. Les chaînes de caractères, les nombres et les booléens sont toujours immuables. La plupart du temps, on aura besoin de créer des constantes au cas par cas (et non de façon générale).
+Pour qu'un objet soit constant, l'ensemble du graphe de références (références directes et indirectes à d'autres objets) doit faire référence uniquement à des objets immuables et figés. L'objet figé est dit immuable, car l'ensemble de son _état_ (valeurs et références à d'autres objets) est fixe. Notez que les chaînes de caractères, les nombres et les booléens sont toujours immuables, et que les fonctions et les tableaux sont des objets.
 
-### Qu'est-ce que le gel « superficiel » ? (_shallow freeze_)
+### Gèle profond
 
-Lorsqu'on appelle `Object.freeze(monObjet)`, le gel ne s'applique qu'aux propriétés directement rattachées à `monObjet`. L'ajout, la suppression ou la réaffectation ne sont empêchées que sur l'objet directement. Si les valeurs de ces propriétés sont également des objets, ces derniers ne sont pas gelés et on peut leur ajouter/supprimer/réaffecter des valeurs.
+Le résultat de l'appel à `Object.freeze(object)` ne s'applique qu'aux propriétés directes de `object` lui-même et empêche _uniquement_ les opérations futures d'ajout, de suppression ou de réaffectation de valeur sur `object`. Si la valeur de ces propriétés est elle-même un objet, ces objets ne sont pas gelés et peuvent faire l'objet d'opérations d'ajout, de suppression ou de réaffectation de valeur.
 
 ```js
-var employé = {
+const employe = {
   nom: "Leroy",
   designation: "Développeur",
   adresse: {
@@ -149,78 +175,47 @@ var employé = {
   },
 };
 
-Object.freeze(employé);
+Object.freeze(employe);
 
-employé.nom = "John"; // propriété directe, la réaffectation échoue en silence
-employé.adresse.ville = "Paris"; // propriété d'un objet fils : modifiable
+employe.nom = "John"; // propriété directe, la réaffectation échoue en silence
+employe.adresse.ville = "Paris"; // propriété d'un objet fils : modifiable
 
-console.log(employé.adresse.ville); // affichera Paris
+console.log(employe.adresse.ville); // affiche Paris
 ```
 
 Pour rendre l'objet complètement immuable, on gèle chacun des objets qu'il contient. Voici un exemple simple de fonction pour parcourir les propriétés qui sont des objets et les geler (attention, cela ne gère pas le cas où on a des cycles de références, ce qui entraînerait une boucle infinie).
 
 ```js
-function deepFreeze(obj) {
+function gelProfond(objet) {
   // On récupère les noms des propriétés définies sur obj
-  var propNames = Object.getOwnPropertyNames(obj);
+  const propNames = Reflect.ownKeys(objet);
 
   // On gèle les propriétés avant de geler l'objet
-  for (let name of propNames) {
-    let value = obj[name];
-    obj[name] = value && typeof value === "object" ? deepFreeze(value) : value;
+  for (const nom of propNames) {
+    const valeur = objet[nom];
+
+    if (
+      (valeur && typeof valeur === "object") ||
+      typeof valeur === "function"
+    ) {
+      gelProfond(valeur);
+    }
   }
 
-  // On gèle l'objet initial
-  return Object.freeze(obj);
+  return Object.freeze(objet);
 }
 
-obj2 = {
-  internal: {
+const objet2 = {
+  interne: {
     a: null,
   },
 };
 
-deepFreeze(obj2);
-obj2.internal.a = "valeurB"; // échouera silencieusement en mode non-strict
-obj2.internal.a; // null
+gelProfond(objet2);
+
+objet2.interne.a = "valeurB"; // échoue silencieusement en mode non-strict
+objet2.interne.a; // null
 ```
-
-## Notes
-
-Pour ES5, si l'argument passé à la méthode n'est pas un objet mais est d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ECMAScript 2015 (ES2015), un argument qui n'est pas un objet sera traité comme un objet ordinaire gelé et sera renvoyé tel quel par la méthode.
-
-```js
-Object.freeze(1);
-// TypeError: 1 is not an object - code ES5
-
-Object.freeze(1);
-// 1                             - code ES2015
-```
-
-Geler un {{domxref("ArrayBufferView")}} contenant des éléments entraînera une exception {{jsxref("TypeError")}} car ce sont des vues sur des zones mémoires.
-
-```js
-> Object.freeze(new Uint8Array(0)) // Aucun élément
-Uint8Array []
-
-> Object.freeze(new Uint8Array(1)) // Avec des éléments
-TypeError: Cannot freeze array buffer views with elements
-
-> Object.freeze(new DataView(new ArrayBuffer(32))) // Aucun élément
-DataView {}
-
-> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // Aucun élément
-Float64Array []
-
-> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Avec des éléments
-TypeError: Cannot freeze array buffer views with elements
-```
-
-On notera que les trois propriétés standard (`buf.byteLength`, `buf.byteOffset` et `buf.buffer`) sont en lecture seule (comme pour {{jsxref("ArrayBuffer")}} et {{jsxref("SharedArrayBuffer")}}) : il n'y a donc aucune raison de vouloir geler ces propriétés.
-
-### Comparaison avec `Object.seal()`
-
-Lorsqu'on utilise la méthode `Object.freeze()`, les propriétés existantes d'un objet deviennent immuables. En revanche, avec {{jsxref("Object.seal()")}}, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.
 
 ## Spécifications
 
@@ -232,8 +227,8 @@ Lorsqu'on utilise la méthode `Object.freeze()`, les propriétés existantes d'u
 
 ## Voir aussi
 
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+- La méthode statique {{JSxRef("Object.isFrozen()")}}
+- La méthode statique {{JSxRef("Object.preventExtensions()")}}
+- La méthode statique {{JSxRef("Object.isExtensible()")}}
+- La méthode statique {{JSxRef("Object.seal()")}}
+- La méthode statique {{JSxRef("Object.isSealed()")}}

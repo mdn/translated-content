@@ -2,9 +2,8 @@
 title: "ARIA : rôle checkbox"
 short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
-original_slug: Web/Accessibility/ARIA/Roles/checkbox_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 1474534461893381d54c502e655f334b5568e597
 ---
 
 Le rôle `checkbox` est destiné aux contrôles interactifs pouvant être cochés. Les éléments contenant `role="checkbox"` doivent également inclure l'attribut [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) afin d'exposer l'état de la case à cocher aux technologies d'assistance.
@@ -174,7 +173,7 @@ Les personnes qui implémentent des cases à cocher doivent&nbsp;:
 - Fournir des styles indiquant quand la case est ciblée.
 
 > [!NOTE]
-> Les avis peuvent diverger quant à la manière dont les technologies d'assistance devraient gérer cette technique. Les informations ci-dessus représentent l'un de ces avis et peuvent évoluer.
+> Les avis peuvent diverger quant à la manière dont les technologies d'assistance doivent gérer cette technique. Les informations ci-dessus représentent l'un de ces avis et peuvent évoluer.
 
 ## Bonnes pratiques
 

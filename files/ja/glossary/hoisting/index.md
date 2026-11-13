@@ -2,12 +2,10 @@
 title: Hoisting (巻き上げ、ホイスティング)
 slug: Glossary/Hoisting
 l10n:
-  sourceCommit: 8fb5853ceee5db8ac6e1c564c6dda4b3f5ec86c5
+  sourceCommit: 6af30294be537972bdac2c46fa98d63e136d589e
 ---
 
-{{GlossarySidebar}}
-
-JavaScript の**巻き上げ** (Hoisting) は、インタープリターがコードの実行前に、関数、変数、クラス、インポートの宣言をそのスコープの先頭に移動するように見えるプロセスを指します。
+JavaScript の**巻き上げ** (Hoisting) は、インタープリターがコードの実行前に、関数、変数、クラス、インポートの宣言をその{{glossary("scope","スコープ")}}の先頭に移動するように見えるプロセスを指します。
 
 「巻き上げ」は ECMAScript 仕様書で規範的に定義されている用語ではありません。仕様書では宣言のグループを [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration) として定義していますが、これは [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/ja/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)、[`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) 宣言しか含んでいません。巻き上げは、異なる形ではありますが、 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 宣言の機能としても多く考えられています。俗な言い方をすれば、以下のような動作はすべて巻き上げと見なされます。
 
@@ -28,7 +26,7 @@ const x = 1;
 }
 ```
 
-もし `const x = 2` 宣言がすべて巻き上げられなければ（実行されたときだけ有効になるように）、`console.log(x)` 文は上のスコープから `x` 値を読み取ることができるはずです。しかし、 `const` 宣言が定義されているスコープ全体をまだ「汚染」しているため、 `console.log(x)` 文はまだ初期化されていない `const x = 2` 宣言から `x` を読み込み、 {{jsxref("ReferenceError")}} を発生します。それでも、字句の宣言をnon-hoistingとして特徴付ける方が有益かもしれません。なぜなら、実用的な視点から見ると、これらの宣言の巻き上げは何の意味ももたらさないからです。
+もし `const x = 2` 宣言がすべて巻き上げられなければ（実行されたときだけ有効になるように）、`console.log(x)` 文は外のスコープから `x` 値を読み取ることができるはずです。しかし、 `const` 宣言が定義されているスコープ全体をまだ「汚染」しているため、 `console.log(x)` 文はまだ初期化されていない `const x = 2` 宣言から `x` を読み込み、 {{jsxref("ReferenceError")}} を発生します。それでも、字句の宣言をnon-hoistingとして特徴付ける方が有益かもしれません。なぜなら、実用的な視点から見ると、これらの宣言の巻き上げは何の意味ももたらさないからです。
 
 なお、以下は巻き上げの形式ではありません。
 
@@ -50,7 +48,9 @@ console.log(x); // 1
 
 ## 関連情報
 
-- [`var` 文](/ja/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [`let` 文](/ja/docs/Web/JavaScript/Reference/Statements/let) — MDN
-- [`const` 文](/ja/docs/Web/JavaScript/Reference/Statements/const) — MDN
-- [`function` 文](/ja/docs/Web/JavaScript/Reference/Statements/function) — MDN
+- [`var` 文](/ja/docs/Web/JavaScript/Reference/Statements/var)
+- [`let` 文](/ja/docs/Web/JavaScript/Reference/Statements/let)
+- [`const` 文](/ja/docs/Web/JavaScript/Reference/Statements/const)
+- [`function` 文](/ja/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` 文](/ja/docs/Web/JavaScript/Reference/Statements/class)
+- [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)

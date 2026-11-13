@@ -3,7 +3,7 @@ title: Set.prototype.isDisjointFrom()
 short-title: isDisjointFrom()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`isDisjointFrom()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を取り、この Set に与えられた集合と共通する要素がないことを示す論理値を返します。
@@ -21,7 +21,7 @@ isDisjointFrom(other)
 
 ### 返値
 
-この Set に `other` の集合と共通する要素がない場合は `true`、そうでなければ `false` です。
+この集合に `other` の集合と共通する要素がない場合は `true`、そうでなければ `false` です。
 
 ## 解説
 
@@ -74,7 +74,7 @@ console.log(composites.isDisjointFrom(squares)); // false
 
 ## 関連情報
 
-- [`Set.prototype.isDisjointFrom` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.isDisjointFrom` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.isDisjointFrom` のポリフィル](https://www.npmjs.com/package/set.prototype.isdisjointfrom)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

@@ -1,12 +1,12 @@
 ---
-title: "`@document` CSS アットルール"
+title: CSS `@document` アットルール
 short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_header}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが（[userchrome.org](https://www.userchrome.org/) を参照）、独自定義のスタイルシートにも使うことができます。
 

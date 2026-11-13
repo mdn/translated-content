@@ -1,54 +1,87 @@
 ---
-title: Element.setPointerCapture()
+title: "Element : méthode setPointerCapture()"
+short-title: setPointerCapture()
 slug: Web/API/Element/setPointerCapture
+l10n:
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
 {{APIRef("DOM")}}
 
-La _Pointer capture_ (_capture de pointeur_) permet de re-cibler des événements pour un événement de pointeur particulier ({{domxref ("PointerEvent")}}) vers un élément particulier au lieu de la cible normale à l'emplacement d'un pointeur. Cela peut être utilisé pour garantir qu'un élément continue à recevoir des événements de pointeur même si le contact du périphérique de pointeur se déplace hors de l'élément (par exemple en faisant défiler).
+La méthode **`setPointerCapture()`** de l'interface {{DOMxRef("Element")}} est utilisée pour désigner un élément spécifique comme _cible de capture_ des futurs évènements de pointeur. Les évènements ultérieurs pour le pointeur sont ciblés sur l'élément de capture jusqu'à ce que la capture soit libérée (avec {{DOMxRef("Element.releasePointerCapture()")}} ou l'évènement {{DOMxRef("Element/pointerup_event", "pointerup")}}).
 
-**`setPointerCapture()`** est la méthode de l'interface {{domxref("Element")}} utilisée pour désigner un élément spécifique comme _cible de capture_ de{{domxref("PointerEvent", "évènements de pointeur")}} futurs. Les évènements subséquents du pointeur seront reciblés sur l'élément jusqu'à la libération de la capture (via {{domxref("Element.releasePointerCapture")}}).
-
-> [!NOTE]
-> Lorque la capture du pointeur est définie, les évènements {{domxref("PointerEvent.pointerover","pointerover")}}, {{domxref("PointerEvent.pointerout","pointerout")}} {{domxref("PointerEvent.pointerenter","pointerenter")}} et {{domxref("PointerEvent.pointerleave","pointerleave")}} sont uniquement générés lors du franchissement de la limite de l'élément dont la capture est définie, car les autres éléments ne peuvent plus être ciblés par le pointeur. Cela a pour effet de supprimer ces événements sur tous les autres éléments.
+Voir [les évènements de pointeur](/fr/docs/Web/API/Pointer_events#capture_du_pointeur) pour un aperçu et des exemples de fonctionnement de la capture de pointeur.
 
 ## Syntaxe
 
-```js
-.setPointerCapture(pointerId);
+```js-nolint
+setPointerCapture(pointerId)
 ```
 
-targetElement
+### Paramètres
 
-### Arguments
-
-- _pointerId_
-  - : L'{{domxref("PointerEvent.pointerId","identifiant")}} pour un {{domxref("PointerEvent","évènement de pointeur")}}.
+- `pointerId`
+  - : Un {{DOMxRef("PointerEvent.pointerId", "pointerId")}} d'un objet {{DOMxRef("PointerEvent")}}.
 
 ### Valeur de retour
 
-Cette méthode renvoie `void` et lance une {{domxref("DOMException")}} nommée `InvalidPointerId` si `pointerId` ne correspond à aucun des pointeurs actifs.
+Aucune ({{JSxRef("undefined")}}).
 
-## Exemple
+### Exceptions
+
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : Levée si `pointerId` ne correspond à aucun pointeur actif.
+
+## Exemples
+
+Cet exemple définit la capture du pointeur sur un {{HTMLElement("div")}} lorsque vous appuyez dessus. Cela vous permet de faire defiler l'élément horizontalement, même lorsque votre pointeur se déplace en dehors de ses limites.
+
+### HTML
 
 ```html
-<html>
-  <script>
-    function downHandler(ev) {
-      var el = document.getElementById("target");
-      //L'élément cible  ('target') recevra/capturera d'autres évènements
-      el.setPointerCapture(ev.pointerId);
-    }
-    function init() {
-      var el = document.getElementById("target");
-      el.onpointerdown = downHandler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me ...</div>
-  </body>
-</html>
+<div id="glissiere">GLISSEZ-MOI</div>
 ```
+
+### CSS
+
+```css
+div {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffbbee;
+  touch-action: none;
+}
+```
+
+### JavaScript
+
+```js
+const glissiere = document.getElementById("glissiere");
+
+function demarrerGlissement(e) {
+  glissiere.onpointermove = defiler;
+  glissiere.setPointerCapture(e.pointerId);
+}
+
+function arreterGlissement(e) {
+  glissiere.onpointermove = null;
+  glissiere.releasePointerCapture(e.pointerId);
+}
+
+function defiler(e) {
+  glissiere.style.transform = `translate(${e.clientX - 70}px)`;
+}
+
+glissiere.onpointerdown = demarrerGlissement;
+glissiere.onpointerup = arreterGlissement;
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -60,5 +93,6 @@ Cette méthode renvoie `void` et lance une {{domxref("DOMException")}} nommée `
 
 ## Voir aussi
 
-- {{ domxref("Element.releasePointerCapture")}}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- La méthode {{DOMxRef("Element.hasPointerCapture()")}}
+- La méthode {{DOMxRef("Element.releasePointerCapture()")}}
+- [Les évènements de pointeur](/fr/docs/Web/API/Pointer_events)

@@ -509,7 +509,7 @@ tbody tr :nth-child(3) {
 
 {{EmbedLiveSample("Mettre en forme une colonne de tableau", 100, 200)}}
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

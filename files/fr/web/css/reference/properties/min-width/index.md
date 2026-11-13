@@ -78,7 +78,7 @@ min-width: unset;
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Définit la largeur minimale (`min-width`) comme un pourcentage de la largeur du bloc englobant.
 - `auto`
-  - : La valeur par défaut. La source de la valeur automatique pour l'élément défini dépend de sa valeur d'affichage. Pour les boîtes de type bloc, les boîtes en ligne, les blocs en ligne et toutes les boîtes de mise en page de tableau, `auto` se résout à `0`.
+  - : La valeur par défaut. La source de la valeur automatique pour l'élément défini dépend de sa valeur d'affichage. Pour les boîtes de type bloc, les boîtes en incise, les blocs en incise (<i lang="en">inline</i> en anglais) et toutes les boîtes de mise en page de tableau, `auto` se résout à `0`.
 
     Pour les {{Glossary("Flex_Item", "éléments flexibles")}} et les éléments de grille, la valeur minimale de largeur est soit la taille suggérée définie, comme la valeur de la propriété `width`, la taille transférée, calculée si l'élément a un `aspect-ratio` défini et que la hauteur est une taille définie, sinon, la taille `min-content` est utilisée. Si l'élément flexible ou de grille est un {{Glossary("scroll container", "conteneur défilant")}}, ou si un élément de grille s'étend sur plus d'une piste de colonne flexible, la taille minimale automatique est `0`.
 

@@ -35,7 +35,7 @@ Hérite de: [EventTarget](/fr/docs/Web/API/EventTarget)
 ## Propriétés
 
 - {{domxref("IDBIndex.isAutoLocale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
-  - : Renvoie un {{domxref("Boolean","booléen")}} indiquant si la valeur de `locale` à été paramétré sur `auto` lors de la mise en place de l'index (voir les paramètres `{{domxref("IDBObjectStore.createIndex")}}`).
+  - : Renvoie un {{jsxref("Boolean", "booléen")}} indiquant si la valeur de `locale` à été paramétré sur `auto` lors de la mise en place de l'index (voir les paramètres `{{domxref("IDBObjectStore.createIndex")}}`).
 - {{domxref("IDBIndex.locale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
   - : Renvoie la localisation de l'index (par exemple fr, ou `en-US`) `si la localisation à été spécifie lors de la mise en place de l'index` (voir les paramètres {{domxref("IDBObjectStore.createIndex")}}).
 - {{domxref("IDBIndex.name")}} {{readonlyInline}}
@@ -45,9 +45,9 @@ Hérite de: [EventTarget](/fr/docs/Web/API/EventTarget)
 - {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
   - : Renvoie le chemin de clé de l'index. Si l'index n'est pas [automatiquement mise à jour](/fr/IndexedDB/Index#gloss_auto-populated) la propriété vaux `null`.
 - {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
-  - : Renvoie un {{domxref("Boolean","booléen")}} qui indique comment l'index gère le chemin de clé si c'est un tableau.
+  - : Renvoie un {{jsxref("Boolean", "booléen")}} qui indique comment l'index gère le chemin de clé si c'est un tableau.
 - {{domxref("IDBIndex.unique")}} {{readonlyInline}}
-  - : Renvoie un {{domxref("Boolean","booléen")}} qui indique l'index interdit la duplication d'enregistrement sur sa clé.
+  - : Renvoie un {{jsxref("Boolean", "booléen")}} qui indique l'index interdit la duplication d'enregistrement sur sa clé.
 
 ## Exemple
 

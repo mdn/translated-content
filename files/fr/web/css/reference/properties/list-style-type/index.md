@@ -3,7 +3,7 @@ title: Propriété CSS `list-style-type`
 short-title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: c2375c58cf5a6f0fd7053f3cee7cba8bd88a2bbe
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-type`** permet de définir l'apparence de la puce d'un élément de liste (un cercle, un caractère, un compteur spécifique, etc.).
@@ -87,10 +87,6 @@ hr {
 }
 ```
 
-Le marqueur utilisera [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), c'est-à-dire la même [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) calculée que l'élément auquel il s'applique.
-
-Seuls quelques éléments HTML ({{HTMLElement("li")}} et {{HTMLElement("summary")}}) ont une valeur par défaut de `display: list-item`. Cependant, la propriété `list-style-type` peut être appliquée à tout élément dont la valeur de {{CSSxRef("display")}} est définie à `list-item`. De plus, comme cette propriété est héritée, elle peut être définie sur un élément parent (généralement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour l'appliquer à tous les éléments de liste.
-
 ## Syntaxe
 
 ```css
@@ -139,7 +135,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - {{CSSxRef("symbols()")}}
   - : Définit un style de puce utilisé.
 - {{CSSxRef("&lt;string&gt;")}}
-  - : La chaîne de caractères indiquée sera utilisée comme puce.
+  - : La chaîne de caractères indiquée est utilisée comme puce.
 - `none`
   - : Aucun marqueur n'est affiché.
 - `disc`
@@ -251,7 +247,7 @@ Reportez-vous à l'exemple [Tous les styles de liste](#tous_les_styles_de_liste)
 
 ### Extensions non-standards
 
-Quelques types prédéfinis sont pris en charge par Mozilla (Firefox) avec le préfixe `-moz-`.
+Mozilla (Firefox) prend en charge quelques types prédéfinis précédés du préfixe `-moz-`.
 
 - `ethiopic-halehame`&nbsp;: `-moz-ethiopic-halehame`
 - `ethiopic-halehame-am`&nbsp;: `-moz-ethiopic-halehame-am`
@@ -264,9 +260,54 @@ Quelques types prédéfinis sont pris en charge par Mozilla (Firefox) avec le pr
 
 Voir le [tableau de compatibilité](#compatibilité_des_navigateurs) pour savoir quels navigateurs prennent en charge quelle extension.
 
+## Description
+
+La propriété `list-style-type` définit le marqueur (tel qu'un disque, un caractère ou un style de compteur personnalisé) d'un élément de liste. Le marqueur est [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), identique à la [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) calculée de l'élément auquel il s'applique.
+
+Seuls quelques éléments HTML ({{HTMLElement("li")}} et {{HTMLElement("summary")}}) ont une valeur par défaut de `display: list-item`. Cependant, la propriété `list-style-type` peut être appliquée à tout élément dont la valeur de {{CSSxRef("display")}} est définie sur `list-item`.
+
+### Héritage du style de liste
+
+Parce que `list-style-type` est hérité, il peut être défini sur un élément parent (généralement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour qu'il s'applique à ses éléments de liste. Cependant, les feuilles de style des agents utilisateurs définissent `list-style-type` sur les éléments `<ul>`, `<ol>` et {{HTMLElement("menu")}}, de sorte que les listes imbriquées utilisent ces valeurs par défaut au lieu d'hériter de la valeur de la liste parente. Pour que les listes imbriquées héritent de cette valeur, définissez `list-style-type: inherit` sur les éléments de liste imbriqués.
+
+Par exemple, dans des cas comme celui-ci&nbsp;:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>
+    Trois
+    <ul>
+      <li>Quatre</li>
+      <li>Cinq</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Lorsque qu'un style personnalisé est défini sur la liste externe&nbsp;:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style-type: square;
+}
+```
+
+La liste interne n'hérite pas du style personnalisé à moins que vous ne la définissiez sur `inherit`&nbsp;:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style-type: inherit;
+}
+```
+
+{{EmbedLiveSample("list-style-inherit", "100%", 200)}}
+
 ## Accessibilité
 
-Safari ne reconnaitra pas une liste ordonnée ou non ordonnée comme une liste dans l'arbre d'accessibilité si elle a une valeur `list-style-type` de `none`. Cela peut être résolu en ajoutant `role="list"` à la balise d'ouverture de la liste. Pour en savoir plus sur ce point et sur les solutions possibles, voir [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style#accessibilité).
+Safari ne reconnait pas une liste ordonnée ou non ordonnée comme une liste dans l'arbre d'accessibilité si elle a une valeur `list-style-type` de `none`. Cela peut être résolu en ajoutant `role="list"` à la balise d'ouverture de la liste. Pour en savoir plus sur ce point et sur les solutions possibles, voir [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style#accessibilité).
 
 ## Définition formelle
 

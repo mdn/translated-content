@@ -3,16 +3,14 @@ title: "Élément HTML `<noframes>` : l'élément de repli des cadres"
 short-title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<noframes>`** fournit un contenu à présenter dans les navigateurs qui ne supportent pas (ou ont désactivé le support de) l'élément {{HTMLElement("frame")}}. Bien que la plupart des navigateurs courants prennent en charge les cadres, il existe des exceptions, notamment certains navigateurs spécialisés comme certains navigateurs mobiles, ainsi que des navigateurs en mode texte.
 
 Un élément `<noframes>` peut contenir n'importe quel élément HTML autorisé dans le corps d'un document HTML, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}, car utiliser des cadres quand ils ne sont pas supportés n'a pas de sens.
 
-`<noframes>` peut être utilisé pour présenter un message expliquant que le navigateur de l'utilisateur·ice ne supporte pas les cadres, mais il devrait idéalement être utilisé pour présenter une version alternative du site qui n'utilise pas de cadres tout en offrant les mêmes fonctionnalités ou des fonctionnalités similaires.
+`<noframes>` peut être utilisé pour présenter un message expliquant que le navigateur de l'utilisateur·ice ne supporte pas les cadres, mais il doit idéalement être utilisé pour présenter une version alternative du site qui n'utilise pas de cadres tout en offrant les mêmes fonctionnalités ou des fonctionnalités similaires.
 
 > [!NOTE]
 > Cet élément est obsolète et ne doit pas être utilisé, puisque les éléments {{HTMLElement("frame")}} et {{HTMLElement("frameset")}} sont également obsolètes. Lorsque des cadres sont nécessaires, elles doivent être présentées à l'aide de l'élément {{HTMLElement("iframe")}}.
@@ -38,8 +36,8 @@ Dans cet exemple, on voit un ensemble de cadre avec deux cadres. De plus, `<nofr
       src="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/frame" />
     <noframes>
       <p>
-        Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
-        est configuré pour ne pas les autoriser.
+        Il semble que votre navigateur ne supporte pas les cadres, ou qu'il est
+        configuré pour ne pas les autoriser.
       </p>
     </noframes>
   </frameset>

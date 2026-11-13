@@ -3,7 +3,7 @@ title: Fonction CSS `exp()`
 short-title: exp()
 slug: Web/CSS/Reference/Values/exp
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: daa035392f8466e6d75f290d9ffa4317adca4070
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`exp()`** est une fonction exponentielle qui prend un nombre en argument et retourne la constante mathématique `e` élevée à la puissance du nombre donné.
@@ -50,11 +50,11 @@ La fonction `exp()` peut être utilisée pour faire pivoter ({{CSSxRef("transfor
 #### HTML
 
 ```html
-<div class="box box-1"></div>
-<div class="box box-2"></div>
-<div class="box box-3"></div>
-<div class="box box-4"></div>
-<div class="box box-5"></div>
+<div class="boite boite-1"></div>
+<div class="boite boite-2"></div>
+<div class="boite boite-3"></div>
+<div class="boite boite-4"></div>
+<div class="boite boite-5"></div>
 ```
 
 #### CSS
@@ -70,24 +70,24 @@ body {
 ```
 
 ```css
-div.box {
+div.boite {
   width: 100px;
   height: 100px;
   background: linear-gradient(orange, red);
 }
-div.box-1 {
+div.boite-1 {
   transform: rotate(calc(1turn * exp(-1))); /* 0.3678794411714423turn */
 }
-div.box-2 {
+div.boite-2 {
   transform: rotate(calc(1turn * exp(-0.75))); /* 0.4723665527410147turn */
 }
-div.box-3 {
+div.boite-3 {
   transform: rotate(calc(1turn * exp(-0.5))); /* 0.6065306597126334turn */
 }
-div.box-4 {
+div.boite-4 {
   transform: rotate(calc(1turn * exp(-0.25))); /* 0.7788007830714049turn */
 }
-div.box-5 {
+div.boite-5 {
   transform: rotate(calc(1turn * exp(0))); /* 1turn */
 }
 ```

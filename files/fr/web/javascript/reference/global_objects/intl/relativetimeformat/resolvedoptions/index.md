@@ -71,4 +71,4 @@ usedOptions.numberingSystem; // "latn"
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.RelativeTimeFormat")}}

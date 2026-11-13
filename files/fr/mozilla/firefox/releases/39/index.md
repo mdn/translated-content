@@ -3,7 +3,7 @@ title: Firefox 39 note de version pour les développeurs
 short-title: Firefox 39
 slug: Mozilla/Firefox/Releases/39
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeur·euse·s Web, mais également pour les développeur·euse·s Firefox et Gecko ainsi que pour les développeur·euse·s d'add-on.
@@ -21,7 +21,7 @@ Points forts&nbsp;:
 - [Glissez et déposez des éléments dans l'inspecteur de page <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#drag-and-drop)
 - [L'historique des commandes de la console Web est désormais conservé entre les sessions <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#command-history)
 - [Commande $\_ console pour imprimer le dernier résultat évalué <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper-commands)
-- [Meilleur mise en évidence du modèle de boîte pour les éléments en ligne <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox-39)
+- [Meilleur mise en évidence du modèle de boîte pour les éléments en incise <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox-39)
 
 [Tous les bogues de devtools corrigés entre Firefox 38 et Firefox 39 <sup>(angl.)</sup>](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&query_based_on=devtools_resolved_week&chfieldto=2015-03-31&chfield=resolution&query_format=advanced&chfieldfrom=2015-02-22&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&known_name=devtools_resolved_week&list_id=12157026)
 
@@ -30,20 +30,20 @@ Points forts&nbsp;:
 - Prise en charge du type {{CSSxRef("&lt;string&gt;")}} sur {{CSSxRef("list-style-type")}}, ainsi que sa propriété abrégée {{CSSxRef("list-style")}} a été implémenté ([bogue Firefox 1144607 <sup>(angl.)</sup>](https://bugzil.la/1144607)).
 - CSS Scroll Snapping a été implémenté ([bogue Firefox 945584 <sup>(angl.)</sup>](https://bugzil.la/945584) et [bogue Firefox 1138658 <sup>(angl.)</sup>](https://bugzil.la/1138658)).
 - La cascade des animations CSS et des transitions CSS a été réécrite pour correspondre à la dernière spécification ([bogue Firefox 1125455 <sup>(angl.)</sup>](https://bugzil.la/1125455)).
-- La prise en charge des scripts verticaux, avec le {{CSSxRef("writing-mode")}} est maintenant activée par défaut sur Nightly et Developer Edition, mais pas sur Firefox Beta et Firefox Release ([bogue Firefox 1099032 <sup>(angl.)</sup>](https://bugzil.la/1099032)). Notez que l'implémentation n'est pas encore terminée et que certains widgets, comme les tables, n'obéissent pas à toutes les valeurs.
+- La prise en charge des scripts verticaux, avec le {{CSSxRef("writing-mode")}} est maintenant activée par défaut sur Nightly et Developer Edition, mais pas sur Firefox Beta et Firefox Release ([bogue Firefox 1099032 <sup>(angl.)</sup>](https://bugzil.la/1099032)). Notez que l'implémentation n'est pas encore terminée et que certains composants, comme les tables, n'obéissent pas à toutes les valeurs.
 - La propriété CSS {{cssxref("filter")}} agit comme `position: relative` + `overflow: hidden` ([bogue Firefox 1125767 <sup>(angl.)</sup>](https://bugzil.la/1125767)).
 
 ### HTML
 
 - Un nouveau rôle {{Glossary("ARIA")}}, `switch`, est maintenant supporté ([bogue Firefox 1136563 <sup>(angl.)</sup>](https://bugzil.la/1136563)).
-- Le support de `<link rel="preconnect">` permettant d'anticiper une future connexion sans révéler aucune information a été implémenté ([bogue Firefox 1135160 <sup>(angl.)</sup>](https://bugzil.la/1135160)).
+- Le support de `<link rel="preconnect">` vous permettant d'anticiper une future connexion sans révéler aucune information a été implémenté ([bogue Firefox 1135160 <sup>(angl.)</sup>](https://bugzil.la/1135160)).
 
 ### JavaScript
 
 - Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ([bogue Firefox 1108949 <sup>(angl.)</sup>](https://bugzil.la/1108949)).
 - La propriété `Object.prototype.__noSuchMethod__` est désormais obsolète et émet un avertissement de console (voir [bogue Firefox 1140428 <sup>(angl.)</sup>](https://bugzil.la/1140428) et cette [annonce de plate-forme <sup>(angl.)</sup>](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - L'implémentation de l'objet {{JSxRef("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES2015&nbsp;:
-  - Les gestionnaires {{JSxRef("Proxy/Proxy/defineProperty", "defineProperty")}} et {{JSxRef("Proxy/Proxy/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{JSxRef("TypeError")}} est lancée en mode strict ([bogue Firefox 1132522 <sup>(angl.)</sup>](https://bugzil.la/1132522)).
+  - Les gestionnaires {{JSxRef("Proxy/Proxy/defineProperty", "defineProperty")}} et {{JSxRef("Proxy/Proxy/set", "set")}} doivent maintenant retourner explicitement `true` pour réussir, sinon une exception {{JSxRef("TypeError")}} est lancée en mode strict ([bogue Firefox 1132522 <sup>(angl.)</sup>](https://bugzil.la/1132522)).
   - Si l'objet {{DOMxRef("window")}} est défini comme cible, ces gestionnaires lancent désormais une `TypeError` ([bogue Firefox 828137 <sup>(angl.)</sup>](https://bugzil.la/828137)).
 
 - Lors de l'utilisation des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), un terminateur de ligne (`\n`) n'est plus autorisé après les arguments de fonction fléchée (`() \n => {}`) ([bogue Firefox 1141392 <sup>(angl.)</sup>](https://bugzil.la/1141392)).
@@ -60,7 +60,7 @@ Points forts&nbsp;:
 - Progression de notre implémentation expérimentale de [Service Workers](/fr/docs/Web/API/Service_Worker_API): les interfaces {{DOMxRef("Cache")}} et {{DOMxRef("CacheStorage")}} sont désormais implémentées ([bogue Firefox 940273 <sup>(angl.)</sup>](https://bugzil.la/940273)).
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API) expérimentale a été activée par défaut ([bogue Firefox 1133861 <sup>(angl.)</sup>](https://bugzil.la/1133861)).
 - Progression de notre implémentation expérimentale de WebGL2: {{DOMxRef("WebGLSync")}} est maintenant implémenté ([bogue Firefox 1048721 <sup>(angl.)</sup>](https://bugzil.la/1048721)).
-- La prise en charge de {{DOMxRef("MouseEvent.offsetX")}} et {{DOMxRef("MouseEvent.offsetY")}} a été ajoutée sur le desktop ([bogue Firefox 69787 <sup>(angl.)</sup>](https://bugzil.la/69787)), mais pas sur Firefox pour Android ou Firefox OS (ils seront ajoutés dans [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43)).
+- La prise en charge de {{DOMxRef("MouseEvent.offsetX")}} et {{DOMxRef("MouseEvent.offsetY")}} a été ajoutée sur le desktop ([bogue Firefox 69787 <sup>(angl.)</sup>](https://bugzil.la/69787)), mais pas sur Firefox pour Android ou Firefox OS (ils sont ajoutés dans [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43)).
 
 ### MathML
 

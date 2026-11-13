@@ -7,7 +7,7 @@ await 運算子可被用來等待 {{jsxref("Promise")}}，只能在 {{jsxref("St
 
 ## 語法
 
-```plain
+```js-nolint
 [rv] = await expression;
 ```
 

@@ -10,7 +10,7 @@ La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un
 
 La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](/es/docs/Web/CSS/Reference/Properties/text-shadow) (la primera sombra definida se ubica hasta arriba).
 
-[Generador de Box-shadow](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
+[Generador de Box-shadow](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
 
 ## Sintaxis
 

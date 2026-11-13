@@ -43,10 +43,10 @@ label {
 L'exemple ci-dessus met en avant plusieurs fonctionnalités de `<textarea>`&nbsp;:
 
 - Un attribut `id` pour permettre d'associer l'élément `<textarea>` à un élément {{HTMLElement("label")}} à des fins d'accessibilité
-- Un attribut `name` pour définir le nom de la donnée associée envoyée au serveur lors de la soumission du formulaire
+- Un attribut `name` pour définir le nom de la donnée associée envoyée au serveur lors de l'envoi du formulaire
 - Les attributs `rows` et `cols` pour définir une taille exacte à occuper par l'élément `<textarea>`. Il est conseillé de les utiliser pour garantir une certaine homogénéité, car les valeurs par défaut des navigateurs peuvent différer
 - L'élément `<textarea>` définit son contenu différemment selon le contexte HTML ou JavaScript&nbsp;:
-  - En HTML, le contenu initial d'un `<textarea>` est défini entre ses balises ouvrante et fermante, et non via un attribut `value`
+  - En HTML, le contenu initial d'un `<textarea>` est défini entre ses balises ouvrante et fermante, et non avec un attribut `value`
   - En JavaScript, les éléments `<textarea>` possèdent une propriété [`value`](/fr/docs/Web/API/HTMLTextAreaElement/value) qui permet d'obtenir ou de définir le contenu courant, et [`defaultValue`](/fr/docs/Web/API/HTMLTextAreaElement/defaultValue) pour obtenir ou définir la valeur initiale (équivalent à l'accès au contenu textuel de l'élément HTML)
 
 L'élément `<textarea>` accepte également plusieurs attributs communs aux éléments de formulaire `<input>`, tels que `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly` et `required`.
@@ -59,12 +59,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Contrôle si le texte saisi est automatiquement mis en majuscules et, le cas échéant, de quelle manière.
 
 - [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete)
-  - : Cet attribut indique si la valeur saisie doit automatiquement être complétée par le navigateur. Cet attribut à valeur contrainte peut prendre l'une de ces deux valeurs :
-    - `off` : l'utilisateur·ice doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
-    - `on` : le navigateur peut compléter la saisie de l'utilisateur·ice en fonction de ce que l'utilisateur·ice a déjà saisi précédemment sur ce champ.
+  - : Cet attribut indique si la valeur saisie doit automatiquement être complétée par le navigateur. Cet attribut à valeur contrainte peut prendre l'une de ces deux valeurs&nbsp;:
+    - `off`&nbsp;: l'utilisateur·ice doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
+    - `on`&nbsp;: le navigateur peut compléter la saisie de l'utilisateur·ice en fonction de ce que l'utilisateur·ice a déjà saisi précédemment sur ce champ.
     - [`<token-list>`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete#jetons_de_la_liste_de_jetons)&nbsp;: Un ensemble ordonné de jetons de détails de remplissage automatique séparés par des espaces, précédé éventuellement d'un jeton de section, d'un jeton de groupe de facturation ou d'expédition, et/ou d'un jeton identifiant le type de destinataire.
 
-    Les éléments `<textarea>` qui ne définissent pas l'attribut `autocomplete` héritent du statut `on` ou `off` défini sur le propriétaire du formulaire du `<textarea>`. Le propriétaire du formulaire est soit l'élément {{HTMLElement("form")}} dont cet élément `<textarea>` est un descendant, soit l'élément de formulaire dont l'`id` est défini par l'attribut `form` de l'élément de saisie. Pour plus d'informations, consultez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/form#autocomplete) dans {{HTMLElement("form")}}.
+    Les éléments `<textarea>` qui ne définissent pas l'attribut `autocomplete` héritent du statut `on` ou `off` défini sur le propriétaire du formulaire du `<textarea>`. Le propriétaire du formulaire est soit l'élément {{HTMLElement("form")}} dont cet élément `<textarea>` est un descendant, soit l'élément de formulaire dont un `id` est défini par l'attribut `form` de l'élément de saisie. Pour plus d'informations, consultez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/form#autocomplete) dans {{HTMLElement("form")}}.
 
 - [`autocorrect`](/fr/docs/Web/HTML/Reference/Global_attributes/autocorrect)
   - : Contrôle si la correction orthographique automatique et le traitement du texte sont activés pendant que l'utilisateur·ice édite ce `textarea`.
@@ -82,7 +82,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Cet attribut est utilisé pour indiquer la direction du texte du contenu de l'élément.
     Pour plus d'informations, consultez l'attribut [`dirname`](/fr/docs/Web/HTML/Reference/Attributes/dirname).
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Cet attribut booléen indique que le contrôle est désactivé et que l'utilisateur·ice ne peut pas interagir avec ce contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état de son élément parent (par exemple de son éventuel élément parent {{HTMLElement("fieldset")}}). S'il n'existe pas d'élément englobant pour lequel l'attribut `disabled` est utilisé, le contrôle est alors actif.
+  - : Cet attribut booléen indique que le contrôle est désactivé et que l'utilisateur·ice ne peut pas interagir avec ce contrôle. Si cet attribut n'est pas utilisé, le contrôle hérite de l'état de son élément parent (par exemple de son éventuel élément parent {{HTMLElement("fieldset")}}). S'il n'existe pas d'élément englobant pour lequel l'attribut `disabled` est utilisé, le contrôle est alors actif.
 - [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
   - : L'élément de formulaire auquel l'élément `<textarea>` est rattaché. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut `id`) d'un élément {{HTMLElement("form")}} du même document. Si cet attribut n'est pas défini, l'élément `<textarea>` doit être un descendant d'un élément `<form>`. Cet attribut permet notamment de placer des éléments `<textarea>` où qu'on le veuille dans le document et pas uniquement comme des descendants des éléments de formulaire.
 - [`maxlength`](/fr/docs/Web/HTML/Reference/Attributes/maxlength)
@@ -104,10 +104,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `rows`
   - : Le nombre de lignes de texte visibles pour le contrôle.
 - [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-  - : Définit si le `<textarea>` est soumis à la vérification orthographique par le navigateur ou le système d'exploitation sous-jacent. La valeur peut être&nbsp;:
+  - : Définit si le `<textarea>` est envoyé à la vérification orthographique par le navigateur ou le système d'exploitation sous-jacent. La valeur peut être&nbsp;:
     - `true`&nbsp;: Indique que l'élément doit avoir son orthographe et sa grammaire vérifiées.
     - `default`&nbsp;: Indique que l'élément doit agir selon un comportement par défaut, éventuellement basé sur la propre valeur `spellcheck` de l'élément parent.
-    - `false`&nbsp;: Indique que l'élément ne doit pas être soumis à la vérification orthographique.
+    - `false`&nbsp;: Indique que l'élément ne doit pas être envoyé à la vérification orthographique.
 
 - `wrap`
   - : Cet attribut à valeur contrainte indique la façon dont les retours à la ligne automatiques sont utilisés. Les valeurs possibles pour cet attribut sont&nbsp;:
@@ -125,11 +125,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Incohérences quant à la ligne de base
 
-La spécification HTML ne définit pas l'emplacement de la ligne de base pour un élément `<textarea>`. Aussi, les différents navigateurs utilisent différentes positions. Pour Gecko, la ligne de base d'un élément `<textarea>` est définie sur la ligne de base de la première ligne du texte de `<textarea>`. Pour un autre navigateur, elle pourrait être définie par rapport au bas de la boîte de l'élément `<textarea>`. Pour ces raisons, on évitera d'utiliser {{CSSxRef("vertical-align", "vertical-align: baseline")}} sur cet élément car le comportement serait imprévisible.
+La spécification HTML ne définit pas l'emplacement de la ligne de base pour un élément `<textarea>`. Aussi, les différents navigateurs utilisent différentes positions. Pour Gecko, la ligne de base d'un élément `<textarea>` est définie sur la ligne de base de la première ligne du texte de `<textarea>`. Pour un autre navigateur, elle peut être définie par rapport au bas de la boîte de l'élément `<textarea>`. Pour ces raisons, on évite d'utiliser {{CSSxRef("vertical-align", "vertical-align: baseline")}} sur cet élément, car le comportement est imprévisible.
 
 ### Contrôler le caractère redimensionnable
 
-Dans la plupart des navigateurs, les `<textarea>` sont redimensionnables — vous remarquerez la poignée de redimensionnement dans le coin droit, qui peut être utilisée pour modifier la taille de l'élément sur la page. Ceci est contrôlé par la propriété CSS {{CSSxRef("resize")}} — le redimensionnement est activé par défaut, mais vous pouvez le désactiver explicitement en utilisant la valeur `none` pour `resize`&nbsp;:
+Dans la plupart des navigateurs, les `<textarea>` sont redimensionnables — vous remarquez la poignée de redimensionnement dans le coin droit, qui peut être utilisée pour modifier la taille de l'élément sur la page. Ceci est contrôlé par la propriété CSS {{CSSxRef("resize")}} — le redimensionnement est activé par défaut, mais vous pouvez le désactiver explicitement en utilisant la valeur `none` pour `resize`&nbsp;:
 
 ```css
 textarea {
@@ -327,16 +327,16 @@ Je suis désactivé.
 ## Voir aussi
 
 - Les autres éléments relatifs aux formulaires&nbsp;:
-  - {{ HTMLElement("form")}}
-  - {{ HTMLElement("button")}}
-  - {{ HTMLElement("datalist")}}
-  - {{ HTMLElement("legend")}}
-  - {{ HTMLElement("label")}}
-  - {{ HTMLElement("select")}}
-  - {{ HTMLElement("optgroup")}}
-  - {{ HTMLElement("option")}}
-  - {{ HTMLElement("input")}}
-  - {{ HTMLElement("fieldset")}}
-  - {{ HTMLElement("output")}}
-  - {{ HTMLElement("progress")}}
-  - {{ HTMLElement("meter")}}
+  - {{HTMLElement("form")}}
+  - {{HTMLElement("button")}}
+  - {{HTMLElement("datalist")}}
+  - {{HTMLElement("legend")}}
+  - {{HTMLElement("label")}}
+  - {{HTMLElement("select")}}
+  - {{HTMLElement("optgroup")}}
+  - {{HTMLElement("option")}}
+  - {{HTMLElement("input")}}
+  - {{HTMLElement("fieldset")}}
+  - {{HTMLElement("output")}}
+  - {{HTMLElement("progress")}}
+  - {{HTMLElement("meter")}}

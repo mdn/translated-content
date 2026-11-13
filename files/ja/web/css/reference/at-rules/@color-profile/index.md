@@ -1,8 +1,9 @@
 ---
-title: "@color-profile"
+title: CSS `@color-profile` アットルール
+short-title: "@color-profile"
 slug: Web/CSS/Reference/At-rules/@color-profile
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@color-profile`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、色を指定するために後で使用する {{cssxref("color_value/color", "color()")}} 関数で使用できるカラープロファイルを定義し名前を付けます。
