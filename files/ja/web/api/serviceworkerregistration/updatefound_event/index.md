@@ -3,20 +3,24 @@ title: "ServiceWorkerRegistration: updatefound イベント"
 short-title: updatefound
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: d4f95d5a32920324e2502a556d8bdd9d7f446718
 ---
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-**`updatefound`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration.installing")}} プロパティが新しいサービスワーカーが取得するたびに呼び出されます。
+**`updatefound`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのイベントで、{{domxref("ServiceWorkerRegistration.installing")}} プロパティが新しいサービスワーカーを取得するたびに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用したり、イベントハンドラープロパティに設定したりしてください。
+このイベント名を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で使用してください。
 
 ```js-nolint
 addEventListener("updatefound", (event) => { })
+```
 
+または、インターフェイスの[イベントハンドラープロパティ](/ja/docs/Web/API/Document_Object_Model/Events#using_onevent_properties)に代入してください。
+
+```js-nolint
 onupdatefound = (event) => { }
 ```
 
