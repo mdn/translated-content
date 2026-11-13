@@ -1,20 +1,19 @@
 ---
 title: zoom
 slug: Web/CSS/Reference/Properties/zoom
-original_slug: Web/CSS/zoom
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 **`zoom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の拡大レベルを制御するために使用できます。
 このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
 
 `zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。
-拡大縮小の際、既定の {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は `top` と `center` から拡大縮小されます。
+拡大縮小の際、デフォルトの {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は `top` と `center` から拡大縮小されます。
 
 一方、 {{cssxref("transform-function/scale", "scale()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。
 `scale()` を使用して、内容が含む要素よりも大きくなった場合は、 {{CSSXRef("overflow")}} が有効になります。
-さらに、 `scale()` を使用して調整された要素は、既定では中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
+さらに、 `scale()` を使用して調整された要素は、デフォルトでは中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
 
 ## 構文
 

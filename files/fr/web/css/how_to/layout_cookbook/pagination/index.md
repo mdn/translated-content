@@ -2,7 +2,7 @@
 title: Pagination
 slug: Web/CSS/How_to/Layout_cookbook/Pagination
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Ce motif de recette présente le modèle de navigation utilisé pour afficher une pagination, permettant à l'utilisateur·ice de naviguer entre différentes pages de contenu, comme des résultats de recherche.
@@ -120,16 +120,16 @@ La liste elle-même devient aussi un conteneur flexible pour disposer les élém
 
 ## Problèmes d'accessibilité
 
-Nous voulons nous assurer qu'une personne utilisant un lecteur d'écran comprenne le rôle de cette navigation et où elle mènera en cliquant sur un lien. Pour cela, nous avons ajouté [`aria-label="pagination"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) sur l'élément `<nav>`.
+Nous voulons nous assurer qu'une personne utilisant un lecteur d'écran comprenne le rôle de cette navigation et où elle mène en cliquant sur un lien. Pour cela, nous avons ajouté [`aria-label="pagination"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) sur l'élément `<nav>`.
 
-Nous avons également ajouté du contenu supplémentaire qui sera lu par un lecteur d'écran mais caché visuellement, et appliqué l'attribut [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) sur les flèches de pagination.
+Nous avons également ajouté du contenu supplémentaire qui est lu par un lecteur d'écran mais caché visuellement, et appliqué l'attribut [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) sur les flèches de pagination.
 
 La section «&nbsp;Voir aussi&nbsp;» à la fin de ce document propose des liens vers des sujets d'accessibilité connexes.
 
 ## Voir aussi
 
-- {{CSSxRef("justify-content")}}, {{CSSxRef("gap")}}
+- Les propriétés {{CSSxRef("justify-content")}}, {{CSSxRef("gap")}}
 - [Bien comprendre ARIA&nbsp;: «&nbsp;hidden&nbsp;» contre «&nbsp;none&nbsp;» <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) (2018)
-- [Contenu invisible uniquement pour les utilisateur·ice·s de lecteurs d'écran <sup>(angl.)</sup>](https://webaim.org/techniques/css/invisiblecontent/#techniques) via WebAIM.org (2020)
+- [Contenu invisible uniquement pour les utilisateur·ice·s de lecteurs d'écran <sup>(angl.)</sup>](https://webaim.org/techniques/css/invisiblecontent/#techniques) sur WebAIM.org (2020)
 - [Écrire du CSS en pensant à l'accessibilité <sup>(angl.)</sup>](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) (2017)
 - [Guide a11y&nbsp;: pagination <sup>(angl.)</sup>](https://a11y-style-guide.com/style-guide/section-navigation.html#kssref-navigation-pagination)

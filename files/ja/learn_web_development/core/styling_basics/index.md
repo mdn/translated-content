@@ -11,7 +11,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 
 ## 前提知識
 
-このモジュールを始める前に、[基本的なソフトウェアのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)で説明されている基本的な作業環境と、[ファイルの扱い](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解しておいてください。また、 HTML に親しんでおいてください（まだの場合は [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)を一通りやっておいてください。
+このモジュールを始める前に、[基本的なソフトウェアのインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)で説明されている基本的な作業環境と、[ファイルの扱い](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)で説明されているファイルの作り方や管理の仕方について理解しておいてください。また、 HTML に親しんでおいてください（まだの場合は [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)を一通りやっておいてください）。
 
 > [!NOTE]
 > ファイルが作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみてください。
@@ -20,7 +20,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 
 - [CSS とは何か](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
   - : CSS を使用すると、見栄えの良いウェブページを作成することができますが、その裏側ではどのように動作しているのでしょうか？この記事では、 CSS とは何か、基本的な構文はどのようなものか、そして、ブラウザーが CSS を HTML に適用してスタイル設定を行う方法について説明します。
-- [CSS 入門](/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started)
+- [CSS を始める](/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started)
   - : この記事では、シンプルな HTML 文書に CSS を適用し、その過程で CSS 言語の実践的な詳細を学んでいきます。また、まだ見ていないの CSS 構文機能についても確認します。
 - [経歴ページのスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) <sup>課題</sup>
   - : この課題では、単純な経歴ページのスタイル設定を行います。ここ数回のレッスンで学んだスキル、具体的にはセレクターの作成、背景色の設定、テキストのスタイル設定などを試す内容です。また、まだ扱っていない基本的な CSS 機能について調べるようにし、調査スキルも試します。
@@ -55,9 +55,9 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 - [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに、すべてのモダンブラウザーに入っている開発者ツールがどう役立つかを示します。
 
-## スキルテスト
+## 確認テスト
 
-チュートリアル記事の間に「スキルテスト」記事が配置されています。これらは、次に進む前に最も重要な情報を理解できているかを確認するためのものです。これらをすべて確認したい場合は、[スキルテスト: CSS スタイル設定の基礎](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills)に一覧が掲載されています。
+チュートリアル記事の間に「確認テスト」記事が配置されています。これらは、次に進む前に最も重要な情報を理解できているかを確認するためのものです。これらをすべて確認したい場合は、[確認テスト: CSS スタイル設定の基礎](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills)に一覧が掲載されています。
 
 ## 追加のチュートリアル
 
@@ -74,9 +74,9 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 
 ## 関連情報
 
-- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com/?via=mdn) の _Learn HTML and CSS_ コースでは、知識豊富な講師陣による楽しい対話形式のレッスンと課題を通じて、 5 つの素晴らしいプロジェクトを構築し展開しながら、HTML と CSS を学んでいきます。
-- [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : この対話型のレッスンでは、 CSS 構文の有益な入門編を提供して指定されています。
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core")}}

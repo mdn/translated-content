@@ -1,17 +1,12 @@
 ---
-title: :placeholder-shown
+title: CSS `:placeholder-shown` 擬似クラス
+short-title: :placeholder-shown
 slug: Web/CSS/Reference/Selectors/:placeholder-shown
-original_slug: Web/CSS/:placeholder-shown
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Reference/Elements/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
-
-```css
-/* プレイスホルダーが有効な要素を選択 */
-:placeholder-shown {
-  border: 2px solid silver;
-}
-```
+**`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素のうち、現在[プレイスホルダー文字列](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)が表示されているものを表します。
 
 {{InteractiveExample("CSS デモ: :placeholder-shown", "tabbed-shorter")}}
 
@@ -28,28 +23,30 @@ input:placeholder-shown {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
-  <label for="name">Full Name:</label>
+  <label for="name">名前:</label>
   <input id="name" name="name" type="text" />
 
-  <label for="email">Email Address:</label>
+  <label for="email">メールアドレス:</label>
   <input id="email" name="email" type="email" placeholder="name@example.com" />
 
-  <label for="age">Your age:</label>
+  <label for="age">年齢:</label>
   <input
     id="age"
     name="age"
     type="number"
     value="18"
-    placeholder="You must be 18+" />
+    placeholder="18 歳以上" />
 </form>
 ```
 
 ## 構文
 
-```
-:placeholder-shown
+```css
+:placeholder-shown {
+  /* ... */
+}
 ```
 
 ## 例
@@ -90,8 +87,8 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input id="input1" placeholder="Name, Rank, and Serial Number" /> <br /><br />
-<input id="input2" placeholder="Name, Rank, and Serial Number" />
+<input id="input1" placeholder="氏名、ランク、シリアル番号" /> <br /><br />
+<input id="input2" placeholder="氏名、ランク、シリアル番号" />
 ```
 
 #### CSS
@@ -115,22 +112,21 @@ input:placeholder-shown {
 ```html
 <form id="test">
   <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name" />
+    <label for="name">生徒名を入力:</label>
+    <input id="name" placeholder="生徒名" />
   </p>
   <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch" />
+    <label for="branch">生徒の所属を入力:</label>
+    <input id="branch" placeholder="所属名" />
   </p>
   <p>
-    <label for="sid">Enter Student ID:</label>
+    <label for="sid">生徒 ID を入力:</label>
     <input
-      type="number"
       pattern="[0-9]{8}"
-      title="8 digit ID"
+      title="数字 8 桁の ID"
       id="sid"
-      class="studentid"
-      placeholder="8 digit id" />
+      class="student-id"
+      placeholder="数字 8 桁の id" />
   </p>
   <input type="submit" />
 </form>
@@ -144,7 +140,7 @@ input {
   color: black;
 }
 
-input.studentid:placeholder-shown {
+input.student-id:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;

@@ -3,7 +3,7 @@ title: "HTMLObjectElement : propriété validity"
 short-title: validity
 slug: Web/API/HTMLObjectElement/validity
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b2c48c8b7c097aeab4bc15a388c913f466f40e25
 ---
 
 {{APIRef("HTML DOM")}}

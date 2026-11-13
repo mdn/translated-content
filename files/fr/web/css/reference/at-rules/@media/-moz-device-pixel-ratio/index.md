@@ -1,11 +1,12 @@
 ---
-title: -moz-device-pixel-ratio
+title: Caractéristique média CSS `-moz-device-pixel-ratio`
+short-title: -moz-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`-moz-device-pixel-ratio`** (spécifique à Gecko) permet d'appliquer des styles en fonction du nombre de pixels physiques par pixel CSS.
 

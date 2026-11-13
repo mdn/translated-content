@@ -1,26 +1,20 @@
 ---
-title: "評価: アクセシビリティのトラブルシューティング"
-short-title: "評価: アクセシビリティのデバッグ"
+title: "課題: アクセシビリティのトラブルシューティング"
+short-title: "課題: アクセシビリティのデバッグ"
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 1b7c3c1e03f14c3878e4d8518b0f1a89bedfdc9c
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
-このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
+このモジュールの課題では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
 
 ## 出発点
 
 評価を始めるために、[例を含むファイルの ZIP](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip) を取得してください。コンピューターのいずれかのディレクトリーにそのコンテンツを展開してください。
 
-それ以外に、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターを使用することもできます。
-
-展開が完了した評価サイトは次のように見えるはずです。
-
-![完了した評価サイトのスクリーンショット。検索入力にはプレースホルダーテキストと送信するボタンがありますが、ラベル付けはされていません。](assessment-site-finished.png)
-
-この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
+または、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターを使用することもできます。
 
 > [!NOTE]
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
@@ -64,8 +58,21 @@ l10n:
 
 現状のデータテーブルはあまりアクセシブルではありません。スクリーンリーダーのユーザーにとって行と列を関連付けることは難しく、またテーブルが何を示しているのかを明確にする概要もありません。この問題を解決するために何らかの機能を HTML に追加することはできますか？
 
-### 他には？
+### 他に考えること
 
 このウェブサイトをよりアクセシブルにする 2 つ以上の改善アイデアを挙げることができますか？
+
+## 例
+
+完成した課題サイトは、このようになるはずです。
+
+![完了した評価サイトのスクリーンショット。検索入力にはプレースホルダーテキストと送信するボタンがありますが、ラベル付けはされていません。](assessment-site-finished.png)
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+[完成したコードの例](https://github.com/mdn/learning-area/tree/main/accessibility/assessment-finished)を参照してください。
+
+</details>
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

@@ -1,12 +1,11 @@
 ---
 title: offset
 slug: Web/CSS/Reference/Properties/offset
-original_slug: Web/CSS/offset
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
+**`offset`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
 定義されたパスに沿って要素をアニメーションするために必要なすべてのプロパティを設定します。 offset プロパティは、オフセット変換を定義するのに役立ちます。これは、[座標変換](/ja/docs/Web/CSS/Guides/Transforms/Using)であり、
 要素内の点 ([offset-anchor](/ja/docs/Web/CSS/Reference/Properties/offset-anchor)) を、パス ([offset-path](/ja/docs/Web/CSS/Reference/Properties/offset-path)) 上のさまざまな点 ([offset-distance](/ja/docs/Web/CSS/Reference/Properties/offset-distance)) にあるオフセット位置 ([offset-position](/ja/docs/Web/CSS/Reference/Properties/offset-position)) に配置し、またオプションで、パスの方向に従うように要素を回転 ([offset-rotate](/ja/docs/Web/CSS/Reference/Properties/offset-rotate)) することもできます。
 
@@ -74,19 +73,17 @@ offset: path(
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "再生";
-    } else {
-      example.classList.add("running");
-      button.textContent = "停止";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    example.classList.add("running");
+    button.textContent = "停止";
+  }
 });
 ```
 
@@ -111,18 +108,18 @@ offset: none;
 /* オフセット経路 */
 offset: ray(45deg closest-side);
 offset: path("M 100 100 L 300 100 L 200 300 z");
-offset: url(arc.svg);
+offset: url("arc.svg");
 
 /* オフセット経路に距離と回転が加わったもの */
-offset: url(circle.svg) 100px;
-offset: url(circle.svg) 40%;
-offset: url(circle.svg) 30deg;
-offset: url(circle.svg) 50px 20deg;
+offset: url("circle.svg") 100px;
+offset: url("circle.svg") 40%;
+offset: url("circle.svg") 30deg;
+offset: url("circle.svg") 50px 20deg;
 
 /* オフセットアンカーを含む */
 offset: ray(45deg closest-side) / 40px 20px;
-offset: url(arc.svg) 2cm / 0.5cm 3cm;
-offset: url(arc.svg) 30deg / 50px 100px;
+offset: url("arc.svg") 2cm / 0.5cm 3cm;
+offset: url("arc.svg") 30deg / 50px 100px;
 
 /* グローバル値 */
 offset: inherit;

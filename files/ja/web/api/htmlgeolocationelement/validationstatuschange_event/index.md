@@ -30,7 +30,7 @@ onvalidationstatuschange = (event) => { }
 
 ### `validationstatuschange` を使用して無効な理由を報告
 
-[埋め込み地図](https://mdn.github.io/dom-examples/geolocation-element/embedded-map/)の例（[ソースコード](https://github.com/mdn/dom-examples/tree/main/geolocation-element/embedded-map)）では、`validationstatuschange` イベントハンドラーを使用して、`<geolocation>` 要素が有効になったことを報告し、また無効にになった際はその無効の理由を報告します。
+[埋め込み地図](https://mdn.github.io/dom-examples/geolocation-element/embedded-map/)の例（[ソースコード](https://github.com/mdn/dom-examples/tree/main/geolocation-element/embedded-map)）では、`validationstatuschange` イベントハンドラーを使用して、`<geolocation>` 要素が有効になったことを報告し、また無効になった際はその無効の理由を報告します。
 
 ```js
 geo.addEventListener("validationstatuschange", () => {

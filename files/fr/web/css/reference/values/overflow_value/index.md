@@ -1,8 +1,9 @@
 ---
-title: <overflow>
+title: Type CSS `<overflow>`
+short-title: <overflow>
 slug: Web/CSS/Reference/Values/overflow_value
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<overflow>`** représente les mots-clés pour les propriétés {{CSSxRef("overflow-block")}}, {{CSSxRef("overflow-inline")}}, {{CSSxRef("overflow-x")}}, {{CSSxRef("overflow-y")}} et la propriété raccourcie {{CSSxRef("overflow")}}. Ces propriétés s'appliquent aux conteneurs de bloc, flex et grille.

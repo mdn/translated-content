@@ -2,7 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 l10n:
-  sourceCommit: a3d19af7e3eeb1c40748c80cd6b5143cfa201c54
+  sourceCommit: ac0fef0566bfd672c44644a95240b8e1407277bd
 ---
 
 {{APIRef("DOM")}}
@@ -17,6 +17,8 @@ _不继承任何属性_。
 
 ### 标准属性
 
+- {{domxref("Navigator.audioSession")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回一个 {{domxref("AudioSession")}} 对象，可用于控制 Web 应用程序的音频如何与设备上播放的其他音频交互。
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
@@ -35,7 +37,7 @@ _不继承任何属性_。
   - : 返回浏览器的 {{domxref("DevicePosture")}} 对象，允许开发者查询设备当前的姿态（即视口是处于平放还是折叠状态），并在姿态变化时执行相应的代码。
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Geolocation")}} 对象，用于访问设备的位置。
-- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回当前浏览上下文的 {{domxref("GPU")}} 对象。是 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} 的入口点。
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : 返回可用的逻辑处理器核心数量。
@@ -51,7 +53,7 @@ _不继承任何属性_。
   - : 返回一个字符串数组，表示用户的首选语言，按优先级排序。
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个 {{domxref("LockManager")}} 对象，提供了请求新的 {{domxref('Lock')}} 对象和查询现有的 {{domxref('Lock')}} 对象的方法。
-- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 提供对浏览器 {{domxref("NavigatorLogin")}} 对象的访问权限，联合身份提供商（IdP）可以使用它在用户登录或退出 IdP 时设置其登录状态。更多详细信息请参阅[联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)。
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : 返回当前设备支持的最大同时触摸接触点数。
@@ -67,6 +69,8 @@ _不继承任何属性_。
   - : 如果浏览器在导航到 PDF 文件时可以使用它们，返回 `true`，否则为 `false`。
 - {{domxref("Navigator.permissions")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Permissions")}} 对象，可以用来查询和更新受[权限 API](/zh-CN/docs/Web/API/Permissions_API) 支持的 API 的权限状态。
+- {{domxref("Navigator.preferences")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : 返回文档当前的 {{domxref("PreferenceManager")}} 对象，提供对[用户首选项](/zh-CN/docs/Web/API/User_Preferences_API)信息的访问。
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个对 {{domxref("Presentation")}} API 的引用。
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}

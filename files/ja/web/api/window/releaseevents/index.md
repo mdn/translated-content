@@ -3,7 +3,7 @@ title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
 ---
 
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
+{{ ApiRef() }} {{Non-standard_header}}
 
 このウィンドウが指定された種類のイベントを捕捉することを解除します。
 

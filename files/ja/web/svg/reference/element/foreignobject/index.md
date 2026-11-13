@@ -2,10 +2,36 @@
 title: <foreignObject>
 slug: Web/SVG/Reference/Element/foreignObject
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<foreignObject>`** は [SVG](/ja/docs/Web/SVG) 要素で、異なる XML 名前空間の要素を含みます。ブラウザーのコンテキストでは、ほとんどの場合 (X)HTML です。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("height")}}
+  - : The height of the foreignObject.
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _デフォルト値_: `auto`; _アニメーション_: **可**
+- {{SVGAttr("width")}}
+  - : The width of the foreignObject.
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _デフォルト値_: `auto`; _アニメーション_: **可**
+- {{SVGAttr("x")}}
+  - : The x coordinate of the foreignObject.
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _デフォルト値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("y")}}
+  - : The y coordinate of the foreignObject.
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _デフォルト値_: `0`; _アニメーション_: **可**
+
+> [!NOTE]
+> SVG2 以降、`x`, `y`, `width`, `height` は幾何属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGForeignObjectElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -47,32 +73,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-### 専用属性
-
-- {{SVGAttr("height")}}
-  - : The height of the foreignObject.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
-- {{SVGAttr("width")}}
-  - : The width of the foreignObject.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
-- {{SVGAttr("x")}}
-  - : The x coordinate of the foreignObject.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
-- {{SVGAttr("y")}}
-  - : The y coordinate of the foreignObject.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
-
-> [!NOTE]
-> SVG2 以降、`x`, `y`, `width`, `height` は幾何属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。
-
-## DOM インターフェイス
-
-この要素は {{domxref("SVGForeignObjectElement")}} インターフェイスを実装しています。
-
-## 使用可能な場所
-
-{{svginfo}}
 
 ## 仕様書
 

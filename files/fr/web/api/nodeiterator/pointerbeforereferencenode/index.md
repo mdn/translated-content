@@ -5,7 +5,7 @@ slug: Web/API/NodeIterator/pointerBeforeReferenceNode
 
 {{APIRef("DOM")}} {{SeeCompatTable}}
 
-La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** renvoie un {{domxref("Boolean")}} (booléen) qui indique si le {{domxref("NodeFilter")}} est ancré avant (si la valeur est `true` (_vrai_)) ou après (`false` (_faux_)) le noeud-ancre indiqué par la propriété {{domxref("NodeIterator.referenceNode")}}.
+La propriété en lecture seule **`NodeIterator.pointerBeforeReferenceNode`** renvoie un {{jsxref("Boolean")}} (booléen) qui indique si le {{domxref("NodeFilter")}} est ancré avant (si la valeur est `true` (_vrai_)) ou après (`false` (_faux_)) le noeud-ancre indiqué par la propriété {{domxref("NodeIterator.referenceNode")}}.
 
 ## Syntaxe
 

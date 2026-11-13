@@ -68,6 +68,6 @@ dataview.getFloat64(1); // 3.785766995733679e-270
 ## Voir aussi
 
 - Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("Float64Array")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("Float64Array")}}

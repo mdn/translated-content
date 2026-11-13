@@ -234,7 +234,7 @@ async function concurrent1() {
 async function concurrent2() {
   console.log("== concurrent2 開始 ==");
 
-  // 2 つの jobs を並列に実行し両方が完了するのを待つ
+  // 2 つの jobs を並行で実行し両方が完了するのを待つ
   await Promise.all([
     (async () => console.log(await resolveAfter2Seconds()))(),
     (async () => console.log(await resolveAfter1Second()))(),
@@ -251,7 +251,7 @@ setTimeout(sequentialWait, 4000); // 2 秒後に "slow" と "fast" をログ出�
 setTimeout(concurrent1, 7000); // concurrentStart と同様
 
 // 直前の処理を待つ
-setTimeout(concurrent2, 10000); // 本当に並列処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "slow" とログ出力する
+setTimeout(concurrent2, 10000); // 本当に並行処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "slow" とログ出力する
 ```
 
 #### await と並行性

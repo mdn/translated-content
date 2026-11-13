@@ -183,6 +183,6 @@ Il n'y a aucune garantie que la fonction de rappel soit appelée plus tôt ou qu
 
 ## Voir aussi
 
-- L'objet {{JSxRef("WeakRef")}}
-- L'objet {{JSxRef("WeakSet")}}
-- L'objet {{JSxRef("WeakMap")}}
+- L'objet natif {{JSxRef("WeakRef")}}
+- L'objet natif {{JSxRef("WeakSet")}}
+- L'objet natif {{JSxRef("WeakMap")}}

@@ -72,7 +72,7 @@ l10n:
 [Mozilla ホームページ](https://www.mozilla.org/ja/)へのリンクを作成しています。
 
 > [!NOTE]
-> Scrimba の [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> スクリムは、 HTML を使用してリンクを作成する方法をインタラクティブに実演し、さらに自分自身でリンクを作成するための課題を提示します。
+> Scrimba の [Anchor tags](https://scrimba.com/learn-html-and-css-c0p/~0a?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> スクリムは、 HTML を使用してリンクを作成する方法をインタラクティブに実演し、さらに自分自身でリンクを作成するための課題を提示します。
 
 ### ブロックレベルリンク
 
@@ -213,7 +213,7 @@ img {
 [ウェブサーバー](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)は URL へのリクエストを受け取り、適切なリソースで応答します。ほとんどのリソースはサーバーのファイルシステム上にファイルとして格納されているため、これらのリソースの URL は多くの場合ファイルパスに似ています。
 
 > [!NOTE]
-> ファイルパスと URL は同じものではありませんが、理解を容易にするため、ここでは同様に同じものとして扱います。両者の違いについては、[どうやって URL がファイルパスに変換されるのか](#どうやって-url-がファイルパスに変換されるのか)の節で詳しく説明します。
+> ファイルパスと URL は同じものではありませんが、理解を容易にするため、ここでは同様に同じものとして扱います。両者の違いについては、[どうやって URL がファイルパスに変換されるのか](#どうやって_url_がファイルパスに変換されるのか)の節で詳しく説明します。
 
 サーバーディレクトリー構造の例を見ていきましょう。
 

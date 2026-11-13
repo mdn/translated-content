@@ -1,8 +1,9 @@
 ---
-title: "<s> : l'élément de texte barré"
+title: "Élément HTML `<s>` : l'élément de texte barré"
+short-title: <s>
 slug: Web/HTML/Reference/Elements/s
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 2bb6edfe996e099d7cbe0d0e2635a76e00a788cc
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<s>`** affiche du texte barré. Utilisez l'élément `<s>` pour représenter des choses qui ne sont plus pertinentes ou plus exactes. Cependant, `<s>` n'est pas approprié pour indiquer les modifications d'un document&nbsp;; pour cela, utilisez les éléments {{HTMLElement("del")}} et {{HTMLElement("ins")}}, selon le cas.
@@ -27,7 +28,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre comme pouvant être annoncé avec la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 s::before,
@@ -52,8 +53,8 @@ s::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été rayé.
 
-- [Note brève sur la manière de rendre votre marque plus accessible | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
-- [Ajuster les styles au niveau du texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Note brève sur la manière de rendre votre marque plus accessible | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
+- [Ajuster les styles au niveau du texte, revisité | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2025/04/tweaking-text-level-styles-reprised.html)
 
 ## Exemples
 

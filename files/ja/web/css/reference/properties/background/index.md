@@ -1,11 +1,12 @@
 ---
-title: background
+title: "`background` プロパティ (CSS)"
+short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
+**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。
 
 {{InteractiveExample("CSS デモ: background")}}
 
@@ -60,6 +61,12 @@ background:
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 
+### リセットのみのサブプロパティ
+
+このプロパティは、以下の CSS プロパティを初期値にリセットします。
+
+- {{cssxref("background-blend-mode")}}
+
 ## 構文
 
 ```css
@@ -83,21 +90,6 @@ background: revert-layer;
 background: unset;
 ```
 
-`background` プロパティは1つまたは複数の背景レイヤーをカンマで区切って指定します。
-
-それぞれのレイヤーの構文は以下の通りです。
-
-- それぞれのレイヤーは、以下の値をそれぞれ 0 ～ 1 回含めることができます。
-  - `<attachment>`
-  - `<bg-image>`
-  - `<bg-position>`
-  - `<bg-size>`
-  - `<repeat-style>`
-
-- `<bg-size>` の値は `<bg-position>` の直後に '/' の文字で区切って含めなければなりません。例: `center/80%`
-- `<visual-box>` の値は 0 ～ 2 回含めることができます。1 回の場合は {{cssxref("background-origin")}} と {{cssxref("background-clip")}} の両方に設定されます。2 回の場合は、1 つ目は {{cssxref("background-origin")}} に、2 つ目は {{cssxref("background-clip")}} に設定されます。
-- `<'background-color'>` の値は最後のレイヤーの指定でのみ含めることができます。
-
 ### 値
 
 - `<attachment>`
@@ -115,13 +107,54 @@ background: unset;
 - `<bg-size>`
   - : {{cssxref("background-size")}} を参照。既定値は `auto` です。
 
-以下の 3 行の CSS は等価です。
+## 解説
+
+`background` 一括指定プロパティを使用すると、すべての CSS 背景プロパティを 1 つの宣言で指定することができます。背景は、要素のコンテンツの下に配置されます。カンマで区切られた複数の背景値がある場合、それぞれが 1 つの背景レイヤーとなり、前回のレイヤーの上に重ねて描画されます。
+
+`background` プロパティは、カンマで区切られた 1 つ以上の背景レイヤーとして指定されます。それぞれのレイヤーには、0 個、1 個、2 個の `<visual-box>` 要素と、0 個または 1 個の `<attachment>`、`<bg-image>`、`<bg-position>`、`<bg-size>`、および `<repeat-style>` 要素を含めることができます。`<bg-position>`、`<bg-size>`、`<repeat-style>` 要素が 2 つ指定された場合、1 つ目の値は水平方向の値に設定され、2 つ目の値は垂直方向の値に設定されます。1 つの値だけが設定された場合は、その値が両方のサイズに適用されます。
+
+`<'background-color'>` 要素は、指定された最後の背景レイヤーにのみ含めることができます。
+
+`background` 一括指定プロパティの値の宣言で設定されていない要素のプロパティは、デフォルト値に設定されます。
+
+### 成分プロパティの順序
+
+一部の要素のプロパティは値の型が共通しているため、一括指定ではそれらのプロパティの順序が重要になります。
+
+`<bg-size>` の値は、`<bg-position>` の後に、`/` 文字で区切って記載することができます。例えば、`10px 10px / 80% 80%` という指定は、背景画像の高さと幅が要素の `80%` となり、要素の左上角から上方向に `10px`、左方向に `10px` の位置に配置されることを意味します。`<bg-position>` 内で、両方の値が長さ単位の場合、または一方が長さ単位で他方が `center` の場合、1 つ目の値は水平位置を、2 つ目の値は垂直位置を参照します。
+
+それぞれの背景レイヤーでは、[`<visual-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#visual-box) の値を 0 個、1 個、2 個指定することができます。値が 1 個のみ指定された場合、{{cssxref("background-origin")}} と {{cssxref("background-clip")}} の両方が設定される。2 つの値が存在する場合、1 つ目の値が `background-origin` を、2 つ目の値が `background-clip` の値を指定します。`<visual-box>` の値が指定されていない場合、`background-origin` のデフォルトは `padding-box`、`background-clip` のデフォルトは `border-box` になります。
+
+その他の背景プロパティについては順序の指定は必須ではありませんが、一貫性と可読性を高めるため、以下の順序を推奨します。なお、どの値も必須ではないことにご留意ください。
+
+`<bg-image> <bg-position> / <bg-size> <repeat-style> <attachment> <bg-clip> <bg-origin> <'background-color'>`
+
+以下の `background` は、すべてのデフォルト値をこの順序で明示的に設定します。
+
+```css
+background: none 0% 0% / auto auto repeat scroll border-box padding-box
+  transparent;
+```
+
+順序が異なっていても、以下の 3 行の CSS は上記と同じ効果があります。
 
 ```css
 background: none;
 background: transparent;
 background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
+
+### 画像の描画順
+
+カンマ区切りで複数の背景が指定されている場合、それらは互いに重なり合う複数の背景レイヤーとして生成されます。リストの先頭にある背景が最上位レイヤーとなります。最上位レイヤーに透明な領域が含まれていない場合、表示されるのはこのレイヤーのみとなります。
+
+最後のレイヤーは最下層のレイヤーです。背景色は常にこのレイヤーに含まれます。
+
+### 文書全体に適用された本文の背景
+
+文書の {{htmlelement("html")}} `:root` 要素の計算された `background-image` の値が `none` で、その `background-color` が `transparent` の場合、ブラウザーは {{htmlelement("body")}} 要素に設定された `background` スタイルを `:root` に引き継ぎ、`<body>` を `background: initial` が設定されているかのように扱います。言い換えれば、`<html>` 要素は `<body>` 要素に設定されたすべての `background` スタイルを取得し、`<body>` 要素の背景プロパティは初期値に設定されます。
+
+この動作のため、仕様書の作成者は、文書の背景スタイルを `html` スタイルブロックではなく `body` スタイルブロックで設定することを推奨しています。ただし、抑制を使用するとこの動作が無効になる点に注意してください。`<html>` 要素または `<body>` 要素のいずれかで、{{cssxref("contain")}} プロパティが `none` 以外の何らかの値に設定されている場合、`background` プロパティおよびその個別指定プロパティの構成要素は、`<body>` 要素からルート要素である `<html>` 要素へ伝播されません。
 
 ## 公式定義
 

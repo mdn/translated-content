@@ -8,10 +8,10 @@ l10n:
 
 Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles possibilités. Cet article fournit des liens vers des articles couvrant les nouvelles fonctionnalités.
 
-## Pour les développeur·euse·s Web et les développeur·euse·s d'applications
+## Pour les développeur·euse·s web et d'applications
 
 - [Microrésumés <sup>(angl.)</sup>](https://wiki.mozilla.org/Microsummaries)
-  - : Les microrésumés sont de courtes compilations, régulièrement mises à jour, des plus importantes informations présentes sur des pages Web. Ils peuvent être fournis tant par les sites eux-mêmes que par des développeur·euse·s tiers. Lorsque les utilisateurs marquent des pages présentant des microrésumés, ils peuvent choisir d'afficher ceux-ci en lieu et place de titres statiques.
+  - : Les microrésumés sont de courtes compilations, régulièrement mises à jour, des plus importantes informations présentes sur des pages Web. Ils peuvent être fournis tant par les sites eux-mêmes que par des développeur·euse·s tiers. Lorsque les utilisateur·ice·s marquent des pages présentant des microrésumés, ils peuvent choisir d'afficher ceux-ci en lieu et place de titres statiques.
 - [Création d'un générateur de microrésumé <sup>(angl.)</sup>](https://web.archive.org/web/20210214003325/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Creating_a_microsummary)
   - : Un tutoriel sur la création d'un générateur de microrésumés.
 - [Référence grammaticale XML d'un microrésumé <sup>(angl.)</sup>](https://web.archive.org/web/20191011001930/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Microsummary_topics/XML_grammar_reference)
@@ -21,7 +21,7 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 - [Création de plugins MozSearch <sup>(angl.)</sup>](https://web.archive.org/web/20210411070858/https://developer.mozilla.org/en-US/docs/Mozilla/Creating_MozSearch_plugins)
   - : Firefox 2 utilise MozSearch, un format de plugins de recherche basé sur OpenSearch.
 - [Gestion de suggestions dans les plugins de recherche <sup>(angl.)</sup>](https://web.archive.org/web/20191015161436/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins)
-  - : Comment permettre à votre plugin MozSearch de proposer des suggestions, qui apparaîtront dans une liste déroulante au fur et à mesure de la frappe dans la Barre de recherche.
+  - : Comment permettre à votre plugin MozSearch de proposer des suggestions, qui apparaissent dans une liste déroulante au fur et à mesure de la frappe dans la barre de recherche.
 - [Nouveautés dans JavaScript 1.7 <sup>(angl.)</sup>](https://web.archive.org/web/20210704072534/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.7)
   - : Firefox 2 fournit JavaScript 1.7, qui comprend de nouvelles fonctionnalités comme `let`, des assignations déstructurantes, des générateurs et itérateurs, et la définition de tableaux par compréhension.
 - [Stockage de session et stockage persistant côté client WHATWG (ou DOM Storage)](/fr/docs/Web/API/Web_Storage_API)

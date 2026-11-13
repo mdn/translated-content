@@ -25,7 +25,7 @@ L'article précédent expliquait pourquoi la sémantique est importante en HTML,
       <td>
         <ul>
           <li>La signification de l'accent et de l'importance, et les éléments de base qui les appliquent en HTML, tels que <code>&lt;em&gt;</code> et <code>&lt;strong&gt;</code>.</li>
-          <li>Identifier le balisage de présentation qui ne doit plus être utilisé du tout (par exemple, <code>&lt;big&gt;</code> et <code>&lt;font&gt;</code>) ; il est obsolète.</li>
+          <li>Identifier le balisage de présentation qui ne doit plus être utilisé du tout (par exemple, <code>&lt;big&gt;</code> et <code>&lt;font&gt;</code>)&nbsp;; il est obsolète.</li>
           <li>Identifier le balisage de présentation qui a été réutilisé pour avoir une nouvelle signification sémantique (par exemple, <code>&lt;i&gt;</code> et <code>&lt;b&gt;</code>).</li>
         </ul>
       </td>
@@ -47,7 +47,7 @@ Lorsque nous voulons ajouter de l'accent à l'oral, nous _insistons_ sur certain
 
 La première phrase exprime un réel soulagement que la personne ne soit pas en retard. En revanche, la seconde, avec les mots «&nbsp;content&nbsp;» et «&nbsp;en retard&nbsp;» en italique, sonne sarcastique ou passif-agressif, exprimant une certaine irritation que la personne soit arrivée un peu en retard.
 
-En HTML, on utilise l'élément HTML {{HTMLElement("em")}} (accent) pour baliser de tels cas. En plus de rendre le document plus agréable à lire, ces éléments sont reconnus par les lecteurs d'écran, qui peuvent être configurés pour les prononcer sur un ton différent. Les navigateurs appliquent par défaut un style italique, mais vous ne devez pas utiliser cette balise uniquement pour obtenir un style italique. Pour cela, vous utiliseriez un élément HTML {{HTMLElement("span")}} et du CSS, ou éventuellement un élément HTML {{HTMLElement("i")}} (voir plus bas).
+En HTML, on utilise l'élément HTML {{HTMLElement("em")}} (accent) pour baliser de tels cas. En plus de rendre le document plus agréable à lire, ces éléments sont reconnus par les lecteurs d'écran, qui peuvent être configurés pour les prononcer sur un ton différent. Les navigateurs appliquent par défaut un style italique, mais vous ne devez pas utiliser cette balise uniquement pour obtenir un style italique. Pour cela, vous utilisez un élément HTML {{HTMLElement("span")}} et du CSS, ou éventuellement un élément HTML {{HTMLElement("i")}} (voir plus bas).
 
 ```html
 <p>Je suis <em>content</em> que vous ne soyez pas <em>en retard</em>.</p>
@@ -61,7 +61,7 @@ Pour mettre en avant des mots importants, nous avons tendance à insister dessus
 >
 > Je compte sur vous. **Ne soyez pas** en retard&nbsp;!
 
-En HTML, on utilise l'élément HTML {{HTMLElement("strong")}} (importance forte) pour baliser de tels cas. En plus de rendre le document plus utile, ces éléments sont également reconnus par les lecteurs d'écran, qui peuvent être configurés pour les prononcer sur un ton différent. Les navigateurs appliquent par défaut un style gras, mais vous ne devez pas utiliser cette balise uniquement pour obtenir un style gras. Pour cela, vous utiliseriez un élément HTML {{HTMLElement("span")}} et du CSS, ou éventuellement un élément HTML {{HTMLElement("b")}} (voir plus bas).
+En HTML, on utilise l'élément HTML {{HTMLElement("strong")}} (importance forte) pour baliser de tels cas. En plus de rendre le document plus utile, ces éléments sont également reconnus par les lecteurs d'écran, qui peuvent être configurés pour les prononcer sur un ton différent. Les navigateurs appliquent par défaut un style gras, mais vous ne devez pas utiliser cette balise uniquement pour obtenir un style gras. Pour cela, vous utilisez un élément HTML {{HTMLElement("span")}} et du CSS, ou éventuellement un élément HTML {{HTMLElement("b")}} (voir plus bas).
 
 ```html
 <p>Ce liquide est <strong>hautement toxique</strong>.</p>
@@ -73,7 +73,7 @@ Vous pouvez imbriquer l'importance forte et l'accent si vous le souhaitez&nbsp;:
 
 ```html-nolint
 <p>Ce liquide est <strong>hautement toxique</strong> — si vous en buvez,
-<strong>vous pourriez <em>mourir</em></strong>.</p>
+<strong>vous pouvez <em>mourir</em></strong>.</p>
 ```
 
 {{EmbedLiveSample("Importance forte")}}
@@ -104,17 +104,17 @@ h1 {
 </p>
 
 <p>
-  En plein hiver, il fera froid. Vous devriez vous couvrir pour éviter de tomber
+  En plein hiver, il fait froid. Vous devez vous couvrir pour éviter de tomber
   malade.
 </p>
 ```
 
-{{EmbedLiveSample('emphasis_importance', "100%", 160)}}
+{{EmbedLiveSample("emphasis_importance", "100%", 160)}}
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <h1><em>Accent</em> et <strong>importance</strong></h1>
@@ -125,7 +125,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 </p>
 
 <p>
-  En plein hiver, il fera <strong>froid</strong>. Vous devriez
+  En plein hiver, il fait <strong>froid</strong>. Vous devez
   <strong>vous couvrir pour éviter de <em>tomber malade</em></strong>
   .
 </p>

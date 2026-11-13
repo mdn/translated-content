@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feDisplacementMap
 original_slug: Web/SVG/Element/feDisplacementMap
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDisplacementMap>`** utilise les valeurs de pixel de l'image de {{SVGAttr("in2")}} pour déplacer spatialement l'image de {{SVGAttr("in")}}.
 
 La formule utilisée pour la transformation est comme suit:

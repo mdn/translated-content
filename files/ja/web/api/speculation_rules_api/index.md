@@ -352,7 +352,7 @@ JavaScript はアクティブになるまで実行されないため、ページ
 
 以下の機能はアクティブ化されていない文書内では自動的に失敗または無機能になります。
 
-{{glossary("transient activation", "一時的な有効化")}}または{{glossary("sticky activation", "粘着的な有効化")}}が要求される API：
+{{glossary("transient activation", "一時的な有効化")}}または{{glossary("sticky activation", "持続的な有効化")}}が要求される API：
 
 - {{domxref("Window.beforeunload_event", "beforeunload")}} イベントで生成される確認ダイアログ
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API) で発生するすべてのイベント
@@ -373,7 +373,7 @@ JavaScript はアクティブになるまで実行されないため、ページ
 
 包含する文書の {{domxref("Document.visibilityState")}} が `"visible"` であることが要求される API:
 
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible" または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
+- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible"` または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
 - [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### 他の制限されている機能

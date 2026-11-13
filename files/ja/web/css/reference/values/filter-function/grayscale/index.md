@@ -1,8 +1,9 @@
 ---
-title: grayscale()
+title: CSS `grayscale()` 関数
+short-title: grayscale()
 slug: Web/CSS/Reference/Values/filter-function/grayscale
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`grayscale()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像をグレースケールに変換します。結果は {{cssxref("filter-function")}} です。

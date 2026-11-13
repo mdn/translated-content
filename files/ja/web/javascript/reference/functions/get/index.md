@@ -1,8 +1,8 @@
 ---
-title: get
+title: get （ゲッター）
 slug: Web/JavaScript/Reference/Functions/get
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
 ---
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。これは[クラス](/ja/docs/Web/JavaScript/Reference/Classes)でも使用できます。
@@ -48,7 +48,7 @@ console.log(obj.latest);
 ```js
 const obj = {
   get prop() {
-    // ゲッター、obj. prop を参照する際に実行されるコード
+    // ゲッター、obj.prop を参照する際に実行されるコード
     return someValue;
   },
 };
@@ -102,7 +102,7 @@ console.log(instance.msg); // "hello cake"
 
 ### `delete` 演算子によるゲッターの削除
 
-ゲッターを削除したい場合は、 {{jsxref("Operators/delete", "delete")}} を使用してください。
+ゲッターを削除したい場合は、 {{jsxref("delete")}} を使用してください。
 
 ```js
 delete obj.latest;
@@ -181,7 +181,7 @@ const obj = {
 
 ### get と defineProperty
 
-`get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("classes")}} 上で使用する場合は微妙な違いがあります。
+`get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("Classes")}} 上で使用する場合は微妙な違いがあります。
 
 `get` を使用した場合は、プロパティはインスタンスのプロトタイプに定義されるのに対し、 {{jsxref("Object.defineProperty()")}} を使用した場合は、プロパティは適用されたインスタンスに定義されます。
 
@@ -218,10 +218,10 @@ console.log(
 - [ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) (JavaScript ガイド)
 - [オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)ガイド
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
+- [`set`（セッター）](/ja/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
 - [オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 - {{jsxref("Statements/class", "class")}}
 - [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
-- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)
+- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) - Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) - Jeff Walden (2010)

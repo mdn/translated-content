@@ -38,10 +38,10 @@ Si es asignado un string a la propiedad del objeto Evento returnValue, una caja 
 | Propiedad                       | Tipo                       | Descripcion                                                                        |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | El evento objetivo(el objetivo superior en el arbol del DOM).                      |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                                                 |
+| `type` {{readOnlyInline}}       | {{jsxref("String")}}       | El tipo de evento.                                                                 |
 | `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | El evento normalmente burbujea?                                                    |
 | `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | Es posible cancelar el evento?                                                     |
-| `returnValue`                   | {{domxref("DOMString")}}   | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
+| `returnValue`                   | {{jsxref("String")}}       | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
 
 ## Ejemplos
 

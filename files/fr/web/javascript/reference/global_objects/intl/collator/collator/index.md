@@ -38,7 +38,7 @@ Intl.Collator(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.Collator()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Intl.Collator`.
+> `Intl.Collator()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `Intl.Collator`.
 
 ### Paramètres
 
@@ -116,5 +116,5 @@ On notera que les résultats obtenus avec les lignes précédentes peuvent varie
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.Collator")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl.Collator")}}
+- L'objet natif {{JSxRef("Intl")}}

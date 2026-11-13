@@ -1,8 +1,9 @@
 ---
-title: radial-gradient()
+title: CSS `radial-gradient()` 関数
+short-title: radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/radial-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊形です。
@@ -228,10 +229,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

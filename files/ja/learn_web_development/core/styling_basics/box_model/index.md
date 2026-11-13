@@ -195,7 +195,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 
 ### CSS 標準ボックスモデル
 
-標準ボックスモデルでは、ボックスに `width` と `height` を指定すると、*コンテンツボックス*のインライン方向のサイズととブロック方向のサイズ（横書きの言語では幅と高さ）が定義されます。すべてのパディングと境界がその幅と高さに追加され、ボックスが占める合計サイズが算出されます。
+標準ボックスモデルでは、ボックスに `width` と `height` を指定すると、*コンテンツボックス*のインライン方向のサイズとブロック方向のサイズ（横書きの言語では幅と高さ）が定義されます。すべてのパディングと境界がその幅と高さに追加され、ボックスが占める合計サイズが算出されます。
 
 以下の CSS をボックスに適用した場合、
 
@@ -388,7 +388,7 @@ p {
 マージンが相殺される場合と相殺されない場合を規定する多くのルールがあります。 詳細については、[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)に関する詳細ページをご覧ください。覚えておくべき主なことは、マージンの相殺は、マージンで空間を作成しているときに、期待した空間が得られなかった場合に起こることだということです。
 
 > [!NOTE]
-> [Learn margins via flags](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>（Scrimba 提供）の対話型レッスンでは、マージンに関する有益な実践的な練習を提供しています。
+> [Learn margins via flags](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>（Scrimba 提供）の対話型レッスンでは、マージンに関する有益な実践的な練習を提供しています。
 
 ### 境界
 

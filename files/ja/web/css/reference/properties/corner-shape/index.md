@@ -1,17 +1,18 @@
 ---
-title: corner-shape
+title: "`corner-shape` プロパティ (CSS)"
+short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 {{SeeCompatTable}}
 
-**`corner-shape`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、{{cssxref("border-radius")}} プロパティ値で指定された領域内のボックスの角を指定します。
+**`corner-shape`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、{{cssxref("border-radius")}} プロパティ値で指定された領域内のボックスの角を指定します。
 
 ## 構成要素のプロパティ
 
-`corner-shape` プロパティは、以下の物理的プロパティの一括指定です。
+このプロパティは、以下の物理的プロパティの一括指定です。
 
 - {{cssxref("corner-top-left-shape")}}
 - {{cssxref("corner-top-right-shape")}}
@@ -113,7 +114,7 @@ div {
 }
 ```
 
-### 角の形状に従うプロパティ
+### `corner-shape` に従うプロパティ
 
 以下のプロパティはすべて、コンテナーに設定された際に角の形状に従います。
 
@@ -126,6 +127,12 @@ div {
 - {{cssxref("backdrop-filter")}}
 
 例については[`corner-shape` に従うプロパティのデモ](#corner-shape_に従うプロパティのデモ)を参照してください。
+
+### `border-shape` の操作
+
+要素に {{cssxref("border-shape")}} プロパティが設定されている場合、`corner-shape` プロパティは効果を発揮しません。これは、`border-shape` が `border-radius` と互換性がないためです。`border-shape` が設定されている場合、指定された `border-radius` は無視されます。`corner-shape` は `border-radius` に依存しているため、同様に効果を発揮しません。
+
+`border-shape` で角の形を指定したい場合は、その図形の一部として直接描画する必要があります。
 
 ## 公式定義
 
@@ -183,10 +190,6 @@ div {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -253,22 +256,13 @@ div {
 }
 
 @supports not (corner-shape: scoop notch) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "このブラウザーは 'corner-shape' プロパティに対応していません。";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -391,22 +385,13 @@ section {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "このブラウザーは 'corner-shape' プロパティに対応していません。";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -516,22 +501,13 @@ section {
 }
 
 @supports not (corner-shape: superellipse(0)) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "このブラウザーは 'corner-shape' プロパティに対応していません。";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -606,22 +582,13 @@ div {
 }
 
 @supports not (corner-shape: square) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "このブラウザーは 'corner-shape' プロパティに対応していません。";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -663,7 +630,8 @@ div {
 
 ## 関連情報
 
-- {{Cssxref("border-radius")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-shape")}}
 - [CSS 境界とボックス装飾](/ja/docs/Web/CSS/Guides/Borders_and_box_decorations)モジュール
 - [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール

@@ -3,7 +3,7 @@ title: "HTMLInputElement : méthode showPicker()"
 short-title: showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: cc66f2b97b465aef7a1781ee479ec8c42ee2fe7c
 ---
 
 {{APIRef("HTML DOM")}}
@@ -36,13 +36,13 @@ Aucune ({{JSxRef("undefined")}}).
 - `InvalidStateError` {{DOMxRef("DOMException")}}
   - : Levée si l'élément n'est pas modifiable, c'est‑à‑dire si l'utilisateur·ice ne peut pas le modifier et/ou s'il ne peut pas être prérempli automatiquement.
 - `NotAllowedError` {{DOMxRef("DOMException")}}
-  - : Levée si la méthode n'est pas déclenchée explicitement par une action utilisateur·ice, telle qu'un geste tactile ou un clic de souris (le sélecteur requiert {{Glossary("Transient activation")}}).
+  - : Levée si la méthode n'est pas déclenchée explicitement par une action utilisateur·ice, telle qu'un geste tactile ou un clic de souris (le sélecteur requiert {{Glossary("Transient activation", "une activation transitoire")}}).
 - `SecurityError` {{DOMxRef("DOMException")}}
   - : Levée si appelée depuis un cadre intégré d'origine croisée, sauf pour les sélecteurs de fichiers et de couleurs (exemptés pour des raisons historiques).
 
 ## Sécurité
 
-[Activation par l'utilisateur](/fr/docs/Web/Security/Defenses/User_activation) est requise. L'utilisateur·ice doit interagir avec la page ou un élément d'interface pour que cette fonctionnalité fonctionne.
+[Activation par l'utilisateur·ice](/fr/docs/Web/Security/Defenses/User_activation) est requise. L'utilisateur·ice doit interagir avec la page ou un élément d'interface pour que cette fonctionnalité fonctionne.
 
 ## Exemples
 
@@ -120,7 +120,7 @@ Nous définissons d'abord une `<datalist>` en HTML contenant plusieurs navigateu
 <button>Sélectionner un navigateur</button>
 ```
 
-Le code ci‑dessous ajoute un écouteur d'événement qui appelle `showPicker()` lorsque le bouton est cliqué.
+Le code ci‑dessous ajoute un écouteur d'évènements qui appelle `showPicker()` lorsque le bouton est cliqué.
 
 ```js
 const button = document.querySelector("button");
@@ -134,6 +134,8 @@ button.addEventListener("click", () => {
   }
 });
 ```
+
+Comme pour les autres sélecteurs, nous ne pouvons pas montrer ce code en cours d'exécution comme exemple en direct, car il s'exécute dans un cadre d'origine croisée et provoquerait une [`SecurityError`](#securityerror).
 
 ### `showPicker()` pour l'autocomplétion
 

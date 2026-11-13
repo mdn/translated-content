@@ -29,4 +29,4 @@ l10n:
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} イベント
 - {{DOMxRef("DeviceOrientationEvent")}}
 - [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

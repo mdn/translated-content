@@ -1,11 +1,12 @@
 ---
-title: <basic-shape>
+title: "`<basic-shape>` データ型 (CSS)"
+short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、{{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}} の各プロパティで使用されるシェイプを表します。
 
 {{InteractiveExample("CSS デモ: &lt;basic-shape&gt;")}}
 
@@ -70,9 +71,10 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
   - : 角丸を定義します。[コンテナーの辺からの距離による矩形](#コンテナーの辺からの距離による矩形の構文)、 [距離による矩形](#座標による矩形の構文)、および[寸法による矩形](#寸法による矩形の構文)を定義します。これらは CSS の {{cssxref("border-radius")}} 一括指定プロパティと同じ構文を使用します。
 
 - `<shape-radius>`
-  - : [円](#円の構文)または[楕円](#楕円の構文)の半径を定義します。有効な値には、{{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（デフォルト）、`farthest-side` があります。負の値は無効です。
+  - : [円](#円の構文)または[楕円](#楕円の構文)の半径を定義します。有効な値には、{{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（デフォルト）、`farthest-side`、`closest-corner`、`farthest-corner` があります。負の値は無効です。
 
     `closest-side` キーワード値は、シェイプの中心から参照ボックスの最も近い辺までの距離を用いて半径の長さを作成します。`farthest-side` キーワード値は、シェイプの中心から参照ボックスの最も遠い辺までの距離を用います。
+    同様に、`closest-corner` と `farthest-corner` は、それぞれ図形の中心から最も近い角および最も遠い角までの長さを使用します。
 
 - `<position>`
   - : [円](#円の構文)または[楕円](#楕円の構文)の中心位置 ({{cssxref("&lt;position&gt;")}}) を定義します。省略した場合、デフォルトは `center` です。
@@ -141,13 +143,18 @@ ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
 
 ### 多角形の構文
 
-{{cssxref("basic-shape/polygon","polygon()")}} 関数は、塗りつぶしルール（SVG の {{SVGAttr("fill-rule")}}）と座標の集合を使用して多角形を定義します。
+{{cssxref("basic-shape/polygon","polygon()")}} 関数は、カンマ区切りで指定された座標の組を用いて多角形を定義します。必要に応じて、その前に SVG {{SVGAttr("fill-rule")}}、角の丸めパラメーター、あるいはその両方を指定することができます。
 
 ```plain
-polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-percentage> ]# )
 ```
 
-この関数は、カンマ区切りの座標ペアのリストを受け取ります。それぞれのペアは空白で区切られた 2 つの `<length-percentage>` 値で構成され、_xi_ と _yi_ のペアを表します。これらの値は、位置 _i_（2 本の線が交わる頂点）における多角形の x 軸および y 軸座標を表します。
+最初の引数はオプションで、以下のいずれか、または両方を空白で区切って指定できます。
+
+- SVG の {{SVGAttr("fill-rule")}} の値で、`nonzero` または `evenodd` のいずれかであり、多角形の図形を塗りつぶす際に使用されているアルゴリズムを指定します。
+- キーワード [`round`](/ja/docs/Web/CSS/Reference/Values/basic-shape/polygon#round_length) の後に、空白を挟んで {{cssxref("length")}} の値を続けます。これにより、多角形の角を丸くすることが指定され、`<length>` は角の半径を指定します。
+
+それぞれの座標ペアは、空白で区切られた 2 つの `<length-percentage>` 値で構成されます。これらの値は、多角形の頂点の X 軸および Y 座標を表します。
 
 ### パスの構文
 
@@ -285,7 +292,7 @@ div {
 
 ## 関連情報
 
-- このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
+- このデータ型を使用するプロパティ: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
 - SVG のシェイプ要素: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール

@@ -40,7 +40,7 @@ sayings.size; // 0
 
 Tradicionalmente, {{jsxref("Object", "objetos", "", 1)}} tem sido usado para mapear strings para valores. Objetos permitem que você defina chaves para valores, recupere esses valores, exclua chaves e detecte se algo está armazenado em uma chave. Objetos `Map`, contudo, possuem algumas vantagens que os tornam mapas melhores.
 
-- As chaves de um `Objeto` são {{jsxref("Global_Objects/String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
+- As chaves de um `Objeto` são {{jsxref("String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
 - Você pode obter o tamanho de um `Map` facilmente enquanto que para um `Object`, você tem que obter manualmente o seu tamanho.
 - A iteração de mapas é por ordem de inserção dos elementos.
 - Um `Object` tem um protótipo, então existem chaves padrão no mapa. (este pode ser ignorado usando `map = Object.create(null)`).

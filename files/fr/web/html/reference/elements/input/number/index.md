@@ -1,13 +1,16 @@
 ---
-title: <input type="number">
+title: Valeur d'attribut HTML `<input type="number">`
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
-  sourceCommit: c601bb5553d19f854792c78ab89624466ce2181d
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`number`** permettent à un·e utilisateur·ice de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
+Les éléments {{HTMLElement("input")}} de type **`number`** permettent à un·e utilisateur·ice de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs qui ne sont pas numériques.
 
 Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
+
+Sur les navigateurs qui ne prennent pas en charge les champs de type `number`, un champ `number` est ramené à un champ de type `text`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
@@ -31,8 +34,6 @@ label {
 }
 ```
 
-Sur les navigateurs qui ne prennent pas en charge les champs de type `number`, un champ `number` est ramené à un champ de type `text`.
-
 ## Valeur
 
 Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
@@ -53,31 +54,31 @@ La valeur de cet attribut est l'identifiant {{DOMxRef("Element.id", "id")}} d'un
 
 ### `max`
 
-La valeur maximale qui peut être acceptée pour ce champ. Si la valeur du champ portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) dépasse ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'aura pas de maximum.
+La valeur maximale qui peut être acceptée pour ce champ. Si la valeur du champ portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) dépasse ce seuil, l'élément [ne peut pas être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'a pas de maximum.
 
 Cette valeur doit être supérieure ou égale à l'attribut `min`.
 
 ### `min`
 
-La valeur minimale qui peut être acceptée pour ce champ. Si la valeur du champ portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) est inférieure à ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'aura pas de minimum.
+La valeur minimale qui peut être acceptée pour ce champ. Si la valeur du champ portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) est inférieure à ce seuil, l'élément [ne peut pas être validé](/fr/docs/Web/HTML/Guides/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'a pas de minimum.
 
 Cette valeur doit être inférieure ou égale à l'attribut `max`.
 
 ### `placeholder`
 
-L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ contenir de saut à la ligne.
+L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur·ice quant à l'information attendue dans le champ. Cet attribut doit être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
+Si le contenu du contrôle respecte une direction donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
 
 > [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [les libellés de `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
+> On évite, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et, car il peut causer certains problèmes avec le contenu. Voir [les libellés de `<input>`](/fr/docs/Web/HTML/Reference/Elements/input#libellés) pour plus d'informations.
 
 ### `readonly`
 
-Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` de l'interface {{DOMxRef("HTMLInputElement")}}.
+Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée avec du code JavaScript, qui définit la propriété `value` de l'interface {{DOMxRef("HTMLInputElement")}}.
 
 > [!NOTE]
-> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'a pas d'effet si l'attribut `readonly` est également présent.
 
 ### `step`
 
@@ -101,10 +102,10 @@ Le type de champ `number` doit uniquement être utilisé pour des nombres incré
 Les éléments `<input type="number">` peuvent simplifier votre travail lors de la création de l'interface utilisateur et de la logique pour la saisie de nombres dans un formulaire. Lorsque vous créez un champ de type number avec la valeur `type` appropriée, vous bénéficiez d'une validation automatique du fait que le texte saisi est un nombre, ainsi que généralement d'un ensemble de boutons pour incrémenter ou décrémenter la valeur.
 
 > [!WARNING]
-> Logiquement, il ne devrait pas être possible de saisir des caractères autres que des chiffres dans un champ de type nombre. Certains navigateurs autorisent les caractères invalides, d'autres non&nbsp;; voir [le bogue Firefox 1398528 <sup>(angl.)</sup>](https://bugzil.la/1398528).
+> Logiquement, il ne doit pas être possible de saisir des caractères autres que des chiffres dans un champ de type nombre. Certains navigateurs autorisent les caractères invalides, d'autres non&nbsp;; voir [le bogue Firefox 1398528 <sup>(angl.)</sup>](https://bugzil.la/1398528).
 
 > [!NOTE]
-> Un·e utilisateur·rice peut modifier votre code HTML en arrière-plan, votre site ne doit donc pas utiliser la validation côté client à des fins de sécurité. Vous devez vérifier côté serveur toute transaction dans laquelle la valeur fournie peut avoir des implications en matière de sécurité, quelle qu'en soit la nature.
+> Un·e utilisateur·ice peut modifier votre code HTML en arrière-plan, votre site ne doit donc pas utiliser la validation côté client à des fins de sécurité. Vous devez vérifier côté serveur toute transaction dans laquelle la valeur fournie peut avoir des implications en matière de sécurité, quelle qu'en soit la nature.
 
 De plus, les navigateurs mobiles peuvent adapter leur ergonomie en affichant un clavier adapté à la saisie de valeur numérique lorsque l'utilisateur·ice appuie sur un tel contrôle.
 
@@ -122,7 +123,7 @@ Dans sa forme la plus simple, on peut implémenter un contrôle de saisie numér
 Un champ de type nombre est considéré comme valide lorsqu'il est vide ou lorsqu'un seul nombre est saisi, mais il est invalide dans les autres cas. Si l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est utilisé, le champ n'est plus considéré comme valide lorsqu'il est vide.
 
 > [!NOTE]
-> N'importe quel nombre est une valeur acceptable, tant qu'il s'agit d'[un nombre à virgule flottante valide](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (c'est-à-dire, ni [NaN](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ni [Infinity](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
+> N'importe quel nombre est une valeur acceptable, tant qu'il s'agit [d'un nombre à virgule flottante valide](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (c'est-à-dire, ni [NaN](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ni [Infinity](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
 ### Indicateurs de saisie
 
@@ -146,7 +147,7 @@ Par défaut, les boutons haut et bas fournis pour incrémenter ou décrémenter 
 
 {{EmbedLiveSample("Paramétrer la taille de l'incrément", 600, 40)}}
 
-Dans cet exemple, on peut voir que les curseurs permettent d'augmenter ou de réduire la valeur de 10 (et non de 1). Il est toujours possible de saisir manuellement un nombre qui n'est pas un multiple de 10 mais la valeur sera alors considérée invalide.
+Dans cet exemple, on peut voir que les curseurs permettent d'augmenter ou de réduire la valeur de 10 (et non de 1). Il est toujours possible de saisir manuellement un nombre qui n'est pas un multiple de 10 mais la valeur est alors considérée invalide.
 
 ### Définir un minimum et un maximum
 
@@ -158,11 +159,11 @@ Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/
 
 {{EmbedLiveSample("Définir un minimum et un maximum", 600, 40)}}
 
-Dans cet exemple, les curseurs ne permettent pas de dépasser 100 ou de saisir une valeur inférieure à 0. Il est toujours possible de saisir manuellement un nombre en dehors de ces bornes mais la valeur sera alors considérée invalide.
+Dans cet exemple, les curseurs ne permettent pas de dépasser 100 ou de saisir une valeur inférieure à 0. Il est toujours possible de saisir manuellement un nombre en dehors de ces bornes mais la valeur est alors considérée invalide.
 
 ### Autoriser les valeurs décimales
 
-Un problème avec les champs de type nombre est que leur pas est de 1 par défaut. Si vous essayez de saisir un nombre avec une valeur décimale qui n'est pas un entier (comme «&nbsp;1.1&nbsp;»), il sera considéré comme invalide. Notez que des valeurs comme «&nbsp;1.0&nbsp;» sont considérées comme valides car elles sont numériquement équivalentes à des entiers. Si vous souhaitez saisir des valeurs avec des fractions, vous devrez l'indiquer dans la valeur de l'attribut `step` (par exemple, `step="0.01"` pour autoriser les décimales à deux chiffres après la virgule). Voici un exemple de base&nbsp;:
+Un problème avec les champs de type nombre est que leur pas est de 1 par défaut. Si vous essayez de saisir un nombre avec une valeur décimale qui n'est pas un entier (comme «&nbsp;1.1&nbsp;»), il est considéré comme invalide. Notez que des valeurs comme «&nbsp;1.0&nbsp;» sont considérées comme valides, car elles sont numériquement équivalentes à des entiers. Si vous souhaitez saisir des valeurs avec des fractions, vous devez l'indiquer dans la valeur de l'attribut `step` (par exemple, `step="0.01"` pour autoriser les décimales à deux chiffres après la virgule). Voici un exemple de base&nbsp;:
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -178,7 +179,7 @@ Si vous souhaitez autoriser n'importe quelle valeur décimale, vous pouvez défi
 
 Les éléments {{HTMLElement("input")}} de type `number` ne prennent pas en charge les attributs de dimensionnement de formulaire comme [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Vous devez utiliser le [CSS](/fr/docs/Web/CSS) pour modifier la taille de ces contrôles.
 
-Par exemple, pour ajuster la largeur du champ afin qu'il soit juste assez large pour saisir un nombre à trois chiffres, on peut modifier notre HTML pour inclure un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) et raccourcir l'indication de saisie, car le champ serait trop étroit pour le texte utilisé jusqu'à présent&nbsp;:
+Par exemple, pour ajuster la largeur du champ afin qu'il soit juste assez large pour saisir un nombre à trois chiffres, on peut modifier notre HTML pour inclure un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) et raccourcir l'indication de saisie, car le champ est trop étroit pour le texte utilisé jusqu'à présent&nbsp;:
 
 ```html
 <input
@@ -190,7 +191,7 @@ Par exemple, pour ajuster la largeur du champ afin qu'il soit juste assez large 
   id="number" />
 ```
 
-Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'`id` `#number`&nbsp;:
+Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le sélecteur d'un `id` `#number`&nbsp;:
 
 ```css
 #number {
@@ -198,7 +199,7 @@ Ensuite, nous ajoutons du CSS pour réduire la largeur de l'élément avec le s�
 }
 ```
 
-Le résultat ressemblera à&nbsp;:
+Le résultat ressemble à&nbsp;:
 
 {{EmbedLiveSample("Paramétrer la taille du contrôle", 600, 40)}}
 
@@ -252,6 +253,12 @@ L'exemple suivant illustre toutes ces fonctionnalités, ainsi que l'utilisation 
     <input type="submit" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("Validation", 600, 80)}}
@@ -344,7 +351,13 @@ Le code HTML ressemble à ceci&nbsp;:
 </form>
 ```
 
-Vous remarquerez que nous utilisons de nombreux attributs déjà abordés plus haut dans l'article. Comme nous voulons accepter une valeur en mètres avec des centimètres, nous avons défini la valeur de `step` à `0.01`, afin que des valeurs comme _1.78_ ne soient pas considérées comme invalides. Nous avons également ajouté un texte indicatif pour ce champ.
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+Remarquez que nous utilisons de nombreux attributs déjà abordés plus haut dans l'article. Comme nous voulons accepter une valeur en mètres avec des centimètres, nous avons défini la valeur de `step` à `0.01`, afin que des valeurs comme _1.78_ ne soient pas considérées comme invalides. Nous avons également ajouté un texte indicatif pour ce champ.
 
 Nous avons masqué les champs pour les pieds et les pouces initialement en utilisant `style="display: none;"`, de sorte que les mètres soient le type de saisie par défaut.
 
@@ -421,12 +434,12 @@ switchBtn.addEventListener("click", () => {
 
 Après avoir déclaré quelques variables, un gestionnaire d'évènements est ajouté au `button` pour gérer le mécanisme de bascule. Cela consiste à changer la `class` du bouton et le {{HTMLElement("label")}}, et à mettre à jour les valeurs affichées des deux groupes de champs lors de l'appui sur le bouton.
 
-(Notez qu'il n'y a pas ici de conversion entre mètres et pieds/pouces, ce qu'une application web réelle ferait probablement.)
+(Notez qu'il n'y a pas ici de conversion entre mètres et pieds/pouces, ce qu'une application web réelle fait probablement.)
 
 > [!NOTE]
-> Lorsque l'utilisateur·ice clique sur le bouton, l'attribut `required` est retiré des champs que nous masquons, et l'attribut `value` est vidé. Cela permet d'envoyer le formulaire même si les deux groupes de champs ne sont pas remplis. Cela garantit aussi que le formulaire n'enverra pas de données non souhaitées.
+> Lorsque l'utilisateur·ice clique sur le bouton, l'attribut `required` est retiré des champs que nous masquons, et l'attribut `value` est vidé. Cela permet d'envoyer le formulaire même si les deux groupes de champs ne sont pas remplis. Cela garantit aussi que le formulaire n'envoie pas de données non souhaitées.
 >
-> Si vous ne faisiez pas cela, il faudrait remplir à la fois les champs pieds/pouces **et** mètres pour pouvoir envoyer le formulaire&nbsp;!
+> Si vous ne faisiez pas cela, il faut remplir à la fois les champs pieds/pouces **et** mètres pour pouvoir envoyer le formulaire&nbsp;!
 
 ## Résumé technique
 
@@ -463,14 +476,6 @@ Après avoir déclaré quelques variables, un gestionnaire d'évènements est aj
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td><p>{{DOMxRef("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        {{DOMxRef("HTMLInputElement.select", "select()")}},
-        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}},
-        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

@@ -1,11 +1,12 @@
 ---
-title: "<small> : l'élément de commentaire en marge"
+title: "Élément HTML `<small>` : l'élément de commentaire en marge"
+short-title: <small>
 slug: Web/HTML/Reference/Elements/small
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 87adaa5384b1015690f3435ce0ba64ac097764eb
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<small>`** représente des commentaires en marge et des mentions en petits caractères, comme les textes de droits d'auteur et les mentions légales, indépendamment de sa présentation visuelle. Par défaut, il affiche le texte qu'il contient avec une taille de police inférieure, par exemple de `small` à `x-small`.
+L'élément [HTML](/fr/docs/Web/HTML) **`<small>`** représente des commentaires en marge et des mentions en petits caractères, comme les textes de droits d'auteur·ice et les mentions légales, indépendamment de sa présentation visuelle. Par défaut, il affiche le texte qu'il contient avec une taille de police inférieure, par exemple de `small` à `x-small`.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;small&gt;", "tabbed-shorter")}}
 

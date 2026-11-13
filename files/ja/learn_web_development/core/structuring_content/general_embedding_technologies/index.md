@@ -3,7 +3,7 @@ title: object から iframe まで — 一般的な埋め込み技術
 short-title: 埋め込み技術
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: f08b3d623c43e0256072013372ba393b5bd1a5a0
 ---
 
 そろそろ、画像、動画、音声を含め、ウェブページに何かを埋め込むコツを実際に使用されていることでしょう。この点では、少し横道にそれて、様々な種類のコンテンツをウェブページに埋め込むことができる要素、{{htmlelement("iframe")}}、{{htmlelement("embed")}}、{{htmlelement("object")}} を見てみたいと思います。 `<iframe>` は他のウェブページを埋め込むためのもので、他の 2 つの要素は PDF ファイルのような外部リソースを埋め込むことができます。
@@ -44,7 +44,7 @@ l10n:
 
 歴史の勉強はここまでにして、次にこれらのいくつかを使用する方法を見ていきましょう。
 
-## 古典的埋め込みの用途で遊ぶ
+## 古典的埋め込みの用途の実践
 
 この記事では、埋め込み技術がどのような用途に有益であるかをすぐに理解していただけるよう、さっそく演習に取り掛かります。ネットの世界では [YouTube](https://www.youtube.com/) がとても有名ですが、その共有機能が利用できることを知らない人がたくさんいます。
 
@@ -140,7 +140,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
 > [!NOTE]
-> [GitHub ページ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できます。
+> [GitHub ページ](/ja/docs/Learn_web_development/Core/Version_control)では、既定で HTTPS 経由でコンテンツを提供できます。
 > 別のホスティングプロバイダーを使用している場合は、 HTTPS でコンテンツを提供するためにどのような対応をしているかを調べる必要があります。
 
 #### 常に `sandbox` 属性を使用する

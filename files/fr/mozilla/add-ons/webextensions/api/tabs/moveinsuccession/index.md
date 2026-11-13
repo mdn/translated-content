@@ -3,8 +3,6 @@ title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 
-{{AddonSidebar}}
-
 Modifie la relation de succession pour un groupe d'onglets.
 
 Using the {{WebExtAPIRef('tabs')}} API, a tab can be assigned a _successor_ tab in the same window. If tab B is the successor of tab A, and tab A is closed while it is the active tab, tab B will be activated next. If tab A doesn't have a successor, then the browser is free to determine which tab to activate next. If tab B is the successor of tab A, then tab A is called a _predecessor_ of tab B. A tab can have at most one successor, but it can have any number of predecessors. A tab cannot take itself or a tab in a different window as a successor.

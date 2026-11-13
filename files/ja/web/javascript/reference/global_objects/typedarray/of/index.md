@@ -3,7 +3,7 @@ title: TypedArray.of()
 short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`TypedArray.of()`** メソッドは、可変長の引数から新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.of()")}} とほぼ同じです。
@@ -78,7 +78,7 @@ Int16Array.of(undefined); // Int16Array [ 0 ]
 
 ## 関連情報
 
-- [`TypedArray.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.of` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.from()")}}

@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: 音声と動画"
-short-title: "試験: 音声と動画"
+short-title: "テスト: 音声と動画"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 l10n:
   sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09

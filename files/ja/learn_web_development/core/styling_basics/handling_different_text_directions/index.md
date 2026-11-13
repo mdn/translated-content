@@ -1,11 +1,10 @@
 ---
 title: テキストの様々な方向の扱い
+short-title: 様々なテキストの方向
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 これまで CSS の学習で出会ったプロパティや数値の多くは、画面の物理的な寸法と結びついていました。例えば、境界線はボックスの上、下、左、右に作成します。これらの物理的な寸法は、横書きで表示されるコンテンツにとてもうまく割り当てられ、既定ではウェブは右書きの言語（アラビア語など）よりも左書きの言語（英語やフランス語など）に対応する傾向があります。
 
@@ -59,7 +58,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-[`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode) プロパティの 3 つの可能な値は次のとおりです。
+{{cssxref("writing-mode")}} プロパティの 3 つの可能な値は次のとおりです。
 
 - `horizontal-tb`: 上から下の方向へブロックが流れます。文は横書きになります。
 - `vertical-rl`: 右から左の方向へブロックが流れます。文は縦書きになります。
@@ -96,7 +95,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
 }
@@ -159,7 +158,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   width: 100px;
@@ -203,7 +202,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   inline-size: 100px;
@@ -250,7 +249,7 @@ body {
 ```css live-sample___logical-mbp
 .wrapper {
   display: flex;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .box {
@@ -317,7 +316,7 @@ h2 {
 .box {
   margin: 10px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   inline-size: 200px;
   writing-mode: horizontal-tb;
 }
@@ -336,10 +335,6 @@ img {
 ### 物理的・論理的のどちらのプロパティを使うべきか
 
 論理的プロパティと値は、物理的に同等のものよりも新しいため、ブラウザーには最近実装されました。 MDN の任意のプロパティページをチェックして、ブラウザーの対応がどの程度前に行われたかを確認できます。複数の書字方向を使用していない場合は、現時点では物理バージョンを使用することをお勧めします。ただし、フレックスボックスやグリッドなどのレイアウトメソッドの処理を始めると、多くの人が理にかなっているため、最終的にはほとんどの場合、人々は論理バージョンに移行することを期待しています。
-
-## 確認テスト
-
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[確認テスト: 書字方向と論理的プロパティ](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)を見てください。
 
 ## まとめ
 

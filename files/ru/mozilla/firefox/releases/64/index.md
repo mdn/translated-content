@@ -57,7 +57,7 @@ _Без изменений._
 
 - Реализовано предложение TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify), чтобы {{jsxref("JSON.stringify")}} не мог возвращать плохо сформированные строки Unicode ([Firefox bug 1469021](https://bugzil.la/1469021)).
 - Проксируемые функции теперь могут быть переданы {{jsxref("Function.prototype.toString")}}`.call()` ([Firefox bug 1440468](https://bugzil.la/1440468)).
-- Если значение не указано, конструктор {{jsxref("WebAssembly.Global")}} будет использовать типизированный 0. Это определяется алгоритмом [`DefaultValue`](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
+- Если значение не указано, конструктор [`WebAssembly.Global`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Global) будет использовать типизированный 0. Это определяется алгоритмом [`DefaultValue`](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
 
 ### API
 

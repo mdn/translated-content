@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`compareExchange()`** de l'objet {{JSxRef("Atomics")}} échange une valeur d'un tableau à un emplacement donné si la valeur qui était dans le tableau correspond à une valeur donnée. Cette méthode renvoie l'ancienne valeur à cet emplacement, qu'il y ait eu remplacement ou non. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un tableau à un emplacement donné si la valeur qui était dans le tableau correspond à une valeur donnée. Cette méthode renvoie l'ancienne valeur à cet emplacement, qu'il y ait eu remplacement ou non. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 ## Syntaxe
 
@@ -40,7 +40,7 @@ L'ancienne valeur à la position définie (`typedArray[index]`). Si la valeur re
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.compareExchange()`
+### Utiliser la méthode `Atomics.compareExchange()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

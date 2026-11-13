@@ -63,7 +63,7 @@ El método `reduce()` ejecuta `callback` una vez por cada elemento presente en e
 
 La primera vez que se llama la función, `valorAnterior` y `valorActual` pueden tener uno de dos valores. Si se proveyó un `valorInicial` al llamar a `reduce`, entonces `valorAnterior` será igual al `valorInicial` y `valorActual` será igual al primer elemento del array. Si no se proveyó un `valorInicial`, entonces `valorAnterior` será igual al primer valor en el `array` y `valorActual` será el segundo.
 
-Si el `array` está vacío y no se proveyó un `valorInicial` lanzará un {{jsxref("Global_Objects/TypeError", "TypeError")}}. Si el `array` tiene un sólo elemento (sin importar la posición) y no se proveyó un `valorInicial`, o si se proveyó un `valorInicial` pero el arreglo está vacío, se retornará ese único valor sin llamar a la `función`.
+Si el `array` está vacío y no se proveyó un `valorInicial` lanzará un {{jsxref("TypeError")}}. Si el `array` tiene un sólo elemento (sin importar la posición) y no se proveyó un `valorInicial`, o si se proveyó un `valorInicial` pero el arreglo está vacío, se retornará ese único valor sin llamar a la `función`.
 
 Suponga que ocurre el siguiente uso de `reduce`:
 

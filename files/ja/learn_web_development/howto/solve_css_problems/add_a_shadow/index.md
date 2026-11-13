@@ -1,11 +1,10 @@
 ---
 title: 要素に影を追加するには
+short-title: 要素に影を追加
 slug: Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、ページ上の任意のボックスに影を追加する方法を紹介します。
 
@@ -45,7 +44,7 @@ button {
   font-weight: bold;
   font-size: 140%;
   background-color: #db1f48;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -58,7 +57,7 @@ button {
 {{EmbedLiveSample("box-shadow-button")}}
 
 > [!NOTE]
-> この例では `inset` を使用していません。これは、シャドウが既定のドロップシャドウであり、シャドウの上にボックスがあることを意味しています。インセットシャドウは、コンテンツがページに押し込まれているかのように、ボックスの内側に現れます。
+> この例では `inset` を使用していません。つまり、デフォルトのドロップシャドウで、ボックスがシャドウの上にあります。インセットシャドウは、コンテンツがページに押し込まれているかのように、ボックスの内側に現れます。
 
 ## 関連情報
 

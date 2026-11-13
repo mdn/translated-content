@@ -257,7 +257,7 @@ btn.addEventListener("click", () => {
 これらのボタン型は `<input>` 要素に同じ `type` 値を使用することでも作成することができます。[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button) です。しかしこれらは `<button>` と比べると多くの欠点があります。そのため、代わりに `<button>` を使用しましょう。
 
 > [!NOTE]
-> Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> には無料のレッスン [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) があり、この記事で以前扱ったフォームの基本事項について、有益な対話形式の復習を提供します。
+> Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> には無料のレッスン [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) があり、この記事で以前扱ったフォームの基本事項について、有益な対話形式の復習を提供します。
 
 ## アクセシビリティに関する余談
 
@@ -477,7 +477,7 @@ btn.addEventListener("click", () => {
 
 ## フォーム検証
 
-先ほど、ブラウザーが指定した基本的なクライアントサイド検ォーム検証について見てきました。`required` 属性は、フォームを送信する前にフィールドへの入力が必須であることを指定するために使用されます。また、メールアドレス、URL、数値などの特定の値型に対して、正しい値型が入力されているかどうかもチェックします。検証が重要な理由は主に 2 つあります。
+先ほど、ブラウザーが指定した基本的なクライアントサイドフォーム検証について見てきました。`required` 属性は、フォームを送信する前にフィールドへの入力が必須であることを指定するために使用されます。また、メールアドレス、URL、数値などの特定の値型に対して、正しい値型が入力されているかどうかもチェックします。検証が重要な理由は主に 2 つあります。
 
 - データが正しい形式で送信されることを確認し、アプリケーションでエラーが発生しないようにします。
 - データがセキュリティ上の問題を発生させないようにします。悪意のある者は、不安全なアプリケーションにおいてデータベースを削除したりシステムを制御したりするコマンドを実行可能にするために、仕様上、特定の形式でデータを送信する方法を知っています。

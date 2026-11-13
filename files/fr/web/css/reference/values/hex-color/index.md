@@ -1,9 +1,9 @@
 ---
-title: <hex-color>
+title: Type CSS `<hex-color>`
+short-title: <hex-color>
 slug: Web/CSS/Reference/Values/hex-color
-original_slug: Web/CSS/hex-color
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hex-color>`** est une notation permettant de décrire la _syntaxe de couleur hexadécimale_ d'une couleur [sRGB](/fr/docs/Glossary/RGB) en utilisant ses composantes principales (rouge, vert, bleu) écrites sous forme de nombres hexadécimaux, ainsi que sa transparence.

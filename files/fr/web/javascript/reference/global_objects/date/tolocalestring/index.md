@@ -164,7 +164,7 @@ console.log(date.toLocaleString("en-US", { hour12: false }));
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DateTimeFormat")}}
+- L'objet natif {{JSxRef("Intl.DateTimeFormat")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleDateString()")}}
 - La méthode {{JSxRef("Date.prototype.toLocaleTimeString()")}}
 - La méthode {{JSxRef("Date.prototype.toString()")}}

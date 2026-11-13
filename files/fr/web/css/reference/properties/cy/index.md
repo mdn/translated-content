@@ -1,8 +1,9 @@
 ---
-title: cy
+title: Propriété CSS `cy`
+short-title: cy
 slug: Web/CSS/Reference/Properties/cy
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cy`** définit le point central sur l'axe des ordonnées d'un élément SVG {{SVGElement("circle")}} ou {{SVGElement("ellipse")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("cy")}} de l'élément.
@@ -79,7 +80,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Définir la coordonnée de l'axe y d'un cercle et d'une ellipse", 300, 180)}}
 
-Le centre du cercle mis en forme est à `30px` du bord supérieur de la zone d'affichage SVG et l'ellipse mise en forme est à `100px` de ce bord, comme défini dans les valeurs de la propriété CSS `cy`. Les centres des formes non stylisées sont tous deux à `50px` du bord supérieur de la zone d'affichage SVG, comme défini dans leurs valeurs de l'attribut SVG `cy`.
+Le centre du cercle mis en forme est à `30px` du bord supérieur de la zone d'affichage SVG et l'ellipse mise en forme est à `100px` de ce bord, comme défini dans les valeurs de la propriété CSS `cy`. Les centres des formes qui ne sont pas mises en forme sont tous deux à `50px` du bord supérieur de la zone d'affichage SVG, comme défini dans leurs valeurs de l'attribut SVG `cy`.
 
 ### Coordonnées de l'axe y en valeurs de pourcentage
 

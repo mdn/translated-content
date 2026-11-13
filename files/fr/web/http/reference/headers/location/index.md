@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Location`** indique l'URL vers laquelle rediriger une page.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Location`** indique l'URL vers laquelle rediriger une page.
 Il n'a de signification que lorsqu'il est envoyé avec une [réponse de redirection](/fr/docs/Web/HTTP/Reference/Status#redirection_messages) `3XX` ou une réponse de statut {{HTTPStatus("201", "201 Created")}}.
 
 Lors des redirections, la méthode HTTP utilisée pour effectuer la requête redirigée afin d'obtenir la page pointée par `Location` dépend de la méthode d'origine et du type de redirection&nbsp;:
@@ -17,7 +17,7 @@ Lors des redirections, la méthode HTTP utilisée pour effectuer la requête red
 
 Toutes les réponses avec l'un des codes de statut ci-dessus incluent un en-tête `Location`.
 
-En cas de création de ressource, il indique l'URL de la ressource nouvellement créée afin qu'un·e client·e puisse la demander immédiatement.
+En cas de création de ressource, il indique l'URL de la ressource nouvellement créée afin qu'un client puisse la demander immédiatement.
 
 `Location` et {{HTTPHeader("Content-Location")}} sont différents.
 `Content-Location` indique l'URL à utiliser pour accéder directement à la ressource à l'avenir lorsque [la négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) a eu lieu.

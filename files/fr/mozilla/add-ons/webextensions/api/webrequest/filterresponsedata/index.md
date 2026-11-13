@@ -3,8 +3,6 @@ title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
 
-{{AddonSidebar}}
-
 Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.
 Vous pouvez ensuite utiliser le filtre de flux pour surveiller et modifier la réponse. Vous appelez typiquement cette fonction à partir d'un écouteur d'événements `webRequest`.
 

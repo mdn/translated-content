@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Intl.DateTimeFormat`** オブジェクトは、言語に応じた日付と時刻の書式化を可能にします。
+**`Intl.DateTimeFormat`** オブジェクトで、言語を考慮した日付と時刻の書式化ができます。
 
 {{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat")}}
 
@@ -40,29 +40,29 @@ console.log(
 ## 静的メソッド
 
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-  - : 指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく対応するものを、配列に収めて返します。
 
 ## インスタンスプロパティ
 
-これらのプロパティは `Intl.DateTimeFormat.prototype` 上で定義され、すべての `Intl.DateTimeFormat` インスタンスで共有されます。
+これらのプロパティは `Intl.DateTimeFormat.prototype` で定義されており、すべての `Intl.DateTimeFormat` インスタンスで共有されます。
 
 - {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
-  - : このインスタンスオブジェクトを作成したコンストラクター関数。`Intl.DateTimeFormat` インスタンスの場合、初期値は {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}} コンストラクターです。
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`Intl.DateTimeFormat` インスタンスの場合、初期値は {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}} コンストラクターとなります。
 - `Intl.DateTimeFormat.prototype[Symbol.toStringTag]`
-  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列 `"Intl.DateTimeFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.DateTimeFormat"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-  - : ロケールおよびこの `DateTimeFormat` オブジェクトの書式化オプションに則って日付を書式化するゲッター関数です。
+  - : この `DateTimeFormat` オブジェクトのロケールおよび書式化オプションに従って日時を書式化するゲッター関数です。
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、この `DateTimeFormat` インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日付の範囲を書式化します。
+  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、この `DateTimeFormat` インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日時の範囲を書式化します。
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、書式化された日付の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。
+  - : このメソッドは 2 つの [Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) を受け取り、書式化された日時の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
-  - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
+  - : ロケールを考慮した書式化に利用できる、日時文字列を部品単位で表すオブジェクトを配列 ({{jsxref("Array")}}) に収めて返します。
 - {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算されたロケールや書式化オプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
@@ -76,12 +76,12 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 引数無しの toLocaleString は実装に依存します。
 // 既定のロケール、既定のタイムゾーンです。
 console.log(new Intl.DateTimeFormat().format(date));
-// "12/19/2012" は、 en-US ろおけーる（言語）で America/Los_Angeles (UTC-0800) タイムゾーンの場合
+// "12/19/2012" は、 en-US ロケール（言語）で America/Los_Angeles (UTC-0800) タイムゾーンの場合
 ```
 
 ### locales の使用
 
-この例では、ローカライズされた日付と時刻の形式のバリエーションの一部示しています。アプリケーションのユーザーインターフェイスで使用される言語のフォーマットを取得するには、 `locales` 引数を使用して、その言語 (およびおそらくいくつかのフォールバック言語) を指定してください。
+この例では、ローカライズされた日付と時刻の形式のバリエーションの一部を示しています。アプリケーションのユーザーインターフェイスで使用される言語のフォーマットを取得するには、 `locales` 引数を使用して、その言語 (およびおそらくいくつかの代替言語) を指定してください。
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

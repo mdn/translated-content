@@ -1,8 +1,9 @@
 ---
-title: grid-auto-columns
+title: Propriété CSS `grid-auto-columns`
+short-title: grid-auto-columns
 slug: Web/CSS/Reference/Properties/grid-auto-columns
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-auto-columns`** définit la taille d'une colonne de grille créée implicitement, d'une {{Glossary("grid tracks", "piste")}} ou d'un motif de pistes.

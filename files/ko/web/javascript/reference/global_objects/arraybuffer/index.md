@@ -42,7 +42,7 @@ l10n:
 
 ## 정적 속성
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer/Symbol.species", "get ArrayBuffer[@@species]")}}
   - : 파생 객체를 만드는 데 사용되는 생성자 함수입니다.
 
 ## 정적 메서드

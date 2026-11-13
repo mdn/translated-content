@@ -3,12 +3,12 @@ title: "HTMLTableSectionElement : méthode deleteRow()"
 short-title: deleteRow()
 slug: Web/API/HTMLTableSectionElement/deleteRow
 l10n:
-  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`deleteRow()`** de l'interface {{DOMxRef("HTMLTableSectionElement")}} supprime une ligne spécifique ({{HTMLElement("tr")}}) d'une {{HTMLElement("section")}} donnée.
+La méthode **`deleteRow()`** de l'interface {{DOMxRef("HTMLTableSectionElement")}} supprime une ligne spécifique ({{HTMLElement("tr")}}) de l'élément de section de tableau donné ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} ou {{HTMLElement("tbody")}}).
 
 ## Syntaxe
 
@@ -19,8 +19,7 @@ deleteRow(index)
 ### Paramètres
 
 - `index`
-  - : `index` est un entier représentant la ligne à supprimer.
-    Cependant, l'index spécial `-1` peut être utilisé pour supprimer la toute dernière ligne de la section.
+  - : L'indice de la ligne à supprimer dans la collection {{DOMxRef("HTMLTableSectionElement.rows", "rows")}}. Si `index` vaut `-1`, la dernière ligne est supprimée.
 
 ### Valeur de retour
 
@@ -29,7 +28,7 @@ Aucune ({{JSxRef("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{DOMxRef("DOMException")}}
-  - : Levée si `index` est supérieur ou égal au nombre de lignes disponibles ou est une valeur négative autre que `-1`.
+  - : Levée si `index` est supérieur ou égal au nombre de lignes ou s'il est inférieur à `-1`.
 
 ## Exemples
 
@@ -125,4 +124,6 @@ removeButton.addEventListener("click", () => {
 
 ## Voir aussi
 
+- La méthode {{DOMxRef("HTMLTableRowElement.deleteCell()")}}
 - La méthode {{DOMxRef("HTMLTableElement.deleteRow()")}}
+- La méthode {{DOMxRef("HTMLTableSectionElement.insertRow()")}}

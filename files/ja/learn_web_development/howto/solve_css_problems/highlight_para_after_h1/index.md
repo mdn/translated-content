@@ -1,11 +1,10 @@
 ---
 title: 見出しの直後に来た段落を強調表示するには
+short-title: 見出しの次の段落を強調表示
 slug: Learn_web_development/Howto/Solve_CSS_problems/Highlight_para_after_h1
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、見出しの直後にある段落を強調表示する方法を紹介します。
 
@@ -19,16 +18,14 @@ CSS の [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors) のグループ
 
 ```html live-sample___highlight_h1_plus_para
 <div class="wrapper">
-  <h1>A heading</h1>
+  <h1>見出し</h1>
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    野菜は体に良いものです。だから、コールラビ、青ネギ、大根、アマランサス、タアサイ、トマティーヨ、メロン、小豆、ニンニクをもっと食べましょう。
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    フダンソウ、ビートの葉、コーン、サトイモの葉、エンダイブ、ウリ。パセリ、エシャロット、ズッキーニ、タアサイ、エンドウの芽、ソラマメ、コラードグリーン、タンポポ、オクラ、ワカメ、トマト。
+    タンポポ、キュウリ、アースナッツ、ピーナッツ、サトイモの葉、ズッキーニ。
   </p>
 </div>
 ```

@@ -2,16 +2,16 @@
 title: Description accessible
 slug: Glossary/Accessible_description
 l10n:
-  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 Une **description accessible** (<i lang="en">accessible description</i> en anglais) est la description d'un élément d'interface utilisateur qui fournit des informations supplémentaires pour aider les utilisateur·ice·s de technologies d'assistance à comprendre l'élément UI et son contexte. Elle est associée à un élément HTML ou SVG et donne aux utilisateur·ice·s un contexte supplémentaire sur son but au-delà de ce qui est fourni par le {{Glossary("Accessible_name", "nom accessible")}} de l'élément. C'est particulièrement important pour les utilisateur·ice·s qui se servent de technologies d'assistance telles que {{Glossary("Screen_reader", "lecteurs d'écrans")}}. La description accessible d'un élément fait partie de {{Glossary("Accessibility_tree", "l'arbre d'accessibilité")}}.
 
 Par exemple, le nom accessible d'un tableau ({{HTMLElement("table")}}) est fourni par sa première légende ({{HTMLElement("caption")}}). Dans le cas de tableaux de données complexes, une ou deux phrases décrivant le tableau peuvent fournir une description. Cela peut être un paragraphe juste avant ou après le tableau, tant visuellement que dans l'ordre du code source. S'il se trouve ailleurs dans l'ordre source, ou pour rendre l'association explicite, l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) peut être utilisé pour associer le tableau à sa description.
 
-De même, lorsqu'un·e utilisateur·ice doit créer un mot de passe, le `<label>` pour l'élément HTML {{HTMLElement("input")}} de type `password` fournit son nom accessible. Une bonne description accessible inclut les exigences du mot de passe de manière visible pour tous les utilisateur·ice·s. Elle peut être explicitement associée à l'entrée via son attribut `aria-describedby`, qui l'ajoute à l'arbre d'accessibilité en tant que «&nbsp;description&nbsp;» pour ce nœud.
+De même, lorsqu'un·e utilisateur·ice doit créer un mot de passe, le `<label>` pour l'élément HTML {{HTMLElement("input")}} de type `password` fournit son nom accessible. Une bonne description accessible inclut les exigences du mot de passe de manière visible pour tous les utilisateur·ice·s. Elle peut être explicitement associée à l'entrée par son attribut `aria-describedby`, qui l'ajoute à l'arbre d'accessibilité en tant que «&nbsp;description&nbsp;» pour ce nœud.
 
-Les descriptions sont réduites à des chaînes de texte. Dans notre exemple de mot de passe, si la valeur de l'attribut `aria-describedby` de l'entrée est l'`id` d'un élément de liste non ordonnée ({{HTMLElement("ul")}}) contenant une liste de conditions, la description est le texte concaténé et les équivalents texte de tous les éléments de la liste.
+Les descriptions sont réduites à des chaînes de caractères de texte. Dans notre exemple de mot de passe, si la valeur de l'attribut `aria-describedby` de l'entrée est un `id` d'un élément de liste non ordonnée ({{HTMLElement("ul")}}) contenant une liste de conditions, la description est le texte concaténé et les équivalents texte de tous les éléments de la liste.
 
 Vous pouvez inspecter la description accessible de tout élément sur votre page&nbsp;: consultez l'onglet d'accessibilité des outils de développement de votre navigateur, qui fournit les informations d'accessibilité pour l'élément actuellement sélectionné.
 

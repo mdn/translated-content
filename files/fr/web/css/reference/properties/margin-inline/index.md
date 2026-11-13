@@ -1,11 +1,12 @@
 ---
-title: margin-inline
+title: Propriété CSS `margin-inline`
+short-title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin-inline`** est une propriété raccourcie qui définit à la fois les marges logiques de début et de fin en ligne d'un élément, lesquelles correspondent à des marges physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin-inline`** est une propriété raccourcie qui définit à la fois les marges logiques de début et de fin en incise (<i lang="en">inline</i> en anglais) d'un élément, lesquelles correspondent à des marges physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin-inline")}}
 
@@ -97,7 +98,7 @@ La propriété `margin-inline` peut être définie avec une ou deux valeurs.
 
 ### Valeurs
 
-La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{CSSxRef("margin", "", "#valeurs")}}.
+La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{CSSxRef("margin-top", "", "#valeurs")}}.
 
 ## Définition formelle
 
@@ -109,7 +110,7 @@ La propriété `margin-inline` peut prendre les mêmes valeurs que la propriét�
 
 ## Exemples
 
-### Définir les marges de début et de fin en ligne
+### Définir les marges de début et de fin en incise
 
 #### HTML
 
@@ -137,7 +138,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir les marges de début et de fin en ligne", 140, 140)}}
+{{EmbedLiveSample("Définir les marges de début et de fin en incise", 140, 140)}}
 
 ## Spécifications
 

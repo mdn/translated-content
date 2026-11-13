@@ -64,7 +64,7 @@ WebSocket API は、ウェブソケット接続を作成して使用するため
 
 - [AsyncAPI](https://www.asyncapi.com/): WebSocket のようなプロトコルに基づいたイベントドリブン型アーキテクチャを記述するための仕様です。 OpenAPI 仕様で REST API を記述するのと同じように、 WebSocket ベースの API を記述するために使用することができます。 [WebSocket で AsyncAPI の利用を検討すべき理由](https://www.asyncapi.com/blog/websocket-part1)と[利用する方法](https://www.asyncapi.com/blog/websocket-part2)を紹介します。
 - [µWebSockets](https://github.com/uNetworking/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
-- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
+- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティーの [Node.js](https://nodejs.org) 用転送プロトコルです。
 - [SocketCluster](https://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
 - [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
 - [Total.js](https://www.totaljs.com): [Node.js](https://nodejs.org/en/) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))

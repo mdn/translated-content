@@ -1,11 +1,14 @@
 ---
-title: Firefox 32 for developers
+title: Firefox 32 開発者向けリリースノート
+short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+  sourceCommit: c13266140a9b05549d7c8616973cb17d9357467b
 ---
 
-## ウェブ開発者向けの変更点一覧
+Firefox 32 は、米国時間 2014 年 9 月 2 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox および Gecko の開発者、アドオン開発者にも有益な主な変更点を掲載しています。
+
+## ウェブ開発者向けの変更点
 
 ### 開発者ツール
 
@@ -43,18 +46,18 @@ l10n:
 
 ### インターフェイス/API/DOM
 
-- {{domxref("Navigator/languages", "navigator.languages")}} プロパティおよび {{domxref("Window.languagechange_event", "languagechange")}} イベントを実装しました ([Firefox バグ 889335](https://bugzil.la/889335))。
+- {{domxref("Navigator.languages")}} プロパティおよび {{domxref("Window.languagechange_event", "languagechange")}} イベントを実装しました ([Firefox バグ 889335](https://bugzil.la/889335))。
 - {{domxref("Navigator.vibrate()")}} メソッドの動作が最新の仕様に適合するようになりました。長すぎる振動は切り詰められます ([Firefox バグ 1014581](https://bugzil.la/1014581))。
 - {{domxref("KeyboardEvent.getModifierState()")}} メソッドおよび {{domxref("MouseEvent.getModifierState()")}} メソッドを、`Accel` 仮想モディファイアをサポートするように拡張しました ([Firefox バグ 1009388](https://bugzil.la/1009388))。
 - {{domxref("KeyboardEvent.code")}} プロパティを試験的に実装しました。ただし、release ビルドでは無効化しています ([Firefox バグ 865649](https://bugzil.la/865649))。
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}} で scope が設定されたセレクター (例えば `querySelector(":scope > li")`) を実装しました ([Firefox バグ 528456](https://bugzil.la/528456))。
-- [ウェブアニメーション API](https://dev.w3.org/fxtf/web-animations/) に関して、{{domxref("Document.timeline")}} インターフェイスを実験的に実装しました ([Firefox バグ 998246](https://bugzil.la/998246))。これは設定項目 `layout.web-animations.api.enabled` で制御されており、現在は Nightly および Aurora のみで有効化しています。
-- [データストア API](/ja/docs/Web/API/Data_Store_API) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)で使用可能になりました ([Firefox バグ 949325](https://bugzil.la/949325))。ただし、認定アプリケーションにのみ有効化されています。
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の {{domxref("InstallPhaseEvent")}} インターフェイスおよび {{domxref("InstallEvent")}} インターフェイスを実装しました ([Firefox バグ 967264](https://bugzil.la/967264))。
-- [MSISDN Verification API](/ja/docs/Web/API/MSISDN_Verification_API) を追加しました。特権アプリに対してのみ有効化されています ([Firefox バグ 988469](https://bugzil.la/988469))。
+- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に関して、{{domxref("Document.timeline")}} インターフェイスを実験的に実装しました ([Firefox バグ 998246](https://bugzil.la/998246))。これは設定項目 `layout.web-animations.api.enabled` で制御されており、現在は Nightly および Aurora のみで有効化しています。
+- [データストア API](https://web.archive.org/web/20210613234447/https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Data_Store_API) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)で使用可能になりました ([Firefox バグ 949325](https://bugzil.la/949325))。ただし、認定アプリケーションにのみ有効化されています。
+- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の `InstallPhaseEvent` インターフェイスおよび {{domxref("InstallEvent")}} インターフェイスを実装しました ([Firefox バグ 967264](https://bugzil.la/967264))。
+- MSISDN Verification API を追加しました。特権アプリに対してのみ有効化されています ([Firefox バグ 988469](https://bugzil.la/988469))。
 - [ゲームパッド API](/ja/docs/Web/API/Gamepad_API)を Android 版の Firefox が対応しました ([Firefox バグ 852935](https://bugzil.la/852935))。
 - 仕様や CSS 構文の発展に適合するよう、{{domxref("CSS.escape()")}} を若干変更しました。識別子を `'--'` から始めることが可能になり、2 番目のダッシュ記号はエスケープされません。また、ベンダー識別子はエスケープしません。([Firefox バグ 1008719](https://bugzil.la/1008719))
-- Hit Regions の実装を完全にするために {{domxref("MouseEvent.region")}} が実装されました ([Firefox バグ 979692](https://bugzil.la/979692)).
+- Hit Regions の実装を完全にするために `MouseEvent.region` が実装されました ([Firefox バグ 979692](https://bugzil.la/979692)).
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} メソッドは既定では有効になりました ([Firefox バグ 1004579](https://bugzil.la/1004579))。
 - {{domxref("Navigator.doNotTrack")}} プロパティは `'yes'` や `'no'` の代わりに、HTTPの値を反映した `'1'` や `'0'` を返すようになりました ([Firefox バグ 887703](https://bugzil.la/887703))。
 - [XMLHttpRequest.responseURL](/ja/docs/Web/API/XMLHttpRequest/responseURL) が実装されました ([Firefox バグ 998076](https://bugzil.la/998076))。
@@ -69,21 +72,21 @@ _変更なし。_
 
 ### WebRTC
 
-- ストリームのサイズやフレームレートを制限するため、[WebRTC](/ja/docs/Glossary/WebRTC) の {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}、`width`、`height`、`framerate` に新たな制約を与えました ([Firefox バグ 907352](https://bugzil.la/907352)):
+- ストリームのサイズやフレームレートを制限するため、[WebRTC](/ja/docs/Glossary/WebRTC) の {{domxref("Navigator.getUserMedia", "getUserMedia()")}}、`width`、`height`、`framerate` に新たな制約を与えました ([Firefox バグ 907352](https://bugzil.la/907352)):
 
   ```js
-  {
+  const constraints = {
     mandatory: {
       width: { min: 640 },
       height: { min: 480 },
     },
     optional: [
       { width: 650 },
-      { width: { min: 650 }},
+      { width: { min: 650 } },
       { frameRate: 60 },
-      { width: { max: 800 }},
-    ]
-  }
+      { width: { max: 800 } },
+    ],
+  };
   ```
 
 - 前回までコールバック関数を引数として使用していた WebRTC のメソッドは、 JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)でも利用できるようになりました。
@@ -100,15 +103,15 @@ _変更なし。_
 
 DOM オブジェクトではない JavaScript オブジェクトに、Xray vision を適用するようになりました。 [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects)。
 
-`getDataDirectory()` メソッドが [`Addon`](/ja/docs/Mozilla/Add-ons/Add-on_Manager/Addon) インスタンスに追加されました。このメソッドは、現在のプロファイル内で、アドオンがデータを格納するために好ましい場所を返します。
+`getDataDirectory()` メソッドが `Addon` インスタンスに追加されました。このメソッドは、現在のプロファイル内で、アドオンがデータを格納するために好ましい場所を返します。
 
 ### Add-on SDK
 
 #### ハイライト
 
-- `PageMod` に [`exclude`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) オプションを追加しました。
-- `Request` に [`anonymous`](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) オプションを追加しました。
-- [アドオンデバッガー](/ja/docs/Mozilla/Add-ons/Add-on_Debugger)がコンソールとスクラッチパッドを含むようになりました。
+- `PageMod` に [`exclude`](https://web.archive.org/web/20210216122834/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/page-mod#pagemod%28options%29) オプションを追加しました。
+- `Request` に [`anonymous`](https://web.archive.org/web/20201201022954/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/request#request%28options%29) オプションを追加しました。
+- [アドオンデバッガー](https://extensionworkshop.com/documentation/develop/debugging/)がコンソールとスクラッチパッドを含むようになりました。
 
 #### 詳細
 
@@ -119,7 +122,3 @@ DOM オブジェクトではない JavaScript オブジェクトに、Xray visio
 ### XPCOM
 
 - `nsIUDPSocket` インターフェイスは、新しい `nsIUDPSocket.multicastLoopback`、`nsIUDPSocket.multicastInterface`、`nsIUDPSocket.multicastInterfaceAddr` 属性と、 `nsIUDPSocket.joinMulticast()` および `nsIUDPSocket.leaveMulticast()` メソッド が追加されて、マルチキャストにも対応するようになりました。
-
-### 過去のバージョン
-
-{{Firefox_for_developers('31')}}

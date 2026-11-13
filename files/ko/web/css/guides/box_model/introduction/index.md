@@ -55,7 +55,7 @@ original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
     - [초기 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
     - [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [실제 값](/ko/docs/Web/CSS/actual_value)
+    - [실제 값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
   - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

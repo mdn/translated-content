@@ -1,11 +1,15 @@
 ---
-title: <input type="button">
+title: Valeur d'attribut HTML `<input type="button">`
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).
+Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page avec un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).
+
+> [!NOTE]
+> Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -46,9 +50,6 @@ Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comm
 }
 ```
 
-> [!NOTE]
-> Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
-
 ## Valeur
 
 ### Bouton avec une valeur
@@ -87,31 +88,31 @@ Nous allons commencer par créer un bouton simple avec un gestionnaire d'évène
 ```
 
 ```js
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+const bouton = document.querySelector("input");
+const paragraphe = document.querySelector("p");
 
-button.addEventListener("click", updateButton);
+bouton.addEventListener("click", actualiserBouton);
 
-function updateButton() {
-  if (button.value === "Démarrer la machine") {
-    button.value = "Arrêter la machine";
-    paragraph.textContent = "La machine est démarrée !";
+function actualiserBouton() {
+  if (bouton.value === "Démarrer la machine") {
+    bouton.value = "Arrêter la machine";
+    paragraphe.textContent = "La machine est démarrée !";
   } else {
-    button.value = "Démarrer la machine";
-    paragraph.textContent = "La machine est arrêtée.";
+    bouton.value = "Démarrer la machine";
+    paragraphe.textContent = "La machine est arrêtée.";
   }
 }
 ```
 
-Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `btn`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui sera utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produira sur le bouton.
+Dans ce script, on récupère une référence à l'objet {{DOMxRef("HTMLInputElement")}} qui représente l'élément `<input>` du DOM et on stocke cette référence dans la variable `bouton`. {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} pour ensuite lui rattacher une fonction qui est utilisée lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) se produit sur le bouton.
 
 {{EmbedLiveSample("Un bouton simple", 650, 100)}}
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un·e utilisateur·ice de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un·e utilisateur·ice de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on peut ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faut appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>
@@ -121,18 +122,18 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 ```
 
 ```js hidden
-const button = document.querySelector("input");
-const paragraph = document.querySelector("p");
+const bouton = document.querySelector("input");
+const paragraphe = document.querySelector("p");
 
-button.addEventListener("click", updateButton);
+bouton.addEventListener("click", actualiserBouton);
 
-function updateButton() {
-  if (button.value === "Démarrer la machine") {
-    button.value = "Arrêter la machine";
-    paragraph.textContent = "La machine est démarrée !";
+function actualiserBouton() {
+  if (bouton.value === "Démarrer la machine") {
+    bouton.value = "Arrêter la machine";
+    paragraphe.textContent = "La machine est démarrée !";
   } else {
-    button.value = "Démarrer la machine";
-    paragraph.textContent = "La machine est arrêtée.";
+    bouton.value = "Démarrer la machine";
+    paragraphe.textContent = "La machine est arrêtée.";
   }
 }
 ```
@@ -140,7 +141,7 @@ function updateButton() {
 {{EmbedLiveSample("Ajouter des raccourcis clavier", 650, 100)}}
 
 > [!NOTE]
-> Un problème de cet exemple est que l'utilisateur·ice ne saura pas quelle touche utiliser comme raccourci&nbsp;! Sur un site réel, il faudrait fournir cette information d'une manière qui n'interfère pas avec la présentation du site (par exemple en fournissant un lien facilement accessible qui pointe vers une page listant les raccourcis du site).
+> Un problème de cet exemple est que l'utilisateur·ice ne sait pas quelle touche utiliser comme raccourci&nbsp;! Sur un site réel, il faut fournir cette information d'une manière qui n'interfère pas avec la présentation du site (par exemple en fournissant un lien facilement accessible qui pointe vers une page listant les raccourcis du site).
 
 ### Désactiver et activer un bouton
 
@@ -159,16 +160,16 @@ Vous pouvez activer et désactiver des boutons à l'exécution en définissant `
 ```
 
 ```js
-const button = document.querySelector("input");
+const bouton = document.querySelector("input");
 
-button.addEventListener("click", disableButton);
+bouton.addEventListener("click", desactiverBouton);
 
-function disableButton() {
-  button.disabled = true;
-  button.value = "Désactivé";
+function desactiverBouton() {
+  bouton.disabled = true;
+  bouton.value = "Désactivé";
   setTimeout(() => {
-    button.disabled = false;
-    button.value = "Activé";
+    bouton.disabled = false;
+    bouton.value = "Activé";
   }, 2000);
 }
 ```
@@ -191,15 +192,15 @@ L'exemple ci-dessous montre ce comportement. Il est très similaire à l'exemple
 ```
 
 ```js hidden
-const button = document.querySelector("input");
-const fieldset = document.querySelector("fieldset");
+const bouton = document.querySelector("input");
+const groupeChamps = document.querySelector("fieldset");
 
-button.addEventListener("click", disableButton);
+bouton.addEventListener("click", desactiverBouton);
 
-function disableButton() {
-  fieldset.disabled = true;
+function desactiverBouton() {
+  groupeChamps.disabled = true;
   setTimeout(() => {
-    fieldset.disabled = false;
+    groupeChamps.disabled = false;
   }, 2000);
 }
 ```
@@ -207,7 +208,7 @@ function disableButton() {
 {{EmbedLiveSample("Héritage de l'état désactivé", 650, 100)}}
 
 > [!NOTE]
-> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [Firefox boggue 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
+> À la différence des autres navigateurs, Firefox conserve l'état `disabled` d'un élément `<input>` même après le rechargement de la page. Pour contourner ce comportement, définissez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/input#autocomplete) de l'élément `<input>` à `off`. (Voir [bogue Firefox 654072 <sup>(angl.)</sup>](https://bugzil.la/654072) pour plus de détails.)
 
 ## Validation
 
@@ -293,8 +294,8 @@ sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
 };
 
-// On enregistre les coordonnées du pointeur de la souris
-// emouse pointer coordinates, and whether the button is pressed
+// On enregistre les coordonnées du pointeur de la souris,
+// et si le bouton est enfoncé
 let curX;
 let curY;
 let pressed = false;
@@ -339,7 +340,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Exemples", '100%', 600)}}
+{{EmbedLiveSample("Exemples", "100%", 600)}}
 
 ## Résumé technique
 
@@ -367,10 +368,6 @@ draw();
     <tr>
       <td><strong>Interface DOM</strong></td>
       <td>{{DOMxRef("HTMLInputElement")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>Aucune</td>
     </tr>
     <tr>
       <td><strong>Rôle ARIA implicite</strong></td>

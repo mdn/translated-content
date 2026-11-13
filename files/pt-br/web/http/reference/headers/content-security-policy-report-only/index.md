@@ -15,7 +15,7 @@ Para mais informações, veja também este artigo em [Content Security Policy (C
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

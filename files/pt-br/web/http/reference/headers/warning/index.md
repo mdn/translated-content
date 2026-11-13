@@ -18,7 +18,7 @@ O cabeçalho `Warning` geralmente pode ser aplicado para qualquer mensagem, entr
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

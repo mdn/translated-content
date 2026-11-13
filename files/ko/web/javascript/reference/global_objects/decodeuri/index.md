@@ -80,6 +80,6 @@ try {
 
 ## 같이 보기
 
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

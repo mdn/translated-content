@@ -1,20 +1,18 @@
 ---
-title: "<sup>: 上付き文字要素"
+title: "`<sup>` 上付き文字要素"
+short-title: <sup>
 slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
-
-**`<sup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
+**`<sup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを示します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;sup&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+  <em>ピタゴラスの定理</em>は、多くの場合、次の式で表されます。
 </p>
 
 <p>
@@ -40,10 +38,10 @@ p {
 
 例えば、高いベースラインを使用しているビジネスや製品の[ワードマーク](https://ja.wikipedia.org/wiki/ワードマーク)をスタイル付けするには、`<sup>` ではなく CSS を使用してください（例えば {{cssxref("vertical-align")}}）。例えば、 `vertical-align: super` とするか、ベースラインを 50% 上げるのであれば、`vertical-align: 50%` とするかしてください。
 
-`<sup>` の適切な使用例には次のようなものがあります (但し、制約するものではありません)。
+`<sup>` の適切な使用例には次のようなものがあります（但し、これに限ったものではありません）。
 
 - べき乗の表示、例えば "x<sup>3</sup>"。これには、特に複雑な場合には、 [MathML](/ja/docs/Web/MathML) の使用を検討する価値があるかもしれません。以下の[例](#例)の[べき乗](#べき乗)を参照してください
-- 一部の言語で特定の略語を表示する際の [Superior letter](https://en.wikipedia.org/wiki/Superior_letter)。例えば、フランス語では、 "mademoiselle" は "M<sup>lle</sup>" のように略すことができます。例は [Superior lettering](#superior_lettering) を参照してください。
+- 一部の言語で特定の略語を表示する際の [superior lettering](https://en.wikipedia.org/wiki/Superior_letter)。例えば、フランス語では、 "mademoiselle" は "M<sup>lle</sup>" のように略すことができます。例は [Superior lettering](#superior_lettering) を参照してください。
 - 序数の表現、たとえば "fourth." を "4<sup>th</sup>" と表現すること。例は[序数](#序数)を参照してください。
 
 ## 例
@@ -79,13 +77,13 @@ Superior lettering は、厳密には上付き文字と同じではありませ�
 
 英語の "fourth" やスペイン語の "quinto" などの序数は、数字と上付き文字で表示される言語に依存したテキストを使用して略されることがあります。
 
-```html
+```html-nolint
 <p>
-  The ordinal number "fifth" can be abbreviated in various languages as follows:
+  「5 番目」という序数は、さまざまな言語で次のように略すことができます。
 </p>
 <ul>
-  <li>English: 5<sup>th</sup></li>
-  <li>French: 5<sup>ème</sup></li>
+  <li>英語: 5<sup>th</sup></li>
+  <li>フランス語: 5<sup>ème</sup></li>
 </ul>
 ```
 
@@ -99,7 +97,9 @@ Superior lettering は、厳密には上付き文字と同じではありませ�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
@@ -133,8 +133,9 @@ Superior lettering は、厳密には上付き文字と同じではありませ�
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#html_同等物を持つ構造ロール">superscript</a
+          ></code
         >
       </td>
     </tr>
@@ -160,5 +161,5 @@ Superior lettering は、厳密には上付き文字と同じではありませ�
 ## 関連情報
 
 - 下付き文字を表現する HTML の {{HTMLElement("sub")}} 要素。なお、`sub` と `sup` を同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[MathML](/ja/docs/Web/MathML) を用いる必要があります。
-- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup)
+- MathML の [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup) 要素
 - CSS の {{cssxref("vertical-align")}} プロパティ

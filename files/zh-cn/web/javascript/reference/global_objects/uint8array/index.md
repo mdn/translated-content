@@ -23,7 +23,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中元素的字节数，Uint8Array 中返回 1 字节。
 - Uint8Array.length
   - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}。
-- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+- {{jsxref("TypedArray", "Uint8Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 
 ## 静态方法
@@ -93,7 +93,7 @@ var uint8 = new Uint8Array(iterable);
 
 ## 兼容性说明
 
-从 ECMAScript 2015 开始，`Uint8Array` 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 `new` 调用 `Uint8Array` 的构造函数，将会抛出 {{jsxref("TypeError")}} 。
+从 ECMAScript 2015 开始，`Uint8Array` 构造函数需要通过 {{jsxref("new")}} 操作符调用。即日起如果没有使用 `new` 调用 `Uint8Array` 的构造函数，将会抛出 {{jsxref("TypeError")}} 。
 
 ```js example-bad
 var dv = Uint8Array([1, 2, 3]);

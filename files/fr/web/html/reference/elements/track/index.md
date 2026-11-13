@@ -1,15 +1,16 @@
 ---
-title: "<track> : l'élément de piste texte embarquée"
+title: "Élément HTML `<track>` : l'élément de piste texte embarquée"
+short-title: <track>
 slug: Web/HTML/Reference/Elements/track
 l10n:
-  sourceCommit: 41db8c95b49ec2ca65776ef5c2eafed616b1510b
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<track>`** est utilisé comme enfant des éléments média, {{HTMLElement("audio")}} et {{HTMLElement("video")}}.
 Chaque élément track permet de définir une piste texte synchronisée (ou des données temporelles) qui peuvent s'afficher en parallèle avec l'élément média, par exemple pour superposer des sous-titres ou des légendes sur une vidéo ou à côté de pistes audio.
 
 Plusieurs pistes peuvent être définies pour un élément média, contenant différents types de données textuelles synchronisées, ou des données textuelles synchronisées traduites pour différentes langues.
-La donnée utilisée sera soit la piste définie comme piste par défaut, soit un type et une traduction selon les préférences de l'utilisateur·ice.
+La donnée utilisée est soit la piste définie comme piste par défaut, soit un type et une traduction selon les préférences de l'utilisateur·ice.
 
 Les pistes sont formatées au [format WebVTT](/fr/docs/Web/API/WebVTT_API) (fichiers `.vtt`) — Web Video Text Tracks.
 

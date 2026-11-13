@@ -1,8 +1,9 @@
 ---
-title: "<tr> : l'élément de ligne d'un tableau"
+title: "Élément HTML `<tr>` : l'élément de ligne d'un tableau"
+short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tr>`** définit une ligne de cellules dans un tableau. Les cellules de la ligne peuvent ensuite être créées à l'aide d'une combinaison d'éléments {{HTMLElement("td")}} (cellule de données) et {{HTMLElement("th")}} (cellule d'en-tête).
@@ -141,7 +142,7 @@ Cet exemple montre un tableau avec quatre lignes et trois colonnes, où la premi
 
 #### CSS
 
-La pseudo-classe CSS {{CSSxRef(":nth-of-type")}} est utilisée pour sélectionner chaque ligne `impair` et définir la {{CSSxRef("background-color")}} de ces lignes sur une teinte légèrement plus foncée, créant un effet «&nbsp;zebra stripe&nbsp;». Ce fond alterné rend les lignes de données du tableau plus faciles à lire et à parcourir — imaginez avoir de nombreuses lignes et colonnes et essayer de trouver une donnée dans une ligne particulière. De plus, les cellules d'en-tête de ligne (éléments {{HTMLElement("th")}}) sont mises en évidence avec une {{CSSxRef("background-color")}} pour les distinguer des cellules de données (éléments {{HTMLElement("td")}}).
+La pseudo-classe CSS {{CSSxRef(":nth-of-type")}} est utilisée pour sélectionner chaque ligne `impair` et définir la {{CSSxRef("background-color")}} de ces lignes sur une teinte légèrement plus foncée, créant un effet «&nbsp;zébré&nbsp;». Ce fond alterné rend les lignes de données du tableau plus faciles à lire et à parcourir — imaginez avoir de nombreuses lignes et colonnes et essayer de trouver une donnée dans une ligne particulière. De plus, les cellules d'en-tête de ligne (éléments {{HTMLElement("th")}}) sont mises en évidence avec une {{CSSxRef("background-color")}} pour les distinguer des cellules de données (éléments {{HTMLElement("td")}}).
 
 ```css
 tr:nth-of-type(odd) {
@@ -399,12 +400,12 @@ th {
 }
 ```
 
-#### Result
+#### Résultat
 
 {{EmbedLiveSample("Trier les lignes par clic sur les cellules d'en-tête", 650, 100)}}
 
 > [!NOTE]
-> Pour être utilisable et accessible, la cellule d'en-tête de chaque colonne triable doit être identifiable comme un bouton de tri et chacune doit indiquer visuellement et avec l'attribut [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) si la colonne est actuellement triée par ordre croissant ou décroissant. Consultez le [Guide de bonnes pratiques ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/) et l'[exemple de tableau triable <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) pour plus d'informations.
+> Pour être utilisable et accessible, la cellule d'en-tête de chaque colonne triable doit être identifiable comme un bouton de tri et chacune doit indiquer visuellement et avec l'attribut [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) si la colonne est actuellement triée par ordre croissant ou décroissant. Consultez le [Guide de bonnes pratiques ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/) et [l'exemple de tableau triable <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) pour plus d'informations.
 
 ## Résumé technique
 

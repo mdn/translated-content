@@ -1,13 +1,12 @@
 ---
 title: Bandwidth (帯域幅)
 slug: Glossary/Bandwidth
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**帯域幅**は、一定の時間内にデータ接続を通過できる情報量の尺度です。これは、通常、ビット毎秒 (bps) の倍数、例えばメガビット毎秒 (Mbps) やギガビット毎秒 (Gbps)などで測定されます。
 
-帯域幅は、一定の時間内にデータ接続を通過できる情報量の尺度です。これは、通常、メガビット毎秒（Mbps）またはギガビット毎秒（Gbps）などのビット毎秒（bps）の倍数で測定されます。
+## 関連情報
 
-## より詳しく知る
-
-- Wikipedia 上の Bandwidth（英語）
-- Wikipedia 上の [帯域幅](https://ja.wikipedia.org/wiki/帯域幅)
+- [帯域幅](https://ja.wikipedia.org/wiki/帯域幅) - ウィキペディア

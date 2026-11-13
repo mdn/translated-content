@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 original_slug: Learn/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este tutorial estende nosso website [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), adicionando páginas de lista e detalhes para livros e autores. Aqui, aprenderemos sobre visualizações genéricas baseadas em classe e mostraremos como elas podem reduzir a quantidade de código que você precisa escrever para casos de uso comuns. Também abordaremos o tratamento de URLs em mais detalhes, mostrando como executar a correspondência básica de padrões.
 

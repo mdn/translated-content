@@ -3,7 +3,7 @@ title: Iterator.from()
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
 
 **`Iterator.from()`** は静的メソッドで、イテレーターや反復可能オブジェクトから新しい {{jsxref("Iterator")}} オブジェクトを作成します。
@@ -21,7 +21,7 @@ Iterator.from(object)
 
 ### 返値
 
-`object` が反復可能オブジェクトである場合、そのオブジェクトの `[Symbol.iterator]()` メソッドが呼び出され、イテレーターが取得されます。 それ以外の場合は、 `object` がイテレーターであると見なされます。 イテレーターがすでに {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} である場合（つまり、そのプロトタイプチェーンに `Iterator.prototype` がある場合）は、直接返されます。 それ以外の場合は、元のイテレーターをラップする新しい {{jsxref("Iterator")}} オブジェクトが作成されます。
+`object` が反復可能オブジェクトである場合、そのオブジェクトの `[Symbol.iterator]()` メソッドが呼び出され、イテレーターが取得されます。 それ以外の場合は、 `object` がイテレーターであると見なされます。 イテレーターがすでに {{jsxref("instanceof")}} {{jsxref("Iterator")}} である場合（つまり、そのプロトタイプチェーンに `Iterator.prototype` がある場合）は、直接返されます。 それ以外の場合は、元のイテレーターをラップする新しい {{jsxref("Iterator")}} オブジェクトが作成されます。
 
 ## 解説
 

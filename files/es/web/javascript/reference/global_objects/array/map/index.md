@@ -55,7 +55,7 @@ Un nuevo array en la que cada elemento es el resultado de ejecutar `callback`.
 
 `callback` es llamada con tres argumentos: el valor del elemento, el índice del elemento, y el objeto array que se está recorriendo.
 
-Si se indica un parámetro `thisArg` a un `map`, se usará como valor de `this` en la función `callback`. En otro caso, se pasará {{jsxref("Global_Objects/undefined", "undefined")}} como su valor `this`. El valor de `this` observable por el `callback` se determina de acuerdo a las [reglas habituales para determinar el valor this visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
+Si se indica un parámetro `thisArg` a un `map`, se usará como valor de `this` en la función `callback`. En otro caso, se pasará {{jsxref("undefined")}} como su valor `this`. El valor de `this` observable por el `callback` se determina de acuerdo a las [reglas habituales para determinar el valor this visto por una función.](/es/docs/Web/JavaScript/Reference/Operators/this)
 
 `map` no modifica el array original en el que es llamado (aunque `callback`, si es llamada, puede modificarlo).
 
@@ -115,7 +115,7 @@ var dobles = numeros.map(function (num) {
 
 ### Usando `map` de forma genérica
 
-Este ejemplo muestra como usar `map` en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
+Este ejemplo muestra como usar `map` en {{jsxref("String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
 
 ```js
 var map = Array.prototype.map;
@@ -183,7 +183,7 @@ function returnInt(element) {
 
 ## Polyfill
 
-`map` fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, y {{jsxref("Global_Objects/Array", "Array")}} tienen sus valores originales y que el `callback.call` evalua el valor original de `{{jsxref("Function.prototype.call")}}`.
+`map` fue agregado al estandar ECMA-262 en la 5th edición; por lo tanto podría no estar presente en todas la implementaciones del estándar. Puedes sobrepasar esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `map` en implementaciones que no lo soportan de forma nativa. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5th edición, asumiendo {{jsxref("Object")}}, {{jsxref("TypeError")}}, y {{jsxref("Array")}} tienen sus valores originales y que el `callback.call` evalua el valor original de `{{jsxref("Function.prototype.call")}}`.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.19

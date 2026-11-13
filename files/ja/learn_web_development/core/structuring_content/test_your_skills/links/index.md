@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: リンク"
-short-title: "試験: リンク"
+short-title: "テスト: リンク"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 l10n:
   sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09

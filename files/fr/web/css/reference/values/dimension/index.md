@@ -1,9 +1,9 @@
 ---
-title: <dimension>
+title: Type CSS `<dimension>`
+short-title: <dimension>
 slug: Web/CSS/Reference/Values/dimension
-original_slug: Web/CSS/dimension
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité&nbsp;: par exemple `10px`.

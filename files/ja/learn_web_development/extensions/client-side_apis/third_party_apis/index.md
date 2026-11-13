@@ -2,10 +2,8 @@
 title: サードパーティ API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -113,8 +111,8 @@ API の他の機能の使用方法を示すために、 Mapquest の例にさら
 
 Mapquest API で表示できる地図には、さまざまな種類があります。 これを行うには、次の行を見つけます。
 
-```js
-layers: L.mapquest.tileLayer("map");
+```js-nolint
+layers: L.mapquest.tileLayer("map"),
 ```
 
 hybrid-style map にするために `'map'` を `'hybrid'` に変えてみてください。他にも様々な値があります。 [`tileLayer` のリファレンスページ](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) には使える様々なオプションや情報が載っています。
@@ -293,7 +291,7 @@ function displayResults(json) {
       const heading = document.createElement("h2");
       const link = document.createElement("a");
       const img = document.createElement("img");
-      const para1 = document.createElement("p");
+      const para = document.createElement("p");
       const keywordPara = document.createElement("p");
       keywordPara.classList.add("keywords");
 
@@ -301,7 +299,7 @@ function displayResults(json) {
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
+      para.textContent = current.snippet;
       keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
         const span = document.createElement("span");
@@ -317,7 +315,7 @@ function displayResults(json) {
       article.appendChild(heading);
       heading.appendChild(link);
       article.appendChild(img);
-      article.appendChild(para1);
+      article.appendChild(para);
       article.appendChild(keywordPara);
       section.appendChild(article);
     }

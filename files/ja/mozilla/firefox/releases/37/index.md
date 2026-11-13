@@ -33,7 +33,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 
 - {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
 - {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
-- 非標準の {{jsxref("String.quote","String.prototype.quote()")}} メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
+- 非標準の `String.prototype.quote()` メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
 - {{jsxref("RegExp.prototype.flags")}} プロパティを実装しました ([Firefox バグ 1108467](https://bugzil.la/1108467))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[Typed Array](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました:
   - {{jsxref("TypedArray.every", "every()")}} および {{jsxref("TypedArray.some", "some()")}} メソッド ([Firefox バグ 1116390](https://bugzil.la/1116390))。
@@ -45,7 +45,7 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
   - {{jsxref("TypedArray.reverse", "reverse()")}} メソッド ([Firefox バグ 1111516](https://bugzil.la/1111516))。
   - {{jsxref("TypedArray.keys", "keys()")}}、{{jsxref("TypedArray.values", "values()")}}、{{jsxref("TypedArray.entries", "entries()")}} メソッド ([Firefox バグ 1119217](https://bugzil.la/1119217))。
 
-- ES6 Proxy の {{jsxref("Global_Objects/Proxy/handler/enumerate", "enumerate")}} トラップを実装しました ([Firefox バグ 783829](https://bugzil.la/783829))。
+- ES6 Proxy の `enumerate` トラップを実装しました ([Firefox バグ 783829](https://bugzil.la/783829))。
 - ES6 仕様書に基づき、{{jsxref("Function.length")}} プロパティの `configurable` 属性を `true` に変更しました ([Firefox バグ 911142](https://bugzil.la/911142))。
 - [ParallelJS (PJS)](http://wiki.ecmascript.org/doku.php?id=strawman:data_parallelism) の開発を中止しました。将来性の乏しさ、関心の薄さ、コードの複雑さが理由です。`Array.prototype.mapPar`、`filterPar`、`reducePar` メソッドといった、Nightly チャンネルのみで有効であった実験的な実装は全面的に削除しました。
 

@@ -1,12 +1,11 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
-original_slug: Web/CSS/print-color-adjust
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: f28f4c26a3d95e41d01a505af3388881abd6e49c
 ---
 
-**`print-color-adjust`** は CSS のプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}が出力端末上で要素の外観を最適化するために、何らかの調整を行うことができるかを設定します。
+**`print-color-adjust`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}が出力端末上で要素の外観を最適化するために、何らかの調整を行うことができるかを設定します。
 既定では、ブラウザーは、出力端末の種類や能力を得た上で、必要かつ賢明であると判断した要素の外観に対する調整を行うことができます。
 
 ## 構文
@@ -69,11 +68,8 @@ print-color-adjust: unset;
 ```css
 .my-box {
   background-color: black;
-  background-image: linear-gradient(
-    rgba(0, 0, 180, 0.5),
-    rgba(70, 140, 220, 0.5)
-  );
-  color: #900;
+  background-image: linear-gradient(rgb(0 0 180 / 50%), rgb(70 140 220 / 50%));
+  color: #990000;
   width: 15rem;
   height: 6rem;
   text-align: center;
@@ -109,6 +105,5 @@ print-color-adjust: unset;
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}

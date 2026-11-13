@@ -58,7 +58,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 
 ## オプションコンテンツのデザイン
 
-Firefox のスタイルにマッチするオプションコンテンツをデザインする方法は [Photon Design System](https://design.firefox.com/photon/index.html) および[ブラウザースタイル](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)の文書を参照してください。
+Firefox のスタイルにマッチするオプションコンテンツをデザインする方法は [Acorn Design System](https://acorn.firefox.com/latest) の文書を参照してください。
 
 ## 例
 

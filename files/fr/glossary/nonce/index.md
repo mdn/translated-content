@@ -2,7 +2,7 @@
 title: Nonce
 slug: Glossary/Nonce
 l10n:
-  sourceCommit: aefcc1599f9a67bfb4e0e5f48b2175eac61739fe
+  sourceCommit: 8fa28413710c2b4a5b6e98b615c84d5fc6c038c4
 ---
 
 En cryptographie et en sécurité informatique, un **`nonce`** est un nombre arbitraire utilisé **une seule fois** dans une communication cryptographique. Le terme vient de «&nbsp;nombre utilisé une seule fois&nbsp;» (<i lang="en">number used once</i> en anglais) et est couramment employé pour empêcher les attaques par rejeu, garantir la fraîcheur des messages et apporter de l'entropie aux protocoles cryptographiques.
@@ -19,6 +19,6 @@ En sécurité web, les nonces sont fréquemment utilisés dans des mécanismes t
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("cryptography", "Cryptographie")}}
   - {{Glossary("encryption", "Chiffrement")}}
-  - {{Glossary("Hash_function", "Hachage")}}
+  - {{Glossary("Hash function", "Hachage")}}
   - {{Glossary("TLS")}}
   - {{Glossary("authentication", "Authentification")}}

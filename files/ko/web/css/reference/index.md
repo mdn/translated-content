@@ -75,7 +75,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 
 ### 결합자
 
-결합자는 "*`A`*는 *`B`*의 자식", "*`A`*는 *`B`*와 인접 요소"처럼, 두 개 이상의 선택자끼리 관계를 형성합니다.
+결합자는 "*`A`*는 *`B`_의 자식", "_`A`*는 *`B`*와 인접 요소"처럼, 두 개 이상의 선택자끼리 관계를 형성합니다.
 
 - [인접 형제 결합자](/ko/docs/Web/CSS/%EC%9D%B8%EC%A0%91_%ED%98%95%EC%A0%9C_%EC%84%A0%ED%83%9D%EC%9E%90) `A + B`
   - : 요소 *`A`*와 *`B`*가 같은 부모를 가지며 *`B`*가 *`A`*를 바로 뒤따라야 하도록 지정합니다.
@@ -114,7 +114,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 
 ### 값
 
-- [실제값](/ko/docs/Web/CSS/actual_value)
+- [실제값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
 - [초깃값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)

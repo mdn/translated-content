@@ -3,8 +3,6 @@ title: windows.Window
 slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
 ---
 
-{{AddonSidebar}}
-
 Informations sur une fenêtre du navigateur.
 
 ## Type

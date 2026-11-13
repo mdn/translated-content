@@ -1,8 +1,9 @@
 ---
-title: background-origin
+title: Propriété CSS `background-origin`
+short-title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-origin`** définit l'origine de l'arrière-plan&nbsp;: depuis le début de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage.
@@ -60,9 +61,9 @@ background-origin: revert-layer;
 background-origin: unset;
 ```
 
-La propriété `background-origin` se définit à l'aide de l'une des valeurs par mot-clé listées ci-dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `border-box`
   - : L'arrière-plan est positionné relativement à la boîte de bordure.

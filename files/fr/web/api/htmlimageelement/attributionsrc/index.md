@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLImageElement/attributionSrc
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 7b9f3c730d1909846f80c70d84ac265d93d82af2
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLImageElement")}} permet d'indiquer que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête d'image. Elle reflète l'attribut de contenu [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc) de l'élément HTML `<img>`.
 
@@ -14,7 +14,7 @@ Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) p
 
 ## Valeur
 
-A string that is either empty or a space-separated list of URLs. For the interpretation of this attribute, see the HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc) reference.
+Une chaîne de caractères vide ou une liste d'URL séparées par des espaces. Pour l'interprétation de cet attribut, voir la référence HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc).
 
 ## Exemples
 
@@ -36,8 +36,8 @@ imgElem.attributionSrc = "";
 ```
 
 ```js
-// Encoder les URL au cas où elles contiendraient des caractères spéciaux
-// comme '=' qui seraient mal interprétés.
+// Encoder les URL au cas où elles contiennent des caractères spéciaux
+// comme '=' qui sont mal interprétés.
 const encodedUrlA = encodeURIComponent("https://a.example/register-source");
 const encodedUrlB = encodeURIComponent("https://b.example/register-source");
 

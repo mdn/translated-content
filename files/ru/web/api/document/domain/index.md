@@ -3,7 +3,7 @@ title: Document.domain
 slug: Web/API/Document/domain
 ---
 
-{{APIRef}} {{Deprecated_Header}}
+{{APIRef}}
 
 Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Web/Security/Defenses/Same-origin_policy).
 

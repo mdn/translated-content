@@ -1,11 +1,12 @@
 ---
-title: env()
+title: "`env()` 関数"
+short-title: env()
 slug: Web/CSS/Reference/Values/env
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 977386fc14a76dec21374aef1e0571900b28dab4
 ---
 
-**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ユーザーエージェントが定義した[環境変数](/ja/docs/Web/CSS/Guides/Environment_variables/Using)の値を CSS に挿入するために使用することができます。
+**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ユーザーエージェントが定義した[環境変数](/ja/docs/Web/CSS/Guides/Environment_variables/Using)の値を CSS に挿入するために使用することができます。あるいは、`env()` を使用することで、CSS の {{cssxref("link-parameters")}} プロパティを使って更新される外部 SVG ファイル内に動的な値を作成することもできます。
 
 ## 構文
 
@@ -19,6 +20,12 @@ env(viewport-segment-right 0 0);
 env(safe-area-inset-right, 1em);
 env(titlebar-area-y, 40px);
 env(viewport-segment-width 0 0, 40%);
+```
+
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
 ```
 
 ### 引数
@@ -35,11 +42,19 @@ env(viewport-segment-width 0 0, 40%);
       - : `titlebar-area-*` 変数は、デスクトップ端末にインストールされた PWA に有用です。デスクトップの PWA が `window-controls-overlay` で [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) の値を使用すると、 `titlebar-area-*` 変数を使用してコンテンツがウィンドウの制御ボタン（すなわち、最小化、最大化、閉じるボタン）に重ならないようにすることができます。
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : ビューポートの端からのインセットと、端末の画面上仮想キーボードのサイズ。{{domxref("VirtualKeyboard API", "仮想キーボード API", "", "nocode")}} で定義されています。
+    - `preferred-text-scale`
+      - : ユーザーが推奨するフォントの拡大率。これは、ブラウザーまたは OS レベルの環境設定で指定される数値です。これを使用すると、コンテンツのサイズを、ブラウザーや OS で設定されたフォントサイズに比例して調整することができます。
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : 特定のビューポートセグメントのサイズとオフセット位置。`viewport-segment-*` キーワードの後に、セグメントの水平位置と垂直位置（またはインデックス）を示すスペース区切りの {{cssxref("&lt;integer>")}} 値が 2 つ続きます。ビューポートセグメントキーワードは、折り曲げ型画面を持つ端末や複数の画面を持つ折りたたみ式端末など、ビューポートが 2 つ以上のセグメントで構成される場合にのみ定義されます。
 
+- [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident)
+  - : `<dashed-ident>` は、CSS の {{cssxref("param")}} 関数内で識別子として使用でき、値を更新できるユーザー定義変数です。
+
 - `<fallback>` {{optional_inline}}
   - : 最初の引数で参照される環境変数が存在しない場合に挿入される代替値。最初のカンマ以降のすべてが代替値と見なされます。これは 1 つの値、別の `env()` 関数、カンマ区切りの値のリストを取ることができます。
+
+- `<declaration_value>` {{optional_inline}}
+  - : `<declaration_value>` は、動的に設定される SVG 属性のデフォルト値です。`<declaration_value>` が省略された場合、それは空の値を表します。
 
 ## 解説
 
@@ -63,9 +78,22 @@ env(viewport-segment-width 0 0, 40%);
 
 `viewport-segment-*` 変数名を使用すると、開閉式や折りたたみ式などのマルチビューポートセグメント端末において、コンテナーを利用可能なセグメントにぴったり収まるように設定できます。`viewport-segment-*` 名の後に続く整数は、環境変数が参照する複数のセグメントのうちのどのセグメントかを示します。
 
+`preferred-text-scale` 変数を用いると、ウェブサイトのテキストやその他の UI 要素のサイズを、ブラウザーや OS で設定されたフォントサイズに比例して調整することができます。例えば、body のフォントサイズを、ユーザーが定義したテキストスケールに基づいたパーセント値で設定することができます。
+
+```css
+body {
+  font-size: calc(100% * env(preferred-text-scale));
+}
+```
+
+同時に、文書の `<head>` 内に [`<meta name="text-scale" content="scale">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/text-scale) を記述することで、サイズをブラウザーや OS レベルのフォントサイズに比例するように設定することもできます。`<meta>` タグは、`env(preferred-text-scale)` よりも可能な限り優先して使用すべきです。これは、`<meta>` タグの方がより幅広いプラットフォームで対応しており、使用方法もより簡単だからです。
+
+> [!WARNING]
+> `<meta name="text-scale" content="scale">` が設定されている場合、`env(preferred-text-scale)` を使用する際には注意が必要です。これは、`em` や `rem` などの相対単位と組み合わせると、テキストの変倍が 2 回適用されてしまうためです。例えば、`<meta>` が設定されている場合、`font-size: calc(2rem * env(preferred-text-scale))` のような宣言を行うと、小さいフォントサイズはさらに小さくなり、大きいフォントサイズはさらに大きくなってしまいます。
+
 ### 後に整数が付いた名前
 
-環境変数が配列のような形の場合、つまり名前が複数の値を指す可能性ががある場合（複数のビューポートセグメントを持つ端末など）、`<environment-variable>` 引数には変数名と、関数が参照する変数の特定のインスタンスのインデックスの両方を指定します。例えば、`viewport-segment-*` 変数の場合、変数名は `env()` 関数に、値を返すセグメントのインデックスを示す 2 つの整数と共に渡されます。これらの値はいずれも `0` 以上の整数です。最初の整数はセグメントの横方向のインデックスを表し（`0` が左端のセグメント）、2 番目の値はセグメントの縦方向のインデックスを表します（`0` が最下部のセグメント）。
+環境変数が配列のような形の場合、つまり名前が複数の値を指す可能性がある場合（複数のビューポートセグメントを持つ端末など）、`<environment-variable>` 引数には変数名と、関数が参照する変数の特定のインスタンスのインデックスの両方を指定します。例えば、`viewport-segment-*` 変数の場合、変数名は `env()` 関数に、値を返すセグメントのインデックスを示す 2 つの整数と共に渡されます。これらの値はいずれも `0` 以上の整数です。最初の整数はセグメントの横方向のインデックスを表し（`0` が左端のセグメント）、2 番目の値はセグメントの縦方向のインデックスを表します（`0` が最下部のセグメント）。
 
 ![2 つの端末セグメントレイアウト。横方向のレイアウトでは、0 0 が最初のセグメント、1 0 が 2 番目のセグメントとなります。縦方向のレイアウトでは、インデックスは 0 0 と 0 1 となる。](env-var-indices.png)
 
@@ -240,6 +268,7 @@ main {
 - [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/Guides/Cascading_variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/Reference/Properties/--*)
 - [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
+- [ビューポートセグメント API](/ja/docs/Web/API/Viewport_segments_API)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

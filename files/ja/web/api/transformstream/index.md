@@ -155,9 +155,7 @@ class JSTextDecoderStream extends TransformStream {
 これは、複数のストリームを結合できる便利なものです。例ではプログレッシブ読み込みやプログレッシブストリーミングを持つ PWA の構築が含まれます。
 
 ```js
-let responses = [
-  /* conjoined response tree */
-];
+let responses = [/* conjoined response tree */];
 let { readable, writable } = new TransformStream();
 
 responses.reduce(

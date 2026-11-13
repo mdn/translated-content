@@ -1,11 +1,12 @@
 ---
-title: margin-inline-end
+title: Propriété CSS `margin-inline-end`
+short-title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
 l10n:
-  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`margin-inline-end`** définit la marge logique de fin en ligne d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Autrement dit, elle correspond à la propriété {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} ou {{CSSxRef("margin-left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-inline-end`** définit la marge logique de fin en incise (<i lang="en">inline</i> en anglais) d'un élément, qui correspond à une marge physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Autrement dit, elle correspond à la propriété {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}} ou {{CSSxRef("margin-left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: margin-inline-end")}}
 
@@ -96,7 +97,7 @@ La propriété `margin-inline-end` peut prendre les mêmes valeurs que la propri
 
 ## Exemples
 
-### Définir la marge de fin en ligne
+### Définir la marge de fin en incise
 
 #### HTML
 
@@ -124,7 +125,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Définir la marge de fin en ligne", 140, 140)}}
+{{EmbedLiveSample("Définir la marge de fin en incise", 140, 140)}}
 
 ## Spécifications
 

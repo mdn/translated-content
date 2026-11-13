@@ -1,13 +1,14 @@
 ---
-title: "<ruby> : l'élément d'annotation de Ruby"
+title: "Élément HTML `<ruby>` : l'élément d'annotation de Ruby"
+short-title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 l10n:
-  sourceCommit: e66301dff87e1ac68bd5e6e9dace12ead3eded6f
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ruby>`** représente de petites annotations affichées au-dessus, en dessous ou à côté du texte de base, généralement utilisées pour indiquer la prononciation des caractères d'Asie orientale. Il peut aussi servir à annoter d'autres types de texte, mais cet usage est moins courant.
 
-Le terme _ruby_ vient d'[une unité de mesure utilisée par les typographes <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Agate_(typography)>), représentant la plus petite taille à laquelle un texte peut être imprimé sur du papier journal tout en restant lisible.
+Le terme _ruby_ vient [d'une unité de mesure utilisée par les typographes <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Agate_(typography)>), représentant la plus petite taille à laquelle un texte peut être imprimé sur du papier journal tout en restant lisible.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;ruby&gt;", "tabbed-shorter")}}
 
@@ -124,3 +125,4 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 - L'élément {{HTMLElement("rp")}}
 - La propriété CSS {{CSSxRef("ruby-overhang")}}
 - Les propriétés et valeurs CSS {{CSSxRef("text-transform", "text-transform: full-size-kana")}}
+- Le module [de mise en page CSS ruby](/fr/docs/Web/CSS/Guides/Ruby_layout)

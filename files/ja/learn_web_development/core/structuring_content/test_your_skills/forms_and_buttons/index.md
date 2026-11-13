@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: フォームとボタン"
-short-title: "試験: フォームとボタン"
+short-title: "テスト: フォームとボタン"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 l10n:
   sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09

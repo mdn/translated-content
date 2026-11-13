@@ -1,8 +1,9 @@
 ---
-title: font-kerning
+title: Propriété CSS `font-kerning`
+short-title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-kerning`** définit l'utilisation des informations de crénage stockées dans une police.
@@ -58,8 +59,10 @@ font-kerning: unset;
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `auto`
-  - : Ce mot-clé laisse au navigateur le choix d'utiliser ou non le crénage. Quand la taille de la police est petite, le crénage de la police peut avoir l'air étrange et les navigateurs le désactiveront.
+  - : Ce mot-clé laisse au navigateur le choix d'utiliser ou non le crénage. Quand la taille de la police est petite, le crénage de la police peut avoir l'air étrange et les navigateurs le désactivent.
 - `normal`
   - : Ce mot-clé force l'application du crénage.
 - `none`

@@ -6,13 +6,13 @@ l10n:
   sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Non-standard_Header}}
 
 **`lastModifiedDate`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、ファイルの最終更新日を返します。最終更新日がわからないファイルは、現在の日付を返します。
 
 ## 値
 
-{{JSXRef("Global_Objects/Date", "Date")}} オブジェクトで、ファイルが最後に変更された日時を表します。
+{{JSXRef("Date")}} オブジェクトで、ファイルが最後に変更された日時を表します。
 
 ## 例
 

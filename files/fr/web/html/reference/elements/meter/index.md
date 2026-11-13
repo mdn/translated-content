@@ -1,8 +1,9 @@
 ---
-title: "<meter> : l'élément de mesure"
+title: "Élément HTML `<meter>` : l'élément de mesure"
+short-title: <meter>
 slug: Web/HTML/Reference/Elements/meter
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
@@ -61,14 +62,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Exemple de plage haute et basse
 
-On remarquera ici que l'attribut [`min`](#min) est absent (ce qui est autorisé), la valeur minimale sera alors `0`.
+Remarquez ici que l'attribut [`min`](#min) est absent (ce qui est autorisé), la valeur minimale est alors `0`.
 
 #### HTML
 
 ```html
 <p>
   L'étudiante a eu un score de&nbsp;:
-  <meter low="69" high="80" max="100" value="84">84%</meter>
+  <meter low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
@@ -152,5 +153,5 @@ On remarquera ici que l'attribut [`min`](#min) est absent (ce qui est autorisé)
 ## Voir aussi
 
 - [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
-- L'élément HTML {{HTMLElement("progress")}}
-- Les pseudo-éléments non-standards {{CSSxRef("::-webkit-meter-bar")}}, {{CSSxRef("::-webkit-meter-inner-element")}}, {{CSSxRef("::-webkit-meter-even-less-good-value")}}, {{CSSxRef("::-webkit-meter-optimum-value")}}, {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- L'élément {{HTMLElement("progress")}}
+- Les pseudo-éléments CSS non-standards {{CSSxRef("::-webkit-meter-bar")}}, {{CSSxRef("::-webkit-meter-inner-element")}}, {{CSSxRef("::-webkit-meter-even-less-good-value")}}, {{CSSxRef("::-webkit-meter-optimum-value")}}, {{CSSxRef("::-webkit-meter-suboptimum-value")}}

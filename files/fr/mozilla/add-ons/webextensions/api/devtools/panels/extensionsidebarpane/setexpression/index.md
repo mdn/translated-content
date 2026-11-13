@@ -3,8 +3,6 @@ title: devtools.panels.ElementsPanel.setExpression()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
 ---
 
-{{AddonSidebar}}
-
 Evalue une expression dans le contexte de la page inspectée et affiche le résultat dans le volet de la barre latérale d'extension.
 
 Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).

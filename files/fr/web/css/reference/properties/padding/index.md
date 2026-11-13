@@ -1,14 +1,14 @@
 ---
-title: padding
+title: Propriété CSS `padding`
+short-title: padding
 slug: Web/CSS/Reference/Properties/padding
-original_slug: Web/CSS/padding
+l10n:
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-{{CSSRef}}
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding`** définit la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) sur les quatre côtés d'un élément en une seule fois.
 
-La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_propriétés_des_boîtes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
-
-{{InteractiveExample("CSS Demo: padding")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: padding")}}
 
 ```css interactive-example-choice
 padding: 1em;
@@ -34,8 +34,8 @@ padding: 0;
 <section id="default-example">
   <div class="transition-all" id="example-element">
     <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
     </div>
   </div>
 </section>
@@ -53,15 +53,24 @@ padding: 0;
 }
 ```
 
-La [zone de remplissage](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
+La zone de remplissage d'un élément correspond à l'espace entre son contenu et sa bordure.
 
 > [!NOTE]
-> Le _padding_ permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.
+> Le remplissage crée un espace supplémentaire à l'intérieur d'un élément. En revanche, la marge ({{CSSxRef("margin")}}) crée un espace supplémentaire _autour_ d'un élément.
+
+## Propriétés constitutives
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("padding-top")}}
+- {{CSSxRef("padding-right")}}
+- {{CSSxRef("padding-bottom")}}
+- {{CSSxRef("padding-left")}}
 
 ## Syntaxe
 
 ```css
-/* On applique la même valeur aux quatre côtés */
+/* Appliqué aux quatre côtés */
 padding: 1em;
 
 /* vertical | horizontal */
@@ -76,24 +85,24 @@ padding: 5px 1em 0 2em;
 /* Valeurs globales */
 padding: inherit;
 padding: initial;
+padding: revert;
+padding: revert-layer;
 padding: unset;
 ```
 
-Selon la quantité de valeurs utilisées, on a un effet différent. Chaque valeur peut être une longueur ([`<length>`](#length)) ou un pourcentage ([`<percentage>`](#percentage)). Les valeurs négatives ne sont pas autorisées.
+La propriété `padding` peut être définie en utilisant une, deux, trois ou quatre valeurs. Chaque valeur est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Les valeurs négatives ne sont pas autorisées.
 
-- **Une valeur** applique le même écart aux 4 côtés.
-- **Deux valeurs** appliquent le premier écart en haut et en bas et le second sur les côtés droit et gauche.
-- **Trois valeurs** appliquent le premier écart en haut, le deuxième à droite et à gauche et le troisième en bas.
-- **Quatre valeurs** appliquent le premier écart en haut, le deuxième à droite, le troisième en bas et le quatrième à gauche.
+- Lorsque **une** valeur est définie, elle s'applique à **tous les côtés**.
+- Lorsque **deux** valeurs sont définies, la première s'applique au **haut et au bas**, la seconde au **gauche et à droite**.
+- Lorsque **trois** valeurs sont définies, la première s'applique au **haut**, la seconde au **droite et gauche**, la troisième au **bas**.
+- Lorsque **quatre** valeurs sont définies, elles s'appliquent respectivement au **haut**, **droite**, **bas** et **gauche** (dans le sens des aiguilles d'une montre).
 
 ### Valeurs
 
-Les valeurs permettent de définir une, deux, trois ou quatre valeurs pour les écarts de remplissage. On peut utiliser des valeurs de type :
-
-- `<length>`
-  - : Définit un écart fixe. Voir la page {{cssxref("&lt;length&gt;")}} sur les valeurs de ce type.
-- `<percentage>`
-  - : Définit un écart relatif à la **largeur** du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} pour plus d'informations sur les valeurs de ce type.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille du remplissage en tant que valeur fixe.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille du remplissage en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 
 ## Définition formelle
 
@@ -105,30 +114,52 @@ Les valeurs permettent de définir une, deux, trois ou quatre valeurs pour les �
 
 ## Exemples
 
-### HTML
+### Définir le remplissage avec des pixels
+
+#### HTML
 
 ```html
-<h4>Coucou le monde !</h4>
-<h3>Le remplissage n'est pas le même ici.</h3>
+<h4>Cet élément a un remplissage modéré.</h4>
+<h3>Le remplissage est énorme dans cet élément&nbsp;!</h3>
 ```
 
-### CSS
+#### CSS
 
 ```css
 h4 {
-  background-color: green;
-  padding: 50px 20px 20px 50px;
+  background-color: lime;
+  padding: 20px 50px;
 }
 
 h3 {
-  background-color: blue;
-  padding: 400px 5%;
+  background-color: cyan;
+  padding: 110px 50px 50px 110px;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples',"100%","100%")}}
+{{EmbedLiveSample("Définir le remplissage avec des pixels", "100%", 300)}}
+
+### Définir le remplissage avec des pixels et des pourcentages
+
+```css
+padding: 5%; /* Tous les côtés : 5 % de remplissage */
+
+padding: 10px; /* Tous les côtés : 10px de remplissage */
+
+padding: 10px 20px; /* haut et bas : 10px de remplissage */
+/* gauche et droite : 20px de remplissage */
+
+padding: 10px 3% 20px; /* haut :            10px de remplissage */
+/* gauche et droite : 3 % de remplissage   */
+/* bas :         20px de remplissage */
+
+padding: 1em 3px 30px 5px; /* haut :    1em de remplissage  */
+/* droite :  3px de remplissage  */
+/* bas : 30px de remplissage */
+/* gauche :   5px de remplissage  */
+```
 
 ## Spécifications
 
@@ -140,9 +171,8 @@ h3 {
 
 ## Voir aussi
 
-- [CSS : Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
-- Les quatres propriétés détaillées synthétisées par `padding` :
-  - {{cssxref("padding-top")}}
-  - {{cssxref("padding-right")}}
-  - {{cssxref("padding-bottom")}}
-  - {{cssxref("padding-left")}}.
+- Les propriétés {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- Les propriétés {{CSSxRef("padding-block-start")}}, {{CSSxRef("padding-block-end")}}, {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("padding-block")}} et {{CSSxRef("padding-inline")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

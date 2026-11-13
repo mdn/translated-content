@@ -1,11 +1,12 @@
 ---
-title: scale3d()
+title: CSS `scale3d()` 関数
+short-title: scale3d()
 slug: Web/CSS/Reference/Values/transform-function/scale3d
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
+**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、三次元空間において要素を変倍する座標変換を定義します。
 変倍量はベクトル [sx, sy, sz] で定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scale3d()")}}
@@ -96,7 +97,7 @@ transform: scale3d(-1.4, 0.4, 0.7);
 }
 ```
 
-この変倍座標変換は、三次元ののベクトルであることが特徴です。この座標は、それぞれの方向にどれだけ変倍を行うかを定義します。3 つすべての座標が等しい場合、変倍は一様 (_等方的_) で、要素の形が保たれます (これは[相似変換](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E7%9B%B8%E4%BC%BC)です)。
+この変倍座標変換は、三次元のベクトルであることが特徴です。この座標は、それぞれの方向にどれだけ変倍を行うかを定義します。3 つすべての座標が等しい場合、変倍は一様 (_等方的_) で、要素の形が保たれます (これは[相似変換](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E7%9B%B8%E4%BC%BC)です)。
 
 座標の値が \[-1, 1] の範囲外の場合、変倍は、その座標の方向に要素を拡大します。この範囲内の場合、変倍は、要素をその座標の方向に縮小します。負の場合、変倍は[点対称化](https://ja.wikipedia.org/wiki/点対称)と大きさの変更を行います。1 と等しい場合、変倍は何もしません。
 
@@ -127,7 +128,7 @@ scale3d(sx, sy, sz)
   <tbody>
     <tr>
       <td colspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+        この座標変換は三次元空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math display="block">
@@ -220,7 +221,7 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`scaleZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("transform-function/rotate3d")}}
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

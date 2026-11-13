@@ -34,16 +34,16 @@ Notre [module Accessibilité de la section Apprendre le développement web](/fr/
 
 ## Guides sur l'accessibilité
 
-Les [guides sur l'accessibilité](/fr/docs/Web/Accessibility/Guides) couvrent les principes d'écriture, la conformité WCAG, les widgets et la navigation accessibles, l'accessibilité mobile et d'autres sujets clés pour comprendre pourquoi l'accessibilité est cruciale sur le web et comment l'améliorer dans vos projets.
+Les [guides sur l'accessibilité](/fr/docs/Web/Accessibility/Guides) couvrent les principes d'écriture, la conformité WCAG, les composants et la navigation accessibles, l'accessibilité mobile et d'autres sujets clés pour comprendre pourquoi l'accessibilité est cruciale sur le web et comment l'améliorer dans vos projets.
 
 - [Informations sur l'accessibilité pour les auteur·ice·s web](/fr/docs/Web/Accessibility/Guides/Information_for_Web_authors)
   - : Ce document liste les recommandations, réglementations, tutoriels et outils pour vérifier et corriger les problèmes d'accessibilité sur les sites web.
 - [Personnalisation pour une navigation plus sûre](/fr/docs/Web/Accessibility/Guides/Browsing_safely)
   - : Cet article explique comment rendre le contenu web accessible aux personnes souffrant de troubles vestibulaires, et à celles qui les accompagnent, en tirant parti des options de personnalisation et des réglages d'accessibilité intégrés aux systèmes d'exploitation.
-- [Applications web et widgets accessibles](/fr/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)
-  - : La plupart des bibliothèques JavaScript proposent des widgets côté client qui imitent le comportement d'interfaces bureautiques connues. Mais il manque souvent des informations sémantiques dans le balisage pour qu'ils soient utilisables par les technologies d'assistance. Ce document décrit des techniques pour améliorer l'accessibilité de ces widgets.
-- [Widgets JavaScript accessibles au clavier](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-  - : Jusqu'à récemment, les développeur·euse·s web souhaitant rendre accessibles leurs widgets stylisés en `<div>` ou `<span>` manquaient de techniques adaptées. **L'accessibilité clavier** fait partie des exigences minimales à connaître. Ce document décrit comment rendre les widgets JavaScript accessibles au clavier.
+- [Applications web et composants accessibles](/fr/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)
+  - : La plupart des bibliothèques JavaScript proposent des composants côté client qui imitent le comportement d'interfaces bureautiques connues. Mais il manque souvent des informations sémantiques dans le balisage pour qu'ils soient utilisables par les technologies d'assistance. Ce document décrit des techniques pour améliorer l'accessibilité de ces composants.
+- [Composants JavaScript accessibles au clavier](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
+  - : Jusqu'à récemment, les développeur·euse·s web souhaitant rendre accessibles leurs composants mis en forme en `<div>` ou `<span>` manquaient de techniques adaptées. **L'accessibilité clavier** fait partie des exigences minimales à connaître. Ce document décrit comment rendre les composants JavaScript accessibles au clavier.
 - [Liste de vérification pour l'accessibilité mobile](/fr/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : Ce document propose une liste concise des exigences d'accessibilité à destination des développeur·euse·s d'applications mobiles.
 - [Comprendre les Web Content Accessibility Guidelines (WCAG)](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
@@ -53,7 +53,7 @@ Les [guides sur l'accessibilité](/fr/docs/Web/Accessibility/Guides) couvrent le
 - [Accessibilité et motifs spatiaux](/fr/docs/Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns)
   - : Ce document décrit des motifs visuels pouvant provoquer des symptômes physiques chez les personnes souffrant d'épilepsie photosensible, de troubles vestibulaires ou d'autres troubles perceptifs.
 - [Accessibilité web&nbsp;: comprendre les couleurs et la luminance](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance)
-  - : Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour tous les utilisateurs voyants, mais c'est essentiel pour les personnes malvoyantes, daltoniennes ou ayant des troubles neurologiques, cognitifs ou autres.
+  - : Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour tous les utilisateur·ice·s voyant·e·s, mais c'est essentiel pour les personnes malvoyantes, daltoniennes ou ayant des troubles neurologiques, cognitifs ou autres.
 - [Accessibilité web pour les crises et réactions physiques](/fr/docs/Web/Accessibility/Guides/Seizure_disorders)
   - : Certains contenus visuels web peuvent provoquer des crises chez des personnes atteintes de troubles cérébraux. Cet article aide à comprendre les contenus à risque et à trouver des outils et stratégies pour les éviter.
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)

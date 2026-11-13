@@ -3,7 +3,7 @@ title: Set.prototype.union()
 short-title: union()
 slug: Web/JavaScript/Reference/Global_Objects/Set/union
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`union()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この Set と与えられた集合のどちらかまたは両方にある要素の入った新しい Set を返します。
@@ -38,7 +38,7 @@ union(other)
 
 ![2 つの円が重なっているベン図。A と B の共通部分は、どちらか一方または両方の円に囲まれた領域です。](diagram.svg)
 
-`union()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在するすべての要素、次に `other` に存在して `this` に存在しないすべての要素をすべて含む新しい Set を構築します。
+`union()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。次に、`other` の `keys()` メソッドを呼び出して繰り返し処理を行い、`this` に存在するすべての要素、次に `other` に存在して `this` に存在しないすべての要素をすべて含む新しい Set を構築します。
 
 返される Set 内の要素の順序は、まず `this` の要素、次に `other` の要素となります。
 
@@ -64,7 +64,7 @@ console.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }
 
 ## 関連情報
 
-- [`Set.prototype.union` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.union` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.union` のポリフィル](https://www.npmjs.com/package/set.prototype.union)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

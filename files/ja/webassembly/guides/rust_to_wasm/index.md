@@ -393,7 +393,7 @@ hello-wasm-0.1.0.tgz
 [INFO]: 🎒  packed up your package!
 ```
 
-npm に公開するには、[npm アカウント](https://www.npmjs.com/)が必要であり、 [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser/) を使用してマシンを認証する必要があります。準備ができたら、内部で `npm publish` を呼び出す `wasm-pack` を使用して公開することができます。
+npm に公開するには、[npm アカウント](https://www.npmjs.com/)が必要であり、 [`npm login`](https://docs.npmjs.com/cli/v11/commands/npm-login/) を使用してマシンを認証する必要があります。準備ができたら、内部で `npm publish` を呼び出す `wasm-pack` を使用して公開することができます。
 
 ```bash
 wasm-pack publish

@@ -13,7 +13,7 @@ La [détection de fonctionnalités](/fr/docs/Learn_web_development/Extensions/Te
 
 Une attention particulière doit être portée à l'accessibilité. Des alternatives acceptables doivent être proposées lorsque cela est possible.
 
-L'amélioration progressive est une technique utile qui permet aux développeur·euse·s web de se concentrer sur la création des meilleurs sites possibles tout en assurant leur fonctionnement sur de nombreux agents utilisateur·ice·s inconnus. La {{Glossary("Graceful degradation", "dégradation gracieuse")}} est liée mais n'est pas la même chose et est souvent considérée comme allant dans le sens opposé à l'amélioration progressive. En réalité, les deux approches sont valides et peuvent souvent se compléter.
+L'amélioration progressive est une technique utile qui permet aux développeur·euse·s web de se concentrer sur la création des meilleurs sites possibles tout en assurant leur fonctionnement sur de nombreux agents utilisateurs inconnus. La {{Glossary("Graceful degradation", "dégradation gracieuse")}} est liée mais n'est pas la même chose et est souvent considérée comme allant dans le sens opposé à l'amélioration progressive. En réalité, les deux approches sont valides et peuvent souvent se compléter.
 
 ## Voir aussi
 

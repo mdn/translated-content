@@ -1,8 +1,9 @@
 ---
-title: hsl()
+title: CSS `hsl()` 関数
+short-title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
@@ -71,7 +72,7 @@ hsl(120deg, 75%, 25%, 0.8)
 
 ### 値
 
-下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に対してすることができる値の説明です。
+下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に使える値の説明です。
 
 #### 絶対的な値の構文
 

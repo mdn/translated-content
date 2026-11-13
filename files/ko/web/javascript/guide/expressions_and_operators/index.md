@@ -305,7 +305,7 @@ const var2 = 4;
       <td>
         두 피연산자의 값과 타입이 모두 같은 경우 <code>true</code>를 반환합니다.
         {{jsxref("Object.is")}}와
-        <a href="/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+        <a href="/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness"
           >JavaScript에서의 같음</a
         >을 참고하세요.
       </td>
@@ -968,7 +968,7 @@ if (theDay instanceof Date) {
 | 쉼표               | `,`                                                                                       |
 
 각각의 연산자로 향하는 링크를 포함한 더 자세한 표는
-[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)에서 찾을 수
+[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#표)에서 찾을 수
 있습니다.
 
 ## 표현식

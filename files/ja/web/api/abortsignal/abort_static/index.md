@@ -3,7 +3,7 @@ title: "AbortSignal: abort() 静的メソッド"
 short-title: abort()
 slug: Web/API/AbortSignal/abort_static
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}

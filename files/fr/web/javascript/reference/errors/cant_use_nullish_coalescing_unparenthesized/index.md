@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"cannot use `??` unparenthesized within `||` and `&&` expressions"</i> se produit lorsque [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) est utilisé avec [un OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR) ou avec [un ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND), dans la même expression et sans parenthèses.
 
 ## Message

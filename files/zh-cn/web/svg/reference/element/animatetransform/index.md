@@ -1,9 +1,11 @@
 ---
-title: animateTransform
+title: <animateTransform>
 slug: Web/SVG/Reference/Element/animateTransform
+l10n:
+  sourceCommit: 12222b32eec33a7411c6de8afc8408d9aa617dd2
 ---
 
-`animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
+**`<animateTransform>`** [SVG](/zh-CN/docs/Web/SVG) 元素对其目标元素的变换属性做动画，从而让动画可以控制平移、缩放、旋转或倾斜。
 
 ## 使用上下文
 
@@ -12,14 +14,11 @@ slug: Web/SVG/Reference/Element/animateTransform
 ## 示例
 
 ```html
-<?xml version="1.0"?>
 <svg
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg">
   <polygon points="60,30 90,90 30,90">
     <animateTransform
       attributeName="transform"
@@ -37,20 +36,6 @@ slug: Web/SVG/Reference/Element/animateTransform
 
 ## 属性
 
-### 全局属性
-
-- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#条件处理属性)
-- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#核心属性)
-- [动画事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画事件属性)
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink_属性)
-- [动画属性目标属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画属性目标属性)
-- [动画定时属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画时间属性)
-- [动画值属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画取值属性)
-- [动画累加属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画累加属性)
-- {{ SVGAttr("externalResourcesRequired") }}
-
-### 专有属性
-
 - {{ SVGAttr("by") }}
 - {{ SVGAttr("from") }}
 - {{ SVGAttr("to") }}
@@ -59,3 +44,11 @@ slug: Web/SVG/Reference/Element/animateTransform
 ## DOM 接口
 
 该元素实现了 [`SVGAnimateTransformElement`](/zh-CN/docs/Web/API/SVGAnimateTransformElement) 接口。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

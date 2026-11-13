@@ -1,8 +1,9 @@
 ---
-title: "<optgroup> : l'élément de groupe d'options"
+title: "Élément HTML `<optgroup>` : l'élément de groupe d'options"
+short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<optgroup>`** crée un regroupement d'options à l'intérieur d'un élément HTML {{HTMLElement("select")}}.
@@ -42,7 +43,7 @@ label {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de sélection). Les navigateurs affichent ces éléments en les grisant.
+  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne reçoit pas les évènements de navigation (tels que les clics ou les changements de sélection). Les navigateurs affichent ces éléments en les grisant.
 - `label`
   - : Le nom du groupe d'options, que le navigateur peut utiliser pour étiqueter les options dans l'interface utilisateur. Cet attribut est obligatoire si cet élément est utilisé.
 

@@ -3,8 +3,6 @@ title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
 
-{{AddonSidebar}}
-
 Description d'une règle déclarative pour la gestion des événements.
 
 ## Type

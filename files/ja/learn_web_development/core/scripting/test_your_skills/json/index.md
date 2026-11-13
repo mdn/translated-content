@@ -1,10 +1,12 @@
 ---
 title: "確認テスト: JSON"
-short-title: JSON
+short-title: "テスト: JSON"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: b36d59a0df933597c7d3b55e363f7a59e30d3ba3
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Scripting/House_data_UI", "Learn_web_development/Core/Scripting")}}
 
 この確認テストの目的は、[JSON の操作](/ja/docs/Learn_web_development/Core/Scripting/JSON)の記事を理解できたかどうかを評価することです。
 
@@ -29,12 +31,18 @@ l10n:
 - 最後の母猫の名前の前に "and" を、その後にピリオドを置く必要があります。どうすれば、JSON に何匹の猫がいても、このような動作をさせることができるでしょうか。
 - なぜ `para1.textContent = motherInfo;` と `para2.textContent = kittenInfo;` の行は `displayCatInfo()` 関数の中にあり、スクリプトの終わりにはないのでしょうか。これは、非同期コードと関係があります。
 
-```html hidden live-sample___json-1
+この課題の出発点は次のようなものです。
+
+{{ EmbedLiveSample("json-1", "100%", 60) }}
+
+この出発点の基盤となるコードは次の通りです。
+
+```html hidden live-sample___json-1 live-sample___json-1-finish
 <p class="one"></p>
 <p class="two"></p>
 ```
 
-```css hidden live-sample___json-1
+```css hidden live-sample___json-1 live-sample___json-1-finish
 p {
   color: purple;
   margin: 0.5em 0;
@@ -72,12 +80,14 @@ function displayCatInfo(catString) {
 }
 ```
 
-{{ EmbedLiveSample("json-1", "100%", 60) }}
+更新後の出力は、次のようになるはずです。
+
+{{ EmbedLiveSample("json-1-finish", "100%", 80) }}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
-最終的な JavaScript は次のようになります。
+完成した JavaScript は、次のようになるでしょう。
 
 ```js
 // ...
@@ -115,4 +125,48 @@ function displayCatInfo(catString) {
 }
 ```
 
+```js hidden live-sample___json-1-finish
+const para1 = document.querySelector(".one");
+const para2 = document.querySelector(".two");
+let motherInfo = "The mother cats are called ";
+let kittenInfo;
+const requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json";
+
+fetch(requestURL)
+  .then((response) => response.text())
+  .then((text) => displayCatInfo(text));
+
+function displayCatInfo(catString) {
+  let total = 0;
+  let male = 0;
+
+  const cats = JSON.parse(catString);
+
+  for (let i = 0; i < cats.length; i++) {
+    for (const kitten of cats[i].kittens) {
+      total++;
+      if (kitten.gender === "m") {
+        male++;
+      }
+    }
+
+    if (i < cats.length - 1) {
+      motherInfo += `${cats[i].name}, `;
+    } else {
+      motherInfo += `and ${cats[i].name}.`;
+    }
+  }
+
+  kittenInfo = `全部で ${total} 匹の子猫がいます。オスは ${male} 匹でメスは ${
+    total - male
+  } 匹です。`;
+
+  para1.textContent = motherInfo;
+  para2.textContent = kittenInfo;
+}
+```
+
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Scripting/House_data_UI", "Learn_web_development/Core/Scripting")}}

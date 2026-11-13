@@ -3,8 +3,6 @@ title: length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 ---
 
-{{jsSideBar("Functions")}}
-
 La propriété **`arguments.length`** contient le nombre d'arguments passés à la fonction.
 
 ## Syntaxe

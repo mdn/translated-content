@@ -3,7 +3,7 @@ title: Constructeur Float32Array()
 short-title: Float32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Float32Array()`** crée des objets {{JSxRef("Float32Array")}}. Le contenu est initialisé à `0` sauf si des données d'initialisation sont explicitement fournies.
@@ -22,7 +22,7 @@ new Float32Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> Le constructeur `Float32Array()` ne peut être appelé qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
+> Le constructeur `Float32Array()` ne peut être appelé qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
@@ -76,8 +76,8 @@ console.log(float32DepuisUnIterable);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Float32Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Float32Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("TypedArray")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("TypedArray")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}

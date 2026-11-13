@@ -3,7 +3,7 @@ title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 
-**`Intl.NumberFormat.prototype.format`** 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。
+**`Intl.NumberFormat.prototype.format`** 属性返回一个根据{{jsxref("Intl/NumberFormat", "NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。
 
 {{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
 
@@ -36,7 +36,7 @@ numberFormat.format(number)
 
 ## 描述
 
-该函数返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来`format` 一个数字的函数。
+该函数返回一个根据{{jsxref("Intl/NumberFormat", "NumberFormat")}}对象的语言环境和格式化选项，来`format` 一个数字的函数。
 
 ## 示例
 
@@ -53,7 +53,7 @@ console.log(numberFormat.format(654321.987));
 
 ### 使用 `format` 和 `map`
 
-使用 `format` 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。
+使用 `format` 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("Intl/NumberFormat", "NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
@@ -73,5 +73,5 @@ console.log(formatted.join("; "));
 
 ## 参见
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

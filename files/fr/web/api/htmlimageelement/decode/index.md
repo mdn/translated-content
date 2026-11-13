@@ -54,7 +54,7 @@ img
 ```
 
 > [!NOTE]
-> Sans méthode retournant une promesse {{JSxRef('Promise')}}, vous ajouteriez l'image au DOM dans un gestionnaire d'événement {{DOMxRef("Window/load_event", "load")}}, et géreriez l'erreur dans le gestionnaire de l'événement {{DOMxRef("HTMLElement/error_event", "error")}}.
+> Sans méthode retournant une promesse {{JSxRef('Promise')}}, vous ajouteriez l'image au DOM dans un gestionnaire d'évènement {{DOMxRef("Window/load_event", "load")}}, et géreriez l'erreur dans le gestionnaire de l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}.
 
 ### Éviter les images vides
 
