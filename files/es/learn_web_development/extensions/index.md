@@ -33,7 +33,7 @@ En particular, si nunca antes has programado, te recomendamos el módulo [Tu pri
   - : La construcción de sitios web requiere HTML, CSS y JavaScript. Para construir sitios web y aplicaciones que la gente quiera usar, que atraigan y retengan a los usuarios, necesitas crear una buena experiencia de usuario. Parte de una buena experiencia de usuario es asegurar que el contenido se cargue rápidamente y responda a la interacción del usuario. Esto se conoce como **rendimiento web**, y en este módulo te centrarás en los fundamentos de cómo crear sitios web de alto rendimiento.
 - [Pruebas](/es/docs/Learn_web_development/Extensions/Testing)
   - : Cualquier base de código que supere un cierto nivel de complejidad necesita tener un sistema de pruebas asociado, para asegurarse de que a medida que se añade nuevo código, la base de código continúe funcionando correctamente y con buen rendimiento, y continúe satisfaciendo las necesidades de los usuarios. Este módulo enumera los fundamentos con los que debes empezar.
-- [Transformar y animar CSS](/es/docs/Learn_web_development/Extensions/Transform_animate)
+- [Transformar y animar CSS](/es/docs/Learn_web_development/Extensions)
   - : Las animaciones son una parte vital de una buena experiencia de usuario. Un uso sutil puede hacer que los diseños de las páginas sean más interesantes y atractivos, y también mejorar la usabilidad y el rendimiento percibido.
-- [Seguridad y privacidad](/es/docs/Learn_web_development/Extensions/Security_privacy)
+- [Seguridad y privacidad](/es/docs/Web/Security)
   - : Es vital tener una comprensión de cómo puedes y debes proteger tus datos y los datos de tus usuarios de posibles atacantes que puedan intentar robarlos. Este módulo cubre tanto el endurecimiento de los sitios web para que sea más difícil robar datos, como la recopilación de datos de los usuarios de una manera respetuosa que evite rastrearlos o compartirlos con terceros inadecuados.

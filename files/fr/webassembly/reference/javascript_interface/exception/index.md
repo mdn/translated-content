@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Exception
 original_slug: WebAssembly/JavaScript_interface/Exception
 ---
 
-{{WebAssemblySidebar}}
-
 Un objet **`WebAssembly.Exception`** représente une exception d'exécution levée depuis WebAssembly vers JavaScript ou levée depuis JavaScript vers un gestionnaire d'exception WebAssembly.
 
 Le [constructeur](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception) prend comme arguments un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag), un tableau de valeurs et un objet `options`.

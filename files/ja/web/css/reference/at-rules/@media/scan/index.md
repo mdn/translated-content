@@ -1,9 +1,9 @@
 ---
-title: scan
+title: CSS `scan` メディア特性
+short-title: scan
 slug: Web/CSS/Reference/At-rules/@media/scan
-original_slug: Web/CSS/@media/scan
 l10n:
-  sourceCommit: 6da4cf5ad98eff4a623db03164549c4f2e3b001a
+  sourceCommit: 5a41c90092765ffe35958f439c2ab626714db340
 ---
 
 **`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器のスキャンプロセスに基づいて CSS スタイルを適用するために使用されます。
@@ -56,7 +56,7 @@ p {
     border-style: dashed;
   }
 }
-@media not screen and (scan: interlaced) {
+@media not screen and (scan: interlace) {
   p {
     color: purple;
   }

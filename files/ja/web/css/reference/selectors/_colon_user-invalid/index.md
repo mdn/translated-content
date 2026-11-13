@@ -1,19 +1,21 @@
 ---
-title: :user-invalid (:-moz-ui-invalid)
+title: :user-invalid
 slug: Web/CSS/Reference/Selectors/:user-invalid
-original_slug: Web/CSS/:user-invalid
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-**`:user-invalid`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーの操作の後、[制約検証](/ja/docs/Learn_web_development/Extensions/Forms#constraint_validation)に基づき有効と判断されなかった検証済みのフォーム要素を表します。
+**`:user-invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーが操作した後、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に基づき有効と判断されなかった検証済みのフォーム要素を表します。
 
 `:user-invalid` 擬似クラスは、ユーザーがフォームの送信を試みた後、そのフォーム要素を再び操作するまで、 {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, {{CSSxRef(":required")}} で空欄の要素に一致します。
 
-> [!NOTE]
-> この擬似クラスは標準外の `:-moz-ui-invalid` 擬似クラスと同じように動作します。
-
 ## 構文
 
-{{CSSSyntax}}
+```css
+:user-invalid {
+  /* ... */
+}
+```
 
 ## 例
 

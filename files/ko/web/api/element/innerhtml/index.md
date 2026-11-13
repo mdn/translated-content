@@ -22,7 +22,7 @@ element.innerHTML = htmlString;
 
 ### Value
 
-요소(element)의 자손의 HTML 직렬화를 포함하는 {{domxref("DOMString")}} 입니다. Setting the value of `innerHTML` 의 값을 설정(대입)하면 요소의 모든 자손이 제거되고, 문자열 htmlString에 지정된 HTML을 파싱하고, 생성된 노드로 대체합니다.
+요소(element)의 자손의 HTML 직렬화를 포함하는 {{jsxref("String")}} 입니다. Setting the value of `innerHTML` 의 값을 설정(대입)하면 요소의 모든 자손이 제거되고, 문자열 htmlString에 지정된 HTML을 파싱하고, 생성된 노드로 대체합니다.
 
 ### Exceptions
 

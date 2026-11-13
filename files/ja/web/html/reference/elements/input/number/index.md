@@ -1,20 +1,21 @@
 ---
-title: <input type="number">
+title: '`<input type="number">` 属性値'
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLSidebar}}
+{{HTMLElement("input")}} 要素の **`number`** 型は、ユーザーが数値を入力するために使用します。数値以外の入力を除外する値検証機能を内蔵しています。
 
-{{HTMLElement("input")}} 要素の **`number`** 型は、ユーザーに数値を入力させるために使用されます。数値以外の入力を除外するための値検証機能を内蔵しています。
+ブラウザーによっては、ユーザーがマウスや指先で操作して値を増減できる矢印を表示することもあります。
 
-ブラウザーによっては、マウスや指先のタップを使用して、値をユーザーが値を増減させるための矢印を提供していることもあります。
+`number` 型に対応していないブラウザーでは、 `number` 入力欄は `text` 入力欄で代替されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="tentacles">Number of tentacles (10-100):</label>
+<label for="tentacles">触手の数 (10-100):</label>
 
 <input type="number" id="tentacles" name="tentacles" min="10" max="100" />
 ```
@@ -33,11 +34,9 @@ label {
 }
 ```
 
-`number` 型に対応していないブラウザーでは、 `number` 入力欄は `text` 入力欄で代替されます。
-
 ## 値
 
-入力欄に入力された数字の値を表す数値です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に数値を設定することで、次のように入力欄の既定値を設定することができます。
+入力欄に入力された数字の値を表す数値です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に数値を設定することで、次のように入力欄のデフォルト値を設定することができます。
 
 ```html
 <input id="number" type="number" value="42" />
@@ -79,18 +78,18 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > [!NOTE]
-> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> 読み取り専用のフィールドは値を持つことができないので、 `required` は `readonly` 属性が指定された入力には何の効果もありません。
 
 ### `step`
 
-`step` 属性は値が従わなければならない粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が準拠する粒度を指定する数値、または後述する特殊な値 `any` です。段階の基準値から整数倍の値のみが有効です。段階の基準値は（指定されていれば）[`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも提供されていなければ `0` です。
 
-文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
+`number` 入力欄のデフォルトの段階値は `1` であり、段階の基準値が整数ではない場合を除き、整数の入力のみを許可します。
+
+文字列値の `any` は段階がないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。
 
 > [!NOTE]
-> ユーザーが入力したデータが刻みの設定に従わない場合、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸めることがあります。
-
-`number` 入力欄の既定の刻み値は `1` であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。
+> ユーザーが入力したデータが段階の設定に従っていない場合、{{Glossary("user agent", "ユーザーエージェント")}}は直近の有効な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸めることがあります。
 
 ## number 入力欄の使用
 
@@ -138,9 +137,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 {{EmbedLiveSample('Placeholders', 600, 40)}}
 
-### 刻み幅の制御
+### 段階幅の制御
 
-既定で、数値を増減させるための増減ボタンは、 1 刻みで値を増減させます。 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を設定することで、刻みの量を指定する数値の値を変更できます。上記の例は10の倍数を指定すると言っていますので、 `step` の値を `10` にすることが妥当でしょう。
+デフォルトで、数値を増減させるための増減ボタンは、 1 段階で値を増減させます。 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を設定することで、段階の量を指定する数値の値を変更できます。上記の例は10の倍数を指定すると言っていますので、 `step` の値を `10` にすることが妥当でしょう。
 
 ```html
 <input type="number" placeholder="10 の倍数" step="10" />
@@ -164,7 +163,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 小数が使用できるようにする
 
-数値入力に関する課題の一つは、既定ではステップのサイズが 1 であることです。小数点以下の値を持つ数値を入力しようとすると（"1.1" など）、それは不正な数値とみなされます。 "1.0" のような値は、数値的には整数と同等であるため、有効であるとみなされます。小数を含む値を入力したい場合は、 `step` 値にこれを反映する必要があります（例えば、 `step="0.01"` で小数点以下 2 桁まで許可）。基本的な例を以下に示します。
+数値入力に関する課題の一つは、デフォルトではステップのサイズが 1 であることです。小数点以下の値を持つ数値を入力しようとすると（"1.1" など）、それは不正な数値とみなされます。 "1.0" のような値は、数値的には整数と同等であるため、有効であるとみなされます。小数を含む値を入力したい場合は、 `step` 値にこれを反映する必要があります（例えば、 `step="0.01"` で小数点以下 2 桁まで許可）。基本的な例を以下に示します。
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -206,7 +205,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### サジェスト値の提供
 
-[`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を値として入れることにより、ユーザーの選択することができる既定の選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
+[`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を値として入れることにより、ユーザーの選択することができるデフォルトの選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -229,7 +228,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 - `<input type="number">` 要素は、数値（または `required` が指定されていない場合は空欄）ではない入力を自動的に違反とします。
 - [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用すると、空欄の入力を違反とします。 (つまり、入力欄は埋める*必要があります*。)
-- [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用すると、妥当な値を特定の刻みの値 (例えば、10の倍数) に制約することができます。
+- [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用すると、妥当な値を特定の段階の値 (例えば、10の倍数) に制約することができます。
 - [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用すると、妥当な値の下限と上限を設けることができます。
 
 次の例は上記の機能のすべてを例示しており、また幾らか CSS を用いて、 `input` の値によって、妥当または違反のアイコンを表示するようにします。
@@ -252,6 +251,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
     <input type="submit" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("Validation", 600, 110)}}
@@ -301,9 +306,9 @@ input:valid + span::after {
 
 ## 例
 
-すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
+すでにデフォルトでは増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
 
-以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第 2 位まで受け付けます。
+以下の例は、ユーザーの身長を入力するフォームです。デフォルトでは慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第 2 位まで受け付けます。
 
 {{EmbedLiveSample("Examples", 600, 150)}}
 
@@ -319,11 +324,11 @@ HTML は次のようになります。
       name="meters"
       step="0.01"
       min="0"
-      placeholder="e.g. 1.78"
+      placeholder="例: 1.78"
       required />
     <span class="validity"></span>
   </div>
-  <div class="feetInputGroup" style="display: none;">
+  <div class="feetInputGroup">
     <span>あなたの身長を入力してください — </span>
     <label for="feet">フィート:</label>
     <input id="feet" type="number" name="feet" min="0" step="1" />
@@ -341,9 +346,15 @@ HTML は次のようになります。
 </form>
 ```
 
-これまでの記事ですでに見てきた属性の多くを使用していることがわかります。センチメートル単位のメートル値を受け入れるため、 `step` の値を `0.01` に設定して、 _1.78_ のような値が無効とされないようにしました。また、その入力欄のプレイスホルダーも提供しました。
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
 
-最初はフィートとインチの入力欄を `style="display: none;"` を使用して非表示にしているため、既定はメートルでの入力です。
+これまでの記事ですでに見てきた属性の多くを使用していることがわかります。メートル単位で身長を入力できるようにし、センチメートル単位の精度にするため、 `step` の値を `0.01` に設定して、 _1.78_ のような値が無効とされないようにしました。また、その入力欄にプレイスホルダーも設定しました。
+
+最初はフィートとインチの入力欄を `style="display: none;"` を使用して非表示にしているため、デフォルトはメートルでの入力です。
 
 次に、 CSS に進みます。これは、以前に見た検証のスタイル付けととても良く似ています。ここで注目するところはありません。
 
@@ -383,6 +394,8 @@ const metersInput = document.querySelector("#meters");
 const feetInput = document.querySelector("#feet");
 const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
+
+feetInputGroup.style.display = "none"; // 初期状態では feet/inches 入力欄を非表示
 
 switchBtn.addEventListener("click", () => {
   if (switchBtn.getAttribute("class") === "meters") {
@@ -460,14 +473,6 @@ switchBtn.addEventListener("click", () => {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
         <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role">spinbutton</a></code>
@@ -489,4 +494,3 @@ switchBtn.addEventListener("click", () => {
 - [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ja/docs/Web/HTML/Reference/Elements/input/tel)
-- [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

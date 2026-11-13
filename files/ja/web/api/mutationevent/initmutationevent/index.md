@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}
 
 **`initMutationEvent()`** は {{domxref("MutationEvent")}} インターフェイスのメソッドで、一度作成された変異イベントの値を初期化します（通常は {{domxref("Document.createEvent()")}} メソッドを使用します）。
 

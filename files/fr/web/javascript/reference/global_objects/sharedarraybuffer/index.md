@@ -3,8 +3,6 @@ title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 
-{{JSRef}}
-
 L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
@@ -39,8 +37,8 @@ Pour commencer, le document doit être mis à disposition dans [un contexte séc
 
 Pour les documents de plus haut niveau, deux en-têtes HTTP doivent être utilisés pour isoler le site des origines tierces&nbsp;:
 
-- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
-- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
+- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
+- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin

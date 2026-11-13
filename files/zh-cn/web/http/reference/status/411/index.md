@@ -9,7 +9,7 @@ slug: Web/HTTP/Reference/Status/411
 
 ## 状态
 
-```plain
+```http
 411 Length Required
 ```
 

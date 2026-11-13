@@ -3,6 +3,8 @@ title: 书本列表页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 接下来我们将实现书本列表页面。这个页面需要呈现数据库中所有书本的列表，包含每本书的作者、标题，标题将成为一个超链接，链接到书本详细内容页面。
 
 ## 控制器
@@ -62,7 +64,4 @@ block content
 
 ![书本列表页面 - Express 教程：本地图书馆网站](new_book_list.png)
 
-## 下一步
-
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 下个部分：[书本实例列表页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

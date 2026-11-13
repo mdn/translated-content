@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/mpath
 original_slug: Web/SVG/Element/mpath
 ---
 
-{{SVGRef}}
-
 L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion")}}, il permet de référencer un élément {{SVGElement("path")}} pour définir le chemin utilisé par l'animation.
 
 ## Contexte d'utilisation

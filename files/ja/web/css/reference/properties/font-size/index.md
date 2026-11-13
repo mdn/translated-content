@@ -1,8 +1,9 @@
 ---
-title: font-size
+title: "`font-size` プロパティ (CSS)"
+short-title: font-size
 slug: Web/CSS/Reference/Properties/font-size
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
@@ -78,8 +79,10 @@ font-size: unset;
 
 ### 値
 
+このプロパティは、以下のリストから 1 つの値で指定します。
+
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : [絶対的なサイズ](/ja/docs/Web/CSS/Reference/Values/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
+  - : [絶対的なサイズ](/ja/docs/Web/CSS/Reference/Values/absolute-size)のキーワードで、ユーザーのデフォルトのフォントサイズ (つまり `medium`) を基準としたものです。
 
 - `larger`, `smaller`
   - : [相対的なサイズ](/ja/docs/Web/CSS/Reference/Values/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
@@ -92,7 +95,7 @@ font-size: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 正の {{cssxref("&lt;percentage&gt;")}} 値で、親要素のフォントサイズからの相対値です。
     > [!NOTE]
-    > アクセシビリティを最大化するために、一般的に最適なのは、ユーザーの既定のフォントサイズからの相対値を使用することです。
+    > アクセシビリティを最大化するために、一般的に最適なのは、ユーザーのデフォルトのフォントサイズからの相対値を使用することです。
 
 - `math`
   - : math 要素の `font-size` プロパティの計算値を、親要素の `font-size` から相対的に決定する際に、[変倍ルール](https://w3c.github.io/mathml-core/#the-math-script-level-property)が適用されます。
@@ -127,7 +130,7 @@ p {
 
 この場合、`<p>` 要素のフォントサイズは、`<p>` 要素で継承されている `font-size` の計算値の 2 倍になります。 すなわち、`1em` の `font-size` は、それが使われている要素の `font-size` の計算値に等しくなります。
 
-`font-size` が `<p>` の何れかの祖先に設定されていない場合、`1em` はブラウザーの既定の `font-size` と等しくなり、大抵は `16px` です。したがって、既定では `1em` が `16px` と同等であり、`2em` は `32px` と同等です。もし `font-size` が 20px と `<body>` 要素に設定されていれば、`1em` は `<p>` 要素において `20px` となり、`2em` は で `40px` と同等になります。
+`font-size` が `<p>` の何れかの祖先に設定されていない場合、`1em` はブラウザーのデフォルトの `font-size` と等しくなり、大抵は `16px` です。したがって、デフォルトでは `1em` が `16px` と同等であり、`2em` は `32px` と同等です。もし `font-size` が 20px と `<body>` 要素に設定されていれば、`1em` は `<p>` 要素において `20px` となり、`2em` は で `40px` と同等になります。
 
 必要なピクセル値に相当する em は、次の式で計算することができます。
 
@@ -160,7 +163,7 @@ span {
 
 {{EmbedLiveSample("Ems", 400, 100)}}
 
-ブラウザーの既定の `font-size` が 16px と仮定すると、単語 "outer" は 25.6px で描画されますが、単語 "inner" は 40.96px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
+ブラウザーのデフォルトの `font-size` が 16px と仮定すると、単語 "outer" は 25.6px で描画されますが、単語 "inner" は 40.96px で描画されます。これは、内側の {{HTMLElement("span")}} 要素の `font-size` は 1.6em ですが、これは親要素の `font-size` からの相対値で、さらにその親要素の `font-size` からの相対値になるからです。これはよく**複合** (compounding) と呼ばれます。
 
 ### rem
 
@@ -185,7 +188,7 @@ span {
 
 {{EmbedLiveSample("Rems", 400, 100)}}
 
-この例では、単語 "outer inner outer" はすべて 25.6px で表示されます（ブラウザーの `font-size` は既定値が 16px のままであるとした場合）。
+この例では、単語 "outer inner outer" はすべて 25.6px で表示されます（ブラウザーの `font-size` はデフォルト値が 16px のままであるとした場合）。
 
 ### ex
 

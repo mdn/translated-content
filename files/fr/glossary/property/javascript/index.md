@@ -37,4 +37,4 @@ Pour plus d'informations sur la lecture et la modification des propriétés, con
 - [Propriété (programmation)](<https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_(informatique)>) sur Wikipedia
 - [Introduction à la programmation orientée objet en JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [Propriétés d'objet](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés)
-- [Énumérabilité et propriété des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

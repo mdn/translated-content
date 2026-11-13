@@ -47,7 +47,7 @@ l10n:
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
-  <label for="color-space">色空間: </label>
+  <label for="color-space">Color space: </label>
   <select id="color-space">
     <option value="srgb">sRGB</option>
     <option value="srgb-linear">sRGB-linear</option>
@@ -62,7 +62,7 @@ l10n:
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    色相の補間方法:
+    Hue interpolation method:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -72,19 +72,19 @@ l10n:
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>色の選択</div>
+    <div>Pick a color</div>
     <table>
       <tbody>
         <tr>
-          <td><label for="color-text">色を入力:</label></td>
+          <td><label for="color-text">Enter color:</label></td>
           <td><input type="text" id="color-text" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-input">色を選択:</label></td>
+          <td><label for="color-input">Pick color:</label></td>
           <td><input type="color" id="color-input" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-opacity">不透明度を選択:</label></td>
+          <td><label for="color-opacity">Select an opacity:</label></td>
           <td>
             <input
               type="range"

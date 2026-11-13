@@ -1,12 +1,11 @@
 ---
 title: Gérer les problèmes courants en JavaScript
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
   sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Extensions/Testing")}}
 
 Dans cet article, nous verrons certains problèmes fréquents qui se posent entre les différents navigateurs avec JavaScript, et aussi comment les résoudre.
 
@@ -16,7 +15,7 @@ Pour cela, nous aborderons entre autres les outils de développement des navigat
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaissance des bases de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">des principes de tests entre les différents navigateurs</a>.
+      <td>Connaissance des bases de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction">des principes de tests entre les différents navigateurs</a>.
       </td>
     </tr>
     <tr>
@@ -95,7 +94,7 @@ npm install -g eslint
 
 On peut alors utiliser la commande `eslint` dans un projet pour en analyser les fichiers.
 
-Ces outils peuvent être utilisés avec les outils de compilation comme [Gulp](https://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour analyser automatiquement le code JavaScript lors du développement (voir comment [Utiliser un agent pour automatiser les tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) dans un article suivant). Voir la page sur [les intégrations ESLint avec les outils de compilation](https://eslint.org/docs/latest/use/integrations#build-tools).
+Ces outils peuvent être utilisés avec les outils de compilation comme [Gulp](https://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour analyser automatiquement le code JavaScript lors du développement (voir comment [Utiliser un agent pour automatiser les tests](/fr/docs/Learn_web_development/Extensions/Testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) dans un article suivant). Voir la page sur [les intégrations ESLint avec les outils de compilation](https://eslint.org/docs/latest/use/integrations#build-tools).
 
 ### Les outils de développement des navigateurs
 
@@ -376,7 +375,7 @@ Un transpilateur populaire est [Babel.js](https://babeljs.io/), mais il en exist
 
 Par le passé, certains sites essayaient de deviner le navigateur utilisé (<i lang="en">browser sniffing</i>) pour fournir le code approprié pour ce navigateur.
 
-Tous les navigateurs utilisent une chaîne de caractères **<i lang="en">user-agent</i>** via l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) qui identifie certaines caractéristiques du navigateur (sa version, son nom, le système d'exploitation, etc.). Pour certains sites et applications, le code de détection était incorrect ou n'a pas été maintenu, ce qui a empêché certains navigateurs de les afficher correctement. Ce problème est devenu si fréquent que les navigateurs ont fini par mentir en changeant leur chaîne d'agent utilisateur pour contourner ces mauvaises détections. Les navigateurs ont également mis à disposition des outils permettant aux personnes de modifier par elles-mêmes la chaîne `User-Agent`, ce qui a fragilisé encore plus les sites et applications qui exploitaient cette chaîne de caractères, voire ce qui a rendu cette technique complètement vaine.
+Tous les navigateurs utilisent une chaîne de caractères **<i lang="en">user-agent</i>** via l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Reference/Headers/User-Agent) qui identifie certaines caractéristiques du navigateur (sa version, son nom, le système d'exploitation, etc.). Pour certains sites et applications, le code de détection était incorrect ou n'a pas été maintenu, ce qui a empêché certains navigateurs de les afficher correctement. Ce problème est devenu si fréquent que les navigateurs ont fini par mentir en changeant leur chaîne d'agent utilisateur pour contourner ces mauvaises détections. Les navigateurs ont également mis à disposition des outils permettant aux personnes de modifier par elles-mêmes la chaîne `User-Agent`, ce qui a fragilisé encore plus les sites et applications qui exploitaient cette chaîne de caractères, voire ce qui a rendu cette technique complètement vaine.
 
 Le billet d'Aaron Anderson, [<i lang="en">History of the browser user-agent string</i> en anglais](https://webaim.org/blog/user-agent-string-history/), fournit un historique utile voire amusant de cette technique. On privilégiera [la détection de fonctionnalité](#détection_de_fonctionnalité) (et `@supports` en CSS) pour détecter de façon fiable lorsqu'une fonctionnalité donnée est prise en charge. Cette méthode ne nécessite pas de mettre à jour le code lorsque de nouvelles versions des navigateurs sont publiées.
 
@@ -413,4 +412,4 @@ Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec 
 
 Et voilà pour JavaScript. Ce n'est pas si simple, mais cet article devrait vous donner quelques points de départ et idées pour diagnostiquer et résoudre certains problèmes JavaScript que vous pourriez rencontrer à l'avenir.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Extensions/Testing")}}

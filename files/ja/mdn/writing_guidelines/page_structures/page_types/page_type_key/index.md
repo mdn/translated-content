@@ -2,23 +2,23 @@
 title: フロントマターの page-type キー
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 > [!CALLOUT]
 > **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
-これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
+これにより、MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
 
-他のフロントマターキーと同様に、 `page-type` キーは "index.md" の始めにある YAML で指定します。
+他のフロントマターキーと同様に、`page-type` キーは "index.md" の始めにある YAML で指定します。
 
 ```md
 ---
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.100
 sidebar: http
 ---
 ```
@@ -42,17 +42,17 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### 学習領域のページ型
 
-この節では [Learn](/ja/docs/Learn_web_development) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧のいずれか、または一般的なページ型の値のいずれかでなければなりません。
+この節では [Learn_web_development](/ja/docs/Learn_web_development) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧のいずれか、または一般的なページ型の値のいずれかでなければなりません。
 
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
 - `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_確認テスト: フォームとボタン_](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
 
-この節では、 [Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role) など。
 - `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) など。
@@ -66,14 +66,14 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)など。
 - `css-function`: [関数](/ja/docs/Web/CSS/Reference/Values/Functions)。例えば {{cssxref("max")}} など。
 - `css-keyword`: キーワード。例えば {{cssxref("inherit")}} など。
-- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/hover) など。
+- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)。例えば {{cssxref("@media/hover")}} など。
 - `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)など。
 - `css-property`: プロパティ。例えば {{cssxref("background-color")}} など。
 - `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
 - `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。例えば {{cssxref("::before")}} など。
 - `css-selector`: [基本セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)など。
 - `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
-- `css-type`: [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)。例えば [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) など。
+- `css-type`: [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)。例えば {{cssxref("&lt;color&gt;")}} など。
 
 ### 用語集のページ型
 
@@ -114,7 +114,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `javascript-instance-data-property`: オブジェクトインスタンスのデータプロパティ。例えば [`length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length) プロパティ（`Array`）など。
 - `javascript-instance-method`: オブジェクトインスタンスのメソッド。例えば [`Array.prototype.at()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/at) など。
 - `javascript-language-feature`: 他のカテゴリーに合わない JavaScript 構文。例えば[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) など。
-- `javascript-namespace`: オブジェクトのうち、インスタンス化できず性的メンバーのみがあるもの。例えば [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) など。
+- `javascript-namespace`: オブジェクトのうち、インスタンス化できず静的メンバーのみがあるもの。例えば [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) など。
 - `javascript-operator`: 演算子。例えば [Addition (+)](/ja/docs/Web/JavaScript/Reference/Operators/Addition) など。
 - `javascript-statement`: 文。例えば [`switch`](/ja/docs/Web/JavaScript/Reference/Statements/switch) など。
 - `javascript-static-accessor-property`: 静的アクセサープロパティ。例えば [`RegExp.lastMatch`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) など。
@@ -125,8 +125,8 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/MathML](/ja/docs/Web/MathML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `mathml-attribute`: MathML 属性。例えば [`mathcolor`](/ja/docs/Web/MathML/Global_attributes/mathcolor) など。
-- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
+- `mathml-attribute`: MathML 属性。例えば [`mathcolor`](/ja/docs/Web/MathML/Reference/Global_attributes/mathcolor) など。
+- `mathml-element`: MathML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
 
 ### SVG のページ型
 
@@ -154,21 +154,21 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では [WebAssembly/](/ja/docs/WebAssembly) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記に掲載されている値のいずれかでなければなりません。
 
-- `webassembly-function`: グローバル関数のうち、 `WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) など。
+- `webassembly-function`: グローバル関数のうち、`WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) など。
 - `webassembly-constructor`: コンストラクター。例えば [`WebAssembly.Exception()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/Exception) など。
 - `webassembly-interface`: WebAssembly インターフェイス。例えば [`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) など。
 - `webassembly-instance-property`: インスタンスプロパティ。例えば [`WebAssembly.Instance.exports`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) など。
 - `webassembly-instance-method`: インスタンスメソッド。例えば [`WebAssembly.Exception.getArg()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/getArg) など。
 - `webassembly-static-method`: 静的メソッド。例えば [`WebAssembly.Module.exports()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static) など。
-- `webassembly-instruction`: 命令または命令の集合。例えば [`Wrap`](/ja/docs/WebAssembly/Reference/Numeric/Wrap) など。
+- `webassembly-instruction`: 命令または命令の集合。例えば [`wrap`](/ja/docs/WebAssembly/Reference/Numeric/wrap_i64) など。
 
 ### WebDriver のページ型
 
 この節では、[Web/WebDriver](/ja/docs/Web/WebDriver)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `webdriver-command`: ウェブドライバーのコマンド。例えば [`CloseWindow`](/ja/docs/Web/WebDriver/Commands/CloseWindow) など。
-- `webdriver-capability`: ウェブドライバーの能力。例えば [`acceptInsecureCerts`](/ja/docs/Web/WebDriver/Capabilities/acceptInsecureCerts) など。
-- `webdriver-error`: ウェブドライバーのエラー。例えば[安全でない資格情報](/ja/docs/Web/WebDriver/Errors/InsecureCertificate)など。
+- `webdriver-command`: ウェブドライバーのコマンド。例えば [`CloseWindow`](/ja/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow) など。
+- `webdriver-capability`: ウェブドライバーの能力。例えば [`acceptInsecureCerts`](/ja/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) など。
+- `webdriver-error`: ウェブドライバーのエラー。例えば[安全でない資格情報](/ja/docs/Web/WebDriver/Reference/Errors/InsecureCertificate)など。
 
 ### WebExtensions のページ型
 
@@ -185,7 +185,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/Manifest](/ja/docs/Web/Progressive_web_apps/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) など。
+- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/description) など。
 
 ### XPath のページ型
 
@@ -203,7 +203,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/EXSLT](/ja/docs/Web/XML/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set) など。
+- `exslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set) など。
 
 ### Firefox のページ型
 

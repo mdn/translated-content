@@ -34,7 +34,7 @@ slug: Web/API/Headers
 - {{domxref("Headers.entries()")}}
   - : 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对。
 - {{domxref("Headers.get()")}}
-  - : 以 {{domxref("ByteString")}} 的形式从 Headers 对象中返回指定 header 的全部值。
+  - : 以 {{jsxref("String")}} 的形式从 Headers 对象中返回指定 header 的全部值。
 - {{domxref("Headers.has()")}}
   - : 以布尔值的形式从 Headers 对象中返回是否存在指定的 header.
 - {{domxref("Headers.keys()")}}

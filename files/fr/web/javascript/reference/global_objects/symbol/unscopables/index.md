@@ -3,8 +3,6 @@ title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
 
-{{JSRef}}
-
 Le symbole connu **`Symbol.unscopables`** est utilisé afin de définir les noms des propriétés propres et héritées qui sont exclues de l'objet lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) sur l'objet en question.
 
 {{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
@@ -77,5 +75,5 @@ with (obj) {
 
 ## Voir aussi
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - [L'instruction `with`](/fr/docs/Web/JavaScript/Reference/Statements/with) (qui n'est pas disponible [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode))

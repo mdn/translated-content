@@ -1,12 +1,12 @@
 ---
-title: "<title> : l'élément de titre du document"
+title: "Élément HTML `<title>` : l'élément de titre du document"
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du {{glossary("Browser", "navigateur")}} ou dans l'onglet de la page). Il ne contient que du texte&nbsp;; les balises HTML présentes dans l'élément, le cas échéant, sont également traitées comme du texte brut.
+L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du {{Glossary("Browser", "navigateur")}} ou dans l'onglet de la page). Il ne contient que du texte&nbsp;; les balises HTML présentes dans l'élément, le cas échéant, sont également traitées comme du texte brut.
 
 ```html
 <title>Le journal du festival de heavy metal de Mamie</title>
@@ -14,7 +14,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du documen
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -22,7 +22,7 @@ L'élément `<title>` est toujours utilisé au sein de l'élément {{HTMLElement
 
 ### Titres de page et référencement (SEO)
 
-Le contenu du titre d'une page peut avoir des implications importantes pour l'optimisation pour les moteurs de recherche ({{glossary("SEO")}}). En général, un titre long et descriptif fonctionne mieux que des titres courts ou génériques. Le contenu du titre est l'un des éléments utilisés par les algorithmes des moteurs de recherche pour décider de l'ordre d'affichage des pages dans les résultats. De plus, le titre est la première «&nbsp;accroche&nbsp;» qui attire l'attention des lecteurs·rices parcourant la page de résultats.
+Le contenu du titre d'une page peut avoir des implications importantes pour l'optimisation pour les moteurs de recherche ({{Glossary("SEO")}}). En général, un titre long et descriptif fonctionne mieux que des titres courts ou génériques. Le contenu du titre est l'un des éléments utilisés par les algorithmes des moteurs de recherche pour décider de l'ordre d'affichage des pages dans les résultats. De plus, le titre est la première «&nbsp;accroche&nbsp;» qui attire l'attention des lecteur·ice·s parcourant la page de résultats.
 
 Quelques conseils pour composer de bons titres&nbsp;:
 
@@ -35,7 +35,7 @@ Quelques conseils pour composer de bons titres&nbsp;:
 
 Il est important de fournir un titre précis et concis pour décrire l'objectif de la page.
 
-Une technique de navigation courante pour les utilisateurs·rices de technologies d'assistance consiste à lire le titre de la page et à en déduire le contenu. En effet, naviguer dans une page pour en déterminer le contenu peut être long et source de confusion. Les titres doivent être uniques pour chaque page d'un site, en mettant idéalement en avant le but principal de la page en premier, suivi du nom du site. Suivre ce modèle permet de s'assurer que le but principal de la page est annoncé en premier par un lecteur d'écran. Cela offre une bien meilleure expérience que d'entendre d'abord le nom du site avant le titre unique de la page, pour chaque page visitée sur un même site.
+Une technique de navigation courante pour les utilisateur·ice·s de technologies d'assistance consiste à lire le titre de la page et à en déduire le contenu. En effet, naviguer dans une page pour en déterminer le contenu peut être long et source de confusion. Les titres doivent être uniques pour chaque page d'un site, en mettant idéalement en avant le but principal de la page en premier, suivi du nom du site. Suivre ce modèle permet de s'assurer que le but principal de la page est annoncé en premier par un lecteur d'écran. Cela offre une bien meilleure expérience que d'entendre d'abord le nom du site avant le titre unique de la page, pour chaque page visitée sur un même site.
 
 ### Exemple
 
@@ -52,7 +52,10 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 </title>
 ```
 
-- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+> [!NOTE]
+> Actuellement, la mise à jour dynamique du titre d'une page n'est pas automatiquement annoncée par les lecteurs d'écran. Si vous souhaitez mettre à jour le titre de la page pour refléter des changements importants d'état, l'utilisation de [régions ARIA Live](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions) peut également être nécessaire.
+
+- [MDN Comprendre WCAG, explications de la directive 2.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.4_—_navigation_fournir_des_moyens_daider_les_utilisateurs_et_utilisatrices_à_naviguer_trouver_du_contenu_et_savoir_leur_position)
 - [Comprendre le critère de réussite 2.4.2 | W3C Comprendre les WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
 ## Exemples
@@ -60,6 +63,8 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
 ```html
 <title>Et voici le titre de ma page !</title>
 ```
+
+Cet exemple définit une page dont le titre (tel qu'affiché en haut de la fenêtre ou dans l'onglet de la fenêtre) est «&nbsp;Super contenu intéressant&nbsp;».
 
 ## Résumé technique
 
@@ -80,7 +85,7 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Du texte qui n'est pas un {{glossary("whitespace", "espace")}} entre éléments.
+        Du texte qui n'est pas un {{Glossary("whitespace", "espace")}} entre éléments.
       </td>
     </tr>
     <tr>
@@ -111,7 +116,7 @@ Mettre à jour la valeur de `title` afin de refléter un changement d'état impo
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTitleElement")}}</td>
+      <td>{{DOMxRef("HTMLTitleElement")}}</td>
     </tr>
   </tbody>
 </table>

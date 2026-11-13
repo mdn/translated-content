@@ -1,8 +1,9 @@
 ---
-title: ::before
+title: Pseudo-élément CSS `::before`
+short-title: ::before
 slug: Web/CSS/Reference/Selectors/::before
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{CSSxRef("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
@@ -64,7 +65,7 @@ Par défaut, les pseudo-éléments `::before` et `::after` partagent le même co
 
 ## Accessibilité
 
-Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteur·ice·s d'écran.
+Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteurs d'écran.
 
 ## Exemples
 
@@ -196,7 +197,7 @@ Voici le code ci-dessus en action. Notez qu'aucune icône n'est utilisée, et qu
 
 ### Séquences d'échappement Unicode
 
-Comme le contenu généré est CSS, et non HTML, vous **ne pouvez pas** utiliser d'entités de balisage dans les valeurs de contenu. Si vous devez utiliser un caractère spécial et que vous ne pouvez pas l'entrer littéralement dans votre chaîne de contenu CSS, utilisez une séquence d'échappement unicode. Cela consiste en un antislash suivi de la valeur unicode hexadécimale du caractère.
+Comme le contenu généré est CSS, et non HTML, vous **ne pouvez pas** utiliser d'entités de balisage dans les valeurs de contenu. Si vous devez utiliser un caractère spécial et que vous ne pouvez pas l'entrer littéralement dans votre chaîne de caractères de contenu CSS, utilisez une séquence d'échappement unicode. Cela consiste en un antislash suivi de la valeur unicode hexadécimale du caractère.
 
 #### HTML
 
@@ -233,9 +234,9 @@ li[aria-current="step"]::before {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('séquences_déchappement_unicode', 400, 200)}}
+{{EmbedLiveSample("Séquences d'échappement Unicode", 400, 200)}}
 
 ### Les pseudo-éléments imbriqués `::before::marker`
 

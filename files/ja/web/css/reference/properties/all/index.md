@@ -1,9 +1,9 @@
 ---
-title: all
+title: "`all` プロパティ"
+short-title: all
 slug: Web/CSS/Reference/Properties/all
-original_slug: Web/CSS/all
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 8a13259a44523cd17b4fe347088b62c6d7a35265
 ---
 
 **`all`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素のすべてのプロパティを ({{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)を除いて) 初期化します。プロパティは初期値または継承値、または他のカスケードレイヤーまたはスタイルシートに由来して指定した値に設定される可能性があります。
@@ -76,9 +76,9 @@ all: revert;
 all: revert-layer;
 ```
 
-`all` プロパティは、 CSS のグローバルキーワード値のうちの一つで定義します。なお、これらの値は {{cssxref("unicode-bidi")}} および {{cssxref("direction")}} プロパティには影響しません。
-
 ### 値
+
+`all` プロパティは、 CSS のグローバルキーワード値のうちの一つで定義します。なお、これらの値は {{cssxref("unicode-bidi")}} および {{cssxref("direction")}} プロパティには影響しません。
 
 - {{cssxref("initial")}}
   - : その要素のすべてのプロパティを[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に変更するべきであることを指定します。

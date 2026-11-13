@@ -12,7 +12,7 @@ slug: Web/API/HTMLHeadElement
 _Наследует свойства от родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadElement.profile")}}
-  - : Это {{domxref("DOMString")}} представляющая URI одного или более профилей метаданных (через запятую).
+  - : Это {{jsxref("String")}} представляющая URI одного или более профилей метаданных (через запятую).
 
 ## Методы
 

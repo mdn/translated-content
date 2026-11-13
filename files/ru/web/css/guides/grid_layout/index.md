@@ -133,7 +133,7 @@ slug: Web/CSS/Guides/Grid_layout
 - [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
 - [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [CSS Grid Layout и доступность](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/Guides/Grid_layout)
 - [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 - [Subgrid](/ru/docs/Web/CSS/Guides/Grid_layout/Subgrid)
 - [Masonry Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}

@@ -1,8 +1,9 @@
 ---
-title: :future
+title: Pseudo-classe CSS `:future`
+short-title: :future
 slug: Web/CSS/Reference/Selectors/:future
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:future`** agit dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement après un élément correspondant à {{CSSxRef(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).

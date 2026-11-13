@@ -17,7 +17,7 @@ element = document.querySelector(selectors);
 
 Onde:
 
-- `element` é um objeto {{ jsxref("Element")}}.
+- `element` é um objeto {{domxref("Element")}}.
 - `selectors` é uma string que contém um ou mais seletores CSS separados por vírgulas.
 
 ## Exemplo

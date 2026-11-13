@@ -1,9 +1,9 @@
 ---
-title: <image>
+title: Type CSS `<image>`
+short-title: <image>
 slug: Web/CSS/Reference/Values/image
-original_slug: Web/CSS/image
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<image>`** représente une image en deux dimensions.
@@ -12,7 +12,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/do
 
 Le type de données `<image>` peut être représenté avec l'une des valeurs suivantes&nbsp;:
 
-- Une image portée par une valeur de type {{cssxref("url_value", "&lt;url&gt;")}}
+- Une image portée par une valeur de type {{CSSxRef("url_value", "&lt;url&gt;")}}
 - Une valeur de type {{CSSxRef("&lt;gradient&gt;")}} qui représente un dégradé
 - Une partie d'une page web définie par la fonction {{CSSxRef("element","element()")}}
 - Une image, un fragment d'image ou une zone de couleur définie par la fonction {{CSSxRef("image/image","image()")}}
@@ -29,7 +29,9 @@ CSS peut gérer ces différents types d'images&nbsp;:
 - Les images sans dimension intrinsèque, mais avec _des proportions intrinsèques_ entre la hauteur et la largeur, comme un fichier SVG ou une image dans [un format vectoriel](https://fr.wikipedia.org/wiki/Image_vectorielle).
 - Les images _sans dimension ou proportion intrinsèques_, comme les dégradés CSS.
 
-Le moteur CSS détermine la _taille effective_ d'un objet en utilisant&nbsp;: (1) ses _dimensions intrinsèques_&nbsp;; (2) sa _taille indiquée_, définie par des propriétés CSS comme {{CSSxRef("width")}}, {{CSSxRef("height")}} ou {{CSSxRef("background-size")}}&nbsp;; et (3) sa _taille par défaut_, déterminée selon la propriété avec laquelle l'image est utilisée&nbsp;:
+### Taille concrète
+
+Le moteur CSS détermine la _taille concrète_ d'un objet en utilisant&nbsp;: (1) ses _dimensions intrinsèques_&nbsp;; (2) sa _taille indiquée_, définie par des propriétés CSS comme {{CSSxRef("width")}}, {{CSSxRef("height")}} ou {{CSSxRef("background-size")}}&nbsp;; et (3) sa _taille par défaut_, déterminée selon la propriété avec laquelle l'image est utilisée&nbsp;:
 
 | Type d'objet (propriété CSS)                                                                   | Taille par défaut de l'objet                                                                  |
 | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -61,7 +63,7 @@ Les navigateurs ne fournissent pas d'informations particulières quant aux image
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 

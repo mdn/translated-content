@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/text
 original_slug: Web/XSLT/Element/text
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:text>` 요소는 출력 트리에 리터럴(literal) 텍스트를 씁니다. `#PCDATA`, 리터럴 텍스트, 엔티티 참조를 포함할 지도 모릅니다.
 

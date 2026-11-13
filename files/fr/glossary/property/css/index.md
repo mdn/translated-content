@@ -11,14 +11,14 @@ Exemple de règle CSS&nbsp;:
 
 ```css
 /* "div" est un sélecteur qui indique que tous les éléments "div" */
-/* auront le style spécifié par cette règle */
+/* ont le style défini par cette règle */
 div {
   /* La propriété "color" avec la valeur "black" indique */
-  /* que le texte sera coloré en noir */
+  /* que le texte est coloré en noir */
   color: black;
 
   /* La propriété "background-color" avec la valeur "white" indique */
-  /* que l'arrière-plan des éléments sera coloré en blanc */
+  /* que l'arrière-plan des éléments est coloré en blanc */
   background-color: white;
 }
 ```

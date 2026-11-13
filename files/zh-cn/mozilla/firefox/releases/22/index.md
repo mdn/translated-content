@@ -18,7 +18,7 @@ slug: Mozilla/Firefox/Releases/22
 - 实现了 ES6 中的[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)([Firefox bug 846406](https://bugzil.la/846406)).
 - The new [Object.is](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ([Firefox bug 839979](https://bugzil.la/839979)).
 - [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ([Firefox bug 848051](https://bugzil.la/848051)).
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ([Firefox bug 789897](https://bugzil.la/789897)).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/preventExtensions", "preventExtensions")}} trap have been implemented ([Firefox bug 789897](https://bugzil.la/789897)).
 
 ### DOM
 

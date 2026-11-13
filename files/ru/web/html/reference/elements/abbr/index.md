@@ -155,6 +155,6 @@ abbr {
 
 ## Смотрите также
 
-- [Использование элемента \<abbr>](/ru/docs/Learn/HTML/Element/abbr)
+- [Использование элемента \<abbr>](/ru/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
 - Другие [элементы, являющиеся семантически текстовыми](/ru/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - Устаревший элемент {{HTMLElement("acronym")}}, который был заменён элементом `<abbr>`.

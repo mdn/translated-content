@@ -5,7 +5,7 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-**`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性。
+**`File.webkitRelativePath`** 是只读属性，包含 {{jsxref("String")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性。
 
 ## 语法
 
@@ -15,7 +15,7 @@ slug: Web/API/File/webkitRelativePath
 
 ### 值
 
-{{domxref("USVString")}} 包含文件路径，相对于用户所选的祖先目录。
+{{jsxref("String")}} 包含文件路径，相对于用户所选的祖先目录。
 
 ## 示例
 

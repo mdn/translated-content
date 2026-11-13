@@ -22,9 +22,9 @@ _La interfaz `WorkerNavigator` no hereda ninguna propiedad._
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}}{{ReadOnlyInline}}
   - : Retorna el número de núcleos lógicos de procesador disponibles.
 - {{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} representando el idioma preferido del usuario, usualmente el idioma de la interfaz de usuario del navegador. El valor `null` se retorna cuando es desconocido.
+  - : Retorna un {{jsxref("String")}} representando el idioma preferido del usuario, usualmente el idioma de la interfaz de usuario del navegador. El valor `null` se retorna cuando es desconocido.
 - {{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : Retorna un arreglo de {{domxref("DOMString")}} representando los idiomas conocidos por el usuario, en orden de preferencia.
+  - : Retorna un arreglo de {{jsxref("String")}} representando los idiomas conocidos por el usuario, en orden de preferencia.
 - {{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Retorna un objeto {{DOMxRef("LockManager")}} que provee métodos para solicitar un nuevo objeto {{DOMxRef('Lock')}} y para consultar por un objeto `Lock` existente.
 - {{DOMxRef("WorkerNavigator.onLine")}}{{ReadOnlyInline}}

@@ -1,14 +1,14 @@
 ---
-title: -webkit-mask-repeat-x
+title: Propriété CSS `-webkit-mask-repeat-x`
+short-title: -webkit-mask-repeat-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-x
-original_slug: Web/CSS/-webkit-mask-repeat-x
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de masque est répétée horizontalement.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-repeat-x`** définit la façon dont une image de masque est répétée horizontalement.
 
 ## Syntaxe
 
@@ -32,14 +32,16 @@ La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de 
 
 ### Valeurs
 
+Cette propriété est définie par une ou plusieurs valeurs séparées par une virgule&nbsp;:
+
 - `repeat`
   - : L'image de masque est répétée horizontalement.
 - `no-repeat`
-  - : L'image de masque n'est pas répétée horizontalement, seul un exemplaire est dessiné selon l'axe horizontal. Le contenu restant sur l'axe horizontal pour les éléments masqués n'est pas affiché.
+  - : L'image de masque n'est pas répétée horizontalement&nbsp;; seul un exemplaire de l'image de masque est dessiné dans cette direction. Le reste du contenu de l'élément masqué n'est pas affiché.
 - `space`
-  - : L'image est répétée tant que possible sans être rognée. La première et la dernière images sont accolées aux bords droit et gauche de l'élément et l'espace restant est réparti entre les copies de l'image. La propriété {{cssxref("mask-position")}} est ignorée sauf si une seule image peut être affichée sans qu'il n'y ait de rognage. On aura uniquement du rognage s'il n'y a pas suffisamment d'espace pour afficher une seule image.
+  - : L'image est répétée tant que possible sans être rognée. La première et la dernière images sont accolées aux bords droit et gauche de l'élément et l'espace restant est réparti entre les copies de l'image. La propriété {{CSSxRef("mask-position")}} est ignorée sauf si une seule image peut être affichée sans qu'il n'y ait de rognage. On a uniquement du rognage s'il n'y a pas suffisamment d'espace pour afficher une seule image.
 - `round`
-  - : L'image est répétée et les différents exemplaires sont tous étirés de la même façon afin qu'il n'y ait pas d'espace entre chaque. Ainsi, une image qui mesure originellement 260px et qui est répétée trois fois pourra être étirée jusqu'à ce que chaque répétition soit large de 300px, ensuite une autre image sera ajoutée et toutes seront compressées à 225px.
+  - : L'image est répétée et les différents exemplaires sont tous étirés de la même façon afin qu'il n'y ait pas d'espace entre chaque. Ainsi, une image qui mesure originellement 260px et qui est répétée trois fois peut être étirée jusqu'à ce que chaque répétition soit large de 300px, ensuite une autre image est ajoutée et toutes sont compressées à 225px.
 
 ## Définition formelle
 
@@ -51,13 +53,15 @@ La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de 
 
 ## Exemples
 
+### Utiliser une image de masque répétée ou non répétée
+
 ```css
-.exempleun {
+.exemple-un {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
-.exempledeux {
+.exemple-deux {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
@@ -65,16 +69,16 @@ La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de 
 
 ### Gestion de plusieurs images
 
-On peut définir un style de répétition (`<repeat-style>`) différent pour chacune des images de masque en séparant les valeurs par des virgules :
+On peut définir un style de répétition (`<repeat-style>`) différent pour chacune des images de masque en séparant les valeurs par des virgules&nbsp;:
 
 ```css
-.exempletrois {
+.exemple-trois {
   -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```
 
-Chaque image aura la valeur associée, dans le même ordre.
+Chaque image a la valeur associée, dans le même ordre.
 
 ## Spécifications
 
@@ -86,5 +90,5 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("mask-repeat", "-webkit-mask-repeat")}}
-- {{cssxref("-webkit-mask-repeat-y")}}
+- La propriété {{CSSxRef("mask-repeat", "-webkit-mask-repeat")}}
+- La propriété {{CSSxRef("-webkit-mask-repeat-y")}}

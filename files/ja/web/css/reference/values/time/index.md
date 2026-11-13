@@ -1,9 +1,8 @@
 ---
 title: <time>
 slug: Web/CSS/Reference/Values/time
-original_slug: Web/CSS/time
 l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<time>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、時間の値を秒単位またはミリ秒単位で表現します。これは {{cssxref("animation")}} や {{cssxref("transition")}} および関連するプロパティで使用されています。
@@ -57,4 +56,4 @@ l10n:
 ## 関連情報
 
 - {{cssxref("&lt;time-percentage&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

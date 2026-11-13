@@ -1,8 +1,9 @@
 ---
-title: "<fieldset> : l'élément pour les ensembles de champs"
+title: "Élément HTML `<fieldset>` : l'élément pour les ensembles de champs"
+short-title: <fieldset>
 slug: Web/HTML/Reference/Elements/fieldset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ({{HTMLElement("label")}}) dans un formulaire.
@@ -38,16 +39,16 @@ input {
 }
 ```
 
-Comme on peut le voir dans l'exemple ci-dessus, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ({{HTMLElement("legend")}}) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément {{HTMLElement("form")}} de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu via une seule valeur.
+Comme on peut le voir dans l'exemple ci-dessus, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ({{HTMLElement("legend")}}) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément {{HTMLElement("form")}} de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu avec une seule valeur.
 
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Si cet attribut booléen est utilisé, tous les contrôles de formulaire descendants de `<fieldset>`, sont désactivés, c'est-à-dire qu'ils ne sont pas éditables et ne seront pas envoyés avec le {{HTMLElement("form")}}. Ils ne recevront aucun évènement de navigation, comme les clics de souris ou les évènements liés au focus. Par défaut, les navigateurs affichent ces contrôles comme grisés. Notez que les éléments de formulaire à l'intérieur de l'élément {{HTMLElement("legend")}} ne seront pas désactivés.
+  - : Si cet attribut booléen est utilisé, tous les contrôles de formulaire descendants de `<fieldset>`, sont désactivés, c'est-à-dire qu'ils ne sont pas éditables et ne sont pas envoyés avec le {{HTMLElement("form")}}. Ils ne reçoivent aucun évènement de navigation, comme les clics de souris ou les évènements liés à la sélection (<i lang="en">focus</i> en anglais). Par défaut, les navigateurs affichent ces contrôles comme grisés. Notez que les éléments de formulaire à l'intérieur de l'élément {{HTMLElement("legend")}} ne sont pas désactivés.
 - [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
-  - : Cet attribut prend la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un élément {{HTMLElement("form")}} auquel vous souhaitez rattacher le `<fieldset>`, même s'il n'est pas imbriqué dans le formulaire. Veuillez noter que l'utilisation de cet attribut peut prêter à confusion — si vous souhaitez que les éléments {{HTMLElement("input")}} à l'intérieur du `<fieldset>` soient associés au formulaire, il faut utiliser l'attribut `form` directement sur ces éléments. Vous pouvez vérifier quels éléments sont associés à un formulaire via JavaScript, en utilisant {{DOMxRef("HTMLFormElement.elements")}}.
+  - : Cet attribut prend la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un élément {{HTMLElement("form")}} auquel vous souhaitez rattacher le `<fieldset>`, même s'il n'est pas imbriqué dans le formulaire. Veuillez noter que l'utilisation de cet attribut peut prêter à confusion — si vous souhaitez que les éléments {{HTMLElement("input")}} à l'intérieur du `<fieldset>` soient associés au formulaire, il faut utiliser l'attribut `form` directement sur ces éléments. Vous pouvez vérifier quels éléments sont associés à un formulaire avec JavaScript, en utilisant {{DOMxRef("HTMLFormElement.elements")}}.
 - `name`
   - : Le nom associé au groupe.
 
@@ -58,11 +59,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 L'élément `<fieldset>` est quelque peu particulier pour la mise en forme.
 
-La valeur initiale de la propriété {{CSSxRef("display")}} pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en ligne, celui-ci se comportera comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a {{CSSxRef("min-inline-size", "min-inline-size: min-content")}}.
+La valeur initiale de la propriété {{CSSxRef("display")}} pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en incise, celui-ci se comporte comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a {{CSSxRef("min-inline-size", "min-inline-size: min-content")}}.
 
-Si un élément {{HTMLElement("legend")}} est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on pourra le cibler avec `display: inline`, il continuera de se comporter comme `block`).
+Si un élément {{HTMLElement("legend")}} est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on peut le cibler avec `display: inline`, il continue de se comporter comme `block`).
 
-Une boîte anonyme contiendra le contenu de `<fieldset>` et héritera de certaines propriétés de `<fieldset>`. Si l'élément `<fieldset>` est mis en forme avec `display: grid` ou `display: inline-grid`, la boîte anonyme aura un contexte de formatage de grille. Si `<fieldset>` est mis en forme avec `display: flex` ou `display: inline-flex`, la boîte anonyme aura un contexte de formatage flexible. Dans tous les autres cas, la boîte anonyme aura un contexte de formatage de bloc.
+Une boîte anonyme contient le contenu de `<fieldset>` et hérite de certaines propriétés de `<fieldset>`. Si l'élément `<fieldset>` est mis en forme avec `display: grid` ou `display: inline-grid`, la boîte anonyme a un contexte de formatage de grille. Si `<fieldset>` est mis en forme avec `display: flex` ou `display: inline-flex`, la boîte anonyme a un contexte de formatage flexible. Dans tous les autres cas, la boîte anonyme a un contexte de formatage de bloc.
 
 N'hésitez pas à donner au `<fieldset>` et au `<legend>` le style que vous souhaitez pour l'adapter au design de votre page.
 
@@ -86,7 +87,7 @@ Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul 
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple simple', '100%', 80)}}
+{{EmbedLiveSample("Exemple simple", "100%", 80)}}
 
 ### \<fieldset> désactivé
 
@@ -99,11 +100,11 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
   <fieldset disabled>
     <legend>Fieldset désactivé</legend>
     <div>
-      <label for="name">Nom : </label>
+      <label for="name">Nom&nbsp;: </label>
       <input type="text" id="name" value="Chris" />
     </div>
     <div>
-      <label for="pwd">Archétype : </label>
+      <label for="pwd">Archétype&nbsp;: </label>
       <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
@@ -112,7 +113,7 @@ Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un
 
 #### Résultat
 
-{{EmbedLiveSample('fieldset désactivé', '100%', 110) }}
+{{EmbedLiveSample("fieldset désactivé", "100%", 110) }}
 
 ## Résumé technique
 

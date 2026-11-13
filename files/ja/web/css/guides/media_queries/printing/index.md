@@ -1,9 +1,8 @@
 ---
 title: 印刷
 slug: Web/CSS/Guides/Media_queries/Printing
-original_slug: Web/CSS/CSS_media_queries/Printing
 l10n:
-  sourceCommit: a29769d6d10261f771321eb60f3990029c160924
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 コンテンツを印刷するときに、ウェブサイトまたはアプリケーションで使い勝手を向上させたい場合があります。考えられるシナリオはいくつかあります。
@@ -65,7 +64,7 @@ window.addEventListener("afterprint", () => self.close);
 #### HTML
 
 ```html
-<button id="print_external">Print external page!</button>
+<button id="print_external">外部ページを印刷</button>
 ```
 
 #### JavaScript
@@ -83,7 +82,7 @@ function setPrint() {
 document.getElementById("print_external").addEventListener("click", () => {
   const hideFrame = document.createElement("iframe");
   hideFrame.onload = setPrint;
-  hideFrame.style.display = "none"; // hide iframe
+  hideFrame.style.display = "none"; // iframe を隠す
   hideFrame.src = "external-page.html";
   document.body.appendChild(hideFrame);
 });

@@ -1,8 +1,9 @@
 ---
-title: "<dfn> : l'élément de définition"
+title: "Élément HTML `<dfn>` : l'élément de définition"
+short-title: <dfn>
 slug: Web/HTML/Reference/Elements/dfn
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dfn>`** indique un terme à définir. L'élément `<dfn>` doit être utilisé dans une phrase de définition complète, où la définition du terme peut être l'une des suivantes&nbsp;:
@@ -129,7 +130,7 @@ Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le d
 </p>
 ```
 
-On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation («&nbsp;HST&nbsp;») et indique le détail de cette abrévation («&nbsp;Hubble Space Telescope&nbsp;») grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
+Notez que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation («&nbsp;HST&nbsp;») et indique le détail de cette abréviation («&nbsp;Hubble Space Telescope&nbsp;») grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
 
 #### Résultat
 

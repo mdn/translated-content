@@ -17,7 +17,11 @@ div:focus-within {
 
 ## 구문
 
-{{CSSSyntax}}
+```css
+:focus-within {
+  /* ... */
+}
+```
 
 ## 예제
 

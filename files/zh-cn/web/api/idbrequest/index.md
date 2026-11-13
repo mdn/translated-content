@@ -71,7 +71,7 @@ request.onupgradeneeded= function(event) {
         <code><a name="attr_errorCode">error</a></code>
       </td>
       <td>
-        <code>readonly <a href="/zh-CN/docs/DOM/DOMError">DOMError</a></code>
+        <code>readonly <a href="/zh-CN/docs/Web/API/DOMError">DOMError</a></code>
       </td>
       <td>
         <p>The following error codes are returned under certain conditions:</p>
@@ -181,10 +181,10 @@ request.onupgradeneeded= function(event) {
 > [!WARNING]
 > These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
 
-| Constant      | Value     | Description                                                         |
-| ------------- | --------- | ------------------------------------------------------------------- |
-| [`DONE`]()    | "done"    | The request has completed or an error has occurred. Initially false |
-| [`LOADING`]() | "pending" | The request has been started, but its result is not yet available.  |
+| Constant        | Value     | Description                                                         |
+| --------------- | --------- | ------------------------------------------------------------------- |
+| [`DONE`](<>)    | "done"    | The request has completed or an error has occurred. Initially false |
+| [`LOADING`](<>) | "pending" | The request has been started, but its result is not yet available.  |
 
 ## Event handlers
 

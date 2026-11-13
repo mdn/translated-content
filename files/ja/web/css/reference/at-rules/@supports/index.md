@@ -1,14 +1,16 @@
 ---
-title: "@supports"
+title: CSS `@supports` アットルール
+short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
-original_slug: Web/CSS/@supports
 l10n:
-  sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
+  sourceCommit: 4179ddfb7690019d23f529cbd316c35d2381c75c
 ---
 
-**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、ブラウザーが CSS 機能に対応しているかによって、 CSS 宣言を指定することができます。
-このアットルールを使用することは、一般に*機能クエリー*と呼ばれます。
+**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、ブラウザーがある CSS 機能に対応しているかによって、CSS 宣言を指定することができます。
+このアットルールを使用することは、一般に機能クエリーと呼ばれます。
 ルールはコードの最上位または他の条件付きグループアットルールの中に配置しなければなりません。
+
+JavaScript では、`@supports` は CSS オブジェクトモデルのインターフェイス {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
 {{InteractiveExample("CSS デモ: @supports", "tabbed-standard")}}
 
@@ -40,29 +42,23 @@ l10n:
 </ul>
 ```
 
-JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
-
 ## 構文
-
-`@supports` アットルールは、 _supports 条件_ を含む文のブロックで構成されます。
-supports 条件は、1 つ以上の名前と値のペア （例： `<property>: <value>`）のセットです。
 
 ```css
 @supports (<supports-condition>) {
   /* 条件が true の場合、このブロックの CSS を使用します。 */
 }
-```
 
-条件は、結合条件 (`and`)、非結合条件 (`or`)、否定 (`not`) で組み合わせることができます。
-
-```css
 @supports (<supports-condition>) and (<supports-condition>) {
   /* 両方の条件が true の場合、このブロックの CSS を使用します。 */
 }
 ```
 
+`@supports` アットルールは、 _supports 条件_ を含む文のブロックで構成されます。
+複数の条件を、結合条件 (`and`)、非結合条件 (`or`)、否定 (`not`) で組み合わせることができます。
 演算子の優先順位は、括弧で定義することができます。
-対応条件は、`<property>: <value>` 宣言構文または `<function()>` 構文のいずれかを使用することができます。
+
+supports の条件は、`<property>: <value>` 宣言構文または `<function()>` 構文のいずれかを使用することができます。
 以下の節では、それぞれの種類の対応条件の使用方法について記述します。
 
 ### 宣言の構文
@@ -81,10 +77,20 @@ supports 条件は、1 つ以上の名前と値のペア （例： `<property>: 
 関数構文は、関数内の値または式がブラウザーに対応しているかどうかを調べます。
 関数構文で対応している関数は、次の節で記述されています。
 
+#### `at-rule()`
+
+この関数は、ブラウザーが指定された [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)に対応しているかどうかを確認します。
+次の例は、ブラウザーが {{cssxref("@keyframes")}} アットルールに対応している場合、true を返し、その中に含まれる CSS スタイルを適用します。
+
+```css
+@supports at-rule(@keyframes) {
+}
+```
+
 #### `selector()`
 
 ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。
-以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)に対応していれば true を返します。
+以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)に対応していれば true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports selector(h2 > p) {
@@ -94,7 +100,7 @@ supports 条件は、1 つ以上の名前と値のペア （例： `<property>: 
 #### `font-tech()`
 
 この関数は、ブラウザーがレイアウトおよびレンダリングのために指定されたフォント技術に対応しているかどうかを調べます。
-次の例では、ブラウザーが `COLRv1` フォント技術に対応している場合、true を返し、CSS スタイルを適用します。
+次の例では、ブラウザーが `COLRv1` フォント技術に対応している場合、true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports font-tech(color-COLRv1) {
@@ -125,7 +131,7 @@ supports 条件は、1 つ以上の名前と値のペア （例： `<property>: 
 #### `font-format()`
 
 この関数は、ブラウザーがレイアウトおよびレンダリングのために指定されたフォント形式に対応しているかどうかを調べます。
-次の例は、ブラウザーが `opentype` フォント形式に対応している場合、 true を返し、 CSS スタイルを適用します。
+次の例は、ブラウザーが `opentype` フォント形式に対応している場合、 true を返し、その中に含まれる CSS スタイルを適用します。
 
 ```css
 @supports font-format(opentype) {
@@ -199,9 +205,16 @@ supports 条件は、1 つ以上の名前と値のペア （例： `<property>: 
 括弧を増やすことなく、複数の論理和を並記することができます。以下の式はどちらも等価です。
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+  (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (-webkit-transform-style: preserve-3d)
+  ) {
+}
 ```
 
 > [!NOTE]
@@ -272,37 +285,66 @@ ul:has(> li li) {
 
 ### フォント技術の対応状況を確認
 
-次の例は、ブラウザーが `COLRv1` フォント技術に対応している場合に CSS スタイルを適用します。
+次の例は、ブラウザーが `COLRv1` フォント技術に対応している場合に、 [Bungee Spice](https://fonts.google.com/specimen/Bungee+Spice) カラーフォントを適用します。
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
-
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  body {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
 フォント技術の対応を検査するには、 {{CSSxRef("@font-face")}} アットルール内の `tech` 関数を使用することもできます。
-ブラウザーがフォント技術に対応していない場合は、代替フォント (`Bungee-fallback.otf`) を使用することができます。
+次の例では、ブラウザーが [`bungee-spice.woff2`](https://fonts.google.com/specimen/Bungee+Spice) のフォント技術に対応していない場合、代わりに通常の [`bungee.woff2`](https://fonts.google.com/specimen/Bungee) フォントを使用します。
 
 ```css
 @font-face {
   font-family: "Bungee Spice";
   src:
-    url("https://fonts.googleapis.com/css2?family=Bungee+Spice")
-      tech(color-COLRv1),
-    url("Bungee-fallback.otf") format("opentype");
+    url("bungee-spice.woff2") tech(color-COLRv1) format("woff2"),
+    url("bungee.woff2") format("woff2");
 }
 ```
 
 ### フォント形式の対応検査
 
-次の例は、ブラウザーが `woff2` フォント形式に対応している場合に CSS スタイルを適用します。
+次の例では、ブラウザーがこのフォント形式に対応している場合は WOFF2 バージョンのフォントを使用し、対応していない場合は、先に指定した WOFF バージョンに切り替えます。
 
 ```css
-@supports font-format(woff2) {
-  font-family: "Open Sans";
+@font-face {
+  font-family: "Open Sans WOFF";
+  src: url("open-sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans WOFF2";
   src: url("open-sans.woff2") format("woff2");
+}
+
+body {
+  font-family: "Open Sans WOFF", sans-serif;
+}
+
+@supports font-format(woff2) {
+  body {
+    font-family: "Open Sans WOFF2", sans-serif;
+  }
+}
+```
+
+ただし、複数のフォント形式を指定する場合は、単一の {{cssxref("@font-face")}} アットルール内の `src` 記述子に、優先度の高い順から低い順にそれらを列挙したほうが効率的です。
+
+```css
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("open-sans.woff2") format("woff2"),
+    url("open-sans.woff") format("woff");
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 ```
 

@@ -71,23 +71,28 @@ console.log(greeting(null)); // "Howdy, stranger"
 
 조건 연산자는 아래와 같이 연결해 사용할 수 있습니다. 이는 연결된 `if … else if … else if … else`와 유사합니다.
 
-```js
-function example(…) {
-    return condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+```js-nolint
+function example() {
+  return condition1 ? value1
+    : condition2 ? value2
+    : condition3 ? value3
+    : value4;
 }
 ```
 
 위 코드는 아래의 연결된 `if … else`와 동등합니다.
 
 ```js
-function example(…) {
-    if (condition1) { return value1; }
-    else if (condition2) { return value2; }
-    else if (condition3) { return value3; }
-    else { return value4; }
+function example() {
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
 }
 ```
 

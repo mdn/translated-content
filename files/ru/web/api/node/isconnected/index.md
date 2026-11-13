@@ -15,7 +15,7 @@ var isItConnected = nodeObjectInstance.isConnected
 
 ### Return value
 
-A {{domxref("Boolean")}} that is `true` if the node is connected to its relevant context object, and `false` if not.
+A {{jsxref("Boolean")}} that is `true` if the node is connected to its relevant context object, and `false` if not.
 
 ## Пример
 

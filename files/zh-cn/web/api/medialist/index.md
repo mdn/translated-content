@@ -13,7 +13,7 @@ slug: Web/API/MediaList
 ## 属性
 
 - {{domxref("MediaList.mediaText")}}
-  - : 一个字符串转化器，返回一个{{domxref("DOMString")}}，以文本形式表示 `MediaList`，也可以通过这个方法设置新的 `MediaList`。
+  - : 一个字符串转化器，返回一个{{jsxref("String")}}，以文本形式表示 `MediaList`，也可以通过这个方法设置新的 `MediaList`。
 - {{domxref("MediaList.length")}} {{readonlyInline}}
   - : 返回 `MediaList` 中媒体查询的数量。
 
@@ -24,7 +24,7 @@ slug: Web/API/MediaList
 - {{domxref("MediaList.deleteMedium()")}}
   - : 从 `MediaList` 中移除一个媒体查询。
 - {{domxref("MediaList.item()")}}
-  - : 一个获取函数，返回一个{{domxref("CSSOMString")}}，表示文本形式的媒体查询，需要提供媒体查询在 `MediaList` 中的索引位置。
+  - : 一个获取函数，返回一个{{jsxref("String")}}，表示文本形式的媒体查询，需要提供媒体查询在 `MediaList` 中的索引位置。
 
 ## 示例
 

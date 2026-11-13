@@ -2,7 +2,7 @@
 title: Développement de jeux vidéo
 slug: Games
 l10n:
-  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 Les jeux vidéo sont parmi les activités numériques les plus populaires. L'arrivée continue de nouvelles technologies permet de développer encore des jeux de meilleure qualité et plus performants qui peuvent fonctionner dans n'importe quel navigateur respectant les standards du web.
@@ -35,7 +35,7 @@ Pour une liste d'exemples de jeux, voir nos [tutoriels](/fr/docs/Games/Tutorials
 - [HTML5 Gamedev Starter <sup>(angl.)</sup>](https://html5devstarter.enclavegames.com/)
   - : Ressource de démarrage pour les nouveaux développeur·euse·s de jeux, une liste sélectionnée de liens vers diverses ressources utiles sur le web.
 - [js13kGames <sup>(angl.)</sup>](https://js13kgames.com/)
-  - : Concours de programmation JavaScript pour développeur·euse·s de jeux HTML avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux soumis sont disponibles dans un format lisible sur GitHub.
+  - : Concours de programmation JavaScript pour développeur·euse·s de jeux HTML avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux envoyés sont disponibles dans un format lisible sur GitHub.
 - [Mozilla Hacks Blog <sup>(angl.)</sup>](https://hacks.mozilla.org/category/games/)
   - : Catégorie «&nbsp;Jeux&nbsp;» du blog Mozilla Hacks contenant des articles intéressants liés au développement de jeux.
 - [Games section on wiki.mozilla.org <sup>(angl.)</sup>](https://wiki.mozilla.org/Platform/Games)

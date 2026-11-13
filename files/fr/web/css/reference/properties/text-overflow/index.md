@@ -1,14 +1,14 @@
 ---
-title: text-overflow
+title: Propriété CSS `text-overflow`
+short-title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
-original_slug: Web/CSS/text-overflow
+l10n:
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`text-overflow`** définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s.
 
-La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
-
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: text-overflow")}}
 
 ```css interactive-example-choice
 text-overflow: clip;
@@ -29,7 +29,10 @@ text-overflow: "";
 ```html interactive-example
 <section id="default-example">
   <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+    <p id="example-element">
+      «&nbsp;Y a-t-il du thé dans ce vaisseau spatial&nbsp;?&nbsp;»
+      demanda-t-il.
+    </p>
   </div>
 </section>
 ```
@@ -51,63 +54,46 @@ text-overflow: "";
 }
 ```
 
-Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (`''`).
-
-Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec `white-space: nowrap`) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.
-
-Cette propriété CSS ne force pas le dépassement. Pour ce faire et afin que `text-overflow` soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec `hidden` et {{cssxref("white-space")}} avec `nowrap`.
-
 ## Syntaxe
 
 ```css
-/* On gère le dépassement en fin de ligne
-    - à droite en LTR,
-    - à gauche en RTL */
 text-overflow: clip;
-text-overflow: ellipsis;
-text-overflow: "…";
-text-overflow: fade;
-text-overflow: fade(10px);
-text-overflow: fade(5%);
-
-/* On gère le dépassement au début et
-   à la fin de la ligne. La directionnalité
-   n'a pas d'importance */
-text-overflow: clip ellipsis;
-text-overflow: "…" "…";
-text-overflow: fade clip;
-text-overflow: fade(10px) fade(10px);
-text-overflow: fade(5%) fade(5%);
+text-overflow: ellipsis ellipsis;
+text-overflow: ellipsis " [..]";
 
 /* Valeurs globales */
 text-overflow: inherit;
 text-overflow: initial;
+text-overflow: revert;
+text-overflow: revert-layer;
 text-overflow: unset;
 ```
 
-La propriété `text-overflow` peut être définie grâce à une ou deux valeurs.
-
-Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera le comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
-
-Chacune des valeurs se compose :
-
-- D'un des mots-clés : [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
-- De la fonction [`fade()`](#fade_fun) à laquelle on passe une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui permet de contrôler la distance d'effacement
-- D'[une chaîne de caractères `<string>`](#string).
-
 ### Valeurs
 
+Cette propriété est définie comme une ou deux valeurs séparées par des espaces, y compris&nbsp;:
+
 - `clip`
-  - : La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (`''`) comme valeur pour cette propriété.
+  - : La valeur par défaut pour cette propriété. Ce mot-clé tronque le texte à la limite de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction), donc le découpage peut se produire au milieu d'un caractère. Pour tronquer à la transition entre les caractères, vous pouvez définir `text-overflow` comme une chaîne de caractères vide, si c'est pris en charge par vos navigateurs cibles&nbsp;: `text-overflow: '';`.
 - `ellipsis`
-  - : Ce mot-clé indique qu'on affiche une ellipse (`'…'`, `U+2026 Horizontal Ellipsis`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.
-- `fade` {{experimental_inline}}
-  - : Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.
-- `fade( <length> | <percentage> )` {{experimental_inline}}
-  - : Cette fonction permet de rogner le contenu qui dépasse et d'appliquer un effet de dégradé en transparence. Au bout de la boîte, on a une transparence totale.
-    L'argument passé à la fonction détermine la distance sur laquelle cet effet est appliqué. La valeur en pourcentage est relative à la largeur de la boîte. Les valeurs inférieures à `0` sont ramenées à `0`. Les valeurs supérieures à la largeur de la boîte sont écrétées à la largeur de la boîte.
-- `<string>` {{experimental_inline}}
-  - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
+  - : Ce mot-clé affiche une ellipse (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction), ce qui réduit la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, elle est rognée.
+- {{CSSxRef("&lt;string&gt;")}}
+  - : La chaîne de caractères à utiliser pour représenter le texte rogné. La chaîne de caractères est affichée à l'intérieur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction) et réduit la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne de caractères, elle est rognée.
+
+## Description
+
+La propriété `text-overflow` définit la façon dont le contenu débordant masqué est signalé aux utilisateur·ice·s. Il peut être tronqué, afficher une ellipse (`…`) ou afficher une chaîne de caractères personnalisée.
+
+La propriété `text-overflow` ne force pas le débordement. Pour faire déborder le texte de son conteneur, vous devez définir d'autres propriétés CSS&nbsp;: {{CSSxRef("overflow")}} et {{CSSxRef("white-space")}}. Par exemple&nbsp;:
+
+```css
+overflow: hidden;
+white-space: nowrap;
+```
+
+La propriété `text-overflow` affecte uniquement le contenu qui déborde d'un élément conteneur de bloc dans sa direction de progression _en incise_ (et non, par exemple, le texte qui déborde en bas d'une boîte).
+
+La propriété `text-overflow` peut être définie avec une ou deux valeurs. Si une seule valeur est fournie, elle définit le comportement du débordement à la fin de la ligne (l'extrémité droite pour un texte de gauche à droite, l'extrémité gauche pour un texte de droite à gauche). Si deux valeurs sont fournies, la première définit le comportement du débordement à l'extrémité gauche de la ligne, et la seconde le définit à son extrémité droite. La propriété accepte soit une valeur de mot-clé (`clip` ou `ellipsis`), soit une valeur de type `<string>`.
 
 ## Définition formelle
 
@@ -127,7 +113,7 @@ Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un
 
 ```html
 <div class="ltr">
-  <h2>Left to right text</h2>
+  <h2>Texte de gauche à droite</h2>
   <pre>clip</pre>
   <p class="overflow-clip">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -143,7 +129,7 @@ Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un
 </div>
 
 <div class="rtl">
-  <h2>Right to left text</h2>
+  <h2>Texte de droite à gauche</h2>
   <pre>clip</pre>
   <p class="overflow-clip">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -200,7 +186,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample('Syntaxe_avec_une_valeur', 600, 320)}}
+{{EmbedLiveSample("Syntaxe avec une valeur", 600, 320)}}
 
 ### Syntaxe avec deux valeurs
 
@@ -270,11 +256,13 @@ for (let para of paras) {
 
 #### Résultat
 
-{{EmbedLiveSample('Syntaxe_avec_deux_valeurs', 600, 360)}}
+{{EmbedLiveSample("Syntaxe avec deux valeurs", 600, 360)}}
 
 ## Spécifications
 
 {{Specifications}}
+
+Une version précédente de cette interface a atteint le statut de <i lang="en">Candidate Recommendation</i> (Candidat à la recommandation). Comme certaines fonctionnalités non listées comme étant à risque doivent être supprimées, la spécification a été rétrogradée au niveau <i lang="en">Working Draft</i> (Brouillon de travail), expliquant pourquoi les navigateurs ont implémenté cette propriété sans préfixe, bien qu'elle ne soit pas à l'état de CR.
 
 ## Compatibilité des navigateurs
 
@@ -282,5 +270,5 @@ for (let para of paras) {
 
 ## Voir aussi
 
-- {{cssxref("overflow")}}
-- {{cssxref("white-space")}}
+- Propriétés CSS associées&nbsp;: {{CSSxRef("overflow")}}, {{CSSxRef("white-space")}}
+- Propriétés CSS qui contrôlent les sauts de ligne dans les mots&nbsp;: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}

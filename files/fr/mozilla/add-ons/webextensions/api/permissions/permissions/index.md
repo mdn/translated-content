@@ -3,13 +3,11 @@ title: Permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
 ---
 
-{{AddonSidebar}}
-
 Un objet `Permissions` représente une collection de permissions.
 
 ## Type
 
-Un {{jsxref("object")}} avec les propriétés suivantes :
+Un {{jsxref("Object")}} avec les propriétés suivantes :
 
 - `origins`{{optional_inline}}
   - : Un tableau de [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), représentant les [permissions de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).

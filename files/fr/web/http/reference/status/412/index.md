@@ -2,7 +2,7 @@
 title: 412 Precondition Failed
 slug: Web/HTTP/Reference/Status/412
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`412 Precondition Failed`** indique que l'accès à la ressource cible a été refusé.
@@ -33,7 +33,7 @@ Par exemple, lors de la modification de certaines pages wiki, le contenu est hac
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Lors de l'enregistrement des modifications d'une page wiki (envoi de données), la requête {{HTTPMethod("POST")}} contiendra l'en-tête {{HTTPHeader("If-Match")}} avec la valeur d'`ETag` que le client a enregistrée lors de la dernière édition afin de vérifier la fraîcheur de la ressource sur le serveur&nbsp;:
+Lors de l'enregistrement des modifications d'une page wiki (envoi de données), la requête {{HTTPMethod("POST")}} contient l'en-tête {{HTTPHeader("If-Match")}} avec la valeur d'`ETag` que le client a enregistrée lors de la dernière édition afin de vérifier la fraîcheur de la ressource sur le serveur&nbsp;:
 
 ```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"

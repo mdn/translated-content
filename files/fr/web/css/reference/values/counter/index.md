@@ -1,12 +1,43 @@
 ---
-title: counter()
+title: Fonction CSS `counter()`
+short-title: counter()
 slug: Web/CSS/Reference/Values/counter
-original_slug: Web/CSS/counter
+l10n:
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`counter()`** retourne une chaîne de caractères représentant la valeur actuelle du compteur nommé, si celui-ci existe.
 
-La fonction CSS **`counter()`** renvoie une chaîne de caractères qui représente la valeur courante du compteur nommé (dont le nom est passé en argument). Elle est généralement utilisée pour construire un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) mais elle peut tout à fait être utilisée à n'importe quel endroit où une valeur {{cssxref("&lt;string&gt;")}} est attendue.
+La fonction `counter()` est généralement utilisée au sein d'un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) avec la propriété {{CSSxRef("content")}}, mais théoriquement, elle peut être utilisée partout où une valeur {{CSSxRef("&lt;string&gt;")}} est acceptée.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: counter()", "tabbed-shorter")}}
+
+```css interactive-example
+.double-list {
+  counter-reset: count -1;
+}
+
+.double-list li {
+  counter-increment: count 2;
+}
+
+.double-list li::marker {
+  content: counter(count, decimal) ") ";
+}
+```
+
+```html interactive-example
+<p>Meilleurs duos dynamiques dans le sport&nbsp;:</p>
+<ol class="double-list">
+  <li>Simone Biles + Jonathan Owens</li>
+  <li>Serena Williams + Venus Williams</li>
+  <li>Aaron Judge + Giancarlo Stanton</li>
+  <li>LeBron James + Dwyane Wade</li>
+  <li>Xavi Hernandez + Andres Iniesta</li>
+</ol>
+```
+
+## Syntaxe
 
 ```css
 /* Usage simple */
@@ -16,31 +47,30 @@ counter(nomcompteur);
 counter(nomcompteur, upper-roman)
 ```
 
-Un [compteur](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) CSS n'a aucun effet visible en lui-même. C'est la fonction `counter()` (ainsi que `counters()`) qui permet d'utiliser la chaîne de caractère ou l'image résultante.
-
-> [!NOTE]
-> La fonction `counter()` peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.
->
-> Veillez à consulter [le tableau de compatibilité des navigateurs](#browser_compatibility) avant d'utiliser ces fonctionnalités en production.
-
-## Syntaxe
+Un [compteur](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) CSS n'a aucun effet visible en lui-même.
+Les fonctions `counter()` et {{CSSxRef("counters()")}} sont ce qui rend les compteurs utiles en retournant des chaînes de caractères définies par le·la développeur·euse (ou des images).
 
 ### Valeurs
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés `none`, `unset`, `initial` ou `inherit`.
-- `<counter-style>`
-  - : Un nom de style de compteur ou une fonction [`symbols()`](/fr/docs/Web/CSS/Reference/Values/symbols). Le nom d'un style de compteur peut indiquer un compteur [alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien](/fr/docs/Web/CSS/Reference/Properties/list-style-type#valeurs) ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/Guides/Counter_styles). Si cette valeur n'est pas fournie, le style par défaut est décimal.
-- `none`
-  - : Représente la chaîne de caractère vide.
+La fonction `counter()` accepte jusqu'à deux paramètres. Le premier paramètre est le `<counter-name>`. Le deuxième paramètre optionnel est le `<counter-style>`.
 
-### Syntaxe formelle
+- `<counter-name>`
+  - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) qui identifie le compteur, et qui est le même nom sensible à la casse utilisé avec les valeurs de propriété {{CSSxRef("counter-reset")}} et {{CSSxRef("counter-increment")}}. Le nom du compteur ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
+- `<counter-style>`
+  - : Un nom de {{CSSxRef("list-style-type")}}, un nom de {{CSSxRef("@counter-style#counter-style-name", "counter-style-name")}} ou une fonction {{CSSxRef("symbols()")}}, où un nom de style de compteur peut être un style de compteur prédéfini `numeric`, `alphabetic` ou `symbolic`, un style de compteur prédéfini complexe en écriture asiatique ou éthiopienne, ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/Guides/Counter_styles). Si omis, le style de compteur par défaut est `decimal`.
+
+> [!NOTE]
+> Pour joindre les valeurs de compteur lors de l'imbrication de compteurs, utilisez la fonction {{CSSxRef("counters()")}}, qui fournit un paramètre {{CSSxRef("&lt;string&gt;")}} supplémentaire.
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
 ## Exemples
 
-### Comparaison entre compteur par défaut et chiffres romains majuscules
+### `lower-roman` comparé à `lower-alpha`
+
+Dans cet exemple, nous affichons un compteur en utilisant les styles de liste `lower-roman` et `lower-alpha`.
 
 #### HTML
 
@@ -54,55 +84,64 @@ Un [compteur](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) CSS n'a auc
 
 #### CSS
 
-```css
-ol {
-  counter-reset: listCounter;
-}
-li {
-  counter-increment: listCounter;
-}
-li::after {
-  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
-    "]";
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Comparaison_entre_compteur_par_défaut_et_chiffres_romains_majuscules", "100%", 150)}}
-
-### Comparaison entre compteur décimal avec zéro et compteur alphabétique minuscule
-
-#### HTML
-
-```html
-<ol>
-  <li></li>
-  <li></li>
-  <li></li>
-</ol>
-```
-
-#### CSS
-
-```css
+```css-nolint
 ol {
   counter-reset: count;
 }
-
 li {
   counter-increment: count;
 }
-
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
+  content:
+    "[" counter(count, lower-roman) "] == ["
     counter(count, lower-alpha) "]";
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Comparaison_entre_compteur_décimal_avec_zéro_et_compteur_alphabétique_minuscule", "100%", 150)}}
+{{EmbedLiveSample("`lower-roman` comparé à `lower-alpha`", "100%", 150)}}
+
+### Afficher un compteur en utilisant trois styles
+
+Dans cet exemple, nous utilisons la fonction `counter()` trois fois.
+
+#### HTML
+
+```html
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+```
+
+#### CSS
+
+Nous incluons la fonction `counter()` avec trois styles de compteur différents, y compris la valeur décimale par défaut. Nous avons ajouté un padding à la liste pour fournir de l'espace pour la longue chaîne de caractères dans `::marker`.
+
+```css-nolint
+ol {
+  counter-reset: listCounter;
+  padding-left: 8em;
+}
+li {
+  counter-increment: listCounter;
+}
+li::marker {
+  content:
+    "L'élément #" counter(listCounter) " est : ";
+}
+li::after {
+  content:
+    "[" counter(listCounter, decimal-leading-zero) "] == ["
+    counter(listCounter, upper-roman) "]";
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Afficher un compteur en utilisant trois styles", "100%", 150)}}
 
 ## Spécifications
 
@@ -115,7 +154,11 @@ li::after {
 ## Voir aussi
 
 - [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("@counter-style")}}
-- La fonction CSS [`counters()`](/fr/docs/Web/CSS/Reference/Values/counters)
+- La propriété {{CSSxRef("counter-reset")}}
+- La propriété {{CSSxRef("counter-set")}}
+- La propriété {{CSSxRef("counter-increment")}}
+- La règle {{CSSxRef("@counter-style")}}
+- La fonction {{CSSxRef("counters()")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module [du contenu généré CSS](/fr/docs/Web/CSS/Guides/Generated_content)

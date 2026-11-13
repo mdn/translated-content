@@ -1,9 +1,9 @@
 ---
-title: video-dynamic-range
+title: CSS `video-dynamic-range` メディア特性
+short-title: video-dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/video-dynamic-range
-original_slug: Web/CSS/@media/video-dynamic-range
 l10n:
-  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`video-dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}の動画プレーンと出力機器が対応する明るさ、コントラスト比、色深度の組み合わせをテストするために使用できます。

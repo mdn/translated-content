@@ -2,7 +2,7 @@
 title: グループと後方参照
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: e166afc6dccac8ac4810a443c069cdb876cc4b5c
 ---
 
 グループは複数のパターンを全体としてグループ化し、グループをキャプチャすることで、正規表現パターンを使用して文字列と一致した場合に、追加で部分一致した情報を提供します。後方参照は、同じ正規表現で以前に捕捉したグループを参照します。
@@ -11,7 +11,7 @@ l10n:
 
 ```js interactive-example
 // グループ
-const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const imageDescription = "この画像の解像度は 1440×900 ピクセルです。";
 const regexpSize = /(\d+)×(\d+)/;
 const match = imageDescription.match(regexpSize);
 console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
@@ -85,7 +85,7 @@ console.log(findDuplicates.match(regex));
       </td>
     </tr>
     <tr>
-      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
       <td>
         <p>
           <a href="/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>修飾子:</strong></a>

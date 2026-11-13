@@ -1,8 +1,9 @@
 ---
-title: "<b> : l'élément portant à l'attention"
+title: "Élément HTML `<b>` : l'élément portant à l'attention"
+short-title: <b>
 slug: Web/HTML/Reference/Elements/b
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<b>`** est utilisé pour attirer l'attention du·de la lecteur·ice sur le contenu de l'élément, qui n'a pas d'importance particulière par ailleurs. Il était auparavant connu sous le nom d'élément «&nbsp;Boldface&nbsp;», et la plupart des navigateurs affichent encore le texte en gras. Cependant, il ne faut pas utiliser `<b>` pour la mise en forme du texte ou pour indiquer une importance. Pour créer un texte en gras, il faut utiliser la propriété CSS {{CSSxRef("font-weight")}}. Pour indiquer qu'un élément a une importance particulière, il faut utiliser l'élément {{HTMLElement("strong")}}.
@@ -30,7 +31,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-- Utilisez l'élément `<b>` pour des cas comme les mots-clés dans un résumé, les noms de produits dans un test ou d'autres portions de texte dont la présentation typique serait en gras (mais sans importance particulière).
+- Utilisez l'élément `<b>` pour des cas comme les mots-clés dans un résumé, les noms de produits dans un test ou d'autres portions de texte dont la présentation typique est en gras (mais sans importance particulière).
 - Ne confondez pas l'élément `<b>` avec les éléments {{HTMLElement("strong")}}, {{HTMLElement("em")}} ou {{HTMLElement("mark")}}. L'élément {{HTMLElement("strong")}} représente un texte d'une certaine _importance_, {{HTMLElement("em")}} met l'accent sur le texte et {{HTMLElement("mark")}} représente un texte d'une certaine _pertinence_. L'élément `<b>` ne transmet pas d'information sémantique particulière&nbsp;; utilisez-le uniquement lorsqu'aucun autre ne convient.
 - De même, n'utilisez pas l'élément `<b>` pour marquer des titres ou des en-têtes. Pour cela, utilisez les balises {{HTMLElement("Heading_Elements", "h1")}} à {{HTMLElement("Heading_Elements", "h6")}}. De plus, les feuilles de style peuvent modifier le style par défaut de ces éléments, de sorte qu'ils ne sont pas nécessairement affichés en gras.
 - Il est recommandé d'utiliser l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) sur l'élément `<b>` pour transmettre des informations sémantiques supplémentaires si nécessaire (par exemple `<b class="lead">` pour la première phrase d'un paragraphe). Cela facilite la gestion de plusieurs cas d'utilisation de `<b>` si vos besoins stylistiques changent, sans avoir à modifier toutes ses utilisations dans le HTML.

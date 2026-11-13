@@ -3,12 +3,12 @@ title: "Element : méthode querySelector()"
 short-title: querySelector()
 slug: Web/API/Element/querySelector
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface {{DOMxRef("Element")}} renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs défini.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Element")}} retourne le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs défini.
 
 ## Syntaxe
 
@@ -19,13 +19,13 @@ querySelector(selectors)
 ### Paramètres
 
 - `selectors`
-  - : Une chaîne de caractères contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
+  - : Une chaîne de caractères contenant un ou plusieurs sélecteurs à comparer. Cette chaîne de caractères doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
 
     Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/Reference/Values/ident#échapper_les_caractères). Voir [Échapper les valeurs d'attribut](#échapper_les_valeurs_dattribut) pour un exemple.
 
 ### Valeur de retour
 
-Le premier élément descendant de `baseElement` qui correspond au groupe de `selectors` «&nbsp;sélecteurs&nbsp;» défini. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris `baseElement` et ses descendants&nbsp;; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de `baseElement`. La première correspondance de ces éléments restants est renvoyée par la méthode `querySelector()`.
+Le premier élément descendant de `baseElement` qui correspond au groupe de `selectors` «&nbsp;sélecteurs&nbsp;» défini. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris `baseElement` et ses descendants&nbsp;; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de `baseElement`. La première correspondance de ces éléments restants est retourné par la méthode `querySelector()`.
 
 Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
 
@@ -50,7 +50,7 @@ const el = document.body.querySelector(
 
 ### Obtenir les descendants directs avec la pseudo-classe `:scope`
 
-Cet exemple utilise la pseudo-classe {{CSSxRef(":scope")}} pour récupérer les enfants directs de l'élément `parentElement`.
+Cet exemple utilise la pseudo-classe {{CSSxRef(":scope")}} pour récupérer les enfants directs de l'élément `elementParent`.
 
 #### HTML
 
@@ -85,14 +85,14 @@ span {
 #### JavaScript
 
 ```js
-const parentElement = document.querySelector("#parent");
-let allChildren = parentElement.querySelectorAll(":scope > span");
-allChildren.forEach((item) => item.classList.add("red"));
+const elementParent = document.querySelector("#parent");
+let tousLesEnfants = elementParent.querySelectorAll(":scope > span");
+tousLesEnfants.forEach((element) => element.classList.add("red"));
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Obtenir les descendants directs avec la pseudo-classe `:scope`-class', 600, 160)}}
+{{EmbedLiveSample("Obtenir les descendants directs avec la pseudo-classe `:scope`", 600, 160)}}
 
 ### La hiérarchie entière compte
 
@@ -111,7 +111,7 @@ Cet exemple montre que la hiérarchie du document entier est prise en compte lor
 </div>
 <div>
   <h5>Résultat</h5>
-  <div id="output"></div>
+  <div id="sortie"></div>
 </div>
 ```
 
@@ -119,7 +119,7 @@ Cet exemple montre que la hiérarchie du document entier est prise en compte lor
 
 ```js
 const baseElement = document.querySelector("p");
-document.getElementById("output").textContent =
+document.getElementById("sortie").textContent =
   baseElement.querySelector("div span").textContent;
 ```
 
@@ -127,7 +127,7 @@ document.getElementById("output").textContent =
 
 Le résultat ressemble à ceci&nbsp;:
 
-{{EmbedLiveSample('La hiérarchie entière compte', '', 200)}}
+{{EmbedLiveSample("La hiérarchie entière compte", "", 200)}}
 
 Remarquez que le sélecteur `"div span"` correspond toujours avec succès à l'élément {{HTMLElement("span")}}, même si les nœuds enfants de `baseElement` n'incluent pas l'élément {{HTMLElement("div")}} (il fait toujours partie du sélecteur défini).
 
@@ -142,7 +142,7 @@ Dans le code suivant, un élément {{HTMLElement("div")}} a un `id` de `"this?el
 Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour consigner les erreurs.
 
 ```html
-<div id="container">
+<div id="conteneur">
   <div id="this?element"></div>
 </div>
 
@@ -150,7 +150,7 @@ Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour 
 <button id="css-escape">CSS.escape()</button>
 <button id="manual-escape">Échappement manuel</button>
 
-<pre id="log"></pre>
+<pre id="journal"></pre>
 ```
 
 #### CSS
@@ -173,35 +173,35 @@ Les trois boutons, lorsqu'on clique dessus, essaient tous de sélectionner le `<
 - Le troisième bouton échappe explicitement le caractère `?` à l'aide d'une barre oblique inverse. Notez qu'il faut aussi échapper la barre oblique inverse elle‑même, en utilisant une autre barre oblique inverse, par exemple&nbsp;: `\\?`.
 
 ```js
-const container = document.querySelector("#container");
-const log = document.querySelector("#log");
+const conteneur = document.querySelector("#conteneur");
+const journal = document.querySelector("#journal");
 
-function random(number) {
-  return Math.floor(Math.random() * number);
+function aleatoire(nombre) {
+  return Math.floor(Math.random() * nombre);
 }
 
-function setBackgroundColor(id) {
-  log.textContent = "";
+function definirCouleurArrierePlan(id) {
+  journal.textContent = "";
 
   try {
-    const element = container.querySelector(`#${id}`);
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    element.style.backgroundColor = randomColor;
+    const element = conteneur.querySelector(`#${id}`);
+    const couleurAleatoire = `rgb(${aleatoire(255)} ${aleatoire(255)} ${aleatoire(255)})`;
+    element.style.backgroundColor = couleurAleatoire;
   } catch (e) {
-    log.textContent = e;
+    journal.textContent = e;
   }
 }
 
 document.querySelector("#no-escape").addEventListener("click", () => {
-  setBackgroundColor("this?element");
+  definirCouleurArrierePlan("this?element");
 });
 
 document.querySelector("#css-escape").addEventListener("click", () => {
-  setBackgroundColor(CSS.escape("this?element"));
+  definirCouleurArrierePlan(CSS.escape("this?element"));
 });
 
 document.querySelector("#manual-escape").addEventListener("click", () => {
-  setBackgroundColor("this\\?element");
+  definirCouleurArrierePlan("this\\?element");
 });
 ```
 

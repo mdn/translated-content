@@ -2,20 +2,20 @@
 title: Utilisation de l'API Web Animations
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 l10n:
-  sourceCommit: 6afda999d054c2ba12d13d129b13eb35952b4fbe
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("Web Animations")}}
 
-L'API **Web Animations** nous permet de construire des animations et de contrôler leur lecture avec JavaScript. Cet article vous mettra sur la bonne voie avec des démonstrations et des tutoriels inspirés d'«&nbsp;Alice au pays des merveilles&nbsp;».
+L'API **Web Animations** nous permet de construire des animations et de contrôler leur lecture avec JavaScript. Cet article vous met sur la bonne voie avec des démonstrations et des tutoriels inspirés d'«&nbsp;Alice au pays des merveilles&nbsp;».
 
 ## Découvrir l'API Web Animations
 
-L'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) ouvre le moteur d'animation du navigateur aux développeur·euse·s et à la manipulation par JavaScript. Cette API a été conçue pour sous-tendre les implémentations d'[Animations CSS](/fr/docs/Web/CSS/Guides/Animations) et de [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), et laisse la porte ouverte à de futurs effets d'animation. C'est l'une des façons les plus performantes d'animer sur le Web, laissant le navigateur effectuer ses propres optimisations internes sans détournements, coercition, ni {{domxref("Window.requestAnimationFrame()")}}.
+[L'API Web Animations](/fr/docs/Web/API/Web_Animations_API) ouvre le moteur d'animation du navigateur aux développeur·euse·s et à la manipulation par JavaScript. Cette API a été conçue pour sous-tendre les implémentations [d'Animations CSS](/fr/docs/Web/CSS/Guides/Animations) et de [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), et laisse la porte ouverte à de futurs effets d'animation. C'est l'une des façons les plus performantes d'animer sur le Web, laissant le navigateur effectuer ses propres optimisations internes sans détournements, coercition, ni {{DOMxRef("Window.requestAnimationFrame()")}}.
 
 Avec l'API Web Animations, nous pouvons déplacer des animations interactives des feuilles de style vers JavaScript, séparant ainsi la présentation du comportement. Nous n'avons plus besoin de recourir à des techniques lourdes pour le DOM comme l'écriture de propriétés CSS et l'application de classes aux éléments pour contrôler le sens de lecture. Et contrairement au CSS purement déclaratif, JavaScript nous permet aussi de définir dynamiquement des valeurs, des propriétés jusqu'aux durées. Pour créer des bibliothèques d'animation personnalisées et des animations interactives, l'API Web Animations peut être l'outil idoine. Voyons ce qu'elle permet.
 
-Cette page contient une suite d'exemples utilisant l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API), inspirés d'[Alice au pays des merveilles](https://fr.wikipedia.org/wiki/Les_Aventures_d%27Alice_au_pays_des_merveilles). Ces exemples ont été créés et partagés gracieusement par [Rachel Nabors <sup>(angl.)</sup>](https://nearestnabors.com/). [L'ensemble complet d'exemples <sup>(angl.)</sup>](https://codepen.io/collection/nqNJvD) est disponible sur CodePen&nbsp;; ici, nous présentons ceux qui sont pertinents pour notre documentation.
+Cette page contient une suite d'exemples utilisant [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API), inspirés de [Alice au pays des merveilles](https://fr.wikipedia.org/wiki/Les_Aventures_d%27Alice_au_pays_des_merveilles). Ces exemples ont été créés et partagés gracieusement par [Rachel Nabors <sup>(angl.)</sup>](https://nearestnabors.com/). [L'ensemble complet d'exemples <sup>(angl.)</sup>](https://codepen.io/collection/nqNJvD) est disponible sur CodePen&nbsp;; ici, nous présentons ceux qui sont pertinents pour notre documentation.
 
 ## Écrire des animations CSS avec l'API Web Animations
 
@@ -28,7 +28,7 @@ Voici une animation de «&nbsp;tumbling&nbsp;» (ou _acrobatie_ en français) é
 {{EmbedLiveSample("animations_css_version", "", 300)}}
 
 ```html hidden live-sample___animations_css_version live-sample___animations_api_version
-<div class="wrapper">
+<div class="enveloppe">
   <div id="tunnel"></div>
   <div id="alice">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -106,7 +106,7 @@ path {
   will-change: transform;
 }
 
-.wrapper {
+.enveloppe {
   position: relative;
   width: 100%;
   height: 100%;
@@ -123,7 +123,7 @@ body {
 }
 ```
 
-Cela change la couleur d'Alice et la rotation de sa transformation sur 3 secondes à un rythme constant (<i lang="en">linear</i>) et boucle indéfiniment. Dans le bloc {{cssxref("@keyframes")}}, on voit qu'à 30&nbsp;% de chaque boucle (environ 0,9s), la couleur d'Alice passe du noir à un bordeaux profond, puis revient au noir à la fin de la boucle.
+Cela change la couleur d'Alice et la rotation de sa transformation sur 3 secondes à un rythme constant (<i lang="en">linear</i>) et boucle indéfiniment. Dans le bloc {{CSSxRef("@keyframes")}}, on voit qu'à 30% de chaque boucle (environ 0,9s), la couleur d'Alice passe du noir à un bordeaux profond, puis revient au noir à la fin de la boucle.
 
 ### Transposer en JavaScript
 
@@ -131,7 +131,7 @@ Essayons maintenant de créer la même animation avec l'API Web Animations.
 
 #### Représenter les images-clés
 
-La première chose à faire est de créer un [objet Keyframe](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats) correspondant à notre bloc {{cssxref("@keyframes")}} en CSS&nbsp;:
+La première chose à faire est de créer un [objet Keyframe](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats) correspondant à notre bloc {{CSSxRef("@keyframes")}} en CSS&nbsp;:
 
 ```js live-sample___animations_api_version
 const aliceTumbling = [
@@ -141,13 +141,13 @@ const aliceTumbling = [
 ];
 ```
 
-Ici, nous utilisons un tableau contenant plusieurs objets. Chaque objet représente une clé de l'animation CSS d'origine. Cependant, contrairement au CSS, l'API Web Animations n'a pas besoin qu'on lui indique explicitement les pourcentages le long de l'animation auxquels chaque clé doit apparaître. Elle divisera automatiquement l'animation en parts égales en fonction du nombre de clés fourni. Cela signifie qu'un objet d'images-clés à trois entrées jouera la clé du milieu à 50&nbsp;% de chaque boucle, sauf indication contraire.
+Ici, nous utilisons un tableau contenant plusieurs objets. Chaque objet représente une clé de l'animation CSS d'origine. Cependant, contrairement au CSS, l'API Web Animations n'a pas besoin qu'on lui indique explicitement les pourcentages le long de l'animation auxquels chaque clé doit apparaître. Elle divise automatiquement l'animation en parts égales en fonction du nombre de clés fourni. Cela signifie qu'un objet d'images-clés à trois entrées joue la clé du milieu à 50% de chaque boucle, sauf indication contraire.
 
-Quand on veut fixer explicitement le décalage d'une clé par rapport aux autres, on peut spécifier un <i lang="en">offset</i> directement dans l'objet, séparé de la déclaration par une virgule. Dans l'exemple ci-dessus, pour s'assurer que la couleur d'Alice change à 30&nbsp;% (et non 50&nbsp;%), on lui donne `offset: 0.3`.
+Quand on veut fixer explicitement le décalage d'une clé par rapport aux autres, on peut définir un décalage directement dans l'objet, séparé de la déclaration par une virgule. Dans l'exemple ci-dessus, pour s'assurer que la couleur d'Alice change à 30% (et non 50%), on lui donne `offset: 0.3`.
 
-Actuellement, il faut fournir au moins deux images-clés (représentant les états de début et de fin de la séquence). Si la liste ne contient qu'une seule entrée, {{domxref("Element.animate()")}} peut lever une exception {{domxref("DOMException")}} de type `NotSupportedError` dans certains navigateurs, en attendant leur mise à jour.
+Actuellement, il faut fournir au moins deux images-clés (représentant les états de début et de fin de la séquence). Si la liste ne contient qu'une seule entrée, {{DOMxRef("Element.animate()")}} peut lever une exception {{DOMxRef("DOMException")}} de type `NotSupportedError` dans certains navigateurs, en attendant leur mise à jour.
 
-En résumé&nbsp;: les clés sont espacées uniformément par défaut, sauf si vous définissez un <i lang="en">offset</i> sur une clé. Pratique.
+En résumé&nbsp;: les clés sont espacées uniformément par défaut, sauf si vous définissez un décalage sur une clé. Pratique.
 
 #### Représenter les propriétés de minutage
 
@@ -162,15 +162,15 @@ const aliceTiming = {
 
 On remarque quelques différences avec la représentation CSS&nbsp;:
 
-- La durée est en millisecondes plutôt qu'en secondes — `3000` et non `3s`. Comme {{domxref("Window.setTimeout", "setTimeout()")}} et {{domxref("Window.requestAnimationFrame()")}}, l'API Web Animations ne prend que des millisecondes.
+- La durée est en millisecondes plutôt qu'en secondes — `3000` et non `3s`. Comme {{DOMxRef("Window.setTimeout", "setTimeout()")}} et {{DOMxRef("Window.requestAnimationFrame()")}}, l'API Web Animations ne prend que des millisecondes.
 - On utilise `iterations` et non `iteration-count`.
 
 > [!NOTE]
-> Il existe de petites différences de terminologie entre les animations CSS et les animations Web. Par exemple, les Web Animations n'utilisent pas la chaîne `'infinite'`, mais le mot-clé JavaScript `Infinity`. Et au lieu de `timing-function`, on utilise `easing`. Nous ne listons pas de valeur `easing` ici car, contrairement aux animations CSS où la valeur par défaut d'{{cssxref("animation-timing-function")}} est `ease`, l'API Web Animations utilise par défaut `linear` — ce qui convient ici.
+> Il existe de petites différences de terminologie entre les animations CSS et les animations Web. Par exemple, les Web Animations n'utilisent pas la chaîne de caractères `'infinite'`, mais le mot-clé JavaScript `Infinity`. Et au lieu de `timing-function`, on utilise `easing`. Nous ne listons pas de valeur `easing` ici car, contrairement aux animations CSS où la valeur par défaut de {{CSSxRef("animation-timing-function")}} est `ease`, l'API Web Animations utilise par défaut `linear` — ce qui convient ici.
 
 #### Assembler les pièces
 
-Il est temps d'assembler le tout avec la méthode {{domxref("Element.animate()")}}&nbsp;:
+Il est temps d'assembler le tout avec la méthode {{DOMxRef("Element.animate()")}}&nbsp;:
 
 ```js live-sample___animations_api_version
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
@@ -224,28 +224,28 @@ document.getElementById("alice").animate(
 );
 ```
 
-## Contrôler la lecture avec play(), pause(), reverse() et updatePlaybackRate()
+## Contrôler la lecture avec `play()`, `pause()`, `reverse()` et `updatePlaybackRate()`
 
 On peut écrire des animations CSS avec l'API Web Animations, mais là où l'API est vraiment utile, c'est pour manipuler la lecture. L'API offre plusieurs méthodes pour contrôler la lecture. Observons la mise en pause et la lecture dans l'exemple «&nbsp;Suis le lapin blanc&nbsp;»&nbsp;:
 
 Dans cet exemple, le lapin blanc a une animation qui le fait descendre dans un terrier. Elle n'est déclenchée que lorsque l'utilisateur·ice clique dessus.
 
 ```html hidden live-sample___follow_the_white_rabbit
-<div class="wrapper">
+<div class="enveloppe">
   <div class="page">
-    <div class="background"></div>
-    <div id="rabbit">Click the rabbit's ears!</div>
-    <div class="foreground"></div>
+    <div class="arriere-plan">Cliquez sur les oreilles du lapin !</div>
+    <div id="lapin"></div>
+    <div class="avant"></div>
     <p>
-      She was just in time to see him pop down a hole between a great tree's
-      roots.
+      Elle est arrivée juste à temps pour le voir disparaître dans un trou entre
+      les racines d'un grand arbre.
     </p>
   </div>
 </div>
 ```
 
 ```css hidden live-sample___follow_the_white_rabbit
-#rabbit {
+#lapin {
   background: url("/shared-assets/images/examples/web-animations/park5_rabbit.png")
     0 0 / 100% 100%;
   cursor: pointer;
@@ -259,7 +259,7 @@ Dans cet exemple, le lapin blanc a une animation qui le fait descendre dans un t
 body {
   background: black;
 }
-.wrapper {
+.enveloppe {
   max-width: 133.33vh;
   margin: 0 auto;
 }
@@ -273,7 +273,7 @@ body {
   white-space: nowrap;
 }
 
-.foreground {
+.avant {
   height: 100%;
   background: url("/shared-assets/images/examples/web-animations/bg_park5_2.png")
     no-repeat 100% 100% / 100% auto;
@@ -284,7 +284,7 @@ body {
   pointer-events: none;
 }
 
-.background {
+.arriere-plan {
   background: url("/shared-assets/images/examples/web-animations/bg_park5_1.png")
     no-repeat 0 0 / 100% auto;
   position: absolute;
@@ -301,38 +301,38 @@ body {
 Nous pouvons animer le lapin avec `animate()` comme d'habitude&nbsp;:
 
 ```js live-sample___follow_the_white_rabbit
-const whiteRabbit = document.getElementById("rabbit");
+const lapinBlanc = document.getElementById("lapin");
 
-const rabbitDownAnimation = whiteRabbit.animate(
+const animationDescenteLapin = lapinBlanc.animate(
   [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
   { duration: 3000, fill: "forwards" },
 );
 ```
 
-La méthode {{domxref("Element.animate()")}} démarre immédiatement après son appel. Pour éviter que le gâteau ne se «&nbsp;mange&nbsp;» tout seul avant que la personne n'ait le temps de cliquer, on appelle {{domxref("Animation.pause()")}} juste après sa définition&nbsp;:
+La méthode {{DOMxRef("Element.animate()")}} démarre immédiatement après son appel. Pour éviter que le gâteau ne se «&nbsp;mange&nbsp;» tout seul avant que la personne n'ait le temps de cliquer, on appelle {{DOMxRef("Animation.pause()")}} juste après sa définition&nbsp;:
 
 ```js live-sample___follow_the_white_rabbit
-rabbitDownAnimation.pause();
+animationDescenteLapin.pause();
 ```
 
 > [!NOTE]
-> Alternativement, on peut définir `rabbitDownAnimation` avec le constructeur {{domxref("Animation/Animation", "Animation()")}}, qui ne commence pas à jouer avant l'appel à `play()`.
+> Alternativement, on peut définir `animationDescenteLapin` avec le constructeur {{DOMxRef("Animation/Animation", "Animation()")}}, qui ne commence pas à jouer avant l'appel à `play()`.
 
-Nous pouvons ensuite utiliser {{domxref("Animation.play()")}} pour lancer l'animation quand on le souhaite. Plus précisément, nous voulons la lier à une action de clic. On y parvient ainsi&nbsp;:
+Nous pouvons ensuite utiliser {{DOMxRef("Animation.play()")}} pour lancer l'animation quand on le souhaite. Plus précisément, nous voulons la lier à une action de clic. On y parvient ainsi&nbsp;:
 
 ```js live-sample___follow_the_white_rabbit
-whiteRabbit.addEventListener("click", downHeGoes);
-whiteRabbit.addEventListener("touchstart", downHeGoes);
+lapinBlanc.addEventListener("click", ilDescend);
+lapinBlanc.addEventListener("touchstart", ilDescend);
 
-function downHeGoes(event) {
-  whiteRabbit.removeEventListener("click", downHeGoes);
-  whiteRabbit.removeEventListener("touchstart", downHeGoes);
+function ilDescend(event) {
+  lapinBlanc.removeEventListener("click", ilDescend);
+  lapinBlanc.removeEventListener("touchstart", ilDescend);
 
-  rabbitDownAnimation.play();
+  animationDescenteLapin.play();
 }
 ```
 
-Quand une personne clique ou touche le lapin, nous pouvons appeler `downHeGoes` pour faire jouer toutes les animations.
+Quand une personne clique ou touche le lapin, nous pouvons appeler `ilDescend` pour faire jouer toutes les animations.
 
 {{EmbedLiveSample("follow_the_white_rabbit", "", 400)}}
 
@@ -340,15 +340,15 @@ Quand une personne clique ou touche le lapin, nous pouvons appeler `downHeGoes` 
 
 Outre la mise en pause et la lecture, on peut utiliser les méthodes suivantes sur une animation&nbsp;:
 
-- {{domxref("Animation.finish()")}} saute à la fin de l'animation.
-- {{domxref("Animation.cancel()")}} annule l'animation et supprime ses effets.
-- {{domxref("Animation.reverse()")}} définit le taux de lecture ({{domxref("Animation.playbackRate")}}) à une valeur négative afin qu'elle se déroule à l'envers.
+- {{DOMxRef("Animation.finish()")}} saute à la fin de l'animation.
+- {{DOMxRef("Animation.cancel()")}} annule l'animation et supprime ses effets.
+- {{DOMxRef("Animation.reverse()")}} définit le taux de lecture ({{DOMxRef("Animation.playbackRate")}}) à une valeur négative afin qu'elle se déroule à l'envers.
 
 Regardons d'abord `playbackRate`&nbsp;: une valeur négative fait jouer une animation à l'envers.
 Dans [De l'autre côté du miroir](https://fr.wikipedia.org/wiki/De_l%27autre_c%C3%B4t%C3%A9_du_miroir), Alice se rend dans un monde où elle doit courir pour rester sur place — et courir deux fois plus vite pour avancer. Dans l'exemple de la course de la Reine Rouge, Alice et la Reine Rouge courent pour rester sur place&nbsp;:
 
 ```html hidden live-sample___red_queen_race
-<div class="wrapper">
+<div class="enveloppe">
   <div class="sky"></div>
   <div class="earth">
     <div id="red-queen-and-alice">
@@ -549,7 +549,7 @@ body {
   height: 100%;
 }
 
-.wrapper {
+.enveloppe {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -636,7 +636,7 @@ setInterval(() => {
 }, 1000);
 ```
 
-Mais si on les encourage par un clic ou un tap, iels accélèrent en multipliant leur `playbackRate`&nbsp;:
+Mais si on les encourage par un clic ou un tap, ils·elles accélèrent en multipliant leur `playbackRate`&nbsp;:
 
 ```js live-sample___red_queen_race
 function goFaster() {
@@ -690,7 +690,7 @@ Lorsqu'on anime des éléments, un cas d'usage courant consiste à conserver l'�
 - Le navigateur doit conserver l'état de l'animation tant qu'elle reste active, donc l'animation continue de consommer des ressources bien qu'elle ne s'anime plus. Notez que cela est en partie atténué par la [suppression automatique des animations avec remplissage](#suppression_automatique_des_animations_avec_remplissage) par le navigateur.
 - Les styles appliqués par les animations ont une [priorité plus élevée dans la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#cascading_order) que les styles spécifiés, ce qui peut les rendre difficiles à surcharger au besoin.
 
-Une meilleure approche consiste à utiliser {{domxref("Animation.commitStyles()")}}. Cette méthode écrit les valeurs calculées des styles courants de l'animation dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de son élément cible, après quoi l'élément peut être restylé normalement.
+Une meilleure approche consiste à utiliser {{DOMxRef("Animation.commitStyles()")}}. Cette méthode écrit les valeurs calculées des styles courants de l'animation dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style) de son élément cible, après quoi l'élément peut être remis en forme normalement.
 
 ## Suppression automatique des animations avec remplissage
 
@@ -700,21 +700,21 @@ Les animations sont supprimées lorsque toutes les conditions suivantes sont ré
 
 - L'animation est avec remplissage (sa propriété `fill` est `forwards` si elle joue en avant, `backwards` si elle joue en arrière, ou `both`).
 - L'animation est terminée. (Remarquez qu'à cause de `fill`, elle est toujours en vigueur.)
-- La chronologie de l'animation est monotone croissante. (C'est toujours vrai pour {{domxref("DocumentTimeline")}}&nbsp;; d'autres chronologies comme {{cssxref("scroll-timeline")}} peuvent reculer.)
+- La chronologie de l'animation est monotone croissante. (C'est toujours vrai pour {{DOMxRef("DocumentTimeline")}}&nbsp;; d'autres chronologies comme {{CSSxRef("scroll-timeline")}} peuvent reculer.)
 - L'animation n'est pas contrôlée par un balisage déclaratif comme le CSS.
-- Chaque effet de style de l'{{domxref("AnimationEffect")}} de l'animation est surchargé par une autre animation qui satisfait aussi toutes les conditions ci-dessus. (Typiquement, lorsque deux animations définissent la même propriété de style du même élément, la plus récente remplace l'autre.)
+- Chaque effet de style de {{DOMxRef("AnimationEffect")}} de l'animation est surchargé par une autre animation qui satisfait aussi toutes les conditions ci-dessus. (Typiquement, lorsque deux animations définissent la même propriété de style du même élément, la plus récente remplace l'autre.)
 
-Les quatre premières conditions garantissent que, sans intervention de JavaScript, l'effet de l'animation ne changera jamais et ne se terminera jamais. La dernière condition garantit que l'animation n'affecte plus le style d'aucun élément&nbsp;: elle a été totalement remplacée.
+Les quatre premières conditions garantissent que, sans intervention de JavaScript, l'effet de l'animation ne change jamais et ne se termine jamais. La dernière condition garantit que l'animation n'affecte plus le style d'aucun élément&nbsp;: elle a été totalement remplacée.
 
-Quand l'animation est supprimée automatiquement, l'événement {{domxref("Animation/remove_event", "remove")}} est déclenché.
+Quand l'animation est supprimée automatiquement, l'évènement {{DOMxRef("Animation/remove_event", "remove")}} est déclenché.
 
-Pour empêcher le navigateur de supprimer automatiquement des animations, appelez la méthode {{domxref("Animation.persist", "persist()")}} de l'animation.
+Pour empêcher le navigateur de supprimer automatiquement des animations, appelez la méthode {{DOMxRef("Animation.persist", "persist()")}} de l'animation.
 
-La propriété {{domxref("Animation.replaceState", "replaceState")}} de l'animation vaut `removed` si l'animation a été supprimée, `persisted` si vous avez appelé {{domxref("Animation.persist", "persist()")}} sur l'animation, ou `active` sinon.
+La propriété {{DOMxRef("Animation.replaceState", "replaceState")}} de l'animation vaut `removed` si l'animation a été supprimée, `persisted` si vous avez appelé {{DOMxRef("Animation.persist", "persist()")}} sur l'animation, ou `active` sinon.
 
 ## Extraire des informations des animations
 
-Imaginez d'autres usages de <i lang="en">playbackRate</i>, comme améliorer l'accessibilité pour les personnes souffrant de troubles vestibulaires en leur permettant de ralentir les animations sur tout un site. Impossible en CSS sans recalculer les durées dans chaque règle, mais avec l'API Web Animations, on peut utiliser {{domxref("Document.getAnimations")}} pour parcourir chaque animation de la page et diviser par deux leur <i lang="en">playbackRate</i>, comme suit&nbsp;:
+Imaginez d'autres usages de <i lang="en">playbackRate</i>, comme améliorer l'accessibilité pour les personnes souffrant de troubles vestibulaires en leur permettant de ralentir les animations sur tout un site. Impossible en CSS sans recalculer les durées dans chaque règle, mais avec l'API Web Animations, on peut utiliser {{DOMxRef("Document.getAnimations")}} pour parcourir chaque animation de la page et diviser par deux leur <i lang="en">playbackRate</i>, comme suit&nbsp;:
 
 ```js
 document.getAnimations().forEach((animation) => {
@@ -756,19 +756,19 @@ L'animation d'Alice la fait passer de la moitié de sa taille à deux fois sa ta
 aliceChange.pause();
 ```
 
-Si nous l'avions laissée en pause au début, elle commencerait à la moitié de sa taille finale, comme si elle avait déjà bu toute la bouteille. Nous voulons placer la «&nbsp;tête de lecture&nbsp;» de son animation au milieu, pour qu'elle soit déjà à mi-chemin. Nous pourrions le faire en réglant {{domxref("Animation.currentTime")}} sur 4 secondes, ainsi&nbsp;:
+Si nous l'avions laissée en pause au début, elle commence à la moitié de sa taille finale, comme si elle a déjà bu toute la bouteille. Nous voulons placer la «&nbsp;tête de lecture&nbsp;» de son animation au milieu, pour qu'elle soit déjà à mi-chemin. Nous pourrions le faire en réglant {{DOMxRef("Animation.currentTime")}} sur 4 secondes, ainsi&nbsp;:
 
 ```js
 aliceChange.currentTime = 4000;
 ```
 
-Mais pendant le travail sur cette animation, nous pourrions changer souvent la durée. Mieux vaut donc régler `currentTime` de manière dynamique, pour ne pas avoir à modifier deux endroits à la fois. C'est possible en se référant à la propriété {{domxref("Animation.effect")}} d'<i lang="en">aliceChange</i>, qui renvoie un objet contenant tous les détails de l'effet ou des effets actifs sur Alice&nbsp;:
+Mais pendant le travail sur cette animation, nous pourrions changer souvent la durée. Mieux vaut donc régler `currentTime` de manière dynamique, pour ne pas avoir à modifier deux endroits à la fois. C'est possible en se référant à la propriété {{DOMxRef("Animation.effect")}} d'<i lang="en">aliceChange</i>, qui retourne un objet contenant tous les détails de l'effet ou des effets actifs sur Alice&nbsp;:
 
 ```js
 aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
 ```
 
-`effect` nous permet d'accéder aux images-clés et aux propriétés de minutage de l'animation — `aliceChange.effect.getComputedTiming()` pointe vers l'objet de minutage d'Alice — il contient sa {{domxref("KeyframeEffect.KeyframeEffect", "duration")}}. On peut la diviser par deux pour obtenir le milieu de la chronologie et régler Alice à une hauteur normale. On peut alors inverser et lire son animation dans un sens comme dans l'autre pour la faire grandir ou rapetisser.
+`effect` nous permet d'accéder aux images-clés et aux propriétés de minutage de l'animation — `aliceChange.effect.getComputedTiming()` pointe vers l'objet de minutage d'Alice — il contient sa {{DOMxRef("KeyframeEffect.KeyframeEffect", "duration")}}. On peut la diviser par deux pour obtenir le milieu de la chronologie et régler Alice à une hauteur normale. On peut alors inverser et lire son animation dans un sens comme dans l'autre pour la faire grandir ou rapetisser.
 
 On peut faire de même pour fixer les durées du gâteau et de la bouteille&nbsp;:
 
@@ -784,7 +784,7 @@ drinking.pause();
 
 Les trois animations dépendent maintenant d'une seule durée, que nous pouvons modifier facilement en un seul endroit.
 
-On peut aussi utiliser l'API Web Animations pour déterminer le temps courant d'une animation. La partie se termine lorsque vous n'avez plus de gâteau à manger ou que la bouteille est vide. La vignette présentée dépend de l'avancement d'Alice dans son animation&nbsp;: a-t-elle trop grandi et ne peut-elle plus entrer par la petite porte, ou est-elle trop petite et ne peut-elle pas atteindre la clé pour ouvrir la porte&nbsp;? Nous pouvons déterminer si elle est du côté «&nbsp;grand&nbsp;» ou «&nbsp;petit&nbsp;» en prenant {{domxref("Animation.currentTime", "currentTime")}} et en le divisant par `activeDuration`&nbsp;:
+On peut aussi utiliser l'API Web Animations pour déterminer le temps courant d'une animation. La partie se termine lorsque vous n'avez plus de gâteau à manger ou que la bouteille est vide. La vignette présentée dépend de l'avancement d'Alice dans son animation&nbsp;: a-t-elle trop grandi et ne peut-elle plus entrer par la petite porte, ou est-elle trop petite et ne peut-elle pas atteindre la clé pour ouvrir la porte&nbsp;? Nous pouvons déterminer si elle est du côté «&nbsp;grand&nbsp;» ou «&nbsp;petit&nbsp;» en prenant {{DOMxRef("Animation.currentTime", "currentTime")}} et en le divisant par `activeDuration`&nbsp;:
 
 ```js
 const endGame = () => {
@@ -813,12 +813,12 @@ const endGame = () => {
 
 ## Rappels et promesses
 
-Les animations et transitions CSS ont leurs propres écouteurs d'événements, et c'est aussi possible avec l'API Web Animations&nbsp;:
+Les animations et transitions CSS ont leurs propres écouteurs d'évènements, et c'est aussi possible avec l'API Web Animations&nbsp;:
 
-- {{domxref("Animation/finish_event", "onfinish")}} est le gestionnaire de l'événement `finish` et peut être déclenché manuellement avec {{domxref("Animation/finish", "finish()")}}.
-- {{domxref("Animation/cancel_event", "oncancel")}} est le gestionnaire de l'événement `cancel` et peut être déclenché avec {{domxref("Animation.cancel", "cancel()")}}.
+- {{DOMxRef("Animation/finish_event", "onfinish")}} est le gestionnaire de l'évènement `finish` et peut être déclenché manuellement avec {{DOMxRef("Animation/finish", "finish()")}}.
+- {{DOMxRef("Animation/cancel_event", "oncancel")}} est le gestionnaire de l'évènement `cancel` et peut être déclenché avec {{DOMxRef("Animation.cancel", "cancel()")}}.
 
-Ici, nous configurons les rappels pour le gâteau, la bouteille et Alice afin qu'iels déclenchent la fonction `endGame`&nbsp;:
+Ici, nous configurons les rappels pour le gâteau, la bouteille et Alice afin qu'ils·elles déclenchent la fonction `endGame`&nbsp;:
 
 ```js
 // Lorsque le gâteau ou la bouteille est terminé
@@ -829,11 +829,11 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Mieux encore, l'API Web Animations fournit aussi une promesse {{domxref("Animation.finished", "finished")}} qui se résout quand l'animation se termine, ou est rejetée si elle est annulée.
+Mieux encore, l'API Web Animations fournit aussi une promesse {{DOMxRef("Animation.finished", "finished")}} qui se résout quand l'animation se termine, ou est rejetée si elle est annulée.
 
 ## Conclusion
 
-Voilà les fonctionnalités de base de l'API Web Animations. Vous devriez désormais être prêt·e à «&nbsp;sauter dans le terrier du lapin&nbsp;» de l'animation dans le navigateur et à écrire vos propres expériences d'animation.
+Voilà les fonctionnalités de base de l'API Web Animations. Vous devez désormais être prêt·e à «&nbsp;sauter dans le terrier du lapin&nbsp;» de l'animation dans le navigateur et à écrire vos propres expériences d'animation.
 
 ## Voir aussi
 

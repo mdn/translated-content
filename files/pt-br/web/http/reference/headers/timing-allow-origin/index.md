@@ -13,7 +13,7 @@ O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são p
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

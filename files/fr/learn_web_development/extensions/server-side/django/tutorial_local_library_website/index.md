@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Le premier article de cette série didactique explique ce que vous apprendrez et donne un aperçu du site Web "Bibliothèque locale", un exemple, qui va être utiliser et évoluer dans les articles suivants.
 
@@ -14,7 +14,7 @@ Le premier article de cette série didactique explique ce que vous apprendrez et
       <th scope="row">Prérequis:</th>
       <td>
         La lecture de
-        <a href="/fr/docs/Learn/Server-side/Django/Introduction"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >l'introduction</a
         >. Pour les articles suivants avoir mis à jour l'environnement comme
         décrit précédemment.

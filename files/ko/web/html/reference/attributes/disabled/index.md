@@ -63,7 +63,7 @@ Firefox는 다른 브라우저들과 달리 페이지를 불러올 때마다 {{h
 
 ### 속성 상호작용
 
-`disabled`와 [`readonly`](/ko/docs/Web/HTML/Attributes/readonly)의 차이는 읽기 전용으로 지정된 컨트롤은 여전히 동작하고 포커스가 가능하다는 반면, 비활성화된 컨트롤은 포커스를 받거나 폼과 함께 제출되지 않고 일반적으로 활성화될 때까지 컨트롤로서 동작하지 않는다는 것입니다.
+`disabled`와 [`readonly`](/ko/docs/Web/HTML/Reference/Attributes/readonly)의 차이는 읽기 전용으로 지정된 컨트롤은 여전히 동작하고 포커스가 가능하다는 반면, 비활성화된 컨트롤은 포커스를 받거나 폼과 함께 제출되지 않고 일반적으로 활성화될 때까지 컨트롤로서 동작하지 않는다는 것입니다.
 
 비활성화된 필드는 그 값이 변경될 수 없기 때문에, [`required`](/ko/docs/Web/HTML/Attributes/required)는 `disabled` 속성이 지정된 입력 필드에 아무 영향도 미치지 않습니다. 또한 요소들이 변경 불가능하게 되므로 [`pattern`](/ko/docs/Web/HTML/Attributes/pattern) 과 같은 대부분의 다른 속성들도 컨트롤이 활성화될 때까지 영향을 미치지 않습니다.
 

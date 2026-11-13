@@ -113,7 +113,7 @@ var maxCallback2 = (max, cur) => Math.max(max, cur);
 
 `reduce()`가 반환하는 값으로는 마지막 콜백 호출의 반환값(`10`)을 사용합니다.
 
-완전한 함수 대신에 {{jsxref("Functions/애로우_펑션", "화살표 함수","",1)}}를 제공할 수도 있습니다. 아래 코드는 위의 코드와 같은 결과를 반환합니다.
+완전한 함수 대신에 {{jsxref("Functions/Arrow_functions", "화살표 함수","",1)}}를 제공할 수도 있습니다. 아래 코드는 위의 코드와 같은 결과를 반환합니다.
 
 ```js
 [0, 1, 2, 3, 4].reduce((prev, curr) => prev + curr);

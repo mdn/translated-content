@@ -24,7 +24,7 @@ formData()
 
 ### 返回值
 
-兑现为 {{domxref("FormData")}} 对象的 {{domxref("Promise")}}。
+兑现为 {{domxref("FormData")}} 对象的 {{jsxref("Promise")}}。
 
 ### 异常
 

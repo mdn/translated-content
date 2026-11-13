@@ -1,9 +1,9 @@
 ---
-title: "アクセシビリティ: より安全に閲覧するためにユーザーができること"
+title: "アクセシビリティ: どのような個人設定が、より安全なウェブ閲覧に役立つのか"
 short-title: 安全な閲覧に役立つ個人設定
 slug: Web/Accessibility/Guides/Browsing_safely
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 813a03e3affaad31a6c975628a1b705fa568f095
 ---
 
 この記事では、オペレーティングシステムに組み込まれている個人設定やアクセシビリティ設定を活用することで、前庭障害のある人やそれを支援する人がウェブコンテンツにアクセスしやすくすることについて説明します。個人設定を活用することで、発作や他にも身体的な反応につながるコンテンツへの接触を防ぐことができます。
@@ -82,7 +82,7 @@ Windows 10 オペレーティングシステムでは、ユーザーはアニメ
 
 - [アクセシビリティ](/ja/docs/Web/Accessibility)
 - [アクセシビリティ学習パス](/ja/docs/Learn_web_development/Core/Accessibility)
-- [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
+- [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Color vision simulation](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - 議論: "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"
 

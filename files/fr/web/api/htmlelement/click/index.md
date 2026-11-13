@@ -1,18 +1,19 @@
 ---
-title: HTMLElement.click()
+title: "HTMLElement : méthode click()"
+short-title: click()
 slug: Web/API/HTMLElement/click
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.
-
-Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
+La méthode **`click()`** de l'interface {{DOMxRef("HTMLElement")}} simule un clic de souris sur un élément. Lorsqu'elle est appelée sur un élément, l'évènement {{DOMxRef("Element/click_event", "click")}} de l'élément est déclenché (sauf si l'attribut [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) est défini).
 
 ## Syntaxe
 
-```js
-click();
+```js-nolint
+click()
 ```
 
 ### Paramètres
@@ -21,7 +22,7 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
@@ -31,21 +32,24 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 
 ```html
 <form>
-  <input
-    type="checkbox"
-    id="maCaseACocher"
-    onmouseover="maFonction()"
-    onclick="console.log('un évènement click a eu lieu')" />
+  <input type="checkbox" id="myCheck" />
 </form>
 ```
 
 ### JavaScript
 
 ```js
-// Lorsque l'évènement mouseover est déclenché, exécuter maFonction
-function maFonction() {
-  document.getElementById("maCaseACocher").click();
-}
+const checkbox = document.getElementById("myCheck");
+
+// Au survol de la souris, exécuter myFunction
+checkbox.addEventListener("mouseover", () => {
+  // Simuler un clic de souris
+  checkbox.click();
+});
+
+checkbox.addEventListener("click", () => {
+  console.log("un évènement click a eu lieu");
+});
 ```
 
 ## Spécifications
@@ -59,6 +63,6 @@ function maFonction() {
 ## Voir aussi
 
 - Les gestionnaires d'évènements associés&nbsp;:
-  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/Element/click_event)
-  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/Element/auxclick_event)
+  - {{DOMxRef("Element.click_event", "Element.onclick")}}
+  - {{DOMxRef("Element.dblclick_event", "Element.ondblclick")}}
+  - {{DOMxRef("Element.auxclick_event", "Element.onauxclick")}}

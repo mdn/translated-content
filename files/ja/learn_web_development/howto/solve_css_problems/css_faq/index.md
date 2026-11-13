@@ -1,11 +1,10 @@
 ---
 title: CSS の一般的な質問
+short-title: FAQ
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 この記事には、 CSS に関するいくつかのよくある質問 (FAQ) とその解答があります。ウェブ開発者になるための道で役に立つかもしれません。
 
@@ -29,19 +28,19 @@ Gecko ベースのブラウザーには、いくつかの小さな調整のみ�
 すべて使用可能な場合は、上記の doctype を使用してください。他にも、標準モードやほぼ標準モードを起動する有効な古い doctype があります。
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## なぜ CSS が妥当なのにまったくレンダリングされないのか?
@@ -58,7 +57,7 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 - ページ内のたくさんのブロックや要素にスタイルのルールを適用したい場合や、スタイルを適用したい要素が 1 つしかないものの、後で追加したい場合は、クラス指定によるスタイルを使用してください。
 - 適用されるスタイルのルールを 1 つの特定のブロックや要素に限定する必要がある場合は、 id 指定によるスタイルを使用してください。このスタイルは特定の id を持った特定の要素にのみ使用されます。
 
-一般的にはできるだけ蔵鵜sを使用し、 id は特定の用途で絶対的に必要な場合（ラベルとフォーム要素を接続したり、スタイルをつける要素が意味的に独自の場合など）に限り使用することが推奨されます。
+一般的にはできるだけクラスを使用し、 id は特定の用途で絶対的に必要な場合（ラベルとフォーム要素を接続したり、スタイルをつける要素が意味的に独自の場合など）に限り使用することが推奨されます。
 
 - クラスを使用するとスタイルの用途が広げられるようになり、現在は特定のルールセットのスタイルを 1 つの要素にしか適用しなくても、後から追加したくなる可能性があります
 - クラスを使用すると、複数の要素のスタイルを設定できるため、id セレクターを使用する複数のルールで同じスタイル設定情報を書き出す必要がなくなり、より短いスタイルシートを作成できます。より短いスタイルシートはより効率が高いです。
@@ -67,12 +66,12 @@ HTML の要素は、 `id` 属性と `class` 属性の片方または両方を持
 > [!NOTE]
 > 詳しくは[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)もご覧ください。
 
-## プロパティを既定値に戻すには
+## プロパティをデフォルト値に戻すには
 
-当初 CSS には "default" キーワードがなく、プロパティの既定値を戻す唯一の方法は、そのプロパティを明示的に宣言し直すことでした。
+当初 CSS には "default" キーワードがなく、プロパティをデフォルト値に戻す唯一の方法は、そのプロパティを明示的に宣言し直すことでした。
 
 ```css
-/* 見出しの既定の色は黒 */
+/* 見出しのデフォルトの色は黒 */
 h1 {
   color: red;
 }
@@ -81,10 +80,10 @@ h1 {
 }
 ```
 
-これは CSS 2 で変わり、[initial](/ja/docs/Web/CSS/Reference/Values/initial) キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
+これは CSS 2 で変わり、{{cssxref("initial")}} キーワードが CSS プロパティの有効な値になりました。これにより、プロパティは、そのプロパティの CSS 仕様で定義されているデフォルト値にリセットされます。
 
 ```css
-/* 見出しの既定の色は黒 */
+/* 見出しのデフォルトの色は黒 */
 h1 {
   color: red;
 }
@@ -95,7 +94,7 @@ h1 {
 
 ## スタイルを他のスタイルから派生させるには
 
-CSS では、あるスタイルが他の表現で定義されることを許可していません。ただし、ひとつの要素に複数のクラスを割り当てることで、同様の効果を得られます。また、複数の場所で再利用できるスタイル情報を 1 ヶ所で定義する方法として、 [CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) が導入されました。
+CSS では、あるスタイルを別のスタイルに基づいて定義することはできません。ただし、ひとつの要素に複数のクラスを割り当てることで同様の効果を得られます。また、[CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)を使うと、複数の場所で再利用できるスタイル情報を 1 か所で定義できます。
 
 ## ひとつの要素に複数のクラスを割り当てる方法
 
@@ -112,7 +111,7 @@ HTML の要素は `class` 属性に空白区切りでクラスを並べること
   }
 </style>
 
-<div class="news today">Content of today's news goes here.</div>
+<div class="news today">今日のニュース記事の本文がここに入ります。</div>
 ```
 
 同じプロパティが双方のルール内で宣言されている場合は、その競合がまずは詳細度によって、そして CSS 宣言の順序に従って解決されます。`class` 属性内のクラスの順序は関係がありません。
@@ -173,16 +172,16 @@ CSS スタイルシートでは、順序**こそが**重要です。あるルー
 
 ### 一括指定プロパティの使用
 
-一括指定プロパティを使用したスタイルルールの定義は、構文がとてもコンパクトになることからよいことです。一部の属性だけを持つ一括指定プロパティの使用は可能かつ正当ですが、宣言していない属性は自動的に既定値へリセットされることを覚えておくべきです。すなわち、単独の属性に対する以前のルールは暗黙的にオーバーライドされます。
+一括指定プロパティを使用したスタイルルールの定義は、構文がとてもコンパクトになることからよいことです。一部の属性だけを持つ一括指定プロパティの使用は可能かつ正当ですが、宣言していない属性は自動的にデフォルト値へリセットされることを覚えておくべきです。すなわち、単独の属性に対する以前のルールは暗黙的にオーバーライドされます。
 
 ```css
 #stockTicker {
   font-size: 12px;
-  font-family: Verdana;
+  font-family: "Verdana";
   font-weight: bold;
 }
 .stockSymbol {
-  font: 14px Arial;
+  font: 14px "Arial";
   color: red;
 }
 ```
@@ -196,7 +195,7 @@ CSS スタイルシートでは、順序**こそが**重要です。あるルー
 ```css
 #stockTicker {
   font-weight: bold;
-  font: 12px Verdana; /* font-weight is now set to normal */
+  font: 12px "Verdana"; /* font-weight は normal に設定される */
 }
 ```
 
@@ -209,7 +208,7 @@ body * {
   font-weight: normal;
 }
 #stockTicker {
-  font: 12px Verdana;
+  font: 12px "Verdana";
 }
 .corpName {
   font-weight: bold;
@@ -246,7 +245,7 @@ div {
 ```
 
 ```html
-<div id="orange" class="green" style="color: red;">This is red</div>
+<div id="orange" class="green" style="color: red;">これは赤色です</div>
 ```
 
 セレクターが複数の範囲を持つ場合、ルールはより複雑になります。セレクターの詳細度がどのように算出されるかについて、詳しくは[CSS 詳細度のドキュメント](/ja/docs/Web/CSS/Guides/Cascade/Specificity)でご覧いただけます。
@@ -262,8 +261,8 @@ div {
 もし作業する際に接頭辞を使用する必要がある場合は、接頭辞のあるバージョンを先に書き、その後に接頭辞のない標準バージョンを書いてください。こうすることで、対応している場合、標準版が接頭辞を自動的に上書きします。例えば次のようになります。
 
 ```css
--webkit-text-stroke: 4px navy;
-text-stroke: 4px navy;
+-webkit-border-after-color: navy;
+border-block-end-color: navy;
 ```
 
 > [!NOTE]

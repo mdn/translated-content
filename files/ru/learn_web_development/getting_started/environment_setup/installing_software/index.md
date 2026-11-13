@@ -3,7 +3,7 @@ title: Установка базового программного обеспе
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website")}}
 
 В _Установке базового программного обеспечения_, мы покажем вам, какие инструменты вам необходимы для простой веб-разработки, и как правильно установить их.
 
@@ -43,4 +43,4 @@ slug: Learn_web_development/Getting_started/Environment_setup/Installing_softwar
 
 Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website")}}

@@ -14,7 +14,7 @@ HTTP **`207 Multi-Status`** 响应状态码表示可能存在多个响应。
 
 ## 状态
 
-```plain
+```http
 207 Multi-Status
 ```
 

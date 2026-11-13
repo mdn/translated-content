@@ -28,7 +28,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive
 
 ## 句法
 
-```plain
+```http
 Content-Security-Policy: sandbox;
 Content-Security-Policy: sandbox <value>;
 ```

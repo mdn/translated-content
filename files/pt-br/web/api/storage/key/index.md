@@ -20,7 +20,7 @@ var aKeyName = storage.key(index);
 
 ### Retorno
 
-Uma {{domxref("DOMString")}} contendo o nome da chave. Se o index não existir, retornará `null`.
+Uma {{jsxref("String")}} contendo o nome da chave. Se o index não existir, retornará `null`.
 
 ## Exemplos
 

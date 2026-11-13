@@ -3,7 +3,7 @@ title: Sélecteurs CSS
 short-title: Sélecteurs
 slug: Web/CSS/Reference/Selectors
 l10n:
-  sourceCommit: 93b85a5bc2b4589d93185263fd2c14381c36f821
+  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
 ---
 
 Les **sélecteurs CSS** sont des modèles utilisés dans les [règles CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#ensembles_de_règles_css) pour cibler et sélectionner des éléments spécifiques à mettre en forme.
@@ -36,6 +36,7 @@ selecteur {
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [Sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors)
 - [Sélecteurs d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [Sélecteurs d'images-clés](/fr/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [Séparateur d'espace de noms (`|`)](/fr/docs/Web/CSS/Reference/Selectors/Namespace_separator)
 - [Sélecteurs de pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [Sélecteurs de pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

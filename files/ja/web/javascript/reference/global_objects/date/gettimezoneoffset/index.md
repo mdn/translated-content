@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.getTimezoneOffset()
+short-title: getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`getTimezoneOffset()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時 (UTC) タイムゾーンで評価されたこの日時と、ローカルタイムゾーンで評価された同じ日時との差を分単位で返します。
+**`getTimezoneOffset()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時 (UTC) タイムゾーンで評価されたこの日時と、現地時間タイムゾーンで評価された同じ日時との差を分単位で返します。
 
 {{InteractiveExample("JavaScript デモ: Date.prototype.getTimezoneOffset()")}}
 
@@ -16,7 +15,7 @@ const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
 const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
 
 console.log(date1.getTimezoneOffset());
-// 予想される結果: 地方時の分単位の時差（-540 など）。
+// 予想される結果: 現地時間の分単位の時差（-540 など）。
 // Date オブジェクトの時間帯のオフセットではありません。
 
 console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
@@ -35,15 +34,15 @@ getTimezoneOffset()
 
 ### 返値
 
-UTC タイムゾーンで評価された日時とローカルタイムゾーンで評価された日時の差を分単位で表した数値。実際のローカルタイムアルゴリズムは実装で定義され、適切なデータがないランタイムでは返値が 0 になることが許容されます。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+UTC タイムゾーンで評価された日時と現地時間タイムゾーンで評価された日時の差を分単位で表した数値。実際の現地時間タイムアルゴリズムは実装で定義され、適切なデータがないランタイムでは返値が 0 になることが許容されます。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 
-`date.getTimezoneOffset()` は、 `date` が UTC タイムゾーンで評価されたものとローカルタイムゾーンで評価されたものの差を分単位で返します。つまり、（コードがブラウザーでウェブから実行された場合）ブラウザーを使用しているホストシステムのタイムゾーン、あるいは、コードが実行された JavaScript ランタイム（例えば Node.js 環境） のホストシステムのタイムゾーンです。
+`date.getTimezoneOffset()` は、 `date` が UTC タイムゾーンで評価されたものと現地時間タイムゾーンで評価されたものの差を分単位で返します。つまり、（コードがブラウザーでウェブから実行された場合）ブラウザーを使用しているホストシステムのタイムゾーン、あるいは、コードが実行された JavaScript ランタイム（例えば Node.js 環境） のホストシステムのタイムゾーンです。
 
 ### 負の値と正の値
 
-`getTimezoneOffset()` が返す分の値は、ローカルのタイムゾーンが UTC よりも後の場合は正の値、先の場合は負の値になります。例えば、UTC+10 の場合、`-600` を返します。
+`getTimezoneOffset()` が返す分の値は、現地時間のタイムゾーンが UTC よりも後の場合は正の値、先の場合は負の値になります。例えば、UTC+10 の場合、`-600` を返します。
 
 | 現在のタイムゾーン | 返値 |
 | ------------------ | ---- |
@@ -61,7 +60,7 @@ UTC タイムゾーンで評価された日時とローカルタイムゾーン�
 > [!NOTE]
 > [多くの国では、 1 年に 2 回時間を変更しない実験をしており](https://ja.wikipedia.org/wiki/各国における夏時間)、これは、DST が冬も継続されることを意味しています。例えば、英国では、DST は 1968 年 2 月 18 日午前 2 時から 1971 年 10 月 31 日午前 3 時まで続き、冬の間に時計は戻されませんでした。
 
-ほとんどの実装では、 [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) を使用して `date` の瞬間のローカルタイムゾーンのオフセットを正確に決定しています。しかし、そのような情報が得られない場合、実装は 0 を返すかもしれません。
+ほとんどの実装では、 [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) を使用して `date` の瞬間の現地時間タイムゾーンのオフセットを正確に決定しています。しかし、そのような情報が得られない場合、実装は 0 を返すかもしれません。
 
 ## 例
 

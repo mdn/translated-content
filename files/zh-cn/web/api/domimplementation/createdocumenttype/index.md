@@ -16,11 +16,11 @@ var doctype = document.implementation.createDocumentType(qualifiedNameStr, publi
 ### 参数
 
 - `qualifiedNameStr`
-  - : {{domxref("DOMString")}} 类型的值，包含一个合规的名称，如 `svg:svg`。
+  - : {{jsxref("String")}} 类型的值，包含一个合规的名称，如 `svg:svg`。
 - `publicId`
-  - : {{domxref("DOMString")}} 类型的值，包含 `PUBLIC` 标识符。
+  - : {{jsxref("String")}} 类型的值，包含 `PUBLIC` 标识符。
 - `systemId`
-  - : {{domxref("DOMString")}} 类型的值，包含 `SYSTEM` 标识符。
+  - : {{jsxref("String")}} 类型的值，包含 `SYSTEM` 标识符。
 
 ## 示例
 

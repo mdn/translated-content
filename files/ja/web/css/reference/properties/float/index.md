@@ -1,12 +1,11 @@
 ---
 title: float
 slug: Web/CSS/Reference/Properties/float
-original_slug: Web/CSS/float
 l10n:
-  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
+**`float`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りで折り返すように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#絶対位置指定)とは異なり）フローの一部であり続けます。
 
 {{InteractiveExample("CSS デモ: float")}}
 
@@ -81,7 +80,7 @@ _浮動要素_ (floating element) とは、`float` の計算値が `none` 以外
 | _その他_             | _変更なし_ |
 
 > [!NOTE]
-> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
+> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトを介して CSS プロパティにアクセスする場合、単一の単語のプロパティ名はそのまま使用されます。`float` は JavaScript では予約キーワードですが、CSS の `float` プロパティは現行のブラウザーでは `float` としてアクセスされます。古いブラウザーでは、`float` プロパティにアクセスするには `cssFloat` を使用しする必要があります（これは "class" 属性が "className" としてアクセスされ、`<label>` 要素の "for" 属性が "htmlFor" としてアクセスされるのと同様です）。
 
 ## 構文
 

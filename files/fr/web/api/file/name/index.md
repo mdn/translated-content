@@ -1,56 +1,48 @@
 ---
-title: File.name
+title: "File : propriété name"
+short-title: name
 slug: Web/API/File/name
+l10n:
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-Cette propriété renvoie le nom du fichier représenté par l'objet [`File`](/fr/docs/Web/API/File) courant. Pour des raisons de sécurité, le chemin du fichier est exclu de cette propriété.
-
-## Syntaxe
-
-```js
-let name = file.name;
-```
+La propriété en lecture seule **`name`** de l'interface {{DOMxRef("File")}} fournit le nom du fichier représenté par un objet {{DOMxRef("File")}}. Pour des raisons de sécurité, le chemin est exclu de cette propriété.
 
 ## Valeur
 
-Une chaîne de caractères qui contient le nom du fichier sans le chemin, par exemple `"Mon compte-rendu.md"`.
+Une chaîne de caractères contenant le nom du fichier sans le chemin, par exemple «&nbsp;Mon compte-rendu.rtf&nbsp;».
 
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)" />
-
-<div id="output"></div>
+<input type="file" id="selecteur-fichier" multiple />
+<div>
+  <p>Liste des fichiers sélectionnés&nbsp;:</p>
+  <ul id="sortie"></ul>
+</div>
 ```
 
 ### JavaScript
 
 ```js
-const output = document.querySelector("#output");
-function processSelectedFiles(fileInput) {
-  let files = fileInput.files;
-  output.textContent = "Liste des fichiers sélectionnés :";
+const sortie = document.querySelector("#sortie");
+function traiterFichiersSelectionnes(entreeFichier) {
+  let fichiers = entreeFichier.files;
+  sortie.textContent = "Liste des fichiers sélectionnés :";
 
-  for (let i = 0; i < files.length; i++) {
-    output.textContent += `\nNom du fichier : ${files[i].name}`;
+  for (let i = 0; i < fichiers.length; i++) {
+    sortie.textContent += `\nNom du fichier : ${fichiers[i].name}`;
   }
-}
-```
-
-```css hidden
-#output {
-  padding: 0.5em 0;
-  white-space: pre;
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('', 300, 150)}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

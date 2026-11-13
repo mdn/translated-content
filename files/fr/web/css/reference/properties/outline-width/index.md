@@ -1,14 +1,14 @@
 ---
-title: outline-width
+title: Propriété CSS `outline-width`
+short-title: outline-width
 slug: Web/CSS/Reference/Properties/outline-width
-original_slug: Web/CSS/outline-width
+l10n:
+  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`outline-width`** définit l'épaisseur du contour d'un élément. Un contour est une ligne tracée autour d'un élément, à l'extérieur de la {{CSSxRef("border")}}.
 
-La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). Visuellement, cela permet de faire ressortir l'élément.
-
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: outline-width")}}
 
 ```css interactive-example-choice
 outline-width: 12px;
@@ -29,7 +29,7 @@ outline-width: thick;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    Ceci est une boîte avec un contour autour.
   </div>
 </section>
 ```
@@ -43,6 +43,8 @@ outline-width: thick;
 }
 ```
 
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("outline")}} lors de la définition de l'apparence d'un contour.
+
 ## Syntaxe
 
 ```css
@@ -51,25 +53,24 @@ outline-width: thin;
 outline-width: medium;
 outline-width: thick;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 outline-width: 1px;
 outline-width: 0.1em;
 
 /* Valeurs globales */
 outline-width: inherit;
+outline-width: initial;
+outline-width: revert;
+outline-width: revert-layer;
+outline-width: unset;
 ```
 
 ### Valeurs
 
-- `thin`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur fine. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `1px`.
-- `medium`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur moyenne. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `3px`.
-- `thick`
-  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur de trait prononcée. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `5px`.
-- `<length>`
-  - : Voir la page sur le type {{cssxref("&lt;length&gt;")}} pour les différentes valeurs correspondantes.
+Cette propriété est définie par une seule valeur `<line-width>`.
+
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la largeur du contour, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite non négative, soit avec les mots-clés&nbsp;: `thin`, `medium` ou `thick`. La valeur par défaut est `medium`.
 
 ## Définition formelle
 
@@ -81,18 +82,20 @@ outline-width: inherit;
 
 ## Exemples
 
-### HTML
+### Définir la largeur du contour d'un élément
+
+#### HTML
 
 ```html
 <span id="thin">thin</span>
 <span id="medium">medium</span>
 <span id="thick">thick</span>
-<span id="deuxpixels">2px</span>
-<span id="unex">1ex</span>
-<span id="deuxem">2em</span>
+<span id="twopixels">2px</span>
+<span id="oneex">1ex</span>
+<span id="em">1.2em</span>
 ```
 
-### CSS
+#### CSS
 
 ```css
 span {
@@ -113,22 +116,22 @@ span {
   outline-width: thick;
 }
 
-#deuxpixels {
+#twopixels {
   outline-width: 2px;
 }
 
-#unex {
+#oneex {
   outline-width: 1ex;
 }
 
-#deuxem {
-  outline-width: 2em;
+#em {
+  outline-width: 1.2em;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', '80')}}
+{{EmbedLiveSample("Définir la largeur du contour d'un élément", "100%", 80)}}
 
 ## Spécifications
 
@@ -137,3 +140,9 @@ span {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("outline-style")}}
+- La propriété {{CSSxRef("outline-color")}}

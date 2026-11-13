@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cadd198e75b25e939938c414e46e95aa7f14318b
 ---
 
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+{{APIRef("Navigation Timing")}}
 
 L'ancienne propriété **`Performance.navigation`** en lecture seule renvoie un objet [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation) représentant le type de navigation qui se produit dans le contexte de navigation donné, comme le nombre de redirections nécessaires pour aller chercher la ressource.
 

@@ -100,7 +100,7 @@ l10n:
 - {{Glossary("Digital certificate")}}
 - {{Glossary("DTLS")}}
 - {{Glossary("Encryption")}}
-- {{Glossary("Forbidden header name")}}
+- {{Glossary("Forbidden request header")}}
 - {{Glossary("Forbidden response header name")}}
 - {{Glossary("Hash")}}
 - {{Glossary("HMAC")}}

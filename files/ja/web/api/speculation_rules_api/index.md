@@ -238,7 +238,7 @@ if (document.prerendering) {
 - ログアウトの URL。
 - 言語切り替えの URL。
 - 「カートに追加」の URL。
-- サーバーが SMS を送信させるログインフローの URL。例えば例えばワンタイムパスワード (OTP) を送信するなど。
+- サーバーが SMS を送信させるログインフローの URL。例えばワンタイムパスワード (OTP) を送信するなど。
 - 毎月の無料記事を消費したり、毎月の利用分数のタイマーを始動させるなど、ユーザーの利用可能数量を消費させる URL。
 - サーバー側の広告コンバージョントラッキングを開始する URL。
 
@@ -352,7 +352,7 @@ JavaScript はアクティブになるまで実行されないため、ページ
 
 以下の機能はアクティブ化されていない文書内では自動的に失敗または無機能になります。
 
-{{glossary("transient activation", "一時的な有効化")}}または{{glossary("sticky activation", "粘着的な有効化")}}が要求される API：
+{{glossary("transient activation", "一時的な有効化")}}または{{glossary("sticky activation", "持続的な有効化")}}が要求される API：
 
 - {{domxref("Window.beforeunload_event", "beforeunload")}} イベントで生成される確認ダイアログ
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API) で発生するすべてのイベント
@@ -373,14 +373,14 @@ JavaScript はアクティブになるまで実行されないため、ページ
 
 包含する文書の {{domxref("Document.visibilityState")}} が `"visible"` であることが要求される API:
 
-- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible" または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
+- [ピクチャインピクチャ API](/ja/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} （包含する文書の可視状態が `"visible"` または{{glossary("transient activation", "一時的な有効化")}}が行われていることが求められる）
 - [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### 他の制限されている機能
 
 - ダウンロードリンク、すなわち `download` 属性を持つ {{htmlelement("a")}} と {{htmlelement("area")}} 要素は、事前レンダリングが完了するまでダウンロードが延期されます。
 - サイト間をまたがる移動は不可: 他のサイトへ移動する事前レンダリング文書は、他のサイトへのリクエストが送信される前に即座に破棄されます。
-- URL の制限: 事前レンダリングさ れる文書は、 HTTP(S) 以外のトップレベル URL を扱うことはできません。以下の URL 型を記載すると、事前レンダリングは直ちに破棄されます。
+- URL の制限: 事前レンダリングされる文書は、 HTTP(S) 以外のトップレベル URL を扱うことはできません。以下の URL 型を記載すると、事前レンダリングは直ちに破棄されます。
   - [`javascript:` URL](/ja/docs/Web/URI/Reference/Schemes/javascript)
   - [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data)
   - `blob:` URL

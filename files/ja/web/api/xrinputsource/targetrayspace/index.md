@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}
 
-{{domxref("XRInputSource")}} の **targetRaySpace`** プロパティは読み取り専用で、仮想空間におけるターゲット光線の位置と方向を表す {{domxref("XRSpace")}} （通常は {{domxref("XRReferenceSpace")}}） を返します。その正の値はターゲット光線の原点の位置を示し、その方向はコントローラー機器自体の方向を示します。これらの値は、入力ソースの {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} のコンテキストで解釈され、機器を入力ソースとして完全に解釈するために使用することができます。
+{{domxref("XRInputSource")}} の **`targetRaySpace`** プロパティは読み取り専用で、仮想空間におけるターゲット光線の位置と方向を表す {{domxref("XRSpace")}} （通常は {{domxref("XRReferenceSpace")}}） を返します。その正の値はターゲット光線の原点の位置を示し、その方向はコントローラー機器自体の方向を示します。これらの値は、入力ソースの {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} のコンテキストで解釈され、機器を入力ソースとして完全に解釈するために使用することができます。
 
 仮想空間における入力コントローラーの位置と方向を表す `XRSpace` を取得するには、 {{domxref("XRInputSource.gripSpace", "gripSpace")}} プロパティを使用してください。
 

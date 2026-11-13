@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Access-Control-Expose-Headers`** permet à un serveur d'indiquer quels en-têtes de réponse doivent être rendus accessibles aux scripts exécutés dans le navigateur en réponse à une requête inter-origines.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Access-Control-Expose-Headers`** permet à un serveur d'indiquer quels en-têtes de réponse doivent être rendus accessibles aux scripts exécutés dans le navigateur en réponse à une requête inter-origines.
 
 Seuls les {{Glossary("CORS-safelisted response header", "en-têtes de réponse sûrs pour le CORS")}} sont exposés par défaut. Pour que les clients puissent accéder à d'autres en-têtes, le serveur doit les lister à l'aide de l'en-tête `Access-Control-Expose-Headers`.
 

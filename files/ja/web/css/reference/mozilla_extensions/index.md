@@ -1,286 +1,149 @@
 ---
-title: CSS の Mozilla 拡張
+title: Firefox の (-moz-) ベンダー接頭辞付きの CSS 拡張
 slug: Web/CSS/Reference/Mozilla_extensions
-original_slug: Web/CSS/Mozilla_Extensions
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Firefox などの Mozilla アプリケーションは、いくつもの特別な **[CSS](/ja/docs/Web/CSS) の Mozilla 拡張**に対応しています。これには、プロパティ、値、擬似要素、擬似クラス、アットルール、メディアクエリーが含まれます。これらの拡張には `-moz-` の接頭辞が付いています。
+{{glossary("vendor prefix", "ベンダー接頭辞")}}は、機能が特定のブラウザー専用であることを示すために使われます。
+Firefox はいくつかの拡張を [CSS](/ja/docs/Web/CSS) に行っており、それらには `-moz-` の接頭辞が付いています。
 
-## Mozilla 独自のプロパティと擬似クラス (ウェブサイトで使用しないでください)
+## 標準の相当機能がない -moz- 接頭辞付きのプロパティ
 
 > [!NOTE]
-> これらのプロパティと擬似クラスは、Firefox などの Mozilla アプリケーション内でのみ動作するものであり、標準化されていません。これら標準外のプロパティの一部は、[XUL](/ja/docs/Mozilla/Tech/XUL) 要素にのみ適用されます。
+> これらの拡張機能は主に実験的または非推奨ですが、下位互換性のために維持されています。
+> 本番環境のウェブサイトでは使用を避けるべきです。
 
-### B
-
-- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-border-bottom-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-left-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-right-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-border-top-colors")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-box-align")}}
-- {{CSSxRef("-moz-box-direction")}}
-- {{CSSxRef("-moz-box-flex")}}
-- {{CSSxRef("-moz-box-ordinal-group")}}
-- {{CSSxRef("-moz-box-orient")}}
-- {{CSSxRef("-moz-box-pack")}}
-
-### C–I
-
-- {{CSSxRef("-moz-context-properties")}}
-- {{CSSxRef("-moz-float-edge")}}
-- {{CSSxRef("-moz-force-broken-image-icon")}}
-- {{CSSxRef("-moz-image-region")}}
-
-### O
-
+- {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}: 代わりに `alt` テキストを使用してください。
 - {{CSSxRef("-moz-orient")}}
-- {{CSSxRef("-moz-osx-font-smoothing")}}
-- {{CSSxRef("-moz-outline-radius")}}
-- {{CSSxRef("-moz-outline-radius-bottomleft")}}
-- {{CSSxRef("-moz-outline-radius-bottomright")}}
-- {{CSSxRef("-moz-outline-radius-topleft")}}
-- {{CSSxRef("-moz-outline-radius-topright")}}
-- {{CSSxRef("overflow-clip-box")}}
-- {{CSSxRef("overflow-clip-box-block")}}
-- {{CSSxRef("overflow-clip-box-inline")}}
+- `-moz-osx-font-smoothing`: 類似の相当機能に {{CSSxRef("font-smooth")}} があります。
+- {{CSSxRef("-moz-user-focus")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-user-input")}} {{deprecated_inline}}
+- `-moz-user-modify`: 接頭辞のない {{CSSxRef("user-modify")}} の相当機能がありますが、HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を代わりに使用してください。
 
-### S–Z
+## 標準の相当機能がある -moz- 接頭辞付きのプロパティ
 
-- {{CSSxRef("-moz-stack-sizing")}}
-- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-input")}}
-- {{CSSxRef("-moz-user-modify")}}
-- {{CSSxRef("-moz-window-dragging")}}
-- {{CSSxRef("-moz-window-shadow")}}
-
-## 以前は独自だったが標準化されたもの
-
-> [!NOTE]
-> CSS の互換性を最大化するため、以下の接頭辞付きのものではなく、接頭辞なしの標準プロパティを使用してください。これらは、標準化されて接頭辞なしの形式が対応され次第、接頭辞付きのバージョンは順次破棄されます。
+以下のプロパティはまず `-moz-` ベンダー接頭辞を使用して実装されましたが、現在は Firefox が標準（接頭辞なし）の構文で対応しています。
+接頭辞付きバージョンの対応は通常、最終的に廃止されるため、代わりに標準プロパティを使用してください。
 
 ### A
 
-- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+- {{CSSxRef("animation", "-moz-animation")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-name", "-moz-animation-name")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- `-moz-appearance`: {{CSSxRef("appearance")}} の接頭辞付き版もまだ対応しています。
 
 ### B
 
-- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
-- {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
-- {{CSSxRef("-moz-background-inline-policy")}}{{deprecated_inline}} [標準化された {{CSSxRef("box-decoration-break")}} に置き換え]
-- {{CSSxRef("background-size", "-moz-background-size")}}{{deprecated_inline}}
-- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-end")}} に置き換え]
-- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-end-color")}} に置き換え]
-- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-end-style")}} に置き換え]
-- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-end-width")}} に置き換え]
-- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
-- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-start")}} に置き換え]
-- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-start-color")}} に置き換え]
-- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-start-style")}} に置き換え]
-- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("border-inline-start-width")}} に置き換え]
-- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} [接頭辞付きも許容]
+- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- `-moz-background-clip` {{deprecated_inline}}: 対応していません。 {{CSSxRef("background-clip")}} を使用してください。
+- `-moz-background-origin` {{deprecated_inline}}: 対応していません。 {{CSSxRef("background-origin")}} を使用してください。
+- `-moz-box-align` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("align-items")}} を使用してください。
+- `-moz-background-inline-policy` {{deprecated_inline}}: 対応していません。{{CSSxRef("box-decoration-break")}} を使用してください。
+- `-moz-box-direction` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("flex-direction")}} を使用してください。
+- `-moz-box-flex` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("flex-grow")}} を使用してください。
+- `-moz-box-ordinal-group` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("order")}} を使用してください。
+- `-moz-box-orient` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("flex-direction")}} を使用してください。
+- `-moz-box-pack` {{deprecated_inline}}: [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の {{CSSxRef("justify-content")}} を使用してください。
+- `-moz-background-size` {{deprecated_inline}}: 対応していません。{{CSSxRef("background-size")}} を使用してください。
+- `-moz-border-end` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-end")}} を使用してください。
+- `-moz-border-end-color` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-end-color")}} を使用してください。
+- `-moz-border-end-style` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-end-style")}} を使用してください。
+- `-moz-border-end-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-end-width")}} を使用してください。
+- `-moz-border-image` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-end-width")}} を使用してください。
+- `-moz-border-start` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-start")}} を使用してください。
+- `-moz-border-start-color` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-start-color")}} を使用してください。
+- `-moz-border-start-style` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-start-style")}} を使用してください。
+- `-moz-border-start-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("border-inline-start-width")}} を使用してください。
+- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
 
 ### C
 
-- {{CSSxRef("clip-path")}} {{Experimental_Inline}} [SVG 以外にも適用]
-- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
+- `-moz-column-count` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-count")}} を使用してください。
+- `-moz-column-fill` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-fill")}} を使用してください。
+- `-moz-column-gap` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-gap")}} を使用してください。
+- `-moz-column-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-width")}} を使用してください。
+- `-moz-column-rule` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-rule")}} を使用してください。
+- `-moz-column-rule-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-rule-width")}} を使用してください。
+- `-moz-column-rule-style` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-rule-style")}} を使用してください。
+- `-moz-column-rule-color` {{deprecated_inline}}: 対応していません。{{CSSxRef("column-rule-color")}} を使用してください。
 
 ### F–M
 
-- {{CSSxRef("filter")}} {{Experimental_Inline}} [SVG 以外にも適用]
-- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("margin-inline-end")}} に置き換え]
-- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("margin-inline-start")}} に置き換え]
-- {{CSSxRef("mask")}} {{Experimental_Inline}} [SVG 以外にも適用]
+- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("hyphens", "-moz-hyphens")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- `-moz-margin-end` {{deprecated_inline}}: 対応していません。{{CSSxRef("margin-inline-end")}} を使用してください。
+- `-moz-margin-start` {{deprecated_inline}}: 対応していません。{{CSSxRef("margin-inline-start")}} を使用してください。
 
-### O
+### O-P
 
-- {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
-- {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
-- {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
-- {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
-- {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
-- {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
+- `-moz-opacity` {{deprecated_inline}}: 対応していません。{{CSSxRef("opacity")}} を使用してください。
+- `-moz-outline` {{deprecated_inline}}: 対応していません。{{CSSxRef("outline")}} を使用してください。
+- `-moz-outline-color` {{deprecated_inline}}: 対応していません。{{CSSxRef("outline-color")}} を使用してください。
+- `-moz-outline-offset` {{deprecated_inline}}: 対応していません。{{CSSxRef("outline-offset")}} を使用してください。
+- `-moz-outline-style` {{deprecated_inline}}: 対応していません。{{CSSxRef("outline-style")}} を使用してください。
+- `-moz-outline-width` {{deprecated_inline}}: 対応していません。{{CSSxRef("outline-width")}} を使用してください。
+- `-moz-padding-end` {{deprecated_inline}}: 対応していません。{{CSSxRef("padding-inline-end")}} を使用してください。
+- `-moz-padding-start` {{deprecated_inline}}: 対応していません。{{CSSxRef("padding-inline-start")}} を使用してください。
+- {{CSSxRef("perspective", "-moz-perspective")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("perspective-origin", "-moz-perspective-origin")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
 
-### P
+### T–Z
 
-- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("padding-inline-end")}} に置き換え]
-- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} [標準化された {{CSSxRef("padding-inline-start")}} に置き換え]
-- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("pointer-events")}} {{Experimental_Inline}} [SVG 以外にも適用]
+- `-moz-tab-size`: {{CSSxRef("tab-size")}} を使用してください。
+- `-moz-text-align-last` {{deprecated_inline}}: 対応していません。{{CSSxRef("text-align-last")}} を使用してください。
+- `-moz-text-decoration-color` {{deprecated_inline}}: 対応していません。{{CSSxRef("text-decoration-color")}} を使用してください。
+- `-moz-text-decoration-line` {{deprecated_inline}}: 対応していません。{{CSSxRef("text-decoration-line")}} を使用してください。
+- `-moz-text-decoration-style` {{deprecated_inline}}: 対応していません。{{CSSxRef("text-decoration-style")}} を使用してください。
+- `-moz-text-size-adjust`: {{CSSxRef("text-size-adjust")}} {{Experimental_Inline}} を参照してください。
+- {{CSSxRef("transform", "-moz-transform")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- {{CSSxRef("transform-style", "-moz-transform-style")}} {{deprecated_inline}}: 接頭辞付き版もまだ対応しています。
+- `-moz-transition` {{deprecated_inline}}: 対応していません。{{CSSxRef("transition")}} を使用してください。
+- `-moz-transition-delay` {{deprecated_inline}}: 対応していません。{{CSSxRef("transition-delay")}} を使用してください。
+- `-moz-transition-duration` {{deprecated_inline}}: 対応していません。{{CSSxRef("transition-duration")}} を使用してください。
+- `-moz-transition-property` {{deprecated_inline}}: 対応していません。{{CSSxRef("transition-property")}} を使用してください。
+- `-moz-transition-timing-function` {{deprecated_inline}}: 対応していません。{{CSSxRef("transition-timing-function")}} を使用してください。
+- `-moz-user-select`: {{CSSxRef("user-select")}} を使用してください。
 
-### T–U
-
-- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{deprecated_inline}}
-- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{deprecated_inline}}
-- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
-- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} [接頭辞付きも許容]
-- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
-
-## 値
+## -moz 接頭辞の付いたプロパティ値
 
 ### グローバル値
 
-- {{CSSxRef("initial","-moz-initial")}}
+- `-moz-initial`: {{CSSxRef("initial")}} を参照してください。
 
-### {{CSSxRef("-moz-appearance")}}
+### background-image
 
-- `button`
-- `button-arrow-down`
-- `button-arrow-next`
-- `button-arrow-previous`
-- `button-arrow-up`
-- `button-bevel`
-- `checkbox`
-- `checkbox-container`
-- `checkbox-label`
-- `checkmenuitem`
-- `dialog`
-- `groupbox`
-- `listbox`
-- `menuarrow`
-- `menucheckbox`
-- `menuimage`
-- `menuitem`
-- `menuitemtext`
-- `menulist`
-- `menulist-button`
-- `menulist-text`
-- `menulist-textfield`
-- `menupopup`
-- `menuradio`
-- `menuseparator`
-- `-moz-mac-unified-toolbar`
-- `-moz-win-borderless-glass`
-- `-moz-win-browsertabbar-toolbox`
-- `-moz-win-communications-toolbox`
-- `-moz-win-glass`
-- `-moz-win-media-toolbox`
-- `-moz-window-button-box`
-- `-moz-window-button-box-maximized`
-- `-moz-window-button-close`
-- `-moz-window-button-maximize`
-- `-moz-window-button-minimize`
-- `-moz-window-button-restore`
-- `-moz-window-titlebar`
-- `-moz-window-titlebar-maximized`
-- `progressbar`
-- `progresschunk`
-- `radio`
-- `radio-container`
-- `radio-label`
-- `radiomenuitem`
-- `resizer`
-- `resizerpanel`
-- `scale-horizontal`
-- `scalethumb-horizontal`
-- `scalethumb-vertical`
-- `scale-vertical`
-- `scrollbarbutton-down`
-- `scrollbarbutton-left`
-- `scrollbarbutton-right`
-- `scrollbarbutton-up`
-- `scrollbar-small`
-- `scrollbarthumb-horizontal`
-- `scrollbarthumb-vertical`
-- `scrollbartrack-horizontal`
-- `scrollbartrack-vertical`
-- `separator`
-- `spinner`
-- `spinner-downbutton`
-- `spinner-textfield`
-- `spinner-upbutton`
-- `statusbar`
-- `statusbarpanel`
-- `tab`
-- `tabpanels`
-- `tab-scroll-arrow-back`
-- `tab-scroll-arrow-forward`
-- `textfield`
-- `textfield-multiline`
-- `toolbar`
-- `toolbarbutton-dropdown`
-- `toolbox`
-- `tooltip`
-- `treeheadercell`
-- `treeheadersortarrow`
-- `treeitem`
-- `treetwisty`
-- `treetwistyopen`
-- `treeview`
-- `window`
+**プロパティ:** {{CSSxRef("background-image")}}
 
-### {{CSSxRef("background-image")}}
+- `-moz-linear-gradient` {{deprecated_inline}}: {{CSSxRef("gradient/linear-gradient")}} を使用してください。
+- `-moz-radial-gradient` {{deprecated_inline}}: {{CSSxRef("gradient/radial-gradient")}} を使用してください。
+- `-moz-element` {{deprecated_inline}}: {{CSSxRef("element")}} を使用してください。
+- {{CSSxRef("-moz-image-rect")}} {{deprecated_inline}}
 
-#### グラデーション
+### order-style and outline-style
 
-- {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-- {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
-
-#### 要素
-
-- {{CSSxRef("element","-moz-element")}}
-
-#### サブ画像
-
-- {{CSSxRef("-moz-image-rect")}}
-
-### {{CSSxRef("border-color")}}
-
-- `-moz-use-text-color` {{deprecated_inline}} ([Firefox バグ 1306214](https://bugzil.la/1306214) で削除)、代わりに {{CSSxRef("color_value#currentColor_keyword","currentcolor")}} を使用してください。
-
-### {{CSSxRef("border-style")}} と {{CSSxRef("outline-style")}}
+**プロパティ:** {{CSSxRef("border-style")}} と {{CSSxRef("outline-style")}}
 
 - `-moz-bg-inset` {{deprecated_inline}}
 - `-moz-bg-outset` {{deprecated_inline}}
 - `-moz-bg-solid` {{deprecated_inline}}
 
-### {{CSSxRef("&lt;color&gt;")}} キーワード
+### &lt;color&gt; キーワード
+
+**型:** {{CSSxRef("&lt;color&gt;")}}
 
 - `-moz-activehyperlinktext`
 - `-moz-hyperlinktext`
 - `-moz-visitedhyperlinktext`
-- `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
 - `-moz-default-background-color`
@@ -291,252 +154,140 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 - `-moz-fieldtext`
 - `-moz-dialog`
 - `-moz-dialogtext`
-- `-moz-dragtargetzone`
-- `-moz-mac-accentdarkestshadow`
-- `-moz-mac-accentdarkshadow`
-- `-moz-mac-accentface`
-- `-moz-mac-accentlightesthighlight`
-- `-moz-mac-accentlightshadow`
-- `-moz-mac-accentregularhighlight`
-- `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`
-- `-moz-mac-chrome-inactive`
-- `-moz-mac-focusring`
-- `-moz-mac-menuselect`
-- `-moz-mac-menushadow`
-- `-moz-mac-menutextselect`
 - `-moz-menuhover`
 - `-moz-menuhovertext`
-- `-moz-win-communicationstext`
-- `-moz-win-mediatext`
-- `-moz-nativehyperlinktext`
 
-### {{CSSxRef("display")}}
+### empty-cells
 
-- `-moz-box` {{deprecated_inline}}
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box` {{Deprecated_Inline}}
-- `-moz-inline-grid` {{deprecated_inline}}
-- `-moz-inline-stack` {{deprecated_inline}}
-- `-moz-inline-table` {{deprecated_inline}}
-- `-moz-grid` {{deprecated_inline}}
-- `-moz-grid-group` {{deprecated_inline}}
-- `-moz-grid-line` {{deprecated_inline}}
-- `-moz-groupbox` {{deprecated_inline}}
-- `-moz-deck` {{deprecated_inline}}
-- `-moz-popup` {{deprecated_inline}}
-- `-moz-stack` {{deprecated_inline}}
-- `-moz-marker` {{deprecated_inline}}
+**プロパティ:** {{CSSxRef("empty-cells")}}
 
-### {{CSSxRef("empty-cells")}}
+- `-moz-show-background` （後方互換モードでの既定値）
 
-- `-moz-show-background` (後方互換モードでは既定値)
+### font-family
 
-### {{CSSxRef("font")}}
-
-- `-moz-button`
-- `-moz-info`
-- `-moz-desktop`
-- `-moz-dialog` (色も)
-- `-moz-document`
-- `-moz-workspace`
-- `-moz-window`
-- `-moz-list`
-- `-moz-pull-down-menu`
-- `-moz-field` (色も)
-
-### {{CSSxRef("font-family")}}
+**プロパティ:** {{CSSxRef("font-family")}}
 
 - `-moz-fixed`
 
-### {{CSSxRef("image-rendering")}}
+### image-rendering
 
-- {{CSSxRef("image-rendering","-moz-crisp-edges")}}
+**プロパティ:** {{CSSxRef("image-rendering")}}
 
-### {{CSSxRef("&lt;length&gt;")}}
+- `-moz-crisp-edges` {{deprecated_inline}}: [`crisp-edges`](/ja/docs/Web/CSS/Reference/Properties/image-rendering#crisp-edges) を使用してください。
 
-- {{CSSxRef("-moz-calc")}}
+### &lt;length&gt;
 
-### {{CSSxRef("list-style-type")}}
+**Type:** {{CSSxRef("&lt;length&gt;")}}
 
-- `-moz-arabic-indic`
-- `-moz-bengali`
-- `-moz-cjk-earthly-branch`
-- `-moz-cjk-heavenly-stem`
-- `-moz-devanagari`
+- `-moz-calc`{{deprecated_inline}}: {{CSSxRef("calc")}} を使用してください。
+
+### list-style-type
+
+**プロパティ:** {{CSSxRef("list-style-type")}}
+
+`list-style-type` のベンダー接頭辞付きの一部の値は、以下のリストにあるものを除き、 `-moz-` 接頭辞なしで標準の値として対応するようになりました。
+詳しくは[ブラウザーの互換性](/ja/docs/Web/CSS/Reference/Properties/list-style-type#ブラウザーの互換性)を参照してください。
+
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
 - `-moz-ethiopic-halehame-ti-er`
 - `-moz-ethiopic-halehame-ti-et`
-- `-moz-ethiopic-numeric`
-- `-moz-gujarati`
-- `-moz-gurmukhi`
 - `-moz-hangul`
 - `-moz-hangul-consonant`
-- `-moz-japanese-formal`
-- `-moz-japanese-informal`
-- `-moz-kannada`
-- `-moz-khmer`
-- `-moz-lao`
-- `-moz-malayalam`
-- `-moz-myanmar`
-- `-moz-oriya`
-- `-moz-persian`
-- `-moz-simp-chinese-formal`
-- `-moz-simp-chinese-informal`
-- `-moz-tamil`
-- `-moz-telugu`
-- `-moz-thai`
-- `-moz-trad-chinese-formal`
-- `-moz-trad-chinese-informal`
 - `-moz-urdu`
 
-### {{CSSxRef("overflow")}}
+### text-align
 
-- {{CSSxRef("-moz-scrollbars-none")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}
-- {{CSSxRef("-moz-hidden-unscrollable")}}
+**プロパティ:** {{CSSxRef("text-align")}}
 
-### {{CSSxRef("text-align")}}
+- `-moz-center` {{deprecated_inline}}: {{CSSxRef("text-align", "text-align: center")}} を使用してください。
+- `-moz-left` {{deprecated_inline}}: {{CSSxRef("text-align", "text-align: left")}} を使用してください。
+- `-moz-right` {{deprecated_inline}}: {{CSSxRef("text-align", "text-align: right")}} を使用してください。
 
-- `-moz-center`
-- `-moz-left`
-- `-moz-right`
+### width, min-width, and max-width
 
-### {{CSSxRef("text-decoration")}}
+**Properties:** {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-width")}}
 
-- `-moz-anchor-decoration`
+- `-moz-min-content`: {{CSSxRef("min-content")}} を参照してください。
+- `-moz-fit-content`: {{CSSxRef("fit-content")}} を参照してください。
+- `-moz-max-content`: {{CSSxRef("max-content")}} を参照してください。
+- `-moz-available`: [`stretch`](/ja/docs/Web/CSS/Reference/Properties/width#stretch) を参照してください。
 
-### {{CSSxRef("-moz-user-select")}}
+## 擬似クラス
 
-- `-moz-all`
-- `-moz-none`
-
-### {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, {{CSSxRef("max-width")}}
-
-- `-moz-min-content`
-- `-moz-fit-content`
-- `-moz-max-content`
-- `-moz-available`
-
-## 擬似要素と擬似クラス
-
-### A – D
-
-- {{CSSxRef("::-moz-anonymous-block")}}
-- {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":-moz-any")}}
-- {{CSSxRef(":-moz-any-link")}} [`:link` と `:visited` に一致する]
-- {{CSSxRef(":-moz-broken")}}
-- {{CSSxRef("::-moz-canvas")}}
-- {{CSSxRef("::-moz-color-swatch")}}
-- {{CSSxRef("::-moz-cell-content")}}
+- `:-moz-any` {{deprecated_inline}}: {{CSSxRef(":is")}} を使用してください。
+- `:-moz-any-link` {{deprecated_inline}}: {{CSSxRef(":any-link")}} を使用してください。
+- {{CSSxRef(":-moz-broken")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-drag-over")}}
-
-### F – I
-
 - {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef("::-moz-focus-inner")}}
-- {{CSSxRef("::-moz-focus-outer")}}
-- {{CSSxRef(":-moz-focusring")}}
-- {{CSSxRef(":-moz-full-screen")}}
-- {{CSSxRef(":-moz-full-screen-ancestor")}}
+- `:-moz-full-screen` {{deprecated_inline}}: 対応していません。{{CSSxRef(":fullscreen")}} を使用してください。
+- `:-moz-full-screen-ancestor` {{deprecated_inline}}: 対応していません。{{CSSxRef(":fullscreen")}} を使用してください。
 - {{CSSxRef(":-moz-handler-blocked")}}
 - {{CSSxRef(":-moz-handler-crashed")}}
 - {{CSSxRef(":-moz-handler-disabled")}}
-- {{CSSxRef("::-moz-inline-table")}}
-
-### L
-
 - {{CSSxRef(":-moz-last-node")}}
-- {{CSSxRef(":-moz-list-bullet")}}
-- {{CSSxRef(":-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":-moz-locale-dir(rtl)")}}
-- {{CSSxRef(":-moz-lwtheme")}}
-- {{CSSxRef(":-moz-lwtheme-brighttext")}}
-- {{CSSxRef(":-moz-lwtheme-darktext")}}
-
-### N – R
-
-- {{CSSxRef(":-moz-native-anonymous")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
+- `:-moz-native-anonymous`
+- `:-moz-placeholder` {{deprecated_inline}}: {{CSSxRef(":placeholder-shown")}} を使用してください。
 - {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-page")}}
-- {{CSSxRef("::-moz-page-sequence")}}
-- {{CSSxRef("::-moz-pagebreak")}}
-- {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::-moz-placeholder")}} {{deprecated_inline}}
+- `:-moz-read-only` {{deprecated_inline}}: {{CSSxRef(":read-only")}} を使用してください。
+- `:-moz-read-write` {{deprecated_inline}}: {{CSSxRef(":read-write")}} を使用してください。
+- {{CSSxRef(":-moz-submit-invalid")}}: {{CSSxRef(":invalid")}} を参照してください。
+- {{CSSxRef(":-moz-suppressed")}}
+- `:-moz-ui-invalid` {{deprecated_inline}}: {{CSSxRef(":user-invalid")}} を使用してください。
+- `:-moz-ui-valid` {{deprecated_inline}}: {{CSSxRef(":user-valid")}} を使用してください。
+- {{CSSxRef(":-moz-user-disabled")}}
+- {{CSSxRef(":-moz-window-inactive")}}
+
+## 擬似要素
+
+- `::-moz-canvas`
+- `::-moz-cell-content`
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- `::-moz-focus-outer`
+- `::-moz-inline-table`
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
+- {{CSSxRef("::-moz-meter-bar")}}
+- `::-moz-pagebreak`
+- `::-moz-pagecontent`
+- `::-moz-placeholder` {{deprecated_inline}}: {{CSSxRef("::placeholder")}} を使用してください。
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
 - {{CSSxRef("::-moz-range-track")}}
-- {{CSSxRef(":-moz-read-only")}}
-- {{CSSxRef(":-moz-read-write")}}
-
-### S
-
-- {{CSSxRef("::-moz-scrolled-canvas")}}
-- {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::-moz-scrolled-page-sequence")}}
-- {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-submit-invalid")}}
-- {{CSSxRef(":-moz-suppressed")}}
-- {{CSSxRef("::-moz-svg-foreign-content")}}
-
-### T
-
-- {{CSSxRef("::-moz-table")}}
-- {{CSSxRef("::-moz-table-cell")}}
-- {{CSSxRef("::-moz-table-column")}}
-- {{CSSxRef("::-moz-table-column-group")}}
-- {{CSSxRef("::-moz-table-outer")}}
-- {{CSSxRef("::-moz-table-row")}}
-- {{CSSxRef("::-moz-table-row-group")}}
-- {{CSSxRef(":-moz-tree-cell")}}
-- {{CSSxRef(":-moz-tree-cell-text")}}
-- {{CSSxRef(":-moz-tree-cell-text(hover)")}}
-- {{CSSxRef(":-moz-tree-checkbox")}}
-- {{CSSxRef(":-moz-tree-column")}}
-- {{CSSxRef(":-moz-tree-drop-feedback")}}
-- {{CSSxRef(":-moz-tree-image")}}
-- {{CSSxRef(":-moz-tree-indentation")}}
-- {{CSSxRef(":-moz-tree-line")}}
-- {{CSSxRef(":-moz-tree-progressmeter")}}
-- {{CSSxRef(":-moz-tree-row")}}
-- {{CSSxRef(":-moz-tree-row(hover)")}}
-- {{CSSxRef(":-moz-tree-separator")}}
-- {{CSSxRef(":-moz-tree-twisty")}}
-
-### U – X
-
-- {{CSSxRef(":-moz-ui-invalid")}}
-- {{CSSxRef(":-moz-ui-valid")}}
-- {{CSSxRef(":-moz-user-disabled")}}
-- {{CSSxRef("::-moz-viewport")}}
-- {{CSSxRef("::-moz-viewport-scroll")}}
-- {{CSSxRef(":-moz-window-inactive")}}
-- {{CSSxRef("::-moz-xul-anonymous-block")}}
+- `::-moz-scrolled-canvas`
+- `::-moz-scrolled-content`
+- `::-moz-selection` {{deprecated_inline}}: {{CSSxRef("::selection")}} を使用してください。
+- `::-moz-svg-foreign-content`
+- `::-moz-table`
+- `::-moz-table-cell`
+- `::-moz-table-column`
+- `::-moz-table-column-group`
+- `::-moz-table-outer`
+- `::-moz-table-row`
+- `::-moz-table-row-group`
+- `::-moz-viewport`
+- `::-moz-viewport-scroll`
 
 ## アットルール
 
-- {{CSSxRef("@-moz-document")}}
+- {{CSSxRef("@document", "@-moz-document")}}
 
 ## メディア特性
 
-- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
-- {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
-- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
-- {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
+- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}}
+- `-moz-platform`
+- `-moz-windows-glass`
 
 ## その他
 
-- {{CSSxRef("-moz-alt-content")}} (see [Firefox バグ 11011](https://bugzil.la/11011))
+- `-moz-alt-content`: [Firefox バグ 11011](https://bugzil.la/11011) を参照してください。
 
 ## 関連情報
 
-- [Chrome 専用 CSS リファレンス](/ja/docs/Mozilla/Gecko/Chrome/CSS)
-- [CSS の Microsoft 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [CSS の WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
+- [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
+- {{glossary("Vendor Prefix", "ベンダー接頭辞")}}: 用語集の項目

@@ -43,7 +43,7 @@ original_slug: Web/CSS/CSS_display/Containing_block
 
 앞서 언급했듯, 특정 속성의 값이 백분율이라면 그 계산값은 요소의 컨테이닝 블록에 의해 결정됩니다. 이렇게 동작하는 속성으로 **박스 모델 속성**과 **오프셋 속성**이 있습니다.
 
-- {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} 속성은 컨테이닝 블록의 `height`를 사용해 백분율을 계산합니다. 컨테이닝 블록의 `height`가 콘텐츠의 크기에 따라 달라질 수 있고, 컨테이닝 블록의 `position`이 `relative`거나 `static`이면 계산값은 **0**이 됩니다.
+- {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} 속성은 컨테이닝 블록의 `height`를 사용해 백분율을 계산합니다.
 - {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} 속성은 컨테이닝 블록의 `width`를 사용해 백분율을 계산합니다.
 
 ## 예제
@@ -258,7 +258,7 @@ p {
     - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
     - [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [실제값](/ko/docs/Web/CSS/actual_value)
+    - [실제값](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
   - [값 정의 구문](/ko/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

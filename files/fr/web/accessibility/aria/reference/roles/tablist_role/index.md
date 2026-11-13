@@ -3,7 +3,7 @@ title: "ARIA : rôle tablist"
 short-title: tablist
 slug: Web/Accessibility/ARIA/Reference/Roles/tablist_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 Le rôle `tablist` identifie l'élément qui sert de conteneur pour un ensemble d'onglets (`tabs`). Le contenu des onglets est appelé éléments `tabpanel`.
@@ -18,7 +18,7 @@ Les onglets sont un ensemble de sections superposées de contenu, appelées pann
 
 Chaque `tab` dans une `tablist` sert d'étiquette pour un `tabpanel` et peut être activé pour afficher ce panneau. La `tablist` est l'élément conteneur de l'ensemble des onglets.
 
-Lorsqu'une interface à onglets est initialisée, un panneau d'onglet est affiché et son onglet associé est stylisé pour indiquer qu'il est actif. Quand l'utilisateur·ice active un autre onglet, le panneau précédemment affiché est masqué, le panneau associé à l'onglet activé devient visible, et l'onglet est considéré comme «&nbsp;actif&nbsp;».
+Lorsqu'une interface à onglets est initialisée, un panneau d'onglet est affiché et son onglet associé est mis en forme pour indiquer qu'il est actif. Quand l'utilisateur·ice active un autre onglet, le panneau précédemment affiché est masqué, le panneau associé à l'onglet activé devient visible, et l'onglet est considéré comme «&nbsp;actif&nbsp;».
 
 Pour une liste d'onglets à sélection unique, les éléments `tabpanel` non actifs doivent être masqués jusqu'à ce que l'utilisateur·ice sélectionne l'onglet associé.
 

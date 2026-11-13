@@ -22,7 +22,11 @@ Whether the page is left or right is decided by the major writing direction of t
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:right {
+  /* ... */
+}
+```
 
 ## Примеры
 

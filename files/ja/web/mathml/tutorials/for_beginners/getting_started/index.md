@@ -1,14 +1,12 @@
 ---
 title: MathML を始めよう
+short-title: 始めよう
 slug: Web/MathML/Tutorials/For_beginners/Getting_started
-original_slug: Web/MathML/Guides/Getting_started
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6b01bafc68dffb3a50f70882d2ba24cd6f9d886f
 ---
 
-{{MathMLRef}}
-
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
 
 この記事では、単純な HTML 文書を使い、そこに MathML 数式を追加する方法を、いくつかの要素を紹介しながら見ていきます。
 
@@ -16,25 +14,17 @@ l10n:
 
 MathML は HTML と同じ構文を用いて要素と属性のツリーを表します。具体的な数式は `<math>` という要素で表され、 HTML ページの中に配置することができます。以下の文書では、段落の中にあります。
 
-```html
-<!doctype html>
-<html lang="ja">
-  <head>
-    <title>最初の数式のページ</title>
-  </head>
-  <body>
-    <p>
-      分数
-      <math>
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      は十進数では表せません。
-    </p>
-  </body>
-</html>
+```html live-sample___inserting_formulas_in_html
+<p>
+  分数
+  <math>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  は十進数では表せません。
+</p>
 ```
 
 `<mfrac>` 要素は分子（最初の子）と分母（2 つ目の子）を持つ分数を指定します。ブラウザーではこのように表示されます。
@@ -42,31 +32,23 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
 > [!WARNING]
-> 分数の代わりに "1 3" と表示される場合は、ブラウザーが MathML に対応していない可能性があります。詳しくは[ブラウザー互換性表](/ja/docs/Web/MathML/Reference/Element/math#browser_compatibility)を調べてください。
+> 分数の代わりに "1 3" と表示される場合は、ブラウザーが MathML に対応していない可能性があります。詳しくは[ブラウザー互換性表](/ja/docs/Web/MathML/Reference/Element/math#ブラウザーの互換性)を調べてください。
 
 ### display 属性
 
 前の例では、数式は段落のテキストと同じ行にあることに注意してください。しかし、下記の通り、大きな数式を自分自身で中央揃えにして表示させることがよくあります。そのためには `<math>` 要素に `display="block"` 属性を付ける必要があります。
 
-```html hidden
-<!doctype html>
-<html lang="ja">
-  <head>
-    <title>最初の数式のページ</title>
-  </head>
-  <body>
-    <p>
-      分数
-      <math display="block">
-        <mfrac>
-          <mn>1</mn>
-          <mn>3</mn>
-        </mfrac>
-      </math>
-      は十進数では表せません。
-    </p>
-  </body>
-</html>
+```html hidden live-sample___the_display_attribute
+<p>
+  分数
+  <math display="block">
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+  </math>
+  は十進数では表せません。
+</p>
 ```
 
 {{ EmbedLiveSample('The_display_attribute', 700, 100, "", "") }}
@@ -77,7 +59,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 > これは LaTeX の _inline_ 数式（ドル記号 `$...$` で区切られる）と _display_ 数式（`\[...\]` で区切られる）の概念に対応しています。
 
 > [!NOTE]
-> このプロパティは `<math display="block">`の場合、初期状態では `normal`、それ以外の場合は `compact` になります。MathMLのサブツリーによっては、このプロパティが自動的に `compact` になることがありますが、この入門チュートリアルではこの微妙な点は無視します。繰り返しますが、これは LaTeX に似ています。
+> 上述の外観の変化は、実際には {{cssxref("math-style")}} プロパティによって制御されており、このプロパティは `<math display="block">` の場合、初期値が `normal` となり、それ以外の場合は `compact` となります。MathMLのサブツリーによっては、このプロパティが自動的に `compact` になることがありますが、この入門チュートリアルではこの微妙な点は無視します。繰り返しますが、これは LaTeX と同様です。
 
 ## \<mrow> 要素でのグループ化
 
@@ -108,11 +90,11 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 </math>
 ```
 
-### アクティブラーニング: 入れ子になった式
+### 演習: 入れ子になった式を書く
 
 練習として、これまで見てきた MathML の要素だけを使って以下の式を書く方法を考えてみてください。もし行き詰まったり、解答を確認したい場合は、例のソースコードを調べてください。
 
-```html hidden
+```html hidden live-sample___nested-expressions
 <ol>
   <li>
     「2 分の 1」足す「3 分の 2」:
@@ -167,7 +149,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 </ol>
 ```
 
-{{ EmbedLiveSample('Active_learning_nested_expressions', 700, 200, "", "") }}
+{{ EmbedLiveSample('nested_expressions', 700, 200, "", "") }}
 
 ## まとめ
 
@@ -179,7 +161,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 - [`<math>` 要素](/ja/docs/Web/MathML/Reference/Element/math)
 - [`<mfrac>` 要素](/ja/docs/Web/MathML/Reference/Element/mfrac)
 - [`<mrow>` 要素](/ja/docs/Web/MathML/Reference/Element/mrow)
-- [`math-style` プロパティ](/ja/docs/Web/CSS/Reference/Properties/math-style)
-- [`math-depth` プロパティ](/ja/docs/Web/CSS/Reference/Properties/math-depth)
+- {{cssxref("math-style")}} プロパティ
+- {{cssxref("math-depth")}} プロパティ
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

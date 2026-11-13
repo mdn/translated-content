@@ -2,14 +2,12 @@
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef("Broadcast Channel API")}}
+{{APIRef("Broadcast Channel API")}} {{AvailableInWorkers}}
 
 **`BroadcastChannel`** インターフェイスは、特定の{{glossary("origin","オリジン")}}の{{glossary("browsing context","閲覧コンテキスト")}}が加入できる名前付きチャンネルを表します。これにより、同じオリジンの異なる文書間（異なるウィンドウ、タブ、フレーム、iframe）の通信を可能にします。 メッセージは、チャンネルに参加しているすべての `BroadcastChannel` オブジェクトで発生する {{domxref("BroadcastChannel/message_event", "message")}} イベントを介して配信されます。
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -36,10 +34,12 @@ _このインターフェイスは、その親である {{domxref("EventTarget")
 
 ## イベント
 
-- [`message`](/ja/docs/Web/API/BroadcastChannel/message_event)
+_このインターフェイスには、親である {{domxref("EventTarget")}} から継承したイベントもあります。_
+
+- {{domxref("BroadcastChannel/message_event", "message")}}
   - : メッセージがチャンネルに到着したときに発生します。
     `onmessage` プロパティからも利用できます。
-- [`messageerror`](/ja/docs/Web/API/BroadcastChannel/messageerror_event)
+- {{domxref("BroadcastChannel/messageerror_event", "messageerror")}}
   - : 逆シリアル化できないメッセージが到着したときに発生します。
     `onmessageerror` プロパティからも利用できます。
 

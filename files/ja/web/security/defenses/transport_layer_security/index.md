@@ -1,12 +1,10 @@
 ---
-title: トランスポート層セキュリティ
+title: トランスポート層セキュリティ (TLS)
+short-title: トランスポート層セキュリティ
 slug: Web/Security/Defenses/Transport_Layer_Security
-original_slug: Web/Security/Transport_Layer_Security
 l10n:
-  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 トランスポート層セキュリティ (TLS, Transport Layer Security) を使用した接続のセキュリティは、選択されている暗号スイートとセキュリティ引数に強く依存します。この記事の目的は、クライアントとサーバーの間の機密性と完全性の通信を確実にするために、選択の参考になることです。 Mozilla Operations Security (OpSec) チームは、サーバーの設定項目のリファレンスが付いた[ウィキ記事を管理しています](https://wiki.mozilla.org/Security/Server_Side_TLS)。
 
@@ -75,7 +73,7 @@ TLS 1.3 の主な変更点は以下の通りです。
 - TLS 1.3 は、接続が再開されるか、事前に共有された鍵を使用しない限り、フォワードセキュアモードのみをサポートしています
 - TLS 1.3 は、TLS 1.3 専用の新しい暗号スイートを定義しています。これらの暗号化スイートはすべて最新の Authenticated Encryption with Associated Data (AEAD) アルゴリズムを使用しています
 - TLS 1.3 のハンドシェイクは、共有シークレットを確立するために必要なメッセージを除き、暗号化されています。特に、これはサーバー証明書とクライアント証明書が暗号化されていることを意味します。ただし、クライアントがサーバーに送信するサーバー ID (サーバー名または SNI 拡張子) は暗号化されないことに注意してください
-- 数多くのメカニズムが無効化されています: リネゴシエーション、一般的なデータ圧縮、[デジタル署名アルゴリズム](https://ja.wikipedia.org/wiki/Digital_Signature_Algorithm)。(DSA) 証明書、静的 RSA 鍵交換、カスタム Diffie-Hellman (DH) グループとの鍵交換
+- 数多くのメカニズムが無効化されています: リネゴシエーション、一般的なデータ圧縮、[デジタル署名アルゴリズム](https://ja.wikipedia.org/wiki/Digital_Signature_Algorithm) (DSA) 証明書、静的 RSA 鍵交換、カスタム Diffie–Hellman (DH) グループとの鍵交換
 
 TLS 1.3 のドラフト版の実装が公開されています。TLS 1.3 は 0-RTT モードを含むいくつかのブラウザーで有効になっています。TLS 1.3 を有効にしているウェブサーバーでは、TLS 1.3 が正常に動作するように設定を調整する必要があるかもしれません。
 
@@ -101,4 +99,4 @@ Firefox はバージョン 74 以降、古い TLS バージョンを使用して
 - Mozilla Operations Security (OpSec) チームは、 [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) のウィキページを保守しています。
 - [HTTP Observatory](/en-US/observatory/), [SSL Labs](https://www.ssllabs.com/ssltest/) はサイトの HTTP/TLS 構成がどれだけ安全かを確認するテストに役立ちます。
 - [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP ヘッダー
+- HTTP の [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) ヘッダー

@@ -21,14 +21,14 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Propiedades de tipo función
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
 
 ### Objetos fundamentales
 
@@ -112,25 +112,25 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Internacionalización
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.DisplayNames")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.Locale")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
 
 ### WebAssembly
 
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
+- [`WebAssembly`](/es/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/es/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/es/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/es/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/es/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/es/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/es/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ## Sentencias
 
@@ -184,7 +184,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Expresiones primarias
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -192,9 +192,9 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/yield*", "yield*")}}
 - {{JSxRef("Operators/async_function", "async function")}}
 - {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
 - {{JSxRef("null")}}
 
@@ -202,9 +202,9 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - [`?.` (Optional chaining)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- {{JSxRef("new")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
+- {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
@@ -217,7 +217,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Operadores unarios
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -237,7 +237,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Operadores relacionales
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/Less_than", "&lt;")}}
 - {{JSxRef("Operators/Greater_than", "&gt;")}}
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
@@ -266,11 +266,11 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### Operador condicional (ternario)
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Operadores de asignación
 
@@ -289,13 +289,13 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
 
 ### Operador coma
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Funciones
 

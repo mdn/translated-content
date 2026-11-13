@@ -3,8 +3,6 @@ title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
 
-{{JSRef}}
-
 La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en minuscules.
 
 {{InteractiveExample("JavaScript Demo: String.toLowerCase()")}}

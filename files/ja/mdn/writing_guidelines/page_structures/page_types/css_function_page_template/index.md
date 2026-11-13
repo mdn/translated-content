@@ -2,15 +2,13 @@
 title: CSS 関数ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
 >
-> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
+> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。
 >
 > ---
 >
@@ -21,8 +19,8 @@ l10n:
 >
 > ```md
 > ---
-> title: NameOfTheFunction()
-> slug: Web/CSS/NameOfTheFunction
+> title: nameOfTheFunction()
+> slug: Web/CSS/Reference/Values/nameOfTheFunction
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -30,33 +28,30 @@ l10n:
 >
 > - **title**
 >   - : `title` の値はページの先頭に表示されます。タイトルの書式は _NameOfTheFunction()_ です。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) プロパティのタイトルは _pow()_ です。
+>     例えば、[`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) 関数のタイトルは _pow()_ です。
 > - **slug**
->   - : `slug` の値は`https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/NameOfTheFunction` のような書式です。スラッグには括弧が付かないことに注意してください。
->     例えば、 [`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) 関数のスラッグは `Web/CSS/pow` です。
+>   - : `slug` の値は `https://developer.mozilla.org/ja/docs/` の後に続く URL の末尾です。これは `Web/CSS/Reference/Values/nameOfTheFunction` のような形式です。slug には括弧を含めないことに注意してください。
+>     例えば、[`pow()`](/ja/docs/Web/CSS/Reference/Values/pow) 関数の slug は `Web/CSS/Reference/Values/pow` です。
 > - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+>   - : （翻訳記事のみ）翻訳元の英語版記事の GitHub コミット ID を記述します。GitHub 上で英語版記事のコミット ID を確認してください。
 >
 > ---
 >
 > **ページ先頭のマクロ**
 >
 > コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
-> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
-> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
->   実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
-> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
+> **訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
+>
+> - `\{{SeeCompatTable}}` — これは **実験的** バナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
+>   技術が実験的で、Firefox の設定によって利用できないようにされている場合は、[Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features)ページにも項目を記入してください。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
-> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
->
-> - `\{{CSSRef}}`: このマクロはすべての CSS ページに置く必要があります。ページに記載したタグに応じて、適切な CSS サイドバーを生成します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
+> 状態ヘッダーのマクロを手動で提供するのではなく、[機能の状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能の状態を追加または更新する方法)の節を参照して、これらの状態をページに追加してください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **実験的** と **標準外** のバナーは、このメモブロックの直後に表示しています。
 >
 > ---
 >
@@ -70,16 +65,16 @@ l10n:
 >
 > _この説明文全体を削除してから公開してください。_
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
-ページのコンテンツは導入段落から始めましょう。関数名から始め、それが何をするのかを買いてください。
-これはできれば 1 つか 2 つの短い文章にしてください。
+ページのコンテンツは導入段落から始めましょう。関数名から始め、それが何をするのかを書いてください。
+できれば 1、2 文の短い段落にしてください。
 
 ## 試してみましょう
 
-_このタイトルは `\{{EmbedInteractiveExample}}` マクロで自動生成されます。_
-
-この節は `\{{EmbedInteractiveExample}}` マクロを使用して追加したインタラクティブサンプルのためのものです。この例は [mdn/interactive-examples リポジトリー](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)に作成します。詳しくはガイドラインの[インタラクティブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#インタラクティブサンプル)の節を参照してください。
+この節は `InteractiveExample` マクロで生成されます。
+「試してみましょう」という節の見出しとコードエディターが現れます。
+詳しくはガイドラインの[インタラクティブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#インタラクティブサンプル)の節を参照してください。
 
 ## 構文
 
@@ -87,7 +82,7 @@ _このタイトルは `\{{EmbedInteractiveExample}}` マクロで自動生成�
 
 構文の行をセミコロンで終わらせないでください。これは、ここでは完全に有効な CSS コードを示すのではなく、構文の使い方だけを示していることを強調する必要があります。
 
-関数が取りうるすべての呼び出しパターンを示します。そのようなすべてのケースの前に、使用する用途を記述するコメントと、引数に名前を付け、構文の区切りや 引数の順序を強調するコメントを追加します。コメント中の引数名は、「引数」の節に掲載されている引数名と一致するようにしてください。
+関数が取りうるすべての呼び出しパターンを示します。そのようなすべてのケースの前に、使用する用途を記述するコメントと、引数に名前を付けて構文上の区切りや引数の順序を示すコメントを追加します。コメント中の引数名は、「引数」の節に掲載されている引数名と一致するようにしてください。
 
 それぞれの呼び出しパターンを示すコメントには、正確に 1 行の空行が続けてください。
 
@@ -105,7 +100,7 @@ var(--custom-prop,)
 /* 代替値あり */
 /* var( <custom-property-name> , <declaration-value> ) */
 var(--custom-prop, initial)
-var(--custom-prop, #FF0000)
+var(--custom-prop, red)
 var(--my-background, linear-gradient(transparent, aqua), pink)
 var(--custom-prop, var(--default-value))
 var(--custom-prop, var(--default-value, red))
@@ -117,9 +112,12 @@ var(--custom-prop, var(--default-value, red))
 引数それぞれに 1 つずつ用語と定義を記載してください。
 
 - `<custom-property-name>`
-  - : 引数の説明、データ型、既定値がある場合はその値を記載してください。
+  - : 引数の説明、データ型、デフォルト値がある場合はその値を記載してください。
 - `<declaration-value>` {{optional_inline}}
-  - : 引数の説明、データ型、既定値がある場合はその値を記載してください。
+  - : 引数の説明、データ型、デフォルト値がある場合はその値を記載してください。
+
+> [!WARNING]
+> CSS のページには、[インライン状態マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#定義リスト内の機能の状態アイコン)を追加しないでください。
 
 ### 返値
 
@@ -127,7 +125,7 @@ var(--custom-prop, var(--default-value, red))
 
 ## 解説
 
-この節はオプションですが推奨されます。これは、このプロパティについての解説と、これがどのように動作するのかを説明するオプションの節です。この節を使用して、関連の用語を説明したり、プロパティの用途を追加したりします。
+この節はオプションですが、記載することを推奨します。関数の説明と動作の解説を記載し、関連用語や関数の使用例を説明してください。
 
 ## 形式文法
 
@@ -135,15 +133,19 @@ var(--custom-prop, var(--default-value, red))
 
 `\{{CSSSyntax}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
+
+## アクセシビリティ
+
+この節はオプションです。この関数を使用する際に開発者が注意すべきアクセシビリティに関するガイドライン、ベストプラクティス、懸念事項を記載してください。該当する場合は、回避策や解決策も含めることができます。
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、例が 1 つだけのページでも、複数形の "Examples" を使用しています。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -168,33 +170,29 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> この関数の例については、 [basic-shape のページ](https://example.org)を参照してください。
+> この関数の例については、[basic-shape のページ](https://example.org/)を参照してください。
 > ```
-
-## アクセシビリティの考慮
-
-この節はオプションです。この関数を使用する際に開発者が注意すべきアクセシビリティに関する警告があれば、ここに記載することができます。また、こうしたアクセシビリティの懸念の回避策があれば、それも含めることができます。
 
 ## 仕様書
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## 関連情報
 
-現在の関数に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在の関数に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

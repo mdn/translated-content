@@ -3,7 +3,7 @@ title: "Array : méthode findLast()"
 short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`findLast()`** des instances de {{JSxRef("Array")}} parcourt le tableau en ordre inverse et retourne la valeur du premier élément qui satisfait la fonction de test fournie.
@@ -12,8 +12,8 @@ Si aucun élément ne satisfait la fonction de test, {{JSxRef("undefined")}} est
 Si vous souhaitez&nbsp;:
 
 - le _premier_ élément correspondant, utilisez {{JSxRef("Array/find", "find()")}}.
-- l'_indice_ du dernier élément correspondant dans le tableau, utilisez {{JSxRef("Array/findLastIndex", "findLastIndex()")}}.
-- l'_indice d'une valeur_, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
+- _l'indice_ du dernier élément correspondant dans le tableau, utilisez {{JSxRef("Array/findLastIndex", "findLastIndex()")}}.
+- _l'indice d'une valeur_, utilisez {{JSxRef("Array/indexOf", "indexOf()")}}.
   (Cette méthode est semblable à {{JSxRef("Array/findIndex", "findIndex()")}}, mais compare chaque élément à la valeur indiquée au lieu d'utiliser une fonction de test.)
 - savoir si une valeur _existe_ dans un tableau, utilisez {{JSxRef("Array/includes", "includes()")}}.
   Là encore, chaque élément est comparé à la valeur indiquée au lieu d'utiliser une fonction de test.
@@ -40,7 +40,7 @@ findLast(callbackFn, thisArg)
 ### Paramètres
 
 - `callbackFn`
-  - : La fonction à exécuter pour chaque élément du tableau. Elle doit renvoyer une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [équivalente à `false`](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
+  - : La fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [équivalente à `false`](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
     - `element`
       - : La valeur de l'élément courant du tableau en cours de traitement.
     - `index`
@@ -100,12 +100,12 @@ const inventaire = [
 const resultat = inventaire.findLast(({ quantite }) => quantite < 2);
 
 console.log(resultat);
-// { name: "poissons", quantite: 1 }
+// { nom: "poissons", quantite: 1 }
 ```
 
 ### Trouver le dernier nombre premier d'un tableau
 
-Dans l'exemple suivant, on trouve le dernier élément du tableau qui est un nombre premier (ou on renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si le tableau ne contient pas de nombre premier)&nbsp;:
+Dans l'exemple suivant, on trouve le dernier élément du tableau qui est un nombre premier (ou on retourne {{JSxRef("undefined")}} si le tableau ne contient pas de nombre premier)&nbsp;:
 
 ```js
 function estPremier(n) {
@@ -128,7 +128,35 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(estPremier)); // 11
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement mémoïsé comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter les calculs répétés.
+> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter les calculs répétés.
+
+### Trouver la tâche la plus récemment terminée
+
+Cet exemple illustre un cas d'utilisation pratique de `findLast()` lorsqu'on travaille avec des données ordonnées par le temps. Il trouve la tâche la plus récemment terminée dans une liste déjà triée par `timestamp`.
+
+```js
+const tasks = [
+  {
+    name: "Configuration du projet",
+    completed: true,
+    timestamp: 1609459200000,
+  },
+  { name: "Écrire des tests", completed: false, timestamp: 1609545600000 },
+  { name: "Corriger le bug #42", completed: true, timestamp: 1609632000000 },
+  {
+    name: "Déployer en pré-production",
+    completed: true,
+    timestamp: 1609718400000,
+  },
+  { name: "Revoir la PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask.name); // Déployer en pré-production
+```
+
+Ceci est plus efficace que d'utiliser `find()` avec un tableau inversé, car cela évite de créer un nouveau tableau.
 
 ### Utiliser le troisième argument de `callbackFn`
 
@@ -200,7 +228,7 @@ const semblableTableau = {
   0: 2,
   1: 7.3,
   2: 4,
-  3: 3, // ignoré par findLast() car length vaut 3
+  3: 3, // ignoré par findLast(), car length vaut 3
 };
 console.log(
   Array.prototype.findLast.call(semblableTableau, (x) => Number.isInteger(x)),
@@ -217,8 +245,10 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.findLast` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.findLast` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlast)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}
 - La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
@@ -227,5 +257,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.every()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("TypedArray.prototype.findLast()")}}
-- [Prothèse d'émulation pour Array.prototype.findLast dans la bibliothèque core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-find-from-last)
-- [Prothèse d'émulation es-shims pour Array.prototype.findLast <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findlast)

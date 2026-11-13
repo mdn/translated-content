@@ -1,8 +1,9 @@
 ---
-title: inverted-colors
+title: Caractéristique média CSS `inverted-colors`
+short-title: inverted-colors
 slug: Web/CSS/Reference/At-rules/@media/inverted-colors
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`inverted-colors`** permet de tester si l'{{Glossary("user agent", "agent utilisateur")}} ou le système d'exploitation sous-jacent a inversé toutes les couleurs.
@@ -68,7 +69,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("appliquer_des_styles_si_une_inversion_des_couleurs_est_détectée")}}
+{{EmbedLiveSample("Appliquer des styles si une inversion des couleurs est détectée")}}
 
 ## Spécifications
 
@@ -78,7 +79,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Voir aussi
 
 - La règle {{CSSxRef("@media")}}
 - Le module des [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)

@@ -1,23 +1,23 @@
 ---
 title: CSS 構文
+short-title: 構文
 slug: Web/CSS/Guides/Syntax
-original_slug: Web/CSS/CSS_syntax
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
 このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
 
-### アットルール
+## リファレンス
+
+### アットルールと記述子
 
 - なし
 
 > [!NOTE]
-> このモジュールは、 {{cssxref("@charset")}} は実際のアットルールではなく、スタイルシートが文法チェックされるときに省略されるべき認識されない古いルールであると明示しています。 `@charset` の有効な使用法は、スタイルシートの先頭部分のみです。ここでは、コンテンツの処理前に、特別なバイト列として解釈されます。
-
-## リファレンス
+> このモジュールでは、 {{cssxref("@charset")}} は実際のアットルールではなく、スタイルシートが文法チェックされるときに省略されるべき認識されない古いルールであると明示しています。 `@charset` の有効な使用法は、スタイルシートの先頭部分のみです。ここでは、コンテンツの処理前に、特別なバイト列として解釈されます。
 
 ### 主要概念
 
@@ -32,10 +32,10 @@ l10n:
 
 ### 用語集の用語
 
-- {{glossary("CSS_Descriptor", "CSS 記述子")}}
-- {{glossary("parse", "構文解析")}}
-- {{glossary("stylesheet", "スタイルシート")}}
-- {{glossary("whitespace", "ホワイトスペース")}}
+- {{glossary("CSS descriptor", "CSS 記述子")}}
+- {{glossary("Parse", "構文解析")}}
+- {{glossary("Stylesheet", "スタイルシート")}}
+- {{glossary("Whitespace", "ホワイトスペース")}}
 
 ## ガイド
 

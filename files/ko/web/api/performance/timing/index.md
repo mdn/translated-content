@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("Performance API")}}{{deprecated_header}}
+{{APIRef("Performance API")}}
 
 오래된
 **`Performance.timing`** 읽기 전용

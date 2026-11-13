@@ -12,7 +12,7 @@ l10n:
 これは、エクスポートされ暗号化された（「ラップされた」とも呼ばれる）鍵を入力として受け取ることを意味しています。
 鍵を復号してからインポートし、[ウェブ暗号 API](/ja/docs/Web/API/Web_Crypto_API) で使用できる {{domxref("CryptoKey")}} オブジェクトを返します。
 
-[SubtleCrypto.importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) と同様に、鍵の [import 形式](/ja/docs/Web/API/SubtleCrypto/importKey#supported_formats) や、抽出可能かどうか、使用することができる処理など、詳細をインポートする鍵の他の属性を指定します。
+[`SubtleCrypto.importKey()`](/ja/docs/Web/API/SubtleCrypto/importKey) と同様に、鍵の [import 形式](/ja/docs/Web/API/SubtleCrypto/importKey#supported_formats) や、抽出可能かどうか、使用することができる処理など、詳細をインポートする鍵の他の属性を指定します。
 
 しかし、`unwrapKey()`はインポートする鍵も 復号するので、復号するために使用する鍵も渡す必要があります。
 これは「ラップ解除鍵」と呼ばれることもあります。

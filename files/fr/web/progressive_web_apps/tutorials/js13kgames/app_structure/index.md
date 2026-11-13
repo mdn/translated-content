@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Dans cet article, nous analyserons l'application [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), verrons pourquoi elle est construite de cette façon et les avantages que cela apporte.
 
 La structure du site web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est plutôt simple&nbsp;: elle consiste en un simple fichier HTML ([`index.html`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) avec un style CSS basique ([`style.css`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)) et quelques images, scripts et polices de caractères. La structure du répertoire ressemble à ceci&nbsp;:
