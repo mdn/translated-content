@@ -3,8 +3,6 @@ title: Chaînage optionnel (optional chaining)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur de **chaînage optionnel** **`?.`** permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide. L'opérateur `?.` fonctionne de manière similaire à l'opérateur de chaînage `.`, à ceci près qu'au lieu de causer une erreur si une référence est {{jsxref("null")}} ou {{jsxref("undefined")}}, l'expression se court-circuite avec `undefined` pour valeur de retour. Quand il est utilisé avec des appels de fonctions, il retourne `undefined` si la fonction donnée n'existe pas.
 
 Ceci résulte en des expressions plus courtes et plus simples lors de l'accès à des propriétés chaînées quand il est possible qu'une référence soit manquante. Ceci peut aussi être utile lors de l'exploration du contenu d'un objet lorsqu'il n'y a aucune garantie concernant les propriétés qui sont requises.
@@ -80,7 +78,7 @@ let result = uneInterface.uneMéthode?.();
 
 #### Réaliser des fonctions de rappel optionnelles ou des écouteurs d'évènements
 
-Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
+Si vous utilisez des fonctions ou des méthodes de recherche depuis un objet avec [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring), vous pourriez avoir des valeurs inexistantes que vous ne pouvez appeler comme fonction à moins que vous ayez vérifié leur existance. En utilisant `?.`, vous pourriez vous passer de cette vérification supplémentaire :
 
 ```js
 // ES2019
@@ -174,7 +172,7 @@ let durée = vacations.trip?.getTime?.();
 
 ### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
 
-L'{{JSxRef("Opérateurs/Nullish_coalescing_operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
+L'{{JSxRef("Operators/Nullish_coalescing", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
 
 ```js
 let client = {
@@ -195,4 +193,4 @@ console.log(villeDuClient); // Ville inconnue
 
 ## Voir aussi
 
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}}
+- {{JSxRef("Operators/Nullish_coalescing", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}}

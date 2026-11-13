@@ -3,8 +3,6 @@ title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
 
-{{AddonSidebar}}
-
 Permet d'interagir avec le système d'onglets du navigateur.
 
 Vous pouvez utiliser cette API pour obtenir une liste des onglets ouverts, filtrés par différents critères, ainsi que pour ouvrir, mettre à jour, déplacer, recharger et supprimer des onglets. Vous ne pouvez pas accéder directement au contenu hébergé par les onglets à l'aide de cette API, mais vous pouvez insérer du JavaScript et du CSS dans les onglets en utilisant les API {{WebExtAPIRef("tabs.executeScript()")}} ou {{WebExtAPIRef("tabs.insertCSS()")}}.
@@ -162,8 +160,6 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

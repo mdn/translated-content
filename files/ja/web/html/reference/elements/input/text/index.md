@@ -1,11 +1,10 @@
 ---
-title: <input type="text">
+title: '`<input type="text">` 属性値'
+short-title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 
@@ -58,15 +57,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `maxlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが `text` 入力欄に入力することができる ({{glossary("UTF-16", "UTF-16 コード単位")}}での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドのテキスト値の長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `minlength`
 
-ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
+ユーザーが `text` 入力欄に入力することができる ({{glossary("UTF-16", "UTF-16 コード単位")}}での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
 
-入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄のテキスト値の長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `pattern`
 
@@ -97,7 +96,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `size`
 
-`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
+`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、デフォルト値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
@@ -110,7 +109,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 - `true`
   - : この要素でスペルチェックを有効にします。
 - `""` (空文字列) または値なし
-  - : スペルチェックについて、要素の既定の動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
+  - : スペルチェックについて、要素のデフォルトの動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
 
 入力欄でスペルチェックが有効にできるのは、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合です。
 
@@ -123,41 +122,31 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### 基本的な例
 
 ```html
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input type="text" id="uname" name="name" />
+</div>
 ```
 
 これは次のように表示されます。
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
+この入力欄をフォームに含めて送信すると、サーバーに送信されるデータの名前と値の組は `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。[`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を {{HTMLElement("input")}} 要素に指定することを忘れないでください。そうしないと、テキスト入力欄の値が送信データに含まれません。
 
 ### プレイスホルダーの設定
 
 [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html-nolint
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="小文字で一語で" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="小文字で一語で" />
+</div>
 ```
 
 プレイスホルダーがどう表示されるかを以下で確認できます。
@@ -171,20 +160,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
-<form>
-  <div>
-    <label for="uname">ユーザー名を選んでください: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="小文字で一語で"
-      size="30" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="uname">ユーザー名を選んでください: </label>
+  <input
+    type="text"
+    id="uname"
+    name="name"
+    placeholder="小文字で一語で"
+    size="30" />
+</div>
 ```
 
 {{EmbedLiveSample('Physical_input_element_size', 600, 80)}}
@@ -242,6 +226,12 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -266,7 +256,7 @@ input:valid + span::after {
 
 {{EmbedLiveSample('Making_input_required', 600, 100)}}
 
-検索用語を入力せずにフォームを送信しようとした場合、ブラウザーはエラーメッセージを表示します。
+ユーザー名を入力せずにフォームを送信しようとした場合、ブラウザーはエラーメッセージを表示します。
 
 ### 入力値の長さ
 
@@ -293,6 +283,12 @@ input:valid + span::after {
     <button>送信</button>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -350,6 +346,12 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -358,7 +360,7 @@ div {
 
 p {
   font-size: 80%;
-  color: #999;
+  color: #999999;
 }
 
 input + span {
@@ -426,18 +428,12 @@ input:valid + span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><code>list</code> 属性がない場合:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
-      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        <code>list</code> 属性がない場合:
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        <code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

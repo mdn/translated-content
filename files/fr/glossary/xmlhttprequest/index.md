@@ -1,20 +1,14 @@
 ---
-title: XHR (XMLHttpRequest)
+title: XMLHttpRequest (XHR)
 slug: Glossary/XMLHttpRequest
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+{{DOMxRef("XMLHttpRequest")}} (XHR) est une {{Glossary("API")}} {{Glossary("JavaScript")}} permettant de créer des requêtes {{Glossary("HTTP")}}. Ses méthodes offrent la possibilité d'envoyer des requêtes réseau entre le {{Glossary("browser", "navigateur")}} et un {{Glossary("server", "serveur")}}.
 
-{{domxref("XMLHttpRequest")}} (XHR) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour créer des requêtes {{Glossary("AJAX")}}. Ses méthodes permettent d'envoyer des requêtes réseau entre le {{Glossary("Browser","navigateur")}} et un {{Glossary("Server","serveur")}}.
+[L'API Fetch](/fr/docs/Web/API/Fetch_API) est le remplaçant moderne de XMLHttpRequest.
 
 ## Voir aussi
 
-### Culture générale
-
-- [`XMLHttpRequest`](https://fr.wikipedia.org/wiki/XMLHttpRequest) sur Wikipédia
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (en)
-
-### Informations techniques
-
-- L'objet {{domxref("XMLHttpRequest")}}.
-- La [documentation sur MDN à propos de l'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
+- La documentation de [l'API XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API)

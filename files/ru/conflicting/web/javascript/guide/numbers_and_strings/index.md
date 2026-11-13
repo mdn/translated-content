@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 В этой главе приводится порядок работы со строками и текстом в JavaScript.
 
@@ -170,11 +170,11 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 
 ## Интернационализация
 
-Объект {{jsxref("Intl")}} представляет собой пространство имён для ECMAScript API по интернационализации, которое обеспечивает чувствительное к языку сравнение строк, форматирование чисел, времени и даты. Конструкторы для объектов {{jsxref("Collator")}}, {{jsxref("NumberFormat")}} и {{jsxref("DateTimeFormat")}} являются свойствами `объекта Intl`.
+Объект {{jsxref("Intl")}} представляет собой пространство имён для ECMAScript API по интернационализации, которое обеспечивает чувствительное к языку сравнение строк, форматирование чисел, времени и даты. Конструкторы для объектов {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}} и {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} являются свойствами `объекта Intl`.
 
 ### Форматирование времени и даты
 
-Объект {{jsxref("DateTimeFormat")}} полезен для форматирования времени и даты. В примере ниже дата форматируется так, как это принято в США (результат отличен для разных временных зон).
+Объект {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} полезен для форматирования времени и даты. В примере ниже дата форматируется так, как это принято в США (результат отличен для разных временных зон).
 
 ```js
 var msPerDay = 24 * 60 * 60 * 1000;
@@ -197,7 +197,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 ### Форматирование чисел
 
-Объект {{jsxref("NumberFormat")}} полезен при форматировании чисел, например, валют.
+Объект {{jsxref("Intl/NumberFormat", "NumberFormat")}} полезен при форматировании чисел, например, валют.
 
 ```js
 var gasPrice = new Intl.NumberFormat("en-US", {
@@ -218,7 +218,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 ### Сравнение
 
-Объект {{jsxref("Collator")}} полезен для сравнения и сортировки строк.
+Объект {{jsxref("Intl/Collator", "Collator")}} полезен для сравнения и сортировки строк.
 
 Например, в Германии есть два различных порядка сортировки строк в зависимости от документа: телефонная книга или словарь. Сортировка по типу телефонной книги подчёркивает звуки.
 
@@ -251,4 +251,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 - [Регулярные выражения JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в руководстве по JavaScript.
 - {{jsxref("RegExp")}} ссылка в документации.
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

@@ -2,10 +2,10 @@
 title: 构建文档
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 65c873fda639b035b94db77dd0f9373f38549aa0
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 {{glossary("HTML")}} 不仅能够定义网页的单独部分（例如“段落”或“图片”），还可以使用块级元素（例如“标题栏”、“导航菜单”、“主内容列”）来定义网站中的复合区域。本文将探讨如何规划基本的网站结构，并根据规划的结构来编写 HTML。
 
@@ -14,9 +14,9 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+        熟悉基本的 HTML，包括<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >基本 HTML 语法</a
-        >，了解文本级语义，如<a
+        >。了解文本级语义，如<a
           href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >标题和段落</a
         >和<a
@@ -80,7 +80,7 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 
 ### 探索我们示例的代码
 
-上图的示例可用下面的代码表示（你也可以[在 GitHub 仓库上找到我们的示例](https://github.com/roy-tian/learning-area/blob/main/html/introduction-to-html/document-and-website-structure/index.html)）。请看下面的列表，了解视觉输出的每个部分由哪些部分组成。
+上图的示例可用下面的代码表示（你也可以[在 GitHub 仓库上找到我们的示例](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)）。请看下面的列表，了解视觉输出的每个部分由哪些部分组成。
 
 ```html
 <!doctype html>
@@ -290,7 +290,7 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
      - 版权声明
      - 至条款、联系方式和无障碍政策的链接
 
-2. 接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：![简单的页面布局示意图，有页眉、主内容、两个可选侧边栏和页脚。](site-structure.png)
+2. 接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：![简单的页面布局示意图，有页眉、主内容、两个可选侧边栏和页脚。](/shared-assets/images/diagrams/learn/structuring-documents/site-structure.svg)
 3. 下面，对于期望添加进站点的所有其他（通用内容以外的）内容展开头脑风暴，直接罗列出来。例如：
    - 航班
    - 住宿
@@ -323,7 +323,7 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
        - 语言和文化
    - 购买假期
 
-5. 可以尝试绘制一个粗略的网站地图——为网站上的每个页面划一个框，并画线表示页面之间的典型工作流程。主页可能位于顶部或中心位置，并链接到大多数页面（如果不是所有页面的话）。小型网站中的大多数页面都应该可以从主导航中找到，但也有例外。你可能还需要说明如何展示网站内容。![显示主页、地区页面、搜索结果、特价页面以及结账和购买流程的网站地图](site-map.png)
+5. 可以尝试绘制一个粗略的网站地图——为网站上的每个页面划一个框，并画线表示页面之间的典型工作流程。主页可能位于顶部或中心位置，并链接到大多数页面（如果不是所有页面的话）。小型网站中的大多数页面都应该可以从主导航中找到，但也有例外。你可能还需要说明如何展示网站内容。![显示主页、地区页面、搜索结果、特价页面以及结账和购买流程的网站地图](/shared-assets/images/diagrams/learn/structuring-documents/site-map.svg)
 
 试着为自己创建的网站进行上述练习。你想做一个关于什么的网站？作为一个扩展目标，利用迄今为止所学到的 HTML 知识创建网站上的几个页面。你可以使用我们的[基本 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)作为起点。
 
@@ -331,4 +331,4 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 
 至此，你应该对如何构建网页/站点有了更好的了解。在本模块的下一篇文章中，我们将学习一些进阶文本技术。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

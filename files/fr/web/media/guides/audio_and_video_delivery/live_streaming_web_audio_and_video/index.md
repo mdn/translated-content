@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_vid
 original_slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 La technologie de _live streaming_ (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de _streaming_, le live streaming est le processus de transmissions d'un média _live_ (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.
 
 La première chose à avoir en tête quand on diffuse un live stream à un navigateur est le fait que, plutôt que de jouer un fichier fini, on relaie un fichier qui est créé à la volée et qui n'a pas de début ou de fin prédéterminé.
@@ -137,7 +135,8 @@ Opus est un format libre de droit et open source qui permet d'optimiser la quali
 
 Actuellement, Opus est supporté par Firefox (bureau et mobile) ainsi que les dernières versions de Chrome bureau et Opera.
 
-> **Note :** [Opus est un format obligatoire](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) pour les implémentations navigateur de WebRTC.
+> [!NOTE]
+> [Opus est un format obligatoire](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) pour les implémentations navigateur de WebRTC.
 
 ### MP3, AAC, Ogg Vorbis
 
@@ -162,7 +161,8 @@ Pour le transfert RTMP, vous pouvez utiliser le [module Nginx RTMP](https://gith
 
 [SHOUTcast](http://en.wikipedia.org/wiki/SHOUTcast) est une technologie propriétaire multi-plateforme pour diffuser des médias en streaming. Développé par Nullsoft, elle permet de diffuser du contenu audio au format MP3 ou AAC en broadcast. Pour utilisation sur le web, les streams SHOUTcast sont transmis sur HTTP.
 
-> **Note :** [Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> [!NOTE]
+> [Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 
@@ -181,7 +181,7 @@ Bien que vous ayez la possibilité d'installer des logiciels tels que GStreamer,
 - [HLS Browser Support](https://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/fr/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)

@@ -3,7 +3,7 @@ title: AbortController
 slug: Web/API/AbortController
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController`** 인터페이스는 하나 이상의 웹 요청을 취소할 수 있게 해준다.
 
@@ -56,7 +56,8 @@ function fetchVideo() {
 }
 ```
 
-> **참고:** `abort()`가 호출되면, `fetch()` promise는 `AbortError`으로 명명된 `DOMException`과 함께 reject된다.
+> [!NOTE]
+> `abort()`가 호출되면, `fetch()` promise는 `AbortError`으로 명명된 `DOMException`과 함께 reject된다.
 
 동작하는 완전한 예제는 GitHub에서 확인 할 수 있다 — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) 참고([라이브 실행도 확인할 수 있다](https://mdn.github.io/dom-examples/abort-api/)).
 

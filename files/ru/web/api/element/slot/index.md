@@ -18,7 +18,7 @@ element.slot = aString
 
 ### Значение
 
-{{domxref("DOMString")}}.
+{{jsxref("String")}}.
 
 ## Примеры
 

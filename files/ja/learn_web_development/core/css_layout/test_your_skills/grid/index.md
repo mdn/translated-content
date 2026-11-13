@@ -1,15 +1,17 @@
 ---
-title: "スキルテスト: グリッド"
-short-title: グリッド
+title: "確認テスト: CSS グリッド"
+short-title: "テスト: CSS グリッド"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: ed70efeffb9717915f028104c5b33e7326a00d96
 ---
 
-このスキルテストの目的は、[グリッドとグリッドアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
+
+この確認テストの目的は、[グリッドとグリッドアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
@@ -37,7 +39,7 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -84,7 +86,7 @@ body {
 }
 .grid > * {
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -177,7 +179,7 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -305,8 +307,8 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
+  background-color: #999999;
+  color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;
   font-size: 80%;
@@ -347,3 +349,5 @@ body {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

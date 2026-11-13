@@ -3,15 +3,11 @@ title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Symbol.keyFor(sym)`** 方法用来获取全局 symbol 注册表中与某个 symbol 关联的键。
 
 ## 语法
 
-```plain
+```js-nolint
 Symbol.keyFor(sym);
 ```
 

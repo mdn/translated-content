@@ -11,7 +11,7 @@ slug: Web/API/Window/scrollByPages
 
 ### 语法
 
-```plain
+```js-nolint
 window.scrollByPages(pages)
 ```
 

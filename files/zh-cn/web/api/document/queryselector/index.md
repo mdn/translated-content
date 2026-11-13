@@ -19,7 +19,7 @@ element = document.querySelector(selectors);
 ### 参数
 
 - `selectors`
-  - : 包含一个或多个要匹配的选择器的 DOM 字符串{{domxref("DOMString")}}。该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发`SYNTAX_ERR`异常。请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)以获取有关选择器以及如何管理它们的更多信息。
+  - : 包含一个或多个要匹配的选择器的字符串。该字符串必须是有效的 CSS 选择器字符串；如果不是，则抛出 `SYNTAX_ERR` 异常。请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)以获取有关选择器以及如何管理它们的更多信息。
 
 > [!NOTE]
 > 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
@@ -28,7 +28,7 @@ element = document.querySelector(selectors);
 
 表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。
 
-如果你需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
+如果你需要与指定选择器匹配的所有元素的列表，则应该使用 {{domxref("Document.querySelectorAll", "querySelectorAll()")}}。
 
 ### 异常
 
@@ -92,7 +92,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 
 ## 参见
 
-- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}

@@ -1,143 +1,114 @@
 ---
-title: String.prototype.replaceAll()
+title: "String : méthode replaceAll()"
+short-title: replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode **`replaceAll()`** des valeurs {{JSxRef("String")}} retourne une nouvelle chaîne de caractères avec toutes les occurrences d'un `pattern` remplacées par un `replacement`. Le `pattern` peut être une chaîne de caractères ou une {{JSxRef("RegExp")}}, et le `replacement` peut être une chaîne de caractères ou une fonction. La chaîne de caractères originale reste inchangée.
 
-La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans laquelle toutes les occurrences d'un motif donné ont été remplacées par une chaîne de remplacement. L'argument `pattern` fournit pour décrire le motif peut être une chaîne de caractères ou une expression rationnelle ([`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)), l'argument `replacement` peut être une chaîne de caractères ou une fonction qui sera appelée pour chaque correspondance.
-
-La chaîne de caractères initiale restera inchangée.
-
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.replaceAll()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "Le nom de ce chien est juste Chien ! Oui, c'est le nom.";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+console.log(paragraph.replaceAll("nom", "surnom"));
+// Résultat attendu : "Le surnom de ce chien est juste Chien ! Oui, c'est le surnom."
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+console.log(paragraph.replaceAll(/\best\b/g, "était"));
+// Résultat attendu : "Le nom de ce chien était juste Chien ! Oui, c'est le nom."
 ```
 
 ## Syntaxe
 
-```js
-const newStr = str.replaceAll(regexp|substr, newSubstr|function)
+```js-nolint
+replaceAll(pattern, replacement)
 ```
-
-> [!NOTE]
-> Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
 
 ### Paramètres
 
-- `regexp` (le motif à rechercher)
-  - : Un objet ou littérale [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) avec le marqueur global. Les correspondances sont remplacées par `newSubstr` ou la valeur retournée par la `function` spécifiée. Une RegExp sans le marqueur global ("g") renverra l'erreur `TypeError`: "replaceAll must be called with a global RegExp".
-- `substr`
-  - : Une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui sera remplacée par `newSubstr`. Elle est traitée comme une chaîne de caracères littérale et _non pas_ comme une expression régulière.
-- `newSubstr` (remplacement)
-  - : La chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui remplacera la sous-chaîne indiquée par la `regexp` ou `substr` donnée en paramètre. Un certain nombre de motifs spéciaux pour le remplacement sont pris en charge, voir la section "[Spécifier une chaîne de caractères comme paramètre](#specifying_a_string_as_a_parameter)" ci-dessous.
-- `function` (remplacement)
-  - : Une fonction qui a pour but de créer la nouvelle sous-chaîne qui remplacera les occurrences trouvées via la `regexp` ou `substr` donnée en paramètre. Les arguments passés à cette fonction sont détaillés dans la section "[Spécifier une fonction comme paramètre](#specifying_a_function_as_a_parameter)" ci-dessous.
+- `pattern`
+  - : Peut être une chaîne de caractères ou un objet avec une méthode [`Symbol.replace`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace), typiquement une expression rationnelle. Les autres valeurs sont converties en chaîne de caractères.
+
+    Si `pattern` [est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles), elle doit avoir l'indicateur global (`g`), sinon une {{JSxRef("TypeError")}} est levée.
+
+- `replacement`
+  - : Peut être une chaîne de caractères ou une fonction. Le remplacement a la même sémantique que [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
 
 ### Valeur de retour
 
-Une nouvelle chaîne avec toutes les occurrences trouvées remplacées par le pattern de remplacement.
+Une nouvelle chaîne de caractères, avec toutes les occurrences d'un motif remplacées par un remplacement.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si le `pattern` [est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles) sans l'indicateur global (`g`) de défini (sa propriété [`flags`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) ne contient pas `"g"`).
 
 ## Description
 
-Cette méthode ne remplace ni ne modifie l'objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) original. Elle retourne juste une nouvelle chaîne de caractères.
+Cette méthode ne mute pas la valeur de la chaîne de caractères lorsqu'elle est appelée dessus. Cela retourne une nouvelle chaîne de caractères.
 
-### Spécifier une chaîne de caractères comme paramètre
+Contrairement à [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace), cette méthode remplace toutes les occurrences d'une chaîne de caractères, pas seulement la première. Bien qu'il soit également possible d'utiliser `replace()` avec une expression rationnelle globale construite dynamiquement à l'aide de [`RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) pour remplacer toutes les occurrences d'une chaîne de caractères, cela peut avoir des conséquences imprévues si la chaîne de caractères contient des caractères spéciaux ayant une signification dans les expressions rationnelles (ce qui peut arriver si la chaîne de caractères de remplacement provient d'une saisie utilisateur·ice). Bien que vous puissiez pallier ce problème en utilisant {{JSxRef("RegExp.escape()")}} pour transformer la chaîne de caractères de l'expression rationnelle en un motif littéral, il est plus simple de transmettre directement la chaîne de caractères à `replaceAll()`, sans la convertir en expression rationnelle.
 
-La chaîne de caractères de remplacement peut inclure les motifs de remplacement spéciaux suivants :
+<!-- cSpell:ignore irat aabbcc -->
 
-| Motif    | Insertion                                                                                                                                                                                                                                   |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Insère un `"$"`.                                                                                                                                                                                                                            |
-| `$&`     | Insère la chaîne de caractères trouvée.                                                                                                                                                                                                     |
-| `` $` `` | Insère la portion de chaîne de caractères qui précède celle trouvée.                                                                                                                                                                        |
-| `$'`     | Insère la portion de chaîne de caractères qui suit celle trouvée.                                                                                                                                                                           |
-| `$n`     | Où `n` est un entier positif inférieur à 100. Insère la n-ième occurrence trouvée, à condition que le premier argument soit un objet [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cet indice démarre à partir de 1. |
+```js
+function censureNomNonSecure(text, name) {
+  return text.replace(new RegExp(name, "g"), "[CENSURÉ]");
+}
+function censureNomSemiSecure(text, name) {
+  return text.replaceAll(name, "[CENSURÉ]");
+}
+function superCensureNomSecure(text, name) {
+  // ne recherche que les correspondances aux limites des mots
+  return text.replaceAll(
+    new RegExp(`\\b${RegExp.escape(name)}\\b`, "g"),
+    "[CENSURÉ]",
+  );
+}
 
-### Spécifier une fonction comme paramètre
+let report =
+  "Un pirate informatique du nom de pi.*te a utilisé des caractères spéciaux dans son nom pour s'introduire dans le système.";
 
-Vous pouvez passer une fonction comme second paramètre. Dans ce cas, la fonction sera appelée après qu'une occurrence soit trouvée. Le résultat de la fonction (valeur de retour) sera utilisé comme chaîne de remplacement. (**Note :** les remplacements spéciaux mentionnés plus haut _ne s'appliqueront pas_ dans ce cas.)
+console.log(censureNomNonSecure(report, "pi.*te")); // "Un [CENSURÉ] a utilisé des caractères spéciaux dans son nom pour s'introduire dans le système"
+console.log(censureNomSemiSecure(report, "pi.*te")); // "Un pirate informatique du nom de [CENSURÉ] a utilisé des caractères spéciaux dans son nom pour s'introduire dans le système."
 
-À noter que la fonction sera utilisée à chaque fois qu'une occurrence sera rencontrée, si l'expression régulière donnée en paramètre est globale.
+report = "Un pirate informatique appelé irat a infiltré le système.";
 
-La fonction admet les arguments suivants :
+console.log(censureNomSemiSecure(report, "irat")); // "Un p[CENSURÉ]e informatique appelé [CENSURÉ] a infiltré le système."
+console.log(superCensureNomSecure(report, "irat")); // "Un pirate informatique appelé [CENSURÉ] a infiltré le système."
+```
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">Nom possible</th>
-      <th class="header" scope="col">Valeur fournie</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>match</code></td>
-      <td>
-        L'occurrence trouvée. (Correspond au <code>$&#x26;</code> du précédent
-        tableau.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>p1, p2…</code></td>
-      <td>
-        <p>
-          Le n-ième chaîne de caractères trouvée par une sous-correspondance
-          entre parenthèses, à condition que le premier paramètre soit un objet
-          de type
-          <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp"
-            ><code>RegExp</code></a
-          >.<br />(Correspond aux <code>$1</code>, <code>$2</code>… précédents.)
-          Par exemple, si <code>/(\a+)(\b+)/</code> a été passé en paramètre,
-          <code>p1</code> est la correspondance pour <code>\a+</code>, et
-          <code>p2</code> pour <code>\b+</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>offset</code></td>
-      <td>
-        Le décalage de la sous-chaîne trouvée dans la chaîne d'entrée (par
-        exemple, si la chaîne complète d'entrée était <code>'abcd'</code> et la
-        sous-chaîne <code>'bc'</code> alors, cet argument vaudra 1.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>string</code></td>
-      <td>La chaîne compète examinée.</td>
-    </tr>
-  </tbody>
-</table>
+Si `pattern` est un objet avec une méthode [`Symbol.replace`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (y compris les objets `RegExp`), cette méthode est appelée avec la chaîne de caractères cible et `replacement` comme arguments. Sa valeur de retour devient la valeur de retour de `replaceAll()`. Dans ce cas, le comportement de `replaceAll()` est entièrement défini par la méthode `[Symbol.replace]()`, et donne donc le même résultat que `replace()` (sauf pour la validation supplémentaire que l'expression rationnelle est globale).
 
-Le nombre d'arguments exact dépend du premier argument de `replaceAll()` : si c'est un objet de type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et, si tel est le cas, du nombre de sous-correspondances entre parenthèses qu'il spécifie.
+Si le `pattern` est une chaîne de caractères vide, le remplacement est inséré entre chaque unité de code UTF-16, similaire au comportement de [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split).
+
+```js
+"xxx".replaceAll("", "_"); // "_x_x_x_"
+```
+
+Pour plus d'infos sur comment les propriétés d'expressions rationnelles (surtout le [sticky](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)) interagissent avec `replaceAll()`, voir [`RegExp.prototype[Symbol.replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace).
 
 ## Exemples
 
-### Utiliser replaceAll()
+### Utiliser la méthode `replaceAll()`
 
 ```js
 "aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
-### Exceptions pour les expressions rationnelles non globales
+### Exceptions levées pour les expressions rationnelles qui ne sont pas globales
 
-Quand on utilise une expression rationnelle pour chercher une valeur, celle-ci doit être globale. Le code suivant ne fonctionnera pas :
+Quand on utilise une expression rationnelle pour chercher une valeur, celle-ci doit être globale. Le code suivant ne fonctionne pas&nbsp;:
 
 ```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+"aabbcc".replaceAll(/b/, ".");
+// TypeError: replaceAll must be called with a global RegExp
 ```
 
-L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
+L'exemple suivant, utilisant le marqueur `g`, fonctionne&nbsp;:
 
 ```js example-good
 "aabbcc".replaceAll(/b/g, ".");
@@ -154,7 +125,10 @@ L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ## Voir aussi
 
-- [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-- [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [`RegExp.prototype.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-- [`RegExp.prototype.test()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.replaceAll` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.replaceAll` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.replaceall)
+- Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- La méthode {{JSxRef("String.prototype.replace()")}}
+- La méthode {{JSxRef("String.prototype.match()")}}
+- La méthode {{JSxRef("RegExp.prototype.exec()")}}
+- La méthode {{JSxRef("RegExp.prototype.test()")}}

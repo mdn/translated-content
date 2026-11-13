@@ -2,10 +2,8 @@
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`import()`** 構文は、よくダイナミックインポートと呼ばれますが、非同期かつ動的に、 ECMAScript モジュールを、潜在的にモジュールではない環境に読み込めるようにする関数風の式です。
 
@@ -20,24 +18,24 @@ import(moduleName, options)
 
 `import()` 呼び出しは関数呼び出しによく似た構文ですが、 `import` 自体はキーワードであり、関数ではありません。`const myImport = import` のようなエイリアスを作成することはできず、 {{jsxref("SyntaxError")}} が発生します。
 
-[末尾コンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas) は、ランタイムが `options` にも対応している場合のみ許可されます。[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
+[末尾カンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、ランタイムが `options` にも対応している場合にのみ許可されます。[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
 
 ### 引数
 
 - `moduleName`
   - : インポート元モジュール。指定子の評価はホスト次第ですが、常に静的な[インポート宣言](/ja/docs/Web/JavaScript/Reference/Statements/import)と同じアルゴリズムに従います。
 - `options`
-  - : インポートオプションを格納するオブジェクト。以下のキーが認識されます：
+  - : インポートオプションを格納するオブジェクト。以下のキーが認識されます。
     - `with`
       - : [インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)。
 
 ### 返値
 
-以下のプロミスを返します：
+以下のプロミスを返します。
 
 - 参照されるモジュールが正常に読み込まれ評価された場合、[モジュール名前空間オブジェクト](#モジュール名前空間オブジェクト)（すなわち `moduleName` からのすべてのエクスポートを格納したオブジェクト）で履行されます。
-- `moduleName` の[文字列への強制変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)で例外が発生した場合、その例外で拒否されます。
-- モジュールの取得と読み込みが何らかの理由で失敗した場合、実装定義のエラーで拒否されます（Node は汎用の `Error` を使用し、すべてのブラウザーは `TypeError` を使用します）。一般的な原因には以下があります：
+- `moduleName` の[文字列への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)で例外が発生した場合、その例外で拒否されます。
+- モジュールの取得と読み込みが何らかの理由で失敗した場合、実装定義のエラーで拒否されます（Node は汎用の `Error` を使用し、すべてのブラウザーでは `TypeError` を使用します）。一般的な原因には以下があります。
   - ファイルシステムベースのモジュールシステム（Node.js など）では、ファイルシステムへのアクセスが失敗した場合（許可拒否、ファイルが見つからない、など）。
   - ウェブベースのモジュールシステム（ブラウザーなど）では、ネットワーク要求が失敗した場合（インターネットに接続されていない、CORS の問題、など）または HTTP エラーが発生した場合（404、500 など）。
 - 参照されるモジュールの評価で例外が発生した場合、その例外で拒否されます。
@@ -47,7 +45,7 @@ import(moduleName, options)
 
 ## 解説
 
-import宣言の構文（`import something from "somewhere"`）は静的で、常にモジュールが 読み込まれた時点で評価される結果となります。ダイナミックインポートを使用すると、import宣言の構文の硬直性を回避し、条件付きまたはオンデマンドでモジュールを読み込むことができます。以下のような理由で、動的インポートが使用することがあります。
+import 宣言の構文 (`import something from "somewhere"`) は静的で、常にモジュールが 読み込まれた時点で評価される結果となります。ダイナミックインポートを使用すると、import宣言の構文の硬直性を回避し、条件付きまたはオンデマンドでモジュールを読み込むことができます。以下のような理由で、動的インポートが使用することがあります。
 
 - 静的にインポートするとコードの読み込みが著しく遅くなる場合で、インポートしているコードが必要になる可能性が低い、または後日必要になる可能性がある場合。
 - 読み込むモジュールが読み込む時点で存在しない場合。
@@ -59,7 +57,7 @@ import宣言の構文（`import something from "somewhere"`）は静的で、常
 
 ファイルがモジュールとして実行されていない場合（HTML ファイルで参照される場合、script タグに `type="module"` が必要）、静的な import 宣言は使用できませんが、非同期の動的 import 構文は常に利用できるので、モジュール以外の環境にもモジュールをインポートすることができます。
 
-`options` 引数を使用すると、さまざまなインポートオプションを指定できます。例えば、[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)などです：
+`options` 引数を使用すると、さまざまなインポートオプションを指定できます。例えば、[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)などです。
 
 ```js
 import("./data.json", { with: { type: "json" } });
@@ -85,7 +83,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-ただし、1つだけ奇妙な場合があります。プロミスは決して [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数は[プロミス解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function)プロセスの一部として、ダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
+ただし、1 つだけ奇妙な場合があります。プロミスは決して [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数は[プロミス解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function)プロセスの一部として、ダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
 
 ```js
 // my-module.js
@@ -111,10 +109,18 @@ import("/my-module.js").then((mod2) => {
 この積極的なキャッシュにより、JavaScript コードは複数回インポートされても一度だけしか実行されないことが保証されます。将来のインポートは HTTP リクエストやディスクアクセスにすら発展しません。JavaScript 環境全体を再起動せずにモジュールを再インポートして再評価する必要がある場合、一つの可能なトリックは、モジュール指定子で一意のクエリーパラメーターを使用することです。これは URL 指定子をサポートするブラウザー以外のランタイムでも動作します。
 
 ```js
-import("/my-module.js?t=" + Date.now());
+import(`/my-module.js?t=${Date.now()}`);
 ```
 
 これにより、長時間実行されるアプリケーションでメモリーリークが発生する可能性があることに注意してください。エンジンはモジュール名前空間オブジェクトを安全にガベージコレクションできないためです。現在、モジュール名前空間オブジェクトのキャッシュを手動でクリアする方法はありません。
+
+また、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用してモジュールのソースコードをテキストとして取得し、モジュールの型に応じて手動で評価することもできます。
+
+- JavaScript モジュールについては、ブラウザーではソースコードを [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) として動的にインポートしたり、Node.js では [`vm.Module`](https://nodejs.org/docs/latest/api/vm.html#class-vmmodule) を使用して評価したりすることができます。
+- JSON モジュールについては、{{jsxref("JSON.parse()")}} を使用してソースコードを構文解析できます。
+- CSS モジュールについては、新しい {{domxref("CSSStyleSheet")}} オブジェクトを作成し、その [`replace()`](/ja/docs/Web/API/CSSStyleSheet/replace) メソッドを使用して、ソースコードを格納することができます。
+
+ただし、これは意味的には動的インポートとは異なります。[フェッチの出力先](/ja/docs/Web/API/Request/destination)、[CSP](/ja/docs/Web/HTTP/Guides/CSP)、[モジュールの解決](/ja/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)といったユーザーエージェントの設定が、正しく適用されない可能性があるからです。
 
 モジュール名前空間オブジェクトのキャッシュは、*正常に*読み込まれ、リンクされたモジュールにのみ適用されます。モジュールは 3 つのステップでインポートされます：読み込み（モジュールの取得）、リンク（主にモジュールの解析）、評価（解析されたコードの実行）。評価の失敗のみがキャッシュされます。モジュールの読み込みやリンクに失敗した場合、次のインポートで再度読み込みとリンクを試行する場合があります。ブラウザーは取得操作の結果をキャッシュする場合としない場合がありますが、一般的な HTTP セマンティクスに従うべきなので、そのようなネットワーク障害の処理は {{domxref("Window/fetch", "fetch()")}} の失敗を処理することと異なるべきではありません。
 
@@ -196,6 +202,16 @@ Promise.all(
     (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
+```
+
+### 動的インポートによるインポート属性の使用
+
+[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)を `import()` 構文の第二引数として受け入れることができます。
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
 ```
 
 ## 仕様書

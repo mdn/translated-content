@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 HTTP 消息的**有效负载体**是在应用{{HTTPHeader("Transfer-Encoding", "传输编码", "", 1)}}之前，包含在 HTTP 消息体中的*信息*（“有效负载”）部分（如果有存在的话）。如果未使用传输编码，则*有效负载体*和*消息体*就是等价的。
 
 例如，以下响应中的消息体仅包含有效负载体：“Mozilla Developer Network”：

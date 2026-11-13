@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 original_slug: Web/Accessibility/ARIA/Roles/gridcell_role
 ---
 
-[グリッドセル (gridcell) ロール](https://www.w3.org/TR/wai-aria-1.1/#gridcell)は、グリッド ([grid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) やツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Treegrid_role)) にセルを作成するために使用します。 これは、情報を表スタイルでグループ化する [HTML の `td` 要素](/ja/docs/Web/HTML/Reference/Elements/td)の機能を模倣することを意図しています。
+[グリッドセル (gridcell) ロール](https://www.w3.org/TR/wai-aria-1.1/#gridcell)は、グリッド ([grid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) やツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)) にセルを作成するために使用します。 これは、情報を表スタイルでグループ化する [HTML の `td` 要素](/ja/docs/Web/HTML/Reference/Elements/td)の機能を模倣することを意図しています。
 
 ```html
 <div role="gridcell">Potato</div>
@@ -85,7 +85,7 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 #### 展開可能なセル
 
-ツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Treegrid_role)) では、`aria-expanded` 属性を切り替えることでグリッドセルを展開可能にできます。 この属性が指定されている場合、個々のグリッドセルにのみ適用されることに注意してください。
+ツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)) では、`aria-expanded` 属性を切り替えることでグリッドセルを展開可能にできます。 この属性が指定されている場合、個々のグリッドセルにのみ適用されることに注意してください。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 

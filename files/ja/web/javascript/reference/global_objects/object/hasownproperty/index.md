@@ -1,11 +1,10 @@
 ---
 title: Object.prototype.hasOwnProperty()
+short-title: hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 l10n:
-  sourceCommit: 619eb04efb7c6171fd4385fd4ba926805ee08a35
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`hasOwnProperty()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す論理値を返します。
 
@@ -15,17 +14,17 @@ l10n:
 {{InteractiveExample("JavaScript デモ: Object.prototype.hasOwnProperty()")}}
 
 ```js interactive-example
-const object1 = {};
-object1.property1 = 42;
+const object = {};
+object.foo = 42;
 
-console.log(object1.hasOwnProperty("property1"));
-// Expected output: true
+console.log(object.hasOwnProperty("foo"));
+// 予想される結果: true
 
-console.log(object1.hasOwnProperty("toString"));
-// Expected output: false
+console.log(object.hasOwnProperty("toString"));
+// 予想される結果: false
 
-console.log(object1.hasOwnProperty("hasOwnProperty"));
-// Expected output: false
+console.log(object.hasOwnProperty("hasOwnProperty"));
+// 予想される結果: false
 ```
 
 ## 構文

@@ -3,8 +3,6 @@ title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 
-{{JSRef}}
-
 **`String.fromCodePoint()`** 静态方法将根据指定的码位序列返回一个字符串。
 
 {{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}

@@ -3,8 +3,6 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 
-{{JSRef}}
-
 **`keys()`** 方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
 
 ## 语法

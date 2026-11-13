@@ -1,11 +1,10 @@
 ---
 title: Object.prototype.isPrototypeOf()
+short-title: isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isPrototypeOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
@@ -23,9 +22,9 @@ Bar.prototype = Object.create(Foo.prototype);
 const bar = new Bar();
 
 console.log(Foo.prototype.isPrototypeOf(bar));
-// Expected output: true
+// 予想される結果: true
 console.log(Bar.prototype.isPrototypeOf(bar));
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文
@@ -81,7 +80,7 @@ console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-`isPrototypeOf()` メソッドは、{{jsxref("Operators/instanceof", "instanceof")}} 演算子と同様に、特定のプロトタイプチェーンから継承されたオブジェクトを扱うときにのみ機能するコードを持つ場合、たとえばそのオブジェクトに特定のメソッドやプロパティが存在することを保証する場合に特に便利です。
+`isPrototypeOf()` メソッドは、{{jsxref("instanceof")}} 演算子と同様に、特定のプロトタイプチェーンから継承されたオブジェクトを扱うときにのみ機能するコードを持つ場合、たとえばそのオブジェクトに特定のメソッドやプロパティが存在することを保証する場合に特に便利です。
 
 たとえば、`baz` オブジェクトが `Foo.prototype` に由来しているか検証してみます。
 
@@ -139,7 +138,7 @@ if (Foo.isFoo(baz)) {
 
 ## 関連情報
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -36,7 +36,8 @@ Accept-Post: <MIME_type>/*
 Accept-Post: */*
 ```
 
-> **참고:** `Accept-Post` 헤더는 기본 설정 개념이 없다는 점(즉, `q` 인수가 없다는 점)을 제외하면 {{HTTPHeader("Accept")}}와 동일한 방식으로 미디어 범위를 지정합니다. 이는 `Accept-Post`가 응답 헤더인 반면 `Accept`는 요청 헤더이기 때문입니다.
+> [!NOTE]
+> `Accept-Post` 헤더는 기본 설정 개념이 없다는 점(즉, `q` 인수가 없다는 점)을 제외하면 {{HTTPHeader("Accept")}}와 동일한 방식으로 미디어 범위를 지정합니다. 이는 `Accept-Post`가 응답 헤더인 반면 `Accept`는 요청 헤더이기 때문입니다.
 
 ## 지시어
 

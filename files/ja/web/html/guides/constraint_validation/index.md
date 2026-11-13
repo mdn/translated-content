@@ -3,10 +3,8 @@ title: HTML フォーム検証と制約検証 API の使用
 short-title: 制約検証
 slug: Web/HTML/Guides/Constraint_validation
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は制約検証 API を使用して検査することができます。
 
@@ -37,7 +35,7 @@ HTML では、基本的な制約は 2 通りの方法で定義されます。
 | [`<input type="URL">`](/ja/docs/Web/HTML/Reference/Elements/input/url)     | 値は絶対 [URL](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) であり、 [URL Living Standard](https://url.spec.whatwg.org/) で定義された通りでなければなりません。 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 | [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                                                                    | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 
-これらの入力型のどちらでも、[`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。これらの中でここで書かれた条件に満足しないものがある場合、 **Type mismatch** 制約違反が発生します。
+`email` 入力型では、[`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。リスト内の値のいずれかが、ここで説明されている条件を満たさない場合、**Type mismatch** の制約違反が発生します。
 
 なお、ほとんどの入力型には内部的な制約がありません。制約検証が禁止されているものや、不正な値を正しい既定値に変換する無害化アルゴリズムがあるものがあるためです。
 
@@ -287,7 +285,7 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 
 ### 複数のフィールドを組み合わせた制約：郵便番号の検証
 
-郵便番号の形式は、国によって異なります。ほとんどの国では、国コードの前に任意の接頭辞を付けることができるだけでなく（ドイツでは `D-`、フランスやスイスでは `F-` のように）、固定の桁数しかない郵便番号を持つ国もありますし、イギリスのように、特定の位置にアルファベットを入れることができる、より複雑な構造を持つ国もあります。
+郵便番号の書式は、国によって異なります。多くの国では、国コードの前に任意の接頭辞を付けることができます（例えば、ドイツの `D-`、フランスの `F-`、スイスの `CH-` など）。郵便番号の桁数が決まっている国もあれば、英国のように、特定の位置に文字を含めることができるなど、より複雑な形式を使用している国もあります。
 
 > [!NOTE]
 > これは包括的な郵便番号検証ライブラリーではなく、主要概念のデモンストレーションです。
@@ -309,6 +307,12 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 これは以下のように表示されます。
 
 {{EmbedLiveSample("Constraint_combining_several_fields_Postal_code_validation")}}
@@ -316,32 +320,32 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 まず、自分自身の制約をチェックする関数を書きます。
 
 ```js
+const countrySelect = document.getElementById("country");
+const postalCodeField = document.getElementById("postal-code");
+
 function checkPostalCode() {
   // それぞれの国で、郵便番号が従うべきパターンを定義する
-  var constraints = {
+  const constraints = {
     ch: [
       "^(CH-)?\\d{4}$",
-      "スイスの郵便番号は明確な 4 桁である必要があります。例: CH-1950 または 1950",
+      "スイスの郵便番号はちょうど 4 桁である必要があります。例: CH-1950 または 1950",
     ],
     fr: [
       "^(F-)?\\d{5}$",
-      "フランスの郵便番号は明確な 5 桁です。例: F-75012 または 75012",
+      "フランスの郵便番号はちょうど 5 桁です。例: F-75012 または 75012",
     ],
     de: [
       "^(D-)?\\d{5}$",
-      "ドイツの郵便番号は明確な 5 桁です。例: D-12345 または 12345",
+      "ドイツの郵便番号はちょうど 5 桁です。例: D-12345 または 12345",
     ],
     nl: [
       "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
-      "オランダの郵便番号は明確な 4 桁に、SA、SD、SS 以外の2文字が続きます。",
+      "オランダの郵便番号はちょうど 4 桁に、SA、SD、SS 以外の 2 文字が続きます。",
     ],
   };
 
   // 国 ID を読む
-  const country = document.getElementById("country").value;
-
-  // NPA フィールドを取得
-  const postalCodeField = document.getElementById("postal-code");
+  const country = countrySelect.value;
 
   // 制約チェッカーを構築
   const constraint = new RegExp(constraints[country][0], "");
@@ -359,13 +363,11 @@ function checkPostalCode() {
 }
 ```
 
-それから、これを {{ HTMLElement("select") }} の **onchange** イベントと {{ HTMLElement("input") }} の **oninput** イベントにリンクします。
+それから、これを {{ HTMLElement("select") }} の `change` イベントと {{ HTMLElement("input") }} の `input` イベントにリンクします。
 
 ```js
-window.onload = () => {
-  document.getElementById("country").onchange = checkPostalCode;
-  document.getElementById("postal-code").oninput = checkPostalCode;
-};
+countrySelect.addEventListener("change", checkPostalCode);
+postalCodeField.addEventListener("input", checkPostalCode);
 ```
 
 ### アップロード前にファイルの大きさを制限
@@ -386,8 +388,9 @@ window.onload = () => {
 JavaScript は選択されたファイルを読み込み、 `File.size()` メソッドを使ってそのサイズを取得し、それを（ハードコードされた）制限値と比較し、違反があった場合は Constraint API を呼び出してブラウザーに通知します。
 
 ```js-nolint
+const fs = document.getElementById("fs");
+
 function checkFileSize() {
-  const fs = document.getElementById("fs");
   const files = fs.files;
 
   // 選択されているファイルが（少なくとも） 1 つある場合
@@ -407,9 +410,7 @@ function checkFileSize() {
 最後に、このメソッドを正しいイベントにフックします。
 
 ```js
-window.onload = () => {
-  document.getElementById("fs").onchange = checkFileSize;
-};
+fs.addEventListener("change", checkFileSize);
 ```
 
 ## 制約検証の視覚的スタイル
@@ -422,7 +423,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 #### :required および :optional 擬似クラス
 
-{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
+{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
 
 #### :placeholder-shown 擬似クラス
 
@@ -430,7 +431,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 #### :valid :invalid 擬似クラス
 
-{{cssxref(':valid')}} と {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 \<input> 要素の内容がその型の設定に応じて、それぞれ検証されたか、検証に失敗したかを表すために使用します。これらのクラスは、有効または無効なフォーム要素にスタイルを与えることで書式が正しい要素と正しくない要素の識別をしやすくします。
+{{cssxref(':valid')}} と {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)は、 \<input> 要素の内容がその型の設定に応じて、それぞれ検証されたか、検証に失敗したかを表すために使用します。これらのクラスは、有効または無効なフォーム要素にスタイルを与えることで書式が正しい要素と正しくない要素の識別をしやすくします。
 
 ### 制約違反のテキストの制御
 
@@ -441,7 +442,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}
   - {{HTMLElement("select")}}
-  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型。それ以外のボタンは制約検証の対象にはなりません。
+  - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型で作成したもの）。それ以外のボタンは制約検証の対象にはなりません。
   - {{HTMLElement("textarea")}}
 
 - [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の `validity` プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。

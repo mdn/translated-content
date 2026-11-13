@@ -7,7 +7,7 @@ slug: Web/API/SVGAnimateElement
 
 **`SVGAnimateElement`** 接口对应于 {{SVGElement("animate")}} 元素。
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

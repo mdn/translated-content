@@ -1,21 +1,23 @@
 ---
 title: Generator.prototype.next()
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`next()`** メソッドは、2 つのプロパティ `done` と `value` を持つオブジェクトを返します。 `next` メソッドに引数を提供して、ジェネレーターへ値を送ることもできます。
+**`next()`** は {{jsxref("Generator")}} インスタンスのメソッドで、2 つのプロパティ `done` と `value` を持つオブジェクトを返します。 `next` メソッドに引数を提供して、ジェネレーターへ値を送ることもできます。
 
 ## 構文
 
 ```js-nolint
-generatorObject.next(value)
+next()
+next(value)
 ```
 
 ### 引数
 
-- `value`
+- `value` {{optional_inline}}
   - : ジェネレーターへ送る値です。
 
     この値は `yield` 式の結果として代入されます。例えば `variable = yield expression` の場合、 `.next()` 関数に渡された値は `variable` に代入されます。
@@ -24,13 +26,18 @@ generatorObject.next(value)
 
 以下の 2 つのプロパティを持った {{jsxref("Object")}} です。
 
-- `done` (boolean)
-  - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
-
-    イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+- `done`
+  - : 論理値です。
+    - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの返値を指定します。
+    - イテレーターが次の値を生成できた場合、値は `false` になります。
 
 - `value`
   - : イテレーターが yield または return した、何らかの JavaScript の値です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : ジェネレーターが既に実行中である場合に発生します。
 
 ## 例
 
@@ -45,11 +52,11 @@ function* gen() {
   yield 3;
 }
 
-const g = gen(); // "Generator { }"
-g.next(); // "Object { value: 1, done: false }"
-g.next(); // "Object { value: 2, done: false }"
-g.next(); // "Object { value: 3, done: false }"
-g.next(); // "Object { value: undefined, done: true }"
+const g = gen(); // Generator { }
+g.next(); // { value: 1, done: false }
+g.next(); // { value: 2, done: false }
+g.next(); // { value: 3, done: false }
+g.next(); // { value: undefined, done: true }
 ```
 
 ### リストでの next() の使用
@@ -62,8 +69,10 @@ function* getPage(list, pageSize = 1) {
     yield list.slice(index, index + pageSize);
   }
 }
+
 const list = [1, 2, 3, 4, 5, 6, 7, 8];
 const page = getPage(list, 3); // Generator { }
+
 page.next(); // { value: [1, 2, 3], done: false }
 page.next(); // { value: [4, 5, 6], done: false }
 page.next(); // { value: [7, 8], done: false }
@@ -80,17 +89,16 @@ page.next(); // { value: undefined, done: true }
 ```js
 function* gen() {
   while (true) {
-    let value = yield null;
+    const value = yield;
     console.log(value);
   }
 }
 
 const g = gen();
-g.next(1);
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+g.next(1); // Returns { value: undefined, done: false }
+// No log at this step: the first value sent through `next` is lost
+g.next(2); // Returns { value: undefined, done: false }
+// Logs 2
 ```
 
 ## 仕様書
@@ -104,4 +112,4 @@ g.next(2);
 ## 関連情報
 
 - {{jsxref("Statements/function*", "function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド

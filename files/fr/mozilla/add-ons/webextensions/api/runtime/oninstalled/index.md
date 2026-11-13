@@ -3,8 +3,6 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 
 Notez que `runtime.onInstalled` n'est pas la même chose {{WebExtAPIRef("management.onInstalled")}}. L'événement `runtime.onInstalled` est déclenché uniquement pour votre extension. L'événement `browser.management.onInstalled` est déclenché pour toutes les extensions.
@@ -67,8 +65,6 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

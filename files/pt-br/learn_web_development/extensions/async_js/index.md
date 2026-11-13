@@ -34,4 +34,5 @@ Se você não estiver familiarizado com os conceitos de programação assíncron
 
 - [Programação Assícrona](https://eloquentjavascript.net/11_async.html) do livro online [Eloquent JavaScript](https://eloquentjavascript.net/), por Marijn Haverbeke.
 
-> **Nota:** **Nota do tradutor**: A segunda edição do _Eloquent Javascript_ foi traduzida pela comunidade brasileira do Javascript e está disponível em [Javascript Eloquente - 2ª Edição](https://github.com/braziljs/eloquente-javascript). Até o momento da tradução deste artigo, a comunidade está trabalhando na conclusão da 3ª edição.
+> [!NOTE]
+> **Nota do tradutor**: A segunda edição do _Eloquent Javascript_ foi traduzida pela comunidade brasileira do Javascript e está disponível em [Javascript Eloquente - 2ª Edição](https://github.com/braziljs/eloquente-javascript). Até o momento da tradução deste artigo, a comunidade está trabalhando na conclusão da 3ª edição.

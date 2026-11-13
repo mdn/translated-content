@@ -3,13 +3,11 @@ title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 ---
 
-{{AddonSidebar}}
-
 Cet événement est déclenché avant l'envoi de données HTTP, mais après que tous les en-têtes HTTP soient disponibles. C'est un bon endroit pour écouter si vous voulez modifier les en-têtes de requête HTTP.
 
 Pour que les en-têtes de requête soient passés dans l'écouteur avec le reste des données de requête, passez `"requestHeaders"` dans un tableau `extraInfoSpec`.
 
-Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
+Pour modifier les en-têtes de façon synchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre événement écouté, retournez un [`BlockingResponse`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') avec une propriété nommée `requestHeaders`, dont la valeur est l'ensemble des en-têtes de requête à envoyer.
 
 Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `extraInfoSpec`, puis dans votre event listener, retournez une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec une `BlockingResponse`.
 
@@ -221,8 +219,6 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

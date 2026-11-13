@@ -5,9 +5,7 @@ l10n:
   sourceCommit: c7416fd067774fc2583944d10801b56672b56631
 ---
 
-{{GlossarySidebar}}
-
-**色彩空间**是对色彩的命名组织方式，用于基于坐标的色彩排列的基本色彩模型。色彩模型定义了色彩的组成部分（例如 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 色彩的 `h`、`w` 和 `b` 通道）与色彩空间之间的关系。多数色彩空间是表示色彩的三维或四维网格，其中各维度（轴）对应色彩空间中的一个通道。一个色彩可以在保持看起来仍然一样的情况下在多个色彩空间中表达，或者从一个色彩空间转换到另一个色彩空间。
+**色彩空间**是对色彩的命名组织方式，用于基于坐标的色彩排列的基本色彩模型。色彩模型定义了色彩的组成部分（例如 [`hwb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb) 色彩的 `h`、`w` 和 `b` 通道）与色彩空间之间的关系。多数色彩空间是表示色彩的三维或四维网格，其中各维度（轴）对应色彩空间中的一个通道。一个色彩可以在保持看起来仍然一样的情况下在多个色彩空间中表达，或者从一个色彩空间转换到另一个色彩空间。
 
 色彩空间对特定范围的色彩进行分类和定义。每个色彩空间由数学模型和相关的规则集定义。每个色彩空间都有一个定义好的{{glossary("gamut", "色域")}}（它指的是它能表示的特定范围的色彩）。这些规则使得跨不同设备和软件的色彩表现一致且可重现。
 
@@ -23,13 +21,13 @@ _sRGB_ 色彩空间（标准红绿蓝）是为 Web 创建的，但我们不再�
 
 RGB 是一种色彩模型，将色彩表示为三个基本成分（红色、绿色和蓝色色彩通道）的混合，产生各种色调。sRGB（标准 RGB）是 {{Glossary("RGB")}} 色彩的底层色彩空间。sRGB 旨在编纂个人电脑及{{glossary("world wide web", "万维网")}}成像系统的显示规范。目前，sRGB 通常是那些没有标记或没有嵌入色彩配置文件的默认色彩空间。
 
-RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{glossary("gamut", "色域")}}的 _Adobe RGB_ 色彩空间。_sRGB_ 和 _Adobe RGB_（`a98-rgb`）中的坐标是不同的。有很多种方式来描述色彩的 RGB 成分：在 {{Glossary("CSS")}} 中，色彩可以表示为十六进制表示法的单个 24 位整数（如淡蓝色 `#add8e6`），或者在 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 函数表示法中表示为 0 到 255 之间的三个独立数字（如，`rgb(46 139.5 87)`）。
+RGB 色彩空间有几种，如可以表示比 _sRGB_ 色彩空间更广泛的{{glossary("gamut", "色域")}}的 _Adobe RGB_ 色彩空间。_sRGB_ 和 _Adobe RGB_（`a98-rgb`）中的坐标是不同的。有很多种方式来描述色彩的 RGB 成分：在 {{Glossary("CSS")}} 中，色彩可以表示为十六进制表示法的单个 24 位整数（如淡蓝色 `#add8e6`），或者在 [`rgb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb) 函数表示法中表示为 0 到 255 之间的三个独立数字（如，`rgb(46 139.5 87)`）。
 
-在 sRGB 色彩空间中，CSS `<color>` 值包括{{cssxref("hex-color", "十六进制色彩")}}、{{cssxref("named-color", "具名色彩")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/color_value/color) 函数还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
+在 sRGB 色彩空间中，CSS `<color>` 值包括{{cssxref("hex-color", "十六进制色彩")}}、{{cssxref("named-color", "具名色彩")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color) 函数还支持 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
 
-HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_关键字")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
+HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb) 表示。命名色彩只是与特定十六进制值相对应的关键字。将这些不同的色彩表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_关键字")}} 可以是任何色彩，而不仅限于 `sRGB` 色彩空间。
 
-`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl)（_色调—饱和度—亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb)（_色调—白度—黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
+`rgb` 色彩函数不是可以用于表示 _sRGB_ 色彩空间的唯一色彩函数。圆柱坐标系，如 [`HSL`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl)（_色调—饱和度—亮度_）或 [`HWB`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb)（_色调—白度—黑度_）色彩模型也用于在 Web 上表示 sRGB 色彩。
 
 - `sRGB` 色彩空间
   - : sRGB 色彩空间（“标准 RGB”），是标准的 RGB（红、绿、蓝）色彩空间，用于显示器、打印机和 Web 中。它是使用最广泛的色彩空间，受到大多数操作系统、软件程序、显示器和打印机的支持。sRGB 以 `r`、`g` 和 `b` 为基础，色域范围为 `0` 至 `1`。它的白点为 D65。
@@ -84,7 +82,7 @@ CIELab 色彩空间包括 Lab、Lch、Oklab 和 Oklch，是设备无关的色彩
 ## 参见
 
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` 特性
-- [CSS 数据类型：`<color>`](/zh-CN/docs/Web/CSS/color_value)
+- [CSS 数据类型：`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value)
 - [sRGB 色彩空间](https://webstore.iec.ch/en/publication/6168)
 - 维基百科上的 [CIELAB 色彩空间](https://zh.wikipedia.org/wiki/CIELAB色彩空间)
 - 维基百科上的 [CIE 1931 色彩空间](https://zh.wikipedia.org/wiki/CIE_1931色彩空间)

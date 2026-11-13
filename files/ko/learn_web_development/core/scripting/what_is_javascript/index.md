@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1eabeec088d52723d74386bad44296bbbbe9b5f3
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
 
 MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다!
 이 글에서는 "JavaScript는 무엇인가요?", "JavaScript로 무엇을 할 수 있나요?"와 같은 질문에 답하며 JavaScript의 용도에 익숙해지도록 높은 수준에서 JavaScript를 살펴볼 것입니다.
@@ -79,7 +79,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 이 마지막 버전의 텍스트 레이블을 클릭하여 어떤 일이 발생하는지 확인해 보세요. (이 데모는 GitHub에서 찾을 수 있습니다 - [소스코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html) 또는 [실행된 모습](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)을 확인해보세요)
 
@@ -333,7 +333,8 @@ for (const button of buttons) {
 이 속성은 `onclick` 속성보다 약간 길 수 있지만 페이지에 있는 버튼의 수나 추가 또는 제거된 버튼의 수에 관계없이 모든 버튼에 대해 작동합니다.
 JavaScript는 변경할 필요가 없습니다.
 
-> **참고:** `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
+> [!NOTE]
+> `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
 > 브라우저를 새로고침해보면, 아무 버튼을 누르더라도 새로운 문단이 생성되는 모습을 볼 수 있습니다.
 > 멋지지 않나요?
 
@@ -365,7 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 이 경우 스크립트와 HTML이 동시에 로드되어 코드가 작동합니다.
 
-> **참고:** `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
+> [!NOTE]
+> `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
 > `defer`은 외부 스크립트에서만 작동하기 때문에 내부 JavaScript 예제에서는 `defer` 솔루션을 사용하지 않았습니다.
 
 고전적인 방법은 스크립트 요소를 본문의 맨 마지막(`</body>` 태그 바로 앞)에 배치하는 것입니다. 그러면 모든 HTML을 읽은 후에 스크립트를 불러오게 됩니다.
@@ -487,4 +489,4 @@ for (const button of buttons) {
 지금 당장은 JavaScript가 약간 버겁게 느껴질지도 모르겠지만, 너무 걱정하지 마세요. 이 과정에 걸친 간단한 단계들을 밟다 보면 전체적인 모습이 보일겁니다.
 다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn_web_development/Core/Scripting/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}

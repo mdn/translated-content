@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
 ---
 
-{{GlossarySidebar}}
-
 **云**指的是分布在全球各地、通过互联网访问的服务器，以及在这些服务器上运行的软件和数据库。
 
 与在本地计算机或服务器上存储数据或运行程序不同，用户可以通过云资源完成任务：这被称为{{glossary("Cloud computing", "云计算")}}。

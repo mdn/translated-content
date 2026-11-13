@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`fill()`** 메서드는 배열의 인덱스 범위 내에 있는 모든 요소를 정적 값으로 변경합니다. 그리고 수정된 배열을 반환합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.fill()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];

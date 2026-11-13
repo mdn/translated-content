@@ -73,7 +73,7 @@ for (var a of [1, 2, 3]);
 console.log(a); // 3
 ```
 
-在脚本中，使用 `var` 声明的变量将被添加为全局对象的不可配置属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
+在脚本中，使用 `var` 声明的变量将被添加为全局对象的不可配置属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
 
 ```js-nolint example-bad
 "use strict";

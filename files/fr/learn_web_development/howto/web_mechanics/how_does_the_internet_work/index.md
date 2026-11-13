@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 original_slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 <table class="standard-table">
@@ -14,7 +12,7 @@ Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Aucun, mais nous vous encourageons à lire l'article
-        <a href="/fr/Apprendre/Commencez_votre_projet_web"
+        <a href="/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >Commencez votre projet Web</a
         >
         avant celui-ci.
@@ -93,6 +91,6 @@ Vous aurez peut-être constaté que lorsque nous naviguons sur le Web avec un na
 
 ## Étapes suivantes
 
-- [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Le fonctionnement du Web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [Comprendre les noms de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

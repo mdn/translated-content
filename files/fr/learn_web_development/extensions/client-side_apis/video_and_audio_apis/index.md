@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
 
@@ -13,17 +13,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
     <tr>
       <th scope="row">Prérequis:</th>
       <td>
-        Les bases du JavaScript (voir <a
-          href="/fr/docs/Learn/JavaScript/First_steps"
-          >premiers pas en JavaScript</a
-        >,
-        <a href="/fr/Apprendre/JavaScript/Building_blocks"
-          >les briques Javascript</a
-        >,
-        <a href="/fr/docs/Learn/JavaScript/Objects">Introduction aux objets</a
-        >), <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
-          >Introduction aux APIs web</a
-        >
+        Connaissances de base en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, en particulier <a href="/fr/docs/Learn_web_development/Core/Scripting/Object_basics">les bases des objets JavaScript</a> et la couverture des API de base telles que <a href="/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting">le scripting DOM</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Network_requests">les requêtes réseau</a>.
       </td>
     </tr>
     <tr>
@@ -38,7 +28,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
 
 ## Les balises HTML5 video et audio
 
-Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), une implémentation habituelle ressemble à ça :
+Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio), une implémentation habituelle ressemble à ça :
 
 ```html
 <video controls>
@@ -55,7 +45,7 @@ Cela crée un lecteur vidéo à l'intérieur du navigateur :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est [`controls`](/fr/docs/Web/HTML/Element/video#controls). Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
+Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est [`controls`](/fr/docs/Web/HTML/Reference/Elements/video#controls). Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -171,7 +161,7 @@ Tout d'abord, en haut du CSS, nous utilisons un bloc {{cssxref("@font-face")}} p
 Ensuite, nous générons du contenu pour afficher une icône sur chaque bouton :
 
 - Nous utilisons le sélecteur {{cssxref("::before")}} pour afficher le contenu au début de chaque élément {{htmlelement("button")}}.
-- Nous utilisons la propriété {{cssxref("content")}} pour que le contenu à afficher soit égal au contenu de l'attribut [`data-icon`](/fr/docs/Learn/HTML/Howto/Use_data_attributes). Dans le cas du bouton play par exemple, `data-icon` contient un "P" majuscule.
+- Nous utilisons la propriété {{cssxref("content")}} pour que le contenu à afficher soit égal au contenu de l'attribut [`data-icon`](/fr/docs/Web/HTML/How_to/Use_data_attributes). Dans le cas du bouton play par exemple, `data-icon` contient un "P" majuscule.
 - Nous apliquons la police web personnalisée au bouton en utilisant {{cssxref("font-family")}}. Dans cette police, "P" est une icône "play", donc le bouton play a une icône "play" affichée dedans.
 
 Les polices d'icônes sont très cool pour de nombreuses raisons: réduire les requêtes HTTP (puisque vous n'avez pas besoin de télécharger des icônes sous forme de fichiers image), bonne scalabilité, et le fait que vous pouvez utiliser les propriétés de texte pour les formatter — comme {{cssxref("color")}} et {{cssxref("text-shadow")}}.
@@ -350,10 +340,10 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
    Vous remarquerez que nous commençons par initialiser deux variables — `intervalFwd` et `intervalRwd` — vous verrez à quoi elles servent plus tard.
 
    Voyons pas à pas `mediaBackward()` (`mediaForward()` fait la même chose, mais dans l'autre sens) :
-   1. Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
-   2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
-   3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
-   4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler [`clearInterval()`](/fr/docs/Web/API/Window/clearInterval) en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
+   1. Nous effaçons les classes et interval qui sont définis sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
+   2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("Element.classList", "classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
+   3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'interval qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
+   4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Quand elle invoquée, la fonction `setInterval()` créé un interval actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un interval actif, vous devez appeler [`clearInterval()`](/fr/docs/Web/API/Window/clearInterval) en lui donnant l'interval à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
 
 3. Pour en finir avec cette section, nous devons définir les fonctions `windBackward()` et `windForward()` invoquées dans les appels `setInterval()`. Ajoutez ce qui suit après les deux fonctions précédentes :
 
@@ -475,10 +465,10 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 ## Voir aussi
 
 - {{domxref("HTMLMediaElement")}}
-- [Contenu audio et vidéo](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide aux `<video>` et `<audio>` HTML.
-- [Intégration audio et vidéo](/fr/docs/Web/Media/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
-- [Manipulation audio et vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
+- [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide aux `<video>` et `<audio>` HTML.
+- [Intégration audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
+- [Manipulation audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
 - Les pages référence {{htmlelement("video")}} et {{htmlelement("audio")}}.
-- [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Formats).
+- [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats).
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

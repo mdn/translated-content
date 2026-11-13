@@ -3,8 +3,6 @@ title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
 
-{{JSRef}}
-
 **`Number.MAX_VALUE`** 静态数据属性表示在 JavaScript 中可表示的最大数值。
 
 {{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
@@ -26,7 +24,7 @@ console.log(multiply(1.7976931348623157e308, 2));
 
 ## 值
 
-2<sup>1024</sup> - 1，或大约 `1.7976931348623157E+308`。
+2<sup>1024</sup> - 2<sup>971</sup>，或大约 `1.7976931348623157E+308`。
 
 {{js_property_attributes(0, 0, 0)}}
 

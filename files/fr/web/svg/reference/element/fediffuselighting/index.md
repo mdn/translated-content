@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feDiffuseLighting
 original_slug: Web/SVG/Element/feDiffuseLighting
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDiffuseLighting>`** éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante, qui est une image RGBA opaque, dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée.
 
 La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur `arithmetic` de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.
@@ -18,9 +16,9 @@ La lumière crée par cette primitive de filtre peut être combinée avec une im
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -148,4 +146,4 @@ Rendu en direct:
 - {{SVGElement("feSpotLight")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

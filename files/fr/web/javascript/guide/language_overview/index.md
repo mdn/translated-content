@@ -4,8 +4,6 @@ slug: Web/JavaScript/Guide/Language_overview
 original_slug: Web/JavaScript/Language_overview
 ---
 
-{{jsSidebar}}
-
 Pourquoi une réintroduction ? Parce que JavaScript est connu pour être source d'incompréhensions. Bien que souvent raillé comme étant un simple jouet, derrière sa simplicité désarmante se cachent certaines fonctionnalités de langage très puissantes. JavaScript est maintenant utilisé par un nombre incroyable d'applications de haut rang, ce qui montre qu'une connaissance approfondie de cette technologie est une compétence importante pour toute développeuse ou développeur web ou mobile.
 
 Il peut être utile de commencer avec un aperçu de l'histoire de ce langage. JavaScript a été créé en 1995 par Brendan Eich, alors ingénieur à Netscape. Ce langage est sorti au grand jour pour la première fois avec Netscape 2 au début de l'année 1996. Il était au départ censé s'appeler LiveScript, mais a été renommé par une décision marketing mal avisée dans le but de capitaliser sur la popularité du langage Java de Sun Microsystems, malgré le fait qu'ils n'aient que très peu en commun. Cela n'a jamais cessé d'être une source de confusion.
@@ -19,7 +17,7 @@ Contrairement à la plupart des langages de programmation, JavaScript n'a pas de
 
 ## Aperçu
 
-JavaScript est un langage dynamique multi-paradigme : il dispose de différents types, opérateurs, objets natifs et méthodes. Sa syntaxe s'inspire des langages Java et C et de nombreuses structures de ces langages s'appliquent également à JavaScript. JavaScript permet la programmation orientée objet avec les prototypes (voir [l'héritage et la chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) et [les classes](/fr/docs/Web/JavaScript/Reference/Classes) apparues avec ES6/ES2015). JavaScript permet également la programmation fonctionnelle car ses fonctions sont des objets et on peut donc stocker ces fonctions dans des variables et les transmettre comme n'importe quel objet.
+JavaScript est un langage dynamique multi-paradigme : il dispose de différents types, opérateurs, objets natifs et méthodes. Sa syntaxe s'inspire des langages Java et C et de nombreuses structures de ces langages s'appliquent également à JavaScript. JavaScript permet la programmation orientée objet avec les prototypes (voir [l'héritage et la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) et [les classes](/fr/docs/Web/JavaScript/Reference/Classes) apparues avec ES6/ES2015). JavaScript permet également la programmation fonctionnelle car ses fonctions sont des objets et on peut donc stocker ces fonctions dans des variables et les transmettre comme n'importe quel objet.
 
 Commençons par nous intéresser aux briques de base de tout langage : les types. Les programmes en JavaScript manipulent des valeurs, et ces valeurs appartiennent toutes à un type. Les types JavaScript sont :
 
@@ -508,7 +506,7 @@ obj["for"] = "Simon"; // fonctionne très bien
 > [!NOTE]
 > À partir d'ECMAScript 5, les mots réservés peuvent être utilisés comme noms de propriétés d'objets « en vrac ». Cela signifie qu'ils n'ont pas besoin d'être « habillés » de guillemets lors de la définition des littéraux d'objet. Voir [la spécification ES5](https://es5.github.io/#x7.6.1).
 
-Pour en savoir plus sur les objets et les prototypes, voir [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object). Pour une explication des prototypes d'objets et des chaînes de prototypes, voir [l'héritage et la chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Pour en savoir plus sur les objets et les prototypes, voir [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object). Pour une explication des prototypes d'objets et des chaînes de prototypes, voir [l'héritage et la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 > [!NOTE]
 > À partir d'ECMAScript 2015, les clés des objets peuvent être définies par la variable en utilisant la notation entre parenthèses lors de sa création. `{[phoneType] : 12345}` est possible au lieu de simplement `var userPhone = {}; userPhone[phoneType] = 12345;`.
@@ -731,7 +729,7 @@ Mais les fonctions anonymes peuvent être utiles même si elles ne sont jamais a
 })();
 ```
 
-De plus amples détails sur les IIFE sont hors de portée de cet article d'introduction — mais un bon exemple de ce à quoi ils sont particulièrement utiles se trouve dans la section [Émulation de méthodes privées avec des fermetures](/fr/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) de l'article [Fermetures](/fr/docs/Web/JavaScript/Closures).
+De plus amples détails sur les IIFE sont hors de portée de cet article d'introduction — mais un bon exemple de ce à quoi ils sont particulièrement utiles se trouve dans la section [Émulation de méthodes privées avec des fermetures](/fr/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures) de l'article [Fermetures](/fr/docs/Web/JavaScript/Guide/Closures).
 
 ### Fonctions récursives
 
@@ -774,7 +772,7 @@ En JavaScript, les fonctions sont également des objets. Il est donc possible de
 ## Les objets personnalisés
 
 > [!NOTE]
-> Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects).
+> Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects).
 
 Dans la programmation orientée objet classique, les objets sont des collections de données et de méthodes opérant sur ces données. Imaginons un objet personne avec les champs prénom et nom. Il y a deux manières d'afficher son nom complet : de la façon « prénom nom » ou de la façon « nom prénom ». À l'aide des fonctions et des objets vus précédemment, voici une manière de le faire :
 

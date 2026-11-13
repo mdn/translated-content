@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/cx
 original_slug: Web/SVG/Attribute/cx
 ---
 
-{{SVGRef}}
-
 L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
 
 Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
@@ -43,7 +41,7 @@ Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -69,7 +67,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -89,13 +87,13 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/Web/SVG/Element/stop) à **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/Web/SVG/Reference/Element/stop) à **100%** corresponde au périmètre de ce plus grand cercle.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -174,5 +172,5 @@ svg {
 
 ## Voir aussi
 
-- [`cy`](/fr/docs/Web/SVG/Attribute/cy)
+- [`cy`](/fr/docs/Web/SVG/Reference/Attribute/cy)
 - [`r`](/fr/docs/Web/SVG/Attribute/r)

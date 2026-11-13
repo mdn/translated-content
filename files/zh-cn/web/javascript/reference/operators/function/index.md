@@ -82,7 +82,7 @@ var x = function (y) {
 };
 ```
 
-更多情况下被当作[回调函数](/zh-CN/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)使用：
+更多情况下被当作[回调函数](/zh-CN/docs/Glossary/Callback_function)使用：
 
 ```js
 button.addEventListener("click", function (event) {

@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/deleteProgram
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.deleteProgram(program);
 ```
 

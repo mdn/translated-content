@@ -3,8 +3,6 @@ title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 ---
 
-{{AddonSidebar}}
-
 Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
 
 ## Syntaxe
@@ -52,8 +50,6 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
->
-> Les données de compatibilité de Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

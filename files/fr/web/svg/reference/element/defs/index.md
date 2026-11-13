@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/defs
 original_slug: Web/SVG/Element/defs
 ---
 
-{{SVGRef}}
-
 SVG permet de définir des objets graphiques (génériques) pour une utilisation ultérieure. Autant qu'il est possible, cet usage est recommandé grâce aux propriétés offertes par l'élément `defs`.
 Ainsi définir ces éléments au sein de l'élément `defs` promeut une meilleure compréhension du contenu SVG par l'homme et donc son accessibilité.
 
@@ -37,10 +35,10 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing)&nbsp;»
-- [Core attributes](/fr/docs/Web/SVG/Attribute#core)&nbsp;»
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent)&nbsp;»
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation)&nbsp;»
+- [Conditional processing attributes](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing)&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Reference/Attribute#core)&nbsp;»
+- [Graphical event attributes](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent)&nbsp;»
+- [Presentation attributes](/fr/docs/Web/SVG/Reference/Attribute#presentation)&nbsp;»
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

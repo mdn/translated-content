@@ -3,8 +3,6 @@ title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
 
-{{AddonSidebar}}
-
 Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtres qui ont été fermés pendant que le navigateur fonctionne.
 
 La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
@@ -64,8 +62,6 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/docs/
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 
@@ -57,8 +55,6 @@ Les événements ont trois fonctions :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

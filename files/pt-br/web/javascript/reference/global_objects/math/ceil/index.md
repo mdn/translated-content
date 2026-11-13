@@ -126,7 +126,7 @@ Math.ceil10(-59, 1); // -50
 
 ## Veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
+- O objeto {{jsxref("Math")}} pertence a.
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.floor()")}}
 - {{jsxref("Math.round()")}}

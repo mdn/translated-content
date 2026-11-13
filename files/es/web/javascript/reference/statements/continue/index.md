@@ -20,11 +20,11 @@ continue [ etiqueta ];
 
 ### Descripción
 
-En contraste con la sentencia {{jsxref("Sentencias/break", "break")}}, `continue` no termina la ejecución del bucle por completo; en cambio,
+En contraste con la sentencia {{jsxref("Statements/break", "break")}}, `continue` no termina la ejecución del bucle por completo; en cambio,
 
-- En un bucle {{jsxref("Sentencias/while", "while")}}, salta de regreso a la condición.
+- En un bucle {{jsxref("Statements/while", "while")}}, salta de regreso a la condición.
 
-- En un bucle {{jsxref("Sentencias/for", "for")}}, salta a la expresión actualizada.
+- En un bucle {{jsxref("Statements/for", "for")}}, salta a la expresión actualizada.
 
 La sentencia `continue` puede incluir una etiqueta opcional que permite al programa saltar a la siguiente iteración del bucle etiquetado en vez del bucle actual. En este caso, la sentencia `continue` necesita estar anidada dentro de esta sentecia etiquetada.
 
@@ -32,7 +32,7 @@ La sentencia `continue` puede incluir una etiqueta opcional que permite al progr
 
 ### Ejemplo: Usando `continue` con `while`
 
-El siguiente ejemplo muestra un bucle {{jsxref("Sentencias/while", "while")}} que tiene una sentencia `continue` que se ejecuta cuando el valor de `i` es 3. Así, `n` toma los valores 1, 3, 7 y 12.
+El siguiente ejemplo muestra un bucle {{jsxref("Statements/while", "while")}} que tiene una sentencia `continue` que se ejecuta cuando el valor de `i` es 3. Así, `n` toma los valores 1, 3, 7 y 12.
 
 ```js
 i = 0;
@@ -70,5 +70,5 @@ checkiandj: while (i < 4) {
 
 ## Vea También
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/label", "label")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label")}}

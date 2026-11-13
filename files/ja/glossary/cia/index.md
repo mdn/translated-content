@@ -1,14 +1,12 @@
 ---
-title: CIA（Confidentiality, Integrity, Availability）
+title: CIA
 slug: Glossary/CIA
+l10n:
+  sourceCommit: cded3768aaaafc953486126a8847ecbdf00fb049
 ---
 
-{{GlossarySidebar}}
+**CIA** は、機密性 (Confidentiality)、完全性 (Integrity)、可用性 (Availability) からなり（CIA トライアド、または AIC トライアドとも呼ばれます）、情報セキュリティに関する組織の方針のガイドとなるモデルです。
 
-CIA（CIA トライアド、または AIC トライアドとも呼ばれます）は、秘匿性（Confidentiality）、完全性（Integrity）、可用性（Availability）からなり、情報セキュリティに関する組織の方針のガイドとなるモデルです。
+## 関連情報
 
-## 関連項目
-
-### 一般知識
-
-- Wikipedia の [情報セキュリティの定義](https://ja.wikipedia.org/wiki/情報セキュリティ#定義)
+- [CIA](https://ja.wikipedia.org/wiki/情報セキュリティ#CIAトライアド) - ウィキペディア

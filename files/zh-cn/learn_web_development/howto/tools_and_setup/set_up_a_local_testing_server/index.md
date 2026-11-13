@@ -10,7 +10,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你需要知道<a href="/zh-CN/docs/learn/How_the_Internet_works"
+        你需要知道<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >互联网是怎么工作的</a
         >，以及<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >什么是 web 服务器</a

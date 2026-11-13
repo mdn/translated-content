@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d5be633656b10c913eb9a1db4fb5c59acfdcb86c
 ---
 
-{{GlossarySidebar}}
-
 在程序语义中，代码的**不变式**（invariant）是指在该代码执行期间始终为真的条件。定义不变式有助于推理代码的正确性和行为。
 
 例如，以下代码：

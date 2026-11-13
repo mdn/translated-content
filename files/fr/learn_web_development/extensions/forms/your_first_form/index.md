@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Your_first_form
 original_slug: Learn/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 Le premier article de notre série vous offre une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et la façon dont les données sont envoyées à un serveur.
 
@@ -100,7 +100,7 @@ En terme de code HTML, nous avons besoin de quelque chose qui ressemble à ceci 
 </form>
 ```
 
-Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et rendre la mise en page plus facile (voir ci-dessous). Veuillez noter l'utilisation de l'attribut `for` sur tous les éléments {{HTMLElement("label")}}. C'est une manière formelle de lier un libellé à un élément du formulaire. Cet attribut fait référence à l'`id` de l'élément correspondant. Il y a plusieurs avantages à faire ainsi. Le plus évident de permettre à l'utilisateur de cliquer sur l'étiquette pour activer le bloc correspondant. Si vous souhaitez mieux comprendre les bénéfices de cet attribut, tout est détaillé dans cet article : [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form).
+Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et rendre la mise en page plus facile (voir ci-dessous). Veuillez noter l'utilisation de l'attribut `for` sur tous les éléments {{HTMLElement("label")}}. C'est une manière formelle de lier un libellé à un élément du formulaire. Cet attribut fait référence à l'`id` de l'élément correspondant. Il y a plusieurs avantages à faire ainsi. Le plus évident de permettre à l'utilisateur de cliquer sur l'étiquette pour activer le bloc correspondant. Si vous souhaitez mieux comprendre les bénéfices de cet attribut, tout est détaillé dans cet article : [Comment structurer un formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form).
 
 Concernant l'élément {{HTMLElement("input")}}, l'attribut le plus important est l'attribut `type`. Ce dernier est extrêmement important puisqu'il définit le comportement de l'élément {{HTMLElement("input")}}. Il peut radicalement changer le sens de l'élément, faites-y attention. Si vous voulez en savoir plus à ce propos, vous pouvez lire l'article au sujet des [widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs).
 
@@ -373,4 +373,4 @@ button {
 
 Toutefois, ce n'est qu'un début — il est désormais temps de regarder plus en détail. Les formulaires HTML sont bien plus puissants que ce que vous avez pu voir ici et les autres articles de ce guide vous aiderons à maîtriser le reste.
 
-{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}

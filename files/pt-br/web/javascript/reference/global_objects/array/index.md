@@ -137,9 +137,9 @@ As propriedades e elementos retornados desta comparação são os seguintes:
 
 - `Array.length`
   - : Propriedade comprimento do construtor `Array`, cujo valor é 1.
-- {{jsxref("Array.@@species", "get Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "get Array[@@species]")}}
   - : A função de construtor que é utilizada para criar objetos derivados.
-- {{jsxref("Array.prototype")}}
+- {{jsxref("Array")}}
   - : Permite a adição de propriedades para todos os objetos array.
 
 ## Métodos
@@ -175,7 +175,8 @@ Todas as instâncias de `Array` herdam de [`Array.prototype`](/pt-BR/docs/JavaSc
 
 ## Métodos genéricos de `Array`
 
-> **Aviso:** **Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.**
+> [!WARNING]
+> **Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.**
 
 Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments) de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
 

@@ -9,13 +9,13 @@ slug: Web/HTTP/Reference/Headers/If-Modified-Since
 
 最常见的应用场景是来更新没有特定 {{HTTPHeader("ETag")}} 标签的缓存实体。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 
-```plain
+```http
 If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ```
 
@@ -40,7 +40,7 @@ If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## 示例
 
-```plain
+```http
 If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

@@ -3,7 +3,7 @@ title: Начало работы
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ### Простой пример
 
@@ -91,4 +91,4 @@ Vary: Accept-Encoding
 
 Неверная конфигурация сервера является очень частой причиной в невозможности загрузить SVG, поэтому убедитесь, что вы проверили конфигурацию вашего сервера. Если ваш сервер не сконфигурирован для того, чтобы посылать правильные заголовки с файлами SVG, тогда Firefox будет вероятнее всего показывать разметку файлов как текст или кодированный мусор, или даже спрашивать программу просмотра выбрать приложение, чтобы открыть их.
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

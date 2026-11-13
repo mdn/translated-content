@@ -1,11 +1,10 @@
 ---
 title: Intl.DurationFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
 l10n:
-  sourceCommit: 415324c4a53612154ec3186c23fc7326676e53b0
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`formatToParts()`** は {{jsxref("Intl.DurationFormat")}} インスタンスのメソッドで、 {{jsxref("Intl/DurationFormat/format", "format()")}} によって返される、書式化された文字列の各部分を表すオブジェクトの配列を返します。これは、ロケール固有のトークンからカスタム文字列を構築するのに役立ちます。
 

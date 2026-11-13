@@ -1,28 +1,26 @@
 ---
-title: 剰余 (%)
+title: 剰余演算子 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**剰余演算子 (`%`)** は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
 
-剰余演算子 (`%`) は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Remainder operator")}}
+{{InteractiveExample("JavaScript デモ: 剰余演算子 (%)")}}
 
 ```js interactive-example
 console.log(13 % 5);
-// Expected output: 3
+// 予想される結果: 3
 
 console.log(-13 % 5);
-// Expected output: -3
+// 予想される結果: -3
 
 console.log(4 % 2);
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(-4 % 2);
-// Expected output: -0
+// 予想される結果: -0
 ```
 
 ## 構文
@@ -33,7 +31,7 @@ x % y
 
 ## 解説
 
-`%` 演算子のオペランドは、数値型と[長整数型](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 つの型ででオーバーロードされています。 これは、まず[両方のオペランドを数値に変換し](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)、それらの型を調べます。両方のオペランドが長整数型になった場合は長整数型の剰余を実行し、そうでない場合は数値型の剰余を実行します。一方のオペランドが長整数型になり、他方が数値型になった場合は {{jsxref("TypeError")}} が発生します。
+`%` 演算子は、数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。まず[両オペランドを数値型に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値への変換)し、それらの型を検査します。両オペランドが長整数になった場合、長整数の剰余を実行します。そうでない場合は数値の剰余を実行します。一方のオペランドが長整数になり、もう一方が数値になった場合は、{{jsxref("TypeError")}} が発生します。
 
 `n % d` の演算では、`n` を被除数、`d` を除数と呼びます。この演算処理は、オペランドのいずれかが `NaN` であるか、 `n` が ±無限大であるか、または `d` が ±0 である場合に `NaN` を返します。
 
@@ -93,13 +91,13 @@ Infinity % Infinity; // NaN
 
 ## 関連情報
 
-- [加算 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
-- [減算 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除算 (`/`)](/ja/docs/Web/JavaScript/Reference/Operators/Division)
-- [乗算 (`*`)](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [べき乗 (`**`)](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [インクリメント (`++`)](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
-- [デクリメント (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [単項マイナス (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [単項プラス (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加算演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [減算演算子 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除算演算子 (`/`)](/ja/docs/Web/JavaScript/Reference/Operators/Division)
+- [乗算演算子 (`*`)](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [べき乗演算子 (`**`)](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [インクリメント演算子 (`++`)](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
+- [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [単項マイナス演算子 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [単項プラス演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)
 - [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html) by Dr. Axel Rauschmayer (2019)

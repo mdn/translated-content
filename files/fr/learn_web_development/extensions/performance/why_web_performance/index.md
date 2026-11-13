@@ -4,27 +4,26 @@ slug: Learn_web_development/Extensions/Performance/why_web_performance
 original_slug: Learn/Performance/why_web_performance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 La performance Web consiste à rendre les sites Web rapides, y compris à rendre les processus lents rapides. Cet article explique pourquoi les performances Web sont importantes pour les visiteurs du site et pour vos objectifs commerciaux.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissances de base en informatique,
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >installation des outils de base</a
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
+          >Logiciels de base installés</a
         >, et connaissances de base des
-        <a href="/fr/docs/Apprendre/Commencer_avec_le_web"
-          >technologies Web côté client</a
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
+          >technologies web côté client</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Connaître les raisons pour lesquelles les performances Web sont
         importantes pour une bonne expérience utilisateur.
@@ -37,7 +36,7 @@ Les performances Web font référence à la rapidité avec laquelle le contenu d
 
 ## Pourquoi se soucier de la performance?
 
-Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Learn/Accessibility). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
+Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Learn_web_development/Core/Accessibility). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
 
 À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article, avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
 
@@ -66,7 +65,7 @@ Voici quelques exemples concrets d'améliorations des performances:
 
 Pour créer des sites Web et des applications que les gens veulent utiliser; pour attirer et fidéliser les visiteurs du site, vous devez créer un site accessible qui offre une bonne expérience utilisateur. La création de sites Web nécessite HTML, CSS et JavaScript, y compris généralement des types de fichiers binaires tels que des images et des vidéos. Les décisions que vous prenez et les outils que vous choisissez lors de la création de votre site peuvent grandement affecter les performances du travail fini.
 
-Une bonne performance est un atout. Une mauvaise performance est une responsabilité. La vitesse du site affecte directement les taux de rebond, la conversion, les revenus, la satisfaction des utilisateurs et le classement des moteurs de recherche. Il a été démontré que les sites performants augmentent la rétention des visiteurs et la satisfaction des utilisateurs. Il a été démontré que la lenteur du contenu conduit à l'abandon du site, certains visiteurs partant pour ne jamais revenir. La réduction de la quantité de données qui passe entre le client et le serveur réduit les coûts pour toutes les parties. La réduction de la taille des fichiers HTML/CSS/JavaScript et multimédia réduit à la fois le temps de chargement et la consommation d'énergie d'un site (voir [performance budgets](/fr/docs/Web/Performance/Performance_budgets)).
+Une bonne performance est un atout. Une mauvaise performance est une responsabilité. La vitesse du site affecte directement les taux de rebond, la conversion, les revenus, la satisfaction des utilisateurs et le classement des moteurs de recherche. Il a été démontré que les sites performants augmentent la rétention des visiteurs et la satisfaction des utilisateurs. Il a été démontré que la lenteur du contenu conduit à l'abandon du site, certains visiteurs partant pour ne jamais revenir. La réduction de la quantité de données qui passe entre le client et le serveur réduit les coûts pour toutes les parties. La réduction de la taille des fichiers HTML/CSS/JavaScript et multimédia réduit à la fois le temps de chargement et la consommation d'énergie d'un site (voir [performance budgets](/fr/docs/Web/Performance/Guides/Performance_budgets)).
 
 Le suivi des performances est important. Plusieurs facteurs, notamment la vitesse du réseau et les capacités de l'appareil, affectent les performances. Il n'y a pas de mesure de performance unique; et des objectifs commerciaux différents peuvent signifier que différentes mesures sont plus pertinentes pour les objectifs du site ou de l'organisation qu'il prend en charge. La perception de la performance de votre site est l'expérience utilisateur!
 
@@ -74,4 +73,4 @@ Le suivi des performances est important. Plusieurs facteurs, notamment la vitess
 
 Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

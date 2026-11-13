@@ -3,8 +3,6 @@ title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 
-{{JSRef}}
-
 **`Uint8ClampedArray`**（8 位无符号整型固定数组）类型化数组表示一个由值固定在 0-255 区间的 8 位无符号整型组成的数组；如果你指定一个在 \[0,255] 区间外的值，它将被替换为 0 或 255；如果你指定一个非整数，那么它将被设置为最接近它的整数。（数组）内容被初始化为 0。一旦（数组）被创建，你可以使用对象的方法引用数组里的元素，或使用标准的数组索引语法（即使用方括号标记）。
 
 ## 语法
@@ -24,7 +22,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : 返回元素大小的一个数值。对 `Uint8ClampedArray` 而言是 1。
 - {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}
   - : 静态长度属性值为 0。对于实际长度（元素的数量），见 {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}。
-- {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
+- {{jsxref("TypedArray", "Uint8ClampedArray.prototype")}}
   - : 原型是 _TypedArray_（类型化数组）对象。
 
 ## 静态方法
@@ -98,7 +96,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## 兼容性注意事项
 
-从 ECMAScript 2015 开始， `Uint8ClampedArray` 构造函数需要用一个 {{jsxref("Operators/new", "new")}} 操作符来构建。从现在开始，不使用 `new` 来调用一个 `Uint8ClampedArray` 构造函数将会抛出一个 {{jsxref("TypeError")}}。
+从 ECMAScript 2015 开始， `Uint8ClampedArray` 构造函数需要用一个 {{jsxref("new")}} 操作符来构建。从现在开始，不使用 `new` 来调用一个 `Uint8ClampedArray` 构造函数将会抛出一个 {{jsxref("TypeError")}}。
 
 ```js example-bad
 var dv = Uint8ClampedArray([1, 2, 3]);

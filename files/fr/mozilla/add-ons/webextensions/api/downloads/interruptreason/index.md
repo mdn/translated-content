@@ -3,8 +3,6 @@ title: downloads.InterruptReason
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 ---
 
-{{AddonSidebar}}
-
 Le type `InteruptReason` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.
 
 Une propriété {{WebExtAPIRef('downloads.DownloadItem')}} d'`erreur` contiendra une chaîne tirée des valeurs définies dans ce type.
@@ -61,8 +59,6 @@ Divers :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

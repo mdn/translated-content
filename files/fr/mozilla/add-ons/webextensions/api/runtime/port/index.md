@@ -3,8 +3,6 @@ title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
 
-{{AddonSidebar}}
-
 Un objet `Port` represente une extrémité d'une connexion entre deux contextes spécifiques, qui peut-être utilisée pour échanger des messages.
 
 Un côté initie la connexion à l'aide d'une API `connect()`. Cela retourne un objet `Port`. L'autre camp écoute les tentatives de connexion à l'aide d'un écouteur `onConnect`. Ceci est passé un objet `Port` correspondant.
@@ -171,8 +169,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

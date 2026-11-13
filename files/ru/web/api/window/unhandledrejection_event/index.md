@@ -43,10 +43,10 @@ window.addEventListener("unhandledrejection", function (event) {
 
 Событие `unhandledrejection` реализует {{domxref("PromiseRejectionEvent")}} интерфейс, который наследуется от {{domxref("Event")}}. Вы можете использовать свойства и методы, определённые в данных интерфейсах.
 
-{{InheritanceDiagram('','','', 'PromiseRejectionEvent')}}
+{{InheritanceDiagram('PromiseRejectionEvent')}}
 
 ## Смотрите также
 
 - [`rejectionhandled`](/ru/docs/Web/API/Window/rejectionhandled_event)
 - {{domxref("PromiseRejectionEvent")}}
-- {{domxref("Promise")}}
+- {{jsxref("Promise")}}

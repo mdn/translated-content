@@ -3,8 +3,6 @@ title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
 
-{{JSRef}}
-
 {{jsxref("Object")}} 实例的 **`valueOf()`** 方法将 `this` 值[转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。该方法旨在被派生对象重写，以实现自定义[类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)逻辑。
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}

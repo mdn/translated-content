@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}
 
 이 모듈의 이 마지막 문서에서, 우리는 배열을 살펴볼 것입니다. 배열이란 하나의 변수명 아래에 데이터 아이템의 리스트를 저장하는 간편한 방법입니다. 여기서 우리는 왜 배열이 유용한지 보고, 어떻게 배열을 만들고, 검색하고(retrieve), 추가하고, 그리고 배열에 저장된 원소들(items)을 삭제하는지, 그리고 그 외의 많은 것을 탐구합니다.
 
@@ -685,4 +685,4 @@ textarea.onkeyup = function () {
 - [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections) — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드
 - {{jsxref("Array")}} — `Array` 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}

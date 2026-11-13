@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/tspan
 original_slug: Web/SVG/Element/tspan
 ---
 
-{{SVGRef}}
-
 A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément `tspan`.
 
 ## Contexte d'utilisation
@@ -48,10 +46,10 @@ svg {
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

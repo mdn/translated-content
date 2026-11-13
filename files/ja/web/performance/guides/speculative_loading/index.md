@@ -1,14 +1,11 @@
 ---
 title: 投機的読み込み
 slug: Web/Performance/Guides/Speculative_loading
-original_slug: Web/Performance/Speculative_loading
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: 4a1d696e78d9aa0a3ca571cbc0aab9ba90258235
 ---
 
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
-
-**投機的読み込み (Speculative loading)** とは、関連するページが実際に訪問される前に、ユーザーが次に訪問する可能性の高いページに関する予測に基づいて、ナビゲーションのアクション（DNS 読み込み、リソースの読み込み、文書のレンダリングなど）を実行することを指します。
+**投機的読み込み** (Speculative loading) とは、関連するページが実際に訪問される前に、ユーザーが次に訪問する可能性の高いページに関する予測に基づいて、ナビゲーションのアクション（DNS 読み込み、リソースの読み込み、文書のレンダリングなど）を実行することを指します。
 
 これらの予測は、開発者から提供されることもあれば（たとえば、サイト上で最も人気のある訪問先のリスト）、ブラウザーの経験則によって決定されることもあります（たとえば、ユーザーの履歴にある人気サイトに基づいて）。このような技術をうまく使えば、ページをより早く、場合によっては即座に利用できるようにすることで、パフォーマンスを大幅に向上させることができる。
 
@@ -18,9 +15,9 @@ l10n:
 
 投機的読み込みにはいくつかの方法があります。
 
-- **先読み (Prefetching)** は、文書（または文書の一部）をレンダリングするのに必要なリソースの一部またはすべてを事前に取得し、レンダリングが実行される時点でよりすばやくレンダリングできるようにすることです。
-- **事前レンダリング (Prerendering)** はさらに段階を踏み、要求されたときに表示させるコンテンツを実際にレンダリングしておきます。これが行われる方法によっては、古いページから新しいページへ即座に移動することができます。
-- **事前接続 (Preconnecting)** は、接続ハンドシェイク（すなわち、DNS + TCP + TLS）の一部またはすべてを事前に実行しておくすることで、指定されたオリジンからの将来の読み込みを高速化するためのものです。
+- **先読み** (Prefetching) は、文書（または文書の一部）をレンダリングするのに必要なリソースの一部またはすべてを事前に取得し、レンダリングが実行される時点でよりすばやくレンダリングできるようにすることです。
+- **事前レンダリング** (Prerendering) はさらに段階を踏み、要求されたときに表示させるコンテンツを実際にレンダリングしておきます。これが行われる方法によっては、古いページから新しいページへ即座に移動することができます。
+- **事前接続** (Preconnecting) は、接続ハンドシェイク（すなわち、DNS + TCP + TLS）の一部またはすべてを事前に実行しておくすることで、指定されたオリジンからの将来の読み込みを高速化するためのものです。
 
 > [!NOTE]
 > 上記の説明は高水準で一般的なものです。ブラウザーが先読みや事前レンダリングを実現するために正確に何を行うかは、用いる機能によって異なります。より正確な機能の説明は、下記の[投機的読み込み機能](#投機的読み込み機能)の節で提供されています。
@@ -31,13 +28,13 @@ l10n:
 
 まず、ブラウザーによっては、さまざまな経験則に基づいてページを自動的に事前レンダリングし、自動的なパフォーマンス向上を提供します。これがどのように行われるかは、ブラウザーの実装によって異なります。例えば Chrome は、アドレスバーに一致する文字列が入力されると、そのページを訪問するという高い確信がある場合は、自動的にページを事前レンダリングします（詳しくは [Viewing Chrome's address bar predictions](https://developer.chrome.com/docs/web-platform/prerender-pages#viewing-chromes-address-bar-predictions) を参照してください）。さらに、検索エンジンからの指示により、アドレスバーに検索キーワードが入力されると、検索結果ページが自動的に事前レンダリングされることもあります。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)と同じ仕組みを使って行います。
 
-2つ目に、開発者がブラウザーに実行させたい投機的読み込みの指示を提供するために使用することができる、さまざまなプラットフォーム機能があります。これについては次の節で紹介します。
+2 つ目に、開発者がブラウザーに実行させたい投機的読み込みの指示を提供するために使用することができる、さまざまなプラットフォーム機能があります。これについては次の節で紹介します。
 
 ## 投機的読み込み機能
 
 ### `<link rel="preconnect">`
 
-[`<link rel="preconnect">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) は、ユーザーが指定されたリソースのオリジンからのリソースを必要としている可能性が高く、そのため、ブラウザーがそのオリジンへの接続を先取りして開始することで、パフォーマンスを改善できる可能性が高いというヒントをブラウザーに提供します。対応しているブラウザーは、接続ハンドシェイク（DNS + TCP + TLSなど）の一部またはすべてを事前に実行します。
+[`<link rel="preconnect">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) は、ユーザーが指定されたリソースのオリジンからのリソースを必要としている可能性が高く、そのため、ブラウザーがそのオリジンへの接続を先取りして開始することで、パフォーマンスを改善できる可能性が高いというヒントをブラウザーに提供します。対応しているブラウザーは、接続ハンドシェイク（DNS + TCP + TLS など）の一部またはすべてを事前に実行します。
 
 例を示します。
 
@@ -89,7 +86,7 @@ Link: <https://example.com>; rel="preconnect"
 
 結果は文書内のメモリーキャッシュに保存されます。現在のページがサブリソースとして使用しないものを先読みさせた場合、ヘッダーが許可していれば結果は HTTP キャッシュに入るかもしれませんが、一般的にはリソースの無駄になります。
 
-次のように、 HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーとして先読みを実装することもできます。
+次のように、 HTTP の [`Link`](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーとして先読みを実装することもできます。
 
 ```http
 Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
@@ -103,7 +100,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 例を示します。
 
-```js
+```html
 <link rel="modulepreload" href="main.js" />
 ```
 
@@ -119,7 +116,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 例を示します。
 
-```js
+```html
 <link rel="prefetch" href="main.js" />
 ```
 
@@ -152,7 +149,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
 > [!NOTE]
-> この技術は Chrome でしか利用できませんでしたが、非推奨になりました。代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を使用しましょう。
+> この技術は Chrome でのみ利用できましたが、現在は非推奨となり、[名前から連想される事前レンダリングは実行できなくなりました](https://developer.chrome.com/blog/nostate-prefetch)。代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を使用しましょう。
 
 [`<link rel="prerender">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender) は、ユーザーが次のナビゲーションのために対象とするリソースを必要とするかもしれないというヒントをブラウザーに提供します。 `prerender` は同じサイト内での将来のナビゲーションのために使用され、複数ページアプリケーション (MPA) では意味がありますが、単一ページアプリケーション (SPA) では意味がありません。
 
@@ -166,7 +163,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### 投機ルール API
 
-[`<script type="speculationrules">`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) は、どのような文書が将来ブラウザーによって先読みされるか、または事前レンダリングされるべきかを決定する一連のルールを提供するために使用します。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の一部です。
+[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) は、ブラウザーが将来の文書を先読みするべきか、事前レンダリングすべきかを決定する一連のルールを指定するために使用されます。これらのルールは、インラインの [`<script type="speculationrules">`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) 要素内および {{httpheader("Speculation-Rules")}} レスポンスヘッダーで参照される外部テキストファイル内の JSON 構造として指定され、提供されます。
 
 ## どんな時にそれぞれの機能を使用するのか
 

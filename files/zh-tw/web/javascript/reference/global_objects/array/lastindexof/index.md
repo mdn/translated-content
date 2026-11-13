@@ -19,7 +19,7 @@ console.log(animals.lastIndexOf("Tiger"));
 
 ## 語法
 
-```plain
+```js-nolint
 arr.lastIndexOf(searchElement)
 arr.lastIndexOf(searchElement, fromIndex)
 ```

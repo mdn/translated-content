@@ -14,7 +14,8 @@ original_slug: Web/HTML/Attributes/autocomplete
 
 더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Reference/Elements/form#autocomplete) 특성을 참고하세요.
 
-> **참고:** `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
+> [!NOTE]
+> `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
 >
 > 1. `name` 또는 `id` 특성 존재
 > 2. `<form>` 요소의 자손일 것
@@ -183,7 +184,8 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `address-line2`
   - : 상세주소. 아파트의 경우 동/호를 작성합니다.
 
-    > **참고:** `street-address`를 사용하는 경우 도로명, 건물번호와 상세주소를 같이 작성합니다.
+    > [!NOTE]
+    > `street-address`를 사용하는 경우 도로명, 건물번호와 상세주소를 같이 작성합니다.
 
 우편번호 찾기 기능을 사용하는 경우 행정구역과 도로명, 건물번호까지는 사용자가 직접 입력하지 않는 점도 유의하세요.
 

@@ -3,8 +3,6 @@ title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
 
-{{JSRef}}
-
 **`padStart()`** 方法用另一个字符串填充当前字符串（如果需要会重复填充），直到达到给定的长度。填充是从当前字符串的开头开始的。
 
 {{InteractiveExample("JavaScript Demo: String.padStart()")}}

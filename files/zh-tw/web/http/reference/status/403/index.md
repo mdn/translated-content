@@ -2,7 +2,7 @@
 title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`403 Forbidden`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求，但拒絕處理。這個狀態與 {{HTTPStatus("401")}} 類似，但不同之處在於，即使進行驗證或重新驗證，**`403 Forbidden`** 回應並不會有所改變。請求失敗通常與應用程式邏輯有關，例如用戶對某個資源或操作的權限不足。

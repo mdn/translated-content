@@ -3,8 +3,6 @@ title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
 
-{{AddonSidebar}}
-
 Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
 
 Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.
@@ -50,8 +48,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

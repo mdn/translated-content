@@ -22,7 +22,7 @@ l10n:
 これは、基盤が元のビュー全体を満たすことができない場合に、より短いバッファーを返すために使用することができます。
 
 なお、 {{domxref("ReadableByteStreamController")}} は [`ReadableStream()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#type)で `type="bytes"` を指定した場合のみ、が基盤ソースに対して作成されます。
-「BYOB モード」は [`autoAllocateChunkSize`](/ja/docs/Web/API/ReadableStream#autoallocatechunksize) を [`ReadableController()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)で指定した場合、または {{domxref("ReadableStreamBYOBReader")}} （ふつうは {{domxref("ReadableStream.getReader()")}} に引数 `{ mode: 'byob' }` 付きで呼び出すことで構築される）を使用した場合にに有効になります。
+「BYOB モード」は [`autoAllocateChunkSize`](/ja/docs/Web/API/ReadableStream#autoallocatechunksize) を [`ReadableController()` コンストラクター](/ja/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)で指定した場合、または {{domxref("ReadableStreamBYOBReader")}} （ふつうは {{domxref("ReadableStream.getReader()")}} に引数 `{ mode: 'byob' }` 付きで呼び出すことで構築される）を使用した場合に有効になります。
 
 ## コンストラクター
 

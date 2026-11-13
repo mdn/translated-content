@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`valueOf()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日時の、 1970 年 1 月 1 日午前 0 時 (UTC) を[元期](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)として定義し、それからのミリ秒数を返します。
 

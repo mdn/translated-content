@@ -1,18 +1,19 @@
 ---
 title: La division du code
 slug: Glossary/Code_splitting
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+La **division du code** (<i lang="en">code splitting</i> en anglais) est la pratique qui consiste à découper le code dont une application web dépend — y compris son propre code et les dépendances tierces — en paquets séparés pouvant être chargés indépendamment les uns des autres.
+Cela permet à une application de ne charger que le code dont elle a réellement besoin à un instant donné, et de charger d'autres paquets à la demande.
+Cette approche est utilisée pour améliorer les performances de l'application, en particulier lors du chargement initial.
 
-La **division du code** (« _code splitting_ » en Anglais) est le fractionnement du code en divers bundles ou composants qui peuvent ensuite être chargés à la demande ou en parallèle.
-
-Au fur et à mesure qu'une application devient de plus en plus complexe ou est maintenue, la taille en octets des fichiers ou bundles CSS et JavaScripts augmente, en particulier à mesure que le nombre et la taille des bibliothèques tierces incluses augmentent. Pour éviter d'avoir à télécharger des fichiers gigantesques, les scripts peuvent être divisés en plusieurs fichiers plus petits. Ensuite, les fonctionnalités requises au chargement de la page peuvent être téléchargées immédiatement avec des scripts supplémentaires [chargés passivement](/fr/docs/Glossary/Lazy_load) une fois que la page ou l'application soit interactive, améliorant ainsi les performances. Bien que la quantité totale de code soit la même (et peut-être même quelques octets plus grands), la quantité de code nécessaire lors du chargement initial peut être réduite.
-
-Le code splitting est une fonctionnalité prise en charge par les contructeurs (bundlers) comme [Webpack](https://webpack.js.org/) et [Browserify](https://browserify.org/) qui peut créer plusieurs bundles pouvant être chargés dynamiquement au moment de l'exécution.
+La division du code est une fonctionnalité prise en charge par les contructeurs (bundlers) comme [Webpack](https://webpack.js.org/) et [Browserify](https://browserify.org/) qui peut créer plusieurs paquets (<i lang="en">bundles</i> en anglais) pouvant être chargés dynamiquement au moment de l'exécution.
 
 ## Voir aussi
 
-- [Lazy loading](/fr/docs/Web/Performance/Lazy_loading)
-- [HTTP/2](/fr/docs/Glossary/HTTP_2)
-- [Tree shaking](/fr/docs/Glossary/Tree_shaking)
+- [Chargement différé](/fr/docs/Web/Performance/Guides/Lazy_loading)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("HTTP 2", "HTTP/2")}}
+  - {{Glossary("Tree shaking", "Suppression des codes morts")}}

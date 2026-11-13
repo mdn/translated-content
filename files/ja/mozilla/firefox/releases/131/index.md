@@ -11,7 +11,7 @@ l10n:
 
 ### CSS
 
-- [Anchor Positioning](/ja/docs/Web/CSS/CSS_anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を解析するために内部で使用するのみです。Anchor Positioning の機能は、設定で制御した上で順次ロールアウトしています。詳しくは [Firefox における実験的機能: CSS Anchor Positioning](/ja/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) をご覧ください ([Firefox bug 1909358](https://bugzil.la/1909358)、[Firefox bug 1838746](https://bugzil.la/1838746))。
+- [Anchor Positioning](/ja/docs/Web/CSS/Guides/Anchor_positioning) のさらなる実装の準備として、`inset-area` CSS プロパティを {{CSSXRef("position-area")}} に改名しました。現在、このプロパティは値を解析するために内部で使用するのみです。Anchor Positioning の機能は、設定で制御した上で順次ロールアウトしています。詳しくは [Firefox における実験的機能: CSS Anchor Positioning](/ja/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) をご覧ください ([Firefox bug 1909358](https://bugzil.la/1909358)、[Firefox bug 1838746](https://bugzil.la/1838746))。
 
 ### JavaScript
 
@@ -20,7 +20,7 @@ l10n:
 ### HTTP
 
 - [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
-- [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)、いわゆる "Partitioned Cookies" をサポートしました。
+- [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)、いわゆる "Partitioned Cookies" をサポートしました。
   この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
 
 ### API

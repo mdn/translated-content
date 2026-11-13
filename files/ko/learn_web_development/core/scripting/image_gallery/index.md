@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 이제 우리는 JavaScript의 핵심적인 구성 요소를 살펴보았으므로, 우리는 반복문, 함수, 조건문, 그리고 이벤트에 대한 여러분의 이해를 시험할 것입니다. 많은 웹사이트들에서 보게 될 꽤 흔한 아이템인 — JavaScript를 이용하는 이미지 갤러리를 만듦으로써 말이죠.
 
@@ -118,4 +118,4 @@ overlay.style.backgroundColor = xxx;
    - (위의 단계 1에서 언급된) 온라인에서 공유 가능한 에디터에 있는, 여러분이 평가를 원하거나 도움이 필요한 예제의 링크. 이것은 익숙해지기에 좋은 습관입니다. 코딩 문제가 있는 누군가를 도울 때, 그들의 코드를 보지 못한다면 그들을 돕는 것은 몹시 힘듭니다.
    - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenu("Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

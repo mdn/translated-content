@@ -3,8 +3,6 @@ title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
 
-{{AddonSidebar}}
-
 Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonction est une fonction asynchrone qui renvoie une promesse ({{jsxref("Promise")}}).
 
 ## Syntaxe
@@ -46,5 +44,3 @@ getAlarm.then(gotAlarm);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

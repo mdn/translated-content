@@ -24,7 +24,7 @@ var getting = browser.tabs.get(
 
 ### 返値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+タブの情報を含む {{WebExtAPIRef('tabs.Tab')}} オブジェクトで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。タブが見つからない場合やその他のエラーが発生した場合、プロミスはエラーメッセージで拒否されます。
 
 ## 例
 

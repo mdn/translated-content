@@ -4,9 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 original_slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
 
 Il y a différentes manières de colorer des formes: utiliser différents attributs SVG sur l'objet, utiliser du {{glossary("CSS")}} en ligne, une section CSS ou un fichier CSS externe. La plupart des {{glossary("SVG")}} que vous trouverez sur le Web utilisent du CSS en ligne, mais il y a des avantages et inconvénients pour chaque manière.
 
@@ -157,9 +155,9 @@ Le premier nombre spécifie la distance du trait et le second la distance de l'e
 
 Il existe d'autres propriétés disponibles:
 
-- [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule), spécifie la règle de remplissage pour les formes où des chemins se chevauchent.
-- [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit), détermine à partir de quel angle une liaison de segment de type `miter` sera affichée en `bevel`.
-- [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset), définit à partir d'où commencer les pointilliés sur la ligne.
+- [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule), spécifie la règle de remplissage pour les formes où des chemins se chevauchent.
+- [`stroke-miterlimit`](/fr/docs/Web/SVG/Reference/Attribute/stroke-miterlimit), détermine à partir de quel angle une liaison de segment de type `miter` sera affichée en `bevel`.
+- [`stroke-dashoffset`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dashoffset), définit à partir d'où commencer les pointilliés sur la ligne.
 
 ## Utiliser CSS
 
@@ -178,7 +176,7 @@ CSS peut être inséré en ligne avec l'élément via l'attribut `style`:
 
 #### Dans un section style
 
-Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/docs/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
+Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/docs/Web/SVG/Reference/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -226,4 +224,4 @@ où style.css ressemble à ça:
 }
 ```
 
-{{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}

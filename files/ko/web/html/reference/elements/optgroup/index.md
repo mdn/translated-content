@@ -37,7 +37,7 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
     </tr>
@@ -68,7 +68,8 @@ label {
   </tbody>
 </table>
 
-> **참고:** `<optgroup>` 요소는 중첩할 수 없습니다.
+> [!NOTE]
+> `<optgroup>` 요소는 중첩할 수 없습니다.
 
 ## 특성
 

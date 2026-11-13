@@ -4,7 +4,7 @@ slug: orphaned/Web/CSS/-webkit-overflow-scrolling
 original_slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{Non-standard_header}}
 
 [CSS](/ko/docs/Web/CSS) **`-webkit-overflow-scrolling`** 속성은 터치 단말기에서 주어진 요소의 모멘텀 기반 스크롤 활성화 여부를 결정합니다.
 
@@ -16,10 +16,6 @@ original_slug: Web/CSS/-webkit-overflow-scrolling
   - : "일반적"인 스크롤을 사용합니다. 즉 손가락을 터치 화면에서 떼는 순간 스크롤이 멈춥니다.
 - `touch`
   - : 모멘텀 기반 스크롤을 사용합니다. 스크롤 제스쳐가 끝나고 손가락을 터치 화면에서 떼어도 잠시 스크롤이 지속됩니다. 지속 속도와 시간은 스크롤 제스쳐의 세기에 따라 달라집니다. 또한 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성합니다.
-
-### 형식 구문
-
-{{csssyntax}}
 
 ## 예제
 

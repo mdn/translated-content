@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- 现已支持在使用 [`conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/conic-gradient)、[`linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/linear-gradient) 和 [`radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/radial-gradient) 函数创建渐变时，以及在使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-radial-gradient) 函数创建重复渐变时，使用 [`<color-interpolation-method>`](/zh-CN/docs/Web/CSS/color-interpolation-method)。（[Firefox bug 1861363](https://bugzil.la/1861363)）。
+- 现已支持在使用 [`conic-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/conic-gradient)、[`linear-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/linear-gradient) 和 [`radial-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/radial-gradient) 函数创建渐变时，以及在使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) 函数创建重复渐变时，使用 [`<color-interpolation-method>`](/zh-CN/docs/Web/CSS/Reference/Values/color-interpolation-method)。（[Firefox bug 1861363](https://bugzil.la/1861363)）。
 
 ### JavaScript
 
@@ -34,7 +34,7 @@ l10n:
 
 ### 安全
 
-- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他媒体类型的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保了如果内容通过 HTTPS 安全提供，则其所有子资源也必须通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
+- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他媒体类型的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保了如果内容通过 HTTPS 安全提供，则其所有子资源也必须通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Defenses/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
 
 ### API
 
@@ -80,7 +80,7 @@ l10n:
 
 - **`calc()` 相对颜色的色彩通道支持**：`layout.css.relative-color-syntax.enabled`。
 
-  CSS [`calc()`](/zh-CN/docs/Web/CSS/calc) 函数现在可以以[相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors#使用_math_函数)解析色彩通道。
+  CSS [`calc()`](/zh-CN/docs/Web/CSS/Reference/Values/calc) 函数现在可以以[相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors#使用_math_函数)解析色彩通道。
 
 - **JavaScript `Float16Array` 类型化数组**：`javascript.options.experimental.float16array`。
 

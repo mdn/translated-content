@@ -3,15 +3,11 @@ title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.atan2()`** 返回从原点 (0,0) 到 (x,y) 点的线段与 x 轴正方向之间的平面角度 (弧度值)，也就是 Math.atan2(y,x)
 
 ## 语法
 
-```plain
+```js-nolint
 Math.atan2(y, x)
 ```
 

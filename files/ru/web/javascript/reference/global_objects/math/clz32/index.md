@@ -72,4 +72,4 @@ Math.clz32 =
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("Math")}}

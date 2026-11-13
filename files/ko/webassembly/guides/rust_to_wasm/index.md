@@ -46,10 +46,10 @@ Node.js와 npm을 설치하려면 [Get npm!](https://www.npmjs.com/get-npm) 페�
 
 npm 계정을 만드려면 [npm 가입 페이지](https://www.npmjs.com/signup) 에서 양식을 작성하시면 됩니다.
 
-그 다음은, 명령줄에서 `npm adduser` 명령을 실행합니다.
+그 다음은, 명령줄에서 `npm login` 명령을 실행합니다.
 
 ```bash
-    $ npm adduser
+    $ npm login
     Username: yournpmusername
     Password:
     Email: (this IS public) you@example.com

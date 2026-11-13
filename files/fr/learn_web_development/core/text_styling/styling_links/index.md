@@ -4,9 +4,9 @@ slug: Learn_web_development/Core/Text_styling/Styling_links
 original_slug: Learn/CSS/Styling_text/Styling_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
-Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
+Lors de la mise en forme de [liens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
 
 <table class="standard-table">
   <tbody>
@@ -14,14 +14,14 @@ Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Cre
       <th scope="row">Prérequis :</th>
       <td>
         Notions de base en informatique, notions de base en HTML (étudier l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML)</a
         >, notions de base en CSS (étudier l'<a
-          href="/fr/docs/Learn/CSS/Introduction_to_CSS"
+          href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS"
           >Introduction à CSS</a
         >),
         <a
-          href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte"
+          href="/fr/docs/Learn_web_development/Core/Styling_basics/Styling_text/initiation-mise-en-forme-du-texte"
           >initiation à la mise en forme de texte</a
         >.
       </td>
@@ -39,11 +39,11 @@ Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Cre
 
 ## Un coup d'œil à quelques liens
 
-Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
+Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
 
 ### État des liens
 
-La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes_et_pseudo-éléments) :
+La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes_et_pseudo-éléments) :
 
 - **link (non visité)** : l'état par défaut dans lequel se trouve un lien, lorsqu'il n'est dans aucun autre état ; cela peut être spécifiquement mis en forme en utilisant la pseudo classe {{cssxref(":link")}} ;
 - **visited :** un lien qui a déjà été visité (qui existe dans l'historique du navigateur), mis en forme en utilisant la pseudo-classe {{cssxref(":visited")}} ;
@@ -226,8 +226,7 @@ Si vous faites une erreur, vous pouvez toujours l'annuler en utilisant le bouton
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, et
-<a href="#">Microsoft Edge</a>.</p></textarea
-  >
+<a href="#">Microsoft Edge</a>.</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -256,8 +255,7 @@ a:hover {
 
 a:active {
 
-}</textarea
-  >
+}</textarea>
 
   <h2>Zone de rendu</h2>
   <div
@@ -382,12 +380,12 @@ Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle
 
 Enfin, nous avons mis un peu de {{cssxref("padding-right")}} sur les liens pour faire de la place afin que l'image d'arrière-plan se place à l'intérieur, de sorte que nous ne la faisions chevaucher le texte.
 
-Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
+Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
 > [!NOTE]
-> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
+> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn_web_development/Core/Styling_basics) et le [design adaptif _(responsive web design)_](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 
@@ -477,4 +475,4 @@ Expliquons ce qui se passe ici, en nous concentrant sur les parties les plus int
 
 Nous espérons que cet article vous a fourni tout ce que vous aviez besoin de savoir sur les liens — pour l'instant ! L'article final de notre module de Mise en forme de texte détaille comment utiliser des polices personnalisées (ou polices web, comme elles sont mieux connues) sur vos sites web.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

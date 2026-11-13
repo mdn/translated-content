@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`anchor()`** 메서드는 name(`<a name="...">str</a>`)이 있는 {{HTMLElement("a")}} 요소 안에 해당 문자열을 집어넣은 문자열을 생성합니다.
 
@@ -47,7 +47,8 @@ document.body.innerHTML = contentString.anchor("hello");
 <a name="hello">Hello, world</a>
 ```
 
-> **경고:** `name`이 {{HTMLElement("a")}} 요소의 유효한 특성이 아니기 때문에 이 마크업은 유효하지 않습니다.
+> [!WARNING]
+> `name`이 {{HTMLElement("a")}} 요소의 유효한 특성이 아니기 때문에 이 마크업은 유효하지 않습니다.
 
 `anchor()`를 사용하여 HTML 텍스트를 직접 작성하는 대신 [`document.createElement()`](/ko/docs/Web/API/Document/createElement)와 같은 DOM API를 사용해야 합니다. 아래의 예를 참고하세요.
 

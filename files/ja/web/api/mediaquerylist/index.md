@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の情報を格納し、文書の状態に対する即時かつイベント駆動の照合に対応します。
+**`MediaQueryList`** オブジェクトは文書に適用されている[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)の情報を格納し、文書の状態に対する即時かつイベント駆動の照合に対応します。
 
 `MediaQueryList` は {{DOMxRef("Window.matchMedia", "matchMedia()")}} を {{DOMxRef("window")}} オブジェクト上で呼び出すことで作成することができます。結果として得られるオブジェクトは、メディアクエリーの状態が変化したとき (つまり、メディアクエリーのテストが `true` の評価が開始または停止したとき) に、リスナーへの通知の送信を処理します。
 
@@ -78,8 +78,8 @@ mql.addEventListener("change", screenTest);
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryListEvent")}}
 - {{DOMxRef("Window.devicePixelRatio")}} の記事にも有益な例があります

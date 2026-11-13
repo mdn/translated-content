@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feFuncB
 original_slug: Web/SVG/Element/feFuncB
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncB>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal bleu de l'image en entrée.
 
 ## Contexte d'utilisation
@@ -16,8 +14,8 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncB>`** doit être placé
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Attribute#attributs_de_fonction_de_transfert)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_fonction_de_transfert)
 
 ### Attributs spécifiques
 
@@ -44,4 +42,4 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncBElement")}}.
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncR")}}
 - {{SVGElement("feFuncG")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

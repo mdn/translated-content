@@ -3,8 +3,6 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 
-{{JSRef}}
-
 La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les clés pour chaque indice du tableau typé.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
@@ -71,6 +69,6 @@ console.log(eArr.next().value); // 4
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
 - [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
   sourceCommit: 4074fc09b07902a560b9b321c1f966452b5afc7c
@@ -12,7 +13,7 @@ l10n:
 
 판별 함수를 만족하는 첫번째 인덱스 대신 값을 반환하는 {{jsxref("Array.prototype.find", "find()")}} 메서드도 참고하시기 바랍니다.
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];

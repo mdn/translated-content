@@ -3,8 +3,6 @@ title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque les enfants d'un dossier ont changé leur commande en raison de la commande triée dans l'interface utilisateur. Cela n'est pas appelé à la suite d'un appel à {{WebExtAPIRef("bookmarks.move()")}} ou une opération glisser dans l'interface utilisateur.
 
 ## Syntaxe
@@ -68,8 +66,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

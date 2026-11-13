@@ -68,13 +68,13 @@ _继承属性自_ _{{domxref("AudioNode")}}。_
 _继承方法自_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : 将当前频域数据拷贝进{{domxref("Float32Array")}}数组。
+  - : 将当前频域数据拷贝进{{jsxref("Float32Array")}}数组。
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : 将当前频域数据拷贝进{{domxref("Uint8Array")}}数组（无符号字节数组）。
+  - : 将当前频域数据拷贝进{{jsxref("Uint8Array")}}数组（无符号字节数组）。
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : 将当前波形，或者时域数据拷贝进{{domxref("Float32Array")}}数组。
+  - : 将当前波形，或者时域数据拷贝进{{jsxref("Float32Array")}}数组。
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : 将当前波形，或者时域数据拷贝进 {{domxref("Uint8Array")}}数组（无符号字节数组）。
+  - : 将当前波形，或者时域数据拷贝进 {{jsxref("Uint8Array")}}数组（无符号字节数组）。
 
 ## 例子
 

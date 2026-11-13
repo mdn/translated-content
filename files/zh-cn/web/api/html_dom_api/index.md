@@ -63,7 +63,7 @@ HTML 元素类的总体继承关系如下：
 
 有一些元素具有共性，因此还有一个额外的中介类型。例如，{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素都呈现音视频媒体。相应的 {{domxref("HTMLAudioElement")}} 和 {{domxref("HTMLVideoElement")}} 类型都基于通用类型 {{domxref("HTMLMediaElement")}}，后者又基于 {{domxref("HTMLElement")}} 等等。`HTMLMediaElement` 定义了音频和视频元素之间共同拥有的方法和属性。
 
-这些特定于元素的接口构成了大部分 HTML DOM API，并且是本文的重点。要了解 {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 的实际结构，请参阅 {{DOMxRef("Document_Object_Model/Introduction", "DOM 概述", "", "1")}}。
+这些特定于元素的接口构成了大部分 HTML DOM API，并且是本文的重点。要了解 DOM 及其概念，请参阅 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 文档。
 
 ## HTML DOM 的目标受众
 

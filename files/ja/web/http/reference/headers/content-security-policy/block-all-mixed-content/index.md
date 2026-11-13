@@ -1,11 +1,10 @@
 ---
-title: "CSP: block-all-mixed-content"
+title: "Content-Security-Policy: block-all-mixed-content ディレクティブ"
+short-title: block-all-mixed-content
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > このディレクティブは、仕様上、廃止されたものとして位置づけられています。
@@ -14,7 +13,7 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** ディレクティブは、ページが HTTPS を使用しているときに HTTP で資産を読み込むことを防ぎます。
 
-すべての[混在コンテンツ](/ja/docs/Web/Security/Mixed_content)のリソースのリクエストは、ブロック可能であるものやアップグレード可能であるものを含め、ブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混在コンテンツがないことを保証します。
+すべての[混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content)のリソースのリクエストは、ブロック可能であるものやアップグレード可能であるものを含め、ブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混在コンテンツがないことを保証します。
 
 > [!NOTE]
 > {{CSP("upgrade-insecure-requests")}} ディレクティブが `block-all-mixed-content` の前に評価されます。
@@ -43,8 +42,7 @@ Content-Security-Policy: img-src https:
 
 ## 仕様書
 
-現在のどの仕様にも属していません。
-古い仕様書である [Mixed Content Level 1](https://www.w3.org/TR/2015/CR-mixed-content-20150317/#strict-opt-in) で定義されていたものです。
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -54,4 +52,4 @@ Content-Security-Policy: img-src https:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}
-- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Defenses/Mixed_content)

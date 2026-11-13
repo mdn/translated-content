@@ -1,12 +1,12 @@
 ---
-title: Cheatsheet HTML
+title: Fiche de synthèse HTML pour la syntaxe et les tâches courantes
+short-title: Fiche de synthèse
 slug: Web/HTML/Guides/Cheatsheet
-original_slug: Learn/HTML/Cheatsheet
+l10n:
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{LearnSidebar}}
-
-Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Element) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn/HTML/Howto). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
+Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Reference/Elements) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn_web_development/Core/Structuring_content). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
 
 > [!NOTE]
 > Les balises HTML doivent en premier lieu être utilisées pour leur sémantique et non pour leur apparence. Il est toujours possible de modifier la mise en forme d'une balise donnée grâce à {{Glossary("CSS")}}. Aussi, quand vous utilisez HTML, soyez concentré-e sur la signification plutôt que sur l'apparence finale.
@@ -16,6 +16,7 @@ Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et réca
 Un élément est une partie d'une page web. Certains éléments sont agissent comme des conteneurs&nbsp;: ils sont grands et contiennent de plus petits éléments. Certains éléments sont plus petits et sont imbriqués dans des éléments plus grands. Par défaut les éléments «&nbsp;en ligne&nbsp;» apparaissent les uns à côté des autres sur une page web. Ils prennent autant de largeur que nécessaire sur une page et s'organisent horizontalement à la façon des mots dans une phrase ou des livres dans une bibliothèque. Tous les éléments en ligne peuvent être placés à l'intérieur de l'élément `<body>`.
 
 <table class="standard-table">
+  <caption>Éléments en ligne&nbsp;: usage et exemples</caption>
   <thead>
     <tr>
       <th scope="col">Usage</th>
@@ -171,7 +172,7 @@ voir &#x3C;cite>Le monstrueux livre des monstres&#x3C;/cite>.</pre
       <td>Un saut de ligne</td>
       <td>{{HTMLElement("br")}}</td>
       <td id="br-example">
-        <pre class="brush: html">Ligne 1&#x3C;br>Ligne 2</pre>
+        <pre class="brush: html">Ligne 1&#x3C;br />Ligne 2</pre>
         {{EmbedLiveSample("br-example", 100, 80)}}
       </td>
     </tr>
@@ -181,7 +182,7 @@ voir &#x3C;cite>Le monstrueux livre des monstres&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
+  Llanfair&#x3C;wbr />pwllgwyngyll&#x3C;wbr />gogerychwyrngogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -216,7 +217,7 @@ mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls="controls">
-  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg" />
   Votre navigateur ne prend pas en charge audio.
 &#x3C;/audio></pre
         >
@@ -242,6 +243,9 @@ mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
 ## Éléments de bloc
 
 Les éléments de bloc, en revanche, occupent toutes la largeur de la page. Ils occupent une ligne entière et ne sont pas apposés les uns à côtés des autres. Ils s'empilent plutôt à l'instar des paragraphes dans un texte.
+
+> [!NOTE]
+> Parce que cette feuille de triche est limitée à quelques éléments représentant des structures spécifiques ou ayant une sémantique particulière, l'élément {{HTMLElement("div")}} n'est pas inclus intentionnellement — car l'élément `div` ne représente rien et n'a pas de sémantique particulière.
 
 <table class="standard-table">
   <thead>
@@ -327,7 +331,7 @@ Ils sont alors dit :
       <td>Un séparateur horizontal</td>
       <td>{{HTMLElement("hr")}}</td>
       <td id="hr-example">
-        <pre class="brush: html">avant&#x3C;hr>après</pre>
+        <pre class="brush: html">avant&#x3C;hr />après</pre>
         {{EmbedLiveSample("hr-example", 100, 100)}}
       </td>
     </tr>

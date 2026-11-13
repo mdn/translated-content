@@ -3,8 +3,6 @@ title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 
-{{AddonSidebar}}
-
 Ce type contient les données nécessaires pour :
 
 - créer une notification avec {{WebExtAPIRef("notifications.create()")}},
@@ -65,5 +63,3 @@ Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas support
 > [!NOTE]
 >
 > Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

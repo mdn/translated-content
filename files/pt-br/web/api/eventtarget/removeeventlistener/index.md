@@ -22,7 +22,8 @@ target.removeEventListener(type, listener[, useCapture])
 
     Se um listener foi registrado duas vezes, uma com o parâmetro _capture_ especificado e outra sem, cada um deve ser removido separadamente. A remoção de um _capturing listener_ não afeta a versão _non-capturing_ do mesmo listener, e vice versa.
 
-> **Nota:** `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
+> [!NOTE]
+> `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
 
 ## Notas
 

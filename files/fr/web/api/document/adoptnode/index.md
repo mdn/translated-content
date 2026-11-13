@@ -1,52 +1,66 @@
 ---
-title: Document.adoptNode()
+title: "Document : méthode adoptNode()"
+short-title: adoptNode()
 slug: Web/API/Document/adoptNode
+l10n:
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_) est remplacé par le document en cours. Le noeud peut ensuite être inséré dans le document en cours.
+La méthode **`adoptNode()`** de l'interface {{DOMxRef("Document")}} transfère un {{Glossary("node/dom", "nœud")}} d'un autre {{DOMxRef("Document", "document", "", "1")}} vers le document de la méthode.
+Le nœud adopté et son sous-arbre sont supprimés de leur document d'origine (le cas échéant), et leur {{DOMxRef("Node.ownerDocument", "ownerDocument")}} est changé pour le document actuel.
+Le nœud peut ensuite être inséré dans le document actuel.
 
 ## Syntaxe
 
-```js
-node = document.adoptNode(externalNode);
+```js-nolint
+adoptNode(externalNode)
 ```
 
-- `node`
-  - : est le noeud adopté qui a maintenant ce document en tant que son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_). Le [`parentNode`](/fr/docs/Web/API/Node/parentNode) du noeud est `null`, car il n'a pas encore été inséré dans l'arborescence du document. Notez que `node` et `externalNode` sont le même objet après cet appel.
-- `externalNode`
-  - : est le noeud à adopter existant dans un autre document.
+### Paramètres
 
-## Exemple
+- `externalNode`
+  - : Le nœud à adopter provenant d'un autre document.
+
+### Valeur de retour
+
+Le `importedNode` copié dans le contexte du document importateur.
+
+Après l'appel de cette méthode, `importedNode` et `externalNode` sont le même objet.
+
+> [!NOTE]
+> Le {{DOMxRef("Node.parentNode")}} de `importedNode` est `null`, car il n'a pas encore été inséré dans l'arborescence du document&nbsp;!
+
+## Exemples
 
 ```js
-var iframe = document.getElementById("my-iframe");
-var iframeImages = iframe.contentDocument.getElementsByTagName("img");
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
-var newParent = document.getElementByTagName("images");
-
-for (var i = 0; i < iframeImages.length; i++) {
-  newParent.appendChild(document.adoptNode(iframeImages[i]));
-}
+iframeImages.forEach((imgEl) => {
+  newParent.appendChild(document.adoptNode(imgEl));
+});
 ```
 
 ## Notes
 
-En général l'appel de `adoptNode` peut échouer en raison du nœud source provenant d'une implémentation différente, mais cela ne devrait pas poser de problème avec les implémentations du navigateur.
+Avant de pouvoir être insérés dans le document courant, les nœuds provenant de documents externes doivent soit être&nbsp;:
 
-Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
-[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+- clonés à l'aide de {{DOMxRef("document.importNode()")}}&nbsp;; ou
+- adoptés à l'aide de `document.adoptNode()`.
 
-Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
-alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+Pour en savoir plus sur les problèmes liés à {{DOMxRef("Node.ownerDocument")}}, consultez la [FAQ DOM du W3C <sup>(angl.)</sup>](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 ## Spécification
 
-- [DOM Level 3 Core: Document.adoptNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- [document.importNode](/fr/docs/Web/API/Document/importNode)
+- La méthode {{DOMxRef("document.importNode()")}}

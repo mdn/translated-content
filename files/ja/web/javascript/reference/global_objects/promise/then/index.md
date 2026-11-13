@@ -3,7 +3,7 @@ title: Promise.prototype.then()
 short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 l10n:
-  sourceCommit: 337d60017f421e14f17bf8e9051d302b0fdb9b9b
+  sourceCommit: 9bda33365e40b6c609fa5190a0af9b5dc6438cf0
 ---
 
 **`then()`** は {{jsxref("Promise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxref("Promise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しを行うことができます。
@@ -63,7 +63,7 @@ then(onFulfilled, onRejected)
 
 `onRejected` ハンドラーの詳細については、 {{jsxref("Promise/catch", "catch()")}} のリファレンスを参照してください。
 
-`then()` は新しいプロミスオブジェクトを返しますが、呼び出されたプロミスオブジェクトを変更し、ハンドラーを内部リストに追加します。 したがって、ハンドラーは元のプロミスによって保持され、その寿命は少なくとも元のプロミスの寿命と同じ長さになります。 例えば、次の例では、返されたプロミスが保持されないにもかかわらず、最終的にはメモリーを使い果たします。
+`then()` は新しいプロミスオブジェクトを返しますが、呼び出されたプロミスオブジェクト自体を変更し、そのプロミスが待機状態の場合、ハンドラーを内部リストに追加します。したがって、そのプロミスが待機状態で、かつ参照可能な状態である限り、ハンドラーは元のプロミスによって保持され続けます。例えば、次の例では、返されたプロミスは保持されませんが、最終的にはメモリー不足に陥ります。
 
 ```js
 const pendingPromise = new Promise(() => {});

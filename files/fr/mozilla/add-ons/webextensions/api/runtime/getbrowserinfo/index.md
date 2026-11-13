@@ -3,8 +3,6 @@ title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
 
-{{AddonSidebar}}
-
 Renvoie les informations sur le navigateur dans lequel l'extension est installée.
 
 Il s'agit d'une fonction asynchrone qui renvoie une {{JSxRef("Promise")}}.
@@ -48,5 +46,3 @@ gettingInfo.then(gotBrowserInfo);
 {{WebExtExamples}}
 
 > [!NOTE]
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

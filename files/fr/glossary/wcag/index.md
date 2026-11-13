@@ -1,27 +1,30 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Les _directives d'accessibilité du contenu Web_ (**<abbr>WCAG</abbr>** pour <i lang="en">Web Content Accessibility Guidelines</i> en anglais) constituent une recommandation publiée par le groupe {{Glossary("WAI", "Initiative pour l'accessibilité du Web (WAI)")}} du {{Glossary("W3C")}}, qui présente un ensemble de recommandations visant à rendre le contenu {{Glossary("accessibility", "accessible")}} principalement pour les personnes en situation de handicap, mais aussi pour les dispositifs et services aux ressources limitées, tels que les assistants numériques.
 
-Les _Web Content Accessibility Guidelines_ (**WCAG**) sont une recommandation publiée par le groupe {{Glossary("WAI","Web Accessibility Initiative")}} du {{Glossary("W3C")}}. Ils définissent un ensemble de lignes de conduite à suivre pour rendre le contenu accessible principalement aux personnes avec des handicaps, mais aussi aux appareils aux ressources limitées comme les téléphones portables.
+WCAG 2 comprend 13 recommandations organisées selon 4 principes (perceptible, utilisable, compréhensible et robuste) et chaque recommandation comporte des critères de succès testables.
 
-WCAG 2.0, qui a replacé WCAG 1.0, a été publié en tant que recommandation W3C le 11 décembre 2008. Elle consiste en 12 directives principales organisées en 4 principes (le contenu doit être perceptible, utilisable, compréhensible et robuste) et chacune de ces directives est accompagnée de critères de succès à évaluer.
+WCAG 2 utilise trois niveaux d'accessibilité&nbsp;:
 
-WCAG utilise trois niveaux d'accessibilité :
+- Priorité 1&nbsp;: Les développeur·euse·s web **doivent** satisfaire ces conditions, sinon il sera impossible à un ou plusieurs groupes d'accéder au contenu du web. Atteindre ce niveau est désigné par A.
+- Priorité 2&nbsp;: Les développeur·euse·s web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
+- Priorité 3&nbsp;: Les développeur·euse·s web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
 
-- Priorité 1 : Les développeurs web **doivent** satisfaire ces conditions, sinon il sera impossible à un ou plusieurs groupes d'accéder au contenu du web. Atteindre ce niveau est désigné par A.
-- Priorité 2 : Les développeurs web **devraient** satisfaire ces conditions, sinon certains groupes éprouveront des difficultés à accéder au contenu du web. Atteindre ce niveau est désigné par AA ou double A.
-- Priorité 3 : Les développeurs web **peuvent** satisfaire ces conditions dans le but de faciliter l'accès au web pour certains groupes. Atteindre ce niveau est désigné par AAA ou triple A.
+Les directives [WCAG 2.2 <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/) ont été publiées en octobre 2023 et [WCAG 3.0 <sup>(angl.)</sup>](https://w3c.github.io/wcag3/guidelines/) est en cours de développement.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Accessibilité du Web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
-
-### Connaissances techniques
-
-- [Informations d'accessibilité sur MDN](/fr/docs/Web/Accessibility/Information_for_Web_authors)
-- [La recommandation WCAG 2.0 sur le W3C](https://www.w3.org/TR/WCAG20/)
+- [Comprendre les directives d'accessibilité du contenu Web](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
+- [WCAG <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) sur Wikipédia
+- [Web Content Accessibility Guidelines (WCAG) 2.2&nbsp;: Recommandation <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/)
+- [Directives d'accessibilité W3C (WCAG) 3.0&nbsp;: ébauche de travail <sup>(angl.)</sup>](https://w3c.github.io/wcag3/guidelines/)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Accessibility", "Accessibilité")}}
+  - {{Glossary("WAI")}}
+  - {{Glossary("ATAG")}}
+  - {{Glossary("UAAG")}}

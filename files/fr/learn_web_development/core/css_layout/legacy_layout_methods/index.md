@@ -4,26 +4,16 @@ slug: Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
 Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application «&nbsp;CSS Grid Layout&nbsp;», ces mises en page étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
-      <td>
-        Les fondamentaux du HTML (voyez
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML">Introduction au HTML</a
-        >) et une idée du fonctionnement de CSS (voyez
-        <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction à CSS</a> et
-        <a href="/fr/docs/Apprendre/CSS/styliser_boites">Styles de boîtes</a>).
-      </td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Bases de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Bases de la mise en forme CSS</a>.)</td>
     </tr>
     <tr>
-      <th scope="row">Objectif:</th>
+      <th scope="row">Objectif d'apprentissage&nbsp;:</th>
       <td>
         Comprendre les concepts fondamentaux derrière les systèmes de
         disposition en trame utilisés avant que CSS Grid Layout soit disponible
@@ -93,7 +83,7 @@ body {
 }
 ```
 
-Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
+Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("Heading_Elements", "h1")}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
 
 ```css
 div:nth-of-type(1) {
@@ -183,7 +173,7 @@ Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'
 
 ## Ancienne création d'un cadre de trames
 
-La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats).
+La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn_web_development/Core/CSS_layout/Floats).
 
 Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.
 
@@ -224,7 +214,7 @@ Le but est d'en faire une trame de démonstration sur deux lignes à partir des 
 
 ![](simple-grid-finished.png)
 
-À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de {{cssxref("box-sizing")}} à `border-box` sur tous les éléments du site (voir [Modification totale du modèle de boîte](</fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte>) pour plus d'explications).
+À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de {{cssxref("box-sizing")}} à `border-box` sur tous les éléments du site (voir [Modification totale du modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#the_alternative_css_box_model) pour plus d'explications).
 
 ```css
 * {
@@ -627,7 +617,8 @@ Incorporez les .css _skeleton_ et _normalize_ dans la page HTML, en ajoutant ce 
 
 Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour la typographie et autres éléments de page que vous pouvez utiliser comme point de départ. Toutefois nous les laisserons de côté pour l'instant — c'est la trame qui nous interesse pour le moment.
 
-> **Note :** [Normalize](/fr/docs/Web) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
+> [!NOTE]
+> [Normalize](/fr/docs/Web) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
 
 Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML&nbsp;:
 
@@ -719,5 +710,3 @@ Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Sk
 ## Résumé
 
 Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

@@ -1,90 +1,118 @@
 ---
-title: Physics
+title: 物理系统
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
+l10n:
+  sourceCommit: 4483da6501d1c735a0e1ac1e95775e2fe1766dc3
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball", "Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 5 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 5 步**。为了在游戏对象之间进行正确的碰撞检测，我们需要用到物理系统；本文将向你介绍 Phaser 中可用的内容，并演示一种典型的简单设置。
 
-为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向你介绍 Phaser 中的可用内容，以及演示典型的简单设置。
+## 添加物理系统
 
-## 添加物理效果
+Phaser 捆绑了三个不同的物理引擎——Arcade Physics、Impact Physics 和 Matter.js Physics——第四个选项 Box2D 则以商业插件的形式提供。对于我们这样的简单游戏，可以使用 Arcade Physics 引擎。我们不需要复杂的几何计算——毕竟，这只是一个球从墙壁和砖块上反弹的游戏。
 
-Phaser 与三个不同的物理引擎（Arcade Physics，P2 和 Ninja Physics）捆绑在一起，第四个选项 Box2D 可作为商业插件使用。对于像我们这样的简单游戏，我们可以使用 Arcade Physics 引擎。我们不需要任何重的几何计算 - 毕竟只是一个球从墙壁和砖块弹起来。
-
-首先，让我们在游戏中初始化 Arcade Physics 引擎。`physics.startSystem()`在`create`函数开头添加方法（使其成为函数内的第一行），如下所示：
+首先，在游戏中配置 Arcade Physics 引擎。将 `physics` 属性添加到 `config` 对象中，如下所示：
 
 ```js
-game.physics.startSystem(Phaser.Physics.ARCADE);
+const config = {
+  // ...
+  physics: {
+    default: "arcade",
+  },
+};
 ```
 
-接下来，我们需要为物理系统启用我们的球 - 默认情况下，Phaser 对象物理不启用。在`create()`函数底部添加以下行：
+接下来，我们需要为小球启用物理系统——Phaser 对象默认不启用物理系统。在 `create()` 方法底部添加以下行：
 
 ```js
-game.physics.enable(ball, Phaser.Physics.ARCADE);
+this.physics.add.existing(this.ball);
 ```
 
-接下来，如果我们要在屏幕上移动我们的球，我们可以设置`velocity`它`body`。再次添加以下行`create()`：
+接下来，如果我们想让球在屏幕上移动，可以在它的 `body` 上设置 `velocity`。继续在 `create()` 底部添加以下行：
 
 ```js
-ball.body.velocity.set(150, 150);
+this.ball.body.setVelocity(150, 150);
 ```
 
-## 删除我们以前的更新说明
+## 删除先前的更新指令
 
-记得删除添加值的我们的老方法`x`，并`y`从`update()`功能：
+记得从 `update()` 方法中删除先前给 `x` 和 `y` 添加值的方式，也就是将它恢复为空状态：
 
 ```js
-function update() {
-  ball.x += 1;
-  ball.y += 1;
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {}
 }
 ```
 
-我们正在使用物理引擎正确处理。
+现在，我们会使用物理引擎正确处理这一点。
 
-## 最终代码检查
+尝试重新加载 `index.html`。目前，物理引擎没有重力或摩擦力，因此球会以恒定速度沿给定方向移动。
 
-最新的代码应该如下所示：
+## 玩转物理系统
 
-```js
-var ball;
+你可以用物理系统做更多事情。例如，在 `create()` 中添加 `this.ball.body.gravity.y = 500;`，就会设置球的垂直重力。尝试将速度改为 `this.ball.body.setVelocity(150, -150);`，你会看到球向上发射，然后因重力向下拉动而落下。
 
-function preload() {
-  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-  game.scale.pageAlignHorizontally = true;
-  game.scale.pageAlignVertically = true;
-  game.stage.backgroundColor = "#eee";
-  game.load.image("ball", "img/ball.png");
-}
-
-function create() {
-  game.physics.startSystem(Phaser.Physics.ARCADE);
-  ball = game.add.sprite(50, 50, "ball");
-  game.physics.enable(ball, Phaser.Physics.ARCADE);
-  ball.body.velocity.set(150, 150);
-}
-
-function update() {}
-```
-
-尝试重新加载`index.html`- 球应该在给定的方向上不断移动。目前，物理引擎的重力和摩擦力设定为零。增加重力将导致球落下，同时摩擦力最终会停止球。
-
-## 物理效果趣味
-
-你可以用物理学来做更多的事情，例如添加`ball.body.gravity.y = 100;`你将设置球的垂直重力。因此，它将向上发射，但是由于重力的作用而下降。
-
-这种功能只是冰山一角 - 有各种功能和变量可以帮助你操纵物理对象。查看官方[物理文档，](http://phaser.io/docs#physics)并使用[Arcade](http://phaser.io/examples/v2/category/arcade-physics)和[P2](http://phaser.io/examples/v2/category/p2-physics)物理系统查看大量示例。
+这种功能只是冰山一角——有各种函数和变量可以帮助你操纵物理对象。查看官方的[物理系统文档](https://docs.phaser.io/phaser/concepts/physics/arcade)，并参阅使用 Arcade 和 Matter.js 物理系统的[大量示例](https://phaser.io/examples/v3.85.0/physics)。
 
 ## 比较你的代码
 
-你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+以下是你目前应该得到的结果，可以实时运行。若要查看其源代码，请点击“运行”按钮。
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  ball;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+  }
+  create() {
+    this.ball = this.add.sprite(50, 50, "ball");
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, 150);
+  }
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("比较你的代码", "", 480, , , , , "allow-modals")}}
 
 ## 下一步
 
-现在我们可以转到下一课，看看如何让球[从墙上弹起](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)。
+现在我们可以转到下一课，看看如何让球[从墙壁反弹](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball", "Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls")}}

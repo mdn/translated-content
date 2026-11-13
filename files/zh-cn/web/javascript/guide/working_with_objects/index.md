@@ -99,7 +99,7 @@ myCar.year = 1969;
 
 ## 枚举一个对象的所有属性
 
-从 [ECMAScript 5](/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla) 开始，有三种原生的方法用于列出或枚举对象的属性：
+有三种原生的方法用于列出或枚举对象的属性：
 
 - [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环
   该方法依次访问一个对象及其原型链中所有可枚举的属性。

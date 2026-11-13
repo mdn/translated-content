@@ -17,7 +17,7 @@ Se existe um cabeçalho {{HTTPHeader("Cache-Control")}} com a diretiva "max-age"
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

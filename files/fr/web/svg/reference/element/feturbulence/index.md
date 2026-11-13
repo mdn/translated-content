@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feTurbulence
 original_slug: Web/SVG/Element/feTurbulence
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTurbulence>`** crée une image en utilisant la [fonction de turbulence de Perlin](https://fr.wikipedia.org/wiki/Bruit_de_Perlin). Cela permet de créer des textures artificielles comme des nuages, du marbre, etc.
 
 ## Contexte d'utilisation
@@ -16,9 +14,9 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTurbulence>`** crée une im
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -90,4 +88,4 @@ Cet élément implémente l'interface {{domxref("SVGFETurbulenceElement")}}.
 - {{SVGElement("feOffset")}}
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

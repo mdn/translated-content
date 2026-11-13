@@ -3,8 +3,6 @@ title: webRequest.onSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 ---
 
-{{AddonSidebar}}
-
 Cet événement est déclenché juste avant l'envoi des en-têtes. Si votre extension ou une autre extension a modifié les en-têtes dans `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, vous verrez la version modifiée ici.
 
 Cet événement est à titre d'information seulement.
@@ -132,8 +130,6 @@ browser.webRequest.onSendHeaders.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
