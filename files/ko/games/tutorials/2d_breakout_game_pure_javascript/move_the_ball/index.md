@@ -132,7 +132,58 @@ function draw() {
 
 아래의 라이브 데모에서 이 강의의 완성된 코드를 확인할 수 있습니다. 어떻게 작동하는지 더 잘 이해하기 위해 플레이 해보세요.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
+> [!NOTE]
+> 라이브 샘플이 자동으로 실행되지 않도록 "게임 시작" 버튼을 추가했습니다. 게임이 자동으로 시작되면서 알림 등의 이벤트가 과도하게 발생하는 것을 방지하기 위해서입니다.
+
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">게임 시작</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{EmbedLiveSample("여러분의 코드와 비교해보세요", 600, 350)}}
 
 연습해보기: 움직이는 공의 속도를 바꾸거나, 움직이는 방향을 바꿔보세요.
 
