@@ -17,10 +17,10 @@ l10n:
 ## 構文
 
 ```js-nolint
-// 古いコールバックの構文:
+// Promise を返す Promise 方式の構文:
 decodeAudioData(arrayBuffer)
 
-// 新しいプロミスベースの構文:
+// 値を返さないコールバック方式の構文:
 decodeAudioData(arrayBuffer, successCallback)
 decodeAudioData(arrayBuffer, successCallback, errorCallback)
 ```
