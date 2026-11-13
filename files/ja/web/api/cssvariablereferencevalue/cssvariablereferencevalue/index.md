@@ -1,32 +1,33 @@
 ---
-title: CSSVariableReferenceValue()
+title: "CSSVariableReferenceValue: CSSVariableReferenceValue() コンストラクター"
+short-title: CSSVariableReferenceValue()
 slug: Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`CSSVariableReferenceValue`** は {{domxref('CSS Typed Object Model API','','',' ')}} のインターフェイスで、組み込み CSS 値のカスタム名を作成することができます。このオブジェクトは機能的に「CSS 変数」と呼ばれることがあり、 {{cssxref('var()')}} 関数と同じ用途を提供します。カスタム名は 2 本のダッシュで始める必要があります。
+新しい {{domxref('CSSVariableReferenceValue')}} を生成します。
 
-## コンストラクター
+## 構文
 
-- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
-  - : 新しい `CSSVariableReferenceValue` オブジェクトを生成します。
+```js-nolint
+new CSSVariableReferenceValue(variable)
+new CSSVariableReferenceValue(variable, fallback)
+```
 
-## プロパティ
+### 引数
 
-- {{domxref('CSSVariableReferenceValue.variable')}}
-  - : コンストラクターに渡されたカスタム名を返します。
-- {{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}
-  - : カスタム名の組み込み CSS 値を返します。
-
-## メソッド
-
-なし。
+- `variable`
+  - : [カスタムプロパティ名](/ja/docs/Web/CSS/Reference/Properties/--*)。
+- `fallback` {{optional_inline}}
+  - : [カスタムプロパティの代替値](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties#カスタムプロパティ代替値)。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}

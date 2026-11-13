@@ -1,13 +1,14 @@
 ---
-title: FileSystemHandle.isSameEntry()
+title: "FileSystemHandle: isSameEntry() メソッド"
+short-title: isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: e1e7e2ac2cb1e40293c32c24bc0667905e9a7a04
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("FileSystemHandle")}} インターフェイスの **`isSameEntry()`** メソッドは、2 個の{{domxref("FileSystemHandle", "ハンドル")}}を比較し、対応するエントリー (ファイルまたはディレクトリー) が一致するかを確認します。
+**`isSameEntry()`** は {{domxref("FileSystemHandle")}} インターフェイスのメソッドで、2 個の{{domxref("FileSystemHandle", "ハンドル")}}を比較し、対応する項目 (ファイルまたはディレクトリー) が一致するかを確認します。
 
 ## 構文
 
@@ -22,20 +23,20 @@ isSameEntry(fileSystemHandle)
 
 ### 返値
 
-エントリーが一致するとき `true` となる {{jsxref('Boolean')}} を返します。
-
-### 例外
-
-例外は投げられません。
+項目が一致するとき `true` となる {{jsxref('Boolean')}} を返します。
 
 ## 例
 
-以下の関数は、1 個のエントリーをエントリーの配列と比較し、一致するエントリーを全て取り除いた新しい配列を返します。
+以下の関数は、単一の項目を配列と比較し、一致する項目をすべて除去した新しい配列を返値として満たす {{jsxref("Promise")}} を返します。
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry));
-
+async function removeMatches(fileEntry, entriesArr) {
+  const newArr = [];
+  for (const entry of entriesArr) {
+    if (!(await fileEntry.isSameEntry(entry))) {
+      newArr.push(entry);
+    }
+  }
   return newArr;
 }
 ```
@@ -50,5 +51,5 @@ function removeMatches(fileEntry, entriesArr) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -3,7 +3,7 @@ title: ウェブ製作者のためのアクセシビリティ情報
 short-title: ウェブ製作者のための情報
 slug: Web/Accessibility/Guides/Information_for_Web_authors
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
 ---
 
 この文書には、ウェブサイトのアクセシビリティの問題を調べ、修正するためのガイドライン、規制、方法、およびツールが記載されています。
@@ -41,8 +41,8 @@ l10n:
 - [Lighthouse Audits](https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md#using-programmatically)
 - [AccessLint.js](https://github.com/accesslint/accesslint.js/tree/master)
 
-GitHub のプルリクエストからアクセシビリティの課題を探す継続的インテグレーションツールです。
+GitHub のプルリクエストからアクセシビリティの課題を探す{{glossary("Continuous integration","継続的インテグレーション")}}ツールです。
 
-- [AccessLint](https://accesslint.com/)
+- [AccessLint](https://www.accesslint.com/)
 
 ウェブアプリケーションは実際のユーザーでテストするのがベストですが、色覚異常、弱視、低コントラスト、ズームなどをシミュレーションすることができます。キーボードナビゲーションをテストするために、常にマウスとタッチを使用してサイトをテストする必要があります。また、音声コマンドを使用してサイトをテストすることもできます。マウスを無効にして、[ウェブ障碍シミュレーター](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)のようなブラウザー拡張機能を使用してみてください。

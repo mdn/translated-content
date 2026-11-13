@@ -3,8 +3,6 @@ title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
-{{AddonSidebar}}
-
 Supprime les données de navigation spécifiées.
 
 Les données de navigation à supprimer sont spécifiées dans l'option `dataTypes`, qui est un objet {{WebExtAPIRef("browsingData.DataTypeSet")}}.

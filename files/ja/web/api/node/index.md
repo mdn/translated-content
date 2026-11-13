@@ -32,7 +32,7 @@ _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTar
 - {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
   - : ツリー構造で次のノードを表す `Node` を返します。該当するノードがない場合は `null` を返します。
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
-  - : `Node` の名前を持つ文字列を返します。名前の構造は、ノードの型によって異なります。例えば、{{DOMxRef("HTMLElement")}} は {{DOMxRef("HTMLAudioElement")}} に対して `'audio'` というように対応するタグの名前、 {{DOMxRef("Text")}} ノードは `'#text'` という文字列、 {{DOMxRef("Document")}} ノードは `'#document'` という文字列になります。
+  - : `Node` の名前を持つ文字列を返します。名前の構造は、ノードの型によって異なります。例えば、{{DOMxRef("HTMLElement")}} は {{DOMxRef("HTMLAudioElement")}} に対して `'AUDIO'` というように対応するタグの名前、 {{DOMxRef("Text")}} ノードは `'#text'` という文字列、 {{DOMxRef("Document")}} ノードは `'#document'` という文字列になります。
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
   - : ノードの型を表す `unsigned short` を返します。使用できる値は次の通りです。
 
@@ -96,6 +96,11 @@ _以下のメソッドに加えて、親である {{DOMxRef("EventTarget")}} か
   - : 現在の要素から子ノードを削除します。そのノードは現在のノードの子であることが必要です。
 - {{DOMxRef("Node.replaceChild()")}}
   - : 現在のノードの子 `Node` のひとつを、引数で指定した別のノードで置き換えます。
+
+## イベント
+
+- {{domxref("Node/selectstart_event", "selectstart")}}
+  - : ユーザーがこのノード内で新しく選択を開始した時発火します。
 
 ## 例
 

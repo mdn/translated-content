@@ -218,7 +218,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 
 ### 単語の境界に一致
 
-この例では、 "en" または "ed" で終わる単語を含む果物の名前にを照合します。
+この例では、 "en" または "ed" で終わる単語を含む果物の名前を照合します。
 
 ```js
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
 original_slug: Learn/JavaScript/First_steps/A_first_splash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Ahora que has aprendido algo sobre la teoría de JavaScript y lo que puedes hacer con ella, te daremos un curso intensivo sobre las características básicas de JavaScript a través de un tutorial completamente práctico. Aquí crearás un sencillo juego de "Adivina el número", paso a paso.
 
@@ -539,4 +539,4 @@ Juguemos un poco con algunos objetos del navegador.
 
 Así que eso es todo para construir el ejemplo. Llegaste al final, ¡bien hecho! Prueba tu código final, o [juega con nuestra versión final aquí](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si no puedes hacer que el ejemplo funcione, compáralo con el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "conflicting/Learn_web_development/Core/Scripting")}}

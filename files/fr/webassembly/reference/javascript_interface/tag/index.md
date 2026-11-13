@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Tag
 original_slug: WebAssembly/JavaScript_interface/Tag
 ---
 
-{{WebAssemblySidebar}}
-
 L'objet **`WebAssembly.Tag`** définit un _type_ d'exception WebAssembly qui peut être levée depuis ou vers du code WebAssembly.
 
 Lorsqu'on crée un objet [`WebAssembly.Exception`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception), la balise (<i lang="en">tag</i>) définit les types de données et l'ordre des valeurs portées par l'exception. La même instance de cette balise doit être utilisée ensuite afin d'accéder aux valeurs portées par les exceptions déclenchées (par exemple, en utilisant la méthode [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).

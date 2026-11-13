@@ -21,6 +21,6 @@ l10n:
 ## 参见
 
 - {{CSSxRef("overscroll-behavior")}} CSS 属性
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)模块
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)模块

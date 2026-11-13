@@ -3,8 +3,6 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
-{{JSRef}}
-
 创建一个 JavaScript `Date` 实例，该实例呈现时间中的某个时刻。`Date` 对象则基于 [Unix Time Stamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)，即自 1970 年 1 月 1 日（UTC）起经过的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date Constructor")}}
@@ -33,8 +31,8 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 ```
 
 > [!NOTE]
-> 创建一个新`Date`对象的唯一方法是通过{{jsxref("Operators/new", "new")}} 操作符，例如：`let now = new Date();`
-> 若将它作为常规函数调用（即不加 {{jsxref("Operators/new", "new")}} 操作符），将返回一个字符串，而非 `Date` 对象。
+> 创建一个新`Date`对象的唯一方法是通过{{jsxref("new")}} 操作符，例如：`let now = new Date();`
+> 若将它作为常规函数调用（即不加 {{jsxref("new")}} 操作符），将返回一个字符串，而非 `Date` 对象。
 
 ### 参数
 
@@ -91,11 +89,11 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - JavaScript 的时间由世界标准时间（UTC）1970 年 1 月 1 日开始，用毫秒计时，一天由 86,400,000 毫秒组成。`Date` 对象的范围是 -100,000,000 天至 100,000,000 天（等效的毫秒值）。
 - `Date` 对象为跨平台提供了统一的行为。时间属性可以在不同的系统中表示相同的时刻，而如果使用了本地时间对象，则反映当地的时间。
 - `Date` 对象支持多个处理 UTC 时间的方法，也相应地提供了应对当地时间的方法。UTC，也就是我们所说的格林威治时间，指的是 time 中的世界时间标准。而当地时间则是指执行 JavaScript 的客户端电脑所设置的时间。
-- 以一个函数的形式来调用 `Date` 对象（即不使用 {{jsxref("Operators/new", "new")}} 操作符）会返回一个代表当前日期和时间的字符串。
+- 以一个函数的形式来调用 `Date` 对象（即不使用 {{jsxref("new")}} 操作符）会返回一个代表当前日期和时间的字符串。
 
 ## 属性
 
-- {{jsxref("Date.prototype")}}
+- {{jsxref("Date")}}
   - : 允许为 `Date` 对象添加属性。
 - `Date.length`
   - : `Date.length` 的值是 7。这是该构造函数可接受的参数个数。
@@ -115,7 +113,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ## JavaScript `Date` 实例
 
-所有的 `Date` 实例都继承自 {{jsxref("Date.prototype")}}。修改 `Date` 构造函数的原型对象会影响到所有的 `Date` 实例。
+所有的 `Date` 实例都继承自 {{jsxref("Date")}}。修改 `Date` 构造函数的原型对象会影响到所有的 `Date` 实例。
 
 ### 实例属性
 

@@ -15,7 +15,7 @@ O cabeçalho **`Accept-CH`** é colocado pelo servidor para especificar quais ca
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>?</td>
     </tr>
   </tbody>

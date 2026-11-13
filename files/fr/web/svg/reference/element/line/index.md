@@ -1,16 +1,37 @@
 ---
 title: <line>
 slug: Web/SVG/Reference/Element/line
-original_slug: Web/SVG/Element/line
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-{{SVGRef}}
-
-L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
+L'élément [SVG](/fr/docs/Web/SVG) **`<line>`** est une forme de base SVG utilisée pour tracer une ligne reliant deux points.
 
 ## Contexte d'utilisation
 
-{{svginfo}}
+{{SVGInfo}}
+
+## Attributs
+
+- {{SVGAttr('x1')}}
+  - : Définit la coordonnée x du point de départ de la ligne.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#number)&nbsp;; _Valeur par défaut_&nbsp;: `0`&nbsp;; _Animation_&nbsp;: **oui**
+- {{SVGAttr('x2')}}
+  - : Définit la coordonnée x du point d'arrivée de la ligne.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#number)&nbsp;; _Valeur par défaut_&nbsp;: `0`&nbsp;; _Animation_&nbsp;: **oui**
+- {{SVGAttr('y1')}}
+  - : Définit la coordonnée y du point de départ de la ligne.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#number)&nbsp;; _Valeur par défaut_&nbsp;: `0`&nbsp;; _Animation_&nbsp;: **oui**
+- {{SVGAttr('y2')}}
+  - : Définit la coordonnée y du point d'arrivée de la ligne.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#number)&nbsp;; _Valeur par défaut_&nbsp;: `0`&nbsp;; _Animation_&nbsp;: **oui**
+- {{SVGAttr("pathLength")}}
+  - : Définit la longueur totale du tracé en unités utilisateur.
+    _Type de valeur_&nbsp;: [**\<number>**](/fr/docs/Web/SVG/Guides/Content_type#number)&nbsp;; _Valeur par défaut_&nbsp;: _aucune_ ; _Animation_&nbsp;: **oui**
+
+## Interface DOM
+
+Cet élément implémente l'interface {{DOMxRef("SVGLineElement")}}.
 
 ## Exemple
 
@@ -33,29 +54,9 @@ svg {
 
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
-## Attributs
+## Spécifications
 
-### Attributs globaux
-
-- [Attributs conditionnels](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_traitement_conditionnel)&nbsp;;
-- [Attributs centraux](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)&nbsp;;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'.c3.a9v.c3.a9nement_graphique)&nbsp;;
-- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_pr.c3.a9sentation)&nbsp;;
-- {{ SVGAttr("class") }}&nbsp;;
-- {{ SVGAttr("style") }}&nbsp;;
-- {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
-- {{ SVGAttr("transform") }}.
-
-### Attributs spécifiques
-
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("y2") }}
-
-## Interface DOM
-
-Cet élément implémente l'interface [`SVGLineElement`](/fr/docs/DOM/SVGLineElement).
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -63,5 +64,4 @@ Cet élément implémente l'interface [`SVGLineElement`](/fr/docs/DOM/SVGLineEle
 
 ## Voir aussi
 
-- {{ SVGElement("polygon") }}&nbsp;;
-- {{ SVGElement("path") }}.
+- Autres formes de base SVG&nbsp;: {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('polygon')}}, **{{SVGElement('polyline')}}**, {{SVGElement('rect')}}

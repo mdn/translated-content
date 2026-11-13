@@ -1,21 +1,21 @@
 ---
 title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "right-hand side of 'in' should be an object" は、 [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)が文字列、数値、その他のプリミティブ型の中を検索するために使用された場合に発生します。これは、あるプロパティがオブジェクト内にあることをチェックする用途でしか使用することができません。
 
 ## エラーメッセージ
 
-```js
-TypeError: Invalid operand to 'in' (Edge)
-TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+```plain
+TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
+TypeError: right-hand side of 'in' should be an object, got null (Firefox)
+TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("TypeError")}}
 
@@ -34,10 +34,10 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
 ```
 
-ここでは代わりに {{jsxref("String.prototype.indexOf()")}} を使う必要があります。
+ここでは代わりに {{jsxref("String.prototype.includes()")}} を使う必要があります。
 
 ```js example-good
-"Hello World".indexOf("Hello") !== -1;
+"Hello World".includes("Hello");
 // true
 ```
 
@@ -46,7 +46,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 調査対象のオブジェクトが実際に [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} になっていないことを確認してください。
 
 ```js example-bad
-var foo = null;
+const foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo' (Chrome)
 // TypeError: right-hand side of 'in' should be an object, got null (Firefox)
@@ -55,7 +55,7 @@ var foo = null;
 `in` 演算子は常にオブジェクトを期待します。
 
 ```js example-good
-var foo = { baz: "bar" };
+const foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
@@ -67,7 +67,7 @@ var foo = { baz: "bar" };
 `in` 演算子を使用して {{jsxref("Array")}} オブジェクトの中を検索するときは注意してください。 `in` 演算子は添字の数値をチェックするものであり、その位置の値をチェックするのではありません。
 
 ```js
-var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```

@@ -116,7 +116,7 @@ do {
 
 [`while`](/zh-TW/docs/Web/JavaScript/Reference/Statements/while) 陳述式會不斷執行它的陳述式只要指定的條件式判斷為 true。一個 while 陳述式看起來如下：
 
-```plain
+```js-nolint
 while (condition)
   statement
 ```
@@ -164,7 +164,7 @@ while (true) {
 
 label 陳述式的語法看起來如下：
 
-```plain
+```js-nolint
 label :
    statement
 ```
@@ -283,7 +283,7 @@ checkiandj: while (i < 4) {
 
 [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) 陳述式重複一個指定的變數來循環一個物件所有可枚舉的屬性。至於每個獨特的屬性，JavaScript 執行特定的陳述式。一個`for...in` 陳述式看起來像以下：
 
-```plain
+```js-nolint
 for (variable in object) {
   statements
 }

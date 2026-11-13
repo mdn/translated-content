@@ -2,7 +2,7 @@
 title: 414 URI Too Long
 slug: Web/HTTP/Reference/Status/414
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、クライアントがリクエストした URI が、サーバーが解釈しようとするものよりも長いことを示します。

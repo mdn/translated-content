@@ -1,11 +1,12 @@
 ---
-title: FetchEvent.request
+title: "FetchEvent: request プロパティ"
+short-title: request
 slug: Web/API/FetchEvent/request
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`request`** は {{domxref("FetchEvent")}} インターフェイスの読み取り専用プロパティで、イベントハンドラーを起動した {{domxref("Request")}} を返します。
 
@@ -64,7 +65,5 @@ self.addEventListener("fetch", (event) => {
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)<sup>(英語)</sup>
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

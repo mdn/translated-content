@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/viewport
 
 ## 语法
 
-```plain
+```js
 void gl.viewport(x, y, width, height);
 ```
 

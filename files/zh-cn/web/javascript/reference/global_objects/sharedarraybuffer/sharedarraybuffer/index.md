@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
 > [!NOTE]
 > `SharedArrayBuffer` 构造函数可能并不总是全局可用的，除非满足某些[安全要求](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements)。
 

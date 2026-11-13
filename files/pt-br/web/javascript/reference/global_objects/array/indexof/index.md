@@ -92,7 +92,7 @@ atualizarColecaoVegetais(vegetais, "espinafre");
 
 ## Polyfill
 
-`indexOf()` foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o `indexOf()` quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("Global_Objects/TypeError", "TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.
+`indexOf()` foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o `indexOf()` quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.
 
 ```js
 // Passos para a produção do ECMA-262, Edition 5, 15.4.4.14

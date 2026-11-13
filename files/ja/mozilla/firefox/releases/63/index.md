@@ -29,16 +29,16 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 ### CSS
 
 - {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
-- [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
-- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Flexbox レイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
+- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
-- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Guides/Media_queries/Using#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
-- [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
+- [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 
@@ -77,7 +77,7 @@ _変更なし。_
 - {{domxref("Element.toggleAttribute()")}} メソッドを実装しました ([Firefox バグ 1469592](https://bugzil.la/1469592))。
 - 以前は非標準であった {{domxref("Event.returnValue")}} プロパティを、互換性のためにサポートしました ([Firefox バグ 1452569](https://bugzil.la/1452569))。
 - ウェブ互換性を向上するために {{domxref("Window.event")}} プロパティを実装しました。現在は標準化されています ([Firefox バグ 218415](https://bugzil.la/218415))。ただし複数のウェブ互換性の問題 (例えば [Firefox バグ 1479964](https://bugzil.la/1479964)) により、すぐに設定項目 `dom.window.event.enabled` で Nightly 以外のチャンネルでは無効化しました ([Firefox バグ 1493869](https://bugzil.la/1493869))。
-- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("NavigatorID.platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
+- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("Navigator/platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
 - Firefox 63 より前のバージョンでは、`rel="noopener"` を持つ新しいウィンドウを開くリンク、および [`noopener`](/ja/docs/Web/API/Window/open#noopener) 機能を有効にして {{domxref("Window.open()")}} を呼び出した場合にすべてのウィンドウ機能を無効にしており、必要な標準機能を明示的に再有効化しなければなりませんでした。Firefox 63 ではこれらのウィンドウでほかのウィンドウと同じ機能が有効になり、不要な機能を明示的に無効化しなければなりません ([Firefox バグ 1419960](https://bugzil.la/1419960))。
 
 #### DOM イベント
@@ -103,13 +103,13 @@ _変更なし。_
 - Web Audio API の {{domxref("ConstantSourceNode")}} ノード型で、仕様書に合わせるためデフォルトのチャンネル数を 1 から 2 に変更しました ([Firefox バグ 1413283](https://bugzil.la/1413283))。
 - {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} の {{domxref("AudioScheduledSourceNode")}} インターフェイス (および拡張によって、このインターフェイスを基にしたすべてのノード) でノードの開始時間として負の値が指定されたときに、正しい例外が発生するようになりました。そのエラーは `RangeError` です ([Firefox バグ 1413284](https://bugzil.la/1413284))。
 - {{domxref("AudioParam")}} オブジェクトの {{domxref("AudioParam.value", "value")}} で許可される最小値と最大値を、それぞれ単精度浮動小数点数で最小の負の値 (-340,282,346,638,528,859,811,704,183,484,516,925,440) と最大の正の値 (+340,282,346,638,528,859,811,704,183,484,516,925,440) に変更しました ([Firefox バグ 1476695](https://bugzil.la/1476695))。
-- アクティブなストリームのコーデックを変更できる、{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
-- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{domxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
+- アクティブなストリームのコーデックを変更できる、{{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
+- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{jsxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
 - また {{domxref("AudioParam.setValueCurveAtTime()")}} が、`values` の配列に有限ではない値が存在する場合に、`TypeError` を正しく返すようになりました ([Firefox バグ 1472095](https://bugzil.la/1472095))。
 - さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従って引数が終了したとき、引数の値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
-- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを {{domxref("RTCRtpStreamStats")}} に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
-- `RTCRtpStreamStats` ディクショナリーの {{domxref("RTCRtpStreamStats.kind", "kind")}} プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
-- {{domxref("RTCRtpStreamStats")}} ディクショナリーの {{domxref("RTCRtpStreamStats.isRemote", "isRemote")}} プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
+- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを `RTCRtpStreamStats` に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
+- `RTCRtpStreamStats` ディクショナリーの `kind` プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
+- `RTCRtpStreamStats` ディクショナリーの `isRemote` プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
 
 #### Canvas と WebGL
 
@@ -132,7 +132,7 @@ _変更なし。_
 ### セキュリティ
 
 - サイトで [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
-- CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクディブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
+- CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクティブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
 - Firefox が NSS 3.39 を使用するようになりました ([Firefox バグ 1470914](https://bugzil.la/1470914))。
 
 ### プラグイン
@@ -143,7 +143,7 @@ _変更なし。_
 
 #### 新機能
 
-- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
+- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Reference/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
 - `unhandledPromptBehavior` capability をサポートしました。これは、WebDriver 仕様の特定の [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) を定義できます ([Firefox バグ 1264259](https://bugzil.la/1264259))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` コマンドに、ユーザープロンプトの処理を追加しました ([Firefox バグ 1439995](https://bugzil.la/1439995))。
 

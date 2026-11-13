@@ -11,9 +11,9 @@ slug: WebAssembly/Guides/Loading_and_running
 
 WebAssembly ещё не интегрирована с `<script type='module'>` или ES2015 оператором `import`, поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.
 
-Старые методы {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} требуют создания {{domxref("ArrayBuffer")}}, содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр. Это аналог `new Function(string)`, за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).
+Старые методы [`WebAssembly.compile`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compile)/[`WebAssembly.instantiate`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate) требуют создания {{jsxref("ArrayBuffer")}}, содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр. Это аналог `new Function(string)`, за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).
 
-Более новые методы {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} намного эффективнее - они выполняют свои действия непосредственно с необработанным потоком байтов, поступающих из сети, избавление от необходимости шага {{domxref("ArrayBuffer")}}.
+Более новые методы [`WebAssembly.compileStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming)/[`WebAssembly.instantiateStreaming`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) намного эффективнее - они выполняют свои действия непосредственно с необработанным потоком байтов, поступающих из сети, избавление от необходимости шага {{jsxref("ArrayBuffer")}}.
 
 Итак, как мы можем получить эти байты в буфер массива и скомпилировать? Следующие разделы объясняют.
 
@@ -21,7 +21,7 @@ WebAssembly ещё не интегрирована с `<script type='module'>` �
 
 [Fetch](/ru/docs/Web/API/Fetch_API) - это удобный современный API для извлечения сетевых ресурсов.
 
-Самый быстрый и эффективный способ получить модуль wasm - использовать более новый метод {{jsxref("WebAssembly.instantiateStreaming()")}}, который может принять вызов `fetch()` в качестве первого аргумента и будет обрабатывать загрузку, компиляцию и создание экземпляра модуля за один шаг, получая доступ к необработанному байтовому коду при его потоковой передаче с сервера:
+Самый быстрый и эффективный способ получить модуль wasm - использовать более новый метод [`WebAssembly.instantiateStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming), который может принять вызов `fetch()` в качестве первого аргумента и будет обрабатывать загрузку, компиляцию и создание экземпляра модуля за один шаг, получая доступ к необработанному байтовому коду при его потоковой передаче с сервера:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
@@ -31,7 +31,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-Если бы мы использовали более старый метод {{jsxref("WebAssembly.instantiate()")}}, который не работает в прямом потоке, нам потребовался бы дополнительный шаг преобразования преобразованного байт-кода в {{domxref("ArrayBuffer")}}, вот так:
+Если бы мы использовали более старый метод [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate), который не работает в прямом потоке, нам потребовался бы дополнительный шаг преобразования преобразованного байт-кода в {{jsxref("ArrayBuffer")}}, вот так:
 
 ```js
 fetch("module.wasm")
@@ -44,7 +44,7 @@ fetch("module.wasm")
 
 ### Помимо перегрузок instantiate()
 
-Функция {{jsxref("WebAssembly.instantiate()")}} имеет две формы перегрузки - та, что показана выше, принимает байт-код для компиляции в качестве аргумента и возвращает `Promise`, которое разрешается для объекта, содержащего оба объекта скомпилированного модуля, и экземпляр этого. Объект выглядит так:
+Функция [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate) имеет две формы перегрузки - та, что показана выше, принимает байт-код для компиляции в качестве аргумента и возвращает `Promise`, которое разрешается для объекта, содержащего оба объекта скомпилированного модуля, и экземпляр этого. Объект выглядит так:
 
 ```js
 {
@@ -57,11 +57,11 @@ fetch("module.wasm")
 > Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
 
 > [!NOTE]
-> Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
+> Вторая форма перегрузки принимает в качестве аргумента объект [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module) и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Выполнение вашего кода WebAssembly
 
-Когда у вас есть экземпляр WebAssembly, доступный в вашем JavaScript, вы можете начать использовать его возможности, которые были экспортированы через свойство {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Ваш код может выглядеть примерно так:
+Когда у вас есть экземпляр WebAssembly, доступный в вашем JavaScript, вы можете начать использовать его возможности, которые были экспортированы через свойство [`WebAssembly.Instance.exports`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports). Ваш код может выглядеть примерно так:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
@@ -89,7 +89,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 1. Создайте новый экземпляр {{domxref("XMLHttpRequest()")}} и используйте его метод {{domxref("XMLHttpRequest.open","open()")}} для открытия запроса, задав для метода запроса значение `GET` и указав путь к файлу, который мы хотим получить.
 2. Ключевой частью этого является установка типа ответа `'arraybuffer'` с помощью свойства {{domxref("XMLHttpRequest.responseType","responseType")}}.
 3. Затем отправьте запрос с помощью {{domxref("XMLHttpRequest.send()")}}.
-4. Затем мы используем обработчик событий {{domxref("XMLHttpRequest.onload", "onload")}} для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из {{domxref("XMLHttpRequest.response", "response")}} и затем передайте это в наш метод {{jsxref("WebAssembly.instantiate()")}}, как мы это делали с Fetch.
+4. Затем мы используем обработчик событий {{domxref("XMLHttpRequest.onload", "onload")}} для вызова функции после завершения загрузки ответа - в этой функции мы получаем буфер массива из {{domxref("XMLHttpRequest.response", "response")}} и затем передайте это в наш метод [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate), как мы это делали с Fetch.
 
 Финальный код выглядит так:
 

@@ -18,7 +18,7 @@ El **User-Agent** {{Glossary("request header")}} es una cadena característica q
    <td>{{Glossary("Request header")}}</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <th scope="row">{{Glossary("Forbidden request header")}}</th>
    <td>no</td>
   </tr>
  </tbody>

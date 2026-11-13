@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("Performance API")}}{{deprecated_header}}
+{{APIRef("Performance API")}}
 
 遗留的 **`Performance.timing`** 只读属性会返回一个与延迟相关的性能信息的 {{domxref("PerformanceTiming")}} 对象。
 

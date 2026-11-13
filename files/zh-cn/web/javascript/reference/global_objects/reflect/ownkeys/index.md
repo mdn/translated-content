@@ -3,8 +3,6 @@ title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
 
-{{JSRef}}
-
 静态方法 **`Reflect.ownKeys()`** 返回一个由目标对象自身的属性键组成的数组。
 
 {{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
@@ -26,7 +24,7 @@ console.log(Reflect.ownKeys(array1));
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.ownKeys(target)
 ```
 

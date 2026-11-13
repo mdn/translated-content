@@ -2,15 +2,15 @@
 title: Améliorations SVG dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
 l10n:
-  sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
+  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
 ---
 
-La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Cet article fournit la liste des fonctionnalités (documentées par ailleurs) des fonctionnalités ajoutées à Firefox 3.
+Firefox 3 offre une prise en charge améliorée du format [Scalable Vector Graphics](/fr/docs/Web/SVG) (SVG) par rapport aux versions précédentes de Firefox. Bien que ces fonctionnalités soient documentées ailleurs, cet article sert de liste pratique pour que vous puissiez facilement déterminer quelles fonctionnalités ont été ajoutées dans Firefox 3.
 
-- Prise en charge de l'élément `foreignObject` (voir [le bogue 326966](https://bugzilla.mozilla.org/show_bug.cgi?id=326966)). Pour plus de détails, consultez [la spécification](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) ou [cet article](https://robert.ocallahan.org/2006/06/future-is-now_20.html).
-- Prise en charge de l'élément `pattern` ([spécification](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
-- Prise en charge de l'élément `mask` ([spécification](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
-- Prise en charge de l'ensemble des filtres SVG 1.1 ([spécification](https://www.w3.org/TR/SVG11/filters.html))&nbsp;:
+- L'élément {{SVGElement("foreignObject")}} est désormais pris en charge ([bogue Firefox 326966 <sup>(angl.)</sup>](https://bugzil.la/326966)).
+- L'élément {{SVGElement("pattern")}} est désormais pris en charge.
+- L'élément {{SVGElement("mask")}} est désormais pris en charge.
+- La prise en charge de tous les [filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects) SVG 1.1 a été ajoutée&nbsp;:
   - `filter`
   - `feDistantLight`
   - `fePointLight`
@@ -34,14 +34,13 @@ La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Ce
   - `feSpecularLighting`
   - `feTurbulence`
   - `feTile`
-
-- Correction de plusieurs bogues pour la gestion de l'élément `<a>` en SVG&nbsp;: [267664](https://bugzilla.mozilla.org/show_bug.cgi?id=267664), [268135](https://bugzilla.mozilla.org/show_bug.cgi?id=268135), [316248](https://bugzilla.mozilla.org/show_bug.cgi?id=316248), [317270](https://bugzilla.mozilla.org/show_bug.cgi?id=317270), et [320724](https://bugzilla.mozilla.org/show_bug.cgi?id=320724).
-- Implémentation des méthodes du DOM SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()`, et `getCharNumAtPosition()`.
-- Prise en charge de l'attribut `xml:space` ([spécification](https://www.w3.org/TR/SVG/text.html#WhiteSpace))
-- Prise en charge pour les alternatives `fill`/`stroke` ([spécification](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))
-- Prise en charge des unités `em` et `ex` units pour indiquer des longueurs ([305859](https://bugzilla.mozilla.org/show_bug.cgi?id=305859)).
+- La gestion de l'élément HTML `<a>` en SVG a été corrigée pour plusieurs bogues&nbsp;; voir [bogue Firefox 267664 <sup>(angl.)</sup>](https://bugzil.la/267664), [bogue WebKit 268135 <sup>(angl.)</sup>](https://bugzil.la/268135), [bogue WebKit 316248 <sup>(angl.)</sup>](https://bugzil.la/316248), [bogue WebKit 317270 <sup>(angl.)</sup>](https://bugzil.la/317270) et [bogue WebKit 320724 <sup>(angl.)</sup>](https://bugzil.la/320724).
+- Les méthodes du DOM SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()` et `getCharNumAtPosition()` ont été implémentées.
+- L'attribut [`xml:space`](/fr/docs/Web/SVG/Reference/Attribute/xml:space) est désormais pris en charge.
+- Les alternatives `fill`/`stroke` sont désormais prises en charge.
+- Les unités `em` et `ex` sont désormais prises en charge pour indiquer des longueurs ([bogue Firefox 305859 <sup>(angl.)</sup>](https://bugzil.la/305859)).
 
 ## Voir aussi
 
 - [SVG](/fr/docs/Web/SVG)
-- [Notes de version de Firefox 3 pour les développeuses et développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 3 pour les développeuses et développeurs](/fr/docs/Mozilla/Firefox/Releases/3)

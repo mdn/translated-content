@@ -8,7 +8,7 @@ O **método HTTP `POST`** envia dados ao servidor. O tipo do corpo da solicitaç
 
 A diferença entre `PUT` e {{HTTPMethod("POST")}} é que `PUT` é idempotente: chamá-lo uma vez ou várias vezes sucessivamente tem o mesmo efeito (ou seja, nenhum efeito colateral), onde sucessivos POST idênticos podem ter efeitos adicionais, assim como passando uma ordem várias vezes.
 
-Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do elemento {{HTMLElement("form")}} ou o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/input#formenctype) dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
+Uma solicitação `POST` geralmente é enviada por meio de um [formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms) e resulta em uma alteração no servidor. Nesse caso, o tipo de conteúdo é selecionado colocando a string adequada no atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do elemento {{HTMLElement("form")}} ou o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Reference/Elements/input#formenctype) dos elementos {{HTMLElement("input")}} ou {{HTMLElement("button")}}:
 
 - `application/x-www-form-urlencoded`: as chaves e valores são codificados em tuplas de valor-chave separadas por `'&'`, com um `'='` entre a chave e o valor. Caracteres não alfanuméricos em chaves e valores são {{glossary ("percent-encoding", "percent encoded")}}: este é o motivo pelo qual esse tipo não é adequado para uso com dados binários (ao invés disso, use `multipart/form-data`)
 - `multipart/form-data`
@@ -34,7 +34,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
+        <a href="/pt-BR/docs/Glossary/Safe"
           >Seguro</a
         >
       </th>
@@ -42,7 +42,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
+        <a href="/pt-BR/docs/Glossary/Idempotent"
           >Idempotente</a
         >
       </th>
@@ -59,7 +59,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulários HTML</a>
       </th>
       <td>Sim</td>
     </tr>

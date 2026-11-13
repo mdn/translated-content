@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-braillelabel"
 short-title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
 La propriété globale `aria-braillelabel` définit une valeur de chaîne de caractères qui étiquette l'élément actuel, qui est destiné à être converti en braille.
@@ -26,7 +26,7 @@ Lors de l'utilisation de `aria-braillelabel`, assurez-vous que&nbsp;:
 > Les technologies d'assistance avec support braille peuvent convertir les noms accessibles en braille.
 > Par conséquent, n'utilisez `aria-braillelabel` que lorsque le nom accessible n'est pas l'expérience utilisateur souhaitée.
 
-Utiliser uniquement un nom accessible, par exemple, à partir du contenu ou via `aria-label` est presque toujours la meilleure expérience utilisateur, donc n'utilisez pas aria-braillelabel pour reproduire aria-label. N'utilisez `aria-braillelabel` que si le nom accessible ne peut pas fournir une représentation braille adéquate.
+Utiliser uniquement un nom accessible, par exemple, à partir du contenu ou avec `aria-label` est presque toujours la meilleure expérience utilisateur, donc n'utilisez pas aria-braillelabel pour reproduire aria-label. N'utilisez `aria-braillelabel` que si le nom accessible ne peut pas fournir une représentation braille adéquate.
 
 ```html
 <button aria-braillelabel="***">
@@ -51,6 +51,6 @@ Utilisé dans **TOUS** les rôles.
 
 ## Voir aussi
 
-- {{domxref("Element.ariaBrailleLabel")}}
+- La propriété API {{DOMxRef("Element.ariaBrailleLabel")}}
 - L'attribut ARIA [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - L'attribut ARIA [`aria-brailleroledescription`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)

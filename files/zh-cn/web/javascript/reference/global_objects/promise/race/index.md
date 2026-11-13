@@ -3,8 +3,6 @@ title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 
-{{JSRef}}
-
 **`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
 
 {{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}

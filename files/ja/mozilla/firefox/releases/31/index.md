@@ -1,9 +1,12 @@
 ---
-title: Firefox 31 for developers
+title: Firefox 31 開発者向けリリースノート
+short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
 l10n:
-  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
+
+Firefox 31 は米国時間 2014 年 7 月 22 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox および Gecko の開発者、アドオン開発者にも有益な主要な変更点を掲載しています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -39,11 +42,12 @@ l10n:
 
 新たな ECMAScript 2015 の機能を実装しました。
 
-- 新たな `Array` のメソッド: {{jsxref("Array.prototype.fill()")}} ([Firefox バグ 911147](https://bugzil.la/911147))
+- 新たな `Array` の組み込みメソッド: {{jsxref("Array.prototype.fill()")}} ([Firefox バグ 911147](https://bugzil.la/911147))
 - 新たな `Math` の関数: {{jsxref("Math.clz32()")}} ([Firefox バグ 925123](https://bugzil.la/925123))
-- 新たな `String` のメソッド: デスクトップ版 Firefox で {{jsxref("String.prototype.normalize()")}} が利用可能になりました ([Firefox バグ 918987](https://bugzil.la/918987))。
+- 新たな `String` の組み込みメソッド: デスクトップ版 Firefox で {{jsxref("String.prototype.normalize()")}} が利用可能になりました ([Firefox バグ 918987](https://bugzil.la/918987))。
 - 新たな `Object` のメソッド: {{jsxref("Object.setPrototypeOf()")}}
 - 新たな `Number` 定数: {{jsxref("Number.MAX_SAFE_INTEGER")}} および {{jsxref("Number.MIN_SAFE_INTEGER")}}。
+- ES2015 のプロキシー {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} トラップが実装されました ([Firefox bug 978235](https://bugzil.la/978235))。
 
 ### インターフェイス/API/DOM
 
@@ -53,7 +57,7 @@ l10n:
 - `InputEvent` インターフェイスを実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - `InputEvent.isComposing` 属性を実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ([Firefox バグ 955860](https://bugzil.la/955860))。
-- 他のブラウザーと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- 他のブラウザーと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` 状態の設定を抑止することはできません。
 - {{domxref("Path2D")}} インターフェイスが実装されました。
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}、{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}、{{domxref("CanvasRenderingContext2D.clip()")}}、{{domxref("CanvasRenderingContext2D.fill()")}}、{{domxref("CanvasRenderingContext2D.stroke()")}} メソッドがオプションで {{domxref("Path2D")}} オブジェクトを受け付けるように更新されました。
 - {{domxref("HTMLMediaElement.fastSeek()")}} を実装しました。
@@ -62,7 +66,7 @@ l10n:
 
 ### MathML
 
-- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition) を部分的に実装しました ([Firefox バグ 407059](https://bugzil.la/407059))。詳しくは [MathML torture test](/ja/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
+- ISO/IEC CD 14496-22 3rd edtion のセクション 6.3.6 にある [OpenType MATH table](https://learn.microsoft.com/en-us/typography/opentype/spec/math) を部分的に実装しました ([Firefox バグ 407059](https://bugzil.la/407059))。詳しくは [MathML torture test](https://web.archive.org/web/20210605072117/https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) をお試しください。
 - `::-moz-math-stretchy` 擬似要素を削除しました ([Firefox バグ 1000879](https://bugzil.la/1000879))。
 - 可能であれば、math valiant が bold、italic、bold-italic である場合に Unicode の数学用英数字記号を使用するようになりました ([Firefox バグ 930504](https://bugzil.la/930504))。
 
@@ -80,7 +84,7 @@ _変更なし。_
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
-- 昔から "`center`" に設定されていた `urlbar-wrapper` （以前は `urlbar-container` ）上の "`align`" 属性が削除されました。これはサードパーティのテーマに影響を与えることが知られています。自分のテーマにとって正しい修正が何であるかはよく見ていく必要がありますが、同等の効果を維持するためには、以下の CSS ルールを追加するとよいでしょう。
+- 昔から `center` に設定されていた `urlbar-wrapper` （以前は `urlbar-container` ）上の `align` 属性が削除されました。これはサードパーティのテーマに影響を与えることが知られています。自分のテーマにとって正しい修正が何であるかはよく見ていく必要がありますが、同等の効果を維持するためには、以下の CSS ルールを追加するとよいでしょう。
 
   ```css
   #urlbar-wrapper {
@@ -88,21 +92,17 @@ _変更なし。_
   }
   ```
 
-- `nsIDOMWindowUtils.sendQueryContentEvent()` および `nsIDOMWindowUtils.sendSelectionSetEvent()` が、省略可能な引数 `aAdditionalFlags` を持ちます。`aReverse` を `true` にして `nsIDOMWindowUtils.sendSelectionSetEvent()` を呼び出している場合、この変更により動作に問題が発生します。`aAdditionalFlags` について詳しくは、[各フラグの説明](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#定数) (`QUERY_CONTENT_FLAG_*` および `SELECTION_SET_FLAG_*`) をご覧ください。
+- `nsIDOMWindowUtils.sendQueryContentEvent()` および `nsIDOMWindowUtils.sendSelectionSetEvent()` が、省略可能な引数 `aAdditionalFlags` を持ちます。`aReverse` を `true` にして `nsIDOMWindowUtils.sendSelectionSetEvent()` を呼び出している場合、この変更により動作に問題が発生します。`aAdditionalFlags` について詳しくは、[各フラグの説明](https://web.archive.org/web/20210518041413/https://developer.mozilla.org/en-US/docs/mozilla/tech/xpcom/reference/interface/nsidomwindowutils#constants) (`QUERY_CONTENT_FLAG_*` および `SELECTION_SET_FLAG_*`) をご覧ください。
 
 ### Add-on SDK
 
 ハイライト:
 
-- [アドオンデバッガー](/ja/docs/Mozilla/Add-ons/Add-on_Debugger)
-- [高水準な BrowserWindow オブジェクトと DOM の windows との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows)および[高水準な Tab オブジェクトと XUL の tabs との間の変換](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs)を行う機能を追加しました。
+- [アドオンデバッガー](https://extensionworkshop.com/documentation/develop/debugging/)
+- [高水準な BrowserWindow オブジェクトと DOM の windows との間の変換](https://web.archive.org/web/20201201230444/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/windows#converting_to_dom_windows)および[高水準な Tab オブジェクトと XUL の tabs との間の変換](https://web.archive.org/web/20210117200824/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/tabs#converting_to_xul_tabs)を行う機能を追加しました。
 - Mac OS X の panel で使用するデフォルトテーマを更新しました。
-- panel に [contentStyle および contentStyleFile](/ja/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) オプションを追加しました。
+- panel に [contentStyle および contentStyleFile](https://web.archive.org/web/20201201022417/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/panel#styling_panel_content) オプションを追加しました。
 
 [Firefox 30 から Firefox 31 の間に行われた GitHub コミット](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
 
 [Firefox 30 から Firefox 31 の間に解決したバグ](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962)。この一覧は Aurora 移行後に上流で行われた内容が含まれていないでしょう。
-
-### 過去のバージョン
-
-{{Firefox_for_developers('30')}}

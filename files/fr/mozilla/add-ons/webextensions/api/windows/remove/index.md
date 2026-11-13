@@ -3,8 +3,6 @@ title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
 ---
 
-{{AddonSidebar}}
-
 Ferme une fenêtre et tous les onglets à l'intérieur, compte tenu de l'ID de la fenêtre.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

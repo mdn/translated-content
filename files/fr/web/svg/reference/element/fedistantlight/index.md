@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feDistantLight
 original_slug: Web/SVG/Element/feDistantLight
 ---
 
-{{SVGRef}}
-
 La primitive de filtre **`<feDistantLight>`** définit une source de lumière distante, que l'on place dans une primitive de filtre d'éclairage:{{SVGElement("feDiffuseLighting")}} ou {{SVGElement("feSpecularLighting")}}.
 
 ## Contexte d'utilisation

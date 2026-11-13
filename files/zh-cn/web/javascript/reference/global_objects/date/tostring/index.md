@@ -3,8 +3,6 @@ title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
 
-{{JSRef}}
-
 **`toString()`** 方法返回一个字符串，以本地的时区表示该 {{jsxref("Date")}} 对象。
 
 {{InteractiveExample("JavaScript Demo: Date.toString()")}}

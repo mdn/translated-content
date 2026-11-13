@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: accept"
+title: "`accept` 属性"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
 
@@ -48,7 +46,7 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-一方、メディアファイルを受け入れる場合は、そのメディア種別の任意の形式を含めるようにしたいかもしれません。
+一方、メディアファイルを受け入れる場合は、そのメディア種別の任意の形式を含めた方が良いかもしれません。
 
 ```html
 <input type="file" id="soundFile" accept="audio/*" />
@@ -104,15 +102,10 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
 ### 基本的な例
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="file">アップロードするファイルを選択してください</label>
-    <input type="file" id="file" name="file" multiple />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="file">アップロードするファイルを選択してください</label>
+  <input type="file" id="file" name="file" multiple />
+</div>
 ```
 
 ```css hidden
@@ -123,12 +116,9 @@ div {
 
 これは次のような出力を生成します。
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
+{{EmbedLiveSample('A_basic_example', 650, 80)}}
 
-> [!NOTE]
-> この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
-
-ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
+ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されます。
 
 上記のように [`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性を含めることで、複数のファイルを一度に選択できるようになります。ユーザーは、選択したプラットフォームが許す任意の方法でファイルピッカーから複数のファイルを選択することができます（例えば、 <kbd>Shift</kbd> キーまたは <kbd>Control</kbd> キーを押しながらクリックするなど）。 `<input>` ごとに 1 つのファイルのみを選択させたい場合は、 `multiple` 属性を省略してください。
 
@@ -146,19 +136,14 @@ div {
 もっと完全な例を見てみましょう。
 
 ```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">アップロードするファイルを選んでください</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="profile_pic">アップロードするファイルを選んでください</label>
+  <input
+    type="file"
+    id="profile_pic"
+    name="profile_pic"
+    accept=".jpg, .jpeg, .png" />
+</div>
 ```
 
 ```css hidden
@@ -167,7 +152,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 80)}}
 
 ## 仕様書
 

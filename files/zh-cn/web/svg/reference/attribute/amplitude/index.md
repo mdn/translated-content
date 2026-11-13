@@ -20,7 +20,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">值</th>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">默认值</th>

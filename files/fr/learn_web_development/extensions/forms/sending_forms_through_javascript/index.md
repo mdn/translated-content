@@ -6,13 +6,11 @@ l10n:
   sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{LearnSidebar}}
-
 Les formulaires HTML peuvent envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) de façon déclarative. Il est aussi possible d'utiliser les formulaires afin de préparer des requêtes HTTP qu'on enverra avec JavaScript, par exemple avec `XMLHttpRequest` ou `Fetch`. Dans cet article, nous verrons en quoi consiste cette approche.
 
 ## Un formulaire parfois détourné
 
-Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
+Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
 
 ### Maîtriser l'interface générale
 

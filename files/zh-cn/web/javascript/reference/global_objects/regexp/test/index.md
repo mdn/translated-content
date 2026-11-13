@@ -3,8 +3,6 @@ title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`test()`** 方法使用正则表达式在指定字符串中执行搜索。如果存在匹配，则返回 `true`, 否则返回 `false`。
 
 JavaScript 的 {{jsxref("RegExp")}} 对象在设置了 {{jsxref("RegExp/global", "global")}}（全局）或 {{jsxref("RegExp/sticky", "sticky")}}（粘性）标志时（例如 `/foo/g` 或 `/foo/y`），是**有状态的**。它们会从上一次匹配中保存一个 {{jsxref("RegExp/lastIndex", "lastIndex")}} 属性。利用这个特性，`test()` 方法可以用来在一段文本字符串中（配合捕获组）迭代查找多个匹配项。

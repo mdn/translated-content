@@ -3,10 +3,10 @@ title: Set.prototype.intersection()
 short-title: intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`intersection()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この Set と指定された集合の両方にある要素の入った新しい Set を返します。
+**`intersection()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この集合と指定された集合の両方にある要素の入った新しい集合を返します。
 
 ## 構文
 
@@ -38,7 +38,7 @@ intersection(other)
 
 ![2 つの円が重なっているベン図。AとBの交点が重なっている部分です。](diagram.svg)
 
-`intersection()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
+`intersection()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
 
 - `this` の中の要素が `other.size` よりも多かった場合、`other` を `keys()` メソッドを呼び出すことで走査し、そこから生成されたすべての要素のうち `this` にも存在する要素で新しい Set を構築します。
 - そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`other.has(e)` が[真値](/ja/docs/Glossary/Truthy)を返すすべてを含む新しい Set を構築します。
@@ -67,7 +67,7 @@ console.log(odds.intersection(squares)); // Set(2) { 1, 9 }
 
 ## 関連情報
 
-- [`Set.prototype.intersection` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.intersection` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.intersection` のポリフィル](https://www.npmjs.com/package/set.prototype.intersection)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

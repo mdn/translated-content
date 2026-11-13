@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/substring
 original_slug: Web/XPath/Reference/Functions/substring
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La función `substring` devuelve una parte de una cadena dada.
 

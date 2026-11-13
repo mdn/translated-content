@@ -18,7 +18,7 @@ name = attribute.localName
 
 ### Valor de retorno
 
-Uma {{domxref("DOMString")}} representando a parte local do nome qualificado do atributo.
+Uma {{jsxref("String")}} representando a parte local do nome qualificado do atributo.
 
 ## Exemplo
 

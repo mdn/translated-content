@@ -3,9 +3,9 @@ title: CryptoKey
 slug: Web/API/CryptoKey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-L'interface **`CryptoKey`** représente une {{glossary("clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
+L'interface **`CryptoKey`** représente une {{glossary("key", "clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
 
 Un objet `CryptoKey` peut être obtenu en utilisant : {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}
 
@@ -16,7 +16,7 @@ _Cette interface n'hérite d'aucune propriété._
 - {{domxref("CryptoKey.type")}}
   - : Retourne une énumération de valeurs représentant un type de clef, une clef secrète (pour un algorithme symétriques), une clef publique ou privée (pour un algorithme asymétrique)
 - {{domxref("CryptoKey.extractable")}}
-  - : Retourne un {{jsxref("booléen")}} indiquant si l'information peut être extraite de l'application ou non.
+  - : Retourne un {{jsxref("Boolean", "booléen")}} indiquant si l'information peut être extraite de l'application ou non.
 - {{domxref("CryptoKey.algorithm")}}
   - : Retourne un objet opaque représentant un chiffre particulier avec lequel la clé doit être utilisée avec.
 - {{domxref("CryptoKey.usages")}}

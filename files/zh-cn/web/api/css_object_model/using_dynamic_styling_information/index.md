@@ -91,7 +91,7 @@ CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，
 
 ## DOM 样式对象
 
-`style` 对象表示了一个单独的样式声明。不像[`document.styleSheets`](/zh-CN/docs/DOM/document.styleSheets) 集合中每个单独的样式规则，样式规则是通过 `document` 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。
+`style` 对象表示了一个单独的样式声明。不像[`document.styleSheets`](/zh-CN/docs/Web/API/Document/styleSheets) 集合中每个单独的样式规则，样式规则是通过 `document` 对象或者应用改样式的元素来访问的。它表示特定元素的内联样式。
 
 比这两个属性更重要的是使用 `style` 对象来给某个元素设置单独的样式属性。
 

@@ -214,7 +214,7 @@ function pollGamepads() {
 }
 ```
 
-Voyons maintenant la boucle de jeu principale. Pour chaque exécution de la boucle, on regarde si un des quatre boutons est pressé. Si c'est le cas, on met à jour les variables de mouvement `a` et `b` de façon correspondante. Ensuite, on met à jour les propriétés CSS [`left`](/fr/docs/Web/CSS/left) et [`top`](/fr/docs/Web/CSS/top) avec les valeurs respectives de `a` et `b`. En pratique, cela aura pour effet de déplacer la balle sur l'écran.
+Voyons maintenant la boucle de jeu principale. Pour chaque exécution de la boucle, on regarde si un des quatre boutons est pressé. Si c'est le cas, on met à jour les variables de mouvement `a` et `b` de façon correspondante. Ensuite, on met à jour les propriétés CSS [`left`](/fr/docs/Web/CSS/Reference/Properties/left) et [`top`](/fr/docs/Web/CSS/Reference/Properties/top) avec les valeurs respectives de `a` et `b`. En pratique, cela aura pour effet de déplacer la balle sur l'écran.
 
 Une fois que tout ça est fait, on utilise `requestAnimationFrame()` pour passer à la <i lang="en">frame</i> suivante, où on exécute à nouveau `gameLoop()`.
 

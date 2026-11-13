@@ -8,7 +8,7 @@ slug: Web/HTML/Reference/Elements/samp
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td><a href="/en/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
@@ -21,7 +21,7 @@ slug: Web/HTML/Reference/Elements/samp
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

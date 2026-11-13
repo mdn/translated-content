@@ -121,7 +121,7 @@ browser.runtime.getManifest().version;
 
 ## Совместимость с браузерами
 
-Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) с браузерами.
+Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) с браузерами.
 
 {{Compat}}
 

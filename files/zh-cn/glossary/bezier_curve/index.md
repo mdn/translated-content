@@ -16,5 +16,5 @@ l10n:
 ## 参见
 
 - 维基百科上的[贝塞尔曲线](https://zh.wikipedia.org/wiki/貝塞爾曲線)
-- [CSS 中的贝塞尔缓动函数](/zh-CN/docs/Web/CSS/easing-function#使用_cubic-bezier_函数)
+- [CSS 中的贝塞尔缓动函数](/zh-CN/docs/Web/CSS/Reference/Values/easing-function#使用_cubic-bezier_函数)
 - {{SVGAttr("keySplines")}} SVG 属性

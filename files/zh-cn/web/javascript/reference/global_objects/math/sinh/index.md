@@ -3,15 +3,11 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.sinh()`** 函数返回一个数字 (单位为角度) 的双曲正弦值。
 
 ## 语法
 
-```plain
+```js-nolint
 Math.sinh(x)
 ```
 

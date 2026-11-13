@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}{{SecureContext_Header}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
 非推奨の **`Navigator.getUserMedia()`** メソッドは、最大 1 系統の動画入力機器（カメラや共有画面など）および最大 1 系統の音声入力機器（マイクなど）を {{domxref("MediaStream")}} のソースとして使用する許可をユーザーに求めます。
 

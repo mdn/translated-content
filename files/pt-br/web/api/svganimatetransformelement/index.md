@@ -7,7 +7,7 @@ slug: Web/API/SVGAnimateTransformElement
 
 A interface `SVGAnimateTransformElement` corresponde ao elemento {{SVGElement("animateTransform")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Propriedades
 

@@ -115,6 +115,6 @@ ARIA `tooltip` ロールの使用は、通常のブラウザーのツールチ�
 ## 関連情報
 
 - [`dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
-- [CSS: `:focus` 擬似クラス](/ja/docs/Web/CSS/:focus)
+- [CSS: `:focus` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 - [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

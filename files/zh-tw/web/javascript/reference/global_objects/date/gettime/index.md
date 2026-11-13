@@ -33,7 +33,7 @@ getTime()
 
 ## 描述
 
-`Date` 物件基本上是由一個[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)表示，而此方法允許你取得該時間戳。你可以使用此方法來協助將日期和時間指派給另一個 {{jsxref("Date")}} 物件。此方法在功能上等同於 {{jsxref("Date/valueof", "valueOf()")}} 方法。
+`Date` 物件基本上是由一個[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)表示，而此方法允許你取得該時間戳。你可以使用此方法來協助將日期和時間指派給另一個 {{jsxref("Date")}} 物件。此方法在功能上等同於 {{jsxref("Date/valueOf", "valueOf()")}} 方法。
 
 ## 範例
 

@@ -2,24 +2,26 @@
 title: Guides ARIA
 slug: Web/Accessibility/ARIA/Guides
 original_slug: Web/Accessibility/ARIA/ARIA_Guides
+l10n:
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-{{AccessibilitySidebar}}
+Les applications internet riches et accessibles (<i lang="en">Accessible Rich Internet Applications</i> en anglais, aussi abrégé **<abbr>ARIA</abbr>**) définissent des moyens de rendre le web plus accessible aux personnes en situation de handicap.
+Cette page liste les guides que vous pouvez utiliser pour améliorer l'accessibilité de fonctionnalités web telles que les tableaux, les formulaires et la navigation au clavier.
 
-**ARIA** (Accessible Rich Internet Applications ou Applications Internet riches accessibles) défini une manière de rendre le web plus accessible pour les personnes en situation de handicap. Les quelques principes suivant permettent de s'assurer d'une meilleure accessibilité :
+{{SubPagesWithSummaries}}
 
-- Traiter les erreurs dans les formulaires
-- Labelliser les composants d'interface
-- Labelliser les composants composés (Composite Widgets) et des zones (Regions)
-- Gérer le focus dans les composants composés (`aria-activedescendant` vs roving tabindex)
-- Utiliser les rôles de points de repère (Landmark Roles)
-- Traiter les actualisations dynamiques & des zones «&nbsp;Live&nbsp;»
-- Mode Virtuel contre mode non virtuel dans les produits de technologies d'assistance
-- Utiliser le Glisser & déposer
-- Notifier les utilisateurs sur les lecteurs d'écran non-ARIA
-- Arranger la structure avec le rôle `presentation`
-- Masquer les trames des tableaux
-- Gérer les dialogues modaux et non modaux
-- Utiliser ARIA avec HTML5
-- Comment tester ARIA ?
-- ARIA sur les périphériques mobiles
+## Voir aussi
+
+- [Concevoir des formulaires accessibles <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/forms/)
+- [Comprendre les bases de WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
+- [Créer des widgets JavaScript accessibles au clavier](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
+- [Utiliser ARIA pour des étiquettes avec champs intégrés](/fr/docs/Web/Accessibility/ARIA/Guides/Multipart_labels)
+- [Gérer la sélection dans les widgets composites <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` contre le <i lang="en">roving tabindex</i>)
+- [Tester ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/test-evaluate/)
+- [Afficher des tableaux accessibles <sup>(angl.)</sup>](https://www.w3.org/WAI/tutorials/tables/)
+- [Étiqueter les widgets](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [Rôles de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)
+- [Zones « live » ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
+- [L'API HTML Drag and Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ARIA&nbsp;: rôle de présentation](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)

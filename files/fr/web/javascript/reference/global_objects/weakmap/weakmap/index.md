@@ -3,8 +3,6 @@ title: Constructeur WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
 
-{{JSRef}}
-
 Le **constructeur `WeakMap()`** permet de créer un nouvel objet [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) éventuellement basé sur un autre objet itérable fourni en argument (par exemple, [un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)).
 
 ## Syntaxe

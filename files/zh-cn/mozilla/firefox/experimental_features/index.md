@@ -220,7 +220,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Refer
 
 ### content-visibility: auto 值
 
-如果内容[不与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
+如果内容[不与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
 
 <table>
   <thead>
@@ -258,11 +258,11 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Refer
   </tbody>
 </table>
 
-请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些特性监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
+请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些特性监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/Guides/Containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
 
 ### 在媒体查询中将单个数字作为纵横比
 
-在为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)指定宽高比时，支持将单个 {{cssxref("number")}} 用作 {{cssxref("ratio")}} 。（详见 [Firefox bug 1565562](https://bugzil.la/1565562)）。
+在为[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)指定宽高比时，支持将单个 {{cssxref("number")}} 用作 {{cssxref("ratio")}} 。（详见 [Firefox bug 1565562](https://bugzil.la/1565562)）。
 
 <table>
   <thead>
@@ -384,48 +384,6 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
   </tbody>
 </table>
 
-### Masonry grid 布局
-
-新增对基于网格布局的 [masonry 风格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Masonry_layout)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
-
-<table>
-  <thead>
-    <tr>
-      <th>更新通道</th>
-      <th>添加的版本</th>
-      <th>默认启用？</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>77</td>
-      <td>是</td>
-    </tr>
-    <tr>
-      <th>开发者版</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>发行版</th>
-      <td>77</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>首选项名称</th>
-      <td colspan="2">
-        <code>layout.css.grid-template-masonry-value.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### fit-content() 函数
 
 {{cssxref("fit-content_function", "fit-content()")}} 函数适用于 {{cssxref("width")}} 和其他大小属性。CSS 网格布局轨迹大小已经支持该函数。（详情请参见 [Firefox bug 1312588](https://bugzil.la/1312588)）
@@ -468,11 +426,11 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### 滚动驱动的动画
 
-滚动驱动动画早先被称为“滚动链接动画”，它取决于滚动条的滚动位置，而不是时间或其他维度。通过 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性（以及 {{cssxref('scroll-timeline')}} 速记属性），你可以指定特定命名容器中的特定滚动条作为滚动驱动动画的源。然后，通过将 {{cssxref('animation-timeline')}} 属性设置为使用 `scroll-timeline-name` 定义的名称值，可以将滚动时间轴与[动画](/zh-CN/docs/Web/CSS/CSS_animations)关联。
+滚动驱动动画早先被称为“滚动链接动画”，它取决于滚动条的滚动位置，而不是时间或其他维度。通过 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性（以及 {{cssxref('scroll-timeline')}} 速记属性），你可以指定特定命名容器中的特定滚动条作为滚动驱动动画的源。然后，通过将 {{cssxref('animation-timeline')}} 属性设置为使用 `scroll-timeline-name` 定义的名称值，可以将滚动时间轴与[动画](/zh-CN/docs/Web/CSS/Guides/Animations)关联。
 
 使用 {{cssxref('scroll-timeline')}} 速记属性时，属性值的顺序必须是 {{cssxref('scroll-timeline-name')}} 后跟 {{cssxref('scroll-timeline-axis')}}。完整属性和速记属性均可在首选项后面使用。
 
-也可以使用 [`scroll()`](/zh-CN/docs/Web/CSS/animation-timeline/scroll) 函数标记和 {{cssxref('animation-timeline')}} 来表示时间轴将使用祖先元素中的滚动条轴。
+也可以使用 [`scroll()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) 函数标记和 {{cssxref('animation-timeline')}} 来表示时间轴将使用祖先元素中的滚动条轴。
 
 有关详细信息，请参阅 [Firefox bug 1807685](https://bugzil.la/1807685)、[Firefox bug 1804573](https://bugzil.la/1804573)、[Firefox bug 1809005](https://bugzil.la/1809005)、[Firefox bug 1676791](https://bugzil.la/1676791)、[Firefox bug 1754897](https://bugzil.la/1754897) 和 [Firefox bug 1737918](https://bugzil.la/1737918)。
 
@@ -514,7 +472,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### :has() 伪类
 
-[`:has()`](/zh-CN/docs/Web/CSS/:has) 伪类会选择包含作为参数传递的选择器的元素。（详见 [Firefox bug 1771896](https://bugzil.la/1771896)）。
+[`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has) 伪类会选择包含作为参数传递的选择器的元素。（详见 [Firefox bug 1771896](https://bugzil.la/1771896)）。
 
 <table>
   <thead>
@@ -554,7 +512,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### @font-face src 特性检查
 
-`@font-face` [`src` 描述符](/zh-CN/docs/Web/CSS/@font-face/src)现在支持 `tech()` 函数，允许根据用户代理是否支持特定字体特性或技术来决定是否下载字体资源。详情请参见 [Firefox bug 1715546](https://bugzil.la/1715546)。
+`@font-face` [`src` 描述符](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/src)现在支持 `tech()` 函数，允许根据用户代理是否支持特定字体特性或技术来决定是否下载字体资源。详情请参见 [Firefox bug 1715546](https://bugzil.la/1715546)。
 
 <table>
   <thead>
@@ -594,7 +552,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### round() 数学函数
 
-CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根据选定的舍入策略对数字（或表达式的结果）进行舍入。详情请参见 [Firefox bug 1764850](https://bugzil.la/1764850)。
+CSS [`round()`](/zh-CN/docs/Web/CSS/Reference/Values/round) 函数是一个数学函数，可根据选定的舍入策略对数字（或表达式的结果）进行舍入。详情请参见 [Firefox bug 1764850](https://bugzil.la/1764850)。
 
 <table>
   <thead>
@@ -634,7 +592,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### font-variant-emoji
 
-通过 CSS [`font-variant-emoji`](/zh-CN/docs/Web/CSS/font-variant-emoji) 属性，你可以设置显示表情符号的默认显示样式。详情请参见（[Firefox bug 1461589](https://bugzil.la/1461589)）。
+通过 CSS [`font-variant-emoji`](/zh-CN/docs/Web/CSS/Reference/Properties/font-variant-emoji) 属性，你可以设置显示表情符号的默认显示样式。详情请参见（[Firefox bug 1461589](https://bugzil.la/1461589)）。
 
 <table>
   <thead>
@@ -674,7 +632,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### page-orientation
 
-**`page-orientation`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@page")}} at-rule 的描述符控制打印页面的旋转。当页面方向发生变化时，它将处理跨页面的内容流。该行为与 [`size`](/zh-CN/docs/Web/CSS/@page/size) 描述符不同，用户可以定义页面的旋转方向。详情请参见（[Firefox bug 1673987](https://bugzil.la/1673987)）。
+**`page-orientation`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@page")}} at-rule 的描述符控制打印页面的旋转。当页面方向发生变化时，它将处理跨页面的内容流。该行为与 [`size`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/size) 描述符不同，用户可以定义页面的旋转方向。详情请参见（[Firefox bug 1673987](https://bugzil.la/1673987)）。
 
 <table>
   <thead>
@@ -714,7 +672,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### prefers-reduced-transparency 媒体特性
 
-CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced-transparency) 媒体特性可让你检测用户是否已启用设置，以尽量减少设备上的透明或半透明图层效果。
+CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) 媒体特性可让你检测用户是否已启用设置，以尽量减少设备上的透明或半透明图层效果。
 更多详情请参见（[Firefox bug 1736914](https://bugzil.la/1736914)）。
 
 <table>
@@ -755,7 +713,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### inverted-colors 媒体特性
 
-通过 CSS [`inverted-colors`](/zh-CN/docs/Web/CSS/@media/inverted-colors) 媒体特性，可以检测用户代理或底层操作系统是否正在反转颜色。详情请参阅（[Firefox bug 1794628](https://bugzil.la/1794628)）。
+通过 CSS [`inverted-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) 媒体特性，可以检测用户代理或底层操作系统是否正在反转颜色。详情请参阅（[Firefox bug 1794628](https://bugzil.la/1794628)）。
 
 <table>
   <thead>
@@ -795,7 +753,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### 具名观看进度时间线属性
 
-通过 CSS [`view-timeline-name`](/zh-CN/docs/Web/CSS/view-timeline-name) 属性，你可以为特定元素赋予一个名称，表明其祖先滚动元素是视图进度时间轴的来源。然后，可以将该名称分配给 `animation-timeline`，当相关元素在其祖先滚动器的可见区域内移动时，`animation-timeline` 就会为其制作动画。详情请参见（[Firefox bug 1737920](https://bugzil.la/1737920)）。
+通过 CSS [`view-timeline-name`](/zh-CN/docs/Web/CSS/Reference/Properties/view-timeline-name) 属性，你可以为特定元素赋予一个名称，表明其祖先滚动元素是视图进度时间轴的来源。然后，可以将该名称分配给 `animation-timeline`，当相关元素在其祖先滚动器的可见区域内移动时，`animation-timeline` 就会为其制作动画。详情请参见（[Firefox bug 1737920](https://bugzil.la/1737920)）。
 
 <table>
   <thead>
@@ -835,7 +793,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### 匿名观看进度时间线属性
 
-通过 CSS [`view()`](/zh-CN/docs/Web/CSS/animation-timeline/view) 函数，可以指定元素的 `animation-timeline` 为视图进度时间轴，当元素在其父元素滚动条的可见区域内移动时，该时间轴将为其制作动画。该函数定义了提供时间轴的父元素的轴，以及动画开始和开始的可见区域的嵌入区。详情请参见（[Firefox bug 1808410](https://bugzil.la/1808410)）。
+通过 CSS [`view()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/view) 函数，可以指定元素的 `animation-timeline` 为视图进度时间轴，当元素在其父元素滚动条的可见区域内移动时，该时间轴将为其制作动画。该函数定义了提供时间轴的父元素的轴，以及动画开始和开始的可见区域的嵌入区。详情请参见（[Firefox bug 1808410](https://bugzil.la/1808410)）。
 
 <table>
   <thead>
@@ -915,7 +873,7 @@ CSS {{cssxref("offset-position")}} 属性定义了元素在路径上的初始位
 
 ### abs() 和 sign() 数学函数
 
-CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 数学函数允许你分别获取参数的绝对值和符号。详情请参见 [Firefox bug 1814588](https://bugzil.la/1814588) 和 [Firefox bug 1814589](https://bugzil.la/1814589)。
+CSS [`abs()`](/zh-CN/docs/Web/CSS/Reference/Values/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/Reference/Values/sign) 数学函数允许你分别获取参数的绝对值和符号。详情请参见 [Firefox bug 1814588](https://bugzil.la/1814588) 和 [Firefox bug 1814589](https://bugzil.la/1814589)。
 
 <table>
   <thead>
@@ -957,7 +915,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
 
 ### rect() 和 xywh() 基本图形函数
 
-通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}）中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
+通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}）中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
 
 <table>
   <thead>
@@ -1385,7 +1343,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### OpenFont COLRv1 字体
 
-该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合特性的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
+该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合特性的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
 
 <table>
   <thead>
@@ -1425,7 +1383,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### CSS 属性和值 API
 
-[CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API) 允许开发人员通过 JavaScript 中的 [`registerProperty()`](/zh-CN/docs/Web/API/CSS/registerProperty_static)或 CSS 中的 [`@property`](/zh-CN/docs/Web/CSS/@property) 规则注册自定义 CSS 属性。使用这两种方法注册属性时，可以进行类型检查、设置默认值，以及设置是否从父元素继承值。详情请参见 [Firefox bug 1840480](https://bugzil.la/1840480)。
+[CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API) 允许开发人员通过 JavaScript 中的 [`registerProperty()`](/zh-CN/docs/Web/API/CSS/registerProperty_static)或 CSS 中的 [`@property`](/zh-CN/docs/Web/CSS/Reference/At-rules/@property) 规则注册自定义 CSS 属性。使用这两种方法注册属性时，可以进行类型检查、设置默认值，以及设置是否从父元素继承值。详情请参见 [Firefox bug 1840480](https://bugzil.la/1840480)。
 
 <table>
   <thead>
@@ -1465,7 +1423,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### CSS 自定义高亮 API
 
-[CSS 自定义高亮 API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 为文档中任意文本范围的样式化提供了一种机制（概括了其他高亮伪元素的行为，如 {{cssxref('::selection')}}、{{cssxref('::spelling-error')}}、{{cssxref('::grammar-error')}} 和 {{cssxref('::target-text')}}）。这些范围在 JavaScript 中使用 [`Range`](/zh-CN/docs/Web/API/Range) 实例进行定义，这些实例在 [`Highlight`](/zh-CN/docs/Web/API/Highlight) 中分组，然后使用 [`HighlightRegistry`](/zh-CN/docs/Web/API/HighlightRegistry) 注册名称。CSS [`::highlight`](/zh-CN/docs/Web/CSS/::highlight) 伪元素用于为已注册的高亮应用样式。详情请参见 [Firefox bug 1703961](https://bugzil.la/1703961)。
+[CSS 自定义高亮 API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 为文档中任意文本范围的样式化提供了一种机制（概括了其他高亮伪元素的行为，如 {{cssxref('::selection')}}、{{cssxref('::spelling-error')}}、{{cssxref('::grammar-error')}} 和 {{cssxref('::target-text')}}）。这些范围在 JavaScript 中使用 [`Range`](/zh-CN/docs/Web/API/Range) 实例进行定义，这些实例在 [`Highlight`](/zh-CN/docs/Web/API/Highlight) 中分组，然后使用 [`HighlightRegistry`](/zh-CN/docs/Web/API/HighlightRegistry) 注册名称。CSS [`::highlight`](/zh-CN/docs/Web/CSS/Reference/Selectors/::highlight) 伪元素用于为已注册的高亮应用样式。详情请参见 [Firefox bug 1703961](https://bugzil.la/1703961)。
 
 <table>
   <thead>
@@ -1602,8 +1560,8 @@ Firefox 现在支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)。
 
 CSS 更新包括：
 
-- [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
-- [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已经得到扩展以支持 popover。
+- [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open)
+- [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 已经得到扩展以支持 popover。
 
 以下 HTML 全局属性得到了支持：
 

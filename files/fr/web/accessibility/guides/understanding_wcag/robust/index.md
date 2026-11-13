@@ -72,6 +72,6 @@ Cette directive vise à rendre le contenu aussi compatible que possible, non seu
 
 - [WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. [Perceptible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-  2. [Opérable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  2. [Utilisable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. [Compréhensible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
   4. Robuste

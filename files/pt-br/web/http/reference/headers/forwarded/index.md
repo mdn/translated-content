@@ -17,7 +17,7 @@ Este cabeçalho é utilizado para depuração, estatísticas, e gerar conteúdo 
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

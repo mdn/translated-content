@@ -12,7 +12,7 @@ slug: Web/API/Response/redirected
 
 ## 值
 
-一个布尔值 ({{domxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
+一个布尔值 ({{jsxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
 
 ## 示例
 

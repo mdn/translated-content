@@ -1,6 +1,9 @@
 ---
-title: Window.screenX
+title: "Window: screenX プロパティ"
+short-title: screenX
 slug: Web/API/Window/screenX
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
 {{APIRef}}
@@ -10,13 +13,7 @@ slug: Web/API/Window/screenX
 > [!NOTE]
 > `screenX` の別名である {{domxref("Window.screenLeft")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
 
-## 構文
-
-```js
-leftWindowPos = window.screenX;
-```
-
-### 返値
+## 値
 
 ブラウザーのビューポートの左端から画面の左端までの CSS ピクセル数に等しい数値です。
 
@@ -35,9 +32,9 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = "rgb(0, 0, 255)";
+  ctx.fillStyle = "rgb(0 0 255)";
   ctx.beginPath();
   ctx.arc(
     leftUpdate + width / 2,
@@ -49,11 +46,7 @@ function positionElem() {
   );
   ctx.fill();
 
-  pElem.textContent =
-    "Window.screenLeft: " +
-    window.screenLeft +
-    ", Window.screenTop: " +
-    window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 XML 宣言（例えば `<?xml version="1.0"?>`）で指定されたバージョン番号を返し、宣言がなければ "1.0" を返します。
 

@@ -475,7 +475,7 @@ router.get("/", function (req, res) {
 
 上面路由的相應模板在下面給出（**index.pug**）。我們稍後會詳細討論這個語法。你現在需要知道的是，標題變量 `title`（值為 '`Express`'）將插入模板中指定的位置。
 
-```plain
+```pug
 extends layout
 
 block content

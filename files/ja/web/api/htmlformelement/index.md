@@ -68,7 +68,7 @@ _このインターフェイスには親である {{domxref("HTMLElement")}} か
 
 ### フォーム要素オブジェクトの取得
 
-`HTMLFormElement` オブジェクトを取得するには、[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)と {{domxref("Document.querySelector", "querySelector()")}} を使うか、document の {{domxref("Document.forms", "forms")}} プロパティを使ってすべてのフォームのリストを取得できます。
+`HTMLFormElement` オブジェクトを取得するには、[CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)と {{domxref("Document.querySelector", "querySelector()")}} を使うか、document の {{domxref("Document.forms", "forms")}} プロパティを使ってすべてのフォームのリストを取得できます。
 
 {{domxref("Document.forms")}} は `HTMLFormElement` オブジェクトの配列、つまりそのページの各フォームの一覧を返します。その後、以下の構文を使用して、個々のフォームを取得することができます。
 

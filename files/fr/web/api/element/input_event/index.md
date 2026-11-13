@@ -1,37 +1,80 @@
 ---
-title: input
+title: "Element : évènement input"
+short-title: input
 slug: Web/API/Element/input_event
+l10n:
+  sourceCommit: bd2f9b713de3aad1afd4a8531a5605a16accf091
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-L'évènement DOM `input` _(entrée)_ est déclenché de façon synchrone quand la valeur d'un élément {{HTMLElement("input")}} _(entrée)_, {{HTMLElement("select")}} _(sélection)_ ou {{ HTMLElement("textarea") }} _(zone de texte)_ est modifiée. (Pour les éléments `input` avec `type=checkbox` _(case à cocher)_ ou `type=radio` , l'évènement `input` n'est pas lancé quand l'utilisateur clique sur le contrôle, parce que la valeur attribuée ne peut être changée).
+L'évènement **`input`** se déclenche lorsque la `value` d'un élément HTML {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} a été modifiée directement par une action de l'utilisateur·ice (comme taper dans une zone de texte ou cocher une case).
 
-De plus, l'évènement `input` se déclenche sur les éditeurs [`contenteditable`](/fr/docs/Web/API/HTMLElement/contentEditable) quand son contenu est modifié. Dans ce cas, l'évènement cible est l'élément "editing host" _(hôte de l'édition)_ . S'il y a deux éléments ou plus qui ont `contenteditable` à true _(vrai)_, "editing host" est l'élément ancêtre le plus proche dont le parent n'est pas modifiable . De même, il est déclenché sur l'élément racine des éditeurs [`designMode`](/fr/docs/Web/API/Document/designMode) .
+L'évènement s'applique également aux éléments avec {{DOMxRef("HTMLElement.contentEditable", "contenteditable")}} activé, et à tout élément lorsque {{DOMxRef("Document.designMode", "designMode")}} est activé. Dans le cas de `contenteditable` et `designMode`, la cible de l'évènement est _l'hôte d'édition_. Si ces propriétés s'appliquent à plusieurs éléments, le hôte d'édition est l'ancêtre le plus proche dont le parent n'est pas éditable.
 
-## Information générale
+## Syntaxe
 
-- Spécification
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input), [DOM Level 3 Events](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input)
-- Interface
-  - : {{domxref("Event")}}, {{domxref("InputEvent")}}
-- Propagation
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : Élement
-- Action par défaut
-  - : La valeur ou le contenu est modifié
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
 
-## Propriétés
+```js-nolint
+addEventListener("input", (event) => { })
 
-| Property                        | Type                       | Description                                            |
-| ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+oninput = (event) => { }
+```
+
+## Type d'évènement
+
+Un objet {{DOMxRef("InputEvent")}}. Hérite de {{DOMxRef("UIEvent")}}.
+
+{{InheritanceDiagram("InputEvent")}}
+
+> [!NOTE]
+> Pour les éléments HTML {{HTMLElement("textarea")}} et {{HTMLElement("input")}} qui acceptent des entrées de texte (`type=text`, `type=tel`, etc.), l'interface est {{DOMxRef("InputEvent")}}&nbsp;; pour les autres, l'interface est {{DOMxRef("Event")}}.
+
+## Description
+
+Pour les éléments `<input>` avec `type=checkbox` ou `type=radio`, l'évènement `input` doit se déclencher chaque fois qu'un·e utilisateur·ice bascule le contrôle, conformément à la [spécification du standard vivant HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Cependant, historiquement, ce n'a pas toujours été le cas. Vérifiez la compatibilité, ou utilisez plutôt l'évènement {{DOMxRef("HTMLElement/change_event", "change")}} pour les éléments de ces types.
+
+Pour les éléments HTML {{HTMLElement("textarea")}} et {{HTMLElement("input")}} qui acceptent une saisie de texte (`type=text`, `type=tel`, etc.), l'interface est {{DOMxRef("InputEvent")}}&nbsp;; pour les autres, l'interface est {{DOMxRef("Event")}}.
+
+L'évènement `input` se déclenche chaque fois que la `value` de l'élément change. Cela diffère de l'évènement {{DOMxRef("HTMLElement/change_event", "change")}}, qui ne se déclenche que lorsque la valeur est validée, par exemple en appuyant sur la touche Entrée ou en sélectionnant une valeur dans une liste d'options. Notez que l'évènement `input` ne se déclenche pas lorsque JavaScript modifie la valeur (`value`) d'un élément de manière programmatique.
+
+En général, seuls les changements de valeur initiés par l'utilisateur·ice, y compris le remplissage automatique, sont censés déclencher l'évènement `input`. Certains changements de la valeur d'un contrôle ne déclenchent pas du tout l'évènement `input`, par exemple&nbsp;:
+
+- Définir la valeur de manière programmatique, par exemple en assignant à la `value` d'un élément ou au `selectedIndex` d'un élément `<select>`.
+- Modifier les éléments enfants d'un contrôle d'une manière qui change sa valeur, par exemple en supprimant l'élément `<option>` sélectionné d'un élément `<select>`.
+- Modifier les attributs d'un contrôle d'une manière qui amène le navigateur à ajuster sa valeur, par exemple en modifiant le `min` ou le `max` d'un champ de type plage (`range`) de sorte que sa valeur actuelle se situe en dehors des nouvelles limites.
+- Réinitialiser un formulaire, ce qui ne déclenche qu'un évènement {{DOMxRef("HTMLFormElement/reset_event", "reset")}}.
+- Le navigateur restaure les valeurs de formulaire enregistrées lors de la navigation dans l'historique. Les contrôles dont les valeurs sont restaurées peuvent varier selon les navigateurs.
+- Chrome efface le nom d'utilisateur·ice et le mot de passe non modifiés et remplis automatiquement si les informations d'identification ne sont plus disponibles, par exemple lorsque l'utilisateur·ice s'est déconnecté·e de Chrome après le remplissage automatique.
+
+## Exemples
+
+Cet exemple enregistre la valeur chaque fois que vous modifiez la valeur de l'élément HTML {{HTMLElement("input")}}.
+
+### HTML
+
+```html
+<input placeholder="Entrer du texte" name="nom" />
+<p id="valeurs"></p>
+```
+
+### JavaScript
+
+```js
+const champ = document.querySelector("input");
+const journal = document.getElementById("valeurs");
+
+champ.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  journal.textContent = e.target.value;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -43,6 +86,7 @@ De plus, l'évènement `input` se déclenche sur les éditeurs [`contenteditable
 
 ## Voir aussi
 
-- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-- [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-- [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)
+- Évènements associés&nbsp;:
+  - {{DOMxRef("Element/beforeinput_event", "beforeinput")}}
+  - {{DOMxRef("HTMLElement/change_event", "change")}}
+  - {{DOMxRef("HTMLInputElement/invalid_event", "invalid")}}

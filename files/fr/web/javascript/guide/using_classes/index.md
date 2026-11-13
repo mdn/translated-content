@@ -305,7 +305,7 @@ rouge.values[0] = 0;
 console.log(rouge.values[0]); // 0
 ```
 
-Il existe une philosophie en programmation orientée objet appelée «&nbsp;encapsulation&nbsp;». Cela signifie qu'il ne faut pas accéder à l'implémentation interne d'un objet, mais utiliser des méthodes bien abstraites pour interagir avec lui. Par exemple, si nous décidions soudain de représenter les couleurs en [HSL](/fr/docs/Web/CSS/color_value/hsl) plutôt qu'en RGB&nbsp;:
+Il existe une philosophie en programmation orientée objet appelée «&nbsp;encapsulation&nbsp;». Cela signifie qu'il ne faut pas accéder à l'implémentation interne d'un objet, mais utiliser des méthodes bien abstraites pour interagir avec lui. Par exemple, si nous décidions soudain de représenter les couleurs en [HSL](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) plutôt qu'en RGB&nbsp;:
 
 ```js
 class Color {

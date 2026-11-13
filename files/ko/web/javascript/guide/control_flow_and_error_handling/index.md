@@ -114,7 +114,7 @@ if ((x = y)) {
 }
 ```
 
-그러나 가끔은 조건에서 할당하는 것이 더 편한 경우도 있습니다. 이런 상황에 참고할 수 있도록, [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 문서의 ["할당을 조건으로 사용하기"](/ko/docs/Web/JavaScript/Reference/Statements/while#할당을_조건으로_사용하기)에서 일반적인 모범 구문의 안내를 제공하고 있습니다.
+그러나 가끔은 조건에서 할당하는 것이 더 편한 경우도 있습니다. 이런 상황에 참고할 수 있도록, [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 문서의 ["할당을 조건으로 사용하기"](/ko/docs/Web/JavaScript/Reference/Statements/while#변수_할당을_조건으로_사용하기)에서 일반적인 모범 구문의 안내를 제공하고 있습니다.
 
 #### 거짓 값
 

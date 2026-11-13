@@ -91,7 +91,7 @@ DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라�
           <strong><code>ownerDocument</code></strong> property 는 그것이 속해
           있는 document 를 return 한다. ), 이 object 는 root document object
           자체이다. 는 <code>document</code> object 에 대한 설명은
-          <a href="/ko/docs/DOM/document" title="DOM/document"
+          <a href="/ko/docs/Web/API/Document" title="DOM/document"
             >DOM <code>document</code> Reference</a
           >
           챕터를 참조하라.
@@ -278,8 +278,8 @@ table.summary = "note: increased border";
 ## Subnav
 
 - [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
+- [Introduction to the DOM](/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)
 - [Events and the DOM](/ko/docs/Learn_web_development/Core/Scripting/Events)
-- [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
+- [Examples](/ko/docs/conflicting/Web/API/Document_Object_Model)
 
 {{DefaultAPISidebar("DOM")}}

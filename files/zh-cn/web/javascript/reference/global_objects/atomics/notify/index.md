@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`Atomics.notify()`** 静态方法唤醒一些在等待队列中休眠的代理。
 
 > [!NOTE]

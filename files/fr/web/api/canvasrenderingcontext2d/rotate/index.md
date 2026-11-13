@@ -60,8 +60,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
->
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
 ```
 
 ```js hidden

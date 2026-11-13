@@ -1,31 +1,26 @@
 ---
-title: Accept-Patch
+title: Accept-Patch ヘッダー
+short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
-original_slug: Web/HTTP/Headers/Accept-Patch
 l10n:
-  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-**`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
+HTTP の **`Accept-Patch`** {{Glossary("response header", "レスポンスヘッダー")}}は、サーバーが {{HTTPMethod("PATCH")}} リクエストで認識できる[メディア種別](/ja/docs/Web/HTTP/Guides/MIME_types)を伝えます。
+例えば、対応していないメディア種別を含む `PATCH` リクエストを受信したサーバーは、{{HTTPStatus("415", "415 Unsupported Media Type")}} を返すとともに、1 つ以上の対応メディア種別を指定した `Accept-Patch` ヘッダーを返すことができます。
 
-何らかのメソッドに対するレスポンスの **`Accept-Patch`** は、 Request-URI で特定されるリソースに対して PATCH が受け入れられることを意味しています。 2 つのよくあるケースがこれをもたらします。
-
-サポートされていないメディアタイプの PATCH リクエストを受信したサーバーは、{{HTTPStatus("415")}} `Unsupported Media Type`と、 1 つ以上のサポートされているメディアタイプを参照する Accept-Patch ヘッダーで応答する可能性があります。
+このヘッダーは、`PATCH` メソッドに対応しているリソースに対する {{HTTPMethod("OPTIONS")}} リクエストに現れる必要があります。
+どのリクエストメソッドに対するレスポンスであっても、そこに `Accept-Patch` ヘッダーが含まれている場合は、そのリクエストの対象リソースに対して `PATCH` が許可されていることを暗黙的に意味します。
 
 > [!NOTE]
->
-> - IANA レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
-> - 他にも `bzip` および `bzip2` の 2 種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら 2 つの UNIX プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。
+> IANA レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)を管理しています。
+> `bzip` および `bzip2` エンコード方式は、標準外ですが、特に過去との互換性を確保する場合などには使用されることがあります。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>はい</td>
+      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
   </tbody>
 </table>
@@ -33,23 +28,30 @@ l10n:
 ## 構文
 
 ```http
-Accept-Patch: application/example, text/example
-Accept-Patch: text/example;charset=utf-8
-Accept-Patch: application/merge-patch+json
+Accept-Patch: <media-type>/<subtype>
+Accept-Patch: <media-type>/*
+Accept-Patch: */*
+
+// メディアス種別カンマ区切りのリスト
+Accept-Patch: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
 ## ディレクティブ
 
-なし
+- `<media-type>/<subtype>`
+  - : 単独の、詳細の[メディア種別](/ja/docs/Web/HTTP/Guides/MIME_types)、例えば `text/html` です。
+- `<media-type>/*`
+  - : サブタイプを持たないメディア種別。
+    例えば、`image/*` は `image/png`、`image/svg`、`image/gif`、その他の画像種別に対応します。
+- `*/*`
+  - : 任意のメディア種別です。
 
 ## 例
 
 ```http
-Accept-Patch: application/example, text/example
-
-Accept-Patch: text/example;charset=utf-8
-
-Accept-Patch: application/merge-patch+json
+Accept-Patch: application/json
+Accept-Patch: application/json, text/plain
+Accept-Patch: text/plain;charset=utf-8
 ```
 
 ## 仕様書
@@ -58,9 +60,11 @@ Accept-Patch: application/merge-patch+json
 
 ## ブラウザーの互換性
 
-ブラウザーの互換性はこのヘッダーには関係ありません（ヘッダーはサーバーから送られ、仕様書ではクライアントの動作を定義していません）。
+ブラウザーの互換性はこのヘッダーには関係ありません。
+ヘッダーはサーバーから送られ、仕様書ではクライアントの動作を定義していません。
 
 ## 関連情報
 
-- HTTP メソッド {{HTTPMethod("PATCH")}}
-- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}
+- {{HTTPHeader("Accept-Post")}}
+- {{HTTPStatus("415", "415 Unsupported Media Type")}}
+- {{HTTPMethod("PATCH")}} リクエストメソッド

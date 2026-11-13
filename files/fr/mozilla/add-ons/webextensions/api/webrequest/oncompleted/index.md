@@ -3,8 +3,6 @@ title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
 ---
 
-{{AddonSidebar}}
-
 Utilisé lorsqu'une demande est complétée.
 
 Cet événement est à titre d'information seulement.
