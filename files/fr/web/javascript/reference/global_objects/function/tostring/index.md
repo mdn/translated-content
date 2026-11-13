@@ -1,13 +1,14 @@
 ---
-title: Function.prototype.toString()
+title: "Function : méthode toString()"
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`toString()`** des instances de {{JSxRef("Function")}} retourne une chaîne de caractères représentant le code source de la fonction.
 
-La méthode **`toString()`** renvoie une chaîne de caractères représentant le code source de la fonction.
-
-{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Function.prototype.toString()")}}
 
 ```js interactive-example
 function sum(a, b) {
@@ -15,19 +16,23 @@ function sum(a, b) {
 }
 
 console.log(sum.toString());
-// Expected output: "function sum(a, b) {
-//                     return a + b;
-//                   }"
+// Résultat attendu : "function sum(a, b) {
+//                      return a + b;
+//                    }"
 
 console.log(Math.abs.toString());
-// Expected output: "function abs() { [native code] }"
+// Résultat attendu : "function abs() { [native code] }"
 ```
 
 ## Syntaxe
 
-```js
-function.toString(indentation)
+```js-nolint
+toString()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
@@ -35,27 +40,94 @@ Une chaîne de caractères qui représente le code source de la fonction.
 
 ## Description
 
-L'objet {{jsxref("Function")}} redéfinit la méthode {{jsxref("Object.prototype.toString", "toString")}} de l'objet {{jsxref("Object")}} ; il n'hérite donc pas de {{jsxref("Object.prototype.toString")}}. Pour les objets {{jsxref("Function")}}, la méthode `toString` renvoie une chaîne de caractères représentant l'objet sous la forme d'une déclaration de fonction. Pour ce faire, `toString` décompile la fonction pour renvoyer une chaîne qui contient le mot-clé `function`, la liste des arguments, les accolades et la source correspondant au corps de la fonction.
+L'objet {{JSxRef("Function")}} remplace la méthode `toString()` héritée de {{JSxRef("Object")}}&nbsp;; il n'hérite pas de {{JSxRef("Object.prototype.toString")}}. Pour les objets `Function` définis par l'utilisateur, la méthode `toString` retourne une chaîne contenant le segment de texte source utilisé pour définir la fonction.
 
-Le moteur JavaScript appelle la méthode `toString` automatiquement lorsqu'un objet {{jsxref("Function")}} doit être représenté textuellement (par exemple lorsqu'une fonction doit être concaténée avec une chaîne de caractères).
+JavaScript appelle automatiquement la méthode `toString` lorsqu'une `Function` doit être représentée comme une valeur textuelle, par exemple lorsqu'une fonction est concaténée avec une chaîne.
 
-La méthode `toString()` lèvera une exception {{jsxref("TypeError")}} (« Function.prototype.toString called on incompatible object ») si la valeur this n'est pas un objet `Function`.
+La méthode `toString()` lèvera une exception {{JSxRef("TypeError")}} ("Function.prototype.toString called on incompatible object"), si l'objet `this` n'est pas un objet `Function`.
 
 ```js example-bad
-Function.prototype.toString.call("toto"); // TypeError
+Function.prototype.toString.call("toto"); // throws TypeError
 ```
 
-Si la méthode `toString()` est appelée sur des fonctions natives qui ne sont pas définies dans le script, `toString()` renvoie une chaîne de caractères indiquant le caractère natif :
+Si la méthode `toString()` est appelée sur des objets fonction intégrés, une fonction créée par {{JSxRef("Function.prototype.bind()")}}, ou d'autres fonctions non JavaScript, alors `toString()` retourne une _chaîne de fonction native_ qui ressemble à
+
+```plain
+function someName() { [native code] }
+```
+
+Pour les méthodes et fonctions des objets intrinsèques, `someName` est le nom initial de la fonction&nbsp;; sinon, son contenu peut être défini par l'implémentation, mais sera toujours dans la syntaxe du nom de propriété, comme `[1 + 1]`, `someName` ou `1`.
+
+> [!NOTE]
+> Cela signifie que l'utilisation de [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) sur des chaînes de fonctions natives est une erreur de syntaxe garantie.
+
+Si la méthode `toString()` est appelée sur une fonction créée par le constructeur `Function`, `toString()` retourne le code source d'une déclaration de fonction synthétisée nommée `"anonymous"` en utilisant les paramètres et le corps de fonction fournis. Par exemple, `Function("a", "b", "return a + b").toString()` retournera&nbsp;:
+
+```plain
+function anonymous(a,b
+) {
+return a + b
+}
+```
+
+Depuis ES2018, la spécification exige que la valeur de retour de `toString()` soit exactement le même code source que celui utilisé lors de la déclaration, y compris les espaces et/ou les commentaires — ou, si l'hôte n'a pas le code source disponible pour une raison quelconque, il doit retourner une chaîne de fonction native. La prise en charge de ce comportement révisé peut être trouvée dans le [tableau de compatibilité](#compatibilité_des_navigateurs).
+
+## Exemples
+
+### Comparer le code source réel et les résultats de toString
 
 ```js
-Math.abs.toString();
+function test(fn) {
+  console.log(fn.toString());
+}
 
-"function abs() {
-    [native code]
-}"
+function f() {}
+class A {
+  a() {}
+}
+function* g() {}
+
+test(f); // "function f() {}"
+test(A); // "class A { a() {} }"
+test(g); // "function* g() {}"
+test((a) => a); // "(a) => a"
+test({ a() {} }.a); // "a() {}"
+test({ *a() {} }.a); // "*a() {}"
+test({ [0]() {} }[0]); // "[0]() {}"
+test(Object.getOwnPropertyDescriptor({ get a() {} }, "a").get); // "get a() {}"
+test(Object.getOwnPropertyDescriptor({ set a(x) {} }, "a").set); // "set a(x) {}"
+test(Function.prototype.toString); // "function toString() { [native code] }"
+test(function f() {}.bind(0)); // "function () { [native code] }"
+test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
 ```
 
-Si la méthode `toString()` est appelée sur une fonction créée avec le constructeur `Function`, `toString()` renverra le code source d'une fonction intitulée `anonymous` et utilisera les paramètres et le corps de la fonction fournis.
+Notez qu'après la révision de `Function.prototype.toString()`, lorsque `toString()` est appelé, les implémentations ne sont jamais autorisées à synthétiser le code source d'une fonction qui n'est pas une chaîne de fonction native. La méthode retourne toujours le code source exact utilisé pour créer la fonction — y compris les exemples [d'accesseur](/fr/docs/Web/JavaScript/Reference/Functions/get) et de [mutateur](/fr/docs/Web/JavaScript/Reference/Functions/set) ci-dessus. Le constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Functions) lui-même a la capacité de synthétiser le code source de la fonction (et est donc une forme implicite de la méthode [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)).
+
+### Obtenir le texte source d'une fonction
+
+Il est possible d'obtenir le texte source d'une fonction en la forçant à être une chaîne de caractères — par exemple, en l'enveloppant dans un littéral de modèle&nbsp;:
+
+```js
+function toto() {
+  return "truc";
+}
+console.log(`${toto}`);
+// function toto() {
+//   return "truc";
+// }
+```
+
+Cette source est _exacte_, y compris les commentaires intercalés (qui ne seront pas stockés par la représentation interne du moteur autrement).
+
+```js
+function toto /* un commentaire */() {
+  return "truc";
+}
+console.log(toto.toString());
+// function toto /* un commentaire */() {
+//   return "truc";
+// }
+```
 
 ## Spécifications
 
@@ -67,4 +139,4 @@ Si la méthode `toString()` est appelée sur une fonction créée avec le constr
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- La méthode {{JSxRef("Object.prototype.toString()")}}

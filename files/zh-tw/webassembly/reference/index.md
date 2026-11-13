@@ -1,11 +1,15 @@
 ---
-title: WebAssembly 參考指令
+title: WebAssembly 指令參考
+short-title: 參考
 slug: WebAssembly/Reference
+l10n:
+  sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
 ---
 
-{{WebAssemblySidebar}}
+此頁面列出了在 web 上使用 [WebAssembly](/zh-TW/docs/WebAssembly) 的指令參考。
 
-- [數字相關指令](/zh-TW/docs/WebAssembly/Reference/Numeric)
-- [變數相關指令](/zh-TW/docs/WebAssembly/Reference/Variables)
-- [記憶體相關指令](/zh-TW/docs/WebAssembly/Reference/Memory)
-- [控制流相關指令](/zh-TW/docs/WebAssembly/Reference/Control_flow)
+{{SubPagesWithSummaries}}
+
+## 參見
+
+- [WebAssembly](/zh-TW/docs/WebAssembly)

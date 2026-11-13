@@ -5,7 +5,7 @@ slug: Web/API/URL/port
 
 {{ApiRef("URL API")}}
 
-La propiedad **`port`** de la interfaz {{domxref("URL")}} es un {{domxref("USVString")}} que contiene el número de puerto de la URL. Si la URL no contiene un número de puerto explícito, se establecerá `''`.
+La propiedad **`port`** de la interfaz {{domxref("URL")}} es un {{jsxref("String")}} que contiene el número de puerto de la URL. Si la URL no contiene un número de puerto explícito, se establecerá `''`.
 
 {{AvailableInWorkers}}
 
@@ -18,7 +18,7 @@ object.port = string;
 
 ### Valor
 
-Un {{domxref("USVString")}}.
+Un {{jsxref("String")}}.
 
 ## Ejemplos
 

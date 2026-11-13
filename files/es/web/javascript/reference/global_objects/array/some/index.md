@@ -134,7 +134,7 @@ getBoolean("true"); // true
 
 ## Polyfill
 
-`some()` fue agregado al estándar ECMA-262 en la 5ta edición; por ello, puede no estar presente en todas las implementaciones del estándar. Puedes trabajar sobre esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `some()` en implementaciones que no tienen soporte nativo. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5ta edición, asumiendo que {{jsxref("Global_Objects/Object", "Object")}} y {{jsxref("Global_Objects/TypeError", "TypeError")}} tienen sus valores originales y que `fun.call` evalúa el valor original de{{jsxref("Function.prototype.call()")}}.
+`some()` fue agregado al estándar ECMA-262 en la 5ta edición; por ello, puede no estar presente en todas las implementaciones del estándar. Puedes trabajar sobre esto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `some()` en implementaciones que no tienen soporte nativo. Este algoritmo es exactamente el mismo especificado en ECMA-262, 5ta edición, asumiendo que {{jsxref("Object")}} y {{jsxref("TypeError")}} tienen sus valores originales y que `fun.call` evalúa el valor original de{{jsxref("Function.prototype.call()")}}.
 
 ```js
 // Pasos de producción de ECMA-262, Edición 5, 15.4.4.17

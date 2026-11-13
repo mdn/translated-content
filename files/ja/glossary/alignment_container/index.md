@@ -2,16 +2,14 @@
 title: Alignment container (配置コンテナー)
 slug: Glossary/Alignment_Container
 l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 **配置コンテナー**は、中に{{glossary("alignment subject","配置対象物")}}が配置される長方形です。これはレイアウトモードによって定義されます。通常は配置対象物を包含しているブロックのことを指します。ボックスの書字方向は外側のコンテナーによって決定されます。
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 - プロパティリファレンス
   - CSS {{CSSXref("align-content")}} プロパティ
   - CSS {{CSSXref("align-items")}} プロパティ

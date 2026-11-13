@@ -63,19 +63,19 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/es/docs/Web/Guide/HTML/Content_categories"
+          ><a href="/es/docs/Web/HTML/Guides/Content_categories"
             >Categorías de contenido</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Contenido de flujo</a
         >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_de_sección"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_sección"
           >contenido de sección</a
         >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_palpable"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_palpable"
           >contenido palpable</a
         >.
       </td>
@@ -83,7 +83,7 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Contenido de flujo</a
         >.
       </td>
@@ -98,11 +98,11 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
       <th scope="row">Padres permitidos</th>
       <td>
         Todo elemento que permita
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >contenido de flujo</a
         >. Un elemento <code>&#x3C;article></code> no puede ser hijo de
         un elemento
-        <a href="/es/docs/Web/HTML/Element/address"
+        <a href="/es/docs/Web/HTML/Reference/Elements/address"
           ><code>&#x3C;address></code></a
         >.
       </td>

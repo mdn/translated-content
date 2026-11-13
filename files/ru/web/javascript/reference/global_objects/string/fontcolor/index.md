@@ -3,7 +3,7 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 ## Сводка
 
@@ -21,7 +21,7 @@ str.fontcolor(color)
 ### Параметры
 
 - `color`
-  - : Строка, выражающая цвет в виде шестнадцатеричного триплета RGB, либо в виде названия цвета. Названия цветов перечислены в [справочнике по значению цвета в CSS](/ru/docs/Web/CSS/color_value).
+  - : Строка, выражающая цвет в виде шестнадцатеричного триплета RGB, либо в виде названия цвета. Названия цветов перечислены в [справочнике по значению цвета в CSS](/ru/docs/Web/CSS/Reference/Values/color_value).
 
 ## Описание
 

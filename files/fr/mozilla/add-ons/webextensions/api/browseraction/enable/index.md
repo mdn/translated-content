@@ -3,8 +3,6 @@ title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
 ---
 
-{{AddonSidebar}}
-
 Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
 
 ## Syntaxe

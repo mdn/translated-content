@@ -61,4 +61,4 @@ document.head.appendChild(meta2);
 ## 参见
 
 - {{HTMLElement("meta")}}
-- [媒体查询的可能值](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [媒体查询的可能值](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)

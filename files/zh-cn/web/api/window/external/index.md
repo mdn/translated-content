@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}} {{deprecated_header}}
+{{APIRef}}
 
 {{domxref("Window")}} API 的 `external` 属性返回一个 `External` 接口的实例，这个接口本来用于包含一些用来向浏览器添加外部搜索提供者（external search provider）的函数。但是，现在这个属性已被弃用，其中的函数现在都是无任何功能的空函数，仅为了符合规范而存在。
 
@@ -24,7 +24,7 @@ l10n:
         <code>AddSearchProvider(<em>descriptionURL)</em></code>
       </td>
       <td>
-        空函数；无任何作用。参见<a href="/zh-CN/docs/Web/OpenSearch#自动发现搜索插件"
+        空函数；无任何作用。参见<a href="/zh-CN/docs/Web/XML/Guides/OpenSearch#自动发现搜索插件"
           >自动发现搜索插件</a
         >。
       </td>

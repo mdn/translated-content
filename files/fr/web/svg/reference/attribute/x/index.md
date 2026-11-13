@@ -4,14 +4,12 @@ slug: Web/SVG/Reference/Attribute/x
 original_slug: Web/SVG/Attribute/x
 ---
 
-{{SVGRef}}
-
 L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
 - [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<cursor>`](/fr/docs/Web/SVG/Element/cursor)
+- [`<cursor>`](/fr/docs/Web/CSS/Reference/Properties/cursor)
 - [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
 - [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
 - [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
@@ -38,7 +36,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 - [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
 - [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
 - [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
-- [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef)
+- [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
 - [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
 - [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
 - [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
@@ -46,7 +44,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 - [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
 - [`<symbol>`](/fr/docs/Web/SVG/Reference/Element/symbol)
 - [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
+- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
 - [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
 - [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
 
@@ -82,7 +80,7 @@ Pour [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph), `x` définit l'abscisse 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        Une liste de valeurs <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        Une liste de valeurs <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -105,7 +103,7 @@ Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -128,7 +126,7 @@ Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `x` 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -151,7 +149,7 @@ Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTra
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -174,7 +172,7 @@ Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `x` déf
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -197,7 +195,7 @@ Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -220,7 +218,7 @@ Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLightin
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -243,7 +241,7 @@ Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMa
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -266,7 +264,7 @@ Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `x` d�
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -289,7 +287,7 @@ Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -312,7 +310,7 @@ Pour [`<feFuncA>`](/fr/docs/Web/SVG/Reference/Element/feFuncA), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -335,7 +333,7 @@ Pour [`<feFuncB>`](/fr/docs/Web/SVG/Reference/Element/feFuncB), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -358,7 +356,7 @@ Pour [`<feFuncG>`](/fr/docs/Web/SVG/Reference/Element/feFuncG), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -381,7 +379,7 @@ Pour [`<feFuncR>`](/fr/docs/Web/SVG/Reference/Element/feFuncR), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -404,7 +402,7 @@ Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `x
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -427,7 +425,7 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -450,7 +448,7 @@ Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -473,7 +471,7 @@ Pour [`<feMergeNode>`](/fr/docs/Web/SVG/Reference/Element/feMergeNode), `x` déf
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -496,7 +494,7 @@ Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `x` d�
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -519,7 +517,7 @@ Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `x` définit l
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -542,7 +540,7 @@ Pour [`<fePointLight>`](/fr/docs/Web/SVG/Reference/Element/fePointLight), `x` d�
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -565,7 +563,7 @@ Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLight
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -588,7 +586,7 @@ Pour [`<feSpotLight>`](/fr/docs/Web/SVG/Reference/Element/feSpotLight), `x` déf
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -611,7 +609,7 @@ Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `x` définit l'abs
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -634,7 +632,7 @@ Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `x` d�
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -657,7 +655,7 @@ Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `x` définit l'abs
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -680,7 +678,7 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `x` 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -700,16 +698,16 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `x` 
 ## `<glyphRef>`
 
 > [!WARNING]
-> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
+> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait pas être utilisé.
 
-Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse du glyphe.
+Pour [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `x` définit l'abscisse du glyphe.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -734,7 +732,7 @@ Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `x` définit l'absci
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -760,7 +758,7 @@ Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `x` définit l'absciss
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -783,7 +781,7 @@ Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `x` définit l'a
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -806,7 +804,7 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `x` définit l'absciss
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -832,7 +830,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `x` définit l'abscisse 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -851,7 +849,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `x` définit l'abscisse 
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Reference/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<text>`](/fr/docs/Web/SVG/Reference/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -859,7 +857,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -918,9 +916,9 @@ line {
 ## `<tref>`
 
 > [!WARNING]
-> Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
+> Avec SVG2, [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -928,7 +926,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -944,7 +942,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -952,7 +950,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -1019,7 +1017,7 @@ Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `x` définit l'abscisse 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>

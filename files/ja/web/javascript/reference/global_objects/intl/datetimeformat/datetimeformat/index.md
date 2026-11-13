@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat() コンストラクター
 short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: 5e0388c53dfc75003e83f79181797c3f66455971
 ---
 
 **`Intl.DateTimeFormat()`** コンストラクターは {{jsxref("Intl.DateTimeFormat")}} オブジェクトを生成します。
@@ -90,7 +90,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : 例: `Thu`
     - `"narrow"`
-      - : 例: `T`。一部のロケールでは、2 つの曜日が同じ短縮表記になることがあります（例: `Tuesday` の短縮表記も `T` である）。
+      - : 例: `T`。一部のロケールでは、2 つの曜日が同じ短縮表記になることがあります（例: `en-US` ロケールでは、`Tuesday` と `Thursday` は両方とも短縮表記が `T` になります）。
 - `era`
   - : 世紀の表現形式です。利用可能な値は次の通りです。
     - `"long"`
@@ -112,7 +112,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : 例: `Mar`
     - `"narrow"`
-      - : 例: `M`。一部のロケールでは、2 つの月が同じ短縮表記になることがあります（例: `May` の短縮表記も `M` である）。
+      - : 例: `M`。一部のロケールでは、2 つの月が同じ短縮表記になることがあります（例: `en-US` ロケールでは、`March` と `mMay` は両方とも短縮表記が `M` になります）。
 - `day`
   - : 日の表現形式です。利用可能な値は `"numeric"` および `"2-digit"` です。
 - `dayPeriod`
@@ -169,7 +169,7 @@ Intl.DateTimeFormat(locales, options)
 - `hour`, `minute`, `second`
 - `hour`, `minute`
 
-要求された日時成分のスタイルは、ロケールが対応している有効な書式に直接対応しない場合があります。そのため、書式マッチャーでは、要求されたスタイルを最も近い対応書式にどのように一致させるかを指定できます。
+要求された日時成分のスタイルは、ロケールが対応している有効な書式に直接対応しない場合があります。そのため、書式照合子では、要求されたスタイルを最も近い対応書式にどのように一致させるかを指定できます。
 
 - `formatMatcher`
   - : 使用する書式照合アルゴリズム。可能な値は `"basic"` と `"best fit"` で、既定は `"best fit"` です。`"best fit"` のアルゴリズムは実装定義であり、`"basic"` は [仕様で定義されています](https://tc39.es/ecma402/#sec-basicformatmatcher)。このオプションは、`dateStyle` と `timeStyle` の両方が `undefined` の場合のみ使用されます（これにより、それぞれの日時成分の書式化が個別にカスタマイズ可能になります）。

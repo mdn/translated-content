@@ -147,4 +147,4 @@ if (canvas.getContext) {
 
 {{EmbedLiveSample("一個簡單的範例", 160, 160)}}
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}

@@ -2,7 +2,7 @@
 title: clipPathUnits
 slug: Web/SVG/Reference/Attribute/clipPathUnits
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
 ---
 
 **`clipPathUnits`** 属性は、 {{ SVGElement("clipPath") }} 要素のコンテンツに使用する座標系を示します。
@@ -31,18 +31,18 @@ svg {
     <circle cx=".5" cy=".5" r=".35" />
   </clipPath>
 
-  <!-- クリップパスに実体化するいくつかの参照長方形 -->
+  <!-- クリッピングパスに実体化するいくつかの参照矩形 -->
   <rect id="r1" x="0" y="0" width="45" height="45" />
   <rect id="r2" x="0" y="55" width="45" height="45" />
   <rect id="r3" x="55" y="55" width="45" height="45" />
   <rect id="r4" x="55" y="0" width="45" height="45" />
 
-  <!-- 最初の 3 つの長方形は、単位 userSpaceOnUse でクリップされる -->
+  <!-- 最初の 3 つの矩形は、単位 userSpaceOnUse でクリップされる -->
   <use clip-path="url(#myClip1)" href="#r1" fill="red" />
   <use clip-path="url(#myClip1)" href="#r2" fill="red" />
   <use clip-path="url(#myClip1)" href="#r3" fill="red" />
 
-  <!-- 最後の長方形は、objectBoundingBox 単位でクリップされる -->
+  <!-- 最後の矩形は、objectBoundingBox 単位でクリップされる -->
   <use clip-path="url(#myClip2)" href="#r4" fill="red" />
 </svg>
 ```
@@ -71,9 +71,9 @@ svg {
 </table>
 
 - userSpaceOnUse
-  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリップパスが作成されたときに定義されたユーザー座標系を参照することを示します。
+  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが作成されたときに定義されたユーザー座標系を参照することを示します。
 - objectBoundingBox
-  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリップパスが適用される要素の境界ボックスを基準としていることを示します。これは、座標系の原点がオブジェクトの境界ボックスの左上隅であり、オブジェクトの境界ボックスの幅と高さは 1 単位の長さを持つとみなされるということです。
+  - : この値は、{{SVGElement('clipPath')}} 要素内のすべての座標が、クリッピングパスが適用される要素の境界ボックスを基準としていることを示します。これは、座標系の原点がオブジェクトの境界ボックスの左上隅であり、オブジェクトの境界ボックスの幅と高さは 1 単位の長さを持つとみなされるということです。
 
 ## 仕様書
 

@@ -2,10 +2,8 @@
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`debugger`** 文は、ブレークポイントの設定などの任意の利用可能なデバッグ機能を呼び出します。デバッグ機能が利用可能ではない場合、この文は効果がありません。
 
@@ -42,4 +40,4 @@ function potentiallyBuggyCode() {
 
 ## 関連情報
 
-- [Firefox 開発者ツール内のデバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) （英語）
+- [The Firefox JavaScript Debugger¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) - Firefox source docs

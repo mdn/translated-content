@@ -5,7 +5,7 @@ slug: Learn_web_development/Howto
 
 {{LearnSidebar}}
 
-Данный раздел создан для обеспечения ответами на распространённые вопросы, которые могут возникнуть и которые не обязательно являются основным материалом при изучении веб-технологий (например, обучающих статей по [HTML](/ru/docs/Learn_web_development/Core/Structuring_content) или [CSS](/ru/docs/Learn/CSS)). Ниже приведённые статьи созданы для самостоятельной работы над их содержимым.
+Данный раздел создан для обеспечения ответами на распространённые вопросы, которые могут возникнуть и которые не обязательно являются основным материалом при изучении веб-технологий (например, обучающих статей по [HTML](/ru/docs/Learn_web_development/Core/Structuring_content) или [CSS](/ru/docs/Learn_web_development/Core/Styling_basics)). Ниже приведённые статьи созданы для самостоятельной работы над их содержимым.
 
 ## Как работает Всемирная паутина?
 
@@ -33,10 +33,10 @@ slug: Learn_web_development/Howto
 
 Вопросы, связанные с инструментами / программным обеспечением, которое вы можете использовать для создания веб-сайтов.
 
-- [Сколько стоит сделать что-то в Интернете?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [Сколько стоит сделать что-то в Интернете?](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : Когда вы запускаете веб-сайт, вы можете ничего не потратить, или ваши расходы могут быть достаточно высокими. В этой статье мы обсудим, сколько всё стоит и что вы получаете за то, за что вы платите (или не платите).
 
-- [Какое ПО мне необходимо для создания веб-сайта?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [Какое ПО мне необходимо для создания веб-сайта?](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
   - : В этой статье мы объясним, какие программные компоненты необходимы вам при редактировании, выгрузке или просмотре веб-сайта.
 
 - [Какие текстовые редакторы доступны?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)
@@ -45,19 +45,19 @@ slug: Learn_web_development/Howto
 - [Что такое "Инструменты разработчика" браузера?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Каждый браузер имеет набор инструментов разработчика для отладки HTML, CSS и другого веб-кода. В этой статье объясняется, как использовать основные функции из инструментов разработчика вашего браузера.
 
-- [Как убедиться в том, что веб-сайт работает правильно?](/ru/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
+- [Как убедиться в том, что веб-сайт работает правильно?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Итак, вы опубликовали свой сайт в Интернете - очень хорошо! Но уверены ли вы в том, что он работает правильно? В этой статье приведены некоторые основные шаги по устранению неполадок.
 
 - [Как настроить локальный сервер тестирования?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
   - : В этой статье объясняется, как настроить простой локальный сервер тестирования на вашем компьютере, и основы его использования.
 
-- [Как загрузить файлы на веб-сервер?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [Как загрузить файлы на веб-сервер?](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : В этой статье показано, как публиковать свой сайт в Интернете с помощью инструментов FTP - одним из самых распространённых способов сделать сайт общедоступным, чтобы другие пользователи могли получить доступ к нему со своих компьютеров.
 
-- [Как использовать GitHub Pages?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
+- [Как использовать GitHub Pages?](/ru/docs/Learn_web_development/Core/Version_control)
   - : В этой статье представлено базовое руководство по публикации контента с использованием функции **gh-pages** сайта GitHub.
 
-- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
+- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/ru/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
   - : Ищете место для размещения вашего сайта? Здесь представлено пошаговое руководство по размещению вашего сайта с помощью платформы Google App Engine.
 
 - [Какие существуют инструменты для отладки сайта и увеличения его производительности?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)

@@ -10,9 +10,9 @@ slug: Web/HTTP/Reference/Headers/ETag
 如果一個網址的資源有更新，就*必須*重新產生它的 `Etag` 值。
 比較前後版本的 ETag 就能知道資源有沒有變化，所以 Etags 的作用就跟指紋一樣。有些伺服器便會把它用在追蹤用途上，而且可能會永久保存這些資訊。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## Syntax
 
@@ -35,7 +35,7 @@ ETag: "<etag_value>"
 
 ## 範例
 
-```plain
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
@@ -46,18 +46,19 @@ ETag: W/"0815"
 
 比如說，在進入 wiki 編輯頁時，當下可以把內文的 hash 值放到 HTTP 回應中的 `Etag` 標頭：
 
-```plain
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
 當儲存更新時， {{HTTPMethod("POST")}} 請求就會有一個 {{HTTPHeader("If-Match")}} 標頭，其值為 `ETag`
 的值，這樣便可以用來檢查資料新鮮度。
 
-```plain
+```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
 如果 hash 沒有對上，就代表文件已經在你的編輯過程中，被別人先修改了，便會回傳
+
 {{HTTPStatus("412")}} `Precondition Failed` 錯誤。
 
 ### 快取沒更新過的資源
@@ -65,7 +66,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 另一個 `ETag` 標頭的好用處是用來快取沒更新過的資源。如果一位使用者再次造訪一個網址（而且前一次有設定 `ETag`），而資源已經*過期*了（舊到不能用），
 則客戶端會把 `ETag` 的值放在 {{HTTPHeader("If-None-Match")}} 標頭內傳送：
 
-```plain
+```http
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 

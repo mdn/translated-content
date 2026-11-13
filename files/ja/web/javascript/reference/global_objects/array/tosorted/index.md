@@ -3,7 +3,7 @@ title: Array.prototype.toSorted()
 short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`toSorted()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/sort", "sort()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、要素を昇順にソートした新しい配列を返します。
@@ -85,7 +85,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 
 ## 関連情報
 
-- [`Array.prototype.toSorted` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`Array.prototype.toSorted` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.toSorted` のポリフィル](https://www.npmjs.com/package/array.prototype.tosorted)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.sort()")}}

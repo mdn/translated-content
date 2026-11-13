@@ -113,7 +113,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 ## CORS가 활성화된 fetch
 
-[CORS](/ko/docs/Web/HTTP/Guides/CORS)가 활성화한 채로 리소스를 프리로드할 때([`fetch()`](/ko/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest), [fonts](/ko/docs/Web/CSS/@font-face) 등), [`crossorigin`](/ko/docs/Web/HTML/Reference/Elements/link#crossorigin) 특성을 [`<link>`](/ko/docs/Web/HTML/Reference/Elements/link) 요소에 지정했는지 세심하게 살펴봐야 합니다. 이 특성은 교차 출처 요청이 아닌 경우에도 해당 리소스의 CORS와 credentials 모드를 일치시키기 위해 지정해야 하는 특성입니다.
+[CORS](/ko/docs/Web/HTTP/Guides/CORS)가 활성화한 채로 리소스를 프리로드할 때([`fetch()`](/ko/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest), [fonts](/ko/docs/Web/CSS/Reference/At-rules/@font-face) 등), [`crossorigin`](/ko/docs/Web/HTML/Reference/Elements/link#crossorigin) 특성을 [`<link>`](/ko/docs/Web/HTML/Reference/Elements/link) 요소에 지정했는지 세심하게 살펴봐야 합니다. 이 특성은 교차 출처 요청이 아닌 경우에도 해당 리소스의 CORS와 credentials 모드를 일치시키기 위해 지정해야 하는 특성입니다.
 
 위에서 언급된 것과 같이, 폰트 파일을 로딩하는 것이 이와 관련된 흥미로운 사례입니다. 여러 이유로 인해, 폰트 파일은 익명 모드 CORS를 통해 요청 되어야 합니다([폰트 요청 조건](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)를 참고하세요).
 
@@ -148,7 +148,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 ## 미디어 포함하기
 
-`<link>` 요소의 한 가지 멋진 기능은 [`media`](/ko/docs/Web/HTML/Reference/Elements/link#media) 특성을 포함할 수 있다는 것입니다. `<link>`는 [미디어 타입](/ko/docs/Web/CSS/@media#media_types) 혹은 완전한 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 포함할 수 있기 때문에 반응형 프리로드를 할 수 있습니다.
+`<link>` 요소의 한 가지 멋진 기능은 [`media`](/ko/docs/Web/HTML/Reference/Elements/link#media) 특성을 포함할 수 있다는 것입니다. `<link>`는 [미디어 타입](/ko/docs/Web/CSS/Reference/At-rules/@media#media_types) 혹은 완전한 [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using)를 포함할 수 있기 때문에 반응형 프리로드를 할 수 있습니다.
 
 예제를 살펴보겠습니다(GitHub에서 [소스 코드](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)와 [라이브 예제](https://mdn.github.io/html-examples/link-rel-preload/media/)를 참고하세요).
 
@@ -188,7 +188,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 </body>
 ```
 
-위 예제에서는 사용자가 좁은 폭의 뷰포트를 가지고 있는 경우 작은 이미지를 프리로드하고, 넓은 폭의 뷰포트를 가지고 있는 경우 더 큰 이미지를 프리로드하기 위해 `<link>` 요소에 `media` 특성을 포함했습니다. 이를 위해 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}}를 사용했습니다(더 상세한 내용은 [미디어 쿼리 테스트하기](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)를 참고하세요).
+위 예제에서는 사용자가 좁은 폭의 뷰포트를 가지고 있는 경우 작은 이미지를 프리로드하고, 넓은 폭의 뷰포트를 가지고 있는 경우 더 큰 이미지를 프리로드하기 위해 `<link>` 요소에 `media` 특성을 포함했습니다. 이를 위해 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}}를 사용했습니다(더 상세한 내용은 [미디어 쿼리 테스트하기](/ko/docs/Web/CSS/Guides/Media_queries/Testing)를 참고하세요).
 
 위 방법은 폰트가 페이지가 렌더링될 때 사용 가능하도록 만들어 FOUT(스타일이 적용되지 않은 텍스트가 잠시 표출되는 현상)을 줄입니다.
 

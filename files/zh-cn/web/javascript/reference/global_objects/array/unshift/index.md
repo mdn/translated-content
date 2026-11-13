@@ -3,8 +3,6 @@ title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
 
-{{JSRef}}
-
 **`unshift()`** 方法将指定元素添加到数组的开头，并返回数组的新长度。
 
 {{InteractiveExample("JavaScript Demo: Array.unshift()")}}

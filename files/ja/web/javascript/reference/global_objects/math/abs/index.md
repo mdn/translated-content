@@ -11,7 +11,7 @@ l10n:
 {{InteractiveExample("JavaScript デモ: Math.abs()")}}
 
 ```js interactive-example
-jfunction difference(a, b) {
+function difference(a, b) {
   return Math.abs(a - b);
 }
 
@@ -57,9 +57,9 @@ Math.abs(1); // 1
 Math.abs(Infinity); // 無限大
 ```
 
-### Math.abs() の動作
+### 引数の変換
 
-空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を渡すと空文字列を返し、空の配列は 0 を返します。
+`Math.abs()` は[引数を数値に変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。変換できない値は {{jsxref("NaN")}} となり、`Math.abs()` も {{jsxref("NaN")}} を返します。
 
 ```js
 Math.abs("-1"); // 1

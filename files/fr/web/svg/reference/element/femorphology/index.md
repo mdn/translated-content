@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feMorphology
 original_slug: Web/SVG/Element/feMorphology
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feMorphology>`** est utilisée pour éroder ou dilater l'image en entrée. Cela permet d'appliquer des effets de mise en gras ou d'amincissement.
 
 ## Contexte d'utilisation

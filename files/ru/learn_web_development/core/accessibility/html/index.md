@@ -3,7 +3,7 @@ title: "HTML: Хорошая основа для доступности"
 slug: Learn_web_development/Core/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Большая часть содержимого интернета может быть сделана доступной просто благодаря использованию правильных HTML-элементов по назначению. В этой статье подробно рассмотрено как HTML может быть использован для обеспечения максимальной доступности.
 
@@ -355,7 +355,8 @@ document.onkeydown = function (e) {
 </p>
 ```
 
-> **Примечание:**Более подробно о создании ссылок и лучших практиках можно почитать в статье «[Создание ссылок](/ru/docs/Learn_web_development/Core/Structuring_content/Creating_links)». Также посмотреть на примеры хороших и плохих ссылок можно на [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) и [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> [!NOTE]
+> Более подробно о создании ссылок и лучших практиках можно почитать в статье «[Создание ссылок](/ru/docs/Learn_web_development/Core/Structuring_content/Creating_links)». Также посмотреть на примеры хороших и плохих ссылок можно на [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) и [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Описания форм также важны для понимания, что нужно вводить в каждое текстовое поле. Следующий пример кажется достаточно разумным:
 
@@ -472,7 +473,8 @@ document.onkeydown = function (e) {
 
 В этом случае мы вообще не используем атрибут `alt`. Вместо этого мы представили наше описание изображения как обычный параграф, указали `id`, и потом использовали атрибут `aria-labelledby`, сославшись на тот `id`. Это вынуждает скринридеры использовать параграф как альтернативный текст/описание изображения. Это особенно удобно, если вы хотите использовать один текст как описание для нескольких изображений, что невозможно с помощью атрибута `alt`.
 
-> **Примечание:** `aria-labelledby` — часть спецификации [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), которая позволяет разработчиками добавлять, где требуется, дополнительную семантику разметке для улучшения доступности при использовании скринридеров. Чтобы узнать больше о том, как это работает, читайте статью [«Основы WAI-ARIA».](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
+> [!NOTE]
+> `aria-labelledby` — часть спецификации [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), которая позволяет разработчиками добавлять, где требуется, дополнительную семантику разметке для улучшения доступности при использовании скринридеров. Чтобы узнать больше о том, как это работает, читайте статью [«Основы WAI-ARIA».](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
 
 ### Другие механизмы альтернативного текста
 
@@ -519,4 +521,4 @@ HTML5 содержит два новых элемента — {{htmlelement("fig
 
 Теперь вы должны хорошо разбираться в написании доступного HTML для большинства случаев. Наша статья про основы WAI-ARIA также заполнит пробелы в знаниях, но эта статья посвящена основам. Далее мы рассмотрим CSS и JavaScript, и как хорошо или плохое их использование влияет на доступность.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

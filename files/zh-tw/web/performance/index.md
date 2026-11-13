@@ -160,7 +160,7 @@ HTML
 
 CSS
 
-- [will-change](/zh-TW/docs/Web/CSS/will-change)
+- [will-change](/zh-TW/docs/Web/CSS/Reference/Properties/will-change)
 - GPU v CPU
 - Measuring layout
 - Font-loading best practices

@@ -14,7 +14,7 @@ A interface **`CustomElementRegistry`** provê métodos para registro de element
 - {{domxref("CustomElementRegistry.get()")}}
   - : Retorna o construtor do nome do elemento informado, ou `undefined` caso não tenha sido definido.
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : Retorna um {{jsxref("Promise", "promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.
+  - : Retorna um {{jsxref("Promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.
 
 ## Exemplos
 

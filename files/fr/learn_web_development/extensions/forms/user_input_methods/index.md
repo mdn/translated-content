@@ -92,7 +92,7 @@ element.requestPointerLock();
 
 Si l'orientation de l'écran est importante pour votre application, vous pouvez lire l'état de l'orientation de l'écran, être informé quand cet état change, et verrouiller l'orientation dans un état spécifique (habituellement portrait ou paysage) à travers l'[API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-Les données d'orientation peuvent être récupérées à travers l'attribut {{domxref("screen.orientation")}} ou à travers la media query [`orientation`](/fr/docs/Web/CSS/@media/orientation). Quand `screen.orientation` change, l'événement {{domxref("screen.orientationchange")}} est declenché sur l'objet screen. Verrouiller l'orientation de l'écran en possible en invoquant la méthode {{domxref("screen.lockOrientation")}}, tandis que la méthode {{domxref("screen.unlockOrientation")}} supprime le verrouillage de l'écran précédemment définit.
+Les données d'orientation peuvent être récupérées à travers l'attribut {{domxref("screen.orientation")}} ou à travers la media query [`orientation`](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation). Quand `screen.orientation` change, l'événement {{domxref("screen.orientationchange")}} est declenché sur l'objet screen. Verrouiller l'orientation de l'écran en possible en invoquant la méthode {{domxref("screen.lockOrientation")}}, tandis que la méthode {{domxref("screen.unlockOrientation")}} supprime le verrouillage de l'écran précédemment définit.
 
 > [!NOTE]
 > Pour plus d'informations sur l'API Screen Orientation API consultez [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
@@ -133,7 +133,7 @@ Voici un exemple qui permet à du contenu d'être déplacé:
 
 Ici, on
 
-- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) à vrai pour que l'élément puisse être déplacé.
+- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) à vrai pour que l'élément puisse être déplacé.
 - Ajoute un gestionnaire d'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) qui définit les données de déplacement à l'intérieur.
 
 > [!NOTE]
@@ -141,7 +141,7 @@ Ici, on
 
 #### contentEditable
 
-Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class).
+Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/class).
 
 ```html
 <div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>

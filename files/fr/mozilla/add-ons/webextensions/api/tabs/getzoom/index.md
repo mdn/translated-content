@@ -3,8 +3,6 @@ title: tabs.getZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 ---
 
-{{AddonSidebar}}
-
 Obtient le facteur de zoom actuel pour l'onglet spécifié.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

@@ -2,7 +2,7 @@
 title: <title> — SVG アクセシブル名要素
 slug: Web/SVG/Reference/Element/title
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<title>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
@@ -11,6 +11,18 @@ l10n:
 
 > [!NOTE]
 > SVG 1.1 との後方互換性のため、 `<title>` 要素は親の最初の子要素であるべきです。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+この要素はグローバル属性のみがあります。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGTitleElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -35,14 +47,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 属性
-
-この要素はグローバル属性のみがあります。
-
-## 使用コンテキスト
-
-{{svginfo}}
 
 ## 仕様書
 

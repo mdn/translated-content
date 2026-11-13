@@ -3,8 +3,6 @@ title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
 
-{{JSRef}}
-
 **`BigInt.asUintN`** 静态方法将 `BigInt` 转换为一个 0 和 2^width-1 之间的无符号整数。
 
 {{InteractiveExample("JavaScript Demo: BigInt.asUintN()")}}
@@ -26,7 +24,7 @@ console.log(BigInt.asUintN(64, U64_CEIL * -42n));
 
 ## 语法
 
-```plain
+```js-nolint
 BigInt.asUintN(width, bigint);
 ```
 

@@ -16,11 +16,11 @@ formData.has(name);
 ### 参数
 
 - `name`
-  - : 一个 {{domxref("USVString")}} ，要查询的 key 名称。
+  - : 一个 {{jsxref("String")}} ，要查询的 key 名称。
 
 ### 返回
 
-一个 {{domxref("Boolean")}}。
+一个 {{jsxref("Boolean")}}。
 
 ## 示例
 

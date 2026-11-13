@@ -3,7 +3,7 @@ title: VRDisplay.displayName
 slug: Web/API/VRDisplay/displayName
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`displayName`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` を識別する人間が読める名前を返します。
 

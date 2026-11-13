@@ -41,7 +41,7 @@ W3C 的 DOM1 级建议值规定了一种检测浏览器对某个 DOM 模型是�
 | {{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( `qualifiedNameStr`, `publicId`, `systemId` )             |      | {{domxref("DocumentType")}} |
 | {{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( `title` )                                                |      | {{domxref("document")}}     |
 | {{domxref("DOMImplementation.getFeature","getFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("DOMObject")}}    |
-| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("Boolean")}}      |
+| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                   |      | {{jsxref("Boolean")}}       |
 
 ## 规范
 

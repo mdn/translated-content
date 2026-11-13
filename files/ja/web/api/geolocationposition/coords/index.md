@@ -3,12 +3,12 @@ title: "GeolocationPosition: coords プロパティ"
 short-title: coords
 slug: Web/API/GeolocationPosition/coords
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationPosition.coords`** は読み取り専用のプロパティで、地理的な位置を表す {{domxref("GeolocationCoordinates")}} オブジェクトを返します。このオブジェクトには、地球上の位置（経度、緯度）、高度、速度が含まれ、グループ化して返されます。また、これらの値に関する精度情報も含まれます。
+**`coords`** は {{domxref("GeolocationPosition")}} インターフェイスの読み取り専用のプロパティで、地理的な位置を表す {{domxref("GeolocationCoordinates")}} オブジェクトを返します。このオブジェクトには、地球上の位置（経度、緯度）、高度、速度が含まれ、グループ化して返されます。また、これらの値に関する精度情報も含まれます。
 
 ### 値
 

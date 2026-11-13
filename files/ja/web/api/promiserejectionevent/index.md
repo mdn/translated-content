@@ -9,7 +9,7 @@ l10n:
 
 **`PromiseRejectionEvent`** インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。
 
-プロミス拒否イベントについての詳細は、[プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミスの拒否イベント)を参照してください。
+プロミス拒否イベントについての詳細は、[プロミス拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミス拒否イベント)を参照してください。
 
 {{InheritanceDiagram}}
 

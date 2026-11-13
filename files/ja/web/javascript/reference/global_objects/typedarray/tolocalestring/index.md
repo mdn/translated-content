@@ -1,11 +1,10 @@
 ---
 title: TypedArray.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
-
-{{JSRef}}
 
 **`toLocaleString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を表す文字列を返します。要素は `toLocaleString` メソッドを使用して文字列に変換され、これらの文字列はロケール依存の文字列（カンマ "," など）で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムです。
 
@@ -15,15 +14,15 @@ l10n:
 const uint8 = new Uint32Array([500, 8123, 12]);
 
 console.log(uint8.toLocaleString());
-// Expected output: "500,8123,12"
+// 予想される結果: "500,8123,12"
 
 console.log(uint8.toLocaleString("en-GB"));
-// Expected output: "500,8,123,12"
+// 予想される結果: "500,8,123,12"
 
 console.log(
   uint8.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
 );
-// Expected output: "500,00 €,8.123,00 €,12,00 €"
+// 予想される結果: "500,00 €,8.123,00 €,12,00 €"
 ```
 
 ## 構文
@@ -37,7 +36,7 @@ toLocaleString(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列か、その配列です。 `locales` 引数の一般的な形式と解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}の文字列か、その配列です。 `locales` 引数の一般的な形式と解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
   - : 構成プロパティを持つオブジェクトです。 {{jsxref("Number.prototype.toLocaleString()")}} を参照してください。
 

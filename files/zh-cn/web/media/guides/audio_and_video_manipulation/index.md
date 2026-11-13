@@ -164,8 +164,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 const myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden

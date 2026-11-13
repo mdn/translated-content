@@ -3,8 +3,6 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 
-{{JSRef}}
-
 L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle ou à l'ensemble de valeurs autorisées.
 
 ## Description

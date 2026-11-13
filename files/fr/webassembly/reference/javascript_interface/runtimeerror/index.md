@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/RuntimeError
 original_slug: WebAssembly/JavaScript_interface/RuntimeError
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.RuntimeError()`** permet de créer un nouvel objet WebAssembly `RuntimeError`. C'est ce type d'exception qui est déclenchée lorsque WebAssembly définit [une trappe](http://webassembly.org/docs/semantics/#traps).
 
 ## Syntaxe
@@ -46,7 +44,7 @@ _Le constructeur `RuntimeError` ne contient aucune propriété qui lui soit prop
 
 _Le constructeur `RuntimeError` ne contient aucune méthode qui lui soit propre. En revanche, il hérite de certaines méthodes grâce à sa chaîne de prototypes._
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toSource()")}}
   - : Cette méthode renvoie un code qui, évalué, entraînerait la même erreur. Elle est héritée via {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
   - : Cette méthode renvoie une chaîne de caractères qui représente l'objet `Error`. Elle est héritée via {{jsxref("Error")}}.

@@ -236,5 +236,5 @@ function type(value) {
 
 ## 参见
 
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

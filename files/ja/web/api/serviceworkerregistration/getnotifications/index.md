@@ -1,11 +1,12 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
+title: "ServiceWorkerRegistration: getNotifications() メソッド"
+short-title: getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 **`getNotifications()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの 1 つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。
 
@@ -20,7 +21,7 @@ getNotifications(options)
 
 - `options` {{optional_inline}}
   - : 返される通知を絞り込むオプションを含むオブジェクト。 使用可能なオプションは次のとおりです。
-    - `tag`
+    - `tag` {{optional_inline}}
       - : 通知タグを表す文字列。 指定した場合、このタグを持つ通知のみが返されます。
 
 ### 返値

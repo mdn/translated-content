@@ -9,7 +9,7 @@ l10n:
 
 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 `AnimationEffect` 接口表示动画的效果。
 
-`AnimationEffect` 是一个抽象接口，因此不能直接实例化。但像 {{domxref("KeyframeEffect")}} 这样的具体接口继承自它，你可以将这些接口的实例传递给 {{domxref("Animation")}} 对象进行播放，或在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)和[过渡](/zh-CN/docs/Web/CSS/CSS_transitions)中使用它们。
+`AnimationEffect` 是一个抽象接口，因此不能直接实例化。但像 {{domxref("KeyframeEffect")}} 这样的具体接口继承自它，你可以将这些接口的实例传递给 {{domxref("Animation")}} 对象进行播放，或在 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)和[过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)中使用它们。
 
 ## 实例方法
 

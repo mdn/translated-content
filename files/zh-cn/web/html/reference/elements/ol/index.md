@@ -29,8 +29,8 @@ li {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a>.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Palpable_content">palpable content</a>.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -42,11 +42,11 @@ li {
   </tr>
   <tr>
    <th scope="row">允许的父级</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">隐含的 ARIA 角色</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role">list</a></code></td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
@@ -84,7 +84,7 @@ li {
 
 ## 使用说明
 
-通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/::marker)一起显示，编号标记可以是数字或者字母。
+通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/Reference/Selectors/::marker)一起显示，编号标记可以是数字或者字母。
 
 `<ol>` 和 {{HTMLElement("ul")}} 元素两者可以无限嵌套，既可以同类嵌套，也可以互相嵌套。
 
@@ -206,6 +206,6 @@ li {
 - 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
 - 对 `<ol>` 元素常用的 CSS 属性：
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), 用于处理复杂的嵌套列表，
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters), 用于处理复杂的嵌套列表，
   - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
   - {{cssxref("margin")}} 属性，用来控制列表的缩进。

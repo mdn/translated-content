@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`map()`** 方法返回一个新的[迭代器辅助方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator#%e8%bf%ad%e4%bb%a3%e5%99%a8%e8%be%85%e5%8a%a9%e6%96%b9%e6%b3%95)，该方法生成由映射函数转换后的迭代器的元素。
 

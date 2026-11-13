@@ -290,8 +290,7 @@ textarea.onkeyup = function () {
 ```html hidden
 <h2>Input</h2>
 <textarea id="code" class="input">
-&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea
->
+&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -616,6 +615,6 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 
 ## 參見
 
-- [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
+- [用 CSS 為 HTML 元素修改顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Applying_color)
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

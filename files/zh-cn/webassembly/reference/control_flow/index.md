@@ -13,7 +13,7 @@ WebAssembly 控制流指令。
   - : 跳转到循环（loop）标签、块（block）标签或 if 标签。
 - [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call)
   - : 调用一个函数。
-- [`drop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Drop)
+- [`drop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/drop)
   - : 从栈中弹出一个值，并丢弃它。
 - [`end`](/zh-CN/docs/WebAssembly/Reference/Control_flow/end)
   - : 可以用于终止 `block`、`loop`、`if` 或 `else`。
@@ -25,7 +25,7 @@ WebAssembly 控制流指令。
   - : 什么也不做。
 - [`return`](/zh-CN/docs/WebAssembly/Reference/Control_flow/return)
   - : 从函数返回。
-- [`select`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Select)
+- [`select`](/zh-CN/docs/WebAssembly/Reference/Control_flow/select)
   - : 基于布尔条件选择它的头两个操作数的其中之一。
 - [`unreachable`](/zh-CN/docs/WebAssembly/Reference/Control_flow/unreachable)
   - : 表示不可到达的代码点。

@@ -3,8 +3,6 @@ title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
 
-{{JSRef}}
-
 **`filter()`** 方法创建给定数组一部分的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，其包含通过所提供函数实现的测试的所有元素。
 
 {{InteractiveExample("JavaScript Demo: Array.filter()")}}

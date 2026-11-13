@@ -3,7 +3,7 @@ title: Что такое URL-адрес?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.
 

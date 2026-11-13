@@ -1,25 +1,25 @@
 ---
-title: HTMLSelectElement.selectedIndex
+title: "HTMLSelectElement : propriété selectedIndex"
+short-title: selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
+l10n:
+  sourceCommit: a5e089d79bf681e27fc6bdb9e4026b2489ffa4d9
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
+La propriété **`selectedIndex`** de l'interface {{DOMxRef("HTMLSelectElement")}} correspond à l'indice numérique du premier élément HTML {{HTMLElement("option")}} sélectionné dans un élément HTML {{HTMLElement("select")}}, s'il y en a un, ou à `-1` si aucune `<option>` n'est sélectionnée. Définir cette propriété sélectionne l'option à cet indice et désélectionne toutes les autres options, tandis que la définir à `-1` désélectionne toutes les options actuellement sélectionnées.
 
-## Syntaxe
+## Valeur
 
-```js
-var index = selectElem.selectedIndex;
-selectElem.selectedIndex = index;
-```
+Un nombre.
 
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
-<p id="p">selectedIndex: 0</p>
+<p id="p">selectedIndex&nbsp;: 0</p>
 
 <select id="select">
   <option selected>Option A</option>
@@ -33,18 +33,18 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById("select");
-var pElem = document.getElementById("p");
+const selectElem = document.getElementById("select");
+const pElem = document.getElementById("p");
 
 // Quand une nouvelle <option> est selectionnée
-selectElem.addEventListener("change", function () {
-  var index = selectElem.selectedIndex;
+selectElem.addEventListener("change", () => {
+  const index = selectElem.selectedIndex;
   // Rapporter cette donnée au <p>
-  pElem.innerHTML = "selectedIndex: " + index;
+  pElem.innerHTML = `selectedIndex&nbsp;: ${index}`;
 });
 ```
 
-{{EmbedLiveSample("Exemple", "200px", "80px")}}
+{{EmbedLiveSample("Exemples", 200, 80)}}
 
 ## Spécifications
 
@@ -53,3 +53,9 @@ selectElem.addEventListener("change", function () {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'interface {{DOMxRef("HTMLSelectElement")}}
+- L'interface {{DOMxRef("HTMLOptionElement")}}
+- L'interface {{DOMxRef("HTMLOptionsCollection")}}

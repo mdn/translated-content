@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/element-available
 original_slug: Web/XPath/Functions/element-available
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `element-available` 함수는 요소가 이용 가능한 지를 결정하고 true나 false를 반환합니다.
 

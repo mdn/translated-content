@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/debugger
 
 ## 語法
 
-```plain
+```js-nolint
 debugger;
 ```
 

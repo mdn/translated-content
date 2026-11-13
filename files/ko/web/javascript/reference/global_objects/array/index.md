@@ -126,7 +126,7 @@ console.log(fruits.length); // 2
 일부 메서드는 메서드가 호출된 기존 배열을 변경하지 않는 대신, 새 배열을 반환합니다. 이러한 메서드는 먼저 새 배열을 구성한 다음 요소를 채우는 방식으로 수행됩니다. 복사는 항상 [얕게](/ko/docs/Glossary/Shallow_copy) 이루어지며, 메서드는 처음에 생성된 배열 이외에는 아무것도 복사하지 않습니다. 원래 배열의 요소는 다음과 같이 새 배열에 복사됩니다
 
 - 객체: 객체 참조가 새 배열로 복사됩니다. 원래 배열과 새 배열 모두 동일한 객체를 참조합니다. 즉, 참조된 객체가 수정되면 변경 사항이 새 배열과 원래 배열 모두에 표시됩니다.
-- 문자열, 숫자, 불리언과 같은 원시 유형({{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Global_Objects/Boolean", "Boolean")}} 객체 아님): 해당 값이 새 배열에 복사됩니다.
+- 문자열, 숫자, 불리언과 같은 원시 유형({{jsxref("String")}}, {{jsxref("Number")}}, {{jsxref("Boolean")}} 객체 아님): 해당 값이 새 배열에 복사됩니다.
 
 어떤 메서드는 메서드가 호출된 배열을 변경하며, 이 경우 반환값은 메서드에 따라 다릅니다. 때로는 같은 배열에 대한 참조를 반환하고, 때로는 새 배열의 길이를 반환합니다.
 
@@ -266,7 +266,7 @@ f("a", "b"); // 'a+b'
 
 ## 정적 속성
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : `Array` 생성자를 반환합니다.
 
 ## 정적 메서드
@@ -286,7 +286,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : 인스턴스 객체를 생성한 생성자 함수입니다. `Array` 인스턴스의 경우, 초기 값은 {{jsxref("Array/Array", "Array")}} 생성자입니다.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : ES2015 버전 이전의 ECMAScript 표준에 포함되지 않았으며 [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with) 문 바인딩 목적으로 무시되는 속성 이름을 포함합니다.
 
 아래 속성은 각 `Array` 인스턴스의 고유 속성입니다.
@@ -325,7 +325,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.forEach()")}}
   - : 호출 배열의 각 요소로 함수를 호출합니다.
 - {{jsxref("Array.prototype.includes()")}}
-  - : 호출하는 배열에 값이 포함되어 있는지 여부를 판단하여 적절하게 `true`나`false`를 반환합니다.
+  - : 호출하는 배열에 값이 포함되어 있는지 여부를 판단하여 적절하게 `true`나 `false`를 반환합니다.
 - {{jsxref("Array.prototype.indexOf()")}}
   - : 호출 배열에서 지정된 요소를 찾을 수 있는 첫 번째(최소) 인덱스를 반환합니다.
 - {{jsxref("Array.prototype.join()")}}
@@ -384,10 +384,11 @@ f("a", "b"); // 'a+b'
 
 ### 배열 만들기
 
-이 예제는 먼저 [배열 리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#배열_맅터럴_표기법)을 사용하고, 다음은 [`Array()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 생성자를 사용하고, 마지막으로 문자열에서 배열을 생성하는 [`String.prototype.split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)을 사용하여 새 배열을 만드는 세 가지 방법을 보여 줍니다.
+이 예제는 먼저 [배열 리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#배열_리터럴_표기법)을 사용하고, 다음은 [`Array()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 생성자를 사용하고, 마지막으로 문자열에서 배열을 생성하는 [`String.prototype.split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)을 사용하여 새 배열을 만드는 세 가지 방법을 보여 줍니다.
 
 ```js
 // 배열 리터럴 표기법을 사용하여 'fruits' 배열을 만듭니다.
+const fruits = ["Apple", "Banana"];
 console.log(fruits.length);
 // 2
 
@@ -430,7 +431,7 @@ fruits[1]; // Banana
 // 배열의 길이보다 1 작습니다.
 fruits[fruits.length - 1]; // Banana
 
-// 배열의 길이볻 큰 인덱스를 사용하면
+// 배열의 길이보다 큰 인덱스를 사용하면
 // undefined가 반환됩니다.
 fruits[99]; // undefined
 ```
@@ -624,7 +625,7 @@ for (const fruit of fruits) {
 
 ### 배열의 각 요소에 대해 함수 호출
 
-이 예제는 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 메서드를 사용하여 `fruits` 배열의 각 요소에 대해 함수를 호출합니다. 이 함수는 각 항목이 항목의 인덱스 번호를 함께 콘솔에 기록합니다.
+이 예제는 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 메서드를 사용하여 `fruits` 배열의 각 요소에 대해 함수를 호출합니다. 이 함수는 각 항목과 항목의 인덱스 번호를 함께 콘솔에 기록합니다.
 
 ```js
 const fruits = ["Apple", "Mango", "Cherry"];

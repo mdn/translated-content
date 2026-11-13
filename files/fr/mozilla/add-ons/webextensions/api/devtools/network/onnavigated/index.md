@@ -3,8 +3,6 @@ title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 ---
 
-{{AddonSidebar}}
-
 Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
 
 ## Syntaxe

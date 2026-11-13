@@ -25,7 +25,7 @@ TypeError: Atomics is not a constructor
 
 是因为尝试将不是构造器的对象或者变量来作为构造器使用。参考 {{Glossary("constructor")}} 或者 [`new` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来了解什么是构造器。
 
-有很多的全局对象比如 {{jsxref("String")}}、{{jsxref("Array")}} 等等都是可以使用 `new` 操作符的构造器。但是有一些全局对象并不是，且其属性和方法都是[静态](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>) 的。下面的 JavaScript 标准内置对象都不是构造器：{{jsxref("Math")}}，{{jsxref("JSON")}}，{{jsxref("Symbol")}}，{{jsxref("Reflect")}}，{{jsxref("Intl")}}，{{jsxref("SIMD")}}，{{jsxref("Atomics")}}。
+有很多的全局对象比如 {{jsxref("String")}}、{{jsxref("Array")}} 等等都是可以使用 `new` 操作符的构造器。但是有一些全局对象并不是，且其属性和方法都是[静态](<https://zh.wikipedia.org/wiki/方法_(電腦科學)#靜態（共享/類別）方法>) 的。下面的 JavaScript 标准内置对象都不是构造函数：{{jsxref("Math")}}、{{jsxref("JSON")}}、{{jsxref("Symbol")}}、{{jsxref("Reflect")}}、{{jsxref("Intl")}}、`SIMD`、{{jsxref("Atomics")}}。
 
 [Generator functions](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 也不能作为构造器来使用。
 
@@ -71,7 +71,7 @@ var mycar = new Car("Eagle", "Talon TSi", 1993);
 
 当返回了一个 immediately-resolved 或者 immediately-rejected Promise 的时候，你根本不需要去创建、操作一个新的 Promise 对象。
 
-这是不合法的（[Promise constructor](/zh-CN/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) 被错误的调用了）且会抛出一个 错误 `TypeError: this is not a constructor` exception:
+这是不合法的（[Promise 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)被错误地调用了）且会抛出 `TypeError: this is not a constructor` 异常：
 
 ```js example-bad
 return new Promise.resolve(true);

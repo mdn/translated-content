@@ -1,8 +1,8 @@
 ---
-title: 高度な JavaScript のオブジェクト志向
+title: 高度な JavaScript のオブジェクト指向
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 46c276b76c9fbf1468070686ecd3abbf64761500
 ---
 
 {{LearnSidebar}}

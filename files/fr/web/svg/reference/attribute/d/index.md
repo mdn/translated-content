@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
-{{SVGRef}}
-
 L'attribut **`d`** définit un tracé à dessiner.
 
 La définition d'un tracé est une liste de [commandes de tracé](#commandes_de_tracé) où chaque commande est composée d'une lettre pour la commande, et de nombres qui représentent les paramètres de la commande. Les commandes sont détaillées [ci-dessous](#commandes_de_tracé).
@@ -50,7 +48,7 @@ Pour un [`<path>`](/fr/docs/Web/SVG/Reference/Element/path), `d` est une chaîne
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -67,16 +65,16 @@ Pour un [`<path>`](/fr/docs/Web/SVG/Reference/Element/path), `d` est une chaîne
 ## `<glyph>`
 
 > [!WARNING]
-> Depuis SVG2, [`<glyph>`](/fr/docs/Web/SVG/Element/glyph) est déprécié et ne doit plus être utilisé.
+> Depuis SVG2, [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne doit plus être utilisé.
 
-Pour un élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+Pour un élément [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -91,21 +89,21 @@ Pour un élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), `d` est une chaî
 </table>
 
 > [!NOTE]
-> Le point d'origine (situé aux coordonnées `0, 0`) correspond généralement au _coin en haut à gauche_ du contexte. Néanmoins, pour l'élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), l'origine se situe dans le coin en bas à gauche de son enveloppe.
+> Le point d'origine (situé aux coordonnées `0, 0`) correspond généralement au _coin en haut à gauche_ du contexte. Néanmoins, pour l'élément [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), l'origine se situe dans le coin en bas à gauche de son enveloppe.
 
 ## `<missing-glyph>`
 
 > [!WARNING]
-> Depuis SVG2, [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph) est déprécié et ne doit plus être utilisé.
+> Depuis SVG2, [`<missing-glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne doit plus être utilisé.
 
-Pour un élément [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+Pour un élément [`<missing-glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -121,7 +119,7 @@ Pour un élément [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph), `
 
 ## Utilisation comme propriété CSS
 
-`d` est un attribut de présentation et peut donc être modifié à l'aide de CSS. La propriété peut prendre [`path()`](/fr/docs/Web/CSS/basic-shape/path) ou `none` comme valeur.
+`d` est un attribut de présentation et peut donc être modifié à l'aide de CSS. La propriété peut prendre [`path()`](/fr/docs/Web/CSS/Reference/Values/basic-shape/path) ou `none` comme valeur.
 
 Dans l'exemple qui suit, on illustre comment appliquer un nouveau tracé au survol d'un élément. Le nouveau tracé est le même que le précédent, mais ajoute une ligne sur le cœur.
 

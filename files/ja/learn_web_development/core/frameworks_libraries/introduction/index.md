@@ -1,11 +1,10 @@
 ---
 title: クライアントサイドフレームワークの概要
+short-title: 概要
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 238b07dfeb8c347c590bd02a63140867525d511c
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -61,7 +60,7 @@ Angular は、宣言型 HTML テンプレートを使用するコンポーネン
 
 オリジナルの [AngularJS](https://angularjs.org/) プロジェクトに取り組み、そこから学んだエヴァン・ユーは、2014年に [Vue](https://vuejs.org/) をリリースしました。 Vue はビッグ 4 の中では最も歴史が浅いが、最近人気が急上昇しています。
 
-Vue は、 [AngularJS](https://angularjs.org/) と同様に、独自のコードの一部で HTML を拡張します。それとは別に、主に最新の標準 JavaScript に依存しています。
+Vue は Angular と同様に、独自のコードの一部で HTML を拡張します。それとは別に、主に最新の標準 JavaScript に依存しています。
 
 ### React
 
@@ -83,18 +82,21 @@ React は、 [JSX](https://ja.react.dev/learn/writing-markup-with-jsx) として
 
 ## DOM の変更の冗長性
 
-HTML 要素を構築し、適切なタイミングでブラウザーにレンダリングするには、驚くほどの量のコードが必要です。状態が次のように構造化されたオブジェクトの配列であるとします。
+HTML 要素を構築し、適切なタイミングでブラウザーにレンダリングするには、驚くほどの量のコードが必要です。状態が次のように構造化されたオブジェクトの配列であるとします。ここで、この状態が、`taskName` （テキスト入力によって制御される）と `tasks` のリストを含む、キーと値のストアであると仮定しましょう。
 
 ```js
-const state = [
-  {
-    id: "todo-0",
-    name: "Learn some frameworks!",
-  },
-];
+const state = {
+  taskName: "",
+  tasks: [
+    {
+      id: "todo-0",
+      name: "フレームワークをいくつか学ぶ",
+    },
+  ],
+};
 ```
 
-それらのタスクの 1 つをユーザーにどのように表示すればよいでしょうか? 各タスクをリスト項目として表現したいとします。つまり、(順序なしリスト要素 [`<ul>`](/ja/docs/Web) 内の) HTML [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) 要素です。どうやって作るのでしょうか？それは次のようになります。
+それらのタスクの 1 つをユーザーにどのように表示すればよいでしょうか? 各タスクをリスト項目として表現したいとします。つまり、HTML の（順序なしリスト要素 [`<ul>`](/ja/docs/Web/HTML/Reference/Elements/ul) 内の） [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) 要素です。どうやって作るのでしょうか？それは次のようになります。
 
 ```js
 function buildTodoItemEl(id, name) {
@@ -119,13 +121,23 @@ function buildTodoItemEl(id, name) {
 function buildDeleteButtonEl(id) {
   const button = document.createElement("button");
   button.setAttribute("type", "button");
-  button.textContent = "Delete";
+  button.addEventListener("click", () => {
+    state.tasks = state.tasks.filter((t) => t.id !== id);
+    renderTodoList();
+  });
+  button.textContent = "削除";
 
   return button;
 }
 ```
 
-このボタンはまだ何も実行しませんが、削除機能の実装を決定すると後で実行されます。ページ上に項目をレンダリングするコードは次のようになります。
+注目すべき点は、状態を更新するたびに、状態が画面に反映されるよう、手動で `renderTodoList` を呼び出す必要があるということです。ページ上にアイテムを表示するコードは、次のようなものになるでしょう。
+
+```js hidden
+const todoFormEl = document.querySelector("#todo-form");
+const todoInputEl = document.querySelector("#todo-input");
+const todoListEl = document.querySelector("#todo-list");
+```
 
 ```js
 function renderTodoList() {
@@ -135,8 +147,8 @@ function renderTodoList() {
     frag.appendChild(item);
   });
 
-  while (todoListEl.firstChild) {
-    todoListEl.removeChild(todoListEl.firstChild);
+  while (todoListEl.lastChild) {
+    todoListEl.removeChild(todoListEl.lastChild);
   }
   todoListEl.appendChild(frag);
 }
@@ -144,11 +156,107 @@ function renderTodoList() {
 
 これで、UI 専用のコードが 30 行をおよそ超えています。つまり、 DOM 内で _何かを_ レンダリングするためだけに、後でリスト項目のスタイルを設定するために使用できるクラスを追加する必要はありません。
 
+興味のある方は、以下の完全な動作デモをご覧ください。下記で "Play" ボタンをクリックすると、プレイグラウンドでソースコードを確認できます。
+
+```html hidden
+<h1>TodoMatic</h1>
+<form id="todo-form">
+  <label for="todo-input">完了させる必要があることは？</label>
+  <input type="text" id="todo-input" autocomplete="on" />
+  <button type="submit">追加</button>
+</form>
+<ul id="todo-list"></ul>
+```
+
+```css hidden
+* + * {
+  margin-top: 0.4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Roboto", "Helvetica", "Arial",
+    sans-serif;
+  color: hsl(0 0 0.13);
+
+  width: 95%;
+  max-width: 30em;
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+
+button,
+input[type="text"] {
+  font-size: 100%;
+  line-height: 1.15;
+  font-family: inherit;
+  margin: 0;
+
+  padding: 0.5rem;
+  border: 1px solid #707070;
+  border-radius: 2px;
+}
+
+* + button {
+  margin-left: 0.4rem;
+}
+
+label {
+  display: table;
+}
+
+ul {
+  margin-top: 1.6rem;
+  padding-left: 2em;
+}
+
+label + input[type="text"] {
+  margin-top: 0.4rem;
+}
+```
+
+```js hidden
+function generateUniqueId(prefix = "prefix") {
+  return `${prefix}-${Math.floor(Math.random() * Date.now())}`;
+}
+
+function createTask(name) {
+  return {
+    name,
+    id: generateUniqueId("todo"),
+  };
+}
+
+function renderInput() {
+  todoInputEl.value = state.taskName;
+}
+
+todoInputEl.addEventListener("change", (e) => {
+  state.taskName = e.target.value;
+});
+todoFormEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  state.tasks = [...state.tasks, createTask(state.taskName)];
+  state.taskName = "";
+  renderInput();
+  renderTodoList();
+});
+renderInput();
+renderTodoList();
+```
+
+{{EmbedLiveSample("the_verbosity_of_dom_change", "", "400", , , , , "allow-forms")}}
+
 DOM を直接操作して、この例のように要素の作り方、プロパティを変更する方法、要素を互いの内側に配置する方法、ページ上にそれらを表示する方法など DOM の仕組みについて多くのことを理解する必要があります。このコードは実際にユーザー操作を処理したり、タスクの追加や削除に対処したりするものはありません。これらの機能を追加する場合は、適切なタイミングで適切な方法で UI を更新することを忘れないでください。
 
 JavaScript フレームワークは、この種の作業をはるかに簡単にするために作成されました。 JavaScript フレームワークは、より良い _開発者体験_ を提供するために存在します。これらは JavaScript にまったく新しい機能をもたらすわけではありません。これらにより、JavaScript の機能に簡単にアクセスできるようになり、今日のウェブに合わせて構築できるようになります。
-
-このセクションのコードサンプルの動作を確認したい場合は、 [CodePen 上のアプリの動作バージョン](https://codepen.io/mxmason/pen/XWbPNmw) をチェックアウトしてください。これにより、ユーザーは次の機能を追加したり、新しいタスクを削除します。
 
 このセクションで使用される JavaScript 機能について詳しくは、以下をご覧ください。
 
@@ -288,7 +396,7 @@ Vue チームは [Vue を他の一般的なフレームワークと徹底的に�
 
 **コンテンツ管理システム** (**CMS**: Content-management systems) は、ユーザーが自分で直接コードを書かずにウェブ用のコンテンツを作成できるツールのことです。大規模なプロジェクト、特にコーディング能力に乏しいコンテンツ・ライターからのインプットを必要とするプロジェクトや時間を節約したいプログラマーにとっては良いソリューションです。しかし CMS のセットアップにはかなりの時間を要し、 CMS を利用するということは、少なくともウェブサイトの最終的なアウトプットをコントロールする手段を放棄することを意味します。例えば、選択したCMSがデフォルトでアクセシブルなコンテンツを作成しない場合、これを改善するのは難しいことが多いです。
 
-有名な CMS システムには、 [WordPress](https://wordpress.com/)、[Joomla](https://www.joomla.org/)、[Drupal](https://www.drupal.org/) などがあります。
+有名な CMS システムには、 [WordPress](https://wordpress.com/)、[Joomla](https://www.joomla.org/)、[Drupal](https://new.drupal.org/) などがあります。
 
 ### サーバーサイドレンダリング
 

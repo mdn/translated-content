@@ -5,13 +5,13 @@ slug: Web/HTTP/Reference/Headers/Tk
 
 **`Tk`** 响应首部显示了对相应请求的跟踪情况。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 
-```plain
+```http
 Tk: !  (under construction)
 Tk: ?  (dynamic)
 Tk: G  (gateway or multiple parties)
@@ -48,7 +48,7 @@ Tk: U  (updated)
 
 声明不对相应资源进行跟踪的 `Tk` 首部，如下图所以：
 
-```plain
+```http
 Tk: N
 ```
 

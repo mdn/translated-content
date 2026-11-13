@@ -37,7 +37,7 @@ El evento `hashchange` es ejecutado cuando el fragmento identificador de la URL 
 | Property                        | Type                       | Description                                           |
 | ------------------------------- | -------------------------- | ----------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                    |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                    |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.            |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.              |
 | `oldURL` {{readonlyInline}}     | {{jsxref("String")}}       | The previous URL from which the window was navigated. |

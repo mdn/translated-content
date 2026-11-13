@@ -163,7 +163,8 @@ Aqui está uma captura de tela de um editor de texto online:
 
 Quando seu _site_ está pronto para visualização pública, você precisa fazer _upload_ de suas páginas _web_ para o seu servidor*web.* Você precisa comprar espaço em um servidor, entre vários provedores (veja [Quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Após você decidir qual provedor usar, o provador te enviará um _e-mail_ com suas informações de acesso, normalmente em forma de uma SFTP URL, nome de usuário, senha, e outra informação necessária para conectar no servidor. Tenha em mente que (S)FTP está um tanto quanto antiquado, e outros sistemas de _upload_ de arquivos estão se tornando populares, como [RSync](https://en.wikipedia.org/wiki/Rsync) e [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
-> **Nota:**FTP é inerentemente inseguro. Você precisa se certificar que seu provedor permite o uso de uma conexão segura, por exemplo o SFTP ou RSync com SSH.
+> [!NOTE]
+> FTP é inerentemente inseguro. Você precisa se certificar que seu provedor permite o uso de uma conexão segura, por exemplo o SFTP ou RSync com SSH.
 
 Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante a criação de um _site_, por isso cobrimos isso detalhadamente em um [artigo separado](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server). Agora, aqui está uma pequena lista de clientes (S)FTP básicos e gratuítos:
 

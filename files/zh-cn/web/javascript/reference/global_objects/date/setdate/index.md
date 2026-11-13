@@ -3,8 +3,6 @@ title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
 
-{{JSRef}}
-
 **`setDate()`** 方法根据本地时间来指定一个日期对象的天数。
 
 {{InteractiveExample("JavaScript Demo: Date.setDate()")}}
@@ -26,7 +24,7 @@ console.log(event.getDate());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.setDate(dayValue)
 ```
 

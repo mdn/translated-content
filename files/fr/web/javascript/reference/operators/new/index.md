@@ -3,8 +3,6 @@ title: L'opérateur new
 slug: Web/JavaScript/Reference/Operators/new
 ---
 
-{{jsSidebar("Operators")}}
-
 L'**opérateur `new`** permet de créer une instance d'un certain type d'objet à partir du constructeur qui existe pour celui-ci (natif ou défini par l'utilisateur).
 
 Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes :
@@ -166,4 +164,4 @@ voiture2.propriétaire.nom;
 
 - {{jsxref("Function")}}
 - {{jsxref("Reflect.construct()")}}
-- {{jsxref("Object.prototype")}}
+- {{jsxref("Object")}}

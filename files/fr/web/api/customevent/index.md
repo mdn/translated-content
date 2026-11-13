@@ -41,4 +41,4 @@ _Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/
 ## Voir aussi
 
 - [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage)
-- [Créer et déclencher des évènements](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)
+- [Créer et déclencher des évènements](/fr/docs/Web/API/Document_Object_Model/Events)

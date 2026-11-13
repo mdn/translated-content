@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/Table/Table
 original_slug: WebAssembly/JavaScript_interface/Table/Table
 ---
 
-{{WebAssemblySidebar}}
-
 Le constructeur **`WebAssembly.Table()`** crée un nouvel objet `Table` de la taille et du type d'élément donné.
 
 ## Syntaxe

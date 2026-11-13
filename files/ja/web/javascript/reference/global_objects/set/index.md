@@ -98,7 +98,7 @@ l10n:
 
 ### Set 風オブジェクト
 
-すべての [Set 合成メソッド](#set-の合成)では、 {{jsxref("Operators/this", "this")}} が実際の `Set` インスタンスであることが要求されますが、引数は Set 風であるだけで構いません。Set 風オブジェクトとは、次のことを提供するオブジェクトです。
+すべての [Set 合成メソッド](#set-の合成)では、 {{jsxref("this")}} が実際の `Set` インスタンスであることが要求されますが、引数は Set 風であるだけで構いません。Set 風オブジェクトとは、次のことを提供するオブジェクトです。
 
 - {{jsxref("Set/size", "size")}} プロパティが数値を保持すること。
 - {{jsxref("Set/has", "has()")}} メソッドが要素を取り、論理値を返すこと。
@@ -139,7 +139,7 @@ interface GPUSupportedFeatures {
 };
 ```
 
-`Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください。
+`Set` 風オブジェクトは、読み取り専用か読み書き可能かのどちらかです（上記の IDL で `readonly` キーワードを確認してください）。
 
 - 読み取り専用の `Set` 風オブジェクトには {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) の各メソッドがあります。
 - 読み書き可能な `Set` 風オブジェクトには、それに加えて {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, {{jsxref("Set/add", "add()")}} の各メソッドがあります。

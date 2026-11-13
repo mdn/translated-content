@@ -3,8 +3,6 @@ title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
 ---
 
-{{JSSidebar("Statements")}}
-
 L'objet **`import.meta`** est une méta-propriété qui expose des métadonnées d'un module JavaScript spécifiques au contexte. Cet objet contient des informations à propos du module, telles que l'URL du module.
 
 ## Syntaxe
@@ -45,5 +43,5 @@ Cet objet contient une propriété `url` qui indique l'URL de base du module. Da
 
 ## Voir aussi
 
-- {{jsxref("Instructions/import","import")}}
-- {{jsxref("Instructions/export","export")}}
+- {{jsxref("Statements/import","import")}}
+- {{jsxref("Statements/export","export")}}

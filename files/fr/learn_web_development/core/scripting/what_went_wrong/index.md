@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
 Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous avez peut-être constaté qu'il ne fonctionnait pas. Pas de panique — cet article vise à ce que vous ne vous arrachiez pas les cheveux sur ces problèmes en donnant quelques conseils simples sur la façon de trouver et corriger les erreurs dans les programmes JavaScript.
 
@@ -205,7 +205,7 @@ let userGuess === Number(guessField.value);
 cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat `true`/`false` (vrai/faux).
 
 > [!NOTE]
-> Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token) pour plus de précisions à propos de cette erreur.
+> Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) pour plus de précisions à propos de cette erreur.
 
 ### Le programme dit que vous avez gagné quelle que soit votre suggestion
 
@@ -268,4 +268,4 @@ Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples p
 - Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
 - Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

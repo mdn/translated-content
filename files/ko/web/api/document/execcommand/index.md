@@ -3,7 +3,7 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 HTML 문서가 `designMode`로 전환되면 문서에서 `execCommand` 메서드를 사용할 수 있게 되는데 이것을 이용해서 문서의 편집 가능한 영역을 변경할 수 있습니다. 대부분의 명령어는 문서의 선택 영역에 영향(_볼드, 이탤릭 등_)을 미치고 나머지는 새 요소를 추가(링크 추가)하거나 전체 줄에 영향(들여쓰기)을 미칩니다. `contentEditable`을 사용할 때에 `execCommand()`를 호출하면 현재 활성화된 편집 요소에 영향을 미칩니다.
 
@@ -20,11 +20,11 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ### 매개 변수
 
 - `aCommandName`
-  - : 실행해야할 명령어 이름 {{domxref("DOMString")}}을 나타냅니다. 사용 가능한 명령어 목록은 [Commands](#commands)를 참고하세요.
+  - : 실행해야할 명령어 이름 {{jsxref("String")}}을 나타냅니다. 사용 가능한 명령어 목록은 [Commands](#commands)를 참고하세요.
 - `aShowDefaultUI`
   - : 기본 사용자 UI가 나타나야하는지를 보여주는 {{jsxref("Boolean")}} 값입니다. Mozilla에서는 구현되어 있지 않습니다.
 - `aValueArgument`
-  - : 입력 변수가 필요한 명령어(`insertImage`와 같이 삽입할 이미지의 URL이 필요한)의 경우 이 {{domxref("DOMString")}}으로 정보를 전달합니다. 변수가 필요하지 않으면 `null`을 표기합니다.
+  - : 입력 변수가 필요한 명령어(`insertImage`와 같이 삽입할 이미지의 URL이 필요한)의 경우 이 {{jsxref("String")}}으로 정보를 전달합니다. 변수가 필요하지 않으면 `null`을 표기합니다.
 
 ### 명령어
 

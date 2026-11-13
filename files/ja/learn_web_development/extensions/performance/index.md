@@ -2,7 +2,7 @@
 title: ウェブパフォーマンス
 slug: Learn_web_development/Extensions/Performance
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: f85d2e26b062decf7a2bb9179c3a93003f4067a9
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions")}}
@@ -28,7 +28,7 @@ l10n:
 - [ウェブパフォーマンスとは](/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : ウェブパフォーマンスが重要であることは分かりましたが、ウェブパフォーマンスとは何でしょうか？この記事では、ウェブページの読み込みとレンダリングから、コンテンツがどのようにユーザーのブラウザーに表示されるかを含め、パフォーマンスの構成要素を紹介します。
 - [ユーザーはパフォーマンスをどう知覚するのか](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
-  - : ユーザーがサイトの速さをどのように知覚するかということは、ウェブサイトの速さをミリ秒単位で示すことよりも重要です。 この認識は、実際のページの読み込みロード時間、アイドリング、ユーザー操作への応答性、スクロールやその他のアニメーションのスムーズさに影響されます。この記事では、様々な読み込みの指標、アニメーション、応答性の指標と、実際の時間よりもユーザーの認識を改善するためのベストプラクティスについて説明します。
+  - : ユーザーがサイトの速さをどのように知覚するかということは、ウェブサイトの速さをミリ秒単位で示すことよりも重要です。 この認識は、実際のページの読み込みロード時間、アイドリング、ユーザー操作への応答性、スクロールやその他のアニメーションのスムーズさに影響されます。この記事では、様々な読み込みの指標、アニメーション、応答性の指標と、実際の時間よりもユーザーの認識を改善するための最善の取り組みについて説明します。
 - [パフォーマンスの計測](/ja/docs/Learn_web_development/Extensions/Performance/Measuring_performance)
   - : パフォーマンス指標のいくつかを理解したところで、パフォーマンスツール、指標、API について深く掘り下げ、パフォーマンスをウェブ開発のワークフローの一部にする方法を考えてみます。
 - [マルチメディア: 画像](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)
@@ -43,11 +43,11 @@ l10n:
   - : CSS は、パフォーマンス向上のための最適化の焦点としてはあまり重要ではないかもしれませんが、パフォーマンスに影響を与える CSS の特性がいくつかあります。この記事では、パフォーマンスに影響を与えるいくつかの CSS プロパティと、パフォーマンスに悪影響を与えないためのスタイルの処理方法を提案します。
 - [ウェブパフォーマンスのためのビジネスケース](/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
   - : パフォーマンスを向上させるために開発者ができることは数多くありますが、どれくらいの速度があれば十分なのでしょうか。このような努力の重要性を権限を持った人に納得させるにはどうすればよいでしょうか。最適化した後、肥大化したパフォーマンスが戻らないようにするにはどうすればよいでしょうか。この記事では、経営陣の説得、パフォーマンス文化とパフォーマンス予算の策定、コードベースにリグレッションが潜り込まないようにする方法を紹介します。
+- [ウェブパフォーマンスの良い取り組みとコツ](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)
+  - : この記事では、いくつかのトピックを基礎レベルで解説し、各トピックのパフォーマンス向上に向けた詳細な情報へのリンクを提供します。HTML、CSS、JavaScript、メディアファイルといったフロントエンド関連のトピックに加え、ウェブパフォーマンスに関連する API、開発者ツール、良い取り組み、悪い慣行についても扱います。
 
 ## 関連情報
 
-- [ウェブパフォーマンスのリソース](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)
-  - : HTML、CSS、JavaScript、メディアファイルなどのフロントエンドの構成物に加えて、アプリケーションを遅くする機能と、主観的・客観的にアプリケーションを速くする機能があります。ウェブパフォーマンスに関連する API、開発者ツール、ベストプラクティス、バッドプラクティスは数多くあります。ここでは、これらの機能の多くを基本的なレベルで紹介し、それぞれのトピックについて、パフォーマンスを向上させるためのより深い考察へのリンクを提供します。
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
   - : この記事では、画面サイズや解像度などが大きく異なる端末でも動作する画像、すなわちレスポンシブ画像の概念を学び、それを実現するために HTML が提供するツールを紹介します。これにより、異なる端末間でのパフォーマンスを向上させることができます。レスポンシブ画像は、[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の一部であり、今後の CSS のテーマとなります。
 - [MDN のウェブパフォーマンスの章](/ja/docs/Web/Performance)

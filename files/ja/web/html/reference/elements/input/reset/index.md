@@ -1,24 +1,22 @@
 ---
-title: <input type="reset">
+title: '`<input type="reset">` 属性値'
+short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLSidebar}}
-
-{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
+{{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、デフォルトの {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <form>
   <div class="controls">
-    <label for="id">User ID:</label>
-    <input type="text" id="id" name="id" />
+    <label for="comments">コメント:</label>
+    <textarea id="comments" name="comments"></textarea>
 
-    <input type="reset" value="Reset" />
-    <input type="submit" value="Submit" />
+    <input type="reset" value="リセット" />
   </div>
 </form>
 ```
@@ -27,7 +25,7 @@ l10n:
 .controls {
   padding-top: 1rem;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-template-columns: 1fr 2fr;
   gap: 0.7rem;
 }
@@ -37,8 +35,7 @@ label {
   justify-self: end;
 }
 
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"] {
   width: 5rem;
   justify-self: end;
 }
@@ -47,19 +44,11 @@ input[type="reset"] {
   grid-column: 2;
   grid-row: 2;
 }
-
-input[type="submit"] {
-  grid-column: 2;
-  grid-row: 3;
-}
 ```
-
-> [!NOTE]
-> 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
 
 ## 値
 
-`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
+`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、ボタンのラベルとして使用する文字列が入ります。このラベルはボタンの{{glossary("Accessible description", "アクセシブル説明")}}になります。 `reset` などのボタンは、それ以外の値を持ちません。
 
 ### value 属性の設定
 
@@ -71,7 +60,7 @@ input[type="submit"] {
 
 ### value 属性の省略
 
-`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("User agent", "ユーザーエージェント")}}によって異なります）。
+`value` を指定しなかった場合は、デフォルトのラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("User agent", "ユーザーエージェント")}}によって異なります）。
 
 ```html
 <input type="reset" />
@@ -83,6 +72,8 @@ input[type="submit"] {
 
 `<input type="reset">` ボタンはフォームをリセットするために使用されます。独自のボタンを作成して JavaScript を使用してカスタマイズしたいのであれば、 [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button) またはよりよい {{htmlelement("button")}} 要素を使用してください。
 
+通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
+
 ### 基本的なリセットボタン
 
 基本的なリセットボタンを作成するところから始めましょう。
@@ -91,7 +82,7 @@ input[type="submit"] {
 <form>
   <div>
     <label for="example">何かテキストの例を入力してください</label>
-    <input id="example" type="text" />
+    <textarea id="example"></textarea>
   </div>
   <div>
     <input type="reset" value="フォームをリセット" />
@@ -115,7 +106,7 @@ input[type="submit"] {
 <form>
   <div>
     <label for="example">何かテキストの例を入力してください</label>
-    <input id="example" type="text" />
+    <textarea id="example"></textarea>
   </div>
   <div>
     <input type="reset" value="フォームをリセット" accesskey="r" />
@@ -132,7 +123,7 @@ input[type="submit"] {
 リセットボタンを無効化するには、以下のようにグローバル属性の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) を指定するだけです。
 
 ```html
-<input type="reset" value="Disabled" disabled />
+<input type="reset" value="無効" disabled />
 ```
 
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効化したり無効化したりすることができます。 JavaScript では、これは `btn.disabled = true` や `btn.disabled = false` のようになります。
@@ -174,10 +165,6 @@ input[type="submit"] {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

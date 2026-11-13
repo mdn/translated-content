@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
 original_slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 ![Mozilla dino logo](dino.svg)
 
@@ -31,7 +31,7 @@ SVG를 시작하기에 앞서, 기초적인 XML 문법이나 HTML 같은 다른 
 - XML은 (HTML과 달리) 대소문자를 구분하는 언어이므로 SVG 요소와 속성은 반드시 예제에 보이는 대로 입력해야 한다.
 - SVG에서 속성 값은 숫자라고 할지라도 반드시 따옴표로 둘러싸야 한다.
 
-SVG의 명세는 아주 길다. 이 튜토리얼에서는 기초적인 부분만을 다룬다. 이미 SVG에 익숙하다면 [요소 레퍼런스](/ko/docs/SVG/Element)나 [인터페이스 레퍼런스](/ko/docs/Web/API/Document_Object_Model#svg_interfaces)에서 필요한 부분을 찾아보면 된다.
+SVG의 명세는 아주 길다. 이 튜토리얼에서는 기초적인 부분만을 다룬다. 이미 SVG에 익숙하다면 [요소 레퍼런스](/ko/docs/Web/SVG/Reference/Element)나 [인터페이스 레퍼런스](/ko/docs/Web/API/Document_Object_Model#svg_interfaces)에서 필요한 부분을 찾아보면 된다.
 
 ### SVG의 종류
 
@@ -41,4 +41,4 @@ SVG의 명세는 아주 길다. 이 튜토리얼에서는 기초적인 부분만
 
 다중 페이지 지원 및 더 나은 색상 관리를 위한 SVG 프린트 명세도 계획되어 있었다. 이 작업은 현재 진행되지 않고 있다.
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

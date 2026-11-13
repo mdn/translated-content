@@ -12,7 +12,7 @@ L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i la
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : Un entier qui représente le nombre d'objets qui sont stockés dans l'objet.
 - {{domxref("DOMTokenList.value")}} {{ReadOnlyInline}}
-  - : retourne la valeur de la liste comme une {{domxref("DOMString")}} _(chaîne de caractères)._
+  - : retourne la valeur de la liste comme une {{jsxref("String")}} _(chaîne de caractères)._
 
 ## Méthodes
 

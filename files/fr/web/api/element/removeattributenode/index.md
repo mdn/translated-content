@@ -1,15 +1,16 @@
 ---
 title: "Element : méthode removeAttributeNode()"
+short-title: removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`removeAttributeNode()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime le nœud [`Attr`](/fr/docs/Web/API/Attr) indiqué de l'élément.
+La méthode **`removeAttributeNode()`** de l'interface {{DOMxRef("Element")}} supprime le nœud {{DOMxRef("Attr")}} indiqué de l'élément.
 
-Si vous n'avez pas besoin d'inspecter le nœud d'attribut avant de la supprimer, vous pouvez utiliser la méthode [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute) à la place.
+Si vous n'avez pas besoin d'inspecter le nœud d'attribut avant de le supprimer, vous pouvez utiliser la méthode {{DOMxRef("Element.removeAttribute()")}} à la place.
 
 ## Syntaxe
 
@@ -20,16 +21,16 @@ removeAttributeNode(attributeNode)
 ### Paramètres
 
 - `attributeNode`
-  - : Le nœud `Attr` à supprimer de l'élément
+  - : Le nœud d'attribut à supprimer de l'élément.
 
 ### Valeur de retour
 
-Le nœud `Attr` qui a été supprimé.
+Le nœud d'attribut qui a été supprimé.
 
 ### Exceptions
 
-- `NotFoundError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Levée lorsque la liste d'attribut de l'élément ne contient pas le nœud d'attribut recherché.
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : Levée lorsque la liste d'attributs de l'élément ne contient pas le nœud d'attribut recherché.
 
 ## Exemples
 
@@ -57,7 +58,6 @@ Il n'existe pas de méthode `removeAttributeNodeNS()`, car `removeAttributeNode(
 
 ## Voir aussi
 
-- [`Document.removeAttribute()`](/fr/docs/Web/API/Document/removeAttribute)
-- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
-- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
-- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- La {{DOMxRef("Document.createAttribute()")}}
+- La {{DOMxRef("Element.getAttributeNode()")}}
+- La {{DOMxRef("Element.setAttributeNode()")}}

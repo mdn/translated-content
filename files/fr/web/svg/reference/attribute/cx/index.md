@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/cx
 original_slug: Web/SVG/Attribute/cx
 ---
 
-{{SVGRef}}
-
 L'attribut **`cx`** définit la coordonnée de l'axe x pour le point central d'un élément.
 
 Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
@@ -43,7 +41,7 @@ Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -69,7 +67,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>
@@ -95,7 +93,7 @@ Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnée
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
+      <td><a href="/fr/docs/Web/CSS/Reference/Values/length-percentage">
         <code>&lt;length-percentage&gt;</code>
       </a></td>
     </tr>

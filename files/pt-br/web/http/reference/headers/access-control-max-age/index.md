@@ -13,7 +13,7 @@ O cabeçalho de resposta **`Access-Control-Max-Age`** indica por quanto tempo os
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

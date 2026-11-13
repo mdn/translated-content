@@ -1,28 +1,31 @@
 ---
-title: Window.prompt()
+title: "Window: prompt() メソッド"
+short-title: prompt()
 slug: Web/API/Window/prompt
+l10n:
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
 {{ApiRef("Window")}}
 
 `window.prompt()` は、ユーザーにテキストを入力するように促すダイアログをオプションのメッセージと共に表示し、ユーザーがテキストを送信するかダイアログをキャンセルするまで待機するようにブラウザーに指示します。
 
-ある条件下では、例えば、ユーザーがタブを切り替えたとき、ブラウザーは実際にはダイアログを表示しないかもしれませんし、ユーザーがテキストを送信したり、ダイアログをキャンセルしたりするまで待たないかもしれません。
+ある条件下では（例えば、ユーザーがタブを切り替えたとき）、ブラウザーは実際にはダイアログを表示しないかもしれませんし、ユーザーがテキストを送信したり、ダイアログをキャンセルしたりするまで待たないかもしれません。
 
 ## 構文
 
-```js
+```js-nolint
 prompt()
 prompt(message)
-prompt(message, default)
+prompt(message, defaultValue)
 ```
 
 ### 引数
 
 - `message` {{optional_inline}}
-  - : ユーザーに表示する文字列。プロンプトウィンドウに表示するものがない場合は省略可能です。
-- `default` {{optional_inline}}
-  - : テキスト入力フィールドに表示される既定値を指定する文字列。 Internet Explorer 7 および 8 では、この引数を指定しなかった場合、文字列 `"undefined"` が既定値となることに注意してください。
+  - : ユーザーに表示する文字列です。プロンプトウィンドウに表示するものがない場合は省略可能です。
+- `defaultValue` {{optional_inline}}
+  - : テキスト入力フィールドに表示されるデフォルト値を指定する文字列です。
 
 ### 返値
 
@@ -30,39 +33,67 @@ prompt(message, default)
 
 ## 例
 
-```js
-let sign = prompt("What's your sign?");
+### メッセージと初期値を指定してプロンプトを使用
 
-if (sign.toLowerCase() == "scorpio") {
-  alert("Wow! I'm a Scorpio too!");
-}
+以下の例では、プロンプトの返値をチェックする方法を示します。
+ユーザーが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。
+ユーザーがテキストを入力せずに OK をクリックする場合、空文字列が返ります。
+ユーザーがキャンセルボタンをクリックする場合、この関数は `null` を返します。
 
-// プロンプトの使い方には色々なものがあります。
-sign = window.prompt(); // 空のプロンプトを表示
-sign = prompt(); //  同上
-sign = window.prompt("元気にしてる ?"); // 「元気にしてる ?」の文字列入りで表示
-sign = window.prompt("元気にしてる ?", "元気だよ !"); // 「元気にしてる ?」 の文字列入りで、入力欄の初期値に「元気だよ !」を設定して表示
+```html live-sample___prompt
+<button id="signButton">星座を調べる</button>
+<pre id="log"></pre>
 ```
 
-ユーザーが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。ユーザーがテキストを入力せずに OK をクリックする場合、空文字列が返ります。ユーザーがキャンセルボタンをクリックする場合、この関数は、 `null` を返します。
+```js live-sample___prompt
+const signButton = document.querySelector("#signButton");
+const log = document.querySelector("#log");
 
-上記例のプロンプトは次のように表示されます（macOS の Chrome）。
+signButton.addEventListener("click", () => {
+  let sign = prompt("あなたの星座は？");
 
-[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
+  if (sign === null) {
+    log.innerText = "よし、次はきっとね。";
+  } else if (sign.toLowerCase() === "") {
+    log.innerText = "恥ずかしがらないで、星座を入力してね！";
+  } else if (sign.toLowerCase() === "scorpio") {
+    log.innerText = "わお！私も Scorpio です！";
+  } else {
+    log.innerText = `${sign} が大好きです。`;
+  }
+});
+```
+
+{{EmbedLiveSample('prompt', , , , , , , 'allow-modals')}}
+
+### プロンプトメッセージと初期値
+
+プロンプトの使い方には色々なものがあります。`prompt` を使ったり、`window.prompt` を使ったり、メッセージと初期値を指定したりできます。
+
+```js
+// 空のプロンプトを表示
+sign = prompt();
+// 同上
+sign = window.prompt();
+// 「元気にしてる ?」の文字列入りで表示
+sign = window.prompt("元気にしてる ?");
+// 「元気にしてる ?」 の文字列入りで、入力欄の初期値に「元気だよ !」を設定して表示
+sign = window.prompt("元気にしてる ?", "元気だよ !");
+```
 
 ## メモ
 
-プロンプトダイアログは、単一の行のテキストボックス、キャンセルボタン、OK ボタンを含み、ユーザーがテキストボックスに入力した（空の可能性もある）テキストを返します。
+ダイアログボックスはモーダルウィンドウです。ダイアログボックスが閉じられるまで、ユーザーはプログラムの他のインターフェイスにアクセスすることができなくなります。
+このため、ダイアログボックス（またはモーダルウィンドウ）を作成する関数は、使いすぎないようにしましょう。
+他にもユーザー入力には {{HTMLElement("dialog")}} 要素を使用することができます。
 
-返値は文字列であることに注意してください。つまり、ユーザーから与えられた値をキャストする必要がある場合があります。例えば、答えが Number であるべきなら、その値を Number にキャストする必要があります。
+プロンプトダイアログは、単一の行のテキストボックス、キャンセルボタン、OK ボタンを含み、ユーザーがテキストボックスに入力した（空の可能性もある）テキストを返します。
+返値は文字列であることに注意してください。つまり、ユーザーから与えられた値をキャストする必要がある場合があります。
+例えば、答えが数値であるべきなら、その値を Number にキャストする必要があります。
 
 ```js
-const aNumber = Number(window.prompt("Type a number", ""));
+const number = Number(window.prompt("Type a number", ""));
 ```
-
-ダイアログボックスはモーダルウィンドウです。ダイアログボックスが閉じられるまで、ユーザーはプログラムの他のインターフェイスにアクセスすることができなくなります。このため、ダイアログボックス（またはモーダルウィンドウ）を作成する関数は、使いすぎないようにしましょう。
-
-他にもユーザー入力には {{HTMLElement("dialog")}} 要素を使用することができます。
 
 ## 仕様書
 
@@ -77,3 +108,4 @@ const aNumber = Number(window.prompt("Type a number", ""));
 - {{HTMLElement("dialog")}} 要素
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) - A List Apart (2017)

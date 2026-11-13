@@ -3,8 +3,6 @@ title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`delete()`** 方法从该集合中删除指定值，如果该值在集合中。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}

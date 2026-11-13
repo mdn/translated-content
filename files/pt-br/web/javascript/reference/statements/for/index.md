@@ -90,8 +90,7 @@ function showOffsetPos(sId) {
     nLeft += oItNode.offsetLeft,
       nTop += oItNode.offsetTop,
       oItNode = oItNode.offsetParent // expressão final
-    /* empty statement */
-  );
+  ); /* empty statement */
 
   console.log(
     'Offset position of "' +
@@ -129,7 +128,7 @@ showOffsetPos("content");
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/Empty", "empty")}}
 - {{jsxref("Statements/while", "while")}}
 - [`do...while`](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)

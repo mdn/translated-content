@@ -22,12 +22,12 @@ String.fromCodePoint(num1[, ...[, numN]])
 
 ### Throws
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : A {{jsxref("Global_Objects/RangeError", "RangeError")}} is thrown if an invalid Unicode code point is given (e.g. "RangeError: NaN is not a valid code point").
+- {{jsxref("RangeError")}}
+  - : A {{jsxref("RangeError")}} is thrown if an invalid Unicode code point is given (e.g. "RangeError: NaN is not a valid code point").
 
 ## Descripción
 
-Because `fromCodePoint()` is a static method of {{jsxref("Global_Objects/String", "String")}}, you always use it as `String.fromCodePoint()`, rather than as a method of a {{jsxref("Global_Objects/String", "String")}} object you created.
+Because `fromCodePoint()` is a static method of {{jsxref("String")}}, you always use it as `String.fromCodePoint()`, rather than as a method of a {{jsxref("String")}} object you created.
 
 ## Ejemplos
 
