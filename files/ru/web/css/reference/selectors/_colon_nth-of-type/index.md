@@ -24,7 +24,11 @@ p:nth-of-type(4n) {
 
 ### Формальный синтаксис
 
-{{csssyntax}}
+```css-nolint
+:nth-of-type(<An+B> | even | odd) {
+  /* ... */
+}
+```
 
 ## Примеры
 

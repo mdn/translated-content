@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**CSS グラデーション**は {{cssxref("&lt;gradient&gt;")}} データ型で表現され、 2 つ以上の色の間の連続的な変化から成る {{cssxref("&lt;image&gt;")}} の特殊型です。グラデーションは 3 種類から選択することができます。線形 (_linear_) ({{cssxref("gradient/linear-gradient", "linear-gradient()")}} 関数によって生成)、放射 (_radial_) ({{cssxref("gradient/radial-gradient", "radial-gradient()")}} 関数によって生成)、扇形 (_conic_) ({{cssxref("gradient/conic-gradient", "conic-gradient()")}} 関数によって生成) の 3 種類です。 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} の各関数によって、反復グラデーションを生成することもできます。
+**CSS グラデーション**は {{cssxref("gradient")}} データ型で表現され、 2 つ以上の色の間の連続的な変化から成る {{cssxref("image")}} の特殊型です。グラデーションは 3 種類から選択することができます。線形 (_linear_) ({{cssxref("gradient/linear-gradient", "linear-gradient()")}} 関数によって生成)、放射 (_radial_) ({{cssxref("gradient/radial-gradient", "radial-gradient()")}} 関数によって生成)、扇形 (_conic_) ({{cssxref("gradient/conic-gradient", "conic-gradient()")}} 関数によって生成) の 3 種類です。 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} の各関数によって、反復グラデーションを生成することもできます。
 
 グラデーションは、例えば背景など、`<image>` が使えるところならば、どこでも利用できます。グラデーションは動的に生成されるため、従来は同様の効果を実現するために使用されていたラスタ画像ファイルを必要としません。加えて、グラデーションはブラウザーによって生成されるため、拡大した際に見栄えがより良く、その場で大きさを変更することもできます。
 
@@ -1059,7 +1059,7 @@ div {
 ## 関連記事
 
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- グラデーション関連の CSS データ型: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
+- グラデーション関連の CSS データ型: {{cssxref("gradient")}}, {{cssxref("image")}}
 - グラデーション関連の CSS プロパティ: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)

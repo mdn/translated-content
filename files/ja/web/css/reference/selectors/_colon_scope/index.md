@@ -1,12 +1,12 @@
 ---
-title: :scope
+title: CSS `:scope` 擬似クラス
+short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
-original_slug: Web/CSS/:scope
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
+**`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、セレクターを照合する対象の参照点またはスコープである要素を表します。
 
 ```css
 /* スコープとなる要素を選択 */
@@ -84,13 +84,13 @@ div {
   }
 
   a {
-    color: darkmagenta;
+    color: indigo;
   }
 }
 
 @scope (.dark-scheme) {
   :scope {
-    background-color: darkmagenta;
+    background-color: indigo;
     color: antiquewhite;
   }
 
@@ -113,11 +113,11 @@ div {
 ```html
 <div id="context">
   <div id="element-1">
-    <div id="element-1.1"></div>
-    <div id="element-1.2"></div>
+    <div id="element-1-1"></div>
+    <div id="element-1-2"></div>
   </div>
   <div id="element-2">
-    <div id="element-2.1"></div>
+    <div id="element-2-1"></div>
   </div>
 </div>
 <p>
@@ -132,8 +132,8 @@ div {
 const context = document.getElementById("context");
 const selected = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").textContent = Array.prototype.map
-  .call(selected, (element) => `#${element.getAttribute("id")}`)
+document.getElementById("results").textContent = [...selected]
+  .map((element) => `#${element.id}`)
   .join(", ");
 ```
 

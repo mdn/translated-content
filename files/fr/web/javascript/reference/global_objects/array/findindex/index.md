@@ -3,7 +3,7 @@ title: "Array : méthode findIndex()"
 short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`findIndex()`** des instances de {{JSxRef("Array")}} retourne l'indice du premier élément d'un tableau qui satisfait la fonction de test fournie.
@@ -81,7 +81,7 @@ console.log([4, 6, 7, 9, 12].findIndex(estPremier)); // 2 (array[2] vaut 7)
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement mémoïsé, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
+> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}}, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
 
 ### Utiliser le troisième argument de `callbackFn`
 
@@ -116,7 +116,7 @@ La méthode `findIndex()` lit la propriété `length` de `this` puis accède à 
 ```js
 const objetSimilaireTableauemblantTableau = {
   length: 3,
-  "-1": 0.1, // ignoré par findIndex() car -1 < 0
+  "-1": 0.1, // ignoré par findIndex(), car -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
@@ -139,13 +139,13 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.findIndex` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.findIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findindex)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.findLast()")}}
 - La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
 - La méthode {{JSxRef("Array.prototype.indexOf()")}}
 - La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
 - La méthode {{JSxRef("TypedArray.prototype.findIndex()")}}
-- [Prothèse d'émulation core-js pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findindex)

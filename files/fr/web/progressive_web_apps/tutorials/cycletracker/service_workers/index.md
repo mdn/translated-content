@@ -4,8 +4,6 @@ short-title: Service workers
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
 ---
 
-{{PWASidebar}}
-
 {{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 Jusqu'à présent, nous avons écrit le HTML, le CSS et le JavaScript de l'application CycleTracker. Nous avons ajouté un fichier de manifeste qui définit les couleurs, icônes, URL et d'autres fonctionnalités de l'application. Notre application web est fonctionnelle&nbsp;! Toutefois, ce n'est pas encore une application web progressive. Dans cette section, nous écrirons le JavaScript nécessaire pour que notre application web devienne une PWA qui puisse être distribuée comme une application à part entière et qui fonctionne hors-ligne.
@@ -308,7 +306,7 @@ Lorsqu'on met à jour le code du <i lang="en">service worker</i>, la constante `
 
 Maintenant que notre <i lang="en">service worker</i> est terminé, nous devons l'enregistrer.
 
-Pour cela, on commence par vérifier la prise en charge de [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) par le navigateur en [détectant la fonctionnalité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#the_concept_of_feature_detection) avec un test de la présence de la propriété [`serviceWorker`](/fr/docs/Web/API/ServiceWorker) sur l'objet global [`navigator`](/fr/docs/Web/API/Navigator)&nbsp;:
+Pour cela, on commence par vérifier la prise en charge de [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) par le navigateur en [détectant la fonctionnalité](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection#the_concept_of_feature_detection) avec un test de la présence de la propriété [`serviceWorker`](/fr/docs/Web/API/ServiceWorker) sur l'objet global [`navigator`](/fr/docs/Web/API/Navigator)&nbsp;:
 
 ```html
 <script>

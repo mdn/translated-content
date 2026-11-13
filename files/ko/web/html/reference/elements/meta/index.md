@@ -20,15 +20,15 @@ original_slug: Web/HTML/Element/meta
       <td>
         메타데이터 콘텐츠.
         <code
-          ><a href="/ko/docs/Web/HTML/Global_attributes/itemprop"
+          ><a href="/ko/docs/Web/HTML/Reference/Global_attributes/itemprop"
             >itemprop</a
           ></code
         >이 존재하면
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >
         및
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -50,7 +50,7 @@ original_slug: Web/HTML/Element/meta
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>인
         경우 {{htmlelement("head")}} 요소.
-        <a href="/ko/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a>가 인코딩 선언이
+        <a href="/ko/docs/Web/HTML/Reference/Elements/meta#http-equiv"><code>http-equiv</code></a>가 인코딩 선언이
         아닌 경우 <code>&#x3C;head></code> 내의
         {{htmlelement("noscript")}} 요소도 가능합니다.
       </td>

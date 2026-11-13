@@ -12,7 +12,7 @@ slug: Web/URI/Reference/Schemes/data
 
 Data URL 由四个部分组成：前缀（`data:`）、指示数据类型的 MIME 类型、如果非文本则为可选的 `base64` 标记、数据本身：
 
-```plain
+```url
 data:[<mediatype>][;base64],<data>
 ```
 

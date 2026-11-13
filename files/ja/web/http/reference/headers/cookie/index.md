@@ -1,10 +1,12 @@
 ---
-title: Cookie
+title: Cookie ヘッダー
+short-title: Cookie
 slug: Web/HTTP/Reference/Headers/Cookie
-original_slug: Web/HTTP/Headers/Cookie
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**`Cookie`** は HTTP のリクエストヘッダーで、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信し、保存された [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を含みます。
+HTTP の **`Cookie`** {{Glossary("request header", "リクエストヘッダー")}}は、保存されている [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を送信します。これらはサーバーに関連付けられているものです（つまり、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信したもの、または JavaScript で {{domxref("Document.cookie")}} を使用して設定されたものです）。
 
 `Cookie` ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。
 
@@ -12,14 +14,10 @@ original_slug: Web/HTTP/Headers/Cookie
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Request header", "リクエストヘッダー")}}
-      </td>
+      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
@@ -27,26 +25,27 @@ original_slug: Web/HTTP/Headers/Cookie
 
 ## 構文
 
-```
+```http
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
 ```
 
-- \<cookie-list>
-  - : 名前と値のリストを `<cookie-name>=<cookie-value>` の形で表したものです。リストの組はセミコロンと空白 (`'; '`) で区切られます。
+## ディレクティブ
+
+- `<cookie-list>`
+  - : 名前と値のリストを `<cookie-name>=<cookie-value>` の形で表したものです。
+    リストの組はセミコロンと空白 (`'; '`) で区切られます。
 
 ## 例
 
-```
+```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
 
 ## 仕様書
 
-| 仕様書                           | 題名                            |
-| -------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -54,5 +53,6 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 
 ## 関連情報
 
+- {{HTTPStatus("413", "413 Content Too Large")}}
 - {{HTTPHeader("Set-Cookie")}}
 - {{domxref("Document.cookie")}}

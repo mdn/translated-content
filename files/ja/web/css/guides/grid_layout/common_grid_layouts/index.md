@@ -3,7 +3,7 @@ title: グリッドを使用したよくあるレイアウトの実現
 short-title: よくあるグリッドレイアウト
 slug: Web/CSS/Guides/Grid_layout/Common_grid_layouts
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
 ---
 
 [一連の CSS グリッドレイアウトガイド](/ja/docs/Web/CSS/Guides/Grid_layout#ガイド)の締めくくりとして、グリッドレイアウトを使ったデザインのテクニックをいくつか紹介します。ここでは、 {{cssxref("grid-template-areas")}} を使った例と、 12 列の可変グリッドシステム、そして自動配置を使ったアイテムリストを見ていきます。これらの例からわかるように、多くの場合、グリッドレイアウトで望む結果を得るためには複数の方法があります。自分が解決しようとしている問題や、実現しようとしているデザインに合わせて、最も参考になる方法を選んでください。
@@ -605,6 +605,6 @@ CSS グリッドレイアウトは、非常に多くの可能性を提供しま�
 
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)
 - [CSS レイアウト: グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)
-- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
+- [CSS grid layout guide](https://css-tricks.com/complete-guide-css-grid-layout/) - CSS-Tricks (2021)
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

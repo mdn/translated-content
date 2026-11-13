@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a468a537c0234a3035951e80af76715e1c36c8f7
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 **`applets`** は {{domxref("Document")}} のプロパティで、空の {{domxref("HTMLCollection")}} を返します。このプロパティは互換性のためだけに残されています。古いバージョンのブラウザーでは、文書内のアプレットのリストを返していました。
 

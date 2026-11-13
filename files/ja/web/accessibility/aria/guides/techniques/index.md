@@ -1,34 +1,11 @@
 ---
 title: "ARIA の使用: ロール、ステート、プロパティ"
 slug: Web/Accessibility/ARIA/Guides/Techniques
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 l10n:
-  sourceCommit: 95cdbf44bd47782a5afb6ec4a3c4d00a5a7958e3
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA ライブリージョン</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/forms">ウェブフォーム</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA に関するバグの報告方法</a></li>
-    <li class="toggle">
-      <details><summary>ARIA ステートとプロパティ</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA ロール</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
-
-ARIA は、要素に適用できる意味づけを定義しており、これらは **ロール** （ユーザーインターフェイス要素の種類を定義する）と、ロールが対応している **ステート** と **プロパティ** に分けられます。オーナーは、要素がすでに適切な ARIA の意味づけが（適切な HTML 要素を使用することによって）ある場合を除いて、そのライフサイクルの間に要素に ARIA の役割と適切な状態およびプロパティを割り当てる必要があります。ARIA の意味づけは、ブラウザーのアクセシビリティ API に余分な情報を公開するだけで、ページの DOM には影響を与えません。
+ARIA は、要素に適用できる意味づけを定義しており、これらは **ロール** （ユーザーインターフェイス要素の種類を定義する）と、ロールが対応している **ステート** と **プロパティ** に分けられます。要素が既に（適切な HTML 要素を使った）適切な ARIA 意味づけを持っている場合を除き、作成者は要素のライフサイクル中に、その要素に ARIA ロールと適切な状態およびプロパティを割り当てるべきです。ARIA 意味づけを加えても、ブラウザーのアクセシビリティ API に追加情報が公開されるだけで、ページの DOM には影響しません。
 
 ## ロール
 
@@ -185,4 +162,4 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 
 ### MicrosoftEdge 固有のプロパティ
 
-- [`x-ms-aria-flowfrom`](/ja/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}
+- `x-ms-aria-flowfrom` {{Non-standard_Inline}}

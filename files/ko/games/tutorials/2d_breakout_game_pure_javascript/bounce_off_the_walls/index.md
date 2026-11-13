@@ -1,15 +1,15 @@
 ---
 title: 공을 벽에 튕기기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.
+이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.
 
-공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)에서 다시 설명할 예정입니다)을 구현해야 합니다.
+공이 움직이는 걸 보니 기쁩니다! 하지만 기쁨을 즐길 틈도 없이 공이 스크린 밖으로 사라져버리네요. 이 문제를 해결하기 위해 공이 캔버스의 4군데 모서리에 다달았을 때 튕겨나올 수 있도록 간단한 충돌 감지 기능(더 자세한 내용은 [다음 글](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)에서 다시 설명할 예정입니다)을 구현해야 합니다.
 
 ## 간단한 충돌 감지
 
@@ -98,13 +98,73 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 자, 다시 여러분이 작성한 코드를 완성된 코드와 비교해보고 게임을 실행해보세요.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
+> [!NOTE]
+> 라이브 샘플이 자동으로 실행되지 않도록 "게임 시작" 버튼을 추가했습니다. 게임이 자동으로 시작되면서 알림 등의 이벤트가 과도하게 발생하는 것을 방지하기 위해서입니다.
+
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">게임 시작</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{EmbedLiveSample("여러분의 코드를 비교해보세요", 600, 360)}}
 
 > [!NOTE]
 > 공이 벽에 부딪힐 때마다 공의 색을 무작위로 변화시켜보세요.
 
 ## 다음 단계
 
-이제 우리는 공이 게임판 안에서 어디서 어떻게 움직이고 있는지 파악했습니다. 네번째 챕터에서는 조작 가능한 배드를 구현해볼 것입니다. — [패드와 키보드 조작](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+이제 우리는 공이 게임판 안에서 어디서 어떻게 움직이고 있는지 파악했습니다. 네번째 챕터에서는 조작 가능한 배드를 구현해볼 것입니다. — [패드와 키보드 조작](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

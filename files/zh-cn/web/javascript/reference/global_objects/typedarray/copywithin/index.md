@@ -28,7 +28,7 @@ typedarray.copyWithin(target, start[, end = this.length])
 
 更多信息请见 {{jsxref("Array.prototype.copyWithin")}}。
 
-这个方法取代了实验性的 {{jsxref("TypedArray.prototype.move()")}}。
+这个方法取代了实验性的 `TypedArray.prototype.move()`。
 
 ## 示例
 

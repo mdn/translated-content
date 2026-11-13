@@ -1,8 +1,9 @@
 ---
-title: :first-of-type
+title: Pseudo-classe CSS `:first-of-type`
+short-title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first-of-type`** permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).
@@ -79,12 +80,12 @@ Cet exemple montre comment les éléments imbriqués peuvent également être ci
 ```html
 <article>
   <div>Ce bloc est le premier !</div>
-  <div>Ce <span>bloc en ligne imbriqué est le premier</span> !</div>
+  <div>Ce <span>bloc en incise imbriqué est le premier</span> !</div>
   <div>
     Ce <em>texte en italique imbriqué est le premier</em>, mais ce
     <em>texte en italique imbriqué est le dernier</em> !
   </div>
-  <div>Ce <span>bloc en ligne imbriqué est stylisé</span> !</div>
+  <div>Ce <span>bloc en incise imbriqué est mis en forme</span> !</div>
   <p>Ce paragraphe est le premier !</p>
   <div>Ce bloc est le dernier.</div>
 </article>
@@ -98,9 +99,9 @@ article :first-of-type {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('Éléments_imbriqués', 500)}}
+{{EmbedLiveSample("Éléments_imbriqués", 500)}}
 
 ## Spécifications
 

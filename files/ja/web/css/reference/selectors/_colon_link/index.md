@@ -1,9 +1,9 @@
 ---
-title: :link
+title: CSS `:link` 擬似クラス
+short-title: :link
 slug: Web/CSS/Reference/Selectors/:link
-original_slug: Web/CSS/:link
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、まだ訪問されていない要素を表します。 {{HTMLElement("a")}} または {{HTMLElement("area")}} など、 `href` 属性を持つ未訪問のすべての要素を選択します。
@@ -22,7 +22,7 @@ a:link {
 ```
 
 ```html interactive-example
-<p>Pages that you might have visited:</p>
+<p>これまでに訪れたことがあるかもしれない場所:</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org">MDN Web Docs</a>
@@ -31,7 +31,7 @@ a:link {
     <a href="https://www.youtube.com/">YouTube</a>
   </li>
 </ul>
-<p>Pages unlikely to be in your history:</p>
+<p>閲覧履歴に残っていない可能性が高いページ:</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org/missing-2">Random MDN page</a>
@@ -42,7 +42,7 @@ a:link {
 </ul>
 ```
 
-`:link` および [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited) 擬似クラスによって定義されたスタイルは、以降のユーザー操作の擬似クラス（{{cssxref(":hover")}} または {{cssxref(":active")}}）によって上書きされる可能性があります。適切にリンクにスタイルを適用するには、 `:link` ルールを他のすべてのリンク関連ルールの前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
+`:link` および {{cssxref(":visited")}} 擬似クラスによって定義されたスタイルは、以降のユーザー操作の擬似クラス（{{cssxref(":hover")}} または {{cssxref(":active")}}）によって上書きされる可能性があります。適切にリンクにスタイルを適用するには、 `:link` ルールを他のすべてのリンク関連ルールの前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
 
 > [!NOTE]
 > 訪問済みかどうかにかかわらず要素を選択するには、 {{cssxref(":any-link")}} を使用してください。
@@ -57,7 +57,7 @@ a:link {
 
 ## 例
 
-既定では、大半のブラウザーが訪問済みのリンクに特別な {{cssxref("color")}} の値を適用しています。そのため、この例のリンクは訪問前でしか特別な文字色にならないでしょう（よって、再度確認するにはブラウザーの履歴をクリアする必要があります）。しかし、 {{cssxref("background-color")}} の値は、大半のブラウザーが既定で訪問済みのリンクに設定していないのでおそらく残ります。
+既定では、大半のブラウザーが訪問済みのリンクに特別な {{cssxref("color")}} の値を適用しています。そのため、この例のリンクは訪問前でしか特別な文字色にならないでしょう（よって、再度確認するにはブラウザーの履歴をクリアする必要があります）。しかし、{{cssxref("background-color")}} の値は、大半のブラウザーが既定で訪問済みのリンクに設定していないのでおそらく残ります。
 
 ### HTML
 

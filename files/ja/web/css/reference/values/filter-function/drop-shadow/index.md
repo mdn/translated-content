@@ -1,8 +1,9 @@
 ---
-title: drop-shadow()
+title: CSS `drop-shadow()` 関数
+short-title: drop-shadow()
 slug: Web/CSS/Reference/Values/filter-function/drop-shadow
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`drop-shadow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像にドロップシャドウ効果を適用します。結果は {{cssxref("filter-function")}} です。

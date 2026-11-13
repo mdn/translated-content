@@ -1,8 +1,9 @@
 ---
-title: perspective()
+title: CSS `perspective()` 関数
+short-title: perspective()
 slug: Web/CSS/Reference/Values/transform-function/perspective
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`perspective()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ユーザーと z=0 平面との間の距離を定義し、閲覧者からの視点は二次元のインターフェイスが三次元であるかのようになります。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -127,7 +128,7 @@ perspective(d)
     <tr>
       <td colspan="2">
         <p>
-          この変換は 3D 空間に適用され、平面で表現することはできません。
+          この変換は三次元空間に適用され、平面で表現することはできません。
         </p>
       </td>
       <td>

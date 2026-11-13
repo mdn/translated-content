@@ -3,7 +3,7 @@ title: Math.fround()
 short-title: fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.fround()`** は静的メソッドで、ある数値を表す最も近い [32 ビット単精度](https://ja.wikipedia.org/wiki/単精度浮動小数点数)浮動小数点数を返します。
@@ -82,6 +82,6 @@ Math.fround(2 ** 150); // Infinity
 
 ## 関連情報
 
-- [`Math.fround` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.fround` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims における `Math.fround` のポリフィル](https://www.npmjs.com/package/math.fround)
 - {{jsxref("Math.round()")}}

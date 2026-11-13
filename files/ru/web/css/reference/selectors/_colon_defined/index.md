@@ -22,7 +22,11 @@ simple-custom:defined {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## Примеры
 

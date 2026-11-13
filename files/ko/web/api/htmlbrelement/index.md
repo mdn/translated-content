@@ -7,14 +7,14 @@ slug: Web/API/HTMLBRElement
 
 **`HTMLBRElement`** 인터페이스는 HTML 줄바꿈 요소({{htmlelement("br")}})를 나타냅니다. {{domxref("HTMLElement")}}를 상속합니다.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 속성
 
 _부모인 {{domxref("HTMLElement")}}로부터 상속합니다._
 
 - {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
-  - : 떠있는 요소 주변 텍스트의 흐름을 나타내는 {{domxref("DOMString")}}입니다.
+  - : 떠있는 요소 주변 텍스트의 흐름을 나타내는 {{jsxref("String")}}입니다.
 
 ## 메서드
 

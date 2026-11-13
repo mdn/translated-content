@@ -3,8 +3,6 @@ title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
 
-{{AddonSidebar}}
-
 Supprime tous les éléments de menu ajoutés par l'extension.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.

@@ -1,8 +1,9 @@
 ---
-title: "<noscript> : l'élément de repli des scripts"
+title: "Élément HTML `<noscript>` : l'élément de repli des scripts"
+short-title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<noscript>`** définit une section HTML à insérer si un type de script sur la page n'est pas pris en charge ou si l'exécution des scripts est actuellement désactivée dans le navigateur.
@@ -18,7 +19,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
   <!-- élément d'ancre qui mène à un fichier externe -->
   <a href="https://www.mozilla.org/">Lien externe</a>
 </noscript>
-<p>Elle est où, la poulette ?</p>
+<p>Elle est où, la poulette&nbsp;?</p>
 ```
 
 ### Résultat avec JavaScript activé

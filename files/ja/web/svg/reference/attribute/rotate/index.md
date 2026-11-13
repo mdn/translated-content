@@ -2,7 +2,7 @@
 title: rotate
 slug: Web/SVG/Reference/Attribute/rotate
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: db01d0c8b4cbf8a4467b1db65e17f6724d0ce710
 ---
 
 `rotate` 属性は、アニメーションする要素が、 {{SVGElement("animateMotion")}} 要素で指定されたパスに沿って移動する際に、どのように回転させるかを指定します。
@@ -23,7 +23,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -105,3 +105,7 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

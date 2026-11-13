@@ -3,8 +3,6 @@ title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
 
-{{AddonSidebar}}
-
 Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

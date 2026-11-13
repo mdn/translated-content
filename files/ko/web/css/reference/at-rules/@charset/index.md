@@ -32,9 +32,13 @@ where:
 - _charset_
   - : 사용되는 문자 인코딩을 나타내는 {{cssxref("&lt;string&gt;")}}입니다. [IANA-registry](https://www.iana.org/assignments/character-sets)에 정의된 웹 안전 문자 인코딩의 이름이어야 합니다. 여러 이름이 인코딩과 관련된 경우, *preferred*로 표시된 것만 사용되어야 합니다.
 
-### 형식 구문
+## 형식 구문
 
-{{csssyntax}}
+`@charset` 규칙은 구문이 아니라 다음과 같은 특정 바이트 시퀀스로 파싱된다는 점에 유의하세요.
+
+```plain
+@charset "<charset>";
+```
 
 ## 예제
 

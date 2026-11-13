@@ -1,8 +1,9 @@
 ---
-title: :lang()
+title: Pseudo-classe CSS `:lang()`
+short-title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:lang()`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.
@@ -99,7 +100,7 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 
 #### Résultat
 
-{{EmbedLiveSample('correspondance_des_enfants_dune_langue_donnee', '', '80')}}
+{{EmbedLiveSample("Correspondance des enfants d'une langue donnée", "", 80)}}
 
 ### Correspondance de plusieurs langues
 
@@ -142,9 +143,9 @@ p {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('correspondance_de_plusieurs_langues', '', '120')}}
+{{EmbedLiveSample("Correspondance de plusieurs langues", "", 120)}}
 
 ## Spécifications
 
@@ -159,4 +160,4 @@ p {
 - La pseudo-classe {{CSSxRef(":dir")}} correspondant à la direction du texte
 - L'attribut HTML [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang)
 - L'attribut HTML [`translate`](/fr/docs/Web/HTML/Reference/Global_attributes/translate)
-- Le référenciel {{RFC(5646, "Balises pour l'identification des langues (également connues sous le nom de BCP 47)")}}
+- L'entrée de glossaire {{Glossary("BCP 47 language tag", "Balise de langue BCP 47")}}

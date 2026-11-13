@@ -1,8 +1,9 @@
 ---
-title: "<header> : l'élément d'en-tête"
+title: "Élément HTML `<header>` : l'élément d'en-tête"
+short-title: <header>
 slug: Web/HTML/Reference/Elements/header
 l10n:
-  sourceCommit: 3527b9372ddeb3b301cc826ed2fbcf086b487568
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<header>`** représente du contenu introductif, généralement un groupe d'éléments d'introduction ou d'aides à la navigation. Il peut contenir des éléments de titre mais aussi un logo, un formulaire de recherche, le nom d'un·e auteur·ice et d'autres éléments.
@@ -66,9 +67,9 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Accessibilité
 
-L'élément `<header>` définit un repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) lorsque son contexte est l'élément {{HTMLElement('body')}}.
+L'élément `<header>` définit un repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) lorsque son contexte est l'élément {{HTMLElement("body")}}.
 
-Lorsqu'il est placé à l'intérieur d'un {{HTMLElement('article')}}, d'un {{HTMLElement('main')}}, d'un {{HTMLElement('section')}}, d'un {{HTMLElement('nav')}}, d'un {{HTMLElement('aside')}}, ou d'un élément ayant le même rôle ARIA implicite que ces éléments, l'élément `<header>` a plutôt le rôle [`generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) et n'est plus considéré comme un repère. Dans ce cas, il ne peut pas être étiqueté avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ni avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
+Lorsqu'il est placé à l'intérieur d'un {{HTMLElement("article")}}, d'un {{HTMLElement("main")}}, d'un {{HTMLElement("section")}}, d'un {{HTMLElement("nav")}}, d'un {{HTMLElement("aside")}}, ou d'un élément ayant le même rôle ARIA implicite que ces éléments, l'élément `<header>` a plutôt le rôle [`generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) et n'est plus considéré comme un repère. Dans ce cas, il ne peut pas être étiqueté avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ni avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Exemples
 
@@ -131,7 +132,7 @@ Lorsqu'il est placé à l'intérieur d'un {{HTMLElement('article')}}, d'un {{HTM
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >
-        mais sans élément descendant qui soit <code>&lt;header&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>.
+        mais sans élément descendant qui soit <code>&lt;header&gt;</code> ou {{HTMLElement("footer")}}.
       </td>
     </tr>
     <tr>
@@ -145,8 +146,8 @@ Lorsqu'il est placé à l'intérieur d'un {{HTMLElement('article')}}, d'un {{HTM
         <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >. Il est à noter qu'un élément <code>&lt;header&gt;</code> ne doit pas
-        descendre d'un élément <a href="/fr/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a> ou d'un autre élément
+        descendre d'un élément {{HTMLElement("address")}},
+        {{HTMLElement("footer")}} ou d'un autre élément
         <code>&lt;header&gt;</code>.
       </td>
     </tr>

@@ -1,112 +1,273 @@
 ---
-title: Utiliser les requêtes de fonctionnalité (feature queries)
+title: Utiliser les requêtes de fonctionnalité
 slug: Web/CSS/Guides/Conditional_rules/Using_feature_queries
-original_slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**Les requêtes de fonctionnalité (ou _feature queries_)** sont créées à l'aide de la règle [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) et permettent aux développeurs web de tester la prise en charge d'une fonctionnalité donnée par le navigateur puis de fournir le code CSS qui sera appliqué selon le résultat de ce test. Dans ce guide, nous verrons comment gérer l'amélioration progressive grâce à l'aide des requêtes de fonctionnalité.
+**Les requêtes de fonctionnalité** (ou <i lang="en">feature queries</i> en anglais) sont des groupes de règles conditionnelles qui testent si l'agent utilisateur prend en charge ou non une ou plusieurs fonctionnalités CSS, telles que les propriétés CSS et les valeurs de propriété. Les requêtes de fonctionnalité offrent aux développeur·euse·s web un moyen de vérifier si un navigateur prend en charge une certaine fonctionnalité, puis de fournir du CSS qui n'est appliqué qu'en fonction du résultat de ce test. Dans ce guide, vous apprendrez comment mettre en œuvre l'amélioration progressive à l'aide des requêtes de fonctionnalité.
+
+Les requêtes de fonctionnalité sont créées à l'aide de la règle CSS {{CSSxRef("@supports")}} (ou de la fonction `supports()` dans les règles {{CSSxRef("@import")}}).
 
 ## Syntaxe
 
-Les requêtes de fonctionnalité CSS s'inscrivent dans [le module de spécification CSS Conditional Rules](https://drafts.csswg.org/css-conditional-3/) qui décrit également le fonctionnement de la règle [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media). Vous pourrez ici voir que les requêtes de fonctionnalité fonctionnent de façon semblable aux requêtes de média. Pour les requêtes de média, on teste une caractéristique de l'environnement dans lequel la page web est affichée/exécutée tandis que pour les requêtes de fonctionnalité, on teste la prise en charge d'une fonctionnalité CSS dans le navigateur.
+Les requêtes de fonctionnalité CSS s'inscrivent dans le module [des règles conditionnelles CSS](/fr/docs/Web/CSS/Guides/Conditional_rules) qui décrit également le fonctionnement de la règle {{CSSxRef("@media")}}. Les requêtes de fonctionnalités fonctionnent de manière similaire aux [requêtes de médias](/fr/docs/Web/CSS/Guides/Media_queries/Using). La différence réside dans le fait qu'avec une requête de médias, vous vérifiez une caractéristique de l'environnement dans lequel la page web est exécutée, tandis qu'avec les requêtes de fonctionnalités, vous vérifiez la prise en charge des fonctionnalités CSS par le navigateur.
 
-Une requête de fonctionnalité commence par une règle `@supports`, suivi du nom de la propriété et de la valeur qu'on souhaite tester. Il n'est pas possible de tester une propriété seule (ex. `display`) mais uniquement un couple nom/valeur :
+Une requête de fonctionnalité se compose de la règle `@supports`, suivie de la condition de prise en charge ou d'une fonction `supports()` et de son paramètre de déclaration, au sein d'une déclaration de règle `@import`&nbsp;:
+
+```plain
+/* Règle `@supports` */
+@supports <condition-de-support> {
+  /* Règles CSS à appliquer */
+}
+
+/* Fonction `supports()` */
+@import lien_importation supports(<declaration>);
+```
+
+Par exemple, nous pouvons appliquer un ensemble de styles ou importer une feuille de style complète si l'agent utilisateur prend en charge la valeur `red` comme valeur valide pour la propriété CSS {{CSSxRef("color")}}&nbsp;:
 
 ```css
-@supports (propriété: valeur) {
-  Règles CSS à appliquer
+/* Règle `@supports` */
+@supports (color: red) {
+  /* Règles CSS à appliquer */
+}
+
+/* Fonction `supports()` */
+@import "/css/styles.css" supports(color: red);
+```
+
+Un autre exemple, si vous souhaitez vérifier si un navigateur prend en charge la propriété `row-gap`, vous devez écrire la requête de fonctionnalité suivante. Dans la plupart des cas, la valeur que vous utilisez n'a pas d'importance&nbsp;: si vous souhaitez simplement vérifier que le navigateur prend en charge cette propriété, n'importe quelle valeur valide suffit.
+
+```html live-sample___simple
+<div class="boite">
+  Si votre navigateur prend en charge la propriété row-gap, la bordure apparaît
+  en pointillés et le texte s'affiche en rouge.
+</div>
+```
+
+```css live-sample___simple
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.boite {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (row-gap: 10px) {
+  .boite {
+    border: 4px dashed darkgreen;
+    color: red;
+  }
 }
 ```
 
-Si, par exemple, on souhaite vérifier qu'un navigateur prend en charge la propriété `row-gap`, on écrira la requête suivant. Dans la plupart des cas, peu importe la valeur utilisée avec cette propriété, on souhaite simplement la prise en charge de cette propriété et on peut donc utiliser n'importe quelle valeur valide pour ça.
+{{EmbedLiveSample("simple")}}
 
-{{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
+La partie dédiée à la valeur de la propriété permet de tester les cas où une nouvelle valeur est définie pour une propriété donnée. Tous les navigateurs prennent en charge `color: red`&nbsp;: ça remonte à CSS1. Cependant, il existe souvent des valeurs supplémentaires ajoutées aux propriétés en CSS, comme les [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors), qui peuvent ne pas être prises en charge. Les requêtes de fonctionnalités permettent de tester les paires propriété-valeur, ce qui signifie que nous pouvons détecter la prise en charge des valeurs.
 
-La partie dédiée à la valeur de la propriété permet de tester les cas où une nouvelle valeur est spécifiée pour une propriété donnée. Le cas de `display` est particulièrement intéressant. Tous les navigateurs prennent en charge `display` (`display: block` faisait partie de CSS1) mais les valeurs `display: flex` et `display: grid` ont été ajoutées plus récemment. Les propriétés CSS peuvent parfois se voir doter de nouvelles valeurs et on peut alors tester leur prise en charge avec `@supports`.
+En développant l'exemple de la propriété `color` ci-dessus, nous vérifions ici si le navigateur prend en charge la déclaration `color: AccentColor`&nbsp;:
+
+```css
+/* Règle `@supports` */
+@supports (color: AccentColor) {
+  /* Règles CSS à appliquer */
+}
+
+/* Fonction `supports()` */
+@import "/css/styles.css" supports(color: AccentColor);
+```
+
+Dans ces exemples, nous avons utilisé des requêtes de fonctionnalités pour vérifier si l'agent utilisateur prend en charge une valeur spécifique d'une propriété CSS, en listant la déclaration unique entre parenthèses. Vous pouvez tester plusieurs valeurs de propriété ou l'absence de prise en charge.
 
 ## Tester l'absence de prise en charge d'une fonctionnalité
 
-Il est aussi possible de tester l'absence de prise en charge d'une fonctionnalité en ajoutant le mot-clé `not` :
+Il est aussi possible de tester l'absence de prise en charge d'une fonctionnalité en ajoutant le mot-clé `not`&nbsp;:
 
 ```css
-@supports not (propriété: valeur) {
-  Règles CSS à appliquer
+/* Règle `@supports` avec `not` */
+@supports not (propriete: valeur) {
+  /* Règles CSS à appliquer */
 }
 ```
 
-Les règles CSS contenues dans la requête suivante seront uniquement appliquées lorsque le navigateur ne prend pas en charge `row-gap`.
+Le CSS à l'intérieur de l'exemple suivant est exécuté si le navigateur ne prend pas en charge `row-gap`.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/not.html", '100%', 600)}}
+```html live-sample___not
+<div class="boite">
+  Si votre navigateur ne prend pas en charge row-gap, le contenu apparait en
+  vert foncé avec une bordure en pointillés.
+</div>
+```
 
-## Tester la prise en charge de plusieurs fonctionnalités
-
-Si on souhaite tester la prise en charge de plusieurs fonctionnalités en même temps, on pourra les combiner avec le mot-clé `and` :
-
-```css
-@supports (property1: value) and (property2: value) {
-  CSS rules to apply
+```css live-sample___not
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.boite {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports not (row-gap: 10px) {
+  .boite {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
 }
 ```
 
-On peut, par exemple, vérifier que le navigateur prend en charge les formes (_shapes_) et grilles CSS grâce à une règle qui teste cette conjonction. La règle suivante renverra `true` uniquement si `shape-outside: circle()` et `display: grid` sont pris en charge par le navigateur.
+{{EmbedLiveSample("not")}}
 
-{{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
+## Tester plus d'une fonctionnalité
 
-De la même façon, on peut utiliser le mot-clé `or` si on souhaite tester la prise en charge d'au moins une fonctionnalité :
+Vous pouvez avoir besoin de tester la prise en charge de plusieurs propriétés dans votre requête de fonctionnalités. Pour ce faire, vous pouvez inclure une liste de fonctionnalités à tester, séparées par des mots-clés `and`&nbsp;:
 
 ```css
-@supports (property1: value) or (property2: value) {
-  CSS rules to apply
+/* Plusieurs fonctionnalités dans la règle `@supports` */
+@supports (propriete1: valeur) and (propriete2: valeur) {
+  /* Règles CSS à appliquer */
 }
 ```
 
-Cela peut s'avérer particulièrement utile lorsqu'un préfixe est présent dans le nom d'une propriété (on peut alors tester la prise en charge de la propriété standard et des versions préfixées).
+Par exemple, si le CSS que vous souhaitez exécuter nécessite que le navigateur prenne en charge formes CSS et grille CSS, vous pouvez créer une règle qui teste la prise en charge de ces deux fonctionnalités par le navigateur. La règle suivante n'est vraie que si `shape-outside: circle()` et `display: grid` sont tous deux pris en charge par le navigateur.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/or.html", '100%', 600)}}
+```html live-sample___and
+<div class="boite">
+  Si votre navigateur prend en charge <code>display: grid</code> et
+  <code>shape-outside: circle()</code>, le contenu est vert foncé avec une
+  bordure en pointillés.
+</div>
+```
 
-## Limites des requêtes de fonctionnalité
+```css live-sample___and
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.boite {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (display: grid) and (shape-outside: circle()) {
+  .boite {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
 
-Une règle `@supports` ne permet de vérifier qu'un navigateur peut interpréter une ou plusieurs paires de propriétés/valeurs. Si cette paire est comprise par le navigateur, celui-ci renverra une réponse positive. Une telle requête ne permet pas d'indiquer que la fonctionnalité est complètement prise en charge, sans bug…
+{{EmbedLiveSample("and")}}
 
-De plus, de telles requêtes ne permettent pas de tester une _implémentation partielle_. Prenons l'exemple de la propriété `gap`, à l'heure actuelle (novembre 2019) : tous les navigateurs prennent en charge `gap` avec les grilles CSS et seul Firefox prend en charge `gap` avec les boîtes flexibles (_flexbox_). Si on teste la propriété `gap` car on souhaite l'utiliser avec les boîtes flexibles, on recevra une réponse positive bien que ce ne soit pas implémenté.
+## Tester au moins une des fonctionnalités multiples
 
-## Comment utiliser `@supports` pour l'amélioration progressive ?
+Vous pouvez également utiliser `or` pour appliquer du CSS uniquement si une ou plusieurs déclarations sont prises en charge&nbsp;:
 
-Les requêtes de fonctionnalité sont un outil précieux pour améliorer un site de façon progressive. Elles permettent de fournir une solution fonctionnelle pour tous les navigateurs et d'améliorer le résultat pour les navigateurs qui prennent en charge de nouvelles fonctionnalités.
+```css
+/* N'importe quelle fonctionnalité dans la règle `@supports` */
+@supports (propriete1: valeur) or (propriete2: valeur) {
+  /* Règles CSS à appliquer */
+}
+```
 
-Toutefois, il existe des navigateurs pour lesquels même les requêtes de fonctionnalité/`@supports` ne sont pas pris en charge. Ainsi, si on souhaite utiliser les grilles CSS (qui ne sont pas prises en charge par IE11), on ne peut pas tester leur prise en charge dans IE11 car ce dernier ne permet pas d'utiliser `@supports`. En pratique, cela ne devrait pas poser de problème : le code CSS principal est destiné aux navigateurs les plus anciens et on ajoute le CSS plus récent dans les requêtes de fonctionnalité.
+Cela peut être particulièrement utile si une fonctionnalité est préfixée par un fournisseur, car vous pouvez tester la propriété standard ainsi que tous les préfixes fournisseurs.
 
-Prenons un exemple plus construit.
+```html live-sample___or
+<div class="boite">
+  Le texte et la bordure sont verts si votre navigateur prend en charge le
+  lissage des polices.
+</div>
+```
 
-Imaginons qu'on veuille créer une disposition avec trois boîtes qui se suivent sur une ligne. Idéalement, on voudrait utiliser [les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout). Toutefois, on voudrait aussi une disposition qui fonctionne pour les navigateurs plus anciens avec des éléments flottants. Pour commencer, on crée la disposition flottante avec le code suivante (on a alors trois colonnes).
+```css live-sample___or
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.boite {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (font-smooth: always) or (-webkit-font-smoothing: antialiased) {
+  .boite {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
 
-{{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
+{{EmbedLiveSample("or")}}
 
-Lorsque les navigateurs ne comprennent pas une propriété ou une valeur CSS, ils l'ignorent. On peut donc améliorer progressivement notre disposition avec les grilles CSS. Les navigateurs qui ne prennent pas en charge les grilles ignoreront la valeur `grid` pour la propriété `display`. Une fois qu'un objet flottant devient un élément de grille, son caractère flottant est retiré (voir [Prendre en charge les navigateurs plus anciens](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)) et la grille écrase alors la version flottante.
+## Options supplémentaires pour les requêtes de fonctionnalités
 
-Un problème persiste cependant. La propriété `width`, utilisée par les objets flottants pour afficher trois colonnes, est désormais interprétée par la grille comme étant la largeur de la piste pour la colonne (et pas la largeur du conteneur comme c'était le cas pour la disposition flottante).
+Les requêtes de fonctionnalités ne se limitent pas aux paires propriété-valeur. Vous pouvez inclure les fonctions [`font-tech()`](/fr/docs/Web/CSS/Reference/At-rules/@supports#font-tech), [`font-format()`](/fr/docs/Web/CSS/Reference/At-rules/@supports#font-format) et [`selector()`](/fr/docs/Web/CSS/Reference/At-rules/@supports#syntaxe_fonctionnelle) dans vos requêtes de fonctionnalités pour appliquer sélectivement du CSS en fonction de la prise en charge par l'agent utilisateur d'une technologie de police, d'un format de police ou d'une syntaxe de sélecteur définie, respectivement.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/step2.html", '100%', 900)}}
+Par exemple, la fonction `selector()` peut être utilisée pour importer une feuille de style pour les navigateurs qui prennent en charge un pseudo-élément préfixé par un fournisseur&nbsp;:
 
-Il faut une façon de retirer la largeur si `display: grid` est pris en charge. C'est là que les requêtes de fonctionnalité montrent leur force. On peut réinitialiser `width` avec la valeur `auto` si les grilles sont prises en charge.
+```css
+/* Une requête `selector()` dans une fonction `supports()` */
+@import "/css/webkitShadowStyles.css"
+  supports(selector(::-webkit-inner-spin-button));
+```
 
-{{EmbedGHLiveSample("css-examples/feature-queries/step3.html", '100%', 900)}}
+## Exemples
 
-Dans le scénario précédent, peu importe que IE11 ne prenne pas en charge les requêtes de fonctionnalité ou les grilles CSS : c'est la version flottante qui sera utilisée dans tous les cas où le navigateur ne prend pas en charge les grilles.
+### Test de prise en charge par le navigateur
 
-Une autre façon d'écrire cette solution consiste à grouper le code utilisant la grille dans une même requête de fonctionnalité.
+Dans cet exemple, nous vérifions si le navigateur prend en charge la couleur `AccentColor` {{CSSxRef("system-color")}} et utilisons `display: none` pour changer le message par défaut «&nbsp;non pris en charge&nbsp;» en un message «&nbsp;pris en charge&nbsp;» si le type de couleur est pris en charge.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/step4.html", '100%', 900)}}
+#### HTML
 
-De cette façon, on a un peu plus de code mais on peut alors tester le fonctionnement par défaut en changeant simplement le nom de la valeur. Dans l'exemple qui suit, vous pouvez ainsi alterner entre les deux solutions en changeant `display: grid` en `display: grip` (une valeur invalide et donc non prise en charge).
+```html
+<p class="accentcolor">
+  Votre navigateur ne prend pas en charge <code>AccentColor</code> en tant que
+  valeur de couleur.
+</p>
+```
+
+#### CSS
+
+```css
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+p {
+  padding: 1em;
+}
+@supports (color: AccentColor) {
+  p {
+    color: green;
+    border: 2px solid;
+  }
+  span {
+    display: none;
+  }
+}
+@supports not (color: AccentColor) {
+  p {
+    color: red;
+  }
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Test de prise en charge par le navigateur")}}
+
+## Limitations des requêtes de fonctionnalités
+
+La règle `@supports` teste si les navigateurs peuvent analyser une ou plusieurs paires propriété/valeur, et donc s'ils déclarent prendre en charge la ou les fonctionnalités associées. Si les paires propriété/valeur sont comprises par un navigateur, il retourne une réponse positive. Les requêtes de fonctionnalités vérifient que les déclarations sont considérées comme valides par un navigateur, mais ne peuvent pas être utilisées pour vérifier si une fonctionnalité est correctement prise en charge sans bogues ou violations de spécifications. Les requêtes de fonctionnalités ne peuvent pas tester les _implémentations partielles_.
 
 ## Résumé
 
-Les requêtes de fonctionnalité permettent d'utiliser des fonctionnalités récentes dans l'amélioration progressive de sites fonctionnels avec les anciens navigateurs. En destinant le code CSS aux navigateurs qui le prennent en charge, on ne risque pas d'interférences avec la disposition de base (comme nous avons pu le voir avec l'exemple précédent sur les grilles CSS).
+Les requêtes de fonctionnalités sont un outil utile pour améliorer progressivement un site. Elles permettent de fournir une bonne solution pour tous les navigateurs, et une solution améliorée pour les navigateurs qui prennent en charge les propriétés et valeurs plus récentes.
+
+Vous n'avez pas besoin d'utiliser des requêtes de fonctionnalités pour commencer à utiliser de nouvelles fonctionnalités CSS&nbsp;; la gestion des erreurs CSS signifie que le navigateur ignore simplement le CSS qu'il ne reconnaît pas encore. Cependant, les requêtes de fonctionnalités sont une alternative utile aux déclarations de secours, et permettent d'écrire du code une fois qui peut éventuellement être pris en charge partout.
 
 ## Voir aussi
 
-- La règle [@supports](/fr/docs/Web/CSS/Reference/At-rules/@supports)
-- [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/Guides/Grid_layout)
-- [Utiliser les requêtes de fonctionnalités en CSS (billet du blog Hacks en anglais)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+- Le module [des règles conditionnelles CSS](/fr/docs/Web/CSS/Guides/Conditional_rules)
+- [Utiliser les requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries/Using)
+- [Prise en charge des anciens navigateurs&nbsp;: requêtes de fonctionnalités](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
+- [Détecter les fonctionnalités du navigateur&nbsp;: `@supports` CSS](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

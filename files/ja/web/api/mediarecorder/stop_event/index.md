@@ -1,22 +1,23 @@
 ---
 title: "MediaRecorder: stop イベント"
+short-title: stop
 slug: Web/API/MediaRecorder/stop_event
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef("Media Recorder API")}}
+{{APIRef("MediaStream Recording")}}
 
-`stop` イベントは、{{domxref("MediaRecorder.stop()")}} メソッドを呼び出した結果として、またはキャプチャしているメディアストリームが終了したときに発生します。 いずれの場合も、`stop` イベントの前に `dataavailable` イベントがあり、それまでにキャプチャされた {{domxref("Blob")}} をアプリで使用できるようにします。
+**`stop`** は {{domxref("MediaRecorder")}} インターフェイスのイベントで、{{domxref("MediaRecorder.stop()")}} メソッドを呼び出した結果として、またはキャプチャしているメディアストリームが終了したときに発生します。 いずれの場合も、`stop` イベントの前に `dataavailable` イベントがあり、それまでにキャプチャされた {{domxref("Blob")}} をアプリで使用できるようにします。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("stop", (event) => {});
+```js-nolint
+addEventListener("stop", (event) => { })
 
-onstop = (event) => {};
+onstop = (event) => { }
 ```
 
 ## イベント型
@@ -53,6 +54,6 @@ mediaRecorder.ondataavailable = (e) => {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 作（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream 収録のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 作。<sup>(英語)</sup>
 - {{domxref("Navigator.getUserMedia")}}

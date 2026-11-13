@@ -46,7 +46,7 @@ Uno de las principales razones por las que HTML hace más fácil la navegación 
 HTML únicamente define la estructura del documento. Para solucionar los problemas de presentación usamos {{glossary("CSS")}}, o usamos scripts para hacer la página interactiva.
 
 - [Cómo usar CSS dentro de un sitio web](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html)
-- [Cómo usar JavaScript dentro de un sitio web](/es/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [Cómo usar JavaScript dentro de un sitio web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
 
 ### Contenido integrado
 

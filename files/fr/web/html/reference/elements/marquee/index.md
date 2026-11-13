@@ -1,11 +1,10 @@
 ---
-title: "<marquee> : l'élément de texte défilant"
+title: "Élément HTML `<marquee>` : l'élément de texte défilant"
+short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<marquee>`** permet d'insérer une zone de texte défilant. Vous pouvez contrôler le comportement du texte lorsqu'il atteint les bords de sa zone de contenu grâce à ses attributs.
 
@@ -13,27 +12,27 @@ L'élément HTML `<marquee>` est obsolète et son utilisation est fortement déc
 
 ## Attributs
 
-- `behavior` {{Deprecated_Inline}}
-  - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est spécifiée, la valeur par défaut est `scroll`.
-- `bgcolor` {{Deprecated_Inline}}
+- `behavior` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Définit comment le texte défile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est définie, la valeur par défaut est `scroll`.
+- `bgcolor` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur de fond en utilisant le nom de la couleur ou son code hexadécimal.
-- `direction` {{Deprecated_Inline}}
-  - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est spécifiée, la valeur par défaut est `left`.
-- `height` {{Deprecated_Inline}}
+- `direction` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est définie, la valeur par défaut est `left`.
+- `height` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la hauteur en pixels ou en pourcentage.
-- `hspace` {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la marge horizontale.
-- `loop` {{Deprecated_Inline}}
-  - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est spécifiée, la valeur par défaut est -1, ce qui signifie que le marquee va défiler indéfiniment.
-- `scrollamount` {{Deprecated_Inline}}
+- `loop` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est définie, la valeur par défaut est -1, ce qui signifie que le marquee va défiler indéfiniment.
+- `scrollamount` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la quantité de défilement de chaque défilement en pixels. La valeur par défaut est 6.
-- `scrolldelay` {{Deprecated_Inline}}
-  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est 85. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que`truespeed`ne soit spécifié.
-- `truespeed` {{Deprecated_Inline}}
-  - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
-- `vspace` {{Deprecated_Inline}}
+- `scrolldelay` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est 85. Notez que toute valeur inférieure à 60 est ignorée et 60 est utilisé à la place, à moins que `truespeed` ne soit défini.
+- `truespeed` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne sont pas ignorées.
+- `vspace` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la marge verticale en pixel ou en pourcentage.
-- `width` {{Deprecated_Inline}}
+- `width` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la largeur en pixel en ou pourcentage.
 
 ## Exemples

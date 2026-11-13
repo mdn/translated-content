@@ -1,18 +1,17 @@
 ---
-title: -moz-user-focus
+title: Propriété CSS `-moz-user-focus`
+short-title: -moz-user-focus
 slug: Web/CSS/Reference/Properties/-moz-user-focus
-original_slug: Web/CSS/-moz-user-focus
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
+La propriété [CSS](/fr/docs/Web/CSS) **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir la sélection.
 
-En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur·ice ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
-
-{{CSSInfo}}
+En utilisant la valeur `ignore`, on peut désactiver la prise de sélection sur l'élément (l'utilisateur·ice ne peut pas activer l'élément) et l'élément est sauté lors de la navigation à la tabulation.
+La valeur par défaut est `none`, qui désactive la prise de sélection sur l'élément et retire la sélection des autres éléments s'il y a une tentative de sélectionner l'élément.
 
 ## Syntaxe
 
@@ -30,10 +29,15 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `ignore`
-  - : L'élément n'accepte pas le focus (au clavier ou au pointeur) et sera sauté lors de la navigation à la tabulation.
+  - : L'élément n'accepte pas la sélection (au clavier ou au pointeur) et est sauté lors de la navigation à la tabulation.
 - `normal`
-  - : L'élément peut recevoir le focus normalement.
+  - : L'élément peut recevoir la sélection normalement.
+- `none`
+  - : L'élément n'accepte pas la sélection au clavier.
+    Toute tentative de sélectionner l'élément retire la sélection des autres éléments.
 
 ## Définition formelle
 
@@ -49,14 +53,14 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 
 ```html
 <input
-  class="ignored"
-  value="L'utilisateur·ice ne peut pas placer le focus sur cet élément." />
+  class="ignore"
+  value="L'utilisateur·ice ne peut pas placer la sélection sur cet élément." />
 ```
 
 ### CSS
 
 ```css
-.ignored {
+.ignore {
   -moz-user-focus: ignore;
 }
 ```
@@ -71,6 +75,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("user-modify")}}
-- {{cssxref("user-select", "-moz-user-select")}}
+- La propriété {{CSSxRef("-moz-user-input")}}
+- La propriété {{CSSxRef("user-modify")}}
+- La propriété {{CSSxRef("user-select", "-moz-user-select")}}

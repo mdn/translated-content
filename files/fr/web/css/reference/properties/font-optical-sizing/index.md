@@ -1,17 +1,58 @@
 ---
-title: font-optical-sizing
+title: Propriété CSS `font-optical-sizing`
+short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
-original_slug: Web/CSS/font-optical-sizing
+l10n:
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-optical-sizing`** définit si le rendu du texte est optimisé pour l'affichage à différentes tailles.
 
-La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille. Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
+{{InteractiveExample("Démonstration CSS&nbsp;: font-optical-sizing")}}
 
-Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (_serifs_) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.
+```css interactive-example-choice
+font-optical-sizing: auto;
+```
 
-> [!NOTE]
-> L'axe de variation pour la taille optique est représenté par `opsz` dans {{cssxref("font-variation-settings")}}.
+```css interactive-example-choice
+font-optical-sizing: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <h2>Chapitre 3</h2>
+    <p>
+      Ce jeudi-là, quelque chose se déplaçait silencieusement à travers
+      l'ionosphère, à plusieurs kilomètres au-dessus de la surface de la
+      planète&nbsp;; plusieurs choses en fait, plusieurs douzaines de grosses
+      choses jaunes et massives en forme de dalles, aussi grandes que des
+      immeubles de bureaux, silencieuses comme des oiseaux.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
+  font-family: "Amstelvar";
+  font-style: normal;
+}
+
+#example-element {
+  font-family: "Amstelvar", serif;
+  text-align: left;
+}
+
+#example-element h2 {
+  font-size: 36px;
+}
+
+#example-element p {
+  font-size: 12px;
+}
+```
 
 ## Syntaxe
 
@@ -23,15 +64,25 @@ font-optical-sizing: auto; /* valeur initiale */
 /* Valeurs globales */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
+font-optical-sizing: revert;
+font-optical-sizing: revert-layer;
 font-optical-sizing: unset;
 ```
 
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `none`
-  - : L'agent utilisateur ne modifiera pas la forme des glyphes pour une vue optimale.
+  - : Le navigateur ne modifie pas la forme des glyphes pour une vue optimale.
 - `auto`
-  - : L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.
+  - : Le navigateur modifie la forme des glyphes pour une vue optimale.
+
+## Description
+
+Le dimensionnement optique est activé par défaut pour les polices qui possèdent un axe de variation de taille optique. L'axe de variation de taille optique est représenté par `opsz` dans {{CSSxRef("font-variation-settings")}}.
+
+Lorsque le dimensionnement optique est utilisé, les petites tailles de texte sont souvent affichées avec des traits plus épais et des empattements plus grands, tandis que les grandes tailles de texte sont souvent affichées de façon plus délicate avec un contraste plus marqué entre les traits épais et fins.
 
 ## Définition formelle
 
@@ -43,26 +94,7 @@ font-optical-sizing: unset;
 
 ## Exemples
 
-### CSS
-
-```css
-@font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
-  font-family: "Amstelvar";
-  font-style: normal;
-}
-
-p {
-  font-size: 36px;
-  font-family: Amstelvar;
-}
-
-.no-optical-sizing {
-  font-optical-sizing: none;
-}
-```
-
-### HTML
+### Désactiver le dimensionnement optique
 
 ```html
 <p class="optical-sizing">
@@ -71,14 +103,30 @@ p {
 </p>
 
 <p class="no-optical-sizing">
-  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devriez voir
-  une différence avec les navigateurs qui prennent en charge cette
-  fonctionnalité.
+  Ce paragraphe n'est pas adapté pour une meilleure lecture. Vous devez voir une
+  différence avec les navigateurs qui prennent en charge cette fonctionnalité.
 </p>
 ```
 
+```css
+@font-face {
+  src: url("AmstelvarAlpha-VF.woff2");
+  font-family: "Amstelvar";
+  font-style: normal;
+}
+
+p {
+  font-size: 36px;
+  font-family: "Amstelvar", serif;
+}
+
+.no-optical-sizing {
+  font-optical-sizing: none;
+}
+```
+
 > [!NOTE]
-> La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
+> La police utilisée dans cet exemple — qui possède un dimensionnement optique et est disponible sous licence libre — est un bon moyen de tester. Vous pouvez le trouver [en téléchargement sur GitHub <sup>(angl.)</sup>](https://github.com/googlefonts/amstelvar-beta/releases).
 
 ## Spécifications
 
@@ -87,3 +135,9 @@ p {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("font-size")}}
+- La propriété {{CSSxRef("font-size-adjust")}}
+- [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

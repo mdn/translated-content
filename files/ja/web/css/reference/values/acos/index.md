@@ -1,8 +1,9 @@
 ---
-title: acos()
+title: CSS `acos()` 関数
+short-title: acos()
 slug: Web/CSS/Reference/Values/acos
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`acos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`-1` から `1` までの数値の逆余弦を返す三角関数です。この関数には、 `0deg` から `180deg` までの {{cssxref("angle")}} を返す単一の計算が含まれています。

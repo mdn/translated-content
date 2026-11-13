@@ -1,9 +1,8 @@
 ---
 title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
-original_slug: Web/CSS/margin-trim
 l10n:
-  sourceCommit: de76d381cb79a61813378963b66d98f68e74381c
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 {{SeeCompatTable}}

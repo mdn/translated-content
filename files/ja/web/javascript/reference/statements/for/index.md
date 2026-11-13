@@ -195,7 +195,7 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 `initialization` 内の変数 `i` は、最初の反復を含む各反復内の `i` 変数とは別個の存在です。したがって、この例では、反復内の `i` の値が事前にインクリメントされているにもかかわらず、`getI` は 0 を返します。
 
 ```js
-for (let i = 0, getI = () => i; i < 3; ) {
+for (let i = 0, getI = () => i; i < 3;) {
   i++;
   console.log(getI());
 }

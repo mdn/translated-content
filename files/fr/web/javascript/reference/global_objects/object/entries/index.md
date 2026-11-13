@@ -3,7 +3,7 @@ title: "Object : méthode statique entries()"
 short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.entries()`** retourne un tableau contenant les paires clé-valeur des propriétés propres énumérables d'un objet, dont les clés sont des chaînes de caractères.
@@ -12,7 +12,7 @@ La méthode statique **`Object.entries()`** retourne un tableau contenant les pa
 
 ```js interactive-example
 const object = {
-  a: "some string",
+  a: "du texte",
   b: 42,
 };
 
@@ -20,8 +20,8 @@ for (const [key, value] of Object.entries(object)) {
   console.log(`${key}: ${value}`);
 }
 
-// Résultat attendu&nbsp;:
-// "a: some string"
+// Résultat attendu :
+// "a: du texte"
 // "b: 42"
 ```
 
@@ -48,7 +48,7 @@ Si vous n'avez besoin que des clés, utilisez {{JSxRef("Object.keys()")}}. Si vo
 
 ## Exemples
 
-### Utilisation de `Object.entries()`
+### Utiliser la méthode `Object.entries()`
 
 ```js
 const obj = { foo: "bar", baz: 42 };
@@ -77,13 +77,13 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 ### Utiliser `Object.entries()` sur des valeurs primitives
 
-Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#coercition_dobjet). [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés propres énumérables, tandis que toutes les autres primitives retournent un tableau vide.
+Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#conversion_en_objet). [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ne peuvent pas être convertis en objets et lèvent immédiatement une {{JSxRef("TypeError")}}. Seules les chaînes de caractères peuvent avoir des propriétés propres énumérables, tandis que toutes les autres primitives retournent un tableau vide.
 
 ```js
-// Strings have indices as enumerable own properties
+// Les chaînes de caractères possèdent des indices sous forme de propriétés propres énumérables
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-// Other primitives except undefined and null have no own properties
+// Les autres types primitifs, à l'exception de undefined et null, ne possèdent pas de propriétés propres
 console.log(Object.entries(100)); // []
 ```
 
@@ -124,7 +124,9 @@ Object.entries(obj).forEach(([key, value]) => {
 
 ## Voir aussi
 
-- [Énumérabilité et appartenance des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.entries` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.entries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.entries)
+- [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.keys()")}}
 - La méthode statique {{JSxRef("Object.values()")}}
 - La méthode {{JSxRef("Object.prototype.propertyIsEnumerable()")}}
@@ -132,5 +134,3 @@ Object.entries(obj).forEach(([key, value]) => {
 - La méthode statique {{JSxRef("Object.fromEntries()")}}
 - La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}
 - La méthode {{JSxRef("Map.prototype.entries()")}}
-- [Prothèse d'émulation de `Object.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [Prothèse d'émulation es-shims de `Object.entries` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.entries)

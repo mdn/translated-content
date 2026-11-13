@@ -18,7 +18,7 @@ GLint gl.getAttribLocation(programme, nom);
 - programme
   - : Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.
 - nom
-  - : Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
+  - : Un {{jsxref("String")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
 
 ### Valeur retournée
 

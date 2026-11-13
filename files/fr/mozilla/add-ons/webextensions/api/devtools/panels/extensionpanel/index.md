@@ -3,8 +3,6 @@ title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
 ---
 
-{{AddonSidebar}}
-
 Une `ExtensionPanel` représente un panneau ajouté aux devtools. C'est la résolution de la [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) renvoyé par [`browser.devtools.panels.create()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
 
 ## Type

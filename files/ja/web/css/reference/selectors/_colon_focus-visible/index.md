@@ -1,12 +1,11 @@
 ---
 title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
-original_slug: Web/CSS/:focus-visible
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
+**`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます。（多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します。）
 
 {{InteractiveExample("CSS デモ: :focus-visible", "tabbed-shorter")}}
 
@@ -33,7 +32,7 @@ select:focus-visible {
   <p>どの風味をご注文されますか？</p>
   <label>氏名: <input name="firstName" type="text" /></label>
   <label
-    >Flavor:
+    >風味:
     <select name="flavor">
       <option>さくらんぼ</option>
       <option>緑茶</option>
@@ -62,7 +61,7 @@ select:focus-visible {
 
 `focus` 擬似クラスは、常に現在フォーカスされている要素に一致します。 `focus-visible` 擬似クラスもフォーカスされた要素に一致しますが、ユーザーが現在どこにフォーカスがあるのかを知る必要がある場合にのみ一致します。 `focus-visible` 擬似クラスは、必要なときにフォーカスされた要素に一致するので、（`:focus` 擬似クラスの代わりに）`:focus-visible` を使用することで、フォーカスインジケータが現れるタイミングを変更することなく、フォーカスインジケータの外観を変更することができます。
 
-[`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) 擬似クラスを使用すると、常に現在フォーカスされている要素を対象とします。この意味は、ユーザーがポインティングデバイスを使用すると、フォーカスされた要素の周囲に目に見えるフォーカスリングが現れることを意味します。 `focus-visible` 擬似クラスは、ユーザーエージェントの選択的なフォーカス表示の動作を尊重しつつ、フォーカス表示のカスタマイズを可能にします。
+{{cssxref(":focus")}} 擬似クラスを使用すると、常に現在フォーカスされている要素を対象とします。この意味は、ユーザーがポインティングデバイスを使用すると、フォーカスされた要素の周囲に目に見えるフォーカスリングが現れることを意味します。 `focus-visible` 擬似クラスは、ユーザーエージェントの選択的なフォーカス表示の動作を尊重しつつ、フォーカス表示のカスタマイズを可能にします。
 
 ## アクセシビリティ
 

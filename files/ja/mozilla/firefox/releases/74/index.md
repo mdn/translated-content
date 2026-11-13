@@ -40,7 +40,7 @@ _変更なし。_
 
 #### 廃止
 
-- {{jsxref("Object.toSource()")}} メソッドおよび {{jsxref("uneval()")}} グローバル関数が、ウェブコンテンツや拡張機能で使用できなくなりました ([Firefox バグ 1565170](https://bugzil.la/1565170))。
+- {{jsxref("Object.prototype.toString()", "Object.toSource()")}} メソッドおよび {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} グローバル関数が、ウェブコンテンツや拡張機能で使用できなくなりました ([Firefox バグ 1565170](https://bugzil.la/1565170))。
 
 ### API
 

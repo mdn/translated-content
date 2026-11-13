@@ -3,8 +3,6 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
 
 {{InteractiveExample("JavaScript Demo: Statement - Return")}}
@@ -152,5 +150,5 @@ réponse(1337); // 56154
 
 ## Voir aussi
 
-- {{jsxref("Fonctions","Les fonctions","",1)}}
+- {{jsxref("Functions","Les fonctions","",1)}}
 - [Les fermetures (closures)](/fr/docs/Web/JavaScript/Guide/Closures)

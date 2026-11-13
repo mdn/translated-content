@@ -3,12 +3,12 @@ title: "HTMLCanvasElement : évènement webglcontextrestored"
 short-title: webglcontextrestored
 slug: Web/API/HTMLCanvasElement/webglcontextrestored_event
 l10n:
-  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
+  sourceCommit: ac7f589f2471fde8e5ee910a7fbd8a4bff931140
 ---
 
 {{APIRef("WebGL API")}}
 
-L'évènement **`webglcontextrestored`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur restaure le tampon de dessin d'un objet {{DOMxRef("WebGLRenderingContext")}}.
+L'évènement **`webglcontextrestored`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) est déclenché si l'agent utilisateur restaure le tampon de dessin d'un objet {{DOMxRef("WebGLRenderingContext")}}.
 
 Une fois le contexte restauré, les ressources WebGL telles que les textures et les tampons créés avant la perte du contexte ne sont plus valides. Vous devez réinitialiser l'état de votre application WebGL et recréer les ressources.
 
@@ -29,13 +29,6 @@ onwebglcontextrestored = (event) => { }
 Un {{DOMxRef("WebGLContextEvent")}}. Hérite de {{DOMxRef("Event")}}.
 
 {{InheritanceDiagram("WebGLContextEvent")}}
-
-## Propriétés de l'évènement
-
-_Cette interface hérite des propriétés de son interface parente, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("WebGLContextEvent.statusMessage")}}
-  - : Une propriété en lecture seule contenant des informations supplémentaires sur l'évènement.
 
 ## Exemple
 

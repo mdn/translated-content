@@ -15,7 +15,7 @@ var resultText = XMLHttpRequest.responseText;
 
 ### 取值
 
-{{domxref("DOMString")}} 是 `XMLHttpRequest` 返回的纯文本的值。当 {{domxref("DOMString")}} 为 `null` 时，表示请求失败了。当{{domxref("DOMString")}} 为 "" 时，表示这个请求还没有被 {{domxref("XMLHttpRequest.send", "send()")}}
+{{jsxref("String")}} 是 `XMLHttpRequest` 返回的纯文本的值。当 {{jsxref("String")}} 为 `null` 时，表示请求失败了。当{{jsxref("String")}} 为 "" 时，表示这个请求还没有被 {{domxref("XMLHttpRequest.send", "send()")}}
 
 当处理一个异步 request 的时候，尽管当前请求并没有结束，`responseText` 的返回值是当前从后端收到的内容。
 

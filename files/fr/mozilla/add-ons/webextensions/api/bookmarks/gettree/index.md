@@ -3,8 +3,6 @@ title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.getTree()`** renvoie un tableau contenant la racine de l'arborescence des signets en tant qu'objet {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}.
 
 Vous pouvez accéder à l'intégralité de l'arborescence de manière récursive en utilisant sa propriété `children` et la propriété `children` de ses descendants, s'ils sont eux-mêmes des dossiers.

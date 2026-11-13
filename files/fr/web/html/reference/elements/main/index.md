@@ -1,8 +1,9 @@
 ---
-title: "<main> : l'élément de contenu principal"
+title: "Élément HTML `<main>` : l'élément de contenu principal"
+short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 l10n:
-  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<main>`** représente le contenu principal du corps ({{HTMLElement("body")}}) d'un document. La zone de contenu principal se compose de contenu directement lié ou qui développe le sujet central d'un document, ou la fonctionnalité centrale d'une application.
@@ -33,15 +34,15 @@ header {
 }
 ```
 
-Un document ne doit pas comporter plus d'un élément `<main>` qui ne possède pas l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) défini.
-
 ## Attributs
 
 Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-## Notes
+## Notes d'utilisation
 
-Le contenu d'un élément `<main>` doit être unique au document. Le contenu répété dans un ensemble de documents ou de sections de document, comme les barres latérales, les liens de navigation, les informations sur le droit d'auteur, les logos du site et les formulaires de recherche, ne doit pas être inclus, sauf si le formulaire de recherche constitue la fonctionnalité principale de la page.
+Un document ne doit pas comporter plus d'un élément `<main>` qui ne possède pas l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) défini.
+
+Le contenu d'un élément `<main>` doit être unique au document. Le contenu répété dans un ensemble de documents ou de sections de document, comme les barres latérales, les liens de navigation, les informations sur le droit d'auteur·ice, les logos du site et les formulaires de recherche, ne doit pas être inclus, sauf si le formulaire de recherche constitue la fonctionnalité principale de la page.
 
 `<main>` ne contribue pas à la structure du document&nbsp;; c'est-à-dire que, contrairement à des éléments HTML comme {{HTMLElement("body")}}, des titres comme `{{HTMLElement("Heading_Elements", "&lt;h2>")}}`, etc., `<main>` n'affecte pas la notion de structure de page du {{Glossary("DOM")}}. Il est strictement informatif.
 
@@ -53,7 +54,7 @@ L'élément `<main>` a le rôle d'un [repère `main`](/fr/docs/Web/Accessibility
 
 ### Navigation rapide
 
-La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
+La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur·ice d'accéder plus rapidement au contenu principal de la page.
 
 Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
@@ -69,11 +70,11 @@ Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à 
 </body>
 ```
 
-- [WebAIM : Liens et navigation rapide <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
+- [WebAIM&nbsp;: Liens et navigation rapide <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
 
 ### Mode lecture
 
-Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
+Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Reference/Elements#sectionnement_du_contenu) lors de la conversion du document pour le mode lecture.
 
 - [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture <sup>(angl.)</sup>](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 

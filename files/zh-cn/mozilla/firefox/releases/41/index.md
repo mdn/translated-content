@@ -45,10 +45,10 @@ Highlights:
 
 ### JavaScript
 
-- {{jsxref("Date.prototype")}}现在是一个普通对象，不再是一个 {{jsxref("Date")}} 实例 ([Firefox bug 861219](https://bugzil.la/861219)).
+- {{jsxref("Date")}}现在是一个普通对象，不再是一个 {{jsxref("Date")}} 实例 ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Date.prototype.toString")}} 现在是一般方法 ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}}被增加到 ([Firefox bug 1131043](https://bugzil.la/1131043)).
-- {{jsxref("Map.@@species", "Map[@@species]")}} 和{{jsxref("Set.@@species", "Set[@@species]")}} 获取已经被增加 ([Firefox bug 1131043](https://bugzil.la/1131043)).
+- {{jsxref("Map/Symbol.species", "Map[@@species]")}} 和{{jsxref("Set/Symbol.species", "Set[@@species]")}} 获取已经被增加 ([Firefox bug 1131043](https://bugzil.la/1131043)).
 - 非标准 {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} 支持已经被废弃 ([Firefox bug 1023609](https://bugzil.la/1023609)).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号。从现在开始语法没有尖括号将会失败 ([Firefox bug 1150855](https://bugzil.la/1150855)).

@@ -1,12 +1,9 @@
 ---
 title: 証明書の透明性
 slug: Web/Security/Defenses/Certificate_Transparency
-original_slug: Web/Security/Certificate_Transparency
 l10n:
-  sourceCommit: 5b755904cd31e7329ee32ace99486a2fea0fe6a1
+  sourceCommit: 4e989d1d75c8fd0abc43c420002618dbdda8bfbe
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **証明書の透明性** (Certificate Transparency) は、証明書の誤発行を防止し、監視するために設計されたオープンなフレームワークです。証明書の透明性においては、新しく発行された証明書は、公開で運営されている、多くの場合独立した CT ログに「記録」され、発行された TLS 証明書の追加のみの暗号的に保証された記録を維持します。
 
@@ -41,8 +38,7 @@ Google Chrome バージョン 107 以降では、2018 年 4 月 30 日以降の 
 
 Apple は、Safari や他のサーバーがサーバー証明書を信頼するために、さまざまな数の SCT を[必要としています](https://support.apple.com/ja-jp/HT205280)。
 
-Firefox デスクトップ版バージョン 135 以降では、Mozilla's Root CA Program に収録されているすべての認証局によって発行された証明書に対して CT ログのインクルードが要求されます。
-現時点で、Android 版では CT ログのインクルードが要求されていません。
+Firefox デスクトップ版（バージョン 135 以降）および Firefox の Android 版（バージョン 145 以降）では、Mozilla のルート CA プログラムが認証する認証局が発行するすべての証明書に対して、CT ログの含みが要求されます。
 
 ## 仕様書
 

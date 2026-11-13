@@ -1,23 +1,21 @@
 ---
-title: "@charset"
+title: CSS `@charset` アットルール
+short-title: "@charset"
 slug: Web/CSS/Reference/At-rules/@charset
-original_slug: Web/CSS/@charset
+l10n:
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
-**`@charset`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) で、スタイルシートで使う文字エンコーディングを定義します。このルールはスタイルシートの最初の要素でなければならず、これより前には文字を一切記述してはいけません。[入れ子の文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#nested_statements)でないとしても、[条件付きグループルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules#条件付きグループルール)の中で使うことはできません。複数の `@charset` アットルールが定義されると、最初のものだけが使われます。HTML 要素の `style` 属性や、HTML ページの文字セットが関係している {{ HTMLElement("style") }} 要素の中では使えません。
+**`@charset`** [CSS](/ja/docs/Web/CSS) ルールは、スタイルシートで使う文字エンコーディングを指定します。この構文は、 {{ cssxref("content") }} のように、一部の CSS プロパティで {{Glossary("ASCII")}} 以外の文字を使う場合に便利です。`@charset` の最初の文字は `@` 記号ですが、これは [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) ではありません。これは、スタイルシートの先頭にのみ置ける特定のバイトシーケンスです。Unicode バイトオーダーマーク以外の文字は、その前に置けません。また、引用符や空白の使い方など、通常の CSS 構文規則にも従いません。
 
-```css
-@charset "utf-8";
-```
+`@charset` が文字セット宣言として認識されない場合は、通常の at-rule として解析されます。 [CSS構文](/ja/docs/Web/CSS/Guides/Syntax) モジュールは、このフォールバック動作を非推奨とし、スタイルシートの文法チェック時に破棄される、認識されないレガシールールとして定義しています。
 
-このアットルールは、非 ASCII 文字を一部の CSS プロパティ、例えば {{cssxref("content")}} などの中で使う際に有用です。
+スタイルシートの文字エンコーディングを定義する方法はいくつかあるため、ブラウザーは以下の方法を、以下の順序で試し、いずれかの方法が見つかり次第処理を止めます。
 
-スタイルシートの文字エンコーディングを定義する方法は複数あるので、ブラウザーは次の手順を順番に試します (そして 1 つでも結果が得られると止めます)。
-
-1. ファイル先頭にある [Unicode バイト順](http://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF)文字 (BOM) の値
+1. ファイル先頭にある [Unicode バイト順](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF) 文字 (BOM) の値
 2. `Content-Type:` HTTP ヘッダーの `charset` 属性、またはスタイルシートを送るのに使われたプロトコル内の同等のものから得られた値
-3. CSS の `@charset` アットルール
-4. 文書参照で定義されている文字エンコーディングを使用。{{HTMLElement("link")}} 要素の `charset` 属性です。この方式は HTML5 で廃止されており、使うべきではありません。
+3. `@charset` CSS 宣言
+4. 参照元のドキュメントで定義されている文字エンコーディング、つまり {{ HTMLElement("link") }} 要素の`charset`属性を使う。この方法は非推奨なので、使わないでください
 5. 文書が UTF-8 だと仮定する
 
 ## 構文
@@ -27,24 +25,32 @@ original_slug: Web/CSS/@charset
 @charset "iso-8859-15";
 ```
 
-ここで、
+### 引数
 
 - _charset_
-  - : 使う文字エンコーディングを意味する {{cssxref("&lt;string&gt;")}} です。[IANA-registry](https://www.iana.org/assignments/character-sets) で定義されているウェブセーフな文字エンコーディングの名前でなければなりません。この名前は必ず 1 文字分の空白文字 (U+0020) の後に続き、二重引用符で囲われ、セミコロン記号で終わる必要があります。もし 1 つのエンコーディングに複数の名前が関連付けられている場合には、使用できるのは _preferred_ とマークされているものだけです。
+  - : 使う文字エンコーディングを意味する {{cssxref("&lt;string&gt;")}} です。[IANA-registry](https://www.iana.org/assignments/character-sets) で定義されているウェブセーフな文字エンコーディングの名前でなければなりません。この名前は必ず 1 文字分の空白文字 (U+0020) の後に続き、二重引用符で囲われ、セミコロン記号で終わる必要があります。もし 1 つのエンコーディングに複数の名前が関連付けられている場合には、使えるのは _preferred_ とマークされているものだけです。
 
 ## 形式文法
 
-{{csssyntax}}
+`@charset` ルールは構文ではなく、以下の形式の特定のバイトシーケンスによって解析されることに気をつけてください。
+
+```plain
+@charset "<charset>";
+```
 
 ## 例
 
 ### 有効・無効な文字セットの宣言
 
-```css-nolint
-@charset "UTF-8"; /* スタイルシートのエンコーディングを Unicode UTF-8 にします*/
-@charset 'iso-8859-15'; /* 無効です。正しくない引用符が使用されています */
+```css-nolint example-good
+@charset "UTF-8"; /* Unicode UTF-8 にスタイルシートのエンコードを設定 */
+```
+
+```css-nolint example-bad
+@charset 'iso-8859-15'; /* 無効です。正しくない引用符が使われています */
+@charset  "UTF-8"; /* 無効です。空白の数が 2 以上になっています */
  @charset "UTF-8"; /* 無効です。アットルールより前に文字（空白）があります */
-@charset UTF-8; /* 無効です。' か " がなく、文字セットは CSS の {{cssxref("&lt;string&gt;")}} ではありません */
+@charset UTF-8; /* 無効です。文字セットは CSS の <string> 型であり、二重引用符が必要です。 */
 ```
 
 ## 仕様書

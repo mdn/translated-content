@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.hasInstance` を表します。{{jsxref("Operators/instanceof", "instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
+**`Symbol.hasInstance`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.hasInstance` を表します。{{jsxref("instanceof")}} 演算子は右辺オペランドに対して、コンストラクターオブジェクトがオブジェクトをそのインスタンスとして認識するかどうかを判断する際に使用されるメソッドを、このシンボルで探します。
 
 {{InteractiveExample("JavaScript デモ: Symbol.hasInstance")}}
 
@@ -85,5 +85,5 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## 関連情報
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)

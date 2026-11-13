@@ -7,7 +7,7 @@ HTTP **303 See Other** 重定向状态码，通常作为 {{HTTPMethod("PUT")}} �
 
 ## 状态
 
-```plain
+```http
 303 See Other
 ```
 

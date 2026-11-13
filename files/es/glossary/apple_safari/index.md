@@ -1,21 +1,23 @@
 ---
 title: Apple Safari
 slug: Glossary/Apple_Safari
+l10n:
+  sourceCommit: ac287b7a4b7de33be5f649a0d3bb7bfca882808f
 ---
 
-{{GlossarySidebar}}
+[**Safari**](https://www.apple.com/safari/) es un {{Glossary("Browser","navegador web")}} desarrollado por Apple e integrado en sus sistemas operativos, entre ellos macOS (para computadoras Mac), iPadOS (para tabletas iPad), iOS (para iPhones) y visionOS (para dispositivos de realidad aumentada como el Apple Vision Pro).
 
-[Safari](https://www.apple.com/safari/) es un {{Glossary("Browser","navegador web")}} desarrollado por Apple y ligado a Mac OS X y iOS. Está basado en el motor de código abierto [WebKit](https://www.webkit.org/).
+Safari usa el motor de renderizado de código abierto {{glossary("WebKit")}}, que deriva de [KHTML](https://es.wikipedia.org/wiki/KHTML).
 
-## Saber más
+## Véase también
 
-### Conocimiento general
-
-- [Safari](<https://es.wikipedia.org/wiki/Safari_(web_browser)>) en Wikipedia
-- [Safari en apple.com](https://www.apple.com/safari/)
-
-### Información técnica
-
-- [El proyecto WebKit](https://www.webkit.org/)
-- [WebKit versión diaria (nightly build](http://nightly.webkit.org/))
-- [Reporta un error en Safari](https://bugs.webkit.org/)
+- [Safari (navegador web)](<https://es.wikipedia.org/wiki/Safari_(navegador)>) en Wikipedia
+- [Safari](https://www.apple.com/safari/) en apple.com
+- [El proyecto de código abierto WebKit](https://webkit.org/)
+- [Archivos de compilación de WebKit](https://webkit.org/build-archives/)
+- [Informar de errores de Safari](https://bugs.webkit.org/)
+- Términos relacionados del glosario:
+  - {{glossary("Browser")}}
+  - {{Glossary("Engine/Rendering", "Motor de renderizado")}}
+  - {{glossary("WebKit")}}
+  - Otros navegadores: {{glossary("Google Chrome")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}

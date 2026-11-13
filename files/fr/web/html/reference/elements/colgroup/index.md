@@ -1,8 +1,9 @@
 ---
-title: "<colgroup> : l'élément regroupant des colonnes"
+title: "Élément HTML `<colgroup>` : l'élément regroupant des colonnes"
+short-title: <colgroup>
 slug: Web/HTML/Reference/Elements/colgroup
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<colgroup>`** définit un groupe de colonnes au sein d'un tableau.
@@ -101,7 +102,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
   - : Définit la couleur de fond de chaque cellule de colonne. La valeur est une couleur HTML&nbsp;; soit un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color), préfixé par un «&nbsp;#&nbsp;», ou un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("color_value", "&lt;color&gt;")}} ne sont pas prises en charge. Utilisez plutôt la propriété CSS {{CSSxRef("background-color")}}, car cet attribut est obsolète.
 
 - `char` {{Deprecated_Inline}}
-  - : Ne fait rien. Il était initialement prévu pour définir l'alignement du contenu sur un caractère de chaque cellule du groupe de colonnes. Les valeurs typiques incluent un point (`.`) lorsqu'on tente d'aligner des nombres ou des valeurs monétaires. Si [`align`](#align) n'est pas défini sur `char`, cet attribut est ignoré, mais il remplacera tout de même la valeur [`align`](/fr/docs/Web/HTML/Reference/Elements/col#align) des éléments {{HTMLElement("col")}} membres de ce groupe de colonnes.
+  - : Ne fait rien. Il était initialement prévu pour définir l'alignement du contenu sur un caractère de chaque cellule du groupe de colonnes. Les valeurs typiques incluent un point (`.`) lorsqu'on tente d'aligner des nombres ou des valeurs monétaires. Si [`align`](#align) n'est pas défini sur `char`, cet attribut est ignoré, mais il remplace tout de même la valeur [`align`](/fr/docs/Web/HTML/Reference/Elements/col#align) des éléments {{HTMLElement("col")}} membres de ce groupe de colonnes.
 
 - `charoff` {{Deprecated_Inline}}
   - : Ne fait rien. Il était initialement prévu pour définir le nombre de caractères pour décaler le contenu de la cellule de colonne par rapport au caractère d'alignement défini par l'attribut [`char`](#char).
@@ -217,7 +218,7 @@ table {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemples', 650, 170)}}
+{{EmbedLiveSample("Exemples", 650, 170)}}
 
 ## Résumé technique
 
@@ -235,7 +236,7 @@ table {
       <th scope="row">Contenu autorisé</th>
       <td>
         Si l'attribut <a href="#span"><code>span</code></a> est présent&nbsp;:
-        aucun car c'est un élément vide.<br />Si l'attribut n'est pas présent,
+        aucun, car c'est un élément vide.<br />Si l'attribut n'est pas présent,
         zéro ou plusieurs éléments {{HTMLElement("col")}}.
       </td>
     </tr>

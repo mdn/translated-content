@@ -32,5 +32,5 @@ alert(cadena.toString()); // Displays "Hello world"
 
 ## Vea También
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

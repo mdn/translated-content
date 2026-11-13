@@ -1,11 +1,10 @@
 ---
-title: <shape>
+title: Type CSS `<shape>`
+short-title: <shape>
 slug: Web/CSS/Reference/Values/shape
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<shape>`** définit la forme précise d'une région. La région représente la partie d'un élément à laquelle s'applique la propriété {{CSSxRef("clip")}}.
 

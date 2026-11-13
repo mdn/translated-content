@@ -48,5 +48,5 @@ null == undefined; // verdadeiro
 
 ## Veja também
 
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("undefined")}}
+- {{jsxref("NaN")}}

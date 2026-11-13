@@ -3,7 +3,7 @@ title: Array.prototype.flat()
 short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`flat()`** は {{jsxref("Array")}} インスタンスのメソッドで、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
@@ -118,7 +118,7 @@ console.log(Array.prototype.flat.call(arrayLike));
 
 ## 関連情報
 
-- [`Array.prototype.flat` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.flat` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.flat` のポリフィル](https://www.npmjs.com/package/array.prototype.flat)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

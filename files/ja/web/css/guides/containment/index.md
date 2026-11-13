@@ -1,9 +1,9 @@
 ---
 title: CSS コンテナー
+short-title: コンテナー
 slug: Web/CSS/Guides/Containment
-original_slug: Web/CSS/CSS_containment
 l10n:
-  sourceCommit: da2fb2fbfca57a93dacfa9ca06dad83fcbb6be01
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS コンテナー** (CSS Containment) モジュールでは、抑制とコンテナークエリーを定義しています。
@@ -36,8 +36,8 @@ l10n:
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
   - : コンテナーコンテキストに名前を付けることを含む、 `@container` でコンテナークエリーを使用するガイドです。
 
-- [CSS コンテナーの使用](/ja/docs/Web/CSS/Guides/Containment/Using)
-  - : CSS コンテナーの基本的な目的と、より良いユーザー体験のために `contain` と `content-visibility` を活用する方法を記述しています。
+- [CSS 抑制の使用](/ja/docs/Web/CSS/Guides/Containment/Using)
+  - : CSS 抑制の基本的な目的と、より良いユーザー体験のために `contain` と `content-visibility` を活用する方法を記述しています。
 
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
   - : コンテナーサイズとスタイルクエリーを `@container` で記述する方法についてのガイドです。カスタムプロパティのスタイルクエリー、クエリー構文と名前付き、コンテナークエリーの入れ子などについて記載しています。

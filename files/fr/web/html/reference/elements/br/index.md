@@ -1,8 +1,9 @@
 ---
-title: "<br> : l'élément de saut de ligne"
+title: "Élément HTML `<br>` : l'élément de saut de ligne"
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<br>`** crée un saut de ligne dans le texte (retour à la ligne). Il est utile pour écrire un poème ou une adresse, lorsque la division des lignes est significative.
@@ -33,7 +34,7 @@ p {
 Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque endroit où l'on souhaite que le texte soit coupé. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
 > [!NOTE]
-> N'utilisez pas `<br>` pour créer des marges entre les paragraphes&nbsp;; entourez-les d'éléments {{HTMLElement("p")}} et utilisez la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef('margin')}} pour contrôler leur taille.
+> N'utilisez pas `<br>` pour créer des marges entre les paragraphes&nbsp;; entourez-les d'éléments {{HTMLElement("p")}} et utilisez la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef("margin")}} pour contrôler leur taille.
 
 ## Attributs
 
@@ -72,7 +73,7 @@ USA<br />
 
 #### Résultat
 
-{{EmbedLiveSample('Simple rupture de ligne', 640, 120)}}
+{{EmbedLiveSample("Simple rupture de ligne", 640, 120)}}
 
 ## Résumé technique
 
@@ -104,7 +105,7 @@ USA<br />
       <th scope="row">Omission de balise</th>
       <td>
         Cet élément doit avoir une balise de début et ne doit pas avoir de
-        balise de fin. Pour les documents XHTML, on écrira cet élément
+        balise de fin. Pour les documents XHTML, on écrit cet élément
         <code>&#x3C;br/></code>.
       </td>
     </tr>
@@ -148,6 +149,6 @@ USA<br />
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("address")}}
-- L'élément HTML {{HTMLElement("p")}}
-- L'élément HTML {{HTMLElement("wbr")}}
+- L'élément {{HTMLElement("address")}}
+- L'élément {{HTMLElement("p")}}
+- L'élément {{HTMLElement("wbr")}}

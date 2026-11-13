@@ -52,7 +52,7 @@ _從親介面 (parent interface) {{domxref("EventTarget")}} 繼承屬性。_
 ## 靜態方法 (Static methods)
 
 - {{domxref("MediaSource.isTypeSupported()")}}
-  - : 回傳一個 {{domxref("Boolean")}} 值表示指定的 MIME 類型是否被現在的用戶代理支援 — 意即可否成功的為該 MIME 類型建立 {{domxref("SourceBuffer")}} 物件。
+  - : 回傳一個 {{jsxref("Boolean")}} 值表示指定的 MIME 類型是否被現在的用戶代理支援 — 意即可否成功的為該 MIME 類型建立 {{domxref("SourceBuffer")}} 物件。
 
 ## 範例
 

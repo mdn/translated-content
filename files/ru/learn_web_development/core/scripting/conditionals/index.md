@@ -3,7 +3,7 @@ title: Принятие решений в вашем коде — условны
 slug: Learn_web_development/Core/Scripting/Conditionals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 Во многих языках программирования код должен иметь возможность принимать решения на основе введённых пользователем данных. Например, в игре, если у пользователя осталось 0 жизней, то игра завершается. В приложении о погоде утром отображается восход солнца, а вечером звезды и луна. В этой статье мы рассмотрим как в JavaScript работают так называемые "условия".
 
@@ -667,8 +667,7 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea
->
+}</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Сброс" />
@@ -771,4 +770,4 @@ textarea.onkeyup = function () {
 - [if...else reference](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

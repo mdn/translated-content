@@ -34,20 +34,22 @@ jobs:
           - zh-tw
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-        with:
-          persist-credentials: false
+      - parallel:
+          - name: Checkout
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              path: mdn/translated-content
+              persist-credentials: false
 
-      - name: Checkout (content)
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-        with:
-          repository: mdn/content
-          path: mdn/content
-          persist-credentials: false
+          - name: Checkout (content)
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              repository: mdn/content
+              path: mdn/content
+              persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: mdn/content/.nvmrc
           package-manager-cache: false
@@ -62,7 +64,7 @@ jobs:
       - name: Sync translated content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
-          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/mdn/translated-content/files
           # Used by the `rari` cli to avoid rate limiting issues
           # when fetching the latest releases info from the GitHub API.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -70,6 +72,7 @@ jobs:
         run: npm run content sync-translated-content ${{ matrix.lang }}
 
       - name: Gather related upstream commits
+        working-directory: mdn/translated-content
         id: gather
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -101,8 +104,9 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Create PR with sync for ${{ matrix.lang }}
-        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7.0.11
+        uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8 # v8.1.2
         with:
+          path: mdn/translated-content
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"

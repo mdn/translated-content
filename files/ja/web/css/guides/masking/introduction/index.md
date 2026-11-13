@@ -1,12 +1,12 @@
 ---
 title: CSS マスク入門
+short-title: 入門
 slug: Web/CSS/Guides/Masking/Introduction
-original_slug: Web/CSS/CSS_masking/Masking
 l10n:
-  sourceCommit: cb25e0acbd9f0af27c4a99965cb962230d49a35d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-CSS マスクを使用すると、1 つ以上のマスク画像を要素に適用して、要素の一部を選択的に表示または非表示にすることができます。これらのマスク画像は、グラデーション、画像、または SVG ソースにすることができます。単一のパスの形状に基づいて要素の領域を完全に表示または非表示にする [CSS クリップ](/ja/docs/Web/CSS/Guides/Masking/Clipping)とは異なり、マスクでは、マスク画像のアルファ透過率およびオプションで輝度に基づいて、微妙な透過率や合成効果を表現することができます。
+CSS マスクでは、1 つ以上のマスク画像を要素に適用して、要素の一部を選択的に表示または非表示にすることができます。これらのマスク画像は、グラデーション、画像、または SVG ソースにすることができます。単一のパスの形状に基づいて要素の領域を完全に表示または非表示にする [CSS クリップ](/ja/docs/Web/CSS/Guides/Masking/Clipping)とは異なり、マスクでは、マスク画像のアルファ透過率およびオプションで輝度に基づいて、微妙な透過率や合成効果を表現することができます。
 
 このガイドでは、マスクの概念、さまざまなマスク画像の型、およびマスクの輝度とアルファ透過率が、マスクされる（表示される）要素の部分とクリップされる（または非表示になる）部分に対してどのように影響するかを紹介します。
 
@@ -23,7 +23,7 @@ CSS では、マスクを使用して、要素の表示領域と非表示領域�
 
 マスクは、 CSS グラデーション、ラスター画像 (PNG など)、および SVG {{svgelement("mask")}} 要素を使用して定義することができます。このガイドでは、[不透明度と透過率](#不透明度と透過率)、[輝度](#アルファ透過度と輝度)、および[マスクと CSS クリップ](#svg_の_mask_をマスクソースとする)について説明しながら、さまざまなマスク画像の種類を紹介します。
 
-それぞれのマスクレイヤーは、基準ボックスに対して [位置指定](/ja/docs/Web/CSS/Reference/Properties/mask-position)された {{cssxref("mask-image")}} で構成されます。マスク画像は、[サイズ](/ja/docs/Web/CSS/Reference/Properties/mask-size)を指定したり、[反復](/ja/docs/Web/CSS/Reference/Properties/mask-repeat)したり、[クリップ](/ja/docs/Web/CSS/Reference/Properties/mask-clip)したりすることができます。複数のマスク画像が宣言されている場合、[マスクレイヤーの合成](/ja/docs/Web/CSS/Reference/Properties/mask-composite)または結合の方法を設定することができます。これについては、[マスクプロパティガイド] (/ja/docs/Web/CSS/CSS_masking/CSS_mask_properties)で説明しています。
+それぞれのマスクレイヤーは、基準ボックスに対して[位置指定](/ja/docs/Web/CSS/Reference/Properties/mask-position)された {{cssxref("mask-image")}} で構成されます。マスク画像は、[サイズ](/ja/docs/Web/CSS/Reference/Properties/mask-size)を指定したり、[反復](/ja/docs/Web/CSS/Reference/Properties/mask-repeat)したり、[クリップ](/ja/docs/Web/CSS/Reference/Properties/mask-clip)したりすることができます。複数のマスク画像が宣言されている場合、[マスクレイヤーの合成](/ja/docs/Web/CSS/Reference/Properties/mask-composite)または結合の方法を設定することができます。これについては、[マスクプロパティガイド] (/ja/docs/Web/CSS/Guides/Masking/Mask_properties)で説明しています。
 
 > [!NOTE]
 > すべての例では、マスクが適用される基盤要素として次の画像を使用します。
@@ -46,8 +46,8 @@ body {
   gap: 20px;
   padding: 15px;
   background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
+    linear-gradient(to right, transparent 50%, rgb(0 0 0 / 0.05) 50%),
+    linear-gradient(to bottom, transparent 50%, rgb(0 0 0 / 0.05) 50%);
   background-size: 20px 20px;
 }
 div,
@@ -60,16 +60,18 @@ img {
 
 アルファマスクでは、要素の表示領域は、その要素に適用されるマスクのアルファ透過率によって定義されます。マスクが完全に不透明な部分は、要素が表示されます。マスクが完全に透明なピクセルでは、要素も完全に非表示になります。マスクの一部が不透明な領域でマスクされている要素の領域は、そのマスクの不透明度に対応して、部分的に不透明になります。
 
+### グラデーションで
+
 これを確認するために、{{cssxref("conic-gradient")}} を `mask-image` として使用した例を見ていきましょう。扇形グラデーションを含む CSS グラデーションは、表示領域と非表示領域の間の滑らかなトランジションを作成するために使用することができます。
 
 この場合、マスクの右上隅は完全に不透明、左上隅は完全に透明、そして下半分は不透明から透明へと滑らかに変化しています。
 
 ```css live-sample___gradient1
 .applied-mask {
-  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgba(0 0 0 / 0) 270deg);
+  mask-image: conic-gradient(black 90deg, transparent 270deg);
 }
 .mask-source {
-  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgba(0 0 0 / 0) 270deg);
+  background: conic-gradient(black 90deg, transparent 270deg);
 }
 ```
 
@@ -83,16 +85,16 @@ img {
 .applied-mask {
   mask-image: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
 .mask-source {
   background: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -102,17 +104,19 @@ img {
 
 {{EmbedLiveSample("gradient2", "", "250px")}}
 
+### インポートした画像で
+
 前の 2 つの例では、グラデーションをマスクおよび背景画像として使用しました。マスク画像は CSS 画像である必要はありません。外部画像や SVG でもかまいません。
 
 この例では、外部の PNG を使用しています。画像には、背景が透明なカラフルなハートが含まれています。
 
 ```css live-sample___image1 live-sample___luminance1
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   mask-size: 220px 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   background-size: 220px 220px;
 }
 ```
@@ -201,12 +205,12 @@ img {
 
 ```css live-sample___luminance3
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   mask-mode: luminance;
   mask-size: 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  background: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   background-size: 220px;
 }
 ```
@@ -257,10 +261,10 @@ img {
 
 ```css live-sample___svg1
 .applied-mask {
-  mask-image: url(#mask-heart);
+  mask-image: url("#mask-heart");
 }
 .applied-clip {
-  clip-path: url(#clip-heart);
+  clip-path: url("#clip-heart");
 }
 ```
 
@@ -290,4 +294,6 @@ body {
 ## 関連情報
 
 - [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS の `mask` プロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

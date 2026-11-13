@@ -3,8 +3,6 @@ title: <center>：中央對齊文字元素
 slug: Web/HTML/Reference/Elements/center
 ---
 
-{{deprecated_header}}
-
 **`<center>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)，它將其區塊級或內聯內容在其包含元素中水平居中顯示。通常，容器是 {{HTMLElement("body")}}，但不是必需的。
 
 在 HTML 4（和 XHTML 1）中，此標籤已被棄用，取而代之的是 [CSS](/zh-TW/docs/Web/CSS) 的 {{Cssxref("text-align")}} 屬性，可以應用於 {{HTMLElement("div")}} 元素或個別的 {{HTMLElement("p")}}。要將區塊居中，請使用其他 CSS 屬性，如 {{Cssxref("margin-left")}} 和 {{Cssxref("margin-right")}}，並將它們設置為 `auto`（或將 {{Cssxref("margin")}} 設置為 `0 auto`）。

@@ -87,7 +87,7 @@ l10n:
 <label for="username">名前を忘れてしまいましたか？</label>
 ```
 
-`<label>` 要素に関連付けることができる要素には {{HTMLElement('button')}}, {{HTMLElement('input')}} （type="hidden"` を除く）, {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}}, {{HTMLElement('textarea')}} があります。
+`<label>` 要素に関連付けることができる要素には {{HTMLElement('button')}}, {{HTMLElement('input')}} （`type="hidden"` を除く）, {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}}, {{HTMLElement('textarea')}} があります。
 
 ## アクセシビリティ
 

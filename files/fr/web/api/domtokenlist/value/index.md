@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/value
 
 {{APIRef("DOM")}}
 
-La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{domxref("DOMString")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.
+La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{jsxref("String")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ tokenList.value;
 
 ### Valeur
 
-Une {{domxref("DOMString")}} (_chaîne de caractères_).
+Une {{jsxref("String")}} (_chaîne de caractères_).
 
 ## Exemples
 

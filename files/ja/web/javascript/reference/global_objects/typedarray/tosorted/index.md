@@ -1,13 +1,12 @@
 ---
 title: TypedArray.prototype.toSorted()
+short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-{{JSRef}}
-
-**`toSorted()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/sort", "sort()")}} メソッドの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toSorted()")}} と同じアルゴリズムですが、既定で文字列としてではなく数値として値をソートする点が異なります。
+**`toSorted()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/sort", "sort()")}} メソッドの[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)版です。これは、要素を昇順にソートした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toSorted()")}} と同じアルゴリズムですが、デフォルトで文字列としてではなく数値として値をソートする点が異なります。
 
 ## 構文
 
@@ -19,11 +18,7 @@ toSorted(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-  - : ソート順を定義する関数です。返値は、 2 つの要素の相対順序を示す符号を持つ数値でなければなりません。
-    - `a`
-      - : 比較のための最初の要素です。
-    - `b`
-      - : 比較のための 2 つ目の要素です。
+  - : 要素の順序を決定する関数。省略された場合、型付き配列の要素は値に基づいてソートされます。詳しくは {{jsxref("TypedArray/sort", "sort()")}} を参照してください。
 
 ### 返値
 
@@ -58,7 +53,7 @@ console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.toSorted` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`TypedArray.prototype.toSorted` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray.prototype.sort()")}}
 - {{jsxref("TypedArray.prototype.toReversed()")}}

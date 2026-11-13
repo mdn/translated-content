@@ -3,8 +3,6 @@ title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 ---
 
-{{AddonSidebar}}
-
 La propriété {{WebExtAPIRef("privacy.network")}} contient des paramètres de configuration du réseau liés à la vie privée. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 Les valeurs par défaut de ces propriétés peuvent varier selon les navigateurs.

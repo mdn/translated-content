@@ -1,10 +1,12 @@
 ---
-title: ::-moz-progress-bar
+title: CSS `::-moz-progress-bar` 擬似要素
+short-title: ::-moz-progress-bar
 slug: Web/CSS/Reference/Selectors/::-moz-progress-bar
-original_slug: Web/CSS/::-moz-progress-bar
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
 **`::-moz-progress-bar`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 {{HTMLElement("progress")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)
 
@@ -12,7 +14,11 @@ original_slug: Web/CSS/::-moz-progress-bar
 
 ## 構文
 
-{{csssyntax}}
+```css
+::-moz-progress-bar {
+  /* ... */
+}
+```
 
 ## 例
 
@@ -44,10 +50,13 @@ original_slug: Web/CSS/::-moz-progress-bar
 
 どの標準にも含まれていません。
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 ## 関連情報
 
 - {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}

@@ -1,8 +1,9 @@
 ---
-title: exp()
+title: CSS `exp()` 関数
+short-title: exp()
 slug: Web/CSS/Reference/Values/exp
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`exp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指数関数であり、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。

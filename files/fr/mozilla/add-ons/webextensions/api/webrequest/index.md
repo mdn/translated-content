@@ -3,8 +3,6 @@ title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
 
-{{AddonSidebar}}
-
 Ajout d'écouteurs d'événements pour les différentes étapes d'une requête HTTP. L'écouteur de l'événement reçoit des informations détaillées sur la demande et peut modifier ou annuler la demande.
 
 Chaque événement est déclenché à un stade particulier de la demande. La séquence typique des événements est la suivante :

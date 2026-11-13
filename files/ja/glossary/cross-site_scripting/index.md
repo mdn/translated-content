@@ -1,17 +1,21 @@
 ---
 title: Cross-site scripting (クロスサイトスクリプティング)
 slug: Glossary/Cross-site_scripting
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**クロスサイトスクリプティング** (XSS) 攻撃とは、攻撃者が対象となるウェブサイトに、あたかもそのウェブサイトの一部であるかのように悪意のあるコードを取得し、実行させる攻撃のことです。そのコードは、そのウェブサイト自身のコードが可能なことなら何でも行うことができます。例えば、攻撃者は次のようなことを行う可能性があります。
 
-クロスサイトスクリプティング (XSS) とは、悪意あるクライアントサイドのコードをウェブサイトに挿入するセキュリティ攻撃です。挿入されたコードは被害者のブラウザー上で実行され、アクセス制限の回避やユーザーへのなりすましなどにつながります。Open Web Application Security Project の調べによると、XSS は 2017 年において [7 番目に多いウェブアプリの脆弱性](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>)でした。
+- サイトが読み込んだページのすべてのコンテンツ、およびローカルストレージ内のあらゆるコンテンツにアクセスし、変更することができます
+- ユーザーの資格情報を使用して HTTP リクエストを送信し、ユーザーになりすましたり、機密データにアクセスしたりすることが可能です
 
-この攻撃が成功してしまうのは、ウェブアプリにバリデーションとエンコーディングが十分に実装されていない場合です。ユーザーのブラウザーは、悪意あるスクリプトを信頼できないものとして検知できません。そのため、任意の Cookie やセッショントークン、ウェブサイト固有の機密情報などにアクセスされたり、悪意あるスクリプトによって {{glossary("HTML")}} のコンテンツが書き換えられてしまったりします。
+すべての XSS 攻撃は、ウェブサイトが次の 2 つのことをしていることに依存しています。
+
+1. 攻撃者によって細工された可能性のある入力を受け入れること
+2. この入力を、サニタイズ（無害化）せずにページに表示すること。つまり、JavaScript として実行されないようにせずに表示すること
 
 ## 関連情報
 
-- [クロスサイトスクリプティング](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0) (Wikipedia)
-- [Cross-site scripting](https://owasp.org/www-community/attacks/xss/) (OWASP)
-- [クロスサイトスクリプティングに関する別の記事](https://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
-- [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)
+- [クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)
+- [Cross-site scripting (OWASP)](https://owasp.org/www-community/attacks/xss/)

@@ -1,21 +1,21 @@
 ---
-title: prefers-color-scheme
+title: CSS `prefers-color-scheme` メディア特性
+short-title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
-original_slug: Web/CSS/@media/prefers-color-scheme
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
-**`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーがシステムに要求したカラーテーマが明色か暗色かを検出するために使用します。
+**`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Guides/Media_queries/Using#メディア特性を対象にする)で、ユーザーがシステムに要求した配色が明色か暗色かを検出するために使用します。
 ユーザーはオペレーティングシステムの設定（ライトモードやダークモードなど）やユーザーエージェントの設定で、この設定を示す場合があります。
 
 ## 埋め込み要素
 
-SVG および iframe の場合、 `prefers-color-scheme` を使用すると、 SVG または iframe の CSS スタイルを、ウェブページ内の親要素の [`color-scheme`](/ja/docs/Web/CSS/Reference/Properties/color-scheme) に基づいて設定することができます。
-SVG は、HTML にインラインでではなく、埋め込み（すなわち `<img src="circle.svg" alt="circle" />`）で使用する必要があります。
+SVG および iframe の場合、 `prefers-color-scheme` を使用すると、 SVG または iframe の CSS スタイルを、ウェブページ内の親要素の {{cssxref("color-scheme")}} に基づいて設定することができます。
+SVG は、埋め込み（すなわち `<img src="circle.svg" alt="circle" />`）で使用する必要があります（[HTML にインラインで](/ja/docs/Web/SVG/Guides/SVG_in_HTML#基本的な例)ではなく）。
 SVG で `prefers-color-scheme` を使用している例については、「[埋め込み要素で継承される配色](#埋め込み要素で継承される配色)」の節を参照してください。
 
-`prefers-color-scheme` は、[オリジンをまたいだ](/ja/docs/Web/Security/Defenses/Same-origin_policy#異なるオリジンへのネットワークアクセス) `<svg>` および `<iframe>` 要素で使用することができます。オリジンをまたぐとは、参照しているページとは異なるホストから取得される要素のことです。 SVG の詳細については、 [SVG のドキュメント](/ja/docs/Web/SVG)、 iframe の詳細については、 [iframe のドキュメント](/ja/docs/Web/HTML/Reference/Elements/iframe)を参照してください。
+`prefers-color-scheme` は、[異なるオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy#異なるオリジンへのネットワークアクセス)の `<svg>` および `<iframe>` 要素で使用することができます。異なるオリジンとは、参照しているページとは異なるホストから取得される要素のことです。SVG の詳細については、 [SVG のドキュメント](/ja/docs/Web/SVG)、 iframe の詳細については、 [iframe のドキュメント](/ja/docs/Web/HTML/Reference/Elements/iframe)を参照してください。
 
 ## 構文
 
@@ -28,7 +28,7 @@ SVG で `prefers-color-scheme` を使用している例については、「[埋
 
 ### ダークテーマかライトテーマかの検出
 
-一般的な使用法は、既定で明るい配色を使用し、`prefers-color-scheme: dark` を使用して、色を暗い色調に上書きすることです。その逆も実現可能です。
+一般的な使用法は、デフォルトで明るい配色を使用し、`prefers-color-scheme: dark` を使用して、色を暗い色調に上書きすることです。その逆も実現可能です。
 
 この例では、両方のオプションを示しています。テーマ A は明るい色を使用しますが、暗い色に変更することができます。テーマ B は暗い色を使用しますが、明るい色に変更することができます。結局、ブラウザーが `prefers-color-scheme` に対応している場合、それぞれのテーマが明るい色、暗い色になります。
 
@@ -50,41 +50,41 @@ div.box {
   display: inline-block;
   padding: 1em;
   margin: 6px;
-  outline: 2px solid #000;
+  outline: 2px solid black;
   width: 12em;
   height: 2em;
   vertical-align: middle;
 }
 ```
 
-テーマ A （茶色）は、既定では明るい配色を使用していますが、メディアクエリーに基づいて暗い配色に切り替わります。
+テーマ A （茶色）は、デフォルトでは明るい配色を使用していますが、メディアクエリーに基づいて暗い配色に切り替わります。
 
 ```css
 .theme-a {
-  background: #dca;
-  color: #731;
+  background: #ddccaa;
+  color: #773311;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
-    background: #753;
-    color: #dcb;
-    outline: 5px dashed #000;
+    background: #775533;
+    color: #ddccbb;
+    outline: 5px dashed black;
   }
 }
 ```
 
-テーマ B （青） は、既定では暗い配色を使用していますが、メディアクエリーに基づいて明るい配色に切り替わります。
+テーマ B （青） は、デフォルトでは暗い配色を使用していますが、メディアクエリーに基づいて明るい配色に切り替わります。
 
 ```css
 .theme-b {
-  background: #447;
-  color: #bbd;
+  background: #444477;
+  color: #bbbbdd;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
-    background: #bcd;
-    color: #334;
-    outline: 5px dotted #000;
+    background: #bbccdd;
+    color: #333344;
+    outline: 5px dotted black;
   }
 }
 ```
@@ -108,35 +108,41 @@ div.box {
 
 ```html
 <div>
-  <img />
+  <img alt="circle" src="" />
 </div>
+<div class="light">
+  <img alt="circle" src="" />
+</div>
+<div class="dark">
+  <img alt="circle" src="" />
+</div>
+```
 
-<div style="color-scheme: light">
-  <img />
-</div>
-<div style="color-scheme: dark">
-  <img />
-</div>
+```css
+.light {
+  color-scheme: light;
+}
 
-<!-- Embed an SVG for all <img> elements -->
-<script>
-  for (let img of document.querySelectorAll("img")) {
-    img.alt = "circle";
-    img.src =
-      "data:image/svg+xml;base64," +
-      window.btoa(`
-      <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <style>
-          :root { color: blue }
-          @media (prefers-color-scheme: dark) {
-            :root { color: purple }
-          }
-        </style>
-        <circle fill="currentColor" cx="16" cy="16" r="16"/>
-      </svg>
-    `);
-  }
-</script>
+.dark {
+  color-scheme: dark;
+}
+```
+
+```js
+// すべての <img> 要素に SVG を埋め込む
+for (const img of document.querySelectorAll("img")) {
+  img.src = `data:image/svg+xml;base64,${window.btoa(`
+    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        :root { color: blue }
+        @media (prefers-color-scheme: dark) {
+          :root { color: purple }
+        }
+      </style>
+      <circle fill="currentColor" cx="16" cy="16" r="16"/>
+    </svg>
+  `)}`;
+}
 ```
 
 {{EmbedLiveSample("Color_scheme_inheritance")}}
@@ -152,9 +158,9 @@ div.box {
 ## 関連情報
 
 - {{cssxref("color-scheme")}} プロパティ
-- [`<meta name="color-scheme">`](/ja/docs/Web/HTML/Reference/Elements/meta/name#color-scheme)
+- [`<meta name="color-scheme">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
 - HTTP の {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} ヘッダーによる[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)
 - [Firefox での prefers-color-scheme のシミュレーション](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [動画: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
-- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode/)
 - 色スキームの変更: [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/)、[macOS](https://developer.apple.com/design/human-interface-guidelines/dark-mode)、[Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019)、[その他のプラットフォーム](https://support.mozilla.org/ja/questions/1271928)

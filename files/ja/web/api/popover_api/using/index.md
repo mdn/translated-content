@@ -20,7 +20,7 @@ l10n:
 > [!NOTE]
 > 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
 
-この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、1 つ以上の制御ボタン（ポップオーバー**インボーカー**とも呼ばれる）を追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
+この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、1 つ以上の制御ボタン（ポップオーバー**インボーカー**とも呼ばれる）を追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することにより、ポップオーバー制御ボタンに設定することができます。
 
 ```html
 <button popovertarget="mypopover">ポップオーバーを切り替え</button>
@@ -206,7 +206,7 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-JavaScript のポップオーバーのプロパティ、機能検出、`togglePopover()' メソッドの動作は、[トグルヘルプ UI の例](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/toggle-help-ui)）をご覧ください。
+JavaScript のポップオーバーのプロパティ、機能検出、`togglePopover()` メソッドの動作は、[トグルヘルプ UI の例](https://mdn.github.io/dom-examples/popover-api/toggle-help-ui/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/toggle-help-ui)）をご覧ください。
 
 ## 入れ子のポップオーバー
 

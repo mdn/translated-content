@@ -85,7 +85,7 @@ Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um compleme
 - [Compartilhando objetos com scripts de páginas](/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 - [Publicando sua extensão](/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
 - [Descontinuando sua extensão](/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension)
-- [Dicas e truques](/docs/Mozilla/Add-ons/WebExtensions/Tips)
+- [Dicas e truques](/docs/Mozilla/Add-ons/WebExtensions)
 
 ### Referências
 
@@ -101,4 +101,4 @@ Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um compleme
 - [Visão geral do manifest.json](/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 - [Compatibilidade de navegadores com manifest.json](/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
-{{ ListSubpages ("/Add-ons/WebExtensions/manifest.json") }}{{AddonSidebar}}
+{{ ListSubpages ("/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json") }}{{AddonSidebar}}

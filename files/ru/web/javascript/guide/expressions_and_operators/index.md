@@ -595,9 +595,9 @@ a * c + b * c; // 9
 
 Упрощённый синтаксис - экспериментальная возможность JavaScript, которая возможно будет добавлена в будущие версии ECMAScript. Есть 2 версии синтаксиса:
 
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Упрощённый синтаксис для массивов.
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : Упрощённый синтаксис для генераторов.
 
 Упрощённые синтаксисы существуют во многих языках программирования и позволяют вам быстро собирать новый массив, основанный на существующем. Например:

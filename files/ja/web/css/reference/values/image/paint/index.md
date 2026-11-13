@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-**`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 PaintWorklet で生成された {{cssxref("&lt;image&gt;")}} の値を定義します。
+**`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 PaintWorklet で生成された {{cssxref("image")}} の値を定義します。
 
 ## 構文
 
@@ -142,5 +142,5 @@ boxColor を定義しているセレクターブロックにカスタムプロ�
 - {{domxref('PaintWorkletGlobalScope')}}
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 描画 API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - [キャンバス API](/ja/docs/Web/API/Canvas_API)

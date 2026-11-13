@@ -1,100 +1,58 @@
 ---
-title: 元素：mouseleave 事件
+title: Element：mouseleave 事件
+short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
+l10n:
+  sourceCommit: c655f38c10ba17b853b0e66b43cf4cf2b176e424
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-**`mouseleave`** 事件在定点设备（通常是鼠标）的指针移出某个{{domxref("Element", "元素", "", 1)}}时被触发。
+**`mouseleave`** 事件在定点设备（通常是鼠标）的光标移出 {{domxref("Element")}} 时，会在该元素上触发。
 
-`mouseleave` 和 {{domxref("Element/mouseout_event", "mouseout")}} 是相似的，但是两者的不同在于 `mouseleave` 不会冒泡而 `mouseout` 会冒泡。这意味着当指针离开元素*及*其所有后代时，会触发 `mouseleave`，而当指针离开元素*或*离开元素的后代（即使指针仍在元素内）时，会触发 `mouseout`。
+`mouseleave` 与 {{domxref("Element/mouseout_event", "mouseout")}} 相似，但区别在于 `mouseleave` 不会冒泡，而 `mouseout` 会冒泡。这意味着当指针已离开该元素*及其*所有后代时，会触发 `mouseleave`；而由于冒泡，当指针离开该元素*或*离开该元素的某个后代时（即使指针仍在该元素内），也会触发 `mouseout`。除此之外，在同一情形下，leave 与 out 事件会在适当时同时派发。
+
+当元素被替换或从 DOM 中移除时，不会触发 `mouseleave` 和 `mouseout` 事件。
+
+请注意，「移出某个元素」指的是元素在 DOM 树中的位置，而不是其视觉位置。例如，若两个兄弟元素的定位使其中一个位于另一个内部，则从外部元素移入内部元素会在外部元素上触发 `mouseleave`，即使指针仍位于外部元素的边界内。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js
-addEventListener("mouseleave", (event) => {});
+```js-nolint
+addEventListener("mouseleave", (event) => { })
 
-onmouseleave = (event) => {};
+onmouseleave = (event) => { }
 ```
 
 ## 事件类型
 
-{{domxref("MouseEvent")}}，继承自 {{domxref("Event")}}。
+{{domxref("MouseEvent")}}。继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。
 
 {{InheritanceDiagram("MouseEvent")}}
 
-## 事件属性
-
-_此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
-
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，如果 <kbd>alt</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，按下的按钮编号（如果适用）。
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，按下的按钮。
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : 鼠标指针在本地（DOM 内容）坐标系中的 X 坐标。
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : 鼠标指针在本地（DOM 内容）坐标系中的 Y 坐标。
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，如果 <kbd>control</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : 返回与事件相对于当前图层的水平坐标。
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
-  - : 返回与事件相对于当前图层的垂直坐标。
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，如果 <kbd>meta</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于上一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件的 X 坐标。
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于上一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件的 Y 坐标。
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 X 坐标。
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 Y 坐标。
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 X 坐标。
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 Y 坐标。
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
-  - : 事件的次要目标（如果适用）。
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : 鼠标指针在全局（屏幕）坐标系中的 X 坐标。
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : 鼠标指针在全局（屏幕）坐标系中的 Y 坐标。
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : 在鼠标事件触发时，如果 <kbd>shift</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : 产生该事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，你可以确定鼠标事件是由实际的鼠标还是由触摸事件生成的（这可能会影响你判断与事件关联的坐标时的准确度）。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : 点击时施加的压力量。
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientX")}} 的别名。
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientY")}} 的别名。
+## 描述
 
 ### `mouseleave` 事件的行为
 
-![mouseleave 的行为](mouseleave.png)
+![mouseleave 行为示意图](mouseleave.png)
 
-在指针离开层次结构时，`mouseleave` 事件将被发送到层次结构的每一个元素。当指针从文本（Text）移动到最外层的 div 之外的区域时，会有四个事件分别被发送到层次结构的四个元素。
+离开层次结构中的各个元素时，会向每个元素发送一个 `mouseleave` 事件。此处，当指针从文本移到图中最外层 div 之外的区域时，会向层次结构中的四个元素发送四个事件。
 
 ### `mouseout` 事件的行为
 
-![mouseout 的行为](mouseout.png)
+![mouseout 行为示意图](mouseout.png)
 
-单个 `mouseout` 事件被发送到 DOM 树中最深的元素，然后其在层次结构中逐层向上冒泡，直至其被事件处理器取消或到达根元素。
+单个 `mouseout` 事件会发送到 DOM 树中最深的元素，然后沿层次结构向上冒泡，直到被处理器取消或到达根元素。
 
 ## 示例
 
-[`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event#示例) 文档有一个示例，说明了 `mouseout` 和 `mouseleave` 之间的区别。
+[`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event#示例) 文档中有一个示例，说明了 `mouseout` 与 `mouseleave` 的区别。
 
 ### mouseleave
 
-以下示例使用 `mouseenter` 事件，在鼠标进入委派了该事件的 `<div>` 的空间时，改变该元素的边框。然后在列表中添加一条带有 `mouseenter` 和 `mouseleave` 事件编号的记录。
+以下简单示例使用 `mouseenter` 事件，在鼠标进入分配给 `<div>` 的区域时更改其边框。然后向列表添加一项，并带上 `mouseenter` 或 `mouseleave` 事件的编号。
 
 #### HTML
 
@@ -108,13 +66,13 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 
 #### CSS
 
-向 `<div>` 添加一些样式，使其更加可视化。
+为 `<div>` 添加样式，使其更易辨认。
 
 ```css
 #mouseTarget {
   box-sizing: border-box;
   width: 15rem;
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 ```
 
@@ -129,13 +87,13 @@ const unorderedList = document.getElementById("unorderedList");
 mouseTarget.addEventListener("mouseenter", (e) => {
   mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
-  addListItem(`这是 mouseenter 事件 ${enterEventCount}.`);
+  addListItem(`这是 mouseenter 事件 ${enterEventCount}。`);
 });
 
 mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
+  mouseTarget.style.border = "1px solid #333333";
   leaveEventCount++;
-  addListItem(`这是 mouseleave 事件 ${leaveEventCount}.`);
+  addListItem(`这是 mouseleave 事件 ${leaveEventCount}。`);
 });
 
 function addListItem(text) {
@@ -145,10 +103,10 @@ function addListItem(text) {
   // 创建一个新的 li 元素
   const newListItem = document.createElement("li");
 
-  // 将文本节点添加到 li 元素中
+  // 将文本节点添加到 li 元素
   newListItem.appendChild(newTextNode);
 
-  // 将新创建的列表元素添加到列表中
+  // 将新创建的列表项添加到列表
   unorderedList.appendChild(newListItem);
 }
 ```
@@ -167,7 +125,7 @@ function addListItem(text) {
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
+- [学习：事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
@@ -176,5 +134,5 @@ function addListItem(text) {
 - {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
-- {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerleave_event", "pointerleave")}}

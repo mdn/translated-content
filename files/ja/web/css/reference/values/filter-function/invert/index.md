@@ -1,8 +1,9 @@
 ---
-title: invert()
+title: CSS `invert()` 関数
+short-title: invert()
 slug: Web/CSS/Reference/Values/filter-function/invert
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("filter-function")}} です。

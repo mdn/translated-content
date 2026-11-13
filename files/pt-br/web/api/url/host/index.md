@@ -5,13 +5,13 @@ slug: Web/API/URL/host
 
 {{ApiRef("URL API")}}
 
-A propriedade **`host`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o host, que é o {{domxref("URL.hostname", "hostname")}}, e também, se o {{glossary("port")}} da URL não for vazia, o ':'`, seguido pelo {{domxref("URL.port", "port")}} da URL.
+A propriedade **`host`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} contendo o host, que é o {{domxref("URL.hostname", "hostname")}}, e também, se o {{glossary("port")}} da URL não for vazia, o ':'`, seguido pelo {{domxref("URL.port", "port")}} da URL.
 
 {{AvailableInWorkers}}
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

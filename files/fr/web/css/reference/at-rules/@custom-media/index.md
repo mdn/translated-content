@@ -1,13 +1,14 @@
 ---
-title: "@custom-media"
+title: Règle CSS `@custom-media`
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 l10n:
-  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
+  sourceCommit: 6b0dc010f6c32a23b54aef95094cee9ec0e1b7b5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@custom-media`** permet de définir des alias pour des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) longues ou complexes. Au lieu de répéter la même `<media-query-list>` codée en dur dans plusieurs règles [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media), elle peut être définie une fois dans une règle `@custom-media` et référencée dans toute la feuille de style selon les besoins.
+La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@custom-media`** permet de définir des alias pour des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) longues ou complexes. Au lieu de répéter la même `<media-query-list>` codée en dur dans plusieurs règles {{CSSxRef("@media")}}, elle peut être définie une fois dans une règle `@custom-media` et référencée dans toute la feuille de style selon les besoins.
 
 ## Syntaxe
 
@@ -21,7 +22,7 @@ La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@c
 ### Valeurs
 
 - `<extension-name>`
-  - : Un type [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident)&nbsp;; le nom identifiant la requête média personnalisée.
+  - : Un type {{CSSxRef("&lt;dashed-ident&gt;")}}&nbsp;; le nom identifiant la requête média personnalisée.
 - Valeur représentée
   - : La valeur associée à la requête média personnalisée. Les valeurs possibles sont&nbsp;:
     - `<media-query-list>`
@@ -33,7 +34,7 @@ La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@c
 
 ## Description
 
-Lors de la création d'interfaces adaptatives, la même condition média doit souvent être répétée dans plusieurs règles [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media), parfois dans différents fichiers et équipes. Dupliquer les requêtes média augmente le risque d'erreurs, complique la refactorisation et génère une surcharge de maintenance inutile. À chaque modification d'une requête média, il faut retrouver et mettre à jour manuellement chaque occurrence — un processus sujet aux erreurs et difficile à suivre dans de grandes bases de code.
+Lors de la création d'interfaces adaptatives, la même condition média doit souvent être répétée dans plusieurs règles {{CSSxRef("@media")}}, parfois dans différents fichiers et équipes. Dupliquer les requêtes média augmente le risque d'erreurs, complique la refactorisation et génère une surcharge de maintenance inutile. À chaque modification d'une requête média, il faut retrouver et mettre à jour manuellement chaque occurrence — un processus sujet aux erreurs et difficile à suivre dans de grandes bases de code.
 
 La règle `@custom-media` résout ce problème en permettant de définir des **alias nommés** pour les requêtes média. Au lieu de répéter la requête complète partout, vous déclarez la condition une fois comme requête média personnalisée et référencez son alias dans toutes vos feuilles de style. Ainsi, la mise à jour de la requête sous-jacente ne nécessite qu'une seule modification à un seul endroit.
 
@@ -52,7 +53,7 @@ Comme la valeur d'une `@custom-media` est simplement une `<media-query-list>` no
 L'opérateur `not` inverse toute la condition média. Cela est utile si vous souhaitez qu'une règle s'applique uniquement lorsqu'une condition spécifique est équivalente à faux.
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }
@@ -69,24 +70,24 @@ L'opérateur `and` permet de combiner plusieurs conditions qui doivent toutes ê
 }
 ```
 
-Cet alias ne correspond que lorsque la zone d'affichage (<i lang="en">viewport</i> en anglais) est comprise dans la plage de largeur spécifiée.
+Cet alias ne correspond que lorsque la zone d'affichage (<i lang="en">viewport</i> en anglais) est comprise dans la plage de largeur définie.
 
 #### Utilisation de l'opérateur `or`
 
-L'opérateur logique `or` (ou son alias par virgule) crée une requête média qui correspond si l'une des conditions listées est équivalente à vrai.
+L'opérateur logique `or` (ou son alias par virgule, lorsqu'il est utilisé pour combiner des types de média) crée une requête média qui correspond si l'une des conditions listées est équivalente à vrai.
 
 ```css
-@custom-media --screen-or-print-1 screen, print;
-@custom-media --screen-or-print-2 screen or print;
+@custom-media --screen-or-print screen, print;
+@custom-media --narrow-or-tall (width < 600px) or (height > 800px);
 
-@media (--screen-or-print-1) {
+@media (--screen-or-print) {
 }
 
-@media (--screen-or-print-2) {
+@media (--narrow-or-tall) {
 }
 ```
 
-Les deux alias sont identiques. Ils sont activés pour les environnements écran et impression.
+L'alias `--screen-or-print` utilise une virgule pour correspondre soit au type de média `screen`, soit au type de média `print`. L'alias `--narrow-or-tall` utilise le mot-clé `or` pour combiner deux fonctionnalités de média, correspondant lorsque la zone d'affichage est plus étroite que 600px, plus haute que 800px, ou les deux.
 
 ## Syntaxe formelle
 
@@ -234,4 +235,4 @@ La définition initiale de `--mobile-breakpoint` est remplacée et donc ignorée
 - La règle {{CSSxRef("@media")}}
 - La règle {{CSSxRef("@import")}}
 - [Design adaptatif](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
-- [Module des requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
+- Le module [des requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)

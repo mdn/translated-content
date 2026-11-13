@@ -12,7 +12,7 @@ slug: Web/HTTP/Reference/Status/308
 
 ## 状态
 
-```plain
+```http
 308 Permanent Redirect
 ```
 

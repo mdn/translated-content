@@ -14,12 +14,12 @@ Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs,
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >compréhension du HTML</a
-        >, et<a href="/fr/docs/Learn/HTML/Introduction_to_HTML"> </a
+        >, et<a href="/fr/docs/Learn_web_development/Core/Structuring_content"> </a
         >connaissances de base de
-        <a href="/fr/docs/Web/HTTP/Basics_of_HTTP">HTTP </a>et
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Web/HTTP">HTTP </a>et
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation côté serveur.</a
         >
       </td>
@@ -50,7 +50,7 @@ Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et conv
 
 ## Côté client : définition de la méthode d'envoi des données
 
-L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) et [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
+L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) et [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ### L'attribut action
 
@@ -74,14 +74,14 @@ Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Re
 <form></form>
 ```
 
-De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) était requis. Il n'y en a donc plus besoin.
+De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) était requis. Il n'y en a donc plus besoin.
 
 ```html
 <form action="#"></form>
 ```
 
 > [!NOTE]
-> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
 
 ### L'attribut method
 
@@ -134,7 +134,7 @@ Host: foo.com
 
 La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
-Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
+Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -268,8 +268,8 @@ Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type
 
 Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
 
-- régler l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
-- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
+- régler l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
+- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
 - incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
 
 Par exemple :

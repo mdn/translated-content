@@ -1,8 +1,9 @@
 ---
-title: ::backdrop
+title: Pseudo-élément CSS `::backdrop`
+short-title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 8fa3309a76fe8dc4cf5e8eed97ef596a91513fbd
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{Glossary("top layer", "couche supérieure")}}.
@@ -53,8 +54,8 @@ showDialogBtn.addEventListener("click", () => favDialog.showModal());
 Les arrière-plans apparaissent dans les cas suivants&nbsp;:
 
 - Les éléments qui ont été placés en mode plein écran à l'aide de la méthode [Fullscreen API](/fr/docs/Web/API/Fullscreen_API) {{DOMxRef("Element.requestFullscreen()")}}.
-- Les éléments {{HTMLElement("dialog")}} qui ont été affichés dans la couche supérieure via un appel à {{DOMxRef("HTMLDialogElement.showModal()")}}.
-- Les éléments {{DOMxRef("Popover API", "Popover", "", "nocode")}} qui ont été affichés dans la couche supérieure via un appel à {{DOMxRef("HTMLElement.showPopover()")}}.
+- Les éléments {{HTMLElement("dialog")}} qui ont été affichés dans la couche supérieure avec un appel à {{DOMxRef("HTMLDialogElement.showModal()")}}.
+- Les éléments {{DOMxRef("Popover API", "Popover", "", "nocode")}} qui ont été affichés dans la couche supérieure avec un appel à {{DOMxRef("HTMLElement.showPopover()")}}.
 
 Lorsque plusieurs éléments ont été placés dans la couche supérieure, chacun d'eux a son propre pseudo-élément `::backdrop`.
 
@@ -66,7 +67,7 @@ dialog::backdrop {
 }
 ```
 
-Les éléments sont placés dans une pile last-in/first-out (LIFO) dans la couche supérieure. Le pseudo-élément `::backdrop` permet d'obscurcir, de styliser ou de cacher complètement tout ce qui se trouve en dessous d'un élément de la couche supérieure.
+Les éléments sont placés dans une pile last-in/first-out (LIFO) dans la couche supérieure. Le pseudo-élément `::backdrop` permet d'obscurcir, de mettre en forme ou de cacher complètement tout ce qui se trouve en dessous d'un élément de la couche supérieure.
 
 `::backdrop` n'hérite ni n'est hérité par d'autres éléments. Aucune restriction n'est imposée sur les propriétés qui s'appliquent à ce pseudo-élément.
 
@@ -74,11 +75,11 @@ Les éléments sont placés dans une pile last-in/first-out (LIFO) dans la couch
 
 ### Mettre en forme l'arrière-plan d'une boîte de dialogue
 
-Dans cet exemple, nous utilisons le pseudo-élément `::backdrop` pour styliser l'arrière-plan utilisé lorsqu'un modal {{HTMLElement("dialog")}} est affiché.
+Dans cet exemple, nous utilisons le pseudo-élément `::backdrop` pour mettre en forme l'arrière-plan utilisé lorsqu'un modal {{HTMLElement("dialog")}} est affiché.
 
 #### HTML
 
-Nous incluons un {{HTMLElement("button")}} qui, lorsqu'il est cliqué, ouvrira le `<dialog>` inclus. Lorsque le `<dialog>` est ouvert, nous donnons le focus au bouton qui ferme la boîte de dialogue&nbsp;:
+Nous incluons un {{HTMLElement("button")}} qui, lorsqu'il est cliqué, ouvre le `<dialog>` inclus. Lorsque le `<dialog>` est ouvert, nous donnons la sélection au bouton qui ferme la boîte de dialogue&nbsp;:
 
 ```html
 <dialog>
@@ -139,7 +140,7 @@ closeButton.addEventListener("click", () => {
 
 #### Résultat
 
-{{EmbedLiveSample("mettre_en_forme_larrière-plan_dune_boîte_de_dialogue", 450, 300)}}
+{{EmbedLiveSample("Mettre en forme l'arrière-plan d'une boîte de dialogue", 450, 300)}}
 
 ## Spécifications
 
@@ -152,7 +153,10 @@ closeButton.addEventListener("click", () => {
 ## Voir aussi
 
 - La pseudo-classe {{CSSxRef(":fullscreen")}}
+- La pseudo-classe {{CSSxRef(":xr-overlay")}}
+- Le module [de mise en page positionnée CSS](/fr/docs/Web/CSS/Guides/Positioned_layout)
+- Le module [des pseudo-éléments CSS](/fr/docs/Web/CSS/Guides/Pseudo-elements)
 - L'élément HTML {{HTMLElement("dialog")}}
-- L'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
-- L'attribut HTML global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)
-- L'[API Popover](/fr/docs/Web/API/Popover_API)
+- L'attribut HTML universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)
+- [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
+- [L'API Popover](/fr/docs/Web/API/Popover_API)

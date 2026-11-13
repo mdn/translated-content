@@ -1,9 +1,9 @@
 ---
 title: CSS スクロールスナップ
+short-title: スクロールスナップ
 slug: Web/CSS/Guides/Scroll_snap
-original_slug: Web/CSS/CSS_scroll_snap
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 **CSS スクロールスナップ** (CSS scroll snap) モジュールは、スナップ位置を定義することで、パンおよびスクロールの動作を制御するためのプロパティを提供します。ユーザーが{{Glossary("scroll container", "スクロールコンテナー")}}内のスクロール可能なコンテンツをスクロールすると、コンテンツは指定された位置にスナップされ、ページングおよびスクロール位置指定の機能を提供します。
@@ -22,7 +22,10 @@ const blockDirection = document.getElementById("block");
 const stop = document.getElementById("stop");
 const snap = document.getElementById("snap");
 const all = document.querySelector("article");
-const rules = document.styleSheets[0].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
+
+setSST();
+setSSA();
 
 inlineDirection.addEventListener("change", () => {
   setSSA();
@@ -32,10 +35,6 @@ blockDirection.addEventListener("change", () => {
 });
 stop.addEventListener("change", () => {
   setSST();
-});
-window.addEventListener("load", () => {
-  setSST();
-  setSSA();
 });
 snap.addEventListener("change", () => {
   all.classList.toggle("snapDisabled");
@@ -182,7 +181,7 @@ article.snapDisabled ul {
   overscroll-behavior-x: initial;
 }
 
-@layer pageSetup {
+@layer page-setup {
   article {
     display: flex;
     gap: 2vw;
@@ -263,7 +262,7 @@ article.snapDisabled ul {
 
 ### 子の CSS プロパティ
 
-- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-initial-target")}}
 - {{cssxref("scroll-margin")}}
   - {{cssxref("scroll-margin-top")}}
   - {{cssxref("scroll-margin-right")}}
@@ -275,6 +274,7 @@ article.snapDisabled ul {
   - {{cssxref("scroll-margin-block")}}
   - {{cssxref("scroll-margin-block-start")}}
   - {{cssxref("scroll-margin-block-end")}}
+- {{cssxref("scroll-snap-align")}}
 - {{cssxref("scroll-snap-stop")}}
 
 ### イベント
@@ -292,7 +292,7 @@ article.snapDisabled ul {
 
 - [CSS スクロールスナップの基本概念](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
   - : CSS のスクロールスナップ機能の概要と例です。
-- [ブラウザーの互換性とスクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
+- [スクロールスナップイベントの使用](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
   - : スクロールスナップイベントである {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} および {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} の使用方法に関するガイドです。ブラウザーが新しいスナップターゲットが保留中または選択されていると判断したときに発生します。
 
 ## 関連概念

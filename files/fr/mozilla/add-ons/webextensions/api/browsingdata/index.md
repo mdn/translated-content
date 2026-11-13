@@ -3,8 +3,6 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 
-{{AddonSidebar}}
-
 Permet aux extensions d'effacer les données accumulées pendant la navigation de l'utilisateur.
 
 Dans l'API `browsingData`, les données de navigations sont divisées en types :

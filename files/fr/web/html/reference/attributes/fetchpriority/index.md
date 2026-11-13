@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : fetchpriority"
+title: "Attribut HTML : `fetchpriority`"
 short-title: fetchpriority
 slug: Web/HTML/Reference/Attributes/fetchpriority
 l10n:
-  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`fetchpriority`** permet au développeur·euse d'indiquer que le chargement anticipé d'une ressource (par exemple une image) a plus ou moins d'impact sur l'expérience utilisateur que ce que le navigateur peut raisonnablement déduire lorsqu'il assigne une priorité interne.

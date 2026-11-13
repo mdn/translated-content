@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ## 문법
 
 ```js
-let settingItem = browser.storage.&#x3C;storageType>.set(
+let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )
 ```

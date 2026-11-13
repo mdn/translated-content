@@ -1,19 +1,14 @@
 ---
 title: STUN
 slug: Glossary/STUN
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-**STUN** (Session Traversal Utilities for NAT) est un protocole auxiliaire servant à transmettre des données dans un environnement avec du {{glossary("NAT")}} (Network Address Translator). STUN retourne l'{{glossary("IP address","adresse IP")}}, le {{glossary("port")}} et l'état de la connectivité d'un ordinateur en réseau derrière un NAT.
+**STUN** (abrégé de <i lang="en">Session Traversal Utilities for NAT</i> en anglais) est un protocole auxiliaire servant à transmettre des données dans un environnement avec du {{Glossary("NAT")}} (<i lang="en">Network Address Translator</i>). STUN retourne {{Glossary("IP address", "l'adresse IP")}}, le {{Glossary("port")}} et l'état de la connectivité d'un ordinateur en réseau derrière un NAT.
 
 ## Voir aussi
 
-### Culture générale
-
 - [STUN](https://fr.wikipedia.org/wiki/Simple_Traversal_of_UDP_through_NATs) sur Wikipédia
 - [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-
-### Référence technique
-
-- [Spécification](https://tools.ietf.org/html/rfc5389)
+- [Spécification <sup>(angl.)</sup>](https://tools.ietf.org/html/rfc5389)

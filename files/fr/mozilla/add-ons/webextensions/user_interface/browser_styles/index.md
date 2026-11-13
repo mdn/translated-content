@@ -3,8 +3,6 @@ title: Styles des navigateurs
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
-{{AddonSidebar}}
-
 Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière :
 
 1. créer un fichier HTML définissant la structure de l'élément d'interface utilisateur
@@ -37,7 +35,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -50,7 +48,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
       <td>
         <p>
           <code
-            ><a href="/fr/docs/Web/HTML/Element/select">&#x3C;select></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/select">&#x3C;select></a></code
           >
         </p>
       </td>
@@ -67,7 +65,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/textarea"
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -81,7 +79,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         Parent d'un
-        <code><a href="/fr/docs/Web/HTML/Element/input">&#x3C;input></a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code>
       </td>
       <td>
         <pre class="brush: html">

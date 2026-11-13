@@ -3,8 +3,6 @@ title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
 
-{{jsSidebar("Operators")}}
-
 Le mot-clé **`super`** est utilisé afin d'appeler ou d'accéder à des fonctions définies sur l'objet parent.
 
 Les expressions de la forme `super.propriete` et `super[expr]` sont valides pour n'importe quelle [définition de méthode](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions), que ce soit au sein d'une [classe](/fr/docs/Web/JavaScript/Reference/Classes) ou d'un [littéral objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).

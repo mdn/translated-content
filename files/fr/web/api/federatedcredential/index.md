@@ -19,7 +19,7 @@ Pour les navigateurs qui le prennent en charge, une instance de cette interface 
 _Hérite des propriétés de l'interface parente : {{domxref("Credential")}}._
 
 - {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} qui contient l'information sur le fournisseur d'authentification fédéré.
+  - : Une chaîne de caractères {{jsxref("String")}} qui contient l'information sur le fournisseur d'authentification fédéré.
 
 ### Gestionnaires d'évènements
 

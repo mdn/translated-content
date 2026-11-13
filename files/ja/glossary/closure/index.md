@@ -1,18 +1,31 @@
 ---
 title: Closure (クロージャ)
 slug: Glossary/Closure
+l10n:
+  sourceCommit: f2497dd4077c67b7832a466868fd5c828df40ec1
 ---
 
-{{GlossarySidebar}}
+コンピュータプログラミングにおいて、**クロージャ**とは、{{glossary("first-class function", "第一級関数")}}を持つ言語において、字句的に{{glossary("scope", "スコープ化")}}された名前バインディングを実装するための手法です。
 
-実行**{{glossary("scope","範囲")}}**を定義するバインディングのこと。{{glossary("JavaScript")}}では、**{{glossary("function","関数")}}**は閉じたコンテキストを作成します。
+{{glossary("JavaScript")}} では、{{glossary("function", "関数")}}がクロージャのコンテキストを作成します。
+以下のコードが示すように、内側の関数は `count` 変数へのアクセスを、`createCounter()` の実行が完了した後でも維持します。
 
-## 関連項目
+```js
+function createCounter() {
+  let count = 0;
+  return function () {
+    count += 1;
+    return count;
+  };
+}
 
-### 一般知識
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
 
-- Wikipedia の [クロージャ](https://ja.wikipedia.org/wiki/クロージャ)
+## 関連情報
 
-### 技術リファレンス
-
-- MDN の[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)
+- [JavaScript におけるクロージャ](/ja/docs/Web/JavaScript/Guide/Closures)
+- [クロージャ](https://ja.wikipedia.org/wiki/クロージャ) - ウィキペディア

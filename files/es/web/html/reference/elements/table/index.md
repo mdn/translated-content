@@ -18,8 +18,8 @@ El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensione
 <table class="standard-table">
     <tbody>
       <tr>
-        <td><a href="/es/docs/HTML/Content_categories" title="HTML/Content categories">Categoria del contenido</a></td>
-        <td><a href="/es/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flujo del contenido</a></td>
+        <td><a href="/es/docs/Web/HTML/Guides/Content_categories" title="HTML/Content categories">Categoria del contenido</a></td>
+        <td><a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flujo del contenido</a></td>
       </tr>
       <tr>
         <td>Contenido permitido</td>

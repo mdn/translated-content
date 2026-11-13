@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Logical_properties_and_values/Basic_concepts
 original_slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 ---
 
-{{CSSRef}}
-
 La spécification relative aux propriétés et valeurs logiques introduit une correspondance relative au flux pour de nombreuses propriétés et valeurs CSS. Dans cet article, nous verrons une introduction de cette spécification et expliquerons les propriétés et valeurs relatives au flux.
 
 ## Quel intérêt pour les propriétés logiques ?

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`Event.initEvent()`** 方法可以用来初始化由 {{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。
 

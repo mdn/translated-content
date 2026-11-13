@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
   - : 指定函数期望的参数个数。
 - {{jsxref("Function/name", "name")}}
   - : 函数的名称。
-- {{jsxref("Function/prototype", "prototype")}}
+- {{jsxref("Function", "prototype")}}
   - : 在使用 `function` 作为构造函数与 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符一起使用时，用作新对象的原型。
 
 ## 实例方法

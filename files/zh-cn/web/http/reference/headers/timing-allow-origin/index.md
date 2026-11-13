@@ -5,13 +5,13 @@ slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 
 响应头 **`Timing-Allow-Origin`** 用于指定特定站点，以允许其访问[Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)提供的相关信息，否则这些信息会由于跨源限制将被报告为零
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 
-```plain
+```http
 Timing-Allow-Origin: *
 Timing-Allow-Origin: <origin>[, <origin>]*
 ```
@@ -27,13 +27,13 @@ Timing-Allow-Origin: <origin>[, <origin>]*
 
 如需允许任何资源都可以看到的计时 (timing) 信息，你可以如此设置：
 
-```plain
+```http
 Timing-Allow-Origin: *
 ```
 
 如需允许`https://developer.mozilla.org`查看你的计时信息，你可以设置：
 
-```plain
+```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 

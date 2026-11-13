@@ -25,7 +25,7 @@ La requête suivante est envoyée en fragments, ce qui est la méthode par défa
 
 ```http
 POST /translate/de HTTP/1.1
-Host: api.exemple.com
+Host: api.example.com
 Content-Type: application/json
 Transfer-encoding: chunked
 
@@ -43,7 +43,7 @@ Content-Length: 110
 
 {
   "message": "Requests must have a content length header.",
-  "documentation": "http://api/exemple.com/docs/errors",
+  "documentation": "http://api/example.com/docs/errors",
 }
 ```
 

@@ -1,16 +1,16 @@
 ---
 title: CSS 生成コンテンツ
+short-title: 生成コンテンツ
 slug: Web/CSS/Guides/Generated_content
-original_slug: Web/CSS/CSS_generated_content
 l10n:
-  sourceCommit: 960a94a198ca60fb04fe63857ea61d7306465791
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS 生成コンテンツ** (CSS generated content) モジュールは、 CSS により要素のコンテンツを置き換えたり、コンテンツを文書に追加したりする方法を定義します。
 
 生成コンテンツは、コンテンツの置換に使用することができます。この場合、 DOM ノードのコンテンツは CSS `<image>` に置き換えられます。 CSS 生成コンテンツを使用すると、言語固有の引用符の生成、カスタムリストアイテム番号や箇条書きの生成、選択した擬似要素に無名置換要素としてコンテンツを生成して視覚的にコンテンツを追加することもできます。
 
-### 生成コンテンツの実際
+## 生成コンテンツの実際
 
 ```html hidden live-sample___generated_content
 <div></div>
@@ -93,7 +93,7 @@ div::before {
   font-size: min(6vh, 2rem);
   justify-content: center;
   display: flex;
-  font-family: comic-sans, papyrus, sans-serif;
+  font-family: "Comic Sans", "Papyrus", sans-serif;
 }
 ```
 
@@ -110,8 +110,7 @@ div::before {
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-> [!NOTE]
-> CSS 生成コンテンツモジュールでは、実装されていない 4 つのリスクのあるプロパティが導入されています。`string-set`、`bookmark-label`、`bookmark-level`、および `bookmark-state` です。
+CSS 生成コンテンツモジュールでは、4 つのリスクのあるプロパティが導入されています。`string-set`、`bookmark-label`、`bookmark-level`、`bookmark-state` です。今のところ、これらの機能に対応しているブラウザーはありません。
 
 ### 関数
 
@@ -119,7 +118,7 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
 
 ### データ型
 
-- [`<content-list>`](/ja/docs/Web/CSS/Reference/Properties/content)
+- [`<content-list>`](/ja/docs/Web/CSS/Reference/Properties/content#値)
 - `<content-replacement>` （{{cssxref("image")}} を参照）
 - {{cssxref("image")}}
 - [`<counter>`](/ja/docs/Web/CSS/Reference/Properties/content#counter)
@@ -142,8 +141,8 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
   - {{cssxref("::marker")}} 擬似要素
 
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
-  - {{cssxref("counter", "counter()")}} 関数
-  - {{cssxref("counters", "counters()")}} 関数
+  - {{cssxref("counter()")}} 関数
+  - {{cssxref("counters()")}} 関数
   - {{cssxref("counter-increment")}} プロパティ
   - {{cssxref("counter-reset")}} プロパティ
 
@@ -153,7 +152,7 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
   - {{cssxref(":target-current")}} 擬似クラス
 
 - [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
-  - {{cssxref("attr", "attr()")}} 関数
+  - {{cssxref("attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型
 

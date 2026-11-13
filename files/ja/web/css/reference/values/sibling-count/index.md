@@ -1,8 +1,9 @@
 ---
-title: sibling-count()
+title: CSS `sibling-count()` 関数
+short-title: sibling-count()
 slug: Web/CSS/Reference/Values/sibling-count
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`sibling-count()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、それが使用されている要素の兄弟 DOM 要素（親要素の直接の子）の総数（自分自身を含む）を表す整数を返します。

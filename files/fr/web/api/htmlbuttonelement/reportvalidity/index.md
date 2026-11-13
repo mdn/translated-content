@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLButtonElement")}} effectue les mêmes étapes de vérification de validité que la méthode {{DOMxRef("HTMLButtonElement.checkValidity", "checkValidity()")}}. De plus, si l'événement {{DOMxRef("HTMLInputElement.invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·ice.
+La méthode **`reportValidity()`** de l'interface {{DOMxRef("HTMLButtonElement")}} effectue les mêmes étapes de vérification de validité que la méthode {{DOMxRef("HTMLButtonElement.checkValidity", "checkValidity()")}}. De plus, si l'évènement {{DOMxRef("HTMLInputElement.invalid_event", "invalid")}} n'est pas annulé, le navigateur affiche le problème à l'utilisateur·ice.
 
 ## Syntaxe
 
@@ -82,7 +82,7 @@ reportButton.addEventListener("click", () => {
 });
 
 exampleButton.addEventListener("invalid", () => {
-  console.log("Événement 'invalid' déclenché sur exampleButton");
+  console.log("Évènement 'invalid' déclenché sur exampleButton");
 });
 
 exampleButton.addEventListener("click", (e) => {
@@ -122,7 +122,7 @@ function toggleButton() {
 
 {{EmbedLiveSample("Exemple", "100%", 220)}}
 
-Le bouton est valide par défaut. Activez «&nbsp;CE BOUTON&nbsp;» pour changer la valeur, le contenu et ajouter un message d'erreur personnalisé. L'activation du bouton «&nbsp;reportValidity()&nbsp;» vérifie la validité du bouton, affiche le message d'erreur personnalisé à l'utilisateur·ice et déclenche un événement `invalid` si le bouton ne passe pas la validation de contrainte à cause du message.
+Le bouton est valide par défaut. Activez «&nbsp;CE BOUTON&nbsp;» pour changer la valeur, le contenu et ajouter un message d'erreur personnalisé. L'activation du bouton «&nbsp;reportValidity()&nbsp;» vérifie la validité du bouton, affiche le message d'erreur personnalisé à l'utilisateur·ice et déclenche un évènement `invalid` si le bouton ne passe pas la validation de contrainte à cause du message.
 
 ## Spécifications
 

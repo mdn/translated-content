@@ -2,11 +2,11 @@
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`206 Partial Content`** est envoyé en réponse à une [requête de plage](/fr/docs/Web/HTTP/Guides/Range_requests).
-Le corps de la réponse contient les plages de données demandées, telles que spécifiées dans l'en-tête {{HTTPHeader("Range")}} de la requête.
+Le corps de la réponse contient les plages de données demandées, telles que définies dans l'en-tête {{HTTPHeader("Range")}} de la requête.
 
 Le format de la réponse dépend du nombre de plages demandées.
 Si une seule plage est demandée, le {{HTTPHeader("Content-Type")}} de l'ensemble de la réponse correspond au type du document, et un {{HTTPHeader("Content-Range")}} est fourni.
@@ -27,7 +27,7 @@ La réponse contient un {{HTTPHeader("Content-Type")}} de `image/gif` et l'en-t�
 
 ```http
 GET /z4d4kWk.gif HTTP/1.1
-Host: images.exemple.com
+Host: images.example.com
 Range: bytes=21010-
 ```
 
@@ -51,7 +51,7 @@ La réponse contient le {{HTTPHeader("Content-Type")}} `multipart/byteranges` av
 
 ```http
 GET /price-list.pdf HTTP/1.1
-Host: exemple.com
+Host: example.com
 Range: bytes=234-639,4590-7999
 ```
 
