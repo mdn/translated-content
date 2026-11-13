@@ -191,7 +191,7 @@ const reponse = await fetch(`https://exemple.org/login?${params}`);
 
 ### Effectuer des requêtes inter-origines
 
-La possibilité d'effectuer une requête inter-origines est déterminée par la valeur de l'option {{DOMxRef("RequestInit", "", "mode")}}. Cette option peut prendre l'une des trois valeurs suivantes&nbsp;: `cors`, `same-origin` ou `no-cors`.
+La possibilité d'effectuer une requête inter-origines est déterminée par la valeur de l'option {{DOMxRef("RequestInit", "", "#mode")}}. Cette option peut prendre l'une des trois valeurs suivantes&nbsp;: `cors`, `same-origin` ou `no-cors`.
 
 - Pour les requêtes fetch, la valeur par défaut de `mode` est `cors`, ce qui signifie que si la requête est inter-origines, elle utilisera le mécanisme de [partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS). Cela signifie&nbsp;:
   - si la requête est une [requête simple](/fr/docs/Web/HTTP/Guides/CORS#requêtes_simples), la requête sera toujours envoyée, mais le serveur doit répondre avec l'en-tête {{HTTPHeader("Access-Control-Allow-Origin")}} approprié, sinon le navigateur ne partagera pas la réponse avec l'appelant.
@@ -201,7 +201,7 @@ La possibilité d'effectuer une requête inter-origines est déterminée par la 
 
 - Définir `mode` sur `no-cors` désactive CORS pour les requêtes inter-origines. Cela restreint les en-têtes qui peuvent être définis et limite les méthodes à GET, HEAD et POST. La réponse est _opaque_, ce qui signifie que ses en-têtes et son corps ne sont pas accessibles en JavaScript. La plupart du temps, un site web ne devrait pas utiliser `no-cors`&nbsp;: son principal usage concerne certains cas d'utilisation des service workers.
 
-Voir la documentation de référence pour {{DOMxRef("RequestInit", "", "mode")}} pour plus de détails.
+Voir la documentation de référence pour {{DOMxRef("RequestInit", "", "#mode")}} pour plus de détails.
 
 ### Inclure des informations d'authentification
 

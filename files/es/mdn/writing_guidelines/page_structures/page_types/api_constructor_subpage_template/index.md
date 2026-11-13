@@ -2,7 +2,7 @@
 title: Plantilla de subpágina del constructor de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 {{MDNSidebar}}
@@ -59,7 +59,6 @@ l10n:
 > - `\{{SeeCompatTable}}` — esto genera un banner **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si la tecnología que está documentando no es experimental, debería eliminar esto.
 >   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debería completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner **Desaprobado** que indica que se desaconseja el uso de la tecnología [desaprobada](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   Si no lo es, entonces puede eliminar la llamada al macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la característica no forma parte de ninguna especificación.
 > - `\{{AvailableInWorkers}}` — esto genera una nota **Disponible en workers** que indica que la tecnología está disponible en un [contexto de worker](/es/docs/Web/API/Web_Workers_API).

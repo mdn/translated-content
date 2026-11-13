@@ -3,6 +3,8 @@ title: 书籍详细信息页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 *书籍详细信息页面*需要呈现指定书籍（`Book`，使用自动生成的 `_id` 字段值进行标识）的信息，以及图书馆中每一个关联的副本（`BookInstance`）的信息。无论我们在哪里呈现一个作者、种类，或书籍实例，都应该链接到关联的详细信息页面。
 
 ## 控制器
@@ -98,7 +100,4 @@ block content
 
 ![书籍详细信息页面——Express 本地图书馆网站](locallibary_express_book_detail.png)
 
-## 下一步
-
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分：[作者详细信息页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

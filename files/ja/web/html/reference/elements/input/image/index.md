@@ -1,12 +1,12 @@
 ---
-title: '`<input type="image">` 属性値 (HTML)'
+title: '`<input type="image">` 属性値'
 short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
+{{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
@@ -21,7 +21,7 @@ l10n:
 <input
   type="image"
   id="image"
-  alt="Login"
+  alt="ログイン"
   src="/shared-assets/images/examples/login-button.png" />
 ```
 
@@ -52,7 +52,7 @@ input[type="image"] {
 
 `alt` 属性は、画像が表示できない場合のボタンのラベルとして使用される代替文字列を提供します（エラーの場合、{{Glossary("User agent", "ユーザーエージェント")}}が画像を表示できない場合、画像を表示しないように設定されていた場合、ユーザーが読み上げ端末を使用している場合など）。提供する場合は、ボタンのラベルとして適切な空ではない文字列である必要があります。
 
-例えば、「今すぐログイン」をアイコンやテキストが入った画像を表示するグラフィックボタンの場合、 `alt` 属性も `今すぐログイン` のように設定してください。
+例えば、アイコンや「今すぐログイン」というテキストを含む画像でグラフィカルなボタンを作成する場合は、`alt` 属性も `今すぐログイン` のように設定してください。
 
 > [!NOTE]
 > `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
@@ -140,7 +140,7 @@ input[type="image"] {
 
 `<input type="image">` 要素は{{ glossary("replaced elements", "置換要素")}}（CSS レイヤーによって内容が生成されたり、直接管理されたりしない要素）で、大部分は通常の {{htmlelement("img")}} 要素と同じ動きをしますが、[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)の機能を持っています。
 
-### 基本的な input 入力の機能
+### 基本的な画像入力の機能
 
 必要な機能をすべて含んだ基本的な例を見てみましょう（これらは `<img>` 要素とまったく同じように動作します）。
 
@@ -150,7 +150,7 @@ input[type="image"] {
   type="image"
   width="100"
   height="30"
-  alt="Login"
+  alt="ログイン"
   src="https://mdn.github.io/shared-assets/images/examples/login-button.png" />
 ```
 
@@ -215,11 +215,11 @@ input[type="image"] {
 <form>
   <p>アカウントにログインしてください</p>
   <div>
-    <label for="userId">User ID</label>
+    <label for="userId">ユーザー ID</label>
     <input type="text" id="userId" name="userId" />
   </div>
   <div>
-    <label for="pwd">Password</label>
+    <label for="pwd">パスワード</label>
     <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
@@ -227,10 +227,16 @@ input[type="image"] {
       id="image"
       type="image"
       src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
-      alt="Login"
+      alt="ログイン"
       width="100" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS
@@ -276,11 +282,16 @@ label {
       id="image"
       type="image"
       src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
-      alt="Login"
-      width="200"
-      height="100" />
+      alt="ログイン"
+      width="100" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 #### CSS
@@ -308,7 +319,7 @@ label {
 
 {{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
-ここでは、 `object-position` は画像 4 を要素の右上隅に描画するように設定されており、`object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
+ここでは、`object-position` は画像を要素の右上隅に描画するように設定されており、`object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
 
 ## 技術的概要
 
