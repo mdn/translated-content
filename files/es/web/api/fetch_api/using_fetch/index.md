@@ -29,7 +29,7 @@ Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el co
 > [!NOTE]
 > El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
 
-Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Web/HTTP/Headers/Content-Security-Policy) en vez de la directiva de los recursos que se han devuelto.
+Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) en vez de la directiva de los recursos que se han devuelto.
 
 ### Suministrando opciones de petición
 
@@ -284,7 +284,7 @@ Las propiedades de response que usarás son:
 
 - {{domxref("Response.status")}} — Entero (por defecto con valor 200) que contiene el código de estado de las respuesta.
 - {{domxref("Response.statusText")}} — Cadena (con valor por defecto "OK"), el cual corresponde al mensaje del estado de código HTTP.
-- {{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{domxref("Boolean")}}, siendo `true` si lo anterior se cumple y `false` en otro caso.
+- {{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{jsxref("Boolean")}}, siendo `true` si lo anterior se cumple y `false` en otro caso.
 
 Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}}, cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:
 
@@ -309,8 +309,8 @@ El constructor {{domxref("Response.Response","Response()")}} toma dos argurmento
 
 Tanto las peticiones como las respuestas pueden contener datos body. Body es una instancia de cualquiera de los siguientes tipos:
 
-- {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array y amigos)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}} (Uint8Array y amigos)
 - {{domxref("Blob")}}/File
 - string
 - {{domxref("URLSearchParams")}}
@@ -357,7 +357,7 @@ Para utilizar `fetch()` en un explorador no soportado, hay disponible un [Fetch 
 ## Vea también
 
 - [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

@@ -3,12 +3,12 @@ title: ライブサンプル (EmbedLiveSample)
 short-title: ライブサンプル
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 MDN は、記事中のコードブロックを「ライブサンプル」として表示することに対応しており、読者はウェブページで見ていくようなコードとその出力結果の両方を見ることができます。
 この機能により、読者は実行されたコードが何を生成するかを正確に理解することができ、文書化がダイナミックで有益なものになります。
-また、文書内のコードブロックが期待される出力を持ち、さまざまなブラウザーで使用したときに適切に動作することを、書き手が絶対的に確認することができます。
+また、書き手は、文書内のコードブロックが期待される出力を持ち、さまざまなブラウザーで適切に動作することを確実に確認できます。
 
 ライブサンプルシステムは、HTML、CSS、JavaScript で書かれたコードブロックを、ページ内で書かれた順番に関係なく処理できます。
 これにより、システムがページ内で直接コードを実行するため、出力がソースコードの組み合わせに確実に対応するように保証します。
@@ -49,7 +49,7 @@ MDN は、記事中のコードブロックを「ライブサンプル」とし�
 1. 識別子として見出しまたはコードブロックを格納するブロック要素の ID を使用します。
 2. コードブロックとともに文字列識別子を指定します。
 
-識別子を明示的に指定していないコードブロックは、既定では、コードブロックを包含する見出しやブロック要素の ID を使用してグループ化されます。この場合の識別子は見出しやブロック要素（{{HTMLElement("div")}} など）の ID です。これは下記の通りで、「段落のスタイル設定」ブロック内の `html` と `css` コードは `EmbedLiveSample` マクロ呼び出しの出力を生成するために使用されます。
+識別子を明示的に指定していないコードブロックは、デフォルトでは、コードブロックを包含する見出しやブロック要素の ID を使用してグループ化されます。この場合の識別子は見出しやブロック要素（{{HTMLElement("div")}} など）の ID です。次の例では、「段落のスタイル設定」ブロック内の `html` と `css` コードが `EmbedLiveSample` マクロ呼び出しの出力を生成するために使用されます。
 
 ````md
 ## 例
@@ -138,7 +138,7 @@ p.fancy {
 - `width` {{deprecated_inline}}
   - : {{HTMLElement("iframe")}} の `width` 属性は、 `px` で指定します。これは、すでに効果がなくなったため、非推奨となりました。ライブサンプルは常にコンテンツエリアの全幅にわたって表示されます。
 - `height`
-  - : {{HTMLElement("iframe")}} の `height` 属性を `px` で指定します。 少なくとも `60` にする必要があります。 これはオプションです。 これを除外した場合は、妥当な既定の高さが使用されます。
+  - : {{HTMLElement("iframe")}} の `height` 属性を `px` で指定します。少なくとも `60` にする必要があります。これはオプションです。省略した場合は、妥当なデフォルトの高さが使用されます。
 - `screenshot_URL` {{deprecated_inline}}
   - : ライブサンプルがどのように表示されるべきかを示したスクリーンショットのURL です。非推奨であり、ライブサンプルは、ブラウザーが対応している場合のみ追加されます。
 - `page_slug` {{deprecated_inline}}
@@ -146,9 +146,9 @@ p.fancy {
 - `class_name` {{deprecated_inline}}
   - : {{HTMLElement("iframe")}} に適用するクラス名。非推奨であり、別のクラス名を使用する理由はありません。
 - `allow`
-  - : {{HTMLElement("iframe")}} の `allow` 属性。これはオプションであり、既定では許可された機能は存在しません。
+  - : {{HTMLElement("iframe")}} の `allow` 属性。これはオプションであり、デフォルトでは機能は許可されません。
 - `sandbox`
-  - : 例がに指定されるべき `sandbox` 属性の文字列が入ります。
+  - : 例に指定されるべき `sandbox` 属性の文字列が入ります。
     許可されている値は `allow-modals`, `allow-forms`, `allow-popups` です。
     `"allow-modals allow-popups"` のように、複数の値を指定することができます。
 
@@ -169,7 +169,7 @@ p.fancy {
 
 ### ライブサンプルの書式
 
-この「例」の節にライブサンプルを書く場合は、このライブサンプルの例を説明する H3 の見出し (`###`) を提供してください。理想的 には、この例について、シナリオと何を実証することを期待しているかを説明する短い 説明を書いてください。次に、次の順番で、以下の H4 見出し (`####`) でサブセクションを追加します。
+「例」の節にライブサンプルを書く場合は、その例を説明する H3 見出し (`###`) を付けてください。理想的には、シナリオとこの例で示す内容を説明する短い説明を書きます。次に、以下の H4 見出し (`####`) をこの順序で使用してサブセクションを追加します。
 
 - HTML
 - CSS
@@ -243,9 +243,9 @@ HTML、CSS、JavaScript コードのコードブロックがそれぞれの言�
 この HTML は、メッセージの配置とスタイルに役立つ段落とブロックを作成します。
 
 ```html live-sample___grouping_code_blocks_by_heading
-<p>A simple example of the live sample system in action.</p>
+<p>ライブサンプルシステムの動作を示す簡単な例です。</p>
 <div class="box">
-  <div id="item">Hello world! Welcome to MDN</div>
+  <div id="item">こんにちは。MDN へようこそ！</div>
 </div>
 ```
 
@@ -271,15 +271,15 @@ CSS コードは、ボックスとその内部のテキストのスタイルを�
 
 #### JavaScript
 
-JavaScript の例では、 "Hello world!" のテキストにイベントハンドラーを添付し、クリックされると切り替わるようにします。
+JavaScript の例では、「こんにちは。MDN へようこそ！」というテキストにイベントハンドラーを設定し、クリックすると表示が切り替わるようにします。
 
 ```js live-sample___grouping_code_blocks_by_heading
 const el = document.getElementById("item");
 let toggleClick = false;
 el.onclick = function () {
   this.textContent = toggleClick
-    ? "Hello world! Welcome to MDN"
-    : "Owww, stop poking me!";
+    ? "こんにちは。MDN へようこそ！"
+    : "痛っ、つつくのはやめて！";
   toggleClick = !toggleClick;
 };
 ```
@@ -301,7 +301,7 @@ el.onclick = function () {
 ```html live-sample___hello-world
 <p>ライブサンプルシステムの単純な動作例です。</p>
 <div class="box">
-  <div id="item">Hello world! Welcome to MDN</div>
+  <div id="item">こんにちは。MDN へようこそ！</div>
 </div>
 ```
 
@@ -323,15 +323,15 @@ CSS コードをコーディングすることで、ボックスとその中の�
 }
 ```
 
-この JavaScript コードは、 "Hello world!" テキストがクリックされたときにアラートが現れるようにイベントハンドラーを取り付けます。このコードブロックの言語識別子 `js` にも `live-sample___hello-world` という文字列を追加しています。
+この JavaScript コードは、「こんにちは。MDN へようこそ！」というテキストをクリックすると表示が切り替わるよう、イベントハンドラーを設定します。このコードブロックの言語識別子 `js` にも `live-sample___hello-world` という文字列を追加しています。
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
 let toggleClick = false;
 el.onclick = function () {
   this.textContent = toggleClick
-    ? "Hello world! Welcome to MDN"
-    : "Owww, stop poking me!";
+    ? "こんにちは。MDN へようこそ！"
+    : "痛っ、つつくのはやめて！";
   toggleClick = !toggleClick;
 };
 ```
@@ -358,11 +358,11 @@ el.onclick = function () {
 
 ### 機能の許可
 
-`allow` 引数を使用すると、ライブサンプル出力が含まれている `<iframe>` 要素内で許可される機能を指定することができます。利用可能な値は[フレームの権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax)からのものです。
+`allow` 引数を使用すると、ライブサンプル出力が含まれている `<iframe>` 要素内で許可される機能を指定することができます。利用可能な値は[フレームの権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy#embedded_frame_syntax)からのものです。
 
 ```html
 <div id="fullscreen-content">
-  <button id="toggle-btn">Toggle fullscreen</button>
+  <button id="toggle-btn">全画面表示を切り替え</button>
 </div>
 ```
 
@@ -379,11 +379,11 @@ toggleBtn.addEventListener("click", () => {
 });
 ```
 
-Result of `\{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}`:
+`\{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}` の実行結果:
 
 {{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}
 
-Result of `\{{EmbedLiveSample("allowing_features", "", "60")}}`:
+`\{{EmbedLiveSample("allowing_features", "", "60")}}` の実行結果:
 
 {{EmbedLiveSample("allowing_features", "", "60")}}
 
@@ -392,7 +392,7 @@ Result of `\{{EmbedLiveSample("allowing_features", "", "60")}}`:
 この例では、新しいログ項目が追加されるたびに前回値が置き換わる、単純な 1 つの項目のログをライブサンプルに実装する方法を示します。
 
 分かりやすくするために、この例ではログ出力コードとそれを使用するコードを区切り、ログ出力コードを最初に表示しています。
-一般的に自分自身でサンプルを実装する場合は、ログ出力する要素を他の UI 要素の下記に配置する必要があります。
+一般にサンプルを実装する場合は、ログ出力する要素を他の UI 要素の下に配置する必要があります。
 
 > [!NOTE]
 > サンプルの一部としてログ出力結果を表示することで、 `console.log()` を使用するよりもはるかに使いやすくなります。
@@ -459,7 +459,7 @@ incrementButton.addEventListener("click", () => {
 このコンソールは、ログが追加されるたびに出力の末尾に新しい行を追加し、新しい項目をスクロールして表示します。
 
 分かりやすくするために、この例ではログ出力コードとそれを使用するコードを区切り、ログ出力コードを最初に表示しています。
-一般的に、自分自身でサンプルを実装する場合、ログ出力要素を他の UI 要素の下記に配置する必要があります。
+一般にサンプルを実装する場合、ログ出力要素を他の UI 要素の下に配置する必要があります。
 
 > [!NOTE]
 > サンプルの一部としてログ出力を表示することは、`console.log()`を使用するよりもずっと使い勝手が良くなります。
@@ -594,6 +594,6 @@ incrementButton.addEventListener("click", () => {
 - コードブロックの順序
   - : ライブサンプルを追加する場合、コードブロックは最初のものがこのサンプルのメイン言語に対応するようにソートする必要があります。たとえば、HTML リファレンスのライブサンプルを追加する場合、最初のブロックは HTML でなければならず、CSS リファレンスのライブサンプルを追加するときは CSS でなければなりません。
 - 見出しの名前付け
-  - : 曖昧さがない場合 (例: サンプルが「例」セクションの下にある場合)、見出しは対応する言語の唯一の名前である HTML、CSS、JavaScript、SVG など（上記参照）で直接的に表します。「HTML コンテンツ」や「JavaScript コンテンツ」のような見出しは使用しないでください。しかし、そのような短い見出しがコンテンツを不明瞭にする場合、より思慮深いタイトルを使用することができます。
+  - : 曖昧さがない場合（例: サンプルが「例」の節の下にある場合）、見出しは対応する言語の唯一の名前である HTML、CSS、JavaScript、SVG など（上記参照）で直接的に表します。「HTML コンテンツ」や「JavaScript コンテンツ」のような見出しは使用しないでください。しかし、そのような短い見出しがコンテンツを不明瞭にする場合、より思慮深いタイトルを使用することができます。
 - 「結果」ブロックを使用する
   - : 異なるコードブロックの後、`EmbedLiveSample` マクロを使用する直前に、「結果」ブロックを使用してください（上記参照）。このようにすると、この例の意味は、読者とページを解析するツール（スクリーンリーダー、ウェブクローラーなど）の両方にとってより明確になります。

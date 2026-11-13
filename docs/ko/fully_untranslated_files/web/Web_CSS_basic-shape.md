@@ -7,7 +7,56 @@ slug: Web/CSS/basic-shape
 
 **`<basic-shape>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, {{cssxref("offset-path")}} 속성이 사용할 형태를 정의합니다.
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 구문
 
@@ -20,7 +69,6 @@ slug: Web/CSS/basic-shape
 다음의 형태를 지원합니다. 모든 `<basic-shape>` 값은 함수형 표기법을 사용하고, 여기서는 [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)을 통해 정의합니다.
 
 - `inset()`
-
   - :
 
     ```
@@ -36,7 +84,6 @@ slug: Web/CSS/basic-shape
     좌우 인셋 각각 75%처럼, 한 축의 인셋 쌍 값의 합이 요소가 차지하는 크기보다 큰 경우 면적 없는 형태를 정의합니다. For this specification, this results in an empty float area.
 
 - `circle()`
-
   - :
 
     ```
@@ -48,7 +95,6 @@ slug: Web/CSS/basic-shape
     {{cssxref("&lt;position&gt;")}} 매개변수는 원의 중심을 지정합니다. 생략할 경우 중앙을 기본값으로 사용합니다.
 
 - `ellipse()`
-
   - :
 
     ```
@@ -60,7 +106,6 @@ slug: Web/CSS/basic-shape
     {{cssxref("&lt;position&gt;")}} 매개변수는 타원의 중심을 지정합니다. 생략할 경우 중앙을 기본값으로 사용합니다.
 
 - `polygon()`
-
   - :
 
     ```
@@ -72,7 +117,6 @@ slug: Web/CSS/basic-shape
     Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the ith vertex of the polygon.
 
 - `path()`
-
   - :
 
     ```

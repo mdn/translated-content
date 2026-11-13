@@ -12,12 +12,12 @@ l10n:
 
 ## 値
 
-{{domxref("ReadableStream")}}、または `Response` オブジェクトが[構築](/ja/docs/Web/API/Response/Response)時に [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null であった場合、あるいは [HTTP レスポンス](/ja/docs/Web/HTTP/Messages#http_レスポンス)に[本体](/ja/docs/Web/HTTP/Messages#本体_2)がなかった場合には [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
+{{domxref("ReadableStream")}}、または `Response` オブジェクトが[構築](/ja/docs/Web/API/Response/Response)時に [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null であった場合、あるいは [HTTP レスポンス](/ja/docs/Web/HTTP/Guides/Messages#http_レスポンス)に[本体](/ja/docs/Web/HTTP/Guides/Messages#本体_2)がなかった場合には [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
 
 ストリームは[読み取り可能なバイトストリーム](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)で、 {{domxref("ReadableStreamBYOBReader")}} を用いたゼロコピー移譲に対応しています。
 
 > [!NOTE]
-> 現在のブラウザーは、本体なしのレスポンス（例えば、 [`HEAD`](/ja/docs/Web/HTTP/Methods/HEAD) リクエストに対するレスポンスや、 [`204 No Content`](/ja/docs/Web/HTTP/Status/204) レスポンス）には `body` プロパティを `null` に設定するという仕様に実際には適合していません。
+> 現在のブラウザーは、本体なしのレスポンス（例えば、 [`HEAD`](/ja/docs/Web/HTTP/Reference/Methods/HEAD) リクエストに対するレスポンスや、 [`204 No Content`](/ja/docs/Web/HTTP/Reference/Status/204) レスポンス）には `body` プロパティを `null` に設定するという仕様に実際には適合していません。
 
 ## 例
 

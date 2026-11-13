@@ -34,7 +34,7 @@ _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 - {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : 一个表示事件源的 URL 字符串。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
-  - : 一个布尔值，表示 `EventSource` 对象是否使用跨源资源共享（[CORS](/zh-CN/docs/Web/HTTP/CORS)）凭据来实例化（`true`），或者不使用（`false`，即默认值）。
+  - : 一个布尔值，表示 `EventSource` 对象是否使用跨源资源共享（[CORS](/zh-CN/docs/Web/HTTP/Guides/CORS)）凭据来实例化（`true`），或者不使用（`false`，即默认值）。
 
 ### 实例方法
 

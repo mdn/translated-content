@@ -3,12 +3,12 @@ title: "HTMLScriptElement: crossOrigin プロパティ"
 short-title: crossOrigin
 slug: Web/API/HTMLScriptElement/crossOrigin
 l10n:
-  sourceCommit: cc756217fbcb8214730fe736973ec15f3592a246
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`crossOrigin`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、この script 要素の{{Glossary("CORS", "オリジン間リソース共有")}}設定を反映します。他の[オリジン](/ja/docs/Glossary/Origin)からのクラシックスクリプトの場合、完全なエラー情報が公開されるかどうかを制御します。モジュールスクリプトでは、スクリプト自身とインポートするスクリプトを制御します。詳細は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+**`crossOrigin`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、この script 要素の{{Glossary("CORS", "オリジン間リソース共有")}}設定を反映します。他の[オリジン](/ja/docs/Glossary/Origin)からのクラシックスクリプトの場合、完全なエラー情報が公開されるかどうかを制御します。モジュールスクリプトでは、スクリプト自身とインポートするスクリプトを制御します。詳細は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 ## 値
 

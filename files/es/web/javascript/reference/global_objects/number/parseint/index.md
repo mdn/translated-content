@@ -39,7 +39,6 @@ Number.parseInt(string, radix)
 - `string`
   - : El valor a analizar, [forzado a una cadena](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Se ignoran los espacios en blanco iniciales en este argumento.
 - `radix` {{optional_inline}}
-
   - : Un número entero entre `2` y `36` que representa la _base_ (la base en los sistemas numéricos matemáticos) del `string`.
 
     Si `radix` no está definida o es `0`, se supone que es `10`, excepto cuando el número comienza con los pares de unidades de código `0x` o `0X`, en cuyo caso se asume una base de `16`.
@@ -54,13 +53,13 @@ Si `radix` es menor que `2` o mayor que `36`, o el primer carácter que no es un
 
 ### Number.parseInt vs. parseInt
 
-Este método tiene la misma funcionalidad que la función global {{jsxref("parseInt", "parseInt()")}}:
+Este método tiene la misma funcionalidad que la función global {{jsxref("parseInt()")}}:
 
 ```js
 Number.parseInt === parseInt; // true
 ```
 
-Su propósito es la modularización de globales. Consulte {{jsxref("parseInt", "parseInt()")}} para obtener más detalles y ejemplos.
+Su propósito es la modularización de globales. Consulte {{jsxref("parseInt()")}} para obtener más detalles y ejemplos.
 
 ## Especificaciones
 
@@ -74,4 +73,4 @@ Su propósito es la modularización de globales. Consulte {{jsxref("parseInt", "
 
 - [Polyfill de `Number.parseInt` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - El objeto {{jsxref("Number")}} al que pertenece.
-- El método global {{jsxref("parseInt", "parseInt()")}}.
+- El método global {{jsxref("parseInt()")}}.

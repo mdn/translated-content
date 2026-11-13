@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Table/get
 
 {{WebAssemblySidebar}}
 
-**`get()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている関数参照を取得します。
+**`get()`** は [`WebAssembly.Table`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table) オブジェクトのプロトタイプメソッドで、指定された位置に格納されている関数参照を取得します。
 
 ## 構文
 
@@ -21,18 +21,18 @@ get(index);
 
 ### 返値
 
-関数参照を返します。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)、wasm 関数を内在する JavaScript ラッパーです。</p>
+関数参照を返します。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)、wasm 関数を内在する JavaScript ラッパーです。</p>
 
 ### 例外
 
-_index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以上であった場合、{{jsxref("RangeError")}} が発生します。
+_index_ が [`Table.prototype.length`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/length) 以上であった場合、{{jsxref("RangeError")}} が発生します。
 
 ## 例
 
 ### get の使用
 
 次の例では (Github の [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)も確認してください)、 table.wasm バイトコードを
-{{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み取り、コンパイルしてインスタンス化しています。その後、エクスポートされたテーブルに格納された参照を取得します。
+[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) メソッドを使用して読み取り、コンパイルしてインスタンス化しています。その後、エクスポートされたテーブルに格納された参照を取得します。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
@@ -55,5 +55,5 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

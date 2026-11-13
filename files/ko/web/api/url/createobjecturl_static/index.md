@@ -5,7 +5,7 @@ slug: Web/API/URL/createObjectURL_static
 
 {{APIRef("URL API")}}
 
-**`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{domxref("DOMString")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.
+**`URL.createObjectURL()`** 정적 메서드는 주어진 객체를 가리키는 URL을 {{jsxref("String")}}으로 반환합니다. 해당 URL은 자신을 생성한 창의 {{domxref("document")}}가 사라지면 함께 무효화됩니다.
 
 객체 URL을 해제하려면 {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}을 호출하세요.
 
@@ -27,7 +27,7 @@ const objectURL = URL.createObjectURL(object);
 
 ### 반환 값
 
-지정한 `object`의 참조 URL을 담은 {{domxref("DOMString")}}
+지정한 `object`의 참조 URL을 담은 {{jsxref("String")}}
 
 ## 예제
 
@@ -45,7 +45,8 @@ const objectURL = URL.createObjectURL(object);
 
 구 Media Source 명세에서는 {{HTMLElement("video")}} 요소에 스트림을 부착하려면 {{domxref("MediaStream")}}의 객체 URL을 생성했어야 했습니다. 이제 이런 과정은 필수가 아니며, 브라우저도 지원을 중단하고 있습니다.
 
-> **경고:** **중요:** 아직 미디어 요소에 {{domxref("URL.createObjectURL", "createObjectURL()")}}을 사용해 스트림을 부착하고 있다면, {{domxref("HTMLMediaElement.srcObject", "srcObject")}}에 `MediaStream`을 직접 설정하도록 코드를 수정해야 합니다.
+> [!WARNING]
+> **중요:** 아직 미디어 요소에 {{domxref("URL.createObjectURL", "createObjectURL()")}}을 사용해 스트림을 부착하고 있다면, {{domxref("HTMLMediaElement.srcObject", "srcObject")}}에 `MediaStream`을 직접 설정하도록 코드를 수정해야 합니다.
 
 ## 명세
 

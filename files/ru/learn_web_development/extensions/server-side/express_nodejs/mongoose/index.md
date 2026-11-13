@@ -3,13 +3,13 @@ title: "Учебник Express часть 3: Использование базы
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
-В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать [Mongoose](http://mongoosejs.com/) для доступа к базе данных веб-сайта [LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны основные методы доступа к данным модели.
+В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать [Mongoose](http://mongoosejs.com/) для доступа к базе данных веб-сайта [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website). Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны основные методы доступа к данным модели.
 
-| Предварительные сведения: | [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website) |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Цель:                     | Уметь спроектировать и создать свои модели, используя Mongoose.                                                    |
+| Предварительные сведения: | [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                     | Уметь спроектировать и создать свои модели, используя Mongoose.                                                                               |
 
 ## Обзор
 
@@ -214,7 +214,6 @@ var schema = new Schema({
 
 - _Имя_ и _тип_ поля как пара "ключ-значение" (поля `name`, `binary и` `living`).
 - _Имя_ поля, после которого указывается объект, определяющий _тип_ и другие возможности поля, такие как:
-
   - значения по умолчанию.
   - встроенные валидаторы (например, значения max и min) и функции-валидаторы пользователя.
   - Является ли поле обязательным
@@ -231,7 +230,6 @@ Mongoose предусматривает встроенные валидатор�
 - Все [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) имеют встроенный валидатор [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required), который определяет, должно ли поле быть заданным перед сохранением документа.
 - [Числа](http://mongoosejs.com/docs/api.html#schema-number-js) имеют валидаторы [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) и [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max).
 - [Строки](http://mongoosejs.com/docs/api.html#schema-string-js) имеют:
-
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum) (перечисления): задают множество допустимых для поля значений.
   - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match) (соответствия)): задают регулярное выражение, которому должна соответствовать строка.
   - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength), [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) -максимальная и минимальная длина строки.
@@ -500,7 +498,6 @@ SomeModel.find(callback_function);
 1. Щёлкните **Create New** в разделе _MongoDB Deployments_ для создания новой БД.![](mlabcreatenewdeployment.png)
 2. Откроется экран _Cloud Provider Selection - раздела провайдера облака_.
    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
-
    - Выберите план SANDBOX (Free) из раздела Plan Type (тип плана).
    - Выберите любого провайдера в разделе _Cloud Provider (провайдер облака)_. Разные провайдеры обслуживают разные регионы (показаны под выбранным типом плана).
    - Щёлкните кнопку **Continue**.
@@ -508,16 +505,13 @@ SomeModel.find(callback_function);
 3. Откроется экран выбора региона _Select Region_.
 
    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
-
    - Выберите ближайший к вам регион и щёлкните кнопку **Continue**.
 
 4. Откроется экран _Final Details_ для ввода названия БД.
-
    - Введите имя новой базы - `local_library` и нажмите **Continue**.
 
 5. Откроется экран подтверждения заказа _Order Confirmation_.
    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
-
    - Щёлкните **Submit Order** (подтвердить заказ), чтобы создать БД.
 
 6. Вы вернётесь на главный (home) экран. Щёлкните по вновь созданной базе, чтобы открыть экран с детальной информацией. Как видно, в БД нет коллекций (данных).
@@ -533,7 +527,7 @@ SomeModel.find(callback_function);
 
 ## Установка Mongoose
 
-Откройте окно команд и перейдите в каталог, в котором создан [каркас веб-сайта Local Library](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл **package.json**, если вы ещё не сделали этого ранее, при чтении [Учебника по Mongoose](#installing_mongoose_and_mongodb).
+Откройте окно команд и перейдите в каталог, в котором создан [каркас веб-сайта Local Library](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл **package.json**, если вы ещё не сделали этого ранее, при чтении [Учебника по Mongoose](#installing_mongoose_and_mongodb).
 
 ```bash
 npm install mongoose
@@ -730,16 +724,16 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 - [Queries](http://mongoosejs.com/docs/queries.html) Запросы (документация Mongoose)
 - [Population](http://mongoosejs.com/docs/populate.html) Пополнение БД (документация Mongoose)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## In this module
 
-- [Express/Node introduction](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express/Node introduction](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
 - [Express Tutorial Part 7: Deploying to production](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)

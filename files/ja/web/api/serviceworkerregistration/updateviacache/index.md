@@ -1,22 +1,22 @@
 ---
-title: ServiceWorkerRegistration.updateViaCache
+title: "ServiceWorkerRegistration: updateViaCache プロパティ"
+short-title: updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: e9b95b3735a9e928fbdf3fe0a9f69c420b44cd79
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-**`updateViaCache`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、 {{domxref('ServiceWorkerContainer.register')}} の呼び出しで指定されたモードを使用してキャッシュを更新します。
-`importScripts` のリクエストは HTTP キャッシュで行われます。 `updateViaCache` はこの動作を制御します。
+**`updateViaCache`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、ブラウザーがサービスワーカーや {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}} を通じてインポートされたスクリプトを更新しようとする際に、HTTP キャッシュを参照する条件を決定するために使用される設定の値を返します。
 
 ## 値
 
-以下の値の何れかを返します。
+以下の値のいずれかを返します。
 
-- `imports`: サービスワーカーの更新のために HTTP キャッシュは参照されませんが、 `importScripts` では参照されることを意味します。
-- `all`: 両方の場合で HTTP キャッシュが参照されることを意味します。
-- `none`: HTTP キャッシュが参照されないことを意味します。
+- `imports`: サービスワーカースクリプトの更新については HTTP キャッシュを参照しませんが、{{domxref("WorkerGlobalScope.importScripts", "importScripts()")}} を使用してインポートされたスクリプトについては参照します。これがデフォルト値です。
+- `all`: サービスワーカーのスクリプトの更新や、{{domxref("WorkerGlobalScope.importScripts", "importScripts()")}} を使用してインポートされたスクリプトについて、HTTP キャッシュを参照します。
+- `none`: HTTP キャッシュを参照しません。
 
 ## 例
 
@@ -52,7 +52,5 @@ if ("serviceWorker" in navigator) {
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) <sup>(英語)</sup>
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

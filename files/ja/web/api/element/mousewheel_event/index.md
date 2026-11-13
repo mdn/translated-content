@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
-{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
+{{APIRef}}{{ Non-standard_header() }}
 
 古い標準外の **`mousewheel`** イベントは、このイベントは {{domxref("Element")}} で非同期に発生し、マウスホイールまたは類似の機器を操作している間の更新を提供します。`mousewheel` イベントはどの標準にも含まれておらず、いくつかのブラウザーで実装されていましたが、 Firefox で実装されることはありませんでした。
 
@@ -40,7 +40,6 @@ _このインターフェイスには、祖先である {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : z 軸のスクロール量を表す `double` を返します。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : `delta*` 値のスクロール量の単位を表す `unsigned long` を返します。指定可能な値は次の通りです。
 
     | 定数                         | 値     | 説明                                                                                            |

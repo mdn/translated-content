@@ -41,9 +41,7 @@ Avec cette clé, vous pouvez enregistrer un site Web en tant que gestionnaire po
 Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoires :
 
 - `protocol`
-
   - : Une chaîne définissant le protocole. Cela doit être soit:
-
     - L'une des suivantes : "bitcoin", "dat", "dweb", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
     - Une chaîne composée d'un nom personnalisé préfixé avec "web+" ou "ext+". Par exemple : "web+foo" ou "ext+foo". Le nom personnalisé doit comporter uniquement des caractères ASCII minuscules. Il est recommandé que les extensions utilisent la forme "ext+".
 

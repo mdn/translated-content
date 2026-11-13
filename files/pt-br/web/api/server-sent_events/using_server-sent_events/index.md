@@ -103,7 +103,7 @@ para quebrar o loop se a conexão foi fechada (por exemplo, o cliente fecha a p�
 
 ## Manipulação de erros
 
-Quando ocorrem problemas (como um tempo limite de rede ou problemas relacionados a [controle de acesso](/pt-BR/docs/Web/HTTP/CORS)), um evento de erro é gerado. Você pode agir sobre isso programaticamente implementando o retorno de chamada `onerror` no objeto `EventSource`:
+Quando ocorrem problemas (como um tempo limite de rede ou problemas relacionados a [controle de acesso](/pt-BR/docs/Web/HTTP/Guides/CORS)), um evento de erro é gerado. Você pode agir sobre isso programaticamente implementando o retorno de chamada `onerror` no objeto `EventSource`:
 
 ```js
 evtSource.onerror = (err) => {

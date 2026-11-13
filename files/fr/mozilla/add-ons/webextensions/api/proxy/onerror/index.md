@@ -3,8 +3,6 @@ title: proxy.onProxyError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 ---
 
-{{AddonSidebar}}
-
 Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur `onRequest`.
 
 L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide dans le gestionnaire d'événements proxy.onRequest.
@@ -31,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `newState`
       - : `Object`. Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant l'erreur.
 

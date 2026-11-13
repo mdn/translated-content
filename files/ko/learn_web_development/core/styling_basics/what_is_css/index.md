@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법을 배웠습니다. 이 강의에서는 브라우저가 CSS 와 HTML 을 가져와서 웹 페이지로 만드는 방법을 살펴 봅니다.
 
@@ -25,7 +25,7 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >의 기본 지식 및 HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습.)
@@ -128,11 +128,11 @@ span {
 
 {{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 90)}}
 
-다음 과정의 [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS) 기사에서 브라우저 DevTools를 사용하여, CSS 문제를 디버깅하고 브라우저가 CSS를 해석하는 방법에 대해 자세히 알아 봅니다.
+다음 과정의 [CSS 디버깅](/ko/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) 기사에서 브라우저 DevTools를 사용하여, CSS 문제를 디버깅하고 브라우저가 CSS를 해석하는 방법에 대해 자세히 알아 봅니다.
 
 ## 브라우저에서 인식하지 못하는 CSS를 발견하면 어떻게 됩니까?
 
-["CSS란 무엇인가" 기사의 "브라우저 지원 정보"](/ko/docs/Learn/CSS/First_steps/What_is_CSS#browser_support_information) 에서 브라우저가 모두 동시에 새로운 CSS를 구현하는 것은 아니라고 언급했습니다. 또한 많은 사람들이 최신 버전의 브라우저를 사용하지 않습니다. CSS는 항상 개발되고 있으므로 브라우저가 인식할 수 있는 것보다 앞서 있기 때문에, 브라우저가 CSS 선택자 또는 인식하지 못하는 선언을 발견하면 어떻게 될지 궁금할 수 있습니다.
+["CSS란 무엇인가" 기사의 "브라우저 지원 정보"](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS#browser_support_information) 에서 브라우저가 모두 동시에 새로운 CSS를 구현하는 것은 아니라고 언급했습니다. 또한 많은 사람들이 최신 버전의 브라우저를 사용하지 않습니다. CSS는 항상 개발되고 있으므로 브라우저가 인식할 수 있는 것보다 앞서 있기 때문에, 브라우저가 CSS 선택자 또는 인식하지 못하는 선언을 발견하면 어떻게 될지 궁금할 수 있습니다.
 
 대답은 아무것도 하지 않으며, CSS의 다음 단계로 넘어갑니다!
 
@@ -171,6 +171,6 @@ p {
 
 ## 요약
 
-이 과정을 거의 끝냈습니다. 할 일이 하나 더 있습니다. [전기 페이지 스타일링 하기](/ko/docs/Learn/CSS/First_steps/Styling_a_biography_page) 에서는 예제의 스타일을 변경하여 작업의 일부 CSS를 테스트 합니다.
+이 과정을 거의 끝냈습니다. 할 일이 하나 더 있습니다. [전기 페이지 스타일링 하기](/ko/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) 에서는 예제의 스타일을 변경하여 작업의 일부 CSS를 테스트 합니다.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}

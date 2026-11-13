@@ -17,4 +17,4 @@ slug: Glossary/MIME_type
 
 - [List of MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [Properly Configuring Server MIME Types](/ru/docs/Learn/Server-side/Configuring_server_MIME_types)
-- Детальная информация об использовании [MIME Types](/ru/docs/Web/HTTP/MIME_types) в контексте Веб.
+- Детальная информация об использовании [MIME Types](/ru/docs/Web/HTTP/Guides/MIME_types) в контексте Веб.

@@ -13,7 +13,7 @@ El método **`removeChild()`** de la interfaz {{domxref("Node")}} elimina un nod
 > [!NOTE]
 > Mientras se mantenga una referencia sobre el elemento hijo eliminado, seguirá existiendo en la memoria, pero ya no forma parte del DOM. Todavía se puede reutilizar más adelante en el código.
 >
-> Si el valor devuelto de `removeChild()` no se almacena y no se guarda ninguna otra referencia, se [eliminará automáticamente](/es/docs/Web/JavaScript/Memory_management) de la memoria al cabo de un breve tiempo.
+> Si el valor devuelto de `removeChild()` no se almacena y no se guarda ninguna otra referencia, se [eliminará automáticamente](/es/docs/Web/JavaScript/Guide/Memory_management) de la memoria al cabo de un breve tiempo.
 
 A diferencia de {{domxref("Node.cloneNode()")}}, el valor devuelto conserva los objetos `EventListener` asociados con él.
 

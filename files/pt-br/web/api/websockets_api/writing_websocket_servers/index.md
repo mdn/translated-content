@@ -40,13 +40,16 @@ Sec-WebSocket-Version: 13
 
 O cliente pode solicitar extensões e/ou subprotocolos aqui; veja [Miscellaneous](#miscellaneous) para mais detalhes. Também, cabeçalhos comuns como `User-Agent`, `Referer`, `Cookie`, ou cabeçalhos de autenticação poderiam estar bem aqui. Faça o que você quiser com eles; eles não pertencem diretamente ao WebSocket. Também é seguro ignora-los. Em muitas configurações comuns, um proxy reverso ja tratou deles.
 
-Se qualquer cabeçalho não foi entendido ou conter um valor incorreto, o servidor deve enviar um erro "[400 Bad Request](/pt-BR/docs/Web/HTTP/Status#400)" e fechar o socket imediatamente. É comum, também dar a razão pelo qual o handshake falhou no body da resposta do HTTP, mas muitas mensages nunca serão mostradas (os browsers não mostram isso). Se o servidor não reconhecer a versão do WebSockets, deve enviar um cabeçalho `Sec-WebSocket-Version` que contenha a(s) versão(versões) que o mesmo entenda. (Esse guia explica o v13, o mais novo). Agora, vamos continuar para o cabeçalho mais curioso, o `Sec-WebSocket-Key`.
+Se qualquer cabeçalho não foi entendido ou conter um valor incorreto, o servidor deve enviar um erro "[400 Bad Request](/pt-BR/docs/Web/HTTP/Reference/Status#400)" e fechar o socket imediatamente. É comum, também dar a razão pelo qual o handshake falhou no body da resposta do HTTP, mas muitas mensages nunca serão mostradas (os browsers não mostram isso). Se o servidor não reconhecer a versão do WebSockets, deve enviar um cabeçalho `Sec-WebSocket-Version` que contenha a(s) versão(versões) que o mesmo entenda. (Esse guia explica o v13, o mais novo). Agora, vamos continuar para o cabeçalho mais curioso, o `Sec-WebSocket-Key`.
 
-> **Nota:** **Dica:** Todos os browsers vão enviar um [`Origin` header](/pt-BR/docs/Web/HTTP/CORS#origin). Você pode usar esse cabeçalho por segurança (verifique pelo de mesma origem, whitelisting/ blacklisting, etc.) e envie uma [403 Forbidden](/pt-BR/docs/Web/HTTP/Status#403) se você não gostou do que viu. Sobretanto, fique ciente que os agentes non-browser podem apenas enviar uma falsa `Origin`. Muitas aplicações vão rejeitar requisições sem cabeçalho.
+> [!NOTE]
+> **Dica:** Todos os browsers vão enviar um [`Origin` header](/pt-BR/docs/Web/HTTP/Guides/CORS#origin). Você pode usar esse cabeçalho por segurança (verifique pelo de mesma origem, whitelisting/ blacklisting, etc.) e envie uma [403 Forbidden](/pt-BR/docs/Web/HTTP/Reference/Status#403) se você não gostou do que viu. Sobretanto, fique ciente que os agentes non-browser podem apenas enviar uma falsa `Origin`. Muitas aplicações vão rejeitar requisições sem cabeçalho.
 
-> **Nota:** **Dica:** A request-uri (`/chat` aqui) não tem significado definido na especificação. Muitas pessoas utilizam habilmente para que servidores lidem com muiltíplas aplicações WebSocket. Por exemplo, `example.com/chat` deve invocar um app de chat com multiplos usuários, enquanto `/game` no mesmo servidor poderia invocar um jogo multiplayer.
+> [!NOTE]
+> **Dica:** A request-uri (`/chat` aqui) não tem significado definido na especificação. Muitas pessoas utilizam habilmente para que servidores lidem com muiltíplas aplicações WebSocket. Por exemplo, `example.com/chat` deve invocar um app de chat com multiplos usuários, enquanto `/game` no mesmo servidor poderia invocar um jogo multiplayer.
 
-> **Nota:** [Regular HTTP status codes](/pt-BR/docs/Web/HTTP/Status) podem apenas ser usados antes do handshake. Depois que o handshake sucede, você deve usar um conjunto de códigos diferentes (definidos na seção 7.4 da especificação).
+> [!NOTE]
+> [Regular HTTP status codes](/pt-BR/docs/Web/HTTP/Reference/Status) podem apenas ser usados antes do handshake. Depois que o handshake sucede, você deve usar um conjunto de códigos diferentes (definidos na seção 7.4 da especificação).
 
 ### Resposta Handshake do Servidor
 
@@ -61,7 +64,8 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 Adicionalmente, o servidor pode decidir sobre os pedidos de extensão/subprotocolo aqui; veja [Miscellaneous](#miscellaneous) para mais detalhes. O `Sec-WebSocket-Accept` é uma parte interessante. O servidor deve deriva-lo do `Sec-WebSocket-Key` que o cliente enviou. Para obte-lo, concatene o `Sec-WebSocket-Key` do cliente e a string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" juntos (isso é uma "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), pegue o [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) do resultado, e retorne o codigo [base64](https://en.wikipedia.org/wiki/Base64) do hash.
 
-> **Nota:** **FYI:** Esse processo, aparentemente complicado existe para que seja óbvio para o cliente se o servidor suporta ou não o WebSockets. Isso é importante por causa de problemas com segurança que aparecem se o servidor aceita a conexão WebSocket mas interpreta que os dados são uma requisição HTTP.
+> [!NOTE]
+> **FYI:** Esse processo, aparentemente complicado existe para que seja óbvio para o cliente se o servidor suporta ou não o WebSockets. Isso é importante por causa de problemas com segurança que aparecem se o servidor aceita a conexão WebSocket mas interpreta que os dados são uma requisição HTTP.
 
 Então se a chave foi "`dGhlIHNhbXBsZSBub25jZQ==`", o cabeçalho `Sec-WebSocket-Accept` aceito será "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Uma vez que o servidor envie estes cabeçalhos, o handshake esta completo e você pode começar a trocar dados!
 
@@ -184,7 +188,8 @@ As extensões e subprotocolos do WebSocket são negociados via headers durante t
 
 ### Extensões
 
-> **Nota:** **Essa sessão precisa ser mais desenvolvida. Por favor edite se você tiver conhecimento sobre.**
+> [!NOTE]
+> **Essa sessão precisa ser mais desenvolvida. Por favor edite se você tiver conhecimento sobre.**
 
 Imagine um extensão que comprime um arquivo antes de ser enviado em um e-mail para alguem. Independente do que você faça, está enviando o _mesmo_ dado de formas diferentes. O destinatário eventualmente terá os mesmos dados que a cópia local que você tem, mas foram enviadas de formas diferentes. Isso é o que extensões fazem. WebSockets definem um protocolo e um forma simples de envio de dados, mas uma extensão como um compressor pode enviar o mesmo dado em um formado menor.
 
@@ -227,7 +232,8 @@ Sec-WebSocket-Protocol: soap
 
 Se você deseja que seu servidor obedeça a certos subprotocolo, então naturalmente precisará de código extra no servidor. Vamos imaginar que estamos usando um subprotocolo `json`. Neste subprotocolo, todos os dados são transmitidos como JSON. Se o cliente solicitar esse protocolo e o servidor quiser usá-lo, o servidor precisará ter um analisador JSON. Na prática, isso fará parte de uma biblioteca, mas o servidor precisará transmitir os dados.
 
-> **Nota:** **Tip:** Para evitar o conflito de nomes, recomenda-se que o subprotocolo seja nomeado como parte da string do domínio. Se você está desenvolvendo um aplicativo de bate-papo personalizado que usa um formato proprietário exclusivo da Exemplo Inc., então você pode usar isso: `Sec-WebSocket-Protocol: chat.example.com`. Note que isso não é necessário, é apenas uma convenção opcional, e você pode usar qualquer string que desejar.
+> [!NOTE]
+> **Tip:** Para evitar o conflito de nomes, recomenda-se que o subprotocolo seja nomeado como parte da string do domínio. Se você está desenvolvendo um aplicativo de bate-papo personalizado que usa um formato proprietário exclusivo da Exemplo Inc., então você pode usar isso: `Sec-WebSocket-Protocol: chat.example.com`. Note que isso não é necessário, é apenas uma convenção opcional, e você pode usar qualquer string que desejar.
 
 ## Relacionado
 

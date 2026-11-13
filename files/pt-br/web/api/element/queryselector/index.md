@@ -14,7 +14,7 @@ elemento = elementoBase.querySelector(seletores);
 ```
 
 - `elemento` e `elementoBase` são objetos {{domxref("element")}}.
-- `selectores` é um grupo de [selectores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
+- `selectores` é um grupo de [selectores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Exemplo
 

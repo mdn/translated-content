@@ -3,11 +3,11 @@ title: Grids
 slug: Learn_web_development/Core/CSS_layout/Grids
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}Сетки (grids) являются установленным инструментом проектирования и многие современные макеты веб-сайта основаны на регулярной сетке. В этой статье мы рассмотрим дизайн на основе сетки и увидим как CSS можно использовать для создания сеток — как с помощью современных инструментов, так и с помощью новых технологий, которые только начинают становиться доступными в браузерах.
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}Сетки (grids) являются установленным инструментом проектирования и многие современные макеты веб-сайта основаны на регулярной сетке. В этой статье мы рассмотрим дизайн на основе сетки и увидим как CSS можно использовать для создания сеток — как с помощью современных инструментов, так и с помощью новых технологий, которые только начинают становиться доступными в браузерах.
 
-| Необходимые навыки: | основы HTML(изучите [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), понимание как работает CSS (изучите [Introduction to CSS](/ru/docs/Learn/CSS/First_steps) и [Styling boxes](/ru/docs/Learn/CSS/Building_blocks).) |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Понять основные концепции, лежащие в основе систем компоновки сетки и как реализовать сетку на веб-странице.                                                                                                                             |
+| Необходимые навыки: | основы HTML(изучите [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), понимание как работает CSS (изучите [Introduction to CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics) и [Styling boxes](/ru/docs/Learn_web_development/Core/Styling_basics).) |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:             | Понять основные концепции, лежащие в основе систем компоновки сетки и как реализовать сетку на веб-странице.                                                                                                                                                                                                        |
 
 ## Что такое макет сетки (grid layout)?
 
@@ -34,7 +34,7 @@ slug: Learn_web_development/Core/CSS_layout/Grids
 
 Мы начнём с рассмотрения того, как вы можете создать простую сетку для вашего проекта.
 
-В настоящее время большинство макетов типа grid создаются с использованием поплавков (floats). Если вы прочитали [нашу предыдущую статью о поплавках,](/ru/docs/Learn/CSS/CSS_layout/Floats) вы уже видели, как мы можем использовать эту технику для создания раскладки нескольких столбцов, что является сущностью любой сетки, использующей этот метод.
+В настоящее время большинство макетов типа grid создаются с использованием поплавков (floats). Если вы прочитали [нашу предыдущую статью о поплавках,](/ru/docs/Learn_web_development/Core/CSS_layout/Floats) вы уже видели, как мы можем использовать эту технику для создания раскладки нескольких столбцов, что является сущностью любой сетки, использующей этот метод.
 
 Самый простой тип структуры сетки для создания фиксированной ширины — нам просто нужно выяснить, сколько общей ширины мы хотим для нашего дизайна, сколько столбцов мы хотим и насколько широки должны быть желоба и столбцы. Если бы вместо этого мы решили выложить наш проект на сетке со столбцами, которые растут и сокращаются в соответствии с шириной браузера, нам нужно будет рассчитать процентную ширину для столбцов и желобов между ними.
 
@@ -75,7 +75,7 @@ slug: Learn_web_development/Core/CSS_layout/Grids
 
 ![](simple-grid-finished.png)
 
-В элементе {{htmlelement ("style")}} добавьте следующий код, который даёт контейнеру ширину 980 пикселей с отступом с правой стороны 20 пикселей. Это даёт нам 960 пикселей для нашей общей ширины столбца/желоба - в этом случае отступы вычитаются из общей ширины содержимого, потому что мы установили {{cssxref ("box-sizing")}} в рамку по всем элементам на сайте (см. [Changing the box model completely](/ru/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely) для большего объяснения).
+В элементе {{htmlelement ("style")}} добавьте следующий код, который даёт контейнеру ширину 980 пикселей с отступом с правой стороны 20 пикселей. Это даёт нам 960 пикселей для нашей общей ширины столбца/желоба - в этом случае отступы вычитаются из общей ширины содержимого, потому что мы установили {{cssxref ("box-sizing")}} в рамку по всем элементам на сайте (см. [Changing the box model completely](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#changing_the_box_model_completely) для большего объяснения).
 
 ```css
 * {
@@ -434,7 +434,7 @@ body {
 
 ## Flexbox grids?
 
-Если вы прочтёте нашу предыдущую статью о [flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox), вы можете подумать, что flexbox - идеальное решение для создания сетчатой системы. В настоящее время доступно множество систем gridbox на основе flexbox и flexbox может решить многие из проблем, которые мы уже обнаружили при создании нашей сетки выше.
+Если вы прочтёте нашу предыдущую статью о [flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox), вы можете подумать, что flexbox - идеальное решение для создания сетчатой системы. В настоящее время доступно множество систем gridbox на основе flexbox и flexbox может решить многие из проблем, которые мы уже обнаружили при создании нашей сетки выше.
 
 Однако flexbox никогда не разрабатывался как сетчатая система и создаёт новый набор проблем при использовании в качестве одного. В качестве простого примера мы можем использовать тот же пример разметки, который мы использовали выше, и использовать следующий CSS для стилей классов-оболочек (`wrapper`), `row` и `col` классов:
 
@@ -593,7 +593,7 @@ Skeleton - это более простая сетка, чем некоторы�
 
 ## Родные CSS Сетки с Grid Layout
 
-В начале этой статьи мы сказали, что CSS ранее не имел реальной системы для создания макетов сетки, но это изменится. Хотя мы ещё не можем использовать встроенную сетевую систему CSS, в следующем году мы увидим поддержку браузера для модуля компоновки сетки CSS ([CSS Grid Layout Module](/ru/docs/Web/CSS/CSS_grid_layout)).
+В начале этой статьи мы сказали, что CSS ранее не имел реальной системы для создания макетов сетки, но это изменится. Хотя мы ещё не можем использовать встроенную сетевую систему CSS, в следующем году мы увидим поддержку браузера для модуля компоновки сетки CSS ([CSS Grid Layout Module](/ru/docs/Web/CSS/Guides/Grid_layout)).
 
 В настоящее время вы можете использовать только те методы, которые мы покажем вам в браузерах, которые реализуют макет сетки CSS «за флагом» - это означает, что он в настоящее время реализован, но в экспериментальном состоянии, которое вам нужно включить.
 
@@ -768,7 +768,7 @@ Skeleton - это более простая сетка, чем некоторы�
 
 ### Активное обучение: Напишите свою собственную простую сетку
 
-В макете «[Введение в CSS](/ru/docs/Learn/CSS/CSS_layout/Introduction)» мы включили раздел о [CSS-таблицах](/ru/docs/Learn/CSS/CSS_layout/Introduction#css_tables), который включал простой пример формы (см. Пример [css-tables-example.html live](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) и [исходный код](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)). Мы хотели бы, чтобы вы взяли копию этого примера и выполните следующие действия:
+В макете «[Введение в CSS](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction)» мы включили раздел о [CSS-таблицах](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction#css_tables), который включал простой пример формы (см. Пример [css-tables-example.html live](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) и [исходный код](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)). Мы хотели бы, чтобы вы взяли копию этого примера и выполните следующие действия:
 
 1. Удалите элементы `<div>` внутри `<form>` - вам больше не нужны эти данные, поскольку CSS-сетки могут обрабатывать размещение содержимого по строкам и столбцам для вас.
 2. Используйте свойства сетки CSS, чтобы создать макет для вашей формы как можно ближе к оригиналу. Вам нужно будет установить ширину на содержащем элементе и подумать о том, как установить пробелы в столбцах, а также пробелы в строке.
@@ -780,13 +780,13 @@ Skeleton - это более простая сетка, чем некоторы�
 
 Прочитав эту статью, вы должны теперь понять, как grid-схемы и grid-структуры работают в CSS. Вы также заглянули в будущее сетки CSS и теперь должны понимать, что используемые нами grid-сетки - это, по сути, стоп-решение, пока у нас не будет широко распространённого способа достижения этого в CSS.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 ## In this module
 
-- [Introduction to CSS layout](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/ru/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/ru/docs/Learn/CSS/CSS_layout/Grids)
+- [Introduction to CSS layout](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction)
+- [Floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats)
+- [Positioning](/ru/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Practical positioning examples](/ru/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
+- [Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+- [Grids](/ru/docs/Learn_web_development/Core/CSS_layout/Grids)

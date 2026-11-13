@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d0347afe1461c248f74279b6361ace1eb1624417
 ---
 
-{{GlossarySidebar}}
-
 **数据库**是一种用于收集已组织好的数据以便于搜索、结构化和扩充的存储系统。
 
 网站开发中，大多数数据库采用关系型数据库管理系统（RDBMS）来组织数据，通过 {{glossary("SQL")}} 语言来编程。但有些数据库没有遵循上述的组织数据的机制，这类被称作 NoSQL 数据库。
@@ -19,6 +17,5 @@ l10n:
 
 - 维基百科上的词条[数据库](https://zh.wikipedia.org/wiki/数据库)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

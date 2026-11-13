@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 En este artículo veremos otro concepto importante en CSS: el **desbordamiento**. El desbordamiento es lo que sucede cuando hay demasiado contenido para que pueda caber cómodamente en una caja. En esta guía aprenderás qué es y cómo administrarlo.
 
@@ -15,17 +15,17 @@ En este artículo veremos otro concepto importante en CSS: el **desbordamiento**
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).
       </td>
     </tr>
     <tr>
@@ -77,7 +77,7 @@ En el ejemplo anterior solo necesitamos desplazarnos en el eje `y`, sin embargo,
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, aunque esta no es una forma recomendada para manejar palabras largas. Si necesitas lidiar con una palabra larga en una caja pequeña, puedes consultar las propiedades {{cssxref ("word-break")}} o {{cssxref ("overflow-wrap")}}. Además, algunos de los métodos expuestos en el artículo [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) pueden ayudarte a crear cuadros que se adapten mejor a cantidades variables de contenido.
+También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, aunque esta no es una forma recomendada para manejar palabras largas. Si necesitas lidiar con una palabra larga en una caja pequeña, puedes consultar las propiedades {{cssxref ("word-break")}} o {{cssxref ("overflow-wrap")}}. Además, algunos de los métodos expuestos en el artículo [Elementos de dimensionado en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Sizing) pueden ayudarte a crear cuadros que se adapten mejor a cantidades variables de contenido.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
@@ -98,7 +98,7 @@ En CSS hay un concepto conocido como **block formatting context** o BFC (_contex
 
 ## Desbordamiento no deseado en diseño web
 
-Los métodos de diseño modernos (explicados en el módulo [Diseñar con el CSS](/es/docs/Learn/CSS/CSS_layout)) gestionan muy bien el desbordamiento. Han sido diseñados para hacer frente al hecho de que tendemos a no poder predecir cuánto contenido habrá en la web. Sin embargo, en el pasado, los desarrolladores a menudo usaban alturas fijas para tratar de alinear los fondos de cajas que en realidad no tenían relación entre sí. Este método era frágil y, en una aplicación heredada, ocasionalmente puede aparecer una caja en que el contenido se superpone a otro contenido de la página. Si ves esto, sabrás que se trata de desbordamiento. Lo ideal sería volver a calcular el diseño para no tener que confiar tamaños de caja fijos.
+Los métodos de diseño modernos (explicados en el módulo [Diseñar con el CSS](/es/docs/Learn_web_development/Core/CSS_layout)) gestionan muy bien el desbordamiento. Han sido diseñados para hacer frente al hecho de que tendemos a no poder predecir cuánto contenido habrá en la web. Sin embargo, en el pasado, los desarrolladores a menudo usaban alturas fijas para tratar de alinear los fondos de cajas que en realidad no tenían relación entre sí. Este método era frágil y, en una aplicación heredada, ocasionalmente puede aparecer una caja en que el contenido se superpone a otro contenido de la página. Si ves esto, sabrás que se trata de desbordamiento. Lo ideal sería volver a calcular el diseño para no tener que confiar tamaños de caja fijos.
 
 Al desarrollar un sitio web, siempre debes tener en cuenta los problemas de desbordamiento. Debes probar diseños con cantidades grandes y pequeñas de contenido, aumentar el tamaño de letra... y asegurarte de que tu CSS puede hacerle frente sin ningún problema. Es probable que cambiar el valor de `overflow` para ocultar contenido o añadir barras de desplazamiento sea algo que debas reservar solo para unos pocos casos especiales, en que realmente desees una caja con barra de desplazamiento, por ejemplo.
 
@@ -110,4 +110,4 @@ Hay mucho que absorber en esta lección. ¿Recuerdas la información más import
 
 Este breve artículo ha introducido el concepto de desbordamiento; ahora comprendes que el CSS intenta no hacer invisible el desbordamiento de contenido, porque esto provoca la pérdida de datos. Has descubierto que puedes gestionar el desbordamiento potencial y también que debes probar tu trabajo para asegurarte de que no causa un desbordamiento problemático accidentalmente.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `privacy.services` 属性包含了控制浏览器或第三方提供的服务的隐私相关设置。每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
 
 ## 属性
@@ -51,4 +49,4 @@ getting.then((got) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
+> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。

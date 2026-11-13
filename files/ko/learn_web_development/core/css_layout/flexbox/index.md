@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Flexbox
 original_slug: Learn/CSS/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이아웃 메서드입니다. 항목은 부족한 공간에 맞추기 위해 축소되거나 여분의 공간을 채우기 위해 변형된다. 이 문서는 근간이 되는 내용 전체를 설명합니다.
 
@@ -13,10 +13,10 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
     <tr>
       <th scope="row">선결 사항:</th>
       <td>
-        HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        HTML의 기초 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>
@@ -33,7 +33,7 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
 
 ## 왜 flexbox인가?
 
-오랫동안 CSS 레이아웃을 작성할 수 있는 신뢰할 수 있는 크로스 브라우저 호환 도구는 [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats) 및 [위치잡기](/ko/docs/Learn/CSS/CSS_layout/Positioning) 도구였습니다. 이것들은 무난하고 작동하지만, 어떤 면에서는 되려 제한적이고 좌절감을 맞보게 합니다.
+오랫동안 CSS 레이아웃을 작성할 수 있는 신뢰할 수 있는 크로스 브라우저 호환 도구는 [부동체](/ko/docs/Learn_web_development/Core/CSS_layout/Floats) 및 [위치잡기](/ko/docs/Learn_web_development/Core/CSS_layout/Positioning) 도구였습니다. 이것들은 무난하고 작동하지만, 어떤 면에서는 되려 제한적이고 좌절감을 맞보게 합니다.
 
 다음과 같은 간단한 레이아웃 요구 사항은 그러한 도구를 사용하여 달성하기가 어렵거나 불가능합니다. 또한, 편리하지도 유연한 방식도 못됩니다.
 
@@ -350,10 +350,10 @@ flexbox 지원은 Firefox, 크롬, 오페라, 마이크로소프트 에지 및 �
 
 flexbox는 몇몇 CSS 기능보다 다소 까다롭습니다. 예를 들어 브라우저에 CSS 그림자 기능이 빠진 경우 해당 사이트을 여전히 사용할 수 있습니다. 그러나 flexbox 기능을 지원하지 않을 경우 레이아웃이 완전히 깨져서 사용할 수 없게 됩니다.
 
-[크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) 단원에서 크로스 브라우저 지원 문제를 극복하기 위한 전략에 대해 논의합니다.
+[크로스 브라우저 테스트](/ko/docs/Learn_web_development/Extensions/Testing) 단원에서 크로스 브라우저 지원 문제를 극복하기 위한 전략에 대해 논의합니다.
 
 ## 요약정리
 
 이로써 flexbox의 기본 안내서를 마감합니다. 재미있는 경험이었기 바라며, 당신이 학습 진도를 더해 갈수록 flexbox를 자유자제로 다룰 수 있게 될 겁니다. 다음으로 CSS 레이아웃의 또 다른 중요한 측면인 CSS grid를 살펴볼 것입니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

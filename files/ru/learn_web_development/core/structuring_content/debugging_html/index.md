@@ -3,7 +3,7 @@ title: Отладка HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Написать HTML — здорово, но как понять, где ошибка, когда что-то не работает? В этой статье описаны несколько инструментов, которые помогают искать и исправлять ошибки в HTML.
 
@@ -63,16 +63,14 @@ HTML не страдает от синтаксических ошибок, по�
    ```
 
 4. Рассмотрим проблемы:
-
    - У {{htmlelement("p","параграфа")}} и {{htmlelement("li","элемента списка")}} не закрыты теги. На изображении выше видно, что разметка не пострадала, так как браузеру легко сделать вывод о том, где заканчивается один элемент и начинается другой.
    - Первый {{htmlelement("strong")}} элемент также не имеет закрывающего тега. Это уже более проблематично, так как сложно сказать, где элемент должен заканчиваться. На деле, весь оставшийся текст был выделен жирным.
    - Следующая часть нарушает правила вложенности: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. В этом случае код тоже сложно проинтерпретировать по причине, описанной выше.
-   - В атрибуте [`href`](/ru/docs/Web/HTML/Element/a#href) отсутствует закрывающая двойная кавычка. Это послужило причиной крупной проблемы — ссылка не воспроизвелась вовсе.
+   - В атрибуте [`href`](/ru/docs/Web/HTML/Reference/Elements/a#href) отсутствует закрывающая двойная кавычка. Это послужило причиной крупной проблемы — ссылка не воспроизвелась вовсе.
 
-5. Сейчас же посмотрим, как браузер сгенерировал собственную разметку, в противовес исходной разметке документа. Чтобы сделать это, воспользуемся инструментами разработчика. Если вы не знакомы с инструментами разработчика, потратьте несколько минут на [Обзор инструментов разработки в браузерах](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+5. Сейчас же посмотрим, как браузер сгенерировал собственную разметку, в противовес исходной разметке документа. Чтобы сделать это, воспользуемся инструментами разработчика. Если вы не знакомы с инструментами разработчика, потратьте несколько минут на [Обзор инструментов разработки в браузерах](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 6. В DOM инспекторе вы можете увидеть как сгенерировалась новая разметка: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Используя DOM инспектор, давайте рассмотрим детали нашего кода, чтобы увидеть, как браузер пытается исправить наши ошибки в HTML (мы обозреваем в Firefox; другой современный браузер должен выдать те же результаты):
-
    - Параграфы и элементы списка получены с закрывающими тегами.
    - Было неочевидно, где элемент `<strong>` должен был закрыться, так что браузер обернул каждый отдельный блок текста своими собственными тегами strong, причём до самого низа документа!
    - Некорректная вложенность была исправлена браузером следующим образом:
@@ -148,4 +146,4 @@ HTML можно проверить по адресу, загрузив файл 
 
 Теперь вы умеете отлаживать HTML. С новыми знаниями вам будет проще разобраться и в отладке более сложных языков — например, CSS и JavaScript. На этом мы заканчиваем вводный модуль курса HTML — время попробовать свои силы в упражнениях.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}

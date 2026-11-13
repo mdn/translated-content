@@ -1,11 +1,10 @@
 ---
 title: Math.exp()
+short-title: exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.exp()`** は静的メソッドで、 [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) のある数値のべき乗を返します。
 
@@ -15,20 +14,20 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+{{InteractiveExample("JavaScript デモ: Math.exp()")}}
 
 ```js interactive-example
 console.log(Math.exp(0));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.exp(1));
-// Expected output: 2.718281828459 (approximately)
+// 予想される結果: 2.718281828459 （およそ）
 
 console.log(Math.exp(-1));
-// Expected output: 0.36787944117144233
+// 予想される結果: 0.36787944117144233
 
 console.log(Math.exp(2));
-// Expected output: 7.38905609893065
+// 予想される結果: 7.38905609893065
 ```
 
 ## 構文

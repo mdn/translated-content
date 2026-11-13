@@ -114,7 +114,7 @@ if ((x = y)) {
 }
 ```
 
-그러나 가끔은 조건에서 할당하는 것이 더 편한 경우도 있습니다. 이런 상황에 참고할 수 있도록, [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 문서의 ["할당을 조건으로 사용하기"](/ko/docs/Web/JavaScript/Reference/Statements/while#할당을_조건으로_사용하기)에서 일반적인 모범 구문의 안내를 제공하고 있습니다.
+그러나 가끔은 조건에서 할당하는 것이 더 편한 경우도 있습니다. 이런 상황에 참고할 수 있도록, [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 문서의 ["할당을 조건으로 사용하기"](/ko/docs/Web/JavaScript/Reference/Statements/while#변수_할당을_조건으로_사용하기)에서 일반적인 모범 구문의 안내를 제공하고 있습니다.
 
 #### 거짓 값
 
@@ -129,7 +129,8 @@ if ((x = y)) {
 
 객체를 포함해 다른 모든 값은 조건문에 전달했을 때 `true`로 평가됩니다.
 
-> **참고:** `true`와 `false` 원시 값을 {{jsxref("Boolean")}} 객체의 참과 거짓 값과 혼동하지 마세요!
+> [!NOTE]
+> `true`와 `false` 원시 값을 {{jsxref("Boolean")}} 객체의 참과 거짓 값과 혼동하지 마세요!
 >
 > 예를 들어,
 >
@@ -322,7 +323,8 @@ try {
 }
 ```
 
-> **참고:** `catch` 블록 안에서 오류를 기록할 땐 `console.log()`보다 `console.error()`를 사용하는 것을 추천합니다. `console.error()`는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
+> [!NOTE]
+> `catch` 블록 안에서 오류를 기록할 땐 `console.log()`보다 `console.error()`를 사용하는 것을 추천합니다. `console.error()`는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
 
 #### `finally` 블록
 
@@ -433,5 +435,4 @@ catch (e) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

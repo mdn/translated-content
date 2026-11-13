@@ -3,13 +3,13 @@ title: Отзывчивый дизайн
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 На заре веб-дизайна страницы создавались для экрана определённого размера. Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция _отзывчивого (адаптивного) веб-дизайна_ _(responsive web design_ (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.
 
-| Необходимые знания: | Основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), идея о том как работает CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps) и [Устройство CSS](/ru/docs/Learn/CSS/Building_blocks).) |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Понять базовые концепции и историю отзывчивого дизайна.                                                                                                                                                                           |
+| Необходимые знания: | Основы HTML (изучите [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), идея о том как работает CSS (изучите [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics) и [Устройство CSS](/ru/docs/Learn_web_development/Core/Styling_basics).) |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Задача:             | Понять базовые концепции и историю отзывчивого дизайна.                                                                                                                                                                                                                                                      |
 
 ## Исторические макеты сайтов
 
@@ -51,7 +51,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 
 1. Первой была идея жидких сеток, нечто что уже исследовала Гилленвотер, что можно прочитать в статье Маркотта - [Fluid Grids](https://alistapart.com/article/fluidgrids/) (опубликовано в 2009 в A List Apart).
 2. Вторым методом была идея [жидких изображений](https://unstoppablerobotninja.com/entry/fluid-images). Используя очень простой метод настройки свойства `max-width` на `100%`, изображения будут становиться меньше если содержащий столбец становится уже чем изначальный размер изображения, но никогда не становится больше. Это позволяет изображению уменьшаться чтобы соответствовать столбцу гибких размеров, а не перекрываться с ним, но не расти и становиться пиксельным если столбец становится шире изображения.
-3. Третьим ключевым компонентом были [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries). Медиавыражения позволяют переключать тип макета применяя только CSS то, что Камерон Адамс исследовал, используя JavaScript. Вместо того чтобы иметь один макет для всех размеров экранов, макет мог изменяться. Боковые панели можно перемещать для маленьких экранов, либо отображать альтернативную навигацию.
+3. Третьим ключевым компонентом были [медиавыражения](/ru/docs/Web/CSS/Guides/Media_queries). Медиавыражения позволяют переключать тип макета применяя только CSS то, что Камерон Адамс исследовал, используя JavaScript. Вместо того чтобы иметь один макет для всех размеров экранов, макет мог изменяться. Боковые панели можно перемещать для маленьких экранов, либо отображать альтернативную навигацию.
 
 Очень важно понять, что **адаптивный веб-дизайн** — **это не отдельная технология**, это термин используемый, чтобы описать подход к веб-дизайну или набор лучших практик, используемых для создания макета, который может реагировать на используемое устройство для просмотра контента. В первоначальном исследовании Маркотта это означало гибкие сетки (с использованием floats) и медиавыражения, однако почти за 10 лет, прошедших с момента написания этой статьи, адаптивная работа стала стандартом по умолчанию. Современные методы макета CSS отзывчивы по своей сути, и у нас есть новые штучки, встроенные в веб-платформу для того, чтобы делать дизайн отзывчивых сайтов проще.
 
@@ -75,7 +75,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 
 Общим подходом при использовании медиавыражений является создание простого одноколоночного макета для устройств с узкими экранами (например, мобильные телефоны), затем проверка для больших экранов и применение макета с несколькими столбцам, когда вы знаете, что у вас достаточно ширины экрана, чтобы уместить все. Такой подход часто называют **mobile first** дизайном.
 
-Узнать больше о [медиавыражениях](/ru/docs/Web/CSS/CSS_media_queries) можно в документации MDN.
+Узнать больше о [медиавыражениях](/ru/docs/Web/CSS/Guides/Media_queries) можно в документации MDN.
 
 ## Гибкие сетки
 
@@ -83,7 +83,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 
 Используя гибкую сетку, вам всего лишь надо добавить контрольную точку и изменить дизайн в точке, когда ваш контент начинает выглядеть плохо. Например, если длина строки становится нечитаемо длинной при увеличении размера экрана, или блок становится сдавленным с двумя словами в каждой строке при сужении экрана.
 
-В первые дни отзывчивого дизайна, нашим единственным вариантом выполнения было использование [floats](/ru/docs/Learn/CSS/CSS_layout/Floats). Гибкий обтекаемый макет достигался путём присвоения каждому элементу процентной ширины удостоверившись, что итоговые значения в макете не превышают 100%. В своей оригинальной статье о плавучих сетках Маркотт подробно описал формулу для преобразования макета, созданного с использованием пикселей, в проценты.
+В первые дни отзывчивого дизайна, нашим единственным вариантом выполнения было использование [floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats). Гибкий обтекаемый макет достигался путём присвоения каждому элементу процентной ширины удостоверившись, что итоговые значения в макете не превышают 100%. В своей оригинальной статье о плавучих сетках Маркотт подробно описал формулу для преобразования макета, созданного с использованием пикселей, в проценты.
 
 ```
 target / context = result
@@ -112,7 +112,7 @@ target / context = result
 
 ## Современные технологии макетов
 
-Современные методы макетов такие как [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox), и [Grid](/ru/docs/Learn/CSS/CSS_layout/Grids) являются отзывчивыми по умолчанию. Они все предполагают, что вы пытаетесь создать гибкую сетку и дают вам более лёгкий способ сделать так.
+Современные методы макетов такие как [Макет с несколькими столбцами](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox), и [Grid](/ru/docs/Learn_web_development/Core/CSS_layout/Grids) являются отзывчивыми по умолчанию. Они все предполагают, что вы пытаетесь создать гибкую сетку и дают вам более лёгкий способ сделать так.
 
 ### Multicol
 
@@ -136,7 +136,7 @@ target / context = result
 
 В Flexbox, в качестве исходного поведения, flex элементы будут сжиматься и распределять пространство между элементами в соответствии с пространством в их контейнере. Изменяя значения `flex-grow` и `flex-shrink` вы можете указать, как вы хотите, чтобы предметы вели себя когда они сталкиваются с большим или меньшим пространством вокруг себя.
 
-В примере ниже каждый flex элемент будет принимать равное количество пространства во flex контейнере используя запись `flex: 1` как описано в главе [Flexbox: Гибкое изменение размеров flex элементов](/ru/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
+В примере ниже каждый flex элемент будет принимать равное количество пространства во flex контейнере используя запись `flex: 1` как описано в главе [Flexbox: Гибкое изменение размеров flex элементов](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
 
 ```css
 .container {
@@ -153,7 +153,7 @@ target / context = result
 
 ### CSS grid
 
-В макете CSS Grid единицы измерения `fr` позволяют распределять доступное пространство между дорожками сетки. Следующий пример создаёт grid контейнер с тремя дорожками размером `1fr`. Это создаст три вертикальные дорожки, каждая занимающая одну часть свободного пространства в контейнере. Вы можете узнать больше об этом подходе к созданию сетки в теме Изучение Макета Grid в разделе [Гибкие grids с единицами fr](/ru/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
+В макете CSS Grid единицы измерения `fr` позволяют распределять доступное пространство между дорожками сетки. Следующий пример создаёт grid контейнер с тремя дорожками размером `1fr`. Это создаст три вертикальные дорожки, каждая занимающая одну часть свободного пространства в контейнере. Вы можете узнать больше об этом подходе к созданию сетки в теме Изучение Макета Grid в разделе [Гибкие grids с единицами fr](/ru/docs/Learn_web_development/Core/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
 
 ```css
 .container {
@@ -181,7 +181,7 @@ img {
 
 Вы также можете напрямую использовать изображения разных размеров, обеспечивая разное кадрирование или совершенно другое изображение для разных размеров экрана.
 
-Вы можете найти подробное [руководство по отзывчивым изображениям в разделе изучения HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) на MDN.
+Вы можете найти подробное [руководство по отзывчивым изображениям в разделе изучения HTML](/ru/docs/Web/HTML/Guides/Responsive_images) на MDN.
 
 ## Отзывчивая типографика
 
@@ -232,7 +232,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/ru/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/ru/docs/Web/CSS/Reference/Values/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -279,19 +279,19 @@ Responsive design refers to a site or application design that responds to the en
 
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 ## In this module
 
-- [Introduction to CSS layout](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/ru/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/ru/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/ru/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/ru/docs/Learn/CSS/CSS_layout/Media_queries)
+- [Introduction to CSS layout](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction)
+- [Normal flow](/ru/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
+- [Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+- [Grid](/ru/docs/Learn_web_development/Core/CSS_layout/Grids)
+- [Floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats)
+- [Positioning](/ru/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Multiple-column layout](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- [Responsive design](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
+- [Beginner's guide to media queries](/ru/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 - [Legacy layout methods](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/ru/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/ru/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension assessment](/ru/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension)

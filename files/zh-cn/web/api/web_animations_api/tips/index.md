@@ -5,13 +5,13 @@ l10n:
   sourceCommit: 5d6aafadb9fc5e5c6f0f46975942a5642ba2f615
 ---
 
-{{CSSRef}}
+{{DefaultAPISidebar("Web Animations")}}
 
 CSS 动画使得你能够实现一些难以置信的效果点缀你的文档或应用程序。然而，有些你想实现的东西表现的并不浅显易懂，或者没法使你立马想到一种聪明的解决办法。这篇文章收集了一些我们发现的贴士和技巧，希望可以帮助你更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在动画结束后，你不能直接通过将元素的 {{cssxref("animation-play-state")}} 设置为 `"running"` 来使动画重新“跑起来”。相反，你必须使用 JavaScript 来使已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)的规范并没有提供使得动画重新激活的方法。在动画结束后，你不能直接通过将元素的 {{cssxref("animation-play-state")}} 设置为 `"running"` 来使动画重新“跑起来”。相反，你必须使用 JavaScript 来使已经停止的动画重新播放。
 
 这里有一种足够稳定和可靠的方法。
 
@@ -121,12 +121,12 @@ function playAnimation() {
 
 ## 动画的层叠上下文
 
-在播放 CSS 动画时，动画的属性会表现得好像它们被包含在 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性声明中一样。任何会创建层叠上下文的属性，如果被标记为 `will-change`，则会使元素接收一个新的层叠上下文。
+在播放 CSS 动画时，动画的属性会表现得好像它们被包含在 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性声明中一样。任何会创建层叠上下文的属性，如果被标记为 `will-change`，则会使元素接收一个新的层叠上下文。
 
-对于 [`animation-fill-mode: forwards`](/zh-CN/docs/Web/CSS/animation-fill-mode#forwards)（以及 `both`），动画属性在动画结束后仍保持其最终关键帧的状态。所以属性会保持 `will-change` 状态，因此如果在动画期间创建了新的层叠上下文，并且在动画结束后仍然存在，则目标元素在动画结束后保留层叠上下文。
+对于 [`animation-fill-mode: forwards`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards)（以及 `both`），动画属性在动画结束后仍保持其最终关键帧的状态。所以属性会保持 `will-change` 状态，因此如果在动画期间创建了新的层叠上下文，并且在动画结束后仍然存在，则目标元素在动画结束后保留层叠上下文。
 
 ## 参见
 
 - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - [动画接口](/zh-CN/docs/Web/API/Animation/Animation)
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
+- [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)模块

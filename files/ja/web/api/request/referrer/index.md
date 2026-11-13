@@ -3,14 +3,15 @@ title: "Request: referrer プロパティ"
 short-title: referrer
 slug: Web/API/Request/referrer
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`referrer`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントによってリクエストのリファラーが設定されます（`client` や `no-referrer`、URL、など）。
 
-> **メモ:** `referrer` の値が `no-referrer` だった場合、空文字が返されます。
+> [!NOTE]
+> `referrer` の値が `no-referrer` だった場合、空文字が返されます。
 
 ## 値
 
@@ -18,11 +19,11 @@ l10n:
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、リクエストのリファラーを変数に保存しています。
+次のスニペットでは、{{domxref("Request.Request", "Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、リクエストのリファラーを変数に保存しています。
 
 ```js
 const myRequest = new Request("flowers.jpg");
-const myReferrer = myRequest.referrer; // 既定では "about:client" を返す
+const myReferrer = myRequest.referrer; // デフォルトでは "about:client" を返す
 ```
 
 ## 仕様書
@@ -33,8 +34,8 @@ const myReferrer = myRequest.referrer; // 既定では "about:client" を返す
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

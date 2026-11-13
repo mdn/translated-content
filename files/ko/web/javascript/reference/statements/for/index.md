@@ -28,7 +28,6 @@ for ([initialization]; [condition]; [final-expression])
 ```
 
 - `initialization`
-
   - : 식(할당식 포함) 또는 변수 선언. 주로 카운터 변수를 초기화할 때 사용합니다. `var` 또는 `let` 키워드를 사용해 새로운 변수를 선언할 수도 있습니다. `var` 키워드로 선언한 변수는 반복문에 제한되지 않습니다. 즉 `for` 문과 같은 범위에 위치합니다. `let` 키워드로 선언한 변수는 반복문의 지역 변수가 됩니다.
 
     식의 결과는 버려집니다.
@@ -38,7 +37,7 @@ for ([initialization]; [condition]; [final-expression])
 - `final-expression`
   - : 매 반복 후 평가할 식. 다음번 `condition` 평가 이전에 발생합니다. 주로 카운터 변수를 증감하거나 바꿀 때 사용합니다.
 - `statement`
-  - : 조건의 평가 결과가 참일 때 실행하는 문. 여러 문을 반복 실행하려면 {{jsxref("Statements/block", "블럭문", "", 0)}}(`{ ... }`)으로 묶어야 합니다. 아무것도 실행하지 않으려면 {{jsxref("Statements/empty", "공백문", "", 0)}} (`;`)을 사용하세요.
+  - : 조건의 평가 결과가 참일 때 실행하는 문. 여러 문을 반복 실행하려면 {{jsxref("Statements/block", "블럭문", "", 0)}}(`{ ... }`)으로 묶어야 합니다. 아무것도 실행하지 않으려면 {{jsxref("Statements/Empty", "공백문", "", 0)}} (`;`)을 사용하세요.
 
 ## 예제
 
@@ -140,7 +139,7 @@ showOffsetPos("content");
 
 ## 참조
 
-- {{jsxref("Statements/empty", "공백문", "", 0)}}
+- {{jsxref("Statements/Empty", "공백문", "", 0)}}
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/while", "while")}}

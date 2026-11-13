@@ -3,8 +3,6 @@ title: windows.WINDOW_ID_CURRENT
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
 ---
 
-{{AddonSidebar}}
-
 `browser.windows.WINDOW_ID_CURRENT` est une valeur qui peut être utilisée comme paramètre `windowId` dans certaines APIs pour représenter la fenêtre courante.
 
 ## Compatibilité des navigateurs
@@ -16,8 +14,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
 > [!NOTE]
 >
 > Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

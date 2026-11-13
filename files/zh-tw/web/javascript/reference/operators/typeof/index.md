@@ -3,8 +3,6 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 ---
 
-{{jsSidebar("Operators")}}
-
 ## 摘要
 
 typeof 運算子會傳回一個字串值, 指出未經運算 (unevaluated) 的運算元所代表的型別。
@@ -31,7 +29,7 @@ typeof 運算子會傳回一個字串值, 指出未經運算 (unevaluated) 的�
 
 `typeof` 之後面跟著它的唯一運算元:
 
-```plain
+```js-nolint
 typeof operand
 ```
 

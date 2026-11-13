@@ -19,7 +19,7 @@ l10n:
 
 ## 例
 
-この例では、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性を使って、時計の画像に 2 種類の大きさの画像を用意しています。ひとつは幅 200px、もうひとつは幅 400px です。さらに、 [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性は、ビューポートの幅を考慮して画像を描画する幅を指定するために提供されています。
+この例では、 [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性を使って、時計の画像に 2 種類の大きさの画像を用意しています。ひとつは幅 200px、もうひとつは幅 400px です。さらに、 [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性は、ビューポートの幅を考慮して画像を描画する幅を指定するために提供されています。
 
 ### HTML
 
@@ -29,11 +29,11 @@ l10n:
 ```html
 <p>画像の高さ: <span class="size">?</span>px (リサイズで更新)</p>
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
-  alt="Clock"
+  src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
+  alt="時計"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
   sizes="(max-width: 400px) 200px, 300px" />
 ```
@@ -58,7 +58,7 @@ window.addEventListener("resize", updateHeight);
 
 {{EmbedLiveSample("Examples", 640, 450)}}
 
-この例は{{LiveSampleLink('Example', '独自のウィンドウ')}}で試してみるとわかりやすいかもしれません。
+この例は{{LiveSampleLink('Examples', '独自のウィンドウ')}}で試してみるとわかりやすいかもしれません。
 
 ## 仕様書
 

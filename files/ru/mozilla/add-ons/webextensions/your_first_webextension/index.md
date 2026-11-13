@@ -25,7 +25,7 @@ cd borderify
 
 ### manifest.json
 
-Используя удобный [текстовый редактор](/ru/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors), создайте в папке `borderify` новый файл с именем `manifest.json` и таким содержимым:
+Используя удобный [текстовый редактор](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors), создайте в папке `borderify` новый файл с именем `manifest.json` и таким содержимым:
 
 ```json
 {
@@ -56,7 +56,8 @@ cd borderify
 
 - [Узнать больше о шаблонах совпадения](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **Предупреждение:** [В некоторых случаях вам нужно указать ID для вашего дополнения](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Если это необходимо, то добавьте ключ [`browser_specific_settings`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) в файл `manifest.json` и установите свойство `gecko.id`:
+> [!WARNING]
+> [В некоторых случаях вам нужно указать ID для вашего дополнения](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Если это необходимо, то добавьте ключ [`browser_specific_settings`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) в файл `manifest.json` и установите свойство `gecko.id`:
 >
 > ```json
 > "browser_specific_settings": {

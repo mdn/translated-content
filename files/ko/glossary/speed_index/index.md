@@ -18,4 +18,4 @@ l10n:
 
 ## 같이 보기
 
-- [웹 성능 배우기](/ko/docs/Learn/Performance)
+- [웹 성능 배우기](/ko/docs/Learn_web_development/Extensions/Performance)

@@ -16,14 +16,14 @@ l10n:
 このスタイルシートは、[`ShadowRoot.adoptedStyleSheets`](/ja/docs/Web/API/ShadowRoot/adoptedStyleSheets) プロパティを使用して、1 つ以上の {{domxref("ShadowRoot")}} インスタンスと共有することもできます。
 このスタイルシートを変更すると、それを採用しているすべてのオブジェクトに影響します。
 
-プロパティ内のスタイルシートは、[CSS カスケードアルゴリズム](/ja/docs/Web/CSS/Cascade)を使用して、文書の他のスタイルシートと共に評価されます。
+プロパティ内のスタイルシートは、[CSS カスケードアルゴリズム](/ja/docs/Web/CSS/Guides/Cascade/Introduction)を使用して、文書の他のスタイルシートと共に評価されます。
 ルールの解決がスタイルシートの順序を考慮する場合、`adoptedStyleSheets` は [`Document.styleSheets`](/ja/docs/Web/API/Document/styleSheets) 内のスタイルシートの後に並べられると想定されます。
 
 現在の {{domxref("Document")}} のコンテキスト内で [`CSSStyleSheet()` コンストラクター](/ja/docs/Web/API/CSSStyleSheet/CSSStyleSheet)を使用して作成されたスタイルシートのみが採用されます。
 
 ## 値
 
-値は {{domxref("CSSStyleSheet")}} インスタンスの配列す。これらは同じ {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} のコンテキスト内で {{domxref("Document")}} コンストラクターを使用して作成されている必要があります。
+値は {{domxref("CSSStyleSheet")}} インスタンスの配列です。これらは同じ {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} のコンテキスト内で {{domxref("Document")}} コンストラクターを使用して作成されている必要があります。
 
 配列を変更する必要がある場合は、`push()` のようなその場での変更を使用 してください。また、{{domxref("CSSStyleSheet")}} インスタンス自体も変更することができ、この変更はこのスタイルシートが採用されている場所であればどこでも適用されます。
 

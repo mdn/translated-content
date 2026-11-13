@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 修改扩展的一组动态规则。首先删除在 `options.removeRuleIds` 中列出的规则，然后添加 `options.addRules` 中给出的规则。请注意：
 
 - 此更新作为原子操作进行：要么所有指定的规则都添加和删除，要么返回错误。
@@ -25,7 +23,6 @@ let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
 ### 参数
 
 - `options`
-
   - : 包含要从动态规则中添加或删除的规则详细信息的对象。
     - `addRules` {{optional_inline}}
       - : 一个 {{WebExtAPIRef("declarativeNetRequest.Rule")}} 数组。要添加的规则的详细信息。

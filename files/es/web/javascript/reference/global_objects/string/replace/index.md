@@ -31,7 +31,6 @@ replace(patrón, reemplazo)
 ### Parámetros
 
 - `patrón`
-
   - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el ejemplo típico es una [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
 
 - `reemplazo`
@@ -261,9 +260,9 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ## Véase también
 
 - [Polyfill de `String.prototype.replace` en `core-js` con arreglos e implementación de un comportamiento moderno como el soporte para `Symbol.replace`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}
 - [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
 - [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)

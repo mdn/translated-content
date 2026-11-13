@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 ## Сводка
 
-Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+Метод **`Object.is()`** определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Синтаксис
 
@@ -24,7 +24,7 @@ var isSame = Object.is(value1, value2);
 
 ## Описание
 
-Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness). Два значения являются одинаковыми в следующих случаях:
+Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Два значения являются одинаковыми в следующих случаях:
 
 - оба равны {{jsxref("undefined")}}
 - оба равны {{jsxref("null")}}
@@ -32,15 +32,14 @@ var isSame = Object.is(value1, value2);
 - оба являются строками с одинаковой длиной и одинаковыми символами
 - оба являются одним и тем же объектом
 - оба являются числами и
-
   - оба равны `+0`
   - оба равны `-0`
   - оба равны {{jsxref("NaN")}}
   - либо оба не равны нулю или {{jsxref("NaN")}} и оба имеют одинаковое значение
 
-Поведение этого метода _не_ аналогично оператору {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. Оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} использует приведение типов обоих операндов (если они имеют различный тип) перед проверкой на равенство (в результате получается, что проверка `"" == false` даёт `true`), а метод `Object.is` приведение типов не выполняет.
+Поведение этого метода _не_ аналогично оператору {{jsxref("Operators", "==", "#Equality")}}. Оператор {{jsxref("Operators", "==", "#Equality")}} использует приведение типов обоих операндов (если они имеют различный тип) перед проверкой на равенство (в результате получается, что проверка `"" == false` даёт `true`), а метод `Object.is` приведение типов не выполняет.
 
-Поведение этого метода _не_ аналогично оператору {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. Оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (также как и оператор {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) считает числовые значения `-0` и `+0` равными, а значение {{jsxref("Number.NaN")}} не равным самому себе.
+Поведение этого метода _не_ аналогично оператору {{jsxref("Operators", "===", "#Identity")}}. Оператор {{jsxref("Operators", "===", "#Identity")}} (также как и оператор {{jsxref("Operators", "==", "#Equality")}}) считает числовые значения `-0` и `+0` равными, а значение {{jsxref("Number.NaN")}} не равным самому себе.
 
 ## Примеры
 
@@ -91,4 +90,4 @@ if (!Object.is) {
 
 ## Смотрите также
 
-- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness) — сравнение всех трёх встроенных способов проверки на одинаковость
+- [Руководство по JavaScript: одинаковость](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — сравнение всех трёх встроенных способов проверки на одинаковость

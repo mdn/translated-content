@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}
 
 **`CSSValue`** インターフェイスは、 CSS プロパティの現在の計算値を表します。
 
@@ -22,7 +22,6 @@ l10n:
 - {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}}
   - : 文字列で、現在の値を表します。
 - {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : `unsigned short` で、値の型を定義するコードを表します。可能な値は次のとおりです。
 
     | 定数                  | 説明                                                                                                                                                                                                                                 |

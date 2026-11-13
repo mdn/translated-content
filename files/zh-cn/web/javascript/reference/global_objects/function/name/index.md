@@ -3,8 +3,6 @@ title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`name`** 数据属性表示函数在创建时指定的名称，或者如果函数是匿名函数，则名称可以是 `anonymous` 或 `''`（空字符串）。
 
 {{InteractiveExample("JavaScript Demo: Function.name")}}
@@ -215,7 +213,7 @@ o[sym2].name; // "[]"
 
 ### 私有属性
 
-私有字段和私有方法的名称中包含哈希符号（`#`）。
+私有字段和私有方法的名称中包含井号（`#`）。
 
 ```js
 class Foo {

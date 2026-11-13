@@ -56,7 +56,7 @@ l10n:
 - [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 角色
 - [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) 角色
 - [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) 角色
-- {{HTMLElement('datalist')}} 元素和 [`<input> list` 属性](/zh-CN/docs/Web/HTML/Element/input#list)
+- {{HTMLElement('datalist')}} 元素和 [`<input> list` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/input#list)
 - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性
 - [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性
 - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性

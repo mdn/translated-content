@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_conte
 original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다. _CSS 기초_ 에서 여러분이 처음 시작하며 필요한 내용을 익히도록 도와드립니다. 저희는 다음과 같은 질문에 관한 답을 드리겠습니다. 어떻게 하면 글자색을 검정이나 빨갛게 할 수 있을까? 어떻게 하면 콘텐츠를 화면의 이런 저런 곳에 보이게 할 수 있을까? 어떻게 하면 배경 이미지와 색상들로 웹페이지를 꾸밀 수 있을까?
 
@@ -20,7 +20,7 @@ p {
 
 한 번 해봅시다. 텍스트 에디터의 새 파일에 위의 CSS 3줄을 복사해 붙여넣으세요. 그다음에 `styles` 디렉토리에 `style.css`로 파일을 저장하세요.
 
-아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
+아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
 
 1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
@@ -43,7 +43,7 @@ p {
 - 선택자(selector)
   - : rule set의 맨 앞에 있는 HTML 요소 이름. 이것은 꾸밀 요소(들)을 선택합니다 (이 예에서는 p 요소). 다른 요소를 꾸미기 위해서는 선택자만 바꿔주세요.
 - 선언
-  - : `color: red`와 같은 단일 규칙; 여러분이 꾸미기 원하는 요소의 속성을 명시합니다.
+  - : `color: red;`와 같은 단일 규칙입니다. 여러분이 꾸미기 원하는 요소의 속성을 명시합니다.
 - 속성(property)
   - : 주어진 HTML 요소를 꾸밀 수 있는 방법입니다. (이 예에서, `color`는 p 요소의 속성입니다.) CSS에서, rule 내에서 영향을 줄 속성을 선택합니다.
 - 속성 값
@@ -89,7 +89,7 @@ h1 {
 | 속성 선택자                                       | 특정 속성을 갖는 페이지의 요소.                                                                  | `img[src]` `<img src="myimage.png">` 를 선택하지만 `<img>` 는 선택 안함  |
 | 수도(Pseudo) 클래스 선택자                        | 특정 요소이지만 특정 상태에 있을 때만, 예를 들면, hover over 상태일 때.                          | `a:hover` `<a>` 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함 |
 
-탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Learn/CSS/Building_blocks/Selectors)에서 찾아보세요.
+탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)에서 찾아보세요.
 
 ## 글꼴과 문자
 
@@ -98,7 +98,7 @@ h1 {
 > [!NOTE]
 > "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
-1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
+1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
    ```html
    <link
@@ -113,11 +113,12 @@ h1 {
    ```css
    html {
      font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-     font-family: placeholder: 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야합니다.
+     font-family:
+       "Open Sans", sans-serif; /* 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야 합니다. */
    }
    ```
 
-4. 이제 HTML body 안에 문자를 포함하는 요소 `h1`, `li` 및 `p` 를 위해 글자 크기를 설정할 것입니다. 또한 조금 더 읽기 좋게 하기 위해 body 콘텐츠의 제목을 가운데 정렬하고 줄의 높이(line-height)와 자간(lettet-spacing)도 설정할 것입니다:
+4. 이제 HTML body 안에 문자를 포함하는 요소 `h1`, `li` 및 `p` 를 위해 글자 크기를 설정할 것입니다. 또한 조금 더 읽기 좋게 하기 위해 body 콘텐츠의 제목을 가운데 정렬하고 줄의 높이(line-height)와 자간(letter-spacing)도 설정할 것입니다:
 
    ```css
    h1 {
@@ -169,7 +170,7 @@ html {
 }
 ```
 
-이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
+이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
 
 ### body 외부 정렬하기
 
@@ -186,7 +187,7 @@ body {
 이제는 body 요소를 위한 것입니다. 여기 적지 않은 선언들이 있습니다. 하나 하나 모두 살펴 봅시다:
 
 - `width: 600px;` — 이것은 body가 항상 600 pixels 의 너비를 갖도록 강제합니다.
-- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/margin#values)에 문서화 되어 있습니다.
+- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/Reference/Properties/margin#values)에 문서화 되어 있습니다.
 - `background-color: #FF9500;` — 전과 같이, 이것은 요소의 배경색을 설정합니다. `html` 요소를 위한 짙은 파란색에 반대되도록 body 에는 붉은 빛을 띄는 오렌지색 같은 것을 사용했었습니다. 한번 시험해보세요. 흰색이나 여러분이 원하는 어떤 색이든 편하게 사용해보세요.
 - `padding: 0 20px 20px 20px;` — padding 에는 콘텐츠의 주위에 약간의 공간을 주기 위한 네 개의 값이 있습니다. 이번엔 body의 상단에 no padding, 그리고 왼쪽, 아래 그리고 오른쪽에 20 pixels 을 설정하고 있습니다. 상단, 우측, 하단, 좌측 순서로 값을 설정합니다.(12시부터 시계방향)
 - `border: 5px solid black;` — 이것은 간단하게 body 모든 면의 border 를 5 pixels 두깨의 실선으로 설정합니다.
@@ -240,6 +241,6 @@ img {
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 페이지로 가보세요.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

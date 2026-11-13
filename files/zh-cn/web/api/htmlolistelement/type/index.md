@@ -9,15 +9,16 @@ l10n:
 
 {{domxref("HTMLOListElement")}} 接口的 **`type`** 属性用于显示排序列表标记的类型。
 
-它反映了 {{HTMLElement("ol")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/ol#type) 属性。
+它反映了 {{HTMLElement("ol")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#type) 属性。
 
-> **备注：** `type` 可以在 CSS 中使用 {{CSSxRef("list-style-type")}} 属性定义。 `list-style-type` 属性提供更多的值。
+> [!NOTE]
+> `type` 可以在 CSS 中使用 {{CSSxRef("list-style-type")}} 属性定义。 `list-style-type` 属性提供更多的值。
 
 ## 值
 
 表示类型的字符串。
 
-其可能的值列在属性[标记类型](/zh-CN/docs/Web/HTML/Element/ol#type)部分。
+其可能的值列在属性[标记类型](/zh-CN/docs/Web/HTML/Reference/Elements/ol#type)部分。
 
 ## 示例
 

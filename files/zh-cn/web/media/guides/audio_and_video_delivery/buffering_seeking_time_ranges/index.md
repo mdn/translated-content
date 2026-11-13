@@ -106,7 +106,7 @@ window.onload = () => {
 
 ## Seekable
 
-`seekable` 属性返回一个 {{domxref("TimeRanges")}} 对象，告诉我们媒体的哪一部分可以不经过延迟直接播放；这与该部分是否已被下载无关。如果服务器上启用了字节范围请求，媒体的一些部分可能是可查找（seekable）但又没有缓冲的，字节范围请求允许服务器分发媒体文件的某一部分，因此可以几乎立即准备好播放——故它们是可查找的。有关字节范围请求的更多信息，请参见 [HTTP 范围请求](/zh-CN/docs/Web/HTTP/Range_requests)。
+`seekable` 属性返回一个 {{domxref("TimeRanges")}} 对象，告诉我们媒体的哪一部分可以不经过延迟直接播放；这与该部分是否已被下载无关。如果服务器上启用了字节范围请求，媒体的一些部分可能是可查找（seekable）但又没有缓冲的，字节范围请求允许服务器分发媒体文件的某一部分，因此可以几乎立即准备好播放——故它们是可查找的。有关字节范围请求的更多信息，请参见 [HTTP 范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)。
 
 ```js
 const seekableTimeRanges = audio.seekable;
@@ -120,7 +120,8 @@ const seekableTimeRanges = audio.seekable;
 const seekableEnd = audio.seekable.end(audio.seekable.length - 1);
 ```
 
-> **备注：** `audio.seekable.end(audio.seekable.length - 1)` 实际上告诉我们可查找的最后一个时间范围的结束点（而不是所有可查找的媒体）。在实践中，这已经足够了，因为浏览器要么启用范围请求，要么不启用。如果不启用，`audio.seekable` 将等同于 `audio.buffered`，这将给出媒体可查找的结束点的有效指示。如果启用了范围请求，这个值通常几乎立即变成媒体的持续时间。
+> [!NOTE]
+> `audio.seekable.end(audio.seekable.length - 1)` 实际上告诉我们可查找的最后一个时间范围的结束点（而不是所有可查找的媒体）。在实践中，这已经足够了，因为浏览器要么启用范围请求，要么不启用。如果不启用，`audio.seekable` 将等同于 `audio.buffered`，这将给出媒体可查找的结束点的有效指示。如果启用了范围请求，这个值通常几乎立即变成媒体的持续时间。
 
 也许最好的方法是给出媒体实际下载了多少的指示——这似乎是浏览器的原生播放器显示的内容。
 

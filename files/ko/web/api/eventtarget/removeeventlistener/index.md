@@ -31,11 +31,9 @@ removeEventListener(type, listener, useCapture);
 - `listener`
   - : 이벤트 대상에서 제거할 수신기 {{domxref("EventListener")}} 함수입니다.
 - `options` {{optional_inline}}
-
   - : 제거할 이벤트 수신기의 특징을 나타내는 옵션 객체입니다.
 
     가능한 옵션은 다음과 같습니다.
-
     - `capture`: 제거할 {{domxref("EventListener")}}가 캡처링 수신기로 등록됐는지에 대한 여부를 나타내는 불리언 값입니다. 기본 값은 `false`입니다.
 
 - `useCapture` {{optional_inline}}

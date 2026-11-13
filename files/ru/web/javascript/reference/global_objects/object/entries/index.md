@@ -103,7 +103,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 ### Итерация по `Object`
 
-Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
+Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
 
 ```
 const obj = { foo: 'bar', baz: 42 };
@@ -124,7 +124,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 
 ## Смотрите также
 
-- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

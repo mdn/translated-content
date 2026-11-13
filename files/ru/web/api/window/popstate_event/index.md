@@ -5,7 +5,7 @@ slug: Web/API/Window/popstate_event
 
 {{APIRef("History API")}}
 
-Событие `popstate` вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом [`history.pushState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_pushState()_method>) или [`history.replaceState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_replaceState()_method>), то состояние события `popstate` будет содержать `state` копии входящего в историю объекта
+Событие `popstate` вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом [`history.pushState()`](</ru/docs/Web/API/History_API#The_pushState()_method>) или [`history.replaceState()`](</ru/docs/Web/API/History_API#The_replaceState()_method>), то состояние события `popstate` будет содержать `state` копии входящего в историю объекта
 
 Обратите внимание, `history.pushState()` или `history.replaceState()` не вызывают событие `popstate`. Событие `popstate` будет вызвано при совершении действий в браузере, таких как нажатие кнопок "Вперёд" или "Назад" (или при вызове `history.back()` или `history.forward()` из JavaScript).
 
@@ -31,7 +31,7 @@ slug: Web/API/Window/popstate_event
 | Property                        | Type                       | Description                                        |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                 |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                 |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.         |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
 | `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |

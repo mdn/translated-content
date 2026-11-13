@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`layerName`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)で作成されたカスケードレイヤーの名前を返します。
+**`layerName`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で作成されたカスケードレイヤーの名前を返します。
 
 作成したレイヤーが無名であった場合、文字列は空文字列 (`""`) となり、レイヤーが作成されていない場合は `null` オブジェクトとなります。
 
@@ -45,5 +45,5 @@ console.log(myRules[2].layerName); // `null` を返す
 
 ## 関連情報
 
-- 学習領域: [カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- 学習領域: [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - {{cssxref("@import")}} および {{cssxref("@layer")}}

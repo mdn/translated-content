@@ -16,43 +16,35 @@ En JavaScript hay dos funciones para decodificar y codificar cadenas base64, res
 
 La función `atob()` decodifica una cadena de datos que ha sido codificada usando la codificación en base 64. Por el contrario, la función `btoa()` crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
 
-Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), lea [este párrafo](/es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
+Ambas funciones trabajan sobre cadenas de texto. Si desea trabajar con [ArrayBuffers](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), lea [este párrafo](/es/docs/Glossary/Base64#Solution_.232_.E2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_TypedArrays_and_UTF-8).
 
-- [`data` URIs](/es/docs/Web/URI/Schemes/data)
-
+- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
   - Los URIs de `data`, definidos por [RFC 2397](https://tools.ietf.org/html/rfc2397), permiten a los creadores de contenido introducir pequeños ficheros en línea en documentos.
 
 - [Base64](https://es.wikipedia.org/wiki/Base64)
-
   - Artículo en Wikipedia sobre el sistema de codificación Base64.
 
 - [`atob()`](/es/docs/Web/API/Window/atob)
-
   - Decodifica una cadena de datos que ha sido codificada utilizando base-64.
 
 - [`btoa()`](/es/docs/Web/API/Window/btoa)
-
   - Crea una cadena ASCII codificada en base 64 a partir de una "cadena" de datos binarios.
 
 - [The "Unicode Problem"](#the_.22unicode_problem.22)
-
   - En la mayoría de navegadores, llamar a `btoa()` con una cadena Unicode causará una excepción `Character Out Of Range`. Este párrafo muestra algunas soluciones.
 
 - [URIScheme](/es/docs/URIScheme)
-
   - Lista de esquemas URI soportados por Mozilla.
 
 - [`StringView`](/es/docs/Web/JavaScript/Typed_arrays/StringView)
-
   - En este artículo está publicada una librería hecha por nosotros con los siguientes objetivos:
-
     - crear una interfaz al estilo de [C](http://es.wikipedia.org/wiki/C_%28programming_language%29) para cadenas (es decir, arrays de códigos de caracteres — [`ArrayBufferView`](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) en JavaScript) basada en la interfaz [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript.
     - crear una colección de métodos para los que los objetos parecidos a cadenas (de ahora en adelante, `stringView`s) funcionen estrictamente en arrays de números más que en cadenas JavaScript inmutables.
     - trabajar con otras codificaciones Unicode diferentes de las [`DOMString`](/es/docs/Web/JavaScript/Reference/Global_Objects/String)s UTF-16 por defecto de JavaScript.
 
 ## Herramientas
 
-- [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/glossary/base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
+- [Reescribir atob() y btoa() usando TypedArrays y UTF-8](/es/docs/Glossary/Base64#solution_.232_.e2.80.93_rewriting_atob%28%29_and_btoa%28%29_using_typedarrays_and_utf-8)
 - [`StringView`, una representación tipo C de cadenas basadas en arrays tipados](/es/docs/Web/JavaScript/Typed_arrays/StringView)
 
 ## Temas relacionados
@@ -367,7 +359,7 @@ Para una librería más completa, véase [`StringView`](/es/docs/Web/JavaScript/
 
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [`data` URIs](/es/docs/Web/URI/Schemes/data)
+- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
 - [ArrayBuffer](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [TypedArrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - [ArrayBufferView](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)

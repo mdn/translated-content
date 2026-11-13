@@ -3,7 +3,7 @@ title: 伪类和伪元素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 下一组我们将了解的选择器被称为**伪类**和**伪元素**。这一类选择器的数量众多，通常用于很明确的目的。一旦你了解了如何使用它们，你便可以通过查阅列表来寻找合适的那一项以完成你想要的选择。与之前一样，每个选择器相关的 MDN 页面都将帮助你了解各浏览器的支持情况。
 
@@ -89,16 +89,16 @@ article p:first-child {
 
 所有的伪类以同样的方式实现。它们选中你的文档中处于某种状态的那部分，表现得就像是你已经向你的 HTML 加入类一样。看下 MDN 上的另外几个示例：
 
-- [`:last-child`](/zh-CN/docs/Web/CSS/:last-child)
-- [`:only-child`](/zh-CN/docs/Web/CSS/:only-child)
-- [`:invalid`](/zh-CN/docs/Web/CSS/:invalid)
+- [`:last-child`](/zh-CN/docs/Web/CSS/Reference/Selectors/:last-child)
+- [`:only-child`](/zh-CN/docs/Web/CSS/Reference/Selectors/:only-child)
+- [`:invalid`](/zh-CN/docs/Web/CSS/Reference/Selectors/:invalid)
 
 ### 用户行为伪类
 
 一些伪类只会在用户以某种方式和文档交互的时候应用。这些**用户行为伪类**，有时叫做**动态伪类**，表现得就像是一个类在用户和元素交互的时候加到了元素上一样。案例包括：
 
-- [`:hover`](/zh-CN/docs/Web/CSS/:hover)——上面提到过，只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。
-- [`:focus`](/zh-CN/docs/Web/CSS/:focus)——只会在用户使用键盘控制，选定元素的时候激活。
+- [`:hover`](/zh-CN/docs/Web/CSS/Reference/Selectors/:hover)——上面提到过，只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。
+- [`:focus`](/zh-CN/docs/Web/CSS/Reference/Selectors/:focus)——只会在用户使用键盘控制，选定元素的时候激活。
 
 ```html live-sample___hover
 <p><a href="">悬停在我上方</a></p>
@@ -169,7 +169,7 @@ article p:first-child::first-line {
 
 ## 生成带有::before 和::after 的内容
 
-有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中。
+有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content)属性一同使用，使用 CSS 将内容插入到你的文档中。
 
 你能用这些插入一个文本字符串，和在下面的实时示例里那样。试着改变{{cssxref("content")}}属性的文本值，看看输出是怎么改变的。你也能改变`::before`伪元素为`::after`，看到这段文本插入到了元素的末尾而不是开头。
 
@@ -234,7 +234,7 @@ article p:first-child::first-line {
 
 ## 参见
 
-- [伪类参考](/zh-CN/docs/Web/CSS/Pseudo-classes)
-- [伪元素参考](/zh-CN/docs/Web/CSS/Pseudo-elements)
+- [伪类参考](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [伪元素参考](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

@@ -57,7 +57,7 @@ Esta propiedad proporciona una forma sencilla de cambiar completamente los conte
 document.body.innerHTML = ""; // Reemplaza el contenido de <body> con una cadena vacía
 ```
 
-El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Element/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
+El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Reference/Elements/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
 
 ```js
 document.documentElement.innerHTML =

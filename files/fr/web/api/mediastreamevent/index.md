@@ -3,7 +3,7 @@ title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}
 
 L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) et [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event).
 
@@ -17,7 +17,7 @@ _Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événem
 ## Constructeurs
 
 - {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
-  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{domxref("DOMString")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
+  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{jsxref("String")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
 
 ## Méthodes
 

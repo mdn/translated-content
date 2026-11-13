@@ -1,11 +1,10 @@
 ---
 title: ボックスを半透明にするには
+short-title: ボックスを半透明にする
 slug: Learn_web_development/Howto/Solve_CSS_problems/Make_box_transparent
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、CSS を使用してボックスを半透明にする方法についてお手伝いします。
 
@@ -17,7 +16,7 @@ l10n:
 
 ## 背景色の不透明度のみを変更する場合
 
-多くの場合、背景色を部分的に透過させるだけで、テキストや他の要素は完全に不透明なままにしておきたいでしょう。これを実現するには、 `rgb()` のようなアルファチャンネルを持つ [`<color>`](/ja/docs/Web/CSS/color_value) の値を使用してください。`opacity` と同様に、アルファチャンネルの値を `1` にすると、その色は完全に不透明になります。したがって、`background-color: rgb(0 0 0 / 50%);` は、背景色を 50% の不透明度に設定します。
+多くの場合、背景色を部分的に透過させるだけで、テキストや他の要素は完全に不透明なままにしておきたいでしょう。これを実現するには、 `rgb()` のようなアルファチャンネルを持つ {{cssxref("&lt;color&gt;")}} の値を使用してください。`opacity` と同様に、アルファチャンネルの値を `1` にすると、その色は完全に不透明になります。したがって、`background-color: rgb(0 0 0 / 50%);` は、背景色を 50% の不透明度に設定します。
 
 下記の例で、不透明度とアルファチャンネルの値を変えてみて、ボックスの後ろの背景画像が見える割合を上下させてみてください。
 
@@ -47,7 +46,7 @@ body {
 
 .box {
   flex: 1;
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 0.5em;
   font-size: 140%;
   padding: 20px;
@@ -56,14 +55,14 @@ body {
 
 ```css live-sample___opacity
 .box1 {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   opacity: 0.5;
 }
 
 .box2 {
   background-color: rgb(0 0 0 / 0.5);
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -74,4 +73,4 @@ body {
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)

@@ -40,7 +40,6 @@ arr.slice([início[,fim]])
 ### Parâmetros
 
 - `início` {{optional_inline}}
-
   - : Índice baseado em zero no qual se inicia a extração.
 
     Como um índice negativo, `início` indica um deslocamento em relação ao fim da sequência. `slice(-2)` extrai os dois últimos elementos do array.
@@ -50,7 +49,6 @@ arr.slice([início[,fim]])
     Se `início` for maior que o comprimento do array, é retornado um array vazio.
 
 - `fim` {{optional_inline}}
-
   - : Índice baseado em zero o qual é o final da extração. `slice` extrai até, não incluindo, `fim`.
 
     `slice(1,4)` extrai do segundo até o quarto elemento (elementos de índice 1, 2 e 3).
@@ -138,7 +136,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Ligações podem ser feitas com a função .`call` de {{jsxref("Function.prototype")}} and it can also be reduced using `[].slice.call(arguments)` ao invés de `Array.prototype.slice.call`. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.
+Ligações podem ser feitas com a função .`call` de {{jsxref("Function")}} and it can also be reduced using `[].slice.call(arguments)` ao invés de `Array.prototype.slice.call`. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;

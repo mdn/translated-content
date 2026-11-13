@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-Объект **`Array`**, как и массивы в других языках программирования, позволяет [хранить коллекцию из нескольких элементов под одним именем переменной](/ru/docs/Learn/JavaScript/First_steps/Arrays) и имеет методы для выполнения общих операций с массивами.
+Объект **`Array`**, как и массивы в других языках программирования, позволяет [хранить коллекцию из нескольких элементов под одним именем переменной](/ru/docs/Learn_web_development/Core/Scripting/Arrays) и имеет методы для выполнения общих операций с массивами.
 
 ## Описание
 
 Массивы являются спископодобными объектами, чьи прототипы содержат методы для операций обхода и изменения массива. Ни размер JavaScript-массива, ни типы его элементов не являются фиксированными. Поскольку размер массива может увеличиваться и уменьшаться в любое время, то нет гарантии, что массив окажется плотным. То есть, при работе с массивом может возникнуть ситуация, что элемент массива, к которому вы обратитесь, будет пустым и вернёт `undefined`. В целом, это удобная характеристика; но если эта особенность массива не желательна в вашем специфическом случае, вы можете рассмотреть возможность использования типизированных массивов.
 
-Некоторые полагают, что [вы не должны использовать массив в качестве ассоциативного массива](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/). В любом случае, вместо него вы можете использовать простые {{jsxref("Global_Objects/Object", "объекты")}}, хотя у них есть и свои подводные камни. Смотрите пост [Легковесные JavaScript-словари с произвольными ключами](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)_(англ.)_ в качестве примера.
+Некоторые полагают, что [вы не должны использовать массив в качестве ассоциативного массива](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/). В любом случае, вместо него вы можете использовать простые {{jsxref("Object", "объекты")}}, хотя у них есть и свои подводные камни. Смотрите пост [Легковесные JavaScript-словари с произвольными ключами](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)_(англ.)_ в качестве примера.
 
 ### Доступ к элементам массива
 
@@ -128,7 +128,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 ## Статические свойства
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : Возвращает конструктор `Array`.
 
 ## Статические методы
@@ -148,7 +148,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Array` начальным значением является конструктор {{jsxref("Array/Array", "Array")}}.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : Содержит имена свойств, которые не включены в стандарт ECMAScript до версии ES2015 и которые игнорируются оператором [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 Собственные свойства каждого экземпляра `Array`:
@@ -234,7 +234,7 @@ const myArray = myRe.exec("cdbBdbsbz");
   - : Возвращает новый объект [_array iterator_](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators), который содержит значения каждого индекса массива.
 - {{jsxref("Array.prototype.with()")}}
   - : Возвращает новый массив с заменённым значением элемента с указанным индексом без изменения исходного массива.
-- [`Array.prototype[@@iterator]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : Псевдоним метода [`values()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
 
 ## Примеры

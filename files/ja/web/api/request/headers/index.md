@@ -3,7 +3,7 @@ title: "Request: headers プロパティ"
 short-title: headers
 slug: Web/API/Request/headers
 l10n:
-  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
@@ -38,7 +38,7 @@ const myInit = {
 
 const myRequest = new Request("flowers.jpg", myInit);
 
-const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get("Content-Type"); // 'image/jpeg' を返す
 ```
 
 ## 仕様書
@@ -49,8 +49,8 @@ const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/j
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

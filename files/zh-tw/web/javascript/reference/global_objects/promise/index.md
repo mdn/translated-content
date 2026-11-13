@@ -3,8 +3,6 @@ title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 
-{{JSRef}}
-
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
 
 > [!NOTE]
@@ -66,7 +64,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 - `Promise.length`
   - : 長度屬性，值固定為 `1`。(建構式參數數目).
-- {{jsxref("Promise.prototype")}}
+- {{jsxref("Promise")}}
   - : `Promise` 建構式的原型（prototype）.
 
 ## 方法

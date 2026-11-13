@@ -18,7 +18,7 @@ OfflineAudioContext.suspend(suspendTime).then(function() { ... });
 ### 参数
 
 - 暂停时间
-  - : A {{jsxref("double")}} 指定暂停的时间。
+  - : A `double` 指定暂停的时间。
 
 ### 返回值
 
@@ -29,9 +29,7 @@ A {{jsxref("Promise")}} resolving to void.
 发生任何异常，promise 就会拒绝。
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : 如果帧数出现下列情况，则抛出该异常：
-
     - 一个负值
     - 小于或等于当前时间
     - 大于或等于渲染的总渲染时间

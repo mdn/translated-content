@@ -5,7 +5,7 @@ slug: Web/API/Document/compatMode
 
 {{ApiRef("DOM")}}
 
-**`Document.compatMode`** 속성은 문서 렌더링을 [호환 모드](/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)에서 진행했는지, 표준 모드에서 진행했는지 나타냅니다.
+**`Document.compatMode`** 속성은 문서 렌더링을 [호환 모드](/ko/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)에서 진행했는지, 표준 모드에서 진행했는지 나타냅니다.
 
 ## 구문
 

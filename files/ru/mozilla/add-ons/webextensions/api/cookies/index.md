@@ -41,34 +41,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 In order to use this API, an add-on must specify the "cookies" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its manifest, along with [host permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
 
 - `http://*.example.com/`
-
   - : An add-on with this host permission may:
-
     - Read a non-secure cookie for `www.example.com`, with any path.
     - Write a secure or non-secure cookie for `www.example.com`, with any path.
 
     It may _not_:
-
     - Read a secure cookie for `www.example.com`.
 
 - `http://www.example.com/`
-
   - : An add-on with this host permission may:
-
     - Read a non-secure cookie for `www.example.com`, with any path.
     - Read a non-secure cookie for `.example.com`, with any path.
     - Write a secure or non-secure cookie for `www.example.com` with any path.
     - Write a secure or non-secure cookie for `.example.com` with any path.
 
     It may _not_:
-
     - Read or write a cookie for `foo.example.com`.
     - Read or write a cookie for `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : An add-on with this host permission may:
-
     - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
 ## Совместимость с браузерами

@@ -1,13 +1,14 @@
 ---
 title: "HTMLTextAreaElement: name プロパティ"
+short-title: name
 slug: Web/API/HTMLTextAreaElement/name
 l10n:
-  sourceCommit: d064784c78ec30c87ec3c3d9681b147999fd782f
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("HTML DOM")}}
 
-{{domxref("HTMLTextAreaElement")}} インターフェイスの **`name`** プロパティは、{{HTMLElement("textarea")}} 要素の名前を表します。要素の [`name`](/ja/docs/Web/HTML/Element/textarea#name) 属性を反映します。
+{{domxref("HTMLTextAreaElement")}} インターフェイスの **`name`** プロパティは、{{HTMLElement("textarea")}} 要素の名前を表します。要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/textarea#name) 属性を反映します。
 
 ## 値
 

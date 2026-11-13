@@ -3,8 +3,6 @@ title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 102 の変更点をまとめています。Firefox 102 は、米国時間 2022 年 6 月 28 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -15,7 +13,7 @@ slug: Mozilla/Firefox/Releases/102
 
 ### CSS
 
-出力端末がコンテンツを表示した後に、その内容を変更できる能力を確認するために使用できる [`update`](/ja/docs/Web/CSS/@media/update) メディア特性をデフォルトで有効にしました ([Firefox バグ 1422312](https://bugzil.la/1422312))。
+出力端末がコンテンツを表示した後に、その内容を変更できる能力を確認するために使用できる [`update`](/ja/docs/Web/CSS/Reference/At-rules/@media/update) メディア特性をデフォルトで有効にしました ([Firefox バグ 1422312](https://bugzil.la/1422312))。
 
 ### JavaScript
 

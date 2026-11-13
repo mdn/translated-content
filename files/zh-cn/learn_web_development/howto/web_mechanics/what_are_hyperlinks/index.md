@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
 <table>

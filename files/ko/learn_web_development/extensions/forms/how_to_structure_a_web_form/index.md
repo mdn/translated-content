@@ -8,7 +8,7 @@ l10n:
 
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 기본 사항을 다룬 후에는 이제 폼의 다른 부분에 구조와 의미를 부여하는 데 사용되는 요소들을 좀 더 자세히 살펴보겠습니다.
 
@@ -17,7 +17,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
     <tr>
       <th scope="row">전제 조건:</th>
       <td>
-        기본적인 컴퓨터 사용능력과 <a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML에 대한 기본적인 이해</a>.
+        기본적인 컴퓨터 사용능력과 <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML에 대한 기본적인 이해</a>.
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
   </tbody>
 </table>
 
-폼의 유연성은 폼을 [HTML](/ko/docs/Learn/HTML)의 가장 복잡한 구조 중 하나로 만듭니다. 전용 요소들과 특성들로 모든 종류의 기본적인 폼을 만들 수 있습니다. HTML 폼을 만들때 올바른 구조를 사용하게되면 사용성과 [접근성](/ko/docs/Learn/Accessibility)을 확보 할 수 있습니다.
+폼의 유연성은 폼을 [HTML](/ko/docs/Learn_web_development/Core/Structuring_content)의 가장 복잡한 구조 중 하나로 만듭니다. 전용 요소들과 특성들로 모든 종류의 기본적인 폼을 만들 수 있습니다. HTML 폼을 만들때 올바른 구조를 사용하게되면 사용성과 [접근성](/ko/docs/Learn_web_development/Core/Accessibility)을 확보 할 수 있습니다.
 
 ## \<form> 요소
 
@@ -159,7 +159,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-위의 문단은 필수 요소에대한 규칙을 설명합니다. 이 규칙은 필수요소를 만나기 전에 시각적으로 확인하는 사용자와 스크린 리더와 같은 보조 기술을 사용하는 사용자가 해당 규칙을 알 수 있도록 '이전'에 포함되어야 합니다. 이 방법은 사용자에게 애스터리스크의 의미를 알려주는데 도움이 됩니다. 그러나 이것으로는 부족합니다. 스크린리더는 애스터리스크를 '별표'라고 읽어줍니다. 시각적인 마우스 사용자가 마우스 호버하면 '필수'가 표시되어야 하는데, 이는 `title` 속성을 사용하여 달성할 수 있습니다. `title` 속성이 스크린 리더에서 읽히는 것은 스크린 리더의 설정에 다라 달라지므로 항상 스크린 리더에서 읽히는 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성 또한 추가하는 것이 더 신뢰할 수 있습니다.
+위의 문단은 필수 요소에대한 규칙을 설명합니다. 이 규칙은 필수요소를 만나기 전에 시각적으로 확인하는 사용자와 스크린 리더와 같은 보조 기술을 사용하는 사용자가 해당 규칙을 알 수 있도록 '이전'에 포함되어야 합니다. 이 방법은 사용자에게 애스터리스크의 의미를 알려주는데 도움이 됩니다. 그러나 이것으로는 부족합니다. 스크린리더는 애스터리스크를 '별표'라고 읽어줍니다. 시각적인 마우스 사용자가 마우스 호버하면 '필수'가 표시되어야 하는데, 이는 `title` 속성을 사용하여 달성할 수 있습니다. `title` 속성이 스크린 리더에서 읽히는 것은 스크린 리더의 설정에 다라 달라지므로 항상 스크린 리더에서 읽히는 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 속성 또한 추가하는 것이 더 신뢰할 수 있습니다.
 
 위의 예시들은 효과적으로 사용하기 위해 순서대로 개선되었습니다.
 
@@ -185,7 +185,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 ## 학습 활동: 폼 구조 만들기
 
-자 그럼 아이디어를 실제로 적용해보고 약간 더 복잡한 폼의 결제 폼을 만들어보겠습니다. 이 폼에는 아직 이해하지 못할 수도 있는 여러가지 컨트롤 유형이 포함됩니다. 현재는 걱정하지 마세요. 다음 글에서 이들이 어떻게 작동하는지 알게될 것입니다 ([기본 네이티브 폼 컨트롤](/ko/docs/Learn/Forms/Basic_native_form_controls)). 지금은 아래 지침을 주의 깊게 읽으며, 폼을 구조화 하는데 사용하는 래퍼 요소와 그 이유를 천천히 파악해보세요.
+자 그럼 아이디어를 실제로 적용해보고 약간 더 복잡한 폼의 결제 폼을 만들어보겠습니다. 이 폼에는 아직 이해하지 못할 수도 있는 여러가지 컨트롤 유형이 포함됩니다. 현재는 걱정하지 마세요. 다음 글에서 이들이 어떻게 작동하는지 알게될 것입니다 ([기본 네이티브 폼 컨트롤](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). 지금은 아래 지침을 주의 깊게 읽으며, 폼을 구조화 하는데 사용하는 래퍼 요소와 그 이유를 천천히 파악해보세요.
 
 1. 컴퓨터의 새로운 경로에 [빈 템플릿 파일](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) 과 [결제 폼을 위한 CSS](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) 의 로컬 복사본을 만드는것으로 시작해 봅시다.
 2. HTML에 CSS를 적용하기 위해 HTML {{htmlelement("head")}} 내부에 아래의 코드를 추가하세요
@@ -269,7 +269,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
    첫 번째는 신용카드 종류를 선택하기 위한 드롭다운 메뉴 ({{htmlelement("select")}}) 입니다.
    두번째는 신용카드 번호를 입력하기 위한 `tel` 타입의 `<input>` 요소입니다. 우리는 `number` 타입을 사용할 수 도 있지만, 우리는 번호입력기 UI(number's spinner UI)를 사용하고 싶지 않습니다.
    마지막으로 카드의 만료 날짜를 입력하기 위한 `text` 타입의 `<input>` 요소입니다. 이는 올바른 형식을 나타내는 _placeholder_ 속성과 입력된 날짜가 올바른 형식인지 검사하는 _pattern_ 속성이 포함되어 있습니다.
-   이런 최신 입력 타입은 [The HTML5 input types](/ko/docs/Learn/Forms/HTML5_input_types) 에서 다시 소개됩니다.
+   이런 최신 입력 타입은 [The HTML5 input types](/ko/docs/Learn_web_development/Extensions/Forms/HTML5_input_types) 에서 다시 소개됩니다.
 
    이전 섹션 아래에 다음 코드를 입력해주세요.
 
@@ -330,7 +330,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 ## 실력을 시험해 보세요!
 
-이 글을 끝까지 읽었지만 가장 중요한 내용을 기억할 수 있나요? 이동하기 전에 [Test your skills: Form structure](/ko/docs/Learn/Forms/Test_your_skills:_Form_structure) 를 방문해 확인 해보세요!
+이 글을 끝까지 읽었지만 가장 중요한 내용을 기억할 수 있나요? 이동하기 전에 [Test your skills: Form structure](/ko/docs/Learn_web_development/Extensions/Forms) 를 방문해 확인 해보세요!
 
 ## 요약
 
@@ -340,10 +340,10 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### 고급 주제
 
 - [How to build custom form controls](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ko/docs/Learn_web_development/Extensions/Forms)

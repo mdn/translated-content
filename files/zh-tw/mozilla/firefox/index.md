@@ -3,8 +3,6 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox](https://www.mozilla.org/firefox/) 是 Mozilla 基金會最受歡迎的網頁瀏覽器，在包含 Windows、MacOS、桌面版 Linux 及 Android 和 iOS 行動裝置在內的眾多平台上發行。具有廣大相容性，整合最新的 Web 技術和強大的開發工具。不管你是一般使用者還是開發者，Firefox 都是你的最佳選擇。
 
 Firefox 是一項開源專案；大多數的程式碼都是由我們廣大的社群志工們所貢獻。在這裡你將會學會如何為 Firefox 專案做出貢獻，並找到一些關於打造 Firefox 擴充套件、在 Firefox 底下使用開發者工具，以及其他任務的資訊連結。

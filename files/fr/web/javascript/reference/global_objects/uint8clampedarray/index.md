@@ -3,8 +3,6 @@ title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 
-{{JSRef}}
-
 Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'entiers non signés représentés sur 8 bits, dont les valeurs sont ramenées entre 0 et 255. Si une valeur non-entière est fournie, elle sera arrondie à l'entier le plus proche. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
 
 ## Constructeur
@@ -89,7 +87,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`Uint8ClampedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
   - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`Uint8ClampedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`Uint8ClampedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples

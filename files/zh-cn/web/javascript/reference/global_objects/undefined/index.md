@@ -3,9 +3,7 @@ title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 
-{{jsSidebar("Objects")}}
-
-全局属性 **`undefined`** 表示原始值 `{{Glossary("Undefined", "undefined")}}`。它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。
+全局属性 **`undefined`** 表示原始值 {{Glossary("Undefined", "undefined")}}。它是一个 JavaScript 的 {{Glossary("Primitive", "原始数据类型")}} 。
 
 {{js_property_attributes(0,0,0)}}
 
@@ -33,7 +31,7 @@ undefined
 
 ## 描述
 
-`undefined`是*全局对象*的一个属性。也就是说，它是全局作用域的一个变量。`undefined`的最初值就是原始数据类型`{{Glossary("Undefined", "undefined")}}`。
+`undefined` 是*全局对象*的一个属性。也就是说，它是全局作用域的一个变量。
 
 在现代浏览器（JavaScript 1.8.5/Firefox 4+），自 ECMAscript5 标准以来 undefined 是一个不能被配置（non-configurable），不能被重写（non-writable）的属性。即便事实并非如此，也要避免去重写它。
 
@@ -83,7 +81,7 @@ if (x === undefined) {
 ```
 
 > [!NOTE]
-> 这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators/Comparison_Operators", "比较操作符")}}查看详情。
+> 这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators", "关系运算符", "#关系运算符", 1)}}查看详情。
 
 ### Typeof 操作符和 undefined
 

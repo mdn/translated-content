@@ -6,11 +6,11 @@ original_slug: Learn/CSS/CSS_layout/Normal_Flow
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 Эта статья объясняет нормальный/базовый поток (normal flow) или способ, которым элементы страницы располагаются на веб-странице по умолчанию.
 
-| Что нужно знать прежде чем изучать: | Основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и понимания как работает CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
+| Что нужно знать прежде чем изучать: | Основы HTML (изучите [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), и понимания как работает CSS (изучите [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:                               | Объяснить как браузеры размещают элементы на веб-странице по умолчанию, т.е. прежде, чем мы начнём вносить какие-либо изменения.                                            |
 
@@ -86,4 +86,4 @@ span {
 
 Теперь, когда вы поняли нормальный поток и как браузер выкладывает содержимое по умолчанию, двигаемся дальше, чтобы понять как это изменить для создания макета согласно вашему дизайну.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

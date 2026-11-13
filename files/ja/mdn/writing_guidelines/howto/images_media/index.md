@@ -3,7 +3,7 @@ title: 画像、メディア、資産の追加方法
 short-title: メディアの追加
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 15e1155ab8a0587405601cc4753bb789cd6ac47c
 ---
 
 このページでは、 MDN で文書内のページに画像やメディアを追加する方法について記述しています。
@@ -31,7 +31,7 @@ MDN ページで shared-assets リポジトリー内の何かを使用するに�
 ## コンテンツリポジトリーへの画像のコミット
 
 shared-assets リポジトリーが用途に適していない場合は、画像を content （en-USの場合、または translated-content）リポジトリーに追加することができます。
-文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文（英語）](https://github.github.com/gfm/#images) または HTML の `<img>` 要素を使用して画像を参照してください。
+文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文](https://github.github.com/gfm/#images)<sup>(英語)</sup>または HTML の `<img>` 要素を使用して画像を参照してください。
 
 例を通して説明しましょう。
 
@@ -41,7 +41,8 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # "yarn" を実行して、 yarn が最新の状態であることを確認する
+   # "npm install" を実行して、最新の状態であることを確認する
+   npm install
    git checkout -b my-images
    ```
 
@@ -56,7 +57,7 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    詳しくは、[画像の圧縮](#画像の圧縮)の節を参照してください。
 
    ```bash
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   npm run filecheck files/en-us/web/css/my-cool-image.png
    ```
 
 4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)を記述するか、 `alt` 属性を持つ {{htmlelement("img")}} 要素を `files/en-us/web/css/index.md` 内に記述してください。
@@ -74,7 +75,7 @@ shared-assets リポジトリーが用途に適していない場合は、画像
    git push -u origin my-images
    ```
 
-6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
+6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)を作成する準備ができました。
 
 ## 画像に代替テキストを追加
 
@@ -122,7 +123,7 @@ MDN Web Docs のページに画像を追加する場合、読者のためにダ�
 例えば、次のようにします。
 
 ```bash
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+npm run filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
 ## 動画を MDN ページへ追加
@@ -211,10 +212,6 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 6. _停止_ ボタンを押す。
 7. メインメニューから*File* > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
 
-### その他のリソース
-
-- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
-
 ### 動画を作成するためのワークフロー
 
 以下の節では、動画を作成して MDN ページに表示させるための一般的な手順を説明します。
@@ -229,7 +226,6 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
   例えば、短い DevTools の動画では、 DevTools を開くところから始めて、視聴者が方向感覚を掴めるようにするのがよい考えです。
 - 操作の内容を考え、スピードを落とし、明確にしてください。
   ある動作（例えば、アイコンをクリックする）をしなければならないときは、ゆっくり明確に操作してください。例えば、
-
   - マウスをアイコンの上に移動させる
   - 強調またはズーム（常にではなく、必要性を感じるかどうかによる）
   - 一旦停止する

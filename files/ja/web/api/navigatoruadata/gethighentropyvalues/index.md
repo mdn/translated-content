@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返し案す。
+**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返します。
 
 > [!NOTE]
 > 「高エントロピー」「低エントロピー」という用語は、これらの値がブラウザーについて明らかにする情報の量を示します。
@@ -25,9 +25,7 @@ getHighEntropyValues(hints)
 ### 引数
 
 - `hints`
-
   - : 返すべきヒントを格納した配列で、 1 つまたは複数を指定します。
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactor"`
@@ -43,22 +41,22 @@ getHighEntropyValues(hints)
 
 - `brands`
   - : ブラウザーのブランドとそのバージョン ({{domxref("NavigatorUAData.brands")}} が提供する情報と同じもの) を指定した `brand` と `version` を格納したオブジェクトの配列を返します。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `mobile`
   - : ユーザーエージェントがモバイル端末で動作している場合、 `true` を返します（{{domxref("NavigatorUAData.mobile")}} が提供するのと同じ情報です）。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `platform`
   - : `"Windows"`のようにユーザーエージェントが動作しているプラットフォームを記述した文字列を返します（{{domxref("NavigatorUAData.platform")}}が提供する情報と同じものです）。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `architecture`
   - : プラットフォームアーキテクチャを格納した文字列。例えば `"x86"` です。
-    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができることができます。
+    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができます。
 - `bitness`
   - : アーキテクチャのビット数を格納した文字列。例えば `"32"` または `"64"` です。
     なお、この情報は、 {{HTTPHeader("Accept-CH")}} ヘッダーでサーバーが明示的にリクエストした場合、 {{HTTPHeader("Sec-CH-UA-Bitness")}} ヘッダーでサーバーに送ることができます。
 - `formFactor`
   - : 端末のフォームファクターを格納する文字列。例えば、`"Tablet"` または「VR」など。
-    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factor")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
+    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factors")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
 - `fullVersionList`
   - : `"brand"` と `"version"` というプロパティを持つオブジェクトの配列で、それぞれブラウザー名とフルバージョンを表します。
     例えば、 `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}` です。
@@ -108,7 +106,7 @@ navigator.userAgentData
 ## 関連情報
 
 - これらの値は、 HTTP リクエストヘッダー経由でも利用できます。
-  - [低エントロピーのクライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)は自動的に送信されます。
+  - [低エントロピーのクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)は自動的に送信されます。
     - {{HTTPHeader("Sec-CH-UA")}}
     - {{HTTPHeader("Sec-CH-UA-Mobile")}}
     - {{HTTPHeader("Sec-CH-UA-Platform")}}

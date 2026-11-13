@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 Cuando diseñas páginas para tú sitio web es bueno tener una idea de los diseños más comunes.
 
@@ -16,7 +16,7 @@ Cuando diseñas páginas para tú sitio web es bueno tener una idea de los dise�
       <th scope="row">Prerrequisitos:</th>
       <td>
         Asegúrate haber pensado
-        <a href="/es/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding"
+        <a href="/es/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >lo que quieres lograr</a
         >
         con tú proyecto web.
@@ -70,7 +70,7 @@ Estas son reglas generales que puedes aprovechar. Desde luego, existen diseños 
 
 ## Aprendizaje activo
 
-_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundización
 

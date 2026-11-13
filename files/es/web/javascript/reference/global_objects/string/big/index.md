@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 {{JSRef}}
 
-{{deprecated_header}}
-
 ## Resumen
 
 Provoca que una cadena sea mostrada con un tamaño de fuente grade, como si estuviese en una etiqueta {{HTMLElement("big")}}.

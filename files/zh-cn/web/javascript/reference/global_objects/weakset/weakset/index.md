@@ -3,8 +3,6 @@ title: WeakSet() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
 
-{{JSRef}}
-
 **`WeakSet()`** 构造函数创建 {{jsxref("WeakSet")}} 对象。
 
 ## 语法
@@ -14,7 +12,8 @@ new WeakSet()
 new WeakSet(iterable)
 ```
 
-> **备注：** `WeakSet()` 构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用。不使用 `new` 而直接调用会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `WeakSet()` 构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用。不使用 `new` 而直接调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

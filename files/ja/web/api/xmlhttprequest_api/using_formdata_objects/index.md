@@ -1,8 +1,8 @@
 ---
-title: FormData オブジェクトの使用
+title: FormData オブジェクトの使い方
 slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
 l10n:
-  sourceCommit: 56dbf87640f2c91ec0ca3b95a8291fe7e362b9a8
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
@@ -19,7 +19,7 @@ const send = document.querySelector("#send");
 send.addEventListener("click", async () => {
   const formData = new FormData();
   formData.append("username", "Groucho");
-  formData.append("accountnum", 123456);
+  formData.append("accountNum", 123456);
 
   // file 型の <input> 要素
   const avatar = document.querySelector("#avatar");
@@ -28,7 +28,7 @@ send.addEventListener("click", async () => {
   // JavaScript のファイル風オブジェクト
   const content = '<q id="a"><span id="b">hey!</span></q>';
   const blob = new Blob([content], { type: "text/xml" });
-  formData.append("webmasterfile", blob);
+  formData.append("webmasterFile", blob);
 
   const response = await fetch("http://example.org/post", {
     method: "POST",
@@ -38,15 +38,18 @@ send.addEventListener("click", async () => {
 });
 ```
 
-> **メモ:** `"avatar"` および `"webmasterfile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountnum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
+> [!NOTE]
+> `"avatar"` および `"webmasterFile"` フィールドはどちらも、ファイルを含んでいます。フィールド `"accountNum"` に与えた数値は [`FormData.append()`](/ja/docs/Web/API/FormData/append) メソッドにより直ちに文字列へ変換されます（フィールドの値として {{ domxref("Blob") }}、 {{ domxref("File") }}、文字列のいずれかを取ることができます。値が `Blob` でも `File` でもない場合は、文字列に変換されます）。
 
-この例では、 `"username"`, `"accountnum"`, `"avatar"`, `"webmasterfile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("Window/fetch", "fetch()")}} を使用してフォームのデータを送信します。 `"webmasterfile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェイスは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
+この例では、 `"username"`, `"accountNum"`, `"avatar"`,
+`"webmasterFile"` というフィールドの値を含む `FormData` インスタンスを構築し、 {{domxref("Window/fetch", "fetch()")}} を使用してフォームのデータを送信します。 `"webmasterFile"` フィールドは {{domxref("Blob")}} です。 `Blob` オブジェクトは、不変的な生データのファイルのようなオブジェクトを表します。 Blob は、必ずしも JavaScript に適した形式ではないデータを表します。 {{ domxref("File") }} インターフェイスは `Blob` をベースにしており、 Blob の機能を継承し、ユーザーのシステム上のファイルをサポートするように拡張されています。 `Blob` を作成するには、 [`Blob()` コンストラクター](/ja/docs/Web/API/Blob/Blob)を呼び出します。
 
 ## HTML フォームから `FormData` オブジェクトを取り出す
 
 既存の {{ HTMLElement("form") }} のデータを含む `FormData` オブジェクトを構築するには、 `FormData` オブジェクトの作成時にその form 要素を指定します。
 
-> **メモ:** `FormData` は `name` 属性を使用する入力フィールドのみを使用します。
+> [!NOTE]
+> `FormData` は `name` 属性を使用する入力フィールドのみを使用します。
 
 ```js
 const formData = new FormData(someFormElement);
@@ -112,7 +115,7 @@ send.addEventListener("click", async () => {
   <p>
     <label
       >Custom file label:
-      <input type="text" name="filelabel" size="12" maxlength="32" />
+      <input type="text" name="file-label" size="12" maxlength="32" />
     </label>
   </p>
   <p>
@@ -146,10 +149,10 @@ form.addEventListener("submit", async (event) => {
 ```
 
 > [!NOTE]
-> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)よりもフォームで指定したメソッドを優先します。
 
 > [!WARNING]
-> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
+> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
 以下のように、直接 {{ domxref("File") }} や {{ domxref("Blob") }} を {{ domxref("FormData") }} オブジェクトへ追加することもできます。
 

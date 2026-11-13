@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSImportRule`** は {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表します。
+**`CSSImportRule`** は {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を表します。
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,7 @@ _祖先である {{domxref("CSSRule")}} から継承したプロパティがあ�
 - {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
   - : {{cssxref("@import")}} ルールで指定された URL を返します。
 - {{domxref("CSSImportRule.layerName")}} {{ReadOnlyInline}}
-  - : {{cssxref("@import")}} ルールで宣言された[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の名前を返します。レイヤーが無名の場合は空文字列、ルールが何も宣言していない場合は `null` を返します。
+  - : {{cssxref("@import")}} ルールで宣言された[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前を返します。レイヤーが無名の場合は空文字列、ルールが何も宣言していない場合は `null` を返します。
 - {{domxref("CSSImportRule.media")}}
   - : 関連づけられたスタイルシートの `media` 属性の値を返します。
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}

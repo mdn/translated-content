@@ -1,13 +1,12 @@
 ---
 title: Math.tanh()
+short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
-
-**`Math.tanh()`** 静的メソッドは、数値のハイパーボリックタンジェントを返します。
+**`Math.tanh()`** は静的メソッドで、数値のハイパーボリックタンジェントを返します。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -15,20 +14,20 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{InteractiveExample("JavaScript デモ: Math.tanh()")}}
 
 ```js interactive-example
 console.log(Math.tanh(-1));
-// Expected output: -0.7615941559557649
+// 予想される結果: -0.7615941559557649
 
 console.log(Math.tanh(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.tanh(Infinity));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.tanh(1));
-// Expected output: 0.7615941559557649
+// 予想される結果: 0.7615941559557649
 ```
 
 ## 構文
@@ -72,7 +71,7 @@ Math.tanh(Infinity); // 1
 
 ## 関連情報
 
-- [`Math.tanh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.tanh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

@@ -3,8 +3,6 @@ title: React 入门
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 本文会引导我们进入一段 React 学习之旅。我们将逐步了解有关它的背景和用例的一些细节，在自己的电脑上建起基本的 React 工具链，创建并使用一个简单的入门应用程序，以学习一些关于 React 在此过程中如何工作的知识。
@@ -65,9 +63,9 @@ React 中的许多模式都使用了现代 JavaScript 的功能。React 与 Java
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-该 heading 常量称为 **JSX 表达式**。React 可以使用它在我们的应用程序中渲染 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 标签。
+该 heading 常量称为 **JSX 表达式**。React 可以使用它在我们的应用程序中渲染 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 标签。
 
-假设出于语义原因，我们想将 heading 包装 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 在标记中？JSX 方法允许我们将元素彼此嵌套，就像使用 HTML 一样：
+假设出于语义原因，我们想将 heading 包装在 [`<header>`](/zh-CN/docs/Web/HTML/Reference/Elements/header) 标记中。JSX 方法允许我们将元素彼此嵌套，就像使用 HTML 一样：
 
 ```js
 const header = (
@@ -86,7 +84,7 @@ const header = (
 > </header>;
 > ```
 >
-> 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 标记没有缩进与其对应的结束标记相同的位置。
+> 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Reference/Elements/header) 标记没有缩进与其对应的结束标记相同的位置。
 
 浏览器是无法读取直接解析 JSX 的。我们的 header 表达式经过（ [Babel](https://babeljs.io/) 或 [Parcel](https://parceljs.org/) 之类的工具）编译之后是这样的：
 
@@ -108,7 +106,7 @@ const header = React.createElement(
 
 有很多使用 React 的方法，但是我们将使用命令行界面（CLI）工具 create-react-app，如前所述，该方法通过安装一些软件包并创建一些软件包来加快开发 React 应用程序的过程。文件供你处理上述工具。
 
-通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让你花费更多的时间来构建应用，而花更少的时间进行设置。
+通过将一些 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素复制到 HTML 文件中，可以在[没有 create-react-app 的情况下将 React 添加到网站](https://reactjs.org/docs/add-react-to-a-website.html)，但是 create-react-app CLI 是 React 应用程序的常见起点。使用它可以让你花费更多的时间来构建应用，而花更少的时间进行设置。
 
 ### 要求
 
@@ -116,7 +114,7 @@ const header = React.createElement(
 
 你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
-如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
+如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或[**适用于 Linux 的 Windows 子系统**](https://docs.microsoft.com/en-us/windows/wsl/about)（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
 
 还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行——通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
@@ -150,9 +148,9 @@ npx create-react-app moz-todo-react
 
 `create-react-app` 运行的时候会在终端上显示一些与其状态相关的信息，通常情况下无需为此担心。运行需要一点时间，在此期间你可以适度放松一下。
 
-处理完成之后，你可以 `cd` 到 `moz-todo-react` 文件夹下，然后键入 `npm start` 命令并回车，先前由 create-react-app 创建的脚本会启动一个地服务 <localhost:3000>，并打开你的默认浏览器来访问这个服务。成功启动浏览器的话，你的浏览器上会显示如下画面：
+处理完成之后，你可以 `cd` 到 `moz-todo-react` 文件夹下，然后键入 `npm start` 命令并回车，先前由 create-react-app 创建的脚本会启动一个本地服务 <localhost:3000>，并打开你的默认浏览器来访问这个服务。成功启动浏览器的话，你的浏览器上会显示如下画面：
 
-![Firefox MacOS 的屏幕截图，打开到 localhost：3000，显示了默认的 create-react-app 应用程序](default-create-react-app.png)
+![Firefox MacOS 的屏幕截图，打开到 localhost：3000，显示了默认的 create-react-app 应用程序](default-vite.png)
 
 ### 应用结构
 
@@ -181,11 +179,11 @@ moz-todo-react
 
 目录 **`src`** 是我们花费时间最多的地方，因为它是我们 React 应用源码存放的目录。
 
-目录 **`public`** 包含了开发应用时浏览器会读取的文件，其中最重要的就是 `index.html`。React 将目录 **`src`** 中的代码嵌入这个文件，从而浏览器才能运行此文件。 `index.html`中的有些内容关乎 create-react-app 的运作，因此除非你知道自己在做什么样的修改，否则不建议编辑这个文件。当然，你可以修改`index.html`中的 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素的内容来表现此应用程序通俗易懂的名称。
+目录 **`public`** 包含了开发应用时浏览器会读取的文件，其中最重要的就是 `index.html`。React 将目录 **`src`** 中的代码嵌入这个文件，从而浏览器才能运行此文件。 `index.html`中的有些内容关乎 create-react-app 的运作，因此除非你知道自己在做什么样的修改，否则不建议编辑这个文件。当然，你可以修改`index.html`中的 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 元素的内容来表现此应用程序通俗易懂的名称。
 
 目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Deployment) 这一篇教程。
 
-文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
+文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) 和 [Package management basics](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
 ## 探索第一个 React 组件 — `<App/>`
 
@@ -276,9 +274,9 @@ function App() {
 
 App 方法返回一个 JSX 表达式，这个表达式定义了浏览器最终要渲染的 DOM。
 
-表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其他任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其他的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
+表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Reference/Elements/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其他任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其他的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
 
-把第 6 行的 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 标签内容改为 "Hello, world!" 并保存文件。你会发现这个改变也会立即在浏览器的`http://localhost:3000` 中同步渲染。现在删掉 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 标签并保存，"Learn React"链接也会同样被删除。
+把第 6 行的 [`<p>`](/zh-CN/docs/Web/HTML/Reference/Elements/p) 标签内容改为 "Hello, world!" 并保存文件。你会发现这个改变也会立即在浏览器的`http://localhost:3000` 中同步渲染。现在删掉 [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a) 标签并保存，"Learn React"链接也会同样被删除。
 
 你的 `App` 组件应该如下所示：
 

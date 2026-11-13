@@ -19,7 +19,7 @@ new Headers(init)
 ### 参数
 
 - `init` {{optional_inline}}
-  - : 通过一个包含任意 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)的对象来预设你的 `Headers`。可以是一个带有 {{jsxref("String")}} 值的简单对象字面量、一个名称—值对（每个队组均为二元字符串数组）的数组，或者是一个已存在的 `Headers` 对象。对于最后一种情况，新的 `Headers` 对象从已存在的 `Headers` 对象中拷贝数据。
+  - : 通过一个包含任意 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)的对象来预设你的 `Headers`。可以是一个带有 {{jsxref("String")}} 值的简单对象字面量、一个名称—值对（每个队组均为二元字符串数组）的数组，或者是一个已存在的 `Headers` 对象。对于最后一种情况，新的 `Headers` 对象从已存在的 `Headers` 对象中拷贝数据。
 
 ## 示例
 
@@ -74,5 +74,5 @@ const myHeaders = new Headers(headers);
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

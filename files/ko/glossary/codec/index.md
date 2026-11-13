@@ -12,6 +12,6 @@ l10n:
 ## 같이 보기
 
 - 위키백과의 [코덱](https://en.wikipedia.org/wiki/Codec)
-- [웹 비디오 코덱 안내서](/ko/docs/Web/Media/Formats/Video_codecs)
+- [웹 비디오 코덱 안내서](/ko/docs/Web/Media/Guides/Formats/Video_codecs)
 - [웹 오디오 코덱 안내서](/ko/docs/Web/Media/Formats/Audio_codecs)
 - [웹에서의 미디어 타입 및 형식 안내](/ko/docs/Web/Media/Formats)

@@ -1,17 +1,15 @@
 ---
 title: 撞擊牆壁
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 l10n:
-  sourceCommit: b0d4232c133f19213742db2286d2c293ce71f674
+  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
 
-{{GamesSidebar}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+這是[使用純 JavaScript 製作打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) 11 個步驟的**第 3 步**。你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 找到課後完整的原始碼。
 
-這是 [Gamedev Canvas 教程](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)的**第 3 步**（共 10 步）。你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 找到課後完整的原始碼。
-
-看到我們的球在移動是很不錯的，但它很快就會從螢幕上消失，這限制了我們能夠享受的樂趣！為了解決這個問題，我們將實現一些碰撞檢測（稍後會在[這裡](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)更詳細地解釋），使球能夠從 Canvas 的四個邊緣反彈。
+看到我們的球在移動是很不錯的，但它很快就會從螢幕上消失，這限制了我們能夠享受的樂趣！為了解決這個問題，我們將實現一些碰撞檢測（稍後會在[這裡](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection)更詳細地解釋），使球能夠從 Canvas 的四個邊緣反彈。
 
 ## 簡單的碰撞檢測
 
@@ -150,9 +148,10 @@ function startGame() {
   setInterval(draw, 10);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
   startGame();
-  this.disabled = true;
+  runButton.disabled = true;
 });
 ```
 
@@ -163,6 +162,6 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 ## 下一步
 
-我們現在已經到了球既移動又保持在遊戲板上的階段。在第四章中，我們將看看如何實現可控的球拍——請參見[球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
+我們現在已經到了球既移動又保持在遊戲板上的階段。在第四章中，我們將看看如何實現可控的球拍——請參見[球拍和鍵盤控制](/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}

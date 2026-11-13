@@ -3,8 +3,6 @@ title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
 
-{{JSRef}}
-
 **`Object.assign()`** 被用來複製一個或多個物件自身所有可數的屬性到另一個目標物件。回傳的值為該目標物件。
 
 ## 語法
@@ -34,7 +32,7 @@ Object.assign(target, ...sources)
 
 若發生錯誤，例如: 當一個屬性不可被寫入時，將會引發 {{jsxref("TypeError")}} 的錯誤，且目標物件剩餘的屬性將不會改變。
 
-注意: `Object.assign()` 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。
+注意: `Object.assign()` 不會在來源物件屬性的值為{{jsxref("Operators/null", "null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。
 
 ## 範例
 

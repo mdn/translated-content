@@ -21,7 +21,7 @@ browser.bookmarks.removeTree(
 ### 引数
 
 - `id`
-  - : 子要素とともに削除されるフォルダーノードの ID を表す {{jsxref("string")}} です。
+  - : 子要素とともに削除されるフォルダーノードの ID を表す {{jsxref("String")}} です。
 - `callback`{{optional_inline}}
   - : ノードが削除された際に実行される関数です。この関数に渡される引数はありません。
 
@@ -54,7 +54,7 @@ chrome.bookmarks.search({ title: "MDN" }, removeMDN);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

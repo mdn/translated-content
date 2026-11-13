@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
@@ -14,7 +12,7 @@ l10n:
 
 该方法与 {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} API 方法非常相似（例如，它们都返回一个 Promise，且都会以一个具有 {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript.unregister","unregister()")}} 方法（用于注销脚本）的 API 对象兑现）。但是，支持的选项有所区别。
 
-这是一个返回 {{JSxRef("Promise")}} 的异步方法。
+这是一个返回 {{JSxRef("Promise")}} 的异步函数。
 
 ## 语法
 
@@ -29,11 +27,9 @@ await registeredUserScript.unregister();
 ### 参数
 
 - `userScriptOptions`
-
   - : `object`，表示要注册的用户脚本。其语法与 {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} 非常相似。
 
     `UserScriptOptions` 对象具有以下属性：
-
     - `scriptMetadata` {{Optional_Inline}}
       - : 包含与注册的用户脚本关联的任意元数据属性的 `JSON` 对象。虽然该对象是任意的，但其必须是可序列化的，因此它与[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)兼容。此元数据用于从脚本传递详细信息到 [API 脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)。例如，提供需要由 [API 脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)注入的 API 子集的详细信息。本 API 并不会使用到该元数据。
     - `allFrames` {{Optional_Inline}}

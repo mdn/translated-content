@@ -4,9 +4,9 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
-Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Learn/CSS/First_steps) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
+Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Learn_web_development/Core/Styling_basics) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
 
 ## Informação: Lists
 

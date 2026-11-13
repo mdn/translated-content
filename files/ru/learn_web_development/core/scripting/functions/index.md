@@ -3,21 +3,21 @@ title: Функции — Переиспользуемые блоки кода
 slug: Learn_web_development/Core/Scripting/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 Другая важная концепция в кодировании — **функции** — позволяют хранить фрагмент кода, который выполняет одну задачу внутри определённого блока, а затем вызывать этот код всякий раз, когда вам это нужно, используя одну короткую команду, вместо того, чтобы вводить один и тот же код несколько раз.
 
 В этой статье мы рассмотрим фундаментальные концепции функций, такие как базовый синтаксис, способы вызова и их определения, область действия и параметры.
 
-| Предпосылки: | Начальная компьютерная грамотность, основы HTML и CSS, [первые шаги JavaScript](/ru/docs/Learn/JavaScript/First_steps). |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Цель:        | Понять фундаментальные основы функций языка JavaScript.                                                                 |
+| Предпосылки: | Начальная компьютерная грамотность, основы HTML и CSS, [первые шаги JavaScript](/ru/docs/conflicting/Learn_web_development/Core/Scripting). |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:        | Понять фундаментальные основы функций языка JavaScript.                                                                                     |
 
 ## Где можно встретить функции?
 
 В JavaScript, вы везде уведите функции. На самом деле, мы пользовались функциями на протяжении всего курса; только мы не говорили об этом слишком часто. Теперь наступило время, чтобы поговорить о функциях более конкретно и разобрать их синтаксис.
 
-В значительном количестве случаев, когда вы пользуетесь структурой JavaScript, в которой есть пара обычных скобок — `()` — и при этом, это не является структурой типа [цикл for](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while, или do...while цикл](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), или [if...else конструкция](/ru/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), вы используете функцию.
+В значительном количестве случаев, когда вы пользуетесь структурой JavaScript, в которой есть пара обычных скобок — `()` — и при этом, это не является структурой типа [цикл for](/ru/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop), [while, или do...while цикл](/ru/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while), или [if...else конструкция](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#if_..._else_statements), вы используете функцию.
 
 ## Встроенные функции браузера
 
@@ -58,7 +58,7 @@ var myNumber = Math.random();
 
 Фактически, часть кода, который вы вызываете, когда ссылаетесь на встроенную функцию браузера (воображаемое слово для её запуска или выполнения), не может быть написана на JavaScript — многие из этих функций вызывают части фонового кода браузера, который написан в основном на системных языках низкого уровня, таких как C ++, а не на веб-языках, таких как JavaScript.
 
-Имейте в виду, что некоторые встроенные функции браузера не являются частью основного языка JavaScript — некоторые из них являются частью API браузера, которые основываются на языке по умолчанию, чтобы обеспечить ещё большую функциональность (подробнее см. [один из предыдущих разделов этого курса](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript#так_что_же_он_действительно_может_делать)). Более подробно рассмотрим использование API браузера в более позднем модуле курса.
+Имейте в виду, что некоторые встроенные функции браузера не являются частью основного языка JavaScript — некоторые из них являются частью API браузера, которые основываются на языке по умолчанию, чтобы обеспечить ещё большую функциональность (подробнее см. [один из предыдущих разделов этого курса](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#так_что_же_он_действительно_может_делать)). Более подробно рассмотрим использование API браузера в более позднем модуле курса.
 
 ## Функции или методы
 
@@ -70,7 +70,7 @@ var myNumber = Math.random();
 
 ## Пользовательские функции
 
-В этом курсе так же использовались **пользовательские функции** — это функции, которые вы определяете в своём коде, а не внутри браузера. Каждый раз, когда вы видели произвольное слово (имя функции) с круглыми скобками прямо после него, вы использовали пользовательскую функцию. В нашем примере [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (подробнее см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) из нашей [статьи о циклах](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code) мы включили пользовательскую функцию `draw()`, которая выглядит так:
+В этом курсе так же использовались **пользовательские функции** — это функции, которые вы определяете в своём коде, а не внутри браузера. Каждый раз, когда вы видели произвольное слово (имя функции) с круглыми скобками прямо после него, вы использовали пользовательскую функцию. В нашем примере [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (подробнее см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) из нашей [статьи о циклах](/ru/docs/Learn_web_development/Core/Scripting/Loops) мы включили пользовательскую функцию `draw()`, которая выглядит так:
 
 ```js
 function draw() {
@@ -368,7 +368,8 @@ function greeting() {
 > [!NOTE]
 > Те же правила определения не применяются к циклу (например, `for() { ... }`) и условным блокам (например, `if() { ... }`) - они выглядят очень похожими, но это не одно и то же! Старайтесь не путать их.
 
-> **Примечание:** [ReferenceError: "x" is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined). Ошибка - это одна из наиболее распространённых проблем, с которой вы столкнётесь. Если вы получите эту ошибку, и вы уверены, что определили эту переменную, проверьте, в какой области она находится.
+> [!NOTE]
+> [ReferenceError: "x" is not defined](/ru/docs/Web/JavaScript/Reference/Errors/Not_defined). Ошибка - это одна из наиболее распространённых проблем, с которой вы столкнётесь. Если вы получите эту ошибку, и вы уверены, что определили эту переменную, проверьте, в какой области она находится.
 
 ### Функции внутри функций
 
@@ -432,4 +433,4 @@ function subFunction3(value) {
 
 <!---->
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

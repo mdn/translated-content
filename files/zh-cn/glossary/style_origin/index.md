@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在 {{Glossary("CSS")}} 中，有三类样式变化的来源，其类别统称为**样式来源**，分别是**用户代理来源**、**用户来源**和**作者来源**。
 
 - 用户代理来源

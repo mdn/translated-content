@@ -321,7 +321,6 @@ intersectionCallback(entries) => {
 ## Interfaces
 
 - {{domxref("IntersectionObserver")}}
-
   - : La interfaz principal para la API de Observador de Intersecciones. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar de manera asíncrona los cambios en la intersección entre uno o más elementos de destino (_target_) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el _viewport_ se denomina **root**.
 
 - {{domxref("IntersectionObserverEntry")}}
@@ -343,7 +342,7 @@ El HTML para este ejemplo es muy simple, con un elemento primario que será la c
 
 ### CSS
 
-El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
+El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/Guides/Transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
 
 ```css
 #box {

@@ -3,8 +3,6 @@ title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
 
-{{AddonSidebar}}
-
 Cet évènement est déclenché lorsque l'alarme se déclenche.
 
 ## Syntaxe
@@ -29,9 +27,7 @@ Cet évènement possède trois méthodes :
 ### Paramètres
 
 - `listener`
-
   - : La fonction qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
-
     - `alarm`
       - : {{WebExtAPIRef('alarms.Alarm')}}. L'alarme qui s'est déclenchée. La propriété `Alarm.name` pourra être utilisée afin de déterminer l'alarme qui s'est déclenchée.
 
@@ -56,5 +52,3 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

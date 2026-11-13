@@ -3,7 +3,7 @@ title: Как работает Веб
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _Как работает Веб_ даст упрощённое представление о том, что происходит при просмотре веб-страницы в браузере на вашем компьютере или телефоне.
 
@@ -33,7 +33,6 @@ _Как работает Веб_ даст упрощённое представ�
 - **DNS**: Система Доменных Имён напоминает записную книжку для веб-сайтов. Когда вы вводите веб-адрес в своём браузере, браузер обращается к DNS, чтобы найти реальный адрес веб-сайта, прежде чем он сможет его получить. Браузеру необходимо выяснить, на каком сервере живёт сайт, поэтому он может отправлять HTTP-сообщения в нужное место (см. Ниже). Это похоже на поиск адреса магазина, чтобы вы могли попасть в него.
 - **HTTP**: Протокол Передачи Гипертекста - это {{Glossary("Protocol", "протокол")}}, который определяет язык для клиентов и серверов, чтобы общаться друг с другом. Он, как язык, который вы используете, чтобы заказать ваш товар.
 - **Файлы компонентов**: сайт состоит из нескольких различных файлов, которые подобны различным отделам с товарами в магазине. Эти файлы бывают двух основных типов:
-
   - **Файлы кода**: сайты построены преимущественно на HTML, CSS и JavaScript, хотя вы познакомитесь с другими технологиями чуть позже.
   - **Материалы**: это собирательное название для всех других вещей, составляющих сайт, такие как изображения, музыка, видео, документы Word и PDF.
 
@@ -60,7 +59,7 @@ _Как работает Веб_ даст упрощённое представ�
 
 ## Смотрите также
 
-- [Как работает Интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Как работает Интернет](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — Протокол уровня приложений](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Давайте изучим его!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Коды ответов](https://dev.opera.com/articles/http-response-codes/)
@@ -69,4 +68,4 @@ _Как работает Веб_ даст упрощённое представ�
 
 Фото улицы: [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), [Kevin D](https://www.flickr.com/photos/kdigga/).
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenu("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

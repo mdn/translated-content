@@ -4,13 +4,13 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.
 
-| Pre-requisitos: | Conocimientos básicos de computadores. Entendimiento básico de HTML y CSS. Familiaridad con los conceptos básicos de JavaScript (vea [Primeros Pasos con JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Elementos básicos de JavaScript](/es/docs/Learn/JavaScript/Building_blocks)) y OOJS (vea [Conceptos básicos de los objetos JavaScript](/es/docs/Learn/JavaScript/Objects/Basics)). |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivos:      | Ganar experiencia en el uso de objetos y el uso de programación orientada a objetos en un contexto realista.                                                                                                                                                                                                                                                                                      |
+| Pre-requisitos: | Conocimientos básicos de computadores. Entendimiento básico de HTML y CSS. Familiaridad con los conceptos básicos de JavaScript (vea [Primeros Pasos con JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Elementos básicos de JavaScript](/es/docs/Learn_web_development/Core/Scripting)) y OOJS (vea [Conceptos básicos de los objetos JavaScript](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivos:      | Ganar experiencia en el uso de objetos y el uso de programación orientada a objetos en un contexto realista.                                                                                                                                                                                                                                                                                                                                 |
 
 ## Lanzemos algunas pelotas
 
@@ -98,7 +98,6 @@ Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla uti
 - Primero usamos [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
 - A continuación usamos el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
 - A continuación con el método [`arc()`](/es/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
-
   - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
   - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
   - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
@@ -253,7 +252,6 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
    ```
 
    Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
-
    - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
    - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
    - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
@@ -280,7 +278,7 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 - [requestAnimationFrame()](/es/docs/Web/API/Window/requestAnimationFrame)
 - [2D detección de colisiones](/es/docs/Games/Techniques/2D_collision_detection)
 - [3D detección de colisiones](/es/docs/Games/Techniques/3D_collision_detection)
-- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
+- [2D juego de ruptura usando sólo JavaScript](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) — un gran tutorial para principiantes sobre como construir un juego 2D.
 - [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

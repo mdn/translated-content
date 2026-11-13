@@ -70,5 +70,5 @@ _親である {{domxref("HTMLMediaElement")}} およびその祖先である {{d
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [HTML での音声と動画の使用](/ja/docs/Web/Media/HTML_media)
+- [HTML での音声と動画の使用](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)
 - このインターフェイスを実装した HTML 要素: {{HTMLElement("audio")}}

@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
 {{AddonSidebar}}
 
 > [!NOTE]
-> この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis) を見てください。
+> この API は [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools) に基づいていますが、Firefox では実装されていない多くの機能があり、よってここに文書化されていません。現在欠けている機能を見るには、 [Limitations of the devtools APIs](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis) を見てください。
 
 `devtools.panels` API によって開発ツール拡張機能では開発ツールウィンドウ内のユーザーインターフェイスの定義ができます。
 
@@ -49,7 +49,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

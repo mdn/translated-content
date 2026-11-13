@@ -217,4 +217,4 @@ exports.book_update_post = [
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms).
+- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).

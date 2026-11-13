@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
 
-{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)对象。
+一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
 
@@ -101,7 +101,7 @@ var myFunction = function namedFunction() {
 
 可以看到，上面的两个例子都不以 function 开头。不以 function 开头的函数语句就是函数表达式定义。
 
-当函数只使用一次时，通常使用**IIFE (_Immediately Invokable Function Expressions_)。**
+当函数只使用一次时，通常使用 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即调用函数表达式）。
 
 ```js
 (function () {
@@ -174,7 +174,8 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### 生成器函数的构造函数
 
-> **备注：** `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
+> [!NOTE]
+> `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
 
 > [!NOTE]
 > 不推荐使用构造器函数的构造函数 (`GeneratorFunction` constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
@@ -208,7 +209,6 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 - [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
 - [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
 - [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
@@ -284,7 +284,7 @@ alert(x); // throws an error
 
 正如第四个例子所展示的那样，函数名与被函数赋值的变量是不相同的。彼此之间没有关系。函数声明同时也创建了一个和函数名相同的变量。因此，与函数表达式定义不同，以函数声明定义的函数能够在它们被定义的作用域内通过函数名而被访问到：
 
-使用用 '`new Function'定义的函数没有函数名。` 然而，在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 `alert(new Function())` 输出：
+使用 `new Function` 定义的函数没有函数名。不过，其序列化形式看起来好像它拥有一个名叫“anonymous”的名称一样。比如，使用 `alert(new Function())` 输出：
 
 ```js
 function anonymous() {}

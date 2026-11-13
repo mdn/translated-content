@@ -2,10 +2,10 @@
 title: バナーと注意
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
-特定の API リファレンスのページでは、記述するコンテンツの使用方法に影響する重要な要素を強調するために、バナーやお知らせを表示しています。
+特定の API リファレンスのページでは、記述するコンテンツの使用方法に影響する重要な要素を強調するために、バナーや注意を表示しています。
 例えば、バナーは特定のインターフェイス、メソッド、プロパティが非推奨であり、実運用コードで使用すべきではない、または保護されたコンテキストでのみ使用することができる場合に強調表示するために使用します。
 
 バナーはページコンテンツ内のマクロを使用してレンダリングされます。
@@ -15,7 +15,7 @@ l10n:
 
 ## バナーマクロを追加する場所
 
-バナーは通常、ページのメタデータのすぐ下に挿入され、ページサイドバーのマクロの横に並んだマクロを使用して追加されます。例えば、下記ブロックでは、 `\{{SecureContext_Header}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示しています。また、 `\{{AvailableInWorkers}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[ウィンドウコンテキスト](/ja/docs/Web/API/Window)および[専用ワーカーコンテキスト](/ja/docs/Web/API/DedicatedWorkerGlobalScope)でのみ利用できることを示しています。さらに、 `\{{SeeCompatTable}}` が追加されており、このインターフェイスが実験的なものであることを示しています。
+バナーは通常、ページのメタデータのすぐ下に挿入され、ページサイドバーのマクロの横に並んだマクロを使用して追加されます。例えば、下記ブロックでは、 `\{{SecureContext_Header}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示しています。また、 `\{{AvailableInWorkers}}` マクロが使用されており、 {{domxref("AudioDecoder")}} インターフェイスが[ウィンドウコンテキスト](/ja/docs/Web/API/Window)および[専用ワーカーコンテキスト](/ja/docs/Web/API/DedicatedWorkerGlobalScope)でのみ利用できることを示しています。さらに、 `\{{SeeCompatTable}}` が追加されており、このインターフェイスが実験的なものであることを示しています。
 
 ```md
 ---
@@ -34,7 +34,7 @@ browser-compat: api.AudioDecoder
 
 以下のマクロは手動で追加する必要があります。
 
-- `\{{SecureContext_Header}}` — これは「**保護されたコンテキスト**」バナーを生成して、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能なことを示します。
+- `\{{SecureContext_Header}}` — これは「**保護されたコンテキスト**」バナーを生成して、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用可能なことを示します。
 - `\{{AvailableInWorkers}}` — これによって、「**ワーカーで利用できる**」というメモが生成され、その技術が[ワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API)で利用できることを示します。
 
 ## 自動的に追加されるバナー
@@ -42,15 +42,15 @@ browser-compat: api.AudioDecoder
 [browser compat data](https://github.com/mdn/browser-compat-data) リポジトリーに格納されるステータスに合わせて、以下のマクロが自動的にコンテンツに追加されます。
 
 - `\{{SeeCompatTable}}` — 「**これは実験的な技術です**」バナーを生成して、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
-- `\{{Deprecated_Header}}` — 「**非推奨**」バナーを生成して、この技術の利用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 - `\{{Non-standard_Header}}` — 「**標準外**」バナーを生成して、この技術が複数のブラウザーで実装されていても、正式な仕様書の一部ではないことを示します。
 
-値を変更するのであれば、 [browser-compat-data リポジトリーで機能の状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)してください。
+値を変更するのであれば、 [browser-compat-data リポジトリーで機能の状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能の状態を追加または更新する方法)してください。
 
 > [!NOTE]
 > コンテンツ内でこれらのマクロを手動で更新することはできますが、ブラウザー互換性データと一致しない値は置き換えられたり除去されたりします。
 
-> **メモ:** `\{{SeeCompatTable}}`、`\{{Deprecated_Header}}`、`\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental`、`deprecated`、`non-standard` のステータス値があります。
+> [!NOTE]
+> `\{{SeeCompatTable}}` または `\{{Non-standard_Header}}` のバナーがあるページは、ページメタデータにそれぞれ `experimental` または `non-standard` のステータス値があります。
 > このメタデータは、ヘッダーと同じときに自動的に更新されます。
 > バナーマクロはこのステータスメタデータには依存しません（しかし、いつか生成されるかもしれません）。
 
@@ -72,4 +72,5 @@ browser-compat: api.AudioDecoder
 
 - 上記バナーと同じページに、標準の「仕様書」の下位セクションとして「規格の状況」を追加します。
 
-> **メモ:** [Related Website Sets](/ja/docs/Web/API/Storage_Access_API/Related_website_sets) がランディングページのバナー、「規格の状況」セクション、何を記述べきかという例になります。
+> [!NOTE]
+> [共有ストレージ API](/ja/docs/Web/API/Shared_Storage_API) は、「規格の状況」節とその内容、およびランディングページのバナーの例です。

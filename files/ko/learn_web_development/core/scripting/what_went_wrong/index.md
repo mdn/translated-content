@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}
 
 앞선 글의 "숫자 알아맞히기" 게임을 따라 만들다가 프로그램이 동작하지 않았나요? 두려워 마세요. 이 글에서는 JavaScript 프로그램에서 그런 문제를 찾아 수정하는 방법에 대한 팁을 제공하여 여러분이 머리카락을 쥐어뜯지 않도록 지켜드리겠습니다.
 
@@ -103,7 +103,7 @@ l10n:
    동일한 오류이지만 브라우저마다 다른 방식으로 설명합니다.
 
    > [!NOTE]
-   > 이 오류는 함수 `checkGuess() {}` 블록에서 발생했기 때문에 페이지가 로드되자마자 나타나지 않았습니다. 나중에 [함수 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 자세히 알아보겠지만 함수 내부 코드는 함수 외부 코드와 별도의 범위에서 실행됩니다. 이 경우 코드가 시행되지 않았고 86번째 줄에서 `checkGuess()` 함수가 실행될 때까지 오류가 발생하지 않았습니다.
+   > 이 오류는 함수 `checkGuess() {}` 블록에서 발생했기 때문에 페이지가 로드되자마자 나타나지 않았습니다. 나중에 [함수 문서](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 자세히 알아보겠지만 함수 내부 코드는 함수 외부 코드와 별도의 범위에서 실행됩니다. 이 경우 코드가 시행되지 않았고 86번째 줄에서 `checkGuess()` 함수가 실행될 때까지 오류가 발생하지 않았습니다.
 
 4. 오류에 표시된 줄 번호는 80입니다. 80번째 줄을 살펴보면 다음 코드를 볼 수 있습니다.
 
@@ -285,4 +285,4 @@ function checkGuess( {
 - 이 글에는 없지만, JavaScript에는 더 많은 종류의 오류들이 있습니다. [JavaScript 오류 참고서](/ko/docs/Web/JavaScript/Reference/Errors)에서 오류 각각의 뜻을 자세히 설명하고 있습니다.
 - 이 글을 마친 후에도 어떻게 수정해야 할지 모르는 오류가 있으면 도움을 받을 수 있습니다! [커뮤니케이션 채널](/ko/docs/MDN/Community/Communication_channels)에서 도움을 요청하세요. 오류가 무엇인지 알려주시면 최선을 다해 도와드리겠습니다. 여러분의 코드를 문의에 포함하면 더 좋습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}

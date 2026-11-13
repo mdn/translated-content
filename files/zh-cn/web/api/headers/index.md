@@ -18,7 +18,7 @@ slug: Web/API/Headers
 一个实现了`Headers` 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: `for (var p of myHeaders)` 等价于 `for (var p of myHeaders.entries())`.
 
 > [!NOTE]
-> 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)参考找到更多关于可用 headers 的信息。
+> 你可以通过阅读我们的 [HTTP headers](/zh-CN/docs/Web/HTTP/Reference/Headers)参考找到更多关于可用 headers 的信息。
 
 ## 构造函数
 
@@ -34,7 +34,7 @@ slug: Web/API/Headers
 - {{domxref("Headers.entries()")}}
   - : 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对。
 - {{domxref("Headers.get()")}}
-  - : 以 {{domxref("ByteString")}} 的形式从 Headers 对象中返回指定 header 的全部值。
+  - : 以 {{jsxref("String")}} 的形式从 Headers 对象中返回指定 header 的全部值。
 - {{domxref("Headers.has()")}}
   - : 以布尔值的形式从 Headers 对象中返回是否存在指定的 header.
 - {{domxref("Headers.keys()")}}
@@ -74,5 +74,5 @@ myHeaders.get("Content-Type");
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

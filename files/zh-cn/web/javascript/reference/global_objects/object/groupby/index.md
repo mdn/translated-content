@@ -3,7 +3,7 @@ title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE]
 > 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.group()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
@@ -12,7 +12,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 
 当分组名称可以用字符串表示时，应使用此方法。如果你需要使用某个任意值作为键来对元素进行分组，请改用 {{jsxref("Map.groupBy()")}} 方法。
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 语法
 

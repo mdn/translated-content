@@ -13,7 +13,7 @@ slug: Web/API/Element/closest
 var elt = element.closest(selectors);
 ```
 
-- **`selectors`** - строка, а точнее {{domxref("DOMString")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
+- **`selectors`** - строка, а точнее {{jsxref("String")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
 - Результат - элемент DOM ({{domxref("Element")}}), либо null.
 
 ## Исключения
@@ -98,5 +98,5 @@ div.closest("div[title]"); //#block - так как ближе нет блоко
 ## Смотрите также
 
 - Интерфейс {{domxref("Element")}}.
-- [Синтаксис селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+- [Синтаксис селекторов](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - Другие методы, принимающие селекторы: {{domxref("element.querySelector()")}} и {{domxref("element.matches()")}}.

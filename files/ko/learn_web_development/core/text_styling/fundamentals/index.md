@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 이 기사에서는 {{glossary("CSS")}} 를 사용하여 텍스트 스타일링을 마스터하기 위한 과정을 시작합니다. 여기에서는 글꼴 굵기, 종류 및 스타일, 글꼴 약식 (shorthand), 텍스트 정렬 및 기타 효과, 줄 및 문자 간격 설정을 포함하여, 텍스트/글꼴 스타일링의 모든 기본 사항에 대해 자세히 설명합니다.
 
@@ -14,10 +14,10 @@ original_slug: Learn/CSS/Styling_text/Fundamentals
       <th scope="row">전제조건</th>
       <td>
         기본적인 컴퓨터의 이해, HTML 기본 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         > 둘러보기), CSS 기본 (study
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 소개</a
         > 둘러보기).
       </td>
@@ -37,7 +37,7 @@ original_slug: Learn/CSS/Styling_text/Fundamentals
 HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부의 텍스트는 요소의 내용 박스안에 배치됩니다. 콘텐츠 영역의 왼쪽 상단 (또는 RTL 언어 콘텐츠의 경우, 오른쪽 상단) 에서 시작하여 행의 끝으로 흐릅니다. 끝까지 도달하면 다음 줄로 내려가서 모든 내용이 박스에 들어갈 때까지 다음 줄로 계속 진행합니다. 텍스트 내용은 일련의 인라인 요소처럼 효과적으로 작동하며, 서로 인접한 줄에 배치되면 줄 끝에 도달할 때까지 줄 바꿈을 만들지 않거나, {{htmlelement("br")}} 요소를 사용하여 수동으로 줄 바꿈을 수행하지 않습니다.
 
 > [!NOTE]
-> 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model) 기사를 검토하여, 박스 모델 이론을 정리하십시오.
+> 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our [박스 모델](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model) 기사를 검토하여, 박스 모델 이론을 정리하십시오.
 
 텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.
 
@@ -45,7 +45,7 @@ HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부
 - **텍스트 레이아웃 스타일**: 텍스트의 간격 및 기타 레이아웃 기능에 영향을 주는 속성으로, 예를 들어 선 과 문자 사이의 간격 및 내용 박스 내에서 텍스트가 정렬되는 방식을 조작할 수 있습니다.
 
 > [!NOTE]
-> 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, 또는 [::first-letter](/ko/docs/Web/CSS/::first-letter)와 같은 텍스트 관련 의사 요소를 사용하십시오.(요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 의사 요소를 사용하십시오.
+> 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, 또는 [::first-letter](/ko/docs/Web/CSS/Reference/Selectors/::first-letter)와 같은 텍스트 관련 의사 요소를 사용하십시오.(요소 텍스트의 첫 번째 문자 선택), [::first-line](/ko/docs/Web/CSS/::first-line) (요소 텍스트의 첫 번째 행 선택) 또는 [::selection](/ko/docs/Web/CSS/Reference/Selectors/::selection) (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 의사 요소를 사용하십시오.
 
 ## 글꼴
 
@@ -71,7 +71,7 @@ HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부
 
 {{cssxref("color")}} 속성은 선택한 요소의 전경 내용의 색상을 설정합니다 (일반적으로 텍스트이지만, {{cssxref("text-decoration")}} 속성을 사용하여 텍스트에 배치되는 밑줄이나 오버라인과 같은 몇 가지 다른 것도 포함할 수 있습니다.
 
-`color` 은 모든 [CSS 색상 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#colors) 를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+`color` 은 모든 [CSS 색상 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) 를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```css
 p {
@@ -160,7 +160,8 @@ p {
 
 나열된 글꼴 중 사용 가능한 글꼴이 없는 경우, 브라우저가 최소한 대략 비슷한 것을 제공할 수 있도록 스택 끝에 적절한 일반 글꼴 이름을 제공하는 것이 좋습니다. 이 점을 강조하기 위해 다른 옵션을 사용할 수 없는 경우 단락에 브라우저의 기본 serif 글꼴이 지정됩니다. 일반적으로 Times New Roman은 sans-serif 글꼴에 적합하지 않습니다!
 
-> **참고:** `Trebuchet MS` 와 같이 둘 이상의 단어가 있는 글꼴 이름은 따옴표로 묶어야합니다, 예를 들면 `"Trebuchet MS"`.
+> [!NOTE]
+> `Trebuchet MS` 와 같이 둘 이상의 단어가 있는 글꼴 이름은 따옴표로 묶어야합니다, 예를 들면 `"Trebuchet MS"`.
 
 #### font-family 예제
 
@@ -193,7 +194,7 @@ p {
 
 ### 글꼴 크기
 
-이전 모듈의 [CSS 값 및 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units) 기사에서 [길이 및 크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)를 검토했습니다. 글꼴 크기({{cssxref("font-size")}} 속성으로 설정)는 이러한 대부분의 단위(및 [백분율](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)과 같은 기타 단위)로 측정된 값을 가질 수 있지만 텍스트 크기를 조정하는 데 사용하는 가장 일반적인 단위는 다음과 같습니다.
+이전 모듈의 [CSS 값 및 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units) 기사에서 [길이 및 크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size)를 검토했습니다. 글꼴 크기({{cssxref("font-size")}} 속성으로 설정)는 이러한 대부분의 단위(및 [백분율](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)과 같은 기타 단위)로 측정된 값을 가질 수 있지만 텍스트 크기를 조정하는 데 사용하는 가장 일반적인 단위는 다음과 같습니다.
 
 - `px` (픽셀): 원하는 텍스트 높이의 픽셀 수입니다. 이것은 절대 단위입니다. 거의 모든 상황에서 페이지의 글꼴에 대해 동일한 최종 계산 값을 생성합니다.
 - `em`s: 1em은 우리가 스타일링하고 있는 현재 요소의 부모 요소에 설정된 글꼴 크기와 같습니다(더 구체적으로는 부모 요소 안에 포함된 대문자 M의 너비). 서로 다른 글꼴 크기가 설정된 많은 중첩 요소가 있지만 아래에서 볼 수 있듯이 실행 가능합니다. 왜 귀찮게 할까요? 익숙해지면 매우 자연스럽고 `em`s를 사용하여 텍스트뿐만 아니라 모든 크기를 조정할 수 있습니다. ems를 사용하여 전체 웹 사이트 크기를 조정할 수 있으므로 유지 관리가 쉽습니다.
@@ -257,19 +258,16 @@ p {
 CSS는 텍스트의 시각적 무게/강조를 변경하는 네 가지 공통 속성을 제공합니다.
 
 - {{cssxref("font-style")}}: 이탤릭체 텍스트를 켜고 끄는 데 사용됩니다. 가능한 값은 다음과 같습니다(어떤 이유로 이탤릭체 스타일을 끄고 싶지 않는 한 이것을 거의 사용하지 않을 것입니다).
-
   - `normal`: 텍스트를 일반 글꼴로 설정합니다(기존 이탤릭체를 끕니다.)
   - `italic`: 사용 가능한 경우 글꼴의 기울임꼴 버전을 사용하도록 텍스트를 설정합니다. 사용할 수 없는 경우 기울임꼴 대신 기울임꼴을 시뮬레이트합니다.
   - `oblique`: 일반 버전을 기울여 만든 이탤릭체 글꼴의 시뮬레이션 버전을 사용하도록 텍스트를 설정합니다.
 
 - {{cssxref("font-weight")}}: 텍스트의 굵기를 설정합니다. 사용 가능한 글꼴 변형이 많은 경우(예: -light, -normal, -bold, -extrabold, -black 등) 많은 값을 사용할 수 있지만 현실적으로 `normal` 및 `bold`를 제외하고는 거의 사용하지 않습니다.
-
   - `normal`, `bold`: 일반 및 **굵은** 글꼴 두께
   - `lighter`, `bolder`: 현재 요소의 굵기를 부모 요소의 굵기보다 한 단계 더 가볍거나 무겁게 설정합니다.
   - `100`–`900`: 필요한 경우 위의 키워드보다 더 세분화된 제어를 제공하는 숫자 굵기 값입니다.
 
 - {{cssxref("text-transform")}}: 글꼴을 변환하도록 설정할 수 있습니다. 값은 다음과 같습니다.
-
   - `none`: 변형을 방지합니다.
   - `uppercase`: 모든 텍스트를 대문자로 변환합니다.
   - `lowercase`: 모든 텍스트를 소문자로 변환합니다.
@@ -277,7 +275,6 @@ CSS는 텍스트의 시각적 무게/강조를 변경하는 네 가지 공통 �
   - `full-width`: 모노스페이스 글꼴과 유사한 고정 너비 사각형 안에 작성되도록 모든 글리프를 변환하여 예를 들어 정렬할 수 있습니다. 라틴 문자와 아시아 언어 글리프(예: 중국어, 일본어, 한국어)
 
 - {{cssxref("text-decoration")}}: 글꼴에 대한 텍스트 장식을 설정/해제합니다.(주로 링크 스타일을 지정할 때 링크의 기본 밑줄을 설정 해제하는 데 사용합니다.) 사용 가능한 값은 다음과 같습니다.
-
   - `none`: 이미 존재하는 모든 텍스트 장식을 해제합니다.
   - `underline`: **텍스트에 밑줄을 긋습니다.**
   - `overline`: 텍스트에 오버라인을 제공합니다.
@@ -336,10 +333,10 @@ text-shadow: 4px 4px 5px red;
 
 네 가지 속성은 다음과 같습니다.
 
-1. 원본 텍스트에서 그림자의 수평 오프셋 — 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)를 사용할 수 있지만 가장 일반적으로 px를 사용합니다. 이 값이 포함되어야 합니다.
+1. 원본 텍스트에서 그림자의 수평 오프셋 — 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size)를 사용할 수 있지만 가장 일반적으로 px를 사용합니다. 이 값이 포함되어야 합니다.
 2. 원본 텍스트에서 그림자의 수직 오프셋. 그림자를 왼쪽/오른쪽이 아닌 위/아래로 이동한다는 점을 제외하면 기본적으로 수평 오프셋과 동일하게 동작합니다. 이 값이 포함되어야 합니다.
-3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)를 사용할 수 있습니다.
-4. 모든 CSS [색상 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#colors)를 사용할 수 있는 그림자의 기본 색상입니다. 포함되지 않은 경우 기본적으로 `black`입니다.
+3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size)를 사용할 수 있습니다.
+4. 모든 CSS [색상 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors)를 사용할 수 있는 그림자의 기본 색상입니다. 포함되지 않은 경우 기본적으로 `black`입니다.
 
 > [!NOTE]
 > 양수 오프셋 값은 그림자를 오른쪽과 아래로 이동하지만 음수 오프셋 값을 사용하여 그림자를 왼쪽과 위쪽으로 이동할 수도 있습니다(예: `-1px -1px`).
@@ -463,7 +460,7 @@ p {
 
 ### 선 높이
 
-{{cssxref("line-height")}} 속성은 각 텍스트 줄의 높이를 설정합니다. 이 속성은 대부분의 [길이 및 크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)를 사용할 수 있지만 승수 역할을 하고 일반적으로 최상의 옵션으로 간주되는 단위 없는 값을 사용할 수도 있습니다. {{cssxref("font-size")}}를 곱하여 `line-height`를 얻습니다. 본문 텍스트는 일반적으로 줄 간격이 떨어져 있을 때 더 보기 좋고 읽기 쉽습니다. 권장 줄 높이는 약 1.5–2(두 배 간격)입니다. 따라서 텍스트 줄을 글꼴 높이의 1.5배로 설정하려면 다음을 사용합니다.
+{{cssxref("line-height")}} 속성은 각 텍스트 줄의 높이를 설정합니다. 이 속성은 대부분의 [길이 및 크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size)를 사용할 수 있지만 승수 역할을 하고 일반적으로 최상의 옵션으로 간주되는 단위 없는 값을 사용할 수도 있습니다. {{cssxref("font-size")}}를 곱하여 `line-height`를 얻습니다. 본문 텍스트는 일반적으로 줄 간격이 떨어져 있을 때 더 보기 좋고 읽기 쉽습니다. 권장 줄 높이는 약 1.5–2(두 배 간격)입니다. 따라서 텍스트 줄을 글꼴 높이의 1.5배로 설정하려면 다음을 사용합니다.
 
 ```css
 line-height: 1.5;
@@ -517,7 +514,7 @@ p {
 
 ### 문자 및 단어 간격
 
-{{cssxref("letter-spacing")}} 및 {{cssxref("word-spacing")}} 속성을 사용하면 텍스트에서 문자와 단어 사이의 간격을 설정할 수 있습니다. 자주 사용하지는 않지만 특정 모양을 얻거나 특히 조밀한 글꼴의 가독성을 향상시키는 용도를 찾을 수 있습니다. 대부분의 [길이 및 크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)를 사용할 수 있습니다.
+{{cssxref("letter-spacing")}} 및 {{cssxref("word-spacing")}} 속성을 사용하면 텍스트에서 문자와 단어 사이의 간격을 설정할 수 있습니다. 자주 사용하지는 않지만 특정 모양을 얻거나 특히 조밀한 글꼴의 가독성을 향상시키는 용도를 찾을 수 있습니다. 대부분의 [길이 및 크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size)를 사용할 수 있습니다.
 
 예를 들어, 예제에서 {{htmlelement("p")}} 요소의 첫 번째 줄에 다음을 적용한 경우입니다.
 
@@ -645,8 +642,7 @@ font:
     id="code"
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea
-  >
+  <p>Some sample text for your delight</p></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -655,8 +651,7 @@ font:
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 p {
 
-  }</textarea
-  >
+  }</textarea>
 
   <h2>Output</h2>
   <div
@@ -706,4 +701,4 @@ window.addEventListener("load", drawOutput);
 
 이 기사에서 텍스트를 가지고 노는 것이 즐거웠기를 바랍니다! 다음 기사에서는 HTML 목록 스타일 지정에 대해 알아야 할 모든 정보를 제공합니다.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

@@ -3,7 +3,10 @@ title: WebVR 的概念
 slug: Web/API/WebVR_API/Concepts
 ---
 
-{{APIRef("WebVR API")}}{{deprecated_header}}
+{{APIRef("WebVR API")}}
+
+> [!NOTE]
+> WebVR API 已被 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 取代。WebVR 从未被批准为标准，仅有极少数浏览器实现并默认启用，且支持的设备数量很少。
 
 这篇文章探讨了一些关于虚拟现实（VR）的概念及其背后的理论基础。如果你是一个进入这个领域的新手，在你深入学习相关代码知识前，非常有必要对于以下的话题做一定的了解。
 
@@ -58,24 +61,20 @@ slug: Web/API/WebVR_API/Concepts
 通过 HMD 输出的信息包含一下四种类别：
 
 1. 位置——HMD 设备的位置基于一个 3D 坐标空间中的三个轴——X 代表左右移动，Y 代表上下移动，Z 代表朝向和远离位置传感设备。在 WEBVR 中：
-
    - x position is represented by {{domxref("VRPositionState.position")}}.x.
    - y position is represented by {{domxref("VRPositionState.position")}}.y.
    - z position is represented by {{domxref("VRPositionState.position")}}.z.
 
 2. 方位——HMD 在三维坐标空间中绕三条轴线的旋转。Pitch 为绕 x 轴旋转，yaw 为绕 y 轴旋转，而 roll 则为绕 z 轴旋转。在 WEBVR 中：
-
    - Pitch is represented by {{domxref("VRPositionState.orientation")}}.x.
    - Yaw is represented by {{domxref("VRPositionState.orientation")}}.y.
    - Roll is represented by {{domxref("VRPositionState.orientation")}}.z.
 
 3. 速度——在 VR 中有两种需要被考虑的速度：
-
    - 线速度——HMD 追踪的沿着三种轴向之一的速度。这类的信息可以通过 {{domxref("VRPositionState.linearVelocity")}} 接收（x、y 和 z）
    - 角速度——就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以通过 {{domxref("VRPositionState.angularVelocity")}} 接收（x、y 和 z）
 
 4. 加速度——在 VR 中有两种需要被考虑的加速度：
-
    - 线性加速度——HMD 设备沿着轴向追踪的加速度。这类的信息可以通过 {{domxref("VRPositionState.linearAcceleration")}} 接收（x、y 和 z）
    - 角度加速度——HMD 设备绕着轴旋转的加速度。这类的信息可以通过 {{domxref("VRPositionState.angularAcceleration")}} 接收（x、y 和 z）
 

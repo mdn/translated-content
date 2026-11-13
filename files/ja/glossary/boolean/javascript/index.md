@@ -1,17 +1,15 @@
 ---
-title: Boolean (ブーリアン) (JavaScript)
+title: Boolean (論理型) (JavaScript)
 slug: Glossary/Boolean/JavaScript
 l10n:
-  sourceCommit: 53e776eeb25d24e413d7a404257faebe1b7ce1be
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**論理型** (Boolean) は JavaScript における {{Glossary("Primitive", "プリミティブ値")}}で、`true` か `false` を表します。
 
-JavaScript において **Boolean** は [プリミティブ値](/ja/docs/Glossary/Primitive)で `true` か `false` を表します。
-
-{{jsxref("Boolean")}} オブジェクトはプリミティブ値の {{Glossary("wrapper")}} です。
+{{jsxref("Boolean")}} オブジェクトは Boolean プリミティブの{{Glossary("wrapper", "ラッパー")}}です。
 
 ## 関連情報
 
-- [Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript グローバルオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)

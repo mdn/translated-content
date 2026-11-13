@@ -1,15 +1,14 @@
 ---
 title: Math.abs()
+short-title: abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 l10n:
-  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+{{InteractiveExample("JavaScript デモ: Math.abs()")}}
 
 ```js interactive-example
 function difference(a, b) {
@@ -17,13 +16,13 @@ function difference(a, b) {
 }
 
 console.log(difference(3, 5));
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(difference(5, 3));
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(difference(1.23456, 7.89012));
-// Expected output: 6.6555599999999995
+// 予想される結果: 6.6555599999999995
 ```
 
 ## 構文
@@ -58,9 +57,9 @@ Math.abs(1); // 1
 Math.abs(Infinity); // 無限大
 ```
 
-### Math.abs() の動作
+### 引数の変換
 
-空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を渡すと空文字列を返し、空の配列は 0 を返します。
+`Math.abs()` は[引数を数値に変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)。変換できない値は {{jsxref("NaN")}} となり、`Math.abs()` も {{jsxref("NaN")}} を返します。
 
 ```js
 Math.abs("-1"); // 1

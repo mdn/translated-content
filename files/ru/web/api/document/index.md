@@ -5,11 +5,11 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
+Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Web/API/Document_Object_Model) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
 Объект **document** может быть получен из разных API:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Element/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Reference/Elements/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
 - Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
 - Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.

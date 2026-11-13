@@ -12,4 +12,4 @@ l10n:
 ## 関連情報
 
 - Wikipedia 上の記事: [ドメイン名](https://ja.wikipedia.org/wiki/ドメイン名)
-- [ドメイン名を理解する](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [ドメイン名を理解する](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

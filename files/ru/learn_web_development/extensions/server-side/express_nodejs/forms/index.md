@@ -3,17 +3,17 @@ title: "Учебник Express часть 6: Работа с формами"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 В этой главе мы покажем вам как работать с HTML формами в Express, используя Pug, и в частности как написать формы для создания, обновления и удаления документов из базы данных.
 
-| Предварительные знания: | Завершите изучение предыдущих тем учебника, включая [Учебник Express Часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data) |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                   | Понять, как писать формы для получения данных от пользователей и обновлять базу данных с этими данными.                                                                 |
+| Предварительные знания: | Завершите изучение предыдущих тем учебника, включая [Учебник Express Часть 5: Отображение данных библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data) |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                   | Понять, как писать формы для получения данных от пользователей и обновлять базу данных с этими данными.                                                                                            |
 
 ## Обзор
 
-[HTML форма](/ru/docs/Learn/Forms) - это группа из одного или нескольких полей / виджетов на веб-странице, которая может использоваться для сбора информации от пользователей для отправки на сервер. Формы представляют собой гибкий механизм для сбора данных, вводимых пользователем, поскольку существуют подходящие входные данные форм, доступные для ввода различных типов данных-текстовые поля, флажки, переключатели, средства выбора даты и т. д. Формы также являются относительно безопасным способом обмена данными с сервером, поскольку они позволяют отправлять данные в запросах `POST` с защитой от подделки межсайтовых запросов.
+[HTML форма](/ru/docs/Learn_web_development/Extensions/Forms) - это группа из одного или нескольких полей / виджетов на веб-странице, которая может использоваться для сбора информации от пользователей для отправки на сервер. Формы представляют собой гибкий механизм для сбора данных, вводимых пользователем, поскольку существуют подходящие входные данные форм, доступные для ввода различных типов данных-текстовые поля, флажки, переключатели, средства выбора даты и т. д. Формы также являются относительно безопасным способом обмена данными с сервером, поскольку они позволяют отправлять данные в запросах `POST` с защитой от подделки межсайтовых запросов.
 
 Работа с формами может быть сложной! Разработчику нужно написать HTML код для форм, валидацию и правильно анализировать введённые данные на сервере (и, возможно, также в браузере), отобразить форму с сообщениями об ошибках, чтобы сообщить пользователям о любых недопустимых полях, обработать данные, когда они были успешно отправлены, и, наконец, каким-то образом ответить пользователю о том, что результат успешен.
 
@@ -24,7 +24,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 
 ### HTML Forms
 
-Первый краткий обзор [HTML Forms](/ru/docs/Learn/Forms). Рассмотрим простую HTML-форму с одним текстовым полем для ввода имени некоторой "команды" и связанной с ней меткой:
+Первый краткий обзор [HTML Forms](/ru/docs/Learn_web_development/Extensions/Forms). Рассмотрим простую HTML-форму с одним текстовым полем для ввода имени некоторой "команды" и связанной с ней меткой:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -48,7 +48,6 @@ Input `submit` будет отображаться в виде кнопки (п�
 
 - `action`: ресурс/URL-адрес, по которому данные должны отправляться на обработку при отправке формы. Если это не установлено (или установлено в пустую строку), то форма будет отправлена назад к URL текущей страницы.
 - `method`: Метод HTTP, используемый для отправки данных: `POST` or `GET`.
-
   - Метод `POST` должен всегда использоваться, если данные собираются привести к изменению базы данных сервера, потому что это может быть сделано более устойчивым к атакам запроса подделки межсайтового.
   - Метод `GET` следует использовать только для форм, которые не изменяют пользовательские данные (например, форма поиска). Рекомендуется, когда вы хотите, чтобы иметь возможность делать закладки или поделиться URL.
 
@@ -63,7 +62,6 @@ Input `submit` будет отображаться в виде кнопки (п�
 Как показано на диаграмме выше, основные действия, которые необходимо выполнить коду обработки форм:
 
 1. Отображение формы по умолчанию при первом запросе пользователем.
-
    - Форма может содержать пустые поля (например, если вы создаёте новую запись), или она может быть предварительно заполнена начальными значениями (например, если вы изменяете запись или имеете полезные начальные значения по умолчанию).
 
 2. Получение данных, отправленных пользователем, обычно в запросе HTTP `POST`.
@@ -95,7 +93,8 @@ npm install express-validator
 
 #### Использование express-validator
 
-> **Примечание:** [express-validator](https://github.com/ctavan/express-validator#express-validator) руководство на Github предоставляет хороший обзор API. Мы рекомендуем вам прочитать это, чтобы получить представление о всех его возможностях (включая создание пользовательских валидаторов). Ниже мы рассмотрим только подмножество, которое полезно для _LocalLibrary_.
+> [!NOTE]
+> [express-validator](https://github.com/ctavan/express-validator#express-validator) руководство на Github предоставляет хороший обзор API. Мы рекомендуем вам прочитать это, чтобы получить представление о всех его возможностях (включая создание пользовательских валидаторов). Ниже мы рассмотрим только подмножество, которое полезно для _LocalLibrary_.
 
 Для того, чтобы использовать валидатор в наших контроллерах, мы должны требовать функции, которые мы хотим использовать из модулей **'express-validator/check**' и **'express-validator/filter**', как показано ниже:
 
@@ -173,7 +172,7 @@ const { sanitizeBody } = require("express-validator/filter");
 
 Чтобы реализовать наш код обработки форм, нам понадобятся два маршрута с одинаковым шаблоном URL. Первый (`GET`) маршрут используется для отображения новой пустой формы создания объекта. Второй маршрут (`POST`) используется для проверки введённых пользователем данных, а затем сохранения информации и перенаправления на страницу сведений (если данные верны) или повторного отображения формы с ошибками (если данные неверны).
 
-Мы уже создали маршруты для всех страниц создания нашей модели в **/routes/catalog.js** (in a [previous tutorial](/ru/docs/Learn/Server-side/Express_Nodejs/routes)). Например, жанровые маршруты показаны ниже:
+Мы уже создали маршруты для всех страниц создания нашей модели в **/routes/catalog.js** (in a [previous tutorial](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)). Например, жанровые маршруты показаны ниже:
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
@@ -190,9 +189,9 @@ router.post("/genre/create", genre_controller.genre_create_post);
 1. [Форма для создания Genre](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — Определение нашей страницы для создания объектов `Genre`.
 2. [Форма для создания Author](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — Определение страницы для создания объектов `Author`.
 3. [Форма для создания Book](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — Определение страницы/формы для создания объектов `Book`.
-4. [Форма для создания BookInstance](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — Определение страницы/формы для создания объектов `BookInstance`.
-5. [Форма для удаления Author](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — Определение страницы для удаления объектов `Author`.
-6. [Форма для обновления Book](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — Определение страницы для обновления объектов `Book`.
+4. [Форма для создания BookInstance](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — Определение страницы/формы для создания объектов `BookInstance`.
+5. [Форма для удаления Author](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form) — Определение страницы для удаления объектов `Author`.
+6. [Форма для обновления Book](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form) — Определение страницы для обновления объектов `Book`.
 
 ## Испытайте себя
 
@@ -225,16 +224,16 @@ _Express_, Node.js и сторонние пакеты, полученные с �
 
 - Пакет [express-validator](https://www.npmjs.com/package/express-validator) (документация на npm).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## Содержание этого модуля (блока статей)
 
-- [Введение в Express/Node](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Настройка окружения для разработки на Node.js (Express)](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Учебник Express: сайт Local Library](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Учебник Express, часть 2: Создание скелета сайта](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Учебник Express, часть 3: Использование базы данных (с помощью Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Учебник Express, часть 4: Маршруты и контроллеры](/ru/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Учебник Express, часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Учебник Express, часть 6: Работа с формами](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Учебник Express, часть 7: Ввод сайта в эксплуатацию](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Введение в Express/Node](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
+- [Настройка окружения для разработки на Node.js (Express)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Учебник Express: сайт Local Library](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Учебник Express, часть 2: Создание скелета сайта](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Учебник Express, часть 3: Использование базы данных (с помощью Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
+- [Учебник Express, часть 4: Маршруты и контроллеры](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)
+- [Учебник Express, часть 5: Отображение данных библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- [Учебник Express, часть 6: Работа с формами](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
+- [Учебник Express, часть 7: Ввод сайта в эксплуатацию](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment)

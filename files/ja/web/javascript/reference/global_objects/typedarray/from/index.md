@@ -1,21 +1,20 @@
 ---
 title: TypedArray.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.from()", "shorter")}}
 
 ```js interactive-example
 const uint16 = Int16Array.from("12345");
 
 console.log(uint16);
-// Expected output: Int16Array [1, 2, 3, 4, 5]
+// 予想される結果: Int16Array [1, 2, 3, 4, 5]
 ```
 
 ## 構文
@@ -34,6 +33,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 - {{jsxref("Uint16Array")}}
 - {{jsxref("Int32Array")}}
 - {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 - {{jsxref("BigInt64Array")}}
@@ -136,7 +136,7 @@ console.log(Int8Array.from.call(NotArray2, [1, 2, 3]));
 
 ## 関連情報
 
-- [`TypedArray.from` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.from` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}

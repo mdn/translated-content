@@ -11,7 +11,8 @@ l10n:
 
 `WebSocket` を構築するには、 [`WebSocket()`](/ja/docs/Web/API/WebSocket/WebSocket) コンストラクターを使用してください。
 
-> **メモ:** `WebSocket` API には[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 CPU 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxref("WebSocketStream")}} を参照してください。
+> [!NOTE]
+> `WebSocket` API には[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 CPU 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxref("WebSocketStream")}} を参照してください。
 
 {{InheritanceDiagram}}
 

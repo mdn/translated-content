@@ -282,7 +282,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 接下来我们创建一个事件处理器（event handler），开始说出在文本框中输入的文本。我们把 [onsubmit](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) 处理器挂在表单上，当 <kbd>Enter</kbd>/<kbd>Return</kbd> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的 {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} 实例——把文本输入框中的值作为参数传递。
 
-接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的 `data-name` 属性，找到 `name` 匹配该属性值的 {{domxref("SpeechSynthesisVoice")}} 对象。把匹配的语音对象设置为{{domxref("SpeechSynthesisUtterance.voice")}} 的属性值。
+接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Reference/Elements/option) 元素。然后使用元素的 `data-name` 属性，找到 `name` 匹配该属性值的 {{domxref("SpeechSynthesisVoice")}} 对象。把匹配的语音对象设置为{{domxref("SpeechSynthesisUtterance.voice")}} 的属性值。
 
 最后，我们设置 [`SpeechSynthesisUtterance.pitch`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pitch) 和[`SpeechSynthesisUtterance.rate`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/rate) 属性值为对应范围表单元素中的值。哈哈所有准备工作就绪，调用 [`SpeechSynthesis.speak()`](/zh-CN/docs/Web/API/SpeechSynthesis/speak) 开始说话。把 [`SpeechSynthesisUtterance`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance) 实例作为参数传递。
 

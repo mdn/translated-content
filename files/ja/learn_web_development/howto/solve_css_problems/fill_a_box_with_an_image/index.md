@@ -1,17 +1,16 @@
 ---
 title: 画像を歪ませずにボックスを埋めるには
+short-title: ボックスを画像で埋める
 slug: Learn_web_development/Howto/Solve_CSS_problems/Fill_a_box_with_an_image
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 451c6b58988664128473a881871707c5ec9737f2
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、HTML 画像をボックスを完全に埋めるように表示させるテクニックを学ぶことができます。
 
 ## object-fit の使用
 
-HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加すると、画像は画像ファイルや HTML の [`width`](/ja/docs/Web/HTML/Element/img#width)、[`height`](/ja/docs/Web/HTML/Element/img#height) 属性から得たサイズとアスペクト比が使われます。時には、画像を配置した枠を完全に埋めるようにしたい場合があります。このような場合、まず、画像のアスペクト比がコンテナーと合わない場合にどうするかを決める必要があります。
+HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加すると、画像は画像ファイルや HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/img#width)、[`height`](/ja/docs/Web/HTML/Reference/Elements/img#height) 属性から得たサイズとアスペクト比が使われます。時には、画像を配置した枠を完全に埋めるようにしたい場合があります。このような場合、まず、画像のアスペクト比がコンテナーと合わない場合にどうするかを決める必要があります。
 
 1. 画像は、アスペクト比を保ったまま完全に枠内に収まるようにし、大きすぎて収まらない辺はトリミングする。
 2. 画像はボックス内に収まるようにし、小さすぎる辺は背景が棒状に透けて見えるようにする。
@@ -47,7 +46,7 @@ HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加す
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
 }
 
 .box img {

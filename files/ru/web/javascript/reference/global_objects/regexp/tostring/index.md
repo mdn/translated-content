@@ -21,13 +21,13 @@ regexObj.toString()
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/RegExp", "RegExp")}} переопределяет метод `toString()` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод `toString()` возвращает строковое представление регулярного выражения.
+Объект {{jsxref("RegExp")}} переопределяет метод `toString()` объекта {{jsxref("Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("RegExp")}}, метод `toString()` возвращает строковое представление регулярного выражения.
 
 ## Примеры
 
 ### Пример: использование метода `toString()`
 
-Следующий пример отображает строковое значение объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}:
+Следующий пример отображает строковое значение объекта {{jsxref("RegExp")}}:
 
 ```js
 var myExp = new RegExp("a+b+c");

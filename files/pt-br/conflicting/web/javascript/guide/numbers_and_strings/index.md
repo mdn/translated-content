@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 Esse capítulo introduz como trabalhar com strings e texto em JavaScript.
 
@@ -154,11 +154,11 @@ Para mais informações, leia sobre [Template strings](/pt-BR/docs/Web/JavaScrip
 
 ## Internacionalização
 
-O objeto {{jsxref("Intl")}} é o _namespace_ para a API de Internacionalização do ECMAScript, que oferece comparação de strings sensíveis à linguagem, formatação de números, e formatação de datas e horas. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objeto `Intl`.
+O objeto {{jsxref("Intl")}} é o _namespace_ para a API de Internacionalização do ECMAScript, que oferece comparação de strings sensíveis à linguagem, formatação de números, e formatação de datas e horas. Os construtores para os objetos {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, e {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} são propriedades do objeto `Intl`.
 
 ### Formatação de data e hora
 
-O objeto {{jsxref("DateTimeFormat")}} é útil para a formatação de data e hora. O código a seguir formata uma data em inglês no formato que é utilizado nos Estados Unidos. (O resultado é diferente em outro fuso horário).
+O objeto {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} é útil para a formatação de data e hora. O código a seguir formata uma data em inglês no formato que é utilizado nos Estados Unidos. (O resultado é diferente em outro fuso horário).
 
 ```js
 var msPorDia = 24 * 60 * 60 * 1000; // número de milisegundos em um dia
@@ -181,7 +181,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 ### Formatação de números
 
-O objeto {{jsxref("NumberFormat")}} é útil para formatar números, por exemplo unidade monetária.
+O objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}} é útil para formatar números, por exemplo unidade monetária.
 
 ```js
 var precoGasolina = new Intl.NumberFormat("en-US", {
@@ -202,7 +202,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 ### Collation
 
-O objeto {{jsxref("Collator")}} é usado para comparar e ordenar strings.
+O objeto {{jsxref("Intl/Collator", "Collator")}} é usado para comparar e ordenar strings.
 
 Por exemplo, existem atualmente duas ordens diferentes de classificação no Alemão: _listaTelefônica_ e _dicionário_. A ordenação da _listaTelefônica_ enfatiza o som, e é como se "ä", "ö", e assim por diante, fossem expandidos para "ae", "oe", e assim sucessivamente, para definir a ordem.
 
@@ -228,4 +228,4 @@ console.log(names.sort(dicionarioAlemao.compare).join(", "));
 
 Para mais informação sobre a API {{jsxref("Intl")}}, veja também [Introducing the JavaScript Internationalization API (em inglês)](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

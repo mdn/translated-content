@@ -3,8 +3,6 @@ title: 默认参数值
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 **函数默认参数**允许在没有值或 `undefined` 被传入时使用默认形参。
 
 {{InteractiveExample("JavaScript Demo: Functions Default")}}
@@ -23,7 +21,7 @@ console.log(multiply(5));
 
 ## 语法
 
-```plain
+```js-nolint
 function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
     statements
 }

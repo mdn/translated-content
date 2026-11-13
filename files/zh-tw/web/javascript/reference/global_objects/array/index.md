@@ -3,8 +3,6 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 ---
 
-{{JSRef}}
-
 JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高階（high-level）、似列表（list-like）的物件。陣列在 Javascript 裡面並沒有固定的長度與型別。由於陣列的長度可以隨時被改變，所以並不能保證陣列的密度。這取決於開發者如何使用陣列。一般來說，這是個非常方便的特性，但如果這並不適用於你的開發工作，你也許會考慮使用型別陣列。
 
 ## 語法
@@ -26,7 +24,7 @@ new Array(arrayLength)
 
 Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合你的用途，你可能會想使用型別陣列（typed arrays）。
 
-有些人認為即便會發生警告，仍然[不應該使用關聯陣列](https://andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
+有些人認為即便會發生警告，仍然[不應該使用關聯陣列](https://andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
 
 ### 存取陣列元素
 
@@ -143,7 +141,7 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : `Array` 建構子的長度為 1。
 - [`Array[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 用來建立衍生物件的建構函數。
-- {{jsxref("Array.prototype")}}
+- {{jsxref("Array")}}
   - : 可加入屬性至所有陣列物件。
 
 ## 方法
@@ -157,7 +155,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 ## `Array` 實例
 
-所有的陣列實例都繼承自 {{jsxref("Array.prototype")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。
+所有的陣列實例都繼承自 {{jsxref("Array")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。
 
 ### 屬性
 
@@ -196,9 +194,9 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
-- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
+- {{jsxref("Object.groupBy()", "Array.prototype.group()")}} {{Experimental_Inline}}
   - : Groups the elements of an array into an object according to the strings returned by a test function.
-- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
+- {{jsxref("Map.groupBy()", "Array.prototype.groupToMap()")}} {{Experimental_Inline}}
   - : Groups the elements of an array into a {{jsxref("Map")}} according to values returned by a test function.
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.

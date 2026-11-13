@@ -202,7 +202,7 @@ Si realmente eres un principiante en el desarrollo web, tendrás que estudiar y 
 
 Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobre lo que hiciste y mantener algunos ejemplos de código mínimos en un directorio en algún lugar para que puedas mirar hacia atrás en el trabajo anterior.
 
-Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
+Además, la web tiene [herramientas de desarrollo](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
 
 > [!NOTE]
 > Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
@@ -242,7 +242,8 @@ Si deseas buscar algo que tenga palabras de moda menos obvias, debes pensar en q
 
 Si tienes un problema con algún código y aparece un mensaje de error específico, a menudo es una buena idea copiar el mensaje de error en tu motor de búsqueda y utilizarlo como término de búsqueda. Si otras personas han tenido el mismo problema, es probable que haya algunos artículos o publicaciones de blog al respecto en lugares como MDN o Stack Overflow.
 
-> **Nota:** [Stack Overflow](https://stackoverflow.com/) es un sitio web realmente útil; básicamente es una enorme base de datos de preguntas y respuestas seleccionadas sobre diversas tecnologías y técnicas relacionadas. Probablemente encontrarás una respuesta que responda a tu pregunta. Si no, puedes hacer una pregunta y ver si alguien puede ayudarte.
+> [!NOTE]
+> [Stack Overflow](https://stackoverflow.com/) es un sitio web realmente útil; básicamente es una enorme base de datos de preguntas y respuestas seleccionadas sobre diversas tecnologías y técnicas relacionadas. Probablemente encontrarás una respuesta que responda a tu pregunta. Si no, puedes hacer una pregunta y ver si alguien puede ayudarte.
 
 #### Prueba en el navegador
 

@@ -2,14 +2,12 @@
 title: 密钥散列消息认证码（HMAC）
 slug: Glossary/HMAC
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
 
-{{GlossarySidebar}}
+**密钥散列消息认证码**（HMAC）是一个被用于{{Glossary("cryptography", "密码学")}}的认证消息机制。
 
-**密钥散列消息认证码**（HMAC）是一个被用于{{Glossary("cryptography", "密码学")}}的认证消息协议。
-
-该协议可以使用于任何的{{Glossary("Cryptographic hash function", "密码学函数")}}。它的强度依赖底层的函数（例如 SHA1 或 MD5）以及被选中的密钥。出于这样使用上的组合，HMAC 认证{{Glossary("Algorithm", "算法")}}通常是以组合名字出现，如 HMAC-SHA1。
+该协议可以使用于任何的{{Glossary("hash function", "密码散列函数")}}。它的强度依赖底层的散列函数以及被选中的密钥。出于这样使用上的组合，HMAC 认证{{Glossary("Algorithm", "算法")}}通常是以组合名字出现，如 HMAC-SHA2。
 
 HMAC 通常用于确保完整性和身份验证。
 

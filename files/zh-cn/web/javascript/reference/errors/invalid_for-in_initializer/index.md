@@ -3,8 +3,6 @@ title: "SyntaxError: for-in loop head declarations may not have initializers"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain

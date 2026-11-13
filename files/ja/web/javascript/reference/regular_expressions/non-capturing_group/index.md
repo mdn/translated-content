@@ -2,10 +2,8 @@
 title: "非キャプチャグループ: (?:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Non-capturing_group
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar}}
 
 **非キャプチャグループ**はサブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。これは JavaScript で発生した[グループ化演算子](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)のように動作します。[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)とは異なり、一致したテキストを記憶しないため、パフォーマンスが向上し、パターンが有用なキャプチャグループを含む場合の混乱を避けることができます。
 

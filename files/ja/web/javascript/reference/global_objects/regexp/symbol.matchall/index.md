@@ -1,15 +1,14 @@
 ---
 title: RegExp.prototype[Symbol.matchAll]()
+short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`[Symbol.matchAll]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
 
-**`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
-
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.matchAll]()", "taller")}}
 
 ```js interactive-example
 class MyRegExp extends RegExp {
@@ -22,9 +21,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("-[0-9]+", "g");
+const re = new MyRegExp("-\\d+", "g");
 console.log("2016-01-02|2019-03-07".matchAll(re));
-// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+// 予想される結果: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
 ```
 
 ## 構文
@@ -90,7 +89,7 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 このメソッドは {{jsxref("String.prototype.matchAll()")}}, とほぼ同様に使用することができますが、 `this` の値と引数の順序が違う点が異なります。
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.matchAll](str);
 
@@ -112,7 +111,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)", "g");
 const str = "2016-01-02|2019-03-07";
 const result = str.matchAll(re);
 
@@ -134,6 +133,7 @@ console.log(result[1]);
 ## 関連情報
 
 - [`RegExp.prototype[Symbol.matchAll]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `RegExp.prototype[Symbol.matchAll]` のポリフィル](https://www.npmjs.com/package/string.prototype.matchall)
 - {{jsxref("String.prototype.matchAll()")}}
 - [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
 - [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

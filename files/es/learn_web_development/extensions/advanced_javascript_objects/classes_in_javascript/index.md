@@ -6,18 +6,18 @@ l10n:
   sourceCommit: 8b799e40ec01fede4e6cd95c2447ae45b6bc74d5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela.
 
-También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) y [constructores](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
+También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) y [constructores](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisitos:</th>
       <td>
-        Conocimientos básicos de informática, comprensión básica de HTML y CSS, familiaridad con conceptos básicos de Javascript (mira <a href="/es/docs/Learn/JavaScript/First_steps">Primeros pasos</a> y <a href="/es/docs/Learn/JavaScript/Building_blocks">Construyendo con bloques</a>) y lo esencial de JSOO (Javascript orientado a objetos)(mira <a href="/es/docs/Learn/JavaScript/Objects/Basics">Introducción a los objetos</a> y <a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_programming">Programación orientada a objetos</a>)
+        Conocimientos básicos de informática, comprensión básica de HTML y CSS, familiaridad con conceptos básicos de Javascript (mira <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting">Primeros pasos</a> y <a href="/es/docs/Learn_web_development/Core/Scripting">Construyendo con bloques</a>) y lo esencial de JSOO (Javascript orientado a objetos)(mira <a href="/es/docs/Learn_web_development/Core/Scripting/Object_basics">Introducción a los objetos</a> y <a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_programming">Programación orientada a objetos</a>)
       </td>
     </tr>
     <tr>
@@ -57,7 +57,7 @@ La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.na
 
 Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `name = '';`.
 
-El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), se encargará de:
+El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors), se encargará de:
 
 - crear un nuevo objeto
 - asociar `this` al nuevo objeto, para que puedas hacer referencia a `this` dentro de tu código en el constructor
@@ -163,7 +163,7 @@ class Student extends Person {
 }
 ```
 
-En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_properties). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
+En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_elements). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
 
 ```js
 const summers = new Student("Summers", 2);
@@ -206,4 +206,4 @@ Haz llegado al final de este artículo pero, ¿Aún recuerdas la información m�
 
 En este artículo repasamos las herramientas principales que existen en JavaScript para crear programas orientados a objetos. A pesar de que no abarcamos este tema completamente, lo que vimos debería ser suficiente para iniciar. Nuestro [artículo sobre clases](/es/docs/Web/JavaScript/Reference/Classes) es un buen lugar para aprender más.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

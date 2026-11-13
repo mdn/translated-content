@@ -14,7 +14,7 @@ También proporciona una definición para conceptos relacionados, como CORS y la
 
 Para hacer una solicitud y recuperar un recurso, utilice el método {{domxref("GlobalFetch.fetch")}}. Se implementa en múltiples interfaces, específicamente {{domxref("Window")}} y {{domxref("WorkerGlobalScope")}}. Esto hace que esté disponible en casi cualquier contexto donde quiera buscar recursos.
 
-El método `fetch()` toma un argumento obligatorio, la ruta de acceso al recurso que desea recuperar. Devuelve una {{domxref("Promise")}} que resuelve en {{domxref("Response")}} a esa petición, sea o no correcta. También puede pasar opcionalmente un objeto de opciones init como segundo argumento (ver {{domxref("Request")}}).
+El método `fetch()` toma un argumento obligatorio, la ruta de acceso al recurso que desea recuperar. Devuelve una {{jsxref("Promise")}} que resuelve en {{domxref("Response")}} a esa petición, sea o no correcta. También puede pasar opcionalmente un objeto de opciones init como segundo argumento (ver {{domxref("Request")}}).
 
 Una vez que {{domxref("Response")}} es recuperada, hay varios métodos disponibles para definir cuál es el contenido del cuerpo y como se debe manejar (ver {{domxref("Body")}}).
 
@@ -54,7 +54,7 @@ Los navegadores han empezado a añadir soporte experimental para las interfaces 
 ## Ver también
 
 - [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch basic concepts](/es/docs/conflicting/Web/API/Fetch_API/Using_Fetch)

@@ -19,12 +19,11 @@ slug: Web/API/Event/cancelable
 
 ## 值
 
-为一个{{domxref("Boolean", "布尔值")}}。若事件可以被取消，其值为 `true`。
+为一个{{jsxref("Boolean", "布尔值")}}。若事件可以被取消，其值为 `true`。
 
 ## 示例
 
-例如，浏览器厂商提议 {{domxref("Document/wheel_event",
-  "wheel")}} 事件只能在[事件监听回调第一次执行](https://github.com/WICG/interventions/issues/33)时被取消，接下来的 `wheel` 事件都不能被取消。
+例如，浏览器厂商提议 {{domxref("Document/wheel_event", "wheel")}} 事件只能在[事件监听回调第一次执行](https://github.com/WICG/interventions/issues/33)时被取消，接下来的 `wheel` 事件都不能被取消。
 
 ```js
 function preventScrollWheel(event) {

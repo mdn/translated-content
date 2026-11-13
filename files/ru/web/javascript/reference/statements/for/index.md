@@ -30,19 +30,16 @@ for ([инициализация]; [условие]; [финальное выр�
 ```
 
 - `инициализация` {{optional_inline}}
-
   - : Выражение (включая [выражения присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Assignment)) или объявление переменной, вычисляемое один раз перед началом цикла. Обычно используется для инициализации переменной счетчика. Это выражение может опционально объявлять новые переменные с ключевыми словами `var` или `let`. Переменные, объявленные с помощью `var`, не являются локальными для цикла, т.е. они находятся в той же области видимости, что и цикл `for`. Переменные, объявленные с помощью `let`, являются локальными для оператора и не доступны за пределами цикла.
 
   Результат выполнения этого выражения отбрасывается.
 
 - `условие` {{optional_inline}}
-
   - : Выражение, которое будет выполнятся перед каждой итерацией цикла. Если выражение [оценивается как true](/ru/docs/Glossary/Truthy), инструкция выполняется. Если выражение [оценивается как false](/ru/docs/Glossary/Falsy), выполнение выходит из цикла и переходит к первой инструкции после конструкции `for`.
 
   Условие не является обязательным. Если его нет, условие всегда всегда оценивается как `true`.
 
 - `финальное выражение` {{optional_inline}}
-
   - : Выражение, выполняющееся в конце итерации цикла. Происходит до следующего выполнения условия. Обычно используется для обновления или увеличения переменной счётчика.
 
 - инструкция
@@ -72,9 +69,9 @@ for (let i = "start" in window ? window.start : 0; i < 9; i++) {
 // SyntaxError: 'for-in' loop variable declaration may not have an initializer.
 ```
 
-```js example-good
+```js-nolint example-good
 // Все выражение инициализации переменной взято в скобки
-for (let i = ("start" in window) ? window.start : 0; i < 9; i++) {
+for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);
 }
 
@@ -168,7 +165,7 @@ showOffsetPos("content");
 - [пустая инструкция](/ru/docs/Web/JavaScript/Reference/Statements/Empty)
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/Empty", "empty")}}
 - {{jsxref("Statements/while", "while")}}
 - [`do...while`](/ru/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)

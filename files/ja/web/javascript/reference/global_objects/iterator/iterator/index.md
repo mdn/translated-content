@@ -1,11 +1,10 @@
 ---
 title: Iterator() コンストラクター
+short-title: Iterator()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
-
-{{JSRef}}
 
 **`Iterator()`** コンストラクターは、イテレーターを作成する他のクラスの[スーパークラス](/ja/docs/Web/JavaScript/Reference/Classes/extends)として意図通りに使用されることを目的としています。これ自体で構築された場合、エラーが発生します。
 
@@ -15,7 +14,8 @@ l10n:
 new Iterator()
 ```
 
-> **メモ:** `Iterator()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxref("TypeError")}} が発生します。さらに、 `Iterator()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことで暗黙的に作成されます。
+> [!NOTE]
+> `Iterator()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。 `new` を使用せずに名付けると {{jsxref("TypeError")}} が発生します。さらに、 `Iterator()` は実際にはそれ自体で作成することはできません。通常は、サブクラスのコンストラクター内で [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことで暗黙的に作成されます。
 
 ### 引数
 
@@ -141,5 +141,6 @@ for (const num of range) {
 ## 関連情報
 
 - [`Iterator` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims による `Iterator` と関連するヘルパーのポリフィル](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

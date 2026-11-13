@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-文字列で、コンテナーの `src` 属性（[`<iframe src="url.html"`](/ja/docs/Web/HTML/Element/iframe#src) など）が入ります。
+文字列で、コンテナーの `src` 属性（[`<iframe src="url.html"`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) など）が入ります。
 
 ## 仕様書
 

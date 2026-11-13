@@ -31,7 +31,7 @@ Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es 
 
 ### Aprendiendo HTML
 
-- [Nuestro tutorial de HTML](/es/docs/Learn/HTML)
+- [Nuestro tutorial de HTML](/es/docs/Learn_web_development/Core/Structuring_content)
 - [Curso web en codecademy.com](https://www.codecademy.com/en/tracks/web) (sitio en inglés)
 
 ### Referencia técnica

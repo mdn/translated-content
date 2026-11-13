@@ -4,8 +4,6 @@ slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 ---
 
-{{HTTPSidebar}}
-
 Una cuestión recurrente entre los dueños de sitios web consiste en elegir entre un no-www y www URLs. Esta página contiene algunos consejos sobre qué es mejor.
 
 ## ¿Qué son los nombres de dominio?

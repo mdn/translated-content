@@ -20,9 +20,7 @@ new TextDecoder(utfLabel, options)
 - `utfLabel` {{optional_inline}}
   - : 一个字符串，默认是 `"utf-8"`。可以是[任意有效的编码](/zh-CN/docs/Web/API/Encoding_API/Encodings)。
 - `options` {{optional_inline}}
-
   - : 一个具有属性的对象：
-
     - `fatal`
       - : 一个布尔值，表示在解码无效数据时，{{DOMxRef("TextDecoder.decode()")}} 方法是否必须抛出 {{jsxref("TypeError")}}。默认是 `false`，这意味着解码器将用替换字符替换错误的数据。
 

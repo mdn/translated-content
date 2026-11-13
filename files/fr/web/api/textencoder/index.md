@@ -23,7 +23,7 @@ slug: Web/API/TextEncoder
 _L'interface `TextEncoder` n'hérite d'aucune propriété._
 
 - {{DOMxRef("TextEncoder.encoding")}}{{ReadOnlyInline}}
-  - : {{DOMxRef("DOMString")}} contenant le nom de l'encodeur, qui est une chaîne de caractères décrivant la méthode que l'objet `TextEncoder` utilisera.
+  - : {{jsxref("String")}} contenant le nom de l'encodeur, qui est une chaîne de caractères décrivant la méthode que l'objet `TextEncoder` utilisera.
 
 ## Méthodes
 

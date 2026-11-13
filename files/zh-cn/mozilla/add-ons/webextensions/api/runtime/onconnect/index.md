@@ -3,8 +3,6 @@ title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
 
-{{AddonSidebar}}
-
 当使用扩展处理或 content script 建立连接时触发。
 
 ## Syntax
@@ -15,23 +13,21 @@ browser.runtime.onConnect.removeListener(listener);
 browser.runtime.onConnect.hasListener(listener);
 ```
 
-事件有三个方法：
+事件包含三个函数：
 
 - `addListener(callback)`
-  - : 为 这个事件添加一个监听器。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数就是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数为需要移除的监听器。
 - `hasListener(listener)`
-  - : 检查监听器是否已经注册到这个事件上。如果已经监听，则返回 `true` 否则返回 `false`.
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
 - `function`
-
   - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
-
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
 
@@ -67,7 +63,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`
   - sends the content script a message using the port
   - starts listening to messages received on the port, and logs them

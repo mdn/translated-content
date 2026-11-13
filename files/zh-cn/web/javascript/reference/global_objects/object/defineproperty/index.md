@@ -3,8 +3,6 @@ title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 
-{{JSRef}}
-
 **`Object.defineProperty()`** 静态方法会直接在一个对象上定义一个新属性，或修改其现有属性，并返回此对象。
 
 {{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
@@ -52,9 +50,7 @@ Object.defineProperty(obj, prop, descriptor)
 数据描述符和访问器描述符都是对象。它们共享以下可选键（请注意：在使用 `Object.defineProperty()` 定义属性的情况下，下述所有键都是**默认值**）：
 
 - `configurable`
-
   - : 当设置为 `false` 时，
-
     - 该属性的类型不能在数据属性和访问器属性之间更改，且
     - 该属性不可被删除，且
     - 其描述符的其他属性也不能被更改（但是，如果它是一个可写的数据描述符，则 `value` 可以被更改，`writable` 可以更改为 `false`）。
@@ -127,7 +123,7 @@ Object.defineProperty(obj, "key", withValue("static"));
 
 如果旧描述符的 `configurable` 特性被设置为 `false`，则该属性被称为*不可配置的*。无法更改不可配置的访问器属性的任何特性，也不能将其在数据类型和访问器类型之间切换。对于具有 `writable: true` 的数据属性，可以修改其值并将 `writable` 特性从 `true` 改为 `false`。当试图更改不可配置的属性（除非允许更改 `value` 和 `writable`）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
 
-当当前属性是可配置的时，将特性设置为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个特性，则会保留旧描述符该特性的值（不会被隐式重新设置为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
+当属性可配置时，将特性设置为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个特性，则会保留旧描述符该特性的值（不会被隐式重新设置为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
 
 ## 示例
 

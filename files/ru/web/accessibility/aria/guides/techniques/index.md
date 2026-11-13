@@ -1,7 +1,6 @@
 ---
 title: Использование ARIA
 slug: Web/Accessibility/ARIA/Guides/Techniques
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
 {{AccessibilitySidebar}}

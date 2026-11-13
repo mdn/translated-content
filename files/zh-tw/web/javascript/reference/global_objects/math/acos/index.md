@@ -2,10 +2,8 @@
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
-
-{{JSRef}}
 
 **`Math.acos()`** 靜態方法會回傳一個數值的反餘弦值（以弧度表示）。也就是說，
 
@@ -16,16 +14,16 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Math.acos()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 計算直角三角形的角度（以弧度表示）
 function calcAngle(adjacent, hypotenuse) {
   return Math.acos(adjacent / hypotenuse);
 }
 
 console.log(calcAngle(8, 10));
-// Expected output: 0.6435011087932843
+// 預期輸出：0.6435011087932843
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// 預期輸出：NaN
 ```
 
 ## 語法
@@ -76,3 +74,4 @@ Math.acos(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("acos()")}} 函式

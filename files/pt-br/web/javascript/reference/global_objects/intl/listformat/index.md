@@ -31,8 +31,6 @@ console.log(formatter3.format(vehicles));
 // Expected output: "Motorcycle Bus Car"
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Construtor
 
 - {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}

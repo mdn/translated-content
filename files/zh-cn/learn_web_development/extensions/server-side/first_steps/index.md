@@ -3,7 +3,7 @@ title: 服务端网站编程的第一步
 slug: Learn_web_development/Extensions/Server-side/First_steps
 ---
 
-{{LearnSidebar}}在我们的服务端编程板块中，我们回答了服务端编程的一系列基础问题—“它是什么？”，“它和客户端编程的区别是什么？”，还有“为什么它是有价值的？”。然后我们提供了对几个最受欢迎的服务端 Web 框架的概览，同时还有对如何选择最适合的框架来创建你第一个网站的指导。最后我们提供了一篇从高层次介绍 Web 服务器安全的文章。
+在我们的服务端编程板块中，我们回答了服务端编程的一系列基础问题—“它是什么？”，“它和客户端编程的区别是什么？”，还有“为什么它是有价值的？”。然后我们提供了对几个最受欢迎的服务端 Web 框架的概览，同时还有对如何选择最适合的框架来创建你第一个网站的指导。最后我们提供了一篇从高层次介绍 Web 服务器安全的文章。
 
 ## 前提
 
@@ -11,9 +11,9 @@ slug: Learn_web_development/Extensions/Server-side/First_steps
 
 你需要先知道“Web 如何工作”，我们推荐你首先阅读下面几个话题：
 
-- [什么是一个 Web 服务器？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [建立一个网站需要什么软件？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [如何向 Web 服务器上传文件？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [安装基础软件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [万维网是如何工作的](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [发布你的网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 有了这些基础知识，你已经准备好开始这些模块的学习了。
 

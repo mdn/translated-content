@@ -44,7 +44,7 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.body")}} {{readonlyInline}}
   - : Um simples "getter" para ler o conteúdo do corpo através da interface {{domxref("ReadableStream")}}.
 - {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Armazena um {{domxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
+  - : Armazena um {{jsxref("Boolean", "Booleano")}} que declara se o corpo da requisição já foi utilizado em uma resposta.
 
 ## Métodos
 
@@ -54,15 +54,15 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 `Request` implementa {{domxref("Body")}}, então também possui os seguintes métodos disponíveis:
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("ArrayBuffer")}} com a representação do corpo da requisição.
+  - : Retorna um objeto do tipo promise que resolve um {{jsxref("ArrayBuffer")}} com a representação do corpo da requisição.
 - {{domxref("Body.blob()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("Blob")}} com a representação do corpo da requisição.
 - {{domxref("Body.formData()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("FormData")}} com a representação do corpo da requisição.
 - {{domxref("Body.json()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("JSON")}} com a representação do corpo da requisição.
+  - : Retorna um objeto do tipo promise que resolve um {{jsxref("JSON")}} com a representação do corpo da requisição.
 - {{domxref("Body.text()")}}
-  - : Retorna um objeto do tipo promise que resolve um {{domxref("USVString")}} (texto) com a representação do corpo da requisição.
+  - : Retorna um objeto do tipo promise que resolve um {{jsxref("String")}} (texto) com a representação do corpo da requisição.
 
 > [!NOTE]
 > Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
@@ -104,7 +104,7 @@ const bodyUsed = myRequest.bodyUsed; // true
 ```
 
 > [!NOTE]
-> O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
+> O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
 
 Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo, e poderá capturar a resposta da seguinte forma:
 
@@ -137,5 +137,5 @@ fetch(myRequest)
 ## Veja também
 
 - [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

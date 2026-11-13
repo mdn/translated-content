@@ -1,18 +1,15 @@
 ---
 title: <xsl:choose>
 slug: Web/XML/XSLT/Reference/Element/choose
-original_slug: Web/XSLT/Reference/Element/choose
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:choose>` 要素はいくつかの選択肢の中から選択肢を定義します。 手続き型言語の switch 文のように振る舞います。
 
 ### 構文
 
-```
+```xml
 <xsl:choose>
   <xsl:when test="[whatever to test1]"></xsl:when>
   <xsl:when test="[whatever to test2]"></xsl:when>
@@ -22,11 +19,11 @@ l10n:
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
-なし
+なし。
 
 ### 種類
 
@@ -36,6 +33,6 @@ l10n:
 
 XSLT, section 9.2.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+サポート済み。

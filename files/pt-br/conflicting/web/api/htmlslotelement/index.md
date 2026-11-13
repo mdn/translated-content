@@ -5,8 +5,6 @@ slug: conflicting/Web/API/HTMLSlotElement
 
 {{ APIRef("Web Components") }}
 
-{{Deprecated_header}}
-
 A interface do **`HTMLContentElement`** representa um {{HTMLElement("content")}} Element HTML, ao qual é usado em [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).
 
 ## Propriedades
@@ -14,7 +12,7 @@ A interface do **`HTMLContentElement`** representa um {{HTMLElement("content")}}
 _Esta interface herda as propriedades de {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLContentElement.select")}}
-  - : é um {{domxref("DOMString")}} que reflete o [`select`](/pt-BR/docs/Web/HTML/element/slot#select) attributo HTML . O valor é uma lista de vírgula separada dos seletores CSS que selecionam o conteúdo para inserir em lugar do elemento `<content>`.
+  - : é um {{jsxref("String")}} que reflete o [`select`](/pt-BR/docs/Web/HTML/element/slot#select) attributo HTML . O valor é uma lista de vírgula separada dos seletores CSS que selecionam o conteúdo para inserir em lugar do elemento `<content>`.
 
 ## Méthodos
 

@@ -16,13 +16,10 @@ void gl.bindTexture(target, texture);
 ### Параметры
 
 - target
-
   - : {{domxref("GLenum")}} указывает тип объекта `texture` для связывания. Возможные значения:
-
     - `gl.TEXTURE_2D`: двухмерная текстура.
     - `gl.TEXTURE_CUBE_MAP`: кубическая текстура.
     - При использовании {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, дополнительно доступны:
-
       - `gl.TEXTURE_3D`: трёхмерная текстура.
       - `gl.TEXTURE_2D_ARRAY`: массив двумерных текстур.
 

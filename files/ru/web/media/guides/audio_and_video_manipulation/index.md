@@ -5,7 +5,8 @@ slug: Web/Media/Guides/Audio_and_video_manipulation
 
 Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/API/WebGL_API) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
 
-> **Примечание:** **Далее** ещё в процессе перевода.
+> [!NOTE]
+> **Далее** ещё в процессе перевода.
 
 ## Обработка видео
 
@@ -116,7 +117,7 @@ processor.doLoad();
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
 > [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/CORS) on your video server.
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/Guides/CORS) on your video server.
 
 ### Видео и WebGL
 
@@ -164,8 +165,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -259,8 +259,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden
@@ -297,7 +296,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
 > [!NOTE]
-> Unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> Unless you have [CORS](/ru/docs/Web/HTTP/Guides/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Типичные для аудио фильтры
 

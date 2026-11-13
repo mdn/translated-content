@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Table/length
 
 {{WebAssemblySidebar}}
 
-**`length`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイププロパティで、このテーブルの長さ、すなわち、テーブルの要素の数を返します。
+**`length`** は [`WebAssembly.Table`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table) オブジェクトのプロトタイププロパティで、このテーブルの長さ、すなわち、テーブルの要素の数を返します。
 
 ## 例
 
@@ -41,5 +41,5 @@ console.log(table.length); // "3"
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

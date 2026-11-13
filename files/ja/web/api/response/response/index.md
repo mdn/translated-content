@@ -21,9 +21,7 @@ new Response(body, options)
 ### 引数
 
 - `body` {{optional_inline}}
-
   - : レスポンスの本体を定義するオブジェクトです。これは `null` （既定値）か、以下のうちのいずれかです。
-
     - {{domxref("Blob")}}
     - {{jsxref("ArrayBuffer")}}
     - {{jsxref("TypedArray")}}
@@ -35,9 +33,7 @@ new Response(body, options)
     - 文字列リテラル
 
 - `options` {{optional_inline}}
-
   - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
-
     - `status`
       - : このレスポンスのステータスコードです。
         既定値は `200` です。
@@ -45,7 +41,7 @@ new Response(body, options)
       - : ステータスコードに関連付けられた、`OK` などのステータスメッセージです。
         既定値は `""` です。
     - `headers`
-      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)をご覧ください）。
+      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)をご覧ください）。
         既定値は空です。
 
 ## 例
@@ -69,5 +65,5 @@ const myResponse = new Response(myBlob, myOptions);
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

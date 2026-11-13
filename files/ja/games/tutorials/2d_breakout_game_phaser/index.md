@@ -3,15 +3,13 @@ title: Phaser を使用した 2D ブロック崩しゲーム
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}
-
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}
 
 このステップバイステップのチュートリアルでは、シンプルなモバイル **MDN ブロック崩し**ゲーム を、 JavaScript で書き、 [Phaser](https://phaser.io/) フレームワークを使用して作成します。
 
 各ステップには、編集可能なライブサンプルがあるので、中間ステージがどのように見えるかを確認しながら遊ぶことができます。 Phaser フレームワークを使用して、画像のレンダリングと移動、衝突の検出、コントロールメカニズム、フレームワーク固有のヘルパー関数、アニメーションと調整、勝利と敗北状態などの基本的なゲームメカニズムを使用するための基本を学びます。
 
-この連載記事を最大限に活用するためには、すでに基礎から中級の [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) の知識を持っている必要があります。このチュートリアルを動作させた後は、 Phaser を使って自身の簡単なウェブゲームを作ることができるはずです。
+この連載記事を最大限に活用するためには、すでに基礎から中級の [JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) の知識を持っている必要があります。このチュートリアルを動作させた後は、 Phaser を使って自身の簡単なウェブゲームを作ることができるはずです。
 
 ![Phaser で作成したゲーム MDN ブロック崩しのゲーム画面。パドルを使用してボールを跳ね返し、ポイントとライフを維持しながら、レンガのフィールドを破壊することができます。](mdn-breakout-phaser.png)
 
@@ -36,7 +34,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 15. [ボタン](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [ゲームプレイのランダム化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-学習経路に関する注意点として、純粋な JavaScript から始めることが、ウェブゲーム開発の確かな知識を得るための最良の方法です。もしあなたが純粋な JavaScript のゲーム開発にまだ慣れていないなら、先にこのシリーズの対になるものである[純粋な JavaScript を使用した 2D ブレイクアウトゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)をやっておくことをお勧めします。
+学習経路に関する注意点として、純粋な JavaScript から始めることが、ウェブゲーム開発の確かな知識を得るための最良の方法です。もしあなたが純粋な JavaScript のゲーム開発にまだ慣れていないなら、先にこのシリーズの対になるものである[純粋な JavaScript を使用した 2D ブレイクアウトゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)をやっておくことをお勧めします。
 
 その後、好きなフレームワークを選んで、プロジェクトに使用することができます。私たちは、良いサポートとコミュニティが利用でき、プラグインの良いセットがある、堅実なフレームワークである Phaser を選びました。フレームワークは、開発時間を短縮し、退屈な部分を引き受けてくれるので、あなたは楽しいことに集中することができます。しかし、フレームワークは常に完璧というわけではありません。予期せぬことが起こったり、フレームワークが提供しない機能を書きたい場合、純粋な JavaScript の知識が必要になります。
 
@@ -47,4 +45,4 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 では、始めましょう。シリーズの最初の部分 - [フレームワークの初期化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)に向かいましょう。
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

@@ -32,17 +32,13 @@ registerProcessor(name, processorCtor)
 ### 例外
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : 以下のとき投げられます。
-
     - `name` が空文字列のとき。
     - 指定の `name` でコンストラクターが既に登録されているとき。
       同じ名前を 2 回登録することは許されません。
 
 - {{jsxref("TypeError")}}
-
   - : 以下のとき投げられます。
-
     - `processorCtor` が呼び出し可能なコンストラクターではないとき。
     - コンストラクターに {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} プロパティが存在し、{{domxref("AudioParamDescriptor")}} ベースのオブジェクトの配列を返さなかったとき。
 

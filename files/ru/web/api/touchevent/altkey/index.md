@@ -20,7 +20,6 @@ var altEnabled = touchEvent.altKey;
 ### Возвращаемое значение
 
 - `altEnabled`
-
   - : `true` если клавиша&#x20;
 
     <kbd>alt</kbd>

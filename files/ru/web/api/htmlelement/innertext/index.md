@@ -11,7 +11,7 @@ slug: Web/API/HTMLElement/innerText
 
 {{domxref("Node.textContent")}} - это альтернативное свойство, которое имеет ряд отличий:
 
-- `textContent` получает содержимое _всех_ элементов, включая [`<script>`](/ru/docs/Web/HTML/Element/script) и [`<style>`](/ru/docs/Web/HTML/Element/style), тогда как `innerText` этого не делает.
+- `textContent` получает содержимое _всех_ элементов, включая [`<script>`](/ru/docs/Web/HTML/Reference/Elements/script) и [`<style>`](/ru/docs/Web/HTML/Reference/Elements/style), тогда как `innerText` этого не делает.
 - `innerText` умеет считывать стили и не возвращает содержимое скрытых элементов, тогда как `textContent` этого не делает.
 - Метод `innerText` позволяет получить CSS, а `textContent` — нет.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`step`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、数値または日付時刻の {{HTMLElement("input")}} 要素が変更できる刻みを示します。これは、要素の [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を反映します。有効な値は、文字列 `"any"` または正の浮動小数点数の入った文字列です。属性が明示的に設定されていない場合、`step` プロパティは空文字列となります。
+**`step`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、数値または日付時刻の {{HTMLElement("input")}} 要素が変更できる刻みを示します。これは、要素の [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を反映します。有効な値は、文字列 `"any"` または正の浮動小数点数の入った文字列です。属性が明示的に設定されていない場合、`step` プロパティは空文字列となります。
 
 ## 値
 

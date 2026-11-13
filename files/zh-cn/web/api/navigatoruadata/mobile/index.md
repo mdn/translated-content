@@ -2,7 +2,7 @@
 title: NavigatorUAData：mobile 属性
 slug: Web/API/NavigatorUAData/mobile
 l10n:
-  sourceCommit: ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
@@ -31,4 +31,4 @@ console.log(navigator.userAgentData.mobile);
 
 ## 参见
 
-- {{HTTPHeader("Sec-CH-UA-Mobile")}} 标头（[低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#低熵提示)）包含相同的信息。
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} 标头（[低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)）包含相同的信息。

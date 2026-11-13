@@ -69,7 +69,7 @@ captureStream =
 
 ## 権限ポリシーの検証
 
-（HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーまたは {{HTMLElement("iframe")}} の `allow` 属性のいずれかを使用した）[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)に対応するユーザーエージェントは、画面キャプチャ API を使用する意思を、`display-capture` ディレクティブを使用して指定することができます。
+（HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーまたは {{HTMLElement("iframe")}} の `allow` 属性のいずれかを使用した）[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)に対応するユーザーエージェントは、画面キャプチャ API を使用する意思を、`display-capture` ディレクティブを使用して指定することができます。
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>

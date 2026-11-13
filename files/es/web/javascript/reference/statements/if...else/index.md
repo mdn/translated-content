@@ -40,11 +40,9 @@ else
 ```
 
 - `condición`
-
   - : Una expresión que puede ser evaluada como {{Glossary("truthy", "verdadera")}} o {{Glossary("falsy", "falsa")}}.
 
 - `sentencia1`
-
   - : Sentencia que se ejecutará si `condición` es evaluada como {{Glossary("truthy", "verdadera")}}. Puede ser cualquier sentencia, incluyendo otras sentenccias `if` anidadas. Para ejecutar múltiples sentencias, use una sentencia [_block_](/es/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agruparlas. Para no ejecutar ninguna sentencia, usa una sentencia [vacía](/es/docs/Web/JavaScript/Reference/Statements/Empty).
 
 - `sentencia2`
@@ -197,5 +195,5 @@ El cual es mucho más claro. Sin embargo, en el raro caso que te encuentres en l
 
 ## Véase También
 
-- {{jsxref("Sentencias/block", "block")}}
-- {{jsxref("Sentencias/switch", "switch")}}
+- {{jsxref("Statements/block", "block")}}
+- {{jsxref("Statements/switch", "switch")}}

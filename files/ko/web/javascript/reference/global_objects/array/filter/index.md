@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
   sourceCommit: 57375b77984037c614982a9327bc96101824db89
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 `filter()` 메서드는 주어진 배열의 일부에 대한 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 생성하고, 주어진 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
 
 ```js interactive-example
 const words = ["spray", "elite", "exuberant", "destruction", "present"];

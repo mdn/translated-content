@@ -3,6 +3,8 @@ title: 作者清单面页、分类清单页面挑战
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
 
 ## 控制器
@@ -78,15 +80,10 @@ block content
 
 1. 你需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
-
    - 按名称以上升顺序，对结果进行排序。
 
 3. 要呈现的模板，应命名为 **genre_list.pug**。
 4. 要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。
 5. 该视图应与上面的屏幕截图/要求相匹配（这应该与作者列表视图具有非常相似的结构/格式，除了种类没有日期）。
 
-## 下一步
-
-回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-
-继续教程 5 下一個部分：[种类细节页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

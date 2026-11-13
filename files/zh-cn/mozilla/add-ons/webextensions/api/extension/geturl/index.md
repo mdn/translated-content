@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 该函数已被弃用。请改用 [`runtime.getURL`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)。
 

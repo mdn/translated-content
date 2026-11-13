@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2b9c5bb9eaa56df82286c06e4405851b5d87c8aa
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 이제 웹 페이지에 이미지와 비디오, 오디오를 추가하는 방법을 이해하셨을 겁니다. 이 시점에서 옆으로 한발 비켜서서, 웹 페이지에 다양한 형태의 콘텐츠를 넣을 수 있는 {{htmlelement("iframe")}} 요소와 {{htmlelement("embed")}} 요소, {{htmlelement("object")}} 요소를 살펴보겠습니다. `<iframe>` 요소는 다른 웹 페이지를 삽입하기 위해, 다른 두 요소는 PDF 파일과 같은 외부 자원을 웹 페이지에 추가하기 위해 사용합니다.
 
@@ -21,10 +21,10 @@ l10n:
           >기본적인 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a>에 대한 기본 지식
           , HTML 기초 지식(
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 다룸)과 이 과정에 포함된 이전 문서를 익힘
       </td>
@@ -235,7 +235,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 이 예시는 `<iframe>`을 사용하기 위한 가장 기본적인 필수 요소를 포함하고 있습니다.
 
-- [`border: none`](/ko/docs/Web/CSS/border)
+- [`border: none`](/ko/docs/Web/CSS/Reference/Properties/border)
   - : 이를 적용하면, `<iframe>` 은 테두리 없이 표시됩니다. 적용하지 않으면 브라우저는 `<iframe>`을 기본적으로 테두리가 있는 상태로 표시하는데, 일반적으로 바람직하지는 않습니다.
 - [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : 이를 설정하면, `<iframe>`에서 [Fullscreen API](/ko/docs/Web/API/Fullscreen_API)를 통해 전제화면 모드를 실행할 수 있습니다. Fullscreen API는 본문에서 다루는 범위를 넘어선 내용입니다.
@@ -257,9 +257,10 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 브라우저 제작사와 웹 개발자들이 얻은 값비싼 교훈이 있는데요, iframe이 웹상에서 악의를 품은 사람들의 일반적인 공격 목표(공식 용어로는 **공격 벡터**)가 된다는 점입니다. **해커**, 더 정확히는 **크래커**라 불리는 이 나쁜 사람들은 iframe을 악용하여 여러분의 웹페이지를 수정하거나, 사람들을 속여 사용자 명이나 비밀번호 등 민감한 정보를 유출하려 합니다. 이 때문에 명세 엔지니어와 브라우저 개발자는 `<iframe>`을 더 안전하게 만들기 위해 다양한 보안 장치를 개발했고, 고려할만한 모범 사례도 있습니다. 아래에서 다뤄보겠습니다.
 
-> **참고:** [클릭재킹](/ko/docs/Glossary/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
+> [!NOTE]
+> [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
 
-우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
+우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
 
 #### 필요한 경우에만 삽입하세요
 
@@ -278,7 +279,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 웹사이트에 HTTPS를 적용하려면 특별한 보안 인증서를 설치해야 합니다. 여러 호스팅 업체에서는 직접 인증서를 설치하지 않아도 HTTPS를 적용할 수 있는 호스팅을 제공합니다. 하지만 직접 HTTPS를 적용해야 한다면, [Let's Encrypt](https://letsencrypt.org/)에서 Apache 웹 서버나 Nginx 등 널리 사용되는 웹 서버를 지원할 뿐만 아니라 자동으로 필요한 인증서를 생성하고 설치할 수 있는 도구와 설명서를 제공하고 있습니다. Let's Encrypt는 이 과정을 최대한 쉽게 만들도록 설계되었습니다. 그러니 웹페이지에 HTTPS를 적용하기 위하여 Let's Encrypt를 사용하지 않을 이유가 전혀 없습니다.
 
-> **참고:** [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
+> [!NOTE]
+> [GitHub pages](/ko/docs/Learn_web_development/Core/Version_control)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
 
 #### 항상 `sandbox` 특성을 사용하세요
 
@@ -293,7 +295,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### CSP 지시어를 설정하세요
 
-{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Glossary/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
+{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Reference/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
 
 > [!NOTE]
 > 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
@@ -319,25 +321,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>삽입된 콘텐츠의 {{glossary("URL")}}</td>
-      <td><a href="/ko/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/ko/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         삽입된 콘텐츠의 정확한 {{glossary("MIME type", 'media type')}}
       </td>
-      <td><a href="/ko/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/ko/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         플러그인이 제어하는 박스의 높이와 너비(CSS 픽셀단위)
       </td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/object#width"><code>width</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>
@@ -381,4 +383,4 @@ PDF는 종이와 디지털을 연결하는 필수적인 징검다리 역할을 �
 
 여기서 다룬 것 외에도 외부 콘텐츠를 삽입하는 기술은 여럿 존재합니다. 이전 글에서 다룬 {{htmlelement("video")}}나 {{htmlelement("audio")}}, {{htmlelement("img")}} 등이 있으며, 아직 살펴보지 않은 기술로는 JavaScript로 생성한 2D, 3D 그래픽을 삽입하는 {{htmlelement("canvas")}}, 벡터 그래픽을 삽입하는 {{SVGElement("svg")}} 등이 있습니다. 이 과정의 다음 글에서 [SVG](/ko/docs/Web/SVG)를 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

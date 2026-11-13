@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`attributionSrc`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{htmlelement("img")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/img#attributionsrc) 属性をプログラムで取得および設定し、その属性の値を反映します。`attributionsrc` は、ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指示します。
+**`attributionSrc`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{htmlelement("img")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/img#attributionsrc) 属性をプログラムで取得および設定し、その属性の値を反映します。`attributionsrc` は、ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指示します。
 
 サーバー側では、{{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーをレスポンスで送信し，それぞれ画像ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
 

@@ -2,7 +2,7 @@
 title: File：name 属性
 slug: Web/API/File/name
 l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 ### HTML
 
 ```html
-<input type="file" id="filepicker" multiple />
+<input type="file" id="file-picker" multiple />
 <div>
   <p>选定文件列表：</p>
   <ul id="output"></ul>
@@ -29,9 +29,9 @@ l10n:
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   output.textContent = "";
 

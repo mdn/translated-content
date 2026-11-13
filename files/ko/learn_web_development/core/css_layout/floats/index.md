@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats
 original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 원래 텍스트 블록 내에서 float 이미지를 위한 {{cssxref("float")}} 속성은 웹 페이지에서 다단 레이아웃을 생성할 용도로 가장 널리 사용되는 도구 중 하나로 자리매김했었습니다. flexbox와 grid의 출현과 함께 float 속성은 이 문서에서 설명하겠지만, 원래의 목적대로 돌아갔습니다.
 
@@ -13,10 +13,10 @@ original_slug: Learn/CSS/CSS_layout/Floats
     <tr>
       <th scope="row">선결 사항:</th>
       <td>
-        HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        HTML의 기초 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>
@@ -35,9 +35,9 @@ original_slug: Learn/CSS/CSS_layout/Floats
 
 float 속성은 웹 개발자가 텍스트 열 내부에 float하는 이미지를 포함하고, 아울러 해당 이미지의 좌측 우측 주변으로 텍스트를 둘러싸는 간단한 레이아웃을 구현할 수 있도록 도입되었습니다. 이런 것은 신문 레이아웃에서 볼 수 있는 종류입니다.
 
-그러나 웹 개발자들은 이미지뿐만 아니라 무엇이든 float할 수 있음을 빠르게 깨달았고, 그래서 floats 사용이 확대되었습니다. 앞서 살펴본 [고급 단락 예제](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#active_learning_a_fancy_paragraph)는 재미있는 드롭캡 효과를 생성하는 데 floats를 어떻게 사용할 수 있는지를 보여줍니다.
+그러나 웹 개발자들은 이미지뿐만 아니라 무엇이든 float할 수 있음을 빠르게 깨달았고, 그래서 floats 사용이 확대되었습니다. 앞서 살펴본 [고급 단락 예제](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#active_learning_a_fancy_paragraph)는 재미있는 드롭캡 효과를 생성하는 데 floats를 어떻게 사용할 수 있는지를 보여줍니다.
 
-floats는 일반적으로 상대 요소와 나란히 놓이도록 float(浮動)하는 다단 정보를 갖춘 웹 사이트의 전체 레이아웃을 만들는데 널리 사용되어 왔다(기본 행동은 다단 무리가 소스에서 보이는 순서와 같은 순서대로 상대 요소 아래에 자리잡기하는 것이다). 더 새롭고 더 나은 레이아웃 기술이 나와있으므로 이러한 방식으로 floats를 사용하는 것은 [낡은 기술](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)로 간주되어야 합니다.
+floats는 일반적으로 상대 요소와 나란히 놓이도록 float(浮動)하는 다단 정보를 갖춘 웹 사이트의 전체 레이아웃을 만들는데 널리 사용되어 왔다(기본 행동은 다단 무리가 소스에서 보이는 순서와 같은 순서대로 상대 요소 아래에 자리잡기하는 것이다). 더 새롭고 더 나은 레이아웃 기술이 나와있으므로 이러한 방식으로 floats를 사용하는 것은 [낡은 기술](/ko/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)로 간주되어야 합니다.
 
 이 문서에서는 floats의 적절한 용도에 집중할 것입니다.
 
@@ -679,6 +679,6 @@ body {
 
 ## 요약정리
 
-당신은 현대적인 웹 개발에서 floats에 대해 알아야 할 것은 이제 모두 알게 되었습니다. 과거에 어떤 식으로 사용되었는지에 관한 정보에 대해선 [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)에 관한 문서를 보십시요. 오래된 프로젝드에 몸 담을 일이 생긴다면 유용할 수도 있습니다.
+당신은 현대적인 웹 개발에서 floats에 대해 알아야 할 것은 이제 모두 알게 되었습니다. 과거에 어떤 식으로 사용되었는지에 관한 정보에 대해선 [레거시 레이아웃 메서드](/ko/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)에 관한 문서를 보십시요. 오래된 프로젝드에 몸 담을 일이 생긴다면 유용할 수도 있습니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

@@ -3,10 +3,10 @@ title: "HTMLTextAreaElement: selectionchange イベント"
 short-title: selectionchange
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 58cc81b21f777d745877ec1430df8ba2852ff411
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 **`selectionchange`** は[選択 API](/ja/docs/Web/API/Selection) のイベントで、{{HTMLElement("textarea")}} 要素内のテキストの選択状態が変更されたときに発生します。
 これは、文字の選択範囲の変更と、キャレットが移動した場合の両方を含みます。
@@ -21,10 +21,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("selectionchange", (event) => {});
+```js-nolint
+addEventListener("selectionchange", (event) => { })
 
-onselectionchange = (event) => {};
+onselectionchange = (event) => { }
 ```
 
 ## イベント型
@@ -40,7 +40,7 @@ onselectionchange = (event) => {};
 ```html
 <div>
   ここにテキストを入力して選択してください:<br /><textarea
-    id="mytext"
+    id="my-text"
     rows="2"
     cols="20"></textarea>
 </div>
@@ -52,12 +52,12 @@ onselectionchange = (event) => {};
 ### JavaScript
 
 ```js
-const myinput = document.getElementById("mytext");
+const myInput = document.getElementById("my-text");
 
-myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myinput.selectionStart;
-  document.getElementById("end").textContent = myinput.selectionEnd;
-  document.getElementById("direction").textContent = myinput.selectionDirection;
+myInput.addEventListener("selectionchange", () => {
+  document.getElementById("start").textContent = myInput.selectionStart;
+  document.getElementById("end").textContent = myInput.selectionEnd;
+  document.getElementById("direction").textContent = myInput.selectionDirection;
 });
 ```
 

@@ -3,8 +3,6 @@ title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました。この記事は開発者に影響がある Firefox 12 での変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -26,24 +24,24 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 
 - [DOMParser](/ja/docs/Web/API/DOMParser) が HTML ドキュメントのソース解析に対応しました。
 - {{ domxref("XMLHttpRequest") }} で `timeout` プロパティと {{ domxref("XMLHttpRequestEventTarget") }} インターフェイス 上の `ontimeout` イベントハンドラーである "timeout" イベントを用いた、タイムアウトがサポートされました。
-- {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/Web/URI/Schemes/data) から読み込めるようになりました。
+- {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/Web/URI/Reference/Schemes/data) から読み込めるようになりました。
 - {{ domxref("XMLHttpRequest") }} で巨大なデータをダウンロードしているとき、`responseType` に "moz-blob" を設定していると、 これまでに受信したデータのすべてを含む {{ domxref("Blob") }} であるレスポンスを参照できる progress イベントハンドラーが定期的に呼び出されるようになりました。これによって、progress ハンドラーでデータのすべてが到着するまで待つことなしにデータを処理し始められます。
 - Gecko が Android 上で [マルチタッチ](/ja/docs/Web/API/Touch_events) をサポートしました。今までは一度に一つのタッチ操作しか認識しかできませんでした。
 - エディター (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラーを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
 - DOM 4 仕様で定義されている {{ domxref("DOMError") }} が実装されました。
 - {{ domxref("Document.createNodeIterator()") }} メソッドが DOM 4 仕様に適合するように更新されました。これにより、`whatToShow` および `filter` 引数がオプションになり、非標準の 4 番目の引数である `entityReferenceExpansion` が削除されます。
-- {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
-- {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) の効果を考慮するようになりました。
+- {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。
+- {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/Web/CSS/Guides/Transforms/Using) の効果を考慮するようになりました。
 
 #### 新しい WebAPI
 
-- Network Information API: {{ domxref("window.navigator.connection") }} の実験的サポートが追加されました。（接頭辞付き）
-- WebTelephony API: {{ domxref("window.navigator.mozTelephony") }} が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
-- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる {{ domxref("window.navigator.mozSms") }} が利用可能になりました。
+- Network Information API: {{domxref("Navigator.connection", "window.navigator.connection")}} の実験的サポートが追加されました。（接頭辞付き）
+- WebTelephony API: `window.navigator.mozTelephony` が実装されました。デバイス上での電話の発信、応答、管理をするためのサポートを提供します。
+- WebSMS API: モバイルデバイスで SMS テキストメッセージを送信できる `window.navigator.mozSms` が利用可能になりました。
 
 ### SVG
 
-- {{ domxref("SVGTests") }} DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
+- `SVGTests` DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
 - {{ domxref("SVGStringList") }} DOM インターフェイスが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
 
 ### MathML
@@ -83,7 +81,7 @@ Mozilla は人気のアドオン [Firebug](https://getfirebug.com/) に依存す
 
 ### XPCOM
 
-- [`nsISupports` プロキシ](/ja/docs/nsISupports_proxies) が削除されました。代わりに [runnable を使ってください](/ja/docs/XPCOM/Making_cross-thread_calls_using_runnables)。
+- [`nsISupports` プロキシー](/ja/docs/nsISupports_proxies) が削除されました。代わりに [runnable を使ってください](/ja/docs/XPCOM/Making_cross-thread_calls_using_runnables)。
 
 <!---->
 

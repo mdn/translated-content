@@ -3,8 +3,6 @@ title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
-{{AddonSidebar}}
-
 La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.
 
 Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la [console](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging) pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.
@@ -22,19 +20,17 @@ var searching = browser.bookmarks.search(
 ### Paramètres
 
 - `query`
-
-  - : Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.
+  - : Un {{jsxref("String")}} ou {{jsxref("Object")}} décrivant la requête à effectuer.
 
     Si la `query` est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.
 
     Si la `query` un objet, elle possède zéro ou plus des trois propriétés suivantes : `query`, `title`, et `url`, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.
-
     - `query` {{optional_inline}}
-      - : Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
+      - : Un {{jsxref("String")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
     - `url` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
+      - : Un {{jsxref("String")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
     - `title` {{optional_inline}}
-      - : Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
+      - : Un {{jsxref("String")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
 
 ### Valeur retournée
 
@@ -92,8 +88,6 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

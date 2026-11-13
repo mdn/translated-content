@@ -48,7 +48,7 @@ myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```js
 myHeaders.append("Accept-Encoding", "deflate");
 myHeaders.append("Accept-Encoding", "gzip");
-myHeaders.getAll("Accept-Encoding"); // Returns [ "deflate", "gzip" ]
+myHeaders.get("Accept-Encoding"); // Returns 'deflate, gzip'
 ```
 
 要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。
@@ -64,5 +64,5 @@ myHeaders.getAll("Accept-Encoding"); // Returns [ "deflate", "gzip" ]
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

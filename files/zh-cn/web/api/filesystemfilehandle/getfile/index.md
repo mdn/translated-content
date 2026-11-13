@@ -2,7 +2,7 @@
 title: FileSystemFileHandle：getFile() 方法
 slug: Web/API/FileSystemFileHandle/getFile
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: e97f7ef524c21300c65b5089139de89a42bd79e2
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}

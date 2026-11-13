@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 首先，我们将从一个高层次看看 API——它们是什么、它们如何工作、如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
 
@@ -265,7 +265,7 @@ audioElement.addEventListener("ended", () => {
 
 ### 它们在适当的地方有额外的安全机制
 
-Web API 特性受到与 JavaScript 和其他 Web 技术（例如[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)）相同的安全考虑，但是它们有时会有额外的安全机制。例如，一些更现代的 Web API 将只能在通过 HTTPS 提供的页面上工作，因为它们正在传输潜在的敏感数据（例如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 和[推送](/zh-CN/docs/Web/API/Push_API)）。
+Web API 特性受到与 JavaScript 和其他 Web 技术（例如[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)）相同的安全考虑，但是它们有时会有额外的安全机制。例如，一些更现代的 Web API 将只能在通过 HTTPS 提供的页面上工作，因为它们正在传输潜在的敏感数据（例如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 和[推送](/zh-CN/docs/Web/API/Push_API)）。
 
 另外，在代码中调用某些 Web API 时会请求用户启用权限。例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API) 使用弹出对话框请求权限：
 

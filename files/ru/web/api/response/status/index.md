@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("Fetch API")}}
 
-Доступное только для чтения свойство **`status`** интерфейса {{domxref("Response")}} содержит [коды состояния ответа HTTP](/ru/docs/Web/HTTP/Status).
+Доступное только для чтения свойство **`status`** интерфейса {{domxref("Response")}} содержит [коды состояния ответа HTTP](/ru/docs/Web/HTTP/Reference/Status).
 
 Например, `200` в случае успеха, `404` если ресурс не найден.
 
 ## Значение
 
-Беззнаковое короткое число `unsigned short`, один из [кодов состояния ответа HTTP](/ru/docs/Web/HTTP/Status).
+Беззнаковое короткое число `unsigned short`, один из [кодов состояния ответа HTTP](/ru/docs/Web/HTTP/Reference/Status).
 
 ## Примеры
 
@@ -49,5 +49,5 @@ fetch(myRequest)
 ## Смотрите также
 
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 객체 지향 프로그래밍(OOP)은 Java 및 C++를 비롯한 많은 프로그래밍 언어의 기본이 되는 프로그래밍 패러다임입니다. 이 기사에서는 OOP의 기본 개념에 대한 개요를 제공합니다. **클래스와 인스턴스**, **상속**, **캡슐화**라는 세 가지 주요 개념에 대해 설명합니다. 지금은 특히 JavaScript를 참조하지 않고 이러한 개념을 설명하므로 모든 예제가 {{Glossary("Pseudocode", "pseudocode")}}로 제공됩니다.
 
@@ -22,13 +22,13 @@ l10n:
       <td>
         JavaScript 함수 이해, JavaScript 기본 사항
         (
-        <a href="/ko/docs/Learn/JavaScript/First_steps">첫 번째 단계</a> 및
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">첫 번째 단계</a> 및
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >빌딩 블록</a
         > 참조) 및 OOJS 기본 사항 (
-        <a href="/ko/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting/Object_basics"
           >객체 소개</a
-        > 및 <a href="/ko/docs/Learn/JavaScript/Objects/Object_prototypes">객체 프로토타입</a> 참조).
+        > 및 <a href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">객체 프로토타입</a> 참조).
       </td>
     </tr>
     <tr>
@@ -224,7 +224,7 @@ student.year // error: 'year' is a private property of Student
 
 이 기사에서는 Java 및 C++와 같은 언어로 구현된 클래스 기반 객체 지향 프로그래밍의 기본 기능 중 일부를 설명했습니다.
 
-이전 두 기사에서 우리는 두 가지 핵심 JavaScript 기능인 [생성자](/ko/docs/Learn/JavaScript/Objects/Basics)와 [프로토타입](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)을 살펴보았습니다. 이러한 기능은 확실히 위에서 설명한 일부 OOP 개념과 어느 정도 관련이 있습니다.
+이전 두 기사에서 우리는 두 가지 핵심 JavaScript 기능인 [생성자](/ko/docs/Learn_web_development/Core/Scripting/Object_basics)와 [프로토타입](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)을 살펴보았습니다. 이러한 기능은 확실히 위에서 설명한 일부 OOP 개념과 어느 정도 관련이 있습니다.
 
 - JavaScript의 **생성자**는 객체에 포함된 모든 메서드를 포함하여 객체의 "모양"을 단일 위치에서 정의할 수 있도록 클래스 정의와 같은 것을 제공합니다. 그러나 여기에서도 프로토타입을 사용할 수 있습니다. 예를 들어 메서드가 생성자의 `prototype` 속성에 정의된 경우 해당 생성자를 사용하여 생성된 모든 객체는 프로토타입을 통해 해당 메서드를 가져오므로 생성자에서 정의할 필요가 없습니다.
 
@@ -244,4 +244,4 @@ student.year // error: 'year' is a private property of Student
 
 다음 기사에서는 클래스 기반 객체 지향 프로그래밍을 지원하기 위해 JavaScript가 제공하는 기능을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

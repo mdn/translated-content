@@ -16,7 +16,7 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("LaunchParams.files")}} {{ReadOnlyInline}}{{Experimental_Inline}}
-  - : 起動ナビゲーションとともに [`POST`](/ja/docs/Web/HTTP/Methods/POST) メソッドで渡されたすべてのファイルを表す、読み取り専用の {{domxref("FileSystemHandle")}} オブジェクト配列を返します。
+  - : 起動ナビゲーションとともに [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) メソッドで渡されたすべてのファイルを表す、読み取り専用の {{domxref("FileSystemHandle")}} オブジェクト配列を返します。
 - {{domxref("LaunchParams.targetURL")}} {{ReadOnlyInline}}{{Experimental_Inline}}
   - : 起動するターゲット URL を返します。
 

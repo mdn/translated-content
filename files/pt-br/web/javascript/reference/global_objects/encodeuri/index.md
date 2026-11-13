@@ -61,7 +61,7 @@ Não escapado:
 
 ### encodeURI vs encodeURIComponent
 
-`encodeURI()` se difere de {{jsxref("encodeURIComponent", "encodeURIComponent()")}} como a seguir:
+`encodeURI()` se difere de {{jsxref("encodeURIComponent()")}} como a seguir:
 
 ```js
 var set1 = ";,/?:@&=+$#"; // Caracteres reservados
@@ -77,7 +77,7 @@ console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (o espaço é codificado como %20)
 ```
 
-Note que `encodeURI()` por si só não pode formar requisições [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET) e [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST), como para [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest), porque `"&"`, `"+"`, e `"="` não são codificados, que são tratados como caracteres especiais em requisições `GET` e `POST`. `encodeURIComponent()`, entretanto, codifica esses caracteres.
+Note que `encodeURI()` por si só não pode formar requisições [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET) e [`POST`](/pt-BR/docs/Web/HTTP/Reference/Methods/POST), como para [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest), porque `"&"`, `"+"`, e `"="` não são codificados, que são tratados como caracteres especiais em requisições `GET` e `POST`. `encodeURIComponent()`, entretanto, codifica esses caracteres.
 
 ### Codificando um substituto solitário alto joga
 
@@ -114,6 +114,6 @@ function fixedEncodeURI(str) {
 
 ## Veja também
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}

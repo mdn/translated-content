@@ -3,8 +3,6 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
 
-{{JSRef}}
-
 La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
@@ -34,9 +32,7 @@ monSet.forEach(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction qu'on souhaite exécuter pour chaque élément et qui sera appelée avec trois arguments :
-
     - `valeurCourante`, `cléCourante`
       - : L'élément courant appartenant à l'ensemble `Set`. Un ensemble n'ayant pas de clé, c'est la même valeur qui est passée pour deux arguments de la fonction de rappel.
     - `set`
@@ -55,7 +51,7 @@ La méthode `forEach()` exécute la fonction `callback` fournie pour chaque vale
 - la **clé de l'élément**
 - l'objet **`Set` qui est parcouru**
 
-Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.foreach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
+Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.forEach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
 
 Si un paramètre `thisArg` est fourni, il sera passé à la fonction `callback` lors de l'appel comme valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée comme argument `this`. La valeur `this` effectivement reçue par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this` par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 

@@ -22,9 +22,7 @@ let creating = browser.tabs.create(
 ### 매개변수
 
 - `createProperties`
-
   - : `object`. 새 탭에 줄 속성들입니다. 이 속성들에 대해 더 알아보려면 {{WebExtAPIRef("tabs.Tab")}} 문서를 확인하십시오.
-
     - `active`{{optional_inline}}
       - : `boolean`. 탭을 창의 활성 탭으로 변경할지에 대한 여부입니다. `false`인 경우에는 효과가 없습니다. 창에 포커스가 맞춰져 있는지 여부에는 영향을 주지 않습니다({{WebExtAPIRef('windows.update')}}를 참조하십시오). 기본 값은 `true`입니다.
     - `cookieStoreId` {{optional_inline}}
@@ -42,7 +40,6 @@ let creating = browser.tabs.create(
     - `pinned`{{optional_inline}}
       - : `boolean`. 탭의 고정 여부입니다. 기본 값은 `false`입니다.
     - `selected`{{optional_inline}}
-
       - : `boolean`. 창에서 선택된 탭이 되는지에 대한 여부입니다. 기본 값은 `true`입니다.
 
         > [!WARNING]
@@ -51,13 +48,11 @@ let creating = browser.tabs.create(
     - `title` {{optional_inline}}
       - : `string`. 탭의 제목입니다. `discarded` 속성이 `true`로 생성된 탭에서만 사용할 수 있습니다.
     - `url` {{optional_inline}}
-
       - : `string`. 탭이 초기에 이동할 URL입니다. 기본 값은 새 탭 페이지입니다.
 
         정규화된 URL에는 반드시 스킴이 포함되어야 합니다. 예를 들어, 'www.google.com' 이 아닌 'http://www.google.com' 을 사용해야 합니다.
 
         보안상의 이유로 Firefox에서는 특수한 권한을 가진 URL은 사용할 수 없습니다. 따라서 다음과 같은 URL을 전달하면 실패하게 됩니다.
-
         - chrome: URLs
         - javascript: URLs
         - data: URLs

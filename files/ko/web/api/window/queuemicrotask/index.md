@@ -25,7 +25,7 @@ queueMicrotask(function);
 ### 매개변수
 
 - `function`
-  - : 브라우저 엔진이 안전한 시점에 실행할 {{jsxref("function")}}입니다. 큐에 올라간 마이크로태스크는 현재 대기 중인 모든 태스크가 완료된 후, 그러나 통제권을 이벤트 루프로 넘겨주기 전에 실행됩니다.
+  - : 브라우저 엔진이 안전한 시점에 실행할 {{jsxref("Operators/function", "function")}}입니다. 큐에 올라간 마이크로태스크는 현재 대기 중인 모든 태스크가 완료된 후, 그러나 통제권을 이벤트 루프로 넘겨주기 전에 실행됩니다.
 
 ### 반환 값
 
@@ -72,4 +72,4 @@ MyElement.prototype.loadData = function (url) {
 
 - `core-js`의 [`queueMicrotask` 폴리필](https://github.com/zloirock/core-js#queuemicrotask)
 - [JavaScript의 queueMicrotask()와 함께 마이크로태스크 사용하기](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)

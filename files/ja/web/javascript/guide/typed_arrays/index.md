@@ -2,10 +2,10 @@
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Guide/Typed_arrays
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 JavaScript の型付き配列は配列風のオブジェクトであり、メモリーバッファー内の生のバイナリーデータを読み書きする手段を提供します。
 
@@ -71,7 +71,7 @@ JavaScript の型付き配列は配列風のオブジェクトであり、メモ
 
 型付き配列のバッファーを直接変更せずに、その長さを変更する方法はありません。ただし、型付き配列がサイズ変更可能なバッファーを閲覧しており、固定された `byteLength` を持たない場合、それは「長さ追跡」であり、変更可能なバッファーがサイズ変更されると、自動的にバッファーに合うようにサイズ変更されます。詳細は、[サイズ変更可能なバッファーを閲覧する際の動作](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#サイズ変更可能なバッファー表示時の動作について)を参照してください。
 
-通常の配列と同様に、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation)を使用して型付き配列の要素にアクセスすることができます。 対応するバッファー内のバイトが取得され、数値として解釈されます。 数値を使用してプロパティにアクセスする場合（または、プロパティにアクセスする際には数値は常に文字列に変換されるため、数値の文字列表現を使用する場合）、そのアクセスは型付き配列によってプロキシ化されます。 つまり、オブジェクト自体を操作することはありません。 これは、例えば次のようなことを意味します。
+通常の配列と同様に、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation)を使用して型付き配列の要素にアクセスすることができます。 対応するバッファー内のバイトが取得され、数値として解釈されます。 数値を使用してプロパティにアクセスする場合（または、プロパティにアクセスする際には数値は常に文字列に変換されるため、数値の文字列表現を使用する場合）、そのアクセスは型付き配列によってプロキシー化されます。 つまり、オブジェクト自体を操作することはありません。 これは、例えば次のようなことを意味します。
 
 - 範囲外のインデックスにアクセスすると、常に `undefined` が返され、オブジェクト上のプロパティに実際にアクセスすることなく、返値においてそのプロパティがアクセスされたかのように見せかけることができます。
 - そのような範囲外のプロパティに書き込もうとする試みは、何の効果も持ちません。エラーは発生しませんが、バッファーや型付き配列も変更されません。
@@ -248,11 +248,11 @@ console.log(text); // "你好"
 
 以下の C 構造体について考えてみましょう。
 
-```cpp
+```c
 struct someStruct {
-  unsigned long id;
-  char username[16];
-  float amountDue;
+    unsigned long id;
+    char username[16];
+    float amountDue;
 };
 ```
 

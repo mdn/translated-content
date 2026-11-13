@@ -1,32 +1,33 @@
 ---
 title: Reflect.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Reflect.has()`** は静的メソッドで、[`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子と似ていますが、関数として存在します。
 
-静的な **`Reflect.has()`** メソッドは、機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
-
-{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.has()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.has(object1, "property1"));
-// Expected output: true
+console.log(Reflect.has(object, "property1"));
+// 予想される結果: true
 
-console.log(Reflect.has(object1, "property2"));
-// Expected output: false
+console.log(Reflect.has(object, "property2"));
+// 予想される結果: false
 
-console.log(Reflect.has(object1, "toString"));
-// Expected output: true
+console.log(Reflect.has(object, "toString"));
+// 予想される結果: true
 ```
 
 ## 構文
 
-```
+```js-nolint
 Reflect.has(target, propertyKey)
 ```
 
@@ -39,15 +40,22 @@ Reflect.has(target, propertyKey)
 
 ### 返値
 
-対象がプロパティを持つかどうかを示す {{jsxref("Boolean")}} 値。
+対象がプロパティを持つかどうかを示す論理値 ({{jsxref("Boolean")}})。
 
 ### 例外
 
-`target` が {{jsxref("Object")}} でなかった場合、 {{jsxref("TypeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `target` がオブジェクトではない場合に発生します。
 
 ## 解説
 
-`Reflect.has` メソッドは、オブジェクトプロパティがあるかをチェックします。機能としては [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)のように動作します。
+`Reflect.has()` は、オブジェクトにプロパティが存在するかどうかを調べる反射的意味づけを提供します。つまり、`Reflect.has(target, propertyKey)` は意味づけ的に次のものと同等です。
+
+```js
+propertyKey in target;
+```
+
+`Reflect.has()` は、`target` の `[[HasProperty]]` [オブジェクト内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) を呼び出します。
 
 ## 例
 
@@ -93,5 +101,7 @@ Reflect.has(c, "foo"); // true
 
 ## 関連情報
 
+- [`Reflect.has` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)
+- [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in)
+- [`handler.has()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has)

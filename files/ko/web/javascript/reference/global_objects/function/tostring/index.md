@@ -59,4 +59,4 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 ## 함께 보기
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

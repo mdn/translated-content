@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("VirtualKeyboard")}} 接口的 **`show()`** 方法用于以编程方式显示屏幕上的虚拟键盘。这在页面需要实现自己的虚拟键盘逻辑时特别有用，特别是在 `contenteditable` 元素上使用 `virtualkeyboardpolicy` 属性时，如[控制 `contenteditable` 元素上的虚拟键盘](/zh-CN/docs/Web/API/VirtualKeyboard_API#控制_contenteditable_元素上的虚拟键盘)所解释的那样。
 
-该方法仅在当前焦点元素是表单控件（如 {{htmlelement("input")}} 或 {{htmlelement("textarea")}} 元素），或者当前焦点元素是 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)，且当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual` 而 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
+该方法仅在当前焦点元素是表单控件（如 {{htmlelement("input")}} 或 {{htmlelement("textarea")}} 元素），或者当前焦点元素是 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)，且当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual` 而 [`inputmode`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
 
 `show()` 方法始终返回 `undefined`，并触发一个 {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} 事件。
 

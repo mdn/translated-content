@@ -24,8 +24,6 @@ console.log(calcAngle(5, 3));
 // Expected output: 1.0303768265243125
 ```
 
-La fuente para este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona el repositorio que hay en este link: <https://github.com/mdn/interactive-examples> ; y envíanos una _pull request_.
-
 ## Sintaxis
 
 ```

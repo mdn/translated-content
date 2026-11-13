@@ -15,8 +15,7 @@ Notification.onclick = function (event) {
 };
 ```
 
-El comportamiento por defecto es mover el foco al viewport del [sitio de contexto](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de dicha notificación. Si no deseas este comportamiento, puedes llamar {{domxref("Event/preventDefault",
-  "preventDefault()")}} en el objeto del evento.
+El comportamiento por defecto es mover el foco al viewport del [sitio de contexto](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de dicha notificación. Si no deseas este comportamiento, puedes llamar {{domxref("Event/preventDefault", "preventDefault()")}} en el objeto del evento.
 
 ## Ejemplos
 

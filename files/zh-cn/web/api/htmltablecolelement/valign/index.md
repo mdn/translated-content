@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableColElement")}} 接口的 **`vAlign`** 属性是一个指示如何在表格 {{htmlelement("col")}} 列元素中垂直对齐文本的字符串。
 
@@ -33,7 +33,7 @@ l10n:
 
 使用 CSS `vertical-align`。由于 {{htmlelement("td")}} 不是 {{htmlelement("col")}} 的子元素，因此不能直接在 {{HTMLElement("col")}} 上设置它，需要使用 `td:nth-child(n)` 或类似值（`n` 是列号）来选择列的单元格。
 
-{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#为表格列添加样式)。
+{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-child#为表格列添加样式)。
 
 ## 规范
 

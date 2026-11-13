@@ -2,7 +2,7 @@
 title: Navigator：canShare() 方法
 slug: Web/API/Navigator/canShare
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
@@ -16,7 +16,7 @@ l10n:
 - 指定了要分享的文件但用户代理实现不支持文件共享。
 - 共享了将被用户代理视为“恶意共享”的指定数据。
 
-[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予，则 `canShare()` 方法将返回 `false`。
+[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予，则 `canShare()` 方法将返回 `false`。
 
 ## 语法
 
@@ -28,13 +28,11 @@ canShare(data)
 ### 参数
 
 - `data` {{optional_inline}}
-
   - : 定义要测试的共享数据的对象。
 
     通常，如果此调用返回 `true`，则具有相同属性的对象将传递给 {{domxref("navigator.share()")}}。用户代理未知的属性将被忽略；共享数据仅根据用户代理理解的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性，否则该方法将返回 `false`。
 
     可能的值为：
-
     - `url` {{optional_inline}}
       - : 表示要共享的 URL 的字符串。
     - `text` {{optional_inline}}

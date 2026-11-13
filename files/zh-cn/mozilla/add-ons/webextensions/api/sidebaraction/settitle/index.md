@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 665b94c45d49c71009c3e6c9a9e0f601b6af0d82
 ---
 
-{{AddonSidebar}}
-
 设置侧边栏的标题。标题会在浏览器列出可用侧边栏的地方显示。例如，Firefox 会在“查看 > 侧栏”菜单中显示这一标题。当侧边栏打开时，该标题还会显示在侧边栏的顶部。
 
 ## 标题类型
@@ -30,17 +28,13 @@ browser.sidebarAction.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`，包含下述属性的对象：
-
     - `title`
-
       - : `string` 或 `null`，侧边栏的新标题。
 
         如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("sidebarAction.getTitle")}} 仍会提供空字符串。
 
         如果 `title` 为 `null`，那么之前设置的标题将会被移除，并且：
-
         - 如果指定了 `tabId`，并且该标签页设置了标签页特定的标题，则该标签页将继承其所属窗口的标题。
         - 如果指定了 `windowId`，并且该窗口设置了特定的窗口标题，则该窗口将继承全局标题。
         - 否则，全局标题将被重置为清单标题。
@@ -76,7 +70,7 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 是基于 Opera 的 [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API。
+> 此 API 基于 Opera 的 [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

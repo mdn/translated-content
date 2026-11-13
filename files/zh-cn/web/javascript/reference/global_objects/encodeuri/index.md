@@ -3,13 +3,11 @@ title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
 
-{{jsSidebar("Objects")}}
-
 **`encodeURI()`** 函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列) 由两个 "代理" 字符组成)。
 
 ## 语法
 
-```plain
+```js-nolint
 encodeURI(URI)
 ```
 
@@ -26,7 +24,7 @@ encodeURI(URI)
 
 假定一个 URI 是完整的 URI，那么无需对那些保留的并且在 URI 中有特殊意思的字符进行编码。
 
-```plain
+```url
 http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+has+spaces#anchor
 ```
 

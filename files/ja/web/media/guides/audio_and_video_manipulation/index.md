@@ -115,15 +115,16 @@ processor.doLoad();
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
 > [!NOTE]
-> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/CORS) を有効にする必要があります。
+> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Guides/CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
-[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
+[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクスチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
+> [!NOTE]
+> [このデモのソースコードは GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 
@@ -162,8 +163,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -191,7 +191,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **メモ:** [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
+> [!NOTE]
+> [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
 
 ## 音声の加工
 
@@ -256,8 +257,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden
@@ -293,7 +293,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **メモ:** [CORS](/ja/docs/Web/HTTP/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> [!NOTE]
+> [CORS](/ja/docs/Web/HTTP/Guides/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 
@@ -347,7 +348,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **メモ:** [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
+> [!NOTE]
+> [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
 
 ## JavaScript によるコーデック
 
@@ -392,5 +394,3 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - [AudioContext](/ja/docs/Web/API/AudioContext)
 - More info on [Spatial Audio](/ja/docs/Web/API/BaseAudioContext/createPanner)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Apps/Fundamentals/")}}

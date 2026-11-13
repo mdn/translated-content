@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`minLength`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、この {{HTMLElement("input")}} 要素の値として必要な最小文字数（UTF-16 コード単位）を示します。これは、この要素の [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を反映します。`-1` は、必要な最小文字数がないことを意味します。
+**`minLength`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、この {{HTMLElement("input")}} 要素の値として必要な最小文字数（UTF-16 コード単位）を示します。これは、この要素の [`minlength`](/ja/docs/Web/HTML/Reference/Elements/input#minlength) 属性を反映します。`-1` は、必要な最小文字数がないことを意味します。
 
 > [!NOTE]
 > 入力に値があり、その値が `minlength` 属性で要求される文字数よりも少ない場合、その要素は無効と見なされ、{{domxref("ValidityState")}} オブジェクトの {{domxref("ValidityState.tooShort", "tooShort")}} プロパティが `true` になります。

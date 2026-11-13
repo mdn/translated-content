@@ -39,7 +39,8 @@ function initColorBuffer(gl) {
 
 もちろん、この新しい関数を `initBuffers()` から呼び出して、作成した新しいバッファーを返す必要もあります。
 
-> **メモ:** `initBuffers()` 関数の終わりで、既存の `return` 文の代わりに以下のコードを追加してください。
+> [!NOTE]
+> `initBuffers()` 関数の終わりで、既存の `return` 文の代わりに以下のコードを追加してください。
 
 ```js
 const colorBuffer = initColorBuffer(gl);
@@ -101,7 +102,8 @@ const fsSource = `
 
 次に、色の属性の場所を調べて、シェーダープログラムにその属性を設定するには、コードを追加する必要があります。
 
-> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新してください。
+> [!NOTE]
+> `main()` 関数の `programInfo` 宣言を次のように更新してください。
 
 ```js
 // シェーダープログラムを使用するために必要な情報をすべて収集します。
@@ -147,7 +149,8 @@ function setColorAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **メモ:** `setColorAttribute()` 関数は、 `drawScene()` から、 `gl.useProgram()` を呼び出す直前に呼ばれます。
+> [!NOTE]
+> `setColorAttribute()` 関数は、 `drawScene()` から、 `gl.useProgram()` を呼び出す直前に呼ばれます。
 
 ```js
 setColorAttribute(gl, buffers, programInfo);

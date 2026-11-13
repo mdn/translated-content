@@ -13,7 +13,7 @@ A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) pro
 
 ### Conhecimento geral
 
-- [Cross-Origin Resource Sharing (CORS)](/pt-BR/docs/Web/HTTP/CORS) na MDN
+- [Cross-Origin Resource Sharing (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS) na MDN
 - [Cross-origin resource sharing](https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipedia
 
 ### Cabeçalhos CORS
@@ -33,7 +33,7 @@ A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) pro
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo quais cabeçalhos HTTP serão utilizados quando a requisição verdadeira for feita.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo qual [método HTTP](/pt-BR/docs/Web/HTTP/Methods) será usado quando a requisição verdadeira for feita.
+  - : Usado ao emitir uma requisição _on-the-fly_ para deixar o servidor sabendo qual [método HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) será usado quando a requisição verdadeira for feita.
 - {{HTTPHeader("Origin")}}
   - : Indica de onde uma busca se origina.
 

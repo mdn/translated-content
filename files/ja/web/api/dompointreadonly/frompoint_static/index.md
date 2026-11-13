@@ -5,7 +5,7 @@ slug: Web/API/DOMPointReadOnly/fromPoint_static
 
 {{APIRef("DOM")}}
 
-静的な **{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。
+静的な **{{domxref("DOMPointReadOnly")}}** メソッド `fromPoint()` は、指定された元の点から新しい `DOMPointReadOnly` オブジェクトを作成し、それを返します。
 
 また、 {{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} コンストラクターを使用しても、新しい `DOMPointReadOnly` オブジェクトを作成することができます。
 
@@ -18,9 +18,7 @@ fromPoint(sourcePoint);
 ### 引数
 
 - `sourcePoint`
-
   - : 新しい点のプロパティの値を取得するための {{domxref("DOMPoint")}} または {{domxref("DOMPointReadOnly")}} インスタンス、あるいは以下のプロパティを含むオブジェクトです。
-
     - `x`
       - : 空間上の点の `x` 座標を表す、無制限の浮動小数点数。これは一般に水平座標であり、正の値は右側に、負の値は左側になります。既定値は `0` です。
     - `y`

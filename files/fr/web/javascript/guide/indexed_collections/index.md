@@ -3,7 +3,7 @@ title: Collections indexées
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Ce chapitre présente les collections de données qui sont ordonnées par un indice. Cela inclue les tableaux et les objets semblables à des tableaux que sont les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et les objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
@@ -296,7 +296,6 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
   ```
 
   `sort()` peut également utiliser une fonction de rappel (<i lang="en">callback</i>) qui détermine comment les éléments sont comparés. La fonction compare deux arguments et renvoie une valeur selon les règles suivantes&nbsp;:
-
   - Si `a` est inférieur à `b` selon l'ordre, renvoie -1 (ou un autre nombre négatif)
   - Si `a` est supérieur à `b` selon l'ordre, renvoie 1 (ou un autre nombre positif)
   - Si `a` et `b` sont considérés égaux, renvoie 0.
@@ -391,7 +390,7 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
 
   La fonction de rappel est appelée avec trois arguments&nbsp;: le premier étant la valeur de l'élément courant, le deuxième est l'indice de cet élément et le troisième représente le tableau lui-même. Les fonctions JavaScript ignorent les arguments supplémentaires qui ne sont pas déclarés explicitement dans la liste des paramètres, on peut donc utiliser une fonction prenant un seul argument comme fonction de rappel.
 
-- [`reduce(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) applique `callback(premièreValeur, secondeValeur)` au fur et à mesure sur le tableau pour le réduire en une seule valeur, c'est cette valeur qui est renvoyée par la fonction&nbsp;:
+- [`reduce(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) applique `callback(premièreValeur, secondeValeur)` au fur et à mesure sur le tableau pour le réduire en une seule valeur, c'est cette valeur qui est renvoyée par la fonction&nbsp;:
 
   ```js
   let a = [10, 20, 30];
@@ -401,7 +400,7 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
   console.log(total); // Affiche 60
   ```
 
-- [`reduceRight(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) fonctionne comme `reduce()`, mais débute avec le dernier élément (parcourt le tableau de droite à gauche).
+- [`reduceRight(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) fonctionne comme `reduce()`, mais débute avec le dernier élément (parcourt le tableau de droite à gauche).
 
   `reduce()` et `reduceRight()` sont à utiliser lorsqu'on souhaite n'obtenir qu'une seule valeur, récursivement, à partir des différents éléments du tableau. Pour plus d'informations sur l'utilisation d'une valeur d'initialisation pour ces deux fonctions, se référer à leurs pages&nbsp;: [`Array.reduceRight`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) et [`Array.reduce`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
@@ -509,4 +508,4 @@ Les vues de tableaux typés possèdent des noms explicites et fournissent des vu
 
 Pour plus d'informations sur les tableaux typés, voir [l'article de la référence](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sur les différents objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

@@ -1,95 +1,257 @@
 ---
 title: "課題: バカ話ジェネレーター"
+short-title: "課題: 話ジェネレーター"
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 7ff752fba26e0bb950998bb5476157ff96c7d314
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
-
-この評価試験では、このモジュールを通して身に付けた知識を生かして、ランダムなバカ話を生成する楽しいアプリを作ります。楽しんでください！
+この課題では、このモジュールでこれまでに学んだ知識を活かして、ランダムでふざけた物語を生成する楽しいアプリを作成します。その過程で、変数、数学、文字列、配列に関する知識が検査されます。楽しんでください！
 
 ## 出発点
 
-この課題を始めるために、次のことを行ってください。
+始めるには、以下のコードパネルのいずれかにある **Play** ボタンをクリックし、MDN Playground で指定されたサンプルを開いてください。その後、[プロジェクト概要]の手順に従ってページを適切にスタイル設定してください。
 
-- GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピューターの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
-- [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
+```html live-sample___silly-story-start live-sample___silly-story-finish
+<div>
+  <label for="custom-name">人の名前を入力:</label>
+  <input id="custom-name" type="text" placeholder="" />
+</div>
+<fieldset>
+  <legend>ロケールを選択:</legend>
+  <label for="us">米国</label
+  ><input id="us" type="radio" name="uk-us" value="us" checked />
+  <label for="uk">英国</label
+  ><input id="uk" type="radio" name="uk-us" value="uk" />
+</fieldset>
+<div>
+  <button class="generate">ランダムなお話を生成</button>
+</div>
+<!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+<p class="story"></p>
+```
 
-その代わりに、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなサイトを使って評価試験を実施できます。 HTML、CSS、JavaScript をオンラインエディターに貼り付けてください。使っているオンラインエディターが独立した JavaScript パネルを持っていない場合、 HTML ページ内の `<script>` 要素内に書いても問題ありません。
+```css hidden live-sample___silly-story-start live-sample___silly-story-finish
+body {
+  font: 1.2em / 1.5 system-ui;
+  margin: 0 auto;
+  width: 500px;
+}
 
-> [!NOTE]
-> 行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+fieldset {
+  border: 0;
+}
 
-## プロジェクトの要点
+fieldset,
+legend {
+  padding: 0;
+  margin: 0;
+}
 
-HTML および CSS と少しのテキストと JavaScript 関数がありますね。JavaScript を必要なだけ書いて、下記のような動作をするプログラムを書きましょう。
+input[type="text"] {
+  margin-top: 5px;
+  padding: 5px;
+  width: 50%;
+  display: block;
+}
 
-- "Generate random story" ボタンが押された時にバカな話を生成する。
-- バカな話を生成するボタンが押される前に "Enter custom name" のテキストフィールドに名前が入力されていた場合には、既定の "Bob" という名前を入力された名前に置き換える。
+div,
+fieldset {
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 10px;
+  background: #ffc125;
+  padding: 20px;
+  visibility: hidden;
+}
+```
+
+```js live-sample___silly-story-start
+// 変数と乱数関数の定義
+
+const customName = document.getElementById("custom-name");
+const generateBtn = document.querySelector(".generate");
+const story = document.querySelector(".story");
+
+function randomValueFromArray(array) {
+  const random = Math.floor(Math.random() * array.length);
+  return array[random];
+}
+
+// 生のテキスト文字列
+
+// ゴブリンのウィリー
+// ビッグダディ
+// サンタクロース
+
+// スープキッチン
+// ディズニーランド
+// ホワイトハウス
+
+// 自然発火した
+// 歩道の上で水たまりになった
+// ナメクジに変身して、這って逃げ去った
+
+// ランダム文字列の一部を返す関数
+
+function returnRandomStoryString() {
+  // 外は華氏 94 度もあったので、:insertx:は散歩に出かけた。:inserty:に着くと、しばらくの間、恐怖のあまり呆然と立ち尽くしていたが、やがて:insertz:。ボブはその一連のことがすべて目撃したが、驚くことはなかった ―― :insertx:の体重は 300 ポンドもあるし、その日は暑い日だったからだ。
+
+  return storyText;
+}
+
+// イベントリスナーと部分的な生成関数の定義
+
+generateBtn.addEventListener("click", generateStory);
+
+function generateStory() {
+  if (customName.value !== "") {
+    const name = customName.value;
+  }
+
+  if (document.getElementById("uk").checked) {
+    const weight = Math.round(300);
+    const temperature = Math.round(94);
+  }
+
+  // TODO: "" を正しい式に置き換えましょう
+  story.textContent = "";
+  story.style.visibility = "visible";
+}
+```
+
+{{EmbedLiveSample("silly-story-start", "100%", 300)}}
+
+## プロジェクト概要
+
+少しのテキストと JavaScript 関数がありますね。JavaScript を必要なだけ書いて、下記のような動作をするプログラムを書きましょう。
+
+- "ランダムなお話を生成" ボタンが押された時にバカな話を生成する。
+- バカな話を生成するボタンが押される前に "人の名前を入力" のテキストフィールドに名前が入力されていた場合には、既定の "Bob" という名前を入力された名前に置き換える。
 - バカな話を生成するボタンが押される前に UK のラジオボタンがチェックされていた場合のみ、既定の US (米国) の重さと気温を UK (英国) の同等な単位に変換する。
 - ボタンが押される度に新しいバカ話がランダムに生成されます。
 
-下記のスクリーンショットは、完成したプログラムが出力する例を表しています。
+### 初期変数と関数
 
-![このバカ話ジェネレーターアプリは、テキストフィールド、 2 つのラジオボタン、ランダムなストーリーを生成するボタンで構成されています。](screen_shot_2018-09-19_at_10.01.38_am.png)
+この JavaScript のコードにおいて、「変数定義と乱数関数を完成させましょう」というコメントの下に、以下の参照を格納するために、3 つの定数があります。
 
-もっとイメージを知りたい場合は、[完成プログラムの例を見てください](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/)（ソースコードは覗かないで！）
+- "人の名前を入力" テキストフィールド: `customName`
+- "ランダムなお話を生成" ボタン: `generateBtn`
+- 記事がコピーされる HTML 本体の下部にある {{htmlelement("p")}} 要素: `story`
 
-## 完成までのステップ
+さらに `randomValueFromArray()` という、引数として配列を取りその配列からランダムに 1 つの項目を返値として返す関数が使えるようになります。
 
-以下の項目が達成すべきリストです。
+「生のテキスト文字列」というコメントの下に、プログラムへの入力となるコメントアウトされた文字列がいくつかあります。これらの文字列のコメントを外し、同様に定数の中に格納しましょう。
 
-基本的なセットアップ
+1. 最初の 3 つの文字列を、`characters` という名前の配列に格納しましょう。
+2. 2 つ目の 3 つの文字列のセットを、`places` という名前の配列に格納しましょう。
+3. 3 つ目の 3 つの文字列のセットを、`events` という名前の配列に格納しましょう。
 
-1. `index.html` ファイルと同じディレクトリーに `main.js` を作ります。
-2. {{htmlelement("script")}} 要素を使用して、HTML ファイルに `main.js` への参照を外部 JavaScript として適用します。これは `</body>` タグの直前に配置します。
+### `returnRandomStoryString()` 関数を完成させる
 
-最初の変数と関数
+「ランダム文字列の一部を返す関数」というコメントの下には、長いコメント付きのテキストと、`storyText` という値を返す `return` 文を含む、未完成の `returnRandomStoryString()` があります。
 
-1. 先ほどのテキストファイル内の "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" という見出しの直後にあるコードをコピーして `main.js` の先頭に貼り付けます。これで "Enter custom name" テキストフィールド (`customName`) 、 "Generate random story" ボタン (`randomize`) 、HTML の body の下のほうにある {{htmlelement("p")}} 要素 (`story`) への参照を保持することができます。さらに `randomValueFromArray()` という、引数として配列を取りその配列からランダムに 1 つの項目を返値として返す関数が使えるようになります。
-2. 次にテキストファイルの 2 番目のセクションを見てみましょう。 "2. RAW TEXT STRINGS" という見出しのところです。このプログラムの入力となる文字列が書かれています。`main.js` の内部で使用できるように、これらの文字列を変数に保持してください。
+この関数を完成させるには、次のようにします。
 
-   1. 先頭の長い長い文字列を `storyText` という変数に格納します。
-   2. 3 つセットになっている最初の文字列の組を `insertX` という配列に格納します。
-   3. 2 組目の文字列を `insertY` という配列に格納します。
-   4. 3 組目の文字列を `insertZ` という配列に格納します。
+1. 長い文字列のコメントを外し、`storyText` という変数に格納してください。これはテンプレートリテラルである必要があります。
+2. テンプレートリテラルの一番上に、`randomCharacter`、`randomPlace`、`randomEvent` という 3 つの定数を追加してください。これらは、それぞれ `characters`、`places`、`events` 配列からランダムな文字列を返す 3 回の `randomValueFromArray()` の呼び出しに等しく設定する必要があります。
+3. テンプレートリテラル内で、`:insertx:`、`:inserty:`、および `:insertz:` を、それぞれ `randomCharacter`、`randomPlace`、`randomEvent` を含む埋め込み式に置き換えてください。
 
-イベントハンドラーと未完成の関数の配置
+### `generateStory()` 関数を完成させる
 
-1. テキストファイルに戻ります。
-2. "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" という見出しの直後にあるコードをコピーして `main.js` ファイルの最後に貼り付けます。これで、
+「イベントリスナーと部分的な生成関数の定義」というコメントの下に、いくつかのコードアイテムがあります。
 
-   - `randomize` 変数へのクリックイベントリスナーが追加され、その変数に紐づくボタンが押された場合に `result()` 関数が実行されるようになります。
-   - 部分的に実装されている `result()` 関数の定義が追加されます。この課題の中で、この関数の残りを実装し、正しく動作するようにします。
+- `generateBtn` 変数に `click` イベントのリスナーを追加する行です。これにより、この変数が表すボタンがクリックされた際に、`generateStory()` 関数が実行されます。
+- 半分できている　`generateStory()` 関数の定義の一部です。この課題の残りの部分では、この関数内の行を埋めて、関数を完了させ、正しく動作するようにします。
 
-`result()` 関数の作成
+以下の手順に従って、この関数を完成させてください。
 
-1. `newStory` という変数を作り、`storyText` の値を `newStory` 変数に格納します。これはボタンが押された場合に、毎回新しい話を作り出すために必要となります。もし `storyText` 変数自体に変更を加えてしまうと一度しか面白い話が生成できなくなってしまいます。
-2. `xItem`、`yItem`、`zItem` という変数を 3 つ作成し、それぞれ対応する配列で呼び出した `randomValueFromArray()` の返値を設定します (それぞれの配列に含まれる文字列がランダムに選ばれます)。例えば、関数を呼び出して `insertX` から一つの文字列を取得するには `randomValueFromArray(insertX)` のように書きます。
-3. 次に `newStory` 文字列内の `:insertx:`、`:inserty:`、`:insertz:` という 3 か所のプレースホルダーをそれぞれ `xItem`、`yItem`、`zItem` に格納されている文字列で置き換えます。ここで役に立つ文字列のメソッドが 2 つあります。いずれの場合も、メソッドの呼び出しを `newStory` と等しくして、呼び出されるたびに `newStory` はそれ自身と等しくなりますが、置換は行われます。これでボタンが何度押されても、プレースホルダーの値をランダムなバカ話で置き換えることができます。もう少しヒントを出すと、さらにヒントとして、選んだメソッドによっては、どちらかの呼び出しを 2 回行う必要があるかもしれません。
-4. 最初の `if` ブロックで、`newStory` の文字列内で見つかる 'Bob' という文字列を `name` 変数の値で置換するため、別の文字列置換のメソッド呼び出し追加します。このブロック内では、「もし ( if ) `customName` テキストフィールドに何かが入力されていれば、Bob をその文字列で置き換える」ということを言っています。
-5. 次の `if` ブロックの中では、`uk` のラジオボタンが選択されているかどうかを調べています。もし選択されているのなら、重さと温度の単位をポンド・華氏から、ストーン・摂氏に変換したいと思います。そのために必要なことは...
-
+1. 1. `newStory` という名前の新しい変数を作成し、その値を `returnRandomStoryString()` の呼び出し結果に設定します。この関数は、ボタンが押されるたびに新しいランダムな話を生成するために必要です。もし `newStory` の値を直接 `storyText` に設定してしまうと、新しい話を生成できるのは一度きりになってしまいます。
+2. 最初の `if` ブロックで、`newStory` の文字列内で見つかる 'Bob' という文字列を `name` 変数の値で置換するため、別の文字列置換のメソッド呼び出し追加します。このブロック内では、「もし (if) `customName` テキストフィールドに何かが入力されていれば、Bob をその文字列で置き換える」ということを言っています。
+3. 次の `if` ブロックの中では、`uk` のラジオボタンが選択されているかどうかを調べています。もし選択されているのなら、重さと温度の単位をポンド・華氏から、ストーン・摂氏に変換したいと思います。そのために必要なことは...
    1. ポンドからストーンへ変換する公式、および、華氏から摂氏へ変換する公式を調べます。
-   2. `weight` 変数が宣言されている行内の、300 を ポンドからストーンに変換した値で置き換えます。そして `' stone'` (ストーン) を `Math.round()` の結果に対して、その後ろに結合します。
-   3. `temperature` 変数が宣言されている行内の、94 を華氏から摂氏に変換した値で置き換えます。こちらには `' centigrade'` (摂氏～度) という文字を `Math.round()` の結果に対して、後ろに結合します。
-   4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、'94 fahrenheit' を `temperature` 変数の内容に、'300 pounds' を `weight` 変数の内容にそれぞれ置換します。
-
-6. 最後に、関数の下から 2 行目にある、`story` 変数の `textContent` プロパティ(段落を参照している) を、`newStory` 変数の内容で置き換えます。
+   2. `weight` 変数が宣言されている行内の、300 をポンドからストーンに変換した値で置き換えます。そして `" stone"` (ストーン) を `Math.round()` の結果に対して、その後ろに結合します。
+   3. `temperature` 変数が宣言されている行内の、`94` を華氏から摂氏に変換した値で置き換えます。`" Celsius"` (摂氏～度) という文字を `Math.round()` の結果に対して、後ろに結合します。
+   4. 上記 2 つの変数の宣言の直後に、さらにもう 2 つ文字列を置換するコードを書いて、`300 pounds` を `weight` 変数の内容に、`94 Fahrenheit` を `temperature` 変数の内容に、それぞれ置換します。
+4. 最後に、関数の下から 2 行目にある、`story` 変数の `textContent` プロパティ(段落を参照している) を、`newStory` 変数の内容で置き換えます。
 
 ## ヒントとコツ
 
 - JavaScript を HTML に適用する以外に、HTML を変更する必要は全くありません。
-- もし、JavaScript が HTML に適切に適用されているかどうかを知りたければ、JavaScript ファイルから一時的に全てのコードを削除して、確実に何かが起きるようなコードを追加して、JavaScript ファイルを保存して HTML ファイルを更新してみましょう。次の例は {{htmlelement("html")}} 要素の背景色を赤くするコードです。JavaScript が適切に HTML に適用されていれば、ブラウザーのウィンドウが真っ赤になることでしょう。
-
-  ```js
-  document.querySelector("html").style.backgroundColor = "red";
-  ```
-
 - [`Math.round()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/round) は JavaScript の組み込みメソッドで、計算結果を整数値に四捨五入します。
 - 置き換える必要のある文字列のインスタンスは 3 つあります。 `replace()` メソッドを複数回繰り返しても、 `replaceAll()` を使用しても構いません。文字列は不変であることを覚えておいてください。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
+## 例
+
+完成したアプリは、以下のライブ例のように動作するはずです。
+
+{{EmbedLiveSample("silly-story-finish", "100%", 500)}}
+
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
+
+完成した JavaScript は、次のような感じになるはずです。
+
+```js live-sample___silly-story-finish
+// 変数定義と乱数関数を完成させましょう
+
+const customName = document.getElementById("custom-name");
+const generateBtn = document.querySelector(".generate");
+const story = document.querySelector(".story");
+
+function randomValueFromArray(array) {
+  const random = Math.floor(Math.random() * array.length);
+  return array[random];
+}
+
+// 模範解答: 生のテキスト文字列
+
+const characters = ["ゴブリンのウィリー", "ビッグダディ", "サンタクロース"];
+const places = ["スープキッチン", "ディズニーランド", "ホワイトハウス"];
+const events = [
+  "自然発火した",
+  "歩道の上で水たまりになった",
+  "ナメクジに変身して、這って逃げ去った",
+];
+
+// 模範解答: ランダム文字列の一部を返す関数
+
+function returnRandomStoryString() {
+  const randomCharacter = randomValueFromArray(characters);
+  const randomPlace = randomValueFromArray(places);
+  const randomEvent = randomValueFromArray(events);
+
+  let storyText = `外は華氏 94 度もあったので、${randomCharacter}は散歩に出かけた。${randomPlace}に着くと、しばらくの間、恐怖のあまり呆然と立ち尽くしていたが、やがて${randomEvent}。ボブはその一連のことがすべて目撃したが、驚くことはなかった ―― ${randomCharacter}の体重は 300 ポンドもあるし、その日は暑い日だったからだ。`;
+
+  return storyText;
+}
+
+// 模範解答: イベントリスナーと部分的な生成関数の定義
+
+generateBtn.addEventListener("click", generateStory);
+
+function generateStory() {
+  let newStory = returnRandomStoryString();
+
+  if (customName.value !== "") {
+    const name = customName.value;
+    newStory = newStory.replace("ボブ", name);
+  }
+
+  if (document.getElementById("uk").checked) {
+    const weight = `${Math.round(300 / 14)} ストーン`;
+    const temperature = `摂氏 ${Math.round((94 - 32) * (5 / 9))} 度`;
+    newStory = newStory.replace("300 ポンド", weight);
+    newStory = newStory.replace("華氏 94 度", temperature);
+  }
+
+  story.textContent = newStory;
+  story.style.visibility = "visible";
+}
+```
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}

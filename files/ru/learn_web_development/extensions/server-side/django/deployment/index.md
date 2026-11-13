@@ -3,13 +3,13 @@ title: "Django Руководство часть 11: Разворачивани�
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
-Теперь, когда вы создали (и протестировали) свой шикарный сайт [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), у вас скорее всего, есть желание разместить его на публичном веб-сервере, чтобы он стал доступен через интернет персоналу и посетителям библиотеки. Данная статья даёт общее представление о том, каким образом подойти к поиску хостинга для размещения сайта, а также, что нужно сделать чтобы подготовить свой сайт к публикации.
+Теперь, когда вы создали (и протестировали) свой шикарный сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), у вас скорее всего, есть желание разместить его на публичном веб-сервере, чтобы он стал доступен через интернет персоналу и посетителям библиотеки. Данная статья даёт общее представление о том, каким образом подойти к поиску хостинга для размещения сайта, а также, что нужно сделать чтобы подготовить свой сайт к публикации.
 
-| Требования: | Завершить изучение всех предыдущих частей руководства, включая [Django Руководство часть 10: Тестирование веб-приложений в Django](/ru/docs/Learn/Server-side/Django/Testing). |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Цель:       | Изучить, где и как вы можете развернуть приложение Django для публичного доступа.                                                                                              |
+| Требования: | Завершить изучение всех предыдущих частей руководства, включая [Django Руководство часть 10: Тестирование веб-приложений в Django](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Testing). |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Изучить, где и как вы можете развернуть приложение Django для публичного доступа.                                                                                                                         |
 
 ## Обзор
 
@@ -77,7 +77,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 
 ## Подготовка веб-сайта к публикации
 
-[Скелет сайта](/ru/docs/Learn/Server-side/Django/skeleton_website) был создан при помощи инструментов _django-admin_ и _manage.py_, которые настроены таким образом, чтобы сделать разработку проще. Многие настройки файла проекта (определённых в **settings.py**) должны быть изменены перед публикацией сайта, либо из-за вопросов безопасности, либо производительности.
+[Скелет сайта](/ru/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) был создан при помощи инструментов _django-admin_ и _manage.py_, которые настроены таким образом, чтобы сделать разработку проще. Многие настройки файла проекта (определённых в **settings.py**) должны быть изменены перед публикацией сайта, либо из-за вопросов безопасности, либо производительности.
 
 > [!NOTE]
 > Общепринятым решением является иметь отдельный файл **settings.py** для публикации, который импортирует важные настройки из внешних файлов, или из переменных окружения. Доступ к данному файлу должен быть ограничен, даже если остальная часть исходного кода доступна в публичном репозитории.
@@ -142,7 +142,6 @@ Heroku - один из самых продолжительных и популя
 - У Heroku есть [свободный уровень](https://www.heroku.com/pricing), который _действительно_ свободен (хотя и с некоторыми ограничениями)
 - Как PaaS, Heroku заботится о большой веб-инфраструктуре для нас. Это значительно облегчает работу, потому что вы не беспокоитесь о серверах, балансирах нагрузки, обратных прокси или любой другой веб-инфраструктуре, которую Heroku предоставляет нам под капотом.
 - Хотя у этого есть некоторые ограничения, это не повлияет на это конкретное приложение. Например:
-
   - Heroku предоставляет только недолговечное хранилище, поэтому загруженные пользователем файлы нельзя безопасно хранить на самом Heroku.
   - Свободный уровень будет спать с неактивным веб-приложением, если в течение получаса не будет запросов.После этого сайт может занять несколько секунд, чтобы ответить, когда он проснулся.
   - Свободный уровень ограничивает время, в течение которого ваш сайт работает до определённого количества часов каждый месяц (не включая время, когда сайт «спит»).Это нормально для сайта с низким уровнем использования / демонстрации, но не подходит, если требуется 100% время безотказной работы.
@@ -188,7 +187,6 @@ Heroku тесно интегрирована с системой управле�
 1. Посетите <https://github.com/> и создайте аккаунт.
 2. После входа в систему нажмите ссылку + в верхней панели инструментов и выберите **Новый репозиторий**.
 3. Заполните все поля на этой форме. Хотя они не являются обязательными, они настоятельно рекомендуются.
-
    - Введите имя нового репозитория (например _django_local_library_), и комментарий к репозиторию (например "Local Library website written in Django".
    - Нажмите на кнопку **Add .gitignore** и в появившемся списке выберите **Python**.
    - Выберите подходящую вам лицензию из списка **Add license.** Если не знаете для чего это - оставьте как было.
@@ -289,7 +287,7 @@ web: gunicorn locallibrary.wsgi --log-file -
 
 Также нам не понадобится _Gunicorn_ для обслуживания нашей LocalLibrary приложения в течение разработки, мы установим это так, чтобы он стал частью наших требований к Heroku для настройки на удалённом сервере.
 
-Установка _Gunicorn_ локально в командной строке используя пакетный менеджер _pip_ (которые мы установили когда [настраивали среду разработки](/ru/docs/Learn/Server-side/Django/development_environment)):
+Установка _Gunicorn_ локально в командной строке используя пакетный менеджер _pip_ (которые мы установили когда [настраивали среду разработки](/ru/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)):
 
 ```bash
 pip3 install gunicorn
@@ -620,7 +618,6 @@ heroku ps   #Display dyno status
 ## Смотрите также
 
 - [Развёртывание Django](https://docs.djangoproject.com/en/1.10/howto/deployment/) (Django docs)
-
   - [Контрольный список развёртывания](https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/) (Django docs)
   - [Развёртывание статических файлов](https://docs.djangoproject.com/en/1.10/howto/static-files/deployment/) (Django docs)
   - [Как развернуть с WSGI](https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/) (Django docs)
@@ -628,7 +625,6 @@ heroku ps   #Display dyno status
   - [Как использовать Django с Gunicorn](https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
-
   - [Настройка Django приложений для Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Начало работы в Heroku с Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)
@@ -642,8 +638,7 @@ heroku ps   #Display dyno status
   - [Ещё о Heroku Django docs](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [Как обслуживать Django Applications вместе с uWSGI и Nginx в Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Другие документы Digital Ocean Django](https://www.digitalocean.com/community/tutorials?q=django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

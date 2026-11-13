@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 En este artículo, explicaremos qué es la programación asíncrona, por qué la necesitamos, y discutiremos brevemente algunas de las formas en que las funciones asíncronas se han implementado históricamente en JavaScript.
 
@@ -259,7 +259,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
+Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es/docs/Learn_web_development/Core/Scripting/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
 
 ## Callbacks (devoluciones de llamada)
 
@@ -328,4 +328,4 @@ Cuando anidamos devoluciones de llamada de esta manera, también puede ser muy d
 
 Por estas razones, la mayoría de las APIs asíncronas modernas no utilizan _callbacks_. En su lugar, la base de la programación asíncrona en JavaScript es la {{jsxref("Promise")}}, y ese es el tema del siguiente artículo.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

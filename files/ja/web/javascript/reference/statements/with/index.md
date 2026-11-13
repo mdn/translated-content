@@ -2,12 +2,11 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 l10n:
-  sourceCommit: 66a7e9459b1658e5be827f929d59f1894bea0f84
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{jsSidebar("Statements")}}{{Deprecated_Header}}
-
-> **メモ:** `with` 文の使用は推奨されません。混乱を招くバグや互換性問題の原因となる可能性があり、最適化ができなくなり、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では禁止されているからです。推奨される代替案は、プロパティをアクセスしたいオブジェクトを一時変数に割り当てることです。
+> [!NOTE]
+> `with` 文の使用は推奨されません。混乱を招くバグや互換性問題の原因となる可能性があり、最適化ができなくなり、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では禁止されているからです。推奨される代替案は、プロパティをアクセスしたいオブジェクトを一時変数に割り当てることです。
 
 **`with`** 文は、文に対するスコープチェーンを拡張します。
 
@@ -57,7 +56,7 @@ with ([1, 2, 3]) {
 }
 ```
 
-オブジェクトは [`@@unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) プロパティを持つことができますが、これはスコープチェーンに（後方互換性のために）追加してはならないプロパティのリストを定義するものです。詳細は [`Symbol.unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) のドキュメントを参照してください。
+オブジェクトは [`[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) プロパティを持つことができますが、これはスコープチェーンに（後方互換性のために）追加してはならないプロパティのリストを定義するものです。詳細は [`Symbol.unscopables`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) のドキュメントを参照してください。
 
 `with` 文を使用する理由は、一時変数を 1 つ節約するためと、長いオブジェクト参照を繰り返すことを避けるためにファイルサイズを縮小するためです。しかし、`with` 文が好ましくない理由はもっとたくさんあります。
 
@@ -86,13 +85,13 @@ with ([1, 2, 3]) {
 
   ECMAScript 5 環境で `f([1, 2, 3], obj)` を呼び出すと、`with` 文の中にある `values` の参照先は `obj` に解決されます。ところが、ECMAScript 2015 では [`values`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) プロパティが `Array.prototype` に導入されました (よって、すべての配列で使用できます)。従って、環境を更新すると、`with` 文の内部にある `values` の参照先は `[1, 2, 3].values` に解決されるようになり、バグを引き起こす可能性があります。
 
-  この具体的な例では、`values` は [`Array.prototype[@@unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) によってスコープ不可と定義されているので、やはり `values` 引数に正しく解決さ れます。もし、スコープ不可と定義されていなければ、デバッグが困難な課題になるのは目に見えています。
+  この具体的な例では、`values` は [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) によってスコープ不可と定義されているので、やはり `values` 引数に正しく解決さ れます。もし、スコープ不可と定義されていなければ、デバッグが困難な課題になるのは目に見えています。
 
 ## 例
 
 ### with の使用
 
-次の `with` 文は、{{jsxref("Math")}} オブジェクトが既定のオブジェクトであると指定しています。`with` 文内の複数の文は、オブジェクトを指定することなく、 {{jsxref("Math.PI", "PI")}} プロパティ、 {{jsxref("Math.cos", "cos")}} メソッド、および {{jsxref("Math.sin", "sin")}} メソッドを参照しています。JavaScript は、これらの参照に対して `Math` オブジェクトを仮定します。
+次の `with` 文は、{{jsxref("Math")}} オブジェクトが既定のオブジェクトであると指定しています。`with` 文内の複数の文は、オブジェクトを指定することなく、 {{jsxref("Math/PI", "PI")}} プロパティ、 {{jsxref("Math/cos", "cos")}} メソッド、および {{jsxref("Math/sin", "sin")}} メソッドを参照しています。JavaScript は、これらの参照に対して `Math` オブジェクトを仮定します。
 
 ```js
 let a, x, y;
@@ -105,9 +104,9 @@ with (Math) {
 }
 ```
 
-### プロパティを現在のスコープに分割代入して with 文を避ける
+### プロパティを現在のスコープに構造分解して with 文を避ける
 
-通常、[プロパティの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)によって `with` を使用するのを避けることができます。ここでは、`with` が余分なスコープを作る動作を模倣するために余分なブロックを作成していますが、実際の使用では、通常はこのブロックを除外することができます。
+通常、[プロパティの構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)によって `with` を使用するのを避けることができます。ここでは、`with` が余分なスコープを作る動作を模倣するために余分なブロックを作成していますが、実際の使用では、通常はこのブロックを除外することができます。
 
 ```js
 let a, x, y;
@@ -173,4 +172,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)

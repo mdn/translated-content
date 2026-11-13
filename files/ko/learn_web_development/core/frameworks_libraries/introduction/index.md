@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
 JavaScript와 프레임워크의 간략한 역사, 프레임워크가 존재하는 이유와 프레임워크가 우리에게 제공하는 것, 배울 프레임워크를 선택하는 방법에 대해 생각하기 시작하는 방법, 클라이언트 측 프레임워크에 대한 대안이 무엇인지 살펴보는 영역에 대한 일반적인 개요로 프레임워크를 살펴보기 시작합니다.
 
@@ -15,9 +15,9 @@ JavaScript와 프레임워크의 간략한 역사, 프레임워크가 존재하�
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML">HTML</a>,
-        <a href="/ko/docs/Learn/CSS">CSS</a>,
-        <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 핵심에 대한 친숙도.
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>,
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 핵심에 대한 친숙도.
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ JavaScript 프레임워크는 매일 사용하는 많은 웹사이트를 포함�
 
 [Ember](https://emberjs.com/)는 [SproutCore](https://en.wikipedia.org/wiki/SproutCore) 프로젝트에서 시작된 작업의 연속으로 2011년 12월에 처음 출시되었습니다. React 및 Vue와 같은 최신 대안보다 사용자가 적은 오래된 프레임워크이지만 안정성, 커뮤니티 지원 및 일부 영리한 코딩 원칙으로 인해 여전히 상당한 인기를 누리고 있습니다.
 
-[Ember 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+[Ember 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 ### Angular
 
@@ -55,7 +55,7 @@ JavaScript 프레임워크는 매일 사용하는 많은 웹사이트를 포함�
 
 Angular는 선언적 HTML 템플릿을 사용하는 컴포넌트 기반 프레임워크입니다. 빌드 시 개발자에게 투명하게 프레임워크의 컴파일러가 템플릿을 최적화된 JavaScript 명령으로 변환합니다. Angular는 다음 장에서 좀 더 자세히 살펴볼 JavaScript의 상위 집합인 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.
 
-[Angular 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+[Angular 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 ### Vue
 
@@ -63,7 +63,7 @@ Angular는 선언적 HTML 템플릿을 사용하는 컴포넌트 기반 프레�
 
 Vue는 [AngularJS](https://angularjs.org/)와 마찬가지로 일부 자체 코드로 HTML을 확장합니다. 그 외에도 주로 최신 표준 JavaScript에 의존합니다.
 
-[Vue 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+[Vue 학습 시작](/ko/docs/conflicting/Learn_web_development/Core/Frameworks_libraries)
 
 ### React
 
@@ -73,7 +73,7 @@ React와 ReactDOM은 함께 사용되는 경우가 많기 때문에, React는 �
 
 React는 [JSX](https://reactjs.org/docs/introducing-jsx.html)로 알려진 HTML과 유사한 구문으로 JavaScript를 확장합니다.
 
-[React 학습 시작](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+[React 학습 시작](/ko/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
 
 ## 프레임워크가 존재하는 이유는 무엇입니까?
 
@@ -98,7 +98,7 @@ const state = [
 ];
 ```
 
-이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Element/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Element/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
+이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Reference/Elements/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
 
 ```js
 function buildTodoItemEl(id, name) {
@@ -321,4 +321,4 @@ Vue 팀은 [Vue를 다른 인기 있는 프레임워크와 철저하게 비교�
 
 다음 기사는 더 낮은 수준으로 내려가서, 프레임워크가 제공하는 경향이 있는 특정 종류의 기능과, 프레임워크가 작동하는 이유를 살펴봅니다.
 
-{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}

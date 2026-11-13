@@ -1,10 +1,9 @@
 ---
 title: "Express 教程 5: 呈現圖書館數據"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 我們現在準備好要新增網頁，以顯示本地圖書館網站的書本與其它資料。這些網頁將包括一個主頁 ，顯示我們每個模型的型態有多少筆紀錄，以及我們所有模型的清單與細節頁面。藉此，我們將得到從數據庫取得紀錄、以及使用樣版的實務經驗。
 
@@ -43,12 +42,11 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 3. [主頁](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)
 4. [書本清單頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
 5. [書本實例清單頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-6. [日期格式化 - 使用 moment](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-7. [作者清單頁面、分類清單頁面與自我挑戰](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-8. [分類詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-9. [書本詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-10. [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-11. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+6. [作者清單頁面、分類清單頁面與自我挑戰](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+7. [分類詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+8. [書本詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+9. [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+10. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 總結
 
@@ -61,6 +59,5 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Async module](http://caolan.github.io/async/docs.html) (Async docs)
 - [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
-- [Moment](http://momentjs.com/docs/) (Moment docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

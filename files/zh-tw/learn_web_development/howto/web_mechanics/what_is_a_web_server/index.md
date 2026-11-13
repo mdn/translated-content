@@ -1,10 +1,9 @@
 ---
 title: 何謂網路伺服器？
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn_web_development/Howto")}}
+{{QuicklinksWithSubPages("/zh-TW/docs/Learn_web_development/Howto")}}
 
 本文章將講解網路伺服器是什麼、如何運作、還有他們的重要性。
 
@@ -35,7 +34,7 @@ original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 1. 以硬體來說，web server 是存放網路伺服器軟體、還有網站檔案（如 HTML 文件、圖片、CSS 樣式表、JavaScript 檔案）的電腦。它會連上網際網路（Internet）並能和其他連上網的設備做物理數據交換。
 2. 以軟體來說，web server 包含了一連串控制網路用戶如何訪問託管檔案 ── 至少有 HTTP 伺服器 ── 的檔案。HTTP 伺服器是其中一個部份，它理解 {{Glossary("URL","URLs")}}（網路地址）與 {{Glossary("HTTP")}}（瀏覽器用來觀察網頁的協議）。它能透過域名（domain name）訪問託管的網站（如 `mozilla.org`）、並將其內容遞送到終端用戶（end-user）的設備上。
 
-以最基本的層面來說，如果瀏覽器需要網路伺服器所託管的檔案，它就需要透過 HTTP 發送對該檔案的請求。如果請求已經傳送到正確的（硬體）網路伺服器，那 HTTP（軟體）伺服器就會接受請求、找出所請求的文件（假若不是接著回傳 [404](/zh-TW/docs/Web/HTTP/Status/404) 頁面）、再透過 HTTP 回傳給瀏覽器。
+以最基本的層面來說，如果瀏覽器需要網路伺服器所託管的檔案，它就需要透過 HTTP 發送對該檔案的請求。如果請求已經傳送到正確的（硬體）網路伺服器，那 HTTP（軟體）伺服器就會接受請求、找出所請求的文件（假若不是接著回傳 [404](/zh-TW/docs/Web/HTTP/Reference/Status/404) 頁面）、再透過 HTTP 回傳給瀏覽器。
 
 ![Basic representation of a client/server connection through HTTP](web-server.svg)
 
@@ -66,9 +65,9 @@ _目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Commun
 - 永遠都有相同的 IP 地址（不是所有{{Glossary("ISP", "網際網路提供者")}}都給家庭用戶提供固定的 IP 地址）
 - 由第三方提供者維護
 
-因此，找到優秀的託管提供者，是建立網站的重點之一。好好探索各大公司提供的服務、並選擇一個符合需求、預算也能負擔的方案（服務的價格從免費到上千美元都有）。你可以[在這篇文章](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting)找到更多資訊。
+因此，找到優秀的託管提供者，是建立網站的重點之一。好好探索各大公司提供的服務、並選擇一個符合需求、預算也能負擔的方案（服務的價格從免費到上千美元都有）。你可以[在這篇文章](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#hosting)找到更多資訊。
 
-一旦找到適合的網絡託管解決方案，你只要[把文件上傳到網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)就行了。
+一旦找到適合的網絡託管解決方案，你只要[把文件上傳到網路伺服器](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)就行了。
 
 ### 透過 HTTP 溝通
 
@@ -87,7 +86,7 @@ HTTP 提供了用戶端與伺服器端，該如何溝通的明確規則。我們
 - 如果透過 HTTP 請求檔案，用戶端必須提供檔案的 {{Glossary("URL")}}。
 - 網路伺服器**必須回應**所有的 HTTP 請求，最起碼需要回應錯誤訊息。
 
-[![MDN 404 錯誤頁面範例](mdn-404.jpg)](/zh-TW/docs/Web/HTTP/Status/404) 在網路伺服器裡面，HTTP 伺服器負責處理和回答傳入的請求。
+[![MDN 404 錯誤頁面範例](mdn-404.jpg)](/zh-TW/docs/Web/HTTP/Reference/Status/404) 在網路伺服器裡面，HTTP 伺服器負責處理和回答傳入的請求。
 
 1. HTTP 伺服器接收請求後，會先檢查請求的 URL 是否匹配現有文件。
 2. 如果匹配，網路伺服器會把檔案內容回傳給瀏覽器。不然，應用伺服器會建立需要的檔案。
@@ -107,6 +106,6 @@ HTTP 提供了用戶端與伺服器端，該如何溝通的明確規則。我們
 
 熟悉了伺服器以後可以：
 
-- 讀讀[how much it costs to do something on the web](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- 了解[various software you need to create a website](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- 移駕到[how to upload files on a web server](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)之類的實戰。
+- 讀讀[how much it costs to do something on the web](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- 了解[various software you need to create a website](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- 移駕到[how to upload files on a web server](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)之類的實戰。

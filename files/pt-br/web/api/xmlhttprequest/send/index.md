@@ -20,15 +20,13 @@ XMLHttpRequest.send(body)
 ### Parâmetros
 
 - `body` {{optional_inline}}
-
   - : Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:
-
     - Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.
-    - Um `BodyInit`, que [conforme a espeficicação Fetch](https://fetch.spec.whatwg.org/#bodyinit), pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.
+    - Um `BodyInit`, que [conforme a espeficicação Fetch](https://fetch.spec.whatwg.org/#bodyinit), pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{jsxref("String")}}.
 
     Se nenhum valor for espeficicado para o corpo, o valor padrão de `null` é usado.
 
-A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{domxref("ArrayBufferView")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
+A melhor maneira de enviar conteúdo binário (por exemplo, em uploads de arquivos) é usando um {{jsxref("TypedArray")}} ou {{domxref("Blob")}} em conjunto com o método `send()`.
 
 ### Valor retornado
 

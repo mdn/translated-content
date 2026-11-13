@@ -60,7 +60,7 @@ block content
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
 > [!NOTE]
-> Представление дат продолжительности жизни автора выглядит безобразно! Это можно исправить, если использовать [тот же подход](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) , который применялся для списка `BookInstance` (добавить в модель `Author` виртуальное свойство продолжительности жизни). Но в этот раз, однако, некоторые даты могут отсутствовать, и ссылки на несуществующие свойства игнорируются, если не задан строгий режим. Метод `moment()` возвращает текущее время, и нежелательно, чтобы отсутствующие даты форматировались как "сегодня". Один из способов состоит в том, чтобы форматирующая функция возвращала пустую строку, если дата не существует. Например:
+> Представление дат продолжительности жизни автора выглядит безобразно! Это можно исправить, если использовать [тот же подход](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data#date_formatting) , который применялся для списка `BookInstance` (добавить в модель `Author` виртуальное свойство продолжительности жизни). Но в этот раз, однако, некоторые даты могут отсутствовать, и ссылки на несуществующие свойства игнорируются, если не задан строгий режим. Метод `moment()` возвращает текущее время, и нежелательно, чтобы отсутствующие даты форматировались как "сегодня". Один из способов состоит в том, чтобы форматирующая функция возвращала пустую строку, если дата не существует. Например:
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
@@ -74,7 +74,6 @@ block content
 
 1. Следует отредактировать `genre_list()` в файле **/controllers/genreController.js**.
 2. Реализация почти такая же, как и для контроллера `author_list()` .
-
    - Sort the results by name, in ascending order.
 
 3. Отображающий шаблон должен быть назван **genre_list.pug**.
@@ -83,6 +82,6 @@ block content
 
 ## Далее
 
-Вернуться к части 5 - [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+Вернуться к части 5 - [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
 
-Перейти к следующему подразделу в части 5: подробная информация о жанрах ([Genre detail page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)).
+Перейти к следующему подразделу в части 5: подробная информация о жанрах ([Genre detail page](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)).

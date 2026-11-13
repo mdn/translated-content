@@ -6,23 +6,23 @@ original_slug: WebAssembly/JavaScript_interface/Instance
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Instance`** オブジェクトは、ステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。 `Instance` オブジェクトには JavaScript から WebAssembly コードを呼び出すことができるすべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)が含まれます。
+**`WebAssembly.Instance`** オブジェクトは、ステートフルで実行可能な [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) のインスタンスです。 `Instance` オブジェクトには JavaScript から WebAssembly コードを呼び出すことができるすべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)が含まれます。
 
 ## コンストラクター
 
-- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/Instance)
   - : 新しい `Instance` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}
+- [`Instance.prototype.exports`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports)
   - : メンバーとして WebAssembly モジュールのインスタンスからエクスポートされたすべての関数を含むオブジェクトを返します。 JavaScript からアクセスしたり使用したりすることができます。読み取り専用です。
 
 ## 例
 
 ### WebAssembly モジュールの同期的なインスタンス化
 
-`WebAssembly.Instance()` コンストラクター関数は、次のように呼び出して指定された {{jsxref("WebAssembly.Module")}} オブジェクトを同期的にインスタンス化することができます。
+`WebAssembly.Instance()` コンストラクター関数は、次のように呼び出して指定された [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトを同期的にインスタンス化することができます。
 
 ```js
 const importObject = {
@@ -42,7 +42,7 @@ fetch("simple.wasm")
   });
 ```
 
-`Instance` を取得するには非同期で行うことを推奨します。例えば、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使って次のようにします。
+`Instance` を取得するには非同期で行うことを推奨します。例えば、 [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 関数を使って次のようにします。
 
 ```js
 const importObject = {
@@ -71,5 +71,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

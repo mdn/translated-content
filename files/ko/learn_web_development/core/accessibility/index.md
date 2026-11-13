@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-웹 개발자가 되기위해서 HTML, CSS 및 JavaScript를 배우는 것이 필요하지만 배운 지식을 효과적으로 사용하기위해서는 지식이상의 기술이 필요로 합니다. 이 기술을 사용해서 웹사이트에 접근하려는 모든 사용자를 차별없이 접근할수 있도록 해야합니다. 이를 위하여 모범 사례([HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목에서 설명) 를 준수하고 [브라우저 호환성 테스트를 거치며](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) 처음부터 접근성을 고려해야합니다. 이 문서에서는 후자에 대해 자세히 다룰 것입니다.
+웹 개발자가 되기위해서 HTML, CSS 및 JavaScript를 배우는 것이 필요하지만 배운 지식을 효과적으로 사용하기위해서는 지식이상의 기술이 필요로 합니다. 이 기술을 사용해서 웹사이트에 접근하려는 모든 사용자를 차별없이 접근할수 있도록 해야합니다. 이를 위하여 모범 사례([HTML](/ko/docs/Learn_web_development/Core/Structuring_content), [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 및 [JavaScript](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) 항목에서 설명) 를 준수하고 [브라우저 호환성 테스트를 거치며](/ko/docs/Learn_web_development/Extensions/Testing) 처음부터 접근성을 고려해야합니다. 이 문서에서는 후자에 대해 자세히 다룰 것입니다.
 
 ## 개요
 
@@ -26,7 +26,7 @@ Firefox Accessibility Inspector는 웹 페이지의 접근성 문제를 점검�
 
 ## 선결조건
 
-이 문서를 최대한 활용하려면 최소한 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS) 및 [JavaScript](/ko/docs/Learn/JavaScript) 항목 중 처음 두 문서를 통해 작업하거나 또는 접근성 문서와 관련된 기술을 통해 개선해 나가는것이 좋습니다.
+이 문서를 최대한 활용하려면 최소한 [HTML](/ko/docs/Learn_web_development/Core/Structuring_content), [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 및 [JavaScript](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) 항목 중 처음 두 문서를 통해 작업하거나 또는 접근성 문서와 관련된 기술을 통해 개선해 나가는것이 좋습니다.
 
 > [!NOTE]
 >
@@ -34,11 +34,11 @@ Firefox Accessibility Inspector는 웹 페이지의 접근성 문제를 점검�
 
 ## 가이드
 
-- [접근성이란?](/ko/docs/Learn/Accessibility/What_is_accessibility)
+- [접근성이란?](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : 이 문서에서는 접근성이 실제로 무엇인지 자세히 살펴보는 것으로 모듈을 시작합니다. 여기에는 고려해야 할 사람의 그룹, 웹과 상호 작용하는 데 사용하는 서로 다른 도구 및 접근성 워크 플로우를 개발하는 방법이 포함됩니다.
-- [HTML: 접근성을 위한 좋은기초](/ko/docs/Learn/Accessibility/HTML)
+- [HTML: 접근성을 위한 좋은기초](/ko/docs/Learn_web_development/Core/Accessibility/HTML)
   - : 항상 올바른 HTML요소를 올바른 용도로 사용하는 것만으로 수많은 웹 콘텐츠에 접근 할 수 있습니다. 이 문서는 접근성을 극대화하기 위해 HTML을 사용하는 방법을 자세히 살펴봅니다.
-- [CSS 와 JavaScript의 접근성 모범 사례](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [CSS 와 JavaScript의 접근성 모범 사례](/ko/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
   - : 또한, CSS 와 JavaScript를 적절히 사용하면 접근성 높은 웹 경험을 줄수도 있지만 , 만약 잘못 사용될 경우 접근성을 크게 해칠 수 있다. 이 문서에서는 복잡한 컨텐츠도 가능한 액세스 할 수 있도록 하기 위해 고려해야 할 몇가지 CSS 및 JavaScript모범 사례를 간략히 설명합니다.
 - [WAI-ARIA 기초](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : 이전 문서에 이어, 시맨틱하지 못한 HTML과 동적 자바 스크립트로 업데이트되는 컨텐츠를 포함하는 복잡한 UI를 제어 하는 것은 어려울 수 있습니다. WAI-ARIA는 브라우저와 보조 기술이 사용자에게 상황을 알려 주는 데 사용할 수 있는 시맨틱한 요소를 추가하여 이러한 문제를 해결하는 기술이다. 여기서는 접근성을 향상시키기 위해 기본적인 수준에서 이 기능을 사용하는 방법을 보여 줍니다.

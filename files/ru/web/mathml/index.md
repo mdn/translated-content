@@ -9,13 +9,13 @@ slug: Web/MathML
 
 ## Справочные данные по MathML
 
-- [Справка по элементам MathML](/ru/docs/Web/MathML/Element)
+- [Справка по элементам MathML](/ru/docs/Web/MathML/Reference/Element)
   - : Детальная информация о каждом элементе MathML, а также информация по совместимости для настольных и мобильных браузеров.
-- [Справка по атрибутам MathML](/ru/docs/Web/MathML/Attribute)
+- [Справка по атрибутам MathML](/ru/docs/Web/MathML/Reference/Attribute)
   - : Информация по атрибутам MathML, которые могут изменять внешний вид или поведение элементов.
-- [Примеры MathML](/ru/docs/Web/MathML/Examples)
+- [Примеры MathML](/ru/docs/Web/MathML/Guides)
   - : Примеры и образцы работы технологии MathML, которые помогут вам понять её принципы.
-- [Средство разработки MathML](/ru/docs/Web/MathML/Authoring)
+- [Средство разработки MathML](/ru/docs/Web/MathML/Guides/Authoring)
   - : Предложения и советы по написанию на MathML, включая рекомендации по редакторам MathML, а также информация о том как интегрировать результат в Web контент.
 
 ## Получение помощи из сообщества

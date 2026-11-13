@@ -1,15 +1,15 @@
 ---
 title: Array[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`Array[Symbol.species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `[Symbol.species]` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
+> [!WARNING]
+> `[Symbol.species]` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `[Symbol.species]` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
 
 ## 構文
 
@@ -19,7 +19,7 @@ Array[Symbol.species]
 
 ### 返値
 
-`get Symbol.species` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
 
 ## 解説
 
@@ -90,7 +90,7 @@ class MyArray extends Array {
 
 ## 関連情報
 
-- [`Array[Symbol.species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `[Symbol.species]` の対応 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array[Symbol.species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `[Symbol.species]` の対応 (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

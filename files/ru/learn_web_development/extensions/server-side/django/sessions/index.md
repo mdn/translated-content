@@ -3,17 +3,17 @@ title: "Руководство часть 7: Сессии"
 slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}
 
-Эта часть расширяет наш сайт [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), добавляя счётчик посещений домашней страницы, реализованного при помощи сессий. Это относительно простой пример, но он демонстрирует то, как при помощи сессий реализовать анализ поведения анонимных пользователей на сайте.
+Эта часть расширяет наш сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), добавляя счётчик посещений домашней страницы, реализованного при помощи сессий. Это относительно простой пример, но он демонстрирует то, как при помощи сессий реализовать анализ поведения анонимных пользователей на сайте.
 
-| Требования: | Завершить изучение всех предыдущих разделов, включая [Django Руководство Часть 6: Обобщённые отображения списков и детальной информации](/ru/docs/Learn/Server-side/Django/Generic_views) |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:       | Понимать как применять сессии.                                                                                                                                                            |
+| Требования: | Завершить изучение всех предыдущих разделов, включая [Django Руководство Часть 6: Обобщённые отображения списков и детальной информации](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views) |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Понимать как применять сессии.                                                                                                                                                                                       |
 
 ## Обзор
 
-В предыдущих частях мы создали сайт [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), который позволяет пользователям получать из каталога списки книг и авторов. На данный момент каждый посетитель сайта получает доступ к одним и тем же страницам и типам информации динамически сформированными из базы данных.
+В предыдущих частях мы создали сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), который позволяет пользователям получать из каталога списки книг и авторов. На данный момент каждый посетитель сайта получает доступ к одним и тем же страницам и типам информации динамически сформированными из базы данных.
 
 В "настоящей" библиотеке вам хотелось бы предоставить пользователю индивидуальные услуги, которые зависят от его предпочтений и предыдущего опыта использования сайта, его настроек и тому подобное. Например, при очередном посещении сайта вы можете скрыть сообщения об ошибках для тех пользователей, которые их уже получали, или сохранить и учитывать пользовательские настройки (например, количество выводимых данных на странице как результат какого-либо поиска).
 
@@ -29,7 +29,7 @@ Django использует куки (cookie), которые содержат �
 
 ## Подключение сессий
 
-Сессии стали доступны автоматически в тот момент, когда мы [создали скелет сайта](/ru/docs/Learn/Server-side/Django/skeleton_website) (во второй части руководства).
+Сессии стали доступны автоматически в тот момент, когда мы [создали скелет сайта](/ru/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (во второй части руководства).
 
 Необходимые конфигурации выполняются в разделах `INSTALLED_APPS` и `MIDDLEWARE` файла проекта (**locallibrary/locallibrary/settings.py**), как показано ниже:
 
@@ -160,4 +160,4 @@ def index(request):
 
 - [Как использовать сессии](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-{{domxref("Window")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{domxref("Promise")}}。
+{{domxref("Window")}} 接口的 **`createImageBitmap`** 从给定的来源创建位图，也可以进行裁剪以包含源图像的一部分。它接受各种不同的图像来源，并返回一个会兑现 {{domxref("ImageBitmap")}} 的 {{jsxref("Promise")}}。
 
 ## 语法
 
@@ -40,13 +40,9 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 - `sh`
   - : 将从中提取 `ImageBitmap` 的矩形的高度。此值可以为负数。
 - `options` {{optional_inline}}
-
   - : 设置图像提取选项的对象。可用的选项包括：
-
     - `imageOrientation`
-
       - : 指定位图图像的方向。
-
         - `from-image`
           - : 如果存在 EXIF 方向元数据，则根据其来指定图像方向（默认）。
         - `flipY`

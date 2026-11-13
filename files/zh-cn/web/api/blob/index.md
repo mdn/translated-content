@@ -2,7 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 l10n:
-  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
+  sourceCommit: 9b52765cefc649969574e722760cc90168c6b6df
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -57,11 +57,9 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### 创建一个表示类型化数组内容的 URL
 
-以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，并创建一个新的包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
+以下示例创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，并创建一个新的包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
 
-#### HTML
-
-```html
+```html live-sample___url-from-array
 <p>
   此示例创建一个包含空格字符到字母 Z 的 ASCII
   代码的类型化数组，然后将其转换为对象 URL。将创建一个用于打开该对象 URL
@@ -69,11 +67,9 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 </p>
 ```
 
-#### JavaScript
+该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
 
-该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
-
-```js
+```js live-sample___url-from-array
 function showViewLiveResultButton() {
   if (window.self !== window.top) {
     // 确保如果我们的文档在 frame 中，我们会让用户首先在新的标签页或窗口中打开它。否则，此示例将不起作用。
@@ -101,18 +97,15 @@ if (!showViewLiveResultButton()) {
   }
 
   const url = typedArrayToURL(bytes, "text/plain");
-
   const link = document.createElement("a");
+
   link.href = url;
   link.innerText = "打开这个数组的 URL";
-
   document.body.appendChild(link);
 }
 ```
 
-#### 结果
-
-{{EmbedLiveSample("创建一个表示类型化数组内容的 URL", 600, 200)}}
+{{EmbedLiveSample('url-from-array', , , , , , , 'allow-popups')}}
 
 ### 从 blob 中提取数据
 

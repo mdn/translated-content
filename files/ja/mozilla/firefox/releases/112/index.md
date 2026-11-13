@@ -5,23 +5,21 @@ l10n:
   sourceCommit: af8cedc8aa8af74c129ffb5369e34290cee36d40
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 112 の変更点をまとめています。Firefox 112 は、米国時間 2023 年 4 月 11 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{domxref("HTMLElement")}} の [**`inert`**](/ja/docs/Web/HTML/Global_attributes/inert) プロパティを全面的に有効にしました。`inert` 属性を持つ HTMLElement の内部にあるコンテンツやインタラクティブ要素を、ブラウザーに無視させることができます。詳しくは [Firefox bug 1764263](https://bugzil.la/1764263) をご覧ください。
+- {{domxref("HTMLElement")}} の [**`inert`**](/ja/docs/Web/HTML/Reference/Global_attributes/inert) プロパティを全面的に有効にしました。`inert` 属性を持つ HTMLElement の内部にあるコンテンツやインタラクティブ要素を、ブラウザーに無視させることができます。詳しくは [Firefox bug 1764263](https://bugzil.la/1764263) をご覧ください。
 
 ### CSS
 
-- [指数関数](/ja/docs/Web/CSS/CSS_Functions#exponential_functions) をデフォルトで有効にしました。
+- [指数関数](/ja/docs/Web/CSS/Reference/Values/Functions#exponential_functions) をデフォルトで有効にしました。
   `pow()`、`sqrt()`、`hypot()`、`log()`、`exp()` の関数を使用できます ([Firefox bug 1814469](https://bugzil.la/1814469))。
 - {{cssxref("overflow")}} のキーワード値 `overlay` を、キーワード値 `auto` の旧来の別名としてサポートしました ([Firefox bug 1817189](https://bugzil.la/1817189))。
-- [`offset-path`](/ja/docs/Web/CSS/offset-path) を定義するために使用する `ray()` 関数で、`<ray_size>` 引数が省略可能になりました。`<ray_size>` 引数を与えない場合は `closest-side` が既定値になります ([Firefox bug 1820071](https://bugzil.la/1820071))。
-- `linear()` [イージング関数](/ja/docs/Web/CSS/easing-function) をサポートしました。
+- [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path) を定義するために使用する `ray()` 関数で、`<ray_size>` 引数が省略可能になりました。`<ray_size>` 引数を与えない場合は `closest-side` が既定値になります ([Firefox bug 1820071](https://bugzil.la/1820071))。
+- `linear()` [イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function) をサポートしました。
   これは複数の点の間を直線的に補完するイージング関数を定義するものであり、複雑なアニメーションを近似的に表現することに役立ちます ([Firefox bug 1819447](https://bugzil.la/1819447)、[Firefox bug 1764126](https://bugzil.la/1764126))。
 
 ### JavaScript
@@ -30,7 +28,7 @@ l10n:
 
 ### API
 
-- {{domxref("navigator.getAutoplayPolicy()")}} をサポートしました。自動再生が許可されているか、許可されていないか、音声がミュートである場合に限り許可されているかに基づいて、メディア要素やオーディオコンテキストの [自動再生](/ja/docs/Web/Media/Autoplay_guide) を開発者が設定できるようにします。
+- {{domxref("navigator.getAutoplayPolicy()")}} をサポートしました。自動再生が許可されているか、許可されていないか、音声がミュートである場合に限り許可されているかに基づいて、メディア要素やオーディオコンテキストの [自動再生](/ja/docs/Web/Media/Guides/Autoplay) を開発者が設定できるようにします。
   詳しくは [Firefox bug 1773551](https://bugzil.la/1773551) をご覧ください。
 - {{domxref("CanvasRenderingContext2D.roundRect()")}}、[`Path2D.roundRect()`](/ja/docs/Web/API/Path2D#path2d.roundrect)、[`OffscreenCanvasRenderingContext2D.roundRect()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#canvasrenderingcontext2d.roundrect) を使用して、2D キャンバスに丸みを帯びた長方形を描画できるようになりました。
   詳しくは [Firefox bug 1756175](https://bugzil.la/1756175) をご覧ください。

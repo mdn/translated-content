@@ -20,7 +20,7 @@ l10n:
 ### meta 要素のメタデータ名の読み取り
 
 次の例では、文書の最初の `<meta>` 要素を検索します。
-`name` の値をコンソールに出力します。これは文書で [keywords](/ja/docs/Web/HTML/Element/meta/name#html_仕様書で定義されている標準メタデータ名) を指定するものです。
+`name` の値をコンソールに出力します。これは文書で [keywords](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) を指定するものです。
 
 ```js
 // <meta name="keywords" content="documentation, HTML, web technologies"> があるとする
@@ -31,7 +31,7 @@ console.log(meta.name);
 
 ### `author` メタデータの meta 要素を作成
 
-次の例は、新しい `<meta>` 要素を `name` 属性に [`author`](/ja/docs/Web/HTML/Element/meta/name#html_仕様書で定義されている標準メタデータ名) を設定して作成します。
+次の例は、新しい `<meta>` 要素を `name` 属性に [`author`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) を設定して作成します。
 `content` 属性には文書の著者を設定し、この要素を文書の `<head>` に追加します。
 
 ```js
@@ -52,4 +52,4 @@ document.head.appendChild(meta);
 ## 関連情報
 
 - {{HTMLElement("meta")}}
-- [name 属性で取りうる値](/ja/docs/Web/HTML/Element/meta/name#html_仕様書で定義されている標準メタデータ名)
+- [name 属性で取りうる値](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name)

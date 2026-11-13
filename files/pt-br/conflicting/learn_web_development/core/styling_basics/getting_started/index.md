@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/Getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprendendo algumas coisas práticas sobre a linguagem no decorrer do processo.
 
@@ -24,7 +24,7 @@ Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprend
             >como trabalhar com arquivos</a
           >, e conhecimento básico sobre HTML (estude
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+            href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
             >Introdução ao HTML</a
           >.)
         </p>
@@ -74,7 +74,8 @@ Nosso ponto de partida e um documento HTML. Você pode copiar o código abaixo s
 </html>
 ```
 
-> **Nota:** **Observação**: Se você está lendo isso em um dispositivo móvel ou em um ambiente onde não possa criar arquivos, não se preocupe — editores de código ao vivo estão disponíveis abaixo para permitir que você escreva o código de exemplo aqui, nesta página.
+> [!NOTE]
+> **Observação**: Se você está lendo isso em um dispositivo móvel ou em um ambiente onde não possa criar arquivos, não se preocupe — editores de código ao vivo estão disponíveis abaixo para permitir que você escreva o código de exemplo aqui, nesta página.
 
 ## Adicionando CSS para o nosso documento
 
@@ -145,7 +146,7 @@ Olhando para essa página você descobrirá que, além de remover a marcação d
 
 Até agora, temos estilizado elementos baseado em seus nomes HTML. isto funciona enquanto você desejar que todos os elementos desse tipo, no seu documento, se pareçam o mesmo. Na maioria das vezes, isso não é o caso, e, então, você precisará encontrar uma maneira de selecionar um subconjunto de elementos sem alterar os outros. A maneira mais comum de fazer isso é adicionar uma classe ao seu elemento HTML e especificar essa classe.
 
-No seu documento HTML, adicione um [atributo de classe](/pt-BR/docs/Web/HTML/Global_attributes/class) ao segundo item da lista. Sua lista se parecerá, agora, assim:
+No seu documento HTML, adicione um [atributo de classe](/pt-BR/docs/Web/HTML/Reference/Global_attributes/class) ao segundo item da lista. Sua lista se parecerá, agora, assim:
 
 ```html
 <ul>
@@ -217,11 +218,12 @@ O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma re
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Nota:** **Observação**: Como pode ver, CSS nos dá várias maneiras de especificar elementos, e temos somente arranhado a superfície até agora! Analisaremos adequadamente todos esses seletores e muitos outros, nos nossos artigos [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) posteriormente neste curso.
+> [!NOTE]
+> **Observação**: Como pode ver, CSS nos dá várias maneiras de especificar elementos, e temos somente arranhado a superfície até agora! Analisaremos adequadamente todos esses seletores e muitos outros, nos nossos artigos [Seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) posteriormente neste curso.
 
 ## Estilizando coisas baseadas no estado
 
-O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
+O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Reference/Elements/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
 
 ```css
 a:link {
@@ -247,7 +249,8 @@ No exemplo ativo abaixo, você pode brincar com diferentes valores para os vári
 
 Removemos o sublinhado do nosso link ao passar o mouse. Pode-se remover os sublinhados de todos os estados de um link. Vale lembrar, no entanto, que em um site real, você deseja garantir que os visitantes saibam que um link é um link. Deixar o sublinhado no lugar pode ser uma pista importante para as pessoas perceberem que é possível clicar em algum texto dentro de um parágrafo — esse é o comportamento ao qual estão acostumados. Como tudo em CSS, existe o potencial de tornar o documento menos acessível com suas alterações — procuraremos destacar possíveis armadilhas em locais apropriados.
 
-> **Nota:** **Observação**: Você verá frequentemente menção de [acessibilidade](/pt-BR/docs/Learn/Accessibility) nessas lições e no MDN. Quando falamos sobre acessibilidade, estamos nos referindo aos requerimentos para a nossa página web ser compreensível e utilizável por todos.
+> [!NOTE]
+> **Observação**: Você verá frequentemente menção de [acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility) nessas lições e no MDN. Quando falamos sobre acessibilidade, estamos nos referindo aos requerimentos para a nossa página web ser compreensível e utilizável por todos.
 >
 > Seu visitante pode muito bem estar em um computador com um mouse defeituoso, ou um dispositivo móvel com uma tela sensível ao toque. Ou eles podem estar usando um leitor de tela, que lê o conteúdo do documento, ou podem precisar de muito texto grande, ou estar navegando no site apenas usando o teclado.
 >
@@ -287,4 +290,4 @@ Neste tutorial, demos uma olhada na quantidade de maneiras as quais pode-se esti
 
 Na próxima lição, veremos como o CSS é estruturado.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

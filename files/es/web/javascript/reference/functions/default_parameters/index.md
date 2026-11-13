@@ -21,8 +21,6 @@ console.log(multiply(5));
 // Expected output: 5
 ```
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
-
 ## Sintaxis
 
 ```
@@ -225,7 +223,7 @@ f(2); // [2, undefined]
 
 ### Parámetro desestructurado con asignación de valor predeterminado
 
-Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring_assignment", "la desestructuración", "", 1)}}:
+Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring", "la desestructuración", "", 1)}}:
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

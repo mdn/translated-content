@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 86 の変更点をまとめています。Firefox 86 は、米国時間 2021 年 2 月 23 日にリリースされました。
 
 > [!NOTE]
@@ -26,7 +24,7 @@ _変更なし。_
 
 ### SVG
 
-- SVG フィルターで [`lighter` operator](/ja/docs/Web/SVG/Attribute/operator#fecomposite) を持つ {{SVGElement("feComposite")}} 要素が使用可能になりました ([Firefox バグ 1518099](https://bugzil.la/1518099))。operator は、2 つのソース画像のピクセルを加算します。
+- SVG フィルターで [`lighter` operator](/ja/docs/Web/SVG/Reference/Attribute/operator#fecomposite) を持つ {{SVGElement("feComposite")}} 要素が使用可能になりました ([Firefox バグ 1518099](https://bugzil.la/1518099))。operator は、2 つのソース画像のピクセルを加算します。
 
 ### CSS
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cb3806d7b20ba6450ca8768120514f95905c77eb
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 返回一个 {{DOMxRef("PluginArray")}} 对象，列出描述应用程序中已安装插件的 {{DOMxRef("Plugin")}} 对象。返回对象的命名属性不可枚举（除非在非常旧的浏览器版本中）。
 

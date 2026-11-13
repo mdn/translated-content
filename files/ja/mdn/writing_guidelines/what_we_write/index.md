@@ -18,7 +18,7 @@ MDN のすべてのコンテンツは、それが現れる技術セクション�
 リンクされているトピックに関連する商用サイトへの外部リンクは、ケースバイケースで判断されます。ウェブ開発者を支援するうえでのその価値は、リンク先サイトの商業的利益を上回るものでなければなりません。
 
 > [!NOTE]
-> MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)の章には、商用サイトへのリンクが表示されますが、これらは必要最小限に使用されており、信頼できる教育パートナーのみにリンクしています。これについての詳細は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)をご覧ください。
+> MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)の章には、商用サイトへのリンクが表示されますが、これらは必要最小限に使用されており、信頼できる教育パートナーのみにリンクしています。これについての詳細は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)をご覧ください。
 
 ### 中立性
 
@@ -34,7 +34,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 新しいリファレンスページやガイドについては、[新しい issue](https://github.com/mdn/mdn/issues/new/choose) で、提案する内容とその理由を説明するディスカッションを開いてください（できるだけ明確にしてください）。
 
-コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
+コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
 
 ## どのようなトピックが MDN Web Docs に載るのか
 
@@ -64,7 +64,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
-MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照してください。
+MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照してください。
 
 ### 新しい技術を文書化するとき
 

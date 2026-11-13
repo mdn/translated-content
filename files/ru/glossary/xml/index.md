@@ -11,4 +11,4 @@ eXtensible Markup Language (XML) - расширяемый язык размет�
 
 ## Узнать больше
 
-- [XML Введение](/ru/docs/Web/XML/XML_introduction)
+- [XML Введение](/ru/docs/Web/XML/Guides/XML_introduction)

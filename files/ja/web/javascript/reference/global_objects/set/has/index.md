@@ -1,27 +1,26 @@
 ---
 title: Set.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの `Set` 内に存在するかどうかを示す論理値を返します。
 
-**`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
-
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.has()")}}
 
 ```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+const set = new Set([1, 2, 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+console.log(set.has(1));
+// 予想される結果: true
 
-console.log(set1.has(5));
-// Expected output: true
+console.log(set.has(5));
+// 予想される結果: true
 
-console.log(set1.has(6));
-// Expected output: false
+console.log(set.has(6));
+// 予想される結果: false
 ```
 
 ## 構文
@@ -37,11 +36,11 @@ has(value)
 
 ### 返値
 
-この `Set` オブジェクト内に指定された値をもつ要素が存在していたら `true` を返します。さもなければ `false` を返します。
+この `Set` オブジェクト内に指定された値が存在していたら `true` を返します。さもなければ `false` を返します。
 
 ## 例
 
-### has() メソッドの使用
+### has() の使用
 
 ```js
 const mySet = new Set();
@@ -50,13 +49,13 @@ mySet.add("foo");
 console.log(mySet.has("foo")); // true
 console.log(mySet.has("bar")); // false
 
-const set1 = new Set();
-const obj1 = { key1: 1 };
-set1.add(obj1);
+const set = new Set();
+const obj = { key1: 1 };
+set.add(obj);
 
-console.log(set1.has(obj1)); // true
-console.log(set1.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
-console.log(set1.add({ key1: 1 })); // set1 には 2 つの項目が含まれるようになる
+console.log(set.has(obj)); // true
+console.log(set.has({ key1: 1 })); // オブジェクト参照が異なるため false を返す
+console.log(set.add({ key1: 1 })); // set には 2 つの項目が含まれるようになる
 ```
 
 ## 仕様書

@@ -11,11 +11,11 @@ l10n:
 
 > [!NOTE]
 > Мы будем использовать Mongoose для получения информации из базы данных.
-> Поэтому перед продолжением чтения может быть полезным ознакомится с [Учебником по Mongoose](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose#учебник_по_mongoose).
+> Поэтому перед продолжением чтения может быть полезным ознакомится с [Учебником по Mongoose](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#учебник_по_mongoose).
 
 ## Маршрут
 
-Мы создали маршруты главной страницы в [предыдущем разделе](/ru/docs/Learn/Server-side/Express_Nodejs/routes). Напомним, все функции маршрутов определены в файле **/routes/catalog.js**:
+Мы создали маршруты главной страницы в [предыдущем разделе](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes). Напомним, все функции маршрутов определены в файле **/routes/catalog.js**:
 
 ```js
 // Получение главной страницы каталога.
@@ -140,5 +140,5 @@ block content
 
 ## Следующие шаги
 
-- Вернуться к [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Продолжить обучение (дополнительная статья к части 5): [Страница списка книг](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page).
+- Вернуться к [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Продолжить обучение (дополнительная статья к части 5): [Страница списка книг](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page).

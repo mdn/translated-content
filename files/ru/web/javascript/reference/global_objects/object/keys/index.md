@@ -58,7 +58,7 @@ console.log(Object.keys(my_obj)); // консоль: ['foo']
 
 ## Примечания
 
-В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES2015 такой аргумент будет приведён к объекту.
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("TypeError")}}. В ES2015 такой аргумент будет приведён к объекту.
 
 ```js
 > Object.keys('foo')
@@ -135,7 +135,7 @@ if (!Object.keys) {
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

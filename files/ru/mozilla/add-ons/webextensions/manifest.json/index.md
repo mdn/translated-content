@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 {{AddonSidebar}}
 
 > [!NOTE]
-> В этой статье описан файл `manifest.json` для веб-расширений. Если вы ищете информацию о `manifest.json` для прогрессивных веб-приложений (PWA), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Manifest).
+> В этой статье описан файл `manifest.json` для веб-расширений. Если вы ищете информацию о `manifest.json` для прогрессивных веб-приложений (PWA), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Progressive_web_apps/Manifest).
 
 Файл `manifest.json` это единственный файл, который обязательно должен быть в каждом расширении, использующем WebExtension API.
 
@@ -121,7 +121,7 @@ browser.runtime.getManifest().version;
 
 ## Совместимость с браузерами
 
-Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) с браузерами.
+Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) с браузерами.
 
 {{Compat}}
 

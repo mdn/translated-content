@@ -3,8 +3,6 @@ title: Анатомия видеоигры
 slug: Games/Anatomy
 ---
 
-{{GamesSidebar}}
-
 Эта статья рассматривает анатомию и рабочий процесс создания средней видеоигры с технической точки зрения и определений того, как должен выглядеть главный цикл приложения. Она служит для помощи начинающим разработчикам в разработке современных игр, а также для понимания того, что необходимо знать при построении игры и как применять различные web-стандарты и инструменты, такие как JavaScript. Опытные разработчики игр, которые только пришли в мир web-разработки тоже могут почерпнуть для себя много интересного.
 
 ## Показать, получить, преобразовать, вычислить, повторить
@@ -120,7 +118,7 @@ window.cancelAnimationFrame(MyGame.stopMain);
 
 Вы можете думать о разработке realtime applications, как о запасе времени для работы. Все вышеперечисленные шаги должны выполняться каждые 16 с половиной миллисекунд, чтобы не отставать от дисплея с частотой 60Гц. Браузеры вызывают ваш код таким образом, чтобы предоставить ему максимум времени для вычислений. Ваш основной поток часто запускает рабочие нагрузки, которые даже не находятся в основном потоке (Например, растеризация или шейдеры в WebGL). Большие вычисления могут выполняться на Web Worker-e или GPU одновременно с тем, как браузер использует свой основной поток для управления сборкой мусора, обработки асинхронных вызовов или других задач.
 
-Пока мы обсуждаем распределение нашего временного бюджета, многие браузеры имеют инструмент под названием _High Resolution Time. Объект_ {{ domxref("Date") }} больше не используется в качестве основного метода синхронизации событий, поскольку он очень не точен и может быть изменён системными часами. High Resolution Time, с другой стороны, подсчитывает количество миллисекунд начиная с `navigationStart` (при выгрузке предыдущего документа). Это значение возвращается в виде десятичного числа с точностью до миллисекунды. Он известен как `DOMHighResTimeStamp`, но для всех целей и задач считайте его числом с плавающей запятой.
+Пока мы обсуждаем распределение нашего временного бюджета, многие браузеры имеют инструмент под названием _High Resolution Time. Объект_ {{jsxref("Date")}} больше не используется в качестве основного метода синхронизации событий, поскольку он очень не точен и может быть изменён системными часами. High Resolution Time, с другой стороны, подсчитывает количество миллисекунд начиная с `navigationStart` (при выгрузке предыдущего документа). Это значение возвращается в виде десятичного числа с точностью до миллисекунды. Он известен как `DOMHighResTimeStamp`, но для всех целей и задач считайте его числом с плавающей запятой.
 
 > [!NOTE]
 > Системы (аппаратные или программные), которые не могу обеспечить точность в микросекундах, могут по крайней мере обеспечить точность в миллисекундах. Однако, они должны обеспечивать точность до 0,001 мс, если способны на это.
@@ -208,15 +206,12 @@ Other methods of tackling the problem exist.
 One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:
 
 - Draw on `requestAnimationFrame` and update on a {{ domxref("window.setInterval") }} or {{ domxref("window.setTimeout") }}.
-
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
 - Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/ru/docs/Web/API/Web_Workers_API/Using_web_workers).
-
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 
 - Draw on `requestAnimationFrame` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
-
   - This sleeps until `requestAnimationFrame` is called and does not pollute the main thread, plus you are not relying on old fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
@@ -308,15 +303,12 @@ I want to be clear that any of the above, or none of them, could be best for you
 An important thing to remember for managed platforms, like the web, is that your loop may stop execution for significant periods of time. This could occur when the user unselects your tab and the browser sleeps (or slows) its `requestAnimationFrame` callback interval. You have many ways to deal with this situation and this could depend on whether your game is single player or multiplayer. Some choices are:
 
 - Consider the gap "a pause" and skip the time.
-
   - You can probably see how this is problematic for most multiplayer games.
 
 - You can simulate the gap to catch up.
-
   - This can be a problem for long drops and/or complex updates.
 
 - You can recover the game state from a peer or the server.
-
   - This is ineffective if your peers or server are out-of-date too, or they don't exist because the game is single player and doesn't have a server.
 
 Once your main loop has been developed and you have decided on a set of assumptions and tradeoffs which suit your game, it is now just a matter of using your decisions to calculate any applicable physics, AI, sounds, network synchronization, and whatever else your game may require.

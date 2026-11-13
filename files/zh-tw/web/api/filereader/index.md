@@ -23,7 +23,6 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : 此 {{domxref("DOMException")}} 類型的物件記錄了讀取資料時發生的錯誤資訊。
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : 表示目前 `FileReader` 狀態的數字，其代表的意義為：
 
     <table>
@@ -58,20 +57,21 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.onload")}}
   - : [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件處理器，於讀取完成時觸發。
 - {{domxref("FileReader.onloadstart")}}
-  - : [`loadstart`](/zh-TW/docs/Web/API/XMLHttpRequest/loadstart_event) 事件處理器，於讀取開始時觸發。
+  - : [`loadstart`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event) 事件處理器，於讀取開始時觸發。
 - {{domxref("FileReader.onloadend")}}
-  - : [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event) 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
+  - : [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
 - {{domxref("FileReader.onprogress")}}
-  - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
+  - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
 
-> **備註：** `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。
+> [!NOTE]
+> `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。
 
 ## 方法
 
 - {{domxref("FileReader.abort()")}}
   - : 中斷目前的讀取，此方法回傳後屬性 `readyState` 將會是 `DONE`。
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以 {{domxref("ArrayBuffer")}} 物件來表示讀入的資料內容。
+  - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以 {{jsxref("ArrayBuffer")}} 物件來表示讀入的資料內容。
 - {{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}
   - : 開始讀取指定的 {{domxref("Blob")}}，讀取完成後屬性 `result` 將以字串型式來表示讀入的原始二進位資料（raw binary data）。
 - {{domxref("FileReader.readAsDataURL()")}}

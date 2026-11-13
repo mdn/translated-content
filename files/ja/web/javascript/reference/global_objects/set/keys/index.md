@@ -1,11 +1,10 @@
 ---
 title: Set.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Set/keys
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`keys()`** は {{jsxref("Set")}} インターフェイスのメソッドで、 [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/values) メソッドの別名です。
 

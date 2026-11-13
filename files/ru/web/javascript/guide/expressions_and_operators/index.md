@@ -3,7 +3,7 @@ title: Выражения и операторы
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Эта глава описывает выражения и операторы языка JavaScript, такие как операторы присваивания, сравнения, арифметические, битовые, логические, строчные, и различные специальные операторы.
 
@@ -70,7 +70,7 @@ operand operator
 
 #### Деструктуризация
 
-Для более сложного присваивания в JavaScript есть синтаксис [деструктуризации](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) - это выражение, которое позволяет извлекать данные из массивов или объектов, используя синтаксис, который зеркалирует конструкторы массивов и литералы объектов.
+Для более сложного присваивания в JavaScript есть синтаксис [деструктуризации](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring) - это выражение, которое позволяет извлекать данные из массивов или объектов, используя синтаксис, который зеркалирует конструкторы массивов и литералы объектов.
 
 ```js
 var foo = ["one", "two", "three"];
@@ -97,7 +97,7 @@ var var1 = 3,
 | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | [Равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Equality) (`==`)                                  | Возвращает true, если операнды равны.                                                                                                                                              | `3 == var1` `"3" == var1` `3 == '3'` |
 | [Не равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Inequality) (`!=`)                             | Возвращает true, если операнды не равны.                                                                                                                                           | `var1 != 4 var2 != "3"`              |
-| [Строго равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Identity) (`===`)                          | Возвращает true, если операнды равны и имеют одинаковый тип. Смотрите также {{jsxref("Object.is")}} и [sameness in JS](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
+| [Строго равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Identity) (`===`)                          | Возвращает true, если операнды равны и имеют одинаковый тип. Смотрите также {{jsxref("Object.is")}} и [sameness in JS](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). | `3 === var1`                         |
 | [Строго не равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Nonidentity)(`!==`)                     | Возвращает true, если операнды не равны и/или имеют разный тип.                                                                                                                    | `var1 !== "3" 3 !== '3'`             |
 | [Больше](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Greater_than_operator) (`>`)                     | Возвращает true, если операнд слева больше операнда справа.                                                                                                                        | `var2 > var1 "12" > 2`               |
 | [Больше или равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Greater_than_or_equal_operator) (`>=`) | Возвращает true, если операнд слева больше или равен операнду справа.                                                                                                              | `var2 >= var1 var1 >= 3`             |
@@ -259,7 +259,8 @@ mystring += "bet"; // получается значение "alphabet" и при
 condition ? val1 : val2
 ```
 
-> **Предупреждение:** _val1 и val2 обязательно должны что-то возвращать, поэтому в этой конструкции нельзя использовать continue или break_
+> [!WARNING]
+> `val1` и `val2` обязательно должны что-то возвращать, поэтому в этой конструкции нельзя использовать `continue` или `break`.
 
 Если `condition (условие)` - истина, то оператор принимает значение `val1`. В противном случае оператор принимает значение `val2`. Вы можете использовать условный оператор во всех случаях, где может быть использован стандартный оператор.
 
@@ -594,9 +595,9 @@ a * c + b * c; // 9
 
 Упрощённый синтаксис - экспериментальная возможность JavaScript, которая возможно будет добавлена в будущие версии ECMAScript. Есть 2 версии синтаксиса:
 
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Упрощённый синтаксис для массивов.
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : Упрощённый синтаксис для генераторов.
 
 Упрощённые синтаксисы существуют во многих языках программирования и позволяют вам быстро собирать новый массив, основанный на существующем. Например:
@@ -649,4 +650,4 @@ var args = [0, 1, 2];
 f(...args);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

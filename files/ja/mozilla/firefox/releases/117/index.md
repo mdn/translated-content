@@ -1,15 +1,14 @@
 ---
-title: Firefox 117 for developers
+title: Firefox 117 開発者向けリリースノート
+short-title: Firefox 117
 slug: Mozilla/Firefox/Releases/117
 l10n:
-  sourceCommit: 062f3961a28054b72c7d406b46867c87208a68b0
+  sourceCommit: f37e438c6dece2b381d2b9f35dc53af21a916a75
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 117 の変更点をまとめています。Firefox 117 は、米国時間 2023 年 8 月 29 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -17,12 +16,12 @@ l10n:
 
 ### CSS
 
-- [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) モジュールと [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
-- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
+- [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) および [`math-depth`](/ja/docs/Web/CSS/Reference/Properties/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
-- [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
-  これはグリッドや段組みのレイアウトで、要素を高さ 0px の代わりに、内容物がないかのようにレイアウトすることに役立ちます ([Firefox bug 1835813](https://bugzil.la/1835813))。
+- [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
+  これは、グリッドや段組みのレイアウトにおいて、要素の高さを 0px にするのではなく、あたかもコンテンツがないかのように配置することができるのに有益です ([Firefox bug 1835813](https://bugzil.la/1835813))。
 
 ### JavaScript
 
@@ -35,7 +34,7 @@ l10n:
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
   `script-src` が提供されていないときに代替として `default-src` ディレクティブの値を使用することで、動作が仕様書に合致するようになりました ([Firefox bug 1313937](https://bugzil.la/1313937))。
 
 - `Range` ヘッダーが、値が 1 バイトの範囲内である (例: `bytes=100-200`) 場合に [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header) になります。
@@ -47,13 +46,14 @@ l10n:
 - {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} 静的メンバーをサポートしました。開発者は任意の反復可能オブジェクトや非同期反復可能オブジェクトから、読み取り可能なストリームを構築することができます ([Firefox bug 1772772](https://bugzil.la/1772772))。
 - [WebRTC Encoded Transforms](/ja/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) をサポートしました。ウェブアプリケーションが worker で実行している {{DOMxRef("TransformStream")}} を使用して、受信および発信する WebRTC のエンコードされた動画および音声フレームを編集できます。
   {{domxref("RTCRtpScriptTransform")}}、{{domxref("RTCRtpScriptTransformer")}}、{{domxref("RTCRtpSender.transform")}}、{{domxref("RTCRtpReceiver.transform")}}、{{domxref("RTCEncodedVideoFrame")}}、{{domxref("RTCEncodedAudioFrame")}} インターフェイス、{{domxref("RTCTransformEvent")}} worker、{{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} イベントをサポートしました ([Firefox bug 1631263](https://bugzil.la/1631263))。
+- [`CSSStyleRule`](/ja/docs/Web/API/CSSStyleRule) が [`CSSGroupingRule`](/ja/docs/Web/API/CSSGroupingRule) から継承するようになり、[`CSSRule`](/ja/docs/Web/API/CSSRule) 空の直接継承ではなくなりました。結果として、[`cssRules`](/ja/docs/Web/API/CSSGroupingRule/cssRules) プロパティおよび [`deleteRule()`](/ja/docs/Web/API/CSSGroupingRule/cssRules) および [`insertRule()`](/ja/docs/Web/API/CSSGroupingRule/insertRule) メソッドに対応するようになりました (Firefox バグ [1846251](https://bugzil.la/1846251))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
 
 - ユーザーがすべての WebDriver セッションを終了してブラウザーを閉じることを可能にする `browser.close` コマンドを追加しました ([Firefox bug 1829334](https://bugzil.la/1829334))。
-- ユーザーがトップレベルの閲覧コンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
+- ユーザーが最上位の閲覧コンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
 - ドキュメント内のナビゲーションに対して発生する `browsingContext.fragmentNavigated` イベントを追加しました ([Firefox bug 1841039](https://bugzil.la/1841039))。
 - `browsingContext.create` コマンドの引数 `background` をサポートしました。これは、新しいコンテキストをバックグラウンドで作成することを強制します。この引数は省略可能で既定値が `false` ですので、`browsingContext.create` はデフォルトで新しいコンテキストをフォアグラウンドで開きます ([Firefox bug 1843507](https://bugzil.la/1843507))。
 - `browsingContext.captureScreenshot` コマンドの引数 `clip` をサポートしました。これは、スクリーンショットを指定した領域または要素に制限できます。要素を切り抜くとき、スクリーンショットを取得する前に要素がビューに入るようにスクロールすることができます ([Firefox bug 1840998](https://bugzil.la/1840998))。
@@ -63,18 +63,10 @@ l10n:
 
 ### Developer tools
 
-- ネットワークモニターでプロキシを経由した要求の情報を表示するようになりました。プロキシのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
+- ネットワークモニターでプロキシーを経由した要求の情報を表示するようになりました。プロキシーのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
 
 - [計測ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で選択した領域をキーボードショートカットでリサイズおよび移動できるようになりました。
   矢印キーを押すと選択した領域の移動、<kbd>Ctrl</kbd> + 矢印キー (Mac では <kbd>Cmd</kbd> + 矢印キー) を押すと選択した領域のリサイズになります。
   これらのキーコンビネーションを使用するときに <kbd>Shift</kbd> キーを押し続けると、移動やリサイズを加速します ([Firefox bug 1262782](https://bugzil.la/1262782))。
 
-- ハイライト擬似要素 ([`::highlight()`](/ja/docs/Web/CSS/::highlight)、[`::target-text`](/ja/docs/Web/CSS/::target-text)、[`::spelling-error`](/ja/docs/Web/CSS/::spelling-error)、[`::grammar-error`](/ja/docs/Web/CSS/::grammar-error)、[`::selection`](/ja/docs/Web/CSS/::selection)) でサポートしていないプロパティを、[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) の CSS ルールパネルで報告するようになりました ([Firefox bug 1842157](https://bugzil.la/1842157))。
-
-## アドオン開発者向けの変更点一覧
-
-変更なし。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(116)}}
+- ハイライト擬似要素 ([`::highlight()`](/ja/docs/Web/CSS/Reference/Selectors/::highlight)、[`::target-text`](/ja/docs/Web/CSS/Reference/Selectors/::target-text)、[`::spelling-error`](/ja/docs/Web/CSS/Reference/Selectors/::spelling-error)、[`::grammar-error`](/ja/docs/Web/CSS/Reference/Selectors/::grammar-error)、[`::selection`](/ja/docs/Web/CSS/Reference/Selectors/::selection)) でサポートしていないプロパティを、[ページインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) の CSS ルールパネルで報告するようになりました ([Firefox bug 1842157](https://bugzil.la/1842157))。

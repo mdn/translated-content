@@ -23,9 +23,7 @@ l10n:
 _親インターフェイスである {{domxref("EventTarget")}} から継承したプロパティもあります。_
 
 - {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
-
   - : 文字列で、通知の表示についての現在の権限を表します。取りうる値は次の通りです。
-
     - `denied` — ユーザーが通知の表示を拒否した。
     - `granted` —通知が表示されることをユーザーが受け入れた。
     - `default` — ユーザーの選択が不明であるため、ブラウザーは値が denied であるかのように動作します。

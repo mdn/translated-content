@@ -2,10 +2,8 @@
 title: ローカルテストサーバーを用意するには
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 l10n:
-  sourceCommit: f21b731803ee077d060a11038d9b284bab37ecc3
+  sourceCommit: d50a52075711e21da27bce5ee24f6334b56cf0f3
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
 
@@ -28,92 +26,103 @@ l10n:
 
 ## ローカルファイルとリモートファイル
 
-ほとんどの学習領域では、ブラウザーでサンプルを直接開くだけで済みます。 HTML ファイルをダブルクリックするか、ブラウザーウィンドウにドラッグ＆ドロップするか、ファイル > 開く...を選択して HTML ファイルを選択するなどです。これを達成する方法はたくさんあります。
+MDN の「学習」記事の多くでは、サンプルをブラウザーで直接開くように案内しています。HTML ファイルをダブルクリックする、ブラウザーウィンドウにドラッグ＆ドロップする、または「ファイル」>「開く…」を選択して HTML ファイルを探すなど、いくつかの方法があります。
 
-ウェブアドレスのパスが `file://` で始まり、その後にローカルハードドライブのファイルへのパスが続く場合、ローカルファイルが使用されています。対照的に、 GitHub でホストされている例 (または他のリモートサーバーの例) を見ると、ウェブアドレスは `http://` または `https://` で始まっており、ファイルが HTTP 経由で受信されたことを示します。
+ウェブアドレスのパスが、ローカルハードドライブ上のファイルへのパスが続く `file://`、または `localhost:` や `http://127.0.0.1`（[ローカル HTTP サーバーの実行](#ローカル_http_サーバーの実行)を参照）で始まる場合、読み込まれたファイルはローカルハードドライブ上にあります。一方、GitHub またはほかのリモートサーバーでホストされている例を表示する場合、ウェブアドレスは `https://` で始まります。これはファイルがリモートにあり、HTTPS 経由で受信されたことを示します。
 
-## ローカルファイルのテストに関する問題
+## file URL を使用する際の問題
 
-一部のサンプルはローカルファイルとして開くと実行されません。これにはさまざまな理由があります。最も可能性が高いのは、
+`file://` URL を使用してサンプルをブラウザーで直接開くと、実行されないことがあります。これにはさまざまな理由があります。よくある理由は次のとおりです。
 
-- **非同期リクエストを特徴としている**。 一部のブラウザー (Chrome を含む) は、ローカルファイルからサンプルを実行するだけでは非同期リクエストは実行しません ([サーバーからのデータの取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)を参照)。これはセキュリティ上の制限があるためです (ウェブセキュリティの詳細については、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)を参照してください)
+- **非同期リクエストを行う**。一部のブラウザー（Chrome を含む）は、サンプルをローカルファイルから実行しただけでは非同期リクエストを実行しません（[JavaScript でネットワークリクエストを行う](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)を参照）。これはセキュリティ上の制限によるものです（ウェブセキュリティについて詳しくは、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)を参照してください）。
 - **サーバー側の言語を使用している**。 サーバー側の言語 (PHP や Python など) では、コードを解釈して結果を提供する特別なサーバーが必要です。
-- **他のファイルをインクルードしている**。 ブラウザーは通常、`file://` スキーマを使用してリソースを読み込むリクエストをオリジン間リクエストとして扱います。
+- **他のファイルをインクルードしている**。ブラウザーは通常、`file://` スキームを使用してリソースを読み込むリクエストをオリジンをまたぐリクエストとして扱います。
   そのため、他のローカルファイルを入れることができるローカルファイルを読み込むと、 {{Glossary("CORS")}} エラーが発生することがあります。
 
-## シンプルなローカル HTTP サーバーの実行
+## ローカル HTTP サーバーの実行
 
-非同期リクエストの問題を回避するには、ローカルウェブサーバーを介して実行することによって、そのようなサンプルをテストする必要があります。
+ローカルファイルの実行に伴う問題を避けるには、ローカルウェブサーバーを介してサンプルをテストする必要があります。この節では、そのためのいくつかの方法を説明します。
 
 ### コードエディターで拡張機能を使用する場合
 
-HTML と CSS と JavaScript だけが必要で、サーバーサイドの言語が必要ない場合、最も簡単な方法はコードエディターの拡張機能を調べることです。ローカルの HTTP サーバーへのインストールと設定するには、自動化するだけでなく、コードエディターとうまく統合されます。 HTTP サーバーのローカルファイルをワンクリックでテストできます。
+サーバー側の言語は必要なく、HTML、CSS、JavaScript だけを使用する場合は、コードエディターの拡張機能を使用すると、ローカルの例を簡単に実行できます。拡張機能はサーバーのインストールと設定を自動化するだけでなく、コードエディターとうまく統合されます。
 
-VSCode については、以下の無料拡張機能を調べると良いでしょう。
+たとえば VS Code では、拡張機能パネルで [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) 拡張機能を検索してください。HTML ファイルを表示しているときに、ユーザーインターフェイスの右上に「Show Preview」ボタンが表示されます。これを押すと、HTML と関連ファイルが別のサイドパネルにレンダリングされます。
 
-- `vscode-preview-server`。[ホームページ](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)でチェックできます。
+Live Preview は、`http://127.0.0.1:3000` のローカルサーバーを使用してファイルを提供します。
+
+### Node.js の使用
+
+Node.js の [`http-server`](https://www.npmjs.com/package/http-server) モジュールを使用すると、任意のディレクトリーで HTML ファイルをホストできます。
+
+このモジュールを使用するには、次のようにします。
+
+1. Node.js（および、通常は Node.js にバンドルされているパッケージマネージャーの npm）がすでにインストールされているか確認するには、[コマンドライン](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)で次のコマンドを実行してください。
+
+   ```bash
+   node -v
+   npm -v
+   ```
+
+2. Node.js がインストールされていない場合は、インストールする必要があります。Node.js のドキュメントにある[ダウンロード手順](https://nodejs.org/en/download)に従って、上記のコマンドを再度実行し、インストールが正常に行われたことを確認してください。
+
+3. コマンドプロンプトで `cd` コマンドを使い、サンプルがあるフォルダーに移動します。
+
+4. サーバーを起動するには、次のコマンドを実行します。
+
+   ```bash
+   npx http-server -o -p 9999 -c-1
+   ```
+
+   これにより、現在のディレクトリーにあるすべてのファイルが `localhost:9999` でホストされ、`index.html` が自動的に読み込まれます。オプション `-o` は、すぐにウェブブラウザーで開くようにします。`index.html` がない場合はディレクトリーの内容が表示され、読み込むファイルを選択できます。オプション `-c-1` はサーバーがファイルをキャッシュしないようにするため、毎回最新のファイルが読み込まれます。
 
 ### Python の使用
 
-これを実現するためのもう一つの方法は、 Python の `http.server` モジュールを使用することです。
+ローカルの例を HTTP サーバーで実行するもう一つの方法は、Python の `http.server` モジュールを使用することです。
 
 > [!NOTE]
-> 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2.x を使用している場合、`http.server` の使用をすべて `SimpleHTTPServer` に置き換えることで、このガイドを実行することができます。しかし、最新バージョンの Python を使用することをお勧めします。
+> 古いバージョンの Python（バージョン 2.7 まで）では、`SimpleHTTPServer` という名前の似たモジュールが提供されていました。Python 2 は廃止されたため、Python 3 の使用をお勧めします。
 
 このためには次のようにします。
 
-1. Python をインストールします。 Linux または Mac OS X を使用している場合は、既にシステム上で使用可能になっているはずです。 Windows ユーザーの方は、 Python ホームページからインストーラーを入手し、インストーラーの指示に従ってインストールすることができます。
-
-   - [python.org](https://www.python.org/) に進みます
-   - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
-   - ページ下部の _Windows Installer_ を選択してダウンロードします
-   - ダウンロードしたら、実行します
-   - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
-   - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします
-
-2. コマンドプロンプト (Windows)/ターミナル (macOS/ Linux) を開きます。 Python がインストールされていることを確認するには、次のコマンドを入力してください。
+1. Python がすでにインストールされているか確認するには、[コマンドライン](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)で次のコマンドを実行してください。
 
    ```bash
+   # macOS または Linux では、次を実行
    python -V
-   # 上記のものが失敗する場合は、次のようにする
+   # 上記が失敗する場合は、次を試す
    python3 -V
-   # または、 "py" コマンドが使用できる場合は、次のようにする
-   py -V
+
+   # Windows では、次を実行
+   py -3 -V
    ```
 
-3. これによりバージョン番号が返されます。 これで OK であれば、 `cd` コマンドを使用して、テストしたいウェブサイトのコードを格納するディレクトリーに移動します。
+2. Python がインストールされていない場合は、インストールする必要があります。Python のドキュメントにある[ダウンロード手順](https://www.python.org/downloads/)に従ってください（[Django チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#python_3_のインストール)にも詳しい説明があります）。その後、コマンドを再度実行して、インストールが成功したか確認してください。
 
-   ```bash
-   # 入力するディレクトリー名を入れる。例えば次のようにする
-   cd Desktop
-   # 必要であれば、 2 つのドットを使用するとディレクトリーを 1 つ上にジャンプする
-   cd ..
-   ```
+3. Python がセットアップできたら、`cd` コマンドを使用して、テストしたいウェブサイトのコードがあるディレクトリーに移動します。
 
 4. そのディレクトリーにあるサーバーを起動するコマンドを入力します。
 
    ```bash
-   # 上記で Python のバージョンが 3.X と返ってきた場合
-   # Windows では、 "python -m http.server" or "py -3 -m http.server" のようにする
+   # macOS と Linux では、次を実行
    python3 -m http.server
-   # 上記で Python のバージョンが 2.X と返ってきた場合
-   python -m SimpleHTTPServer
+
+   # Windows では、次を実行
+   py -3 -m http.server
    ```
 
-5. 既定では、これはローカルウェブサーバー上のディレクトリーの内容を 8000 番ポート上で実行します。このサーバーにアクセスするには、ウェブブラウザーで `localhost:8000` の URL に移動します。ここにディレクトリーの内容が表示されるので、実行する HTML ファイルをクリックしてください。
+   デフォルトでは、現在のディレクトリーにあるすべてのファイルが `localhost:8000` でホストされ、`index.html` が自動的に読み込まれます。`index.html` がない場合はディレクトリーの内容が表示され、読み込むファイルを選択できます。
 
-> [!NOTE]
-> すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` (Python 3.x) または `python -m SimpleHTTPServer 7800` (Python 2.x) です。これで `localhost:7800` でコンテンツにアクセスできます。
+   > [!NOTE]
+   > すでにポート 8000 でサーバーが動作している場合は、サーバーのコマンドに別のポート番号を指定できます。たとえば `python3 -m http.server 7800` とすると、`localhost:7800` でコンテンツにアクセスできます。
 
 ## サーバー側の言語をローカルで実行
 
-Python の `http.server` （Python 2 では `SimpleHTTPServer`）モジュールは便利ですが、単なる静的ファイルサーバーに過ぎません。 Python、PHP、JavaScript などの言語で書かれたコードの実行方法はわかりません。これを処理するには、必要なことがあります。必要なのは、実行しようとしているサーバー側の言語に依存します。いくつかの例があります。
+Python、PHP、JavaScript などのサーバーサイド言語を使用する場合の最適な手法は、使用しているサーバーサイド言語、およびウェブフレームワークを使用しているか「スタンドアロン」のコードを使用しているかによって異なります。
 
-- Python のサーバー側コードを実行するには、Python ウェブフレームワークを使用する必要があります。 Python のウェブフレームワークには、 Django（[ガイド](/ja/docs/Learn_web_development/Extensions/Server-side/Django)が利用できます）、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com) など人気のものが多く存在します。
-- Node.js (JavaScript) サーバー側コードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。 Express は良い選択です - [Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) を参照してください
-- PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](https://www.php.net/manual/ja/features.commandline.webserver.php)を起動してください。
+ウェブフレームワークを使用している場合、通常、そのフレームワークは独自の開発サーバーを提供しています。
+例えば、次の言語/フレームワークには開発サーバーが付属しています。
 
-  ```bash
-  cd path/to/your/php/code
-  php -S localhost:8000
-  ```
+- Python のウェブフレームワークは、[Django](/ja/docs/Learn_web_development/Extensions/Server-side/Django) や [Flask](https://flask.palletsprojects.com/) などです。
+- Node/JavaScript のフレームワークは、[Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) などです。
+- PHP には独自の[組み込み開発サーバー](https://www.php.net/manual/en/features.commandline.webserver.php)があります。また、[MAMP](https://www.mamp.info/en/downloads/) (macOS) や [XAMPP](https://www.apachefriends.org/download.html) (Linux/Windows/macOS) などの PHP/データベース開発サーバーをインストールすることもできます。

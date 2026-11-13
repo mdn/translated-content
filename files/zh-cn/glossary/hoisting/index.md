@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9fd171abed5944476123db22360b1e086f0900d5
 ---
 
-{{GlossarySidebar}}
-
 JavaScript **提升**是指解释器在执行代码之前，似乎将函数、变量、类或导入的*声明*移动到其{{glossary("scope", "作用域")}}的顶部的过程。
 
 *提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[_可提升的声明_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：

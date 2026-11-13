@@ -1,11 +1,10 @@
 ---
 title: Math.log2()
+short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`Math.log2()`** は静的メソッドで、数値の 2 を底とした対数を返します。
 
@@ -15,20 +14,20 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{InteractiveExample("JavaScript デモ: Math.log2()")}}
 
 ```js interactive-example
 console.log(Math.log2(3));
-// Expected output: 1.584962500721156
+// 予想される結果: 1.584962500721156
 
 console.log(Math.log2(2));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.log2(1));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.log2(0));
-// Expected output: -Infinity
+// 予想される結果: -Infinity
 ```
 
 ## 構文
@@ -77,7 +76,7 @@ Math.log2(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.log2` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.log2` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log10()")}}

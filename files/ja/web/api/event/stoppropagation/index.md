@@ -26,7 +26,7 @@ event.stopPropagation()
 
 ## 例
 
-[イベントの伝播](/ja/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation) を参照してください。
+[イベントの伝播](/ja/docs/Web/API/Document_Object_Model#イベントの伝播) を参照してください。
 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} の例も参照してください。
 
 ## 仕様書

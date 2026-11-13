@@ -25,12 +25,13 @@ console.log(canMakeHTTPRequest());
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **참고:** `globalThis` 속성은 구성 및 쓰기가 가능하므로 코드 작성자가 신뢰할 수 없는 코드를 실행할 때 숨길 수 있고 전역 객체 노출을 방지할 수 있습니다.
+> [!NOTE]
+> `globalThis` 속성은 구성 및 쓰기가 가능하므로 코드 작성자가 신뢰할 수 없는 코드를 실행할 때 숨길 수 있고 전역 객체 노출을 방지할 수 있습니다.
 
 ## 설명
 
 역사적으로 전역 객체에 접근하려면 다른 JavaScript 환경에서 다른 구문이 필요했습니다. 웹에서는 {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, {{domxref("Window.frames", "frames")}}를 사용할 수 있지만, [Web Workers](/ko/docs/Web/API/Worker)에서는 `self`만 동작합니다. Node.js에서는 이 중 어느 것도 작동하지 않으며 대신 `global`을 사용해야 합니다.
-`this` 키워드는 비엄격 모드에서 실행되는 함수 내부에서 사용될 수 있지만, `this`는 엄격 모드에서 실행되는 모듈 및 내부 함수에서 `undefined`가 됩니다. `Function('return this')()`를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}}와 같이 {{jsxref("eval", "eval()")}}을 비활성화하는 환경에서는 이러한 방식으로 {{jsxref("Function")}}을 사용할 수 없습니다.
+`this` 키워드는 비엄격 모드에서 실행되는 함수 내부에서 사용될 수 있지만, `this`는 엄격 모드에서 실행되는 모듈 및 내부 함수에서 `undefined`가 됩니다. `Function('return this')()`를 사용하는 방법도 존재하지만, 브라우저의 {{glossary("CSP")}}와 같이 {{jsxref("Global_Objects/eval", "eval()")}}을 비활성화하는 환경에서는 이러한 방식으로 {{jsxref("Function")}}을 사용할 수 없습니다.
 
 `globalThis` 속성은 환경에 무관하게 전역 `this` 값, 즉 전역 객체에 접근하는 표준 방법을 제공합니다. `window`, `self` 등 유사한 속성과는 다르게 window와 non-window 컨텍스트 모두에서의 동작을 보장합니다. 따라서 코드를 구동하는 환경을 모르더라도 전역 객체에 일관된 방식으로 접근할 수 있습니다. 이름을 기억하는 데 도움이 되도록 전역 범위에서 `this` 값은 `globalThis`라는 점만 기억하세요.
 
@@ -59,7 +60,7 @@ console.log(window.Math === Math); // true
 
 그러나 전역 객체에 명시적으로 접근해야 하는 한 가지 경우는 일반적으로 [폴리필](/ko/docs/Glossary/Polyfill)을 위해 전역 개체에 **작성** 할 때입니다.
 
-`globalThis` 이전에는 환경에 대한 전역 객체를 가져오는 방법 중 유일하게 믿을만한 교차 플랫폼 방법은 `Function('return this')()` 이었습니다. 그러나 이로 인해 일부 설정에서 [CSP](/ko/docs/Web/HTTP/CSP) 위반이 발생하므로 작성자는 이와 같은 조각별 정의를 사용합니다([원래 core-js 소스](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)).
+`globalThis` 이전에는 환경에 대한 전역 객체를 가져오는 방법 중 유일하게 믿을만한 교차 플랫폼 방법은 `Function('return this')()` 이었습니다. 그러나 이로 인해 일부 설정에서 [CSP](/ko/docs/Web/HTTP/Guides/CSP) 위반이 발생하므로 작성자는 이와 같은 조각별 정의를 사용합니다([원래 core-js 소스](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)).
 
 ```js
 function check(it) {
@@ -120,4 +121,4 @@ if (typeof globalThis.Intl === "undefined") {
 ## 같이 보기
 
 - [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}

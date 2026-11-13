@@ -3,7 +3,7 @@ title: 語法與型別
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章討論 JavaScript 的基本語法與基礎資料類型、包括變數、常數、字元常數
 
@@ -13,7 +13,7 @@ JavaScript 許多基本語法借鑒自 Java，C 或是 C++，但亦受 Awk、Per
 
 JavaScript 是 Case-sensitive（區分大小寫）並使用 Unicode 編碼。舉例來說，Früh (德文的"early") 可以當作變數的名稱。
 
-```plain
+```js
 var Früh = "foobar";
 ```
 
@@ -109,7 +109,7 @@ var a;
 a + 2; // Evaluates to NaN
 ```
 
-當你對 {{jsxref("null")}} 進行運算，{{jsxref("null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
+當你對 {{jsxref("Operators/null", "null")}} 進行運算，{{jsxref("Operators/null", "null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
 
 ```js
 var n = null;
@@ -265,7 +265,6 @@ MY_OBJECT.key = "otherValue";
 最新 ECMAScript 標準定義以下七種資料型別:
 
 - 六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
-
   - {{Glossary("Boolean")}}. `true` and `false`.
   - {{Glossary("null")}}. A special keyword denoting a null value. Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.
   - {{Glossary("undefined")}}. A top-level property whose value is undefined.
@@ -313,8 +312,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 當代表數字的值以字串形式存在記憶體中，有些方法可用來將這種字串轉換成整數或浮點數。
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` 只會返回整數，因此減少了對小數的使用。此外，parseInt 的最佳實務是始終包含基數參數。基數參數用於指定使用的數值系統。
 
@@ -433,7 +432,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 
 舉個例子：
 
-```plain
+```js-nolint
 3.1415926
 -.123456789
 -3.1E+12
@@ -616,7 +615,7 @@ console.log(quote);
 
 The result of this would be:
 
-```plain
+```js-nolint
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 

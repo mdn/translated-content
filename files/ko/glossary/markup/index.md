@@ -23,7 +23,6 @@ HTML 파일과 같은 텍스트 파일 내에서, 요소는 콘텐츠의 해당 
 ## 같이 보기
 
 - [MDN 웹 문서 용어사전](/ko/docs/Glossary)
-
   - {{Glossary("HTML")}}
   - {{Glossary("XHTML")}}
   - {{Glossary("XML")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-{{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entry API")}}{{Non-standard_Header}}
 
 {{domxref("FileSystemEntry")}} インターフェイスの **`toURL()`** メソッドは、ファイルシステム項目を識別するために使用することができる URL を格納した文字列を作成して返します。
 これは `src` 属性や `href` 属性の値として使用することができる新しい URL スキーム `filesystem:` を公開することで行われます。
@@ -54,5 +54,5 @@ document.body.appendChild(img);
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
 - {{domxref("FileSystemDirectoryEntry.removeRecursively()")}}

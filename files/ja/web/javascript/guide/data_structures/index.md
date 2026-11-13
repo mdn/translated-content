@@ -1,16 +1,13 @@
 ---
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Guide/Data_structures
-original_slug: Web/JavaScript/Data_structures
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。
 
-[言語概要](/ja/docs/Web/JavaScript/Language_overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
+[言語概要](/ja/docs/Web/JavaScript/Guide/Language_overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
 
 ## 動的かつ弱い型付け
 
@@ -67,7 +64,7 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 - 初期化を伴わない変数宣言 (`let x;`) は、暗黙的にその変数を `undefined` に初期化します。
 - {{jsxref("Array.prototype.find()")}} や {{jsxref("Map.prototype.get()")}} など、多くのメソッドは要素が見つからないと `undefined` を返します。
 
-コア言語では、`null` が使用される頻度はかなり低くなっています。最も重要な場所は、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)の終わりです。その後、{{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} など、プロトタイプとやりとりするメソッドは `undefined` に代わり `null` を受け入れるか返します。
+コア言語では、`null` が使用される頻度はかなり低くなっています。最も重要な場所は、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)の終わりです。その後、{{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} など、プロトタイプとやりとりするメソッドは `undefined` に代わり `null` を受け入れるか返します。
 
 `null` は[キーワード](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)ですが、`undefined` は通常の[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)で、たまたまグローバルプロパティであると見なされます。実際には、`undefined` は再定義されたり、シャドウ化されたりすることはないので、この違いは小さいです。
 
@@ -83,12 +80,12 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 表現可能な範囲外の値は、自動的に次のように変換されます。
 
-- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `+Infinity` に変換されます。
-- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `+0` に変換されます。
+- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `Infinity` に変換されます。
+- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `0` に変換されます。
 - -{{jsxref("Number.MAX_VALUE")}} より小さな負の数は `-Infinity` に変換されます。
 - -{{jsxref("Number.MIN_VALUE")}} より大きな負の数は `-0` に変換されます。
 
-`+Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
+`Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
 
 数値型には、複数の表現を持つ値が1つだけあります。`0` は `-0` と `+0` の両方で表します（`0` は `+0` の別名です）。実際には、異なる表現にほとんど違いはありません。例えば、`+0 === -0` は `true` です。ただし、ゼロで割ったときには気づくことができるようになっています。
 
@@ -99,7 +96,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**not **a** **N**umber") は、特殊な数値の一種で、演算操作の結果が数値として発生しない場合によく遭遇します。また、JavaScript で唯一、それ自身と等しくない値でもあります。
 
-数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点`でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
+数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
 
 > [!NOTE]
 > ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/マスク_%28情報工学%29)を使用すれば、 1 つの数値で複数の論理値を表現することも可能ですが、 JavaScript は（論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような）論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として見なされています。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
@@ -171,7 +168,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 - `writable`
   - : プロパティに代入することで変更可能かどうかを示す論理値です。
 - `enumerable`
-  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)も参照してください。
+  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)も参照してください。
 - `configurable`
   - : 論理値で、プロパティの削除、アクセサプロパティへの変更、属性の変更が可能かどうかを示します。
 
@@ -189,17 +186,17 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 - `set`
   - : 割り当てる値を格納した引数で呼び出される関数です。指定したプロパティを変更しようとしたときに実行されます。[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)も参照してください。`undefined` にすることができます。
 - `enumerable`
-  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)も参照してください。
+  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)も参照してください。
 - `configurable`
   - : 論理値で、プロパティの削除、アクセサプロパティへの変更、属性の変更が可能かどうかを示します。
 
-オブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)は、他のオブジェクトや `null` を指しています。これは概念的にはオブジェクトの隠しプロパティで、一般的には `[[Prototype]]` として表されます。オブジェクトの `[[Prototype]]` のプロパティは、オブジェクト自身にもアクセスすることができます。
+オブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)は、他のオブジェクトや `null` を指しています。これは概念的にはオブジェクトの隠しプロパティで、一般的には `[[Prototype]]` として表されます。オブジェクトの `[[Prototype]]` のプロパティは、オブジェクト自身にもアクセスすることができます。
 
 オブジェクトはアドホックなキーと値のペアであるため、マップとしてよく使用されます。しかし、人間工学、セキュリティ、パフォーマンスの課題がある場合があります。任意のデータを格納するためには、代わりに {{jsxref("Map")}} を使用してください。[`Map` のリファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map#object_と_map_の比較)には、キーと値の関連性を格納するためのプレーンオブジェクトとマップの間のメリットとデメリットについてより詳しい議論が含まれています。
 
 ### 日付
 
-日付を表現する場合は、JavaScript に組み込まれた [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) ユーティリティを使用するのが最適です。
+JavaScript で日付を表すために指定された API は 2 種類あります。古くからある {{jsxref("Date")}} オブジェクトと、現行の {{jsxref("Temporal")}} オブジェクトです。 `Date` は望ましくない設計上の選択を多く保有しており、新しいコードでは実現可能であれば避けるべきです。
 
 ### 添字付きコレクション: 配列および型付き配列
 
@@ -217,7 +214,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 通常、DOM ノードにデータをバインドするには、オブジェクトに直接プロパティを設定するか、 `data-*` 属性を使用します。これらの手法は同じコンテクストで実行されるあらゆるスクリプトからデータの利用が可能であるため、不都合な面を持ち合わせていました。 `Map` や `WeakMap` を使うと、オブジェクトへの*プライベート*なデータバインドを簡単に行うことができます。
 
-`WeakMap` および `WeakSet` では、キーとしてオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)のいずれかであるガベージコレクターで回収可能な値のみが許可され、キーがコレクション内に残っていても、キーが回収される場合があります。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Memory_management#%e3%83%a1%e3%83%a2%e3%83%aa%e3%83%bc%e7%ae%a1%e7%90%86%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0)に固有の仕様として使用します。
+`WeakMap` および `WeakSet` では、キーとしてオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)のいずれかであるガベージコレクターで回収可能な値のみが許可され、キーがコレクション内に残っていても、キーが回収される場合があります。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Guide/Memory_management#%e3%83%a1%e3%83%a2%e3%83%aa%e3%83%bc%e7%ae%a1%e7%90%86%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0)に固有の仕様として使用します。
 
 ### 構造化データ: JSON
 
@@ -255,7 +252,7 @@ console.log({} + []); // "[object Object]"
 
 数値の型には[数値型](#数値型)と[長整数型](#長整数型)の 2 種類があります。言語が数値か長整数かを具体的に指定する場合もあります（{{jsxref("Array.prototype.slice()")}} は添字が数値でなければならないなど）。他にも、どちらかを許容し、オペランドの種類によって異なる処理を行う場合もあります。他にも暗黙の変換を許さない厳密な強制処理については、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)や[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数型への変換)を参照して下さい。
 
-数値変換は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)とほぼ同じですが、長整数の場合はは {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。すべての算術演算子は、数値型と長整数型の両方がオーバーロードされているため、数値変換が行わわれます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への変換を行います。
+数値変換は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)とほぼ同じですが、長整数の場合は {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。すべての算術演算子は、数値型と長整数型の両方がオーバーロードされているため、数値変換が行わわれます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への変換を行います。
 
 ### その他の変換
 

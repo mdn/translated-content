@@ -9,16 +9,14 @@ slug: Web/API/WebGLRenderingContext/cullFace
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.cullFace(mode);
 ```
 
 ### 参数
 
 - `mode`
-
   - : {{domxref("GLenum")}} 指定适合进行剔除的面是正面还是背面。默认值是 `gl.BACK`. 可能的值有：
-
     - `gl.FRONT`
     - `gl.BACK`
     - `gl.FRONT_AND_BACK`

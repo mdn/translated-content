@@ -5,7 +5,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir hojas de estilo simples. En esta lección vamos a echar un vistazo a cómo un navegador crea una página web a partir de CSS y HTML.
 
@@ -16,16 +16,16 @@ Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir 
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >
         y conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >).
       </td>
     </tr>
@@ -126,7 +126,7 @@ La salida actualizada es la siguiente:
 
 {{EmbedLiveSample ( 'La_aplicación_de_CSS_al_DOM', '100%', 55)}}
 
-En nuestro artículo [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS) que encontrarás en el siguiente módulo, vamos a utilizar las herramientas DevTools del navegador para depurar posibles problemas en el CSS. También aprenderemos más sobre cómo el navegador interpreta el CSS.
+En nuestro artículo [Depurar el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) que encontrarás en el siguiente módulo, vamos a utilizar las herramientas DevTools del navegador para depurar posibles problemas en el CSS. También aprenderemos más sobre cómo el navegador interpreta el CSS.
 
 ## ¿Qué ocurre si un navegador encuentra CSS que no entiende?
 
@@ -169,6 +169,6 @@ En lecciones posteriores veremos muchas más formas de cómo admitir navegadores
 
 ## Y finalmente
 
-Casi has terminado este módulo; solo nos queda una cosa más por hacer. En el próximo artículo, [pondrás en práctica tu conocimiento nuevo](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page) para cambiar el estilo de un ejemplo y probarte con un poco de CSS en el proceso.
+Casi has terminado este módulo; solo nos queda una cosa más por hacer. En el próximo artículo, [pondrás en práctica tu conocimiento nuevo](/es/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page) para cambiar el estilo de un ejemplo y probarte con un poco de CSS en el proceso.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "conflicting/Learn_web_development/Core/Styling_basics")}}

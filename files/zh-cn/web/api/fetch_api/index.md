@@ -1,55 +1,55 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
+l10n:
+  sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
-Fetch API 提供了一个获取资源的接口（包括跨网络通信）。对于任何使用过 {{domxref("XMLHttpRequest")}} 的人都能轻松上手，而且新的 API 提供了更强大和灵活的功能集。
-
-{{AvailableInWorkers}}
+Fetch API 提供了一个用于获取资源（包括跨网络通信）的接口。它是 {{DOMxRef("XMLHttpRequest")}} 的一个更强大、更灵活的替代。
 
 ## 概念和用法
 
-Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及其他与网络请求有关的）对象的通用定义。这将在未来更多需要它们的地方使用它们，无论是 service worker、Cache API，又或者是其他处理请求和响应的方式，甚至是任何一种需要你自己在程序中生成响应的方式（即使用计算机程序或者个人编程指令）。
+Fetch API 使用 {{DOMxRef("Request")}} 和 {{DOMxRef("Response")}} 对象（以及网络请求涉及的其他内容），还涉及 CORS 和 HTTP Origin 标头语义等相关概念。
 
-它同时还为有关联性的概念，例如 CORS 和 HTTP Origin 标头信息，提供一种新的定义，取代它们原来那种分离的定义。
+要发起请求并获取资源，请使用 {{domxref("Window/fetch", "fetch()")}} 方法。该方法在 {{DOMxRef("Window")}} 和 {{DOMxRef("WorkerGlobalScope", "Worker")}} 上下文中均为全局方法。这意味着在几乎任何需要获取资源的上下文中，都可以使用它。
 
-发送请求或者获取资源，请使用 {{domxref("fetch()")}} 方法。它在很多接口中都被实现了，更具体地说，是在 {{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 接口上。因此在几乎所有环境中都可以用这个方法获取资源。
+`fetch()` 方法有一个必需参数，即要获取资源的路径。它返回一个 {{JSxRef("Promise")}}，该 Promise 会在服务器返回头部信息后，立即解析兑现为该请求的 {{DOMxRef("Response")}} 对象——**即使服务器的响应是 HTTP 错误状态**。你也可以传入一个可选的 `init` 选项对象作为第二个参数（参见 {{DOMxRef("Request")}}）。
 
-`fetch()` 强制接受一个参数，即要获取的资源的路径。它返回一个 {{JSxRef("Promise")}}，该 Promise 会在服务器使用标头响应后，兑现为该请求的 {{domxref("Response")}}——**即使服务器的响应是 HTTP 错误状态**。你也可以传一个可选的第二个参数 `init`（参见 {{domxref("Request")}}）。
+一旦获取到 {{DOMxRef("Response")}} 对象后，就有多种方法可用于定义主体内容以及如何处理该内容。
 
-一旦 {{domxref("Response")}} 被返回，有许多方法可以获取主体定义的内容以及如何处理它。
+虽然可以直接使用 {{DOMxRef("Request.Request", "Request()")}} 和 {{DOMxRef("Response.Response", "Response()")}} 构造函数创建请求和响应对象，但这种做法并不常见。通常，它们会作为其他 API 操作的结果被创建（例如，来自 service worker 的 {{DOMxRef("FetchEvent.respondWith()")}}）。
 
-你也可以通过 {{domxref("Request.Request","Request()")}} 和 {{domxref("Response.Response","Response()")}} 构造函数直接创建请求和响应。但是我们不建议这么做，它们更可能被创建为其他的 API 操作的结果（比如，service worker 中的 {{domxref("FetchEvent.respondWith")}}）。
+有关使用 Fetch API 功能的更多信息，请参见[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)。
 
-### 与 jQuery 的区别
+### 延迟 Fetch
 
-`fetch` 规范主要在三个方面与 `jQuery.ajax()` 不同：
+{{domxref("Window/fetchLater", "fetchLater()")}} API 允许开发者请求*延迟获取*，它可以在指定的时间段之后发送，或者在页面关闭或导航离开时发送。参见[使用延迟 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
 
-- 从 `fetch()` 返回的 Promise **不会因 HTTP 的错误状态而被拒绝**，即使响应是 HTTP `404` 或 `500`。相反，它将正常兑现（`ok` 状态会被设置为 `false`），并且只有在网络故障或者有任何阻止请求完成时，才拒绝。
-- 除非你在 [init 对象中](/zh-CN/docs/Web/API/Window/fetch#参数)设置（去包含）_credentials_，否则 `fetch()` **将不会发送跨源 cookie**。
+## 接口
 
-  - [2018 年 4 月](https://github.com/whatwg/fetch/pull/585)，该规范将默认的 credentials 策略更改为 `'same-origin'`。以下浏览器发布了过时的原生 fetch，并在以下版本中更新：Firefox 61.0b13、Safari 12、Chrome 68。
-  - 如果你的目标是这些旧的浏览器，请务必在所有可能接受 cookie/用户登录状态影响的 API 请求中包含拥有 `credentials: 'same-origin'` 的 [init 对象](/zh-CN/docs/Web/API/Window/fetch#参数)。
+- {{domxref("Window.fetch()")}} 和 {{domxref("WorkerGlobalScope.fetch()")}}
+  - : 用于获取资源的 `fetch()` 方法。
+- {{domxref("Window.fetchLater()")}}
+  - : 用于发起延迟获取请求。
+- {{domxref("DeferredRequestInit")}}
+  - : 表示可用于配置延迟获取请求的选项集合。
+- {{domxref("FetchLaterResult")}}
+  - : 表示请求延迟获取的结果。
+- {{DOMxRef("Headers")}}
+  - : 表示响应/请求的标头信息，允许你查询这些信息，并根据结果采取不同的操作。
+- {{DOMxRef("Request")}}
+  - : 表示资源请求。
+- {{DOMxRef("Response")}}
+  - : 表示对请求的响应。
 
-> [!NOTE]
-> 更多关于 Fetch API 的用法，参考[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)。
+## HTTP 标头
 
-### 中止 fetch
-
-要中止未完成的 `fetch()`，甚至 `XMLHttpRequest` 操作，请使用 {{DOMxRef("AbortController")}} 和 {{DOMxRef("AbortSignal")}} 接口。
-
-## Fetch 接口
-
-- {{domxref("fetch()")}}
-  - : 包含了 `fetch()` 方法，用于获取资源。
-- {{domxref("Headers")}}
-  - : 表示响应/请求的标头信息，允许你查询它们，或者针对不同的结果做不同的操作。
-- {{domxref("Request")}}
-  - : 相当于一个资源请求。
-- {{domxref("Response")}}
-  - : 相当于请求的响应
+- {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
+  - : 控制 `fetchLater()` API 的[顶级配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)。
+- {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
+  - : 控制 `fetchLater()` API 的[跨源子框架共享配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)。
 
 ## 规范
 
@@ -62,7 +62,6 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 ## 参见
 
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)

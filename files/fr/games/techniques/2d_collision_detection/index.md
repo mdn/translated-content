@@ -3,8 +3,6 @@ title: Détection de collisions en 2D
 slug: Games/Techniques/2D_collision_detection
 ---
 
-{{GamesSidebar}}
-
 Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d'utiliser une forme générique appelée masque de collision («&nbsp;_hitbox_&nbsp;») qui couvrira l'entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d'avoir de bonnes performances pour un grand nombre d'entités à tester.
 
 Cet article donne un résumé des techniques les plus utilisées pour la détection des collisions dans les jeux en deux dimensions.

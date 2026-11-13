@@ -1,24 +1,23 @@
 ---
 title: Promise.resolve()
+short-title: resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
-
-{{JSRef}}
 
 **`Promise.resolve()`** は静的メソッドで、 {{jsxref("Promise")}} を与えられた値で「解決」させます。値がプロミスの場合は、そのプロミスが返されます。その値が [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) であれば、`Promise.resolve()` は `then()` メソッドを、準備した 2 つのコールバックと共に呼び出します。それ以外の場合は、その値で履行するプロミスが返されます。
 
 この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。
 
-{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+{{InteractiveExample("JavaScript デモ: Promise.resolve()")}}
 
 ```js interactive-example
 const promise1 = Promise.resolve(123);
 
 promise1.then((value) => {
   console.log(value);
-  // Expected output: 123
+  // 予想される結果: 123
 });
 ```
 
@@ -41,7 +40,8 @@ Promise.resolve(value)
 
 `Promise.resolve()` はプロミスを _解決_ します。これはプロミスを履行したり拒否したりすることとは異なります。用語の定義については、[プロミスの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#description)を参照してください。簡単に言うと、 `Promise.resolve()` は、最終的な状態が他のプロミス、 Thenable オブジェクト、または他の値に依存しているプロミスを返します。
 
-> **メモ:** `value` 式の評価で同期的にエラーが発生する可能性がある場合、このエラーは捕捉されず、`Promise.resolve()` によって拒否されたプロミスにラップされます。この用途には {{jsxref("Promise/try", "Promise.try(() => value)")}} を使用することを検討してください。
+> [!NOTE]
+> `value` 式の評価で同期的にエラーが発生する可能性がある場合、このエラーは捕捉されず、`Promise.resolve()` によって拒否されたプロミスにラップされます。この用途には {{jsxref("Promise/try", "Promise.try(() => value)")}} を使用することを検討してください。
 
 `Promise.resolve()` は汎用で、サブクラス化に対応しています。つまり、`Promise` のサブクラスで呼び出すことができ、その結果はサブクラス型のプロミスになります。これを行うには、サブクラスのコンストラクターは [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じ定義で実装する必要があります。引数として `resolve` と `reject` コールバックで呼び出すことができる単一の `executor` 関数を受け入れることができます。
 
@@ -133,7 +133,7 @@ p2.then(
 
 // Thenable はコールバックの後で Promise が解決した場合に
 // 例外を発生させます。
-const thenable = {
+const p3 = Promise.resolve({
   then(onFulfilled) {
     onFulfilled("Resolving");
     throw new TypeError("Throwing");
@@ -195,9 +195,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static resolve = Promise.resolve;
 }
 
-Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
+const p = NotPromise.resolve("foo"); // "Resolved foo" と出力
+// p は NotPromise インスタンス
 ```
 
 入れ子になった Thenable を平坦化する機能は `Promise()` コンストラクターの `resolve` 関数で実装されています。そのため、他のコンストラクターで呼び出すと、そのコンストラクターが `resolve` 関数をどのように実装しているかによって入れ子の Thenable が平坦化されない場合があります。
@@ -206,7 +209,7 @@ Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
 const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled({
-      // Thenable は他の Thenable に履行されます
+      // Thenable は他の Thenable に履行される
       then(onFulfilled, onRejected) {
         onFulfilled(42);
       },
@@ -214,7 +217,8 @@ const thenable = {
   },
 };
 
-Promise.resolve.call(NotPromise, thenable); // "Resolved { then: [Function: then] }" と出力
+Promise.resolve(thenable); // "Resolved { then: [Function: then] }" と出力
+// p は NotPromise インスタンス
 ```
 
 ## 仕様書

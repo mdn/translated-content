@@ -76,7 +76,7 @@ MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来�
 
 ### 审查拉取请求
 
-当涉及拉取请求的更改时，内容和散文必须遵循 [MDN 写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide) ，示例代码必须遵循[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+当涉及拉取请求的更改时，内容和散文必须遵循 [MDN 写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide) ，示例代码必须遵循[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 在审查拉取请求时，你应该：
 

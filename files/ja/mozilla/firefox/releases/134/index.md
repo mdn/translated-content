@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f65bc685391ad06b6d1fbef84b217459002f073f
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 134 の変更点をまとめています。Firefox 134 は、米国時間 [2025 年 1 月 7 日](https://whattrainisitnow.com/release/?version=134) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -36,7 +34,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [VP8 コーデック](/ja/docs/Web/Media/Formats/Video_codecs#vp8) を使用した画面共有動画の WebRTC サイマルキャストをサポートしました (ほかの動画ソースのサイマルキャストは以前から可能でした)。より正確には VP8 を使用しているときに、画面およびウィンドウのキャプチャー (たとえば {{domxref("MediaDevices.getDisplayMedia()")}}) の {{domxref("MediaStreamTrack")}} オブジェクトを複数のサイマルキャストレイヤーとしてエンコードできます ([Firefox bug 1692873](https://bugzil.la/1692873))。
+- [VP8 コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#vp8) を使用した画面共有動画の WebRTC サイマルキャストをサポートしました (ほかの動画ソースのサイマルキャストは以前から可能でした)。より正確には VP8 を使用しているときに、画面およびウィンドウのキャプチャー (たとえば {{domxref("MediaDevices.getDisplayMedia()")}}) の {{domxref("MediaStreamTrack")}} オブジェクトを複数のサイマルキャストレイヤーとしてエンコードできます ([Firefox bug 1692873](https://bugzil.la/1692873))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
@@ -60,7 +58,7 @@ l10n:
 
 - **`Intl.DurationFormat`** (Nightly 版): {{jsxref("Intl.DurationFormat")}} は、期間を言語に依存して表記できます ([Firefox bug 1648139](https://bugzil.la/1648139))。
 - **`autocorrect`**: <code>dom.forms.autocorrect</code>。
-  HTML の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) 属性および {{domxref("HTMLElement.autocorrect")}} プロパティは、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します ([Firefox bug 1725806](https://bugzil.la/1725806))。
+  HTML の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) 属性および {{domxref("HTMLElement.autocorrect")}} プロパティは、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します ([Firefox bug 1725806](https://bugzil.la/1725806))。
 
 ## 過去のバージョン
 

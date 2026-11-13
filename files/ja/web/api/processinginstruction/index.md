@@ -9,9 +9,10 @@ l10n:
 
 **`ProcessingInstruction`** インターフェイスは[処理命令](https://www.w3.org/TR/xml/#sec-pi)を表します。すなわち、特定のアプリケーションを対象とした埋め込み {{domxref("Node")}} を表します。しかし、その命令を理解できないほかのアプリケーションは無視することができます。
 
-> **警告:** `ProcessingInstruction` ノードは XML 文書のみが対応しており、 HTML 文書は対応していません。この中では、処理命令はコメントとみなされ、ツリーでは {{domxref("Comment")}} オブジェクトとして表現されます。
+> [!WARNING]
+> `ProcessingInstruction` ノードは XML 文書のみが対応しており、 HTML 文書は対応していません。この中では、処理命令はコメントとみなされ、ツリーでは {{domxref("Comment")}} オブジェクトとして表現されます。
 
-処理命令は [XML 宣言](/ja/docs/Web/XML/XML_introduction#xml_declaration)とは異なることがあります。
+処理命令は [XML 宣言](/ja/docs/Web/XML/Guides/XML_introduction#xml_declaration)とは異なることがあります。
 
 > [!NOTE]
 > ユーザー定義の処理命令は "`xml`" で始めることはできません。 `xml` 接頭辞を持つ処理命令のターゲット名は、 XML 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xml-stylesheet ?>` などを見てください）。
@@ -31,7 +32,6 @@ l10n:
 _このインターフェイスは親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
-
   - : 存在すれば、関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。なければ `null` を返します。
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

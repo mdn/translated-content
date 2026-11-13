@@ -17,7 +17,7 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Guías
 
-- [Conceptos de WebAssembly](/es/docs/WebAssembly/Concepts)
+- [Conceptos de WebAssembly](/es/docs/WebAssembly/Guides/Concepts)
   - : Empieza leyendo los conceptos de alto nivel detrás de WebAssembly — qué es, por qué es tan útil, cómo encaja en la plataforma web (y más allá), y cómo usarlo.
 - [Compilar un nuevo módulo de C/C++ a WebAssembly](/es/docs/WebAssembly/C_to_wasm)
   - : Al escribir código en C/C++, puedes compilarlo a .wasm usando una herramienta como [Emscripten](/es/docs/Mozilla/Projects/Emscripten/). Veamos cómo funciona.
@@ -25,8 +25,8 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
   - : Uno de los principales casos de uso para WebAssembly es tomar las librerías existentes del ecosistema de C y permitir que los desarrolladores los usen en la web.
 - [Compilar de Rust a WebAssembly](/es/docs/WebAssembly/rust_to_wasm)
   - : Si has escrito algo en Rust, ¡puedes compilarlo a WebAssembly! Este tutorial te enseña todo lo que necesitas saber para compilar un proyecto de Rust a wasm y usarlo en una aplicación web existente.
-- [Cargar y ejecutar código WebAssembly](/es/docs/WebAssembly/Loading_and_running)
-  - : Una vez que tengas un .wasm, este artículo cubre cómo recuperarlo, compilarlo e instanciarlo, combinando la API de [WebAssembly de JavaScript](/es/docs/WebAssembly/JavaScript_interface) con las APIs [Fetch](/es/docs/Web/API/Fetch_API) o [XHR](/es/docs/Web/API/XMLHttpRequest).
+- [Cargar y ejecutar código WebAssembly](/es/docs/WebAssembly/Guides/Loading_and_running)
+  - : Una vez que tengas un .wasm, este artículo cubre cómo recuperarlo, compilarlo e instanciarlo, combinando la API de [WebAssembly de JavaScript](/es/docs/WebAssembly/Reference/JavaScript_interface) con las APIs [Fetch](/es/docs/Web/API/Fetch_API) o [XHR](/es/docs/Web/API/XMLHttpRequest).
 - [Usar la API WebAssembly de JavaScript](/es/docs/WebAssembly/Using_the_JavaScript_API)
   - : Una vez cargado el módulo .wasm, querrás usarlo. En este artículo te mostramos cómo usar WebAssembly mediante la API WebAssembly de JavaScript.
 - [Funciones exportadas de WebAssembly](/es/docs/WebAssembly/Exported_functions)
@@ -38,25 +38,25 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Referencia de la API
 
-- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
+- [`WebAssembly`](/es/docs/WebAssembly/Reference/JavaScript_interface)
   - : Este objeto sirve como espacio de nombres para toda funcionalidad relacionada a WebAssembly.
-- {{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}
-  - : El objeto `WebAssembly.Global` representa una instancia variable global, accesible desde JavaScript e importable/exportable a través de una o más instancias de {{jsxref("WebAssembly.Module")}}. Esto permite el enlace dinámico de varios módulos.
-- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
+- [`WebAssembly.Global()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Global)
+  - : El objeto `WebAssembly.Global` representa una instancia variable global, accesible desde JavaScript e importable/exportable a través de una o más instancias de [`WebAssembly.Module`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module). Esto permite el enlace dinámico de varios módulos.
+- [`WebAssembly.Module()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : El objeto `WebAssembly.Module` contiene código WebAssembly sin estado que ha sido ya compilado por el navegador y puede ser [compartido con workers](/es/docs/Web/API/Worker/postMessage) e instanciado varias veces.
-- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
+- [`WebAssembly.Instance()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : Un objeto `WebAssembly.Instance` es una instancia ejecutable y con estado de un `Module`. Los objetos `Instance` contienen todas las [funciones exportadas de WebAssembly](/es/docs/WebAssembly/Exported_functions) que permiten llamar a código WebAssembly desde JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
+- [`WebAssembly.instantiateStreaming()`](/es/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming)
   - : La función `WebAssembly.instantiateStreaming()` es la principal API para compilar e instanciar código WebAssembly, retornando tanto un `Module` como su primera `Instance`.
-- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Un objeto `WebAssembly.Memory` es un {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
-- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
+- [`WebAssembly.Memory()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+  - : Un objeto `WebAssembly.Memory` es un {{jsxref("ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
+- [`WebAssembly.Table()`](/es/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Un objeto `WebAssembly.Table` es un arreglo tipado redimensionable de valores opacos, como referencias a funciones, que son accedidos por una `Instance`.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Crea un nuevo objeto `CompileError` de WebAssembly.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Crea un nuevo objeto `LinkError` de WebAssembly.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/es/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Crea un nuevo objeto `RuntimeError` de WebAssembly.
 
 ## Ejemplos

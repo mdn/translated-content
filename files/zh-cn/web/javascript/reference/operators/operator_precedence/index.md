@@ -3,8 +3,6 @@ title: 运算符优先级
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
 
-{{jsSidebar("Operators")}}
-
 **运算符的优先级**决定了表达式中运算执行的先后顺序。优先级高的运算符会作为优先级低的运算符的操作数。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
@@ -224,7 +222,7 @@ a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直�
             <td><code>… [ … ]</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/new","new")}}（带参数列表）</td>
+            <td>{{jsxref("new")}}（带参数列表）</td>
             <td>n/a</td>
             <td><code>new … ( … )</code></td>
         </tr>
@@ -240,7 +238,7 @@ a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直�
         </tr>
         <tr>
             <td>17</td>
-            <td>{{jsxref("Operators/new","new")}}（无参数列表）</td>
+            <td>{{jsxref("new")}}（无参数列表）</td>
             <td>从右到左</td>
             <td><code>new …</code></td>
         </tr>
@@ -289,7 +287,7 @@ a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直�
             <td><code>void …</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/delete", "delete")}}</td>
+            <td>{{jsxref("delete")}}</td>
             <td><code>delete …</code></td>
         </tr>
         <tr>
@@ -363,7 +361,7 @@ a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直�
             <td><code>… in …</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+            <td>{{jsxref("instanceof")}}</td>
             <td><code>… instanceof …</code></td>
         </tr>
         <tr>

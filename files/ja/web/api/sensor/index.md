@@ -9,7 +9,7 @@ l10n:
 
 **`Sensor`** は[センサー API 群](/ja/docs/Web/API/Sensor_APIs)のインターフェイスで、ほかのすべてのセンサーインターフェイスのベースクラスです。このインターフェイスを直接使うことはできません。ですが、このインターフェイスは継承するインターフェイスがアクセスするプロパティ・イベントハンドラー・メソッドを提供します。
 
-この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 
@@ -32,9 +32,9 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref('Sensor.activated')}} {{ReadOnlyInline}}
-  - : センサーが作動中かどうかを表す {{jsxref('boolean')}} 値を返します。
+  - : センサーが作動中かどうかを表す {{jsxref('Boolean')}} 値を返します。
 - {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
-  - : センサーが測定値を持っているかを表す {{jsxref('boolean')}} 値を返します。
+  - : センサーが測定値を持っているかを表す {{jsxref('Boolean')}} 値を返します。
 - {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
   - : センサーの最新の測定値のタイムスタンプを返します。
 

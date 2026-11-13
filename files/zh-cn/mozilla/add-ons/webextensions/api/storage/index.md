@@ -3,7 +3,7 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
-{{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
+使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 
 此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。
 
@@ -50,7 +50,7 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/docs/extensions/reference/api/storage) API。这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)。
+> 此 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/docs/extensions/reference/api/storage) API。该文档衍生自 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

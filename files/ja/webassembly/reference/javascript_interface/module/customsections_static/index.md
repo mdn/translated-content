@@ -17,7 +17,7 @@ WebAssembly.Module.customSections(module, sectionName);
 ### 引数
 
 - _module_
-  - : カスタムセクションを考慮する {{jsxref("WebAssembly.Module")}} オブジェクト。
+  - : カスタムセクションを考慮する [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクト。
 - _sectionName_
   - : 目的のカスタムセクションの文字列名。
 
@@ -27,7 +27,7 @@ WebAssembly.Module.customSections(module, sectionName);
 
 ### 例外
 
-`module` が {{jsxref("WebAssembly.Module")}} オブジェクトのインスタンスでない場合、{{jsxref("TypeError")}} が発生します。
+`module` が [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトのインスタンスでない場合、{{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
@@ -72,5 +72,5 @@ WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

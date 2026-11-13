@@ -69,7 +69,7 @@ delete trees[3];
 3 in trees; // retorna false
 ```
 
-Se você definir uma propriedade como {{jsxref("Global_Objects/undefined", "undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
+Se você definir uma propriedade como {{jsxref("undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
 
 ```js
 var mycar = { make: "Honda", model: "Accord", year: 1998 };
@@ -105,4 +105,4 @@ O operador `in` retorna `true` para propriedades que estão na cadeida de protó
 - [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

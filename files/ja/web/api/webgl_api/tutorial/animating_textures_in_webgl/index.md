@@ -145,7 +145,8 @@ function updateTexture(gl, texture, video) {
 
 次に、これらの新しい関数を `main()` 関数から呼び出す必要があります。
 
-> **メモ:** `main()` 関数で、 `loadTexture()` の呼び出しを次のコードに置き換えましょう。
+> [!NOTE]
+> `main()` 関数で、 `loadTexture()` の呼び出しを次のコードに置き換えましょう。
 
 ```js
 const texture = initTexture(gl);
@@ -155,7 +156,8 @@ const video = setupVideo("Firefox.mp4");
 > [!NOTE]
 > また、[Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードする必要があります。
 
-> **メモ:** `main()` 関数で、 `render()` 関数をこのように置き換えましょう。
+> [!NOTE]
+> `main()` 関数で、 `render()` 関数をこのように置き換えましょう。
 
 ```js
 // シーンを反復して描画
@@ -185,6 +187,6 @@ function render(now) {
 
 ## 関連情報
 
-- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

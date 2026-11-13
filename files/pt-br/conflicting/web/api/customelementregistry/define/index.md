@@ -5,7 +5,8 @@ slug: conflicting/Web/API/CustomElementRegistry/define
 
 {{APIRef("DOM")}}
 
-> **Nota:**document.registerElement() está depreciado em favor do customElements.define().
+> [!NOTE]
+> document.registerElement() está depreciado em favor do customElements.define().
 
 O método **`document.registerElement()`** registra um novo [elemento personalizado](/pt-BR/docs/Web/API/Web_components/Using_custom_elements) no browser e retorna um construtor para o novo elemento.
 

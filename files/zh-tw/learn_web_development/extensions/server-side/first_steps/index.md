@@ -1,10 +1,7 @@
 ---
 title: 伺服器端程式設計起步走
 slug: Learn_web_development/Extensions/Server-side/First_steps
-original_slug: Learn/Server-side/First_steps
 ---
-
-{{LearnSidebar}}
 
 在我們的伺服器端程式設計模組內，我們會回答一些關於伺服器端編程的問題 ──「那是什麼？」、「它和用戶端程式設計有何不同？」、還有「為什麼它有用？」。接著，我們會比較各大熱門框架、並佐以一些如何選擇最適合框架的指引。最後，我們還會提供關於伺服器安全的進階介紹性文章。
 
@@ -17,8 +14,8 @@ original_slug: Learn/Server-side/First_steps
 你必須知道「網路如何運作」。關於此，我們推薦以下主題：
 
 - [何謂網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [我需要什麼軟體來建立網站？](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- [如何把檔案上傳到網路伺服器？](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [我需要什麼軟體來建立網站？](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- [如何把檔案上傳到網路伺服器？](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 有了基本理解後，你就可以透過本章節的模組來完成工作。
 

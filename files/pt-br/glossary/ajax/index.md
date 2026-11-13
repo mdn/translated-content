@@ -20,5 +20,5 @@ Com websites interativos e padrões web modernos, o AJAX está sendo substituíd
 ### Informações técnicas
 
 - O objeto {{domxref("XMLHttpRequest")}} .
-- [A documentação AJAX no MDN](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [A documentação AJAX no MDN](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API no MDN](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch)

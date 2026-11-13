@@ -3,8 +3,6 @@ title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 
-{{JSRef}}
-
 **`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
 {{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
@@ -30,7 +28,6 @@ replaceAll(pattern, replacement)
 ### 参数
 
 - `pattern`
-
   - : 可以是一个字符串或一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。任何没有 `Symbol.replace` 方法的值都将被强制转换为字符串。
 
     如果 `pattern` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)，则必须设置全局（`g`）标志，否则会抛出 {{jsxref("TypeError")}}。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
-{{jsSidebar("Errors")}}
-
 当在 {{jsxref("Statements/return", "return")}} 语句之后使用别的语句，或在无分号返回语句之后直接在后面跟随表达式，会出现 JavaScript 警告“unreachable code after return statement”。
 
 ## 错误信息

@@ -17,5 +17,5 @@ Un **protocolo** es un conjunto de reglas que definen cómo se intercambian los 
 ## Vea también
 
 - {{glossary("TCP")}}
-- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Overview)
+- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Guides/Overview)
 - {{glossary("Packet","Paquete")}}

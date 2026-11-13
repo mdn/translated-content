@@ -3,8 +3,6 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 
-{{AddonSidebar}}
-
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
 L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.
@@ -29,7 +27,7 @@ browser.clipboard.setImageData(imageData, imageType);
 - `imageData`
   - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Les données de l'image codées.
 - `imageType`
-  - : Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
+  - : Un {{jsxref("String")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
 
 ### Valeur de retour
 
@@ -45,10 +43,10 @@ Copiez une image distante :
 
 ```js
 // requires:
-// * the host permission for "https://cdn.mdn.mozilla.net/*"
+// * the host permission for "https://mdn.github.io/*"
 // * the API permission "clipboardWrite"
 
-fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+fetch("https://mdn.github.io/shared-assets/images/examples/favicon144.png")
   .then((response) => response.arrayBuffer())
   .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```

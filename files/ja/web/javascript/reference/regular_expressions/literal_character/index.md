@@ -2,10 +2,8 @@
 title: "リテラル文字: a, b"
 slug: Web/JavaScript/Reference/Regular_expressions/Literal_character
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
-
-{{JsSidebar}}
 
 **リテラル文字**は、入力テキスト内で一致するもの自体を示します。
 
@@ -18,7 +16,7 @@ c
 ### 引数
 
 - `c`
-  - : 下記で記述する構文文字以外の単一の文字です。
+  - : 下記で説明する構文文字以外の単一の文字です。
 
 ## 解説
 
@@ -64,7 +62,7 @@ const pattern = /<.+?>/g;
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
-      <td><code>!#%&,:;<=>@`~</code></td>
+      <td><code>!#%&,:;&lt;=&gt;@`~</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td>
     </tr>
     <tr>
@@ -173,7 +171,8 @@ console.log(
 );
 -->
 
-> **メモ:** `v` モード文字クラスでエスケープとアンエスケープの両方が可能な文字は、まさに「二重記号」として禁止されている文字です。詳しくは[`v`モード文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_mode文字クラス)を参照してください。
+> [!NOTE]
+> `v` モード文字クラスでエスケープとアンエスケープの両方が可能な文字は、まさに「二重記号」として禁止されている文字です。詳しくは[`v`モード文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_mode文字クラス)を参照してください。
 
 構文文字を文字通りに照合したい場合は、バックスラッシュ (`\`) で[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)する必要があります。例えば、パターン中のリテラル文字 `*` と照合するには、パターンに `\*` と書く必要があります。構文文字をリテラル文字として使用すると、予期しない結果になるか、構文エラーが発生します。例えば、 `/*/` は正規表現として有効ではありません。[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、`]`、`{`、`}` は文字クラスの終わりや数量詞の区切りとして解釈できない場合、文字通りに現れることがあります。これは[ウェブ互換性のために非推奨です](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)ので、頼ってはいけません。
 
@@ -211,6 +210,6 @@ console.log(pattern.test(string)); // true
 
 ## 関連情報
 
-- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
+- [文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)ガイド
+- [正規表現](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)

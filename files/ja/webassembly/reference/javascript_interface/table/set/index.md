@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Table/set
 
 {{WebAssemblySidebar}}
 
-**`set()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている参照を別な値に変更します。
+**`set()`** は [`WebAssembly.Table`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table) オブジェクトのプロトタイプメソッドで、指定された位置に格納されている参照を別な値に変更します。
 
 ## 構文
 
@@ -19,7 +19,7 @@ set(index, value);
 - _index_
   - : 変更する関数参照の位置。
 - _value_
-  - : 変更する参照。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)、 wasm 関数を内在する JavaScript ラッパーである必要があります。
+  - : 変更する参照。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)、 wasm 関数を内在する JavaScript ラッパーである必要があります。
 
 ### 返値
 
@@ -27,14 +27,14 @@ set(index, value);
 
 ### 例外
 
-- _index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以上の場合、 {{jsxref("RangeError")}} が発生します。
-- _value_ がエクスポートされた WebAssembly 関数でも <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> でもない場合、{{jsxref("TypeError")}} が発生します。
+- _index_ が [`Table.prototype.length`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/length) 以上の場合、 {{jsxref("RangeError")}} が発生します。
+- _value_ がエクスポートされた WebAssembly 関数でも <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/null">null</a></code> でもない場合、{{jsxref("TypeError")}} が発生します。
 
 ## 例
 
 ### Table.set の使用
 
-次の例 (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[動作例](https://mdn.github.io/webassembly-examples/blob/master/js-api-examples/table2.html)を確認してください) では、初期サイズが参照 2 つである WebAssembly Table インスタンスを生成しています。そして、テーブルの長さと 2 つの位置の内容 ({{jsxref("WebAssembly/Table/get","Table.prototype.get()")}} で取得) を出力して、長さが 2 であること、それぞれの位置には現在、関数の参照が含まれていないこと (現在は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すこと) を示しています。
+次の例 (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[動作例](https://mdn.github.io/webassembly-examples/blob/master/js-api-examples/table2.html)を確認してください) では、初期サイズが参照 2 つである WebAssembly Table インスタンスを生成しています。そして、テーブルの長さと 2 つの位置の内容 ([`Table.prototype.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get) で取得) を出力して、長さが 2 であること、それぞれの位置には現在、関数の参照が含まれていないこと (現在は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すこと) を示しています。
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
@@ -53,7 +53,7 @@ var importObj = {
 };
 ```
 
-最後に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して読み込みインスタンス化します。テーブルの長さを記録し、テーブルに格納された 2 つの関数参照を呼び出します (table2.wasm モジュール ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) がテーブルに 2 つの関数の参照を追加し、どちらも単純な表示を表示します)。
+最後に、 wasm モジュール (table2.wasm) を [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) を使用して読み込みインスタンス化します。テーブルの長さを記録し、テーブルに格納された 2 つの関数参照を呼び出します (table2.wasm モジュール ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) がテーブルに 2 つの関数の参照を追加し、どちらも単純な表示を表示します)。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -80,5 +80,5 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

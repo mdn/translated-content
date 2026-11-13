@@ -11,7 +11,7 @@ l10n:
 
 このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` デバイスセンサーの使用を許可することが必要です。
 
-この機能は、サーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
+この機能は、サーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

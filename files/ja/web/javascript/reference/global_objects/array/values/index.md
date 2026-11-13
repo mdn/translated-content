@@ -1,27 +1,26 @@
 ---
 title: Array.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`values()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の各要素の値を含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.values()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+const array = ["a", "b", "c"];
+const iterator = array.values();
 
 for (const value of iterator) {
   console.log(value);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
 ```
 
 ## 構文
@@ -98,7 +97,7 @@ for (const letter of values) {
 for (const letter of values) {
   console.log(letter);
 }
-// undefined
+// 出力なし
 ```
 
 [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して早めに反復処理を終了した場合、反復処理を継続する際にイテレーターで現在の位置から再開することができます。
@@ -185,7 +184,8 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 
 ## 関連情報
 
-- [`Array.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.values` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims による `Array.prototype.values` のポリフィル](https://www.npmjs.com/package/array.prototype.values)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}

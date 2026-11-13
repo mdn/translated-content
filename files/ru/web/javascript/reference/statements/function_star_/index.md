@@ -126,7 +126,6 @@ var obj = new f(); // throws "TypeError: f is not a constructor"
 - Оператор [yield](/ru/docs/Web/JavaScript/Reference/Operators/yield)
 - Оператор [function](/ru/docs/Web/JavaScript/Reference/Statements/function)
 - Другие ресурсы:
-
   - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](http://taskjs.org/)

@@ -3,12 +3,12 @@ title: "ContentVisibilityAutoStateChangeEvent: skipped プロパティ"
 short-title: skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
 {{APIRef("CSS Containment")}}
 
-`skipped` は {{ domxref("ContentVisibilityAutoStateChangeEvent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)場合は `true` を返し、そうでない場合は `false` を返します。
+`skipped` は {{ domxref("ContentVisibilityAutoStateChangeEvent") }} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが[要素のコンテンツをスキップする](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)場合は `true` を返し、そうでない場合は `false` を返します。
 
 ## 値
 
@@ -52,6 +52,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

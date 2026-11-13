@@ -3,8 +3,6 @@ title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un onglet est remplacé par un autre en raison d'un prérendering ou d'un instantané.
 
 Cet événement peut ne pas être pertinent ou pris en charge par des navigateurs autres que Chrome.
@@ -31,14 +29,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `addedTabId`
       - : `integer`. ID de l'onglet de remplacement.
 
     <!---->
-
     - `removedTabId`
       - : `integer`. ID de l'onglet qui a été remplacé.
 
@@ -64,8 +59,6 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -5,7 +5,7 @@ slug: WebAssembly/Reference/JavaScript_interface/compile_static
 
 {{WebAssemblySidebar}}
 
-Функция **`WebAssembly.compile()`** компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.
+Функция **`WebAssembly.compile()`** компилирует [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module) из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию [`WebAssembly.instantiate()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/instantiate).
 
 ## Синтаксис
 
@@ -20,12 +20,12 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 
 ### Возвращаемое значение
 
-Промис (`Promise`), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.
+Промис (`Promise`), который разрешает объект [`WebAssembly.Module`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Module), представляющий скомпилированный модуль.
 
 ### Исключения
 
 - Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays), генерируется {{jsxref("TypeError")}}.
-- Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
+- Если компиляция не удалась, промис отклоняется с помощью [`WebAssembly.CompileError`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError).
 
 ## Примеры
 
@@ -41,7 +41,7 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
+> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
 ## Характеристики
 
@@ -54,5 +54,5 @@ fetch("simple.wasm")
 ## Смотрите также
 
 - [WebAssembly](/ru/docs/WebAssembly) обзорная страница
-- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly концепции](/ru/docs/WebAssembly/Guides/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)

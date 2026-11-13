@@ -26,5 +26,5 @@ IDL 属性は、 unsigned long、 URL、 論理型など、[他の型を反映](
 ## 関連情報
 
 - ウィキペディアの[インタフェース記述言語](https://ja.wikipedia.org/wiki/インタフェース記述言語)
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
 - [インターフェイス定義言語](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)（英語）

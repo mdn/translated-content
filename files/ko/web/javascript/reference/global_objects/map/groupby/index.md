@@ -59,7 +59,7 @@ Map.groupBy(items, callbackFn)
 
 `Map.groupBy()`는 순회 가능한 각 요소에 대해 제공된 `callbackFn` 함수를 한 번씩 호출합니다. 콜백 함수는 연관된 요소의 그룹을 나타내는 값을 반환해야 합니다. `callbackFn`이 반환한 값은 `Map.groupBy()`가 반환한 {{jsxref("Map")}}의 키로 사용됩니다. 각 키에는 콜백이 동일한 값을 반환한 모든 요소가 포함된 연관 배열이 있습니다.
 
-반환된 {{jsxref("Map")}}과 원본 순회 가능한 요소는 동일합니다. {{Glossary("deep copy", "깊은 복사")}}가 아닙니다. 요소의 내부 구조를 변경하면 원본 순회 가능한 요소와 반환된 {{jsxref("Map")}}에 모두 반영됩니다.
+반환된 {{jsxref("Map")}}에 들어 있는 요소와 원본 순회 가능한 객체의 요소는 같은 요소입니다({{Glossary("deep copy", "깊은 복사")}}가 아닙니다). 요소의 내부 구조를 변경하면 원본 순회 가능한 객체와 반환된 {{jsxref("Map")}}에 모두 반영됩니다.
 
 이 방법은 시간이 지남에 따라 변경될 수 있는 특정 객체와 관련된 정보를 그룹화해야 할 때 유용합니다. 객체가 수정되더라도 반환된 `Map`의 키로 계속 작동하기 때문입니다. 대신 객체에 대한 문자열 표현을 생성하고 이를 {{jsxref("Object.groupBy()")}}의 그룹화 키로 사용하는 경우 객체가 변경되어도 원본 객체와 해당 표현 간의 매핑을 유지해야 합니다.
 
@@ -96,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-함수의 인수 `{ quantity }`는 [함수 인수의 객체 구조 분해 구문](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본 예시입니다. 이렇게 하면 매개변수로 전달된 객체의 `quantity` 속성을 풀고 함수 본문에 있는 `quantity`이라는 변수에 할당합니다. 이는 함수 내에서 요소의 관련 값에 접근하는 매우 간단명료한 방법입니다.
+함수의 인수 `{ quantity }`는 [함수 인수의 객체 구조 분해 구문](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter)의 기본 예시입니다. 이렇게 하면 매개변수로 전달된 객체의 `quantity` 속성을 풀고 함수 본문에 있는 `quantity`이라는 변수에 할당합니다. 이는 함수 내에서 요소의 관련 값에 접근하는 매우 간단명료한 방법입니다.
 
 `Map`의 키는 수정한 후에도 계속 사용할 수 있습니다. 그러나 키를 다시 생성하여 계속 사용할 수는 없습니다. 따라서 맵을 사용해야 하는 모든 것이 해당 키에 대한 참조를 유지하는 것이 중요합니다.
 

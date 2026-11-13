@@ -3,8 +3,6 @@ title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされました。このページでは、開発者に影響する Firefox 39 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -41,8 +39,7 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 - [`RegExp` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)は第 1 引数に `RegExp`、また第 2 引数に `flags` を指定した場合に、例外が発生しないようになりました ([Firefox バグ 1108949](https://bugzil.la/1108949))。
 - `Object.prototype.__noSuchMethod__` プロパティは非推奨になり、コンソールに警告を表示します ([Firefox バグ 1140428](https://bugzil.la/1140428) および [platform でのアナウンス](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)をご覧ください)。
 - {{jsxref("Proxy")}} オブジェクトの実装を、ES6 仕様へさらに準拠するよう更新しました:
-
-  - {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} ハンドラーおよび {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラーは、成功時に `true` を、strict モードで成功しない場合は {{jsxref("TypeError")}} 例外を明示的に返すことが必要になりました ([Firefox バグ 1132522](https://bugzil.la/1132522))。
+  - {{jsxref("Proxy/Proxy/defineProperty", "defineProperty")}} ハンドラーおよび {{jsxref("Proxy/Proxy/set", "set")}} ハンドラーは、成功時に `true` を、strict モードで成功しない場合は {{jsxref("TypeError")}} 例外を明示的に返すことが必要になりました ([Firefox バグ 1132522](https://bugzil.la/1132522))。
   - {{domxref("window")}} をターゲットとして設定した場合、これらのハンドラーで `TypeError` 例外が発生します ([Firefox バグ 828137](https://bugzil.la/828137))。
 
 - [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) を使用する際、行末 (`\n`) をアロー関数の引数の後ろに置くことができなくなりました (`() \n => {}`) ([Firefox バグ 1141392](https://bugzil.la/1141392))。
@@ -75,7 +72,7 @@ _変更なし。_
 
 ### その他
 
-- [WOFF2](/ja/docs/Web/CSS/CSS_fonts/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
+- [WOFF2](/ja/docs/Web/CSS/Guides/Fonts/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
 - [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) コマンドラインオプションを削除しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
 - 新たに [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) サポートしました ([Firefox バグ 1153460](https://bugzil.la/1153460))。
 

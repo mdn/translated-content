@@ -32,7 +32,6 @@ Um `AudioContext`pode ser um alvo de eventos, portanto, ele implementa a interfa
 ### Manipuladores de eventos
 
 - {{domxref("AudioContext.onstatechange")}}
-
   - : Um manipulador de evento que é executado quando um evento do tipo [`statechange`](/pt-BR/docs/Web/API/RTCIceTransport/statechange_event) dispara.
 
     Isso ocorre quando o estado `AudioContext` muda, devido ao chamado de um dos métodos de mudança de estado ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
@@ -86,7 +85,7 @@ _Também implementa métodos a partir da interface_ {{domxref("EventTarget")}}.
 - {{domxref("AudioContext.createAudioWorker()")}}
   - : Cria um {{domxref ("AudioWorkerNode")}}, que pode interagir com um segmento de trabalho da Web para gerar, processar ou analisar o áudio diretamente. Isso foi adicionado à especificação em 29 de agosto de 2014, e ainda não foi implementado em nenhum navegador.
 - {{domxref("AudioContext.decodeAudioData()")}}
-  - : Decodifica assincronamente dados de arquivos de áudio contidos em {{domxref("ArrayBuffer")}}. Nesse caso, o ArrayBuffer geralmente é carregado a partir de um atributo de `resposta` {{domxref("XMLHttpRequest")}}'s definir o `responseType` para `arraybuffer`. Esse método funciona apenas em arquivos completos, não fragmentos de arquivos de áudio.
+  - : Decodifica assincronamente dados de arquivos de áudio contidos em {{jsxref("ArrayBuffer")}}. Nesse caso, o ArrayBuffer geralmente é carregado a partir de um atributo de `resposta` {{domxref("XMLHttpRequest")}}'s definir o `responseType` para `arraybuffer`. Esse método funciona apenas em arquivos completos, não fragmentos de arquivos de áudio.
 - {{domxref("AudioContext.resume()")}}
   - : Retoma a progressão do tempo em um contexto de áudio que anteriormente foi suspenso.
 - {{domxref("AudioContext.suspend()")}}

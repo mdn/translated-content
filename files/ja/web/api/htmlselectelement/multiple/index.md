@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`multiple`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、ユーザーがオプションのリストから複数のオプションを選択できることを指定します。これは、{{htmlelement("select")}} 要素の [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性を反映しています。
+**`multiple`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、ユーザーがオプションのリストから複数のオプションを選択できることを指定します。これは、{{htmlelement("select")}} 要素の [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性を反映しています。
 
 ## 値
 

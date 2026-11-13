@@ -88,7 +88,6 @@ slug: WebAssembly/Guides/C_to_Wasm
    ```
 
    這次使用的選項略有不同：
-
    - 我們使用了 `-o hello2.html`，這意味著編譯器仍將輸出 JavaScript 和 HTML 檔案。
    - 我們也使用了 `-O3` 用來優化編譯程式的。Emcc 像其他的 C 編譯器一樣，也有編譯優化的選項：`-O0`（不進行優化）、`-O1`、`-O2`、`-Os`、`-Oz`、`-Og` 和 `-O3`。`-O3` 是適合發行版本的優化設定。
    - 我們還使用了 `--shell-file html_template/shell_minimal.html`，這指定了你要運行的範例使用的 HTML 頁面模板。

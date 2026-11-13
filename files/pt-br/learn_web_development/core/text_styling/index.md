@@ -10,7 +10,7 @@ Com o básico de CSS compreendido, o próximo passo para você se concentrar ser
 
 ## Pré-requisites
 
-Antes de começar este módulo, você já deverá ter familiaridade básica com HTML, como dissemos no módulos [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML), e estar confortável com os fundamentos de CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps).
+Antes de começar este módulo, você já deverá ter familiaridade básica com HTML, como dissemos no módulos [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content), e estar confortável com os fundamentos de CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
 > Se você está usando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar seus próprios arquivos, você poderá treinar os códigos-exemplo em um programa de código online como [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
@@ -21,7 +21,7 @@ Este módulo contém os seguintes artigos que ensinarão você todos os fundamen
 
 - [Fundamentos da estilização de texto e fontes](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals)
   - : Neste artigo nós passamos por todo o básico da estilização de texto/fonte, incluindo a configuração weight(negrito), family e style, configuração com forma abreviada, alinhamento textual, linha e espaçamento entre as letras.
-- [Estilizando lista](/pt-BR/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Estilizando lista](/pt-BR/docs/Learn_web_development/Core/Text_styling/Styling_lists)
   - : Listas comportam-se como qualquer texto na maior parte das vezes, ma há algumas propriedades CSS específicas para lista que você precisa conhecer, e algumas boas práticas a considerar. Este artigo esclarecerá tudo.
 - [Estilizando links](/pt-BR/docs/Learn/CSS/Styling_text/Styling_links)
   - : Na estilização de links, é importante entender como fazer uso de pseudo-classes para estilizar o estado dos links efetivamente, como estilizar links para uso em recursos de interfaces diversas como menus de navegação e guias. Veremos todos esses tópicos neste artigo.

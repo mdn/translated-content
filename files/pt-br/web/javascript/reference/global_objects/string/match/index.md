@@ -18,7 +18,6 @@ str.match(regexp);
 ### Parâmetros
 
 - `regexp`
-
   - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
     Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
@@ -50,9 +49,9 @@ Se a expressão regular não incluir o sinalizador `g`, `str.match()` retornará
 
 ### Veja também: métodos RegExp
 
-- Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()", "RegExp.test()")}}.
+- Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()")}}.
 - Se você quiser encontrar apenas uma correspondência, você pode querer usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
-- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String. prototype.matchAll() ")}} em vez disso.
+- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String.prototype.matchAll()")}} em vez disso.
 
 ## Exemplos
 
@@ -94,7 +93,7 @@ console.log(matches_array);
 ```
 
 > [!NOTE]
-> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 

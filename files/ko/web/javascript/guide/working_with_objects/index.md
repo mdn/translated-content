@@ -3,7 +3,7 @@ title: 객체로 작업하기
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}
 
 JavaScript는 간단한 객체 기반 패러다임 위에 만들어졌습니다. 객체는 속성의 컬렉션이고, 속성은 이름('키')과 값 사이의 연결 관계입니다. 속성의 값이 함수인 경우에는 메서드라고 부릅니다. 브라우저 안에 미리 정의된 객체 뿐만 아니라 여러분이 직접 객체를 정의할 수도 있습니다. 이번 장에서는 객체, 속성, 함수, 메서드 사용법과 함께 직접 새로운 객체를 생성하는 법을 알아봅니다.
 
@@ -287,7 +287,7 @@ fish.displayType(); // 출력: 물고기
 
 ## 상속
 
-JavaScript의 모든 객체는 적어도 하나의 다른 객체를 상속합니다. 상속 대상 객체를 프로토타입이라고 부르고, 상속한 속성은 생성자의 `prototype` 객체에서 찾을 수 있습니다. [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)에서 자세히 알아보세요.
+JavaScript의 모든 객체는 적어도 하나의 다른 객체를 상속합니다. 상속 대상 객체를 프로토타입이라고 부르고, 상속한 속성은 생성자의 `prototype` 객체에서 찾을 수 있습니다. [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)에서 자세히 알아보세요.
 
 ## 객체 속성 인덱싱
 
@@ -306,7 +306,7 @@ Car.prototype.color = null;
 car1.color = "black";
 ```
 
-[상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)에서 더 자세한 정보를 알아보세요.
+[상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)에서 더 자세한 정보를 알아보세요.
 
 ## 메서드 정의
 
@@ -316,14 +316,14 @@ car1.color = "black";
 objectName.methodName = functionName;
 
 const myObj = {
-  myMethod: function(params) {
+  myMethod: function (params) {
     // 뭔가 하기...
-  }
+  },
 
   // 이렇게도  동작해요
   myOtherMethod(params) {
     // 뭔가 다른거 하기...
-  }
+  },
 };
 ```
 
@@ -510,11 +510,11 @@ fruit.name = "포도";
 console.log(fruitbear); // 출력: { name: "사과" }가 아니라 { name: "포도" }
 ```
 
-비교 연산에 대한 더 자세한 정보는 [동일 연산자](/ko/docs/Web/JavaScript/Reference/Operators#동일_연산자)에서 더 알아보세요.
+비교 연산에 대한 더 자세한 정보는 [동일 연산자](/ko/docs/Web/JavaScript/Reference/Operators#같음_연산자)에서 더 알아보세요.
 
 ## 같이 보기
 
-- 더 깊게 들어가려면 [JavaScript 객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 읽어보세요.
+- 더 깊게 들어가려면 [JavaScript 객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 읽어보세요.
 - 객체를 생성하는 다른 방법인 ECMAScript 2015 클래스에 대해 알아보려면 [JavaScript 클래스](/ko/docs/Web/JavaScript/Reference/Classes) 참고서를 방문하세요.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}

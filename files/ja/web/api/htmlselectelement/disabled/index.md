@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLSelectElement.disabled`** プロパティは論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
+**`HTMLSelectElement.disabled`** プロパティは論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/select#disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
 
 ## 値
 

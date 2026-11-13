@@ -3,7 +3,7 @@ title: 书本实例详情页面与自我挑战
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
 
-{{LearnSidebar}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
 
 ## 书本实例详情页面
 
@@ -84,6 +84,4 @@ block content
 2. 更新作者 `Author` 模型以添加寿命虚拟属性。寿命应类似于：_date_of_birth - date_of_death_，这两个值的格式与 `BookInstance.due_back_formatted` 的日期格式相同。
 3. 在当前显示使用 `date_of_birth` 和 `date_of_death` 的所有视图中使用 `Author.lifespan`。
 
-## 下一步
-
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

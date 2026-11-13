@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 함수에 대해 우리가 이야기해야 할 마지막 한 가지 필수적인 개념이 있습니다 — 반환 값(return value)입니다. 몇몇 함수들은 중요한 값을 반환(return)하지 않지만, 다른 함수들은 반환합니다. 그 값들이 무엇인지, 그것들을 어떻게 사용하는지, 그리고 어떻게 함수가 유용한 값을 반환하게 만드는지를 이해하는 것은 중요합니다. 우리는 이 모든 것을 아래에서 다룰 것입니다.
 
@@ -14,9 +14,9 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해,
-        <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">JavaScript 첫걸음</a
         >,
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting/Functions"
           >함수 — 코드 재사용</a
         >.
       </td>
@@ -32,7 +32,7 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
 
 **반환 값**(return value)이란 그냥 들리는 그대로입니다 — 함수가 완료되었을 때 함수가 반환하는 값입니다. 여러분은 이미 수 차례 반환 값을 마주쳤습니다. 비록 그것들에 대해 분명하게 생각하지는 않았을지도 모르지만요.
 
-(이 시리즈의 [지난 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions)에서 본) 익숙한 예제로 돌아가 봅시다.
+(이 시리즈의 [지난 문서](/ko/docs/Learn_web_development/Core/Scripting/Functions#built-in_browser_functions)에서 본) 익숙한 예제로 돌아가 봅시다.
 
 ```js
 let myText = "The weather is cold";
@@ -184,17 +184,17 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions).
 
 ## 결론
 
 이제 끝났습니다 — 함수는 즐겁고, 아주 유용하고, 그리고 비록 함수의 문법과 기능성에 대해 이야기할 것들이 많지만, 그것들은 꽤 이해하기 쉽습니다.
 
-만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn#contact_us)에서 도움을 요청해 보세요.
+만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn_web_development#contact_us)에서 도움을 요청해 보세요.
 
 ## 같이 보기
 
 - [함수 고급](/ko/docs/Web/JavaScript/Reference/Functions) — 더욱 고급의 함수에 관련된 정보를 다루는 자세한 가이드
 - [JavaScript에서의 콜백(callback) 함수](https://www.impressivewebs.com/callback-functions-javascript/) — 일반적인 JavaScript 패턴은 함수를 다른 함수 내부에 _인자(argument)로서_ 전달하는 것입니다. 이것은 그리고서 첫번째 함수 내부에서 호출됩니다. 이것은 이 코스의 범위를 조금 넘어서지만, 머지않아 공부할 가치는 있습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

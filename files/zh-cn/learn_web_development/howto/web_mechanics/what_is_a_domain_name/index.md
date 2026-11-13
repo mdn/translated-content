@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 <table>
   <tbody>
     <tr>
@@ -48,9 +46,7 @@ l10n:
 域名的每一部分都提供着特定信息。
 
 - {{Glossary("TLD")}}（Top-Level Domain，顶级域名）
-
   - : 顶级域名可以告诉用户域名所提供的服务的一般目的。最通用的顶级域名（`.com`、`.org`、`.net`）不需要 Web 服务满足特定的标准，但一些顶级域名则执行更严格的政策（因此它们的目的更加明确）。比如：
-
     - 地区的顶级域名，如 `.us`、`.fr` 或 `.sh`，可以要求必须提供给定语言的服务或者托管在指定国家——它们应该表示特定语言或国家的资源。
     - 包含 `.gov` 的顶级域名只能被政府部门使用。
     - `.edu` 顶级域名只能为教育或学术机构使用。
@@ -60,7 +56,6 @@ l10n:
     顶级域名的完整列表[由 ICANN 维护](https://www.icann.org/resources/pages/tlds-2012-02-25-en)。
 
 - 标签（或组成部分）
-
   - : 标签都是紧随着 TLD 的。标签由 1 到 63 个大小写不敏感的字符组成，这些字符包含字母 `A` 到 `z`、数字 `0` 到 `9`，甚至“-”这个符号（当然，“-”不应该出现在标签开头或者标签的结尾）。`a`、`97` 和 `hello-strange-person-16-how-are-you` 都是有效的示例标签。
 
     刚好位于 TLD 前面的标签也被称为*二级域名*（SLD）。
@@ -167,6 +162,5 @@ DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都�
 好了，我们讲了许多有关的步骤和结构。接下来。
 
 - 如果你想亲自实践，现在最好开始深入设计和探索[网页的结构](/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)。
-- 关于建站需要的花销这类问题的讨论也是有价值的。请参考[建站需要花费多少钱](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)。
 - 或者在维基百科上阅读更多关于[域名](https://zh.wikipedia.org/wiki/域名)。
 - 你也可以在[这里](https://howdns.works/)找到有关 DNS 工作原理的有趣且丰富多彩的解释。

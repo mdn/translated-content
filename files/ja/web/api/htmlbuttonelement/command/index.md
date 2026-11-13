@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
-**`command`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このボタンで制御される要素で実行されるアクションを取得し、設定します。これに効果を持たせるには、[`commandfor`](/ja/docs/Web/HTML/Element/button#commandfor) を設定する必要があります。
+**`command`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このボタンで制御される要素で実行されるアクションを取得し、設定します。これに効果を持たせるには、[`commandfor`](/ja/docs/Web/HTML/Reference/Elements/button#commandfor) を設定する必要があります。
 
-これは HTML の [`command`](/ja/docs/Web/HTML/Element/button#command) 属性を反映します。
+これは HTML の [`command`](/ja/docs/Web/HTML/Reference/Elements/button#command) 属性を反映します。
 
 ## 値
 
-文字列です。有効な値については [`command`](/ja/docs/Web/HTML/Element/button#command) 属性の記事を参照してください。
+文字列です。有効な値については [`command`](/ja/docs/Web/HTML/Reference/Elements/button#command) 属性の記事を参照してください。
 
 ## 例
 

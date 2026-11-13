@@ -13,7 +13,7 @@ Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en 
 })();
 ```
 
-Es un patrón de diseño también conocido cómo **función autoejecutable** ({{glossary("Self-Executing Anonymous Function")}} ) y se compone por dos partes. La primera es la función anónima con alcance léxico encerrado por el {{jsxref("Operadores/Grouping", "Operador de Agrupación")}} `()`. Esto impide accesar variables fuera del IIFE, así cómo contaminar el alcance (scope) global.
+Es un patrón de diseño también conocido cómo **función autoejecutable** ({{glossary("Self-Executing Anonymous Function")}} ) y se compone por dos partes. La primera es la función anónima con alcance léxico encerrado por el {{jsxref("Operators/Grouping", "Operador de Agrupación")}} `()`. Esto impide accesar variables fuera del IIFE, así cómo contaminar el alcance (scope) global.
 
 La segunda parte crea la expresión de función cuya ejecución es inmediata `()`, siendo interpretado directamente en el engine de JavaScript.
 
@@ -45,7 +45,7 @@ result; // "Barry"
 ### Aprende acerca de
 
 - [Publicación en el blog de Ben Alman definiendo IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
-- [Ejemplo rápido](/es/docs/Web/JavaScript/Language_overview#functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo después de "Custom objects")
+- [Ejemplo rápido](/es/docs/Web/JavaScript/Guide/Language_overview#functions) "Ejemplo Rápido"(al final de la sección "Functions" , justo después de "Custom objects")
 
 ### Conocimiento general
 

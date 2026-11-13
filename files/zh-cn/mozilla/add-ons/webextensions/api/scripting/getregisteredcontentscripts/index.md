@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册的一部分脚本。
 
 > [!NOTE]
@@ -70,4 +68,4 @@ console.log(scripts.map((script) => script.id)); // ["script-2"]
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API。
+> 此 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API。

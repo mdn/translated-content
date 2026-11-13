@@ -14,9 +14,7 @@ slug: Web/API/PerformanceNavigation
 _`PerformanceNavigation` 接口不继承任何属性。_
 
 - {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
-
   - : 一个无符号短整型，表示是如何导航到这个页面的。可能的值如下：
-
     - `TYPE_NAVIGATE` (0)
       - : 当前页面是通过点击链接，书签和表单提交，或者脚本操作，或者在 url 中直接输入地址，type 值为 0
     - `TYPE_RELOAD` (1)

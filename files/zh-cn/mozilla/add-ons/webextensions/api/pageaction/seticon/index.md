@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
-{{AddonSidebar}}
-
 设置页面操作的图标。
 
 你可以指定图片文件的路径或 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象作为单个图标。
@@ -26,11 +24,8 @@ let settingIcon = browser.pageAction.setIcon(
 ### 参数
 
 - `details`
-
   - : `object`。包含 `imageData`、`path` 其中一个属性和 `tabId` 属性的对象。
-
     - `imageData` {{optional_inline}}
-
       - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} 或 `object`。这要么是一个单一的 `ImageData` 对象，要么是一个字典对象。
 
         使用字典对象来指定多个不同尺寸的 `ImageData` 对象，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，例如：
@@ -47,7 +42,6 @@ let settingIcon = browser.pageAction.setIcon(
         浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
-
       - : `string` 或 `object`。这要么是指向图标文件的相对路径，要么是一个字典对象。
 
         使用字典对象来指定多个不同尺寸的图标文件，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的值是一个相对路径，其名称是其大小，例如：
@@ -96,7 +90,7 @@ browser.pageAction.onClicked.addListener((tab) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-setIcon) API。本文衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-setIcon) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

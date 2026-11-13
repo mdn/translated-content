@@ -3,7 +3,7 @@ title: Переменные - место хранения необходимой
 slug: Learn_web_development/Core/Scripting/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}
 
 После прочтения последних двух статей вы знаете, что такое JavaScript, что он может сделать для вас, как использовать его вместе с другими веб-технологиями и какими он обладает функциями высокого уровня. В этой статье мы перейдём к реальным основам, рассмотрим, как работать с большинством базовых блоков JavaScript — Переменными.
 
@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 
 ## Инструменты, которые вам нужны
 
-В этой статье вам будет предложено ввести строки кода, чтобы проверить ваше понимание материала. Если вы используете браузер для настольных компьютеров, лучшим примером для ввода кода примера является консоль JavaScript вашего браузера (см. [What are browser developer tools](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) для получения дополнительной информации о том, как получить доступ к этому инструменту).
+В этой статье вам будет предложено ввести строки кода, чтобы проверить ваше понимание материала. Если вы используете браузер для настольных компьютеров, лучшим примером для ввода кода примера является консоль JavaScript вашего браузера (см. [What are browser developer tools](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) для получения дополнительной информации о том, как получить доступ к этому инструменту).
 
 Также мы предоставили простую консоль JavaScript, встроенную ниже в странице, для ввода кода, если вы не используете браузер с консолью JavaScript или консоль на странице окажется для вас более комфортной.
 
@@ -388,4 +388,4 @@ typeof myNumber;
 
 К настоящему времени вы должны знать достаточно о переменных JavaScript и о том, как их создавать. В следующей статье мы остановимся на числах более подробно, рассмотрев, как сделать базовую математику в JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}

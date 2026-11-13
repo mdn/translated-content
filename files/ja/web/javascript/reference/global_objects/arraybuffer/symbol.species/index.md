@@ -1,15 +1,15 @@
 ---
 title: ArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`ArrayBuffer[Symbol.species]`** は静的アクセサープロパティで、配列バッファーメソッドから返値を作成するために使用されるコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在することで、任意のコードを実行することができ、セキュリティ上の脆弱性を⽣じる可能性があります。また、ある種の最適化もとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼らないでください。
+> [!WARNING]
+> `[Symbol.species]` が存在することで、任意のコードを実行することができ、セキュリティ上の脆弱性を⽣じる可能性があります。また、ある種の最適化もとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼らないでください。
 
 ## 構文
 

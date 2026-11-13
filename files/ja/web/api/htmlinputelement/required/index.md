@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`required`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmlelement("input")}} 要素の [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を反映します。
+**`required`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmlelement("input")}} 要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を反映します。
 
 HTML の論理属性である `required` 属性は、型が `hidden`、`range`、`color`、`submit`、`reset`、`button`、`image` の場合には無視されますが、これらの入力型において、この属性が存在する場合には `required` プロパティが `true` となり、それ以外の場合には `false` となります。
 

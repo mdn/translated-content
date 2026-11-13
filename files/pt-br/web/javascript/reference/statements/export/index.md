@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/export
 
 O export é utilizado quando criamos módulos JavaScript para exportar ligações em tempo real para suas funções, objetos ou valores primitivos de um módulo sejam utilizados por outros programas através de declarações {{jsxref("Statements/import", "import")}}. Ligações que são exportadas ainda podem ser modificadas localmente; quando importadas, embora elas possam ser lidas somente pelo módulo que as importou, seu valor é atualizado sempre que ela modificada pelo módulo que a exportou.
 
-Módulos exportados ficam em {{jsxref("Strict_mod", "strict mode")}}, independentemente se é declarado dessa forma, ou não. Export não pode ser utilizado em scripts embutidos.
+Módulos exportados ficam em {{jsxref("Strict_mode", "strict mode")}}, independentemente se é declarado dessa forma, ou não. Export não pode ser utilizado em scripts embutidos.
 
 ## Sintaxe
 
@@ -83,7 +83,7 @@ Mas a exportação padrão pode ser importada com qualquer nome, por exemplo:
 ```js
 // arquivo test.js
 let k;
-export default k = 12;
+export default (k = 12);
 ```
 
 ```js
@@ -179,7 +179,7 @@ console.log(foo); // 4.555806215962888
 É importante notar o seguinte:
 
 - Você pode incluir esse script no seu código HTML através do elemento {{htmlelement("script")}} do tipo="module", de modo que ele seja reconhecido e tratado apropriadamente.
-- Você não pode executar módulos JS através de `file://` URL — você receberá errors [CORS](/pt-BR/docs/Web/HTTP/CORS). Você deve rodá-los através de um servidor HTTP.
+- Você não pode executar módulos JS através de `file://` URL — você receberá errors [CORS](/pt-BR/docs/Web/HTTP/Guides/CORS). Você deve rodá-los através de um servidor HTTP.
 
 ### Usando a exportação padrão
 

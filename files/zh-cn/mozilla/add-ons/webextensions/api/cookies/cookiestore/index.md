@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `CookieStore` 类型用于表示浏览器中的一个 cookie 存储。
 
 不同浏览模式的窗口可能会使用不同的 cookie 存储。例如，隐私浏览/无痕模式窗口使用的 cookie 存储与非无痕/隐私窗口使用的 cookie 存储是分开的。此外，在 Firefox 中使用[容器标签页](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)时，一个窗口可能会有多个 cookie 存储。
@@ -56,7 +54,7 @@ browser.cookies.getAllCookieStores().then((stores) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#type-CookieStore) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#type-CookieStore) API。该文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

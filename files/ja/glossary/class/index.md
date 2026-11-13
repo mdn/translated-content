@@ -12,6 +12,6 @@ l10n:
 ## 関連情報
 
 - [JavaScript のクラス](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [クラスベース](https://ja.wikipedia.org/wiki/クラスベース)（ウィキペディア）
 - [オブジェクト指向プログラミング](https://ja.wikipedia.org/wiki/オブジェクト指向プログラミング)（ウィキペディア）

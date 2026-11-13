@@ -87,7 +87,7 @@ var max = Math.max.apply(null, numbers);
 var min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -131,7 +131,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **참고:** **알림:** 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
+> [!NOTE]
+> 위에서 사용된 `Object.create()` 메소드는 상대적으로 새로운 것입니다. 대안으로, 다음 접근법 중 하나를 고려하세요.
 
 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 사용:
 
@@ -144,7 +145,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {
@@ -185,7 +186,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
-**알림:** 네이티브가 아닌 `Function.construct` 메소드는 {{jsxref("Date")}} 와 같은 일부 네이티브 생성자와 동작하지 않을 것입니다. 그런 경우, {{jsxref("Function.prototype.bind")}} 메소드를 사용해야 합니다. 예를 들어, 다음과 같은 배열이 있다고 할 때, {{jsxref("Global_Objects/Date", "Date")}} 생성자: `[2012, 11, 4]` 와 함께 사용되려면 다음과 같이 작성해야 합니다: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`. 이는 가장 좋은 방법이 아니며, 어떤 상용 환경에서도 사용되지 않을 수 있습니다.
+**알림:** 네이티브가 아닌 `Function.construct` 메소드는 {{jsxref("Date")}} 와 같은 일부 네이티브 생성자와 동작하지 않을 것입니다. 그런 경우, {{jsxref("Function.prototype.bind")}} 메소드를 사용해야 합니다. 예를 들어, 다음과 같은 배열이 있다고 할 때, {{jsxref("Date")}} 생성자: `[2012, 11, 4]` 와 함께 사용되려면 다음과 같이 작성해야 합니다: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`. 이는 가장 좋은 방법이 아니며, 어떤 상용 환경에서도 사용되지 않을 수 있습니다.
 
 ## 명세
 

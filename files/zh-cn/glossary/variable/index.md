@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 变量是{{Glossary("Value", "值")}}的具名引用。这样可以让不可预测的值通过预定的名称来访问。
 
 ## 参见

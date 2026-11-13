@@ -24,7 +24,7 @@ var removing = browser.tabs.remove(
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+指定したすべてのタブが閉じられるか、それらの `beforeunload` プロンプトが処理されたときに、引数なしで履行される [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。エラーが発生した場合、プロミスはエラーメッセージで拒否されます。
 
 ## ブラウザーの互換性
 
@@ -65,7 +65,7 @@ removing.then(onRemoved, onError);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

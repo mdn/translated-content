@@ -11,13 +11,13 @@ sidebar: mdnsidebar
 ¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.
 
 > [!NOTE]
-> Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Community/Contributing/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
+> Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Community/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
 
 ## ¿Que puedo hacer para ayudar?
 
 Hay varias opciones que puedes tomar para contribuir a MDN según tus habilidades e intereses. Junto con cada tarea proporcionamos una breve descripción y el tiempo aproximado que normalmente toma cada tipo de tarea.
 
-Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 ### Tipos de contribución primaria
 
@@ -34,7 +34,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
   <tbody>
     <tr>
       <td>
-        <a href="/es/docs/MDN/Contribute/Fixing_MDN_content_bugs"
+        <a href="/es/docs/MDN/Community/Getting_started"
           >Corrección de errores de contenido de MDN</a
         >
       </td>
@@ -96,7 +96,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
         >
       </td>
       <td>
-        Nuestras páginas de <a href="/es/docs/Learn">aprende desarrollo web</a>
+        Nuestras páginas de <a href="/es/docs/Learn_web_development">aprende desarrollo web</a>
         obtienen más de un millón de visitas al mes y tienen
         <a href="https://discourse.mozilla.org/c/mdn/learn/250"
           >foros activos</a

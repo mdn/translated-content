@@ -20,7 +20,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 [제어 흐름과 에러 처리](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#예외처리문)를 참고하세요.
 
 - {{jsxref("EvalError")}}
-  - : 전역 함수 {{jsxref("eval", "eval()")}}에서 발생하는 오류의 인스턴스를
+  - : 전역 함수 {{jsxref("Global_Objects/eval", "eval()")}}에서 발생하는 오류의 인스턴스를
     생성합니다.
 - {{jsxref("RangeError")}}
   - : 숫자 변수나 매개변수가 유효한 범위를 벗어났음을 나타내는 오류 인스턴스를
@@ -28,14 +28,13 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 - {{jsxref("ReferenceError")}}
   - : 잘못된 참조를 했음을 나타내는 오류 인스턴스를 생성합니다.
 - {{jsxref("SyntaxError")}}
-  - : {{jsxref("eval", "eval()")}}이 코드를 분석하는 중 잘못된 구문을 만났음을
+  - : {{jsxref("Global_Objects/eval", "eval()")}}이 코드를 분석하는 중 잘못된 구문을 만났음을
     나타내는 오류 인스턴스를 생성합니다.
 - {{jsxref("TypeError")}}
   - : 변수나 매개변수가 유효한 자료형이 아님을 나타내는 오류 인스턴스를
     생성합니다.
 - {{jsxref("URIError")}}
-  - : {{jsxref("encodeURI", "encodeURI()")}}나 {{jsxref("decodeURI",
-    "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
+  - : {{jsxref("encodeURI()")}}나 {{jsxref("decodeURI", "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
     인스턴스를 생성합니다.
 - {{JSxRef("AggregateError")}}
   - : 하나의 동작이 여러 개의 오류 발생시키는 경우(예:
@@ -62,10 +61,10 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
   - : 오류 메시지
 - {{jsxref("Error.prototype.name")}}
   - : 오류 이름
-- {{jsxref("Error.prototype.description")}}
+- `Error.prototype.description`
   - : 오류를 설명하기 위한 비표준 마이크로소프트 속성.
     {{jsxref("Error.prototype.message", "message")}}와 비슷합니다.
-- {{jsxref("Error.prototype.number")}}
+- `Error.prototype.number`
   - : 오류 번호를 위한 비표준 마이크로소프트 속성
 - {{jsxref("Error.prototype.fileName")}}
   - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 Mozilla 속성
@@ -86,9 +85,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 
 ### 일반적인 오류 던지기
 
-`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw",
-  "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch",
-  "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
+`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw", "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch", "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
 
 ```js
 try {
@@ -102,8 +99,7 @@ try {
 
 오류의 {{jsxref("Object.prototype.constructor", "constructor")}} 속성을 이용해
 유형을 판별, 특정 오류만 처리할 수 있습니다. 만약 최신 Javascript 엔진에서
-동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof",
-  "instanceof")}} 키워드를 이용할 수도 있습니다.
+동작하는 코드를 작성한다면 {{jsxref("instanceof")}} 키워드를 이용할 수도 있습니다.
 
 ```js
 try {
@@ -208,6 +204,6 @@ try {
 
 ## 같이 보기
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

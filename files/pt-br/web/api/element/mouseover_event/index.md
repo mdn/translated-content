@@ -143,7 +143,7 @@ test.addEventListener(
 
 ## Veja também
 
-- [Introdução a eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introdução a eventos](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}

@@ -3,8 +3,6 @@ title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 41 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -26,7 +24,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 ### CSS
 
 - 縦書き文章のレイアウト機能を、デフォルトで有効にしました ([Firefox バグ 1138384](https://bugzil.la/1138384))。以下の CSS プロパティが使用可能になりました:
-
   - 書字方向を選択する: {{cssxref("writing-mode")}}
   - 文字の向きを制御する: {{cssxref("text-orientation")}}.
   - 方向に依存しない {{cssxref("width")}} および {{cssxref("height")}}: {{cssxref("block-size")}} および {{cssxref("inline-size")}}
@@ -43,20 +40,20 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 - `href` 属性を持たない {{HTMLElement("a")}} は、インタラクティブコンテンツとして分類しないようになりました。{{HTMLElement("label")}} 要素内でクリックすると、ラベル付けされたコンテンツがアクティブになります ([Firefox バグ 1167816](https://bugzil.la/1167816))。
 - サイトアイコン (favicon およびショートカットアイコン) で、SVG アイコンをサポートしました ([Firefox バグ 366324](https://bugzil.la/366324))。
-- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
+- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Reference/Elements/link) で、[`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
 - picture 要素がリサイズやビューポートの変化に反応しない問題を修正しました ([Firefox バグ 1135812](https://bugzil.la/1135812))。
 
 ### JavaScript
 
-- {{jsxref("Date.prototype")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ([Firefox バグ 861219](https://bugzil.la/861219))。
+- {{jsxref("Date")}} は {{jsxref("Date")}} のインスタンスではなく、通常のオブジェクトになりました ([Firefox バグ 861219](https://bugzil.la/861219))。
 - {{jsxref("Date.prototype.toString")}} は、ジェネリックなメソッドになりました ([Firefox バグ 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} を追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
-- {{jsxref("Map.Symbol.species", "Map[Symbol.species]")}} および {{jsxref("Set.Symbol.species", "Set[Symbol.species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
+- {{jsxref("Map/Symbol.species", "Map[Symbol.species]")}} および {{jsxref("Set/Symbol.species", "Set[Symbol.species]")}} ゲッタを追加しました ([Firefox バグ 1131043](https://bugzil.la/1131043))。
 - 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ([Firefox バグ 1023609](https://bugzil.la/1023609))。
 - {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割された引数", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
 - ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。
 - コンストラクター形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレーターメソッドを除く) は不可になりました ([Firefox バグ 1059908](https://bugzil.la/1059908) および [Firefox バグ 1166950](https://bugzil.la/1166950))。
-- ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
+- ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
 - [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 構文をサポートしました ([Firefox バグ 1141865](https://bugzil.la/1141865))。
 
 ### インターフェイス/API/DOM
@@ -64,7 +61,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 #### HTML Editing API
 
 - 切り取り、コピー、貼り付けのコマンド制御を改良して、JS プログラムからウェブコンテンツのコピーや切り取りが可能になりました:
-
   - {{domxref("Document.queryCommandSupported()")}} に引数として `'paste'` コマンドを与えると、実際に操作を行うための十分な権限がない場合に `false` を返します ([Firefox バグ 1161721](https://bugzil.la/1161721))。
   - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ([Firefox バグ 1162952](https://bugzil.la/1162952))。
   - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ([Firefox バグ 1012662](https://bugzil.la/1012662))。
@@ -89,7 +85,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 #### Service Worker
 
 - [Service Worker](/ja/docs/Web/API/Service_Worker_API) の実験的な実装を改良しました:
-
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} を実装しました ([Firefox バグ 1131352](https://bugzil.la/1131352))。
   - {{domxref("Clients.claim()")}} を追加しました ([Firefox バグ 1130684](https://bugzil.la/1130684))。
   - Service Worker で機能する上記以外のイベントは {{domxref("ExtendableEvent")}} から継承しており、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} メソッドにアクセスできます ([Firefox バグ 1160527](https://bugzil.la/1160527))。
@@ -133,7 +128,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 ## セキュリティ
 
-- [CSP](/ja/docs/Web/HTTP/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

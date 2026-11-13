@@ -15,5 +15,5 @@ l10n:
 
 - 위키백과의 [조건문](https://en.wikipedia.org/wiki/Exception_handling#Condition_systems)
 - MDN의 [제어 흐름](/ko/docs/Glossary/Control_flow)
-- [코드에서 결정하기 — 조건절](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [코드에서 결정하기 — 조건절](/ko/docs/Learn_web_development/Core/Scripting/Conditionals)
 - MDN의 [JavaScript의 제어 흐름 및 오류 처리](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

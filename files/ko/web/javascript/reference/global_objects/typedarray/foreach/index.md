@@ -45,11 +45,9 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
-
   - : 각 요소에 대해 실행할 함수.
 
     다음 세 가지 매개변수를 받습니다.
-
     - `element`
       - : 현재 처리할 현재 요소.
     - `index`

@@ -37,7 +37,6 @@ array.splice(indice) // SpiderMonkey/Firefox extension
 - `indice`
   - : Índice o qual deve iniciar a alterar a lista. Se maior que o tamanho total da mesma, nenhum elemento será alterado. Se negativo, irá iniciar a partir daquele número de elementos a partir do fim.
 - `deleteCount`
-
   - : Um inteiro indicando o número de antigos elementos que devem ser removidos.
 
     Se o parâmetro `deleteCount` não é especificado, ou se é maior que o número de elementos restantes na lista iniciando pelo índice, então todos os elementos até o fim da lista serão deletados.

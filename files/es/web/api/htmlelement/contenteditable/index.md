@@ -32,4 +32,4 @@ element.contentEditable = 'true'
 
 - [Making content editable](/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable)
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) global attribute.
+- The [`contenteditable`](/es/docs/Web/HTML/Reference/Global_attributes#contenteditable) global attribute.

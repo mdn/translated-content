@@ -1,11 +1,10 @@
 ---
 title: テキストに影を追加するには
+short-title: テキストに影を追加
 slug: Learn_web_development/Howto/Solve_CSS_problems/Add_a_text_shadow
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a862f7714755b140b150bd2c724589f6f95a19a2
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、ページ上の任意のテキストに影を追加する方法を紹介します。
 
@@ -20,11 +19,11 @@ l10n:
 - ぼかし半径
 - 色
 
-下記の例では、X 軸のオフセットを 2px、Y 軸のオフセットを 4px、ぼかし半径を 4px、色を半透明の青に設定しています。さまざまな値を使って、影がどう変わるか試してみてください。
+下記の例では、X 軸のオフセットを `2px`、Y 軸のオフセットを `4px`、ぼかし半径を `4px`、色を半透明の青に設定しています。さまざまな値を使って、影の効果がどう変わるか試してみてください。
 
 ```html live-sample___text-shadow
 <div class="wrapper">
-  <h1>テキストに影を追加しています</h1>
+  <h1>テキストに影を追加</h1>
 </div>
 ```
 
@@ -35,7 +34,7 @@ h1 {
 }
 ```
 
-{{EmbedLiveSample("text-shadow")}}
+{{EmbedLiveSample("Text_shadow")}}
 
 > [!NOTE]
-> テキストシャドウを使用すると、簡単にテキストを読みづらくなる場合があります。低コントラストのテキストを読むことが困難な閲覧者のために、選択した色が読みやすく、十分な[色コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)になっていることを確認しておいてください。
+> テキストに影を付けると、意図せずテキストが読みにくくなることがあります。選んだ色でもテキストの読みやすさを保てるよう、十分な[色コントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)を確保してください。

@@ -3,15 +3,14 @@ title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
 
-{{AddonSidebar}}
-
 Renvoie l'élément pour un `targetElementId` donné
 
 Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
 
 La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode `targetElementId` expire lorsque l'utilisateur ouvre un autre menu contextuel.
 
-> **Note :** `menus.getTargetElement` ne retourne l'élément demandé que s'il est appelé dans le même contexte que le document qui contient l'élément, par exemple en utilisant des scripts de contenu (comme dans l'exemple ci-dessous).
+> [!NOTE]
+> `menus.getTargetElement` ne retourne l'élément demandé que s'il est appelé dans le même contexte que le document qui contient l'élément, par exemple en utilisant des scripts de contenu (comme dans l'exemple ci-dessous).
 
 Une extension nécessite la permission "menus" pour utiliser cette API
 

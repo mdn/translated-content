@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLTrackElement.src`** 属性反映 {{HTMLElement("track")}} 元素的 [`src`](/zh-CN/docs/Web/HTML/Element/track#src) 属性的值，其指示文本轨道数据的 URL。
+**`HTMLTrackElement.src`** 属性反映 {{HTMLElement("track")}} 元素的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/track#src) 属性的值，其指示文本轨道数据的 URL。
 
 ## 值
 

@@ -40,7 +40,7 @@ requestPointerLock(options)
 
 如果使用 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 调用 `requestPointerLock()`，则必须先调用 `requestPointerLock()`，因为 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 将消耗{{Glossary("Transient activation", "瞬态激活")}}的状态。
 
-在 {{htmlelement("iframe")}} 元素中调用 `requestPointerLock()` 时，必须添加 `allow-pointer-lock` [沙盒令牌](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)。此外，其他 {{htmlelement("iframe")}} 元素中的其他元素不得处于指针锁定模式。
+在 {{htmlelement("iframe")}} 元素中调用 `requestPointerLock()` 时，必须添加 `allow-pointer-lock` [沙盒令牌](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox)。此外，其他 {{htmlelement("iframe")}} 元素中的其他元素不得处于指针锁定模式。
 
 ## 示例
 

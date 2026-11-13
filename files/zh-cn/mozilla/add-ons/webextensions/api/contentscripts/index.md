@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 使用此 API 注册内容脚本。注册内容脚本会指示浏览器将给定的内容脚本插入到与给定 URL 模式匹配的页面中。
 
 > [!NOTE]

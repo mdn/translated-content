@@ -3,8 +3,6 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
-{{JSRef}}
-
 **`Object.create()`** 指定其原型物件與屬性，創建一個新物件。
 
 ## 語法
@@ -26,7 +24,7 @@ Object.create(proto[, propertiesObject])
 
 ### 例外
 
-如果 `proto` 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。
+如果 `proto` 參數不是 {{jsxref("Operators/null", "null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。
 
 ## 範例
 
@@ -165,13 +163,11 @@ o2 = Object.create(
 ```js
 if (typeof Object.create !== "function") {
   Object.create = function (proto, propertiesObject) {
-    if (
-      !(
-        proto === null ||
-        typeof proto === "object" ||
-        typeof proto === "function"
-      )
-    ) {
+    if (!(
+      proto === null ||
+      typeof proto === "object" ||
+      typeof proto === "function"
+    )) {
       throw TypeError("Argument must be an object, or null");
     }
     var temp = new Object();

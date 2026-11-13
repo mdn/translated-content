@@ -19,5 +19,5 @@ l10n:
 
 ## 関連情報
 
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [チュートリアル: フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- [チュートリアル: フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

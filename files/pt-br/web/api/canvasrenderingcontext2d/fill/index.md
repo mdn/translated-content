@@ -18,10 +18,8 @@ void ctx.fill(path, fillRule);
 ### Parâmetros
 
 - `fillRule`
-
   - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
     Possíveis valores:
-
     - `nonzero`
       - : A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
     - `evenodd`
@@ -61,8 +59,7 @@ Edite o código abaixo e veja as alterações instantâneas no canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
->
+ctx.fill();</textarea>
 ```
 
 ```js hidden

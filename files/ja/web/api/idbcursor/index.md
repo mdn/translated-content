@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
 
 **`IDBCursor`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
 
@@ -17,7 +18,8 @@ l10n:
 
 ## インスタンスプロパティ
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
 
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`null` や例外を返しません。
@@ -44,8 +46,6 @@ l10n:
   - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドでオブジェクトストア内のカーソルの現在の位置にある値を更新します。これは、特定のレコードを更新するのに使用できます。
 
 ## 定数
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))

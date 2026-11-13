@@ -28,7 +28,7 @@ _Интерфейс `File` также наследует свойства от {
 - {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
   - : Возвращает URL адрес, где расположен {{domxref("File")}}.
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : Возвращает [MIME](/ru/docs/Web/HTTP/MIME_types) тип файла.
+  - : Возвращает [MIME](/ru/docs/Web/HTTP/Guides/MIME_types) тип файла.
 
 ## Методы экземпляра
 

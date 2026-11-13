@@ -3,13 +3,13 @@ title: Введение в кросс-браузерное тестирован�
 slug: Learn_web_development/Extensions/Testing/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 Эта статья начинает модуль с обзора темы кросс-браузерного тестирования, отвечая на такие вопросы как "что такое кросс-браузерное тестирование?", "с какими распространёнными проблемами можно столкнуться?" и "какие основные подходы для тестирования, обнаружения и исправления проблем существуют?"
 
-| Необходимые условия: | Знакомство с основами [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript). |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Цель:                | Улучшить понимание идей кроссбраузерного тестирования.                                                                   |
+| Необходимые условия: | Знакомство с основами [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting). |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Улучшить понимание идей кроссбраузерного тестирования.                                                                                                                                                           |
 
 ## Что такое кросс-браузерное тестирование?
 
@@ -25,11 +25,11 @@ slug: Learn_web_development/Extensions/Testing/Introduction
 
 С другой стороны, плохо, когда сайт полноценно работает для обычных людей, но может быть совершенно недоступен для людей, имеющих проблемы со зрением, т.к. их приложения для чтения экрана не могут распознать информацию на сайте.
 
-Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
+Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
 
 ## Почему возникают кросс-браузерные проблемы?
 
-Есть множество причин, почему возникают кросс-браузерные проблемы, и, заметьте, что сейчас мы говорим о проблемах, при которых некоторые вещи ведут себя по-разному в разных браузерах / устройствах / настройках просмотра. Прежде чем вы столкнётесь с проблемами браузера, вы должны исправить все ошибки в коде (см. [Отладка HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong) из предыдущего раздела).
+Есть множество причин, почему возникают кросс-браузерные проблемы, и, заметьте, что сейчас мы говорим о проблемах, при которых некоторые вещи ведут себя по-разному в разных браузерах / устройствах / настройках просмотра. Прежде чем вы столкнётесь с проблемами браузера, вы должны исправить все ошибки в коде (см. [Отладка HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML), [Отладка CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS), and [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong) из предыдущего раздела).
 
 Кросс-браузерные проблемы возникают потому-что:
 
@@ -92,7 +92,7 @@ After each implementation phase, you will need to test the new functionality. To
 
 At this point, fix any problems you find with your new code.
 
-Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on [determining your target browsers](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)). For example:
+Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on [determining your target browsers](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all)). For example:
 
 - Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, IE, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
@@ -131,7 +131,7 @@ The first thing to do is to narrow down where the bug occurs as much as possible
 
 It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see [Reporting bugs](#reporting_bugs), below).
 
-If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
+If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML), [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
 
 Once a fix has been made, you'll want to repeat your testing process to make sure your fix is working OK, and hasn't caused the site to break in other places or in other browsers.
 
@@ -149,15 +149,15 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 
 This article should have given you a high-level understanding of the most important concepts you need to know about cross browser testing. Armed with this knowledge, you are now ready to move on and start learning about Cross browser testing strategies.
 
-{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 ## In this module
 
-- [Introduction to cross browser testing](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Introduction to cross browser testing](/ru/docs/Learn_web_development/Extensions/Testing/Introduction)
+- [Strategies for carrying out testing](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies)
 - [Handling common HTML and CSS problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [Handling common JavaScript problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
 - [Handling common accessibility problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Implementing feature detection](/ru/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 - [Introduction to automated testing](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
 - [Setting up your own test automation environment](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

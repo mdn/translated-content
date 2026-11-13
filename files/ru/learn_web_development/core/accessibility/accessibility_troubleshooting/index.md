@@ -3,13 +3,13 @@ title: Устранение проблем доступности
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
 
-| Prerequisites: | Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, an understanding of the [previous articles in the course](/ru/docs/Learn/Accessibility). |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objective:     | To test basic knowledge of accessibility fundamentals.                                                                                                                |
+| Prerequisites: | Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, an understanding of the [previous articles in the course](/ru/docs/Learn_web_development/Core/Accessibility). |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objective:     | To test basic knowledge of accessibility fundamentals.                                                                                                                                     |
 
 ## Starting point
 
@@ -68,4 +68,4 @@ Can you list two more ideas for improvements that would make the website more ac
 
 If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenu("Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

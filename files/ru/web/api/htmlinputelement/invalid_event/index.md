@@ -5,7 +5,7 @@ slug: Web/API/HTMLInputElement/invalid_event
 
 {{APIRef}}
 
-Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/ru/docs/Learn/Forms#constraint_validation_api)на элементе.
+Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/ru/docs/Learn_web_development/Extensions/Forms#constraint_validation_api)на элементе.
 
 ## Общая информация
 
@@ -14,7 +14,6 @@ slug: Web/API/HTMLInputElement/invalid_event
 - **Взаимодействие** {{domxref("Event")}}
 
   Всплытия
-
   - : Нет
 
 - Отменяемый
@@ -29,6 +28,6 @@ slug: Web/API/HTMLInputElement/invalid_event
 | Property                        | Type                       | Description                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |

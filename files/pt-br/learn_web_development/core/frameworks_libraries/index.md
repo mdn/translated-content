@@ -39,7 +39,7 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 >
 > Se você precisar conferir seu código em relação à nossa versão, você pode encontrar a versão finalizada do código de exemplo da aplicação React em nosso [repositório todo-react](https://github.com/mdn/todo-react). Para uma versão executada ao vivo, veja <https://mdn.github.io/todo-react-build/>.
 
-- [1. Começando com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Começando com o React](/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : Neste artigo nós vamos dar olá para o React. Descobriremos um pouco dos detalhes sobre seu histórico e casos de uso, configurar uma cadeia de ferramentas React básica em nosso computador local, e criar e brincar com um aplicativo inicial simples, aprendendo um pouco sobre como o React funciona no processo.
 - [2. Começando com a nossa lista "to do" do React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Digamos que recebemos a tarefa de criar uma prova de conceito em React - uma aplicação que permite aos usuários adicionar, editar e deletar tarefas nas quais desejam trabalhar e também marcar tarefas como concluídas sem excluí-las. Este artigo irá orientá-lo sobre como colocar a estrutura básica e estilizações do componente `App` no lugar, pronto para a definição e interatividade de componentes individuais, que adicionaremos mais tarde.
@@ -81,7 +81,7 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 
-- [1. Getting started with Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. Getting started with Vue](/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
   - : Now let's introduce Vue, the third of our frameworks. In this article, we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
 - [2. Creating our first Vue component](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - : Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props and saving data state.

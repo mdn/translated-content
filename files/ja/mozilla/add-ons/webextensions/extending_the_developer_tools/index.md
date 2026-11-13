@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 {{AddonSidebar}}
 
 > [!NOTE]
-> このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis)を参照してください。
+> このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis)を参照してください。
 
 WebExtensions API を使用して、ブラウザーの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
 
@@ -22,12 +22,11 @@ HTML ファイルは、devtools ページと呼ばれる特別なページを拡
 
 devtools ページはブラウザーの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
 
-devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Element/script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
+devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
 
 - グローバル [`window`](/ja/docs/Web/API/Window) オブジェクトを介してアクセス可能な通常の DOM API
 - コンテンツスクリプトと[同じ WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - devtools API:
-
   - [`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

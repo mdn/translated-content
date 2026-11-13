@@ -3,8 +3,6 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 ---
 
-{{AddonSidebar}}
-
 Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêtre ou vers une autre fenêtre.
 
 Vous pouvez uniquement déplacer des onglets vers et à partir de fenêtres dont {{WebExtAPIRef('windows.WindowType', 'WindowType')}} est `"normal"`.
@@ -25,13 +23,10 @@ var moving = browser.tabs.move(
 - `tabIds`
   - : `integer` ou `array` d'`integer`. ID du {{WebExtAPIRef('tabs.Tab', 'tab')}}à déplacer, ou un tableau d'ID d'onglet.
 - `moveProperties`
-
   - : `object`. Un objet qui spécifie où déplacer le(s) onglet(s).
-
     - `windowId`{{optional_inline}}
       - : `integer`. 'ID de la fenêtre dans laquelle vous souhaitez déplacer les onglet(s). Si vous omettez cela, chaque onglet de `tabIds` sera déplacé vers l' `index` dans sa fenêtre actuelle. Si vous incluez ceci, et `tabIds` contient plus d'un onglet, alors le premier onglet de `tabIds` sera déplacé vers l'`index`, et les autres onglets le suivront dans l'ordre donné dans `tabIds`.
     - `index`
-
       - : `integer`. La position de l'index pour déplacer la tabulation à, en commençant à 0. Une valeur de -1 placera la tabulation à la fin de la fenêtre.
 
         Si vous passez une valeur inférieure à -1, la fonction renvoie une erreur.
@@ -128,8 +123,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

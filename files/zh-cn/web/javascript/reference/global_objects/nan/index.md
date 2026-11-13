@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 915c9519f3cca1c616c2f554d5ad9e1483bbb170
 ---
 
-{{jsSidebar("Objects")}}
-
 全局属性 **`NaN`** 是一个表示非数字的值。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}

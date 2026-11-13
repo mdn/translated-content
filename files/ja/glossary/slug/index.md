@@ -1,16 +1,16 @@
 ---
-title: Slug (スラグ)
+title: Slug (スラッグ)
 slug: Glossary/Slug
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。
-MDN のコンテキストでは、"\<locale> / docs /" に続く URL の部分です。
+スラッグは、通常は URL の最後にあるウェブアドレスの固有の識別部分です。
+MDN のコンテキストでは、"_\<locale>/docs/_" に続く URL の部分です。
 
 親文書の下に新しい文書が作成されたときの最終的な構成要素でもあります。
-たとえば、このページのスラグは `Glossary/スラグ` です。
+たとえば、このページのスラッグは `Glossary/Slug` です。
 
 ## 関連情報
 
-- [タイトルとスラグの決め方](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#タイトルとスラグの決め方)
+- [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#スラッグ)

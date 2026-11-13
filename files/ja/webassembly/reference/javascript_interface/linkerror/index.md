@@ -10,7 +10,7 @@ original_slug: WebAssembly/JavaScript_interface/LinkError
 
 ## コンストラクター
 
-- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/JavaScript_interface/LinkError/LinkError)
+- [`WebAssembly.LinkError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError/LinkError)
   - : 新しい `WebAssembly.LinkError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
@@ -30,7 +30,7 @@ original_slug: WebAssembly/JavaScript_interface/LinkError
 
 ## インスタンスメソッド
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toSource()")}}
   - : 同じエラーを評価できるコードを返します。 {{jsxref("Error")}} から継承しています。
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
   - : 指定された `Error` オブジェクトを表す文字列を返します。{{jsxref("Error")}} から継承しています。
@@ -66,5 +66,5 @@ try {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

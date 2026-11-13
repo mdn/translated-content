@@ -3,8 +3,6 @@ title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 ---
 
-{{JSRef}}
-
 La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la gauche vers la droite) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduce()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 {{InteractiveExample("JavaScript Demo: TypedArray.reduce()")}}
@@ -29,9 +27,7 @@ typedarray.reduce(callback[, valeurInitiale])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
-
     - `valeurPrécédente`
       - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
     - `valeurCourante`

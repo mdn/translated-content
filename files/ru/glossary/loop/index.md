@@ -66,5 +66,4 @@ while (i < 5) {
 - Блок кода будет продолжать работать, пока переменная (i) меньше 5.
 
 1. [MDN Web Docs Glossary](/ru/docs/Glossary)
-
    1. {{Glossary("Loop")}}

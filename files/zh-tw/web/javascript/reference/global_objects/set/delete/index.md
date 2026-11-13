@@ -3,8 +3,6 @@ title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
 
-{{JSRef}}
-
 **`delete()`** 方法會一個 `Set` 物件中移除指定元素。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}

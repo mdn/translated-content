@@ -12,9 +12,8 @@ l10n:
 ## 같이 보기
 
 - [Numeric types](https://en.wikipedia.org/wiki/Data_type#Numeric_types) 위키피디아
-- JavaScript 타입: [`Number`](/ko/docs/Web/JavaScript/Data_structures#number_type)
+- JavaScript 타입: [`Number`](/ko/docs/Web/JavaScript/Guide/Data_structures#number_type)
 - JavaScript 전역 객체 {{jsxref("Number")}}
 - [Glossary:](/ko/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("Primitive", "원시 값")}}

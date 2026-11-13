@@ -3,7 +3,7 @@ title: "CSSLayerStatementRule: nameList プロパティ"
 short-title: nameList
 slug: Web/API/CSSLayerStatementRule/nameList
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("CSSOM")}}
@@ -62,4 +62,4 @@ item.textContent = `@layer は ${layer.nameList.join(
 
 - {{DOMXRef("CSSLayerBlockRule.name")}}
 - {{CSSXref("@layer")}}
-- [名前付きレイヤーのための @layer 文のアットルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)
+- [名前付きレイヤーのための @layer 文のアットルール](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)

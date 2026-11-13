@@ -39,7 +39,7 @@ slug: Web/Progressive_web_apps
 
 ![](responsive.svg)
 
-**[Отзывчивые](/ru/docs/Learn/CSS/CSS_layout/Responsive_Design)**
+**[Отзывчивые](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)**
 
 Помещаются на любой экран: настольный компьютер, смартфон, планшет и т.д.
 

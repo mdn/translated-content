@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.getSubTree()`** 方法根据给定的 ID 异步检索一个 {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}。
 
 如果该项目是一个文件夹，你可以使用其 `children` 属性以及其后代（如果它们本身是文件夹）的 `children` 属性递归访问所有后代。
@@ -24,7 +22,7 @@ let gettingSubTree = browser.bookmarks.getSubTree(
 ### 参数
 
 - `id`
-  - : 一个指定要检索的子树根的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要检索的子树根的 ID 的{{jsxref("String", "字符串", "", 1)}}。
 
 ### 返回值
 

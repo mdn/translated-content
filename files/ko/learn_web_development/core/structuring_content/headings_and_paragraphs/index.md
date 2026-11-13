@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 표시 할 수 있도록 텍스트 구조와 의미 (시멘틱({{glossary ( "semantics")}})라고도 함)를 제공하는 것입니다.
 이번 글에서는 {{glossary ( "HTML")}}을 사용하여 제목 및 단락을 추가하고, 단어를 강조하고, 목록을 만드는 등의 방법으로 텍스트 페이지를 구성하는 방법을 설명합니다.
@@ -14,7 +14,7 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
     <tr>
       <th scope="row">선행 학습:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 다뤄봤던 HTML의 기초에 익숙해지기.
       </td>
@@ -116,8 +116,7 @@ My short story
 
 I am a policewoman and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea
->
+My legs are made of cardboard and I am married to a fish.</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -246,8 +245,7 @@ HTML 순서 없는(unordered) 리스트를 만들기 위해 아래에 있는 샘
 milk
 eggs
 bread
-hummus</textarea
->
+hummus</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -340,8 +338,7 @@ Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea
->
+The school is on your right, 300 meters up the road</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -435,8 +432,7 @@ Quick hummus recipe
 
     Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
->
+    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -591,8 +587,7 @@ spotted stealing several garden gnomes from a shopping
 center in downtown Milwaukee. They were all wearing green
 jumpsuits and silly hats, and seemed to be having a whale
 of a time. If anyone has any information about this
-incident, please contact the police now.</p></textarea
->
+incident, please contact the police now.</p></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -691,6 +686,6 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 
 ## 요약
 
-일단 이게 다에요! 이 글을 통해 여러분은 HTML에서 텍스트를 표현하기 시작하는 방법에 대해 좋은 아이디어를 얻었고, 이 영역에서 가장 중요한 몇가지 요소들을 알게되었습니다. 이 코스에에서 다룰 의미론적 요소는 훨씬 더 많으며 [하이퍼링크를 만드는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)에 대해 자세히 알아보도록 합시다.
+일단 이게 다에요! 이 글을 통해 여러분은 HTML에서 텍스트를 표현하기 시작하는 방법에 대해 좋은 아이디어를 얻었고, 이 영역에서 가장 중요한 몇가지 요소들을 알게되었습니다. 이 코스에에서 다룰 의미론적 요소는 훨씬 더 많으며 [하이퍼링크를 만드는 방법](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)에 대해 자세히 알아보도록 합시다.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "conflicting/Learn_web_development/Core/Structuring_content")}}

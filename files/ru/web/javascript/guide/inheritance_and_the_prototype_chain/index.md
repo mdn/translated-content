@@ -1,7 +1,6 @@
 ---
 title: Наследование и цепочка прототипов
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 
 {{jsSidebar("Advanced")}}

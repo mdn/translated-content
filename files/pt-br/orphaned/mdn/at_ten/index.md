@@ -16,10 +16,10 @@ No início de 2005, um pequeno time de sonhadores se propôs a criar um novo e l
 
 Por dez anos a comunidade do MDN tem documentado a Web livre. Desde corrigir pequenos erros a escrever uma API completamente nova todo mundo tem alguma coisa a oferecer, e nenhuma contribuição é menor ou maior que a outra. Nós temos mais de 90.000 páginas de conteúdo que tem sido escritas ou traduzidas por membros de nossa fantástica comunidade de Mozillians. Você pode se tornar um de nós.
 
-[Aprenda mais about contributing](/pt-BR/docs/MDN/Community/Contributing)
+[Aprenda mais about contributing](/pt-BR/docs/conflicting/MDN/Community)
 
 ## Subnav
 
 1. [10 anos de MDN](/pt-BR/docs/MDN_at_ten/)
 2. [A história do MDN](/pt-BR/docs/MDN/At_ten/History_of_MDN)
-3. [Contribuindo com o MDN](/pt-BR/docs/MDN/Community/Contributing)
+3. [Contribuindo com o MDN](/pt-BR/docs/conflicting/MDN/Community)

@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`href`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)で指定された URL を返します。
+**`href`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で指定された URL を返します。
 
-解決された URL は、関連づけられてたスタイルシートの [`href`](/ja/docs/Web/HTML/Element/link#href) 属性となります。
+解決された URL は、関連づけられてたスタイルシートの [`href`](/ja/docs/Web/HTML/Reference/Elements/link#href) 属性となります。
 
 ## 値
 

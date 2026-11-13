@@ -1,11 +1,12 @@
 ---
 title: 機能検出の実装
+short-title: 機能検出
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 機能検出は、あるブラウザーがあるコードのブロックに対応しているかどうかを調べ、対応しているか (またはしていないか) に応じて異なるコードを実行することで、ブラウザーが常に動作し、ブラウザーによってクラッシュやエラーが発生しないようにします。この記事では、独自の単純な機能検出の書き方、実装をスピードアップするためのライブラリーの使い方、 `@supports` などの機能検出のためのネイティブ機能について詳しく説明します。
 
@@ -34,11 +35,11 @@ l10n:
 
 機能検出の根底にあるアイデアは、プログラムを実行中のブラウザーがある特定の機能に対応しているかを確かめ、その結果に応じて異なるコードを実行するということで、対応ブラウザーと非対応ブラウザーのいずれでも許容できる挙動となるようにすることです。もしこの対策をしなければ、その特定の機能に対応していないブラウザーではサイトが正常に表示されなかったり、エラーを起こして使い勝手を悪化させるでしょう。
 
-それでは、[よくある JavaScript の問題の処理](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#機能検出)で触れた例を振り返ってみましょう。[位置情報 API](/ja/docs/Web/API/Geolocation_API) (ブラウザーを実行している端末の位置情報を返します)は、 [Navigator](/ja/docs/Web/API/Navigator) オブジェクトに含まれる `geolocation` プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。
+それでは、 [JavaScript のデバッグとエラー処理](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#機能検出)の記事で触れた例を振り返ってみましょう。[位置情報 API](/ja/docs/Web/API/Geolocation_API) (ブラウザーを実行している端末の位置情報を返します)は、 [Navigator](/ja/docs/Web/API/Navigator) オブジェクトに含まれる `geolocation` プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // Google Maps API を用いて現在位置をマップ上に表示します
   });
 } else {
@@ -46,7 +47,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-次に進む前にもう 1 つお伝えさせてください。機能検出と**ブラウザー検出**（サイトにアクセスしているブラウザーの種類の検出）を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは[ブラウザー検出をしない](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#ブラウザー検出をしない)を参照してください。
+次に進む前にもう 1 つお伝えさせてください。機能検出と**ブラウザー検出**（サイトにアクセスしているブラウザーの種類の検出）を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは[ユーザーエージェント文字列を使用したブラウザーの検出 （UA スニッフィング）](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)を参照してください。
 
 ## 自分自身で機能検出テストを書く
 
@@ -56,7 +57,7 @@ if ("geolocation" in navigator) {
 
 JavaScriptで _[element.style.プロパティ](/ja/docs/Web/API/HTMLElement/style)_ （例 `paragraph.style.rotate`）の存在をテストすることで、 CSS 機能のテストを書くことができます。
 
-古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
+古典的な例としては、ブラウザーで [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid) に対応しているかをテストする場合が挙げられます。 `subgrid` 値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} において対応しているブラウザーでは、レイアウトにサブグリッドを使用することができます。対応していないブラウザーでは、問題なく動作する通常のグリッドを使用することになりますが、見た目はあまりよくありません。
 
 この例を用いると、値が対応している場合はサブグリッドのスタイルシートを、対応していない場合は通常のグリッドのスタイルシートを含めることができます。そのためには、 HTML ファイルの見出しに 2 つのスタイルシートを含めることができます。 1 つはすべてのスタイル設定、もう 1 つはサブグリッドに対応していない場合の既定レイアウトを実装するものです。
 
@@ -82,7 +83,7 @@ if (CSS.supports("grid-template-columns", "subgrid")) {
 
 #### @supports
 
-CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と同じように動作しますが、解像度や画面の内側、縦横比などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、 CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
+CSS にはネイティブの機能検出メカニズムがあります。 {{cssxref("@supports")}} アットルールです。これは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と同じように動作しますが、解像度、画面幅、{{glossary("aspect ratio", "アスペクト比")}}などのメディア特性に応じて CSS を選択的に適用するのではなく、 `CSS.supports()` と同じように、CSS 機能が対応しているかどうかによって CSS を選択的に適用します。
 
 例えば、前回の例を書き換えて `@supports` を使用することができます。
 
@@ -128,7 +129,6 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
 検出可能な機能の一般的なパターンには、以下のようなものがあります。
 
 - オブジェクトのメンバー
-
   - : 具体的なメソッドやプロパティ（通常は、検出する API や他の機能を使用するためのエントリーポイント）が親オブジェクトに存在するかどうかを調べます。
 
     先ほどの例では、[`navigator`](/ja/docs/Web/API/Navigator) オブジェクトに `geolocation` メンバがあるかどうかをテストすることで、[位置情報](/ja/docs/Web/API/Geolocation_API)の対応を検出するためにこのパターンを使用しました。
@@ -140,17 +140,16 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
     ```
 
 - 要素のプロパティ
-
   - : {{domxref("Document.createElement()")}} を使ってメモリー内に要素を作成し、それにプロパティが存在するか調べます。
 
     この例では、[キャンバス API](/ja/docs/Web/API/Canvas_API) の対応を検出する方法を示しています。
 
     ```js
-    function supports_canvas() {
+    function supportsCanvas() {
       return !!document.createElement("canvas").getContext;
     }
 
-    if (supports_canvas()) {
+    if (supportsCanvas()) {
       // Create and draw on canvas elements
     }
     ```
@@ -159,12 +158,10 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
     > 上の例の二重 `NOT` (`!!`) は、結果を歪める可能性のある{{glossary("Truthy", "真値")}}/{{glossary("Falsy", "偽値")}}ではなく、「適切な」論理値を返すように強制する方法です。
 
 - 要素におけるメソッドの固有の返値
-
-  - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、その要素にメソッドが存在するか調べます。存在する場合は、そのメソッドが返す値を調べます。このパターンの例については、 [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) の機能テストを参照してください。
+  - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、その要素にメソッドが存在するか調べます。存在する場合は、そのメソッドが返す値を調べます。
 
 - 要素に割り当てられたプロパティ値の保持
-
-  - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、プロパティに固有の値を設定し、その値が保持されているかどうかを調べます。このパターンの例については、 [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) の機能テストを参照してください。
+  - : {{domxref("Document.createElement()")}} を使用してメモリー内に要素を作成し、プロパティに固有の値を設定し、その値が保持されているかどうかを調べます。
 
 しかし、いくつかの機能は検出できないことが知られていることに留意してください。このような用途では、{{Glossary("Polyfill", "ポリフィル")}}を使用するなど、別の手法を用いる必要があります。
 
@@ -173,7 +170,7 @@ JavaScript の機能検出テストの例をすでに見ました。一般的に
 また、 {{domxref("Window.matchMedia")}} の JavaScript 機能についても触れておきたいと思います。これは、 JavaScript 内でメディアクエリーテストを実行するためのプロパティです。このように見ていきます。
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   // run JavaScript in here.
 }
 ```
@@ -181,16 +178,13 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 例えば、 [Snapshot](https://github.com/chrisdavidmills/snapshot) デモでは、 Brick JavaScript ライブラリーを選択的に適用し、 UI レイアウトを処理するために使用していますが、小さな画面レイアウト（480px 幅以下）の場合のみ使用しています。最初に `media` 属性を使用して、ページ幅が 480px 以下の場合にのみ Brick CSS を使用します。
 
 ```html
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
+<link href="dist/brick.css" rel="stylesheet" media="(width <= 480px)" />
 ```
 
 そして、 JavaScript で何度か `matchMedia()` を使用することで、小さな画面レイアウトにいる場合にのみ Brick のナビゲーション機能を実行することができます（広い画面レイアウトでは、すべてを一度に見ることができるので、異なるビュー間を移動する必要はありません）。
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   deck.shuffleTo(1);
 }
 ```

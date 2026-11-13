@@ -2,10 +2,10 @@
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: d8a5165fd3c3b35ea9d07a914459e8d468f62276
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}
 
 プロミス ({{jsxref("Promise")}}) は、非同期処理の最終的な完了もしくは失敗を表すオブジェクトです。多くの人々は既存の用意されたプロミスを使うことになるため、このガイドでは、プロミスの作成方法の前に、関数が返すプロミスの使い方から説明します。
 
@@ -35,7 +35,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 連鎖
 
-よくあるニーズは、 2 つ以上の非同期処理を連続して実行することで、前回の処理が成功したときに、その結果をもとに後続の処理を始めることです。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](http://callbackhell.com/)に陥っていました。
+よくあるニーズとして、2 つ以上の非同期操作を連続して実行することが挙げられます。この場合、それぞれの操作は、前回の操作が成功したとき、前回の段階の結果を用いて開始されます。昔は、複数の非同期処理を連続して実行すると、古典的な[コールバック地獄](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1)<sup>(英語)</sup>に陥っていました。
 
 ```js-nolint
 doSomething(function (result) {
@@ -199,11 +199,12 @@ async function logIngredients() {
 }
 ```
 
-コードはプロミスの前に `await` キーワードがあることを除いて、同期的なコードとまったく同じに見えることに注目してください。トレードオフの1つは、[`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを簡単に忘れてしまう可能性があることです。これは、型不一致（例えば、プロミスを値として使用しようとするなど）がある場合にのみ修正することができます。
+コードはプロミスの前に `await` キーワードがあることを除いて、同期的なコードとまったく同じに見えることに注目してください。トレードオフの 1 つは、[`await`](/ja/docs/Web/JavaScript/Reference/Statements/async_function) キーワードを簡単に忘れてしまう可能性があることです。これは、型不一致（例えば、プロミスを値として使用しようとするなど）がある場合にのみ修正することができます。
 
 `async`/`await` はプロミスを基に構築されています。例えば、`doSomething()` は以前と同じ関数であるため、プロミスから `async`/`await` に変更するために必要なリファクタリングは最小限で済みます。 `async`/`await` の構文については、[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)および [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) のリファレンスで詳しく説明されています。
 
-> **メモ:** `async`/`await` は通常のプロミス連鎖と同じ並列処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
+> [!NOTE]
+> `async`/`await` は通常のプロミス連鎖と同じ並行処理の意味論をもちます。 1 つの非同期関数内で `await` を使用しても、プログラム全体が停止するわけではなく、その値に依存する部分のみが停止します。そのため、 `await` が待機中の間にも、他にも非同期のジョブが実行される可能性があります。
 
 ## エラー処理
 
@@ -312,13 +313,12 @@ doSomething()
 これは下記のテキストを出力します。
 
 ```plain
-Initial
 あれを実行
 以前に何が起こったとしても、これを行う
 ```
 
 > [!NOTE]
-> 「これを実行」のテキストは「何か失敗した」エラーが拒否をを引き起こしたため、出力されないことに注意してください。
+> 「これを実行」のテキストは「何か失敗した」エラーが拒否を引き起こしたため、出力されないことに注意してください。
 
 `async`/`await` では、このコードは次のようになります。
 
@@ -335,14 +335,14 @@ async function main() {
 }
 ```
 
-### プロミスの拒否イベント
+### プロミス拒否イベント
 
 プロミス拒否イベントがどのハンドラーによっても処理されなかった場合、そのイベントは呼び出しスタックの先頭にバブリングし、ホストはそれを表面化させる必要があります。ウェブでは、プロミスが拒否されるたびに、 2 種類のイベントのどちらかがグローバルスコープに送られます（一般的には、 [`window`](/ja/docs/Web/API/Window) か、ウェブワーカーで使用する場合は、 [`Worker`](/ja/docs/Web/API/Worker)、または他のワーカーベースのインターフェイスです）。この 2 つのイベントは次の通りです。
 
 - [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event)
   - : プロミスが拒否されたものの、拒否ハンドラーが利用できない場合に送られます。
 - [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event)
-  - : プロミスが拒否されたとき、実行者の `reject` 関数によって拒否が処理された後に送られます。
+  - : すでに `unhandledrejection` イベントを発生させた、拒否されたプロミスにハンドラーが添付された場合に送信されます。
 
 いずれの場合でも、この（[`PromiseRejectionEvent`](/ja/docs/Web/API/PromiseRejectionEvent) 型の）イベントは、拒否されたプロミスを示す [`promise`](/ja/docs/Web/API/PromiseRejectionEvent/promise) プロパティと、そのプロミスが失敗した理由を表す [`reason`](/ja/docs/Web/API/PromiseRejectionEvent/reason) プロパティを持ちます。
 
@@ -372,15 +372,15 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 });
 ```
 
-注意すべきは、配列の中の 1 つのプロミスが拒否されると、 `Promise.all()` がそのエラーを発生させ、他の処理を中断することです。これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
+配列内のプロミスのいずれかが拒否された場合、`Promise.all()` は返されたプロミスを直ちに拒否します。他の操作は引き続き実行されますが、その結果は `Promise.all()` の返値からは利用できません。これにより、予期せぬ状態や振る舞いが発生する可能性があります。 {{jsxref("Promise.allSettled()")}} は、解決する前にすべての操作が完了することを保証する別の合成ツールです。
 
-これらのメソッドはすべてプロミスを並列処理します。一連のプロミスは同時に開始され、他にも待つことはありません。いくつかの賢い JavaScript を使用することで、逐次合成が可能です。
+これらのメソッドはすべてプロミスを並行処理します。一連のプロミスは同時に開始され、他にも待つことはありません。いくつかの賢い JavaScript を使用することで、逐次合成が可能です。
 
 ```js
 [func1, func2, func3]
   .reduce((p, f) => p.then(f), Promise.resolve())
   .then((result3) => {
-    // result3 を使用
+    /* result3 を使用 */
   });
 ```
 
@@ -423,7 +423,7 @@ for (const f of [func1, func2, func3]) {
 /* 最終的な結果 (すなわち result3) を使用 */
 ```
 
-しかし、プロミスを逐次的に構成する前に、それが実に必要かどうかを検討してください。あるプロミスの実行が他のプロミスの結果に依存していない限り、それらが不必要にブロックし合わないように、常にプロミス並列処理を実行する方がよいのです。
+しかし、プロミスを逐次的に構成する前に、それが実に必要かどうかを検討してください。あるプロミスの実行が他のプロミスの結果に依存していない限り、それらが不必要にブロックし合わないように、常にプロミス並行処理を実行する方がよいのです。
 
 ## キャンセル
 
@@ -483,7 +483,7 @@ console.log(value); // 1 or 2?
 
 一方で、プロミスは[制御の反転](https://ja.wikipedia.org/wiki/制御の反転)という形です。コールバックが呼び出されるタイミングを API 実装者が制御することはありません。その代わりに、コールバックキューを維持し、いつコールバックを呼び出すかを決定する仕事はプロミスの実装に委ねられ、 API ユーザーと API 開発者の両方は、自動的に以下のような強力な意味づけ保証を得ることができます。
 
-- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Event_loop#run-to-completion)より前に呼び出されることはありません。
+- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Reference/Execution_model#run-to-completion)より前に呼び出されることはありません。
 - これらのコールバックは、プロミスが表す非同期処理の成功や失敗の後に追加されても呼び出されます。
 - [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) を複数回呼び出すことで、複数のコールバックを追加することができます。これらは挿入された順に次々と呼び出されます。
 

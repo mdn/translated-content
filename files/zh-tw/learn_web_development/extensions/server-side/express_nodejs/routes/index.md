@@ -1,10 +1,9 @@
 ---
 title: "Express 教學 4: 路由與控制器"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
-original_slug: Learn/Server-side/Express_Nodejs/routes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在本教程中，我們將為最終在 本地圖書館 網站中需要的所有資源端點，搭配 "空殼" 處理函式來配置路由 (URL handling code) 。完成後，我們的路由處理源碼將會有模組化結構，在接下來的文章中，我們可以用真實的處理函式加以擴充。我們也會對如何使用 Express 創建模組化路由，有更好的理解。
 
@@ -155,12 +154,12 @@ app.get(/.*fish$/, function (req, res) {
 
 例如，考慮一個編碼的 URL，其中包含有關用戶和書本的信息：`http://localhost:3000/users/34/books/8989`。我們可以使用`userId`和`bookId`路徑參數，提取如下所示的信息：
 
-```plain
-app.get('/users/:userId/books/:bookId', function (req, res) {
+```js
+app.get("/users/:userId/books/:bookId", function (req, res) {
   // Access userId via: req.params.userId
   // Access bookId via: req.params.bookId
   res.send(req.params);
-})
+});
 ```
 
 路由參數的名稱，必須由「單詞字符」（AZ，az，0-9 和\_）組成。

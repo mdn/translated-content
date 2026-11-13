@@ -46,4 +46,4 @@ ul.addEventListener("click", hide, false);
 
 ## 같이 보기
 
-- [이벤트 대상의 비교](/ko/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [이벤트 대상의 비교](/ko/docs/Learn_web_development/Core/Scripting/Event_bubbling)

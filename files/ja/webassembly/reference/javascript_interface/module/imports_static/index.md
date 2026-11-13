@@ -17,7 +17,7 @@ WebAssembly.Module.imports(module);
 ### 引数
 
 - _module_
-  - : {{jsxref("WebAssembly.Module")}} オブジェクトです。
+  - : [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトです。
 
 ### 返値
 
@@ -25,7 +25,7 @@ WebAssembly.Module.imports(module);
 
 ### 例外
 
-module が {{jsxref("WebAssembly.Module")}} オブジェクトインスタンスでなかった場合は、 {{jsxref("TypeError")}} が発生します。
+module が [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトインスタンスでなかった場合は、 {{jsxref("TypeError")}} が発生します。
 
 ## 例
 
@@ -57,5 +57,5 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -17,7 +17,7 @@ selectElt.setCustomValidity(string);
 
 ### Parameters
 
-- _string_ 将作为错误信息包含到 {{domxref("DOMString")}} 之中。
+- _string_ 将作为错误信息包含到 {{jsxref("String")}} 之中。
 
 ## Specifications
 
@@ -29,4 +29,4 @@ selectElt.setCustomValidity(string);
 
 ## 查看更多
 
-- [Form validation.](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [Form validation.](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)

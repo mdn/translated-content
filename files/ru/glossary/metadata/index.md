@@ -11,6 +11,6 @@ l10n:
 
 ## Смотрите также
 
-- [Метаданные в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#метаданные_элемент_meta)
+- [Метаданные в HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#метаданные_элемент_meta)
 - [Метаданные](https://ru.wikipedia.org/wiki/Метаданные) в Википедии
 - Элемент {{htmlelement("meta")}} в MDN

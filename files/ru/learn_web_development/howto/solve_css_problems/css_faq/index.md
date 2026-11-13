@@ -54,13 +54,13 @@ Use a class-specific style when you want to apply the styling rules to many bloc
 
 Stylesheets with fewer rules are usually more performant. It is therefore recommended to use classes as much as possible, and to reserve the use of id for specific uses (like to connect label and form elements or for styling elements that must be semantically unique).
 
-See [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+See [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
 ## How do I restore the default value of a property?
 
 Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property.
 
-This has changed with CSS 2; the keyword [initial](/ru/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/ru/docs/Web/CSS/Reference/Values/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ## How do I derive one style from another?
 
@@ -166,7 +166,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
+When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/Guides/Cascade/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
 
 ```
 div { color: black; }

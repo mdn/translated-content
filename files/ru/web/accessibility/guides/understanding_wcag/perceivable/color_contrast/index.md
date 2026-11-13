@@ -1,7 +1,6 @@
 ---
 title: Цветовой контраст
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
 {{AccessibilitySidebar}}
@@ -19,16 +18,12 @@ original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ## Связанные с WCAG критерии успеха
 
 - [1.4.3 Минимальный контраст (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
-
   - : Цветовой контраст между фоном и содержимым переднего плана должен быть минимальным, чтобы обеспечить удобочитаемость:
-
     - Текст и его фон должны иметь контрастность не менее 4.5.1.
     - Текст заголовка (или просто крупный текст) должен иметь соотношение не менее 3.1. Крупный текст определяется как минимум 18pt или 14pt полужирный.
 
 - [1.4.6 Улучшенный контраст (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
-
   - : Это следует и основывается на критерии 1.4.3.
-
     - Текст и его фон должны иметь контрастность не менее 7.1.
     - Текст заголовка (или просто крупный текст) должен иметь соотношение не менее 4.5.1.
 
@@ -47,5 +42,5 @@ original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 
 ## Смотрите также
 
-- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [Цвет и цветовой контраст](/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
 - [Понимание нетекстового контраста](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

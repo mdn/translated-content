@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 l10n:
-  sourceCommit: 4e32a881872958fdf928d8b4d42189fba2e11459
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`every()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、提供された関数で実装されたテストに、型付き配列内のすべての要素が合格するかどうかをテストします。これは論理値を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.every()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.every()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -19,7 +18,7 @@ function isNegative(element, index, array) {
 const int8 = new Int8Array([-10, -20, -30, -40, -50]);
 
 console.log(int8.every(isNegative));
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文
@@ -36,7 +35,7 @@ every(callbackFn, thisArg)
     - `element`
       - : 現在処理されている型付き配列の要素です。
     - `index`
-      - : 現在処理されている型付き配列の要素の添字です。
+      - : 現在処理されている型付き配列の要素のインデックスです。
     - `array`
       - : `every()` が実行されている型付き配列です。
 - `thisArg` {{optional_inline}}
@@ -74,7 +73,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 
 ## 関連情報
 
-- [`TypedArray.prototype.every` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.every` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

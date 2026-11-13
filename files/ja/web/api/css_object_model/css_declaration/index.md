@@ -2,10 +2,10 @@
 title: CSS 宣言
 slug: Web/API/CSS_Object_Model/CSS_Declaration
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: b07efa13f8459a44a2cbc7b6cdb3279967565e63
 ---
 
-{{ APIRef("CSSOM") }}
+{{DefaultAPISidebar("CSSOM")}}
 
 **CSS 宣言**は、 DOM でオブジェクトに公開されない抽象的な概念です。 CSS プロパティと値の組を表します。
 

@@ -3,8 +3,6 @@ title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
 
-{{AddonSidebar}}
-
 Activé lorsque l'extension a accordé de nouvelles permissions.
 
 ## Syntaxe
@@ -29,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :
-
     - `permissions`
       - : Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.
 
@@ -55,5 +51,3 @@ browser.permissions.onAdded.addListener(handleAdded);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

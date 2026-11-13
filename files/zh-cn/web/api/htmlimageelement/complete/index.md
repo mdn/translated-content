@@ -15,7 +15,7 @@ l10n:
 
 如果满足以下任何一个条件，则认为图像已经加载完毕：
 
-- 没有指定 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 和 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性。
+- 没有指定 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 和 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性。
 - `srcset` 属性不存在且 `src` 属性被指定为空字符串（`""`）时。
 - 图片资源已经完全获取，并且已经排队等待渲染/合成。
 - 图像元素已预先确定，图像已完全可用并准备好使用。

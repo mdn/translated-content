@@ -44,7 +44,7 @@ arr.includes(searchElement[, fromIndex])
 Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra dentro de la matriz (o la parte de la matriz indicada por el índice `fromIndex`, si se especifica). Todos los valores de cero se consideran iguales independientemente del signo (es decir, -0 se considera igual a 0 y +0), pero `false` no se considera igual a 0.
 
 > [!NOTE]
-> Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar si se encuentra el elemento dado
+> Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar si se encuentra el elemento dado
 
 ## Ejemplos
 

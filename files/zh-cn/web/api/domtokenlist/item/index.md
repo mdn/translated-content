@@ -16,11 +16,11 @@ tokenList.item(index)
 ### 参数
 
 - `index`
-  - : {{domxref("DOMString")}} 类型，一个表示要返回的项的索引。
+  - : {{jsxref("String")}} 类型，一个表示要返回的项的索引。
 
 ### 返回值
 
-{{domxref("DOMString")}}类型，一个表示要返回的项。如果数字大于或等于列表的`length`，则返回`null`。
+{{jsxref("String")}}类型，一个表示要返回的项。如果数字大于或等于列表的`length`，则返回`null`。
 
 ## 示例
 

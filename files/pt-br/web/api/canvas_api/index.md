@@ -60,7 +60,6 @@ ctx.fillRect(10, 10, 150, 100);
 ## Guias e Tutoriais
 
 - [Tutorial Canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial)
-
   - : Um tutorial compreensivo abordando o uso básico da API de Canvas e suas funcionalidades avançadas.
 
 - [Mergulhando no Canvas HTML5](https://joshondesign.com/p/books/canvasdeepdive/title.html)

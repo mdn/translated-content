@@ -15,4 +15,4 @@ l10n:
 
 - [Dominator](<https://en.wikipedia.org/wiki/Dominator_(graph_theory)>) (Wikipedia、英語)
 - [ドミネーター](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
-- [ガベージコレクション](/ja/docs/Web/JavaScript/Memory_management#ガベージコレクション)
+- [ガベージコレクション](/ja/docs/Web/JavaScript/Guide/Memory_management#ガベージコレクション)

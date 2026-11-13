@@ -36,7 +36,7 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 - `valueN` {{optional_inline}}
   - : 각각의 변수 선언에 대해, 유효한 JavaScript 표현식을 지정해 변수의 초기 값을 지정할 수 있습니다.
 
-이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용해서 변수를 선언할 수도 있습니다.
+이 구문 대신 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용해서 변수를 선언할 수도 있습니다.
 
 ```js
 let { bar } = foo; // foo = { bar: 10, baz: 12 };
@@ -45,13 +45,14 @@ let { bar } = foo; // foo = { bar: 10, baz: 12 };
 
 ## 설명
 
-`let`을 사용하면 {{jsxref("statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#일시적_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
+`let`을 사용하면 {{jsxref("Statements/block", "블록 명령문", "", 1)}}이나 `let`을 사용한 표현식 내로 범위가 제한되는 변수를 선언할 수 있습니다. 이는 `let`이 {{jsxref("Statements/var", "var")}} 키워드와 다른 점으로, `var`는 변수를 블록을 고려하지 않고 현재 함수 (또는 전역 스코프) 어디에서나 접근할 수 있는 변수를 선언합니다. 또한 `let`은 [파서가 구문을 평가해야만 변수를 값으로 초기화](#일시적_사각지대)(아래 참고)한다는 점도 `var`와 다릅니다.
 
-{{jsxref("statements/const", "const")}}와 마찬가지로 `let` 역시 전역 범위 선언에 사용(최상위 스코프 선언)해도 {{domxref("window")}} 객체에 새로운 속성을 추가하지 않습니다.
+{{jsxref("Statements/const", "const")}}와 마찬가지로 `let` 역시 전역 범위 선언에 사용(최상위 스코프 선언)해도 {{domxref("window")}} 객체에 새로운 속성을 추가하지 않습니다.
 
 왜 키워드의 이름이 "**let**"이 됐는지에 대한 설명은 [여기](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)서 읽을 수 있습니다.
 
-> **참고:** `let` 변수가 가진 다양한 문제는, `let` 변수 선언을 현재 스코프의 맨 위에서 수행해서 피할 수 있습니다.
+> [!NOTE]
+> `let` 변수가 가진 다양한 문제는, `let` 변수 선언을 현재 스코프의 맨 위에서 수행해서 피할 수 있습니다.
 > (가독성에 영향을 줄 수 있습니다)
 
 ## 예제
@@ -91,7 +92,7 @@ console.log(this.y); // undefined
 
 ### 비공개 멤버 모사
 
-[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
+[생성자](/ko/docs/Glossary/Constructor)와 `let`을 함께 사용하면 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 사용하지 않아도 비공개 멤버를 나타낼 수 있습니다.
 
 ```js
 var Thing;
@@ -181,7 +182,8 @@ switch (x) {
 
 `let` 변수는 초기화하기 전에는 읽거나 쓸 수 없습니다(선언 구문에 초기 값을 지정하지 않은 경우 `undefined`로 초기화함). 초기화 전에 접근을 시도하면 {{jsxref("ReferenceError")}}가 발생합니다.
 
-> **참고:** {{jsxref("Statements/var", "var")}} 변수와 다른 점으로, `var`의 경우 선언 전에 접근할 시 `undefined`입니다.
+> [!NOTE]
+> {{jsxref("Statements/var", "var")}} 변수와 다른 점으로, `var`의 경우 선언 전에 접근할 시 `undefined`입니다.
 
 변수 스코프의 맨 위에서 변수의 초기화 완료 시점까지의 변수는 "일시적 사각지대"(Temporal Dead Zone, TDZ)에 들어간 변수라고 표현합니다.
 

@@ -18,7 +18,8 @@ console.exception(obj1 [, obj2, ..., objN]);
 console.exception(msg [, subst1, ..., substN]);
 ```
 
-> **Примечание:** `console.exception()` — это псевдоним для `console.error()`; они функционально идентичны.
+> [!NOTE]
+> `console.exception()` — это псевдоним для `console.error()`; они функционально идентичны.
 
 ### Параметры
 

@@ -21,7 +21,6 @@ createTreeWalker(root, whatToShow, filter)
 - `root`
   - : 表示 `TreeWalker` 对象的根节点的 {{DOMXref("Node")}}，为 {{DOMXref("TreeWalker.currentNode")}} 的初始值。
 - `whatToShow` {{optional_inline}}
-
   - : 表示位掩码的 `unsigned long`，由 [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter) 的常属性组合而成。此参数便于筛选出特定类型的节点。其默认值为 `0xFFFFFFFF`，表示 `NodeFilter.SHOW_ALL` 常数。
 
     | 常数                                                     | 数值         | 描述                                             |
@@ -44,9 +43,7 @@ createTreeWalker(root, whatToShow, filter)
     > 由于任意 `Attr` 节点的父节点恒为 `null`，{{DOMXref("TreeWalker.nextNode()")}} 和 {{DOMXref("TreeWalker.previousNode()")}} 永远不会返回 `Attr` 节点。遍历 `Attr` 节点请使用 {{DOMXref("Element.attributes")}}。
 
 - `filter` {{optional_inline}}
-
   - : 回调函数或含 `acceptNode()` 方法的对象，其返回值为 `NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT` 或 `NodeFilter.FILTER_SKIP`。对于以 `root` 为根节点的子树中被 `whatToShow` 标志所接受的任意节点，将调用此函数或方法决定是否在迭代节点列表中包含此节点：
-
     - 若返回值为 `NodeFilter.FILTER_ACCEPT`，则包含此节点。
     - 若返回值为 `NodeFilter.FILTER_REJECT`，则不包含以此节点为根的子树中的任意节点。
     - 若返回值为 `NodeFilter.FILTER_SKIP`，则不包含此节点。

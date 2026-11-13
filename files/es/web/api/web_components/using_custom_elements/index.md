@@ -16,7 +16,7 @@ El controlador de los elementos personalizados en un documento web es el objeto 
 
 Para registrar un elemento personalizado en la página, debes usar el método {{domxref("CustomElementRegistry.define()")}} . Éste toma los siguientes argumentos:
 
-- Un {{domxref("DOMString")}} que representa el nombre que estás dando al elemento. Nótese que los nombres de los elementos personalizados [deben contener un guión](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name) (kebab-case); Los nombres no pueden ser palabras simples.
+- Un {{jsxref("String")}} que representa el nombre que estás dando al elemento. Nótese que los nombres de los elementos personalizados [deben contener un guión](https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name) (kebab-case); Los nombres no pueden ser palabras simples.
 - Un objeto [class](/es/docs/Web/JavaScript/Reference/Classes) que define el comportamiento del ejemplo.
 - Opcionalmente, un objeto de opciones que contiene la propiedad `extends` , que especifica el elemento preconstruido del que hereda (solo es relevante para elementos personalizados preconstruidos; ver la definición más abajo).
 
@@ -50,7 +50,7 @@ Aprenderás más sobre estos callbacks en la sección [Using the lifecycle callb
 Hay dos tipos de elementos personalizados :
 
 - **Elementos personalizados autónomos** — estos no heredan de elementos estándar HTML. Se usan estos elementos en una página escribiéndolos literalmente como un elemento HTML nuevo. Por ejemplo `<popup-info>`, o `document.createElement("popup-info")`.
-- **Elementos preconstruidos** **personalizados** heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) [`is`](/es/docs/Web/HTML/Global_attributes#is) y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo `<p is="word-count">`, o `document.createElement("p", { is: "word-count" })`.
+- **Elementos preconstruidos** **personalizados** heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) [`is`](/es/docs/Web/HTML/Reference/Global_attributes#is) y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo `<p is="word-count">`, o `document.createElement("p", { is: "word-count" })`.
 
 ## Trabajando mediante algunos ejemplos sencillos
 
@@ -210,7 +210,8 @@ Puedes definir varios callbacks dentro de la definición de la clase de un eleme
 
 - `connectedCallback`: Se invoca cada vez que se añade un elemento personalizado a un documento. Esto ocurrirá cada vez que el nodo se mueva, y puede suceder antes de que todo el contenido se haya parseado.
 
-  > **Nota:** `connectedCallback` puede llamarse cuando el elemento ya no esté conectado. Para asegurarse usar {{domxref("Node.isConnected")}}.
+  > [!NOTE]
+  > `connectedCallback` puede llamarse cuando el elemento ya no esté conectado. Para asegurarse usar {{domxref("Node.isConnected")}}.
 
 - `disconnectedCallback`: Se invoca cada vez que el elemento se desconecta del DOM del documento.
 - `adoptedCallback`: Se invoca cada vez que el elemento se mueve a un nuevo documento.

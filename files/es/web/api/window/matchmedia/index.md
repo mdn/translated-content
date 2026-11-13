@@ -5,7 +5,7 @@ slug: Web/API/Window/matchMedia
 
 {{APIRef}}
 
-El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) indicada.
+El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQueryList")}} que representa los analizados de la [media query](/es/docs/Web/CSS/Guides/Media_queries/Using) indicada.
 
 ## Sintaxis
 
@@ -39,7 +39,7 @@ Consulte [Probando media queries](/es/docs/Web/CSS/CSS_media_queries/Testing_med
 
 ## Ver también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/es/docs/Web/CSS/Guides/Media_queries/Using)
 - [Probando media queries](/es/docs/Web/Guide/CSS/probando_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

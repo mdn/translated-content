@@ -2,7 +2,7 @@
 title: XMLHttpRequest：setRequestHeader() 方法
 slug: Web/API/XMLHttpRequest/setRequestHeader
 l10n:
-  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -13,9 +13,9 @@ l10n:
 
 如果沒有使用此設定 {{HTTPHeader("Accept")}} 標頭，則在呼叫 {{domxref("XMLHttpRequest.send", "send()")}} 時，將隨請求傳送類型為「`*/*`」 的 `Accept` 標頭。
 
-出於安全原因，有幾個由使用者代理管控的{{Glossary("Forbidden_header_name", "禁止的請求標頭")}}。任何嘗試從前端 JavaScript 程式碼中設置這些標頭的值之行為都會被忽略，且不會發出警告或錯誤。
+出於安全原因，有幾個由使用者代理管控的{{Glossary("Forbidden request header", "禁止的請求標頭")}}。任何嘗試從前端 JavaScript 程式碼中設置這些標頭的值之行為都會被忽略，且不會發出警告或錯誤。
 
-此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
+此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
 
 > [!NOTE]
 > 對於你的自訂字段，跨域發送請求時可能會遇到「**not allowed by Access-Control-Allow-Headers in preflight response**」的例外狀況。在這種情況下，你需要在伺服器端的回應標頭中設定 {{HTTPHeader("Access-Control-Allow-Headers")}}。

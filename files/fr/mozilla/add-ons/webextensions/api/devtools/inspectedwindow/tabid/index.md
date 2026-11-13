@@ -3,8 +3,6 @@ title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 ---
 
-{{AddonSidebar}}
-
 L'ID de {{WebExtAPIRef("tabs.Tab", "tab")}} est que cette instance des devtools est jointe, représenté comme un nombre.
 
 Cela peut être envoyé à la page de fond de l'extension, de sorte que la page d'arrière plan peut utiliser l'API {{WebExtAPIRef("tabs")}} pour interargir avec l'onglet :
@@ -43,8 +41,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

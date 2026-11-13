@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaHidden`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性の値を反映し、要素がアクセシビリティ API に公開されているかどうかを示します。
+**`ariaHidden`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性の値を反映し、要素がアクセシビリティ API に公開されているかどうかを示します。
 
 ## 値
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 例
 
-この例では、ID が `hidden` の要素の [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性は "true" に設定されています。`ariaHidden` を使用して値を "false" に更新します。
+この例では、ID が `hidden` の要素の [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性は "true" に設定されています。`ariaHidden` を使用して値を "false" に更新します。
 
 ```html
 <div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>

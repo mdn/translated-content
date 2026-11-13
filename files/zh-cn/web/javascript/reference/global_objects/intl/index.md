@@ -3,23 +3,21 @@ title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 
-{{JSRef}}
-
-**`Intl`** 对象是 ECMAScript 国际化 API 的一个命名空间，它提供了精确的字符串对比、数字格式化，和日期时间格式化。{{jsxref("Collator")}}，{{jsxref("NumberFormat")}} 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是 `Intl` 对象的属性。本页文档内容包括了这些属性，以及国际化使用的构造器和其他语言的方法等常见的功能。
+**`Intl`** 对象是 ECMAScript 国际化 API 的一个命名空间，它提供了精确的字符串对比、数字格式化，和日期时间格式化。{{jsxref("Intl/Collator", "Collator")}}，{{jsxref("Intl/NumberFormat", "NumberFormat")}} 和 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 对象的构造函数是 `Intl` 对象的属性。本页文档内容包括了这些属性，以及国际化使用的构造器和其他语言的方法等常见的功能。
 
 ## 属性
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
   - : collators 的构造函数，用于启用对语言敏感的字符串比较的对象。
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
   - : 用于启用语言敏感的日期和时间格式的对象的构造函数。
-- {{jsxref("Global_Objects/ListFormat", "Intl.ListFormat")}}
+- {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
   - : 用于启用语言敏感数字格式的对象的构造函数。
-- {{jsxref("Global_Objects/PluralRules", "Intl.PluralRules")}}
+- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - : 用于启用多种敏感格式和多种语言语言规则的对象的构造函数。
-- {{jsxref("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
 
 ## 方法
@@ -43,7 +41,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 
 在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在[IANA 语言子标记注册](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) 中找到。
 
-BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Collator")}}，{{jsxref("NumberFormat")}}，或者 {{jsxref("DateTimeFormat")}} 对象。例如：
+BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Intl/Collator", "Collator")}}，{{jsxref("Intl/NumberFormat", "NumberFormat")}}，或者 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 对象。例如：
 
 - `"de-DE-u-co-phonebk"`：使用德语的电话簿排序变体，这会把元音变音扩展成字符对：ä → ae, ö → oe, ü → ue。
 - `"th-TH-u-nu-thai"`：在数字格式中使用泰语的数值表示（๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙）
@@ -54,7 +52,7 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
 
 `locales` 参数，在除去所有的 Unicode 扩展之后，会被转化成来自应用的优先请求。运行时拿它和可用的语言区域做对比然后选择出最合适的一个。有两种匹配算法：“查找”匹配遵循 [BCP 47](https://tools.ietf.org/html/rfc5646) 中指定的查找算法；“最佳命中”匹配器会让运行时至少提供一个语言区域，但合适请求的结果可能会比查找算法的要多。如果应用没有提供一个 locales 参数，或者运行时没有一个匹配请求的语言区域，那么会使用运行时默认的语言区域。匹配器可以使用 `options` 参数的一个属性来进行选择（见下方）。
 
-如果选中的语言标记有一个 Unicode 扩展子字符串，这个扩展会用于自定义构造对象或者方法的行为。每一个构造函数或者方法仅支持 Unicode 扩展定义的 key 的一个子集，和依赖于语言标记的支持的值。例如，`“co”`这个 key（collation）只在 {{jsxref("Collator")}} 中支持，它的值“phonebk”只在德语中支持。
+如果选中的语言标记有一个 Unicode 扩展子字符串，这个扩展会用于自定义构造对象或者方法的行为。每一个构造函数或者方法仅支持 Unicode 扩展定义的 key 的一个子集，和依赖于语言标记的支持的值。例如，`“co”`这个 key（collation）只在 {{jsxref("Intl/Collator", "Collator")}} 中支持，它的值“phonebk”只在德语中支持。
 
 ### `options` 参数
 
@@ -74,16 +72,14 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
 
 - 介绍：[The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - 构造函数
-
-  - {{jsxref("Collator", "Intl.Collator")}}
-  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("ListFormat", "Intl.ListFormat")}}
-  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
-  - {{jsxref("PluralRules", "Intl.PluralRules")}}
-  - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 
 - 方法
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

@@ -15,7 +15,7 @@ selectElt.setCustomValidity(string);
 
 ### Параметр
 
-- _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
+- _Строка_ {{jsxref("String")}} содержащая сообщение об ошибке.
 
 ## Спецификации
 
@@ -27,4 +27,4 @@ selectElt.setCustomValidity(string);
 
 ## Смотрите также
 
-- [Проверка(валидация) форм.](/ru/docs/Web/HTML/Constraint_validation)
+- [Проверка(валидация) форм.](/ru/docs/Web/HTML/Guides/Constraint_validation)

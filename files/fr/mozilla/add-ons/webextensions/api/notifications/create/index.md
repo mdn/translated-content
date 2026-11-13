@@ -3,8 +3,6 @@ title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 
-{{AddonSidebar}}
-
 Crée et affiche une notification.
 
 Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le contenu et le comportement de la notification.
@@ -134,5 +132,3 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

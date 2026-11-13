@@ -3,8 +3,6 @@ title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
 
-{{AddonSidebar}}
-
 Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -20,9 +18,7 @@ var gettingPopup = browser.pageAction.getPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. ID de l'onglet dont vous souhaitez obtenir la fenêtre contextuelle.
 
@@ -61,8 +57,6 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

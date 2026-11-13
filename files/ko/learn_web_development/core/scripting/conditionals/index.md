@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 어떤 프로그래밍 언어든 코드는 의사 결정을 내리고 입력 내용에 따라 작업을 수행해야 합니다. 예를 들어 게임에서 플레이어의 생명 수치가 0이면 게임이 종료됩니다. 날씨 앱에서는 아침에 해가 뜬 그림을 보여주고 밤에는 달과 별을 보여줍니다. 이 문서에서는 JavaScript에서 조건문이 작동하는 방법을 살펴 보겠습니다.
 
@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/Building_blocks/conditionals
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 활용 능력, HTML, CSS,
-        <a href="/ko/docs/Learn/JavaScript/First_steps">Javascript 첫걸음</a>
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">Javascript 첫걸음</a>
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ if (조건) {
 위를 살펴보면:
 
 1. 키워드 `if` 뒤에 괄호가 옵니다.
-2. 시험할 조건은 괄호 안에 위치합니다 (전형적으로 "이 값은 다른 값보다 큰가?", 또는 "이 값은 존재하는가?"). 이 조건은 마지막 모듈에서 논의했던 비교 연산자([comparison operators](/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators))를 사용할 것이고 `true`나 `false`를 리턴합니다.
+2. 시험할 조건은 괄호 안에 위치합니다 (전형적으로 "이 값은 다른 값보다 큰가?", 또는 "이 값은 존재하는가?"). 이 조건은 마지막 모듈에서 논의했던 비교 연산자([comparison operators](/ko/docs/Learn_web_development/Core/Scripting/Math#comparison_operators))를 사용할 것이고 `true`나 `false`를 리턴합니다.
 3. 내부의 중괄호 안에 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 `true`를 반환하는 경우에만 실행됩니다.
 4. 키워드 `else`.
 5. 또 다른 중괄호 안에 더 많은 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 `true`가 아닌 경우에만 실행됩니다. — 또는 다른 말로 하자면, 조건이 `false`인 경우에만 실행됩니다.
@@ -157,7 +157,7 @@ function setWeather() {
 
 ### 비교 연산자에 대한 메모
 
-비교 연산자는 우리의 조건문 안의 조건을 테스트하는데 사용됩니다. 우리는 먼저 이전의 [JavaScript의 기본적인 연산 - 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators) 문서에서 비교 연산자를 봤습니다. 우리의 선택들은 다음과 같습니다:
+비교 연산자는 우리의 조건문 안의 조건을 테스트하는데 사용됩니다. 우리는 먼저 이전의 [JavaScript의 기본적인 연산 - 숫자와 연산자](/ko/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) 문서에서 비교 연산자를 봤습니다. 우리의 선택들은 다음과 같습니다:
 
 - `===`와 `!==` — 한 값이 다른 값과 같거나 다른지 테스트한다.
 - `<` 와 `>` — 한 값이 다른 값보다 작은지 큰지 테스트한다.
@@ -318,7 +318,8 @@ switch (expression) {
 6. 원하는 만큼 다른 케이스를 (3번–5번) 입력할 수 있습니다.
 7. 키워드 `default`는 그 뒤에 선택이 없다는 것을 제외하고 케이스들 중 하나와 완전히 같은 코드 패턴인데 (3번–5번), 이 블록 이후에는 실행할 어떤 코드도 없으므로 `break` 문이 필요하지 않습니다. 일치하는 항목이 없으면 실행되는 기본 옵션입니다.
 
-> **참고:** `default`를 반드시 포함하지 않아도 됩니다 — 만약 표현식이 미지의 값과 같게 되어버릴 수 있는 경우가 없다면 여러분은 안전하게 이것을 생략할 수 있습니다. 그러나, 그 경우가 있다면, 여러분은 미지의 경우를 다루기 위해 이것을 포함할 필요가 있습니다.
+> [!NOTE]
+> `default`를 반드시 포함하지 않아도 됩니다 — 만약 표현식이 미지의 값과 같게 되어버릴 수 있는 경우가 없다면 여러분은 안전하게 이것을 생략할 수 있습니다. 그러나, 그 경우가 있다면, 여러분은 미지의 경우를 다루기 위해 이것을 포함할 필요가 있습니다.
 
 ### A switch example
 
@@ -682,8 +683,7 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea
->
+}</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
@@ -800,17 +800,17 @@ textarea.onkeyup = function () {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 조건문](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 조건문](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals).
 
 ## 결론
 
-그리고 이것이 여러분이 지금 JavaScript에서 알아야 할 조건문 구조에 대한 모든 것입니다! 저는 여러분이 이 개념들을 이해했고 이 예제들을 쉽게 통과했을 것이라고 확신합니다; 만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn#contact_us)에서 도움을 요청해 보세요.
+그리고 이것이 여러분이 지금 JavaScript에서 알아야 할 조건문 구조에 대한 모든 것입니다! 저는 여러분이 이 개념들을 이해했고 이 예제들을 쉽게 통과했을 것이라고 확신합니다; 만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn_web_development#contact_us)에서 도움을 요청해 보세요.
 
 ## 같이 보기
 
-- [비교 연산자(Comparison operators)](/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [비교 연산자(Comparison operators)](/ko/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
 - [조건문 자세하게 살펴보기](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else 참고서](/ko/docs/Web/JavaScript/Reference/Statements/if...else)
 - [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

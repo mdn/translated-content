@@ -114,7 +114,7 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Ver también
 
-- [Parsing and serializing XML](/es/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/es/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)
 - [XMLSerializer](/es/docs/Web/API/XMLSerializer)
 - [Parsing HTML to DOM](/es/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

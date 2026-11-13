@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
 ---
 
-{{GamesSidebar}}
-
 Esta página muestra las técnicas básicas esenciales para cualquiera que quiera desarrollar juego web usando tecnologías web abiertas.
 
 - [Utilizar scripts asíncronos para asm.js](/es/docs/Games/Techniques/Async_scripts)
   - : Especialmente cuando se trabaje en juegos medianos y grandes, los scripts asíncronos son una técnica esencial de la que aprovecharse, para poder compilar JavaScript fuera del hilo principal y que pueda ser almacenado en caché para próximos usos, resultando en una mejora significativa del rendimiento para los usuarios. Este artículo explica cómo.
-- [Mejorando rendimiento inicial](/es/docs/Web/Performance/Optimizing_startup_performance)
+- [Mejorando rendimiento inicial](/es/docs/Web/Performance/Guides/Optimizing_startup_performance)
   - : Cómo asegurarse de que un juego se inicia rápidamente, sin dificultad y sin parecer que bloquea el navegador o el dispositivo del usuario.
 - [Utilizar canales de datos peer-to-peer WebRTC](/es/docs/Games/Techniques/WebRTC_data_channels)
   - : Además de proporcionar soporte para comunicaciones de audio y video, WebRTC permite al desarrollador configurar canales de datos _peer-to-peer_ para intercambiar activamente texto o datos binarios entre usuarios. Este artículo explica lo que esto puede significar, y muestra como usar librerías que facilitan el trabajo.

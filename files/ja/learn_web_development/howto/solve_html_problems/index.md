@@ -1,11 +1,12 @@
 ---
 title: よくある HTML の問題の解決
+short-title: よくある HTML の問題
 slug: Learn_web_development/Howto/Solve_HTML_problems
 l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-{{LearnSidebar}}
+## よくある問題と解決策
 
 以下のリンクは、 HTML で解決しなければならない日常的な問題の解決策を示すものです。
 
@@ -28,14 +29,14 @@ HTML は文書の意味的な情報を提供することに特化しているの
 - [画像やグラフィックに注釈を付ける方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#図表と図表のキャプションで画像に注釈を付ける)
 - [略語をマークして理解しやすくする方法](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)
 - [ウェブページに引用を追加する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#引用)
-- [HTML で用語を定義する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
+- [HTML で用語を定義する方法](/ja/docs/Web/HTML/How_to/Define_terms_with_HTML)
 
 ### ハイパーリンク
 
 HTML を使用する主な理由の 1 つは、{{Glossary("Hyperlink", "ハイパーリンク")}}を使用してナビゲーションを簡単にすることであり、これは様々な形で使用することができます。
 
 - [ハイパーリンクを作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- [HTML を使って目次を作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#アクティブラーニング_ナビゲーションメニューの作成)
+- [HTML を使って目次を作成する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#ナビゲーションメニューの作成)
 
 ### 画像とマルチメディア
 
@@ -47,7 +48,7 @@ HTML を使用する主な理由の 1 つは、{{Glossary("Hyperlink", "ハイ�
 HTMLは文書構造を設定するだけです。表示に関する課題を解決するには、 {{glossary("CSS")}} を使用するか、スクリプトを使用してページを操作可能にしてください。
 
 - [ウェブページで CSS を使用する方法](/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started#文書に_css_を追加)
-- [ウェブページで JavaScript を使用する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
+- [ウェブページで JavaScript を使用する方法](/ja/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
 
 ### 埋め込みコンテンツ
 
@@ -74,18 +75,18 @@ HTMLは文書構造を設定するだけです。表示に関する課題を解�
 ### データ表現
 
 - 数値とコード値を HTML で表現する方法 - [上付き文字と下付き文字](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#上付きと下付き)、および[コンピューターのコードの表現](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#コンピューターのコードの表現)を参照してください。
-- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)
 
 ### 上級のテキスト意味づけ
 
-- [HTML の改行を制御する方法](/ja/docs/Web/HTML/Element/br)
+- [HTML の改行を制御する方法](/ja/docs/Web/HTML/Reference/Elements/br)
 - 変更をマークする方法 (追加および削除されたテキスト) - {{htmlelement("ins")}} と {{htmlelement("del")}} 要素を参照してください
 
 ### 上級の画像やマルチメディア
 
-- [レスポンシブ画像をウェブページに追加する方法](/ja/docs/Web/HTML/Responsive_images)
+- [レスポンシブ画像をウェブページに追加する方法](/ja/docs/Web/HTML/Guides/Responsive_images)
 - [ウェブページにベクター画像を追加する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
-- [画像にヒットマップを追加する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
+- [画像にヒットマップを追加する方法](/ja/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
 
 ### 国際化
 
@@ -96,8 +97,8 @@ HTML は単一言語ではありません。一般的な国際化の問題を処
 
 ### パフォーマンス
 
-- [読み込みが速い HTML ページを作成する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [読み込みが速い HTML ページを作成する方法](/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
 
 ## 関連情報
 
-- [HTML 早見表](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)
+- [HTML 早見表](/ja/docs/Web/HTML/Guides/Cheatsheet)

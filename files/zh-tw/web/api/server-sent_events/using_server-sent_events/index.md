@@ -94,14 +94,14 @@ while (true) {
 ```
 
 上述的程式碼會在每秒產生一個類型為「ping」的事件。每一個事件的資料是一個 JSON 物件，內容為事件產生時的 ISO 8601 時間戳。同時會隨機發送一個簡易訊息（沒有事件類型）。
-迴圈的執行會獨立於連線的狀態，，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
+迴圈的執行會獨立於連線的狀態，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
 
 > [!NOTE]
 > 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例——參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## 錯誤處理
 
-當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
+當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
 
 ```js
 evtSource.onerror = function (err) {
@@ -113,7 +113,7 @@ evtSource.onerror = function (err) {
 
 預設的情況下，如果客戶端和伺服器的連線關閉則連線會被重啟。連線的關閉會伴隨著 `.close()` 方法的執行。
 
-```plain
+```js
 evtSource.close();
 ```
 
@@ -152,7 +152,7 @@ evtSource.close();
 
 第二則訊息包含了 data 欄位及「some text」的值。第三則訊息包含了 data 欄位及「another message\nwith two lines」。注意在內容所出現的換行符號。
 
-```plain
+```bash
 : this is a test stream
 
 data: some text
@@ -165,7 +165,7 @@ data: with two lines
 
 這個範例傳送了一些命名的事件。每一個事件都被指定了 `event` 欄位並且 `data` 欄位也有相應的 JSON 字串作為客戶端回應事件所需的資料。 `data` 欄位的內容可以是任何的字串；它並沒有強制必須以 JSON 的格式撰寫。
 
-```plain
+```bash
 event: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 
@@ -183,7 +183,7 @@ data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 
 你並非一定只能用未命名訊息或已分類的事件；實際上你可以在單一的事件中把它們混合在一起。
 
-```plain
+```bash
 event: userconnect
 data: {"username": "bobby", "time": "02:33:48"}
 

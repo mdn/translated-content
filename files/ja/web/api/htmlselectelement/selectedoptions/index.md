@@ -102,4 +102,4 @@ orderButton.addEventListener(
 
 ## 関連情報
 
-- [ドロップダウンコントロール](/ja/docs/Learn/Forms/Other_form_controls#%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB)
+- [ドロップダウンコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB)

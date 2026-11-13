@@ -55,7 +55,7 @@ No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Boolean/Boolean", "Boolean()")}}
+- {{jsxref("Boolean.Boolean", "Boolean()")}}
   - : Crea un nuevo objeto `Boolean`.
 
 ## Métodos de instancia
@@ -99,5 +99,5 @@ var bObjProto = new Boolean({});
 ## Ve también
 
 - [Boolean](/es/docs/Glossary/Boolean)
-- [Boolean primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Boolean primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#boolean_type)
 - [Tipo de dato `Boolean` (Wikipedia)](https://es.wikipedia.org/wiki/Tipo_de_dato_lógico)

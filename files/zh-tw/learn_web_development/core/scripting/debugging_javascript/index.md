@@ -1,10 +1,7 @@
 ---
 title: Writing forward-compatible websites
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
-
-{{LearnSidebar}}
 
 這個頁面將解釋如何撰寫在新的瀏覽器版本發布時不會遭受毀損的網頁。
 

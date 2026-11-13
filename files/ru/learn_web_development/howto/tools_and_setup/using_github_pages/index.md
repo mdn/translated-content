@@ -3,7 +3,7 @@ title: Как использовать GitHub Pages?
 slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 [GitHub](https://github.com/) — это сайт «социальной разработки». Он позволяет загружать репозитории кода для хранения **в системе управления версиями** [Git](http://git-scm.com/). После загрузки вы можете сотрудничать с другими участниками для работы над общим проектом, а ещё это система с открытым исходным кодом по умолчанию: любой человек в мире может найти ваш код на GitHub, использовать его, учиться по нему и улучшать его. Вы тоже можете взаимодействовать с кодом других людей! В этой статье представлено базовое руководство по публикации контента с использованием функции gh-pages Github.
 
@@ -98,4 +98,4 @@ git push
 
 Вы можете написать более подходящее сообщение вместо _another commit_, чтобы уточнить, что именно вы только что изменили.
 
-Мы едва коснулись Git. Чтобы узнать больше, начните с нашей статьи [Git и GitHub](/ru/docs/Learn/Tools_and_testing/GitHub).
+Мы едва коснулись Git. Чтобы узнать больше, начните с нашей статьи [Git и GitHub](/ru/docs/Learn_web_development/Core/Version_control).

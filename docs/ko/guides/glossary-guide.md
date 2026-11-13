@@ -49,6 +49,7 @@
 | Description            | 설명            | [링크][Array]                                                                                                                           |
 | Example                | 예제            | [링크][target]                                                                                                                          |
 | Examples               | 예제            | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
+| Exceptions             | 예외            |                                                                                                                                         |
 | Guides                 | 안내서          |                                                                                                                                         |
 | In this module         | 이번 과정에서는 | [링크][React_getting_started]                                                                                                           |
 | Instance properties    | 인스턴스 속성   |                                                                                                                                         |
@@ -70,6 +71,7 @@
 | Tools & resources      | 도구 & 리소스   | [링크][JavaScript]                                                                                                                      |
 | Transient activation   | 임시 활성화     |                                                                                                                                         |
 | Tutorial               | 자습서          |                                                                                                                                         |
+| Usage context          | 사용 맥락       |                                                                                                                                         |
 | Usage notes            | 사용 일람       |                                                                                                                                         |
 | Web Technologies       | 웹 기술들       | [링크][Introduction_to_HTML5_Game_Development]                                                                                          |
 
@@ -85,6 +87,7 @@
 | Directives          | 지시어           | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Guide               | 안내서           | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Instruction         | 지침             | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
+| Learning Outcomes   | 학습 성과        |                                                                                        |
 | Naming              | 이름 지정        |                                                                                        |
 | Parameters          | 매개변수         | [링크][AudioWorkletNode]                                                               |
 | Prerequisites       | 선행 지식        |                                                                                        |

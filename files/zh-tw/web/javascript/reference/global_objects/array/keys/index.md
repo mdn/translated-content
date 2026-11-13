@@ -3,8 +3,6 @@ title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
-{{JSRef}}
-
 **`keys()`** 方法會回傳一個包含陣列中的每一個索引之鍵（keys）的新 **`Array Iterator`** 物件。
 
 {{InteractiveExample("JavaScript Demo: Array.keys()")}}
@@ -24,7 +22,7 @@ for (const key of iterator) {
 
 ## 語法
 
-```plain
+```js-nolint
 arr.keys()
 ```
 

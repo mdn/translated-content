@@ -3,7 +3,7 @@ title: "EventTarget: removeEventListener() メソッド"
 short-title: removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -36,11 +36,9 @@ removeEventListener(type, listener, useCapture)
 - `listener`
   - : イベントターゲットから取り外すイベントハンドラーの[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener#イベントリスナーのコールバック)関数です。
 - `options` {{optional_inline}}
-
   - : イベントリスナーに関する特性を指定する、オプションのオブジェクトです。
 
     次のオプションが使用できます。
-
     - `capture`: 論理値で、取り外す[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener#イベントリスナーのコールバック)がキャプチャリスナーとして登録されているか否かを指定します。この引数がない場合、既定の値として `false` が想定される。
 
 - `useCapture` {{optional_inline}}
@@ -110,10 +108,10 @@ function makeBackgroundYellow() {
   toggle = !toggle;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+clickTarget.addEventListener("click", makeBackgroundYellow);
 
 mouseOverTarget.addEventListener("mouseover", () => {
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  clickTarget.removeEventListener("click", makeBackgroundYellow);
 });
 ```
 

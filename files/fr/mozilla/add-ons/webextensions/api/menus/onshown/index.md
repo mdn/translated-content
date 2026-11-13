@@ -3,8 +3,6 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur a montré un menu.
 
 Une extension peut utiliser cet événement pour mettre à jour ses éléments de menu en utilisant des informations qui ne sont disponibles qu'une fois le menu affiché. Généralement, une extension trouvera la mise à jour dans son gestionnaire `onShown` puis appellera {{WebExtAPIRef("menus.refresh()")}} pour mettre à jour le menu lui-même.
@@ -92,13 +90,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `info`
-
       - : `Object`. Ceci est juste comme l'objet {{WebExtAPIRef('menus.OnClickData')}}, sauf qu'il contient deux propriétés supplémentaires:
-
         - `contexts`: un tableau de tous les {{WebExtAPIRef("menus.ContextType", "contexts")}} applicables à ce menu.
         - `menuIds`: un tableau d'ID de tous les éléments de menu appartenant à cette extension qui sont affichés dans ce menu.
 
@@ -107,7 +101,6 @@ Les événements ont trois fonctions :
         Les propriétés `contexts`, `menuIds`, `frameId`, et `editable` modifiables sont toujours fournis. Toutes les autres propriétés dans `info` sont uniquement fournies si l'extension a la [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour la page.
 
     <!---->
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 

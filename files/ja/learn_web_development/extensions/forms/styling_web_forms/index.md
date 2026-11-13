@@ -2,10 +2,10 @@
 title: ウェブフォームへのスタイル設定
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 前回までのいくつかの記事では、HTML でウェブフォームを作成する方法を示しました。これで、[CSS](/ja/docs/Web/CSS) でスタイル設定する方法を示します。
 
@@ -41,7 +41,7 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} および {{HTMLElement("legend")}}
-3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) 以外
+3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) 以外
 4. 複数行の {{HTMLElement("textarea")}}
 5. ボタン（{{HTMLElement("input")}} と {{HTMLElement("button")}} の両方）
 6. {{HTMLElement("label")}}
@@ -50,17 +50,19 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 #### スタイル設定が困難なもの
 
 1. チェックボックスとラジオボタン
-2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+2. [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 
 これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)の記事で見ていきます。
 
 #### 内部が CSS 単独ではスタイル設定できないもの
 
-- [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日時関連コントロール
-- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)のような日時関連コントロール
+- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - ドロップダウンウィジェットの作成に含まれる要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む。
+  > [!NOTE]
+  > 一部のブラウザーでは、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)に対応するようになりました。これは、HTML と CSS の機能群であり、これらを組み合わせることで、`<select>` 要素とそのコンテンツを、通常の DOM 要素と同様に完全にカスタマイズできるようになります。
 - {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 
 例えば、日付ピッカーのカレンダーや、クリックするとオプションリストが表示されるボタンなどは、CSS を使用するだけではスタイル設定することができません。
@@ -72,7 +74,7 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 
 ## 単純なフォームウィジェットのスタイル設定
 
-前節の「スタイル設定しやすい」ウィジェットは、[初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)および [CSS の構成要素](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks)の記事で紹介したテクニックを使用してスタイル設定することができます。また、UI の現在の状態に基づいたスタイル設定を可能にする特別なセレクター [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)もあります。
+前節の「スタイル設定しやすい」ウィジェットは、[初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)および [CSS の構成要素](/ja/docs/Learn_web_development/Core/Styling_basics)の記事で紹介したテクニックを使用してスタイル設定することができます。また、UI の現在の状態に基づいたスタイル設定を可能にする特別なセレクター [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)もあります。
 
 この記事の終わりで例を説明しますが、最初の段階で、フォームのスタイル設定について知っておくべきいくつかの特別な側面について説明します。
 
@@ -92,13 +94,13 @@ textarea {
 
 {{cssxref('inherit')}} のプロパティ値で、プロパティ値は計算された親要素のプロパティ値に一致するようになります。つまり親の値を継承します。
 
-以下のスクリーンショットで違いを示します。左側は Mac OS X の Chrome における `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, `<button>` 要素の既定のレンダリングで、プラットフォームのキテイノフォントスタイルを使用しています。右側は同じ要素ですが、フォントを調和させるスタイルルールを適用したものです。
+以下のスクリーンショットで違いを示します。左側は Mac OS X の Chrome における `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, `<button>` 要素のデフォルトのレンダリングで、プラットフォームのキテイノフォントスタイルを使用しています。右側は同じ要素ですが、フォントを調和させるスタイルルールを適用したものです。
 
-![既定値および継承されたフォントファミリーを持つフォームコントロール。既定値では、ある型はセリフで、ある型はサンセリフである。継承すると、すべてのフォントが親のフォントファミリ（この場合は段落）に変更されるはずです。奇妙なことに、 submit 型の入力は親の段落から継承されません。](forms_fontfamily.png)
+![デフォルト値および継承されたフォントファミリーを持つフォームコントロール。デフォルト値では、ある型はセリフで、ある型はサンセリフである。継承すると、すべてのフォントが親のフォントファミリ（この場合は段落）に変更されるはずです。奇妙なことに、 submit 型の入力は親の段落から継承されません。](forms_fontfamily.png)
 
-既定はいろいろと変わります。継承により、フォントは親のフォントファミリーに変更されます — ここでは親コンテナーの既定の serif フォントです。ほぼすべてそうですが、例外として Chrome では`<input type="submit">` は親段落を継承しません。むしろ、{{cssxref('font-family#Values', 'font-family: system-ui')}}を使います。これは同等な入力タイプの中で `<button>` 要素を使う理由です。
+デフォルトはいろいろと変わります。継承により、フォントは親のフォントファミリーに変更されます — ここでは親コンテナーのデフォルトの serif フォントです。ほぼすべてそうですが、例外として Chrome では`<input type="submit">` は親段落を継承しません。むしろ、{{cssxref('font-family#Values', 'font-family: system-ui')}}を使います。これは同等な入力タイプの中で `<button>` 要素を使う理由です。
 
-フォームはシステムの既定のスタイルを使用するか、コンテンツに合うよう設計されたカスタムスタイルを使用するかについては多くの議論があります。これを決めるのは、設計者としてサイトやウェブアプリケーションを作成するあなた次第です。
+フォームはシステムのデフォルトのスタイルを使用するか、コンテンツに合うよう設計されたカスタムスタイルを使用するかについては多くの議論があります。これを決めるのは、設計者としてサイトやウェブアプリケーションを作成するあなた次第です。
 
 ### ボックスモデル
 
@@ -118,21 +120,106 @@ button {
 }
 ```
 
-下のスクリーンショットで、左の列は `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、`<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`、{{htmlelement('button')}} の既定の描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
+下のスクリーンショットで、左の列は `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、`<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`、{{htmlelement('button')}} のデフォルトの描画、右の列は同じ要素に上のルールを使用して作成したものです。各種のウィジェットのプラットフォームのデフォルトルールと比較して、すべての要素が同じ領域を占めるようにすることが可能な点に注目してください。
 
 ![ボックスモデルのプロパティは、ほとんどの入力型に効果があります。](boxmodel_formcontrols1.png)
 
 スクリーンショットではわからないかもしれませんが、ラジオやチェックボックスの操作はそのままで、 {{cssxref('width')}} プロパティで提供される 150px の水平空間に中央配置されています。他のブラウザーでは、ウィジェットが中央に配置されないことがありますが、割り当てられた空間は守られます。
 
-### legend の配置
+### 凡例の配置
 
-{{HTMLElement("legend")}} 要素はスタイル設定では問題ありませんが、その配置を操作するのは少し厄介かもしれません。既定では、常に親である {{HTMLElement("fieldset")}} の上境界の上、左上隅の近くに配置されます。他の場所、例えば fieldset の内部や左下隅の近くに配置するには、位置指定を行う必要があります。
+{{HTMLElement("legend")}} 要素はスタイル設定では問題ありませんが、その配置を操作するのは少し厄介かもしれません。デフォルトでは、常に親である {{HTMLElement("fieldset")}} の上境界の上、左上隅の近くに配置されます。他の場所、例えばフィールドセットの内部や左下隅の近くに配置するには、位置指定を行う必要があります。
 
 下記の例を見てください。
 
-{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
+```html hidden live-sample___positioned-legend
+<form>
+  <fieldset>
+    <legend>好きな野菜をすべて選んでください</legend>
+    <ul>
+      <li>
+        <label for="carrots">にんじん</label>
+        <input
+          type="checkbox"
+          checked
+          id="carrots"
+          name="carrots"
+          value="carrots" />
+      </li>
+      <li>
+        <label for="peas">エンドウ豆</label>
+        <input type="checkbox" id="peas" name="peas" value="peas" />
+      </li>
+      <li>
+        <label for="cabbage">キャベツ</label>
+        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
+      </li>
+      <li>
+        <label for="cauliflower">カリフラワー</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
+      </li>
+      <li>
+        <label for="broccoli">ブロッコリー</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>好きな料理は何ですか？</legend>
+    <ul>
+      <li>
+        <label for="soup">スープ</label>
+        <input type="radio" checked id="soup" name="meal" value="soup" />
+      </li>
+      <li>
+        <label for="curry">カレー</label>
+        <input type="radio" id="curry" name="meal" value="curry" />
+      </li>
+      <li>
+        <label for="pizza">ピザ</label>
+        <input type="radio" id="pizza" name="meal" value="pizza" />
+      </li>
+      <li>
+        <label for="tacos">タコス</label>
+        <input type="radio" id="tacos" name="meal" value="tacos" />
+      </li>
+      <li>
+        <label for="bolognese">ボロネーゼ</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
+      </li>
+    </ul>
+  </fieldset>
+</form>
+```
 
-この方法で legend を配置するには、次の CSS を使います（単純化するため、他の宣言は削除しています）。
+```css hidden live-sample___positioned-legend
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+```
+
+{{EmbedLiveSample("positioned-legend", '100%', 400)}}
+
+この方法で凡例を配置するには、次の CSS を使います（単純化するため、他の宣言は除去しています）。
 
 ```css
 fieldset {
@@ -150,7 +237,8 @@ legend {
 
 {{HTMLElement("legend")}} 要素はアクセシビリティにとってとても重要です。フィールドセット内の各フォーム要素のラベルの一部として支援技術によって読み上げられます。しかし、上記のようなテクニックを使用しても問題ありません。 legend の内容はこれまでと同じように読み上げられます。見た目の位置が変更されただけです。
 
-> **メモ:** {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
+> [!NOTE]
+> {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
 
 ## 具体的なスタイル設定の例
 
@@ -193,7 +281,7 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn_web_development/Extensio
 
 ここからが面白いところです。コードを書き始める前に、ここでは 3 つの追加要素が必要です。
 
-1. [はがきの背景](background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存してください。
+1. [はがきの背景](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存してください。
 2. タイプライター風フォント: [dafont.com の "Mom's Typewriter" フォント](https://www.dafont.com/moms-typewriter.font?back=theme)、TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
 3. 手書き風フォント: [fontsquirrel.com の "Journal"](https://www.dafont.com/journal.font) — TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
 
@@ -235,7 +323,7 @@ body {
   font: 1.3rem sans-serif;
   padding: 0.5em;
   margin: 0;
-  background: #222;
+  background: #222222;
 }
 
 form {
@@ -245,9 +333,9 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: white url("background.jpg");
 
-  /* we create our grid */
+  /* 独自のグリッドを作成 */
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -255,7 +343,7 @@ form {
 }
 ```
 
-注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
+注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
 
 ```css
 h1 {
@@ -314,11 +402,11 @@ textarea:focus {
 }
 ```
 
-これでテキストフィールドのスタイル設定が完了しましたが、次は単一行および複数行のテキストフィールドの表示が同じになるよう調整しなければなりません。一般に、これらの既定の表示が同じでないためです。
+これでテキストフィールドのスタイル設定が完了しましたが、次は単一行および複数行のテキストフィールドの表示が同じになるよう調整しなければなりません。一般に、これらのデフォルトの表示が同じでないためです。
 
 #### テキストエリアの微調整
 
-{{HTMLElement("textarea")}} 要素は既定でブロック要素としてレンダリングされるようにします。ここで重要なことは、 {{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように `resize` プロパティを使用します。 {{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これの既定値が `auto` であるブラウザーと `scroll` であるブラウザーが存在します。この例では、すべてのブラウザーが `auto` になるようにするのがよいでしょう。
+{{HTMLElement("textarea")}} 要素はデフォルトでブロック要素としてレンダリングされるようにします。ここで重要なことは、 {{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように `resize` プロパティを使用します。 {{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これのデフォルト値が `auto` であるブラウザーと `scroll` であるブラウザーが存在します。この例では、すべてのブラウザーが `auto` になるようにするのがよいでしょう。
 
 ```css
 textarea {
@@ -336,29 +424,29 @@ textarea {
 }
 ```
 
-#### 送信ボタンにスタイル設定する
+#### 送信ボタンのスタイル設定
 
-{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めて、行いたいことが何でもできます。
+{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めて、行いたいことが何でもできます。
 
 ```css
 button {
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 5px;
   background: none;
   cursor: pointer;
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -371,18 +459,8 @@ button:focus {
 > [!NOTE]
 > 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください（[ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください）。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)をご覧ください。
-
 ## まとめ
 
 ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)、「不良」や「劣悪」に分類されているウィジェットの扱い方を見ていきます。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

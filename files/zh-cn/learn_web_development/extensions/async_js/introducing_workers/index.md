@@ -3,7 +3,6 @@ title: worker 简介
 slug: Learn_web_development/Extensions/Async_JS/Introducing_workers
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
 在“异步 JavaScript”模块的最后一篇文章中，我们将介绍 worker，它使你能够在单独执行的{{Glossary("Thread", "线程")}}中运行一些任务。
@@ -115,8 +114,7 @@ document.querySelector("#reload").addEventListener("click", () => {
     <button id="reload">Reload</button>
 
     <textarea id="user-input" rows="5" cols="62">
-Try typing in here immediately after pressing "Generate primes"</textarea
-    >
+Try typing in here immediately after pressing "Generate primes"</textarea>
 
     <div id="output"></div>
   </body>

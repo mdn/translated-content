@@ -12,7 +12,6 @@ slug: Web/API/GeolocationPositionError
 _Интерфейс **PositionError** не наследует никаких свойств._
 
 - {{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
-
   - : Возвращает _unsigned short,_ представляющий код ошибки. Возможны следующие значения:
 
     | Значение | Связанная константа    | Описание                                                                                                                                              |
@@ -22,7 +21,7 @@ _Интерфейс **PositionError** не наследует никаких с�
     | `3`      | `TIMEOUT`              | Время, разрешённое для получения геолокации, определяется {{domxref ("PositionOptions.timeout")}} информация была достигнута до получения информации. |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Returns a human-readable {{domxref("DOMString")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
+  - : Returns a human-readable {{jsxref("String")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
 
 ## Methods
 

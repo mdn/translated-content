@@ -11,8 +11,8 @@ slug: Web/API/HTMLFormElement/reset
 
 ### 语法
 
-```plain
-HTMLFormElement.reset()
+```js
+HTMLFormElement.reset();
 ```
 
 ### 例子

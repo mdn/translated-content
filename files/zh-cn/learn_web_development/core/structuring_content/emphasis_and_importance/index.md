@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content")}}
 
 上一篇文章探讨了语义在 HTML 中的重要性，重点是标题和段落。本文将继续以语义为主题，探讨对文本进行强调和重要性处理的 HTML 元素（与印刷媒体中的斜体和粗体文字类似）。
@@ -95,8 +93,7 @@ l10n:
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
 <h1>AlphaGo 李世乭五番棋</h1>
 
-<p>2016 年 3 月 8 日到 3 月 15 日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。</p></textarea
->
+<p>2016 年 3 月 8 日到 3 月 15 日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="重置" />

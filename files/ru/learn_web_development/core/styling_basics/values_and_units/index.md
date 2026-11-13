@@ -3,23 +3,23 @@ title: Значения свойств CSS
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 Каждое свойство используемое в CSS имеет значение или набор значений которые допустимы для этого свойства, и изучение страниц MDN со свойствами поможет вам понять какие значения валидны для того или иного свойства. В этом уроке мы рассмотрим некоторые наиболее общие значения и единицы в использовании.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                     |
+| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Что такое значение CSS?
 
-В спецификациях CSS и на страницах свойств здесь в MDN вы сможете определять (узнавать) значения, потому как они будут заключены в угловые скобки, например [`<color>`](/ru/docs/Web/CSS/color_value) или [`<length>`](/ru/docs/Web/CSS/length). Если вы видите значение `<color>` как действительное для определённого свойства это значит что вы можете использовать любой валидный цвет в качестве значение для этого свойства, как перечислено на странице [`<color>`](/ru/docs/Web/CSS/color_value)[.](/ru/docs/Web/CSS/color_value)
+В спецификациях CSS и на страницах свойств здесь в MDN вы сможете определять (узнавать) значения, потому как они будут заключены в угловые скобки, например [`<color>`](/ru/docs/Web/CSS/Reference/Values/color_value) или [`<length>`](/ru/docs/Web/CSS/Reference/Values/length). Если вы видите значение `<color>` как действительное для определённого свойства это значит что вы можете использовать любой валидный цвет в качестве значение для этого свойства, как перечислено на странице [`<color>`](/ru/docs/Web/CSS/Reference/Values/color_value)[.](/ru/docs/Web/CSS/Reference/Values/color_value)
 
 > [!NOTE]
 > You'll also see CSS values referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value.
 
 > [!NOTE]
-> Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the [\<color>](/ru/docs/Web/CSS/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
+> Yes, CSS values tend to be denoted using angle brackets, to differentiate them from CSS properties (e.g. the {{cssxref("color")}} property, versus the [\<color>](/ru/docs/Web/CSS/Reference/Values/color_value) data type). You might get confused between CSS data types and HTML elements too, as they both use angle brackets, but this is unlikely — they are used in very different contexts.
 
 В следующем примере мы установили цвет нашего заголовка используя ключевое слово и фон используя функцию `rgb()`:
 
@@ -30,7 +30,7 @@ h1 {
 }
 ```
 
-Значение в CSS это путь определения коллекции допустимых под-значений. То есть если вы видите `<color>` как применённый, то вам не надо озадачиваться какой из разных типов значения цвета может быть использован — ключевое слово, hex значение, функция `rgb()` и т.д. Вы можете воспользоваться _любым_ доступным значением `<color>` при условии, что они поддерживаются вашим браузером. Страницы для всех значений на MDN дадут вам информацию о поддержке браузеров. Например, если вы посмотрите на страницу [`<color>`](/ru/docs/Web/CSS/color_value) то вы увидите раздел совместимости браузеров в котором перечислены различные типы значений цвета и их поддержка.
+Значение в CSS это путь определения коллекции допустимых под-значений. То есть если вы видите `<color>` как применённый, то вам не надо озадачиваться какой из разных типов значения цвета может быть использован — ключевое слово, hex значение, функция `rgb()` и т.д. Вы можете воспользоваться _любым_ доступным значением `<color>` при условии, что они поддерживаются вашим браузером. Страницы для всех значений на MDN дадут вам информацию о поддержке браузеров. Например, если вы посмотрите на страницу [`<color>`](/ru/docs/Web/CSS/Reference/Values/color_value) то вы увидите раздел совместимости браузеров в котором перечислены различные типы значений цвета и их поддержка.
 
 Давайте посмотрим на некоторые типы значений и единиц с примерами чтобы вы могли опробовать различные возможные значения, с которыми вы можете часто сталкиваться.
 
@@ -38,12 +38,12 @@ h1 {
 
 Существуют различные типы числовых данных, которые вы можете использовать в CSS. Следующие типы классифицируются как числовые:
 
-| Тип данных                                    | Описание                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/ru/docs/Web/CSS/integer)       | `<integer>` (целое число) — целое число такое как `1024` или `-55`.                                                                                                                                                                                                                                                                                                                             |
-| [`<number>`](/ru/docs/Web/CSS/number)         | `<number>` (число) представляет десятичное число — оно может иметь, а может и не иметь десятичную точку с факториальным компонентом, например `0.255`, `128`, или `-1.2`.                                                                                                                                                                                                                       |
-| `<dimension>`                                 | `<dimension>` (измерение) это — `<number>` (число) с единицей измерения, прикреплённой к нему, например `45deg`, `5s`, или `10px`. `<dimension>` — это зонт категорий, включающих в себя типы [`<length>`](/ru/docs/Web/CSS/length), [`<angle>`](/ru/docs/Web/CSS/angle), [`<time>`](/ru/docs/Web/CSS/time), и [`<resolution>`](/ru/docs/Web/CSS/resolution) (длина, угол, время и разрешение). |
-| [`<percentage>`](/ru/docs/Web/CSS/percentage) | `<percentage>` (проценты) представляют собой долю некоторого другого значения, например `50%`. Процентные значения всегда относительны по отношению к другому количеству, например длина элемента относительна к длине её родительского элемента.                                                                                                                                               |
+| Тип данных                                                     | Описание                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/ru/docs/Web/CSS/Reference/Values/integer)       | `<integer>` (целое число) — целое число такое как `1024` или `-55`.                                                                                                                                                                                                                                                                                                                                                                                |
+| [`<number>`](/ru/docs/Web/CSS/Reference/Values/number)         | `<number>` (число) представляет десятичное число — оно может иметь, а может и не иметь десятичную точку с факториальным компонентом, например `0.255`, `128`, или `-1.2`.                                                                                                                                                                                                                                                                          |
+| `<dimension>`                                                  | `<dimension>` (измерение) это — `<number>` (число) с единицей измерения, прикреплённой к нему, например `45deg`, `5s`, или `10px`. `<dimension>` — это зонт категорий, включающих в себя типы [`<length>`](/ru/docs/Web/CSS/Reference/Values/length), [`<angle>`](/ru/docs/Web/CSS/Reference/Values/angle), [`<time>`](/ru/docs/Web/CSS/Reference/Values/time), и [`<resolution>`](/ru/docs/Web/CSS/resolution) (длина, угол, время и разрешение). |
+| [`<percentage>`](/ru/docs/Web/CSS/Reference/Values/percentage) | `<percentage>` (проценты) представляют собой долю некоторого другого значения, например `50%`. Процентные значения всегда относительны по отношению к другому количеству, например длина элемента относительна к длине её родительского элемента.                                                                                                                                                                                                  |
 
 ### Длины
 
@@ -95,7 +95,7 @@ h1 {
 
 #### em и rem
 
-`em` и `rem` — две относительные длины, с которыми вы вероятное всего сталкиваетесь чаще при разметке чего-либо от блоков до текста. Стоит понимать как они работают, понимать различия между ними, особенно когда вы начинаете переходить к более сложным темам как [стилизация текста](/ru/docs/Learn/CSS/Styling_text) или [разметка CSS](/ru/docs/Learn/CSS/CSS_layout). Приведённый ниже пример показывает это.
+`em` и `rem` — две относительные длины, с которыми вы вероятное всего сталкиваетесь чаще при разметке чего-либо от блоков до текста. Стоит понимать как они работают, понимать различия между ними, особенно когда вы начинаете переходить к более сложным темам как [стилизация текста](/ru/docs/Learn_web_development/Core/Text_styling) или [разметка CSS](/ru/docs/Learn_web_development/Core/CSS_layout). Приведённый ниже пример показывает это.
 
 HTML это набор вложенных списков — у нас имеется три списка в общей сложности и оба примера имеют одинаковый HTML. Единственное различие в том, что первый имеет класс _ems,_ а второй класс _rems_.
 
@@ -149,7 +149,7 @@ HTML это набор вложенных списков — у нас имее�
 
 ### Ключевые слова цвета
 
-Довольно часто в примерах как здесь, так и на других страницах в MDN вы будете видеть использование ключевых слов цвета, поскольку это простой и понятный способ определения цвета. Существует определённое количество этих ключевых слов и некоторые их них имеют довольно занимательные имена! Полный список вы можете посмотреть на странице значений [`<color>`](/ru/docs/Web/CSS/color_value) .
+Довольно часто в примерах как здесь, так и на других страницах в MDN вы будете видеть использование ключевых слов цвета, поскольку это простой и понятный способ определения цвета. Существует определённое количество этих ключевых слов и некоторые их них имеют довольно занимательные имена! Полный список вы можете посмотреть на странице значений [`<color>`](/ru/docs/Web/CSS/Reference/Values/color_value) .
 
 **Попробуйте поиграть с разными значениями цвета на живом примере ниже, чтобы понять больше об идее как они работают.**
 
@@ -216,7 +216,7 @@ In the example below we have demonstrated an image and a gradient in use as a va
 
 ## Position
 
-The [`<position>`](/ru/docs/Web/CSS/position_value) data type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/ru/docs/Web/CSS/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.
+The [`<position>`](/ru/docs/Web/CSS/position_value) data type represents a set of 2D coordinates, used to position an item such as a background image (via [`background-position`](/ru/docs/Web/CSS/Reference/Properties/background-position)). It can take keywords such as `top`, `left`, `bottom`, `right`, and `center` to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.
 
 A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to `center`.
 
@@ -230,7 +230,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS, for example [when specifying generated content](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS, for example [when specifying generated content](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generating_content_with_before_and_after). In this case the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
@@ -252,25 +252,24 @@ The key thing to remember is that each property has a defined list of allowed va
 
 For example, understanding that [`<image>`](/ru/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 
-1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
 
-   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
+7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
+9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

@@ -3,8 +3,6 @@ title: Travailler avec l'API Bookmarks
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
 
-{{AddonSidebar}}
-
 Les signets permettent aux utilisateurs de collecter et d'organiser des listes de pages Web, afin qu'ils puissent facilement retrouver leurs favoris. Grâce à l'API Bookmarks, vos extensions peuvent manipuler les signets de la même manière que les utilisateurs.
 
 ## Permissions
@@ -22,7 +20,6 @@ Pour utiliser l'API Bookmarks, vous devez demander la permission `"bookmarks"` d
 L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuvent faire avec les signets et inclut des fonctions pour :
 
 - Manipulation élémentaire d'un signet, offrant :
-
   - Ajouter ({{WebExtAPIRef("bookmarks.create")}}).
   - Récupérer ({{WebExtAPIRef("bookmarks.get")}}).
   - Mettre à jour ({{WebExtAPIRef("bookmarks.update")}}).
@@ -32,14 +29,12 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 
 - Obtention d'une liste de signets récemment ajoutés ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Signet la manipulation de l'arborescence des dossiers pour :
-
   - Obtenir des informations sur l'arborescence ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - Ajouter des branches ({{WebExtAPIRef("bookmarks.create")}}).
   - Supprimer des noeuds ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - Déplacer des nœuds ({{WebExtAPIRef("bookmarks.move")}}).
 
 - Écoute des événements de signets (ou de dossiers d'arborescence de signets) qui :
-
   - Ajouter ({{WebExtAPIRef("bookmarks.onCreated")}}).
   - Changer ({{WebExtAPIRef("bookmarks.onChanged")}}).
   - Déplacer ({{WebExtAPIRef("bookmarks.onMoved")}}.
@@ -47,7 +42,6 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
   - Supprimer ({{WebExtAPIRef("bookmarks.onRemoved")}}).
 
 - Écoute des importations de signets, qui peuvent être utilisées pour suspendre le traitement d'un autre signet pendant l'importation :
-
   - Importer commencé ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
   - Importer terminé ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
 

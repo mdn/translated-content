@@ -19,11 +19,11 @@ l10n:
 
 送信ボタンは、さまざまな属性によってフォームを送信する動作を上書きすることができます。
 
-- `{{HtmlElement("button#attr-formaction", "formaction")}}`: フォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
-- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`: フォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
-- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`: フォームの [`method`](/ja/docs/Web/HTML/Element/form#method) 属性を上書きします。
-- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`: フォームの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性を上書きします。
-- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`: フォームの [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。
+- `{{HtmlElement("button#attr-formaction", "formaction")}}`: フォームの [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
+- `{{HtmlElement("button#attr-formenctype", "formenctype")}}`: フォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
+- `{{HtmlElement("button#attr-formmethod", "formmethod")}}`: フォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性を上書きします。
+- `{{HtmlElement("button#attr-formnovalidate", "formnovalidate")}}`: フォームの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性を上書きします。
+- `{{HtmlElement("button#attr-formtarget", "formtarget")}}`: フォームの [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性を上書きします。
 
 ## フォームデータ項目
 
@@ -33,5 +33,5 @@ l10n:
 
 ## 関連情報
 
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

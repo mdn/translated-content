@@ -3,8 +3,6 @@ title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
 
-{{AddonSidebar}}
-
 Un objet décrivant une seule visite sur une page.
 
 ## Type
@@ -31,8 +29,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

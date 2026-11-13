@@ -1,40 +1,50 @@
 ---
-title: element.dispatchEvent
+title: "EventTarget : méthode dispatchEvent()"
+short-title: dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
+l10n:
+  sourceCommit: c615fed2b0c23b4c107d854485ced0d4e1e1e092
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_) dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
+Les évènements déclenchés manuellement avec `dispatchEvent()` suivent les mêmes règles de gestion que les évènements natifs, y compris la phase de capture et, éventuellement, de propagation.
+
+La méthode **`dispatchEvent()`** de l'interface {{DOMxRef("EventTarget")}} envoie un objet {{DOMxRef("Event")}} à la cible, invoquant (de façon synchrone) les écouteurs d'évènements concernés dans l'ordre approprié. Les règles normales de gestion des évènements (y compris la phase de capture et, éventuellement, de propagation) s'appliquent aussi aux évènements déclenchés manuellement avec `dispatchEvent()`.
+
+Appeler `dispatchEvent()` est la dernière étape pour _déclencher un évènement_. L'évènement doit déjà avoir été créé et initialisé à l'aide d'un constructeur {{DOMxRef("Event/Event", "Event()")}}.
+
+> [!NOTE]
+> Lors de l'appel à cette méthode, la propriété {{DOMxRef("Event.target")}} est initialisée à la valeur d'un `EventTarget` courant.
+
+Contrairement aux évènements «&nbsp;natifs&nbsp;», qui sont déclenchés par le navigateur en mettant en file d'attente une tâche sur la [boucle d'évènements](/fr/docs/Web/JavaScript/Reference/Execution_model#job_queue_and_event_loop), `dispatchEvent()` invoque tous les gestionnaires d'évènements applicables de façon synchrone avant de retourner. La propriété en lecture seule [`isTrusted`](/fr/docs/Web/API/Event/isTrusted) vaut `true` pour les évènements natifs et `false` pour les évènements déclenchés avec `dispatchEvent()`.
 
 ## Syntaxe
 
-```js
-cancelled = !target.dispatchEvent(event);
+```js-nolint
+dispatchEvent(event)
 ```
 
 ### Paramètres
 
-- `event` est un objet {{domxref("Event")}} à envoyer.
-- `target` (_cible_) est utilisée pour initialiser la {{domxref("Event", "", "target")}} et déterminer quels écouteurs d'évènements doivent être invoqués.
+- `event`
+  - : L'objet {{DOMxRef("Event")}} à déclencher. Sa propriété {{DOMxRef("Event.target")}} est définie sur la valeur d'un {{DOMxRef("EventTarget")}} courant.
 
-### Valeur retournée
+### Valeur de retour
 
-- La valeur de retour est `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
+Retourne `false` si `event` est annulable et qu'au moins un des gestionnaires d'évènements ayant reçu `event` ayant appelé {{DOMxRef("Event.preventDefault()")}}. Sinon, retourne `true`.
 
-La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est `null` ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.
+### Exceptions
 
-## Notes
+- `InvalidStateError` {{DOMxRef("DomException")}}
+  - : Levée si le type de l'évènement n'a pas été défini lors de l'initialisation de l'évènement.
 
-Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Event_loop), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
-
-Comme montré dans l'exemple qui précède, `dispatchEvent` est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le [constructeur d'évènements](/fr/docs/Web/API/Event/Event).
-
-Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
+> [!WARNING]
+> Les exceptions levées par les gestionnaires d'évènements sont signalées comme des exceptions non interceptées. Les gestionnaires d'évènements s'exécutent sur une pile d'appels imbriquée&nbsp;: ils bloquent l'appelant jusqu'à leur achèvement, mais les exceptions ne sont pas propagées à l'appelant.
 
 ## Exemple
 
-Voir [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events).
+Voir [Créer et déclencher des évènements](/fr/docs/Web/API/Document_Object_Model/Events#créer_et_déclencher_des_évènements).
 
 ## Spécifications
 
@@ -43,3 +53,7 @@ Voir [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_a
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Référence de l'objet Event](/fr/docs/Web/API/Event)

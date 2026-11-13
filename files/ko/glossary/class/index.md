@@ -11,7 +11,7 @@ l10n:
 
 ## 같이 보기
 
-- [JavaScript의 클래스](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript의 클래스](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - 위키백과의 [클래스 기반 프로그래밍](https://en.wikipedia.org/wiki/Class-based_programming)
 - 위키백과의 [객체 지향 프로그래밍](https://en.wikipedia.org/wiki/Object-oriented_programming)

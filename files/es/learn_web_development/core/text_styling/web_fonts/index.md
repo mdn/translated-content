@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Web_fonts
 original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.
 
@@ -14,11 +14,11 @@ En el primer artículo del módulo, exploramos las características básicas del
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>),
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >texto CSS y los fundamentos de la fuente</a
         >.
       </td>
@@ -35,7 +35,7 @@ En el primer artículo del módulo, exploramos las características básicas del
 
 ## Resumen de las familias de tipos de letra
 
-Como observamos en el artículo [Texto y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals), puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:
+Como observamos en el artículo [Texto y tipos de letra](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals), puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:
 
 ```css
 p {
@@ -43,7 +43,7 @@ p {
 }
 ```
 
-Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn/CSS/Styling_text/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
+Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
 
 ## Tipografías web
 
@@ -187,4 +187,4 @@ Los navegadores disponen hoy de una tecnología de tipos de letra reciente llama
 
 Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo al texto, es hora de evaluar cuánto has retenido del módulo a partir de la creación de una composición tipográfica de una página de inicio de una escuela comunitaria.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

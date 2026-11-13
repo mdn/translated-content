@@ -4,13 +4,13 @@ slug: Learn_web_development/Core/Scripting/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 Con la mayor parte de la teoría esencial tratada en el artículo anterior, este artículo proporciona experiencia práctica. Aquí obtendrás práctica construyendo tu propia función personalizada. En el camino, también explicaremos algunos detalles útiles sobre cómo tratar las funciones.
 
-| Prerequisites: | Conocimientos básicos de computación, una comprensión básica de HTML y CSS, [JavaScript first steps](/es/docs/Learn/JavaScript/First_steps), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                    |
+| Prerequisites: | Conocimientos básicos de computación, una comprensión básica de HTML y CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn_web_development/Core/Scripting/Functions). |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                                            |
 
 ## Aprendizaje activo: construyamos una función
 
@@ -32,7 +32,7 @@ La función `alert` es limitada: pueder cambiar el mensaje, pero no puedes cambi
 Para empezar, vamos a poner juntos una función básica.
 
 > [!NOTE]
-> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
+> Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
 
 1. Comience accediendo al archivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) y haciendo una copia local. Verás que el HTML es simple — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.
 2. Luego añade lo siguiente dentro del elemento `<script>`:
@@ -275,4 +275,4 @@ En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo confi
 
 ¡Felicidades por llegar al final! Este artículo lo llevó a través de todo el proceso de creación de una función personalizada y práctica, que con un poco más de trabajo podría trasplantarse en un proyecto real. En el siguiente artículo resumiremos las funciones explicando otro concepto esencial relacionado: valores de retorno.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

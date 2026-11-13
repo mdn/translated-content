@@ -23,7 +23,7 @@ l10n:
     <tr>
       <th scope="row">学習成果:</th>
       <td>
-        オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテストで練習する。
+        オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテキストで練習する。
       </td>
     </tr>
   </tbody>
@@ -73,7 +73,7 @@ function randomRGB() {
 }
 ```
 
-`random()` 関数は、2 つの数値を引数に取り、その間の範囲の乱数を返します。`randomRGB()` 関数は、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 文字列として表されるランダムな色を生成します。
+`random()` 関数は、2 つの数値を引数に取り、その間の範囲の乱数を返します。`randomRGB()` 関数は、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 文字列として表されるランダムな色を生成します。
 
 ## プログラム用のボールを一つモデル化する
 
@@ -119,7 +119,6 @@ draw() {
 - まずは、[`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) を使って紙に形を描きたいと宣言します。
 - 次に [`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) を使って形を何色にしたいか宣言します — ここではボールの `color` プロパティを指定します。
 - 次に [`arc()`](/ja/docs/Web/API/CanvasRenderingContext2D/arc) メソッドを使って紙に円弧形をなぞります。これの引数は:
-
   - 円弧の中心座標、`x` と `y` — ボールの `x`、`y` プロパティを指定します。
   - 円弧の半径 — ここではボールの `size` プロパティです。
   - 最後の二つの引数は円弧の開始点から終了点までの角度を円の中心角で指定します。ここでは 0 度から `2 * PI`、これはラジアンで表わした 360 度に相当します(ややこしいですがラジアンで指定しなければなりません)。これで一周した円を描けます。もし `1 * PI` までしか指定しなければ、半円（180 度）になるでしょう。
@@ -310,7 +309,7 @@ function loop() {
 - [requestAnimationFrame()](/ja/docs/Web/API/Window/requestAnimationFrame)
 - [2D の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
 - [3D の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
-- [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
+- [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
 - [Phaser を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリーを使って 2D ゲームを作るための基本を解説しています。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

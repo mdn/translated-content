@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee1599cba00284fd6af713e61e96dae61bb10287
 ---
 
-{{jsSidebar("Errors")}}
-
 当在代码中出现意外的赋值情况时，JavaScript 就会抛出“invalid assignment left-hand side”的异常。当使用单个 `=` 符号而不是 `==` 或 `===` 时，可能会触发此异常。
 
 ## 错误信息

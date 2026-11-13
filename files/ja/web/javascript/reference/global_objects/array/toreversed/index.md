@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.toReversed()
+short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`toReversed()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/reverse", "reverse()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、要素を逆順に並べた新しい配列を返します。
 
@@ -80,7 +79,8 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 
 ## 関連情報
 
-- [`Array.prototype.toReversed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`Array.prototype.toReversed` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims による `Array.prototype.toReversed` のポリフィル](https://www.npmjs.com/package/array.prototype.toreversed)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

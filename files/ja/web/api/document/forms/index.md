@@ -97,5 +97,5 @@ const selectFormElement = document.forms[index].elements[index];
 
 ## 関連情報
 
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("form")}} および {{domxref("HTMLFormElement")}} インターフェイス

@@ -35,9 +35,8 @@ x-frame-options: DENY
 
 ## 같이 보기
 
-- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Headers)
+- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Reference/Headers)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP header")}}
   - {{Glossary("Response header")}}

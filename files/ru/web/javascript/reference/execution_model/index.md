@@ -1,7 +1,6 @@
 ---
 title: Цикл событий
 slug: Web/JavaScript/Reference/Execution_model
-original_slug: Web/JavaScript/Event_loop
 ---
 
 {{JsSidebar("Advanced")}}

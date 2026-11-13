@@ -12,4 +12,4 @@ l10n:
 ## Смотрите также
 
 - Описание элемента {{htmlelement("head")}} на MDN
-- [Тег \<head>](/ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) в учебнике MDN
+- [Тег \<head>](/ru/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) в учебнике MDN

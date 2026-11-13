@@ -16,9 +16,7 @@ new Touch(options)
 ### 参数
 
 - _touchInit_
-
   - : 是一个`TouchInit` 字典，它拥有以下属性：
-
     - `"identifier"`, 必须，是一个长整型，表示一个触摸点的数字标记。
     - `"target"`, 必须，是 {{domxref("EventTarget")}}类型，表示在触摸点开始接触接触面时的节点。
     - `"clientX"`, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。

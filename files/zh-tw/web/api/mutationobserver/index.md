@@ -31,7 +31,8 @@ new MutationObserver(
 | `void disconnect();`                                                        |
 | `Array takeRecords();`                                                      |
 
-> **備註：** {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
+> [!NOTE]
+> {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
 
 ### `observe()`
 

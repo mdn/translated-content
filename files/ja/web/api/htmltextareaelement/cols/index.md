@@ -3,12 +3,12 @@ title: "HTMLTextAreaElement: cols プロパティ"
 short-title: cols
 slug: Web/API/HTMLTextAreaElement/cols
 l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`cols`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、複数行テキストコントロールの見える幅を、平均的な文字幅における文字数で表す正の整数です。これは `<textarea>` 要素の [`cols`](/ja/docs/Web/HTML/Element/textarea#cols) 属性を反映します。
+**`cols`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、複数行テキストコントロールの見える幅を、平均的な文字幅における文字数で表す正の整数です。これは `<textarea>` 要素の [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) 属性を反映します。
 
 ## 値
 

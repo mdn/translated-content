@@ -5,17 +5,17 @@ slug: Web/MathML
 
 {{MathMLRef}}
 
-**Lenguaje de Marcado Matemático (MathML)** es un lenguaje de marcado [XML](/es/docs/Web/XML/XML_introduction) para describir expresiones matemáticas capturando tanto su contenido como su estructura.
+**Lenguaje de Marcado Matemático (MathML)** es un lenguaje de marcado [XML](/es/docs/Web/XML/Guides/XML_introduction) para describir expresiones matemáticas capturando tanto su contenido como su estructura.
 
 Aquí encontrarás enlaces a documentación, ejemplos y herramientas que te ayudarán a trabajar con esta tecnología poderosa. Para un resumen, vea la [presentación](https://fred-wang.github.io/MozSummitMathML/index.html) que se preparó para Mozilla Summit 2013.
 
 ## Referencia de MathML
 
-- [Referencia de elementos de MathML](/es/docs/Web/MathML/Element)
+- [Referencia de elementos de MathML](/es/docs/Web/MathML/Reference/Element)
   - : Detalles sobre cada elemento de MathML e información sobre compatibilidad con navegadores móviles y de escritorio.
-- [Referencia de atributos de MathML](/es/docs/Web/MathML/Attribute)
+- [Referencia de atributos de MathML](/es/docs/Web/MathML/Reference/Attribute)
   - : Información sobre los atributos que modifican el aspecto y comportamiento de los elementos.
-- [Ejemplos de MathML](/es/docs/Web/MathML/Examples)
+- [Ejemplos de MathML](/es/docs/Web/MathML/Guides)
   - : Muestras y ejemplos en MathML para ayudarte a comprender cómo funciona.
 - [Creando MathML](/es/docs/Web/MathML/Authoring)
   - : Sugerencias y consejos al momento de escribir MathML, incluyendo editores de MathML sugeridos y cómo integrar sus productos a contenido Web.

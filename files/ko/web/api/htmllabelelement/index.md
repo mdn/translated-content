@@ -20,9 +20,10 @@ l10n:
 - {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
   - : {{domxref("HTMLFormElement")}} 객체는 라벨이 지정된 컨트롤러와 연관이 있는 폼을 나타냅니다. 연관되어 있는 컨트롤이 없거나, 해당 컨트롤이 폼 내부에 존재하지 않는 경우에 `null` 을 반환합니다. 다시 말해서, 이는 단순히 `HTMLLabelElement.control.form` 단축 속성입니다.
 - {{domxref("HTMLLabelElement.htmlFor")}}
-  - : 라벨이 지정된 컨트롤의 ID 문자열을 포함합니다. 이는 [`for`](/ko/docs/Web/HTML/Element/label#for) 특성을 반영합니다.
+  - : 라벨이 지정된 컨트롤의 ID 문자열을 포함합니다. 이는 [`for`](/ko/docs/Web/HTML/Reference/Elements/label#for) 특성을 반영합니다.
 
-> **참고:** `for` 특성을 프로그래밍 방식으로 지정하기 위해서는, [`htmlFor`](/ko/docs/Web/API/HTMLLabelElement/htmlFor) 을 사용하세요.
+> [!NOTE]
+> `for` 특성을 프로그래밍 방식으로 지정하기 위해서는, [`htmlFor`](/ko/docs/Web/API/HTMLLabelElement/htmlFor) 을 사용하세요.
 
 ## 인스턴스 메서드
 

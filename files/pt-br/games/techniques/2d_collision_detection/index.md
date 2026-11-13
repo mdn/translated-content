@@ -3,8 +3,6 @@ title: Detecção de Colisão 2D
 slug: Games/Techniques/2D_collision_detection
 ---
 
-{{GamesSidebar}}
-
 Algoritmos para detectar colisões em jogos 2D dependem do tipo de formas que podem colidir (por exemplo, retângulo para retângulo, retângulo para círculo, círculo para círculo). Geralmente, você terá uma forma genérica simples que abrange a entidade conhecida como "hitbox", portanto, mesmo que a colisão não seja perfeita, ela terá boa aparência e terá bom desempenho em várias entidades. Este artigo fornece uma revisão das técnicas mais comuns usadas para fornecer detecção de colisão em jogos 2D.
 
 ## Caixa delimitadora alinhada por eixo
@@ -73,7 +71,8 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
 
-> **Nota:** [Outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/217jrozd/3/)
+> [!NOTE]
+> [Outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/217jrozd/3/)
 
 ## Colisão Circular
 
@@ -168,7 +167,8 @@ if (distance < circle1.radius + circle2.radius) {
 
 {{ EmbedLiveSample('Playable_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
 
-> **Nota:** [Aqui é outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE]
+> [Aqui é outro exemplo sem o Canvas ou bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Teorema do eixo de separação
 

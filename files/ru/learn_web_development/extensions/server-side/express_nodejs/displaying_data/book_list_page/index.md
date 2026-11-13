@@ -52,17 +52,18 @@ block content
 
 View расширит базовый шаблон **layout.pug** и переопределит `block` с именем '**content**'. Он отображает `title` который мы передали из контроллера (с помощью метода `render()` ), а затем перебирает переменную `book_list` используя синтаксис `each`-`in`-`else` . Для каждой книги создаётся элемент списка, отображающий название книги в виде ссылки на страницу сведений о книге, за которой следует имя автора. Если в `book_list` нет книг, то выполняется `else`, и отображается текст "нет книг".'
 
-> **Примечание:**Мы используем `book.url` для предоставления ссылки на подробную запись для каждой книги (мы реализовали этот маршрут, но не страницу). Это виртуальное свойство модели `Book` , которая использует поле `_id` для создания уникального URL.
+> [!NOTE]
+> Мы используем `book.url` для предоставления ссылки на подробную запись для каждой книги (мы реализовали этот маршрут, но не страницу). Это виртуальное свойство модели `Book` , которая использует поле `_id` для создания уникального URL.
 
 Здесь интересно, что каждая книга определена в двух строках, использование конвейера для второй строки (выделено выше) необходимо, чтобы имя автора не стало частью гиперссылки из первой строки.
 
 ## На что это похоже?
 
-Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
+Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
 
 ![Book List Page - Express Local Library site](locallibary_express_book_list.png)
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [BookInstance list page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
+- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [BookInstance list page](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).

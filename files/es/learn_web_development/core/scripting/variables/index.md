@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Después de leer los últimos artículos, deberías saber qué es JavaScript, qué puede hacer por ti, cómo usarlo junto con otras tecnologías web y cómo se ven sus características principales desde un alto nivel. En este artículo, llegaremos a los conceptos básicos reales, y veremos cómo trabajar con los bloques de construcción más básicos de JavaScript — Variables.
 
@@ -14,7 +14,7 @@ Después de leer los últimos artículos, deberías saber qué es JavaScript, qu
 
 ## Herramientas que necesitas
 
-A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
+A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
 
 ## ¿Qué es una variable?
 
@@ -128,7 +128,7 @@ En este punto, puedes estar pensando "¿por qué necesitamos dos palabras clave 
 
 Las razones son algo históricas. Cuando se creó JavaScript por primera vez, solo existía `var`. Esto básicamente funciona bien en la mayoría de los casos, pero tiene algunos problemas en la forma en que trabaja — su diseño a veces puede ser confuso o francamente molesto. Entonces, se creó `let` en versiones modernas de JavaScript, una nueva palabra clave para crear variables que funciona de manera algo diferente a `var`, solucionando sus problemas en el proceso.
 
-A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Sentencias/let", "let")}} en nuestra página de referencia.
+A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Statements/let", "let")}} en nuestra página de referencia.
 
 Para empezar, si escribes un programa JavaScript de varias líneas que declara e inicia una variable, puedes declarar una variable con `var` después de iniciarla y seguirá funcionando. Por ejemplo:
 
@@ -147,7 +147,7 @@ var myName;
 > [!NOTE]
 > Esto no funcionará al escribir líneas individuales en una consola de JavaScript, solo cuando se ejecutan varias líneas de JavaScript en un documento web.
 
-Esto funciona debido a la **elevación** — lee {{jsxref("Sentencias/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
+Esto funciona debido a la **elevación** — lee {{jsxref("Statements/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
 
 La elevación (`hoisting`) ya no funciona con `let`. Si cambiamos `var` a `let` en el ejemplo anterior, fallaría con un error. Esto es bueno — declarar una variable después de iniciarla resulta en un código confuso y más difícil de entender.
 
@@ -198,7 +198,7 @@ Puedes llamar a una variable prácticamente como quieras, pero existen limitacio
 - Un último punto: también debes evitar el uso de palabras reservadas de JavaScript como nombres de variables — con esto, nos referimos a las palabras que componen la sintaxis real de JavaScript. Por lo tanto, no puedes usar palabras como `var`, `function`, `let` y `for` como nombres de variables. Los navegadores las reconocen como elementos de código diferentes, por lo que obtendrás errores.
 
 > [!NOTE]
-> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Gramática_léxica", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
+> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Lexical_grammar", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
 
 Ejemplos de buenos nombres:
 
@@ -284,7 +284,7 @@ myNumberArray[2]; // debe devolver 40
 
 Los corchetes especifican un valor de índice correspondiente a la posición del valor que deseas devolver. Posiblemente hayas notado que los arreglos en JavaScript tienen índice cero: el primer elemento está en el índice 0.
 
-Aprenderás mucho más sobre los arreglos en [un futuro artículo](/es/docs/Learn/JavaScript/First_steps/Arrays).
+Aprenderás mucho más sobre los arreglos en [un futuro artículo](/es/docs/Learn_web_development/Core/Scripting/Arrays).
 
 ### Objetos
 
@@ -302,7 +302,7 @@ Para recuperar la información almacenada en el objeto, puedes utilizar la sigui
 dog.name;
 ```
 
-Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en [un futuro módulo](/es/docs/Learn/JavaScript/Objects).
+Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en [un futuro módulo](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects).
 
 ## Tipado dinámico
 
@@ -323,7 +323,7 @@ myNumber = 500; // mucho mejor — ahora este es un número
 typeof myNumber;
 ```
 
-Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operadores/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
+Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operators/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
 
 ## Constantes en JavaScript
 
@@ -345,10 +345,10 @@ daysInWeek = 8;
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables).
 
 ## Resumen
 
 A estas alturas, deberías saber bastante sobre las variables de JavaScript y cómo crearlas. En el próximo artículo, nos centraremos en los números con más detalle, y veremos cómo hacer matemáticas básicas en JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}

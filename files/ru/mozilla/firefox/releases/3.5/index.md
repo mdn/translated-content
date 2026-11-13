@@ -3,8 +3,6 @@ title: Firefox 3.5 для разработчика
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox 3.5](http://www.firefox.com/) вводит ряд новых возможностей, а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, освещающие основные усовершенствования.
 
 ## Новые возможности для разработчиков
@@ -49,7 +47,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref("-moz-column-rule-style") }}
 
   {{ cssxref("-moz-column-rule-color") }}
-
   - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
 
 - The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
@@ -73,7 +70,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : These selectors are all newly-supported in Firefox 3.5.
 
 #### Новые возможности DOM

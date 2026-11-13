@@ -122,7 +122,7 @@ button.addEventListener("click", (event) => {
 
 ## 같이 보기
 
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
+- [이벤트 입문](/ko/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

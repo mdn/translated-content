@@ -9,24 +9,20 @@ l10n:
 
 [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`CryptoKey`** 接口表示从特定 {{domxref("SubtleCrypto")}} 方法（{{domxref("SubtleCrypto.generateKey", "generateKey()")}}、{{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}、{{domxref("SubtleCrypto.importKey", "importKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}）导出的密码学{{glossary("key", "密钥")}}。
 
-出于安全考虑，`CryptoKey` 接口仅在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中可用。
+出于安全考虑，`CryptoKey` 接口仅在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中可用。
 
 ## 实例属性
 
 - {{domxref("CryptoKey.type")}} {{ReadOnlyInline}}
-
   - : 该对象所表示的密钥类型可以是以下值之一：`"secret"`、`"private"` 或 `"public"`。
 
 - {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}}
-
   - : 一个布尔值，表示原始信息是否能使用 [`SubtleCrypto.exportKey()`](/zh-CN/docs/Web/API/SubtleCrypto/exportKey) 或 [`SubtleCrypto.wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey) 导出。
 
 - {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}}
-
   - : 一个描述可使用此密钥的算法及任何关联的额外参数的对象。
 
 - {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}}
-
   - : 一个字符串的{{jsxref("Array", "数组", "", 1)}}，指明密钥的用途。数组元素可能的值有：`"encrypt"`、`"decrypt"`、`"sign"`、`"verify"`、`"deriveKey"`、`"deriveBits"`、`"wrapKey"` 和 `"unwrapKey"`。
 
 ## 示例

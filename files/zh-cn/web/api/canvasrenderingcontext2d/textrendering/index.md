@@ -9,7 +9,7 @@ l10n:
 
 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的 **`CanvasRenderingContext2D.textRendering`** 属性用于在渲染文本时向渲染引擎提供应该如何优化的相关信息。
 
-这些值对应于 SVG 的 [`text-rendering`](/zh-CN/docs/Web/SVG/Attribute/text-rendering) 属性（和 CSS 的 [`text-rendering`](/zh-CN/docs/Web/CSS/text-rendering) 属性）。
+这些值对应于 SVG 的 [`text-rendering`](/zh-CN/docs/Web/SVG/Reference/Attribute/text-rendering) 属性（和 CSS 的 [`text-rendering`](/zh-CN/docs/Web/CSS/Reference/Properties/text-rendering) 属性）。
 
 ## 值
 

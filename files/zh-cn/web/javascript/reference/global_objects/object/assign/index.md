@@ -3,8 +3,6 @@ title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
 
-{{JSRef}}
-
 **`Object.assign()`** 静态方法将一个或者多个*源对象*中所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}的{{jsxref("Object/hasOwn", "自有属性", "", 1)}}复制到*目标对象*，并返回修改后的目标对象。
 
 {{InteractiveExample("JavaScript Demo: Object.assign()")}}
@@ -43,7 +41,7 @@ Object.assign(target, ...sources)
 
 如果目标对象与源对象具有相同的{{jsxref("Object/keys", "键（属性名）", "", 1)}}，则目标对象中的属性将被源对象中的属性覆盖，后面的源对象的属性将类似地覆盖前面的源对象的同名属性。
 
-`Object.assign()` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不仅仅是复制或定义新的属性。如果合并源对象包含 getter 的新属性到原型中，则可能不适合使用此方法。
+`Object.assign()` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不是复制或定义新的属性。如果合并源对象包含 getter 的新属性到原型中，则可能不适合使用此方法。
 
 如果要将属性定义（包括它们的可枚举性）复制到原型中，则应改用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}} 方法。
 
@@ -51,7 +49,8 @@ Object.assign(target, ...sources)
 
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而 `target` 对象也会被修改。
 
-> **备注：** `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
+> [!NOTE]
+> `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
 
 ## 示例
 

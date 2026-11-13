@@ -4,8 +4,6 @@ slug: Web/JavaScript/Reference/Errors/String_literal_EOL
 original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -40,7 +38,7 @@ var longString = "This is a very long string which needs
 
 Pour écrire une chaîne sur plusieurs lignes, on pourra utiliser :
 
-- [L'opérateur +](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Addition_()>),
+- [L'opérateur +](</fr/docs/Web/JavaScript/Reference/Operators#Addition_()>),
 - Une barre oblique inversée ("\\")
 - [Des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals)
 

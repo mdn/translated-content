@@ -10,7 +10,7 @@ l10n:
 
 **`HTMLStyleElement.disabled`** プロパティは、このスタイルシートが無効 (`true`) かそうでないか (`false`) を取得または設定するために使用することができます。
 
-なお、対応する `disabled` 属性は [HTML の `<style>` 要素](/ja/docs/Web/HTML/Element/style)にはありません。
+なお、対応する `disabled` 属性は [HTML の `<style>` 要素](/ja/docs/Web/HTML/Reference/Elements/style)にはありません。
 
 ## 値
 
@@ -24,12 +24,12 @@ l10n:
 
 ### インラインスタイルを無効化
 
-この例は、[HTML の `<style>` 要素](/ja/docs/Web/HTML/Element/style) を使用して HTML で定義したスタイルに、プログラムから disabled プロパティを設定しています。
+この例は、[HTML の `<style>` 要素](/ja/docs/Web/HTML/Reference/Elements/style) を使用して HTML で定義したスタイルに、プログラムから disabled プロパティを設定しています。
 また、[`Document.styleSheets`](/ja/docs/Web/API/Document/styleSheets) を使用して、文書内のすべてのスタイルシートにアクセスすることもできます。
 
 #### HTML
 
-この HTML には、段落要素を青くする HTML の [`<style>`](/ja/docs/Web/HTML/Element/style) 要素、段落要素、スタイルを有効/無効にするために使用するボタンが含まれています。
+この HTML には、段落要素を青くする HTML の [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style) 要素、段落要素、スタイルを有効/無効にするために使用するボタンが含まれています。
 
 ```html
 <button>有効化</button>

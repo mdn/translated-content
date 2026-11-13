@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章讨论 JavaScript 的基本语法、变量声明、数据类型和字面量。
 
@@ -242,7 +242,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新的 ECMAScript 标准定义了 8 种数据类型：
 
 - 七种{{Glossary("Primitive", "基本")}}数据类型：
-
   1. {{Glossary("Boolean")}}。`true` 和 `false`。
   2. {{Glossary("null")}}。一个表示空值的特殊关键字。（因为 JavaScript 是区分大小写的，所以 `null` 和 `Null`、`NULL` 或其他变体是不一样的。）
   3. {{Glossary("undefined")}}。一个未定义值的顶级属性。
@@ -377,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **备注：** [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
+> [!NOTE]
+> [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
 >
 > ```diff
 > const myList = [

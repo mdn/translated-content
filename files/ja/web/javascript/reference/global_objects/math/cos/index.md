@@ -1,15 +1,14 @@
 ---
 title: Math.cos()
+short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+**`Math.cos()`** は静的メソッドで、ラジアン単位で表した角度の余弦（コサイン）を返します。
 
-**`Math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
-
-{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+{{InteractiveExample("JavaScript デモ: Math.cos()")}}
 
 ```js interactive-example
 function getCircleX(radians, radius) {
@@ -17,13 +16,13 @@ function getCircleX(radians, radius) {
 }
 
 console.log(getCircleX(1, 10));
-// Expected output: 5.403023058681398
+// 予想される結果: 5.403023058681398
 
 console.log(getCircleX(2, 10));
-// Expected output: -4.161468365471424
+// 予想される結果: -4.161468365471424
 
 console.log(getCircleX(Math.PI, 10));
-// Expected output: -10
+// 予想される結果: -10
 ```
 
 ## 構文
@@ -35,11 +34,11 @@ Math.cos(x)
 ### 引数
 
 - `x`
-  - : 余弦を返すラジアンの角度。
+  - : 角度をラジアンで表した数値です。
 
 ### 返値
 
-`x` の余弦で、-1 から 1 まで（両端を含む）です。 `x` が{{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合、 {{jsxref("NaN")}} を返します。
+`x` の余弦で、-1 以上 1 以下です。 `x` が{{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合、 {{jsxref("NaN")}} を返します。
 
 ## 解説
 
@@ -75,3 +74,4 @@ Math.cos(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("cos()")}} 関数

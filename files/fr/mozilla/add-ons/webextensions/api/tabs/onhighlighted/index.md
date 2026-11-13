@@ -3,8 +3,6 @@ title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque l'ensemble des onglets en surbrillance dans une fenêtre change
 
 Notez qu'avant la version 63, Firefox n'avait pas le concept de mettre en évidence plusieurs onglets, donc cet événement n'était qu'un alias pour {{WebExtAPIRef("tabs.onActivated")}}.
@@ -31,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `highlightInfo`
       - : [`object`](#highlightinfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`type`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、HTML の [`type`](/ja/docs/Web/HTML/Element/object#type) 属性を反映した文字列を返します。リソースの MIME タイプを指定します。
+**`type`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、HTML の [`type`](/ja/docs/Web/HTML/Reference/Elements/object#type) 属性を反映した文字列を返します。リソースの MIME タイプを指定します。
 
 ## 値
 

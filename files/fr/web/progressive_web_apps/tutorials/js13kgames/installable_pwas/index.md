@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode hors connexion grâce à son [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisatrices et utilisateurs d'installer l'application web sur leur appareil. L'application web installée peut ensuite être lancée comme s'il s'agissait d'une application native du système d'exploitation. Cet article explique comment y parvenir à l'aide du manifeste de l'application web.
 
 Ces technologies permettent à l'application d'être directement lancée depuis l'écran d'accueil, la barre de tâche, ou le dock de l'appareil, plutôt que d'ouvrir le navigateur, puis d'accéder au site en utilisant un marque-page ou en tapant l'URL. Votre application web peut être placée à côté d'applications natives, ce qui en facilite l'accès. De plus, vous pouvez spécifier que l'application soit lancée en mode plein écran ou autonome, supprimant ainsi l'interface utilisateur du navigateur par défaut qui serait autrement présente, créant ainsi une sensation encore plus transparente et native.
@@ -30,7 +28,7 @@ L'élément clef est un fichier qui représente le manifeste de l'application we
 
 Il se trouve habituellement dans le dossier racine de l'application web. Il contient des informations utiles, telles que le titre de l'application, des chemins d'accès vers des icônes de différentes tailles pouvant être utilisées pour représenter l'application sur un système d'exploitation (comme une icône sur l'écran d'accueil, une entrée dans le menu Démarrer ou une icône sur le bureau) et une couleur d'arrière-plan à utiliser dans les écrans de chargement ou de démarrage. Ces informations sont nécessaires au navigateur pour présenter correctement l'application web pendant le processus d'installation, dans l'interface de lancement de l'application de l'appareil (par exemple l'écran d'accueil d'un appareil mobile).
 
-Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est inclus dans la section [`<head>`](/fr/docs/Web/HTML/Element/head) du fichier `index.html` via la ligne de code suivante&nbsp;:
+Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est inclus dans la section [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) du fichier `index.html` via la ligne de code suivante&nbsp;:
 
 ```html
 <link rel="manifest" href="js13kpwa.webmanifest" />
@@ -85,7 +83,7 @@ La plupart des champs sont explicites, mais décortiquons le document et expliqu
 - `background_color`
   - : Une couleur de fond utilisée lors de l'installation et pour l'écran de chargement.
 
-Il existe de nombreux autres paramètres que vous pouvez utiliser. Référez-vous à [la référence sur les manifestes d'applications web](/fr/docs/Web/Manifest) pour plus de détails.
+Il existe de nombreux autres paramètres que vous pouvez utiliser. Référez-vous à [la référence sur les manifestes d'applications web](/fr/docs/Web/Progressive_web_apps/Manifest) pour plus de détails.
 
 ## Installer une PWA
 

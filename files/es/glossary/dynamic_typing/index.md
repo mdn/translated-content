@@ -11,7 +11,7 @@ slug: Glossary/Dynamic_typing
 
 ### Conoce sobre el tema
 
-- [Tipos de datos y estructuras de datos en Javascript](/es/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en Javascript](/es/docs/Web/JavaScript/Guide/Data_structures)
 
 ### Conocimientos generales
 

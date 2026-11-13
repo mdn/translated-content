@@ -35,7 +35,7 @@ ARIA - это набор специальных атрибутов, которы
 
 ### ARIA для виджетов на JavaScript
 
-- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
   - : Первый шаг в создании доступных JavaScript виджетов, позволяющих производить навигацию с помощью клавиатуры. Статья описывает последовательные шаги по достижению цели. Ещё один хороший ресурс - [статья Yahoo! об управлении фокусом.](http://www.yuiblog.com/blog/2009/02/23/managing-focus/)
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
   - : В этом руководстве описываются способы управления самыми распространёнными виджетами с клавиатуры.
@@ -82,16 +82,15 @@ ARIA - это набор специальных атрибутов, которы
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
   - : The W3C specification itself, useful as a reference. Note that, at this stage, it is important to test compatibility, as implementations are still inconsistent.
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/PF/aria-practices/)
-
   - : Like the W3C WAI-ARIA specification, the official best practices represents a future ideal — a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.
 
     For now, web developers implementing ARIA should maximize compatibility. Use best practices docs and examples based on current implementations.
 
 - [Open AJAX Accessibility Task Force](http://www.openajax.org/member/wiki/Accessibility)
   - : The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.
-- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Web/Accessibility/ARIA/Guides/Techniques)
   - : The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is important when regulations or policies are based on WCAG.
 
 ### Related Topics
 
-[Accessibility](/ru/docs/Web/Accessibility), [AJAX](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/ru/docs/Web/JavaScript)
+[Accessibility](/ru/docs/Web/Accessibility), [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/ru/docs/Web/JavaScript)

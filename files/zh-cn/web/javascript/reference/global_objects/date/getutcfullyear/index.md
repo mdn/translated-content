@@ -3,8 +3,6 @@ title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 ---
 
-{{JSRef}}
-
 **`getUTCFullYear()`** 以世界时为标准，返回一个指定的日期对象的年份。
 
 {{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
@@ -22,7 +20,7 @@ console.log(date2.getUTCFullYear());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCFullYear()
 ```
 

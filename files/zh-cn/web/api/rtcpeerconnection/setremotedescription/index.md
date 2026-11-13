@@ -13,7 +13,7 @@ slug: Web/API/RTCPeerConnection/setRemoteDescription
 
 ## 语法
 
-```plain
+```js-nolint
 aPromise = pc.setRemoteDescription(sessionDescription);
 
 pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
@@ -24,14 +24,12 @@ _这个方法没有返回值。_
 ### 参数
 
 - _sessionDescription_
-  - : Is a {{domxref("DOMString")}} is the description of the parameters to be applied to the remote session.
+  - : Is a {{jsxref("String")}} is the description of the parameters to be applied to the remote session.
 - _successCallback_
   - : Is a `Function` without parameter which will be called when the description has been successfully set. At this point, one can send the offer to a remote server that can forward it to a remote client
 - _errorCallback_
-
   - : Is a `RTCPeerConnectionErrorCallback` which will be called if the description can't be set. It takes the following parameter:
-
-    - _errorInformation_ which is a {{domxref("DOMString")}} describing the reason why the description has not been set.
+    - _errorInformation_ which is a {{jsxref("String")}} describing the reason why the description has not been set.
 
 ## Example
 

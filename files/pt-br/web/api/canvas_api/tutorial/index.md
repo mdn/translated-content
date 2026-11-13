@@ -3,7 +3,7 @@ title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
 ---
 
-{{DefaultAPISidebar("Canvas API")}} [![](canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)
+{{DefaultAPISidebar("Canvas API")}} [![](canvas_tut_examples.jpg)](/pt-BR/docs/Web/API/Canvas_API)
 
 [**`<canvas>`**](/pt-BR/docs/Web/API/Canvas_API) é um elemento [HTML](/pt-BR/docs/Web/HTML) que pode ser usado para desenhar usando linguagem de "script" (normalmente [JavaScript](/pt-BR/docs/Web/JavaScript)). Isto pode ser usado, por exemplo, para desenhar gráficos, fazer composições de fotos ou simples (e [não tão simples](/pt-BR/docs/HTML/Canvas/A_Basic_RayCaster)) animações. As imagens à direita mostram exemplos de implementações **[`<canvas>`](/pt-BR/docs/Web/API/Canvas_API)** que serão parte deste tutorial.
 
@@ -41,4 +41,4 @@ Usar o elemento `<canvas>`não é muito difícil, mas você precisa de um conhec
 
 Devido a um erro técnico lamentável que ocorreu na semana de 17 de junho de 2013, perdemos parte do histórico deste tutorial, incluindo atribuições a todos os contribuidores anteriores ao seu conteúdo. Pedimos desculpas por isso, e espero que você nos perdoe desse infeliz infortúnio.
 
-{{ Next("Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica") }}
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

@@ -73,5 +73,5 @@ cookie ==> This is a demo cookie
 
 - [`Map.prototype.forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

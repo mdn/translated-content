@@ -74,9 +74,9 @@ En esta función se utilizan mayúsculas en lugar de minúsculas, debido a probl
 
 ### Primitivas `String` y objetos `String`
 
-Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glossary("Primitive", "primitivas string")}}. (Lo mismo ocurre con {{jsxref("Boolean", "Booleanos")}} y {{jsxref("Global_Objects/Number", "Números")}}).
+Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glossary("Primitive", "primitivas string")}}. (Lo mismo ocurre con {{jsxref("Boolean", "Booleanos")}} y {{jsxref("Number", "Números")}}).
 
-Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("Operators/new", "new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
+Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
 
 ```js
 let s_prim = "foo";
@@ -238,15 +238,16 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
   - : Recorta los espacios en blanco del final de la cadena.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Devuelve el valor primitivo del objeto especificado. Redefine el método {{jsxref("Object.prototype.valueOf()")}}.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String/Symbol.iterator")}}
   - : Devuelve un nuevo objeto `Iterator` que itera sobre los puntos de código de un valor de cadena, devolviendo cada punto de código como un valor de cadena.
 
 ## Métodos de contenedor HTML
 
-> **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
+> [!NOTE]
+> **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
 
 - {{jsxref("String.prototype.anchor()")}}
-  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Element/a#name) (hipertexto destino)
+  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Reference/Elements/a#name) (hipertexto destino)
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
@@ -256,13 +257,13 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 - {{jsxref("String.prototype.fixed()")}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}}
-  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Element/font#color)
+  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#color)
 - {{jsxref("String.prototype.fontsize()")}}
-  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Element/font#size)
+  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#size)
 - {{jsxref("String.prototype.italics()")}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}}
-  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Element/font#size) (enlace a URL)
+  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#size) (enlace a URL)
 - {{jsxref("String.prototype.small()")}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}}
@@ -295,8 +296,8 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Ve también
 
-- [Formato de texto en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Text_formatting)
+- [Formato de texto en la Guía de JavaScript](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/docs/Mozilla/Add-ons/Code_snippets/StringView)
 - [Cadenas binarias](/es/docs/Web/API/Window/btoa)

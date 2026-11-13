@@ -17,42 +17,42 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Guias
 
-- [Conceitos WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
+- [Conceitos WebAssembly](/pt-BR/docs/WebAssembly/Guides/Concepts)
   - : Comece lendo os conceitos de alto nível por trás do WebAssembly - o que é, por que é tão útil, como ele se encaixa na plataforma web e como usá-lo.
-- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm)
+- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/Guides/C_to_Wasm)
   - : Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como [Emscripten](/pt-BR/docs/Mozilla/Projects/Emscripten/). Veja como isso funciona.
 - [Carregando e executando código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)
   - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly](/pt-BR/docs/WebAssembly/JavaScript_interface)como [Obter](/pt-BR/docs/Web/API/Fetch_API) ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Compilando módulos de WebAssembly no cache](/pt-BR/docs/WebAssembly/Caching_modules)
   - : O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
-- [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)
+- [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Guides/Using_the_JavaScript_API)
   - : Depois de carregar um módulo .wasm, você vai querer usá-lo. Neste artigo, mostramos como usar a WebAssembly através da API JavaScript da WebAssembly.
 - [Exportando funções de WebAssembly](/pt-BR/docs/WebAssembly/Exported_functions)
   - : Funções WebAssembly exportadas são as reflexões de JavaScript das funções da WebAssembly e permitem chamar o código WebAssembly do JavaScript. Este artigo descreve o que são.
-- [Compreendendo o formato de texto do WebAssembly](/pt-BR/docs/WebAssembly/Understanding_the_text_format)
+- [Compreendendo o formato de texto do WebAssembly](/pt-BR/docs/WebAssembly/Guides/Understanding_the_text_format)
   - : Este artigo explica o formato de texto wasm. Esta é a representação textual de baixo nível de um módulo .wasm mostrado nas ferramentas de desenvolvedor do navegador ao depurar.
 - [Convertendo o formato de texto do WebAssembly para o wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm)
   - : Este artigo fornece um guia sobre como converter um módulo WebAssembly escrito no formato de texto em um binário .wasm.
 
 ## Referência da API
 
-- {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
+- [`WebAssembly`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface)
   - : Este objeto atua como o espaço para todas as funcionalidade relacionada à WebAssembly.
-- {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module")}}
+- [`WebAssembly.Module`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Module)
   - : A `WebAssembly.Module` o objeto contém o código da WebAssembly sem estado que já foi compilado pelo navegador e pode ser eficientemente [compartilhado com os trabalhos](/pt-BR/docs/Web/API/Worker/postMessage), [armazenados em cache no IndexedDB](</pt-BR/docs /WebAssembly/Caching_modules>), e instanciados várias vezes.
-- {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance")}}
+- [`WebAssembly.Instance`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Instance)
   - : A `WebAssembly.Instance` o objeto é uma instância executável e estável de um `Módulo`. Os objetos `Instanciados` contêm todas as [funções de WebAssembly exportadas](/pt-BR/docs/WebAssembly/Exported_functions)que permitem chamar o código WebAssembly do JavaScript.
-- {{jsxref("Global_objects/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
+- [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module` e sua primeira `instância`.
-- {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
-- {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
+- [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
+- [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Cria um novo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Cria um novo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Cria um novo objeto WebAssembly `RuntimeError`.
 
 ## Exemplos

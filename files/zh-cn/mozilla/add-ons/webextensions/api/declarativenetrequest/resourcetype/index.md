@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 请求的资源类型。与 {{WebExtAPIRef('webRequest.ResourceType')}} 类似。
 
 ## 类型
@@ -22,24 +20,21 @@ l10n:
 - `image`
   - : 被渲染成图像的资源，除了在支持该类型的浏览器上的 `imageset`（请参阅下面的浏览器兼容性）。
 - `imageset`
-  - : 由 {{HTMLElement("picture")}} 元素加载的图像或在 `<img>` 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性中给定的图像。
+  - : 由 {{HTMLElement("picture")}} 元素加载的图像或在 `<img>` 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性中给定的图像。
 - `main_frame`
   - : 加载到标签页中的顶级文档。
 - `media`
   - : 由 {{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素加载的资源。
 - `object`
-
   - : 由 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素加载的资源。
 
     没有专用 `object_subrequest` 类型的浏览器（请参阅下面的浏览器兼容性）还将插件发送的后续请求标记为 `object`。
 
 - `object_subrequest`
-
   - : 由插件发送的请求。
 
 - `ping`
-
-  - : 当点击链接时，发送到链接的 [`ping`](/zh-CN/docs/Web/HTML/Element/a#ping) 属性中给定的 URL。
+  - : 当点击链接时，发送到链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中给定的 URL。
 
     没有专用 `beacon` 类型的浏览器（请参阅下面的浏览器兼容性）还将通过 Beacon API 发送的请求标记为 `ping`。
 

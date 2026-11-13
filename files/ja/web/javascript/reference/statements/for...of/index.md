@@ -2,26 +2,24 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 **`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
 たとえば組み込みの {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}}（およびその他の DOM コレクション）、同様に {{jsxref("Functions/arguments", "arguments")}} オブジェクトや、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から生成される[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)、ユーザー定義の反復可能オブジェクトなどがあります。
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{InteractiveExample("JavaScript デモ: for...of 文")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-for (const element of array1) {
+for (const element of array) {
   console.log(element);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
 ```
 
 ## 構文
@@ -32,7 +30,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[分割代入パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)など）。`var` で宣言された変数はループのローカル変数ではなく、すなわち `for...of` ループと同じスコープになります。
+  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var), [`using`](/ja/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/ja/docs/Web/JavaScript/Reference/Statements/await_using) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)など）。`var` で宣言された変数はループのローカル変数にはなりません。すなわち `for...of` ループと同じスコープになります。
 - `iterable`
   - : 反復可能オブジェクトです。ループを実行する一連の値の元となるものです。
 - `statement`
@@ -68,7 +66,18 @@ for (let value of iterable) {
 > [!NOTE]
 > 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
+{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} 宣言を使用して宣言された変数は、ループの反復が完了するたびに破棄されます（また、`await using` は反復の終了時に暗黙の `await` を発生させます）。ただし、ループが早期終了した場合、イテレーター内に残っている未訪問の値は破棄されません（現在の値は破棄されます）。
+
+```js
+const resources = [dbConnection1, dbConnection2, dbConnection3];
+
+for (using dbConnection of resources) {
+  dbConnection.query("...");
+  // dbConnection はここで破棄される
+}
+```
+
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
 
 しかし、特別なルールにより、変数名として `async` を使用することは禁じられています。これは無効な構文です。
 
@@ -78,6 +87,14 @@ for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop ma
 ```
 
 これは、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループである有効なコード `for (async of => {};)` との構文のあいまいさを避けるためです。
+
+同様に、`using` 宣言を使用する場合、変数に `of` と名付けることはできません。
+
+```js-nolint example-bad
+for (using of of []); // SyntaxError
+```
+
+これは、`using` が導入される前に有効だったコード `for (using of [])` との構文上の曖昧さを避けるためです。
 
 ## 例
 
@@ -177,7 +194,7 @@ foo(1, 2, 3);
 
 ### NodeList に対する反復処理
 
-次の例では `read` クラスを、[`<article>`](/ja/docs/Web/HTML/Element/article) 要素の直接の子孫である段落に対して追加します。DOM の [`NodeList`](/ja/docs/Web/API/NodeList) コレクションを反復処理すること実現します。
+次の例では `read` クラスを、[`<article>`](/ja/docs/Web/HTML/Reference/Elements/article) 要素の直接の子孫である段落に対して追加します。DOM の [`NodeList`](/ja/docs/Web/API/NodeList) コレクションを反復処理すること実現します。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");
@@ -342,7 +359,7 @@ for (const value of generator) {
 
 `for...in` および `for...of` 文は、両方とも何かに対する繰り返しです。これらの主な違いは、何に対する繰り返しなのかというところです。
 
-{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)に対して、順序不定で繰り返し処理を行います。`for...of` 文は、[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)が定義した順序で値を反復処理します。
+{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)に対して、順序不定で繰り返し処理を行います。`for...of` 文は、[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)が定義した順序で値を反復処理します。
 
 次の例では、{{jsxref("Array")}} に対して `for...of` ループと `for...in` ループを使用した場合の違いを示しています。
 
@@ -371,9 +388,9 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-オブジェクト `iterable` は `objCustom` および `arrCustom` プロパティを継承しています。`Object.prototype` および `Array.prototype` の各プロパティを[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で格納しているからです。
+オブジェクト `iterable` は `objCustom` および `arrCustom` プロパティを継承しています。`Object.prototype` および `Array.prototype` の各プロパティを[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)で格納しているからです。
 
-`for...in` ループは `iterable` オブジェクトの[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)のみを出力します。配列の要素である `3`, `5`, `7` や `"hello"` は、列挙可能なプロパティではないため出力しません。これらは値です。配列の _添字_ が `arrCustom` や `objCustom` と共に出力されます。なぜプロパティが反復処理に出てこないのかが分からない場合は、[配列の反復処理と `for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in#配列の繰り返しと_for...in) にもっと詳しい説明があります。
+`for...in` ループは `iterable` オブジェクトの[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)のみを出力します。配列の要素である `3`, `5`, `7` や `"hello"` は、列挙可能なプロパティではないため出力しません。これらは値です。配列の _添字_ が `arrCustom` や `objCustom` と共に出力されます。なぜプロパティが反復処理に出てこないのかが分からない場合は、[配列の反復処理と `for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in#配列の繰り返しと_for...in) にもっと詳しい説明があります。
 
 2 番目のループは最初のものと似ていますが、{{jsxref("Object.hasOwn()")}} を使用して見つかった列挙可能なプロパティがオブジェクト自身のものであるか、すなわち継承したものでないかどうかをチェックしています。オブジェクト自身のプロパティである場合は、ログ出力します。`0`, `1`, `2`, `foo` は自身のプロパティであるため出力されます。`arrCustom` と `objCustom` は継承されたものであるために出力されません。
 

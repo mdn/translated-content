@@ -106,7 +106,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **备注：** {{domxref("MediaSourceHandle")}} 无法成功传输到共享 worker 或 service worker。
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}} 无法成功传输到共享 worker 或 service worker。
 
 ## 规范
 

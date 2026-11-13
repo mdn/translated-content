@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.update()`** 方法更新书签的标题和 URL，或者更新书签文件夹的名称。
 
 > [!WARNING]
@@ -26,17 +24,14 @@ let updating = browser.bookmarks.update(
 ### 参数
 
 - `id`
-
-  - : {{jsxref("string", "字符串", "", 1)}}，指定要更新的书签或书签文件夹的 ID。
+  - : {{jsxref("String", "字符串", "", 1)}}，指定要更新的书签或书签文件夹的 ID。
 
 - `changes`
-
-  - : {{jsxref("object", "对象", "", 1)}}，指定要应用的更改，其中包含以下某些字段的组合。未指定的任何项目在引用的书签或文件夹中不会被更改：
-
+  - : {{jsxref("Object", "对象", "", 1)}}，指定要应用的更改，其中包含以下某些字段的组合。未指定的任何项目在引用的书签或文件夹中不会被更改：
     - `title` {{optional_inline}}
-      - : {{jsxref("string", "字符串", "", 1)}}，包含书签的新标题；或者，如果 `id` 引用文件夹，则包含文件夹的新名称。
+      - : {{jsxref("String", "字符串", "", 1)}}，包含书签的新标题；或者，如果 `id` 引用文件夹，则包含文件夹的新名称。
     - `url` {{optional_inline}}
-      - : {{jsxref("string", "字符串", "", 1)}}，提供书签的新 URL。
+      - : {{jsxref("String", "字符串", "", 1)}}，提供书签的新 URL。
 
 ### 返回值
 

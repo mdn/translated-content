@@ -1,12 +1,9 @@
 ---
 title: すべての種類のユーザーのためにデザインするには
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
@@ -15,7 +12,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
+        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
       </td>
     </tr>
     <tr>
@@ -31,10 +28,6 @@ l10n:
 
 ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://ja.wikipedia.org/wiki/ユニバーサルデザイン)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
 
-## アクティブラーニング
-
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
-
 ## より深く掘り下げる
 
 ### カラーコントラスト
@@ -43,7 +36,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 {{Glossary("W3C")}} では、前景と背景の輝度の比を計算するアルゴリズムで、良い色の混合を定義しています。計算がかなり複雑に思えるかもしれませんが、その仕事を代行してくれるツールに頼ることができます。
 
-Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) をダウンロードし、インストールしてみましょう。
+Vispero の [Color Contrast Analyser](https://vispero.com/lp/color-contrast-checker/) をダウンロードし、インストールしてみましょう。
 
 > [!NOTE]
 > 他にも、 WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
@@ -232,20 +225,18 @@ div.container {
 
 画像が簡潔に記述できるのであれば、 `alt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
 
-> **メモ:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
+> [!NOTE]
+> `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 
 #### 音声/動画
 
 マルチメディアコンテンツの代替も提供することが必要です。
 
 - 字幕／クローズキャプション
-  - : 音声が聞こえない訪問者のために、動画にキャプションを入れる必要があります。ユーザーの中には、聴覚障害をお持ちの方や、スピーカーが機能しない方、（電車の中など）騒がしい環境で作業している方もいます。
+  - : 音声が聞こえない訪問者のために、動画にキャプションを入れる必要があります。ユーザーの中には、聴覚障碍のある方や、スピーカーが機能しない方、（電車の中など）騒がしい環境で作業している方もいます。
 - 文字起こし
   - : 字幕は、誰かが動画を見て初めて機能するものです。多くのユーザーは時間がなかったり、適切なプラグインやコーデックがなかったりします。さらに、検索エンジンは、コンテンツをインデックスするために、主にテキストに頼っています。これらの理由から、動画/音声ファイルをテキストで書き起こしたものを提供してください。
 
 ### 画像の圧縮
 
-ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。
-
-- **インストールするソフトウェア** [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）
-- **オンラインツール** Dynamic drive の [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) （帯域幅がより有効になるように、ある形式から別の形式に自動的に変換することができます。）
+ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。通常、ローカルツールは開発ワークフローと統合しやすいのでお勧めです。これらのツールには [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）などがあります。

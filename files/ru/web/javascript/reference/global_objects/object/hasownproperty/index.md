@@ -22,7 +22,7 @@ obj.hasOwnProperty(prop)
 
 ## Описание
 
-Каждый объект, произошедший от {{jsxref("Global_Objects/Object", "Object")}}, наследует метод `hasOwnProperty`. Этот метод может использоваться для определения того, содержит ли объект указанное свойство в качестве собственного свойства объекта; в отличие от оператора {{jsxref("Operators/in", "in")}}, этот метод не проверяет существование свойств в цепочке прототипов объекта.
+Каждый объект, произошедший от {{jsxref("Object")}}, наследует метод `hasOwnProperty`. Этот метод может использоваться для определения того, содержит ли объект указанное свойство в качестве собственного свойства объекта; в отличие от оператора {{jsxref("Operators/in", "in")}}, этот метод не проверяет существование свойств в цепочке прототипов объекта.
 
 ## Примеры
 
@@ -107,8 +107,8 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [Руководство по JavaScript: повторное наследование](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Руководство по JavaScript: повторное наследование](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

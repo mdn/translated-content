@@ -3,8 +3,6 @@ title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 ---
 
-{{JSRef}}
-
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la droite vers la gauche) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduceRight()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 ## Syntaxe
@@ -16,9 +14,7 @@ typedarray.reduceRight(callback[, valeurInitiale])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
-
     - `valeurPrécédente`
       - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
     - `valeurCourante`

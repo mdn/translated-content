@@ -3,7 +3,7 @@ title: Массивы
 slug: Learn_web_development/Core/Scripting/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "conflicting/Learn_web_development/Core/Scripting")}}
 
 В финальной статье этого раздела, мы познакомимся с массивами — лаконичным способом хранения списка элементов под одним именем. Мы поймём, чем они полезны, затем узнаем, как создать массив, получить, добавить и удалить элементы, хранящиеся в массиве.
 
@@ -17,7 +17,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 
 Если бы у нас не было массивов, мы должны были бы хранить каждый элемент в отдельной переменной, а затем вызывать код, выполняющий печать и добавляющий отдельно каждый элемент. Написание такого кода займёт намного больше времени, сам код будет менее эффективным и подверженным ошибкам. Если бы у нас было 10 элементов для добавления в счёт-фактуру, это ещё куда ни шло, но как насчёт 100 предметов? Или 1000? Мы вернёмся к этому примеру позже в статье.
 
-Как и в предыдущих статьях, давайте узнаем о реальных основах работы с массивами, введя некоторые примеры в [консоль разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+Как и в предыдущих статьях, давайте узнаем о реальных основах работы с массивами, введя некоторые примеры в [консоль разработчика](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Создание массива
 
@@ -41,7 +41,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 
 ### Получение и изменение элементов массива
 
-Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Введите следующее в вашу консоль:
 
@@ -99,7 +99,7 @@ for (var i = 0; i < sequence.length; i++) {
 
 ### Преобразование между строками и массивами
 
-Часто у вас могут быть некоторые необработанные данные, содержащиеся в большой длинной строке, и вы можете захотеть разделить полезные пункты до более удобной и полезной формы, а затем сделать что-то для них, например отобразить их в таблице данных. Для этого мы можем использовать метод {{jsxref ("String.prototype.split ()", "split ()")}}. В его простейшей форме он принимает единственный параметр, символ, который вы хотите отделить в строке, и возвращает подстроки между разделителем как элементы в массиве.
+Часто у вас могут быть некоторые необработанные данные, содержащиеся в большой длинной строке, и вы можете захотеть разделить полезные пункты до более удобной и полезной формы, а затем сделать что-то для них, например отобразить их в таблице данных. Для этого мы можем использовать метод {{jsxref("String.prototype.split()", "split()")}}. В его простейшей форме он принимает единственный параметр, символ, который вы хотите отделить в строке, и возвращает подстроки между разделителем как элементы в массиве.
 
 > [!NOTE]
 > Хорошо, технически это строковый метод, не метод массива, но мы поместили его в массивы, так как он хорошо подходит для них.
@@ -211,9 +211,9 @@ var myArray = [
 
 1. Ниже комментария `// number 1` имеется ряд строк, каждая из которых содержит название продукта и цену, разделённые двоеточием. Нужно превратить их в массив и сохранить его под названием `products`.
 2. На строке с комментарием `// number 2` начинается цикл for. В строке цикла имеется `i <= 0`, что является условием , которое заставляет цикл for выполняться только один раз, так как это значение i сообщает циклу: «останавливаться, когда `i` меньше или равен 0», при этом `i` начинается с 0. Нужно заменить `i <= 0` условным тестом, который останавливает цикл, когда `i` перестаёт быть меньше длины массива `products` .
-3. Под комментарием `// number 3` мы хотим, чтобы вы написали строку кода, которая разбивает текущий элемент массива (`name:price`) на два отдельных элемента: один содержит только имя, а другой - содержащее только цену. Если не знаете, как это сделать, ещё раз просмотрите статью [Полезные строковые методы](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods), а лучше, посмотрите раздел [Преобразование между строками и массивами](#преобразование_между_строками_и_массивами) этой статьи.
-4. В рамках приведённой выше строки нужно преобразовать цену из строки в число. Если не помните, как это сделать, ознакомьтесь со статьёй [строки в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings).
-5. В верхней части кода есть переменная с именем `total` , которая содержит значение `0`. Внутри цикла (под комментарием `// number 4`) нужно добавить строку, которая добавляет текущую цену товара к этой сумме на каждой итерации цикла, так чтобы в конце кода была выведена корректная сумма в счёт-фактуре. Для этого вам может понадобится [оператор присваивания](/ru/docs/Learn/JavaScript/First_steps/Math#операторы_присваивания).
+3. Под комментарием `// number 3` мы хотим, чтобы вы написали строку кода, которая разбивает текущий элемент массива (`name:price`) на два отдельных элемента: один содержит только имя, а другой - содержащее только цену. Если не знаете, как это сделать, ещё раз просмотрите статью [Полезные строковые методы](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods), а лучше, посмотрите раздел [Преобразование между строками и массивами](#преобразование_между_строками_и_массивами) этой статьи.
+4. В рамках приведённой выше строки нужно преобразовать цену из строки в число. Если не помните, как это сделать, ознакомьтесь со статьёй [строки в JavaScript](/ru/docs/Learn_web_development/Core/Scripting/Strings).
+5. В верхней части кода есть переменная с именем `total` , которая содержит значение `0`. Внутри цикла (под комментарием `// number 4`) нужно добавить строку, которая добавляет текущую цену товара к этой сумме на каждой итерации цикла, так чтобы в конце кода была выведена корректная сумма в счёт-фактуре. Для этого вам может понадобится [оператор присваивания](/ru/docs/Learn_web_development/Core/Scripting/Math#операторы_присваивания).
 6. Под комментарием `// number 5` нужно изменить строку так, чтобы переменная `itemText` была равна "current item name — $current item price", например "Shoes — $23.99" для каждого случая, чтобы корректная информация для каждого элемента была напечатана в счёте-фактуре. Здесь обычная конкатенация строк, которая должна быть вам знакома.
 
 ```html hidden
@@ -378,7 +378,7 @@ body {
 
 ## Практика: Топ 5 поисковых запросов
 
-Хорошим тоном, является использование методов массива, таких как {{jsxref ("Array.prototype.push ()", "push ()")}} и {{jsxref ("Array.prototype.pop ()", "pop ()") }} - это когда вы ведёте запись активных элементов в веб-приложении. Например, в анимированной сцене может быть массив объектов, представляющих текущую отображаемую фоновую графику и вам может потребоваться только 50 одновременных отображений по причинам производительности или беспорядка. Когда новые объекты создаются и добавляются в массив, более старые могут быть удалены из массива для поддержания нужного числа.
+Хорошим тоном является использование методов массива, таких как {{jsxref("Array.prototype.push()", "push()")}} и {{jsxref("Array.prototype.pop()", "pop()")}} — это когда вы ведёте запись активных элементов в веб-приложении. Например, в анимированной сцене может быть массив объектов, представляющих текущую отображаемую фоновую графику и вам может потребоваться только 50 одновременных отображений по причинам производительности или беспорядка. Когда новые объекты создаются и добавляются в массив, более старые могут быть удалены из массива для поддержания нужного числа.
 
 В этом примере мы собираемся показать гораздо более простое использование - ниже мы даём вам поддельный поисковый сайт с полем поиска. Идея заключается в том, что когда в поле поиска вводятся запросы, в списке отображаются 5 предыдущих поисковых запросов. Когда число терминов превышает 5, последний член начинает удаляться каждый раз, когда новый член добавляется в начало, поэтому всегда отображаются 5 предыдущих терминов.
 
@@ -570,16 +570,16 @@ textarea.onkeyup = function () {
 - [Indexed collections](/ru/docs/Web/JavaScript/Guide/Indexed_collections) — an advanced level guide to arrays and their cousins, typed arrays.
 - {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глуых_историй", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "conflicting/Learn_web_development/Core/Scripting")}}
 
 ## В этом разделе
 
-- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ru/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ru/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Массивы](/ru/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [Что такое JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
+- [A first splash into JavaScript](/ru/docs/Learn_web_development/Core/Scripting/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong)
+- [Storing the information you need — Variables](/ru/docs/Learn_web_development/Core/Scripting/Variables)
+- [Basic math in JavaScript — numbers and operators](/ru/docs/Learn_web_development/Core/Scripting/Math)
+- [Handling text — strings in JavaScript](/ru/docs/Learn_web_development/Core/Scripting/Strings)
+- [Useful string methods](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods)
+- [Массивы](/ru/docs/Learn_web_development/Core/Scripting/Arrays)
+- [Assessment: Silly story generator](/ru/docs/Learn_web_development/Core/Scripting/Silly_story_generator)

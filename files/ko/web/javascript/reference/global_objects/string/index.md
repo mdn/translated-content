@@ -58,7 +58,7 @@ ECMAScript 2015 이후, 문자열 리터럴은 소위 [템플릿 리터럴](/ko/
 
 작성한 코드가 매우 긴 문자열을 포함해야 하는 경우, 끝 없이 뻗어나가는 한 줄이나 편집기의 재량에 따라 자동으로 줄을 넘기는 대신 직접 여러 줄로 나누되 내용에는 영향을 주지 않고 싶을 때가 있을겁니다. 이런 상황에는 두 가지 방법을 사용할 수 있습니다.
 
-우선 다음과 같이 [+](</ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#%EB%8D%94%ED%95%98%EA%B8%B0_()>) 연산자를 사용할 수 있습니다.
+우선 다음과 같이 [+](</ko/docs/Web/JavaScript/Reference/Operators#%EB%8D%94%ED%95%98%EA%B8%B0_()>) 연산자를 사용할 수 있습니다.
 
 ```js
 let longString =
@@ -121,7 +121,7 @@ if (a < b) {
 
 JavaScript는 `String` 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 [숫자](/ko/docs/Web/JavaScript/Reference/Global_Objects)의 true도 마찬가지입니다.)
 
-문자열 리터럴(작은 따옴표 또는 큰 따옴표로 생성되는)과 생성자 없이(즉. {{jsxref("Operators/new", "new")}} 키워드를 사용하지 않고) `String`을 호출하여 반환된 문자열은 원형 문자열(primitive strings)입니다. JavaScript는 자동적으로 원형을 `String` 오브젝트로 변환하기 때문에, `String` 오브젝트 메서드를 사용하여 원형문자열을 생성할 수 있습니다. 문맥 안의 메서드에서 프로퍼티 조회 또는 원형의 문자열 호출이 발생하면, JavaScript는 자동으로 문자열 원형을 감싸고 프로퍼티 조회를 수행 하거나 메서드를 호출합니다.
+문자열 리터럴(작은 따옴표 또는 큰 따옴표로 생성되는)과 생성자 없이(즉. {{jsxref("new")}} 키워드를 사용하지 않고) `String`을 호출하여 반환된 문자열은 원형 문자열(primitive strings)입니다. JavaScript는 자동적으로 원형을 `String` 오브젝트로 변환하기 때문에, `String` 오브젝트 메서드를 사용하여 원형문자열을 생성할 수 있습니다. 문맥 안의 메서드에서 프로퍼티 조회 또는 원형의 문자열 호출이 발생하면, JavaScript는 자동으로 문자열 원형을 감싸고 프로퍼티 조회를 수행 하거나 메서드를 호출합니다.
 
 ```js
 var s_prim = "foo";
@@ -156,11 +156,9 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 ## 정적 메서드
 
-- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[,
-    <var>numN</var>]])")}}
+- {{jsxref("String.fromCharCode()", "String.fromCharCode(<var>num1</var> [, ...[, <var>numN</var>]])")}}
   - : 지정된 유니코드 값의 순서를 이용하여 만든 문자열을 반환합니다.
-- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[,
-    <var>numN</var>)")}}
+- {{jsxref("String.fromCodePoint()", "String.fromCodePoint(<var>num1</var> [, ...[, <var>numN</var>)")}}
   - : 지정된 코드 포인트 순서를 이용하여 만든 문자열을 반환합니다.
 - {{jsxref("String.raw()")}}
   - : 원형 템플릿 문자열(raw template string)에서 생성된 문자열을 반환합니다.
@@ -177,95 +175,73 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - {{jsxref("String.prototype.charAt()", "String.prototype.charAt(<var>index</var>)")}}
   - : Returns the character (exactly one UTF-16 code unit) at the specified
     `index`.
-- {{jsxref("String.prototype.charCodeAt()",
-    "String.prototype.charCodeAt(<var>index</var>)")}}
+- {{jsxref("String.prototype.charCodeAt()", "String.prototype.charCodeAt(<var>index</var>)")}}
   - : Returns a number that is the UTF-16 code unit value at the given
     `index`.
-- {{jsxref("String.prototype.codePointAt()",
-    "String.prototype.codePointAt(<var>pos</var>)")}}
+- {{jsxref("String.prototype.codePointAt()", "String.prototype.codePointAt(<var>pos</var>)")}}
   - : Returns a nonnegative integer Number that is the code point value of the UTF-16
     encoded code point starting at the specified `pos`.
-- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[,
-    ...<var>strN </var>])")}}
+- {{jsxref("String.prototype.concat()", "String.prototype.concat(<var>str </var>[, ...<var>strN </var>])")}}
   - : Combines the text of two (or more) strings and returns a new string.
-- {{jsxref("String.prototype.includes()",
-    "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
+- {{jsxref("String.prototype.includes()", "String.prototype.includes(<var>searchString</var> [, <var>position</var>])")}}
   - : Determines whether the calling string contains `searchString`.
-- {{jsxref("String.prototype.endsWith()",
-    "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.endsWith()", "String.prototype.endsWith(<var>searchString</var> [, <var>length</var>])")}}
   - : Determines whether a string ends with the characters of the string
     `searchString`.
-- {{jsxref("String.prototype.indexOf()",
-    "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.indexOf()", "String.prototype.indexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the first
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.lastIndexOf()",
-    "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
+- {{jsxref("String.prototype.lastIndexOf()", "String.prototype.lastIndexOf(<var>searchValue</var> [, <var>fromIndex</var>])")}}
   - : Returns the index within the calling {{jsxref("String")}} object of the last
     occurrence of `searchValue`, or `-1` if not found.
-- {{jsxref("String.prototype.localeCompare()",
-    "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [,
-    <var>options</var>]])")}}
+- {{jsxref("String.prototype.localeCompare()", "String.prototype.localeCompare(<var>compareString</var> [, <var>locales</var> [, <var>options</var>]])")}}
   - : Returns a number indicating whether the reference string
     `compareString` comes before, after, or is equivalent to the
     given string in sort order.
 - {{jsxref("String.prototype.match()", "String.prototype.match(<var>regexp</var>)")}}
   - : Used to match regular expression `regexp` against a string.
-- {{jsxref("String.prototype.matchAll()",
-    "String.prototype.matchAll(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.matchAll()", "String.prototype.matchAll(<var>regexp</var>)")}}
   - : Returns an iterator of all `regexp`'s matches.
-- {{jsxref("String.prototype.normalize()",
-    "String.prototype.normalize([<var>form</var>])")}}
+- {{jsxref("String.prototype.normalize()", "String.prototype.normalize([<var>form</var>])")}}
   - : Returns the Unicode Normalization Form of the calling string value.
-- {{jsxref("String.prototype.padEnd()",
-    "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padEnd()", "String.prototype.padEnd(<var>targetLength</var> [, <var>padString</var>])")}}
   - : Pads the current string from the end with a given string and returns a new string of
     the length `targetLength`.
-- {{jsxref("String.prototype.padStart()",
-    "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}
+- {{jsxref("String.prototype.padStart()", "String.prototype.padStart(<var>targetLength</var> [, <var>padString</var>])")}}
   - : Pads the current string from the start with a given string and returns a new string
     of the length `targetLength`.
 - {{jsxref("String.prototype.repeat()", "String.prototype.repeat(<var>count</var>)")}}
   - : Returns a string consisting of the elements of the object repeated
     `count` times.
-- {{jsxref("String.prototype.replace()" ,
-    "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replace()" , "String.prototype.replace(<var>searchFor</var>, <var>replaceWith</var>)")}}
   - : Used to replace occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.replaceAll()" ,
-    "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
+- {{jsxref("String.prototype.replaceAll()" , "String.prototype.replaceAll(<var>searchFor</var>, <var>replaceWith</var>)")}}
   - : Used to replace all occurrences of `searchFor` using
     `replaceWith`. `searchFor` may be a string
     or Regular Expression, and `replaceWith` may be a string or
     function.
-- {{jsxref("String.prototype.search()",
-    "String.prototype.search(<var>regexp</var>)")}}
+- {{jsxref("String.prototype.search()", "String.prototype.search(<var>regexp</var>)")}}
   - : Search for a match between a regular expression `regexp` and
     the calling string.
-- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[,
-    <var>endIndex</var>])")}}
+- {{jsxref("String.prototype.slice()", "String.prototype.slice(<var>beginIndex</var>[, <var>endIndex</var>])")}}
   - : Extracts a section of a string and returns a new string.
-- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [,
-    <var>limit</var>] ])")}}
+- {{jsxref("String.prototype.split()", "String.prototype.split([<var>sep</var> [, <var>limit</var>] ])")}}
   - : Returns an array of strings populated by splitting the calling string at occurrences
     of the substring `sep`.
-- {{jsxref("String.prototype.startsWith()",
-    "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}
+- {{jsxref("String.prototype.startsWith()", "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substring()",
-    "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
+- {{jsxref("String.prototype.substring()", "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
-- {{jsxref("String.prototype.toLocaleLowerCase()",
-    "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleLowerCase()", "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
   - : The characters within a string are converted to lowercase while respecting the
     current locale.For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
   - : The characters within a string are converted to uppercase while respecting the
     current locale.For most languages, this will return the same as
     {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
@@ -286,7 +262,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String/Symbol.iterator")}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
@@ -294,7 +270,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 ### 문자열 변환
 
-비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("Global_Objects/null", "null")}}과 {{jsxref("Global_Objects/undefined", "undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
+비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("null")}}과 {{jsxref("undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
 
 ```js
 var outputStrings = [];
@@ -313,5 +289,4 @@ for (var i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 같이 보기
 
-- {{domxref("DOMString")}}
 - [Binary strings](/ko/docs/Web/API/DOMString/Binary)

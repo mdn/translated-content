@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : 一个反映 [`datetime`](/zh-CN/docs/Web/HTML/Element/time#datetime) HTML 属性的字符串，包含元素日期和时间值的机器可读形式。
+  - : 一个反映 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) HTML 属性的字符串，包含元素日期和时间值的机器可读形式。
 
 ## 实例方法
 

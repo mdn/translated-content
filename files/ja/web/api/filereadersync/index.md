@@ -32,7 +32,7 @@ l10n:
 - {{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}
   - : このメソッドは、指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをテキスト文字列として表す文字列に変換します。オプションの **`encoding`** 引数は、使用するエンコーディングを示します（iso-8859-1 や UTF-8 など）。これがない場合、このメソッドはエンコーディングの検出アルゴリズムを適用します。
 - {{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}
-  - : 指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データをデータ URL として表す文字列に変換します。
+  - : 指定された {{DOMxRef("Blob")}} または {{DOMxRef("File")}} を、入力データを data URL として表す文字列に変換します。
 
 ## 仕様書
 

@@ -11,4 +11,4 @@ l10n:
 
 ## 같이 보기
 
-- [페이지 채우기: 브라우저 작동 방식](/ko/docs/Web/Performance/How_browsers_work)
+- [페이지 채우기: 브라우저 작동 방식](/ko/docs/Web/Performance/Guides/How_browsers_work)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
 ---
 
-{{jsSidebar("Errors")}}
-
 当某个地方引用了一个不存在的变量时，就会出现“_variable_ is not defined”JavaScript 异常。
 
 ## 错误信息

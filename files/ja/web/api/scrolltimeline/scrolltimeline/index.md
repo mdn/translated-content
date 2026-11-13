@@ -19,15 +19,11 @@ new ScrollTimeline(options)
 ### 引数
 
 - `options`
-
   - : 以下のプロパティを持つことができるオブジェクトです。
-
     - `source`
       - : スクロール位置がタイムラインの進行を駆動するスクロール可能な要素（スクローラー）を表す {{domxref("Element")}} への参照。
     - `axis` {{optional_inline}}
-
       - : タイムラインの進行軸を表す列挙値です。可能な値は以下の通りです。
-
         - `"block"`: スクロールコンテナーのブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸。標準英語のような横書き方向では `"y"` と同じになり、縦書き方向では `"x"` と同じになります。
         - `"inline"`: スクロールコンテナーのインライン軸（行のテキストの流れに並行な方向の軸）上のスクロールバー。横書き方向の場合は `"x"` と同じで、縦書き方向の場合は `"y"` と同じです。
         - `"y"`: スクロールコンテナーの縦軸のスクロールバー。
@@ -54,6 +50,6 @@ new ScrollTimeline(options)
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - {{domxref("ScrollTimeline")}}
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}

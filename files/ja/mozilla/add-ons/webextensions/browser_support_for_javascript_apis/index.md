@@ -1,15 +1,12 @@
 ---
 title: JavaScript API 群のブラウザーの互換性
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 {{WebExtAllCompatTables}}
 
-> [!NOTE]
-> Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
-
 ## 関連情報
 
-- [Browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [manifest.json のブラウザーの互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json#ブラウザーの互換性)

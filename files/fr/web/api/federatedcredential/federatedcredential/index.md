@@ -18,10 +18,8 @@ var mesCredentials = new FederatedCredential(init);
 ### Paramètres
 
 - `init`
-
   - : Les propriétés de cet objet sont :
-
-    - `provider` : une chaîne de caractères {{domxref("USVString")}} identifiant le fournisseur d'information d'authentification.
+    - `provider` : une chaîne de caractères {{jsxref("String")}} identifiant le fournisseur d'information d'authentification.
 
 ## Spécifications
 

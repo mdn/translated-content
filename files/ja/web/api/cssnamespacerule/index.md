@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSNamespaceRule`** インターフェイスは単一の CSS {{ cssxref("@namespace") }} [アットルール](/ja/docs/Web/CSS/At-rule)を記述します。
+**`CSSNamespaceRule`** インターフェイスは単一の CSS {{ cssxref("@namespace") }} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を記述します。
 
 {{InheritanceDiagram}}
 

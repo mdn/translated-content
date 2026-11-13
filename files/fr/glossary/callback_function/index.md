@@ -1,34 +1,46 @@
 ---
 title: Fonction de rappel (callback)
 slug: Glossary/Callback_function
+l10n:
+  sourceCommit: bc0796927a1f937dc8ba92afde355fb2d7c05306
 ---
 
-{{GlossarySidebar}}
+Une **fonction de rappel** (aussi appelée <i lang="en">callback</i> en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
 
-Une fonction de rappel (aussi appelée _callback_ en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
+L'utilisateur·ice d'une API basée sur les fonctions de rappel écrit une fonction qui est transmise à l'API. Le fournisseur de l'API (appelé _l'appelant_) prend cette fonction et la rappelle (ou l'exécute) à un moment donné dans le corps de l'appelant. L'appelant est responsable de transmettre les bons paramètres à la fonction de rappel. Il peut aussi attendre une valeur de retour particulière de la fonction de rappel, qui servira à orienter le comportement ultérieur de l'appelant.
 
-Voici un rapide exemple :
+Il existe deux façons d'appeler une fonction de rappel&nbsp;: _synchrone_ et _asynchrone_. Les rappels synchrones sont appelés immédiatement après l'invocation de la fonction externe, sans tâche asynchrone intermédiaire, tandis que les rappels asynchrones sont appelés plus tard, après qu'une opération {{Glossary("asynchronous", "asynchrone")}} soit terminée.
+
+Comprendre si le rappel est appelé de façon synchrone ou asynchrone est particulièrement important pour analyser les effets de bord. Considérez l'exemple suivant&nbsp;:
 
 ```js
-function salutation(name) {
-  alert("Bonjour " + name);
-}
+let valeur = 1;
 
-function processUserInput(callback) {
-  var name = prompt("Entrez votre nom.");
-  callback(name);
-}
+faireUnTruc(() => {
+  valeur = 2;
+});
 
-processUserInput(salutation);
+console.log(valeur); // 1 ou 2 ?
 ```
 
-L' exemple ci-dessus est un rappel {{glossary("synchronous","synchrone")}} et il est exécuté immédiatement.
+Si `faireUnTruc` appelle le rappel de façon synchrone, alors la dernière instruction affichera `2` car `value = 2` est exécuté immédiatement&nbsp;; sinon, si le rappel est asynchrone, la dernière instruction affichera `1` car `value = 2` n'est exécuté qu'après l'instruction `console.log`.
 
-Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple [xhr-async-callback](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html) ([voir aussi en direct](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html)), on utilise la fonction `displayImage` comme une fonction de rappel pour la fonction `loadAsset` (cette dernière récupère l'image via une requête [XHR](</fr/docs/Glossaire/XHR_(XMLHttpRequest)>)).
+Des exemples de rappels synchrones incluent les fonctions de rappel passées à {{JSxRef("Array.prototype.map()")}}, {{JSxRef("Array.prototype.forEach()")}}, etc. Des exemples de rappels asynchrones incluent ceux passés à {{DOMxRef("Window.setTimeout", "setTimeout()")}} et {{JSxRef("Promise.prototype.then()")}}. Voici des exemples d'implémentation de `faireUnTruc` qui appellent le rappel de façon synchrone et asynchrone&nbsp;:
 
-Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
+```js
+// Synchrone
+function faireUnTruc(callback) {
+  callback();
+}
+
+// Asynchrone
+function faireUnTruc(callback) {
+  setTimeout(callback, 0);
+}
+```
+
+Le guide [Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#gestion_du_temps) fournit plus d'informations sur le moment d'exécution des rappels asynchrones.
 
 ## Voir aussi
 
 - [Fonction de rappel](https://fr.wikipedia.org/wiki/Fonction_de_rappel) sur Wikipédia
-- [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).

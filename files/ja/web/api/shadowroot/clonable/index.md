@@ -12,8 +12,8 @@ l10n:
 
 値が `true` の場合、{{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で複製されたシャドウホストにはシャドウルートのコピーが含まれます。
 
-既定値は `false` です。
-`true` に設定するには、{{domxref("Element.attachShadow()")}} メソッドの `clonable` オプションを使用するか、またはシャドウルートを宣言的に関連付ける使用される `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性を設定します。
+デフォルトでは、値は `false` です。
+`true` に設定するには、{{domxref("Element.attachShadow()")}} メソッドの `clonable` オプションを使用するか、シャドウルートを宣言的に関連付けるために使用する `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性を設定します。
 
 ## 値
 

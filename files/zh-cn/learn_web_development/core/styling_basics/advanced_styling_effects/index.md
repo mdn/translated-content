@@ -3,8 +3,6 @@ title: 高级区块效果
 slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 ---
 
-{{LearnSidebar}}
-
 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。
 
 <table>
@@ -374,8 +372,7 @@ article div:last-child {
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <div class="style-me">
-</div></textarea
-  >
+</div></textarea>
 
   <h2>CSS Input</h2>
   <textarea
@@ -391,8 +388,7 @@ article div:last-child {
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea
-  >
+} </textarea>
 
   <h2>Output</h2>
   <div

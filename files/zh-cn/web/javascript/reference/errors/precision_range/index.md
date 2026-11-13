@@ -3,8 +3,6 @@ title: "RangeError: precision is out of range"
 slug: Web/JavaScript/Reference/Errors/Precision_range
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 描述
 
 ```plain

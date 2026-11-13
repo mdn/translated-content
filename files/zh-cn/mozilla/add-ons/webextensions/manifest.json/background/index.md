@@ -3,8 +3,6 @@ title: 后台 - background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>

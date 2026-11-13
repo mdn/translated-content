@@ -2,10 +2,10 @@
 title: 入門編
 slug: Web/JavaScript/Guide/Introduction
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 本章では JavaScript について紹介し、その基本的な概念について説明します。
 
@@ -29,7 +29,7 @@ MDN には以下の JavaScript 関連ドキュメントがあります。
 
 JavaScript は、クロスプラットフォームで動作するオブジェクト指向のスクリプト言語で、ウェブページをインタラクティブにするために使用されます（例えば、複雑なアニメーション、押下可能なボタン、ポップアップメニューなどを設けることです）。 Node.js のような、より高度なサーバー側のバージョンの JavaScript もあり、ファイルをダウンロードするだけでなく（複数のコンピューター間でのリアルタイムの連携など）、ウェブサイトに多くの機能を追加することができます。ホスト環境（例えばウェブブラウザー）内では、 JavaScript とその環境のオブジェクトが結びつけられ、プログラム制御が可能になっています。
 
-JavaScript には、`Array`、`Date`、 `Math` といったオブジェクトからなる基本的なライブラリー、そして演算子、制御構造、文といったプログラミング言語の要素からなる主要な機能が含まれています。 JavaScript のコア機能は、追加のオブジェクトを補うことで、様々な目的に拡張することができます。例えば以下のようなものです。
+JavaScript には、`Array`、`Map`、 `Math` といったオブジェクトからなる基本的なライブラリー、そして演算子、制御構造、文といったプログラミング言語の要素からなる主要な機能が含まれています。 JavaScript のコア機能は、追加のオブジェクトを補うことで、様々な目的に拡張することができます。例えば以下のようなものです。
 
 - _クライアントサイド JavaScript_ は、ブラウザーとその*ドキュメントオブジェクトモデル* (DOM) を制御するオブジェクトを提供することにより、コア言語を拡張します。例えば、クライアントサイドでの拡張により、アプリケーションが HTML フォーム上に要素を配置したり、マウスクリック、フォーム入力、ページ移動といったユーザーのイベントに応答したりできます。
 - _サーバーサイド JavaScript_ は、 JavaScript を使ったサーバーの稼働に関連するオブジェクトを提供することにより、コア言語を拡張します。例えば、サーバーサイドでの拡張により、アプリケーションがデータベースとやり取りしたり、アプリケーション内のある呼び出しから別の呼び出しまでの間を情報が連続性を保ったり、サーバー上のファイルを操作したりできます。
@@ -58,7 +58,7 @@ Java は高速実行と型安全のために設計されたクラスベースの
 
 JavaScript は、ヨーロッパの情報通信システム標準化団体である [Ecma International](https://ecma-international.org/) （ECMA は、以前は European Computer Manufacturers Association の頭字語）で標準化されており、 JavaScript をベースとした国際的なプログラミング言語の標準化を実現しています。この標準化された JavaScript は ECMAScript と呼ばれ、この規格に対応するすべてのアプリケーションで同じように動作します。企業は、このオープンスタンダードな言語を使って、 JavaScript の実装を開発することができます。 ECMAScript 標準は、 ECMA-262 仕様書に記載されています。
 
-ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://ecma-international.org/publications/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)の記事を参考にしてください。
+ECMA-262 標準は、[ISO](https://www.iso.org/home.html)（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、[Ecma International のウェブサイト](https://ecma-international.org/publications/standards/ecma-262/)でも確認できます。ECMAScript 仕様書には、[World Wide Web Consortium (W3C)](https://www.w3.org/) によって標準化されているドキュメントオブジェクトモデル (DOM) は記載されていません。 DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。 JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)の記事を参考にしてください。
 
 ### JavaScript ドキュメント vs ECMAScript 仕様書
 
@@ -72,7 +72,7 @@ JavaScript のドキュメントは、JavaScript プログラマーに適した�
 
 ## JavaScript を始めよう
 
-JavaScript を始めるのに必要なものは、最新のウェブブラウザーだけです。 [Firefox](https://www.mozilla.org/ja/firefox/new/)、[Chrome](https://www.google.com/chrome/index.html)、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge)、[Safari](https://www.apple.com/safari/) の最新バージョンは、このガイドで説明されているすべての機能に対応しています。
+JavaScript を始めるのに必要なものは、最新のウェブブラウザーだけです。 [Firefox](https://www.firefox.com/ja/)、[Chrome](https://www.google.com/chrome/index.html)、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge)、[Safari](https://www.apple.com/safari/) の最新バージョンは、このガイドで説明されているすべての機能に対応しています。
 
 JavaScript を試すのに非常に便利なツールが JavaScript コンソール（ウェブコンソール、または単にコンソールと呼ばれることもあります）です。これは、JavaScript を入力すると、現在のページで実行できるツールです。
 
@@ -84,7 +84,7 @@ JavaScript を試すのに非常に便利なツールが JavaScript コンソー
 
 - [Firefox でコンソールを開く](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
 - [Chrome でコンソールを開く](https://developer.chrome.com/docs/devtools/open)
-- [Microsoft Edge でコンソールを開く](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools-guide-chromium/console/)
+- [Microsoft Edge でコンソールを開く](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools/console/)
 
 ### JavaScript を入力して実行
 

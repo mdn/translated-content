@@ -60,7 +60,7 @@ function test() {
 
 ## No utilice `eval` innecesariamente
 
-`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de caracteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Global_Objects/Function", "Function")}} (art. en inglés) el cual es similar, no es susceptible.
+`eval()` es una función peligrosa, quel ejecuta el código el cual es pasado con los privilegios de quien llama. Si ejecuta `eval()` con una cadena de caracteres que podría ser afectada por un elemento malicioso, podría terminar ejecutando código malicioso dentro de la computadora del usuario con los permisos de su página o extensión web . Más importante aún, una parte del código de terceros podría accesar al ámbito en el cual `eval()` fue invocada, lo que puede permitir la entrada a posibles ataques de formas a las que el constructor {{jsxref("Function")}} (art. en inglés) el cual es similar, no es susceptible.
 
 `eval()` es generalmente también más lenta que otras alternativas desde que se invoca en el intérprte de JS, mientras que otros muchos constructores son optimizados por los motores JS modernos.
 
@@ -152,7 +152,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-Las [clausuras o cierres](/es/docs/Web/JavaScript/Closures)(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
+Las [clausuras o cierres](/es/docs/Web/JavaScript/Guide/Closures)(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
 
 ### Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)
 
@@ -162,7 +162,7 @@ Observe, que ya que la sintaxis de JSON es limitada en comparación con la sinta
 
 ### Pasar datos en lugar de código
 
-Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/Web/XPath) (art. en inglés) en lugar de código JavaScript.
+Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/Web/XML/XPath) (art. en inglés) en lugar de código JavaScript.
 
 ### Ejecutar código sin privilegos limitados
 
@@ -231,5 +231,5 @@ var fct2 = eval(fctStr2); // deuelve una función
 
 ## Vea También
 
-- {{jsxref("Objetos_globales/uneval", "uneval()")}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}}
 - [Miembros de operadores](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)

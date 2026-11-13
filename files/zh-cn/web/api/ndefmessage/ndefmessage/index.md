@@ -18,9 +18,7 @@ new NDEFMessage(records)
 ### 参数
 
 - `records`
-
   - : 包含以下成员的对象数组：
-
     - `data` {{optional_inline}}
       - : 包含要传输的数据；可以是字符串、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} 或嵌套记录数组之一。
     - `encoding` {{optional_inline}}
@@ -30,21 +28,18 @@ new NDEFMessage(records)
     - `lang` {{optional_inline}}
       - : 根据 {{RFC(5646, "用于标识语言的标记（又称 BCP 47）")}}规定的有效语言标签。
     - `mediaType` {{optional_inline}}
-      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
     - `recordType`
-
       - : 指示存储在 `data` 中的数据类型的字符串。必须是以下值之一：
-
         - `"absolute-url"`
 
           指向数据的绝对 URL。
 
           `"empty"`
-
           - : 一个空的 {{domxref("NDEFRecord")}}。
 
         - `"mime"`
-          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
         - `"smart-poster"`
           - : 一个由 [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 规范定义的智能海报。
         - `"text"`

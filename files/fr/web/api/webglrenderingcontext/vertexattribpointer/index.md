@@ -20,22 +20,17 @@ void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
 - `taille`
   - : Un {{domxref("GLint")}} indiquant le nombre de composantes par attribut de sommet. Doit être 1, 2, 3 ou 4.
 - `type`
-
   - : Un {{domxref ("GLenum")}} spécifiant le type de données de chaque composante dans le tableau. Valeurs possibles :
-
     - `gl.BYTE` : entier signé sur 8 bits, à valeurs dans \[-128, 127]
     - `gl.SHORT` : entier signé sur 16 bits, à valeurs dans \[-32768, 32767]
     - `gl.UNSIGNED_BYTE` : entier non signé sur 8 bits, à valeurs dans \[0, 255]
     - `gl.UNSIGNED_SHORT` : entier non signé sur 16 bits, à valeurs dans \[0, 65535]
     - `gl.FLOAT` : nombre flottant IEEE 32 bits
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, la valeur suivante est en outre disponible :
-
       - `gl.HALF_FLOAT` : nombre flottant IEEE 16 bits
 
 - `normalise`
-
   - : Un {{domxref("GLboolean")}} indiquant si les valeurs des données entières doivent être normalisées dans une certaine plage lorsqu'elles sont converties en flottant.
-
     - Pour les types `gl.BYTE` et `gl.SHORT`, normalise les valeurs à \[-1, 1] si `true`.
     - Pour les types `gl.UNSIGNED_BYTE` et `gl.UNSIGNED_SHORT`, normalise les valeurs à \[0, 1] si `true`.
     - Pour les types `gl.FLOAT` et `gl.HALF_FLOAT`, ce paramètre est sans effet.
@@ -128,7 +123,7 @@ sera stocké dans le tampon des tableaux comme suit :
 
 ### Création du tampon des tableaux
 
-Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de données JSON en utilisant un {{domxref("DataView")}}. Notez l'utilisation de `true`, car WebGL s'attend à ce que nos données soient en little-endian.
+Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de données JSON en utilisant un {{jsxref("DataView")}}. Notez l'utilisation de `true`, car WebGL s'attend à ce que nos données soient en little-endian.
 
 ```js
 // Charger la géometrie avec fetch() et Response.json()

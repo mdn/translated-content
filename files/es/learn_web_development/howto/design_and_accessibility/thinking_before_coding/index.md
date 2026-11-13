@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_codin
 original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 Este artículo cubre el primer paso importante de cada proyecto: definir lo que se desea lograr con él.
 
@@ -35,7 +35,7 @@ Todo esto es llamado _idealización del proyecto_ y es un primer paso necesario 
 
 ## Aprendizaje Activo
 
-_No hay aprendizaje activo todavía. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_No hay aprendizaje activo todavía. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundizando
 

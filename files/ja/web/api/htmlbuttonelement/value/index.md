@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`value`** は {{DOMxRef("HTMLButtonElement")}} インターフェイスのプロパティで、この {{htmlelement("button")}} 要素の現在の値を文字列で表します。値が設定されていない場合は空文字列になります。これはこの要素の [`value`](/ja/docs/Web/HTML/Element/button#value) 属性を反映します。
+**`value`** は {{DOMxRef("HTMLButtonElement")}} インターフェイスのプロパティで、この {{htmlelement("button")}} 要素の現在の値を文字列で表します。値が設定されていない場合は空文字列になります。これはこの要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/button#value) 属性を反映します。
 
 ## 値
 

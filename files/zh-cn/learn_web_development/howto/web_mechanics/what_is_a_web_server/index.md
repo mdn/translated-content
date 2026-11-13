@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 在这篇文章中我们会重温什么是 web 服务器，它们如何工作，以及为什么它们很重要。
 
 <table>
@@ -35,7 +33,7 @@ l10n:
 1. 硬件部分，web 服务器是一台存储了 web 服务器软件以及网站的组成文件（比如，HTML 文档、图片、CSS 样式表和 JavaScript 文件）的计算机。它接入到互联网并且支持与其他连接到互联网的设备进行物理数据的交互。
 2. 软件部分，web 服务器包括控制网络用户如何访问托管文件的几个部分，至少是一台 _HTTP 服务器_。一台 HTTP 服务器是一种能够理解 {{Glossary("URL")}}（网络地址）和 {{Glossary("HTTP")}}（浏览器用来查看网页的协议）的软件。一个 HTTP 服务器可以通过它所存储的网站域名进行访问，并将这些托管网站的内容传递给最终用户的设备。
 
-基本上，当浏览器需要一个托管在网络服务器上的文件的时候，浏览器通过 HTTP 请求这个文件。当这个请求到达正确的 web 服务器（硬件）时，_HTTP 服务器_（软件）收到这个请求，找到这个被请求的文档（如果这个文档不存在，那么将返回一个 [404](/zh-CN/docs/Web/HTTP/Status/404) 响应），并把这个文档通过 HTTP 发送给浏览器。
+基本上，当浏览器需要一个托管在网络服务器上的文件的时候，浏览器通过 HTTP 请求这个文件。当这个请求到达正确的 web 服务器（硬件）时，_HTTP 服务器_（软件）收到这个请求，找到这个被请求的文档（如果这个文档不存在，那么将返回一个 [404](/zh-CN/docs/Web/HTTP/Reference/Status/404) 响应），并把这个文档通过 HTTP 发送给浏览器。
 
 ![通过 HTTP 的客户/服务器连接的基本表示方法](web-server.svg)
 
@@ -62,9 +60,9 @@ l10n:
 - 专用 web 服务器可以一直拥有一样的 IP 地址，这也称为*专有 IP 地址*（不是所有的 {{Glossary("ISP")}} 都会为家庭线提供一个固定的 IP 地址）
 - 专用 web 服务器往往由第三方提供者维护
 
-因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在[这篇文章](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#专业网站机构和托管)中找到更多的细节。
+因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务。有关更多细节，请参见[获取托管服务和域名](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#获取托管服务和域名)。
 
-一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。
+一旦你设置好一个网络托管解决方案，你必须上传你的文件到你的 web 服务器；参见[发布你的网站 > 发布到你的服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#发布到你的服务器)。
 
 ### 通过 HTTP 交流
 
@@ -99,11 +97,3 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 不可能建议一个通用的应用服务器适用于所有可能的用例。一些应用服务器设计用于托管和管理博客、知识库或电子商务解决方案，而其他一些则更通用。如果你正在构建一个动态网站，请花时间研究你的需求，并找到最适合你需求的技术。
 
 大多数网站开发者不需要从头开始创建应用服务器，因为有很多现成的解决方案，其中许多都可以高度配置。但是，如果你确实需要创建自己的服务器，那么你可能需要使用服务器框架，利用其现有的代码和库，并仅扩展你需要的部分以满足你的用例。只有相对较少的开发者需要完全从头开始开发服务器：例如，为了满足嵌入式系统上紧张的资源限制。如果你想尝试构建一个服务器，请浏览[服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)学习路径中的资源。
-
-## 下一步
-
-现在你已经熟悉了什么是 web 服务器，你可以：
-
-- 钻研[在 web 上做某些事情要花费多少](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- 学习关于[创建一个网页所需要的各种软件](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- 移步到某些实用的东西，像是[如何上传文件到一个 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。

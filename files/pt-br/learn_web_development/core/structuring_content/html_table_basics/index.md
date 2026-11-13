@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Tables
 
 {{LearnSidebar}}
 
-Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem [CSS](/pt-BR/docs/Learn/CSS) para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.
+Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.
 
 ## Pré-requisitos
 
@@ -19,7 +19,7 @@ Antes de iniciar este módulo, você deverá ter domínio dos básicos de HTML �
 
 Este módulo contém os seguintes artigos:
 
-- [HTML - o básico sobre tabelas](/pt-BR/docs/Learn/HTML/Tables/Basics)
+- [HTML - o básico sobre tabelas](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Este artigo apresenta as tabelas HTML, cobrindo o essencial, tal como linhas e células, cabeçalhos, como extender células por múltiplas colunas e linhas, e como agrupar todas as células numa coluna para efeitos de estilo.
 - [HTML - funcionalidades avançadas de tabelas e acessibilidade](/pt-BR/docs/Learn/HTML/Tables/Advanced)
   - : No segundo artigo deste módulo, nós vamos ver algumas funcionalidades mais avançadas das tabelas HTML — tais como legendas/resumos e agrupar as suas filas no cabeçalho da tabela (head), seções de corpo (body) e rodapé (footer) — bem como, veremos sobre a acessibilidade das tabelas para os utilizadores deficientes visuais .

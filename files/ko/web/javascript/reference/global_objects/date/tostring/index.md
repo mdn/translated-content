@@ -29,7 +29,7 @@ dateObj.toString();
 
 ## 설명
 
-{{jsxref("Date")}} 객체는 `toString()` 메서드를 {{jsxref("Object.prototype")}}이 아닌 {{jsxref("Date.prototype")}}에서 상속받습니다. `Date.prototype.toString()`의 반환값은 ECMA-262에 명시되어있으며 다음과 같이 요약할 수 있습니다.
+{{jsxref("Date")}} 객체는 `toString()` 메서드를 {{jsxref("Object")}}이 아닌 {{jsxref("Date")}}에서 상속받습니다. `Date.prototype.toString()`의 반환값은 ECMA-262에 명시되어있으며 다음과 같이 요약할 수 있습니다.
 
 - 요일: 세 글자 영어 요일명. 예: "Sat"
 - 공백
@@ -47,14 +47,12 @@ dateObj.toString();
 - 공백
 - 문자열 "GMT"
 - 시간대 차이의 부호.
-
   - 0 이상일 경우 "+"
   - 0 미만일 경우 "-"
 
 - 두 글자 숫자로 표현한 시 차이. 예: "14"
 - 두 글자 숫자로 표현한 분 차이. 예: "00"
 - 선택사항: 다음으로 구성한 시간대의 이름.
-
   - 공백
   - 여는 소괄호
   - 구현마다 다를 수 있는 시간대 이름. 약어와 전체 이름 둘 다 가능. 예: "Korea Standard Time", "한국 표준시" 또는 "KST"

@@ -48,7 +48,7 @@ MDN Web 文档的 [GitHub 讨论](https://github.com/orgs/mdn/discussions)是一
 
 ## 本地化沟通渠道
 
-每一个本地化团队都有自己的[沟通方式](/zh-CN/docs/MDN/Community/Contributing/Translated_content)。
+每一个本地化团队都有自己的[沟通方式](/zh-CN/docs/MDN/Community/Translated_content)。
 
 ## 电子邮件
 

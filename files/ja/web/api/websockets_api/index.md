@@ -2,10 +2,10 @@
 title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 l10n:
-  sourceCommit: f49de43625cd621fd73c7ba2e9a2db3d8566580f
+  sourceCommit: 20c3765ca2538a98ffef564c7eb87df43e2cef94
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}{{AvailableInWorkers}}
 
 **WebSocket API** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができるものです。この API を使用すると、サーバーにメッセージを送信し、サーバーから返信をポーリングすることなく応答を受信することができます。
 
@@ -17,7 +17,7 @@ WebSocket API は、ウェブソケット接続を作成して使用するため
 それに加えて、[WebTransport API](/ja/docs/Web/API/WebTransport_API) が多くのアプリケーションで WebSocket API に取って代わることも予想されます。WebTransport は、汎用性の高い低レベル API で、背圧や、`WebSocket` や `WebSocketStream` では対応していない機能、例えば、一方向ストリーム、順不同配信、データグラムを介した信頼性の低いデータ転送など、他にも多くの機能を提供します。WebTransport は WebSocket よりも複雑で、ブラウザーの対応も限定的ですが、高度なソリューションの実装が可能です。標準の WebSocket 接続が用途に適しており、幅広いブラウザーとの互換性が必要な場合は、WebSockets API を用いてすばやく実装し、実行することができます。しかし、アプリケーションに標準以外のカスタムソリューションが要求される場合は、WebTransport API を使用すべきでしょう。
 
 > [!NOTE]
-> WebSocket の接続は機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
+> ページに開いた WebSocket 接続がある場合、ブラウザーはそのページを {{glossary("bfcache")}} に追加しない可能性があります。したがって、ユーザーがページの利用を完了した際には接続を閉じることを推奨します。詳細は [bfcache の操作](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#bfcache_の操作)を参照してください。
 
 ## インターフェイス
 
@@ -64,7 +64,7 @@ WebSocket API は、ウェブソケット接続を作成して使用するため
 
 - [AsyncAPI](https://www.asyncapi.com/): WebSocket のようなプロトコルに基づいたイベントドリブン型アーキテクチャを記述するための仕様です。 OpenAPI 仕様で REST API を記述するのと同じように、 WebSocket ベースの API を記述するために使用することができます。 [WebSocket で AsyncAPI の利用を検討すべき理由](https://www.asyncapi.com/blog/websocket-part1)と[利用する方法](https://www.asyncapi.com/blog/websocket-part2)を紹介します。
 - [µWebSockets](https://github.com/uNetworking/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
-- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
+- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティーの [Node.js](https://nodejs.org) 用転送プロトコルです。
 - [SocketCluster](https://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
 - [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
 - [Total.js](https://www.totaljs.com): [Node.js](https://nodejs.org/en/) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))

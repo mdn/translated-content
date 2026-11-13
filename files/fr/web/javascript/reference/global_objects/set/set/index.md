@@ -3,8 +3,6 @@ title: Constructeur Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
-{{JSRef}}
-
 Le **constructeur `Set()`** permet de créer des objets `Set` qui sont des ensembles de valeurs uniques de n'importe quel type ([des valeurs primitives](/fr/docs/Glossary/Primitive) ou des objets).
 
 {{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
@@ -32,7 +30,6 @@ new Set(iterable);
 ### Paramètres
 
 - `iterable` {{optional_inline}}
-
   - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») est passé en argument, ses différents éléments seront ajoutés au nouvel objet `Set` créé.
 
     Si ce paramètre est absent ou s'il vaut `null`, le nouvel ensemble créé sera vide.

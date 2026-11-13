@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{Glossary("HTML")}} {{HTMLElement("img")}} 元素可让你在 HTML 文档中嵌入图像，而 {{HTMLElement("picture")}} 元素则可启用[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)。在本指南中，你可以找到有关在网站中添加图像的资源链接。
+{{Glossary("HTML")}} {{HTMLElement("img")}} 元素可让你在 HTML 文档中嵌入图像，而 {{HTMLElement("picture")}} 元素则可启用[响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)。在本指南中，你可以找到有关在网站中添加图像的资源链接。
 
 ## 参考
 
@@ -14,16 +14,16 @@ l10n:
 ### HTML
 
 - {{HTMLElement("img")}}
-  - : **HTML `<img>` 元素**用于在网页中嵌入图像。它支持多种属性，可控制图像的行为方式，并允许为看不到图像的人添加 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本等重要信息。
+  - : **HTML `<img>` 元素**用于在网页中嵌入图像。它支持多种属性，可控制图像的行为方式，并允许为看不到图像的人添加 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本等重要信息。
 - {{HTMLElement("picture")}}
   - : **HTML `<picture>` 元素**包含零个或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素，为不同的显示/设备场景提供不同版本的图像。浏览器会考虑每个子 `<source>` 元素，并选择其中最匹配的元素。
 
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了如何调整[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容大小以适应其容器，例如 [`<img>`](/zh-CN/docs/Web/HTML/Element/img) 或 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)。
+  - : **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了如何调整{{glossary("Replaced elements", "可替换元素")}}的内容大小以适应其容器，例如 [`<img>`](/zh-CN/docs/Web/HTML/Reference/Elements/img) 或 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)。
 - {{cssxref("object-position")}}
-  - : **`object-position`** [CSS](/zh-CN/docs/Web/CSS) 属性指定所选[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中的内容在元素框内的对齐方式。替换元素对象未覆盖的框内区域将显示该元素的背景。
+  - : **`object-position`** [CSS](/zh-CN/docs/Web/CSS) 属性指定所选{{glossary("Replaced elements", "可替换元素")}}中的内容在元素框内的对齐方式。替换元素对象未覆盖的框内区域将显示该元素的背景。
 - {{cssxref("background-image")}}
   - : **`background-image`** [CSS](/zh-CN/docs/Web/CSS) 属性为元素设置一个或多个背景图像。
 
@@ -40,5 +40,5 @@ l10n:
 
 你可能感兴趣的相关主题。
 
-- [学习 HTML：响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)
+- [学习 HTML：响应式图片](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
   - : 在本文中，我们将了解响应式图像（能在屏幕尺寸、分辨率和其他特性差异较大的设备上正常显示的图像）的概念并了解 HTML 提供了哪些工具来帮助我们实现这项技术。

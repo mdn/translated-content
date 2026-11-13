@@ -28,11 +28,11 @@ AddType application/ogg .ogg
 
 ## 正确处理范围请求
 
-为了支持搜索和播放尚未下载的媒体区域，你可以使用[范围请求](/zh-CN/docs/Web/HTTP/Range_requests)从搜索目标位置检索媒体。此外，它还会使用字节范围请求寻址到媒体的末尾（假设提供了 {{HTTPHeader("Content-Length")}} 标头），以确定媒体的时长。
+为了支持搜索和播放尚未下载的媒体区域，你可以使用[范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)从搜索目标位置检索媒体。此外，它还会使用字节范围请求寻址到媒体的末尾（假设提供了 {{HTTPHeader("Content-Length")}} 标头），以确定媒体的时长。
 
 如果服务器可以接受范围请求，则应接受 {{HTTPHeader("Accept-Ranges")}} 标头。它必须向所有范围请求返回 {{HTTPStatus("206", "206 Partial Content")}}，否则浏览器无法判断服务器是否支持范围请求。服务器也必须为请求 `Range: bytes=0-` 返回 `206: Partial Content`。
 
-参见[范围请求](/zh-CN/docs/Web/HTTP/Range_requests)以了解更多信息。
+参见[范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)以了解更多信息。
 
 ## 包含常规关键帧
 

@@ -2,17 +2,15 @@
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{jsSidebar("Classes")}}
 
 **`constructor`** メソッドは、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)で作成されたオブジェクトインスタンスの生成と初期化を行うための特殊なメソッドです。
 
 > [!NOTE]
 > このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{InteractiveExample("JavaScript デモ: クラスのコンストラクター")}}
 
 ```js interactive-example
 class Polygon {
@@ -24,7 +22,7 @@ class Polygon {
 const poly1 = new Polygon();
 
 console.log(poly1.name);
-// Expected output: "Polygon"
+// 予想される結果: "Polygon"
 ```
 
 ## 構文
@@ -139,7 +137,7 @@ try {
 3. 現在のクラスの[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)が初期化されます。
 4. `super()` 呼び出し後の `constructor` 本体（基底クラスの場合は本体全体）が評価されます。
 
-`constructor` 本体の中では、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) で作成されるオブジェクトにアクセスしたり [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるクラスに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new) でアクセスしたりすることができます。メソッド（[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を含む）と[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) は `constructor` が実行される前に `this` で初期化されているので、スーパークラスのコンストラクターからサブクラスのメソッドにアクセスすることもできることに注意してください。しかし、これらのメソッドが `this` を使用している場合、 `this` はまだ完全に初期化されていません。これは、派生クラスのパブリックフィールドを読むと `undefined` になり、プライベートフィールドを読むと `TypeError` になるということです。
+`constructor` 本体の中では、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) で作成されるオブジェクトにアクセスしたり [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるクラスに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new) でアクセスしたりすることができます。メソッド（[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を含む）と[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) は `constructor` が実行される前に `this` で初期化されているので、スーパークラスのコンストラクターからサブクラスのメソッドにアクセスすることもできることに注意してください。しかし、これらのメソッドが `this` を使用している場合、 `this` はまだ完全に初期化されていません。これは、派生クラスのパブリックフィールドを読むと `undefined` になり、プライベートフィールドを読むと `TypeError` になるということです。
 
 ```js example-bad
 new (class C extends class B {
@@ -178,7 +176,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-親クラスのコンストラクターがオブジェクトを返した場合、そのオブジェクトは派生クラスの[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を定義する際の値として使用します。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)なものも含む）を無関係なオブジェクトに定義することができます。
+親クラスのコンストラクターがオブジェクトを返した場合、そのオブジェクトは派生クラスの[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を定義する際の値として使用します。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)なものも含む）を無関係なオブジェクトに定義することができます。
 
 `constructor` は通常の[メソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)構文に従うので、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)や[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)などをすべて使用することができます。
 
@@ -196,11 +194,11 @@ const person = new Person();
 person.introduce(); // こんにちは、私は名無し
 ```
 
-コンストラクターはリテラル名でなければなりません。[計算プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)はコンストラクターにはなれません。
+コンストラクターはリテラル名でなければなりません。[算出プロパティ名](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)はコンストラクターにはなれません。
 
 ```js
 class Foo {
-  // これは計算プロパティ名です。コンストラクターとしてピックアップされることはありません。
+  // これは算出プロパティ名です。コンストラクターとしてピックアップされることはありません。
   ["constructor"]() {
     console.log("called");
     this.a = 1;

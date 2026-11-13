@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("SVG")}}
 
-**`dataset`** は {{DOMxRef("SVGElement")}} インターフェイスの読み取り専用プロパティで、要素の[カスタムデータ属性](/ja/docs/Web/SVG/Attribute/data-*) (`data-*`) への読み書きアクセスを提供します。これは文字列のマップ ({{domxref("DOMStringMap")}}) を公開し、各 `data-*` 属性の項目を持つ文字列の地図（DOMStringMap）を公開します。
+**`dataset`** は {{DOMxRef("SVGElement")}} インターフェイスの読み取り専用プロパティで、要素の[カスタムデータ属性](/ja/docs/Web/SVG/Reference/Attribute/data-*) (`data-*`) への読み書きアクセスを提供します。これは文字列のマップ ({{domxref("DOMStringMap")}}) を公開し、各 `data-*` 属性の項目を持つ文字列の地図（DOMStringMap）を公開します。
 
 `dataset` の動作に関するより詳しい情報は {{domxref("HTMLElement.dataset")}} を参照して下さい。
 
@@ -44,5 +44,5 @@ console.log(el.dataset.id); // "1234567890"
 
 ## 関連情報
 
-- SVG の [`data-*`](/ja/docs/Web/SVG/Attribute/data-*) 属性
-- [データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
+- SVG の [`data-*`](/ja/docs/Web/SVG/Reference/Attribute/data-*) 属性
+- [データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)

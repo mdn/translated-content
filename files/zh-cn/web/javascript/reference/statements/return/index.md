@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
-
 **`return`** 语句用于终止函数执行，并指定要返回给调用函数的值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Return")}}

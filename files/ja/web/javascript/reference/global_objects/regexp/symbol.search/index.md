@@ -1,15 +1,14 @@
 ---
 title: RegExp.prototype[Symbol.search]()
+short-title: "[Symbol.search]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.search]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) がどのように動作するのかを指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.search]()")}}
 
 ```js interactive-example
 class RegExp1 extends RegExp {
@@ -23,7 +22,7 @@ class RegExp1 extends RegExp {
 }
 
 console.log("table football".search(new RegExp1("foo")));
-// Expected output: 6
+// 予想される結果: 6
 ```
 
 ## 構文

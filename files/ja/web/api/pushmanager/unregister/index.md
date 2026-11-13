@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
+{{ApiRef("Push API")}}{{non-standard_header}}{{AvailableInWorkers}}
 
 **`unregister()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
 

@@ -1,17 +1,16 @@
 ---
 title: element-available
 slug: Web/XML/XPath/Reference/Functions/element-available
-original_slug: Web/XPath/Reference/Functions/element-available
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `element-available` 関数は、要素が利用可能かどうかを判断し、true または false を返します。
 
-### 構文
+## 構文
 
-```
-element-available(QName )
+```plain
+element-available( QName )
 ```
 
 ### 引数
@@ -23,10 +22,10 @@ element-available(QName )
 
 展開された名前が命令の名前である場合にのみ true を返します。展開された名前が XSLT 名前空間 URI と等しい名前空間 URI を持つ場合、XSLT で定義された要素を参照します。それ以外の場合は拡張要素を参照します。展開された名前が null の名前空間 URI を持つ場合、要素利用可能な関数は false を返します。
 
-### 定義
+## 仕様書
 
-[XSLT 1.0 15](https://www.w3.org/TR/xslt#function-element-available)
+[XSLT 1.0 15](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-element-available)
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

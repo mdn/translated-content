@@ -2,10 +2,8 @@
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
-
-{{JSRef}}
 
 **`Math.asin()`** 靜態方法回傳數字的反正弦值（單位為弧度）。也就是說，
 
@@ -16,16 +14,16 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Math.asin()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 計算直角三角形的角度（以弧度表示）
 function calcAngle(opposite, hypotenuse) {
   return Math.asin(opposite / hypotenuse);
 }
 
 console.log(calcAngle(6, 10));
-// Expected output: 0.6435011087932844
+// 預期輸出：0.6435011087932844
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// 預期輸出：NaN
 ```
 
 ## 語法
@@ -77,3 +75,4 @@ Math.asin(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("asin()")}} 函式

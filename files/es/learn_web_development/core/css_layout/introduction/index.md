@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
 
 Este artículo resumirá algunas de las características de diseño de páginas web con CSS que ya hemos mencionado en módulos anteriores, como los diferentes valores de {{cssxref ("display")}}, e introducirá algunos de los conceptos que vamos a tratar en este módulo.
 
@@ -14,10 +14,10 @@ Este artículo resumirá algunas de las características de diseño de páginas 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
       </td>
     </tr>
     <tr>
@@ -75,11 +75,11 @@ Cuando usas CSS para crear un diseño de página web, alejas los elementos del f
 
 Los métodos que permiten cambiar la disposición de los elementos en CSS son los siguientes:
 
-- **La propiedad {{cssxref ("display")}}**: los valores estándar como `block`, `inline` o `inline-block` pueden cambiar el comportamiento de los elementos en el flujo normal (consulta [Tipos de cajas en CSS](/es/docs/Learn/CSS/Building_blocks/The_box_model) para obtener más información). Luego hay métodos de diseño completos que se activan con un valor `display`, por ejemplo [CSS Grid](/es/docs/Learn/CSS/CSS_layout/Grids) y [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propiedad {{cssxref ("display")}}**: los valores estándar como `block`, `inline` o `inline-block` pueden cambiar el comportamiento de los elementos en el flujo normal (consulta [Tipos de cajas en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Box_model) para obtener más información). Luego hay métodos de diseño completos que se activan con un valor `display`, por ejemplo [CSS Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) y [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 - **Floats**: la aplicación de un valor {{cssxref ("float")}} como `left` puede hacer que los elementos de nivel de bloque rodeen el elemento por uno de sus lados, como la forma en que las imágenes a veces tienen texto flotando a su alrededor en los diseños de algunas revistas.
 - **La propiedad {{cssxref ("position")}}**: permite controlar con precisión la ubicación de las cajas dentro de otras cajas. El posicionamiento estático es el valor predeterminado en el flujo normal, pero puede hacer que los elementos se distribuyan de manera diferente si se utilizan otros valores, por ejemplo, pueden estar siempre fijados a la parte superior izquierda de la ventana del navegador.
 - **Diseño de tablas**: se pueden usar las características que sirven para diseñar las partes de una tabla HTML en elementos que no son de tabla con `display: table` y las propiedades asociadas.
-- **Diseño en varias columnas**: las propiedades de [diseño en varias columnas](/es/docs/Web/CSS/CSS_multicol_layout) permiten distribuir el contenido de un bloque en columnas, como en el caso de un periódico.
+- **Diseño en varias columnas**: las propiedades de [diseño en varias columnas](/es/docs/Web/CSS/Guides/Multicol_layout) permiten distribuir el contenido de un bloque en columnas, como en el caso de un periódico.
 
 ## La propiedad display
 
@@ -91,7 +91,7 @@ Además de poder cambiar la presentación predeterminada de un elemento `block` 
 
 ## Flexbox
 
-Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/CSS_flexible_box_layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
+Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/Guides/Flexible_box_layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
 
 ### Establecer display: flex
 
@@ -166,7 +166,7 @@ Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")
 {{ EmbedLiveSample('Establecer la propiedad flex', '300', '200') }}
 
 > [!NOTE]
-> Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
+> Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 
 ## Diseño de cuadrícula
 
@@ -261,7 +261,7 @@ Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explíc
 {{ EmbedLiveSample('Colocar elementos en la cuadrícula', '300', '330') }}
 
 > [!NOTE]
-> Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn/CSS/CSS_layout/Grids).
+> Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn_web_development/Core/CSS_layout/Grids).
 
 El resto de esta guía expone otros métodos de diseño de páginas web que son menos importantes para las estructuras principales de diseño de tu página web, pero que pueden serte de ayuda para tareas específicas. Si entiendes la naturaleza de cada una de las tareas de diseño de una página web, vas a descubrir enseguida que a menudo vas a ser capaz de discernir qué tipo de diseño se adapta mejor a cada componente de tu diseño particular.
 
@@ -328,7 +328,7 @@ p {
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
 > [!NOTE]
-> El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn/CSS/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn_web_development/Core/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Técnicas de posicionamiento
 
@@ -747,4 +747,4 @@ body {
 
 Este artículo ha proporcionado un breve resumen de todas las tecnologías de diseño que debes conocer. ¡Sigue leyendo para obtener más información sobre cada tecnología individual!
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}

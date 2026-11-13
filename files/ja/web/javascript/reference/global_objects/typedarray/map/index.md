@@ -1,22 +1,21 @@
 ---
 title: TypedArray.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`map()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、呼び出された型付き配列のすべての要素に対して指定された関数を呼び出し、その結果を格納した新しい型付き配列を生成します。このメソッドは {{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。
 
-**`map()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、与えられた関数を呼び出された型付き配列のすべての要素に対して呼び出し、その結果からなる新しい型付き配列を生成します。このメソッドは、 {{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。
-
-{{InteractiveExample("JavaScript Demo: TypedArray.map()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.map()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([25, 36, 49]);
 const roots = uint8.map(Math.sqrt);
 
 console.log(roots);
-// Expected output: Uint8Array [5, 6, 7]
+// 予想される結果: Uint8Array [5, 6, 7]
 ```
 
 ## 構文
@@ -29,14 +28,13 @@ map(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
-  - : 型付き配列のそれぞれの要素に対して実行する関数。その返値は、新しい型付き配列の単一の要素として追加されます。この関数は以下の引数で呼び出されます。
+  - : 型付き配列のそれぞれの要素に対して実行する関数です。その返値は、新しい型付き配列の 1 つの要素として追加されます。この関数は以下の引数で呼び出されます。
     - `element`
       - : 型付き配列で現在処理されている要素です。
     - `index`
-      - : 現在処理中の要素の型付き配列内におけるインデックスです。
+      - : 型付き配列で現在処理されている要素のインデックスです。
     - `array`
-      - : `map()` が呼び出されてた型付き配列です。
+      - : `map()` が呼び出された型付き配列です。
 
 - `thisArg` {{optional_inline}}
   - : `callbackFn` を実行する際に `this` として使用する値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
@@ -58,8 +56,8 @@ map(callbackFn, thisArg)
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
 const roots = numbers.map(Math.sqrt);
-// roots の内容は [1, 2, 3] となる
-// numbers の内容は [1, 4, 9] のまま
+// roots の内容は Uint8Array [1, 2, 3] となる
+// numbers の内容は Uint8Array [1, 4, 9] のまま
 ```
 
 ### 引数を含む関数を使用して型付き配列をマッピングする
@@ -69,8 +67,8 @@ const roots = numbers.map(Math.sqrt);
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map((num) => num * 2);
-// doubles は Uint8Array [2, 8, 18] となる
-// numbers は Uint8Array [1, 4, 9] のまま
+// doubles の内容は Uint8Array [2, 8, 18] となる
+// numbers の内容は Uint8Array [1, 4, 9] のまま
 ```
 
 ## 仕様書
@@ -83,7 +81,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ## 関連情報
 
-- [`TypedArray.prototype.map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.map` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

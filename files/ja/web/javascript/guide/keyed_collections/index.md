@@ -2,10 +2,10 @@
 title: キー付きコレクション
 slug: Web/JavaScript/Guide/Keyed_collections
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 本章では、キーによって索引付けされたデータのコレクションを紹介します。`Map` および `Set` オブジェクトは挿入順に反復処理を行える要素を保持します。
 
@@ -56,19 +56,19 @@ sayings.size; // 0
 
 ### WeakMap オブジェクト
 
-{{jsxref("WeakMap")}} キーと値のペアの集合であり、キーはオブジェクトまたは[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でなければならず、値は任意の [JavaScript 型](/ja/docs/Web/JavaScript/Data_structures)で、キーへの強い参照を作成しません。つまり、オブジェクトが `WeakMap` のキーとして存在しても、そのオブジェクトがガベージコレクションの対象となることを妨げることはありません。キーとして使用されていたオブジェクトが回収された場合、そのオブジェクトに対応する `WeakMap` 内の値も、他の場所で強く参照されていない限り、ガベージコレクションの対象となります。 `WeakMap` のキーとして使用できる唯一のプリミティブ型はシンボル（より特定の[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)）です。非登録シンボルは一意であることが保証されており、再作成できないためです。
+{{jsxref("WeakMap")}} キーと値のペアの集合であり、キーはオブジェクトまたは[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でなければならず、値は任意の [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures)で、キーへの強い参照を作成しません。つまり、オブジェクトが `WeakMap` のキーとして存在しても、そのオブジェクトがガベージコレクションの対象となることを妨げることはありません。キーとして使用されていたオブジェクトが回収された場合、そのオブジェクトに対応する `WeakMap` 内の値も、他の場所で強く参照されていない限り、ガベージコレクションの対象となります。 `WeakMap` のキーとして使用できる唯一のプリミティブ型はシンボル（より特定の[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)）です。非登録シンボルは一意であることが保証されており、再作成できないためです。
 
 `WeakMap` API は本質的には `Map` API と同じです。
 しかし、 `WeakMap` ではキーの生存状況を監視できないため、列挙もできません。そのため、 `WeakMap` 内のキーの一覧を取得する方法はありません。もしそのようなメソッドがあったとしても、一覧はガベージコレクションの状態に依存し、不確定性が生まれてしまいます。
 
 詳細やサンプルコードについては、{{jsxref("WeakMap")}} リファレンスページの「なぜ WeakMap なのか？」もご覧ください。
 
-`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) からの引用です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな `WeakMap` オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。 `privates` はモジュールからエクスポートされていません。
+`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例では、プライベートなデータとメソッドはオブジェクトの内部に属していて、`privates` オブジェクト (`WeakMap`) に格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。 `privates` はモジュールからエクスポートされていません。
 
 ```js
 const privates = new WeakMap();
 
-function Public() {
+export default function Public() {
   const me = {
     // ここにプライベートデータが置かれる
   };
@@ -77,11 +77,13 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // `me` にプライベートデータを詰め込む…
+  // `me` にプライベートデータを詰め込む
+  // …
 };
-
-module.exports = Public;
 ```
+
+> [!NOTE]
+> この用例は[クラスとプライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)で実装されています。
 
 ## Set
 
@@ -112,7 +114,8 @@ for (const item of mySet) {
 
 {{jsxref("Array.from")}} または[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用して `Set` から {{jsxref("Array")}} を生成することができます。また、`Set` コンストラクターを使って `Array` から `Set` へと逆変換することができます。
 
-> **メモ:** `Set` オブジェクトは一意の値を格納することにくれぐれも注意してください、重複した要素は配列から変換するときに削除されます。
+> [!NOTE]
+> `Set` オブジェクトは一意の値を格納することにくれぐれも注意してください、重複した要素は配列から変換するときに削除されます。
 
 ```js
 Array.from(mySet);
@@ -144,7 +147,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ## Map と Set におけるキーと値の等値性
 
-`Map` オブジェクトのキーの等値性と `Set` オブジェクトの値の等値性は両方とも、「[SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)」に基づいています。
+`Map` オブジェクトのキーの等値性と `Set` オブジェクトの値の等値性は両方とも、「[SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)」に基づいています。
 
 - 等値性は原則として同値比較演算子 `===` のように判定します。
 - `-0` と `+0` は等しいと見なします。

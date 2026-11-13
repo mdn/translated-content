@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作的徽章文本颜色。
 
 > [!NOTE]
@@ -29,9 +27,7 @@ browser.action.getBadgeTextColor(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取徽标文本颜色的标签页。
     - `windowId` {{optional_inline}}
@@ -69,7 +65,7 @@ browser.action.getBadgeTextColor({}).then(onGot, onFailure);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-getBadgeTextColor) API。该文档衍生于 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-getBadgeTextColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

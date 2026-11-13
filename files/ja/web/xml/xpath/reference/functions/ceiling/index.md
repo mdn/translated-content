@@ -1,17 +1,16 @@
 ---
 title: ceiling
 slug: Web/XML/XPath/Reference/Functions/ceiling
-original_slug: Web/XPath/Reference/Functions/ceiling
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+`ceiling` 関数は 10 進数の実数を評価し、その 10 進数以上の最も小さい整数を返します。
 
-`ceiling` 関数は小数を評価し、その小数以上の最も小さい整数を返します。
+## 構文
 
-### 構文
-
-```
-ceiling(number )
+```plain
+ceiling( number )
 ```
 
 ### 引数
@@ -29,10 +28,10 @@ ceiling(number )
 
 `ceiling (-5.2)` = _-5_
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-ceiling)
+[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-ceiling)
 
-### Gecko での対応
+## Gecko の対応
 
 対応済み。

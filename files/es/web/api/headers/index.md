@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Fetch API")}}
 
-La interfaz **`Headers`** de la [API Fetch](/es/docs/Web/API/Fetch_API) te permite realizar varias acciones en las [cabeceras de solicitud y respuesta HTTP](/es/docs/Web/HTTP/Headers). Estas acciones incluyen recuperar, establecer, agregar y eliminar cabeceras de la lista de cabeceras de la solicitud.
+La interfaz **`Headers`** de la [API Fetch](/es/docs/Web/API/Fetch_API) te permite realizar varias acciones en las [cabeceras de solicitud y respuesta HTTP](/es/docs/Web/HTTP/Reference/Headers). Estas acciones incluyen recuperar, establecer, agregar y eliminar cabeceras de la lista de cabeceras de la solicitud.
 
 Un objeto `Headers` tiene una lista de cabeceras asociada, que inicialmente está vacía y consta de cero o más pares de nombre y valor. Puedes agregar a esto utilizando métodos como `{{domxref("Headers.append","append()")}}` (ver [Ejemplos](#ejemplos).) En todos los métodos de esta interfaz, los nombres de las cabeceras se comparan mediante secuencias de bytes sin distinción de mayúsculas y minúsculas.
 
@@ -20,7 +20,7 @@ Puedes recuperar un objeto `Headers` a través de las propiedades `{{domxref("Re
 Un objeto que implementa `Headers` se puede usar directamente en una estructura `{{jsxref("Statements/for...of", "for...of")}}`, en lugar de `{{domxref('Headers.entries()', 'entries()')}}`: `for (const p of myHeaders)` es equivalente a `for (const p of myHeaders.entries())`.
 
 > [!NOTE]
-> Puedes obtener más información sobre las cabeceras disponibles leyendo nuestra referencia de [cabeceras HTTP](/es/docs/Web/HTTP/Headers).
+> Puedes obtener más información sobre las cabeceras disponibles leyendo nuestra referencia de [cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers).
 
 {{AvailableInWorkers}}
 
@@ -96,5 +96,5 @@ myHeaders.get("Content-Type"); // debería devolver 'text/xml'
 ## Véase también
 
 - [API de ServiceWorker](/es/docs/Web/API/Service_Worker_API)
-- [Control de Acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
+- [Control de Acceso HTTP (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

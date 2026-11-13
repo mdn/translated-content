@@ -3,8 +3,6 @@ title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
 
-{{JsSidebar("Classes")}}
-
 類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
 類別基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。
 
@@ -183,7 +181,7 @@ class Rectangle {
 
 私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。
 
-想知道更多資訊，可參閱 {{jsxref("Classes/Private_properties", "private class features", "", 1)}}。
+想知道更多資訊，可參閱 {{jsxref("Classes/Private_elements", "private class features", "", 1)}}。
 
 ### 裝箱、原型方法及靜態方法
 

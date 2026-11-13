@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
 original_slug: Learn/CSS/First_steps/What_is_CSS
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets) permiten crear páginas web atractivas. Pero ¿cómo funcionan realmente? En este artículo explicaremos qué es el CSS con un ejemplo de sintaxis sencillo y describiremos algunos términos clave sobre este lenguaje.
 
@@ -15,15 +15,15 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
       <td>
         Conocimientos básicos de informática,
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >tener instalado el software básico</a
         >, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >
         y nociones de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>
@@ -35,7 +35,7 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
   </tbody>
 </table>
 
-En el módulo [Introducción al HTML](/es/docs/Learn/HTML/Introduction_to_HTML), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
+En el módulo [Introducción al HTML](/es/docs/Learn_web_development/Core/Structuring_content), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
 
 ![Los estilos predeterminados utilizados por el navegador](html-example.png)
 
@@ -52,7 +52,7 @@ Un **documento** suele ser un archivo de texto estructurado con un lenguaje de m
 > [!NOTE]
 > Un navegador también recibe el nombre de {{Glossary("Agente de usuario", "agente de usuario")}}, que consiste en un programa informático que representa a una persona dentro del sistema. Los navegadores son el modelo principal de agente de usuario en el que pensamos cuando hablamos de CSS, pero no son el único. Hay otros documentos de usuario disponibles, como los que convierten documentos HTML y CSS en PDF para imprimir.
 
-El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el [color](/es/docs/Web/CSS/color_value) y el [tamaño](/es/docs/Web/CSS/font-size) de los encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser [convertir una columna de texto en una composición](/es/docs/Web/CSS/Layout_cookbook/Column_layouts) con un área de contenido principal y una barra lateral para información relacionada. Incluso se puede usar para crear efectos de [animación](/es/docs/Web/CSS/CSS_animations). Echa un vistazo a los enlaces de este párrafo para ver ejemplos específicos.
+El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el [color](/es/docs/Web/CSS/Reference/Values/color_value) y el [tamaño](/es/docs/Web/CSS/Reference/Properties/font-size) de los encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser [convertir una columna de texto en una composición](/es/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts) con un área de contenido principal y una barra lateral para información relacionada. Incluso se puede usar para crear efectos de [animación](/es/docs/Web/CSS/Guides/Animations). Echa un vistazo a los enlaces de este párrafo para ver ejemplos específicos.
 
 ## Sintaxis del CSS
 
@@ -71,7 +71,7 @@ La regla se abre con un {{Glossary("CSS Selector", "selector")}}. Este _seleccio
 
 Luego tenemos un conjunto de llaves `{ }`. Entre estas habrá una o más **declaraciones**, que tomarán la forma de pares de **propiedad** y **valor**. Cada par especifica cada una de las propiedades de los elementos seleccionados y el valor que queremos dar a esa propiedad.
 
-Antes de los dos puntos, tenemos la propiedad; y después, el valor. Las {{Glossary("property/CSS", "propiedades")}} CSS admiten diferentes valores, dependiendo de qué propiedad se esté especificando. En el ejemplo anterior, tenemos la propiedad `color`, que puede tomar varios [valores de color](/es/docs/Learn/CSS/Building_blocks/Values_and_units#color). También tenemos la propiedad de `font-size`, que puede tomar varias [unidades de tamaño](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS#N%C3%BAmeros_longitudes_y_porcentajes) como valor.
+Antes de los dos puntos, tenemos la propiedad; y después, el valor. Las {{Glossary("property/CSS", "propiedades")}} CSS admiten diferentes valores, dependiendo de qué propiedad se esté especificando. En el ejemplo anterior, tenemos la propiedad `color`, que puede tomar varios [valores de color](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). También tenemos la propiedad de `font-size`, que puede tomar varias [unidades de tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#N%C3%BAmeros_longitudes_y_porcentajes) como valor.
 
 Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra.
 
@@ -93,11 +93,11 @@ Algunos valores se aprenden rápidamente, mientras que otros deberán buscarse. 
 
 ## Módulos CSS
 
-Como hay tantas cosas que se podrían diseñar usando CSS, el lenguaje se divide en _módulos_. Verás referencias a estos módulos a medida que explores en MDN y observarás que muchas de las páginas de documentación están organizadas en torno a un módulo en particular. Por ejemplo, puedes echar un vistazo a la referencia MDN del módulo [Fondos y bordes](/es/docs/Web/CSS/CSS_backgrounds_and_borders) para averiguar cuál es su propósito, qué otras propiedades y características diferentes contiene. También encontrarás enlaces a la _especificación CSS_ que define la tecnología (ver más abajo).
+Como hay tantas cosas que se podrían diseñar usando CSS, el lenguaje se divide en _módulos_. Verás referencias a estos módulos a medida que explores en MDN y observarás que muchas de las páginas de documentación están organizadas en torno a un módulo en particular. Por ejemplo, puedes echar un vistazo a la referencia MDN del módulo [Fondos y bordes](/es/docs/Web/CSS/Guides/Backgrounds_and_borders) para averiguar cuál es su propósito, qué otras propiedades y características diferentes contiene. También encontrarás enlaces a la _especificación CSS_ que define la tecnología (ver más abajo).
 
 En esta fase, no debes preocuparte demasiado sobre cómo se estructura el CSS, sin embargo, puede facilitarte la búsqueda de información si, por ejemplo, sabes que es probable que cierta propiedad se encuentre entre otras similares y, por lo tanto, en la misma especificación.
 
-Volvamos al módulo de Fondos y bordes para un ejemplo específico: puedes pensar que tiene lógica que las propiedades [`background-color`](/es/docs/Web/CSS/background-color) y [`border-color`](/es/docs/Web/CSS/border-color) se definan en este módulo. Y llevas toda la razón.
+Volvamos al módulo de Fondos y bordes para un ejemplo específico: puedes pensar que tiene lógica que las propiedades [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) y [`border-color`](/es/docs/Web/CSS/Reference/Properties/border-color) se definan en este módulo. Y llevas toda la razón.
 
 ### Especificaciones CSS
 
@@ -111,12 +111,12 @@ Como recién llegado al CSS, es probable que encuentres las especificaciones abr
 
 ## Compatibilidad con navegadores
 
-Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas web si uno o más navegadores lo han implementado. Esto significa que el código se ha escrito para convertir las instrucciones que se especifican en nuestro archivo CSS en algo que se pueda mostrar en pantalla. Veremos este proceso más en profundidad en el artículo [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works). Es inusual que todos los navegadores puedan implementar una misma característica al mismo tiempo, por lo que suele haber una brecha en la que se pueden usar algunas partes del CSS en algunos navegadores pero no en otros. Por este motivo, es útil poder verificar el estado de implementación. En cada una de las páginas de propiedades que hay en la MDN se puede ver el estado de la propiedad de interés, por lo que se puede saber si será posible utilizarla en un sitio web.
+Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas web si uno o más navegadores lo han implementado. Esto significa que el código se ha escrito para convertir las instrucciones que se especifican en nuestro archivo CSS en algo que se pueda mostrar en pantalla. Veremos este proceso más en profundidad en el artículo [Cómo funciona el CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS). Es inusual que todos los navegadores puedan implementar una misma característica al mismo tiempo, por lo que suele haber una brecha en la que se pueden usar algunas partes del CSS en algunos navegadores pero no en otros. Por este motivo, es útil poder verificar el estado de implementación. En cada una de las páginas de propiedades que hay en la MDN se puede ver el estado de la propiedad de interés, por lo que se puede saber si será posible utilizarla en un sitio web.
 
-Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`font-family`](/es/docs/Web/CSS/font-family).
+Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`font-family`](/es/docs/Web/CSS/Reference/Properties/font-family).
 
 ## ¿Qué viene ahora?
 
-Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started), donde puedes empezar a escribir algo de CSS tú mismo.
+Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started), donde puedes empezar a escribir algo de CSS tú mismo.
 
-{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}

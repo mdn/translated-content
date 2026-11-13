@@ -1,11 +1,10 @@
 ---
 title: 技術の調査方法
+short-title: 技術の調査
 slug: MDN/Writing_guidelines/Howto/Research_technology
 l10n:
-  sourceCommit: 5fc1783bd6216c274bd3a93e5a42820572ff7b18
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
-
-{{MDNSidebar}}
 
 > [!CALLOUT]
 > 訳注:
@@ -30,8 +29,13 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 
 1. MDN Web Docs の [How-to ガイド](/ja/docs/MDN/Writing_guidelines/Howto): あなたはすでにここにいますが、すべての記事に目を通して、私たちの書くスタイル、さまざまなページの種類とそこに含まれる章、ページのさまざまな部分 (仕様書やブラウザー互換性など) を記載する方法に慣れることは良いことです。
 2. 最新の仕様書: MDN Web Docs で文書化されている技術については、さまざまな標準化団体が仕様書を作成しています。例えば、 JavaScript は [TC39](https://tc39.es/)、 HTML は [WHATWG](https://whatwg.org/)、CSS や XML、一部の Web API は [W3C](https://www.w3.org/) です。仕様書は MDN Web Docs のリファレンスページからリンクされています（「仕様書」の節を調べてください）。また、ウェブで検索することもできます。常に最新の仕様書から作業してください。
-3. 最新の現行ブラウザー： [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)、[Chrome Canary](https://www.google.com/intl/en/chrome/canary/)、[Safari Technology Preview](https://webkit.org/downloads/) など、あなたが文書化しようとしている機能に対応している可能性が高い、実験的/アルファビルドが必要です。これは、特に「近日公開予定」の機能を文書化する場合に適切です。
+3. 最新の現行ブラウザー： [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly)、[Chrome Canary](https://www.google.com/intl/en/chrome/canary/)、[Safari Technology Preview](https://webkit.org/downloads/) など、あなたが文書化しようとしている機能に対応している可能性が高い、実験的/アルファビルドが必要です。これは、特に「近日公開予定」の機能を文書化する場合に適切です。
 4. デモ/ブログ記事/その他の情報: できるだけ多くの情報を探しましょう。ある技術が変わったために更新する場合、使用するリソースが古くなっていないことを確認してください。これが、最初の 2 点が重要な理由です。
+
+> [!WARNING]
+> 技術を調査するときに、AI ツールの回答を信頼しないでください。
+> AI ツールは、存在しないプロパティ、メソッド、ブラウザーの対応状況など、でっち上げたり古くなったりした詳細を事実であるかのように示すことがあります。
+> 詳細は必ず仕様書で確認し、ブラウザーでテストしてください。
 
 また、質問に答えてくれる人を探すのも賢い方法です。これは仕様の作成者であったり、ブラウザー機能を実装するエンジニアであったりします。
 
@@ -51,7 +55,7 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 ある技術を文書化する過程で、何度もサンプルコードを書いたりデモを作ったりすることになるでしょうが、まずその技術がどのように動作するのかに親しむことから始めるのはとても有益です。これは実に有益な練習です。なぜなら、用途（開発者がこの技術を使う理由）をよく理解し、同時にサンプルコードを開発するのに役立つからです。
 
 > [!NOTE]
-> 仕様書が最近更新され、たとえば、ある手法が定義されなくなったが、古い手法がまださまざまなブラウザーで動作する、というような場合、古い手法と新しい手法をカバーするために、両方を同じ場所に文書に配置しなければならないことが多いでしょう。
+> 仕様書が最近更新され、たとえば、ある手法が定義されなくなったが、古い手法がまださまざまなブラウザーで動作する、というような場合、古い手法と新しい手法の両方をカバーするために、同じ場所に両方を文書化しなければならないことがよくあります。
 > 助けが必要な場合は、入手したデモを参照するか、技術連絡先に依頼してください。
 
 ## 執筆または更新するページのリストを作成
@@ -86,7 +90,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -96,7 +99,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -106,7 +108,6 @@ MDN Web Docs のサンプルコードの一部は別個のリポジトリーに�
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …

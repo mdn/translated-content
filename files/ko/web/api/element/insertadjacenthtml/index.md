@@ -19,9 +19,7 @@ insertAdjacentHTML(position, text)
 ### 매개변수
 
 - `position`
-
   - : 요소와 상대적인 위치를 나타내는 문자열입니다. 다음 문자열 중 하나여야 합니다.
-
     - `"beforebegin"`
       - : 요소 이전에 위치합니다. 오직 요소가 DOM 트리에 있고 부모 요소를 가지고 있을 때만 유효합니다.
     - `"afterbegin"`

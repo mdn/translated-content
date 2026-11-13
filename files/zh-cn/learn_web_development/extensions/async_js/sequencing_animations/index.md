@@ -1,9 +1,9 @@
 ---
-title: 序列动画
+title: 挑战：序列动画
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 在本测验中，你将使用我们在[如何使用 Promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises) 中学习的一些技术来更新页面，使它能够按顺序播放一系列动画。
 
@@ -91,17 +91,5 @@ alice1.animate(aliceTumbling, aliceTiming);
 3. 使用 [`async` 和 `await`](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises#async_和_await) 来实现它。
 
 别忘了，`element.animate()` 并不返回一个 `Promise`：它返回一个 `Animation` 对象，该对象具有一个 `finished` 属性，这个属性才是 `Promise`。
-
-## 评估或进一步的帮助
-
-如果你希望自己的作品被评估，或者遇到困难想寻求帮助：
-
-1. 将作品放入在线共享编辑器中，如 [CodePen](https://codepen.io/)，[jsFiddle](https://jsfiddle.net/)，或者 [Glitch](https://glitch.com/)。
-2. 在 [MDN 论坛学习分类](https://discourse.mozilla.org/c/mdn/learn/250)中写一篇文章寻求评估和/或帮助。你的文章应该包括：
-
-   - 一个描述性的标题，如“请帮助评估测序动画”。
-   - 详细说明你已经尝试过的方法，以及你希望我们做的事情，例如：你遇到困难需要帮助，或者你完成了作品，需要评估。
-   - 一个指向你的作品的链接（托管在在线共享编辑器中，如步骤 1 所述），这是一个很好的实践ーー如果你看不到他们的代码，就很难帮助有编码问题的人。
-   - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。
 
 {{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

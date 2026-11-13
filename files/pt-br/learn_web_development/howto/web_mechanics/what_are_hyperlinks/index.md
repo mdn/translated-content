@@ -15,7 +15,7 @@ Neste artigo, veremos o que são hiperlinks e por que eles são importantes.
         <a href="/en-US/Learn/How_the_Internet_works"
           >como a Internet funciona </a
         >e estar familiarizado com<a
-          href="/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
         >
           a diferença entre uma página da web, um site, um servidor da web e um
           mecanismo de pesquisa</a
@@ -89,4 +89,4 @@ Os links influenciam a rapidez com que um mecanismo de pesquisa se vincula ao se
 Agora você vai querer configurar algumas páginas da web com links.
 
 - Para obter mais informações teóricas, aprenda sobre [URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), já que cada link aponta para um URL.
-- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) _(em inglês)_, explica como implementar links em detalhes.
+- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content) _(em inglês)_, explica como implementar links em detalhes.

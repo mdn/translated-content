@@ -3,8 +3,6 @@ title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### Developer Tools
@@ -13,7 +11,7 @@ slug: Mozilla/Firefox/Releases/24
 
 ### JavaScript
 
-- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions)不再默认处于严格模式，除非显式使用 `"use strict"`。（[Firefox bug 852762](https://bugzil.la/852762)）
+- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)不再默认处于严格模式，除非显式使用 `"use strict"`。（[Firefox bug 852762](https://bugzil.la/852762)）
 
 ### DOM
 

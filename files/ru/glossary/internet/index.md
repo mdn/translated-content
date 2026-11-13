@@ -11,4 +11,4 @@ l10n:
 
 ## Смотрите также
 
-- [Как работает Интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) (введение для начинающих)
+- [Как работает Интернет](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (введение для начинающих)

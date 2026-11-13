@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLFencedFrameElement.allow")}} {{experimental_inline}}
-  - : 获取并设置对应 `<fencedframe>` 元素的 `allow` 属性值，该属性表示内容首次嵌入时应用的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。
+  - : 获取并设置对应 `<fencedframe>` 元素的 `allow` 属性值，该属性表示内容首次嵌入时应用的[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。
 - {{domxref("HTMLFencedFrameElement.config")}} {{experimental_inline}}
   - : 一个 {{domxref("FencedFrameConfig")}} 对象，表示 {{htmlelement("fencedframe")}} 的导航，即其中将显示什么内容。`FencedFrameConfig` 是从诸如[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 等来源返回的。
 - {{domxref("HTMLFencedFrameElement.height")}} {{experimental_inline}}

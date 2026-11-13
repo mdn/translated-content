@@ -27,7 +27,7 @@ getDevices()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 現在の文書へのアクセスが[セキュリティへの配慮](/ja/docs/Web/API/Web_Bluetooth_API#セキュリティへの配慮)のため、すなわち[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の {{HTTPHeader("Permissions-Policy/bluetooth", "bluetooth")}} ディレクティブによってブロックされているときなどに、このコンテキストでこの処理が許可されていない場合に発生します。
+  - : 現在の文書へのアクセスが[セキュリティへの配慮](/ja/docs/Web/API/Web_Bluetooth_API#セキュリティへの配慮)のため、すなわち[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{HTTPHeader("Permissions-Policy/bluetooth", "bluetooth")}} ディレクティブによってブロックされているときなどに、このコンテキストでこの処理が許可されていない場合に発生します。
 
 ## 仕様書
 

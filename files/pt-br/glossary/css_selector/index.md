@@ -37,23 +37,21 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 ### Conhecimento geral
 
 - Seletores básicos
-
-  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors) `elementname`
-  - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
-  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [Classes seletoras](/pt-BR/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [ID seletores](/pt-BR/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [Seletores universais](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
   - `Seletores de estado a:active, a:visited`
 
 - Combinadores
-
   - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
   - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_combinator) `A > B`
-  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Descendant_combinator) `A B`
+  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-- [Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements)
-- [Pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [Pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 
 ### Referência técnica
 

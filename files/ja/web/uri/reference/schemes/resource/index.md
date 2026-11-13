@@ -3,7 +3,7 @@ title: "resource: URL"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
 {{non-standard_header}}
@@ -12,19 +12,22 @@ l10n:
 
 ## 構文
 
-リソース URL は、接頭辞 (`resource:`) と読み込むするリソースを指す URL の 2 つの部分で構成されます。
-
 ```url
 resource://<path>
 ```
 
-例えば次のようになります。
+- `resource:`
+  - : この URL のスキームです。
+- `<path>`
+  - : 読み込むリソースを指すパス。
+
+例を示します。
 
 ```url
 resource://gre/res/svg.css
 ```
 
-リソース URL ('->') に矢印がある場合は、最初のファイルが次のファイルにロードされたことを意味します。
+リソース URL に矢印 ('->') がある場合は、最初のファイルが次のファイルを読み込むことを意味します。
 
 ```url
 resource://<File-loader> -> <File-loaded>
@@ -57,7 +60,7 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 過去には、ウェブコンテンツは、 Firefox の内部リソースだけでなく、拡張機能の資産も含め、URI が必要とするあらゆるリソースにアクセスすることができました。 現在、この動作はデフォルトでは禁止されています。
 
 しかし、特定の状況下で Firefox がウェブコンテンツにリソースを読み込む必要があります。
-たとえば、ソース表示ページ（「ページのソースを表示」または「選択した部分のソースを表示」）を開くと、このページが `viewsource.css` を `resource:` URL を介してが要求していることが分かります。
+たとえば、ソース表示ページ（「ページのソースを表示」または「選択した部分のソースを表示」）を開くと、このページが `resource:` URL を介して `viewsource.css` を要求していることが分かります。
 ウェブコンテンツに公開する必要があるリソースは、 `resource://content-accessible/`という名前の新しい場所に移動されました。
 これは隔離されており、重要ではないリソースのみが含まれています。
 このようにして、重要なリソースを公開し、ほとんどの脅威を排除できます。

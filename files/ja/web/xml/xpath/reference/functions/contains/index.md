@@ -1,26 +1,22 @@
 ---
 title: contains
 slug: Web/XML/XPath/Reference/Functions/contains
-original_slug: Web/XPath/Reference/Functions/contains
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `contains` 関数は、第 1 引数の文字列に第 2 引数の文字列が含まれているかどうかを判定し、論理値 true または false を返します。
 
-### 構文
+## 構文
 
-```
-contains(haystack ,needle )
+```plain
+contains(haystack, needle)
 ```
 
 ### 引数
 
 - `haystack`
   - : 検索される文字列
-
-<!---->
-
 - `needle`
   - : `haystack` の部分文字列かどうかを検索する文字列
 
@@ -28,10 +24,10 @@ contains(haystack ,needle )
 
 `haystack` に `needle` が含まれていれば `true`。 そうでなければ `false`。
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-contains)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-contains)
 
-### Gecko でのサポート
+## Gecko の対応
 
-サポート済み。
+対応済み。

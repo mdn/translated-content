@@ -24,8 +24,6 @@ console.log(typedArray2);
 // Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
 ```
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
-
 ## Descripción
 
 ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (`TypedArray.prototype`) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
@@ -79,11 +77,11 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
-- {{jsxref("TypedArray.name")}}
+- {{jsxref("Function.name", "TypedArray.name")}}
   - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
-- {{jsxref("TypedArray.prototype")}}
+- {{jsxref("TypedArray")}}
   - : Prototipo para objetos `TypedArray`.
 
 ## Métodos estáticos
@@ -156,14 +154,14 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
   - : Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo.
 
 ## Ejemplos
 
 ### Se requiere `new`
 
-A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
+A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);

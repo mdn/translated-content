@@ -1,10 +1,7 @@
 ---
 title: JavaScript building blocks
 slug: Learn_web_development/Core/Scripting
-original_slug: Learn/JavaScript/Building_blocks
 ---
-
-{{LearnSidebar}}
 
 在本單元中，我們繼續介紹所有 JavaScript 的關鍵基本功能，將注意力轉向常見的代碼塊類型，如條件語句，循環，函數和事件。 你已經在課程中看到了這些東西，但只是順便說一下 - 在這裡我們將明確地討論它。
 

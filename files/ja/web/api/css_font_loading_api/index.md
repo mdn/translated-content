@@ -2,19 +2,16 @@
 title: CSS フォント読み込み API
 slug: Web/API/CSS_Font_Loading_API
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
-{{DefaultAPISidebar("CSS Font Loading API")}}
+{{DefaultAPISidebar("CSS Font Loading API")}}{{AvailableInWorkers}}
 
-CSS フォント読み込み API は、フォントリソースを動的に読み込むためのイベントとインターフェイスを提供します。
-
-> [!NOTE]
-> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます（`self.fonts` が{{domxref('FontFaceSet')}} にアクセスする機能を提供します）。
+**CSS フォント読み込み API** (CSS Font Loading API) は、フォントリソースを動的に読み込むためのイベントとインターフェイスを提供します。
 
 ## 概念と使用方法
 
-CSSスタイルシートでは、カスタムフォントを使用することができます。 [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールでダウンロードするフォントを指定し、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティで要素に適用します。
+CSSスタイルシートでは、カスタムフォントを使用することができます。 {{cssxref("@font-face")}} ルールでダウンロードするフォントを指定し、 {{cssxref("font-family")}} プロパティで要素に適用します。
 フォントがダウンロードされるこの点は、ユーザーエージェントによって制御されます。
 ほとんどのエージェントは、フォントが最初に必要になったときだけ取得して読み込むため、知覚できるほどの遅延が生じることがあります。
 
@@ -22,7 +19,7 @@ CSS フォント読み込み API は、フォントフェイスがいつ取得�
 フォントフェイスを文書やワーカーのフォントフェイス集合に追加することで、ユーザーエージェントは必要に応じて関連するフォントリソースを自動的に取得し読み込むことができます。
 フォントフェイスは、フォントフェイス集合に追加される前でも後でも読み込むことができますが、描画に使用する前に必ず設定するには追加しなければなりません。
 
-フォントフェイスは{{domxref('FontFace')}}オブジェクトで定義します。このオブジェクトは CSS [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールとほぼ同じ方法で、バイナリーまたは URL フォントのソースとフォントの他のプロパティを指定します。
+フォントフェイスは{{domxref('FontFace')}}オブジェクトで定義します。このオブジェクトは CSS {{cssxref("@font-face")}} ルールとほぼ同じ方法で、バイナリーまたは URL フォントのソースとフォントの他のプロパティを指定します。
 `FontFace` オブジェクトは、 {{domxref("Document.fonts")}} と {{domxref("WorkerGlobalScope.fonts")}} を使用してそれぞれ文書またはワーカー {{domxref('FontFaceSet')}} に追加されます。
 作者は `FontFace` または `FontFaceSet` を使用してフォントのダウンロードを起動し、読み込み完了を監視することができます。
 `FontFaceSet` を使用すると、さらに、ページで必要なすべてのフォントが読み込まれ、文書レイアウトが完了したときに判断することができます。
@@ -35,21 +32,22 @@ CSS フォント読み込み API は、フォントフェイスがいつ取得�
 ### フォントフェイスの定義
 
 フォントフェイスは [`FontFace` コンストラクター](/ja/docs/Web/API/FontFace/FontFace) を使用して作成します。コンストラクターは引数としてフォントファミリー、フォントソース、オプションの記述子を取ります。
-これらの引数の書式と文法は、同等の [`@font-face`](/ja/docs/Web/CSS/@font-face) 定義と同じです。
+これらの引数の書式と文法は、同等の {{cssxref("@font-face")}} 定義と同じです。
 
 フォントソースは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に入ったバイナリーデータでも、フォントリソースの URL でもかまいません。
 URL ソースを使用する典型的なフォントフェイス定義は下記のようになります。
 URL フォントソースには `url()` 関数が要求されることに注意してください。
 
 ```js
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
 });
 ```
 
-> **メモ:** `font-face` と同様に、いくつかの記述子はフォントデータ中の期待されるデータを表し、フォントの照合に用いられますが、他にも実際に生成されるフォントフェイスのプロパティを設定/定義するものもあります。
+> [!NOTE]
+> `@font-face` と同様に、いくつかの記述子はフォントデータ中の期待されるデータを表し、フォントの照合に用いられますが、他にも実際に生成されるフォントフェイスのプロパティを設定/定義するものもあります。
 > 例えば、`style`を "italic" に設定すると、そのファイルにイタリック体のフォントが含まれていることを示します。これが真となるファイルを指定するかどうかは作者次第です。
 
 バイナリーソースによるフォントフェイスは、フォント定義が有効でフォントデータを読み込むことができれば自動的に読み込まれます。 {{domxref('FontFace.status')}} は、成功すれば `loaded`、そうでなければ `failed` に設定されます
@@ -63,7 +61,7 @@ URL をソースとするフォントフェイスは検証されますが、自�
 
 ```js
 // フォントフェイスを定義
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
@@ -82,7 +80,7 @@ document.fonts.add(font);
 
 ```js
 // フォントフェイスを定義
-const font = new FontFace("myfont", "url(myfont.woff)");
+const font = new FontFace("my-font", 'url("my-font.woff")');
 
 // document.fonts (FontFaceSet) に追加
 document.fonts.add(font);
@@ -142,7 +140,7 @@ canvas.height = 75;
 ```js
 const bitterFontFace = new FontFace(
   "FontFamily Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
+  'url("https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
@@ -201,7 +199,7 @@ const ctx = canvas.getContext("2d");
 
 const oxygenFontFace = new FontFace(
   "FontFamily Oxygen",
-  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)",
+  'url("https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
@@ -228,7 +226,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
 
 プロミスを待つ代わりに、イベントを使用してフォントの読み込み処理を追跡することもできます。
 下記のコードは `loading` イベントと `loadingerror` イベントを待ち受け、それぞれの場合のフォントフェイスの数をログ出力しています。
-loadingdone`イベントリスナーでは、さらにフォントフェイスを反復処理し、ファミリー名をログ出力しています。
+`loadingdone`イベントリスナーでは、さらにフォントフェイスを反復処理し、ファミリー名をログ出力しています。
 
 ```js
 document.fonts.addEventListener("loading", (event) => {
@@ -251,7 +249,7 @@ document.fonts.addEventListener("loadingdone", (event) => {
 プロミスが解決すると、文書内のフォントフェイスの値を反復処理します。
 
 ```js
-document.fonts.ready.then(function () {
+document.fonts.ready.then(() => {
   log.textContent += `\nFontFaces in document: ${document.fonts.size}.\n`;
 
   for (const fontFace of document.fonts.values()) {

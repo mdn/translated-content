@@ -15,7 +15,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ## Localizaciones activas
 
 > [!NOTE]
-> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 ### Portugués brasileño (pt-BR)
 
@@ -30,7 +30,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Francés (fr)
 
 - Discusiones: [Matrix (canal #l10n-fr)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Colaboradores actuales: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Colaboradores actuales: [cw118](https://github.com/cw118), [tristantheb](https://github.com/tristantheb)
 
 ### Japonés (ja)
 
@@ -50,7 +50,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ### Español (es)
 
 - Discusiones: [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
+- Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [mariomorillo](https://github.com/mariomorillo), [GNUXDAR](https://github.com/GNUXDAR)
 
 > [!NOTE]
 > Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)

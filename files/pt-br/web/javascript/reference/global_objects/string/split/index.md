@@ -42,15 +42,13 @@ str.split([separator[, limit]])
 <!---->
 
 - `separator`
-  - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
+  - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("RegExp", "expressão regular", "", 1)}}.
 
 > [!WARNING]
 > Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](https://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
 
 - `limite`
-
   - : Opcional. Um número inteiro não negativo especificando um limite no número de divisões a serem encontradas. O método `split()` ainda dividirá em cada ocorrência do separador, até que o número de itens divididos corresponda ao limite ou que a string fique aquém do separador.
-
     - O array pode conter menos entradas do que o `limit` se o final da string for alcançado antes que o limite seja atingido.
     - Se o `limit` for `0`, `[]` será retornado.
 
@@ -178,7 +176,8 @@ O script exibirá o texto a seguir:
 [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Nota:**`\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
+> [!NOTE]
+> `\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
 
 ### Revertendo uma String usando `split()`
 
@@ -202,7 +201,7 @@ O script exibirá o texto a seguir:
 > // retorna "́emuśer"
 > ```
 >
-> **Bonus:** use o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
+> **Bonus:** use o operador {{jsxref("Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
 
 ## Especificações
 

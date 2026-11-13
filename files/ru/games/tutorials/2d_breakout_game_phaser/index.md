@@ -3,13 +3,13 @@ title: 2D игра на Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}
 
 В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
 
 Каждый шаг будет сопровождаться настраиваемым и живым примером для того, чтобы вы могли видеть, что должно получиться на промежуточных этапах создания. Вы узнаете основы для работы с фреймворком Phaser: рендер и движение картинок, определение столкновения, управление, встроенные вспомогательные функции, анимации и отрисовка кадров, изменение игровой статистки.
 
-Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
+Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
@@ -27,14 +27,14 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 8. [Конец игры](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 9. [Создание поля блоков](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 10. [Определение столкновения](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
-11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
 12. [Победа в игре](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
 13. [Добавление жизней](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
 14. [Анимация](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Кнопки](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Создание случайных событий](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-Также мы хотели бы заметить, что лучший способ научиться создавать веб-игры - это чистый (pure) JavaScript. Если вы ещё не знакомы с разработкой на чистом JavaScript, то мы предлагаем вам первым делом пройти туториал [2D игра на чистом JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+Также мы хотели бы заметить, что лучший способ научиться создавать веб-игры - это чистый (pure) JavaScript. Если вы ещё не знакомы с разработкой на чистом JavaScript, то мы предлагаем вам первым делом пройти туториал [2D игра на чистом JavaScript](/ru/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript).
 
 После этого вы можете выбрать любой фреймворк и использовать его в своих проектах. Мы выбрали Phaser, потому что это прочный фреймворк с хорошей поддержкой, открытым сообществом и набором различных плагинов. Фреймворки ускоряют разработку и заботятся о скучных вещах, позволяя вам сосредоточиться на самом весёлом. Однако они не идеальны, так что если что-то пойдёт не так или вы захотите написать функцию, которую фреймворк не поддерживает, то вам пригодятся знания чистого JavaScript.
 
@@ -45,4 +45,4 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 Давайте начнём! Первая часть руководства — это [Инициализация фреймворка](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
 
-{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

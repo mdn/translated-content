@@ -2,35 +2,33 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Classes")}}
-
-**`static`** キーワードは、クラスに静的メソッドや静的プロパティを定義します。静的メソッドも静的プロパティもクラスのインスタンスからは呼び出されません。その代わりに、クラスそのものから呼び出されます。静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
+**`static`** キーワードは、クラスに[静的メソッドや静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes#静的メソッドとフィールド)、または[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)を定義します（この使い方について詳しくは、リンク先を参照してください）。 静的プロパティは、クラスのインスタンスから直接アクセスすることはできません。代わりに、クラス自体に対してアクセスします。
 
 静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
 
 > [!NOTE]
 > クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
 
-{{InteractiveExample("JavaScript Demo: Classes Static", "taller")}}
+{{InteractiveExample("JavaScript デモ: クラスの static", "taller")}}
 
 ```js interactive-example
 class ClassWithStaticMethod {
   static staticProperty = "someValue";
   static staticMethod() {
-    return "static method has been called.";
+    return "静的メソッドが呼び出されました。";
   }
   static {
-    console.log("Class static initialization block called");
+    console.log("クラス静的初期化ブロックが呼び出されます");
   }
 }
 
 console.log(ClassWithStaticMethod.staticProperty);
-// Expected output: "someValue"
+// 予想される結果: "someValue"
 console.log(ClassWithStaticMethod.staticMethod());
-// Expected output: "static method has been called."
+// 予想される結果: "静的メソッドが呼び出されました。"
 ```
 
 ## 構文
@@ -54,14 +52,14 @@ class ClassWithStatic {
 
 このページでは、静的メソッド、静的アクセサ、静的フィールドを含む、クラスのパブリック静的プロパティを紹介します。
 
-- プライベートな静的機能については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+- プライベートな静的機能については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - インスタンスの機能については、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)、[パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
 パブリック静的機能は、`static` キーワードを使用して宣言します。これらは[クラス評価時](/ja/docs/Web/JavaScript/Reference/Classes#評価の順序)に、 [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（これは本質的に {{jsxref("Object.defineProperty()")}} です）を使用して、クラスのコンストラクターに追加されます。これらは、コンストラクターから再びアクセスします。
 
 静的メソッドの多くは、インスタンスを作成したり複製したりするなどの、ユーティリティ関数です。パブリック静的フィールドは、作成するすべてのクラスインスタンスではなく、クラスごとに一つだけフィールドを存在させたい場合に有益です。これは、キャッシュや固定の構成値、 あるいはインスタンスをまたがって複製する必要のないデータなどに有益です。
 
-静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
+静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
 
 静的フィールドは初期化子を持つことができます。初期化子を持たない静的フィールドは `undefined` に初期化されます。パブリック静的フィールドはサブクラスでは再初期化されませんが、プロトタイプチェーン経由でアクセスすることができます。
 
@@ -107,7 +105,7 @@ console.log(SubClassWithStaticField.subStaticField); // "基底クラスの静�
 静的フィールド初期化子と[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)は、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
 > [!NOTE]
-> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 ## 例
 
@@ -147,7 +145,7 @@ console.log(SquaredTriple.description); // 'I square the triple of any number yo
 console.log(SquaredTriple.longDescription); // undefined
 console.log(SquaredTriple.customName); // 'Tripler'
 
-// This throws because calculate() is a static member, not an instance member.
+// これは calculate() がインスタンスメンバーではなく静的メンバーなので、例外が発生
 console.log(tp.calculate()); // 'tp.calculate is not a function'
 ```
 
@@ -159,10 +157,10 @@ console.log(tp.calculate()); // 'tp.calculate is not a function'
 class StaticMethodCall {
   static staticProperty = "static property";
   static staticMethod() {
-    return "Static method and " + this.staticProperty + " has been called";
+    return `Static method and ${this.staticProperty} has been called`;
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + " from another static method";
+    return `${this.staticMethod()} from another static method`;
   }
 }
 StaticMethodCall.staticMethod();
@@ -174,20 +172,20 @@ StaticMethodCall.anotherStaticMethod();
 
 ### クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し
 
-静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名()` / `this.constructor.静的プロパティ名` のようにしてください。
+静的メソッドは静的ではないメソッドの {{JSxRef("this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名()` / `this.constructor.静的プロパティ名` のようにしてください。
 
 ```js
 class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticProperty); // 'static property'
     console.log(this.constructor.staticProperty); // 'static property'
-    console.log(StaticMethodCall.staticMethod()); // 'static method has been called.'
-    console.log(this.constructor.staticMethod()); // 'static method has been called.'
+    console.log(StaticMethodCall.staticMethod()); // '静的メソッドが呼び出されました。'
+    console.log(this.constructor.staticMethod()); // '静的メソッドが呼び出されました。'
   }
 
   static staticProperty = "static property";
   static staticMethod() {
-    return "static method has been called.";
+    return "静的メソッドが呼び出されました。";
   }
 }
 ```
@@ -202,6 +200,7 @@ class StaticMethodCall {
 
 ## 関連情報
 
-- [`class` 式](/ja/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)
+- [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
 - [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
+- [静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Statements/class", "class")}}

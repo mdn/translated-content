@@ -20,7 +20,6 @@ l10n:
 - audio
   - : 사용자가 [audio](/ko/docs/Web/HTML/Element/audio) 요소를 컨텍스트 클릭할 때 적용됩니다.
 - bookmark
-
   - : 사용자가 북마크 툴바나 북마크 메뉴, 북마크 사이드바(<kbd>Ctrl</kbd>+<kbd>B</kbd>)나 라이브러리 윈도우(<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>)에서 북마크 항목을 컨텍스트 클릭할 때 적용됩니다. 북마크 사이드바와 라이브러리 윈도우에서의 적용은 Firefox 66부터 지원됩니다. 매니페스트에 "bookmarks" [API 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)이 요구됩니다.
 
 - browser_action
@@ -42,7 +41,6 @@ l10n:
 - selection
   - : 페이지 일부가 선택되어 있을 때 적용됩니다.
 - tab
-
   - : 사용자가 탭을 컨텍스트 클릭할 때 적용됩니다. 구체적으로 페이지 자체가 아니라, 사용자가 한 브라우저 탭에서 다른 탭으로 전환할 수 있도록 하는 탭 스트립 또는 기타 사용자 인터페이스 요소를 의미합니다.
 
     Firefox 63부터는 탭의 메뉴 항목을 클릭하면 현재 활성 탭이 아닌 경우에도 클릭한 탭에 대해 [activeTab](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 권한이 부여됩니다.
@@ -50,7 +48,7 @@ l10n:
 - tools_menu
   - : 항목이 브라우저의 도구 메뉴에 추가됩니다. 이 기능은 `menus` 네임스페이스를 통해 `ContextType`에 접근하는 경우에만 사용할 수 있다는 것을 참고하십시오. `contextMenus` 네임스페이스를 통해 접근하는 경우에는 사용할 수 없습니다.
 - video
-  - : [video](/ko/docs/Web/HTML/Element/video) 요소에 컨텍스트 클릭을 할 때 적용됩니다.
+  - : [video](/ko/docs/Web/HTML/Reference/Elements/video) 요소에 컨텍스트 클릭을 할 때 적용됩니다.
 
 참고: "launcher"는 지원되지 않습니다.
 

@@ -10,13 +10,13 @@ l10n:
 
 El método **`window.postMessage()`** permite la comunicación segura entre objetos {{domxref("Window")}} de diferentes orígenes; por ejemplo, entre una página y una ventana emergente que ha abierto, o entre una página y un _iframe_ incrustado dentro de ella.
 
-Normalmente, a los _scripts_ en diferentes páginas se les permite acceder entre sí si y solo si las páginas de las que se originan comparten el mismo [origen](/es/docs/Web/API/Location/origin) (también conocido como "[política del mismo origen](/es/docs/Web/Security/Same-origin_policy)"). `window.postMessage()` proporciona un mecanismo controlado para eludir esta restricción de forma segura (si se usa correctamente).
+Normalmente, a los _scripts_ en diferentes páginas se les permite acceder entre sí si y solo si las páginas de las que se originan comparten el mismo [origen](/es/docs/Web/API/Location/origin) (también conocido como "[política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy)"). `window.postMessage()` proporciona un mecanismo controlado para eludir esta restricción de forma segura (si se usa correctamente).
 
 Furthermore, an accessing script must have obtained the window object of the accessed document beforehand. This can occur through methods such as [`window.open()`](/es/docs/Web/API/Window/open) for popups or [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement/contentWindow) for iframes.
 
 Además, un _script_ de acceso debe haber obtenido el objeto de ventana del documento al que se ha accedido de antemano. Esto puede ocurrir a través de métodos como [`window.open()`](/es/docs/Web/API/Window/open) para ventanas emergentes o [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement/contentWindow) para _iframes_.
 
-En términos generales, una ventana puede obtener una referencia a otra (por ejemplo, a través de `targetWindow = window.opener`) y luego enviar un {{domxref("MessageEvent")}} a través de `targetWindow.postMessage()`. La ventana receptora queda entonces libre para [manejar este evento](/es/docs/Web/Events/Event_handlers) según sea necesario. Los argumentos pasados ​​a `window.postMessage()` (es decir, el "mensaje") se [exponen a la ventana receptora a través del objeto de evento](#el_evento_enviado).
+En términos generales, una ventana puede obtener una referencia a otra (por ejemplo, a través de `targetWindow = window.opener`) y luego enviar un {{domxref("MessageEvent")}} a través de `targetWindow.postMessage()`. La ventana receptora queda entonces libre para [manejar este evento](/es/docs/Web/API/Document_Object_Model/Events) según sea necesario. Los argumentos pasados ​​a `window.postMessage()` (es decir, el "mensaje") se [exponen a la ventana receptora a través del objeto de evento](#el_evento_enviado).
 
 ## Sintaxis
 
@@ -180,7 +180,7 @@ El valor de la propiedad `origin` del evento despachado no se ve afectado por el
 
 Para nombres de host IDN solamente, el valor de la propiedad `origin` no es consistentemente Unicode o punycode; para una mayor compatibilidad, verifica tanto los valores IDN como punycode cuando uses esta propiedad si esperas mensajes de sitios IDN. Este valor eventualmente será consistentemente IDN, pero por ahora debes manejar ambas formas, IDN y punycode.
 
-El valor de la propiedad `origin` cuando la ventana que envía contiene una URL [`javascript:`](/es/docs/Web/URI/Schemes/javascript) o [`data:`](/es/docs/Web/URI/Schemes/data) es el origen del script que cargó la URL.
+El valor de la propiedad `origin` cuando la ventana que envía contiene una URL [`javascript:`](/es/docs/Web/URI/Schemes/javascript) o [`data:`](/es/docs/Web/URI/Reference/Schemes/data) es el origen del script que cargó la URL.
 
 ### Uso de window\.postMessage en extensiones {{Non-standard_inline}}
 

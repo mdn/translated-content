@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
 
 作者详情页面需要呈现指定作者（`Author`）的信息，使用（自动生成的）`_id` 字段值进行标识，接着是这个作者的所有书本（`Book`）对象的列表。
 
@@ -83,7 +83,4 @@ block content
 > [!NOTE]
 > 作者的出生与死亡日期的外观很丑！我们将在本文最后的自我挑战中处理它。
 
-## 下一步
-
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分：[书本实例细节页面和自我挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

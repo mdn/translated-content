@@ -3,8 +3,6 @@ title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 59 中会影响开发人员的更改的信息。Firefox 59 已于 2018 年 3 月 13 日发布。
 
 ## Web 开发者应该注意的变化
@@ -19,7 +17,7 @@ slug: Mozilla/Firefox/Releases/59
 
 ### HTML
 
-- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
+- 实现了{{HTMLElement("textarea")}} 元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性。这使得你可以启用或禁用元素的表单自动填写。
 
 ### CSS
 

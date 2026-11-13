@@ -3,7 +3,7 @@ title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
 ---
 
-{{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
+{{APIRef("File and Directories Entries API")}}{{Non-standard_header}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`createWriter()`** メソッドは、ディレクトリー項目によって表現されるファイルにデータを書き込むために使用します。
 
@@ -57,4 +57,4 @@ function writeToFileEntry(entry, text) {
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)

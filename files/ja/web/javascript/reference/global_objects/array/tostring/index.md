@@ -1,21 +1,20 @@
 ---
 title: Array.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.toString()", "shorter")}}
 
 ```js interactive-example
-const array1 = [1, 2, "a", "1a"];
+const array = [1, 2, "a", "1a"];
 
-console.log(array1.toString());
-// Expected output: "1,2,a,1a"
+console.log(array.toString());
+// 予想される結果: "1,2,a,1a"
 ```
 
 ## 構文
@@ -46,7 +45,7 @@ console.log(Array.prototype.toString.call({ join: () => 1 })); // 1 と出力
 
 配列を文字列値として表す必要がある場合や、配列が文字列の結合として参照されるとき、 JavaScript は `toString` メソッドを自動的に呼び出します。
 
-`Array.prototype.toString` は他の配列も含めて、再帰的にそれぞれの要素を文字列に変換します。Array.prototype.toString` が返す文字列には区切り文字がないので、入れ子配列は平坦化されたように見えます。
+`Array.prototype.toString` は他の配列も含めて、再帰的にそれぞれの要素を文字列に変換します。`Array.prototype.toString` が返す文字列には区切り文字がないので、入れ子配列は平坦化されたように見えます。
 
 ```js
 const matrix = [
@@ -71,9 +70,9 @@ console.log(arr.toString()); // 1,3,,4,2
 ### toString() の使用
 
 ```js
-const array1 = [1, 2, "a", "1a"];
+const array = [1, 2, "a", "1a"];
 
-console.log(array1.toString()); // "1,2,a,1a"
+console.log(array.toString()); // "1,2,a,1a"
 ```
 
 ### 疎配列における toString() の使用

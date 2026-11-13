@@ -38,7 +38,6 @@ console.log(global === global.global); // true (Node.js에서)
 ## 같이 보기
 
 - [MDN Web Docs Glossary](/ko/docs/Glossary)
-
   - {{glossary("global scope", "전역 범위")}}
   - {{glossary("object", "객체")}}
 

@@ -76,7 +76,7 @@ console.log(`${Object(1n)}`); // "Overridden"
 
 ### 음수 0 BigInt
 
-정수에는 음수 0이 없으므로 음수 0의 `BigInt`는 없습니다. `0.0`은 JavaScript [`Number`](/ko/docs/Web/JavaScript/Data_structures#number_type) 유형에만 나타나는 IEEE 부동소수점 개념입니다.
+정수에는 음수 0이 없으므로 음수 0의 `BigInt`는 없습니다. `0.0`은 JavaScript [`Number`](/ko/docs/Web/JavaScript/Guide/Data_structures#number_type) 유형에만 나타나는 IEEE 부동소수점 개념입니다.
 
 ```js
 (-0n).toString(); // "0"

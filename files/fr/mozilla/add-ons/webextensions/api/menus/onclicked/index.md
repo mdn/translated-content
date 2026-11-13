@@ -3,8 +3,6 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un élément de menu est cliqué.
 
 Pour la compatibilité avec les autres navigateurs, Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
@@ -31,14 +29,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `info`
       - : {{WebExtAPIRef('menus.OnClickData')}}. Informations sur l'élément cliqué et le contexte dans lequel le clic s'est produit.
 
     <!---->
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 

@@ -147,7 +147,7 @@ p {
 ### 図や地図を含む画像
 
 画像が概念図、グラフ、図、マップとして表示される情報を含んでいる場合、`alt` テキストは少なくとも要約した形で同じ情報を提供する必要があります。
-これは /me の画像が [PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) のようなビットマップ形式であっても [JPEG](/ja/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) や [SVG](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) などのベクター形式で提供されます。
+これは /me の画像が [PNG](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) のようなビットマップ形式であっても [JPEG](/ja/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) や [SVG](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) などのベクター形式で提供されます。
 
 - 地図の場合、 `alt` のテキストは地図で示された場所への道順を、口頭で説明するのと同じように説明することができます。
 - グラフの場合、テキストはそのグラフの項目とその値を説明することができます。

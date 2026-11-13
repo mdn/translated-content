@@ -3,7 +3,7 @@ title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
 
@@ -23,7 +23,6 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 - `constraints`
   - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - `successCallback`
-
   - : Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
 
     ```js
@@ -41,7 +40,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 
 ### Возвращающееся значение
 
-{{domxref("undefined")}}.
+{{jsxref("undefined")}}.
 
 ## Примеры
 

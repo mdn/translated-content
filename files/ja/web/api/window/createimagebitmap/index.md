@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-**`createImageBitmap()`** は {{domxref("Window")}} インターフェイスのメソッドで、指定されたソースからビットマップを作成し、オプションでそのソースの一部のみを切り抜きます。このメソッドは、ウィンドウとワーカーの両方のグローバルスコープに存在します。このメソッドは、さまざまな画像ソースを受け付け、 {{domxref("ImageBitmap")}} に解決する {{jsxref("Promise")}} を返します。
+**`createImageBitmap()`** は {{domxref("Window")}} インターフェイスのメソッドで、指定されたソースからビットマップを作成し、オプションでそのソースの一部のみを切り抜きます。
+このメソッドは、さまざまな画像ソースを受け付け、 {{domxref("ImageBitmap")}} に解決する {{jsxref("Promise")}} を返します。
 
 ## 構文
 
@@ -31,24 +32,34 @@ createImageBitmap(image, sx, sy, sw, sh, options)
     - {{domxref("ImageData")}}
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 - `sx`
-  - : `ImageBitmap` が抽出される矩形の参照点の x 座標。
+  - : `ImageBitmap` が抽出される長方形の参照点の x 座標。
 - `sy`
-  - : `ImageBitmap` が抽出される矩形の参照点の y 座標。
+  - : `ImageBitmap` が抽出される長方形の参照点の y 座標。
 - `sw`
-  - : `ImageBitmap` が抽出される矩形の幅。この値は負の値にすることができます。
+  - : `ImageBitmap` が抽出される長方形の幅。
+    この値は負の値にすることができます。
 - `sh`
-  - : `ImageBitmap` が抽出される矩形の高さ。この値は負の値にすることができます。
+  - : `ImageBitmap` が抽出される長方形の高さ。この値は負の値にすることができます。
 - `options` {{optional_inline}}
-
   - : 画像の抽出のためのオプションを設定するオブジェクト。利用可能なオプションは以下の通りです。
-
     - `imageOrientation`
-      - : 画像をそのまま表示するか、垂直方向に反転させて表示するかを指定します。`none` （既定値）または `flipY` のいずれかを指定します。
+      - : 画像をどの方向に向けるかを指定します。
+        - `from-image`
+          - : EXIF 方向メタデータが存在する場合、その方向に従って画像を表示します（既定値）。
+        - `flipY`
+          - : Image oriented according to EXIF orientation metadata, if present, and then flipped vertically.
+        - `none`
+          - : 画像のエンコード方式に従って画像の方向を調整し、方向に関するメタデータ（EXIF メタデータなど、画像を縦向きで撮影するためにカメラを横向きにしたことを示すために画像に追加される場合のあるメタデータ）は無視します。
+
     - `premultiplyAlpha`
-      - : ビットマップのカラーチャンネルをアルファチャンネルで前置増幅するかどうかを指定します。 `none`、`premultiply`、`default` （既定値）のいずれかです。
+      - : ビットマップのカラーチャンネルをアルファチャンネルで前置増幅するかどうかを指定します。
+        `none`、`premultiply`、`default` （既定値）のいずれかです。
     - `colorSpaceConversion`
-      - : 画像を色空間変換でデコードするかどうかを指定します。 `none` または `default` （既定値）のいずれかを指定します。値 `default` は、実装固有の動作を使用することを示します。
+      - : 画像を色空間変換でデコードするかどうかを指定します。
+        `none` または `default` （既定値）のいずれかを指定します。
+        値 `default` は、実装固有の動作を使用することを示します。
     - `resizeWidth`
       - : 出力幅を示す long 整数です。
     - `resizeHeight`
@@ -58,7 +69,7 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 
 ### 返値
 
-指定された矩形のビットマップデータを保持する {{domxref("ImageBitmap")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。
+指定された長方形のビットマップデータを保持する {{domxref("ImageBitmap")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。
 
 ## 例
 

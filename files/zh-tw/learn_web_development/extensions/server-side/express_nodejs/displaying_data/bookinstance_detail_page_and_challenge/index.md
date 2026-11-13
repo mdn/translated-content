@@ -1,8 +1,9 @@
 ---
 title: 書本實例詳情頁面與自我挑戰
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
+
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
 
 ## 書本實例詳情頁面
 
@@ -84,8 +85,6 @@ block content
 
 1. 用 BookInstance 詳細信息頁面中的 `due_back_formatted` 替換 `due_back`。
 2. 更新作者模塊以添加壽命虛擬屬性。壽命應該有兩個值： _date_of_birth - date_of_death_，這兩個值的格式與 `BookInstance.due_back_formatted`的日期格式相同。
-3. 在當前使用 `date_of_birth` 和 `date_of_death`的所有視圖中，使用 `Author.lifespan` 。
+3. 在當前使用 `date_of_birth` 和 `date_of_death`的所有視圖中，使用 `Author.lifespan`。
 
-## 下一步
-
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

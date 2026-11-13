@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bd48972c8a9c2acf3b8fa6e41248d0952eb0c406
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 여기서 우리는 웹 서버가 무엇인지, 어떻게 동작하는지, 왜 중요한지를 알아볼 것입니다.
 
@@ -15,10 +15,10 @@ l10n:
     <tr>
       <th scope="row">선행 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>
@@ -67,9 +67,9 @@ l10n:
 - 항상 같은 IP주소를 가지고 있습니다(모든 {{Glossary("ISP", "ISPs")}}가 홈 라인에 대해 고정된 IP주소를 제공하는 것은 아닙니다.)
 - 제 3자에 의해 유지보수 됩니다
 
-이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting) 찾을 수 있습니다.
+이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#hosting) 찾을 수 있습니다.
 
-당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
 ### HTTP를 이용해 통신하기
 
@@ -110,6 +110,6 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 이제 당신은 웹 서버에 익숙해졌으니, 아래와 같은 것들을 할 수 있습니다.
 
-- [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)를 읽어보기
+- [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)를 읽어보기
 - [당신이 웹 사이트를 생성하기 위해 필요한 다양한 소프트웨어](/ko/docs/Learn/What_software_do_I_need.)를 배우기
-- [웹 서버에 어떻게 파일을 업로드 하는 지](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)와 같은 실용적인 것으로 넘어가기
+- [웹 서버에 어떻게 파일을 업로드 하는 지](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)와 같은 실용적인 것으로 넘어가기

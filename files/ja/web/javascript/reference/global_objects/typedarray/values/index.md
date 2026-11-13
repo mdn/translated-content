@@ -1,25 +1,24 @@
 ---
 title: TypedArray.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-{{JSRef}}
+**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各要素の値を反復処理する新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
 
-**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対する値を持つ新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
-
-{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.values()")}}
 
 ```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const array1 = uint8.values();
+const bytes = new Uint8Array([10, 20, 30, 40, 50]);
+const iterator = bytes.values();
 
-array1.next();
-array1.next();
+iterator.next();
+iterator.next();
 
-console.log(array1.next().value);
-// Expected output: 30
+console.log(iterator.next().value);
+// 予想される結果: 30
 ```
 
 ## 構文
@@ -34,7 +33,7 @@ values()
 
 ### 返値
 
-新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトです。
+新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 解説
 
@@ -74,7 +73,7 @@ console.log(values.next().value); // 50
 
 ## 関連情報
 
-- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
