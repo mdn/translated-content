@@ -1,11 +1,12 @@
 ---
-title: ServiceWorkerRegistration.index
+title: "ServiceWorkerRegistration: index プロパティ"
+short-title: index
 slug: Web/API/ServiceWorkerRegistration/index
 l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+  sourceCommit: 6c3bed9bcd275fd4ad714c4df0ed874e9bf87681
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。
 
@@ -20,12 +21,12 @@ l10n:
 ここでは、メインスクリプトからアクセスする例を示します。
 
 ```js
-// reference registration
+// 登録を参照
 const registration = await navigator.serviceWorker.ready;
 
-// feature detection
+// 機能検出
 if ("index" in registration) {
-  // Content Index API functionality
+  // Content Index API の機能
   const contentIndex = registration.index;
 }
 ```
@@ -33,7 +34,7 @@ if ("index" in registration) {
 [サービスワーカー](/ja/docs/Web/API/ServiceWorker)からの呼び出し例です。
 
 ```js
-// service worker script
+// サービスワーカースクリプト
 
 const contentIndex = self.registration.index;
 ```
@@ -48,6 +49,5 @@ const contentIndex = self.registration.index;
 
 ## 関連情報
 
-- {{domxref("Content Index API", "コンテンツインデックス API", "", 1)}}
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/) (英語)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/) (英語)
+- [コンテンツインデックス API](/ja/docs/Web/API/Content_Index_API)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api) <sup>(英語)</sup>
