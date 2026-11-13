@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getAttribLocation
 
 ## 语法
 
-```plain
+```js
 GLint gl.getAttribLocation(program, name);
 ```
 
@@ -18,7 +18,7 @@ GLint gl.getAttribLocation(program, name);
 - program
   - : 一个包含了属性参数的{{domxref("WebGLProgram")}} 对象。
 - name
-  - : 需要获取下标指向位置的 {{domxref("DOMString")}} 属性参数名
+  - : 需要获取下标指向位置的 {{jsxref("String")}} 属性参数名
 
 ### 返回值
 

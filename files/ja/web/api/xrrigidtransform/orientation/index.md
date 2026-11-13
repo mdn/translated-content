@@ -29,7 +29,7 @@ xrReferenceSpace = refSpace.getOffsetReferenceSpace(
 
 ここで指定されている単位クォータニオンは \[0.0, 1.0, 0.0, 1.0] であり、オブジェクトが y 軸に沿って直接向いている必要があることを示します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

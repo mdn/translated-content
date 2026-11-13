@@ -52,5 +52,5 @@ Tenga en cuenta que, a pesar de que la entrada original (para `http://example.co
 ## Vea también
 
 - {{domxref("window.history")}}
-- [Manipulando la historia del navegador](/es/docs/Web/Guide/DOM/Manipulating_the_browser_history)
-- [Ejemplo de navegación con Ajax](/es/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
+- [Manipulando la historia del navegador](/es/docs/Web/API/History_API)
+- [Ejemplo de navegación con Ajax](/es/docs/Web/API/History_API/Working_with_the_History_API)

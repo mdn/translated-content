@@ -7,7 +7,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 
 Используя File API, добавленный к DOM в HTML5, в веб-приложениях теперь можно запрашивать пользователя выбрать локальные файлы и затем читать содержимое этих файлов. Выбор файлов может осуществляться с помощью элемента {{ HTMLElement("input") }} или drag and drop.
 
-Если вы хотите использовать DOM File API в расширениях или коде Chrome, используйте. На самом деле, в таком случае вам необходимо ознакомиться с дополнительными нюансами. См. статью [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) для подробностей.
+Если вы хотите использовать DOM File API в расширениях или коде Chrome, используйте. На самом деле, в таком случае вам необходимо ознакомиться с дополнительными нюансами. См. статью [Using the DOM File API in chrome code](/en-US/Extensions/Using_the_DOM_File_API_in_chrome_code) для подробностей.
 
 ## Доступ к выбранным файлам
 
@@ -27,7 +27,7 @@ File API делает возможным доступ к {{ domxref("FileList") 
 const selectedFile = document.getElementById("input").files[0];
 ```
 
-Обращение к одному выбранному файлу через [jQuery](http://jquery.com/):
+Обращение к одному выбранному файлу через [jQuery](https://jquery.com/):
 
 ```js
 var selectedFile = $("#input").get(0).files[0];
@@ -311,7 +311,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## Пример: Использование URL объектов для отображения изображений
 
-Этот пример использует URL объектов для отображения эскизов изображений. Кроме этого, оно показывает другую информацию о файлах, включая их имена и размеры. Вы можете [посмотреть работающий пример](/samples/domref/file-click-demo.html).
+Этот пример использует URL объектов для отображения эскизов изображений. Кроме этого, оно показывает другую информацию о файлах, включая их имена и размеры. Вы можете [посмотреть работающий пример](https://mdn.dev/archives/media/samples/domref/file-click-demo.html).
 
 HTML, который представляет интерфейс, выглядит так:
 
@@ -382,7 +382,6 @@ function handleFiles(files) {
 1. Создаётся новый элемент - неупорядоченный список ({{ HTMLElement("ul") }}).
 2. Этот новый элемент вставляется в блок {{ HTMLElement("div") }} с помощью вызова его метода {{ domxref("element.appendChild()") }}.
 3. Для каждого {{ domxref("File") }} в {{ domxref("FileList") }}, представляемого `files`:
-
    1. Создаём новый элемент пункта списка ({{ HTMLElement("li") }}) и вставляем его в список.
    2. Создаём новый элемент изображения ({{ HTMLElement("img") }}).
    3. Устанавливаем источник изображения в новый URL объекта, представляющий файл, используя {{ domxref("window.URL.createObjectURL()") }} для создания URL на двоичный объект.
@@ -558,7 +557,7 @@ window.URL.revokeObjectURL(obj_url);
 ## Спецификации
 
 - [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29) (Рабочие материалы HTML 5)
-- [File API](http://www.w3.org/TR/FileAPI/)
+- [File API](https://www.w3.org/TR/FileAPI/)
 
 ## Дополнительные ссылки
 
@@ -567,6 +566,6 @@ window.URL.revokeObjectURL(obj_url);
 - {{ domxref("FileReader") }}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/en-US/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - [jQuery](http://www.jquery.com/) JavaScript library

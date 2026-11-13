@@ -34,7 +34,7 @@ request.send(formData);
 > [!NOTE]
 > Los campos "userfile" y "webmasterfile" contienen ambos un archivo. El número asignado al campo "accountnum" es inmediatamente convertido a string por el método [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (el valor del campo puede ser un {{ domxref("Blob") }}, {{ domxref("File") }}, o una cadena de texto; **si el valor no es ni un Blob, ni un File, será convertido a un string**).
 
-Este ejemplo construye una instancia de `FormData` que almacenará los valores de los campos "username", "accountnum", "userfile" y "webmasterfile", entonces usará el método [`send()`](</en/DOM/XMLHttpRequest#send()> "en/XMLHttpRequest#send()") de `XMLHttpRequest` para enviar los datos del formulario. El campo "webmasterfile" es un [`Blob`](/en/DOM/Blob). Un objeto [`Blob`](/en/DOM/Blob) representa un objeto de tipo similar a un fichero que es inalterable y que almacenará datos en formato raw. Los Blobs representan datos que no necesariamente tendrán un formato Javascript nativo. La interfaz {{ domxref("File") }} está basada en [`Blob`](/en/DOM/Blob), y hereda su funcionalidad y la amplía para dar soporte a archivos que estén en el sistema del usuario. Para construir un [`Blob`](/en/DOM/Blob), puede invocar [`al constructor del objeto Blob`](/en/DOM/Blob#Constructor).
+Este ejemplo construye una instancia de `FormData` que almacenará los valores de los campos "username", "accountnum", "userfile" y "webmasterfile", entonces usará el método [`send()`](</en/DOM/XMLHttpRequest#send()> "en/XMLHttpRequest#send()") de `XMLHttpRequest` para enviar los datos del formulario. El campo "webmasterfile" es un [`Blob`](/es/docs/Web/API/Blob). Un objeto [`Blob`](/es/docs/Web/API/Blob) representa un objeto de tipo similar a un fichero que es inalterable y que almacenará datos en formato raw. Los Blobs representan datos que no necesariamente tendrán un formato Javascript nativo. La interfaz {{ domxref("File") }} está basada en [`Blob`](/es/docs/Web/API/Blob), y hereda su funcionalidad y la amplía para dar soporte a archivos que estén en el sistema del usuario. Para construir un [`Blob`](/es/docs/Web/API/Blob), puede invocar [`al constructor del objeto Blob`](/es/docs/Web/API/Blob#constructor).
 
 ## Recuperando un objeto FormData de un formulario HTML
 
@@ -146,11 +146,11 @@ $.ajax({
 
 ## Envío de formularios y carga de archivos vía AJAX sin objetos `FormData`
 
-Si quiere saber cómo serializar y enviar vía [AJAX](/es/docs/AJAX) un formulario _sin_ utilizar objetos FormData, por favor leer [este párrafo](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) .
+Si quiere saber cómo serializar y enviar vía [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests) un formulario _sin_ utilizar objetos FormData, por favor leer [este párrafo](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) .
 
 ## Vea también
 
-- [Usando XMLHttpRequest](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [`HTMLFormElement`](/es/docs/DOM/HTMLFormElement)
-- [`Blob`](/es/docs/DOM/Blob)
-- [Typed Arrays](/es/docs/JavaScript/Typed_arrays)
+- [Usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [`HTMLFormElement`](/es/docs/Web/API/HTMLFormElement)
+- [`Blob`](/es/docs/Web/API/Blob)
+- [Typed Arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)

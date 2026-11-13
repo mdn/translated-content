@@ -1,15 +1,36 @@
 ---
 title: handler.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`handler.apply()`** メソッドは、オブジェクトの `[[Call]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。関数呼び出しなどの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.apply()", "taller")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply(target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // 予想される結果: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// 予想される結果: 3
+console.log(proxy(1, 2));
+// 予想される結果: 30
+```
 
 ## 構文
 
@@ -17,7 +38,7 @@ l10n:
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }
-});
+})
 ```
 
 ### 引数

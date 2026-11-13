@@ -98,7 +98,7 @@ for (let i = 0; i < 7; i++) {
 
 {{Compat}}
 
-## Читайте также
+## Смотрите также
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}

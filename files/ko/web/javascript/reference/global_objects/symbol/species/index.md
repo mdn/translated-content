@@ -9,9 +9,27 @@ l10n:
 
 **`Symbol.species`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `Symbol.species`을 나타냅니다. 객체의 복사본을 생성하는 메서드는 생성자 함수가 복사본을 만들 때 사용할 객체에서 이 심볼을 검색할 수 있습니다.
 
-> **경고:** `Symbol.species`가 존재하면 임의의 코드가 실행될 수 있으며 보안 취약점이 발생할 수 있습니다. 또한 특정 최적화를 훨씬 더 어렵게 만듭니다. 엔진 구현자는 [이 기능을 제거할지 여부를 조사](https://github.com/tc39/proposal-rm-builtin-subclassing)하고 있습니다. 가능하면 이 기능을 사용하지 마세요.
+> [!WARNING]
+> `Symbol.species`가 존재하면 임의의 코드가 실행될 수 있으며 보안 취약점이 발생할 수 있습니다. 또한 특정 최적화를 훨씬 더 어렵게 만듭니다. 엔진 구현자는 [이 기능을 제거할지 여부를 조사](https://github.com/tc39/proposal-rm-builtin-subclassing)하고 있습니다. 가능하면 이 기능을 사용하지 마세요.
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
 
 ## 값
 

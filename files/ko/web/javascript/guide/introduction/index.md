@@ -21,11 +21,11 @@ l10n:
 
 MDN에 있는 JavaScript 문서는 다음 세가지 파트로 되어있습니다.
 
-- [Web 개발 학습하기](/ko/docs/Learn)는 입문자를 위한 정보를 제공하며, 프로그래밍과 인터넷에 대한 기본 개념을 소개합니다.
+- [Web 개발 학습하기](/ko/docs/Learn_web_development)는 입문자를 위한 정보를 제공하며, 프로그래밍과 인터넷에 대한 기본 개념을 소개합니다.
 - [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide) (이 안내서)는 JavaScript 언어와 객체에 대한 개요를 제공합니다.
 - [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference) JavaScript에 관련된 자세한 참고 자료를 제공합니다.
 
-JavaScript가 처음이라면, [학습터](/ko/docs/Learn)와 [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)부터 시작해 보세요. 기본 사항을 확실히 이해했다면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)에서 개별 객체 및 명령문에 대한 자세한 내용을 확인할 수 있습니다.
+JavaScript가 처음이라면, [학습터](/ko/docs/Learn_web_development)와 [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)부터 시작해 보세요. 기본 사항을 확실히 이해했다면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)에서 개별 객체 및 명령문에 대한 자세한 내용을 확인할 수 있습니다.
 
 ## JavaScript는 무엇인가?
 
@@ -60,7 +60,7 @@ Java는 빠른 실행과 형 안전성을 위해 설계된 클래스 기반 프�
 
 JavaScript는 JavaScript를 기반으로 표준화된 국제 프로그래밍 언어를 제공하기 위해 정보 및 통신 시스템 표준화를 위한 유럽 협회(이전에는 유럽 컴퓨터 제조업체 협회(European Computer Manufacturers Association)의 약자)인 [Ecma International](https://www.ecma-international.org/)에서 표준화되었습니다. ECMAScript라고 하는 이 표준화된 JavaScript 버전은 표준을 지원하는 모든 애플리케이션에서 동일한 방식으로 작동합니다. 회사는 개방형 표준 언어를 사용하여 JavaScript 구현을 개발할 수 있습니다. ECMAScript 표준은 ECMA-262 명세에 문서화되어 있습니다.
 
-ECMA-262 표준은 또한 IOS-16262로서 [ISO](http://www.iso.ch/) (국제 표준화 기구)에 의해 승인되었습니다. [Ecma International website](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 그 명세를 찾을 수 있습니다. ECMAScript 명세는 [World Wide Web Consortium (W3C)](http://www.w3.org/) 나 [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/)에 의해 표준화된 Document Object Model (DOM)을 설명하지 않습니다. DOM은 HTML 문서 객체가 스크립트에 노출되는 방식을 정의합니다. JavaScript로 프로그래밍할 때 사용되는 다양한 기술에 대한 더 나은 아이디어를 얻으려면, [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 기사를 참고하세요.
+ECMA-262 표준은 또한 IOS-16262로서 [ISO](http://www.iso.ch/) (국제 표준화 기구)에 의해 승인되었습니다. [Ecma International website](https://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 그 명세를 찾을 수 있습니다. ECMAScript 명세는 [World Wide Web Consortium (W3C)](https://www.w3.org/) 나 [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/)에 의해 표준화된 Document Object Model (DOM)을 설명하지 않습니다. DOM은 HTML 문서 객체가 스크립트에 노출되는 방식을 정의합니다. JavaScript로 프로그래밍할 때 사용되는 다양한 기술에 대한 더 나은 아이디어를 얻으려면, [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) 기사를 참고하세요.
 
 ### JavaScript 문서 vs ECMAScript 명세서
 

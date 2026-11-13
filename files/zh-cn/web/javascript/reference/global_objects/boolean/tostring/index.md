@@ -3,11 +3,21 @@ title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
 
-{{JSRef}}
-
 **`toString()`** 方法返回表示指定的布尔对象的字符串。
 
-{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+
+```js interactive-example
+const flag1 = new Boolean(true);
+
+console.log(flag1.toString());
+// Expected output: "true"
+
+const flag2 = new Boolean(1);
+
+console.log(flag2.toString());
+// Expected output: "true"
+```
 
 ## 语法
 

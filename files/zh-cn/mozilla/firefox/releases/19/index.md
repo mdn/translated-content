@@ -3,16 +3,14 @@ title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ## Web 开发者需要注意的变化
 
 ### JavaScript
 
-- [`Map`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Set) 对象的 `size()` 方法变成了 `size` 属性。([Firefox bug 807001](https://bugzil.la/807001))
-- [`Map`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Set) 对象新增了一个 clear() 方法。([Firefox bug 805003](https://bugzil.la/805003))
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象的 `size()` 方法变成了 `size` 属性。([Firefox bug 807001](https://bugzil.la/807001))
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象新增了一个 clear() 方法。([Firefox bug 805003](https://bugzil.la/805003))
 
 ### CSS
 
@@ -56,7 +54,7 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ## 参见
 
-- [Firefox 19 发行说明](http://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
+- [Firefox 19 发行说明](https://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
 - [Firefox 19 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_19)
 - [Firefox 19 附加组件兼容性](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
 

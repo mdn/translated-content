@@ -3,8 +3,6 @@ title: ウェブゲーム用の音声
 slug: Games/Techniques/Audio_for_Web_Games
 ---
 
-{{GamesSidebar}}
-
 音声はゲームの重要部分です。つまりこれはフィードバックと雰囲気を与えます。ウェブベースの音声は早くから成熟していますが、まだ多くのブラウザーに案内すべき違いがあります。ゲームエクスペリエンスにとってどの音声パーツが重要で、どれがあっても良いけど不要なものかを決めて、それに従って戦略を決めるのが必要となる事がよくあります。この記事ではウェブゲーム用の音声を実装するための詳細なガイドを提供し、現在なるべく広い範囲のプラットフォームで動作するものを観察します。
 
 ## モバイル音声の注意点
@@ -18,7 +16,7 @@ slug: Games/Techniques/Audio_for_Web_Games
 音声付きの自動再生が許可されるのは、次のような場合であることは特筆すべきです。
 
 - ユーザーがドメインと対話したことがあること。
-- モバイルでは、ユーザーが[サイトを画面の内側へ追加した](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen)場合に許可されます。
+- モバイルでは、ユーザーが[サイトを画面の内側へ追加した](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)場合に許可されます。
 
 多くのモバイルブラウザーは、ゲームが音声再生するように要求しても単に無視します。つまり音声の再生にはユーザーが開始するイベントが必要です。これは音声再生の構成を考慮する必要があるということです。これは通常、事前に音声を読み込んでユーザーが開始するイベントに準備しておくことで守られます。
 
@@ -136,7 +134,7 @@ slug: Games/Techniques/Audio_for_Web_Games
 
 ### 音声スプライト
 
-音声スプライトは [CSS スプライト](/ja/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)から名前をとったもので、 CSS スプライトとは単一グラフィックリソースを連続したスプライトに分解して使う CSS のための視覚的なテクニックです。同じ原理を音声に適用することで、読み込みと再生に時間のかかる小さな音声ファイルの束ではなく、必要とする音声すべてを含む大きな音声ファイル一つを用いることができます。そのファイルから特定の音を再生するには、各音声スプライトの既知の開始・停止時間を指定するだけです。
+音声スプライトは [CSS スプライト](/ja/docs/Web/CSS/Guides/Images/Implementing_image_sprites)から名前をとったもので、 CSS スプライトとは単一グラフィックリソースを連続したスプライトに分解して使う CSS のための視覚的なテクニックです。同じ原理を音声に適用することで、読み込みと再生に時間のかかる小さな音声ファイルの束ではなく、必要とする音声すべてを含む大きな音声ファイル一つを用いることができます。そのファイルから特定の音を再生するには、各音声スプライトの既知の開始・停止時間を指定するだけです。
 
 利点は、一つの音声を前もって提供しておき、スプライトをすぐ使える状態にできることです。こうすることで、大きな一つの音声の再生と即時停止をするだけですみます。また、サーバーリクエスト数を減らすことと、帯域幅を節約することもできます。
 
@@ -381,7 +379,8 @@ trackEls.forEach((el, i) => {
 });
 ```
 
-> **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
+> [!NOTE]
+> [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
 
 ゲーム世界の文脈では、異なる状況で使用されるループやサンプルがあるかもしれません。よりシームレスな体験のために、他のトラックと同期させることができると便利です。
 
@@ -430,7 +429,7 @@ if (offset === 0) {
 ## 関連情報
 
 - [ウェブオーディオ API (MDN)](/ja/docs/Web/API/Web_Audio_API)
-- [`<audio>` (MDN)](/ja/docs/Web/HTML/Element/audio)
+- [`<audio>` (MDN)](/ja/docs/Web/HTML/Reference/Elements/audio)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Mixing Positional Audio and WebGL (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)

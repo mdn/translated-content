@@ -3,11 +3,26 @@ title: Accesseurs de propriétés
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
 
-{{jsSidebar("Operators")}}
-
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## Syntaxe
 
@@ -93,11 +108,11 @@ Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et
 
 Une méthode n'est pas liée à l'objet dont elle est une méthode. En particulier, `this` n'est pas défini dans une méthode, c'est-à-dire que `this` ne fait pas nécessairement référence à un objet contenant la méthode. En réalité, `this` est «&nbsp;passé&nbsp;» par l'appel de la fonction.
 
-Pour plus d'informations, consultez la page sur [l'opérateur `this` et les liaisons de méthodes](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this#Liaison_de_m.C3.A9thodes).
+Pour plus d'informations, consultez la page sur [l'opérateur `this` et les liaisons de méthodes](/fr/docs/Web/JavaScript/Reference/Operators/this#liaison_de_méthodes).
 
 ### Note concernant `eval`
 
-Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("eval", "eval()")}} alors que la notation avec crochets pourrait être utilisée. Par exemple, la syntaxe suivante est utilisée dans de nombreux scripts.
+Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("Global_Objects/eval", "eval()")}} alors que la notation avec crochets pourrait être utilisée. Par exemple, la syntaxe suivante est utilisée dans de nombreux scripts.
 
 ```js
 x = eval("document.formulaire." + controle + ".value");
@@ -121,5 +136,5 @@ x = document.formulaire[controle].value;
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [L'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition)
+- [L'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring)
 - [Le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

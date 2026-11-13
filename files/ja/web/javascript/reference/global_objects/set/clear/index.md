@@ -1,15 +1,28 @@
 ---
 title: Set.prototype.clear()
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`clear()`** は {{jsxref("Set")}} インターフェイスのメソッドで、この集合からすべての要素を取り除きます。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.clear()")}}
+
+```js interactive-example
+const set = new Set();
+set.add(1);
+set.add("foo");
+
+console.log(set.size);
+// 予想される結果: 2
+
+set.clear();
+
+console.log(set.size);
+// 予想される結果: 0
+```
 
 ## 構文
 
@@ -40,7 +53,7 @@ console.log(mySet.has("foo")); // true
 mySet.clear();
 
 console.log(mySet.size); // 0
-console.log(mySet.has("bar")); // false
+console.log(mySet.has("foo")); // false
 ```
 
 ## 仕様書

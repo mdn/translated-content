@@ -3,20 +3,18 @@ title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 ## 普通 Web 开发者应该注意的变化
 
 ### 开发者工具
 
 Highlights:
 
-- [Web Audio Editor](/zh-CN/docs/Tools/Web_Audio_Editor)
+- [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - [Code completion and inline documentation in Scratchpad](/zh-CN/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [User agent styles in the Inspector's Rules view](/zh-CN/docs/Tools/Page_Inspector#Rules_view)
-- [Element picker button has moved](/zh-CN/docs/Tools/Page_Inspector#Firefox_32_onwards_2)
-- [Node dimensions added to the Inspector's infobar](/zh-CN/docs/Tools/Page_Inspector#Firefox_32_onwards)
-- [Full page screenshot button added](/zh-CN/docs/Tools/Tools_Toolbox#Extra_tools)
+- [User agent styles in the Inspector's Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules_view)
+- [Element picker button has moved](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards_2)
+- [Node dimensions added to the Inspector's infobar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards)
+- [Full page screenshot button added](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra_tools)
 - HiDPI images added to the tools
 - Nodes that have `display:none` are shown differently in the Inspector
 
@@ -31,8 +29,8 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
-- [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- [**id**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) and [**class**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class) are now true [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
 
 ### JavaScript
 
@@ -43,14 +41,14 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/Reference/Events/languagechange) 事件。 ([Firefox bug 889335](https://bugzil.la/889335))。
+- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/API/Window/languagechange_event) 事件。 ([Firefox bug 889335](https://bugzil.la/889335))。
 - The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ([Firefox bug 1014581](https://bugzil.la/1014581)).
 - {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ([Firefox bug 1009388](https://bugzil.la/1009388))。
 - 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ([Firefox bug 865649](https://bugzil.la/865649))。
 - Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](http://dev.w3.org/fxtf/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://dev.w3.org/fxtf/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
 - The [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
-- The [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
+- The [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
 - The [MSISDN Verification API](/zh-CN/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).
 - The [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
@@ -94,13 +92,13 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](/zh-CN/docs/Xray_vision#Xray_semantics_for_Object_and_Array).
+- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array).
 
 ## 附加组件 和 Mozilla 开发者应该注意的变化
 
-Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](/zh-CN/docs/Xray_vision#Xrays_for_JavaScript_objects).
+Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
 
-A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
@@ -108,7 +106,7 @@ A `getDataDirectory()` method has been added to [`Addon`](/zh-CN/Add-ons/Add-on_
 
 - Added [`exclude`](/zh-CN/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
 - Added [`anonymous`](/zh-CN/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
-- [Add-on Debugger](/zh-CN/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
+- [Add-on Debugger](/zh-CN/docs/Mozilla/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
 
 #### Details
 

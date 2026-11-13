@@ -3,10 +3,10 @@ title: "DOMRectReadOnly: DOMRectReadOnly() コンストラクター"
 short-title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 l10n:
-  sourceCommit: a631fd40bdc682a82be57be9932c9853a86ac1b5
+  sourceCommit: 3652cfa9c036cf3ceebb1384bdc7edfd549251f3
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`DOMRectReadOnly()`** コンストラクターは新しい {{domxref("DOMRectReadOnly")}} オブジェクトを生成します。
 

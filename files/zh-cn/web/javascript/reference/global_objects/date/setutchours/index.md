@@ -5,11 +5,24 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`setUTCHours()`** 方法用于根据世界协调时更改日期对象的小时、分钟、秒或毫秒。
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
 
 ## 语法
 

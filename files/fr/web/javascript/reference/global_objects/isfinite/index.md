@@ -1,36 +1,55 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
+l10n:
+  sourceCommit: 52aca3c51ce0ff04036a13d4db471c9844d07b00
 ---
 
-{{jsSidebar("Objects")}}
+La fonction **`isFinite()`** détermine si une valeur est finie, en convertissant d'abord la valeur en nombre si nécessaire. Un nombre fini est un nombre qui n'est pas {{JSxRef("NaN")}} ou ±{{JSxRef("Infinity")}}. Comme la contrainte à l'intérieur de la fonction `isFinite()` peut être [surprenante](/fr/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), vous pouvez préférer utiliser {{JSxRef("Number.isFinite()")}}.
 
-La fonction globale **`isFinite()`** détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: isFinite()")}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Le nombre n'est PAS infini.";
+  }
+  return "Le nombre est infini !";
+}
+
+console.log(div(0));
+// Résultat attendu : "Le nombre est infini !"
+
+console.log(div(1));
+// Résultat attendu : "Le nombre n'est PAS infini."
+```
 
 ## Syntaxe
 
-```js
-isFinite(valeurÀTester);
+```js-nolint
+isFinite(value)
 ```
 
 ### Paramètres
 
-- `valeurÀTester`
-  - : La valeur dont on souhaite savoir si elle est finie ou non.
+- `value`
+  - : La valeur à tester.
 
 ### Valeur de retour
 
-`false` si la valeur passée en argument vaut {{jsxref("Infinity")}} (en positif ou en négatif),{{jsxref("NaN")}} ou {{jsxref("undefined")}}, `true` sinon.
+`true`, sauf lorsque la valeur donnée est soit {{JSxRef("Infinity")}}, `-Infinity`, ou {{JSxRef("NaN")}} après avoir été [convertie en un nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_nombre).
 
 ## Description
 
-`isFinite()` est une fonction qui n'est rattachée à aucun objet et qui est disponible au plus haut niveau.
+`isFinite()` est une propriété fonction de l'objet global.
 
-Cette fonction peut être utilisée pour déterminer si un nombre est fini ou non. La fonction `isFinite()` examine le nombre passé en argument : si celui-ci vaut {{jsxref("NaN")}}, {{jsxref("Infinity")}} (pour l'infini) ou {{jsxref("Infinity","-Infinity")}} (pour l'infini négatif), cette fonction renvoie `false` sinon elle renvoie `true`.
+Lorsque l'argument passé à la fonction `isFinite()` n'est pas de type [nombre](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_nombre), la valeur est d'abord contrainte à un nombre, puis la valeur résultante est comparée à `NaN` et ±`Infinity`. Ce comportement est aussi déroutant que celui de {{JSxRef("isNaN")}} — par exemple, `isFinite("1")` retourne `true`.
+
+{{JSxRef("Number.isFinite()")}} est une façon plus fiable de tester si une valeur est un nombre fini, car elle retourne `false` pour toute entrée qui n'est pas un nombre.
 
 ## Exemples
+
+### Utiliser la fonction `isFinite()`
 
 ```js
 isFinite(Infinity); // false
@@ -40,11 +59,12 @@ isFinite(-Infinity); // false
 isFinite(0); // true
 isFinite(2e64); // true
 isFinite(910); // true
-isFinite(null); // true, ce qui aurait été false
-// avec la méthode Number.isFinite(null)
 
-isFinite("0"); // true ce qui aurait été false
-// avec la méthode Number.isFinite("0")
+// Ce qui suit est faux avec la méthode plus robuste `Number.isFinite()` :
+
+isFinite(null); // true, parce que null est converti en 0
+isFinite(""); // true, parce que la chaîne de caractères vide est convertie en 0
+isFinite("123"); // true, parce que la chaîne de caractères peut être analysée comme un nombre
 ```
 
 ## Spécifications
@@ -57,7 +77,7 @@ isFinite("0"); // true ce qui aurait été false
 
 ## Voir aussi
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- La propriété {{JSxRef("Number.isFinite()")}}
+- La propriété {{JSxRef("Number.NaN")}}
+- La propriété {{JSxRef("Number.POSITIVE_INFINITY")}}
+- La propriété {{JSxRef("Number.NEGATIVE_INFINITY")}}

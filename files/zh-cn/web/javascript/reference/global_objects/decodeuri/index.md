@@ -3,15 +3,28 @@ title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
 
-{{jsSidebar("Objects")}}
-
 **`decodeURI()`** 函数能解码由{{jsxref("encodeURI")}} 创建或其他流程得到的统一资源标识符（URI）。
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## 语法
 
-```plain
+```js-nolint
 decodeURI(encodedURI)
 ```
 
@@ -45,10 +58,10 @@ decodeURI(
 
 ### 捕捉异常
 
-```plain
+```js
 try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
+  var a = decodeURI("%E0%A4%A");
+} catch (e) {
   console.error(e);
 }
 

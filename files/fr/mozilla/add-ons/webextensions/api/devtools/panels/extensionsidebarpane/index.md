@@ -3,28 +3,26 @@ title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
 ---
 
-{{AddonSidebar}}
-
 L'objet `ExtensionSidebarPane` représente un volet qu'une extension a ajouté à la barre latérale dans l'inspecteur HTML/CSS du navigateur.
 
 ![](inspector-sidebar.png)
 
-Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.panels.elements.createSidebarane()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane).
+Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.panels.elements.createSidebarane()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane).
 
 ## Fonctions
 
-- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression)
+- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression)
   - : Évaluer une expression JavaScript dans la page Web inspectée par l'inspecteur. Le résultat est affiché dans le volet de la barre latérale.
-- [`devtools.panels.ExtensionSidebarPane.setObject()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject)
+- [`devtools.panels.ExtensionSidebarPane.setObject()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject)
   - : Définit un objet JSON qui sera affiché dans le volet de la barre latérale.
-- [`devtools.panels.ExtensionSidebarPane.setPage()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage)
+- [`devtools.panels.ExtensionSidebarPane.setPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage)
   - : Charge la page pointée par l'URL fournie.
 
 ## Evénements
 
-- [`devtools.panels.ExtensionSidebarPane.onShown`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown)
+- [`devtools.panels.ExtensionSidebarPane.onShown`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown)
   - : Lancé lorsque le volet latéral est affiché.
-- [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden)
+- [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden)
   - : Lancé lorsque le volet de la barre latérale est masqué.
 
 ## Compatibilité des navigateurs

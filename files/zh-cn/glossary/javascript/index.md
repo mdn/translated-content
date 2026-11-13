@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 409978ee3d2edd2b045adfbe39769b2dae6f31ea
 ---
 
-{{GlossarySidebar}}
-
 JavaScript（JS）是一种程序设计语言，通常用于客户端（client-side）的网页动态脚本，不过，也常通过像 [Node.js](https://nodejs.org/) 这样的运行时，用于{{Glossary("Server","服务器")}}端。
 
 **不应该**把 JavaScript 和 [Java](https://zh.wikipedia.org/wiki/Java) 混淆。“_Java_”和“_JavaScript_”都是 Oracle 公司在美国和其他国家注册的商标，但是这两种程序设计语言在语法、语义和使用方面都明显不同。
@@ -28,5 +26,5 @@ Brendan Eich（彼时受雇于 Netscape）为服务器端构想的语言——Ja
 - [NodeSchool 的“javascripting”工坊](https://nodeschool.io/#workshoppers)
 - [codecademy.com 的 JavaScript 课程](https://www.codecademy.com/catalog/language/javascript)
 - [最新的 ECMAScript 标准](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-- MDN 的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/reference)
+- MDN 的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)
 - [_Eloquent JavaScript_](https://eloquentjavascript.net/) 一书

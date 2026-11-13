@@ -57,7 +57,7 @@ if (elem.requestFullscreen) {
 
 ### 全螢幕要求失敗
 
-並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen) 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
+並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 [`allowfullscreen`](/zh-TW/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
 
 > [!NOTE]
 > 全螢幕要求必須在事件處理常式中呼叫，否則將會被拒絕。
@@ -85,7 +85,7 @@ if (elem.requestFullscreen) {
 
 In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.
 
-[查看示例](/samples/domref/fullscreen.html)
+[查看示例](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### 監視 Enter 鍵
 
@@ -157,7 +157,7 @@ If fullscreen mode is already active (`fullscreenElement` is non-`null`), we cal
 
 These are some of the methods that browsers implemented before the standard was drafted. Having the standard methods described above it's better to avoid using the following ones:
 
-- [`window.fullScreen`](/zh-TW/docs/DOM/window.fullScreen) (Firefox)
+- [`window.fullScreen`](/zh-TW/docs/Web/API/Window/fullScreen) (Firefox)
 - `HTMLMediaElement.webkitDisplayingFullscreen`
 - `HTMLMediaElement.webkitEnterFullscreen`
 - `HTMLMediaElement.webkitExitFullscreen`
@@ -172,5 +172,5 @@ These are some of the methods that browsers implemented before the standard was 
 - {{ domxref("document.mozFullScreenEnabled") }}
 - {{ cssxref(":-moz-full-screen") }}
 - {{ cssxref(":-moz-full-screen-ancestor") }}
-- [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-TW/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
 - [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](https://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)

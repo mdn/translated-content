@@ -1,8 +1,9 @@
 ---
 title: "HTMLAnchorElement: origin プロパティ"
+short-title: origin
 slug: Web/API/HTMLAnchorElement/origin
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +23,7 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
 anchor.origin; // 'https://developer.mozilla.org' を返す
 ```

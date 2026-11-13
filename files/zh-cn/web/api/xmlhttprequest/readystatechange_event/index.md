@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/readystatechange_event
 
 {{APIRef}}
 
-只要 `readyState` 属性发生变化，就会调用相应的[处理函数](/zh-CN/docs/Web/API/EventHandler)。这个回调函数会被用户线程所调用。**`XMLHttpRequest.onreadystatechange`** 会在 {{domxref("XMLHttpRequest")}} 的{{domxref("XMLHttpRequest.readyState", "readyState")}} 属性发生改变时触发 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件的时候被调用。
+只要 `readyState` 属性发生变化，就会调用相应的[处理函数](/zh-CN/docs/Web/API/Document_Object_Model/Events)。这个回调函数会被用户线程所调用。**`XMLHttpRequest.onreadystatechange`** 会在 {{domxref("XMLHttpRequest")}} 的{{domxref("XMLHttpRequest.readyState", "readyState")}} 属性发生改变时触发 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件的时候被调用。
 
 > [!WARNING]
 > 这个方法不该用于同步的 requests 对象，并且不能在内部 (C++) 代码中使用。

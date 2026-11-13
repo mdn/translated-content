@@ -24,7 +24,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 
 **`const`** создаёт константу (новую именованную ссылку на область памяти), доступную только для чтения. Это не означает, что указываемое значение неизменно, но это означает, что идентификатор не может быть переназначен. Например, если константа указывает на объект, то сам объект может быть изменён.
 
-Все соображения по поводу [временных мёртвых зон](/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let), применимы и к [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) и к `const`.
+Все соображения по поводу [временных мёртвых зон](/ru/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let), применимы и к [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) и к `const`.
 
 Имена констант не могут совпадать с именами функций или переменных той же области видимости.
 
@@ -58,15 +58,15 @@ let MY_FAV = 20;
 
 // Важно отметить свойства области видимости уровня блока
 if (MY_FAV === 7) {
-    // Всё нормально. Создать константу или переменную MY_FAV можно.
-    // (работает так же как и let при объявлении в блоке переменных, которые не const)
-    const MY_FAV = 20;
+  // Всё нормально. Создать константу или переменную MY_FAV можно.
+  // (работает так же как и let при объявлении в блоке переменных, которые не const)
+  const MY_FAV = 20;
 
-    // MY_FAV теперь 20
-    console.log("my favorite number is " + MY_FAV);
+  // MY_FAV теперь 20
+  console.log("my favorite number is " + MY_FAV);
 
-    // это попадёт в глобальный контекст и выдаст ошибку
-    var MY_FAV = 20;
+  // это попадёт в глобальный контекст и выдаст ошибку
+  var MY_FAV = 20;
 }
 
 // MY_FAV все ещё имеет значение 7
@@ -76,10 +76,10 @@ console.log("my favorite number is " + MY_FAV);
 const FOO;
 
 // const также работает с объектами
-const MY_OBJECT = {"key": "value"};
+const MY_OBJECT = { key: "value" };
 
 // Попытка переопределить ссылку на объект вызовет исключение - Uncaught TypeError: Assignment to constant variable.
-MY_OBJECT = {"OTHER_KEY": "value"};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // но, свойства объекта (ключи) можно изменять
 MY_OBJECT.key = "otherValue"; // Используйте Object.freeze() для того, чтобы сделать объект неизменяемым
@@ -89,7 +89,7 @@ const MY_ARRAY = [];
 // Например, можно добавлять элементы в массив
 MY_ARRAY.push("A"); // ["A"]
 // Но менять ссылку на объект массива нельзя. Это вызовет исключение - Uncaught TypeError: Assignment to constant variable
-MY_ARRAY = ["B"]
+MY_ARRAY = ["B"];
 ```
 
 ## Спецификации
@@ -104,4 +104,4 @@ MY_ARRAY = ["B"]
 
 - [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
 - [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
-- [Константы в справочнике JavaScript](/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants)
+- [Константы в справочнике JavaScript](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

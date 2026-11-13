@@ -3,15 +3,11 @@ title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`toString()`** 方法返回当前 symbol 对象的字符串表示。
 
 ## 语法
 
-```plain
+```js-nolint
 symbol.toString();
 ```
 

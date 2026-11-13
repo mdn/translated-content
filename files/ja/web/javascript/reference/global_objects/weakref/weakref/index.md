@@ -1,11 +1,10 @@
 ---
 title: WeakRef() コンストラクター
+short-title: WeakRef()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 l10n:
-  sourceCommit: 7da0dabee277f9c295178ae132c16c8fed5d747a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`WeakRef()`** コンストラクターは、 {{jsxref("WeakRef")}} オブジェクトを生成します。
 
@@ -15,7 +14,8 @@ l10n:
 new WeakRef(target)
 ```
 
-> **メモ:** `WeakRef()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `WeakRef()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) との組み合わせでのみ構築されます。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

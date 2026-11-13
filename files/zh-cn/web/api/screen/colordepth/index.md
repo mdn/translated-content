@@ -1,11 +1,17 @@
 ---
-title: Screen.colorDepth
+title: Screen：colorDepth 属性
 slug: Web/API/Screen/colorDepth
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
 {{APIRef("CSSOM")}}
 
-返回屏幕的颜色深度（color depth）。根据 CSSOM( CSS 对象模型 ) 视图，为兼容起见，该值总为 24。
+只读属性 **`Screen.colorDepth`** 返回屏幕的颜色深度（color depth）。根据 CSSOM（CSS 对象模型），某些实现为了兼容性原因总是返回 `24`。请参阅浏览器兼容性部分，以了解不这么做的浏览器。
+
+## 值
+
+一个数字。
 
 ## 示例
 

@@ -3,7 +3,7 @@ title: 語法與型別
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章討論 JavaScript 的基本語法與基礎資料類型、包括變數、常數、字元常數
 
@@ -13,7 +13,7 @@ JavaScript 許多基本語法借鑒自 Java，C 或是 C++，但亦受 Awk、Per
 
 JavaScript 是 Case-sensitive（區分大小寫）並使用 Unicode 編碼。舉例來說，Früh (德文的"early") 可以當作變數的名稱。
 
-```plain
+```js
 var Früh = "foobar";
 ```
 
@@ -52,7 +52,7 @@ JavaScript 有三種宣告方式
 
 在 JavaScript 中，變數必須使用字母（letter）、下底線（\_）、錢號（$）作為開頭；後面的字員組成可以包含數字（0-9）。JavaScript 是區分大小寫（case sensitive）的，大寫字母（'A' \~ 'Z'）和小寫字母（'a' \~ 'z'）皆可使用且不相等。
 
-You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) as characters in identifiers.
+You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers (for more details see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6)). You can also use the [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -109,7 +109,7 @@ var a;
 a + 2; // Evaluates to NaN
 ```
 
-當你對 {{jsxref("null")}} 進行運算，{{jsxref("null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
+當你對 {{jsxref("Operators/null", "null")}} 進行運算，{{jsxref("Operators/null", "null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
 
 ```js
 var n = null;
@@ -120,7 +120,7 @@ console.log(n * 32); // Will log 0 to the console
 
 當我們在函式外宣告一個變數時，這個變數會是一個全域變數 (global variable), 因為在這份程式文件裡面的所有程式碼都可以使用到這個變數。但當我們只在函式內宣告變數時，這變數是區域變數 (local variable)，因為變數只會在函式內被使用到。
 
-**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
+**請注意!!** 在 ECMAScript 2015 以前的 JavaScript 版本裡，並沒有定義區塊描述 ([block statement](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement)) 的變數有效範圍。更精確的說，之前版本所定義的變數，其特性相當於全域變數；不只在宣告的區塊或函數裡面有效 ，其變數值還會超出宣告區塊而影響到全部的描述碼。
 
 從下面例子來看，其輸出結果會是 5。雖然 x 是在 if { } 區塊裡面被宣告的，但卻因為有全域變數的特性，因此溢出大括號而成為後續描述碼的變數值。
 
@@ -265,7 +265,6 @@ MY_OBJECT.key = "otherValue";
 最新 ECMAScript 標準定義以下七種資料型別:
 
 - 六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
-
   - {{Glossary("Boolean")}}. `true` and `false`.
   - {{Glossary("null")}}. A special keyword denoting a null value. Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.
   - {{Glossary("undefined")}}. A top-level property whose value is undefined.
@@ -277,7 +276,7 @@ MY_OBJECT.key = "otherValue";
 
 儘管這些變數關聯性很小，他們可以讓你在你的應用程式中，產生出有意義的函數。
 
-[物件](/zh-TW/docs/JavaScript/Reference/Global_Objects/Object)與 [函數](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
+[物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)與 [函數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 在語言中是其它的基本元素. 你可以把物件想成是一個被命名過且用來裝數值的容器,以及函數則為你的應用程式所執行的步驟.
 
 ### 資料型別轉換
 
@@ -313,8 +312,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 當代表數字的值以字串形式存在記憶體中，有些方法可用來將這種字串轉換成整數或浮點數。
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` 只會返回整數，因此減少了對小數的使用。此外，parseInt 的最佳實務是始終包含基數參數。基數參數用於指定使用的數值系統。
 
@@ -412,7 +411,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 0b11, 0b0011 and -0b11 (binary, base 2)
 ```
 
-更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals).
+更多資訊請參閱 [Numeric literals in the Lexical grammar reference](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
 ### 浮點數字面值 (Floating-point literals)
 
@@ -433,7 +432,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 
 舉個例子：
 
-```plain
+```js-nolint
 3.1415926
 -.123456789
 -3.1E+12
@@ -600,7 +599,7 @@ You should use string literals unless you specifically need to use a String obje
 |             |                                                                                                                                                                                                                                                    |
 | `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits _XX_ between 00 and FF. For example, \xA9 is the hexadecimal sequence for the copyright symbol.                                                                    |
 |             |                                                                                                                                                                                                                                                    |
-| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals). |
+| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits _XXXX_. For example, \u00A9 is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
 | `\u{XXXXX}` | Unicode code point escapes. For example, \u{2F804} is the same as the simple Unicode escapes \uD87E\uDC04.                                                                                                                                         |
 
 #### Escaping characters
@@ -616,7 +615,7 @@ console.log(quote);
 
 The result of this would be:
 
-```plain
+```js-nolint
 He read "The Cremation of Sam McGee" by R.W. Service.
 ```
 
@@ -647,7 +646,7 @@ Sugar is sweet,\n\
 and so is foo.";
 ```
 
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/zh-TW/docs/Web/JavaScript/Reference/template_strings). This allows for many new features including multiline strings!
+ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/zh-TW/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features including multiline strings!
 
 ```js
 var poem = `Roses are red,

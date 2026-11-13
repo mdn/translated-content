@@ -23,6 +23,6 @@ l10n:
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - [엔디언](https://ko.wikipedia.org/wiki/%EC%97%94%EB%94%94%EC%96%B8)
 - {{Glossary("data structure", "자료 구조")}}

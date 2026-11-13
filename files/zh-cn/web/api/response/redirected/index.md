@@ -12,7 +12,7 @@ slug: Web/API/Response/redirected
 
 ## 值
 
-一个布尔值 ({{domxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
+一个布尔值 ({{jsxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
 
 ## 示例
 
@@ -64,5 +64,5 @@ fetch("awesome-picture.jpg", { redirect: "error" })
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

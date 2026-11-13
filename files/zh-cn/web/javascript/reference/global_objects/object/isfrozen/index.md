@@ -3,11 +3,23 @@ title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
 
-{{JSRef}}
-
 **`Object.isFrozen()`** 静态方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。
 
-{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isFrozen(object1));
+// Expected output: false
+
+Object.freeze(object1);
+
+console.log(Object.isFrozen(object1));
+// Expected output: true
+```
 
 ## 语法
 

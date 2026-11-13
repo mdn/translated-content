@@ -12,7 +12,7 @@ slug: Web/API/Element/keyup_event
 - 詳述
   - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-keyup)
 - 介面
-  - : [KeyboardEvent](/zh-TW/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/zh-TW/docs/Web/API/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable
@@ -31,4 +31,4 @@ slug: Web/API/Element/keyup_event
 - [`keydown`](/zh-TW/docs/Web/API/Element/keydown_event)
 - [`keyup`](/zh-TW/docs/Web/API/Element/keyup_event)
 - [`keypress`](/zh-TW/docs/Web/API/Element/keypress_event)
-- [`input`](/zh-TW/docs/Web/API/HTMLElement/input_event)
+- [`input`](/zh-TW/docs/Web/API/Element/input_event)

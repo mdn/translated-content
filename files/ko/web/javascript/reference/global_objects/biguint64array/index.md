@@ -22,7 +22,7 @@ l10n:
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자 값으로 반환합니다. `BigUint64Array`의 경우 `8` 입니다.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
+- {{jsxref("Function.name", "BigUint64Array.name")}}
   - : 생성자 이름을 문자열로 반환합니다. `BigUint64Array` 타입의 경우 `"BigUint64Array"`입니다.
 
 ## 정적 메서드
@@ -84,6 +84,6 @@ console.log(biguint64FromIterable);
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

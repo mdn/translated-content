@@ -1,24 +1,39 @@
 ---
 title: Atomics.exchange()
+short-title: exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Atomics.exchange()`** は静的メソッドで、指定された値を配列内の指定した位置と交換し、その値を返します。これは不可分操作で、古い値を読み取ってから新しい値を書き込むまでの間に他の物が書き込まないことを保証します。
 
-静的な **`Atomics.exchange()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。これは不可分操作で、古い値を読み取ってから新しい値を書き込むまでの間に他の物が書き込まないことを保証します。
+{{InteractiveExample("JavaScript デモ: Atomics.exchange()")}}
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+```js interactive-example
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 2
+```
 
 ## 構文
 
-```js
-Atomics.exchange(typedArray, index, value);
+```js-nolint
+Atomics.exchange(typedArray, index, value)
 ```
 
 ### 引数
 
 - `typedArray`
-  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} の何れかです。
 - `index`
   - : `typedArray` で `value` と交換する位置です。
 - `value`
@@ -30,8 +45,10 @@ Atomics.exchange(typedArray, index, value);
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 例
 

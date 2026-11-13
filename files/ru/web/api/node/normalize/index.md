@@ -41,4 +41,4 @@ wrapper.normalize();
 
 ## Смотрите также
 
-- [`Text.splitText`](/ru/docs/DOM/Text.splitText)
+- [`Text.splitText`](/ru/docs/Web/API/Text/splitText)

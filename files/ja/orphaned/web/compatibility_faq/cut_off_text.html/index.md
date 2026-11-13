@@ -17,8 +17,8 @@ slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
 要因の代表例として以下があります。
 
 1. **表示領域が足りていない**
-    表示領域の[width](/ja/docs/Web/CSS/width)プロパティの値が表示させるテキストの文字数分の px 数より小さいことで見切れています。
-    テキストを全て表示させるには、テキストよりも大きな[width](/ja/docs/Web/CSS/width)プロパティの値を設定する必要があります。
+    表示領域の[width](/ja/docs/Web/CSS/Reference/Properties/width)プロパティの値が表示させるテキストの文字数分の px 数より小さいことで見切れています。
+    テキストを全て表示させるには、テキストよりも大きな[width](/ja/docs/Web/CSS/Reference/Properties/width)プロパティの値を設定する必要があります。
 
     ```css
     input[type=text] {
@@ -32,7 +32,7 @@ slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
 各要因の解決策の代表例として以下があります。
 
 1. **表示領域が足りていない**
-    表示領域の[width](/ja/docs/Web/CSS/width)プロパティを要素のテキストに合わせて、再設定することで正しく表示されます。
+    表示領域の[width](/ja/docs/Web/CSS/Reference/Properties/width)プロパティを要素のテキストに合わせて、再設定することで正しく表示されます。
     表示するテキストが長すぎてテキストボックスを超えてしまう場合は、テキストボックスの横幅の調整も必要となります。
 
     ```css
@@ -47,4 +47,4 @@ slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
 - 少ない調整で正しく表示を行えるようになります。
   - 要素内の px 指定の変更のみなので、他ブラウザーへの影響がありません。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

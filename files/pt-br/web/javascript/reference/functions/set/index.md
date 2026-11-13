@@ -30,7 +30,7 @@ Em JavaScript, um _setter_ pode ser usado para executar uma função sempre que 
 Observe os seguintes itens ao trabalhar com a sintaxe _set_:
 
 - Ele pode ter um identificador que é um número ou uma string;
-- Deve ter exatamente um parâmetro (para mais informações, acesse: [Mudança do ES5 incompatível: funções getter e setter literais tem exatamemente zero ou um parâmetros](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/));
+- Deve ter exatamente um parâmetro (para mais informações, acesse: [Mudança do ES5 incompatível: funções getter e setter literais tem exatamemente zero ou um parâmetros](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/));
 - Não deve ter a mesma nomenclatura seja ela para propriedades ou função.
   (`{ set x(v) { }, set x(v) { } }` e `{ x: ..., set x(v) { } }` é proibido.)
 
@@ -80,7 +80,8 @@ console.log(o.a); // 5
 
 ### Usando um nome de propriedade computada
 
-> **Nota:** **Atenção:** Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.
+> [!NOTE]
+> **Atenção:** Propriedades computadas são uma tecnologia experimental, parte da proposta ECMAScript 6, e não é amplamente suportada por todos os browsers ainda. Ele vai retornar um syntax error en ambientes que não tem suporte.
 
 ```js
 var expr = "foo";
@@ -117,4 +118,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide

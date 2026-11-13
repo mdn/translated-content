@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 전역 **`NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## 값
 
@@ -41,7 +56,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 ### `NaN` 판별
 
-값이 `NaN`인지 확인하려면, {{jsxref("Number.isNaN()")}} 또는 {{jsxref("Global_Objects/isNaN", "isNaN()")}}를 사용하여 값이 `NaN`인지 여부를 확인 할 수 있습니다. 또는 `NaN`은 자신과 같지 않다고 비교되는 유일한 값이므로 `x !== x`와 같은 자체 비교를 수행할 수 있습니다.
+값이 `NaN`인지 확인하려면, {{jsxref("Number.isNaN()")}} 또는 {{jsxref("isNaN()")}}를 사용하여 값이 `NaN`인지 여부를 확인 할 수 있습니다. 또는 `NaN`은 자신과 같지 않다고 비교되는 유일한 값이므로 `x !== x`와 같은 자체 비교를 수행할 수 있습니다.
 
 ```js
 NaN === NaN; // false
@@ -82,11 +97,11 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-`NaN`과 그 비교에 대한 자세한 내용은 [평등 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)를 참조.
+`NaN`과 그 비교에 대한 자세한 내용은 [평등 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)를 참조.
 
 ### 눈에 띄게 구별되는 NaN 값
 
-`NaN`이 자신과 동등하지 않은 데는 동기가 있습니다. [IEEE 754 인코딩](https://en.wikipedia.org/wiki/NaN#Floating_point)에서 지수 `0x7ff`와 0이 아닌 가수부가 있는 부동 소수점 숫자는 `NaN`이기 때문에 서로 다른 이진 표현을 가진 두 개의 부동 소수점 숫자를 생성할 수 있지만 둘 다 `NaN`입니다. JavaScript에서 [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)를 사용하여 비트 수준 조작을 수행할 수 있습니다.
+`NaN`이 자신과 동등하지 않은 데는 동기가 있습니다. [IEEE 754 인코딩](https://en.wikipedia.org/wiki/NaN#Floating_point)에서 지수 `0x7ff`와 0이 아닌 가수부가 있는 부동 소수점 숫자는 `NaN`이기 때문에 서로 다른 이진 표현을 가진 두 개의 부동 소수점 숫자를 생성할 수 있지만 둘 다 `NaN`입니다. JavaScript에서 [typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)를 사용하여 비트 수준 조작을 수행할 수 있습니다.
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -122,4 +137,4 @@ NaN ** 0 === 1; // true
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

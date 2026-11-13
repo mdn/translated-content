@@ -3,11 +3,24 @@ title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakMap")}} 实例的 **`set()`** 方法根据指定的键值在该 `WeakMap` 中添加新元素。
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+weakmap1.set(object2, "bar");
+
+console.log(weakmap1.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap1.get(object2));
+// Expected output: "bar"
+```
 
 ## 语法
 

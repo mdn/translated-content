@@ -16,7 +16,6 @@ RTL과 반대로, LTR (Left To Right)은 영어 (`en`, `en-US`, `en-GB`, 등), �
 ## 같이 보기
 
 - [MDN 웹 문서 용어사전](/ko/docs/Glossary)
-
   - {{Glossary("Localization")}}
   - {{Glossary("LTR", "LTR (Left to Right)")}}
   - {{Glossary("RTL", "RTL (Right to Left)")}}

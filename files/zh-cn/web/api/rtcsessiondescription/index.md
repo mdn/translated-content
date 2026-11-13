@@ -16,7 +16,7 @@ _`RTCSessionDescription` 接口不继承任何属性_
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
   - : [`RTCSdpType`](#rtcsdptype) 会话描述类型的原型枚举。
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("DOMString")}} 包含会话的{{Glossary("SDP")}}协议描述。
+  - : 一个 {{jsxref("String")}} 包含会话的{{Glossary("SDP")}}协议描述。
 
 ## 常数
 
@@ -24,12 +24,12 @@ _`RTCSessionDescription` 接口不继承任何属性_
 
 当前枚举值定义当前会话描述的状态，例如这个属性： {{domxref("RTCSessionDescription.type", "type")}} 。会话描述的值将使用如下值之一。
 
-| Value      | Description                                                                                                                              |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `answer`   | SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。换言之，此会话描述描述了商定的配置，并将被发送以完成协商。. |
-| `offer`    | 该会话描述对象描述首次握手的请求/响应。会话过程从发送方到接收方。                                                                        |
-| `pranswer` | 会话描述对象描述一个临时响应；也就是说，它是对以前的提议或临时答案的响应。                                                               |
-| `rollback` | 具有空会话描述的这种特殊类型用于回滚到以前的稳定状态。                                                                                   |
+| Value      | Description                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `answer`   | SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。换言之，此会话描述描述了商定的配置，并将被发送以完成协商。 |
+| `offer`    | 该会话描述对象描述首次握手的请求/响应。会话过程从发送方到接收方。                                                                       |
+| `pranswer` | 会话描述对象描述一个临时响应；也就是说，它是对以前的提议或临时答案的响应。                                                              |
+| `rollback` | 具有空会话描述的这种特殊类型用于回滚到以前的稳定状态。                                                                                  |
 
 ## 方法
 

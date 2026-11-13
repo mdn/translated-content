@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/fillStyle
 
 A propriedade **`CanvasRenderingContext2D.fillStyle`** da API do Canvas 2D especifica a cor ou o estilo para usar regiões internas. O valor inicial é `#000` (preto).
 
-Veja também o capítulo [Aplicando estilos e cores](/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors) no [Canvas Tutorial](/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial).
+Veja também o capítulo [Aplicando estilos e cores](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) no [Canvas Tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial).
 
 ## Sintaxe
 
@@ -20,7 +20,7 @@ ctx.fillStyle = pattern;
 ### Opções
 
 - `color`
-  - : Um {{domxref("DOMString")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
+  - : Um {{jsxref("String")}} passado como um valor de CSS {{cssxref("&lt;color&gt;")}}.
 - `gradient`
   - : Um objeto {{domxref("CanvasGradient")}} (um gradiente linear ou radial).
 - `pattern`
@@ -58,8 +58,7 @@ Edite o código abaixo e veja as alterações atualizadas na tela:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea
->
+ctx.fillRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

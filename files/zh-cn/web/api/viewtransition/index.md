@@ -7,7 +7,7 @@ slug: Web/API/ViewTransition
 
 {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} 的 **`ViewTransition`** 接口表示视图过渡，并提供了在过渡到达不同状态时运行代码的功能（例如，准备运行动画，或动画完成），或跳过视图过渡。
 
-此对象类型由 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 方法返回。当调用 `startViewTransition()` 时，将按照[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述的步骤序列进行。这也解释了不同的 Promise 何时兑现。
+此对象类型由 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 方法返回。当调用 `startViewTransition()` 时，将按照[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述的步骤序列进行。这也解释了不同的 Promise 何时兑现。
 
 {{InheritanceDiagram}}
 

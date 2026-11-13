@@ -3,8 +3,6 @@ title: Constructeur Uint8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 ---
 
-{{JSRef}}
-
 Le constructeur **`Uint8Array()`** crée un tableau typé contenant des entiers non-signés sur 8 bits. Le contenu de ces éléments est initialisé à `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation usuelle pour les tableaux avec les crochets.
 
 ## Syntaxe
@@ -89,6 +87,6 @@ let dv = new Uint8Array([1, 2, 3]);
 ## Voir aussi
 
 - [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `Uint8ClampedArray` avec `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

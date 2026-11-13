@@ -9,7 +9,18 @@ l10n:
 
 El método **`set()`** de las instancias {{jsxref("Map")}} agrega o actualiza una entrada en este _map_ con la llave y valor especificados.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Sintaxis
 
@@ -20,9 +31,9 @@ set(key, value)
 ### Parámetros
 
 - `key`
-  - : La llave del elemento que se va a agregar al objeto `Map`. La llave puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
+  - : La llave del elemento que se va a agregar al objeto `Map`. La llave puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objetos)).
 - `value`
-  - : El valor de el elemento que se va a agregar al objeto `Map`. El valor puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
+  - : El valor de el elemento que se va a agregar al objeto `Map`. El valor puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objetos)).
 
 ### Valor devuelto
 

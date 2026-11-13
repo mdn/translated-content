@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 
 **`Math.exp()`**함수는 `x`를 인수로 하는 `e^x` 값을 반환합니다. 그리고 `e`는 {{jsxref("Math.E", "오일러 상수(또는 네이피어 상수)", "", 1)}}는 자연 로그의 밑입니다.
 
-{{EmbedInteractiveExample("pages/js/math-exp.html")}}
+{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+
+```js interactive-example
+console.log(Math.exp(0));
+// Expected output: 1
+
+console.log(Math.exp(1));
+// Expected output: 2.718281828459 (approximately)
+
+console.log(Math.exp(-1));
+// Expected output: 0.36787944117144233
+
+console.log(Math.exp(2));
+// Expected output: 7.38905609893065
+```
 
 ## 구문
 

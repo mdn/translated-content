@@ -70,11 +70,12 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 보셨나요? 데이터베이스 접속은 다른 operation 들과 비슷합니다 — 당신은 "요청(request)" 하면 됩니다.
 
-open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/IndexedDB/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/IndexedDB/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/ko/docs/IndexedDB/IDBDatabase) 의 인스턴스입니다.
+open 요청은 데이터베이스를 즉시 열거나 즉시 트랜잭션을 시작하지 않습니다. `open()` 함수를 호출하면 이벤트로 처리한 결과(성공 상태)나 오류 값이 있는 [`IDBOpenDBRequest`](/ko/docs/Web/API/IDBOpenDBRequest) 객체를 반환합니다. IndexedDB의 다른 비동기 함수 대부분은 결과 또는 오류가 있는 [`IDBRequest`](/ko/docs/Web/API/IDBRequest) 객체를 반환합니다. `open()` 함수의 결과는 [`IDBDatabase`](/ko/docs/Web/API/IDBDatabase) 의 인스턴스입니다.
 
 open 메소드의 두번째 매개 변수는 데이터베이스의 버전입니다. 데이터베이스의 버전은 데이터베이스 스키마를 결정합니다. 데이터베이스 스키마는 데이터베이스 안의 객체 저장소와 그것들의 구조를 결정합니다. 데이터베이스가 아직 존재하지 않으면, open operation에 의해 생성되고, 그 다음 `onupgradeneeded` 이벤트가 트리거되고 이 이벤트 안에서 데이터베이스 스키마를 작성합니다. 데이터베이스가 존재하지만 업그레이드 된 버전 번호를 지정하는 경우 `onupgradeneeded` 이벤트가 트리거되고 해당 핸들러에 업데이트된 스키마를 제공할 수 있습니다. 자세한 내용은 나중에 아래의 [데이터베이스의 버전 업데이트](#데이터베이스의_버전_생성_또는_업데이트)와 {{ domxref("IDBFactory.open") }} 페이지를 참조하십시오.
 
-> **경고:** **중요**: 버전 번호는 `unsigned long long` 숫자입니다. 이는 버전 번호는 매우 큰 정수가 되어야한다는 의미입니다. 또한 부동 소수점을 사용할 수 없다는 것을 의미합니다. 그렇지 않으면 가장 가까운 정수로 변환되어 트랜잭션이 시작되지 않거나 `upgradeneeded` 이벤트가 트리거 되지 않습니다. 예를 들어, 2.4와 같은 버전 번호를 사용하지 마십시오:
+> [!WARNING]
+> **중요**: 버전 번호는 `unsigned long long` 숫자입니다. 이는 버전 번호는 매우 큰 정수가 되어야한다는 의미입니다. 또한 부동 소수점을 사용할 수 없다는 것을 의미합니다. 그렇지 않으면 가장 가까운 정수로 변환되어 트랜잭션이 시작되지 않거나 `upgradeneeded` 이벤트가 트리거 되지 않습니다. 예를 들어, 2.4와 같은 버전 번호를 사용하지 마십시오:
 > `var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
 
 #### 제어 객체 생성
@@ -92,7 +93,7 @@ request.onsuccess = function (event) {
 
 `onsuccess()` 또는 `onerror()` 두 함수 중 어떤 함수가 호출될까요? 모든 것이 성공하면, success 이벤트 (즉, `type` 속성이`"success"` 로 설정된 DOM 이벤트)가 `request`를 `target`으로 발생합니다. 일단 실행되면, `request` 의 `onsuccess()` 함수는 success 이벤트를 인수로 트리거됩니다. 반면, 문제가 있는 경우, 오류 이벤트 (즉 `type` 속성이`"error"` 로 설정된 DOM 이벤트)는 `request`에서 발생합니다. 이 오류 이벤트를 인수로 `onerror()` 함수가 트리거됩니다.
 
-The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits) 를 참조하십시오.)
+The IndexedDB API는 오류 처리의 필요성을 최소화하도록 설계되었기 때문에 많은 오류 이벤트를 볼 수는 없을 것입니다. (적어도 API에 익숙하지 않은 경우). 그러나 데이터베이스를 여는 경우 오류 이벤트를 발생하는 몇 가지 일반적인 조건이 있습니다. 가장 많은 문제는 사용자가 웹 응용 프로그램에 데이터베이스를 만들 수 있는 권한을 주지 않기로 결정한 것입니다. IndexedDB의 주요 설계 목표 중 하나는 많은 양의 데이터를 오프라인에서 사용할 수 있도록 하는 것입니다. (각 브라우저에서 저장할 수 있는 저장 용량에 대한 자세한 내용은 [Storage limits](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#storage_limits) 를 참조하십시오.)
 
 일부 광고 네트워크나 악의적인 웹 사이트가 컴퓨터를 오염시키는 것을 브라우저는 원하지 않기 때문에 브라우저는 특정 웹 응용 프로그램이 처음으로 저장용 IndexedDB를 열려고 할 때 사용자에게 메시지를 보냅니다. 사용자가 액세스를 허용하거나 거부할 수 있습니다. 또한, 개인정보 보호 모드의 브라우저에서 IndexedDB 공간은 시크릿 세션이 닫힐 때까지 메모리 내에서만 지속됩니다. (Firefox의 개인정보 보호 브라우징 모드와 Chrome 의 시크릿 모드가 있지만, Firefox 의 경우 2015년 11월 현재 아직 미구현([Firefox bug 781982](https://bugzil.la/781982) 참조)이므로, 개인정보 보호 브라우징 모드의 Firefox에서는 IndexedDB를 사용할 수 없습니다).
 
@@ -219,7 +220,7 @@ request.onupgradeneeded = function (event) {
 우리는 또한 저장된 객체의 `name` 프로퍼티를 찾기 위한 인덱스 "name"을 요청합니다.
 또한 `createObjectStore()`, `createIndex()` 도 생성하려는 인덱스의 종류를 결정하는 선택적인 객체인 `options` 을 인자로 받습니다. `name` 프로퍼티가 없는 객체를 추가할 수는 있지만, 이 경우 그 객체는 "name" 인덱스에 나타나지 않습니다.
 
-이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en/IndexedDB/Using_IndexedDB#Using_an_index) 섹션을 확인할 수 있습니다.
+이제 우리는 저장된 customer 객체를 가져오기 위해 `ssn` 을 이용하여 객체 저장소로부터 바로 가져오거나, 인덱스에서 그들의 이름을 이용해 가져올 수 있습니다. 이 과정이 어떻게 이루어지는지 배우기 위해, [using an index](/en-US/IndexedDB/Using_IndexedDB#using_an_index) 섹션을 확인할 수 있습니다.
 
 ### 키 생성기 사용하기
 
@@ -249,7 +250,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-키 생성기와 관련된 보다 많은 정보는 ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept) 를 참고해 주십시오.
+키 생성기와 관련된 보다 많은 정보는 ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept) 를 참고해 주십시오.
 
 ## 데이터 추가, 검색 및 제거
 
@@ -265,7 +266,7 @@ request.onupgradeneeded = function (event) {
 트랜잭션에서 적합한 범위와 모드를 사용함으로써 자료 접근을 빠르게 할 수 있습니다. 여기 두개의 팁이 있습니다:
 
 - 범위를 지정할 때, 필요한 객체 저장소만 정하십시오. 이 방식은 겹치지 않는 범위의 트랜잭션들을 동시에 처리할 수 있게 해줍니다.
-- `readwrite` 모드는 필요할때만 사용하십시오. 겹친 범위에 대해 `readonly` 트랜잭션은 동시에 실행될 수 있지만, `readwrite` 트랜잭션은 객체 저장소에 오직 한개만 작동할 수 있습니다. 더 자세한 내용은 [Basic Concepts](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB) 글에 있는 _[transactions](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ 정의를 참고하십시오.
+- `readwrite` 모드는 필요할때만 사용하십시오. 겹친 범위에 대해 `readonly` 트랜잭션은 동시에 실행될 수 있지만, `readwrite` 트랜잭션은 객체 저장소에 오직 한개만 작동할 수 있습니다. 더 자세한 내용은 [Basic Concepts](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology) 글에 있는 _[transactions](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ 정의를 참고하십시오.
 
 ### 데이터베이스에 데이터 추가
 
@@ -354,7 +355,7 @@ db
 범위 제한과 모드 설정에 따라 데이터 접근 속도를 빠르게 할 수 있다는 점을 주목하십시오. 여기 몇개의 팁이 있습니다:
 
 - 범위([scope](#scope))를 정의할 때, 당신이 필요로 하는 오브젝트 스토어만 지정하십시오. 이렇게 하면, 범위가 중복되지 않는 한 여러 개의 트랜잭션을 동시에 실행할 수 있습니다.
-- `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction))을 참조하십시오.
+- `readwrite` 모드는 반드시 필요할 때만 사용하십시오. `readonly` 모드는 범위가 중복되더라도 동시에 실행 가능하지만, `readwrite` 모드는 한 오브젝트 스토어에 대해 동시에 하나밖에 실행할 수 없습니다. 더욱 자세한 정보는, 기본 개념서의 트랜잭션의 정의 항목([transactions in the Basic Concepts article](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction))을 참조하십시오.
 
 ### 데이터베이스의 내용을 업데이트하기
 
@@ -427,7 +428,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **참고:** **Note**: Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
+> [!NOTE]
+> Mozilla는 이런 경우를 처리하기 위해 getAll()을 구현했습니다(그리고 함께 구현한 `getAllKeys()`는 현재 about:config의 `dom.indexedDB.experimental` 설정 뒤에 숨겨져 있습니다.). 이들은 IndexedDB 표준은 아니기 때문에 추후 사라질 수 있습니다. 하지만 우리는 이것들이 유용하다고 생각하기 때문에 포함시켰습니다. 다음 코드는 위 코드와 정확히 같이 동작합니다.:`js objectStore.getAll().onsuccess = function(event) { alert("Got all customers: " + event.target.result); };` 커서의 `value` 속성을 살펴보는 것은 성능상의 비용이 발생합니다. 왜냐하면 해당 객체는 지연 생성되기 때문입니다. 예를 들어 `getAll()` 을 사용할 때, Gecko는 모든 객체를 한 번에 생성합니다. 만약 키 각각을 보는 것에만 관심이 있다면, 커서를 사용하는 것이 `getAll()`을 사용하는 것 보다 훨씬 효율적입니다. 반면에 객체 저장소의 모든 객체 배열을 가져오려는 경우에는 `getAll()`을 사용하세요.
 
 ### index 사용하기
 
@@ -1334,18 +1336,18 @@ Further reading for you to find out more information if desired.
 
 ### Reference
 
-- [IndexedDB API Reference](/en/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [IndexedDB API Reference](/en-US/IndexedDB)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 - [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 
 ### Libraries
 
 - [localForage](https://localforage.github.io/localForage/): A Polyfill providing a simple name:value syntax for client-side data storage, which uses IndexedDB in the background, but falls back to WebSQL and then localStorage in browsers that don't support IndexedDB.
-- [dexie.js](http://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
+- [dexie.js](https://www.dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [ZangoDB](https://github.com/erikolson186/zangodb): A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
-- [JsStore](http://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
+- [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.

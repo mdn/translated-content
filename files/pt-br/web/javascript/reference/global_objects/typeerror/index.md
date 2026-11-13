@@ -28,7 +28,7 @@ O `TypeError` é ativado quando um operador ou argumento passado para uma funç�
 
 ## Propriedades
 
-- {{jsxref("TypeError.prototype")}}
+- {{jsxref("TypeError")}}
   - : Permite a adição de propriedades para o objeto `TypeError`.
 
 ## Métodos
@@ -39,11 +39,11 @@ O TypeError global não contém métodos por si só, no entanto, ele herda algun
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -90,4 +90,4 @@ try {
 ## Veja também
 
 - {{jsxref("Error")}}
-- {{jsxref("TypeError.prototype")}}
+- {{jsxref("TypeError")}}

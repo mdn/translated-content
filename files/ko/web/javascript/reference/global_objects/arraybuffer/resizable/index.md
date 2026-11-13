@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 인스턴스의 **`resizable`** 접근자 속성은 배열 버퍼가 크기 조정이 가능한지 불가한지 여부를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-resizable.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.resizable")}}
+
+```js interactive-example
+const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });
+const buffer2 = new ArrayBuffer(8);
+
+console.log(buffer1.resizable);
+// Expected output: true
+
+console.log(buffer2.resizable);
+// Expected output: false
+```
 
 ## 설명
 

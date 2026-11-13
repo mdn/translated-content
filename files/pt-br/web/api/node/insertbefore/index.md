@@ -26,7 +26,8 @@ var elementoInserido = elementoPai.insertBefore(novoElemento, elementoDeReferenc
 
 Se _elementoDeReferencia_ for `null`, _novoElemento_ será inserido no fim da lista de nós filhos.
 
-> **Nota:** `elementoDeReferencia` não é um parâmetro opcional - você deve passar explicitamente um `Node` ou `null`. Deixar de fornecer ou passar valores inválidos pode [ter comportamento diferente](https://code.google.com/p/chromium/issues/detail?id=419780) em diferentes versões de navegadores.
+> [!NOTE]
+> `elementoDeReferencia` não é um parâmetro opcional - você deve passar explicitamente um `Node` ou `null`. Deixar de fornecer ou passar valores inválidos pode [ter comportamento diferente](https://code.google.com/p/chromium/issues/detail?id=419780) em diferentes versões de navegadores.
 
 ### Return value
 
@@ -53,7 +54,7 @@ O valor retornado é o filho incluído, exceto quando `newNode` é um {{domxref(
 </script>
 ```
 
-Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/DOM/Node.nextSibling).
+Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/Web/API/Node/nextSibling).
 
 No exemplo anterior, `sp1` poderia ser inserido após `sp2` desta forma:
 
@@ -65,7 +66,7 @@ Se `sp2` não possuir um próximo nó, significa que ele deve ser o último filh
 
 ## Exemplo 2
 
-Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/DOM/Node.firstChild).
+Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/Web/API/Node/firstChild).
 
 ```js
 // Guarda a referêncis do elemento no quela nóe queremos inserir o novo nó

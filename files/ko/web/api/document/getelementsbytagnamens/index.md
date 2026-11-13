@@ -17,9 +17,11 @@ elements = document.getElementsByTagNameNS(namespace, name);
 - _namespace_ 는 탐색하기 위한 엘리먼트의 네임스페이스 URI 입니다({{domxref("Node.namespaceURI", "element.namespaceURI")}}) 를 확인하세요).
 - _name 은 탐색할 엘리먼트의 로컬명 또는 모든 엘리먼트에 일치하는 특별 값 `*` 입니다_({{domxref("Node.localName", "element.localName")}} 를 확인하세요).
 
-> **참고:** **노트:** W3C 명세는 `elements` 를 `NodeList` 라고 하였지만, Gecko 와 Internet Explorer 에서는 {{DOMxRef("HTMLCollection")}} 을 반환합니다. Opera 는`NodeList` 를 반환하지만 `namedItem` 메소드를 구현해 `HTMLCollection` 과 유사하게 만듭니다. 2012 년 1월 기준으로, WebKit 브라우저만 순수한 `NodeList` 를 반환합니다. 자세한 내용은 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) 를 확인하세요.
+> [!NOTE]
+> **노트:** W3C 명세는 `elements` 를 `NodeList` 라고 하였지만, Gecko 와 Internet Explorer 에서는 {{DOMxRef("HTMLCollection")}} 을 반환합니다. Opera 는`NodeList` 를 반환하지만 `namedItem` 메소드를 구현해 `HTMLCollection` 과 유사하게 만듭니다. 2012 년 1월 기준으로, WebKit 브라우저만 순수한 `NodeList` 를 반환합니다. 자세한 내용은 [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) 를 확인하세요.
 
-> **참고:** **노트:** 현재 이 메소드의 파라미터는 대소문자를 구분하지만, Firefox 3.5 와 그 이전에는 그렇지 않았습니다. 자세한 내용은 [Firefox 3.6 개발자 릴리즈 노트](/ko/docs/Mozilla/Firefox/Releases/3.6#DOM)와 {{domxref("Element.getElementsByTagNameNS")}} 의 브라우저 호환성 섹션을 확인하세요.
+> [!NOTE]
+> **노트:** 현재 이 메소드의 파라미터는 대소문자를 구분하지만, Firefox 3.5 와 그 이전에는 그렇지 않았습니다. 자세한 내용은 [Firefox 3.6 개발자 릴리즈 노트](/ko/docs/Mozilla/Firefox/Releases/3.6#DOM)와 {{domxref("Element.getElementsByTagNameNS")}} 의 브라우저 호환성 섹션을 확인하세요.
 
 ## 예시
 
@@ -106,7 +108,7 @@ elements = document.getElementsByTagNameNS(namespace, name);
 
 ## 지원하지 않는 다른 브라우저를 위한 잠재적인 대안
 
-원하는 브라우저가 XPath 를 지원하지 않는다면, 원하는 로컬명과 네임스페이스를 갖는 모든 태그를 찾기 위한 다른 접근법(모든 자식을 거쳐 DOM 을 횡단, 모든 @xmlns 인스턴스 식별 등)이 필요하지만, XPath 가 훨씬 빠릅니다(Explorer 에 적용하려면, 아래의 함수에서 XPath 대신 [이 래퍼 클래스같은](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js) XPath 래퍼를 호출할 수 있습니다(Explorer 는 다른 API 로 XPath 를 지원합니다).)
+원하는 브라우저가 XPath 를 지원하지 않는다면, 원하는 로컬명과 네임스페이스를 갖는 모든 태그를 찾기 위한 다른 접근법(모든 자식을 거쳐 DOM 을 횡단, 모든 @xmlns 인스턴스 식별 등)이 필요하지만, XPath 가 훨씬 빠릅니다(Explorer 에 적용하려면, 아래의 함수에서 XPath 대신 [이 래퍼 클래스같은](https://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js) XPath 래퍼를 호출할 수 있습니다(Explorer 는 다른 API 로 XPath 를 지원합니다).)
 
 ```js
 function getElementsByTagNameNSWrapper(ns, elName, doc, context) {

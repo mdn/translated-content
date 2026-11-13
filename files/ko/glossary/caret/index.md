@@ -11,7 +11,7 @@ l10n:
 
 대부분의 사용자 인터페이스는 얇은 수직선이나 깜박이는 문자 크기의 상자를 사용하여 캐럿을 나타내지만 이는 다를 수 있습니다. 텍스트의 이 지점을 **삽입 지점**이라고 합니다. '캐럿'이라는 단어는 텍스트 삽입 지점과 마우스 커서를 구별합니다.
 
-웹에서, 캐럿은 {{HTMLElement("input")}} 및 {{HTMLElement("textarea")}} 요소는 물론 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes#contenteditable) 속성이 설정된 모든 요소의 삽입 지점을 나타내는 데 사용됩니다. 따라서 사용자가 요소의 내용을 편집할 수 있습니다.
+웹에서, 캐럿은 {{HTMLElement("input")}} 및 {{HTMLElement("textarea")}} 요소는 물론 [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes#contenteditable) 속성이 설정된 모든 요소의 삽입 지점을 나타내는 데 사용됩니다. 따라서 사용자가 요소의 내용을 편집할 수 있습니다.
 
 ## 같이 보기
 
@@ -28,8 +28,8 @@ l10n:
 - [`<input type="text">`](/ko/docs/Web/HTML/Element/input/text)
 - [`<input type="password">`](/ko/docs/Web/HTML/Element/input/password)
 - [`<input type="search">`](/ko/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/ko/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ko/docs/Web/HTML/Element/input/time), and [`<input type="datetime-local">`](/ko/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="date">`](/ko/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/ko/docs/Web/HTML/Element/input/time), and [`<input type="datetime-local">`](/ko/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number), [`<input type="range">`](/ko/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/ko/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/ko/docs/Web/HTML/Element/input/tel) 및 [`<input type="url">`](/ko/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}
-- [콘텐츠 편집이 가능한](/ko/docs/Web/HTML/Global_attributes#contenteditable) 속성이 설정된 모든 요소
+- [콘텐츠 편집이 가능한](/ko/docs/Web/HTML/Reference/Global_attributes#contenteditable) 속성이 설정된 모든 요소

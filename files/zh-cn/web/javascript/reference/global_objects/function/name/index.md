@@ -3,11 +3,23 @@ title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`name`** 数据属性表示函数在创建时指定的名称，或者如果函数是匿名函数，则名称可以是 `anonymous` 或 `''`（空字符串）。
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
 
 ## 值
 
@@ -117,7 +129,7 @@ f.name; // "f"
 
 ### 初始化器和默认值
 
-在[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
+在[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
 
 ```js
 const [f = () => {}] = [];
@@ -201,7 +213,7 @@ o[sym2].name; // "[]"
 
 ### 私有属性
 
-私有字段和私有方法的名称中包含哈希符号（`#`）。
+私有字段和私有方法的名称中包含井号（`#`）。
 
 ```js
 class Foo {

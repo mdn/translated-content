@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/status
 
 {{APIRef('XMLHttpRequest')}}
 
-Доступное только для чтения свойство **`XMLHttpRequest.status`**, возвращает числовой [код состояния](/ru/docs/Web/HTTP/Status) HTTP ответа `XMLHttpRequest`.
+Доступное только для чтения свойство **`XMLHttpRequest.status`**, возвращает числовой [код состояния](/ru/docs/Web/HTTP/Reference/Status) HTTP ответа `XMLHttpRequest`.
 
 До завершения запроса значение `status` равно 0. Браузеры также сообщают о состоянии 0 в случае ошибок `XMLHttpRequest`.
 
@@ -48,5 +48,5 @@ xhr.send();
 
 ## Смотрите также
 
-- Список [HTTP response codes](/ru/docs/Web/HTTP/Response_codes)
+- Список [HTTP response codes](/ru/docs/Web/HTTP/Reference/Status)
 - [HTTP](/ru/docs/Web/HTTP)

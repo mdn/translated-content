@@ -15,7 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-> **メモ:** [コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)を使うこともできます。
+> [!NOTE]
+> [コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)を使うこともできます。
 
 ## 構文
 
@@ -30,14 +31,12 @@ var sending = browser.runtime.sendMessage(
 ### 引数
 
 - `extensionId`{{optional_inline}}
-  - : `string` 型。 メッセージを送信する拡張機能の ID。別の拡張機能にメッセージを送信する場合は、この引数を含めてください。受信させることを意図している拡張機能が manifest.json の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーを使って明示的に ID を設定されている場合は、その値を `extensionId` に指定する必要があります。そうでない場合、受信側の拡張機能のために生成された ID を指定する必要があります。
+  - : `string` 型。 メッセージを送信する拡張機能の ID。別の拡張機能にメッセージを送信する場合は、この引数を含めてください。受信させることを意図している拡張機能が manifest.json の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを使って明示的に ID を設定されている場合は、その値を `extensionId` に指定する必要があります。そうでない場合、受信側の拡張機能のために生成された ID を指定する必要があります。
     もし `extensionId` が省略された場合、メッセージは自分自身の拡張機能に送信されます。
 - `message`
   - : `any` 型。シリアライズされたクローンに構造化できるオブジェクト。
 - `options`{{optional_inline}}
-
   - : `object` 型。
-
     - `includeTlsChannelId`{{optional_inline}}
       - : `boolean` 型。接続イベントを待つプロセスのための {{WebExtAPIRef('runtime.onMessageExternal')}} に TLS チャンネル ID が渡されるかどうか。
     - `toProxyScript{{optional_inline}}`
@@ -47,9 +46,7 @@ var sending = browser.runtime.sendMessage(
 
 - **引数が一つの場合**、それは送信されるメッセージで、内部的に送信されます。
 - **引数が二つの場合**
-
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
-
     1. 有効な `options` オブジェクトである (つまり、ブラウザーがサポートする `options` のプロパティのみを持つオブジェクト)
     2. null
     3. undefined
@@ -109,7 +106,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage) API に基づいています。このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

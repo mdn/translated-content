@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
@@ -7,9 +8,18 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 인스턴스의 **`every()`** 메서드는 배열의 모든 요소가 제공된 함수로 구현된 테스트를 통과하는지 테스트합니다. 이 메서드는 불리언 값을 반환합니다.
+{{jsxref("Array")}} 인스턴스의 **`every()`** 메서드는 제공된 테스트 함수를 만족시키지 못한 배열 내 요소를 하나 찾으면 `false`를 반환합니다. 그렇지 않으면 `true`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-every.html", 'shorter')}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.every()", "shorter")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// 예상 출력: true
+```
 
 ## 구문
 
@@ -33,7 +43,7 @@ every(callbackFn, thisArg)
 
 ### 반환 값
 
-`callbackFn`이 모든 배열 요소에 대해 {{Glossary("truthy", "참")}} 값을 반환하면 `true`입니다. 그렇지 않으면 `false`입니다.
+`callbackFn`이 {{Glossary("falsy", "거짓")}}을 반환하는 경우 `false`를 즉시 반환하며, 그렇지 않으면 `true`를 반환합니다.
 
 ## 설명
 

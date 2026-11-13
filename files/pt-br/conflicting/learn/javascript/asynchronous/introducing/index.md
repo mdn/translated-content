@@ -3,7 +3,7 @@ title: Conceitos gerais da programação assíncrona
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS")}}
 
 Neste artigo, nós vamos ver um número de conceitos importantes relativos à programação assíncrona e como ela se parece em navegadores modernos e em JavaScript. Você deve entender estes conceitos antes de trabalhar com outros artigos neste módulo.
 
@@ -165,9 +165,9 @@ O design moderno de software gira em torno do uso de programação assíncrona, 
 
 ## Nesse módulo
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Timeouts e intervalos](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Código elegante usando as Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Facilitando a programação async com async e await](/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Escolhendo a abordagem certa](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
+- [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+- [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
+- [Código elegante usando as Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
+- [Facilitando a programação async com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
+- [Escolhendo a abordagem certa](/pt-BR/docs/Learn_web_development/Extensions/Async_JS)

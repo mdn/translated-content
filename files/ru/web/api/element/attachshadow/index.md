@@ -40,11 +40,9 @@ var shadowroot = element.attachShadow(shadowRootInit);
 ### Параметры
 
 - `shadowRootInit`
-
   - : `ShadowRootInit` содержит следующие поля:
 
     `mode`: Строка указывающая на режим инкапсуляции для shadowDOM:
-
     - `open.` Указывает на открытие режима инкапсуляции.
       Это означает что элементы shadowRoot доступны для внешнего мира _element.shadowRoot_
 

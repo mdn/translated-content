@@ -3,8 +3,6 @@ title: 废弃和过时的特性
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 
-{{JsSidebar("More")}}
-
 本附录列出了那些已经废弃（仍然可用，但是已计划删除）或者过时（已被删除，无法使用）的 JavaScript 特性。
 
 ## 废弃的特性
@@ -130,7 +128,7 @@ console.log("b");
 
 ### String
 
-- 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox 68 中删除。你可以使用 {{jsxref("String", "String.prototype", "实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
+- 非标准的字符串通用方法，如 `String.slice(myStr, 0, 12)`、`String.replace(myStr, /\./g, "!")` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 53 中被废弃，并在 Firefox 68 中删除。你可以使用 {{jsxref("String", "String.prototype", "#实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
 - `String.prototype.quote` 已在 Firefox 37 中移除。
 - {{jsxref("String.prototype.search")}}、{{jsxref("String.prototype.match")}} 和 {{jsxref("String.prototype.replace")}} 中非标准的 `flags` 参数已被淘汰。
 
@@ -144,7 +142,7 @@ console.log("b");
 
 ### Array
 
-非标准的 Array 通用方法，如 `Array.slice(myArr, 0, 12)`、`Array.forEach(myArr, myFn)` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 68 中被废弃，并在 Firefox 71 中删除。你可以使用 {{jsxref("Array", "Array.prototype", "实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
+非标准的 Array 通用方法，如 `Array.slice(myArr, 0, 12)`、`Array.forEach(myArr, myFn)` 等，在 Firefox 1.5（JavaScript 1.6）中引入，在 Firefox 68 中被废弃，并在 Firefox 71 中删除。你可以使用 {{jsxref("Array", "Array.prototype", "#实例方法")}} 和 {{jsxref("Function.call")}} 来代替。
 
 | 属性                | 描述                 | 替代                |
 | ------------------- | -------------------- | ------------------- |

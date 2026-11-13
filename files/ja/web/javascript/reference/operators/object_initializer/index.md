@@ -2,14 +2,32 @@
 title: オブジェクト初期化子
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **オブジェクト初期化子** (object initializer) は、オブジェクトのプロパティ名と関連する値の 0 個以上のペアを中括弧 (`{}`) で囲んだカンマ区切りのリストです。オブジェクトは [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や [`new`](/ja/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) 演算子で[コンストラクター関数を呼び出して](/ja/docs/Web/JavaScript/Reference/Operators/new)使用することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: オブジェクト初期化子", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// 予想される結果: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// 予想される結果: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// 予想される結果: "foo"
+```
 
 ## 構文
 
@@ -18,8 +36,8 @@ o = {
   a: "foo",
   b: 42,
   c: {},
-  1: "number literal property",
-  "foo:bar": "string literal property",
+  1: "数値リテラルプロパティ",
+  "foo:bar": "文字列リテラルプロパティ",
 
   shorthandProperty,
 
@@ -30,7 +48,7 @@ o = {
   get property() {},
   set property(value) {},
 
-  [expression]: "computed property",
+  [式]: "計算プロパティ",
 
   __proto__: prototype,
 
@@ -40,14 +58,14 @@ o = {
 
 ## 解説
 
-オブジェクト初期化子は、{{jsxref("Object")}} の初期化を表す式です。オブジェクトはオブジェクトを表す*プロパティ*で構成されます。オブジェクトプロパティの値は、特定の[プリミティブ](/ja/docs/Glossary/Primitive)データ型か他のオブジェクトのどちらかを含みます。
+オブジェクト初期化子は、{{jsxref("Object")}} の初期化を表す式です。オブジェクトはオブジェクトを表すプロパティで構成されます。オブジェクトプロパティの値は、特定の[プリミティブ](/ja/docs/Glossary/Primitive)データ型か他のオブジェクトのどちらかを含みます。
 
 ### オブジェクトリテラル構文と JSON
 
 オブジェクトリテラル構文は **J**ava**S**cript **O**bject **N**otation ([JSON](/ja/docs/Glossary/JSON)) とは異なります。両者は似ていますが、違いがあります。
 
-- JSON は、`"property": value` 構文を使用するプロパティ定義*のみ*を許可します。プロパティ名は二重引用符で囲まなければなりません。そして、その定義を略記にすることはできません。計算されたプロパティ名も許されません。
-- JSON オブジェクトプロパティの値で取りうるのは、文字列、数値、`true`、`false`、`null`、配列、他の JSON オブジェクトのみです。これはJSONがメソッドや、プレーンでないオブジェクト、例えば [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) や [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp) を表現できないことを意味しています。
+- JSON は、`"property": value` 構文を使用するプロパティ定義*のみ*を許可します。プロパティ名は二重引用符で囲まなければなりません。そして、その定義を略記にすることはできません。算出プロパティ名も許されません。
+- JSON オブジェクトプロパティの値で取りうるのは、文字列、数値、`true`、`false`、`null`、配列、他の JSON オブジェクトのみです。これは JSON がメソッドや、プレーンでないオブジェクト、例えば [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) や [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp) を表現できないことを意味しています。
 - JSON では、 `"__proto__"` は通常のプロパティキーです。オブジェクトリテラルでは、[オブジェクトのプロトタイプを設定します](#プロトタイプセッター)。
 
 JSON はオブジェクトリテラル構文の _厳格なサブセット_ であり、有効な JSON テキストはすべてオブジェクトリテラルとして解釈でき、構文エラーを発生させないことを意味しています。唯一の例外は、オブジェクトリテラル構文では `__proto__` キーの重複を禁止していることです。これは [`JSON.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) には適用されません。後者は `__proto__` を通常のプロパティのように扱い、最後に出現した値をプロパティの値として導きます。オブジェクトリテラルではオブジェクトのプロトタイプを設定し、 JSON では通常のプロパティを設定します。
@@ -90,7 +108,7 @@ const object = {
 object.foo; // "bar"
 object["age"]; // 42
 object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.baz.myProp; // 12
 ```
 
 ### プロパティの定義
@@ -132,7 +150,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)だけは例外で、クラス本体で固有のプロパティでなければなりません。
+ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)だけは例外で、クラス本体で固有のプロパティでなければなりません。
 
 ### メソッドの定義
 
@@ -141,7 +159,9 @@ ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#
 ```js
 const o = {
   property: function (parameters) {},
-  get property() {},
+  get property() {
+    return 1;
+  },
   set property(value) {},
 };
 ```
@@ -177,14 +197,14 @@ const o = {
 
 メソッドの詳細や例については、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)をご覧ください。
 
-### 計算プロパティ名
+### 算出プロパティ名
 
-オブジェクト初期化子構文でも、計算プロパティ名に対応します。角括弧 `[]` の中に式を記述することができ、それが計算されてプロパティ名として使用されます。これは、プロパティの読み込みと設定に使用したことのある、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文のブラケット表記を彷彿とさせるものです。
+オブジェクト初期化子構文でも、算出プロパティ名に対応します。角括弧 `[]` の中に式を記述することができ、それが計算されてプロパティ名として使用されます。これは、プロパティの読み込みと設定に使用したことのある、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文のブラケット表記を彷彿とさせるものです。
 
 今では、オブジェクトリテラルでも同様な構文を使うことができます。
 
 ```js
-// 計算プロパティ名
+// 算出プロパティ名
 let i = 0;
 const a = {
   [`foo${++i}`]: i,
@@ -229,7 +249,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
+> [!WARNING]
+> {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
 
 ### プロトタイプセッター
 
@@ -301,6 +322,7 @@ const obj7 =  {
 ## 関連情報
 
 - [メンバー演算子](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`get`](/ja/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/ja/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set)
 - [メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

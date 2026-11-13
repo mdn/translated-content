@@ -1,123 +1,123 @@
 ---
-title: CSSStyleSheet.insertRule()
+title: CSSStyleSheet：insertRule() 方法
 slug: Web/API/CSSStyleSheet/insertRule
+l10n:
+  sourceCommit: d64189632da72d059dcc110f4d0b0684ef45ba16
 ---
 
 {{APIRef("CSSOM")}}
 
-**CSSStyleSheet.insertRule()** 方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些[限制](#Restrictions).
+**`CSSStyleSheet.insertRule()`** 方法會將新的 [CSS 規則](/zh-TW/docs/Web/API/CSSRule)插入到[目前的樣式表](/zh-TW/docs/Web/API/CSSStyleSheet)中。
 
-更明確的說，雖然 **insertRule()** 只是一個 {{domxref("CSSStyleSheet")}} 的方法， 他實際上插入這份規則到 {{domxref("CSSStyleSheet")}}._cssRules_, 在 {{domxref("CSSRuleList")}} 之中。
+> [!NOTE]
+> 雖然 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 專屬的方法，但實際上它是將規則插入至 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中——其內部的 {{domxref("CSSRuleList")}}。
 
-這份規則，必須包含的內容，取決於它的類型： 對於規則集 (rule-sets)，規則同時指定了選擇器和样式聲明。 對於規則 (at-rules)，規則同時指定 at 標識符（ at-identifier ）和規則內容。
-
-## Syntax
+## 語法
 
 ```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```
 
-### Parameters
+### 參數
 
 - `rule`
-  - : 一個 {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（[selector](/zh-TW/docs/Web/Guide/CSS/Getting_Started/Selectors)）和样式聲明，或 at 標識符和規則內容。
+  - : 包含要插入規則的字串。插入規則的內容需視其類型而定：
+    - **針對[規則集](/zh-TW/docs/Web/CSS/Guides/Syntax/Introduction#css_語句)**，需包含[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)及樣式宣告。
+    - **針對 [at-規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)**，需包含 at-識別符與規則內容。
+
 - `index` {{optional_inline}}
-  - : 無符號整數，代表在 `stylesheet.cssRules.length` 中插入的位置，其中 index-0 是第一個規則，而 index-max 就是最後一個規則，並且與 CSSStyleSheet 的長度相同。cssRules 在舊的實現中是必需的。查詢「瀏覽器兼容」取得詳細信息。 默認值為 0。
+  - : 一個小於等於 `stylesheet.cssRules.length` 的正整數，表示新插入規則在 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。預設值為 `0`。（在舊版實作中此參數為必要。參見[瀏覽器相容性](#瀏覽器相容性)。）
 
-### Return value
+### 回傳值
 
-The index within the style sheet's rule-list of the newly inserted rule.
+新插入規則在樣式表規則清單中的索引值。
 
-### 限制
+### 例外
 
-CSS 樣式表規則列表，有一些直覺的、和不是那麼直覺的[限制](https://drafts.csswg.org/cssom/#insert-a-css-rule) ，影響著規則的插入方式和位置。
-違反這些可能會導致 DOM 異常 ({{domxref("DOMException")}}) 引發錯誤。
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : 若 `index` 大於 `{{domxref("CSSRuleList", "", "", "1")}}.length`，則會拋出此錯誤。
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : 若因某些 CSS 限制而無法在索引 `0` 插入 `rule`，則會拋出此錯誤。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 若 `rule` 參數中包含超過一個規則，則會拋出此錯誤。
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : 若嘗試在樣式規則之後插入 {{cssxref("@import")}} at-規則，則會拋出此錯誤。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : 若 `rule` 為 {{cssxref("@namespace")}}，且規則清單中已有不只 `@import` 或 `@namespace` 的 at-規則，則會拋出此錯誤。
 
-- 如果 index > 樣式表中規則數量 (`CSSRuleList.length`)，他會中止，顯示 IndexSizeError (索引大小錯誤)。
-- 如果 rule 無法在索引 0 插入，因為一些 CSS 因素的限制，他會中止，顯示 HierarchyRequestError (層次結構請求錯誤)。
-- 如果規則參數中給出多個規則，他會中止，顯示 SyntaxError (語法錯誤)。
-- 如果嘗試在樣式規則之後插入 `@import at-rule`，他會中止，顯示 HierarchyRequestError (層次結構請求錯誤)。
-- 如果規則是 `@namespace at-rule`，且列表不只有 `@import at-rules` 和 / 或 `@namespace at-rules`他會中止，顯示 InvalidStateError (狀態錯誤無效)。
+## 範例
 
-## Examples
+### 插入新規則
 
-### Example 1
+以下程式碼片段會將一個新規則插入樣式表的最上方。
 
 ```js
-// push a new rule onto the top of my stylesheet
 myStyle.insertRule("#blanc { color: white }", 0);
 ```
 
-### Example 2
+### 新增樣式表規則的函式
 
 ```js
 /**
- * Add a stylesheet rule to the document (may be better practice, however,
- * to dynamically change classes, so style information can be kept in
- * genuine stylesheets (and avoid adding extra elements to the DOM))
- * Note that an array is needed for declarations and rules since ECMAScript does
- * not afford a predictable object iteration order and since CSS is
- * order-dependent (i.e., it is cascading); those without need of
- * cascading rules could build a more accessor-friendly object-based API.
- * @param {Array} rules Accepts an array of JSON-encoded declarations
+ * 將樣式表規則加入文件中（建議最佳做法是動態變更 class，
+ * 如此一來樣式資訊可以保留在正規樣式表中，避免將額外元素加入 DOM）。
+ * 注意由於 ECMAScript 不保證物件的屬性順序可預期，
+ * 且 CSS 對順序有依賴，因此此處使用陣列來表示宣告與規則。
+ * @param {Array} rules 接受一個以 JSON 編碼的宣告陣列
  * @example
 addStylesheetRules([
-  ['h2', // Also accepts a second argument as an array of arrays instead
+  ['h2', // 第二個參數也可以是由多個陣列組成的陣列
     ['color', 'red'],
-    ['background-color', 'green', true] // 'true' for !important rules
+    ['background-color', 'green', true] // 第三個參數設為 true 表示使用 !important
   ],
   ['.myClass',
     ['background-color', 'yellow']
   ]
 ]);
- */
+*/
 function addStylesheetRules(rules) {
-  var styleEl = document.createElement("style"),
-    styleSheet;
+  const styleEl = document.createElement("style");
 
-  // Append style element to head
+  // 將 <style> 元素加到 <head>
   document.head.appendChild(styleEl);
 
-  // Grab style sheet
-  styleSheet = styleEl.sheet;
+  // 取得樣式表
+  const styleSheet = styleEl.sheet;
 
-  for (var i = 0, rl = rules.length; i < rl; i++) {
-    var j = 1,
-      rule = rules[i],
-      selector = rules[i][0],
+  for (let rule of rules) {
+    let i = 1,
+      selector = rule[0],
       propStr = "";
-    // If the second argument of a rule is an array of arrays, correct our variables.
-    if (Object.prototype.toString.call(rule[1][0]) === "[object Array]") {
+    // 若第二個參數是由多個陣列組成的陣列，則重新設定變數。
+    if (Array.isArray(rule[1][0])) {
       rule = rule[1];
-      j = 0;
+      i = 0;
     }
 
-    for (var pl = rule.length; j < pl; j++) {
-      var prop = rule[j];
-      propStr +=
-        prop[0] + ":" + prop[1] + (prop[2] ? " !important" : "") + ";\n";
+    for (; i < rule.length; i++) {
+      const prop = rule[i];
+      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
     }
 
-    // Insert CSS Rule
+    // 插入 CSS 規則
     styleSheet.insertRule(
-      selector + "{" + propStr + "}",
+      `${selector}{${propStr}}`,
       styleSheet.cssRules.length,
     );
   }
 }
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)
+- [可構造樣式表](https://web.dev/articles/constructable-stylesheets)（web.dev）

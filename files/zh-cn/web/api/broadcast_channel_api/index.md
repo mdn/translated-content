@@ -10,7 +10,7 @@ l10n:
 **Broadcast Channel API** 允许{{glossary("browsing context", "浏览上下文")}}（即 _window_、_tab_、_frame_ 或 _iframe_）与同{{glossary("origin", "源")}}的 worker 之间进行基本通信。
 
 > [!NOTE]
-> 确切地说，允许使用相同的[存储分区](/zh-CN/docs/Web/Privacy/State_Partitioning)的浏览上下文之间进行通信。首先根据顶级网站对存储空间进行分区，例如，如果你在 `a.com` 处打开了一个页面，其中嵌入了 `b.com` 的 iframe，而另一个页面打开的页面是 `b.com`，则 iframe 无法与第二个页面通信，尽管它们在技术上是同源的。但是，如果第一个页面也位于 `b.com` 上，则 iframe 可以与第二个页面通信。
+> 确切地说，允许使用相同的[存储分区](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning)的浏览上下文之间进行通信。首先根据顶级网站对存储空间进行分区，例如，如果你在 `a.com` 处打开了一个页面，其中嵌入了 `b.com` 的 iframe，而另一个页面打开的页面是 `b.com`，则 iframe 无法与第二个页面通信，尽管它们在技术上是同源的。但是，如果第一个页面也位于 `b.com` 上，则 iframe 可以与第二个页面通信。
 
 通过创建 {{domxref("BroadcastChannel")}} 对象，你可以接收发布到该对象的任何消息。你不必维护对要与之通信的框架或 worker 的引用：他们可以通过构建具有相同名称的 {{domxref("BroadcastChannel")}} 来“订阅”特定频道，并在它们之间进行双向通信。
 

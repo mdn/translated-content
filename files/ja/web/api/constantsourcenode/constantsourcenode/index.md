@@ -21,9 +21,7 @@ new ConstantSourceNode(context, options)
 - `context`
   - : ノードを関連付けたい音声コンテキストを表す {{domxref("AudioContext")}} です。
 - `options`
-
   - : `ConstantSourceOptions` 辞書オブジェクトで、 `ConstantSourceNode` に持たせたいプロパティを定義します。
-
     - `offset`
       - : 読み取り専用の {{domxref("AudioParam")}} で、ソースが生成する定数値を指定します。既定では 1.0 です。通常は 1.0 ですが、 `Infinity` から `+Infinity` の範囲であればどのような値でも指定できます。
 

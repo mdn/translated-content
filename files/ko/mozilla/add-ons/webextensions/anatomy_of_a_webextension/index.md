@@ -13,22 +13,22 @@ manifest.json 파일은 모든 확장앱이 가져야하는 유일한 파일입�
 
 또한 확장앱에 포함될 다른 파일들(하단 목록)을 가리킵니다.
 
-- [Background pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): (브라우저 창의 수명과 독립적으로) 오랜 시간 실행되는 로직 구현.
+- [Background pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts): (브라우저 창의 수명과 독립적으로) 오랜 시간 실행되는 로직 구현.
 - 확장앱의 아이콘 및 기타 버튼들.
-- [사이드바, 팝업, 옵션 페이지](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
-- [컨텐츠 스크립트](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 웹페이지에 주입할 JavaScript 파일
+- [사이드바, 팝업, 옵션 페이지](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
+- [컨텐츠 스크립트](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts): 웹페이지에 주입할 JavaScript 파일
 
 ![](webextension-anatomy.png)
 
 세부 내용: [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 참조.
 
-manifest에 참조 된 항목 외에도, [Extension pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages)와 해당 페이지의 리소스가 확장앱 번들에 포함될 수 있습니다.
+manifest에 참조 된 항목 외에도, [Extension pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#extension_pages)와 해당 페이지의 리소스가 확장앱 번들에 포함될 수 있습니다.
 
 ## Background scripts
 
 확장앱은 종종 특정 웹 페이지나 브라우저 창의 수명과 독립적으로 장기간 상태를 유지하거나 작업을 수행해야 합니다. 그때 필요한 것이 백그라운드 스크립트입니다.
 
-백그라운드 스크립트는 확장앱이 로드 되자마자 로드되며 확장앱이 다시 비활성화 또는 제거될 때까지 로드된 상태를 유지합니다. 적절한 [권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions)을 요청했다면 이 스크립트에서 [WebExtension APIs](/en-US/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
+백그라운드 스크립트는 확장앱이 로드 되자마자 로드되며 확장앱이 다시 비활성화 또는 제거될 때까지 로드된 상태를 유지합니다. 적절한 [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)을 요청했다면 이 스크립트에서 [WebExtension APIs](/ko/docs/Mozilla/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
 
 ### 백그라운드 스크립트 정의
 
@@ -64,7 +64,7 @@ background page를 제공할 필요는 없습니다. 백그라운드 스크립�
 
 #### WebExtension APIs
 
-백그라운드 스크립트는 선언된 [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 내의 모든 [WebExtension APIs](/en-US/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
+백그라운드 스크립트는 선언된 [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 내의 모든 [WebExtension APIs](/ko/docs/Mozilla/Add-ons/WebExtensions/API)를 사용할 수 있습니다.
 
 #### Cross-origin access
 
@@ -72,7 +72,7 @@ background page를 제공할 필요는 없습니다. 백그라운드 스크립�
 
 #### Web content
 
-백그라운드 스크립트는 웹 페이지에 직접 엑세스하지 못합니다. 그러나 웹페이지에 [컨텐츠 스크립트](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)를 삽입할 수 있으며 [메시지 전달 API를 통해 컨텐츠 스크립트와 통신할 수 있습니다](/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
+백그라운드 스크립트는 웹 페이지에 직접 엑세스하지 못합니다. 그러나 웹페이지에 [컨텐츠 스크립트](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)를 삽입할 수 있으며 [메시지 전달 API를 통해 컨텐츠 스크립트와 통신할 수 있습니다](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
 #### Content security policy
 
@@ -83,7 +83,7 @@ background page를 제공할 필요는 없습니다. 백그라운드 스크립�
 확장앱은 HTML를 이용하여 다양한 UI를 포함할 수 있습니다.
 
 - [사이드바](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)는 브라우저 창의 왼쪽, 웹 페이지 옆에 표시되는 창입니다.
-- [팝업](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)은 사용자가 [툴바 버튼](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) 이나 [주소창 버튼](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)를 클릭 할 때 표시되는 다이얼로그입니다
+- [팝업](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)은 사용자가 [툴바 버튼](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) 이나 [주소창 버튼](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)를 클릭 할 때 표시되는 다이얼로그입니다
 - [옵션 페이지](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)는 브라우저의 애드온 매니저에서 확장앱의 환경 설정에 접근할 때 표시 되는 페이지입니다.
 
 이러한 각 구성 요소에 대해 HTML 파일을 만들고 [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json)의 특정 속성에 지정합니다. 이 HTML 파일은 일반 웹 페이지와 마찬가지로 CSS 및 JavaScript 파일이 포함될 수 있습니다.

@@ -3,11 +3,23 @@ title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
 
-{{JSRef}}
-
 **`setHours()`** 方法根据本地时间为一个日期对象设置小时数，返回从 1970-01-01 00:00:00 UTC 到更新后的 {{jsxref("Global_Objects/Date", "日期")}} 对象实例所表示时间的毫秒数。
 
-{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+event.setHours(20);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+```
 
 ## 语法
 

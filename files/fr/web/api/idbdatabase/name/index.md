@@ -5,7 +5,7 @@ slug: Web/API/IDBDatabase/name
 
 {{APIRef("IndexedDB")}}
 
-La propriété **`name`** de l'interface `IDBDatabase` est une chaîne de caractères, sous la forme d'un objet {{domxref("DOMString")}}, contenant le nom de la base de données connectée.
+La propriété **`name`** de l'interface `IDBDatabase` est une chaîne de caractères, sous la forme d'un objet {{jsxref("String")}}, contenant le nom de la base de données connectée.
 
 {{AvailableInWorkers}}
 
@@ -17,7 +17,7 @@ db.name;
 
 ### Valeur
 
-Une chaîne de caractères {{domxref("DOMString")}} contenant le nom de la base de données connectée.
+Une chaîne de caractères {{jsxref("String")}} contenant le nom de la base de données connectée.
 
 ## Exemple
 
@@ -60,7 +60,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

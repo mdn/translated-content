@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaMultiLine`** は {{domxref("Element")}} インターフェイスのプロパティで、テキストボックスが複数行の入力を受け入れるか単一の行だけを受け入れるかを示す [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性の値を反映します。
+**`ariaMultiLine`** は {{domxref("Element")}} インターフェイスのプロパティで、テキストボックスが複数行の入力を受け入れるか単一の行だけを受け入れるかを示す [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性の値を反映します。
 
 > [!NOTE]
 > 可能であれば、HTMLの {{htmlelement("input")}} 要素で `type="text"` を使用するか、{{htmlelement("textarea")}} を使用してください。これらは意味づけが組み込まれており、ARIA 属性を必要としないからです。
@@ -54,4 +54,4 @@ console.log(el.ariaMultiLine); // "false"
 
 ## 関連情報
 
-- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

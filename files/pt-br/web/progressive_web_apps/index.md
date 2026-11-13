@@ -65,7 +65,7 @@ Documentação de referência para as tecnologias _web_ que você vai usar para 
 
 ### Web app manifest
 
-- [Web app manifest](/pt-BR/docs/Web/Manifest)
+- [Web app manifest](/pt-BR/docs/Web/Progressive_web_apps/Manifest)
   - : Desenvolvedores podem usar os "membros" do _web app manifest_ ["manifesto da aplicação web", tradução própria] para descrever uma PWA, personalizar sua aparência e integrá-la mais profundamente ao sistema operacional.
 
 ### APIs de _Service Worker_

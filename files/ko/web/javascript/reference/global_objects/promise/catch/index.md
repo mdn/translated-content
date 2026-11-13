@@ -9,7 +9,18 @@ l10n:
 
 **`catch()`** 메서드는 {{jsxref("Promise")}} 인스턴스의 메서드로, 프로미스가 거부될 때 호출될 함수를 예약합니다. 이 메서드는 즉시 다른 {{jsxref("Promise")}} 객체를 반환하여 다른 프로미스 메서드들을 [체이닝](/ko/docs/Web/JavaScript/Guide/Using_promises#chaining) 할 수 있게 합니다. 이는 {{jsxref("Promise/then", "then(undefined, onRejected)")}}의 단축 표현입니다.
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## 구문
 

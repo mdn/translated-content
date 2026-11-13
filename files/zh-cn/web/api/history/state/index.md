@@ -1,45 +1,45 @@
 ---
-title: state
+title: History：state 属性
+short-title: state
 slug: Web/API/History/state
+l10n:
+  sourceCommit: b8eb6acf2fa8e54254b1165e58adbe2378591da1
 ---
 
 {{APIRef("History API")}}
 
-返回在 history 栈顶的 `任意` 值的拷贝。通过这种方式可以查看 state 值，不必等待 [`popstate`](/zh-CN/docs/Web/Events/popstate)事件发生后再查看。
+{{DOMxRef("History")}} 接口的 **`state`** 只读属性表示历史记录堆栈顶部的状态值。通过该属性，可以在无需等待 {{domxref("Window/popstate_event", "popstate")}} 事件的情况下查看当前状态。
 
-## 语法
+## 值
 
-```js
-let currentState = history.state;
-```
+历史记录堆栈顶部的状态。在调用 {{domxref("History.pushState","pushState()")}} 或 {{domxref("History.replaceState","replaceState()")}} 方法之前，该值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-如果不进行下面两种类型的调用，state 的值将会是 null
+## 示例
 
-{{domxref("History.pushState","pushState()")}} or {{domxref("History.replaceState","replaceState()")}}.
-
-## 例子
-
-下面 log 例句输出 history.state 的值，首先是在没有执行 {{domxref("History.pushState","pushState()")}} 语句进而将值 push 到 history 之前的 log。下面一行 log 语句再次输出 state 值，此时 history.state 已经有值。可以在脚本文件中执行下面语句，或者在控制台直接执行。
+下面的代码在调用 {{domxref("History.pushState","pushState()")}} 方法向历史记录中推入一个值之前，先输出 `history.state` 的值。下一行再次将其输出到控制台，可以看到此时 `history.state` 已具有一个值。
 
 ```js
-// 值为 null 因为我们还没有修改 history 栈
-console.log(`History.state before pushState: ${history.state}`);
+// 应该为 null，因为我们尚未修改历史记录堆栈
+console.log("调用 pushState 前的 History.state：", history.state);
 
-// 现在 push 一些数据到栈里
-history.replaceState({ name: "Example" }, "pushState example", "page3.html");
+// 现在向堆栈中推入一个新状态
+history.pushState({ name: "Example" }, "pushState 示例", "page3.html");
 
-// 现在 state 已经有值了
-console.log(`History.state after pushState: ${history.state}`);
+// 此时 state 已有值
+console.log("调用 pushState 后的 History.state：", history.state);
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Working with the History API](/zh-CN/docs/Web/API/History_API/Working_with_the_History_API)
+- [使用历史记录 API](/zh-CN/docs/Web/API/History_API/Working_with_the_History_API)
+- [`History.pushState()`](/zh-CN/docs/Web/API/History/pushState)
+- [`History.replaceState()`](/zh-CN/docs/Web/API/History/replaceState)
+- [`PopStateEvent.state`](/zh-CN/docs/Web/API/PopStateEvent/state)

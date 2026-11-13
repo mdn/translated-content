@@ -20,4 +20,4 @@ El rol de TCP es garantizar que los paquetes se entreguen de forma confiable y s
 
 ## Vea también
 
-- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Overview)
+- [Generalidades del protocolo HTTP](/es/docs/Web/HTTP/Guides/Overview)

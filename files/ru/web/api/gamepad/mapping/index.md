@@ -24,7 +24,7 @@ console.log(gp.mapping);
 
 ## Значение
 
-A {{domxref("string")}}.
+A {{jsxref("String")}}.
 
 ## Спецификации
 
@@ -36,4 +36,4 @@ A {{domxref("string")}}.
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

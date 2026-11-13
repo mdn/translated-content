@@ -12,7 +12,22 @@ slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 초기화는 현재 클래스의 선언 컨텍스트에서 프라이빗 상태에 대한 특별한 권한으로 수행됩니다.
 이는 정적 블록을 사용하여 인스턴스 프라이빗 필드가 있는 클래스와 같은 범위에서 선언된 다른 클래스 또는 함수 간에 정보를 공유할 수도 있음을 의미합니다. (C++의 "friend" 클래스와 유사)
 
-{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
+{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+
+```js interactive-example
+class ClassWithStaticInitializationBlock {
+  static staticProperty1 = "Property 1";
+  static staticProperty2;
+  static {
+    this.staticProperty2 = "Property 2";
+  }
+}
+
+console.log(ClassWithStaticInitializationBlock.staticProperty1);
+// Expected output: "Property 1"
+console.log(ClassWithStaticInitializationBlock.staticProperty2);
+// Expected output: "Property 2"
+```
 
 ## 구문
 

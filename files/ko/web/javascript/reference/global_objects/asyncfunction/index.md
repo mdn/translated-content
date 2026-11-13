@@ -33,7 +33,8 @@ const AsyncFunction = async function () {}.constructor;
 - `AsyncFunction.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"AsyncFunction"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
 
-> **참고:** `AsyncFunction` 인스턴스는 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 가지지 않습ㄴ디ㅏ.
+> [!NOTE]
+> `AsyncFunction` 인스턴스는 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성을 가지지 않습ㄴ디ㅏ.
 
 ## 인스턴스 메서드
 

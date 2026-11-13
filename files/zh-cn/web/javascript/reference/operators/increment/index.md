@@ -3,11 +3,23 @@ title: 自增（++）
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
 
-{{jsSidebar("Operators")}}
-
 **自增**（**`++`**）运算符对其操作数进行自增（加一），并根据运算符的位置返回自增之前或之后的值。
 
-{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
 
 ## 语法
 

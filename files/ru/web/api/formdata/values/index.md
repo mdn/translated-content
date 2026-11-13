@@ -7,7 +7,7 @@ slug: Web/API/FormData/values
 
 {{APIRef("XMLHttpRequest API")}}
 
-The **`FormData.values()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем значениям в этом объекте. Значения - это {{domxref("USVString")}} или {{domxref("Blob")}} объекты.
+The **`FormData.values()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем значениям в этом объекте. Значения - это {{jsxref("String")}} или {{domxref("Blob")}} объекты.
 
 ## Синтаксис
 
@@ -51,6 +51,6 @@ value2
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Использование XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Использование FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Использование FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

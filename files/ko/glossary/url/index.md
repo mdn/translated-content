@@ -15,6 +15,6 @@ URL은 파일 전송({{glossary("FTP")}}), 이메일({{Glossary("SMTP")}}) 등 �
 
 ## 같이 보기
 
-- [URL과 URL 구조에 대한 이해](/ko/docs/Learn/Common_questions/What_is_a_URL)
+- [URL과 URL 구조에 대한 이해](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - URL 문법은 [URL Living Standard](https://url.spec.whatwg.org/)에 정의되어 있습니다.
 - 위키백과의 [URL](https://en.wikipedia.org/wiki/URL)

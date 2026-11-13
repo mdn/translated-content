@@ -1,11 +1,11 @@
 ---
-title: Java による WebSocket サーバーの記述
+title: Java で WebSocket サーバーを書く
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。
 
@@ -128,7 +128,6 @@ if (get.find()) {
 
   FIN: メッセージをフレームで送ることができますが、単純化します。
   Opcode _0x1_ はテキストであることを意味します。 [Opcode の完全なリスト](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
-
   - 134:
 
   2 番目のバイトから 128 を引いた値が 0 〜 125 の場合、これはメッセージの長さです。 126 の場合は、次の 2 バイト (16 ビット符号なし整数)、127 の場合、次の 8 バイト (64 ビット符号なし整数、最上位ビットは 0 でなければならない) が長さです。
@@ -166,4 +165,4 @@ Java の例です。
 
 ## 関連情報
 
-- [WebSocket サーバーの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [WebSocket サーバーを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

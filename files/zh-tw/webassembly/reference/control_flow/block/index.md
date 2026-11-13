@@ -9,7 +9,56 @@ slug: WebAssembly/Reference/Control_flow/block
 
 **`loop`** 和 `block` 相似卻相反，在 `loop` 中，在一輪循環結束或是使用 `br` 跳出時，程式會回到循環的開頭；而 `block` 則是會結束該區塊標籤的執行，跳到下一段程式碼。
 
-{{EmbedInteractiveExample("pages/wat/block.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: block", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  ;; import the browser console object, you'll need to pass this in from JavaScript
+  (import "console" "log" (func $log (param i32)))
+
+  ;; create a function that takes in a number as a param,
+  ;; and logs that number if it's not equal to 100.
+  (func (export "log_if_not_100") (param $num i32)
+    (block $my_block
+
+      ;; $num is equal to 100
+      local.get $num
+      i32.const 100
+      i32.eq
+
+      (if
+        (then
+
+          ;; branch to the end of the block
+          br $my_block
+
+        )
+      )
+
+      ;; not reachable when $num is 100
+      local.get $num
+      call $log
+
+    )
+  )
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
+  (result) => {
+    const log_if_not_100 = result.instance.exports.log_if_not_100;
+
+    log_if_not_100(99);
+    // Expected output: 99
+    log_if_not_100(100);
+    // Should not log anything
+    log_if_not_100(101);
+    // Expected output: 101
+  },
+);
+```
 
 ## 語法
 

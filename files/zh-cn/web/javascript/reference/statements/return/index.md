@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
-
 **`return`** 语句用于终止函数执行，并指定要返回给调用函数的值。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 语法
 
@@ -93,7 +106,7 @@ counter();
 
 ### 返回一个函数
 
-请参阅有关[闭包](/zh-CN/docs/Web/JavaScript/Closures)的文章。
+请参阅有关[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)的文章。
 
 ```js
 function magic() {
@@ -117,4 +130,4 @@ answer(1337); // 56154
 ## 参见
 
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [闭包](/zh-CN/docs/Web/JavaScript/Closures)
+- [闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)

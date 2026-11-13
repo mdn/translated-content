@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.DisplayNames()`** 생성자는 {{jsxref("Intl.DisplayNames")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## 구문
 
@@ -17,7 +30,8 @@ l10n:
 new Intl.DisplayNames(locales, options)
 ```
 
-> **참고:** `Intl.DisplayNames()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> [!NOTE]
+> `Intl.DisplayNames()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
 ### 매개변수
 

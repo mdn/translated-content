@@ -1,17 +1,38 @@
 ---
 title: RegExp.prototype.test()
+short-title: test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`test()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `true` を、それ以外の場合は `false` を返します。
 
 JavaScript の {{jsxref("RegExp")}} オブジェクトは {{jsxref("RegExp/global", "global")}} または {{jsxref("RegExp/sticky", "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxref("RegExp/lastIndex", "lastIndex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// 予想される結果: true
+
+console.log(globalRegex.lastIndex);
+// 予想される結果: 0
+
+console.log(globalRegex.test(str));
+// 予想される結果: true
+
+console.log(globalRegex.lastIndex);
+// 予想される結果: 9
+
+console.log(globalRegex.test(str));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -22,7 +43,7 @@ test(str)
 ### 引数
 
 - `str`
-  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
+  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
 
 ### 返値
 
@@ -40,7 +61,7 @@ test(str)
 
 ### test() の使用
 
-"`hello`" が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
+`"hello"` が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
 
 ```js
 const str = "hello world!";
@@ -53,8 +74,8 @@ console.log(result); // true
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 
@@ -64,7 +85,8 @@ function testInput(re, str) {
 
 その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
 
-> **メモ:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
+> [!NOTE]
+> `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
 
 `test()` が `false` を返した場合、正規表現の `lastIndex` プロパティを呼び出すと `0` にリセットされます。
 

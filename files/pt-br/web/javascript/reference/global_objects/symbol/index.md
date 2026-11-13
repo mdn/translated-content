@@ -40,7 +40,7 @@ O código acima cria três símbolos novos. Note que a função **_Symbol("foo")
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-A sintaxe a seguir com o operador {{jsxref("Operators/new", "new")}} vai resultar em um {{jsxref("TypeError")}}:
+A sintaxe a seguir com o operador {{jsxref("new")}} vai resultar em um {{jsxref("TypeError")}}:
 
 ```js
 var sym = new Symbol(); // TypeError
@@ -69,7 +69,7 @@ O método {{jsxref("Object.getOwnPropertySymbols()")}} retorna um array de símb
 
 - `Symbol.length`
   - : Propriedade de tamanho cujo valor é 1.
-- {{jsxref("Symbol.prototype")}}
+- {{jsxref("Symbol")}}
   - : Representa o protótipo do `Symbol` construtor.
 
 ### Símbolos conhecidos
@@ -77,7 +77,7 @@ O método {{jsxref("Object.getOwnPropertySymbols()")}} retorna um array de símb
 Em adição para seus próprios símbolos, JavaScript possui alguns símbolos built-in que representa os comportamentos internos da linguagem que não foram revelados para os desenvolvedores no ECMAScript 5 e anterior. Esses símbolos podem ser acessados usando as seguintes propriedades:
 
 - Symbol.hasInstance
-  - : Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instância de um objeto. Usado por {{jsxref("Operators/instanceof", "instanceof")}}.
+  - : Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instância de um objeto. Usado por {{jsxref("instanceof")}}.
 - Symbol.isConcatSpreadable
   - : Especificado como @@isConcatSpreadable. Um valor Booleano indicando se um objeto deve ser adicionado como elemento de uma array. Usado por {{jsxref("Array.prototype.concat()")}}.
 - Symbol.isRegExp
@@ -100,15 +100,15 @@ Em adição para seus próprios símbolos, JavaScript possui alguns símbolos bu
 
 ## `Symbol` protótipo
 
-Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
+Todos os símbolos herdados de {{jsxref("Symbol")}}.
 
 ### Propriedades
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties') -->
 
 ### Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods') -->
 
 ## Exemplos
 
@@ -130,7 +130,7 @@ Algumas anotações quando trabalhando com conversão de tipo de símbolos.
   (e.g. `+sym` or `sym | 0`).
 - Quando usando operador de igualdade, `Object(sym) == sym` retorna `true`.
 - `Symbol("foo") + "bar"` lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciosamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.
-- A ["safer" `String(sym)` conversion](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma `new String(sym)` será lançada.
+- A ["safer" `String(sym)` conversion](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma `new String(sym)` será lançada.
 
 ### Símbolos e `for...in` iteração
 
@@ -181,6 +181,6 @@ obj[Object(sym)]; // still 1
 
 ## Veja também
 
-- [Glossary: Symbol data type](/pt-BR/docs/Glossary/Symbol)
+- [Glossary: Symbol data type](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)

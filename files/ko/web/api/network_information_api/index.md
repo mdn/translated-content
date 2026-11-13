@@ -36,5 +36,5 @@ updateConnectionStatus();
 
 ## 같이 보기
 
-- [Online and offline events](/en/Online_and_offline_events)
+- [Online and offline events](/en-US/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

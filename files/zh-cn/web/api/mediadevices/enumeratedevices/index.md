@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/enumerateDevices
 
 {{APIRef("WebRTC")}}
 
-{{domxref("MediaDevices")}} 的方法 **`enumerateDevices()`** 请求一个可用的媒体输入和输出设备的列表，例如麦克风，摄像机，耳机设备等。返回的 {{domxref("Promise")}} 完成时，会带有一个描述设备的 {{domxref("MediaDeviceInfo")}} 的数组。
+{{domxref("MediaDevices")}} 的方法 **`enumerateDevices()`** 请求一个可用的媒体输入和输出设备的列表，例如麦克风，摄像机，耳机设备等。返回的 {{jsxref("Promise")}} 完成时，会带有一个描述设备的 {{domxref("MediaDeviceInfo")}} 的数组。
 
 ## 语法
 
@@ -15,7 +15,7 @@ var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
 
 ### 返回值
 
-返回一个 {{ domxref("Promise") }} 。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。.
+返回一个 {{jsxref("Promise")}}。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。
 
 如果枚举失败，promise 也会被拒绝（rejected）。
 
@@ -72,6 +72,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ## See also
 
 - {{domxref("navigator.mediaDevices.getUserMedia()")}}
-- [WebRTC](/zh-CN/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/zh-CN/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia()` for taking photos rather than video.

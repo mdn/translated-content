@@ -12,7 +12,30 @@ l10n:
 
 **`finally()`** 메서드를 사용하면 {{jsxref("Promise/then", "then()")}} 와 {{jsxref("Promise/catch", "catch()")}} 처리기 속 코드 중복을 피할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## 문법
 
@@ -41,7 +64,8 @@ promiseInstance.finally(onFinally)
   - `Promise.resolve(2).then(() => 77, () => {})` 는 `77`로 이행됩니다. 이와는 다르게, `Promise.resolve(2).finally(() => 77)` 는 `2`로 이행됩니다.
   - 유사하게 `Promise.reject(3).then(() => {}, () => 88)` 는 `88`로 거부됩니다. 이와는 달리 `Promise.reject(3).finally(() => {})` 는 `3`로 거부됩니다.
 
-> **참고:** `finally` 콜백 내 예외 발생 또는 거부된 프로미스를 반환하는 경우에는 거부된 프로미스를 반환합니다. 예를 들어 `Promise.reject(3).finally(() => { throw 99; })` 와 `Promise.reject(3).finally(() => Promise.reject(99))` 는 모두 `99`로 거부된 프로미스를 반환합니다.
+> [!NOTE]
+> `finally` 콜백 내 예외 발생 또는 거부된 프로미스를 반환하는 경우에는 거부된 프로미스를 반환합니다. 예를 들어 `Promise.reject(3).finally(() => { throw 99; })` 와 `Promise.reject(3).finally(() => Promise.reject(99))` 는 모두 `99`로 거부된 프로미스를 반환합니다.
 
 {{jsxref("Promise/catch", "catch()")}}처럼 , `finally()`는 내부적으로 자신을 호출한 객체의 `then` 메소드를 호출합니다. `onFinally`가 함수가 아닌 경우, `then()`은 두 인자 모두 `onFinally`로 넘어가 호출되며, 즉 {{jsxref("Promise.prototype.then()")}}에게 유용한 처리기가 포함되지 않는다는 의미입니다. 그 외의 경우 then()은 내부적으로 생성된 두 개의 함수와 함께 호출되며, 다음과 비슷하게 동작합니다.
 

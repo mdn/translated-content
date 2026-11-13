@@ -3,11 +3,26 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
-{{JSRef}}
-
 **`Object.create()`** 静态方法以一个现有对象作为原型，创建一个新对象。
 
-{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## 语法
 
@@ -21,7 +36,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : 新创建对象的原型对象。
 - `propertiesObject` {{Optional_inline}}
-  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
+  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
 
 ### 返回值
 

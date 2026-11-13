@@ -2,14 +2,23 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 l10n:
-  sourceCommit: 2a71e92730e3cb0eef85991d04b10ef15531ab0c
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
-
-{{jsSidebar("Statements")}}
 
 **`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 语法
 
@@ -19,13 +28,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : 在循环开始前初始化的表达式（包含[赋值表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）或者变量声明。通常用于初始化计数器变量。该表达式可以选择使用 `var` 或 `let` 关键字声明新的变量，使用 `var` 声明的变量不是该循环的局部变量，而是与 `for` 循环处在同样的作用域中。用 `let` 声明的变量是语句的局部变量。
 
     该表达式的结果会被丢弃。
 
 - `condition` {{optional_inline}}
-
   - : 每次循环迭代之前要判定的表达式。如果该表达式的[判定结果为真](/zh-CN/docs/Glossary/Truthy)，`statement` 将被执行。如果[判定结果为假](/zh-CN/docs/Glossary/Falsy)，那么执行流程将退出循环，并转到 `for` 结构后面的第一条语句。
 
     这个条件测试是可选的。如果省略，该条件总是计算为真。
@@ -34,6 +41,13 @@ for (initialization; condition; afterthought)
   - : 每次循环迭代结束时执行的表达式。执行时机是在下一次判定 `condition` 之前。通常被用于更新或者递增计数器变量。
 - `statement`
   - : 只要条件的判定结果为真就会被执行的语句。你可以使用[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)来执行多个语句。如果没有任何语句要执行，请使用一个[空语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)（`;`）。
+
+## 描述
+
+就像其他循环语句，你可以在 `statement` 中使用[控制流程语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#控制流程)：
+
+- {{jsxref("Statements/break", "break")}} 停止 `statement` 的执行，并转到循环后的第一条语句。
+- {{jsxref("Statements/continue", "continue")}} 停止 `statement` 的执行，并重新执行 `afterthought`，然后是 `condition`。
 
 ## 示例
 
@@ -118,7 +132,7 @@ while (i <= 3) {
 
 ### 初始化块中的词法声明
 
-在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Closures)时。例如，对于以下代码：
+在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)时。例如，对于以下代码：
 
 ```js
 for (let i = 0; i < 3; i++) {
@@ -139,7 +153,7 @@ for (; i < 3; i++) {
 }
 ```
 
-它打印了 `3`、`3` 和 `3`，因为每个 `setTimeout` 创建了一个新的闭包，它引用了 `i` 变量，但是如果 `i` 不是循环体的局部变量，那么所有的闭包都会引用同一个变量，并且由于 [`setTimeout`](/zh-CN/docs/Web/API/setTimeout) 的异步性质，它可能在循环已经退出之后才被调用，导致所有队列里的回调函数的 `i` 值都被设置为 `3`。
+它打印了 `3`、`3` 和 `3`，因为每个 `setTimeout` 创建了一个新的闭包，它引用了 `i` 变量，但是如果 `i` 不是循环体的局部变量，那么所有的闭包都会引用同一个变量，并且由于 {{domxref("Window.setTimeout", "setTimeout()")}} 的异步性质，它可能在循环已经退出之后才被调用，导致所有队列里的回调函数的 `i` 值都被设置为 `3`。
 
 如果你使用 `var` 语句来初始化，那么变量声明将只作用于函数作用域，而不是词法作用域（即它不会局限于循环体）。
 
@@ -181,7 +195,7 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 `initialization` 内部的 `i` 变量与每次迭代中的 `i` 变量是不同的，包括第一次。因此，在这个例子中，`getI` 返回 0，即使在迭代中 `i` 的值已经递增了：
 
 ```js
-for (let i = 0, getI = () => i; i < 3; ) {
+for (let i = 0, getI = () => i; i < 3;) {
   i++;
   console.log(getI());
 }

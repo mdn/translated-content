@@ -1,334 +1,96 @@
 ---
 title: 文件物件模型 (DOM)
 slug: Web/API/Document_Object_Model
+l10n:
+  sourceCommit: df2a728b3b3911a396a4b47d363e4a335a5c8065
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-**文件物件模型（_Document Object Model, DOM_）**是 HTML、XML 和 SVG 文件的程式介面。它提供了一個文件（樹）的結構化表示法，並定義讓程式可以存取並改變文件架構、風格和內容的方法。DOM 提供了文件以擁有屬性與函式的節點與物件組成的結構化表示。節點也可以附加事件處理程序，一旦觸發事件就會執行處理程序。 本質上，它將網頁與腳本或程式語言連結在一起。
+**文件物件模型**（**DOM**）將文件的結構（例如代表網頁的 HTML）表示在記憶體中，以此連接網頁到腳本或程式設計語言。通常是指 JavaScript，儘管將 HTML、SVG 或 XML 文件模型化為物件並非 JavaScript 語言核心的一部分。
 
-雖然常常使用 JavaScript 來存取 DOM，但它本身並不是 JavaScript 語言的一部分，而且它也可以被其他語言存取（雖然不太常見就是了）。
+DOM 用邏輯樹來表示文件。樹的每個分支都終止於一個節點，每個節點都包含物件。DOM 方法允許以程式設計方式存取樹。藉由這些方法，你可以更改文件的結構、樣式或內容。
 
-這裡有一篇 DOM 的[介紹](/zh-TW/docs/DOM/DOM_Reference/Introduction)可供查閱。
+節點也可以附加事件處理器。事件觸發後，事件處理器便會執行。
 
 ## DOM 介面
 
-- {{domxref("Attr")}}
-- {{domxref("CharacterData")}}
-- {{domxref("ChildNode")}} {{experimental_inline}}
-- {{domxref("Comment")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("Document")}}
-- {{domxref("DocumentFragment")}}
-- {{domxref("DocumentType")}}
-- {{domxref("DOMError")}}
-- {{domxref("DOMException")}}
-- {{domxref("DOMImplementation")}}
-- {{domxref("DOMString")}}
-- {{domxref("DOMTimeStamp")}}
-- {{domxref("DOMSettableTokenList")}}
-- {{domxref("DOMStringList")}}
-- {{domxref("DOMTokenList")}}
-- {{domxref("Element")}}
-- {{domxref("Event")}}
-- {{domxref("EventTarget")}}
-- {{domxref("HTMLCollection")}}
-- {{domxref("MutationObserver")}}
-- {{domxref("MutationRecord")}}
-- {{domxref("Node")}}
-- {{domxref("NodeFilter")}}
-- {{domxref("NodeIterator")}}
-- {{domxref("NodeList")}}
-- {{domxref("ParentNode")}} {{experimental_inline}}
-- {{domxref("ProcessingInstruction")}}
-- {{domxref("Range")}}
-- {{domxref("Text")}}
-- {{domxref("TreeWalker")}}
-- {{domxref("URL")}}
-- {{domxref("Window")}}
-- {{domxref("Worker")}}
-- {{domxref("XMLDocument")}} {{experimental_inline}}
+- {{DOMxRef("AbortController")}}
+- {{DOMxRef("AbortSignal")}}
+- {{DOMxRef("AbstractRange")}}
+- {{DOMxRef("Attr")}}
+- {{DOMxRef("CDATASection")}}
+- {{DOMxRef("CharacterData")}}
+- {{DOMxRef("Comment")}}
+- {{DOMxRef("CustomEvent")}}
+- {{DOMxRef("Document")}}
+- {{DOMxRef("DocumentFragment")}}
+- {{DOMxRef("DocumentType")}}
+- {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
+- {{DOMxRef("DOMException")}}
+- {{DOMxRef("DOMImplementation")}}
+- {{DOMxRef("DOMParser")}}
+- {{DOMxRef("DOMPoint")}}
+- {{DOMxRef("DOMPointReadOnly")}}
+- {{DOMxRef("DOMRect")}}
+- {{DOMxRef("DOMTokenList")}}
+- {{DOMxRef("Element")}}
+- {{DOMxRef("Event")}}
+- {{DOMxRef("EventTarget")}}
+- {{DOMxRef("HTMLCollection")}}
+- {{DOMxRef("MutationObserver")}}
+- {{DOMxRef("MutationRecord")}}
+- {{DOMxRef("NamedNodeMap")}}
+- {{DOMxRef("Node")}}
+- {{DOMxRef("NodeIterator")}}
+- {{DOMxRef("NodeList")}}
+- {{DOMxRef("ProcessingInstruction")}}
+- {{DOMxRef("Range")}}
+- {{DOMxRef("StaticRange")}}
+- {{DOMxRef("Text")}}
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
+- {{DOMxRef("TimeRanges")}}
+- {{DOMxRef("TreeWalker")}}
+- {{DOMxRef("XMLDocument")}}
 
-## 棄用的 DOM 介面
+### 已過時的 DOM 介面
 
-文件物件模型正被大量的簡化。為了達成這個目的，下這些介面是在 DOM level 3 或更早的規範中就被刪掉了。由於不清楚是否會被再度納入，請姑且當他們已經被遺棄，並避免使用：
+文件物件模型已經被高度簡化。為了達到此目的，不同 DOM Level 3 或更早期的規範中的以下介面已被移除。它們不再對 Web 開發人員可用。
 
-- {{domxref("CDATASection")}}
-- {{domxref("DOMConfiguration")}}
-- {{domxref("DOMErrorHandler")}}
-- {{domxref("DOMImplementationList")}}
-- {{domxref("DOMImplementationRegistry")}}
-- {{domxref("DOMImplementationSource")}}
-- {{domxref("DOMLocator")}}
-- {{domxref("DOMObject")}}
-- {{domxref("DOMUserData")}}
-- {{domxref("Entity")}}
-- {{domxref("EntityReference")}}
-- {{domxref("NamedNodeMap")}}
-- {{domxref("NameList")}}
-- {{domxref("Notation")}}
-- {{domxref("TypeInfo")}}
-- {{domxref("UserDataHandler")}}
--
+- `DOMConfiguration`
+- `DOMErrorHandler`
+- `DOMImplementationList`
+- `DOMImplementationRegistry`
+- `DOMImplementationSource`
+- `DOMLocator`
+- `DOMObject`
+- `DOMSettableTokenList`
+- `DOMUserData`
+- `ElementTraversal`
+- `Entity`
+- `EntityReference`
+- `NameList`
+- `Notation`
+- `TypeInfo`
+- `UserDataHandler`
 
-## HTML 介面
+## HTML DOM
 
-一份包含 html 的文件會透過 {{domxref("HTMLDocument")}} 介面來描述。注意 HTML 規範也擴展了 {{domxref("Document")}} 介面。
+包含 HTML 的文件使用 {{DOMxRef("Document")}} 介面來描述，HTML 規範擴展了此介面以包含各種 HTML 特有的功能。特別是 {{domxref("Element")}} 介面被增強為 {{domxref("HTMLElement")}} 和各種子類別，每個子類別代表一個（或一族密切相關的）元素。
 
-`HTMLDocument` 物件也提供了瀏覽器功能的存取：分頁、透過 {{domxref("Window")}} 介面描繪頁面的視窗、與其相關的 {{domxref("window.style", "樣式")}} （通常是 CSS ）、與本文關聯的瀏覽器 {{domxref("window.history", "歷史")}}、以及一個文件內的 {{domxref("Selection", "選擇器")}}。
+HTML DOM API 提供了對各種瀏覽器功能的存取，例如分頁與視窗、CSS 樣式與樣式表、瀏覽器歷史記錄等。這些介面在 [HTML DOM API](/zh-TW/docs/Web/API/HTML_DOM_API) 文件中會進一步討論。
 
-### HTML 元素介面
+## SVG DOM
 
-- {{domxref("HTMLAnchorElement")}}
-- {{domxref("HTMLAppletElement")}}
-- {{domxref("HTMLAreaElement")}}
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLBaseElement")}}
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLBRElement")}}
-- {{domxref("HTMLButtonElement")}}
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("HTMLDataElement")}}
-- {{domxref("HTMLDataListElement")}}
-- {{domxref("HTMLDialogElement")}}
-- {{domxref("HTMLDirectoryElement")}}
-- {{domxref("HTMLDivElement")}}
-- {{domxref("HTMLDListElement")}}
-- {{domxref("HTMLElement")}}
-- {{domxref("HTMLEmbedElement")}}
-- {{domxref("HTMLFieldSetElement")}}
-- {{domxref("HTMLFontElement")}}
-- {{domxref("HTMLFormElement")}}
-- {{domxref("HTMLFrameElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("HTMLHeadElement")}}
-- {{domxref("HTMLHeadingElement")}}
-- {{domxref("HTMLHtmlElement")}}
-- {{domxref("HTMLHRElement")}}
-- {{domxref("HTMLIFrameElement")}}
-- {{domxref("HTMLImageElement")}}
-- {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLLegendElement")}}
-- {{domxref("HTMLLIElement")}}
-- {{domxref("HTMLLinkElement")}}
-- {{domxref("HTMLMapElement")}}
-- {{domxref("HTMLMediaElement")}}
-- {{domxref("HTMLMenuElement")}}
-- {{domxref("HTMLMetaElement")}}
-- {{domxref("HTMLMeterElement")}}
-- {{domxref("HTMLModElement")}}
-- {{domxref("HTMLObjectElement")}}
-- {{domxref("HTMLOListElement")}}
-- {{domxref("HTMLOptGroupElement")}}
-- {{domxref("HTMLOptionElement")}}
-- {{domxref("HTMLOutputElement")}}
-- {{domxref("HTMLParagraphElement")}}
-- {{domxref("HTMLParamElement")}}
-- {{domxref("HTMLPreElement")}}
-- {{domxref("HTMLProgressElement")}}
-- {{domxref("HTMLQuoteElement")}}
-- {{domxref("HTMLScriptElement")}}
-- {{domxref("HTMLSelectElement")}}
-- {{domxref("HTMLSourceElement")}}
-- {{domxref("HTMLSpanElement")}}
-- {{domxref("HTMLStyleElement")}}
-- {{domxref("HTMLTableElement")}}
-- {{domxref("HTMLTableCaptionElement")}}
-- {{domxref("HTMLTableCellElement")}}
-- {{domxref("HTMLTableDataCellElement")}}
-- {{domxref("HTMLTableHeaderCellElement")}}
-- {{domxref("HTMLTableColElement")}}
-- {{domxref("HTMLTableRowElement")}}
-- {{domxref("HTMLTableSectionElement")}}
-- {{domxref("HTMLTextAreaElement")}}
-- {{domxref("HTMLTimeElement")}}
-- {{domxref("HTMLTitleElement")}}
-- {{domxref("HTMLTrackElement")}}
-- {{domxref("HTMLUListElement")}}
-- {{domxref("HTMLUnknownElement")}}
-- {{domxref("HTMLVideoElement")}}
+類似地，包含 SVG 的文件也使用 {{DOMxRef("Document")}} 介面來描述，SVG 規範擴展了此介面以包含各種 SVG 特有的功能。特別是 {{domxref("Element")}} 介面被增強為 {{domxref("SVGElement")}} 和各種子類別，每個子類別代表一個或一族密切相關的元素。這些介面在 [SVG API](/zh-TW/docs/Web/API/SVG_API) 文件中會進一步討論。
 
-### 其他介面
+## 規範
 
-- {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
-- {{domxref("TextMetrics")}}
-- {{domxref("ImageData")}}
-- {{domxref("CanvasPixelArray")}}
-- {{domxref("NotifyAudioAvailableEvent")}}
-- {{domxref("HTMLAllCollection")}}
-- {{domxref("HTMLFormControlsCollection")}}
-- {{domxref("HTMLOptionsCollection")}}
-- {{domxref("HTMLPropertiesCollection")}}
-- {{domxref("DOMStringMap")}}
-- {{domxref("RadioNodeList")}}
-- {{domxref("MediaError")}}
+{{Specifications}}
 
-### 棄用的 HTML 介面
+## 參見
 
-- {{domxref("HTMLIsIndexElement")}}
-
-## SVG 介面
-
-### SVG 元素介面
-
-- {{domxref("SVGAElement")}}
-- {{domxref("SVGAltGlyphElement")}}
-- {{domxref("SVGAltGlyphDefElement")}}
-- {{domxref("SVGAltGlyphItemElement")}}
-- {{domxref("SVGAnimationElement")}}
-- {{domxref("SVGAnimateElement")}}
-- {{domxref("SVGAnimateColorElement")}}
-- {{domxref("SVGAnimateMotionElement")}}
-- {{domxref("SVGAnimateTransformElement")}}
-- {{domxref("SVGCircleElement")}}
-- {{domxref("SVGClipPathElement")}}
-- {{domxref("SVGColorProfileElement")}}
-- {{domxref("SVGComponentTransferFunctionElement")}}
-- {{domxref("SVGCursorElement")}}
-- {{domxref("SVGDefsElement")}}
-- {{domxref("SVGDescElement")}}
-- {{domxref("SVGElement")}}
-- {{domxref("SVGEllipseElement")}}
-- {{domxref("SVGFEBlendElement")}}
-- {{domxref("SVGFEColorMatrixElement")}}
-- {{domxref("SVGFEComponentTransferElement")}}
-- {{domxref("SVGFECompositeElement")}}
-- {{domxref("SVGFEConvolveMatrixElement")}}
-- {{domxref("SVGFEDiffuseLightingElement")}}
-- {{domxref("SVGFEDisplacementMapElement")}}
-- {{domxref("SVGFEDistantLightElement")}}
-- {{domxref("SVGFEFloodElement")}}
-- {{domxref("SVGFEGaussianBlurElement")}}
-- {{domxref("SVGFEImageElement")}}
-- {{domxref("SVGFEMergeElement")}}
-- {{domxref("SVGFEMergeNodeElement")}}
-- {{domxref("SVGFEMorphologyElement")}}
-- {{domxref("SVGFEOffsetElement")}}
-- {{domxref("SVGFEPointLightElement")}}
-- {{domxref("SVGFESpecularLightingElement")}}
-- {{domxref("SVGFESpotLightElement")}}
-- {{domxref("SVGFETileElement")}}
-- {{domxref("SVGFETurbulenceElement")}}
-- {{domxref("SVGFEFuncRElement")}}
-- {{domxref("SVGFEFuncGElement")}}
-- {{domxref("SVGFEFuncBElement")}}
-- {{domxref("SVGFEFuncAElement")}}
-- {{domxref("SVGFilterElement")}}
-- {{domxref("SVGFilterPrimitiveStandardAttributes")}}
-- {{domxref("SVGFontElement")}}
-- {{domxref("SVGFontFaceElement")}}
-- {{domxref("SVGFontFaceFormatElement")}}
-- {{domxref("SVGFontFaceNameElement")}}
-- {{domxref("SVGFontFaceSrcElement")}}
-- {{domxref("SVGFontFaceUriElement")}}
-- {{domxref("SVGForeignObjectElement")}}
-- {{domxref("SVGGElement")}}
-- {{domxref("SVGGlyphElement")}}
-- {{domxref("SVGGlyphRefElement")}}
-- {{domxref("SVGGradientElement")}}
-- {{domxref("SVGHKernElement")}}
-- {{domxref("SVGImageElement")}}
-- {{domxref("SVGLinearGradientElement")}}
-- {{domxref("SVGLineElement")}}
-- {{domxref("SVGMarkerElement")}}
-- {{domxref("SVGMaskElement")}}
-- {{domxref("SVGMetadataElement")}}
-- {{domxref("SVGMissingGlyphElement")}}
-- {{domxref("SVGMPathElement")}}
-- {{domxref("SVGPathElement")}}
-- {{domxref("SVGPatternElement")}}
-- {{domxref("SVGPolylineElement")}}
-- {{domxref("SVGPolygonElement")}}
-- {{domxref("SVGRadialGradientElement")}}
-- {{domxref("SVGRectElement")}}
-- {{domxref("SVGScriptElement")}}
-- {{domxref("SVGSetElement")}}
-- {{domxref("SVGStopElement")}}
-- {{domxref("SVGStyleElement")}}
-- {{domxref("SVGSVGElement")}}
-- {{domxref("SVGSwitchElement")}}
-- {{domxref("SVGSymbolElement")}}
-- {{domxref("SVGTextElement")}}
-- {{domxref("SVGTextPathElement")}}
-- {{domxref("SVGTitleElement")}}
-- {{domxref("SVGTRefElement")}}
-- {{domxref("SVGTSpanElement")}}
-- {{domxref("SVGUseElement")}}
-- {{domxref("SVGViewElement")}}
-- {{domxref("SVGVKernElement")}}
-
-### SVG 資料型別介面
-
-這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。
-
-> [!NOTE]
-> 從 Gecko 5.0 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
-
-#### 靜態類型
-
-- {{domxref("SVGAngle")}}
-- {{domxref("SVGColor")}}
-- {{domxref("SVGICCColor")}}
-- {{domxref("SVGElementInstance")}}
-- {{domxref("SVGElementInstanceList")}}
-- {{domxref("SVGLength")}}
-- {{domxref("SVGLengthList")}}
-- {{domxref("SVGMatrix")}}
-- {{domxref("SVGNumber")}}
-- {{domxref("SVGNumberList")}}
-- {{domxref("SVGPaint")}}
-- {{domxref("SVGPoint")}}
-- {{domxref("SVGPointList")}}
-- {{domxref("SVGPreserveAspectRatio")}}
-- {{domxref("SVGRect")}}
-- {{domxref("SVGStringList")}}
-- {{domxref("SVGTransform")}}
-- {{domxref("SVGTransformList")}}
-
-#### 動畫類型
-
-- {{domxref("SVGAnimatedAngle")}}
-- {{domxref("SVGAnimatedBoolean")}}
-- {{domxref("SVGAnimatedEnumeration")}}
-- {{domxref("SVGAnimatedInteger")}}
-- {{domxref("SVGAnimatedLength")}}
-- {{domxref("SVGAnimatedLengthList")}}
-- {{domxref("SVGAnimatedNumber")}}
-- {{domxref("SVGAnimatedNumberList")}}
-- {{domxref("SVGAnimatedPreserveAspectRatio")}}
-- {{domxref("SVGAnimatedRect")}}
-- {{domxref("SVGAnimatedString")}}
-- {{domxref("SVGAnimatedTransformList")}}
-
-### SMIL 相關介面
-
-- {{domxref("ElementTimeControl")}}
-- {{domxref("TimeEvent")}}
-
-### 其他的 SVG 介面
-
-- {{domxref("SVGAnimatedPathData")}}
-- {{domxref("SVGAnimatedPoints")}}
-- {{domxref("SVGColorProfileRule")}}
-- {{domxref("SVGCSSRule")}}
-- {{domxref("SVGExternalResourcesRequired")}}
-- {{domxref("SVGFitToViewBox")}}
-- {{domxref("SVGLangSpace")}}
-- {{domxref("SVGLocatable")}}
-- {{domxref("SVGRenderingIntent")}}
-- {{domxref("SVGStylable")}}
-- {{domxref("SVGTests")}}
-- {{domxref("SVGTextContentElement")}}
-- {{domxref("SVGTextPositioningElement")}}
-- {{domxref("SVGTransformable")}}
-- {{domxref("SVGUnitTypes")}}
-- {{domxref("SVGURIReference")}}
-- {{domxref("SVGViewSpec")}}
-- {{domxref("SVGZoomAndPan")}}
-
-## 相關連結
-
-- [DOM 範例](/zh-TW/docs/DOM/DOM_Reference/Examples)
+- [CSS 物件模型（CSSOM）](/zh-TW/docs/Web/API/CSS_Object_Model)
+- [HTML DOM API](/zh-TW/docs/Web/API/HTML_DOM_API)
+- [SVG API](/zh-TW/docs/Web/API/SVG_API)

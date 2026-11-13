@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/dragstart_event
 
 {{APIRef}}
 
-{{domxref("GlobalEventHandlers","global event handler")}} для события {{event("dragstart")}}.
+{{domxref("GlobalEventHandlers","global event handler")}} для события [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
 
 ## Синтаксис
 
@@ -20,7 +20,7 @@ var dragstartHandler = targetElement.ondragstart;
 
 ## Пример
 
-Этот пример демонстрирует использование {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} атрибута обработчика для установки обработчика событий элемента {{event("dragstart")}}.
+Этот пример демонстрирует использование атрибута {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} для установки обработчика событий [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
 
 ```js
 <!DOCTYPE html>
@@ -86,4 +86,4 @@ function dragover_handler(ev) {
 
 ## Смотрите также
 
-- {{event("dragstart")}}
+- [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event)

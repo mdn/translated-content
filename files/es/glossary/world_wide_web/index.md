@@ -23,10 +23,10 @@ Tan pronto como inventó la Web, Tim Berners-Lee fundó el Consorcio de la World
 
 ### Más información en
 
-- [Entendiendo la Web](/es/Learn)
+- [Entendiendo la Web](/es/docs/Learn_web_development)
 - [Mapa para la enseñanza Web (Web literacy map)](https://learning.mozilla.org/web-literacy) (sitio en inglés, en el cual se muestra un inventario de las habilidades necesarias para el desarrollo Web y actividades de aprendizaje)
 
 ### Conocimiento general
 
 - [World Wide Web](https://es.wikipedia.org/wiki/World_Wide_Web) en Wikipedia
-- [El sitio web de la W3C](http://w3.org)
+- [El sitio web de la W3C](https://w3.org)

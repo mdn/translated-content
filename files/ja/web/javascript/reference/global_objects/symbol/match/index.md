@@ -1,17 +1,32 @@
 ---
 title: Symbol.match
+short-title: match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Symbol.match`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.match` を表します。{{jsxref("String.prototype.match()")}} メソッドは第 1 引数に対して、入力文字列と現在のオブジェクトとの照合に使われるメソッドを、このシンボルで探します。このシンボルは、オブジェクトが[正規表現として扱われる](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)べきかどうかを決定するためにも使用されます。
+**`Symbol.match`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.match` を表します。{{jsxref("String.prototype.match()")}} メソッドは第 1 引数に対して、入力文字列と現在のオブジェクトとの照合に使われるメソッドを、このシンボルで探します。このシンボルは、オブジェクトが[正規表現として扱われる](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)べきかどうかを決定するためにも使用されます。
 
 詳しくは、[`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) および {{jsxref("String.prototype.match()")}} を参照してください。
 
-{{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol.match", "taller")}}
+
+```js interactive-example
+const regexp = /foo/;
+// console.log('/foo/'.startsWith(regexp));
+// 予想される結果 (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
+// 予想される結果 (Firefox): Error: Invalid type: first can't be a Regular Expression
+// 予想される結果 (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+
+regexp[Symbol.match] = false;
+
+console.log("/foo/".startsWith(regexp));
+// 予想される結果: true
+
+console.log("/baz/".endsWith(regexp1));
+// 予想される結果: false
+```
 
 ## 値
 

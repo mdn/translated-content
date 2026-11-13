@@ -1,17 +1,24 @@
 ---
-title: 関数式
+title: function 式
 slug: Web/JavaScript/Reference/Operators/function
 l10n:
-  sourceCommit: 8680b4c648f2f2be1a391e3a318dff7c7d50f3f4
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`function`** キーワードは、式の中で関数を定義するために使用されます。
 
 [`function` 関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)や[アロー構文](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を用いて関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: function 式", "shorter")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// 予想される結果: 12
+```
 
 ## 構文
 
@@ -37,7 +44,8 @@ function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
 
 ### 引数
 
@@ -50,7 +58,7 @@ function name(param0, param1, /* …, */ paramN) {
 
 ## 解説
 
-`function` 式は [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とよく似ており、ほとんど同じ書式ですあります。 `function` 式と `function` 宣言の主な相違点は、*関数名*です。 `function` 式では、*無名*関数を生成するために、関数名を省略できます。 `function` 式は、定義するとすぐに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数）として使用できます。詳細については、[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を参照してください。
+`function` 式は [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とよく似ており、ほとんど同じ書式です。 `function` 式と `function` 宣言の主な相違点は、*関数名*です。 `function` 式では、*無名*関数を生成するために、関数名を省略できます。 `function` 式は、定義するとすぐに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数）として使用できます。詳細については、[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を参照してください。
 
 ### 関数式の巻き上げ
 
@@ -73,7 +81,7 @@ var notHoisted = function () {
 
 ```js
 const math = {
-  factit: function factorial(n) {
+  factorial: function factorial(n) {
     console.log(n);
     if (n <= 1) {
       return 1;
@@ -82,7 +90,7 @@ const math = {
   },
 };
 
-math.factit(3); //3;2;1;
+math.factorial(3); // 3;2;1;
 ```
 
 関数式に名前が付けられている場合、関数の [`name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name) プロパティには、構文から推測される暗黙の名前 (関数が割り当てられている変数など) ではなく、その名前が設定されます。
@@ -90,6 +98,8 @@ math.factit(3); //3;2;1;
 宣言とは異なり、関数式の名前は読み取り専用です。
 
 ```js
+"use strict";
+
 function foo() {
   foo = 1;
 }
@@ -124,18 +134,168 @@ button.addEventListener("click", function (event) {
 
 ### 即時実行関数式 (IIFE) の使用
 
-無名の関数が生成され、呼び出されます。
+[IIFE](/ja/docs/Glossary/IIFE) は、単一の式が要求される場所で、任意の数の文を自分自身で実行（場合によっては値を返す）、一般的なパターンとして使用されています。 IIFE の多くの従来からの用途は、[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)や[ブロックスコープ宣言](/ja/docs/Web/JavaScript/Reference/Statements/let)といった新しい構文機能によって取って代わられています。 IIFE 自体は現在、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を付けて記述されることが一般的ですが、その考え方は変わりません。一般的に IIFE は、このようになっています。
 
-```js-nolint
+```js
+// 標準的な IIFE
 (function () {
-  console.log("Code runs!");
+  // 文…
 })();
 
-// または
+// 引数付きの IIFE
+(function (a, b) {
+  console.log(a + b);
+})(1, 2); // 3 を出力
 
-!function () {
-  console.log("Code runs!");
-}();
+// 変数を初期化するために使用される IIFE
+const value = (() => {
+  const randomValue = Math.random();
+  if (randomValue > 0.5) {
+    return "heads";
+  }
+  return "tails";
+})();
+```
+
+ここでは、いくつかの用途を例を添えて紹介します。
+
+### スクリプトコードでグローバル名前空間を汚染することを避ける
+
+すべてのスクリプトの最上位のスコープは共有されており、異なるファイルから多数の関数やグローバル変数が導入される可能性があるため、名前の競合を避けるには、グローバル宣言される名前の数を制限することが重要です（これは[モジュール](/ja/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts)では大幅に緩和されますが、それでも一時変数のスコープを制限することは、特にファイルがとても長い場合に有益です）。初期化コードで再利用する必要がない部分がある場合、 IIFE パターンを使用することができます。関数宣言や関数式よりも優れており、コードがここで一度だけ実行されることを保証します。
+
+```js
+// スクリプトの最上位（モジュールではない）
+
+var globalVariable = (() => {
+  // いくらかの初期化コード
+  let firstVariable = something();
+  let secondVariable = somethingElse();
+  return firstVariable + secondVariable;
+})();
+
+// firstVariable と secondVariable は関数本体の外からアクセスできない
+```
+
+### モジュールパターン
+
+また、 IIFE を使用してプライベート変数やパブリック変数、メソッドを作成することもできます。モジュールパターンのより高度な活用や、 IIFE のそれ以外にも使用方法については、 Addy Osmani 著『Learning JavaScript Design Patterns』を参照してください。
+
+```js
+const makeWithdraw = (balance) =>
+  ((copyBalance) => {
+    let balance = copyBalance; // この変数は非公開
+    const doBadThings = () => {
+      console.log("お前の金で悪いことをしてやる");
+    };
+    doBadThings();
+    return {
+      withdraw(amount) {
+        if (balance >= amount) {
+          balance -= amount;
+          return balance;
+        }
+        return "お金が足りない";
+      },
+    };
+  })(balance);
+
+const firstAccount = makeWithdraw(100); // "お前の金で悪いことをしてやる"
+console.log(firstAccount.balance); // undefined
+console.log(firstAccount.withdraw(20)); // 80
+console.log(firstAccount.withdraw(30)); // 50
+console.log(firstAccount.doBadThings); // undefined; this method is private
+const secondAccount = makeWithdraw(20); // "お前の金で悪いことをしてやる"
+console.log(secondAccount.withdraw(30)); // "お金が足りない"
+console.log(secondAccount.withdraw(20)); // 0
+```
+
+### ES6 以前の var をつけた for ループ
+
+ブロックスコープの `let` および `const` 宣言が導入される以前、古いコードでは次の ような IIFE の使用例が見られました。 `var` 文では、指定された関数スコープとグローバルスコープのみが存在します。
+たとえば、 Button 0 と Button 1 というテキストを持つ 2 つのボタンを作成し、クリック時にそれぞれ 0 と 1 をアラート表示したいとします。以下のコードは動作しません。
+
+```js
+for (var i = 0; i < 2; i++) {
+  const button = document.createElement("button");
+  button.innerText = `Button ${i}`;
+  button.onclick = function () {
+    console.log(i);
+  };
+  document.body.appendChild(button);
+}
+console.log(i); // 2
+```
+
+クリックすると、Button 0 と Button 1 の両方が 2 を通知します。これは `i` がグローバル変数であり、最後の値が 2 であるためです。ES6 以前では、 IIFE パターンを使用してこの問題を修正することができました。
+
+```js
+for (var i = 0; i < 2; i++) {
+  const button = document.createElement("button");
+  button.innerText = `Button ${i}`;
+  button.onclick = (function (copyOfI) {
+    return function () {
+      console.log(copyOfI);
+    };
+  })(i);
+  document.body.appendChild(button);
+}
+console.log(i); // 2
+```
+
+Button 0 と Button 1 がクリックされると、それぞれ 0 と 1 が通知されます。変数 `i` はグローバルに定義されています。 `let` 文を使用すれば、次のように単純に記述できます。
+
+```js
+for (let i = 0; i < 2; i++) {
+  const button = document.createElement("button");
+  button.innerText = `Button ${i}`;
+  button.onclick = function () {
+    console.log(i);
+  };
+  document.body.appendChild(button);
+}
+console.log(i); // Uncaught ReferenceError: i is not defined.
+```
+
+クリックすると、これらのボタンは 0 と 1 を通知します。
+
+### 式の場所での制御フロー文
+
+IIFE により、 `switch` などの言語構文を式内で使用することができます。
+
+```js
+someObject.property = (() => {
+  switch (someVariable) {
+    case 0:
+      return "zero";
+    case 1:
+      return "one";
+    default:
+      return "unknown";
+  }
+})();
+```
+
+これの手法は、変数を`const`にしたいが、初期化時に`let`や`var`を使用せざるを得ない状況で特に有益です。
+
+```js
+let onlyAssignedOnce;
+try {
+  onlyAssignedOnce = someFunctionThatMightThrow();
+} catch (e) {
+  onlyAssignedOnce = null;
+}
+```
+
+IIFE を使用することで、変数を `const` にすることができます。
+
+```js
+const onlyAssignedOnce = (() => {
+  try {
+    return someFunctionThatMightThrow();
+  } catch (e) {
+    return null;
+  }
+})();
 ```
 
 ## 仕様書

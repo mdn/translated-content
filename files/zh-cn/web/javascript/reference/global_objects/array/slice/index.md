@@ -3,11 +3,31 @@ title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 
-{{JSRef}}
-
 **`slice()`** 方法返回一个新的数组对象，这一对象是一个由 `start` 和 `end` 决定的原数组的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)（包括 `start`，不包括 `end`），其中 `start` 和 `end` 代表了数组元素的索引。原始数组不会被改变。
 
-{{EmbedInteractiveExample("pages/js/array-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()", "taller")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## 语法
 
@@ -148,7 +168,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## 参见
 
 - [`core-js` 中 `Array.prototype.slice` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

@@ -3,12 +3,12 @@ title: "Element: matches() メソッド"
 short-title: matches()
 slug: Web/API/Element/matches
 l10n:
-  sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("DOM")}}
 
-**`matches()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素が指定した [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors) によって選択されるかどうかを検査します。
+**`matches()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素が指定した [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) によって選択されるかどうかを検査します。
 
 ## 構文
 
@@ -19,7 +19,7 @@ matches(selectors)
 ### 引数
 
 - `selectors`
-  - : {{domxref("Element")}} を検査するために有効な [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を格納した文字列です。
+  - : {{domxref("Element")}} を検査するために有効な [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を格納した文字列です。
 
 ### 返値
 
@@ -66,5 +66,5 @@ for (const bird of birds) {
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
 - セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}

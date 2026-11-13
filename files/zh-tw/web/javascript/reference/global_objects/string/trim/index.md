@@ -3,12 +3,20 @@ title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
 
-{{JSRef}}
-
 **`trim()`** 方法會移除字串起始及結尾處的空白字元。
 本文中的空白字元指所有空格字元（如：空格、欄標、無間斷空格等等）及換行字元（如：換行、回車等等）。
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## 語法
 

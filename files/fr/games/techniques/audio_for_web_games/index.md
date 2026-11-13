@@ -3,8 +3,6 @@ title: L'audio dans les jeux Web
 slug: Games/Techniques/Audio_for_Web_Games
 ---
 
-{{GamesSidebar}}
-
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
 
 ## Avertissement sur l'audio sur mobile
@@ -136,7 +134,7 @@ Bien que les navigateurs mobiles puissent présenter les problèmes évoqués ci
 
 ### Les "sprites" audio
 
-Les "sprites" audio empruntent leur nom aux ["sprites" CSS](/fr/docs/Web/CSS/CSS_Images/Sprites_CSS) ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.
+Les "sprites" audio empruntent leur nom aux ["sprites" CSS](/fr/docs/Web/CSS/Guides/Images/Implementing_image_sprites) ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.
 
 L'avantage est que nous pouvons amorcer un morceau d'audio et avoir nos "sprites" prêts à partir. Pour ce faire, nous pouvons juste jouer et mettre en pause instantanément la plus grande partie de l'audio. Nous réduisons également le nombre de demandes de serveur et économisons de la bande passante.
 
@@ -208,7 +206,7 @@ myAudio.addEventListener(
 
 ## Musique de fond
 
-La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode [`playbackRate()`](/fr/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained) , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.
+La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode [`playbackRate()`](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained) , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.
 
 Tout ceci est possible en utilisant l'élément standard {{HTMLElement ("audio")}} associé à l'API {{domxref("HTMLMediaElement")}} , mais il devient beaucoup plus facile et flexible avec l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API).
 
@@ -372,7 +370,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 ## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
-- [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)
+- [`<audio>` sur MDN](/fr/docs/Web/HTML/Reference/Elements/audio)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks) (en)](https://web.dev/articles/webaudio-games)
 - [Mixing Positional Audio and WebGL (HTML5Rocks) (en)](https://web.dev/articles/webaudio-positional-audio)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits (en)](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)

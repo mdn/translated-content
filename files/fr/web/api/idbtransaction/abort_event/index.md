@@ -10,7 +10,7 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 ## Informations générales
 
 - Spécification
-  - : [IndexedDB](http://www.w3.org/TR/IndexedDB/#request-api)
+  - : [IndexedDB](https://www.w3.org/TR/IndexedDB/#request-api)
 - Interface
   - : Event
 - Propagation
@@ -27,10 +27,10 @@ Le gestionnaire d'arrêt est exécuté lorsqu'une transaction a été interrompu
 | Property                        | Type                       | Description                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Voir aussi
 
-- [Utilisation d'IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB)
+- [Utilisation d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)

@@ -3,11 +3,31 @@ title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 
-{{JSRef}}
-
 **`slice()`** 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## 語法
 
@@ -98,7 +118,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Binding can be done with the .`call` function of {{jsxref("Function.prototype")}} and it can also be reduced using `[].slice.call(arguments)` instead of `Array.prototype.slice.call`. Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
+Binding can be done with the .`call` function of {{jsxref("Function")}} and it can also be reduced using `[].slice.call(arguments)` instead of `Array.prototype.slice.call`. Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;
@@ -113,7 +133,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Streamlining cross-browser behavior
 
-Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by `Array.prototype.slice` and IE < 9 does not do so, versions of IE starting with version 9 do allow this. 「Shimming」 it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently _de facto_ standard behavior. (The shim also fixes IE to work with the second argument of `slice()` being an explicit {{jsxref("null")}}/{{jsxref("undefined")}} value as earlier versions of IE also did not allow but all modern browsers, including IE >= 9, now do.)
+Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by `Array.prototype.slice` and IE < 9 does not do so, versions of IE starting with version 9 do allow this. 「Shimming」 it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently _de facto_ standard behavior. (The shim also fixes IE to work with the second argument of `slice()` being an explicit {{jsxref("Operators/null", "null")}}/{{jsxref("undefined")}} value as earlier versions of IE also did not allow but all modern browsers, including IE >= 9, now do.)
 
 ```js
 /**

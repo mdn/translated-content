@@ -3,8 +3,6 @@ title: actions utilisateurs
 slug: Mozilla/Add-ons/WebExtensions/User_actions
 ---
 
-{{AddonSidebar}}
-
 Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:
 
 - une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.
@@ -29,7 +27,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 Notez que les actions de l'utilisateur dans les pages Web normales ne sont pas traitées comme des actions de l'utilisateur à cette fin. Par exemple, si un utilisateur clique sur un bouton dans une page Web normale et qu'un script de contenu a ajouté un gestionnaire de clic pour ce bouton et que ce gestionnaire envoie un message à la page d'arrière-plan de l'extension, alors le gestionnaire de message de page d'arrière-plan n'est pas considéré comme traitant une action utilisateur.
 
-De plus, si un gestionnaire d'entrée utilisateur attend une [promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise), alors son statut de gestionnaire d'entrée utilisateur est perdu. Par exemple :
+De plus, si un gestionnaire d'entrée utilisateur attend une [promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), alors son statut de gestionnaire d'entrée utilisateur est perdu. Par exemple :
 
 ```js
 async function handleClick() {

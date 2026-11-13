@@ -3,11 +3,16 @@ title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
 
-{{JSRef}}
-
 **`toLowerCase()`** 函式会回传将字符串转换为英文小写字母后的结果。
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLowerCase()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toLowerCase());
+// Expected output: "the quick brown fox jumps over the lazy dog."
+```
 
 ## 语法
 

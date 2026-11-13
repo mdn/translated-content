@@ -3,8 +3,6 @@ title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 
-{{AddonSidebar}}
-
 Native messaging 可以让 extension 与安装在用户计算机上的原生应用交换信息。原生应用仅需给 extension 提供服务，而无需在网页中可访问。一个常见的例子是密码管理器：原生应用负责存储和加密你的密码，并且和 extension 通信来填充网页中的表单字段。Native messaging 可以让 extension 拥有那些 WebExtensions APIs 所没有的功能，比如访问某些特定的硬件。
 
 原生应用的安装与管理并不是在浏览器当中的：它应该是使用操作系统进行安装，和其他的原生应用一样。然后你需要将你的原生应用安装在指定位置，并提供一个清单。清单中描述了浏览器如何连接到你的原生应用。
@@ -117,7 +115,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 ### Extension 端
 
-你使用过 [messaging APIs](/zh-CN/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
+你使用过 [messaging APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) 与 content script 通信，与原生应用通信你应该非常熟悉，有 2 种方式：
 
 - 基于连接的通信
 - 无连接的通信（请求/响应 模式）
@@ -129,7 +127,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 当原生应用启动后，它被会传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用会一直保持运行，直到 extension 调用 `Port.disconnect()` 或连接它的记录被结束。
 
@@ -170,7 +168,7 @@ browser.browserAction.onClicked.addListener(() => {
 每个消息都会创建一个新的原生应用实例。当原生应用启动时会被传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
 
 原生应用发送的第一条消息将会被作为对 `sendNativeMessage()` 响应，将会被传入回调函数中。
 
@@ -251,7 +249,7 @@ while True:
 
 ## 常见问题 Troubleshooting
 
-如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/Add-ons/WebExtensions/Debugging#Viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
+如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging#viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
 
 如果你没有配置好原生应用，你应该会看到一些错误信息。
 

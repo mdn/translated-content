@@ -74,7 +74,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Icon.html
     ```
 
 2. **zoom プロパティが使用されている**
-    zoom プロパティは Firefox では適応されないため、[height](/ja/docs/Web/CSS/height)プロパティで位置を指定するのがよいです。
+    zoom プロパティは Firefox では適応されないため、[height](/ja/docs/Web/CSS/Reference/Properties/height)プロパティで位置を指定するのがよいです。
     その他の指定も px 指定で調整することで、他のブラウザーとの表示差異はなくなります。
 
     ```css
@@ -89,7 +89,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Icon.html
     ```
 
 3. **ブラウザーの解像度の違いによる表示差異**
-    アイコンの位置を[padding](/ja/docs/Web/CSS/padding)プロパティで再調整することで正しく表示させることが可能となります。
+    アイコンの位置を[padding](/ja/docs/Web/CSS/Reference/Properties/padding)プロパティで再調整することで正しく表示させることが可能となります。
 
     ```css
     img.message {
@@ -103,4 +103,4 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Icon.html
 
 - 他のブラウザーでも互換性を維持することができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

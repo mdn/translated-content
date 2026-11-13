@@ -3,15 +3,13 @@ title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### CSS
 
 - `text-decoration-line` 属性仍然带有前缀，不过现在它把 `'blink'` 也看看成了它的合法属性值，虽然并不会真正的让内容产生闪烁效果 ([Firefox bug 812995](https://bugzil.la/812995)).
 - 非标准的 [`-moz-text-blink`](/zh-CN/docs/Web/CSS/-moz-text-blink) 属性已被删除 ([Firefox bug 812995](https://bugzil.la/812995)).
-- 实现了 [CSS Image Values Level 4](http://dev.w3.org/csswg/css-images-4/) 中的 [`image-orientation`](/zh-CN/docs/Web/CSS/image-orientation) 属性，比起 Level 3, Level 4 增加了对 `from-image` 关键字和 EXIF 的支持。
+- 实现了 [CSS Image Values Level 4](https://dev.w3.org/csswg/css-images-4/) 中的 [`image-orientation`](/zh-CN/docs/Web/CSS/Reference/Properties/image-orientation) 属性，比起 Level 3, Level 4 增加了对 `from-image` 关键字和 EXIF 的支持。
 - 支持了 `position:sticky`，需要开启 `layout.css.sticky.enabled` 选项（[Firefox bug 886646](https://bugzil.la/886646)）。
 
 ### HTML

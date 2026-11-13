@@ -3,11 +3,23 @@ title: 逗号运算符（,）
 slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
-{{jsSidebar("Operators")}}
-
 **逗号**（**`,`**）运算符对它的每个操作数从左到右求值，并返回最后一个操作数的值。这让你可以创建一个复合表达式，其中多个表达式被评估，复合表达式的最终值是其成员表达式中最右边的值。这通常用于为 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环提供多个参数。
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## 语法
 

@@ -49,7 +49,7 @@ function updateProgress(percentComplete) {
 
 다른 웹 기술과 마찬가지로, ARIA 역시 환경 별 지원 수준에 차이를 보입니다. 지원 수준은 사용자의 운영 체제 및 사용하는 브라우저, 그리고 연결된 보조 기술마다 다릅니다. 게다가 각각의 버전 또한 영향을 줍니다. 오래된 소프트웨어 버전은 특정 ARIA 역할을 지원하지 않거나, 부분적으로만 지원하거나, 잘못된 기능을 가지고 있을 수 있습니다.
 
-또 다른 중요한 점은, 보조 기술에 의존하는 사용자 일부가 컴퓨터 및 브라우저 상호작용 기능을 잃어버릴까 두려워 소프트웨어 업그레이드를 주저할 수 있다는 점을 인지하는 것입니다. 그러므로 가능한 한 보조 기술이 훨씬 넓게 지원하는, [의미를 가진 HTML 요소](/ko/docs/Learn/Accessibility/HTML)를 사용하는 편이 좋습니다.
+또 다른 중요한 점은, 보조 기술에 의존하는 사용자 일부가 컴퓨터 및 브라우저 상호작용 기능을 잃어버릴까 두려워 소프트웨어 업그레이드를 주저할 수 있다는 점을 인지하는 것입니다. 그러므로 가능한 한 보조 기술이 훨씬 넓게 지원하는, [의미를 가진 HTML 요소](/ko/docs/Learn_web_development/Core/Accessibility/HTML)를 사용하는 편이 좋습니다.
 
 마지막으로 작성한 ARIA을 실제 보조 기술로 시험하는 것도 필요합니다. 브라우저 에뮬레이터와 시뮬레이터가 전체 테스트에 효율적인 도구가 아니듯, 유사 보조 기술만으로는 완벽한 지원을 장담하기엔 부족합니다.
 
@@ -66,7 +66,7 @@ function updateProgress(percentComplete) {
 
 - [ARIA 랜드마크를 사용하여 페이지 탐색 고도화](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 스크린 리더 사용자들을 위해 ARIA 랜드마크를 사용하여 웹 페이지의 탐색 기능을 향상시키는 법을 소개해주는 좋은 글입니다. [이와 더불어서 ARIA 구현 노트](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 및 실제 사이트에서의 활용 예시들을 참고하세요. (2011년 7월에 업데이트됨)
-- [폼 접근성 향상하기](/ko/docs/ARIA/forms)
+- [폼 접근성 향상하기](/ko/docs/Web/Accessibility/ARIA)
   - : ARIA는 동적 콘텐츠만을 위한 것이 아닙니다! ARIA 특성을 사용해 HTML 폼의 접근성을 높이는 방법을 알아보세요.
 
 ## 스크립트 처리된 위젯을 위한 ARIA
@@ -91,11 +91,11 @@ function updateProgress(percentComplete) {
 
 ## 버그 제출
 
-[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
+[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en-US/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ## 관련 주제
 
-{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/JavaScript)
+{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/Web/JavaScript)
 
-- [웹 개발](/ko/docs/Web/Guide)
+- [웹 개발](/ko/docs/MDN/Guides)
 - [접근성과 Mozilla](/ko/docs/Mozilla/Accessibility)

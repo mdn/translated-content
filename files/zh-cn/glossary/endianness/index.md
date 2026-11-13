@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88637aa25621db0218f2fd9e07ad62be2f0817b9
 ---
 
-{{GlossarySidebar}}
-
 **字节序**或**字节顺序**描述了计算机如何组织构成数字的字节。
 
 每个内存存储位置都有一个索引或地址。每一字节可以存储一个 8 位数字（即介于 `0x00` 和 `0xff` 之间），因此，你必须保留不止一个字节来储存一个更大的数字。现在，大部分需占用多个字节的数字*排序*方式是**小端序**，所有的英特尔处理器都使用小端序。小端序的意思是按照从最低有效位到最高有效位的顺序存储字节（其中最低有效字节位于第一个地址，或最小的地址），可类比欧洲通用的日期书写方式（例如，31 December 2050）。
@@ -19,12 +17,12 @@ l10n:
 - _大端序_：`0x12 0x34 0x56 0x78`
 - _混合序_（曾经的做法，非常罕见）：`0x34 0x12 0x78 0x56`
 
-类型化数组指南提供了[将任何数字转换为给定字节序的二进制表示](/zh-CN/docs/Web/JavaScript/Typed_arrays#视图)的一个示例。
+类型化数组指南提供了[将任何数字转换为给定字节序的二进制表示](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays#视图)的一个示例。
 
 ## 参见
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - 维基百科上的[字节序](https://zh.wikipedia.org/wiki/字节序)
 - {{Glossary("Data structure", "数据结构")}}

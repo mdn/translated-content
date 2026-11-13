@@ -24,7 +24,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 속�
 ### 이벤트 처리기
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers)입니다.
+  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/conflicting/Web/API/Document_Object_Model/Events)입니다.
 
 ## 메서드
 
@@ -40,7 +40,8 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 이전에 연기된 오디오 컨텍스트에서의 시간 진행을 재개합니다.
 
-> **참고:** `resume()` 메서드는 여전히 사용 가능합니다 — 이것은 이제 {{domxref("BaseAudioContext")}} 인터페이스에 정의되었고 ({{domxref("AudioContext.resume")}}을 참조하세요) 따라서 {{domxref("AudioContext")}}와 {{domxref("OfflineAudioContext")}} 인터페이스 모두에서 접근 가능합니다.
+> [!NOTE]
+> `resume()` 메서드는 여전히 사용 가능합니다 — 이것은 이제 {{domxref("BaseAudioContext")}} 인터페이스에 정의되었고 ({{domxref("AudioContext.resume")}}을 참조하세요) 따라서 {{domxref("AudioContext")}}와 {{domxref("OfflineAudioContext")}} 인터페이스 모두에서 접근 가능합니다.
 
 ## 이벤트
 
@@ -48,7 +49,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 - [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event)
   - : 오프라인 오디오 컨텍스트의 렌더링이 완료되었을 때 발생됩니다.
-    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
+    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
 
 ## 예제
 

@@ -3,11 +3,20 @@ title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
 
-{{JSRef}}
-
 **`Object.getOwnPropertyNames()`** 静态方法返回一个数组，其包含给定对象中所有自有属性（包括不可枚举属性，但不包括使用 symbol 值作为名称的属性）。
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 语法
 
@@ -119,7 +128,7 @@ console.log(nonenumOnly);
 ## 参见
 
 - [`core-js` 中 `Object.getOwnPropertyNames` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

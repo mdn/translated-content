@@ -21,7 +21,6 @@ var node = new AudioWorkletNode(context, name, options);
 - `name`
   - : 이 노드가 기반으로 할 {{domxref("AudioWorkletProcessor")}}의 이름을 나타내는 문자열. 제공된 이름을 가진 프로세서는 {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} 메서드를 사용하여 반드시 맨 먼저 등록되어야 합니다.
 - `options` {{optional_inline}}
-
   - : 새로운 노드를 설정하기 위해 다음의 선택적인 속성들 중 0개 또는 그 이상을 포함하는 객체:
 
     <!-- 명세는 이 객체를 다음으로 나타냅니다: AudioWorkletNodeOptions -->
@@ -30,7 +29,6 @@ var node = new AudioWorkletNode(context, name, options);
     > 이 객체에 적용된 [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)의 결과는
     > 또한 연관된 {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} 생성자로 내부적으로 전달됩니다
     > — 이는 근본적인 사용자 정의 {{domxref("AudioWorkletProcessor")}}의 커스텀 초기화를 가능케 합니다.
-
     - `numberOfInputs` {{optional_inline}}
       - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} 속성을 초기화할 값. 기본값은 1입니다.
     - `numberOfOutputs` {{optional_inline}}
@@ -49,7 +47,6 @@ var node = new AudioWorkletNode(context, name, options);
 ### 예외
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : 명시된 `options.outputChannelCount` 이 `0` 또는 현재 구현 지원보다 더 큽니다.
 
     `options.numberOfInputs`와 `options.numberOfOutputs`가 둘 다 0입니다.

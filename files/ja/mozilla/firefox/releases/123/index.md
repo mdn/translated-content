@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14ce84d863643d7f729e497781bfd247add7d1ae
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 123 の変更点をまとめています。Firefox 123 は、米国時間 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=123) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -30,15 +28,15 @@ l10n:
 
 ### HTTP
 
-- ページが必要とする可能性があるリソースを、サーバーがまだ完全なレスポンスを準備している間に [先読み](/ja/docs/Web/HTML/Attributes/rel/preload) するための HTTP [`103 Early Hints`](/ja/docs/Web/HTTP/Status/103) [情報レスポンス](/ja/docs/Web/HTTP/Status#情報レスポンス) ステータスコードが有効になりました。
+- ページが必要とする可能性があるリソースを、サーバーがまだ完全なレスポンスを準備している間に [先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) するための HTTP [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス) ステータスコードが有効になりました。
   これは、ページの読み込み時間を大きく削減できます。
-  なお、[事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect) のために使用する `103 Early Hints` ヘッダーは [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#http) でサポートしました。
+  なお、[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) のために使用する `103 Early Hints` ヘッダーは [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#http) でサポートしました。
   詳しくは [Firefox bug 1874445](https://bugzil.la/1874445) をご覧ください。
 
 ### API
 
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) で、クロスオリジンの資格情報作成をサポートしました。
-  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
+  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) で [`Permissions-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
   ([Firefox bug 1870863](https://bugzil.la/1870863))
 
 #### DOM

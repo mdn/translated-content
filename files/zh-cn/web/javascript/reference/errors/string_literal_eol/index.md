@@ -3,8 +3,6 @@ title: "SyntaxError: string literal contains an unescaped line break"
 slug: Web/JavaScript/Reference/Errors/String_literal_EOL
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain
@@ -38,7 +36,7 @@ var longString = "This is a very long string which needs
 // SyntaxError: unterminated string literal
 ```
 
-可以使用["+"运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)，反斜杠，或[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来代替多行。“+”运算符的使用如下：
+可以使用["+"运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#addition)，反斜杠，或[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来代替多行。“+”运算符的使用如下：
 
 ```js example-good
 var longString =

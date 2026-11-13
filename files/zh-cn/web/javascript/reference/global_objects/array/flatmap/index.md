@@ -3,11 +3,18 @@ title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 
-{{JSRef}}
-
 **`flatMap()`** 方法对数组中的每个元素应用给定的回调函数，然后将结果展开一级，返回一个新数组。它等价于在调用 {{jsxref("Array.prototype.map","map()")}} 方法后再调用深度为 1 的 {{jsxref("Array.prototype.flat","flat()")}} 方法（`arr.map(...args).flat()`），但比分别调用这两个方法稍微更高效一些。
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.flatMap()", "shorter")}}
+
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 ## 语法
 
@@ -157,7 +164,7 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.flatMap` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flat()")}}

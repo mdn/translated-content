@@ -3,13 +3,23 @@ title: L'opérateur this
 slug: Web/JavaScript/Reference/Operators/this
 ---
 
-{{jsSidebar("Operators")}}
-
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
 
-Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) dans lesquelles `this` correspond à la valeur du contexte englobant.
+Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) dans lesquelles `this` correspond à la valeur du contexte englobant.
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -98,7 +108,7 @@ whatsThis.call(obj); // "Toto"
 whatsThis.apply(obj); // "Toto"
 ```
 
-Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.
+Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function")}}.
 
 ```js
 function ajout(c, d) {
@@ -150,7 +160,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
 
 ### Avec les fonctions fléchées
 
-En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
+En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
 
 ```js
 var objetGlobal = this;
@@ -297,7 +307,7 @@ console.log(o.phase, o.moduleRéel); // logs -0.78 1.4142
 
 ### En tant que constructeur
 
-Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le `this` correspondant sera lié au nouvel objet en train d'être construit.
+Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("new")}}), le `this` correspondant sera lié au nouvel objet en train d'être construit.
 
 > [!NOTE]
 > Par défaut, un constructeur renverra l'objet auquel `this` fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de `this`).

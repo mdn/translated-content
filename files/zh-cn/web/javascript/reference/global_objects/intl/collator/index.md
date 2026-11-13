@@ -3,11 +3,24 @@ title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 
-{{JSRef}}
-
 **`Intl.Collator`** 对象用于语言敏感的字符串比较。
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## 构造函数
 
@@ -42,7 +55,7 @@ console.log(new Intl.Collator().compare("a", "a")); // 0
 
 ### 使用 locales
 
-{{jsxref("Collator.prototype.compare()")}} 提供的结果在不同语言之间有所不同。为了获得用于你的应用程序的用户界面的语言格式，请确保使用 `locales` 参数指定了语言（可能还有一些回退语言）：
+{{jsxref("Intl/Collator/compare()", "Collator.prototype.compare()")}} 提供的结果在不同语言之间有所不同。为了获得用于你的应用程序的用户界面的语言格式，请确保使用 `locales` 参数指定了语言（可能还有一些回退语言）：
 
 ```js
 // 德语中，ä 使用 a 的排序
@@ -56,7 +69,7 @@ console.log(new Intl.Collator("sv").compare("ä", "z"));
 
 ### 使用 options
 
-{{jsxref("Collator.prototype.compare()")}} 提供的结果可以使用 options 参数自定义：
+{{jsxref("Intl/Collator/compare()", "Collator.prototype.compare()")}} 提供的结果可以使用 options 参数自定义：
 
 ```js
 // 德语中，ä 使用 a 作为基本字母

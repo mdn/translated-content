@@ -39,5 +39,5 @@ slug: Web/API/File_and_Directory_Entries_API
 
 ## 参见
 
-- [介绍文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-- [Firefox 中的文件与目录条目 API 支持](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [文件 API](/zh-CN/docs/Web/API/File_API)
+- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)

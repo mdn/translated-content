@@ -9,9 +9,9 @@ l10n:
 
 CORS のプリフライトリクエストは {{Glossary("CORS")}} のリクエストの一つであり、サーバーが CORS プロトコルを理解していて準備がされていることを、特定のメソッドとヘッダーを使用してチェックします。
 
-これは {{HTTPMethod("OPTIONS")}} リクエストであり、 {{HTTPHeader("Access-Control-Request-Method")}},{{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の 3 つの HTTP リクエストヘッダー使用します。
+これは {{HTTPMethod("OPTIONS")}} リクエストであり、 {{HTTPHeader("Access-Control-Request-Method")}},{{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の 3 つの HTTP リクエストヘッダーを使用します。
 
-プリフライトリクエストはブラウザーが自動的に発行するものであり、通常は、フロントエンドの開発者が自分でそのようなリクエストを作成する必要はありません。これはリクエストが ["to be preflighted"](/ja/docs/Web/HTTP/CORS#プリフライトリクエスト) と修飾されている場合に現れ、[単純リクエスト](/ja/docs/Web/HTTP/CORS#単純リクエスト)の場合は省略されます。
+プリフライトリクエストはブラウザーが自動的に発行するものであり、通常は、フロントエンドの開発者が自分でそのようなリクエストを作成する必要はありません。これはリクエストが ["to be preflighted"](/ja/docs/Web/HTTP/Guides/CORS#プリフライトリクエスト) と修飾されている場合に現れ、[単純リクエスト](/ja/docs/Web/HTTP/Guides/CORS#単純リクエスト)の場合は省略されます。
 
 例えば、クライアントはプリフライトリクエストを使用して、 {{HTTPMethod("DELETE")}} リクエストを送信する前に、 `DELETE` リクエストを許可するかどうかをサーバーに尋ねるかもしれません。
 

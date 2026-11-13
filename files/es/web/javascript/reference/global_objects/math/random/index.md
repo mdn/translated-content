@@ -8,9 +8,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 La función **`Math.random()`** devuelve un número de coma flotante pseudo-aleatorio, comprendido en el rango de 0 a menor que 1 (es decir, incluido el 0 pero no el 1), con una distribución aproximadamente uniforme en este rango. Dicho rango puede ser ampliado hasta los valores deseados.
 La implementación selecciona la semilla inicial del algoritmo de generación de números aleatorios, no pudiendo ser esta elegida o restablecida por el usuario.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
 
-> **Nota:** `Math.random()` no proporciona números aleatorios criptográficamente seguros, por lo que no debe ser usado para cualquier cosa relacionada con seguridad.
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
+
+> [!NOTE]
+> `Math.random()` no proporciona números aleatorios criptográficamente seguros, por lo que no debe ser usado para cualquier cosa relacionada con seguridad.
 > En su lugar, puede hacer uso de la API web _Crypto_. Concretamente, puede utilizar el método {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}}.
 
 ## Sintaxis

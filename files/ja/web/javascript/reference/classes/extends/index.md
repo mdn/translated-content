@@ -2,14 +2,37 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Classes")}}
 
 **`extends`** キーワードは、[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: クラスの拡張", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// 予想される結果: "19-Aug-1975"
+```
 
 ## 構文
 
@@ -116,7 +139,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を含む）を無関係なオブジェクトに定義することができます。
+親クラスのコンストラクターがオブジェクトを返す場合、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)をさらに初期化するときに、そのオブジェクトが派生クラスの `this` 値として使用されます。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)のものを含む）を無関係なオブジェクトに定義することができます。
 
 ### 組み込みクラスのサブクラス化
 
@@ -132,7 +155,7 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 しかし、上記のような期待を適切に実装するには、只ならぬ努力が必要です。
 
 - まず、返されるインスタンスを構築するコンストラクターを取得するために、静的メソッドで [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値を読み取ることが要求されることです。これは `[p1, p2, p3].map(Promise.resolve)` が `Promise.resolve` 内の `this` が未定義であるためにエラーを発生することになります。これを修正する方法としては、 {{jsxref("Array.from()")}} がそうであるように、 `this` がコンストラクターでない場合に基底クラスで代替処理をすることですが、それでも基底クラスが特殊ケースであることを意味しています。
-- 2 つ目は、インスタンスメソッドがコンストラクター関数を取得するために [`this.constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) を読み込むことを要求されることです。しかし、コンストラクターのプロパティは書き込みと設定の両方が可能であり、保護されていないため、 `new this.constructor()` は古いコードを壊す可能性があります。そのため、組み込みメソッドをコピーする場合の多くは、代わりにコンストラクターの [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) プロパティを使用しています（既定では、単にコンストラクター自身である `this` を返します）。しかし、 `@@species` によって任意のコードを実行したり、任意のタイプのインスタンスを作成したりすることができるため、セキュリティ上の問題があり、サブクラスの意味づけが非常に複雑になります。
+- 2 つ目は、インスタンスメソッドがコンストラクター関数を取得するために [`this.constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) を読み込むことを要求されることです。しかし、コンストラクターのプロパティは書き込みと設定の両方が可能であり、保護されていないため、 `new this.constructor()` は古いコードを壊す可能性があります。そのため、組み込みメソッドをコピーする場合の多くは、代わりにコンストラクターの [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) プロパティを使用しています（既定では、単にコンストラクター自身である `this` を返します）。しかし、 `[Symbol.species]` によって任意のコードを実行したり、任意のタイプのインスタンスを作成したりすることができるため、セキュリティ上の問題があり、サブクラスの意味づけが非常に複雑になります。
 - 3 つ目はカスタムコードを目に見える形で呼び出すことになり、多くのオプティマイザーの実装が難しくなります。例えば、 `Map()` コンストラクターが _x_ 要素の反復可能オブジェクトで呼び出された場合、内部ストレージに要素をコピーするだけではなく、目に見える形で `set()` メソッドを _x_ 回呼び出さなければなりません。
 
 これらの問題は組み込みクラスに固有のものではありません。自分自身で作成したクラスについても、同じような決定をしなければならないことがあるでしょう。しかし、組み込みクラスでは、最適化とセキュリティがより大きな関心事です。新しい組み込みメソッドは常に基底クラスを構築し、可能な限りいくつかのカスタムメソッドを呼び出します。上記の期待値を達成しながら組み込みクラスをサブクラス化したい場合は、既定値の動作が組み込まれているメソッドをすべてオーバーライドする必要があります。既定では継承されているため、基底クラスに新しいメソッドを追加すると、サブクラスの意味づけが崩れる可能性があります。したがって、組み込みクラスを拡張するためのより良い方法は、[_コンポジション_](#継承を避ける) を使用することです。
@@ -366,7 +389,7 @@ class ReadOnlyMap {
 }
 ```
 
-この場合、 `ReadOnlyMap` クラスは `Map` のサブクラスではありませんが、同じメソッドを実装しています。これはコードの重複を意味しますが、 `ReadOnlyMap` クラスは `Map` クラスと強く割り当てられているわけではなく、 `Map` クラスが変更されても簡単に壊れることはありません。例えば、 `Map` クラスが `set()` を呼び出さない [`emplace()`](https://github.com/tc39/proposal-upsert) メソッドを追加した場合、後者が `emplace()` もオーバーライドするように更新されない限り、 `ReadOnlyMap` クラスは読み取り専用ではなくなります。さらに、`ReadOnlyMap` オブジェクトは `set` メソッドをすべて持たないので、実行時にエラーを発生するよりも正確です。
+この場合、 `ReadOnlyMap` クラスは `Map` のサブクラスではありませんが、同じメソッドを実装しています。これはコードの重複を意味しますが、 `ReadOnlyMap` クラスは `Map` クラスと強く結びつけられているわけではなく、 `Map` クラスが変更されても簡単に壊れることはありません。例えば、 `Map` クラスが `set()` を呼び出さない新しいユーティリティメソッド（[`getOrInsert()`](https://github.com/tc39/proposal-upsert) など）を追加した場合、 `ReadOnlyMap` クラスは `getOrInsert()` を上書きするように更新されない限り、読み取り専用になります。さらに、`ReadOnlyMap` オブジェクトは `set` メソッドをすべて持たないので、実行時にエラーを発生させるよりも正確です。
 
 ## 仕様書
 

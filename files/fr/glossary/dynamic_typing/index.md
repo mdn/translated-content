@@ -1,18 +1,13 @@
 ---
 title: Typage dynamique
 slug: Glossary/Dynamic_typing
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**Les langages à typage dynamique** sont ceux (comme {{Glossary("JavaScript")}}) dont l'interpréteur attribue aux {{Glossary("variable", "variables")}} un {{Glossary("type")}} lors de l'exécution en fonction de la {{Glossary("Value", "valeur")}} qu'elles possèdent à ce moment.
 
-**Les langages à typage dynamique** sont ceux (comme {{glossary("JavaScript")}}) dont l'interpréteur attribue aux {{glossary("variable","variables")}} un {{glossary("type")}} lors de l'exécution en fonction de la {{glossary("Value","valeur")}} qu'elles possèdent à ce moment.
+## Voir aussi
 
-## Pour en savoir plus
-
-### Apprendre sur ce sujet
-
-- [Les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)
-
-### Culture générale
-
+- [Les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Type (informatique)](<https://fr.wikipedia.org/wiki/Type_(informatique)#Typage_statique_et_typage_dynamique>) sur Wikipédia

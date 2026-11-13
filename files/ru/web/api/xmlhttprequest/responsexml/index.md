@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/responseXML
 
 {{APIRef('XMLHttpRequest')}}
 
-`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/URI/Reference/Schemes/data).
 
 > [!NOTE]
 > Название `responseXML` это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.

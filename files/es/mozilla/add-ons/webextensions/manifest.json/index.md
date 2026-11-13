@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json
 {{AddonSidebar}}
 
 > [!NOTE]
-> Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre [Web App Manifest](/es/docs/Web/Manifest).
+> Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre [Web App Manifest](/es/docs/Web/Progressive_web_apps/Manifest).
 
 El archivo `manifest.json` es el único archivo que toda extensión usando la API WebExtension debe contener necesariamente.
 
@@ -36,7 +36,7 @@ browser.runtime.getManifest().version;
 
 ## Compatibilidad con navegadores
 
-Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 {{Compat}}
 

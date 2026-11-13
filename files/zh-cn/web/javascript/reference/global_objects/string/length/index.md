@@ -3,11 +3,16 @@ title: String：length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 类型的 **`length`** 数据属性表示字符串的 UTF-16 码元长度。
 
-{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.length", "shorter")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
+```
 
 ## 值
 

@@ -38,7 +38,7 @@ L'analyseur va alors capturer les données audio en usant une Transformation de 
 
 Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.
 
-Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
+Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un {{jsxref("Float32Array")}} ou un {{jsxref("Uint8Array")}}, en fonction du type de données que vous traitez.
 
 Par exemple, disons que nous manipulons une fft de fréquence 2048. Nous retournons la valeur {{ domxref("AnalyserNode.frequencyBinCount") }}, qui correspond à la moitié de la fréquence, puis nous appelons la méthode Uint8Array() en passant frequencyBinCount comme argument pour la taille — c'est le nombre de points de données qui seront collectées pour cette fréquence.
 
@@ -60,7 +60,7 @@ Regardons quelques exemples précis.
 
 ## Création d'une forme d'onde / oscilloscope
 
-Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](http://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
+Pour visualiser un oscilloscope (chapeau à [Soledad Penadés](https://soledadpenades.com/) pour le code original sur [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), nous commençons par suivre la procédure standard décrite dans le paragraphe précédent pour mettre en place le tampon :
 
 ```js
 analyseur.fftSize = 2048;

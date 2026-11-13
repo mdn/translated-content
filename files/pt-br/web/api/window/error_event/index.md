@@ -5,10 +5,10 @@ slug: Web/API/Window/error_event
 
 {{ApiRef("HTML DOM")}}
 
-Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
+Um [event handler](/pt-BR/docs/Web/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
 
-- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
-- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
+- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
+- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
 
 Instalando um manipulador de eventos de erro global é útil para compilação automatizada de relatórios de erro.
 
@@ -42,7 +42,7 @@ element.onerror = function(event) { ... }
 
 ## Notas
 
-Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem diferente](/pt-BR/docs/Web/Security/Same-origin_policy), os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja [Erro do Firefox 363897](https://bugzil.la/363897)). Ao invés de exibir simplesmente **`"Script error." (erro de script)`**, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/script#crossorigin) no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados. Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.
+Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem diferente](/pt-BR/docs/Web/Security/Same-origin_policy), os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja [Erro do Firefox 363897](https://bugzil.la/363897)). Ao invés de exibir simplesmente **`"Script error." (erro de script)`**, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Reference/Elements/script#crossorigin) no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados. Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {

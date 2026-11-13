@@ -5,7 +5,7 @@ slug: Web/API/PerformanceElementTiming/identifier
 
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
-La propriété en lecture seule **`identifier`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) sur l'élément.
+La propriété en lecture seule **`identifier`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming) sur l'élément.
 
 ## Syntaxe
 
@@ -15,11 +15,11 @@ var identifier = PerformanceElementTiming.identifier;
 
 ### Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## Examples
 
-Dans cet exemple, la valeur de [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) est `big-image`. L'appel à `entry.indentifier` renvoie donc la chaîne de caractères `big-image`.
+Dans cet exemple, la valeur de [`elementtiming`](/fr/docs/Web/HTML/Reference/Attributes/elementtiming) est `big-image`. L'appel à `entry.indentifier` renvoie donc la chaîne de caractères `big-image`.
 
 ```html
 <img

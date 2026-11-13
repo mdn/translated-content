@@ -55,7 +55,7 @@ if (done is true) {
 // SyntaxError: missing ) after condition
 ```
 
-이 경우 올바른 [비교연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)를 사용해야 합니다. 그 예시로:
+이 경우 올바른 [비교연산자](/ko/docs/Web/JavaScript/Reference/Operators)를 사용해야 합니다. 그 예시로:
 
 ```js example-good
 if (done === true) {
@@ -66,5 +66,5 @@ if (done === true) {
 ## 더 보기
 
 - [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Comparison operators](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-- [Making decisions in your code — conditionals](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Comparison operators](/ko/docs/Web/JavaScript/Reference/Operators)
+- [Making decisions in your code — conditionals](/ko/docs/Learn_web_development/Core/Scripting/Conditionals)

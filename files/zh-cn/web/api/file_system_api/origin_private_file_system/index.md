@@ -2,7 +2,7 @@
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
 l10n:
-  sourceCommit: 2cba64f68aab9e233fecfc2bab8bea4118716c14
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 3. 调用 {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} 来请求用户的权限以保存更改。
 4. 如果用户接受了权限请求，更改就会保存回原文件。
 
-这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.com/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
+这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.cn/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
 
 因此，这些操作会相当缓慢。在你进行小规模的文本更新时没那么明显，但是当进行像 [SQLite](https://www.sqlite.org/wasm) 数据库更改这样的更显著、更大规模的文件更新时就会遇到性能问题。
 
@@ -76,7 +76,7 @@ const existingDirectoryHandle =
 
 1. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 以返回一个 {{domxref("FileSystemFileHandle")}} 对象。
 2. 调用 {{domxref("FileSystemFileHandle.createWritable()")}} 方法返回一个 {{domxref("FileSystemWritableFileStream")}} 对象，这是一种特化的 {{domxref("WritableStream")}} 对象。
-3. 调用 {{domxref("FileSystemWritableFilestream.write()")}} 来向其写入内容。
+3. 调用 {{domxref("FileSystemWritableFileStream.write()")}} 来向其写入内容。
 4. 使用 {{domxref("WritableStream.close()")}} 关闭流。
 
 ### 删除文件或目录
@@ -128,7 +128,7 @@ Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("高速文件.txt", {
+const fileHandle = await opfsRoot.getFileHandle("my-high-speed-file.txt", {
   create: true,
 });
 const syncAccessHandle = await fileHandle.createSyncAccessHandle();
@@ -194,4 +194,4 @@ accessHandle.truncate(4);
 
 ## 参见
 
-- web.dev 上的[源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- web.developers.google.cn 上的[源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

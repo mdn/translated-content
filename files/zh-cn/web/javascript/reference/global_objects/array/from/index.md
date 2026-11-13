@@ -3,13 +3,19 @@ title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 
-{{JSRef}}
-
 **`Array.from()`** 静态方法从[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)对象创建一个新的浅拷贝的数组实例。
 
 转换[异步的可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)对象到数组，可以使用 {{jsxref("Array.fromAsync()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 语法
 
@@ -181,7 +187,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## 参见
 
 - [`core-js` 中的 `Array.from` Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

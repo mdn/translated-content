@@ -11,7 +11,8 @@ l10n:
 
 ## コンストラクター
 
-> **メモ:** `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。派生クラスのコンストラクターはオプションオブジェクトとともに呼ばれるため、独自の初期化処理を行うことができます。詳しくはコンストラクターのページを参照してください。
+> [!NOTE]
+> `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。派生クラスのコンストラクターはオプションオブジェクトとともに呼ばれるため、独自の初期化処理を行うことができます。詳しくはコンストラクターのページを参照してください。
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : 新しい `AudioWorkletProcessor` オブジェクトのインスタンスを生成します。
@@ -45,7 +46,6 @@ _`AudioWorkletProcessor` インターフェイスはイベントに反応しま�
 
 1. 別のファイルを作ります。
 2. このファイルで以下を行います。
-
    1. `AudioWorkletProcessor` クラスを継承 ([「派生クラスの作成」の節](#%E6%B4%BE%E7%94%9F%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AE%E4%BD%9C%E6%88%90)を参照) し、その中で自身の {{domxref("AudioWorkletProcessor.process", "process()")}} メソッドを定義します。
    2. 作成した処理器を {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} メソッドで登録します。
 

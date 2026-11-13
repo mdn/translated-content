@@ -124,7 +124,8 @@ if (done) {
 }
 ```
 
-> **备注：** `close()` 是新自定义流的一部分，而不是我们在这个讨论的一部分。我们将在下一节阐述更多关于自定义流的内容。
+> [!NOTE]
+> `close()` 是新自定义流的一部分，而不是我们在这个讨论的一部分。我们将在下一节阐述更多关于自定义流的内容。
 
 如果 `done` 为 `true`，我们处理已经读取的新分块（包含在结果对象的 `value` 属性），然后再次调用 `pump()` 函数去读取下一个分块。
 
@@ -233,7 +234,7 @@ readableStream
 > [!NOTE]
 > 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
 
-自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
+自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("Window.setInterval", "setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
 
 ```js
 const stream = new ReadableStream({

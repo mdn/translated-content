@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d055553630e3043ad50742e1817650993216ddd8
 ---
 
-{{jsSidebar("Statements")}}
-
 **`export`** 声明用于从 JavaScript 模块中导出值。导出的值可通过 {{jsxref("Statements/import", "import")}} 声明或[动态导入](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)来将其导入其他程序。导入绑定的值会在导出该绑定的模块中发生变化——当模块更新其导出绑定的值时，更新将在其导入值中可见。
 
 要在源文件中使用 `export` 声明，运行时必须将该文件解释为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，可通过在 {{HTMLElement("script")}} 标记中添加 `type="module"` 或由其他模块导入来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
@@ -254,7 +252,7 @@ console.log(foo); // 4.555806215962888
 着重注意以下几点：
 
 - 在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理
-- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
+- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 错误。你需要通过 HTTP 服务器运行。
 
 ### 使用默认导出
 

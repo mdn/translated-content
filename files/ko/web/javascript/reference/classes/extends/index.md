@@ -7,7 +7,32 @@ slug: Web/JavaScript/Reference/Classes/extends
 
 **`extends`** 키워드는 클래스를 다른 클래스의 자식으로 만들기 위해 [class 선언](/ko/docs/Web/JavaScript/Reference/Statements/class) 또는 [class 식](/ko/docs/Web/JavaScript/Reference/Operators/class)에 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// Expected output: "19-Aug-1975"
+```
 
 ## 구문
 
@@ -82,7 +107,7 @@ class myDate extends Date {
 
 ### `null` 확장
 
-{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object.prototype")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
+{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
 
 ```js
 class nullExtends extends null {

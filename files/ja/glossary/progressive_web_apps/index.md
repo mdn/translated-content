@@ -1,5 +1,5 @@
 ---
-title: "Progressive web apps\_(プログレッシブウェブアプリ)"
+title: Progressive web apps (プログレッシブウェブアプリ)
 slug: Glossary/Progressive_web_apps
 ---
 
@@ -11,5 +11,5 @@ slug: Glossary/Progressive_web_apps
 
 ## 詳細情報
 
-- MDN 上の [アプリセンター](/ja/docs/Web/Apps)
+- MDN 上の [アプリセンター](/ja/docs/Web/Progressive_web_apps)
 - Google Developers 上の [Progressive web apps](https://developers.google.com/web/progressive-web-apps)

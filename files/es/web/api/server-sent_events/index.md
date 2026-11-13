@@ -45,7 +45,7 @@ Para saber cómo usar los eventos enviados por el servidor, consulta nuestro art
 
 ### Temas relacionados
 
-- [AJAX](/es/docs/Web/Guide/AJAX)
+- [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/es/docs/Web/JavaScript)
 - [WebSockets](/es/docs/Web/API/WebSockets_API)
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`loading`** 属性为{{Glossary("user agent", "用户代理")}}提供一个提示字符串，表示是否应在页面加载时立即加载 [iframe](/zh-CN/docs/Web/HTML/Element/iframe)，或者仅在需要时才加载。
+{{domxref("HTMLIFrameElement")}} 接口的 **`loading`** 属性为{{Glossary("user agent", "用户代理")}}提供一个提示字符串，表示是否应在页面加载时立即加载 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)，或者仅在需要时才加载。
 
 这可用于优化文档内容的加载。在页面加载时可见的 iframe 可以立即（即时）下载，而可能在初始页面加载时位于屏幕外的 iframe 可以懒加载——它们仅在将要出现在窗口的{{Glossary("visual viewport", "可视视口")}}中时下载。
 
@@ -62,6 +62,6 @@ frameDiv.appendChild(iframe);
 ## 参见
 
 - {{HTMLElement("iframe")}} 元素
-- MDN 学习区的 [Web 性能](/zh-CN/docs/Learn/Performance)
-- MDN 网络性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)
-- web.dev 上的[是时候懒加载屏幕外的 iframe 了！](https://web.dev/articles/iframe-lazy-loading)
+- MDN 学习区的 [Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)
+- MDN 网络性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)
+- web.developers.google.cn 上的[是时候懒加载屏幕外的 iframe 了！](https://web.developers.google.cn/articles/iframe-lazy-loading)

@@ -3,8 +3,6 @@ title: Array.fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 ---
 
-{{JSRef}}
-
 **`Array.fromAsync()`** 静态方法可以由一个[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)、[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)创建一个新的、浅拷贝的 `Array` 实例。
 
 ## 语法
@@ -194,7 +192,7 @@ function* generatorWithRejectedPromises() {
 ## 参见
 
 - [`core-js` 中 `Array.fromAsync` 的 polyfill](https://github.com/zloirock/core-js#arrayfromasync)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

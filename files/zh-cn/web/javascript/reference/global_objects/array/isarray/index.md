@@ -5,11 +5,23 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`Array.isArray()`** 静态方法用于确定传递的值是否是一个{{jsxref("Array", "数组", "", 1)}}。
 
-{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+{{InteractiveExample("JavaScript Demo: Array.isArray()")}}
+
+```js interactive-example
+console.log(Array.isArray([1, 3, 5]));
+// Expected output: true
+
+console.log(Array.isArray("[]"));
+// Expected output: false
+
+console.log(Array.isArray(new Array(5)));
+// Expected output: true
+
+console.log(Array.isArray(new Int16Array([15, 33])));
+// Expected output: false
+```
 
 ## 语法
 
@@ -89,5 +101,5 @@ arr instanceof Array; // false
 ## 参见
 
 - [`core-js` 中 `Array.isArray` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}

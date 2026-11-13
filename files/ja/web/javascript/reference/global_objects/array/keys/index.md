@@ -1,15 +1,27 @@
 ---
 title: Array.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`keys()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各インデックスのキーを含む、新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.keys()")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+const iterator = array.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// 予想される結果: 0
+// 予想される結果: 1
+// 予想される結果: 2
+```
 
 ## 構文
 
@@ -71,11 +83,12 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 
 ## 関連情報
 
-- [`Array.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.keys` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims による `Array.prototype.keys` のポリフィル](https://www.npmjs.com/package/array.prototype.keys)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.keys()")}}
-- [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

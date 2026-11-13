@@ -18,5 +18,4 @@ l10n:
 - [RFC 1939](https://datatracker.ietf.org/doc/html/rfc1939) (POP3 명세서)
 - [RFC 2449](https://datatracker.ietf.org/doc/html/rfc2449) (POP3 확장 메커니즘의 명세서)
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary):
-
   - {{Glossary("IMAP")}}

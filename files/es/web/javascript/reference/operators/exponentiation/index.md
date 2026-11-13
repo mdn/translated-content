@@ -9,7 +9,21 @@ l10n:
 
 El operador de **exponenciación (`**`)\*\* retorna el resultado de elevar el primer operando a la potencia del segundo operando. Es equivalente a {{jsxref("Math.pow()")}}, exepto que también acepta [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt) como operandos.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Sintaxis
 
@@ -19,7 +33,7 @@ x ** y
 
 ## Descripción
 
-El operador `**` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar los operandos a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una exponenciación BigInt si el operando se convirtió en un BigInt; de lo contrario, realiza la negación de número. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+El operador `**` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar los operandos a un valor numérico](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una exponenciación BigInt si el operando se convirtió en un BigInt; de lo contrario, realiza la negación de número. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
 
 Tanto para números como para BigInts, `0` elevado a una potencia positiva devuelve `0` y `0` elevado a una potencia de `0` devuelve `1`. Para números, `0` elevado a un número negativo devuelve `Infinity`, mientras que `-0` elevado a un número negativo devuelve `-Infinity`.
 

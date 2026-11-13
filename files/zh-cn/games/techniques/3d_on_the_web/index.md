@@ -5,8 +5,6 @@ l10n:
   sourceCommit: af17418720844a3db9825011a533d10722051bfc
 ---
 
-{{GamesSidebar}}
-
 为了 web 上丰富的游戏体验，一个好武器是 webGL，它可以在 HTML {{htmlelement("canvas")}} 元素上渲染。WebGL 基本上是 Web 的 OpenGL ES 2.0 版本——作为一个 JavaScript API，它提供了能构建丰富的交互式动画和游戏的工具。你可以使用硬件加速的 JavaScript 生成和呈现动态 3D 图像。
 
 ## 文档和浏览器支持

@@ -3,9 +3,25 @@ title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
 
-{{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
+{{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## Sintaxe
 
@@ -36,7 +52,7 @@ switch (expressão) {
 
 Se a condição for correspondida, o programa executa as instruções asssociadas. Se múltiplos casos corresponderem o valor, o primeiro caso que corresponder é selecionado, mesmo se os casos não forem iguais entre si.
 
-O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a [comparação de igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional `default`, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula `default`, o programa continua a execução da instrução seguindo para o final do `switch`. Por convenção, a cláusula default é a última, mas não é algo obrigatório.
+O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a [comparação de igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators), `===`) transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional `default`, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula `default`, o programa continua a execução da instrução seguindo para o final do `switch`. Por convenção, a cláusula default é a última, mas não é algo obrigatório.
 
 A instrução opcional [`break`](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) associada com cada `case` garante que o programa saia da condicional `switch` assim que a instrução correspondente for executada e executa a instrução que segue logo após o switch. Caso `break` seja omitido, o programa continua a execução para a próxima instrução dentro de `switch`.
 
@@ -99,7 +115,7 @@ switch (foo) {
 
 Referência para esta técnica abaixo:
 
-[- Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[- Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
 #### Multi-Caso - Operação Simples
 

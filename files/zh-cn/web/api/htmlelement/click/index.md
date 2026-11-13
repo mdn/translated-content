@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.click()`** 方法模拟鼠标单击元素。当在某个元素上调用时，会触发元素的 {{domxref("Element/click_event", "click")}} 事件（除非该元素设置了 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 属性）。
+**`HTMLElement.click()`** 方法模拟鼠标单击元素。当在某个元素上调用时，会触发元素的 {{domxref("Element/click_event", "click")}} 事件（除非该元素设置了 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性）。
 
 ## 语法
 
@@ -59,7 +59,6 @@ function myFunction() {
 ## 参见
 
 - 有关的事件处理器
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

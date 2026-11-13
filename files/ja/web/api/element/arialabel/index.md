@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaLabel`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値を反映し、現在の要素にラベル付けする文字列値を定義します。
+**`ariaLabel`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性の値を反映し、現在の要素にラベル付けする文字列値を定義します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例では、`close-button` という ID を持つ要素の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性には "Close" が設定されています。`ariaLabel` を使用して、値を "Close dialog" に更新します。
+この例では、`close-button` という ID を持つ要素の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性には "Close" が設定されています。`ariaLabel` を使用して、値を "Close dialog" に更新します。
 
 ```html
 <button aria-label="Close" id="close-button">X</button>

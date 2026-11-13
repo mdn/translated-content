@@ -1,6 +1,9 @@
 ---
-title: CSSGroupingRule.insertRule()
+title: "CSSGroupingRule: insertRule() メソッド"
+short-title: insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("CSSOM") }}
@@ -9,16 +12,16 @@ slug: Web/API/CSSGroupingRule/insertRule
 
 ## 構文
 
-```js
-insertRule(rule);
-insertRule(rule, index);
+```js-nolint
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### 引数
 
-- rule
+- `rule`
   - : 文字列です。
-- index{{optional_inline}}
+- `index` {{optional_inline}}
   - : 省略可能で、このルールを挿入する位置です。既定値は 0 です。
 
 ### 返値

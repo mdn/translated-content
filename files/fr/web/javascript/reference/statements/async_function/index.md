@@ -3,13 +3,30 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
 
-{{jsSidebar("Statements")}}
-
 Une fonction asynchrone est une fonction précédée par le mot-clé `async`, et qui peut contenir le mot-clé `await`. `async` et `await` permettent un comportement asynchrone, basé sur une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)), écrite de façon simple, et évitant de configurer explicitement les chaînes de promesse.
 
 Les fonctions asynchrones peuvent également être définies comme des [expressions](/fr/docs/Web/JavaScript/Reference/Operators/async_function).
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 ## Syntaxe
 
@@ -34,7 +51,7 @@ Une promesse ({{jsxref("Promise")}}) qui sera résolue avec la valeur renvoyée 
 
 ## Description
 
-Une fonction `async` peut contenir une expression {{jsxref("Opérateurs/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée `Promise`. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.
+Une fonction `async` peut contenir une expression {{jsxref("Operators/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée `Promise`. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.
 
 Le mot-clé `await` est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
@@ -228,4 +245,4 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

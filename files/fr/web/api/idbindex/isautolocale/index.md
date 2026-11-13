@@ -5,7 +5,7 @@ slug: Web/API/IDBIndex/isAutoLocale
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#Paramètres)).
+La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#paramètres)).
 
 ## Syntaxe
 
@@ -82,7 +82,7 @@ Actuellement, cette propriété ne fait partie d'aucune spécification.
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

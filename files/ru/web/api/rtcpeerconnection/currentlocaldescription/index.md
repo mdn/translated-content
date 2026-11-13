@@ -55,4 +55,4 @@ else {
 
 - {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/ru/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ru/docs/Web/API/WebRTC_API)

@@ -38,13 +38,13 @@ Une action de page est une icône que votre extension ajoute dans la barre d'URL
 
 Votre extension peut éventuellement fournir une fenêtre contextuelle associée dont le contenu est spécifié en utilisant HTML, CSS et JavaScript.
 
-Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) quand l'utilisateur clique sur l'icône.
+Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) quand l'utilisateur clique sur l'icône.
 
-Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/Add-ons/WebExtensions/API/pageAction).
+Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction).
 
 Les actions de page sont comme les actions de navigateur, mais elles sont associées à des pages Web particulières et non au navigateur dans son ensemble. Si une action est seulement pertinente sur certaines pages, vous devez utiliser une action de page et l'afficher uniquement sur les pages pertinentes. Si une action est pertinente pour toutes les pages ou pour le navigateur lui-même, utilisez une action de navigateur.
 
-Alors que les actions du navigateur sont affichées par défaut, les actions de page sont cachées par défaut. Elles peuvent être affichées pour un onglet particulier en appelant [`pageAction.show()`](/fr/Add-ons/WebExtensions/API/pageAction/show), en passant dans l'ID de l'onglet. Vous pouvez également modifier ce comportement par défaut en utilisant la propriété `show_matches`.
+Alors que les actions du navigateur sont affichées par défaut, les actions de page sont cachées par défaut. Elles peuvent être affichées pour un onglet particulier en appelant [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show), en passant dans l'ID de l'onglet. Vous pouvez également modifier ce comportement par défaut en utilisant la propriété `show_matches`.
 
 ## Syntaxe
 
@@ -135,29 +135,23 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant
           des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          {{HTMLElement("link")}}
           et
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >, tout comme une page Web normale. Cependant, n'utilisez pas
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >
+          {{HTMLElement("script")}}, tout comme une page Web normale. Cependant, n'utilisez pas
+          {{HTMLElement("script")}}
           avec du code intégré, car vous obtiendrez une erreur de politique de
           violation de contenu. Au lieu de cela,
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >
+          {{HTMLElement("script")}}
           doit utiliser l'attribut
-          <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour
+          {{HTMLElement("script")}} pour
           charger un fichier script séparé.
         </p>
         <p>
           Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans la fenêtre contextuelle peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (à
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs WebExtension</a> (à
           condition, bien sûr, que l'extension ait les
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
             >permissions</a
           >
           appropriées).
@@ -165,7 +159,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -182,7 +176,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -197,7 +191,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Masquer l'action de page par défaut pour les pages dont les URLs
           correspondent des
-          <a href="/fr/Add-ons/WebExtensions/match_patterns"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >modèles de correspondance</a
           >
           données.
@@ -284,6 +278,6 @@ Une action de page avec une icône, un titre et une fenêtre contextuelle. Cette
 
 ## Voir aussi
 
-- [`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

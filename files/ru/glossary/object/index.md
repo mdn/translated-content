@@ -14,4 +14,4 @@ slug: Glossary/Object
 ### Общие сведения
 
 - {{jsxref("Object")}} в [справочнике JavaScript](/ru/docs/Web/JavaScript/Reference)
-- [Object data structures in JavaScript](/ru/docs/Web/JavaScript/Data_structures#Objects)
+- [Object data structures in JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures#objects)

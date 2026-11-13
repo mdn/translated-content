@@ -9,7 +9,7 @@ La propiedad de sólo-lectura **`Event.type`** devuelve una cadena de texto que 
 
 El argumento `event` de {{ domxref("EventTarget.addEventListener()") }} y {{ domxref("EventTarget.removeEventListener()") }} no es sensible a mayúsculas.
 
-Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/Reference/Events)
+Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/API/Document_Object_Model/Events)
 
 ## Sintaxis
 

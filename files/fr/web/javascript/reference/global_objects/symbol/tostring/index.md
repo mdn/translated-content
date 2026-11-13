@@ -3,11 +3,23 @@ title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 
-{{JSRef}}
-
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet `Symbol`.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+
+```js interactive-example
+console.log(Symbol("desc").toString());
+// Expected output: "Symbol(desc)"
+
+console.log(Symbol.iterator.toString());
+// Expected output: "Symbol(Symbol.iterator)
+
+console.log(Symbol.for("foo").toString());
+// Expected output: "Symbol(foo)"
+
+// console.log(Symbol('foo') + 'bar');
+// Expected output: Error: Can't convert symbol to string
+```
 
 ## Syntaxe
 

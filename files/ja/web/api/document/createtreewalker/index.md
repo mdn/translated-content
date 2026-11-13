@@ -21,16 +21,14 @@ createTreeWalker(root, whatToShow, filter)
 ### 引数
 
 - `root`
-
   - : {{domxref("Node")}} で、{{domxref("TreeWalker.currentNode")}} の初期値である`TreeWalker` オブジェクトのルートを表します。
 
 - `whatToShow` {{optional_inline}}
-
   - : `unsigned long` で、[`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter) の定数プロパティを組み合わせて作成したビットマスクを表します。特定の型のノードをフィルタリングする便利な方法です。既定値は `0xFFFFFFFF` で、これは `NodeFilter.SHOW_ALL` 定数を表します。
 
     | 定数                                                     | 数値         | 説明                                                      |
     | -------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | すべて絵のノードを出力します。                            |
+    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | すべてのノードを出力します。                              |
     | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`        | {{domxref("Attr")}} ノードを出力します。                  |
     | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`        | {{domxref("CDATASection")}} ノードを出力します。          |
     | `NodeFilter.SHOW_COMMENT`                                | `0x80`       | {{domxref("Comment")}} ノードを出力します。               |
@@ -44,12 +42,11 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`       | {{domxref("ProcessingInstruction")}} ノードを出力します。 |
     | `NodeFilter.SHOW_TEXT`                                   | `0x4`        | {{domxref("Text")}} ノードを出力します。                  |
 
-    > **メモ:** `Attr` ノードの親は常に `null` であるため、{{DOMXref("TreeWalker.nextNode()")}} や {{DOMXref("TreeWalker.previousNode()")}} が `Attr` ノードを返すことはありません。`Attr` ノードを走査するには、{{DOMXref("Element.attributes")}} を使用してください。
+    > [!NOTE]
+    > `Attr` ノードの親は常に `null` であるため、{{DOMXref("TreeWalker.nextNode()")}} や {{DOMXref("TreeWalker.previousNode()")}} が `Attr` ノードを返すことはありません。`Attr` ノードを走査するには、{{DOMXref("Element.attributes")}} を使用してください。
 
 - `filter` {{optional_inline}}
-
   - : コールバック関数または `acceptNode()` メソッドを持つオブジェクトで、`NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT`、`NodeFilter.FILTER_SKIP` のいずれかを返します。この関数またはメソッドは、`whatToShow` フラグによって含まれるものとして受け入れられた `root` を基点とするサブツリーの各ノードに対して呼び出され、反復可能オブジェクトのリストに含めるかどうかを決定します。
-
     - 返値が `NodeFilter.FILTER_ACCEPT` の場合、このノードが含まれます。
     - 返値が `NodeFilter.FILTER_REJECT` の場合、このノードの配下のサブツリーにあるすべてのノードが含まれません。
     - 返値が `NodeFilter.FILTER_SKIP` の場合、このノードは含まれません。

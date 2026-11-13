@@ -1,5 +1,5 @@
 ---
-title: 使用 Web Workers
+title: 使用 Web Worker
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
 
@@ -9,16 +9,16 @@ Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的�
 
 本文详细介绍了如何使用 web worker。
 
-## Web Workers API
+## Web Worker API
 
 一个 worker 是使用一个构造函数创建的一个对象（例如 {{domxref("Worker.Worker", "Worker()")}}）运行一个命名的 JavaScript 文件——这个文件包含将在 worker 线程中运行的代码; worker 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}。因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}} 获取全局作用域（而不是{{domxref("window.self","self")}}）将返回错误。
 
 在专用 worker 的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了 worker 的上下文（专用 worker 是指标准 worker 仅在单一脚本中被使用；共享 worker 的上下文是 {{domxref("SharedWorkerGlobalScope")}} 对象）。一个专用 worker 仅能被首次生成它的脚本使用，而共享 worker 可以同时被多个脚本使用。
 
 > [!NOTE]
-> 参见 [Web Workers API 落地页](/zh-CN/docs/Web/API/Web_Workers_API)以获取 worker 的参考文档和更多指引。
+> 参见 [Web Worker API 落地页](/zh-CN/docs/Web/API/Web_Workers_API)以获取 worker 的参考文档和更多指引。
 
-在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用 {{domxref("window")}} 对象的默认方法和属性。但是你可以使用大量 `window` 对象之下的东西，包括 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)，以及 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 等数据存储机制。查看 [Web Workers 可以使用的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) 获取详情。
+在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用 {{domxref("window")}} 对象的默认方法和属性。但是你可以使用大量 `window` 对象之下的东西，包括 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)，以及 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 等数据存储机制。查看 [Web Worker 可以使用的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)获取详情。
 
 workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 `postMessage()` 方法发送各自的消息，使用 `onmessage` 事件处理函数来响应消息（消息被包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
 
@@ -136,7 +136,7 @@ importScripts("foo.js", "bar.js"); /* 引入两个脚本 */
 importScripts("//example.com/hello.js"); /* 你可以从其他来源导入脚本 */
 ```
 
-浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码（包括使用 {{domxref("setTimeout()")}} 异步执行的代码）依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
+浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码（包括使用 {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 异步执行的代码）依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
 
 > [!NOTE]
 > 脚本的下载顺序不固定，但执行时会按照传入 `importScripts()` 中的文件名顺序进行。这个过程是同步完成的；直到所有脚本都下载并运行完毕，`importScripts()` 才会返回。
@@ -225,7 +225,7 @@ Content-Security-Policy: script-src 'self'
 
 这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 `eval()` 的。
 
-为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身设置 [Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 响应标头。
+为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身设置 [Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) 响应标头。
 
 有一个例外情况，即 worker 脚本的源如果是一个全局性的唯一的标识符（例如，它的 URL 协议为 data 或 blob），worker 则会继承创建它的 document 或者 worker 的 CSP。
 
@@ -812,25 +812,25 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 你可以在 web worker 中使用大多数的标准 JavaScript 特性，包括：
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 和 {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} 和 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 在一个 worker 中最主要的你*不能*做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
 > [!NOTE]
-> 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/zh-CN/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
+> 你可以使用网站测试一个方法是否对 worker 可用：<https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 {{domxref("EventSource")}}，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
 
 > [!NOTE]
-> 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
+> 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。
 
 ## 规范
 
 {{Specifications}}
 
-## 相关链接
+## 参见
 
-- [`Worker`](/zh-CN/docs/Web/API/Worker) 接口
-- [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker) 接口
-- [worker 可用的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 接口
+- {{domxref("Worker")}} 接口
+- {{domxref("SharedWorker")}} 接口
+- [worker 可用的方法](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- {{domxref("OffscreenCanvas")}} 接口

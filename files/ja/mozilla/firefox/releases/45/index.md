@@ -3,8 +3,6 @@ title: Firefox 45 for developers
 slug: Mozilla/Firefox/Releases/45
 ---
 
-{{FirefoxSidebar}}
-
 Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。Firefox 45 は、米国時間 2016 年 3 月 8 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -30,7 +28,6 @@ Firefox の最新の開発者向け機能を試すには、 Firefox Developer Ed
 
 - {{cssxref("word-spacing")}} でパーセント値に対応しました ([Firefox バグ 1038663](https://bugzil.la/1038663))。
 - CSS グリッドの実装が向上し、実験的な状態ではないと判断しました。これらを Nightly および Developer Edition で既定で有効にしましたが、Beta および Release では無効です ([Firefox バグ 1000592](https://bugzil.la/1000592))。
-
   - 溝 (`grid-column-gap`, `grid-row-gap`, `grid-gap` プロパティ) を実装しました ([Firefox バグ 1176792](https://bugzil.la/1176792))。
   - グリッドアイテムの最小サイズ ({{cssxref("min-width")}} や {{cssxref("min-height")}} の値 `auto` の特殊な動作) を実装しました ([Firefox バグ 1176775](https://bugzil.la/1176775))。
   - グリッドレイアウトで {{cssxref("align-self")}} および {{cssxref("justify-self")}} に対応しました ([Firefox バグ 1151213](https://bugzil.la/1151213))。
@@ -43,14 +40,13 @@ Firefox の最新の開発者向け機能を試すには、 Firefox Developer Ed
 - {{cssxref("float")}} および {{cssxref("clear")}} で、値 `inline-start` および `inline-end` に対応しました ([Firefox バグ 1122918](https://bugzil.la/1122918))。Nightly、Aurora (Dev edition)、Firefox OS では、既定で有効です。Release および Beta で有効化するには設定項目 `layout.css.float-logical-values.enabled` を `true` に変更してください。
 - {{cssxref("text-emphasis")}}、{{cssxref("text-emphasis-style")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-emphasis-position")}} を実装しました。既定値は無効です (有効化するには `layout.css.text-emphasis.enabled` を true に設定してください) ([Firefox バグ 1040668](https://bugzil.la/1040668))。
 - ウェブの互換性のためにいくつかの `-webkit` 接頭辞付きプロパティおよび値に対応しました設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です。
-
   - ウェブ互換性のため、 `-webkit-backface-visibility`, `-webkit-perspective`, `-webkit-perspective-origin` を追加しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ([Firefox バグ 1179444](https://bugzil.la/1179444))。
 
 ### JavaScript
 
 - ES2015 (ES6) の [クラス](/ja/docs/Web/JavaScript/Reference/Classes) を既定で有効にしました ([Firefox バグ 1197932](https://bugzil.la/1197932))。
-- {{jsxref("Operators/Expression_closures", "式クロージャ", "", 1)}} が非推奨になり、コンソールに警告を表示するようになりました ([Firefox バグ 995610](https://bugzil.la/995610))。
-- {{jsxref("String.prototype.replace")}} は関数の引数を実行した後、{{jsxref("Global_Objects/RegExp/n", "RegExp の静的プロパティ", "", 1)}} に値を復元しないようになりました ([Firefox バグ 1226936](https://bugzil.la/1226936))。
+- {{jsxref("Deprecated_and_obsolete_features", "式クロージャ", "", 1)}} が非推奨になり、コンソールに警告を表示するようになりました ([Firefox バグ 995610](https://bugzil.la/995610))。
+- {{jsxref("String.prototype.replace")}} は関数の引数を実行した後、{{jsxref("RegExp.n", "RegExp の静的プロパティ", "", 1)}} に値を復元しないようになりました ([Firefox バグ 1226936](https://bugzil.la/1226936))。
 - {{jsxref("Math.random()")}} を XorShift128+ アルゴリズムにアップグレードしました ([Firefox バグ 322529](https://bugzil.la/322529))。
 
 ### インターフェイス/API/DOM

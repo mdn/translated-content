@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 
 **`Number.MAX_VALUE`** 속성은 JavaScript가 표현할 수 있는 제일 큰 양의 숫자 값을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+
+```js interactive-example
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return "Process as Infinity";
+  }
+  return x * y;
+}
+
+console.log(multiply(1.7976931348623157e308, 1));
+// Expected output: 1.7976931348623157e+308
+
+console.log(multiply(1.7976931348623157e308, 2));
+// Expected output: "Process as Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 

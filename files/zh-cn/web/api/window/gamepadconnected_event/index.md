@@ -10,7 +10,7 @@ slug: Web/API/Window/gamepadconnected_event
 ## 基本信息
 
 - 文档
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
+  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
 - 类型
   - : 事件
 - 冒泡
@@ -26,7 +26,7 @@ slug: Web/API/Window/gamepadconnected_event
 
 | Property          | Type                       | Description                                               |
 | ----------------- | -------------------------- | --------------------------------------------------------- |
-| `target` 只读     | {{domxref("DOMString")}}   | 事件目标（DOM 树中的顶层，即 document.documentElement）。 |
+| `target` 只读     | {{jsxref("String")}}       | 事件目标（DOM 树中的顶层，即 document.documentElement）。 |
 | `type` 只读       | {{domxref("EventTarget")}} | 事件的类型。                                              |
 | `bubbles` 只读    | {{jsxref("Boolean")}}      | 事件是否正常冒泡。                                        |
 | `cancelable` 只读 | {{jsxref("Boolean")}}      | 事件是否可以取消。                                        |
@@ -48,8 +48,8 @@ window.addEventListener("gamepadconnected", function (event) {
 
 ## 相关事件
 
-- [gamepaddisconnected](/zh-CN/docs/Web/Reference/Events/gamepaddisconnected)
+- [gamepaddisconnected](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event)
 
 ## 还可以参考
 
-- [Using Gamepad API](/zh-CN/docs/API/Gamepad/Using_Gamepad_API)
+- [Using Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

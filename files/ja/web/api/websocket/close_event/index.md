@@ -3,10 +3,10 @@ title: "WebSocket: close イベント"
 short-title: close
 slug: Web/API/WebSocket/close_event
 l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。
 
@@ -43,7 +43,7 @@ _下記に示したプロパティに加えて、親インターフェイスで�
 
 ```js
 exampleSocket.addEventListener("close", (event) => {
-  console.log("The connection has been closed successfully.");
+  console.log("この接続を閉じることに成功しました。");
 });
 ```
 
@@ -51,7 +51,7 @@ exampleSocket.addEventListener("close", (event) => {
 
 ```js
 exampleSocket.onclose = (event) => {
-  console.log("The connection has been closed successfully.");
+  console.log("この接続を閉じることに成功しました。");
 };
 ```
 

@@ -1,30 +1,46 @@
 ---
-title: String.prototype.padStart()
+title: "String : méthode padStart()"
+short-title: padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode **`padStart()`** des valeurs {{JSxRef("String")}} remplit cette chaîne de caractères avec une chaîne de caractères donnée (répétée et/ou tronquée, si nécessaire) afin que la chaîne de caractères résultante ait une longueur donnée. Le remplissage est appliqué depuis le début de cette chaîne de caractères.
 
-La méthode **`padStart()`** permet de compléter la chaîne courante avec une chaîne de caractères donnée afin d'obtenir une chaîne de longueur fixée. Pour atteindre cette longueur, la chaîne complémentaire peut être répétée. La chaîne courante est complétée depuis le début.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.padStart()")}}
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+```js interactive-example
+const str = "5";
+
+console.log(str.padStart(2, "0"));
+// Résultat attendu : "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Résultat attendu : "************5581"
+```
 
 ## Syntaxe
 
-```js
-str.padStart(longueurCible [, chaîneComplémentaire])
+```js-nolint
+padStart(targetLength)
+padStart(targetLength, padString)
 ```
 
 ### Paramètres
 
 - `longueurCible`
   - : La longueur de la chaîne qu'on souhaite obtenir. Si la longueur indiquée est inférieure à celle de la chaîne courante, cette dernière est renvoyée telle quelle.
-- `chaîneComplémentaire` {{optional_inline}}
+- `chaîneComplémentaire` {{Optional_Inline}}
   - : La chaîne de caractères avec laquelle on veut compléter la chaîne courante. Si cette chaîne est trop longue, on prendra uniquement le début (la partie la plus à gauche quand la langue s'écrit de gauche à droite). La valeur par défaut de ce paramètre est l'espace " " (U+0020). Si cette chaîne est trop courte, elle sera répétée.
 
 ### Valeur de retour
 
-Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle indiquée, complétée avec la chaîne fournie au début de la chaîne courante.
+Une chaîne de caractères ({{JSxRef("String")}}) dont la longueur est celle indiquée, complétée avec la chaîne fournie au début de la chaîne courante.
 
 ## Exemples
 
@@ -46,4 +62,4 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.padEnd()")}}
+- {{JSxRef("String.prototype.padEnd()")}}

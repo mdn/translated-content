@@ -1,15 +1,24 @@
 ---
 title: Number.EPSILON
+short-title: EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Number.EPSILON`** は静的データプロパティで、 1 と 1 より大きな最小の浮動小数点数の差を表します。
 
-**`Number.EPSILON`** プロパティは、1 と 1 より大きな最小の浮動小数点数の差を表します。
+{{InteractiveExample("JavaScript デモ: Number.EPSILON")}}
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// 予想される結果: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// 予想される結果: true
+```
 
 ## 値
 
@@ -76,7 +85,7 @@ const z = 2000.3;
 console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 ```
 
-大きさだけでなく、入力の*精度*も考慮することが重要です。例えば、数値がフォーム入力から収集され、入力値が `0.1` のステップでしか調整できない場合（すなわち [`<input type="number" step="0.1">`](/ja/docs/Web/HTML/Attributes/step)）、データは `0.1` の精度しかないので通常は `0.01` など、はるかに大きな許容差を認めることを意味します。
+大きさだけでなく、入力の*精度*も考慮することが重要です。例えば、数値がフォーム入力から収集され、入力値が `0.1` のステップでしか調整できない場合（すなわち [`<input type="number" step="0.1">`](/ja/docs/Web/HTML/Reference/Attributes/step)）、データは `0.1` の精度しかないので通常は `0.01` など、はるかに大きな許容差を認めることを意味します。
 
 > [!NOTE]
 > 有益な教訓：等値検査の閾値として、単純に `Number.EPSILON` を使用しないでくださ い。比較する数値の大きさや精度に適した閾値を使用してください。
@@ -92,4 +101,5 @@ console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 ## 関連情報
 
 - [`Number.EPSILON` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- 所属先の {{jsxref("Number")}} オブジェクト
+- [es-shims による `Number.EPSILON` のポリフィル](https://www.npmjs.com/package/es-constants)
+- {{jsxref("Number")}}

@@ -43,7 +43,7 @@ source = offlineCtx.createBufferSource();
 ```
 
 > [!NOTE]
-> 想要获取完整的例子，请看我们在 Github 仓库的 [offline-audio-context-promise](http://mdn.github.io/offline-audio-context-promise/) （也可以看 [源代码](https://github.com/mdn/offline-audio-context-promise) ）
+> 想要获取完整的例子，请看我们在 Github 仓库的 [offline-audio-context-promise](https://mdn.github.io/offline-audio-context-promise/) （也可以看 [源代码](https://github.com/mdn/offline-audio-context-promise) ）
 
 ## 规范
 

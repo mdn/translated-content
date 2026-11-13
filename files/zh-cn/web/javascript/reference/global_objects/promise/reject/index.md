@@ -3,11 +3,22 @@ title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
 
-{{JSRef}}
-
 **`Promise.reject()`** 静态方法返回一个已拒绝（rejected）的 `Promise` 对象，拒绝原因为给定的参数。
 
-{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+
+```js interactive-example
+function resolved(result) {
+  console.log("Resolved");
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+Promise.reject(new Error("fail")).then(resolved, rejected);
+// Expected output: Error: fail
+```
 
 ## 语法
 

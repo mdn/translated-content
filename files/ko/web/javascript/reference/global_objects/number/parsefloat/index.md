@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 
 **`Number.parseFloat()`** 메서드는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다. 숫자를 파싱할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: 0
+```
 
 ## 구문
 
@@ -30,13 +45,13 @@ Number.parseFloat(string);
 
 ### Number.parseFloat vs parseFloat
 
-`Number.parseFloat()`은 전역 {{jsxref("parseFloat", "parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.
+`Number.parseFloat()`은 전역 {{jsxref("parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.
 
 ```js
 Number.parseFloat === parseFloat; // true
 ```
 
-`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.
+`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat()")}}를 참고하세요.
 
 ## 명세
 
@@ -50,4 +65,4 @@ Number.parseFloat === parseFloat; // true
 
 - `core-js`의 [`Number.parseFloat` 폴리필](https://github.com/zloirock/core-js#ecmascript-number)
 - 이 메서드가 속한 {{jsxref("Number")}} 객체
-- 전역 {{jsxref("parseFloat", "parseFloat()")}} 메서드
+- 전역 {{jsxref("parseFloat()")}} 메서드

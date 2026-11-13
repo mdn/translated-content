@@ -3,11 +3,22 @@ title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
 
-{{JSRef}}
-
 **`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
-{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setSeconds(42);
+
+console.log(event.getSeconds());
+// Expected output: 42
+
+console.log(event);
+// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
+// Note: your timezone may vary
+```
 
 ## 语法
 

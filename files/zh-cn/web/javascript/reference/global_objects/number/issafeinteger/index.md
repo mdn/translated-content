@@ -3,11 +3,24 @@ title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 
-{{JSRef}}
-
 **`Number.isSafeInteger()`** 静态方法判断提供的值是否是一个*安全整数*。
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 ## 语法
 

@@ -9,7 +9,20 @@ l10n:
 
 {{jsxref("Set")}} 인스턴스의 **`size`** 접근자 속성은 이 집합의 (고유한) 요소의 수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+
+```js interactive-example
+const set1 = new Set();
+const object1 = {};
+
+set1.add(42);
+set1.add("forty two");
+set1.add("forty two");
+set1.add(object1);
+
+console.log(set1.size);
+// Expected output: 3
+```
 
 ## 설명
 

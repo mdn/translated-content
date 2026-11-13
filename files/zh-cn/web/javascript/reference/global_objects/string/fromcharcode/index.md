@@ -3,11 +3,14 @@ title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 
-{{JSRef}}
-
 **`String.fromCharCode()`** 静态方法返回由指定的 UTF-16 码元序列创建的字符串。
 
-{{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCharCode()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCharCode(189, 43, 190, 61));
+// Expected output: "½+¾="
+```
 
 ## 语法
 

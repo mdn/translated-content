@@ -11,12 +11,12 @@ l10n:
 
 ## Значение
 
-{{domxref("ReadableStream")}} или [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null) для объектов `Response`, [созданных](/ru/docs/Web/API/Response/Response) с пустым свойством [`body`](/ru/docs/Web/API/Response/Response#body), и для [HTTP ответов](/ru/docs/Web/HTTP/Messages#http_responses) без [тела](/ru/docs/Web/HTTP/Messages#body_2).
+{{domxref("ReadableStream")}} или [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null) для объектов `Response`, [созданных](/ru/docs/Web/API/Response/Response) с пустым свойством [`body`](/ru/docs/Web/API/Response/Response#body), и для [HTTP ответов](/ru/docs/Web/HTTP/Guides/Messages#http_responses) без [тела](/ru/docs/Web/HTTP/Guides/Messages#body_2).
 
 Поток представляет собой [поток байтов для чтения](/ru/docs/Web/API/Streams_API/Using_readable_byte_streams), который поддерживает чтение без копирования с использованием {{domxref("ReadableStreamBYOBReader")}}.
 
 > [!NOTE]
-> В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `null` для ответов без тела (например, для ответов на запросы [`HEAD`](/ru/docs/Web/HTTP/Methods/HEAD) или [`204 No Content`](/ru/docs/Web/HTTP/Status/204)).
+> В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `null` для ответов без тела (например, для ответов на запросы [`HEAD`](/ru/docs/Web/HTTP/Reference/Methods/HEAD) или [`204 No Content`](/ru/docs/Web/HTTP/Reference/Status/204)).
 
 ## Примеры
 

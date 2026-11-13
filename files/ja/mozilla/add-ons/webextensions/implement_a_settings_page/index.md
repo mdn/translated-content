@@ -13,7 +13,8 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
 - HTML からインクルードされる、ストレージから設定ページに投入し、ユーザーが変更した時に保存された設定を更新するスクリプトを書く。
 - HTML ファイルのパスを manifest.json の [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) キーに設定する。これにより、HTML 文書が、拡張機能の名前や説明と共に、文書ブラウザーのアドオンマネージャーに表示される。
 
-> **メモ:** [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
+> [!NOTE]
+> [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
 
 ## 簡単な拡張機能
 
@@ -46,7 +47,7 @@ document.body.style.border = "10px solid blue";
 
 これは単にページに青い枠をつけます。
 
-[この拡張機能をインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)してテストします — お好みのあらゆるウェブページを開きます:
+[この拡張機能をインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)してテストします — お好みのあらゆるウェブページを開きます:
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -150,7 +151,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 ローカルストレージがふさわしいと感じる場合、代わりにローカルストレージに設定値を保存できます。
 
 > [!NOTE]
-> Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーに拡張機能の ID をセットしておく必要があります。
+> Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに拡張機能の ID をセットしておく必要があります。
 
 最後に、ストレージから枠の色を読むのに "borderify.js" を更新します:
 
@@ -186,7 +187,7 @@ settings/
 
 いま、次を行ってみます:
 
-- [拡張機能を再読み込み](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [拡張機能を再読み込み](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
 - ウェブページを読み込む
 - 設定ページを開いて枠の色を変える
 - ウェブページを再読み込みして違いを見る
@@ -201,5 +202,4 @@ Firefox で設定ページにアクセスするには about:addons に移動し�
 - [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API のリファレンス文書
 - 拡張機能から直接設定ページを開くには [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API を使う
 - 設定ページの例:
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

@@ -9,7 +9,22 @@ l10n:
 
 **`BigInt.asIntN()`** 정적 메서드는 `BigInt` 값을 주어진 최하위 비트 수로 자르고 해당 값을 부호 있는 정수로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.asIntN()")}}
+
+```js interactive-example
+const I64_CEIL = 2n ** 63n;
+
+console.log(BigInt.asIntN(64, I64_CEIL - 1n));
+// 9223372036854775807n (2n ** 64n - 1n, the maximum non-wrapping value)
+console.log(BigInt.asIntN(64, I64_CEIL));
+// -9223372036854775808n (wraps to min value)
+console.log(BigInt.asIntN(64, I64_CEIL + 1n));
+// -9223372036854775807n (min value + 1n)
+console.log(BigInt.asIntN(64, I64_CEIL * 2n));
+// 0n (wrapped around to zero)
+console.log(BigInt.asIntN(64, -I64_CEIL * -42n));
+// 0n (also wraps on negative multiples)
+```
 
 ## 구문
 
@@ -51,7 +66,8 @@ BigInt.asIntN(bits, bigint)
 ===>      1001 (이진수) = -7n
 ```
 
-> **참고:** `BigInt` 값은 언제나 이진수 2의 보수로 인코딩됩니다.
+> [!NOTE]
+> `BigInt` 값은 언제나 이진수 2의 보수로 인코딩됩니다.
 
 {{jsxref("Number.prototype.toExponential()")}}와 같은 유사한 언어 API와 달리 `asIntN`은 {{jsxref("BigInt")}}의 정적 속성이므로 항상 BigInt 값의 메서드가 아닌 `BigInt.asIntN()`으로 사용합니다. `asIntN()`을 "표준 라이브러리 함수"로 노출하면 [asm.js와의 상호 운용](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)을 할 수 있습니다.
 

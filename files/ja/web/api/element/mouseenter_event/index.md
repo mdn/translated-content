@@ -3,12 +3,14 @@ title: "Element: mouseenter イベント"
 short-title: mouseenter
 slug: Web/API/Element/mouseenter_event
 l10n:
-  sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
 
-**`mouseenter`** イベントは、ポインティングデバイス (通常はマウス) のホットスポットが最初にイベントが発行された要素の中に移動したときにその要素 ({{domxref("Element")}}) に発行されます。
+**`mouseenter`** イベントは、ポインティングデバイス（ふつうはマウス）のホットスポットが最初にイベントが発行された要素の中に移動したときにその要素 ({{domxref("Element")}}) に発行されます。
+
+「要素の中に移動」とは、 DOM ツリーにおける要素の位置を指し、視覚的な位置を指すものではないことに注意してください。例えば、子要素が親要素の外側に配置されるように位置指定されている場合、たとえポインターが親要素の境界外にあるとしても、子要素への移動により親要素で `mouseenter` がトリガーされます。
 
 ## 構文
 
@@ -22,7 +24,7 @@ onmouseenter = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -37,9 +39,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -63,9 +65,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : もしあれば、イベントの副ターゲットです。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -92,13 +94,13 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 ![mouseover の動作図](mouseover.png)
 DOM ツリーの最も深い要素に 1 つの `mouseover` イベントが送信され、ハンドラーによってキャンセルされるかルートに達するまで階層を上にバブリングします。
 
-深い階層では、数多くの `mouseover` イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は `mouseenter` イベントを待ち受けした方が優れています。
+深い階層では、数多くの `mouseenter` イベントが送信され、とても重くなり、著しい性能の問題を引き起こすことがあります。このような場合は `mouseover` イベントを待ち受けした方が優れています。
 
 対応する（マウスがコンテンツ領域から出たときに要素に発生する）`mouseleave` と組み合わせると、 `mouseenter` イベントは CSS の {{cssxref(':hover')}} 擬似クラスととても似た方法で動作します。
 
 ## 例
 
-[`mouseover`](/ja/docs/Web/API/Element/mouseover_event#example) のドキュメントには、`mouseover` と `mouseenter` の間の違いを説明する例があります。
+[`mouseover`](/ja/docs/Web/API/Element/mouseover_event#例)のドキュメントには、`mouseover` と `mouseenter` の間の違いを説明する例があります。
 
 ### mouseenter
 
@@ -175,7 +177,7 @@ function addListItem(text) {
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
@@ -183,6 +185,5 @@ function addListItem(text) {
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
-- {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}

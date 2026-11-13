@@ -31,4 +31,4 @@ target.onclose = functionRef;
 
 ## 参见
 
-- HTML [`<dialog>`](/zh-CN/docs/Web/HTML/Element/dialog) 元素
+- HTML [`<dialog>`](/zh-CN/docs/Web/HTML/Reference/Elements/dialog) 元素

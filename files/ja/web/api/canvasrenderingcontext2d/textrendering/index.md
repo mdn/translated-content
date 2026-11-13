@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.textRendering`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画するときに何を最適化するかについての情報をレンダリングエンジンに提供します。
 
-値は SVG の [`text-rendering`](/ja/docs/Web/SVG/Attribute/text-rendering) 属性（および CSS の [`text-rendering`](/ja/docs/Web/CSS/text-rendering) プロパティ）に相当します。
+値は SVG の [`text-rendering`](/ja/docs/Web/SVG/Reference/Attribute/text-rendering) 属性（および CSS の [`text-rendering`](/ja/docs/Web/CSS/Reference/Properties/text-rendering) プロパティ）に相当します。
 
 ## 値
 
@@ -26,7 +26,6 @@ l10n:
   - : ブラウザーは、レンダリング速度や幾何学的精度よりも読みやすさを重視します。
     これによりカーニングとオプションの合字が有効になります。
 - `geometricPrecision`
-
   - : ブラウザーは、描画速度や読みやすさよりも幾何学的な正確さを 重視します。
     フォントのある側面（カーニングなど）は直線的に変倍するわけではありません。
     変倍率が大きい場合、テキストの描画があまり美しくないことがありますが、サイズは期待通りになります（基盤のオペレーティングシステムを対応している最も近いフォントサイズに切り上げも切り下げもされません）。

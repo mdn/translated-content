@@ -64,7 +64,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 
 2. **全体のレイアウトに誤りがある**
     全体のレイアウトに誤りがあり、結果一部のバナー等が非表示となっている場合があります。
-    [float](/ja/docs/Web/CSS/float)プロパティ等の配置指定に誤りがあり、結果、一部の要素が画面に収まりきれずに表示できていません。
+    [float](/ja/docs/Web/CSS/Reference/Properties/float)プロパティ等の配置指定に誤りがあり、結果、一部の要素が画面に収まりきれずに表示できていません。
 
 ## 解決策
 
@@ -73,11 +73,11 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 1. **ベンダープレフィックス**
     webkit 指定の描画やサイズ指定を他ブラウザーでも互換性を維持できるよう下記記載のものに修正することで正しく表示可能となります。
 
-    - [border-radius](/ja/docs/Web/CSS/border-radius)プロパティ
-    - [linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数
-    - [box-shadow](/ja/docs/Web/CSS/box-shadow)プロパティ
-    - [transform](/ja/docs/Web/CSS/transform)プロパティ
-    - [background-size](/ja/docs/Web/CSS/background-size)プロパティ
+    - [border-radius](/ja/docs/Web/CSS/Reference/Properties/border-radius)プロパティ
+    - [linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数
+    - [box-shadow](/ja/docs/Web/CSS/Reference/Properties/box-shadow)プロパティ
+    - [transform](/ja/docs/Web/CSS/Reference/Properties/transform)プロパティ
+    - [background-size](/ja/docs/Web/CSS/Reference/Properties/background-size)プロパティ
 
     詳しくは、「[mobile 版 Firefox 向けベンダープレフィックス対処方法まとめ](./Tips_Vendor_Prefix.html)」をご覧ください。
 
@@ -133,4 +133,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Icon_Shown.html
 ・他のブラウザーでも互換性を維持することができます。
 ・全体のレイアウトを見直すことにより、その後の変更修正も容易になります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

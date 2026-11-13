@@ -5,7 +5,7 @@ slug: Web/API/Element/scroll_event
 
 {{ApiRef("HTML DOM")}}
 
-A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos {{event("Event_handlers", "event handler")}} que processam eventos `scroll`.
+A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) que processam eventos `scroll`.
 
 O evento `scroll` é disparado quando uma visão do documento ou um elemento foi rolado, seja por um usuário, uma [API Web](/pt-BR/docs/Web/API), ou o {{glossary("user agent")}}.
 
@@ -22,7 +22,7 @@ target.onscroll = functionRef;
 
 `functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um {{domxref("UIEvent")}} objeto com um único argumento.
 
-Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um {{event("scroll")}} evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
+Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um [`scroll`](/pt-BR/docs/Web/API/Document/scroll_event) evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
 
 ## Exemplo
 

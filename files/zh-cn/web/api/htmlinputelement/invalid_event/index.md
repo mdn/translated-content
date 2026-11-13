@@ -28,7 +28,7 @@ slug: Web/API/HTMLInputElement/invalid_event
   </tbody>
 </table>
 
-这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 `invalid` 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 `<form>` 或元素自己的 [`checkValidity()`](/zh-CN/docs/Learn/Forms#constraint_validation_api) 方法之后。
+这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 `invalid` 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 `<form>` 或元素自己的 [`checkValidity()`](/zh-CN/docs/Learn_web_development/Extensions/Forms#constraint_validation_api) 方法之后。
 
 这个事件不会在 [`blur`](/zh-CN/docs/Web/API/Element/blur_event) 事件中触发。
 
@@ -82,4 +82,4 @@ function logValue(e) {
 
 - HTML {{HtmlElement("form")}} 元素
 - 相关事件：[`submit`](/zh-CN/docs/Web/API/HTMLFormElement/submit_event)
-- [CSS `:invalid` 伪类](/zh-CN/docs/Web/CSS/:invalid)
+- [CSS `:invalid` 伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/:invalid)

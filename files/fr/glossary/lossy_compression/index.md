@@ -1,22 +1,20 @@
 ---
 title: Compression avec perte
 slug: Glossary/Lossy_compression
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+La **compression avec perte**, ou compression irréversible, est une méthode de compression de données qui utilise des approximations inexactes et la suppression partielle de données pour représenter le contenu. En termes simples&nbsp;: la compression avec perte entraîne la perte de données du fichier initial, ce qui peut entraîner une dégradation de la qualité. Le processus de cette compression est irréversible&nbsp;: une fois la compression avec perte effectuée, le contenu ne peut pas être restauré à son état d'origine. Par conséquent, un contenu ayant subi une compression avec perte ne doit généralement pas être modifié ultérieurement.
 
-La **compression** **avec perte**, ou compression irréversible, est une méthode de compression des données qui réalise des approximations inexactes et abandonne une partie des données pour représenter un contenu.
+La compression avec perte est largement utilisée dans les formats d'image comme {{Glossary("JPEG")}}, {{Glossary("WebP")}}, ainsi que dans les formats audio et vidéo comme [MP3, MP4, H.264 et autres](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types).
+Des méthodes de compression comme {{Glossary("WebP")}} sont capables de [compression avec ou sans perte](https://developers.google.com/speed/webp/docs/compression?hl=fr) selon le niveau de compression ou les options choisies lors de l'encodage.
 
-Pour le dire simplement : la compression avec perte entraîne une perte de données du fichier d'origine, entraînant une possible dégradation de sa qualité.
+![Image de compression avec perte](2019-11-18.png)
 
-Le processus de compression est ici irréversible; une fois la compression avec perte réalisée, le contenu ne peut pas retrouver son état initial. C'est pourquoi le contenu ainsi compressé ne devrait plus, en principe, être à nouveau édité.
-
-La compression avec perte est largement utilisée pour les formats d'image.
-
-![Lossy compression image](2019-11-18.png)
-
-Même s'il n'y a pas de différence flagrante de qualité entre les deux images ci-dessus, la taille de la seconde a été considérablement réduite grâce à une compression avec perte.
+Bien qu'il n'y ait pas de différence évidente de qualité entre les deux images ci-dessus, la taille de la seconde image a été significativement réduite grâce à la compression avec perte.
 
 ## Voir aussi
 
-- [Compression sans perte](/fr/docs/Glossaire/Compression_sans_perte)
+- Terme associé du glossaire&nbsp;:
+  - {{Glossary("Lossless compression", "Compression sans perte")}}

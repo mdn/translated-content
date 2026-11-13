@@ -36,7 +36,6 @@ history.pushState(stateObj, "page 2", "bar.html");
 Давайте более подробно рассмотрим каждый и этих трёх параметров.
 
 - **state object**
-
   - : Объект состояния – это JavaScript-объект, связанный с новой записью в истории, созданной `pushState()`. Всякий раз, когда пользователь переходит к новому состоянию, происходит событие `popstate`, а свойство `state` этого события содержит копию объекта состояния с записями истории.
 
     Объект состояния может быть чем-угодно, что может быть сериализовано. Поскольку Firefox сохраняет объекты состояния на диске пользователя, чтобы их можно было восстановить после перезапуска браузера, мы накладываем ограничение в 640 тысяч символов на сериализованное представление объекта состояния. Если вы передаёте объект состояния, чьё сериализованное представление больше этого значения, метод `pushState()` выдаст исключение. Если вам нужно хранилище большего размера, следует рассмотреть использование `sessionStorage` и/или `localStorage`.
@@ -76,7 +75,7 @@ let stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#Example_of_pushState_method)_.
+Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#example_of_pushstate_method)_.
 
 Далее, предположим, на странице `http://mozilla.org/bar.html` выполняется JavaScript-код:
 
@@ -107,5 +106,5 @@ let currentState = history.state;
 ## Смотрите также
 
 - [History API](/ru/docs/Web/API/History_API)
-- [Ajax navigation example](/ru/docs/Web/API/History_API/Example)
+- [Ajax navigation example](/ru/docs/Web/API/History_API/Working_with_the_History_API)
 - {{ domxref("window.history") }}

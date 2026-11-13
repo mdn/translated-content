@@ -8,7 +8,20 @@ slug: Web/JavaScript/Reference/Statements/do...while
 **`do...while` 문은** 테스트 조건이 거짓으로 평가될 때까지 지정된 구문을 실행하는 루프를 만듭니다.
 단, 구문이 실행된 뒤에 테스트 조건이 평가됨으로 구문은 무조건 한 번은 실행됩니다.
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## 문법
 
@@ -19,7 +32,6 @@ do {
 ```
 
 - `구문`
-
   - : 테스트 조건이 참일 때마다 한 번이상 실행되는 구문입니다. 만약 루프 내에서 여러 구문을 반복 실행 시키고 싶으시다면, 다음 명령을 사용합니다. {{jsxref("Statements/block", "block", "", 1)}} 구문을 활용하여 (`{ ... }`) 이런 식으로 그룹화합니다.
 
 - `조건식`

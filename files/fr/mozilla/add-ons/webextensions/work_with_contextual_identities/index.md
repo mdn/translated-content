@@ -3,8 +3,6 @@ title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 ---
 
-{{AddonSidebar}}
-
 Beaucoup de gens ont besoin ou veulent interagir avec le web en utilisant plusieurs personnages. Ils peuvent avoir des comptes pour le travail sur le Web et le courrier électronique personnel. Ils peuvent se déconnecter de leurs comptes de médias sociaux avant d'accéder aux achats en ligne, afin de s'assurer que les scripts de suivi sur les sites d'achat ne peuvent pas prendre en charge leur activité de médias sociaux. Pour répondre à ces exigences, les utilisateurs finissent souvent par utiliser une fenêtre de navigateur standard et privée ou deux navigateurs différents.
 
 Pour répondre à ce besoin, Firefox inclut une fonctionnalité connue sous le nom d'identités contextuelles, d'onglets de conteneurs ou de conteneurs de comptes. Cette fonctionnalité permet la création d'un conteneur de cookies pour chacune des identités que l'utilisateur souhaite utiliser dans son navigateur. Les onglets peuvent être associés à l'une de ces identités, en conservant les cookies distincts de ceux des autres identités dans le navigateur. Le résultat pratique est que, par exemple, un utilisateur peut avoir une identité personnelle et professionnelle. Ils peuvent ensuite utiliser l'identité personnelle dans un onglet, où ils se connectent à leur messagerie Web personnelle, et l'identité professionnelle dans un autre onglet, où ils se connectent à leur messagerie Web professionnelle.
@@ -24,7 +22,7 @@ Pour utiliser les fonctionnalités d'identité contextuelle dans les extensions,
 
 ## Permissions
 
-Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
+Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
 
 ## Exemple de procédure pas à pas
 
@@ -168,8 +166,8 @@ Si l'utilisateur sélectionne l'option permettant de fermer tous les onglets pou
 
 Si vous voulez en savoir plus sur l'API contextualIdentities, consultez :
 
-- [contextualIdentities API reference](/fr/Add-ons/WebExtensions/API/contextualIdentities).
-- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/firefox/addon/multi-account-containers/).
+- [contextualIdentities API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities).
+- code source de l'extension [Multi-Account Containers](https://github.com/mozilla/multi-account-containers/#readme). C'est le code pour l'extension [Firefox Multi-Account Containers](/fr/docs/Mozilla/Firefox/addon/multi-account-containers/).
 
   Cette extension fournit aux utilisateurs des fonctionnalités améliorées pour les identités contextuelles, telles que la possibilité de cliquer longuement sur le nouveau bouton de l'onglet, puis de sélectionner l'identité à utiliser dans le nouvel onglet. Il met vraiment en valeur les capacités offertes par les identités contextuelles et vaut le détour.
 

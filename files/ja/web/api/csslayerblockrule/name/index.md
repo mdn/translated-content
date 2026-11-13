@@ -3,7 +3,7 @@ title: "CSSLayerBlockRule: name プロパティ"
 short-title: name
 slug: Web/API/CSSLayerBlockRule/name
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("CSSOM")}}
@@ -55,7 +55,7 @@ const layer = rules[1]; // CSSLayerBlockRule
 const anonymous = rules[2]; // 無名の CSSLayerBlockRule
 
 item1.textContent = `1 つ目の CSSLayerBlockRule は "${layer.name}" レイヤーを定義しています。`;
-item2.textContent = `2 つ目の CSSLayerBlockRule は  "${anonymous.name}" という名前のレイヤーです。`;
+item2.textContent = `2 つ目の CSSLayerBlockRule は "${anonymous.name}" という名前のレイヤーです。`;
 ```
 
 ### 結果
@@ -73,4 +73,4 @@ item2.textContent = `2 つ目の CSSLayerBlockRule は  "${anonymous.name}" と�
 ## 関連情報
 
 - {{cssxref("@layer")}} の宣言文は {{domxref("CSSLayerStatementRule")}} で表されます。
-- CSS における[名前付きカスケードレイヤーの作成](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#カスケードレイヤーの作成)方法
+- CSS における[名前付きカスケードレイヤーの作成](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#カスケードレイヤーの作成)方法

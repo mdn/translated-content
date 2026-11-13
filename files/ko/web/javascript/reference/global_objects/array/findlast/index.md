@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
   sourceCommit: 57375b77984037c614982a9327bc96101824db89
@@ -17,7 +18,16 @@ l10n:
   이 역시 테스트 함수를 사용하는 것 대신 각 요소가 값과 동일한지 확인합니다.
 - 제공된 테스트 함수를 만족하는 요소가 있는지 찾아야 하는 경우, {{jsxref("Array/some", "some()")}}을 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## 구문
 
@@ -76,7 +86,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 화살표 함수와 구조 분해 사용
 
-이전 예제는 화살표 함수와 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)을 사용하여 작성할 수 있습니다.
+이전 예제는 화살표 함수와 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)을 사용하여 작성할 수 있습니다.
 
 ```js
 const inventory = [

@@ -25,7 +25,7 @@ var str = s.serializeToString(d);
 alert(str);
 ```
 
-The next example uses XMLSerializer with [insertAdjacentHTML()](/ru/docs/DOM/element.insertAdjacentHTML) to insert a newly created DOM Node into the Document's body. Because [insertAdjacentHTML()](/ru/docs/DOM/element.insertAdjacentHTML) accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.
+The next example uses XMLSerializer with [insertAdjacentHTML()](/ru/docs/Web/API/Element/insertAdjacentHTML) to insert a newly created DOM Node into the Document's body. Because [insertAdjacentHTML()](/ru/docs/Web/API/Element/insertAdjacentHTML) accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.
 
 ```js
 var inp = document.createElement("input");
@@ -43,5 +43,5 @@ document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ## Смотрите также
 
 - [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en-US/XMLHttpRequest)
+- [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
 - [DOMParser](/en-US/DOMParser)

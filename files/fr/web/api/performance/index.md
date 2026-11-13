@@ -5,7 +5,7 @@ slug: Web/API/Performance
 
 {{APIRef("High Resolution Time")}}
 
-L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Navigation_timing_API), [User Timing](/fr/docs/Web/API/User_Timing_API), et [Resource Timing](/fr/docs/Web/API/Resource_Timing_API).
+L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Performance_API/Navigation_timing), [User Timing](/fr/docs/Web/API/Performance_API/User_timing), et [Resource Timing](/fr/docs/Web/API/Performance_API/Resource_timing).
 
 Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("window.performance")}}.
 
@@ -17,14 +17,12 @@ Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{
 _L'interface `Performance` n'hérite d'aucune propriété._
 
 - {{domxref("performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
-
   - : {{domxref("PerformanceNavigation")}} est un objet qui fournit des informations contextuelles sur les opérations incluses dans les indicateurs de `timing`, notamment si la page a été chargée ou actualisée, combien de redirections ont été effectuées, etc…
 
     > [!NOTE]
     > Indisponible dans les Web Workers.
 
 - {{domxref("performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
-
   - : {{domxref("PerformanceTiming")}} est un objet contenant des informations de performance liées à la latence.
 
     > [!NOTE]
@@ -80,6 +78,6 @@ On pourra écouter ces événements en utilisant `addEventListener()` ou en assi
 ## Voir aussi
 
 - [Performance Timeline](/fr/docs/Web/API/Performance_Timeline)
-- [Navigation Timing API](/fr/docs/Web/API/Navigation_timing_API)
-- [User Timing API](/fr/docs/Web/API/User_Timing_API)
-- [Resource Timing API](/fr/docs/Web/API/Resource_Timing_API)
+- [Navigation Timing API](/fr/docs/Web/API/Performance_API/Navigation_timing)
+- [User Timing API](/fr/docs/Web/API/Performance_API/User_timing)
+- [Resource Timing API](/fr/docs/Web/API/Performance_API/Resource_timing)

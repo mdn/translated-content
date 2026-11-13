@@ -1,13 +1,15 @@
 ---
-title: Geolocation.watchPosition()
+title: Geolocation：watchPosition() 方法
 slug: Web/API/Geolocation/watchPosition
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{ APIref("Geolocation API") }}
+{{securecontext_header}}{{ APIref("Geolocation API") }}
 
-**`Geolocation.watchPosition()`** 這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。你也可以選擇性的定義錯誤時哪些錯誤回呼函式(error callback function) 需要被呼叫。
+{{domxref("Geolocation")}} 介面的 **`watchPosition()`** 方法用於註冊一個處理函式，該函式會在裝置位置每次變更時自動被呼叫。你也可以選擇性地指定一個錯誤處理回呼函式。
 
-這個函式將回傳一組 ID 編號，此編號搭配 {{domxref("Geolocation.clearWatch()")}} 函式，即可停止更新使用者的位置。
+請注意，除了需要安全上下文之外，此功能也可能被 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` 阻擋，並且還需要使用者明確授予權限。如有需要，當呼叫此方法時，將會提示使用者。權限狀態可以使用[權限 API](/zh-TW/docs/Web/API/Permissions_API) 中的 `geolocation` 使用者權限來查詢。
 
 ## 語法
 
@@ -19,29 +21,35 @@ watchPosition(success, error, options)
 
 ### 參數
 
-- _success_
-  - : 一個回呼函式(callback function) 會被傳入一個 {{domxref("Position")}} 的物件。
-- _error_ {{optional_inline}}
-  - : 一個選擇性的錯誤回呼函式(callback function)，會被傳入一個{{domxref("PositionError")}} 的物件。
-- _options_ {{optional_inline}}
-  - : 一個選擇性 {{domxref("PositionOptions")}} 的物件。
+- `success`
+  - : 一個回呼函式，它接受一個 {{domxref("GeolocationPosition")}} 物件作為輸入參數。
+- `error` {{optional_inline}}
+  - : 一個可選的回呼函式，它接受一個 {{domxref("GeolocationPositionError")}} 物件作為輸入參數。
+- `options` {{optional_inline}}
+  - : 一個可選的物件，為位置監控提供組態選項。有關可能選項的更多詳細訊息，參見 {{domxref("Geolocation.getCurrentPosition()")}}。
+
+### 回傳值
+
+一個整數 ID，用於識別已註冊的處理函式。此 ID 可以傳遞給 {{domxref("Geolocation.clearWatch()")}} 以取消註冊該處理函式。
 
 ## 範例
 
 ```js
-var id, target, options;
+let id;
+let target;
+let options;
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you reached the target");
+    console.log("恭喜，你已到達目標");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+  console.error(`錯誤（${err.code}）：${err.message}`);
 }
 
 target = {
@@ -58,21 +66,17 @@ options = {
 id = navigator.geolocation.watchPosition(success, error, options);
 ```
 
-## 備註
-
-如果你的應用程式是跑在 firefox OS 上，請參考 [geolocation wake lock](</zh-TW/docs/Web/API/Geolocation/navigator.requestWakeLock()>)，此方法可以讓你的程式在背景或螢幕關上時也能持續收到位置更新。
-
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 這個介面屬於{{domxref("Geolocation")}}. 並且存取他的方式為{{domxref("NavigatorGeolocation.geolocation")}}.
-- 相反的操作: {{domxref("Geolocation.clearWatch()")}}
-- 類似的方法: {{domxref("Geolocation.getCurrentPosition()")}}
+- [使用 Geolocation API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- 其所屬的介面 {{domxref("Geolocation")}}，以及存取它的方式——{{domxref("Navigator.geolocation")}}。
+- 相反的操作：{{domxref("Geolocation.clearWatch()")}}
+- 一個類似的方法：{{domxref("Geolocation.getCurrentPosition()")}}

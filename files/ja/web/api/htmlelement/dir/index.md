@@ -48,6 +48,6 @@ parg.dir = "rtl";
 ## 関連情報
 
 - {{domxref("document.dir")}}
-- HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) グローバル属性
+- HTML の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) グローバル属性
 - CSS の {{cssxref("direction")}} プロパティ
 - CSS の {{cssxref(":dir")}} 擬似クラス

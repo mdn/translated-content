@@ -3,12 +3,10 @@ title: 用戶介面
 slug: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 
-{{AddonSidebar}}
-
 套件 APIs 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。
 
 > [!NOTE]
-> 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)文章。
+> 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)文章。
 
 <table class="standard-table">
   <thead>

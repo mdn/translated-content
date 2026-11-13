@@ -3,13 +3,27 @@ title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 ---
 
-{{JSRef}}
-
 如果指定的对象*自身*有指定的属性，则静态方法 **`Object.hasOwn()`** 返回 `true`。如果属性是继承的或者不存在，该方法返回 `false`。
 
-> **备注：** `Object.hasOwn()` 旨在取代 {{jsxref("Object.prototype.hasOwnProperty()")}}。
+> [!NOTE]
+> `Object.hasOwn()` 旨在取代 {{jsxref("Object.prototype.hasOwnProperty()")}}。
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## 语法
 
@@ -144,8 +158,8 @@ if (Object.hasOwn(foo, "prop")) {
 
 - [在 `core-js` 中 `Object.hasOwn` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript 指南：重新审视继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript 指南：重新审视继承](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

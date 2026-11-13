@@ -3,8 +3,6 @@ title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
 
-{{AddonSidebar}}
-
 La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Propriétés
@@ -50,4 +48,4 @@ getting.then((got) => {
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy).
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy).

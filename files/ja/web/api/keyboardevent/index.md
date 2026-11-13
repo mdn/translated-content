@@ -2,14 +2,15 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent`** オブジェクトは、キーボードによるユーザーの操作を示します。個々のイベントがユーザーとキーとの間の単一の操作（または修飾キーとの組み合わせ）を表します。イベントの種類 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, {{domxref("Element/keyup_event", "keyup")}}) はキーボード操作が発生した種類を識別します。
 
-> **メモ:** `KeyboardEvent` は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{domxref("Element/input_event", "input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合、キーボードイベントが発生することはありません。
+> [!NOTE]
+> `KeyboardEvent` は、単にユーザーがキーボードのキーで行った操作が何であるかを低水準で示すものであり、その操作のその場面における意味は持ちません。テキストの入力を処理したい場合は、代わりに {{domxref("Element/input_event", "input")}} イベントを使用してください。ユーザーが他の種類のテキスト入力、例えば、タブレット端末やタブレット機器による手書き入力システムなどを使用している場合、キーボードイベントが発生することはありません。
 
 {{InheritanceDiagram}}
 
@@ -92,18 +93,15 @@ l10n:
 _このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
     > [!WARNING]
     > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -113,23 +111,19 @@ _このインターフェイスには、親である {{domxref("UIEvent")}} お�
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](#キーボード上の位置)にあります。
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
 
 ### 古いプロパティ
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
-
   - : キーの Unicode 参照番号を表す数値を返します。このプロパティは `keypress` イベントでのみ使用されます。 `char` プロパティが複数の文字を含むキーの場合、これはそのプロパティの最初の文字の Unicode 値です。Firefox 26 では、表示可能な文字のコードが返されます。
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
-
   - : 押されたキーの修飾されていない値を識別する、システムおよび実装に依存する数値コードを表す数値を返します。
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
@@ -140,13 +134,10 @@ _このインターフェイスには、親である {{domxref("UIEvent")}} お�
 _このインターフェイスには、親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したメソッドもあります。_
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
-
   - : そのイベントが発生した際に修飾キー (<kbd>Alt</kbd> / <kbd>Shift</kbd> / <kbd>Ctrl</kbd> / <kbd>Meta</kbd>) が押されていたかどうかを表す論理値を返します。
 
 ### 古いメソッド
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : `KeyboardEvent` オブジェクトを初期化します。これは Firefox でのみ実装されていたものですが、もう Firefox でも対応していません。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
   - : `KeyboardEvent` オブジェクトを初期化します。これは非推奨になりました。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 
@@ -212,47 +203,39 @@ GTK を用いた環境の中には、自動リピート時にネイティブの 
 ## 例
 
 ```js
-document.addEventListener(
-  "keydown",
-  (event) => {
-    const keyName = event.key;
+document.addEventListener("keydown", (event) => {
+  const keyName = event.key;
 
-    if (keyName === "Control") {
-      // do not alert when only Control key is pressed.
-      return;
-    }
+  if (keyName === "Control") {
+    // Ctrl キーのみが押されている場合はアラートを表示しない
+    return;
+  }
 
-    if (event.ctrlKey) {
-      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-      alert(`Combination of ctrlKey + ${keyName}`);
-    } else {
-      alert(`Key pressed ${keyName}`);
-    }
-  },
-  false,
-);
+  if (event.ctrlKey) {
+    // event.key が 'Control' でなくても（例えば 'a' が押されている）、
+    // event.ctrlKey は同時に Ctrl キーが押されていれば true になる
+    alert(`ctrlKey + ${keyName} の組み合わせ`);
+  } else {
+    alert(`${keyName} キーが押された`);
+  }
+});
 
-document.addEventListener(
-  "keyup",
-  (event) => {
-    const keyName = event.key;
+document.addEventListener("keyup", (event) => {
+  const keyName = event.key;
 
-    // As the user releases the Ctrl key, the key is no longer active,
-    // so event.ctrlKey is false.
-    if (keyName === "Control") {
-      alert("Control key was released");
-    }
-  },
-  false,
-);
+  // ユーザーが Ctrl キーを話したら、キーはアクティブではなくなるので、
+  // event.ctrlKey は false になる
+  if (keyName === "Control") {
+    alert("Ctrl キーが離された");
+  }
+});
 ```
 
 ## 仕様書
 
 {{Specifications}}
 
-`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた {{domxref("KeyboardEvent.initKeyEvent()")}} が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
+`KeyboardEvent` インターフェイスの草案は数多く提案されてきました。まず最初は DOM Events Level 2 でしたが意見がまとまらず破棄され、続いて DOM Events Level 3 が提案されました。これにより、標準外な初期化メソッドが実装されてしまいました (Gecko では DOM Events Level 2 の初期に定義されていた `KeyboardEvent.initKeyEvent()` が、他のブラウザーでは DOM Events Level 3 の初期に定義されていた {{domxref("KeyboardEvent.initKeyboardEvent()")}} です)。しかし両者のメソッドは、現代的なコンストラクターである {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} で置き換えられてました。
 
 ## ブラウザーの互換性
 

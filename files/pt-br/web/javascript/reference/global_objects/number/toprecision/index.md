@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 O método **`toPrecision()`** retorna uma string que representa o valor do objeto {{jsxref("Number")}} com uma precisão específica.
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// Expected output: "123.5"
+
+console.log(precise(0.004));
+// Expected output: "0.004000"
+
+console.log(precise(1.23e5));
+// Expected output: "1.230e+5"
+```
 
 ## Sintaxe
 
@@ -28,7 +43,7 @@ Se o parâmetro `precisão` for omitido, este método terá o mesmo comportament
 
 ### Exceções
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("RangeError")}}
   - : Se o valor de `precisão` não estiver compreendido entre 1 e 100 (inclusive), um {{jsxref("RangeError")}} será lançado. É permitido às implementações suportar valores menores e maiores que esses, sendo um requisito do ECMA-262 que seja dado suporte a uma precisão de até 21 algarismos significativos.
 
 ## Exemplos

@@ -1,15 +1,25 @@
 ---
 title: TypedArray.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`keys()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対するキーを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.keys()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.keys()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const keys = uint8.keys();
+
+keys.next();
+keys.next();
+
+console.log(keys.next().value);
+// 予想される結果: 2
+```
 
 ## 構文
 
@@ -63,11 +73,11 @@ console.log(arrKeys.next().value); // 4
 
 ## 関連情報
 
-- [`TypedArray.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [`TypedArray.prototype.keys` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Array.prototype.keys()")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

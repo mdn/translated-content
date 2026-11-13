@@ -12,7 +12,7 @@ Un aspecto importante de los componentes Web es la encapsulación — ser capaz 
 
 ## Vista de alto nivel
 
-Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Introduction) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
+Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
 
 ```html
 <!doctype html>
@@ -198,7 +198,7 @@ wrapper.appendChild(info);
 
 ### Using our custom element
 
-Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements):
+Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements):
 
 ```js
 // Define the new element
@@ -213,5 +213,5 @@ customElements.define("popup-info", PopUpInfo);
 
 ## See also
 
-- [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements)
-- [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements)
+- [Using templates and slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)

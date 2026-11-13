@@ -3,11 +3,23 @@ title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 ---
 
-{{JSRef}}
-
 **`at()`** 方法接收一个整数值并返回该索引对应的元素，允许正数和负数。负整数从数组中的最后一个元素开始倒数。
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## 语法
 
@@ -102,7 +114,7 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 ## 参见
 
 - [`core-js` 中 `Array.prototype.at` 的 polyfill](https://github.com/zloirock/core-js#relative-indexing-method)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Division
 
 나누기 연산자(`/`)는 왼쪽 피연산자를 피제수, 오른쪽 피연산자를 제수로 하여 몫을 구합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+
+```js interactive-example
+console.log(12 / 2);
+// Expected output: 6
+
+console.log(3 / 2);
+// Expected output: 1.5
+
+console.log(6 / "3");
+// Expected output: 2
+
+console.log(2 / 0);
+// Expected output: Infinity
+```
 
 ## 구문
 

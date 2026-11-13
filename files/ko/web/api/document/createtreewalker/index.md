@@ -18,8 +18,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `root`
   - : 이 {{domxref("TreeWalker")}} 순회의 루트 {{domxref("Node")}}이다. 이것은 보통 이 문서 소유의 한 엘리먼트이다.
 - `whatToShow` {{optional_inline}}
-
-  - : [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter)의 상수 프라퍼티들을 조합하여 만든 비트마스크를 나타내는 선택적인 `unsigned long` 이다. 이것은 특정 유형의 노드를 필터링하는 편리한 방법이다. 기본값은 `SHOW_ALL` 상수를 나타내는 `0xFFFFFFFF`이다.
+  - : [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter)의 상수 프라퍼티들을 조합하여 만든 비트마스크를 나타내는 선택적인 `unsigned long` 이다. 이것은 특정 유형의 노드를 필터링하는 편리한 방법이다. 기본값은 `SHOW_ALL` 상수를 나타내는 `0xFFFFFFFF`이다.
 
     | 상수                                                     | 숫자 값                          | 설명                                                                                                                                                                                                                                                                                                                                                                                      |
     | -------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +39,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
 - `filter` {{optional_inline}}
   - : 선택적인 {{domxref("NodeFilter")}}이다. {{domxref("TreeWalker")}}가 `whatToShow` 체크를 통과한 노드의 승인여부를 판단하기 위해 호출하는 `acceptNode` 메소드를 가진 객체이다.
 - `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}
-  - : 한 {{domxref("EntityReference")}}를 버릴 때 그 전체 하위 트리를 같이 버려야하는지를 나타내는 {{domxref("Boolean")}} 플래그이다.
+  - : 한 {{domxref("EntityReference")}}를 버릴 때 그 전체 하위 트리를 같이 버려야하는지를 나타내는 {{jsxref("Boolean")}} 플래그이다.
 
 ### 반환 값
 

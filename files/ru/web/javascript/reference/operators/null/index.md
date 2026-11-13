@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/null
 
 Значение `null` представляет отсутствие какого-либо объектного значения. В JavaScript, `null` является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## Синтаксис
 
@@ -17,7 +30,7 @@ null
 
 ## Описание
 
-Значение `null` записывается литералом `null`. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("Global_Objects/undefined", "undefined")}}). В API, `null` часто присутствует в местах где ожидается объект, но подходящего объекта нет.
+Значение `null` записывается литералом `null`. Оно является самостоятельным, а не свойством глобального объекта (как {{jsxref("undefined")}}). В API, `null` часто присутствует в местах где ожидается объект, но подходящего объекта нет.
 
 ```js
 // переменная foo не существует - она не была определена и никогда не инициализировалась:
@@ -31,7 +44,7 @@ null
 
 ### Отличия между `null` и `undefined`
 
-`null` является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например:
+`null` является определённым значением отсутствия объекта, тогда как {{jsxref("undefined")}} обозначает неопределённость. Например:
 
 ```js
 var element;
@@ -42,7 +55,7 @@ element = document.getElementById("not-exists");
 // переменная element теперь инициализирована значением null, её значение определено
 ```
 
-При проверке на `null` или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о [различии между операторами равенства (==) и идентичности (===)](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства): с первым, выполняется преобразование типов.
+При проверке на `null` или {{jsxref("undefined")}}, помните о [различии между операторами равенства (==) и идентичности (===)](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства): с первым, выполняется преобразование типов.
 
 ```js
 typeof null; // object (не "null" из соображений обратной совместимости)
@@ -61,5 +74,5 @@ null == undefined; // true
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("undefined")}}
+- {{jsxref("NaN")}}

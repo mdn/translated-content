@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAnchorElement.relList`** は読み取り専用プロパティで、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映します。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("a")}} 要素で表されるリソースと現在のドキュメントの間の関係を示すリンク種別のセットが入ります。
+**`HTMLAnchorElement.relList`** は読み取り専用プロパティで、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映します。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("a")}} 要素で表されるリソースと現在のドキュメントの間の関係を示すリンク種別のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 

@@ -38,5 +38,5 @@ var offsetWidth =element.offsetWidth;
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/es/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN Measuring Element Dimension and Locati](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

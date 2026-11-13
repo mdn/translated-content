@@ -3,11 +3,23 @@ title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 ---
 
-{{JSRef}}
-
 **`setBigInt64()`**方法在距{{jsxref("DataView")}} 的起始位置的指定字节偏移处存储一个带符号的 64 位整数（long long 类型）值。
 
-{{EmbedInteractiveExample("pages/js/dataview-setbigint64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setBigInt64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in a signed 64-bit integer
+const max = 2n ** (64n - 1n) - 1n;
+
+const view = new DataView(buffer);
+view.setBigInt64(1, max);
+
+console.log(view.getBigInt64(1));
+// Expected output: 9223372036854775807n
+```
 
 ## 语法
 

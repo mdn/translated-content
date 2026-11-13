@@ -1,30 +1,49 @@
 ---
 title: Math.cosh()
+short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`Math.cosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックコサイン）を返します。
 
-**`Math.cosh()`** 関数は、引数として与えた数の双曲線余弦 (ハイパーボリックコサイン) を返します。これは{{jsxref("Math.E", "定数 e", "", 1)}} を使用して次のように表すことができます。
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚌𝚘𝚜𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>+</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh}(x)} = \cosh(x) = \frac{\mathrm{e}^x + \mathrm{e}^{-x}}{2}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
+{{InteractiveExample("JavaScript デモ: Math.cosh()")}}
 
-{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
+```js interactive-example
+console.log(Math.cosh(0));
+// 予想される結果: 1
+
+console.log(Math.cosh(1));
+// 予想される結果: 1.543080634815244 （およそ）
+
+console.log(Math.cosh(-1));
+// 予想される結果: 1.543080634815244 （およそ）
+
+console.log(Math.cosh(2));
+// 予想される結果: 3.7621956910836314
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.cosh(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値。
+  - : 数値です。
 
 ### 返値
 
-指定された数値の双曲線余弦 (ハイパーボリックコサイン) です。
+`x` の双曲線余弦（ハイパーボリックコサイン）です。
 
 ## 解説
 
@@ -35,32 +54,12 @@ Math.cosh(x)
 ### Math.cosh() の使用
 
 ```js
+Math.cosh(-Infinity); // Infinity
+Math.cosh(-1); // 1.5430806348152437
+Math.cosh(-0); // 1
 Math.cosh(0); // 1
 Math.cosh(1); // 1.5430806348152437
-Math.cosh(-1); // 1.5430806348152437
-```
-
-## ポリフィル
-
-これは {{jsxref("Math.exp()")}} 関数を使用して次のようにエミュレートできます。
-
-```js
-Math.cosh =
-  Math.cosh ||
-  function (x) {
-    return (Math.exp(x) + Math.exp(-x)) / 2;
-  };
-```
-
-または {{jsxref("Math.exp()")}} 関数を一度だけ呼び出すようにすると、次のようになります。
-
-```js
-Math.cosh =
-  Math.cosh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y + 1 / y) / 2;
-  };
+Math.cosh(Infinity); // Infinity
 ```
 
 ## 仕様書
@@ -73,6 +72,8 @@ Math.cosh =
 
 ## 関連情報
 
+- [`Math.cosh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
+- [es-shims による `Math.cosh` のポリフィル](https://www.npmjs.com/package/math.cosh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

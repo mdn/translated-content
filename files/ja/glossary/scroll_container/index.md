@@ -1,19 +1,26 @@
 ---
 title: Scroll container (スクロールコンテナー)
 slug: Glossary/Scroll_container
+l10n:
+  sourceCommit: 2b112aef57df0649462db5d9f47d782a7aa1f25c
 ---
 
 {{GlossarySidebar}}
 
-**スクロールコンテナー** (scroll container) は、コンテナーに `overflow: scroll` を適用するか、 `overflow: auto` であふれるほどの量のコンテンツがあるときに生成されます。
+**スクロールコンテナー** (scroll container) は、スクロールバーが存在するかどうかにかかわらず、コンテンツをスクロールすることができる要素ボックスです。ユーザーエージェントは、CSS の {{cssxref("overflow")}} プロパティが `scroll` に設定されている場合、または `overflow` が `auto` に設定されていてコンテンツがコンテナーからあふれた場合に、要素ボックスにスクロールバーを追加してスクロールコンテナーにします。
 
-スクロールコンテナーによって、ユーザーは領域をあふれて表示から切り取られ非表示になる部分をスクロールさせることができます。スクロールコンテナーの見える部分は、{{glossary("Scrollport", "スクロールポート")}}と呼ばれます。
+要素ボックスのコンテンツがその境界ボックスをあふれた場合、ユーザーはスクロールバーを使用して、表示されない切り取られたコンテンツをスクロールすることができます。
 
-- 関連用語:
+スクロールコンテナーには、スクロールポートとスクロールバーが含まれます。
 
-  - {{glossary("Scroll container", "スクロールコンテナー")}}
-  - {{glossary("Scrollport", "スクロールポート")}}
+## スクロールポート
 
-- 関連 CSS プロパティ:
+スクロールポートは、スクロールコンテナーの可視部分であり、スクロールコンテナーのパディングボックスと一致しています。スクロールバーは、コンテンツが表示されるようにスクロールポートの内外に移動するために使用することができます。
 
-  - {{cssxref("overflow")}}
+## 関連情報
+
+- [CSS 構成要素: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- [スクロールスナップ](/ja/docs/Glossary/Scroll_snap)、[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#scroll_snap_container)を含む
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール

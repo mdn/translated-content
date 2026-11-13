@@ -25,7 +25,7 @@ slug: Web/API/Window/error_event
       <th scope="row">Event handler property（事件处理程序属性）</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/API/GlobalEventHandlers/onerror"
+          ><a href="/zh-CN/docs/Web/API/Window/error_event"
             >onerror</a
           ></code
         >
@@ -122,4 +122,4 @@ scriptError.addEventListener("click", () => {
 
 ## 相关事件
 
-- This event on `Element` targets: [`error`](/zh-CN/docs/Web/API/Element/error_event) event
+- This event on `Element` targets: [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) event

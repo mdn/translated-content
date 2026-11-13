@@ -1,45 +1,42 @@
 ---
-title: Event.target
+title: "Event: свойство target"
 slug: Web/API/Event/target
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-Свойство **`target`** интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.
+Доступное только для чтения свойство **`target`** интерфейса {{domxref("Event")}} содержит ссылку на элемент, в котором возникло событие.
+Он может отличаться от {{domxref("Event.currentTarget")}}, на котором сработал обработчик события в фазе всплытия или захвата события.
 
-Синтаксис
+## Значение
 
-```
-theTarget = event.target
-```
+Связанный {{domxref("EventTarget")}}.
 
-Значение:
-
-{{domxref("EventTarget")}}
-
-## Пример
+## Примеры
 
 Свойство `event.target` может быть использовано для реализации **делегирования событий**.
 
-```
+```js
 // Создадим список
-var ul = document.createElement('ul');
+const ul = document.createElement("ul");
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
-  // e.target ссылается на кликнутый <li> элемент
-  // Он отличается от e.currentTarget который будет ссылаться на родительский <ul> в этом контексте
-  e.target.style.visibility = 'hidden';
+function hide(evt) {
+  // evt.target будет указывать на элемент <li>, по которому был произведён клик
+  // evt.currentTarget будет указывать на родительский элемент <ul>
+  evt.target.style.visibility = "hidden";
 }
 
-// Назначим обработчик к списку
-// Он будет вызван когда кликнут на любой <li>
-ul.addEventListener('click', hide, false);
+// Добавим обработчик события на список
+// Он будет вызываться при клике на каждом элементе <li>
+ul.addEventListener("click", hide, false);
 ```
 
 ## Спецификации
@@ -52,4 +49,4 @@ ul.addEventListener('click', hide, false);
 
 ## Смотрите также
 
-- [Comparison of Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Всплытие событий](/ru/docs/Learn_web_development/Core/Scripting/Event_bubbling)

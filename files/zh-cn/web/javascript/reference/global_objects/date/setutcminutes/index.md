@@ -5,11 +5,21 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`setUTCMinutes()`** 方法根据世界协调时来设置该日期的分钟数。
 
-{{EmbedInteractiveExample("pages/js/date-setutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCMinutes());
+// Expected output: 15
+
+date1.setUTCMinutes(25);
+
+console.log(date1.getUTCMinutes());
+// Expected output: 25
+```
 
 ## 语法
 

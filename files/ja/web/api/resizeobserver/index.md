@@ -10,7 +10,7 @@ l10n:
 **`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。
 
 > [!NOTE]
-> コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
+> コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を参照してください。
 
 ## コンストラクター
 
@@ -120,7 +120,7 @@ window.addEventListener("error", function (e) {
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+- [ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} （[交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API) の一部）
-- 今後リリースされる[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)は、レスポンシブデザインを実装するための有効な選択肢になるかもしれません。
+- 今後リリースされる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)は、レスポンシブデザインを実装するための有効な選択肢になるかもしれません。

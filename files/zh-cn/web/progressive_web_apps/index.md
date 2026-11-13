@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps
 
 ### Web 应用清单
 
-- [Web 应用清单成员](/zh-CN/docs/Web/Manifest)
+- [Web 应用清单成员](/zh-CN/docs/Web/Progressive_web_apps/Manifest)
   - : 开发人员可以使用 web 应用清单成员来描述 PWA，定制其外观，并更深入地将其整合到操作系统中。
 
 ### Service Worker API
@@ -98,6 +98,6 @@ Service worker 可以使用以下 API 来使你的应用程序在离线状态下
 
 ## 参见
 
-- web.dev 上的[渐进式 web 应用](https://web.dev/explore/progressive-web-apps)
-- web.dev 上的[学习 PWA](https://web.dev/learn/pwa/)
+- web.developers.google.cn 上的[渐进式 web 应用](https://web.developers.google.cn/explore/progressive-web-apps)
+- web.developers.google.cn 上的[学习 PWA](https://web.developers.google.cn/learn/pwa/)
 - learn.microsoft.com 上的[渐进式 web 应用](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/)（2023 年 1 月 24 日）

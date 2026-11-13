@@ -3,11 +3,16 @@ title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`codePointAt()`** 方法返回一个非负整数，该整数是从给定索引开始的字符的 Unicode 码位值。请注意，索引仍然基于 UTF-16 码元，而不是 Unicode 码位。
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## 语法
 

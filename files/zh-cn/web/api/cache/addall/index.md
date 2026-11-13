@@ -9,7 +9,8 @@ slug: Web/API/Cache/addAll
 
 {{domxref("Cache")}} 接口的 **`addAll()`** 方法接受一个 URL 数组，检索它们，并将生成的 response 对象添加到给定的缓存中。在检索期间创建的 request 对象成为存储的 response 操作的 key。
 
-> **备注：** `addAll()` will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting `put()` operation would overwrite a previous cache entry created by the same `addAll()` method.
+> [!NOTE]
+> `addAll()` will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting `put()` operation would overwrite a previous cache entry created by the same `addAll()` method.
 
 > [!NOTE]
 > Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
@@ -72,6 +73,6 @@ this.addEventListener("install", function (event) {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

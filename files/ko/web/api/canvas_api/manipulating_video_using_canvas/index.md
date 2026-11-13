@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 {{DefaultAPISidebar("Canvas API")}}
 
-비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/Video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 JavaScript 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
+비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Reference/Elements/video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 JavaScript 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
 
 {{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
@@ -51,7 +51,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 여기에서 중요한 요소는:
 
-1. 이 문서에는 ID가 c1, c2인 두 개의 [`캔버스`](/ko/docs/Web/HTML/Element/canvas)가 있습니다. 캔버스 c1은 비디오 원본의 현재 프레임을 보여주기 위해 사용되고, c2는 크로마 키잉 효과를 수행한 결과를 보여줍니다. c2에서 비디오의 녹색 배경을 대체할 정지 이미지를 미리 로드합니다.
+1. 이 문서에는 ID가 c1, c2인 두 개의 [`캔버스`](/ko/docs/Web/HTML/Reference/Elements/canvas)가 있습니다. 캔버스 c1은 비디오 원본의 현재 프레임을 보여주기 위해 사용되고, c2는 크로마 키잉 효과를 수행한 결과를 보여줍니다. c2에서 비디오의 녹색 배경을 대체할 정지 이미지를 미리 로드합니다.
 2. JavaScript 코드는 main.js에서 가져옵니다. 이 스크립트는 JavaScript 1.8 기능을 사용했기 때문에 스크립트를 가져오는 22번째 줄에서 버전이 명시됩니다
 3. 문서가 로드되면, processor.doLoad() 메서드가 실행됩니다.
 
@@ -153,4 +153,4 @@ processor.computeFrame = function computeFrame() {
 
 ## 더 보기
 
-- [오디오와 비디오 사용하기](/ko/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [오디오와 비디오 사용하기](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)

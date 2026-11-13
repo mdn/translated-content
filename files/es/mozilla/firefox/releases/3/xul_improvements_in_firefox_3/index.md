@@ -3,21 +3,17 @@ title: Mejoras XUL en Firefox 3
 slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL), además de mejoras en los elementos existentes. Aún que este material se documenta en detalle en otro lugar, este artículo ofrece una buena lista de estas mejoras así como enlaces a la documentación detallada.
 
 ### Los nuevos elementos
 
 - [Los controles numéricos](/es/Tutorial_de_XUL/Controles_numéricos):
-
   - El elemento [`<scale>`](/es/XUL/scale) permite crear escalas deslizantes que dejan al usuario seleccionar cualquier valor dentro de un rango especificado. Este control podría utilizarse, por ejemplo, para crear un control de volumen.
   - El valor `number` para el atributo `type` de cajas de texto (`textbox`) crea una caja de texto donde sólo se pueden introducir números. Además, aparecen botones de flecha en un lateral que permiten incrementar o disminuir los valores. [Más información sobre cajas de texto numérico](https://wiki.mozilla.org/XUL:Specs:NumberBox). [Error 345510 en Firefox](https://bugzil.la/345510)
   - El elemento [`<spinbuttons>`](/es/XUL/spinbuttons), que puede usarse para crear controles con la ayuda de vínculos XBL. [Error 155053 en Firefox](https://bugzil.la/155053)
   - Los controles, [`<datepicker>`](/es/XUL/datepicker) y [`<timepicker>`](/es/XUL/timepicker) sirven para permitir entradas de fecha y hora. El seleccionador de fecha está disponible en varios estilos según el atributo `type` y permite entradas vía cajas de texto o de un calendario. [Más información sobre seleccionadores de fecha (en)](https://wiki.mozilla.org/XUL:Specs:DateTimePickers) [Referencia de seleccionadores de fecha](/es/XUL/datepicker) [Referencia de seleccionadores de hora](/es/XUL/timepicker)
 
 - Hay una [guía](/es/XUL/Guía_de_popup) sobre menús y elementos emergentes que describe las nuevas funciones disponibles.
-
   - El elemento [`<dropmarker>`](/es/XUL/dropmarker) es útil para crear, con vínculos XBL, controles de estilo de menú. ([Error 348614 en Firefox](https://bugzil.la/348614))
   - El elemento [`<panel>`](/es/XUL/panel) está diseñado para elementos emergentes que no son menús. Pueden albergar cualquier tipo de contenido. Para menús se debería utilizar el elemento \<menupopup>. Los menús permiten la navegación mediante el teclado y apertura/cierre de sub-menús.
 
@@ -37,7 +33,6 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL), además de mejoras
 - Las propiedades `inputField` y `editable` han sido añadidas a la lista de menú.
 - El elemento \<menu> tiene métodos para añadir, insertar y eliminar elementos de menú. ([Error 372552 en Firefox](https://bugzil.la/372552))
 - Los elementos `<menu>`, `<menuitem>` y `<menuseparator>`:
-
   - tienen la propiedad `selected`, de sólo lectura, que indica si el elemento está seleccionado en una \<menulist>.
   - tienen la propiedad `control`, de sólo lectura, que devuelve la \<menulist> rodeada.
   - admiten las propiedades `accessKey`, `disabled`, `crop`, `image` y `label` que definen el atributo correspondiente.
@@ -51,7 +46,6 @@ Firefox 3 proporciona varios nuevos elementos [XUL](/es/XUL), además de mejoras
 - La `<textbox>` tiene el método `reset()` para reiniciar el valor de una caja de texto a su valor predeterminado. La propiedad `defaultValue` se usará para obtener y modificar el valor por defecto de la caja de texto. ([Error 312867 en Firefox](https://bugzil.la/312867))
 - Se ofrece la propiedad `editor` que permite obtener la interfaz `nsIEditor` interna del campo de texto.([Error 312867 en Firefox](https://bugzil.la/312867))
 - La [`caja de texto`](/es/XUL/textbox) admite el atributo `newlines` que especifica cómo se tratarán los saltos de linea en el texto pegado. [Error 253481 en Firefox](https://bugzil.la/253481). Los posibles valores son:
-
   - `pasteintact` - pega todo tal cual está
   - `pastetofirst` - (valor por defecto) pega sólo hasta el primer salto de linea
   - `replacewithspaces` - reemplaza los saltos de linea por espacios

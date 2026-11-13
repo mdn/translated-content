@@ -2,7 +2,7 @@
 title: Navigator：share() 方法
 slug: Web/API/Navigator/share
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
@@ -11,24 +11,22 @@ l10n:
 
 该方法用 `undefined` 兑现 {{jsxref("Promise")}}。在 Windows 上，当共享弹出窗口启动时，就会发生这种情况，而在 Android 上，一旦数据成功传递到*共享目标*，promise 就会兑现。
 
-[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予该权限，则 `share()` 方法将抛出异常。
+[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予该权限，则 `share()` 方法将抛出异常。
 
 ## 语法
 
 ```js-nolint
-navigator.share(data)
+share(data)
 ```
 
 ### 参数
 
 - `data` {{optional_inline}}
-
   - : 包含要共享的数据的对象。
 
     用户代理未知的属性将被忽略；共享数据仅根据用户代理可识别的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性。
 
     可能的值有：
-
     - `url` {{optional_inline}}
       - : 表示要共享的 URL 的字符串。
     - `text` {{optional_inline}}
@@ -49,7 +47,7 @@ navigator.share(data)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文档未完全激活，或正在进行其他共享操作。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)已用于阻止使用此特性，或当前文档不处于{{Glossary("transient activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
+  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)已用于阻止使用此特性，或当前文档不处于{{Glossary("transient activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
 - {{jsxref("TypeError")}}
   - : 无法验证指定的共享数据。可能的原因包括：
     - `data` 参数被完全省略或仅包含具有未知值的属性。请注意，用户代理无法识别的任何属性都会被忽略。
@@ -114,7 +112,7 @@ navigator.share(data)
 
 ## 安全
 
-此方法要求当前文档具有 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略和{{Glossary("transient activation", "瞬态激活")}}状态。（它必须由 UI 事件触发，例如单击按钮，并且不能由脚本在任意点启动。）此外，该方法必须指定本机实现的支持共享的有效数据。
+此方法要求当前文档具有 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略和{{Glossary("transient activation", "瞬态激活")}}状态。（它必须由 UI 事件触发，例如单击按钮，并且不能由脚本在任意点启动。）此外，该方法必须指定本机实现的支持共享的有效数据。
 
 ## 示例
 

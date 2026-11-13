@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 
 A propriedade **`Number.NEGATIVE_INFINITY`** representa o valor Infinito negativo.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descrição
 
@@ -55,5 +72,5 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 - {{jsxref("Number.POSITIVE_INFINITY")}}
 - {{jsxref("Number.isFinite()")}}
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("isFinite()")}}

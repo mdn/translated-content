@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{jsxref("Function")}} 인스턴스의 **`name`** 속성은 함수가 생성될 때 지정된 대로 함수의 이름을 나타내거나 익명으로 생성된 함수의 경우 `anonymous` 또는 `''`(빈 문자열)일 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
 
 ## 값
 
@@ -47,7 +61,7 @@ var f = function () {};
 console.log(f.name); // "f"
 ```
 
-{{jsxref("Operators/Function", "function 식", "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
+{{jsxref("Operators/function", "function 식", "", 1)}}에서 이름으로 함수를 정의할 수 있습니다:
 
 ```js
 var object = {

@@ -7,7 +7,8 @@ slug: Web/API/Node/textContent
 
 A propriedade **`textContent`** da interface {{domxref("Node")}} representa o conteúdo de texto de um nó e dos seus descendentes.
 
-> **Nota:** `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#Differences_from_innerText)
+> [!NOTE]
+> `textContent` e {{domxref("HTMLElement.innerText")}} são facilmente confundidos, mas [os dois possuem importantes diferenças entre sí.](#differences_from_innertext)
 
 ## Sintaxe
 
@@ -24,7 +25,7 @@ Uma `String` ou `null`
 
 Ao obter valores desta propriedade:
 
-- Se o nó for um [document](/pt-BR/docs/DOM/document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
+- Se o nó for um [document](/pt-BR/docs/Web/API/Document), um [DOCTYPE](/pt-BR/docs/Glossary/Doctype), ou uma [notation](/pt-BR/docs/Web/API/Notation), o `textContent` retornará `null`. (Para se obter todo o texto e os [dados CDATA](/pt-BR/docs/Web/API/CDATASection) do documento inteiro, você poderá usar `document.documentElement.textContent`.)
 - Se o nó for uma [seção CDATA](/pt-BR/docs/Web/API/CDATASection), comentário, [instrução de processamento](/pt-BR/docs/Web/API/ProcessingInstruction), ou um [text node](/pt-BR/docs/Web/API/Document/createTextNode), o `textContent` retornará o texto dentro do nó, i.e., o {{domxref("Node.nodeValue")}}.
 - Para outros tipos de nó, o `textContent` retornará a concatenação `textContent` de cada nó filho, exceto comentários e instruções de processamento. Essa é uma string vazia se o nó não tiver filhos.
 

@@ -3,7 +3,7 @@ title: Cómo hacer PWAs instalables
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 En el último artículo, leímos cómo la aplicación de ejemplo, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), funciona sin conexión gracias a su [servicio worker](/es/docs/Web/API/Service_Worker_API), pero podemos ir aún más lejos y permitir que los usuarios instalen la aplicación web en los navegadores móviles y de escritorio que lo admitan. Los usuarios pueden iniciar la aplicación web instalada como si fuera una aplicación nativa. Este artículo explica cómo lograr esto usando el manifiesto de la aplicación web.
 
@@ -13,7 +13,7 @@ Estas tecnologías permiten que la aplicación se inicie directamente desde la p
 
 Para que el sitio web sea instalable, necesitas lo siguiente:
 
-- Un manifiesto web, con los [campos correctos completados](/es/Apps/Progressive/Add_to_home_screen#Manifest)
+- Un manifiesto web, con los [campos correctos completados](/es/docs/Web/Aplicaciones/Progressive/Add_to_home_screen#manifest)
 - Que sitio web se sirva desde un dominio seguro (HTTPS)
 - Un icono para representar la aplicación en el dispositivo.
 - Un [servicio worker](/es/docs/Web/API/Service_Worker_API) registrado para permitir que la aplicación funcione sin conexión (actualmente, esto solo lo requiere Chrome para Android)
@@ -74,7 +74,7 @@ La mayoría de los campos se explican por sí mismos, pero para estar seguros de
 - `theme_color`: Un color primario para la interfaz de usuario, utilizado por el sistema operativo.
 - `background_color`: Un color que se utiliza como fondo predeterminado de la aplicación, usado durante la instalación y en la pantalla de bienvenida.
 
-Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Manifest) para obtener más detalles.
+Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest) para obtener más detalles.
 
 ## Agregar a la pantalla inicial
 
@@ -110,10 +110,10 @@ El icono y los colores del tema y fondo se utilizan para crear esta pantalla.
 
 En este artículo, aprendimos cómo podemos hacer que las PWAs se puedan instalar con un manifiesto web correctamente configurado, y cómo el usuario puede luego instalar la PWA con la función "agregar a la pantalla de inicio" de su navegador.
 
-Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía para agregar a la pantalla de inicio](/es/docs/Web/Apps/Progressive/Add_to_home_screen). La compatibilidad con el navegador se limita actualmente a Firefox para Android 58+, Mobile Chrome y Android Webview 31+, y Opera para Android 32+, pero esto debería mejorar en un próximo futuro.
+Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía para agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). La compatibilidad con el navegador se limita actualmente a Firefox para Android 58+, Mobile Chrome y Android Webview 31+, y Opera para Android 32+, pero esto debería mejorar en un próximo futuro.
 
 Ahora pasemos a la última pieza del rompecabezas de PWA: usar notificaciones automáticas para compartir anuncios con el usuario y ayudarlo a volver a interactuar con tu aplicación.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

@@ -3,11 +3,21 @@ title: 无符号右移（>>>）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
 
-{{jsSidebar("Operators")}}
-
 **无符号右移运算符（`>>>`）**（零填充右移）将左操作数计算为无符号数，并将该数字的二进制表示形式移位为右操作数指定的位数，取模 32。向右移动的多余位将被丢弃，零位从左移入。其符号位变为 `0`，因此结果始终为非负数。与其他按位运算符不同，零填充右移返回一个无符号 32 位整数。
 
-{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >>> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >>> b); //  00111111111111111111111111111110
+// Expected output: 1073741822
+```
 
 ## 语法
 

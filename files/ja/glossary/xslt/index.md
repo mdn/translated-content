@@ -14,4 +14,4 @@ XSLT には XML 入力、または XQuery および XPath データモデルに�
 ## 関連情報
 
 - [XSLT](https://ja.wikipedia.org/wiki/XSLT)（ウィキペディア）
-- [XSLT のドキュメント (MDN)](/ja/docs/Web/XSLT)
+- [XSLT のドキュメント (MDN)](/ja/docs/Web/XML/XSLT)

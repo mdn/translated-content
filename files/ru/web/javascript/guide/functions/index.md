@@ -3,7 +3,7 @@ title: Функции
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 ## Функции в JavaScript
 
@@ -135,7 +135,7 @@ if (num === 0) {
 
 В дополнение к объявлениям функций, описанных здесь, вы также можете использовать конструктор [Function](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) для создания функций из строки во время выполнения (_runtime_), подобно [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-**Метод** — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_Objects).
+**Метод** — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_objects).
 
 ## Вызовы функций
 
@@ -172,7 +172,7 @@ var square = function (n) {
 };
 ```
 
-Аргументы функции не ограничиваются строками и числами. Вы можете передавать целые объекты в функцию. Функция `show_props()` (объявленная в [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_Objects)) является примером функции, принимающей объекты аргументом.
+Аргументы функции не ограничиваются строками и числами. Вы можете передавать целые объекты в функцию. Функция `show_props()` (объявленная в [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_objects)) является примером функции, принимающей объекты аргументом.
 
 Функция может вызвать саму себя. Например, вот функция рекурсивного вычисления факториала:
 
@@ -281,7 +281,7 @@ function loop(x) {
 loop(0);
 ```
 
-Однако некоторые алгоритмы не могут быть простыми повторяющимися циклами. Например, получение всех элементов структуры дерева (например, [DOM](/ru/docs/DOM)) проще всего реализуется использованием рекурсии:
+Однако некоторые алгоритмы не могут быть простыми повторяющимися циклами. Например, получение всех элементов структуры дерева (например, [DOM](/ru/docs/Web/API/Document_Object_Model)) проще всего реализуется использованием рекурсии:
 
 ```js
 function walkTree(node) {
@@ -551,7 +551,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **Примечание:** `arguments` является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство `length`. Однако он не обладает всеми методами массивов.
+> [!NOTE]
+> `arguments` является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство `length`. Однако он не обладает всеми методами массивов.
 
 Рассмотрите объект [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript-справочнике для большей информации.
 
@@ -589,7 +590,7 @@ multiply(5); // 5
 
 ### Остаточные параметры (Rest parameters)
 
-[Остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) предоставляют нам массив неопределённых аргументов. В примере мы используем остаточные параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (**_[Arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions))_**, о которой будет рассказано в следующей секции.
+[Остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters) предоставляют нам массив неопределённых аргументов. В примере мы используем остаточные параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (**_[Arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions))_**, о которой будет рассказано в следующей секции.
 
 ```js
 function multiply(multiplier, ...theArgs) {
@@ -682,11 +683,11 @@ var p = new Person();
 
 Подробное техническое описание функций в статье справочника {{jsxref("Functions","Функции")}}
 
-Смотрите также [`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function) в Справочнике JavaScript для получения дополнительной информации по функции как объекту.
+Смотрите также [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в Справочнике JavaScript для получения дополнительной информации по функции как объекту.
 
 Внешние ресурсы:
 
-- [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-function-objects)
+- [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-function-objects)
 - [Учебник по Javascript - замыкания](https://learn.javascript.ru/closures)
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

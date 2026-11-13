@@ -11,7 +11,18 @@ O método `replace()` retorna uma nova string com algumas ou todas as correspond
 
 A string original não é modificada.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Sintaxe
 
@@ -26,15 +37,13 @@ str.replace(regexp|substr, newSubStr|function)
 - `substr`
   - : Uma {{jsxref ("String")}} que será substituída por `newSubStr`. Ele é tratado como uma string textual e não é interpretado como uma expressão regular. Apenas a primeira ocorrência será substituída.
 - `newSubStr`
-
-  - : A {{jsxref("Global_Objects/String", "String")}} que substitui a `substr` recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "
+  - : A {{jsxref("String")}} que substitui a `substr` recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "
 
     Especificando uma string como parâmetro
 
     " abaixo.
 
 - `function`
-
   - : A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "
 
     Especificando uma função como parâmetro
@@ -42,9 +51,7 @@ str.replace(regexp|substr, newSubStr|function)
     " mais abaixo.
 
 - `flags` {{non-standard_inline}}
-
-  - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
-
+  - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
     - `g`
       - : Combinação global.
     - `i`
@@ -54,7 +61,8 @@ str.replace(regexp|substr, newSubStr|function)
     - `y` {{experimental_inline}}
       - : Sticky
 
-    > **Nota:**O argumento `flags` não funciona no v8 Core (Chrome e NodeJs).
+    > [!NOTE]
+    > O argumento `flags` não funciona no v8 Core (Chrome e NodeJs).
 
 ### Valor retornado
 
@@ -62,7 +70,7 @@ Uma nova string com alguma ou todas as combinações do padrão substituído(s) 
 
 ## Descrição
 
-Este método não muda o objeto {{jsxref("Global_Objects/String", "String")}}. Ele simplesmente retorna uma nova string.
+Este método não muda o objeto {{jsxref("String")}}. Ele simplesmente retorna uma nova string.
 
 Para realizar uma pesquisa global e substituir, inclua a flag `g` na expressão regular ou se o primeiro parâmetro for uma string, inclua `g` no parâmetro flags.
 
@@ -70,13 +78,13 @@ Para realizar uma pesquisa global e substituir, inclua a flag `g` na expressão 
 
 A string substituidora pode incluir o seguinte padrão de substituição especial:
 
-| **Padrão**    | **Insere**                                                                                                                                                                          |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`          | Insere um "$".                                                                                                                                                                      |
-| `$&`          | Insere a string casada.                                                                                                                                                             |
-| `` $` ``      | Insere a porção da string que precede a substring combinada.                                                                                                                        |
-| `$'`          | Insere a porção da string que segue a substring combinada.                                                                                                                          |
-| `$n` ou `$nn` | Onde `n` ou `nn` são dígitos decimais, insere a _n_-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+| **Padrão**    | **Insere**                                                                                                                                                 |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`          | Insere um "$".                                                                                                                                             |
+| `$&`          | Insere a string casada.                                                                                                                                    |
+| `` $` ``      | Insere a porção da string que precede a substring combinada.                                                                                               |
+| `$'`          | Insere a porção da string que segue a substring combinada.                                                                                                 |
+| `$n` ou `$nn` | Onde `n` ou `nn` são dígitos decimais, insere a _n_-ésima substring entre parêntesis casada, dado o primeiro argumento foi um objeto {{jsxref("RegExp")}}. |
 
 ### Especificando uma função como parâmetro
 
@@ -84,14 +92,14 @@ Você pode especificar uma função no segundo parâmetro. Neste caso, a funçã
 
 Os parâmetros da função são:
 
-| **Possíveis nomes** | **Valor fornecido**                                                                                                                                                                                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`             | A substring encontrada. Corresponde ao `$&` acima.                                                                                                                                                                                                                                            |
-| `p1, p2, ...`       | O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função `replace()` {{jsxref("Global_Objects/RegExp", "RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, for o primeiro parâmetro, `p1` é a combinação para `\a+`, e `p2` para `\b+`. |
-| `offset`            | O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.                                                                                                                   |
-| `string`            | A string completa que está sendo examinada.                                                                                                                                                                                                                                                   |
+| **Possíveis nomes** | **Valor fornecido**                                                                                                                                                                                                                                                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`             | A substring encontrada. Corresponde ao `$&` acima.                                                                                                                                                                                                                   |
+| `p1, p2, ...`       | O enésimo parâmetro entre parênteses da RegEx no primeiro parâmetro na função `replace()` {{jsxref("RegExp")}}. (Corresponde a `$1`, `$2`, etc. acima.) Por exemplo, se `/(\a+)(\b+)/`, for o primeiro parâmetro, `p1` é a combinação para `\a+`, e `p2` para `\b+`. |
+| `offset`            | O offset da string encontrada em relação ao resto da string. Por exemplo, se a string for 'abcd' e a string a ser encontrada for 'bc', então este parâmetro terá o valor 1.                                                                                          |
+| `string`            | A string completa que está sendo examinada.                                                                                                                                                                                                                          |
 
-(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("Global_Objects/RegExp", "RegExp")}} e de quantas combinações entre parênteses houver).
+(O número exato de argumentos dependerá se o primeiro parâmetro for uma {{jsxref("RegExp")}} e de quantas combinações entre parênteses houver).
 
 O exemplo a seguir irá substituir o valor de `newString` para `'abc - 12345 - #$*%'`:
 
@@ -121,7 +129,7 @@ console.log(newstr);
 ```
 
 > [!NOTE]
-> Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para maiores explicações as sobre expressões regulares.
+> Veja [este guia](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) para maiores explicações as sobre expressões regulares.
 
 ### Usando `global` e `ignore` com `replace()`
 
@@ -139,7 +147,7 @@ console.log(newstr);
 
 ### Trocando palavras em uma string
 
-O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) e os padrões de substituição `$1` e `$2`.
+O script a seguir troca as palavras na string. Para o texto que vai substituir, o script usa [grupos de captura](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) e os padrões de substituição `$1` e `$2`.
 
 ```js
 var re = /(\w+)\s(\w+)/;

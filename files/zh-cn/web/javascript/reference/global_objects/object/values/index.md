@@ -3,11 +3,20 @@ title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 
-{{JSRef}}
-
 **`Object.values()`** 静态方法返回一个给定对象的自有可枚举字符串键属性值组成的数组。
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+{{InteractiveExample("JavaScript Demo: Object.values()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+```
 
 ## 语法
 
@@ -85,7 +94,7 @@ console.log(Object.values(100)); // []
 ## 参见
 
 - [`core-js` 中 `Object.values` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

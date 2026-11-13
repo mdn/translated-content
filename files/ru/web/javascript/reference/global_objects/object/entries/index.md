@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 **`Object.entries()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, value]`, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается **`Object.entries()`** не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то массив должен быть отсортирован до вызова метода, например `Object.entries(obj).sort((a, b) => a[0] - b[0]);`.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## Синтаксис
 
@@ -88,7 +103,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 ### Итерация по `Object`
 
-Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
+Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
 
 ```
 const obj = { foo: 'bar', baz: 42 };
@@ -109,7 +124,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 
 ## Смотрите также
 
-- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

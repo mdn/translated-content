@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("String")}} 값의 **`replace()`** 메서드는 `pattern`의 단일, 일부 혹은 모든 일치 항목이 `replacement`로 대치된 새로운 문자열을 반환합니다. `pattern`은 문자열 혹은 {{jsxref("RegExp")}}일 수 있습니다. `replacement`는 문자열이나 각 일치 항목마다 호출되는 함수일 수 있습니다. 만약 `pattern`이 문자열이라면, 오직 첫 번째 항목만 변경됩니다. 원본 문자열은 변하지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## 구문
 
@@ -129,7 +140,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 이는 `'Twas the night before Christmas...'`를 출력합니다.
 
-> **참고:** [정규 표현식 안내서](/ko/docs/Web/JavaScript/Guide/Regular_expressions)를 보시면 정규 표현식에 대해 더 많은 설명을 보실 수 있습니다.
+> [!NOTE]
+> [정규 표현식 안내서](/ko/docs/Web/JavaScript/Guide/Regular_expressions)를 보시면 정규 표현식에 대해 더 많은 설명을 보실 수 있습니다.
 
 ### 전역 그리고 대소문자 구분 무시 플래그와 함께 replace() 사용하기
 

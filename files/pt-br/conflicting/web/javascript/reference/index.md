@@ -10,7 +10,7 @@ O JavaScript é uma linguagem interpretada que se destina a ser utilizado dentro
 
 ## Onde encontrar mais informações sobre JavaScript ?
 
-Você pode verificar a documentação do _core_ da linguagem e seus novos recursos ( [ECMAScript](/pt-BR/docs/Web/JavaScript/Language_Resources) puro em sua maior parte), incluindo também :
+Você pode verificar a documentação do _core_ da linguagem e seus novos recursos ( [ECMAScript](/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview) puro em sua maior parte), incluindo também :
 
 - [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide)
 - [Referência de JavaScript](/pt-BR/docs/Web/JavaScript/Reference)
@@ -36,4 +36,4 @@ Na referência do JavaScript você poderá encontrar os seguintes seções :
 
 - [Recursos e funcionalidades obsoletas](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Gramática Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Tipos e estruturas de dados](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [Tipos e estruturas de dados](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)

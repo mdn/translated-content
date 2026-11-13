@@ -3,11 +3,31 @@ title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
 
-{{JSRef}}
-
 La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  _age: 111,
+  [Symbol("secret")]: "I am scared!",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  ownKeys(target) {
+    return Reflect.ownKeys(target);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+for (const key of Object.keys(proxy1)) {
+  console.log(key);
+  // Expected output: "_age"
+  // Expected output: "eyeCount"
+}
+```
 
 ## Syntaxe
 
@@ -100,6 +120,6 @@ console.log(Object.getOwnPropertyNames(p));
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Reflect.ownKeys()")}}

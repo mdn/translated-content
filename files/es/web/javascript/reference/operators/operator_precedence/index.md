@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 La **precedencia de operadores** determina el orden en el cual los operadores son evaluados uno respecto del otro. Los operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## Precedencia y Asociatividad
 
@@ -243,21 +257,20 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto",
-                1)}}
+        {{jsxref("Operators/Property_accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por corchetes)","#notaci.c3.b3n_por_corchetes", 1)}}
+        {{jsxref("Operators/Property_accessors", "Acceso a propiedades (notación por corchetes)","#notaci.c3.b3n_por_corchetes", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (con lista de argumentos)</td>
+      <td>{{jsxref("new")}} (con lista de argumentos)</td>
       <td>n/a</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -280,7 +293,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (sin lista de argumentos)
+        {{jsxref("new")}} (sin lista de argumentos)
       </td>
       <td>a la derecha</td>
       <td><code>new …</code></td>
@@ -346,7 +359,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -446,7 +459,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+      <td>{{jsxref("instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>
@@ -517,7 +530,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Nullish_coalescing_operator","Operador de coalescencia nula (??)","", 1)}}
+        {{jsxref("Operators/Nullish_coalescing","Operador de coalescencia nula (??)","", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… ?? …</code></td>
@@ -525,7 +538,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>3</td>
       <td>
-        {{jsxref("Operators/Conditional_Operator","Operador condicional (ternario)","", 1)}}
+        {{jsxref("Operators/Conditional_operator","Operador condicional (ternario)","", 1)}}
       </td>
       <td>a la derecha</td>
       <td><code>… ? … : …</code></td>
@@ -595,7 +608,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>1</td>
       <td>
-        {{jsxref("Operators/Comma_Operator","Operador coma","", 1)}}
+        {{jsxref("Operators/Comma_operator","Operador coma","", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… , …</code></td>

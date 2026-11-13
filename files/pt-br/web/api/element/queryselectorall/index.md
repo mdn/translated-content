@@ -7,7 +7,7 @@ slug: Web/API/Element/querySelectorAll
 
 ## Sumário
 
-Retorna uma [`NodeList`](/pt-BR/docs/DOM/NodeList) de todos os elementos descendentes do elemento que foi invocado que sejam compatíveis com o grupo de seletores CSS especificados.
+Retorna uma [`NodeList`](/pt-BR/docs/Web/API/NodeList) de todos os elementos descendentes do elemento que foi invocado que sejam compatíveis com o grupo de seletores CSS especificados.
 
 ## Sintaxe
 
@@ -17,9 +17,9 @@ elementList = baseElement.querySelectorAll(selectors);
 
 Onde
 
-- `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/DOM/element).
-- `baseElement` é um objeto [elemento](/pt-BR/docs/DOM/element).
-- `selectors` é um grupo de [seletores](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Selectors) que serão procurados.
+- `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/Web/API/Element).
+- `baseElement` é um objeto [elemento](/pt-BR/docs/Web/API/Element).
+- `selectors` é um grupo de [seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que serão procurados.
 
 ## Exemplos
 
@@ -62,6 +62,6 @@ Lembre-se que o valor retornado é uma NodeList, então não é recomendado o us
 
 ## Veja também
 
-- [`document.querySelectorAll`](/pt-BR/docs/DOM/Document.querySelectorAll)
-- [`document.querySelector`](/pt-BR/docs/DOM/Document.querySelector)
+- [`document.querySelectorAll`](/pt-BR/docs/Web/API/Document/querySelectorAll)
+- [`document.querySelector`](/pt-BR/docs/Web/API/Document/querySelector)
 - [Code snippets for `querySelector`](/pt-BR/docs/Code_snippets/QuerySelector)

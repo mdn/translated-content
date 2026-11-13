@@ -5,11 +5,20 @@ l10n:
   sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
-
 {{jsxref("ArrayBuffer")}} 实例的 `byteLength` 访问器属性返回该数组缓冲区的长度（以字节为单位）。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+// Use byteLength to check the size
+const bytes = buffer.byteLength;
+
+console.log(bytes);
+// Expected output: 8
+```
 
 ## 描述
 

@@ -26,7 +26,7 @@ throw 42; // gera uma exceção com o valor 42
 throw true; // gera uma exceção com o valor true
 ```
 
-Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
+Note também que a instrução `throw` é afetada pela [inserção automática de ponto-e-vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) como nenhum terminador de linha entre a palavra `throw` e a expressão é permitido.
 
 ## Exemplos
 

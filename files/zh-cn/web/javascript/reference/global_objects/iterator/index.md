@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`Iterator`** 对象是一个符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)的对象，其提供了 `next()` 方法用以返回迭代器结果对象。所有内置迭代器都继承自 `Iterator` 类。`Iterator` 类提供了 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) 方法，该方法返回迭代器对象本身，使迭代器也[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。它还提供了一些使用迭代器的辅助方法。
 
 ## 描述
@@ -43,7 +41,7 @@ const nameToDeposit = new Map([
 const totalDeposit = [...nameToDeposit.values()].reduce((a, b) => a + b);
 ```
 
-这首先将 {{jsxref("Map.prototype.values()")}} 返回的迭代器器转换为数组，然后使用 {{jsxref("Array.prototype.reduce()")}} 方法计算总和。然而，这既创建了一个中间数组，又重复了数组两次。相反，你可以使用迭代器本身的 `reduce()` 方法：
+这首先将 {{jsxref("Map.prototype.values()")}} 返回的迭代器转换为数组，然后使用 {{jsxref("Array.prototype.reduce()")}} 方法计算总和。然而，这既创建了一个中间数组，又重复了数组两次。相反，你可以使用迭代器本身的 `reduce()` 方法：
 
 ```js
 const totalDeposit = nameToDeposit.values().reduce((a, b) => a + b);
@@ -134,7 +132,6 @@ const myIterator = Iterator.from({
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Iterator` 实例，其初始值是 {{jsxref("Iterator/Iterator", "Iterator")}} 构造函数。
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
     > [!NOTE]

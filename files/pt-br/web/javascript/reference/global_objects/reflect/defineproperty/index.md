@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 O método estático **`Reflect.defineProperty()`** é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## Sintaxe
 
@@ -36,7 +50,8 @@ Um {{jsxref("TypeError")}}, se `target` não for um {{jsxref("Object")}}.
 
 O método `Reflect.defineProperty` permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.
 
-> **Nota:** **Uma diferença fundamental:** `Object.defineProperty` retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. `Reflect.defineProperty`, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
+> [!NOTE]
+> **Uma diferença fundamental:** `Object.defineProperty` retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. `Reflect.defineProperty`, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
 
 ## Exemplos
 

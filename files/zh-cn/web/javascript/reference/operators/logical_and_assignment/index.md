@@ -3,11 +3,22 @@ title: 逻辑与赋值（&&=）
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **逻辑与赋值**（`x &&= y`）运算仅在 `x` 为{{Glossary("truthy","真")}}值时为其赋值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+
+```js interactive-example
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
+```
 
 ## 语法
 

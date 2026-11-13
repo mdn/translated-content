@@ -3,11 +3,9 @@ title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
 ---
 
-{{AddonSidebar}}
-
 La fonction **`cancel()`** de l'API de {{WebExtAPIRef("downloads")}} annule un téléchargement. L'appel échouera si le téléchargement n'est pas actif : par exemple, parce qu'il a terminé le téléchargement..
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +22,7 @@ var canceling = browser.downloads.cancel(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -51,9 +49,7 @@ canceling.then(onCanceled, onError);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

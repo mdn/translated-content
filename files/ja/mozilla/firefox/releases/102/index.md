@@ -3,8 +3,6 @@ title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 102 の変更点をまとめています。Firefox 102 は、米国時間 2022 年 6 月 28 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -15,7 +13,7 @@ slug: Mozilla/Firefox/Releases/102
 
 ### CSS
 
-出力端末がコンテンツを表示した後に、その内容を変更できる能力を確認するために使用できる [`update`](/ja/docs/Web/CSS/@media/update-frequency) メディア特性をデフォルトで有効にしました ([Firefox バグ 1422312](https://bugzil.la/1422312))。
+出力端末がコンテンツを表示した後に、その内容を変更できる能力を確認するために使用できる [`update`](/ja/docs/Web/CSS/Reference/At-rules/@media/update) メディア特性をデフォルトで有効にしました ([Firefox バグ 1422312](https://bugzil.la/1422312))。
 
 ### JavaScript
 
@@ -23,7 +21,7 @@ slug: Mozilla/Firefox/Releases/102
 
 ### API
 
-- 非標準の [IDBMutableFile](/ja/docs/Web/API/IDBMutableFile)、[IDBFileHandle](/ja/docs/Web/API/IDBFileHandle)、[IDBFileRequest](/ja/docs/Web/API/IDBFileRequest) インターフェイスおよび [IDBDatabase.createMutableFile()](/ja/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile) メソッドを、将来のリリースで削除する準備としてデフォルトで無効にしました ([Firefox バグ 1764771](https://bugzil.la/1764771))。
+- 非標準の [IDBMutableFile](/ja/docs/Web/API/IndexedDB_API)、[IDBFileHandle](/ja/docs/Web/API/IndexedDB_API)、[IDBFileRequest](/ja/docs/Web/API/IndexedDB_API) インターフェイスおよび [IDBDatabase.createMutableFile()](/ja/docs/Web/API/IDBDatabase#idbdatabase.createmutablefile) メソッドを、将来のリリースで削除する準備としてデフォルトで無効にしました ([Firefox バグ 1764771](https://bugzil.la/1764771))。
 
 - [Transform streams](/ja/docs/Web/API/TransformStream) をサポートしました。{{domxref("ReadableStream")}} から {{domxref("WritableStream")}} へチャンクを運んで、変換処理を実行できます。
   この更新には新しい [`TransformStream`](/ja/docs/Web/API/TransformStream) および [`TransformStreamDefaultController`](/ja/docs/Web/API/TransformStreamDefaultController) インターフェイスと [`ReadableStream.pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) メソッドが含まれます ([Firefox バグ 1767507](https://bugzil.la/1767507))。

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 Метод **`toString()`** возвращает строку, представляющую объект.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## Синтаксис
 
@@ -21,7 +36,7 @@ obj.toString()
 
 ## Описание
 
-Каждый объект имеет метод `toString()`, автоматически вызывающийся, когда объект должен быть представлен в виде текстового значения или когда объект участвует в выражении, где ожидается строка. По умолчанию, метод `toString()` наследуется каждым объектом, произошедшим от объекта {{jsxref("Global_Objects/Object", "Object")}}. Если этот метод не переопределён в пользовательском объекте, `toString()` возвращает строку вида "\[object _тип_]", где `тип` — это тип объекта. Это иллюстрирует следующий код:
+Каждый объект имеет метод `toString()`, автоматически вызывающийся, когда объект должен быть представлен в виде текстового значения или когда объект участвует в выражении, где ожидается строка. По умолчанию, метод `toString()` наследуется каждым объектом, произошедшим от объекта {{jsxref("Object")}}. Если этот метод не переопределён в пользовательском объекте, `toString()` возвращает строку вида "\[object _тип_]", где `тип` — это тип объекта. Это иллюстрирует следующий код:
 
 ```js
 var o = new Object();
@@ -29,7 +44,7 @@ o.toString(); // вернёт [object Object]
 ```
 
 > [!NOTE]
-> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("Global_Objects/null", "null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
+> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
 
 ## Примеры
 
@@ -50,7 +65,7 @@ function Dog(name, breed, color, sex) {
 theDog = new Dog("Болтушка", "лабрадор", "шоколадный", "девочка");
 ```
 
-Если вы вызовете метод `toString()` на этом пользовательском объекте, он вернёт значение по умолчанию, унаследованное от {{jsxref("Global_Objects/Object", "Object")}}:
+Если вы вызовете метод `toString()` на этом пользовательском объекте, он вернёт значение по умолчанию, унаследованное от {{jsxref("Object")}}:
 
 ```js
 theDog.toString(); // вернёт [object Object]
@@ -113,7 +128,8 @@ toString.call(null); // [object Null]
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toSource()")}}
+- [Полифил `Object.prototype.toString` с поддержкой `Symbol.toStringTag` в `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}
+- {{jsxref("Symbol.toStringTag")}}

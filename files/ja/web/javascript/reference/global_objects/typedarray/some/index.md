@@ -1,15 +1,29 @@
 ---
 title: TypedArray.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の要素のうち、指定されたテスト関数を満たす要素が 1 つでも見つかった場合に `true` を返します。それ以外の場合は `false` を返します。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
 
-**`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の中に指定された関数で実装されているテストに合格する要素が 1 つでもあるかどうかをテストします。型付き配列の中に指定された関数が true を返す要素があれば true を返し、なければ false を返します。型付き配列を変更することはありません。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.some()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// 予想される結果: true
+
+console.log(positives.some(isNegative));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -21,7 +35,6 @@ some(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
       - : 現在処理されている型付き配列の要素です。
@@ -43,7 +56,7 @@ some(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列のすべての要素の大きさをテストする
+### 型付き配列の要素の大きさをテストする
 
 次の例では、型付き配列の中に 10 よりも大きい要素があるかどうかをテストします。
 
@@ -65,7 +78,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 
 ## 関連情報
 
-- [`TypedArray.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.some` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}

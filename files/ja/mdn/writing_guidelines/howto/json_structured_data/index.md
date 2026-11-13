@@ -1,13 +1,12 @@
 ---
 title: 構造化データの使用方法
+short-title: 構造化データの使用
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 l10n:
-  sourceCommit: 7870c4db8ad2eae109d1c7c68e038743115eebb5
+  sourceCommit: 6d363614de8a40c33d1afe92e4e846b75beea986
 ---
 
-{{MDNSidebar}}
-
-MDNは可能な限り、明確に定義された構造でデータを格納されます。この情報は一元化され、一度の更新で多くの場所で使用することができます。
+MDN は可能な限り、明確に定義された構造でデータを格納します。この情報は一元化され、一度の更新で多くの場所で使用することができます。
 
 このようなファイルがいくつかあり、この記事ではそれらの目的、構造、メンテナンスプロセスについて記述しています。
 
@@ -27,28 +26,30 @@ GroupData はまさにそれを行います。それぞれの API について�
 `GroupData.json` の項目は次のような構造です。
 
 ```json
-"API_の名前": {
-  "overview": ["概要ページの名前"],
-  "guides": [
-    "ガイド_1_の名前",
-    (…)
-  ],
-  "interfaces": [
-    "インターフェイス_1_の名前",
-    (…)
-  ],
-  "methods": [
-    "追加メソッド_1_の名前",
-    (…)
-  ],
-  "properties": [
-    "追加プロパティ_1_の名前",
-    (…)
-  ],
-  "events": [
-    "追加イベント_1_の名前",
-    (…)
-  ]
+{
+  "API_の名前": {
+    "overview": ["概要ページの名前"],
+    "guides": [
+      "ガイド_1_の名前"
+      // …
+    ],
+    "interfaces": [
+      "インターフェイス_1_の名前"
+      // …
+    ],
+    "methods": [
+      "追加メソッド_1_の名前"
+      // …
+    ],
+    "properties": [
+      "追加プロパティ_1_の名前"
+      // …
+    ],
+    "events": [
+      "追加イベント_1_の名前"
+      // …
+    ]
+  }
 }
 ```
 
@@ -66,13 +67,16 @@ GroupData はまさにそれを行います。それぞれの API について�
   - : API の一部であるインターフェイスを掲載します。
 - `"methods"`
   - : API の一部であるメソッドを掲載します。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのメソッドは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-method` または `web-api-instance-method` の場合、自動的にサイドバーに追加されます。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスのメソッドは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-method` または `web-api-instance-method` の場合、自動的にサイドバーに追加されます。
 - `"properties"`
   - : API の一部である他のインターフェイスのプロパティを掲載します。例えば `navigator.xr` （WebXR API が `navigator` オブジェクトに追加するプロパティ）です。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-property` または `web-api-instance-property` の場合、自動的にサイドバーに追加されます。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-static-property` または `web-api-instance-property` の場合、自動的にサイドバーに追加されます。
 - `"events"`
-  - : API の一部である他のインターフェイスのイベントを掲載します。値はページのタイトルです（`Web/Events` 以下になければなりません）。
-    > **メモ:** `"interfaces"` に掲載されているインターフェイスのプロパティは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-event` の場合、自動的にサイドバーに追加されます。
+  - : API の一部である他のインターフェイスのイベントを掲載します。値はページのタイトルです。
+    > [!NOTE]
+    > `"interfaces"` に掲載されているインターフェイスを対象とするイベントは、ここに挙げては**いけません**。そのページの `page-type` キーが `web-api-event` の場合、自動的にサイドバーに追加されます。
 
 他の 2 つのキー、 `"dictionaries"` と `"callbacks"` がありますが、同じ原理で処理します。これらのエンティティを自分自身のページで文書化しなくなりましたので、これらの使用は非推奨です。また、新しい項目を追加するべきではありません（少しずつ除去していきます）。
 
@@ -81,11 +85,9 @@ GroupData はまさにそれを行います。それぞれの API について�
 
 ### GroupData の更新プロセス
 
-このファイルは、サイドバーに影響する変更が起こったのと同じPRで更新されるべきです。そうすれば、サイドバーは常に最新の状態になります。レビュアーはこのファイルを採用していない PR をマージすべきではありません。
+[`files/jsondata/GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) は、サイドバーに影響する変更が起こったのと同じ PR で更新する必要があります。そうすれば、サイドバーは常に最新の状態になります。レビュアーは、このファイルを更新していない PR をマージすべきではありません。
 
 あなたの変更をテストするには、 PR 内のファイルのサイドバーがすべての項目を正しく表示しているか調べてください。
-
-`GroupData.json` ファイルは GitHub で[ここ](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json)にあります。
 
 ## InterfaceData: インターフェイスの継承の記録
 
@@ -101,9 +103,11 @@ GroupData はまさにそれを行います。それぞれの API について�
 `InterfaceData.json` の項目は次のような構造です。
 
 ```json
-"インターフェイスの名前": {
-  "inh": "親インターフェイスの名前",
-  "impl": []
+{
+  "インターフェイスの名前": {
+    "inh": "親インターフェイスの名前",
+    "impl": []
+  }
 }
 ```
 
@@ -114,16 +118,14 @@ GroupData はまさにそれを行います。それぞれの API について�
 
 ### InterfaceData の更新プロセス
 
-他のインターフェイスを継承する新しいインターフェイスを追加する PR は、このファイルを更新しなければなりません。レビュアーはそうしない PR をマージすべきではありません。
+他のインターフェイスを継承する新しいインターフェイスを追加する PR は、[`files/jsondata/InterfaceData.json`](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json) を更新しなければなりません。レビュアーはそうしない PR をマージすべきではありません。
 
-変更をテストするには、 P Rで編集した各インターフェイスのサイドバーが継承を正しく表示しているか調べてください。
-
-`InterfaceData.json` ファイルは GitHub で[ここ](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json)にあります。
+変更をテストするには、PR で編集した各インターフェイスのサイドバーが継承を正しく表示しているか調べてください。
 
 ## SpecData: 仕様書情報
 
-> **警告:** `SpecData.json` ファイルは保守されなくなりました。正規の 仕様書情報は w3c/browser-spec と mdn/browser-compat-data の features の `spec_url` キーに保存されます。
+> [!WARNING]
+> [`SpecData.json`](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) ファイルは保守されなくなりました。
+> 正規の仕様書情報は [w3c/browser-specs](https://github.com/w3c/browser-specs) と、[mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) で定義されている機能の `spec_url` キーに保存されます。
 
-除去している `\{{SpecName}}` と `\{{Spec2}}` マクロは `SpecData.json` ファイルを使用しています。代わりに、 `\{{Specifications}}` マクロを使用して仕様表を挿入するか、仕様への（良い）リンクをハードコーディングしてください。たいていの場合、「仕様書」セクションの外で仕様書に言及したり、リンクを張ったりすることは、 MDN で適切に文書化されていないことの表れであることに注意してください。
-
-`SpecData.json` ファイルは GitHub で[ここ](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)にあります。
+`SpecData.json` ファイルへの追加は受け付けていません。代わりに、`\{{Specifications}}` マクロを使用して仕様表を挿入するか、本文中で仕様書へのリンクを記述してください。ほとんどの場合、「仕様書」セクション以外で仕様書に言及したりリンクしたりすることは、MDN で適切に文書化されていないことを示しています。

@@ -1,21 +1,14 @@
 ---
 title: Certifié
 slug: Glossary/Certified
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 **Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.
 
-Pour les détails sur la certification en {{glossary("Cryptography","Cryptographie")}}, veuillez vous référer aux {{glossary("Digital Certificate","certificats numériques")}}.
+Pour les détails sur la certification en {{Glossary("Cryptography", "Cryptographie")}}, veuillez vous référer aux {{Glossary("Digital Certificate", "certificats numériques")}}.
 
 ## Voir aussi
 
-### Culture générale
-
-- [Tutoriel sur la sécurité des informations](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
-- [Autorité de certification](https://fr.wikipedia.org/wiki/Autorité_de_certification) sur Wikipédia
-
-### Firefox OS
-
-- Les applications internes de Firefox OS sont aussi parfois appelées applications certifiées : voir [Permissions des applications](/fr/Apps/Build/App_permissions) pour plus d'informations.
+- [Certification <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Professional_certification#Computer_technology) sur Wikipédia

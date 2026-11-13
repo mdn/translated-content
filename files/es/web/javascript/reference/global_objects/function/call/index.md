@@ -18,13 +18,12 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 ### Parametros
 
 - `thisArg` {{optional_inline}}
-
   - : El valor a usar como `this` cuando se llama a _`function`_.
 
     > [!WARNING]
     > En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
     >
-    > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
+    > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("null")}} y {{jsxref("undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 
 - `arg1, arg2, ...`
   - : Argumentos para el objeto.
@@ -37,7 +36,7 @@ El resultado de llamar a la función con el `this` especificado y los argumentos
 
 `call()` permite que una función/método que pertenece a un objeto, ser asignada y llamada para un objeto diferente.
 
-`call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método ona vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
+`call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método una vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
 
 > [!NOTE]
 > Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
@@ -105,7 +104,7 @@ for (var i = 0; i < animales.length; i++) {
 }
 ```
 
-## See also
+## Ver también
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}

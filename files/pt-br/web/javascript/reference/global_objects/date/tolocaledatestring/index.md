@@ -15,13 +15,13 @@ dateObj.toLocaleDateString([locales [, options]])
 
 ### Parametros
 
-Verifique a seção [Compatibilidade entre navegadores](#compatibilidade_entre_navegadores) para ver quais navegadores dão suporte aos argumentos `locales` e `options`, e o [Example: Verificação para suporte dos argumentos `locales` e `options`](#Example:_Checking_for_support_for_locales_and_options_arguments) para detectar a funcionalidade.
+Verifique a seção [Compatibilidade entre navegadores](#compatibilidade_entre_navegadores) para ver quais navegadores dão suporte aos argumentos `locales` e `options`, e o [Example: Verificação para suporte dos argumentos `locales` e `options`](#example:_checking_for_support_for_locales_and_options_arguments) para detectar a funcionalidade.
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}O valor padrão para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `weekday`, `year`, `month`, `day` são todas {{jsxref("undefined")}}, então `year`, `month` and `day` são assumidos como "`numeric`".
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters') -->O valor padrão para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `weekday`, `year`, `month`, `day` são todas {{jsxref("undefined")}}, então `year`, `month` and `day` são assumidos como "`numeric`".
 
 ### Return value
 
-Uma representação em string de parte da data dada a instância {{jsxref("Global_Objects/Date", "Date")}} de acordo com as convenções específicas do idioma.
+Uma representação em string de parte da data dada a instância {{jsxref("Date")}} de acordo com as convenções específicas do idioma.
 
 ## Exemplos
 
@@ -116,7 +116,7 @@ console.log(date.toLocaleDateString("en-US", options));
 
 ## Performance
 
-Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecido porsua propriedade {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecido porsua propriedade {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificações
 
@@ -128,7 +128,7 @@ Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Glob
 
 ## Veja também
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

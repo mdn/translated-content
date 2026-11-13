@@ -46,8 +46,8 @@ slug: Web/API/Web_Workers_API
 
 워커의 기본 사용법을 보이는 간단한 데모를 준비해놨습니다.
 
-- [기본적인 전용 워커 예제](https://github.com/mdn/simple-web-worker) ([실행](http://mdn.github.io/simple-web-worker/))
-- [기본적인 공유 워커 예제](https://github.com/mdn/simple-shared-worker) ([실행](http://mdn.github.io/simple-shared-worker/))
+- [기본적인 전용 워커 예제](https://github.com/mdn/simple-web-worker) ([실행](https://mdn.github.io/simple-web-worker/))
+- [기본적인 공유 워커 예제](https://github.com/mdn/simple-shared-worker) ([실행](https://mdn.github.io/simple-shared-worker/))
 
 [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)에서 데모의 동작법을 자세히 알아볼 수 있습니다.
 

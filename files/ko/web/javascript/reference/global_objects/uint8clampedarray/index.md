@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray.Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : 새로운 `Uint8ClampedArray` 객체를 생성합니다.
 
 ## 정적 속성
@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자 값으로 반환합니다. `Uint8ClampedArray`의 경우 `1` 입니다.
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
+- {{jsxref("Function.name", "Uint8ClampedArray.name")}}
   - : 생성자 이름을 문자열로 반환합니다. `Uint8ClampedArray` 타입의 경우 `"Uint8ClampedArray"`입니다.
 
 ## 정적 메서드
@@ -86,6 +86,6 @@ console.log(uintc8FromIterable);
 ## 같이 보기
 
 - [`core-js`에서 `Uint8ClampedArray`의 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

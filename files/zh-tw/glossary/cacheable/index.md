@@ -3,8 +3,6 @@ title: 可緩存
 slug: Glossary/Cacheable
 ---
 
-{{GlossarySidebar}}
-
 **可緩存**的響應是可被緩存的 HTTP 響應，它被存儲以供稍後檢索和使用，從而將新的請求保存在伺服器。不是所有的 HTTP 響應都可以被緩存，可以被緩存的 HTTP 響應需滿足如下列條件:
 
 - 請求中使用的方法本身是可以被緩存的，如 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法。如果下達了新的指示，響應 {{HTTPMethod("POST")}} 方法也可以被緩存，但這種實施方式極爲罕見。其他方法，如：{{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 都不可以被緩存，同樣他們的處理結果也不可以。
@@ -15,7 +13,7 @@ slug: Glossary/Cacheable
 
 同樣的,如果請求的方法和響應的狀態都可以被緩存，那請求的響應也都將可以被緩存：
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 
@@ -25,7 +23,7 @@ GET /pageX.html HTTP/1.1
 
 {{HTTPMethod("PUT")}} 請求不能被緩存. 此外，它還將導致所有來源為 {{HTTPMethod("HEAD")}} 或 {{HTTPMethod("GET")}} 相同的 URI 緩存數據無效 :
 
-```plain
+```http
 PUT /pageX.html HTTP/1.1
 (…)
 
@@ -35,7 +33,7 @@ PUT /pageX.html HTTP/1.1
 
 指定的 {{HTTPHeader("Cache-Control")}} 頭部在響應中可以阻止緩存：
 
-```plain
+```http
 GET /pageX.html HTTP/1.1
 (…)
 

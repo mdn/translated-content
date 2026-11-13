@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 O método **`Number.isSafeInteger()`** determina se o valor fornecido é seja um número seguro.
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 Um inteiro seguro é um inteiro que:
 
@@ -18,7 +33,7 @@ Um inteiro seguro é um inteiro que:
 
 Exemplo, `253 - 1` é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, `253` _não_ é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro `253 + 1` não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de `253` sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de `-(253 - 1)` inclusive para `253 - 1` (sendo ± `9007199254740991` ou ± 9,007,199,254,740,991).
 
-A manipulação de valores entre \~9 quadrilhões com precisão total requer o uso de [arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (biblioteca aritmética de precisão arbitrária). Veja [What Every Programmer Needs to Know about Floating Point Arithmetic](http://floating-point-gui.de/) (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.
+A manipulação de valores entre \~9 quadrilhões com precisão total requer o uso de [arbitrary precision arithmetic library](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (biblioteca aritmética de precisão arbitrária). Veja [What Every Programmer Needs to Know about Floating Point Arithmetic](https://floating-point-gui.de/) (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.
 
 Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.
 

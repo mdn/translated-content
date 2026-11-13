@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 
 {{JSRef}}
 
-**`slice()`** 메서드는 형식화 배열의 일부를 얕게 복사(shallow copy)한 새로운 형식화 배열 객체를 반환합니다. 이 메서드는 {{jsxref("Array.prototype.slice()")}}와 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_객체) 중 하나입니다.
+**`slice()`** 메서드는 형식화 배열의 일부를 얕게 복사(shallow copy)한 새로운 형식화 배열 객체를 반환합니다. 이 메서드는 {{jsxref("Array.prototype.slice()")}}와 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_객체) 중 하나입니다.
 
 ## 구문
 

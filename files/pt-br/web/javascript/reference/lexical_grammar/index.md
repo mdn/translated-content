@@ -32,7 +32,7 @@ Espaços em branco ajudam na legibilidade do código e separam os símbolos um d
 
 ## Finalizadores de linha
 
-Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
+Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
 
 Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).
 
@@ -113,7 +113,7 @@ Neste caso, a função `console.log()` nunca será invocada, pois está comentad
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Statements/switch", "default")}}
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
@@ -125,12 +125,12 @@ Neste caso, a função `console.log()` nunca será invocada, pois está comentad
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}

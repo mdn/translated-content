@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当书签或文件夹被移除时触发。当文件夹被递归移除时，只会为该文件夹触发一个通知，而不会为其内容触发通知。
 
 ## 语法
@@ -17,23 +15,21 @@ browser.bookmarks.onRemoved.removeListener(listener)
 browser.bookmarks.onRemoved.hasListener(listener)
 ```
 
-事件包含以下三个函数：
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到该事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到该事件。如果正在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。被移除项目的 ID。
     - `removeInfo`

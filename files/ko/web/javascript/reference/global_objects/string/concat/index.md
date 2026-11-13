@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/concat
 
 **`concat()`** 메서드는 매개변수로 전달된 모든 문자열을 호출 문자열에 붙인 새로운 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## 구문
 
@@ -51,7 +62,7 @@ var greetList = ["Hello", " ", "Venkat", "!"];
 
 ## 성능
 
-`concat()` 메서드보다 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}} (`+`, `+=`)를 사용하는게 더 좋습니다. [성능 테스트](https://web.archive.org/web/20170404182053/https://jsperf.com/concat-vs-plus-vs-join) 결과에 따르면 할당 연산자의 속도가 몇 배 빠릅니다.
+`concat()` 메서드보다 {{jsxref("Operators", "할당 연산자", "#Assignment_operators", 1)}} (`+`, `+=`)를 사용하는게 더 좋습니다. [성능 테스트](https://web.archive.org/web/20170404182053/https://jsperf.com/concat-vs-plus-vs-join) 결과에 따르면 할당 연산자의 속도가 몇 배 빠릅니다.
 
 ## 명세
 
@@ -64,4 +75,4 @@ var greetList = ["Hello", " ", "Venkat", "!"];
 ## 관련문서
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "Assignment operators", "#Assignment_operators", 1)}}

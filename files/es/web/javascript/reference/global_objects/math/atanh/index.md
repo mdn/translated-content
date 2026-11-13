@@ -9,7 +9,21 @@ La función **`Math.atanh()`** nos retorna un arco hiperbólico de un numero, es
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ el unico } \; y \; \text{de tal manera que} \; \tanh(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-atanh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+
+```js interactive-example
+console.log(Math.atanh(-1));
+// Expected output: -Infinity
+
+console.log(Math.atanh(0));
+// Expected output: 0
+
+console.log(Math.atanh(0.5));
+// Expected output: 0.549306144334055 (approximately)
+
+console.log(Math.atanh(1));
+// Expected output: Infinity
+```
 
 ## Sintaxis
 

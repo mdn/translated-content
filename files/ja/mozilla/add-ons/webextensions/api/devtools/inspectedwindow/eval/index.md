@@ -9,9 +9,9 @@ devtools が接続されているウィンドウで JavaScript を実行しま�
 
 これは {{WebExtAPIRef("tabs.executeScript()")}} を使用してコンテンツスクリプトを添付することに似ていますが、主に 2 つの違いがあります。
 
-第 1 に、JavaScript は[ブラウザーが通常 devtools コンソール実装で提供する特別なコマンド](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval#ヘルパー)のセットを使用できます。たとえば、"$0" を使用してインスペクターで現在選択されている要素を参照します。
+第 1 に、JavaScript は[ブラウザーが通常 devtools コンソール実装で提供する特別なコマンド](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval#ヘルパー)のセットを使用できます。たとえば、"$0" を使用してインスペクターで現在選択されている要素を参照します。
 
-次に、実行する JavaScript はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、[ページスクリプトが読み込まれなかった場合に存在するページを表示する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#DOM_access)コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、DOM 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的なウェブページが WebExtensions API を混乱または破壊することを困難にすることを目的としています。つまり `eval()` を使用してこの保護を放棄する場合は非常に注意する必要があり、`eval()` を使用する必要がない限りコンテンツスクリプトを使用する必要があります。
+次に、実行する JavaScript はページが読み込んだスクリプトによってページに加えられた変更を確認できます。これは、[ページスクリプトが読み込まれなかった場合に存在するページを表示する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access)コンテンツスクリプトとは対照的です。ただし、コンテンツスクリプトによって提供される分離は意図的なセキュリティ機能であり、DOM 関数とプロパティを再定義することにより、悪意のあるまたは単に非協力的なウェブページが WebExtensions API を混乱または破壊することを困難にすることを目的としています。つまり `eval()` を使用してこの保護を放棄する場合は非常に注意する必要があり、`eval()` を使用する必要がない限りコンテンツスクリプトを使用する必要があります。
 
 スクリプトは、ページのメインフレームでデフォルトで評価されます。スクリプトは、JSON として表現できる値に評価する必要があります (たとえば、関数または関数を含むオブジェクトには評価されない可能性があることを意味します)。デフォルトでは、スクリプトはページに添付されたコンテンツスクリプトを表示しません。
 
@@ -30,7 +30,7 @@ The script gets access to a number of objects that help the injected script inte
 - `inspect()`
   - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.
 
-[See some examples.](#Examples)
+[See some examples.](#examples)
 
 ## 構文
 
@@ -46,9 +46,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options`{{optional_inline}}
-
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
-
     - `frameURL`{{optional_inline}}
       - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
     - `useContentScriptContext`{{optional_inline}}
@@ -65,16 +63,14 @@ If no error occurred, element 0 will contain the result of evaluating the expres
 If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
 - errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-
   - a boolean property `isException`, set to `true`
   - a string property `value`, giving more details.
 
 - other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
 
-## ブラウザーの対応状況
+## ブラウザーの互換性
 
 {{Compat}}
 
@@ -162,7 +158,7 @@ inspectButton.addEventListener("click", () => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

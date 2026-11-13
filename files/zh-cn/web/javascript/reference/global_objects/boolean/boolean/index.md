@@ -3,11 +3,16 @@ title: Boolean() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ---
 
-{{JSRef}}
-
 **`Boolean()`** 构造函数可以创建 {{jsxref("Boolean")}} 对象或返回布尔类型的原始值。
 
-{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+
+```js interactive-example
+const flag = new Boolean();
+
+console.log(flag);
+// Expected output: false
+```
 
 ## 语法
 

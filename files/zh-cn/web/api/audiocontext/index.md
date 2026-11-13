@@ -54,7 +54,7 @@ var audioCtx = new AudioContext();
 
 跨浏览器的方式：
 
-```plain
+```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -74,5 +74,5 @@ var finish = audioCtx.destination;
 
 ## 参见
 
-- 使用 [Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- 使用 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("OfflineAudioContext")}}

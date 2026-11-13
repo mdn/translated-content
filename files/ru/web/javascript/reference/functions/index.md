@@ -160,10 +160,10 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 Внутри функции получить доступ к её аргументам можно через объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Объект, похожий на массив и содержащий все аргументы, переданные в текущую функцию.
-- [`arguments.callee`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: Функция, исполняемая в текущий момент.
+- [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments): Объект, похожий на массив и содержащий все аргументы, переданные в текущую функцию.
+- [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_inline}}: Функция, исполняемая в текущий момент.
 - [`arguments.caller`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller) : Функция, которая вызвала текущую функцию.
-- [`arguments.length`](/ru/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): Число аргументов, переданных в функцию.
+- [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length): Число аргументов, переданных в функцию.
 
 ## Определение методов
 
@@ -178,7 +178,8 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### Синтаксис определения методов
 
-> **Примечание:** _Определение методов — это экспериментальная_ технология, часть спецификации ECMAScript 6, и она пока ещё не получила широкой поддержки среди браузеров.
+> [!NOTE]
+> Определение методов — это экспериментальная технология, часть спецификации ECMAScript 6, и она пока ещё не получила широкой поддержки среди браузеров.
 
 Начиная с ECMAScript 6, можно определять собственные методы, используют более краткий синтаксис, похожий на геттеры и сеттеры. Более подробно — в статье [Определение методов.](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
@@ -332,7 +333,7 @@ function a() {
 
 ## Определение функции в зависимости от условия
 
-Функции могут быть определены в зависимости от условий с помощью инструкции `function (разрешённое расширение стандарта` [ECMA-262 Edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm)) или конструктора `Function`. Обратите внимание, что подобные инструкции [запрещены в ES5 strict](https://bugzilla.mozilla.org/show_bug.cgi?id=609832). Кроме того, эта возможность по-разному ведёт себя в разных браузерах, поэтому не стоит на неё рассчитывать.
+Функции могут быть определены в зависимости от условий с помощью инструкции `function (разрешённое расширение стандарта` [ECMA-262 Edition 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm)) или конструктора `Function`. Обратите внимание, что подобные инструкции [запрещены в ES5 strict](https://bugzilla.mozilla.org/show_bug.cgi?id=609832). Кроме того, эта возможность по-разному ведёт себя в разных браузерах, поэтому не стоит на неё рассчитывать.
 
 В коде ниже функция `zero` никогда не будет определена и не может быть вызвана, потому что '`if (0)`' всегда расценивается как `false`:
 

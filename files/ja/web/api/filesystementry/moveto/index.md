@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 {{domxref("FileSystemEntry")}} インターフェイスの **`moveTo()`** メソッドは、この項目で指定したファイルをファイルシステムの新しい場所に移動します。
 
@@ -53,7 +53,7 @@ moveTo(newParent, newName, successCallback, errorCallback)
 
 ## 例
 
-この例は、一時的なログファイルが 1 メガバイトを超えた場合に、より永続的な "log" ディレクトリ－に移動させる方法を示しています。
+この例は、一時的なログファイルが 1 メガバイトを超えた場合に、より永続的な "log" ディレクトリーに移動させる方法を示しています。
 
 ```js
 workingDirectory.getFile(
@@ -84,5 +84,5 @@ workingDirectory.getFile(
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
 - {{domxref("FileSystemEntry.copyTo()")}}

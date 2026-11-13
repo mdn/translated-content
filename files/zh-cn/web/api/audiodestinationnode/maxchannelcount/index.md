@@ -33,7 +33,7 @@ audioCtx.destination.maxChannelCount = 2;
 gainNode.connect(audioCtx.destination);
 ```
 
-为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](http://mdn.github.io/violent-theremin/).
+为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](https://mdn.github.io/violent-theremin/).
 
 ## 规范
 
@@ -45,4 +45,4 @@ gainNode.connect(audioCtx.destination);
 
 ## 其他
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

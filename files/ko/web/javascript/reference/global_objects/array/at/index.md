@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 l10n:
   sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
@@ -9,7 +10,21 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`at()`** 메서드는 정숫값을 받아 해당 인덱스에 있는 항목을 반환하며, 양수와 음수를 사용할 수 있습니다. 음의 정수는 배열의 마지막 항목부터 거슬러 셉니다.
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## 구문
 

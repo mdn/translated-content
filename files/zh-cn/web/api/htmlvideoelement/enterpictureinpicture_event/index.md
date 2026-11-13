@@ -2,7 +2,7 @@
 title: HTMLVideoElement：enterpictureinpicture 事件
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
 {{APIRef("Picture-in-Picture API")}}

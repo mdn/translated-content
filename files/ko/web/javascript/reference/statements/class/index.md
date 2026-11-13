@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Statements/class
 
 **`class` 선언**은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 {{jsxref("Operators/class", "클래스 표현", "", 1)}}을 사용하여 클래스를 정의할 수도 있습니다. 표현식과 달리 선언문으로는 같은 클래스를 다시 선언하면 오류가 발생합니다.
 
@@ -29,7 +40,7 @@ slug: Web/JavaScript/Reference/Statements/class
 
 ### 간단한 클래스 선언
 
-다음 예제는 우선 `Polygon` 클래스를 정의하고, `Square`라는 이름의 새로운 클래스가 `Polygon`을 상속합니다. 생성자 내부의 `super()`는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.
+다음 예제는 우선 `Polygon` 클래스를 정의하고, `Square`라는 이름의 새로운 클래스가 `Polygon`을 상속합니다. 생성자 내부의 `super()`는 생성자 내에서만, 그리고 {{jsxref("this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.
 
 ```js
 class Polygon {

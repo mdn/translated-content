@@ -43,4 +43,4 @@ Especificado no HTML5.
 
 - {{domxref("window.confirm","confirm")}}
 - {{domxref("window.prompt","prompt")}}
-- Para o [Mozilla Chrome](/pt-BR/docs/Chrome), veja `nsIPromptService.alert()` e `nsIPromptService.alertCheck()`
+- Para o [Mozilla Chrome](/pt-BR/docs/Glossary/Chrome), veja `nsIPromptService.alert()` e `nsIPromptService.alertCheck()`

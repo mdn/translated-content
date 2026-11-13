@@ -1,29 +1,26 @@
 ---
-title: Request.method
+title: Request：method 属性
+short-title: method
 slug: Web/API/Request/method
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Request")}}的只读属性**method**包含请求的方法 (`GET`, `POST`, etc.)
+{{domxref("Request")}} 接口的 **`method`** 只读属性包含请求所使用的方法（如 `GET`、`POST` 等）。
 
-## 语法
+## 值
 
-```plain
-var myMethod = request.method;
-```
+一个用于指示请求所使用的方法的{{jsxref("String", "字符串", , 1)}}。
 
-### Value
+## 示例
 
-A {{domxref("ByteString")}} indicating the method of the request.
-
-## 举例
-
-In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:
+在下面的代码片段中，我们使用 {{domxref("Request.Request", "Request()")}} 构造函数（针对与脚本位于同一目录下的图像文件）创建了一个新的请求，然后将该请求的方法保存到一个变量中：
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myMethod = myRequest.method; // GET
+const myRequest = new Request("flowers.jpg");
+const myMethod = myRequest.method; // GET
 ```
 
 ## 规范
@@ -34,8 +31,8 @@ var myMethod = myRequest.method; // GET
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

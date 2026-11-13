@@ -12,12 +12,12 @@ slug: Web/API/AbortSignal
 _AbortSignal также наследует свойства от своего родительского интерфейса, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
-  - : Это {{domxref("Boolean")}}, который указывает, отменён ли запрос(ы), с которым связывался сигнал, отменён (`true`) или нет (`false`).
+  - : Это {{jsxref("Boolean")}}, который указывает, отменён ли запрос(ы), с которым связывался сигнал, отменён (`true`) или нет (`false`).
 
 ### Обработчики событий
 
 - {{domxref("AbortSignal.onabort")}}
-  - : Вызывается когда происходит событие {{event("abort_(dom_abort_api)", "abort")}}, т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.
+  - : Вызывается когда происходит событие [`abort`](/ru/docs/Web/API/AbortSignal/abort_event), т.е. когда DOM запрос(ы), с которым связывался сигнал, отменён.
 
 ## Методы
 
@@ -29,7 +29,7 @@ _AbortSignal наследует методы от родительского и�
 
 Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-Когда [fetch запрос](/ru/docs/Web/API/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
+Когда [fetch запрос](/ru/docs/Web/API/Window/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
 
 ```js
 var controller = new AbortController();

@@ -1,24 +1,47 @@
 ---
-title: RegExp.prototype.multiline
+title: "RegExp : propriété multiline"
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
+l10n:
+  sourceCommit: 8f53af45fae665627a95ac50e177b15d0228b920
 ---
 
-{{JSRef}}
+La propriété d'accesseur **`multiline`** des instances de {{JSxRef("RegExp")}} indique si l'indicateur `m` est utilisé avec cette expression rationnelle.
 
-La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.multiline", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}{{js_property_attributes(0,0,1)}}
+```js interactive-example
+const regex1 = /^football/;
+const regex2 = /^football/m;
+
+console.log(regex1.multiline);
+// Résultat attendu : false
+
+console.log(regex2.multiline);
+// Résultat attendu : true
+
+console.log(regex1.test("rugby\nfootball"));
+// Résultat attendu : false
+
+console.log(regex2.test("rugby\nfootball"));
+// Résultat attendu : true
+```
 
 ## Description
 
-La valeur de `multiline` est un booléen. Elle vaut `true` si le drapeau "`m`" a été utilisé et `false` sinon. Le flag "`m`" indique qu'une chaine de caractères qui s'étend sur plusieurs lignes doit être traitée comme une série de ligne. Ainsi, si "`m`" est utilisé, "`^`" et "`$`" ne correspondent plus au début et à la fin de la chaîne mais aux débuts et aux fins de chaque ligne de la chaîne.
+`RegExp.prototype.multiline` a une valeur `true` si l'indicateur `m` est utilisé&nbsp;; sinon, `false`. L'indicateur `m` indique qu'une chaîne de caractères sur plusieurs lignes doit être traitée comme plusieurs lignes. Par exemple, si `m` est utilisé, `^` et `$` ne correspondent plus uniquement au début ou à la fin de l'ensemble de la chaîne de caractères, mais au début ou à la fin de chaque ligne de la chaîne de caractères.
 
-Cette propriété ne peut pas être modifiée directement.
+> [!NOTE]
+> Pour correspondre au début et à la fin de l'ensemble de la chaîne de caractères en mode `m`, utilisez les [assertions de frontière de tampon](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) `\A`, `\z` et `\Z`.
+
+L'accesseur en écriture de `multiline` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
+### Utiliser `multiline`
+
 ```js
-var regex = new RegExp("toto", "m");
+const regex = /^toto/m;
 
 console.log(regex.multiline); // true
 ```
@@ -33,8 +56,11 @@ console.log(regex.multiline); // true
 
 ## Voir aussi
 
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- La propriété {{JSxRef("RegExp.prototype.lastIndex")}}
+- La propriété {{JSxRef("RegExp.prototype.dotAll")}}
+- La propriété {{JSxRef("RegExp.prototype.global")}}
+- La propriété {{JSxRef("RegExp.prototype.hasIndices")}}
+- La propriété {{JSxRef("RegExp.prototype.ignoreCase")}}
+- La propriété {{JSxRef("RegExp.prototype.source")}}
+- La propriété {{JSxRef("RegExp.prototype.sticky")}}
+- La propriété {{JSxRef("RegExp.prototype.unicode")}}

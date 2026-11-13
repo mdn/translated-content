@@ -1,15 +1,26 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Date.parse()`** 靜態方法會解析一個日期的字串表示法，並回傳該日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)。
 
-**`Date.parse()`** 方法解析一表示日期的字串，並回傳自 1970 年 01 月 01 日 00:00:00 UTC 起至該日期共經過的毫秒數；如果字串無法辨識或包含無效值（如：2015-02-31），則回傳 `NaN`。
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
 
-只有 [ISO 8601 格式](https://tc39.es/ecma262/#sec-date-time-string-format)（ `YYYY-MM-DDTHH:mm:ss.sssZ`）為明確指定支援的格式。其餘格式因實作方式而異，不一定跨瀏覽器通用。若需要涵蓋多種格式，可以引入函式庫協助。
+```js interactive-example
+// 標準日期時間字串格式
+const unixTimeZero = Date.parse("1970-01-01T00:00:00Z");
+// 類似 toUTCString() 的非標準格式
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+console.log(unixTimeZero);
+// 預期輸出：0
+
+console.log(javaScriptRelease);
+// 預期輸出：818035920000
+```
 
 ## 語法
 
@@ -17,86 +28,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 Date.parse(dateString)
 ```
 
-## 參數
+### 參數
 
 - `dateString`
-  - : 一個簡化表示 [ISO 8601 日曆日期延伸格式](#日期字串格式)的字串。（亦可使用其他格式，但結果會依實作方式而定。）
+  - : 一個[日期時間字串格式](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#日期時間字串格式)的字串。關於使用不同格式的注意事項，請參見連結的參考資料。
 
-### 返回值
+### 回傳值
 
-一個自 1970 年 01 月 01 日 00:00:00 UTC 起，至解析字串而得的日期為止，所經過的毫秒數值。如果該參數並非有效日期，則回傳 {{jsxref("NaN")}} 。
+一個數字，表示給定日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)。如果 `dateString` 無法被解析為一個有效的日期，則回傳 {{jsxref("NaN")}}。
 
 ## 描述
 
-`parse()` 方法接受一日期字串（例如： `"2011-10-10T14:48:00"`）並回傳自 1970 年 01 月 01 日 00:00:00 UTC 至該日期所經過的毫秒數。
+此函式對於基於字串值設定日期值很有用，例如與 {{jsxref("Date/setTime", "setTime()")}} 方法結合使用。
 
-此函式實用於設定日期，例如結合使用 {{jsxref("Date.prototype.setTime()", "setTime()")}} 方法與 {{jsxref("Global_Objects/Date", "Date")}} 物件。
+`parse()` 可以處理的格式沒有明確指定，但有幾個{{Glossary("invariant", "不變量")}}：
 
-### 日期字串格式
+- 必須支援[日期時間字串格式](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#日期時間字串格式)（由 {{jsxref("Date/toISOString", "toISOString()")}} 產生）。
+- 如果 `x` 是任何毫秒數為零的 Date 物件，那麼 `x.valueOf()` 應該等於以下任何一個：`Date.parse(x.toString())`、`Date.parse(x.toUTCString())`、`Date.parse(x.toISOString())`。這意味著由 {{jsxref("Date/toString", "toString()")}} 和 {{jsxref("Date/toUTCString", "toUTCString()")}} 產生的格式也應該被支援。
+- 規範*不*要求支援由 {{jsxref("Date/toLocaleString", "toLocaleString()")}} 產生的格式。然而，主要引擎都嘗試支援 `toLocaleString("en-US")` 格式。
 
-呈現日期時間的標準字串格式乃 ISO 8601 日曆日期延伸格式的簡化版。（詳細請參見 ECMAScript 規範的 [Date Time String Format](https://tc39.es/ecma262/#sec-date-time-string-format)章節）
+其他格式是由實作定義的，可能無法在所有瀏覽器中運作。如果需要容納許多不同的格式，一個函式庫會有所幫助。事實上，`Date.parse()` 的不可靠性是引入 {{jsxref("Temporal")}} API 的動機之一。
 
-例如，`"2011-10-10"`（_只有日期_）、`"2011-10-10T14:48:00"`（_日期與時間_），或 `"2011-10-10T14:48:00.000+09:00"`（_日期與時間至毫秒級以及時區_）皆可作為有效參數傳入並解析。如果沒有指明時差，只有日期的參數會假設為 UTC 時間，而有日期與時間的參數會當作是本地時間。
-
-解析日期字串的過程雖然會加註時區，但回傳值必定是從 1970 年 01 月 01 日 00:00:00 UTC 起至該參數表示的日期為止，所經過的毫秒數；或是 `NaN`。
-
-因為 `parse()` 是 {{jsxref("Date")}} 的靜態方法，故會以
-`Date.parse()` 而非作為 {{jsxref("Date")}} 實例的方法呼叫。
-
-### 退回至實作定義的日期格式
-
-> [!NOTE]
-> 此段落包含因實作而異的行為，不同實作間可能不一致。
-
-ECMAScript 規範表明：如果字串不符合標準格式，函式可能會退回至實作定義的啟發式或解析演算法。無法辨識的字串或包含無效值的 ISO 格式字串將使 `Date.parse()` 回傳 {{jsxref("NaN")}}。
-
-不過無效且非 ECMA-262 定義的 ISO 格式的日期字串，其回傳結果會依瀏覽器與實際值而異，不一定回傳 {{jsxref("NaN")}}，例如：
-
-```js
-// 非 ISO 字串且含無效日期值
-new Date("23/25/2014");
-```
-
-在 Firefox 30 當中會被視為本地時間的 2015 年 11 月 25 日，而 Safari 7 中則為無效日期。
-
-但如果為 ISO 格式的字串而包含無效值，則會回傳 {{jsxref("NaN")}}：
-
-```js
-// ISO 字串且含無效日期值
-new Date("2014-25-23").toISOString();
-// throws "RangeError: invalid date"
-```
-
-SpiderMonkey 的實作啟發可見 [`jsdate.cpp`](https://searchfox.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889)。例如 `"10 06 2014"` 即不符合 ISO 格式，故會執行自定義解析。參見 [rough outline](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) 以瞭解運作原理。
-
-```js
-new Date("10 06 2014");
-```
-
-會被視為本地時間的 2014 年 10 月 06 日 而非 2014 年 06 月 10 日。
-
-其他範例：
-
-```js
-new Date("foo-bar 2014").toString();
-// returns: "Invalid Date"
-
-Date.parse("foo-bar 2014");
-// returns: NaN
-```
-
-### 假定時區上的差異
-
-> [!NOTE]
-> 此段落包含因實作而異的行為，不同實作間可能不一致。
-
-給定一非標準的字串 `"March 7, 2014"`，`parse()` 會假定為本地時區；但如果是簡化版的 ISO 8601 日曆日期延伸格式的字串，如 `"2014-03-07"`，則會假定為 UTC 時區。故，除非系統為 UTC 時區，否則依支援的 ECMAScript 版本，由該字串產生的 {{jsxref("Date")}} 物件可能呈現不同時間。亦即兩個看似相等的日期字串，依傳入的格式而可能產生不同解析結果。
+因為 `parse()` 是 `Date` 的一個靜態方法，所以你總是將其作為 `Date.parse()` 使用，而不是作為你所建立的 `Date` 物件的一個方法。
 
 ## 範例
 
 ### 使用 Date.parse()
 
-下列呼叫皆會回傳 `1546300800000`。第一個隱含為 UTC 時間，其餘則以 ISO 日期規範（`Z` 與 `+00:00`）明確表示 UTC 時區。
+以下呼叫都會回傳 `1546300800000`。第一個會隱含 UTC 時間，因為它只有日期，而其他的則明確指定了 UTC 時區。
 
 ```js
 Date.parse("2019-01-01");
@@ -104,60 +63,140 @@ Date.parse("2019-01-01T00:00:00.000Z");
 Date.parse("2019-01-01T00:00:00.000+00:00");
 ```
 
-以下呼叫並未指明時區，將會設定為使用者系統時區的 2019-01-01 00:00:00。
+以下呼叫未指定時區，將會被設定為系統本地時區的 2019-01-01 00:00:00，因為它同時有日期和時間。
 
 ```js
 Date.parse("2019-01-01T00:00:00");
 ```
 
-### 非標準的日期字串
+### toString() 與 toUTCString() 格式
+
+除了標準的日期時間字串格式外，也支援 {{jsxref("Date/toString", "toString()")}} 和 {{jsxref("Date/toUTCString", "toUTCString()")}} 的格式：
+
+```js
+// toString() 格式
+Date.parse("Thu Jan 01 1970 00:00:00 GMT-0500 (Eastern Standard Time)");
+// 在所有時區的所有實作中皆為 18000000
+
+// toUTCString() 格式
+Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
+// 在所有時區的所有實作中皆為 0
+```
+
+### 非標準日期字串
 
 > [!NOTE]
-> 此段落包含因實作而異的行為，不同實作間可能不一致。
+> 本節包含實作特定的行為，這些行為在不同瀏覽器或不同版本的瀏覽器之間可能不一致。這並非一個全面的瀏覽器相容性表格，你在程式碼中使用任何格式之前，都應該進行自己的測試。
 
-若 `ipoDate` 為既有的 {{jsxref("Date")}} 物件，可將其設定為本地時間的 1995-08-09，如下：
+當日期字串非標準時，實作通常預設為本地時區。為了一致性，我們將假設執行環境使用 UTC 時區，除非另有說明，否則輸出將隨設備的時區而異。[本地時區的日光節約時間（DST）也可能對此產生影響](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#日光節約時間_dst_地區的不同結果)。
 
-```js
-ipoDate.setTime(Date.parse("Aug 9, 1995"));
-```
+這裡有一些非標準日期字串的更多範例。瀏覽器在解析日期字串時非常寬鬆，可能會丟棄任何它們無法解析的字串部分。出於相容性的原因，瀏覽器通常會互相複製行為，所以這些處理模式傾向於跨瀏覽器傳播。如前所述，以下範例僅供說明，絕非詳盡無遺：
 
-其他解析非標準日期字串的範例：
-
-```js
-Date.parse("Aug 9, 1995");
-```
-
-因為此字串未指明時區、且並非 ISO 格式，故預設為本地時區。如在 GMT-0300 時區回傳 `807937200000`，其他時區另計。
-
-```js
-Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
-```
-
-因為已指明 GMT (UTC) 時區，不論本地時區為何，皆回傳 `807926400000`。
-
-```js
-Date.parse("Wed, 09 Aug 1995 00:00:00");
-```
-
-因為參數內沒有指明時區，而且並非 ISO 格式，因此視為本地時間。在 GMT-0300 時區會回傳 `807937200000`，其他時區另計。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
-```
-
-因為已指明 GMT (UTC) 時區，不論本地時區為何，皆回傳 `0`。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00");
-```
-
-因為此字串未指明時區、且並非 ISO 格式，故預設為本地時區。如在 GMT-0400 回傳 `14400000`，其他時區另計。
-
-```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
-```
-
-因為已指明 GMT (UTC) 時區，不論本地時區為何，皆回傳 `14400000`。
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>範例</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">單一數字</td>
+<td><code>0</code>（單一位數）</td>
+<td colspan="2">946684800000（2000 年 1 月 1 日）；在 Firefox ≤122 中為 NaN</td>
+<td>-62167219200000（0000 年 1 月 1 日）</td>
+</tr>
+<tr>
+<td><code>31</code>（兩位數）</td>
+<td colspan="2">NaN</td>
+<td>-61188912000000（0031 年 1 月 1 日）</td>
+</tr>
+<tr>
+<td><code>999</code>（三／四位數）</td>
+<td colspan="3">-30641733102000（0999 年 1 月 1 日）</td>
+</tr>
+<tr>
+<td rowspan="4">使用不同分隔符的日期字串</td>
+<td><code>1970-01-01</code>（標準）</td>
+<td colspan="3">在所有時區中皆為 0</td>
+</tr>
+<tr>
+<td><code>1970/01/01</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td><code>1970,01,01</code></td>
+<td colspan="2">0</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><code>1970 01 01</code></td>
+<td colspan="2">0</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>類似 <code>toString()</code> 的字串</td>
+<td><code>Thu Jan 01 1970 00:00:00</code><br><code>Thu Jan 01 1970</code><br><code>Jan 01 1970 00:00:00</code><br><code>Jan 01 1970</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td>類似 <code>toUTCString()</code> 的字串</td>
+<td><code>Thu, 01 Jan 1970 00:00:00</code><br><code>Thu, 01 Jan 1970</code><br><code>01 Jan 1970 00:00:00</code><br><code>01 Jan 1970</code></td>
+<td colspan="3">0</td>
+</tr>
+<tr>
+<td rowspan="4">日期的第一個部分是兩位數</td>
+<td><code>01-02-03</code>（第一部分可以是有效的月份）</td>
+<td colspan="2">1041465600000（2003 年 1 月 2 日）</td>
+<td>-62132745600000（0001 年 2 月 3 日）<br>注意：Safari 總是假設為 YY-MM-DD，但對於斜線則為 MM/DD/YY。</td>
+</tr>
+<tr>
+<td><code>27-02-03</code>（第一部分可以是有效的日期但不是月份）</td>
+<td colspan="2">NaN</td>
+<td>-61312291200000（0027 年 2 月 3 日）</td>
+</tr>
+<tr>
+<td><code>49-02-03</code>（第一部分不能是有效的日期且小於 50）</td>
+<td colspan="2">2495923200000（2049 年 2 月 3 日）</td>
+<td>-60617980800000（0049 年 2 月 3 日）</td>
+</tr>
+<tr>
+<td><code>50-02-03</code>（第一部分不能是有效的日期且大於等於 50）</td>
+<td colspan="2">-628300800000（1950 年 2 月 3 日）</td>
+<td>-60586444800000（0050 年 2 月 3 日）</td>
+</tr>
+<tr>
+<td rowspan="3">超出範圍的日期部分</td>
+<td><code>2014-25-23</code><br><code>Mar 32, 2014</code><br><code>2014/25/23</code></td>
+<td colspan="3">NaN</td>
+</tr>
+<tr>
+<td><code>2014-02-30</code></td>
+<td colspan="2">1393718400000（2014 年 3 月 2 日）</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td><code>02/30/2014</code></td>
+<td colspan="3">1393718400000</td>
+</tr>
+<tr>
+<td rowspan="5">月份名稱後的多餘字元</td>
+<td><code>04 Dec 1995</code><br><code>04 Decem 1995</code><br><code>04 December 1995</code></td>
+<td colspan="3">818031600000</td>
+</tr>
+<tr>
+<td><code>04 DecFoo 1995</code></td>
+<td colspan="3">818031600000<br>只讀取前三個字元。<br>Firefox ≤121 會讀取到有效的月份名稱為止，因此當它看到「F」時會回傳 NaN。</td>
+</tr>
+<tr>
+<td><code>04 De 1995</code></td>
+<td colspan="3">NaN</td>
+</tr>
+</tbody>
+</table>
 
 ## 規範
 
@@ -166,11 +205,6 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
 ## 瀏覽器相容性
 
 {{Compat}}
-
-### 相容性資訊
-
-- Firefox 49 將解析兩位數年份的方式從與 Internet Explorer 改為與 Google Chrome 一致。現在小於 `50` 的兩位數年份會解析為 21 世紀年份。例如 `04/16/17`，先前會視為 1917 年 04 月 16 日；現在則解析為 2017 年 04 月 16 日。建議使用 ISO 8601 格式如 `"2017-04-16"`，以避免任何互通性問題或不明確的年份。（[bug 1265136](https://bugzilla.mozilla.org/show_bug.cgi?id=1265136)）
-- Google Chrome 視數字字串為有效的 `dateString` 參數。例如 `!!Date.parse("42")` 在 Firefox 會評估為 `false`，而在 Google Chrome 會評估為 `true`；因為 `"42"` 被當作是 2042 年 01 月 01 日。
 
 ## 參見
 

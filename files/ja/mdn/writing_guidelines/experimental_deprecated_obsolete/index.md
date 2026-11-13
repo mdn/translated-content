@@ -2,10 +2,8 @@
 title: 実験的、非推奨、廃止
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 これらの用語は、技術や仕様と一般的に関連しており、 MDN Web Docs で技術の状態をラベル付けするために使用されます。これらの用語の定義については、 MDN Web Docs は [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) リポジトリーと連携しています。
 これらの用語は、 MDN Web Docs で使用するという文脈で下記に記述します。
@@ -102,7 +100,7 @@ MDN Web Docs において、廃止 (**obsolete**) という用語は、過去に
 
 時々 (まれに) 仕様書の異なるバージョン (特に W3C と WHATWG) が競合することがあります。例えば、一方のバージョンがある機能を非推奨とする一方で、もう一方が非推奨にしない場合などがあります。
 このような場合、何が真実なのか、例えば、ブラウザーは実際にどうしているかを考慮し、「重要」なメモを書いて最新の状態を要約してください。
-例えば、 2019 年 1 月時点の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) グローバル属性には競合があり、次のように要約されています。<!-- この仕様の競合に関する警告例は、そのページにはもう存在しません。他に例を見つけることもできませんでした。 -->
+例えば、 2019 年 1 月時点の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) グローバル属性には競合があり、次のように要約されています。<!-- この仕様の競合に関する警告例は、そのページにはもう存在しません。他に例を見つけることもできませんでした。 -->
 
 > [!WARNING]
 > 仕様の競合があります。 WHATWG 仕様では [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) がリストアップされており、最近のブラウザーはこれに対応する方向で動いています。

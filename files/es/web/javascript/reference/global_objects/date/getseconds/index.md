@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 El método **`getSeconds()`** devuelve los segundos en la fecha especificada de acuerdo a la hora local.
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## Sintaxis
 
@@ -23,7 +30,7 @@ Un número entero, entro 0 y 59, representando los segundos en la fecha dada de 
 
 ### Utilizando `getSeconds()`
 
-La segunda sentencia asigna el valor 30 a la variable `seconds`, en base al valor del objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
+La segunda sentencia asigna el valor 30 a la variable `seconds`, en base al valor del objeto {{jsxref("Date")}} `Xmas95`.
 
 ```js
 var Xmas95 = new Date("December 25, 1995 23:15:30");

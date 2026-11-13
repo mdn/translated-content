@@ -16,7 +16,7 @@ Há dois tipos de fontes subjacentes:
 - **Push sources** constatemente envia dados enquanto os acessa, e você decide quando iniciar, pausar ou cancelar o acesso ao stream. Exemplos deste tipo incluem stream de vídeo e sockets TCP/[Web sockets](/pt-BR/docs/Web/API/WebSockets_API).
 - **Pull sources** requer que você requisite os dados explicitamente uma conectado. Exemplos deste tipo incluem operações de acesso a arquivos via chamada [Fetch](/pt-BR/docs/Web/API/Fetch_API) ou [XHR](/pt-BR/docs/Web/API/XMLHttpRequest/XMLHttpRequest).
 
-O dado é lido sequencialmente em pequenos blocos de informação chamado chunks. Um chunk por ser um simples byte, ou, pode ser algo maior como um [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays) de um certo tamanho.
+O dado é lido sequencialmente em pequenos blocos de informação chamado chunks. Um chunk por ser um simples byte, ou, pode ser algo maior como um [typed array](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) de um certo tamanho.
 Um simples stream pode conter chunks de diferentes tamanhos e tipos.
 ![](readable_streams.png)
 
@@ -30,7 +30,8 @@ Apenas um reader pode ler um stream por vez; quando um reader é criado e inicia
 
 Observe que há dois tipos diferentes de readable streams. Assim como um readable stream convencional há um tipo chamado byte stream - este é uma versão extendida de um stream convencional para leitura de underlying byte sources (de outra forma conhecido como BYOB, ou "bring your own buffer"). Estes permitem que streams sejam lidos diretamente em um buffer fornecido pelo desenvolvedor, minimizando a cópia necessária. Tal underlying stream (e por extensão, reader e controller) seu código dependerá em primeiro lugar de como o stream foi criado (veja o {{domxref("ReadableStream.ReadableStream()")}} construtor de página).
 
-> **Aviso:** **Importante**: Bytes streams não estão implementados ainda em algum lugar, e foram levantadas questões sobre se os detalhes de especificação estão em condições para serem implementados. Isto pode mudar com o tempo.
+> [!WARNING]
+> **Importante**: Bytes streams não estão implementados ainda em algum lugar, e foram levantadas questões sobre se os detalhes de especificação estão em condições para serem implementados. Isto pode mudar com o tempo.
 
 Você pode fazer uso dos stream readers já implementados via mecanismos como {{domxref("Response.body")}} como uma requisição, ou com seus próprios streams usando o {{domxref("ReadableStream.ReadableStream()")}} como construtor.
 

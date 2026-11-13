@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/strokeStyle
 
 La propriété **`CanvasRenderingContext2D.strokeStyle`** de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est `#000` (black).
 
-Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
+Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) dans le [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial).
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ ctx.strokeStyle = pattern;
 ### Options
 
 - `color`
-  - : Une {{domxref("DOMString")}} analysée comme valeur CSS {{cssxref("&lt;color&gt;")}}.
+  - : Une {{jsxref("String")}} analysée comme valeur CSS {{cssxref("&lt;color&gt;")}}.
 - `gradient`
   - : Un objet {{domxref("CanvasGradient")}} (un gradient linéaire ou radial).
 - `pattern`
@@ -60,8 +60,7 @@ ctx.strokeRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = 'blue';
-ctx.strokeRect(10, 10, 100, 100);</textarea
->
+ctx.strokeRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

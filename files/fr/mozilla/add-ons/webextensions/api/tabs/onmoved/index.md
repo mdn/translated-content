@@ -3,8 +3,6 @@ title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'un onglet est déplacé dans une fenêtre
 
 Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir {{WebExtAPIRef('tabs.onDetached')}}.
@@ -31,16 +29,13 @@ Les événements ont trois fonctions:
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet déplacé par l'utilisateur.
 
     <!---->
-
     - `moveInfo`
-      - : [`object`](#moveInfo). Informations sur le déménagement.
+      - : [`object`](#moveinfo). Informations sur le déménagement.
 
 ## Objets supplémentaires
 
@@ -80,9 +75,7 @@ browser.tabs.onMoved.addListener(handleMoved);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

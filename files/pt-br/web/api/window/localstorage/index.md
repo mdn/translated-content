@@ -5,7 +5,7 @@ slug: Web/API/Window/localStorage
 
 {{APIRef()}}
 
-A propriedade `localStorage` permite acessar um objeto {{domxref("Storage")}} local. A `localStorage` é similar ao [`sessionStorage`](/pt-BR/docs/Web/API/Window.sessionStorage). A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.
+A propriedade `localStorage` permite acessar um objeto {{domxref("Storage")}} local. A `localStorage` é similar ao [`sessionStorage`](/pt-BR/docs/Web/API/Window/sessionStorage). A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.
 
 ## Sintaxe
 
@@ -25,7 +25,8 @@ O seguinte trecho acessa o objeto {{domxref("Storage")}} local do domínio atual
 localStorage.setItem("meuGato", "Tom");
 ```
 
-> **Nota:** **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
+> [!NOTE]
+> **Nota: Por favor veja o artigo** [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) **para um exemplo completo.**
 
 ## Especificações
 

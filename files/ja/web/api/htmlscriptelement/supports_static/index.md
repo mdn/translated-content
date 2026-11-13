@@ -3,7 +3,7 @@ title: "HTMLScriptElement: supports() 静的メソッド"
 short-title: supports()
 slug: Web/API/HTMLScriptElement/supports_static
 l10n:
-  sourceCommit: 3bd335bf04ca78b7f4917ebc99e0f4f47f11d3de
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("HTML DOM")}}
@@ -21,19 +21,17 @@ HTMLScriptElement.supports(type)
 ### 引数
 
 - `type`
-
   - : 対応しているかどうかを調べるスクリプトの種類を示す文字列リテラルです。
     対応している値は以下の通りで、大文字と小文字が区別されます。
-
     - `"classic"`
       - : クラシックスクリプトに対応しているかどうかを検査します。
         「クラシック」スクリプトとは、モジュールスクリプトより前の通常の、伝統的な JavaScript ファイルのことです。
     - `"module"`
       - : [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているかどうかを検査します。
     - `"importmap"`
-      - : インポートマップに対応しているかどうかを検査します。
+      - : [インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)に対応しているかどうかを検査します。
     - `"speculationrules"`
-      - : 投機ルールに対応し、有効になっているかどうかを検査します。
+      - : [投機ルール](/ja/docs/Web/API/Speculation_Rules_API)に対応し、有効になっているかどうかを検査します。
 
     他の値であれば、このメソッドは `false` を返します。
 

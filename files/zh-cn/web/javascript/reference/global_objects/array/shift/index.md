@@ -3,11 +3,21 @@ title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
 
-{{JSRef}}
-
 **`shift()`** 方法从数组中删除**第一个**元素，并返回该元素的值。此方法更改数组的长度。
 
-{{EmbedInteractiveExample("pages/js/array-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
 
 ## 语法
 
@@ -23,7 +33,7 @@ shift()
 
 `shift` 方法移除索引为 0 的元素，并将后续元素的下标依次向前移动，然后返回被移除的元素。如果 {{jsxref("Array.length", "length")}} 属性的值为 0，则返回 {{jsxref("undefined")}}。
 
-{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是是作用于数组的最后一个元素上的。
+{{jsxref("Array/pop", "pop()")}} 方法有着和 `shift()` 相似的行为。但是作用于数组的最后一个元素上的。
 
 `shift()` 方法是一个改变方法。它改变了 `this` 的内容和长度。如果你希望保持 `this` 的值不变，但返回一个删除了第一个元素的新数组，你可以使用 [`arr.slice(1)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)。
 
@@ -95,7 +105,7 @@ console.log(plainObj);
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}

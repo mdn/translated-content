@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 `RegisteredContentScript` オブジェクトは `register()` で登録されたスクリプトを保持し、`unregister()`でそのスクリプトを登録解除(unregister)できます。また、コンテントスクリプトはそれらを作ったページが消された際にも自動的に登録解除されます。例えば、background ページによって登録されたコンテントスクリプトは、background ページが消去された際に自動的に登録解除されます。
 
-`contentScripts` API にパーミッションは存在しませんが、拡張機能は register()でマッチさせる URL においては適切な[host permissions](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)を持っている必要があります。
+`contentScripts` API にパーミッションは存在しませんが、拡張機能は register()でマッチさせる URL においては適切な[host permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)を持っている必要があります。
 
 ## Types
 

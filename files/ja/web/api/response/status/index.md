@@ -8,14 +8,14 @@ l10n:
 
 {{APIRef("Fetch API")}}
 
-**`status`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスの [HTTP ステータスコード](/ja/docs/Web/HTTP/Status)を保持します。
+**`status`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスの [HTTP ステータスコード](/ja/docs/Web/HTTP/Reference/Status)を保持します。
 
 例えば、 `200` は成功を、 `404` はリソースが見つからなかったことを表します。
 
 ## 値
 
 符号なし整数です。
-これは [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)のうちの一つです。
+これは [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)のうちの一つです。
 
 ## 例
 
@@ -50,5 +50,5 @@ fetch(myRequest)
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

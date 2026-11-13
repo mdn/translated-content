@@ -7,7 +7,7 @@ slug: Web/API/Canvas_API
 
 **Canvas API**는 [JavaScript](/ko/docs/Web/JavaScript)와 [HTML](/ko/docs/Web/HTML) {{HtmlElement("canvas")}} 엘리먼트를 통해 그래픽을 그리기위한 수단을 제공합니다. 무엇보다도 애니메이션, 게임 그래픽, 데이터 시각화, 사진 조작 및 실시간 비디오 처리를 위해 사용됩니다.
 
-Canvas API는 주로 2D 그래픽에 중점을 두고 있습니다. [WebGL API](/ko/docs/Web/WebGL) 또한 `<canvas>` 엘리먼트를 사용하며, 하드웨어 가속 2D 및 3D 그래픽을 그립니다.
+Canvas API는 주로 2D 그래픽에 중점을 두고 있습니다. [WebGL API](/ko/docs/Web/API/WebGL_API) 또한 `<canvas>` 엘리먼트를 사용하며, 하드웨어 가속 2D 및 3D 그래픽을 그립니다.
 
 ## 기본 예시
 
@@ -52,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **참고:** **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/WebGL) 하위에 참조되어있습니다.
+> [!NOTE]
+> **노트:** `WebGLRenderingContext`에 관련된 인터페이스는 [WebGL](/ko/docs/Web/API/WebGL_API) 하위에 참조되어있습니다.
 
 {{domxref("CanvasCaptureMediaStream")}}은 관련된 인터페이스입니다.
 
@@ -60,9 +61,9 @@ ctx.fillRect(10, 10, 150, 100);
 
 - [Canvas 튜토리얼](/ko/docs/Web/API/Canvas_API/Tutorial)
   - : Canvas API의 기본적인 사용과 고급 기능 모두를 다루는 이해하기 쉬운 튜토리얼.
-- [HTML5 Canvas 깊이 살펴보기](http://joshondesign.com/p/books/canvasdeepdive/title.html)
+- [HTML5 Canvas 깊이 살펴보기](https://joshondesign.com/p/books/canvasdeepdive/title.html)
   - : Canvas API 및 WebGL의 실습, 자세한 소개.
-- [Canvas 핸드북](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [Canvas 핸드북](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
   - : Canvas API에 대한 유용한 레퍼런스.
 - [데모: A basic ray-caster](/ko/docs/Web/API/Canvas_API/A_basic_ray-caster)
   - : Canvas를 사용한 ray-tracing 애니메이션 데모.
@@ -73,21 +74,22 @@ ctx.fillRect(10, 10, 150, 100);
 
 Canvas API는 굉장히 강력하지만, 사용하는 것이 항상 간단하지 않습니다. 아래에 나열된 라이브러리들은 캔버스 기반 프로젝트를 더 빠르고 더 쉽게 생성할 수 있게 해줍니다.
 
-- [EaselJS](http://www.createjs.com/easeljs)는 게임, 생성 예술 및 기타 고도의 그래픽 경험을 쉽게 생성할 수 있게 해주는 오픈소스 캔버스 라이브러리입니다.
+- [EaselJS](https://www.createjs.com/easeljs)는 게임, 생성 예술 및 기타 고도의 그래픽 경험을 쉽게 생성할 수 있게 해주는 오픈소스 캔버스 라이브러리입니다.
 - [Fabric.js](http://fabricjs.com)는 SVG 파싱 기능을 갖춘 오픈소스 캔버스 라이브러리입니다.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/)는 캔버스 기반 데이터 열지도를 생성하기위한 오픈소스 라이브러리입니다.
-- [JavaScript InfoVis Toolkit](http://thejit.org/)은 인터렉티브한 데이터 시각화를 생성합니다.
+- [JavaScript InfoVis Toolkit](https://thejit.org/)은 인터렉티브한 데이터 시각화를 생성합니다.
 - [Konva.js](https://konvajs.github.io/)는 데스크탑 및 모바일 애플리케이션을 위한 2D 캔버스 라이브러리입니다.
 - [p5.js](https://p5js.org/)는 예술가, 디자이너, 교육자 및 입문자를 위한 캔버스 그리기 기능의 모든 세트를 포함하고 있습니다.
 - [Paper.js](http://paperjs.org/)는 HTML5 Canvas 위에서 실행되는 오픈소스 벡터 그래픽 스크립팅 프레임워크입니다.
 - [Phaser](https://phaser.io/)는 Canvas 및 WebGL 기반의 브라우저 게임을 위한 빠르고, 자유롭고, 재미있는 오픈소스 프레임워크입니다.
-- [Processing.js](http://processingjs.org)는 Processing 시각화 언어의 포트입니다.
+- [Processing.js](https://processingjs.org)는 Processing 시각화 언어의 포트입니다.
 - [Pts.js](https://ptsjs.org)는 canvas 및 SVG를 사용한 창의적인 코딩 및 시각화를 위한 라이브러리입니다.
 - [Rekapi](https://github.com/jeremyckahn/rekapi)는 Canvas를 위한 애니메이션 키 프레임 API입니다.
-- [Scrawl-canvas](http://scrawl.rikweb.org.uk/)는 2D 캔버스 엘리먼트를 생성하고 조작하기위한 오픈소스 JavaScript 라이브러리입니다.
-- [ZIM](http://zimjs.com) 프레임워크는 canvas에서의 창의적인 코딩을 위한 편의성, 컴포넌트 및 컨트롤을 제공하는 프레임워크입니다. 접근성 및 다채로운 튜토리얼을 포함합니다.
+- [Scrawl-canvas](https://scrawl.rikweb.org.uk/)는 2D 캔버스 엘리먼트를 생성하고 조작하기위한 오픈소스 JavaScript 라이브러리입니다.
+- [ZIM](https://zimjs.com) 프레임워크는 canvas에서의 창의적인 코딩을 위한 편의성, 컴포넌트 및 컨트롤을 제공하는 프레임워크입니다. 접근성 및 다채로운 튜토리얼을 포함합니다.
 
-> **참고:** **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/WebGL)를 확인하세요.
+> [!NOTE]
+> **노트:** WebGL을 사용하는 2D 및 3D를 위한 [WebGL API](/ko/docs/Web/API/WebGL_API)를 확인하세요.
 
 ## 명세
 
@@ -99,4 +101,4 @@ Mozilla 애플리케이션은 Gecko 1.8([Firefox 1.5](/ko/docs/Mozilla/Firefox/R
 
 ## 함께 보기
 
-- [WebGL](/ko/docs/Web/WebGL)
+- [WebGL](/ko/docs/Web/API/WebGL_API)

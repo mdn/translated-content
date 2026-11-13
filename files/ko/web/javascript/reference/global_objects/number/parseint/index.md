@@ -9,7 +9,23 @@ l10n:
 
 **`Number.parseInt()`** 정적 메서드는 문자열 인자를 구문 분석하여 지정된 진법 또는 기수의 정수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+
+```js interactive-example
+function roughScale(x, base) {
+  const parsed = Number.parseInt(x, base);
+  if (Number.isNaN(parsed)) {
+    return 0;
+  }
+  return parsed * 100;
+}
+
+console.log(roughScale(" 0xF", 16));
+// Expected output: 1500
+
+console.log(roughScale("321", 2));
+// Expected output: 0
+```
 
 ## 구문
 
@@ -23,7 +39,6 @@ Number.parseInt(string, radix)
 - `string`
   - : 파싱할 값으로, [문자열로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)됩니다. 이 인자의 앞 부분 공백은 무시됩니다.
 - `radix` {{optional_inline}}
-
   - : `2`에서 `36` 사이의 정수로,
     `string`의 진법(수학적 숫자 체계의 기수)을
     나타냅니다.

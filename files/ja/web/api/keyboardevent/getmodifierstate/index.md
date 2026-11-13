@@ -3,7 +3,7 @@ title: "KeyboardEvent: getModifierState() メソッド"
 short-title: getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 l10n:
-  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("UI Events")}}
@@ -176,7 +176,8 @@ Firefox で `getModifierState()` が true を返すときです。
 
 ## `"Accel"` 仮想修飾子
 
-> **メモ:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
+> [!NOTE]
+> `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
 
 `getModifierState()` は `"Accel"` という名前の非推奨の仮想修飾子も受け入れます。`event.getModifierState("Accel")` は {{domxref("KeyboardEvent.ctrlKey")}} または {{domxref("KeyboardEvent.metaKey")}} の少なくともどちらかが `true` である場合に `true` を返します。
 

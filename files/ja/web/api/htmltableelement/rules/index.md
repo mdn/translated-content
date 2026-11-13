@@ -3,10 +3,10 @@ title: "HTMLTableElement: rules プロパティ"
 short-title: rules
 slug: Web/API/HTMLTableElement/rules
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.rules`** プロパティは、表の中でセルのどの境界を描画するかを示します。
 
@@ -35,7 +35,7 @@ t.rules = "all";
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## ブラウザーの互換性
 

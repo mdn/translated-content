@@ -3,14 +3,28 @@ title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
 
-{{JSRef}}
-
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
 
 > [!NOTE]
 > 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## 語法
 
@@ -50,7 +64,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 - `Promise.length`
   - : 長度屬性，值固定為 `1`。(建構式參數數目).
-- {{jsxref("Promise.prototype")}}
+- {{jsxref("Promise")}}
   - : `Promise` 建構式的原型（prototype）.
 
 ## 方法

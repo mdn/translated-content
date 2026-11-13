@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("Set")}} 인스턴스의 **`forEach()`** 메서드는 제공된 함수를 Set 요소 각각에 대해 삽입 순서대로 한 번씩 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## 구문
 
@@ -49,7 +61,7 @@ forEach(callbackFn, thisArg)
 - **순회 중인 `Set` 객체**
 
 그러나 `Set`은 키 값을 사용하지 않으므로, 처음 두 개의 매개변수 모두 **요소 값**을 받습니다.
-이는 {{jsxref("Map.foreach", "Map")}}과 {{jsxref("Array.forEach","Array")}}에서
+이는 {{jsxref("Map.forEach", "Map")}}과 {{jsxref("Array.forEach","Array")}}에서
 사용하는 `forEach()`와 동일한 형태를 유지하기 위해서 입니다.
 
 `thisArg` 매개변수를 `forEach()`에 제공한 경우

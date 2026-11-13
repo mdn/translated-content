@@ -37,8 +37,8 @@ l10n:
     <tr>
       <td>剩余的所有值</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Element/input"><code>input</code></a>
-        或者 <a href="/zh-CN/docs/Web/HTML/Element/textarea"><code>textarea</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input"><code>input</code></a>
+        或者 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea"><code>textarea</code></a>
       </td>
       <td>
         一个空数组

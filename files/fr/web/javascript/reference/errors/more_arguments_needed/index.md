@@ -3,8 +3,6 @@ title: "TypeError: More arguments needed"
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -44,4 +42,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## Voir aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)
+- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)

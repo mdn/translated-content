@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 **`for...in` 문**은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## 문법
 
@@ -32,7 +45,7 @@ for (const variable in object) {
 
 ### 속성의 삭제, 추가, 수정
 
-<code>for..in</code> 문은 임의의 순서로 객체의 속성들에 대해 반복합니다. (적어도 <code>cross-browser</code> 설정에서는 왜 표면적으로 보이는 반복의 순서를 따를 수 없는지에 대해서 {{jsxref("Operators/delete", "delete")}} 를 참고하십시오.)
+<code>for..in</code> 문은 임의의 순서로 객체의 속성들에 대해 반복합니다. (적어도 <code>cross-browser</code> 설정에서는 왜 표면적으로 보이는 반복의 순서를 따를 수 없는지에 대해서 {{jsxref("delete")}} 를 참고하십시오.)
 
 만약 한 반복으로 속성이 수정된 후에 방문하는 경우, 반복문에서의 그 값은 나중의 값으로 정해집니다. 방문하기 전에 삭제된 속성에 대해서는 이후에 방문하지 않습니다. 반복이 발생하는 객체에 추가된 속성은 방문하거나 반복에서 생략할 수 있습니다.
 
@@ -137,8 +150,8 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) (usable with `for...of` syntax)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

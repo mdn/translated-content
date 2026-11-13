@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 **`Object.preventExtensions()`** 메서드는 새로운 속성이 이제까지 객체에 추가되는 것을 방지합니다 (즉 객체의 장래 확장을 막습니다).
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, "property1", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+```
 
 ## 구문
 
@@ -22,7 +37,7 @@ Object.preventExtensions(obj);
 
 ## 설명
 
-객체는 새로운 속성이 추가될 수 있는 경우 확장 가능입니다. `Object.preventExtensions()`는 객체를 이제 확장 불가로 표시하므로 표시된 그 시점에 있던 것 이외의 속성을 갖지 않습니다. 보통 확장 불가인 객체의 속성은 여전히 _삭제될_ 수 있음을 주의하세요. 확장 불가인 객체에 새로운 속성을 추가하려는 시도는 실패합니다, 조용히든 {{jsxref("TypeError")}}가 발생해서든 (가장 흔하나 오로지 {{jsxref("Functions_and_function_scope/Strict_mode", "엄격 모드", "", 1)}}인 경우에서만은 아님).
+객체는 새로운 속성이 추가될 수 있는 경우 확장 가능입니다. `Object.preventExtensions()`는 객체를 이제 확장 불가로 표시하므로 표시된 그 시점에 있던 것 이외의 속성을 갖지 않습니다. 보통 확장 불가인 객체의 속성은 여전히 _삭제될_ 수 있음을 주의하세요. 확장 불가인 객체에 새로운 속성을 추가하려는 시도는 실패합니다, 조용히든 {{jsxref("TypeError")}}가 발생해서든 (가장 흔하나 오로지 {{jsxref("Strict_mode", "엄격 모드", "", 1)}}인 경우에서만은 아님).
 
 `Object.preventExtensions()`는 자신의 속성 추가만을 방지합니다. 속성은 여전히 객체의 프로토타입에 추가될 수 있습니다. 그러나, 객체에 `Object.preventExtensions()`를 호출하면 그 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 속성의 확장 또한 막습니다.
 

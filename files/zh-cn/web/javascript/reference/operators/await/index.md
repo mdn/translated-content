@@ -3,8 +3,6 @@ title: await
 slug: Web/JavaScript/Reference/Operators/await
 ---
 
-{{jsSidebar("Operators")}}
-
 `await` 操作符用于等待一个 {{jsxref("Promise")}} 兑现并获取它兑现之后的值。它只能在{{jsxref("Statements/async_function", "异步函数", "", 1)}}或者[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)顶层中使用。
 
 ## 语法
@@ -120,7 +118,7 @@ export default await colors;
 
 ### await 对执行过程的影响
 
-当函数执行到 `await` 时，被等待的表达式会立即执行，所有依赖该表达式的值的代码会被暂停，并推送进[微任务队列（microtask queue）](/zh-CN/docs/Web/JavaScript/Event_loop)。然后主线程被释放出来，用于事件循环中的下一个任务。即使等待的值是已经敲定的 promise 或不是 promise，也会发生这种情况。例如，考虑以下代码：
+当函数执行到 `await` 时，被等待的表达式会立即执行，所有依赖该表达式的值的代码会被暂停，并推送进[微任务队列（microtask queue）](/zh-CN/docs/Web/JavaScript/Reference/Execution_model)。然后主线程被释放出来，用于事件循环中的下一个任务。即使等待的值是已经敲定的 promise 或不是 promise，也会发生这种情况。例如，考虑以下代码：
 
 ```js
 async function foo(name) {

@@ -5,7 +5,7 @@ slug: Web/API/Window/performance
 
 {{APIREf}}
 
-The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the [Navigation Timing](/ru/docs/Navigation_timing) API and high-resolution time data.
+The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the [Navigation Timing](/ru/docs/Web/API/Performance_API/Navigation_timing) API and high-resolution time data.
 
 ## Methods
 
@@ -14,7 +14,7 @@ The Web Performance API allows web pages access to certain functions for measuri
 - {{domxref("Performance.now()", "performance.now()")}}
   - : Возвращает {{domxref("DOMHighResTimeStamp")}} представляющий количество миллисекунд прошедшее с момента отсчёта.
 - `measure()`
-  - : This method stores the [`DOMHighResTimeStamp`](http://www.w3.org/TR/hr-time/#domhighrestimestamp) duration between two marks along with the associated name (a "measure").
+  - : This method stores the [`DOMHighResTimeStamp`](https://www.w3.org/TR/hr-time/#domhighrestimestamp) duration between two marks along with the associated name (a "measure").
 - **`getEntriesByType()`**
   - : …
 - **`getEntriesByType()`**
@@ -22,7 +22,6 @@ The Web Performance API allows web pages access to certain functions for measuri
 - **`getEntriesByName()`**
   - : …
 - `clearMarks()`
-
   - : If the markName argument is not specified, this method removes all marks and their associated DOMHighResTimeStamp time values.
 
     If the markName argument is specified, this method removes all DOMHighResTimeStamp time values for the given mark name.

@@ -19,11 +19,11 @@ l10n:
 
 제출 버튼은 다양한 속성을 통해 양식의 제출 동작을 재정의할 수 있습니다.
 
-- `{{HtmlElement("button#formaction", "formaction")}}`: 양식의 [`action`](/ko/docs/Web/HTML/Element/form#action) 속성을 재정의합니다.
-- `{{HtmlElement("button#formenctype", "formenctype")}}`: 양식의 [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 속성을 재정의합니다.
-- `{{HtmlElement("button#formmethod", "formmethod")}}`: 양식의 [`method`](/ko/docs/Web/HTML/Element/form#method) 속성을 재정의합니다.
-- `{{HtmlElement("button#formnovalidate", "formnovalidate")}}`: 양식의 [`novalidate`](/ko/docs/Web/HTML/Element/form#novalidate) 속성을 재정의합니다.
-- `{{HtmlElement("button#formtarget", "formtarget")}}`: 양식의 [`target`](/ko/docs/Web/HTML/Element/form#target) 속성을 재정의합니다.
+- `{{HtmlElement("button#formaction", "formaction")}}`: 양식의 [`action`](/ko/docs/Web/HTML/Reference/Elements/form#action) 속성을 재정의합니다.
+- `{{HtmlElement("button#formenctype", "formenctype")}}`: 양식의 [`enctype`](/ko/docs/Web/HTML/Reference/Elements/form#enctype) 속성을 재정의합니다.
+- `{{HtmlElement("button#formmethod", "formmethod")}}`: 양식의 [`method`](/ko/docs/Web/HTML/Reference/Elements/form#method) 속성을 재정의합니다.
+- `{{HtmlElement("button#formnovalidate", "formnovalidate")}}`: 양식의 [`novalidate`](/ko/docs/Web/HTML/Reference/Elements/form#novalidate) 속성을 재정의합니다.
+- `{{HtmlElement("button#formtarget", "formtarget")}}`: 양식의 [`target`](/ko/docs/Web/HTML/Reference/Elements/form#target) 속성을 재정의합니다.
 
 ## 양식 데이터 항목
 
@@ -33,5 +33,5 @@ l10n:
 
 ## 같이 보기
 
-- [기본 네이티브 양식 컨트롤](/ko/docs/Learn/Forms/Basic_native_form_controls)
+- [기본 네이티브 양식 컨트롤](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [양식 데이터 제출하기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data)

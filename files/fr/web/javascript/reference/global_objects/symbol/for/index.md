@@ -3,11 +3,22 @@ title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
 
-{{JSRef}}
-
 La méthode **`Symbol.for(clé)`** permet de chercher parmi les symboles existants enregistrés dans le registre global de l'environnement d'exécution. Si un symbole associé à la clé donnée existe, il est renvoyé par la fonction, sinon un nouveau symbole associé à cette clé est créé dans le registre.
 
-{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+
+```js interactive-example
+console.log(Symbol.for("bar") === Symbol.for("bar"));
+// Expected output: true
+
+console.log(Symbol("bar") === Symbol("bar"));
+// Expected output: false
+
+const symbol1 = Symbol.for("foo");
+
+console.log(symbol1.toString());
+// Expected output: "Symbol(foo)"
+```
 
 ## Syntaxe
 

@@ -15,4 +15,4 @@ slug: Glossary/Proxy_server
 ## Узнать подробнее
 
 - [Прокси сервера и туннелирование](/ru/docs/Web/HTTP/Proxy_servers_and_tunneling)
-- [Прокси сервер](https://en.wikipedia.org/wiki/Proxy_server) на Википедии
+- [Прокси-сервер](https://ru.wikipedia.org/wiki/Прокси-сервер) в Википедии

@@ -9,7 +9,7 @@ Houdini 是一组底层 API，它们公开了 CSS 引擎的各个部分，从而
 
 ## Houdini 的优点
 
-当样式改变时 Houdini 相比 JavaScript[.style](/zh-CN/docs/Web/API/ElementCSSInlineStyle/style) 的方式能够能够更快的解析。浏览器在应用脚本中发现的任何样式更新之前，会对 CSSOM 进行解析——包括布局、绘制和合成过程。此外，对于 JavaScript 样式更新，布局、绘制和复合过程也会重复进行。Houdini 代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中——创建可渲染的、可理解的样式。Houdini 为在 JavaScript 中使用 CSS 值提供了一个基于对象的 API。
+当样式改变时 Houdini 相比 JavaScript {{domxref("HTMLElement.style")}} 的方式能够更快的解析。浏览器在应用脚本中发现的任何样式更新之前，会对 CSSOM 进行解析——包括布局、绘制和合成过程。此外，对于 JavaScript 样式更新，布局、绘制和复合过程也会重复进行。Houdini 代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中——创建可渲染的、可理解的样式。Houdini 为在 JavaScript 中使用 CSS 值提供了一个基于对象的 API。
 
 Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且暴露出了作为 JavaScript 对象的值。比起先前基于字符串的，对 [`HTMLElement.style`](/zh-CN/docs/Web/API/HTMLElement/style) 进行操作的方案，对 JavaScript 对象进行操作更符合直觉。每个元素和样式表规则都拥有一个样式对应表，该对应表可以通过 [`StylePropertyMap`](/zh-CN/docs/Web/API/StylePropertyMap) 来获得。
 
@@ -19,7 +19,7 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 <script>CSS.paintWorklet.addModule('csscomponent.js');</script>
 ```
 
-以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorklet/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
+以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorkletGlobalScope/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
 
 这个 CSS `paint()` 函数的参数包括 worklet 的名字，以及其他可选的参数。worklet 同时能够访问元素的自定义属性：它们不需要作为函数参数传递。
 
@@ -42,14 +42,12 @@ li {
   - : 这是一个更直接地暴露出 CSS 解析器的 API，能够把任意 CSS 类语言解析成为一种中间类型。
     目前还没有该 API 的教程或参考。
 - CSS Properties and Values API
-
   - : 定义了一个用来注册新的 CSS 属性的 API。通过该 API 注册的属性必须用一种特定的解析语法书写，以定义其类型、继承行为以及初始值。
 
     [CSS Properties and Values API reference](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
     [CSS Properties and Values API guide](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API/guide)
 
 - CSS Typed OM
-
   - : 该 API 将 CSSOM 字符串转化为有类型意义的 JavaScript。这将对后续的一个重要的表现打下基础。CSS Typed OM 将 CSS 值以类型化处理的 JavaScript 对象的形式暴露出来，以使其表现可以被控制。
 
     [CSS Typed OM reference](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
@@ -58,14 +56,12 @@ li {
 - CSS Layout API
   - : 作为一个被设计来提升 CSS 扩展性的 API，该 API 能够让开发者去书写他们自己的布局算法，比如 masonry 或者 line snapping。该 API 目前还没有原生支持。目前还没有该 API 的教程或参考。
 - CSS Painting API
-
   - : 作为一个被设计来提升 CSS 扩展性的 API，该 API 允许开发者通过 `paint()` 方法书写 JavaScript 函数，以控制绘制元素的背景、边框或者内容区域。
 
     [CSS Painting API reference](/zh-CN/docs/Web/API/CSS_Painting_API)
     [CSS Painting API guide](/zh-CN/docs/Web/API/CSS_Painting_API/Guide)
 
 - Worklets
-
   - : 该 API 允许脚本独立于 JavaScript 执行环境，运行在渲染流程的各个阶段。Worklets 在概念上很接近于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) ，它由渲染引擎调用，并扩展了渲染引擎。
 
     [Worklets reference](/zh-CN/docs/Web/API/Worklet)

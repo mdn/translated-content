@@ -9,9 +9,25 @@ l10n:
 
 **`Math.random()`** 정적 메서드는 0보다 크거나 1보다 작은 부동 소수점 의사 난수를 반환하며, 해당 범위에서 거의 균일한 분포를 가지므로 원하는 범위로 확장할 수 있습니다. 구현체는 난수 생성 알고리즘의 초기 시드를 선택하며, 사용자가 선택하거나 재설정할 수 없습니다.
 
-> **참고:** `Math.random()`은 암호학적으로 안전한 난수를 제공하지 않습니다. 보안과 관련된 용도로 사용하지 마세요. 대신 Web Crypto API, 더 정확하게는 {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} 메서드를 사용하시기 바랍니다.
+> [!NOTE]
+> `Math.random()`은 암호학적으로 안전한 난수를 제공하지 않습니다. 보안과 관련된 용도로 사용하지 마세요. 대신 Web Crypto API, 더 정확하게는 {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} 메서드를 사용하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## 문법
 

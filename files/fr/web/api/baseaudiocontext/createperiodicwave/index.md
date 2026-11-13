@@ -24,9 +24,7 @@ Un {{domxref("PeriodicWave")}}.
 - `imag`
   - : Un tableau de termes sinus (traditionnellement les termes B).
 - `contraintes` {{optional_inline}}
-
   - : Un objet dictionnaire spécifiant si la normalisation doit être désactivée (si non spécifié, la normalisation est activée par défaut). Il accepte une propriété :
-
     - `disableNormalization`: si réglé à `true`, la normalisation est désactivée pour l'onde périodique. Sa valeur par défaut est `false`.
 
 > [!NOTE]
@@ -77,4 +75,4 @@ Les coefficients de la transformation de Fourier doivent être données dans un 
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,16 +1,30 @@
 ---
-title: RegExp.prototype[@@matchAll]()
+title: RegExp.prototype[Symbol.matchAll]()
+short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 l10n:
-  sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`[Symbol.matchAll]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
 
-**`[@@match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.matchAll]()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
+```js interactive-example
+class MyRegExp extends RegExp {
+  [Symbol.matchAll](str) {
+    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
+    if (!result) {
+      return null;
+    }
+    return Array.from(result);
+  }
+}
+
+const re = new MyRegExp("-\\d+", "g");
+console.log("2016-01-02|2019-03-07".matchAll(re));
+// 予想される結果: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+```
 
 ## 構文
 
@@ -37,7 +51,7 @@ regexp[Symbol.matchAll](str)
 /a/g[Symbol.matchAll]("abc");
 ```
 
-[`@@split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) と同様、 `@@matchAll` は [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) を使用して新しい正規表現を作成するところから始め、何があっても元の正規表現を変更することを避けます。 [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) は元の正規表現の値から始まります。
+[`Symbol.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) と同様、 `[Symbol.matchAll]()` は [`Symbol.species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) を使用して新しい正規表現を作成するところから始め、何があっても元の正規表現を変更することを避けます。 [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) は元の正規表現の値から始まります。
 
 ```js
 const regexp = /[a-c]/g;
@@ -47,7 +61,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // [ "1 b", "1 c" ]
 ```
 
-入力がグローバル正規表現であるかどうかの検証は [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) で行われます。`@@matchAll` は入力を検証しません。正規表現がグローバルでない場合、返されたイテレーターは [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) の結果を一度返し、その後 `undefined` を返します。正規表現がグローバルである場合、返されたイテレーターの `next()` メソッドが呼び出されるたびに、正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) を呼び出し、結果を返します。
+入力がグローバル正規表現であるかどうかの検証は [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) で行われます。`[Symbol.matchAll]()` は入力を検証しません。正規表現がグローバルでない場合、返されたイテレーターは [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) の結果を一度返し、その後 `undefined` を返します。正規表現がグローバルである場合、返されたイテレーターの `next()` メソッドが呼び出されるたびに、正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) を呼び出し、結果を返します。
 
 正規表現が粘着的でグローバルな場合、粘着的な照合を行います。つまり `lastIndex` 以降は照合しません。
 
@@ -66,7 +80,7 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 // [ [ "" ], [ "" ] ]
 ```
 
-このメソッドは {{jsxref('RegExp')}} サブクラスで `matchAll()` の動作をカスタマイズするために存在します。
+このメソッドは {{jsxref("RegExp")}} サブクラスで `matchAll()` の動作をカスタマイズするために存在します。
 
 ## 例
 
@@ -75,7 +89,7 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 このメソッドは {{jsxref("String.prototype.matchAll()")}}, とほぼ同様に使用することができますが、 `this` の値と引数の順序が違う点が異なります。
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.matchAll](str);
 
@@ -83,9 +97,9 @@ console.log(Array.from(result, (x) => x[0]));
 // [ "2016", "01", "02" ]
 ```
 
-### サブクラスでの @@matchAll の使用
+### サブクラスでの `[Symbol.matchAll]()` の使用
 
-{{jsxref("RegExp")}} のサブクラスは `[@@matchAll]()` メソッドを上書きして既定の動作を変更することができます。
+{{jsxref("RegExp")}} のサブクラスは `[Symbol.matchAll]()` メソッドを上書きして既定の動作を変更することができます。
 
 例えば、 {{jsxref("Array")}} を[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)の代わりに返すことができます。
 
@@ -97,7 +111,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)", "g");
 const str = "2016-01-02|2019-03-07";
 const result = str.matchAll(re);
 
@@ -118,10 +132,11 @@ console.log(result[1]);
 
 ## 関連情報
 
-- [`RegExp.prototype[@@matchAll]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`RegExp.prototype[Symbol.matchAll]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `RegExp.prototype[Symbol.matchAll]` のポリフィル](https://www.npmjs.com/package/string.prototype.matchall)
 - {{jsxref("String.prototype.matchAll()")}}
-- [`RegExp.prototype[@@match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
-- [`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
-- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
-- [`RegExp.prototype[@@split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
 - {{jsxref("Symbol.matchAll")}}

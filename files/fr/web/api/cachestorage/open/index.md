@@ -7,7 +7,7 @@ slug: Web/API/CacheStorage/open
 
 La fonction **`open()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
 
 > [!NOTE]
 > Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.

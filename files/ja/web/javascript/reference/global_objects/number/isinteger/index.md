@@ -1,15 +1,29 @@
 ---
 title: Number.isInteger()
+short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number.isInteger()`** は静的メソッドで、渡された値が整数かどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
+{{InteractiveExample("JavaScript デモ: Number.isInteger()")}}
+
+```js interactive-example
+function fits(x, y) {
+  if (Number.isInteger(y / x)) {
+    return "Fits!";
+  }
+  return "Does NOT fit!";
+}
+
+console.log(fits(5, 10));
+// 予想される結果: "Fits!"
+
+console.log(fits(5, 11));
+// 予想される結果: "Does NOT fit!"
+```
 
 ## 構文
 
@@ -72,4 +86,5 @@ Number.isInteger(4500000000000000.1); // true（精度が落ちるため）
 ## 関連情報
 
 - [`Number.isInteger` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
-- このメソッドが所属している {{jsxref("Number")}} オブジェクト。
+- [es-shims による `Number.isInteger` のポリフィル](https://www.npmjs.com/package/number.isinteger)
+- {{jsxref("Number")}}

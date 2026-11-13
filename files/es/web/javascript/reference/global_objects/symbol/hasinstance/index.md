@@ -7,9 +7,22 @@ l10n:
 
 {{JSRef}}
 
-El símbolo conocido como **`Symbol.hasInstance`** se utiliza para determinar si un objeto constructor reconoce un objeto como su instancia. El comportamiento del operador {{jsxref("Operators/instanceof", "instanceof")}} puede personalizarse mediante este símbolo.
+El símbolo conocido como **`Symbol.hasInstance`** se utiliza para determinar si un objeto constructor reconoce un objeto como su instancia. El comportamiento del operador {{jsxref("instanceof")}} puede personalizarse mediante este símbolo.
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+
+```js interactive-example
+class Array1 {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+
+console.log([] instanceof Array1);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Ejemplos
 
@@ -60,4 +73,4 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## Véase también
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}

@@ -3,11 +3,24 @@ title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toString()`** 方法返回表示该数字值的字符串。
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## 语法
 

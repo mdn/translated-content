@@ -9,7 +9,7 @@ l10n:
 
 **접근성 트리**는 대부분의 HTML 요소에 대한 정보와 관련된 {{Glossary("accessibility", "접근성")}}을 포함합니다.
 
-브라우저는 마크업을 [DOM tree](/ko/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)로 불리는 내부적인 표현으로 전환시킵니다. DOM 트리는 모든 마크업의 요소, 특성, 텍스트 노드를 표현하는 객체들을 포함합니다. 그 다음 브라우저는 DOM 트리에 기반된 접근성 트리를 생성합니다. 이 트리는 플랫폼별 접근성 API에서 스크린 리더와 같은 보조 기술이 이해할 수 있는 표현을 제공하기 위해 사용됩니다.
+브라우저는 마크업을 [DOM tree](/ko/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee)로 불리는 내부적인 표현으로 전환시킵니다. DOM 트리는 모든 마크업의 요소, 특성, 텍스트 노드를 표현하는 객체들을 포함합니다. 그 다음 브라우저는 DOM 트리에 기반된 접근성 트리를 생성합니다. 이 트리는 플랫폼별 접근성 API에서 스크린 리더와 같은 보조 기술이 이해할 수 있는 표현을 제공하기 위해 사용됩니다.
 
 접근성 트리 객체에는 4가지 속성들이 있습니다.
 
@@ -29,6 +29,5 @@ l10n:
 ## 같이 보기
 
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Accessibility", "접근성")}}
   - {{Glossary("ARIA")}}

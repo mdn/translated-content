@@ -91,7 +91,8 @@ function draw() {
 
 세번째 단계는 선택사항으로 `closePath()` 메소드를 호출하는 것 입니다. 이 메소드는 현재 점 위치와 시작점 위치를 직선으로 이어서 도형을 닫습니다. 이미 도형이 닫혔거나 한 점만 존재한다면, 이 메소드는 아무것도 하지 않습니다.
 
-> **참고:** `fill()` 메소드 호출 시, 열린 도형은 자동으로 닫히게 되므로 `closePath()`메소드를 호출하지 않아도 됩니다. 이것은 `stroke()` 메소드에는 **적용되지 않습니다**.
+> [!NOTE]
+> `fill()` 메소드 호출 시, 열린 도형은 자동으로 닫히게 되므로 `closePath()`메소드를 호출하지 않아도 됩니다. 이것은 `stroke()` 메소드에는 **적용되지 않습니다**.
 
 ### 삼각형 그리기
 
@@ -168,7 +169,8 @@ function draw() {
 
 `moveTo()`를 사용한 코드라인을 지우면 연결된 선들을 확인 할 수 있습니다
 
-> **참고:** `arc()` function에 대하여 더 알아보고 싶다면 아래의 [Arcs](#arcs) 를 확인하세요.
+> [!NOTE]
+> `arc()` function에 대하여 더 알아보고 싶다면 아래의 [Arcs](#arcs) 를 확인하세요.
 
 ### 선
 
@@ -230,7 +232,8 @@ function draw() {
 
 `arc` 메소드의 여섯개의 매개변수에 대하여 좀 더 자세하게 알아봅시다: `x` 와 `y`는 호를 그릴 때 필요한 원점 좌표입니다. 반지름(`radius`) 은 말 그대로 호의 반지름을 뜻합니다. `startAngle` 및 `endAngle` 매개 변수는 원의 커브를 따라 호의 시작점과 끝점을 라디안 단위로 정의합니다. 이 변수들은 x축을 기준으로 계산됩니다. Boolean 값을 가지는 `anticlockwise` 변수는 `true`일 때 호를 반시계 방향으로 그리게 되며, 그렇지 않을 경우에는 시계 방향으로 그리게 됩니다.
 
-> **참고:** `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용합니다. 각도를 라디안으로 바꾸려면 다음의 JavaScript(JavaScript) 코드를 사용하실 수 있습니다: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> `arc` 함수에서 각도는 각이 아닌 라디안 값을 사용합니다. 각도를 라디안으로 바꾸려면 다음의 JavaScript(JavaScript) 코드를 사용하실 수 있습니다: `radians = (Math.PI/180)*degrees`.
 
 다음의 예제는 우리가 이제껏 봐 왔던 예제들 보다 약간 더 복잡합니다. 이 예제는 12가지의 다양한 각도로 채워진 각기 다른 호를 그립니다.
 
@@ -253,12 +256,12 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    for (var i = 0; i &#x3C; 4; i++) {
-      for (var j = 0; j &#x3C; 3; j++) {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
         ctx.beginPath();
         var x = 25 + j * 50; // x coordinate
         var y = 25 + i * 50; // y coordinate
@@ -539,9 +542,9 @@ function draw() {
 
 ### SVG paths 사용하기
 
-새로운 캔버스 path2D API 또다른 강력한 특징 중 하나는, 캔버스의 path를 초기화 하기 위해 [SVG path data](/ko/docs/Web/SVG/Tutorial/Paths)를 사용한다는 것입니다. 이는 path 데이터를 이동시키며, SVG와 canvas 에서 재사용 할 수 있도록 해줍니다.
+새로운 캔버스 path2D API 또다른 강력한 특징 중 하나는, 캔버스의 path를 초기화 하기 위해 [SVG path data](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)를 사용한다는 것입니다. 이는 path 데이터를 이동시키며, SVG와 canvas 에서 재사용 할 수 있도록 해줍니다.
 
-path는 (`M10 10`) 점으로 이동한 다음, 수평하게 오른쪽으로 으로 80 포인트 (`h 80`) 만큼 이동합니다. 이후 수직으로 80포인트 (v 80) 내려간 다음, 80 포인트 왼쪽으로 (`h -80`) 수평하게 이동하고 다시 시작점 (`z`)으로 돌아갑니다. 예시는 [이곳](/ko/docs/Web/API/Path2D.Path2D#Using_SVG_paths)( `Path2D` constructor )에서 확인하실 수 있습니다.
+path는 (`M10 10`) 점으로 이동한 다음, 수평하게 오른쪽으로 으로 80 포인트 (`h 80`) 만큼 이동합니다. 이후 수직으로 80포인트 (v 80) 내려간 다음, 80 포인트 왼쪽으로 (`h -80`) 수평하게 이동하고 다시 시작점 (`z`)으로 돌아갑니다. 예시는 [이곳](/ko/docs/Web/API/Path2D/Path2D#using_svg_paths)( `Path2D` constructor )에서 확인하실 수 있습니다.
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

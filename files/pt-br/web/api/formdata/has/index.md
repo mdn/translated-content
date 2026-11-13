@@ -21,11 +21,11 @@ formData.has(name);
 ### Parâmetros
 
 - `name`
-  - : Uma {{domxref("USVString")}} que representa o nome da chave que você que testar.
+  - : Uma {{jsxref("String")}} que representa o nome da chave que você que testar.
 
 ### Retorna
 
-Um {{domxref("Boolean")}}.
+Um {{jsxref("Boolean")}}.
 
 ## Exemplo
 
@@ -54,6 +54,6 @@ formData.has("username"); // Retorna true
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,11 +1,10 @@
 ---
 title: String() コンストラクター
+short-title: String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 l10n:
-  sourceCommit: 84aaeee9a64e1bfe002837468eb798e5d5eb2bbe
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`String`** コンストラクターは新しい {{jsxref("String")}} オブジェクトを生成します。関数として呼び出された場合は、文字列型のプリミティブ値を返します。
 
@@ -16,7 +15,8 @@ new String(thing)
 String(thing)
 ```
 
-> **メモ:** `String()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
+> [!NOTE]
+> `String()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
 
 ### 引数
 
@@ -25,11 +25,12 @@ String(thing)
 
 ### 返値
 
-`String` がコンストラクターとして（`new` 付きで）呼び出された場合、{{jsxref("String")}} オブジェクトを生成します。これはプリミティブでは**ありません**。
+`String()` が関数として（[`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) なしで）呼び出された場合、 `value` が[文字列プリミティブに変換されたもの](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列への変換)を返します。特に、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)値は、例外を発生させるのではなく、 `"Symbol(description)"` に変換されます。ここで、`description` は、このシンボルのの[説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)です。
 
-`String` が関数として呼び出された場合、引数を文字列プリミティブに変換します。[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)値は例外を発生させず、`"Symbol(description)"` の形に変換され、この `description` はそのシンボルの [description](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) となります。
+`String` がコンストラクターとして（`new` 付きで）呼び出された場合、 `value` を（シンボルの特別扱いなしで）文字列プリミティブに変換し、 {{jsxref("String")}} オブジェクトでラップして返します。これはプリミティブでは**ありません**。
 
-> **警告:** `String` をコンストラクターとして使用する場面はほとんど見つからないでしょう。
+> [!WARNING]
+> `String` をコンストラクターとして使用する場面はほとんど見つからないでしょう。
 
 ## 例
 
@@ -46,7 +47,8 @@ typeof a; // "object"
 typeof b; // "string"
 ```
 
-ここでは、この関数は約束通り ({{Glossary("primitive", "プリミティブ")}}型の) 文字列を生成します。しかし、コンストラクターは String 型 (オブジェクトのラッパー) のインスタンスを生成しますので、 String コンストラクターを使用するのは稀だといえます。
+ここでは、この関数は約束通り（{{Glossary("primitive", "プリミティブ")}}型の）文字列を生成します。
+しかし、コンストラクターは String 型（オブジェクトのラッパー）のインスタンスを生成しますので、 String コンストラクターを使用するのは稀だといえます。
 
 ### String() を用いてシンボルを文字列化
 
@@ -74,4 +76,4 @@ String(sym); // "Symbol(example)"
 
 ## 関連情報
 
-- [JavaScript ガイドのテキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)
+- [数値と文字列](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド

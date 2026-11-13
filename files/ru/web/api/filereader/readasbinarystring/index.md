@@ -5,7 +5,7 @@ slug: Web/API/FileReader/readAsBinaryString
 
 {{APIRef("File API")}} {{non-standard_header}}
 
-Метод `readAsBinaryString` используется для начала считывания содержимого определённого как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершится {{domxref("FileReader.readyState","readyState")}} становится `DONE`, и срабатывает {{event("loadend")}} . В это время атрибут {{domxref("FileReader.result","result")}} содержит сырые бинарные данные из файла.
+Метод `readAsBinaryString` используется для начала считывания содержимого определённого как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершится {{domxref("FileReader.readyState","readyState")}} становится `DONE`, и возникает событие [`loadend`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). В это время атрибут {{domxref("FileReader.result","result")}} содержит сырые бинарные данные из файла.
 
 Заметьте, что этот метод устарел (12 July 2012 Working Draft from the W3C.)
 

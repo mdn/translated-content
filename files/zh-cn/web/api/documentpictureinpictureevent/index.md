@@ -2,7 +2,7 @@
 title: DocumentPictureInPictureEvent
 slug: Web/API/DocumentPictureInPictureEvent
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: bac20b9ed34bf5b6427ba9274c99c1737dc309ff
 ---
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
@@ -16,16 +16,16 @@ l10n:
 - {{domxref("DocumentPictureInPictureEvent.DocumentPictureInPictureEvent", "DocumentPictureInPictureEvent()")}} {{Experimental_Inline}}
   - : 创建一个新的 `DocumentPictureInPictureEvent` 对象实例。
 
-## 实例方法
-
-_继承其父接口 {{DOMxRef("Event")}} 的方法。_
-
 ## 实例属性
 
 _继承其父接口 {{DOMxRef("Event")}} 的属性。_
 
 - {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个 {{domxref("Window")}} 实例，表示触发事件的 `DocumentPictureInPicture` 窗口的浏览上下文。
+
+## 实例方法
+
+_继承其父接口 {{DOMxRef("Event")}} 的方法。_
 
 ## 示例
 

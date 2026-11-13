@@ -3,14 +3,12 @@ title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.update()`** met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.
 
 > [!WARNING]
 > Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,19 +22,17 @@ var updating = browser.bookmarks.update(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.
+  - : Un {{jsxref("String")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.
 - `changes`
-
-  - : Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :
-
+  - : Un {{jsxref("Object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :
     - `title` {{optional_inline}}
-      - : Un {{jsxref("string")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'`id` fait référence à un dossier.
+      - : Un {{jsxref("String")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'`id` fait référence à un dossier.
     - `url` {{optional_inline}}
-      - : Un {{jsxref("string")}} fournissant une nouvelle URL pour le signet.
+      - : Un {{jsxref("String")}} fournissant une nouvelle URL pour le signet.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée.
 
 ## Exemples
 
@@ -75,9 +71,7 @@ searching.then(updateFolders, onRejected);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

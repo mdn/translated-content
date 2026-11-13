@@ -7,11 +7,23 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 
 Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Tipos
 
-La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
+La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 <table class="standard-table">
     <thead>
@@ -93,7 +105,7 @@ La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expres
      </tr>
      <tr>
       <td><code>[\b]</code></td>
-      <td>Coincide con un caracter de retroceso. Si estás buscando el carácter de límite de palabra (<code>\b</code>), consulta {{JSxRef("../Guide/Regular_Expressions/Boundaries", "Límites")}}.</td>
+      <td>Coincide con un caracter de retroceso. Si estás buscando el carácter de límite de palabra (<code>\b</code>), consulta [Límites](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries).</td>
      </tr>
      <tr>
       <td><code>\0</code></td>
@@ -183,15 +195,14 @@ Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emoji
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
-
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}

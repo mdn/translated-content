@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 
 O método **`setUTCSeconds()`** atribui os segundos para a data especificada de acordo com o horário universal.
 
-{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCSeconds());
+// Expected output: 30
+
+date1.setUTCSeconds(39);
+
+console.log(date1.getUTCSeconds());
+// Expected output: 39
+```
 
 ## Sintaxe
 

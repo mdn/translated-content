@@ -14,4 +14,4 @@ La codificación de caracteres Unicode más común en la Web es {{Glossary("UTF-
 ## Aprende más
 
 - [Unicode](https://es.wikipedia.org/wiki/Unicode) en Wikipedia
-- [El estándar Unicode: Introducción técnica](http://www.unicode.org/standard/principles.html)
+- [El estándar Unicode: Introducción técnica](https://www.unicode.org/standard/principles.html)

@@ -3,10 +3,10 @@ title: "WebSocket: message イベント"
 short-title: message
 slug: Web/API/WebSocket/message_event
 l10n:
-  sourceCommit: 6a0f22ee0b3a854ed37271373cbc1d1099c0d361
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `message` イベントは、 `WebSocket` を通してデータを受け取ったときに発生します。
 
@@ -48,10 +48,10 @@ _以下に示したプロパティに加え、親インターフェイスであ�
 ## 例
 
 ```js
-// Create WebSocket connection.
+// WebSocket 接続を作成
 const socket = new WebSocket("ws://localhost:8080");
 
-// Listen for messages
+// メッセージを待ち受け
 socket.addEventListener("message", (event) => {
   console.log("Message from server ", event.data);
 });

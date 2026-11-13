@@ -3,7 +3,7 @@ title: 检测 WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
 
 这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。
 
@@ -66,4 +66,4 @@ window.addEventListener(
 
 这个例子的源代码可以在[GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)上获取。
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}

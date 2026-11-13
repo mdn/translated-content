@@ -59,4 +59,4 @@ La clé de `storage` est un objet qui possède les propriétés requises suivant
 
 > [!NOTE]
 >
-> Cette page comprend les détails de la page du site web des développeurs de Chrome [Manifeste pour les zones de stockage](https://developer.chrome.com/apps/manifest/storage) incluses ici sous la licence Creative Commons Attribution 3.0 United States License.
+> Cette page comprend les détails de la page du site web des développeurs de Chrome [Manifeste pour les zones de stockage](https://developer.chrome.com/docs/apps/manifest/storage) incluses ici sous la licence Creative Commons Attribution 3.0 United States License.

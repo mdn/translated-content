@@ -15,4 +15,4 @@ HTML 요소의 이름은 요소의 시작 태그 시작 부분과 요소 종료 
 
 - 위키백과의 [HTML 요소](https://ko.wikipedia.org/wiki/HTML_%EC%9A%94%EC%86%8C)
 - {{glossary("WHATWG")}}의 [HTML 요소 구문](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)
-- [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content)

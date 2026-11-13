@@ -13,7 +13,8 @@ Se nenhum cabeçalho {{HTTPHeader("Accept")}} foi definido usando este método, 
 
 Por razões de segurança, alguns cabeçalhos só podem ser controlados pelo agente do usuário. Esses cabeçalhos incluem o cabeçalho {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} e o cabeçalho {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-> **Nota:** **Observação:** Para seu campos personalizados, você pode encontrar uma exceção "**not allowed by Access-Control-Allow-Headers in preflight response**" quando você envia requisições através de domínios. Neste caso, você precisa definir o cabeçalho {{HTTPHeader("Access-Control-Allow-Headers")}} no seu cabeçalho de resposta no lado do servidor.
+> [!NOTE]
+> Para seu campos personalizados, você pode encontrar uma exceção "**not allowed by Access-Control-Allow-Headers in preflight response**" quando você envia requisições através de domínios. Neste caso, você precisa definir o cabeçalho {{HTTPHeader("Access-Control-Allow-Headers")}} no seu cabeçalho de resposta no lado do servidor.
 
 ## Sintaxe
 
@@ -42,5 +43,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## Veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML em XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

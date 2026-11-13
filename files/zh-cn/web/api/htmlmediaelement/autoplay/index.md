@@ -7,14 +7,14 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.autoplay`** 属性反映了 HTML [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，表示是否应在有足够的媒体资源加载完成且无需中断的情况下自动开始播放。
+**`HTMLMediaElement.autoplay`** 属性反映了 HTML [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay) 属性，表示是否应在有足够的媒体资源加载完成且无需中断的情况下自动开始播放。
 
 如果媒体元素的源是 {{domxref("MediaStream")}} 且其 `autoplay` 属性为 `true`，则该元素在激活时（即 {{domxref("MediaStream.active")}} 为 `true`）将开始播放。
 
 > [!NOTE]
 > 自动播放音频（或带音轨的视频）的网站会给用户带来不愉快的体验，因此应尽量避免。如果你必须提供自动播放特性，则应使其成为选择性特性（要求用户明确启用）。然而，当创建媒体元素并在稍后由用户控制其源时，自动播放可能会很有用。
 
-有关自动播放、自动播放阻止以及当自动播放被用户的浏览器阻止时如何响应的深入介绍，请参阅我们的文章[媒体和 Web Audio API 的自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+有关自动播放、自动播放阻止以及当自动播放被用户的浏览器阻止时如何响应的深入介绍，请参阅我们的文章[媒体和 Web Audio API 的自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
 ## 值
 

@@ -80,11 +80,11 @@ var matches = el.querySelectorAll("iframe[data-src]");
 
 ## 规范
 
-- [选择器 API](http://www.w3.org/TR/selectors-api/)
+- [选择器 API](https://www.w3.org/TR/selectors-api/)
 
 ## 参见
 
 - {{Domxref("Element.querySelector")}}
-- [`document.querySelectorAll`](/zh-CN/docs/Web/API/Document.querySelectorAll)
-- [`document.querySelector`](/zh-CN/docs/Web/API/Document.querySelector)
+- [`document.querySelectorAll`](/zh-CN/docs/Web/API/Document/querySelectorAll)
+- [`document.querySelector`](/zh-CN/docs/Web/API/Document/querySelector)
 - [Code snippets for `querySelector`](/zh-CN/docs/Code_snippets/QuerySelector)

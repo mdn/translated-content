@@ -3,8 +3,6 @@ title: 扩展剖析
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
-{{AddonSidebar}}
-
 扩展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。
 
 ## manifest.json
@@ -13,11 +11,11 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 这个 manifest 文件还可以指向其他一些类型的文件：
 
-- [后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本): 执行一个长时间运行的逻辑。
+- [后台脚本](#后台脚本): 执行一个长时间运行的逻辑。
 - 图标：用于扩展插件和任何它可能定义的按钮儿。
-- [侧边栏，弹出窗口，选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面): 为各式各样用户界面组件提供内容的 HTML 文件。
-- [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
-- [网络可访问资源](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
+- [侧边栏，弹出窗口，选项页](#侧边栏，弹出窗口，选项页面): 为各式各样用户界面组件提供内容的 HTML 文件。
+- [内容脚本](#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
+- [网络可访问资源](#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
 
 ![Web 扩展的组件。manifest.JSON 是所有扩展里都必须存在的。它提供指向后台页面、内容脚本、浏览器动作、页面动作、选项页和 web 可访问资源的引用。后台页面由 HTML 和 JS 组成。内容脚本由 JS 和 CSS 组成。用户单击扩展图标能够触发浏览器动作和页面动作，由此产生的弹出窗口由 HTML、CSS 和 JS 组成。选项页由 HTML、CSS 和 JS 组成。](webextension-anatomy.png)
 
@@ -101,7 +99,7 @@ background-page.html 的内容如下：
 你的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
 
 - [侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是一个面板，它被显示在浏览器窗口左侧，就在网页旁边。
-- [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
+- [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
 - [选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)是当用户访问扩展管理器内置的扩展选项页面时，内嵌显示的页面。
 
 对于这些组件，你可以创建一个 HTML 文件，并使用 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 中的特定属性指向它。HTML 文件可以引用 CSS 和 JavaScript 文件，就像普通的网页一样。
@@ -139,6 +137,6 @@ background-page.html 的内容如下：
 ## 网络可访问资源
 
 网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的 URI 方案来引用。
-举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 `src` 属性的 [img](/zh-CN/docs/Web/HTML/Element/img) 标签了。
+举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 `src` 属性的 [img](/zh-CN/docs/Web/HTML/Reference/Elements/img) 标签了。
 
 若想了解更多，请参考 manifest.json 中相关条目的文档：[web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)。

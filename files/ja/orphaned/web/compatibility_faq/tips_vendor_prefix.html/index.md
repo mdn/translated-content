@@ -15,7 +15,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 
 ### Mozilla CSS 拡張仕様 (-moz-)
 
-詳細は、[Mozilla 独自の CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_Extensions) をご覧ください。
+詳細は、[Mozilla 独自の CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) をご覧ください。
 
 ＜表 1 : -moz-指定された値と mobile 版 Firefox 向け対処法＞
 
@@ -30,7 +30,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 
 ### Webkit CSS 拡張仕様 (-webkit-)
 
-詳細は、[WebKit 独自の CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_Extensions) をご覧ください。
+詳細は、[WebKit 独自の CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions) をご覧ください。
 
 ＜表 2 : -webkit-指定された値と mobile 版 Firefox 向け対処法＞
 
@@ -71,11 +71,11 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 | Firefox/3.6-15                   | -moz-linear-gradient();    |
 | Firefox/16(2012.10 リリース)以降 | linear-gradient();         |
 
-mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/linear-gradient)等のリファレンスを参照し、適正な設定を行うことが必要です。
+mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)等のリファレンスを参照し、適正な設定を行うことが必要です。
 
 ## 参考
 
 ・CSS グラデーションの利用 - Web developer guide | MDN
-　　[https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_CSS_gradients](/ja/docs/Web/Guide/CSS/Using_CSS_gradients)
+　　[https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Using_CSS_gradients](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

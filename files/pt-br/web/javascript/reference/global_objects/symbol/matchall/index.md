@@ -7,11 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 
 O símbolo **`Symbol.matchAll`** é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll", "shorter")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## Descrição
 
-Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
+Esse símbolo é usado pelo {{jsxref("String.prototype.matchAll()")}} e especificado no {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}. Os próximos dois exemplos retornam o mesmo resultado:
 
 ```js
 "abc".matchAll(/a/);
@@ -41,7 +50,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
+Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.
 
 ## Especificações
 
@@ -54,4 +63,4 @@ Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "
 ## Veja também
 
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}

@@ -30,7 +30,8 @@ l10n:
 | {{domxref("ProcessingInstruction")}} | 対象を除く内容物全体   |
 | {{domxref("Text")}}                  | テキストノードの中身   |
 
-> **メモ:** `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
+> [!NOTE]
+> `nodeValue` が `null` になると定義されている場合は、設定しても効果がありません。
 
 ## 例
 

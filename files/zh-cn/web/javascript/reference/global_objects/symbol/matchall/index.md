@@ -3,13 +3,20 @@ title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
 
-{{JSRef}}
-
 **`Symbol.matchAll`** 内置通用（well-known）符号指定方法返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxref("String.prototype.matchAll()")}} 方法调用。
 
 详细信息请参阅 [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## 值
 

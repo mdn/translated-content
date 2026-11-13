@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 - 特定のアドオンやマニフェストのパーミッション警告を調べる
 - アドオンのインストール・有効・無効の状態に関する通知の取得
 
-操作のほとんどは "management" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions)を要求します。他のアドオンへのアクセスを提供しない操作はこのパーミッションを要求しません。
+操作のほとんどは "management" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を要求します。他のアドオンへのアクセスを提供しない操作はこのパーミッションを要求しません。
 
 ## 型
 
@@ -61,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> この API は Chromium の [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。
 
 <pre class="hidden">// Copyright 2012 The Chromium Authors. All rights reserved.
 //

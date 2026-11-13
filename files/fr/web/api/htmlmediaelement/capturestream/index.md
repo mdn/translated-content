@@ -1,39 +1,47 @@
 ---
-title: HTMLMediaElement.captureStream()
+title: "HTMLMediaElement : méthode captureStream()"
+short-title: captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
+l10n:
+  sourceCommit: eccbe7d0f6b2f5ddd9b40f91324f4da394d1f1a0
 ---
 
-{{APIRef("HTML Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
-**`captureStream()`** est une méthode de l'interface {{domxref("HTMLMediaElement")}} retournant un objet {{domxref('MediaStream')}} qui diffuse en temps réel l'enregistrement d'un contenu obtenu dans un élément média.
+La méthode **`captureStream()`** de l'interface {{DOMxRef("HTMLMediaElement")}} retourne un objet {{DOMxRef("MediaStream")}} qui diffuse en temps réel l'enregistrement d'un contenu obtenu dans un élément média.
+
+Cela peut être utilisé, par exemple, comme source pour une {{DOMxRef("RTCPeerConnection")}} dans {{Glossary("WebRTC")}}.
 
 ## Syntaxe
 
-```js
-var mediaStream = mediaElement.captureStream();
+```js-nolint
+captureStream()
 ```
 
 ### Paramètres
 
 Aucun.
 
-### Retours
+### Valeur de retour
 
-Un objet {{domxref('MediaStream')}} pouvant être utilisé en tant que source pour des données audio et/ou vidéo par d'autres média traitant du code, ou comme source pour [WebRTC](/fr/docs/Glossary/WebRTC).
+Un objet {{DOMxRef('MediaStream')}} pouvant être utilisé en tant que source pour des données audio et/ou vidéo par d'autres média traitant du code, ou comme source pour {{Glossary("WebRTC")}}.
 
-## Exemple
+## Exemples
 
-Dans cet exemple, un écouteur d'événement est mise en place, permettant la capture du contenu d'un élément média avec l'ID `"playback"` dans un {{domxref("MediaStream")}} lors d'un clic sur un bouton de lancement. La flux peut être utilisée dans d'autres buts—comme une source de diffusion via WebRTC, vous permettant de partager des vidéos pré-enregistrées avec une autre personne lors d'un appel video.
+### Utilisation simple
+
+Dans cet exemple, un gestionnaire d'évènements est établi de sorte qu'un clic sur un bouton commence à capturer le contenu d'un élément média avec l'ID `"playback"` dans un {{DOMxRef("MediaStream")}}.
+Le flux peut ensuite être utilisé à d'autres fins, comme un flux WebRTC pour partager des vidéos pré-enregistrées avec une autre personne lors d'un appel vidéo.
 
 ```js
-document.querySelector(".playAndRecord").addEventListener("click", function () {
-  var playbackElement = document.getElementById("playback");
-  var captureStream = playbackElement.captureStream();
+document.querySelector(".playAndRecord").addEventListener("click", () => {
+  const playbackElement = document.getElementById("playback");
+  const captureStream = playbackElement.captureStream();
   playbackElement.play();
 });
 ```
 
-Voir [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element) pour des exemples et explications plus détaillées et complexes.
+Voir [Enregistrer un élément média](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element) pour un exemple plus long et plus complexe ainsi qu'une explication détaillée.
 
 ## Spécifications
 
@@ -45,8 +53,8 @@ Voir [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Reco
 
 ## Voir aussi
 
-- [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [MediaStream Recording API](/fr/docs/Web/API/MediaStream_Recording_API)
-- {{domxref("HTMLCanvasElement.captureStream()")}}
-- {{domxref("MediaStream")}}
-- [WebRTC API](/fr/docs/Web/API/WebRTC_API)
+- [Enregistrer un élément média](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
+- [L'API MediaStream Recording](/fr/docs/Web/API/MediaStream_Recording_API)
+- La méthode {{DOMxRef("HTMLCanvasElement.captureStream()")}}
+- L'interface {{DOMxRef("MediaStream")}}
+- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)

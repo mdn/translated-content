@@ -3,11 +3,20 @@ title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
 
-{{JSRef}}
-
 **`replace()`** 方法返回一个新字符串，其中一个、多个或所有匹配的 `pattern` 被替换为 `replacement`。`pattern` 可以是字符串或 {{jsxref("RegExp")}}，`replacement` 可以是字符串或一个在每次匹配时调用的函数。如果 `pattern` 是字符串，则只会替换第一个匹配项。原始的字符串不会改变。
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## 语法
 

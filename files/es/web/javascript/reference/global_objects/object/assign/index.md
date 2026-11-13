@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 El método **`Object.assign()`** copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Sintaxis
 
@@ -261,5 +274,5 @@ if (typeof Object.assign != "function") {
 ## Ver también
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades)
-- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread#Spread_en_literales_tipo_Objeto)
+- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_en_literales_tipo_objeto)

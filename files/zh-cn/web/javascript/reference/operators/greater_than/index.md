@@ -3,11 +3,24 @@ title: 大于（>）
 slug: Web/JavaScript/Reference/Operators/Greater_than
 ---
 
-{{jsSidebar("Operators")}}
-
 大于运算符（`>`）在左操作数大于右操作数时返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+
+```js interactive-example
+console.log(5 > 3);
+// Expected output: true
+
+console.log(3 > 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n > 5);
+// Expected output: false
+
+console.log("ab" > "aa");
+// Expected output: true
+```
 
 ## 语法
 

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 O símbolo conhecido **`Symbol.iterator`** especifíca o iterador padrão para um objeto. Usado por [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of).
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## Descrição
 
@@ -15,11 +28,11 @@ Sempre que um objeto precisa ser iterado (como um começo de um `for..of` loop),
 
 Alguns tipos built-in tem um comportamento padrão de iteração, enquanto outros tipos (assim como {{jsxref("Object")}}) não tem. O tipo built-in com um método `@@iterator` são:
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}
 
 Veja também [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) para mais informação.
 
@@ -41,7 +54,7 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable]; // [1, 2, 3]
 ```
 
-Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
+Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando [computed property](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {
@@ -84,8 +97,8 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ## Veja também
 
 - [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxref("Array/Symbol.iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String/Symbol.iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map/Symbol.iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set/Symbol.iterator", "Set.prototype[@@iterator]()")}}

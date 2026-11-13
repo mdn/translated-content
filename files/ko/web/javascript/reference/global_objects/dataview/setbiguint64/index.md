@@ -11,7 +11,21 @@ l10n:
 이 `DataView`의 지정된 바이트 오프셋의 8 바이트의 공간에 64비트 부호 없는 정수로 저장합니다.
 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 저장할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setBigUint64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in an unsigned 64-bit integer
+const max = 2n ** 64n - 1n;
+
+const view = new DataView(buffer);
+view.setBigUint64(1, max);
+
+console.log(view.getBigUint64(1));
+// Expected output: 18446744073709551615n
+```
 
 ## 구문
 

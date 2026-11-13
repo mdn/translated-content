@@ -15,6 +15,6 @@ URL также могут быть использованы при переда�
 
 ## Смотрите также
 
-- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) на сайте MDN
+- [Что такое URL-адрес?](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) на сайте MDN
 - Синтаксис URL-адресов определён в [URL Living Standard](https://url.spec.whatwg.org/)
 - [URL](https://ru.wikipedia.org/wiki/URL) в Википедии

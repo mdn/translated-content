@@ -1,15 +1,27 @@
 ---
 title: Symbol.for()
+short-title: for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Symbol.for()`** は静的メソッドで、引数で与えられたキーでランタイム全体のシンボルレジストリー内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリー内に生成されます。
 
-{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
+{{InteractiveExample("JavaScript デモ: Symbol.for()")}}
+
+```js interactive-example
+console.log(Symbol.for("bar") === Symbol.for("bar"));
+// 予想される結果: true
+
+console.log(Symbol("bar") === Symbol("bar"));
+// 予想される結果: false
+
+const symbol1 = Symbol.for("foo");
+
+console.log(symbol1.toString());
+// 予想される結果: "Symbol(foo)"
+```
 
 ## 構文
 

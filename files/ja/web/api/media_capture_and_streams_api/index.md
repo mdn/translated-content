@@ -19,7 +19,7 @@ l10n:
 
 `MediaStream` オブジェクトは、1 つの**入力**と 1 つの**出力**を持ちます。 `MediaStream` オブジェクトは、ローカルで呼び出される {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} によって生成され、ユーザーのカメラやマイクの 1 つを入力ソースとして持ちます。ローカルでない `MediaStream` は、 {{HTMLElement("video")}} や {{HTMLElement("audio")}} などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} API によって取得できるネットワーク越しに生成されたストリーム、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("MediaStreamAudioDestinationNode")}} によって作成されたストリームとして表現されます。
 
-`MediaStream` オブジェクトの出力は**コンシューマー** (consumer) に接続されます。出力として {{HTMLElement("audio")}} や {{HTMLElement("video")}} などのメディア要素、 WebRTC {{domxref("RTCPeerConnection")}} API、[ウェブオーディオ API](/ja/docs/Web_Audio_API) の {{domxref("MediaStreamAudioSourceNode")}}が使用できます。
+`MediaStream` オブジェクトの出力は**コンシューマー** (consumer) に接続されます。出力として {{HTMLElement("audio")}} や {{HTMLElement("video")}} などのメディア要素、 WebRTC {{domxref("RTCPeerConnection")}} API、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("MediaStreamAudioSourceNode")}}が使用できます。
 
 ## インターフェイス
 
@@ -27,19 +27,14 @@ l10n:
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
 - {{domxref("URL")}}
 
@@ -54,7 +49,7 @@ l10n:
 
 ## ガイドとチュートリアル
 
-[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事では、**制約**と**能力**、メディア設定の概念について説明しています。また、[制約エクササイザ―](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints#例_制約エクササイザ―)を記載しており、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）からの音声と映像のトラックに対して異なる制約集合を適用した結果を試してみることができます。
+[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事では、**制約**と**能力**、メディア設定の概念について説明しています。また、[制約エクササイザー](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints#例_制約エクササイザー)を記載しており、コンピューターの A/V 入力機器（ウェブカメラやマイクなど）からの音声と映像のトラックに対して異なる制約集合を適用した結果を試してみることができます。
 
 [getUserMedia() による写真の撮影](/ja/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) の記事では、[`getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) を使用して、 `getUserMedia()` に対応しているコンピューターや携帯電話のカメラにアクセスし、それで写真を撮る方法を示しています。
 

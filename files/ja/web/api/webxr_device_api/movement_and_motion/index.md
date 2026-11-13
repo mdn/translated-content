@@ -20,7 +20,7 @@ slug: Web/API/WebXR_Device_API/Movement_and_motion
 
 ## 依存関係
 
-この例では、[`three.js`](https://threejs.org/) などの 3D グラフィックフレームワークに依存しませんが、行列演算には過去に他の例で使用している [`glMatrix`](http://glmatrix.net/) ライブラリーを使用します。 この例では、WebXR API の仕様を担当するチームである Immersive Web Working Group によって管理されている [WebXR ポリフィル](https://github.com/immersive-web/webxr-polyfill/)もインポートします。 このポリフィルをインポートすることで、WebXR がまだ実装されていない多くのブラウザーでこの例を機能させることができ、WebXR 仕様のまだ実験的な日々の間に発生する仕様からの一時的な逸脱を滑らかにします。
+この例では、[`three.js`](https://threejs.org/) などの 3D グラフィックフレームワークに依存しませんが、行列演算には過去に他の例で使用している [`glMatrix`](https://glmatrix.net/) ライブラリーを使用します。 この例では、WebXR API の仕様を担当するチームである Immersive Web Working Group によって管理されている [WebXR ポリフィル](https://github.com/immersive-web/webxr-polyfill/)もインポートします。 このポリフィルをインポートすることで、WebXR がまだ実装されていない多くのブラウザーでこの例を機能させることができ、WebXR 仕様のまだ実験的な日々の間に発生する仕様からの一時的な逸脱を滑らかにします。
 
 ## オプション
 
@@ -119,7 +119,7 @@ function LogGLError(where) {
 
 ### 頂点シェーダーとフラグメントシェーダー
 
-頂点シェーダーとフラグメントシェーダーはどちらも、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の例で使用されているものとまったく同じです。 ここで使用されている基本的なシェーダーの [GLSL](/ja/docs/Web/API/WebGL_API/By_example/Hello_GLSL) ソースコードに興味がある場合は、[それを参照](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#Update_the_shaders)してください。
+頂点シェーダーとフラグメントシェーダーはどちらも、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の例で使用されているものとまったく同じです。 ここで使用されている基本的なシェーダーの [GLSL](/ja/docs/Web/API/WebGL_API/By_example/Hello_GLSL) ソースコードに興味がある場合は、[それを参照](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#update_the_shaders)してください。
 
 頂点シェーダーは、各頂点の初期位置と、ビューアーの現在の位置と方向をシミュレートするためにそれらを変換するために適用する必要のある変換を指定して、各頂点の位置を計算するとだけ言っておきましょう。 フラグメントシェーダーは、テクスチャーで見つかった値から必要に応じて補間し、照明効果を適用して各頂点の色を返します。
 

@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 
 El método **`Object.values()`** devuelve un array con los valores correspondientes a las propiedades **enumerables** de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+{{InteractiveExample("JavaScript Demo: Object.values()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+```
 
 ## Sintaxis
 
@@ -74,7 +85,7 @@ Para dar soporte compatible con `Object.values()` a entornos antiguos que no la 
 
 ## Ver también
 
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades)
+- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

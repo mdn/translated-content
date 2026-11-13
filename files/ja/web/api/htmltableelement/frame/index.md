@@ -3,10 +3,10 @@ title: "HTMLTableElement: frame プロパティ"
 short-title: frame
 slug: Web/API/HTMLTableElement/frame
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableElement")}} インターフェイスの **`frame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。
 
@@ -44,7 +44,7 @@ t.border = "2px";
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## ブラウザーの互換性
 

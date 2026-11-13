@@ -1,24 +1,38 @@
 ---
 title: Atomics.store()
+short-title: store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Atomics.store()`** は静的メソッドで、指定された値を配列内の指定した位置に格納し、その値を返します。
 
-静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
+{{InteractiveExample("JavaScript デモ: Atomics.store()")}}
 
-{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
+```js interactive-example
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.store(uint8, 0, 2));
+// 予想される結果: 2
+
+console.log(Atomics.load(uint8, 0));
+// 予想される結果: 2
+```
 
 ## 構文
 
-```js
-Atomics.store(typedArray, index, value);
+```js-nolint
+Atomics.store(typedArray, index, value)
 ```
 
 ### 引数
 
 - `typedArray`
-  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} の何れかです。
 - `index`
   - : `typedArray` で `value` を格納する位置です。
 - `value`
@@ -30,16 +44,18 @@ Atomics.store(typedArray, index, value);
 
 ### 例外
 
-- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 例
 
 ### store() の使用
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const ta = new Uint8Array(sab);
 
 Atomics.store(ta, 0, 12); // 12
 ```

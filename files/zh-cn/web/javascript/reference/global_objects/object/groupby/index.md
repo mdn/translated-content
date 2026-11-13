@@ -3,7 +3,7 @@ title: Object.groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE]
 > 在某些浏览器的某些版本中，此方法被实现为 `Array.prototype.group()` 方法。由于 web 兼容性问题，它现在以静态方法实现。参见[浏览器兼容性表格](#浏览器兼容性)以获取更多信息。
@@ -12,7 +12,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 
 当分组名称可以用字符串表示时，应使用此方法。如果你需要使用某个任意值作为键来对元素进行分组，请改用 {{jsxref("Map.groupBy()")}} 方法。
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 语法
 
@@ -83,7 +101,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 
 <!-- autocorrect-enable -->
 
-箭头函数每次被调用时都只返回每个数组元素的 `type` 属性。请注意，函数参数 `{ type }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `type` 属性，并将其赋值给函数体中名为 `type` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
+箭头函数每次被调用时都只返回每个数组元素的 `type` 属性。请注意，函数参数 `{ type }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `type` 属性，并将其赋值给函数体中名为 `type` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
 我们还可以创建根据元素的一个或多个属性中的值推断的分组。下面是一个非常类似的示例，根据 `quantity` 字段的值将项目分为 `ok` 或 `restock` 组。
 
@@ -120,7 +138,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## 参见
 
 - [`core-js` 中 `Object.groupBy` 的 polyfill](https://github.com/zloirock/core-js#array-grouping)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}
 - {{jsxref("Map.groupBy()")}}

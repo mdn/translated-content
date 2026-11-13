@@ -120,9 +120,9 @@ Os escritores da MDN usam etiquetas para identificar artigos que precisam de det
 - `NeedsContent`
   - : Este artigo é um esboço, ou a informação está, de alguma forma, incompleta. Esta etiqueta significa que alguém precisa revisar o conteúdo e adicionar detalhes e/ou terminar a escrita do artigo.
 - `NeedsExample`
-  - : O artigo precisa de um ou mais exemplos para ilustrar melhor seu objetivo, de acordo com o [sistema de exemplos dinâmicos.](/pt-BR/docs/MDN/Contribute/Structures/Live_samples)
+  - : O artigo precisa de um ou mais exemplos para ilustrar melhor seu objetivo, de acordo com o [sistema de exemplos dinâmicos.](/pt-BR/docs/MDN/Writing_guidelines/Page_structures/Live_samples)
 - `NeedsLiveSamples`
-  - : Este arigo necessita que um, ou mais, de seus exemplos sejam modificados para incluir o uso do [sistema de exemplos dinâmicos](/pt-BR/docs/MDN/Contribute/Structures/Live_samples).
+  - : Este arigo necessita que um, ou mais, de seus exemplos sejam modificados para incluir o uso do [sistema de exemplos dinâmicos](/pt-BR/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - `NeedsUpdate`
   - : O artigo está desatualizado.
 - `l10n:exclude`
@@ -182,7 +182,8 @@ Para cada página você aplica vários tipos de etiquetas, por exemplo:
 
 Filtros de busca não vão funcionar apropriadamente, a não ser que marquemos as páginas da MDN corretamente. Aqui está uma tabela dos filtros de pesquisa e sua busca correspondente.
 
-> **Nota:** **Observação:** Se várias etiquetas estiverem listadas abaixo de "Nome da etiqueta", isso significa que, pelo menos, uma delas precisa estar presente para o artigo estar propriamente marcado.
+> [!NOTE]
+> Se várias etiquetas estiverem listadas abaixo de "Nome da etiqueta", isso significa que, pelo menos, uma delas precisa estar presente para o artigo estar propriamente marcado.
 
 | Grupo do filtro     | Nome do filtro de pesquisa | Nome da _etiqueta_                                                                                   |
 | ------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -221,7 +222,7 @@ Filtros de busca não vão funcionar apropriadamente, a não ser que marquemos a
 Há vários tipos de problemas de rotulagem que você pode ajudar a resolver:
 
 - Sem etiquetas
-  - : Geralmente os artigos devem ter, _no minimo_, as etiquetas de "[categória](/pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente#Categória)" e "[tópico](/pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente#Tópico)". Comumente outras etiquetas podem ser adicionadas mas, se você ajudar a garantir que o requesito minimo delas esteja presente, você já terá uma documentação maravilhosa!
+  - : Geralmente os artigos devem ter, _no minimo_, as etiquetas de "[categória](/pt-BR/docs/MDN/Writing_guidelines/Howto#categória)" e "[tópico](/pt-BR/docs/MDN/Writing_guidelines/Howto#tópico)". Comumente outras etiquetas podem ser adicionadas mas, se você ajudar a garantir que o requesito minimo delas esteja presente, você já terá uma documentação maravilhosa!
 - Etiquetas que não seguem nossos padrões
   - : Por favor, conserte qualquer documento cujas etiquetas não sigam as normas estabelecidas nesta página. Leve em consideração que, devido a um [erro no _Kuma_](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), algumas etiquetas traduzidas (como `Référence`) podem aparecer em algumas páginas em inglês. Há uma chance bem grande destas etiquetas voltarem após serem deletadas, então, não se acanhe em consertá-las, até o erro ser corrigiido.
 - Etiquetas incorretas

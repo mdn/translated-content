@@ -9,7 +9,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用 C#来写后端。你可以使用任何可用于后端开发的语言来做这个事，但是，要为了使例子简明易懂，我选择微软的 C#。
 
-此服务器符合 [RFC 6455](http://tools.ietf.org/html/rfc6455) 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。
+此服务器符合 [RFC 6455](https://tools.ietf.org/html/rfc6455) 因此，因此它只处理来自 Chrome16，Firefox 11，IE 10 及更高版本的连接。
 
 ## 第一步
 
@@ -133,8 +133,8 @@ if (Regex.IsMatch(data, "^GET")) {
 
 1. 获取请求头中"Sec-WebSocket-Key"字段的值，这个字段值不能有任何的前导和后继空格字符
 2. 将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID ) 拼接起来
-3. 计算新的值的 SHA-1 和 Base64 哈希值
-4. 将哈希值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
+3. 计算新的值的 SHA-1 和 Base64 散列值
+4. 将散列值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
 
 ```cpp
 
@@ -177,7 +177,7 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 
 - FIN 位：这个位表明是否整个消息都已经从客户端被发送出去。消息可能以多个帧的形式发送，但现在我们将情景考虑得简单一些。
 - RSV1, RSV2, RSV3：除非规定的扩展协议支持将它们赋为非 0 值，否则这些位必须为 0。
-- Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。[Opcodes 值的完整罗列](http://tools.ietf.org/html/rfc6455#section-5.2)
+- Opcode：这些位描述了接收的消息的类型。Opcode 0x1 意味着这是一条文本消息。[Opcodes 值的完整罗列](https://tools.ietf.org/html/rfc6455#section-5.2)
 
 第二个字节，当前值是 131，是另一个按位组成的部分，分解如下：
 
@@ -215,4 +215,4 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## 有关文档
 
-- [编写 WebSocket 服务器](/zh-CN/docs/WebSockets/Writing_WebSocket_servers)
+- [编写 WebSocket 服务器](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

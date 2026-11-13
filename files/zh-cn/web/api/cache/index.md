@@ -9,9 +9,10 @@ slug: Web/API/Cache
 
 一个域可以有多个命名 Cache 对象。你需要在你的脚本 (例如，在 {{domxref("ServiceWorker")}} 中) 中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开一个 Cache 对象，再使用 Cache 对象的方法去处理缓存。
 
-你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxref("StorageEstimate")}} API 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 [Deleting old caches](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches) 获取更多信息。
+你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxref("StorageEstimate")}} API 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 [Deleting old caches](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) 获取更多信息。
 
-> **备注：** {{domxref("Cache.put")}}, {{domxref("Cache.add")}}和{{domxref("Cache.addAll")}}只能在`GET`请求下使用。
+> [!NOTE]
+> {{domxref("Cache.put")}}, {{domxref("Cache.add")}}和{{domxref("Cache.addAll")}}只能在`GET`请求下使用。
 
 > [!NOTE]
 > Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.

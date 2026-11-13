@@ -49,9 +49,9 @@ El constructor puede lanzar excepciones:
 
 ### Errores de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
 
-A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
+A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent).
 
 ### Ejemplos
 
@@ -87,7 +87,7 @@ Una vez la conexión esta abierta, se puede comenzar a enviar datos al servidor.
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
+Puedes enviar información como un string, {{ domxref("Blob") }}, o en un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 > [!NOTE]
 > Antes de la version 11, Firefox sólo soportaba el envío de datos como una cadena.
@@ -102,7 +102,7 @@ exampleSocket.onopen = function (event) {
 
 ### Usando JSON para transferir Objetos
 
-Una forma de enviar información compleja al servidor es utilizar [JSON](/en/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
+Una forma de enviar información compleja al servidor es utilizar [JSON](/en-US/JSON). Por ejemplo, un programa para chatear puede interactuar con el servidor usando un protocolo que implementa el uso de paquetes de JSON:
 
 ```js
 // Envia texto a todos los usuarios através del servidor
@@ -189,7 +189,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
+Se usa [`JSON.parse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) para convertir el objeto JSON de vuelta al original, luego se examina y se realiza la acción pertinente.
 
 ### Formato de texto de los datos
 

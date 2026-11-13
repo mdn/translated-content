@@ -1,15 +1,28 @@
 ---
 title: Object.isSealed()
+short-title: isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 l10n:
-  sourceCommit: 2ae5490e54b413897242860dfe2328e825773bda
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.isSealed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript デモ: Object.isSealed()")}}
+
+```js interactive-example
+const object = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object));
+// 予想される結果: false
+
+Object.seal(object);
+
+console.log(Object.isSealed(object));
+// 予想される結果: true
+```
 
 ## 構文
 

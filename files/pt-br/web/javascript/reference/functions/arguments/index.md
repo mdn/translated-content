@@ -47,7 +47,7 @@ var args = Array.from(arguments);
 >   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
-Você pode usar o objeto `arguments` se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar [`arguments.length`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length) para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto `arguments`. Para determinar o número de parâmetros declarados na [assinatura](/pt-BR/docs/Glossary/Signature/Function) da função, use a propriedade [`Function.length`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/length).
+Você pode usar o objeto `arguments` se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar [`arguments.length`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/length) para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto `arguments`. Para determinar o número de parâmetros declarados na [assinatura](/pt-BR/docs/Glossary/Signature/Function) da função, use a propriedade [`Function.length`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 ### Usando typeof com Arguments
 
@@ -65,7 +65,7 @@ console.log(typeof arguments[0]); //this will return the typeof individual argum
 
 ### Usando a Sintaxe Spread com Arguments
 
-Você também pode usar o método {{jsxref("Array.from()")}} ou o [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) para converter argumentos em um Array real:
+Você também pode usar o método {{jsxref("Array.from()")}} ou o [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) para converter argumentos em um Array real:
 
 ```js
 var args = Array.from(arguments);
@@ -138,7 +138,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### Rest, default e parâmetros desestruturados
 
-O objeto `arguments` pode ser usado em conjunto com os parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters) e [destruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+O objeto `arguments` pode ser usado em conjunto com os parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters) e [destruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 function foo(...args) {
@@ -147,9 +147,9 @@ function foo(...args) {
 foo(1, 2, 3); // [1,2,3]
 ```
 
-Enquanto a presença dos parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) não alteram o [comportamento do objeto `arguments` no código em strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode#Making_eval_and_arguments_simpler), existe uma sutil diferença para o código non-strict.
+Enquanto a presença dos parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring) não alteram o [comportamento do objeto `arguments` no código em strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), existe uma sutil diferença para o código non-strict.
 
-Quando uma função não-strict **não** contém parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **modificam** os valores dos argumentos (e vice-versa). Veja o código:
+Quando uma função não-strict **não** contém parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring), os valores no objeto `arguments` **modificam** os valores dos argumentos (e vice-versa). Veja o código:
 
 ```js
 function func(a) {
@@ -169,7 +169,7 @@ function func(a) {
 func(10); // 99
 ```
 
-Quando uma função não-strict **contém** parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), os valores no objeto `arguments` **não modificam** os valores dos argumentos (e vice-versa). Ao invés disso, eles refletem os argumentos fornecidos no momento da chamada:
+Quando uma função não-strict **contém** parâmetros [rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), ou [desestruturados](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring), os valores no objeto `arguments` **não modificam** os valores dos argumentos (e vice-versa). Ao invés disso, eles refletem os argumentos fornecidos no momento da chamada:
 
 ```js
 function func(a = 55) {

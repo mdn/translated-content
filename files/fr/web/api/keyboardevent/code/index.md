@@ -17,7 +17,7 @@ Pour déterminer quel caractère correspond à un `key event`, utilisez plutôt 
 
 ## Valeurs des codes
 
-Les valeurs de code pour Windows, Linux et macOS figurent dans la liste de la [KeyboardEvent: code values](/fr/docs/Web/API/KeyboardEvent/code/code_values).
+Les valeurs de code pour Windows, Linux et macOS figurent dans la liste de la [KeyboardEvent: code values](/fr/docs/Web/API/UI_Events/Keyboard_event_code_values).
 
 ## Exemples
 
@@ -147,7 +147,7 @@ function updatePosition(offset) {
 }
 ```
 
-La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/fr/docs/Web/SVG/Attribute/transform).
+La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/fr/docs/Web/SVG/Reference/Attribute/transform).
 
 ```js
 function refresh() {

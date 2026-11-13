@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 
 **`handler.getPrototypeOf()`** 메서드는 `[[GetPrototypeOf]]` 내부 메서드에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  eyeCount: 4,
+};
+
+const monsterPrototype = {
+  eyeCount: 2,
+};
+
+const handler = {
+  getPrototypeOf(target) {
+    return monsterPrototype;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler);
+
+console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
+// Expected output: true
+
+console.log(Object.getPrototypeOf(proxy1).eyeCount);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -40,7 +64,7 @@ new Proxy(obj, {
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 ### 불변 조건
 

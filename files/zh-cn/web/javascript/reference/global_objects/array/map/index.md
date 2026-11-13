@@ -3,11 +3,19 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef}}
-
 **`map()`** 方法**创建一个新数组**，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 语法
 
@@ -234,7 +242,7 @@ const filteredNumbers = numbers.map((num, index) => {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.map` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.from()")}}

@@ -11,7 +11,22 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 {{js_property_attributes(0, 0, 0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## Описание
 
@@ -23,7 +38,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 ### Проверка на равенство `NaN`
 
-`NaN` является неравным (посредством сравнения через `==`, `!=`, `===`, and `!==`) любому другому значению, включая другое значение NaN. Используйте {{jsxref("Number.isNaN()")}} или {{jsxref("Global_Objects/isNaN", "isNaN()")}}, чтобы наиболее понятным образом определить является ли значение значением NaN. Или выполните само-сравнение: NaN, и только NaN, в результате такого сравнения будет неравным самому себе.
+`NaN` является неравным (посредством сравнения через `==`, `!=`, `===`, and `!==`) любому другому значению, включая другое значение NaN. Используйте {{jsxref("Number.isNaN()")}} или {{jsxref("isNaN()")}}, чтобы наиболее понятным образом определить является ли значение значением NaN. Или выполните само-сравнение: NaN, и только NaN, в результате такого сравнения будет неравным самому себе.
 
 ```js
 NaN === NaN; // false
@@ -58,4 +73,4 @@ Number.isNaN("hello world"); // false
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

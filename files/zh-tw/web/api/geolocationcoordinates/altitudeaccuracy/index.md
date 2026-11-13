@@ -1,27 +1,27 @@
 ---
-title: Coordinates.altitudeAccuracy
+title: GeolocationCoordinates：altitudeAccuracy 屬性
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
+l10n:
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates.altitudeAccuracy`** 是個唯讀的正複數用來代表高度的精準度，單位為公尺，並有 95% 可靠度。如果裝置無法提供這個值則回傳 null。
+{{domxref("GeolocationCoordinates")}} 介面的 **`altitudeAccuracy`** 唯讀屬性是一個正 `double` 值，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。如果實作不支援測量高度，則此值為 `null`。
 
-## 語法
+## 值
 
-```plain
-altAcc = coordinates.altitudeAccuracy
-```
+一個正的 `double`，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("Coordinates")}} 介面。
+- [使用地理定位 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

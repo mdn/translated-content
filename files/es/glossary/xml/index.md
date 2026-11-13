@@ -16,4 +16,4 @@ Esto significa que XML tiene una mayor aplicación; por ejemplo, a través de XM
 ### General knowledge
 
 - [XML](https://es.wikipedia.org/wiki/XML) en Wikipedia
-- [Introducción a XML](/es/docs/Introducción_a_XML)
+- [Introducción a XML](/es/docs/Web/XML/Guides/XML_introduction)

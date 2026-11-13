@@ -26,7 +26,6 @@ prompt()
 一个解析为包含以下属性的对象的 {{jsxref("Promise")}}：
 
 - `outcome` {{experimental_inline}} {{non-standard_inline}}
-
   - : 一个字符串，表示用户是否选择了安装应用。此字符串必须是以下值之一：
     - `"accepted"`：用户已安装该应用。
     - `"dismissed"`：用户未安装该应用。
@@ -45,4 +44,4 @@ prompt()
 ## 参见
 
 - [制作可安装的 PWA](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- web.dev（2021）上的[如何为应用提供安装体验](https://web.dev/articles/customize-install)
+- web.developers.google.cn 上的[如何为应用提供安装体验](https://web.developers.google.cn/articles/customize-install)（2021）

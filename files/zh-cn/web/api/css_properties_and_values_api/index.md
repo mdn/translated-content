@@ -12,7 +12,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 - {{domxref('CSS.registerProperty')}}
   - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [JavaScript](/zh-CN/docs/Web/JavaScript) 中的 {{domxref('CSS.registerProperty')}} 访问该接口。
 - {{cssxref('@property')}}
-  - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [CSS](/zh-CN/docs/Web/CSS) 中的 {{cssxref('@property')}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)访问该接口。
+  - : 定义了浏览器应该如何解析 {{cssxref('--*', 'CSS custom properties')}}。通过 [CSS](/zh-CN/docs/Web/CSS) 中的 {{cssxref('@property')}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)访问该接口。
 
 ## 示例
 
@@ -27,7 +27,7 @@ window.CSS.registerProperty({
 });
 ```
 
-可以在 [CSS](/zh-CN/docs/Web/CSS) 中使用 {{cssxref('@property')}} [at-rule](/zh-CN/docs/Web/CSS/At-rule) 进行相同的注册：
+可以在 [CSS](/zh-CN/docs/Web/CSS) 中使用 {{cssxref('@property')}} [at-rule](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules) 进行相同的注册：
 
 ```css
 @property --my-color {

@@ -9,14 +9,14 @@ l10n:
 
 **`ContactsManager`** は{{domxref('Contact Picker API', '連絡先ピッカー API', '', 1)}} のインターフェイスで、ユーザーが連絡先リストから項目を選択し、選択した項目の限られた詳細をウェブサイトやアプリケーションと共有できるようにします。
 
-ContactsManager` はグローバルな {{domxref('navigator.contacts')}} プロパティを通して利用することができます。
+`ContactsManager` はグローバルな {{domxref('navigator.contacts')}} プロパティを通して利用することができます。
 
 ## インスタンスメソッド
 
 - {{domxref('ContactsManager.select','select()')}} {{Experimental_Inline}}
   - : {{jsxref('Promise')}} を返します。これが解決すると、ユーザーに連絡先ピッカーが表示され、共有したい連絡先を選択してもらうことができます。
 - {{domxref('ContactsManager.getProperties()','getProperties()')}} {{Experimental_Inline}}
-  - : {{jsxref('Promise')}} を返します。これは、利用できる連絡先プロパティを示す[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
+  - : {{jsxref('Promise')}} を返します。これは、利用できる連絡先プロパティを示す[文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)の配列 ({{jsxref('Array')}}) で解決します。
 
 ## 例
 

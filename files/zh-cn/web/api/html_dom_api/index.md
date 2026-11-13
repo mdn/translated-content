@@ -39,9 +39,9 @@ HTML 标准添加到 `Document` 中的内容包括：
 
 - 在加载页面时，支持访问 {{Glossary("HTTP")}} 标头提供的各种信息，例如文档加载的{{DOMxRef("Document/location", "位置", "", "1")}}、{{DOMxRef("Document/cookie", "cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "修改日期", "", "1")}}、{{DOMxRef("Document/referrer", "引用站点", "", "1")}}等。
 - 可以访问文档 {{HTMLElement("head")}} 块和 {{DOMxRef("Document/body", "body", "", "1")}} 中元素的列表，以及包含在文档中的{{DOMxRef("Document/images", "图像", "", "1")}}、{{DOMxRef("Document/links", "链接", "", "1")}}、{{DOMxRef("Document/scripts", "脚本", "", "1")}}等列表。
-- 支持通过检查{{DOMxRef("Document/hasFocus", "焦点", "", "1")}}和对[可编辑内容](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)执行命令来与用户交互。
+- 支持通过检查{{DOMxRef("Document/hasFocus", "焦点", "", "1")}}和对[可编辑内容](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)执行命令来与用户交互。
 - HTML 标准定义的文档事件处理器，允许访问{{DOMxRef("MouseEvent", "鼠标", "", "1")}}和{{DOMxRef("KeyboardEvent", "键盘", "", "1")}}事件、{{DOMxRef("HTML_Drag_and_Drop_API", "拖放", "", "1")}}、{{DOMxRef("HTMLMediaElement", "媒体控制", "", "1")}}等。
-- 可以传递到元素和文档的事件处理器；目前仅包括{{DOMxRef("HTMLElement/copy_event", "复制", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "剪切", "", "1")}}和{{DOMxRef("HTMLElement/paste_event", "粘贴", "", "1")}}操作。
+- 可以传递到元素和文档的事件处理器；目前仅包括 {{DOMxRef("Element/copy_event", "copy")}}、{{DOMxRef("Element/cut_event", "cut")}} 和 {{DOMxRef("Element/paste_event", "paste")}} 操作。
 
 ### HTML 元素接口
 
@@ -63,7 +63,7 @@ HTML 元素类的总体继承关系如下：
 
 有一些元素具有共性，因此还有一个额外的中介类型。例如，{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素都呈现音视频媒体。相应的 {{domxref("HTMLAudioElement")}} 和 {{domxref("HTMLVideoElement")}} 类型都基于通用类型 {{domxref("HTMLMediaElement")}}，后者又基于 {{domxref("HTMLElement")}} 等等。`HTMLMediaElement` 定义了音频和视频元素之间共同拥有的方法和属性。
 
-这些特定于元素的接口构成了大部分 HTML DOM API，并且是本文的重点。要了解 {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} 的实际结构，请参阅 {{DOMxRef("Document_Object_Model/Introduction", "DOM 概述", "", "1")}}。
+这些特定于元素的接口构成了大部分 HTML DOM API，并且是本文的重点。要了解 DOM 及其概念，请参阅 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 文档。
 
 ## HTML DOM 的目标受众
 
@@ -361,10 +361,10 @@ nameField.addEventListener("input", (event) => {
 
 ### 参考
 
-- [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "文档对象模型（DOM）", "", "1")}}参考
 
 ### 指南
 
-- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)：操作 DOM 的入门指南。
+- [操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)：操作 DOM 的入门指南。

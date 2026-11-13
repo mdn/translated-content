@@ -3,11 +3,23 @@ title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
 
-{{JSRef}}
-
 **`Math.floor()`** 函数总是返回小于等于一个给定数字的最大整数。
 
-{{EmbedInteractiveExample("pages/js/math-floor.html")}}
+{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+
+```js interactive-example
+console.log(Math.floor(5.95));
+// Expected output: 5
+
+console.log(Math.floor(5.05));
+// Expected output: 5
+
+console.log(Math.floor(5));
+// Expected output: 5
+
+console.log(Math.floor(-5.05));
+// Expected output: -6
+```
 
 ## 语法
 

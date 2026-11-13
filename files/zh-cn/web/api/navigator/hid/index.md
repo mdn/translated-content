@@ -2,14 +2,14 @@
 title: Navigator：hid 属性
 slug: Web/API/Navigator/hid
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
 ---
 
 {{APIRef("WebHID API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`Navigator.hid`** 只读属性返回一个 {{domxref("HID")}} 对象，该对象提供用于连接 HID 设备、列出已连接的 HID 设备以及连接的 HID 设备的事件处理程序的方法。
+**`Navigator.hid`** 只读属性返回一个 {{domxref("HID")}} 对象，该对象提供访问 HID 设备连接的方法，以及当用户代理连接或断开设备时触发的事件。
 
-如果已定义的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止使用 WebHID，则 `Navigator.hid` 属性将不可用。
+如果已定义的[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止使用 WebHID，则 `Navigator.hid` 属性将不可用。
 
 ## 值
 

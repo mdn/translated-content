@@ -1,33 +1,49 @@
 ---
-title: RegExp.prototype.source
+title: "RegExp : propriété source"
+short-title: source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La propriété d'accesseur **`source`** des instances de {{JSxRef("RegExp")}} retourne une chaîne de caractères contenant le texte source de cette expression rationnelle, sans les deux barres obliques de chaque côté ni aucun des indicateurs.
 
-La propriété **`source`** renvoie une chaîne de caractères qui contient le texte du motif à rechercher (_pattern_), sans les barres obliques (_slashes_). C'est une propriété en lecture seule liée à l'instance. **`source`** ne contient aucun des options ou drapeaux (_flags_) (tels que "g", "i" ou "m") de l'expression rationnelle.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: RegExp.prototype.source")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}{{js_property_attributes(0,0,1)}}
+```js interactive-example
+const regex = /totoTruc/gi;
+
+console.log(regex.source);
+// Résultat attendu : "totoTruc"
+
+console.log(new RegExp().source);
+// Résultat attendu : "(?:)"
+
+console.log(new RegExp("\n").source === "\\n");
+// Résultat attendu : true (à partir d'ES5)
+// En raison de l'échappement
+```
+
+## Description
+
+Conceptuellement, la propriété `source` est le texte compris entre les deux barres obliques dans le littéral d'expression rationnelle. Le langage exige que la chaîne de caractères retournée soit correctement échappée, de sorte que lorsque le `source` est concaténé avec une barre oblique de chaque côté, il forme un littéral d'expression rationnelle analysable. Par exemple, pour `new RegExp("/")`, le `source` est `\\/`, car s'il génère `/`, le littéral résultant devient `///`, ce qui est un commentaire de ligne. De même, tous les [terminateurs de ligne](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#terminateurs_de_lignes) sont échappés, car les _caractères_ de terminaison de ligne brisent le littéral d'expression rationnelle. Il n'y a pas d'exigence pour les autres caractères, tant que le résultat est analysable. Pour les expressions rationnelles vides, la chaîne de caractères `(?:)` est retournée.
 
 ## Exemples
 
 ### Utiliser `source`
 
 ```js
-var regex = /totoMachin/gi;
+const regex = /totoMachin/gi;
 
-console.log(regex.source); // "totoMachin"
+console.log(regex.source); // "totoMachin", ne contient pas /.../ et "gi".
 ```
 
-### Les expressions ratonnelles vides et l'échappement
-
-À partir d'ECMAScript 5, la propriété `source` ne renvoie plus une chaîne vide pour les expressions rationnelles vides. Elle renvoie la chaîne `"(?:)"`. De plus, les fins de lignes (telles que "\n") sont désormais échappées.
+### Expressions rationnelles vides et échappement
 
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp("\n").source === "\n"; // true avant ES5
-new RegExp("\n").source === "\\n"; // true à partir d'ES5
+new RegExp("\n").source === "\\n"; // true, à partir d'ES5
 ```
 
 ## Spécifications
@@ -40,4 +56,4 @@ new RegExp("\n").source === "\\n"; // true à partir d'ES5
 
 ## Voir aussi
 
-- {{jsxref("RegExp.prototype.flags")}}
+- La propriété {{JSxRef("RegExp.prototype.flags")}}

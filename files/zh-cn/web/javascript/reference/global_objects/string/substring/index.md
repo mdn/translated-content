@@ -3,11 +3,19 @@ title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`substring()`** 方法返回该字符串从起始索引到结束索引（不包括）的部分，如果未提供结束索引，则返回到字符串末尾的部分。
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample("JavaScript Demo: String.substring()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+```
 
 ## 语法
 

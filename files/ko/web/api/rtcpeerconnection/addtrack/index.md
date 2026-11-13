@@ -7,7 +7,8 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`** 은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
 
-> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
+> [!NOTE]
+> **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
 
 ## Syntax
 
@@ -28,7 +29,8 @@ rtpSender = RTCPeerConnection.addTrack(track, stream...);
 
 {{domxref("RTCRtpSender")}} 객체는 미디어 데이터를 전송하기위해 사용됩니다.
 
-> **참고:** **참조:** 모든 RTCRtpSender는 {{domxref("RTCRtpTransceiver")}}를 구성하기 위해서 {{domxref("RTCRtpReceiver")}}와 함께 짝을 이룹니다. 관련이 있는 리시버는 원격 유저가 리시버에 하나 혹은 여러개의 스트림을 추가하지 않는 이상 mute 상태입니다. mute 상태에서는 패킷을 전달 할 수 없습니다.
+> [!NOTE]
+> **참조:** 모든 RTCRtpSender는 {{domxref("RTCRtpTransceiver")}}를 구성하기 위해서 {{domxref("RTCRtpReceiver")}}와 함께 짝을 이룹니다. 관련이 있는 리시버는 원격 유저가 리시버에 하나 혹은 여러개의 스트림을 추가하지 않는 이상 mute 상태입니다. mute 상태에서는 패킷을 전달 할 수 없습니다.
 
 ### 예외처리
 
@@ -181,7 +183,7 @@ pc.setRemoteDescription(desc)
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time Transport Protocol (RTP)](/ko/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.ontrack")}}
 - {{DOMxRef("RTCPeerConnection/track_event", "track")}}

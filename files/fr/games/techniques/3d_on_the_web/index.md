@@ -3,8 +3,6 @@ title: Jeux 3D sur le web
 slug: Games/Techniques/3D_on_the_web
 ---
 
-{{GamesSidebar}}
-
 Pour des expériences de jeu riches sur le Web, l'arme de choix est WebGL, qui est fourni sur HTML {{htmlelement ("canvas")}}. WebGL est essentiellement un OpenGL ES 2.0 pour le Web - c'est une API JavaScript fournissant des outils pour créer des animations interactives riches et bien sûr aussi des jeux. Vous pouvez générer et rendre des graphiques 3D dynamiques avec du JavaScript accéléré.
 
 ## Documentation et support du navigateur
@@ -34,7 +32,7 @@ Il est difficile d'imaginer un jeu sans la détection de collision — nous devo
 
 ### Réalité virtuelle sur le web
 
-Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebVR).
+Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebXR).
 
 Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) qui montre comment il est facile de construire des environnements 3D pour la réalité virtuelle en utilisant le framework [A-Frame](https://aframe.io//) .
 
@@ -76,7 +74,7 @@ Vous pouvez trouver tous les codes source de cette série de [démos sur GitHub]
 
 ### API
 
-- [Canvas API](/fr/docs/Web/HTML/Canvas)
+- [Canvas API](/fr/docs/Web/API/Canvas_API)
 - [WebGL API](/fr/docs/Web/API/WebGL_API)
 - [WebVR API](/fr/docs/Web/API/WebVR_API)
 

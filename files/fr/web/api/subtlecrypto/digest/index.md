@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/digest
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
+La méthode **`digest()`** de l'interface {{domxref("SubtleCrypto")}} génère un {{Glossary("hash function", "digest")}} de la donnée fournie. Un condensé est une petite valeur de taille fixe issue d'une donnée de taille variable. Les condensés cryptographiques doivent résister à la collision, ce qui signifie qu'il doit être très difficile d'obtenir le même condensé à partir de deux entrés différentes.
 
 Il prend en argument un identifiant pour l'algorithme de condensé et les données à traiter. Il retourne une {{jsxref("Promise")}} qui contiendra le condensé.
 
@@ -17,14 +17,13 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Paramètres
 
-- _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
-
+- _`algorithm`_ est une {{jsxref("String")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
   - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
   - `SHA-256`
   - `SHA-384`
   - `SHA-512`.
 
-- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{domxref("ArrayBufferView")}} contenant les données à traiter.
+- _`data`_ est un {{jsxref("ArrayBuffer")}} ou un {{jsxref("TypedArray")}} contenant les données à traiter.
 
 ### Valeur retournée
 
@@ -32,14 +31,14 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ## Algorithmes supportés
 
-Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossaire/Fonction_de_hachage_cryptographique), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
+Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
 
 ### SHA-1
 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
 > [!WARNING]
-> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> Cet algorithme est maintenant considéré comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
 ### SHA-256
 

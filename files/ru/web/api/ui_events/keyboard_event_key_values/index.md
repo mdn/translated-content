@@ -7,9 +7,9 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 
 В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этот клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространённых платформ включены там, где они доступны.
 
-Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью [KeyboardEvent.key](/docs/Web/API/KeyboardEvent/key)
+Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью [KeyboardEvent.key](/ru/docs/Web/API/KeyboardEvent/key)
 
-[Special Values](#Special_values) | [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
+[Special Values](#special_values) | [Modifier Keys](#modifier_keys) | [Whitespace Keys](#whitespace_keys) | [Navigation Keys](#navigation_keys) | [Editing Keys](#editing_keys) | [UI Keys](#ui_keys) | [Device Keys](#device_keys) | [IME and Composition Keys](#ime_and_composition_keys) | [Function Keys](#function_keys) | [Phone Keys](#phone_keys) | [Multimedia Keys](#multimedia_keys) | [Audio Control Keys](#audio_control_keys) | [TV Control Keys](#tv_control_keys) | [Media Controller Keys](#media_controller_keys) | [Speech Recognition Keys](#speech_recognition_keys) | [Document Keys](#document_keys) | [Application Selector Keys](#application_selector_keys) | [Browser Control Keys](#browser_control_keys) | [Numeric Keypad Keys](#numeric_keypad_keys)
 
 ## Специальные значения
 
@@ -1233,7 +1233,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
           If you wish to identify which specific dead key was pressed (in cases
           where more than one exists), you can do so by examining the
           {{domxref("KeyboardEvent")}}'s associated
-          {{event("compositionupdate")}} event's
+          [`compositionupdate`](/ru/docs/Web/API/Element/compositionupdate_event) event's
           {{domxref("CompositionEvent.data", "data")}} property.
         </p>
       </td>
@@ -1651,7 +1651,7 @@ slug: Web/API/UI_Events/Keyboard_event_key_values
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/ru/docs/Web/API/Element/compositionupdate_event) event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 
@@ -2820,9 +2820,9 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 Приведённые ниже значения частично получены из ряда технических характеристик бытовой электроники:
 
 - [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации [ATSC](https://ru.wikipedia.org/wiki/ATSC))
-- [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
+- [Open Cable Application Platform 1.1.3](https://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
 - [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
-- [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
+- [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
 > [!NOTE]
 > Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.

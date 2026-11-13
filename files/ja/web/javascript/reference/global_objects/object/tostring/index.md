@@ -1,15 +1,21 @@
 ---
 title: Object.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 l10n:
-  sourceCommit: 6a3063ab22fdcaedc8d69b80261f09d870ea9709
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
 
-**`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
+{{InteractiveExample("JavaScript デモ: Object.prototype.toString()")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+```js interactive-example
+const map = new Map();
+
+console.log(map.toString());
+// 予想される結果: "[object Map]"
+```
 
 ## 構文
 
@@ -19,7 +25,7 @@ toString()
 
 ### 引数
 
-既定では、 `toString()` は引数を取りません。ただし、Object を継承するオブジェクトは、パラメータを取る独自の実装で toString() をオーバーライドできます。例えば、 [`Number.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) および [`BigInt.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) メソッドは、オプションで引数 `radix` を取ります。
+既定では、 `toString()` は引数を取りません。ただし、Object を継承するオブジェクトは、パラメーターを取る独自の実装で toString() をオーバーライドできます。例えば、 [`Number.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) および [`BigInt.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) メソッドは、オプションで引数 `radix` を取ります。
 
 ### 返値
 
@@ -27,11 +33,11 @@ toString()
 
 ## 解説
 
-JavaScript は `toString` メソッドを[オブジェクトをプリミティブ値に変換](/ja/docs/Web/JavaScript/Data_structures#型変換)するために呼び出します。 `toString` を呼び出す必要があるのは稀です。 JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇すると、自動的に `toString` メソッドを呼び出します。
+JavaScript は `toString` メソッドを[オブジェクトをプリミティブ値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)するために呼び出します。 `toString` を呼び出す必要があるのは稀です。 JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇すると、自動的に `toString` メソッドを呼び出します。
 
-このメソッドは[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)によって優先的に呼び出されますが、[数値変換](/ja/docs/Web/JavaScript/Data_structures#数値変換)と[プリミティブ変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)は `valueOf()` を優先的に呼び出します。ただし、基底の [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) メソッドはオブジェクトを返すので、オブジェクトが `valueOf()` をオーバーライドしない限り、通常は最後に `toString()` メソッドが呼び出されます。例えば、 `+[1]` は `1` を返しますが、これは [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) メソッドが `"1"` を返し、それが数値に変換されるからです。
+このメソッドは[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)によって優先的に呼び出されますが、[数値変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換)と[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)は `valueOf()` を優先的に呼び出します。ただし、基底の [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) メソッドはオブジェクトを返すので、オブジェクトが `valueOf()` をオーバーライドしない限り、通常は最後に `toString()` メソッドが呼び出されます。例えば、 `+[1]` は `1` を返しますが、これは [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) メソッドが `"1"` を返し、それが数値に変換されるからです。
 
-`Object.prototype` を継承するすべてのオブジェクト（ [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `toString()` メソッドを継承します。独自オブジェクトを作成するときは、`toString()` をオーバーライドして独自メソッドを呼び出し、独自オブジェクトを文字列値に変換できるようにします。また、 [`@@toPrimitive`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを追加することもできます。このメソッドでは、変換処理をより細かく制御することができ、どの型の変換についても常に `valueOf` または `toString` よりも優先されます。
+`Object.prototype` を継承するすべてのオブジェクト（ [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `toString()` メソッドを継承します。独自オブジェクトを作成するときは、`toString()` をオーバーライドして独自メソッドを呼び出し、独自オブジェクトを文字列値に変換できるようにします。また、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを追加することもできます。このメソッドでは、変換処理をより細かく制御することができ、どの型の変換についても常に `valueOf` または `toString` よりも優先されます。
 
 基底となる `Object.prototype.toString()` をオーバーライドされているオブジェクトで使用する（または `null` や `undefined` に対して呼び出す）には、 {{jsxref("Function.prototype.call()")}} または {{jsxref("Function.prototype.apply()")}} を呼び出す必要があり、最初の引数（`thisArg` と呼ばれる）として検査したいオブジェクトを渡します。
 
@@ -61,7 +67,7 @@ Object.prototype.toString.call(arr); // "[object Array]"
 
 ### 独自オブジェクトの toString のオーバーライド
 
-既定の `toString()` メソッドに代わって呼び出される関数を作ることができます。 `toString()` メソッドは文字列を返す必要があります。オブジェクトを返し、そのメソッドが[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)の際に暗黙的に呼び出された場合、その結果は無視され、代わりに相対メソッド {{jsxref("Object/valueOf", "valueOf()")}} の値が使われます。これらのメソッドのどちらもがプリミティブ値を返さない場合は `TypeError` が発生します。
+既定の `toString()` メソッドに代わって呼び出される関数を作ることができます。 `toString()` メソッドは文字列を返す必要があります。オブジェクトを返し、そのメソッドが[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の際に暗黙的に呼び出された場合、その結果は無視され、代わりに相対メソッド {{jsxref("Object/valueOf", "valueOf()")}} の値が使われます。これらのメソッドのどちらもがプリミティブ値を返さない場合は `TypeError` が発生します。
 
 以下のコードは `Dog` クラスを定義しています。
 

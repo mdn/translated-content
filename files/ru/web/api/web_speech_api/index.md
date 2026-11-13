@@ -11,7 +11,7 @@ Web Speech API позволяет взаимодействовать с голо
 
 Web Speech API позволяет веб приложениям управлять голосовыми данными. Существует два компонента к этому API:
 
-- Распознавание голоса. Доступ обеспечивается через {{domxref("SpeechRecognition")}} интерфейс, который в свою очередь обеспечивает возможность распознавать текст из входящего аудио потока (обычно через устройство распознавания речи в устройстве по умолчанию) и отвечать соответственно. Воспользовавшись конструктором интерфейса вы можете создать новый {{domxref("SpeechRecognition")}} объект, у которого есть ряд событий для обнаружения начала речи через микрофон устройства. {{domxref("SpeechGrammar")}} интерфейс предоставляет контейнер для определённого набора грамматики, которое ваше приложение должно использовать. Грамматика определяется с помощью [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.)
+- Распознавание голоса. Доступ обеспечивается через {{domxref("SpeechRecognition")}} интерфейс, который в свою очередь обеспечивает возможность распознавать текст из входящего аудио потока (обычно через устройство распознавания речи в устройстве по умолчанию) и отвечать соответственно. Воспользовавшись конструктором интерфейса вы можете создать новый {{domxref("SpeechRecognition")}} объект, у которого есть ряд событий для обнаружения начала речи через микрофон устройства. {{domxref("SpeechGrammar")}} интерфейс предоставляет контейнер для определённого набора грамматики, которое ваше приложение должно использовать. Грамматика определяется с помощью [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.)
 - Доступ к синтезу речи осуществляется с помощью {{domxref("SpeechSynthesis")}} интерфейса, компонент text-to-speech позволяет приложениям прочесть свой текстовый контент (обычно через дефолтный синтезатор речи устройства). В {{domxref("SpeechSynthesisVoice")}} объектах есть различные типы голоса, и различным частям текста можно назначать {{domxref("SpeechSynthesisUtterance")}} объекты. Можно начать воспроизведение передав их методу {{domxref("SpeechSynthesis.speak()")}}.
 
 Для большей информации по использованию этих фич, смотрите [Using the Web Speech API](/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
@@ -27,7 +27,7 @@ Web Speech API позволяет веб приложениям управлят
 - {{domxref("SpeechRecognitionError")}}
   - : Представляет сообщения об ошибках из службы распознавания.
 - {{domxref("SpeechRecognitionEvent")}}
-  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+  - : The event object for the [`result`](/ru/docs/Web/API/SpeechRecognition/result_event) and [`nomatch`](/ru/docs/Web/API/SpeechRecognition/nomatch_event) events, and contains all the data associated with an interim or final speech recognition result.
 - {{domxref("SpeechGrammar")}}
   - : Слова или шаблоны слов которые мы хотим чтобы служба распознавания распознала.
 - {{domxref("SpeechGrammarList")}}
@@ -72,6 +72,6 @@ Web Speech API позволяет веб приложениям управлят
 ## Смотрите также
 
 - [Using the Web Speech API](/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
-- [SitePoint article](http://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
 - [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
-- [Demo](http://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]
+- [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

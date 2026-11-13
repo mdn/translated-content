@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 **`Object.assign()`** 메서드는 출처 객체들의 모든 {{jsxref("Object/propertyIsEnumerable", "열거 가능", "", 1)}}한 {{jsxref("Object/hasOwnProperty", "자체 속성", "", 1)}}을 복사해 대상 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 구문
 
@@ -38,7 +51,8 @@ Object.assign(target, ...sources);
 
 오류(대상 객체의 속성이 쓰기 불가한 상태 등)를 마주치면 {{jsxref("TypeError")}}가 발생합니다. 그러나 오류가 발생하기 전에 이미 추가/변경한 다른 속성의 값은 대상 객체에 유지됩니다.
 
-> **참고:** `Object.assign()`의 출처에 {{jsxref("null")}} 또는 {{jsxref("undefined")}}를 제공해도 예외는 발생하지 않습니다.
+> [!NOTE]
+> `Object.assign()`의 출처에 {{jsxref("null")}} 또는 {{jsxref("undefined")}}를 제공해도 예외는 발생하지 않습니다.
 
 ## 예제
 
@@ -228,5 +242,5 @@ console.log(copy);
 
 - [`core-js`의 `Object.assign` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
-- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [객체 리터럴에서의 전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

@@ -1,15 +1,26 @@
 ---
 title: RegExp.prototype.exec()
+short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`exec()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、指定された文字列の中でこの正規表現と一致するものを検索し、その結果の配列、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex = /fo+/g;
+const str = "table football, foosball";
+let array;
+
+while ((array = regex.exec(str)) !== null) {
+  console.log(`Found ${array[0]}. Next starts at ${regex.lastIndex}.`);
+  // 予想される結果: "Found foo. Next starts at 9."
+  // 予想される結果: "Found foo. Next starts at 19."
+}
+```
 
 ## 構文
 
@@ -35,7 +46,6 @@ exec(str)
 - `groups`
   - : 名前付きキャプチャグループを示す [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)で、そのキーが名前となり、値がキャプチャグループ、またはキャプチャグループが定義されていなければ {{jsxref("undefined")}} です。詳しくは[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を参照してください。
 - `indices` {{optional_inline}}
-
   - : このプロパティは [`d`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) フラグが設定されている場合にのみ存在します。これは配列で、それぞれの要素は部分文字列の一致した境界を表します。この配列のそれぞれの要素のインデックスは `exec()` が返す配列の中の一致する部分文字列のインデックスに対応します。言い換えれば、最初の `indices` 項目は照合する文字列全体を表し、2 つ目の `indices` 項目は最初のキャプチャグループなどを表します。各項目自身は 2 要素の配列で、最初の数字は一致の開始インデックスを表し、2 つ目の数字はその終了インデックスを表します。
 
     配列 `indices` にはさらに `groups` プロパティがあり、すべての名前付きキャプチャグループの [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)を保持します。キーはキャプチャグループの名前であり、それぞれの値は 2 つ要素の配列で、最初の数字はキャプチャグループの始めるインデックス、 2 つ目の数字は終わりのインデックスです。正規表現に名前付きキャプチャグループが含まれていない場合、 `groups` は `undefined` となります。
@@ -46,11 +56,13 @@ JavaScript の {{jsxref("RegExp")}} オブジェクトは、 [global](/ja/docs/W
 
 `exec()` を使用する場合、グローバルフラグは sticky フラグが設定されているときには影響しません。照合は常に粘着的に行われます。
 
-`exec()` は正規表現のプリミティブメソッドです。他の多くの正規表現メソッドは、内部的に `exec()` を呼び出します。これは [`@@replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) のような文字列のメソッドからも呼び出されます。`exec()` 自体は強力ですが（そして最も効率的です）、多くの場合、最も明確に意図を伝えるものではありません。
+`exec()` は正規表現のプリミティブメソッドです。他の多くの正規表現メソッドは、内部的に `exec()` を呼び出します。これは [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) のような文字列のメソッドからも呼び出されます。`exec()` 自体は強力ですが（そして最も効率的です）、多くの場合、最も明確に意図を伝えるものではありません。
 
 - 正規表現が文字列に一致するかどうかだけが必要で、実際に何が一致するかを見る必要がない場合は、代わりに {{jsxref("RegExp.prototype.test()")}} を使用してください。
 - グローバル正規表現のすべての出現を探す場合で、キャプチャグループのような情報が不要な場合は、代わりに {{jsxref("String.prototype.match()")}} を使用してください。さらに、 {{jsxref("String.prototype.matchAll()")}} は、一致した文字列を反復処理することで、（キャプチャグループを持つ）文字列の複数の部分の照合を簡略化するのに役立ちます。
 - 文字列内の位置のインデックスを知るため照合する場合は、代わりに{{jsxref("String.prototype.search()")}}メソッドを使用してください。
+
+`exec()`は、上記のいずれの方法でも容易に実現できない複雑な操作に有用です。特に、手動で [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) を調整する必要がある場合に頻繁に使用されます。（{{jsxref("String.prototype.matchAll()")}} は正規表現をコピーするため、`matchAll` の反復処理中に `lastIndex` を変更しても反復処理には影響しません。）その一例については、[`lastIndex` の巻き戻し](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex#lastindex_の巻き戻し) を参照してください。
 
 ## 例
 
@@ -76,13 +88,13 @@ const result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 | `index`    | `4`                                                                |
 | `indices`  | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
 | `input`    | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
-| `groups`   | `{ color: "brown" }`                                               |
+| `groups`   | `{ color: "Brown" }`                                               |
 
 それに加えて、この正規表現がグローバルであるため、 `re.lastIndex` は `25` に設定されます。
 
 ### 連続した一致の検索
 
-正規表現で [`g`](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) フラグを使用する場合、同じ文字列で成功する一致を見つけるために `exec()` メソッドを複数回使うことができます。その際、検索は正規表現オブジェクトの {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティで指定された位置の `str` の部分文字列から始まります（{jsxref("RegExp.prototype.test()", "test()")}} も {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティの位置から始めます）。なお、別な文字列を検索する場合でも {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティはリセットされず、既存の {{jsxref("RegExp/lastIndex", "lastIndex")}} から検索を始めます。
+正規表現で [`g`](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索) フラグを使用する場合、同じ文字列で成功する一致を見つけるために `exec()` メソッドを複数回使うことができます。その際、検索は正規表現オブジェクトの {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティで指定された位置の `str` の部分文字列から始まります（{{jsxref("RegExp/test", "test()")}} も {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティの位置から始めます）。なお、別な文字列を検索する場合でも {{jsxref("RegExp/lastIndex", "lastIndex")}} プロパティはリセットされず、既存の {{jsxref("RegExp/lastIndex", "lastIndex")}} から検索を始めます。
 
 例えば、次のスクリプトを考えてみてください。
 
@@ -134,5 +146,5 @@ console.log(matches[1]);
 
 ## 関連情報
 
-- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)の章
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("RegExp")}}

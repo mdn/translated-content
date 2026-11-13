@@ -27,7 +27,7 @@ clone()
 
 ## 示例
 
-在我们的 [Fetch Response 克隆示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone)（请参阅[在线 Fetch Response 克隆示例](http://mdn.github.io/fetch-examples/fetch-response-clone/)）我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。当 fetch 成功兑现时，我们克隆它，使用两个 {{domxref("Body.blob")}} 调用从两个响应中提取 blob，使用 {{domxref("URL.createObjectURL")}} 从 blob 创建对象 URL，并将它们显示在两个单独的 {{htmlelement("img")}} 元素中。
+在我们的 [Fetch Response 克隆示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone)（请参阅[在线 Fetch Response 克隆示例](https://mdn.github.io/fetch-examples/fetch-response-clone/)）我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。当 fetch 成功兑现时，我们克隆它，使用两个 {{domxref("Body.blob")}} 调用从两个响应中提取 blob，使用 {{domxref("URL.createObjectURL")}} 从 blob 创建对象 URL，并将它们显示在两个单独的 {{htmlelement("img")}} 元素中。
 
 ```js
 const image1 = document.querySelector(".img1");
@@ -61,5 +61,5 @@ fetch(myRequest).then((response) => {
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

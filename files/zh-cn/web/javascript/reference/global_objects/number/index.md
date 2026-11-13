@@ -3,15 +3,13 @@ title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 ---
 
-{{JSRef}}
-
 **`Number`** 值表示像 `37` 或 `-9.25` 这样的浮点数。
 
 `Number` 构造函数包含常量和处理数值的方法。其他类型的值可以使用 `Number()` 函数转换为数字。
 
 ## 描述
 
-数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
+数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
 
 ```js
 255; // 二百五十五
@@ -48,11 +46,11 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 尾数使用 52 比特存储，在二进制小数中解释为 `1.…` 之后的数字。因此，尾数的精度是 2<sup>-52</sup>（可以通过 {{jsxref("Number.EPSILON")}} 获得），或者十进制数小数点后大约 15 到 17 位；超过这个精度的算术会受到[舍入](https://zh.wikipedia.org/wiki/浮点数#准确性)的影响。
 
-一个数值可以容纳的最大值是 2<sup>1024</sup> - 1（指数为 1023，尾数为基于二进制的 0.1111…），可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。超过这个值的数会被替换为特殊的数值常量 {{jsxref("Infinity")}}。
+一个数值可以容纳的最大值是 2<sup>1023</sup> × (2 - 2<sup>-52</sup>)（指数为 1023，尾数为基于二进制的 0.1111…），可以通过 {{jsxref("Number.MAX_VALUE")}} 获得。超过这个值的数会被替换为特殊的数值常量 {{jsxref("Infinity")}}。
 
 只有在 -2<sup>53</sup> + 1 到 2<sup>53</sup> - 1 范围内（闭区间）的整数才能在不丢失精度的情况下被表示（可通过 {{jsxref("Number.MIN_SAFE_INTEGER")}} 和 {{jsxref("Number.MAX_SAFE_INTEGER")}} 获得），因为尾数只能容纳 53 位（包括前导 1）。
 
-有关这部份的更多详细信息，请参阅 [ECMAScript 标准](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)。
+有关这部分的更多详细信息，请参阅 [ECMAScript 标准](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)。
 
 ### Number 强制转换
 
@@ -71,7 +69,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数值分隔符)。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 抛出 {{jsxref("TypeError")}}，以防止意外的强制隐式转换导致精度损失。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对象首先通过按顺序调用它们的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（使用 `"number"` 提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
+- 对象首先通过按顺序调用它们的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（使用 `"number"` 提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
 
 有两种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -82,7 +80,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 
 #### 整数转换
 
-某些操作需要整数作为参数，尤其是那些与数组/字符串索引、日期/时间组件和数字进制相关的操作。在执行上述数值强制转换步骤后，结果将被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（即舍弃小数部份）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不包括 `-0`）或 ±Infinity。
+某些操作需要整数作为参数，尤其是那些与数组/字符串索引、日期/时间组件和数字进制相关的操作。在执行上述数值强制转换步骤后，结果将被[截断](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)为整数（即舍弃小数部分）。如果数值为 ±Infinity，则按原样返回。如果数值是 `NaN` 或 `-0`，则返回为 `0`。因此，结果总是整数（不包括 `-0`）或 ±Infinity。
 
 值得注意的是，当转换到整数时，`undefined` 和 `null` 都会变成 `0`，因为 `undefined` 被转换为 `NaN`，`NaN` 也变成了 `0`。
 

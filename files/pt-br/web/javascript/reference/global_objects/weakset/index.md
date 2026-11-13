@@ -29,20 +29,20 @@ As principais diferenças para o objeto {{jsxref("Set")}} são:
 
 - `WeakSet.length`
   - : O valor da propriedade de comprimento é 0.
-- {{jsxref("WeakSet.prototype")}}
+- {{jsxref("WeakSet")}}
   - : Representa o protóripo para o construtos `Set`. Permite a adição de propriedades para todos os objetos do `WeakSet`.
 
 ## `Instâncias WeakSet`
 
-Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet.prototype")}}.
+Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet")}}.
 
 ### Propriedades
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties') -->
 
 ### Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods') -->
 
 ## Exemplos
 

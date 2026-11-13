@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 05808d3600f3a5b856eaaf89359f1fdc3d255c26
 ---
 
-{{AddonSidebar}}
-
 添加按钮到浏览器的工具栏。
 
 [浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)是浏览器工具栏中的一个按钮。
 
-你可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同你的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，你需要通过[消息](/zh-CN/Add-ons/WebExtensions/Modify_a_web_page#消息)通信。
+你可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同你的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，你需要通过[消息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#消息)通信。
 
 如果你指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果你没有指定一个弹出窗，用户单击该图标的事件将派发到你的扩展。
 

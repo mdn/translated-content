@@ -29,7 +29,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
 - Chrome で有効な `version` の値は、常に Firefox でも有効です。
 - Firefox で有効な `version` の値は Chrome でも有効とは限りません。
 
-AMO キュー内でバージョンを "beta" にマークする特別ルールについては [maintenance policy](/ja/Add-ons/Distribution#Beta_versions) を見てください。
+AMO キュー内でバージョンを "beta" にマークする特別ルールについては [maintenance policy](/ja/docs/Mozilla/Add-ons/Distribution#beta_versions) を見てください。
 
 ## 例
 

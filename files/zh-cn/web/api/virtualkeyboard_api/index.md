@@ -2,7 +2,7 @@
 title: 虚拟键盘 API
 slug: Web/API/VirtualKeyboard_API
 l10n:
-  sourceCommit: 96e73ab4d1fdb714a6a6516821b3206d83909046
+  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}{{securecontext_header}}
@@ -29,7 +29,7 @@ Web 浏览器通常会通过自动调整视口高度并在聚焦时滚动到输�
 
 - {{domxref("VirtualKeyboard")}} 接口，通过 {{domxref('navigator.virtualKeyboard')}} 访问，用于选择是否使用浏览器的自动虚拟键盘行为，以及通过编程方式显示或隐藏虚拟键盘，还可以获取当前虚拟键盘的位置和大小。
 - `keyboard-inset-*` CSS 环境变量提供有关虚拟键盘位置和大小的信息。
-- [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 属性指定虚拟键盘是否应出现在 `contenteditable` 元素上。
+- [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性指定虚拟键盘是否应出现在 `contenteditable` 元素上。
 
 ### 选择不使用自动虚拟键盘行为
 
@@ -55,7 +55,7 @@ if ("virtualKeyboard" in navigator) {
 
 ### 使用 CSS 环境变量检测虚拟键盘的几何信息
 
-虚拟键盘 API 还公开了以下 [CSS 环境变量](/zh-CN/docs/Web/CSS/env)：`keyboard-inset-top`、`keyboard-inset-right`、`keyboard-inset-bottom`、`keyboard-inset-left`、`keyboard-inset-width` 和 `keyboard-inset-height`。
+虚拟键盘 API 还公开了以下 [CSS 环境变量](/zh-CN/docs/Web/CSS/Reference/Values/env)：`keyboard-inset-top`、`keyboard-inset-right`、`keyboard-inset-bottom`、`keyboard-inset-left`、`keyboard-inset-width` 和 `keyboard-inset-height`。
 
 `keyboard-inset-*` CSS 环境变量对于使用 CSS 根据虚拟键盘的出现调整布局非常有用。它们通过距离视口边缘的顶部、右侧、底部和左侧插入定义一个矩形。如果需要，还可以使用 `width` 和 `height` 变量。
 
@@ -84,9 +84,9 @@ if ("virtualKeyboard" in navigator) {
 
 ### 控制 `contenteditable` 元素上的虚拟键盘
 
-默认情况下，使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性的元素在被轻触或点击时会触发虚拟键盘。在某些情况下，可能希望阻止这种行为，并在其他事件后手动显示虚拟键盘。
+默认情况下，使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性的元素在被轻触或点击时会触发虚拟键盘。在某些情况下，可能希望阻止这种行为，并在其他事件后手动显示虚拟键盘。
 
-将 [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual` 可以阻止浏览器默认处理虚拟键盘的行为，而是通过使用 {{domxref("VirtualKeyboard")}} 接口的 `show()` 和 `hide()` 方法自行处理。
+将 [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual` 可以阻止浏览器默认处理虚拟键盘的行为，而是通过使用 {{domxref("VirtualKeyboard")}} 接口的 `show()` 和 `hide()` 方法自行处理。
 
 下面的代码片段展示了如何使用 `virtualkeyboardpolicy` 属性和 `navigator.virtualKeyboard.show()` 方法来在双击事件后显示虚拟键盘：
 

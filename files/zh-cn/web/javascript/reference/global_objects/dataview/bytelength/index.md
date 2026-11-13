@@ -3,11 +3,20 @@ title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
 
-{{JSRef}}
-
 **`byteLength`** 属性描述了视图从它的 {{jsxref("ArrayBuffer")}} 开始的字节长度。
 
-{{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view1.byteLength + view2.byteLength); // 16 + 4
+// Expected output: 20
+```
 
 ## 语法
 

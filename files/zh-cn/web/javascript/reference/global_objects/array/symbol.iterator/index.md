@@ -3,13 +3,24 @@ title: Array.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许数组被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[数组迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会产生数组中每个索引的值。
 
 该属性的初始值与 {{jsxref("Array.prototype.values")}} 属性的初始值是相同的函数对象。
 
-{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator1 = array1[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -106,7 +117,7 @@ logIterable(123);
 ## 参见
 
 - [`core-js` 中 `Array.prototype[Symbol.iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}

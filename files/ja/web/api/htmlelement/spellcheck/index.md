@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`spellcheck`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck)のヒントを制御する論理値を表します。すべての HTML 要素で利用できますが、すべての要素に影響するわけではありません。
+**`spellcheck`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)のヒントを制御する論理値を表します。すべての HTML 要素で利用できますが、すべての要素に影響するわけではありません。
 
-これは HTML の [`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) グローバル属性を反映します。
+これは HTML の [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) グローバル属性を反映します。
 
 ## 値
 
@@ -18,7 +18,7 @@ l10n:
 
 ## 例
 
-次の例は、スクリプトで[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck)のヒントを制御する方法を示しています。
+次の例は、スクリプトで[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)のヒントを制御する方法を示しています。
 
 ```html
 <div>
@@ -59,4 +59,4 @@ controller.addEventListener("change", (e) => {
 
 ## 関連情報
 
-- HTML の [`spellcheck`](/ja/docs/Web/HTML/Global_attributes#spellcheck) グローバル属性
+- HTML の [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) グローバル属性

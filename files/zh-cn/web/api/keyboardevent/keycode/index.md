@@ -3,7 +3,7 @@ title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{APIRef("UI Events")}}
 
 这个只读的属性 **`KeyboardEvent.keyCode`** 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。
 
@@ -65,7 +65,6 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
 - 如果键盘布局是支持 ASCII 的键盘布局（即，可以输入 ASCII 字母），则使用 0 或者根据下面的附加规则计算。
 - 否则，即键盘布局不支持 ASCII，使用环境中安装的具有最高优先级的支持 ASCII 的键盘布局：
-
   - 如果按备用键盘布局上的键输入一个 ASCII 字母或数字，请使用 keycode。
   - 否则，使用 0 或者根据下面的附加规则计算。
 
@@ -75,9 +74,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 > 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190`（`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持世界上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 
 1. 如果运行 macOS 或者 Linux:
-
    1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
-
       1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
       2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
       3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
@@ -85,7 +82,6 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
    2. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
 2. 如果运行 Windows：
-
    1. 当美国键盘布局激活时，使用映射到 Windows 的相同虚拟键代码的按键产生的 ASCII 字符的`keyCode`值。
 
 由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值
@@ -2641,11 +2637,11 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_F24`                 | 0x87 (135) | F24 key.                                                                                                                   |
 | `DOM_VK_NUM_LOCK`            | 0x90 (144) | Num Lock key.                                                                                                              |
 | `DOM_VK_SCROLL_LOCK`         | 0x91 (145) | Scroll Lock key.                                                                                                           |
-| `DOM_VK_WIN_OEM_FJ_JISHO`    | 0x92 (146) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for "Dictionary" key on Fujitsu OASYS.      |
-| `DOM_VK_WIN_OEM_FJ_MASSHOU`  | 0x93 (147) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for "Unregister word" key on Fujitsu OASYS. |
-| `DOM_VK_WIN_OEM_FJ_TOUROKU`  | 0x94 (148) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for "Register word" key on Fujitsu OASYS.   |
-| `DOM_VK_WIN_OEM_FJ_LOYA`     | 0x95 (149) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for "Left OYAYUBI" key on Fujitsu OASYS.    |
-| `DOM_VK_WIN_OEM_FJ_ROYA`     | 0x96 (150) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for "Right OYAYUBI" key on Fujitsu OASYS.   |
+| `DOM_VK_WIN_OEM_FJ_JISHO`    | 0x92 (146) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for "Dictionary" key on Fujitsu OASYS.      |
+| `DOM_VK_WIN_OEM_FJ_MASSHOU`  | 0x93 (147) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for "Unregister word" key on Fujitsu OASYS. |
+| `DOM_VK_WIN_OEM_FJ_TOUROKU`  | 0x94 (148) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for "Register word" key on Fujitsu OASYS.   |
+| `DOM_VK_WIN_OEM_FJ_LOYA`     | 0x95 (149) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for "Left OYAYUBI" key on Fujitsu OASYS.    |
+| `DOM_VK_WIN_OEM_FJ_ROYA`     | 0x96 (150) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for "Right OYAYUBI" key on Fujitsu OASYS.   |
 | `DOM_VK_CIRCUMFLEX`          | 0xA0 (160) | Circumflex ("^") key.                                                                                                      |
 | `DOM_VK_EXCLAMATION`         | 0xA1 (161) | Exclamation ("!") key.                                                                                                     |
 | `DOM_VK_DOUBLE_QUOTE`        | 0xA3 (162) | Double quote (""") key.                                                                                                    |
@@ -2676,22 +2672,22 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_QUOTE`               | 0xDE (222) | Quote (''') key.                                                                                                           |
 | `DOM_VK_META`                | 0xE0 (224) | Meta key on Linux, Command key on Mac.                                                                                     |
 | `DOM_VK_ALTGR`               | 0xE1 (225) | AltGr key (Level 3 Shift key or Level 5 Shift key) on Linux.                                                               |
-| `DOM_VK_WIN_ICO_HELP`        | 0xE3 (227) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This is (was?) used for Olivetti ICO keyboard.            |
-| `DOM_VK_WIN_ICO_00`          | 0xE4 (228) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This is (was?) used for Olivetti ICO keyboard.            |
-| `DOM_VK_WIN_ICO_CLEAR`       | 0xE6 (230) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This is (was?) used for Olivetti ICO keyboard.            |
-| `DOM_VK_WIN_OEM_RESET`       | 0xE9 (233) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_JUMP`        | 0xEA (234) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_PA1`         | 0xEB (235) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_PA2`         | 0xEC (236) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_PA3`         | 0xED (237) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_WSCTRL`      | 0xEE (238) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_CUSEL`       | 0xEF (239) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_ATTN`        | 0xF0 (240) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_FINISH`      | 0xF1 (241) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_COPY`        | 0xF2 (242) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_AUTO`        | 0xF3 (243) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_ENLW`        | 0xF4 (244) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
-| `DOM_VK_WIN_OEM_BACKTAB`     | 0xF5 (245) | An [OEM specific key on Windows](#OEM_specific_keys_on_Windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_ICO_HELP`        | 0xE3 (227) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This is (was?) used for Olivetti ICO keyboard.            |
+| `DOM_VK_WIN_ICO_00`          | 0xE4 (228) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This is (was?) used for Olivetti ICO keyboard.            |
+| `DOM_VK_WIN_ICO_CLEAR`       | 0xE6 (230) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This is (was?) used for Olivetti ICO keyboard.            |
+| `DOM_VK_WIN_OEM_RESET`       | 0xE9 (233) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_JUMP`        | 0xEA (234) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_PA1`         | 0xEB (235) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_PA2`         | 0xEC (236) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_PA3`         | 0xED (237) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_WSCTRL`      | 0xEE (238) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_CUSEL`       | 0xEF (239) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_ATTN`        | 0xF0 (240) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_FINISH`      | 0xF1 (241) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_COPY`        | 0xF2 (242) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_AUTO`        | 0xF3 (243) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_ENLW`        | 0xF4 (244) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
+| `DOM_VK_WIN_OEM_BACKTAB`     | 0xF5 (245) | An [OEM specific key on Windows](#oem_specific_keys_on_windows). This was used for Nokia/Ericsson's device.                |
 | `DOM_VK_ATTN`                | 0xF6 (246) | Attn (Attention) key of IBM midrange computers, e.g., AS/400.                                                              |
 | `DOM_VK_CRSEL`               | 0xF7 (247) | CrSel (Cursor Selection) key of IBM 3270 keyboard layout.                                                                  |
 | `DOM_VK_EXSEL`               | 0xF8 (248) | ExSel (Extend Selection) key of IBM 3270 keyboard layout.                                                                  |

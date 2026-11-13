@@ -5,11 +5,24 @@ l10n:
   sourceCommit: ec9fab3524d17932694856be045c9e50168821fd
 ---
 
-{{JSRef}}
-
 如果给定的预期值等于旧值，**`Atomics.exchange()`** 静态方法会用给定的值替换数组上指定位置的值，并返回该位置的旧值，无论其是否等于预期的值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+Atomics.compareExchange(uint8, 0, 5, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+
+Atomics.compareExchange(uint8, 0, 5, 4); // Returns 2
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 语法
 

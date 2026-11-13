@@ -15,7 +15,7 @@ selectElt.setCustomValidity(string);
 
 ### Parameters
 
-- `string` is the {{domxref("DOMString")}} containing the error message.
+- `string` is the {{jsxref("String")}} containing the error message.
 
 ## Especificaciones
 
@@ -27,4 +27,4 @@ selectElt.setCustomValidity(string);
 
 ## See also
 
-- [Form validation.](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Form validation.](/es/docs/Web/HTML/Constraint_validation)

@@ -3,11 +3,23 @@ title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 ---
 
-{{JSRef}}
-
 **`at()`** 方法接受一个整数值，并返回一个新的 {{jsxref('String')}}，该字符串由位于指定偏移量处的单个 UTF-16 码元组成。该方法允许正整数和负整数。负整数从字符串中的最后一个字符开始倒数。
 
-{{EmbedInteractiveExample("pages/js/string-at.html")}}
+{{InteractiveExample("JavaScript Demo: String.at()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+let index = 5;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of 5 returns the character u"
+
+index = -4;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of -4 returns the character d"
+```
 
 ## 语法
 

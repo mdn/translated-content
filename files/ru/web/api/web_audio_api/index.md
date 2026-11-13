@@ -45,7 +45,7 @@ Web audio API также даёт нам возможность контроли
   - : Интерфейс AudioNode представляет собой некий обрабатывающий модуль такой как источник аудио (то есть HTML \<audio> или \<video> элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).
 - {{domxref("AudioParam")}}
   - : Интерфейс **`AudioParam`** представляет аудио-параметры связанные с {{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.
-- {{event("ended_(Web_Audio)", "ended")}} (event)
+- [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
   - : Событие **ended** генерируется тогда, когда воспроизведение остановлено по причине окончания носителя.
 
 ### Источники звука
@@ -61,7 +61,7 @@ Web audio API также даёт нам возможность контроли
 - {{domxref("MediaElementAudioSourceNode")}}
   - : Интерфейс **`MediaElementAudioSourceNode`** представляет источник звука, содержащегося в элементе HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} . Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : Интерфейс **`MediaStreamAudioSourceNode`** представляет источник звука, содержащегося в потоке [WebRTC](/ru/docs/WebRTC) {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
+  - : Интерфейс **`MediaStreamAudioSourceNode`** представляет источник звука, содержащегося в потоке [WebRTC](/ru/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.
 
 ### Аудио фильтры
 
@@ -91,7 +91,7 @@ Once you are done processing your audio, these interfaces define where to output
 - {{domxref("AudioDestinationNode")}}
   - : The **`AudioDestinationNode`** interface represents the end destination of an audio source in a given context — usually the speakers of your device.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : The **`MediaStreamAudioDestinationNode`** interface represents an audio destination consisting of a [WebRTC](/ru/docs/WebRTC) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a MediaStream obtained from {{ domxref("Navigator.getUserMedia") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.
+  - : The **`MediaStreamAudioDestinationNode`** interface represents an audio destination consisting of a [WebRTC](/ru/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a MediaStream obtained from {{ domxref("Navigator.getUserMedia") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.
 
 ### Анализ и визуализация данных
 
@@ -127,10 +127,10 @@ If you want to use an external script to process your audio source, the below No
 
 - {{domxref("ScriptProcessorNode")}}
   - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/ru/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
   - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
 - {{domxref("AudioProcessingEvent")}}
-  - : The [Web Audio API](/ru/docs/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
+  - : The [Web Audio API](/ru/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
 
 ### Offline/background audio processing
 
@@ -138,14 +138,14 @@ It is possible to process/render an audio graph very quickly in the background �
 
 - {{domxref("OfflineAudioContext")}}
   - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
+- [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) event implements this interface.
 
 ### Audio Workers
 
-Audio workers provide the ability for direct scripted audio processing to be done inside a [web worker](/ru/docs/Web/Guide/Performance/Using_web_workers) context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the [Audio processing via JavaScript](#Audio_processing_via_JavaScript) section above.
+Audio workers provide the ability for direct scripted audio processing to be done inside a [web worker](/ru/docs/Web/API/Web_Workers_API/Using_web_workers) context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the [Audio processing via JavaScript](#audio_processing_via_javascript) section above.
 
 - {{domxref("AudioWorkerNode")}}
   - : The AudioWorkerNode interface represents an {{domxref("AudioNode")}} that interacts with a worker thread to generate, process, or analyse audio directly.
@@ -165,7 +165,7 @@ The following interfaces were defined in old versions of the Web Audio API spec,
 
 ## Пример
 
-This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) demo (also check out the [full source code at Github](https://github.com/mdn/voice-change-o-matic)) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!
+This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (also check out the [full source code at Github](https://github.com/mdn/voice-change-o-matic)) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!
 
 The Web Audio API lines are highlighted; if you want to find more out about what the different methods, etc. do, have a search around the reference pages.
 
@@ -335,33 +335,30 @@ function voiceMute() {
 
 - [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
-- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Voice-change-O-matic example](https://mdn.github.io/voice-change-o-matic/)
+- [Violent Theremin example](https://mdn.github.io/violent-theremin/)
+- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
+- [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
+- [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API)
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
-- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
+- [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
 
 ### Quicklinks
 
 1. **Guides**
-
    1. [Basic concepts behind Web Audio API](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
    2. [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
    3. [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-   4. [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-   5. [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+   4. [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+   5. [Porting webkitAudioContext code to standards based AudioContext](/ru/docs/Web/API/Web_Audio_API)
 
 2. **Examples**
-
-   1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-   2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
+   1. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)
+   2. [Violent Theremin](https://mdn.github.io/violent-theremin/)
 
 3. **Interfaces**
-
    1. {{domxref("AnalyserNode")}}
    2. {{domxref("AudioBuffer")}}
    3. {{domxref("AudioBufferSourceNode")}}
@@ -370,16 +367,16 @@ function voiceMute() {
    6. {{domxref("AudioListener")}}
    7. {{domxref("AudioNode")}}
    8. {{domxref("AudioParam")}}
-   9. {{event("audioprocess")}} (event)
+   9. [`audioprocess`](/ru/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
    10. {{domxref("AudioProcessingEvent")}}
    11. {{domxref("BiquadFilterNode")}}
    12. {{domxref("ChannelMergerNode")}}
    13. {{domxref("ChannelSplitterNode")}}
-   14. {{event("complete")}} (event)
+   14. [`complete`](/ru/docs/Web/API/OfflineAudioContext/complete_event) (event)
    15. {{domxref("ConvolverNode")}}
    16. {{domxref("DelayNode")}}
    17. {{domxref("DynamicsCompressorNode")}}
-   18. {{event("ended_(Web_Audio)", "ended")}} (event)
+   18. [`ended`](</ru/docs/Web/Events/ended_(Web_Audio)>) (event)
    19. {{domxref("GainNode")}}
    20. {{domxref("MediaElementAudioSourceNode")}}
    21. {{domxref("MediaStreamAudioDestinationNode")}}

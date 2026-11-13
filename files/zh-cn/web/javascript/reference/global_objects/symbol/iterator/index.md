@@ -3,11 +3,22 @@ title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 
-{{JSRef}}
-
 **`Symbol.iterator`** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环使用。
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## 描述
 

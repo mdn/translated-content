@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c9f7361807d9b0fbf0fcf0ccc5cc166bf33d307d
 ---
 
-{{JSRef}}
-
 **`ArrayBuffer`** 对象用来表示通用的原始二进制数据缓冲区。
 
 它是一个字节数组，通常在其他语言中称为“byte array”。你不能直接操作 `ArrayBuffer` 中的内容；而是要通过[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。
@@ -21,7 +19,7 @@ l10n:
 
 `ArrayBuffer` 对象可以通过在调用 {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} 构造函数时包含 `maxByteLength` 选项来使其大小可变。你可以通过访问其 {{jsxref("ArrayBuffer/resizable", "resizable")}} 和 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 属性来查询 `ArrayBuffer` 的大小是否可变以及其最大值。你可以通过调用 {{jsxref("ArrayBuffer/resize", "resize()")}} 为可变大小的 `ArrayBuffer` 分配一个新的大小。新的字节会被初始化为 0。
 
-这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
+这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 调整大小）。
 
 ### 传输 ArrayBuffer
 

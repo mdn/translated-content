@@ -12,13 +12,11 @@ slug: Web/API/Web_Storage_API
 Web Storage의 두 가지 방식은 다음과 같습니다.
 
 - `sessionStorage`는 각각의 {{glossary("origin", "출처")}}에 대해 독립적인 저장 공간을 페이지 세션이 유지되는 동안(브라우저가 열려있는 동안) 제공합니다.
-
   - 세션에 한정해, 즉 브라우저 또는 탭이 닫힐 때까지만 데이터를 저장합니다.
   - 데이터를 절대 서버로 전송하지 않습니다.
   - 저장 공간이 쿠키보다 큽니다. (최대 5MB)
 
 - `localStorage`도 위와 같지만, 브라우저를 닫았다 열어도 데이터가 남아있습니다.
-
   - 유효기간 없이 데이터를 저장하고, JavaScript를 사용하거나 브라우저 캐시 또는 로컬 저장 데이터를 지워야만 사라집니다.
   - 저장 공간이 셋 중 제일 큽니다.
 
@@ -64,4 +62,4 @@ Web Storage API에 의존하는 웹 사이트를 개발할 때, 개발자는 이
 ## 같이 보기
 
 - [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
+- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)

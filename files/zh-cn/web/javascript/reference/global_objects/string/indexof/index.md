@@ -3,11 +3,27 @@ title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`indexOf()`** 方法在字符串中搜索指定子字符串，并返回其第一次出现的位置索引。它可以接受一个可选的参数指定搜索的起始位置，如果找到了指定的子字符串，则返回的位置索引大于或等于指定的数字。
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## 语法
 
@@ -19,13 +35,10 @@ indexOf(searchString, position)
 ### 参数
 
 - `searchValue`
-
   - : 要搜索的子字符串。所有传入值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`indexOf()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
 
 - `position` {{optional_inline}}
-
   - : 该方法返回指定子字符串在大于或等于 `position` 位置的第一次出现的索引，默认为 `0`。如果 `position` 大于调用字符串的长度，则该方法根本不搜索调用字符串。如果 `position` 小于零，该方法的行为就像 `position` 为 `0` 时一样。
-
     - `hello world hello'.indexOf('o', -5)` 返回 `4`——因为它使该方法的行为类似于第二个参数为 `0`，并且 `o` 在大于或等于 `0` 位置的第一次出现是在 `4` 位置。
 
     - `'hello world hello'.indexOf('world', 12)` 返回 `-1`——因为，虽然子字符串 `world` 确实出现在索引 `6` 处，但该位置不大于或等于 `12`。

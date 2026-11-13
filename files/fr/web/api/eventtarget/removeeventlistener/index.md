@@ -1,116 +1,116 @@
 ---
-title: element.removeEventListener
+title: "EventTarget : méthode removeEventListener()"
+short-title: removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("EventTarget")}} (_cible_) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section _Correspondance utilisée pour la suppression d'écouteurs d'événements_ ci-après.
+La méthode **`removeEventListener()`** de l'interface {{domxref("EventTarget")}} permet de supprimer un écouteur d'événement précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}} sur la cible.
+L'écouteur à supprimer est identifié par une combinaison du type d'événement, de la fonction d'écoute elle-même, et de diverses options qui peuvent influencer la correspondance (voir [Correspondance des écouteurs à supprimer](#correspondance_des_écouteurs_à_supprimer)).
+
+Si les arguments passés à `removeEventListener()` ne correspondent à aucun [écouteur d'événement](/fr/docs/Web/API/EventTarget/addEventListener#la_fonction_de_rappel_de_lécouteur_dévénements) actuellement enregistré sur l'`EventTarget`, cela n'a aucun effet.
+
+Si un [écouteur d'événement](/fr/docs/Web/API/EventTarget/addEventListener#la_fonction_de_rappel_de_lécouteur_dévénements) est supprimé d'un {{domxref("EventTarget")}} pendant qu'un autre écouteur traite un événement, il ne sera pas déclenché par cet événement. Il peut cependant être réattaché par la suite.
+
+> [!WARNING]
+> Si un écouteur est enregistré deux fois, une fois avec l'option _capture_ et une fois sans, il faut supprimer chaque version séparément. Supprimer un écouteur en mode capture n'affecte pas la version sans capture du même écouteur, et inversement.
+
+Les écouteurs d'événements peuvent aussi être supprimés en passant un objet {{domxref("AbortSignal")}} à {{domxref("EventTarget/addEventListener()", "addEventListener()")}}, puis en appelant {{domxref("AbortController/abort()", "abort()")}} sur le contrôleur propriétaire du signal.
 
 ## Syntaxe
 
-```js
-target.removeEventListener(type, listener[, options]);
-target.removeEventListener(type, listener[, useCapture]);
+```js-nolint
+removeEventListener(type, listener)
+removeEventListener(type, listener, options)
+removeEventListener(type, listener, useCapture)
 ```
 
 ### Paramètres
 
 - `type`
-  - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
+  - : Chaîne de caractères qui précise le type d'événement pour lequel supprimer un écouteur.
 - `listener`
-  - : La fonction {{domxref("EventListener")}} du gestionnaire d'évènements à retirer de la cible d'évènements.
+  - : La fonction [écouteur d'événement](/fr/docs/Web/API/EventTarget/addEventListener#la_fonction_de_rappel_de_lécouteur_dévénements) à supprimer de la cible.
 - `options` {{optional_inline}}
+  - : Objet d'options qui précise les caractéristiques de l'écouteur d'événement.
 
-  - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
-
-    - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
+    Les options disponibles sont&nbsp;:
+    - `capture`&nbsp;: Booléen qui indique si l'[écouteur d'événement](/fr/docs/Web/API/EventTarget/addEventListener#la_fonction_de_rappel_de_lécouteur_dévénements) à supprimer a été enregistré en mode capture ou non. Si ce paramètre est absent, la valeur par défaut est `false`.
 
 - `useCapture` {{optional_inline}}
-  - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
-
-Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.
+  - : Booléen qui indique si l'[écouteur d'événement](/fr/docs/Web/API/EventTarget/addEventListener#la_fonction_de_rappel_de_lécouteur_dévénements) à supprimer a été enregistré en mode capture ou non. Si ce paramètre est absent, la valeur par défaut est `false`.
 
 ### Valeur de retour
 
-`undefined`. (_indéfini_)
+Aucune ({{jsxref("undefined")}}).
 
-### Correspondance utilisée pour la suppression d'écouteurs d'événements
+### Correspondance des écouteurs à supprimer
 
-Étant donné qu'un écouteur d'événements a déjà été ajouté en appelant {{domxref("EventTarget.addEventListener","addEventListener()")}}, vous pouvez éventuellement arriver à un point auquel vous devez le supprimer. Vous devez alors spécifier le même `type` et les mêmes paramètres `listener` pour `removeEventListener()`, mais qu'en est-il des paramètres `options` ou `useCapture` ?
+Lorsqu'un écouteur d'événement a été ajouté avec {{domxref("EventTarget.addEventListener", "addEventListener()")}}, il peut arriver que vous deviez le supprimer. Il faut alors spécifier les mêmes paramètres `type` et `listener` à `removeEventListener()`. Mais qu'en est-il des paramètres `options` ou `useCapture`&nbsp;?
 
-Alors que `addEventListener()` vous permet d'ajouter le même écouteur plus d'une fois pour le même type si les options sont différentes, la seule option que `removeEventListener()` vérifie est l'indicateur `capture` / `useCapture`. Sa valeur doit correspondre pour que `removeEventListener()` corresponde, mais pas les autres valeurs.
+Bien que `addEventListener()` permette d'ajouter plusieurs fois le même écouteur pour un même type si les options diffèrent, la seule option prise en compte par `removeEventListener()` est le drapeau `capture`/`useCapture`. Sa valeur doit correspondre pour que la suppression fonctionne, les autres options n'ont pas d'importance.
 
-Par exemple, considérons l'appel de `addEventListener()` :
+Par exemple&nbsp;:
 
 ```js
 element.addEventListener("mousedown", handleMouseDown, true);
 ```
 
-Maintenant, voyons chacun des deux appels de `removeEventListener()` :
+Considérez ces deux appels à `removeEventListener()`&nbsp;:
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false); // Fails
-element.removeEventListener("mousedown", handleMouseDown, true);
+element.removeEventListener("mousedown", handleMouseDown, false); // Échec
+element.removeEventListener("mousedown", handleMouseDown, true); // Succès
 ```
 
-Le premier appel échoue parce que la valeur de `useCapture` ne correspond pas. Le second réussit puisqu'il correspond pour `useCapture`.
+Le premier échoue car la valeur de `useCapture` ne correspond pas. Le second réussit car la valeur correspond.
 
-Maintenant, observez ceci :
+Autre exemple&nbsp;:
 
 ```js
 element.addEventListener("mousedown", handleMouseDown, { passive: true });
 ```
 
-Ici, nous spécifions un objet `options` dans lequel `passive` est défini à `true`, tandis que les autres options sont laissées à la valeur par défaut de `false`.
+Ici, on spécifie un objet d'options où `passive` vaut `true`, les autres options restant à `false` par défaut.
 
-Maintenant, regardez chacun de ces appels successifs à `removeEventListener()`. N'importe lequel d'entre eux dans lequel `capture` ou `useCapture` est `true` (_vrai_) échoue ; tous les autres réussissent. Seul le paramètre de `capture` est important pour `removeEventListener()`.
+Considérez ces appels à `removeEventListener()`&nbsp;: tous ceux où `capture` ou `useCapture` vaut `true` échouent&nbsp;; les autres réussissent.
+
+Seule l'option `capture` compte pour `removeEventListener()`.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Échoue
-element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, false); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, true); // Échoue
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Succès
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Succès
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Échec
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Succès
+element.removeEventListener("mousedown", handleMouseDown, false); // Succès
+element.removeEventListener("mousedown", handleMouseDown, true); // Échec
 ```
 
-Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à `addEventListener()` lors de l'appel de `removeEventListener()`.
+À noter&nbsp;: certains navigateurs ont pu être incohérents sur ce point. Sauf raison particulière, il est conseillé d'utiliser les mêmes valeurs que lors de l'appel à `addEventListener()`.
 
-## Notes
+## Exemple
 
-Si un {{domxref("EventListener")}} est retiré d'un {{domxref("EventTarget")}} alors qu'il est en train de traiter un événement, il ne sera pas déclenché par les actions courantes. Les {{domxref("EventListener")}} ne peuvent jamais être invoqués après avoir été retirés.
-
-L'appel de `removeEventListener()` avec des paramètres n'identifiant aucun {{domxref("EventListener")}} actuellement enregistré sur l'`EventTarget` n'a aucun effet.
-
-## Exemples
-
-Cet exemple montre comment ajouter un écouteur d'évènements basé sur `click` et supprimer un écouteur d'évènements basé sur `mouseover`.
+Cet exemple montre comment ajouter un écouteur d'événement basé sur `mouseover` qui supprime un écouteur basé sur `click`.
 
 ```js
-var body = document.querySelector("body"),
-  clickTarget = document.getElementById("click-target"),
-  mouseOverTarget = document.getElementById("mouse-over-target"),
-  toggle = false;
+const body = document.querySelector("body");
+const clickTarget = document.getElementById("click-target");
+const mouseOverTarget = document.getElementById("mouse-over-target");
 
+let toggle = false;
 function makeBackgroundYellow() {
-  "use strict";
-
-  if (toggle) {
-    body.style.backgroundColor = "white";
-  } else {
-    body.style.backgroundColor = "yellow";
-  }
+  body.style.backgroundColor = toggle ? "white" : "yellow";
 
   toggle = !toggle;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+clickTarget.addEventListener("click", makeBackgroundYellow);
 
-mouseOverTarget.addEventListener("mouseover", function () {
-  "use strict";
-
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+mouseOverTarget.addEventListener("mouseover", () => {
+  clickTarget.removeEventListener("click", makeBackgroundYellow);
 });
 ```
 
@@ -122,103 +122,6 @@ mouseOverTarget.addEventListener("mouseover", function () {
 
 {{Compat}}
 
-## Prothèse (_polyfill_) pour la prise en charge des navigateurs anciens
-
-`addEventListener()` et `removeEventListener()` ne sont pas présents dans les anciens navigateurs. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts, permettant l'utilisation de `addEventListener()` et `removeEventListener()` dans les implémentations qui ne le supportent pas nativement. Toutefois, cette méthode ne fonctionnera pas sur Internet Explorer 7 ou version antérieure, car l'extension du fichier Element.prototype n'a pas été prise en charge jusqu'à Internet Explorer 8.
-
-```js
-if (!Element.prototype.addEventListener) {
-  var oListeners = {};
-  function runListeners(oEvent) {
-    if (!oEvent) {
-      oEvent = window.event;
-    }
-    for (
-      var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type];
-      iElId < oEvtListeners.aEls.length;
-      iElId++
-    ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
-          oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
-        }
-        break;
-      }
-    }
-  }
-  Element.prototype.addEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
-  ) {
-    if (oListeners.hasOwnProperty(sEventType)) {
-      var oEvtListeners = oListeners[sEventType];
-      for (
-        var nElIdx = -1, iElId = 0;
-        iElId < oEvtListeners.aEls.length;
-        iElId++
-      ) {
-        if (oEvtListeners.aEls[iElId] === this) {
-          nElIdx = iElId;
-          break;
-        }
-      }
-      if (nElIdx === -1) {
-        oEvtListeners.aEls.push(this);
-        oEvtListeners.aEvts.push([fListener]);
-        this["on" + sEventType] = runListeners;
-      } else {
-        var aElListeners = oEvtListeners.aEvts[nElIdx];
-        if (this["on" + sEventType] !== runListeners) {
-          aElListeners.splice(0);
-          this["on" + sEventType] = runListeners;
-        }
-        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
-          if (aElListeners[iLstId] === fListener) {
-            return;
-          }
-        }
-        aElListeners.push(fListener);
-      }
-    } else {
-      oListeners[sEventType] = { aEls: [this], aEvts: [[fListener]] };
-      this["on" + sEventType] = runListeners;
-    }
-  };
-  Element.prototype.removeEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
-  ) {
-    if (!oListeners.hasOwnProperty(sEventType)) {
-      return;
-    }
-    var oEvtListeners = oListeners[sEventType];
-    for (
-      var nElIdx = -1, iElId = 0;
-      iElId < oEvtListeners.aEls.length;
-      iElId++
-    ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        nElIdx = iElId;
-        break;
-      }
-    }
-    if (nElIdx === -1) {
-      return;
-    }
-    for (
-      var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx];
-      iLstId < aElListeners.length;
-      iLstId++
-    ) {
-      if (aElListeners[iLstId] === fListener) {
-        aElListeners.splice(iLstId, 1);
-      }
-    }
-  };
-}
-```
-
 ## Voir aussi
 
-- {{domxref("EventTarget.addEventListener")}}
-- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.
+- {{domxref("EventTarget.addEventListener()")}}

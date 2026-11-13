@@ -78,7 +78,7 @@ function handlePlayButton() {
 
 En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/es/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
 
-Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento [`click`](/es/docs/Web/Reference/Events/click) en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
+Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento [`click`](/es/docs/Web/API/Element/click_event) en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
 
 Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-play-promise.glitch.me/).
 
@@ -93,6 +93,6 @@ Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-
 ## Ver también
 
 - [Web media technologies](/es/docs/Web/Media)
-- Learning: [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning: [Video and audio content](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Autoplay guide for media and Web Audio APIs](/es/docs/Web/Media/Autoplay_guide)
 - [Using the Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

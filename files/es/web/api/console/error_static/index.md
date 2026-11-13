@@ -18,7 +18,8 @@ console.exception(obj1 [, obj2, ..., objN]);
 console.exception(msg [, subst1, ..., substN]);
 ```
 
-> **Nota:** `console.exception()` es un alias de `console.error()`; son funcionalmente identicas.
+> [!NOTE]
+> `console.exception()` es un alias de `console.error()`; son funcionalmente identicas.
 
 ### Parametros
 
@@ -29,7 +30,7 @@ console.exception(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Objetos JavaScript con la sustitución a reemplazar dentro del texto (**`msg`**). Esto brinda control adicional en el formato de salida del texto.
 
-Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#Outputting_text_to_the_console)" en la documentacion de {{domxref("console")}} para mas detalles.
+Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#outputting_text_to_the_console)" en la documentacion de {{domxref("console")}} para mas detalles.
 
 ## Especificaciones
 
@@ -41,6 +42,6 @@ Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#Outputting_text_to
 
 ## Vea también
 
-- [Documentacion de Opera Dragonfly: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Documentacion de Opera Dragonfly: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
 - [Herramientas de desarrolladores de Chrome: Usando la Consola](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)

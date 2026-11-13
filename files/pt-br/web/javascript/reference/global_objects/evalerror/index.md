@@ -24,7 +24,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 ## Propriedades
 
-- {{jsxref("EvalError.prototype")}}
+- {{jsxref("EvalError")}}
   - : Permite a adição de propriedades para um objeto `EvalError`.
 
 ## Métodos
@@ -35,11 +35,11 @@ O global `EvalError` não contém métodos próprios, no entando, ele irá herda
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -72,5 +72,5 @@ try {
 ## Veja também
 
 - {{jsxref("Error")}}
-- {{jsxref("EvalError.prototype")}}
+- {{jsxref("EvalError")}}
 - {{jsxref("Global_Objects/eval", "eval()")}}

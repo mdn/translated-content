@@ -3,11 +3,33 @@ title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
 
-{{JSRef}}
-
 **`handler.preventExtensions()`** 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  preventExtensions(target) {
+    target.canEvolve = false;
+    Object.preventExtensions(target);
+    return true;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## 语法
 
@@ -90,6 +112,6 @@ Object.preventExtensions(p); // 抛出类型错误
 ## 参考
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

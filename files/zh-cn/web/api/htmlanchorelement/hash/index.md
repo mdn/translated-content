@@ -1,35 +1,38 @@
 ---
 title: HTMLAnchorElement：hash 属性
+short-title: hash
 slug: Web/API/HTMLAnchorElement/hash
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLHyperlinkElementUtils.hash`** 属性返回一个字符串，其中包含一个 `'#'`，后面是 URL 的片段标识符。
+{{domxref("HTMLAnchorElement")}} 接口的 **`hash`** 属性是一个包含 `"#"` 符号，后面跟着 `<a>` 元素的 `href` 的片段标识符的字符串。如果 URL 没有片段标识符，则此属性包含一个空字符串，即 `""`。
 
-片段没有经过[百分号编码](https://zh.wikipedia.org/wiki/百分号编码)。如果 URL 没有包含片段标识符，这个属性为一个空的字符串，`""`。
+参见 {{domxref("URL.hash")}} 以获取更多信息。
 
 ## 值
 
-一个字符串。
+字符串。
 
 ## 示例
 
-### 从锚点链接获取 hash 值
+### 从锚点链接中获取散列值
 
-给定 HTML 代码如下：
+给定 HTML
 
 ```html
-<a id="myAnchor" href="/zh-CN/docs/HTMLAnchorElement#示例">示例</a>
+<a id="myAnchor" href="/zh-CN/docs/Web/API/HTMLAnchorElement/hash#示例">
+  示例
+</a>
 ```
 
-你可以像这样获取锚点的 hash 值：
+你可以像这样获取锚点散列值：
 
 ```js
 const anchor = document.getElementById("myAnchor");
-anchor.hash; // 返回 '#示例'
+anchor.hash; // “#%E7%A4%BA%E4%BE%8B”
 ```
 
 ## 规范

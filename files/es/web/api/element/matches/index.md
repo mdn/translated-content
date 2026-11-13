@@ -19,7 +19,7 @@ var result = element.matches(selectorString);
 
 ### Valor devuelto
 
-`result` es un {{domxref("Boolean")}}.
+`result` es un {{jsxref("Boolean")}}.
 
 ### Excepciones
 
@@ -91,5 +91,5 @@ if (!Element.prototype.matches) {
 
 ## Véase también
 
-- [The syntax of Selectors](/es/docs/Web/Guide/CSS/Getting_started/Selectors)
+- [The syntax of Selectors](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - Otros métodos que usan selectores: {{domxref("element.querySelector()")}} and {{domxref("element.closest()")}}.

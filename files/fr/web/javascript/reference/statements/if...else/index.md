@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`if…else`** exécute une instruction si une condition donnée est [équivalente à vrai](/fr/docs/Glossary/Truthy). Si la condition est [équivalente à faux](/fr/docs/Glossary/Falsy), ce sera l'instruction de la clause optionnelle `else` qui sera exécutée.
 
-{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+
+```js interactive-example
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = "positive";
+  } else {
+    result = "NOT positive";
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// Expected output: "NOT positive"
+```
 
 ## Syntaxe
 
@@ -171,5 +184,5 @@ Si vous devez affecter une variable de cette façon, [la documentation sur l'ins
 ## Voir aussi
 
 - [Bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block)
-- [`switch`](/fr/docs/JavaScript/Reference/Statements/switch)
+- [`switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch)
 - [L'opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

@@ -7,7 +7,7 @@ slug: Web/API/CanvasCaptureMediaStreamTrack
 
 **`CanvasCaptureMediaStreamTrack`** Интерфейс представляет собой видеодорожку, содержащуюся в {{domxref ("MediaStream")}}, генерируемую из {{HTMLElement ("canvas")}} после вызова {{domxref ("HTMLCanvasElement.captureStream ()")}}.
 
-Часть [API захвата мультимедиа и потоков](/ru/docs/Web/API/Media_Streams_API).
+Часть [API захвата мультимедиа и потоков](/ru/docs/Web/API/Media_Capture_and_Streams_API).
 
 ## Свойства
 

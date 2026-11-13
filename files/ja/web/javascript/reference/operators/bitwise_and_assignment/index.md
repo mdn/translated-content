@@ -1,15 +1,21 @@
 ---
-title: ビット論理積代入 (&=)
+title: ビット論理積代入演算子 (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **ビット論理積代入 (`&=`)** 演算子は、 2 つのオペランドで[論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を取り、その結果を左オペランドへ代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: ビット論理積代入演算子 (&=)", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a &= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000001
+// 予想される結果: 1
+```
 
 ## 構文
 

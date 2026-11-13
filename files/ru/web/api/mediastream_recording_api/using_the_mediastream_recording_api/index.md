@@ -248,7 +248,7 @@ mediaRecorder.onstop = function (e) {
 </article>
 ```
 
-После этого создаём объект {{domxref("Blob")}} с комбинацией наших записанных частей аудио и создаём объект URL ссылающийся на него, используя метод `window.URL.createObjectURL(blob)`. Затем устанавливаем значение атрибута [`src`](/ru/docs/Web/HTML/Element/audio#src) элемента {{HTMLElement("audio")}} в созданный объект URL, так, что бы при нажатии на кнопку воспроизведения объект `Blob` передал свои данные элементу.
+После этого создаём объект {{domxref("Blob")}} с комбинацией наших записанных частей аудио и создаём объект URL ссылающийся на него, используя метод `window.URL.createObjectURL(blob)`. Затем устанавливаем значение атрибута [`src`](/ru/docs/Web/HTML/Reference/Elements/audio#src) элемента {{HTMLElement("audio")}} в созданный объект URL, так, что бы при нажатии на кнопку воспроизведения объект `Blob` передал свои данные элементу.
 
 Наконец, устанавливаем обработчик события `onclick` на кнопке удаления, для удаления всей структуры HTML проигрывания результата записи (элемент clip).
 
@@ -262,6 +262,6 @@ mediaRecorder.onstop = function (e) {
 
 ## Смотрите также
 
-- Страница [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)
+- Страница [MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API)
 - `{{domxref("Navigator.getUserMedia()")}}`
 - Интерфейс [MediaRecorder теперь поддерживают 65% веб-сайтов](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

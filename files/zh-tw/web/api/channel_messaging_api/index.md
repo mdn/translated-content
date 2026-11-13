@@ -1,39 +1,37 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
+l10n:
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{DefaultAPISidebar("Channel Messaging API")}}
+{{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
-Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。
+**Channel Messaging API** 允許兩個分別運行於不同瀏覽上下文且附加至同一文件的腳本（例如，兩個 IFrame，或主文件與一個 IFrame，兩個透過 {{domxref("SharedWorker")}} 的文件，或兩個 worker）直接進行通訊，透過雙向通道（或管道）在兩端的埠之間傳遞訊息。
 
-{{AvailableInWorkers}}
+## 概念與使用方式
 
-## Channel 訊息概念與使用情境
+可以使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 建構子來建立一個訊息通道。一旦建立後，通道的兩個埠可以透過 {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}} 屬性存取（這兩者都會回傳 {{domxref("MessagePort")}} 物件）。建立通道的應用程式使用 `port1`，而另一端的應用程式使用 `port2`——你可以向 `port2` 發送訊息，並使用 {{domxref("window.postMessage")}} 傳遞兩個參數（要發送的訊息以及要轉移所有權的物件，在此情況下為埠本身）將埠轉移到另一個瀏覽上下文。
 
-{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 建構子產生 channel， 一但生成了，便可以存取 channel 兩端的 port: {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}}，這兩個屬性會回傳 domxref("MessagePort")}} objects.)。建立 channel 的 app 使用 port1，另一端用 port2，利用 {{domxref("window.postMessage")}} 方法帶入參數，向 port2 傳送訊息以及移轉物件 (這裡也就是只 port)。
+當這些可轉移物件被轉移後，它們在先前所屬的上下文中將無法再使用。例如一個埠，一旦被傳送，在原本的上下文中將無法再使用。
 
-一但可移轉物件被移轉後，前任擁有者便失去所有權，例如當 port 移轉出去後，原本持有該 port 的環境便不能再使用之。目前可移轉物件只有 {{domxref("ArrayBuffer")}} 以及 {{domxref("MessagePort")}}。
+另一個瀏覽上下文可以使用 {{domxref("MessagePort.message_event", "onmessage")}} 監聽訊息，並透過事件的 `data` 屬性抓取訊息的內容。然後，你可以使用 {{domxref("MessagePort.postMessage")}} 回應，將訊息傳回原始文件。
 
-另一端的瀏覽環境則藉由 {{domxref("MessagePort.onmessage")}} 監聽訊息、從訊息事件物件的 data 屬性擷取訊息資料，然後再呼叫 {{domxref("MessagePort.postMessage")}} 回傳訊息。
+當你想停止透過通道傳送訊息時，可以調用 {{domxref("MessagePort.close")}} 關閉埠。
 
-如果想關閉訊息 channel，則呼叫 {{domxref("MessagePort.close")}}。
+在[使用通道訊息](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)中了解更多有關如何使用此 API 的資訊。
 
-更多 API 使用細節請見 [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
-
-## Channel 訊息介面
+## 介面
 
 - {{domxref("MessageChannel")}}
-  - : 生成一個新的 message channel。
+  - : 建立一個新的訊息通道以傳送訊息。
 - {{domxref("MessagePort")}}
-  - : 控制 port，用來傳送和監聽訊息。
-- {{domxref("PortCollection")}}
-  - : `MessagePort`s 陣列，實驗性質方案；用來同時廣播到多個訊息 port。
+  - : 控制訊息通道上的埠，允許從一個埠發送訊息並監聽另一個埠接收訊息。
 
 ## 範例
 
-- Github 上有 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
-- 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](http://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
+- 我們在 GitHub 上發布了一個[通道訊息基本範例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以線上運行](https://mdn.github.io/dom-examples/channel-messaging-basic/)），展示了一個頁面與嵌入的 {{htmlelement("iframe")}} 之間進行單一訊息傳遞的簡單範例。
+- 你還可以查看[多訊息範例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage)（[線上運行](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)），展示了一個稍微複雜的設置，可以在主頁面與 IFrame 之間傳送多個訊息。
 
 ## 規範
 
@@ -43,8 +41,8 @@ Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳�
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
-- [Using channel messaging](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
+- [使用通道訊息](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Worker API](/zh-TW/docs/Web/API/Web_Workers_API)
 - [Broadcast Channel API](/zh-TW/docs/Web/API/Broadcast_Channel_API)

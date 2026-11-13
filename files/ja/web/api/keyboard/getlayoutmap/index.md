@@ -27,7 +27,7 @@ getLayoutMap()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 呼び出しが[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされた場合に発生します。
+  - : 呼び出しが[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされた場合に発生します。
 
 ## 例
 

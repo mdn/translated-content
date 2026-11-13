@@ -1,15 +1,25 @@
 ---
 title: Symbol.toStringTag
+short-title: toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Symbol.toStringTag`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.toStringTag` を表します。{{jsxref("Object.prototype.toString()")}} は `this` に対して、このオブジェクトの型を表す文字列を持つプロパティを、このシンボルで探します。
 
-**`Symbol.toStringTag`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.toStringTag` を表します。{{jsxref("Object.prototype.toString()")}} は `this` に対して、このオブジェクトの型を表す文字列を持つプロパティを、このシンボルで探します。
+{{InteractiveExample("JavaScript デモ: Symbol.toStringTag")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return "Validator";
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// 予想される結果: "[object Validator]"
+```
 
 ## 値
 
@@ -30,7 +40,7 @@ Object.prototype.toString.call(3); // "[object Number]"
 Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+// … などなど
 ```
 
 ### 組み込み toStringTag シンボル
@@ -43,7 +53,7 @@ Object.prototype.toString.call(null); // "[object Null]"
 Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... などなど
+// … などなど
 ```
 
 ### 独自クラスの既定のオブジェクトタグ

@@ -5,11 +5,22 @@ l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 值的 **`includes()`** 方法执行区分大小写的搜索，以确定是否可以在一个字符串中找到另一个字符串，并根据情况返回 `true` 或 `false`。
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## 语法
 

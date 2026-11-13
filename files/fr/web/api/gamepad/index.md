@@ -23,7 +23,7 @@ Un objet `Gamepad` peut être retourné de deux manières :
 - {{domxref("Gamepad.displayId")}} {{readonlyInline}}
   - : Retourne {{domxref("VRDisplay.displayId")}} associé à {{domxref("VRDisplay")}} — Le VRDisplay dont la manette contrôle la scène affichée.
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} contenant l'information d'identification de la manette.
+  - : Un {{jsxref("String")}} contenant l'information d'identification de la manette.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : Un entier qui s'auto-incrémente pour être unique à chaque dispositif actuellement connecté au système.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}
@@ -66,5 +66,5 @@ window.addEventListener("gamepadconnected", function (event) {
 
 ## Voir aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/Web/Guide/API/Gamepad)
+- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [API Gamepad](/fr/docs/Web/API/Gamepad_API)

@@ -3,11 +3,22 @@ title: 取余赋值（%=）
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **取余赋值**（**`%=`**）运算符将变量除以右操作数的值，并将余数赋值给该变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a %= 2));
+// Expected output: 1
+
+console.log((a %= 0));
+// Expected output: NaN
+
+console.log((a %= "hello"));
+// Expected output: NaN
+```
 
 ## 语法
 

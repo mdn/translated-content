@@ -3,11 +3,35 @@ title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
 
-{{JSRef}}
-
 **`handler.set()`** 方法是设置属性值操作的捕获器。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## 语法
 
@@ -29,7 +53,6 @@ new Proxy(target, {
 - `value`
   - : 新属性值。
 - `receiver`
-
   - : 最初接收赋值的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
 
     > [!NOTE]
@@ -96,5 +119,5 @@ console.log(p.a); // 10
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Reflect.set()")}}

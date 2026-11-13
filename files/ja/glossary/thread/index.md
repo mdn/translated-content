@@ -20,9 +20,8 @@ l10n:
 
 ## 関連情報
 
-- [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
+- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
 - [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - 関連用語:
-
   - {{Glossary("Main thread", "メインスレッド")}}

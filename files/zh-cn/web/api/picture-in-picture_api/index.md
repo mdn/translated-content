@@ -1,20 +1,23 @@
 ---
-title: 画中画（Picture-in-Picture）API
+title: 画中画 API
 slug: Web/API/Picture-in-Picture_API
 l10n:
-  sourceCommit: 7c1f91ddd9cd584b041d18a916ab850a226824ad
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-**画中画 API** 允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
+**画中画 API**（Picture-in-Picture API）允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
 
-> **备注：** [文档画中画 API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
+> [!NOTE]
+> [文档画中画 API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
 
 ## 接口
 
 - {{DOMxRef("PictureInPictureWindow")}}
   - : 表示浮动的视频窗口；包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理器属性。
+- {{DOMxRef("PictureInPictureEvent")}}
+  - : 表示画中画相关事件，包括 {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}、{{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}} 和 {{domxref("PictureInPictureWindow/resize_event", "resize")}}。
 
 ## 实例方法
 
@@ -42,7 +45,7 @@ l10n:
 ### Document 接口上的实例属性
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如 [`"picture-in-picture"` 特性](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)不被允许，或者不支持画中画模式），则是 `false` 。
+  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如 [`"picture-in-picture"` 特性](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture)不被允许，或者不支持画中画模式），则是 `false` 。
 
 ### Document 或 ShadowRoot 接口上的实例属性
 
@@ -60,17 +63,17 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : 当 {{DOMxRef("PictureInPictureWindow")}} 大小改变时触发该事件。
 
-## 添加控制
+## 添加控件
 
-如果通过[媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API) 设置了媒体操作处理器，则浏览器会在画中画叠加层中自动添加相应操作的控制。例如，如果已设置 `"nexttrack"` 动作，则画中画视图中可能会显示跳过按钮。但该特性不支持添加自定义 HTML 按钮或控件。
+如果通过[媒体会话 API](/zh-CN/docs/Web/API/Media_Session_API) 设置了媒体操作处理器，则浏览器会在画中画叠加层中自动添加相应操作的控件。例如，如果已设置 `"nexttrack"` 动作，则画中画视图中可能会显示跳过按钮。但该特性不支持添加自定义 HTML 按钮或控件。
 
 ## 控制样式
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/Reference/Selectors/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
 
 ## 控制访问权限
 
-可以使用[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制画中画的可用性。全屏模式的特性由字符串 `"picture-in-picture"` 标识，默认的允许列表的值是 `"self"`，意味着在顶级文档上下文以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
+可以使用[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)控制画中画的可用性。全屏模式的特性由字符串 `"picture-in-picture"` 标识，默认的允许列表的值是 `*`，意味着在顶级文档上下文以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
 
 ## 示例
 
@@ -80,7 +83,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 
 ### 切换画中画模式
 
-当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理程序调用：
+当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理器调用：
 
 ```js
 function togglePictureInPicture() {

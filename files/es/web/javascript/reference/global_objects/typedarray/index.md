@@ -7,9 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## Descripción
 
@@ -64,11 +77,11 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
-- {{jsxref("TypedArray.name")}}
+- {{jsxref("Function.name", "TypedArray.name")}}
   - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
-- {{jsxref("TypedArray.prototype")}}
+- {{jsxref("TypedArray")}}
   - : Prototipo para objetos `TypedArray`.
 
 ## Métodos estáticos
@@ -141,14 +154,14 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
   - : Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo.
 
 ## Ejemplos
 
 ### Se requiere `new`
 
-A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
+A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);
@@ -195,7 +208,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## Ve también
 
-- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/es/docs/Web/API/TextDecoder) — Ayuda que decodifica cadenas a partir de datos numéricos

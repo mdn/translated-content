@@ -3,8 +3,6 @@ title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 ---
 
-{{JSRef}}
-
 **`BigInt64Array`** 类型的数组代表由 64 位有符号整数组成的数组。如果需要控制字节顺序的话，请使用 {{jsxref("DataView")}} 代替。内容初始化为 `0n`。一旦建立，就可以使用对象的方法或使用标准数组索引语法（即使用中括号表示法）引用数组中的元素。
 
 ## 构造函数
@@ -82,6 +80,6 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

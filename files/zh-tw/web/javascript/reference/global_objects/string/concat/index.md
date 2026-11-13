@@ -3,11 +3,20 @@ title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
 
-{{JSRef}}
-
 **`concat()`** 會將呼叫此方法的字串以及作為參數傳遞進此方法的字串串接在一起，並將串接結果作為一個新的字串回傳。
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## 語法
 
@@ -35,7 +44,7 @@ concat(str1, str2, ... , strN)
 
 ## 效能
 
-對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} 來達成，
+對於字串的串接，強烈建議直接使用{{jsxref("Operators", "賦值運算子", "#賦值運算子", 1)}}來達成，
 像是 `+` 及 `+=`，而不是使用 `concat()` 方法。
 
 ## 範例
@@ -70,4 +79,4 @@ let greetList = ["Hello", " ", "Venkat", "!"];
 ## 參見
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "賦值運算子", "#賦值運算子", 1)}}

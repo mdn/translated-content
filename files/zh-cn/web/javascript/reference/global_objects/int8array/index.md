@@ -3,8 +3,6 @@ title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
 
-{{JSRef}}
-
 **`Int8Array`** 类型数组表示二进制补码 8 位有符号整数的数组。内容初始化为 0。一旦建立，你可以使用对象的方法引用数组中的元素，或使用标准数组索引语法 ( 即，使用括号注释)。
 
 ## 语法
@@ -16,7 +14,7 @@ new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);
 ```
 
-有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## 静态属性
 
@@ -24,7 +22,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中每个元素的大小。在 `Int8Array` 中这个值为 1。
 - Int8Array.length
   - : 此属性为固定值属性，值为 3。查看 {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}} 获得获取数组内元素个数方法。
-- {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
+- {{jsxref("TypedArray", "Int8Array.prototype")}}
   - : _TypedArray_ 对象的构造原型。
 
 ## 静态方法
@@ -87,7 +85,7 @@ var z = new Int8Array(buffer, 1, 4);
 
 ## 兼容性说明
 
-自 ECMAScript 2015 (ES6) 施行，`Int8Array` 需要使用 {{jsxref("Operators/new", "new")}} 构造。从当前版本开始，不加 new 而便调用 `Int8Array` 构造器方法，将报出 {{jsxref("TypeError")}} 错误。
+自 ECMAScript 2015 (ES6) 施行，`Int8Array` 需要使用 {{jsxref("new")}} 构造。从当前版本开始，不加 new 而便调用 `Int8Array` 构造器方法，将报出 {{jsxref("TypeError")}} 错误。
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);
@@ -102,7 +100,7 @@ var dv = new Int8Array([1, 2, 3]);
 ## 参见
 
 - [`core-js` 中 `Int8Array` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)指南
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

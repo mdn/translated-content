@@ -85,8 +85,7 @@ Altere o código abaixo e veja suas alterações atualizadas na tela:
 ctx.beginPath();
 ctx.moveTo(150, 20);
 ctx.arcTo(150,100,50,100,20);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

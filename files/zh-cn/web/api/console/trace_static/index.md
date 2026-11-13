@@ -1,31 +1,39 @@
 ---
 title: console：trace() 静态方法
+short-title: trace()
 slug: Web/API/console/trace_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-{{domxref("console")}} 的 **`trace()`** 方法向 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)输出一个堆栈跟踪。
+**`console.trace()`** 静态方法会将堆栈追踪信息输出到控制台。
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> 在某些浏览器中，`console.trace()` 还可能输出导致当前 `console.trace()` 的调用序列和异步事件（这些并不在当前调用栈上），以帮助识别当前事件评估循环的起源。
 
-在页面 {{domxref("console")}} 文档中查看[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)的详细介绍和示例。
+详情和示例请参见 {{domxref("console")}} 文档中的[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)部分。
 
 ## 语法
 
 ```js-nolint
-trace()
-trace(object1, /* …, */ objectN)
+console.trace()
+console.trace(object1, /* …, */ objectN)
 ```
 
 ### 参数
 
-- `...any, ...data` {{optional_inline}}
-  - : Zero or more objects to be output to console along with the trace. These are assembled and formatted the same way they would be if passed to the {{domxref("console.log()")}} method.
+- `objects` {{optional_inline}}
+  - : 零个或多个要与追踪信息一起输出到控制台的对象。这些对象的组装与格式化方式与传递给 {{domxref("console/log_static", "console.log()")}} 方法时相同。
 
-## Example
+### 返回值
 
-```plain
+无（{{jsxref("undefined")}}）。
+
+## 示例
+
+```js
 function foo() {
   function bar() {
     console.trace();
@@ -36,7 +44,7 @@ function foo() {
 foo();
 ```
 
-In the console, the following trace will be displayed:
+在控制台中，将显示以下追踪信息：
 
 ```plain
 bar
@@ -54,4 +62,6 @@ foo
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Microsoft Edge 关于 `console.trace()` 的文档](https://learn.microsoft.com/zh-CN/microsoft-edge/devtools/console/api#trace)
+- [Node.js 关于 `console.trace()` 的文档](https://nodejs.org/docs/latest/api/console.html#consoletracemessage-args)
+- [Google Chrome's 关于 `console.trace()` 的文档](https://developer.chrome.google.cn/docs/devtools/console/api/#trace)

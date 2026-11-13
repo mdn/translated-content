@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/continue
 
 **`continue`** 문은 현재 또는 레이블이 지정된 루프의 현재 반복에서 명령문의 실행을 종료하고 반복문의 처음으로 돌아가여 루프문의 다음 코드를 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+
+```js interactive-example
+let text = "";
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+```
 
 ## 구문
 
@@ -20,10 +34,10 @@ slug: Web/JavaScript/Reference/Statements/continue
 
 ## 설명
 
-{{jsxref ( "Statements / break", "break")}} 문과 달리 `continue`는 루프의 실행을 완전히 종료하지 않고 `for`, `while`문에서 다음과 같이 동작합니다.
+{{jsxref("Statements/break", "break")}} 문과 달리 `continue`는 루프의 실행을 완전히 종료하지 않고 `for`, `while`문에서 다음과 같이 동작합니다.
 
-- {{jsxref ( "Statements / while", "while")}} 루프에서는 다시 조건으로 점프합니다.
-- {{jsxref ( "Statements / for", "for")}} 루프에서는 업데이트 표현식으로 점프합니다.
+- {{jsxref("Statements/while", "while")}} 루프에서는 다시 조건으로 점프합니다.
+- {{jsxref("Statements/for", "for")}} 루프에서는 업데이트 표현식으로 점프합니다.
 
 `continue` 문에는 현재 루프 대신 레이블이 지정된 루프 문의 다음 반복으로 건너 뛰도록하는 선택적 레이블이 포함될 수 있습니다. 이 경우, `continue` 문은 이 레이블 된 명령문 내에 중첩되어야합니다.
 

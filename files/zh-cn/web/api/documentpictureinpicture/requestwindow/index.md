@@ -2,7 +2,7 @@
 title: DocumentPictureInPicture：requestWindow() 方法
 slug: Web/API/DocumentPictureInPicture/requestWindow
 l10n:
-  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
+  sourceCommit: f7ddd45a6bd53eb7fc10dbacc07a3acb168c1352
 ---
 
 {{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
@@ -22,13 +22,21 @@ requestWindow(options)
 
 - `options` {{optional_inline}}
   - : 包含以下属性的选项对象：
-    - `height`
-      - : 一个非负数，表示要为画中画窗口的视口设置的高度（以像素为单位）。如果未指定 `options`，则使用默认值 0。
-    - `width`
-      - : 一个非负数，表示要为画中画窗口的视口设置的宽度（以像素为单位）。如果未指定 `options`，则使用默认值 0。
+    - `disallowReturnToOpener` {{optional_inline}}
+      - : 布尔值。设置为 `true` 时，此选项提示浏览器不应显示允许用户返回原始标签页并关闭画中画窗口的 UI 控件。默认为 `false`。例如，在 Chrome 实现此功能时，提供的 UI 控件是画中画窗口顶部栏中的“返回标签页”按钮：
+
+        ![浏览器窗口中包含一个嵌入式视频播放器和多个控制按钮，顶部栏中有一个返回标签页按钮，以红色框突出显示](back-to-tab-button.png)
+
+    - `height` {{optional_inline}}
+      - : 一个非负数，表示要为画中画窗口的视口设置的高度（以像素为单位）。默认值为 `0`。
+    - `preferInitialWindowPlacement` {{optional_inline}}
+      - : 布尔值，默认为 `false`。当设置为 `true` 时，画中画窗口在关闭并重新打开时总是回到最初打开的位置和大小。相反，如果 `preferInitialWindowPlacement` 为 `false`，画中画窗口的大小和位置将在关闭和重新打开时被记住——它将重新打开到之前的位置和大小，例如由用户设置。
+
+    - `width` {{optional_inline}}
+      - : 一个非负数，表示要为画中画窗口的视口设置的宽度（以像素为单位）。默认值为 `0`。
 
 > [!NOTE]
-> 如果指定了其中一个选项，则必须同时指定另一个选项，否则会抛出错误。如果两个值均未指定、指定为 0 或设置过大，则浏览器将根据需要限制或忽略这些值以提供合理的用户体验。限制的大小将根据浏览器实现、显示器尺寸和其他因素而有所不同。
+> 如果指定了 `height` 选项或 `width` 选项之一，则必须同时指定另一个选项，否则会抛出错误。如果两个值均未指定、指定为 0 或设置过大，则浏览器将根据需要限制或忽略这些值以提供合理的用户体验。限制的大小将根据浏览器实现、显示器尺寸和其他因素而有所不同。
 
 ### 返回值
 
@@ -53,10 +61,12 @@ const videoPlayer = document.getElementById("player");
 
 // ...
 
-// 打开画中画窗口。
+// 打开画中画窗口并设置所有选项
 const pipWindow = await window.documentPictureInPicture.requestWindow({
   width: videoPlayer.clientWidth,
   height: videoPlayer.clientHeight,
+  disallowReturnToOpener: true,
+  preferInitialWindowPlacement: true,
 });
 
 // ...

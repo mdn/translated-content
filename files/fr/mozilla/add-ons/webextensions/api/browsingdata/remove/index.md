@@ -3,15 +3,13 @@ title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
-{{AddonSidebar}}
-
 Supprime les données de navigation spécifiées.
 
 Les données de navigation à supprimer sont spécifiées dans l'option `dataTypes`, qui est un objet {{WebExtAPIRef("browsingData.DataTypeSet")}}.
 
 Vous pouvez utiliser l'option `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour contrôler à quelle distance remonter dans le temps pour supprimer des données et supprimer les données uniquement à partir de pages Web normales ou pour supprimer des données hébergées d'applications et extensions aussi.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -31,7 +29,7 @@ var removing = browser.browsingData.remove(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -81,9 +79,7 @@ browser.browsingData
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 O operador lógico **NOT (`!`)** (complemento lógico, negação) leva a verdade à falsidade e a falsidade à verdade, por isso, é conhecido como um operador de "negação". Normalmente é usado com valores booleanos (lógicos). Quando usado com valores não booleanos, retorna `false` se seu único operando puder ser convertido em `true`; caso contrário, retorna `true`.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -30,7 +38,7 @@ Exemplos de expressões que podem ser convertidas em falso são:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-Mesmo que o operador `!` possa ser usado com operandos que não sejam valores booleanos, ele ainda pode ser considerado um operador booleano, pois seu valor de retorno sempre pode ser convertido em um [primitivo booleano](/pt-BR/docs/Web/JavaScript/Data_structures#boolean_type). Para converter explicitamente seu valor de retorno (ou qualquer expressão em geral) para o valor booleano correspondente, use um operador NOT duplo (`!!`) ou o construtor {{jsxref("Boolean/Boolean", "Boolean")}} do JavaScript.
+Mesmo que o operador `!` possa ser usado com operandos que não sejam valores booleanos, ele ainda pode ser considerado um operador booleano, pois seu valor de retorno sempre pode ser convertido em um [primitivo booleano](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#boolean_type). Para converter explicitamente seu valor de retorno (ou qualquer expressão em geral) para o valor booleano correspondente, use um operador NOT duplo (`!!`) ou o construtor {{jsxref("Boolean/Boolean", "Boolean")}} do JavaScript.
 
 ## Exemplos
 
@@ -47,7 +55,7 @@ O código a seguir mostra exemplos do operador lógico NOT `!`:
 
 ### Duplo NOT (`!!`)
 
-É possível usar alguns operadores NOT em série para forçar explicitamente a conversão de qualquer valor para um [primitivo booleano](/pt-BR/docs/Web/JavaScript/Data_structures#boolean_type) correspondente.
+É possível usar alguns operadores NOT em série para forçar explicitamente a conversão de qualquer valor para um [primitivo booleano](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#boolean_type) correspondente.
 A conversão é baseada na "veracidade" ou "falsidade" do valor (veja
 {{Glossary("truthy")}} e {{Glossary("falsy")}}).
 

@@ -52,7 +52,7 @@ L'interface hérite des parents suivants:
 _Hérite des propriétés de son parent._ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Entier long non signé qui représente la taille de la [FFT](/fr/docs/) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
+  - : Entier long non signé qui représente la taille de la [FFT](/fr/docs/Web) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Entier long non signé égal à la moitié fftSize. C'est en général le nombre de valeurs qu'on manipule pour la visualisation.
 - {{domxref("AnalyserNode.minDecibels")}}
@@ -67,19 +67,19 @@ _Hérite des propriétés de son parent._ _{{domxref("AudioNode")}}_.
 _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : Copie les données de fréquence dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+  - : Copie les données de fréquence dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 <!---->
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copie les données de fréquence dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+  - : Copie les données de fréquence dans un tableau {{jsxref("Uint8Array")}} passé en paramètre.
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 <!---->
 
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{domxref("Uint8Array")}} passé en paramètre.
+  - : Copie les données de forme d'onde ou du domaine temporel dans un tableau {{jsxref("Uint8Array")}} passé en paramètre.
 
 ## Exemples
 

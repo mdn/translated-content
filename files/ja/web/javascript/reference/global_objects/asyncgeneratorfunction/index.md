@@ -2,12 +2,10 @@
 title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
 l10n:
-  sourceCommit: d19dc31570f62196a5837be38bd0b11c45e67b05
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`AsyncGeneratorFunction`** オブジェクトは、[非同期ジェネレータ関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) のメソッドを提供します。 JavaScript で、すべての非同期ジェネレータ関数は実際には `AsyncGeneratorFunction` オブジェクトです。
+**`AsyncGeneratorFunction`** オブジェクトは、[非同期ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)のメソッドを提供します。 JavaScript では、すべての非同期ジェネレータ関数は実際には `AsyncGeneratorFunction` オブジェクトです。
 
 なお、`AsyncGeneratorFunction` はグローバルオブジェクトではありません。以下のコードで取得できます。
 
@@ -17,7 +15,29 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` は {{jsxref("Function")}} のサブクラスです。
 
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: AsyncGeneratorFunction", "taller")}}
+
+```js interactive-example
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str += val;
+  }
+  console.log(str);
+}
+
+generate();
+// 予想される結果: "abc"
+```
 
 ## コンストラクター
 
@@ -33,9 +53,14 @@ _親である {{jsxref("Function")}} から継承したインスタンスプロ�
 - {{jsxref("Object/constructor", "AsyncGeneratorFunction.prototype.constructor")}}
   - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `AsyncGeneratorFunction` インスタンスにおいては、初期値は {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction")}} コンストラクターです。
 - `AsyncGeneratorFunction.prototype.prototype`
-  - : すべての非同期ジェネレータ関数は同じ [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを共有していて、それは [`AsyncGenerator.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) です。それぞれの非同期ジェネレーター関数のインスタンスは自分自身で `prototype` プロパティも持ちます。非同期ジェネレーター関数が呼び出されると、返される非同期ジェネレーターオブジェクトは非同期ジェネレーター関数の `prototype` プロパティを継承し、そのプロパティは `AsyncGeneratorFunction.prototype` を継承します。
-- `AsyncGeneratorFunction.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"AsyncGeneratorFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
+  - : すべての非同期ジェネレータ関数は同じ [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを共有していて、それは [`AsyncGenerator.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) です。 `async function*` 構文または `AsyncGeneratorFunction()` コンストラクターで生成されるそれぞれの非同期ジェネレーター関数も、自身の `prototype` プロパティを保持します。このプロパティのプロトタイプは `AsyncGeneratorFunction.prototype.prototype` です。非同期ジェネレーター関数が呼び出されると、その `prototype` プロパティは返される非同期ジェネレーターオブジェクトのプロトタイプとなります。
+- `AsyncGeneratorFunction.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"AsyncGeneratorFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
+
+以下のプロパティは、それぞれの `AsyncGeneratorFunction` インスタンスが自身で持つプロパティです。
+
+- {{jsxref("AsyncGeneratorFunction/prototype", "prototype")}}
+  - : 関数が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子と共にコンストラクターとして使用される場合に使用されます。新しいオブジェクトのプロトタイプとなります。
 
 ## インスタンスメソッド
 
@@ -51,7 +76,7 @@ _親である {{jsxref("Function")}} からインスタンスメソッドを継�
 
 ## 関連情報
 
-- [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function*)
 - {{jsxref("Function")}}
 - {{jsxref("AsyncFunction")}}

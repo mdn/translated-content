@@ -3,14 +3,12 @@ title: "URLSearchParams: get() メソッド"
 short-title: get()
 slug: Web/API/URLSearchParams/get
 l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-**`get()`** は {{domxref("URLSearchParams")}} インターフェースのメソッドで、指定された検索パラメーターに関連付けられた最初の値を返します。
-
-{{availableinworkers}}
+**`get()`** は {{domxref("URLSearchParams")}} インターフェイスのメソッドで、指定された検索パラメーターに関連付けられた最初の値を返します。
 
 ## 構文
 

@@ -18,9 +18,7 @@ open(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个用于传递 {{domxref("AbortSignal")}} 信号的对象：
-
     - `signal`
       - : 一个 {{domxref("AbortSignal")}} 对象。当调用 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法时，拾色器模式将被中止。
 

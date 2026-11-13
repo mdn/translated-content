@@ -2,10 +2,8 @@
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
-
-{{AddonSidebar}}
 
 这是一个设置浏览器操作图标的函数。
 
@@ -28,17 +26,14 @@ let settingIcon = browser.browserAction.setIcon(
 ### 参数
 
 - `details`
-
   - : `object`。一个包含 `imageData` 或 `path` 属性的对象，可选地包含一个 `tabId` 属性。
-
     - `imageData` {{optional_inline}}
-
-      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` 或 `object`。这可以是单个 `ImageData` 对象或一个字典对象。
+      - : {{WebExtAPIRef('browserAction.ImageDataType')}} 或 `object`。这可以是单个 `ImageData` 对象或一个字典对象。
 
         使用字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `ImageData` 是一个字典，则每个属性的值是一个 `ImageData` 对象，属性名是其尺寸，如下所示：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.browserAction.setIcon({
           imageData: {
             16: image16,
             32: image32,
@@ -49,13 +44,12 @@ let settingIcon = browser.browserAction.setIcon(
         浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
-
       - : `string` 或 `object`。这可以是到图标文件的相对路径，也可以是一个字典对象。
 
         使用字典对象来指定不同尺寸的多个图标文件，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `path` 是一个字典，则每个属性的值是一个相对路径，属性名是其尺寸，如下所示：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.browserAction.setIcon({
           path: {
             16: "path/to/image16.jpg",
             32: "path/to/image32.jpg",
@@ -66,11 +60,9 @@ let settingIcon = browser.browserAction.setIcon(
         浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为给定的标签设置图标。用户将该标签导航到新页面时，图标将被重置。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。为给定的窗口设置图标。
 
 <!---->

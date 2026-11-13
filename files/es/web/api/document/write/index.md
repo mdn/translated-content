@@ -5,10 +5,10 @@ slug: Web/API/Document/write
 
 {{ ApiRef("DOM") }}
 
-Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/document.open).
+Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/Document/open).
 
 > [!NOTE]
-> Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
+> Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/Document/open#notes).
 
 ## Sintaxis
 
@@ -45,7 +45,7 @@ document.write(texto);
 
 ## Notas
 
-Escribir a un documento que ya tiene contenido cargado previamente sin llamar a [`document.open()`](/es/docs/Web/API/document.open), automáticamente hará una llamada a document.open(). Después de haber finalizado la escritura del documento, es recomendable llamar a [`document.close()`](/es/docs/Web/API/document.close), para informar al navegador que la carga de la página ya ha terminado. El texto que escribas allí es convertido a la estructura tipificada de HTML dentro del modelo estructural del documento. En el ejemplo de más arriba, el elemento h1 se convierte en un nodo dentro del documento.
+Escribir a un documento que ya tiene contenido cargado previamente sin llamar a [`document.open()`](/es/docs/Web/API/Document/open), automáticamente hará una llamada a document.open(). Después de haber finalizado la escritura del documento, es recomendable llamar a [`document.close()`](/es/docs/Web/API/Document/close), para informar al navegador que la carga de la página ya ha terminado. El texto que escribas allí es convertido a la estructura tipificada de HTML dentro del modelo estructural del documento. En el ejemplo de más arriba, el elemento h1 se convierte en un nodo dentro del documento.
 
 Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` incluído en el HTML, entonces la llamada a document.open() nunca ocurrirá. Por ejemplo:
 
@@ -55,9 +55,11 @@ Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` in
 </script>
 ```
 
-> **Nota:** `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo](/es/docs/Glossary/MIME_type) `application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> [!NOTE]
+> `document.write` y `document.writeln` [no funcionan dentro de un documento XHTML](/es/docs/Archive/Web/Writing_JavaScript_for_HTML) (obtendrás un mensaje de error que dice "Operación no soportada" ("Operation is not supported") \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] en la consola). Esto sucede cuando abrimos un archivo local de extensión .xhtml o para cualquier document servido con un [MIME del tipo](/es/docs/Glossary/MIME_type) `application/xhtml+xml`. Hay más información disponible en [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-> **Nota:** `document.write` en scripts de modo [diferido](/es/docs/Web/HTML/Element/script#attr-defer) o [asyncrónico](/es/docs/Web/HTML/Element/script#attr-async) serán ignorados, y recibirás un mensaje de error en la consola del tipo "Una llamada a document.write() desde un script cargado asincrónicamente fue ignorado" ("A call to `document.write()` from an asynchronously-loaded external script was ignored").
+> [!NOTE]
+> `document.write` en scripts de modo [diferido](/es/docs/Web/HTML/Reference/Elements/script#attr-defer) o [asyncrónico](/es/docs/Web/HTML/Reference/Elements/script#attr-async) serán ignorados, y recibirás un mensaje de error en la consola del tipo "Una llamada a document.write() desde un script cargado asincrónicamente fue ignorado" ("A call to `document.write()` from an asynchronously-loaded external script was ignored").
 
 ## Especificaciones
 

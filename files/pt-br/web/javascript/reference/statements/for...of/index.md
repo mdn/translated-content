@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...of
 
 {{jsSidebar("Statements")}}
 
-O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Guide/iterable) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
+O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
 
 ## Sintaxe
 
@@ -106,7 +106,7 @@ for (let value of iterable) {
 // 3
 ```
 
-### Iterando sobre um objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
+### Iterando sobre um objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
 
 ```
 (function() {

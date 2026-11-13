@@ -3,11 +3,24 @@ title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 
-{{JSRef}}
-
 **`endsWith()`** 方法用于判断一个字符串是否以指定字符串结尾，如果是则返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+
+```js interactive-example
+const str1 = "Cats are the best!";
+
+console.log(str1.endsWith("best!"));
+// Expected output: true
+
+console.log(str1.endsWith("best", 17));
+// Expected output: true
+
+const str2 = "Is this a question?";
+
+console.log(str2.endsWith("question"));
+// Expected output: false
+```
 
 ## 语法
 

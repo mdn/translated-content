@@ -16,4 +16,4 @@ l10n:
 ## 같이 보기
 
 - [requestIdleCallback](/ko/docs/Web/API/Window/requestIdleCallback)
-- [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)
+- [지연 로딩](/ko/docs/Web/Performance/Guides/Lazy_loading)

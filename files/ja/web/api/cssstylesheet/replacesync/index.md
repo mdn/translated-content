@@ -1,13 +1,14 @@
 ---
 title: "CSSStyleSheet: replaceSync() メソッド"
+short-title: replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("CSSOM")}}
 
-**`replaceSync()`** は {{domxref("CSSStyleSheet")}} インターフェイスのメソッドで、スタイルシートの内容を渡された内容で同期的に置き換えます。.
+**`replaceSync()`** は {{domxref("CSSStyleSheet")}} インターフェイスのメソッドで、スタイルシートの内容を渡された内容で同期的に置き換えます。
 
 `replaceSync()` と {{domxref("CSSStyleSheet.replace()")}} の両メソッドは、 {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} コンストラクターで作成されたスタイルシートでのみ使用できます。
 
@@ -20,7 +21,6 @@ replaceSync(text)
 ### 引数
 
 - `text`
-
   - : スタイルシートのコンテンツを置き換えるためのスタイルルールを格納した文字列。文字列に解釈可能なルールのリストが入っていない場合、値は空文字列に設定されます。
 
     > [!NOTE]
@@ -55,5 +55,5 @@ stylesheet.replaceSync("body { font-size: 1.4em; } p { color: red; }");
 
 ## 関連情報
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)

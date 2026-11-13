@@ -3,11 +3,23 @@ title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 
-{{JSRef}}
-
 **`indexOf()`** 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 -1。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## 语法
 
@@ -131,7 +143,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.indexOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

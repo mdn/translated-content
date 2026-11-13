@@ -9,7 +9,7 @@ slug: Web/API/DOMException
 
 每个异常都有一个**名称**（name），一个采用驼峰命名法的简短字符串，用于描述识别错误或异常情况。
 
-`DOMException` 是一个{{Glossary("Serializable object","可序列化对象")}}，因此可以使用 {{domxref("structuredClone()")}} 克隆，或使用 {{domxref("Worker.postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间复制。
+`DOMException` 是一个{{Glossary("Serializable object","可序列化对象")}}，因此可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 克隆，或使用 {{domxref("Worker.postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间复制。
 
 ## 构造函数
 

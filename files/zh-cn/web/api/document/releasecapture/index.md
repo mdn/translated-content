@@ -11,7 +11,7 @@ slug: Web/API/Document/releaseCapture
 
 ### 语法
 
-```plain
+```js-nolint
 document.releaseCapture()
 ```
 
@@ -19,7 +19,7 @@ document.releaseCapture()
 
 ### 示例
 
-请参见 {{ domxref("element.setCapture()") }} 的 [示例](/zh-CN/DOM/element.setCapture#Example)
+请参见 {{ domxref("element.setCapture()") }} 的 [示例](/zh-CN/docs/Web/API/Element/setCapture#example)
 
 ### 规范
 

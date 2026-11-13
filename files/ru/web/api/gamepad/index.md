@@ -7,14 +7,14 @@ slug: Web/API/Gamepad
 
 Интерфейс **`Gamepad`** [Gamepad API](/ru/docs/Web/API/Gamepad_API) определяет отдельный геймпад или контроллер, предоставляющий доступ к такой информации, как: нажатие кнопок, позиции осей, и id.
 
-Объект `Gamepad` может быть возвращён в одном из двух случаев: как свойство `gamepad` событий {{event("gamepadconnected")}} и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}, или считыванием любой позиции в массиве, возвращённом методом {{domxref("Navigator.getGamepads()")}}.
+Объект `Gamepad` может быть возвращён в одном из двух случаев: как свойство `gamepad` событий [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}, или считыванием любой позиции в массиве, возвращённом методом {{domxref("Navigator.getGamepads()")}}.
 
 ## Свойства
 
 - {{domxref("Gamepad.displayId")}} {{readonlyInline}}
   - : _Возвращает {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} (при необходимости) — `VRDisplay` отображаемая область которого управляется геймпадом._
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} содержит идентификационную информацию о контроллере.
+  - : {{jsxref("String")}} содержит идентификационную информацию о контроллере.
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : Целое автоинкрементируемое значение, уникальное для каждого устройства, подключённого в данный момент к системе.
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}
@@ -63,5 +63,5 @@ window.addEventListener("gamepadconnected", function (e) {
 
 ## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Gamepad API](/ru/docs/Web/API/Gamepad_API)

@@ -1,15 +1,43 @@
 ---
 title: Symbol.asyncIterator
+short-title: asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
+**`Symbol.asyncIterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.asyncIterator` を表します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[Symbol.asyncIterator]` キーを持つ必要があります。
 
-**`Symbol.asyncIterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.asyncIterator` を表します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[Symbol.asyncIterator]` キーを持つ必要があります。
+{{InteractiveExample("JavaScript デモ: Symbol.asyncIterator", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
+```js interactive-example
+const delayedResponses = {
+  delays: [500, 1300, 3500],
+
+  wait(delay) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, delay);
+    });
+  },
+
+  async *[Symbol.asyncIterator]() {
+    for (const delay of this.delays) {
+      await this.wait(delay);
+      yield `${delay} ミリ秒の遅延レスポンス`;
+    }
+  },
+};
+
+(async () => {
+  for await (const response of delayedResponses) {
+    console.log(response);
+  }
+})();
+
+// 予想される結果: "500 ミリ秒の遅延レスポンス"
+// 予想される結果: "1300 ミリ秒の遅延レスポンス"
+// 予想される結果: "3500 ミリ秒の遅延レスポンス"
+```
 
 ## 値
 

@@ -82,5 +82,5 @@ let obj = {
 
 ## Смотрите также
 
-- [Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [XRegEx flags](http://xregexp.com/flags/) – библиотека регулярного выражения, которая предоставляет четыре новых флага (`n`, `s`, `x`, `A`)
+- [Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
+- [XRegEx flags](https://xregexp.com/flags/) – библиотека регулярного выражения, которая предоставляет четыре новых флага (`n`, `s`, `x`, `A`)

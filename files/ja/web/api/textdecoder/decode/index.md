@@ -25,9 +25,7 @@ decode(buffer, options)
 - `buffer` {{Optional_Inline}}
   - : デコードするエンコードされたテキストが入っている、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} の何れかのオブジェクトです。
 - `options` {{Optional_Inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `stream`
       - : 論理値のフラグで、以後 `decode()` を呼び出す際に、追加データが続くかどうかを示します。
         データを塊で処理する場合は `true` に設定し、最後の塊、またはデータが塊でない場合は `false` に設定します。

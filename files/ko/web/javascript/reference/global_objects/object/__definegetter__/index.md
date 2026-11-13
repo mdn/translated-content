@@ -32,7 +32,7 @@ obj.__defineGetter__(prop, func);
 
 ## Description
 
-`__defineGetter__` 를 사용하여 기존 오브젝트의 {{jsxref("Operators/get", "getter", "", 1)}}를 사용할 수 있습니다.
+`__defineGetter__` 를 사용하여 기존 오브젝트의 {{jsxref("Functions/get", "getter", "", 1)}}를 사용할 수 있습니다.
 
 ## Examples
 
@@ -76,10 +76,10 @@ console.log(o.gimmeFive); // 5
 ## See also
 
 - [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- {{jsxref("Operators/get", "get")}} operator
+- {{jsxref("Functions/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - [Firefox bug 647423](https://bugzil.la/647423)

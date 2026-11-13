@@ -49,7 +49,8 @@ HTML drag-and-drop использует {{domxref("Event","модель собы
 
 Ключевое отличие интерфейсов {{domxref("DataTransfer")}} и {{domxref("DataTransferItem")}} заключается в том, что первый использует синхронный метод доступа к данным о перетаскиваемых объектах {{domxref("DataTransfer.getData","getData()")}}, а второй – асинхронный метод {{domxref("DataTransferItem.getAsString","getAsString()")}}.
 
-> **Примечание:** {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе [Поддержка](#interoperability) .
+> [!NOTE]
+> {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе [Поддержка](#interoperability) .
 
 ### Специфичные для Gecko интерфейсы
 
@@ -61,7 +62,7 @@ Mozilla и Firefox поддерживают некоторые функции, �
 
 ### Обозначьте, что можно _перетаскивать_
 
-Чтобы сделать элемент _перетаскиваемым_, к нему нужно добавить атрибут [`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable) и глобальный обработчик события {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}. Пример показан в коде ниже:
+Чтобы сделать элемент _перетаскиваемым_, к нему нужно добавить атрибут [`draggable`](/ru/docs/Web/HTML/Reference/Global_attributes#draggable) и глобальный обработчик события {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}. Пример показан в коде ниже:
 
 ```html
 <script>
@@ -88,7 +89,7 @@ Mozilla и Firefox поддерживают некоторые функции, �
 
 ### Определите данные перетаскивания
 
-Приложение может добавлять в операцию перетаскивания любое количество элементов данных. Каждый элемент данных — это {{domxref("DOMString","строка")}} определённого `типа`. Обычно MIME-тип равен `text/html`.
+Приложение может добавлять в операцию перетаскивания любое количество элементов данных. Каждый элемент данных — это {{jsxref("String","строка")}} определённого `типа`. Обычно MIME-тип равен `text/html`.
 
 У каждого {{domxref("DragEvent","события перетаскивания")}} есть свойство {{domxref("DragEvent.dataTransfer","dataTransfer")}}, которое _содержит_ данные о событии. Это свойство (являющееся объектом {{domxref("DataTransfer")}}), также имеет методы _управления_ данными перетаскивания. Метод {{domxref("DataTransfer.setData","setData()")}} используется для добавления элемента в данные перетаскивания, как показано в следующем примере.
 

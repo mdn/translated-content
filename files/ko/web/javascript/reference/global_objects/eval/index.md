@@ -5,11 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 {{jsSidebar("Objects")}}
 
-> **경고:** **주의:** 문자열로부터 **`eval()`** 을 실행하는 것은 엄청나게 위험합니다. **`eval()`** 을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
+> [!WARNING]
+> **주의:** 문자열로부터 **`eval()`** 을 실행하는 것은 엄청나게 위험합니다. **`eval()`** 을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
 
 **`eval()`** 은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 구문
 
@@ -48,7 +63,7 @@ var expression = new String("2 + 2");
 eval(expression.toString()); // 4를 반환
 ```
 
-`eval`을 직접 호출하지 않고 참조를 통해 _간접적으로_ 사용한다면 [ECMAScript 5부터는](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 `eval()`로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.
+`eval`을 직접 호출하지 않고 참조를 통해 _간접적으로_ 사용한다면 [ECMAScript 5부터는](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 `eval()`로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.
 
 ```js
 function test() {
@@ -63,7 +78,7 @@ function test() {
 
 ## `eval`을 절대 사용하지 말 것!
 
-`eval()`은 인자로 받은 코드를 caller의 권한으로 수행하는 위험한 함수입니다. 악의적인 영향을 받았을 수 있는 문자열을 `eval()`로 실행한다면, 당신의 웹페이지나 확장 프로그램의 권한으로 사용자의 기기에서 악의적인 코드를 수행하는 결과를 초래할 수 있습니다. 또한, 제3자 코드가 `eval()`이 호출된 위치의 스코프를 볼 수 있으며, 이를 이용해 비슷한 함수인 {{jsxref("Global_Objects/Function", "Function")}}으로는 실현할 수 없는 공격이 가능합니다.
+`eval()`은 인자로 받은 코드를 caller의 권한으로 수행하는 위험한 함수입니다. 악의적인 영향을 받았을 수 있는 문자열을 `eval()`로 실행한다면, 당신의 웹페이지나 확장 프로그램의 권한으로 사용자의 기기에서 악의적인 코드를 수행하는 결과를 초래할 수 있습니다. 또한, 제3자 코드가 `eval()`이 호출된 위치의 스코프를 볼 수 있으며, 이를 이용해 비슷한 함수인 {{jsxref("Function")}}으로는 실현할 수 없는 공격이 가능합니다.
 
 또한 최신 JS 엔진에서 여러 코드 구조를 최적화하는 것과 달리 `eval()`은 JS 인터프리터를 사용해야 하기 때문에 다른 대안들보다 느립니다.
 
@@ -164,7 +179,7 @@ var propname = getPropName(); // "a" 또는 "b"를 반환
 eval("var result = obj." + propname);
 ```
 
-그러나 여기에서 `eval()`을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 사용하여야 합니다.
+그러나 여기에서 `eval()`을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 사용하여야 합니다.
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -225,7 +240,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-또한 [클로저](/ko/docs/Web/JavaScript/Closures)를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.
+또한 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.
 
 ### JSON 파싱 (문자열을 JavaScript 객체로 변환)
 
@@ -235,7 +250,7 @@ JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한
 
 ### 코드 대신 데이터 전달하기
 
-예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/XPath)에 스크랩 규칙을 정의할 수 있습니다.
+예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/Web/XML/XPath)에 스크랩 규칙을 정의할 수 있습니다.
 
 ### 제한된 권한으로 코드 실행하기
 
@@ -307,6 +322,6 @@ var fct2 = eval(fctStr2); // 함수를 반환
 
 ## 참고
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}}
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [WebExtensions: Using eval in content scripts](<https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)

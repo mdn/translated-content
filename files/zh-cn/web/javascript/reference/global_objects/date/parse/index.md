@@ -3,13 +3,22 @@ title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 
-{{JSRef}}
-
 **`Date.parse()`** 方法解析一个表示某个日期的字符串，并返回从 1970-1-1 00:00:00 UTC 到该日期对象（该日期对象的 UTC 时间）的毫秒数，如果该字符串无法识别，或者一些情况下，包含了不合法的日期数值（如：2015-02-31），则返回值为 NaN。
 
 不推荐在 ES5 之前使用 Date.parse 方法，因为字符串的解析完全取决于实现。直到至今，不同宿主在如何解析日期字符串上仍存在许多差异，因此最好还是手动解析日期字符串（在需要适应不同格式时库能起到很大帮助）。
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## 语法
 
@@ -22,7 +31,7 @@ Date.parse(dateString)
 ### 参数
 
 - `dateString`
-  - : 一个符合 [RFC2822](http://tools.ietf.org/html/rfc2822#page-14) 或 ISO 8601 日期格式的字符串（其他格式也许也支持，但结果可能与预期不符）。
+  - : 一个符合 [RFC2822](https://tools.ietf.org/html/rfc2822#page-14) 或 ISO 8601 日期格式的字符串（其他格式也许也支持，但结果可能与预期不符）。
 
 ### 返回值
 
@@ -32,15 +41,15 @@ Date.parse(dateString)
 
 `parse` 方法接受一个日期字符串（例如 "`Dec 25, 1995`"），并返回从 1970-1-1 00:00:00 UTC 到该日期字符串所表示日期的毫秒数。该方法在基于字符串值设置日期值时很有用，例如结合使用{{jsxref("Global_Objects/Date/setTime", "setTime()")}} 方法和 {{jsxref("Global_Objects/Date", "Date()")}} 构造函数。
 
-`parse` 方法接受一个表示时间的字符串，返回相应的时间值。该方法可以接受符合 RFC2822 / IETF 日期语法 ([RFC2822 Section 3.3](http://tools.ietf.org/html/rfc2822#page-14)) 的字符串，如 "`Mon, 25 Dec 1995 13:30:00 GMT`"。该方法能够理解美国大陆时区的缩写，但是为了更通用，应该使用时区偏移，如 "`Mon, 25 Dec 1995 13:30:00 +0430`"（格林威治的子午线向东偏移 4 小时 30 分钟）。如果没有指定时区，默认使用本地时区。
+`parse` 方法接受一个表示时间的字符串，返回相应的时间值。该方法可以接受符合 RFC2822 / IETF 日期语法 ([RFC2822 Section 3.3](https://tools.ietf.org/html/rfc2822#page-14)) 的字符串，如 "`Mon, 25 Dec 1995 13:30:00 GMT`"。该方法能够理解美国大陆时区的缩写，但是为了更通用，应该使用时区偏移，如 "`Mon, 25 Dec 1995 13:30:00 +0430`"（格林威治的子午线向东偏移 4 小时 30 分钟）。如果没有指定时区，默认使用本地时区。
 
-GMT 和 UTC 被看作相等。如果 [RFC2822 Section 3.3](http://tools.ietf.org/html/rfc2822#page-14) 格式中不包含时区信息时，会以本地时区来解析日期字符串。
+GMT 和 UTC 被看作相等。如果 [RFC2822 Section 3.3](https://tools.ietf.org/html/rfc2822#page-14) 格式中不包含时区信息时，会以本地时区来解析日期字符串。
 
 由于在解析日期字符串时存在偏差会导致结果不一致，因此推荐始终手动解析日期字符串，特别是不同的 ECMAScript 实现会把诸如“2015-10-12 12:00:00”的字符串解析为 NaN，UTC 或者本地时间。
 
 ### ECMAScript 5 ISO-8601 日期格式支持
 
-另外，日期时间字符串也可以使用 [ISO 8601](http://www.w3.org/TR/NOTE-datetime) 格式。例如，"`2011-10-10`"（仅日期）或 "`2011-10-10T14:48:00`"（日期和时间）能够作为参数被传递和解析。如果参数字符串只包含日期格式，那么将会使用 UTC 时区来解析该参数。而如果是[ISO 8601](http://www.w3.org/TR/NOTE-datetime) 格式中规定的时间加日期的格式，则将会被作为本地时区处理。
+另外，日期时间字符串也可以使用 [ISO 8601](https://www.w3.org/TR/NOTE-datetime) 格式。例如，"`2011-10-10`"（仅日期）或 "`2011-10-10T14:48:00`"（日期和时间）能够作为参数被传递和解析。如果参数字符串只包含日期格式，那么将会使用 UTC 时区来解析该参数。而如果是[ISO 8601](https://www.w3.org/TR/NOTE-datetime) 格式中规定的时间加日期的格式，则将会被作为本地时区处理。
 
 虽然在日期字符串解析过程中会使用时区修饰符，但返回值总会是从由 NaN 表示的 1970-1-1 00:00:00 UTC 到该日期字符串所表示日期的毫秒数。
 

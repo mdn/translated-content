@@ -7,9 +7,9 @@ slug: Web/API/Worker
 
 Worker 接口是 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker，只须调用 `Worker(URL)` 构造函数，函数参数 `URL` 为指定的脚本。
 
-Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者[同源](/zh-CN/docs/Web/Security/Same-origin_policy)（注意：[Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)暂时不支持嵌套 Worker）。
+Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者[同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)（注意：[Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)暂时不支持嵌套 Worker）。
 
-需要注意的是，不是所有函数和构造函数 (或者说…类) 都可以在 Worker 中使用。具体参考页面 [Worker 所支持的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。Worker 可以使用 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 发送请求，但是请求的 `responseXML` 与 `channel` 两个属性值始终返回 `null` （`fetch` 仍可正常使用，没有类似的限制）。
+需要注意的是，不是所有函数和构造函数 (或者说…类) 都可以在 Worker 中使用。具体参考页面 [Worker 所支持的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。Worker 可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 发送请求，但是请求的 `responseXML` 与 `channel` 两个属性值始终返回 `null` （`fetch` 仍可正常使用，没有类似的限制）。
 
 > [!NOTE]
 > 如果你要在火狐浏览器的扩展使用 Worker 访问 [js-ctypes](/zh-CN/docs/Mozilla/js-ctypes)，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)
@@ -39,7 +39,7 @@ _继承父接口 {{domxref("EventTarget")}} 的方法。_
 - {{domxref("Worker.postMessage()")}}
   - : 发送一条消息到最近的外层对象，消息可由任何 JavaScript 对象组成。
 - {{domxref("Worker.terminate()")}}
-  - : 立即终止 worker。该方法不会给 worker 留下任何完成操作的机会；就是简单的立即停止。Service Woker 不支持这个方法。
+  - : 立即终止 worker。该方法不会给 worker 留下任何完成操作的机会；就是简单的立即停止。Service Worker 不支持这个方法。
 
 ## 示例
 
@@ -56,7 +56,7 @@ first.onchange = function () {
 };
 ```
 
-完整的示例，请查阅 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+完整的示例，请查阅 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## 规范
 
@@ -70,7 +70,7 @@ first.onchange = function () {
 
 ### 跨域行为的错误事件
 
-浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有[`error`](/zh-CN/docs/Web/API/Element/error_event)事件发生
+浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有[`error`](/zh-CN/docs/Web/API/HTMLElement/error_event)事件发生
 
 ## 参见
 

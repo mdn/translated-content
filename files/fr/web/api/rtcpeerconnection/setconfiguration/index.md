@@ -10,7 +10,7 @@ La méthode **`RTCPeerConnection.setConfiguration()`** définit la configuration
 Le cas d'usage le plus probable (bien qu'il ne soit probablement pas répandu) est le remplacement des serveurs ICE à utiliser. Voici deux scénarios pour lesquels cela pourrait se produire :
 
 - L'objet {{domxref("RTCPeerConnection")}} a été instancié sans qu'un serveur ICE soit spécifié. Si le constructeur {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} a été appelé sans paramètre, on doit alors appeler `setConfiguration()` pour ajouter des serveurs ICE avant que la négociation ICE puisse avoir lieu.
-- La connexion doit être renégociée et il faut utiliser un autre ensemble de serveurs ICE pour une certaine raison (ex. l'utilisateur s'est déplacé dans une nouvelle région et il faut donc utiliser de nouveaux serveurs ICE régionaux). Dans ce cas, on pourra appeler `setConfiguration()` pour passer sur les serveurs régionaux puis initier [un redémarrage ICE](/fr/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
+- La connexion doit être renégociée et il faut utiliser un autre ensemble de serveurs ICE pour une certaine raison (ex. l'utilisateur s'est déplacé dans une nouvelle région et il faut donc utiliser de nouveaux serveurs ICE régionaux). Dans ce cas, on pourra appeler `setConfiguration()` pour passer sur les serveurs régionaux puis initier [un redémarrage ICE](/fr/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
 > [!NOTE]
 > On ne peut pas changer les informations d'identité d'une connexion une fois que celle-ci a été créée.

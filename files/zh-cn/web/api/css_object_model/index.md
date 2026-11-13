@@ -48,7 +48,7 @@ CSS 的值是没有类型的，也就是使用 {{JSxRef("String")}} 对象来表
 
 CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{DOMxRef("Window")}}、{{DOMxRef("Element")}}、{{DOMxRef("HTMLElement")}}、{{DOMxRef("HTMLImageElement")}}、{{DOMxRef("Range")}}、{{DOMxRef("MouseEvent")}} 和 {{DOMxRef("SVGElement")}}。
 
-### CSS 类型化对象模型
+### CSS 类型对象模型
 
 - {{DOMxRef("CSSImageValue")}}
 - {{DOMxRef("CSSKeywordValue")}}
@@ -80,8 +80,6 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 - {{DOMxRef("StylePropertyMapReadOnly")}}
 
 ### 废弃的 CSSOM 接口 {{deprecated_inline}}
-
-{{deprecated_header}}
 
 - {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}

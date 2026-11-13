@@ -5,12 +5,13 @@ slug: conflicting/Web/API/CustomElementRegistry/define
 
 {{APIRef("DOM")}}
 
-> **Nota:**document.registerElement() está depreciado em favor do customElements.define().
+> [!NOTE]
+> document.registerElement() está depreciado em favor do customElements.define().
 
-O método **`document.registerElement()`** registra um novo [elemento personalizado](/pt-BR/docs/Web/Web_Components/Custom_Elements) no browser e retorna um construtor para o novo elemento.
+O método **`document.registerElement()`** registra um novo [elemento personalizado](/pt-BR/docs/Web/API/Web_components/Using_custom_elements) no browser e retorna um construtor para o novo elemento.
 
 > [!NOTE]
-> Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja [Habilitando componentes web no Firefox.](/pt-BR/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)
+> Esta é uma tecnologia experimental. O browser você precisa usar suporte à componentes web. Veja [Habilitando componentes web no Firefox.](/pt-BR/docs/Web/API/Web_components#enabling_web_components_in_firefox)
 
 ## Sintaxe
 
@@ -58,4 +59,4 @@ mytag.textContent = "I am a my-tag element.";
 
 ## Veja também
 
-- [Elementos customizados](/pt-BR/docs/Web/Web_Components/Custom_Elements)
+- [Elementos customizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements)

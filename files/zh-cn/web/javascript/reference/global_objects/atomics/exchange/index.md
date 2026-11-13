@@ -5,11 +5,23 @@ l10n:
   sourceCommit: ec9fab3524d17932694856be045c9e50168821fd
 ---
 
-{{JSRef}}
-
 **`Atomics.exchange()`** 静态方法会将给定的值替换数组上指定位置的值，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 语法
 

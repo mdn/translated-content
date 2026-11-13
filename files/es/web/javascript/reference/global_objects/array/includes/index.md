@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 El método **`includes()`** determina si una matriz incluye un determinado elemento, devuelve `true` o `false` según corresponda.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## Sintaxis
 
@@ -29,7 +44,7 @@ arr.includes(searchElement[, fromIndex])
 Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra dentro de la matriz (o la parte de la matriz indicada por el índice `fromIndex`, si se especifica). Todos los valores de cero se consideran iguales independientemente del signo (es decir, -0 se considera igual a 0 y +0), pero `false` no se considera igual a 0.
 
 > [!NOTE]
-> Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar si se encuentra el elemento dado
+> Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar si se encuentra el elemento dado
 
 ## Ejemplos
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9409e72722add6d1c4baeaf7b262c9b0985c0bcf
 ---
 
-{{GlossarySidebar}}
-
 {{Glossary("HTML")}} **布尔属性**是表示 `true` 或 `false` 值的{{glossary("attribute", "属性")}}。如果 HTML 标签包含布尔属性——无论该属性的值如何——该属性都会在该元素上设置为 `true`。如果 HTML 标签不包含该属性，则该属性被设置为 `false`。
 
 如果属性存在，则取值可以是：
@@ -32,7 +30,7 @@ l10n:
 
 ## 参见
 
-- [布尔属性](/zh-CN/docs/Web/HTML/Attributes#布尔属性)
+- [布尔属性](/zh-CN/docs/Web/HTML/Reference/Attributes#布尔属性)
 - HTML 规范中的[布尔属性](https://html.spec.whatwg.org/#boolean-attributes)
 - 相关术语：
   - {{Glossary("Attribute", "属性")}}

@@ -1,15 +1,25 @@
 ---
 title: RegExp.prototype.unicode
+short-title: unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`unicode`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `u` フラグが使用されているかどうかを返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.unicode", "taller")}}
+
+```js interactive-example
+const regex1 = /\u{61}/;
+const regex2 = /\u{61}/u;
+
+console.log(regex1.unicode);
+// 予想される結果: false
+
+console.log(regex2.unicode);
+// 予想される結果: true
+```
 
 ## 解説
 
@@ -51,10 +61,10 @@ console.log(regex.unicode); // true
 ## 関連情報
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

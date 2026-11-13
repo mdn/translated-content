@@ -26,7 +26,7 @@ Array.isArray(obj)
 
 ## Описание
 
-За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](http://web.mit.edu/jwalden/www/isArray.html).
+За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](https://web.mit.edu/jwalden/www/isArray.html).
 
 ## Примеры
 
@@ -88,4 +88,4 @@ if (!Array.isArray) {
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxref("Array")}}

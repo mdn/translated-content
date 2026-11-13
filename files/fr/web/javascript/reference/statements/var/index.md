@@ -3,11 +3,23 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`var`** (pour variable) permet de déclarer une variable et éventuellement d'initialiser sa valeur.
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## Syntaxe
 
@@ -196,5 +208,5 @@ console.log(typeof y); // "undefined" car y est local à la fonction a
 
 ## Voir aussi
 
-- {{jsxref("Instructions/let","let")}}
-- {{jsxref("Instructions/const","const")}}
+- {{jsxref("Statements/let","let")}}
+- {{jsxref("Statements/const","const")}}

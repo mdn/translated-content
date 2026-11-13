@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
@@ -9,7 +10,16 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`flatMap()`** 메서드는 배열의 각 요소에 주어진 콜백 함수를 적용한 다음 그 결과를 한 단계씩 평탄화하여 형성된 새 배열을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.map","map()")}} 뒤에 깊이 1의 {{jsxref("Array.prototype.flat","flat()")}}을 붙이는 것(`arr.map(...args).flat()`)과 동일하지만, 두 메서드를 따로 호출하는 것보다 약간 더 효율적입니다.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.flatMap()", "shorter")}}
+
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 ## 구문
 

@@ -28,14 +28,14 @@ new ArrayBuffer(length)
 
 ### Создание буфера
 
-- [Из Base64 строки](/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Из Base64 строки](/ru/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [Из локального файла](</ru/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## Свойства
 
 - `ArrayBuffer.length`
   - : Длина конструктора `ArrayBuffer`, которая равна 1.
-- {{jsxref("ArrayBuffer.prototype")}}
+- {{jsxref("ArrayBuffer")}}
   - : Позволяет расширить прототип всех `ArrayBuffer` объектов.
 
 ## Методы
@@ -47,7 +47,7 @@ new ArrayBuffer(length)
 
 ## Пример
 
-В этом примере мы создаём 8-байтный буфер с {{jsxref("Global_Objects/Int32Array", "Int32Array")}} представлением:
+В этом примере мы создаём 8-байтный буфер с {{jsxref("Int32Array")}} представлением:
 
 ```js
 var buffer = new ArrayBuffer(8);
@@ -64,4 +64,4 @@ var view = new Int32Array(buffer);
 
 ## Также
 
-- [JavaScript типизированные массивы](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript типизированные массивы](/ru/docs/Web/JavaScript/Guide/Typed_arrays)

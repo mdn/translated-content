@@ -7,21 +7,21 @@ slug: MDN/Writing_guidelines
 
 A Rede de Desenvolvedores da Mozilla (MDN) é uma plataforma de aprendizagem em evolução para tecnologias da Web e o software que alimenta a Web, incluindo:
 
-- Padrões web como [CSS](/pt-BR/docs/CSS), [HTML](/pt-BR/docs/HTML), e [JavaScript](/pt-BR/docs/JavaScript)
-- [Open Web app development](/pt-BR/docs/Apps)
-- [Firefox add-on development](/pt-BR/docs/Add-ons)
+- Padrões web como [CSS](/pt-BR/docs/Web/CSS), [HTML](/pt-BR/docs/Web/HTML), e [JavaScript](/pt-BR/docs/Web/JavaScript)
+- [Open Web app development](/pt-BR/docs/Web/Progressive_web_apps)
+- [Firefox add-on development](/pt-BR/docs/Mozilla/Add-ons)
 
 ## Nossa missão
 
 A missão da MDN é simples: prover uma completa, exata e útil documentação para tudo sobre a open Web, sendo ele construído, suportado ou não pela Mozilla. Se é uma tecnologia aberta e Web, queremos documentá-lo.
 
-Além disso, podemos fornecer a documentação sobre como [desenvolver e contribuir com os projetos da Mozilla](/pt-BR/docs/Mozilla), [Firefox OS](/pt-BR/Firefox_OS) e [desenvolvimento de Web app](/pt-BR/Apps).
+Além disso, podemos fornecer a documentação sobre como [desenvolver e contribuir com os projetos da Mozilla](/pt-BR/docs/Mozilla), [Firefox OS](/pt-BR/Firefox_OS) e [desenvolvimento de Web app](/pt-BR/docs/Apps).
 
 Se você não tem certeza se um tópico específico deve ser abordado no MDN leia: [Isso pertence ao MDN?](/pt-BR/docs/Project:MDN/Contributing/Does_this_belong)
 
 ## Como você pode ajudar
 
-Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Quick_start), baseada em seus interesses e na sua quantidade de tempo livre.
+Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
 
 ## A comunidade MDN
 
@@ -29,9 +29,9 @@ Nossa comunidade é global! Nós temos contribuidores incríveis ao redor do mun
 
 ## Licenças e cópias de direito
 
-Os documentos wiki da MDN foram preparados com as contribuições de muitos autores, de dentro e de fora da Mozilla Foundation. A menos que seja indicado, o conteúdo está disponível sob os termos da [Creative Commons Attribution-ShareAlike license](http://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou qualquer versão mais recente. Por favor, atribua "Mozilla Contributors" e inclua um hyperlink (online) ou URL (impresso) para a página da wiki específica do conteúdo referenciado. Por exemplo, para atribuir a este artigo, você pode escrever:
+Os documentos wiki da MDN foram preparados com as contribuições de muitos autores, de dentro e de fora da Mozilla Foundation. A menos que seja indicado, o conteúdo está disponível sob os termos da [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou qualquer versão mais recente. Por favor, atribua "Mozilla Contributors" e inclua um hyperlink (online) ou URL (impresso) para a página da wiki específica do conteúdo referenciado. Por exemplo, para atribuir a este artigo, você pode escrever:
 
-> [About MDN](/pt-BR/docs/MDN/About) por [Mozilla Contributors](/pt-BR/docs/MDN/About$history) está licenciado sob [CC-BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5/).
+> [About MDN](/pt-BR/docs/MDN/Writing_guidelines) por [Mozilla Contributors](/pt-BR/docs/MDN/About$history) está licenciado sob [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
 
 Note que nesse exemplo, "Mozilla Contributors" leva para a história da página citada. Veja [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) para explicações mais detalhadas.
 
@@ -40,13 +40,14 @@ Note que nesse exemplo, "Mozilla Contributors" leva para a história da página 
 
 Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](http://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
 
-Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](http://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <http://creativecommons.org/publicdomain/zero/1.0/>".
+Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](https://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <http://creativecommons.org/publicdomain/zero/1.0/>".
 
-Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
+Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
 
 Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
 
-> **Aviso:** **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
+> [!WARNING]
+> **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
 
 Os direitos de cópia para materiais de contribuição permanecem com o(a) autor(a), a menos que ele(a) os atribua a outra pessoa.
 
@@ -87,7 +88,7 @@ Obviamente, já que a MDN é uma wiki, a melhor coisa que você pode fazer é co
 
 Como tudo o que é Mozilla, você pode reportar um problema na documentação registrando um bug. É aí que entra o registro de um [documentation request bug](https://bugzilla.mozilla.org/form.doc). Nosso útil formulário de solicitação de documentação reunirá as informações necessárias para que possamos começar a consertar o problema.
 
-Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma mais rápida de ver um problema de documentação resolvido é consertá-lo você mesmo. Veja [Criando e editando páginas](/pt-BR/docs/MDN/Contribute/Creating_and_editing_pages) para detalhes.
+Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma mais rápida de ver um problema de documentação resolvido é consertá-lo você mesmo. Veja [Criando e editando páginas](/pt-BR/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) para detalhes.
 
 ### Bugs do site ou solicitar recursos
 
@@ -101,4 +102,4 @@ Desde então, o projeto continuou a crescer e agora forma um nexo central para t
 
 ## Sobre a Mozilla
 
-Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](http://www.mozilla.org/pt-BR/mission/).
+Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](https://www.mozilla.org/pt-BR/mission/).

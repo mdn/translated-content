@@ -2,24 +2,47 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 l10n:
-  sourceCommit: 2b87789e97bfcdf33989e3b1504aec58c2106ba6
+  sourceCommit: c5a0ee66baf779b702ffae6d964d1f365381767c
 ---
 
-{{JSRef}}
+**`Map`** オブジェクト（対応表）はキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。
+キーや値には任意の値（オブジェクトと{{Glossary("Primitive", "プリミティブ値")}}）を使用することができます。
 
-**`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。キーや値には任意の値（オブジェクトと{{glossary("Primitive", "プリミティブ値")}}）を使用することができます。
+{{InteractiveExample("JavaScript デモ: Map", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+```js interactive-example
+const map = new Map();
+
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
+
+console.log(map.get("a"));
+// 予想される結果: 1
+
+map.set("a", 97);
+
+console.log(map.get("a"));
+// 予想される結果: 97
+
+console.log(map.size);
+// 予想される結果: 3
+
+map.delete("b");
+
+console.log(map.size);
+// 予想される結果: 2
+```
 
 ## 解説
 
-`Map` オブジェクトは、キーと値のペアのコレクションです。`Map` のキーは**一度しか出現しません**。`Map` の集合の中で一意です。`Map` オブジェクトはキーと値のペアで反復処理されます。{{jsxref("Statements/for...of", "for...of")}} ループは、各反復処理に対して `[キー, 値]` という 2 つのメンバーからなる配列を返します。反復処理は _挿入順_ で行われます。これは、それぞれのキーと値のペアが [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/set) メソッドによって最初にマップに挿入された順番に対応します（つまり、 `set()` が呼ばれたときには、すでに同じ値を持つキーがマップになかったということです）。
+`Map` オブジェクトは、キーと値のペアのコレクションです。`Map` のキーは**一度しか出現しません**。`Map` の集合の中で一意です。`Map` オブジェクトはキーと値のペアで反復処理されます。{{jsxref("Statements/for...of", "for...of")}} ループは、各反復処理に対して `[キー, 値]` という 2 つのメンバーからなる配列を返します。反復処理は _挿入順_ で行われます。これは、それぞれのキーと値のペアが [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/set) メソッドによって最初に対応表に挿入された順番に対応します（つまり、 `set()` が呼ばれたときには、すでに同じ値を持つキーが対応表になかったということです）。
 
-仕様書では、「平均して、集合の要素数に対してサブリニアなアクセス時刻を提供する」マップを実装することを要求しています。したがって、複雑度が O(N) よりも高い場合、内部的にはハッシュ表（O(1) ルックアップ）、探索木（O(log(N)) ルックアップ）、あるいは他のデータ構造として表すことが可能です。
+仕様書では、「平均して、集合の要素数に対してサブリニアなアクセス時刻を提供する」対応表を実装することを要求しています。したがって、複雑度が O(N) よりも高い場合、内部的にはハッシュ表（O(1) ルックアップ）、探索木（O(log(N)) ルックアップ）、あるいは他のデータ構造として表すことが可能です。
 
 ### キーの等価性
 
-キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
+キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。また、オブジェクトキーの場合、等価性（同じかどうか）の判定はオブジェクトの同一性に基づきます。値ではなく、参照によって比較されます。例えば、[Map オブジェクトの使用](#map_オブジェクトの使用) をご覧ください。
 
 ### Object と Map の比較
 
@@ -64,7 +87,7 @@ l10n:
           ユーザーが提供したキーと値のペアを <code>Object</code> に設定すると、攻撃者がオブジェクトのプロトタイプを上書きできる可能性があり、
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             オブジェクトインジェクション攻撃
-          </a>につながる可能性があります。偶発的なキーの問題と同様に、これも<code>null</code>-prototypeオブジェクトを使用することによって軽減することができます。
+          </a>や<a href="/ja/docs/Web/Security/Attacks/Prototype_pollution">プロトタイプ汚染攻撃</a>につながる可能性があります。偶発的なキーの問題と同様に、これも<code>null</code>-prototypeオブジェクトを使用することによって軽減することができます。
         </p>
       </td>
     </tr>
@@ -82,7 +105,7 @@ l10n:
       <th scope="row">キーの順序</th>
       <td>
         <p>
-          <code>Map</code> のキーは、単純で直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>Map</code> オブジェクトは挿入順でキーを返します。
+          <code>Map</code> のキーは、直感的な方法で順序付けられます。すなわち、反復処理を行うと、 <code>Map</code> オブジェクトは挿入順でキーを返します。
         </p>
       </td>
       <td>
@@ -91,14 +114,7 @@ l10n:
         </p>
         <p>
           この順序は ECMAScript 2015 で初めて自身のプロパティに対してのみ定義されましたが、 ECMAScript 2020 では継承されたプロパティに対しても同様に順序が定義されています。
-          <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys"
-            >OrdinaryOwnPropertyKeys</a
-          >
-          と
-          <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties"
-            >EnumerateObjectProperties</a
-          >
-          の抽象指定操作を参照してください。しかし、オブジェクトのプロパティが<strong>すべて</strong>反復処理される単一の単一のメカニズムはないことに注意してください。
+          しかし、オブジェクトのプロパティが<strong>すべて</strong>反復処理される単一のメカニズムはないことに注意してください。
           （{{jsxref("Statements/for...in", "for-in")}} は列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.keys")}} は自分自身の列挙可能な文字列キーのプロパティのみを含む、 {{jsxref("Object.getOwnPropertyNames")}} は列挙不可能な場合でも自分自身の文字列キーのプロパティを含む、 {{jsxref("Object.getOwnPropertySymbols")}} は、
           <code>Symbol</code> キーを持つプロパティに対しても同じことを行う、など。）
         </p>
@@ -225,9 +241,9 @@ console.log(contacts.size); // 1
 
 **ブラウザーの `Map` 風オブジェクト** (または「Map 風オブジェクト」) は、多くの点で `Map` のようにふるまう [Web API](/ja/docs/Web/API) のインターフェイスです。
 
-`Map` と同様に、エントリーはオブジェクトに追加されたのと同じ順番で走査できます。
+`Map` と同様に、項目はオブジェクトに追加されたのと同じ順番で走査できます。
 また、`Map` 風オブジェクトと `Map` は同じ名前で同じ挙動のプロパティおよびメソッドを持ちます。
-しかし、`Map` と違い、各エントリーのキーと値には事前に定義された特定の型しか使用できません。
+しかし、`Map` と違い、各項目のキーと値には事前に定義された特定の型しか使用できません。
 
 使用可能な型は、仕様書の IDL 定義で設定されています。
 たとえば、{{domxref("RTCStatsReport")}} はキーには文字列を、値にはオブジェクトを用いなければならない `Map` 風オブジェクトです。
@@ -241,19 +257,20 @@ interface RTCStatsReport {
 
 `Map` 風オブジェクトは読み取り専用のことも、読み書き可能なこともあります。(上の IDL の `readonly` キーワードに注目してください)
 
-- 読み取り専用の `Map` 風オブジェクトは、プロパティ [`size`](#map.prototype.size) と、メソッド [`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values)、[`@@iterator`](#map.prototypeiterator) を持ちます。
-- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド [`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete)、[`set()`](#map.prototype.set) を持ちます。
+- 読み取り専用の `Map` 風オブジェクトは、プロパティ {{jsxref("Map/size", "size")}} と、メソッド {{jsxref("Map/entries", "entries()")}}, {{jsxref("Map/forEach", "forEach()")}}, {{jsxref("Map/get", "get()")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}, {{jsxref("Map/values", "values()")}}, [`Symbol.iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator) を持ちます。
+- 書き込み可能な `Map` 風オブジェクトは、これに加えてメソッド {{jsxref("Map/clear", "clear()")}}, {{jsxref("Map/delete", "delete()")}}, {{jsxref("Map/set", "set()")}} を持ちます。
 
 これらのメソッドとプロパティは、キーと値の型の制約を除いて、`Map` の対応するエンティティと同様にふるまいます。
 
 以下は、読み取り専用の `Map` 風ブラウザーオブジェクトの例です。
 
 - {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("EventCounts")}}
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
+- {{domxref("RTCStatsReport")}}
 
 ## コンストラクター
 
@@ -262,38 +279,51 @@ interface RTCStatsReport {
 
 ## 静的プロパティ
 
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- [`Map[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : 派生クラスを生成するためのコンストラクター関数です。
+
+## 静的メソッド
+
+- {{jsxref("Map.groupBy()")}}
+  - : 与えられた反復可能な要素を、与えられたコールバック関数から返された値を使用してグループ化します。最後に返される `Map` は、テスト関数から得られた一意の値をキーとして使用しており、各グループの要素の配列を取得するために使用できます。
 
 ## インスタンスプロパティ
 
-- `Map.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Map"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+これらのプロパティは `Map.prototype` で定義され、すべての `Map` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "Map.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。`Map` インスタンスの場合、初期値は {{jsxref("Map/Map", "Map")}} コンストラクターです。
 - {{jsxref("Map.prototype.size")}}
   - : `Map` オブジェクトの中のキーと値のペアの数を返します。
+- `Map.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Map"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Map.prototype.clear()")}}
   - : `Map` オブジェクトからすべてのキーと値のペアを削除します。
 - {{jsxref("Map.prototype.delete()")}}
-  - : `Map` オブジェクトに要素が存在し、削除された場合は `true` を返します。要素が存在しなければ `false` を返します。その後では `Map.prototype.has(key)` が `false` を返すようになります。
-- {{jsxref("Map.prototype.get()")}}
-  - : `key` で指定されたキーに結び付けられた値を返します。存在しない場合は `undefined` を返します。
-- {{jsxref("Map.prototype.has()")}}
-  - : 論理値で、渡されたキーに結び付けられた要素が `Map` オブジェクト内に存在するかどうかを返します。
-- {{jsxref("Map.prototype.set()")}}
-  - : `Map` オブジェクト内の `key` で指定されたキーの値を `value` に設定します。その `Map` オブジェクトを返します。
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
-  - : `Map` オブジェクト内の各要素の `[key, value] の配列` が挿入順で含む、新しいイテレーターオブジェクトを返します。
-- {{jsxref("Map.prototype.keys()")}}
-  - : `Map` オブジェクト内の各要素のキーが挿入順で含む、新しいイテレーターオブジェクトを返します。
-- {{jsxref("Map.prototype.values()")}}
-  - : `Map` オブジェクト内の各要素の値が挿入順で含む、新しいイテレーターオブジェクトを返します。
+  - : この `Map` から、キーで指定された項目を除去します。
 - {{jsxref("Map.prototype.entries()")}}
-  - : `Map` オブジェクト内の要素に対して挿入順にすべての要素の `[key, value]` の配列を含む、新しいイテレーターオブジェクトを返します。
+  - : `Map` オブジェクトの各要素の `[key, value]` からなる 2 つの要素の配列を挿入順で含む新しいイテレーターオブジェクトを返します。
 - {{jsxref("Map.prototype.forEach()")}}
-  - : `callbackFn` を、 `Map` オブジェクトに存在するそれぞれのキーと値のペアに対して 1 回ずつ、挿入順に呼び出します。 `thisArg` 引数が `forEach` に与えられた場合は、それぞれのコールバックでこれを `this` の値として使用します。
+  - : `Map` オブジェクトに存在するキーと値のペアの数だけ、挿入順に `callbackFn` を呼び出します。 `thisArg` 引数が `forEach` に渡された場合、各コールバックの `this` 値として使用されます。
+- {{jsxref("Map.prototype.get()")}}
+  - : この `Map` 内のキーに対応する値を返します。該当するキーがない場合は `undefined` を返します。
+- {{jsxref("Map.prototype.getOrInsert()")}}
+  - : この `Map` 内に指定されたキーに対応する値を返します。キーが存在しない場合は、そのキーと指定されたデフォルト値を持つ新しい項目を挿入し、挿入された値を返します。
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
+  - : この `Map` 内の指定されたキーに対応する値を返します。キーが存在しない場合は、そのキーと、指定されたコールバックから計算されたデフォルト値を持つ新しい項目を挿入し、挿入された値を返します。
+- {{jsxref("Map.prototype.has()")}}
+  - : 論理値で、指定されたキーを持つ項目が、この `Map` に存在するかどうかを示す値を返します。
+- {{jsxref("Map.prototype.keys()")}}
+  - : この `Map` オブジェクト内の各要素のキーが挿入順で含まれる、新しいイテレーターオブジェクトを返します。
+- {{jsxref("Map.prototype.set()")}}
+  - : この `Map` に、指定されたキーと値を持つ新しい項目を追加します。また、キーがすでに存在する場合は、既存の項目を更新します。
+- {{jsxref("Map.prototype.values()")}}
+  - : `Map` オブジェクト内の各要素の値が挿入順で含まれる、新しいイテレーターオブジェクトを返します。
+- [`Map.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
+  - : `Map` オブジェクト内の各要素の `[key, value]` の配列が挿入順で含まれる、新しいイテレーターオブジェクトを返します。
 
 ## 例
 
@@ -302,14 +332,14 @@ interface RTCStatsReport {
 ```js
 const myMap = new Map();
 
-const keyString = '文字列'
+const keyString = "文字列";
 const keyObj = {};
-const keyFunc  function() {};
+const keyFunc = () => {};
 
 // 値を設定する
 myMap.set(keyString, "'文字列' と結び付けられた値");
-myMap.set(keyObj, 'keyObj と結び付けられた値');
-myMap.set(keyFunc, 'keyFunc と結び付けられた値');
+myMap.set(keyObj, "keyObj と結び付けられた値");
+myMap.set(keyFunc, "keyFunc と結び付けられた値");
 
 console.log(myMap.size); // 3
 
@@ -318,9 +348,9 @@ console.log(myMap.get(keyString)); // "'文字列' と結び付けられた値"
 console.log(myMap.get(keyObj)); // "keyObj と結び付けられた値"
 console.log(myMap.get(keyFunc)); // "keyFunc と結び付けられた値"
 
-console.log(myMap.get('文字列')); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
+console.log(myMap.get("文字列")); // "'文字列' と結び付けられた値"。 keyString === '文字列' であるため
 console.log(myMap.get({})); // undefined, keyObj !== {} であるため
-console.log(myMap.get(function() {})); // undefined, keyFunc !== function () {} であるため
+console.log(myMap.get(() => {})); // undefined, keyFunc !== () => {} であるため
 ```
 
 ### NaN を Map のキーとして使用
@@ -341,7 +371,7 @@ myMap.get(otherNaN);
 
 ### for..of を使用した Map の反復処理
 
-マップは `for..of` ループを使用して反復処理を行うことができます。
+対応表は `for..of` ループを使用して反復処理を行うことができます。
 
 ```js
 const myMap = new Map();
@@ -375,7 +405,7 @@ for (const [key, value] of myMap.entries()) {
 
 ### forEach() で Map を反復処理
 
-マップは {{jsxref("Map.prototype.forEach", "forEach()")}} メソッドを使用して反復できます。
+対応表は {{jsxref("Map/forEach", "forEach()")}} メソッドを使用して反復できます。
 
 ```js
 myMap.forEach((value, key) => {
@@ -393,12 +423,12 @@ const kvArray = [
   ["キー2", "値2"],
 ];
 
-// 通常の Map コンストラクターを使って、キーと値の 2 次元配列をマップに変換する
+// 通常の Map コンストラクターを使って、キーと値の 2 次元配列を対応表に変換する
 const myMap = new Map(kvArray);
 
-console.log(myMap.get("キー1")); // "値1" を返す
+console.log(myMap.get("キー1")); // "値1"
 
-// 展開演算子を使って、マップをキー・値の 2 次元配列に変換する
+// 展開演算子を使って、対応表をキー・値の 2 次元配列に変換する
 console.log(Array.from(myMap)); // kvArray とまったく同じ Array を表示する
 
 // あるいは展開演算子をキーまたは値のイテレーターに使って、キーまたは値のみの配列を得る
@@ -418,12 +448,13 @@ const original = new Map([[1, "one"]]);
 const clone = new Map(original);
 
 console.log(clone.get(1)); // one
-console.log(original === clone); // false (useful for shallow comparison)
+console.log(original === clone); // false （シャロー比較に便利）
 ```
 
-> **メモ:** *データ自身*は複製されないことに注意しておいてください。
+> [!NOTE]
+> データ自身は複製されないことに注意しておいてください。言い換えれば、これは `Map` の[シャローコピー](/ja/docs/Glossary/Shallow_copy)にすぎません。
 
-マップはキーの固有性を保持しながら混合可能です。
+対応表はキーの固有性を保持しながら混合可能です。
 
 ```js
 const first = new Map([
@@ -437,7 +468,7 @@ const second = new Map([
   [2, "dos"],
 ]);
 
-// 2 つのマップを混合します。重複するキーは後勝ちになります。
+// 2 つの対応表を混合します。重複するキーは後勝ちになります。
 // スプレッド演算子は基本的に Map を Array に変換します。
 const merged = new Map([...first, ...second]);
 
@@ -460,10 +491,10 @@ const second = new Map([
   [2, "dos"],
 ]);
 
-// マップと配列を混合します。重複するキーは後勝ちになります。
-const merged = new Map([...first, ...second, [1, "eins"]]);
+// 対応表と配列を混合します。重複するキーは後勝ちになります。
+const merged = new Map([...first, ...second, [1, "un"]]);
 
-console.log(merged.get(1)); // eins
+console.log(merged.get(1)); // un
 console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
 ```
@@ -478,7 +509,8 @@ console.log(merged.get(3)); // three
 
 ## 関連情報
 
-- `Map` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#map) で利用できます
+- [`Map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#map)
+- [es-shims による `Map` のポリフィル](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

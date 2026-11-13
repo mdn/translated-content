@@ -3,8 +3,6 @@ title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -18,7 +16,7 @@ SyntaxError: missing : after property id (Firefox)
 
 ## Quel est le problème ?
 
-Lorsqu'on crée un objet en utilisant un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet), il faut utiliser un deux-points ( : ) afin de séparer les clés des valeurs pour les propriétés de l'objet.
+Lorsqu'on crée un objet en utilisant un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer), il faut utiliser un deux-points ( : ) afin de séparer les clés des valeurs pour les propriétés de l'objet.
 
 ```js
 var obj = { cleDeLaPropriete: "valeur" };
@@ -78,4 +76,4 @@ var obj = { ["tr" + "uc"]: "toto" };
 
 ## Voir aussi
 
-- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet)
+- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)

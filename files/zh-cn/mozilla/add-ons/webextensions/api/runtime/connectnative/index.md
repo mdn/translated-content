@@ -3,8 +3,6 @@ title: 连接本地应用程序方法 - runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
 
-{{AddonSidebar}}
-
 该方法能够把附加组件和用户计算机上的一个本地应用程序相连接。同时我们需要本地应用程序的名称作为参数。当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者。之后可以通过该对象的 Port.onMessage() 和 Port.postMessage() 方法来和本地应用程序进行信息交互。本地应用程序会一直运行直到退出，除非调用了 `Port.disconnect()`方法，亦或创建该 Port 对象的页面被摧毁了。一旦 Port 对象断开连接，浏览器会给该进程几秒的时间以便安全优雅的退出和释放，之后如果发现该进程没退出的话就直接暴力干掉。
 
 更多信息，请查看 [Native messaging](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
@@ -20,7 +18,7 @@ var port = browser.runtime.connectNative(
 ### 参数
 
 - `application`
-  - : 值类型为 `string`。该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest) 中的"name"特性的值一致。
+  - : 值类型为 `string`。该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest) 中的"name"特性的值一致。
 
 ### 返回值
 
@@ -59,7 +57,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 是基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-connectNative) API。本文档采自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
+> 此 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-connectNative) API。该文档衍生自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -43,7 +43,7 @@ l10n:
 
 ### 相关主题
 
-- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
 - [WebSocket](/zh-CN/docs/Web/API/WebSockets_API)
 

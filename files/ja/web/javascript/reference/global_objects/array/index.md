@@ -2,25 +2,23 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 7c2fdcaace1ab622a1055b7cc710297c452ce9ee
 ---
 
-{{JSRef}}
-
-**`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数の項目の集合を単一の変数名の下に格納](/ja/docs/Learn/JavaScript/First_steps/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
+**`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
 
 ## 解説
 
 JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)ではなく、主に次のような性質を持つ `Array` オブジェクトです。
 
-- **JavaScript の配列はリサイズ可能**であり、**異なる[データ型](/ja/docs/Web/JavaScript/Data_structures)を交ぜて格納することができます**。（これらの性質が望ましくない場合は、代わりに[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を使用してください）。
-- **JavaScript の配列は連想配列ではありません**。配列の要素はインデックスとして任意の文字列を使用してアクセスすることができません。非負の整数（またはそれぞれの文字列表現）をインデックスとして使用してアクセスする必要があります。
+- **JavaScript の配列はリサイズ可能**であり、**異なる[データ型](/ja/docs/Web/JavaScript/Guide/Data_structures)を交ぜて格納することができます**。（これらの性質が望ましくない場合は、代わりに[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を使用してください）。
+- **JavaScript の配列は連想配列ではありません**。配列の要素は添字として任意の文字列を使用してアクセスすることができません。非負の整数（またはそれぞれの文字列表現）を添字として使用してアクセスする必要があります。
 - **JavaScript の配列は[ゼロオリジン](https://ja.wikipedia.org/wiki/オリジン)です**。配列の最初の要素は `0` の位置にあり、 2 番目の要素は `1` の位置にあるといった具合です。そして、最後の要素は配列の {{jsxref("Array/length", "length")}} プロパティの値から `1` を引いた位置になります。
 - **JavaScript の[配列コピー操作](#配列のコピー)は[シャローコピー](/ja/docs/Glossary/Shallow_copy)を生成します**。（JavaScript オブジェクトに対するすべての標準組み込みコピー操作は、[ディープコピー](/ja/docs/Glossary/Deep_copy)ではなく、シャローコピーを作成します）。
 
-### 配列のインデックス
+### 配列の添字
 
-`Array` オブジェクトは要素のインデックスとして任意の文字列を（[連想配列](https://en.wikipedia.org/wiki/Associative_array)のように）使用することはできません。非負の整数（またはその文字列形式）を使用しなければなりません。整数以外の値で設定したりアクセスしたりすると、配列のリスト自体の要素を設定したり取り出したりすることはできませんが、その配列の[オブジェクトプロパティの集合](/ja/docs/Web/JavaScript/Data_structures#プロパティ)に関連する変数を設定したりアクセスしたりすることができます。配列のオブジェクトプロパティと配列要素のリストは別個のものであり、配列の[探索や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列のメソッド)はこれらの名前付きプロパティに適用することができません。
+`Array` オブジェクトは要素の添字として任意の文字列を（[連想配列](https://en.wikipedia.org/wiki/Associative_array)のように）使用することはできません。非負の整数（またはその文字列形式）を使用しなければなりません。整数以外の値で設定したりアクセスしたりすると、配列のリスト自体の要素を設定したり取り出したりすることはできませんが、その配列の[オブジェクトプロパティの集合](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)に関連する変数を設定したりアクセスしたりすることができます。配列のオブジェクトプロパティと配列要素のリストは別個のものであり、配列の[探索や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列のメソッド)はこれらの名前付きプロパティに適用することができません。
 
 `toString` が一つのプロパティであるのと同様に（ただし厳密には `toString()` はメソッドですが）、配列における配列要素はオブジェクトのプロパティです。しかし、次のように配列にアクセスしようとすると、プロパティ名が妥当でないため、構文エラーが発生します。
 
@@ -28,15 +26,15 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 arr.0; // 構文エラー
 ```
 
-JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使うことはできません。また、配列のインデックスを引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
+JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
-`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
+`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためです。このため、以下の例は `true` がログ出力されます。
 
 ```js
 console.log(years["2"] !== years["02"]);
 ```
 
-`years['2']` だけが実際の配列のインデックスです。 `years['02']` は自由な文字列のプロパティであり、配列の反復処理では処理されません。
+`years['2']` だけが実際の配列の添字です。 `years['02']` は自由な文字列のプロパティであり、配列の反復処理では処理されません。
 
 ### length と数値プロパティとの関係
 
@@ -52,7 +50,7 @@ fruits.push("バナナ", "りんご", "もも");
 console.log(fruits.length); // 3
 ```
 
-JavaScript の配列で、配列のインデックスとして妥当なプロパティであり、かつ現在の配列の範囲の外にあるインデックスを設定すると、エンジンは配列の {{jsxref("Array/length", "length")}} プロパティを更新します。
+JavaScript の配列で、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array/length", "length")}} プロパティを更新します。
 
 ```js
 fruits[5] = "マンゴー";
@@ -83,43 +81,44 @@ console.log(fruits.length); // 2
 
 ### 配列メソッドと空のスロット
 
-[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)において空のスロットは、配列のメソッド間で一貫性のない動作をします。一般に、古いメソッドは空のスロットをスキップしますが、新しいメソッドはそれを `undefined` として扱う傾向があります。
+[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)で空のスロットに遭遇した場合、配列メソッドの挙動はさまざまです。一般的に、古いメソッド（`forEach` など）では、空のスロットと `undefined` の値を格納する位置を異なる方法で処理します。
 
-複数の要素を反復処理するメソッドのうち、以下のものはインデックスにアクセスする前に [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) によるチェックを行い、空のスロットと `undefined` を混同しないようにします。
+空のスロットに特別な処理を行うメソッドには、 {{jsxref("Array/concat", "concat()")}}, {{jsxref("Array/copyWithin", "copyWithin()")}}, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/flat", "flat()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/forEach", "forEach()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/reduce", "reduce()")}}, {{jsxref("Array/reduceRight", "reduceRight()")}}, {{jsxref("Array/reverse", "reverse()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/some", "some()")}}, {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/splice", "splice()")}} があります。`forEach` などの反復処理メソッドは、空のスロットをまったく処理しません。他にも `concat` や `copyWithin` など、コピーする際に空の要素を維持するメソッドもありますが、結局のところ配列は疎のままです。
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/indexOf", "indexOf()")}}
-- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/some", "some()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
+```js
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+colors.forEach((item, index) => {
+  console.log(`${index}: ${item}`);
+});
+// 出力:
+// 0: red
+// 1: yellow
+// 2: blue
+// 5: purple
 
-空のスロットを具体的にどのように扱うかについては、各メソッドのページを参照してください。
+colors.reverse(); // ['purple', 空 × 2, 'blue', 'yellow', 'red']
+```
 
-以下のメソッドは、空のスロットを `undefined` であるかのように扱います。
+新しいメソッド（`keys` など）は、空のスロットを特別扱いせず、`undefined` が格納されているかのように扱います。空のスロットと `undefined` 要素を同一視するメソッドには、{{jsxref("Array/entries", "entries()")}}, {{jsxref("Array/fill", "fill()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/includes", "includes()")}}, {{jsxref("Array/join", "join()")}}, {{jsxref("Array/keys", "keys()")}}, {{jsxref("Array/toLocaleString", "toLocaleString()")}}, {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, {{jsxref("Array/values", "values()")}}, {{jsxref("Array/with", "with()")}} などがあります。
 
-- {{jsxref("Array/entries", "entries()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/includes", "includes()")}}
-- {{jsxref("Array/join", "join()")}}
-- {{jsxref("Array/keys", "keys()")}}
-- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
-- {{jsxref("Array/values", "values()")}}
+```js
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+const iterator = colors.keys();
+for (const key of iterator) {
+  console.log(`${key}: ${colors[key]}`);
+}
+// 出力
+// 0: red
+// 1: yellow
+// 2: blue
+// 3: undefined
+// 4: undefined
+// 5: purple
+
+const newColors = colors.toReversed(); // ['purple', undefined, undefined, 'blue', 'yellow', 'red']
+```
 
 ### コピーメソッドと変更メソッド
 
@@ -130,24 +129,11 @@ console.log(fruits.length); // 2
 
 他にも、メソッドが呼び出された配列を変更するメソッドがあります。この場合、メソッドによって返値が異なります。あるものは同じ配列への参照を、あるものは新しい配列の長さを返します。
 
-以下のメソッドは、 [`this.constructor[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) にアクセスして使用するコンストラクターを決定し、新しい配列を作成します。
+[`this.constructor[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) にアクセスして使用するコンストラクターを決定し、新しい配列を作成するメソッドは、{{jsxref("Array/concat", "concat()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/flat", "flat()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/splice", "splice()")}}（返される要素を取り除いた配列を構成するため）です。
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/splice", "splice()")}}（返される要素を取り除いた配列を構成するため）
+常に `Array` ベースのコンストラクターで新しい配列を作成するメソッドは、{{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, {{jsxref("Array/with", "with()")}} です。
 
-以下のメソッドは常に `Array` ベースのコンストラクターで新しい配列を作成します。
-
-- {{jsxref("Array/toReversed", "toReversed()")}}
-- {{jsxref("Array/toSorted", "toSorted()")}}
-- {{jsxref("Array/toSpliced", "toSpliced()")}}
-- {{jsxref("Array/with", "with()")}}
-
-以下の表は、元の配列を変更メソッドと、それに対応する変更しない代替メソッドの一覧です。
+次の表は、元の配列を変更メソッドと、それに対応する変更しない代替メソッドの一覧です。
 
 | 変更メソッド                                   | 変更しない代替メソッド                                   |
 | ---------------------------------------------- | -------------------------------------------------------- |
@@ -182,7 +168,7 @@ method(callbackFn, thisArg)
 - `element`
   - : 配列の中で現在処理されている要素。
 - `index`
-  - : 配列の中で、現在処理中の要素のインデックス。
+  - : 配列の中で、現在処理中の要素の添字。
 - `array`
   - : メソッドが呼び出された配列。
 
@@ -190,33 +176,43 @@ method(callbackFn, thisArg)
 
 引数 `thisArg` （既定値は `undefined`）は、`callbackFn` を呼び出す際に `this` 値として使用されます。`callbackFn` から最終的に見える `this` 値は、[通常のルール](/ja/docs/Web/JavaScript/Reference/Operators/this)に従って決定します。もし `callbackFn` が[厳格モードではない](/ja/docs/Web/JavaScript/Reference/Strict_mode#no_this_substitution)のであれば、`this` の値がプリミティブ型であった場合はオブジェクトにラップされ、`undefined`/`null` の場合は [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) に置き換わります。`callbackFn` が[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)で定義されていた場合は、`thisArg` 引数は関係ありません。アロー関数には自分自身の `this` の{{Glossary("binding", "バインディング")}}がないためです。
 
+`callbackFn` に渡される引数 `array` は、反復処理中に別の要素を読み込みたい場合に最も便利です。なぜなら、現在の配列を参照する既存の変数が常に存在するとは限らないからです。通常、反復処理中に配列を変更すべきではありません（[反復処理内での初期配列の変更](#反復処理内での初期配列の変更)を参照）。しかし、この引数を使用して変更することもできます。配列引数は、`map()`、`filter()`、`flatMap()` などのメソッドの場合、構築中の配列ではありません。構築中の配列にコールバック関数からアクセスする方法はありません。
+
 すべての反復可能オブジェクトは[コピー可能](#コピーメソッドと変更メソッド)で[汎用性](#汎用的な配列メソッド)がありますが、[空のスロット](#配列メソッドと空のスロット)では異なる形で動作します。
 
-以下のメソッドは反復可能です。
-
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/some", "some()")}}
+反復処理可能なメソッドは、{{jsxref("Array/every", "every()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/forEach", "forEach()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/some", "some()")}} です。
 
 具体的には、{{jsxref("Array/every", "every()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/some", "some()")}} は常にすべての要素に対して `callbackFn` を呼び出すわけではなく、返値が決定するとすぐに反復処理を停止します。
 
-他にもコールバック関数を受け取り、配列のそれぞれの要素に対して最大1回実行するメソッドが2種類ありますが、一般的な反復処理メソッドとは少し異なる形式を持っています（`thisArg` を受け入れないなど）。
+{{jsxref("Array/reduce", "reduce()")}} および {{jsxref("Array/reduceRight", "reduceRight()")}} メソッドもコールバック関数を取り、配列のそれぞれの要素に対して最大 1 回実行しますが、一般的な反復処理メソッドとは少し異なる形式を持っています（`thisArg` を受け入れないなど）。
 
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
+{{jsxref("Array/sort", "sort()")}} メソッドもコールバック関数を取りますが、反復処理するメソッドではありません。配列の配置を変更し、`thisArg` を受け入れず、1 つの要素に対して複数回コールバックを呼び出すことがあります。
 
-{{jsxref("Array/sort", "sort()")}} メソッドもコールバック関数を取りますが、反復処理するメソッドではありません。配列の配置を変更し、`thisArg` を受け入れず、1 つのインデックスに対して複数回コールバックを呼び出すことがあります。
+反復処理メソッドは、以下のように配列を反復処理します（技術的な詳細は省略します）。
+
+```js
+function method(callbackFn, thisArg) {
+  const length = this.length;
+  for (let i = 0; i < length; i++) {
+    if (i in this) {
+      const result = callbackFn.call(thisArg, this[i], i, this);
+      // 結果に対して何かをする。早く戻ることもある
+    }
+  }
+}
+```
+
+以下の点に注意してください。
+
+1. すべてのメソッドが `i in this` の検査を行うわけではありません。 `find`、`findIndex`、`findLast`、`findLastIndex` の核メソッドは行いませんが、他のメソッドは行います。
+2. `length` は、ループ開始前に記憶されます。これは、反復処理中の挿入や削除を処理する方法に影響します（[反復処理内での初期配列の変更](#反復処理内での初期配列の変更)を参照）。
+3. このメソッドは配列の要素を記憶しないため、反復処理中に要素が変更された場合、新しい値が取得される可能性があります。
+4. 上記のコードは、添字の昇順で配列を反復処理します。添字の降順で反復処理（`for (let i = length - 1; i >= 0; i--)`）するメソッドは `reduceRight()`、`findLast()`、`findLastIndex()` です。
+5. `reduce` と `reduceRight` は、シグネチャが若干異なり、常に最初の要素または最後の要素から始めるわけではありません。
 
 ### 汎用的な配列メソッド
 
-配列メソッドは常に汎用的であり、配列オブジェクトの内部データにはアクセスしません。配列の要素には `length` プロパティを通してアクセスし、インデックスの要素にはアクセスするだけです。つまり、配列風のオブジェクトに対しても呼び出すことができます。
+配列メソッドは常に汎用的であり、配列オブジェクトの内部データにはアクセスしません。配列の要素には `length` プロパティを通してアクセスし、その位置の要素をアクセスするだけです。つまり、配列風オブジェクトに対しても呼び出すことができます。
 
 ```js
 const arrayLike = {
@@ -247,7 +243,7 @@ console.log(a.length); // 0
 
 #### 配列風オブジェクト
 
-[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)とは、上記の `length` の処理で例外が発生しないオブジェクトのことです。具体的に言うと、このようなオブジェクトには実際に `length` プロパティがあり、`0` から `length - 1` までのインデックスつき要素を持つことが期待されます（すべてのインデックスが存在するわけではない場合は、機能的に[疎配列](#配列メソッドと空のスロット)と同等となります）。配列メソッドが配列風オブジェクトを処理するとき、 0 より小さいか `length - 1` より大きい整数インデックスは無視されます。
+[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)とは、上記の `length` の処理で例外が発生しないオブジェクトのことです。具体的に言うと、このようなオブジェクトには実際に `length` プロパティがあり、`0` から `length - 1` までの添字つき要素を持つことが期待されます（すべての要素が存在するわけではない場合は、機能的に[疎配列](#配列メソッドと空のスロット)と同等となります）。配列メソッドが配列風オブジェクトを処理するとき、 0 より小さいか `length - 1` より大きい整数の添字は無視されます。
 
 多くの DOM オブジェクトは、例えば [`NodeList`](/ja/docs/Web/API/NodeList) や [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) は配列風です。また、[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトも配列風です。自分自身に配列メソッドがなくても、その配列メソッドを呼び出すことができます。
 
@@ -266,7 +262,7 @@ f("a", "b"); // 'a+b'
 
 ## 静的プロパティ
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- [`Array[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : `Array` コンストラクターを返します。
 
 ## 静的メソッド
@@ -286,7 +282,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : このインスタンスオブジェクトを作成したコンストラクター関数です。 `Array` インスタンスの場合、初期値は {{jsxref("Array/Array", "Array")}} コンストラクターです。
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : ES2015 版以前の ECMAScript 標準に含まれておらず、 [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) による文のバインドの目的には無視されるプロパティ名を含みます。
 
 これらのプロパティはそれぞれの `Array` インスタンスが自分自身で持つプロパティです。
@@ -305,7 +301,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.entries()")}}
   - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
-  - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
+  - : 配列内で、指定されたテスト関数の条件を満たさない要素を見つけた場合は `false` を返します。それ以外の場合は `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
   - : 配列内の指定した開始位置から終了位置までの要素を固定値で埋めます。
 - {{jsxref("Array.prototype.filter()")}}
@@ -313,11 +309,11 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.find()")}}
   - : 指定されたたテスト関数を満たす、配列の最初の要素の値を返します。適切な要素が見つからなかった場合は `undefined` を返します。
 - {{jsxref("Array.prototype.findIndex()")}}
-  - : 指定されたテスト関数を満たす、配列の最初の要素のインデックスを返します。適切な要素が見つからなかった場合は `-1` を返します。
+  - : 指定されたテスト関数を満たす、配列の最初の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
 - {{jsxref("Array.prototype.findLast()")}}
   - : 指定されたたテスト関数を満たす、配列の最後の要素の値を返します。適切な要素が見つからなかった場合は `undefined` を返します。
 - {{jsxref("Array.prototype.findLastIndex()")}}
-  - : 指定されたテスト関数を満たす、配列の最後の要素のインデックスを返します。適切な要素が見つからなかった場合は `-1` を返します。
+  - : 指定されたテスト関数を満たす、配列の最後の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
 - {{jsxref("Array.prototype.flat()")}}
   - : すべての部分配列の要素を指定された深さまで再帰的に連結した新しい配列を返します。
 - {{jsxref("Array.prototype.flatMap()")}}
@@ -327,13 +323,13 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.includes()")}}
   - : この配列が特定の要素を含むかどうか判定し、その結果を `true` または `false` で返します。
 - {{jsxref("Array.prototype.indexOf()")}}
-  - : 指定された値と等しい値を持つ最初の（インデックスの一番小さい）要素のインデックスを返します。見つからない場合、`-1` を返します。
+  - : 指定された値と等しい値を持つ最初の（添字の一番小さい）要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.join()")}}
-  - : 配列のすべての要素を結合した文字列を返します。
+  - : この配列内のすべての要素を、カンマまたは指定された区切り文字列で区切って連結した新しい文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を返します。このオブジェクトは配列中の各インデックスのキーを保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
-  - : 指定された値と等しい値を持つ最後の (インデックスの一番大きい) 要素のインデックスを返します。見つからない場合、`-1` を返します。
+  - : 指定された値と等しい値を持つ最後の (添字の一番大きい) 要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.map()")}}
   - : 配列内のすべての要素に対して与えられた関数を呼び出し、その結果を格納した新しい配列を生成します。
 - {{jsxref("Array.prototype.pop()")}}
@@ -351,7 +347,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.slice()")}}
   - : 配列の一部を取り出して新しい配列として返します。
 - {{jsxref("Array.prototype.some()")}}
-  - : 指定したテスト関数を配列中の少なくとも 1 個の要素が満たした場合に `true` を返します。
+  - : 指定されたテスト関数を満たす要素が配列内に見つかった場合、`true` を返します。そうでなければ、`false` を返します。
 - {{jsxref("Array.prototype.sort()")}}
   - : 配列内で要素を整列し、配列を返します。
 - {{jsxref("Array.prototype.splice()")}}
@@ -369,10 +365,10 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.unshift()")}}
   - : 配列の最初に 1 個以上の要素を追加し、配列の変更後の `length` を返します。
 - {{jsxref("Array.prototype.values()")}}
-  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。このオブジェクトは、配列中の各インデックスの値を保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
 - {{jsxref("Array.prototype.with()")}}
   - : 指定された位置の要素を指定された値で置き換えた新しい配列を、元の配列に変更を加えることなく返します。
-- [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : 既定では [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 関数を返します。
 
 ## 例
@@ -380,7 +376,7 @@ f("a", "b"); // 'a+b'
 この節では、 JavaScript で一般的な配列操作の例をいくつか紹介します。
 
 > [!NOTE]
-> まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
+> まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays) の[配列とは何かの説明](/ja/docs/Learn_web_development/Core/Scripting/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
 
 ### 配列の作成
 
@@ -414,31 +410,31 @@ console.log(fruitsString);
 // "りんご, バナナ"
 ```
 
-### インデックスによる配列の要素へのアクセス
+### 添字による配列の要素へのアクセス
 
-この例では配列 `fruits` 内の項目に、配列内の位置を示すインデックスを指定することでアクセスする方法を示しています。
+この例では配列 `fruits` 内の項目に、配列内の位置を示す添字を指定することでアクセスする方法を示しています。
 
 ```js
 const fruits = ["りんご", "バナナ"];
 
-// 配列の最初の要素のインデックスは必ず 0 です。
+// 配列の最初の要素の添字は必ず 0 です。
 fruits[0]; // りんご
 
-// 配列の 2 番目の要素のインデックスは必ず 1 です。
+// 配列の 2 番目の要素の添字は必ず 1 です。
 fruits[1]; // バナナ
 
-// 配列の末尾の要素のインデックスは、常に配列の長さよりも
+// 配列の末尾の要素の添字は、常に配列の長さよりも
 // 1 だけ小さいものです。
 fruits[fruits.length - 1]; // バナナ
 
-// 配列の長さよりも大きなインデックスを使用すると、
+// 配列の長さよりも大きな添字を使用すると、
 // 'undefined' が返されます。
 fruits[99]; // undefined
 ```
 
-### 配列内の項目のインデックスを検索
+### 配列内のアイテムの添字を検索
 
-この例では [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドを使用して、文字列 `"バナナ"` の位置（インデックス）を配列 `fruits` の中から探します。
+この例では [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドを使用して、文字列 `"バナナ"` の位置（添字）を配列 `fruits` の中から探します。
 
 ```js
 const fruits = ["りんご", "バナナ"];
@@ -448,7 +444,7 @@ console.log(fruits.indexOf("バナナ"));
 
 ### 配列内に特定の項目があるかどうかを検査
 
-この例では、配列 `fruits` が `"バナナ"` と `"さくらんぼ"` を含んでいるかどうかを確認する 2 つの方法を示しています。最初は [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドで、次に [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドで、インデックスの値が `-1` でないことを確認します。
+この例では、配列 `fruits` が `"バナナ"` と `"さくらんぼ"` を含んでいるかどうかを確認する 2 つの方法を示しています。最初は [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドで、次に [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドで、添字の値が `-1` でないことを確認します。
 
 ```js
 const fruits = ["りんご", "バナナ"];
@@ -487,7 +483,8 @@ console.log(removedItem);
 // みかん
 ```
 
-> **メモ:** `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
+> [!NOTE]
+> `pop()` は配列の最後の項目を削除するためだけに使用できます。配列の最後にある複数の項目を削除したい場合は、次の例を参照してください。
 
 ### 配列の最後から複数の項目を取り除く
 
@@ -505,7 +502,7 @@ console.log(removedItems);
 
 ### 配列を最初の _N_ 項目ちょうどに切り詰める
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドはを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
 
 ```js
 const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
@@ -530,9 +527,10 @@ console.log(removedItem);
 // りんご
 ```
 
-> **メモ:** `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
+> [!NOTE]
+> `shift()` は最初の項目を配列から取り除く場合にのみ使用できます。複数の項目を配列の先頭から取り除く場合は、次の例を参照してください。
 
-### 配列の先頭から複数の項目を取り除く
+### 配列の先頭から複数のアイテムを取り除く
 
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` から先頭の 3 項目を取り除きます。
 
@@ -547,9 +545,9 @@ console.log(removedItems);
 // ["りんご", "いちご", "さくらんぼ"]
 ```
 
-### 配列に最初の項目を追加
+### 配列に最初のアイテムを追加
 
-この例では [`unshift()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) メソッドを使用して、配列 `fruits` のインデックス `0` に新しい項目を追加します。これを配列の新しい先頭の項目にします。
+この例では [`unshift()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) メソッドを使用して、配列 `fruits` の要素 `0` に新しい項目を追加します。これを配列の新しい先頭の項目にします。
 
 ```js
 const fruits = ["バナナ", "マンゴー"];
@@ -560,9 +558,9 @@ console.log(newLength);
 // 3
 ```
 
-### インデックスを指定して単一の項目を取り除く
+### 添字を指定して単一の項目を取り除く
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置のインデックスを指定します。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字を指定します。
 
 ```js
 const fruits = ["いちご", "バナナ", "マンゴー"];
@@ -575,9 +573,9 @@ console.log(removedItems);
 // ["バナナ"]
 ```
 
-### インデックスを指定して複数の項目を取り除く
+### 添字を指定して複数の項目を取り除く
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` および `"いちご"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置のインデックスと共に、取り除く項目の総数を指定します。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` および `"いちご"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字と共に、取り除く項目の総数を指定します。
 
 ```js
 const fruits = ["りんご", "バナナ", "いちご", "マンゴー"];
@@ -628,7 +626,7 @@ for (const fruit of fruits) {
 
 ### 配列のそれぞれの要素に対して関数を呼び出す
 
-この例では [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) メソッドを使用して、配列 `fruits` のそれぞれの要素に対して関数を呼び出しています。この関数ではそれぞれの項目を、その項目のインデックスの番号と共にコンソールへログ出力します。
+この例では [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) メソッドを使用して、配列 `fruits` のそれぞれの要素に対して関数を呼び出しています。この関数ではそれぞれの項目を、その項目の添字の番号と共にコンソールへログ出力します。
 
 ```js
 const fruits = ["りんご", "マンゴー", "さくらんぼ"];
@@ -686,9 +684,9 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を、コピーするのではなく、新しいコピーに移譲できる利点があります。
+また、 [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を、コピーするのではなく、新しいコピーに移譲できる利点があります。
 
-最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#_による厳密な等価性)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
+最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#_による厳密な等価性)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
 
 ```js
 const fruits = ["いちご", "マンゴー"];
@@ -762,7 +760,7 @@ console.table(values);
 結果は次のようになります。
 
 ```plain
-// 最初の列はインデックスです
+// 最初の列は添字です
 0  1    0
 1  2    2
 2  4    8
@@ -795,6 +793,144 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 ```
 
 照合結果についての詳しい情報は、 {{jsxref("RegExp.prototype.exec()")}} および {{jsxref("String.prototype.match()")}} のページを参照してください。
+
+### 反復処理内での初期配列の変更
+
+[反復処理メソッド](#反復処理メソッド)は、呼び出された配列を変更しませんが、`callbackFn` として提供される関数は変更することができます。覚えておくべき重要な原則は、0 から `arrayLength - 1` までの要素のみが参照されるということです。ここで、`arrayLength` は配列メソッドが最初に呼び出された時点での配列の長さですが、コールバックに渡される要素は、その要素が参照された時点での値です。したがって、
+
+- `callbackFn` は、反復処理メソッドの呼び出しが開始された際に、配列の初期長を超えて追加された要素を処理しません。
+- 既に処理した要素を変更しても、それらの位置で `callbackFn` が再度呼び出されることはありません。
+- 既存の、まだ処理されていない配列要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値は、その要素が処理された時点での値となります。 除去された要素は処理されません。
+
+> [!WARNING]
+> 上記のような同時進行の変更は、理解しにくいコードにつながる可能性が高く、一般的に避けるべきです（特別な場合を除く）。
+
+次の例では、`forEach` メソッドを例として使用していますが、他にも昇順で要素を巡回するメソッドであれば、同じように動作します。 最初のヘルパー関数を定義します。
+
+```js
+function testSideEffect(effect) {
+  const arr = ["e1", "e2", "e3", "e4"];
+  arr.forEach((elem, index, arr) => {
+    console.log(`配列: [${arr.join(", ")}], 添字: ${index}, 要素: ${elem}`);
+    effect(arr, index);
+  });
+  console.log(`最終的な配列: [${arr.join(", ")}]`);
+}
+```
+
+まだ処理されていない要素を変更した場合、要素に到達したときに見えます。
+
+```js
+testSideEffect((arr, index) => {
+  if (index + 1 < arr.length) arr[index + 1] += "*";
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2*, e3, e4], 添字: 1, 要素: e2*
+// 配列: [e1, e2*, e3*, e4], 添字: 2, 要素: e3*
+// 配列: [e1, e2*, e3*, e4*], 添字: 3, 要素: e4*
+// 最終的な配列: [e1, e2*, e3*, e4*]
+```
+
+既に処理した位置の要素を変更しても、反復処理する挙動は変わりませんが、配列はその後で異なったものになります。
+
+```js
+testSideEffect((arr, index) => {
+  if (index > 0) arr[index - 1] += "*";
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2, e3, e4], 添字: 1, 要素: e2
+// 配列: [e1*, e2, e3, e4], 添字: 2, 要素: e3
+// 配列: [e1*, e2*, e3, e4], 添字: 3, 要素: e4
+// 最終的な配列: [e1*, e2*, e3*, e4]
+```
+
+未処理の要素に、初期配列の長さよりも小さい要素を _n_ 個挿入すると、それらの要素が処理済みになります。これで初期配列の長さを超える添字を持つようになった元の配列の最後の _n_ 個の要素は、処理されません。
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 0, "new");
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2, e3, e4], 添字: 1, 要素: e2
+// 配列: [e1, e2, new, e3, e4], 添字: 2, 要素: new
+// 配列: [e1, e2, new, e3, e4], 添字: 3, 要素: e3
+// 最終的な配列: [e1, e2, new, e3, e4]
+// e4 is not visited because it now has index 4
+```
+
+配列の最初の要素数よりも大きな添字を持つ要素を _n_ 個挿入しても、それらの要素が処理されることはありません。
+
+```js
+testSideEffect((arr) => arr.push("new"));
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2, e3, e4, new], 添字: 1, 要素: e2
+// 配列: [e1, e2, e3, e4, new, new], 添字: 2, 要素: e3
+// 配列: [e1, e2, e3, e4, new, new, new], 添字: 3, 要素: e4
+// 最終的な配列: [e1, e2, e3, e4, new, new, new, new]
+```
+
+既に処理した要素に _n_ 個の要素を挿入しても、それらが処理されることはありませんが、残りの要素が _n_ 個分後ろにずれるため、現在の要素と、その前の _n - 1_ 個の要素が再び処理されることになります。
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 0, "new"));
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [new, e1, e2, e3, e4], 添字: 1, 要素: e1
+// 配列: [new, new, e1, e2, e3, e4], 添字: 2, 要素: e1
+// 配列: [new, new, new, e1, e2, e3, e4], 添字: 3, 要素: e1
+// 最終的な配列: [new, new, new, new, e1, e2, e3, e4]
+// e1は、常にシフトバックされるため、処理され続けます。
+```
+
+未処理の要素から _n_ 個の要素を削除すると、それらはもはや処理されなくなります。配列が縮小したため、最後の _n_ 回の反復処理では、範囲外の添字が処理されます。メソッドが存在しない要素を無視する場合（[配列メソッドと空のスロット](#配列メソッドと空のスロット)を参照）、最後の _n_ 回の反復処理はスキップされます。そうでなければ、それらは `undefined` となります。
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 1);
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2, e3, e4], 添字: 1, 要素: e2
+// 配列: [e1, e2, e4], 添字: 2, 要素: e4
+// 最終的な配列: [e1, e2, e4]
+// 範囲外なので要素 3 は処理しません。
+
+// Compare this with find(), which treats nonexistent indexes as undefined:
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`配列: [${arr.join(", ")}], 添字: ${index}, 要素: ${elem}`);
+  if (index === 1) arr.splice(2, 1);
+  return false;
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e1, e2, e3, e4], 添字: 1, 要素: e2
+// 配列: [e1, e2, e4], 添字: 2, 要素: e4
+// 配列: [e1, e2, e4], 添字: 3, 要素: undefined
+```
+
+既に処理した要素から _n_ 個の要素を削除しても、それらが削除される前に処理されていたという事実は変わりません。配列が縮小されたため、現在の要素の次の _n_ 個の要素はスキップされます。このメソッドが存在しない添字を無視する場合は、最後の _n_ 回の反復処理がスキップされます。そうでない場合は、`undefined` が返されます。
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 1));
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// e2 は処理されない。e2 の要素は 0 となり、既に処理されているため
+// 配列: [e2, e3, e4], 添字: 1, 要素: e3
+// e4 は処理されない。e4 の要素は 1 となり、既に処理されているため
+// 最終的な配列: [e2, e4]
+// 添字 2 は範囲外なので、アクセスされない
+
+// find() は、存在しない要素を undefined として扱います。これと比較してください。
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`配列: [${arr.join(", ")}], 添字: ${index}, 要素: ${elem}`);
+  arr.splice(index, 1);
+  return false;
+});
+// 配列: [e1, e2, e3, e4], 添字: 0, 要素: e1
+// 配列: [e2, e3, e4], 添字: 1, 要素: e3
+// 配列: [e2, e4], 添字: 2, 要素: undefined
+// 配列: [e2, e4], 添字: 3, 要素: undefined
+```
+
+添字の降順で反復処理するメソッドでは、挿入により要素がスキップされ、削除により要素が複数回アクセスされます。 上記のコードを自分で調整して、効果を確認してください。
 
 ## 仕様書
 

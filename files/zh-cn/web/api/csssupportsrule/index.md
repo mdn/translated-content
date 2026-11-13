@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSSupportsRule`** 接口代表了一个单独的 CSS {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)。
+**`CSSSupportsRule`** 接口代表了一个单独的 CSS {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)。
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ _继承其祖先 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}
 
 ## 示例
 
-CSS 中包含了一个使用 {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)的 CSS 特性查询，其中含有一条样式规则。这将会是 `document.styleSheets[0].cssRules` 返回的第一个 CSSRule。因此，`myRules[0]` 返回的是一个 {{domxref("CSSSupportsRule")}} 对象。
+CSS 中包含了一个使用 {{cssxref("@supports")}} [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)的 CSS 特性查询，其中含有一条样式规则。这将会是 `document.styleSheets[0].cssRules` 返回的第一个 CSSRule。因此，`myRules[0]` 返回的是一个 {{domxref("CSSSupportsRule")}} 对象。
 
 ```css
 @supports (display: grid) {

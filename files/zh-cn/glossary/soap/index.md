@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **SOAP**（简单对象访问协议）是一种以 XML 格式传输数据的{{glossary('protocol', '协议')}}。
 
 ## 参见

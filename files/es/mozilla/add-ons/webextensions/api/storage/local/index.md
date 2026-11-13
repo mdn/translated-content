@@ -9,7 +9,7 @@ Representa el área de almacenamiento local. Los elementos en el almacenamiento 
 
 El navegador puede restringir la cantidad de datos que una extensión puede almacenar en el área de almacenamiento local:
 
-Chrome limita la extensión a 5MB de datos usando esta API a menos que tenga el permiso ["unlimitedStorage"](/es/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
+Chrome limita la extensión a 5MB de datos usando esta API a menos que tenga el permiso ["unlimitedStorage"](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
 Firefox le permite solicitar el permiso "Almacenamiento ilimitado" de la versión 56 en adelante. Aún no restringe la cantidad de datos que su extensión puede almacenar, pero comenzará a hacerlo en una versión futura: por lo tanto, es una buena idea solicitar el permiso de "Almacenamiento ilimitado" ahora, si tiene la intención de almacenar una gran cantidad de datos.
 
 Cuando se desinstala la extensión, se borra su almacenamiento local asociado.
@@ -39,11 +39,10 @@ El objeto local implementa los métodos definidos en el{{WebExtAPIRef("storage.S
 
 {{WebExtExamples}}
 
-> **Nota:** **Agradecimientos**
+> [!NOTE]
+> **Agradecimientos**
 >
 > Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
->
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

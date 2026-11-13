@@ -3,11 +3,16 @@ title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
 
-{{JSRef}}
-
 **`getSeconds()`** 方法根据本地时间，返回一个指定的日期对象的秒数。
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## 语法
 

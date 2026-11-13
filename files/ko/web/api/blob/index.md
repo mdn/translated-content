@@ -30,13 +30,13 @@ slug: Web/API/Blob
 ## 인스턴스 메서드
 
 - {{DOMxRef("Blob.prototype.arrayBuffer()")}}
-  - : `Blob`의 전체 내용을 이진 데이터로 담은 {{domxref("ArrayBuffer")}}로 이행하는 프로미스를 반환합니다
+  - : `Blob`의 전체 내용을 이진 데이터로 담은 {{jsxref("ArrayBuffer")}}로 이행하는 프로미스를 반환합니다
 - {{domxref("Blob.prototype.slice()")}}
   - : 메서드를 호출한 블롭의 바이트를 주어진 시작 바이트와 끝 바이트 범위에서 복제해 새로운 `Blob` 객체를 생성하고 반환합니다.
 - {{domxref("Blob.prototype.stream()")}}
   - : `Blob`의 콘텐츠를 읽을 수 있는 {{domxref("ReadableStream")}}을 반환합니다.
 - {{domxref("Blob.prototype.text()")}}
-  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{domxref("USVString")}}으로 이행하는 프로미스를 반환합니다.
+  - : `Blob`의 전체 내용을 UTF-8 텍스트로 담은 {{jsxref("String")}}으로 이행하는 프로미스를 반환합니다.
 
 ## 예제
 
@@ -53,7 +53,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### 형식화 배열의 콘텐츠를 나타내는 URL 생성하기
 
-다음 코드는 JavaScript [형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)을 생성하고, 배열의 데이터를 담은 `Blob` 객체도 만듭니다. 그 후, {{domxref("URL.createObjectURL()")}}을 호출해 블롭을 {{glossary("URL")}}로 변환합니다.
+다음 코드는 JavaScript [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 생성하고, 배열의 데이터를 담은 `Blob` 객체도 만듭니다. 그 후, {{domxref("URL.createObjectURL()")}}을 호출해 블롭을 {{glossary("URL")}}로 변환합니다.
 
 #### HTML
 
@@ -67,7 +67,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 #### JavaScript
 
-아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 [`src`](/ko/docs/Web/HTML/Element/img#src) 특성에 지정하는 등 다양하게 사용할 수 있습니다.
+아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 [`src`](/ko/docs/Web/HTML/Reference/Elements/img#src) 특성에 지정하는 등 다양하게 사용할 수 있습니다.
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {
@@ -135,4 +135,4 @@ const text = await blob.text();
 - {{domxref("FileReader")}}
 - {{domxref("File")}}
 - {{domxref("URL.createObjectURL")}}
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

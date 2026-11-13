@@ -3,11 +3,20 @@ title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 ---
 
-{{JSRef}}
-
 **`getFloat64()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView)相对于起始位置偏移 n 个字节处开始，获取一个 64-bit 数 (双精度浮点型，8 个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat64(1, Math.PI);
+
+console.log(view.getFloat64(1));
+// Expected output: 3.141592653589793
+```
 
 ## 语法
 
@@ -38,9 +47,9 @@ dataview.getFloat64(byteOffset [, littleEndian])
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat64(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getFloat64(1)); // 8.20788039913184e-304
 ```
 
 ## 规范

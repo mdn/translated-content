@@ -8,7 +8,7 @@ slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 网页音频接口最有趣的特性之一它就是可以获取频率、波形和其他来自声源的数据，这些数据可以被用作音频可视化。这篇文章将解释如何做到可视化，并提供了一些基础使用案例。
 
 > [!NOTE]
-> 你可以在[Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)演示里找到本文出现的所有代码片段。
+> 你可以在[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)演示里找到本文出现的所有代码片段。
 
 ## 基本概念
 
@@ -38,7 +38,7 @@ analyser.connect(distortion);
 
 要捕获数据，你需要使用 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 或 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 方法来获取频率数据，用 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 或 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 来获取波形数据。
 
-这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个 32 位浮点数组，第二个和第三个方法会产生 8 位无符号整型数组，因此一个标准的 JavaScript 数组就不能使用——你需要用一个 {{ domxref("Float32Array") }} 或者 {{ domxref("Uint8Array") }} 数组，具体需要哪个视情况而定。
+这些方法把数据复制进了一个特定的数组当中，所以你在调用它们之前要先创建一个新数组。第一个方法会产生一个 32 位浮点数组，第二个和第三个方法会产生 8 位无符号整型数组，因此一个标准的 JavaScript 数组就不能使用——你需要用一个 {{jsxref("Float32Array")}} 或者 {{jsxref("Uint8Array")}} 数组，具体需要哪个视情况而定。
 
 那么让我们来看看例子，比如我们正在处理一个 2048 尺寸的 FFT。我们返回 {{ domxref("AnalyserNode.frequencyBinCount") }} 值，它是 FFT 的一半，然后调用 Uint8Array()，把 frequencyBinCount 作为它的长度参数——这代表我们将对这个尺寸的 FFT 收集多少数据点。
 
@@ -60,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## 创建一个波形/示波器
 
-要创建一个示波器视觉效果（感谢 [Soledad Penadés](http://soledadpenades.com/) 在 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) 中提供的源码），我们首先用下面代码框中的代码为标准设置一个 buffer：
+要创建一个示波器视觉效果（感谢 [Soledad Penadés](https://soledadpenades.com/) 在 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) 中提供的源码），我们首先用下面代码框中的代码为标准设置一个 buffer：
 
 ```js
 analyser.fftSize = 2048;
@@ -214,4 +214,4 @@ draw();
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
 > [!NOTE]
-> 本文中的案例展现了 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 和 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 的用法。如果想要查看 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 和 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 的用法，请参考我们的 [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) 演示（也能看到 [源代码](https://github.com/mdn/voice-change-o-matic-float-data) ）——它和本文中出现的 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 功能完全相同，唯一区别就是它使用的是浮点数作数据，而不是本文中的无符号整型数。
+> 本文中的案例展现了 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 和 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 的用法。如果想要查看 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 和 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 的用法，请参考我们的 [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 演示（也能看到 [源代码](https://github.com/mdn/voice-change-o-matic-float-data) ）——它和本文中出现的 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 功能完全相同，唯一区别就是它使用的是浮点数作数据，而不是本文中的无符号整型数。

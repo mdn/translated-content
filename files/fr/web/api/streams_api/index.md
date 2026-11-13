@@ -19,7 +19,7 @@ Avec la mise à disposition des Streams en JavaScript, tout ceci a changé — v
 
 Il y a aussi d'autres avantages — vous pouvez détecter quand un flux commence ou prend fin, chaîner les flux entre eux, traiter les erreurs et annuler les flux si nécessaire et vous adapter à la vitesse de lecture du flux.
 
-L'usage basique des <i lang="en">Streams</i> s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, le corps de réponse retourné par une [requête `fetch`](/fr/docs/Web/API/fetch) réussie peut être exposé en tant que [`ReadableStream`](/fr/docs/Web/API/ReadableStream) — vous pourrez ainsi le lire en utilisant un lecteur créé par [`ReadableStream.getReader()`](/fr/docs/Web/API/ReadableStream/getReader), l'annuler avec [`ReadableStream.cancel()`](/fr/docs/Web/API/ReadableStream/cancel), etc.
+L'usage basique des <i lang="en">Streams</i> s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, le corps de réponse retourné par une [requête `fetch`](/fr/docs/Web/API/Window/fetch) réussie peut être exposé en tant que [`ReadableStream`](/fr/docs/Web/API/ReadableStream) — vous pourrez ainsi le lire en utilisant un lecteur créé par [`ReadableStream.getReader()`](/fr/docs/Web/API/ReadableStream/getReader), l'annuler avec [`ReadableStream.cancel()`](/fr/docs/Web/API/ReadableStream/cancel), etc.
 
 Un usage plus avancé consiste à créer son propre flux en utilisant le constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, pour traiter par exemple les données à l'intérieur d'un [service worker](/fr/docs/Web/API/Service_Worker_API).
 
@@ -58,9 +58,9 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 ### Extensions vers d'autres APIs
 
 - {{domxref("Request")}}
-  - : Quand un nouvel objet `Request` est construit, vous pouvez lui passer un {{domxref("ReadableStream")}} dans la propriété `body` de son dictionnaire `RequestInit`. Cette `Request` peut alors être envoyée à un [`fetch()`](/fr/docs/Web/API/fetch) pour initier l'appel vers le flux.
+  - : Quand un nouvel objet `Request` est construit, vous pouvez lui passer un {{domxref("ReadableStream")}} dans la propriété `body` de son dictionnaire `RequestInit`. Cette `Request` peut alors être envoyée à un [`fetch()`](/fr/docs/Web/API/Window/fetch) pour initier l'appel vers le flux.
 - {{domxref("Body")}}
-  - : La réponse {{domxref("Body")}} retrouné par un [appel fetch](/fr/docs/Web/API/fetch) réussi est exposée par défaut comme un {{domxref("ReadableStream")}}, et peut être ratachée à un reader, etc.
+  - : La réponse {{domxref("Body")}} retrouné par un [appel fetch](/fr/docs/Web/API/Window/fetch) réussi est exposée par défaut comme un {{domxref("ReadableStream")}}, et peut être ratachée à un reader, etc.
 
 ### Interfaces liées aux flux d'octets
 
@@ -78,12 +78,12 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 
 We have created a directory of examples to go along with the Streams API documentation — see [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams). The examples are as follows:
 
-- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
-- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
-- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
-- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
-- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
-- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/fr/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
+- [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): This example shows how to consume a ReadableStream and pass its data to another.
+- [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): This example shows how a ReadableStream of a PNG can be turned into grayscale.
+- [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/): This example shows how to use a custom stream to generate random strings, enqueue them as chunks, and then read them back out again.
+- [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
+- [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to to write to a writable stream, then decode the stream and write the contents to the UI.
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/fr/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
 
 Examples from other developers:
 

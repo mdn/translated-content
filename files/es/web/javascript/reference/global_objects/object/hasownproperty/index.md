@@ -107,8 +107,8 @@ Observe que en el último caso no han habido nuevos objetos creados.
 
 ## Véase también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/es/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/es/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisted](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

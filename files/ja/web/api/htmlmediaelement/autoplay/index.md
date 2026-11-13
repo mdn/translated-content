@@ -8,14 +8,14 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.autoplay`** プロパティは、 HTML の [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性を反映しています。これは、メディアが中断なく再生できるようになった時点で自動的に再生を開始するかどうかを示します。
+**`HTMLMediaElement.autoplay`** プロパティは、 HTML の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay) 属性を反映しています。これは、メディアが中断なく再生できるようになった時点で自動的に再生を開始するかどうかを示します。
 
 ソースが {{domxref("MediaStream")}} で `autoplay` プロパティが `true` のメディア要素は、アクティブになると（つまり、{{domxref("MediaStream.active")}} が `true` になると）再生を開始します。
 
 > [!NOTE]
 > 自動的に音声（または音声トラックを含む動画）を再生するサイトは、ユーザーにとって不快な経験になる可能性があるため、可能な限り避けるべきです。 自動再生機能を提供する必要がある場合は、オプトインする必要があります（ユーザーに明確に有効にするよう要求する）。 ただし、自動再生は、ソースが後でユーザーの制御下で設定されるメディア要素を作成するときには便利です。
 
-自動再生、自動再生のブロック、およびユーザーのブラウザーによって自動再生がブロックされた場合の対応方法についての詳細は、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。
+自動再生、自動再生のブロック、およびユーザーのブラウザーによって自動再生がブロックされた場合の対応方法についての詳細は、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。
 
 ## 値
 

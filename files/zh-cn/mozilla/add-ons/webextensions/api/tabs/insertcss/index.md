@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 向一个页面注入 CSS。
 
 > [!NOTE]
@@ -37,17 +35,14 @@ let inserting = browser.tabs.insertCSS(
 - `tabId` {{optional_inline}}
   - : `integer`。要插入 CSS 的选项卡 ID。默认为当前窗口的活动选项卡。
 - `details`
-
   - : 描述要插入的 CSS 的对象。包含以下属性：
-
     - `allFrames` {{optional_inline}}
       - : `boolean`。如果为 `true`，则将 CSS 注入到当前页面的所有框架中。如果为 `false`，则仅将 CSS 注入到顶层框架。默认为 `false`。
     - `code` {{optional_inline}}
       - : `string`。要注入的代码（文本字符串形式）。
     - `cssOrigin` {{optional_inline}}
-
       - : `string`。可以取以下两个值之一：“user”，表示将 CSS 添加为用户样式表；“author”，表示将其添加为作者样式表。如果省略此选项，则 CSS 将作为作者样式表添加。
-        - “user”允许你防止网站覆盖你插入的 CSS。参见[层叠顺序](/zh-CN/docs/Web/CSS/Cascade#层叠顺序)。
+        - “user”允许你防止网站覆盖你插入的 CSS。参见[层叠顺序](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#层叠顺序)。
         - “author”样式表的行为就像它们出现在页面指定的所有作者规则之后一样。这种行为包括页面脚本动态添加的任何作者样式表，即使此添加发生在 `insertCSS` 调用完成之后。
 
     - `file` {{optional_inline}}
@@ -100,7 +95,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-insertCSS) API。此文档来源于 Chromium 代码库中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-insertCSS) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

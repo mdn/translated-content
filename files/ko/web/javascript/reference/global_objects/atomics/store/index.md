@@ -9,7 +9,20 @@ l10n:
 
 **`Atomics.store()`** 정적 메서드는 배열의 지정된 위치에 지정된 값을 저장하고 해당 값을 반환합니다
 
-{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.store(uint8, 0, 2));
+// Expected output: 2
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 구문
 

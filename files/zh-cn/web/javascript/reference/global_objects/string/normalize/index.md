@@ -3,11 +3,31 @@ title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`normalize()`** 方法返回该字符串的 Unicode 标准化形式。
 
-{{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}
+
+```js interactive-example
+const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
+
+console.log(`${name1}, ${name2}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1 === name2);
+// Expected output: false
+console.log(name1.length === name2.length);
+// Expected output: false
+
+const name1NFC = name1.normalize("NFC");
+const name2NFC = name2.normalize("NFC");
+
+console.log(`${name1NFC}, ${name2NFC}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1NFC === name2NFC);
+// Expected output: true
+console.log(name1NFC.length === name2NFC.length);
+// Expected output: true
+```
 
 ## 语法
 
@@ -19,11 +39,9 @@ normalize(form)
 ### 参数
 
 - `form` {{optional_inline}}
-
   - : 是 `"NFC"`、`"NFD"`、`"NFKC"` 或 `"NFKD"` 其中之一，用于指定 Unicode 标准化形式。如果省略或为 {{jsxref("undefined")}}，则使用 `"NFC"`。
 
     这些值具有以下含义：
-
     - `"NFC"`
       - : 规范分解，然后进行规范组合。
     - `"NFD"`

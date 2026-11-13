@@ -1,15 +1,26 @@
 ---
 title: Object.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`toLocaleString()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによってオーバーライドするためのものです。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.tolocalestring()")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date.toLocaleString("ar-EG"));
+// 予想される結果: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number = 123456.789;
+
+console.log(number.toLocaleString("de-DE"));
+// 予想される結果: "123.456,789"
+```
 
 ## 構文
 
@@ -19,7 +30,7 @@ toLocaleString()
 
 ### 引数
 
-なし。ただし、このメソッドをオーバーライドするすべてのオブジェクトは、 {{jsxref("Date.prototype.toLocaleString")}} のように `locales` と `options` に対応する最大 2 つの引数を受け取ることが期待されます。これらの引数の位置は、他の目的には使用しないでください。
+なし。ただし、このメソッドをオーバーライドするすべてのオブジェクトは、 {{jsxref("Number.prototype.toLocaleString")}} のように `locales` と `options` に対応する最大 2 つの引数を受け取ることが期待されます。これらの引数の位置は、他の目的には使用しないでください。
 
 ### 返値
 

@@ -7,9 +7,10 @@ slug: Web/API/NodeList
 
 `NodeList` 对象是节点的集合，通常是由属性，如{{domxref("Node.childNodes")}} 和 方法，如{{domxref("document.querySelectorAll")}} 返回的。
 
-> **备注：** `NodeList` **不是一个数组**，是一个类似数组的对象 (_Like Array Object_)。虽然 `NodeList` 不是一个数组，但是可以使用 `forEach()` 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。
+> [!NOTE]
+> `NodeList` **不是一个数组**，是一个类似数组的对象 (_Like Array Object_)。虽然 `NodeList` 不是一个数组，但是可以使用 `forEach()` 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。
 >
-> 不过，有些浏览器较为过时，没有实现 `NodeList.forEach()` 和 `Array.from()`。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看[该例](#Example)。
+> 不过，有些浏览器较为过时，没有实现 `NodeList.forEach()` 和 `Array.from()`。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看[该例](#example)。
 
 在一些情况下，`NodeList` 是一个实时集合，也就是说，如果文档中的节点树发生变化，`NodeList` 也会随之变化。例如，{{domxref("Node.childNodes")}} 是实时的：
 
@@ -53,9 +54,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-**不要尝试使用 [`for...in`](/zh-CN/JavaScript/Reference/Statements/for...in) 或者 [`for each...in`](/zh-CN/JavaScript/Reference/Statements/for_each...in) 来遍历一个 `NodeList` 对象中的元素**，因为，如果你把上述两个属性也看成 {{domxref("element")}} 对象的话，`NodeList` 对象中的 `length` 和 `item` 属性也会被遍历出来，这可能会导致你的脚本运行出错。此外，`for...in` 不能保证访问这些属性的顺序。
+**不要尝试使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 或者 [`for each...in`](/zh-CN/docs/JavaScript/Reference/Statements/for_each...in) 来遍历一个 `NodeList` 对象中的元素**，因为，如果你把上述两个属性也看成 {{domxref("element")}} 对象的话，`NodeList` 对象中的 `length` 和 `item` 属性也会被遍历出来，这可能会导致你的脚本运行出错。此外，`for...in` 不能保证访问这些属性的顺序。
 
-[for...of](/zh-CN/JavaScript/Reference/Statements/for...of) 循环**将会**正确的遍历 `NodeList` 对象：
+[for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环**将会**正确的遍历 `NodeList` 对象：
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");
@@ -77,7 +78,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 ## 英文原版中已删除的内容
 
-> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性为“See_also”或“参见”。
+> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性为“See_also”或“参见”。
 
 ### 为什么 NodeList 不是数组？
 

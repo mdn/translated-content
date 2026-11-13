@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 
-{{HTTPSidebar}}
-
 O alvo de uma requisição HTTP é chamada de "resource", ou recurso em português, com a natureza ainda não definida; Isso pode ser um documento, uma foto ou qualquer outra coisa. Cada recurso é identificado por uma Identificação de recursos uniforme, do inglês **Uniform Resource Identifier** ({{Glossary("URI")}}) usada pelo HTTP para identificar recursos.
 
 A identidade e a localização de recursos na Web são fornecidas, principalmente por um único URL (Uniform Resource Locator, um tipo de URI). Pode ser que as vezes as a identidade e a localização não são dadas pelo mesmo URI: O HTTP usa um cabeçalho HTTP específico, {{HTTPHeader("Alt-Svc")}} quando o recurso solicitado quer que o cliente acesse-o de outra localização
@@ -53,7 +51,7 @@ As duas URNs correspondem
 
 | Esquema     | Descrição                                                                  |
 | ----------- | -------------------------------------------------------------------------- |
-| data        | [URI de dados](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)              |
+| data        | [URI de dados](/pt-BR/docs/Web/URI/Schemes/data)              |
 | file        | Nomes de arquivos específicos do host                                      |
 | ftp         | [Protocolo de transferência de arquivo](/pt-BR/docs/Glossary/FTP)          |
 | http/https  | [Hyper text transfer protocol (Secure)](/pt-BR/docs/Glossary/HTTP)         |
@@ -113,5 +111,5 @@ urn:isbn:9780141036144
 
 ## Veja também
 
-- [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)
-- [Lista de esquemas URI IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

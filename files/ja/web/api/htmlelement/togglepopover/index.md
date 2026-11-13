@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("Popover API")}}
 
-**`togglePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）の非表示状態と表示状態をトグル切り替えします。
+**`togglePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）の非表示状態と表示状態をトグル切り替えします。
 
-`togglePopover()` が [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性の付いた要素に対して呼び出されると、次のようになります。
+`togglePopover()` が [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性の付いた要素に対して呼び出されると、次のようになります。
 
 1. {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行されます。
 2. ポップオーバーが非表示状態と表示状態の間で切り替わります。
@@ -56,7 +56,7 @@ togglePopover(force)
 ```
 
 次に、ポップアップとなる `<div>` 要素を定義します。
-実際のコンテンツは重要ではありませんが、`<div>` をポップオーバーにするために、[`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性が必要で、既定では非表示になることに注意してください（または、JavaScript でこの要素を設定することもできます）。
+実際のコンテンツは重要ではありませんが、`<div>` をポップオーバーにするために、[`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性が必要で、既定では非表示になることに注意してください（または、JavaScript でこの要素を設定することもできます）。
 
 ```html
 <div id="mypopover" popover>
@@ -118,5 +118,5 @@ if (HTMLElement.prototype.hasOwnProperty("popover")) {
 
 ## 関連情報
 
-- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
+- HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

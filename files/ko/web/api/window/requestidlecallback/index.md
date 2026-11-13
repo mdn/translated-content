@@ -25,13 +25,13 @@ var handle = window.requestIdleCallback(callback[, options])
 ### Parameters
 
 - `callback`
-  - : 이벤트 루프가 유휴 상태가 될 때 호출되어야 하는 함수. callback 함수는 {{domxref("IdleDeadline")}} 객체를 인자로 전달받습으며 이 객체를 통해 타임아웃 기간이 만료되어 callback이 실행되었는지 여부를 알 수 있습니다.
+  - : 이벤트 루프가 유휴 상태가 될 때 호출되어야 하는 함수. callback 함수는 {{domxref("IdleDeadline")}} 객체를 인자로 전달받으며 이 객체를 통해 타임아웃 기간이 만료되어 callback이 실행되었는지 여부를 알 수 있습니다.
 - `options` {{optional_inline}}
   - : 선택적으로 사용가능한 option 설정. 현재는 하나의 property만 정의 되어 있습니다 :\* `timeout`: 만약`timeout` 이 지정되어 있고 양수일 경우, _timeout_ 밀리세컨드가 지날 때까지 callback이 실행되지 않았다면 성능상에 부정적인 영향을 미치는 위험이 있더라도 다음 idle 상태에 callback이 호출됩니다.
 
 ## Example
 
-[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 예제를 참조해 주십시오.
+[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#example) 예제를 참조해 주십시오.
 
 ## 명세서
 

@@ -11,7 +11,7 @@ l10n:
 **`draggable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素がドラッグ可能かどうかを示す論理値プリミティブを取得または設定します。
 
 これは、dragableHTML グローバル属性の値を反映します。
-It reflects the value of the [`draggable`](/ja/docs/Web/HTML/Global_attributes/draggable) HTML global attribute.
+It reflects the value of the [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) HTML global attribute.
 
 ## 値
 
@@ -46,5 +46,5 @@ if (notDraggableElement.draggable) {
 
 ## 関連情報
 
-- HTML の [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) グローバル属性
+- HTML の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) グローバル属性
 - [HTML のドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の概要

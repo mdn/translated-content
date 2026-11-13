@@ -9,9 +9,9 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Documentation
 
-- [Utilisation des événements envoyés par le serveur](/fr/docs/Server-sent_events/Using_server-sent_events)
+- [Utilisation des événements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events)
   - : Un tutoriel sur l'écriture d'une partie côté serveur et côté client d'une application d'événements envoyée par le serveur.
-- [EventSource référence](/fr/docs/Server-sent_events/EventSource)
+- [EventSource référence](/fr/docs/Web/API/EventSource)
   - : Une référence à l'API EventSource côté client.
 
 ## Outils
@@ -22,14 +22,14 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Rubriques connexes
 
-- [AJAX](/fr/docs/AJAX), [JavaScript](/fr/docs/JavaScript), [WebSockets](/fr/docs/WebSockets)
+- [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/fr/docs/Web/JavaScript), [WebSockets](/fr/docs/Web/API/WebSockets_API)
 
 ## Voir aussi
 
-- Une [application de type Twitter](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) alimentée par des événements envoyés par le serveur et [son code sur Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [Événements HTML5 et envoyés par le serveur](http://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Événements envoyés par le serveur à l'aide d'Asp.Net](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- Une [application de type Twitter](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) alimentée par des événements envoyés par le serveur et [son code sur Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [Événements HTML5 et envoyés par le serveur](https://dsheiko.com/weblog/html5-and-server-sent-events)
+- [Événements envoyés par le serveur à l'aide d'Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
 
 ## Spécification
 
-- [Événements envoyés par le serveur](http://dev.w3.org/html5/eventsource/)
+- [Événements envoyés par le serveur](https://dev.w3.org/html5/eventsource/)

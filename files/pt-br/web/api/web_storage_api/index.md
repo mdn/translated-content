@@ -33,9 +33,9 @@ Esses mecanismos estão disponíveis a partir das seguintes propriedades {{domxr
 
 ## Exemplos
 
-Para desmonstrar o uso de web storage, nós criamos um exemplo simples, chamado [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). A página da demo [landing page](http://mdn.github.io/web-storage-demo/) oferece funcionalidades que permitem alterar a cor, fonte e imagem que é exibida na página. Quando você escolhe uma opção diferente, a página será atualizada imediatamente. Além disso, sua escolha foi armazenada em `localStorage`, para que quando você feche o navegador e abra novamente para acessar a página, suas escolhas sejam lembradas.
+Para desmonstrar o uso de web storage, nós criamos um exemplo simples, chamado [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). A página da demo [landing page](https://mdn.github.io/web-storage-demo/) oferece funcionalidades que permitem alterar a cor, fonte e imagem que é exibida na página. Quando você escolhe uma opção diferente, a página será atualizada imediatamente. Além disso, sua escolha foi armazenada em `localStorage`, para que quando você feche o navegador e abra novamente para acessar a página, suas escolhas sejam lembradas.
 
-Nós também fornecemos um [event output page](http://mdn.github.io/web-storage-demo/event.html) — para quando você abrir a página em outra aba, as informações sejam atualizadas através da chamada de um {{event("StorageEvent")}}.
+Nós também fornecemos um [event output page](https://mdn.github.io/web-storage-demo/event.html) — para quando você abrir a página em outra aba, as informações sejam atualizadas através da chamada de um [`StorageEvent`](/pt-BR/docs/Web/Events/StorageEvent).
 
 ## Especificações
 

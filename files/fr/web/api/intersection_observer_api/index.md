@@ -304,7 +304,7 @@ Le code HTML de cet exemple est très court. L'élément principal est la boîte
 
 ### CSS
 
-Le CSS n'est pas extrêmement important dans le cadre de cet exemple ; il met en place l'élément et établit que les attributs {{cssxref("background-color")}} et {{cssxref("border")}} peuvent participer à des [transitions CSS](/fr/docs/Web/CSS/CSS_Transitions). Nous utiliserons ces transitions pour faire évoluer l'élément de telle sorte qu'il devienne plus ou moins obscur.
+Le CSS n'est pas extrêmement important dans le cadre de cet exemple ; il met en place l'élément et établit que les attributs {{cssxref("background-color")}} et {{cssxref("border")}} peuvent participer à des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions). Nous utiliserons ces transitions pour faire évoluer l'élément de telle sorte qu'il devienne plus ou moins obscur.
 
 ```css
 #box {
@@ -376,7 +376,7 @@ Les constantes et variables que nous préparons sont :
 - `decreasingColor`
   - : De même, il s'agit d'une chaîne de caractères qui définit une couleur que nous appliquerons lorsque le ratio de visibilité diminue.
 
-On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr//docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
+On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr_docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
 
 #### Création de l'observateur d'intersection
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e4cc8b707a1056c14a6316079798b95cb39b725f
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 {{domxref("FileSystemEntry")}} の **`getMetadata()`** インターフェイスは、更新日時やサイズなどファイルシステム項目に関する情報を持つ {{domxref("Metadata")}} オブジェクトを取得します。
 
@@ -69,4 +69,4 @@ workingDirectory.getFile(
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)

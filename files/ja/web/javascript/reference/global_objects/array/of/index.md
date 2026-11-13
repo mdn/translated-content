@@ -1,15 +1,22 @@
 ---
 title: Array.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`Array.of()`** 静的メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.of()", "shorter")}}
+
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// 予想される結果: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// 予想される結果: Array []
+```
 
 ## 構文
 
@@ -41,7 +48,7 @@ Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3); // [1, 2, 3]
 ```
 
-`Array.of()` メソッドは汎用ファクトリーメソッドです。例えば、 `Array` のサブクラスが `of()` メソッドを継承した場合、継承した `of()` メソッドは `Array` インスタンスではなく、サブクラスの新しいインスタンスを返します。実際には、 `this` 値には新しい配列の長さを表す単一の引数を受け入れる任意のコンストラクタ関数を指定することができ、コンストラクタは `of()` に渡された引数の数だけ呼び出されます。最終的な `length` は、すべての要素が代入されたときに再度設定されます。もし `this` の値がコンストラクター関数でない場合、代わりにプレーンな `Array` コンストラクターが使用されます。
+`Array.of()` メソッドは汎用ファクトリーメソッドです。例えば、 `Array` のサブクラスが `of()` メソッドを継承した場合、継承した `of()` メソッドは `Array` インスタンスではなく、サブクラスの新しいインスタンスを返します。実際には、 `this` 値には新しい配列の長さを表す単一の引数を受け入れる任意のコンストラクター関数を指定することができ、コンストラクターは `of()` に渡された引数の数だけ呼び出されます。最終的な `length` は、すべての要素が代入されたときに再度設定されます。もし `this` の値がコンストラクター関数でない場合、代わりにプレーンな `Array` コンストラクターが使用されます。
 
 ## 例
 
@@ -85,7 +92,8 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ## 関連情報
 
-- [`Array.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.of` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
+- [es-shims による `Array.of` のポリフィル](https://www.npmjs.com/package/array.of)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}

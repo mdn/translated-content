@@ -3,7 +3,7 @@ title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header()}}
+{{APIRef("HTML DOM")}}
 
 La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
 
@@ -17,9 +17,7 @@ varalignment =HTMLTableElement.align;
 ### Parámetros
 
 - `alignment` {{deprecated_inline}}
-
   - : `alignment` es una cadena con uno de los siguientes valores:
-
     - left
     - center
     - right
@@ -34,4 +32,4 @@ t.align = "center";
 
 ## Especificación
 
-- Especificación W3C DOM 2 HTML [_HTMLTableElement_ .align](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+- Especificación W3C DOM 2 HTML [_HTMLTableElement_ .align](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).

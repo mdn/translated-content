@@ -3,12 +3,12 @@ title: "Element: querySelectorAll() メソッド"
 short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 l10n:
-  sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} の **`querySelectorAll()`** メソッドは、静的な (ライブではない) {{domxref("NodeList")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。
+{{domxref("Element")}} の **`querySelectorAll()`** メソッドは、静的な（生きていない） {{domxref("NodeList")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。
 
 ## 構文
 
@@ -19,20 +19,18 @@ querySelectorAll(selectors)
 ### 引数
 
 - `selectors`
+  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な CSS セレクター文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
 
-  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターを指定する際は、カンマで区切ります。
+    HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
 
-    なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
-
-> [!NOTE]
-> 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)を参照してください。
+    なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/Reference/Selectors/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
 
 ### 返値
 
-生きていない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。
+生きていない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。要素は文書順になります。つまり、子要素の前に親要素が来て、手前の兄弟は後の兄弟の前に来ます。
 
 > [!NOTE]
-> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
@@ -41,27 +39,22 @@ querySelectorAll(selectors)
 
 ## 例
 
-### データセットセレクターと属性セレクター
+### カスタムデータ値ですべての要素を取得
+
+この例では、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、 `data-name` データ属性に "funnel-chart-percent" を含んでいる複数の属性を選択します。
 
 ```html
 <section class="box" id="sect1">
-  <div class="funnel-chart-percent1">10.900%</div>
-  <div class="funnel-chart-percent2">3700.00%</div>
-  <div class="funnel-chart-percent3">0.00%</div>
+  <div data-name="funnel-chart-percent1">10.900%</div>
+  <div data-name="funnel-chart-percent2">3700.00%</div>
+  <div data-name="funnel-chart-percent3">0.00%</div>
 </section>
 ```
 
 ```js
-// データセットセレクター
 const refs = [
   ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
 ];
-
-// 属性セレクター
-// const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class^="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class$="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 ```
 
 ### 一致するもののリストの入手
@@ -72,7 +65,7 @@ const refs = [
 const matches = myBox.querySelectorAll("p");
 ```
 
-次の例では、文書内にあるすべての {{HTMLElement("div")}} 要素のうち、 "`note`" または "`alert`" のいずれかのクラスを持つもののリストを返します。
+次の例では、文書内にあるすべての {{HTMLElement("div")}} 要素のうち、 `note` または `alert` のいずれかのクラスを持つもののリストを返します。
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");
@@ -85,16 +78,16 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-次の例では[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、文書内の {{HTMLElement("iframe")}} 要素のうち `"data-src"` という名前の属性を持つもののリストを返します。
+次の例では[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、文書内の {{HTMLElement("iframe")}} 要素のうち `"data-src"` という名前の属性を持つもののリストを返します。
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
-こちらでは、属性セレクターを使用して、ID が `"userlist"` の要素の中にあり、`"data-active"` 属性を持ち、その値が `"1"` であるリスト項目のリストを返しています。
+こちらでは、属性セレクターを使用して、ID が `"user-list"` の要素の中にあり、`"data-active"` 属性を持ち、その値が `"1"` であるリスト項目のリストを返しています。
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 
@@ -112,11 +105,12 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **メモ:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
+> [!NOTE]
+> `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
 
 ### セレクターのスコープ
 
-`querySelectorAll()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを置いてください。
+`querySelectorAll()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/Web/CSS/Reference/Selectors/:scope) 擬似クラスを置いてください。
 
 #### HTML
 
@@ -131,10 +125,10 @@ highlightedItems.forEach((userItem) => {
 <button id="select-scope">Select with :scope</button>
 
 <div id="outer">
-  .outer
+  #outer
   <div id="subject">
-    .subject
-    <div id="inner">.inner</div>
+    #subject
+    <div id="inner">#inner</div>
   </div>
 </div>
 
@@ -189,6 +183,86 @@ selectScope.addEventListener("click", () => {
 
 "Select with :scope" を押すと、`:scope` 擬似クラスがセレクターのスコープを `#subject` に制限するので、セレクターの照合では `#outer` は使われず、`#inner` 要素は見つかりません。
 
+### 属性値のエスケープ
+
+例えば、 HTML 文書の中の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が有効な [CSS 識別子](/ja/docs/Web/CSS/Reference/Values/ident)ではないものが含まれている場合、 `querySelector()` で使用する前に属性値をエスケープする必要があります。
+
+#### HTML
+
+以下のコードは、 {{htmlelement("div")}} 要素には `id` として `"this?element"` が設定されており、これは有効な CSS 識別子ではありません。 `"?"` 文字が CSS 識別子に許可されていないためです。
+
+ここには 3 つのボタンがあり、エラーを出力するために {{htmlelement("pre")}} 要素があります。
+
+```html
+<div id="container">
+  <div id="this?element"></div>
+</div>
+
+<button id="no-escape">エスケープなし</button>
+<button id="css-escape">CSS.escape()</button>
+<button id="manual-escape">手動エスケープ</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+3 つのボタンはどれも、クリックすると、 `<div>` を選択して、その背景色をランダムな値に設定しようとします。
+
+- 最初のボタンは `"this?element"` の値を直接使用しています。
+- 2 つ目のボタンは {{domxref("CSS.escape_static", "CSS.escape()")}} で値をエスケープします。
+- 3 つ目のボタンはバックスラッシュを用いて、明示的に `"?"` 文字をエスケープしています。なお、もう一つのバックスラッシュを用いて、 `"\\?"` のようにバックスラッシュ自体をエスケープする必要があります。
+
+```js
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const elements = container.querySelectorAll(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    elements[0].style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+```
+
+#### 結果
+
+最初のボタンをクリックするとエラーが返されますが、 2 つ目と 3 つ目のボタンは正規に動作します。
+
+{{embedlivesample("escaping_attribute_values", "", 200)}}
+
 ## 仕様書
 
 {{Specifications}}
@@ -199,9 +273,9 @@ selectScope.addEventListener("click", () => {
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
-- MDN 学習エリアの[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- MDN 学習エリアの[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

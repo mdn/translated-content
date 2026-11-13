@@ -62,7 +62,8 @@ const setCookie = browser.cookies.set({
 setCookie.then(logCookie, logError);
 ```
 
-> **メモ:** `runtime.lastError` は {{WebExtAPIRef("extension.lastError")}} のエイリアスです。 2 つはセットになっており、どちらかだけを確認すればよいです。
+> [!NOTE]
+> `runtime.lastError` は {{WebExtAPIRef("extension.lastError")}} のエイリアスです。 2 つはセットになっており、どちらかだけを確認すればよいです。
 
 ## ブラウザーの互換性
 

@@ -1,18 +1,15 @@
 ---
-title: RegExp[@@species]
+title: RegExp[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 l10n:
-  sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
-{{JSRef}}
+**`RegExp[Symbol.species]`** は静的なアクセサープロパティで、特定の `RegExp` メソッドのコピーされた正規表現を構築するのに使用されたコンストラクターを返します。
 
-**`RegExp[@@species]`** は静的なアクセサープロパティで、特定の `RegExp` メソッドのコピーされた正規表現を構築するのに使用された `RegExp` コンストラクターを返します。
-
-> **警告:** `@@species` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
-
-{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
+> [!WARNING]
+> `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
 
 ## 構文
 
@@ -22,11 +19,11 @@ RegExp[Symbol.species]
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクター (`this`) の値。この返値は、コピーした `RegExp` インスタンスを作成するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値。この返値は、コピーした `RegExp` インスタンスを作成するために使用されます。
 
 ## 解説
 
-`@@species` アクセサープロパティは、 `RegExp` の既定のコンストラクターを返します。サブクラスのコンストラクターは、オーバーライドすることでコンストラクターの割り当てを変更することができます。既定の実装は基本的に次の通りです。
+`[Symbol.species]` アクセサープロパティは、 `RegExp` の既定のコンストラクターを返します。サブクラスのコンストラクターは、オーバーライドすることでコンストラクターの割り当てを変更することができます。既定の実装は基本的に次の通りです。
 
 ```js
 // 説明のための架空の基礎実装
@@ -37,23 +34,23 @@ class RegExp {
 }
 ```
 
-この多相的な実装により、派生したサブクラスの `@@species` も既定でコンストラクター自身を返すようになります。
+この多相的な実装により、派生したサブクラスの `Symbol.species` も既定でコンストラクター自身を返すようになります。
 
 ```js
-class SubRegExp extends SubRegExp {}
+class SubRegExp extends RegExp {}
 SubRegExp[Symbol.species] === SubRegExp; // true
 ```
 
-一部の `RegExp` メソッドは、{{jsxref("RegExp/exec", "exec()")}} を実行する前に現在の正規表現インスタンスのコピーを作成します。そのため、{{jsxref("RegExp/lastIndex", "lastIndex")}} への変更が保持されないような副作用があります。`@@species` プロパティは、新しいインスタンスのコンストラクターを決定するために使用されます。正規表現インスタンスをコピーするメソッドは以下の通りです。
+一部の `RegExp` メソッドは、{{jsxref("RegExp/exec", "exec()")}} を実行する前に現在の正規表現インスタンスのコピーを作成します。そのため、{{jsxref("RegExp/lastIndex", "lastIndex")}} への変更が保持されないような副作用があります。`Symbol.species` プロパティは、新しいインスタンスのコンストラクターを決定するために使用されます。正規表現インスタンスをコピーするメソッドは以下の通りです。
 
-- [`[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
-- [`[@@split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
 
 ## 例
 
 ### 通常オブジェクトの species
 
-`@@species` プロパティは、既定のコンストラクターを返します。 `RegExp` オブジェクトであれば、 `RegExp` コンストラクターを返します。
+`Symbol.species` プロパティは、既定のコンストラクターを返します。 `RegExp` オブジェクトであれば、 `RegExp` コンストラクターを返します。
 
 ```js
 RegExp[Symbol.species]; // function RegExp()
@@ -65,7 +62,7 @@ RegExp[Symbol.species]; // function RegExp()
 
 ```js
 class MyRegExp extends RegExp {
-  // MyRegExp の species を親である RegExp コンストラクタにオーバーライドします。
+  // MyRegExp の species を親である RegExp コンストラクターにオーバーライドします。
   static get [Symbol.species]() {
     return RegExp;
   }

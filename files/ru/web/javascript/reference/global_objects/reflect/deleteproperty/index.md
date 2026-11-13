@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 Статический метод **`Reflect.deleteProperty()`** позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
 
-{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Reflect.deleteProperty(object1, "property1");
+
+console.log(object1.property1);
+// Expected output: undefined
+
+const array1 = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array1, "3");
+
+console.log(array1);
+// Expected output: Array [1, 2, 3, undefined, 5]
+```
 
 ## Синтаксис
 

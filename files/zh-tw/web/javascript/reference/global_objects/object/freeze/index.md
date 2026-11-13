@@ -3,11 +3,23 @@ title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
 
-{{JSRef}}
-
 **`Object.freeze()`** 顧名思義是用來「凍結」一個物件的：也就是防止物件新增屬性；防止物件既有的屬性被刪除；防止物件原本的屬性，還有屬性的可列舉性，可設定性，可寫性被改動；同時它也防止物件的原型被改變。此方法回傳一個凍結狀態的物件。
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## 語法
 

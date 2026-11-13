@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 El método **`Number.isFinite()`** determina si el valor pasado es un número finito.
 
-{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+
+```js interactive-example
+console.log(Number.isFinite(1 / 0));
+// Expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// Expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// Expected output: false
+```
 
 ## Sintaxis
 
@@ -26,7 +37,7 @@ Un {{jsxref("Boolean")}} indicando si el valor dado es finito o no.
 
 ## Description
 
-En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan `true`.
+En comparación con la funcion global {{jsxref("isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan `true`.
 
 ## Ejemplos
 

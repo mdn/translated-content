@@ -15,7 +15,7 @@ Devuelve el `keyCode` de la tecla presionada, o el codigo del caracter (`charCod
 var keyResult = event.which;
 ```
 
-`keyResult` contiene el codigo numerico para una tecla en particular, dependiendo si la tecla presionada es alfanumerica o no-alfanumerica. Por favor mire [`charCode`](/en/DOM/event.charCode) y [`keyCode`](/en/DOM/event.keyCode) para mas informacion.
+`keyResult` contiene el codigo numerico para una tecla en particular, dependiendo si la tecla presionada es alfanumerica o no-alfanumerica. Por favor mire [`charCode`](/es/docs/Web/API/KeyboardEvent/charCode) y [`keyCode`](/es/docs/Web/API/KeyboardEvent/keyCode) para mas informacion.
 
 ### Ejemplo
 

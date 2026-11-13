@@ -3,8 +3,6 @@ title: alarms.Alarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 ---
 
-{{AddonSidebar}}
-
 Cette interface fournit des informations sur une alarme donnée. Cet objet est retourné à partir de {{WebExtAPIRef('alarms.get()')}} et {{WebExtAPIRef('alarms.getAll()')}} et est passé au gestionnaire d'évènement {{WebExtAPIRef('alarms.onAlarm')}}.
 
 ## Type
@@ -26,6 +24,4 @@ Les valeurs de ce type sont des objets contenant les propriétés suivantes :
 
 **Remerciements :**
 
-Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
-
-Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).

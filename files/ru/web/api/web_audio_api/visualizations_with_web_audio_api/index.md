@@ -38,7 +38,7 @@ distortion.connect(audioCtx.destination);
 
 Чтобы получить данные, вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.
 
-Эти методы копируют данные в указанный массив, поэтому вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{ domxref("Float32Array") }} или {{ domxref("Uint8Array") }}, в зависимости от нужных вам данных.
+Эти методы копируют данные в указанный массив, поэтому вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{jsxref("Float32Array")}} или {{jsxref("Uint8Array")}}, в зависимости от нужных вам данных.
 
 Например, если параметр AnalyserNode.fftSize установлен на 2048, мы возвращаем значение {{ domxref("AnalyserNode.frequencyBinCount") }}, равное половине fft, затем вызываем Uint8Array() с frequencyBinCount в качестве длины — столько измерений мы произведём для данного размера fft.
 
@@ -60,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## Создание формы волны/осциллографа
 
-Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](http://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
+Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](https://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
 
 ```js
 analyser.fftSize = 2048;
@@ -214,4 +214,4 @@ draw();
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
 > [!NOTE]
-> Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.
+> Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.

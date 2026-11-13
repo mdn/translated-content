@@ -3,11 +3,25 @@ title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
 
-{{JSRef}}
+**`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否是对象的[可枚举自有](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)属性。
 
-**`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否是对象的[可枚举自有](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)属性。
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## 语法
 
@@ -90,7 +104,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### 测试 Symbol 属性
 
-`propertyIsEnumerable()` 也支持 {{jsxref("Symbol")}} 属性。请注意，大多数枚举方法只访问字符串属性；当使用 {{jsxref("Object.assign()")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)时，symbol 属性的可枚举性才有用。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`propertyIsEnumerable()` 也支持 {{jsxref("Symbol")}} 属性。请注意，大多数枚举方法只访问字符串属性；当使用 {{jsxref("Object.assign()")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)时，symbol 属性的可枚举性才有用。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)。
 
 ```js
 const sym = Symbol("可枚举的");
@@ -143,7 +157,7 @@ Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 
 ## 参见
 
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

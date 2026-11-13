@@ -42,16 +42,16 @@ slug: Web/API/Worker
 
 - [`message`](/ko/docs/Web/API/Worker/message_event)
   - : 워커의 부모가 워커로부터 메시지를 수신했을 대 발생합니다.
-    [`onmessage`](/ko/docs/Web/API/Worker/onmessage) 속성에서도 사용 가능합니다.
+    [`onmessage`](/ko/docs/Web/API/Worker/message_event) 속성에서도 사용 가능합니다.
 - [`messageerror`](/ko/docs/Web/API/Worker/messageerror_event)
   - : `Worker` 객체가 [역직렬화](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 할 수 없는 객체를 메시지로 받았을 대 발생합니다.
-    [`onmessageerror`](/ko/docs/Web/API/Worker/onmessageerror) 속성에서도 사용 가능합니다.
+    [`onmessageerror`](/ko/docs/Web/API/Worker/messageerror_event) 속성에서도 사용 가능합니다.
 - [`rejectionhandled`](/ko/docs/Web/API/Window/rejectionhandled_event)
   - : {{jsxref("Promise")}}가 거부될 때마다 발생합니다. 거부를 처리할 처리기의 존재 유무는 고려하지 않습니다.
-    [`onrejectionhandled`](/ko/docs/Web/API/WindowEventHandlers/onrejectionhandled) 속성에서도 사용 가능합니다.
+    [`onrejectionhandled`](/ko/docs/Web/API/Window/rejectionhandled_event) 속성에서도 사용 가능합니다.
 - [`unhandledrejection`](/ko/docs/Web/API/Window/unhandledrejection_event)
   - : {{jsxref("Promise")}}가 거부됐는데, 처리할 처리기가 없을 때 발생합니다.
-    [`onunhandledrejection`](/ko/docs/Web/API/WindowEventHandlers/onunhandledrejection) 속성에서도 사용 가능합니다.
+    [`onunhandledrejection`](/ko/docs/Web/API/Window/unhandledrejection_event) 속성에서도 사용 가능합니다.
 
 ## 예제
 
@@ -67,7 +67,7 @@ first.onchange = function () {
 };
 ```
 
-전체 예제를 보시려면 저희의 [simple-web-worker 예제](https://github.com/mdn/simple-web-worker) ([라이브](http://mdn.github.io/simple-web-worker/))를 참고하세요.
+전체 예제를 보시려면 저희의 [simple-web-worker 예제](https://github.com/mdn/simple-web-worker) ([라이브](https://mdn.github.io/simple-web-worker/))를 참고하세요.
 
 ## 명세
 

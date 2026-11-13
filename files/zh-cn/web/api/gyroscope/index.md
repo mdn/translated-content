@@ -9,7 +9,7 @@ l10n:
 
 [Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 的 **`Gyroscope`** 接口在每次读取时提供设备沿所有三个轴的角速度。
 
-要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `'gyroscope'` 设备传感器的权限。此外，此特性可能会被服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `'gyroscope'` 设备传感器的权限。此外，此特性可能会被服务器上设置的[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
 
 {{InheritanceDiagram}}
 

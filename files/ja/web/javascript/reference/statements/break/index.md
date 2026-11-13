@@ -2,14 +2,26 @@
 title: break
 slug: Web/JavaScript/Reference/Statements/break
 l10n:
-  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`break`** 文は現在のループや {{jsxref("Statements/switch", "switch")}} 文を終了し、プログラムの制御を終了した文の次の文に移します。[ラベル付きの文](/ja/docs/Web/JavaScript/Reference/Statements/label)の中で使用された場合は、ラベル付きの文を飛び越えるためにも使われます。
 
-{{EmbedInteractiveExample("pages/js/statement-break.html")}}
+{{InteractiveExample("JavaScript デモ: break statement")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i += 1;
+}
+
+console.log(i);
+// 予想される結果: 3
+```
 
 ## 構文
 
@@ -89,7 +101,7 @@ outerBlock: {
 
 `break` 文は参照先のラベルの中になければなりません。次のコードもラベル付きブロックで `break` 文を使っていますが、`break` 文が `block2` を参照しているにもかかわらず `block2` の中にないので、構文エラーが発生します。
 
-```js example-bad
+```js-nolint example-bad
 block1: {
   console.log("1");
   break block2; // SyntaxError: label not found
@@ -102,7 +114,7 @@ block2: {
 
 構文エラーは、次のコードのように `break` がループの中や、`break` 文によって脱出しようとしているラベル付きブロックの中で入れ子になっている関数で使われた場合にも、構文エラーが発生します。
 
-```js example-bad
+```js-nolint example-bad
 function testBreak(x) {
   let i = 0;
 
@@ -121,7 +133,7 @@ function testBreak(x) {
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```js example-bad
+```js-nolint example-bad
 block1: {
   console.log("1");
   (() => {

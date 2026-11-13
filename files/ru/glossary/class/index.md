@@ -13,7 +13,7 @@ slug: Glossary/Class
 
 ### Общие знания
 
-- [Языки, основанные на классах против прототипно-ориентированных](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
-- [Использование функций как классов в JavaScript](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B#The_Class)
-- [Класс-ориентированное программирование](https://en.wikipedia.org/wiki/Class-based_programming) на Википедии (только английский)
-- [Объектно-ориентированное программирование](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5) на Википедии
+- [Языки, основанные на классах против прототипно-ориентированных](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Классы в JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) в Википедии (англ.)
+- [Объектно-ориентированное программирование](https://ru.wikipedia.org/wiki/Объектно-ориентированное_программирование) в Википедии

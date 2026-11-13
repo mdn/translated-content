@@ -17,7 +17,7 @@ var orientation = window.screen.orientation;
 
 一个 {{DOMxRef("ScreenOrientation")}} 的实例，表示屏幕的方向。
 
-注意在更早的、有前缀的版本中会返回一个 {{DOMxRef("DOMString")}} 值，相当于 {{DOMxRef("ScreenOrientation.type")}} 的值。
+注意在更早的、有前缀的版本中会返回一个 {{jsxref("String")}} 值，相当于 {{DOMxRef("ScreenOrientation.type")}} 的值。
 
 ## 示例
 
@@ -53,4 +53,4 @@ if (orientation === "landscape-primary") {
 
 - {{DOMxRef("ScreenOrientation")}}
 - {{DOMxRef("Screen.onorientationchange")}}
-- [Managing screen orientation](/zh-CN/docs/Managing_screen_orientation)
+- [Managing screen orientation](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

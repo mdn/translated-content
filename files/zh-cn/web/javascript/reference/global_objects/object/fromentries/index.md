@@ -3,11 +3,21 @@ title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
 
-{{JSRef}}
-
 **`Object.fromEntries()`** 静态方法将键值对列表转换为一个对象。
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## 语法
 
@@ -18,9 +28,7 @@ Object.fromEntries(iterable)
 ### 参数
 
 - `iterable`
-
   - : 一个包含对象列表的[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，例如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}。每个对象都要有两个属性：
-
     - `0`
       - : 表示属性键的字符串或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
     - `1`

@@ -26,7 +26,7 @@ Cette section fournit une brève description de chaque propriété et méthode a
 
 ### requestPointerLock()
 
-L'API Pointer lock, de manière similaire à l'[API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), étend les les éléments DOM en ajoutant une nouvelle méthode, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. Comme le préfixe fournisseur a récemment été retiré, vous devriez utiliser la syntaxe ci-dessous, par exemple pour demander un verrouillage deu pointeur sur un élément `canvas`:
+L'API Pointer lock, de manière similaire à l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API), étend les les éléments DOM en ajoutant une nouvelle méthode, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. Comme le préfixe fournisseur a récemment été retiré, vous devriez utiliser la syntaxe ci-dessous, par exemple pour demander un verrouillage deu pointeur sur un élément `canvas`:
 
 ```js
 canvas.requestPointerLock =

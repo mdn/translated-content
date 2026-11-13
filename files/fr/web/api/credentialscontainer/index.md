@@ -22,7 +22,6 @@ Aucun.
 - {{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}
   - : Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec l'instance de {{domxref("Credential")}} qui correspond aux paramètres fournis.
 - {{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}
-
   - : Cette méthode active un marqueur qui indique si une connexion automatique est autorisée pour les futures visites sur cette origine et renvoie une promesse ({{jsxref("Promise")}}) vide.
 
     On pourra par exemple appeler cette méthode après qu'un utilisateur se soit déconnecté d'un site web pour s'assurer qu'il n'est pas reconnecté à la prochaine visite. Dans des versions antérieures de la spécification, cette méthode était intitulée `requireUserMediation()`. Voir le tableau de compatibilité ci-après pour plus de détails.

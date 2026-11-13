@@ -17,7 +17,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
 複数の要因が考えられますが、代表例として以下があります。
 
 1. **ブラウザー間でのデフォルト値の差異**
-    ブラウザー毎でデフォルト値を持っています。 [line-height](/ja/docs/Web/CSS/line-height): normal; 等で指定するとデフォルト値で表示されます。
+    ブラウザー毎でデフォルト値を持っています。 [line-height](/ja/docs/Web/CSS/Reference/Properties/line-height): normal; 等で指定するとデフォルト値で表示されます。
     しかし、ブラウザーによってはデフォルト値が異なるため、同じように normal で指定してもブラウザー比較すると異なる表示となってしまうことがあります。
 
     ```css
@@ -44,7 +44,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
     ```
 
 3. **ブラウザー間での px 指定の差異**
-    様々なアイコン上の文字列を CSS の[padding](/ja/docs/Web/CSS/padding)プロパティ等を使用して、配置を指定している場合、ブラウザー間で表示がずれてしまう場合があります。
+    様々なアイコン上の文字列を CSS の[padding](/ja/docs/Web/CSS/Reference/Properties/padding)プロパティ等を使用して、配置を指定している場合、ブラウザー間で表示がずれてしまう場合があります。
     これは、ブラウザー間で px 指定の差異があるために発生しています。
 
     ```css
@@ -73,7 +73,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
 
 2. **ベンダープレフィックス**
     webkit 指定が入っている場合は、他のブラウザーとの互換用に別途指定を行う必要があります。
-    \-webkit-box-sizing プロパティの場合は、[box-sizing](/ja/docs/Web/CSS/box-sizing)プロパティを追記することで Firefox でも指定を行うことができます。
+    \-webkit-box-sizing プロパティの場合は、[box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing)プロパティを追記することで Firefox でも指定を行うことができます。
 
     ```css
     #button-06 {
@@ -85,7 +85,7 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
     ```
 
 3. **ブラウザー間での px 指定の差異**
-    指定に差異が出てしまっているものに関しては、個々の要素に[padding](/ja/docs/Web/CSS/padding)プロパティ指定を追記し、
+    指定に差異が出てしまっているものに関しては、個々の要素に[padding](/ja/docs/Web/CSS/Reference/Properties/padding)プロパティ指定を追記し、
     それぞれで調整を行うことで、想定の表示を行うことが可能となります。
 
     ```css
@@ -99,4 +99,4 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
 
 - デフォルト値ではなく、明示的に値を指定することで、他のブラウザーで差異があった場合にも対応できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

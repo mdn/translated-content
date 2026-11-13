@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaHasPopup`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性の値を反映し、要素によって発生させることができるメニューやダイアログなどの対話型ポップアップ要素の型と利用できるかどうかを示します。
+**`ariaHasPopup`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性の値を反映し、要素によって発生させることができるメニューやダイアログなどの対話型ポップアップ要素の型と利用できるかどうかを示します。
 
 ## 値
 

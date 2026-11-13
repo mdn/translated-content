@@ -16,9 +16,7 @@ drawElements(mode, count, type, offset);
 ### 引数
 
 - `mode`
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} で、描画するプリミティブの型を指定します。取りうる値は次の通りです。
-
     - `gl.POINTS`: 単一の点を描きます。
     - `gl.LINE_STRIP`: 直線を次の頂点に向けて描きます。
     - `gl.LINE_LOOP`: 直線を次の頂点に向けて描き、最後の頂点を最初の頂点に接続します。
@@ -30,13 +28,10 @@ drawElements(mode, count, type, offset);
 - count
   - : {{domxref("WebGL_API/Types", "GLsizei")}} で、レンダリングする要素配列バッファーの要素数を指定します。例えば、 `gl.LINES` を使ってワイヤーフレームの三角形を描く場合、線 1 本あたり 2 つの端点× 3 本 ＝ 6 要素になります。しかし、同じワイヤーフレームの三角形を `gl.LINE_STRIP` で描画する場合、要素配列バッファーは 1 本目の終点/ 2 本目の始点、 2 本目の終点/ 3 本目の始点のインデックスを繰り返さないので、 `count` は 4 個となります。同じ三角形を `gl.LINE_LOOP` で描画する場合、要素配列バッファーは最初と最後の頂点を繰り返さないので、 `count` は 3 となります。
 - type
-
   - : {{domxref("WebGL_API/Types", "GLenum")}} で、要素の配列バッファーの値の型を指定します。取りうる値は次の通りです。
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - {{domxref("OES_element_index_uint")}} 拡張を使用する場合:
-
       - `gl.UNSIGNED_INT`
 
 - offset

@@ -7,7 +7,7 @@ slug: Web/API/URL/createObjectURL_static
 
 ## Определение
 
-**`URL.createObjectURL()`** - статический метод, который создаёт {{domxref("DOMString")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
+**`URL.createObjectURL()`** - статический метод, который создаёт {{jsxref("String")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
 
 {{AvailableInWorkers}}
 
@@ -24,7 +24,7 @@ objectURL = URL.createObjectURL(blob);
 
 ## Пример
 
-Смотрите [Using object URLs to display images](/ru/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images).
+Смотрите [Using object URLs to display images](/ru/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Примечания
 
@@ -41,4 +41,4 @@ objectURL = URL.createObjectURL(blob);
 ## Смотрите также
 
 - {{domxref("URL.revokeObjectURL()")}}
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications)
+- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -3,7 +3,7 @@ title: "Document: fullscreenElement プロパティ"
 short-title: fullscreenElement
 slug: Web/API/Document/fullscreenElement
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("Fullscreen API")}}
@@ -15,6 +15,7 @@ l10n:
 ## 返値
 
 現在全画面モードになっている {{domxref("Element")}} オブジェクト。全画面モードがこの `document` で使用されていない場合、返値は `null` です。
+全画面モードで複数の要素がある場合、最上位の（最も最近リクエストされた）要素が返されます。
 
 ## 例
 
@@ -44,4 +45,4 @@ function isVideoInFullscreen() {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

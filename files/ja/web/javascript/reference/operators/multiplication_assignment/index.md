@@ -1,30 +1,56 @@
 ---
-title: 乗算代入 (*=)
+title: 乗算代入演算子 (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**乗算代入演算子 (`*=`)** は、2 つのオペランドで[乗算](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)を行い、結果を左オペランドに代入します。
 
-乗算代入演算子 (`*=`) は、変数に右のオペランドの値を乗算し、結果を変数に代入します。
+{{InteractiveExample("JavaScript デモ: 乗算代入演算子 (*=)")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// 予想される結果: 6
+
+console.log((a *= "hello"));
+// 予想される結果: NaN
+```
 
 ## 構文
 
-```js
-x *= y; // x = x * y
+```js-nolint
+x *= y
 ```
+
+## 解説
+
+`x *= y` は `x = x * y` と同等ですが、式 `x` が一度だけ評価される点が異なります。
 
 ## 例
 
-### 乗算代入の使用
+### 数値を使用した乗算代入
 
 ```js
-// 次の変数を想定
-//  bar = 5
-
+let bar = 5;
 bar *= 2; // 10
+```
+
+その他の長整数以外の値は数値に変換されます。
+
+```js
+let bar = 5;
 bar *= "foo"; // NaN
+```
+
+### 長整数を使用した乗算代入
+
+```js
+let foo = 3n;
+foo *= 2n; // 6n
+foo *= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## 仕様書
@@ -38,4 +64,4 @@ bar *= "foo"; // NaN
 ## 関連情報
 
 - [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [乗算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [乗算演算子 (`*`)](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)

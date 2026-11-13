@@ -10,7 +10,7 @@ slug: Web/API/CustomElementRegistry
 ## 메서드
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 정의합니다.
+  - : 새로운 [사용자 정의 요소](/ko/docs/Web/API/Web_components/Using_custom_elements)를 정의합니다.
 - {{domxref("CustomElementRegistry.get()")}}
   - : 주어진 이름을 붙인 사용자 정의 요소의 생성자를 반환합니다. 해당하는 이름에 정의된 요소가 존재하지 않으면 {{jsxref("undefined")}}를 대신 반환합니다.
 - {{domxref("CustomElementRegistry.upgrade()")}}
@@ -64,7 +64,8 @@ class WordCount extends HTMLParagraphElement {
 customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
-> **참고:** `CustomElementRegistry`는 {{domxref("Window.customElements")}} 속성으로 접근할 수 있습니다.
+> [!NOTE]
+> `CustomElementRegistry`는 {{domxref("Window.customElements")}} 속성으로 접근할 수 있습니다.
 
 ## 명세서
 

@@ -1,16 +1,21 @@
 ---
-title: CSRF
+title: Falsification de requête inter-sites (CSRF)
 slug: Glossary/CSRF
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Dans une attaque de **falsification de requête inter-sites** (<i lang="en">cross-site request forgery</i>, CSRF en anglais), un·e attaquant·e trompe le navigateur pour qu'il effectue une requête HTTP vers le site cible à partir d'un site malveillant. La requête inclut les identifiants de l'utilisateur·ice et amène le serveur à exécuter une action nuisible, pensant que l'utilisateur·ice l'a voulue.
 
-**CSRF** (Cross-Site Request Forgery) est une attaque qui usurpe l'identité d'un utilisateur de confiance et envoie des commandes non désirées sur un site web. Cela peut être réalisé, par exemple, en ajoutant des paramètres malveillants dans une {{glossary("URL")}} associée à un lien qui prétend aller quelque part ailleurs.
+Une attaque CSRF est possible si un site web&nbsp;:
+
+- utilise des requêtes HTTP pour modifier un état côté serveur&nbsp;;
+- utilise uniquement des cookies pour valider que la requête provient d'un·e utilisateur·ice authentifié·e&nbsp;;
+- utilise uniquement des paramètres dans la requête qu'un·e attaquant·e peut prédire.
+
+Il existe plusieurs moyens de se défendre contre les attaques CSRF, notamment l'utilisation de [jetons CSRF](/fr/docs/Web/Security/Attacks/CSRF#jetons_csrf), l'utilisation des [métadonnées fetch](/fr/docs/Web/Security/Attacks/CSRF#fetch_metadata) pour bloquer certaines requêtes inter-sites, et le [paramétrage de l'attribut `SameSite`](/fr/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies) sur les cookies utilisés pour authentifier les requêtes sensibles.
 
 ## Voir aussi
 
-### Culture générale
-
-- [<i lang="en">Cross-site request forgery</i>](https://fr.wikipedia.org/wiki/Cross-site_request_forgery) sur Wikipédia
-- [Mesures de prévention](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>) (en)
-- [Tutoriel sur la sécurité, sur MDN](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [Falsification de requête inter-sites](/fr/docs/Web/Security/Attacks/CSRF)
+- [Aide-mémoire pour la prévention des attaques CSRF <sup>(angl.)</sup>](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) sur [owasp.org <sup>(angl.)</sup>](https://owasp.org/)

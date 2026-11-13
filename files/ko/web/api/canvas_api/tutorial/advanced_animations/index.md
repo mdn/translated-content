@@ -290,7 +290,7 @@ ball.draw();
 
 ## 마우스 컨트롤 추가하기
 
-공을 컨트롤 하기 위해, 우리는 [`mousemove`](/ko/docs/Web/Reference/Events/mousemove) 이벤트를 사용하여 마우스를 따라오게 할 것이다. [`click`](/ko/docs/Web/Events/click) 이벤트를 통해 공을 놓으면 다시 공이 튀도록 할 것이다.
+공을 컨트롤 하기 위해, 우리는 [`mousemove`](/ko/docs/Web/API/Element/mousemove_event) 이벤트를 사용하여 마우스를 따라오게 할 것이다. [`click`](/ko/docs/Web/API/Element/click_event) 이벤트를 통해 공을 놓으면 다시 공이 튀도록 할 것이다.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -374,6 +374,6 @@ ball.draw();
 ## 더보기
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/ko/docs/Games/Techniques/Efficient_animation_for_web_games)
+- [Efficient animation for web games](/ko/docs/Games/Techniques)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

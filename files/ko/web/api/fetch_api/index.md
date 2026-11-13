@@ -23,7 +23,7 @@ Fetch API는 {{domxref("Request")}}와 {{domxref("Response")}} 객체, 그리고
 
 {{domxref("Request.Request", "Request()")}}와 {{domxref("Response.Response", "Response()")}} 생성자를 직접 호출해서 요청과 응답을 생성할 수 있지만, 이런 사용법은 흔치 않습니다. 보통 이 두 객체는 다른 API(예를 들어, 서비스 워커의 {{domxref("FetchEvent.respondWith()")}})에 의해 생성됩니다.
 
-Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)에서, 개념 학습은 [Fetch 기본 개념](/ko/docs/Web/API/Fetch_API/Basic_concepts)에서 확인하세요.
+Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)에서, 개념 학습은 [Fetch 기본 개념](/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b)에서 확인하세요.
 
 ## Fetch 인터페이스
 
@@ -48,7 +48,7 @@ Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko
 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
 - [Fetch 폴리필](https://github.com/github/fetch)
-- [Fetch 기본 개념](/ko/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch 기본 개념](/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b)

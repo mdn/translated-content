@@ -26,12 +26,12 @@ if (fileInput.multiple == true) {
 
 ## See also
 
-- [FileList](/zh-CN/DOM/FileList)
+- [FileList](/zh-CN/docs/Web/API/FileList)
 - [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
 
 ## Specification
 
-- [The multiple attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
+- [The multiple attribute](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
 
 ## Browser compatibility
 

@@ -1,15 +1,31 @@
 ---
 title: RegExp.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 939067a53bb5bb3787f2d536b83df2252d4e838e
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、は正規表現を表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.toString()", "taller")}}
+
+```js interactive-example
+console.log(new RegExp("a+b+c"));
+// 予想される結果: /a+b+c/
+
+console.log(new RegExp("a+b+c").toString());
+// 予想される結果: "/a+b+c/"
+
+console.log(new RegExp("bar", "g").toString());
+// 予想される結果: "/bar/g"
+
+console.log(new RegExp("\n", "g").toString());
+// 予想される結果: "/\n/g"
+
+console.log(new RegExp("\\n", "g").toString());
+// 予想される結果: "/\n/g"
+```
 
 ## 構文
 

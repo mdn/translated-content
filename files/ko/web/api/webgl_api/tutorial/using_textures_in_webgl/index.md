@@ -12,7 +12,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 가장 먼저 해야할 일은 텍스쳐를 읽어오는 것입니다. 이번 예제에서는 동일한 하나의 텍스쳐를 회전하는 정육면체의 6개의 면에 입혀볼 것입니다. 여러개의 텍스쳐를 각 면에 입힌다고 해도 하나를 입히는 것과 동일한 방법을 적용하면 됩니다.
 
 > [!NOTE]
-> 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/ko/docs/HTTP_access_control)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/WebGL/Cross-Domain_Textures)를 참고하세요.
+> 텍스쳐를 외부에서 읽어올 때는 [크로스 도메인 규칙(cross-domain rules)](/ko/docs/Web/HTTP/Guides/CORS)에 유의해야 합니다. CORS(Cross Origin Resource Sharing)승인을 받을 수 있는 도메인에 있는 텍스쳐만 읽어올 수 있습니다. 자세한 내용은 [크로스 도메인 텍스쳐(Cross-domain textures)](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures)를 참고하세요.
 
 텍스쳐를 읽어오는 코드는 다음과 같습니다:
 
@@ -45,7 +45,7 @@ function handleTextureLoaded(image, texture) {
 텍스쳐를 실질적으로 생성하려면, 앞에서 새로 생성한 텍스쳐 객체를 `gl.TEXTURE_2D`에 바인딩해야 합니다. 그리고 나서 이미지 데이터가 로딩된 이미지 객체를 `texImage2D()`에 전달하여 호출하면, 이미지 데이터가 텍스쳐에 쓰여(write) 집니다.
 
 > [!NOTE]
-> 텍스쳐의 너비와 높이는 **거의 대부분**의 상황에서 2의 거듭제곱 픽셀(1, 2, 4, 8, 16, 32, ...)이어야 합니다. 예외인 경우에 대해서는 아래의 _"_[크기가 2의 거듭제곱 픽셀이 아닌 텍스쳐](/ko/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures)_"를 참고하세요._
+> 텍스쳐의 너비와 높이는 **거의 대부분**의 상황에서 2의 거듭제곱 픽셀(1, 2, 4, 8, 16, 32, ...)이어야 합니다. 예외인 경우에 대해서는 아래의 _"_[크기가 2의 거듭제곱 픽셀이 아닌 텍스쳐](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#non_power-of-two_textures)_"를 참고하세요._
 
 그 다음 두 라인은 텍스쳐를 위한 필터링을 준비합니다. 이 필터링은 이미지 크기가 변경될 때 이미지가 필터되는 방식을 제어합니다. 여기에서는 이미지를 확대할 때 선형 필터링을 사용하고, 이미지를 축소할 때 mipmap을 사용합니다. generateMipMap()을 호출해서 mipmap이 만들어지면 gl.TEXTURE_2D에 null을 바인딩시켜서, 텍스쳐를 다룰 준비가 끝났다는 것을 WebGL에게 알려줍니다.
 
@@ -176,6 +176,6 @@ gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 
 GL은 32개의 텍스쳐 레지스터를 제공합니다. 그 중 첫번째 레지스터는 `gl.TEXTURE0` 입니다. 텍스쳐를 사용하기 위해 전에 읽어온 텍스쳐를 gl.TEXTURE0에 바인딩하고, 셰이더 샘플러를 셰이더 프로그램에 명시되어 있는 `uSampler`로 설정합니다.
 
-이제 앞 단원의 예제보다 더 보기 좋게 회전하는 정육면체를 볼 수 있을 것입니다. WebGL을 지원하는 브라우저라면 [여기](/samples/webgl/sample6/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
+이제 앞 단원의 예제보다 더 보기 좋게 회전하는 정육면체를 볼 수 있을 것입니다. WebGL을 지원하는 브라우저라면 [여기](http://mdn.github.io/webgl-examples/tutorial/sample6/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
   sourceCommit: 6589a6a25a5d2e9a359c3f02f37c670fb7c74259
@@ -16,7 +17,16 @@ l10n:
 - 제공된 테스트 함수를 만족하는 요소가 있는지 찾아야 하는 경우, {{jsxref("Array/some", "some()")}}을 사용하세요.
 - 만약 주어진 테스트 함수를 만족하는 모든 요소를 찾고 싶으면 {{jsxref("Array/filter", "filter()")}}을 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## 구문
 

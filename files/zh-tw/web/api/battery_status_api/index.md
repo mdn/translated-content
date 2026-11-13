@@ -1,38 +1,74 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
+l10n:
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
-{{DefaultAPISidebar("Battery API")}}
+{{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
 
-**Battery Status API** 也就是所謂的 **Battery API**，將提供系統電池充電容量的資訊，並在電池容量變化時送出事件，以通知使用者。此 API 可調整 Apps 的資源耗用量，在電力偏低時縮減耗電量；或可在電力耗盡之前儲存檔案，避免資料遺失。
+**Battery Status API**，更常被稱為 **Battery API**，提供有關系統電池充電狀態的資訊，並允許你透過事件通知來得知電池電量或充電狀態的變化。這可以用來調整應用程式的資源使用，以在電池電量低時減少耗電，或者在電池耗盡前儲存變更以防止資料遺失。
 
-Battery Status API 是以 [`window.navigator.battery`](/zh-TW/docs/Web/API/window.navigator.battery) 屬性 (為 [`BatteryManager`](/zh-TW/docs/Web/API/BatteryManager) 物件) 而擴充了 [`window.navigator`](/zh-TW/docs/Web/API/window.navigator)，並新增數項可讓使用者接收的新事件，以隨時監控電池狀態。
+> [!NOTE]
+> 此 API _無法在_ [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API) 中使用（不會透過 {{domxref("WorkerNavigator")}} 暴露）。
+
+## 介面
+
+- {{domxref("BatteryManager")}}
+  - : 提供有關系統電池充電狀態的資訊。
+
+### 擴展至其他介面
+
+- {{domxref("Navigator.getBattery()")}}
+  - : 返回一個 {{JSxRef("Promise")}}，其會兌現為一個 {{DOMxRef("BatteryManager")}} 物件。
 
 ## 範例
 
-在此範例中，我們將分別監聽 [chargingchange](/zh-TW/docs/Web/Reference/Events/chargingchange) 與 [levelchange](/zh-TW/docs/Web/Reference/Events/levelchange) 事件，而看到充電狀態 (不論是否插電進行充電) 與電池容量的變化。
+在此範例中，我們監聽充電狀態（是否插電充電中）以及電池電量和時間的變化。這是透過監聽 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}、{{domxref("BatteryManager.levelchange_event", "levelchange")}}、{{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}} 和 {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} 事件來完成的。
 
 ```js
-var battery =
-  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
-
-function updateBatteryStatus() {
-  console.log("Battery status: " + battery.level * 100 + " %");
-
-  if (battery.charging) {
-    console.log("Battery is charging");
+navigator.getBattery().then((battery) => {
+  function updateAllBatteryInfo() {
+    updateChargeInfo();
+    updateLevelInfo();
+    updateChargingInfo();
+    updateDischargingInfo();
   }
-}
+  updateAllBatteryInfo();
 
-battery.addEventListener("chargingchange", updateBatteryStatus);
-battery.addEventListener("levelchange", updateBatteryStatus);
-updateBatteryStatus();
+  battery.addEventListener("chargingchange", () => {
+    updateChargeInfo();
+  });
+  function updateChargeInfo() {
+    console.log(`電池正在充電嗎？${battery.charging ? "是" : "否"}`);
+  }
+
+  battery.addEventListener("levelchange", () => {
+    updateLevelInfo();
+  });
+  function updateLevelInfo() {
+    console.log(`電池電量：${battery.level * 100}%`);
+  }
+
+  battery.addEventListener("chargingtimechange", () => {
+    updateChargingInfo();
+  });
+  function updateChargingInfo() {
+    console.log(`電池充電時間：${battery.chargingTime} 秒`);
+  }
+
+  battery.addEventListener("dischargingtimechange", () => {
+    updateDischargingInfo();
+  });
+  function updateDischargingInfo() {
+    console.log(`電池放電時間：${battery.dischargingTime} 秒`);
+  }
+});
 ```
 
-另可參閱[規格所提供之範例](http://dev.w3.org/2009/dap/system-info/battery-status.html#introduction)。
+參見[規範中的範例](https://w3c.github.io/battery/#examples)。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -40,12 +76,6 @@ updateBatteryStatus();
 
 {{Compat}}
 
-## 另請參閱
+## 參見
 
-- [部落格文章 - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh 所寫的 JavaScript Battery Api](http://davidwalsh.name/battery-api)
-- [battery.js - 跨瀏覽器 wrapper](https://github.com/pstadler/battery.js)
-- [`BatteryManager`](/zh-TW/docs/Web/API/BatteryManager)
-- [`navigator.battery`](/zh-TW/docs/Web/API/window.navigator.battery)
-- `測試你的瀏覽器是否支援 Battery Status API。可掃 QR Code:`
-- [![QR Code to Battery Status API Test Page](http://x.co/qr/batstat?s=165)](http://x.co/qr/batstat?s=165)
+- [Hacks 部落格文章——使用 Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

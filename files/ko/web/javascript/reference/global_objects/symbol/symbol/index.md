@@ -9,7 +9,25 @@ l10n:
 
 **`Symbol()`** 함수는 타입 Symbol의 원시 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## 구문
 
@@ -18,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **참고:** `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
+> [!NOTE]
+> `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
 > `new`와 함께 생성하려하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
@@ -47,7 +66,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-{{jsxref("Operators/new", "new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
+{{jsxref("new")}} 연산자를 사용한 아래 구문은 {{jsxref("TypeError")}}를 발생시킵니다.
 
 ```js example-bad
 const sym = new Symbol(); // TypeError

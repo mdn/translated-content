@@ -21,25 +21,23 @@ setValidity(flags, message, anchor)
 ### 引数
 
 - `flags` {{Optional_Inline}}
-
   - : 要素の有効状態を示す、 1 つ以上のフラグを含む辞書オブジェクトです。
-
     - `valueMissing`
-      - : 論理値で、要素に [`required`](/ja/docs/Web/HTML/Element/input#required) 属性があって値がない場合は `true` となり、そうでない場合は `false` となります。もし `true` なら、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
+      - : 論理値で、要素に [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性があって値がない場合は `true` となり、そうでない場合は `false` となります。もし `true` なら、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
     - `typeMismatch`
-      - : 論理値で、値が必要とされる構文でない場合（[`type`](/ja/docs/Web/HTML/Element/input#type) が `email` または `url` の場合）は `true` となり、構文が正しい場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
+      - : 論理値で、値が必要とされる構文でない場合（[`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `email` または `url` の場合）は `true` となり、構文が正しい場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
     - `patternMismatch`
-      - : 論理値で、指定された [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) に一致しない場合は `true` となり、一致する場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
+      - : 論理値で、指定された [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) に一致しない場合は `true` となり、一致する場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} の擬似クラスに一致します。
     - `tooLong`
       - : 論理値で、値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトで指定された `maxlength` を超える場合は `true` となり、最大の長さ以下の場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
     - `tooShort`
       - : 論理値で、値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトで指定された `minlength` に満たない場合は `true` となり、最小の長さ以上の場合は `false` となります。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
     - `rangeUnderflow`
-      - : 論理値で、値が [`min`](/ja/docs/Web/HTML/Element/input#min) 属性で指定された最小値より小さい場合は `true` となり、最小値以上の場合は `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+      - : 論理値で、値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) 属性で指定された最小値より小さい場合は `true` となり、最小値以上の場合は `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
     - `rangeOverflow`
-      - : 論理値で、値が [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定された最大値より大きい場合は `true` となり、最大値以下であれば `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+      - : 論理値で、値が [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定された最大値より大きい場合は `true` となり、最大値以下であれば `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
     - `stepMismatch`
-      - : 論理値で、値が [`step`](/ja/docs/Web/HTML/Element/input#step) 属性によって決定されるルールに適合しない（つまり、ステップ値で均等に割り切れない）場合は `true` となり、ステップのルールに適合する場合は `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
+      - : 論理値で、値が [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性によって決定されるルールに適合しない（つまり、ステップ値で均等に割り切れない）場合は `true` となり、ステップのルールに適合する場合は `false` となります。 `true` の場合、要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} 擬似クラスに一致します。
     - `badInput`
       - : 論理値で、ブラウザーが変換できない入力をユーザーが入力した場合に `true` となります。
     - `customError`

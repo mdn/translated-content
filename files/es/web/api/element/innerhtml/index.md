@@ -26,7 +26,7 @@ element.innerHTML = htmlString;
 
 ### Valor
 
-La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
+La variable constante `content` contiene un [DOMString](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
 
 ### Excepciones
 
@@ -57,7 +57,7 @@ Esta propiedad proporciona una forma sencilla de cambiar completamente los conte
 document.body.innerHTML = ""; // Reemplaza el contenido de <body> con una cadena vacía
 ```
 
-El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Element/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
+El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Reference/Elements/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
 
 ```js
 document.documentElement.innerHTML =
@@ -93,7 +93,7 @@ const name = "<img src='x' onerror='alert(1)'>";
 el.innerHTML = name; // con peligro, la alerta ahora si es mostrada
 ```
 
-Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/En/DOM/Node.textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
+Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/es/docs/Web/API/Node/textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
 
 ## Ejemplo
 
@@ -134,4 +134,4 @@ La siguiente cadena (string) se muestra en la ventana de la consola:
 ## Véase también
 
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Para aquellos que desean adherirse a los estándares, aquí hay un conjunto de funciones JavaScript que ofrecen serializar o analizar XML para así establecer contenidos de elementos definidos como cadena(s) via el DOM o para conseguir contenidos de elementos obtenidos del DOM como cadenas.
-- [jssaxparser](http://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
+- [jssaxparser](https://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))

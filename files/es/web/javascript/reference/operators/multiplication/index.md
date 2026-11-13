@@ -9,7 +9,21 @@ l10n:
 
 El operador de **multiplicación (`*`)** produce el producto de dos operandos.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## Sintaxis
 
@@ -19,7 +33,7 @@ x * y
 
 ## Descripción
 
-El operador `*` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una multiplicación BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza la multiplicación de números. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+El operador `*` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una multiplicación BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza la multiplicación de números. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
 
 ## Ejemplos
 

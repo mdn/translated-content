@@ -5,11 +5,21 @@ l10n:
   sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
-{{jsSidebar("Statements")}}
-
 **`for...of`** 语句执行一个循环，该循环处理来自[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -19,7 +29,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...of` 循环所在的作用域相同。
+  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...of` 循环所在的作用域相同。
 - `iterable`
   - : 可迭代对象。循环操作的序列值的来源。
 - `statement`
@@ -52,7 +62,7 @@ for (let value of iterable) {
 > [!NOTE]
 > 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
+你可以使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
 
 然而，有一条特别的规则禁止使用 `async` 作为变量名。这是无效语法：
 
@@ -161,7 +171,7 @@ foo(1, 2, 3);
 
 ### 迭代 NodeList
 
-下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Element/article) 元素下的段落添加一个 `read` 类。
+下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Reference/Elements/article) 元素下的段落添加一个 `read` 类。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");
@@ -323,7 +333,7 @@ for (const value of generator) {
 
 `for...in` 和 `for...of` 语句都用于迭代某个内容，它们之间的主要区别在于迭代的对象。
 
-{{jsxref("Statements/for...in", "for...in")}} 语句用于迭代对象的[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，而 `for...of` 语句用于迭代[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)定义的要进行迭代的值。
+{{jsxref("Statements/for...in", "for...in")}} 语句用于迭代对象的[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)，而 `for...of` 语句用于迭代[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)定义的要进行迭代的值。
 
 下面的示例展示了在迭代 {{jsxref("Array")}} 时，`for...of` 循环和 `for...in` 循环之间的区别。
 
@@ -352,9 +362,9 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-`iterable` 对象继承了 `objCustom` 和 `arrCustom` 属性，因为其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中同时包含了 `Object.prototype` 和 `Array.prototype`。
+`iterable` 对象继承了 `objCustom` 和 `arrCustom` 属性，因为其[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中同时包含了 `Object.prototype` 和 `Array.prototype`。
 
-`for...in` 循环仅打印了 `iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不会打印数组中的*元素* `3`、`5`、`7` 或 `"hello"`，因为它们不是*属性*，而是*值*。它打印了数组的*索引*以及 `arrCustom` 和 `objCustom`，它们是实际的属性。如果你对为什么迭代这些属性感到困惑，可以查看关于[数组迭代和 `for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#数组迭代和_for...in) 工作原理的更详细解释。
+`for...in` 循环仅打印了 `iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)。它不会打印数组中的*元素* `3`、`5`、`7` 或 `"hello"`，因为它们不是*属性*，而是*值*。它打印了数组的*索引*以及 `arrCustom` 和 `objCustom`，它们是实际的属性。如果你对为什么迭代这些属性感到困惑，可以查看关于[数组迭代和 `for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#数组迭代和_for...in) 工作原理的更详细解释。
 
 第二个循环与第一个循环类似，但它使用 {{jsxref("Object.hasOwn()")}} 来检查找到的可枚举属性是否为对象的自有属性，即非继承属性。如果是，则打印该属性。属性 `0`、`1`、`2` 和 `foo` 被打印，因为它们是自有属性。属性 `arrCustom` 和 `objCustom` 没有被打印，因为它们是继承属性。
 

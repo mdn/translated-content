@@ -7,7 +7,8 @@ slug: Web/API/Node/textContent
 
 La propiedad **`textContent`** de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.
 
-> **Nota:** `textContent` y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero [ambos son diferentes en varias formas importantes](#Diferencias_con_innerText).
+> [!NOTE]
+> `textContent` y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero [ambos son diferentes en varias formas importantes](#diferencias_con_innertext).
 
 ## Sintaxis
 

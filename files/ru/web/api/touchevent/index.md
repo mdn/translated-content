@@ -21,7 +21,6 @@ slug: Web/API/TouchEvent
 _Данный интерфейс наследует свойства своих предков, {{domxref("UIEvent")}} и {{domxref("Event")}}._
 
 - {{ domxref("TouchEvent.altKey") }} {{readonlyInline}}
-
   - : Булево значение, показывающее, была ли нажата клавиша&#x20;
 
     <kbd>alt</kbd>
@@ -31,7 +30,6 @@ _Данный интерфейс наследует свойства своих 
 - {{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}
   - : Список {{ domxref("TouchList") }}, со всеми объектами {{ domxref("Touch") }}, представляющими отдельные точки касания, состояние которых изменилось между предыдущим событием касания и текущим.
 - {{ domxref("TouchEvent.ctrlKey") }} {{readonlyInline}}
-
   - : Булево значение, показывающее, была ли нажата клавиша&#x20;
 
     <kbd>ctrl</kbd>
@@ -39,7 +37,6 @@ _Данный интерфейс наследует свойства своих 
     , когда произошло событие касания
 
 - {{ domxref("TouchEvent.metaKey") }} {{readonlyInline}}
-
   - : Булево значение, показывающее, была ли нажата клавиша&#x20;
 
     <kbd>meta</kbd>
@@ -47,7 +44,6 @@ _Данный интерфейс наследует свойства своих 
     , когда произошло событие касания.
 
 - {{ domxref("TouchEvent.shiftKey") }} {{readonlyInline}}
-
   - : Булево значение, показывающее, была ли нажата клавиша&#x20;
 
     <kbd>shift</kbd>
@@ -100,24 +96,24 @@ _Данный интерфейс наследует свойства своих 
 
 Важно отметить, что во многих случаях происходят и события касаний, и события мыши (чтобы код, не использующий касания, мог продолжать взаимодействовать с пользователем). Если вы используете события касания, вам следует вызывать {{domxref("Event.preventDefault","preventDefault()")}} для предотвращения отправки событий мыши.
 
-Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true` и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции `passive` равным `false` как показано в примере ниже. Это изменение запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем. Демонстрация этого доступна на сайте [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners).
+Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для [`touchstart`](/ru/docs/Web/API/Element/touchstart_event) и [`touchmove`](/ru/docs/Web/API/Element/touchmove_event) равно `true` и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции `passive` равным `false` как показано в примере ниже. Это изменение запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем. Демонстрация этого доступна на сайте [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners).
 
 ## GlobalEventHandlers
 
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchstart")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchstart`](/ru/docs/Web/API/Element/touchstart_event).
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchend")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchend`](/ru/docs/Web/API/Element/touchend_event).
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchmove")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchmove`](/ru/docs/Web/API/Element/touchmove_event).
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события {{event("touchcancel")}}.
+  - : Обработчик {{domxref("GlobalEventHandlers","global event handler")}} для события [`touchcancel`](/ru/docs/Web/API/Element/touchcancel_event).
 
 ## Пример
 
-Смотрите [пример в основной статье о событиях касания](/en/DOM/Touch_events#Example).
+Смотрите [пример в основной статье о событиях касания](/en-US/DOM/Touch_events#example).
 
 ## Спецификации
 

@@ -16,7 +16,7 @@ const newDoc = document.implementation.createHTMLDocument(title)
 ### Параметры
 
 - `title` {{optional_inline}} (except in IE)
-  - : {{domxref("DOMString")}}, содержащий заголовок для создания нового HTML-документа.
+  - : {{jsxref("String")}}, содержащий заголовок для создания нового HTML-документа.
 
 ## Пример
 
@@ -64,7 +64,7 @@ function makeDocument() {
 
 Строка 16 вытягивает `contentDocument` фрейма; это документ, в который мы будем вводить новое содержимое. Следующие две строки обрабатывают импорт содержимого нашего нового документа в контекст нового документа. Наконец, строка 20 фактически заменяет содержимое фрейма содержимым нового документа.
 
-[Смотреть Видео Примеры](/samples/domref/createHTMLDocument.html)
+[Смотреть Видео Примеры](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 Возвращаемый документ предварительно сконструирован со следующим HTML-кодом:
 

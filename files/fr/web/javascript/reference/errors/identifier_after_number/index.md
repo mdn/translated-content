@@ -3,8 +3,6 @@ title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 
-{{JSSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -49,5 +47,5 @@ var toto = vie1;
 
 ## Voir aussi
 
-- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
-- [Les variables](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Les variables](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#variables) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)

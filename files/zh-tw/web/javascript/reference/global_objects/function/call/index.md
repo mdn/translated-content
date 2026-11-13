@@ -3,18 +3,16 @@ title: Function.prototype.call
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
-{{JSRef}}
-
 使用給定的 `this` 參數以及分別給定的參數來呼叫某個函數
 
 > [!NOTE]
-> 此函數的所有語法大致上與 [`apply()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply) 相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
+> 此函數的所有語法大致上與 [`apply()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
 
 <table class="standard-table">
   <thead>
     <tr>
       <th colspan="2">
-        <a href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Function"
+        <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function"
           >Function </a
         >物件的方法
       </th>
@@ -41,7 +39,7 @@ fun.call(thisArg[, arg1[, arg2[, ...]]])
 ### 參數
 
 - `thisArg`
-  - : 呼叫*`fun`*時提供的`this`值。 注意，它可能是一個無法在函數內看到的值：若這個函數是在非嚴苛模式( [non-strict mode](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) ), `null` `、undefined` 將會被置換成全域變數，而原生型態的值將會被封裝
+  - : 呼叫*`fun`*時提供的`this`值。 注意，它可能是一個無法在函數內看到的值：若這個函數是在非嚴苛模式( [non-strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode) ), `null` `、undefined` 將會被置換成全域變數，而原生型態的值將會被封裝
 - `arg1, arg2, ...`
   - : 其他參數
 
@@ -115,4 +113,4 @@ for (var i = 0; i < animals.length; i++) {
 
 ## 參見
 
-- [apply](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply)
+- [apply](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)

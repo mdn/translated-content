@@ -1,11 +1,11 @@
 ---
 title: Axe transversal
 slug: Glossary/Cross_Axis
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{GlossarySidebar}}
-
-L'axe transversal d'une {{glossary("flexbox")}} traverse l'{{glossary("Main Axis","axe principal")}}, donc si la {{glossary("flex-direction")}} et l'axe principal sont `row` (_ligne_) ou `row-reverse` l'axe transversal est en colonne.
+L'**axe transversal** d'une {{Glossary("flexbox")}} traverse l'{{Glossary("Main Axis", "axe principal")}}, donc si la {{CSSxRef("flex-direction")}} et l'axe principal sont `row` (_ligne_) ou `row-reverse` l'axe transversal est en colonne.
 
 ![The cross axis runs down the column](basics3.png)
 
@@ -19,15 +19,28 @@ L'alignement des articles sur l'axe transversal est réalisé avec la propriét�
 
 ### Références de la propriété
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex")}}
+- {{CSSxRef("align-content")}}
+- {{CSSxRef("align-items")}}
+- {{CSSxRef("align-self")}}
+- {{CSSxRef("flex-wrap")}}
+- {{CSSxRef("flex-direction")}}
+- {{CSSxRef("flex")}}
+- {{CSSxRef("flex-basis")}}
+- {{CSSxRef("flex-flow")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}
+- {{CSSxRef("justify-content")}}
+- {{CSSxRef("order")}}
 
-### En lire plus
+### Pour aller plus loin
 
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- Guide Flexbox CSS : _[Maîtriser l'enveloppe des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)_
+Guides sur le flexbox CSS&nbsp;:
+
+- [Concepts de base du flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Gestion de l'enroulement des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Flex")}}
+  - {{Glossary("Flex Container", "Conteneur flexible")}}
+  - {{Glossary("Flex Item", "Élément flexible")}}
+  - {{Glossary("Grid")}}

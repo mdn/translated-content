@@ -2,14 +2,22 @@
 title: 空文
 slug: Web/JavaScript/Reference/Statements/Empty
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{jsSidebar("Statements")}}
 
 **空文** は、JavaScript 構文で文が想定されているときに、文を用意しないために使います。
 
-{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
+{{InteractiveExample("JavaScript デモ: 空文")}}
+
+```js interactive-example
+const array = [1, 2, 3];
+
+// 配列のすべての値に 0 を代入
+for (let i = 0; i < array.length; array[i++] = 0 /* 空文 */);
+
+console.log(array);
+// 予想される結果: Array [0, 0, 0]
+```
 
 ## 構文
 
@@ -45,9 +53,9 @@ console.log(arr);
 
 次の例は、おそらく意図的でない使用例です。
 
-```js example-bad
-if (condition); // 注意: この "if" は何の意味もない!
-killTheUniverse(); // この関数が常に実行される!!!
+```js-nolint example-bad
+if (condition);      // 注意: この "if" は何の意味もない!
+  killTheUniverse(); // この関数が常に実行される!!!
 ```
 
 ## 仕様書

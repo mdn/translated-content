@@ -106,9 +106,9 @@ Ces interfaces sont liées à l'interactivité avec les réseaux téléphoniques
 
 ## Tutoriels
 
-- [Amélioration de la compatibilité à l'aide de WebRTC adapter.js](/fr/docs/Web/API/WebRTC_API/adapter.js)
+- [Amélioration de la compatibilité à l'aide de WebRTC adapter.js](/fr/docs/Web/API/WebRTC_API#interoperability)
   - : L'organisation WebRTC [fournit sur GitHub l'adaptateur WebRTC](https://github.com/webrtc/adapter/) pour contourner les problèmes de compatibilité dans les implémentations WebRTC de différents navigateurs. L'adaptateur est un shim JavaScript qui permet à votre code d'être écrit selon la spécification afin qu'il "fonctionne simplement" dans tous les navigateurs prenant en charge WebRTC.
-- [Prendre des photos fixes avec WebRTC](/fr/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Prendre des photos fixes avec WebRTC](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
   - : Cet article explique comment utiliser WebRTC pour accéder à l'appareil photo sur un ordinateur ou un téléphone mobile avec prise en charge WebRTC et prendre une photo avec.
 - [Un exemple RTCDataChannel simple](/fr/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : L'interface {{domxref("RTCDataChannel")}} est une fonctionnalité qui vous permet d'ouvrir un canal entre deux pairs sur lequel vous pouvez envoyer et recevoir des données arbitraires. L'API est intentionnellement similaire à l'[API WebSocket](/fr/docs/Web/API/WebSockets_API), de sorte que le même modèle de programmation peut être utilisé pour chacun.
@@ -140,7 +140,7 @@ Ces interfaces sont liées à l'interactivité avec les réseaux téléphoniques
 
 {{Specifications}}
 
-En plus de ces spécifications définissant l'API nécessaire pour utiliser WebRTC, il existe plusieurs protocoles, répertoriés sous [ressources](#Protocols).
+En plus de ces spécifications définissant l'API nécessaire pour utiliser WebRTC, il existe plusieurs protocoles, répertoriés sous [ressources](#protocols).
 
 ## Voir aussi
 

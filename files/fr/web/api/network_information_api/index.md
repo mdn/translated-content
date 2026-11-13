@@ -58,5 +58,5 @@ if (connection) {
 
 ## Voir aussi
 
-- [Les évènement online et offline](/fr/docs/Online_and_offline_events)
+- [Les évènement online et offline](/fr/docs/Web/API/Navigator/onLine)
 - [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection)

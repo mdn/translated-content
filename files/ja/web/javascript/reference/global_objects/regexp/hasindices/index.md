@@ -1,15 +1,26 @@
 ---
 title: RegExp.prototype.hasIndices
+short-title: hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`hasIndices`** は {{jsxref("RegExp")}} インスタンスのプロパティで、その正規表現で `d` フラグが使用されたかどうかを示します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = /foo/d;
+
+console.log(regex1.hasIndices);
+// 予想される結果: true
+
+const regex2 = /bar/;
+
+console.log(regex2.hasIndices);
+// 予想される結果: false
+```
 
 ## 解説
 
@@ -54,12 +65,12 @@ console.log(regex2.exec(str2).indices); // undefined
 
 ## 関連情報
 
-- {{JSxRef("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.exec()")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

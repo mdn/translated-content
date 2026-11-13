@@ -43,11 +43,11 @@ Retorna uma matriz contendo todos os objetos {{domxref("VRDisplay")}} que está 
 {{domxref("Navigator.getVRDisplays()")}}
 Retorna uma promessa que resolve uma matriz de objetos {{domxref("VRDisplay")}} que representa qualquer dispositivo VR disponível conectado ao computador.
 {{domxref("Window.onvrdisplayconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido conectado ao computador (quando o evento {{event("vrdisplayconnected")}} for acionado).
+Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido conectado ao computador (quando o evento [`vrdisplayconnected`](/pt-BR/docs/Web/API/Window/vrdisplayconnect_event) for acionado).
 {{domxref("Window.onvrdisplaydisconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento {{event("vrdisplaydisconnected")}} for acionado).
+Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento [`vrdisplaydisconnected`](/pt-BR/docs/Web/API/Window/vrdisplaydisconnect_event) for acionado).
 {{domxref("Window.onvrdisplaypresentchange")}}
-Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento {{event("onvrdisplaypresentchange")}} é acionado).
+Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento [`onvrdisplaypresentchange`](/pt-BR/docs/Web/Events/onvrdisplaypresentchange) é acionado).
 
 ## Exemplos
 

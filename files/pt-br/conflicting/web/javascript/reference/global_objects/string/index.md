@@ -7,7 +7,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
 
 **`DOMString`** é uma String UTF-16. Como o JavaScript já usa tais strings, uma `DOMString` é mapeada diretamente a uma {{jsxref("String")}}.
 
-Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para um método ou parâmetro que aceite uma `DOMString`, tal valor é convertido para a string `"null"`.
+Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para um método ou parâmetro que aceite uma `DOMString`, tal valor é convertido para a string `"null"`.
 
 ## Especificações
 
@@ -16,7 +16,6 @@ Passando [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para
 ## Veja também
 
 - [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String "/pt-BR/docs/Web/API/DOMString")
-- {{domxref("USVString")}}
-- {{domxref("CSSOMString")}}
+- {{jsxref("String")}}
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/String_view)
 - [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)

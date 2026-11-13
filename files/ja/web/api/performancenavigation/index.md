@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 古い **`PerformanceNavigation`** インターフェイスは、現在のドキュメントへのナビゲーションがどのように行われたかに関する情報を表します。
 
@@ -20,9 +20,7 @@ l10n:
 _`PerformanceNavigation` インターフェイスはプロパティを継承していません。_
 
 - {{domxref("PerformanceNavigation.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : `unsigned short` で、このページへのナビゲーションがどのように行われたかを示します。取りうる値は次のとおりです。
-
     - `TYPE_NAVIGATE` (0)
       - : リンク、ブックマーク、フォーム送信、またはスクリプトを使用するか、アドレスバーに URL を入力してページにアクセスしました。
     - `TYPE_RELOAD` (1)

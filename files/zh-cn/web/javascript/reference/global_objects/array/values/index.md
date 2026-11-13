@@ -3,11 +3,22 @@ title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
-{{JSRef}}
-
 **`values()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象迭代数组中每个元素的值。
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript Demo: Array.values()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -156,7 +167,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.values` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}

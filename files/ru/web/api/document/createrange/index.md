@@ -1,33 +1,45 @@
 ---
-title: Document.createRange()
+title: "Document: метод createRange()"
 slug: Web/API/Document/createRange
+l10n:
+  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
 {{APIRef("DOM")}}
 
-Возвращает новый объект типа {{domxref("Range")}}.
+Метод **`Document.createRange()`** возвращает новый объект {{domxref("Range")}}.
 
-## Syntax
+## Синтаксис
 
+```js-nolint
+createRange()
 ```
-range = document.createRange();
-```
 
-`range` содержит созданный объект {{domxref("Range")}}.
+### Параметры
 
-## Example
+Нет.
+
+### Возвращаемое значение
+
+Созданный объект {{domxref("Range")}}.
+
+## Примеры
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
 ```
 
-## Notes
+## Примечания
 
-После того, как Range был создан, вам необходимо установить границы, прежде чем вы сможете использовать большую часть методов.
+После того, как `Range` создан, необходимо задать его граничные точки, прежде чем можно будет использовать большинство его методов.
 
-## Specification
+## Specifications
 
-- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

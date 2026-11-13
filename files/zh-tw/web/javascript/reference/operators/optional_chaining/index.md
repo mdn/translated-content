@@ -3,17 +3,31 @@ title: 可選串連
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
 
-{{JSSidebar("Operators")}}
-
-**可選串連**運算子 **`?.`** 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。`?.` 運算子的操作與 `.` 屬性存取運算子相似，後者會在參照到 [nullish](/zh-TW/docs/Glossary/nullish) ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 `undefined` 。 當需要存取一個函數，而這函數並不存在時，則會回傳 `undefined` 。
+**可選串連**運算子 **`?.`** 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。`?.` 運算子的操作與 `.` 屬性存取運算子相似，後者會在參照到 [nullish](/zh-TW/docs/Glossary/nullish) ({{JSxRef("Operators/null", "null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 `undefined` 。 當需要存取一個函數，而這函數並不存在時，則會回傳 `undefined` 。
 
 當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 語法
 
-```plain
+```js-nolint
 obj?.prop
 obj?.[expr]
 arr?.[index]
@@ -62,7 +76,7 @@ let result = someInterface.customMethod?.();
 
 #### 處理回呼函式或事件處理器
 
-如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
+如果你使用回呼函式，或是透過[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
 
 ```js
 // 在 ES2019 下撰寫
@@ -148,7 +162,7 @@ let duration = vacations.trip?.getTime?.();
 
 ### 使用空值合併運算子
 
-在可選串連後可以使用{{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：
+在可選串連後可以使用{{JSxRef("Operators/Nullish_coalescing", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：
 
 ```js
 let customer = {
@@ -169,5 +183,5 @@ console.log(customerCity); // Unknown city
 
 ## 參見
 
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}
+- {{JSxRef("Operators/Nullish_coalescing", "空值合併運算子", '', 1)}}
 - [TC39 proposals](https://github.com/tc39/proposals)

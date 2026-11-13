@@ -3,11 +3,33 @@ title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
 
-{{JSRef}}
-
 La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  preventExtensions(target) {
+    target.canEvolve = false;
+    Object.preventExtensions(target);
+    return true;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -91,6 +113,6 @@ Object.preventExtensions(p); // TypeError est levée
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

@@ -11,7 +11,21 @@ l10n:
 
 `toLocaleString`이 호출될 때마다 방대한 현지화 문자열 데이터베이스에서 검색을 수행해야 하므로 비효율적일 수 있습니다. 메서드가 동일한 인수를 사용하여 여러 번 호출되는 경우 `NumberFormat` 객체가 전달된 인수를 기억하고 데이터베이스의 일부를 캐시하기로 결정할 수 있으므로 {{jsxref("Intl/NumberFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다. 향후 `format` 호출이 보다 제한된 컨텍스트 내에서 현지화 문자열을 검색할 수 있으므로 {{jsxref("Intl.NumberFormat")}} 객체를 생성하고 그 {{jsxref("Intl/NumberFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## 구문
 
@@ -28,13 +42,11 @@ toLocaleString(locales, options)
 [`Intl.NumberFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)를 지원하는 구현체에서 이러한 매개변수는 [`Intl.NumberFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 생성자 매개변수와 정확히 대응합니다. `Intl.NumberFormat`을 지원하지 않는 구현체에서는 두 매개변수를 모두 무시하도록 요청되므로 사용되는 로케일과 반환되는 문자열의 형식은 전적으로 구현에 따라 달라집니다.
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그가 있는 문자열 또는 이러한 문자열의 배열입니다. `Intl.NumberFormat()` 생성자의 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 매개변수에 해당합니다.
 
     `Intl.NumberFormat`을 지원하지 않는 구현체에서는 이 매개변수가 무시되고 일반적으로 호스트의 로케일이 사용됩니다.
 
 - `options` {{optional_inline}}
-
   - : 출력 형식을 조정하는 객체입니다. `Intl.NumberFormat()` 생성자의 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 매개변수에 해당합니다.
 
     `Intl.NumberFormat`을 지원하지 않은 구현체에서는 이 매개변수가 무시됩니다.

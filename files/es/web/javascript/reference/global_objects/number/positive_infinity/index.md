@@ -30,7 +30,7 @@ Este valor tiene un comportamiento ligeramente diferente al infinio matemático:
 
 Muchos métodos de JavaScript (tales como el constructor del objeto `Number`, `parseFloat` y `parseInt`) retornan `NaN` si el valor especificado en el parámetro es signficativamente mayor a `Number.MAX_VALUE`.
 
-Podrías utilizar la propiedad `Number.POSITIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/isFinite) seria mas apropiado en estos casos.
+Podrías utilizar la propiedad `Number.POSITIVE_INFINITY` para indicar una condición de error que retorne un numero finito en caso de que esto suceda. Note, sin embargo, que [`isFinite`](/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite) seria mas apropiado en estos casos.
 
 ## Ejemplo
 

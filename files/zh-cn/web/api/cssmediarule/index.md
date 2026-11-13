@@ -1,32 +1,53 @@
 ---
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
+l10n:
+  sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
 {{ APIRef("CSSOM") }}
 
-**`CSSMediaRule`** 是一个表示单个 CSS {{cssxref("@media")}} 规则的接口。它实现了 {{domxref("CSSConditionRule")}} 接口，因此也是 {{domxref("CSSGroupingRule")}}，也相当于{{domxref("CSSRule")}}中类型值为 `4` 的规则类型（即`CSSRule.MEDIA_RULE`）。
+**`CSSMediaRule`** 接口表示一个单独的 CSS {{cssxref("@media")}} 规则。
 
-## 语法
+{{InheritanceDiagram}}
 
-下列语法是使用 [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式描述的。
+## 实例属性
 
-```plain
-interface CSSMediaRule : CSSConditionRule {
-    readonly attribute MediaList media;
+_继承其父接口 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
+
+- {{domxref("CSSMediaRule.media")}} {{ReadOnlyInline}}
+  - : 返回一个表示样式信息所针对的目标媒介的 {{domxref("MediaList")}} 对象。
+
+## 实例方法
+
+_没有特定的方法；它继承其父接口 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
+
+## 示例
+
+下面的 CSS 包含一个带有样式规则的媒体查询。由于该规则存在于文档中最后添加的样式表中，所以它会成为文档中最后一个样式表返回的第一个
+CSSRule（即 `document.styleSheets[document.styleSheets.length-1].cssRules` 的第一个）。`myRules[0]` 返回一个 `CSSMediaRule`
+对象，我们可以从中获取 `mediaText`。
+
+```html
+<p id="log"></p>
+```
+
+```css
+@media (width >= 500px) {
+  body {
+    color: blue;
+  }
 }
 ```
 
-## 属性
+```js
+const log = document.getElementById("log");
+const myRules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const mediaList = myRules[0]; // 一个表示该媒体查询的 CSSMediaRule 对象。
+log.textContent += ` ${mediaList.media.mediaText}`;
+```
 
-作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，`CSSMediaRule` 也实现（继承）了来自这些接口的属性。它还有如下属性：
-
-- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
-  - : 声明了一个 {{domxref("MediaList")}}，表示指定目标媒体中的样式信息。
-
-## 方法
-
-作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，`CSSMediaRule` 也实现（继承）了来自这些接口的方法。除此之外，没有其他方法。
+{{EmbedLiveSample("示例","100%","50px")}}
 
 ## 规范
 

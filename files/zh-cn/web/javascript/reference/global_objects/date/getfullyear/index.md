@@ -3,13 +3,18 @@ title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
 
-{{JSRef}}
-
 **`getFullYear()`** 方法根据本地时间返回指定日期的年份。
 
 此方法替代 {{jsxref("Date.prototype.getYear()", "getYear()")}} 。
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## 语法
 

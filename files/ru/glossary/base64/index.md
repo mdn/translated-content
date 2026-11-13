@@ -7,7 +7,7 @@ slug: Glossary/Base64
 
 **Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
-Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/XML).
+Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/Web/XML).
 
 В языке JavaScript существуют две функции, для кодирования и декодирования данных в/из формат Base64 соответственно:
 
@@ -20,23 +20,21 @@ slug: Glossary/Base64
 
 ## Документация
 
-- [`data` URIs](/ru/docs/data_URIs)
-  - : `data` URIs, описанные в [RFC 2397](http://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
+- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
+  - : `data` URIs, описанные в [RFC 2397](https://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
 - [Base64](https://en.wikipedia.org/wiki/Base64)
   - : Wikipedia article about Base64 encoding.
 - {{domxref("WindowBase64.atob","atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("WindowBase64.btoa","btoa()")}}
   - : Creates a base-64 encoded ASCII string from a "string" of binary data.
-- [The "Unicode Problem"](#The_Unicode_Problem)
+- [The "Unicode Problem"](#the_unicode_problem)
   - : In most browsers, calling `btoa()` on a Unicode string will cause a `Character Out Of Range` exception. This paragraph shows some solutions.
 - [URIScheme](/ru/docs/URIScheme)
   - : List of Mozilla supported URI schemes
 - [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
-
   - : In this article is published a library of ours whose aims are:
-
-    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes — [`ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer) interface,
+    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes — [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) interface,
     - creating a collection of methods for such string-like objects (since now: `stringView`s) which work **strictly on array of numbers** rather than on immutable JavaScript strings,
     - working with other Unicode encodings, different from default JavaScript's UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString)s,
 
@@ -47,13 +45,13 @@ slug: Glossary/Base64
 
 ## Related Topics
 
-- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
-- [Typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
-- [`ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
-- [`Uint8Array`](/ru/docs/Web/JavaScript/Typed_arrays/Uint8Array)
+- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+- [Typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
+- [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+- [`Uint8Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 - [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
 - [`DOMString`](/ru/docs/Web/API/DOMString)
-- [`URI`](/ru/docs/URI)
+- [`URI`](/ru/docs/Glossary/URI)
 - [`encodeURI()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
 
 ## The "Unicode Problem"

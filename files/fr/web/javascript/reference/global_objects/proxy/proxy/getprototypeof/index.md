@@ -3,11 +3,33 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
-{{JSRef}}
-
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  eyeCount: 4,
+};
+
+const monsterPrototype = {
+  eyeCount: 2,
+};
+
+const handler = {
+  getPrototypeOf(target) {
+    return monsterPrototype;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler);
+
+console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
+// Expected output: true
+
+console.log(Object.getPrototypeOf(proxy1).eyeCount);
+// Expected output: 2
+```
 
 ## Syntaxe
 
@@ -40,7 +62,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 
 ### Invariants
 
@@ -117,6 +139,6 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

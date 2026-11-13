@@ -18,7 +18,7 @@ _L'interface `GeolocationPosition` n'hérite d'aucune propriété._
 
 ## Méthodes
 
-**L'interface* `GeolocationPosition` *n'implémente ni n'hérite d'aucune méthode.**
+_*L'interface* `GeolocationPosition` *n'implémente ni n'hérite d'aucune méthode.*_
 
 ## Spécifications
 
@@ -30,5 +30,5 @@ _L'interface `GeolocationPosition` n'hérite d'aucune propriété._
 
 ## Voir aussi
 
-- [Utilisation de l'API de Géolocalisation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utilisation de l'API de Géolocalisation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}

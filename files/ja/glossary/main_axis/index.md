@@ -1,9 +1,9 @@
 ---
-title: Main Axis (主軸)
+title: Main axis (主軸)
 slug: Glossary/Main_Axis
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{GlossarySidebar}}
 
 {{glossary("flexbox")}} における主軸は、{{cssxref("flex-direction")}} プロパティの設定方向によって定義されます。`flex-direction` が取り得る値は以下の 4 つです。
 
@@ -18,7 +18,7 @@ slug: Glossary/Main_Axis
 
 `column` または `column-reverse` を選んだ場合は、ページの上から下に向かってブロック要素の並ぶ方向に伸びる軸となります。
 
-![](basics2.png)
+![コンテナーの幅いっぱいに 3 つのフレックスアイテムが配置され、他のアイテムの下にコード順に表示されます。フレックスディレクティブは段組みに設定します。主軸は垂直、つまり上から下へ。](basics2.png)
 
 アイテムの `flex` プロパティを使って、フレックスアイテム自体が使える幅を指定することで、主軸に沿ったサイズを制御することができます。また、アイテム間そしてアイテムの周囲の空間については、`justify-content` プロパティを使って制御することができます。
 
@@ -35,6 +35,7 @@ slug: Glossary/Main_Axis
 
 ### 参考文献
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS フレックスボックスガイド: _[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- CSS フレックスボックスガイド:
+  - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+  - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+  - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)

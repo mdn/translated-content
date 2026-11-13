@@ -20,9 +20,7 @@ forEach(callback, thisArg)
 ### 引数
 
 - `callback`
-
   - : それぞれの要素に対して呼び出す関数で、 3 つの引数を取ります。
-
     - `currentValue`
       - : 配列内で処理中の現在の要素です。
     - `currentIndex`
@@ -31,7 +29,7 @@ forEach(callback, thisArg)
       - : `forEach()` を実行中の配列です。
 
 - `thisArg` {{Optional_inline}}
-  - : `callback` を実行する際に {{jsxref("Operators/this", "this")}} として使用する値です。
+  - : `callback` を実行する際に {{jsxref("this")}} として使用する値です。
 
 ### 返値
 

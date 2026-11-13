@@ -40,7 +40,7 @@ l10n:
 ### Document インターフェイスのインスタンスプロパティ
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : `pictureInPictureEnabled` プロパティはピクチャインピクチャモードが使用可能かどうかを指示します。何らかの理由でピクチャインピクチャモードが利用できない場合（例えば、[`"picture-in-picture"` 機能](/ja/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)が許可されていない、またはピクチャインピクチャモードに対応していない場合）は `false` となります。
+  - : `pictureInPictureEnabled` プロパティはピクチャインピクチャモードが使用可能かどうかを指示します。何らかの理由でピクチャインピクチャモードが利用できない場合（例えば、[`"picture-in-picture"` 機能](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture)が許可されていない、またはピクチャインピクチャモードに対応していない場合）は `false` となります。
 
 ### Document または ShadowRoot インターフェイスのインスタンスプロパティ
 
@@ -64,11 +64,11 @@ _ピクチャインピクチャ API では 3 つのイベントを定義して�
 
 ## スタイルの制御
 
-[`:picture-in-picture`](/ja/docs/Web/CSS/:picture-in-picture) は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードになっている動画要素に一致します。これにより、動画がピクチャインピクチャモードと従来の表示モードを行き来するときに、コンテンツのサイズやスタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
+[`:picture-in-picture`](/ja/docs/Web/CSS/Reference/Selectors/:picture-in-picture) は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、現在ピクチャインピクチャモードになっている動画要素に一致します。これにより、動画がピクチャインピクチャモードと従来の表示モードを行き来するときに、コンテンツのサイズやスタイル、レイアウトを自動的に調整するようにスタイルシートを設定することができます。
 
 ## アクセスの制御
 
-ピクチャインピクチャモードが利用できるかは、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を使って制御することができます。全画面モード機能は文字列 `"picture-in-picture"` で識別され、既定値の allowlist 値は `"self"` です。これは、ピクチャインピクチャモードが最上位の文書コンテキストで許可されることと、最上位の文書と同じオリジンから読み込まれた入れ子の閲覧コンテキストで許可されることを意味します。
+ピクチャインピクチャモードが利用できるかは、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を使って制御することができます。全画面モード機能は文字列 `"picture-in-picture"` で識別され、既定値の allowlist 値は `"self"` です。これは、ピクチャインピクチャモードが最上位の文書コンテキストで許可されることと、最上位の文書と同じオリジンから読み込まれた入れ子の閲覧コンテキストで許可されることを意味します。
 
 ## 例
 

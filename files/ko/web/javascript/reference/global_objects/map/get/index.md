@@ -10,7 +10,18 @@ l10n:
 **`get()`** 메서드는 `Map` 객체에서 특정 요소를 반환합니다. 만약 주어진 키와 관련된 값이 객체라면 해당 객체에 대한
 참조만 가져오고, 해당 객체에 대한 모든 변경은 `Map` 내에서 효율적으로 수정됩니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## 구문
 

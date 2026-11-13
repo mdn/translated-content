@@ -68,7 +68,7 @@ window.addEventListener("beforeunload", (event) => {
 
 {{Compat}}
 
-Смотрите [WindowEventHandlers/onbeforeunload](/ru/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility) для получения более подробной информации о том, как различные браузеры обрабатывают это событие.
+Смотрите [WindowEventHandlers/onbeforeunload](/ru/docs/Web/API/Window/beforeunload_event#browser_compatibility) для получения более подробной информации о том, как различные браузеры обрабатывают это событие.
 
 ## Смотрите также
 

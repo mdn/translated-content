@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext/deleteTexture
 
 ## Syntax
 
-```plain
+```js-nolint
 void gl.deleteTexture(texture);
 ```
 

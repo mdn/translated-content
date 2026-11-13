@@ -1,0 +1,51 @@
+---
+title: X-Forwarded-Host ヘッダー
+short-title: X-Forwarded-Host
+slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+---
+
+HTTP の **`X-Forwarded-Host`** (XFH) {{Glossary("request header", "リクエストヘッダー")}}は、HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントからリクエストされたオリジンホストを特定するための事実上の標準となっているヘッダーです。
+
+標準化されたバージョンのヘッダーは HTTP の {{HTTPHeader("Forwarded")}} ヘッダーですが、使用されている頻度ははるかに低くなっています。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">ヘッダー種別</th>
+      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
+      <td>いいえ</td>
+    </tr>
+  </tbody>
+</table>
+
+## 構文
+
+```http
+X-Forwarded-Host: <host>
+```
+
+## ディレクティブ
+
+- `<host>`
+  - : 転送されたサーバーのドメイン名
+
+## 例
+
+```http
+X-Forwarded-Host: id42.example-cdn.com
+```
+
+## 仕様書
+
+現行のどの仕様書にも含まれていません。
+
+## 関連情報
+
+- {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Proto")}} ヘッダー
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Forwarded")}}

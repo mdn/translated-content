@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 O método **`valueOf()`** retorna o valor primitivo do objeto especificado.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Sintaxe
 
@@ -78,5 +93,5 @@ myObj + 3; // 7
 ## Veja também
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Symbol.toPrimitive")}}

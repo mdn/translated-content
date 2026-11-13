@@ -59,4 +59,4 @@ _Этот интерфейс наследует методы его родите
 
 ## Смотрите также
 
-- [Интерфейсы DOM.](/ru/docs/DOM/DOM_Reference)
+- [Интерфейсы DOM.](/ru/docs/Web/API/Document_Object_Model)

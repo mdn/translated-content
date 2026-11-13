@@ -33,15 +33,15 @@ PWA 清单文件是一个 JSON 文件，它提供了关于该应用程序的特�
 
 为了识别你的 PWA，JSON 必须包含一个 `name` 或 `short_name` 成员，或者两者都包含，以定义 PWA 的名称。它还可以包含一个 `description`。
 
-- [`name`](/zh-CN/docs/Web/Manifest/name)
+- [`name`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/name)
   - : PWA 的名称。这是操作系统列出应用程序时使用的名称，也是应用图标旁边的标签，等等。
-- [`short_name`](/zh-CN/docs/Web/Manifest/short_name)
+- [`short_name`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/short_name)
   - : 如果没有足够的空间显示 `name`，则显示给用户的 PWA 的名称。它被用作手机屏幕上图标的标签，包括在 iOS 的“添加到主屏幕”对话框中。
 
 当 `name` 和 `short_name` 都存在时，大多数情况下都会使用 `name`，在显示应用程序名称的空间有限时使用 `short_name`。
 
-- [`description`](/zh-CN/docs/Web/Manifest/description)
-  - : 说明应用程序的功能。它提供了一个关于应用程序目的和功能的[无障碍描述](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)。
+- [`description`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/description)
+  - : 说明应用程序的功能。它提供了一个关于应用程序目的和功能的[无障碍描述](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)。
 
 ### 任务
 
@@ -61,21 +61,20 @@ PWA 清单文件是一个 JSON 文件，它提供了关于该应用程序的特�
 
 PWA 的安装后和离线体验的外观由清单文件定义。外观清单成员包括 `start_url` 和 `display`，以及可以用于[自定义应用程序颜色](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors)的成员，包括 `theme_color` 和 `background_color`。
 
-- [`start_url`](/zh-CN/docs/Web/Manifest/start_url)
-
+- [`start_url`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
   - : 用户启动 PWA 时的起始页面。
 
-- [`display`](/zh-CN/docs/Web/Manifest/display)
+- [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display)
   - : 控制应用程序的显示模式，包括 `fullscreen`、`standalone`，后者可以将 PWA 显示为[独立应用程序](/zh-CN/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)、`minimal-ui`，类似独立视图但具有用于控制导航的 UI 元素，以及 `browser`，即在常规浏览器视图中打开应用程序。
 
-还有一个 [`orientation`](/zh-CN/docs/Web/Manifest/orientation) 成员，用于将 PWA 的默认方向定义为 `portrait` 或 `landscape`。由于我们的应用程序在两种方向下都能很好地工作，因此我们将省略此成员。
+还有一个 [`orientation`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/orientation) 成员，用于将 PWA 的默认方向定义为 `portrait` 或 `landscape`。由于我们的应用程序在两种方向下都能很好地工作，因此我们将省略此成员。
 
 ### 颜色
 
-- [`theme_color`](/zh-CN/docs/Web/Manifest/theme_color)
+- [`theme_color`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : 默认的[操作系统和浏览器 UI 元素的颜色](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#定义主题色)，例如某些移动体验中的状态栏和桌面操作系统上的应用程序标题栏。
-- [`background_color`](/zh-CN/docs/Web/Manifest/background_color)
-  - : 在 CSS 加载之前，显示为[应用程序背景](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#定制应用窗口背景色)的占位符颜色。为了在应用启动和加载之间创建平滑过渡，建议使用声明为应用程序 [`background-color`](/zh-CN/docs/Web/CSS/background-color) 颜色的 [`<color>`](/zh-CN/docs/Web/CSS/color_value)。
+- [`background_color`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
+  - : 在 CSS 加载之前，显示为[应用程序背景](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#定制应用窗口背景色)的占位符颜色。为了在应用启动和加载之间创建平滑过渡，建议使用声明为应用程序 [`background-color`](/zh-CN/docs/Web/CSS/Reference/Properties/background-color) 颜色的 [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value)。
 
 ### 任务
 
@@ -103,7 +102,7 @@ PWA 的安装后和离线体验的外观由清单文件定义。外观清单成�
 
 PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，并提高可发现性。PWA 应用图标出现在主屏幕、应用启动器或应用商店搜索结果中。渲染的图标大小和文件要求因显示位置和显示方而异。清单文件是定义图像的地方。
 
-在清单 JSON 对象中，`icons` 成员指定用于不同上下文的一个或多个图标对象数组，每个对象都有一个 `src` 和 `sizes` 成员，还有可选的 `type` 和 `purpose` 成员。每个图标对象的 `src` 列出单个图像文件的源。`sizes` 成员提供空格分隔的尺寸列表，指明应该对该特定图像使用哪些尺寸，或者使用关键字 `any`；该值与 {{HTMLElement("link")}} 元素的 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性相同。`type` 成员列出图像的 MIME 类型。
+在清单 JSON 对象中，`icons` 成员指定用于不同上下文的一个或多个图标对象数组，每个对象都有一个 `src` 和 `sizes` 成员，还有可选的 `type` 和 `purpose` 成员。每个图标对象的 `src` 列出单个图像文件的源。`sizes` 成员提供空格分隔的尺寸列表，指明应该对该特定图像使用哪些尺寸，或者使用关键字 `any`；该值与 {{HTMLElement("link")}} 元素的 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/link#sizes) 属性相同。`type` 成员列出图像的 MIME 类型。
 
 ```js
 {
@@ -130,9 +129,9 @@ PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，�
 }
 ```
 
-所有图标都应该有相同的外观和感觉，以确保用户可以识别你的 PWA。但图标越大，它可以包含的细节就越丰富。尽管所有图标文件都是正方形的，但有些操作系统会以不同的形状渲染图标，裁剪部分区域或“遮挡”图标以适应 UI，或者如果图标不可遮挡则会缩小并居中放置在背景上。[安全区域](/zh-CN/docs/Web/Progressive_web_apps/How_to/Define_app_icons#支持遮挡)，即图标被遮挡为圆形时也会正常渲染的内部 80% 区域。通过将 `purpose` 成员设置为 `maskable`，可以将图标定义为[自适应图标](https://web.dev/articles/maskable-icon)。
+所有图标都应该有相同的外观和感觉，以确保用户可以识别你的 PWA。但图标越大，它可以包含的细节就越丰富。尽管所有图标文件都是正方形的，但有些操作系统会以不同的形状渲染图标，裁剪部分区域或“遮挡”图标以适应 UI，或者如果图标不可遮挡则会缩小并居中放置在背景上。[安全区域](/zh-CN/docs/Web/Progressive_web_apps/How_to/Define_app_icons#支持遮挡)，即图标被遮挡为圆形时也会正常渲染的内部 80% 区域。通过将 `purpose` 成员设置为 `maskable`，可以将图标定义为[自适应图标](https://web.developers.google.cn/articles/maskable-icon)。
 
-在 Safari 以及 iOS 和 iPadOS 中，如果通过 {{HTMLElement("link")}} 在 HTML 文档的 {{HTMLElement("head")}} 中包含[非标准的 `apple-touch-icon`](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#在你的站点增加自定义图标)，它们会优先于清单中声明的图标。
+在 Safari 以及 iOS 和 iPadOS 中，如果通过 {{HTMLElement("link")}} 在 HTML 文档的 {{HTMLElement("head")}} 中包含[非标准的 `apple-touch-icon`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#在你的站点增加自定义图标)，它们会优先于清单中声明的图标。
 
 ### 任务
 
@@ -205,7 +204,7 @@ PWA 需要从应用的 HTML 文档中链接到清单文件。我们已经有一�
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-`<link>` 元素最常用于链接样式表，在 PWA 中，它用于链接必须的清单文件，但也用于[建立站点图标](/zh-CN/docs/Web/HTML/Attributes/rel#图标)（包括“favicon”风格的图标和移动设备主屏幕和应用程序上的图标）等其他用途。
+`<link>` 元素最常用于链接样式表，在 PWA 中，它用于链接必须的清单文件，但也用于[建立站点图标](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#图标)（包括“favicon”风格的图标和移动设备主屏幕和应用程序上的图标）等其他用途。
 
 ```html
 <link rel="icon" href="icons/circle.svg" />

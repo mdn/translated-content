@@ -42,19 +42,19 @@
 
 ### JavaScript
 
-| 英文词汇           | 翻译             | 备注                                                                                     | 引用来源                                                                    |
-| ------------------ | ---------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| bare module        | 裸模块           | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。                             | https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277 |
-| brand check        | 特定类型检查     | 通过一段代码来对特定的数据类型进行检查。                                                 | https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483 |
-| constructor        | 构造函数         |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
-| exotic object      | 特异对象         |                                                                                          |                                                                             |
-| handler            | 处理器           |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
-| interface          | 接口             |                                                                                          | https://zh.wikipedia.org/wiki/介面_(資訊科技)                               |
-| normative optional | 可选标准         |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
-| primitive          | 原始值/类型      | 基本类型包括对象，而原始类型不包括对象。                                                 | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
-| unscopable         | 非作用域（属性） |                                                                                          | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
-| well-known symbol  | 内置通用符号     |                                                                                          | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
-| tree shake         | 摇树优化         | 入口文件虽然依赖了某个模块，但实际只使用其中的某些功能，通过该优化可以删除未使用的代码。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1505225794 |
+| 英文词汇           | 翻译                   | 备注                                                                                     | 引用来源                                                                    |
+| ------------------ | ---------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| bare module        | 裸模块                 | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。                             | https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277 |
+| brand check        | 特定类型检查           | 通过一段代码来对特定的数据类型进行检查。                                                 | https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483 |
+| constructor        | 构造函数               |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
+| exotic object      | 特异对象               |                                                                                          |                                                                             |
+| handler            | 处理器                 |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
+| interface          | 接口                   |                                                                                          | https://zh.wikipedia.org/wiki/介面_(資訊科技)                               |
+| normative optional | 可选标准               |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
+| primitive          | 原始值/类型            | 基本类型包括对象，而原始类型不包括对象。                                                 | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
+| unscopable         | 不可绑定作用域（属性） |                                                                                          | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
+| well-known symbol  | 内置通用符号           |                                                                                          | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
+| tree shake         | 摇树优化               | 入口文件虽然依赖了某个模块，但实际只使用其中的某些功能，通过该优化可以删除未使用的代码。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1505225794 |
 
 ## 标题/表格
 
@@ -66,10 +66,13 @@
 | Associated roles       | 相关角色     |                    |                                                                              |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                              |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894  |
+| Demo                   | 演示         | 交互示例的标题     |                                                                              |
 | Examples               | 示例         |                    |                                                                              |
 | Exceptions             | 异常         |                    |                                                                              |
+| Expected output        | 期望输出     | 交互示例的文字提示 |                                                                              |
 | Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
 | Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Learning outcomes      | 学习成果     | 在学习区表格中使用 |                                                                              |
 | Objective              | 目标         | 在学习区表格中使用 |                                                                              |
 | Parameters             | 参数         |                    |                                                                              |
 | Prerequisites          | 前提         | 在学习区表格中使用 |                                                                              |

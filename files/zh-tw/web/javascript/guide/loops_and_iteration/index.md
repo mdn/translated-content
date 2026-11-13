@@ -3,7 +3,7 @@ title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 迴圈提供一個快速又簡潔的方法來重複地做某件事。這個章節的[JavaScript 教學](/zh-TW/docs/Web/JavaScript/Guide)會介紹在 JavaScript 可以使用的幾種不同的迭代陳述式。
 
@@ -116,7 +116,7 @@ do {
 
 [`while`](/zh-TW/docs/Web/JavaScript/Reference/Statements/while) 陳述式會不斷執行它的陳述式只要指定的條件式判斷為 true。一個 while 陳述式看起來如下：
 
-```plain
+```js-nolint
 while (condition)
   statement
 ```
@@ -164,7 +164,7 @@ while (true) {
 
 label 陳述式的語法看起來如下：
 
-```plain
+```js-nolint
 label :
    statement
 ```
@@ -283,7 +283,7 @@ checkiandj: while (i < 4) {
 
 [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) 陳述式重複一個指定的變數來循環一個物件所有可枚舉的屬性。至於每個獨特的屬性，JavaScript 執行特定的陳述式。一個`for...in` 陳述式看起來像以下：
 
-```plain
+```js-nolint
 for (variable in object) {
   statements
 }
@@ -317,7 +317,7 @@ car.model = Mustang;
 
 ## `for...of` 陳述式
 
-[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Guide/iterable)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
+[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
 
 ```plain
 for (variable of object) {

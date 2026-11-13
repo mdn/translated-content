@@ -26,7 +26,7 @@ void ctx.clearRect(x, y, width, height);
 
 ## Notas de uso
 
-Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
+Um problema comum com `clearRect` que pode acontecer, é que pode não funcionar corretamente, caso não seja usada alguma [propriedade de _path_](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Não esqueça de usar {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} antes de começar um novo frame depois de chamar `clearRect`.
 
 ## Exemplos
 
@@ -75,8 +75,7 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
->
+ctx.clearRect(10, 10, 100, 100);</textarea>
 ```
 
 ```js hidden

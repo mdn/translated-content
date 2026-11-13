@@ -19,4 +19,4 @@ Python은 OSI가 승인한 오픈 소스 라이센스로 개발되어 상업적�
 - [Official Python 문서 자습서](https://docs.python.org/3/tutorial/index.html)
 - [Tutorialspoint Python 자습서](http://www.tutorialspoint.com/python/index.htm)
 - [AlphaCodingSkills Python 자습서](https://alphacodingskills.com/python/python-tutorial.php)
-- MDN의 [Django Web Framework (Python)](/ko/docs/Learn/Server-side/Django)
+- MDN의 [Django Web Framework (Python)](/ko/docs/Learn_web_development/Extensions/Server-side/Django)

@@ -15,7 +15,7 @@ l10n:
 
 **순회 가능 프로토콜**을 사용하면 JavaScript 객체를 {{jsxref("Statements/for...of", "for...of")}} 구조에서 반복되는 값과 같은 순회 동작을 정의하거나 사용자 지정할 수 있습니다. {{jsxref("Object")}}와는 달리 {{jsxref("Array")}} 또는 {{jsxref("Map")}}과 같은 일부 내장 유형은 기본 순회 동작이 있는 [내장 순회 가능](#내장_순회_가능) 항목입니다.
 
-**순회 가능**이 되기위해 객체는 반드시 `@@iterator` 메서드를 구현해야 합니다. 즉, 객체(또는 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)의 객체 중 하나)에 상수 {{jsxref("Symbol.iterator")}}를 통해 이용할 수 있는 `@@iterator` 키가 있는 속성이 있어야 합니다.
+**순회 가능**이 되기위해 객체는 반드시 `@@iterator` 메서드를 구현해야 합니다. 즉, 객체(또는 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)의 객체 중 하나)에 상수 {{jsxref("Symbol.iterator")}}를 통해 이용할 수 있는 `@@iterator` 키가 있는 속성이 있어야 합니다.
 
 - `[Symbol.iterator]`
   - : [반복자 프로토콜](#반복자_프로토콜)을 준수하는 객체를 반환하는 인수가 없는 함수.
@@ -38,7 +38,6 @@ l10n:
 모든 반복자 프로토콜 메서드(`next()`, `return()`, 그리고 `throw()`)는 `IteratorResult` 인터페이스를 구현하는 객체를 반환해야 합니다. 다음 속성이 반드시 있어야 합니다.
 
 - `done` {{optional_inline}}
-
   - : 불리언 값으로, 반복자가 시퀀스에서 다음 값을 생성할 수 있는 경우엔 `false`입니다. (이는 `done` 속성을 지정하지 않는 것과 같습니다.)
 
     반복자가 시퀀스를 완료한 경우에 이 값은 `true`입니다. 이때 `value`는 반복자의 반환 값을 선택적으로 지정합니다.
@@ -97,7 +96,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 모든 내장 반복자는 `this`를 반환하는 `[@@iterator]()` 메서드를 구현하는 {{jsxref("Iterator", "Iterator.prototype")}}에서 상속되었기 때문에 내장 반복자도 순회 가능입니다.
 
-그러나 가능하다면 `iterable[Symbol.iterator]`가 [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)처럼 항상 처음부터 시작하는 별개의 반복자를 반환하는 것이 좋습니다.
+그러나 가능하다면 `iterable[Symbol.iterator]`가 [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)처럼 항상 처음부터 시작하는 별개의 반복자를 반환하는 것이 좋습니다.
 
 ## 비동기 반복자와 비동기 순회 가능 프로토콜
 
@@ -169,7 +168,7 @@ new WeakSet(
 
 ### 순회 가능을 기대하는 구문
 
-{{jsxref("Statements/for...of", "for...of")}} 루프, [배열 및 매개변수 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax), {{jsxref("Operators/yield*", "yield*")}}, 그리고 [배열 구조 분해](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)와 같은 일부 명령문과 표현식에는 순회 가능이 필요합니다.
+{{jsxref("Statements/for...of", "for...of")}} 루프, [배열 및 매개변수 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax), {{jsxref("Operators/yield*", "yield*")}}, 그리고 [배열 구조 분해](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)와 같은 일부 명령문과 표현식에는 순회 가능이 필요합니다.
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -346,7 +345,7 @@ console.log(it.next().value); // 2
 
 ### 클래스로 반복자 정의하기
 
-상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)으로도 수행할 수 있습니다.
+상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)으로도 수행할 수 있습니다.
 
 ```js
 class SimpleClass {
@@ -392,7 +391,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
+`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
 
 ```js
 const iterator = someString[Symbol.iterator]();

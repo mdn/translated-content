@@ -13,6 +13,6 @@ CSS や JavaScript ファイルの初期読み込みはレンダーブロッキ�
 
 ## 関連項目
 
-- [CSS のパフォーマンス最適化](/ja/docs/Learn/Performance/CSS)
-- [JavaScript のパフォーマンス最適化](/ja/docs/Learn/Performance/JavaScript)
+- [CSS のパフォーマンス最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
+- [JavaScript のパフォーマンス最適化](/ja/docs/Learn_web_development/Extensions/Performance/JavaScript)
 - [What Are Render-Blocking Resources & How to Fix Render Blocking Issues](https://speckyboy.com/render-blocking/) (Speckyboy, 2018)

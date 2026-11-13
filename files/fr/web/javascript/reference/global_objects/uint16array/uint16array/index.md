@@ -3,8 +3,6 @@ title: Constructeur Uint16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 ---
 
-{{JSRef}}
-
 Le **constructeur `Uint16Array()`** permet de créer un nouveau tableau typé [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array) dont les éléments sont des nombres entiers non-signés, représentés sur 16 bits et utilisant le boutisme de la plateforme.
 
 ## Syntaxe
@@ -91,6 +89,6 @@ const uint16_from_iterable = new Uint16Array(iterable);
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Uint16Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)

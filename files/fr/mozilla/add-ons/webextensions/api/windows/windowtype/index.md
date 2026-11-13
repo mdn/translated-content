@@ -3,8 +3,6 @@ title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
 
-{{AddonSidebar}}
-
 Le type de la fenêtre du navigateur est comme çà.
 
 ## Type
@@ -24,9 +22,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

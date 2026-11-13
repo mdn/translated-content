@@ -2,7 +2,7 @@
 title: CSSRule
 slug: Web/API/CSSRule
 l10n:
-  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("CSSOM")}}
@@ -25,13 +25,14 @@ l10n:
 - {{DOMXRef("CSSLayerBlockRule")}}
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSPropertyRule")}}
+- {{DOMXRef("CSSNestedDeclarations")}}
 
 ## インスタンスプロパティ
 
 `CSSRule` インターフェイスは、すべてのルールに共通のプロパティを規定します。特定の種類のルールに特有のプロパティは、各種類のルールのために、さらに特化したインターフェイス内で規定されています。
 
 - {{domxref("CSSRule.cssText")}}
-  - : このルールのテキスト表現を表します。たとえば "`h1,h2 { font-size: 16pt }`" や "`@import 'url'`" です。ルールの一部（つまり、この例の "font-size" の値）にアクセスまたは変更するには、[ルールの種類に特化したインターフェイス](#型定数)のプロパティを使用してください。
+  - : このルールのテキスト表現を表します。たとえば `"h1,h2 { font-size: 16pt }"` や `"@import 'url'"` です。ルールの一部（つまり、この例の "font-size" の値）にアクセスまたは変更するには、ルールの種類に特化したインターフェイスのプロパティを使用してください（上記参照）。
 - {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
   - : このルールを含むルールを返します。このルールが包含されていなければ `null` を返します。つまり、このルールが {{cssxref("@media")}} ブロック内部のスタイルルールの場合、親ルールは {{domxref("CSSMediaRule")}} になります。
 - {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}

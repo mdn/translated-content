@@ -35,6 +35,6 @@ print()
 
 ## 参见
 
-1. [打印](/zh-CN/docs/Web/Guide/Printing)
+1. [打印](/zh-CN/docs/Web/CSS/Guides/Media_queries/Printing)
 2. {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
 3. {{ domxref("window.afterprint_event", "afterprint") }} 事件

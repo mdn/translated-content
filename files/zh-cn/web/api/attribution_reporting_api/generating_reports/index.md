@@ -11,7 +11,7 @@ l10n:
 
 ## 基本流程
 
-当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的 [`POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 请求将报告发送到报告来源的特定端点：
+当触发器和来源匹配时，浏览器会生成报告，并通过无凭证的 [`POST`](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 请求将报告发送到报告来源的特定端点：
 
 - 对于事件级报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-event-attribution`。
 - 对于汇总报告，端点为 `<reporting-origin>/.well-known/attribution-reporting/report-aggregate-attribution`。
@@ -22,14 +22,14 @@ l10n:
 
 ## 事件级报告
 
-事件级报告会在其包含的**报告窗口**结束时生成并计划发送。报告窗口的长度由来源的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"event_report_window"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_window) 或 [`"event_report_windows"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) 字段决定。
+事件级报告会在其包含的**报告窗口**结束时生成并计划发送。报告窗口的长度由来源的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"event_report_window"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_window) 或 [`"event_report_windows"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#event_report_windows) 字段决定。
 
 如果未指定这些字段，报告窗口将回退到以下默认值：
 
-- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因来源)，默认报告窗口在来源的 `"expiry"` 到期时结束，该值在 `Attribution-Reporting-Register-Source` 的 [`"expiry"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) 字段中设置。如果未显式设置，则默认为注册后 30 天。
+- 对于[基于事件的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于事件的归因来源)，默认报告窗口在来源的 `"expiry"` 到期时结束，该值在 `Attribution-Reporting-Register-Source` 的 [`"expiry"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#expiry) 字段中设置。如果未显式设置，则默认为注册后 30 天。
 - 对于[基于导航的来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)，默认报告窗口分别为 2 天、7 天和来源的 `"expiry"`。
 
-有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
+有关详细信息，请参阅[自定义报告窗口](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
 
 一旦事件级报告到达相应的端点，数据如何处理、存储和显示完全取决于开发者。一个典型的事件级报告可能如下所示：
 
@@ -50,11 +50,11 @@ l10n:
 属性如下：
 
 - `"attribution_destination"`
-  - : 一个字符串，或者是一个包含 2-3 个字符串的数组，取决于来源是否注册了多个目标。这些字符串代表在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) 站点。
+  - : 一个字符串，或者是一个包含 2-3 个字符串的数组，取决于来源是否注册了多个目标。这些字符串代表在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) 站点。
 - `"source_event_id"`
-  - : 一个表示归因来源 ID 的字符串。这等同于在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的 [`"source_event_id"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#source_event_id)。
+  - : 一个表示归因来源 ID 的字符串。这等同于在来源注册时通过关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中设置的 [`"source_event_id"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#source_event_id)。
 - `"trigger_data"`
-  - : 一个表示归因触发器来源数据的字符串，在触发器注册时设置（通过关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头设置的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data)）。
+  - : 一个表示归因触发器来源数据的字符串，在触发器注册时设置（通过关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 响应标头设置的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data)）。
 - `"report_id"`
   - : 一个表示此报告的[通用唯一标识符（UUID）](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计算。
 - `"source_type"`
@@ -64,17 +64,17 @@ l10n:
 - `"scheduled_report_time"`
   - : 一个字符串，表示从 Unix 纪元开始到浏览器最初计划发送报告的秒数（以避免因设备离线导致报告延迟而产生的不准确性）。
 - `"source_debug_key"` {{optional_inline}}
-  - : 一个 64 位无符号整数，表示归因来源的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中设置的值相同。有关更多信息，请参阅[调试报告](#调试报告)。
+  - : 一个 64 位无符号整数，表示归因来源的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中设置的值相同。有关更多信息，请参阅[调试报告](#调试报告)。
 - `"trigger_debug_key"` {{optional_inline}}
   - : 一个 64 位无符号整数，表示归因触发器的调试密钥。此值与关联的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头中的 `"debug_key"` 字段中设置的值相同。有关更多信息，请参阅[调试报告](#调试报告)。
 
 ## 汇总报告
 
-汇总报告是从收到的多个可汇总报告创建的，并随后[批处理](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching)以准备由[汇总服务](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service)处理。此后，数据如何处理、存储和显示完全取决于开发者。
+汇总报告是从收到的多个可汇总报告创建的，并随后[批处理](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching)以准备由[汇总服务](https://developers.google.cn/privacy-sandbox/private-advertising/aggregation-service)处理。此后，数据如何处理、存储和显示完全取决于开发者。
 
 默认情况下，可汇总报告是在触发器交互后生成并计划发送的，带有随机延迟以帮助模糊时序并提高隐私性。对于给定的已注册归因来源，从注册到来源过期期间会记录归因来源事件——这称为**报告窗口**。
 
-到期时间由关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 `expiry` 值定义，如果未明确设置，则默认为注册后 30 天。请注意，可以通过在 `Attribution-Reporting-Register-Source` 标头中设置 `aggregatable_report_window` 值来进一步修改报告窗口的长度。有关详细信息，请参阅[自定义报告窗口](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
+到期时间由关联的 {{httpheader("Attribution-Reporting-Register-Source")}} 标头中的 `expiry` 值定义，如果未明确设置，则默认为注册后 30 天。请注意，可以通过在 `Attribution-Reporting-Register-Source` 标头中设置 `aggregatable_report_window` 值来进一步修改报告窗口的长度。有关详细信息，请参阅[自定义报告窗口](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows)。
 
 > [!NOTE]
 > 为了进一步保护用户隐私，每个归因来源相关的汇总报告值具有有限的总值——这称为**贡献预算**。此值可能因 API 的不同实现而有所不同；在 Chrome 中为 65,536。任何会生成报告从而导致的总值超出此限制的转化将不被记录。请确保跟踪预算并在你尝试测量的不同指标之间共享它。
@@ -104,7 +104,7 @@ l10n:
     - `"api"`
       - : 表示触发报告生成的 API 的枚举值。目前，这个值将始终等于 `"attribution-reporting"`，但将来可能会扩展以支持其他 API。
     - `"attribution_destination"`
-      - : 一个表示归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#destination) URL 的字符串，该 URL 在来源注册时通过相关的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头设置。
+      - : 一个表示归因 [`"destination"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) URL 的字符串，该 URL 在来源注册时通过相关的 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头设置。
     - `"report_id"`
       - : 一个表示此报告的[全局唯一标识符（UUID）](/zh-CN/docs/Glossary/UUID)的字符串，可用于防止重复计数。
     - `"reporting_origin"`
@@ -116,11 +116,8 @@ l10n:
     - `"version"`
       - : 一个表示生成报告的 API 版本的字符串。
 - `"aggregation_service_payloads"`
-
   - : 一个对象数组，表示汇总服务用来组装报告中数据的直方图贡献的有效负载对象。目前，每个报告只支持一个由浏览器配置的有效负载。将来可能会支持多个可定制的有效负载。每个有效负载对象包含以下属性：
-
     - `"payload"`
-
       - : 一个通过 [HPKE](https://datatracker.ietf.org/doc/rfc9180/) 加密并经过 [base64](/zh-CN/docs/Glossary/Base64) 编码的 [CBOR](https://cbor.io/) 映射，结构如下：
 
         ```js
@@ -141,7 +138,7 @@ l10n:
 - `"aggregation_coordinator_origin"`
   - : 汇总服务的部署选项。
 - `"source_debug_key"` {{optional_inline}}
-  - : 一个 64 位无符号整数，表示归因来源的调试密钥。此值与相关 {{httpheader("Attribution-Reporting-Register-Source")}} 标头的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中的值一致。更多信息请参见[调试报告](#调试报告)。
+  - : 一个 64 位无符号整数，表示归因来源的调试密钥。此值与相关 {{httpheader("Attribution-Reporting-Register-Source")}} 标头的 [`"debug_key"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#debug_key) 字段中的值一致。更多信息请参见[调试报告](#调试报告)。
 - `"trigger_debug_key"` {{optional_inline}}
   - : 一个 64 位无符号整数，表示归因触发器的调试密钥。此值与相关 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头的 `"debug_key"` 字段中的值一致。更多信息请参见[调试报告](#调试报告)。
 
@@ -151,9 +148,9 @@ l10n:
 
 关于归因报告中噪声的工作原理，请参见：
 
-- [理解汇总报告中的噪声](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise)
+- [理解汇总报告中的噪声](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise)
 - [数据限制和噪声](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [处理噪声](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
+- [处理噪声](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
 
 ## 报告优先级和限制
 
@@ -223,9 +220,11 @@ l10n:
 }
 ```
 
-> **备注：** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
+> [!NOTE]
+> `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
 
-> **备注：** `not_filters`，即否定过滤器，也受支持。
+> [!NOTE]
+> `not_filters`，即否定过滤器，也受支持。
 
 在此上下文中，`filters` 可以是对象或对象数组。当指定列表时，只需一个字典匹配即可将触发器视为匹配。
 
@@ -261,7 +260,7 @@ l10n:
 - **详细调试报告**为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
 
 > [!NOTE]
-> 要使用调试报告，报告来源（origin）需要设置 cookie。如果配置为接收报告的来源是第三方，则该 cookie 将是[第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 cookie 的浏览器中将无法使用调试报告。
+> 要使用调试报告，报告来源（origin）需要设置 cookie。如果配置为接收报告的来源是第三方，则该 cookie 将是[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)，这意味着在禁用/不可用第三方 cookie 的浏览器中将无法使用调试报告。
 
 ### 使用调试报告
 
@@ -294,7 +293,6 @@ l10n:
    ```
 
 4. 设置适当的端点以接收你希望生成的调试报告。调试报告发送到报告来源中的三个单独端点：
-
    - 事件级成功调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
    - 汇总成功调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
    - 详细调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/verbose`
@@ -303,6 +301,6 @@ l10n:
 
 有关更多信息和示例，请参见：
 
-- developers.google.com 上的[调试报告介绍](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/)（2023）
-- developers.google.com 上的[设置调试报告](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/)（2023）
-- developers.google.com 上的[调试宝典](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/)（2023）
+- developers.google.cn 上的[调试报告介绍](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/)（2023）
+- developers.google.cn 上的[设置调试报告](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/)（2023）
+- developers.google.cn 上的[调试宝典](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/)（2023）

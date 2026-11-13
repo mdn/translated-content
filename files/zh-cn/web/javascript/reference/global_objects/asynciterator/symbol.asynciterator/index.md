@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
-
 {{jsxref("AsyncIterator")}} 实例的 **`[Symbol.asyncIterator]()`** 方法实现了[异步可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)并允许内置的异步迭代器被大多数期望异步迭代器的语法所接受，如 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环。它返回 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，即异步迭代器对象本身。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## 语法
 

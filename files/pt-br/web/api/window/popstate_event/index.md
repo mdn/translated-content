@@ -12,7 +12,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 ## Informação geral
 
 - Especificação
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
 - Interface
   - : PopStateEvent
 - Bubbles
@@ -29,7 +29,7 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 | Property                        | Type                       | Description                                        |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                 |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                 |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.         |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
 | `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |
@@ -63,4 +63,4 @@ Observe que mesmo que a entrada do histórico inicial(para `http://example.com/e
 
 ## Eventos relacionados
 
-- [`hashchange`](/pt-BR/docs/Mozilla_event_reference/hashchange)
+- [`hashchange`](/pt-BR/docs/Web/API/Window/hashchange_event)

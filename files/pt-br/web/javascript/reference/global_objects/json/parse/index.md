@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 O método **`JSON.parse()`** analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função **reviver** opcional pode ser fornecida para executar uma transformação no objeto que será retornado.
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## Sintaxe
 

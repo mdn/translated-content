@@ -2,10 +2,8 @@
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 l10n:
-  sourceCommit: 758299969f63c13d235212f1adff79a649702adf
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
-
-{{jsSidebar("More")}}
 
 このページのリストは JavaScript で廃止予定（まだ使用できるが削除する予定）とされた、あるいは既に廃止され使用不可となった機能の一覧です。
 
@@ -101,19 +99,19 @@ console.log("b");
 
 [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループヘッダーの `var` 宣言での初期化子は非推奨であり、厳格モードでは[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)になります。初期化子の式が評価され、変数に割り当てられますが、ループの最初の反復処理で値がすぐに再割り当てされます。
 
-通常、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) 文の `catch` ブロックには、`catch()` でバインドされた変数と同じ名前の変数宣言を置くことはできません。拡張文法では、`catch` ブロックに `catch` でバインドされた識別子と同じ名前の宣言済み変数 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) を置くことができます。ただし、`catch` のバインドが単純な識別子であり、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ではない場合に限ります。ただし、この変数の初期化と割り当ては、上位のスコープ変数ではなく、`catch` にバインドされた識別子に対してのみ作用します。このため、動作がわかりにくい場合があります。
+通常、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) 文の `catch` ブロックには、`catch()` でバインドされた変数と同じ名前の変数宣言を置くことはできません。拡張文法では、`catch` ブロックに `catch` でバインドされた識別子と同じ名前の宣言済み変数 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) を置くことができます。ただし、`catch` のバインドが単純な識別子であり、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) ではない場合に限ります。ただし、この変数の初期化と割り当ては、上位のスコープ変数ではなく、`catch` にバインドされた識別子に対してのみ作用します。このため、動作がわかりにくい場合があります。
 
 ```js
 var a = 2;
 try {
-  throw 42;
+  throw new Error();
 } catch (a) {
   var a = 1; // この 1 は、外側の `a` ではなく、捕捉された `a` に代入される
 }
 console.log(a); // 2
 
 try {
-  throw 42;
+  throw new Error();
   // メモ: 内部で宣言されている `a` との重複を避けるため、
   // `err` に変更してみる
 } catch (err) {
@@ -150,7 +148,7 @@ console.log(a); // 1
 
 | プロパティ                   | 説明                                                                                        | 代替                                                                                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `__count__`                  | ユーザー定義オブジェクトに直接定義された列挙可能なプロパティの数を返します。                | [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                               |
+| `__count__`                  | ユーザー定義オブジェクトで直接利用できる列挙可能なプロパティの数を返します。                | [`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                               |
 | `__parent__`                 | オブジェクトのコンテキストを指し示します。                                                  | 直接の置き換えなし                                                                                                                                                            |
 | `__iterator__`               | [旧形式のイテレーター](#旧形式のジェネレーターとイテレーター)と共に使用                     | [`Symbol.iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) および新しい[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) |
 | `__noSuchMethod__`           | 存在しないプロパティがメソッドとして呼ばれたときに呼び出されるメソッド。                    | {{jsxref("Proxy")}}                                                                                                                                                           |
@@ -163,7 +161,7 @@ console.log(a); // 1
 
 ### String
 
-- 標準外の String の汎用メソッド、たとえば `String.slice(myStr, 0, 12)`, `String.replace(myStr, /./g, "!")` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 53 で非推奨となり、そして Firefox 68 で廃止されました。代わりに {{jsxref("String", "String.prototype", "instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
+- 標準外の String の汎用メソッド、たとえば `String.slice(myStr, 0, 12)`, `String.replace(myStr, /./g, "!")` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 53 で非推奨となり、そして Firefox 68 で廃止されました。代わりに {{jsxref("String", "String.prototype", "#instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
 - `String.prototype.quote` は Firefox 37 で削除されました。
 - 標準外の `flags` 引数は {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, {{jsxref("String.prototype.replace")}} で廃止されました。
 
@@ -177,7 +175,7 @@ console.log(a); // 1
 
 ### Array
 
-- 標準外の Array の汎用メソッド、例えば `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 68 で非推奨となり、Firefox 71 で削除されました。代わりに {{jsxref("Array", "Array.prototype", "instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
+- 標準外の Array の汎用メソッド、例えば `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)` などは、 Firefox 1.5 (JavaScript 1.6) で導入され、Firefox 68 で非推奨となり、Firefox 71 で削除されました。代わりに {{jsxref("Array", "Array.prototype", "#instance_methods")}} 上のメソッドを {{jsxref("Function.call")}} と共に使用することができます。
 
 | プロパティ          | 説明                                   | 代替                |
 | ------------------- | -------------------------------------- | ------------------- |

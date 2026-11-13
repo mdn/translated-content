@@ -30,7 +30,7 @@ slug: Web/API/MediaRecorder
 ## 方法
 
 - {{domxref("MediaRecorder.canRecordMimeType()", "MediaRecorder.isTypeSupported()")}}
-  - : 返回一个{{domxref("Boolean")}} 值，来表示设置的 MIME type 是否被当前用户的设备支持。
+  - : 返回一个{{jsxref("Boolean")}} 值，来表示设置的 MIME type 是否被当前用户的设备支持。
 - {{domxref("MediaRecorder.pause()")}}
   - : 暂停媒体录制
 - {{domxref("MediaRecorder.requestData()")}}
@@ -45,7 +45,7 @@ slug: Web/API/MediaRecorder
 ## 静态方法
 
 - {{domxref("MediaRecorder.isTypeSupported()")}}
-  - : 静态方法，判断给定的 MIME 类型是否支持。返回{{domxref("Boolean")}}类型的值。
+  - : 静态方法，判断给定的 MIME 类型是否支持。返回{{jsxref("Boolean")}}类型的值。
 
 ## 事件处理
 
@@ -68,7 +68,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - [`error`](/zh-CN/docs/Web/API/MediaRecorder/error_event)
   - : Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
-    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/onerror) property.
+    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/error_event) property.
 
 ## 示例
 
@@ -157,7 +157,7 @@ if (navigator.mediaDevices) {
 
 ## See also
 
-- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
 - [Recording a media element](/zh-CN/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

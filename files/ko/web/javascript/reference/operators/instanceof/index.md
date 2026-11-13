@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 **`instanceof` 연산자**는 생성자의 `prototype` 속성이 객체의 프로토타입 체인 어딘가 존재하는지 판별합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## 구문
 

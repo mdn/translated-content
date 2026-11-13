@@ -3,11 +3,20 @@ title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
 
-{{JSRef}}
-
 **`toString()`** 方法返回一个字符串，表示指定 {{jsxref("BigInt")}} 对象。后面的 "n" 不是字符串的一部分。
 
-{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+
+```js interactive-example
+console.log(1024n.toString());
+// Expected output: "1024"
+
+console.log(1024n.toString(2));
+// Expected output: "10000000000"
+
+console.log(1024n.toString(16));
+// Expected output: "400"
+```
 
 ## 语法
 

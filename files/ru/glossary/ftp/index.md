@@ -11,5 +11,5 @@ slug: Glossary/FTP
 
 ### Общие сведения
 
-- [Руководство по загрузке файлов через FTP для новичка (англ.)](/en-US/Learn/Upload_files_to_a_web_server).
-- [FTP в Википедии](http://ru.wikipedia.org/wiki/FTP).
+- [Руководство по загрузке файлов через FTP для новичков](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- [FTP](https://ru.wikipedia.org/wiki/FTP) в Википедии

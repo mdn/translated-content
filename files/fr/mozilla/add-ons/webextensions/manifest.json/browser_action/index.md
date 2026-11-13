@@ -45,9 +45,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 Une action de navigateur est un bouton que votre extension ajoute à la barre d'outils du navigateur. Le bouton comporte une icône et peut éventuellement avoir une fenêtre contextuelle dont le contenu est spécifié à l'aide de HTML, CSS et JavaScript.
 
-Si vous fournissez une fenêtre contextuelle, la fenêtre contextuelle est ouverte lorsque l'utilisateur clique sur le bouton, et votre JavaScript s'exécute dans la fenêtre contextuelle permettant l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de popup, un événement de clic est envoyé aux [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) de votre extension lorsque l'utilisateur clique sur le bouton.
+Si vous fournissez une fenêtre contextuelle, la fenêtre contextuelle est ouverte lorsque l'utilisateur clique sur le bouton, et votre JavaScript s'exécute dans la fenêtre contextuelle permettant l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de popup, un événement de clic est envoyé aux [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) de votre extension lorsque l'utilisateur clique sur le bouton.
 
-Vous pouvez également créer et manipuler des actions de navigateur de manière programmée à l'aide de l'[API browserAction](/fr/Add-ons/WebExtensions/API/browserAction).
+Vous pouvez également créer et manipuler des actions de navigateur de manière programmée à l'aide de l'[API browserAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## Syntaxe
 
@@ -82,11 +82,11 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           chrome://browser/content/extension-mac.css sur OS X. Lorsque vous
           définissez les dimensions, sachez que cette feuille de style définit
           actuellement <code>box-sizing: border-box</code> (voir
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          {{CSSxRef("box-sizing")}}).
         </p>
         <p>
           Les
-          <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_styles"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
             >Browser styles</a
           >
           décrivent les classes que vous pouvez appliquer aux éléments dans le
@@ -176,7 +176,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
         <p>
           Voir
           <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
             >Choisir les tailles des icones</a
           >
           pour plus de conseils à ce sujet.
@@ -193,28 +193,17 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
         </p>
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript en
-          utilisant des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
-          et
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >, tout comme une page Web normale. Cependant,
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >
-          doit avoir l'attribut
-          <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour
-          charger un fichier. N'utilisez pas
-          <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >
+          utilisant des éléments {{HTMLElement("link")}}
+          et {{HTMLElement("script")}}, tout comme une page Web normale. Cependant,
+          {{HTMLElement("script")}} doit avoir l'attribut {{HTMLElement("script")}} pour
+          charger un fichier. N'utilisez pas {{HTMLElement("script")}}
           avec du code intégré, car vous obtiendrez une erreur de politique de
           violation de contenu confuse.
         </p>
         <p>
           Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans la fenêtre contextuelle peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (soumis,
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs WebExtension</a> (soumis,
           bien sûr, à l'extension possédant les
           <a
             href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
@@ -225,7 +214,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -242,7 +231,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -355,7 +344,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 Une action de navigateur avec une icône, un titre et une fenêtre contextuelle. Celle-ci s'affiche lorsque l'utilisateur clique sur le bouton.
 
-Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/Add-ons/WebExtensions/Your_second_WebExtension).
+Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
 ## Compatibilité des navigateurs
 
@@ -363,6 +352,6 @@ Pour une extension simple, mais complète, qui utilise une action de navigateur,
 
 ## Voir aussi
 
-- [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action)
-- [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

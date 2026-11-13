@@ -12,7 +12,7 @@ slug: Web/API/ExtendableEvent
 
 此接口继承自{{domxref("Event")}}接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 > [!NOTE]
 > 只有当全局范围是 {{domxref("ServiceWorkerGlobalScope")}} 时，此接口才可用。当它是一个 {{domxref("Window")}} 或其他类型 worker 的作用域时，它不可用。
@@ -31,7 +31,7 @@ slug: Web/API/ExtendableEvent
 _从他的父辈继承，{{domxref("Event")}}。_
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : 延长事件的生存期。它将在 service worker 的 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate) 事件中被调用。
+  - : 延长事件的生存期。它将在 service worker 的 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install_event) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件中被调用。
 
 ## 实例
 
@@ -82,7 +82,7 @@ self.addEventListener("install", function (event) {
 ```
 
 > [!NOTE]
-> 在获取资源时，如果有可能资源是由不支持 [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) 的服务器提供的，那么使用 `{mode: 'no-cors'}` 非常重要。在本例中， [www.chromium.org](http://www.chromium.org) 不支持 CORS。
+> 在获取资源时，如果有可能资源是由不支持 [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) 的服务器提供的，那么使用 `{mode: 'no-cors'}` 非常重要。在本例中， [www.chromium.org](https://www.chromium.org) 不支持 CORS。
 
 ## 规范
 

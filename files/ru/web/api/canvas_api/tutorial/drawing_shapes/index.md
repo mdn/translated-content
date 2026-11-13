@@ -71,7 +71,7 @@ function draw() {
 Создание фигур используя контуры происходит в несколько важных шагов:
 
 1. Сначала вы создаёте контур.
-2. Затем, используя [команды рисования](/ru/docs/Web/API/CanvasRenderingContext2D#Paths), рисуете контур.
+2. Затем, используя [команды рисования](/ru/docs/Web/API/CanvasRenderingContext2D#paths), рисуете контур.
 3. Потом закрываете контур.
 4. Созданный контур вы можете обвести или залить для его отображения.
 
@@ -79,7 +79,7 @@ function draw() {
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
   - : Создаёт новый контур. После создания используется в дальнейшем командами рисования при построении контуров.
-- [Path методы](/ru/docs/Web/API/CanvasRenderingContext2D#Paths)
+- [Path методы](/ru/docs/Web/API/CanvasRenderingContext2D#paths)
   - : Методы для установки различных контуров объекта.
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
   - : Закрывает контур, так что будущие команды рисования вновь направлены контекст.
@@ -494,7 +494,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 Давайте посмотрим, как мы можем построить объект `Path2D` :
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : Конструктор **`Path2D()`** возвращает вновь созданный объект `Path2D` необязательно с другим путём в качестве аргумента (создаёт копию) или необязательно со строкой, состоящей из данных пути [SVG path](/ru/docs/Web/SVG/Tutorial/Paths) .
+  - : Конструктор **`Path2D()`** возвращает вновь созданный объект `Path2D` необязательно с другим путём в качестве аргумента (создаёт копию) или необязательно со строкой, состоящей из данных пути [SVG path](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) .
 
 ```js
 new Path2D(); // пустой path объект
@@ -502,7 +502,7 @@ new Path2D(path); // копирование из другого path
 new Path2D(d); // path из SVG
 ```
 
-Все [методы path](/ru/docs/Web/API/CanvasRenderingContext2D#Paths) , такие как `moveTo`, `rect`, `arc`, или `quadraticCurveTo`, и т.п, которые мы уже знаем, доступны для объектов `Path2D`
+Все [методы path](/ru/docs/Web/API/CanvasRenderingContext2D#paths) , такие как `moveTo`, `rect`, `arc`, или `quadraticCurveTo`, и т.п, которые мы уже знаем, доступны для объектов `Path2D`
 
 API `Path2D` также добавляет способ комбинирования путей с использованием метода `addPath`. Это может быть полезно, если вы хотите, например, создавать объекты из нескольких компонентов.
 
@@ -544,10 +544,10 @@ function draw() {
 
 ### Использование SVG путей
 
-Ещё одна мощная функция нового Canvas `Path2D` API использует данные пути SVG, [SVG path data](/ru/docs/Web/SVG/Tutorial/Paths), для инициализации путей на вашем холсте. Это может позволить вам передавать данные пути и повторно использовать их как в SVG, так и в холсте.
+Ещё одна мощная функция нового Canvas `Path2D` API использует данные пути SVG, [SVG path data](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths), для инициализации путей на вашем холсте. Это может позволить вам передавать данные пути и повторно использовать их как в SVG, так и в холсте.
 
 Путь перемещается в точку (`M10 10`), а затем горизонтально перемещается на 80 пунктов вправо (`h 80`), затем на 80 пунктов вниз (`v 80`), затем на 80 пунктов влево (`h -80`), а затем обратно на start (`z`).
-Этот пример можно увидеть на странице [`Path2D` constructor](/ru/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+Этот пример можно увидеть на странице [`Path2D` constructor](/ru/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

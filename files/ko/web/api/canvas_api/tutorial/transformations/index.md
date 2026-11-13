@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Transformations
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
-이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
+이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
 
 ## 상태(state)의 저장과 복원
 
@@ -21,7 +21,7 @@ Canvas 상태는 스택(stack)에 쌓입니다. `save()` 메소드가 호출될 
 - 이전부터 적용된 변형(가령, `translate`과 `rotate`와 `scale` 같은 – 아래의 내용을 보세요).
 - 다음 속성(attributes)의 현재 값:
   {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- 현재의 [clipping path](/ko/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths), 이것은 다음 섹션에서 다루겠습니다.
+- 현재의 [clipping path](/ko/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths), 이것은 다음 섹션에서 다루겠습니다.
 
 여러분은 원하는 만큼 `save()` 메소드를 많이 호출할 수 있습니다. `restore()` 메소드를 호출할 때마다 마지막으로 저장된 상태가 스택에서 튀어나와 저장된 설정들을 모두 복원시킵니다.
 
@@ -121,7 +121,8 @@ draw();
 
 이 예제는 사각형을 canvas 원점에서 먼저 회전하고 그다음에 `translate()`의 도움을 받아 사각형 자체의 중심에서 회전하는 데 `rotate()`를 사용합니다.
 
-> **참고:** **주의**: 각도의 단위는 도(degree)가 아닌 라디안(radian)입니다. 변환하려면 `radians = (Math.PI/180)*degrees`.를 사용합니다.
+> [!NOTE]
+> **주의**: 각도의 단위는 도(degree)가 아닌 라디안(radian)입니다. 변환하려면 `radians = (Math.PI/180)*degrees`.를 사용합니다.
 
 ```js
 function draw() {

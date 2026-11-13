@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Comma_operator
 
 **Оператор запятая** выполняет каждый из его операндов (слева направо) и возвращает значение последнего операнда.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## Синтаксис
 
@@ -40,7 +54,7 @@ for (let i = 0, j = 9; i <= 9; i++, j--)
 ```js
 // подобное объявление запрещено в строгом режиме(strict mode)
 
-(a = b = 3), (c = 4); // возвращает 4 в консоль
+((a = b = 3), (c = 4)); // возвращает 4 в консоль
 console.log(a); // 3
 x = ((y = 5), (z = 6)); // возвращает 6 в консоль
 console.log(x); // 6
@@ -56,7 +70,7 @@ console.log(x); // 6
 function myFunc() {
   let x = 0;
 
-  return (x += 1), x; // то же самое, что return ++x;
+  return ((x += 1), x); // то же самое, что return ++x;
 }
 ```
 

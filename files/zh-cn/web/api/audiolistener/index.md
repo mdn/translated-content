@@ -5,7 +5,7 @@ slug: Web/API/AudioListener
 
 {{ APIRef("Web Audio API") }}
 
-`AudioListener` 接口代表了人听音乐场景时声音的位置和方向，和用于[音频空间化](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)。所有{{domxref("PannerNode")}} 相对于 `AudioListener` 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。
+`AudioListener` 接口代表了人听音乐场景时声音的位置和方向，和用于[音频空间化](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。所有{{domxref("PannerNode")}} 相对于 `AudioListener` 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。
 
 特别需要注意的是一个环境中只能有一个收听者而且这不是{{domxref("AudioNode")}}.
 
@@ -72,4 +72,4 @@ The `setOrientation()` and `setPosition()` methods have been replaced by setting
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -20,9 +20,11 @@ l10n:
 
 `CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
-> **メモ:** `CacheStorage` は、信頼されていないオリジン（つまり、 HTTPS を使用しないオリジンですが、この定義は将来より複雑になる可能性があります）では常に拒否され、 `SecurityError` となります。 Firefox でテストする場合は、 Firefox 開発者ツールのオプション/ギアメニューの **HTTP による Service Worker を有効化 (ツールボックスを開いたとき)** オプションをチェックすることで回避することが可能です。さらに、 `CacheStorage` はファイルシステムへのアクセスを必要とするため、Firefoxのプライベートモードでは利用できない場合があります。
+> [!NOTE]
+> `CacheStorage` は、信頼されていないオリジン（つまり、 HTTPS を使用しないオリジンですが、この定義は将来より複雑になる可能性があります）では常に拒否され、 `SecurityError` となります。 Firefox でテストする場合は、 Firefox 開発者ツールのオプション/ギアメニューの **HTTP による Service Worker を有効化 (ツールボックスを開いたとき)** オプションをチェックすることで回避することが可能です。さらに、 `CacheStorage` はファイルシステムへのアクセスを必要とするため、Firefoxのプライベートモードでは利用できない場合があります。
 
-> **メモ:** {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリーと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
+> [!NOTE]
+> {{domxref("CacheStorage.match()")}} は便利なメソッドです。 キャッシュエントリーと一致する同等の機能を実装するには、{{domxref("CacheStorage.keys()")}} からキャッシュ名の配列を返し、{{domxref("CacheStorage.open()")}} で各キャッシュを開き、{{domxref("Cache.match()")}} で必要なものと一致させます。
 
 ## インスタンスメソッド
 

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 
 **`getDate()`** 메서드는 주어진 날짜의 현지 시간 기준 일을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getDate()")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const date1 = birthday.getDate();
+
+console.log(date1);
+// Expected output: 19
+```
 
 ## 구문
 

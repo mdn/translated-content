@@ -48,5 +48,5 @@ const decodedData = atob(encodedData); // 문자열 디코딩
 ## 같이 보기
 
 - [`core-js`](https://github.com/zloirock/core-js)의 [`atob` 폴리필](https://github.com/zloirock/core-js#base64-utility-methods)
-- [`data` URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/ko/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("btoa","btoa()")}}

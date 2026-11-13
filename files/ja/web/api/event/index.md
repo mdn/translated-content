@@ -2,23 +2,23 @@
 title: Event
 slug: Web/API/Event
 l10n:
-  sourceCommit: 0a3eba62842757c71fbd39060f00a3159b7fcdc5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`Event`** インターフェイスは DOM で発生するイベントを表します。
+**`Event`** インターフェイスは [`EventTarget`](/ja/docs/Web/API/EventTarget) で発生するイベントを表します。
 
 ユーザーの操作によって発生するイベント（マウスボタンのクリック、キーボードを叩くなど）もありますし、非同期タスクの進捗を表すための API によって生成されるイベントもあります。要素の [`HTMLElement.click()`](/ja/docs/Web/API/HTMLElement/click) の呼び出しや、イベントを定義し、 [`EventTarget.dispatchEvent()`](/ja/docs/Web/API/EventTarget/dispatchEvent) を使用して指定されたターゲットに送信するなどのようにプログラムから起動されるものもあります。
 
 イベントには様々な型があり、イベントによっては基本の `Event` インターフェイスを基にした他のインターフェイスを使用することもあります。 `Event` 自体は、すべてのイベントで共通のプロパティやメソッドを持っています。
 
-多くの DOM 要素は、これらのイベントを受け入れる（または「待ち受けする」）ように設定することができ、それに応じてコードを実行してイベントを処理する（または「取り扱う」）ことができます。イベントハンドラーはふつう、様々な [HTML 要素](/ja/docs/Web/HTML/Element)（`<button>`, `<div>`, `<span>`, など）に [`EventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して結び付けられ（または「装着され」）、これが一般に古い HTML の[イベントハンドラー属性](/ja/docs/Web/HTML/Global_attributes)を使用する方法を置き換えています。さらに、このようなハンドラーは正しく追加されたら、必要に応じて [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を使用して切り離すことができます。
+多くの DOM 要素は、これらのイベントを受け入れる（または「待ち受けする」）ように設定することができ、それに応じてコードを実行してイベントを処理する（または「取り扱う」）ことができます。イベントハンドラーはふつう、様々な [HTML 要素](/ja/docs/Web/HTML/Reference/Elements)（`<button>`, `<div>`, `<span>`, など）に [`EventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して結び付けられ（または「装着され」）、これが一般に古い HTML の[イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Global_attributes)を使用する方法を置き換えています。さらに、このようなハンドラーは正しく追加されたら、必要に応じて [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を使用して切り離すことができます。
 
 > [!NOTE]
 > 1 つの要素が、まったく同じイベントに対して複数のハンドラーを持つこともできます。特に、別々の独立したコードモジュールが、それぞれ独立した目的のためにハンドラーを装着する場合（例えば、広告モジュールと統計モジュールの両方がビデオ視聴を監視しているウェブページ）です。
 
-数多くの入れ子になった要素があり、それぞれに独自のイベントハンドラーがあった場合、イベントの処理はとても複雑になります。特に、親要素が子要素と全く同じイベントを受け取る場合、「空間的に」重なり合っているので、技術的にはイベントは両方で発生し、そのようなイベントの処理順序は、トリガーされた各ハンドラーの[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)の設定次第で決まります。
+数多くの入れ子になった要素があり、それぞれに独自のイベントハンドラーがあった場合、イベントの処理はとても複雑になります。特に、親要素が子要素と全く同じイベントを受け取る場合、「空間的に」重なり合っているので、技術的にはイベントは両方で発生し、そのようなイベントの処理順序は、トリガーされた各ハンドラーの[イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)の設定次第で決まります。
 
 ## Event を基にしたインターフェイス
 
@@ -90,10 +90,12 @@ l10n:
   - : このイベントをキャンセルするために {{domxref("event.preventDefault()")}} が呼び出されたかどうかを示します。
 - {{domxref("Event.eventPhase")}} {{ReadOnlyInline}}
   - : イベントフローのどのフェーズで処理されているかを示します。 `NONE`, `CAPTURING_PHASE`, `AT_TARGET`, `BUBBLING_PHASE` のうちのいずれかの数値です。
-- {{domxref("Event.srcElement")}} {{non-standard_inline}}
-  - : {{domxref("Event.target")}} の、(古いバージョンの Microsoft Internet Explorer 由来の) 標準外の別名であり、ウェブの互換性の目的で一部の他のブラウザーでも対応が始められています。
+- {{domxref("Event.isTrusted")}} {{ReadOnlyInline}}
+  - : イベントがブラウザーによって（例えばユーザーによるクリック後に）開始されたものか、スクリプトによって（例えばイベント作成メソッドを使用して）開始されたものかを示します。
+- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : {{domxref("Event.target")}} プロパティの別名です。代わりに {{domxref("Event.target")}} を使用してください。
 - {{domxref("Event.target")}} {{ReadOnlyInline}}
-  - : イベントが最初に送出されたターゲットへの参照。
+  - : イベントが最初に送出されたターゲットへの参照です。
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
   - : イベントが生成された時刻をミリ秒単位で示します。仕様書ではこの値を元期からの経過時間としていますが、実際のブラウザーでの定義は様々です。また、値を {{domxref("DOMHighResTimeStamp")}} に変更する作業が進行中です。
 - {{domxref("Event.type")}} {{ReadOnlyInline}}
@@ -115,9 +117,7 @@ l10n:
 ## インスタンスメソッド
 
 - {{domxref("Event.composedPath()")}}
-
   - : （リスナーが呼び出されるオブジェクトへの）イベントのパスを返します。これはシャドウルートの {{domxref("ShadowRoot.mode")}} が閉じた状態で作成されたシャドウツリーのノードは含みません。
-
 - {{domxref("Event.preventDefault()")}}
   - : （キャンセル可能な場合）イベントをキャンセルします。
 - {{domxref("Event.stopImmediatePropagation()")}}
@@ -140,6 +140,7 @@ l10n:
 
 ## 関連情報
 
-- 利用できるイベントの種類: [イベントリファレンス](/ja/docs/Web/Events)
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
-- [カスタムイベントの生成と発行](/ja/docs/Web/Events/Creating_and_triggering_events)
+- 利用できるイベントの種類: [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
+- [学習: イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [カスタムイベントの生成と発行](/ja/docs/Web/API/Document_Object_Model/Events)

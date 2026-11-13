@@ -40,7 +40,8 @@ request.send(formData);
 
 Для создания объекта `FormDatа`, содержащего данные существующей формы ({{ HTMLElement("form") }}) передайте форму в качестве аргумента при создании объекта `FormData:`
 
-> **Примечание:**FormData будет использовать только те поля ввода, которые используют атрибут name.
+> [!NOTE]
+> FormData будет использовать только те поля ввода, которые используют атрибут name.
 
 ```js
 var formData = new FormData(someFormElement);
@@ -152,11 +153,11 @@ $.ajax({
 
 ## Отправка форм и файлов при помощи AJAX _без использования_ объекта `FormData`
 
-Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/AJAX) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)
+Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files)
 
 ## Смотрите также
 
 - [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)

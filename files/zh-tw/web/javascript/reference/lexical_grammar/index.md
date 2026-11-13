@@ -3,8 +3,6 @@ title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
 
-{{JsSidebar("More")}}
-
 此篇介紹 Javascript 的 lexical grammar。ECMAScript 的原始碼從左到右被掃描並被轉換成一系列的輸入元素也就是 token、控制字元、行終止字元、註解或是空白字元。ECMAScript 也定義了一些特定的關鍵字和實體語法還有用來自動插入分號來結束陳述式的規則。
 
 ## 控制字元
@@ -32,7 +30,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 行終止字元
 
-除了空白字元之外，行終止字元也用來提升源碼可讀性。然而，在某些情況下行終止字元會影響 Javascript 程式的執行，所以有些地方是被禁止使用的。行終止字元同時也會影響[自動插入分號](#Automatic_semicolon_insertion)的運作。在[正規表達式](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)中，行終止字元屬於 **\s** 的類別。
+除了空白字元之外，行終止字元也用來提升源碼可讀性。然而，在某些情況下行終止字元會影響 Javascript 程式的執行，所以有些地方是被禁止使用的。行終止字元同時也會影響[自動插入分號](#automatic_semicolon_insertion)的運作。在[正規表達式](/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions)中，行終止字元屬於 **\s** 的類別。
 
 在 ECMAScript 中，只有以下的 Unicode 碼位被視為行終止字元，其他如 Next Line, NEL, U+0085 等的行終止字元被視為空白字元。
 
@@ -113,8 +111,8 @@ comment();
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Statements/switch", "default")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -126,11 +124,11 @@ comment();
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -206,7 +204,7 @@ function import() {} // 不合法.
 
 ### Null
 
-更多說明請參閱 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/null) 。
+更多說明請參閱 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 。
 
 ```js-nolint
 null
@@ -234,7 +232,7 @@ false
 0777 // 被解析成八進制, 十進制值為 511
 ```
 
-數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzil.la/957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzil.la/957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix)。
 
 #### 二進制
 
@@ -338,7 +336,7 @@ ECMAScript 2015 新增。使用 Unicode 跳脫編碼位置表示法，即可使�
 
 ### 範本字串
 
-更多說明請參閱 [template strings](/zh-TW/docs/Web/JavaScript/Reference/template_strings) 。
+更多說明請參閱 [template strings](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 。
 
 ```js-nolint
 `string text`
@@ -365,7 +363,7 @@ tag `string text ${expression} string text`
 
 ECMAScript 規格闡明 [自動插入分號的三個規則](https://tc39.es/ecma262/#sec-rules-of-automatic-semicolon-insertion)。
 
-1\. 如果 [行終止字元](#Line_terminators) 或 "}" 出現在不符文法的地方，一個分號會被自動插入在其之前。
+1\. 如果 [行終止字元](#line_terminators) 或 "}" 出現在不符文法的地方，一個分號會被自動插入在其之前。
 
 ```js
 { 1 2 } 3
@@ -377,7 +375,7 @@ ECMAScript 規格闡明 [自動插入分號的三個規則](https://tc39.es/ecma
 
 2\. 當一個 token 輸入流到了結尾而解析器仍然無法將其解析為一個完整的程式，一個分號會被自動插入於其後。
 
-在這裡 `++` 並不會被當作作用於變數`b`的 [後綴運算元](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)，因為行終止字元出現在`b` 和 `++`之間。
+在這裡 `++` 並不會被當作作用於變數`b`的 [後綴運算元](/zh-TW/docs/Web/JavaScript/Reference/Operators#increment)，因為行終止字元出現在`b` 和 `++`之間。
 
 ```js-nolint
 a = b
@@ -418,7 +416,7 @@ a + b;
 
 ## 參閱
 
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}

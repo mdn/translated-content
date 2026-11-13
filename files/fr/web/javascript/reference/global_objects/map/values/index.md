@@ -1,35 +1,55 @@
 ---
-title: Map.prototype.values()
+title: "Map : méthode values()"
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`values()`** des instances de {{JSxRef("Map")}} retourne un nouvel objet _[itérateur de tableau associatif](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui contient les valeurs de chaque élément de cette map dans l'ordre d'insertion.
 
-La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) qui contient les valeurs de chacun des éléments contenu dans l'objet `Map` donné, dans leur ordre d'insertion.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.values()")}}
 
-{{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
+```js interactive-example
+const map = new Map();
+
+map.set("0", "toto");
+map.set(1, "tata");
+
+const iterator = map.values();
+
+console.log(iterator.next().value);
+// Résultat attendu : "toto"
+
+console.log(iterator.next().value);
+// Résultat attendu : "tata"
+```
 
 ## Syntaxe
 
-```js
-maMap.values();
+```js-nolint
+values()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un nouvel objet `Iterator` {{jsxref("Map")}}.
+Un nouvel [objet d'itérateur itérable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Exemple
 
-### Utiliser `values()`
+### Utiliser la méthode `values()`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "licorne");
 
-var mapIter = maMap.values();
+const mapIter = maMap.values();
 
 console.log(mapIter.next().value); // "toto"
 console.log(mapIter.next().value); // "truc"
@@ -46,5 +66,5 @@ console.log(mapIter.next().value); // "licorne"
 
 ## Voir aussi
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- L'objet natif {{JSxRef("Map.prototype.entries()")}}
+- L'objet natif {{JSxRef("Map.prototype.keys()")}}

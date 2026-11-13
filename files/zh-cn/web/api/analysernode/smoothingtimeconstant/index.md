@@ -28,9 +28,9 @@ analyser.smoothingTimeConstant = 1;
 
 ## 例子
 
-下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
+下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
 
-更多的例子/信息，查看 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 `如果你对 smoothingTimeConstant()` 的效果好奇，可以尝试克隆上面的例子并设置 "`analyser.smoothingTimeConstant = 0;"` 代替。你会发现值的变化更加快速。
 
@@ -85,4 +85,4 @@ draw();
 
 ## 相关内容
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

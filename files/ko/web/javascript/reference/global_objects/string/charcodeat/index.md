@@ -11,7 +11,20 @@ l10n:
 
 `charCodeAt()`은 항상 문자열을 [UTF-16 코드 단위](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)의 시퀀스로 색인하므로 론 서로게이트(lone surrogates)를 반환할 수 있습니다. 주어진 인덱스에서 전체 유니코드 코드 포인트를 가져오려면 {{jsxref("String.prototype.codePointAt()")}}를 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charCodeAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+```
 
 ## 구문
 
@@ -59,7 +72,8 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **참고:** `charCodeAt()`을 사용하여 `codePointAt()`을 다시 구현하지 마세요. UTF-16 서로게이트에서 유니코드 코드 포인트로의 변환은 복잡하며 `codePointAt()`은 문자열의 내부 표현을 직접 사용하므로 성능이 더 우수할 수 있습니다. 필요한 경우 `codePointAt()`에 대한 폴리필을 설치하시기 바랍니다.
+> [!NOTE]
+> `charCodeAt()`을 사용하여 `codePointAt()`을 다시 구현하지 마세요. UTF-16 서로게이트에서 유니코드 코드 포인트로의 변환은 복잡하며 `codePointAt()`은 문자열의 내부 표현을 직접 사용하므로 성능이 더 우수할 수 있습니다. 필요한 경우 `codePointAt()`에 대한 폴리필을 설치하시기 바랍니다.
 
 아래는 [유니코드 FAQ](https://unicode.org/faq/utf_bom.html#utf16-3)에서 발췌한 UTF-16 코드 단위 쌍을 유니코드 코드 포인트로 변환하는 가능한 알고리즘입니다.
 

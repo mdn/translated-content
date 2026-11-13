@@ -15,7 +15,7 @@ Toda función en JavaScript es un objeto Function. Ver {{jsxref("Function")}} pa
 
 Las funciones no son lo mismo que los procedimientos. Una función siempre devuelve un valor, pero un procedimiento, puede o no puede devolver un valor.
 
-Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Sentencias/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
+Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Statements/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
 
 Los parámetros en la llamada a una función son los argumentos de la función. Los argumentos se pasan a las funciones _por valor_. Si la función cambia el valor de un argumento, este cambio no se refleja globalmente ni en la llamada de la función. Sin embargo, las referencias a objetos también son valores, y son especiales: si la función cambia las propiedades del objeto referenciado, ese cambio es visible fuera de la función, tal y como se muestra en el siguiente ejemplo:
 
@@ -49,7 +49,7 @@ myFunc(mycar);
 window.alert(mycar.marca);
 ```
 
-La palabra clave [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
+La palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
 
 ## Definiendo funciones
 
@@ -57,7 +57,7 @@ Hay varias formas de definir funciones:
 
 ### Declaración de una función (La instrucción `function`)
 
-Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Sentencias/function","function")}} para más detalles):
+Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Statements/function","function")}} para más detalles):
 
 ```js-nolint
 function nombre([param[, param[, ...param]]]) {
@@ -80,7 +80,7 @@ function nombre([param[, param[, ...param]]]) {
 
 ### Expresión de una función (El operador `function`)
 
-Una expresión function es similar y tiene la misma sintaxis que una declaración de función (ver operador {{jsxref("Operadores/function", "function")}} para más detalles):
+Una expresión function es similar y tiene la misma sintaxis que una declaración de función (ver operador {{jsxref("Operators/function", "function")}} para más detalles):
 
 ```js-nolint
 function [nombre]([param[, param[, ...param]]]) {
@@ -106,7 +106,7 @@ function [nombre]([param[, param[, ...param]]]) {
 > [!NOTE]
 > Las expresiones de función Flecha son una tecnología experimental, parte de la proposición Harmony (EcmaScript 6) y no son ampliamente implementadas por los navegadores.
 
-Una expresión de función flecha tiene una sintaxis más corta y su léxico se une a este valor (ver {{jsxref("Funciones/Arrow_functions", "arrow functions", "", 1)}} para más detalles):
+Una expresión de función flecha tiene una sintaxis más corta y su léxico se une a este valor (ver {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} para más detalles):
 
 ```js-nolint
 ([param] [, param]) => { instrucciones }
@@ -141,7 +141,7 @@ Llamar al contructor Function como una función, sin el operador new, tiene el m
 
 ## El objeto `arguments`
 
-Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functiones/argument", "Function")}}.
+Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functions/arguments", "Function")}}.
 
 ## Ámbito de ejecución y pila de funciones
 
@@ -152,7 +152,7 @@ some section about scope and functions calling other functions
 Una función puede referirse y llamarse a sí misma. Hay tres maneras en la que una función puede referirse a sí misma.
 
 1. El nombre de la función
-2. {{jsxref("arguments.callee")}}
+2. {{jsxref("Functions/arguments/callee", "arguments.callee")}}
 3. una función dentro del ambito de ejecución que refiere a la función
 
 Por ejemplo, considere la siguiente definición de función:
@@ -193,7 +193,7 @@ function loop(x) {
 loop(0);
 ```
 
-Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el [DOM](/es/docs/DOM)) es realizado de manera más fácil usando recursión:
+Sin embargo, algunos algoritmos no pueden ser bucles iterativos simples. Por ejemplo, obtener todos los nodos de una estructura de arbol (e.g. el [DOM](/es/docs/Web/API/Document_Object_Model)) es realizado de manera más fácil usando recursión:
 
 ```js
 function recorrerArbol(nodo) {
@@ -240,7 +240,7 @@ fin:3
 
 - Puede anidar una función dentro de una función. La función anidada (inner) es privada a la función que la contiene (outer). También con la forma: aclosure.
   - : Un cierre es una expresión (normalmente una función) que puede tener variables libres junto con un entorno que enlaza esas variables (que "cierra" la expresión).
-    Dado que una función anidada es un cierre, esto significa que una función anidada puede "heredar" los argumentos y las variables de su función contenedora. En otras palabras, la función interna contiene el ámbito de la función externa.[](http://jibbering.com/faq/faq_notes/closures.html)
+    Dado que una función anidada es un cierre, esto significa que una función anidada puede "heredar" los argumentos y las variables de su función contenedora. En otras palabras, la función interna contiene el ámbito de la función externa.[](https://jibbering.com/faq/faq_notes/closures.html)
 
 Desde que la función anidada es un cierre (closure), esto significa que una función anidada puede "heredar" los argumentos y variables de su función contenedora. En otras palabras, la función interna contiene un scope (alcance) de la función externa.
 
@@ -387,7 +387,6 @@ Compare lo siguiente:
 Todos hacen aproximadamente la misma cosa, con algunas diferencias sutiles:
 
 - Existe una distinción entre el nombre de la función y la variable a la que se asigna la función:
-
   - El nombre de la función no se puede cambiar, mientras que la variable a la que se asigna la función puede ser reasignada.
   - El nombre de la función sólo se puede utilizar en el cuerpo de la función. Intentar utilizarlo fuera del cuerpo de la función da como resultado un error (o `undefined` si el nombre de la función se declaró previamente mediante una instrucción `var`). Por ejemplo:
 
@@ -531,9 +530,9 @@ if (0)
 
 ## Funciones como manejadores de eventos
 
-En JavaScript, los controladores de eventos [DOM](/es/DOM) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](/es/DOM/event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
+En JavaScript, los controladores de eventos [DOM](/es/docs/Web/API/Document_Object_Model) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](/es/docs/Web/API/Event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
 
-Los posibles objetivos de eventos en un documento [HTML](/es/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](http://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
+Los posibles objetivos de eventos en un documento [HTML](/es/docs/Web/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](https://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
 
 > [!NOTE]
 > Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)

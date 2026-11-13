@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 `DirectoryEntrySync` インターフェイスは、ファイルシステム内のディレクトリーを表します。ディレクトリー内のファイルの作成、読み込み、検索、および再帰的に削除するためのメソッドが含まれています。
 
@@ -300,4 +300,4 @@ removeRecursively()
 ## 関連情報
 
 - [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_System_API)

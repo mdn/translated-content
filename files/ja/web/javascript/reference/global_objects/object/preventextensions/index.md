@@ -1,15 +1,29 @@
 ---
 title: Object.preventExtensions()
+short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Object.preventExtensions()`** は静的メソッドで、すでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。また、このオブジェクトのプロトタイプが再代入されることを防ぎます。
 
-**`Object.preventExtensions()`** 静的メソッドは、すでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。また、このオブジェクトのプロトタイプが再代入されることを防ぎます。
+{{InteractiveExample("JavaScript デモ: Object.preventExtensions()")}}
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+```js interactive-example
+const object = {};
+
+Object.preventExtensions(object);
+
+try {
+  Object.defineProperty(object, "foo", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // 予想される結果: TypeError: Cannot define property foo, object is not extensible
+}
+```
 
 ## 構文
 

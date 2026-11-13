@@ -9,7 +9,7 @@ slug: Web/API/Blob/type
 
 ## 값
 
-파일의 MIME 유형을 나타내는 {{domxref("DOMString")}}. 유형을 알아낼 수 없는 경우 빈 문자열입니다.
+파일의 MIME 유형을 나타내는 {{jsxref("String")}}. 유형을 알아낼 수 없는 경우 빈 문자열입니다.
 
 ## 예제
 
@@ -69,4 +69,4 @@ input.addEventListener("change", (event) => {
 ## 같이 보기
 
 - {{domxref("Blob")}}
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -1,36 +1,29 @@
 ---
-title: CSSRule.parentStyleSheet
+title: CSSRule：parentStyleSheet 属性
 slug: Web/API/CSSRule/parentStyleSheet
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("CSSOM") }}
 
-### 概述
+{{domxref("CSSRule")}} 接口的 **`parentStyleSheet`** 属性返回定义当前规则的 {{domxref("StyleSheet")}} 对象。
 
-**parentStyleSheet** 返回在当前规则中已定义的样式表对象。
+## 值
 
-### 语法
+{{domxref("StyleSheet")}} 对象。
 
-```plain
-stylesheet = cssRule.parentStyleSheet
+## 示例
+
+```js
+const docRules = document.styleSheets[0].cssRules;
+console.log(docRules[0].parentStyleSheet == document.styleSheets[0]); // 返回 true
 ```
 
-### 参数
+## 规范
 
-- `stylesheet`是一个样式表对象。
+{{Specifications}}
 
-### 例子
+## 浏览器兼容性
 
-```plain
-if ( bgRule.parentStyleSheet != mySheet ) {
-   // alien style rule!
-}
-```
-
-### 备注
-
-查看 [Gecko DOM Reference:event#DOM_styleSheet_Object](en/Gecko_DOM_Reference/event#DOM_styleSheet_Object) 有关样式表的对象接口的详细信息。
-
-### 规范
-
-DOM Level 2 Style - cssRule
+{{Compat}}

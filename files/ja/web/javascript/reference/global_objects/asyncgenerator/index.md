@@ -2,10 +2,8 @@
 title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`AsyncGenerator`** オブジェクトは{{jsxref("Statements/async_function*", "非同期ジェネレーター関数", "", 1)}}から返されるもので、[非同期反復可能プロトコルと非同期イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)の両方を満たすものです。
 
@@ -13,17 +11,15 @@ l10n:
 
 `AsyncGenerator` は隠しクラスの {{jsxref("AsyncIterator")}} のサブクラスです。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
-
 ## コンストラクター
 
-`AsyncGenerator` コンストラクターはグローバルには利用できません。`AsyncGenerator` のインスタンスは、[非同期ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)から返される必要があります。
+`AsyncGenerator` コンストラクターに対応する JavaScript のエンティティはありません。`AsyncGenerator` のインスタンスは、[非同期ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)から返される必要があります。
 
 ```js
 async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
+  yield Promise.resolve(1);
   yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+  yield 3;
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next().then((res) => console.log(res.value)); // 1
@@ -31,20 +27,20 @@ asyncGen.next().then((res) => console.log(res.value)); // 2
 asyncGen.next().then((res) => console.log(res.value)); // 3
 ```
 
-実際、`AsyncGenerator`コンストラクターに対応するJavaScriptのエンティティはありません。非同期ジェネレーター関数によって生成されるすべてのオブジェクトによって共有されるプロトタイプオブジェクトである隠しオブジェクトがあるだけです。このオブジェクトはクラスのように見せるために `AsyncGenerator.prototype` というスタイルで呼ばれることが多いのですが、[`AsyncGeneratorFunction.prototype.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) と呼ぶほうが適切でしょう。なぜなら `AsyncGeneratorFunction` は実際の JavaScript エンティティであるからです。
+非同期ジェネレーター関数によって作成されるすべてのオブジェクトに共通するプロトタイプオブジェクトという、隠れたオブジェクトが 1 つだけ存在します。このオブジェクトは、クラスのように `AsyncGenerator.prototype` と表記されることが多いですが、`AsyncGeneratorFunction` は実際の JavaScript エンティティであるため、より適切には {{jsxref("AsyncGeneratorFunction.prototype.prototype")}} と呼ぶべきです。`AsyncGenerator` インスタンスのプロトタイプチェーンを理解するには、{{jsxref("AsyncGeneratorFunction.prototype.prototype")}} を参照してください。
 
 ## インスタンスプロパティ
 
 これらのプロパティは `AsyncGenerator.prototype` で定義されており、すべての `AsyncGenerator` インスタンスで共有されています。
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : インスタンスオブジェクトを作成したコンストラクター関数。`AsyncGenerator` インスタンスの場合、初期値は [`AsyncGeneratorFunction.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) です。
 
-    > **メモ:** `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。
+    > [!NOTE]
+    > `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。
 
-- `AsyncGenerator.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncGenerator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
+- `AsyncGenerator.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncGenerator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
@@ -67,14 +63,14 @@ _親である {{jsxref("AsyncIterator")}} からインスタンスメソッド�
 // 非同期タスクです。実際にはもっと有益なことを使用していることを
 // 想定してください。
 function delayedValue(time, value) {
-  return new Promise((resolve /*, reject*/) => {
+  return new Promise((resolve /*, reject */) => {
     setTimeout(() => resolve(value), time);
   });
 }
 
 async function* generate() {
   yield delayedValue(2000, 1);
-  yield delayedValue(100, 2);
+  yield delayedValue(1000, 2);
   yield delayedValue(500, 3);
   yield delayedValue(250, 4);
   yield delayedValue(125, 5);
@@ -104,6 +100,6 @@ main().catch((e) => console.error(e));
 - {{jsxref("Statements/function*", "function*", "", 1)}}
 - {{jsxref("Statements/async_function*", "async function*", "", 1)}}
 - [`function*` 式](/ja/docs/Web/JavaScript/Reference/Operators/function*)
-- {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
-- {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- {{jsxref("GeneratorFunction", "ジェネレーター関数", "", 1)}}
+- {{jsxref("AsyncGeneratorFunction", "非同期ジェネレーター関数", "", 1)}}
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)ガイド

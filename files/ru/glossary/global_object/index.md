@@ -57,7 +57,6 @@ greeting: function greeting() {
 ```
 
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
-
   - {{glossary("global scope")}}
   - {{glossary("object")}}
 

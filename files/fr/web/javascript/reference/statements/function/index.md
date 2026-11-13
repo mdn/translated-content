@@ -3,13 +3,20 @@ title: function
 slug: Web/JavaScript/Reference/Statements/function
 ---
 
-{{jsSidebar("Statements")}}
-
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
 
-Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction","",1)}}.
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
+
+Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Operators/function", "expression de fonction","",1)}}.
 
 ## Syntaxe
 
@@ -30,9 +37,9 @@ function nom([param1[, param2,[…, paramN]]]) {
 
 Une fonction créée via une déclaration de fonction est un objet `Function` et possède toutes les caractéristiques (propriétés, méthodes et comportement) d'un objet `Function`. Voir la page {{jsxref("Function")}} pour plus d'informations sur ces caractéristiques.
 
-Une fonction peut également être créée en utilisant une expression (voir {{jsxref("Opérateurs/L_opérateur_function", "les expressions de fonctions","",1)}}).
+Une fonction peut également être créée en utilisant une expression (voir {{jsxref("Operators/function", "les expressions de fonctions","",1)}}).
 
-Par défaut, une fonction renvoie {{jsxref("undefined")}}. Pour renvoyer une autre valeur en résultat, une fonction doit utiliser une instruction {{jsxref("Instructions/return", "return")}} qui définit la valeur à retourner.
+Par défaut, une fonction renvoie {{jsxref("undefined")}}. Pour renvoyer une autre valeur en résultat, une fonction doit utiliser une instruction {{jsxref("Statements/return", "return")}} qui définit la valeur à retourner.
 
 ### Fonctions créées conditionnellement
 
@@ -104,7 +111,7 @@ function remontée() {
 }
 ```
 
-On notera que les {{jsxref("Opérateurs/L_opérateur_function", "expressions de fonctions","",1)}} ne sont pas remontées :
+On notera que les {{jsxref("Operators/function", "expressions de fonctions","",1)}} ne sont pas remontées :
 
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
@@ -136,12 +143,12 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 
 ## Voir aussi
 
-- {{jsxref("Fonctions", "Les fonctions","",1)}}
+- {{jsxref("Functions", "Les fonctions","",1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction","",1)}}
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("Fonctions/Fonctions_fléchées", "Les fonctions fléchées","",1)}}
+- {{jsxref("Operators/function", "Les expressions de fonction","",1)}}
+- L'instruction {{jsxref("Statements/function*", "function*")}}
+- L'expression {{jsxref("Operators/function*", "function*")}}
+- {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées","",1)}}
 - {{jsxref("GeneratorFunction")}}
-- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
-- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Opérateurs/async_function)
+- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)

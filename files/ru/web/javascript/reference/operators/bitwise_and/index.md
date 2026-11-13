@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 Побитовый оператор И (`&`) возвращает `1` в каждой битовой позиции, для которой соответствующие биты обоих операндов равны `1`.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## Синтаксис
 
@@ -66,5 +74,5 @@ a & b
 
 ## Смотрите также
 
-- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [Bitwise AND assignment operator](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

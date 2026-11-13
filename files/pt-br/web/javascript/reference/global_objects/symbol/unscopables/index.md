@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 
 O símbolo **`Symbol.unscopables`** é usado para específicar um valor objeto cujo os nomes de propriedade próprio e herdados são excluídos das associações do ambiente [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) o objeto associado.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## Descrição
 
@@ -21,7 +36,7 @@ Configurando a propriedade para `true` em um objeto `unscopables` tornará ele n
 
 ### Escopo com declarações
 
-O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMAScript 2015 e superiores, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro do ambiente `with` "chaves" seria agora o método e não as variavéis. Isso qunado os símbolos `unscopable`s foram introduzidos. Uma confiração built-in `unscopables` é implementada como {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} para prevenir que alguns métodos de Array tenham escopo definido na desclaração `with`.
+O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMAScript 2015 e superiores, o método {{jsxref("Array.prototype.keys()")}} foi introduzido. Isso significa que dentro do ambiente `with` "chaves" seria agora o método e não as variavéis. Isso qunado os símbolos `unscopable`s foram introduzidos. Uma confiração built-in `unscopables` é implementada como {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}} para prevenir que alguns métodos de Array tenham escopo definido na desclaração `with`.
 
 ```js
 var keys = [];
@@ -66,5 +81,5 @@ with (obj) {
 
 ## Veja também
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - [`with`](/pt-BR/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode))

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-{{domxref("Element")}} 接口的 **`elementTiming`** 属性用于标识在 {{domxref("PerformanceElementTiming")}} API 中观测的元素。`elementTiming` 属性反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) HTML 属性的值。
+{{domxref("Element")}} 接口的 **`elementTiming`** 属性用于标识在 {{domxref("PerformanceElementTiming")}} API 中观测的元素。`elementTiming` 属性反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性的值。
 
 ## 值
 
@@ -17,7 +17,7 @@ l10n:
 
 ### 打印 `elementTiming` 的值
 
-在该示例中，将 [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) 属性添加到 {{HTMLElement("img")}} 元素上，以便观测该图像。
+在该示例中，将 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性添加到 {{HTMLElement("img")}} 元素上，以便观测该图像。
 
 ```html
 <img
@@ -47,4 +47,4 @@ console.log(el.elementTiming); // "big-image"
 ## 参见
 
 - {{domxref("PerformanceElementTiming")}}
-- [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) HTML 属性
+- [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性

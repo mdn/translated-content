@@ -5,7 +5,7 @@ slug: Web/API/AnalyserNode/getFloatFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{domxref("Float32Array")}} passé en paramètre.
+La méthode **`getFloatFrequencyData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de fréquence dans un tableau {{jsxref("Float32Array")}} passé en paramètre.
 
 Si le tableau a moins d'éléments que la propriété {{domxref("AnalyserNode.frequencyBinCount")}}, les données en excès sont supprimées. S'il a davantage d'éléments, les éléments non utilisés sont ignorés.
 
@@ -25,7 +25,7 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 ### Paramètres
 
 - `array`
-  - : {{domxref("Float32Array")}} dans lequel seront copiées les données de fréquence. Pour tout échantillon silencieux, la valeur est `-Infinity`.
+  - : {{jsxref("Float32Array")}} dans lequel seront copiées les données de fréquence. Pour tout échantillon silencieux, la valeur est `-Infinity`.
 
 ### Valeur de retour
 
@@ -33,7 +33,7 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -72,7 +72,7 @@ dessiner();
 ## Paramètres
 
 - array
-  - : Le tableau {{domxref("Float32Array")}} dans lequel seront copiées les données du domaine fréquentiel.
+  - : Le tableau {{jsxref("Float32Array")}} dans lequel seront copiées les données du domaine fréquentiel.
 
 ## Spécifications
 
@@ -84,4 +84,4 @@ dessiner();
 
 ## Voir aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

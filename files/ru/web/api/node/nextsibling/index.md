@@ -19,8 +19,8 @@ nextNode = node.nextSibling
 Поэтому узел, полученный, например, при использовании [`Node.firstChild`](/ru/docs/Web/API/Node/firstChild) или [`Node.previousSibling`](/ru/docs/Web/API/Node/previousSibling) может относиться к
 пробелу, а не к тому элементу, который автор хотел получить.
 
-Смотрите [Пробел в DOM](/ru/docs/Web/Guide/DOM/Whitespace_in_the_DOM) и
-[W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?](http://www.w3.org/DOM/faq.html#emptytext)
+Смотрите [Пробел в DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace) и
+[W3C DOM 3 FAQ: Почему некоторые текстовые узлы пустые?](https://www.w3.org/DOM/faq.html#emptytext)
 для дополнительной информации.
 
 ## Пример
@@ -61,8 +61,8 @@ nextNode = node.nextSibling
 
 ## Спецификации
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
+- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## Смотрите также
 

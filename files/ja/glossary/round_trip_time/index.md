@@ -24,5 +24,5 @@ round-trip min/avg/max/stddev = 23.781/26.828/34.904/4.114 ms
 
 ## 関連情報
 
-- [Time to First Byte (TTFB)](/ja/docs/Glossary/time_to_first_byte)
+- [Time to First Byte (TTFB)](/ja/docs/Glossary/Time_to_first_byte)
 - [レイテンシー](/ja/docs/Glossary/Latency)

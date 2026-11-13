@@ -25,7 +25,7 @@ Notifications API 는 웹 페이지가 일반 사용자에게 시스템 알림 �
 부가적으로, Notifications API 명세는 [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API) 에 여러가지 추가 기능을 지정하여 service worker 가 알림을 발생시킬 수 있도록 허용합니다.
 
 > [!NOTE]
-> 여러분의 앱에서 알림을 사용하는것에 대한 자세한 내용은 [Notifications API 사용하기](/ko/docs/WebAPI/Using_Web_Notifications) 글에서 찾아보시기 바랍니다.
+> 여러분의 앱에서 알림을 사용하는것에 대한 자세한 내용은 [Notifications API 사용하기](/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API) 글에서 찾아보시기 바랍니다.
 
 ## Notifications 인터페이스
 
@@ -51,4 +51,4 @@ Notifications API 는 웹 페이지가 일반 사용자에게 시스템 알림 �
 
 ## 함께 보기
 
-- [Notifications API 사용하기](/ko/docs/WebAPI/Using_Web_Notifications)
+- [Notifications API 사용하기](/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API)

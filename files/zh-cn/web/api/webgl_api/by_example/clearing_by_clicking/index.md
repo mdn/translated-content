@@ -3,7 +3,7 @@ title: Clearing by clicking
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}
 
 此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 WebGL 图形操作结合起来。
 
@@ -106,4 +106,4 @@ window.addEventListener(
 
 这个例子的代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking) 上下载。
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}

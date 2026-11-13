@@ -1,30 +1,49 @@
 ---
 title: Math.atanh()
+short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`Math.atanh()`** は静的メソッドで、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
 
-**`Math.atanh()`** 関数は、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.16666666666666666em"></mspace><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\forall x \in ({-1}, 1),\;\mathtt{\operatorname{Math.atanh}(x)} &= \operatorname{artanh}(x) = \text{the unique } y \text{ such that } \tanh(y) = x \\&= \frac{1}{2}\,\ln\left(\frac{1+x}{1-x}\right)\end{aligned}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ the unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math>
+{{InteractiveExample("JavaScript デモ: Math.atanh()")}}
 
-{{EmbedInteractiveExample("pages/js/math-atanh.html")}}
+```js interactive-example
+console.log(Math.atanh(-1));
+// 予想される結果: -Infinity
+
+console.log(Math.atanh(0));
+// 予想される結果: 0
+
+console.log(Math.atanh(0.5));
+// 予想される結果: 0.549306144334055 （およそ）
+
+console.log(Math.atanh(1));
+// 予想される結果: Infinity
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.atanh(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値。
+  - : -1 以上 1 以下の数値です。
 
 ### 返値
 
-与えられた数値の双曲線逆正接 (ハイパーボリックアークタンジェント) です。
+`x` の双曲線逆正接 (ハイパーボリックアークタンジェント) です。 `x` が 1 の場合、 {{jsxref("Infinity")}} を返します。 `x` が -1 の場合、 `-Infinity` を返します。 `x` が -1 未満であるか 1 より大きな場合は、 {{jsxref("NaN")}} を返します。
 
 ## 解説
 
@@ -37,24 +56,11 @@ Math.atanh(x)
 ```js
 Math.atanh(-2); // NaN
 Math.atanh(-1); // -Infinity
+Math.atanh(-0); // -0
 Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
 Math.atanh(1); // Infinity
 Math.atanh(2); // NaN
-```
-
-１よりも大きな値もしくは -1 よりも小さな値に対しては、 {{jsxref("NaN")}} が返されます。
-
-## ポリフィル
-
-<math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>に対して、 <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> になり、次の関数でエミュレートできます。
-
-```js
-Math.atanh =
-  Math.atanh ||
-  function (x) {
-    return Math.log((1 + x) / (1 - x)) / 2;
-  };
 ```
 
 ## 仕様書
@@ -67,6 +73,8 @@ Math.atanh =
 
 ## 関連情報
 
+- [`Math.atanh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
+- [es-shims による `Math.atanh` のポリフィル](https://www.npmjs.com/package/math.atanh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}

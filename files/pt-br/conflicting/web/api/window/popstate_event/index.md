@@ -44,10 +44,10 @@ Observe que mesmo que a entrada do histórico inicial (para `http://example.com/
 
 ## Especificação
 
-- [HTML5 popstate event](http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
+- [HTML5 popstate event](https://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate)
 
 ## Veja também
 
 - {{domxref("window.history")}}
-- [Manipulating the browser history](/pt-BR/docs/Web/Guide/DOM/Manipulating_the_browser_history)
-- [Ajax navigation example](/pt-BR/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
+- [Manipulating the browser history](/pt-BR/docs/Web/API/History_API)
+- [Ajax navigation example](/pt-BR/docs/Web/API/History_API/Working_with_the_History_API)

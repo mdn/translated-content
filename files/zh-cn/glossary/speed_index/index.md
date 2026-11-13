@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **速度指数**（SI）页面加载性能指标用于衡量页面可见内容的加载速度。速度指数取决于视口的大小，以毫秒为单位表示：时间越短，得分越高。
 
 速度指数是为了解决其他里程碑和指标的问题，提供真实用户体验的度量。速度指数已经在几个常见的审核中实现，包括 [WebPageTest](https://github.com/WPO-Foundation/webpagetest-docs/blob/main/src/metrics/SpeedIndex.md) 和 [Lighthouse](https://github.com/paulirish/speedline)。
@@ -19,4 +17,4 @@ _显示了页面加载事件之前的首屏内容如何加载和由速度指数�
 
 ## 参见
 
-- [了解 Web 性能](/zh-CN/docs/Learn/Performance)
+- [了解 Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

@@ -3,14 +3,14 @@ title: keydown
 slug: Web/API/Element/keydown_event
 ---
 
-O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do evento [`keypress`](/pt-BR/docs/Web/Events/keypress), o `keydown` é disparado para teclas que produzem e que não produzem um caractere.
+O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do evento [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event), o `keydown` é disparado para teclas que produzem e que não produzem um caractere.
 
 ## Informações gerais
 
 - Especificação
   - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown)
 - Interface
-  - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/pt-BR/docs/Web/API/KeyboardEvent)
 - Burbulha
   - : Sim
 - Cancelável
@@ -127,7 +127,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
       <td>
         O número de referência Unicode da tecla; este atributo é usado somente
         pelo evento
-        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Web/API/Element/keypress_event"
           ><code>keypress</code></a
         >. Para teclas cujo atributo <code>char</code> contém múltiplos
         caracteres, este é o valor Unicode do primeiro caractere daquele
@@ -229,10 +229,10 @@ Iniciando com o Gecko 25, uma chamada para o método `preventDefault()` do event
 
 ## Eventos Relacionados
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
+- [`keyup`](/pt-BR/docs/Web/API/Element/keyup_event)
+- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)
 
 ## Exemplo
 

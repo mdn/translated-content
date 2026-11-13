@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作徽章的文本颜色。没有特定徽章文本颜色的标签页将继承全局徽章文本颜色。
 
 ## 语法
@@ -20,23 +18,17 @@ browser.browserAction.setBadgeTextColor(
 ### 参数
 
 - `details`
-
   - : 一个包含以下属性的对象：
-
     - `color`
-
       - : 颜色，可以指定为以下之一：
-
-        - 字符串：任何 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。如果字符串不是有效颜色，返回的 Promise 将被拒绝，并且文本颜色不会更改。
-        - `{{WebExtAPIRef('browserAction.ColorArray')}}` 对象。
+        - 字符串：任何 CSS [\<color>](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。如果字符串不是有效颜色，返回的 Promise 将被拒绝，并且文本颜色不会更改。
+        - {{WebExtAPIRef('browserAction.ColorArray')}} 对象。
         - `null`。如果指定了 `tabId`，则移除特定标签页的徽章文本颜色，使该标签页继承全局徽章文本颜色。否则将全局徽章文本颜色恢复为默认值。
 
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为指定的标签页设置徽章文本颜色。当用户将该标签页导航到新页面时，颜色会重置。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。仅为指定的窗口设置徽章文本颜色。
 
 <!---->

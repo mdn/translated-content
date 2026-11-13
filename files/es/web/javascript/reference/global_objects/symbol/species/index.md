@@ -9,7 +9,24 @@ l10n:
 
 El símbolo conocido como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
 
 ## Descripción
 
@@ -47,5 +64,5 @@ console.log(mapped instanceof Array); // true
 
 ## Véase también
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxref("Map/Symbol.species", "Map[@@species]")}}
+- {{jsxref("Set/Symbol.species", "Set[@@species]")}}

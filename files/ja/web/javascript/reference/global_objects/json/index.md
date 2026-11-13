@@ -2,10 +2,8 @@
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: ab03131120acd9e210a5da979d685457e0762d2b
 ---
-
-{{JSRef}}
 
 **`JSON`** 名前空間オブジェクトは、 [JavaScript Object Notation](https://json.org/) ({{Glossary("JSON")}}) を解釈したり、値を JSON に変換したりする静的メソッドを持ちます。
 
@@ -33,7 +31,7 @@ JavaScript のオブジェクトリテラルと JSON との間で、同じテキ
 有効な JSON の構文は、[ABNF](https://ja.wikipedia.org/wiki/ABNF) で表現された以下の文法で公式に定義されています。これは [IETF の JSON 標準 (RFC)](https://datatracker.ietf.org/doc/html/rfc8259) からコピーしたものです。
 
 ```plain
-JSON-text = object / array
+JSON-text = ws value ws
 begin-array     = ws %x5B ws  ; [ left square bracket
 begin-object    = ws %x7B ws  ; { left curly bracket
 end-array       = ws %x5D ws  ; ] right square bracket
@@ -85,12 +83,12 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-重要でない{{Glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` （数値に空白を含んではいけません）や `JSONString` （対応する文字であると解釈されるか、エラーが発生します）の内部では置くことができません。。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://symbl.cc/jp/0009/))、キャリッジリターン ([U+000D](https://symbl.cc/jp/000D/))、ラインフィード ([U+000A](https://symbl.cc/jp/000A/))、空白 ([U+0020](https://symbl.cc/jp/0020/)) のみです。
+重要でない{{Glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` （数値に空白を含んではいけません）や `JSONString` （対応する文字であると解釈されるか、エラーが発生します）の内部では置くことができません。ホワイトスペースとして有効な文字はタブ文字 (U+0009)、キャリッジリターン (U+000D)、ラインフィード (U+000A)、空白 (U+0020) のみです。
 
 ## 静的プロパティ
 
-- `JSON[@@toStringTag]`
-  - : プロパティ [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) の初期値は文字列 `"JSON"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
+- `JSON[Symbol.toStringTag]`
+  - : プロパティ [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) の初期値は文字列 `"JSON"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
 
 ## 静的メソッド
 
@@ -240,7 +238,6 @@ const parsedData = JSON.parse(str, (key, value, context) => {
 
 ## 関連情報
 
-- {{jsxref("Date.prototype.toJSON()")}}
 - [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)

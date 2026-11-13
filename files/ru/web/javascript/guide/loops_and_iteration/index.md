@@ -342,7 +342,7 @@ for (key in arr) {
 
 ## `for...of`
 
-Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
+Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
 
 ```
 for (variable of object) {

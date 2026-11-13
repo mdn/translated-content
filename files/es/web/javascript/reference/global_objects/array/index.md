@@ -204,7 +204,7 @@ console.log(Object.keys(frutas)); // ['0', '1']
 console.log(frutas.length); // 2
 ```
 
-Hay más información sobre este tema en la página sobre [`Array.length`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length).
+Hay más información sobre este tema en la página sobre [`Array.length`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 
 ### Creación de un array a partir de una expresión regular
 
@@ -232,91 +232,91 @@ Las propiedades y elementos que se obtienen de esta búsqueda son los siguientes
 
 ## Constructor
 
-- **[`Array()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)**
+- **[`Array()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)**
   - : Crea un nuevo objeto `Array`.
 
 ## Propiedades estáticas
 
-- [`get Array[@@species]`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@species)
+- [`get Array[@@species]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : La función del constructor se utiliza para crear objetos derivados.
 
 ## Métodos estáticos
 
-- [`Array.from()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/from)
+- [`Array.from()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
   - : Crea una nueva instancia de `Array` a partir de `similarAUnArray`, un objeto iterable o parecido a un _array._
-- [`Array.isArray()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/isArray)
+- [`Array.isArray()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
   - : Devuelve `true` si `valor` es un _array_, y `false` en caso contrario.
-- [`Array.of()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/of)
+- [`Array.of()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
   - : Crea una nueva instancia de `Array` con un número variable de parámetros, independientemente del número y del tipo de dichos parámetros.
 
 ## Propiedades de instancia
 
-- [`Array.prototype.length`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length)
+- [`Array.prototype.length`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
   - : Indica el número de elementos de un _array_.
-- [`Array.prototype[@@unscopables]`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables)
+- [`Array.prototype[@@unscopables]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Símbolo que contiene todos los nombres de las propiedades que se excluyen de un ámbito de enlace [`with`](/es/docs/Web/JavaScript/Referencia/Sentencias/with).
 
 ## Métodos de instancia
 
-- [`Array.prototype.concat()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/concat)
+- [`Array.prototype.concat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
   - : Devuelve un nuevo _array_ que es la concatenación de aquél sobre el que se invoca, seguido de otros _array(s)_ o valor(es).
-- [`Array.prototype.copyWithin()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin)
+- [`Array.prototype.copyWithin()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
   - : Copia una secuencia de elementos de un _array_ dentro del propio _array_.
-- [`Array.prototype.entries()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/entries)
+- [`Array.prototype.entries()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los pares clave/valor para cada índice del _array_.
-- [`Array.prototype.every()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/every)
+- [`Array.prototype.every()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
   - : Devuelve `true` si todos los elementos del _array_ cumplen el predicado que recibe como parámetro.
-- [`Array.prototype.fill()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/fill)
+- [`Array.prototype.fill()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
   - : Asigna un _`valor`_ estático a todos los elementos del _array_ entre las posiciones `inicio` y `fin`.
-- [`Array.prototype.filter()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
+- [`Array.prototype.filter()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
   - : Devuelve un nuevo _array_ que contiene todos los elementos de aquél para el cual se llama que cumplan el predicado que se le pasa como parámetro.
-- [`Array.prototype.find()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/find)
+- [`Array.prototype.find()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
   - : Devuelve el primer _`elemento`_ del _array_ que cumpla el predicado que se pasa como parámetro, o `undefined` si ninguno lo cumple.
-- [`Array.prototype.findIndex()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/findIndex)
+- [`Array.prototype.findIndex()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
   - : Devuelve el índice del primer elemento del _array_ que cumpla el predicado que se pasa como parámetro, o `-1` si nunguno lo cumple.
-- [`Array.prototype.forEach()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
+- [`Array.prototype.forEach()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
   - : Llama a la función pasada como parámetro para todos los elementos del _array._
-- [`Array.prototype.includes()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/includes)
+- [`Array.prototype.includes()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
   - : Determina si el _array_ contiene el `valorBuscado` y devuelve `true` o `false` según sea el caso.
-- [`Array.prototype.indexOf()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/indexOf)
+- [`Array.prototype.indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
   - : Devuelve el índice del primer elemento del _array_ que sea igual a `elementoBuscado`, o `-1` si no existe.
-- [`Array.prototype.join()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join)
+- [`Array.prototype.join()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
   - : Concatena en un string todos los elementos de un _array._
-- [`Array.prototype.keys()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/keys)
+- [`Array.prototype.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
   - : Devuelve un nuevo `Array Iterator` que contiene las claves de cada índice del _array._
-- [`Array.prototype.lastIndexOf()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf)
+- [`Array.prototype.lastIndexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
   - : Devuelve el índice del último elemento del _array_ que sea igual a `elementoBuscado`, o `-1` si no existe.
-- [`Array.prototype.map()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
+- [`Array.prototype.map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
   - : Devuelve un nuevo _array_ que contiene el resultado de llamar a la función pasada como parámetro a todos los elementos del _array_ sobre el que se invoca.
-- [`Array.prototype.pop()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/pop)
+- [`Array.prototype.pop()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
   - : Elimina el último elemento de un _array_, y devuelve dicho elemento.
-- [`Array.prototype.push()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/push)
+- [`Array.prototype.push()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
   - : Añade uno o más elementos al final de un _array_ y devuelve el nuevo valor de su propiedad `length`.
-- [`Array.prototype.reduce()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
+- [`Array.prototype.reduce()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
   - : Aplica la función pasada como parámetro a un `acumulador` y a cada valor del _array_, que se recorre de izquierda a derecha, para reducirlo a un único valor.
-- [`Array.prototype.reduceRight()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduceRight)
+- [`Array.prototype.reduceRight()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
   - : Aplica la función pasada como parámetro a un _`acumulador`_ y a cada valor del _array_, que se recorre de derecha a izquierda, para reducirlo a un único valor.
-- [`Array.prototype.reverse()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reverse)
+- [`Array.prototype.reverse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
   - : Invierte el orden de los elementos de un _array_ (el primero pasa a ser el último y el último a ser el primero) en el propio _array._ Este método modifica el array.
-- [`Array.prototype.shift()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/shift)
+- [`Array.prototype.shift()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
   - : Elimina el primer elemento de un _array_, y devuelve dicho elemento.
-- [`Array.prototype.slice()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice)
+- [`Array.prototype.slice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
   - : Extrae una porción del _array_ sobre el que se llama y devuelve un nuevo _array_.
-- [`Array.prototype.some()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/some)
+- [`Array.prototype.some()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
   - : Devuelve `true` si al menos un elemento del _array_ cumple con el predicado que se pasa como parámetro.
-- [`Array.prototype.sort()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
+- [`Array.prototype.sort()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
   - : Ordena los elementos de un _array_, modificando éste, y devuelve el array ordenado.
-- [`Array.prototype.splice()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice)
+- [`Array.prototype.splice()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
   - : Añade, borra o modifica elementos de un _array_.
-- [`Array.prototype.toLocaleString()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString)
-  - : Devuelve un string adaptado a la configuración regional que representa el _array_ y sus elementos. Redefine el método [`Object.prototype.toLocaleString()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString).
-- [`Array.prototype.toString()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/toString)
-  - : Devuelve un string que representa el _array_ y sus elementos. Redefine el método [`Object.prototype.toString()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/toString).
-- [`Array.prototype.unshift()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/unshift)
+- [`Array.prototype.toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString)
+  - : Devuelve un string adaptado a la configuración regional que representa el _array_ y sus elementos. Redefine el método [`Object.prototype.toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString).
+- [`Array.prototype.toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
+  - : Devuelve un string que representa el _array_ y sus elementos. Redefine el método [`Object.prototype.toString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
+- [`Array.prototype.unshift()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
   - : Añada uno o más elementos al inicio de un _array_ y devuelve el nuevo valor de `length` para el _array_ resultante.
-- [`Array.prototype.values()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/values)
+- [`Array.prototype.values()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores para cada índice del _array_.
-- [`Array.prototype[@@iterator]()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores para cada índice del _array_.
 
 Ejemplos
@@ -418,8 +418,7 @@ da como resultado:
 ## Ver también
 
 - En la Guía de JavaScript:
+  - ["Propiedades indexadas de un objeto"](/es/docs/Web/JavaScript/Guide/Working_with_objects#indexing_object_properties)
+  - ["Colecciones con índice: objeto Array"](/es/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 
-  - ["Propiedades indexadas de un objeto"](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-  - ["Colecciones con índice: objeto Array"](/es/docs/Web/JavaScript/Guide/Indexed_collections#Array_object)
-
-- [Arrays tipados](/es/docs/JavaScript_typed_arrays)
+- [Arrays tipados](/es/docs/Web/JavaScript/Guide/Typed_arrays)

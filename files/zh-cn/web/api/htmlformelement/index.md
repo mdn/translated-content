@@ -2,7 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 l10n:
-  sourceCommit: c99afd3cafe73c93831bd73ad1dac285c3c713b1
+  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,32 +20,32 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : 反映表单中控件的数量的 `long` 值。
 - {{domxref("HTMLFormElement.name")}}
-  - : 反映表单的 [`name`](/zh-CN/docs/Web/HTML/Element/form#name) HTML 属性值的字符串，包含表单的名称。
+  - : 反映表单的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/form#name) HTML 属性值的字符串，包含表单的名称。
 - {{domxref("HTMLFormElement.method")}}
-  - : 反映表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) HTML 属性值的字符串，表示用于提交表单的 HTTP 方法。只能设置特定的值。
+  - : 反映表单的 [`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method) HTML 属性值的字符串，表示用于提交表单的 HTTP 方法。只能设置特定的值。
 - {{domxref("HTMLFormElement.target")}}
-  - : 反映表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) HTML 属性值的字符串，表示用于显示提交表单的结果的位置。
+  - : 反映表单的 [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) HTML 属性值的字符串，表示用于显示提交表单的结果的位置。
 - {{domxref("HTMLFormElement.action")}}
-  - : 反映表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML 属性值的字符串，包含处理表单提交的信息的程序的 URI。
+  - : 反映表单的 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action) HTML 属性值的字符串，包含处理表单提交的信息的程序的 URI。
 - {{domxref("HTMLFormElement.encoding")}} 或 {{domxref("HTMLFormElement.enctype")}}
-  - : 反映表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) HTML 属性值的字符串，表示用于将表单传输到服务器的内容类型。只能设置特定的值。这两个属性是同义词。
+  - : 反映表单的 [`enctype`](/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype) HTML 属性值的字符串，表示用于将表单传输到服务器的内容类型。只能设置特定的值。这两个属性是同义词。
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : 反映表单的 [`accept-charset`](/zh-CN/docs/Web/HTML/Element/form#accept-charset) HTML 属性值的字符串，表示服务器接受的字符编码。
+  - : 反映表单的 [`accept-charset`](/zh-CN/docs/Web/HTML/Reference/Elements/form#accept-charset) HTML 属性值的字符串。
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : 反映表单的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) HTML 属性值的字符串，表示此表单中的控件是否可以由浏览器自动填充其值。
+  - : 反映表单的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/form#autocomplete) HTML 属性值的字符串，表示此表单中的控件是否可以由浏览器自动填充其值。
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : 反映表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) HTML 属性值的布尔值，表示是否不应对表单进行验证。
+  - : 反映表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate) HTML 属性值的布尔值，表示是否不应对表单进行验证。
 
-具名输入会被作为属性添加到其所属表单的实例中，且如果它们共享相同的名称（例如，具有名为 `action` 的输入的表单将使其 `action` 属性返回该输入，而不是表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML 属性）。
+具名输入会被作为属性添加到其所属表单的实例中，且如果它们共享相同的名称（例如，具有名为 `action` 的输入的表单将使其 `action` 属性返回该输入，而不是表单的 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action) HTML 属性）。
 
 ## 实例方法
 
 _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 - {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
-  - : 如果元素的子控件受到[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)并满足这些约束，则返回 `true`；如果某些控件不满足其约束，则返回 `false`。在不满足其约束的任何控件上触发名为 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 的事件；如果未取消事件，则这些控件被视为无效。由程序员决定如何响应 `false`。
+  - : 如果元素的子控件受到[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)并满足这些约束，则返回 `true`；如果某些控件不满足其约束，则返回 `false`。在不满足其约束的任何控件上触发名为 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 的事件；如果未取消事件，则这些控件被视为无效。由程序员决定如何响应 `false`。
 - {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
-  - : 如果元素的子控件满足其[验证约束](/zh-CN/docs/Web/HTML/Constraint_validation)，则返回 `true`。当返回 `false` 时，将为每个无效的子控件触发可取消的 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，并将验证问题报告给用户。
+  - : 如果元素的子控件满足其[验证约束](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，则返回 `true`。当返回 `false` 时，将为每个无效的子控件触发可取消的 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，并将验证问题报告给用户。
 - {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}
   - : 请求使用指定的提交按钮及其相应的配置来提交表单。
 - {{domxref("HTMLFormElement.reset", "reset()")}}
@@ -68,7 +68,7 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ### 获得表单元素对象
 
-要获取 `HTMLFormElement` 对象，你可以使用 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)和 {{domxref("Document.querySelector", "querySelector()")}}，或者使用文档的 {{domxref("Document.forms", "forms")}} 属性获取文档中所有表单的列表。
+要获取 `HTMLFormElement` 对象，你可以使用 [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)和 {{domxref("Document.querySelector", "querySelector()")}}，或者使用文档的 {{domxref("Document.forms", "forms")}} 属性获取文档中所有表单的列表。
 
 {{domxref("Document.forms")}} 返回 `HTMLFormElement` 对象数组，其中列出了页面上的每个表单。然后，你可以使用以下任何语法来获取单个表单：
 
@@ -91,13 +91,13 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 例如：
 
-- `<input name="id">` 会优先于 `<form id="…">`。这意味着 `form.id` 不会引用表单的 id，而是引用名称为“`id`”的元素。这也适用于其他表单属性，例如 `<input name="action">` 或 `<input name="post">`。
+- `<input name="id">` 会优先于 `<form id="…">`。这意味着 `form.id` 不会引用表单的 id，而是引用名称为 `"id"` 的元素。这也适用于其他表单属性，例如 `<input name="action">` 或 `<input name="post">`。
 - `<input name="elements">` 会使表单的 `elements` 集合无法访问。引用 `form.elements` 现在将引用单个元素。
 
 要避免这些元素名称的问题，你应该：
 
 - *始终*使用 `elements` 集合来避免元素名称和表单属性之间的歧义。
-- *切勿*将“`elements`”作为元素名称。
+- *切勿*将 `"elements"` 作为元素名称。
 
 如果你不使用 JavaScript，这不会造成问题。
 
@@ -107,7 +107,7 @@ _此接口还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}}（但由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `"image"` 的元素会被忽略）
+- {{HTMLElement("input")}}（但由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 为 `"image"` 的元素会被忽略）
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -187,10 +187,10 @@ f.submit(); // 调用表单的 submit() 方法
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>名字：<input type="text" name="firstname" /></label>
+        <label>名字：<input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>姓氏：<input type="text" name="lastname" /></label>
+        <label>姓氏：<input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>

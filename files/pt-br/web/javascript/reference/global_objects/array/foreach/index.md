@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 O método `forEach()` executa uma dada função em cada elemento de um array.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Sintaxe
 
@@ -18,9 +28,7 @@ arr.forEach(callback(currentValue [, index [, array]])[, thisArg]);
 ### Parâmetros
 
 - `callback`
-
   - : Função para executar em cada elemento, recebendo três argumentos:
-
     - `currentValue`
       - : O valor atual do elemento sendo processado no array.
     - `index` {{optional_inline}}
@@ -108,7 +116,7 @@ if (!Array.prototype.forEach) {
 
 Um algorítimo 100% verdadeiro para a 5ª Edição do ECMA-262, pode ser visto abaixo:
 
-O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call).
+O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call).
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.18

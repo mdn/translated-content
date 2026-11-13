@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}
 
-La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le contenu d'un blob ([`Blob`](/fr/docs/Web/API/Blob)) ou d'un fichier ([`File`](/fr/docs/Web/API/File)). Lorsque l'opération de lecture est terminée, [`readyState`](/fr/docs/Web/API/FileReader/readyState) prend la valeur `DONE`, et l'évènement [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) est déclenché. À partir de ce moment, la propriété [`result`](/fr/docs/Web/API/FileReader/result) contient les données sous la forme d'une [URL de données](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) qui représente les données du fichier sous la forme d'une chaîne de caractères encodée en base64.
+La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le contenu d'un blob ([`Blob`](/fr/docs/Web/API/Blob)) ou d'un fichier ([`File`](/fr/docs/Web/API/File)). Lorsque l'opération de lecture est terminée, [`readyState`](/fr/docs/Web/API/FileReader/readyState) prend la valeur `DONE`, et l'évènement [`loadend`](/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event) est déclenché. À partir de ce moment, la propriété [`result`](/fr/docs/Web/API/FileReader/result) contient les données sous la forme d'une [URL de données](/fr/docs/Web/URI/Reference/Schemes/data) qui représente les données du fichier sous la forme d'une chaîne de caractères encodée en base64.
 
 > [!NOTE]
 > Pour un blob, [`result`](/fr/docs/Web/API/FileReader/result) ne peut pas être décodé en base64 sans avoir d'abord retiré la déclaration d'URL de données qui précède les données encodées. Pour récupérer uniquement la chaîne encodée en base 64, il faut d'abord supprimer le préfixe `data:*/*;base64,` du résultat.
@@ -123,4 +123,4 @@ function previewFiles() {
 ## Voir aussi
 
 - [`FileReader`](/fr/docs/Web/API/FileReader)
-- [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL)
+- [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static)

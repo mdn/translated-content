@@ -20,19 +20,17 @@ l10n:
 - {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
   - : Строка, содержащая идентификатор фонового запроса.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий общее количество байт для загрузки.
+  - : {{jsxref("Number")}} содержащий общее количество байт для загрузки.
 - {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий количество успешно отправленных байт, изначально `0`.
+  - : {{jsxref("Number")}} содержащий количество успешно отправленных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
+  - : {{jsxref("Number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий количество скачанных байт, изначально `0`.
+  - : {{jsxref("Number")}} содержащий количество скачанных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
   - : Изначально возвращает пустую строку, а по завершению запросо либо `"success"`, либо `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
-
   - : Возвращает одну из следующих строк:
-
     - `""`
       - : Запрос не завершён, либо завершился успешно.
     - `"aborted"`
@@ -47,7 +45,7 @@ l10n:
       - : Превышен `downloadTotal`. Его значение устанавливается при регистрации запроса.
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
-  - : {{jsxref("boolean")}} указывает, установлен ли флаг `recordsAvailable`.
+  - : {{jsxref("Boolean")}} указывает, установлен ли флаг `recordsAvailable`.
 
 ## Методы
 
@@ -63,7 +61,6 @@ l10n:
 Слушайте эти события используя [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) или назначая слушатель события свойству `oneventname`.
 
 - [`progress`](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event)
-
   - : Срабатывает при изменении любого из следующих свойств:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},

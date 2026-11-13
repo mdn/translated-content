@@ -1,15 +1,13 @@
 ---
-title: 分布式拒绝服务攻击
+title: 分布式拒绝服务（DDoS）
 slug: Glossary/Distributed_Denial_of_Service
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: c13b7a059a543d02e4dbafce42813dad1244dcaa
 ---
 
-{{GlossarySidebar}}
+**分布式拒绝服务**（DDoS）是一种 {{Glossary("Denial of Service", "DoS")}} 攻击，其使用许多被感染的系统来攻击单个目标，以耗尽服务器资源并阻止合法用户。
 
-**分布式拒绝服务**（DDoS）是一种攻击，在这种攻击中，许多被破坏的系统被用来攻击一个目标，以淹没服务器资源并阻止合法用户。
-
-通常情况下，许多人使用机器人攻击高知名度的 Web {{glossary("server", "服务器")}}，如银行或信用卡支付网关。DDoS 涉及计算机网络和 CPU 资源管理。
+通常情况下，许多人使用机器人攻击高知名度的 Web {{Glossary("server", "服务器")}}，如银行或信用卡支付网关。DDoS 涉及计算机网络和 CPU 资源管理。
 
 在典型的 DDoS 攻击中，攻击者首先利用一个计算机系统的漏洞，使其成为 DDoS 主控。攻击主控者，也被称为僵尸主控者，用恶意软件识别和感染其他脆弱的系统。最终，攻击者指示被控制的机器对指定目标发起攻击。
 
@@ -24,8 +22,8 @@ l10n:
 - 无法访问任何网站
 - 收到的垃圾邮件数量急剧增加（这种类型的 DoS 攻击被认为是电子邮件炸弹）
 - 无线或有线互联网连接中断
-- 长期拒绝访问网络或任何互联网服务
+- 长期拒绝 Web 或任何互联网服务的访问
 
 ## 参见
 
-- 维基百科上的[拒绝服务攻击](https://zh.wikipedia.org/wiki/阻斷服務攻擊)
+- 维基百科上的[分布式拒绝服务攻击](https://zh.wikipedia.org/wiki/阻斷服務攻擊)

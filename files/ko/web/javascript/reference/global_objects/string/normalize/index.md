@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 
 **`normalize()`** 메서드는 주어진 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다. 만약 주어진 값이 문자열이 아닐 경우에는 우선 문자열로 변환 후 정규화합니다.
 
-{{EmbedInteractiveExample("pages/js/string-normalize.html")}}
+{{InteractiveExample("JavaScript Demo: String.normalize()")}}
+
+```js interactive-example
+const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
+
+console.log(`${name1}, ${name2}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1 === name2);
+// Expected output: false
+console.log(name1.length === name2.length);
+// Expected output: false
+
+const name1NFC = name1.normalize("NFC");
+const name2NFC = name2.normalize("NFC");
+
+console.log(`${name1NFC}, ${name2NFC}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1NFC === name2NFC);
+// Expected output: true
+console.log(name1NFC.length === name2NFC.length);
+// Expected output: true
+```
 
 ## 구문
 
@@ -115,6 +137,6 @@ console.log(second === third); // 같은 글자처럼 보이지만 false를 출�
 
 ## 같이 보기
 
-- [Unicode Standard Annex #15, Unicode Normalization Forms](http://www.unicode.org/reports/tr15/)
+- [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
 - [Unicode equivalence](http://en.wikipedia.org/wiki/Unicode_equivalence)
 - [유니코드 정규화](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EC%A0%95%EA%B7%9C%ED%99%94)

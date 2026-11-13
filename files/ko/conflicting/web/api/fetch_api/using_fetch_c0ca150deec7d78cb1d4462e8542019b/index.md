@@ -17,7 +17,7 @@ l10n:
 
 Fetch의 핵심은 HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}를 추상화하는 인터페이스와, 비동기적 리소스 요청을 시작하기 위한 {{domxref("fetch()")}} 메서드입니다. HTTP의 주요 구성요소들이 JavaScript 객체로 추상화됐기 때문에, 다른 API들에서도 이 기능들을 활용하기 용이합니다.
 
-[서비스 워커](/ko/docs/Web/API/ServiceWorker_API)가 Fetch를 적극 활용하는 API의 일례입니다.
+[서비스 워커](/ko/docs/Web/API/Service_Worker_API)가 Fetch를 적극 활용하는 API의 일례입니다.
 
 Fetch는 이러한 HTTP 요청의 비동기적인 특성을 한 단계 더 발전시켜, 모든 API가 {{jsxref("Promise")}}에 기반합니다.
 
@@ -65,6 +65,6 @@ Fetch는 이러한 HTTP 요청의 비동기적인 특성을 한 단계 더 발�
 
 헤더 가드는 헤더의 콘텐츠를 변경하는 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, {{domxref("Headers.append","append()")}} 메서드에 영향을 끼칩니다. 가드는 `immutable`의 {{domxref("Headers")}}를 수정하려고 한 경우, `TypeError` 를 반환합니다. 예외의 경우도 있는데 다음과 같은 상황에서는 동작합니다.
 
-- 가드가 `request` 에서 헤더의 이름이 {{Glossary("forbidden header name")}} 가 아닌 경우
+- 가드가 `request` 에서 헤더의 이름이 {{Glossary("Forbidden request header")}} 가 아닌 경우
 - 가드가 `request-no-cors` 에서 헤더의 `name` 또는 `value` 값이 {{Glossary("simple header")}} 인 경우
 - 가드가 `response` 며 헤더의 이름이 {{Glossary("forbidden response header name")}} 가 아닌 경우

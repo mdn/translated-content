@@ -3,11 +3,20 @@ title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 
-{{JSRef}}
-
 **`Object.keys()`** 静态方法返回一个由给定对象自身的可枚举的字符串键属性名组成的数组。
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 语法
 
@@ -90,7 +99,7 @@ console.log(Object.keys(100)); // []
 ## 参见
 
 - [`core-js` 中 `Object.keys` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

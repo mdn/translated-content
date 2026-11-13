@@ -138,5 +138,5 @@ Los objectos [JSON2](https://github.com/douglascrockford/JSON-js) y [JSON3](http
 
 ## Vea también
 
-- [Using native JSON](/es/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Using native JSON](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("Date.prototype.toJSON()")}}

@@ -1,5 +1,6 @@
 ---
-title: Array.length
+title: "Array: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
@@ -9,7 +10,14 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`length`** 데이터 속성은 해당 배열의 요소 수를 나타냅니다. 해당 값은 부호 없는 32비트 정수이며 배열의 최대 인덱스 보다 항상 큽니다.
 
-{{EmbedInteractiveExample("pages/js/array-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## 값
 

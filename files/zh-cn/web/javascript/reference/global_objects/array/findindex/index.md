@@ -3,13 +3,20 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef}}
-
 **`findIndex()`** 方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回 -1。
 
 另请参阅 {{jsxref("Array/find", "find()")}} 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 ## 语法
 
@@ -59,12 +66,15 @@ findIndex(callbackFn, thisArg)
 以下示例返回数组中第一个素数的索引，如果没有素数则返回 `-1`。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -74,6 +84,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1，没有找到
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2（array[2] 是 7）
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ### 在稀疏数组上使用 findIndex()
 
@@ -110,7 +123,7 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.findIndex` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findLast()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **CSS 属性**是一种特征（如颜色），其相关值定义了浏览器应如何显示该元素的一个方面。
 
 以下是 CSS 规则的示例：
@@ -24,6 +22,6 @@ div {
 
 ## 参见
 
-- [CSS 学习](/zh-CN/docs/Learn/CSS)
+- [CSS 学习](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - [MDN 上的 CSS 参考](/zh-CN/docs/Web/CSS/Reference)
 - [CSS 工作组目前的工作](https://www.w3.org/Style/CSS/current-work)

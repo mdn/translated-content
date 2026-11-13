@@ -11,7 +11,21 @@ l10n:
 
 자세한 내용은 [`RegExp.prototype[Symbol.replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), {{jsxref("String.prototype.replace()")}} 및 {{jsxref("String.prototype.replaceAll()")}}를 참고하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
 
 ## 값
 

@@ -17,7 +17,6 @@ Un évènement `CloseEvent` est envoyé au client utilisant une [WebSocket](/fr/
 _Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
-
   - : Retourne un `unsigned short` contenant le code de fermeture envoyé par le serveur. Les valeurs possibles sont données ci-dessous.
 
     <table class="standard-table">
@@ -188,7 +187,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
     </table>
 
 - {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retourne un {{ domxref("DOMString") }} qui indique la raison pour laquelle le serveur a fermé la connexion. Ce message est spécifique au serveur et au sous-protocole utilisé.
+  - : Retourne un {{ jsxref("String") }} qui indique la raison pour laquelle le serveur a fermé la connexion. Ce message est spécifique au serveur et au sous-protocole utilisé.
 - {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
   - : Retourne un {{jsxref("Boolean")}} qui indique si la connexion a été correctement fermée ou non.
 

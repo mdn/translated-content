@@ -5,12 +5,12 @@ slug: Web/API/Element/blur_event
 
 {{APIRef}}
 
-Событие `blur` вызывается когда элемент теряет фокус. Главное отличие между этим событием и [`focusout`](/ru/docs/Mozilla_event_reference/focusout) только в том что у последнего есть фаза всплытия.
+Событие `blur` вызывается когда элемент теряет фокус. Главное отличие между этим событием и [`focusout`](/ru/docs/Web/API/Element/focusout_event) только в том что у последнего есть фаза всплытия.
 
 ## Основная информация
 
 - Спецификация
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
 - Интерфейс
   - : {{domxref("FocusEvent")}}
 - Всплытие
@@ -29,14 +29,14 @@ slug: Web/API/Element/blur_event
 | Property                           | Type                                     | Description                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | The type of event.                         |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## Делегирование события
 
-Есть два способа реализовать делегирование этого события: использовать событие `focusout` в браузерах которые поддерживают его (все браузеры, Firefox с 52+), или установить параметр "useCapture" метода [`addEventListener`](/ru/docs/DOM/element.addEventListener) на `true`:
+Есть два способа реализовать делегирование этого события: использовать событие `focusout` в браузерах которые поддерживают его (все браузеры, Firefox с 52+), или установить параметр "useCapture" метода [`addEventListener`](/ru/docs/Web/API/EventTarget/addEventListener) на `true`:
 
 ### HTML Content
 
@@ -79,7 +79,7 @@ form.addEventListener(
 
 ## Похожие события
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/ru/docs/Web/API/Element/focus_event)
+- [`blur`](/ru/docs/Web/API/Element/blur_event)
+- [`focusin`](/ru/docs/Web/API/Element/focusin_event)
+- [`focusout`](/ru/docs/Web/API/Element/focusout_event)

@@ -3,8 +3,6 @@ title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 
-{{JSRef}}
-
 Un objet **`TypeError`** représente une erreur qui se produit généralement (mais pas toujours) lorsqu'une opération n'a pu avoir lieu parce qu'une valeur n'a pas le type attendu.
 
 Une exception `TypeError` peut être levée lorsque&nbsp;:
@@ -30,7 +28,7 @@ Une exception `TypeError` peut être levée lorsque&nbsp;:
   - : Le numéro de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`TypeError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de colonne de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`TypeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`TypeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples

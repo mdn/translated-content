@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList/matches
 
 {{APIRef("CSSOM View")}}
 
-La propiedad **`matches`** de sólo lectura de la interfaz {{domxref ("MediaQueryList")}} es {{domxref ("Boolean")}} que devuelve `true` si el {{domxref ("document")}} coincide actualmente con el medio lista de consultas, o `false` si no.
+La propiedad **`matches`** de sólo lectura de la interfaz {{domxref ("MediaQueryList")}} es {{jsxref("Boolean")}} que devuelve `true` si el {{domxref ("document")}} coincide actualmente con el medio lista de consultas, o `false` si no.
 
 ## Sintaxis
 
@@ -15,7 +15,7 @@ var matches = MediaQueryList.matches;
 
 ### Value
 
-A {{domxref("Boolean")}}; returns `true` if the {{domxref("document")}} currently matches the media query list, `false` if not.
+A {{jsxref("Boolean")}}; returns `true` if the {{domxref("document")}} currently matches the media query list, `false` if not.
 
 ## Examples
 
@@ -37,8 +37,8 @@ if (mql.matches) {
 
 ## See also
 
-- [Media queries](/es/docs/CSS/Media_queries)
-- [Using media queries from code](/es/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/es/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}

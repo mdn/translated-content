@@ -3,11 +3,31 @@ title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
-{{JSRef}}
-
 **`handler.apply()`** 方法用于拦截函数的调用。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply: function (target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy1 = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy1(1, 2));
+// Expected output: 30
+```
 
 ## 语法
 
@@ -76,7 +96,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Function.prototype.apply")}}
 - {{jsxref("Function.prototype.call")}}
 - {{jsxref("Reflect.apply()")}}

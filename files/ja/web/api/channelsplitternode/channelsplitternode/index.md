@@ -22,7 +22,6 @@ new ChannelSplitterNode(context, options)
 - `context`
   - : このノードを関連付ける音声コンテキストを表す {{domxref("BaseAudioContext")}} です。
 - `options` {{optional_inline}}
-
   - : `ChannelSplitterNode` に持たせるプロパティを定義するオブジェクトです。
     - `numberOfOutputs` {{optional_inline}}
       - : {{domxref("ChannelSplitterNode")}} の出力の数を決める数値です。指定しない場合の既定の値は 6 です。

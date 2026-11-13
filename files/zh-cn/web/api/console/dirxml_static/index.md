@@ -9,7 +9,7 @@ slug: Web/API/console/dirxml_static
 
 ## 语法
 
-```plain
+```js-nolint
 console.dirxml(object);
 ```
 
@@ -24,4 +24,4 @@ console.dirxml(object);
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

@@ -3,11 +3,22 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 
-{{JSRef}}
-
 **`Symbol.toStringTag`** 内置通用（well-known）symbol 是一个字符串值属性，用于创建对象的默认字符串描述。它由 {{jsxref("Object.prototype.toString()")}} 方法内部访问。
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return "Validator";
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// Expected output: "[object Validator]"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## 示例
 

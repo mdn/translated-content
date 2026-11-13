@@ -5,7 +5,7 @@ slug: Web/API/Document/compatMode
 
 {{APIRef("DOM")}}
 
-Определяет когда документ отображается в [Quirks mode](/en/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
+Определяет когда документ отображается в [Quirks mode](/en-US/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
 
 ## Синтаксис
 
@@ -36,4 +36,4 @@ if (document.compatMode == "BackCompat") {
 
 ## Спецификации
 
-- [DOM: Document.compatMode](http://dom.spec.whatwg.org/#dom-document-compatmode)
+- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)

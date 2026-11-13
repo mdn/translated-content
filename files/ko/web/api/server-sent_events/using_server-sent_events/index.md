@@ -21,7 +21,7 @@ server-sent event API는 {{domxref("EventSource")}} 인터페이스에 포함돼
 const evtSource = new EventSource("ssedemo.php");
 ```
 
-이벤트를 생성하는 스크립트가 다른 오리진에 호스팅되어 있다면, URL과 옵션 딕셔너리를 모두 사용하여 새로운 `EventSource` 객체를 만들어야 합니다. `example.com` 에 클라이언트 스크립트가 있는 경우를 예시로 들어 보겠습니다.
+이벤트를 생성하는 스크립트가 다른 오리진에 호스팅되어 있다면, URL과 옵션 딕셔너리를 모두 사용하여 새로운 `EventSource` 객체를 만들어야 합니다. `example.com`에 클라이언트 스크립트가 있는 경우를 예시로 들어 보겠습니다.
 
 ```js
 const evtSource = new EventSource("//api.example.com/ssedemo.php", {
@@ -31,7 +31,7 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", {
 
 ### `message` 이벤트 수신하기
 
-서버애서 보낸 [`event`](#event) 필드가 없는 메시지는 `message` 이벤트로 수신됩니다. 메시지 이벤트를 수신하기 위해서는 {{domxref("EventSource.message_event", "message")}} 이벤트를 위한 핸들러를 추가해야 합니다.
+서버에서 보낸 [`event`](#event) 필드가 없는 메시지는 `message` 이벤트로 수신됩니다. 메시지 이벤트를 수신하기 위해서는 {{domxref("EventSource.message_event", "message")}} 이벤트를 위한 핸들러를 추가해야 합니다.
 
 ```js
 evtSource.onmessage = function (e) {
@@ -47,7 +47,7 @@ evtSource.onmessage = function (e) {
 
 ### 사용자 지정 이벤트 수신하기
 
-`event` 필드를 갖는 서버의 메시지들은 `event` 에 명시된 이름의 이벤트로 수신됩니다. 예를 들면 아래와 같습니다.
+`event` 필드를 갖는 서버의 메시지들은 `event`에 명시된 이름의 이벤트로 수신됩니다. 예를 들면 아래와 같습니다.
 
 ```js
 evtSource.addEventListener("ping", function (event) {
@@ -58,7 +58,7 @@ evtSource.addEventListener("ping", function (event) {
 });
 ```
 
-이 코드는 서버가 `event` 필드가 `ping` 으로 설정된 메시지를 보낼 때마다 호출되며, `data` 필드의 JSON을 파싱하여 그 정보를 출력합니다.
+이 코드는 서버가 `event` 필드가 `ping`으로 설정된 메시지를 보낼 때마다 호출되며, `data` 필드의 JSON을 파싱하여 그 정보를 출력합니다.
 
 > **주의:** **HTTP/2 를 사용하지 않을 때** SSE는 활성화된 연결의 최대 개수 제한으로 인한 한계를 겪을 수 있으며, 이 제한은 브라우저당 적용될 뿐만 아니라 매우 낮은 수(6)로 설정되어 있어 특히 여러 탭을 열 때 문제를 겪을 수 있습니다. 이 문제는 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955)과 [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896)에서 수정되지 않을 것으로 표시되었습니다. 이 제한은 브라우저와 도메인별로 적용되므로 `www.example1.com` 에 대해 모든 탭에서 6개의 SSE 연결을 열 수 있고, `www.example2.com` 에 대해서도 6개의 SSE 연결을 열 수 있습니다. (출처: [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). HTTP/2를 사용할 때는 동시에 열 수 있는 HTTP 스트림의 최대 개수가 서버와 클라이언트 간에 협상되며, 기본값은 100입니다.
 
@@ -112,7 +112,7 @@ while (true) {
 
 ## 에러 핸들링
 
-네트워크 타임아웃 또는 [접근 제어](/ko/docs/HTTP/Access_control_CORS)와 관련된 문제 등 문제가 발생할 때 에러 이벤트가 생성됩니다. `EventSource` 객체에 `onerror` 콜백을 구현하여 프로그래밍적으로 이를 처리할 수 있습니다.
+네트워크 타임아웃 또는 [접근 제어](/ko/docs/Web/HTTP/Guides/CORS)와 관련된 문제 등 문제가 발생할 때 에러 이벤트가 생성됩니다. `EventSource` 객체에 `onerror` 콜백을 구현하여 프로그래밍적으로 이를 처리할 수 있습니다.
 
 ```js
 evtSource.onerror = function (e) {

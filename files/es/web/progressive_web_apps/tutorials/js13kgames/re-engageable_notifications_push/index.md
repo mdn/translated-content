@@ -3,7 +3,7 @@ title: Cómo hacer que las PWAs se puedan volver a conectar usando Notificacione
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps")}}
 
 Tener la capacidad de almacenar en caché el contenido de una aplicación para que funcione sin conexión es una gran característica. Permitir que el usuario instale la aplicación web en su pantalla de inicio es aún mejor. Pero en lugar de depender solo de las acciones del usuario, podemos hacer más, utilizando mensajes `push` y notificaciones para volver a interactuar automáticamente y entregar contenido nuevo siempre que esté disponible.
 
@@ -67,7 +67,7 @@ Se crea una nueva notificación aleatoria cada 30 segundos hasta que se vuelve d
 
 La tecnología aún se encuentra en una etapa muy temprana; algunos ejemplos de uso utilizan la plataforma de mensajería en la nube de Google, pero se están reescribiendo para admitir IDVAP (**Id**entificación **vo**luntaria de la **ap**licación), que ofrece una capa adicional de seguridad para tu aplicación. Puedes examinar los [ejemplos del libro de recetas del servicio _workers_](https://github.com/mdn/serviceworker-cookbook/push-payload.html), intenta configurar un servidor de mensajería `push` usando [Firebase](https://firebase.google.com/), o crea tu propio servidor (utilizando Node.js, por ejemplo).
 
-Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Apps/Progressive/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
+Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);
@@ -266,6 +266,6 @@ Todo lo que hace es agregar un escucha para el evento [`push`](/es/docs/Web/Refe
 
 No dudes en explorar el resto de los ejemplos en el [Libro de recetas para el servicio _workers_](https://github.com/mdn/serviceworker-cookbook/) si deseas saber cómo se manejan: el [código fuente completo está disponible en GitHub](https://github.com/mozilla/serviceworker-cookbook/). Hay una gran colección de ejemplos de uso que muestran el uso general, pero también la inserción web, las estrategias de almacenamiento en caché, el rendimiento, el trabajo sin conexión y más.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Guides/Making_PWAs_installable", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

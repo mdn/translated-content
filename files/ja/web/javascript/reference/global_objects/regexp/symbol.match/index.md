@@ -1,16 +1,29 @@
 ---
-title: RegExp.prototype[@@match]()
+title: RegExp.prototype[Symbol.match]()
+short-title: "[Symbol.match]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
 
-**`[@@match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.match]()")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.match](str) {
+    const result = RegExp.prototype[Symbol.match].call(this, str);
+    if (result) {
+      return "VALID";
+    }
+    return "INVALID";
+  }
+}
+
+console.log("2012-07-02".match(new RegExp1("(\\d+)-(\\d+)-(\\d+)")));
+// 予想される結果: "VALID"
+```
 
 ## 構文
 
@@ -42,9 +55,9 @@ regexp[Symbol.match](str)
 /a/[Symbol.match]("abc");
 ```
 
-正規表現がグローバル（`g` フラグ付き）である場合、この正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) メソッドは、 `exec()` が `null` を返すまで繰り返し呼び出されます。そうでない場合、 `exec()` は一度だけ呼び出され、その結果が `@@match` の返値となります。
+正規表現がグローバル（`g` フラグ付き）である場合、この正規表現の [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) メソッドは、 `exec()` が `null` を返すまで繰り返し呼び出されます。そうでない場合、 `exec()` は一度だけ呼び出され、その結果が `[Symbol.match]()` の返値となります。
 
-`@@match` は `exec()` を `null` が返るまで呼び出し続け、最後の照合に失敗すると自動的に正規表現の [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) を 0 にリセットします。しかし、正規表現が[粘着的](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)であるもののグローバルではない場合、 `lastIndex` はリセットされません。この場合、 `match()` を呼び出すたびに異なる結果を返すかもしれません。
+`[Symbol.match]()` は `exec()` を `null` が返るまで呼び出し続け、最後の照合に失敗すると自動的に正規表現の [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) を 0 にリセットします。しかし、正規表現が[粘着的](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)であるもののグローバルではない場合、 `lastIndex` はリセットされません。この場合、 `match()` を呼び出すたびに異なる結果を返すかもしれません。
 
 ```js
 const re = /[abc]/y;
@@ -73,7 +86,7 @@ console.log("😄".match(/(?:)/gu)); // [ '', '' ]
 
 このメソッドは `RegExp` サブクラス内で照合の動作をカスタマイズするために存在します。
 
-さらに、`@@match` プロパティは[オブジェクトが正規表現であるかどうか](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)をチェックするために使われます。
+さらに、`[Symbol.match]()` プロパティは[オブジェクトが正規表現であるかどうか](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)をチェックするために使われます。
 
 ## 例
 
@@ -82,7 +95,7 @@ console.log("😄".match(/(?:)/gu)); // [ '', '' ]
 このメソッドは、_ほとんど_ {{jsxref("String.prototype.match()")}} と同じ方法で使用することができますが、 `this` と引数の並び順が異なります。
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.match](str);
 console.log(result); // ["2016", "01", "02"]
@@ -90,7 +103,7 @@ console.log(result); // ["2016", "01", "02"]
 
 ### サブクラスで @@match を使用
 
-{{jsxref("RegExp")}} のサブクラスは、既定の動作を修正するために `[@@match]()` メソッドをオーバーライドできます。
+{{jsxref("RegExp")}} のサブクラスは、既定の動作を修正するために `[Symbol.match]()` メソッドをオーバーライドできます。
 
 ```js
 class MyRegExp extends RegExp {
@@ -105,9 +118,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)");
 const str = "2016-01-02";
-const result = str.match(re); // String.prototype.match は re[@@match] を呼び出す
+const result = str.match(re); // String.prototype.match は re[Symbol.match]() を呼び出す
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
 console.log(result.group(3)); // 02
@@ -123,12 +136,12 @@ console.log(result.group(3)); // 02
 
 ## 関連情報
 
-- [`RegExp.prototype[@@match]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`RegExp.prototype[Symbol.match]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- [`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
-- [`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
-- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
-- [`RegExp.prototype[@@split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
+- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - {{jsxref("Symbol.match")}}

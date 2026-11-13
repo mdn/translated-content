@@ -3,11 +3,25 @@ title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
-{{JSRef}}
-
 **`split()`** 方法接受一个模式，通过搜索模式将{{jsxref("String", "字符串", "", 1)}}分割成一个有序的子串列表，将这些子串放入一个数组，并返回该数组。
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## 语法
 
@@ -35,7 +49,8 @@ split(separator, limit)
 
 如果 `separator` 是一个空字符串（`""`），`str` 被转换为一个由其 UTF-16 字符组成的数组，形成的字符串的两端没有空字符。
 
-> **备注：** `"".split("")` 是唯一一种字符串作为 `separator` 参数传入的生成空数组的方法。
+> [!NOTE]
+> `"".split("")` 是唯一一种字符串作为 `separator` 参数传入的生成空数组的方法。
 
 > [!WARNING]
 > 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代理对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
@@ -165,7 +180,8 @@ console.log(splits);
 // [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **备注：** `\d` 匹配从 0 到 9 的数字[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)。
+> [!NOTE]
+> `\d` 匹配从 0 到 9 的数字[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)。
 
 ### 使用自定义分割器
 

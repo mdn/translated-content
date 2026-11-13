@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 Функция **`parseFloat()`** принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## Синтаксис
 
@@ -32,9 +47,9 @@ parseFloat(строка)
 
 Если первый символ нельзя привести к числовому виду, `parseFloat` вернёт `NaN`.
 
-С точки зрения математики, значение `NaN` не является числом в какой-либо системе счисления. Чтобы определить, вернёт ли `parseFloat` значение {{jsxref("NaN")}} в качестве результата, можно вызвать функцию {{jsxref("Global_Objects/isNaN", "isNaN")}}. Если `NaN` участвует в арифметических операциях, результатом также будет `NaN`.
+С точки зрения математики, значение `NaN` не является числом в какой-либо системе счисления. Чтобы определить, вернёт ли `parseFloat` значение {{jsxref("NaN")}} в качестве результата, можно вызвать функцию {{jsxref("isNaN")}}. Если `NaN` участвует в арифметических операциях, результатом также будет `NaN`.
 
-`parseFloat` также может вернуть значение `Infinity` ("бесконечность"). Вы можете использовать функцию {{jsxref("Global_Objects/isFinite", "isFinite")}}, чтобы определить, является ли результат конечным числом (not `Infinity`, `-Infinity`, или `NaN`).
+`parseFloat` также может вернуть значение `Infinity` ("бесконечность"). Вы можете использовать функцию {{jsxref("isFinite")}}, чтобы определить, является ли результат конечным числом (not `Infinity`, `-Infinity`, или `NaN`).
 
 ## Примеры
 
@@ -76,8 +91,8 @@ parseFloat("FF2");
 
 ## Смотрите также
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

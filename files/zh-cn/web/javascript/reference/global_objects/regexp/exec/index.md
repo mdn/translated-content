@@ -3,11 +3,21 @@ title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
 
-{{JSRef}}
-
 **`exec()`** 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 ## 语法
 

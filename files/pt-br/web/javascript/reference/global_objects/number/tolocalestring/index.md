@@ -17,12 +17,12 @@ numObj.toLocaleString([locales [, options]])
 
 ### Parâmetros
 
-Dê uma olhada na seção [Compatibilidade do Navegador](#Browser_compatibility) para verificar quais navegadores suportam os argumentos `locales` e `options`, e o Exemplo: Verificando o suporte dos argumentos `locales` e `options` para detecção desta característica.
+Dê uma olhada na seção [Compatibilidade do Navegador](#browser_compatibility) para verificar quais navegadores suportam os argumentos `locales` e `options`, e o Exemplo: Verificando o suporte dos argumentos `locales` e `options` para detecção desta característica.
 
 > [!NOTE]
 > ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento `locales` ao método `Number.toLocaleString()`. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos [Árabe Ocidental](https://en.wikipedia.org/wiki/Arabic_numerals). Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ([Erro do Firefox 999003](https://bugzil.la/999003))
 
-{{page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros') -->
 
 ## Exemplos
 
@@ -38,7 +38,7 @@ console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U
 
 ### Verificando o suporte dos argumentos `locales` e `options`
 
-Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:
+Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("RangeError")}} pode ser usada da seguinte forma:
 
 ```js
 function toLocaleStringSupportsLocales() {
@@ -123,7 +123,7 @@ console.log(numero.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 
 ## Desempenho
 
-Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("NumberFormat.format")}}.
+Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}}.
 
 ## Especificações
 

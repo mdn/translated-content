@@ -3,14 +3,14 @@ title: "Window: atob() メソッド"
 short-title: atob()
 slug: Web/API/Window/atob
 l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+  sourceCommit: 3e097148b4c6cb9c6d8824275599f855ca63827b
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`atob()`** は {{domxref("Window")}} インターフェイスのメソッドで、 {{glossary("Base64")}} エンコーディングでエンコードされたデータの文字列をデコードします。 {{domxref("Window.btoa()")}} メソッドを使用して、通信に問題が発生する可能性のあるデータをエンコードして送信し、送信した後に `atob()` メソッドを使用して再度デコードすることができます。例えば、{{Glossary("ASCII")}} の 0 から 31 までのコードような制御文字をエンコードして送信し、デコードすることができます。
 
-任意の Unicode 文字列で使用する場合は、用語集の {{Glossary("Base64")}} の項目の 「Unicode 問題」を参照してください。
+{{jsxref("Uint8Array.fromBase64()")}} メソッドを使用することも検討してください。このメソッドは、base64 エンコードされた文字列から `Uint8Array` オブジェクトを作成します。その結果、生のバイト列を含む文字列よりも作業しやすい、バイト配列が生成されます。
 
 ## 構文
 
@@ -21,11 +21,11 @@ atob(encodedData)
 ### 引数
 
 - `encodedData`
-  - : base64 でエンコードされたデータが入っているバイナリー文字列（すなわち、文字列のそれぞれの文字がバイナリーデータの各バイトとして扱われる文字列）です。
+  - : {{domxref("Window.btoa()")}} によって生成されたアルファベットを使用した、base64 エンコードされた文字列です。
 
 ### 返値
 
-`encodedData` をデコードしたデータを含む ASCII 文字列です。
+`encodedData` からデコードされた生のバイト列を含むバイナリー文字列です。 JavaScript の文字列は {{glossary("UTF-16")}} でエンコードされているため、これはそれぞれの文字が 256 未満のコードポイントを持ち、 1 バイトのデータを表すことを意味します。
 
 ### 例外
 
@@ -39,6 +39,8 @@ const encodedData = window.btoa("Hello, world"); // 文字列をエンコード
 const decodedData = window.atob(encodedData); // 文字列をデコード
 ```
 
+その他の例については、{{domxref("Window.btoa()")}} メソッドをご覧ください。
+
 ## 仕様書
 
 {{Specifications}}
@@ -50,6 +52,7 @@ const decodedData = window.atob(encodedData); // 文字列をデコード
 ## 関連情報
 
 - [`atob` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) にあります
-- [`data` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}: 同じメソッドですが、ワーカーのスコープのものです。
 - {{domxref("Window.btoa()")}}
+- {{jsxref("Uint8Array.fromBase64()")}}

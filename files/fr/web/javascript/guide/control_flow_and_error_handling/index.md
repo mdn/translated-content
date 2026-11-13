@@ -3,13 +3,13 @@ title: Contrôle du flux d'instructions et gestion des erreurs
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supporte nativement un ensemble d'instructions. Ces instructions permettent de définir les logiques des algorithmes, le flux des informations, etc. Ce chapitre fournit un aperçu sur le fonctionnement de ces différentes instructions JavaScript.
 
 Les [Références de JavaScript](/fr/docs/Web/JavaScript/Reference/Statements) contiennent plus de détails sur les différentes instructions décrites dans ce chapitre.
 
-Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
+Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
 
 ## Les blocs d'instruction
 
@@ -183,7 +183,6 @@ JavaScript évalue l'instruction de commutation ci-dessus comme suit :
 
 - Le programme recherche d'abord une clause `case` dont l'étiquette correspond à la valeur de l'expression, puis il transfère le contrôle à cette clause, en exécutant les instructions associées.
 - Si aucune étiquette correspondante n'est trouvée, le programme recherche la clause optionnelle `default` :
-
   - Si une clause `default` est trouvée, le programme transfère le contrôle à cette clause, exécutant les déclarations associées.
   - Si aucune clause `default` n'est trouvée, le programme reprend l'exécution à l'instruction qui suit la fin de `switch`.
   - (Par convention, la clause `default` est écrite comme la dernière clause, mais il n'est pas nécessaire que ce soit le cas).
@@ -344,7 +343,7 @@ try {
 ```
 
 > [!NOTE]
-> Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/Console/error) plutôt que [`console.log()`](/fr/docs/Web/API/Console/log). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
+> Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/console/error_static) plutôt que [`console.log()`](/fr/docs/Web/API/console/log_static). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
 
 #### Le bloc `finally`
 

@@ -47,7 +47,7 @@ if (
 ```
 
 > [!NOTE]
-> 因为`compareDocumentPosition`返回的是一个位掩码，所以必须再使用[按位与运算符](/zh-CN/docs/JavaScript/Reference/Operators/Bitwise_Operators)才能得到有意义的值。
+> 因为`compareDocumentPosition`返回的是一个位掩码，所以必须再使用[按位与运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)才能得到有意义的值。
 
 注意第一条语句使用了带有参数 0 的 {{domxref("NodeList.item()")}} 方法，它和 getElementsByTagName('head')\[0] 是一样的。
 
@@ -61,5 +61,5 @@ if (
 
 ## 相关链接
 
-- [`Node.contains`](/zh-CN/docs/DOM/Node.contains)
+- [`Node.contains`](/zh-CN/docs/Web/API/Node/contains)
 - [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

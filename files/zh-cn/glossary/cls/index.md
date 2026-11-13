@@ -5,9 +5,7 @@ l10n:
   sourceCommit: fcd4f39485d740615c32ccaef63471bc27095fb0
 ---
 
-{{GlossarySidebar}}
-
-**累计布局偏移**（CLS）是一种由 Google 设计为[核心 Web 要素](https://web.dev/explore/learn-core-web-vitals)之一的网站的可用性指标。
+**累计布局偏移**（CLS）是一种由 Google 设计为[核心 Web 要素](https://web.developers.google.cn/explore/learn-core-web-vitals)之一的网站的可用性指标。
 
 它可以衡量用户遇到意外布局偏移的程度。这里元素的意外偏移指不是由用户操作（如点按按钮或动画的一部分）引起的偏移。
 
@@ -17,4 +15,4 @@ l10n:
 
 ## 参见
 
-- web.dev 上的 [CLS](https://web.dev/articles/cls)
+- web.developers.google.cn 上的 [CLS](https://web.developers.google.cn/articles/cls)

@@ -9,7 +9,7 @@ O objeto **`FileReader`** permite que aplicativos da web leiam de forma assíncr
 
 Objetos de arquivo podem ser obtidos de um objeto {{domxref("FileList")}} retornado como resultado de um usuário selecionar arquivos usando o elemento {{HTMLElement("input")}} ou de uma operação de arrastar e soltar {{ domxref("DataTransfer")}} objeto.
 
-O `FileReader` só pode acessar o conteúdo dos arquivos que o usuário selecionou explicitamente, usando um elemento HTML `<input type="file">` ou arrastando e soltando. Ele não pode ser usado para ler um arquivo por nome de caminho do sistema de arquivos do usuário. Para ler arquivos no sistema de arquivos do cliente por nome de caminho, use a [API de acesso ao sistema de arquivos](/pt-BR/docs/Web/API/File_System_Access_API). Para ler arquivos do lado do servidor, use soluções Ajax padrão, com permissão CORS se estiver lendo entre domínios.
+O `FileReader` só pode acessar o conteúdo dos arquivos que o usuário selecionou explicitamente, usando um elemento HTML `<input type="file">` ou arrastando e soltando. Ele não pode ser usado para ler um arquivo por nome de caminho do sistema de arquivos do usuário. Para ler arquivos no sistema de arquivos do cliente por nome de caminho, use a [API de acesso ao sistema de arquivos](/pt-BR/docs/Web/API/File_System_API). Para ler arquivos do lado do servidor, use soluções Ajax padrão, com permissão CORS se estiver lendo entre domínios.
 
 {{AvailableInWorkers}}
 
@@ -27,7 +27,6 @@ Consulte [Usando arquivos de aplicativos da Web](/pt-BR/docs/Web/API/File_API/Us
 - {{domxref("FileReader.error")}} {{ReadOnlyInline}}
   - : Um {{domxref("DOMException")}} representando o erro que ocorreu durante a leitura do arquivo.
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
-
   - : Um número que indica o estado do `FileReader`. Este é um dos seguintes:
 
     | Nome      | Valor | Descrição                                    |

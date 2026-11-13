@@ -15,7 +15,7 @@ Hay una serie de cosas que puede hacer para ayudar a proteger su sitio. Este art
 
 ## Seguridad de la información del usuario
 
-- [Cómo desactivar el autocompletado de formularios](/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+- [Cómo desactivar el autocompletado de formularios](/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
   - : Los campos de formulario admiten el autocompletado en Gecko; es decir, sus valores pueden recordarse y recuperarse automáticamente la próxima vez que el usuario visite su sitio. Para ciertos tipos de datos, es posible que desee desactivar esta función.
 - [Privacidad y el selector :visited](/es/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Este artículo analiza los cambios realizados en el método `getComputedStyle()` que elimina la capacidad de los sitios maliciosos de averiguar el historial de navegación del usuario.
@@ -24,16 +24,16 @@ Hay una serie de cosas que puede hacer para ayudar a proteger su sitio. Este art
 
 ## Seguridad del contenido
 
-- [Configurar correctamente los tipos MIME del servidor](/es/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Configurar correctamente los tipos MIME del servidor](/es/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
   - : Hay varias formas en que los tipos MIME incorrectos pueden causar posibles problemas de seguridad en su sitio. Este artículo explica algunos de ellos y muestra cómo configurar su servidor para servir archivos con los tipos MIME correctos.
-- [Seguridad de transporte estricta HTTP](/es/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [Seguridad de transporte estricta HTTP](/es/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : La cabecera [HTTP](/es/docs/Web/HTTP) `Strict-Transport-Security:` permite que un sitio web especifique que solo se puede acceder a él mediante HTTPS.
-- [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
+- [Control de acceso HTTP](/es/docs/Web/HTTP/Guides/CORS)
   - : El estándar Cross-Origin Resource Sharing proporciona una forma de especificar qué contenido se puede cargar desde otros dominios. Puede usar esto para evitar que su sitio se use incorrectamente; además, puede usarlo para establecer recursos que otros sitios pueden usar expresamente.
-- [Política de seguridad de contenido](/es/docs/Web/HTTP/CSP)
+- [Política de seguridad de contenido](/es/docs/Web/HTTP/Guides/CSP)
   - : Una capa adicional de seguridad que ayuda a detectar y mitigar ciertos tipos de ataques, incluidos {{Glossary("Cross-site_scripting", "Secuencias de comandos entre sitios")}} (Cross Site Scripting (XSS), en inglés) y ataques de inyección de datos. Estos ataques se utilizan para todo, desde el robo de datos hasta la desfiguración del sitio o la distribución de malware. El código es ejecutado por las víctimas y permite a los atacantes eludir los controles de acceso y hacerse pasar por los usuarios.
-- [La cabecera de respuesta X-Frame-Options](/es/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : La cabecera de respuesta [HTTP](/es/docs/Web/HTTP) `X-Frame-Options:` se puede usar para indicar si se debe permitir que un navegador represente una página en un {{ HTMLElement("frame") }}. Los sitios pueden usar esto para evitar ataques de [clickjacking](/es/docs/Glossary/Clickjacking), al asegurarse de que su contenido no se incruste en otros sitios.
+- [La cabecera de respuesta X-Frame-Options](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
+  - : La cabecera de respuesta [HTTP](/es/docs/Web/HTTP) `X-Frame-Options:` se puede usar para indicar si se debe permitir que un navegador represente una página en un {{ HTMLElement("frame") }}. Los sitios pueden usar esto para evitar ataques de [clickjacking](/es/docs/Web/Security/Attacks/Clickjacking), al asegurarse de que su contenido no se incruste en otros sitios.
 - Control de acceso mediante la configuración de un sitio web
   - : Es la mejor manera de asegurar su sitio. Puede ignorar direcciones IP específicas, restringir el acceso a ciertas áreas del sitio web, proteger diferentes archivos, proteger contra enlaces directos de imágenes y mucho más. Por ejemplo, el archivo .htaccess se usa para sitios web alojados en [servidores HTTP Apache](https://httpd.apache.org/).
 

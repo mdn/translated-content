@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 ## Описание
 
-> **Предупреждение:** **Внимание:** В ES5 [strict mode](/ru/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) использование `arguments.callee` запрещено.
+> [!WARNING]
+> В ES5 [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode) использование `arguments.callee` запрещено.
 
 ### Зачем вообще использовать `arguments.callee`?
 

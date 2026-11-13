@@ -1,39 +1,33 @@
 ---
-title: GainNode.gain
+title: GainNode：gain 屬性
 slug: Web/API/GainNode/gain
+l10n:
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("GainNode") }} 介面的 `gain` 屬性是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，代表增益的數值。
+{{ domxref("GainNode") }} 介面的 `gain` 屬性是一個 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) 的 {{domxref("AudioParam")}}，代表要應用的增益量。
 
-## 語法
+## 值
 
-```js
-var audioCtx = new AudioContext();
-var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0.5;
-```
-
-### 傳回值
-
-一個 {{domxref("AudioParam")}}.
+一個 {{domxref("AudioParam")}}。
 
 > [!NOTE]
-> 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
+> 雖然回傳的 `AudioParam` 是唯讀的，但它所代表的值並非如此。
 
 ## 範例
 
-See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
+參見 [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#範例) 的範例程式碼，其展示了如何使用 `AudioContext` 來建立 `GainNode`，接著透過改變 gain 屬性值來靜音和取消靜音音訊。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容度
+## 瀏覽器相容性
 
 {{Compat}}
 
 ## 參見
 
-- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

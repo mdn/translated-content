@@ -2,7 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
 {{APIRef("DOM")}}
@@ -15,7 +15,8 @@ HTML 文書の場合、{{domxref("Element.innerHTML")}} や {{domxref("Element.o
 
 なお、 {{domxref("XMLHttpRequest")}}は、 URL アドレスが指定できるリソースから直接 XML や HTML を解釈でき、その {{domxref("XMLHttpRequest.response", "response")}} プロパティで `Document` を返すことに注意してください。
 
-> **メモ:** [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
+> [!NOTE]
+> [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
 
 ## コンストラクター
 
@@ -41,7 +42,7 @@ HTML 文書の場合、{{domxref("Element.innerHTML")}} や {{domxref("Element.o
 
 ## 関連情報
 
-- [XML の解釈とシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML の構文解析とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
-- {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 文書での同様のページ
+- {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 文書で対応するもの。

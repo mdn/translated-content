@@ -1,19 +1,37 @@
 ---
 title: Math.atan()
+short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+**`Math.atan()`** は静的メソッドで、数値の逆正接（アークタンジェント）をラジアン単位で返します。
 
-**`Math.atan()`** 関数は、引数として与えた数値のアークタンジェントをラジアン単位で返します。
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{the unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ such that } \tan(y) = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \tan(y) = x</annotation></semantics></math>
+{{InteractiveExample("JavaScript デモ: Math.atan()")}}
 
-{{EmbedInteractiveExample("pages/js/math-atan.html")}}
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(opposite, adjacent) {
+  return Math.atan(opposite / adjacent);
+}
+
+console.log(calcAngle(8, 10));
+// 予想される結果: 0.6747409422235527
+
+console.log(calcAngle(5, 3));
+// 予想される結果: 1.0303768265243125
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.atan(x)
 ```
 
@@ -24,11 +42,9 @@ Math.atan(x)
 
 ### 返値
 
-与えられた数値のアークタンジェント (ラジアン単位) です。
+（<math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> ～ <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> で両端を含むラジアン単位の角度である） `x` の逆正接（アークタンジェント）です。 `x` が {{jsxref("Infinity")}} である場合は <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> を返します。 `x` gが `-Infinity` である場合、 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> を返します。
 
 ## 解説
-
-`Math.atan()` メソッドは <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> から <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> までのラジアンの数値を返します。
 
 `atan()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.atan()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
@@ -37,18 +53,17 @@ Math.atan(x)
 ### Math.atan() の使用
 
 ```js
-Math.atan(1); // 0.7853981633974483
-Math.atan(0); // 0
+Math.atan(-Infinity); // -1.5707963267948966 (-π/2)
 Math.atan(-0); // -0
+Math.atan(0); // 0
+Math.atan(1); // 0.7853981633974483  (π/4)
+Math.atan(Infinity); // 1.5707963267948966  (π/2)
 
-Math.atan(Infinity); //  1.5707963267948966
-Math.atan(-Infinity); // -1.5707963267948966
-
-// The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
-Math.atan(y / x);
+// 直線 (0,0) -- (x,y) が直交座標系において x 軸となす角度
+const theta = (x, y) => Math.atan(y / x);
 ```
 
-様式上の理由から **±**`Infinity` の使用を避けたいと思うことがあるかもしれません。その場合、 {{jsxref("Math.atan2()")}} を第二引数を `0` としてを使うとよりよいかもしれません。
+シータ関数を避け、代わりに {{jsxref("Math.atan2()")}} を使用することをお勧めします。これは、より広い範囲（-π から π まで）を保有しており、`x` が `0` の場合など、 `NaN` を出力しないようにします。
 
 ## 仕様書
 
@@ -66,3 +81,4 @@ Math.atan(y / x);
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan()")}} 関数

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
-{{jsSidebar("Errors")}}
-
 当 URI 编码或解码没有成功完成时，JavaScript 会抛出“malformed URI sequence”异常。
 
 ## 错误信息

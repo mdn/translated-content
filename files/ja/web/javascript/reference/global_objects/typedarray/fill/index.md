@@ -1,15 +1,23 @@
 ---
 title: TypedArray.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`fill()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある範囲のインデックスにあるすべての要素を固定値で埋めます。これは変更された型付き配列を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.fill()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([0, 0, 0, 0]);
+// 値、開始位置、終了位置
+uint8.fill(4, 1, 3);
+
+console.log(uint8);
+// 予想される結果: Uint8Array [0, 4, 4, 0]
+```
 
 ## 構文
 
@@ -24,9 +32,9 @@ fill(value, start, end)
 - `value`
   - : 型付き配列を埋める値です。
 - `start` {{optional_inline}}
-  - : 埋まる範囲の開始点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
+  - : 埋める範囲の先頭を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
 - `end` {{optional_inline}}
-  - : 埋まる範囲の終了点を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `fill()` は `end` の手前までを埋めます。
+  - : 埋める範囲の末尾を表すゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。 `fill()` は `end` の手前までを埋めます。
 
 ### 返値
 
@@ -58,7 +66,7 @@ new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 
 ## 関連情報
 
-- [`TypedArray.prototype.fill` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.fill` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.fill()")}}

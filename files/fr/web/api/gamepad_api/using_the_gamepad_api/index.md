@@ -177,7 +177,7 @@ window.addEventListener("gamepaddisconnected", function (e) {
 });
 ```
 
-Pour Chrome, les choses sont différentes. Le navigateur ne stocke qu'un instantané de l'état de la manette et il faut donc continuellement rafraîchir l'état connu avant d'utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) lorsque celui-ci devient disponible. Dans le code qui suit, on fait cela avec [`setInterval()`](/fr/docs/Web/API/setInterval). Une fois que l'objet est disponible, les informations sont affichées, la boucle de jeu commence et l'intervalle de répétition pour l'état de la manette est arrêté avec [`clearInterval`](/fr/docs/Web/API/clearInterval). Pour les versions les plus anciennes de Chrome, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) est implémentée avec un préfixe `webkit`. Pour une rétro-compatibilité, on essaie ici de détecter et de gérer les deux cas (avec et sans préfixe).
+Pour Chrome, les choses sont différentes. Le navigateur ne stocke qu'un instantané de l'état de la manette et il faut donc continuellement rafraîchir l'état connu avant d'utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) lorsque celui-ci devient disponible. Dans le code qui suit, on fait cela avec [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Une fois que l'objet est disponible, les informations sont affichées, la boucle de jeu commence et l'intervalle de répétition pour l'état de la manette est arrêté avec [`clearInterval`](/fr/docs/Web/API/Window/clearInterval). Pour les versions les plus anciennes de Chrome, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) est implémentée avec un préfixe `webkit`. Pour une rétro-compatibilité, on essaie ici de détecter et de gérer les deux cas (avec et sans préfixe).
 
 ```js
 let interval;
@@ -214,7 +214,7 @@ function pollGamepads() {
 }
 ```
 
-Voyons maintenant la boucle de jeu principale. Pour chaque exécution de la boucle, on regarde si un des quatre boutons est pressé. Si c'est le cas, on met à jour les variables de mouvement `a` et `b` de façon correspondante. Ensuite, on met à jour les propriétés CSS [`left`](/fr/docs/Web/CSS/left) et [`top`](/fr/docs/Web/CSS/top) avec les valeurs respectives de `a` et `b`. En pratique, cela aura pour effet de déplacer la balle sur l'écran.
+Voyons maintenant la boucle de jeu principale. Pour chaque exécution de la boucle, on regarde si un des quatre boutons est pressé. Si c'est le cas, on met à jour les variables de mouvement `a` et `b` de façon correspondante. Ensuite, on met à jour les propriétés CSS [`left`](/fr/docs/Web/CSS/Reference/Properties/left) et [`top`](/fr/docs/Web/CSS/Reference/Properties/top) avec les valeurs respectives de `a` et `b`. En pratique, cela aura pour effet de déplacer la balle sur l'écran.
 
 Une fois que tout ça est fait, on utilise `requestAnimationFrame()` pour passer à la <i lang="en">frame</i> suivante, où on exécute à nouveau `gameLoop()`.
 

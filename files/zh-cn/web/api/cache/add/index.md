@@ -18,7 +18,8 @@ fetch(url).then(function (response) {
 
 对于更复杂的操作，你可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
 
-> **备注：** `add()` 将会覆盖之前存储在 cache 中与 request 匹配的任何 key/value 对。
+> [!NOTE]
+> `add()` 将会覆盖之前存储在 cache 中与 request 匹配的任何 key/value 对。
 
 > [!NOTE]
 > 之前的 Cache (Blink 和 Gecko 内核版本) 在实现{{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 和 {{domxref("Cache.put")}} 的策略是在 response 结果完全写入缓存后才会 resolve 当前的 promise。更新后的规范版本中一旦条目被记录到数据库就会 resolve 当前的 promise，即使当前 response 结果还在传输中。
@@ -70,6 +71,6 @@ this.addEventListener("install", function (event) {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

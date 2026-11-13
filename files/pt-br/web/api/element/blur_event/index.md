@@ -3,7 +3,7 @@ title: blur (evento)
 slug: Web/API/Element/blur_event
 ---
 
-O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Mozilla_event_reference/focusout) é que apenas o segundo 'borbulha'.
+O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event) é que apenas o segundo 'borbulha'.
 
 ## Informação geral
 
@@ -28,14 +28,14 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 | Property                           | Type                                     | Description                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `type` {{readonlyInline}}          | {{jsxref("String")}}                     | The type of event.                         |
 | `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
 ## Delegação do evento
 
-Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento `focusout` nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do [`addEventListener`](/pt-BR/docs/DOM/element.addEventListener) para `true`:
+Existem duas maneiras de implementar a delegação de eventos para este evento: usando o evento `focusout` nos navegadores que suportam-o, ou definindo o parâmetro "useCapture" do [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) para `true`:
 
 ### Conteúdo HTML
 
@@ -78,7 +78,7 @@ form.addEventListener(
 
 ## Eventos relacionados
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/pt-BR/docs/Web/API/Element/focus_event)
+- [`blur`](/pt-BR/docs/Web/API/Element/blur_event)
+- [`focusin`](/pt-BR/docs/Web/API/Element/focusin_event)
+- [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event)

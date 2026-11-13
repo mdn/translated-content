@@ -25,9 +25,9 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
 
 2. **アイテムの横幅指定が誤っている**
     アイテムの横幅指定が画面横幅を超えて指定されているため、その他の要素の右側に空白ができています。
-    アイテムの横幅指定は、[width](/ja/docs/Web/CSS/width)プロパティの指定方法または値の誤り、アイテムを表示しているブロックの指定の誤り等があります。
+    アイテムの横幅指定は、[width](/ja/docs/Web/CSS/Reference/Properties/width)プロパティの指定方法または値の誤り、アイテムを表示しているブロックの指定の誤り等があります。
 
-    下記の指定方法は、[max-width](/ja/docs/Web/CSS/max-width)プロパティ等で、横画面切替表示時の横幅で指定されてしまうため、縦画面に対応されなくなってしまう例になります。
+    下記の指定方法は、[max-width](/ja/docs/Web/CSS/Reference/Properties/max-width)プロパティ等で、横画面切替表示時の横幅で指定されてしまうため、縦画面に対応されなくなってしまう例になります。
     その他に、テーブル同様そもそも指定を行っていないか、もしくは表示するブラウザーに対応していないタグを使用している可能性もあります。
 
     ```css
@@ -46,7 +46,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
 各要因の解決策の代表例として以下があります。
 
 1. **テーブルの列幅指定がされていない**
-    画面全体に [table-layout](/ja/docs/Web/CSS/table-layout): fixed; を指定します。
+    画面全体に [table-layout](/ja/docs/Web/CSS/Reference/Properties/table-layout): fixed; を指定します。
     この指定により、テーブルの列幅が画面に合わされますので、画面右側の空白はなくなります。
 
     ```css
@@ -60,8 +60,8 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
     }
     ```
 
-    また、テーブルの幅指定を [display](/ja/docs/Web/CSS/display): table; で行っている場合、Firefox では認識できません。
-    他ブラウザー互換のために [display](/ja/docs/Web/CSS/display): inline-block; を追記することで、画面幅に指定することができます。
+    また、テーブルの幅指定を [display](/ja/docs/Web/CSS/Reference/Properties/display): table; で行っている場合、Firefox では認識できません。
+    他ブラウザー互換のために [display](/ja/docs/Web/CSS/Reference/Properties/display): inline-block; を追記することで、画面幅に指定することができます。
 
     ```css
     #navigation ul {
@@ -72,7 +72,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
     ```
 
 2. **アイテムの横幅指定が誤っている**
-    [max-width](/ja/docs/Web/CSS/max-width): 100%; で指定されている場合は、横画面表示時のサイズで表示されてしまうため、 [width](/ja/docs/Web/CSS/width): 100%; に修正することで縦画面表示時のサイズにも対応できます。
+    [max-width](/ja/docs/Web/CSS/Reference/Properties/max-width): 100%; で指定されている場合は、横画面表示時のサイズで表示されてしまうため、 [width](/ja/docs/Web/CSS/Reference/Properties/width): 100%; に修正することで縦画面表示時のサイズにも対応できます。
 
     ```css
     img {
@@ -83,7 +83,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
     }
     ```
 
-    [display](/ja/docs/Web/CSS/display):-moz-box; 等、mobile 版ブラウザーで対応されていないタグを使用している場合や、そもそも指定がない場合は、[display](/ja/docs/Web/CSS/display): inline-block; に修正することで指定できます。
+    [display](/ja/docs/Web/CSS/Reference/Properties/display):-moz-box; 等、mobile 版ブラウザーで対応されていないタグを使用している場合や、そもそも指定がない場合は、[display](/ja/docs/Web/CSS/Reference/Properties/display): inline-block; に修正することで指定できます。
 
     ```css
     box li {
@@ -98,4 +98,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
 - 画面サイズに列幅を合わせることにより、様々な画面サイズのデバイスに対応可能となります。
   - また、アイテム一つ一つの幅を正しく指定することで、他のコンテンツの表示崩れ等の併発を防ぐことができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

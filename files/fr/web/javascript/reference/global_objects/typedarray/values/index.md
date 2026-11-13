@@ -3,11 +3,20 @@ title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
 
-{{JSRef}}
-
 La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.values();
+
+array1.next();
+array1.next();
+
+console.log(array1.next().value);
+// Expected output: 30
+```
 
 ## Syntaxe
 
@@ -56,8 +65,8 @@ console.log(eArr.next().value); // 50
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}

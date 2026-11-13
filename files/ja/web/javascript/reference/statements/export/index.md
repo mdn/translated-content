@@ -2,10 +2,8 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 l10n:
-  sourceCommit: 3bf2463d6d13f1f4b388ff2a0daaea9da5e545eb
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 **`export`** 宣言は、JavaScript モジュールから値をエクスポートするために使用されます。エクスポートされた値は {{jsxref("Statements/import", "import")}} 宣言や[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)によって、他のプログラムにインポートすることができます。インポートされたバインディングの値は、それをエクスポートするモジュールの変更の対象となります。モジュールがエクスポートするバインディングの値を更新すると、その更新はインポートされた値として見えます。
 
@@ -44,6 +42,7 @@ export * as name1 from "module-name";
 export { name1, /* …, */ nameN } from "module-name";
 export { import1 as name1, import2 as name2, /* …, */ nameN } from "module-name";
 export { default, /* …, */ } from "module-name";
+export { default as name1 } from "module-name";
 ```
 
 - `nameN`
@@ -68,6 +67,16 @@ export function myFunction() {
 ```
 
 `export` キーワードの後には、 `let`, `const`, `var` 宣言や、関数、クラス宣言を使用することができます。また、 `export { name1, name2 }` 構文を使用すると、他の場所で宣言された名前のリストをエクスポートすることができます。`export {}` は空のオブジェクトをエクスポートするわけではないことに注意してください。これは何もエクスポートしない（空の名前のリストをエクスポートする）ノーオペレーション宣言です。
+
+`export` は、{{jsxref("Statements/using", "using")}} または {{jsxref("Statements/await_using", "await using")}} 宣言では使用できません。ただし、`using` または `await using` で宣言された変数をエクスポートすることは可能です。ただし、この方法は極力避けるべきです。変数はモジュールの実行が終了するとすぐに破棄されるため、インポート元はすべて既に破棄された値を受け取ることになるからです。
+
+```js-nolint example-bad
+export using resource1 = getResource(); // SyntaxError
+
+// 構文上は許されるが、避けるべき
+using resource2 = getResource();
+export { resource2 };
+```
 
 エクスポート宣言は[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)のルールには従いません。`X` という名前自体が宣言される前に、そのモジュールが `X` をエクスポートすることを宣言することができます。
 
@@ -127,6 +136,7 @@ export default k;
 ```js
 // 他のファイル
 import m from "./test"; // k がデフォルトエクスポートなので、インポートする k の代わりに m を使用することができる点に注意してください
+
 console.log(m); // 12
 ```
 
@@ -156,6 +166,7 @@ export { default as function1, function2 } from "bar.js";
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -182,6 +193,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -194,7 +206,7 @@ import { a } from "./barrel.js";
 
 以下は、import に対応するものですが、構文的には無効です。
 
-```js example-bad
+```js-nolint example-bad
 export DefaultExport from "bar.js"; // Invalid
 ```
 
@@ -208,6 +220,12 @@ export from" 構文では、`as` トークンを省略することができま�
 
 ```js
 export { default, function2 } from "bar.js";
+```
+
+`export from` は `import` が対応しているすべての機能に対応しています。例えば[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)などです。
+
+```js
+export { default } from "./data.json" with { type: "json" };
 ```
 
 ## 例
@@ -247,22 +265,22 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // "From graph draw function" と記録
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```
 
 以下の点に注意することが重要です。
 
-- このスクリプトを HTML の {{htmlelement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
-- `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
+- このスクリプトを HTML の {{HTMLElement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
+- `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/Guides/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
 
 ### デフォルトエクスポートの使用
 
-値をひとつエクスポートしたい、あるいはモジュールでフォールバック先の値を持ちたい場合は、デフォルトエクスポートを使用するとよいでしょう。
+モジュール全体を表す単一の値をエクスポートしたい場合は、デフォルトエクスポートが使用できます。
 
 ```js
-// module "my-module.js"
+// module "cube.js"
 
 export default function cube(x) {
   return x * x * x;
@@ -272,7 +290,8 @@ export default function cube(x) {
 別のスクリプトからの、デフォルトエクスポートのインポートは直観的です。
 
 ```js
-import cube from "./my-module.js";
+import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 
@@ -333,7 +352,7 @@ import { myFunction, myVariable, MyClass } from "parentModule.js";
 ## 関連情報
 
 - {{jsxref("Statements/import", "import")}}
-- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) Jason Orendorff のブログ記事
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) Lin Clark のブログ記事
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)ガイド
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) (hacks.mozilla.org, 2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) (hacks.mozilla.org, 2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) (Dr. Axel Rauschmayer)

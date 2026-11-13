@@ -9,7 +9,8 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 构造函数
 
-> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的代码直接实例化。它们只能随着与之相联系的 {{domxref("AudioWorkletNode")}} 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
+> [!NOTE]
+> `AudioWorkletProcessor` 及其子类不能通过用户提供的代码直接实例化。它们只能随着与之相联系的 {{domxref("AudioWorkletNode")}} 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : 创建一个 `AudioWorkletProcessor` 对象的新实例。
@@ -43,8 +44,7 @@ The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters
 
 1. 创建一个独立的文件;
 2. 在这个文件中：
-
-   1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#Deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
+   1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
 3. Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;

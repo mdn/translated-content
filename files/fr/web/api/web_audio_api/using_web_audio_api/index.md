@@ -5,9 +5,9 @@ slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 {{DefaultAPISidebar("Web Audio API")}}
 
-La [Web Audio API](/fr/docs/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
+La [Web Audio API](/fr/docs/Web/API/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
 
-La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Element/Img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
+La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Reference/Elements/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Reference/Elements/img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
 
 L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
 
@@ -15,7 +15,7 @@ L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au 
 
 Afin d'expliquer l'utilisation de la Web Audio API, nous avons créé un certain nombre d'exemples qui seront étoffés au fur et à mesure. N'hésitez pas à en ajouter d'autres et à suggérer des améliorations !
 
-Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-change-o-matic), une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble ([run the Voice-change-O-matic live](http://mdn.github.io/voice-change-o-matic/)).
+Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-change-o-matic), une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble ([run the Voice-change-O-matic live](https://mdn.github.io/voice-change-o-matic/)).
 
 ![Une boîte à rythme avec des contrôles pour la lecture, le volume et le pan](boombox.png)
 
@@ -61,7 +61,7 @@ Maintenant que nous avons créé un contexte, nous allons utiliser les méthodes
 - générées en JavaScript par un noeud audio tel qu'un oscillateur. Pour créer un {{domxref("OscillatorNode")}} on utilise la méthode {{domxref("AudioContext.createOscillator")}}.
 - créées à partir de données PCM brutes: le contexte audio a des méthodes pour décoder lesformats supportés; voir {{ domxref("AudioContext.createBuffer()") }}, {{domxref("AudioContext.createBufferSource()")}}, et {{domxref("AudioContext.decodeAudioData()")}}.
 - récupérées dans des élements HTML tels que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}: voir {{domxref("AudioContext.createMediaElementSource()")}}.
-- prises dans un [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.
+- prises dans un [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.
 
 Pour notre exemple nous nous contenterons de créer un oscillateur pour générer un son simple comme source, et un noeud de gain pour contrôler le volume:
 
@@ -87,7 +87,7 @@ oscillateur.connect(noeudGain);
 noeudGain.connect(contexteAudio.destination);
 ```
 
-On peut connecter autant de noeuds qu'on le souhaite (cf. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)). Par exemple:
+On peut connecter autant de noeuds qu'on le souhaite (cf. [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)). Par exemple:
 
 ```js
 source = contexteAudio.createMediaStreamSource(stream);
@@ -106,7 +106,7 @@ Ce code créerait le graphe audio suivant :
 Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.
 
 > [!NOTE]
-> Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor), très utile pour débugger les graphes audio.
+> Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html), très utile pour débugger les graphes audio.
 
 ### Lecture du son et définition du pitch
 
@@ -118,7 +118,7 @@ oscillateur.frequency.value = 2500; // valeur en hertz
 oscillateur.start();
 ```
 
-Le code suivant, qui vient de l'exemple [Violent Theremin](http://mdn.github.io/violent-theremin/), spécifie une valeur maximum pour le gain, et une valeur pour la fréquence:
+Le code suivant, qui vient de l'exemple [Violent Theremin](https://mdn.github.io/violent-theremin/), spécifie une valeur maximum pour le gain, et une valeur pour la fréquence:
 
 ```js
 var largeur = window.innerWidth;
@@ -256,7 +256,7 @@ On peut créer un noeud modulatur d'onde avec la méthode {{ domxref("AudioConte
 var distortion = contexteAudio.createWaveShaper();
 ```
 
-On associe ensuite à cet objet une forme d'onde définie mathématiquement, qui est appliquée à l'onde de base pour créer un effet de distortion. Ecrire son propre algorithme n'est pas si simple, et pour commencer le mieux est encore d'en chercher un sur le Web. Par exemple, nous avons trouvé celui-ci sur [Stack Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion):
+On associe ensuite à cet objet une forme d'onde définie mathématiquement, qui est appliquée à l'onde de base pour créer un effet de distortion. Ecrire son propre algorithme n'est pas si simple, et pour commencer le mieux est encore d'en chercher un sur le Web. Par exemple, nous avons trouvé celui-ci sur [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion):
 
 ```js
 function genererCourbeDistortion(amount) {

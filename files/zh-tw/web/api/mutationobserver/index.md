@@ -5,7 +5,7 @@ slug: Web/API/MutationObserver
 
 {{APIRef("DOM")}}
 
-`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/DOM) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
+`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
 
 ## 建構式
 
@@ -31,7 +31,8 @@ new MutationObserver(
 | `void disconnect();`                                                        |
 | `Array takeRecords();`                                                      |
 
-> **備註：** {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
+> [!NOTE]
+> {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
 
 ### `observe()`
 
@@ -49,7 +50,7 @@ void observe(
 - `target`
   - : The {{domxref("Node")}} on which to observe DOM mutations.
 - `options`
-  - : A [`MutationObserverInit`](#MutationObserverInit) object, specifies which DOM mutations should be reported.
+  - : A [`MutationObserverInit`](#mutationobserverinit) object, specifies which DOM mutations should be reported.
 
 > [!NOTE]
 > Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
@@ -72,7 +73,7 @@ Array takeRecords();
 
 #### Return value
 
-Returns an Array of [`MutationRecord`s](#MutationRecord).
+Returns an Array of [`MutationRecord`s](#mutationrecord).
 
 ## `MutationObserverInit`
 
@@ -109,7 +110,7 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 ## Example usage
 
-The following example was taken from [this blog post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+The following example was taken from [this blog post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
 ```js
 // select the target node
@@ -135,7 +136,7 @@ observer.disconnect();
 ## Additional reading
 
 - [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
 - [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
 - [The mutation summary library](https://github.com/rafaelw/mutation-summary)
 - [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface

@@ -12,11 +12,11 @@ original_slug: Web/JavaScript/About_JavaScript
 
 JavaScript se ejecuta en el lado del cliente de la web, y se puede utilizar para estilizar/programar cómo se comportan las páginas web cuando ocurre un evento. JavaScript es un potente lenguaje de scripts y fácil de aprender, ampliamente utilizado para controlar el comportamiento de las páginas web.
 
-Contrariamente a la creencia popular, **JavaScript _no_ es "Java interpretado"**. En pocas palabras, JavaScript es un lenguaje de scripts dinámico que admite {{JSxRef("../Guide/Details_of_the_Object_Model", "construcción de objetos basada en prototipos", "#Lenguajes_basados_en_clases_vs._basados_en_prototipos")}}. Intencionalmente, la sintaxis básica es similar a Java y C++ para reducir la cantidad de conceptos nuevos necesarios para aprender el lenguaje. Construcciones del lenguaje, como las declaraciones `if`, los bucles `for` y `while`, y `switch` y los bloques `try...catch` funcionan igual que en esos lenguajes (o casi).
+Contrariamente a la creencia popular, **JavaScript _no_ es "Java interpretado"**. En pocas palabras, JavaScript es un lenguaje de scripts dinámico que admite [construcción de objetos basada en prototipos](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#Lenguajes_basados_en_clases_vs._basados_en_prototipos). Intencionalmente, la sintaxis básica es similar a Java y C++ para reducir la cantidad de conceptos nuevos necesarios para aprender el lenguaje. Construcciones del lenguaje, como las declaraciones `if`, los bucles `for` y `while`, y `switch` y los bloques `try...catch` funcionan igual que en esos lenguajes (o casi).
 
-JavaScript puede funcionar como un {{JSxRef("../Introduction_to_Object-Oriented_JavaScript", "lenguaje orientado a objetos")}} y [procedimental](https://es.wikipedia.org/wiki/Programación_por_procedimientos). Los objetos se crean mediante programación en JavaScript, adjuntando métodos y propiedades a objetos que de otro modo **en tiempo de ejecución** estarían vacíos, a diferencia de las definiciones de clases sintácticas comunes en lenguajes compilados como C++ y Java. Una vez que se ha construido un objeto, se puede utilizar como plano (o prototipo) para crear objetos similares.
+JavaScript puede funcionar como un [lenguaje orientado a objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) y [procedimental](https://es.wikipedia.org/wiki/Programación_por_procedimientos). Los objetos se crean mediante programación en JavaScript, adjuntando métodos y propiedades a objetos que de otro modo **en tiempo de ejecución** estarían vacíos, a diferencia de las definiciones de clases sintácticas comunes en lenguajes compilados como C++ y Java. Una vez que se ha construido un objeto, se puede utilizar como plano (o prototipo) para crear objetos similares.
 
-Las capacidades dinámicas de JavaScript incluyen la construcción de objetos en tiempo de ejecución, listas de parámetros variables, variables de función, creación dinámica de scripts (a través de {{JSxRef("Objetos_globales/eval", "eval")}}, introspección de objetos (a través de `for...in`) y recuperación de código fuente (los programas JavaScript pueden descompilar los cuerpos de las funciones en su texto fuente).
+Las capacidades dinámicas de JavaScript incluyen la construcción de objetos en tiempo de ejecución, listas de parámetros variables, variables de función, creación dinámica de scripts (a través de {{JSxRef("Global_Objects/eval", "eval")}}, introspección de objetos (a través de `for...in`) y recuperación de código fuente (los programas JavaScript pueden descompilar los cuerpos de las funciones en su texto fuente).
 
 Para una explicación más profunda de la programación de JavaScript, sigue los enlaces [recursos de JavaScript](#recursos_de_javascript) a continuación.
 
@@ -28,14 +28,14 @@ Con el transcurso del tiempo, y tras varias importantes optimizaciones del entor
 
 Más allá de las implementaciones anteriores, existen otros motores JavaScript populares como:—
 
-- [V8](https://code.google.com/p/v8/) de Google , que se utiliza en el navegador Google Chrome y las versiones recientes del navegador Opera. Este también es el motor que utiliza [Node.js](http://nodejs.org).
+- [V8](https://code.google.com/p/v8/) de Google , que se utiliza en el navegador Google Chrome y las versiones recientes del navegador Opera. Este también es el motor que utiliza [Node.js](https://nodejs.org).
 - [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) utilizado en algunos navegadores WebKit como Apple Safari.
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq) en versiones antiguas de Opera.
+- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq) en versiones antiguas de Opera.
 - [Motor Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) utilizado en Internet Explorer (aunque el lenguaje que implementa formalmente se llama "JScript" para evitar problemas de marcas registradas).
 
-Cada uno de los motores de JavaScript de Mozilla expone una API pública que los desarrolladores de aplicaciones pueden utilizar para integrar JavaScript en su software. Hasta ahora, el entorno de alojamiento más común para JavaScript son los navegadores web. Los navegadores web suelen utilizar la API pública para crear **objetos del anfitrión** responsables de reflejar el [DOM](http://www.w3.org/DOM/) en JavaScript.
+Cada uno de los motores de JavaScript de Mozilla expone una API pública que los desarrolladores de aplicaciones pueden utilizar para integrar JavaScript en su software. Hasta ahora, el entorno de alojamiento más común para JavaScript son los navegadores web. Los navegadores web suelen utilizar la API pública para crear **objetos del anfitrión** responsables de reflejar el [DOM](https://www.w3.org/DOM/) en JavaScript.
 
-Otra aplicación común para JavaScript es como lenguaje de programación de lado del servidor (Web). Un servidor web JavaScript expondría objetos del anfitrión que representan una solicitud HTTP y objetos de respuesta, que luego podría manipular un programa JavaScript para generar páginas web dinámicamente. [Node.js](http://nodejs.org) es un ejemplo popular de esto.
+Otra aplicación común para JavaScript es como lenguaje de programación de lado del servidor (Web). Un servidor web JavaScript expondría objetos del anfitrión que representan una solicitud HTTP y objetos de respuesta, que luego podría manipular un programa JavaScript para generar páginas web dinámicamente. [Node.js](https://nodejs.org) es un ejemplo popular de esto.
 
 ## Recursos de JavaScript
 
@@ -45,9 +45,9 @@ Otra aplicación común para JavaScript es como lenguaje de programación de lad
 
 - [Rhino](/es/docs/Rhino)
   - : Información específica para la implementación de JavaScript escrita en Java (también conocido como Rhino).
-- {{JSxRef("../Language_Resources", "Recursos del lenguaje")}}
+- [Recursos del lenguaje](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
   - : Punteros a estándares JavaScript publicados.
-- {{JSxRef("../A_re-introduction_to_JavaScript", "Una reintroducción a JavaScript")}}
-  - : {{JSxRef("../Guide", "Guía de JavaScript")}} y {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
+- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Guide/Language_overview)
+  - : [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) y [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 **JavaScript®** es una marca comercial o una marca comercial registrada de Oracle en EE. UU. y otros países.

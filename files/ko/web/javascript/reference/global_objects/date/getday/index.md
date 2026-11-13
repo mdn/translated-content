@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 **`getDay()`** 메서드는 주어진 날짜의 현지 시간 기준 요일을 반환합니다. 0은 일요일을 나타냅니다. 현재의 일을 반환하려면 {{jsxref("Date.prototype.getDate()")}}를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/date-getday.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getDay()")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const day1 = birthday.getDay();
+// Sunday - Saturday : 0 - 6
+
+console.log(day1);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -32,7 +41,8 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-> **참고:** **참고:** 필요하다면, 요일의 이름(`"월요일"` 등)을 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}과 `options` 매개변수를 사용해 얻을 수 있습니다. 이 방법을 사용하면 국제화도 더 쉬워집니다.```js
+> [!NOTE]
+> **참고:** 필요하다면, 요일의 이름(`"월요일"` 등)을 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}과 `options` 매개변수를 사용해 얻을 수 있습니다. 이 방법을 사용하면 국제화도 더 쉬워집니다.```js
 > var options = { weekday: 'long'};
 > console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 > // Monday

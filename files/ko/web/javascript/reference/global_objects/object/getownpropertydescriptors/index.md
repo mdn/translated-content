@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 
 **`Object.getOwnPropertyDescriptors()`** 메서드는 주어진 객체의 모든 속성들의 설명자(descriptor)들을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+
+console.log(descriptors1.property1.writable);
+// Expected output: true
+
+console.log(descriptors1.property1.value);
+// Expected output: 42
+```
 
 ## 구문
 
@@ -69,11 +83,11 @@ Object.create(
 ```js
 function superclass() {}
 superclass.prototype = {
-  // 여기에 슈퍼 클래스의 생성자, 매서드, 속성을 정의합니다.
+  // 여기에 슈퍼 클래스의 생성자, 메서드, 속성을 정의합니다.
 };
 function subclass() {}
 subclass.prototype = Object.create(superclass.prototype, {
-  // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
+  // 여기에 서브클래스의 생성자, 메서드, 속성을 정의합니다.
 });
 ```
 

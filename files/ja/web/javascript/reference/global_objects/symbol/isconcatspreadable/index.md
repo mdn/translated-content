@@ -1,15 +1,29 @@
 ---
 title: Symbol.isConcatSpreadable
+short-title: isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Symbol.isConcatSpreadable`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.isConcatSpreadable` を表します。{{jsxref("Array.prototype.concat()")}} メソッドは、連結される各オブジェクトに対してこのシンボルを探し、配列風オブジェクトとして扱って配列要素を平坦化すべきかどうかを判断します。
 
-**`Symbol.isConcatSpreadable`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.isConcatSpreadable` を表します。{{jsxref("Array.prototype.concat()")}} メソッドは、連結される各オブジェクトに対してこのシンボルを探し、配列風オブジェクトとして扱って配列要素を平坦化すべきかどうかを判断します。
+{{InteractiveExample("JavaScript デモ: Symbol.isConcatSpreadable")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
+```js interactive-example
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// 予想される結果: Array ["a", "b", "c", 1, 2, 3]
+
+numeric[Symbol.isConcatSpreadable] = false;
+alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// 予想される結果: Array ["a", "b", "c", Array [1, 2, 3]]
+```
 
 ## 値
 
@@ -68,7 +82,8 @@ const fakeArray = {
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
-> **メモ:** `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。
+> [!NOTE]
+> `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。
 
 ## 仕様書
 

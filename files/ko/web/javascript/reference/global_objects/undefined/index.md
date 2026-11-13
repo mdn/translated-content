@@ -8,7 +8,21 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 전역 **`undefined`** 속성은 `{{Glossary("Undefined", "undefined")}}` 원시 값을 나타내며,
 JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## 값
 
@@ -55,10 +69,11 @@ if (x === undefined) {
 }
 ```
 
-> **참고:**: `x == undefined`는 `x`가 `null`일 때도 참이기 때문에, 엄격한 동등 연산자(표준 동등 연산자와 반대로)를 사용해야 합니다.
+> [!NOTE]
+> : `x == undefined`는 `x`가 `null`일 때도 참이기 때문에, 엄격한 동등 연산자(표준 동등 연산자와 반대로)를 사용해야 합니다.
 > 반면에, 엄격한 동등 연산자는 그렇지 않습니다. 이것은 `null`이 `undefined`하고 동일하지 않기 때문입니다.
 >
-> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness) 문서를 확인하세요.
+> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) 문서를 확인하세요.
 
 ### `typeof` 연산자와 `undefined`
 

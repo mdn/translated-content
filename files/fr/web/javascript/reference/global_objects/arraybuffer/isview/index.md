@@ -1,28 +1,37 @@
 ---
-title: ArrayBuffer.isView()
+title: "ArrayBuffer : méthode statique isView()"
+short-title: isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`ArrayBuffer.isView()`** détermine si la valeur passée est une des vues d'`ArrayBuffer`, comme les [objets de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un objet {{JSxRef("DataView")}}.
 
-La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: ArrayBuffer.isView()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
+```js interactive-example
+// Crée un objet ArrayBuffer avec une taille en octets
+const buffer = new ArrayBuffer(16);
+
+console.log(ArrayBuffer.isView(new Int32Array()));
+// Résultat attendu : true
+```
 
 ## Syntaxe
 
-```js
-ArrayBuffer.isView(arg);
+```js-nolint
+ArrayBuffer.isView(value)
 ```
 
 ### Paramètres
 
-- `arg`
-  - : L'argument dont on souhaite savoir s'il est une vue.
+- `value`
+  - : La valeur à vérifier.
 
 ### Valeur de retour
 
-`true` si la valeur passée en argument est une des vues du tableau `ArrayBuffer`, `false` sinon.
+`true` si l'argument donné est une des vues de {{JSxRef("ArrayBuffer")}}&nbsp;; sinon, `false`.
 
 ## Exemples
 
@@ -38,8 +47,8 @@ ArrayBuffer.isView(new Uint8Array()); // true
 ArrayBuffer.isView(new Float32Array()); // true
 ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 
-var buffer = new ArrayBuffer(2);
-var dv = new DataView(buffer);
+const buffer = new ArrayBuffer(2);
+const dv = new DataView(buffer);
 ArrayBuffer.isView(dv); // true
 ```
 
@@ -53,4 +62,4 @@ ArrayBuffer.isView(dv); // true
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Guide des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)

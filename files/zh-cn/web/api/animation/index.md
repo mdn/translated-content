@@ -47,7 +47,7 @@ slug: Web/API/Animation
 - {{domxref("Animation.finish()")}}
   - : 设置动画中止播放。
 - {{domxref("Animation.pause()")}}
-  - : 暂停播放动画。.
+  - : 暂停播放动画。
 - {{domxref("Animation.play()")}}
   - : 开始或恢复播放动画，或者如果之前完成，则重新开始动画。
 - {{domxref("Animation.reverse()")}}

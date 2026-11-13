@@ -3,11 +3,25 @@ title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`forEach()`** 方法按插入顺序对该 map 中的每个键/值对执行一次提供的函数。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+
+```js interactive-example
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+```
 
 ## 语法
 

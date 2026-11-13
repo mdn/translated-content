@@ -3,11 +3,24 @@ title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 
-{{JSRef}}
-
 **`Number.NEGATIVE_INFINITY`** 静态数据属性表示负无穷值。
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
 
 ## 值
 

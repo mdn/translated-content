@@ -3,8 +3,6 @@ title: Firefox 88 for developers
 slug: Mozilla/Firefox/Releases/88
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 88 の変更点をまとめています。Firefox 88 は、米国時間 2021 年 4 月 19 日にリリースされました。
 
 > [!NOTE]
@@ -14,7 +12,7 @@ slug: Mozilla/Firefox/Releases/88
 
 ### 開発者ツール
 
-- 生の応答ビューと整形済みの応答ビューを切り替えるボタンを実装しました ([Firefox バグ 1693147](https://bugzil.la/1693147))。例えば、[ネットワークリクエストの詳細 > 応答タブ](/ja/docs/Tools/Network_Monitor/request_details#response_tab) をご覧ください。
+- 生の応答ビューと整形済みの応答ビューを切り替えるボタンを実装しました ([Firefox バグ 1693147](https://bugzil.la/1693147))。例えば、[ネットワークリクエストの詳細 > 応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) をご覧ください。
 
 ### HTML
 
@@ -37,7 +35,7 @@ _変更なし。_
 ### JavaScript
 
 - [RegExp match indices](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) をサポートしました ([Firefox バグ 1519483](https://bugzil.la/1519483))。
-- [`Intl.DisplayNames()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) および [`Intl.ListFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) で、コンストラクターに渡す `options` が [オブジェクト](/ja/docs/Learn/JavaScript/Objects) であるかを厳密に確認して、文字列や他のプリミティブ値を使用した場合に例外が発生するようになりました ([Firefox バグ 1696881](https://bugzil.la/1696881))。
+- [`Intl.DisplayNames()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) および [`Intl.ListFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) で、コンストラクターに渡す `options` が [オブジェクト](/ja/docs/Learn_web_development/Core/Scripting/Object_basics) であるかを厳密に確認して、文字列や他のプリミティブ値を使用した場合に例外が発生するようになりました ([Firefox バグ 1696881](https://bugzil.la/1696881))。
 
 ### HTTP
 
@@ -51,7 +49,7 @@ _変更なし。_
 
 #### DOM
 
-- すでに [`aborted`](/ja/docs/Web/API/AbortSignal/aborted) が設定されている {{domxref("AbortSignal")}} を返す静的メソッド [`AbortSignal.abort()`](/ja/docs/Web/API/AbortSignal/abort) が使用可能になりました ([Firefox バグ 1698468](https://bugzil.la/1698468)).
+- すでに [`aborted`](/ja/docs/Web/API/AbortSignal/aborted) が設定されている {{domxref("AbortSignal")}} を返す静的メソッド [`AbortSignal.abort()`](/ja/docs/Web/API/AbortSignal/abort_static) が使用可能になりました ([Firefox バグ 1698468](https://bugzil.la/1698468)).
 
 ### WebDriver conformance (Marionette)
 

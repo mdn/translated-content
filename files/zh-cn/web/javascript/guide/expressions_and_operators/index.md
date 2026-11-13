@@ -3,7 +3,7 @@ title: 表达式与运算符
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 本章描述了 JavaScript 的表达式和运算符，包括了赋值、比较、算数、位运算、逻辑、字符串、三元，等等。
 
@@ -73,7 +73,7 @@ JavaScript 拥有二元和一元运算符和一个特殊的三元运算符（条
 
 #### 解构
 
-对于更复杂的赋值，[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
+对于更复杂的赋值，[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
 
 ```js
 var foo = ["one", "two", "three"];
@@ -89,23 +89,23 @@ var [one, two, three] = foo;
 
 ### 比较运算符
 
-[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用 Unicode 值。在多数情况下，如果两个操作数不是相同的类型，JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 `===` 和 `!==` 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符
+[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用 Unicode 值。在多数情况下，如果两个操作数不是相同的类型，JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 `===` 和 `!==` 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符
 
 ```js
 var var1 = 3;
 var var2 = 4;
 ```
 
-| 运算符                                                                                                                                      | 描述                                                                                                                                                  | 返回 true 的示例                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                       | `3 == var1` `"3" == var1` `3 == '3'` |
-| [不等于 Not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                                   | 如果两边操作数不相等时返回 true                                                                                                                       | `var1 != 4 var2 != "3"`              |
-| [全等 Strict equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                                   | 两边操作数相等且类型相同时返回 true。参见 {{jsxref("Object.is")}} and [sameness in JS](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
-| [不全等 Strict not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                          | 两边操作数不相等或类型不同时返回 true。                                                                                                               | `var1 !== "3" 3 !== '3'`             |
-| [大于 Greater than](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator) (`>`)                        | 左边的操作数大于右边的操作数返回 true                                                                                                                 | `var2 > var1 "12" > 2`               |
-| [大于等于 Greater than or equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator) (`>=`) | 左边的操作数大于或等于右边的操作数返回 true                                                                                                           | `var2 >= var1 var1 >= 3`             |
-| [小于 Less than](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator) (`<`)                              | 左边的操作数小于右边的操作数返回 true                                                                                                                 | `var1 < var2 "2" < 12`               |
-| [小于等于 Less than or equal](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_or_equal_operator) (`<=`)       | 左边的操作数小于或等于右边的操作数返回 true                                                                                                           | `var1 <= var2 var2 <= 5`             |
+| 运算符                                                                                                                 | 描述                                                                                                                                                        | 返回 true 的示例                     |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [等于 Equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#equality) (`==`)                                           | 如果两边操作数相等时返回 true。                                                                                                                             | `3 == var1` `"3" == var1` `3 == '3'` |
+| [不等于 Not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#inequality) (`!=`)                                   | 如果两边操作数不相等时返回 true                                                                                                                             | `var1 != 4 var2 != "3"`              |
+| [全等 Strict equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#identity) (`===`)                                   | 两边操作数相等且类型相同时返回 true。参见 {{jsxref("Object.is")}} and [sameness in JS](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). | `3 === var1`                         |
+| [不全等 Strict not equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#nonidentity) (`!==`)                          | 两边操作数不相等或类型不同时返回 true。                                                                                                                     | `var1 !== "3" 3 !== '3'`             |
+| [大于 Greater than](/zh-CN/docs/Web/JavaScript/Reference/Operators#greater_than_operator) (`>`)                        | 左边的操作数大于右边的操作数返回 true                                                                                                                       | `var2 > var1 "12" > 2`               |
+| [大于等于 Greater than or equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator) (`>=`) | 左边的操作数大于或等于右边的操作数返回 true                                                                                                                 | `var2 >= var1 var1 >= 3`             |
+| [小于 Less than](/zh-CN/docs/Web/JavaScript/Reference/Operators#less_than_operator) (`<`)                              | 左边的操作数小于右边的操作数返回 true                                                                                                                       | `var1 < var2 "2" < 12`               |
+| [小于等于 Less than or equal](/zh-CN/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator) (`<=`)       | 左边的操作数小于或等于右边的操作数返回 true                                                                                                                 | `var1 <= var2 var2 <= 5`             |
 
 > [!NOTE]
 > （**=>**）不是运算符，而是[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的标记符号。
@@ -136,21 +136,21 @@ var var2 = 4;
 
 下表总结了 JavaScript 的位运算符。
 
-| Operator                                                                                     | Usage     | Description                                                                                                        |
-| -------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| 按位与 [AND](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1，否则返回 0.                                                      |
-| 按位或 [OR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1，否则返回 0.                                            |
-| 按位异或 [XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
-| 按位非 [NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT)   | `~ a`     | 反转被操作数的位。                                                                                                 |
-| 左移 [shift](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
-| 算术右移                                                                                     | `a >> b`  | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位。(译注：算术右移左边空出的位是根据最高位是 0 和 1 来进行填充的) |
-| 无符号右移 (左边空出位用 0 填充)                                                             | `a >>> b` | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位，并把左边空出的位都填充为 0                                     |
+| Operator                                                                   | Usage     | Description                                                                                                        |
+| -------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| 按位与 [AND](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_and)   | `a & b`   | 在 a,b 的位表示中，每一个对应的位都为 1 则返回 1，否则返回 0.                                                      |
+| 按位或 [OR](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_or)     | `a \| b`  | 在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1，否则返回 0.                                            |
+| 按位异或 [XOR](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_xor) | `a ^ b`   | 在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.                                               |
+| 按位非 [NOT](/zh-CN/docs/Web/JavaScript/Reference/Operators#bitwise_not)   | `~ a`     | 反转被操作数的位。                                                                                                 |
+| 左移 [shift](/zh-CN/docs/Web/JavaScript/Reference/Operators#left_shift)    | `a << b`  | 将 a 的二进制串向左移动 b 位，右边移入 0.                                                                          |
+| 算术右移                                                                   | `a >> b`  | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位。(译注：算术右移左边空出的位是根据最高位是 0 和 1 来进行填充的) |
+| 无符号右移 (左边空出位用 0 填充)                                           | `a >>> b` | 把 a 的二进制表示向右移动 b 位，丢弃被移出的所有位，并把左边空出的位都填充为 0                                     |
 
 #### 位逻辑运算符
 
 概念上来讲，位逻辑运算符工作流程如下：
 
-- 操作数被转换为 32bit 整數，以位序列（0 和 1 组成）表示。若超過 32bits，則取低位 32bit，如下所示：
+- 操作数被转换为 32bit 整数，以位序列（0 和 1 组成）表示。若超过 32bits，则取低位 32bit，如下所示：
 
 ```plain
   Before: 11100110111110100000000000000110000000000001
@@ -190,11 +190,11 @@ var var2 = 4;
 
 逻辑运算符常用于布尔（逻辑）值之间; 当操作数都是布尔值时，返回值也是布尔值。不过实际上`&&`和`||`返回的是一个特定的操作数的值，所以当它用于非布尔值的时候，返回值就可能是非布尔值。逻辑运算符的描述如下。
 
-| 运算符                                                                                         | 范例               | 描述                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) `(&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
-| [逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) (`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
-| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) `(!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
+| 运算符                                                                       | 范例               | 描述                                                                                                                                                                      |
+| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators#logical_and) `(&&`)  | `expr1 && expr2`   | (逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回`expr2`。因此`，&&`用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.                           |
+| [逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators#logical_or) (`\|\|`) | `expr1 \|\| expr2` | (逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回`expr2`。因此，\|\| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。 |
+| [逻辑非](/zh-CN/docs/Web/JavaScript/Reference/Operators#logical_not) `(!)`   | `!expr`            | (逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。                                                                                                          |
 
 能被转换为`false`的值有`null`, `0`, `NaN`, 空字符串 ("") 和`undefined`。（译者注：也可以称作”falsy“）
 
@@ -337,7 +337,7 @@ if (3 in trees) {
 }
 ```
 
-如果想让数组中存在一个元素但是是`undefined`值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
+如果想让数组中存在一个元素但是 `undefined` 值，使用`undefined`关键字而不是`delete`操作。如下： `trees[3] 分配一个 undefined`,但是这个数组元素仍然存在：
 
 ```js
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -526,7 +526,7 @@ if (theDay instanceof Date) {
 | assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
 | comma                  | `,`                                       |
 
-上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 [JavaScript 参考手册](/zh-CN/docs/JavaScript/Reference/Operators/Operator_precedence)中找到。
+上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 [JavaScript 参考手册](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)中找到。
 
 ## 表达式
 
@@ -597,10 +597,10 @@ a * c + b * c; // 9
 
 Comprehensions 是一个带有实验性质的 JavaScript 特性，计划将在未来的 ECMAScript 版本中加入该特性。有两种类型的 comprehensions:
 
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : 数列数值推导（非标准用法）
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
-  - : 生成器数值推导（译者注：生成器数值推导标准化可能不大，推荐使用 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions)）
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
+  - : 生成器数值推导（译者注：生成器数值推导标准化可能不大，推荐使用 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)）
 
 Comprehensions 特性被许多编程语言所采用，该特性能够使你快速地通过一个已有的数组来创建出一个新的数组，比如：
 
@@ -633,4 +633,4 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 super([arguments]); // calls the parent constructor. super.functionOnParent([arguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

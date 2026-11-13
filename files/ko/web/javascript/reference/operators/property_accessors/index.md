@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 
 **속성 접근자**는 점 또는 괄호 표기법으로 객체의 속성에 접근할 수 있도록 해줍니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## 구문
 
@@ -101,7 +118,7 @@ console.log(object[bar]);
 
 ### `eval()` 주의사항
 
-JavaScript 초심자로써는 괄호 표기법을 사용할 수 있는 장소에 {{jsxref("eval", "eval()")}}을 남용하기 쉽습니다. 간혹 스크립트에서 다음과 같은 구문을 찾아볼 수 있습니다.
+JavaScript 초심자로써는 괄호 표기법을 사용할 수 있는 장소에 {{jsxref("Global_Objects/eval", "eval()")}}을 남용하기 쉽습니다. 간혹 스크립트에서 다음과 같은 구문을 찾아볼 수 있습니다.
 
 ```js
 x = eval("document.forms.form_name.elements." + strFormControl + ".value");

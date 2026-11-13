@@ -3,11 +3,18 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef}}
-
 **`match()`** 方法检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的结果。
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## 语法
 
@@ -18,7 +25,6 @@ match(regexp)
 ### 参数
 
 - `regexp`
-
   - : 一个正则表达式对象或者任何具有 [`Symbol.match`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) 方法的对象。
 
     如果 `regexp` 不是 `RegExp` 对象并且对象上无 `Symbol.match` 方法，则会使用 `new RegExp(regexp)` 将其隐式地转换为 {{jsxref("RegExp")}}。

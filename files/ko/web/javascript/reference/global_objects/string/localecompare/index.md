@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 **`localeCompare()`** 메서드는 참조 문자열이 정렬 순으로 지정된 문자열 앞 혹은 뒤에 오는지 또는 동일한 문자열인지 나타내는 수치를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 새로운 `locales` 인수와 `options` 인수를 사용하면 정렬에 사용될 언어를 지정하고 함수의 동작을 사용자 정의할 수 있습니다.
 `locales`와 `options`의 인수를 무시하는 오래된 구현에서는 사용되는 locale과 정렬 순서는 완전히 구현에 의존합니다.
@@ -25,13 +35,12 @@ localeCompare(compareString, locales, options);
 - `compareString`
   - `referenceStr`가 비교되는 문자열.
 - `locales`와 `options`
-
   - 이러한 인수는 함수의 동작을 사용자 정의하여 응용 프로그램에서 포맷 규칙을 사용할 언어를 지정합니다.
     `"locales"`와 `"options"`의 인자를 무시하는 구현에서는 사용되는 로케일과 반환되는 문자열의 형식은
     완전히 구현에 의존합니다.
 
     매개변수의 상세 및 사용 방법은 [`Intl.Collator()`
-    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)를 참조하세요.
+    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)를 참조하세요.
 
 ### 반환 값
 
@@ -52,8 +61,8 @@ localeCompare(compareString, locales, options);
 
 ## 성능
 
-큰 배열의 정렬과 같이 대량의 문자열을 비교하는 경우, {{jsxref("Global_Objects/Collator", "Intl.Collator")}} 객체를 작성하고
-해당 {{jsxref("Collator.prototype.compare", "compare")}} 프로퍼티가 제공하는 함수를 사용하는 것이 좋습니다.
+큰 배열의 정렬과 같이 대량의 문자열을 비교하는 경우, {{jsxref("Intl/Collator", "Intl.Collator")}} 객체를 작성하고
+해당 {{jsxref("Intl/Collator/compare", "compare")}} 프로퍼티가 제공하는 함수를 사용하는 것이 좋습니다.
 
 ## 예시
 
@@ -142,4 +151,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## 같이 보기
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 
 **`[@@split]()`** метод делит объект {{jsxref("String")}} в массив строк, путём разбиения строки на подстроки.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.split](str, limit) {
+    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
+    return result.map((x) => `(${x})`);
+  }
+}
+
+console.log("2016-01-02".split(new RegExp1("-")));
+// Expected output: Array ["(2016)", "(01)", "(02)"]
+
+console.log("2016-01-02".split(new RegExp("-")));
+// Expected output: Array ["2016", "01", "02"]
+```
 
 ## Синтаксис
 
@@ -82,8 +97,8 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 ## Смотрите также
 
 - {{jsxref("String.prototype.split()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.match", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

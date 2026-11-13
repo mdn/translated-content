@@ -21,11 +21,11 @@ formData.has(name);
 ### Parameters
 
 - `name`
-  - : 테스트 하려는 키의 이름을 나타내는 {{domxref("USVString")}} 입니다.
+  - : 테스트 하려는 키의 이름을 나타내는 {{jsxref("String")}} 입니다.
 
 ### Returns
 
-{{domxref("Boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## Example
 
@@ -54,6 +54,6 @@ formData.has("username"); // Returns true
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

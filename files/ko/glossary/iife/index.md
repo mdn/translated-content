@@ -147,6 +147,5 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 
 - 위키피디아의 [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 - [Glossary](/ko/docs/Glossary)
-
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

@@ -22,9 +22,7 @@ var node = document.importNode(externalNode, deep);
 - _externalNode_
   - : Внешний `Node` или `DocumentFragment`, который импортируется в настоящий документ.
 - _deep_
-
   - : Булеан, контролирующий, необходимо ли импортировать всё DOM поддерево узла _externalNode_.
-
     - Если _deep_ установлен в `true`, _узел externalNode_ и все его потомки будут скопированы.
     - Если _deep_ установлен в `false`, импортируется только _externalNode_ — новый узел не будет содержать потомков.
 
@@ -44,7 +42,7 @@ document.getElementById("container").appendChild(newNode);
 
 ## Notes
 
-Nodes from external documents should be cloned using [`document.importNode()`](/ru/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/ru/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ru/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+Nodes from external documents should be cloned using [`document.importNode()`](/ru/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/ru/docs/Web/API/Document/adoptNode)) before they can be inserted into the current document. For more on the [`Node.ownerDocument`](/ru/docs/Web/API/Node/ownerDocument) issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.
 

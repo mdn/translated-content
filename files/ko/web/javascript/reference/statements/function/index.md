@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Statements/function
 
 {{jsxref("Function")}} 생성자나 {{jsxref("Operators/function", "함수 표현식(function expression)")}}을 사용해서 정의할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## 구문
 

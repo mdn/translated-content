@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 突出显示（选择）一个或多个标签页。通过窗口 ID 和一系列标签索引来指定标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,13 +20,10 @@ let highlighting = browser.tabs.highlight(
 ### 参数
 
 - `highlightInfo`
-
   - : `object`。
-
     - `windowId` {{optional_inline}}
       - : `integer`。包含要突出显示标签页的窗口的 ID。
     - `populate` {{optional_inline}}
-
       - : `boolean`。默认为 `true`。如果设置为 `false`，则 {{WebExtAPIRef('windows.Window')}} 对象不会包含 `tabs` 属性，该属性包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。
 
         > [!NOTE]
@@ -48,7 +43,7 @@ let highlighting = browser.tabs.highlight(
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-highlight) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-highlight) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

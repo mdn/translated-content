@@ -19,7 +19,7 @@ L'interface **`InputEvent`** représente un évènement notifiant la modificatio
 Cette interface hérite des propriétés de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.
 
 - {{domxref("InputEvent.data")}}{{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} avec les caractères insérést. Cela peut être une chaîne vide si la modification n'insère pas de texte (comme la suppression de caractères, par exemple).
+  - : Retourne une {{jsxref("String")}} avec les caractères insérést. Cela peut être une chaîne vide si la modification n'insère pas de texte (comme la suppression de caractères, par exemple).
 - {{domxref("InputEvent.dataTransfer")}}{{readonlyinline}}
   - : Retourne un objet {{domxref("DataTransfer")}} contenant des informations sur des données de texte riche (_richtext_) ou brut (_plaintext_) étant ajoutées ou supprimées du contenu éditable.
 - {{domxref("InputEvent.inputType")}}{{readonlyinline}}
@@ -44,5 +44,5 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Voir aussi
 
-- L'évènement [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
-- L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event)
+- L'évènement [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
+- L'évènement [`input`](/fr/docs/Web/API/Element/input_event)

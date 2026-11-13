@@ -40,7 +40,7 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 
 ## Methods
 
-_{{domxref("AudioNode")}}_ 를 부모로 가지는 매서드.
+_{{domxref("AudioNode")}}_ 를 부모로 가지는 메서드.
 
 - {{domxref("AudioBufferSourceNode.start()")}}
   - : 음원이 재생되는 시작되는 시점.
@@ -52,7 +52,7 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 매서드.
 이 예제는 two-second buffer를 생성하여 화이트 노이즈로 채워 이를 `AudioBufferSourceNode을 통해 재생한다.`
 
 > [!NOTE]
-> You can also [run the code live](http://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
+> You can also [run the code live](https://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

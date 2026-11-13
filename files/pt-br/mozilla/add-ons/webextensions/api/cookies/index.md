@@ -7,41 +7,33 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 Habilita extensões a obter e atribuir cookies, e ser notificado quando eles mudam.
 
-Para usar esta API, você precisa incluir a [API permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json), bem como a [host permissions](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para os sites cujos cookies você precisa acessar. Veja [cookie Permissions](/pt-BR/Add-ons/WebExtensions/API/cookies#Permissions).
+Para usar esta API, você precisa incluir a [API permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json), bem como a [host permissions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) para os sites cujos cookies você precisa acessar. Veja [cookie Permissions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions).
 
 ## Permissões
 
-Para usar esta API, uma extensão especificar a "cookies" [API permission](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) em seu arquivo manifest, junto com a [host permissions](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
+Para usar esta API, uma extensão especificar a "cookies" [API permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) em seu arquivo manifest, junto com a [host permissions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
 
 - `http://*.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler um cookie inseguro para `www.example.com`, com qualquer caminho.
     - Escrever um cookie seguro ou inseguro para `www.example.com`, com qualquer caminho.
 
     _não_ pode:
-
     - Ler um cookie seguro de `www.example.com`.
 
 - `http://www.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler um cookie não seguro para `www.example.com`, com qualquer caminho.
     - Ler um cookie não seguro para `.example.com`, com qualquer caminho.
     - Escrever um cookie seguro ou não seguro para `www.example.com` com qualquer caminho.
     - Escrever um cookie seguro ou não seguro para `.example.com` com qualquer caminho.
 
     _não_ pode:
-
     - Ler ou escrever um cookie para `foo.example.com`.
     - Ler ou escrever um cookie para `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler ou escrever um cookie seguro ou inseguro para `www.example.com` com qualquer caminho.
 
 ## Isolamento de primera parte
@@ -54,7 +46,7 @@ Cookies de terceiros são aquleles enviados por sites em que você está num dad
 
 Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da [bbc.com](http://bbc.com) com o cookie da [cnn.com](http://cnn.com), então o rastreador não pode monitorar um simples usuários através de ambos os sites.
 
-Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração [`firstPartyIsolate`](/pt-BR/Add-ons/WebExtensions/API/privacy/websites#Properties) atribuida a API [`privacy`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/privacy). Observe que este isolamento de primeira parte está habilitado por padrão no navegador [Tor](https://www.torproject.org/).
+Isolamento de primera parte pode ser habilitado diretamente pelo usuário ajustando a configuração do navegador , e pode ser atribuia do extensões usando a configuração [`firstPartyIsolate`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#properties) atribuida a API [`privacy`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/privacy). Observe que este isolamento de primeira parte está habilitado por padrão no navegador [Tor](https://www.torproject.org/).
 
 Na API `cookies`, o domínio de primeira parte é representado usando o atributo `firstPartyDomain`. Todos os cookies atribuidos enquanto o isolamento de primeira parte está habilitado terá este atributo atribuito para o domínio da página original. No exemplo acima, deveria ser "[bbc.com](http://bbc.com)" para um cookie e "[cnn.com](http://cnn.com)" para outro. Todos os cookies atribuidos pelos websites enquanto o isolamento de primeira parte estiver desabilitado terão sua propriedade atribuida a uma string vazia.
 
@@ -97,7 +89,8 @@ Quando o isolamento de primeira parte está desabilitado, o parâmetro `firstPar
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
+> [!NOTE]
+> **Agradecimentos**Esta API é baseada na API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) do Chromium. Esta documentação é derivada do [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) no código do Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

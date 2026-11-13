@@ -5,7 +5,7 @@ slug: Web/API/IDBObjectStore/keyPath
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}}的只读属性 keyPath 接口返回当前 objectStore 的[key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath)。
+{{domxref("IDBObjectStore")}}的只读属性 keyPath 接口返回当前 objectStore 的[key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath)。
 
 什么是 keyPath 呢？在 indexedDB 中，一条记录就是一个 object，object 里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是 keyPath，属性值就是 key。在用 indexedDB 的 get 方法时，提供 key，而不需要指定 keyPath，因为 get 方法把参数作为这个最主要的属性的值，在数据库中进行查询。（译者注）
 

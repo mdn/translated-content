@@ -3,11 +3,23 @@ title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 ---
 
-{{JSRef}}
-
 **`toLocaleTimeString()`** 方法返回该日期对象时间部分的字符串，该字符串格式因语言而异。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法仅是调用了 `Intl.DateTimeFormat` 方法。
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## 语法
 
@@ -24,13 +36,11 @@ toLocaleTimeString(locales, options)
 在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，这些参数与构造函数的参数完全对应。而对于不支持 `Intl.DateTimeFormat` 的实现，则要求函数忽略这两个参数，使得函数使用的区域（locale）以及返回的字符串的格式完全取决于实现。
 
 - `locales` {{optional_inline}}
-
   - : 表示缩写语言代码（BCP 47 language tag）的字符串，或由此类字符串组成的数组。对应于 `Intl.DateTimeFormat()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 参数。
 
     在不支持 `Intl.DateTimeFormat` 的实现中，该参数会被忽略，并且通常会使用主机的区域设置。
 
 - `options` {{optional_inline}}
-
   - : 一个调整输出格式的对象。对应于 `Intl.DateTimeFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 参数。如果其 `dayPeriod`、`hour`、`minute`、`second` 和 `fractionalSecondDigits` 属性全是 undefined，则 `hour`、`minute`、`second` 这三个属性会被设置为 `"numeric"`。
 
     在不支持 `Intl.DateTimeFormat` 的实现中，该参数会被忽略。

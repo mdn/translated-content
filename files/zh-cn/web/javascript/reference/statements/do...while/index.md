@@ -5,11 +5,22 @@ l10n:
   sourceCommit: becca01d713f7f3c37f40ede7ee7c282312dfa4f
 ---
 
-{{jsSidebar("Statements")}}
-
 **`do...while`** 语句创建了一个循环，只要测试条件为 true，该循环就会执行指定语句。执行语句后会对条件进行评估，从而使指定语句至少执行一次。
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## 语法
 
@@ -58,7 +69,7 @@ console.log(result);
 ```js
 do {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     break;
   }
   const friends = user.getFriends();
@@ -78,7 +89,7 @@ do {
 ```js
 handleFriends: {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     break handleFriends;
   }
   const friends = user.getFriends();
@@ -97,7 +108,7 @@ handleFriends: {
 ```js
 function handleFriends() {
   if (!user.loggedIn) {
-    console.log("你未登陆");
+    console.log("你未登录");
     return;
   }
   const friends = user.getFriends();

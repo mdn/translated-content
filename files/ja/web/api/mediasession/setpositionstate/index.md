@@ -21,9 +21,7 @@ setPositionState(stateDict)
 ### 引数
 
 - `stateDict` {{optional_inline}}
-
   - : 文書の進行中のメディアの再生位置と再生速度に関する更新情報を提供するオブジェクトです。このオブジェクトが空の場合、既存の再生状態情報はクリアされます。このオブジェクトは、以下の引数を格納した辞書です。
-
     - `duration`
       - : 浮動小数点数の値で、現在のメディアの全体の再生時間を秒単位で示します。これは常に正の値であるべきであり、正の無限大 ([`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) は、ライブストリームのような、終わりを定義しないメディアを示します。
     - `playbackRate`
@@ -38,9 +36,7 @@ setPositionState(stateDict)
 ### 例外
 
 - {{jsxref("TypeError")}}
-
   - : このエラーは、さまざまな状況で発生する可能性があります。
-
     - 指定したオブジェクトの `duration` が見つからないか、負の値、または `null` である。
     - その `position` が見つからないか null であるか、または `duration` よりも大きいか負の値である。
     - `playbackRate` がゼロである。

@@ -3,8 +3,6 @@ title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 
-{{JSRef}}
-
 **`TypeError`**（类型错误）对象通常（但并不只是）用来表示值的类型非预期类型时发生的错误。
 
 以下情况会抛出 `TypeError`：
@@ -13,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypeError
 - 尝试修改无法更改的值；或
 - 尝试以不适当的方法使用一个值。
 
-`TypeError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{domxref("structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
+`TypeError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
 ## 构造函数
 

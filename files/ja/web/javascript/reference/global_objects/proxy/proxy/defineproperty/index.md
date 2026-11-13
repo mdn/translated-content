@@ -1,15 +1,35 @@
 ---
 title: handler.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`handler.defineProperty()`** は、オブジェクトの `[[DefineOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.defineProperty()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.defineProperty()", "taller")}}
+
+```js interactive-example
+const handler = {
+  defineProperty(target, key, descriptor) {
+    invariant(key, "define");
+    return true;
+  },
+};
+
+function invariant(key, action) {
+  if (key[0] === "_") {
+    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+  }
+}
+
+const monster = {};
+const proxy = new Proxy(monster, handler);
+
+console.log((proxy._secret = "easily scared"));
+// 予想される結果: Error: Invalid attempt to define private "_secret" property
+```
 
 ## 構文
 
@@ -17,13 +37,12 @@ l10n:
 new Proxy(target, {
   defineProperty(target, property, descriptor) {
   }
-});
+})
 ```
 
 ### 引数
 
-次の引数が `defineProperty()` メソッドに渡されます。
-`this` はハンドラーにバインドされます。
+次の引数が `defineProperty()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
 - `target`
   - : ターゲットオブジェクトです。
@@ -34,7 +53,9 @@ new Proxy(target, {
 
 ### 返値
 
-`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型)を返す必要があります。
+`defineProperty()` メソッドはプロパティが正しく定義されたかどうかを表す[論理値](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)を返す必要があります。それ以外の値は[論理値に強制変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#論理型への変換)。
+
+多くの操作（{{jsxref("Object.defineProperty()")}} および {{jsxref("Object.defineProperties()")}} を含む）は、`[[DefineOwnProperty]]` 内部メソッドが `false` を返す場合、{{jsxref("TypeError")}} が発生します。
 
 ## 解説
 
@@ -49,13 +70,16 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、プロキシーは {{jsxref("TypeError")}} を発生します。
+プロキシーの `[[DefineOwnProperty]]` 内部メソッドは、ハンドラーの定義が以下の不変条件のいずれかに違反する場合、{{jsxref("TypeError")}} が発生します。
 
-- ターゲットオブジェクトが拡張不可の場合、プロパティは追加できません。
-- ターゲットオブジェクトの構成不可の独自のプロパティとして存在しない場合、プロパティは構成不可とみなされ、追加や変更ができません。
-- ターゲットオブジェクトの対応する構成可能なプロパティが存在する場合、プロパティは構成不可にすることができません。
-- 対応するターゲットオブジェクトのプロパティが存在する場合、`Object.defineProperty(target, prop, descriptor)` は例外をスローしません。
-- strict モードでは、`defineProperty` ハンドラーから `false` が返ってきた場合、{{jsxref("TypeError")}} 例外をスローします。
+- プロパティを追加することはできません。対象オブジェクトが拡張可能でない場合です。つまり、 {{jsxref("Reflect.isExtensible()")}} が `target` 上のプロパティに対して `false` を返し、 {{jsxref("Reflect.getOwnPropertyDescriptor()")}} が `target` 上のプロパティに対して `undefined` を返す場合、トラップは偽値を返す必要があります。
+- プロパティは、ターゲットオブジェクトに対応する構成不可な自身のプロパティが存在しない限り、構成不可にできません。つまり、{{jsxref("Reflect.getOwnPropertyDescriptor()")}} が `target` 上のプロパティに対して `undefined` または `configurable: true` を返す場合、かつ `descriptor.configurable` が `false` である場合、トラップは偽値を返す必要があります。
+- 構成不可プロパティは、ターゲットオブジェクトに該当する構成不可かつ非書き込み可能の固有プロパティが存在する場合を除き、非書き込み可能ではありません。つまり、 {{jsxref("Reflect.getOwnPropertyDescriptor()")}} が `target` 上のプロパティに対して `configurable: false, writable: true` を返し、 `descriptor.writable` が `false` である場合、トラップは偽値を返す必要があります。
+- プロパティが対象オブジェクトに対応するプロパティを保有する場合、対象オブジェクトのプロパティの記述子は `descriptor` と互換性がある必要があります。つまり、 `target` を通常のオブジェクトと仮定し、 `Object.defineProperty(target, property, descriptor)` がエラーを発生すると仮定した場合、トラップは偽値を返す必要があります。 `Object.defineProperty()` の参照には詳細な情報が含まれていますが、簡単に言うと、ターゲットプロパティが構成不可の場合、以下の条件が満たされる必要があります。
+  - `configurable`、`enumerable`、`get`、`set` は変更できません
+  - プロパティはデータとアクセサーの間で切り替えることができません
+  - `writable` 属性は `true` から `false` に変更できます
+  - `value` 属性は `writable` が `true` の場合にのみ変更できます
 
 ## 例
 

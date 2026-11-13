@@ -48,10 +48,10 @@ var x = function* (y) {
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions", "Functions and function scope")}}

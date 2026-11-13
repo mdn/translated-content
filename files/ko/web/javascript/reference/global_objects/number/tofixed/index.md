@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 **`toFixed()`** 메서드는 숫자를 고정 소수점 표기법(fixed-point notation)으로 표시합니다.
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial("1.23e+5"));
+// Expected output: "123000.00"
+```
 
 ## 구문
 

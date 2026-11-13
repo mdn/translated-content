@@ -164,5 +164,5 @@ console.log(matches[1]);
 
 ## Смотрите также
 
-- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

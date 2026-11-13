@@ -3,11 +3,30 @@ title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
 
-{{JSRef}}
-
 La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  defineProperty(target, key, descriptor) {
+    invariant(key, "define");
+    return true;
+  },
+};
+
+function invariant(key, action) {
+  if (key[0] === "_") {
+    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+  }
+}
+
+const monster1 = {};
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log((proxy1._secret = "easily scared"));
+// Expected output: Error: Invalid attempt to define private "_secret" property
+```
 
 ## Syntaxe
 
@@ -106,6 +125,6 @@ Object.defineProperty(p, "name, {
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}

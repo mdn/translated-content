@@ -43,5 +43,5 @@ Float64Array.BYTES_PER_ELEMENT; // 8
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

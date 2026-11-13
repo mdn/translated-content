@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 
 El método **`Number.parseFloat()`** analiza un argumento y devuelve un número de punto flotante. Si un número no se puede analizar a partir del argumento, devuelve {{jsxref("NaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: 0
+```
 
 ## Sintaxis
 
@@ -30,7 +45,7 @@ O {{jsxref("NaN")}} cuando el primer carácter que no es un espacio en blanco no
 
 ### Number.parseFloat vs parseFloat
 
-Este método tiene la misma funcionalidad que la función global {{jsxref("parseFloat", "parseFloat()")}}:
+Este método tiene la misma funcionalidad que la función global {{jsxref("parseFloat()")}}:
 
 ```js
 Number.parseFloat === parseFloat; // true
@@ -38,7 +53,7 @@ Number.parseFloat === parseFloat; // true
 
 Este método también es parte de ECMAScript 2015. (Su propósito es la modularización de globales).
 
-Consulte {{jsxref("parseFloat", "parseFloat()")}} para obtener más detalles y ejemplos.
+Consulte {{jsxref("parseFloat()")}} para obtener más detalles y ejemplos.
 
 ## Especificaciones
 
@@ -52,4 +67,4 @@ Consulte {{jsxref("parseFloat", "parseFloat()")}} para obtener más detalles y e
 
 - [Polyfill de `Number.parseFloat` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}: El objeto al que pertenece este método.
-- El método global {{jsxref("parseFloat", "parseFloat()")}}.
+- El método global {{jsxref("parseFloat()")}}.

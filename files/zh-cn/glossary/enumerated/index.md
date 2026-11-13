@@ -5,15 +5,13 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在计算机科学中，**枚举**类型是一种由一组有限的具名值组成的数据类型。
 
 ## HTML 枚举属性
 
-在 HTML 中，[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)是具有一组有限、预定义文本值的属性。例如，HTML [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 全局属性有三个有效值：`ltr`、`rtl` 和 `auto`。
+在 HTML 中，[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)是具有一组有限、预定义文本值的属性。例如，HTML [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 全局属性有三个有效值：`ltr`、`rtl` 和 `auto`。
 
-每个枚举属性在属性存在但没有值（值缺失）时，或属性被赋值为无效值时，会被赋值为默认值。与 HTML [布尔](/zh-CN/docs/Glossary/Boolean)属性不同的是，HTML 枚举属性在属性存在时，无论值是存在、省略还是无效，其都为 true。例如，HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 全局属性有两个有效关键字：`true` 和 `false`。如果属性存在但未设置值，则值为 `true`。如果设置了值但无效，例如 `contenteditable="contenteditable"`，则该值将映射到第三种状态 `inherit`。
+每个枚举属性在属性存在但没有值（值缺失）时，或属性被赋值为无效值时，会被赋值为默认值。与 HTML [布尔](/zh-CN/docs/Glossary/Boolean)属性不同的是，HTML 枚举属性在属性存在时，无论值是存在、省略还是无效，其都为 true。例如，HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 全局属性有两个有效关键字：`true` 和 `false`。如果属性存在但未设置值，则值为 `true`。如果设置了值但无效，例如 `contenteditable="contenteditable"`，则该值将映射到第三种状态 `inherit`。
 
 ## ARIA 枚举属性
 
@@ -28,5 +26,5 @@ l10n:
 ## 参见
 
 - [布尔](/zh-CN/docs/Glossary/Boolean)
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - HTML 标准中的[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

@@ -16,7 +16,7 @@ slug: Web/API/Service_Worker_API
 서비스 워커는 보안 상의 이유로 HTTPS에서만 동작합니다. 네트워크 요청을 수정할 수 있다는 점에서 중간자 공격에 굉장히 취약하기 때문입니다. 또한 Firefox에서는 사생활 보호 모드에서 Service Worker API에 접근할 수 없습니다.
 
 > [!NOTE]
-> 서비스 워커는 모든 것을 세부적으로 통제할 수 있다는 점에서 [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) 등 오프라인이나 캐시의 이전 시도보다 우위를 점합니다. 서비스 워커는 개발자의 의도를 짐작하지 않으며, 예측과 빗나갔을 때 망가지지도 않기 때문입니다.
+> 서비스 워커는 모든 것을 세부적으로 통제할 수 있다는 점에서 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) 등 오프라인이나 캐시의 이전 시도보다 우위를 점합니다. 서비스 워커는 개발자의 의도를 짐작하지 않으며, 예측과 빗나갔을 때 망가지지도 않기 때문입니다.
 
 > [!NOTE]
 > 서비스 워커는 응답을 기다린 후 성공 또는 실패 액션을 실행하는 경우가 많으므로 [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 적극적으로 사용합니다.
@@ -52,7 +52,8 @@ slug: Web/API/Service_Worker_API
 
 서비스 워커는 {{domxref("FetchEvent")}} 이벤트를 사용해 요청에 응답할 수 있습니다. {{domxref("FetchEvent.respondWith()")}} 메서드를 사용해 요청에 대한 응답을 원하는 방식으로 자유롭게 바꾸세요.
 
-> **참고:** `install`과 `activate` 이벤트 처리는 시간이 꽤 걸릴 수도 있기에, 서비스 워커 명세는 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 메서드를 제공합니다. `install`이나 `activate`에서 `waitUntil()`을 호출하면서 매개변수로 프로미스를 제공하면, 성공적으로 이행하기 전까지는 기능 이벤트가 발생하지 않습니다.
+> [!NOTE]
+> `install`과 `activate` 이벤트 처리는 시간이 꽤 걸릴 수도 있기에, 서비스 워커 명세는 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 메서드를 제공합니다. `install`이나 `activate`에서 `waitUntil()`을 호출하면서 매개변수로 프로미스를 제공하면, 성공적으로 이행하기 전까지는 기능 이벤트가 발생하지 않습니다.
 
 기본적인 첫 서비스 워커를 차근차근 만드는 방법은 [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)에서 읽어볼 수 있습니다.
 
@@ -129,4 +130,4 @@ slug: Web/API/Service_Worker_API
 - [서비스 워커 기초 코드 예제](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/basic_usage)
+- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

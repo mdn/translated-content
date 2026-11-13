@@ -3,8 +3,6 @@ title: 侧边栏
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 ---
 
-{{MDNSidebar}}
-
 MDN 支持在页面中添加侧边栏；这些框是包含到 MDN 上的其他页面或站外页面链接的可分层列表。本文描述了如何创建侧边栏。
 
 ## 侧边栏语法

@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
 
-{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
+一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
 
@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Functions
 
 在 JavaScript 中，每个函数其实都是一个`Function`对象。查看{{jsxref("Function")}}页面`了解其`属性和方法。
 
-如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用[new](/zh-CN/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
+如果一个函数中没有使用 return 语句，则它默认返回`undefined`。要想返回一个特定的值，则函数必须使用 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句来指定一个要返回的值。(使用[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字调用一个[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)除外)。
 
 调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数参数名叫作形参。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应形参的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应形参会和该实参指向同一个对象。假如函数在内部改变了对应形参的值，返回后，实参指向的对象的值也会改变：
 
@@ -45,7 +45,7 @@ myFunc(mycar);
 console.log(mycar.brand);
 ```
 
-在函数执行时，[`this` 关键字](/zh-CN/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用[arguments.callee](/zh-CN/JavaScript/Reference/Functions_and_function_scope/arguments/callee)属性 (**[严格模式](/zh-CN/JavaScript/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
+在函数执行时，[`this` 关键字](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用[arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)属性 (**[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)**下不可用)，如果该函数是一个匿名函数，则你只能使用后者。
 
 ## 函数定义
 
@@ -53,7 +53,7 @@ console.log(mycar.brand);
 
 ### 函数声明 (函数语句)
 
-有一个特殊的语法来声明函数 (查看[函数语句](/zh-CN/JavaScript/Reference/Statements/function)了解详情)：
+有一个特殊的语法来声明函数 (查看[函数语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)了解详情)：
 
 ```plain
 function name([param[, param[, ... param]]]) { statements }
@@ -101,7 +101,7 @@ var myFunction = function namedFunction() {
 
 可以看到，上面的两个例子都不以 function 开头。不以 function 开头的函数语句就是函数表达式定义。
 
-当函数只使用一次时，通常使用**IIFE (_Immediately Invokable Function Expressions_)。**
+当函数只使用一次时，通常使用 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即调用函数表达式）。
 
 ```js
 (function () {
@@ -174,7 +174,8 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### 生成器函数的构造函数
 
-> **备注：** `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数)).
+> [!NOTE]
+> `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
 
 > [!NOTE]
 > 不推荐使用构造器函数的构造函数 (`GeneratorFunction` constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。
@@ -200,16 +201,15 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 
 ### 剩余参数
 
-剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余参数语法允许将数量不限的参数描述成一个数组。参见：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
 
 ## `arguments`对象
 
 你可以参阅在函数里使用`arguments`对象的函数参数。参见：[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-- [`arguments`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
-- [`arguments.callee`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
-- [`arguments.caller`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller){{Deprecated_Inline}} : 调用当前执行函数的函数。
-- [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): 传给函数的参数的数目。
+- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments): 一个包含了传递给当前执行函数参数的类似于数组的对象。
+- [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_Inline}}: 当前正在执行的函数。
+- [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length): 传给函数的参数的数目。
 
 ## 方法函数定义
 
@@ -284,7 +284,7 @@ alert(x); // throws an error
 
 正如第四个例子所展示的那样，函数名与被函数赋值的变量是不相同的。彼此之间没有关系。函数声明同时也创建了一个和函数名相同的变量。因此，与函数表达式定义不同，以函数声明定义的函数能够在它们被定义的作用域内通过函数名而被访问到：
 
-使用用 '`new Function'定义的函数没有函数名。` 然而，在 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 `alert(new Function())` 输出：
+使用 `new Function` 定义的函数没有函数名。不过，其序列化形式看起来好像它拥有一个名叫“anonymous”的名称一样。比如，使用 `alert(new Function())` 输出：
 
 ```js
 function anonymous() {}
@@ -487,4 +487,4 @@ if ("function" === typeof window.noFunc) {
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
 - {{jsxref("Functions/Method_definitions", "Method definitions")}}
-- [Functions and function scope](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Functions and function scope](/zh-CN/docs/Web/JavaScript/Reference/Functions)

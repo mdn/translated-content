@@ -1,32 +1,38 @@
 ---
-title: Range.createContextualFragment()
+title: Range：createContextualFragment() 方法
 slug: Web/API/Range/createContextualFragment
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ApiRef("DOM")}}
 
-**`Range.createContextualFragment()`** 方法通过以 range 的开头（选定节点的父级）作为上下文节点来调用 HTML 片段解析算法 或者 XML 片段解析算法来返回 {{domxref("DocumentFragment")}}。如果 range 属于一个其 HTMLness bit 被设置了的 {{domxref("Document")}} 则会应用 HTML 片段解析算法。在 HTML 的情况下，如果上下文节点为 html，由于历史原因，将使用 body 作为上下文来调用片段解析算法。
+**`Range.createContextualFragment()`** 方法通过以范围的起始位置（即所选节点的*父*节点）作为上下文节点，调用 HTML 片段解析算法或 XML 片段解析算法，返回一个 {{domxref("DocumentFragment")}}。如果该范围属于一个已设置 HTMLness 位的 `Document`，则会使用 HTML 片段解析算法。在 HTML 的情况下，出于历史原因，如果上下文节点是 `html`，片段解析算法则会改为使用 `body` 作为上下文执行。
 
 ## 语法
 
-```plain
-documentFragment = range.createContextualFragment(tagString)
+```js-nolint
+createContextualFragment(tagString)
 ```
 
 ### 参数
 
 - `tagString`
-  - : 包含要转换为文档片段的文本和标签的文本。
+  - : 包含要转换为文档片段的文本和标签。
+
+### 返回值
+
+{{domxref("DocumentFragment")}} 对象。
 
 ## 示例
 
 ```js
-var tagString = "<div>I am a div node</div>";
-var range = document.createRange();
+const tagString = "<div>我是一个 div 节点</div>";
+const range = document.createRange();
 
-// 使文档中第一个 div 的父级成为上下文节点
+// 让文档中第一个 div 元素的父元素成为上下文节点
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.createContextualFragment(tagString);
+const documentFragment = range.createContextualFragment(tagString);
 document.body.appendChild(documentFragment);
 ```
 
@@ -38,6 +44,6 @@ document.body.appendChild(documentFragment);
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

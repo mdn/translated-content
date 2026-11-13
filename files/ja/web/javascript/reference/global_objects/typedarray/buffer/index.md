@@ -1,15 +1,23 @@
 ---
 title: TypedArray.prototype.buffer
+short-title: buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`buffer`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、構築時点にこの型付き配列が参照する {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-buffer.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.buffer", "shorter")}}
+
+```js interactive-example
+// ArrayBuffer をバイト単位のサイズで作成
+const buffer = new ArrayBuffer(8);
+const uint16 = new Uint16Array(buffer);
+
+console.log(uint16.buffer.byteLength);
+// 予想される結果: 8
+```
 
 ## 解説
 
@@ -47,5 +55,5 @@ console.log(arr.buffer === buffer); // true
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}

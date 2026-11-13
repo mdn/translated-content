@@ -1,15 +1,21 @@
 ---
 title: "String: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 l10n:
-  sourceCommit: f01f00dd9fb1dbb2af9c40c5b06421e883d71910
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`length`** データプロパティは、{{jsxref("String")}} オブジェクトの文字列長を UTF-16 コード単位の数で表します。
 
-{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.length", "shorter")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// 予想される結果: "Life, the universe and everything. Answer: 42"
+```
 
 ## 値
 
@@ -33,7 +39,7 @@ l10n:
 const str1 = "a".repeat(2 ** 29 - 24); // 成功する
 const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
 
-const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // このバッファのサイズは 512MiB
+const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // このバッファーのサイズは 512MiB
 const str = new TextDecoder().decode(buffer); // この文字列のサイズは 1GiB
 ```
 
@@ -41,7 +47,7 @@ const str = new TextDecoder().decode(buffer); // この文字列のサイズは 
 
 静的プロパティの `String.length` は文字列の長さとは関係なく、 `String` 関数の[アリティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length)（簡単に言えば、それが持つ形式的な引数の数）であり、1 です。
 
-`length` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)で分割し、文字ごとに反復処理をしてください。
+`length` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)で分割し、文字ごとに反復処理をしてください。
 
 ```js
 function getCharacterLength(str) {

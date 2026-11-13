@@ -20,19 +20,17 @@ l10n:
 - {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : バックグラウンドフェッチのIDを示す文字列。
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : アップロードされる総バイト数を表す {{jsxref("number")}}。
+  - : アップロードされる総バイト数を表す {{jsxref("Number")}}。
 - {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 送信に成功したバイト数を表す {{jsxref("number")}}。初期値は `0`。
+  - : 送信に成功したバイト数を表す {{jsxref("Number")}}。初期値は `0`。
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : ダウンロード全体のバイト数を表す {{jsxref("number")}}。これはバックグラウンドフェッチの登録時に設定される値です。設定されなかった場合は `0` となります。
+  - : ダウンロード全体のバイト数を表す {{jsxref("Number")}}。これはバックグラウンドフェッチの登録時に設定される値です。設定されなかった場合は `0` となります。
 - {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 今までにダウンロードされたバイト数を表す {{jsxref("number")}}。初期値は `0`。
+  - : 今までにダウンロードされたバイト数を表す {{jsxref("Number")}}。初期値は `0`。
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 初期状態では空文字列。完了時には `"success"` または `"failure"` という文字列。
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 下記文字列のいずれかの値をとります。
-
     - `""`
       - : バックグラウンドフェッチが完了していない、もしくは成功したとき。
     - `"aborted"`
@@ -47,7 +45,7 @@ l10n:
       - : バックグラウンドフェッチの登録時に指定された `downloadTotal` を超過したとき。
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : `recordsAvailable` フラグが設定されているかどうかを表す {{jsxref("boolean")}}。
+  - : `recordsAvailable` フラグが設定されているかどうかを表す {{jsxref("Boolean")}}。
 
 ## メソッド
 
@@ -63,7 +61,6 @@ l10n:
 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を用いて、または、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てて、これらイベントの発生を待ち受けてください。
 
 - [`progress`](/ja/docs/Web/API/BackgroundFetchRegistration/progress_event) {{Experimental_Inline}}
-
   - : 次のプロパティのいずれかに変化があったとき、発火されます。:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}} 、
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}} 、

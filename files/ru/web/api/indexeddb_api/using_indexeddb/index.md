@@ -216,7 +216,7 @@ Object stores are created with a single call to `createObjectStore()`. The metho
 
 We've also asked for an index named "name" that looks at the `name` property of the stored objects. As with `createObjectStore()`, `createIndex()` takes an optional `options` object that refines the type of index that you want to create. Adding objects that don't have a `name` property still succeeds, but the object won't appear in the "name" index.
 
-We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index).
+We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](#using_an_index).
 
 ## Adding and removing data
 

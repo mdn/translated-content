@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 
 **`Number.NEGATIVE_INFINITY`** 속성은 음의 무한대를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
@@ -25,7 +42,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 - `NEGATIVE_INFINITY`를, {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}를 제외한 아무 양의 수로 나눈 결과는 `NEGATIVE_INFINITY`입니다.
 - `NEGATIVE_INFINITY`를 `NEGATIVE_INFINITY` 또는 {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}로 나눈 결과는 {{jsxref("NaN")}}입니다.
 
-`Number.NEGATIVE_INFINITY`를 사용해 성공 시 유한수를 반환하는 식의 결과를 판별할 수 있습니다. 그러나 이런 경우 {{jsxref("isFinite", "isFinite()")}}를 사용하는 편이 더 적합합니다.
+`Number.NEGATIVE_INFINITY`를 사용해 성공 시 유한수를 반환하는 식의 결과를 판별할 수 있습니다. 그러나 이런 경우 {{jsxref("isFinite()")}}를 사용하는 편이 더 적합합니다.
 
 `NEGATIVE_INFINITY`는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 `Number.NEGATIVE_INFINITY`의 형식으로 사용해야 합니다.
 
@@ -56,4 +73,4 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 - {{jsxref("Number.POSITIVE_INFINITY")}}
 - {{jsxref("Number.isFinite()")}}
 - {{jsxref("Infinity")}}
-- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isFinite()")}}

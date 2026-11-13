@@ -9,7 +9,15 @@ l10n:
 
 {{jsxref("Date")}} 인스턴스의 **`toTimeString()`** 메서드는 현지 시간대로 해석된 날짜의 시간 부분을 표현하는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 구문
 

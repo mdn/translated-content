@@ -3,8 +3,6 @@ title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
-{{AddonSidebar}}
-
 Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
 
 Les navigateurs gardent une liste des pages que l'utilisateur visite souvent et récemment. Ils utilisent cette liste pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
@@ -15,9 +13,9 @@ Le navigateur peut ensuite appliquer un filtrage supplémentaire à cette liste 
 
 L'API `topSites.get()` permet à une extension d'accéder à cette liste. Appelé sans aucune option, il fournira la liste filtrée des pages, c'est-à-dire celle qui apparaît dans la page "Nouvel onglet". Cependant, en fournissant diverses options, il est possible pour une extension d'obtenir la liste non filtrée des pages.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites"
+Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "topSites"
 
 ## Syntaxe
 
@@ -28,9 +26,7 @@ var gettingTopSites = browser.topSites.get();
 ### Paramètres
 
 - `options`
-
   - : `object`. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
     - `includeFavicon` {{optional_inline}}
@@ -48,7 +44,7 @@ var gettingTopSites = browser.topSites.get();
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ceci sera réalisé avec un tableau d'objets {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -98,7 +94,7 @@ gettingTopSites.then(logTopSites, onError);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

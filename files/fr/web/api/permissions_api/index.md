@@ -57,5 +57,5 @@ Vous pouvez également en lire plus sur le fonctionnement de cet exemple dans l'
 
   [<i lang="en">Using the Permissions API to Detect How Often Users Allow or Deny Camera Access</i> (en anglais)](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
 
-- [`Notification.permission`](/fr/docs/Web/API/notification/permission)
+- [`Notification.permission`](/fr/docs/Web/API/Notification/permission_static)
 - [Confidentialité, permissions et sécurité de l'information](/fr/docs/Web/Privacy)

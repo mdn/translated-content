@@ -2,12 +2,14 @@
 title: 文件系统 API
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
+  sourceCommit: 59d87e8756161420f3f40dc554562858f4427e72
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
 **文件系统 API**（File System API）——以及通过[**文件系统访问 API**（File System Access API）](https://wicg.github.io/file-system-access/)提供的扩展来访问设备文件系统中的文件——允许使用文件读写以及文件管理功能。
+
+请参阅[与其他文件相关 API 的关系](/zh-CN/docs/Web/API/File_API#relationship_to_other_file-related_apis)，以了解此 API、[文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 和[文件 API](/zh-CN/docs/Web/API/File_API) 之间的区别。
 
 ## 概念与用法
 
@@ -28,11 +30,34 @@ l10n:
 > 使用此 API 的特性时可能会抛出的各种异常已在规范定义的相关页面中列出。然而，API 与底层操作系统的交互使得实际情况更加复杂。这里提供一篇关于[在规范中列出错误对应表](https://github.com/whatwg/fs/issues/57)的提议，其中包含了一些有用的信息。
 
 > [!NOTE]
-> 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中，也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
+> 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中，也可以通过 {{domxref("window.postMessage", "postMessage()")}} 传递。
 
 ### 源私有文件系统
 
 源私有文件系统（origin private file system，OPFS）属于文件系统 API，提供了页面所属的源专用的存储端点，并且不像常规文件系统那样对用户可见。它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地写入访问。
+
+以下是一些可能的用例：
+
+- 具有持久上传组件的应用
+  - 当选择要上传的文件或目录时，你可以将文件复制到本地沙盒中并一次上传一个块。
+
+  - 应用可以在中断后重新启动上传，例如浏览器关闭或崩溃、连接中断或计算机关机。
+
+- 具有大量媒体静态资源的视频游戏或其他应用
+  - 应用下载一个或多个大型 tar 包并将其本地展开为目录结构。
+
+  - 应用在后台预先获取静态资源，因此用户无需等待下载即可进入下一个任务或游戏级别。
+
+- 支持离线访问或本地缓存的音频或照片编辑器（性能和速度极佳）
+  - 应用可以就地写入文件（例如，仅覆盖 ID3/EXIF 标签而不是整个文件）。
+
+- 离线视频查看器
+  - 应用可以下载大文件（>1GB）以供以后查看。
+  - 该应用可以访问部分下载的文件（这样你就可以观看 DVD 的第一章，即使该应用仍在下载其余内容，或者由于你必须跑去赶火车而导致应用未完成下载）。
+
+- 离线 Web 邮件客户端
+  - 客户端下载附件并将其存储在本地。
+  - 客户端缓存附件以供稍后上传。
 
 请阅读我们的[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)，以了解如何使用它。
 
@@ -43,12 +68,16 @@ l10n:
 
 ## 接口
 
+- {{domxref("FileSystemChangeRecord")}} {{experimental_inline}}
+  - : 包含 {{domxref("FileSystemObserver")}} 观察到的单个更改的详细信息。
 - {{domxref("FileSystemHandle")}}
   - : 代表文件或目录条目的对象。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("FileSystemFileHandle")}}
   - : 提供一个文件系统条目的句柄。
 - {{domxref("FileSystemDirectoryHandle")}}
   - : 提供一个文件系统目录的句柄。
+- {{domxref("FileSystemObserver")}} {{experimental_inline}}
+  - : 提供一种观察所选文件或目录的变化的机制。
 - {{domxref("FileSystemSyncAccessHandle")}}
   - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在专用于操作[源私有文件系统](#源私有文件系统)上的文件的专用 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中访问。
 - {{domxref("FileSystemWritableFileStream")}}
@@ -63,9 +92,9 @@ l10n:
 - {{domxref("Window.showSaveFilePicker()")}}
   - : 显示允许用户保存文件的文件选择器。
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : 如果拖动的项目是文件，则返回 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则返回 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 返回 {{jsxref('Promise')}}，如果拖动的项目是文件，则兑现 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则兑现 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("StorageManager.getDirectory()")}}
-  - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个由 {{domxref("FileSystemDirectoryHandle")}} 对象兑现的 {{jsxref('Promise')}}。
+  - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个兑现 {{domxref("FileSystemDirectoryHandle")}} 对象的 {{jsxref('Promise')}}。
 
 ## 示例
 
@@ -239,4 +268,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
-- [源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- [源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

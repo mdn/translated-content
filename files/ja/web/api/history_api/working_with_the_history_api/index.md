@@ -106,5 +106,5 @@ const currentState = history.state;
 ## 関連情報
 
 - [履歴 API](/ja/docs/Web/API/History_API)
-- [履歴ナビゲーションの例](/ja/docs/Web/API/History_API/Example)
+- [履歴ナビゲーションの例](/ja/docs/Web/API/History_API/Working_with_the_History_API)
 - {{domxref("window.history", "history")}} グローバルオブジェクト

@@ -16,7 +16,8 @@ double 値で、 FFT 解析データを拡大縮小する際の最小[デシベ�
 
 `getByteFrequencyData()` からデータを取得した場合、振幅が `minDecibels` 以下の周波数は `0` として返されます。
 
-> **メモ:** `AnalyserNode.maxDecibels` より大きい値を設定すると、 `INDEX_SIZE_ERR` 例外が発生します。
+> [!NOTE]
+> `AnalyserNode.maxDecibels` より大きい値を設定すると、 `INDEX_SIZE_ERR` 例外が発生します。
 
 ## 例
 

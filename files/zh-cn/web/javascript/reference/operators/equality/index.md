@@ -5,11 +5,23 @@ l10n:
   sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
-
 **相等**（**`==`**）运算符检查其两个操作数是否相等，返回一个布尔值结果。与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符不同，它会尝试转换不同类型的操作数，并进行比较。
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## 语法
 
@@ -19,7 +31,7 @@ x == y
 
 ## 描述
 
-相等运算符（`==` 和 `!=`）提供[非严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_进行宽松相等比较)语义。这可以大致总结如下：
+相等运算符（`==` 和 `!=`）提供[非严格相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_进行宽松相等比较)语义。这可以大致总结如下：
 
 1. 如果操作数具有相同的类型，则按如下方式进行比较：
    - 对象（Object）：仅当两个操作数引用同一个对象时返回 `true`。
@@ -29,7 +41,7 @@ x == y
    - 大整型（BigInt）：仅当两个操作数的值相同时返回 `true`。
    - 符号（Symbol）：仅当两个操作数引用相同的符号时返回 `true`。
 2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
-3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值强制转换)。
+3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#原始值强制转换)。
 4. 在这一步，两个操作数都被转换为原始值（字符串、数字、布尔值、符号和大整型中的一个）。剩余的转换将分情况完成。
    - 如果是相同的类型，使用步骤 1 进行比较。
    - 如果其中一个操作数是符号而另一个不是，返回 `false`。

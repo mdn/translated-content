@@ -53,4 +53,4 @@ node.onclick = function () {
 ## 参见
 
 - {{domxref("element.accessKey")}}
-- The [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) global attribute.
+- The [accesskey](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey) global attribute.

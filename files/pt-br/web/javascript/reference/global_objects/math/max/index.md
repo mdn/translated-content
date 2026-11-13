@@ -28,9 +28,9 @@ O maior dos números passados como argumentos. Se pelo menos um dos argumentos n
 
 Por `max` ser um método estático em `Math`, você sempre irá usá-lo da seguinte maneira `Math.max()`, e não como um método da classe `Math` que você tenha instanciado.
 
-Se nenhum argumento for passado o resultado sempre será - {{jsxref("Global_Objects/Infinity", "Infinity")}}.
+Se nenhum argumento for passado o resultado sempre será - {{jsxref("Infinity")}}.
 
-Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("Global_Objects/NaN", "NaN")}}.
+Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("NaN")}}.
 
 ## Exemplos
 
@@ -61,7 +61,7 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
+O novo [operador spread](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) é um modo curto de se escrever a solução com `apply` para retornar o maior valor de um array.
 
 ```js
 var arr = [1, 2, 3];
@@ -69,7 +69,7 @@ var max = Math.max(...arr);
 // max: 3
 ```
 
-Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
+Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o resultado errado caso o array tenha muitos elementos, porque eles tentam passar o array de elementos como parâmetros de funções. Veja [usando apply e funções embutidas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#usando_apply_e_funções_embutidas) para mais detalhes. A solução com `reduce` não apresenta esse problema.
 
 ## Especificações
 
@@ -81,5 +81,5 @@ Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o res
 
 ## Veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
+- O objeto {{jsxref("Math")}} pertence a.
 - {{jsxref("Math.min()")}}

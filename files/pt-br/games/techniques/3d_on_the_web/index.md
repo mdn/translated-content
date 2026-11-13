@@ -3,8 +3,6 @@ title: Jogos 3D na WEB
 slug: Games/Techniques/3D_on_the_web
 ---
 
-{{GamesSidebar}}
-
 A melhor arma para desenvolver ótimas experiências em jogos na WEB é WebGL, que é renderizada em HTML {{htmlelement("canvas")}}. WebGL é, basicamente, uma OpenGL ES 2.0 para a Web — é uma API JavaScript que fornece ferramentas para construir animações ricas e, logicamente, jogos. Você pode gerar e renderizar gráficos dinâmicos em 3D com JavaScript acelerado por hardware.
 
 ## Documentação e suporte para navegadores
@@ -34,7 +32,7 @@ Você pode fazer muito mais com WebGL. Há alguns conceitos avançados que você
 
 ### WebVR
 
-O conceito de realidade virtual não é novo, mas está crescendo na web devido os avanços de hardware, tal como o [Oculus Rift](https://www.oculus.com/en-us/rift/), e a (atualmente experimental) [WebVR API](/pt-BR/docs/Web/API/WebVR_API) para capturar informações de hardware via Realidade Virtual (RV) e tonaná-la acessível para uso em aplicações JavaScript. Para mais informações, leia [WebVR — Realidade Virtual para a Web](/pt-BR/docs/Games/Techniques/3D_on_the_web/WebVR).
+O conceito de realidade virtual não é novo, mas está crescendo na web devido os avanços de hardware, tal como o [Oculus Rift](https://www.oculus.com/en-us/rift/), e a (atualmente experimental) [WebVR API](/pt-BR/docs/Web/API/WebVR_API) para capturar informações de hardware via Realidade Virtual (RV) e tonaná-la acessível para uso em aplicações JavaScript. Para mais informações, leia [WebVR — Realidade Virtual para a Web](/pt-BR/docs/Games/Techniques/3D_on_the_web/WebXR).
 
 Também há o artigo [Desenvolvendo uma demo básica com A-Frame](/pt-BR/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) que te mostra como é fácil construir ambientes 3D para realidade virtual usando o framework [A-Frame](http://aframe.io/).
 
@@ -42,7 +40,7 @@ Também há o artigo [Desenvolvendo uma demo básica com A-Frame](/pt-BR/docs/Ga
 
 Codificar WebGL diretamente é bem complexo, mas você vai querer se familiarizar com isso a longo prazo quando seus projetos avançarem (veja nossa [documentação WebGL](/pt-BR/docs/Web/API/WebGL_API) para começar). Para projetos do mundo real você provavelmente também usará um framework para acelerar o desenvolvimento e ajudar na administração do projeto em que estiver trabalhando. Usar um framework para jogos 3D também ajuda muito a otimizar o desempenho, assim você pode focar no desenvolvimento do jogo.
 
-A biblioteca JavaScript 3D mais popular é [Three.js](http://threejs.org/), uma ferramenta multiuso que deixa técnicas 3D comuns mais simples de serem implementadas. Há outras bibliotecas de desenvolvimento de jogos populares e alguns frameworks que valem a pena serem checados também; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) e [Babylon.js](http://www.babylonjs.com/) estão entre os mais reconhecidos, com belas documentações, editores online e comunidades ativas.
+A biblioteca JavaScript 3D mais popular é [Three.js](https://threejs.org/), uma ferramenta multiuso que deixa técnicas 3D comuns mais simples de serem implementadas. Há outras bibliotecas de desenvolvimento de jogos populares e alguns frameworks que valem a pena serem checados também; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) e [Babylon.js](http://www.babylonjs.com/) estão entre os mais reconhecidos, com belas documentações, editores online e comunidades ativas.
 
 ### Desenvolvendo uma demo básica com A-Frame
 
@@ -82,7 +80,7 @@ Você pode encontrar todo o código fonte para esta série de [demos no GitHub](
 
 ### Frameworks
 
-- [Three.js](http://threejs.org/)
+- [Three.js](https://threejs.org/)
 - [Whitestorm.js](https://github.com/WhitestormJS/whs.js) (baseado em Three.js)
 - [PlayCanvas](https://playcanvas.com/)
 - [Babylon.js](http://www.babylonjs.com/)

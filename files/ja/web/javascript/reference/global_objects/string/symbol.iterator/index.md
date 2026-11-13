@@ -1,23 +1,39 @@
 ---
-title: String.prototype[@@iterator]()
+title: String.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 l10n:
-  sourceCommit: 427e8d03276b4915c08c5f0541452fb1c830c295
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`[Symbol.iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループなど、反復可能オブジェクトを期待するほとんどの構文で文字列が利用できるようにします。これは、文字列値の Unicode コードポイントを個別の文字列として返す[文字列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-**`[@@iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や{{jsxref("Statements/for...of", "for...of")}}ループ
-文字列値のコードポイントを走査し、それぞれのコードポイントを文字列値として返すイテレーターオブジェクトを返します。
+{{InteractiveExample("JavaScript デモ: String.prototype[Symbol.iterator]()")}}
 
-{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
+```js interactive-example
+const str = "The quick red fox jumped over the lazy dog's back.";
+
+const iterator = str[Symbol.iterator]();
+let theChar = iterator.next();
+
+while (!theChar.done && theChar.value !== " ") {
+  console.log(theChar.value);
+  theChar = iterator.next();
+  // 予想される結果: "T"
+  //                 "h"
+  //                 "e"
+}
+```
 
 ## 構文
 
 ```js-nolint
 string[Symbol.iterator]()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -42,7 +58,7 @@ string[Symbol.iterator]()
 
 ### for...of ループを用いた反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドが存在することで、文字列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.iterator]()` メソッドが存在することで、文字列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 ```js
 const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
@@ -81,5 +97,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 
 ## 関連情報
 
-- [`String.prototype[@@iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`String.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [数値と文字列](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
+- {{jsxref("Symbol.iterator")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

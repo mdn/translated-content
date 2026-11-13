@@ -22,11 +22,9 @@ registerProtocolHandler(schema, url, titre);
 ### Paramètres
 
 - `schema`
-
   - : Une chaîne de caractères contenant [les schémas autorisés](#schémas_autorisés) pour le protocole que le site souhaite gérer. On peut ainsi, par exemple, gérer les liens vers des messages SMS en passant le schéma `"sms"`.
 
 - `url`
-
   - : Une chaîne de caractères qui contient l'URL du gestionnaire.
     **Cette URL doit inclure `%s`**, comme emplacement à remplacer avec l'URL [échappée](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) à gérer.
 
@@ -34,7 +32,6 @@ registerProtocolHandler(schema, url, titre);
     > L'URL du gestionnaire doit également utiliser le schéma `https`. Les anciens navigateurs prenaient aussi en charge `http`.
 
 - `titre` {{deprecated_inline}}
-
   - : Un titre, lisible par un humain, pour le gestionnaire.
     **Cette valeur sera affichée à l'utilisatrice ou à l'utilisateur**, par exemple pour lui demander «&nbsp;Autorisez-vous ce site à gérer les liens \[schema]&nbsp;?&nbsp;» ou pour lister les gestionnaires enregistrés dans les paramètres du navigateur.
 
@@ -46,9 +43,7 @@ registerProtocolHandler(schema, url, titre);
 ### Exceptions
 
 - [`SecurityError`](/fr/docs/Web/API/DOMException#noms_derreur)
-
   - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
-
     - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
     - [L'origine](/fr/docs/Glossary/Origin) de l'URL du gestionnaire ne correspond pas à l'origine de la page qui utilise cette API.
     - Cette fonction doit être appelée depuis un contexte sécurisé pour le navigateur.
@@ -130,5 +125,5 @@ La personne recevra une notification indiquant que le code a demandé à enregis
 
 ## Voir aussi
 
-- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler)
 - [Améliorer le Web fédéré avec RegisterProtocolHandler (en anglais)](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)

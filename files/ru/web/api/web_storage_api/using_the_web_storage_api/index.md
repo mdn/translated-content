@@ -110,11 +110,11 @@ function setStyles() {
 }
 ```
 
-Первые три строки извлекают значения элементов локального хранилища. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
+Первые три строки извлекают значения элементов локального хранилища. Затем мы записываем значения элементов формы, чтобы они сохранились после перезагрузки страницы. Наконец, мы обновляем стили и изображения на странице, чтобы они вступили в силу.
 
-## Setting values in storage
+## Сохранение значений в хранилище
 
-{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.
+Метод {{domxref("Storage.setItem()")}} используется как для создания новых, так и для изменения существующих элементов. Он принимает два аргумента — ключ элемента и значение для хранения.
 
 ```js
 function populateStorage() {
@@ -136,7 +136,7 @@ fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;
 ```
 
-## Responding to storage changes with the StorageEvent
+## Отслеживание изменений в хранилище с помощью StorageEvent
 
 The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 

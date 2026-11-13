@@ -3,11 +3,19 @@ title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
 
-{{JSRef}}
-
 **`forEach()`** 方法对数组的每个元素执行一次给定的函数。
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -161,7 +169,7 @@ console.log(obj.sum); // 16
 因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callbackFn` 函数，作为它的 `this` 值。
 
 > [!NOTE]
-> 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
+> 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("this")}} 值。
 
 ### 对象复制函数
 
@@ -252,7 +260,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.forEach` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.map()")}}

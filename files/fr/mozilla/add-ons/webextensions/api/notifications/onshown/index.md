@@ -3,8 +3,6 @@ title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
 
-{{AddonSidebar}}
-
 Lancé immédiatement après l'affichage d'une notification.
 
 ## Syntaxe
@@ -29,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `notificationId`
       - : `string`. ID de la notification qui a été affichée.
 
@@ -58,4 +54,4 @@ browser.notifications.onShown.addListener(logShown);
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).

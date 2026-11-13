@@ -17,5 +17,5 @@ _WebSocket_ - это {{Glossary("protocol", "протокол")}}, которы�
 
 ### Примеры использования
 
-- [Создание клиентского приложения WebSocket](/ru/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Создание клиентского приложения WebSocket](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [Создание сервера с использованием WebSocket](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

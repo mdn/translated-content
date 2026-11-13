@@ -1,15 +1,31 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`multiline`** は {{jsxref("RegExp")}} のアクセサープロパティで、正規表現で `m` フラグが使用されているかどうかを返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.multiline", "taller")}}
+
+```js interactive-example
+const regex1 = /^football/;
+const regex2 = /^football/m;
+
+console.log(regex1.multiline);
+// 予想される結果: false
+
+console.log(regex2.multiline);
+// 予想される結果: true
+
+console.log(regex1.test("rugby\nfootball"));
+// 予想される結果: false
+
+console.log(regex2.test("rugby\nfootball"));
+// 予想される結果: true
+```
 
 ## 解説
 
@@ -22,7 +38,7 @@ l10n:
 ### multiline の使用
 
 ```js
-const regex = /foo/m;
+const regex = /^foo/m;
 
 console.log(regex.multiline); // true
 ```
@@ -38,10 +54,10 @@ console.log(regex.multiline); // true
 ## 関連情報
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

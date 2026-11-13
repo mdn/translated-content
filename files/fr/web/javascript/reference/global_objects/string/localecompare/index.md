@@ -1,76 +1,88 @@
 ---
-title: String.prototype.localeCompare()
+title: "String : méthode localeCompare()"
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+La méthode **`localeCompare()`** des valeurs {{JSxRef("String")}} retourne un nombre indiquant si cette chaîne de caractères se situe avant, après ou est la même que la chaîne de caractères donnée selon l'ordre de tri. Dans les implémentations prenant en charge l'API [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), cette méthode délègue à `Intl.Collator`.
 
-La méthode **`localeCompare()`** renvoie un nombre indiquant si la chaîne de caractères courante se situe avant, après ou est la même que la chaîne passée en paramètre, selon l'ordre lexicographique de la locale.
+Lors de la comparaison d'un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet {{JSxRef("Intl.Collator")}} et d'utiliser la fonction fournie par sa méthode {{JSxRef("Intl/Collator/compare", "compare()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.localeCompare()")}}
 
-Les arguments `locales` et `options` permettent de définir la locale et des options pour adapter le comportement de la fonction. Pour les anciennes implémentations qui ignorent les arguments `locales` et `options`, l'ordre de tri utilisé sera entièrement dépendant de l'implémentation.
+```js interactive-example
+const a = "réservé"; // Avec accents, en minuscules
+const b = "RESERVE"; // Sans accents, en majuscules
+
+console.log(a.localeCompare(b));
+// Résultat attendu : 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Résultat attendu : 0
+```
 
 ## Syntaxe
 
-```js
-localeCompare(chaineAComparer);
-localeCompare(chaineAComparer, locales);
-localeCompare(chaineAComparer, locales, options);
+```js-nolint
+localeCompare(compareString)
+localeCompare(compareString, locales)
+localeCompare(compareString, locales, options)
 ```
 
 ### Paramètres
 
-- `chaineAComparer`
+Les paramètres `locales` et `options` permettent d'adapter le comportement de la fonction et de laisser les applications définir la langue dont les conventions de formatage doivent être utilisées.
 
-  - : La chaîne avec laquelle on souhaite comparer la chaîne de caractères courante.
+Dans les implémentations qui prennent en charge l'API [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), ces paramètres correspondent exactement aux paramètres du constructeur [`Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator). Les implémentations qui ne prennent pas en charge `Intl.Collator` sont invitées à ignorer ces deux paramètres, ce qui rend le résultat de la comparaison entièrement dépendant de l'implémentation — il est seulement requis qu'il soit _cohérent_.
 
-- `locales` et `options`
+- `compareString`
+  - : La chaîne de caractères avec laquelle la chaîne de caractères courante est comparée. Toutes les valeurs sont [converties en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères), donc l'omission de ce paramètre ou le passage de `undefined` entraîne la comparaison avec la chaîne de caractères `"undefined"`, ce qui est rarement souhaité.
+- `locales` {{Optional_Inline}}
+  - : Une chaîne de caractères avec une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}, ou un tableau de telles chaînes de caractères. Correspond à l'argument [`locales`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) du constructeur `Intl.Collator()`.
 
-  - : Ces arguments permettent d'adapter le comportement de la fonction pour que les applications puissent indiquer la locale dont les conventions doivent être utilisées. Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale et le format de la chaîne qui est renvoyée dépendent entièrement de l'implémentation.
+    Dans les implémentations qui ne prennent pas en charge `Intl.Collator`, ce paramètre est ignoré et la locale de l'hôte est généralement utilisée.
 
-    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
+- `options` {{Optional_Inline}}
+  - : Un objet ajustant le format de sortie. Correspond à l'argument [`options`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) du constructeur `Intl.Collator()`.
+
+    Dans les implémentations qui ne prennent pas en charge `Intl.Collator`, ce paramètre est ignoré.
+
+Voir le [constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) pour plus de détails sur les paramètres `locales` et `options` et sur leur utilisation.
 
 ### Valeur de retour
 
-Un nombre négatif si la chaîne de caractères appelante est ordonnée avant la chaîne passée en argument, un nombre positif si elle se situe après, 0 si les deux chaînes sont équivalentes.
+Un nombre **négatif** si `referenceStr` se situe avant `compareString`&nbsp;; **positif** si `referenceStr` se situe après `compareString`&nbsp;; `0` si elles sont équivalentes.
+
+Dans les implémentations qui prennent en charge `Intl.Collator`, cela équivaut à `new Intl.Collator(locales, options).compare(referenceStr, compareString)`.
 
 ## Description
 
-Cette méthode renvoie un nombre entier qui indique si la chaîne de caractères courante se situe avant ou après la chaîne passée en argument selon l'ordre lexicographique tenant compte de la locale.
+Retourne un nombre entier indiquant si la chaîne de caractères `referenceStr` se situe avant, après ou est équivalente à la chaîne de caractères `compareString`.
 
-Cette méthode renvoie&nbsp;:
-
-- un nombre négatif si la chaîne de caractères courant se situe avant la chaîne `chaineAComparer`
-- un nombre positif si elle se situe après
-- 0 si les deux chaînes sont équivalentes selon cet ordre.
+- Négatif lorsque `referenceStr` se situe avant `compareString`
+- Positif lorsque `referenceStr` se situe après `compareString`
+- Retourne `0` si elles sont équivalentes
 
 > [!WARNING]
-> Il ne faut pas tester uniquement les valeurs -1 et 1.
+> Ne vous fiez pas aux valeurs de retour exactes `-1` ou `1`&nbsp;!
 >
-> En effet les valeurs entières utilisées peuvent varier en fonction des navigateurs et de leurs versions. En effet, la spécification indique uniquement le signe de la valeur à fournir. Par exemple, certains navigateurs pourront renvoyer -2 ou 2 (voire d'autres valeurs).
-
-## Performances
-
-Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare).
+> Les résultats négatifs et positifs varient selon les navigateurs (ainsi que selon les versions des navigateurs), car la spécification ECMAScript ne mandate que des valeurs négatives et positives. Certains navigateurs peuvent retourner `-2` ou `2`, ou même une autre valeur négative ou positive.
 
 ## Exemples
 
 ### Utiliser la méthode `localeCompare()`
 
-L'exemple qui suit illustre les différents cas de figures lors de la comparaison des chaînes de caractères&nbsp;:
-
 ```js
-// La lettre "a" est située avant la lettre "c"
-// On a donc une valeur négative
-'a'.localeCompare('c'); // -2, ou -1, ou toute autre valeur négative
+// La lettre « a » précède le « c », ce qui donne une valeur négative
+"a".localeCompare("c"); // -2, ou -1, ou toute autre valeur négative
 
-// Alphabétiquement, le mot "coucou" est situé après
-// "avion", la valeur est donc positive
-'coucou'.localeCompare('avion')); // 2, ou 1, ou toute autre valeur positive
+// Dans l'ordre alphabétique, le mot « coucou » vient après « avion »,
+// ce qui donne une valeur positive
+"coucou".localeCompare("avion")); // 2, ou 1, ou toute autre valeur positive
 
-// Deux chaînes de caractères identiques sont équivalentes : 0
-'a'.localeCompare('a'); // 0
+// « a » et « a » sont équivalents et donnent une valeur neutre égale à zéro
+"a".localeCompare("a"); // 0
 ```
 
 ### Trier un tableau
@@ -78,8 +90,15 @@ L'exemple qui suit illustre les différents cas de figures lors de la comparaiso
 `localeCompare()` permet de trier un tableau sans tenir compte de la casse&nbsp;:
 
 ```js
-var items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
-items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
+const elements = [
+  "réservé",
+  "Premier",
+  "Cliché",
+  "communiqué",
+  "café",
+  "Adieu",
+];
+elements.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -87,7 +106,7 @@ items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 
 Les arguments `locales` et `options` ne sont pas pris en charge par tous les navigateurs.
 
-Pour vérifier qu'une implémentation implémente ces paramètres, il est possible d'utiliser un cas d'erreur quand on utilise une balise de langue incorrecte (ce qui provoque une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError))&nbsp;:
+Pour vérifier si une implémentation les prend en charge, utilisez l'argument `"i"` (une exigence selon laquelle les balises de langue illégales sont rejetées) et recherchez une exception {{JSxRef("RangeError")}}&nbsp;:
 
 ```js
 function localeCompareSupportsLocales() {
@@ -102,7 +121,7 @@ function localeCompareSupportsLocales() {
 
 ### Utiliser le paramètre `locales`
 
-Les résultats fournis par la méthode `localeCompare()` peuvent varier selon les locales utilisées. Pour spécifier la locale à utiliser pour votre application, utilisez l'argument `locales` (éventuellement en incluant des locales de recours)&nbsp;:
+Les résultats fournis par la méthode `localeCompare()` peuvent varier selon les locales utilisées. Pour définir la locale à utiliser pour votre application, utilisez l'argument `locales` (éventuellement en incluant des locales de recours)&nbsp;:
 
 ```js
 console.log("ä".localeCompare("z", "de")); // une valeur négative : en allemand ä est avant z
@@ -121,16 +140,16 @@ console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // une valeur positive
 ```
 
-### Tri numérique
+### Trier des nombres
 
 ```js
-// Par défaut, selon l'ordre lexicographique, "2" est supérieur à "10"
+// Par défaut, "2" > "10"
 console.log("2".localeCompare("10")); // 1
 
-// En utilisant un ordre numérique
+// En utilisant un ordre numérique :
 console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
-// En utilisant une balise de locale
+// En utilisant une balise de locale :
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 ```
 

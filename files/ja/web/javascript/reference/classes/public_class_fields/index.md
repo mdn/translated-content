@@ -2,12 +2,10 @@
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 l10n:
-  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Classes")}}
-
-パブリックフィールドは、静的なものもインスタンスのものも書き込み可能、列挙可能、構成可能です。そのため、プライベートなものとは異なり、プロトタイプの継承に参加します。
+**パブリックフィールド**は、書き込み可能、列挙可能、構成不可のプロパティであり、それぞれのクラスインスタンスまたはクラスコンストラクターで定義されます。
 
 ## 構文
 
@@ -30,7 +28,7 @@ class ClassWithField {
 このページでは、パブリックインスタンスフィールドについて詳しく紹介します。
 
 - パブリック静的フィールドについては、 [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static) を参照してください。
-- プライベートフィールドについては、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+- プライベートフィールドについては、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - パブリックメソッドについては、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を参照してください。
 - パブリックアクセサーについては、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)および[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を参照してください。
 
@@ -143,7 +141,7 @@ console.log(instance.b); // undefined
 ```
 
 > [!NOTE]
-> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 クラスフィールドは [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（本質的には {{jsxref("Object.defineProperty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.field = …` を使用するのとは異なります。
 
@@ -177,7 +175,7 @@ const instance2 = new DerivedWithConstructor(); // Logs 1
 
 ### クラスフィールドの使用
 
-クラスフィールドはコンストラクターの引数に依存できないので、フィールド初期化子は通常、インスタンスごとに同じ値として評価されます（{{jsxref("Date.now()")}} やオブジェクト初期化子のように、同じ式が時刻ごとに異なる値として評価できる場合を除きます）。
+クラスフィールドはコンストラクターの引数に依存できないので、フィールド初期化子は通常、インスタンスごとに同じ値として評価されます（{{jsxref("Math.random()")}} やオブジェクト初期化子のように、同じ式が時刻ごとに異なる値として評価できる場合を除きます）。
 
 ```js example-bad
 class Person {
@@ -249,7 +247,7 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 - [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
 - [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - {{jsxref("Statements/class", "class")}}
 - [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) (Shu-yu Guo, 2018)
 - [Public and private class fields](https://v8.dev/features/class-fields) (v8.dev, 2018)

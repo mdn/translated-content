@@ -16,9 +16,9 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLUListElement.type")}} {{deprecated_inline}}
-  - : 一个字符串，反映 [`type`](/zh-CN/docs/Web/HTML/Element/ul#type) 属性并定义要用于显示的标记种类。这些值依赖于浏览器，从未标准化。
+  - : 一个字符串，反映 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/ul#type) 属性并定义要用于显示的标记种类。这些值依赖于浏览器，从未标准化。
 - {{domxref("HTMLUListElement.compact")}} {{deprecated_inline}}
-  - : 一个布尔值，指示应减小列表项之间的间距，此属性仅反映 [`compact`](/zh-CN/docs/Web/HTML/Element/ul#compact) 属性，不考虑现代页面中用于该行为的 {{cssxref("line-height")}} CSS 属性。
+  - : 一个布尔值，指示应减小列表项之间的间距，此属性仅反映 [`compact`](/zh-CN/docs/Web/HTML/Reference/Elements/ul#compact) 属性，不考虑现代页面中用于该行为的 {{cssxref("line-height")}} CSS 属性。
 
 ## 实例方法
 

@@ -2,7 +2,7 @@
 title: 全屏 API 指南
 slug: Web/API/Fullscreen_API/Guide
 l10n:
-  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
+  sourceCommit: c17bd570e356cdf3e1abb4c2dfe1e57a2cfb5bc7
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -16,16 +16,16 @@ l10n:
 我们来看看 {{HTMLElement("video")}} 这个元素：
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 我们可以用下面的代码让视频进入全屏模式：
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -33,20 +33,26 @@ if (elem.requestFullscreen) {
 
 这段代码会在调用 `requestFullscreen()` 方法之前先检验它是否存在。
 
+一旦元素处于全屏模式，它将与 {{cssxref(":fullscreen")}} 匹配，从而为其赋予一些默认样式，例如占据整个屏幕。它也被放置在{{glossary("top layer", "顶层")}}中。
+
+如果请求在全屏模式下显示多个元素，则它们都会由 {{cssxref(":fullscreen")}} 匹配，并且全部位于顶层。它们相互堆叠，最近请求的元素位于较旧的元素之上。最近请求的元素会显示并通过 {{domxref("Document.fullscreenElement")}} 返回。
+
 ### 通知
 
 当成功进入全屏模式时，包含该元素的文档会收到一个 {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} 事件。当退出全屏模式时，文档会再一次收到 {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} 事件。注意此 {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} 事件本身并不提供任何有关文档是否进入或退出全屏模式的信息，但如果文档具有非空的 {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}，你就知道你处于全屏模式。
 
 ### 当全屏请求失败时
 
-你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性，可选择是否允许将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求将不起作用。而相应元素会收到一个 `fullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打印一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
+你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性，可选择是否允许将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求将不起作用。而相应元素会收到一个 `fullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打印一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
 
 > [!NOTE]
-> 全屏请求必须在事件处理函数中调用，否则将会被拒绝。
+> 全屏请求必须在事件处理器中调用，否则将会被拒绝。
 
 ## 退出全屏模式
 
-用户总是可以自行退出全屏模式；详见[你的用户想了解的信息](#things_your_users_want_to_know)。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。
+用户总是可以自行退出全屏模式；详见[你的用户想了解的信息](#你的用户想了解的信息)。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。
+
+如果有多个元素处于全屏模式，调用 `exitFullscreen()` 只会退出最顶层的元素，并显示其下方的下一个元素。按 <kbd>Esc</kbd> 或 <kbd>F11</kbd> 可退出所有全屏元素。
 
 ## 其他信息
 
@@ -73,7 +79,7 @@ if (elem.requestFullscreen) {
 
 [查看实时运行示例](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
-### 监听 <kbd>Enter</kbd> 键
+### 监听 Enter 键
 
 当页面加载完成时，这段代码可以设置一个事件监听器以监听 <kbd>Enter</kbd> 键。
 
@@ -123,4 +129,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

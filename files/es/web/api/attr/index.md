@@ -9,18 +9,19 @@ Este tipo representa un atributo de un elemento DOM como un objeto. En muchos m�
 
 {{InheritanceDiagram}}
 
-> **Advertencia:** **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
+> [!WARNING]
+> **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
 
 ## Propiedades
 
 - {{domxref("Attr.name", "name")}} {{readOnlyInline}}
   - : El nombre del atributo.
 - {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : Un {{domxref("DOMString")}} representing the namespace URI of the attribute, or `null` if there is no namespace.
+  - : Un {{jsxref("String")}} representing the namespace URI of the attribute, or `null` if there is no namespace.
 - {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the local part of the qualified name of the attribute.
+  - : A {{jsxref("String")}} representing the local part of the qualified name of the attribute.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
+  - : A {{jsxref("String")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
   - : This property always returns `true`. Originally, it returned `true` if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
 - {{domxref("Attr.value", "value")}}
@@ -56,7 +57,6 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
-
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
     Contrary to above claim, {{domxref("Document.evaluate")}} can return `Attr` objects from an XPath, in which case you would not easily know the owner.

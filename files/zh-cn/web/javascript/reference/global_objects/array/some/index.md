@@ -3,11 +3,19 @@ title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 
-{{JSRef}}
-
 **`some()`** 方法测试数组中是否至少有一个元素通过了由提供的函数实现的测试。如果在数组中找到一个元素使得提供的函数返回 true，则返回 true；否则返回 false。它不会修改数组。
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## 语法
 
@@ -146,7 +154,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.every` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.forEach()")}}

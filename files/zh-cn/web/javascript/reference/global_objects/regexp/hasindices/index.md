@@ -3,11 +3,21 @@ title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ---
 
-{{JSRef}}
-
 **`hasIndices`** 访问器属性指示 `d` 标志是否与正则表达式一起使用。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "d");
+
+console.log(regex1.hasIndices);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.hasIndices);
+// Expected output: false
+```
 
 ## 描述
 

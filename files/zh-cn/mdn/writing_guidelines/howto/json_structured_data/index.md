@@ -3,8 +3,6 @@ title: 如何使用结构化数据
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 ---
 
-{{MDNSidebar}}
-
 MDN 尽可能以明确定义的结构存储数据。这些信息将被集中存储和更新，以便同时在多个地方使用。
 
 这样的文件有好几个，本文档描述了它们的用途、结构和维护过程。
@@ -64,13 +62,16 @@ GroupData 正是这样做的：对于每个 API，它列出了接口、属性、
   - : 列出了属于 API 的接口。
 - `"methods"`
   - : 列出了属于 API 的方法。
-    > **备注：** `"interfaces"` 中列出的接口的方法**不得**列在此处。如果页面的 `page-type` 键为 `web-api-static-method` 或 `web-api-instance-method`，则它们会被自动添加到侧边栏中。
+    > [!NOTE]
+    > `"interfaces"` 中列出的接口的方法**不得**列在此处。如果页面的 `page-type` 键为 `web-api-static-method` 或 `web-api-instance-method`，则它们会被自动添加到侧边栏中。
 - `"properties"`
   - : 列出了属于 API 的其他接口上的方法，例如 `navigator.xr`（WebXR API 添加到 `navigator` 对象的属性）
-    > **备注：** `"interfaces"` 中列出的接口的属性**不得**列在此处。如果页面的 `page-type` 键为 `web-api-static-property` 或 `web-api-instance-property`，则它们会被自动添加到侧边栏中。
+    > [!NOTE]
+    > `"interfaces"` 中列出的接口的属性**不得**列在此处。如果页面的 `page-type` 键为 `web-api-static-property` 或 `web-api-instance-property`，则它们会被自动添加到侧边栏中。
 - `"events"`
   - : 列出了属于 API 的其他接口的事件。其值是页面的*标题*（页面必须位于 `Web/Events` 下）。
-    > **备注：** `"interfaces"` 中列出的接口的事件**不得**列在此处。如果页面的 `page-type` 键为 `web-api-event`，则它们会被自动添加到侧边栏中。
+    > [!NOTE]
+    > `"interfaces"` 中列出的接口的事件**不得**列在此处。如果页面的 `page-type` 键为 `web-api-event`，则它们会被自动添加到侧边栏中。
 
 还有另外两个键：`"dictionaries"` 和 `"callbacks"`，它们的工作原理相同。由于我们不再为它们的实体记录自己的页面，因此它们的使用已被弃用，不应再向其中添加新条目（我们会逐渐删除它们）。
 
@@ -120,7 +121,8 @@ GroupData 正是这样做的：对于每个 API，它列出了接口、属性、
 
 ## SpecData：规范信息
 
-> **警告：** `SpecData.json` 文件已不再维护。规范信息存储在 w3c/browser-spec 和 mdn/browser-compat-data 中列出的特性的 `spec_url` 键中。
+> [!WARNING]
+> `SpecData.json` 文件已不再维护。规范信息存储在 w3c/browser-spec 和 mdn/browser-compat-data 中列出的特性的 `spec_url` 键中。
 
 `\{{SpecName}}` 和 `\{{Spec2}}` 宏使用 `SpecData.json` 文件。我们不再接受对 `SpecData.json` 文件的任何进一步的贡献；相反，要么尝试使用 `\{{Specifications}}` 宏插入一个规范表格，要么尝试硬编码直接指向规范的链接。请注意，大多数情况下，在*规范*部分之外提及或链接到规范表明 MDN 上未适当记录某些内容。
 

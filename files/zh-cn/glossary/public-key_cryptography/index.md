@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aabd56c814d580e577199239fb27e54cc168cf55
 ---
 
-{{GlossarySidebar}}
-
 非对称密钥密码，或*公钥密码*，是一种密钥成对出现的密码系统。由其中一个密钥执行的变换只能通过另一个密钥来解密。一个密钥（_私钥_）是保密的，而另一个密钥是公开的。
 
 在数字签名中，使用私钥进行签名，公钥进行验证。这意味着任何人都可以验证签名，但只有拥有相应私钥的人才能生成签名。
@@ -22,7 +20,6 @@ l10n:
 - [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto 支持的算法](/zh-CN/docs/Web/API/SubtleCrypto#支持的算法)
 - 术语
-
   - {{Glossary("Symmetric-key cryptography", "对称密钥密码")}}
 
 - 维基百科上的[公开密钥密码学](https://zh.wikipedia.org/wiki/公开密钥加密)

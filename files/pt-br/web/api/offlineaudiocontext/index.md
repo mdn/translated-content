@@ -22,7 +22,7 @@ _Também herda propriedades da sua entidade paterna, {{domxref("BaseAudioContext
 ### Manipuladores de Eventos
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}} - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
+  - : É uma chamada [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) quando o processamento é encerrado, é quando o evento [`complete`](/pt-BR/docs/Web/API/OfflineAudioContext/complete_event) - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.
 
 ## Métodos
 
@@ -77,8 +77,9 @@ function getData() {
         .startRendering()
         .then(function (renderedBuffer) {
           console.log("Rendering completed successfully");
-          var audioCtx = new (window.AudioContext ||
-            window.webkitAudioContext)();
+          var audioCtx = new (
+            window.AudioContext || window.webkitAudioContext
+          )();
           var song = audioCtx.createBufferSource();
           song.buffer = renderedBuffer;
 
@@ -113,4 +114,4 @@ getData();
 
 ## Veja também
 
-- [Usando a API de áudio da Web](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Usando a API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

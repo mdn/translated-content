@@ -16,7 +16,7 @@ _Acessibilidade na Web (Web Accessibility)_ (**A11Y**) refere-se às melhores pr
 
 ### Aprenda sobre acessibilidade na web
 
-- [Web Accessibility In Mind](http://webaim.org/)
+- [Web Accessibility In Mind](https://webaim.org/)
 
 ### Referências Técnicas
 

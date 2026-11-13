@@ -19,8 +19,8 @@ slug: Glossary/User_agent
 
 ### Общие сведения
 
-- [User agent](https://ru.wikipedia.org/wiki/User_agent) на Википедии
+- [User agent](https://ru.wikipedia.org/wiki/User_agent) в Википедии
 
 ### Техническая справка
 
-- [User agent](http://tools.ietf.org/html/rfc2616#section-14.43) заголовок запроса в спецификации RFC 2616
+- [User agent](https://tools.ietf.org/html/rfc2616#section-14.43) заголовок запроса в спецификации RFC 2616

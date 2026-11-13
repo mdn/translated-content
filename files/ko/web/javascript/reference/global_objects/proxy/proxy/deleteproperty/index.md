@@ -5,9 +5,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 
 {{JSRef}}
 
-**`handler.deleteProperty()`** 메서드는 {{jsxref("Operators/delete", "delete")}} 연산자에 대한 트랩입니다.
+**`handler.deleteProperty()`** 메서드는 {{jsxref("delete")}} 연산자에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## 구문
 
@@ -32,7 +57,7 @@ new Proxy(target, {
 
 ## 설명
 
-**`handler.deleteProperty()`** 메서드는 {{jsxref("Operators/delete", "delete")}} 연산자에 대한 트랩입니다.
+**`handler.deleteProperty()`** 메서드는 {{jsxref("delete")}} 연산자에 대한 트랩입니다.
 
 ### 가로채기
 
@@ -52,7 +77,7 @@ new Proxy(target, {
 
 ### delete 연산자 가로채기
 
-다음 코드는 {{jsxref("Operators/delete", "delete")}} 연산자를 트랩합니다.
+다음 코드는 {{jsxref("delete")}} 연산자를 트랩합니다.
 
 ```js
 const p = new Proxy(
@@ -93,5 +118,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` 생성자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}} 연산자
+- {{jsxref("delete")}} 연산자
 - {{jsxref("Reflect.deleteProperty()")}}

@@ -18,7 +18,7 @@ Cette propriété est en lecture seule.
 ### Valeur retournée
 
 - `alpha`
-  - : Un `double` indiquant la vitesse de rotation autour de l'axe Z, en degrés par seconde. Voir [Détecter l'orientation de l'appareil](/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained) pour plus de détails.
+  - : Un `double` indiquant la vitesse de rotation autour de l'axe Z, en degrés par seconde. Voir [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) pour plus de détails.
 
 ## Spécifications
 

@@ -5,9 +5,9 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 {{DefaultAPISidebar("Canvas API")}}
 
-Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) introducido en Firefox 3.5 con un elemento [`canvas`](/en/HTML/Canvas) , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.
+Al combinar las capacidades del elemento [`video`](/es/docs/Web/HTML/Reference/Elements/video) introducido en Firefox 3.5 con un elemento [`canvas`](/es/docs/Web/API/Canvas_API) , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.
 
-[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml) .
+[Ver este ejemplo en vivo](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml) .
 
 ## El contenido del documento
 
@@ -153,7 +153,7 @@ La imagen resultante tiene este aspecto:
 
 Esto se hace en varias ocasiones mientras el video se reproduce, de manera que fotograma tras fotograma se procesa y se muestra con el efecto de croma.
 
-[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml) .
+[Ver este ejemplo en vivo](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml) .
 
 ## Consulta también
 

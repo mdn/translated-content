@@ -3,11 +3,23 @@ title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 ---
 
-{{JSRef}}
-
 **`setFullYear()`** 方法根据本地时间为一个日期对象设置年份。
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## 语法
 

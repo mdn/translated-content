@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/decodeAudioData
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }}接口的 `decodeAudioData()` 方法可用于异步解码音频文件中的 {{domxref("ArrayBuffer")}}。`ArrayBuffer` 数据可以通过 {{domxref("XMLHttpRequest")}} 和 {{domxref("FileReader")}} 来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。
+{{ domxref("AudioContext") }}接口的 `decodeAudioData()` 方法可用于异步解码音频文件中的 {{jsxref("ArrayBuffer")}}。`ArrayBuffer` 数据可以通过 {{domxref("XMLHttpRequest")}} 和 {{domxref("FileReader")}} 来获取。AudioBuffer 是通过 AudioContext 采样率进行解码的，然后通过回调返回结果。
 
 这是从音频轨道创建用于 web audio API 音频源的首选方法。
 
@@ -31,7 +31,7 @@ decodeAudioData(arrayBuffer, successCallback, errorCallback)
 通过按钮来运行 `getData()` 来获取音轨并播放它。当使用 `stop()` 方法后 source 将会被清除。
 
 > [!NOTE]
-> You can [run the example live](http://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
+> You can [run the example live](https://mdn.github.io/decode-audio-data/) (or [view the source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 // define variables
@@ -114,7 +114,7 @@ ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
 
 ## 返回
 
-一个 {{domxref("Promise") }}对象。
+一个 {{jsxref("Promise")}}对象。
 
 ## 规范
 
@@ -126,4 +126,4 @@ ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

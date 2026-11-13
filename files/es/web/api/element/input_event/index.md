@@ -38,10 +38,10 @@ El evento **`input`** se dispara cuando el valor (`value`) de un elemento {{HTML
 
 El evento también aplica a los elementos con la propiedad {{domxref("HTMLElement.contentEditable", "contenteditable")}} habilidado, y para cualquier otro elemento cuando la propiedad {{domxref("Document.designMode", "designMode")}} esta encendida. En el caso de un `contenteditable` y `designMode`, el objetivo del evento es el the event target is the _editing host_. Si estas propiedades aplian a múltiples elementos, el host de edición es el elemento ancestro más cercano cuyo padre no es editable.
 
-Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento [`change`](/es/docs/Web/Reference/Events/change) en su lugar para estos tipos.
+Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) en su lugar para estos tipos.
 
 > [!NOTE]
-> A diferencia de `input`, el evento [`change`](/es/docs/Web/Reference/Events/change) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
+> A diferencia de `input`, el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
 
 ## Ejemplos
 
@@ -86,7 +86,6 @@ function updateValue(e) {
 - [InputEvent](/es/docs/Web/API/InputEvent)
 - {{domxref("GlobalEventHandlers.oninput")}}
 - Eventos relacionados
-
   - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
-  - [`change`](/es/docs/Web/Reference/Events/change)
-  - [`invalid`](/es/docs/Web/API/Constraint_validation/invalid_event)
+  - [`change`](/es/docs/Web/API/HTMLElement/change_event)
+  - [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event)

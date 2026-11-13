@@ -2,10 +2,8 @@
 title: Breadcrumb (パンくずリスト)
 slug: Glossary/Breadcrumb
 l10n:
-  sourceCommit: 56c7d77cdb42a21cdd1b7ca7767c9d0bf8b7462e
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
-
-{{GlossarySidebar}}
 
 **パンくずリスト** (breadcrumb, breadcrumb trail) は、ウェブサイトの各ページのヘッダーと本文の間に置かれることが多い構成要素です。パンくずリストを通じて、たとえばトップページからみて現在のページがどの階層に位置するかや、ユーザーが現在のページに至るまでどの順番でどのリンクをたどってきたのかを知ることができます。
 
@@ -16,11 +14,11 @@ l10n:
 パンくずリストが適切に機能していれば、ユーザーはウェブサイト内での現在位置を確かめ、どのように今のページに到着したのかを知ることができます。そのおかげで、ユーザーはすでに見たページに簡単に戻ることができますし、余計なクリックをせずに上の階層のページに移動することができます。
 
 > [!NOTE]
-> パンくずナビゲーションメニュー専用の[意味づけされた HTML 要素](https://html.spec.whatwg.org/multipage/semantics-other.html#rel-up)はありませんが、一般的にその階層構造を表すのには {{htmlelement("ol")}} 要素が使用されます。
+> パンくずナビゲーションメニュー専用の[意味づけされた HTML 要素](https://html.spec.whatwg.org/multipage/semantics-other.html#rel-up)<sup>(英語)</sup>はありませんが、一般的にその階層構造を表すのには {{htmlelement("ol")}} 要素が使用されます。
 
 ## 関連情報
 
-- [パンくずナビゲーション](/ja/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [パンくずナビゲーション](/ja/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)
 - [Google Search Central: Breadcrumb Structured Data](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
 - [APG Guide: Breadcrumb Example](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
 - [Understanding Success Criterion 2.4.8 | W3C Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/location)

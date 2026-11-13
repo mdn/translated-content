@@ -5,7 +5,7 @@ slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 
 {{APIRef("WebVR API")}}
 
-La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'[API Gamepad](/fr/docs/Web/API/Gamepad_API), et plus spécifiquement avec l'[API Gamepad Extensions](/fr/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) qui ajoute des API pour accéder, entre autres, à la [position du controller](/fr/docs/Web/API/GamepadPose), au [retour haptique](/fr/docs/Web/API/GamepadHapticActuator), etc.. Cet article fournit les bases pour utiliser ces API.
+La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'[API Gamepad](/fr/docs/Web/API/Gamepad_API), et plus spécifiquement avec l'[API Gamepad Extensions](/fr/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) qui ajoute des API pour accéder, entre autres, à la [position du controller](/fr/docs/Web/API/GamepadPose), au [retour haptique](/fr/docs/Web/API/GamepadHapticActuator), etc.. Cet article fournit les bases pour utiliser ces API.
 
 ## L'API WebVR
 
@@ -89,7 +89,7 @@ function reportDisplays() {
 
 This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
 
-The last line contained in this function is a [`setTimeout()`](/fr/docs/Web/API/setTimeout) call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
+The last line contained in this function is a [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
 
 ### Getting the Gamepad information
 
@@ -222,7 +222,7 @@ if (gp && gpPose.hasPosition) {
 }
 ```
 
-Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{domxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
+Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{jsxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
 
 If the `gp` variable has a `Gamepad` object inside it and it can return position values (`gpPose.hasPosition`), indicating a 6DoF controller, we modify the cube position using position and orientation values. If only the former is true, indicating a 3DoF controller, we modify the cube position using the orientation values only. If there is no gamepad connected, we don't modify the cube position at all.
 

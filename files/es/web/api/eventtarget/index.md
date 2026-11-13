@@ -30,6 +30,6 @@ Muchos objetivos de eventos tales como: elementos, documentos y ventanas, tambi�
 
 ## Vea también
 
-- [Event reference](/es/docs/Web/Reference/Events) - Los eventos disponibles en la plataforma
+- [Event reference](/es/docs/Web/API/Document_Object_Model/Events) - Los eventos disponibles en la plataforma
 - [Event developer guide](/es/docs/Web/Guide/DOM/Events) - Guía sobre eventos para desarrolladores
 - {{domxref("Event")}} - Interface

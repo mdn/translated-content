@@ -16,18 +16,14 @@ var observer = new IntersectionObserver(callback[, options]);
 ### 参数
 
 - `callback`
-
   - : 当元素可见比例超过指定阈值后，会调用一个回调函数，此回调函数接受两个参数：
-
     - `entries`
       - : 一个{{domxref("IntersectionObserverEntry")}}对象的数组，每个被触发的阈值，都或多或少与指定阈值有偏差。
     - `observer`
       - : 被调用的{{domxref("IntersectionObserver")}}实例。
 
 - `options` {{optional_inline}}
-
   - : 一个可以用来配置 observer 实例的对象。如果`options`未指定，observer 实例默认使用文档视口作为 root，并且没有 margin，阈值为 0%（意味着即使一像素的改变都会触发回调函数）。你可以指定以下配置：
-
     - `root`
       - : 监听元素的祖先元素{{domxref("Element")}}对象，其边界盒将被视作视口。目标在根的可见区域的任何不可见部分都会被视为不可见。
     - `rootMargin`

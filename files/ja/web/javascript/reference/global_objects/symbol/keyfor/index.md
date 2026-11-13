@@ -1,15 +1,29 @@
 ---
 title: Symbol.keyFor()
+short-title: keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Symbol.keyFor()`** 静的メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリーから受け取ります。
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript デモ: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // グローバルシンボル
+
+console.log(Symbol.keyFor(globalSym));
+// 予想される結果: "foo"
+
+const localSym = Symbol(); // ローカルシンボル
+
+console.log(Symbol.keyFor(localSym));
+// 予想される結果: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// 予想される結果: undefined
+```
 
 ## 構文
 

@@ -7,7 +7,8 @@ slug: Web/API/SharedWorker
 
 **`SharedWorker`** 인터페이스는 윈도우 창이나 iframe, 워커등의 다른 브라우징 컨텍스트에서도 접근이 가능한 특정 종류의 워커를 의미합니다. 기존의 다른 종류의 워커들과 다른 전역 스코프를 갖는 인터페이스를 구현합니다. {{domxref("SharedWorkerGlobalScope")}}.
 
-> **참고:** **참고 :** SharedWorker 가 몇개의 다른 브라우징 컨텍스트에서 접근이 가능하면, 그 브라우징 컨텍스트들은 모두 정확히 같은 오리진을 공유해야 합니다. (같은 프로토콜, 호스트, 포트 등)
+> [!NOTE]
+> **참고 :** SharedWorker 가 몇개의 다른 브라우징 컨텍스트에서 접근이 가능하면, 그 브라우징 컨텍스트들은 모두 정확히 같은 오리진을 공유해야 합니다. (같은 프로토콜, 호스트, 포트 등)
 
 ## 생성자
 
@@ -29,7 +30,7 @@ _{{domxref("EventTarget")}}_ 의 속성들을 상속 받습니다. 그리고 _{{
 
 ## 예제
 
-[Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) 를 보시면 2개의 HTML 페이지가 있습니다. 각각 간단한 계산을 위해 JavaScript를 사용합니다. 각기 다른 스크립트가 계산을 위해 같은 워커 파일을 사용합니다 — 두 개 페이지가 모두 다른 윈도우창에서 실행되더라도 같은 워커에 접근할 수 있습니다.
+[Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)) 를 보시면 2개의 HTML 페이지가 있습니다. 각각 간단한 계산을 위해 JavaScript를 사용합니다. 각기 다른 스크립트가 계산을 위해 같은 워커 파일을 사용합니다 — 두 개 페이지가 모두 다른 윈도우창에서 실행되더라도 같은 워커에 접근할 수 있습니다.
 
 아래 코드 스니펫은 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} 생성자를 이용해 `SharedWorker` 객체를 생성합니다. 두 스크립트 모두 아래를 포함합니다.
 
@@ -88,4 +89,4 @@ onconnect = function (e) {
 ## 같이 보기
 
 - {{domxref("Worker")}}
-- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

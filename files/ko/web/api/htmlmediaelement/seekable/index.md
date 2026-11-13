@@ -37,4 +37,4 @@ for (let count = 0; count < timeRangesObject.length; count++) {
 
 - seekable을 정의하는 인터페이스는 {{domxref("HTMLMediaElement")}}입니다.
 - [미디어 소스 확장 API](/ko/docs/Web/API/Media_Source_Extensions_API)
-- [미디어 버퍼링, 검색 및 시간 범위](/ko/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [미디어 버퍼링, 검색 및 시간 범위](/ko/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)

@@ -20,8 +20,8 @@ check(font, text)
 
 ### 参数
 
-- `font`：使用 CSS [`font`](/zh-CN/docs/Web/CSS/font) 属性语法的字体规范，例如 `"italic bold 16px Roboto"`。
-- `text`：将字体面限制为 Unicode 范围至少包含文本中的一个字符。这[不检查单个字形覆盖](http://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
+- `font`：使用 CSS [`font`](/zh-CN/docs/Web/CSS/Reference/Properties/font) 属性语法的字体规范，例如 `"italic bold 16px Roboto"`。
+- `text`：将字体面限制为 Unicode 范围至少包含文本中的一个字符。这[不检查单个字形覆盖](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
 
 ## 示例
 

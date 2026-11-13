@@ -10,7 +10,7 @@ slug: Web/API/Window/pageshow_event
 ## 基本信息
 
 - 规范
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
 - 接口
   - : [PageTransitionEvent](/zh-CN/docs/Web/API/PageTransitionEvent)
 - 事件冒泡
@@ -27,10 +27,10 @@ slug: Web/API/Window/pageshow_event
 | Property                        | Type                       | Description                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | 表示网页是否是来自缓存。                               |
+| `persisted` {{readonlyInline}}  | {{jsxref("Boolean")}}      | 表示网页是否是来自缓存。                               |
 
 ## 示例
 
@@ -63,5 +63,5 @@ window.addEventListener('load', function() {
 
 ## 相关事件
 
-- [`pagehide`](/zh-CN/docs/Mozilla_event_reference/pagehide)
-- [Using Firefox 1.5 caching — pageshow event](/zh-CN/docs/Using_Firefox_1.5_caching#pageshow_event)
+- [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event)
+- [Using Firefox 1.5 caching — pageshow event](/zh-CN/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching#pageshow_event)

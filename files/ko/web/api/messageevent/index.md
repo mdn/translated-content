@@ -21,9 +21,9 @@ slug: Web/API/MessageEvent
 _이 interface는 부모 객체인 {{domxref("Event")}}의 속성을 상속받습니다._
 
 - {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : emitter에 의해 보내진 데이터인 {{domxref("DOMString")}}, {{domxref("Blob")}} 또는 {{domxref("ArrayBuffer")}}를 포함합니다.
+  - : emitter에 의해 보내진 데이터인 {{jsxref("String")}}, {{domxref("Blob")}} 또는 {{jsxref("ArrayBuffer")}}를 포함합니다.
 - {{domxref("MessageEvent.origin")}}
-  - : {{domxref("DOMString")}} 입니다.…
+  - : {{jsxref("String")}} 입니다.…
 - {{domxref("MessageEvent.ports")}}
   - : …
 - {{domxref("MessageEvent.source")}}
@@ -44,5 +44,5 @@ _이 interface는 부모 객체인 {{domxref("Event")}}의 메서드를 상속�
 ## See also
 
 - {{domxref("ExtendableMessageEvent")}}, 와 유사한 interface이며, 개발자에게 더 유연성을 제공하기 위해 사용되는 interface 입니다.
-- [WebSocket API](/ko/docs/Web/API/WebSocket_API)
+- [WebSocket API](/ko/docs/Web/API/WebSockets_API)
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)

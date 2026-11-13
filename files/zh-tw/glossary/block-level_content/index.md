@@ -3,9 +3,7 @@ title: 區塊級元素
 slug: Glossary/Block-level_content
 ---
 
-{{GlossarySidebar}}
-
-HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/HTML/Inline_elements)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵.
+HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/Glossary/Inline-level_content)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵.
 
 瀏覽器預設以在元素前後換行的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。
 
@@ -48,7 +46,7 @@ There are a couple of key differences between block-level elements and inline el
 - Content model
   - : Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
 
-The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/HTML/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), but there are additional categories.
+The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/Web/HTML/Guides/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content), but there are additional categories.
 
 ## 相關元素
 
@@ -112,6 +110,6 @@ The following is a complete list of all HTML block level elements (although "blo
 ### 參閱
 
 - [行內級元素](/zh-TW/docs/Glossary/Inline-level_content)
-- [Block formatting context](/zh-TW/docs/Web/Guide/CSS/Block_formatting_context)
+- [區塊格式化上下文](/zh-TW/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - {{cssxref("display")}}
-- [`writing-mode`](/zh-TW/docs/Web/CSS/writing-mode)
+- [`writing-mode`](/zh-TW/docs/Web/CSS/Reference/Properties/writing-mode)

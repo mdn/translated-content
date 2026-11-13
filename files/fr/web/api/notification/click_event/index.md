@@ -37,4 +37,4 @@ notification.onclick = function (event) {
 ## Voir aussi
 
 - {{domxref("Notification")}}
-- [Utiliser l'API Notifications](/fr/docs/Web/API/notification/Using_Web_Notifications)
+- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)

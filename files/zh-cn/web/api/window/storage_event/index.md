@@ -9,7 +9,7 @@ slug: Web/API/Window/storage_event
 
 ## 常规信息
 
-说明：_[Web Storage](http://www.w3.org/TR/webstorage/#the-storage-event)_
+说明：_[Web Storage](https://www.w3.org/TR/webstorage/#the-storage-event)_
 
 <table class="properties">
   <tbody>
@@ -34,17 +34,17 @@ slug: Web/API/Window/storage_event
 
 ## 属性
 
-| Property                         | Type                              | Description                   |
-| -------------------------------- | --------------------------------- | ----------------------------- |
-| `target` {{readonlyInline}}      | {{domxref("EventTarget")}}        | 事件目标 (DOM 树中的最大目标) |
-| `type` {{readonlyInline}}        | {{domxref("DOMString")}}          | 事件的类型                    |
-| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}             | 事件通常是否会出现冒泡        |
-| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}             | 事件是否可取消                |
-| `key` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | 键更改时                      |
-| `oldValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | 正在更改键的旧值              |
-| `newValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | 正在更改键的新值              |
-| `url` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | 键更改的文档的地址            |
-| `storageArea` {{readonlyInline}} | {{domxref("Storage")}}            | 受影响的存储对象              |
+| Property                         | Type                          | Description                   |
+| -------------------------------- | ----------------------------- | ----------------------------- |
+| `target` {{readonlyInline}}      | {{domxref("EventTarget")}}    | 事件目标 (DOM 树中的最大目标) |
+| `type` {{readonlyInline}}        | {{jsxref("String")}}          | 事件的类型                    |
+| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}         | 事件通常是否会出现冒泡        |
+| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}         | 事件是否可取消                |
+| `key` {{readonlyInline}}         | {{jsxref("String")}} (string) | 键更改时                      |
+| `oldValue` {{readonlyInline}}    | {{jsxref("String")}} (string) | 正在更改键的旧值              |
+| `newValue` {{readonlyInline}}    | {{jsxref("String")}} (string) | 正在更改键的新值              |
+| `url` {{readonlyInline}}         | {{jsxref("String")}} (string) | 键更改的文档的地址            |
+| `storageArea` {{readonlyInline}} | {{domxref("Storage")}}        | 受影响的存储对象              |
 
 ## 规范
 

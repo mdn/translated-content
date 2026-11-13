@@ -24,7 +24,7 @@ TypeError: 'x' не является функцией или её возвращ
 
 ### Итерация по свойствам объекта
 
-В JavaScript, {{jsxref("object")}} не повторяется, если они реализуют итерационный протокол . Поэтому нельзя использовать for...of для перебора свойств объекта.
+В JavaScript, {{jsxref("Object")}} не повторяется, если они реализуют итерационный протокол . Поэтому нельзя использовать for...of для перебора свойств объекта.
 
 ```js example-bad
 var obj = { France: "Paris", England: "London" };
@@ -75,7 +75,8 @@ function* generate(a, b) {
   yield b;
 }
 
-for (let x of generate) // TypeError: генерация не является итерационной
+for (let x of generate)
+  // TypeError: генерация не является итерационной
   console.log(x);
 ```
 
@@ -92,9 +93,9 @@ for (let x of generate(1, 2)) console.log(x);
 
 ## Смотрите также
 
-- [iterable protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+- [iterable protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [generators](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
+- [generators](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
 - [for…of](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

@@ -1,11 +1,14 @@
 ---
-title: Node.hasAttributes
+title: Element：hasAttributes() 方法
+short-title: hasAttributes()
 slug: Web/API/Element/hasAttributes
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ApiRef}}
+{{ApiRef("DOM")}}
 
-`hasAttributes`属性返回一个布尔值`true`或`false`,来表明当前元素节点是否有至少一个的属性 (attribute).
+{{domxref("Element")}} 接口的 **`hasAttributes()`** 方法返回一个表示当前元素是否具有任何属性的布尔值。
 
 ## 语法
 
@@ -13,16 +16,36 @@ slug: Web/API/Element/hasAttributes
 hasAttributes()
 ```
 
+### 参数
+
+无。
+
+### 返回值
+
+布尔值。
+
 ## 示例
 
 ```js
-var t1 = document.getElementById("table-data");
-
-if (t1.hasAttributes()) {
-  // 可以用 t1.attributes 来读取该元素的所有属性
+let foo = document.getElementById("foo");
+if (foo.hasAttributes()) {
+  // 对“foo.attributes”进行操作
 }
 ```
 
 ## 规范
 
-- [hasAttributes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeHasAttrs)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.attributes")}}
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

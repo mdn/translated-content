@@ -5,7 +5,7 @@ slug: Web/API/Storage/removeItem
 
 {{APIRef("Web Storage API")}}
 
-El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/API_de_almacenamiento_web) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
+El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/Web_Storage_API) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
 
 ## Sintaxis
 
@@ -16,7 +16,7 @@ storage.removeItem(keyName);
 ### Parámetros
 
 - _**keyName**_
-  - : Una {{domxref("DOMString")}} que contiene el nombre de la clave que se desea eliminar.
+  - : Una {{jsxref("String")}} que contiene el nombre de la clave que se desea eliminar.
 
 ### Devuelve
 

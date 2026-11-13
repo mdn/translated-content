@@ -1,15 +1,29 @@
 ---
 title: Set.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
-
-{{JSRef}}
 
 **`delete()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの集合にあれば、取り除きます。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.delete()")}}
+
+```js interactive-example
+const set = new Set();
+set.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+
+// `x > 10` であるすべての点を削除
+set.forEach((point) => {
+  if (point.x > 10) {
+    set.delete(point);
+  }
+});
+
+console.log(set.size);
+// 予想される結果: 1
+```
 
 ## 構文
 
@@ -20,15 +34,15 @@ setInstance.delete(value)
 ### 引数
 
 - `value`
-  - : `Set` から取り除く要素の値です。
+  - : この `Set` オブジェクトから取り除く要素の値です。オブジェクトは、値ではなく[参照](/ja/docs/Glossary/Object_reference)によって比較されます。
 
 ### 返値
 
-`true` ならば `value` が既に `Set` に存在していたことを表します。そうでなければ `false` を返します。
+`Set` オブジェクト内の値が正常に取り除かれた場合、`true` を返します。`Set` 内にその値が見つからない場合は、`false` を返します。
 
 ## 例
 
-### delete() メソッドの使用
+### delete() の使用
 
 ```js
 const mySet = new Set();
@@ -70,4 +84,6 @@ setObj.forEach((point) => {
 ## 関連情報
 
 - {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
 - {{jsxref("Set.prototype.clear()")}}
+- {{jsxref("Set.prototype.has()")}}

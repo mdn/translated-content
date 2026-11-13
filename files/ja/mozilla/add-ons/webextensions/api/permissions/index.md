@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/permissions
 
 - the extension can run with a smaller set of permissions except when it actually needs them
 - the extension can handle permission denial in a graceful manner instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension without giving it access to your location, for example.
-- the extension may need [host permissions](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), but not know at install time exactly which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime can be an alternative to asking for "\<all_urls>" at install time.
+- the extension may need [host permissions](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), but not know at install time exactly which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime can be an alternative to asking for "\<all_urls>" at install time.
 
 To use the permissions API, decide which permissions your extension can request at runtime, and list them in [`optional_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). After this, you can request any permissions that were included in `optional_permissions`. Requests may only be made in the handler for a user action (for example, a click handler).
 
@@ -57,4 +57,4 @@ To use the permissions API, decide which permissions your extension can request 
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 
@@ -7,7 +8,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 **`some()`** 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 적어도 하나라도 통과하는지 테스트합니다. 만약 배열에서 주어진 함수가 true을 반환하면 true를 반환합니다. 그렇지 않으면 false를 반환합니다. 이 메서드는 배열을 변경하지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## 구문
 
@@ -31,11 +42,9 @@ some(function (element, index, array) { /* … */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
-
   - : 배열의 각 요소에 대해 실행할 함수. 이 함수는 요소가 시험을 통과하면 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환하며, 그렇지 않으면 거짓인 값을 반환합니다.
 
   다음의 인자와 함께 함수를 호출합니다.
-
   - `element`
     - : 처리할 배열 내 현재 요소
   - `index`

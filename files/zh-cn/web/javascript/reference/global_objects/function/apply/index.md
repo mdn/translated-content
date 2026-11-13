@@ -3,11 +3,23 @@ title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`apply()`** 方法会以给定的 `this` 值和作为数组（或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)）提供的 `arguments` 调用该函数。
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 语法
 

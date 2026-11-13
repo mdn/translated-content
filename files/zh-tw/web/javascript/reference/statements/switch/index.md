@@ -3,11 +3,25 @@ title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
 
-{{jsSidebar("Statements")}}
-
 **`switch` 語句**會比對一個[表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的[陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements)，以及此一符合條件以外，剩下其他條件裡的陳述式。
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## 語法
 
@@ -42,7 +56,7 @@ switch (expression) {
 
 ## 描述
 
-一個 switch 陳述式會先評估自己的 expression。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expression 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 case，就執行第一個符合的 case，就算該 case 與其他 case 不同）
+一個 switch 陳述式會先評估自己的 expression。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expression 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators), `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 case，就執行第一個符合的 case，就算該 case 與其他 case 不同）
 
 If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing the associated statements. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. 按照慣例， `default` 語句會是最後一個條件，但不一定要存在。
 

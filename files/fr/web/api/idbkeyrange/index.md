@@ -5,32 +5,30 @@ slug: Web/API/IDBKeyRange
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
+L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/IndexedDB_API) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
 
 Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :
 
-| Intervalle                         | Code                                                                         |
-| ---------------------------------- | ---------------------------------------------------------------------------- |
-| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
-| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)  |
-| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
-| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound) |
-| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound)              |
-| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound)  |
-| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound) |
-| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound) |
-| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only)                   |
+| Intervalle                         | Code                                                                                |
+| ---------------------------------- | ----------------------------------------------------------------------------------- |
+| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)       |
+| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)  |
+| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static)       |
+| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static) |
+| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound_static)              |
+| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static)  |
+| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
+| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
+| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only_static)                   |
 
 Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
 - La borne inférieure de l'intervalle de clé est :
-
   - `undefined`
   - Inférieure à la valeur de la clé
   - Égal à la valeur de la clé si `lowerOpen` est `false` (l'intervalle est fermé à gauche)
 
 - La borne supérieure de l'intervalle de clé est :
-
   - `undefined`
   - Supérieure à la valeur de la clé
   - Égal à la valeur de la clé si `upperOpen` vaut `false` (l'intervalle est fermé à droite)
@@ -108,7 +106,7 @@ function displayData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

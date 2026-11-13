@@ -2,7 +2,7 @@
 title: NDEFReader：write() 方法
 slug: Web/API/NDEFReader/write
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
@@ -19,9 +19,7 @@ write(message, options)
 ### 参数
 
 - `message`
-
-  - : 要写入的消息，可以是字符串对象或字面量、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}，或者是记录数组。具有以下成员：
-
+  - : 要写入的消息，可以是字符串、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}，或者是记录数组。具有以下成员：
     - `data` {{optional_inline}}
       - : 包含要传输的数据；可以是字符串、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} 或嵌套记录数组之一。
     - `encoding` {{optional_inline}}
@@ -31,17 +29,15 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : 根据 {{RFC(5646, "用于标识语言的标记（又称 BCP 47）")}}规定的有效语言标签。
     - `mediaType` {{optional_inline}}
-      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
+      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
     - `recordType`
-
       - : 指示存储在 `data` 中的数据类型的字符串。必须是以下值之一：
-
         - `"absolute-url"`
           - : 指向数据的绝对 URL。
         - `"empty"`
           - : 一个空的 {{domxref("NDEFRecord")}}。
         - `"mime"`
-          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
+          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
         - `"smart-poster"`
           - : 一个由 [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 规范定义的智能海报。
         - `"text"`
@@ -52,9 +48,7 @@ write(message, options)
           - : 由 [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) 规范定义的 URL。
 
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `overwrite`
       - : 一个布尔值，指定是否应覆盖（如果存在的话）现有记录。
     - `signal` {{optional_inline}}
@@ -64,7 +58,7 @@ write(message, options)
 
 一个 {{JSxRef("Promise")}}，当消息成功写入标签时兑现，或者在遇到硬件或权限错误时拒绝。
 
-## 异常
+### 异常
 
 此方法不抛出异常；相反，它会拒绝返回的 promise，并传入一个 {{domxref("DOMException")}}，其 `name` 属性是以下值之一：
 

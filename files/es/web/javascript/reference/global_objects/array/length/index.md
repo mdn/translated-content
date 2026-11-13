@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 La propiedad **`length`** de un objeto que es una instancia de tipo Array establece o devuelve la cantidad de elementos en esa matriz. El valor es un entero sin signo de 32 bits que siempre es numéricamente mayor que el índice más alto en la matriz.
 
-{{EmbedInteractiveExample("pages/js/array-length.html")}}
+{{InteractiveExample("JavaScript Demo: Array.length")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## Descripción
 
@@ -56,7 +63,7 @@ function printEntries(arr) {
 // === impreso ===
 ```
 
-Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties).
+Pero, la propiedad `length` no necesariamente indica el número de valores definidos en la matriz. Ver también [Relación entre `length` y las propiedades numéricas](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 

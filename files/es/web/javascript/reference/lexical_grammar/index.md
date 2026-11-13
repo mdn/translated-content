@@ -32,7 +32,7 @@ Los caracteres de {{Glossary("Espacio_en_blanco")}} mejoran la legibilidad del t
 
 ## Terminadores de línea
 
-Además de los caracteres de {{Glossary("Espacio_en_blanco", "espacio en blanco")}}, los caracteres de terminación de línea se utilizan para mejorar la legibilidad del texto fuente. Sin embargo, en algunos casos, los terminadores de línea pueden influir en la ejecución del código JavaScript, ya que hay algunos lugares donde están prohibidos. Los terminadores de línea también afectan el proceso de la [inserción automática de punto y coma](#Inserción_automática_de_punto_y_coma). Los terminadores de línea se corresponden con la clase **\s** en [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Además de los caracteres de {{Glossary("Espacio_en_blanco", "espacio en blanco")}}, los caracteres de terminación de línea se utilizan para mejorar la legibilidad del texto fuente. Sin embargo, en algunos casos, los terminadores de línea pueden influir en la ejecución del código JavaScript, ya que hay algunos lugares donde están prohibidos. Los terminadores de línea también afectan el proceso de la [inserción automática de punto y coma](#inserción_automática_de_punto_y_coma). Los terminadores de línea se corresponden con la clase **\s** en [expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 Solo los siguientes puntos de código Unicode se tratan como terminadores de línea en ECMAScript, otros caracteres de salto de línea se tratan como espacios en blanco (por ejemplo, `Next Line`, `NEL`, `U+0085` se consideran como espacios en blanco).
 
@@ -135,8 +135,8 @@ console.log("Hola mundo");
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Statements/switch", "default")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -147,12 +147,12 @@ console.log("Hola mundo");
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -267,7 +267,7 @@ Los tipos {{jsxref("Number")}} y {{jsxref("BigInt")}} usan literales numéricos.
 0777; // procesado como octal, 511 en decimal
 ```
 
-Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si todos los dígitos después del `0` inicial son menores que 8, el número se interpreta como un número octal. Esto no arrojará JavaScript, consulta [error 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). Consulta también la página sobre {{jsxref("parseInt", "parseInt()")}}
+Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si todos los dígitos después del `0` inicial son menores que 8, el número se interpreta como un número octal. Esto no arrojará JavaScript, consulta [error 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). Consulta también la página sobre {{jsxref("parseInt()")}}
 
 ##### Exponencial
 
@@ -339,7 +339,7 @@ Para números `BigInt` octales, siempre utiliza cero seguido de la letra "o" (ma
 0o755n;
 ```
 
-Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Data_structures#BigInt_type).
+Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#bigint_type).
 
 #### Separadores numéricos
 
@@ -464,7 +464,7 @@ Consulta también {{jsxref("RegExp")}} para obtener más información.
 
 ### Plantillas literales
 
-Consulta también [cadenas de plantilla](/es/docs/Web/JavaScript/Reference/template_strings) para obtener más información.
+Consulta también [cadenas de plantilla](/es/docs/Web/JavaScript/Reference/Template_literals) para obtener más información.
 
 ```js-nolint
 `string text`
@@ -491,7 +491,7 @@ Algunas [declaraciones JavaScript](/es/docs/Web/JavaScript/Reference/Statements)
 
 La especificación ECMAScript menciona [tres reglas de inserción de punto y coma](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
-1\. Se inserta un punto y coma antes, cuando se encuentra un [terminador de línea](#Line_terminators) o "}" que no está permitido por la gramática.
+1\. Se inserta un punto y coma antes, cuando se encuentra un [terminador de línea](#line_terminators) o "}" que no está permitido por la gramática.
 
 ```js
 { 1 2 } 3
@@ -503,7 +503,7 @@ La especificación ECMAScript menciona [tres reglas de inserción de punto y com
 
 2\. Se inserta un punto y coma al final, cuando se detecta el final del flujo de entrada de símbolos y el analizador no puede procesar el único flujo de entrada como un programa completo.
 
-Aquí `++` no se trata como un [operador sufijo](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) que se aplica a la variable `b`, porque se produce un terminador de línea entre `b` y `++`.
+Aquí `++` no se trata como un [operador sufijo](/es/docs/Web/JavaScript/Reference/Operators#increment) que se aplica a la variable `b`, porque se produce un terminador de línea entre `b` y `++`.
 
 ```js
 a = b;
@@ -544,8 +544,8 @@ a + b;
 
 ## Ve también
 
-- [Jeff Walden: números binarios y octales](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: caracteres de secuencias de escape JavaScript](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: números binarios y octales](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: caracteres de secuencias de escape JavaScript](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean", "Booleanos")}}
 - {{jsxref("Number", "Números")}}
 - {{jsxref("RegExp")}}

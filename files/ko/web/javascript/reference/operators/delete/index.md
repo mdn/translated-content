@@ -9,7 +9,22 @@ l10n:
 
 **`delete`**는 객체의 속성을 제거합니다. 속성의 값이 객체이고 더 이상 그 객체에 대한 참조가 없다면, 해당 객체는 결국 자동으로 메모리에서 해제됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 구문
 
@@ -48,7 +63,7 @@ delete identifier;
 delete object.#privateProperty;
 ```
 
-[클래스](/ko/docs/Web/JavaScript/Reference/Classes)는 자동으로 엄격 모드로 작동하며, [private 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)은 클래스 본문 내에서만 참조될 수 있기 때문에 private 속성은 절대 삭제될 수 없습니다. `delete identifier`는 식별자가 전역 객체의 구성 가능한 속성을 참조한다면 [작동할 수 있지만](#deleting_global_properties), 이 형식을 피하고 [`gloablThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)를 접두사로 사용해야 합니다.
+[클래스](/ko/docs/Web/JavaScript/Reference/Classes)는 자동으로 엄격 모드로 작동하며, [private 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)은 클래스 본문 내에서만 참조될 수 있기 때문에 private 속성은 절대 삭제될 수 없습니다. `delete identifier`는 식별자가 전역 객체의 구성 가능한 속성을 참조한다면 [작동할 수 있지만](#deleting_global_properties), 이 형식을 피하고 [`gloablThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)를 접두사로 사용해야 합니다.
 
 다른 표현식들도 허용되지만, 이 예시는 의미 있는 동작을 유발하지 않습니다.
 
@@ -57,7 +72,7 @@ delete console.log(1);
 // 로그 1, true 반환, 아무것도 삭제되지 않습니다.
 ```
 
-`delete` 연산자는 객체에서 주어진 속성을 삭제합니다. 성공적으로 삭제하면 `true`를 반환하고, 실패하면 `false`를 반환합니다. 일반적인 믿음(아마도 [C++의 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170))와 같은 다른 프로그래밍 언어들 때문에)과 달리, `delete` 연산자는 메모리를 직접 해제하는 것과 전혀 관련이 없습니다. 메모리 관리는 참조를 끊는 방식으로 간접적으로 이루어집니다. 자세한 내용은 [메모리 관리](/ko/docs/Web/JavaScript/Memory_management) 페이지를 참조하세요.
+`delete` 연산자는 객체에서 주어진 속성을 삭제합니다. 성공적으로 삭제하면 `true`를 반환하고, 실패하면 `false`를 반환합니다. 일반적인 믿음(아마도 [C++의 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170))와 같은 다른 프로그래밍 언어들 때문에)과 달리, `delete` 연산자는 메모리를 직접 해제하는 것과 전혀 관련이 없습니다. 메모리 관리는 참조를 끊는 방식으로 간접적으로 이루어집니다. 자세한 내용은 [메모리 관리](/ko/docs/Web/JavaScript/Guide/Memory_management) 페이지를 참조하세요.
 
 아래 시나리오를 고려하는 것이 중요합니다.
 

@@ -3,8 +3,6 @@ title: Desenvolvimento de jogos
 slug: Games
 ---
 
-{{GamesSidebar}}
-
 Jogar é uma das atividades mais populares em computadores. Novas tecnologias aparecem, constantemente, para tornar possível o desenvolvimento de jogos melhores e mais poderosos, que podem ser executados em qualquer navegador compatível com os padrões web.
 
 ## Desenvolver jogos web
@@ -14,7 +12,7 @@ Bem-vindas ao centro de desenvolvimento de jogos MDN! Nesta área da página ofe
 Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e, [exemplos de jogos](/pt-BR/docs/Games/Examples).
 
 > [!NOTE]
-> Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn) é o melhor para você, se você for completamente principiante.
+> Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn_web_development) é o melhor para você, se você for completamente principiante.
 
 ## Leve jogos nativos para a Web
 
@@ -47,7 +45,6 @@ Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-
 - [Gamedev.js Weekly](http://gamedevjsweekly.com/)
   - : Boletim de notícias semanal sobre desenvolvimento de jogos HTML5, lançado toda Sexta-Feira. Contém os últimos artigos, tutoriais, ferramentas e recursos.
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
-
   - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
 
 - [HTML5 Game Engine](http://html5gameengine.com/)
@@ -60,7 +57,7 @@ Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-
   - : Fale, diretamente, com desenvolvedores, em tempo real.
 - [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
   - : Partida para novos desenvolvedores de jogos, uma lista organizada de links para vários recursos úteis na web.
-- [js13kGames](http://js13kgames.com/)
+- [js13kGames](https://js13kgames.com/)
   - : Competição de codificação JavaScript para desenvolvedores de jogos HTML5 com tamanho de arquivo limitado a 13 kilobytes. Todos os jogos submetidos estão disponíveis no Github para leitura.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
   - : Categoria de Jogos no Mozilla Hacks blog, contém artigos interessantes relacionados a gamedev.

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 A função `parseFloat` analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## Sintaxe
 
@@ -90,7 +105,7 @@ Observe que este código é somente um exemplo; ele não aceita números válido
 
 ## Veja também
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

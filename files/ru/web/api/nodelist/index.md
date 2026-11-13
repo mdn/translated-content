@@ -74,9 +74,9 @@ for (let i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-Не следует использовать конструкции [`for...in`](/ru/docs/JavaScript/Reference/Statements/for...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
+Не следует использовать конструкции [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
 
-Циклы [`for...of`](/ru/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
+Циклы [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
 
 ```js
 const list = document.querySelectorAll("input[type=checkbox]");

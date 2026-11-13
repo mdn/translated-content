@@ -11,7 +11,21 @@ l10n:
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝟶</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0,\;\mathtt{\operatorname{Math.log10}(x)} = \log\_{10}(x) = \text{the unique } y \text{ such that } 10^y = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-log10.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+
+```js interactive-example
+console.log(Math.log10(100000));
+// Expected output: 5
+
+console.log(Math.log10(2));
+// Expected output: 0.3010299956639812
+
+console.log(Math.log10(1));
+// Expected output: 0
+
+console.log(Math.log10(0));
+// Expected output: -Infinity
+```
 
 ## 구문
 

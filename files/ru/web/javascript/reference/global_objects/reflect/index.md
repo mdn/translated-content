@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 {{JSRef}}
 
-**Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` - это не функциональный, а простой объект, он не является сконструированным.
+**Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` - это не функциональный, а простой объект, он не является сконструированным.
 
 ## Описание
 
@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ## Методы
 
-Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
+Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
 
 - {{jsxref("Reflect.apply()")}}
   - : Вызывает целевую функцию с аргументами, переданными в параметре `args`. Смотрите также {{jsxref("Function.prototype.apply()")}}.
@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
   - : Похож на {{jsxref("Object.defineProperty()")}}. Возвращает {{jsxref("Boolean")}}.
 - {{jsxref("Reflect.deleteProperty()")}}
   - : Оператор [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) как функция. Аналогично `delete target[name]`.
-- {{jsxref("Reflect.enumerate()")}}
+- `Reflect.enumerate()`
   - : Похож на цикл [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in). Возвращает итератор с собственными перечисляемыми и наследуемыми свойствами целевого объекта.
 - {{jsxref("Reflect.get()")}}
   - : Функция, которая возвращает значение свойств.
@@ -89,4 +89,4 @@ Reflect.set(duck, "eyes", "black");
 ## Смотрите также
 
 - Глобальный объект {{jsxref("Proxy")}}.
-- Объект {{jsxref("Proxy.handler", "handler")}}.
+- Объект {{jsxref("Proxy/Proxy", "handler")}}.

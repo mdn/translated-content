@@ -3,11 +3,22 @@ title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 
-{{JSRef}}
-
 **`matchAll()`** 方法返回一个迭代器，该迭代器包含了检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的所有结果（包括[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)）。
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## 语法
 
@@ -18,7 +29,6 @@ matchAll(regexp)
 ### 参数
 
 - `regexp`
-
   - : 一个正则表达式对象，或者是任何具有 [`Symbol.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) 方法的对象。
 
     如果 `regexp` 不是一个 `RegExp` 对象，并且没有 `Symbol.matchAll` 方法，它将通过 `new RegExp(regexp, 'g')` 被隐式转换为一个 {{jsxref("RegExp")}} 对象。

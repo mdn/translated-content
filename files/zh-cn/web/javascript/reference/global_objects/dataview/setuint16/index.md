@@ -3,11 +3,20 @@ title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 ---
 
-{{JSRef}}
-
 **`setUint16()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 16-bit 数 (无符号短整型)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint16(1, 65535); // Max unsigned 16-bit integer
+
+console.log(view.getUint16(1));
+// Expected output: 65535
+```
 
 ## 语法
 

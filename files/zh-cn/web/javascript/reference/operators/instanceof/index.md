@@ -3,24 +3,42 @@ title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
 
-{{jsSidebar("Operators")}}
+**`instanceof`** 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。其返回值是一个布尔值。可以通过 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 来自定义该运算符的行为。
 
-**`instanceof`** **运算符**用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
+{{InteractiveExample("JavaScript Demo: instanceof operator")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// 预期输出：true
+
+console.log(auto instanceof Object);
+// 预期输出：true
+```
 
 ## 语法
 
-```plain
+```js-nolint
 object instanceof constructor
 ```
 
 ### 参数
 
 - `object`
-  - : 某个实例对象
+  - : 要测试的对象
 - `constructor`
-  - : 某个构造函数
+  - : 测试对照的构造函数
+
+### 异常
+
+- {{jsxref("TypeError")}}
+  - : 如果 `constructor` 不是对象，或 `constructor` 没有 [`[Symbol.hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 方法（那么它一定是一个函数），则抛出该异常。
 
 ## 描述
 
@@ -31,24 +49,28 @@ object instanceof constructor
 function C() {}
 function D() {}
 
-var o = new C();
+const o = new C();
 
-o instanceof C; // true，因为 Object.getPrototypeOf(o) === C.prototype
+// true，因为：Object.getPrototypeOf(o) === C.prototype
+o instanceof C;
 
-o instanceof D; // false，因为 D.prototype 不在 o 的原型链上
+// false，因为 D.prototype 不在 o 的原型链上
+o instanceof D;
 
-o instanceof Object; // true，因为 Object.prototype.isPrototypeOf(o) 返回 true
-C.prototype instanceof Object; // true，同上
+o instanceof Object; // true，原因如下：
+C.prototype instanceof Object; // true
 
+// 重新赋值 `constructor.prototype`：在实践中很罕见
 C.prototype = {};
-var o2 = new C();
+const o2 = new C();
 
 o2 instanceof C; // true
 
-o instanceof C; // false，C.prototype 指向了一个空对象，这个空对象不在 o 的原型链上。
+// false，C.prototype 指向了一个空对象，这个空对象不在 o 的原型链上
+o instanceof C;
 
 D.prototype = new C(); // 继承
-var o3 = new D();
+const o3 = new D();
 o3 instanceof D; // true
 o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 ```
@@ -72,7 +94,7 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 下面的代码使用了 `instanceof` 来证明：`String` 和 `Date` 对象同时也属于`Object` 类型（他们是由 `Object` 类派生出来的）。
 
-但是，使用对象文字符号创建的对象在这里是一个例外：虽然原型未定义，但 `instanceof Object` 返回 `true`。
+但是，使用对象字面量符号创建的对象在这里是一个例外：虽然原型未定义，但 `instanceof Object` 返回 `true`。
 
 ```js
 var simpleStr = "This is a simple string";
@@ -141,6 +163,6 @@ if (!mycar instanceof Car)
 
 ## 参见
 
-- [typeof](/zh-CN/docs/JavaScript/Reference/Operators/typeof)
+- [typeof](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
 - {{jsxref("Symbol.hasInstance")}}
 - {{jsxref("Object.prototype.isPrototypeOf")}}

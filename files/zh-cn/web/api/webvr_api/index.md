@@ -18,11 +18,11 @@ WebVR API 能为虚拟现实设备的渲染提供支持——例如像 Oculus Ri
 {{domxref("HMDVRDevice.getEyeParameters()")}} 方法返回一个 {{domxref("VREyeParameters")}} 对象，可用于获取显示区域的信息——头显可以看到多少画面。 {{domxref("VREyeParameters.currentFieldOfView")}} 返回一个 {{domxref("VRFieldOfView")}} 对象，该对象包含了 4 个角度信息来描述当前的显示区域。你可以用 {{domxref("HMDVRDevice.setFieldOfView()")}} 来改变当前的显示区域。
 
 > [!NOTE]
-> 要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章[使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)。要学习更多关于 VR 技术背后的基础概念，请阅读文章 [WebVR 概念](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts)。
+> 要了解更多关于如何在你的应用程序中使用这些接口，请阅读文章[使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)。要学习更多关于 VR 技术背后的基础概念，请阅读文章 [WebVR 概念](/zh-CN/docs/Web/API/WebVR_API/Concepts)。
 
 ### 使用控制器：将 WebVR 与 Gamepad API 相结合
 
-Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/zh-CN/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) that adds API features for accessing [controller pose](/zh-CN/docs/Web/API/GamepadPose), [haptic actuators](/zh-CN/docs/Web/API/GamepadHapticActuator), and more.
+Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/zh-CN/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/zh-CN/docs/Web/API/GamepadPose), [haptic actuators](/zh-CN/docs/Web/API/GamepadHapticActuator), and more.
 
 > [!NOTE]
 > Our [Using VR controllers with WebVR](/zh-CN/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
@@ -66,7 +66,7 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 ## 参见
 
 - [建立 WebVR 的运行环境](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)
-- [WebVR 的相关概念](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts)
+- [WebVR 的相关概念](/zh-CN/docs/Web/API/WebVR_API/Concepts)
 - [怎样使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)——一系列有趣的概念游戏演示的集合，其中有些包括了 WebVR。
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)——一个当你编写 WebVR APP 时，非常有用的用于开始编程的模板。

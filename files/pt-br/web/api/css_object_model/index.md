@@ -51,8 +51,8 @@ Outras interfaces podem ser usadas com CSSOM:
 
 ## Tutoriais
 
-- [Determinando dimensões de elementos](/pt-BR/docs/Determining_the_dimensions_of_elements) (É necessário algumas atualizações, já que foi feito com DHTML/Ajax).
-- [Gerenciando as orientações da tela](/pt-BR/docs/WebAPI/Managing_screen_orientation)
+- [Determinando dimensões de elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (É necessário algumas atualizações, já que foi feito com DHTML/Ajax).
+- [Gerenciando as orientações da tela](/pt-BR/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Especificações
 

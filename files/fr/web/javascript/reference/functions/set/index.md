@@ -3,11 +3,24 @@ title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
 ---
 
-{{jsSidebar("Functions")}}
-
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## Syntaxe
 
@@ -36,7 +49,7 @@ On notera que `set` :
 - ne doit pas apparaître dans un littéral objet qui possède un autre `set` ou une autre propriété avec la même clé :
   ( `{ set x(v) { }, set x(v) { } }` et `{ x: ..., set x(v) { } }` seront interdits)
 
-On peut retirer un mutateur d'un objet grâce à l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}}.
+On peut retirer un mutateur d'un objet grâce à l'opérateur {{jsxref("delete")}}.
 
 ## Exemples
 
@@ -57,7 +70,7 @@ On notera que `courant` n'est pas défini. Toute tentative pour y accéder renve
 
 ### Supprimer un mutateur grâce à l'opérateur `delete`
 
-Si on souhaite retirer un mutateur, on peut simplement utiliser l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}} :
+Si on souhaite retirer un mutateur, on peut simplement utiliser l'opérateur {{jsxref("delete")}} :
 
 ```js
 delete o.courant;
@@ -107,9 +120,9 @@ console.log(obj.bidule); // "bidule"
 
 ## Voir aussi
 
-- {{jsxref("Fonctions/get","get")}}
-- {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
+- {{jsxref("Functions/get","get")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), dans le Guide JavaScript
+- [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#définir_des_getters_et_setters), dans le Guide JavaScript

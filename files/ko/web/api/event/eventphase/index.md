@@ -14,11 +14,11 @@ slug: Web/API/Event/eventPhase
 - `Event.NONE (0)`
   - : 이 이벤트는 현재 처리 중이 아닙니다.
 - `Event.CAPTURING_PHASE (1)`
-  - : 이벤트가 대상의 부모 객체를 통해 전파 중입니다. 이 단계는 {{domxref("Window")}}에서 시작해서, {{domxref("Document")}}, {{domxref("HTMLHtmlElement")}}를 거쳐 이벤트가 대상의 부모에 도달할 때까지 지속됩니다. {{domxref("EventTarget.addEventListener()")}}로 등록한 [이벤트 수신기](/ko/docs/Web/API/EventListener) 중 캡처 모드로 등록한 수신기는 이 단계에서 발동합니다.
+  - : 이벤트가 대상의 부모 객체를 통해 전파 중입니다. 이 단계는 {{domxref("Window")}}에서 시작해서, {{domxref("Document")}}, {{domxref("HTMLHtmlElement")}}를 거쳐 이벤트가 대상의 부모에 도달할 때까지 지속됩니다. {{domxref("EventTarget.addEventListener()")}}로 등록한 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener) 중 캡처 모드로 등록한 수신기는 이 단계에서 발동합니다.
 - `Event.AT_TARGET (2)`
   - : 이벤트가 [이벤트 대상](/ko/docs/Web/API/EventTarget)에 도착했습니다. {{domxref("Event.bubbles")}}가 `false`면 `Event.AT_TARGET` 단계가 끝남과 동시에 이벤트 처리도 마칩니다.
 - `Event.BUBBLING_PHASE (3)`
-  - : 이벤트가 대상의 조상을 따라 역순으로 전파 중입니다. 이 단계는 대상의 부모에서 시작해서 마침내 {{domxref("Window")}}에 도달할 때까지 지속됩니다. 이 동작을 버블링이라고 부르며, {{domxref("Event.bubbles")}}가 `true`여야 발생합니다. [이벤트 수신기](/ko/docs/Web/API/EventListener) 중 캡처 모드가 아닌 수신기는 이 단계에서 발동합니다.
+  - : 이벤트가 대상의 조상을 따라 역순으로 전파 중입니다. 이 단계는 대상의 부모에서 시작해서 마침내 {{domxref("Window")}}에 도달할 때까지 지속됩니다. 이 동작을 버블링이라고 부르며, {{domxref("Event.bubbles")}}가 `true`여야 발생합니다. [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener) 중 캡처 모드가 아닌 수신기는 이 단계에서 발동합니다.
 
 ## 예제
 

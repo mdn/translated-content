@@ -7,9 +7,28 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 **`indexOf()`** 메서드는 호출한 {{jsxref("String")}} 객체에서 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다. 일치하는 값이 없으면 -1을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
 
-> **참고:** {{jsxref("Array")}}에서는 {{jsxref("Array.prototype.indexOf()")}} 메서드가 같은 역할을 합니다.
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
+
+> [!NOTE]
+> {{jsxref("Array")}}에서는 {{jsxref("Array.prototype.indexOf()")}} 메서드가 같은 역할을 합니다.
 
 ## 구문
 

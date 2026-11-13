@@ -13,7 +13,27 @@ l10n:
 
 `AsyncGenerator`는 숨겨진 {{jsxref("AsyncIterator")}} 클래스의 하위 클래스입니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 생성자
 
@@ -38,10 +58,10 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 아래 속성은 `AsyncGenerator.prototype`에 정의되어 있으며 모든 `AsyncGenerator` 인스턴스에서 공유됩니다.
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : 인스턴스 객체를 생성하는 생성자 함수입니다. `AsyncGenerator` 객체를 위한 초기 값은 [`AsyncGeneratorFunction.prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)입니다.
 
-    > **참고:** `AsyncGenerator` 객체는 자신을 생성한 비동기 생성기 함수의 참조를 저장하고 있지 않습니다.
+    > [!NOTE]
+    > `AsyncGenerator` 객체는 자신을 생성한 비동기 생성기 함수의 참조를 저장하고 있지 않습니다.
 
 - `AsyncGenerator.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"AsyncGenerator"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.

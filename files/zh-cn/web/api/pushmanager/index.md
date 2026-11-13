@@ -71,6 +71,6 @@ navigator.serviceWorker
 
 ## See also
 
-- [Using the Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)
+- [Using the Push API](/zh-CN/docs/Web/API/Push_API)
 - [Push API](/zh-CN/docs/Web/API/Push_API)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)

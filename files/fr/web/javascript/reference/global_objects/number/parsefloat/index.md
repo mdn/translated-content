@@ -1,46 +1,60 @@
 ---
-title: Number.parseFloat()
+title: "Number : méthode statique parseFloat()"
+short-title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode statique **`Number.parseFloat()`** analyse un argument et retourne un nombre à virgule flottante. Si un nombre ne peut pas être analysé à partir de l'argument, elle retourne {{JSxRef("NaN")}}.
 
-La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caractères en un nombre flottant. Cette méthode possède un comportement identique à {{jsxref("parseFloat")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales).
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.parseFloat()")}}
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference("4.567abcdefgh"));
+// Résultat attendu : 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Résultat attendu : 0
+```
 
 ## Syntaxe
 
-```js
-Number.parseFloat(chaîne);
+```js-nolint
+Number.parseFloat(string)
 ```
 
 ### Paramètres
 
-- `chaîne`
-  - : Une chaîne de caractères qu'on souhaite convertir en nombre flottant.
+- `string`
+  - : La valeur à analyser, [convertie en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#convertion_en_chaîne_de_caractères). Les {{Glossary("whitespace", "espaces blancs")}} initiaux dans cet argument sont ignorés.
 
 ### Valeur de retour
 
-Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la valeur {{jsxref("NaN")}} sera renvoyée.
+Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument.
 
-## Description
+Ou {{JSxRef("NaN")}} si le premier caractère non blanc ne peut pas être converti en nombre.
 
-Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :
+## Exemples
+
+### `Number.parseFloat()` et `parseFloat()`
+
+Cette méthode possède les mêmes fonctionnalités que la fonction native {{JSxRef("parseFloat()")}}&nbsp;:
 
 ```js
 Number.parseFloat === parseFloat; // true
 ```
 
-Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.
+Son objectif est la modularisation des objets globaux.
 
-## Prothèse d'émulation (_polyfill_)
-
-```js
-if (Number.parseFloat === undefined) {
-  Number.parseFloat = parseFloat;
-}
-```
+Voir {{JSxRef("parseFloat()")}} pour plus de détails et d'exemples.
 
 ## Spécifications
 
@@ -52,5 +66,7 @@ if (Number.parseFloat === undefined) {
 
 ## Voir aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette fonction.
-- La méthode globale {{jsxref("parseFloat")}}.
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.parseFloat` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.parseFloat` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.parsefloat)
+- L'objet natif {{JSxRef("Number")}}
+- La fonction native {{JSxRef("parseFloat()")}}

@@ -9,7 +9,21 @@ l10n:
 
 El operador de **incremento (`++`)** incrementa (agrega uno a) su operando y retorna el valor antes o despues del incremento, dependiendo de dónde está posicionado el operador.
 
-{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
 
 ## Sintaxis
 
@@ -20,7 +34,7 @@ x++
 
 ## Descripción
 
-El operador `++` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una incremento con BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza el incremento de números.
+El operador `++` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar ambos operandos a valores numéricos](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una incremento con BigInt si ambos operandos se convierten en BigInts; de lo contrario, realiza el incremento de números.
 
 Si se usa postfijo, con el operador después del operando (por ejemplo, `x++`), el operador de incremento incrementa y devuelve el valor antes de incrementar.
 

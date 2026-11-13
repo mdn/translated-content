@@ -9,7 +9,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 > Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.
 
 > [!NOTE]
-> Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais [Opera Mini](http://www.opera.com/mobile/mini) (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.
+> Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais [Opera Mini](https://www.opera.com/mobile/mini) (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.
 
 ## Les différents types de stockage des données
 
@@ -104,7 +104,7 @@ Nous traçons le "dernier temps d'accès" pour chaque origine utilisant le stock
 
 Dans Firefox, les technologies suivantes utilisent le stockage de données du navigateur pour stocker des données au besoin. Nous les qualifions de "quota clients" dans ce contexte :
 
-- [IndexedDB](/fr/docs/Web/API/API_IndexedDB)
+- [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
 - [asm.js](http://asmjs.org/) caching
 - [Cache API](/fr/docs/Web/API/Cache)
 

@@ -79,7 +79,7 @@ function sourceOpen() {
 ## 関連情報
 
 - [メディアソース拡張 API](/ja/docs/Web/API/Media_Source_Extensions_API)
-- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [一般的なメディアタイプにおける "codecs" パラメーター](/ja/docs/Web/Media/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

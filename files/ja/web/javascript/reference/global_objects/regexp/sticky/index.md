@@ -1,15 +1,30 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`sticky`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `y` フラグが使用されているかどうかを返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.sticky", "taller")}}
+
+```js interactive-example
+const str = "table football";
+const regex = /foo/y;
+
+regex.lastIndex = 6;
+
+console.log(regex.sticky);
+// 予想される結果: true
+
+console.log(regex.test(str));
+// 予想される結果: true
+
+console.log(regex.test(str));
+// 予想される結果: false
+```
 
 ## 解説
 
@@ -30,20 +45,20 @@ l10n:
 
 [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) メソッドでは、粘着的かつグローバルな正規表現は、粘着的かつグローバルでない正規表現と同じ動作をします。[`test()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) は `exec()` の単純なラッパーなので、`test()` はグローバルフラグを無視して同様に粘着的な照合を行います。しかし、他にもグローバル正規表現の挙動を特殊化するメソッドがたくさんあるため、 一般的にはグローバルフラグは粘着フラグと直交します。
 
-- [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)（[`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
-  - `y` の正規表現については、`matchAll()` では例外が発生します。`[@@matchAll]()` は `exec()` の結果を 1 つだけ生成しますが、その正規表現の `lastIndex` を更新します。
+- [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)（[`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
+  - `y` の正規表現については、`matchAll()` では例外が発生します。`[Symbol.matchAll]()` は `exec()` の結果を 1 つだけ生成しますが、その正規表現の `lastIndex` を更新します。
   - `g` または `gy` の正規表現については、`exec()` の結果を生成するイテレーターを返します。
-- [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match)（[`RegExp.prototype[@@match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
+- [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match)（[`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
   - `y` の正規表現については、`exec()` の結果を返し、その正規表現の `lastIndex` を更新します。
   - `g` または `gy` の正規表現については、すべての `exec()` の結果を配列で返します。
-- [`String.prototype.search()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) （[`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) を呼び出す）では `g` フラグは常に無視されます。
+- [`String.prototype.search()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) （[`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) を呼び出す）では `g` フラグは常に無視されます。
   - `y` または `gy` の正規表現については、常に `0`（文字列の一致箇所の最も先頭）または `-1` （先頭に一致しなかった場合）を返し、存在した場合でも `lastIndex` を更新しません。
   - `g` の正規表現については、文字列中で最初に一致した箇所のインデックスを返します。一致するものが見つからなかった場合は `-1` を返します。
-- [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) （[`RegExp.prototype[@@split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split) を呼び出す）では `y`, `g`,`gy` はすべて同じ動作をします。
-- [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)（[`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) を呼び出す）では、`y`, `g`, `gy` はすべて異なります。
+- [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) （[`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) を呼び出す）では `y`, `g`,`gy` はすべて同じ動作をします。
+- [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace)（[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) を呼び出す）では、`y`, `g`, `gy` はすべて異なります。
   - `y` の正規表現については、現在の `lastIndex` の位置で置換を一度実行し、`lastIndex` を更新します。
   - `g` および `gy` の正規表現については、`exec()` に一致したすべての箇所を置換します。
-- [`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)（[`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
+- [`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)（[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) を呼び出す）では `y`, `g`, `gy` はすべて異なります。
   - `y` の正規表現については、`replaceAll()` は例外が発生します。
   - `g` および `gy` の正規表現については、`exec()` に一致したすべての箇所を置換します。
 
@@ -71,9 +86,9 @@ Firefox の SpiderMonkey エンジンの一部のバージョンでは `^` 指�
 以下は正しい挙動の例です。
 
 ```js
-const regex = /^foo/y;
-regex.lastIndex = 2;
-regex.test("..foo"); // false - インデックス 2 は文字列の先頭ではない
+const regex1 = /^foo/y;
+regex1.lastIndex = 2;
+regex1.test("..foo"); // false - インデックス 2 は文字列の先頭ではない
 
 const regex2 = /^foo/my;
 regex2.lastIndex = 2;
@@ -94,10 +109,10 @@ regex2.test(".\nfoo"); // true - インデックス 2 は行の先頭
 
 - [`sticky` フラグのポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.unicode")}}

@@ -5,11 +5,24 @@ l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
-
 **`throw`** 语句用于抛出用户自定义的异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用函数中没有 `catch` 块，则程序将终止。
 
-{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Throw")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (isNaN(width) || isNaN(height)) {
+    throw new Error("Parameter is not a number!");
+  }
+}
+
+try {
+  getRectArea(3, "A");
+} catch (e) {
+  console.error(e);
+  // Expected output: Error: Parameter is not a number!
+}
+```
 
 ## 语法
 
@@ -22,7 +35,7 @@ throw expression;
 
 ## 描述
 
-`throw` 语句在任何可以使用语句的上下文中都有效。它的执行会产生一个在调用堆栈传播的异常。有关错误冒泡和处理的更多信息，请参阅[流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
+`throw` 语句在任何可以使用语句的上下文中都有效。它的执行会产生一个在调用堆栈传播的异常。有关错误冒泡和处理的更多信息，请参阅[控制流与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
 
 `throw` 关键字后面可以跟任何类型的表达式，例如：
 

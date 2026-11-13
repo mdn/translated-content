@@ -27,7 +27,7 @@ onscroll = (event) => {};
 
 ### Scroll 事件限流
 
-由于 `scroll` 事件可被高频触发，事件处理器不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件限流，如下所述。
+由于 `scroll` 事件可被高频触发，事件处理器不应该执行高性能消耗的操作，如 DOM 操作。而更推荐的做法是使用 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("Window.setTimeout", "setTimeout()")}} 或 {{DOMxRef("CustomEvent")}} 给事件限流，如下所述。
 
 然而需要注意的是，输入事件和动画帧的触发速度大致相同，因此通常不需要下述优化。此示例使用 `requestAnimationFrame` 优化 `scroll` 事件。
 

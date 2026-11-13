@@ -3,11 +3,14 @@ title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 
-{{JSRef}}
-
 **`String.fromCodePoint()`** 静态方法将根据指定的码位序列返回一个字符串。
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+// Expected output: "☃★♲你"
+```
 
 ## 语法
 

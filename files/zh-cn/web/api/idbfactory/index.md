@@ -5,12 +5,12 @@ slug: Web/API/IDBFactory
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/IndexedDB) 的`IDBFactory` 接口让程序可以异步存取 indexed databases。`window.indexedDB` 对象实现了这个接口。你可以通过这个对象而不是直接使用`IDBFactory`接口打开——创建或者连接——和删除一个数据库。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的`IDBFactory` 接口让程序可以异步存取 indexed databases。`window.indexedDB` 对象实现了这个接口。你可以通过这个对象而不是直接使用`IDBFactory`接口打开——创建或者连接——和删除一个数据库。
 
 ## Methods
 
 - {{domxref("IDBFactory.open")}}
-  - : 请求打开一个数据库的连接（[connection to a database](/zh-CN/docs/IndexedDB#gloss_database_connection)）。
+  - : 请求打开一个数据库的连接（[connection to a database](/zh-CN/docs/Web/API/IndexedDB_API#gloss_database_connection)）。
 - {{domxref("IDBFactory.deleteDatabase")}}
   - : 请求删除数据库。
 - {{domxref("IDBFactory.cmp")}}
@@ -18,8 +18,8 @@ slug: Web/API/IDBFactory
 
 ### 过时的 Methods
 
-- [`IDBFactory.open`](/zh-CN/docs/Web/API/IDBFactory.open-obsolete), the original version {{Deprecated_Inline}}
-  - : 一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施 ([connection to a database](/zh-CN/docs/IndexedDB#gloss_database_connection)).
+- [`IDBFactory.open`](/zh-CN/docs/Web/API/IDBFactory/open), the original version {{Deprecated_Inline}}
+  - : 一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施 ([connection to a database](/zh-CN/docs/Web/API/IndexedDB_API#gloss_database_connection)).
 
 ## Example
 

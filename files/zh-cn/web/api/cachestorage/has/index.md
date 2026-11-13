@@ -18,7 +18,7 @@ has(cacheName)
 ### 参数
 
 - cacheName
-  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.
+  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{jsxref("String")}}.
 
 ### 返回值
 
@@ -55,6 +55,6 @@ caches
 
 ## 参考
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

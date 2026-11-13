@@ -3,13 +3,26 @@ title: Map.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)以允许 `Map` 对象被大多数语法所接受，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个 [map 迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，此对象会以插入顺序生成 map 的键值对。
 
 该属性的初始值与 {{jsxref("Map.prototype.entries")}} 属性的初始值是同一个函数对象。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## 语法
 

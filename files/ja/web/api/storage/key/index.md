@@ -46,7 +46,7 @@ for (let i = 0; i < localStorage.length; i++) {
 ```
 
 > [!NOTE]
-> 現実世界のの例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> 現実世界の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 

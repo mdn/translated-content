@@ -9,7 +9,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## Sintaxe
 
@@ -24,7 +37,6 @@ array.splice(indice) // SpiderMonkey/Firefox extension
 - `indice`
   - : Índice o qual deve iniciar a alterar a lista. Se maior que o tamanho total da mesma, nenhum elemento será alterado. Se negativo, irá iniciar a partir daquele número de elementos a partir do fim.
 - `deleteCount`
-
   - : Um inteiro indicando o número de antigos elementos que devem ser removidos.
 
     Se o parâmetro `deleteCount` não é especificado, ou se é maior que o número de elementos restantes na lista iniciando pelo índice, então todos os elementos até o fim da lista serão deletados.

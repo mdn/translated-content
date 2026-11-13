@@ -11,4 +11,4 @@ slug: Glossary/Internet
 
 ### インターネットについて学ぶ
 
-- [インターネットはどのように動くのか](/ja/docs/Learn/Common_questions/How_does_the_Internet_work) (初心者向けの紹介)
+- [インターネットはどのように動くのか](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (初心者向けの紹介)

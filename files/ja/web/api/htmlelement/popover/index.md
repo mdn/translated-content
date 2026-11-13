@@ -10,7 +10,7 @@ l10n:
 
 **`popover`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素のポップオーバー状態（`"auto"` または `"manual"`）を JavaScript から取得したり設定したりします。機能検出に使用することもできます。
 
-これは、HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性の値を反映します。
+これは、HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性の値を反映します。
 
 ## 値
 
@@ -27,7 +27,7 @@ l10n:
 
 ### 機能検出
 
-`popover` 属性を使用して、[ポップオーバー API](/ja/docs/Web/API/Popover_API) の機能を検出するすることができます。
+`popover` 属性を使用して、[ポップオーバー API](/ja/docs/Web/API/Popover_API) の機能を検出することができます。
 
 ```js
 function supportsPopover() {
@@ -62,5 +62,5 @@ if (popoverSupported) {
 
 ## 関連情報
 
-- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
+- HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

@@ -3,11 +3,20 @@ title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 ---
 
-{{JSRef}}
-
 **`setUint32()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 32-bit 数 (无符号长整型)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+
+console.log(view.getUint32(1));
+// Expected output: 4294967295
+```
 
 ## 语法
 

@@ -3,15 +3,25 @@ title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
 
-{{jsSidebar("Functions")}}
-
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 語法
 
-```plain
+```js-nolint
 {get prop() { ... } }
 {get [expression]() { ... } }
 ```
@@ -30,7 +40,7 @@ slug: Web/JavaScript/Reference/Functions/get
 使用 `get` 語法時，請注意以下情況：
 
 - 可以擁有一個以數字或字串為代表的標示符；
-- 最少要有零個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）
+- 最少要有零個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）
 - 不能以有另一個 `get` 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 `{ get x() { }, get x() { } }` and `{ x: ..., get x() { } }`）。
 
 getter 可以用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 操作符移除。
@@ -117,7 +127,7 @@ get notifier() {
 
 ### `get` 與 `defineProperty`
 
-在使用 {{jsxref("classes")}} 時，儘管 `get` 關鍵字與 {{jsxref("Object.defineProperty()")}} 會出現相同結果，但其中有微妙的差異。
+在使用 {{jsxref("Classes")}} 時，儘管 `get` 關鍵字與 {{jsxref("Object.defineProperty()")}} 會出現相同結果，但其中有微妙的差異。
 
 在使用 `get` 時，屬性會在物件的原型被定義；而在使用 {{jsxref("Object.defineProperty()")}} 時，屬性會在被套用的實例內定義。
 
@@ -150,7 +160,7 @@ console.log(
 ## 參見
 
 - [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

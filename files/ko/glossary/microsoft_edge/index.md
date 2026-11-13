@@ -13,7 +13,6 @@ l10n:
 
 - [공식 웹 사이트](https://www.microsoft.com/edge)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Google Chrome")}}
   - {{Glossary("Microsoft Edge")}}
   - {{Glossary("Microsoft Internet Explorer")}}

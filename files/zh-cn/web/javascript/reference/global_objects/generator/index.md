@@ -5,13 +5,27 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`Generator`** 对象由{{jsxref("Statements/function*", "生成器函数", "", 1)}}返回并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。
 
 `Generator` 是隐藏类 {{jsxref("Iterator")}} 的子类。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 构造函数
 
@@ -38,10 +52,10 @@ console.log(gen.next().value); // 3
 这些属性定义于 `Generator.prototype` 并由所有 `Generator` 实例所共享。
 
 - {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
-
   - : 创建实例对象的构造函数。对于 `Generator` 实例，其初始值是 [`GeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)。
 
-    > **备注：** `Generator` 对象不会存储创建它们的生成器函数的引用。
+    > [!NOTE]
+    > `Generator` 对象不会存储创建它们的生成器函数的引用。
 
 - `Generator.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。

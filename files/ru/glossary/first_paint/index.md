@@ -9,6 +9,6 @@ slug: Glossary/First_paint
 
 ## Смотрите также
 
-- [First meaningful paint](/ru/docs/Glossary/first_meaningful_paint)
+- [First meaningful paint](/ru/docs/Glossary/First_meaningful_paint)
 - [First contentful paint](/ru/docs/Glossary/First_contentful_paint)
-- [Paint Timing API](/ru/docs/)
+- [Paint Timing API](/ru/docs/Web)

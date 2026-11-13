@@ -9,9 +9,10 @@ slug: Web/API/EventTarget/dispatchEvent
 
 `dispatchEvent()` 호출은 이벤트 발송 과정의 마지막 단계입니다. 발송에 앞서 우선 {{domxref("Event/Event", "Event()")}} 생성자로 이벤트를 생성 및 초기화해야 합니다.
 
-> **참고:** `dispatchEvent()` 사용 시, {{domxref("Event.target")}} 속성은 현재 `EventTarget`으로 초기화됩니다.
+> [!NOTE]
+> `dispatchEvent()` 사용 시, {{domxref("Event.target")}} 속성은 현재 `EventTarget`으로 초기화됩니다.
 
-브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
+브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/Reference/Execution_model)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
 
 ## 구문
 
@@ -38,7 +39,7 @@ dispatchEvent(event);
 
 ## 예외
 
-[이벤트 생성과 발동](/ko/docs/Web/Events/Creating_and_triggering_events)를 확인하세요.
+[이벤트 생성과 발동](/ko/docs/Web/API/Document_Object_Model/Events)를 확인하세요.
 
 ## 명세
 

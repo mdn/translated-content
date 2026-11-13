@@ -1,29 +1,27 @@
 ---
-title: window.parent
+title: Window：parent 属性
 slug: Web/API/Window/parent
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-### 概述
+**`Window.parent`** 属性是对当前窗口或子框架的父窗口的引用。
 
-返回当前窗口的父窗口对象。
+如果没有父窗口，那么它的 `parent` 属性会引用它自身。
 
-如果一个窗口没有父窗口，则它的 `parent` 属性为自身的引用。
+当一个窗口加载在 {{htmlelement("iframe")}}、{{htmlelement("object")}} 或 {{htmlelement("frame")}} 中时，它的父窗口是嵌套该窗口的元素所属的窗口。
 
-如果当前窗口是一个 `<iframe>`, `<object>`, 或者 `<frame>`,则它的父窗口是嵌入它的那个窗口
+## 值
 
-### 语法
+一个 `Window` 或 {{htmlelement("iframe")}} 对象。
 
-```plain
-var parentWindow = window.parent;
-```
+## 示例
 
-### 例子
-
-```plain
-if (window.parent != window.top) {
-  // 至少有三层窗口
+```js
+if (window.parent !== window.top) {
+  // 嵌套层级超过一级
 }
 ```
 
@@ -37,5 +35,5 @@ if (window.parent != window.top) {
 
 ## 参见
 
-- [`window.frameElement`](/zh-CN/DOM/window.frameElement) 返回嵌入当前窗口的 frame 对象。
-- [`window.top`](/zh-CN/docs/Web/API/Window/top) 返回当前窗口最顶层的父窗口。
+- {{domxref("window.frameElement")}} 返回当前 `window` 所嵌入的特定元素（例如 `<iframe>`）。
+- {{domxref("window.top")}} 返回对顶层窗口的引用。

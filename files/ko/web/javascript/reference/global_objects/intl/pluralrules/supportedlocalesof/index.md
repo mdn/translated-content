@@ -9,7 +9,15 @@ l10n:
 
 **`Intl.PluralRules.supportedLocalesOf()`** 정적 메서드는 런타임의 기본 로케일로 돌아갈 필요 없이 복수 규칙에서 지원되는 제공된 로케일들 중 해당하는 로케일들을 포함하는 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales = ["en-US", "ban", "ar-OM", "de-DE"];
+const options = { localeMatcher: "lookup" };
+
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
+// Expected output: Array ["en-US", "ar-OM", "de-DE"]
+```
 
 ## 구문
 

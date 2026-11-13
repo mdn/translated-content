@@ -2,10 +2,8 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 l10n:
-  sourceCommit: b5273d393038abf5880298f01a9d3011d53bf7fc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`RegExp`** オブジェクトは、テキストをパターンと照合するために使用します。
 
@@ -15,10 +13,10 @@ l10n:
 
 ### リテラル記法とコンストラクター
 
-`RegExp` オブジェクトを生成するには 2 通りの方法があります。*リテラル記法*と*コンストラクター*です。
+`RegExp` オブジェクトを生成するには 2 通りの方法があります。「リテラル記法」と「コンストラクター」です。
 
-- _リテラル記法_ はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)が続きます。
-- _コンストラクター関数_ は文字列または `RegExp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
+- 「リテラル記法」はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)が続きます。
+- 「コンストラクター関数」は文字列または `RegExp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
 
 以下の 3 つの式は、同じ正規表現オブジェクトを生成します。
 
@@ -30,7 +28,7 @@ const re = new RegExp("ab+c", "i"); // 最初の引数に文字列のパター�
 const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラルを渡したコンストラクター
 ```
 
-正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に一致を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
+正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に照合を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
 
 リテラル記法では、正規表現が評価されるときにコンパイルが行われます。一方、`RegExp` オブジェクトのコンストラクターである `new RegExp('ab+c')` は、実行時に正規表現をコンパイルすることになります。
 
@@ -40,7 +38,7 @@ const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラ�
 
 `new RegExp(/ab+c/, flags)` という式は新しい `RegExp` を生成しますが、第 1 引数を元として使用し、第 2 引数で指定された[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)として使用して生成します。
 
-コンストラクター関数を使用する場合は、通常の文字エスケープ規則（文字列内に特殊文字が含まれるとき、前に `\` を付加する）が必須です。
+コンストラクター関数を使用する場合は、通常の文字エスケープの規則（文字列内に特殊文字が含まれるとき、前に `\` を付加する）が必須です。
 
 例えば、以下 2 つの構文は同等です。
 
@@ -63,13 +61,13 @@ const re = new RegExp("\\w+");
 
 ほとんどの場合、 `Symbol.match` のチェックを通ることに注意してください。これはつまり、次のようなことです。
 
-- 実際の `RegExp` オブジェクトの `Symbol.match` プロパティの値が[偽値](/ja/docs/Glossary/Falsy)であるが `undefined` ではなかった場合、（[`exec`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) や [`@@replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) のように他のすべてがそのままでも）、正規表現ではないかのように使用することができます。
+- 実際の `RegExp` オブジェクトの `Symbol.match` プロパティの値が[偽値](/ja/docs/Glossary/Falsy)であるが `undefined` ではなかった場合、（[`exec`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) や [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) のように他のすべてがそのままでも）、正規表現ではないかのように使用することができます。
 - `RegExp` ではないオブジェクトが `Symbol.match` プロパティを持っていると、正規表現であるかのように扱われます。
 
-この選択は `@@match` が照合に使用することを意図したプロパティであることを最もよく表しているからです。（`exec` も使用することができますが、シンボルのプロパティではないので、誤検出が多すぎるでしょう）。正規表現を特別扱いする場所は次のとおりです。
+この選択は `[Symbol.match]()` が照合に使用することを意図したプロパティであることを最もよく表しているからです。（`exec` も使用することができますが、シンボルのプロパティではないので、誤検出が多すぎるでしょう）。正規表現を特別扱いする場所は次のとおりです。
 
 - [`String.prototype.endsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), [`startsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/includes) では、最初の引数が正規表現の場合は {{jsxref("TypeError")}} が発生します。
-- [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) と [`replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) は、最初の引数が正規表現である場合、 [global](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) フラグが [`@@matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) または [`@@replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを呼び出す前に設定されます。
+- [`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) と [`replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) は、最初の引数が正規表現である場合、 [global](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) フラグが [`[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll) または [`[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを呼び出す前に設定されます。
 - [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターは、 `pattern` が（他のいくつかの条件を満たして）正規表現と判断された場合、 `pattern` を直接返します。 `pattern` が正規表現である場合、 `pattern` を文字列に変換するのではなく、 `source` と `flags` プロパティに問い合わせることになります。
 
 例えば、 [`String.prototype.endsWith()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) はすべての入力値を文字列へと強制しますが、引数が正規表現の場合、この関数が文字列と照合するだけのために設計されており、正規表現を使用することは開発者の間違いと考えるため、例外を発生させます。
@@ -79,7 +77,7 @@ const re = new RegExp("\\w+");
 "foobar".endsWith(/bar/); // TypeError: First argument to String.prototype.endsWith must not be a regular expression
 ```
 
-このチェックを回避するには、 `@@match` に `undefined` ではない[偽値](/ja/docs/Glossary/Falsy)を設定してください。この場合、正規表現は `String.prototype.match()` には使用できませんが(`@@match` がなければ `match()` は [`re.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString) で追加したスラッシュ 2 本を持つ新しい `RegExp` オブジェクトを構築するので）、事実上他のすべてに使用することが可能です。
+このチェックを回避するには、 `[Symbol.match]` に `undefined` ではない[偽値](/ja/docs/Glossary/Falsy)を設定してください。この場合、正規表現は `String.prototype.match()` には使用できませんが（`[Symbol.match]` がなければ `match()` は [`re.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString) で追加したスラッシュ 2 本を持つ新しい `RegExp` オブジェクトを構築するので）、事実上他のすべてに使用することが可能です。
 
 ```js
 const re = /bar/g;
@@ -91,7 +89,7 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### Perl 風の RegExp プロパティ
 
-{{jsxref("RegExp")}} のプロパティのいくつかは長い名前と短い（Perl 風の）名前があります。どちらの名前も同じ値を参照します。（Perl は JavaScript が正規表現をモデルにしたプログラミング言語です。）[非推奨の `RegExp` のプロパティ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)も参照してください。
+`RegExp` のプロパティのいくつかは長い名前と短い（Perl 風の）名前があります。どちらの名前も同じ値を参照します。（Perl は JavaScript が正規表現をモデルにしたプログラミング言語です。）[非推奨の `RegExp` のプロパティ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)も参照してください。
 
 ## コンストラクター
 
@@ -100,20 +98,25 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ## 静的プロパティ
 
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
+- [`RegExp.$1`, …, `RegExp.$9`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n) {{deprecated_inline}}
   - : 読み取り専用の静的プロパティで、括弧で囲まれた一致した部分文字列を格納します。
-- {{jsxref("RegExp/input", "RegExp.input ($_)")}} {{deprecated_inline}}
+- [`RegExp.input` (`$_`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input) {{deprecated_inline}}
   - : 静的プロパティで、正規表現が正常に一致した最後の文字列を格納します。
-- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+- [`RegExp.lastMatch` (`$&`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) {{deprecated_inline}}
   - : 読み取り専用の静的プロパティで、最後に一致した部分文字列を格納します。
-- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+- [`RegExp.lastParen` (`$+`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen) {{deprecated_inline}}
   - : 読み取り専用の静的プロパティで、最後の括弧で囲まれた部分文字列の一致を格納します。
-- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
+- [`RegExp.leftContext` (`` $` ``)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext) {{deprecated_inline}}
   - : 読み取り専用の静的プロパティで、最近一致した文字列の前の部分文字列を格納します。
-- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
+- [`RegExp.rightContext` (`$'`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext) {{deprecated_inline}}
   - : 読み取り専用の静的プロパティで、最近一致した文字列以下の部分文字列を格納します。
-- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+- [`RegExp[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : 派生オブジェクトを生成するために使用されるコンストラクター関数です。
+
+## 静的メソッド
+
+- {{jsxref("RegExp.escape()")}}
+  - : 文字列内の潜在的な正規表現構文文字を[エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions#エスケープシーケンス)し、[リテラルパターン](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)として {{jsxref("RegExp/RegExp", "RegExp()")}} コンストラクターで安全に使用できる新しい文字列を返します。
 
 ## インスタンスプロパティ
 
@@ -157,30 +160,30 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
   - : 文字列引数で一致するものがあるかどうか検査します。
 - {{jsxref("RegExp.prototype.toString()")}}
   - : 指定されたオブジェクトを表す文字列を返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
-- [`RegExp.prototype[@@match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
   - : 指定された文字列と照合を実行し、照合結果を返します。
-- [`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
   - : 文字列で正規表現に一致するものをすべて返します。
-- [`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
   - : 指定された文字列で一致する部分を新しい部分文字列で置き換えます。
-- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
   - : 指定された文字列で一致する部分を検索し、その文字列で見つかったパターンの位置を返します。
-- [`RegExp.prototype[@@split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[Symbol.split]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
   - : 文字列を部分文字列に分割し、指定された文字列を配列に分割します。
 
 ## 例
 
 ### 正規表現を使用したデータ形式の変更
 
-以下のスクリプトは、 {{jsxref("String.prototype.replace()")}} メソッドを使用して、 _名 姓_ の形式の名前に一致させ、_姓, 名_ の形式で出力します。
+以下のスクリプトは、 {{jsxref("String.prototype.replace()")}} メソッドを使用して、 _名 姓_ の形式の名前で照合し、_姓, 名_ の形式で出力します。
 
 スクリプトでは、置換テキスト中で `$1` と `$2` を使用して、それぞれ対応する正規表現パターンで一致する括弧がキャプチャした結果を指定しています。
 
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr);
 ```
 
 これは、 `"Cruz, Maria"` と表示します。
@@ -190,8 +193,8 @@ console.log(newstr);
 既定の改行文字は、プラットフォーム (Unix、Windows など) によって異なります。この例で実行する行分割は、あらゆるプラットフォームで動作します。
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
@@ -199,13 +202,15 @@ console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the e
 
 ### 複数行で正規表現を使用する
 
+デフォルトでは、`.` 文字は改行に一致しません。改行に一致させるには、`s` フラグ（`dotAll` モード）を使用します。
+
 ```js
 const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // null を返す
 
-s.match(/yes[^]*day/);
+s.match(/yes.*day/s);
 // Returns ["yes\nmake my day"]
 ```
 
@@ -247,13 +252,13 @@ global フラグ `g` を付けると、 3 桁だけでなく、 6 桁すべて�
 
 上の表にもある通り、`\w` や `\W` は ASCII 基本文字にのみ一致します。具体的には `a` から `z` 、`A` から `Z` 、 `0` から `9` および `_` です。
 
-キリル語やヘブライ語で使われるような非 ASCII 文字に一致させるには `\uhhhh` 形式 (`hhhh` の部分は 16 進表記の Unicode 値) を使ってください。
+キリル語やヘブライ語で使われるような非 ASCII 文字と照合するには `\uHHHH` 形式（`HHHH` の部分は 16 進表記の Unicode 値）を使ってください。
 
 この例は、文字列全体から Unicode 文字列だけを抜き出す方法を示しています。
 
 ```js
 const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+const regex = /[\u0400-\u04ff]+/g;
 
 const match = regex.exec(text);
 console.log(match[0]); // 'Образец'
@@ -266,7 +271,7 @@ console.log(regex.lastIndex); // 15
 // 以下同様
 ```
 
-[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)機能は `\p{scx=Cyrl}` のように簡潔な表記ができるようにする解決策を導入しています。
+[Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)機能は `\p{scx=Cyrl}` （すべてのキリル文字に一致）または `\p{L}/u` （すべての言語の文字に一致）のようにより簡潔な表記ができるようにする解決策を導入しています。
 
 ### URL からのサブドメイン名の抽出
 

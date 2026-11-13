@@ -3,11 +3,19 @@ title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toLocaleUpperCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为大写形式并返回。
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## 语法
 
@@ -19,7 +27,6 @@ toLocaleUpperCase(locales)
 ### 参数
 
 - `locales` {{optional_inline}}
-
   - : 一个带有 BCP 47 语言标签的字符串，或者是这种字符串的数组。指示要根据特定区域设置的大小写映射规则进行转换的区域设置。有关 `locales` 参数的一般形式和解释，请参阅 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
 
     与使用 `locales` 参数的其他方法不同，`toLocaleUpperCase()` 不允许进行区域设置匹配。因此，在检查 `locales` 参数的有效性之后，`toLocaleUpperCase()` 始终使用列表中的第一个区域设置（如果列表为空，则使用默认区域设置），即使该区域设置在实现中不受支持。

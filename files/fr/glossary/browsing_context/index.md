@@ -1,19 +1,25 @@
 ---
 title: Contexte de navigation
 slug: Glossary/Browsing_context
+l10n:
+  sourceCommit: 8b67ae9ed4fb1b14e4d596c6bbcb4e08a9af2964
 ---
 
-{{GlossarySidebar}}
+Un **contexte de navigation** est un environnement dans lequel un navigateur affiche un {{DOMxRef("Document")}}.
+Dans les navigateurs modernes, il s'agit généralement d'un _onglet_, mais cela peut aussi être une _fenêtre_, un _popup_, une [application web](/fr/docs/Web/Progressive_web_apps), ou même une partie d'une page comme un _frame_ ou un _iframe_.
 
-Un **contexte de navigation** est l'environnement dans lequel un {{glossary("Browser","navigateur")}} affiche un {{domxref("Document","document")}}. Dans les navigateurs modernes, il s'agit généralement d'un onglet, mais il peut s'agir d'une fenêtre ou encore seulement des parties d'une page, comme une {{HTMLElement("frame")}} ou une {{HTMLElement("iframe")}}.
+Chaque contexte de navigation possède une origine (celle du document actif) et un historique ordonné des documents affichés précédemment.
+La communication et le partage de ressources entre contextes de navigation sont limités, en particulier entre contextes d'origines différentes.
+Par exemple, un {{DOMxRef("BroadcastChannel")}} ne peut être ouvert et utilisé que pour communiquer entre contextes de même origine.
 
-Chaque contexte de navigation possède une {{glossary("Origin","origine")}} spécifique, l'origine du document actif, ainsi qu'un historique qui énumère dans l'ordre tous les documents affichés.
+Un contexte de navigation peut faire partie d'un **groupe de contextes de navigation**, qui est un ensemble de **contextes de navigation** partageant des éléments communs, comme l'historique, les cookies, les mécanismes de stockage, etc.
+Les contextes de navigation d'un même groupe conservent des références entre eux et peuvent donc inspecter les objets globaux des autres et s'envoyer des messages.
 
-La communication entre les contextes de navigation est sévèrement restreinte. Entre des contextes de la même origine, il est possible d'ouvrir et utiliser un canal {{domxref("BroadcastChannel")}}.
+Par défaut, un document ouvert dans un groupe de contextes de navigation est ouvert dans le même groupe, qu'il soit d'origine croisée ou non.
+L'en-tête {{HTTPHeader("Cross-Origin-Opener-Policy")}} permet de contrôler si le document est ouvert dans son propre nouveau groupe de contextes de navigation et {{DOMxRef("Window.crossOriginIsolated","isolé des origines croisées","","no code")}} des autres contextes (en particulier ceux d'origine croisée).
+Cela permet de réduire les risques d'attaques cross-origin et les attaques par canal auxiliaire appelées [XS-Leaks <sup>(angl.)</sup>](https://xsleaks.dev/).
 
 ## Voir aussi
 
-### Référence technique
-
-- [Context de navigation sur WHATWG](https://html.spec.whatwg.org/multipage/browsers.html#windows)
-- [Contexte de navigation sur W3C](http://dev.w3.org/html5/spec/browsers.html)
+- Terme associé du glossaire&nbsp;:
+  - {{Glossary("Origin")}}

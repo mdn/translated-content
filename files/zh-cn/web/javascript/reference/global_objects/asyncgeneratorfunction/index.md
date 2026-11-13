@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`AsyncGeneratorFunction`** 对象为[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)提供方法。在 JavaScript 中，每个异步生成器函数实际上都是一个 `AsyncGeneratorFunction` 对象。
 
 注意，`AsyncGeneratorFunction` *不是*全局对象。它可以通过以下代码获取：
@@ -17,7 +15,29 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` 是 {{jsxref("Function")}} 的一个子类。
 
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction()", "taller")}}
+
+```js interactive-example
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 构造函数
 

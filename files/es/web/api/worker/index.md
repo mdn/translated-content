@@ -11,7 +11,7 @@ La interfaz **`Worker`** de la [API de Web Workers](/es/docs/Web/API/Web_Workers
 
 La creación de un _worker_ se realiza llamando al constructor `Worker("path/to/worker/script")`.
 
-Los _workers_ pueden generar nuevos _workers_, siempre y cuando esos _workers_ estén alojados en el mismo [origen](/es/docs/Web/Security/Same-origin_policy) que la página principal. (Nota: [los trabajadores anidados aún no están implementados en WebKit](https://webkit.org/b/22723)).
+Los _workers_ pueden generar nuevos _workers_, siempre y cuando esos _workers_ estén alojados en el mismo [origen](/es/docs/Web/Security/Defenses/Same-origin_policy) que la página principal. (Nota: [los trabajadores anidados aún no están implementados en WebKit](https://webkit.org/b/22723)).
 
 [No todas las interfaces y funciones están disponibles](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) para scripts dentro de un `Worker`. Los _workers_ pueden usar {{domxref("XMLHttpRequest")}} para la comunicación de red, pero sus atributos `responseXML` y `channel` son siempre `null`. ([`fetch`](/es/docs/Web/API/Fetch_API) también está disponible, sin tales restricciones).
 

@@ -30,7 +30,7 @@ Se o argumento passado não for do tipo string, o mesmo será convertido em uma 
 
 ## Performance
 
-É extremamente recomendado o uso dos [operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) (`+`, `+=`) em detrimento do método `concat()`.
+É extremamente recomendado o uso dos [operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) (`+`, `+=`) em detrimento do método `concat()`.
 
 ## Exemplos
 
@@ -56,4 +56,4 @@ console.log(hello.concat("Kevin", " tenha um bom dia."));
 ## Veja também
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "Assignment operators", "Assignment_operators", 1)}}

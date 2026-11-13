@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+{{js_property_attributes(0,0,1)}}
 
 > [!NOTE]
 > Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
@@ -45,7 +61,7 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-Você pode definir uma função com um nome numa {{jsxref("Operators/Function", "expressão de função", "", 1)}}:
+Você pode definir uma função com um nome numa {{jsxref("Operators/function", "expressão de função", "", 1)}}:
 
 ```js
 var object = {

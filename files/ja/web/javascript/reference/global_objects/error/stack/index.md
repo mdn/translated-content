@@ -1,112 +1,158 @@
 ---
 title: Error.prototype.stack
+short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
+l10n:
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-**`stack`** は {{jsxref("Error")}} オブジェクトの標準外のプロパティで、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
+> [!NOTE]
+> `stack` プロパティは事実上、主要な JavaScript エンジンすべてで実装されており、[JavaScript 標準化委員会はこれを標準化しようとしています](https://github.com/tc39/proposal-error-stacks)。実装の不一致によりスタック文字列の正確な内容に依存することはできませんが、一般的に存在すると仮定し、デバッグ目的で使用できます。
+
+**`stack`** は {{jsxref("Error")}} インスタンスの標準外のプロパティで、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
+
+## 値
+
+文字列です。
+
+`stack` プロパティは標準外であるため、実装によってその実装先が異なります。
+
+- Firefox では、`Error.prototype` のアクセサープロパティです。
+- Chrome および Safari では、それぞれの `Error` インスタンスのデータプロパティであり、記述子は次のとおりです。
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## 解説
 
-各ステップは改行で区切られ、行の先頭は関数名（グローバルスコープからの呼び出しでない場合）、次に `@` 記号、ファイルの場所（エラーが投げられている時に関数がエラーコンストラクターである場合を除く）、コロン記号、ファイルの場所がある場合は行番号の順に続きます。（ただし、{{jsxref("Error")}} オブジェクトも、投げられたエラーから取り戻すため `fileName` および `lineNumber`、`columnNumber` プロパティを所有することに注意してください。これはエラーのみであり、そのトレースではありません。）
+それぞれの JavaScript エンジンは独自の形式でスタックトレースを出力しますが、高レベルな構造は概ね一貫しています。すべての実装では、スタック内の各行が個別の関数呼び出しを表します。エラーを直接引き起こした呼び出しは最上部に配置され、呼び出しチェーン全体を開始した呼び出しは最下部に配置されます。以下にスタックトレースの例を示します。
 
-これは Firefox だけで使用される書式であることに注意してください。スタックトレースに標準の書式はありません。しかし、Safari 6 以降と Opera 12 以前ではとてもよく似た書式を使用します。一方で、V8 JavaScript エンジンを搭載したブラウザー（Chrome、Opera 15 以降、Android Browser など）や IE 10 以降のブラウザーは異なる書式を使用します。
+```js
+function foo() {
+  bar();
+}
 
-**スタック上の引数の値**: Firefox 14 以前 ([Firefox バグ 744842](https://bugzil.la/744842)) で、関数名は、文字列に変換され括弧で囲まれた引数の値に続き、`@` 記号の直前に置かれます。オブジェクト (または配列等) は変換された形式 `"[object Object]"` で現れるため、これが実際のオブジェクトに戻され評価されることはありません。スカラー値を受け取ります (それにも関わらず、少なくとも Firefox 14 では可能です。`arguments.callee.caller.arguments` を使用し、`arguments.callee.caller.name` により、簡単に関数名を取り戻すことが可能です)。`"undefined"` は、`"(void 0)"` として記録されます。ただし、`"@"`、`"("`, `")"` (または、これらがファイル名に含まれる場合) を伴う文字列引数が渡された場合、行がそのコンポーネント部分で分かれてしまうため、これらに安易に頼ることができません。従って、Firefox 14 以降では、これが少なからず問題になります。
+function bar() {
+  baz();
+}
 
-ブラウザによって値を設定するタイミングが異なります。例えば Firefox は、これを {{jsxref("Error")}} オブジェクトが作成された時に設定し、PhantomJS は、{{jsxref("Error")}} が投げられた時にのみ設定します。[アーカイブされた MSDN のドキュメント](https://web.archive.org/web/20180618201428/https://docs.microsoft.com/scripting/javascript/reference/stack-property-error-javascript)によれば、PhantomJS の実装とも一致するようです。
+function baz() {
+  console.log(new Error().stack);
+}
+
+foo();
+```
+
+```plain
+#### JavaScriptCore
+baz@filename.js:10:24
+bar@filename.js:6:6
+foo@filename.js:2:6
+global code@filename.js:13:4
+
+#### SpiderMonkey
+baz@filename.js:10:15
+bar@filename.js:6:3
+foo@filename.js:2:3
+@filename.js:13:1
+
+#### V8
+Error
+    at baz (filename.js:10:15)
+    at bar (filename.js:6:3)
+    at foo (filename.js:2:3)
+    at filename.js:13:1
+```
+
+V8 は、スタックトレースをカスタマイズするための標準外の[スタックトレース API](https://v8.dev/docs/stack-trace-api) を提供しています。これには{{jsxref("Error.captureStackTrace()")}}、{{jsxref("Error.stackTraceLimit")}}、`Error.prepareStackTrace()` が含まれます。他のエンジンもこの API に様々な程度で対応していましたが、
+
+エンジンによってこの値を設定するタイミングは異なります。ほとんどの現代のエンジンでは、{{jsxref("Error")}} オブジェクトが作成された時点で設定されます。つまり、関数内で以下の方法を使用して完全なコールスタック情報を取得できます。
+
+```js
+function foo() {
+  console.log(new Error().stack);
+}
+```
+
+throw したり捕捉したりしません。
+
+スタックフレームは明示的な関数呼び出し以外にも存在します。例えば、イベントリスナー、タイムアウトジョブ、プロミスハンドラーはそれぞれ独自の呼び出しチェーンを開始します。 {{jsxref("Global_Objects/eval", "eval()")}} および {{jsxref("Function")}} コンストラクター呼び出し内のソースコードもスタックに現れます。
+
+```js
+console.log(new Function("return new Error('Function failed')")().stack);
+console.log("====");
+console.log(eval("new Error('eval failed')").stack);
+```
+
+```plain
+#### JavaScriptCore
+anonymous@
+global code@filename.js:1:65
+====
+eval code@
+eval@[native code]
+global code@filename.js:3:17
+
+#### SpiderMonkey
+anonymous@filename.js line 1 > Function:1:8
+@filename.js:1:65
+
+====
+@filename.js line 3 > eval:1:1
+@filename.js:3:13
+
+#### V8
+Error: Function failed
+    at eval (eval at <anonymous> (filename.js:1:13), <anonymous>:1:8)
+    at filename.js:1:65
+====
+Error: eval failed
+    at eval (eval at <anonymous> (filename.js:3:13), <anonymous>:1:1)
+    at filename.js:3:13
+```
+
+Firefox では、`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることができます。Firefox の [eval ソースのデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html)のドキュメントを参照してください。
 
 ## 例
 
 ### stack プロパティの使用
 
-次の HTML マークアップは、`stack` プロパティの使用を実演します。
+以下のスクリプトは、`stack` プロパティを使用してスタックトレースをブラウザーウィンドウに出力する方法を示しています。これにより、ブラウザーのスタック構造がどのように見えるかを確認できます。
 
-```html
-<!doctype html>
-<meta charset="UTF-8" />
-<title>Stack Trace Example</title>
-<body>
-  <script>
-    function trace() {
-      try {
-        throw new Error("myError");
-      } catch (e) {
-        alert(e.stack);
-      }
-    }
-    function b() {
-      trace();
-    }
-    function a() {
-      b(3, 4, "\n\n", undefined, {});
-    }
-    a("first call, firstarg");
-  </script>
-</body>
+```html hidden
+<div id="output"></div>
 ```
 
-上記のマークアップは、Windows ファイルシステム上の `C:\example.html` に保存されているものと仮定します。これは、次のテキストを含む警告メッセージを生成します:
-
-Firefox 30 以降では、列番号が含まれます。
-
-```plain
-trace@file:///C:/example.html:9:17
-b@file:///C:/example.html:16:13
-a@file:///C:/example.html:19:13
-@file:///C:/example.html:21:9
+```css hidden
+#output {
+  white-space: pre;
+  font-family: monospace;
+}
 ```
-
-Firefox 14 から Firefox 29 まで:
-
-```plain
-trace@file:///C:/example.html:9
-b@file:///C:/example.html:16
-a@file:///C:/example.html:19
-@file:///C:/example.html:21
-```
-
-Firefox 13 以前は、代わりに次のテキストが生成されます。
-
-```plain
-Error("myError")@:0
-trace()@file:///C:/example.html:9
-b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
-a("first call, firstarg")@file:///C:/example.html:19
-@file:///C:/example.html:21
-```
-
-### eval によるコードのスタック
-
-Firefox 30 以降、`Function()` および `eval()` 呼び出し内のコードのエラースタックは、各呼び出しに、行番号と列番号についての詳細情報を含むスタックを生成するようになりました。関数呼び出しは、`"> Function"` で示され、eval 呼び出しは、`"> eval"` で示されます。
 
 ```js
+function trace() {
+  throw new Error("trace() failed");
+}
+function b() {
+  trace();
+}
+function a() {
+  b(3, 4, "\n\n", undefined, {});
+}
 try {
-  new Function("throw new Error()")();
+  a("first call, first arg");
 } catch (e) {
-  console.log(e.stack);
+  document.getElementById("output").textContent = e.stack;
 }
-
-// anonymous@file:///C:/example.html line 7 > Function:1:1
-// @file:///C:/example.html:7:6
-
-try {
-  eval("eval('FAIL')");
-} catch (x) {
-  console.log(x.stack);
-}
-
-// @file:///C:/example.html line 7 > eval line 1 > eval:1:1
-// @file:///C:/example.html line 7 > eval:1:1
-// @file:///C:/example.html:7:6
 ```
 
-`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) ドキュメント内の [eval ソースのデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) と [ブログ記事](https://fitzgeraldnick.com/2014/12/05/name-eval-scripts.html) も参照してください。
+{{EmbedLiveSample("Using_the_stack_property", "700", "200")}}
 
 ## 仕様書
 
-仕様の一部ではありません。
+仕様書に含まれていません。
 
 ## ブラウザーの互換性
 
@@ -114,5 +160,6 @@ try {
 
 ## 関連情報
 
-- 外部プロジェクト: [TraceKit](https://github.com/csnover/TraceKit/) および [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
+- [TraceKit](https://github.com/csnover/TraceKit/) (GitHub)
+- [stacktrace.js](https://github.com/stacktracejs/stacktrace.js) (GitHub)
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) (V8 docs)

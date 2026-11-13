@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
+{{domxref("HTMLElement")}} の **`hidden`** プロパティは、この要素の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性の値を反映します。
 
 ## 値
 
@@ -21,7 +21,7 @@ l10n:
 - `"until-found"`
   - : この要素は _hidden until found_ で、隠されているが、ページ内検索で見つかったり、フラグメントナビゲーションで到達したりすると表示されることを意味します。
 
-この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性のページを参照してください。
+この属性の使い方の詳細は、このプロパティが反映する HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性のページを参照してください。
 
 ## 例
 
@@ -105,5 +105,5 @@ document.getElementById("okButton").addEventListener(
 
 ## 関連情報
 
-- [hidden](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
+- [hidden](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - {{cssxref("display")}}

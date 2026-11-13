@@ -7,14 +7,30 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 
 Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.
 
-{{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}
+
+```js interactive-example
+const ghostSpeak = "booh boooooooh";
+const regexpSpooky = /bo{3,}h/;
+console.log(ghostSpeak.match(regexpSpooky));
+// Expected output: Array ["boooooooh"]
+
+const modifiedQuote = "[He] ha[s] to go read this novel [Alice in Wonderland].";
+const regexpModifications = /\[.*?\]/g;
+console.log(modifiedQuote.match(regexpModifications));
+// Expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+
+const regexpTooGreedy = /\[.*\]/g;
+console.log(modifiedQuote.match(regexpTooGreedy));
+// Expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+```
 
 ## Tipos
 
-La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Cheatsheet", "esta hoja de referencia")}}. No olvides editarla también, ¡gracias!
+La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 > [!NOTE]
-> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}}, {{JSxRef("../Guide/Regular_Expressions/Unicode_Property_Escapes", "escapes de propiedades Unicode")}}, {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos y rangos")}}.
+> A continuación, _elemento_ se refiere no solo a caracteres individuales, sino que también incluye [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
     <thead>
@@ -150,15 +166,14 @@ console.log(texto.match(regexpNoCodiciosa));
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
-
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}

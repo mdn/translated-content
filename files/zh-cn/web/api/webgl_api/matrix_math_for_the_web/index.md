@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Matrix_math_for_the_web
 
 {{DefaultAPISidebar("WebGL")}}
 
-矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合 [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)和 matrix3d 变换类型使用矩阵。
+矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合 [CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)和 matrix3d 变换类型使用矩阵。
 
 虽然本文为了便于解释而使用了 CSS，矩阵却是许多技术中的核心概念，包括 WebGL 和着色器。本文也是 [MDN content kit](https://github.com/TatumCreative/mdn-matrix-math) 的一部分。示例使用了一组全局对象 MDN 下的[工具函数](https://github.com/TatumCreative/mdn-webgl)。
 
@@ -137,7 +137,7 @@ var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
 > [!WARNING]
-> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](http://glmatrix.net/)就是一个注重速度和性能的库。
+> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](https://glmatrix.net/)就是一个注重速度和性能的库。
 
 ## 平移矩阵
 

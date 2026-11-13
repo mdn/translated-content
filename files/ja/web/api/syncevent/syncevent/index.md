@@ -16,11 +16,9 @@ var mySyncEvent = new SyncEvent(type, init)
 ### パラメータ
 
 - _type_
-  - : イベントの型。.
+  - : イベントの型。
 - _init_ {{optional_inline}}
-
   - : イベントオブジェクトに適用するカスタム設定を含むオプションオブジェクト。オプションは次の通りです:
-
     - `tag`: この `SyncEvent` の開発者が定義した一意の識別子。
     - `lastChance`: {{jsxref("Boolean")}} は、現在の試行後にユーザーエージェントが同期の試行をこれ以上行わないことを示しています。
 

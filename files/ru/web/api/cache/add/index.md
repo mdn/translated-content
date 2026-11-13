@@ -18,7 +18,8 @@ fetch(url).then(function (response) {
 
 Для более сложных операций, вам нужно использовать {{domxref("Cache.put","Cache.put()")}}.
 
-> **Примечание:** `add()` перезапишет любую пару ключ/значение, сохранённую ранее в кеше, соответствующем запросу.
+> [!NOTE]
+> `add()` перезапишет любую пару ключ/значение, сохранённую ранее в кеше, соответствующем запросу.
 
 ## Синтаксис
 
@@ -67,6 +68,6 @@ this.addEventListener("install", function (event) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

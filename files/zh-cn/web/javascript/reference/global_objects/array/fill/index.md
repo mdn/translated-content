@@ -3,11 +3,24 @@ title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
 
-{{JSRef}}
-
 **`fill()`** 方法用一个固定值填充一个数组中从起始索引（默认为 `0`）到终止索引（默认为 `array.length`）内的全部元素。它返回修改后的数组。
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
 
 ## 语法
 
@@ -114,6 +127,6 @@ console.log(Array.prototype.fill.call(arrayLike, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.fill` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

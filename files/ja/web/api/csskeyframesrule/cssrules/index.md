@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM") }}
 
-**`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes [アットルール](/ja/docs/Web/CSS/At-rule)のルールを返します。
+**`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)のルールを返します。
 
 ### 値
 

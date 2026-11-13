@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 
 거듭제곱 할당 연산자(`**=`)는 오른쪽 피연산자의 값으로 변수를 거듭제곱한 결과를 다시 변수에 할당합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a **= 2));
+// Expected output: 9
+
+console.log((a **= 0));
+// Expected output: 1
+
+console.log((a **= "hello"));
+// Expected output: NaN
+```
 
 ## 구문
 
@@ -37,5 +50,5 @@ bar **= "foo"; // NaN
 
 ## 같이 보기
 
-- [JavaScript 안내서의 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)
+- [JavaScript 안내서의 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
 - [거듭제곱 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation)

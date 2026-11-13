@@ -582,11 +582,11 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 透视矩阵是一种可以满足这些要求的投影矩阵。也开始涉及数学更多的内容，这些示例中将不做充分解释。简而言之，它结合了除以 w（与前面的例子相同）和基于 [相似三角形](https://en.wikipedia.org/wiki/Similarity_%28geometry%29) 相似三角形的一些巧妙操作。如果你想阅读有关其背后数学的完整说明，请查看以下一些链接：
 
-- [OpenGL 投影矩阵](http://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [OpenGL 投影矩阵](https://www.songho.ca/opengl/gl_projectionmatrix.html)
 - [透视投影](http://ogldev.atspace.co.uk/www/tutorial12/tutorial12.html)
-- [尝试了解 WebGL 中透视矩阵背后的数学](http://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [尝试了解 WebGL 中透视矩阵背后的数学](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
-关于下面使用的透视矩阵，需要注意的一件重要的事是它会翻转 z 轴。在裁剪空间中，z+ 原理观察者，而使用此矩阵，它朝向观察者。
+关于下面使用的透视矩阵，需要注意的一件重要的事是它会翻转 z 轴。在裁剪空间中，z+ 远离观察者，而使用此矩阵，它朝向观察者。
 
 翻转 z 轴的原因是，裁剪空间坐标系是左手坐标系（z 轴指向远离观察者并指入屏幕的位置），而数学，物理学和 3D 建模中的惯例与 OpenGL 中视图/眼睛坐标系一样，是使用右手坐标系（z 轴指向屏幕，朝向观察者）。有关的 Wikipedia 文章的更多信息：[直角坐标系](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness), [右手法则](https://en.wikipedia.org/wiki/Right-hand_rule)。
 

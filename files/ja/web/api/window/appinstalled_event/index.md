@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
+**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Progressive_web_apps/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 

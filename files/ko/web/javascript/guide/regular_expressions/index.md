@@ -3,7 +3,7 @@ title: 정규 표현식
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}
 
 정규 표현식, 또는 정규식은 문자열에서 특정 문자 조합을 찾기 위한 패턴입니다. JavaScript에서는 정규 표현식도 객체로서, {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec()")}}와 {{jsxref("RegExp.test", "test()")}} 메서드를 사용할 수 있습니다. {{jsxref("String")}}의 {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.split", "split()")}} 메서드와도 함께 사용할 수 있습니다. 이 장에서는 JavaScript의 정규 표현식을 설명합니다.
 
@@ -29,7 +29,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 ## 정규 표현식 패턴 작성하기
 
-정규 표현식 패턴은 `/abc/`처럼 단순한 문자로 구성하거나, `/ab+c/`와 `/Chapter (\d+)\.\d*/`처럼 단순한 문자와 특수 문자의 조합으로 구성할 수도 있습니다. 특히 `(\d+)`에 나타난 괄호는 정규 표현식에서 기억 장치처럼 쓰여서, 괄호의 안쪽 패턴과 일치한 부분을 나중에 사용할 수 있도록 기억합니다. [그룹 사용하기](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#using_groups)에서 더 알아보세요.
+정규 표현식 패턴은 `/abc/`처럼 단순한 문자로 구성하거나, `/ab+c/`와 `/Chapter (\d+)\.\d*/`처럼 단순한 문자와 특수 문자의 조합으로 구성할 수도 있습니다. 특히 `(\d+)`에 나타난 괄호는 정규 표현식에서 기억 장치처럼 쓰여서, 괄호의 안쪽 패턴과 일치한 부분을 나중에 사용할 수 있도록 기억합니다. [그룹 사용하기](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups)에서 더 알아보세요.
 
 ### 단순 패턴 사용하기
 
@@ -45,11 +45,11 @@ slug: Web/JavaScript/Guide/Regular_expressions
   - : 어서션에는 줄이나 단어의 시작과 끝을 나타내는 경계와, 일치가 가능한 방법을 나타내는 패턴(전방탐색, 후방탐색, 조건 표현식 등)이 포함됩니다.
 - [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
   - : 글자와 숫자처럼 다른 유형의 문자를 구분합니다.
-- [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
   - : 표현 문자의 그룹과 범위를 나타냅니다.
 - [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - : 일치할 문자나 표현이 반복되어야 할 횟수를 나타냅니다.
-- [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+- [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - : 대/소문자, 수학 기호, 문장 부호처럼, 유니코드 문자 속성에 따라 문자를 구분합니다.
 
 아래 표는 정규 표현식에서 사용하는 모든 특수문자의 목록입니다.
@@ -169,7 +169,7 @@ function escapeRegExp(string) {
 
 ### 괄호 사용하기
 
-정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#그룹_사용하기) 문서에서 자세히 알아보세요.
+정규 표현식의 아무 부분이나 괄호로 감싸게 되면, 그 부분과 일치하는 부분 문자열을 기억하게 됩니다. 기억한 부분 문자열은 불러와서 다시 사용할 수 있습니다. [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups) 문서에서 자세히 알아보세요.
 
 ## JavaScript에서 정규 표현식 사용하기
 
@@ -370,7 +370,7 @@ console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 > 다음 문서에서도 정규 표현식의 사용 예제를 볼 수 있습니다.
 >
 > - {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}} 메서드 참조
-> - 이 안내서의 하위 문서: [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [어서션](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+> - 이 안내서의 하위 문서: [문자 클래스](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [어서션](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [그룹과 범위](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [수량자](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 ### 정규 표현식 특수 문자를 사용한 입력 값 검증
 
@@ -439,4 +439,4 @@ form.addEventListener("submit", (event) => {
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : 시각적 정규 표현식 테스터입니다.
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}

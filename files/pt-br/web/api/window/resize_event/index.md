@@ -28,18 +28,18 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 
 ## Properties
 
-| Property                        | Type                                             | Description                                                                                |
-| ------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget) | O evento alto (o primeiro alvo na árvore DOM).                                             |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/Web/API/DOMString)     | O tipo de evento.                                                                          |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean)         | Se o evento normalmente bubbles ou não.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/API/Boolean)         | Se o evento é cancelado ou não.                                                            |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy) | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                         |
+| Property                        | Type                                                                                  | Description                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)                                      | O evento alto (o primeiro alvo na árvore DOM).                                             |
+| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) | O tipo de evento.                                                                          |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento normalmente bubbles ou não.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean)              | Se o evento é cancelado ou não.                                                            |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                                      | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                                      | 0.                                                                                         |
 
 ## Examples
 
-Como os eventos `resize` podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando [requestAnimationFrame](/pt-BR/docs/DOM/window.requestAnimationFrame), [setTimeout](/pt-BR/docs/Web/API/WindowTimers/setTimeout) ou [customEvent](/pt-BR/docs/Web/API/CustomEvent)\*, como a seguir:
+Como os eventos `resize` podem ser altamente executados, o evento manipulador não deve executar operações computacionais caras como modificações DOM. Em vez disso, recomenda-se diminuir o impacto do evento usando [requestAnimationFrame](/pt-BR/docs/Web/API/Window/requestAnimationFrame), [setTimeout](/pt-BR/docs/Web/API/Window/setTimeout) ou [customEvent](/pt-BR/docs/Web/API/CustomEvent)\*, como a seguir:
 
 **\* IMPORTANT:** Por favor note que IE11 precisa do [customEvent](/pt-BR/docs/Web/API/CustomEvent/CustomEvent#Polyfill) polyfill para funcionar corretamente.
 

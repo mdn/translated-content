@@ -3,8 +3,6 @@ title: 如何创建、移动、删除及编辑页面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 ---
 
-{{MDNSidebar}}
-
 本文描述了创建、移动、删除及编辑页面的方法。在所有这些情况下，最好检查我们的 [MDN 收录规则](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)页面的指导方针，以确认是否应该采取这些行动，并在采取进一步措施之前与 MDN Web 文档团队在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)进行讨论。
 
 ## 创建页面
@@ -85,7 +83,8 @@ yarn content move <from-slug> <to-slug> [locale]
 
 4. 创建拉取请求。
 
-> **备注：** `yarn content move` 会自动在 `_redirects.txt` 文件中添加必要的重定向信息，这样旧的位置会重定向到新的位置。不要手动编辑 `_redirects.txt` 文件！如果你这样做，很容易出现错误。如果你需要在不移动文件的情况下添加重定向，请在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室) 上与 MDN Web 文档团队讨论。
+> [!NOTE]
+> `yarn content move` 会自动在 `_redirects.txt` 文件中添加必要的重定向信息，这样旧的位置会重定向到新的位置。不要手动编辑 `_redirects.txt` 文件！如果你这样做，很容易出现错误。如果你需要在不移动文件的情况下添加重定向，请在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室) 上与 MDN Web 文档团队讨论。
 
 ## 删除页面
 

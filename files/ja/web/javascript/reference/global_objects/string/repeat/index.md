@@ -1,15 +1,21 @@
 ---
 title: String.prototype.repeat()
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`repeat()`** は {{jsxref("String")}} 値のメソッドで、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
 
-**`repeat()`** メソッドは、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
+{{InteractiveExample("JavaScript デモ: String.prototype.repeat()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
+```js interactive-example
+const mood = "Happy! ";
+
+console.log(`I feel ${mood.repeat(3)}`);
+// 予想される結果: "I feel Happy! Happy! Happy! "
+```
 
 ## 構文
 
@@ -20,7 +26,7 @@ repeat(count)
 ### 引数
 
 - `count`
-  - : `0` から{{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "正の無限大")}}までの間の整数で、文字列を繰り返す数を示します。
+  - : `0` から {{jsxref("Number/POSITIVE_INFINITY", "Infinity")}} までの間の整数で、文字列を繰り返す数を示します。
 
 ### 返値
 
@@ -40,7 +46,7 @@ repeat(count)
 "abc".repeat(0); // ''
 "abc".repeat(1); // 'abc'
 "abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' （小数は丸められ、整数の結果が返されます）
+"abc".repeat(3.5); // 'abcabcabc' （小数点以下は切り捨てられます）
 "abc".repeat(1 / 0); // RangeError
 
 ({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
@@ -58,4 +64,5 @@ repeat(count)
 ## 関連情報
 
 - [`String.prototype.repeat` のポリフィル )(`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.repeat` のポリフィル](https://www.npmjs.com/package/string.prototype.repeat)
 - {{jsxref("String.prototype.concat()")}}

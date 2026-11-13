@@ -3,8 +3,6 @@ title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 
-{{AddonSidebar}}
-
 Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.
 
 L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé «&nbsp;manifest hôte&nbsp;» (host manifest) ou «&nbsp;manifest d'application&nbsp;» (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.
@@ -18,7 +16,7 @@ Par la suite, l'extension pourra échanger des messages en JSON avec l'applicati
 Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :
 
 - La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
-- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
+- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).
 
 Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt «&nbsp;webextensions‐examples&nbsp;» sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
 

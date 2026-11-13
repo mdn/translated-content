@@ -25,7 +25,8 @@ new BigInt64Array(buffer, byteOffset)
 new BigInt64Array(buffer, byteOffset, length)
 ```
 
-> **참고:** `BigInt64Array()`는 오직
+> [!NOTE]
+> `BigInt64Array()`는 오직
 > [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다.
 > `new` 없이 호출하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
@@ -81,6 +82,6 @@ console.log(bigint64FromIterable);
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

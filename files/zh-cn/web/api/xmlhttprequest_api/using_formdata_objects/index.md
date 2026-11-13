@@ -153,7 +153,7 @@ $.ajax({
 
 ## 不使用 FormData 对象，通过 AJAX 提交表单和上传文件
 
-如果你想知道不使用 FormData 对象的情况下，如何序列化并通过 [AJAX](/zh-CN/docs/AJAX) 提交表单，[请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
+如果你想知道不使用 FormData 对象的情况下，如何序列化并通过 [AJAX](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests) 提交表单，[请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
 
 ## 参见
 

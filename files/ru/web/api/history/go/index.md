@@ -7,7 +7,7 @@ slug: Web/API/History/go
 
 Метод **`History.go()`** выполняет переход на определённую страницу в истории текущей сессии. С его помощью можно перемещаться как вперёд, так и назад, в зависимости от значения параметра.
 
-Данный метод является {{glossary("asynchronous", "асинхронным")}}. Добавьте обработчик для события {{event("popstate")}}, чтобы определить, когда переход закончен.
+Данный метод является {{glossary("asynchronous", "асинхронным")}}. Добавьте обработчик события [`popstate`](/ru/docs/Web/API/Window/popstate_event), чтобы определить, когда переход закончен.
 
 ## Синтаксис
 
@@ -66,5 +66,5 @@ history.go(0);
 - {{domxref("History")}}
 - {{DOMxRef("History.back","back()")}}
 - {{DOMxRef("History.forward","forward()")}}
-- {{event("popstate")}} event
+- Событие [`popstate`](/ru/docs/Web/API/Window/popstate_event)
 - [Working with the History API](/ru/docs/Web/API/History_API/Working_with_the_History_API)

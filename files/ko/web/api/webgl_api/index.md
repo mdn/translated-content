@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API
 
 **WebGL**(Web Graphics Library)은 플러그인을 사용하지 않고 웹 브라우저에서 상호작용 가능한 3D와 2D 그래픽을 표현하기 위한 JavaScript API입니다. WebGL은 HTML5 {{HTMLElement("canvas")}} 요소에서 사용할 수 있는, OpenGL ES 2.0을 대부분 충족하는 API를 제공합니다.
 
-WebGL은 [Firefox](https://www.mozilla.org/ko/firefox/new/) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/fr/safari/) 5.1+, [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/download-ie) 11+, [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) build 10240+에서 사용할 수 있습니다. 그러나 사용자 장치의 하드웨어도 WebGL 기능을 지원해야 합니다.
+WebGL은 [Firefox](https://www.mozilla.org/ko/firefox/new/) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/fr/safari/) 5.1+, [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/download-ie) 11+, [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) build 10240+에서 사용할 수 있습니다. 그러나 사용자 장치의 하드웨어도 WebGL 기능을 지원해야 합니다.
 
 {{HTMLElement("canvas")}} 요소는 [캔버스 API](/ko/docs/Web/API/Canvas_API)를 사용해 웹 페이지에서 2D 그래픽을 그릴 때도 사용됩니다.
 
@@ -44,7 +44,7 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 - [Transform Feedback objects](/ko/docs/Web/API/WebGLTransformFeedback),
 - WebGL 2의 핵심이 된 확장 기능: [Vertex Array objects](/ko/docs/Web/API/WebGLVertexArrayObject), [instancing](/ko/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced), [multiple render targets](/ko/docs/Web/API/WebGL2RenderingContext/drawBuffers), [fragment depth](/ko/docs/Web/API/EXT_frag_depth).
 
-["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) 블로그 포스트와와 and [webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) 데모도 참고.
+["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) 블로그 포스트와와 and [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) 데모도 참고.
 
 <h2 class="Documentation" id="안내서와_자습서">안내서와 자습서</h2>
 
@@ -52,9 +52,9 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 
 - [WebGL의 데이터](/ko/docs/Web/API/WebGL_API/Data)
   - : WebGL 코드를 작성할 때 사용하는 변수, 버퍼와 그 외 다른 형태의 데이터를 알아봅니다.
-- [WebGL 우수 사례](/ko/docs/Web/WebGL/WebGL_best_practices)
+- [WebGL 우수 사례](/ko/docs/Web/API/WebGL_API/WebGL_best_practices)
   - : WebGL 콘텐츠의 품질, 성능, 안정성을 높일 수 있는 팁과 제안입니다.
-- [확장 사용](/ko/docs/Web/WebGL/Using_Extensions)
+- [확장 사용](/ko/docs/Web/API/WebGL_API/Using_Extensions)
   - : WebGL 확장을 사용하는 법을 알아봅니다.
 
 ### 자습서
@@ -79,18 +79,18 @@ WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제�
 <h2 class="Related_Topics" id="참고자료">참고자료</h2>
 
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL. This is a great place to start if you've never done low-level graphics programming.
-- [Khronos WebGL site](http://www.khronos.org/webgl/) The main web site for WebGL at the Khronos Group.
+- [Khronos WebGL site](https://www.khronos.org/webgl/) The main web site for WebGL at the Khronos Group.
 - [Learning WebGL](http://learningwebgl.com/blog/?page_id=1217) A site with tutorials on how to use WebGL.
-- [WebGL Fundamentals](http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) A basic tutorial with fundamentals of WebGL.
+- [WebGL Fundamentals](https://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/) A basic tutorial with fundamentals of WebGL.
 - [WebGL playground](http://webglplayground.net/) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
 - [WebGL Academy](http://www.webglacademy.com/) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
-- [WebGL Stats](http://webglstats.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
+- [WebGL Stats](https://webglreport.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
 
 ### Libraries
 
 - [glMatrix](https://github.com/toji/gl-matrix) is a JavaScript matrix and vector library for high-performance WebGL apps.
 - [PhiloGL](http://senchalabs.github.com/philogl/) is a WebGL framework for data visualization, creative coding, and game development.
-- [Pixi.js](http://www.pixijs.com/) is a fast, open-source 2D WebGL renderer.
+- [Pixi.js](https://www.pixijs.com/) is a fast, open-source 2D WebGL renderer.
 - [PlayCanvas](https://playcanvas.com/) is an open-source game engine.
 - [Sylvester](http://sylvester.jcoglan.com/) is an open-source library for manipulating vectors and matrices. Not optimized for WebGL but extremely robust.
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.

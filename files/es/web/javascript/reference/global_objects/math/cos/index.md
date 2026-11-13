@@ -7,9 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 
 La función estática **`Math.cos()`** devuelve el [coseno](https://es.wikipedia.org/wiki/Coseno) del ángulo especificado, que debe ser especificado en [radianes](https://es.wikipedia.org/wiki/Radi%C3%A1n). Este valor es <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>adyacente</mtext> </mrow></mrow></msub><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>hipotenusa</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
 
-El código fuente de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si te gustaría contribuir con el proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 ## Sintaxis
 

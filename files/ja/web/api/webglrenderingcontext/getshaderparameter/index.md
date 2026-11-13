@@ -21,9 +21,7 @@ getShaderParameter(shader, pname)
 - `shader`
   - : 引数情報の取得元となる {{domxref("WebGLShader")}}。
 - `pname`
-
   - : 問い合わせる情報を指定する {{domxref("WebGL_API/Types", "GLenum")}} です。指定可能な値は次の通りです。
-
     - `gl.DELETE_STATUS`
       - : シェーダーに削除フラグが立っているかどうかを示す {{domxref("WebGL_API/Types", "GLboolean")}} を返します。
     - `gl.COMPILE_STATUS`

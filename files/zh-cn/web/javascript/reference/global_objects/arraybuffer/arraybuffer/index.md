@@ -5,11 +5,17 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`ArrayBuffer()`** 构造函数创建 {{jsxref("ArrayBuffer")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 语法
 
@@ -18,7 +24,8 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **备注：** `ArrayBuffer()` 只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `ArrayBuffer()` 只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

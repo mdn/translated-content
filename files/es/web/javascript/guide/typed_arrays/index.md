@@ -23,7 +23,7 @@ Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript div
 
 ### Vistas de arreglos tipados
 
-Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales tal como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo tipado especial, la `Uint8ClampedArray`. Esta fija los valores entre 0 y 255. {{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}
+Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales tal como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo tipado especial, la `Uint8ClampedArray`. Esta fija los valores entre 0 y 255. [Tipos de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
 
 | Tipo                            | Intervalo de valores          | Tamaño en bytes | Descripción                                                                               | Tipo de IDL web           | Tipo C equivalente               |
 | ------------------------------- | ----------------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------- |
@@ -113,11 +113,11 @@ console.log("La entrada 0 en el arreglo de 32 bits ahora es " + int32View[0]);
 
 La salida de esto es `"La entrada 0 en el arreglo de 32 bits ahora es 32"`.
 
-En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("Global_Objects/TypedArray", "tipo de vista", "#TypedArray_objects")}}.
+En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("TypedArray", "tipo de vista", "#TypedArray_objects")}}.
 
 ### Trabajar con complejas estructuras de datos
 
-Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos [WebGL](/es/docs/Web/API/WebGL_API), archivos de datos o estructuras C que necesitas utilizar mientras usas [js-ctypes](/es/docs/Web/JavaScript/Typed_arrays).
+Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos [WebGL](/es/docs/Web/API/WebGL_API), archivos de datos o estructuras C que necesitas utilizar mientras usas [js-ctypes](/es/docs/Web/JavaScript/Guide/Typed_arrays).
 
 Considera esta estructura C:
 
@@ -162,5 +162,5 @@ normalArray.constructor === Array;
 - [Conseguir ArrayBuffers o arreglos tipados a partir de cadenas codificadas en Base64](/es/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [StringView: una representación en C de cadenas basadas en arreglos tipados](/es/docs/Code_snippets/StringView)
 - [Rápida manipulación de píxeles en canvas con arreglos tipados](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Arreglos tipados: Datos binarios en el navegador](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Arreglos tipados: Datos binarios en el navegador](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

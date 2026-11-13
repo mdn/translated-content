@@ -3,15 +3,25 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
-{{JSRef}}
-
 **`sort()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回对相同数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
 
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂度。
 
 如果想要不改变原数组的排序方法，可以使用 {{jsxref("Array/toSorted", "toSorted()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 语法
 
@@ -23,9 +33,7 @@ sort(compareFn)
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 定义排序顺序的函数。返回值应该是一个数字，其符号表示两个元素的相对顺序：如果 `a` 小于 `b`，返回值为负数，如果 `a` 大于 `b`，返回值为正数，如果两个元素相等，返回值为 `0`。`NaN` 被视为 `0`。该函数使用以下参数调用：
-
     - `a`
       - : 第一个用于比较的元素。不会是 `undefined`。
     - `b`
@@ -326,7 +334,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## 参见
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

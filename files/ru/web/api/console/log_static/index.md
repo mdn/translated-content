@@ -21,11 +21,11 @@ console.log(msg [, subst1, ..., substN]);
 - `obj1` ... `objN`
   - : Список объектов JavaScript для вывода. Объекты выводятся в том порядке, в котором они были указаны при вызове метода. Пожалуйста, обратите внимание, что если вы логируете объекты в последних версиях Chrome и Firefox, в консоль залогируется не значение объекта, а _ссылка_ на него. Это означает, что, возможно, в консоль будет выведено не значение объекта на момент вызова `console.log()`, а будет выведено значение объекта на момент открытия консоли.
 - `msg`
-  - : Строка JavaScript, содержащая 0 и более [подстановочных символов](/ru/docs/Web/API/console#Using_string_substitutions) для замены (см. `subst1` ... `substN`).
+  - : Строка JavaScript, содержащая 0 и более [подстановочных символов](/ru/docs/Web/API/console#using_string_substitutions) для замены (см. `subst1` ... `substN`).
 - `subst1` ... `substN`
   - : JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в `msg`. Это даст вам дополнительный контроль над форматом вывода.
 
-Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/DOM/console#Outputting_text_to_the_console) документации {{domxref("console")}}.
+Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/Web/API/console#outputting_text_to_the_console) документации {{domxref("console")}}.
 
 ## Спецификации
 
@@ -59,7 +59,7 @@ console.log(msg [, subst1, ..., substN]);
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Firebug wiki: Console API](http://getfirebug.com/wiki/index.php/Console_API) - Firebug поддерживает дополнительные возможности реализации console.log(), такие как [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
-- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)
+- [Firebug wiki: Console API](https://getfirebug.com/wiki/index.php/Console_API) - Firebug поддерживает дополнительные возможности реализации console.log(), такие как [styled logging](http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/).
+- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

@@ -23,5 +23,5 @@ coord = position.coords
 
 ## Veja também
 
-- [Usando geolocalização](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando geolocalização](/pt-BR/docs/Web/API/Geolocation_API)
 - A interface {{domxref("Position")}} a qual ela pertence.

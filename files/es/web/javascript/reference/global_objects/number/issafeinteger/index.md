@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 El método **`Number.isSafeInteger()`** determina si el valor provisto es un número que es un entero seguro.
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 Un entero seguro es un entero que
 
@@ -16,7 +31,7 @@ Un entero seguro es un entero que
 
 Por ejemplo, `253 - 1` es un entero seguro: puede ser exactamente representado y ningún otro entero puede ser redondeado a él bajo cualquier modo de redondeo de IEEE-754. En contraste, `253` _no_ es un entero seguro, puede ser exactamente representado en IEEE-754, pero el entero `253 + 1` no puede ser directamente representado en IEEE-754 pero en su lugar, redondea a `253` bajo los modos de redondeo _redondeo-al-más-cercano_ y _redondeo-a-cero_. Los enteros seguros consisten en todos los enteros desde `-(253 - 1)` inclusivo, hasta `253 - 1` inclusivo (± `9007199254740991` o ± 9,007,199,254,740,991).
 
-Manejar valores más grandes o más pequeños que \~9 cuatrillones con presición completa requiere usar una [biblioteca de artimética de presición arbitraria](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Ver [Lo que todo programador necesita saber sobre aritmética de punto flotante](http://floating-point-gui.de/) para más información sobre representaciones de punto flotante de los números.
+Manejar valores más grandes o más pequeños que \~9 cuatrillones con presición completa requiere usar una [biblioteca de artimética de presición arbitraria](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic). Ver [Lo que todo programador necesita saber sobre aritmética de punto flotante](https://floating-point-gui.de/) para más información sobre representaciones de punto flotante de los números.
 
 ## Sintaxis
 

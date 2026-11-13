@@ -7,7 +7,7 @@ slug: Web/API/Window/postMessage
 
 **window.postMessage()** 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机 (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。**window.postMessage()** 方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。
 
-从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 `targetWindow = window.opener`），然后在窗口上调用 `targetWindow.postMessage()` 方法分发一个 {{domxref("MessageEvent")}} 消息。接收消息的窗口可以根据需要自由[处理此事件](/zh-CN/docs/Web/Guide/Events)。传递给 window.postMessage() 的参数（比如 message）将[通过消息事件对象暴露给接收消息的窗口](/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event)。
+从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 `targetWindow = window.opener`），然后在窗口上调用 `targetWindow.postMessage()` 方法分发一个 {{domxref("MessageEvent")}} 消息。接收消息的窗口可以根据需要自由[处理此事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)。传递给 window.postMessage() 的参数（比如 message）将[通过消息事件对象暴露给接收消息的窗口](#The_dispatched_event)。
 
 ## 语法
 
@@ -16,9 +16,9 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```
 
 - `otherWindow`
-  - : 其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行[window.open](/zh-CN/docs/DOM/window.open)返回的窗口对象、或者是命名过或数值索引的[window.frames](/zh-CN/docs/DOM/window.frames)。
+  - : 其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行[window.open](/zh-CN/docs/Web/API/Window/open)返回的窗口对象、或者是命名过或数值索引的[window.frames](/zh-CN/docs/Web/API/Window/frames)。
 - `message`
-  - : 将要发送到其他 window 的数据。它将会被[结构化克隆算法](/zh-CN/docs/DOM/The_structured_clone_algorithm)序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。\[[1](/zh-CN/docs/)]
+  - : 将要发送到其他 window 的数据。它将会被[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。\[[1](/zh-CN/docs/Web)]
 - `targetOrigin`
   - : 通过窗口的 origin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串"\*"（表示无限制）或者一个 URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用 postMessage 传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的 origin 属性完全一致，来防止密码被恶意的第三方截获。**如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的 targetOrigin，而不是 \*。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。**
 - `transfer` {{optional_Inline}}
@@ -50,7 +50,7 @@ message 的属性有：
 - `origin`
   - : 调用 `postMessage` 时消息发送方窗口的 [origin](/zh-CN/docs/Origin) . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如“`https://example.org` (隐含端口 `443`)”、“`http://example.net` (隐含端口 `80`)”、“`http://example.com:8080`”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。
 - `source`
-  - : 对发送消息的[窗口](/zh-CN/docs/DOM/window)对象的引用; 你可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。
+  - : 对发送消息的[窗口](/zh-CN/docs/Web/API/Window)对象的引用; 你可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。
 
 ## 安全问题
 

@@ -3,11 +3,24 @@ title: parseFloat
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
 
-{{jsSidebar("Objects")}}
-
 **`parseFloat()`** 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+
+```js interactive-example
+function circumference(r) {
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference(4.567));
+// Expected output: 28.695307297889173
+
+console.log(circumference("4.567abcdefgh"));
+// Expected output: 28.695307297889173
+
+console.log(circumference("abcdefgh"));
+// Expected output: NaN
+```
 
 ## 语法
 

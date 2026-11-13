@@ -28,7 +28,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 ## Méthodes
 
 - {{domxref("AudioBuffer.getChannelData()")}}
-  - : Retourne un {{domxref ("Float32Array")}} contenant les données PCM associés au canal, défini par l'index du canal (0 représentant le premier canal).
+  - : Retourne un {{jsxref("Float32Array")}} contenant les données PCM associés au canal, défini par l'index du canal (0 représentant le premier canal).
 - {{domxref("AudioBuffer.copyFromChannel()")}}
   - : Copie les échantillons du canal associé à `AudioBuffer` dans un tableau de destination.
 - {{domxref("AudioBuffer.copyToChannel()")}}
@@ -36,7 +36,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 
 ## Exemple
 
-L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
+L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](https://mdn.github.io/audio-buffer/) est également consultable.
 
 ```js
 // Stéréo

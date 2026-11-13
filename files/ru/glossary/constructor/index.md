@@ -32,5 +32,5 @@ var defaultReference = new Default();
 
 ## Смотрите также
 
-- [Конструктор в ООП для JavaScript](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor) на MDN
+- [Конструктор в ООП для JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor) на MDN
 - [Оператор new в JavaScript](/ru/docs/Web/JavaScript/Reference/Operators/new) на MDN

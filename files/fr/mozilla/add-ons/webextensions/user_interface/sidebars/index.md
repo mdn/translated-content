@@ -3,8 +3,6 @@ title: Barres laterales
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
 
-{{AddonSidebar}}
-
 Une barre latérale est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Cette page décrit les barres latérales, leur spécification, leur conception et des exemples d'utilisation.
 
 Le navigateur fournit une interface utilisateur (UI) qui permet à l'utilisateur de voir les barres latéraux actuellement disponibles et de sélectionner une barre latérale à afficher. Par exemple, Firefox a un menu "Affichage > Barre latérale". Une seule barre latérale peut être affichée à la fois, et cette barre latérale sera affichée pour tous les onglets et toutes les fenêtres du navigateur.
@@ -34,7 +32,7 @@ Lorsqu'une extension est installée comme une barre latérale, sa barre latéral
 
 ## Spécification des barres latérales
 
-Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), à côté d'un titre et d'une icône par défaut :
+Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), à côté d'un titre et d'une icône par défaut :
 
 ```json
 "sidebar_action": {

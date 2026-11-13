@@ -11,7 +11,18 @@ l10n:
 바이트 오프셋에서 4바이트를 읽고 이를 32비트 부동소수점 숫자로 해석합니다.
 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## 구문
 

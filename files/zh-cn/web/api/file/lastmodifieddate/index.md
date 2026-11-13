@@ -2,10 +2,10 @@
 title: File：lastModifiedDate 属性
 slug: Web/API/File/lastModifiedDate
 l10n:
-  sourceCommit: 3b5a1c0dfd59257c0a51052a9efa7b0108f8ecca
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Non-standard_Header}}
 
 {{domxref("File")}} 接口的 **`lastModifiedDate`** 只读属性返回文件的最后修改日期。没有已知最后修改日期的文件则返回当前日期。
 
@@ -16,8 +16,8 @@ l10n:
 ## 示例
 
 ```js
-// fileInput 是一个 HTMLInputElement：<input type="file" multiple id="myfileinput">
-const fileInput = document.getElementById("myfileinput");
+// fileInput 是一个 HTMLInputElement：<input type="file" multiple id="my-file-input">
+const fileInput = document.getElementById("my-file-input");
 
 for (const file of fileInput.files) {
   console.log(`${file.name} 最后修改日期为 ${file.lastModifiedDate}`);

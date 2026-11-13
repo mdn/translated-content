@@ -3,7 +3,7 @@ title: "HTMLScriptElement: type プロパティ"
 short-title: type
 slug: Web/API/HTMLScriptElement/type
 l10n:
-  sourceCommit: dadc5c5b6386e011bc296caedadec4287d55277f
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,7 +16,7 @@ l10n:
 
 文字列です。このプロパティの値は以下のいずれかです。
 
-- **属性が設定されていない (既定値)、空文字列、JavaScript の MIME タイプのいずれか**
+- **属性が未設定（デフォルト値）、空文字列、JavaScript の MIME タイプのいずれか**
   - : スクリプトが JavaScript コードを格納した「クラシックスクリプト」であることを示します。
 - `module`
   - : この値によってコードは JavaScript モジュールとして扱われます。
@@ -27,17 +27,17 @@ l10n:
 - **その他の値**
   - : 埋め込まれたコンテンツはデータブロックとして扱われ、ブラウザーによって処理されることはありません。
 
-詳しくは {{HTMLElement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script/type) 属性を参照してください。
+詳しくは {{HTMLElement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性を参照してください。
 
 ## 例
 
 ```html
-<script id="el" type="text/javascript"></script>
+<script id="el" type="module"></script>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.type); // 出力: "text/javascript"
+console.log(el.type); // 出力: "module"
 ```
 
 ## 仕様書

@@ -5,7 +5,7 @@ slug: Web/API/Window/matchMedia
 
 {{APIRef}}
 
-{{domxref("Window")}} 的 **`matchMedia()`** 方法返回一个新的 {{domxref("MediaQueryList")}} 对象，表示指定的[媒体查询](/zh-CN/docs/CSS/Media_queries)字符串解析后的结果。返回的 `MediaQueryList` 可被用于判定 {{domxref("Document")}} 是否匹配媒体查询，或者监控一个 `document` 来判定它匹配了或者停止匹配了此媒体查询。
+{{domxref("Window")}} 的 **`matchMedia()`** 方法返回一个新的 {{domxref("MediaQueryList")}} 对象，表示指定的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)字符串解析后的结果。返回的 `MediaQueryList` 可被用于判定 {{domxref("Document")}} 是否匹配媒体查询，或者监控一个 `document` 来判定它匹配了或者停止匹配了此媒体查询。
 
 ## 语法
 
@@ -68,7 +68,7 @@ JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("W
 
 {{EmbedLiveSample("示例", "100%", "60")}}
 
-参考更多的例子来 [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code) 。
+参考更多的例子来 [通过代码使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing) 。
 
 ## 规范
 
@@ -80,7 +80,7 @@ JavaScript 代码只需将要匹配的媒体查询字符串传递到{{domxref("W
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/CSS/Media_queries)
-- [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code)
+- [媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
+- [通过代码使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

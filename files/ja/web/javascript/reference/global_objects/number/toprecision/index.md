@@ -1,15 +1,29 @@
 ---
 title: Number.prototype.toPrecision()
+short-title: toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 l10n:
-  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toPrecision()`** は {{jsxref("Number")}} 値のメソッドで、この数値を指定された有効桁数で表す文字列を返します。
 
-**`toPrecision()`** メソッドは {{jsxref("Number")}} オブジェクトを指定された精度で表した文字列を返します。
+{{InteractiveExample("JavaScript デモ: Number.prototype.toPrecision()")}}
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// 予想される結果: "123.5"
+
+console.log(precise(0.004));
+// 予想される結果: "0.004000"
+
+console.log(precise(1.23e5));
+// 予想される結果: "1.230e+5"
+```
 
 ## 構文
 
@@ -25,20 +39,21 @@ toPrecision(precision)
 
 ### 返値
 
-{{jsxref("Number")}} オブジェクトを `precision` で指定された桁で概数化された、固定小数点数、または指数表記で表した文字列です。概数の表現方法については {{jsxref("Number.prototype.toFixed()")}} メソッドの説明を参照してください。それは `toPrecision()` にも適用されます。
-
-引数 `precision` が省略された場合、 {{jsxref("Number.prototype.toString()")}} のように振舞います。 `precision` が整数の値ではない場合は、最も近い整数に概数化されます。
+指定された数値を、指定された有効桁数で表します。指数が `precision` 以上または -6 未満の場合、科学記数法が使用されます。`precision` 引数が省略された場合、{{jsxref("Number.prototype.toString()")}} と同じ動作をします。
 
 ## 例外
 
 - {{jsxref("RangeError")}}
   - : `precision` が `1` 以上 100 以下の範囲にない場合に発生します。
+- {{jsxref("TypeError")}}
+  - : これのメソッドが {{jsxref("Number")}} ではないオブジェクトに対して呼び出した場合、例外が発生します。
 
 ## 例
 
 ### `toPrecision` の使用
 
 ```js
+// この数値は指数が 0 であるため、指数表記が使用されることはない
 let num = 5.123456;
 
 console.log(num.toPrecision()); // '5.123456'
@@ -46,6 +61,7 @@ console.log(num.toPrecision(5)); // '5.1235'
 console.log(num.toPrecision(2)); // '5.1'
 console.log(num.toPrecision(1)); // '5'
 
+// この数値は指数が-4であるため、指数表記が使用されることはない
 num = 0.000123;
 
 console.log(num.toPrecision()); // '0.000123'
@@ -53,8 +69,16 @@ console.log(num.toPrecision(5)); // '0.00012300'
 console.log(num.toPrecision(2)); // '0.00012'
 console.log(num.toPrecision(1)); // '0.0001'
 
-// なお、場合によっては指数表記が返されることがあります。
-console.log((1234.5).toPrecision(2)); // '1.2e+3'
+// この数値は指数が 3 であるため、精度が 4 未満の場合、指数表記を使用する
+num = 1234.5;
+console.log(num.toPrecision(1)); // '1e+3'
+console.log(num.toPrecision(2)); // '1.2e+3'
+console.log(num.toPrecision(6)); // '1234.50'
+
+// この数値は指数が -7 であるため、常に指数表記を使用する
+num = 0.00000012345;
+console.log(num.toPrecision(1)); // '1e-7'
+console.log(num.toPrecision(10)); // '1.234500000e-7'
 ```
 
 ## 仕様書

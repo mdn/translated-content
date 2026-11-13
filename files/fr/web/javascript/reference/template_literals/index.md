@@ -3,8 +3,6 @@ title: Littéraux de gabarits
 slug: Web/JavaScript/Reference/Template_literals
 ---
 
-{{JsSidebar("More")}}
-
 Les littéraux de gabarits sont des littéraux de chaînes de caractères permettant d'intégrer des expressions. Avec eux, on peut utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation.
 
 > [!NOTE]
@@ -12,18 +10,19 @@ Les littéraux de gabarits sont des littéraux de chaînes de caractères permet
 
 ## Syntaxe
 
-```js
-`texte``ligne de texte 1
-  ligne de texte 2``texte ${expression} texte`;
-
-etiquette`texte ${expression} texte`;
+```js-nolint
+`texte`
+`ligne de texte 1
+  ligne de texte 2`
+`texte ${expression} texte`
+etiquette`texte ${expression} texte`
 ```
 
 ## Description
 
 Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`) au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
 
-Pour créer la chaîne finale, la fonction par défaut concatène simplement les différentes parties en une seule chaîne. Toutefois, on peut utiliser une fonction spécifique pour obtenir un comportement différent et recomposer la chaîne avec une autre logique. On parlera alors [de gabarit étiqueté (cf. ci-après)](#Gabarits_étiquetés).
+Pour créer la chaîne finale, la fonction par défaut concatène simplement les différentes parties en une seule chaîne. Toutefois, on peut utiliser une fonction spécifique pour obtenir un comportement différent et recomposer la chaîne avec une autre logique. On parlera alors [de gabarit étiqueté (cf. ci-après)](#gabarits_étiquetés).
 
 ```js
 let rep = 42;
@@ -157,7 +156,7 @@ console.log(sortie);
 
 ### Chaînes brutes
 
-La propriété spéciale `raw`, disponible sur le premier argument de la fonction du gabarit étiqueté, vous permet d'accéder aux chaînes brutes, telles qu'elles ont été entrées, sans traiter [les séquences d'échappement](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Utilisation_des_caractères_spéciaux).
+La propriété spéciale `raw`, disponible sur le premier argument de la fonction du gabarit étiqueté, vous permet d'accéder aux chaînes brutes, telles qu'elles ont été entrées, sans traiter [les séquences d'échappement](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#utilisation_des_caractères_spéciaux).
 
 ```js
 function etiquette(chaines) {
@@ -235,7 +234,7 @@ let mauvaise = `mauvaise séquence d'échappement : \unicode`;
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
+- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
 - _[Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)_
 - [_ES6 en détails : les gabarits de libellé_ sur tech.mozfr.org](https://tech.mozfr.org/post/2015/05/27/ES6-en-details-%3A-les-gabarits-de-chaines-de-caracteres)
 - _[Styled Components](https://www.styled-components.com/)_

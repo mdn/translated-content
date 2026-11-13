@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 인스턴스의 **`resize()`** 메서드는 `ArrayBuffer`를 명시된 바이트 크기만큼 크기를 조절합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-resize.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.resize()")}}
+
+```js interactive-example
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+buffer.resize(12);
+
+console.log(buffer.byteLength);
+// Expected output: 12
+```
 
 ## 구문
 

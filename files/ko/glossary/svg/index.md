@@ -23,4 +23,4 @@ l10n:
 
 - [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
 - [MDN의 SVG 문서](/ko/docs/Web/SVG)
-- [최신 SVG 명세](http://www.w3.org/TR/SVG/)
+- [최신 SVG 명세](https://www.w3.org/TR/SVG/)

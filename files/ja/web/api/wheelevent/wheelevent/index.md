@@ -27,9 +27,7 @@ new WheelEvent(type, options)
   - : イベント名の文字列です。
     大文字と小文字は区別され、ブラウザーは常に `wheel` に設定します。
 - `options` {{optional_inline}}
-
   - : _{{domxref("MouseEvent/MouseEvent", "MouseEvent()")}} で定義するプロパティに加え_、以下のプロパティを持つことができるオブジェクトです。
-
     - `deltaX` {{optional_inline}}
       - : 浮動小数点数で、水平スクロール量を `deltaMode` の単位で表します。
         既定値は `0.0` です。
@@ -40,7 +38,6 @@ new WheelEvent(type, options)
       - : 浮動小数点数で、 Z 軸のスクロール量を `deltaMode` の単位で表します。
         既定値は `0.0` です。
     - `deltaMode` {{optional_inline}}
-
       - : デルタ値のスクロール量の単位を表す整数です。既定値は `0x00` です。指定できる値は以下の通りです。
 
         | 定数              | 値     | 説明                                 |

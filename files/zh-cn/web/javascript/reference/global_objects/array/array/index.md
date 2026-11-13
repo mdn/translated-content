@@ -3,8 +3,6 @@ title: Array() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
 
-{{JSRef}}
-
 **`Array()`** 构造函数用于创建 {{jsxref("Array")}} 对象。
 
 ## 语法
@@ -92,5 +90,5 @@ console.log(fruits[0]); // "Apple"
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}

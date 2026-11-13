@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 
 **Конструктор Set** позволяет создавать объекты Set, в которых хранятся уникальные значения любого типа, будь то [примитивные значения](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Primitive) или ссылки на объекты.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -18,7 +31,6 @@ new Set([iterable])
 ### Параметры
 
 - `iterable` {{optional_inline}}
-
   - : Если передаётся [итеративный объект](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый Set.
 
     Если вы не укажете этот параметр или его значение равно нулю, новый набор будет пустым.

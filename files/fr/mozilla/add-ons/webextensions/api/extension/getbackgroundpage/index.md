@@ -3,8 +3,6 @@ title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 
-{{AddonSidebar}}
-
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
 > [!NOTE]
@@ -30,7 +28,7 @@ Aucun
 
 ## Exemples
 
-Supposons un [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un [script d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js
@@ -40,7 +38,7 @@ function foo() {
 }
 ```
 
-Un script exécuté dans un [popup](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) peut appeler cette fonction directement comme ceci :
+Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
 
 ```js
 // popup.js
@@ -53,9 +51,7 @@ page.foo(); // -> "I'm defined in background.js"
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

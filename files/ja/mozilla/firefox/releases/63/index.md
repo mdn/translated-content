@@ -3,22 +3,20 @@ title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされました。このページでは、開発者に影響する Firefox 63 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- [インスペクター](/ja/docs/Tools/Page_Inspector) のフォントタブに、ページ上のフォントの設定を簡単に確認および編集できるエディターを追加しました。詳しくは [フォントを編集する](/ja/docs/Tools/Page_Inspector/How_to/Edit_fonts) をご覧ください。
-- [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) をデフォルトで有効化しました ([Firefox バグ 1482454](https://bugzil.la/1482454))。
-- [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) でオブジェクトにマウスポインターを載せると、[アイテムを強調表示](/ja/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items) して、ページ上の情報バーにアイテムのロールや名前を表示するようになりました ([Firefox バグ 1473030](https://bugzil.la/1473030))。
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) で、コマンドラインをコンソール出力の直後に表示するようになりました ([Firefox バグ 1136299](https://bugzil.la/1136299))。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で、URL が既知のトラッカーに属することを示すアイコンを追加しました。[セキュリティアイコン](/ja/docs/Tools/Network_Monitor/request_list#Security_icons) をご覧ください ([Firefox バグ 1333994](https://bugzil.la/1333994))。
+- [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) のフォントタブに、ページ上のフォントの設定を簡単に確認および編集できるエディターを追加しました。詳しくは [フォントを編集する](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) をご覧ください。
+- [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) をデフォルトで有効化しました ([Firefox バグ 1482454](https://bugzil.la/1482454))。
+- [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) でオブジェクトにマウスポインターを載せると、[アイテムを強調表示](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items) して、ページ上の情報バーにアイテムのロールや名前を表示するようになりました ([Firefox バグ 1473030](https://bugzil.la/1473030))。
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コマンドラインをコンソール出力の直後に表示するようになりました ([Firefox バグ 1136299](https://bugzil.la/1136299))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、URL が既知のトラッカーに属することを示すアイコンを追加しました。[セキュリティアイコン](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#security_icons) をご覧ください ([Firefox バグ 1333994](https://bugzil.la/1333994))。
 - `devtools.aboutdebugging.showSystemAddons` の既定値が `false` になりました。これは、`about:debugging` ページにシステムアドオンを表示しないことを意味します。`about:config` で、この設定を変更できます ([Firefox バグ 1425347](https://bugzil.la/1425347))。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) のツールバーをわかりやすくして、ビューポートを左寄せにするオプションを追加しました。
-- ページインスペクターに、カスタム要素の [クラス定義へのリンク](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Custom_element_definition) を表示する機能を追加しました ([Firefox バグ 1443923](https://bugzil.la/1443923))。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) のツールバーをわかりやすくして、ビューポートを左寄せにするオプションを追加しました。
+- ページインスペクターに、カスタム要素の [クラス定義へのリンク](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#custom_element_definition) を表示する機能を追加しました ([Firefox バグ 1443923](https://bugzil.la/1443923))。
 
 ### HTML
 
@@ -31,16 +29,16 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 ### CSS
 
 - {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
-- [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
-- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Flexbox レイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
+- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
-- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Guides/Media_queries/Using#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
-- [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
+- [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 
@@ -54,7 +52,7 @@ _変更なし。_
 
 - {{jsxref("Symbol.prototype.description")}} プロパティを実装しました ([Firefox バグ 1472170](https://bugzil.la/1472170))。
 - {{JSxRef("Object.fromEntries()")}} メソッドを実装しました ([Firefox バグ 1469019](https://bugzil.la/1469019))。
-- undefined であるオブジェクトのプロパティにアクセスしようとしたときのエラーメッセージを改善しました。`x` が undefined である状況で `x.y` にアクセスしようとすると、コンソールが従来の `TypeError: x is undefined` に代わって、より具体的な [`x is undefined; can't access its "y" property`](/ja/docs/Web/JavaScript/Reference/Errors/cant_access_property) を返します ([Firefox バグ 1259822](https://bugzil.la/1259822))。
+- undefined であるオブジェクトのプロパティにアクセスしようとしたときのエラーメッセージを改善しました。`x` が undefined である状況で `x.y` にアクセスしようとすると、コンソールが従来の `TypeError: x is undefined` に代わって、より具体的な [`x is undefined; can't access its "y" property`](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) を返します ([Firefox バグ 1259822](https://bugzil.la/1259822))。
 
 #### 廃止
 
@@ -72,7 +70,6 @@ _変更なし。_
 #### DOM
 
 - {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} で、以下の部分をデフォルトで有効にしました ([Firefox バグ 1476158](https://bugzil.la/1476158))。
-
   - {{domxref("Animation")}} の {{domxref("Animation.ready", "ready")}} および {{domxref("Animation.finished", "finished")}} プロパティ。`Animation` オブジェクトの `ready` および `finished` {{jsxref("Promise")}} を指定します。
   - {{domxref("Animation")}} オブジェクトの {{domxref("Animation.effect", "effect")}} プロパティ。
   - {{domxref("KeyframeEffect")}} および {{domxref("AnimationEffect")}} インターフェイス。
@@ -80,7 +77,7 @@ _変更なし。_
 - {{domxref("Element.toggleAttribute()")}} メソッドを実装しました ([Firefox バグ 1469592](https://bugzil.la/1469592))。
 - 以前は非標準であった {{domxref("Event.returnValue")}} プロパティを、互換性のためにサポートしました ([Firefox バグ 1452569](https://bugzil.la/1452569))。
 - ウェブ互換性を向上するために {{domxref("Window.event")}} プロパティを実装しました。現在は標準化されています ([Firefox バグ 218415](https://bugzil.la/218415))。ただし複数のウェブ互換性の問題 (例えば [Firefox バグ 1479964](https://bugzil.la/1479964)) により、すぐに設定項目 `dom.window.event.enabled` で Nightly 以外のチャンネルでは無効化しました ([Firefox バグ 1493869](https://bugzil.la/1493869))。
-- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("NavigatorID.platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
+- Firefox の動作を Edge や Chrome に合わせるため、{{domxref("Navigator/platform", "navigator.platform")}} プロパティが 64 ビット版 Windows で実行している場合でも `"Win32"` を返すようになりました ([Firefox バグ 1472618](https://bugzil.la/1472618))。
 - Firefox 63 より前のバージョンでは、`rel="noopener"` を持つ新しいウィンドウを開くリンク、および [`noopener`](/ja/docs/Web/API/Window/open#noopener) 機能を有効にして {{domxref("Window.open()")}} を呼び出した場合にすべてのウィンドウ機能を無効にしており、必要な標準機能を明示的に再有効化しなければなりませんでした。Firefox 63 ではこれらのウィンドウでほかのウィンドウと同じ機能が有効になり、不要な機能を明示的に無効化しなければなりません ([Firefox バグ 1419960](https://bugzil.la/1419960))。
 
 #### DOM イベント
@@ -106,13 +103,13 @@ _変更なし。_
 - Web Audio API の {{domxref("ConstantSourceNode")}} ノード型で、仕様書に合わせるためデフォルトのチャンネル数を 1 から 2 に変更しました ([Firefox バグ 1413283](https://bugzil.la/1413283))。
 - {{domxref("Web_Audio_API", "Web Audio API", "", "1")}} の {{domxref("AudioScheduledSourceNode")}} インターフェイス (および拡張によって、このインターフェイスを基にしたすべてのノード) でノードの開始時間として負の値が指定されたときに、正しい例外が発生するようになりました。そのエラーは `RangeError` です ([Firefox バグ 1413284](https://bugzil.la/1413284))。
 - {{domxref("AudioParam")}} オブジェクトの {{domxref("AudioParam.value", "value")}} で許可される最小値と最大値を、それぞれ単精度浮動小数点数で最小の負の値 (-340,282,346,638,528,859,811,704,183,484,516,925,440) と最大の正の値 (+340,282,346,638,528,859,811,704,183,484,516,925,440) に変更しました ([Firefox バグ 1476695](https://bugzil.la/1476695))。
-- アクティブなストリームのコーデックを変更できる、{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
-- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{domxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
+- アクティブなストリームのコーデックを変更できる、{{domxref("SourceBuffer.changeType")}} メソッドをデフォルトで有効にしました。これは {{domxref("Media_Source_Extensions_API", "Media Source Extensions API", "", "1")}} の一部です ([Firefox バグ 1481166](https://bugzil.la/1481166))。
+- {{domxref("AudioParam.setValueCurveAtTime()")}} メソッドを、引数の値が次第に変わることを示すために浮動小数点数値の配列を受け入れるように更新しました。以前は {{jsxref("Float32Array")}} であることが必要でした ([Firefox バグ 1421091](https://bugzil.la/1421091))。
 - また {{domxref("AudioParam.setValueCurveAtTime()")}} が、`values` の配列に有限ではない値が存在する場合に、`TypeError` を正しく返すようになりました ([Firefox バグ 1472095](https://bugzil.la/1472095))。
 - さらに `setValueCurveAtTime()` で、時間が経過した後に指定した値のカーブに従って引数が終了したとき、引数の値がカーブの値のリストの最後の値に設定されるようになりました ([Firefox バグ 1308436](https://bugzil.la/1308436))。
-- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを {{domxref("RTCRtpStreamStats")}} に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
-- `RTCRtpStreamStats` ディクショナリーの {{domxref("RTCRtpStreamStats.kind", "kind")}} プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
-- {{domxref("RTCRtpStreamStats")}} ディクショナリーの {{domxref("RTCRtpStreamStats.isRemote", "isRemote")}} プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
+- ほかのディクショナリーや仕様書に合わせて、`RTCRTPStreamStats` ディクショナリーを `RTCRtpStreamStats` に改名しました ([Firefox バグ 1480498](https://bugzil.la/1480498))。
+- `RTCRtpStreamStats` ディクショナリーの `kind` プロパティをサポートしました ([Firefox バグ 1481851](https://bugzil.la/1481851))。
+- `RTCRtpStreamStats` ディクショナリーの `isRemote` プロパティが推奨になりました。Firefox 65 で削除する予定です。このプロパティにアクセスすると、コンソールに警告を表示します。詳しくは [Advancing WebRTC ブログの投稿](https://blog.mozilla.org/webrtc/getstats-isremote-65/) をご覧ください ([Firefox バグ 1393306](https://bugzil.la/1393306))。
 
 #### Canvas と WebGL
 
@@ -134,8 +131,8 @@ _変更なし。_
 
 ### セキュリティ
 
-- サイトで [Content Security Policy](/ja/docs/Web/HTTP/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
-- CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクディブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
+- サイトで [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
+- CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクティブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
 - Firefox が NSS 3.39 を使用するようになりました ([Firefox バグ 1470914](https://bugzil.la/1470914))。
 
 ### プラグイン
@@ -146,7 +143,7 @@ _変更なし。_
 
 #### 新機能
 
-- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
+- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Reference/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
 - `unhandledPromptBehavior` capability をサポートしました。これは、WebDriver 仕様の特定の [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) を定義できます ([Firefox バグ 1264259](https://bugzil.la/1264259))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` コマンドに、ユーザープロンプトの処理を追加しました ([Firefox バグ 1439995](https://bugzil.la/1439995))。
 
@@ -169,7 +166,7 @@ _変更なし。_
 ### その他
 
 - {{domxref("PerformanceObserver.observe()")}} の動作を、指定したエントリータイプの配列に有効な値が見つからない場合や、配列が空または存在しない場合に、単に何もしないように修正しました。以前は、Firefox は誤って `TypeError` を発生させていました ([Firefox バグ 1403027](https://bugzil.la/1403027))。
-- [OpenSearch](/ja/docs/Web/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
+- [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
 
 ## アドオン開発者向けの変更点
 
@@ -182,7 +179,6 @@ _変更なし。_
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} および {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} で、ブラウザーのアクションバッジの文字色を取得および設定できるようになりました ([Firefox バグ 1424620](https://bugzil.la/1424620))。
 - `manifest.json` のテーマ `colors` キーで、新しいタブの文字色を設定する `ntp_text` プロパティと、新しいタブの色を設定する `ntp_background` プロパティをサポートしました ([Firefox バグ 1347204](https://bugzil.la/1347204))。
 - ブックマークサイドバーなど、サイドバーの色をテーマで定義可能になりました ([Firefox バグ 1418602](https://bugzil.la/1418602))。関連プロパティ:
-
   - `sidebar`: サイドバーの背景色。
   - `sidebar_text`: サイドバーの文字色。
   - `sidebar_highlight`: サイドバーで選択したアイテムの背景色。
@@ -212,7 +208,7 @@ _変更なし。_
 - {{WebExtAPIRef("menus.create()")}} で非表示のメニュー項目を作成できるようになりました。また、{{WebExtAPIRef("menus.update()")}} で項目の表示・非表示を切り替えられるようになりました ([Firefox バグ 1482529](https://bugzil.la/1482529))。
 - {{WebExtAPIRef("menus")}} API を使用して作成した項目でアクセスキーをサポートしました ([Firefox バグ 1320462](https://bugzil.la/1320462))。
 - {{WebExtApiRef("menus.create()")}} および {{WebExtApiRef("menus.update()")}} の `targetUrlPatterns` 引数で、通常はマッチパターンで許可されないものを含む任意の URL スキームをサポートしました ([Firefox バグ 1280370](https://bugzil.la/1280370))。
-- タブのコンテキストメニューがクリックされたとき、そのタブが現在アクティブなタブではない場合でも ["activeTab" パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) が認められるようになりました ([Firefox バグ 1446956](https://bugzil.la/1446956))。
+- タブのコンテキストメニューがクリックされたとき、そのタブが現在アクティブなタブではない場合でも ["activeTab" パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) が認められるようになりました ([Firefox バグ 1446956](https://bugzil.la/1446956))。
 
 #### その他
 

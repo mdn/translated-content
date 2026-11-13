@@ -7,7 +7,7 @@ slug: Glossary/Inline-level_content
 
 ### Sumário
 
-"Inline" é uma categorização dos elementos do HTML, em contraste com os ["elementos de bloco"](/pt-BR/docs/HTML/Block-level_elements). Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:
+"Inline" é uma categorização dos elementos do HTML, em contraste com os ["elementos de bloco"](/pt-BR/docs/Glossary/Block-level_content). Os elementos inline podem ser exibidos em nível de bloco ou outros elementos inline. Eles ocupam somente a largura de seu conteúdo. A diferença entre elementos inline e bloco incluem:
 
 - Modelo de conteúdo
   - : Geralmente, elementos inline devem ter somente dados em outros elementos inline.
@@ -18,11 +18,11 @@ slug: Glossary/Inline-level_content
 
 Listagem dos elementos que são "inline":
 
-- [b](/pt-BR/HTML/Element/b), [big](/pt-BR/HTML/Element/big), [i](/pt-BR/HTML/Element/i), [small](/pt-BR/HTML/Element/small), [tt](/pt-BR/HTML/Element/tt)
-- [abbr](/pt-BR/HTML/Element/abbr), [acronym](/pt-BR/HTML/Element/acronym), [cite](/pt-BR/HTML/Element/cite), [code](/pt-BR/HTML/Element/code), [dfn](/pt-BR/HTML/Element/dfn), [em](/pt-BR/HTML/Element/em), [kbd](/pt-BR/HTML/Element/kbd), [strong](/pt-BR/HTML/Element/strong), [samp](/pt-BR/HTML/Element/samp), [var](/pt-BR/HTML/Element/var)
-- [a](/pt-BR/HTML/Element/a), [bdo](/pt-BR/HTML/Element/bdo), [br](/pt-BR/HTML/Element/br), [img](/En/HTML/Element/Img), [map](/pt-BR/HTML/Element/map), [object](/pt-BR/HTML/Element/object), [q](/pt-BR/HTML/Element/q), [script](/En/HTML/Element/Script), [span](/pt-BR/HTML/Element/span), [sub](/pt-BR/HTML/Element/sub), [sup](/pt-BR/HTML/Element/sup)
-- [button](/pt-BR/HTML/Element/button), [input](/pt-BR/HTML/Element/Input), [label](/pt-BR/HTML/Element/label), [select](/pt-BR/HTML/Element/select), [textarea](/pt-BR/HTML/Element/textarea)
+- [b](/pt-BR/docs/Web/HTML/Reference/Elements/b), [big](/pt-BR/docs/Web/HTML/Reference/Elements/big), [i](/pt-BR/docs/Web/HTML/Reference/Elements/i), [small](/pt-BR/docs/HTML/Element/small), [tt](/pt-BR/docs/HTML/Element/tt)
+- [abbr](/pt-BR/docs/Web/HTML/Reference/Elements/abbr), [acronym](/pt-BR/docs/Web/HTML/Reference/Elements/acronym), [cite](/pt-BR/docs/Web/HTML/Reference/Elements/cite), [code](/pt-BR/docs/Web/HTML/Reference/Elements/code), [dfn](/pt-BR/docs/Web/HTML/Reference/Elements/dfn), [em](/pt-BR/docs/Web/HTML/Reference/Elements/em), [kbd](/pt-BR/docs/HTML/Element/kbd), [strong](/pt-BR/docs/Web/HTML/Reference/Elements/strong), [samp](/pt-BR/docs/HTML/Element/samp), [var](/pt-BR/docs/Web/HTML/Reference/Elements/var)
+- [a](/pt-BR/docs/Web/HTML/Reference/Elements/a), [bdo](/pt-BR/docs/Web/HTML/Reference/Elements/bdo), [br](/pt-BR/docs/Web/HTML/Reference/Elements/br), [img](/en-US/HTML/Element/Img), [map](/pt-BR/docs/Web/HTML/Reference/Elements/map), [object](/pt-BR/docs/HTML/Element/object), [q](/pt-BR/docs/Web/HTML/Reference/Elements/q), [script](/en-US/HTML/Element/Script), [span](/pt-BR/docs/Web/HTML/Reference/Elements/span), [sub](/pt-BR/docs/HTML/Element/sub), [sup](/pt-BR/docs/HTML/Element/sup)
+- [button](/pt-BR/docs/Web/HTML/Reference/Elements/button), [input](/pt-BR/docs/Web/HTML/Reference/Elements/input), [label](/pt-BR/docs/Web/HTML/Reference/Elements/label), [select](/pt-BR/docs/Web/HTML/Reference/Elements/select), [textarea](/pt-BR/docs/Web/HTML/Reference/Elements/textarea)
 
 ### Ver também
 
-- [Elementos de nível de bloco](/pt-BR/HTML/Block-level_elements)
+- [Elementos de nível de bloco](/pt-BR/docs/Glossary/Block-level_content)

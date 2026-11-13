@@ -13,14 +13,14 @@ slug: Web/API/Location/assign
 
 ## Синтаксис
 
-```
-object.assign(url);
+```js-nolint
+assign(url)
 ```
 
 ### Параметры
 
 - _url_
-  - : {{domxref("DOMString")}}, содержащий URL страницы, на которую нужно перейти.
+  - : {{jsxref("String")}}, содержащий URL страницы, на которую нужно перейти.
 
 ## Примеры
 

@@ -9,7 +9,20 @@ l10n:
 
 {{jsxref("Intl.RelativeTimeFormat")}} 인스턴스의 **`format()`** 메서드는 이 `Intl.RelativeTimeFormat` 객체의 로케일 및 형식 옵션에 따라 `value`와 `unit`의 형식을 지정합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+console.log(rtf1.format(10, "seconds"));
+// Expected output: "in 10 sec."
+```
 
 ## 구문
 

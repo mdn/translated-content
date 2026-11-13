@@ -3,7 +3,7 @@ title: Utiliser les promesses
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.
 
@@ -123,7 +123,7 @@ faireQqc()
   .catch(failureCallback);
 ```
 
-Les arguments passés à `then` sont optionnels. La forme `catch(failureCallback)` est un alias plus court pour `then(null, failureCallback)`. Ces chaînes de promesses sont parfois construites avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) :
+Les arguments passés à `then` sont optionnels. La forme `catch(failureCallback)` est un alias plus court pour `then(null, failureCallback)`. Ces chaînes de promesses sont parfois construites avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
 
 ```js
 faireQqc()
@@ -196,7 +196,7 @@ try {
 }
 ```
 
-Cette symétrie entre le code asynchrone et le code synchrone atteint son paroxysme avec le couple d'opérateurs [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function) d'ECMAScript 2017:
+Cette symétrie entre le code asynchrone et le code synchrone atteint son paroxysme avec le couple d'opérateurs [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) d'ECMAScript 2017:
 
 ```js
 async function toto() {
@@ -340,8 +340,8 @@ console.log(1); // 1, 2, 3, 4
 ## Voir aussi
 
 - {{jsxref("Promise.then()")}}
-- [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
-- [La spécification Promises/A+](http://promisesaplus.com/)
-- [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [La spécification Promises/A+](https://promisesaplus.com/)
+- [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Iterators_and_generators")}}

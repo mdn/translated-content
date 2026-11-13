@@ -3,8 +3,6 @@ title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 30 を搭載した Firefox 30 は、米国時間 2014 年 6 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 30 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -29,9 +27,9 @@ _変更なし。_
 
 ### JavaScript
 
-- ES6 互換の新たな[配列内包](/ja/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) `[for (item of iterable) item]` および [Generator 内包](/ja/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` を実装しました ([Firefox バグ 979865](https://bugzil.la/979865))。
+- ES6 互換の新たな[配列内包](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `[for (item of iterable) item]` および [Generator 内包](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` を実装しました ([Firefox バグ 979865](https://bugzil.la/979865))。
 - Typed arrays が拡張可能になり、新たな名前のプロパティをサポートしました ([Firefox バグ 695438](https://bugzil.la/695438))。
-- {{jsxref("Error.prototype.stack")}} プロパティがカラム番号を含むようになり ([Firefox バグ 762556](https://bugzil.la/762556))、[`Function()` や `eval()` を呼び出す](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#Stack_of_eval'ed_code)際の動作が向上しました。ミニファイされた、あるいは生成された JavaScript コードのデバッグを改善する助けになります。
+- {{jsxref("Error.prototype.stack")}} プロパティがカラム番号を含むようになり ([Firefox バグ 762556](https://bugzil.la/762556))、[`Function()` や `eval()` を呼び出す](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_eval'ed_code)際の動作が向上しました。ミニファイされた、あるいは生成された JavaScript コードのデバッグを改善する助けになります。
 
 ### インターフェイス/API/DOM
 

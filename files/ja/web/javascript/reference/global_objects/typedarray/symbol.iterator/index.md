@@ -1,18 +1,29 @@
 ---
-title: TypedArray.prototype[@@iterator]()
+title: TypedArray.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-{{JSRef}}
-
-**`[@@iterator]()`** は {{jsxref("TypedArray")}} インスタンスのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。この型付き配列の各要素の値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+**`[Symbol.iterator]()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにします。このメソッドは、型付き配列の各インデックスの値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 このプロパティの初期値は {{jsxref("TypedArray.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+const iterator = uint8[Symbol.iterator]();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// 予想される結果: 10
+// 予想される結果: 20
+// 予想される結果: 30
+```
 
 ## 構文
 
@@ -26,13 +37,13 @@ typedArray[Symbol.iterator]()
 
 ### 返値
 
-{{jsxref("TypedArray.prototype.values()")}} と同じ返値で、この型付き配列のすべての要素の値を返す、新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+{{jsxref("TypedArray.prototype.values()")}} と同じ返値で、この型付き配列の各インデックスの値を返す、新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 ## 例
 
 ### for...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はめったにないことに注意してください。`@@iterator` メソッドの存在により、型付き配列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレータを取得します。
+このメソッドを直接呼び出す必要はめったにないことに注意してください。`Symbol.iterator` メソッドの存在により、型付き配列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)となり、`for...of` ループのような反復処理構文は、反復処理のためにこのメソッドを自動的に呼び出してイテレーターを取得します。
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
@@ -41,7 +52,7 @@ for (const n of arr) {
 }
 ```
 
-### 手動でイテレーターを手繰る
+### イテレーターを手動で操作する
 
 反復処理を最大限に制御するために、返すイテレーターオブジェクトの `next()` メソッドを手動で呼び出すことができます。
 
@@ -65,8 +76,8 @@ console.log(arrIter.next().value); // 50
 
 ## 関連情報
 
-- [`TypedArray.prototype[@@iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [`TypedArray.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

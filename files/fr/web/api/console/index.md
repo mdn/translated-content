@@ -9,7 +9,7 @@ l10n:
 
 L'objet **`console`** permet d'accéder à la console de débogage de l'environnement JavaScript (par exemple [la console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) de Firefox). Son fonctionnement varie d'un navigateur à l'autre, mais certaines fonctionnalités sont standardisées et généralement fournies.
 
-On peut accéder à l'objet `console` depuis n'importe quel objet global, [`Window`](/fr/docs/Web/API/Window) pour les contextes de navigation classiques et [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope) dans les <i lang="en">workers</i>, grâce à la propriété `console`. Exposé via [`Windows.console`](/fr/docs/Web/API/Window/console), on peut y faire référence avec `console`. Par exemple&nbsp;:
+On peut accéder à l'objet `console` depuis n'importe quel objet global, [`Window`](/fr/docs/Web/API/Window) pour les contextes de navigation classiques et [`WorkerGlobalScope`](/fr/docs/Web/API/WorkerGlobalScope) dans les <i lang="en">workers</i>, grâce à la propriété `console`. Exposé via [`Windows.console`](/fr/docs/Web/API/console), on peut y faire référence avec `console`. Par exemple&nbsp;:
 
 ```js
 console.log("Erreur à l'ouverture du lien indiqué.");
@@ -30,7 +30,7 @@ Dans cette page, nous verrons [les méthodes](#méthodes) disponibles sur l'obje
   - : Vide le contenu de la console.
 - [`console.count()`](/fr/docs/Web/API/console/count_static)
   - : Affiche le nombre de fois que le compteur avec le libellé correspondant a été appelé.
-- [`console.countReset()`](/fr/docs/Web/API/console/countreset_static)
+- [`console.countReset()`](/fr/docs/Web/API/console/countReset_static)
   - : Réinitialise la valeur du compteur avec le libellé corredpondant.
 - [`console.debug()`](/fr/docs/Web/API/console/debug_static)
   - : Affiche un message de débogage dans la console.
@@ -44,9 +44,9 @@ Dans cette page, nous verrons [les méthodes](#méthodes) disponibles sur l'obje
   - : Un synonyme pour `console.error()`.
 - [`console.group()`](/fr/docs/Web/API/console/group_static)
   - : Crée un nouveau [groupe](#utiliser_des_groupes_dans_la_console), indentant l'affichage des messages suivants. Pour revenir au niveau courant, on appellera `console.groupEnd()`.
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)
   - : Crée un nouveau [groupe](#utiliser_des_groupes_dans_la_console), indentant l'affichage des messages suivants. Toutefois, contrairement à `console.group()`, les messages du groupe sont repliés. Pour revenir au niveau courant, on appellera `console.groupEnd()`.
-- [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static)
+- [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static)
   - : Ferme le [groupe](#utiliser_des_groupes_dans_la_console) courant.
 - [`console.info()`](/fr/docs/Web/API/console/info_static)
   - : Affiche des informations dans la console. Ce message peut contenir des [chaînes de caractères de substitution](#utiliser_des_chaînes_de_substitution) et d'autres valeurs fournies comme arguments complémentaires.
@@ -54,18 +54,18 @@ Dans cette page, nous verrons [les méthodes](#méthodes) disponibles sur l'obje
   - : Affiche des messages généraux dans la console. Ce message peut contenir des [chaînes de caractères de substitution](#utiliser_des_chaînes_de_substitution) et d'autres valeurs fournies comme arguments complémentaires.
 - [`console.profile()`](/fr/docs/Web/API/console/profile_static) {{Non-standard_inline}}
   - : Démarre l'enregistrement d'un profil de performance. Un nom peut être fourni en argument et associé au profil ainsi créé.
-- [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static) {{Non-standard_inline}}
+- [`console.profileEnd()`](/fr/docs/Web/API/console/profileEnd_static) {{Non-standard_inline}}
   - : Arrête l'enregistrement du profil de performance.
 - [`console.table()`](/fr/docs/Web/API/console/table_static)
   - : Affiche des données tabulaires sous forme d'un tableau.
 - [`console.time()`](/fr/docs/Web/API/console/time_static)
   - : Démarre un [chronomètre](#chronomètres) avec un nom fourni en paramètre.
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)
   - : Arrête le [chronomètre](#chronomètres) indiqué et affiche la durée écoulée (exprimée en millisecondes) depuis le début de la mesure.
-- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)
   - : Affiche la valeur du [chronomètre](#chronomètres) indiqué dans la console.
-- [`console.timeStamp()`](/fr/docs/Web/API/console/timestamp_static) {{Non-standard_inline}}
-  - : Ajoute un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)).
+- [`console.timeStamp()`](/fr/docs/Web/API/console/timeStamp_static) {{Non-standard_inline}}
+  - : Ajoute un marqueur de performance pour l'outil de mesure des performances du navigateur ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)).
 - [`console.trace()`](/fr/docs/Web/API/console/trace_static)
   - : Affiche la [trace de la pile d'appels](#trace_de_piles_dappels).
 - [`console.warn()`](/fr/docs/Web/API/console/warn_static)
@@ -177,24 +177,24 @@ console.log(
 
 Les propriétés qui peuvent être utilisées avec cette syntaxe sont (au moins pour Firefox)&nbsp;:
 
-- [`background`](/fr/docs/Web/CSS/background) et les propriétés détaillées correspondantes
-- [`border`](/fr/docs/Web/CSS/border) et les propriétés détaillées correspondantes
-- [`border-radius`](/fr/docs/Web/CSS/border-radius)
-- [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
-- [`clear`](/fr/docs/Web/CSS/clear) et [`float`](/fr/docs/Web/CSS/float)
-- [`color`](/fr/docs/Web/CSS/color)
-- [`cursor`](/fr/docs/Web/CSS/cursor)
-- [`display`](/fr/docs/Web/CSS/display)
-- [`font`](/fr/docs/Web/CSS/font) et les propriétés détaillées correspondantes
-- [`line-height`](/fr/docs/Web/CSS/line-height)
-- [`margin`](/fr/docs/Web/CSS/margin)
-- [`outline`](/fr/docs/Web/CSS/outline) et les propriétés détaillées correspondantes
-- [`padding`](/fr/docs/Web/CSS/padding)
-- Les propriétés `text-*` comme [`text-transform`](/fr/docs/Web/CSS/text-transform)
-- [`white-space`](/fr/docs/Web/CSS/white-space)
-- [`word-spacing`](/fr/docs/Web/CSS/word-spacing) et [`word-break`](/fr/docs/Web/CSS/word-break)
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
+- [`background`](/fr/docs/Web/CSS/Reference/Properties/background) et les propriétés détaillées correspondantes
+- [`border`](/fr/docs/Web/CSS/Reference/Properties/border) et les propriétés détaillées correspondantes
+- [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius)
+- [`box-decoration-break`](/fr/docs/Web/CSS/Reference/Properties/box-decoration-break)
+- [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow)
+- [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) et [`float`](/fr/docs/Web/CSS/Reference/Properties/float)
+- [`color`](/fr/docs/Web/CSS/Reference/Properties/color)
+- [`cursor`](/fr/docs/Web/CSS/Reference/Properties/cursor)
+- [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+- [`font`](/fr/docs/Web/CSS/Reference/Properties/font) et les propriétés détaillées correspondantes
+- [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
+- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
+- [`outline`](/fr/docs/Web/CSS/Reference/Properties/outline) et les propriétés détaillées correspondantes
+- [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)
+- Les propriétés `text-*` comme [`text-transform`](/fr/docs/Web/CSS/Reference/Properties/text-transform)
+- [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
+- [`word-spacing`](/fr/docs/Web/CSS/Reference/Properties/word-spacing) et [`word-break`](/fr/docs/Web/CSS/Reference/Properties/word-break)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)
 
 > [!NOTE]
 > Le message de la console se comporte par défaut comme un élément en ligne. Pour observer des effets avec `padding`, `margin` ou autre, il faut modifier son affichage, par exemple avec `display: inline-block`.

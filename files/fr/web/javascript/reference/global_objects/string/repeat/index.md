@@ -1,40 +1,45 @@
 ---
-title: String.prototype.repeat()
+title: "String : méthode repeat()"
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode **`repeat()`** des valeurs {{JSxRef("String")}} construit et retourne une nouvelle chaîne de caractères qui contient le nombre de copies défini de cette chaîne de caractères, concaténées ensemble.
 
-La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.repeat()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html")}}
+```js interactive-example
+const mood = "Joyeux ! ";
+
+console.log(`Je me sens ${mood.repeat(3)}`);
+// Résultat attendu : "Je me sens Joyeux ! Joyeux ! Joyeux ! "
+```
 
 ## Syntaxe
 
-```js
-str.repeat(compte);
+```js-nolint
+repeat(count)
 ```
 
 ### Paramètres
 
-- `compte`
-  - : Un nombre entier entre 0 and +∞ : \[ 0, +∞\[, indiquant le nombre de fois que la chaine de caractères doit être repétée dans la nouvelle chaine de caractères.
+- `count`
+  - : Un entier entre `0` et {{JSxRef("Number/POSITIVE_INFINITY", "Infinity")}}, indiquant le nombre de fois que la chaîne de caractères est répétée.
 
 ### Valeur de retour
 
-Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la chaîne appelante.
+Une nouvelle chaîne de caractères contenant le nombre indiqué de copies de la chaîne de caractère donnée.
 
 ### Exceptions
 
-- {{jsxref("Erreurs/Negative_repetition_count", "RangeError")}} : le nombre de répétition doit être positif.
-- {{jsxref("Erreurs/Resulting_string_too_large", "RangeError")}} : le nombre de répétition ne doit pas être infini et la taille de la chaîne résultante ne doit pas dépasser la taille maximale pour une chaîne de caractères.
-
-<!---->
-
-- {{jsxref("RangeError")}}
-  - : La compteur doit être positif et inférieur à l'infini.
+- {{JSxRef("RangeError")}}
+  - : Levée si `count` est négatif ou dépasse la longueur maximum.
 
 ## Exemples
+
+### Utiliser la méthode `repeat()`
 
 ```js
 "abc".repeat(-1); // RangeError
@@ -55,3 +60,9 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.repeat` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.repeat` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.repeat)
+- La méthode {{JSxRef("String.prototype.concat()")}}

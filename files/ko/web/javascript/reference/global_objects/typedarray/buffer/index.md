@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 
 **`buffer`** 접근자 속성은 생성 시 *TypedArray*에서 참조하는 {{jsxref("ArrayBuffer")}}를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-buffer.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.buffer", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint16 = new Uint16Array(buffer);
+
+console.log(uint16.buffer.byteLength);
+// Expected output: 8
+```
 
 ## 설명
 
@@ -43,5 +52,5 @@ console.log(arr.buffer === buffer); // true
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

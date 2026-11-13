@@ -26,9 +26,7 @@ entries = list.getEntries({ name: "entry_name", entryType: "mark" });
 ### Paramètres
 
 - `PerformanceEntryFilterOptions` {{optional_inline}}
-
   - : Est un dictionnaire `PerformanceEntryFilterOptions`, comportant les champs suivants :
-
     - `"name"`, le nom d'une entrée de performance.
     - `"entryType"`, le type d'entrée. Les types d'entrée valides sont énumérés dans la propriété [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
     - `"initiatorType"`, le type de la ressource initiatrice (par exemple un élément HTML). Les valeurs sont définies par la propriété [`PerformanceResourceTiming.initiatorType`](/fr/docs/Web/API/PerformanceResourceTiming/initiatorType).

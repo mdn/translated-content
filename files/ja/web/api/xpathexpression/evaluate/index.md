@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM XPath")}}
 
-**`evaluate()`** は {{domxref("XPathExpression")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [XPath](/ja/docs/Web/XPath) 式を実行し、{{domxref("XPathResult")}} を返します。
+**`evaluate()`** は {{domxref("XPathExpression")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [XPath](/ja/docs/Web/XML/XPath) 式を実行し、{{domxref("XPathResult")}} を返します。
 
 ## 構文
 
@@ -23,7 +23,7 @@ evaluate(contextNode, type, result)
 - `contextNode`
   - : 式を評価するために使用するコンテキストを表す {{domxref("Node")}} です。
 - `type` {{optional_inline}}
-  - : 式を評価して返す結果の型を指定します。これは{{domxref("XPathResult", "XPathResult", "定数")}}のいずれかでなければなりません。
+  - : 式を評価して返す結果の型を指定します。これは{{domxref("XPathResult", "XPathResult", "#定数")}}のいずれかでなければなりません。
 - `result` {{optional_inline}}
   - : このメソッドが再利用して返す結果オブジェクトを指定することができます。
     `null` を指定した場合や、実装が指定した結果を再利用しない場合は、新しい結果オブジェクトを返します。
@@ -36,15 +36,15 @@ XPath 式の評価結果を表す {{domxref("XPathResult")}} オブジェクト�
 
 #### INVALID_EXPRESSION_ERR
 
-式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR`` 型の {{domxref("XPathException")}} が発生します。
+式が {{domxref("XPathEvaluator")}} の規則に従っていなかった場合、 `INVALID_EXPRESSION_ERR` 型の {{domxref("DOMException")}} が発生します。
 
 #### TYPE_ERR
 
-結果を指定した型に変換できなかた場合、 `TYPE_ERR` 型の {{domxref("XPathException")}} が発生します。
+結果を指定した型に変換できなかった場合、 `TYPE_ERR` 型の {{domxref("DOMException")}} が発生します。
 
 #### NAMESPACE_ERR
 
-指定した {{domxref("XPathNSResolver")}} で解決できない名前空間接頭辞が式に格納されていた場合、 `NAMESPACE_ERROR` 型の {{domxref("DOMException")}} が発生します。
+指定した `XPathNSResolver` で解決できない名前空間接頭辞が式に格納されていた場合、 `NAMESPACE_ERROR` 型の {{domxref("DOMException")}} が発生します。
 
 #### WRONG_DOCUMENT_ERR
 

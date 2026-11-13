@@ -3,11 +3,35 @@ title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
 
-{{JSRef}}
+La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 
-La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
+{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
+```js interactive-example
+const handler1 = {
+  has(target, key) {
+    if (key[0] === "_") {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: "easily scared",
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log("eyeCount" in proxy1);
+// Expected output: true
+
+console.log("_secret" in proxy1);
+// Expected output: false
+
+console.log("_secret" in monster1);
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -32,7 +56,7 @@ La méthode `has` doit renvoyer une valeur booléenne.
 
 ## Description
 
-La méthode **`handler.has`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
+La méthode **`handler.has`** est une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 
 ### Interceptions
 
@@ -40,7 +64,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 
 - L'accès à une propriété : `toto in proxy`
 - L'accès à une propriété héritée : `toto in Object.create(proxy)`
-- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) : `with(proxy) { (foo); }`
+- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) : `with(proxy) { (foo); }`
 - {{jsxref("Reflect.has()")}}
 
 ### Invariants
@@ -52,7 +76,7 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 
 ## Exemples
 
-Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :
+Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Operators/in", "in")}} :
 
 ```js
 var p = new Proxy(
@@ -94,6 +118,6 @@ var p = new Proxy(obj, {
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- L'opérateur {{jsxref("Operators/in", "in")}}
 - {{jsxref("Reflect.has()")}}

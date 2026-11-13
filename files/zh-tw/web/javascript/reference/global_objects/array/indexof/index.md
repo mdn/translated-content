@@ -3,18 +3,30 @@ title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 
-{{JSRef}}
-
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
 
 > [!NOTE]
 > 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## 語法
 
-```plain
+```js-nolint
 arr.indexOf(searchElement[, fromIndex])
 ```
 
@@ -31,7 +43,7 @@ arr.indexOf(searchElement[, fromIndex])
 
 ## 說明
 
-`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
+`indexOf()` 用[嚴格相等（strict equality，`===`）](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)的方式比較陣列中的元素與 `searchElement` 是否相等。
 
 ## 範例
 
@@ -85,7 +97,7 @@ updateVegetablesCollection(veggies, "spinach");
 
 ## Polyfill
 
-`indexOf()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all browsers. You can work around this by utilizing the following code at the beginning of your scripts. This will allow you to use `indexOf()` when there is still no native support. This algorithm matches the one specified in ECMA-262, 5th edition, assuming {{jsxref("Global_Objects/TypeError", "TypeError")}} and {{jsxref("Math.abs()")}} have their original values.
+`indexOf()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all browsers. You can work around this by utilizing the following code at the beginning of your scripts. This will allow you to use `indexOf()` when there is still no native support. This algorithm matches the one specified in ECMA-262, 5th edition, assuming {{jsxref("TypeError")}} and {{jsxref("Math.abs()")}} have their original values.
 
 ```js
 if (!Array.prototype.indexOf) {

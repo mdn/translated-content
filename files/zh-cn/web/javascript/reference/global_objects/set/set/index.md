@@ -3,11 +3,22 @@ title: Set() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
-{{JSRef}}
-
 **`Set()`** 构造函数创建 {{jsxref("Set")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 语法
 
@@ -16,7 +27,8 @@ new Set()
 new Set(iterable)
 ```
 
-> **备注：** `Set()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `Set()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

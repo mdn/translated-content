@@ -18,7 +18,7 @@ parseInt(string, base);
 ## Parâmetros
 
 - `string`
-  - : O valor a analisar. Se o argumento `string` não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Os espaços em branco na `string` são ignorados.
+  - : O valor a analisar. Se o argumento `string` não for uma string, então o valor é convertido para uma string (utilizando a operação abstrata [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Os espaços em branco na `string` são ignorados.
 - `base`
   - : Um inteiro entre `2` e `36` que representa a _base_ da `string` (sistemas numéricos matemáticos) mencionada no parâmetro anterior. Especifique `10` para o sistema numérico decimal comumente usado por humanos. **Sempre especifique este parâmetro** para eliminar confusão do leitor e para garantir o comportamento esperado. Implementações diferentes produzem resultados diferentes quando `base` não é especificado, normalmente assumindo o valor como `10`.
 
@@ -40,7 +40,7 @@ Se _base_ é `undefined` ou 0 (ou ausente), JavaScript assume o seguinte:
 
 Se o primeiro caracter não puder ser convertido para um número, `parseInt` retorna `NaN`.
 
-Para propósitos aritméticos, o valor `NaN` não é um número em qualquer base. Você pode chamar a função {{jsxref("Global_Objects/isNaN", "isNaN")}} para determinar se o resultado de `parseInt` é `NaN`. Se `NaN` for passado em operações aritméticas, o resultado da operação também será `NaN`.
+Para propósitos aritméticos, o valor `NaN` não é um número em qualquer base. Você pode chamar a função {{jsxref("isNaN")}} para determinar se o resultado de `parseInt` é `NaN`. Se `NaN` for passado em operações aritméticas, o resultado da operação também será `NaN`.
 
 Para converter um número para seu literal string em uma base específica use `intValue.toString(base)`.
 
@@ -141,9 +141,9 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## Veja também
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

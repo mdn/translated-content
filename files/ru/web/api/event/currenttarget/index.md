@@ -9,7 +9,7 @@ l10n:
 
 Доступное только для чтения свойство **`currentTarget`** интерфейса {{domxref("Event")}} указывает на элемент, к которому был прикреплён обработчик события.
 
-Это не всегда будет тот же элемент, на котором сработало событие, потому что событие могло быть вызвано на потомке элемента, а затем [всплыть](/ru/docs/Learn/JavaScript/Building_blocks/Events#всплытие_и_перехват_событий) выше к элементу с обработчиком. Элемент, на котором было вызвано событие, можно получить с помощью {{domxref("Event.target")}}.
+Это не всегда будет тот же элемент, на котором сработало событие, потому что событие могло быть вызвано на потомке элемента, а затем [всплыть](/ru/docs/Learn_web_development/Core/Scripting/Events#всплытие_и_перехват_событий) выше к элементу с обработчиком. Элемент, на котором было вызвано событие, можно получить с помощью {{domxref("Event.target")}}.
 
 ## Значение
 
@@ -85,5 +85,5 @@ reset.addEventListener("click", () => document.location.reload());
 
 ## Смотрите также
 
-- [Сравнение разных Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
-- [Всплытие и перехват событий](/ru/docs/Learn/JavaScript/Building_blocks/Events#всплытие_и_перехват_событий)
+- [Сравнение разных Event Targets](/ru/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+- [Всплытие и перехват событий](/ru/docs/Learn_web_development/Core/Scripting/Events#всплытие_и_перехват_событий)

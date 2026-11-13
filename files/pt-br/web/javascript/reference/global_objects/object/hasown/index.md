@@ -7,9 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 
 O método estático **`Object.hasOwn()`** retorna `true` se o objeto específicado tem a propriedade indicada como sua propriedade _own_. Se a propriedade é herdada, ou não existe, o método retorna `false`.
 
-> **Nota:** `Object.hasOwn()` Tem a intenção de substituir {{jsxref("Object.hasOwnProperty()")}}.
+> [!NOTE]
+> `Object.hasOwn()` Tem a intenção de substituir {{jsxref("Object.hasOwnProperty()")}}.
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -146,8 +162,8 @@ if (Object.hasOwn(foo, "prop")) {
 
 - [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript Guide: Inheritance revisited](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

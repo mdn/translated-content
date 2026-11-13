@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 **`toPrecision()`** 메서드는 {{jsxref("Number")}} 객체를 지정된 정밀도로 나타내는 문자열을 반환한다.
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// Expected output: "123.5"
+
+console.log(precise(0.004));
+// Expected output: "0.004000"
+
+console.log(precise(1.23e5));
+// Expected output: "1.230e+5"
+```
 
 ## 문법
 
@@ -28,7 +43,7 @@ numObj.toPrecision([precision]);
 
 ### 예외
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+- {{jsxref("RangeError")}}
   - : `precision(정밀도)`가 1에서 100 사이가 아닌 경우 {{jsxref("RangeError")}}가 발생합니다. 구현은 더 큰 값과 더 작은 값을 지원할 수 있습니다. ECMA-262는 최대 21 자리의 정밀도 만을 요구합니다.
 
 ## 예제

@@ -11,7 +11,7 @@ Retorna uma string contendo o tipo de evento.
 
 O argumento do evento {{ domxref("EventTarget.addEventListener()") }} e {{ domxref("EventTarget.removeEventListener()") }} é caso insensível(case insensitive).
 
-Veja [Mozilla event reference](/pt-BR/docs/Mozilla_event_reference) para obter a lista de tipos de evento disponíveis
+Veja [Mozilla event reference](/pt-BR/docs/Web/Events) para obter a lista de tipos de evento disponíveis
 
 ## Sintaxe
 

@@ -3,10 +3,10 @@ title: "DOMRect: DOMRect() コンストラクター"
 short-title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
 l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+  sourceCommit: dc82e604c805cd2eae887a371111e902c8c52241
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`DOMRect()`** コンストラクターは、新しい {{domxref("DOMRect")}} オブジェクトを作成します。
 
@@ -18,13 +18,13 @@ new DOMRect(x, y, width, height)
 
 ### 引数
 
-- `x`
+- {{domxref("DOMRect.x", "x")}}
   - : この `DOMRect` の原点の `x` 座標です。
-- `y`
+- {{domxref("DOMRect.y", "y")}}
   - : この `DOMRect` の原点の `y` 座標です。
-- `width`
+- {{domxref("DOMRect.width", "width")}}
   - : この `DOMRect` の幅です。
-- `height`
+- {{domxref("DOMRect.height", "height")}}
   - : この `DOMRect` の高さです。
 
 ### 返値

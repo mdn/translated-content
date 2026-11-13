@@ -1,16 +1,19 @@
 ---
-title: ShadowRoot.getAnimations()
+title: "ShadowRoot: getAnimations() メソッド"
+short-title: getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}
 
-**`getAnimations()`** は {{domxref("ShadowRoot")}} のメソッドで、ターゲット要素がシャドウツリーの子孫である、現在有効なすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれています。
+**`getAnimations()`** は {{domxref("ShadowRoot")}} のメソッドで、ターゲット要素がシャドウツリーの子孫である、現在有効なすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれています。
 
 ## 構文
 
-```js
-getAnimations();
+```js-nolint
+getAnimations()
 ```
 
 ### 引数
@@ -28,7 +31,7 @@ getAnimations();
 ```js
 let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
-shadow.getAnimations().forEach(function (animation) {
+shadow.getAnimations().forEach((animation) => {
   animation.playbackRate *= 0.5;
 });
 ```
@@ -44,8 +47,7 @@ shadow.getAnimations().forEach(function (animation) {
 ## 関連情報
 
 - [Web Animations API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)
-- {{domxref("Element.getAnimations()")}} - 単一の
-  {{domxref("Element")}} とその配下のアニメーションのみを読み取ります。
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
+- {{domxref("Element.getAnimations()")}} - 単一の {{domxref("Element")}} とその配下のアニメーションのみを読み取ります。
 - {{domxref("Animation")}}

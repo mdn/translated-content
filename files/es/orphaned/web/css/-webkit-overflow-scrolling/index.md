@@ -4,7 +4,7 @@ slug: orphaned/Web/CSS/-webkit-overflow-scrolling
 original_slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propiedad CSS `-webkit-overflow-scrolling` controla si los dispositivos táctiles usan el desplazamiento momentum o inercial (momentum-based scroll) para el elemento dado.
 
@@ -72,5 +72,5 @@ No es parte de ninguna especificación. Apple tiene una [descripción en la Refe
 
 ## Ver también
 
-- [Artículo en CSS-Tricks con ejemplo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [Artículo en CSS-Tricks con ejemplo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
 - [Smashing Magazine- describiendo el efecto del scroll con rebote y cómo funciona en diferentes navegadores](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)

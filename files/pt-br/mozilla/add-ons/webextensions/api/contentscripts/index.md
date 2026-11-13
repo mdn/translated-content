@@ -13,7 +13,7 @@ Para usar a API, invoque {{WebExtAPIRef("contentScripts.register()")}} passando 
 
 O objeto `RegisteredContentScript` represente os scripts que foram registrados com a chamada `register()`. Ele define um método `unregister()` que você pode usar para desregistrar o conteúdo de scripts. O conteúdo de scripts também são desregistrados automaticamente quando a página que os criou é destruida. Por exemplo, se estão registrados para uma página em segundo plano serão desregistrados automaticamente quando esta página for destruida, e se eles estão registrados para uma barra lateral ou popup, também serão desregistrados automaticamente quando essas forem fechadas.
 
-Não há permissão para a API `contentScripts`, mas uma extensão pode ter a [permissão de host](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) apropriada para algum padrão passado para o `register()`.
+Não há permissão para a API `contentScripts`, mas uma extensão pode ter a [permissão de host](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) apropriada para algum padrão passado para o `register()`.
 
 ## Tipos
 

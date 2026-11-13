@@ -23,20 +23,20 @@ ECMAScript также определяет ключевые слова и лит
 
 Пробельные символы улучшают читабельность исходного текста и разделяет токены друг от друга. Пробельные символы обычно не обязательны для функционирования кода. [Утилиты для уменьшения объёма кода](http://en.wikipedia.org/wiki/Minification_%28programming%29) часто удаляют пробельные символы, чтобы уменьшить объем кода.
 
-| Code point | Name                           | Abbreviation | Description                                                                                                     | Escape sequence |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                                        | \t              |
-| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                                          | \v              |
-| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))               | \f              |
-| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                                  |                 |
-| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                                            |                 |
-| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Юникоде на Википедии](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| Code point | Name                           | Abbreviation | Description                                                                                       | Escape sequence |
+| ---------- | ------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                          | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                            | \v              |
+| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)) | \f              |
+| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                    |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                              |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Википедии](https://ru.wikipedia.org/wiki/Пробел)                                |                 |
 
 ## Окончание строк
 
 В дополнение к пробельным символам, символы окончания строк тоже используются для читабельности исходного кода. Однако, в некоторых случаях, символы окончания строк могут влиять на выполнение JavaScript-кода, т.к. есть некоторые места, где они запрещены.
 
-Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#Automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) при поиске **\s** класса.
+Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_expressions) при поиске **\s** класса.
 
 В ECMAScript, в качестве окончания строк можно использовать только ниже перечисленные Юникод символы. Другие символы окончания строк будут интерпретированы, как пробельные символы (например, Next Line, NEL, U+0085 будут интерпретироваться, как пробельные символы).
 
@@ -140,7 +140,7 @@ console.log("Hello world");
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/while", "do")}}
 - [`else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - {{jsxref("Statements/export", "export")}}
@@ -151,13 +151,13 @@ console.log("Hello world");
 - [`if`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - {{jsxref("Statements/import", "import")}}
 - [`in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Statements/let", "let")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - [`try`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch)
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -226,7 +226,7 @@ function import() {} // неправильно.
 
 ### Литерал Null
 
-Подробнее о `{{jsxref('Global_Objects/null','null')}}null`.
+Подробнее о `{{jsxref('null')}}null`.
 
 ```js
 null;
@@ -234,7 +234,7 @@ null;
 
 ### Литерал Boolean
 
-Подробнее о `{{jsxref('Global_Objects/Boolean','Boolean')}}`.
+Подробнее о `{{jsxref('Boolean')}}`.
 
 ```js
 true;
@@ -255,11 +255,11 @@ false;
 0777; // распознается, как восьмеричное число, 511 - как десятичное число
 ```
 
-Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about `{{jsxref('Global_Objects/parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
+Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about `{{jsxref('parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
 
 #### Binary (двоичные числа)
 
-Синтаксис двоичных чисел состоит из цифры ноль, за которой следует маленькая или большая латинская буква "B" (0b или 0B). Этот синтаксис новый и появился только в ECMAScript 2015, пожалуйста посмотрите таблицу совместимости с браузерами. Это может производить ошибку `{{jsxref('Global_Objects/SyntaxError','SyntaxError')}}`: "Missing binary digits after 0b", Если цифры не 0 или 1.
+Синтаксис двоичных чисел состоит из цифры ноль, за которой следует маленькая или большая латинская буква "B" (0b или 0B). Этот синтаксис новый и появился только в ECMAScript 2015, пожалуйста посмотрите таблицу совместимости с браузерами. Это может производить ошибку `{{jsxref('SyntaxError')}}`: "Missing binary digits after 0b", Если цифры не 0 или 1.
 
 ```js
 var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
@@ -350,7 +350,7 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 
 ### Литерал Регулярного выражения
 
-Смотрите также `{{jsxref('Global_Objects/RegExp','RegExp')}}` для получения более подробной информации.
+Смотрите также `{{jsxref('RegExp')}}` для получения более подробной информации.
 
 ```js
 /ab+c/g
@@ -363,7 +363,7 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 
 ### Литерал Шаблона
 
-Смотрите также {{jsxref('template_strings','template strings')}} для получения более подробной информации.
+Смотрите также {{jsxref('Template_literals','template strings')}} для получения более подробной информации.
 
 ```js
 `string text`;
@@ -400,7 +400,7 @@ tag`string text ${expression} string text`;
 
 2\. Точка с запятой ставится в конце, когда обнаружен конец вводимой строки токенов и парсер is unable to parse the single input stream as a complete program.
 
-Here `++` is not treated as a {{jsxref('Operators/Arithmetic_Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here `++` is not treated as a {{jsxref('Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js-nolint
 a = b
@@ -445,8 +445,8 @@ a + b;
 
 ## Смотрите также
 
-- [Jeff Walden: Двоичные и восьмеричные числа](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Двоичные и восьмеричные числа](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

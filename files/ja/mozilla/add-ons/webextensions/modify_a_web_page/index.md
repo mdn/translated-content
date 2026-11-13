@@ -39,11 +39,13 @@ WebExtensions API での実現方法は２つあります：
 }
 ```
 
-[`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
+[`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
 
-> **メモ:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
+> [!NOTE]
+> `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
 
-> **メモ:** `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
+> [!NOTE]
+> `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
 
 次に、"page-eater.js" というファイルを "modify-page" ディレクトリー内に作り、以下のように記述します。
 
@@ -55,7 +57,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-[拡張機能をインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) して [https://developer.mozilla.org/](/) を訪れてみましょう。
+[拡張機能をインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) して [https://developer.mozilla.org/](/) を訪れてみましょう。
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -84,8 +86,8 @@ document.body.appendChild(header);
 
 これは `content_scripts` キーを削除し、新たに 2 つのキーを追加しました。
 
-- [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions): スクリプトをページに挿入するには、変更するページへの権限が必要です。[`activeTab` パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)は現在アクティブなタブへの一時的な権限を取得する方法です。コンテキストメニューに項目を追加するには `contextMenus` パーミッションも必要となります。
-- [`background`](/ja/Add-ons/WebExtensions/manifest.json/background): ["バックグラウンドスクリプト"](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) という "background.js" を永続的に読み込み、ここでコンテキストメニューを設定し、コンテンツスクリプトを挿入します。
+- [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): スクリプトをページに挿入するには、変更するページへの権限が必要です。[`activeTab` パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)は現在アクティブなタブへの一時的な権限を取得する方法です。コンテキストメニューに項目を追加するには `contextMenus` パーミッションも必要となります。
+- [`background`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): ["バックグラウンドスクリプト"](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) という "background.js" を永続的に読み込み、ここでコンテキストメニューを設定し、コンテンツスクリプトを挿入します。
 
 このファイルを作りましょう。"background.js" というファイルを "modify-page" ディレクトリー内に作り以下のように記述します。
 
@@ -104,7 +106,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-このスクリプトでは [context menu item](/ja/Add-ons/WebExtensions/API/ContextMenus/create) を作成し、特定の id とタイトルを指定します。(コンテキストメニューに表示するテキスト) 次に、イベントリスナーを設定して、ユーザーがコンテキストメニュー項目をクリックしたときに、それが `eat-page` 項目であるかどうかをチェックします。それが正しければ、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を利用して、"page-eater.js" を挿入します。この API はオプションでタブ ID を引数として取ります、よってタブ ID は省略されています。つまり、スクリプトは現在アクティブなタブに挿入されています。
+このスクリプトでは [context menu item](/ja/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create) を作成し、特定の id とタイトルを指定します。(コンテキストメニューに表示するテキスト) 次に、イベントリスナーを設定して、ユーザーがコンテキストメニュー項目をクリックしたときに、それが `eat-page` 項目であるかどうかをチェックします。それが正しければ、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を利用して、"page-eater.js" を挿入します。この API はオプションでタブ ID を引数として取ります、よってタブ ID は省略されています。つまり、スクリプトは現在アクティブなタブに挿入されています。
 
 この時点で拡張機能は以下のようになっています。
 
@@ -115,7 +117,7 @@ modify-page/
     page-eater.js
 ```
 
-[拡張機能を再読み込み](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)して、ページを開きます (任意のページ) コンテキストメニューを有効化し、"Eat this page" を選択します。
+[拡張機能を再読み込み](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)して、ページを開きます (任意のページ) コンテキストメニューを有効化し、"Eat this page" を選択します。
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
@@ -126,13 +128,13 @@ modify-page/
 
 コンテンツスクリプトとバックグラウンドスクリプトはお互いの状態に直接アクセスすることはできません。しかし、メッセージを送ることによる対話をすることができます。一方のエンドはメッセージリスナーを設定し、もう一方のエンドはメッセージを送信します。 次の表は、各側面に関連する API をまとめたものです。
 
-|                | コンテンツスクリプト内                                                                   | バックグラウンドスクリプト内                                                   |
-| -------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ja/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| メッセージ受信 | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime#onMessage) |
+|                | コンテンツスクリプト内                                                                      | バックグラウンドスクリプト内                                                                |
+| -------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>)    | [`browser.tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
+| メッセージ受信 | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
 
 > [!NOTE]
-> このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
+> このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
 
 例を更新して、バックグラウンドスクリプトからメッセージを送信する方法を示します。
 
@@ -184,10 +186,10 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 今すぐページを処理する代わりに、コンテンツスクリプトは [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)を使ってメッセージを取得します。 メッセージが到着すると、コンテンツスクリプトは前と同じコードを実行しますが、置換テキストは `request.replacement` から取得されます。
 
-[`tabs.executeScript()`](/ja/Add-ons/WebExtensions/API/tabs/executeScript) は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される `onExecuted` を使用します。
+[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される `onExecuted` を使用します。
 
 > [!NOTE]
-> Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](/ja/docs/Tools/Browser_Console) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
+> Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/docs/Mozilla/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
 
 コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、 [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) の代わりに [`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) を使用します。
 
@@ -213,13 +215,11 @@ browser.runtime.sendMessage({
 - [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - `content_scripts` を使用した例:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - `tabs.executeScript()` を使用した例:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)

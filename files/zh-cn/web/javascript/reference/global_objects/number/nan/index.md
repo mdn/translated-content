@@ -3,11 +3,25 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
 
-{{JSRef}}
-
 **`Number.NaN`** 静态数据属性表示非数字值，等同于 {{jsxref("NaN")}}。有关 `NaN` 的行为的更多信息，请参阅[全局属性的描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
 
-{{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
+
+```js interactive-example
+function clean(x) {
+  // eslint-disable-next-line use-isnan
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
 
 ## 值
 

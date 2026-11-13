@@ -1,27 +1,29 @@
 ---
-title: Window.performance
+title: "Window: performance プロパティ"
+short-title: performance
 slug: Web/API/Window/performance
-original_slug: Web/API/performance_property
+l10n:
+  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
 ---
 
-{{APIRef("High Resolution Time")}}
+{{APIRef("Performance API")}}
 
-{{domxref("Window")}} インタフェースのパフォーマンスプロパティは、現在のドキュメントに関するパフォーマンス情報を収集するために使用できる {{domxref("Performance")}} オブジェクトを返します。これはパフォーマンスタイムライン API、高解像度時間 API、[ナビゲーションタイミング API](/ja/docs/Web/API/Navigation_timing_API)、[ユーザータイミング API](/ja/docs/Web/API/User_Timing_API) および[リソースタイミング API](/ja/docs/Web/API/Resource_Timing_API) の公開ポイントとして機能します。
+**`performance`** は {{domxref("Window")}} インターフェイスのプロパティで、{{domxref("Performance")}} オブジェクトを返します。このオブジェクトは、ウィンドウのスコープ内で実行されているコードのパフォーマンス情報を収集するために使用できます。
 
-## 構文
-
-```
-performanceData = window.performance;
-```
+パフォーマンス項目はコンテキストごとに記録されます。メインスレッド（または他のワーカー）でマークを作成した場合、ワーカースレッドではそのマークを見ることはできません。その逆も同様です。
 
 ### 値
 
 それが公開する API によって提供されるパフォーマンスおよびタイミング関連情報へのアクセスを提供する {{domxref("Performance")}} オブジェクト。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("WorkerGlobalScope.performance")}}

@@ -1,16 +1,29 @@
 ---
-title: RegExp.prototype[@@split]()
+title: RegExp.prototype[Symbol.split]()
+short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 l10n:
-  sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`[Symbol.split]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) にセパレーターとして正規表現が渡されたときにどのように動作するのかを指定します。
 
-**`[@@search]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) にセパレーターとして正規表現が渡されたときにどのように動作するのかを指定します。
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.split]()")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@split.html")}}
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.split](str, limit) {
+    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
+    return result.map((x) => `(${x})`);
+  }
+}
+
+console.log("2016-01-02".split(new RegExp1("-")));
+// 予想される結果: Array ["(2016)", "(01)", "(02)"]
+
+console.log("2016-01-02".split(/-/));
+// 予想される結果: Array ["2016", "01", "02"]
+```
 
 ## 構文
 
@@ -24,7 +37,7 @@ regexp[Symbol.split](str, limit)
 - `str`
   - : 分割操作の対象。
 - `limit` {{optional_inline}}
-  - : 検出される分割数の制限を指定する整数。 `[@@split]()` メソッドは、 `this` RegExp パターン (または上記の構文では `regexp`) に一致するたびに、分割項目の数が `limit` と一致するか、文字列が `this` パターンを満たなくなるまで、分割を行います。
+  - : 検出される分割数の制限を指定する整数。 `[Symbol.split]()` メソッドは、 `this` RegExp パターン (または上記の構文では `regexp`) に一致するたびに、分割項目の数が `limit` と一致するか、文字列が `this` パターンを満たなくなるまで、分割を行います。
 
 ### 返値
 
@@ -42,9 +55,9 @@ regexp[Symbol.split](str, limit)
 
 このメソッドは、`RegExp` のサブクラスで `split()` の動作をカスタマイズするために存在します。
 
-`RegExp.prototype[@@split]()` ベースメソッドは、次のように動作します。
+`RegExp.prototype[Symbol.split]()` ベースメソッドは、次のように動作します。
 
-- [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) を使用して新しい正規表現を構築し、元の正規表現が変更され内容にするところから始まります。
+- [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) を使用して新しい正規表現を構築し、元の正規表現が変更され内容にするところから始まります。
 - 正規表現の `g` （「グローバル」）フラグは無視され、 `y` （「粘着的」）フラグは元々表示されていない場合でも常に適用されます。
 - 対象とする文字列が空で、正規表現が空文字列に一致する場合（例えば `/a?/`）は、空の配列を返します。そうでない場合、正規表現が空文字列に一致しなければ `[""]` を返します。
 - 照合は `this.exec()` を連続して呼び出すことで行われます。正規表現は常に粘着的なので、文字列に沿って移動し、その度に一致する文字列、インデックス、キャプチャグループが得られます。
@@ -66,9 +79,9 @@ const result = re[Symbol.split](str);
 console.log(result); // ["2016", "01", "02"]
 ```
 
-### サブクラスで @@split を使用する
+### サブクラスで `[Symbol.split]()` を使用する
 
-既定の動作を修正するために、{{jsxref("RegExp")}} のサブクラスで `[@@split]()` メソッドをオーバーライドできます。
+既定の動作を修正するために、{{jsxref("RegExp")}} のサブクラスで `[Symbol.split]()` メソッドをオーバーライドできます。
 
 ```js
 class MyRegExp extends RegExp {
@@ -80,7 +93,7 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("-");
 const str = "2016-01-02";
-const result = str.split(re); // String.prototype.split calls re[@@split].
+const result = str.split(re); // String.prototype.split は re[Symbol.split]() を呼び出す
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
 
@@ -94,12 +107,12 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 ## 関連情報
 
-- [`RegExp.prototype[@@split]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`RegExp.prototype[Symbol.split]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.split()")}}
-- [`RegExp.prototype[@@match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
-- [`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
-- [`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
-- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
+- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
+- [`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
+- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - {{jsxref("Symbol.split")}}

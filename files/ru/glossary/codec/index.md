@@ -11,4 +11,4 @@ slug: Glossary/Codec
 
 ### Технические ссылки
 
-- [Медиа форматы, поддерживаемые audio и video элементами HTML](/ru/docs/Web/HTML/Supported_media_formats)
+- [Медиа форматы, поддерживаемые audio и video элементами HTML](/ru/docs/Web/Media/Formats)

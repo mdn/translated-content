@@ -11,7 +11,17 @@ l10n:
 이 메서드는 {{jsxref("Array.prototype.forEach()")}}와 동일한 알고리즘으로 동작합니다.
 형식화 배열은 [형식화 배열 타입](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.forEach()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+
+uint8.forEach((element) => console.log(element));
+
+// Expected output: 10
+// Expected output: 20
+// Expected output: 30
+```
 
 ## 구문
 
@@ -35,11 +45,9 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
-
   - : 각 요소에 대해 실행할 함수.
 
     다음 세 가지 매개변수를 받습니다.
-
     - `element`
       - : 현재 처리할 현재 요소.
     - `index`

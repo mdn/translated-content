@@ -9,7 +9,21 @@ l10n:
 
 동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, 불리언 결과를 반환합니다. [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## 문법
 
@@ -19,7 +33,7 @@ x == y
 
 ## 상세 설명
 
-동등 연산자 (`==` 와 `!=`)는 두 피연산자를 비교하기 위해 [느슨한 같음](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using)을 사용합니다. 다음과 같이 간략히 설명할 수 있습니다.
+동등 연산자 (`==` 와 `!=`)는 두 피연산자를 비교하기 위해 [느슨한 같음](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#loose_equality_using)을 사용합니다. 다음과 같이 간략히 설명할 수 있습니다.
 
 1. 두 피연산자가 동일한 타입일 때는 다음과 같이 비교합니다.
    - 객체: 두 피연산자가 동일한 객체를 참조할 때만 `true`를 반환합니다.
@@ -29,7 +43,7 @@ x == y
    - BigInt: 두 피연산자가 동일한 값을 가질 때만 `true`를 반환합니다.
    - 심볼: 두 피연산자가 동일한 심볼을 참조할 때만 `true`를 반환합니다.
 2. 하나의 피연산자가 `null`이거나 `undefined`인 경우, `true`를 반환하기 위해선 다른 하나가 무조건 `null`이거나 `undefined`여야 합니다. 그렇지 않으면 `false`를 반환합니다.
-3. 하나의 피연산자가 객체이고 다른 하나가 원시 타입인 경우, [객체를 원시 타입으로 변환합니다.](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion)
+3. 하나의 피연산자가 객체이고 다른 하나가 원시 타입인 경우, [객체를 원시 타입으로 변환합니다.](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)
 4. 이 경우, 두 피연산자를 모두 원시 타입(문자열, 숫자, 불리언, 심볼, BigInt 중 하나)으로 변환합니다. 나머지 변환은 다음 순서를 따릅니다.
    - 두 피연산자의 타입이 같다면, 1단계를 이용해 비교합니다.
    - 하나의 피연산자가 심볼이고 다른 하나가 심볼이 아닌 경우, `false`를 반환합니다.

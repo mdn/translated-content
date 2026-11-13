@@ -15,6 +15,6 @@ l10n:
 
 ## 같이 보기
 
-- [HTML 시작하기](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [사용자 지정 요소 정의하기](/ko/docs/Web/Web_Components/Using_custom_elements)
+- [HTML 시작하기](/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+- [사용자 지정 요소 정의하기](/ko/docs/Web/API/Web_components/Using_custom_elements)
 - DOM의 요소를 나타내는 {{domxref("Element")}} 인터페이스

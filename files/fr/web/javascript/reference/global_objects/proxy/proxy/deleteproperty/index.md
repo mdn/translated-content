@@ -3,11 +3,34 @@ title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 ---
 
-{{JSRef}}
+La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("delete")}}.
 
-La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html","taller")}}
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## Syntaxe
 
@@ -32,7 +55,7 @@ La méthode `deleteProperty()` doit renvoyer un booléen qui indique si oui ou n
 
 ## Description
 
-La méthode **`handler.deleteProperty()`** est une trappe permettant d'intercepter les opérations de l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+La méthode **`handler.deleteProperty()`** est une trappe permettant d'intercepter les opérations de l'opérateur {{jsxref("delete")}}.
 
 ### Interceptions
 
@@ -49,7 +72,7 @@ Si les invarians suivants ne sont pas respectés, le proxy renverra une exceptio
 
 ## Exemples
 
-Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+Dans l'exemple qui suit, on intercepte les opérations de {{jsxref("delete")}}.
 
 ```js
 var p = new Proxy(
@@ -76,6 +99,6 @@ delete p.a; // "appelée sur : a"
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
+- L'opérateur {{jsxref("delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

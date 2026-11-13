@@ -48,7 +48,7 @@ Os novatos devem notar que a caixa de 'Id' no nome deste método _deve_ estar co
 
 Se não existe um elemento com o id fornecido, esta função retorna `null`. Note que o parâmetro ID diferência maiúsculas e minúsculas. Assim document.getElementById("Main") retornará `null` ao invés do elemento `<div id="main">`, devido a "M" e "m" serem diferentes para o objetivo deste método.
 
-**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/pt-BR/docs/DOM/Node.insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
+**Elementos que não estão no documento** não são procurados por `getElementById`. Quando criar um elemento e atribuir um ID ao mesmo, você deve inserir o elemento na árvore do documento com [`insertBefore`](/pt-BR/docs/Web/API/Node/insertBefore) ou método similar antes que você possa acessá-lo com `getElementById`:
 
 ```js
 var elemento = document.createElement("div");
@@ -56,7 +56,7 @@ elemento.id = "testqq";
 var el = document.getElementById("testqq"); // el será null!
 ```
 
-**Documentos não-HTML.** A implementação do DOM deve ter informações que diz quais atributos são do tipo ID. Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo `id` é definido para ser um tipo ID em casos comuns de [XHTML](/pt-BR/docs/XHTML), [XUL](/pt-BR/docs/XUL), e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam `null`.
+**Documentos não-HTML.** A implementação do DOM deve ter informações que diz quais atributos são do tipo ID. Atributos com o nome "id" não são do tipo ID a menos que assim sejam definidos nos documentos DTD. O atributo `id` é definido para ser um tipo ID em casos comuns de [XHTML](/pt-BR/docs/Glossary/XHTML), [XUL](/pt-BR/docs/XUL), e outros. Implementações que não reconhecem se os atributos são do tipo ID, ou não são esperados retornam `null`.
 
 ## Especificações
 
@@ -68,5 +68,5 @@ var el = document.getElementById("testqq"); // el será null!
 
 ## Veja também
 
-- referências de [document](/pt-BR/docs/DOM/document) para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.
+- referências de [document](/pt-BR/docs/Web/API/Document) para outros métodos e propriedades podem ser usados para obter referências para elementos no documento.
 - [xml:id](/pt-BR/docs/xml/xml:id) - tem um método utilitário que permite que obtenha 'xml:id' em documentos XML

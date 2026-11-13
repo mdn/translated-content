@@ -41,4 +41,4 @@ Não faz parte de nenhuma especificação. A Apple tem [uma descrição na refer
 
 ## Veja também
 
-- [Artigo do CSS-Tricks com demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [Artigo do CSS-Tricks com demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)

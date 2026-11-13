@@ -3,12 +3,12 @@ title: "ServiceWorkerRegistration: pushManager プロパティ"
 short-title: pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-**`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、プッシュサブスクリプションを管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、サブスクリプションへの参加、アクティブなサブスクリプションの取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。
+**`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、プッシュサブスクリプションを管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、サブスクリプションへの参加、アクティブなサブスクリプションの取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。
 
 ## 構文
 
@@ -30,13 +30,13 @@ navigator.serviceWorker
       (pushSubscription) => {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
-        // アプリケーションサーバが必要としているプッシュサブスクリプションの
-        // 詳細はここから使用できます。たとえば、XMLHttpRequest を使用して
+        // アプリケーションサーバーが必要としているプッシュサブスクリプションの
+        // 詳細はここから使用できます。たとえば、fetch() API を使用して
         // これを送信できます。
       },
       (error) => {
         // 開発中は、コンソールにエラーを表示するのに役立ちます。
-        // 本番環境では、アプリケーションサーバにエラー情報を送信
+        // 本番環境では、アプリケーションサーバーにエラー情報を送信
         // するためにも 役立ちます。
         console.error(error);
       },

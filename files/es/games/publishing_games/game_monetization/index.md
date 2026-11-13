@@ -3,9 +3,7 @@ title: Monetización de videojuegos
 slug: Games/Publishing_games/Game_monetization
 ---
 
-{{GamesSidebar}}
-
-Cuando empleas tu tiempo en crear un juego, [distribuirlo](/es/docs/Games/Techniques/Publishing_games/Game_distribution) y [promocionarlo](/es/docs/Games/Techniques/Publishing_games/Game_promotion) deberías considerar ganar un poco de dinero con ello. Si tu trabajo es un esfuerzo serio en tu camino para ser un desarrollador independiente de juegos capaz de ganarse la vida, sigue leyendo y verás cuales son tus opciones. La tecnología es lo suficientemente madura; ahora es cuestión de elegir el enfoque adecuado.
+Cuando empleas tu tiempo en crear un juego, [distribuirlo](/es/docs/Games/Publishing_games/Game_distribution) y [promocionarlo](/es/docs/Games/Publishing_games/Game_promotion) deberías considerar ganar un poco de dinero con ello. Si tu trabajo es un esfuerzo serio en tu camino para ser un desarrollador independiente de juegos capaz de ganarse la vida, sigue leyendo y verás cuales son tus opciones. La tecnología es lo suficientemente madura; ahora es cuestión de elegir el enfoque adecuado.
 
 ## Juegos de pago
 
@@ -17,7 +15,7 @@ Cuanto ganes por tu jugo depende del mercado, la calidad de tu juego y otros tan
 
 En lugar de que la gente pague por tu juego por adelantado, puedes ofrecer un juego de forma gratuita con compras dentro de la aplicación. En este caso, el juego puede ser adquirido sin gastarse un centavo --- dar el juego a los jugadores, pero ofreciendo monedas del juego, bonus extra o beneficios por dinero real. Ejemplos específicos pueden ser, incluir bonus de nivel, mejores armas o hechizos, o volver a llenar la energía necesaria para jugar. Diseñar un buen sistema de compras en la aplicación es un arte propio.
 
-Recuerda que necesitas miles de descargas de tu juego para hacer efectivas/rentables las compras en la aplicación --- solo una pequeña parte de los jugadores pagará por las compras en la aplicación. ¿Cómo de pequeña? Varía, pero alrededor de una persona por cada mil es aproximadamente la media. Cuantas más personas jueguen a tu juego, mayor será la probabilidad de que alguien pague, o sea que tus beneficios dependen en gran medida de tus actividades de [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion).
+Recuerda que necesitas miles de descargas de tu juego para hacer efectivas/rentables las compras en la aplicación --- solo una pequeña parte de los jugadores pagará por las compras en la aplicación. ¿Cómo de pequeña? Varía, pero alrededor de una persona por cada mil es aproximadamente la media. Cuantas más personas jueguen a tu juego, mayor será la probabilidad de que alguien pague, o sea que tus beneficios dependen en gran medida de tus actividades de [promoción](/es/docs/Games/Publishing_games/Game_promotion).
 
 ### Freemium
 
@@ -27,7 +25,7 @@ Los juegos que ofrecen compras en el juego, a menudo se refieren a **freemium** 
 
 Los complementos y el contenido descargable son una buena manera de proporcionar un valor extra a un juego ya lanzado, pero recuerda que tendrás que ofrecer contenido decente y entretenido para atraer a la gente a comprarlo. Un conjunto totalmente nuevo de niveles con nuevos personajes, armas e historia es un buen material para DLC, pero para tener suficientes ventas el juego en sí debe ser popular, o de lo contrario no habrá jugadores interesados en gastar su dinero duramente ganado. eso.
 
-En lugar de vender activamente los juegos, también puede intentar obtener un ingreso pasivo: mostrar anuncios y confiar en actividades anteriores relacionadas con la [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion) de su juego puede ser beneficioso, pero su juego debe ser adictivo, lo cual no es tan fácil como parece. Todavía necesitas planearlo, y en algún momento también necesitarás un poco de suerte. Si su juego se vuelve viral y la gente comienza a compartirlo, puede obtener muchas descargas y dinero de los anuncios.
+En lugar de vender activamente los juegos, también puede intentar obtener un ingreso pasivo: mostrar anuncios y confiar en actividades anteriores relacionadas con la [promoción](/es/docs/Games/Publishing_games/Game_promotion) de su juego puede ser beneficioso, pero su juego debe ser adictivo, lo cual no es tan fácil como parece. Todavía necesitas planearlo, y en algún momento también necesitarás un poco de suerte. Si su juego se vuelve viral y la gente comienza a compartirlo, puede obtener muchas descargas y dinero de los anuncios.
 
 Hay muchas compañías que ofrecen sistemas de publicidad: usted se registra y les permite mostrar anuncios a cambio de un porcentaje de las ganancias. Se dice que Google AdSense es el más efectivo, pero no está diseñado para juegos y es una práctica bastante mala usarlo para ese propósito. En lugar de arriesgarse a que se cierre su cuenta y se bloquee todo el dinero, intente utilizar los portales habituales de gamedev como [LeadBolt](https://www.leadbolt.com/). Ofrecen sistemas fáciles de implementar para mostrar los anuncios en sus juegos y dividir las ganancias con usted.
 
@@ -81,7 +79,7 @@ Puedes vender camisetas, [pegatinas](https://www.stickermule.com/user/1070634890
 
 ### Donaciones
 
-Cuando todo lo demás falla puedes intentar poner un botón de donaciones en la página de tu juego y pedir apoyo de la comunidad. Algunas veces funciona, pero solo si el jugador te conoce y siente que te ayudará. Este es el porque de que manejar cuidadosamente la comunidad es tan importante. Funcionó con la competición de [js13kGames](http://js13kgames.com/) --- todos los participantes obtuvieron una camiseta gratis, y algunos incluso dieron unos cuantos dólares para ayudarlo a seguir funcionado en los próximos años.
+Cuando todo lo demás falla puedes intentar poner un botón de donaciones en la página de tu juego y pedir apoyo de la comunidad. Algunas veces funciona, pero solo si el jugador te conoce y siente que te ayudará. Este es el porque de que manejar cuidadosamente la comunidad es tan importante. Funcionó con la competición de [js13kGames](https://js13kgames.com/) --- todos los participantes obtuvieron una camiseta gratis, y algunos incluso dieron unos cuantos dólares para ayudarlo a seguir funcionado en los próximos años.
 
 ## Resumen
 

@@ -42,7 +42,7 @@ HTML 文件的最后一行调用了 `app.js` JavaScript 文件。这就是我们
 
 ## 表单提交
 
-页面包含一个 {{HTMLelement("form")}}，用于选择每个经期的开始日期和结束日期。日期选择器是类型为 {{HTMLElement("input/date", "日期")}} 的 {{HTMLElement("input")}}，其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 分别为 `start-date` 和 `end-date`。
+页面包含一个 {{HTMLelement("form")}}，用于选择每个经期的开始日期和结束日期。日期选择器是类型为 {{HTMLElement("input/date", "日期")}} 的 {{HTMLElement("input")}}，其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 分别为 `start-date` 和 `end-date`。
 
 表单没有方法或动作。取而代之的是，我们使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 为表单添加了一个事件监听器。当用户尝试提交表单时，我们阻止表单提交，存储新的经期，渲染这个经期以及之前的经期，然后重置表单。
 
@@ -109,15 +109,15 @@ function checkDatesInvalid(startDate, endDate) {
 }
 ```
 
-在这个应用程序的一个更健壮的版本中，我们至少要包含错误消息来通知用户存在错误。一个好的应用程序会通知用户错误是什么，将焦点放在有问题的表单控件上，并使用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)来通知无障碍技术用户错误信息。
+在这个应用程序的一个更健壮的版本中，我们至少要包含错误消息来通知用户存在错误。一个好的应用程序会通知用户错误是什么，将焦点放在有问题的表单控件上，并使用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)来通知无障碍技术用户错误信息。
 
 ## Local storage
 
 我们使用 [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)，具体来说是 [window.localStorage](/zh-CN/docs/Web/API/Window/localStorage)，以字符串化的 JSON 对象形式存储开始日期和结束日期对。
 
-[LocalStorage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#存储简单数据_—_web_storage) 有一些局限性，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
+[LocalStorage](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage#存储简单数据_—_web_storage) 有一些局限性，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
 
-对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)（IDB）和后面讨论的 service worker 具有更好的性能。
+对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)（IDB）和后面讨论的 service worker 具有更好的性能。
 
 `localStorage` 的局限包括：
 

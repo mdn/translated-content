@@ -1,43 +1,40 @@
 ---
-title: NodeList.length
+title: NodeList：length 属性
+short-title: length
 slug: Web/API/NodeList/length
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
 
-## 摘要
+**`NodeList.length`** 属性返回 {{domxref("NodeList")}} 中包含的元素数量。
 
-返回 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 集合中子节点数量。
+## 值
 
-## 语法
+一个表示 `NodeList` 中元素的数量的整数值。
 
-```js
-numItems = nodeList.length;
-```
+## 示例
 
-- `numItems` 是一个整数，表示 `NodeList` 子节点的数量。
-
-## 例子
+`length` 属性在 DOM 编程中非常有用。它通常用来检测列表的长度，以判断列表是否存在。同时，它也常被用作 `for` 循环中的迭代条件，如下面的示例所示。
 
 ```js
-// 获取文档中的所有 p 标签
-var items = document.getElementsByTagName("p");
+// 文档中所有的段落元素
+const items = document.getElementsByTagName("p");
 
-// 循环 items 然后输出每个 p 标签 html
-var gross = "";
-for (var i = 0; i < items.length; i++) {
+// 遍历列表中的每一项，将整个元素内容追加为一段 HTML 字符串
+let gross = "";
+for (let i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 
-// gross 现在集合了所有 p 标签的 HTML 内容。
+// gross 现在包含了所有段落的 HTML 内容
 ```
-
-## 注意
-
-length 不是 [元素（Element）](en/DOM/element)的属性，而是 [NodeList](/zh-CN/docs/Web/API/NodeList) 的属性。NodeList 是使用 DOM 操作方法返回的对象，比如使用 [document.getElementsByTagName](en/DOM/document.getElementsByTagName) 就会返回一个 NodeList 对象。
-
-length 是在 DOM 操作中非常常见的属性。最常见的是用 length 属性来判断某些节点是否存在，或者如上述一样，用在 for 循环上。
 
 ## 规范
 
-[length](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

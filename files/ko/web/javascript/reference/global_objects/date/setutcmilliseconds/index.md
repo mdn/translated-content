@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 
 **`setUTCMilliseconds()`** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 설정합니다.
 
-{{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+
+```js interactive-example
+const date1 = new Date("2018-01-24T12:38:29.069Z");
+
+console.log(date1.getUTCMilliseconds());
+// Expected output: 69
+
+date1.setUTCMilliseconds(420);
+
+console.log(date1.getUTCMilliseconds());
+// Expected output: 420
+```
 
 ## 구문
 

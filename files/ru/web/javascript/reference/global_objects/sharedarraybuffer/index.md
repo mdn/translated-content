@@ -22,7 +22,7 @@ worker.postMessage(sab);
 
 ### Обновление и синхронизация разделяемой памяти с помощью атомарных операций
 
-Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .
+Разделяемую память можно создавать и изменять одновременно в воркерах или основном потоке. В зависимости от системы (ЦПУ, ОС, браузера), распространение изменений по всем контекстам может занять некоторое время. Для синхронизации необходимы {{jsxref("Atomics", "атомарные", "", 1)}} операции.
 
 ### API, принимающие объекты `SharedArrayBuffer`
 
@@ -41,7 +41,7 @@ worker.postMessage(sab);
 - [`Cross-Origin-Opener-Policy`](/ru/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) со значением `same-origin`` (защищает ваш источник от атаки)
 - [`Cross-Origin-Embedder-Policy`](/ru/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) со значением `require-corp` или `credentialless` (защищает жертв от вашего источника)
 
-Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство [`crossOriginIsolated`](/ru/docs/Web/API/crossOriginIsolated), доступное для контекстов окна и воркера:
+Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство [`crossOriginIsolated`](/ru/docs/Web/API/Window/crossOriginIsolated), доступное для контекстов окна и воркера:
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -75,5 +75,5 @@ if (crossOriginIsolated) {
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
-- [`crossOriginIsolated`](/ru/docs/Web/API/crossOriginIsolated)
+- [`crossOriginIsolated`](/ru/docs/Web/API/Window/crossOriginIsolated)
 - [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/) on developer.chrome.com (2021)

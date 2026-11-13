@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 126 中影响开发者的变更信息。Firefox 126 于 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126)发布。
 
 ## 为 Web 开发者带来的变化
@@ -35,7 +33,7 @@ l10n:
 
 ### HTTP
 
-- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
+- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
 
 ### API
 
@@ -44,24 +42,23 @@ l10n:
 - [`URL.parse()`](/zh-CN/docs/Web/API/URL/parse_static) 静态方法现已支持创建 [`URL`](/zh-CN/docs/Web/API/URL) 对象。如果传递的参数未定义有效的 `URL`，则返回 `null`，因此可以作为使用 [`URL` 构造函数](/zh-CN/docs/Web/API/URL/URL)创建 `URL` 对象的不抛出异常的替代方法（[Firefox bug 1823354](https://bugzil.la/1823354)）。
 - 现已支持[屏幕唤醒锁 API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API)，其用于请求在应用程序处于活动状态时不要使屏幕变暗或锁定。这对于导航和阅读应用程序以及其他的因为在使用时屏幕可能不会接收到通常会使其保持唤醒状态的常规触摸输入的应用程序特别有用。在安全上下文中，可以通过 {{domxref("Navigator.wakeLock")}}（会返回一个 {{domxref("WakeLock")}}）访问 API。其允许你请求一个用于监视唤醒锁的状态并手动释放它的 {{domxref("WakeLockSentinel")}}（[Firefox bug 1589554](https://bugzil.la/1589554)、[Firefox bug 1874849](https://bugzil.la/1874849)）。
 - 现已支持所有的 [`RTCIceCandidate`](/zh-CN/docs/Web/API/RTCIceCandidate) 属性和方法（除了未实现的 `relayProtocol` 和 `url` 属性），并与规范相匹配。已对 `RTCIceCandidate` 的属性进行了以下更改：
-
   - 已将以下属性变为只读：[`candidate`](/zh-CN/docs/Web/API/RTCIceCandidate/candidate)、[`sdpMid`](/zh-CN/docs/Web/API/RTCIceCandidate/sdpMid)、[`sdpMLineIndex`](/zh-CN/docs/Web/API/RTCIceCandidate/sdpMLineIndex) 和 [`usernameFragment`](/zh-CN/docs/Web/API/RTCIceCandidate/usernameFragment)。
   - 已添加以下属性：[`foundation`](/zh-CN/docs/Web/API/RTCIceCandidate/foundation)、[`component`](/zh-CN/docs/Web/API/RTCIceCandidate/component)、[`priority`](/zh-CN/docs/Web/API/RTCIceCandidate/priority)、[`address`](/zh-CN/docs/Web/API/RTCIceCandidate/address)、[`protocol`](/zh-CN/docs/Web/API/RTCIceCandidate/protocol)、[`port`](/zh-CN/docs/Web/API/RTCIceCandidate/port)、[`type`](/zh-CN/docs/Web/API/RTCIceCandidate/type)、[`tcpType`](/zh-CN/docs/Web/API/RTCIceCandidate/tcpType)、[`relatedAddress`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedAddress)、[`relatedPort`](/zh-CN/docs/Web/API/RTCIceCandidate/relatedPort) 和 [`usernameFragment`](/zh-CN/docs/Web/API/RTCIceCandidate/usernameFragment)。
 
   （[Firefox bug 1322186](https://bugzil.la/1322186)）。
 
-- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
+- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
 
 #### DOM
 
-- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
+- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
 - 现已支持 {{domxref("Selection.direction")}} 属性，其用于指示范围的方向（[Firefox bug 1867058](https://bugzil.la/1867058)）。
 
 #### 媒体、WebRTC 和 Web 音频
 
 #### 移除
 
-- 现已从 [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) 中删除字幕事件 [`bounce`](/zh-CN/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/zh-CN/docs/Web/API/HTMLMarqueeElement#finish) 和 [`start`](/zh-CN/docs/Web/API/HTMLMarqueeElement#start)，同时删除的还有在 [`<marquee>` HTML 元素](/zh-CN/docs/Web/HTML/Element/marquee)上定义的相应的[事件处理器属性](/zh-CN/docs/Web/HTML/Element/marquee#事件处理器)（[Firefox bug 1689705](https://bugzil.la/1689705)）。
+- 现已从 [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) 中删除字幕事件 [`bounce`](/zh-CN/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/zh-CN/docs/Web/API/HTMLMarqueeElement#finish) 和 [`start`](/zh-CN/docs/Web/API/HTMLMarqueeElement#start)，同时删除的还有在 [`<marquee>` HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements/marquee)上定义的相应的[事件处理器属性](/zh-CN/docs/Web/HTML/Reference/Elements/marquee#事件处理器)（[Firefox bug 1689705](https://bugzil.la/1689705)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 
@@ -93,7 +90,7 @@ l10n:
 
 - **CSS `shape()` 函数**：`layout.css.basic-shape-shape.enabled`。
 
-  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
+  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
 
 ## 更早期的版本
 

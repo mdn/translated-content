@@ -3,14 +3,14 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 ## Сводка
 
 Метод **`fontcolor()`** создаёт HTML-элемент {{HTMLElement("font")}}, заставляющий строку отображаться шрифтом указанного цвета.
 
 > [!NOTE]
-> Элемент \<font> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> Элемент \<font> был удалён из [HTML5](/ru/docs/Glossary/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
 
 ## Синтаксис
 
@@ -21,7 +21,7 @@ str.fontcolor(color)
 ### Параметры
 
 - `color`
-  - : Строка, выражающая цвет в виде шестнадцатеричного триплета RGB, либо в виде названия цвета. Названия цветов перечислены в [справочнике по значению цвета в CSS](/ru/docs/Web/CSS/color_value).
+  - : Строка, выражающая цвет в виде шестнадцатеричного триплета RGB, либо в виде названия цвета. Названия цветов перечислены в [справочнике по значению цвета в CSS](/ru/docs/Web/CSS/Reference/Values/color_value).
 
 ## Описание
 

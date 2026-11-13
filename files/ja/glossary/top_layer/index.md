@@ -9,7 +9,7 @@ l10n:
 
 **最上位レイヤー**は、ビューポートの幅と高さ全体にわたり、ウェブ文書内に表示される他のすべてのレイヤーの最上位に位置する固有のレイヤーです。これは、ページ上の他のすべてのコンテンツの上に現れるべき要素を含むために、ブラウザーによって作成されます。
 
-最上位レイヤーに配置された要素は新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成し、対応する {{cssxref("::backdrop")}} 擬似要素も生成します。
+最上位レイヤーに配置された要素は新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成し、対応する {{cssxref("::backdrop")}} 擬似要素も生成します。
 
 最上位レイヤーに現れる要素は以下の通りです。
 
@@ -25,7 +25,7 @@ Chrome などの一部のブラウザーでは、最上位レイヤーに配置�
 
 ## 関連情報
 
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
 - {{htmlelement("dialog")}} 要素、 {{domxref("HTMLDialogElement")}} インターフェイス
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

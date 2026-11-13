@@ -1,17 +1,18 @@
 ---
-title: window.top
+title: "Window: top プロパティ"
+short-title: top
 slug: Web/API/Window/top
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
 ウィンドウ階層における最上位のウィンドウへの参照を返します。
 
-## 構文
+## 値
 
-```
-var topWindow = window.top;
-```
+最上位のウィンドウへの参照です。
 
 ## 注記
 
@@ -19,10 +20,10 @@ var topWindow = window.top;
 
 このプロパティは、親、あるいは、階層になっているウィンドウのサブフレーム内にあるウィンドウを扱っていて、最上位のフレームセットを取得したいときに特に役立ちます。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}

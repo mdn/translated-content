@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-[WebGL](http://www.khronos.org/webgl/) 使得在支持 HTML 的 [`canvas`](/zh-CN/HTML/Canvas) 标签的浏览器中，不需要安装任何插件，便可以使用基于 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 的 API 在 canvas 中进行 2D 和 3D 渲染。WebGL 程序包括用 JavaScript 写的控制代码，以及在图形处理单元（GPU, Graphics Processing Unit）中执行的着色代码（GLSL，注：GLSL 为 OpenGL 着色语言）。WebGL 元素可以和其他 HTML 元素混合使用，并且可以和网页其他部分或者网页背景结合起来。
+[WebGL](https://www.khronos.org/webgl/) 使得在支持 HTML 的 [`canvas`](/zh-CN/docs/Web/API/Canvas_API) 标签的浏览器中，不需要安装任何插件，便可以使用基于 [OpenGL ES](https://www.khronos.org/opengles/) 2.0 的 API 在 canvas 中进行 2D 和 3D 渲染。WebGL 程序包括用 JavaScript 写的控制代码，以及在图形处理单元（GPU, Graphics Processing Unit）中执行的着色代码（GLSL，注：GLSL 为 OpenGL 着色语言）。WebGL 元素可以和其他 HTML 元素混合使用，并且可以和网页其他部分或者网页背景结合起来。
 
 本文将向你介绍 WebGL 的基本用法。此处假定你对三维图形方面的数学知识已经有一定的理解，本文也不会试图向你教授 3D 图像概念本身。
 
@@ -62,7 +62,7 @@ function main() {
 ## 参见
 
 - [WebGL 介绍](https://dev.opera.com/articles/introduction-to-webgl-part-1/): 由 Luz Caballero 所著，发布在 dev.opera.com。这篇文章说明 WebGL 是什么，解释了 WebGL 是如何工作的 (介绍了渲染管线的概念)，并且介绍了一些 WebGL 库。
-- [WebGL 基础](http://webglfundamentals.org/)
-- [现代 OpenGL 介绍：](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) 由 Joe Groff 写的一系列关于 OpenGL 的不错的文章，提供了一个清晰的介绍，从 OpenGL 的历史到图形管线概念，也包括一些说明 OpenGL 如何工作的例子，如果你对 OpenGL 没有任何概念的话，这是不错的出发点。
+- [WebGL 基础](https://webglfundamentals.org/)
+- [现代 OpenGL 介绍：](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) 由 Joe Groff 写的一系列关于 OpenGL 的不错的文章，提供了一个清晰的介绍，从 OpenGL 的历史到图形管线概念，也包括一些说明 OpenGL 如何工作的例子，如果你对 OpenGL 没有任何概念的话，这是不错的出发点。
 
 {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

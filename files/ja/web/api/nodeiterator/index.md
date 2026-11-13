@@ -22,7 +22,6 @@ _このインターフェイスが継承するプロパティはありません�
 - {{domxref("NodeIterator.root")}} {{readonlyInline}}
   - : `NodeIterator` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
 - {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
-
   - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。
 
     使用できる値は以下のとおりです。
@@ -46,10 +45,8 @@ _このインターフェイスが継承するプロパティはありません�
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
-  {{experimental_inline() }}
   - : イテレーターが結び付けられている {{domxref("Node")}} を返します。
-- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
-  experimental_inline() }}
+- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}}
   - : 論理値のフラグで、 {{domxref("NodeIterator")}} が前に固定されるかどうかを示します。前に固定される場合は `true`、後に固定される場合は `false` になります。
 
 ## メソッド
@@ -75,6 +72,5 @@ _このインターフェイスが継承するメソッドはありません。_
 
 - 作成するメソッド: {{domxref("Document.createNodeIterator()")}}
 - 関連インターフェイス
-
   - {{domxref("NodeFilter")}}
   - {{domxref("TreeWalker")}}

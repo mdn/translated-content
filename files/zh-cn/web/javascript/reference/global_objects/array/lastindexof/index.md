@@ -3,13 +3,19 @@ title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`lastIndexOf()`** 方法返回数组中给定元素最后一次出现的索引，如果不存在则返回 -1。该方法从 `fromIndex` 开始向前搜索数组。
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## 语法
 
@@ -119,7 +125,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.lastIndexOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

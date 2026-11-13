@@ -9,7 +9,19 @@ l10n:
 
 **`dotAll`** 속성은 `s` 플래그가 정규식과 함께 사용되는지 여부를 나타냅니다. `dotAll`은 개별 정규식 인스턴스의 읽기 전용 속성입니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "s");
+
+console.log(regex1.dotAll);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.dotAll);
+// Expected output: false
+```
 
 ## 설명
 

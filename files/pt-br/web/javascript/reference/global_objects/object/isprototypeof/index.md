@@ -7,9 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
 
-> **Nota:** `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
+> [!NOTE]
+> `isPrototypeOf()` difere do operador {{jsxref("instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
+
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// Expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -67,7 +82,7 @@ console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-O método`isPrototypeOf()`, junto com o operador {{jsxref("Operators/instanceof", "instanceof")}} vêm a ser útil se você tem um código que só pode funcionar quando estiver lidando com objetos que descendem de uma cadeia de protótipos específicos, por exemplo, para garantir que certos métodos ou propriedades estarão presentes naquele objeto que você precisa.
+O método`isPrototypeOf()`, junto com o operador {{jsxref("instanceof")}} vêm a ser útil se você tem um código que só pode funcionar quando estiver lidando com objetos que descendem de uma cadeia de protótipos específicos, por exemplo, para garantir que certos métodos ou propriedades estarão presentes naquele objeto que você precisa.
 
 Por exemplo, checar se o objeto `baz` descende de `Foo.prototype`:
 
@@ -87,7 +102,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## Veja também
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

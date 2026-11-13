@@ -184,5 +184,5 @@ if (!window.JSON) {
 
 ## Смотрите также
 
-- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("Date.prototype.toJSON()")}}

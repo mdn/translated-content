@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a9bd012040da7024cc05c00336aa7ebb42c5c227
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 123 中影响开发者的变更信息。Firefox 123 于 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=122)发布。
 
 ## 为 Web 开发者带来的变化
@@ -30,11 +28,11 @@ l10n:
 
 ### HTTP
 
-- [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Status#信息响应)状态码现在可用于（当服务器仍在准备完整响应时页面可能需要的）[预加载](/zh-CN/docs/Web/HTML/Attributes/rel/preload)资源。这可以显著减少页面加载时间。请注意，对[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)使用 `103 Early Hints` 标头的支持已经在 [Firefox 120](/zh-CN/docs/Mozilla/Firefox/Releases/120#http) 中添加。详情请参见 [Firefox bug 1874445](https://bugzil.la/1874445)。
+- [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Reference/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码现在可用于（当服务器仍在准备完整响应时页面可能需要的）[预加载](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)资源。这可以显著减少页面加载时间。请注意，对[预连接](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)使用 `103 Early Hints` 标头的支持已经在 [Firefox 120](/zh-CN/docs/Mozilla/Firefox/Releases/120#http) 中添加。详情请参见 [Firefox bug 1874445](https://bugzil.la/1874445)。
 
 ### API
 
-- [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 现已支持跨源凭据创建。更具体地，如果顶层嵌入的 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 的 [`Feature-Policy: publickey-credentials-create`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) 允许，现在可以在从不同来源加载的嵌套浏览上下文中调用 [`navigator.credentials.create({publicKey})`](/zh-CN/docs/Web/API/CredentialsContainer/create)。（[Firefox bug 1870863](https://bugzil.la/1870863)）。
+- [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 现已支持跨源凭据创建。更具体地，如果顶层嵌入的 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allow) 的 [`Feature-Policy: publickey-credentials-create`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) 允许，现在可以在从不同来源加载的嵌套浏览上下文中调用 [`navigator.credentials.create({publicKey})`](/zh-CN/docs/Web/API/CredentialsContainer/create)。（[Firefox bug 1870863](https://bugzil.la/1870863)）。
 
 #### DOM
 

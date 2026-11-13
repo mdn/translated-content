@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
-
 HTTP 요청 대상을 "리소스"라고 하며 리소스의 특성은 더 이상 정의되지 않습니다. 리소스는 문서, 사진 등으로 그 어떤 것이든 될 수 있습니다. 각 리소스는 리소스 식별을 위해 HTTP 전체에서 사용되는 {{Glossary("URI")}}(Uniform Resource Identifier)로 식별됩니다.
 
 ## URL과 URN
@@ -53,7 +51,7 @@ urn:ietf:rfc:7230
 
 | 스키마      | 설명                                                         |
 | ----------- | ------------------------------------------------------------ |
-| data        | [Data URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)       |
+| data        | [Data URL](/ko/docs/Web/URI/Reference/Schemes/data)       |
 | file        | 호스트별 파일 이름                                           |
 | ftp         | {{Glossary("FTP","파일 전송 프로토콜")}}                     |
 | http/https  | [하이퍼 텍스트 전송 프로토콜 (보안)](/ko/docs/Glossary/HTTP) |
@@ -113,5 +111,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## 같이 보기
 
-- [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/What_is_a_URL)
+- [URL이란 무엇인가?](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [IANA URI 체계 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

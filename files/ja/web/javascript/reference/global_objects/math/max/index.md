@@ -1,28 +1,40 @@
 ---
 title: Math.max()
+short-title: max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Math.max()`** は静的メソッドで、入力引数として与えられた数値のうち最大の値を返します。引数がなかった場合は -{{jsxref("Infinity")}} を返します。
 
-**`Math.max()`** 関数は、入力引数として与えられた 0 個以上の数値のうち最大の数を返します。引数がなかった場合は -{{jsxref("Infinity")}} を返します。
+{{InteractiveExample("JavaScript デモ: Math.max()")}}
 
-{{EmbedInteractiveExample("pages/js/math-max.html")}}
+```js interactive-example
+console.log(Math.max(1, 3, 2));
+// 予想される結果: 3
+
+console.log(Math.max(-1, -3, -2));
+// 予想される結果: -1
+
+const array = [1, 3, 2];
+
+console.log(Math.max(...array));
+// 予想される結果: 3
+```
 
 ## 構文
 
 ```js-nolint
 Math.max()
-Math.max(value0)
-Math.max(value0, value1)
-Math.max(value0, value1, /* … ,*/ valueN)
+Math.max(value1)
+Math.max(value1, value2)
+Math.max(value1, value2, /* … ,*/ valueN)
 ```
 
 ### 引数
 
-- `value1`, `value2`, … , `valueN`
+- `value1`, …, `valueN`
   - : 最大値を選択して返すための、 0 個以上の数値です。
 
 ### 返値

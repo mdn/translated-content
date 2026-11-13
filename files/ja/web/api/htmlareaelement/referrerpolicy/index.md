@@ -1,13 +1,14 @@
 ---
 title: "HTMLAreaElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLAreaElement/referrerPolicy
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 {{APIRef}}
 
-**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Element/area#referrerpolicy) 属性を反映します。
+**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/area#referrerpolicy) 属性を反映します。
 
 ## 値
 
@@ -23,7 +24,7 @@ l10n:
 - `origin-when-cross-origin`
   - : 同一オリジンリクエストを行う場合は完全な URL を送信し、それ以外の場合は文書のオリジンのみを送信します。
 - `same-origin`
-  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
+  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
 - `strict-origin`
   - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
 - `strict-origin-when-cross-origin` (default)
@@ -36,7 +37,7 @@ l10n:
 
 ```html
 <img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround" />>
+<map id="myMap" name="mapAround"></map>
 ```
 
 ```js

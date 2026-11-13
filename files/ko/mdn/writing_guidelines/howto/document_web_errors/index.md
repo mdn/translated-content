@@ -2,7 +2,7 @@
 title: 웹 오류를 문서화하는 방법
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
 {{MDNSidebar}}
@@ -14,7 +14,6 @@ JavaScript 오류에는 문제 해결을 위한 추가 조언이 포함된 JavaS
 ## 1단게 – 문서화할 오류 결정하기
 
 - Firefox/Gecko의 오류 메시지: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Edge/Chakra의 오류 메시지: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
 - Chrome/v8의 오류 메시지: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
 ## 2단계 - 기존 오류 문서 확인하기
@@ -32,7 +31,6 @@ JavaScript 오류에는 문제 해결을 위한 추가 조언이 포함된 JavaS
 
 - 기존 오류 문서 중 하나에서 구조를 복사하여 사용하거나 처음부터 시작하십시오. 여러분의 선택입니다!
 - 적어도 다음 사항이 있어야 합니다.
-
   - 다른 브라우저에서 발생한 메시지를 포함한 구문 상자.
   - 오류 유형.
   - 이 오류가 발생한 이유와 그 결과를 설명하는 텍스트. 발생한 메시지 이상으로 작성.

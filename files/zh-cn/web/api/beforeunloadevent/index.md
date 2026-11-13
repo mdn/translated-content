@@ -65,4 +65,4 @@ window.addEventListener("beforeunload", function (e) {
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
 - [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
 - [`unload`](/zh-CN/docs/Web/API/Window/unload_event)
-- [卸载文档 — 提示卸载文档](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [卸载文档 — 提示卸载文档](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

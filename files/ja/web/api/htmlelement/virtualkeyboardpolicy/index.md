@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
 
-**`virtualKeyboardPolicy`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素のコンテンツが編集可能な場合（{{htmlelement("input")}} や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性が設定された要素など）、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末での画面に表示される仮想キーボードの動作を示す文字列を取得または設定します。
+**`virtualKeyboardPolicy`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素のコンテンツが編集可能な場合（{{htmlelement("input")}} や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が設定された要素など）、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末での画面に表示される仮想キーボードの動作を示す文字列を取得または設定します。
 
-これは HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) グローバル属性の値を反映します。
+これは HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) グローバル属性の値を反映します。
 
 ## 値
 
@@ -42,4 +42,4 @@ element.virtualKeyboardPolicy = "manual";
 
 ## 関連情報
 
-- HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes#virtualkeyboardpolicy) グローバル属性
+- HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) グローバル属性

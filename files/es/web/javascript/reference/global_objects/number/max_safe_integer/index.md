@@ -7,9 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 La constante **`Number.MAX_SAFE_INTEGER`** es el número mas grande 'seguro' en JavaScript (`2^53 - 1`).
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
 
-La fuente de este ejemplo interactivo está almacenada en GitHub. Si quieres contribuir al proyecto de ejmplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un 'pull request'.
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 {{js_property_attributes(0, 0, 0)}}
 

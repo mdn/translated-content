@@ -46,7 +46,7 @@ slug: Web/API/Element/mouseenter_event
 
 ## Примеры
 
-В документации по [`mouseover`](/ru/docs/Web/Events/mouseover#Example) есть пример иллюстрирующий различия между `mouseover` и `mouseenter`.
+В документации по [`mouseover`](/ru/docs/Web/API/Element/mouseover_event#example) есть пример иллюстрирующий различия между `mouseover` и `mouseenter`.
 
 ### mouseenter
 
@@ -123,7 +123,7 @@ function addListItem(text) {
 
 ## Смотрите также
 
-- [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/ru/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}

@@ -1,61 +1,52 @@
 ---
-title: change
+title: "HTMLElement : évènement change"
+short-title: change
 slug: Web/API/HTMLElement/change_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-L'événement **change** est déclenché pour les éléments {{HTMLElement("input")}} _(entrée)_, {{HTMLElement("select")}} _(sélection)_ et {{HTMLElement("textarea")}} _(zone de texte)_ lorsqu'un changement de leur valeur est réalisé par l'utilisateur. Contrairement à l'événement [`input`](/fr/docs/Web/API/HTMLElement/input_event), **change** n'est pas nécessairement déclenché pour chaque changement de valeur.
+L'évènement **`change`** de l'interface {{DOMxRef("HTMLElement")}} est déclenché sur les éléments HTML {{HTMLElement("input")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}} lorsque la personne modifie la valeur de l'élément. À la différence de l'évènement {{DOMxRef("Element/input_event", "input")}}, l'évènement `change` n'est pas nécessairement déclenché à chaque modification unitaire de la valeur de l'élément.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Propagation</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Gestionnaire d'événements</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+Selon le type d'élément modifié et l'interaction avec l'élément, l'évènement `change` pourra se déclencher à un moment différent&nbsp;:
 
-En fonction du type d'élément de formulaire modifié et de la manière dont l'utilisateur interagit avec cet élément, l'événement **change** se déclenche à un moment différent :
+- Quand un élément `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` est coché ou décoché (au clic ou au clavier)&nbsp;;
+- Quand un élément `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` est sélectionné (mais pas lorsqu'il est désélectionné)&nbsp;;
+- Lorsque l'utilisateur·ice applique le changement explicitement (par exemple en sélectionnant une valeur dans une liste déroulante {{HTMLElement("select")}} à l'aide du clic de la souris, en sélectionnant une date dans un sélecteur `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, ou en sélectionnant un fichier dans le sélecteur de fichiers `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.)&nbsp;;
+- Lorsque l'élément perd le focus après que la valeur a été changée pour les éléments où il s'agit de saisir une valeur plutôt que d'en sélectionner une, comme {{HTMLElement("textarea")}} ou les champs de type `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, ou `{{HTMLElement('input/password', 'password')}}` de l'élément HTML {{HTMLElement('input')}}.
 
-- Quand l'élément est activé (en cliquant ou en utilisant le clavier) pour `<input type="radio">` et `<input type="checkbox">`_(case à cocher_).
-- Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" _(sélecteur de date)_ pour `<input type="date">`, en sélectionnant un fichier d'un "file picker" _(sélecteur de fichier)_ pour `<input type="file">`, etc.).
-- Quand l'élément perd le focus après que sa valeur a été changée, mais pas validée (par exemple, après l'édition d'une valeur de {{HTMLElement("textarea")}} ou `<input type="text">`).
+La spécification HTML liste [les types d'éléments `<input>` qui devraient déclencher l'évènement `change`](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
 
-Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement **change** doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du \<select> (voir [bug Firefox 126379](https://bugzil.la/126379)).
+## Syntaxe
 
-[La spécification HTML répertorie les types `<input>` qui doivent déclencher l'événement `change`.](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)
+On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou alors on utilisera une propriété globale de gestion d'évènements telle que `onchange`.
+
+```js-nolint
+addEventListener("change", (event) => { })
+
+onchange = (event) => { }
+```
+
+## Type d'évènement
+
+Un évènement générique de type {{DOMxRef("Event")}}.
 
 ## Exemples
 
-### L'élément \<select>
-
-Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTML/Element/select) en appelant la fonction `changeEventHandler()` dans l'attribut `onchange`. Il lit la valeur de la cible de l'évènement et la montre dans une alerte.
+### Avec un élément `<select>`
 
 #### HTML
 
 ```html
-<label
-  >Choose an ice cream flavor:
+<label>
+  Choisissez un parfum de glace :
   <select class="ice-cream" name="ice-cream">
-    <option value="">Select One …</option>
-    <option value="chocolate">Chocolate</option>
-    <option value="sardine">Sardine</option>
-    <option value="vanilla">Vanilla</option>
+    <option value="">Choisir parmi…</option>
+    <option value="chocolat">chocolat</option>
+    <option value="sardine">sardine</option>
+    <option value="vanille">vanille</option>
   </select>
 </label>
 
@@ -77,29 +68,29 @@ select {
 }
 ```
 
-#### Javascript
+#### JavaScript
 
 ```js
 const selectElement = document.querySelector(".ice-cream");
+const result = document.querySelector(".result");
 
 selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector(".result");
-  result.textContent = `You like ${event.target.value}`;
+  result.textContent = `Vous avez choisi ${event.target.value}`;
 });
 ```
 
 #### Résultat
 
-{{ EmbedLiveSample('Lélément_select', '100%', '75px') }}
+{{EmbedLiveSample('Avec un élément `<select>`', '100%', 75)}}
 
-### L'élément d'entrée de texte
+### Avec un champ texte
 
-Pour certains éléments, notamment `<input type="text">`, l'événement de changement ne se déclenche pas tant que le contrôle ne perd pas le focus. Essayez de saisir quelque chose dans le champ ci-dessous, puis cliquez ailleurs pour déclencher l'événement.
+Pour certains éléments, dont `<input type="text">`, l'évènement `change` ne se déclenche pas tant que le contrôle n'a pas perdu le focus. Essayez de saisir quelque chose dans le champ ci-après, puis cliquez autre part afin de déclencher l'évènement.
 
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name" />
+<input placeholder="Veuillez saisir un texte" name="name" />
 <p id="log"></p>
 ```
 
@@ -118,7 +109,7 @@ function updateValue(e) {
 
 #### Résultat
 
-{{ EmbedLiveSample('Lélément_dentrée_de_texte', '100%', '75px') }}
+{{EmbedLiveSample('Avec un champ texte', '100%', 90)}}
 
 ## Spécifications
 
@@ -128,9 +119,4 @@ function updateValue(e) {
 
 {{Compat}}
 
-## Voir aussi
-
-Cet événement est aussi déclenché dans plusieurs API non-standard:
-
-- {{domxref("NetworkInformation.connection")}} déclenche l'événement **change** lorsque les informations de connexions changent.
-- {{domxref("DeviceStorageChangeEvent")}} est déclenché à chaque fois qu'un fichier est créé, modifié, ou supprimé du système de stockage du périphérique.
+Les navigateurs ne sont pas toujours d'accord sur le moment où l'évènement `change` doit être déclenché pour certains types d'interaction. Par exemple, la navigation au clavier dans les éléments HTML {{HTMLElement("select")}} ne déclenchait autrefois jamais d'évènement `change` dans Gecko tant que l'utilisateur·ice n'appuyait pas sur Entrée ou ne déplaçait pas la sélection en dehors du `<select>` (voir le bug [Firefox 126379 <sup>(angl.)</sup>](https://bugzil.la/126379)). Depuis Firefox 63 (Quantum), ce comportement est cependant cohérent entre les principaux navigateurs.

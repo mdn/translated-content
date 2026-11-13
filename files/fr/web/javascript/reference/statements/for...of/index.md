@@ -3,11 +3,21 @@ title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 ---
 
-{{jsSidebar("Statements")}}
+L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Iteration_protocols","objet itérable","#le_protocole_itérable",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Functions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
 
-L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntaxe
 
@@ -22,7 +32,7 @@ for (variable of iterable) {
 - `iterable`
   - : L'objet dont on parcourt les propriétés énumérables.
 - `instruction`
-  - : Une instruction à exécuter pour chaque propriété, cette instruction peut être composée de plusieurs instructions en utilisant un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions.
+  - : Une instruction à exécuter pour chaque propriété, cette instruction peut être composée de plusieurs instructions en utilisant un {{jsxref("Statements/block","bloc","",1)}} d'instructions.
 
 ## Exemples
 
@@ -39,7 +49,7 @@ for (let valeur of tableauItérable) {
 // 3
 ```
 
-Si la variable n'est pas réaffectée dans la boucle, on pourra également utiliser [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) à la place de [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) :
+Si la variable n'est pas réaffectée dans la boucle, on pourra également utiliser [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) à la place de [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) :
 
 ```js
 let tableauItérable = [1, 2, 3];
@@ -126,7 +136,7 @@ Object.keys(arr).forEach(function (element, index) {
 
 ### Parcourir l'objet `arguments`
 
-Il est possible de parcourir l'objet {{jsxref("Fonctions/arguments", "arguments")}} afin d'examiner l'ensemble des paramètres passés à la fonction :
+Il est possible de parcourir l'objet {{jsxref("Functions/arguments", "arguments")}} afin d'examiner l'ensemble des paramètres passés à la fonction :
 
 ```js
 (function () {
@@ -173,7 +183,7 @@ for (let o of toto()) {
 
 ### Itérer sur les générateurs
 
-Grâce à cette instruction, on peut également itérer sur les {{jsxref("Instructions/function*","générateurs","",1)}} :
+Grâce à cette instruction, on peut également itérer sur les {{jsxref("Statements/function*","générateurs","",1)}} :
 
 ```js
 function* fibonacci() {
@@ -196,7 +206,7 @@ for (let n of fibonacci()) {
 
 ### Itérer sur les autres objets itérables
 
-Il est aussi possible d'itérer sur un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_») de façon explicite :
+Il est aussi possible d'itérer sur un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») de façon explicite :
 
 ```js
 var iterable = {
@@ -226,9 +236,9 @@ console.log("fini !");
 
 Les deux instructions `for...in` et `for...of` permettent de parcourir un ensemble. Mais elles ne parcourent pas le même ensemble.
 
-L'instruction {{jsxref("Instructions/for...in", "for...in")}} permet de parcourir [les propriétés énumérables](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement) d'un objet dans un ordre arbitraire.
+L'instruction {{jsxref("Statements/for...in", "for...in")}} permet de parcourir [les propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet dans un ordre arbitraire.
 
-L'instruction `for...of` permet quant à elle de parcourir les données contenues dans l'[objet itérable](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérables) visé.
+L'instruction `for...of` permet quant à elle de parcourir les données contenues dans l'[objet itérable](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérables) visé.
 
 Dans l'exemple qui suit, on illustre la différence de comportement entre une boucle `for...of` et une boucle `for...in` utilisées sur un tableau ({{jsxref("Array")}}).
 
@@ -255,7 +265,7 @@ for (let i of iterable) {
 }
 ```
 
-Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object.prototype")}} et {{jsxref("Array.prototype")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes).
+Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object")}} et {{jsxref("Array")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```js
 for (let i in iterable) {
@@ -264,7 +274,7 @@ for (let i in iterable) {
 }
 ```
 
-Cette boucle ne parcourt que les [propriétés énumérables](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement) de l'objet `iterable` dans un ordre arbitraire. Les éléments du tableau `3`, `5`, `7` ou `hello` ne sont pas affichés car ce ne sont pas des propriétés (et encore moins des propriétés énumérables). En revanche, on retrouve bien les indices du tableau et les propriétés `arrCustom` et `objCustom`. Pour décrire plus précisément ce comportement, vous pouvez consulter {{jsxref("Instructions/for...in", "for...in", "#/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau")}}.
+Cette boucle ne parcourt que les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) de l'objet `iterable` dans un ordre arbitraire. Les éléments du tableau `3`, `5`, `7` ou `hello` ne sont pas affichés car ce ne sont pas des propriétés (et encore moins des propriétés énumérables). En revanche, on retrouve bien les indices du tableau et les propriétés `arrCustom` et `objCustom`. Pour décrire plus précisément ce comportement, vous pouvez consulter {{jsxref("Statements/for...in", "for...in", "#/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau")}}.
 
 ```js
 for (let i in iterable) {
@@ -282,11 +292,11 @@ for (let i of iterable) {
 }
 ```
 
-Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
+Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_itérable) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
 
 ### Attention à ne pas réutiliser les générateurs
 
-Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. [bug Firefox 1147371](https://bugzil.la/1147371)).
+Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Statements/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. [bug Firefox 1147371](https://bugzil.la/1147371)).
 
 ```js
 var gen = (function* () {

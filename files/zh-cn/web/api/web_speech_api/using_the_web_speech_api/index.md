@@ -136,7 +136,7 @@ document.body.onclick = () => {
 
 #### 接收、处理结果
 
-一旦语音识别开始，有许多 event handlers 可以用于做结果返回的后续操作，除了识别的结果外还有些零碎的相关信息可供操作 (可查看 [`SpeechRecognition` event handlers list](/zh-CN/docs/Web/API/SpeechRecognition#Event_handlers) )。最常见会使用的一个是 [`SpeechRecognition.onresult`](/zh-CN/docs/Web/API/SpeechRecognition/onresult) ，这在收到一个成功的结果时候触发。
+一旦语音识别开始，有许多 event handlers 可以用于做结果返回的后续操作，除了识别的结果外还有些零碎的相关信息可供操作 (可查看 [`SpeechRecognition` event handlers list](/zh-CN/docs/Web/API/SpeechRecognition#Event_handlers) )。最常见会使用的一个是 [`SpeechRecognition.onresult`](/zh-CN/docs/Web/API/SpeechRecognition/result_event) ，这在收到一个成功的结果时候触发。
 
 ```js
 recognition.onresult = (event) => {
@@ -149,7 +149,7 @@ recognition.onresult = (event) => {
 
 代码中第三行看上去有一点复杂，让我们一步一步解释以下。[`SpeechRecognitionEvent.results`](/zh-CN/docs/Web/API/SpeechRecognitionEvent/results) 属性返回的是一个[`SpeechRecognitionResultList`](/zh-CN/docs/Web/API/SpeechRecognitionResultList) 对象 (这个对象会包含[`SpeechRecognitionResult`](/zh-CN/docs/Web/API/SpeechRecognitionResult) 对象们)，它有一个 getter，所以它包含的这些对象可以像一个数组被访问到——所以`[last]` 返回的是排在最后位置 (最新) 的`SpeechRecognitionResult`对象。每个`SpeechRecognitionResult` 对象包含的 [`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象含有一个被识别的单词。这些`SpeechRecognitionResult` 对象也有一个 getter，所以`[0]` 返回的是其中包含的第一个[`SpeechRecognitionAlternative`](/zh-CN/docs/Web/API/SpeechRecognitionAlternative) 对象。最后返回的`transcript`属性就是被识别单词的字符串，把背景颜色设置为这个颜色，并在 UI 中报告出这个结果信息。
 
-也使用了 [`SpeechRecognition.onspeechend`](/zh-CN/docs/Web/API/SpeechRecognition/onspeechend) 这个 handle 停止语音识别服务 (具体工作在[`SpeechRecognition.stop()`](/zh-CN/docs/Web/API/SpeechRecognition/stop)) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)
+也使用了 [`SpeechRecognition.onspeechend`](/zh-CN/docs/Web/API/SpeechRecognition/speechend_event) 这个 handle 停止语音识别服务 (具体工作在[`SpeechRecognition.stop()`](/zh-CN/docs/Web/API/SpeechRecognition/stop)) ，一旦一个单词被识别就不能再说咯 (必须再点击屏幕再次开启语音识别)
 
 ```js
 recognition.onspeechend = () => {
@@ -161,7 +161,7 @@ recognition.onspeechend = () => {
 
 最后两个处理器处理的两种情况，一种是你说的内容不在定义的语法中所以识别不了，另一种是出现了 error。
 
-[`SpeechRecognition.onnomatch`](/zh-CN/docs/Web/API/SpeechRecognition/onnomatch) 支持的就是第一种，但是得注意它似乎在 Firefox 或者 Chrome 中触发会有问题；它只是返回任何被识别的内容：
+[`SpeechRecognition.onnomatch`](/zh-CN/docs/Web/API/SpeechRecognition/nomatch_event) 支持的就是第一种，但是得注意它似乎在 Firefox 或者 Chrome 中触发会有问题；它只是返回任何被识别的内容：
 
 ```js
 recognition.onnomatch = (event) => {
@@ -169,7 +169,7 @@ recognition.onnomatch = (event) => {
 };
 ```
 
-[`SpeechRecognition.onerror`](/zh-CN/docs/Web/API/SpeechRecognition/onerror) 处理的是第二种情况，识别成功了但是有 error 出现——[`SpeechRecognitionError.error`](/zh-CN/docs/Web/API/SpeechRecognitionError/error) 属性包含的信息就是返回的确切的 error 是什么。
+[`SpeechRecognition.onerror`](/zh-CN/docs/Web/API/SpeechRecognition/error_event) 处理的是第二种情况，识别成功了但是有 error 出现——[`SpeechRecognitionError.error`](/zh-CN/docs/Web/API/SpeechRecognitionErrorEvent/error) 属性包含的信息就是返回的确切的 error 是什么。
 
 ```js
 recognition.onerror = (event) => {
@@ -282,7 +282,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 接下来我们创建一个事件处理器（event handler），开始说出在文本框中输入的文本。我们把 [onsubmit](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) 处理器挂在表单上，当 <kbd>Enter</kbd>/<kbd>Return</kbd> 被按下，对应行为就会发生。我们首先通过构造函数创建一个新的 {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} 实例——把文本输入框中的值作为参数传递。
 
-接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素。然后使用元素的 `data-name` 属性，找到 `name` 匹配该属性值的 {{domxref("SpeechSynthesisVoice")}} 对象。把匹配的语音对象设置为{{domxref("SpeechSynthesisUtterance.voice")}} 的属性值。
+接下来，我们需要弄清楚使用哪种语音。使用 {{domxref("HTMLSelectElement")}} `selectedOptions` 属性返回当前选中的 [`<option>`](/zh-CN/docs/Web/HTML/Reference/Elements/option) 元素。然后使用元素的 `data-name` 属性，找到 `name` 匹配该属性值的 {{domxref("SpeechSynthesisVoice")}} 对象。把匹配的语音对象设置为{{domxref("SpeechSynthesisUtterance.voice")}} 的属性值。
 
 最后，我们设置 [`SpeechSynthesisUtterance.pitch`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pitch) 和[`SpeechSynthesisUtterance.rate`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/rate) 属性值为对应范围表单元素中的值。哈哈所有准备工作就绪，调用 [`SpeechSynthesis.speak()`](/zh-CN/docs/Web/API/SpeechSynthesis/speak) 开始说话。把 [`SpeechSynthesisUtterance`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance) 实例作为参数传递。
 
@@ -302,7 +302,7 @@ inputForm.onsubmit = (event) => {
   synth.speak(utterThis);
 ```
 
-在事件处理器的最后部分，我们加入了一个 [`SpeechSynthesisUtterance.onpause`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/onpause) 处理器，来展示[`SpeechSynthesisEvent`](/zh-CN/docs/Web/API/SpeechSynthesisEvent) 如何可以很好地使用。当 [`SpeechSynthesis.pause()`](/zh-CN/docs/Web/API/SpeechSynthesis/pause) 被调用，这将返回一条消息，报告该语音暂停时的字符编号和名称。
+在事件处理器的最后部分，我们加入了一个 [`SpeechSynthesisUtterance.onpause`](/zh-CN/docs/Web/API/SpeechSynthesisUtterance/pause_event) 处理器，来展示[`SpeechSynthesisEvent`](/zh-CN/docs/Web/API/SpeechSynthesisEvent) 如何可以很好地使用。当 [`SpeechSynthesis.pause()`](/zh-CN/docs/Web/API/SpeechSynthesis/pause) 被调用，这将返回一条消息，报告该语音暂停时的字符编号和名称。
 
 ```js
 utterThis.onpause = (event) => {

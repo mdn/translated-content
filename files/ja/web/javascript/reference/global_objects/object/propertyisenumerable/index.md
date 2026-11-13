@@ -1,15 +1,30 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
+short-title: propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
 
-**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
+{{InteractiveExample("JavaScript デモ: Object.prototype.propertyIsEnumerable()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
+```js interactive-example
+const object = {};
+const array = [];
+object.foo = 42;
+array[0] = 42;
+
+console.log(object.propertyIsEnumerable("foo"));
+// 予想される結果: true
+
+console.log(array.propertyIsEnumerable(0));
+// 予想される結果: true
+
+console.log(array.propertyIsEnumerable("length"));
+// 予想される結果: false
+```
 
 ## 構文
 
@@ -92,7 +107,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### シンボルプロパティの検査
 
-`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
 
 ```js
 const sym = Symbol("enumerable");
@@ -145,7 +160,7 @@ Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 
 ## 関連情報
 
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

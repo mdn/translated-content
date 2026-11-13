@@ -1,8 +1,9 @@
 ---
 title: "CSS: paintWorklet 静的プロパティ"
+short-title: paintWorklet
 slug: Web/API/CSS/paintWorklet_static
 l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
@@ -34,4 +35,4 @@ if ("paintWorklet" in CSS) {
 ## 関連情報
 
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Houdini API](/ja/docs/Web/Guide/Houdini)
+- [Houdini API](/ja/docs/Web/API/Houdini_APIs)

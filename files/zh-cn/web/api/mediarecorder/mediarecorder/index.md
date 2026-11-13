@@ -19,9 +19,7 @@ new MediaRecorder(stream, options)
 - **`stream`**
   - : {{domxref("MediaStream")}} 将要录制的流。它可以是来自于使用 {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} 创建的流或者来自于 {{HTMLElement("audio")}}, {{HTMLElement("video")}} 以及 {{HTMLElement("canvas")}} DOM 元素。
 - **`options`** {{optional_inline}}
-
   - : 一个字典对象，它可以包含下列属性：
-
     - `mimeType`: 为新构建的 `MediaRecorder` 指定录制容器的 MIME 类型。在应用中通过调用 {{domxref("MediaRecorder.isTypeSupported()")}} 来检查浏览器是否支持此种`mimeType` .
     - `audioBitsPerSecond`: 指定音频的比特率。
     - `videoBitsPerSecond`: 指定视频的比特率。
@@ -64,7 +62,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 更多信息
 
-- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
-- [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}

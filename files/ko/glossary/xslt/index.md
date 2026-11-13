@@ -14,4 +14,4 @@ XSLT은 has its own processor that accepts XML 입력이나 XQuery 및 XPath 데
 ## 같이 보기
 
 - [XSLT](https://en.wikipedia.org/wiki/XSLT) on Wikipedia
-- [MDN의 XSLT 명세서](/ko/docs/Web/XSLT)
+- [MDN의 XSLT 명세서](/ko/docs/Web/XML/XSLT)

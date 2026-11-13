@@ -83,8 +83,8 @@ document.body.appendChild(header);
 
 Мы удалили ключ `content_scripts` и добавили два новых:
 
-- [`permissions (разрешения)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем. [Разрешение `activeTab`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) это способ получить доступ к текущей вкладки. Нам также нужно разрешение `contextMenus`, чтобы добавлять в контекстное меню новые элементы.
-- [`background (фоновый)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): мы используем этот ключ, для загрузки постоянного ["фонового скрипта"](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), с именем "background.js", в котором мы настроим контекстное меню и внедрим контентный скрипт.
+- [`permissions (разрешения)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем. [Разрешение `activeTab`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) это способ получить доступ к текущей вкладки. Нам также нужно разрешение `contextMenus`, чтобы добавлять в контекстное меню новые элементы.
+- [`background (фоновый)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): мы используем этот ключ, для загрузки постоянного ["фонового скрипта"](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), с именем "background.js", в котором мы настроим контекстное меню и внедрим контентный скрипт.
 
 Давайте создадим этот файл. Создадим новый файл "background.js" в директории "modify-page" и поместим в него следующий код:
 
@@ -103,7 +103,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-В этом скрипте мы создаём [элемент контекстного меню](/en-US/Add-ons/WebExtensions/API/ContextMenus/create), передавая ему определённый идентификатор и заголовок (текст будет отображаться в элементе контекстного меню). Затем мы настраиваем обработчик событий таким образом, чтобы когда пользователь выбирает пункт контекстного меню, осуществлялась проверка, наш ли это элемент `eat-page`. Если это так - внедряем скрипт "page-eater.js" в текущую вкладку, используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. Это API опционально принимает идентификатор вкладки, в качестве аргумента. Мы опустили его, это означает, что скрипт будет внедряться в текущую активную вкладку.
+В этом скрипте мы создаём [элемент контекстного меню](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus/create), передавая ему определённый идентификатор и заголовок (текст будет отображаться в элементе контекстного меню). Затем мы настраиваем обработчик событий таким образом, чтобы когда пользователь выбирает пункт контекстного меню, осуществлялась проверка, наш ли это элемент `eat-page`. Если это так - внедряем скрипт "page-eater.js" в текущую вкладку, используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. Это API опционально принимает идентификатор вкладки, в качестве аргумента. Мы опустили его, это означает, что скрипт будет внедряться в текущую активную вкладку.
 
 На данном этапе расширение должно иметь следующий вид:
 
@@ -122,10 +122,10 @@ modify-page/
 
 Контентные и фоновые скрипты не могут на прямую взаимодействовать друг с другом. Не смотря на это они могут взаимодействовать с помощью обмена сообщениями. Для этого один конец создаёт обработчик сообщений, а другой - может посылать сообщения. В следующей таблице представлены API-интерфейсы, задействованные с каждой стороны:
 
-|                     | В контентном скрипте                                                                        | В фоновом скрипте                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Отправка сообщения  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| Получение сообщения | [`browser.runtime.onMessage`](/en-US/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/en-US/Add-ons/WebExtensions/API/runtime#onMessage) |
+|                     | В контентном скрипте                                                                        | В фоновом скрипте                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Отправка сообщения  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
+| Получение сообщения | [`browser.runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
 
 Давайте обновим наш пример, чтобы посмотреть, как послать сообщение из фонового скрипта.
 
@@ -192,12 +192,10 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Примеры использования `content_scripts`:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - Примеры использования `tabs.executeScript()`:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)

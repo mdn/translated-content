@@ -3,8 +3,6 @@ title: アドオンバー
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザーウィンドウの下部からステータスバーが削除されます。この新しいツールバーは ID "addon-bar" を持った、標準の XUL `<toolbar>` です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの XUL 要素でもアドオンバーに配置することができます。
 
 > [!NOTE]
@@ -35,7 +33,7 @@ addonBar.appendChild(newItem);
 itemLabel.value = "Hello world!";
 ```
 
-To add the button only once create a bool pref to check if it is the first run. [For example](http://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
+To add the button only once create a bool pref to check if it is the first run. [For example](https://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
 
 ```js
 var firstrun = Services.prefs.getBoolPref("extensions.YOUREXT.firstrun");
@@ -78,7 +76,7 @@ overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/ov
 
 ### デフォルトでボタンを追加
 
-参照 : [Adding a button by default](/ja/docs/Code_snippets/Toolbar#Adding_button_by_default)
+参照 : [Adding a button by default](/ja/docs/orphaned/Code_snippets/Toolbar#adding_button_by_default)
 
 ## 見た目の違い
 

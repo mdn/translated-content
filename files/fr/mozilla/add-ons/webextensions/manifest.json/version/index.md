@@ -26,7 +26,7 @@ Version de l'extension, sous forme de nombres et de caractères ASCII séparés 
 
 Vous pouvez inspecter le [code de linter des modules complémentaires](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) pour voir comment les versions d'extension pour Firefox sont validées.
 
-Notez que [la syntaxe définie pour la version de Chrome](https://developer.chrome.com/extensions/manifest/version) est plus restrictive que celle utilisée par Firefox :
+Notez que [la syntaxe définie pour la version de Chrome](https://developer.chrome.com/docs/extensions/reference/manifest/version) est plus restrictive que celle utilisée par Firefox :
 
 - Les valeurs d'une `version` valide pour Chrome seront toujours valables pour Firefox
 - Les valeurs d'une `version` valide pour Firefox peuvent ne pas être valides pour Chrome

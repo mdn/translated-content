@@ -28,4 +28,4 @@ window.name = "lab_view";
 
 Имя окна используется, в основном, для задания свойства `target` гиперссылок и форм.
 
-Также оно может использоваться в фреймворках для предоставления кросс-доменного обмена сообщениями (например, [SessionVars](http://www.thomasfrank.se/sessionvars.html) и [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) из Dojo) как более безопасная альтернатива JSONP.
+Также оно может использоваться в фреймворках для предоставления кросс-доменного обмена сообщениями (например, [SessionVars](https://www.thomasfrank.se/sessionvars.html) и [dojox.io.windowName](http://www.sitepen.com/blog/2008/07/22/windowname-transport/) из Dojo) как более безопасная альтернатива JSONP.

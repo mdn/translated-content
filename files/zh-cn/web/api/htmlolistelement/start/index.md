@@ -9,9 +9,10 @@ l10n:
 
 {{domxref("HTMLOListElement")}} 接口的 **`start`** 属性表示有序列表的起始值，默认值是 1。
 
-它反映了 {{HTMLElement("ol")}} 元素的 [`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性。
+它反映了 {{HTMLElement("ol")}} 元素的 [`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性。
 
-> **备注：** `start` 属性值独立于 {{domxref("HTMLOListElement.type")}} 属性；它总是数字，即使当类型是字母或罗马数字。
+> [!NOTE]
+> `start` 属性值独立于 {{domxref("HTMLOListElement.type")}} 属性；它总是数字，即使当类型是字母或罗马数字。
 
 ## 值
 

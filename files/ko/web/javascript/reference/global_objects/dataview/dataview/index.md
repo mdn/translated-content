@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 
 **`DataView()`** 생성자는 새로운 {{jsxref("DataView")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## 구문
 

@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 实例的 **`resize()`** 方法将 `ArrayBuffer` 调整为指定的大小，以字节为单位。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-resize.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.resize()")}}
+
+```js interactive-example
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+buffer.resize(12);
+
+console.log(buffer.byteLength);
+// Expected output: 12
+```
 
 ## 语法
 

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 El objeto `WeakMap` es una colección de pares llave/valor en la que las llaves
 deben ser objetos con valores de cualquier
-[tipo de dato en JavaScript](/es/docs/Web/JavaScript/Data_structures#javascript_types),
+[tipo de dato en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#javascript_types),
 y el cual no crea fuertes referencias a sus llaves.
 Es decir, la presencia de un objeto como llave en un `WeakMap` no evita que el
 objeto sea recolectado como basura. Una vez que se ha recopilado un objeto
@@ -39,7 +39,7 @@ Obtener valores del mapa implicaría iterar a través de todas las llaves hasta 
 
 Tal implementación tendría dos inconvenientes principales:
 
-1. El primero es una búsqueda *O(*n*)* (siendo _n_ el número de claves en el mapa) ya que ambas operaciones deben iterar a través de la lista de llaves para encontrar un valor coincidente.
+1. El primero es una búsqueda _O(*n*)_ (siendo _n_ el número de claves en el mapa) ya que ambas operaciones deben iterar a través de la lista de llaves para encontrar un valor coincidente.
 2. El segundo inconveniente es un problema de pérdida de memoria por que los arreglos se aseguran que las referencias a cada llave y cada valor se mantengan indefinidamente. Estas referencias evitan que las llaves se recopilen como basura, incluso si no hay otras referencias al objeto. Esto también evitaría que los valores correspondientes se recopilen como basura.
 
 Por el contrario, en un `WeakMap`, un objeto llave se refiere fuertemente a su contenido siempre que la llave no se recolecte como basura, pero débilmente a partir de ese momento. Como tal, un `WeakMap`:

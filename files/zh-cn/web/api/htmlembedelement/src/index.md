@@ -7,7 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLEmbedElement")}} 接口的 **`src`** 属性返回一个指示嵌入资源的 URL 字符串。它反映 {{HTMLElement("embed")}} 元素的 `src` 属性。
+{{domxref("HTMLEmbedElement")}} 接口的 **`src`** 属性返回一个指示嵌入资源的 URL 字符串。
+
+它反映 {{HTMLElement("embed")}} 元素的 `src` 属性。
 
 ## 值
 

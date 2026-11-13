@@ -1,5 +1,6 @@
 ---
 title: Array.of()
+short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
@@ -9,7 +10,15 @@ l10n:
 
 **`array.of()`** 정적 메서드는 인자의 수나 유형에 관계없이 가변적인 수의 인자로부터 새로운 `Array` 인스턴스를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// Expected output: Array []
+```
 
 ## 구문
 

@@ -3,11 +3,22 @@ title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
 
-{{JSRef}}
+Le symbole « connu » **`Symbol.hasInstance`** est utilisé afin de déterminer si un objet constructeur reconnaît un objet comme une de ses instances. On peut donc adapter/personnaliser le comportement de l'opérateur {{jsxref("instanceof")}} grâce à ce symbole.
 
-Le symbole « connu » **`Symbol.hasInstance`** est utilisé afin de déterminer si un objet constructeur reconnaît un objet comme une de ses instances. On peut donc adapter/personnaliser le comportement de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}} grâce à ce symbole.
+{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
+```js interactive-example
+class Array1 {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+
+console.log([] instanceof Array1);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Exemples
 
@@ -32,4 +43,4 @@ console.log([] instanceof MonArray); // true
 
 ## Voir aussi
 
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}

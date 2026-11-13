@@ -3,11 +3,24 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 ---
 
-{{jsSidebar("Operators")}}
+Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'itération/génération à un autre {{jsxref("Statements/function*", "générateur")}} ou à un autre objet itérable.
 
-Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'itération/génération à un autre {{jsxref("Instructions/function*", "générateur")}} ou à un autre objet itérable.
+{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
+```js interactive-example
+function* func1() {
+  yield 42;
+}
+
+function* func2() {
+  yield* func1();
+}
+
+const iterator = func2();
+
+console.log(iterator.next().value);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -110,7 +123,7 @@ console.log(résultat); // "toto"
 
 ## Voir aussi
 
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator)
-- L'instruction {{jsxref("Instruction/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("Opérateurs/yield", "yield")}}
+- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- L'instruction {{jsxref("Statements/function*", "function*")}}
+- L'expression {{jsxref("Operators/function*", "function*")}}
+- {{jsxref("Operators/yield", "yield")}}

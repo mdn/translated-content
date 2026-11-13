@@ -3,10 +3,6 @@ title: HTML
 slug: Glossary/HTML
 ---
 
-{{GlossarySidebar}}
-
-{{QuickLinksWithSubpages("/zh-TW/docs/Glossary")}}
-
 超文件標記語言（**HTML**，HyperText Markup Language）是用於指定網頁結構的描述性語言。
 
 ## 簡歷
@@ -33,7 +29,7 @@ HTML 文件的副檔名通常存為 `.htm` 或是 `.html`。它們會放在{{Glo
 
 ### 學習 HTML
 
-- [我們的 HTML 教學](/zh-TW/docs/Learn/HTML)
+- [我們的 HTML 教學](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
 - [codecademy.com 的網路課程](https://www.codecademy.com/en/tracks/web)
 
 ### 技術參考

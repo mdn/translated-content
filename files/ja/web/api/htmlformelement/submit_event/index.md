@@ -14,7 +14,8 @@ l10n:
 
 `submit` イベントは、ユーザーが{{Glossary("submit button", "送信ボタン")}}を押したり、 <kbd>Enter</kbd> キーをフォーム内のフィールド（例えば {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}）の編集中に押したりしたときに発生します。このイベントは {{domxref("HTMLFormElement.submit()", "form.submit()")}} メソッドを呼び出した場合には送信されません。
 
-> **メモ:** [フォームの検証](/ja/docs/Learn/Forms/Form_validation)に合格していないフォームを送信しようとすると、 {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生します。この場合、フォーム検証が送信を阻止しますので、 `submit` イベントは発生しません。
+> [!NOTE]
+> [フォームの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に合格していないフォームを送信しようとすると、 {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生します。この場合、フォーム検証が送信を阻止しますので、 `submit` イベントは発生しません。
 
 ## 構文
 

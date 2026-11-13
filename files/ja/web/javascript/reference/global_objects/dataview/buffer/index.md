@@ -1,13 +1,25 @@
 ---
 title: DataView.prototype.buffer
+short-title: buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`buffer`** は {{jsxref("DataView")}} インスタンスのアクセサープロパティで、このビューの構築時に参照された {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を表します。
 
-**`buffer`** アクセサープロパティは、この `DataView` の構築時に参照された {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} を表します。
+{{InteractiveExample("JavaScript デモ: DataView.buffer")}}
 
-{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
+```js interactive-example
+// ArrayBuffer を作成
+const buffer = new ArrayBuffer(123);
+
+// ビューを作成
+const view = new DataView(buffer);
+
+console.log(view.buffer.byteLength);
+// 予想される結果: 123
+```
 
 ## 解説
 
@@ -18,8 +30,8 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ### buffer プロパティの使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.buffer; // ArrayBuffer { byteLength: 8 }
 ```
 

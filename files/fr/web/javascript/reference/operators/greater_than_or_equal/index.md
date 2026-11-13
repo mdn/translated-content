@@ -3,11 +3,24 @@ title: Supérieur ou égal (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur supérieur ou égal (`>=`) renvoie `true` si l'opérande gauche est supérieur ou égal à l'opérande droit et `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/expressions-greater-than-or-equal.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}
+
+```js interactive-example
+console.log(5 >= 3);
+// Expected output: true
+
+console.log(3 >= 3);
+// Expected output: true
+
+// Compare bigint to number
+console.log(3n >= 5);
+// Expected output: false
+
+console.log("ab" >= "aa");
+// Expected output: true
+```
 
 ## Syntaxe
 

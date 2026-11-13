@@ -25,7 +25,7 @@ console.info(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Объекты JavaScript, которыми заменятся маски в строке `msg`. Так можно дополнительно контролировать формат вывода. Например, `console.info('Output %f', 234);` выведет в консоль: `Output 234.000000`
 
-Смотрите [Вывод текста в консоль](/ru/docs/Web/API/console#Outputting_text_to_the_console) в документации {{domxref("console")}} для получения подробностей.
+Смотрите [Вывод текста в консоль](/ru/docs/Web/API/console#outputting_text_to_the_console) в документации {{domxref("console")}} для получения подробностей.
 
 ## Спецификации
 
@@ -37,5 +37,5 @@ console.info(msg [, subst1, ..., substN]);
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

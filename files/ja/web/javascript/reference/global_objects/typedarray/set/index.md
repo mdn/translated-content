@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`set()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-set.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.set()")}}
+
+```js interactive-example
+// ArrayBuffer をバイト単位のサイズで作成
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+
+// 値を配列のインデックス 3 からコピーする
+uint8.set([1, 2, 3], 3);
+
+console.log(uint8);
+// 予想される結果: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+```
 
 ## 構文
 
@@ -24,9 +35,9 @@ set(typedarray, targetOffset)
 ### 引数
 
 - `array`
-  - : 値のコピーする配列です。コピー元の配列からのすべての値がコピー先の配列にコピーされます。ただし、コピー元の配列の長さにオフセットを加えた長さがコピー先の配列の長さを超えた場合は、例外が発生します。
+  - : 値をコピーする配列です。コピー元の配列のすべての値がコピー先の配列にコピーされます。ただし、コピー元の配列の長さにオフセットを加えた長さがコピー先の配列の長さを超える場合は、例外が発生します。
 - `typedarray`
-  - : コピー元の配列が型付き配列の場合、2 つの配列は同じ {{jsxref("ArrayBuffer")}} を共有することができます。 JavaScript エンジンは、バッファーのコピー元の範囲をコピー先の範囲にインテリジェントに **copy** します。
+  - : コピー元の配列が型付き配列の場合、2 つの配列は同じ {{jsxref("ArrayBuffer")}} を共有することがあります。JavaScript エンジンは、バッファー内のコピー元の範囲をコピー先の範囲に適切に **コピー** します。
 - `targetOffset` {{optional_inline}}
   - : コピー先の配列へのオフセットで、コピー元の配列からの値の書き込みを開始する位置です。この値を省略した場合は 0 と見なされます（つまり、コピー元の配列はインデックス 0 から始まるコピー先配列の値を上書きします）。
 
@@ -64,7 +75,7 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.set` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.set` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

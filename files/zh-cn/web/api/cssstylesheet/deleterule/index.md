@@ -11,8 +11,8 @@ slug: Web/API/CSSStyleSheet/deleteRule
 
 ### 语法
 
-```plain
-stylesheet.deleteRule(index)
+```js
+stylesheet.deleteRule(index);
 ```
 
 ### 参数
@@ -21,14 +21,14 @@ stylesheet.deleteRule(index)
 
 ### 示例
 
-```plain
- myStyles.deleteRule(0);
+```js
+myStyles.deleteRule(0);
 ```
 
 ### 参见
 
-- [insertRule](/zh-CN/DOM/CSSStyleSheet/insertRule)
+- [insertRule](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule)
 
 ### 规范
 
-[deleteRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)
+[deleteRule](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)

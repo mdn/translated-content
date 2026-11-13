@@ -30,9 +30,9 @@ _这个接口没有父类，不继承任何属性。_
 - **{{ domxref("Touch.screenY") }}**{{readonlyInline}}
   - : 触点相对于屏幕上边缘的 Y 坐标。
 - **{{ domxref("Touch.clientX") }}**{{readonlyInline}}
-  - : 触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 左边缘的 X 坐标。不包括任何滚动偏移。
+  - : 触点相对于可见视区 ([visual viewport](https://www.quirksmode.org/mobile/viewports2.html)) 左边缘的 X 坐标。不包括任何滚动偏移。
 - **{{ domxref("Touch.clientY") }}**{{readonlyInline}}
-  - : 触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 上边缘的 Y 坐标。不包括任何滚动偏移。
+  - : 触点相对于可见视区 ([visual viewport](https://www.quirksmode.org/mobile/viewports2.html)) 上边缘的 Y 坐标。不包括任何滚动偏移。
 - {{ domxref("Touch.pageX") }}{{readonlyInline}}
   - : 触点相对于 HTML 文档左边缘的 X 坐标。当存在水平滚动的偏移时，这个值包含了水平滚动的偏移。
 - {{ domxref("Touch.pageY") }}{{readonlyInline}}
@@ -59,7 +59,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 示例
 
-请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example)。
+请看 [example on the main Touch events article](/zh-CN/docs/Web/API/Touch_events#example)。
 
 ## 规范
 
@@ -71,7 +71,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 相关链接
 
-- [Touch events](/zh-CN/DOM/Touch_events)
+- [Touch events](/zh-CN/docs/Web/API/Touch_events)
 - {{domxref("Touch_events","Touch Events Overview")}}
 - {{ domxref("Document.createTouch()") }}
 - {{ domxref("Touch") }}

@@ -3,11 +3,24 @@ title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 
-{{JSRef}}
-
 **`Object.entries()`** 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## 语法
 
@@ -85,7 +98,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### 遍历对象
 
-使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构数组)，你可以很容易地遍历对象。
+使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#解构数组)，你可以很容易地遍历对象。
 
 ```js
 // 使用 for...of 循环
@@ -111,7 +124,7 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 参见
 
 - [`core-js` 中 `Object.entries` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

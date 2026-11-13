@@ -3,10 +3,10 @@ title: "XMLHttpRequest: responseType プロパティ"
 short-title: responseType
 slug: Web/API/XMLHttpRequest/responseType
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} (XHR) の **`responseType`** プロパティは列挙型の文字列値で、レスポンスに含まれているデータの型を示します。
 
@@ -23,13 +23,14 @@ l10n:
 - `"blob"`
   - : `response` はバイナリーデータを含む {{domxref("Blob")}} オブジェクトです。
 - `"document"`
-  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
+  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
 - `"json"`
   - : `response` は {{Glossary("JSON")}} として受信したデータの内容を解釈して生成された JavaScript オブジェクトです。
 - `"text"`
   - : `response` は文字列に入ったテキストです。
 
-> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
+> [!NOTE]
+> `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
 
 ### 例外
 
@@ -58,6 +59,6 @@ XHR のリクエストは既定では非同期です。同期モードは、 `fa
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - レスポンスデータ: {{domxref("XMLHttpRequest.response", "response")}}, {{domxref("XMLHttpRequest.responseText", "responseText")}}, {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

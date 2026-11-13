@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 
 **`propertyIsEnumerable()`** 메서드는 특정 속성이 열거가능한지 여부를 나타내는 불리언 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()")}}
+
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## 구문
 
@@ -108,7 +124,7 @@ o.propertyIsEnumerable("firstMethod"); // returns false
 
 ## 같이 보기
 
-- [Enumerability and ownership of properties](/ko/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

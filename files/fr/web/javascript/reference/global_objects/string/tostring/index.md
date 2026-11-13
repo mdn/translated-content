@@ -3,11 +3,19 @@ title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 ---
 
-{{JSRef}}
-
 La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## Syntaxe
 
@@ -42,5 +50,5 @@ console.log(x.toString()); // affiche "coucou monde"
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

@@ -7,7 +7,27 @@ slug: Web/JavaScript/Reference/Operators/Object_initializer
 
 객체는 [`new Object()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 또는 _literal_ 표기법(_initializer_ 표기법)을 사용해 초기화될 수 있습니다. 객체 초기자는 중괄호(`{}`)로 묶인 0개 이상의 객체의 프로퍼티명과 관련 값의 쌍을 콤마로 구분한 목록입니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 구문
 
@@ -89,7 +109,7 @@ let object = {
 
 ### 프로퍼티에 접근하기
 
-객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 보세요).
+객체를 생성한 후에는 이를 읽거나 변경할 수 있습니다. 객체 프로퍼티는 점 표기법 또는 대괄호 표기법을 사용해 접근할 수 있습니다(자세한 정보는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 보세요).
 
 ```js
 object.foo; // "bar"
@@ -199,7 +219,7 @@ let o = {
 
 ### 계산된 프로퍼티명
 
-ECMAScript 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. 대괄호 `[]` 안에서 표현식을 허용하며, 표현식은 프로퍼티명으로 계산되어 사용됩니다. 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 구문의 대괄호 표기법을 연상시킵니다.
+ECMAScript 2015부터 객체 초기자 구문은 계산된 프로퍼티 명도 지원합니다. 대괄호 `[]` 안에서 표현식을 허용하며, 표현식은 프로퍼티명으로 계산되어 사용됩니다. 이는 이미 프로퍼티를 읽고 설정하는 데 사용하는 [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors) 구문의 대괄호 표기법을 연상시킵니다.
 
 이제 객체 리터럴에서도 유사한 구문을 사용할 수 있습니다.
 
@@ -249,11 +269,12 @@ let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-> **경고:** {{jsxref("Object.assign()")}}은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
+> [!WARNING]
+> {{jsxref("Object.assign()")}}은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
 
 ### 프로토타입 변형
 
-`__proto__: value` 또는 `"__proto__": value` 형태의 프로토타입 정의는 `__proto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. 대신에, 제공된 값이 객체 또는 [`null`](/ko/docs/Web/JavaScript/Reference/Global_Objects/null)인 경우, 생성된 객체의 `[[Prototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `null`이 아닌 경우, 객체는 변경되지 않습니다).
+`__proto__: value` 또는 `"__proto__": value` 형태의 프로토타입 정의는 `__proto__` 이름을 갖는 프로퍼티를 생성하지 않습니다. 대신에, 제공된 값이 객체 또는 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)인 경우, 생성된 객체의 `[[Prototype]]`을 해당 값으로 변경합니다(값이 객체 또는 `null`이 아닌 경우, 객체는 변경되지 않습니다).
 
 ```js
 let obj1 = {};
@@ -304,7 +325,7 @@ assert(obj3.__proto__ === 17);
 
 ## 같이 보기
 
-- [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [프로퍼티 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/ko/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ko/docs/Web/JavaScript/Reference/Functions/set)
 - [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)

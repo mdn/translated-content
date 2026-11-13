@@ -13,7 +13,7 @@ slug: Web/API/Range/setStart
 
 ## 语法
 
-```plain
+```js-nolint
 range.setStart(startNode, startOffset);
 ```
 
@@ -43,4 +43,4 @@ range.setStart(startNode, startOffset);
 
 ## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 El método **`forEach()`** ejecuta la función indicada una vez por cada elemento del array.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Sintaxis
 
@@ -20,9 +30,7 @@ arr.forEach(function callback(currentValue, index, array) {
 ### Parámetros
 
 - `callback`
-
   - : Función a ejecutar por cada elemento, que recibe tres argumentos:
-
     - `currentValue`
       - : El elemento actual siendo procesado en el array.
     - `index` {{optional_inline}}
@@ -47,7 +55,7 @@ arr.forEach(function callback(currentValue, index, array) {
 2. el índice del elemento
 3. el array que está siendo recorrido
 
-Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto) (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
+Si un parámetro `thisArg` es proporcionado a `forEach`, será usado como el valor `this` para cada invocación de `callback` como si se llamara a `callback.call(thisArg, element, index, array)`. Si `thisArg` es `undefined` o `null`, el valor `this` dentro de la función depende si la función está o no en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode) (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
 
 El rango de elementos procesados por `forEach()` se establece antes de la primera invocación del `callback`. Los elementos que sean añadidos al vector después de que inicie la llamada a `forEach` no serán visitados por `callback`. Si los valores de los elementos existentes en el vector son modificados, el valor pasado al `callback` será el valor al momento de que forEach los visite; no se evaluarán los elementos borrados antes de ser visitados por `forEach`.
 

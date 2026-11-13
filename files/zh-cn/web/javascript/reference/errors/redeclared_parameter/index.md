@@ -3,8 +3,6 @@ title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain
@@ -54,4 +52,4 @@ function f(arg) {
 - [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
-- [Declaring variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)
+- [Declaring variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)

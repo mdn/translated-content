@@ -149,9 +149,7 @@ class JSTextDecoderStream extends TransformStream {
 这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 PWA。
 
 ```js
-let responses = [
-  /* conjoined response tree */
-];
+let responses = [/* conjoined response tree */];
 let { readable, writable } = new TransformStream();
 
 responses.reduce(
@@ -174,4 +172,4 @@ responses.reduce(
 ## 参见
 
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
-- [数据流——权威指南](https://web.dev/articles/streams)
+- [数据流——权威指南](https://web.developers.google.cn/articles/streams)

@@ -3,12 +3,12 @@ title: "Element: mousemove イベント"
 short-title: mousemove
 slug: Web/API/Element/mousemove_event
 l10n:
-  sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
 
-`mousemove` イベントは、カーソルのホットスポットが要素内にあるときに、ポインティングデバイス (通常はマウス) が移動されると、その要素に発行されます。
+`mousemove` イベントは、カーソルのホットスポットが要素内にあるときに、ポインティングデバイス（ふつうはマウス）が移動されると、その要素に発行されます。
 
 ## 構文
 
@@ -22,7 +22,7 @@ onmousemove = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -37,9 +37,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -49,9 +49,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>meta</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの X 座標です。
+  - : 前回の `mousemove` イベントの位置から相対的なマウスポインターの X 座標です。
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 前回の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的なマウスポインターの Y 座標です。
+  - : 前回の `mousemove` イベントの位置から相対的なマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : 対象ノードのパディング辺からの相対的なマウスポインターの X 座標です。
 - {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
@@ -63,9 +63,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : もしあれば、イベントの副ターゲットです。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -171,7 +171,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/click_event", "click")}}

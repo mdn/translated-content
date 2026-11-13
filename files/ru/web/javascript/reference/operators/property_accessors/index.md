@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 
 Доступ к свойствам объекта можно получить, используя точечную и скобочную записи.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## Синтаксис
 
@@ -115,7 +132,7 @@ console.log(object[bar]);
 
 ### Привязка методов
 
-Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Метод не привязан к содержащему его объекту. Это значит, что значение `this` в методах объекта не всегда указывает на него. Вместо этого, `this` "передаётся" при вызове метода. Смотрите подробнее [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ## Примеры
 

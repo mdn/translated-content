@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
-  - : `long` 値で、古い [`width`](/ja/docs/Web/HTML/Element/pre#width) 属性を反映し、{{HTMLElement("pre")}} 要素の固定長の長さを指定します。
+  - : `long` 値で、古い [`width`](/ja/docs/Web/HTML/Reference/Elements/pre#width) 属性を反映し、{{HTMLElement("pre")}} 要素の固定長の長さを指定します。
 
 ## インスタンスメソッド
 

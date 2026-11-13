@@ -13,11 +13,12 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 [`width`](/ko/docs/Web/HTML/Element/canvas#width)와 [`height`](/ko/docs/Web/HTML/Element/canvas#height)의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
+{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 [`width`](/ko/docs/Web/HTML/Reference/Elements/canvas#width)와 [`height`](/ko/docs/Web/HTML/Reference/Elements/canvas#height)의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
 
-> **참고:** **노트:** 만약 렌더링이 왜곡된 것처럼 보이는 경우 CSS를 사용하지 않고 `<canvas>` 속성에서 `width` 및 `height` 속성을 명시적으로 지정하십시오.
+> [!NOTE]
+> **노트:** 만약 렌더링이 왜곡된 것처럼 보이는 경우 CSS를 사용하지 않고 `<canvas>` 속성에서 `width` 및 `height` 속성을 명시적으로 지정하십시오.
 
-[`id`](/ko/docs/Web/HTML/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/ko/docs/Web/HTML/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
+[`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id) 속성(어트리뷰트)는 `<canvas>` 요소에 국한되지 않는 글로벌HTML 속성 ([global HTML attributes](/ko/docs/Web/HTML/Reference/Global_attributes) )중 하나로, 모든 HTML 요소에 적용 ( [`class`](/ko/docs/Web/HTML/Reference/Global_attributes/class) 등등)될 수 있습니다. 대체로 항상 `id` 속성을 사용해 주는것이 좋은데, 이는 스크립트 내에서 구분을 쉽게 해 줄 수 있기 때문입니다.
 
 `<canvas>`요소는 일반적인 이미지 ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…) 처럼 스타일을 적용시킬 수 있습니다. 하지만 이 방법은 실제 캔버스 위에 그리는 것에는 영향을 끼치지 않습니다. 이 방법이 어떻게 사용되는지는 [해당 챕터](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)에서 확인 할 수 있습니다. 캔버스에 스타일링이 따로 지정 되있지 않았다면, 캔버스 스타일은 투명으로 설정되어있습니다.
 
@@ -49,7 +50,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 
 ## 렌더링 컨텍스트
 
-{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 **렌더링 컨텍스**(**rendering contexts**)를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, [WebGL](/ko/docs/Web/WebGL)은 [OpenGL ES](http://www.khronos.org/opengles/) 을 기반으로 하는 3D 컨텍스트를 사용합니다.
+{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 **렌더링 컨텍스**(**rendering contexts**)를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, [WebGL](/ko/docs/Web/API/WebGL_API)은 [OpenGL ES](https://www.khronos.org/opengles/) 을 기반으로 하는 3D 컨텍스트를 사용합니다.
 
 캔버스는 처음에 비어있습니다. 무언가를 표시하기 위해서, 어떤 스크립트가 랜더링 컨텍스트에 접근하여 그리도록 할 필요가 있습니다. {{HTMLElement("canvas")}} 요소는 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 메서드를 이용해서, 랜더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있습니다. getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가집니다. 본 튜토리얼에서 다루고 있는 2D 그래픽의 경우, {{domxref("CanvasRenderingContext2D")}}을 얻기위해 `"2d"`로 지정합니다.
 
@@ -79,7 +80,8 @@ if (canvas.getContext) {
 
 다음은 이후의 예제들에서 시작점으로 사용될 수 있는 가장 최소한의 템플릿입니다.
 
-> **참고:** **알아두기:** HTML 내에 스크립트(script)를 사용하는것은 좋은 연습 방법이 아닙니다. 다음의 예시에서는 간결하게 나타내기 위해 사용 한 것입니다.
+> [!NOTE]
+> **알아두기:** HTML 내에 스크립트(script)를 사용하는것은 좋은 연습 방법이 아닙니다. 다음의 예시에서는 간결하게 나타내기 위해 사용 한 것입니다.
 
 ```html
 <!doctype html>

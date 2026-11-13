@@ -12,7 +12,6 @@ slug: Web/API/GeolocationPositionError
 _`PositionError` 接口没有继承任何属性。_
 
 - {{domxref("PositionError.code")}} {{readonlyInline}}
-
   - : 返回无符号的、简短的错误码。下列值是可能的：
 
     | 值  | 相关联的常量           | 描述                                                                                            |
@@ -22,7 +21,7 @@ _`PositionError` 接口没有继承任何属性。_
     | `3` | `TIMEOUT`              | 获取地理位置超时，通过定义{{domxref("PositionOptions.timeout")}} 来设置获取地理位置的超时时长。 |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : 返回一个开发者可以理解的 {{domxref("DOMString")}} 来描述错误的详细信息。
+  - : 返回一个开发者可以理解的 {{jsxref("String")}} 来描述错误的详细信息。
 
 ## 方法
 
@@ -38,5 +37,5 @@ _`PositionError` 接口没有继承任何属性。_
 
 ## 请参见
 
-- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
 - The {{domxref("Geolocation")}} interface that use it.

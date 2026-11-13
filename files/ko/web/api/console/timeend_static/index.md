@@ -20,7 +20,7 @@ console.timeEnd(label);
 ### 매개변수
 
 - `label`
-  - : 중지할 타이머의 이름입니다. 중지되면 경과 시간이 [웹 콘솔](/ko/docs/Tools/Web_Console)에 자동으로 시간이 종료되었음을 알리는 표시와 함께 표시됩니다.
+  - : 중지할 타이머의 이름입니다. 중지되면 경과 시간이 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에 자동으로 시간이 종료되었음을 알리는 표시와 함께 표시됩니다.
 
 ## 예제
 

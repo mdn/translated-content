@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **SEO**（搜索引擎优化）是一种让网站在搜索引擎结果中更加清晰，也帮助我们将搜索结果更靠前的过程。
 
 搜索引擎{{Glossary("Crawler", "爬取")}}网页，跟随页面之间的链接，并索引找到的内容。搜索时，搜索引擎会显示索引内容。爬行者遵守规则。如果你在为网站进行搜索引擎优化时密切关注这些规则，则会为网站提供最好的机会，以便在首批结果中显示，增加流量和可能的收入（用于电子商务和广告）。
@@ -25,4 +23,4 @@ SEO 方法分为三大类：
 ## 参见
 
 - 维基百科上的 [SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化)
-- [Google 搜索中心](https://developers.google.com/search/docs)
+- [Google 搜索中心](https://developers.google.cn/search/docs)

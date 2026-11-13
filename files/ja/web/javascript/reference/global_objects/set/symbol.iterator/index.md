@@ -1,18 +1,31 @@
 ---
-title: Set.prototype[@@iterator]()
+title: Set.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`[Symbol.iterator]()`** は {{jsxref("Set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、 `Set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-**`[@@iterator]()`** は {{jsxref("Set")}} インスタンスのメソッドで、[反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、 `Set` オブジェクトを、反復可能オブジェクトを期待するほとんどの構文、例えば[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループなどで利用できるようにします。これは、挿入順に集合の値を返す[集合イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
+このプロパティの初期値は、{{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-**`@@iterator`** プロパティの初期値は {{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+{{InteractiveExample("JavaScript デモ: Set.prototype[Symbol.iterator]()")}}
 
-{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
+```js interactive-example
+const set = new Set();
+
+set.add(42);
+set.add("forty two");
+
+const iterator = set[Symbol.iterator]();
+
+console.log(iterator.next().value);
+// 予想される結果: 42
+
+console.log(iterator.next().value);
+// 予想される結果: "forty two"
+```
 
 ## 構文
 
@@ -32,7 +45,7 @@ set[Symbol.iterator]()
 
 ### for...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`@@iterator` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`[Symbol.iterator]()` メソッドの存在によって `Set` オブジェクトは[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` 文のような反復処理の構文は自動的にこのメソッドを呼ぶことで反復処理を行うためのイテレーターを取得できるようになります。
 
 ```js
 const mySet = new Set();
@@ -59,7 +72,7 @@ const setIter = mySet[Symbol.iterator]();
 
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+console.log(setIter.next().value); // {}
 ```
 
 ## 仕様書

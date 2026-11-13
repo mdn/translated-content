@@ -3,11 +3,28 @@ title: parseInt
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 
-{{jsSidebar("Objects")}}
-
 **parseInt(_string_, _radix_)** 解析一个字符串并返回指定基数的十进制整数，`radix` 是 2-36 之间的整数，表示被解析字符串的基数。
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
 
 ## 语法
 
@@ -18,7 +35,7 @@ parseInt(string, radix);
 ### 参数
 
 - `string`
-  - : 要被解析的值。如果参数不是一个字符串，则将其转换为字符串 (使用 [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)抽象操作)。字符串开头的空白符将会被忽略。
+  - : 要被解析的值。如果参数不是一个字符串，则将其转换为字符串 (使用 [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)抽象操作)。字符串开头的空白符将会被忽略。
 - `radix`_ {{optional_inline}}_
   - : 从 `2` 到 `36` 的整数，表示进制的基数。例如指定 `16` 表示被解析值是十六进制数。如果超出这个范围，将返回 `NaN`。假如指定 `0` 或未指定，基数将会根据字符串的值进行推算。注意，推算的结果不会永远是默认值 `10`！文章后面的描述解释了当参数 `radix` 不传时该函数的具体行为。
 
@@ -61,7 +78,8 @@ parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 => 1*5^
 
 要将一个数字转换为特定的 `radix` 中的字符串字段，请使用 `thatNumber.toString(radix)` 函数。
 
-> **警告：** {{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
+> [!WARNING]
+> {{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
 
 ## 示例
 

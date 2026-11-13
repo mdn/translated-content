@@ -5,11 +5,23 @@ l10n:
   sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
-{{JSRef}}
-
 **`Atomics.and()`** 静态方法会将给定的值与数组指定位置上的值进行按位与运算，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) AND 2 (0010) = 2 (0010)
+console.log(Atomics.and(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 语法
 

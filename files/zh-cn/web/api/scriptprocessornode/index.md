@@ -6,7 +6,7 @@ slug: Web/API/ScriptProcessorNode
 {{APIRef("Web Audio API")}}
 
 > [!NOTE]
-> 这个特性在 2014 年 8 月 29 日发布的 Web Audio API 规范中已经标记为不推荐，将很快会被[Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers)代替。
+> 这个特性在 2014 年 8 月 29 日发布的 Web Audio API 规范中已经标记为不推荐，将很快会被[Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#audio_workers)代替。
 
 `ScriptProcessorNode` 接口允许使用 JavaScript 生成、处理、分析音频。它是一个 {{domxref("AudioNode")}}，连接着两个缓冲区音频处理模块，其中一个缓冲区包含输入音频数据，另外一个包含处理后的输出音频数据。实现了 {{domxref("AudioProcessingEvent")}} 接口的一个事件，每当输入缓冲区有新的数据时，事件将被发送到该对象，并且事件将在数据填充到输出缓冲区后结束。
 

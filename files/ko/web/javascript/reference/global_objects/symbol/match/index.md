@@ -11,7 +11,23 @@ l10n:
 
 좀 더 많은 정보를 알고 싶으시면 [`RegExp.prototype[@@match]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)와 {{jsxref("String.prototype.match()")}}를 참고하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.match", "taller")}}
+
+```js interactive-example
+const regexp1 = /foo/;
+// console.log('/foo/'.startsWith(regexp1));
+// Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
+// Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
+// Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+
+regexp1[Symbol.match] = false;
+
+console.log("/foo/".startsWith(regexp1));
+// Expected output: true
+
+console.log("/baz/".endsWith(regexp1));
+// Expected output: false
+```
 
 ## 값
 

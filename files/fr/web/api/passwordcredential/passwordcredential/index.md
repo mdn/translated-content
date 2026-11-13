@@ -21,9 +21,7 @@ var mesCredentials = new PasswordCredential(HTMLFormElement);
 Le constructeur peut prendre l'une de ces deux valeurs en argument.
 
 - `passwordCredentialData`
-
   - : Un dictionnaire `PasswordCredentialData` avec les champs suivants :
-
     - `iconURL` {{optional_inline}} : l'URL de l'image pour l'avatar de l'utilisateur.
     - `id` : l'identifiant de l'utilisateur qui se connecte.
     - `name` {{optional_inline}} : le nom de l'utilisateur qui se connecte.

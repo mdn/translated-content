@@ -3,8 +3,6 @@ title: Array.prototype[Symbol.unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 ---
 
-{{JSRef}}
-
 `Array.prototype` 的 **`[Symbol.unscopables]`** 数据属性被所有 {{jsxref("Array")}} 实例共享。它包含在 ES2015 版本之前 ECMAScript 标准中未收纳的属性名，并且这些属性被排除在由 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句绑定的环境中。
 
 ## 值
@@ -34,9 +32,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables
 - [`toSpliced()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-`Array.prototype[Symbol.unscopables]` 是一个只包含所有上述属性且对应值为 `true` 的空对象。它的[原型是 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因此不会意外地使 `Object.prototype` 属性（比如 [`toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)）变为非作用域属性，而令在 `with` 语句中调用数组的 `toString()` 方法仍然有效。
+`Array.prototype[Symbol.unscopables]` 是一个只包含所有上述属性且对应值为 `true` 的空对象。它的[原型是 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因此不会意外地使 `Object.prototype` 属性（比如 [`toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)）变为不可绑定作用域属性，而令在 `with` 语句中调用数组的 `toString()` 方法仍然有效。
 
-请参阅 {{jsxref("Symbol.unscopables")}} 了解如何为自定义对象设置非作用域属性。
+请参阅 {{jsxref("Symbol.unscopables")}} 了解如何为自定义对象设置不可绑定作用域属性。
 
 ## 示例
 
@@ -65,7 +63,7 @@ with (Array.prototype) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype[Symbol.unscopables]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Symbol.unscopables")}}

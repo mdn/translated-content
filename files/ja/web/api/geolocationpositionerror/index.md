@@ -2,7 +2,7 @@
 title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -13,17 +13,16 @@ l10n:
 
 _`GeolocationPositionError` インターフェイスが継承するプロパティはありません。_
 
-- {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}} {{securecontext_inline}}
-
+- {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}}
   - : `unsigned short` でエラーコードを表します。以下の値になる可能性があります。
 
-    | 値  | 関連付けられた定数     | 説明                                                                                                                                                     |
-    | --- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `1` | `PERMISSION_DENIED`    | ページに必要な権限がないため、位置情報の取得に失敗しました。例えば、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされたなどです。 |
-    | `2` | `POSITION_UNAVAILABLE` | 1 つ以上の位置の内部ソースが内部エラーを返したために、位置情報の取得に失敗しました。                                                                     |
-    | `3` | `TIMEOUT`              | 位置情報を取得するための制限時間が情報を取得する前に終了しました。                                                                                       |
+    | 値  | 関連付けられた定数     | 説明                                                                                                                                                            |
+    | --- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `1` | `PERMISSION_DENIED`    | ページに必要な権限がないため、位置情報の取得に失敗しました。例えば、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされたなどです。 |
+    | `2` | `POSITION_UNAVAILABLE` | 1 つ以上の位置の内部ソースが内部エラーを返したために、位置情報の取得に失敗しました。                                                                            |
+    | `3` | `TIMEOUT`              | 位置情報を取得するための制限時間が情報を取得する前に終了しました。                                                                                              |
 
-- {{domxref("GeolocationPositionError.message")}} {{ReadOnlyInline}} {{securecontext_inline}}
+- {{domxref("GeolocationPositionError.message")}} {{ReadOnlyInline}}
   - : エラーの詳細を説明する、人間が読める文字列返します。仕様書の注では、主にデバッグ用途を想定しており、ユーザーインターフェイスに直接表示するものではないとしています。
 
 ## インスタンスメソッド

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.pop()
+short-title: pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
@@ -11,7 +12,22 @@ l10n:
 배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
 이 메서드는 배열의 길이를 변경합니다.
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.pop()")}}
+
+```js interactive-example
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ## 구문
 

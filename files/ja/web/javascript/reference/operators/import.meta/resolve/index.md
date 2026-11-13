@@ -2,10 +2,8 @@
 title: import.meta.resolve()
 slug: Web/JavaScript/Reference/Operators/import.meta/resolve
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **`import.meta.resolve()`** は JavaScript モジュールの [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) オブジェクトで定義されている組み込み関数で、現在のモジュールの URL をベースとしてモジュール指定子を URL に解決します。
 
@@ -35,7 +33,7 @@ const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
 ```
 
-`import.meta.resolve()` は解決を行うだけであり、結果のパスをロードしたりインポートしようとはしないことに注意してください。（この動作の理由は[仕様の説明](https://gist.github.com/domenic/f2a0a9cb62d499bcc4d12aebd1c255ab#sync-vs-async)に記述されています。）そのため、返されたパスが存在するファイルに対応しているかどうかや、そのファイルがモジュールの有効なコードを含んでいるかどうかに関係なく、その返値は同じです。
+`import.meta.resolve()` は解決を行うだけであり、結果のパスをロードしたりインポートしようとはしないことに注意してください。そのため、返されたパスが存在するファイルに対応しているかどうかや、そのファイルがモジュールの有効なコードを含んでいるかどうかに関係なく、その返値は同じです。これにより、 `import.meta.resolve()` は同期的な操作であることができます。
 
 これは[動的インポート](/ja/docs/Web/JavaScript/Reference/Operators/import)とは異なります。どちらも第 1 引数としてモジュール指定子を受け取りますが、 `import.meta.resolve()` はそのパスにアクセスしようとすることなく、インポートされるであろうパスを返します。したがって、次の 2 つは実質的に同じコードです。
 
@@ -90,12 +88,12 @@ console.log(helperPath);
 
 ### ECMAScript の機能ではない
 
-`import.meta.resolve()` は JavaScript モジュールの [ECMAScript 仕様書](/ja/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)の一部として指定も文書化もされていません。その代わりに、この仕様書 [`import.meta` オブジェクト](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta)を定義していますが、[そのすべてのプロパティを "ホスト定義" のままにしています](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties)。 WHATWG HTML 標準は ECMAScript 標準が残したものをピックアップし、[モジュール指定子の解決](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier) を使って [`import.meta.resolve` を定義しています](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties)。
+`import.meta.resolve()` は JavaScript モジュールの [ECMAScript 仕様書](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)の一部として定義も文書化もされていません。その代わりに、この仕様書 [`import.meta` オブジェクト](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta)を定義していますが、[そのすべてのプロパティを "ホスト定義" のままにしています](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties)。 WHATWG HTML 標準は ECMAScript 標準が残したものをピックアップし、[モジュール指定子の解決](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier) を使って [`import.meta.resolve` を定義しています](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties)。
 
 つまり、 `import.meta.resolve()` はすべての適合する JavaScript 実装で実装される必要はありません。しかし、 `import.meta.resolve()` はブラウザー以外の環境でも利用できるかもしれません：
 
-- Deno は[ブラウザー動作との互換性](https://deno.land/manual/runtime/import_meta_api)を実装しています。
-- Node.js には `--experimental-import-meta-resolve` という実装があり、現在は文字列の代わりに `Promise` を返します。
+- Deno は[ブラウザー動作との互換のもの](https://docs.deno.com/runtime/reference/deno_namespace_apis/#import.meta)を実装しています。
+- Node.js も [`import.meta.resolve()` 関数](https://nodejs.org/docs/latest/api/esm.html#importmetaresolvespecifier)を実装していますが、 `--experimental-import-meta-resolve` フラグを使用する場合、追加の `parent` 引数が提供されます。
 
 ## 例
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 
 O método `every()` testa se todos os elementos do array passam pelo teste implementado pela função fornecida. Este método retorna um valor booleano.
 
-{{EmbedInteractiveExample("pages/js/array-every.html")}}
+{{InteractiveExample("JavaScript Demo: Array.every()")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -18,9 +27,7 @@ arr.every(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função que testa cada elemento, recebe três parametros:
-
     - `currentValue` (obrigatório)
       - : O elemento atual sendo processado na array.
     - `index` (opcional)

@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-O método **`HTMLCanvasElement.toDataURL()`** retorna uma [data URI](/pt-BR/docs/Web/HTTP/data_URIs), contendo uma representação da imagem no formato especificado pelo parâmetro `type` (por padrão, esse valor é [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). A resolução da imagem retornada é de 96 dpi.
+O método **`HTMLCanvasElement.toDataURL()`** retorna uma [data URI](/pt-BR/docs/Web/URI/Schemes/data), contendo uma representação da imagem no formato especificado pelo parâmetro `type` (por padrão, esse valor é [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). A resolução da imagem retornada é de 96 dpi.
 
 - Se a altura ou largura do canvas for `0`, será retornada a string `"data:,"`.
 - Se o tipo solicitado não for `image/png`, mas o valor retornado começa com `data:image/png`, então o tipo da requisição não é suportado.
@@ -20,14 +20,14 @@ canvas.toDataURL(type, encoderOptions);
 ### Parâmetros
 
 - `type` {{optional_inline}}
-  - : Uma {{domxref("DOMString")}} indicando o formato da imagem. Por padrão, o formato definido é `image/png`.
+  - : Uma {{jsxref("String")}} indicando o formato da imagem. Por padrão, o formato definido é `image/png`.
 - `encoderOptions` {{optional_inline}}
   - : Um {{jsxref("Number")}} entre `0` e `1`, indicando a qualidade da imagem solicitada pelo tipo `image/jpeg` ou `image/webp`.
     Se esse argumento for outro valor que não de `0` a `1`, então o valor padrão (`0.92)` será usado. Outros valores serão ignorados.
 
 ### Valor retornado
 
-Uma {{domxref("DOMString")}} contendo a [data URI](/pt-BR/docs/Web/HTTP/data_URIs) solicitada.
+Uma {{jsxref("String")}} contendo a [data URI](/pt-BR/docs/Web/URI/Schemes/data) solicitada.
 
 ## Exemplos
 
@@ -129,4 +129,4 @@ function removeColors() {
 ## Veja também
 
 - A interface que a define, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/pt-BR/docs/Web/HTTP/data_URIs) na referência [HTTP](/pt-BR/docs/Web/HTTP).
+- [Data URIs](/pt-BR/docs/Web/URI/Schemes/data) na referência [HTTP](/pt-BR/docs/Web/HTTP).

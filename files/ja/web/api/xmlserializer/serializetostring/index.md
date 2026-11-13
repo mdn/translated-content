@@ -70,7 +70,7 @@ serializeToString(rootNode)
 
 ## 関連情報
 
-- [XML のパースとシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML のパースとシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - HTML にシリアライズする : {{domxref("Element.innerHTML")}} と
   {{domxref("Element.outerHTML")}}
 - HTML や XML をパースして DOM ツリーを生成する : {{domxref("DOMParser")}}

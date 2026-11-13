@@ -14,7 +14,7 @@ No solo podemos dibujar formas nuevas detrás de las ya existentes sino que las 
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Esto establece el tipo de operación compuesta a aplicar cuando se dibujan nuevas figuras, en donde tipo (type) es una cadena de caracteres que identifica cual de las doce operaciones compuestas se utilizará.
 
-Vea [ejemplos de composición](/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) para el código de los siguientes ejemplos.
+Vea [ejemplos de composición](/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) para el código de los siguientes ejemplos.
 
 ```js hidden
 const canvas1 = document.createElement("canvas");

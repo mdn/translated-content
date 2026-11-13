@@ -11,6 +11,9 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron: "0 1 * * *"
 
+permissions:
+  contents: read
+
 jobs:
   build:
     if: github.repository == 'mdn/translated-content'
@@ -31,23 +34,29 @@ jobs:
           - zh-tw
 
     steps:
-      - uses: actions/checkout@v4
+      - parallel:
+          - name: Checkout
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              path: mdn/translated-content
+              persist-credentials: false
 
-      - uses: actions/checkout@v4
-        with:
-          repository: mdn/content
-          path: mdn/content
+          - name: Checkout (content)
+            uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+            with:
+              repository: mdn/content
+              path: mdn/content
+              persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version-file: ".nvmrc"
-          cache: "yarn"
-          cache-dependency-path: mdn/content/yarn.lock
+          node-version-file: mdn/content/.nvmrc
+          package-manager-cache: false
 
-      - name: Install all yarn packages
+      - name: Install
         working-directory: ${{ github.workspace }}/mdn/content
-        run: yarn --frozen-lockfile
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,11 +64,16 @@ jobs:
       - name: Sync translated content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
-          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/mdn/translated-content/files
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ${{ github.workspace }}/mdn/content
-        run: yarn content sync-translated-content ${{ matrix.lang }}
+        run: npm run content sync-translated-content ${{ matrix.lang }}
 
       - name: Gather related upstream commits
+        working-directory: mdn/translated-content
+        id: gather
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -80,24 +94,28 @@ jobs:
           FILE_COMMIT_URLS=$(echo -e "${FILE_COMMIT_URLS}" | grep -v '^$' | sort | uniq)
           echo -e "commit urls:\n${FILE_COMMIT_URLS}"
 
-          # set multiline string to env
+          # set multiline string to output
           # https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           # as the commit urls would not contain 'EOF', we can use it as a delimiter
           {
             echo 'COMMIT_URLS<<EOF'
             echo "${FILE_COMMIT_URLS}"
             echo EOF
-          } >> "$GITHUB_ENV"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Create PR with sync for ${{ matrix.lang }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@15733dbdfeedb4f7fdb73d13c6f5ac83b710fab8 # v8.1.2
         with:
+          path: mdn/translated-content
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: "Yari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
+          body: "Rari generated sync. Related upstream commits:
+
+
+            ${{ steps.gather.outputs.COMMIT_URLS }}"
           labels: |
             automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/topSites
 
 {{AddonSidebar}}
 
-topSites API を使うと、ユーザーがよく訪れるページをを含む配列を取得できます。
+topSites API を使うと、ユーザーがよく訪れるページを含む配列を取得できます。
 
 ブラウザーはユーザーがこれらの場所に簡単に戻れるようにこれを維持します。Firefox では既定で「新しいタブ」ページには最もよく訪れるページのリストが提供されます。
 
-topSites API を使うには "topSites" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)必要です。
+topSites API を使うには "topSites" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)必要です。
 
 ## 型
 
@@ -28,7 +28,7 @@ topSites API を使うには "topSites" の [API パーミッション](/ja/Add-
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.unshift()
+short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
 
@@ -7,7 +8,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 **`unshift()`** 메서드는 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## 구문
 

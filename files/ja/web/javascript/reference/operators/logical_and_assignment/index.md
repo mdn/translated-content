@@ -1,40 +1,65 @@
 ---
-title: 論理積代入 (&&=)
+title: 論理積代入演算子 (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**論理積代入演算子 (`&&=`)** は、左オペランドが{{Glossary("truthy", "真値")}}の場合にのみ右オペランドを評価し、左オペランドに代入します。
 
-論理積代入 (`x &&= y`) 演算子は、`x` が{{Glossary("truthy", "真値")}}である場合にのみ代入を行います。
+{{InteractiveExample("JavaScript デモ: 論理積代入演算子 (&&=)")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
+```js interactive-example
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// 予想される結果: 2
+
+b &&= 2;
+console.log(b);
+// 予想される結果: 0
+```
 
 ## 構文
 
-```js
-expr1 &&= expr2;
+```js-nolint
+x &&= y
 ```
 
 ## 解説
 
-### 短絡評価 (ショートサーキット)
+論理積代入演算子は[短絡評価](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting)を行うため、`x &&= y` は `x && (x = y)` と同等です。ただし、式 `x` は一度だけ評価されます。
 
-[論理積演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)は左から右に評価され、次のルールを使って短絡評価の可能性があるかどうかテストされます。
-
-`(偽値の式) && expr` は、偽値の式が短絡評価されます。
-
-短絡評価とは、上記の `expr` 部分が**評価されない**ことを意味します。したがって、評価された場合の副作用は発生しません (例えば、`expr` が関数呼び出しである場合、呼び出しは行われません)。
-
-論理積代入も短絡評価されます。これは、`x &&= y` が以下と等価であることを意味します。
+左辺が真値でない場合、[論理積](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)演算子の短絡が発生するため代入は実行されません。例えば、 `x` が `const` であっても、以下のコードはエラーが発生しません。
 
 ```js
-x && (x = y);
+const x = 0;
+x &&= 2;
 ```
 
-そして、常に代入が行われる以下とは等価ではありません。
+次のコードもセッターを起動しません。
 
-```js example-bad
-x = x && y;
+```js
+const x = {
+  get value() {
+    return 0;
+  },
+  set value(v) {
+    console.log("セッターが呼び出されました");
+  },
+};
+
+x.value &&= 2;
+```
+
+実際、 `x` が真値である場合、 `y` はまったく評価されません。
+
+```js
+const x = 0;
+x &&= console.log("y が評価されました");
+// 何もログ出力されない
 ```
 
 ## 例
@@ -61,8 +86,8 @@ y &&= 0; // 0
 
 ## 関連情報
 
-- [論理積演算子 (&&)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [論理積演算子 (`&&`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [ヌル値合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [ビット論理積代入 (`&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

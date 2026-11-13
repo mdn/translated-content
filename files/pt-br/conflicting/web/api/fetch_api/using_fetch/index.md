@@ -15,7 +15,7 @@ A [Fetch API](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface para buscar r
 
 O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.
 
-[Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API) é um exemplo de uma API que faz um grande uso de Fecth.
+[Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) é um exemplo de uma API que faz um grande uso de Fecth.
 
 Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.
 
@@ -65,6 +65,6 @@ Quando um novo objeto {{domxref("Headers")}} é criado usando o {{domxref("Heade
 
 Um cabeçalho guard afeta os métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, e {{domxref("Headers.append","append()")}} os quais mudam o conteúdo do cabeçalho. Um`TypeError` é lançado se você tentar modificar um objeto {{domxref("Headers")}} objeto cujo "guard" é `immutable`. De qualquer maneira, a operação vai funcionar se
 
-- guard for um `request` e o _name_ de cabeçalho não for {{Glossary("forbidden header name")}} .
+- guard for um `request` e o _name_ de cabeçalho não for {{Glossary("Forbidden request header")}} .
 - guard for `request-no-cors` e os _name_/_value_ de cabeçalho for {{Glossary("simple header")}} .
 - guard for `response` e o _name_ de cabeçalho não for {{Glossary("forbidden response header name")}} .

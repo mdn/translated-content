@@ -9,7 +9,14 @@ l10n:
 
 {{jsxref("String")}} 값의 **`toUpperCase()`** 메서드는 문자열을 대문자로 변환해 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toUpperCase()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toUpperCase());
+// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+```
 
 ## 구문
 

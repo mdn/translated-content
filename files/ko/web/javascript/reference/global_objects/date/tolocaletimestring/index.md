@@ -11,7 +11,21 @@ l10n:
 
 `toLocaleTimeString`을 호출할 때마다 방대한 현지화 문자열 데이터베이스에서 검색을 수행해야 하므로 비효율적일 수 있습니다. 메서드가 동일한 인수를 사용하여 여러 번 호출되는 경우 `DateTimeFormat` 객체가 전달된 인수를 기억하고 데이터베이스의 일부를 캐시하기로 결정할 수 있으므로 {{jsxref("Intl.DateTimeFormat")}} 객체를 생성하고 그 {{jsxref("Intl/DateTimeFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다. 이렇게 함으로써 향후 `format` 호출에서 보다 제한된 컨텍스트 내에서 현지화 문자열을 검색할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## 구문
 
@@ -28,13 +42,11 @@ toLocaleTimeString(locales, options)
 [`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)를 지원하는 구현체에서 이러한 매개변수는 [`Intl.DateTimeFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 생성자 매개변수와 정확히 대응합니다. `Intl.DateTimeFormat`을 지원하지 않는 구현체는 두 매개변수를 모두 무시하도록 요청하므로 사용되는 로케일과 반환되는 문자열의 형식은 전적으로 구현체에 따라 달라집니다.
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그가 포함된 문자열 또는 이러한 문자열의 배열입니다. `Intl.DateTimeFormat()` 생성자의 매개변수인 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales)과 대응됩니다.
 
     `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시하고 일반적으로 호스트의 로케일이 사용됩니다.
 
 - `options` {{optional_inline}}
-
   - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)과 대응됩니다. `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`가 모두 정의되지 않았다면 `hour`, `minute`, `second`는 `"numeric"`으로 설정됩니다.
 
     `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시합니다.

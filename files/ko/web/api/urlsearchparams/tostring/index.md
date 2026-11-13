@@ -8,7 +8,7 @@ slug: Web/API/URLSearchParams/toString
 {{domxref("URLSearchParams")}} 인터페이스의 **`toString()`** 메서드는 URL에 사용할 수 있는 쿼리 문자열을 반환합니다.
 
 > [!NOTE]
-> 이 메서드는 선행 `'?'`를 붙이지 않은 쿼리 문자열을 반환합니다. 이 동작은 `'?'`를 포함한 값을 반환하는 [`window.location.search`](/ko/docs/Web/API/HTMLHyperlinkElementUtils/search)와 다릅니다.
+> 이 메서드는 선행 `'?'`를 붙이지 않은 쿼리 문자열을 반환합니다. 이 동작은 `'?'`를 포함한 값을 반환하는 [`window.location.search`](/ko/docs/Web/API/HTMLAnchorElement/search)와 다릅니다.
 
 {{availableinworkers}}
 

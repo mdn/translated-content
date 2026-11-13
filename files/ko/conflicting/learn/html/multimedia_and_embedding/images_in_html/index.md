@@ -8,7 +8,7 @@ original_slug: Web/Guide/Graphics
 
 ## 2D 그래픽
 
-- [Canvas](/ko/docs/Web/HTML/Canvas)
+- [Canvas](/ko/docs/Web/API/Canvas_API)
   - : {{HTMLElement("canvas")}} 요소는 JavaScript를 사용하여 2D 그래픽을 그리는 API를 제공합니다.
 - [SVG](/ko/docs/Web/SVG)
   - : Scalable Vector Graphics (SVG)는 그래픽을 묘사하기 위해 선, 곡선 및 그 밖의 기하학 도형을 사용할 수 있습니다. 벡터로, 어떤 크기로든 깔끔하게 크기 조정하는 이미지를 만들 수 있습니다.
@@ -20,7 +20,7 @@ original_slug: Web/Guide/Graphics
 
 ## 비디오
 
-- [HTML5 audio 및 video 사용](/ko/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [HTML5 audio 및 video 사용](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : 웹 페이지 내 비디오 및/또는 오디오 삽입 및 그 재생 제어.
 - [WebRTC](/ko/docs/Web/API/WebRTC_API)
   - : WebRTC에서 RTC는 실시간 통신(Real-Time Communications)을 뜻하며, 오디오/비디오 스트리밍 및 브라우저 클라이언트(peer) 간 데이터 공유를 가능하게 하는 기술입니다.

@@ -3,11 +3,23 @@ title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
 
-{{JSRef}}
-
 **`padStart()`** 方法用另一个字符串填充当前字符串（如果需要会重复填充），直到达到给定的长度。填充是从当前字符串的开头开始的。
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+
+```js interactive-example
+const str1 = "5";
+
+console.log(str1.padStart(2, "0"));
+// Expected output: "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Expected output: "************5581"
+```
 
 ## 语法
 

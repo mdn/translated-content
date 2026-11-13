@@ -35,9 +35,7 @@ Un objet {{domxref("IDBKeyRange")}} qui représente l'intervalle de clé.
 ### Exceptions
 
 - `DataError`
-
   - : Cette exception {{domxref("DOMException")}} est levée si :
-
     - Une des limites passé n'est pas valide.
     - La limite inférieur est supèrieur à la limite supérieur.
     - Les limites correspondent et l'intervalle est ouvert.
@@ -82,7 +80,7 @@ function displayData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

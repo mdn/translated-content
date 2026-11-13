@@ -14,7 +14,7 @@ Esta API permite que as aplicações ofereçam essa mesma funcionalidade a parti
 
 Mesmo se permitido por uma política de permissões, o acesso a um dispositivo de saída de áudio específico ainda requer permissão explícita do usuário, pois o usuário pode estar em um local onde a reprodução de áudio através de alguns dispositivos de saída não seja apropriada.
 
-A API fornece o método [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) que permite aos usuários selecionar sua saída de áudio desejada dentre aquelas permitidas pela diretiva [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) do cabeçalho HTTP [`Permissions-Policy`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy) do documento.
+A API fornece o método [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) que permite aos usuários selecionar sua saída de áudio desejada dentre aquelas permitidas pela diretiva [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) do cabeçalho HTTP [`Permissions-Policy`](/pt-BR/docs/Web/HTTP/Reference/Headers/Permissions-Policy) do documento.
 O dispositivo selecionado recebe, então, permissão do usuário, permitindo que ele seja enumerado com [`MediaDevices.enumerateDevices()`](/pt-BR/docs/Web/API/MediaDevices/enumerateDevices) e definido como dispositivo de saída de áudio usando [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId).
 
 Dispositivos de áudio podem se conectar e desconectar arbitrariamente. Aplicações que desejam reagir a esse tipo de mudança podem ouvir o evento [`devicechange` event](/pt-BR/docs/Web/API/MediaDevices/devicechange_event) e usar [`enumerateDevices()`](/pt-BR/docs/Web/API/MediaDevices/enumerateDevices) para determinar se `sinkId` está presente nos dispositivos retornados.
@@ -46,13 +46,11 @@ O acesso à API está sujeito às seguintes restrições:
 - Todos os métodos e propriedades só podem ser chamados em um [contexto seguro](/pt-BR/docs/Web/Security/Secure_Contexts).
 
 - [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) concede permissão do usuário para um dispositivo selecionado ser usado como o dispositivo de saída de áudio:
-
   - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
   - [Ativação de usuário transitória](/pt-BR/docs/Web/Security/User_activation) é necessária.
     O usuário deve interagir com a página ou um elemento de interface do usuário para que o método seja chamado.
 
 - [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId) define um ID permitido como saída de áudio:
-
   - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
   - É necessária a permissão do usuário para definir um ID de dispositivo não padrão.
     - Isso pode vir da seleção na janela de diálogo lançada por `MediaDevices.selectAudioOutput()`

@@ -13,9 +13,9 @@ l10n:
 
 如果没有设置 {{HTTPHeader("Accept")}} 标头，则在调用 {{domxref("XMLHttpRequest.send", "send()")}} 时，会随请求发送一个类型为 `"*/*"` 的 `Accept` 标头。
 
-安全起见，有些{{Glossary("Forbidden_header_name", "禁止修改的标头")}}的值只能由用户代理控制。任何通过前端 JavaScript 代码为其中一个标头设置值的尝试都将被忽略，不会出现警告或错误。
+安全起见，有些{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}的值只能由用户代理控制。任何通过前端 JavaScript 代码为其中一个标头设置值的尝试都将被忽略，不会出现警告或错误。
 
-另外，[`Authorization`](/zh-CN/docs/Web/HTTP/Headers/Authorization) HTTP 标头可以添加到请求中，但如果请求被跨源重定向，则会被删除。
+另外，[`Authorization`](/zh-CN/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 标头可以添加到请求中，但如果请求被跨源重定向，则会被删除。
 
 > [!NOTE]
 > 对于自定义字段，在跨域请求时可能遇到“**not allowed by Access-Control-Allow-Headers in preflight response**”异常，你可能需要在你的服务端设置 {{HTTPHeader("Access-Control-Allow-Headers")}}。

@@ -3,8 +3,6 @@ title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
 ---
 
-{{AddonSidebar}}
-
 Définit le type `BrowserSetting` , qui est utilisé pour représenter un paramètre de navigateur.
 
 ## Types
@@ -18,9 +16,7 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

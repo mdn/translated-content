@@ -3,11 +3,24 @@ title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
 
-{{JSRef}}
+{{jsxref("Object")}} 实例的 **`valueOf()`** 方法将 `this` 值[转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。该方法旨在被派生对象重写，以实现自定义[类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)逻辑。
 
-{{jsxref("Object")}} 实例的 **`valueOf()`** 方法将 `this` 值[转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。该方法旨在被派生对象重写，以实现自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)逻辑。
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## 语法
 
@@ -28,11 +41,11 @@ valueOf()
 
 ## 描述
 
-JavaScript 调用 `valueOf` 方法来[将对象转换成基本类型值](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)。你很少需要自己调用 `valueOf` 方法；当遇到需要基本类型值的对象时，JavaScript 会自动的调用该方法。
+JavaScript 调用 `valueOf` 方法来[将对象转换成基本类型值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)。你很少需要自己调用 `valueOf` 方法；当遇到需要基本类型值的对象时，JavaScript 会自动的调用该方法。
 
-[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[强制基本类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)优先会调用该方法，而[强制字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#强制字符串转换)会优先调用 `toString()`，并且 `toString()` 很可能返回字符串值（甚至对于 {{jsxref("Object.prototype.toString()")}} 基本实现也是如此），因此在这种情况下不会调用 `valueOf()`。
+[强制数字类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)和[强制基本类型转换](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制原始值转换)优先会调用该方法，而[强制字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#强制字符串转换)会优先调用 `toString()`，并且 `toString()` 很可能返回字符串值（甚至对于 {{jsxref("Object.prototype.toString()")}} 基本实现也是如此），因此在这种情况下不会调用 `valueOf()`。
 
-从 `Object.prototype` 继承的所有对象（即，除了[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `toString()` 方法。`Object.prototype.valueOf()` 的基本实现被有意设计为无用的：返回一个对象；其返回值将永远不会被任何[基本类型转换算法](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)使用。许多内置对象重写此方法以返回适当的基本类型值。创建自定义对象时，可以重写 `valueOf()` 来调用自定义方法，以便将自定义对象转换为基本类型值。通常，`valueOf()` 用于返回对对象具有意义的值——与 `toString()` 不同，它不需要字符串。或者，你可以添加一个 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程进行更多控制，并且对于任何类型的转换，始终优先于 `valueOf` 或 `toString`。
+从 `Object.prototype` 继承的所有对象（即，除了[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `toString()` 方法。`Object.prototype.valueOf()` 的基本实现被有意设计为无用的：返回一个对象；其返回值将永远不会被任何[基本类型转换算法](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制类型转换)使用。许多内置对象重写此方法以返回适当的基本类型值。创建自定义对象时，可以重写 `valueOf()` 来调用自定义方法，以便将自定义对象转换为基本类型值。通常，`valueOf()` 用于返回对对象具有意义的值——与 `toString()` 不同，它不需要字符串。或者，你可以添加一个 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程进行更多控制，并且对于任何类型的转换，始终优先于 `valueOf` 或 `toString`。
 
 ## 示例
 

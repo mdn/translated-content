@@ -11,7 +11,8 @@ slug: Web/API/Element/scrollHeight
 
 `scrollHeight` 값은 수직 스크롤바를 사용하지 않고 요소의 콘텐츠를 모두 나타낼 때 필요한 최소 높이의 값과 동일합니다. 높이 측정은 {{domxref("Element.clientHeight", "clientHeight")}}와 동일한 방법을 사용하여 요소의 안쪽 여백은 포함하고, 테두리와 바깥 여백, (존재하는 경우) 수평 스크롤바의 높이는 포함하지 않습니다. 또한 {{cssxref("::before")}}, {{cssxref("::after")}} 등 의사 요소의 높이도 결과에 포함합니다. 요소의 콘텐츠를 수직 스크롤바 없이 모두 보일 수 있는 경우의 `scrollHeight`는 `clientHeight`와 동일합니다.
 
-> **참고:** `scrollHeight`의 반환 값은 정수로 반올림됩니다. 소수점을 포함한 값이 필요한 경우 {{domxref("Element.getBoundingClientRect()")}}를 사용하세요.
+> [!NOTE]
+> `scrollHeight`의 반환 값은 정수로 반올림됩니다. 소수점을 포함한 값이 필요한 경우 {{domxref("Element.getBoundingClientRect()")}}를 사용하세요.
 
 ## 구문
 
@@ -42,7 +43,7 @@ window.getComputedStyle(element).overflowY !== "hidden";
 
 ### 텍스트를 다 읽었는지 확인하기
 
-[`onscroll`](/ko/docs/DOM/element.onscroll) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/DOM/element.scrollTop) 과 [`element.clientHeight`](/ko/docs/DOM/element.clientHeight) 를 참조하세요).
+[`onscroll`](/ko/docs/Web/API/Element/scroll_event) 이벤트를 함께 사용하여, 내용을 다 읽었는지 확인할 수 있습니다. ([`element.scrollTop`](/ko/docs/Web/API/Element/scrollTop) 과 [`element.clientHeight`](/ko/docs/Web/API/Element/clientHeight) 를 참조하세요).
 
 #### HTML
 
@@ -145,4 +146,4 @@ onload = function () {
 
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.offsetHeight")}}
-- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

@@ -5,11 +5,16 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/URI/Schemes/data)。可以使用 `type` 参数指定其类型，默认为 [PNG](https://zh.wikipedia.org/wiki/PNG) 格式。图片的分辨率为 96dpi。
+**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片表示的 [data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data)，此图片的格式由 `type` 参数指定。
 
-- 如果画布的高度或宽度是 0，那么会返回字符串“`data:,`”。
-- 如果传入的类型非“`image/png`”，但是返回的值以“`data:image/png`”开头，那么该传入的类型是不支持的。
-- Chrome 支持“`image/webp`”类型。
+可以指定所需的文件格式和图片质量。如果未指定文件格式，或指定的文件格式不受支持，则数据将以 `image/png` 导出。换句话说，如果传入的类型非 `image/png`，但是返回的值以 `data:image/png` 开头，那么这个类型是不受支持的。
+
+浏览器被要求支持 `image/png`，许多浏览器也会支持 `image/jpeg` 和 `image/webp` 在内的其他格式。
+
+对于支持编码分辨率元数据的文件格式，创建的图像数据将具有 96dpi 的分辨率。
+
+> [!WARNING]
+> `toDataURL()` 将整个图像编码为内存中的字符串。对于较大的图像，这可能会有性能影响，甚至在赋值给 {{domxref("HTMLImageElement.src")}} 时可能超出浏览器的 URL 长度限制。你通常应该优先选择 [`toBlob()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toBlob)，结合 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} 来使用。
 
 ## 语法
 
@@ -28,7 +33,7 @@ toDataURL(type, encoderOptions)
 
 ### 返回值
 
-包含 [data URI](/zh-CN/docs/Web/URI/Schemes/data) 的字符串。
+包含 [data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的字符串。
 
 ## 示例
 
@@ -130,4 +135,4 @@ function removeColors() {
 ## 参考
 
 - 定义接口，{{domxref("HTMLCanvasElement")}}
-- [HTTP](/zh-CN/docs/Web/HTTP) 参考中的 [Data URI](/zh-CN/docs/Web/URI/Schemes/data)
+- [HTTP](/zh-CN/docs/Web/HTTP) 参考中的 [Data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data)

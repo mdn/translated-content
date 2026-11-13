@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
 ---
 
-{{FirefoxSidebar}}
-
 如果你是一位开发者，并且希望了解 Firefox 3 中所有的新特性，这里是一个很好的起点。这篇文章提供了一个覆盖所有 Firefox 3 新特性的列表。虽然它并不能包括所有微小的改动，但它能够帮助你学习到最主要的改进。
 
 ## Firefox 3 中为开发者带来的新特性
@@ -23,7 +21,7 @@ l10n:
   - : 你可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文本。
 - [支持画布变换](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations#变形)
   - : Firefox 现在支持 canvas 的 `transform()` 和 `setTransform()` 方法。
-- [使用微格式](/zh-CN/docs/Web/HTML/microformats)
+- [使用微格式](/zh-CN/docs/Web/HTML/Guides/Microformats)
   - : Firefox 现在有一组用于微格式的 API。
 - [拖放事件](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 支持新的拖放事件，当拖放开始和结束时，该事件将会被发送至源节点。
@@ -38,10 +36,10 @@ l10n:
 - [JavaScript 1.8 的支持](/zh-CN/docs/New_in_JavaScript_1.8)
   - : Firefox 3 提供了 JavaScript 1.8 的支持。
 - [EXSLT 支持](/zh-CN/docs/Web/EXSLT)
-  - : Firefox 3 提供了对 [EXSLT](/zh-CN/docs/Web/EXSLT)（[XSLT](/zh-CN/docs/Web/XSLT) 的扩展）的一个基本子集的支持。
+  - : Firefox 3 提供了对 [EXSLT](/zh-CN/docs/Web/EXSLT)（[XSLT](/zh-CN/docs/Web/XML/XSLT) 的扩展）的一个基本子集的支持。
 - [Firefox 3 中 SVG 的改进](/zh-CN/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : Firefox 3 对 SVG 的支持有了长足的改进：支持二十余个新滤镜、一些新的元素和属性，以及一些其他改进。
-- [动态可移植网络图形](/zh-CN/docs/Web/Media/Formats/Image_types#apng（动态可移植网络图形）)
+- [动态可移植网络图形](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng（动态可移植网络图形）)
   - : Firefox 3 提供了对动态可移植网络图形（APNG）图像格式的支持。
 
 ### 对 XUL 和扩展插件的开发者

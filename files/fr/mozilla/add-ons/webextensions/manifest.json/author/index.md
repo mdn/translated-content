@@ -22,7 +22,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
   </tbody>
 </table>
 
-L'auteur de l'extension, destiné à être visualisé dans l'interface utilisateur du navigateur. Si la clé du [developpeur](/fr/Add-ons/WebExtensions/manifest.json/developer) est fournie et qu'elle contient la propriété "nom", elle remplacera la clé de l'auteur. Il n'y a aucun moyen de spécifier plusieurs auteurs.
+L'auteur de l'extension, destiné à être visualisé dans l'interface utilisateur du navigateur. Si la clé du [developpeur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) est fournie et qu'elle contient la propriété "nom", elle remplacera la clé de l'auteur. Il n'y a aucun moyen de spécifier plusieurs auteurs.
 
 Notez que Firefox ne supporte cette clé qu'à partir de la version 52 et que cette clé est obligatoire dans Microsoft Edge.
 

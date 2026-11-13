@@ -3,11 +3,22 @@ title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
-{{JSRef}}
-
 **`keys()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，其中包含数组中每个索引的键。
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## 语法
 
@@ -66,7 +77,7 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.keys` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}

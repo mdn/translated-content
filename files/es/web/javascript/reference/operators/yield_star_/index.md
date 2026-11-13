@@ -110,7 +110,7 @@ console.log(result); // "foo"
 
 ## Ver también
 
-- [Protocolos de iteración](/es/docs/Web/JavaScript/Referencia/Iteration_protocols)
+- [Protocolos de iteración](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

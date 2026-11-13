@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`difference()`** 方法接受一个集合并返回一个新的集合，其中包含当前集合中存在但给定集合中不存在的所有元素。
 
 ## 语法
@@ -34,7 +32,7 @@ difference(other)
 
 ![两个圆重叠的维恩图。A 不与 B 重叠的区域是 A 和 B 的差集。](diagram.svg)
 
-`difference()` 接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("Operators/this", "this")}} 是一个 {{jsxref("Set")}} 实例，因为它直接检索存储在其中的底层数据，而不调用任何用户代码。然后，它的行为取决于 `this` 和 `other` 的大小：
+`difference()` 接受[类集合](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)对象作为 `other` 参数。方法要求 {{jsxref("this")}} 是一个 {{jsxref("Set")}} 实例，因为它直接检索存储在其中的底层数据，而不调用任何用户代码。然后，它的行为取决于 `this` 和 `other` 的大小：
 
 - 如果 `this` 的元素数量大于 `other.size`，则通过调用 `keys()` 方法遍历 `other`，并使用 `this` 中所有在 `other` 中未见过的元素构造一个新的集合。
 - 否则，它会遍历 `this` 中的元素，并使用 `this` 中的所有使 `other.has(e)` 返回[假值](/zh-CN/docs/Glossary/Falsy)的元素 `e` 构造一个新集合。

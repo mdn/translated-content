@@ -3,14 +3,18 @@ title: "Element: mouseleave イベント"
 short-title: mouseleave
 slug: Web/API/Element/mouseleave_event
 l10n:
-  sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
 
 **`mouseleave`** イベントは、ポインティングデバイス（ふつうはマウス）のカーソルが要素 ({{domxref("Element")}}) の外に移動したときに発行されます。
 
-`mouseleave` と {{domxref("Element/mouseout_event", "mouseout")}} はよく似ていますが、 `mouseleave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseleave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素*または*その要素の子孫のうちの一つを出たときに（ポインターがまだその要素内にあったとしても）発行されます。
+`mouseleave` と {{domxref("Element/mouseout_event", "mouseout")}} はよく似ていますが、 `mouseleave` はバブリングしないのに対して `mouseout` はバブリングするという点が異なります。すなわち `mouseleave` はポインターがその要素*および*すべての子孫を出たときに発行されるのに対し、 `mouseout` はポインターがその要素、またはその要素の子孫のうちの一つを出たときに（ポインターがまだその要素内にあったとしても）発行されます。
+
+要素がDOMから置き換えられたり除去されたりした場合は、 `mouseleave` および `mouseout` イベントは発生しません。
+
+「要素の外へ移動」とは、 DOM ツリーにおける要素の位置を指し、視覚的な位置を指すものではないことに注意してください。例えば、 2 つの兄弟要素が位置指定され、一方が他方の内部に配置されている場合、外側の要素から内側の要素に移動すると、ポインターが外側の要素の範囲内にあったとしても、内側の要素で `mouseleave` が発生します。
 
 ## 構文
 
@@ -39,9 +43,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに押されていたボタンです（もしあれば）。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : [ビューポート座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
+  - : [ビューポート座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#ビューポート)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>control</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -65,9 +69,9 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : もしあれば、イベントの副ターゲットです。
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの X 座標です。
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : [スクリーン座標](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
+  - : [スクリーン座標](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems#スクリーン)におけるマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : このマウスイベントが発行されたときに <kbd>shift</kbd> キーが押されていた場合は `true` を返します。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -171,7 +175,7 @@ function addListItem(text) {
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}

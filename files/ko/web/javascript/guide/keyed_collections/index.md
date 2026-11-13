@@ -3,7 +3,7 @@ title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 이번 장에서는 입력된 키값을 기준으로 정렬되는 데이터의 집합(자료 구조)에 대해 소개 할 것이다. Map과 Set은 입력된 순서대로 반복적으로 접근 가능한 요소들을 포함하고 있다.
 
@@ -36,7 +36,7 @@ for (var [key, value] of sayings) {
 
 전통적으로 {{jsxref("Object", "objects", "", 1)}} 는 문자열을 값에 매핑하는 데 사용되었다. Object는 키를 값으로 설정하고, 값을 검색하고, 키를 삭제하고, 키에 저장된 내용을 검색 할 수 있게 만들어준다. 그러나 Map 객체는 더 나은 맵이 되도록 하는 몇 가지 장점을 가지고 있다.
 
-- Object의 키는 {{jsxref("Global_Objects/String","Strings")}}이며, Map의 키는 모든 값을 가질 수 있다.
+- Object의 키는 {{jsxref("String","Strings")}}이며, Map의 키는 모든 값을 가질 수 있다.
 - Object는 크기를 수동으로 추적해야하지만, Map은 크기를 쉽게 얻을 수 있다.
 - Map은 삽입된 순서대로 반복된다.
 - 객체(Object)에는 prototype이 있어 Map에 기본 키들이 있다. (이것은 map = Object.create(null) 를 사용하여 우회할 수 있다. )
@@ -54,7 +54,7 @@ Object 혹은 Map중에 어느 것을 사용할지를 결정하는데 도움을 
 
 WeakMap에 대한 더 많은 정보와 예제 코드 그리고 "왜 WeakMap을 사용하지?"를 보고 싶다면 {{jsxref("WeakMap")}} 페이지를 참고하면 된다.
 
-`WeakMap`를 사용하는 한가지 경우는 객체의 사적인 정보를 저장하기 위해서 이거나 상세 구현 내용을 숨기기 위한 것이다. 다음의 예제는 Nick Fitzgerald의 블로그 글- ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/)-에서 가져온 것이다. 객체가 가지고 있는 그렇지만 외부에 공개되지 않는(private) 데이터와 메서드들은 `WeakMap`객체인 `privates`에 저장이 된다. 인스턴스를 통해 접근 가능한 모든 것들과 prototype은 public이고 다른 것들은 외부에서는 접근이 불가하다 그 이유는 `privates`는 모듈로부터 내보내기(export)가 되지 않기 때문이다.
+`WeakMap`를 사용하는 한가지 경우는 객체의 사적인 정보를 저장하기 위해서 이거나 상세 구현 내용을 숨기기 위한 것이다. 다음의 예제는 Nick Fitzgerald의 블로그 글- ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)-에서 가져온 것이다. 객체가 가지고 있는 그렇지만 외부에 공개되지 않는(private) 데이터와 메서드들은 `WeakMap`객체인 `privates`에 저장이 된다. 인스턴스를 통해 접근 가능한 모든 것들과 prototype은 public이고 다른 것들은 외부에서는 접근이 불가하다 그 이유는 `privates`는 모듈로부터 내보내기(export)가 되지 않기 때문이다.
 
 ```js
 const privates = new WeakMap();
@@ -99,7 +99,7 @@ for (let item of mySet) console.log(item);
 
 ### 배열과 Set의 상호 변환
 
-{{jsxref("Array.from")}} 혹은 [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
+{{jsxref("Array.from")}} 혹은 [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
 
 ```js
 Array.from(mySet);
@@ -138,4 +138,4 @@ Map객체의 key에 대한 동치성 비교와 Set객체의 값에 대한 동치
 - \-0과 +0은 같다고 간주한다.
 - {{jsxref("NaN")}}는 자기 자신하고 같다고 간주한다. (===와는 반대로)
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

@@ -16,12 +16,13 @@ new WeakMap()
 new WeakMap(iterable)
 ```
 
-> **참고:** `WeakMap()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `WeakMap()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 
 - `iterable`
-  - : [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array) 또는 [@@iterator](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) 메서드(첫 번째 요소가 `WeakMap` 키로 사용될 값이고 두 번째 요소가 해당 키에 연결할 값인 두 요소 배열과 같은 객체를 생성하는 이터레이터 객체를 반환)를 시행하는 다른 이터러블 객체. 각 키-값 쌍은 새로운 `WeakMap`에 추가됩니다. null은 undefined으로 취급합니다.
+  - : [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array) 또는 [@@iterator](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) 메서드(첫 번째 요소가 `WeakMap` 키로 사용될 값이고 두 번째 요소가 해당 키에 연결할 값인 두 요소 배열과 같은 객체를 생성하는 이터레이터 객체를 반환)를 시행하는 다른 이터러블 객체. 각 키-값 쌍은 새로운 `WeakMap`에 추가됩니다. null은 undefined으로 취급합니다.
 
 ## 예제
 

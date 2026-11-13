@@ -2,10 +2,8 @@
 title: 新しいコンテンツや機能の提案
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
 l10n:
-  sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs のための新しいコンテンツや機能の提案について、コミュニティの皆さんからのご意見に常に関心を持っています。ただし、提案を受け付けているとはいえ、以下のことを念頭に置いておく必要があります。
 
@@ -25,7 +23,7 @@ MDN Web Docs のための新しいコンテンツや機能の提案について�
 
 ## ディスカッションに参加し、承認を待つ
 
-もし、その提案が良いものだと感じたら、私たちは MDN community の discussions リポジトリーで[ディスカッションを始める](https://github.com/mdn/mdn-community/dicsussions)でしょう。これは、私たちのパートナーやより広いコミュニティから意見を取得するためです。私たちは、あなたがディスカッションを監視し、必要に応じて参加することをお勧めします。
+もし、その提案が良いものだと感じたら、私たちは MDN community の discussions リポジトリーで[ディスカッションを始める](https://github.com/orgs/mdn/discussions)でしょう。これは、私たちのパートナーやより広いコミュニティから意見を取得するためです。私たちは、あなたがディスカッションを監視し、必要に応じて参加することをお勧めします。
 
 ## 課題を開く
 

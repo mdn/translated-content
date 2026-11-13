@@ -1,17 +1,29 @@
 ---
 title: String.prototype.charCodeAt()
+short-title: charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コード単位を表す `0` から `65535` までの整数を返します。
 
-`charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
+`charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("String.prototype.codePointAt()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.charCodeAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// 予想される結果: "Character code 113 is equal to q"
+```
 
 ## 構文
 
@@ -48,8 +60,8 @@ Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの�
 
 ```js
 const str = "𠮷𠮾";
-console.log(str.charAt(0)); // 55362、または d842、これは妥当な Unicode 文字ではない
-console.log(str.charAt(1)); // 57271、または dfb7、これは妥当な Unicode 文字ではない
+console.log(str.charCodeAt(0)); // 55362、または d842、これは妥当な Unicode 文字ではない
+console.log(str.charCodeAt(1)); // 57271、または dfb7、これは妥当な Unicode 文字ではない
 ```
 
 指定された位置の完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} を使用してください。
@@ -59,7 +71,8 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **メモ:** `charCodeAt()` を使用して `codePointAt()` を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、`codePointAt()` のポリフィルをインストールしてください。
+> [!NOTE]
+> `charCodeAt()` を使用して `codePointAt()` を再実装することは避けてください。孤立サロゲートの検出とそのペアリングは複雑で、文字列の内部表現を直接使用する組み込み API の方がパフォーマンスが高いかもしれません。必要であれば、`codePointAt()` のポリフィルをインストールしてください。
 
 以下は [Unicode FAQ](https://unicode.org/faq/utf_bom.html#utf16-3) から引用した、UTF-16 コードユニットのペアを Unicode コードポイントに変換する可能なアルゴリズムです。
 

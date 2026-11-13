@@ -1,32 +1,46 @@
 ---
 title: Math.sin()
+short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+**`Math.sin()`** は静的メソッドで、ラジアン単位で表した数値の正弦（サイン）を返します。
 
-**`Math.sin()`** 関数は、引数として与えた数の正弦 (サイン) を返します。
+{{InteractiveExample("JavaScript デモ: Math.sin()")}}
 
-{{EmbedInteractiveExample("pages/js/math-sin.html")}}
+```js interactive-example
+function getCircleY(radians, radius) {
+  return Math.sin(radians) * radius;
+}
+
+console.log(getCircleY(1, 10));
+// 予想される結果: 8.414709848078965
+
+console.log(getCircleY(2, 10));
+// 予想される結果: 9.092974268256818
+
+console.log(getCircleY(Math.PI, 10));
+// 予想される結果: 1.2246467991473533e-15
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.sin(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値 (ラジアンで指定)。
+  - : ラジアンで角度を表す数値です。
 
 ### 返値
 
-指定された数値の正弦 (サイン) です。
+`x` の正弦で、-1 から 1 まで（両端を含む）です。`x` が {{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合は、{{jsxref("NaN")}} を返します。
 
 ## 解説
-
-`Math.sin()` メソッドはラジアンで指定された角度の正弦 (サイン) を表す -1 から 1 までの範囲の数値を表します。
 
 `sin()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.sin()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
@@ -35,10 +49,12 @@ Math.sin(x)
 ### Math.sin() の使用
 
 ```js
+Math.sin(-Infinity); // NaN
+Math.sin(-0); // -0
 Math.sin(0); // 0
 Math.sin(1); // 0.8414709848078965
-
 Math.sin(Math.PI / 2); // 1
+Math.sin(Infinity); // NaN
 ```
 
 ## 仕様書
@@ -57,3 +73,4 @@ Math.sin(Math.PI / 2); // 1
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("sin()")}} 関数

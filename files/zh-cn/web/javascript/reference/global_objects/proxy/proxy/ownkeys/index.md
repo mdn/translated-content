@@ -3,11 +3,31 @@ title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
 
-{{JSRef}}
-
 **`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  _age: 111,
+  [Symbol("secret")]: "I am scared!",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  ownKeys(target) {
+    return Reflect.ownKeys(target);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+for (const key of Object.keys(proxy1)) {
+  console.log(key);
+  // Expected output: "_age"
+  // Expected output: "eyeCount"
+}
+```
 
 ## 语法
 
@@ -101,6 +121,6 @@ console.log(Object.getOwnPropertyNames(p));
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Reflect.ownKeys()")}}

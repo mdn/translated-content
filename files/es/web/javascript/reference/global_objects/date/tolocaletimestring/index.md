@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 
 El método **`toLocaleTimeString()`** devuelve una cadena con una representación de la parte del tiempo de esta fecha sensible al idioma. Los nuevos argumentos `locales` y `options` le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse y personalizan el comportamiento de esta función. En implementaciones antiguas que ignoran los argumentos `locales` y `options` la localidad usada y la forma de la cadena devuelta son completamente dependientes de la implementación.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## Sintaxis
 
@@ -19,13 +33,13 @@ dateObj.toLocaleTimeString([locales[, options]])
 
 Los argumentos `locales` y `options` personalizan el comportamiento de la función y le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse. En las implementaciones que ignoran los argumentos `locales` y `options`, la localidad y la forma de la cadena devuelta son dependientes por completo de la implementación.
 
-Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
+Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
 
 El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month` y `day` son todas {{jsxref("undefined")}}, entonces `year`, `month` y `day` se asumen como `"numeric"`.
 
 ### Valor devuelto
 
-Una cadena representando la porción de tiempo de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada, conforme a las convenciones específicas del idioma.
+Una cadena representando la porción de tiempo de la instancia {{jsxref("Date")}} dada, conforme a las convenciones específicas del idioma.
 
 ## Ejemplos
 
@@ -114,7 +128,7 @@ console.log(
 
 ## Rendimiento
 
-Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificaciones
 
@@ -126,7 +140,7 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Ver también
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

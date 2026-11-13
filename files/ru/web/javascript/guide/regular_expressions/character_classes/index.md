@@ -7,7 +7,19 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 
 Классы символов позволяют различать виды символов, к примеру, как различия между буквами и цифрами.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Типы
 
@@ -146,7 +158,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
         Совпадёт с символом возврат назад (англ. backspace). Если вы ищите
         символ границы слова (<code>\b</code>), смотри
         <a
-          href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+          href="/ru/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
           >Границы</a
         >.
       </td>
@@ -282,9 +294,9 @@ console.table(nonEnglishText.match(regexpBMPWord));
 
 ## Смотрите также
 
-- [Руководство по Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
-  - [Assertions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Руководство по Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Assertions](/ru/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantifiers](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Unicode property escapes](/ru/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Groups and ranges](/ru/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 - [Конструктор `RegExp()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

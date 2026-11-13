@@ -25,7 +25,7 @@ if (gp.buttons[0].pressed == true) {
 
 ## Значение
 
-{{domxref("boolean")}}.
+{{jsxref("Boolean")}}.
 
 ## Спецификации
 
@@ -37,4 +37,4 @@ if (gp.buttons[0].pressed == true) {
 
 ## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

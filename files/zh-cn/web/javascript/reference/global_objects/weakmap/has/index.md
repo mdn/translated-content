@@ -3,11 +3,23 @@ title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakMap")}} 实例的 **`has()`** 返回一个布尔值，指示该 `WeakMap` 中是否存在具有指定键的元素。
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## 语法
 

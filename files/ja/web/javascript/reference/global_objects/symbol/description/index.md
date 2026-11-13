@@ -1,19 +1,32 @@
 ---
 title: Symbol.prototype.description
+short-title: description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`description`** は {{JSxRef("Symbol")}} 値のアクセサープロパティで、このシンボルの説明を格納した文字列を返し、シンボルに説明がない場合は `undefined` を返します。
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript デモ: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// 予想される結果: "desc"
+
+console.log(Symbol.iterator.description);
+// 予想される結果: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// 予想される結果: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// 予想される結果: "foobar"
+```
 
 ## 解説
 
-{{JSxRef("Symbol")}} オブジェクトは、オプションの説明を使用して作成できます。これはデバッグには使用できますが、シンボル自体にはアクセスできません。`Symbol.prototype.description` プロパティを使用して、その説明を読み取ることができます。囲んでいる "`Symbol()`" 文字列が含まれていないため、 `Symbol.prototype.toString()` とは異なります。例を参照してください。
+{{jsxref("Symbol")}} オブジェクトは、オプションの説明を使用して作成できます。これはデバッグには使用できますが、シンボル自体にはアクセスできません。`Symbol.prototype.description` プロパティを使用して、その説明を読み取ることができます。囲んでいる `"Symbol()"` 文字列が含まれていないため、 `Symbol.prototype.toString()` とは異なります。例を参照してください。
 
 ## 例
 
@@ -45,4 +58,5 @@ Symbol.for("foo").description; // "foo"
 ## 関連情報
 
 - [`Symbol.prototype.description` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [es-shims による `Symbol.prototype.description` のポリフィル](https://www.npmjs.com/package/symbol.prototype.description)
 - {{jsxref("Symbol.prototype.toString()")}}

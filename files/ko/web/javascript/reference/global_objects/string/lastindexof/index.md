@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 **`lastIndexOf()`** 메서드는 주어진 값과 일치하는 부분을 `fromIndex`로부터 역순으로 탐색하여, 최초로 마주치는 인덱스를 반환합니다. 일치하는 부분을 찾을 수 없으면 `-1`을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()", "shorter")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## 구문
 
@@ -41,7 +52,8 @@ str.lastIndexOf(searchValue[, fromIndex])
 "canal".lastIndexOf("", 2); //  2 반환
 ```
 
-> **참고:** `'abab'.lastIndexOf('ab', 2)`는 0이 아니고 2를 반환합니다. `fromIndex`는 탐색의 시작점만 제한하기 때문입니다.
+> [!NOTE]
+> `'abab'.lastIndexOf('ab', 2)`는 0이 아니고 2를 반환합니다. `fromIndex`는 탐색의 시작점만 제한하기 때문입니다.
 
 ### 대소문자 구분
 

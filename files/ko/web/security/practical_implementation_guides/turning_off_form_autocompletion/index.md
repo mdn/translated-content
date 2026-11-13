@@ -12,11 +12,11 @@ l10n:
 
 일반적으로 이러한 기능은 기본적으로 활성화되어 있지만, 사용자의 개인 정보 보호에 문제가 될 수 있으므로 사용자는 브라우저에서 이 기능을 비활성화할 수 있습니다. 그러나 양식으로 제출된 데이터 중 일부는 향후에 유용하지 않거나(예: 일회성 핀) 민감한 정보(예: 고유한 정부 식별자 또는 신용 카드 보안 코드)를 포함하기 때문에, 웹 사이트 개발자로서, 브라우저의 자동 완성 기능이 활성화된 경우에도 브라우저가 이러한 필드의 값을 기억하지 않기를 원할 수 있습니다.
 
-실제로 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)는 자동 완성/자동 채우기가 작동할 것을 요구하지 않습니다. 단지 특정 개인 사용자 정보와 관련된 양식 필드가 프로그래밍 방식으로 식별되기만 하면 됩니다. 즉, 양식 자체에 대한 자동 완성 기능이 꺼진 경우에도 기준을 통과할 수 있습니다(개별 양식 필드에 관련 [`autocomplete`](/ko/docs/Web/HTML/Attributes/autocomplete) 속성을 추가하여).
+실제로 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)는 자동 완성/자동 채우기가 작동할 것을 요구하지 않습니다. 단지 특정 개인 사용자 정보와 관련된 양식 필드가 프로그래밍 방식으로 식별되기만 하면 됩니다. 즉, 양식 자체에 대한 자동 완성 기능이 꺼진 경우에도 기준을 통과할 수 있습니다(개별 양식 필드에 관련 [`autocomplete`](/ko/docs/Web/HTML/Reference/Attributes/autocomplete) 속성을 추가하여).
 
 ## 자동 완성 비활성화하기
 
-양식에서 자동 완성을 비활성화하려면 [`autocomplete`](/ko/docs/Web/HTML/Attributes/autocomplete) 속성을 "off"로 설정합니다.
+양식에서 자동 완성을 비활성화하려면 [`autocomplete`](/ko/docs/Web/HTML/Reference/Attributes/autocomplete) 속성을 "off"로 설정합니다.
 
 ```plain
 autocomplete="off"
@@ -64,6 +64,6 @@ autocomplete="off"
 
 사용자가 다른 사람의 새 암호를 지정할 수 있는 사용자 관리 페이지에서 암호 필드의 자동 채우기를 방지하기 위해 `autocomplete="new-password"`를 사용할 수 있습니다.
 
-브라우저는 이 힌트를 준수할 필요가 없습니다. 그러나, 최신 브라우저는 바로 위와 같은 이유로 `autocomplete="new-password"`가 있는 `<input>` 요소의 자동 채우기를 중단했습니다. 예를 들어, Firefox 버전 67([Firefox bug 1119063](https://bugzil.la/1119063) 참조)은 이 경우에 대해 자동 채우기를 중지했습니다. 그러나, Firefox 70([Firefox bug 1565407](https://bugzil.la/1565407) 참조)은 안전하게 생성된 암호를 제안할 수 있지만, 저장된 암호를 자동으로 채우지는 않습니다. 자세한 내용은 [`autocomplete` 호환성 표](/ko/docs/Web/HTML/Attributes/autocomplete#browser_compatibility)를 참조하세요.
+브라우저는 이 힌트를 준수할 필요가 없습니다. 그러나, 최신 브라우저는 바로 위와 같은 이유로 `autocomplete="new-password"`가 있는 `<input>` 요소의 자동 채우기를 중단했습니다. 예를 들어, Firefox 버전 67([Firefox bug 1119063](https://bugzil.la/1119063) 참조)은 이 경우에 대해 자동 채우기를 중지했습니다. 그러나, Firefox 70([Firefox bug 1565407](https://bugzil.la/1565407) 참조)은 안전하게 생성된 암호를 제안할 수 있지만, 저장된 암호를 자동으로 채우지는 않습니다. 자세한 내용은 [`autocomplete` 호환성 표](/ko/docs/Web/HTML/Reference/Attributes/autocomplete#browser_compatibility)를 참조하세요.
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}

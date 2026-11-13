@@ -3,10 +3,10 @@ title: "Event: target プロパティ"
 short-title: target
 slug: Web/API/Event/target
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`target`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが配信されたオブジェクトへの参照です。これは、イベントのバブリングまたはキャプチャ段階でイベントハンドラーが呼び出されたときの {{domxref("Event.currentTarget")}} とは異なります。
 
@@ -49,4 +49,4 @@ ul.addEventListener("click", hide, false);
 
 ## 関連情報
 
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [学習: イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)

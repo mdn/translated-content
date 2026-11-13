@@ -16,24 +16,20 @@ let observer = new IntersectionObserver(callback[, options]);
 ### Paramètres
 
 - `callback`
-
   - : Une fonction appelée lorsque la proportion de l'élément qui est visible franchit un seuil. La fonction de rappel reçoit en entrée deux paramètres :
-
     - `entries`
       - : Une liste d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), chacun représentant un seuil franchi, que ce soit en passant au-dessus ou en dessous du pourcentage spécifié par le seuil.
     - `observateur`
       - : L'objet [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) pour lequel la fonction de rappel est invoquée.
 
 - `options` {{optional_inline}}
-
   - : Un objet optionnel qui paramètre l'observateur. Si `options` n'est pas spécifié, l'observateur utilise la fenêtre du document comme racine, sans appliquer de marge, et avec un seuil de 0% (signifiant que le moindre changement d'un pixel suffira à déclencher la fonction de rappel). Les propriétés suivantes peuvent être utilisées pour la configuration :
-
     - `root`
       - : Un objet [`Element`](/fr/docs/Web/API/Element) ou [`Document`](/fr/docs/Web/API/Document) qui est un ancêtre de l'élément observé et dont la boîte englobante sera considérée comme la zone d'affichage (_viewport_). Toute portion de l'élément cible qui n'est pas visible dans la zone couverte par cette zone englobant n'est pas considérée visible.
     - `rootMargin`
-      - : Une chaîne de caractères spécifiant un ensemble de décalages à ajouter à la zone englobante pour le calcul des intersections. La zone effective utilisées pour les calculs peut ainsi être réduite ou étendue. La syntaxe est proche de celle utilisée pour la propriété CSS [`margin`](/fr/docs/Web/CSS/margin). Voir [L'élément racine et sa marge externe](/fr/docs/Web/API/Intersection_Observer_API) pour plus d'informations sur le fonctionnement des marges et la syntaxe. Sa valeur par défaut est `"0px 0px 0px 0px"`.
+      - : Une chaîne de caractères spécifiant un ensemble de décalages à ajouter à la zone englobante pour le calcul des intersections. La zone effective utilisées pour les calculs peut ainsi être réduite ou étendue. La syntaxe est proche de celle utilisée pour la propriété CSS [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin). Voir [L'élément racine et sa marge externe](/fr/docs/Web/API/Intersection_Observer_API) pour plus d'informations sur le fonctionnement des marges et la syntaxe. Sa valeur par défaut est `"0px 0px 0px 0px"`.
     - `threshold`
-      - : Un nombre ou un tableau de nombres entre 0.0 et 1.0 (inclus), spécifiant des seuils définis comme ratios de la part visible d'un élément cible observé par rapport à sa surface totale. Une valeur de 0.0 signifie que tout pixel visible de l'élément le rend visible et 1.0 que l'entièreté de l'élément doit être visible. Voir [cette section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#Thresholds) pour une description plus approfondie de l'usage des seuils d'intersection. Le seuil par défaut est 0.0.
+      - : Un nombre ou un tableau de nombres entre 0.0 et 1.0 (inclus), spécifiant des seuils définis comme ratios de la part visible d'un élément cible observé par rapport à sa surface totale. Une valeur de 0.0 signifie que tout pixel visible de l'élément le rend visible et 1.0 que l'entièreté de l'élément doit être visible. Voir [cette section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#thresholds) pour une description plus approfondie de l'usage des seuils d'intersection. Le seuil par défaut est 0.0.
 
 ### Valeur de retour
 

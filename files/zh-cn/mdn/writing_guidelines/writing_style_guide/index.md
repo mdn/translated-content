@@ -3,8 +3,6 @@ title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 本篇写作风格指南描述了 MDN Web 文档上的内容应该如何书写、组织、拼写和格式化。
 
 这些指南是为了确保整个网站的语言和风格的一致性。也就是说，我们对内容而不是格式更感兴趣，所以不必在为 MDN Web 文档贡献前学习整个写作风格指南。然而，如果其他贡献者后来编辑你的作品以符合该指南，请不要感到不安或惊讶。当你提交内容拉取请求时，审稿人也可能将你指向这个风格指南。
@@ -82,7 +80,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#文本) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### 使用包容性语言
 
@@ -130,7 +128,6 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - **确保页面不会太相似**：如果不同页面上的内容在文字上相似，搜索引擎就会认为这些页面是关于同一事物的，即使它们实际上不是。例如，如果一个界面有 `width` 和 `height` 两个属性，那么记录这两个属性的两个页面上的文字很容易惊人地相似，只是换了几个词，用了同一个例子。这使得搜索引擎很难知道哪个是哪个，而且它们最终会共享页面排名，导致这两个页面比预期更难找到。
 
   那么，确保每一个页面都有自己的内容是很重要的。这里有一些建议可以帮助你实现这一目标：
-
   - **解释更多独特的概念**：考虑那些可能比人们想象的有更多差异的使用案例。例如，在编写 `width` 和 `height` 属性的文档时，也许可以写出水平空间和垂直空间的不同使用方式，并提供关于适当概念的讨论。也许你可以提到在为侧边栏腾出空间方面使用 `width`，而使用 `height` 来处理垂直滚动或页脚。包括关于无障碍问题的信息也是一个有用的、重要的想法。
   - **使用不同的例子**：这些情况下的例子往往比正文更相似，因为例子可能一开始就使用了两个（或全部）相似的方法或属性，因此在重复使用时不需要真正的改变。所以扔掉这个例子，写一个新的，或者至少提供多个例子，其中至少有一些是不同的。
   - **为例子增加描述**：既要概述例子的作用，又要涵盖它是如何工作的，考虑到主题的复杂性和目标受众，要有适当的详细程度。
@@ -140,14 +137,13 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - **确保页面不会太短**：如果一个页面上的内容太少（在 SEO 术语中称为“薄页（thin page）”），搜索引擎将不会对这种页面进行准确的分类。内容过短的页面很难找到。作为一个指导原则，确保 MDN Web 文档上的页面内容不少于 300 字左右。不要人为地撑满一个页面，但在可能的情况下，将这一准则作为一个最小的目标长度。
 
   这里有一些基本准则，可以帮助你创建有足够内容的页面，使其可以正常搜索，而不至于用不必要的文字把它们弄得很乱：
-
   - **避免占位符**：很明显，如果文章存在占位符或缺少内容，请补充上相应的内容。我们尽量避免在 MDN Web 文档上出现直接的“占位符”页面，尽管它们确实存在，但有很多页面缺少大量的内容。
   - **审查页面结构**：审查页面以确保它的结构对于[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)来说是正确的。要确保它应该有的每一节都存在，并有适当的内容。
   - **确保完整性**：审查各节以确保没有遗漏任何信息。确保所有的参数都被列出并解释。确保涵盖任何例外情况——这是一个特别常见的内容缺失的地方。
   - **确保所有的概念都得到充实**：对某件事进行快速解释很容易，但要确保涵盖所有的细微差别。是否有特殊情况？是否有读者可能需要了解的任何已知限制？
-  - **增加例子**：应该有涵盖所有参数或至少是初级到中级用户可能使用的参数（或属性）的例子，以及任何需要额外解释的高级参数。每个例子前面都应该有一个概述，说明这个例子将做什么，理解它可能需要哪些额外的知识，等等。在例子之后（或穿插在例子的各个部分）应该有解释代码如何工作的文字。不要吝啬例子中的细节和对错误的处理。请记住，用户会复制和粘贴你的例子在他们自己的项目中使用，而你的代码也会在生产网站上使用！请参阅我们的[代码范例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)以获得更多有用的信息。
+  - **增加例子**：应该有涵盖所有参数或至少是初级到中级用户可能使用的参数（或属性）的例子，以及任何需要额外解释的高级参数。每个例子前面都应该有一个概述，说明这个例子将做什么，理解它可能需要哪些额外的知识，等等。在例子之后（或穿插在例子的各个部分）应该有解释代码如何工作的文字。不要吝啬例子中的细节和对错误的处理。请记住，用户会复制和粘贴你的例子在他们自己的项目中使用，而你的代码也会在生产网站上使用！请参阅我们的[代码范例指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)以获得更多有用的信息。
   - **解释用例**：如果所描述的功能有特别常见的用例，那就谈一谈吧！而不是假设用户会在使用过程中出现问题！与其假设用户会发现被记录的方法可以用来解决一个常见的开发问题，不如实际添加一个关于该用例的部分，并提供一个例子和解释该例子如何工作的文字。
-  - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
+  - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
     > [!NOTE]
     > 不建议包含过多的关键词或与功能无关的关键词，以试图操纵搜索引擎的排名；这种类型的行为很容易被发现，而且往往会受到惩罚。同样，**不要**在实际页面内添加重复的、无益的材料或大量的关键词，以试图提高页面的大小和搜索排名。这对内容的可读性和我们的搜索结果来说都是弊大于利。
   - **专注于主题内容**：随着谷歌在 2013 年的 Hummingbird 更新，人们越来越关注使用自然语言来传达信息。这意味着，围绕页面的主题来写内容要比围绕特定的关键词好得多。对于一个给定的主题，你极有可能包括许多关键词；事实上，许多 SEO 编制了一个 5-100 个不同关键词的清单（在短、中、长尾关键词之间变化），以包括在他们的文章中，这取决于长度。这样做会使你的措辞多样化，从而减少重复。
@@ -173,24 +169,20 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 缩写是一个较长单词的缩短版本，而首字母缩写是使用短语中每个单词的第一个字母创造的新单词。本节介绍了缩写和首字母缩写的准则。
 
 - **扩展形式**：在页面中第一次提到一个术语时，要展开用户可能不熟悉的缩略语。如果有疑问，就展开它——或者更好的是，把它链接到描述该技术的文章或[术语表](/zh-CN/docs/Glossary)条目。
-
   - **正确**："XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **错误**："XUL is Mozilla's XML-based language..."
 
 - **大写形式及句点：** 在这两种缩写中（包括国家和组织的缩写，如“US”、“UN”），请使用全大写且不要添加句号。
-
   - **正确**：XUL
   - **错误**：X.U.L.; Xul
 
 - **拉丁文缩写**：你可以在括号内的表达和注释中使用常见的拉丁文缩写（如 etc.、i.e.、e.g.）。在这些缩写中使用句号，后面是逗号或其他适当的标点符号。
-
   - **正确**：Web browsers (e.g., Firefox) can be used ...
   - **错误**：Web browsers e.g. Firefox can be used ...
   - **错误**：Web browsers, e.g. Firefox, can be used ...
   - **错误**：Web browsers, (eg: Firefox) can be used ...
 
   在普通的句子中（也就是注记文字或括号的外面），请使用与拉丁文缩写等价的英文单词或短语。
-
   - **正确**：... web browsers, and so on.
   - **错误**：... web browsers, etc.
 
@@ -215,12 +207,10 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   > 另外，如果你决定使用缩写，那么请确保*你*的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。
 
 - **缩写和缩略语的复数形式**：当需要使用复数形式的缩写或缩略语时，直接在后面加上 _s_ 即可，请务必不要加撇号。
-
   - **正确**：CD-ROMs
   - **错误**：CD-ROM's
 
 - **“Versus”、“vs.”和“v.”**：如果使用缩略语，“vs.”比“v.”更好，可以在标题中使用。在文本的其他地方，使用全拼形式“versus”。
-
   - **正确**：this vs. that
   - **错误**：this v. that
   - **错误**：this versus that
@@ -247,27 +237,22 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 ### 数字和数词
 
 - **逗号**：应该仅在数字的位数大于等于 5 位时才使用逗号分隔符：
-
   - **正确**：4000、54,000
   - **错误**：4,000、54000
 
 - **日期**：请用“January 1, 1990”这样的形式来表达日期（不包括代码示例中的日期）。
-
   - **正确**：February 24, 1906
   - **错误**：February 24th, 1906、24 February, 1906、24/02/1906
 
   或者你也可以使用“YYYY/MM/DD”的形式：
-
   - **正确**：1906/02/24
   - **错误**：02/24/1906、24/02/1906、02/24/06
 
 - **年代**：请使用“1990s”这种形式来表示年代，但不要使用撇号：
-
   - **正确**：1920s
   - **错误**：1920's
 
 - **数词的复数**：数词的复数直接在后面加“s”，同样不要使用撇号：
-
   - **正确**：486s
   - **错误**：486's
 
@@ -293,7 +278,6 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 下面的列表描述了一些我们需要注意逗号使用规则的常见情况：
 
 - **在介绍性从句后**：引导句是一个从属句，通常出现在一个句子的开头。在引导句后使用逗号，将其与后面的独立句分开。
-
   - 示例 1：
     - **正确**："In this example, you will see how to use a comma."
     - **错误**："In this example you will see how to use a comma."
@@ -305,17 +289,14 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
     - **错误**："On mobile platforms you tend to get a numeric keypad for entering data."
 
 - **在连接词之前**：串行逗号（也称为“牛津逗号”）是指在三个或更多项目的系列中出现在连词前的逗号。在 MDN Web 文档上，我们使用串行逗号。逗号还可以分隔列表中的每个项目。
-
   - **正确**：I will travel on trains, planes, and automobiles.
   - **错误**：I will travel on trains, planes and automobiles.
 
   在包含两个项目的列表中，不要在“and”或“or”之前使用逗号。
-
   - **正确**："My dog is cute and smart."
   - **错误**："My dog is cute, and smart."
 
   如果连词“and”、“but”和“or”连接两个独立分句，则在其前面使用逗号。但是，如果句子在连词的作用下变得很长或很复杂，可以考虑将其改写成两个句子。
-
   - 示例 1：
     - **正确**："You can perform this step, but you need to pay attention to the file setting."
     - **错误**："You can perform this step but you need to pay attention to the file setting."
@@ -327,22 +308,18 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   > 这种情况在翻译成简体中文时应将逗号翻译为顿号。“简体中文翻译指南”一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)”一节中也提到了这个问题。
 
 - **在“that”和“which”之前：** 限制性从句对句子的意义至关重要，不需要用逗号将其与其余句子隔开。限制性从句通常由“that”引入，**不应**在其前面加逗号。
-
   - **正确**："We have put together a course that includes all the essential information you need to work towards your goal."
   - **错误**："We have put together a course, that includes all the essential information you need to work towards your goal."
 
   非限制性从句提供额外的信息，对句子的意思不是至关重要的。非限制性从句通常由“which”引入，前面应加一个逗号。
-
   - **正确**："You write a policy, which is an allowed list of origins for each feature."
   - **错误**："You write a policy which is an allowed list of origins for each feature."
 
 - **在“such as”之前**：如果“such as”是一个非限制性从句的一部分，而剩下的句子是一个独立的从句，在“such as”前使用逗号。
-
   - **正确：** "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
   - **错误：** "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
 
   下面的例子显示了什么时候不能用逗号与“such as”搭配。在这里，包含“such as”的句子对句子的意义至关重要。
-
   - **正确**："Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
   - **错误**："Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
 
@@ -367,14 +344,12 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - **HTML 元素**：请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用 {{HTMLElement("code")}} 样式。
 
   当文章中第一次出现某个元素的时候，应该用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
-
   - **正确**：{{HTMLElement("span")}} element
   - **错误**：span tag
 
 - **Parameters 和 arguments**：MDN Web 文档上推荐使用 **parameters** 术语，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
 
 - **用户界面操作**：在说明一系列操作步骤时，应使用祈使语气来描述用户的操作，并用 UI 组件的名称和其元素类型来标识操作对象。
-
   - **正确**："Click the Edit button."
   - **错误**："Click Edit."
 
@@ -409,7 +384,7 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 - 如果你正在处理一大段示例代码，把它分解成较小的逻辑部分，以便对它们进行单独描述，这可能是有意义的。
 - 在添加[实时演示](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)时，注意到包含样本的区域中的所有 {{HTMLElement("pre")}} 块在运行样本前都被串联起来，这让你可以将任何或所有的 HTML、CSS 和 JavaScript 分成多个片段，每个片段可以选择有自己的描述、标题等。这使得撰写代码文档的功能非常强大和灵活。
 
-要了解如何为 MDN Web 文档的代码示例设置样式或格式，请参见[代码示例样式指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+要了解如何为 MDN Web 文档的代码示例设置样式或格式，请参见[代码示例样式指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 ### 外部链接
 
@@ -426,14 +401,12 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 > 在添加外部链接之前，考虑在 MDN Web 文档内交叉引用内容。内部链接更容易维护，并使整个 MDN Web 文档对读者更有价值。
 
 - **良好的外部链接**：好的外部链接能把读者带到相关的、持久的、被广泛信任的资源。你应该更倾向于添加链接到以下的外部内容：
-
   - 独特或不可缺少的（例如，IETF RFC）。
   - 对归属、引用或鸣谢是必要的（例如，作为知识共享署名的一部分）
   - 比起将这些内容纳入 MDN Web 文档本身，更有可能对该主题进行维护（例如，供应商的发布说明）。
   - 开源或社区驱动，就像 MDN Web 文档本身一样
 
 - **糟糕的外部链接**：糟糕的外部链接缺乏相关性、可维护性、无障碍性，或者给读者带来障碍。避免添加指向外部内容的链接：
-
   - 通用的或不具体的（例如，一个供应商的主页，而不是相关的文档）。
   - 短暂的或未维护的（例如，一次性的公告）
   - 自我链接或自我宣传（例如，作者在 MDN Web 文档之外的自己的工作）。
@@ -459,7 +432,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 当一个新的段落开始一个新的章节时，应该添加一个标题。
 
-在不跳级的情况下，按照递减的顺序使用这些 markdown 标记级别：`##`，然后是 `###`，然后是 `####`；这些分别翻译成 [HTML 标题标签](/zh-CN/docs/Web/HTML/Element/Heading_Elements)的 `<h2>`、`<h3>` 和 `<h4>` 标签。
+在不跳级的情况下，按照递减的顺序使用这些 markdown 标记级别：`##`，然后是 `###`，然后是 `####`；这些分别翻译成 [HTML 标题标签](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)的 `<h2>`、`<h3>` 和 `<h4>` 标签。
 
 `##` 是允许的最高级别，因为 `#` 是保留给页面标题的。我们建议不要添加超过三层的标题。如果你觉得有必要添加第四层标题，可以考虑将文章分成几个小的文章，并设置一个着陆页。或者，看看你是否可以用无序列表的方式来呈现信息，以避免添加第四级标题。
 
@@ -519,18 +492,18 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 ### “参见”部分
 
-MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的[“参见”部分](/zh-CN/docs/Web/CSS/@layer#参见)。
+MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的[“参见”部分](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#参见)。
 
-一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
+一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn_web_development)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
 
 为了保持整个 MDN Web 文档的一致性，在添加或更新“参见”部分时，请记住以下准则。
 
 #### 链接文字
 
-- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Attributes) 页面的链接文本将是：
-  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)页面的链接文本将是：
-  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes) 页面的链接文本将是：
+  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)页面的链接文本将是：
+  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
 - 对于外部链接也要使用句子的大小写，即使目标文章页面上的大小写不同。这是为了确保整个 MDN Web 文档的一致性。例外情况包括书籍的名称。
 - 使用适当的宏来链接到[参考文档页面](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#链接到_mdn_的参考文档页面)。使用宏将为链接文本中的关键词添加代码格式，如前面的例子所示。
 - 链接列表项的开头不需要冠词（"A"、"An"、"The"）。链接文本后不需要标点符号，因为它必然是一个术语或一个短语。
@@ -561,7 +534,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 
@@ -580,7 +553,6 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 在撰写标题时，请牢记以下准则：
 
 - **大写风格**：在 MDN Web 文档中，页面标题和章节标题应使用分句式大写（仅大写第一个单词和专有名词），而不是标题式大写：
-
   - **正确**："A new method for creating JavaScript rollovers"
   - **错误**："A New Method for Creating JavaScript Rollovers"
 
@@ -589,7 +561,6 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - **通用原则**：决定你要记录什么，以及你将如何组织这些内容，是写作的第一步。写一个目录可以帮助你决定如何安排信息。先介绍简单的概念，然后再介绍更复杂和高级的概念。先讲概念性的信息，然后再讲面向行动的主题。
 
   在为页面和章节或分节撰写标题时，请牢记以下准则：
-
   - **由浅入深**：如[标题级别](#标题级别)部分所述，从较高的 `##` 到较低的 `####` 排布内容，中间不要跳级。使用较高层次的标题作为广泛的介绍性标题，并在进入较低层次的标题时使用更具体的标题。
   - **按逻辑分组**：确保所有相关的小节都在一个较高层次的标题下有逻辑地组合在一起。命名各部分的标题可以帮助你完成这项工作。
   - **保持标题简短**：较短的标题更容易在文本和目录中粗读。

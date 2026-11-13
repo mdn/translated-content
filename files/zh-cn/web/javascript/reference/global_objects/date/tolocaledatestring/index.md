@@ -3,11 +3,28 @@ title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 ---
 
-{{JSRef}}
-
 **`toLocaleDateString()`** 方法返回指定日期对象日期部分的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法仅是调用了 `Intl.DateTimeFormat` 方法。
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## 语法
 
@@ -24,13 +41,11 @@ toLocaleDateString(locales, options)
 在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，这些参数与构造函数的参数完全对应。而对于不支持 `Intl.DateTimeFormat` 的实现，则要求函数忽略这两个参数，使得函数使用的区域（locale）以及返回的字符串的格式完全取决于实现。
 
 - `locales` {{optional_inline}}
-
   - : 表示缩写语言代码（BCP 47 language tag）的字符串，或由此类字符串组成的数组。对应于 `Intl.DateTimeFormat()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) 参数。
 
     在不支持 `Intl.DateTimeFormat` 的实现中，该参数会被忽略，并且通常会使用主机的区域设置。
 
 - `options` {{optional_inline}}
-
   - : 一个调整输出格式的对象。对应于 `Intl.DateTimeFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) 参数。如果其 `dayPeriod`、`hour`、`minute`、`second` 和 `fractionalSecondDigits` 属性全是 undefined，则 `hour`、`minute`、`second` 这三个属性会被设置为 `"numeric"`。
 
     在不支持 `Intl.DateTimeFormat` 的实现中，该参数会被忽略。

@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaAutoComplete`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性の値を反映します。この属性は、テキストを入力することで、コンボボックス、検索ボックス、テキストボックスに対して、ユーザーの意図する値の 1 つ以上の予測を表示させることができるかどうかを示し、予測が発生した場合にどのように表示するかを指定します。
+**`ariaAutoComplete`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性の値を反映します。この属性は、テキストを入力することで、コンボボックス、検索ボックス、テキストボックスに対して、ユーザーの意図する値の 1 つ以上の予測を表示させることができるかどうかを示し、予測が発生した場合にどのように表示するかを指定します。
 
 ## 値
 

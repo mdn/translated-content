@@ -5,7 +5,7 @@ slug: Web/API/Notification/click_event
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos [`click`](/es/docs/Web/Reference/Events/click). Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
+La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos [`click`](/es/docs/Web/API/Element/click_event). Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
 
 ## Sintaxis
 
@@ -15,8 +15,7 @@ Notification.onclick = function (event) {
 };
 ```
 
-El comportamiento por defecto es mover el foco al viewport del [sitio de contexto](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de dicha notificación. Si no deseas este comportamiento, puedes llamar {{domxref("Event/preventDefault",
-  "preventDefault()")}} en el objeto del evento.
+El comportamiento por defecto es mover el foco al viewport del [sitio de contexto](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de dicha notificación. Si no deseas este comportamiento, puedes llamar {{domxref("Event/preventDefault", "preventDefault()")}} en el objeto del evento.
 
 ## Ejemplos
 

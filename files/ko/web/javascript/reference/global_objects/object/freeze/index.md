@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 **`Object.freeze()`** 메서드는 객체를 **동결**합니다. 동결된 객체는 더 이상 변경될 수 없습니다. 즉, 동결된 객체는 새로운 속성을 추가하거나 존재하는 속성을 제거하는 것을 방지하며 존재하는 속성의 불변성, 설정 가능성(configurability), 작성 가능성이 변경되는 것을 방지하고, 존재하는 속성의 값이 변경되는 것도 방지합니다. 또한, 동결 객체는 그 프로토타입이 변경되는것도 방지합니다. `freeze()`는 전달된 동일한 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## 구문
 
@@ -183,7 +197,7 @@ TypeError: 1 is not an object // ES5 code
 1                             // ES2015 code
 ```
 
-엘리먼트를 갖는 {{domxref("ArrayBufferView")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.
+엘리먼트를 갖는 {{jsxref("TypedArray")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.
 
 ```js
 > Object.freeze(new Uint8Array(0)) // 엘리먼트가 없음

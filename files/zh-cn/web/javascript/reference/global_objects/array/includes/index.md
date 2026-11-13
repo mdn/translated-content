@@ -3,11 +3,24 @@ title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 
-{{JSRef}}
-
 **`includes()`** 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## 语法
 
@@ -32,7 +45,7 @@ includes(searchElement, fromIndex)
 
 ## 描述
 
-`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` *不*被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
+`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` *不*被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
 
 当在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用时，`includes()` 方法迭代空槽，就像它们的值是 `undefined` 一样。
 
@@ -115,7 +128,7 @@ console.log(Array.prototype.includes.call(arrayLike, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.includes` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.find()")}}

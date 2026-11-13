@@ -3,7 +3,7 @@ title: Scissor animation
 slug: Web/API/WebGL_API/By_example/Scissor_animation
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}
 
 使用剪切和清除操作实现一些动画的简单 WebGL 的例子。
 
@@ -153,4 +153,4 @@ function getRenderingContext() {
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
 
-{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Boilerplate_1","Web/API/WebGL_API/By_example/Raining_rectangles")}}

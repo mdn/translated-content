@@ -42,7 +42,7 @@ Llamamos a esto una _llamada a función asíncrona_. Esta convención tiene vari
 
 A diferencia de las funciones callback pasadas al "viejo estilo", una promesa viene con algunas garantías:
 
-- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/EventLoop#Ejecutar_hasta_completar) del bucle de eventos de JavaScript.
+- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/Reference/Execution_model#ejecutar_hasta_completar) del bucle de eventos de JavaScript.
 - Las funciones callback añadidas con `then()` incluso después del éxito o fracaso de la operación asíncrona serán llamadas como se mostró anteriormente.
 - Múltiples funciones callback pueden ser añadidas llamando a `then()` varias veces. Cada una de ellas es ejecutada una seguida de la otra, en el orden en el que fueron insertadas.
 
@@ -97,7 +97,7 @@ hazAlgo()
   .catch(falloCallback);
 ```
 
-Los argumentos a `then` son opcionales, y `catch(falloCallBack)` es un atajo para `then(null, falloCallBack)`. Es posible que veas esto expresado con [funciones de flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) :
+Los argumentos a `then` son opcionales, y `catch(falloCallBack)` es un atajo para `then(null, falloCallBack)`. Es posible que veas esto expresado con [funciones de flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
 
 ```js
 hazAlgo()
@@ -171,7 +171,7 @@ try {
 }
 ```
 
-Esta simetría con el código síncrono culmina con la mejora sintáctica [async/await](/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona) en ECMASCript 2017:
+Esta simetría con el código síncrono culmina con la mejora sintáctica [async/await](/es/docs/Web/JavaScript/Reference/Statements/async_function) en ECMASCript 2017:
 
 ```js
 async function foo() {
@@ -324,7 +324,7 @@ console.log(1); // 1, 2, 3, 4
 
 ## Anidamiento
 
-Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas#Common_mistakes).
+Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](#common_mistakes).
 
 El anidamiento es una estructura de control para limitar el alcance de las sentencias `catch`. Específicamente, un `catch` anidado sólo captura fallos dentro de su contexto y por debajo, no captura errores que están más arriba en la cadena fuera del alcance del anidamiento. Cuando se usa correctamente, da mayor precisión en la recuperación de errores:
 
@@ -385,5 +385,5 @@ El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_fun
 ## Vea también
 
 - {{jsxref("Promise.then()")}}
-- [Promises/A+ specification](http://promisesaplus.com/)
-- [Nolan Lawson: Tenemos un problema con las promesas — Errores comunes con las promesas](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Promises/A+ specification](https://promisesaplus.com/)
+- [Nolan Lawson: Tenemos un problema con las promesas — Errores comunes con las promesas](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)

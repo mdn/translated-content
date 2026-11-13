@@ -1,34 +1,52 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
-
 グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
+**`isFinite()`** 関数は、値が有限数であるかどうかを判断します。必要に応じて、まず値を数値に変換します。有限数とは、{{jsxref("NaN")}} でも ±{{jsxref("Infinity")}} でもない数値です。 `isFinite()` 関数内の強制変換は[予想外の結果をもたらす](/ja/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description)可能性があるため、{{jsxref("Number.isFinite()")}} を使用することをお勧めします。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript デモ: isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// 予想される結果: "Number is Infinity!""
+
+console.log(div(1));
+// 予想される結果: "Number is NOT Infinity."
+```
 
 ## 構文
 
-```
-isFinite(testValue)
+```js-nolint
+isFinite(value)
 ```
 
 ### 引数
 
-- `testValue`
-  - : 有限性の評価を行いたい値。
+- `value`
+  - : 検査を行う値。
 
 ### 返値
 
-正または負の {{jsxref("Infinity")}} か {{jsxref("NaN")}} か {{jsxref("undefined")}} の場合は **`false`** です。それ以外の場合は **`true`** です。
+与えられた値が[数値に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)した後に {{jsxref("NaN")}}、{{jsxref("Infinity")}}、`-Infinity` であった場合は `false` です。それ以外の場合は `true` です。
 
 ## 解説
 
-`isFinite` はグローバルオブジェクトの関数プロパティです。
+`isFinite()` はグローバルオブジェクトの関数プロパティです。
 
-この関数を使用すると、ある数値が有限数かどうかを判定できます。 `isFinite` 関数はその引数内の数値を調査します。この関数は、引数が `NaN`、正の無限大、負の無限大のいずれかの場合に `false` を返し、それ以外は `true` を返します。
+`isFinite()` 関数の引数が[数値型](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型) でない場合、その値は最初に数値に変換され、その結果が `NaN` および ±Infinity と比較されます。これは {{jsxref("isNaN")}} の動作と同じくらい紛らわしいです。例えば、`isFinite("1")` は `true` になります。
+
+{{jsxref("Number.isFinite()")}} は、値が有限数であるかどうかを検査する、より信頼性の高い方法です。これは、数値以外の入力に対しては `false` を返すからです。
 
 ## 例
 
@@ -43,11 +61,9 @@ isFinite(0); // true
 isFinite(2e64); // true
 isFinite(910); // true
 
-isFinite(null); // true が返される、より堅牢性の高い
-// Number.isFinite(null) では false となる
-
-isFinite("0"); // true が返される、より堅牢性の高い
-// Number.isFinite("0") では false となる
+// より堅牢な Number.isFinite() を使用すると、異なる結果になります。
+isFinite(null); // true
+isFinite("0"); // true
 ```
 
 ## 仕様書

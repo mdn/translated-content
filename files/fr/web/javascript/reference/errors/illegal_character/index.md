@@ -3,8 +3,6 @@ title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -83,4 +81,4 @@ var toto = 'truc';<200b>
 
 ## Voir aussi
 
-- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
+- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)

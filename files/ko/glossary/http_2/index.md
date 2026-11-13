@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**HTTP/2** 는 [HTTP 네트워크 프로토콜](/ko/docs/Web/HTTP/Basics_of_HTTP)의 주요 개정판입니다.
+**HTTP/2** 는 [HTTP 네트워크 프로토콜](/ko/docs/conflicting/Web/HTTP)의 주요 개정판입니다.
 
 HTTP/2의 주요 목표는 "지연 시간"을 감소시키는 것입니다. 전체 요청과 응답 멀티플렉싱을 가능하게 하여 {{glossary("latency", "대기 시간")}}을 줄이고, HTTP 헤더 필드를 효율적으로 압축함으로써 프로토콜 오버헤드를 최소화하고, 요청에 대한 우선 순위를 결정하고 서버 푸시 지원을 추가하는 것입니다.
 
@@ -18,6 +18,5 @@ HTTP/2는 어떤 방식으로도 HTTP의 어플리케이션 의미를 수정하�
 - [MDN의 HTTP 설명](/ko/docs/Web/HTTP)
 - 위키피디아의 [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("Latency")}}

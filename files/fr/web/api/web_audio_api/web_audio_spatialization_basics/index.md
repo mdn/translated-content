@@ -162,7 +162,7 @@ Nous allons maintenant déplacer le radiocassette dans cette «&nbsp;pièce&nbsp
 
 Le son provient de l'avant des hauts-parleurs du radiocassette et lorsqu'on le tourne, on peut modifier la direction du son (par exemple, diffuser le son vers l'arrière si le radiocassette est tourné de 180° et nous tourne le dos).
 
-Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/CSS_Transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
+Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/Guides/Transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
 
 ```js
 const moveControls = document

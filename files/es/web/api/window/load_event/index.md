@@ -36,7 +36,7 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 ## Información general
 
 - Especificación
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
 - Interfaz
   - : UIEvent
 - Propagación
@@ -53,9 +53,9 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 | Propiedad                       | Tipo                         | Descripción                                                                            |
 | ------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | `{{domxref("EventTarget")}}` | El objetivo del evento (el objetivo superior en el árbol DOM).                         |
-| `type` {{readonlyInline}}       | `{{domxref("DOMString")}}`   | El tipo de evento.                                                                     |
-| `bubbles` {{readonlyInline}}    | `{{domxref("Boolean")}}`     | Si el elemento normalmente se propaga (bubbles) o no.                                  |
-| `cancelable` {{readonlyInline}} | `{{domxref("Boolean")}}`     | Si el evento es cancelable o no.                                                       |
+| `type` {{readonlyInline}}       | `{{jsxref("String")}}`       | El tipo de evento.                                                                     |
+| `bubbles` {{readonlyInline}}    | `{{jsxref("Boolean")}}`      | Si el elemento normalmente se propaga (bubbles) o no.                                  |
+| `cancelable` {{readonlyInline}} | `{{jsxref("Boolean")}}`      | Si el evento es cancelable o no.                                                       |
 | `view` {{readonlyInline}}       | `{{domxref("WindowProxy")}}` | `{{domxref("Document.defaultView", "document.defaultView")}}` (`window` del documento) |
 | `detail` {{readonlyInline}}     | `long` (`float`)             | 0.                                                                                     |
 
@@ -65,8 +65,8 @@ El evento `load` se dispara cuando un recurso y sus recursos dependientes han te
 
 ## Eventos relacionados
 
-- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
-- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
-- [`load`](/es/docs/Web/Reference/Events/load)
-- [`beforeunload`](/es/docs/Web/Reference/Events/beforeunload)
-- [`unload`](/es/docs/Web/Reference/Events/unload)
+- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
+- [`load`](/es/docs/Web/API/Window/load_event)
+- [`beforeunload`](/es/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/es/docs/Web/API/Window/unload_event)

@@ -13,14 +13,14 @@ slug: Web/API/Location/replace
 
 ## Синтаксис
 
-```
-object.replace(url);
+```js-nolint
+replace(url)
 ```
 
 ### Параметры
 
 - _url_
-  - : {{domxref("DOMString")}} , содержащий URL страницы, на которую нужно перейти.
+  - : {{jsxref("String")}} , содержащий URL страницы, на которую нужно перейти.
 
 ## Примеры
 

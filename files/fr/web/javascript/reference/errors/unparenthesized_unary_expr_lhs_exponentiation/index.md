@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
-
 L'exception JavaScript <i lang="en">"unparenthesized unary expression can't appear on the left-hand side of '\*\*'"</i> se produit lorsqu'un opérateur unaire (parmi `typeof`, `void`, `delete`, `await`, `!`, `~`, `+`, `-`) est utilisé sur l'opérande gauche de [l'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) sans parenthèse.
 
 ## Message
@@ -70,4 +68,4 @@ Cela a également l'avantage de rendre le code plus compréhensible et explicite
 
 - [Discussion originale à propos de la précédence de l'opérateur d'exponentiation (en anglais)](https://esdiscuss.org/topic/exponentiation-operator-precedence)
 - [L'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

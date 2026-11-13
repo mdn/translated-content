@@ -3,11 +3,23 @@ title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
 
-{{JSRef}}
-
 {{jsxref("WeakMap")}} 实例的 **`get()`** 方法返回该 `WeakMap` 中的指定元素。
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.get(object1));
+// Expected output: 42
+
+console.log(weakmap1.get(object2));
+// Expected output: undefined
+```
 
 ## 语法
 

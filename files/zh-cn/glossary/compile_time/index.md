@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 **编译时间**是指程序从被加载到程序被{{glossary("parse", "解析完成")}}所用的时间。
 
 ## 参见

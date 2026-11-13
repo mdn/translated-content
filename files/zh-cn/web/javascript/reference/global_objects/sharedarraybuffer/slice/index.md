@@ -5,11 +5,22 @@ l10n:
   sourceCommit: a37335abeaad31f9fafc56cfaa641db2337777a3
 ---
 
-{{JSRef}}
-
 {{jsxref("SharedArrayBuffer")}} 实例的 **`slice()`** 方法返回一个新的 `SharedArrayBuffer`，其包含当前 `SharedArrayBuffer` 从 `start` 开始（包含）到 `end` 结束（不含）的字节内容的副本。如果 `start` 或 `end` 为负数，则表示从数组末尾开始计数的索引，即与从开头开始的方向相反。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer); // Create the view
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+
+console.log(sliced);
+// Expected output: Int32Array [42, 0]
+```
 
 ## 语法
 

@@ -9,12 +9,12 @@ slug: Web/JavaScript/Reference/Statements/import
 
 Существует также function-like динамический `import()`, который не требует скриптов с типом "`module`".
 
-Обратная совместимость может быть обеспечена с помощью атрибута `nomodule` тега [script](/ru/docs/Web/HTML/Element/script).
+Обратная совместимость может быть обеспечена с помощью атрибута `nomodule` тега [script](/ru/docs/Web/HTML/Reference/Elements/script).
 
 Динамический импорт полезен в ситуациях, когда вы хотите загрузить модуль условно или по требованию. Статическая форма предпочтительна для загрузки начальных зависимостей и может быть более полезна для инструментов статического анализа и [tree shaking](/ru/docs/Glossary/Tree_shaking).
 
 > [!NOTE]
-> На данный момент эта функциональность [только начинает поддерживаться](https://jakearchibald.com/2017/es-modules-in-browsers/) браузерами. Полноценная реализация присутствует во многих транспайлерах, таких как TypeScript и [Babel](http://babeljs.io/), а также в сборщиках, например, в [Rollup](https://github.com/rollup/rollup) и [Webpack](https://webpack.js.org/).
+> На данный момент эта функциональность [только начинает поддерживаться](https://jakearchibald.com/2017/es-modules-in-browsers/) браузерами. Полноценная реализация присутствует во многих транспайлерах, таких как TypeScript и [Babel](https://babeljs.io/), а также в сборщиках, например, в [Rollup](https://github.com/rollup/rollup) и [Webpack](https://webpack.js.org/).
 
 ## Синтаксис
 
@@ -253,4 +253,4 @@ for (const link of document.querySelectorAll("nav > a")) {
 - {{jsxref("Statements/export", "export")}}
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

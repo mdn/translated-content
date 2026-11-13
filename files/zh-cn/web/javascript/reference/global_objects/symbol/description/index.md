@@ -3,11 +3,23 @@ title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
 
-{{JSRef}}
-
 **`description`** 是一个只读属性，它会返回 {{jsxref("Symbol")}} 对象的可选描述的字符串。
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// Expected output: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// Expected output: "foobar"
+```
 
 ## 语法
 

@@ -3,7 +3,7 @@ title: Упорядоченные наборы данных
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 Данная глава знакомит читателя с массивами - коллекциями элементов, упорядоченных по индексу. Глава включает в себя описание массивов и массивоподобных структур, таких как {{jsxref("Array")}} и {{jsxref("TypedArray")}}.
 
@@ -25,7 +25,7 @@ var arr = [element0, element1, ..., elementN];
 
 `element0, element1, ..., elementN` - список значений элементов массива. Если значения заданы, то эти значения будут являться элементами массива после его инициализации. Свойство `length` у массива будет равно количеству аргументов.
 
-Синтаксис с использованием квадратных скобок называется "литерал массива" (array literal) или "инициализатор массива". Такая запись короче, чем другие способы создания массива, и, как правило, более предпочтительна. См. [Array literals](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
+Синтаксис с использованием квадратных скобок называется "литерал массива" (array literal) или "инициализатор массива". Такая запись короче, чем другие способы создания массива, и, как правило, более предпочтительна. См. [Array literals](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
 
 Для создания массива без элементов, но ненулевой длины, возможно использовать одно из следующих выражений:
 
@@ -156,7 +156,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-Если вам заранее известно, что ни один элемент массива не будет расценён как `false` при приведении к boolean — например, каждый элемент массива является [DOM](/ru/docs/DOM) узлом, тогда вы можете блеснуть чуть более эффективным оборотом:
+Если вам заранее известно, что ни один элемент массива не будет расценён как `false` при приведении к boolean — например, каждый элемент массива является [DOM](/ru/docs/Web/API/Document_Object_Model) узлом, тогда вы можете блеснуть чуть более эффективным оборотом:
 
 ```js
 var divs = document.getElementsByTagName("div");
@@ -441,11 +441,11 @@ for (i = 0; i < 4; i++) {
 
 ### Массивы и регулярные выражения
 
-Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}} и {{jsxref("Global_Objects/String/split","String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions).
+Когда массив является результатом вычислений регулярного выражения над строкой, он содержит свойства и элементы с информацией о совпадениях. Массив возвращается функциями {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}} и {{jsxref("String.split()")}} Подробнее о том, как использовать массивы с регулярными выражениями смотрите в [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Работа с массивоподобными объектами
 
-Некоторые объекты в JavaScript, такие как {{domxref("NodeList")}}, возвращаемые методом {{domxref("document.getElementsByTagName()")}}, или специальный объект {{jsxref("Functions/arguments","arguments")}}, доступный внутри функции, выглядят и ведут себя как обычные массивы, однако не имеет всех присущих массиву методов. Так например, объект `arguments` имеет свойство {{jsxref("Global_Objects/Function/length","length")}}, но не имеет метода {{jsxref("Array.forEach", "forEach()")}}.
+Некоторые объекты в JavaScript, такие как {{domxref("NodeList")}}, возвращаемые методом {{domxref("document.getElementsByTagName()")}}, или специальный объект {{jsxref("Functions/arguments","arguments")}}, доступный внутри функции, выглядят и ведут себя как обычные массивы, однако не имеет всех присущих массиву методов. Так например, объект `arguments` имеет свойство {{jsxref("Function.length","length")}}, но не имеет метода {{jsxref("Array.forEach", "forEach()")}}.
 
 Методы из прототипа Array, могут быть вызваны для массивоподобных объектов. Например:
 
@@ -467,7 +467,7 @@ Array.prototype.forEach.call("a string", function (chr) {
 
 ## Типизированные массивы
 
-[JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) (типизированные массивы) являются массивоподобными объектами, которые предоставляют механизм доступа к сырым бинарным данным. Как вы уже знаете, {{jsxref("Array")}} массивы динамически растут, сокращаются и могут содержать значения любых типов JavaScript. Движки JavaScript производят оптимизации, благодаря чему, эти операции происходят быстро. Однако, веб приложения становятся все более мощными, добавляются возможности манипуляции со звуковыми и видеоданными, доступ к сырым данным [WebSockets](/ru/docs/WebSockets), и тому подобное. Становится очевидным, что возможность быстрой и эффективной работы с двоичными данными в JavaScript будет очень полезной. Для чего типизированные массивы и предназначены.
+[JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays) (типизированные массивы) являются массивоподобными объектами, которые предоставляют механизм доступа к сырым бинарным данным. Как вы уже знаете, {{jsxref("Array")}} массивы динамически растут, сокращаются и могут содержать значения любых типов JavaScript. Движки JavaScript производят оптимизации, благодаря чему, эти операции происходят быстро. Однако, веб приложения становятся все более мощными, добавляются возможности манипуляции со звуковыми и видеоданными, доступ к сырым данным [WebSockets](/ru/docs/Web/API/WebSockets_API), и тому подобное. Становится очевидным, что возможность быстрой и эффективной работы с двоичными данными в JavaScript будет очень полезной. Для чего типизированные массивы и предназначены.
 
 ### Буферы и представления: архитектура типизированных массивов
 
@@ -483,6 +483,6 @@ Array.prototype.forEach.call("a string", function (chr) {
 
 Название типизированного представления массива говорит само за себя. Оно представляет массив в распространённых числовых форматах, таких как `Int8`, `Uint32`, `Float64` и так далее. Среди прочих существует специальное представление `Uint8ClampedArray`. Оно ограничивает значения интервалом от 0 до 255. Это полезно, например, при [Обработке данных изображения в Canvas](/ru/docs/Web/API/ImageData).
 
-Для получения подробных сведений смотрите [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Typed_arrays) и справочную документацию для {{jsxref("TypedArray")}}.
+Для получения подробных сведений смотрите [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays) и справочную документацию для {{jsxref("TypedArray")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}

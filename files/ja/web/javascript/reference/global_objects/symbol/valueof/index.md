@@ -1,15 +1,24 @@
 ---
 title: Symbol.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`valueOf()`** は {{jsxref("Symbol")}} 値のメソッドで、このシンボル値を返します。
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript デモ: Symbol.prototype.valueOf()")}}
+
+```js interactive-example
+const symbol = Symbol("foo");
+
+console.log(typeof Object(symbol));
+// 予想される結果: "object"
+
+console.log(typeof Object(symbol).valueOf());
+// 予想される結果: "symbol"
+```
 
 ## 構文
 

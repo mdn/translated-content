@@ -10,7 +10,7 @@ l10n:
 
 **`lang`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話の言語を取得および設定します。
 
-設定されていない場合、アプリ（すなわち {{htmlelement("html")}} の [`lang`](/ja/docs/Web/HTML/Element/html#lang) 値）の言語が使用されるか、こちらも未設定であればユーザーエージェントの既定の言語が使用されます。
+設定されていない場合、アプリ（すなわち {{htmlelement("html")}} の [`lang`](/ja/docs/Web/HTML/Reference/Elements/html#lang) 値）の言語が使用されるか、こちらも未設定であればユーザーエージェントの既定の言語が使用されます。
 
 ## 値
 

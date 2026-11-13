@@ -1,104 +1,152 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("Array")}} 實例的 **`concat()`** 方法用於合併兩個或更多的陣列。此方法不會改變原有的陣列，而是返回一個新的陣列。
 
-**`concat()`** 方法被用來合併兩個或多個陣列。此方法不會改變現有的陣列，回傳一個包含呼叫者陣列本身的值，作為代替的是回傳一個新陣列。
+{{InteractiveExample("JavaScript Demo: Array.prototype.concat()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/array-concat.html")}}
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// 預期輸出：Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 語法
 
-```plain
-var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+```js-nolint
+concat()
+concat(value1)
+concat(value1, value2)
+concat(value1, value2, /* …, */ valueN)
 ```
 
 ### 參數
 
-- `valueN`
-  - : 陣列以及／或者值，用來合併成一個新的陣列。請參閱下方詳細資訊描述。
+- `value1`, …, `valueN` {{optional_inline}}
+  - : 要合併到新陣列的陣列和／或數值。如果省略了所有 `valueN` 參數，則 `concat` 會返回一個原陣列的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)。更多詳情請參見下方描述。
 
 ### 回傳值
 
-一個新的{{jsxref("Array","陣列")}}實體。
+一個新的 {{jsxref("Array")}} 實例。
 
 ## 描述
 
-`concat` 產生一個由呼叫者陣列自己的元素，以及對每一個參數按照順序，合併參數的元素（如果參數是個陣列）或者是參數自己本身（如果參數不是一個陣列）成為一個新的陣列。`concat` 方法不會遞迴巢狀陣列參數。
+`concat` 方法會創建一個新的陣列。該陣列首先會被初始化為呼叫此方法的物件中的元素。接著，對於每個引數，將其值合併到陣列中——對於普通物件或原始值，引數本身會成為最終陣列的一個元素；對於具有 [`Symbol.isConcatSpreadable`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) 屬性設為真值的陣列或類陣列物件，每個元素會被獨立地加入最終的陣列中。`concat` 方法不會遞迴處理巢狀陣列引數。
 
-`concat` 方法不會改變 `this` 自己本身或是任何被提供當做參數的陣列，取而代之則是回傳一個淺層複製（shallow copy）包含了與原始的陣列中一樣的元素的副本。原始陣列的元素被複製到新的陣列的規則如下所示：
+`concat()` 方法是[複製方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#複製方法與變異方法)。它不會改變 `this` 或任何作為引數傳入的陣列，而是返回一個[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，該複製包含與原始陣列相同的元素。
 
-- 物件參考（並非為實際的物件）：`concat` 複製物件的參考至新的陣列。不管是原始的還是新的陣列都參考到相同的物件。也就是說，如果一個被參照的物件被修改了，變動會同時反映到新的以及原始的陣列中。
-- 資料型態為字串、數值或是布林（非 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 及 {{jsxref("Global_Objects/Boolean", "Boolean")}} 物件）：`concat` 複製字串及數值的值到新的陣列。
+如果任一個來源陣列是[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)，`concat()` 方法會保留空槽。
 
-> [!NOTE]
-> 合併（多個）陣列／（多個）值將讓原始的陣列不會被受到影響。此外，任何對新陣列（只有在元素不是物件參考的情況下）的操作都不會影響原始的陣列，反之亦然。
+`concat()` 方法是[通用方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。`this` 值的處理方式與其他引數相同（除了它會先被轉換為物件），意味著普通物件會被直接加到結果陣列的最前端，而具有 `[Symbol.isConcatSpreadable]` 為真值的類陣列物件則會被展開並加入結果陣列。
 
 ## 範例
 
 ### 合併兩個陣列
 
-下面的程式碼為合併兩個陣列：
+以下程式碼將兩個陣列合併：
 
 ```js
-var alpha = ["a", "b", "c"];
-var numeric = [1, 2, 3];
+const letters = ["a", "b", "c"];
+const numbers = [1, 2, 3];
 
-alpha.concat(numeric);
-// 結果: ['a', 'b', 'c', 1, 2, 3]
+const alphaNumeric = letters.concat(numbers);
+console.log(alphaNumeric);
+// 結果為 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 合併三個陣列
 
-下面的程式碼為合併三個陣列：
+以下程式碼將三個陣列合併：
 
 ```js
-var num1 = [1, 2, 3],
-  num2 = [4, 5, 6],
-  num3 = [7, 8, 9];
+const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const num3 = [7, 8, 9];
 
-var nums = num1.concat(num2, num3);
+const numbers = num1.concat(num2, num3);
 
-console.log(nums);
-// 結果：[1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(numbers);
+// 結果為 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### 合併值到一個陣列
+### 合併值到陣列中
 
-下面的程式碼為合併三個值到一個陣列中：
+以下程式碼將三個值合併到陣列中：
 
 ```js
-var alpha = ["a", "b", "c"];
+const letters = ["a", "b", "c"];
 
-var alphaNumeric = alpha.concat(1, [2, 3]);
+const alphaNumeric = letters.concat(1, [2, 3]);
 
 console.log(alphaNumeric);
-// 結果：['a', 'b', 'c', 1, 2, 3]
+// 結果為 ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### 合併巢狀陣列
 
-下面的程式碼為合併巢狀陣列，並證明保留了原本的參考（references）：
+以下程式碼將巢狀陣列合併，並示範引用的保留：
 
 ```js
-var num1 = [[1]];
-var num2 = [2, [3]];
+const num1 = [[1]];
+const num2 = [2, [3]];
 
-var nums = num1.concat(num2);
+const numbers = num1.concat(num2);
 
-console.log(nums);
-// results in [[1], 2, [3]]
+console.log(numbers);
+// 結果為 [[1], 2, [3]]
 
-// modify the first element of num1
+// 修改 num1 的第一個元素
 num1[0].push(4);
 
-console.log(nums);
-// results in [[1, 4], 2, [3]]
+console.log(numbers);
+// 結果為 [[1, 4], 2, [3]]
 ```
 
-## 規格
+### 合併類陣列物件並使用 Symbol.isConcatSpreadable
+
+`concat` 預設不會將所有類陣列物件當作陣列來處理——只有當 `Symbol.isConcatSpreadable` 被設定為真值（例如 `true`）時，才會如此處理。
+
+```js
+const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
+const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
+console.log([0].concat(obj1, obj2));
+// [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
+```
+
+### 在稀疏陣列上使用 concat()
+
+如果源陣列中有任何空位，則結果陣列也會是稀疏的：
+
+```js
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
+```
+
+### 在非陣列物件上調用 concat()
+
+如果 `this` 值不是陣列，則會將其轉換為物件並像處理 `concat()` 的其他引數一樣進行處理。在這種情況下，回傳值始終是新的陣列。
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // 被 concat() 忽略，因為 length 是 2
+};
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
+```
+
+## 規範
 
 {{Specifications}}
 
@@ -108,8 +156,12 @@ console.log(nums);
 
 ## 參見
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — 從陣列的尾端加入/移除元素
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — 從陣列的前端加入/移除元素
-- {{jsxref("Array.splice", "splice")}} — 從陣列特定的位置加入/移除元素
+- [`core-js` 中 `Array.prototype.concat` 的 polyfill，包含修正和現代行為的實作，如 `Symbol.isConcatSpreadable` 的支援](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.concat` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.concat)
+- [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} – 控制扁平化
+- {{jsxref("Symbol.isConcatSpreadable")}}

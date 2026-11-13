@@ -35,8 +35,8 @@ slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
 
 1. **テーブルのセル幅の未指定**
 
-    テーブルの配置指定に [table-layout](/ja/docs/Web/CSS/table-layout): fixed; を適用させます。
-    [table-layout](/ja/docs/Web/CSS/table-layout): fixed; の指定により、横並びのセル幅が左右均等になります。
+    テーブルの配置指定に [table-layout](/ja/docs/Web/CSS/Reference/Properties/table-layout): fixed; を適用させます。
+    [table-layout](/ja/docs/Web/CSS/Reference/Properties/table-layout): fixed; の指定により、横並びのセル幅が左右均等になります。
 
     ```css
     #maincontent section.category .list div{
@@ -52,6 +52,6 @@ slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
 - 他のブラウザーでも互換性を維持することができます。
   - 細かい px の指定をせずにテーブルの見た目を整えることができます。
   - また、後続するセルのコンテンツが用意された列幅をオーバーフロー(はみ出し)した場合にも、
-    発生したセルに対して[overflow](/ja/docs/Web/CSS/overflow)プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。
+    発生したセルに対して[overflow](/ja/docs/Web/CSS/Reference/Properties/overflow)プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

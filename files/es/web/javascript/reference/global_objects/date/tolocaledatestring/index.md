@@ -10,7 +10,26 @@ El método **`toLocaleDateString()`** devuelve una cadena con una representació
 Los argumentos `locales` y `options` permiten a las aplicaciones especificar el idioma cuyas convenciones de formato deben utilizarse y permiten personalizar el comportamiento de la función.
 En las implementaciones más antiguas, que ignoran los argumentos `locales` y `options`, la configuración regional utilizada y la forma de la cadena devuelta dependen totalmente de la implementación.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## Sintaxis
 
@@ -31,11 +50,11 @@ El valor por defecto para cada propiedad del componente fecha-hora es {{jsxref("
 
 ### Valor de retorno
 
-Una cadena que representa la parte de la fecha de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada según las convenciones específicas del idioma.
+Una cadena que representa la parte de la fecha de la instancia {{jsxref("Date")}} dada según las convenciones específicas del idioma.
 
 ## Rendimiento
 
-Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Ejemplos
 
@@ -145,7 +164,7 @@ console.log(date.toLocaleDateString("en-US", options));
 
 ## Véase también
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}

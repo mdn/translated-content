@@ -18,7 +18,7 @@ El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/
 
 ## Propiedades estáticas
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer/Symbol.species", "get ArrayBuffer[@@species]")}}
   - : La función constructora que se usa para crear objetos derivados.
 
 ## Métodos estáticos
@@ -58,6 +58,6 @@ const view = new Int32Array(buffer);
 ## Véase también
 
 - Un polyfill de `ArrayBuffer` está disponible en [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arraglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: longitud de array invalida](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`filter()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された関数で実装されているテストに合格した要素だけにフィルタリングされた、指定された型付き配列の一部のコピーを作成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.filter()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const negInt8 = int8.filter(isNegative);
+
+console.log(negInt8);
+// 予想される結果: Int8Array [-10, -30, -50]
+```
 
 ## 構文
 
@@ -63,7 +74,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 
 ## 関連情報
 
-- [`TypedArray.prototype.filter` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.filter` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

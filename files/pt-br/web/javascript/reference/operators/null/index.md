@@ -17,7 +17,7 @@ null
 
 ## Descrição
 
-O valor `null` é um literal, e não uma propriedade do objeto global (como o [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) pode ser). O desenhos das APIs, o null as vezes é devolvido no lugar de um objeto que era esperado. Quando fizer a checagem de um valor para `null` ou `undefined`, esteja ciente das [diferenças entre o operador de igualdade (==) e o de igualdade estrita (===)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) (em inglês). Uma conversão de tipos é realizada na operação de igualdade.
+O valor `null` é um literal, e não uma propriedade do objeto global (como o [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) pode ser). O desenhos das APIs, o null as vezes é devolvido no lugar de um objeto que era esperado. Quando fizer a checagem de um valor para `null` ou `undefined`, esteja ciente das [diferenças entre o operador de igualdade (==) e o de igualdade estrita (===)](/pt-BR/docs/Web/JavaScript/Reference/Operators) (em inglês). Uma conversão de tipos é realizada na operação de igualdade.
 
 ```js
 // foo não existe, não foi definido e jamais foi inicializado:
@@ -48,5 +48,5 @@ null == undefined; // verdadeiro
 
 ## Veja também
 
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("undefined")}}
+- {{jsxref("NaN")}}

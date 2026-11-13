@@ -20,16 +20,12 @@ Un entero largo sin signo (unsigned long integer) que puede utilizarse para canc
 ### Parámetros
 
 - `callback`
-
   - : La referencia a la función que debe ser ejecutada en un futuro inmediato. La función callback toma un argumento con las siguientes propiedades:
-
     - `timeRemaining`: Referencia a un metodo que devuelve un {{domxref("DOMHighResTimeStamp")}}.
     - `didTimeout`: Booleano que se devuelve a false si el callback fue invocado por el navegador durante su inactividad, y true en otro caso (por ejemplo, si se definió timeout y expiró antes de que hubiera suficiente tiempo de inactividad).
 
 - `options` {{optional_inline}}
-
   - : Contiene parametros opcionales de configuración. Contiene la siguiente propiedad:
-
     - `timeout`: Plazo para que el navegador ejecute la función callback. Valor en milisegundos.
 
 ## Ejemplos

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 122 の変更点をまとめています。Firefox 122 は、米国時間 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -20,11 +18,11 @@ l10n:
 
 - CSS の {{cssxref("offset-position")}} プロパティをデフォルトで有効にしました。これは、パスにおける要素の初期位置を定義します ([Firefox bug 1598152](https://bugzil.la/1598152))。
 
-- [`<basic-shape>`](/ja/docs/Web/CSS/offset-path#basic-shape)、[`<coord-box>`](/ja/docs/Web/CSS/offset-path#coord-box)、[`url()`](/ja/docs/Web/CSS/offset-path#url) といった、CSS の {{cssxref("offset-path")}} を定義するためのさまざまな方法をデフォルトで有効にしました ([Firefox bug 1598159](https://bugzil.la/1598159))。
+- [`<basic-shape>`](/ja/docs/Web/CSS/Reference/Properties/offset-path#basic-shape)、[`<coord-box>`](/ja/docs/Web/CSS/Reference/Properties/offset-path#coord-box)、[`url()`](/ja/docs/Web/CSS/Reference/Properties/offset-path#url) といった、CSS の {{cssxref("offset-path")}} を定義するためのさまざまな方法をデフォルトで有効にしました ([Firefox bug 1598159](https://bugzil.la/1598159))。
 
 - CSS の {{cssxref("ray")}} 関数をデフォルトで有効にしました。この関数を使用して、{{cssxref("offset-position")}} から始まって指定した角度の方向へ伸びる線分として {{cssxref("offset-path")}} を定義できます ([Firefox bug 1598151](https://bugzil.la/1598151))。
 
-- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
+- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
 
 ### JavaScript
 
@@ -50,7 +48,7 @@ l10n:
 
 #### 廃止
 
-- CSS の [`-moz-user-focus`](/ja/docs/Web/CSS/-moz-user-focus) プロパティのサポートを廃止しました ([Firefox bug 1871745](https://bugzil.la/1871745) および [Firefox bug 1868552](https://bugzil.la/1868552))。
+- CSS の [`-moz-user-focus`](/ja/docs/Web/CSS/Reference/Properties/-moz-user-focus) プロパティのサポートを廃止しました ([Firefox bug 1871745](https://bugzil.la/1871745) および [Firefox bug 1868552](https://bugzil.la/1868552))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -79,7 +77,6 @@ l10n:
   {{htmlelement("template")}} 要素で `shadowrootmode` 属性をサポートしました。{{domxref("Element.attachShadow()", "attachShadow()")}} メソッドの `mode` オプションと同じく、`open` または `closed` を設定できます。これは、シャドウ DOM のサブツリーを宣言的に作成することを可能にします ([Firefox bug 1712140](https://bugzil.la/1712140))。
 
 - **シャドウ DOM の cloneable オプションとプロパティ**
-
   - {{domxref("Element.attachShadow()")}} メソッドで `clonable` ブール型オプションをサポートしました。これは、作成したシャドウルートが複製可能かを指定します。既定値は `false` であり、`true` に設定すると {{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で複製されたシャドウホストは、複製にシャドウルートが含まれます。
   - {{domxref("ShadowRoot")}} インターフェイスで、読み取り専用の {{domxref("ShadowRoot.clonable", "clonable")}} プロパティをサポートしました。シャドウルートが複製可能である場合は `true`、そうでない場合は `false` を返します。宣言的なシャドウ DOM で作成したシャドウルートは常に `true` を返します。
 
@@ -87,7 +84,7 @@ l10n:
 
 - **Popover API:** `dom.element.popover.enabled`。
 
-  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
+  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
 
 - **クリップボードの読み書き:** `dom.events.asyncClipboard.clipboardItem`、`dom.events.asyncClipboard.readText`、`dom.events.asyncClipboard.writeText`。
 

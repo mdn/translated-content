@@ -31,11 +31,11 @@ slug: Web/API/MessageEvent
 _继承其父类 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : 返回 {{domxref("DOMString")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。
+  - : 返回 {{jsxref("String")}}, {{domxref("Blob")}} 或者 {{jsxref("ArrayBuffer")}}，包含来自发送者的数据。
 - {{domxref("MessageEvent.origin")}}
-  - : 返回一个表示消息发送者来源的{{domxref("USVString")}}
+  - : 返回一个表示消息发送者来源的{{jsxref("String")}}
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} representing a unique ID for the event.
+  - : {{jsxref("String")}} representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}}
   - : `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。
 - {{domxref("MessageEvent.ports")}}
@@ -50,7 +50,7 @@ _继承父类 {{domxref("Event")}} 的方法。_
 
 ## 示例
 
-在我们的基础共享线程示例 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。
+在我们的基础共享线程示例 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。
 
 下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 `SharedWorker`对象。
 

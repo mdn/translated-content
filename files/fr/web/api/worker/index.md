@@ -9,7 +9,7 @@ L'interface **Worker** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) 
 
 Notez qu'un worker peut lui aussi lancer d'autre Worker tant que ces autres workers sont hébergés par une page qui a la même origine que la page parente. (Note: [Les workers imbriqués ne sont pas encore implémentés dans WebKit](https://bugs.webkit.org/show_bug.cgi?id=22723)).
 
-De plus les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) pour les communiquer avec le réseau, à l'exception des attributs `responseXML` et `channel` qui vont toujours retourner `null`.
+De plus les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les communiquer avec le réseau, à l'exception des attributs `responseXML` et `channel` qui vont toujours retourner `null`.
 
 [Toutes les interfaces et toutes les fonctions](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) ne seront pas disponibles pour le script associé au `Worker`.
 
@@ -53,9 +53,9 @@ _Il hérite de son parent,_ _{{domxref("EventTarget")}},_ et implémente les pro
 <!---->
 
 - [`rejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event)
-  - : Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire [`onrejectionhandled`](/fr/docs/Web/API/WindowEventHandlers/onrejectionhandled).
+  - : Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire [`onrejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event).
 - [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)
-  - : Levé quand une {{jsxref("Promise")}} est rejetée sans gestionnaire pour récupérer l'exception. Aussi disponible à travers la propriété [`onunhandledrejection`](/fr/docs/Web/API/WindowEventHandlers/onunhandledrejection).
+  - : Levé quand une {{jsxref("Promise")}} est rejetée sans gestionnaire pour récupérer l'exception. Aussi disponible à travers la propriété [`onunhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event).
 
 ## Exemple
 
@@ -71,7 +71,7 @@ premier.onchange = function () {
 };
 ```
 
-Pour un exemple complet, voir [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([exécuter le worker dédié](http://mdn.github.io/simple-web-worker/)).
+Pour un exemple complet, voir [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([exécuter le worker dédié](https://mdn.github.io/simple-web-worker/)).
 
 ## Spécifications
 
@@ -87,7 +87,7 @@ Dans les premières versions des spécifications, charger un scripte worker en c
 
 ## Voir aussi
 
-- [Utiliser les web Worker](/fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers)
-- [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- D'autres type de workers: {{ domxref("SharedWorker") }}, et [ServiceWorker](/fr/docs/Web/API/ServiceWorker_API).
+- [Utiliser les web Worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- D'autres type de workers: {{ domxref("SharedWorker") }}, et [ServiceWorker](/fr/docs/Web/API/Service_Worker_API).
 - Worker non-standard, spécifique à Gecko: {{ domxref("ChromeWorker") }}, utilisé par les extensions.

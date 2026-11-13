@@ -27,7 +27,7 @@ querySelector(selectors)
 
 ### 返値
 
-指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)の集合に一致する文書内の最初の要素を表す {{domxref("Element")}} オブジェクトです。一致する要素がない場合は `null` が返されます。
+指定された [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)の集合に一致する文書内の最初の要素を表す {{domxref("Element")}} オブジェクトです。一致する要素がない場合は `null` が返されます。
 
 ## 例
 

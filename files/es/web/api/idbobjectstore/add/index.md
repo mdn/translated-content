@@ -5,7 +5,7 @@ slug: Web/API/IDBObjectStore/add
 
 {{ APIRef("IDBObjectStore") }}
 
-El metodo `add()` de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un [clone estructurado](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.
+El metodo `add()` de la interfaz {{domxref("IDBObjectStore")}} retorna un objeto {{domxref("IDBRequest")}}, y, un hilo separado, crea un [clone estructurado](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) del valor, y almacena el valor clonado en el almacén de objetos. Esto es para agregar nevos registros a un almacén de objetos.
 
 Para determinar si la operación de agregar fue completada satisfactoriamente, escucha el evento `complete` de la transaccion en adicion al evento `success` de la peticion `IDBojectStore.add`, porque la transaccion y todavía puede fallar después de lanzar el evento success. En otras palabras, el eventos success sólo es lanzado cuando la transacción ha sido puesta en cola satisfactoriamente.
 
@@ -30,9 +30,7 @@ Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOME
 - `TransactionInactiveError`
   - : Esta transacción de [`IDBObjectStore`](/es/docs/Web/API/IDBObjectStore)'s está inactiva.
 - `DataError`
-
   - : Cualquiera de los siguientes condiciones aplica:
-
     - El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.
     - El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.
     - El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.

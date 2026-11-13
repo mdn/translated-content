@@ -25,7 +25,8 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 {{domxref("WritableStream")}}을 사용하면 Stream에 데이터를 쓰는 것도 가능합니다..
 
-> **참고:** [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts), [Using readable streams](/ko/docs/Web/API/Streams_API/Using_readable_streams), [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) — 페이지에서 stream에 관한 더 자세한 이론과 예제를 찾을 수 있습니다.
+> [!NOTE]
+> [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts), [Using readable streams](/ko/docs/Web/API/Streams_API/Using_readable_streams), [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) — 페이지에서 stream에 관한 더 자세한 이론과 예제를 찾을 수 있습니다.
 
 ## 스트림 인터페이스
 
@@ -63,7 +64,8 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 ### ByteStream 관련 인터페이스
 
-> **경고:** **중요**: 아래 항목들은 아직 구현된 곳이 없으며, 스펙의 세부 사항이 구현할 수 있을 만큼 충분한 지 논의가 진행중입니다. 추후 변경될 수 있습니다.
+> [!WARNING]
+> **중요**: 아래 항목들은 아직 구현된 곳이 없으며, 스펙의 세부 사항이 구현할 수 있을 만큼 충분한 지 논의가 진행중입니다. 추후 변경될 수 있습니다.
 
 - {{domxref("ReadableStreamBYOBReader")}}
   - : 개발자가 직접 제공하여 stream data를 읽을 수 있는 BYOB ("bring your own buffer") reader를 표현합니다. (예 커스텀 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 생성자).
@@ -76,12 +78,12 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 Streams API 문서와 참조할 만한 예제를 함께 작성하였습니다 — [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) 를 참조하세요. 예제는 아래와 같습니다.:
 
-- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): ReadableStream에서 어떻게 데이터를 읽어들여 다른 곳으로 전달하는지 보여줍니다.
-- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): PNG file의 ReadableStream을 통해 grayscale로 변경하는 방법을 보여줍니다.
-- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/): 커스텀 스트림을 통해 무작위 문자열을 생성하고, 데이터 청크로 큐잉한 뒤, 다시 읽어들이는 방법에 대해 설명합니다.
-- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): 이 예제는 simple random stream 예제를 확장하여, 스트림을 분할하고 각 스트림이 독립적으로 데이터를 읽는 방법을 보여줍니다.
-- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): Writable stream에 데이터를 쓰는 방법을 설명하고, 스트림 데이터를 디코드하여 UI로 표현하는 방법을 보여줍니다.
-- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): [`pipeThrough()`](/ko/docs/Web/API/ReadableStream/pipeThrough) 을 통해 PNG file을 PNG 청크 스트림으로 변환하는 방식으로 ReadableStream을 다른 데이터 타입 스트림으로 전환하는 방법을 설명합니다.
+- [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): ReadableStream에서 어떻게 데이터를 읽어들여 다른 곳으로 전달하는지 보여줍니다.
+- [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): PNG file의 ReadableStream을 통해 grayscale로 변경하는 방법을 보여줍니다.
+- [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/): 커스텀 스트림을 통해 무작위 문자열을 생성하고, 데이터 청크로 큐잉한 뒤, 다시 읽어들이는 방법에 대해 설명합니다.
+- [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): 이 예제는 simple random stream 예제를 확장하여, 스트림을 분할하고 각 스트림이 독립적으로 데이터를 읽는 방법을 보여줍니다.
+- [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): Writable stream에 데이터를 쓰는 방법을 설명하고, 스트림 데이터를 디코드하여 UI로 표현하는 방법을 보여줍니다.
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): [`pipeThrough()`](/ko/docs/Web/API/ReadableStream/pipeThrough) 을 통해 PNG file을 PNG 청크 스트림으로 변환하는 방식으로 ReadableStream을 다른 데이터 타입 스트림으로 전환하는 방법을 설명합니다.
 
 다른 개발자의 예제:
 

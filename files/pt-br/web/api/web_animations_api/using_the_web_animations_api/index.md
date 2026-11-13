@@ -336,14 +336,15 @@ var endGame = function() {
 }
 ```
 
-> **Nota:** `getAnimations()` e `effect` não estão disponíveis em todos os browsers no momento em que este artigo foi escrito, mas o polyfill possibilita utilizá-los agora.
+> [!NOTE]
+> `getAnimations()` e `effect` não estão disponíveis em todos os browsers no momento em que este artigo foi escrito, mas o polyfill possibilita utilizá-los agora.
 
 ## Callbacks e promises
 
 Animações e Transições CSS tem seus event listeners próprios, que também são possíveis com a Web Animations API:
 
-- [`onfinish`](/pt-BR/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
-- [`oncancel`](/pt-BR/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
+- [`onfinish`](/pt-BR/docs/Web/API/Animation/finish_event) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
+- [`oncancel`](/pt-BR/docs/Web/API/Animation/cancel_event) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
 
 Aqui nós definimos os callbacks para o bolinho, a garrafa e para Alice para disparar a função `endGame`:
 

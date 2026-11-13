@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 l10n:
   sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
@@ -9,7 +10,20 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`Join()`** 메서드는 배열의 모든 요소를 쉼표나 지정된 구분 문자열로 구분하여 연결한 새 문자열을 만들어 반환합니다. 배열에 항목이 하나만 있는 경우, 해당 항목은 구분 기호를 사용하지 않고 반환됩니다.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## 구문
 

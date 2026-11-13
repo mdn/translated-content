@@ -3,7 +3,7 @@ title: Coleções chaveadas
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 Este capítulo apresenta coleções de dados que são ordenados por uma chave; Objetos Map e Set contêm elementos que são iteráveis em ordem de inserção.
 
@@ -40,7 +40,7 @@ sayings.size; // 0
 
 Tradicionalmente, {{jsxref("Object", "objetos", "", 1)}} tem sido usado para mapear strings para valores. Objetos permitem que você defina chaves para valores, recupere esses valores, exclua chaves e detecte se algo está armazenado em uma chave. Objetos `Map`, contudo, possuem algumas vantagens que os tornam mapas melhores.
 
-- As chaves de um `Objeto` são {{jsxref("Global_Objects/String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
+- As chaves de um `Objeto` são {{jsxref("String","Strings")}}, onde elas podem ser de qualquer valor para um `Map`.
 - Você pode obter o tamanho de um `Map` facilmente enquanto que para um `Object`, você tem que obter manualmente o seu tamanho.
 - A iteração de mapas é por ordem de inserção dos elementos.
 - Um `Object` tem um protótipo, então existem chaves padrão no mapa. (este pode ser ignorado usando `map = Object.create(null)`).
@@ -59,7 +59,7 @@ Uma diferença para objetos `Map` é que chaves `WeakMap` não são enumeráveis
 
 Para mais informações e código de exemplo, veja também "Por quê WeakMap?" na página de referência {{jsxref("WeakMap")}}.
 
-Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](http://fitzgeraldnick.com/weblog/53/) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
+Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
 
 ```js
 const privates = new WeakMap();
@@ -104,7 +104,7 @@ for (let item of mySet) console.log(item);
 
 ### Conversão entre Array e Set
 
-Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Array.from")}} ou o [operador de propagação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator). Além disso, o construtor `Set` aceita um `Array` para converter em outra direção. Observe novamente que objetos `Set` armazenam valores únicos, então quaisquer elementos duplicados de um Array são excluídos quando convertidos.
+Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Array.from")}} ou o [operador de propagação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Além disso, o construtor `Set` aceita um `Array` para converter em outra direção. Observe novamente que objetos `Set` armazenam valores únicos, então quaisquer elementos duplicados de um Array são excluídos quando convertidos.
 
 ```js
 Array.from(mySet);
@@ -141,4 +141,4 @@ Ambos, a igualdade de chaves de objetos `Map` e a igualdade de valor de objetos 
 - `-0` e `+0` são considerados iguais.
 - {{jsxref("NaN")}} é considerado igual a ela mesmo (contrário de `===`).
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

@@ -3,12 +3,12 @@ title: "HTMLLinkElement: referrerPolicy プロパティ"
 short-title: referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`HTMLLinkElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("link")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Element/link#referrerpolicy) 属性を反映します。
+**`referrerPolicy`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、リソースの取得時に送信するリファラーを定義する {{HTMLElement("link")}} 要素の HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/link#referrerpolicy) 属性を反映します。
 
 詳しくは HTTP の {{HTTPHeader("Referrer-Policy")}} ヘッダーを参照してください。
 
@@ -26,11 +26,11 @@ l10n:
 - `origin-when-cross-origin`
   - : 同一オリジンリクエストを行う場合は完全な URL を送信し、それ以外の場合は文書のオリジンのみを送信します。
 - `same-origin`
-  - : リファラーは[同一サイトオリジン](/ja/docs/Web/Security/Same-origin_policy)には送信されますが、オリジン間リクエストではリファラー情報が送信されません。
+  - : リファラーは[同一サイトのオリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy)には送信されますが、オリジンをまたぐリクエストではリファラー情報が送信されません。
 - `strict-origin`
   - : プロトコルのセキュリティレベルが変わらない場合（例: HTTPS→HTTPS）だけ、文書のオリジンをリファラーとして送信し、セキュリティレベルの低い宛先（例: HTTPS→HTTP）には送信しないようにします。
-- `strict-origin-when-cross-origin` (default)
-  - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
+- `strict-origin-when-cross-origin` (デフォルト)
+  - : これは、ポリシーが指定されていない場合のユーザーエージェントのデフォルトの動作です。同一オリジンのリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。このポリシーは、 TLS で保護されたリソースから安全でないオリジンへのオリジンとパスを漏洩します。
     この設定の影響を慎重に検討してください。

@@ -13,17 +13,17 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Этот манифест также может содержать указатели на несколько других типов файлов:
 
-- [Background pages](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): Реализует долгоиграющую логику.
+- [Background pages](#Background_scripts): Реализует долгоиграющую логику.
 - Иконки для расширения и любых кнопок, которые оно может определить.
-- [Sidebars, popups, and options pages](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.
-- [Content scripts](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.
-- [Web-accessible resources](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources): Делает контент вашего расширения видимым для веб-страниц и скриптов.
+- [Sidebars, popups, and options pages](#Sidebars_popups_options_pages): HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.
+- [Content scripts](#Content_scripts): JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.
+- [Web-accessible resources](#Web_accessible_resources): Делает контент вашего расширения видимым для веб-страниц и скриптов.
 
 ![](webextension-anatomy.png)
 
 Для получения подробной информации см. справочную страницу [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
-Помимо ссылок, указанных в манифесте, расширение может включать дополнительные [веб-страницы расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages) с поддерживающимися файлами.
+Помимо ссылок, указанных в манифесте, расширение может включать дополнительные [веб-страницы расширения](#Extension_pages) с поддерживающимися файлами.
 
 ## Фоновые скрипты
 
@@ -85,7 +85,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### Web-содержимое
 
-Фоновые скрипты не получают прямого доступа к веб-страницам. Однако они могут загружать [скрипты содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) на веб-страницы и [взаимодействовать с этими скриптами с помощью API передачи сообщений](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
+Фоновые скрипты не получают прямого доступа к веб-страницам. Однако они могут загружать [скрипты содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) на веб-страницы и [взаимодействовать с этими скриптами с помощью API передачи сообщений](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
 #### Политика безопасности содержимого
 
@@ -96,7 +96,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 Ваше расширение может иметь разнообразные компоненты интерфейса, определённые в HTML документах:
 
 - [Боковая панель (sidebar](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)) - это панель, отображаемая в окне браузера с левой стороны, рядом с веб-страницей
-- [Всплывающие окна (popup](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)) - диалоговое окно, отображаемое по клику на [кнопке](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) на [панели инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) или в адресной строке
+- [Всплывающие окна (popup](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)) - диалоговое окно, отображаемое по клику на [кнопке](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) на [панели инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) или в адресной строке
 - [Страница настроек](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.
 
 Для каждого из этих компонентов вы создаёте HTML файл и помещаете специальную информацию в [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json). HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.
@@ -135,6 +135,6 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Веб-доступные ресурсы - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.
 
-Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить [`img`](/ru/docs/Web/HTML/Element/img) тэги, которые будут ссылаться на эти изображения через `src` атрибут.
+Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить [`img`](/ru/docs/Web/HTML/Reference/Elements/img) тэги, которые будут ссылаться на эти изображения через `src` атрибут.
 
 Подробнее см. [web_accessible_resources](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) секцию manifest.json.

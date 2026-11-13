@@ -3,13 +3,23 @@ title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
 
-{{jsSidebar("Operators")}}
+JavaScript **函式內的 `this` 關鍵字**表現，和其他語言相比略有差異。在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)與非嚴格模式下也有所不同。
 
-JavaScript **函式內的 `this` 關鍵字**表現，和其他語言相比略有差異。在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)與非嚴格模式下也有所不同。
+通常，`this` 值由被呼叫的函式來決定。它不能在執行期間被指派，每次函式呼叫調用的值也可能不同。ES5 引入了 [`bind`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法去[設置函式的 `this` 值，而不管它怎麼被呼叫。](#the_bind_method)ECMAScript 2015 也導入了定義 `this` 詞法範圍的[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（它的 `this` 值會維持在詞法作用域）。
 
-通常，`this` 值由被呼叫的函式來決定。它不能在執行期間被指派，每次函式呼叫調用的值也可能不同。ES5 引入了 [`bind`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法去[設置函式的 `this` 值，而不管它怎麼被呼叫。](#The_bind_method)ECMAScript 2015 也導入了定義 `this` 詞法範圍的[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（它的 `this` 值會維持在詞法作用域）。
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 語法
 
@@ -69,7 +79,7 @@ f2() === undefined; //true
 所以在嚴格模式下，如果 `this` 沒有定義到執行環境內，其預設值就會是 `undefined`。
 
 > [!NOTE]
-> 在第二個例子裡面，`this` 應為 [`undefined`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined)，因為 `f2` 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 `window.f2()`）被直接呼叫。某些瀏覽器首次支援[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)時沒導入這個特徵，它們會因此錯誤的回傳 `window` 物件。
+> 在第二個例子裡面，`this` 應為 [`undefined`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined)，因為 `f2` 是直接被呼叫，而不是在其為某個物件的方法或屬性的情況下（例如 `window.f2()`）被直接呼叫。某些瀏覽器首次支援[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)時沒導入這個特徵，它們會因此錯誤的回傳 `window` 物件。
 
 要從某個語境訪問另一個 `this` 語境的值，請使用 [call](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [apply](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply):
 
@@ -343,7 +353,7 @@ for (var i = 0; i < elements.length; i++) {
 
 ### 作為行內事件處理器
 
-當程式碼從行內的 [on 事件處理器](/zh-TW/docs/Web/Guide/Events/Event_handlers)呼叫的話，`this` 就會設在監聽器所置的 DOM 元素：
+當程式碼從行內的 [on 事件處理器](/zh-TW/docs/Web/API/Document_Object_Model/Events)呼叫的話，`this` 就會設在監聽器所置的 DOM 元素：
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>
@@ -367,6 +377,6 @@ for (var i = 0; i < elements.length; i++) {
 
 ## 參見
 
-- [嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
 - [All this](http://bjorn.tipling.com/all-this)，一篇關於 `this` 上下文不同的相關文章
 - [親和地解釋 JavaScript 的「this」關鍵字](http://rainsoft.io/gentle-explanation-of-this-in-javascript/)

@@ -3,11 +3,33 @@ title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 
-{{JSRef}}
-
 La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  secret: "easily scared",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  get: function (target, prop, receiver) {
+    if (prop === "secret") {
+      return `${target.secret.substring(0, 4)} ... shhhh!`;
+    }
+    return Reflect.get(...arguments);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+console.log(proxy1.secret);
+// Expected output: "easi ... shhhh!"
+```
 
 ## Syntaxe
 
@@ -101,5 +123,5 @@ p.a; // exception TypeError levée
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Reflect.get()")}}

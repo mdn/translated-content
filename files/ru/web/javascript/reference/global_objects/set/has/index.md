@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/has
 
 Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -23,11 +36,10 @@ mySet.has(value);
 ### Возвращаемое значение
 
 - Boolean
-
   - : Возвращает `true`, если в коллекции `Set` существует элемент с указанным значением; в противном случае `false`.
 
     > [!NOTE]
-    > С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) для определения наличия указанного элемента.
+    > С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) для определения наличия указанного элемента.
 
 ## Примеры
 

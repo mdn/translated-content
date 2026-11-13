@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
@@ -7,7 +8,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 **`reduceRight()`** 메서드는 누적기에 대해 함수를 적용하고 배열의 각 값 (오른쪽에서 왼쪽으로)은 값을 단일 값으로 줄여야합니다.
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 왼쪽에서 오른쪽으로 {{jsxref("Array.prototype.reduce()")}}도 참조하십시오.
 

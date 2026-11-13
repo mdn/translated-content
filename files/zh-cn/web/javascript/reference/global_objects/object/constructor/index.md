@@ -3,8 +3,6 @@ title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
 
-{{JSRef}}
-
 {{jsxref("Object")}} 实例的 **`constructor`** 数据属性返回一个引用，指向创建该实例对象的构造函数。注意，此属性的值是对*函数本身*的引用，而不是一个包含函数名称的字符串。
 
 > [!NOTE]
@@ -182,7 +180,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // 跑起来没毛病
 ```
 
-请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
+请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
 
 如果上面的代码看起来太死板，你也可以考虑使用 [`Object.setPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 来操作原型链。
 
@@ -308,6 +306,6 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 ## 参见
 
-- {{jsxref("statements/class","Class declaration","",1)}}
+- {{jsxref("Statements/class","Class declaration","",1)}}
 - {{jsxref("Classes/constructor","Class constructor","",1)}}
 - 术语：{{Glossary("constructor", "", 1)}}

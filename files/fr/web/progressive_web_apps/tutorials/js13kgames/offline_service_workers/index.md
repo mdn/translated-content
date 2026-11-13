@@ -7,8 +7,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-{{PWASidebar}}
-
 Maintenant que nous avons vu la structure de notre application js13kPWA, que nous avons configuré et fait fonctionner le squelette de base, voyons comment implémenter un mode hors connexion à l'aide des <i lang="en">service workers</i>. Dans cet article, nous examinerons comment ils sont utilisés dans notre [exemple js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ([voir également le code source](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)).
 
 ## Explication des service workers
@@ -104,7 +102,7 @@ self.addEventListener("install", (e) => {
 });
 ```
 
-Expliquons ici deux éléments&nbsp;: le rôle de [`ExtendableEvent.waitUntil`](/fr/docs/Web/API/ExtendableEvent/waitUntil) fait et l'objet [`caches`](/fr/docs/Web/API/caches).
+Expliquons ici deux éléments&nbsp;: le rôle de [`ExtendableEvent.waitUntil`](/fr/docs/Web/API/ExtendableEvent/waitUntil) fait et l'objet [`caches`](/fr/docs/Web/API/Window/caches).
 
 Le <i lang="en">service worker</i> ne s'installe pas tant que le code situé à l'intérieur de `waitUntil()` n'est pas exécuté. Cette méthode renvoie une promesse, ce qui permet un fonctionnement asynchrone adéquat&nbsp;: l'installation peut prendre du temps et nous devons attendre qu'elle soit terminée.
 

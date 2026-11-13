@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 44037e8c5610426012a3971cfa5c0b3fa719ee54
 ---
 
-{{GlossarySidebar}}
-
 屏幕阅读器是尝试以非视觉的形式表达屏幕显示内容的软件应用程序，通常使用文本转语音的方式，但也可以转换为盲文或声音图标。屏幕阅读器对于视力受损、文盲或有学习障碍的人而言至关重要。有一些是浏览器扩展屏幕阅读器，但大多数屏幕阅读器适用于所有的用户应用程序，而非仅局限于浏览器。
 
 在 Web {{glossary("accessibility", "无障碍")}}方面，大多数用户代理提供了一个无障碍对象模型，屏幕阅读器与专用的无障碍 API 交互，使用各种操作系统特性并采用钩子编程技术。
@@ -36,7 +34,7 @@ Chromebook 也有自带的屏幕阅读器 ChromeVox，让视觉受损人士能�
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
 - [术语](/zh-CN/docs/Glossary)
   - {{Glossary("Accessibility", "无障碍")}}

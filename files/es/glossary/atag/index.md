@@ -1,19 +1,24 @@
 ---
 title: ATAG
 slug: Glossary/ATAG
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**Authoring Tool {{glossary("Accessibility")}} Guidelines (ATAG)** (Pautas de Accesibilidad para Herramientas de Autor) son una recomendación del {{Glossary("W3C")}} para crear herramientas de autor accesibles que produzcan contenido accesible.
 
-ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines/Pautas de accesibilidad de herramientas de autor) es una recomendación de la {{Glossary("W3C")}} para la construcción de herramientas de autor y producir contenido accesible.
+Las herramientas de autor son aplicaciones de software que se usan para crear contenido web. ATAG explica cómo:
 
-## Saber más
+- hacer que las propias herramientas de autor sean **accesibles**, de modo que las personas con discapacidad puedan crear contenido web.
+- ayudar a quienes crean contenido a hacerlo más accesible; en concreto, permitir, apoyar y promover la producción de contenido que cumpla las {{glossary("WCAG", "Pautas de Accesibilidad para el Contenido Web")}} (WCAG, por sus siglas en inglés).
 
-### Conocimiento general
+## Véase también
 
-- [ATAG como parte de la Iniciativa de Accesibilidad Web](http://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tools_Accessibility_Guidelines_.28ATAG.29) en la WikiPedia
-
-### Referencia técnica
-
-- [Resumen de Authoring Tool Accessibility Guidelines (ATAG)](http://www.w3.org/WAI/intro/atag.php)
-- [La recomendación ATAG 2.0](http://www.w3.org/TR/ATAG20/)
+- [ATAG como parte de la Iniciativa de Accesibilidad Web (WAI)](<https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)>) en Wikipedia
+- [Authoring Tool Accessibility Guidelines (ATAG) Overview](https://www.w3.org/WAI/standards-guidelines/atag/)
+- [Authoring Tool Accessibility Guidelines (ATAG) Recommendation 2.0](https://www.w3.org/TR/ATAG20/)
+- Términos relacionados del glosario:
+  - {{Glossary("Accessibility", "Accesibilidad")}}
+  - {{Glossary("WAI")}}
+  - {{Glossary("WCAG")}}
+  - {{Glossary("UAAG")}}

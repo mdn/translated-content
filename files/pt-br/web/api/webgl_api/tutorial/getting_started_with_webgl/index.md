@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 {{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-[WebGL](http://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](http://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
+[WebGL](https://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](https://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
 
 Esse artigo vai introduzir o básico sobre o uso do WebGL. Acredita-se que você já possui entendimento da matemática que envolve os gráficos 3D, e que este artigo não tem a pretensão de tentar ensinar-lhe OpenGL em si.
 
@@ -66,7 +66,7 @@ Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado
 ## Veja também
 
 - [Uma introdução ao WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/): Escrito por Luz Caballero, publicado por dev.opera.com. Esse artigo direciona sobre o que o WebGL é, explicando como o WebGL funciona (incluindo o conceito de pipeline de renderização), e introduz algumas bibliotecas do WebGL.
-- [Fundamentos do WebGL](http://webglfundamentals.org/)
-- [Uma introdução para o OpenGL moderno:](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) Uma séroe de bons artigos sobre OpenGL escrita por Joe Groff, provendo uma introdução clara para o OpenGL a partir de sua história até os importantes conceitos de pipeline de gráficos, e também inclui alguns exemplos demonstrativos sobre como o OpenGL funciona. Se você não tem ideia do que seja OpenGL, esse é um bom lugar para começar.
+- [Fundamentos do WebGL](https://webglfundamentals.org/)
+- [Uma introdução para o OpenGL moderno:](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) Uma séroe de bons artigos sobre OpenGL escrita por Joe Groff, provendo uma introdução clara para o OpenGL a partir de sua história até os importantes conceitos de pipeline de gráficos, e também inclui alguns exemplos demonstrativos sobre como o OpenGL funciona. Se você não tem ideia do que seja OpenGL, esse é um bom lugar para começar.
 
 {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

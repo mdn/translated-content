@@ -1,15 +1,28 @@
 ---
 title: TypedArray.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 l10n:
-  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`at()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで整数値を受け取り、そのインデックスにある要素を返します。整数値には正の整数と負の整数が使用できます。負の整数の場合は、この型付き配列の末尾の要素から前に数えます。このメソッドは {{jsxref("Array.prototype.at()")}} と同じアルゴリズムです。
 
-**`at()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで整数値を受け取り、そのインデックスにある項目を返します。整数値には正の整数と負の整数が使用できます。負の整数の場合は、この型付き配列の末尾の項目から前に数えます。このメソッドは {{jsxref("Array.prototype.at()")}} と同じアルゴリズムです。
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.at()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
+```js interactive-example
+const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);
+
+let index = 1;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// 予想される結果: "An index of 1 returns the item 10"
+
+index = -2;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// 予想される結果: "An index of -2 returns the item 40"
+```
 
 ## 構文
 
@@ -20,7 +33,7 @@ at(index)
 ### 引数
 
 - `index`
-  - : 返される型付き配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。負の添字を使用した場合は、型付き配列の末尾から逆に数えた位置です。 `index < 0` であれば、 `index + array.length` がアクセスされます。
+  - : 返される型付き配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。負のインデックスを使用した場合は、型付き配列の末尾から逆に数えた位置です。 `index < 0` であれば、 `index + array.length` がアクセスされます。
 
 ### 返値
 
@@ -39,7 +52,7 @@ at(index)
 ```js
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
-// 指定された配列の最後の項目を返す関数です。
+// 指定された配列の最後の要素を返す関数です。
 function returnLast(arr) {
   return arr.at(-1);
 }
@@ -50,21 +63,21 @@ console.log(lastItem); // 18
 
 ### メソッドの比較
 
-ここでは、 {{jsxref("TypedArray")}} の最後から 2 番目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
+ここでは、 {{jsxref("TypedArray")}} の最後から 2 番目の要素を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
 
 ```js
-// Our typed array with values
+// 値を格納した型付き配列
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
-// Using length property
+// length プロパティを使用
 const lengthWay = uint8[uint8.length - 2];
 console.log(lengthWay); // 11
 
-// Using slice() method. Note an array is returned
+// slice() メソッドを使用（配列が返されることに注意）
 const sliceWay = uint8.slice(-2, -1);
 console.log(sliceWay[0]); // 11
 
-// Using at() method
+// at() メソッドを使用
 const atWay = uint8.at(-2);
 console.log(atWay); // 11
 ```
@@ -79,7 +92,8 @@ console.log(atWay); // 11
 
 ## 関連情報
 
-- [`TypedArray.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
+- [`TypedArray.prototype.at` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [es-shims による `TypedArray.prototype.at` のポリフィル](https://www.npmjs.com/package/typedarray.prototype.at)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

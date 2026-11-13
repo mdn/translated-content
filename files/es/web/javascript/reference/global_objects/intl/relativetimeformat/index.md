@@ -7,27 +7,40 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 El objeto **`Intl.RelativeTimeFormat`** te proporciona una manera de formatear tiempos relativos con traducciones.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
 
-El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <https://github.com/mdn/interactive-examples> y manda una Pull Request.
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
+```
 
 ## Constructor
 
-- {{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
+- {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
   - : Crea una nueva instancia de `Intl.RelativeTimeFormat`.
 
 ## Métodos estáticos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Devuelve un {{jsxref("Array")}} con todos los idiomas disponibles sin necesidad de usar el que hay por defecto.
 
 ## Métodos de instancia
 
-- {{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat).
-- {{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
+  - : Formatea `value` y `unit` conforme al idioma y las opciones de formateo al crear la instancia con [`Intl.RelativeTimeFormat`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat).
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
   - : Devuelve un {{jsxref("Array")}} de objetos representando el tiempo relativo en partes que pueden ser usadas en traducciones.
-- {{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
+- {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
   - : Devuelve un nuevo objeto con las propiedades que reflejan las opciones de localización y formato usadas durante la inicialización del objeto.
 
 ## Ejemplos

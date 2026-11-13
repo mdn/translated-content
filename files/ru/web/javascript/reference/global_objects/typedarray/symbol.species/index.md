@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 
 {{JSRef}}
 
-**`TypedArray[@@species]`** - это способ доступа, с помощью которого можно получить конструктор [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+**`TypedArray[@@species]`** - это способ доступа, с помощью которого можно получить конструктор [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ## Синтаксис
 
@@ -27,11 +27,11 @@ Float64Array
 
 ## Описание
 
-Свойство **`species`** возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects). Конструкторы подкласса могут его переопределить.
+Свойство **`species`** возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects). Конструкторы подкласса могут его переопределить.
 
 ## Примеры
 
-Свойство [**`species`**](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects):
+Свойство [**`species`**](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects):
 
 ```js
 Int8Array[Symbol.species]; // function Int8Array()

@@ -9,7 +9,7 @@ O JavaScript suporta um conjunto compacto de declarações, especificamente de f
 
 Veja a [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements) para detalhes sobre as declarações mostradas neste capítulo. No código em JavaScript, o caractere ponto e vírgula (`;`) é utilizado para separar declarações.
 
-Toda expressão também é uma declaração. Veja [Expressões e Operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) para informações completas sobre expressões.
+Toda expressão também é uma declaração. Veja [Expressões e Operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) para informações completas sobre expressões.
 
 ## Declaração em bloco
 
@@ -66,7 +66,7 @@ if (condicao) {
 }
 ```
 
-onde `condicao` pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) para uma explicação sobre o que é avaliado como `true` e `false`. Se `condicao` for avaliada como verdadeira, declaracao`_1` é executada; caso contrário, `declaracao_2` é executada. `declaracao_1` e `declaracao_2` podem ser qualquer declaração, incluindo declarações `if` aninhadas.
+onde `condicao` pode ser qualquer expressão que seja avaliada como verdadeira ou falsa. Veja [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description) para uma explicação sobre o que é avaliado como `true` e `false`. Se `condicao` for avaliada como verdadeira, declaracao`_1` é executada; caso contrário, `declaracao_2` é executada. `declaracao_1` e `declaracao_2` podem ser qualquer declaração, incluindo declarações `if` aninhadas.
 
 Você pode também combinar declarações utilizando `else if` para obter várias condições testadas em sequência, como o seguinte:
 
@@ -123,7 +123,7 @@ Os seguintes valores são avaliados como falsos:
 
 Todos os outros valores, incluindo todos os objetos, são avaliados como verdadeiros quando passados para uma declaração condicional.
 
-Não confunda os valores booleanos primitivos `true` e `false` com os valores de `true` e `false` do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Por exemplo:
+Não confunda os valores booleanos primitivos `true` e `false` com os valores de `true` e `false` do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description). Por exemplo:
 
 ```
 var b = new Boolean(false);
@@ -214,7 +214,7 @@ Você pode chamar uma exceção usando a declaração `throw` e manipulá-la usa
 
 Praticamente pode-se utilizar `throw` em qualquer objeto de JavaScript. Todavia, nem todos os objetos ativados por `throw` são igualmente criados. Embora seja bastante comum tratar números ou strings como erros usando `throw`, é frequentemente mais eficiente usar alguns tipos de exceções especificamente criadas para esses propósitos:
 
-- [ECMAScript exceptions](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
+- [ECMAScript exceptions](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects#fundamental_objects)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
 ### `Declaração throw`
@@ -238,7 +238,8 @@ throw {
 };
 ```
 
-> **Nota:**Você pode especificar um objeto quando você lança uma exceção. Você pode então, referenciar as propriedades de um objeto no bloco catch. O exemplo a seguir cria um objeto myUserException do tipo userException e o usa em uma declaração throw.
+> [!NOTE]
+> Você pode especificar um objeto quando você lança uma exceção. Você pode então, referenciar as propriedades de um objeto no bloco catch. O exemplo a seguir cria um objeto myUserException do tipo userException e o usa em uma declaração throw.
 
 ```js
 // Cria um objeto do tipo UserException
@@ -433,7 +434,7 @@ Uma Promise assume um destes estados:
 
 ### Carregando uma imagem com XHR
 
-Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](http://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
+Um exemplo simples usando Promise e `XMLHttpRequest` para carregar uma imagem disponível no repositório MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html). Você também pode [vê-lo executando](https://mdn.github.io/promises-test/). Cada etapa está comentada o que lhe permite seguir de perto a arquitetura Promise e arquitetura XHR. Aqui está a versão não comentada, mostrando o fluxo `Promise` para que você possa ter uma ideia:
 
 ```js
 function imgLoad(url) {

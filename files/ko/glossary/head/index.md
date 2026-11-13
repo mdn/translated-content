@@ -12,4 +12,4 @@ l10n:
 ## 같이 보기
 
 - MDN에서의 {{htmlelement("head")}} 요소 참조
-- MDN Learning Area의 [The HTML \<head>](/ko/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head) 참고
+- MDN Learning Area의 [The HTML \<head>](/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) 참고

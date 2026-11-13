@@ -1,15 +1,29 @@
 ---
 title: Object.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript デモ: Object.defineProperty()")}}
+
+```js interactive-example
+const object = {};
+
+Object.defineProperty(object, "foo", {
+  value: 42,
+  writable: false,
+});
+
+object.foo = 77;
+// 厳格モードではエラーが発生
+
+console.log(object.foo);
+// 予想される結果: 42
+```
 
 ## 構文
 
@@ -39,9 +53,7 @@ Object.defineProperty(obj, prop, descriptor)
 どちらの形でも記述子はオブジェクトで表現します。共通して以下のオプションのキーを持つことができます (注: ここでいう**既定値**とは、`Object.defineProperty()` を使ってプロパティを定義する場合です)。
 
 - `configurable`
-
   - : これが `false` に設定されていた場合、
-
     - このプロパティの種類をデータプロパティとアクセサープロパティの間で変更することができません。
     - このプロパティを削除することができません。
     - 記述子の他の属性は変更できません（しかし、 `writable: true` のデータ記述子であれば、 `value` を変更し、 `writable` を `false` に変更することができます）。
@@ -68,7 +80,7 @@ Object.defineProperty(obj, prop, descriptor)
   - : プロパティのセッターとなる関数で、セッターがない場合は {{jsxref("undefined")}} です。プロパティに値が割り当てられたとき、その値を引数としてこの関数がコールされます。この関数内で `this` は割り当てようとしたプロパティを持つオブジェクトになります。
     **既定値は {{jsxref("undefined")}} です。**
 
-記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子に `value` または `writable` と、`get` または `set` のキーの両方がある場合は、例外が発生します。
+記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子がデータ記述子（`value` または `writable` を持つため）であり、かつアクセサー記述子（`get` または `set` を持つため）である場合、例外が発生します。
 
 これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定を確実に保持するためには、記述子オブジェクトのプロトタイプチェーンにある既存のオブジェクトを前もって凍結するか、すべてのオプションを明示的に指定するか、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を作成します。
 
@@ -89,36 +101,16 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 同じオブジェクトを再利用
-function withValue(value) {
-  const d =
-    withValue.d ||
-    (withValue.d = {
-      enumerable: false,
-      writable: false,
-      configurable: false,
-      value,
-    });
-
-  // 値の代入で重複操作を防ぐ
-  if (d.value !== value) d.value = value;
-
-  return d;
-}
-// このように使います。
-Object.defineProperty(obj, "key", withValue("static"));
-
-// freeze が利用できるなら、オブジェクトのプロトタイプのプロパティ
-// (value, get, set, enumerable, writable, configurable) を
-// 追加・削除することを防ぐことができます。
-(Object.freeze || Object)(Object.prototype);
+// 3. オブジェクトのプロトタイププロパティの追加または除去されるのを防止
+// (value, get, set, enumerable, writable, configurable)
+Object.freeze(Object.prototype);
 ```
 
 プロパティが既に存在する場合、 `Object.defineProperty()` は記述子の値とプロパティの現在の構成に従ってプロパティを変更しようとします。
 
 古い記述子の `configurable` 属性が `false` に設定されていた場合、そのプロパティは _構成不可_ と言います。設定不可能なアクセサープロパティの属性を変更することはできませんし、データプロパティとアクセサープロパティの種類を切り替えることもできません。 `writable: true` のデータプロパティでは、値を変更して `writable` 属性を `true` から `false` に変更することが可能です。データプロパティで元の値と同じ値を定義する場合を除き、設定不可能なプロパティ属性（許可されている場合は `value` と `writable` を除く）を変更しようとすると {{jsxref("TypeError")}} が発生します。
 
-現在のプロパティが構成可能な場合、属性を `undefined` に定義すると、その属性は効果的に削除されます。例えば、 `o.k` がアクセサープロパティである場合、 `Object.defineProperty(o, "k", { set: undefined })` とするとセッターを除去し、`k` はゲッターのみを持つことになるので、、読み取り専用になります。新しい記述子に属性がない場合、古い記述子の属性値は保持されます（暗黙的に `undefined` に再定義されることはありません）。異なる「風味」の記述子を与えることで、データとアクセサープロパティを切り替えることが可能です。例えば、新しい記述子が（`value` または `writable` を持つ）データ記述子の場合、元の記述子の `get` 属性と `set` 属性は両方とも削除されます。
+現在のプロパティが構成可能な場合、属性を `undefined` に定義すると、その属性は効果的に削除されます。例えば、 `o.k` がアクセサープロパティである場合、 `Object.defineProperty(o, "k", { set: undefined })` とするとセッターを除去し、`k` はゲッターのみを持つことになるので、読み取り専用になります。新しい記述子に属性がない場合、古い記述子の属性値は保持されます（暗黙的に `undefined` に再定義されることはありません）。異なる「風味」の記述子を与えることで、データとアクセサープロパティを切り替えることが可能です。例えば、新しい記述子が（`value` または `writable` を持つ）データ記述子の場合、元の記述子の `get` 属性と `set` 属性は両方とも削除されます。
 
 ## 例
 
@@ -204,7 +196,7 @@ console.log(o.a); // 37 がログ出力されます。代入文は動作しま�
 
 #### enumerable 属性
 
-`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で認識されるかどうかを定義します。 {{jsxref("Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。詳細情報については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で認識されるかどうかを定義します。 {{jsxref("Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。詳細情報については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
 
 ```js
 const o = {};
@@ -410,23 +402,23 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 ```js
 const pattern = {
   get() {
-    return "I always return this string, whatever you have assigned";
+    return "何を代入しても、この文字列を常に返します";
   },
   set() {
-    this.myname = "this is my name string";
+    this.myName = "これは私の名前の文字列です";
   },
 };
 
 function TestDefineSetAndGet() {
-  Object.defineProperty(this, "myproperty", pattern);
+  Object.defineProperty(this, "myProperty", pattern);
 }
 
 const instance = new TestDefineSetAndGet();
-instance.myproperty = "test";
-console.log(instance.myproperty);
-// I always return this string, whatever you have assigned
+instance.myProperty = "test";
+console.log(instance.myProperty);
+// 何を代入しても、この文字列を常に返します
 
-console.log(instance.myname); // this is my name string
+console.log(instance.myName); // これは私の名前の文字列です
 ```
 
 ### プロパティの継承
@@ -502,7 +494,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## 関連情報
 
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

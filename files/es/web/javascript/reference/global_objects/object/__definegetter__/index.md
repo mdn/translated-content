@@ -27,7 +27,7 @@ obj.__defineGetter__(prop, func)
 
 ## Descripción
 
-The `__defineGetter__` allows a {{jsxref("Operators/get", "getter", "", 1)}} to be defined on a pre-existing object.
+The `__defineGetter__` allows a {{jsxref("Functions/get", "getter", "", 1)}} to be defined on a pre-existing object.
 
 ## Ejemplos
 
@@ -71,10 +71,10 @@ console.log(o.gimmeFive); // 5
 ## Mira también
 
 - [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- {{jsxref("Operators/get", "get")}} operator
+- {{jsxref("Functions/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - [Error 647423 en Firefox](https://bugzil.la/647423)

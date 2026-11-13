@@ -7,9 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 
 **`Promise.resolve(value)`** 메서드는 주어진 값으로 이행하는 {{jsxref("Promise.then")}} 객체를 반환합니다. 그 값이 프로미스인 경우, 해당 프로미스가 반환됩니다. 그 값이 thenable(예, {{jsxref("Promise.then", "\"then\" 메소드")}} 가 있음)인 경우, 반환된 프로미스는 그 thenable을 "따르며", 그 최종 상태를 취합니다. 그렇지 않으면 반환된 프로미스는 그 값으로 이행합니다. 이 함수는 프로미스형의 객체(무언가를 결정하는 프로미스를 결정하는 프로미스 등)의 중첩된 레이어를 단일 레이어로 펼칩니다.
 
-> **경고:** **주의**: 스스로를 결정하는 thenable 에서 `Promise.resolve` 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 `async` Pipe 를 함께 사용한 [예제](https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts)입니다. 자세한 내용은 [여기](https://angular.io/guide/template-syntax#avoid-side-effects)에서 확인하세요.
+> [!WARNING]
+> **주의**: 스스로를 결정하는 thenable 에서 `Promise.resolve` 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 `async` Pipe 를 함께 사용한 [예제](https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts)입니다. 자세한 내용은 [여기](https://angular.io/guide/template-syntax#avoid-side-effects)에서 확인하세요.
 
-{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(123);
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: 123
+});
+```
 
 ## 구문
 

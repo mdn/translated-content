@@ -3,11 +3,16 @@ title: Array：length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 ---
 
-{{JSRef}}
-
 **`length`** 是 {{jsxref("Array")}} 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大索引。
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## 值
 
@@ -124,7 +129,7 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - [`TypedArray`：`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
 - [`String`: `length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)

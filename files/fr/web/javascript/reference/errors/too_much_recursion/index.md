@@ -3,8 +3,6 @@ title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
-{{jsSidebar("Errors")}}
-
 ## Message
 
 ```
@@ -68,4 +66,4 @@ boucle(0);
 ## Voir aussi
 
 - {{Glossary("Récursion")}}
-- [Les fonctions récursives](/fr/docs/Web/JavaScript/Guide/Fonctions#La_récursivité)
+- [Les fonctions récursives](/fr/docs/Web/JavaScript/Guide/Functions#la_récursivité)

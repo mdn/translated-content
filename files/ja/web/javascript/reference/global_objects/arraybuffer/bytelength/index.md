@@ -1,15 +1,25 @@
 ---
 title: ArrayBuffer.prototype.byteLength
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`byteLength`** は、{{jsxref("ArrayBuffer")}} のアクセサープロパティで、この配列バッファーの長さをバイト単位で表します。
 
-**`byteLength`** アクセサープロパティは、{{jsxref("ArrayBuffer")}} の長さをバイト単位で表します。
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.prototype.byteLength")}}
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
+```js interactive-example
+// ArrayBuffer をバイト単位のサイズで作成
+const buffer = new ArrayBuffer(8);
+
+// byteLength でサイズを確認
+const bytes = buffer.byteLength;
+
+console.log(bytes);
+// 予想される結果: 8
+```
 
 ## 解説
 

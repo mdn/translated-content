@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
 
 ## Cambios para desarrolladores web
@@ -14,18 +12,18 @@ Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre 
 ### HTML
 
 - El atributo `value` de {{ HTMLElement("li") }} ahora puede ser negativo. Los valores negativos anteriores se convertian a 0.
-- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
-- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
+- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
+- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
 - Firefox en Android ahora permite a los usuarios tomar fotos con la cámara de su teléfono sin salir del navegador cuando se usa el elemento {{ HTMLElement("input") }} con `type="file"` y `accept="image/*"` .
 - Las imágenes PNG ICO de estilo Windows Vista ahora son compatibles.
-- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
-- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Element/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
+- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
+- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Reference/Elements/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
 
 ### CSS
 
 - La propiedad {{ cssxref("font-stretch") }} ahora es compatible.
 - La propiedad {{ cssxref("columns") }} ahora es compatible, con el prefijo `-moz`. Esta es una forma abreviada de las siguientes propiedades: {{ cssxref("column-width") }} y {{ cssxref("column-count") }}.
-- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Element/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
+- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
 - Ahora puede especificar configuraciones de desbordamiento para los bordes izquierdo y derecho del contenido usando una nueva sintaxis de dos valores para {{ cssxref("text-overflow") }}.
 
 ### JavaScript
@@ -44,11 +42,11 @@ _Ningún cambio._
 - Los [eventos de composición](/es/docs/Web/API/CompositionEvent) de DOM Nivel 3 ahora son compatibles.
 - Se implementó el atributo {{ domxref("Document.scripts") }}; esto devuelve un {{ domxref("HTMLCollection") }} de todos los elementos {{ HTMLElement("script") }} del documento.
 - Se implementó el método {{ domxref("Document.queryCommandSupported()") }}.
-- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
+- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/API/Document_Object_Model/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
 - El evento `readystatechange` ahora solo se activa en {{ domxref("Document") }}, según lo previsto.
 - Los manejadores de eventos ahora se implementan como interfaces IDL estándar. En la mayoría de los casos, esto no afectará el contenido, pero hay excepciones.
 - Se ha agregado un nuevo tipo de respuesta, "`moz-json`", a `XMLHttpRequest`, lo que permite que `XMLHttpRequest` analice automáticamente cadenas [JSON](/es/docs/Glossary/JSON); cuando solicita este tipo, se analiza una cadena JSON devuelta, de modo que el valor de la propiedad `response` es el objeto JavaScript resultante.
-- [Eventos de "progreso" `XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress) ahora se envían de manera confiable para cada fragmento de datos recibido; en el pasado, era posible que la última parte de los datos recibidos no activará un evento de "progreso". Ahora puede realizar un seguimiento del progreso siguiendo solo los eventos de "progreso", en lugar de tener que monitorear también los eventos de "carga" para detectar la recepción de la última porción de datos.
+- [Eventos de "progreso" `XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) ahora se envían de manera confiable para cada fragmento de datos recibido; en el pasado, era posible que la última parte de los datos recibidos no activará un evento de "progreso". Ahora puede realizar un seguimiento del progreso siguiendo solo los eventos de "progreso", en lugar de tener que monitorear también los eventos de "carga" para detectar la recepción de la última porción de datos.
 - En el pasado, llamar a [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) con un detector `null` generaba una excepción. Ahora devuelve sin error y sin efecto.
 - La nueva propiedad {{ domxref("navigator.doNotTrack") }} permite que su contenido determine fácilmente si el usuario ha habilitado o no su preferencia de no rastrear; si este valor es "sí", no debe rastrear al usuario.
 - Los objetos {{ domxref("Range") }} y {{ domxref("Selection") }} ahora se comportan según sus especificaciones cuando {{ domxref("Text.splitText()", "splitText()") }} y {{domxref("Node.normalize", "normalize()") }} son llamados.
@@ -70,7 +68,7 @@ _Ningún cambio._
 
 ### Redes
 
-- Ahora puede enviar el contenido de [matrices tipadas en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) (es decir, el contenido de un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) [usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- Ahora puede enviar el contenido de [matrices tipadas en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) (es decir, el contenido de un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) [usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - Las conexiones WebSocket ahora permiten que no se reciban caracteres en marcos de datos UTF-8 válidos, en lugar de fallar.
 - La cabecera HTTP `Accept` para solicitudes XSLT se ha cambiado a "\*/\*" para simplificar. Dado que recuperar XSLT siempre ha vuelto a "\*/\*", tenía sentido simplificar la solicitud inicial.
 - Los intentos por parte de un servidor de usar los códigos de respuesta `301 Moved Permanently` (Movido permanentemente) o `307 Temporary Redirect` (Redirección temporal) para redirigir al usuario a un URI `javascript:` ahora [resultan en un error de "mala conexión"](/es/docs/Web/HTTP#more_on_redirection_responses) en lugar de redirigir. Esto evita ciertos tipos de ataques de secuencias de comandos entre sitios.

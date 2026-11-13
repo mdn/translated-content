@@ -3,11 +3,9 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef}}
-
 **`RegExp`** 对象用于将文本与一个模式匹配。
 
-有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
+有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 描述
 
@@ -47,7 +45,7 @@ var re = /\w+/;
 
 ### Perl-like RegExp 属性
 
-请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见[不推荐使用的 RegExp 属性。](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
+请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见[不推荐使用的 RegExp 属性。](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties)
 
 ## 构造函数
 
@@ -122,10 +120,10 @@ console.log(newstr);
 
 对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。
 
-```plain
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+```js
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
+console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 注意：在正则表达式中，以竖线分割的子模式的顺序会影响匹配结果。

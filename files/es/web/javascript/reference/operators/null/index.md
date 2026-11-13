@@ -9,7 +9,20 @@ slug: Web/JavaScript/Reference/Operators/null
 
 El valor `null` es un literal de Javascript que representa intencionalmente un valor nulo o "vacío". Es uno de los {{Glossary("Primitive", "valores primitivos")}} de Javascript.
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## Sintaxis
 

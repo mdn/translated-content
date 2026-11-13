@@ -1,15 +1,22 @@
 ---
 title: TypedArray.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
 
-**`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.slice()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html", "shorter")}}
+```js interactive-example
+const bytes = new Uint8Array([10, 20, 30, 40, 50]);
+const byteSlice = bytes.slice(1, 3);
+
+console.log(byteSlice);
+// 予想される結果: Uint8Array [20, 30]
+```
 
 ## 構文
 
@@ -36,14 +43,14 @@ slice(start, end)
 
 ## 例
 
-### 例: 既存の配列の一部を返す
+### 既存の型付き配列の一部を返す
 
 ```js
-const uint8 = new Uint8Array([1, 2, 3]);
-uint8.slice(1); // Uint8Array [ 2, 3 ]
-uint8.slice(2); // Uint8Array [ 3 ]
-uint8.slice(-2); // Uint8Array [ 2, 3 ]
-uint8.slice(0, 1); // Uint8Array [ 1 ]
+const bytes = new Uint8Array([1, 2, 3]);
+bytes.slice(1); // Uint8Array [ 2, 3 ]
+bytes.slice(2); // Uint8Array [ 3 ]
+bytes.slice(-2); // Uint8Array [ 2, 3 ]
+bytes.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## 仕様書
@@ -56,7 +63,8 @@ uint8.slice(0, 1); // Uint8Array [ 1 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.slice` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.slice` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [es-shims による `TypedArray.prototype.slice` のポリフィル](https://www.npmjs.com/package/typedarray.prototype.slice)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.slice()")}}

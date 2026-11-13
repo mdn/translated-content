@@ -21,7 +21,7 @@ formData.get(name);
 ### Parameters
 
 - `name`
-  - : 검색하고 싶은 키의 이름을 나타내는 {{domxref("USVString")}} 입니다.
+  - : 검색하고 싶은 키의 이름을 나타내는 {{jsxref("String")}} 입니다.
 
 ### Return value
 
@@ -59,6 +59,6 @@ formData.get("username"); // Returns "Chris"
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

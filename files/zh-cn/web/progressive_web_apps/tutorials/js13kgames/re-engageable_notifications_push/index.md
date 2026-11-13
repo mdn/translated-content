@@ -67,7 +67,7 @@ function randomNotification() {
 
 这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification)，它能为你的应用提供一层额外的安全防护。你可以看一下 [Service Workers Cookbook 里的一些例子](https://github.com/mdn/serviceworker-cookbook/push-payload.html)，尝试用 [Firebase](https://firebase.google.com/) 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
 
-之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
+之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);

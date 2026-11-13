@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/break
 
 **`break` 문**은 현재 반복문, {{jsxref("Statements/switch", "switch")}} 문, 또는 {{jsxref("Statements/label", "label")}} 문을 종료하고, 그 다음 문으로 프로그램 제어를 넘깁니다.
 
-{{EmbedInteractiveExample("pages/js/statement-break.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
 
 ## 구문
 

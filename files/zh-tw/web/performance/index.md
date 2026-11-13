@@ -150,55 +150,53 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 
 HTML
 
-- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Element/picture)
-- [The `<video>` Element](/zh-TW/docs/Web/HTML/Element/video)
-- [The `<source>` Element](/zh-TW/docs/Web/HTML/Element/source)
-- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Element/img#Attributes)
+- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/picture)
+- [The `<video>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/video)
+- [The `<source>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/source)
+- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Reference/Elements/img#Attributes)
+  - [Responsive images](/zh-TW/docs/Web/HTML/Guides/Responsive_images)
 
-  - [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-
-- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Preloading_content) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
+- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 
-- [will-change](/zh-TW/docs/Web/CSS/will-change)
+- [will-change](/zh-TW/docs/Web/CSS/Reference/Properties/will-change)
 - GPU v CPU
 - Measuring layout
 - Font-loading best practices
 
 JavaScript
 
-- [DOMContentLoaded](/zh-TW/docs/Web/Events/DOMContentLoaded)
+- [DOMContentLoaded](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/zh-TW/docs/Glossary/Garbage_collection)
 - [requestAnimationFrame](/zh-TW/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 
 - [Performance API](/zh-TW/docs/Web/API/Performance_API)
-- [Navigation Timing API](/zh-TW/docs/Web/API/Navigation_timing_API)
+- [Navigation Timing API](/zh-TW/docs/Web/API/Performance_API/Navigation_timing)
 - [Media Capabilities API](/zh-TW/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
 - [Network Information API](/zh-TW/docs/Web/API/Network_Information_API)
 - [PerformanceNavigationTiming](/zh-TW/docs/Web/API/PerformanceNavigationTiming)
 - [Battery Status API](/zh-TW/docs/Web/API/Battery_Status_API)
 - [Navigator.deviceMemory](/zh-TW/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/zh-TW/docs/Web/API/Intersection_Observer_API)
-- [Using the User Timing AP](/zh-TW/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)I
-- [Long Tasks API](/zh-TW/docs/Web/API/Long_Tasks_API)
+- [Using the User Timing AP](/zh-TW/docs/Web/API/Performance_API/User_timing)I
+- [Long Tasks API](/zh-TW/docs/Web/API/PerformanceLongTaskTiming)
 - [High Resolution Timing API](/zh-TW/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
-- [Resource Timing API](/zh-TW/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/zh-TW/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/zh-TW/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/zh-TW/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/zh-TW/docs/Web/API/Window/requestIdleCallback)
 
-- [Beacon API](/zh-TW/docs/Web/API/Beacon_API/Using_the_Beacon_API)
-- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
-- [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/navigationPreload)
+- [Beacon API](/zh-TW/docs/Web/API/Beacon_API)
+- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
+- [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/zh-TW/docs/Web/API/PerformanceServerTiming)
 
 Headers
 
-- [Content-encoding](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding)
+- [Content-encoding](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Encoding)
 - HTTP/2
 - [gZip](/zh-TW/docs/Glossary/GZip_compression)
 - Client Hints
@@ -218,9 +216,8 @@ Best Practices
 
 - [Using Service Workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Using Web Workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
 
-- [PWA](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
-- [Caching](/zh-TW/docs/Web/HTTP/Caching)
+- [PWA](/zh-TW/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
+- [Caching](/zh-TW/docs/Web/HTTP/Guides/Caching)
 - Content Delivery Networks (CDN)

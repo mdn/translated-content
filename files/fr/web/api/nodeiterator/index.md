@@ -20,7 +20,6 @@ _L'interface n'hérite d'aucune propriété._
 - {{domxref("NodeIterator.root")}} {{readonlyInline}}
   - : Renvoie un {{domxref("Node")}} (_noeud_) représentant le noeud racine comme spécifié lors de la création du `NodeIterator`.
 - {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
-
   - : Renvoie un `unsigned long` (_long non signé_), celui-ci étant un masque constitué de constantes décrivant les types de {{domxref("Node")}} (_noeud_) et devant être présenté. Les nœuds non correspondants sont ignorés, mais leurs enfants peuvent être inclus, le cas échéant. Les valeurs possibles sont :
 
     <table class="standard-table">
@@ -134,11 +133,11 @@ _L'interface n'hérite d'aucune propriété._
 - {{domxref("NodeIterator.filter")}} {{readonlyInline}}
   - : Renvoie un {{domxref("NodeFilter")}} utilisé pour sélectionner les noeuds pertinents.
 - {{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}
-  - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, tout son sous-arbre doit être supprimé en même temps.
+  - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, tout son sous-arbre doit être supprimé en même temps.
 - {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline() }}
   - : Renvoie le {{domxref("Node")}} (noeud) auquel l'itérateur est ancré.
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{ experimental_inline() }}
-  - : Renvoie un {{domxref("Boolean")}} (_booléen_) qui indique si le {{domxref("NodeIterator")}} est ancré avant (`true` (_vrai_)) ou après (`false` (_faux_)) le noeud d'ancrage.
+  - : Renvoie un {{jsxref("Boolean")}} (_booléen_) qui indique si le {{domxref("NodeIterator")}} est ancré avant (`true` (_vrai_)) ou après (`false` (_faux_)) le noeud d'ancrage.
 
 ## Méthodes
 

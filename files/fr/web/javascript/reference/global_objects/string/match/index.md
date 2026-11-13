@@ -1,95 +1,161 @@
 ---
-title: String.prototype.match()
+title: "String : méthode match()"
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode **`match()`** des valeurs {{JSxRef("String")}} permet d'obtenir le résultat de la correspondance de cette chaîne de caractères avec une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
-La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.match()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-match.html")}}
+```js interactive-example
+const paragraph =
+  "Le renard brun rapide saute par-dessus le chien paresseux. Il a aboyé.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Résultat attendu : Array ["L", "I"]
+```
 
 ## Syntaxe
 
-```js
-str.match(regexp);
+```js-nolint
+match(regexp)
 ```
 
 ### Paramètres
 
 - `regexp`
-  - : Un objet représentant une expression rationnelle. Si ce n'est pas un objet de type `RegExp`, celui-ci sera converti en un objet {{jsxref("RegExp")}} grâce à `new RegExp(regexp)`. Si aucun paramètre n'est utilisé, cela renverra un tableau contenant un élément étant la chaîne vide : `[""]`.
+  - : Un objet représentant une expression rationnelle, ou tout objet possédant une méthode [`Symbol.match`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match).
+
+    Si `regexp` n'est pas un objet de type `RegExp` et ne possède pas de méthode `Symbol.match`, il est implicitement converti en un objet {{JSxRef("RegExp")}} en utilisant `new RegExp(regexp)`.
+
+    Si vous ne fournissez aucun paramètre et utilisez directement la méthode `match()`, vous obtenez un {{JSxRef("Array")}} contenant une chaîne de caractères vide&nbsp;: `[""]`, car cela équivaut à `match(/(?:)/)`.
 
 ### Valeur de retour
 
-Un tableau ({{jsxref("Array")}}) contenant les correspondances et les groupes capturés avec les parenthèses ou {{jsxref("null")}} s'il n'y a pas de correspondance. Le contenu de ce tableau dépend de l'utilisation du marqueur pour la recherche globale `g` :
+Un tableau ({{JSxRef("Array")}}) dont le contenu dépend de la présence ou de l'absence de l'indicateur global (`g`), ou [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si aucune correspondance n'est trouvée.
 
-- Si le marqueur `g` est utilisé, tous les résultats correspondants à l'expression rationnelle complète seront renvoyés mais les groupes capturants ne seront pas renvoyés.
-- Si le marqueur `g` n'est pas utilisé, seule la première correspondance et ses groupes capturants seront renvoyés. Dans ce cas, l'élément renvoyé aura des propriétés supplémentaires listées ci-après.
-
-#### Propriétés supplémentaires
-
-Comme indiqué ci-avant, les résultats peuvent contenir certaines propriétés supplémentaires :
-
-- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) pour plus d'informations.
-- `index` : l'indice de la chaîne de caractères où a été trouvée la correspondance.
-- `input` : une copie de la chaîne sur laquelle a été effectuée la recherche.
+- Si l'indicateur `g` est utilisé, tous les résultats correspondant à l'expression rationnelle complète sont retournés, mais les groupes capturant ne sont pas inclus.
+- Si l'indicateur `g` n'est pas utilisé, seule la première correspondance complète et ses groupes capturant associés sont retournés. Dans ce cas, `match()` retourne le même résultat que {{JSxRef("RegExp.prototype.exec()")}} (un tableau avec certaines propriétés supplémentaires).
 
 ## Description
 
-Si l'expression n'utilise pas le drapeau (_flag_) `g`, le résultat obtenu sera le même qu'avec {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
+L'implémentation de `String.prototype.match` ne fait pas grand-chose d'autre que d'appeler la méthode `Symbol.match` de l'argument avec la chaîne de caractères comme premier paramètre. L'implémentation réelle provient de [`RegExp.prototype[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
 
-### Voir aussi : les méthodes de `RegExp`
+- Si vous avez besoin de savoir si une chaîne de caractères correspond à une expression rationnelle {{JSxRef("RegExp")}}, utilisez {{JSxRef("RegExp.prototype.test()")}}.
+- Si vous ne voulez que la première correspondance trouvée, vous pouvez utiliser {{JSxRef("RegExp.prototype.exec()")}} à la place.
+- Si vous voulez obtenir des groupes capturant et que l'indicateur global est défini, vous devez utiliser {{JSxRef("RegExp.prototype.exec()")}} ou {{JSxRef("String.prototype.matchAll()")}} à la place.
 
-- Si on souhaite savoir s'il existe des correspondances entre une chaîne de caractères et une expression rationnelle {{jsxref("RegExp")}}, on pourra utiliser {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.
-- Si on ne souhaite obtenir que la première correspondance, on pourra plutôt utiliser {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} à la place.
-- Si on souhaite obtenir les groupes correspondants et que le drapeau « global » est activé, il faudra utiliser {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} à la place.
+Pour plus d'informations sur la sémantique de `match()` lorsqu'une expression rationnelle est passée, voir [`RegExp.prototype[Symbol.match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
 
 ## Exemples
 
-### Utiliser `match()`
+### Utiliser la méthode `match()`
 
-Dans l'exemple suivant, on utilise `match()` afin de trouver la chaîne `'Chapitre'` suivie par un ou plusieurs chiffres séparés par des points. L'expression utilisée active le drapeau `i` afin que la casse ne soit pas prise en compte.
+Dans l'exemple suivant, `match()` est utilisé pour trouver `"chapitre"` suivi d'un ou plusieurs caractères numériques, suivi d'un point décimal et de caractères numériques zéro ou plusieurs fois.
+
+L'expression rationnelle inclut l'indicateur `i` afin que les différences entre majuscules et minuscules soient ignorées.
 
 ```js
-var str = "Pour plus d'informations, voir le chapitre 3.4.5.1";
-var re = /(chapitre \d+(\.\d)*)/i;
-var trouvé = str.match(re);
+const chaine = "Pour plus d'informations, voir le chapitre 3.4.5.1";
+const re = /(chapitre \d+(\.\d)*)/i;
+const trouve = chaine.match(re);
 
-console.log(trouvé);
-
-// logs ['chapitre 3.4.5.1', 'chapitre 3.4.5.1', '.1']
-
-// 'chapitre 3.4.5.1' est la première correspondance
-// 'chapitre 3.4.5.1' est la valeur gardée en mémoire par
-// `(chapitre \d+(\.\d)*)`.
-// '.1' est la valeur gardée en mémoire par `(\.\d)`.
+console.log(trouve);
+// [
+//   'chapitre 3.4.5.1'
+//   'chapitre 3.4.5.1'
+//   '.1'
+//   index: 34
+//   input: 'Pour plus d'informations, voir le chapitre 3.4.5.1'
+//   groups: undefined
+// ]
 ```
 
-### Utiliser les drapeaux `g` (global) et `i` (ignorer la casse) avec `match()`
+Dans le résultat de la correspondance ci-dessus, `'voir le chapitre 3.4.5.1'` est la correspondance complète. `'chapitre 3.4.5.1'` a été capturé par `(chapitre \d+(\.\d)*)`. `'.1'` est la dernière valeur capturée par `(\.\d)`. La propriété `index` (`34`) est l'index basé sur zéro de la correspondance complète. La propriété `input` est la chaîne de caractères originale qui a été analysée.
 
-Dans cet exemple, on illustre comment utiliser des drapeaux avec l'expression rationnelle qui est un argument de `match()`. Chaque lettre de A à E et de a à e est renvoyée, chacune dans un élément du tableau de résultat.
+### Utiliser les indicateurs global et ignorer la casse avec `match()`
+
+L'exemple suivant démontre l'utilisation de l'indicateur global et de l'indicateur ignorer la casse avec `match()`. Toutes les lettres `A` à `E` et `a` à `e` sont retournées, chacune étant son propre élément dans le tableau.
 
 ```js
-var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var regexp = /[A-E]/gi;
-var tableau_correspondances = str.match(regexp);
+const chaine = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const regexp = /[A-E]/gi;
+const correspondances = chaine.match(regexp);
 
-console.log(tableau_correspondances);
+console.log(correspondances);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+```
+
+> [!NOTE]
+> Voir aussi {{JSxRef("String.prototype.matchAll()")}} et [Recherche avancée avec indicateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions#recherche_avancée_avec_indicateurs).
+
+### Utiliser les groupes capturant nommés
+
+Dans les navigateurs qui prennent en charge les groupes capturant nommés, le code suivant capture `"renard"` ou `"chat"` dans un groupe nommé `animal`&nbsp;:
+
+```js
+const paragraphe =
+  "Le renard brun rapide saute par-dessus le chien paresseux. Il a aboyé.";
+
+const regexDeCapture = /(?<animal>renard|chat) brun rapide/;
+const trouve = paragraphe.match(regexDeCapture);
+console.log(trouve.groups); // {animal: "renard"}
+```
+
+### Utiliser `match()` sans paramètre
+
+```js
+const chaine = "Rien ne vient de rien.";
+
+chaine.match(); // retourne [""]
+```
+
+### Utiliser `match()` avec un objet qui n'est pas une `RegExp` mais qui implémente `[Symbol.match]()`
+
+Si un objet possède une méthode `Symbol.match`, elle peut être utilisée comme un comparateur personnalisé. La valeur de retour de `Symbol.match` devient la valeur de retour de `match()`.
+
+```js
+const chaine = "Hmm, c'est intéressant.";
+
+chaine.match({
+  [Symbol.match](str) {
+    return ["Oui, c'est intéressant."];
+  },
+}); // retourne ["Oui, c'est intéressant."]
 ```
 
 ### Utiliser un paramètre qui n'est pas une `RegExp`
 
-Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
+Lorsque le paramètre `regexp` est une chaîne de caractères ou un nombre, il est implicitement converti en {{JSxRef("RegExp")}} en utilisant `new RegExp(regexp)`.
 
 ```js
-var str1 = "NaN signifie : qui n'est pas un nombre.";
-var str2 = "Mon père a 65 ans.";
-str1.match("nombre"); // "nombre" est une chaîne, renvoie ["nombre"]
-str1.match(NaN); // NaN est de type number, renvoie ["NaN"]
-str2.match(65); // Renvoie ["65"]
-str2.match(+65); // Renvoie également ["65"]
+const chaine1 =
+  "Tous les nombres sauf NaN satisfont <= Infinity et >= -Infinity en JavaScript.";
+const chaine2 = "Mon grand-père a 65 ans et ma grand-mère a 63 ans.";
+const chaine3 = "Le contrat a été déclaré nul et non avenu.";
+chaine1.match("number"); // "number" est une chaîne de caractères. retourne ["number"]
+chaine1.match(NaN); // le type de NaN est le nombre. retourne ["NaN"]
+chaine1.match(Infinity); // le type de Infinity est le nombre. retourne ["Infinity"]
+chaine1.match(-Infinity); // retourne ["-Infinity"]
+chaine2.match(65); // retourne ["65"]
+chaine3.match(null); // retourne ["null"]
+```
+
+Cela donne des résultats inattendus si les caractères spéciaux ne sont pas correctement échappés.
+
+```js
+console.log("123".match("1.3")); // [ "123" ]
+```
+
+Ceci est une correspondance parce qu'un `.` dans une expression rationnelle correspond à n'importe quel caractère. Pour qu'il corresponde uniquement à un point spécifique, vous devez échapper l'entrée.
+
+```js
+console.log("123".match("1\\.3")); // null
 ```
 
 ## Spécifications
@@ -102,6 +168,9 @@ str2.match(+65); // Renvoie également ["65"]
 
 ## Voir aussi
 
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.match` dans `core-js` avec des corrections et la mise en œuvre du comportement moderne comme la prise en charge de `Symbol.match` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- Le guide [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- La méthode {{JSxRef("String.prototype.matchAll()")}}
+- L'objet natif {{JSxRef("RegExp")}}
+- La méthode {{JSxRef("RegExp.prototype.exec()")}}
+- La méthode {{JSxRef("RegExp.prototype.test()")}}

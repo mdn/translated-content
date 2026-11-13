@@ -27,7 +27,7 @@ Todas funções `browsingData.remove[X]()` pegam o objeto {{WebExtAPIRef("browsi
 
 Finalmente, a API {{WebExtAPIRef("browsingData.settings()")}} fornece uma função que retorna o atual valor das configurações da funcionalidade "Limpar Histórico".
 
-Para usar esta API você deve ter a [permissão de API](/pt-BR/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "browsingData".
+Para usar esta API você deve ter a [permissão de API](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "browsingData".
 
 ## Tipos
 
@@ -65,7 +65,8 @@ Para usar esta API você deve ter a [permissão de API](/pt-BR/Add-ons/WebExtens
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) do Chromium.Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> **Agradecimentos**Esta API é baseada na API [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) do Chromium.Os dados de compatibilidade do Microsoft Edge compatibility são fornecidos pela Microsoft Corporation e aqui estão inclusos sob a Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,8 +3,6 @@ title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -13,12 +11,12 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 ハイライト:
 
-- [ウェブコンソールでサーバー側のログを記録](/ja/docs/Tools/Web_Console/Console_messages#server)
-- [CSS 宣言をオーバーライドしたルールをすばやく見つける](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
-- [インスペクターのコンテキストメニュー項目 "Use in Console"](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- [ルールビューで "厳密に" フィルタリング](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
-- [コンソールのネットワーク項目にネットワークモニターへのリンクを追加](/ja/docs/Tools/Web_Console/Console_messages#network)
-- [マークアップビューで、擬似クラスを強制的に適用していることを示すインジケータを表示](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)
+- [ウェブコンソールでサーバー側のログを記録](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#server)
+- [CSS 宣言をオーバーライドしたルールをすばやく見つける](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#overridden_declarations)
+- [インスペクターのコンテキストメニュー項目 "Use in Console"](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element_popup_menu)
+- [ルールビューで "厳密に" フィルタリング](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#strict_search)
+- [コンソールのネットワーク項目にネットワークモニターへのリンクを追加](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#network)
+- [マークアップビューで、擬似クラスを強制的に適用していることを示すインジケータを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#setting_hover_active_focus)
 - WebIDE の新たなサイドバー UI
 
 [Firefox 42 から Firefox 43 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2015-08-10&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678).
@@ -45,7 +43,7 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 - ES2015 仕様に合致するよう、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) は自身の [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトを持たないようになりました。`arguments` オブジェクトは Lexical にバインドされます (外側の関数から継承)。たいていの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) が `(...args) => args[i]` のよい代替になります。[Firefox バグ 889158](https://bugzil.la/889158) をご覧ください。
 - [arguments](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters) と共に使用できるようになりました ([Firefox バグ 1133298](https://bugzil.la/1133298))。
-- 厳格モードではない関数にマップされた [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、関数が[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) のいずれも**含まない**場合に限り提供されるようになりました ([Firefox バグ 1175394](https://bugzil.la/1175394))。
+- 厳格モードではない関数にマップされた [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは、関数が[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) のいずれも**含まない**場合に限り提供されるようになりました ([Firefox バグ 1175394](https://bugzil.la/1175394))。
 
 #### その他の変更点
 
@@ -131,7 +129,7 @@ _変更なし。_
 
 ### プラグイン
 
-- content をマルチプロセスに切り替える将来のリリースへの準備として、[NPAPI](/ja/Add-ons/Plugins) プラグインをページ content と同じプロセスで実行できなくなりました。`dom.ipc.plugins` から始まる設定項目は使用しません。
+- content をマルチプロセスに切り替える将来のリリースへの準備として、[NPAPI](/ja/docs/Mozilla/Add-ons/Plugins) プラグインをページ content と同じプロセスで実行できなくなりました。`dom.ipc.plugins` から始まる設定項目は使用しません。
 
 ### その他
 

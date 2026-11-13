@@ -11,12 +11,12 @@ Essencialmente, um _service worker_ se comporta como um servidor _proxy_ situado
 
 Um _service worker_ é um tipo especial de _[worker](/pt-BR/docs/Web/API/Worker)_ baseado em eventos, o qual é registrado para um determinado _path_ e origem. Na prática, ele é um arquivo JavaScript que pode controlar as páginas do site ao qual ele está associado, interceptando e modificando requisições e a navegação em si. Ele também faz _cache_ dos recursos trafegados de maneira bastante granular, visando oferecer controle total sobre como a sua aplicação se comporta em determinadas situações (o exemplo mais óbvio, naturalmente, é quando não há conexão de rede disponível).
 
-Assim como outros tipos de _worker_, um _service worker_ é executado em um contexto isolado. Dessa forma, não tem acesso ao DOM e roda em uma thread completamente separada, sendo incapaz de realizar operações blocantes. Service workers foram projetados para ser totalmente assíncronos; como consequência disso, não permitem o acesso a APIs como [XHR síncrono](/pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas#Synchronous_request) e [localStorage](/pt-BR/docs/Web/API/Window/Window.localStorage).
+Assim como outros tipos de _worker_, um _service worker_ é executado em um contexto isolado. Dessa forma, não tem acesso ao DOM e roda em uma thread completamente separada, sendo incapaz de realizar operações blocantes. Service workers foram projetados para ser totalmente assíncronos; como consequência disso, não permitem o acesso a APIs como [XHR síncrono](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#synchronous_request) e [localStorage](/pt-BR/docs/Web/API/Window/localStorage).
 
 Por questões de segurança, _service workers_ funcionam apenas em sites servidos via HTTPS. A possibilidade de modificar requisições em um domínio desprotegido contra ataques do tipo [man-in-the-middle](/pt-BR/docs/Glossary/MitM) seria desastrosa. No Firefox, é vetado o acesso à API de _service workers_ para sites abertos no [Modo de navegação privativa](https://support.mozilla.org/pt-BR/kb/navegacao-privativa-use-firefox-sem-historico).
 
 > [!NOTE]
-> Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
+> Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
 
 > [!NOTE]
 > Service workers fazem uso intenso de [promessas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), uma vez que eles têm de esperar por respostas assíncronas para, após retornadas, poderem executar a ação apropriada (de sucesso ou erro). A arquitetura de promessas é ideal para esse tipo de cenário.
@@ -49,7 +49,8 @@ Há também o evento `activate`. O momento em que ele é disparado é geralmente
 
 Seu service worker pode responder a requisições usando o {{domxref("FetchEvent")}}. Você pode manipular a resposta a essas requisições da maneira que quiser, através do método {{domxref("FetchEvent.respondWith")}}.
 
-> **Nota:**Como `oninstall` e `onactivate` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
+> [!NOTE]
+> Como `oninstall` e `onactivate` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
 
 Para um tutorial completo, mostrando como construir seu primeiro exemplo do zero, leia [Usando Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
@@ -85,7 +86,7 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 - {{domxref("ExtendableEvent")}}
   - : Estende a vida dos eventos `install` e `activate` disparados no {{domxref("ServiceWorkerGlobalScope")}}, como parte do ciclo de vida do _service worker_. Isso garante que qualquer evento funcional (como o {{domxref("FetchEvent")}}) não seja despachado para o {{domxref("ServiceWorker")}} até que ele conclua as ações em andamento, como por exemplo: atualizar esquemas de banco de dados, apagar caches defasados, etc.
 - {{domxref("ExtendableMessageEvent")}}
-  - : O objeto de evento do {{event("message_(ServiceWorker)","message")}}, o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
+  - : O objeto de evento do [`message`](</pt-BR/docs/Web/Events/message_(ServiceWorker)>), o qual é disparado em um _service worker_ (quando uma mensagem de canal é recebida no {{domxref("ServiceWorkerGlobalScope")}} a partir de outro contexto) — estende o tempo de vida desses eventos.
 - {{domxref("FetchEvent")}}
   - : O parâmetro recebido no _handler_ {{domxref("ServiceWorkerGlobalScope.onfetch")}}. O `FetchEvent` representa uma ação de descarregamento que é despachada no {{domxref("ServiceWorkerGlobalScope")}} de um {{domxref("ServiceWorker")}}. Ele contém informações sobre a requisição e a resposta resultante, além de disponibilizar o método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, o qual nos permite devolver uma resposta customizada para a página que está sendo controlada.
 - {{domxref("InstallEvent")}}
@@ -126,9 +127,9 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 ## Veja também
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
-- [Using Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Best Practices for using the VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)

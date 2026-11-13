@@ -3,11 +3,20 @@ title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ---
 
-{{JSRef}}
-
 **`buffer`** 属性描述了在构造时被 DataView 引用的 {{jsxref("ArrayBuffer")}}。
 
-{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+
+```js interactive-example
+// Create an ArrayBuffer
+const buffer = new ArrayBuffer(123);
+
+// Create a view
+const view = new DataView(buffer);
+
+console.log(view.buffer.byteLength);
+// Expected output: 123
+```
 
 ## 语法
 

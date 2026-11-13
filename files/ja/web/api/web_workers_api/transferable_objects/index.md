@@ -41,7 +41,8 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **メモ:** [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、移譲は行えません。
+> [!NOTE]
+> [型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) {{jsxref("Int32Array")}} や {{jsxref("Uint8Array")}} は{{Glossary("serializable object", "シリアライズ可能")}}ですが、移譲は行えません。
 > しかし、その下にあるバッファーは {{jsxref("ArrayBuffer")}} であり、これは移譲可能なオブジェクトです。
 > data 引数に `uInt8Array.buffer` を設定すれば、移譲する配列に `uInt8Array` がなくても、送ることができます。
 

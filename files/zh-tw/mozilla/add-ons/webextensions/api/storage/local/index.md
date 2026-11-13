@@ -3,13 +3,11 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar}}
-
 代表 `local` 儲存空間。通常 `local` 裡面的東西，會放在套件安裝的地方。
 
 瀏覽器可能會限制套件本地可儲存的資料數量：
 
-- Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 [unlimitedStorage](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage) 權限。
+- Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 [unlimitedStorage](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage) 權限。
 - 56 版以後的 Firefox 將能要求 unlimitedStorage 權限。目前 Firefox 還沒有限制套件內的資料上限，但這功能會在未來引入：因此，如果可能會儲存大容量的資料，最好要實做 unlimitedStorage 的請求。
 
 如果套件被移除、相關的儲存資料也會一併移除。
@@ -40,9 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> 此 API 基於 Chromium 的 [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API 而來，文件改作自 Chromium 程式碼裡的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/storage.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

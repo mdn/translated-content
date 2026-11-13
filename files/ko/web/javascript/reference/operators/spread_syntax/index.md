@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Spread_syntax
 
 **전개 구문**을 사용하면 배열이나 문자열과 같이 반복 가능한 문자를 0개 이상의 인수 (함수로 호출할 경우) 또는 요소 (배열 리터럴의 경우)로 확장하여, 0개 이상의 키-값의 쌍으로 객체로 확장시킬 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## 구문
 
@@ -61,7 +75,7 @@ myFunction(-1, ...args, 2, ...[3]);
 
 #### `new`에 적용
 
-{{jsxref("Operators/new", "new")}}를 사용해 생성자를 호출 할 때, 배열과 `apply` (`apply` 는 `[[Call]]` 을 하지만 `[[Construct]]` 는 그렇지 않음) 를 **직접** 사용하는 것은 불가했습니다. 하지만, 전개 구문 덕분에 배열을 `new` 와 함께 쉽게 사용될 수 있습니다.
+{{jsxref("new")}}를 사용해 생성자를 호출 할 때, 배열과 `apply` (`apply` 는 `[[Call]]` 을 하지만 `[[Construct]]` 는 그렇지 않음) 를 **직접** 사용하는 것은 불가했습니다. 하지만, 전개 구문 덕분에 배열을 `new` 와 함께 쉽게 사용될 수 있습니다.
 
 ```js
 var dateFields = [1970, 0, 1]; // 1 Jan 1970

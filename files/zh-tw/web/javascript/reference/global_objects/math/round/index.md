@@ -3,13 +3,11 @@ title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
 
-{{JSRef}}
-
 **`Math.round()`** 函數回傳四捨五入後的近似值.
 
 ## 表達式
 
-```plain
+```js-nolint
 Math.round(x)
 ```
 

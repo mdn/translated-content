@@ -26,7 +26,7 @@ function* name([param[, param[, ... param]]]) { statements }
 
 Генераторы являются функциями с возможностью выхода и последующего входа. Их контекст исполнения (значения переменных) сохраняется при последующих входах.
 
-Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-[итератор](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol). При вызове метода `next()` итератора тело функции-генератора исполняется до первого встреченного оператора [**`yield`**](/ru/docs/Web/JavaScript/Reference/Operators/yield), который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи `yield* anotherGenerator()`. Метод `next()` возвращает объект со свойством `value`, содержащим отданное значение, и свойством `done`, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода `next()` с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение на аргумент переданный в `next()`.
+Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-[итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols). При вызове метода `next()` итератора тело функции-генератора исполняется до первого встреченного оператора [**`yield`**](/ru/docs/Web/JavaScript/Reference/Operators/yield), который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи `yield* anotherGenerator()`. Метод `next()` возвращает объект со свойством `value`, содержащим отданное значение, и свойством `done`, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода `next()` с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение на аргумент переданный в `next()`.
 
 ## Примеры
 
@@ -122,11 +122,10 @@ var obj = new f(); // throws "TypeError: f is not a constructor"
 
 ## Смотрите также
 
-- [Протокол итераторов](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Протокол итераторов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - Оператор [yield](/ru/docs/Web/JavaScript/Reference/Operators/yield)
 - Оператор [function](/ru/docs/Web/JavaScript/Reference/Statements/function)
 - Другие ресурсы:
-
   - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](http://taskjs.org/)

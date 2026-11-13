@@ -34,7 +34,7 @@ var p_prime = p.cloneNode(true);
 
 ## Notas
 
-Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/DOM/element.addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
+Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
 
 El nodo duplicado devuelto por `cloneNode()` no formará parte del documento hasta que sea añadido a otro nodo que sea parte del documento utilizando {{domxref("Node.appendChild()")}} o un método similar. Tampoco tiene padre hasta que sea añadido a otro nodo.
 
@@ -42,7 +42,8 @@ Si `deep` se establece a `false`, los elementos hijos no se clonan. Tampoco se c
 
 Si `deep` se evalúa a `true`, el subárbol completo (incluyendo texto que pueda estar en nodos {{domxref("Text")}} hijos) también se copian. En los nodos vacíos (por ejemplo, los elementos {{HTMLElement("img")}} y {{HTMLElement("input")}}) no importa si `deep` es `true` o `false`.
 
-> **Advertencia:** `cloneNode()` puede conducir a elementos con ID's duplicados en el documento.
+> [!WARNING]
+> `cloneNode()` puede conducir a elementos con ID's duplicados en el documento.
 
 Si el nodo original tiene un ID el elemento clonado se ubicará en el mismo documento, el ID del clon debería ser modificado para ser único. Los atributos name pueden necesitar ser modificados también, dependiendo de si se esperan nombres duplicados.
 

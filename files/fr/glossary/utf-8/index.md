@@ -1,9 +1,9 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 UTF-8 (UCS Transformation Format 8) est le {{Glossary("Character encoding","codage de caractères")}} le plus répandu sur le world wide web. Chaque caractère est représenté par un à quatre octets. UTF-8 est rétro-compatible avec l'{{Glossary("ASCII")}} et peut représenter n'importe quel caractère Unicode.
 
@@ -14,4 +14,4 @@ Les 128 premiers caractères UTF-8 correspondent exactement aux 128 premiers car
 ### Culture générale
 
 - [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) sur Wikipédia
-- [FAQ sur l'UTF-8, sur le site web d'Unicode](http://www.unicode.org/faq/utf_bom.html#UTF8)
+- [FAQ sur l'UTF-8, sur le site web d'Unicode <sup>(angl.)</sup>](https://www.unicode.org/faq/utf_bom.html#UTF8)

@@ -9,7 +9,7 @@ l10n:
 
 [Sensor API](/zh-CN/docs/Web/API/Sensor_APIs) 的 **`LinearAccelerationSensor`** 接口在每次读取时提供沿所有三个轴加到设备上的加速度（不包含重力加速度）。
 
-要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `accelerometer` 设备传感器的权限。此外，此特性可能会被服务器设置的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+要使用此传感器，用户必须通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 授予 `accelerometer` 设备传感器的权限。此外，此特性可能会被服务器设置的[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
 
 {{InheritanceDiagram}}
 

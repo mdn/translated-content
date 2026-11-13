@@ -3,11 +3,24 @@ title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
 
-{{jsSidebar("Objects")}}
-
 **`isNaN()`** 函式會判斷某個數值是不是 {{jsxref("NaN")}}。注意：在 `isNaN` 函式裡面，有個[有趣的](#描述)強制性規則。你可能會想改用在 ECMAScript 2015 導入的 {{jsxref("Number.isNaN()")}}。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 語法
 

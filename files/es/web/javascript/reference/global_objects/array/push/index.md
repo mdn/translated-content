@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 El método **`push()`** añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## Sintaxis
 
@@ -30,7 +44,7 @@ El método `push` es muy práctico para añadir valores a un array.
 
 `push` es genérico intencionadamente. Este método puede ser {{jsxref("Function.call", "call()")}} o {{jsxref("Function.apply", "apply()")}} a objetos que representen arrays. El método `push` depende de la propiedad `length` para decidir donde empezar a insertar los valores dados. Si el valor de la propiedad `length` no puede ser convertido en numérico, el índice 0 es usado. Esto permite la posibilidad de que la propiedad `length` sea inexistente, y en este caso `length` será creado.
 
-Los únicos objetos nativos que se asemejen al array son {{jsxref("Global_Objects/String", "strings", "", 1)}} objetos, aunque estos no se puedan usar en la aplicación de este método ya que son inmutables.
+Los únicos objetos nativos que se asemejen al array son {{jsxref("String", "strings", "", 1)}} objetos, aunque estos no se puedan usar en la aplicación de este método ya que son inmutables.
 
 ## Ejemplos
 

@@ -16,7 +16,8 @@ getElementsByTagName(name)
 - `elements` 是一个由发现的元素出现在树中的顺序构成的动态的 HTML 集合 {{domxref("HTMLCollection")}} (但是看下面的提示) 。
 - `name` 是一个代表元素的名称的字符串。特殊字符 "\*" 代表了所有元素。
 
-> **备注：** [最新的 W3C 规范](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 说明这些元素是 `HTMLCollection`（HTML 集合）；然而，这个方法在 WebKit 内核的浏览器中返回一个 {{domxref("NodeList")}} 。更多详情请查看 [Firefox bug 14869](https://bugzil.la/14869) 。
+> [!NOTE]
+> [最新的 W3C 规范](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 说明这些元素是 `HTMLCollection`（HTML 集合）；然而，这个方法在 WebKit 内核的浏览器中返回一个 {{domxref("NodeList")}} 。更多详情请查看 [Firefox bug 14869](https://bugzil.la/14869) 。
 
 ## 例子
 
@@ -92,5 +93,5 @@ getElementsByTagName(name)
 
 ## 参考
 
-- [DOM Level 2 Core: Document.getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core: Document.getElementsByTagName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

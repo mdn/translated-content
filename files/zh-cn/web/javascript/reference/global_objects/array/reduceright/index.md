@@ -3,13 +3,26 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
-{{JSRef}}
-
 **`reduceRight()`** 方法对累加器（accumulator）和数组的每个值（按从右到左的顺序）应用一个函数，并使其成为单个值。
 
 对于从左至右遍历的相似方法，请参阅 {{jsxref("Array.prototype.reduce()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()", "shorter")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 ## 语法
 
@@ -251,7 +264,7 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.reduce` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}

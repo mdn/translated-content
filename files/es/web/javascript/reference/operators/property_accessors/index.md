@@ -75,11 +75,11 @@ alert(objeto[bar]);
 
 Un método no está enlazado al objeto del que es método. Específicamente, `this` no está establecido en un método, es decir, `this` no se refiere necesariamente a un objeto conteniendo el método. `this`, en cambio, se "pasa" mediante la llamada de función.
 
-Vea [enlace a métodos](/es/docs/Web/JavaScript/Referencia/Operadores/this#Funciones_enlazadas).
+Vea [enlace a métodos](/es/docs/Web/JavaScript/Reference/Operators/this#funciones_enlazadas).
 
 ### Nota sobre `eval`
 
-Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
+Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("Global_Objects/eval", "eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
 
 ```js
 x = eval("document.nombre_formulario." + cadenaControlFormulario + ".value");

@@ -1,46 +1,57 @@
 ---
 title: DataView.prototype.getFloat32()
+short-title: getFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("DataView")}} 实例的 **`getFloat32()`** 方法从该 `DataView` 中指定的字节偏移位置开始读取 4 个字节，并将其解释为一个 32 位浮点数。该方法没有对齐限制；多字节值可以从任意边界内的偏移位置读取。
 
-**`getFloat32()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).
+{{InteractiveExample("JavaScript 演示：DataView.prototype.getFloat32()")}}
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
+```js interactive-example
+// 创建一个以字节为单位指定大小的 ArrayBuffer
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// 期望输出：3.1415927410125732
+```
 
 ## 语法
 
-```plain
-dataview.getFloat32(byteOffset [, littleEndian])
+```js-nolint
+getFloat32(byteOffset)
+getFloat32(byteOffset, littleEndian)
 ```
 
 ### 参数
 
-- byteOffset
-  - : 偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。
-- littleEndian
-  - : {{optional_inline}} 表示这个 32 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。
+- `byteOffset`
+  - : 表示从视图起始位置开始读取数据的偏移量（以字节为单位）。
+- `littleEndian` {{optional_inline}}
+  - : 指示数据的存储格式是[小端序还是大端序](/zh-CN/docs/Glossary/Endianness)。如果为 `false` 或 `undefined`，则按大端序读取值。
 
-### 返回
+### 返回值
 
-一个带符号的 32 位浮点数。
+一个取值范围为 `-3.4e38` 到 `3.4e38` 的浮点数。
 
-### 抛出错误
+### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。
-
-## 说明
-
-没有对齐约束; 多字节值可以从任何偏移处获取。
+  - : 当设置的 `byteOffset` 导致读取超出视图末尾时，会抛出此异常。
 
 ## 示例
 
+### 使用 getFloat32()
+
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat32(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getFloat32(1)); // 2.387939260590663e-38
 ```
 
 ## 规范
@@ -53,5 +64,7 @@ dataview.getFloat32(1); // 0
 
 ## 参见
 
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Float32Array")}}

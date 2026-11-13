@@ -33,10 +33,10 @@ Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma c
 | Propriedade                     | Tipo                       | Descrição                                                              |
 | ------------------------------- | -------------------------- | ---------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | O evento alvo (the topmost target in the DOM tree).                    |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | O tipo de evento.                                                      |
+| `type` {{readOnlyInline}}       | {{jsxref("String")}}       | O tipo de evento.                                                      |
 | `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | O evento é normalmente _bubble_?                                       |
 | `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | É possível cancelar o evento?                                          |
-| `returnValue`                   | {{domxref("DOMString")}}   | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
+| `returnValue`                   | {{jsxref("String")}}       | O valor de retorno do evento (a mensagem que será exibida ao usuário). |
 
 ## Exemplos
 
@@ -72,8 +72,8 @@ Note também que vários navegadores para celular ignoram o resultado deste even
 
 ## Veja também
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("unload")}}
-- [Descarregando documentos — Confirmando para descarregar o documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document) (em inglês)
+- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
+- [`load`](/pt-BR/docs/Web/API/Window/load_event)
+- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)
+- [Descarregando documentos — Confirmando para descarregar o documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document) (em inglês)

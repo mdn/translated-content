@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{APIRef("DOM")}}
 
-Тип возвращаемый некоторыми API, который содержит список [DOMString](/En/DOM/DOMString) (строки).
+Тип возвращаемый некоторыми API, который содержит список [DOMString](/en-US/DOM/DOMString) (строки).
 
 ## Свойства
 
@@ -15,7 +15,7 @@ slug: Web/API/DOMStringList
 ## Методы
 
 - {{domxref("DOMStringList.item()")}}
-  - : Возвращает {{domxref("DOMString")}}.
+  - : Возвращает {{jsxref("String")}}.
 - {{domxref("DOMStringList.contains()")}}
   - : Возвращает {{jsxref("Boolean")}} с указанием, есть ли данная строка в списке.
 

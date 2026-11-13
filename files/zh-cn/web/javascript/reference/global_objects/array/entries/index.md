@@ -3,11 +3,21 @@ title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 
-{{JSRef}}
-
 **`entries()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含数组中每个索引的键/值对。
 
-{{EmbedInteractiveExample("pages/js/array-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+const iterator1 = array1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array [0, "a"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "b"]
+```
 
 ## 语法
 
@@ -98,7 +108,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}

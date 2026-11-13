@@ -22,7 +22,8 @@ new Int8Array(buffer, byteOffset)
 new Int8Array(buffer, byteOffset, length)
 ```
 
-> **참고:** `Int8Array()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)
+> [!NOTE]
+> `Int8Array()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)
 > 로만 생성할 수 있습니다. `new` 없이 호출을 시도하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
 ### 매개변수
@@ -78,6 +79,6 @@ console.log(int8FromIterable);
 ## 같이 보기
 
 - [`core-js`에서 `Int8Array` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

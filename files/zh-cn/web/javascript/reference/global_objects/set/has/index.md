@@ -3,11 +3,22 @@ title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`has()`** 方法返回一个布尔值来指示对应的值是否存在于该集合中。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 语法
 

@@ -9,7 +9,19 @@ l10n:
 
 **`global`** 접근자 속성은 `g` 플래그가 정규표현식에 사용되었는지 여부를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+
+console.log(regex1.global);
+// Expected output: true
+
+const regex2 = new RegExp("bar", "i");
+
+console.log(regex2.global);
+// Expected output: false
+```
 
 ## 설명
 
@@ -20,7 +32,7 @@ l10n:
 업데이트되므로 다음 `exec()` 호출은 다음 문자에서 시작됩니다.
 
 [`String.prototype.matchAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 및 [`String.prototype.replaceAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)과 같은 일부 메서드는 매개변수가 정규식인 경우 전역(global)인지 여부를 확인합니다.
-정규식의 [`@@match`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) 및 [`@@replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) 메서드([`String.prototype.match()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match) 및 [`String.prototype.replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)에 의해 호출됨)도 정규식이 전역일 때 다른 동작을 갖습니다.
+정규식의 [`@@match`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) 및 [`@@replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) 메서드([`String.prototype.match()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match) 및 [`String.prototype.replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)에 의해 호출됨)도 정규식이 전역일 때 다른 동작을 갖습니다.
 
 `global`의 set 접근자는 `undefined`, 즉 정의되지 않았습니다. 이 속성은 직접 변경할 수 없습니다.
 

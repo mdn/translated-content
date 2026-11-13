@@ -2,7 +2,7 @@
 title: Permissions
 slug: Web/API/Permissions
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: 805d398f95c9d1ad8769e65d56bbfe2a31205021
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
@@ -13,10 +13,6 @@ l10n:
 
 - {{domxref("Permissions.query","Permissions.query()")}}
   - : 返回给定 API 的用户权限状态。
-- {{domxref("Permissions.request","Permissions.request()")}} {{Experimental_Inline}}
-  - : 请求使用给定 API 的权限。目前任何浏览器都不支持此功能。
-- {{domxref("Permissions.requestAll","Permissions.requestAll()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : 请求使用一组给定 API 的权限。目前任何浏览器都不支持此功能。
 - {{domxref("Permissions.revoke","Permissions.revoke()")}} {{Deprecated_Inline}}
   - : 撤消当前在给定 API 上设置的权限。
 

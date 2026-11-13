@@ -1,36 +1,50 @@
 ---
-title: ビット排他的論理和代入 (^=)
+title: ビット排他的論理和代入演算子 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**ビット排他的論理和代入演算子 (`^=`)** は、 2 つのオペランドに対して[ビット単位のXOR](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) を実行し、その結果を左側のオペランドに代入します。
 
-ビット排他的論理和代入演算子 (`^=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の XOR 演算を実行し、結果を変数に代入します。
+{{InteractiveExample("JavaScript デモ: ビット排他的論理和代入演算子 (^=)")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a ^= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000110
+// 予想される結果: 6
+```
 
 ## 構文
 
-```js
-x ^= y; // x = x ^ y
+```js-nolint
+x ^= y
 ```
+
+## 解説
+
+`x ^= y` は `x = x ^ y` と同等ですが、式 `x` は一度だけ評価されます。
 
 ## 例
 
 ### ビット排他的論理和代入の使用
 
 ```js
-let a = 5; // 00000000000000000000000000000101
-a ^= 3; // 00000000000000000000000000000011
+let a = 5; // (00000000000000000000000000000101)
+a ^= 3; // (00000000000000000000000000000011)
 
-console.log(a); // 00000000000000000000000000000110
-// 6
+console.log(a); // 6 (00000000000000000000000000000110)
 
-let b = 5; // 00000000000000000000000000000101
-b ^= 0; // 00000000000000000000000000000000
+let b = 5; // (00000000000000000000000000000101)
+b ^= 0; // (00000000000000000000000000000000)
 
-console.log(b); // 00000000000000000000000000000101
-// 5
+console.log(b); // 5 (00000000000000000000000000000101)
+
+let c = 5n;
+c ^= 3n;
+console.log(c); // 6n
 ```
 
 ## 仕様書
@@ -44,4 +58,4 @@ console.log(b); // 00000000000000000000000000000101
 ## 関連情報
 
 - [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
-- [ビット排他的論理和演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [ビット排他的論理和演算子 (`^`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

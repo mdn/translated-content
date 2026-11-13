@@ -3,8 +3,6 @@ title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
 ---
 
-{{AddonSidebar}}
-
 L'architecture du client natif. Cela peut-etre différent de arch sur certaines plate-formes.
 
 ## Type
@@ -19,9 +17,7 @@ Les valeurs de type sont des chaînes. Les valeurs possible sont : `"arm"`, `"x8
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

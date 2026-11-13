@@ -1,13 +1,22 @@
 ---
 title: Object.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.getPrototypeOf()`** 静态方法返回指定对象的原型（即内部 `[[Prototype]]` 属性的值）。
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html", "shorter")}}
+{{InteractiveExample("JavaScript 演示：Object.getPrototypeOf()", "shorter")}}
+
+```js interactive-example
+const prototype = {};
+const object = Object.create(prototype);
+
+console.log(Object.getPrototypeOf(object) === prototype);
+// 预期输出：true
+```
 
 ## 语法
 
@@ -40,9 +49,9 @@ Object.getPrototypeOf(obj) === proto; // true
 
 ```js
 Object.getPrototypeOf("foo");
-// TypeError: "foo" is not an object (ES5 code)
+// TypeError: "foo" is not an object（ES5 代码）
 Object.getPrototypeOf("foo");
-// String.prototype                  (ES2015 code)
+// String.prototype（ES2015 代码）
 ```
 
 ## 规范
@@ -56,8 +65,9 @@ Object.getPrototypeOf("foo");
 ## 参见
 
 - [`core-js` 中 `Object.getPrototypeOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
+- [`Object.getPrototypeOf` 的 es-shims polyfill 实现](https://www.npmjs.com/package/object.getprototypeof)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig 关于 [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) 的博文。
 - {{jsxref("Reflect.getPrototypeOf()")}}
+- John Resig 撰写的 [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)（2008）

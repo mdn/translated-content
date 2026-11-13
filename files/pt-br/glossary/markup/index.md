@@ -6,10 +6,10 @@ slug: Glossary/Markup
 {{GlossarySidebar}}
 
 Uma linguagem de marcação é aquela projetada para definir e apresentar textos.
-[HTML](/pt-BR/docs/Glossario/HTML) (Linguagem de Marcação de Hipertexto), é um exemplo de linguagem
+[HTML](/pt-BR/docs/Glossary/HTML) (Linguagem de Marcação de Hipertexto), é um exemplo de linguagem
 de marcação.
 
-Em um arquivo de texto, como um arquivo HTML, os elementos são _marcados_ utilizando [tags](/pt-BR/docs/Glossario/Tag), que explica o
+Em um arquivo de texto, como um arquivo HTML, os elementos são _marcados_ utilizando [tags](/pt-BR/docs/Glossary/Tag), que explica o
 objetivo dessa parte do conteúdo.
 
 ## Tipos de linguagem de marcação
@@ -29,7 +29,7 @@ objetivo dessa parte do conteúdo.
   - : Usada especificamente para rotular partes do documento como elas são, e não como devem ser processadas. Sistemas conhecidos que fornecem muitos desses
     rótulos incluem LaTeX, HTML e XML. O objetivo é dissociar a estrutura do documento de qualquer tratamento ou representação particular. Essa marcação é
     frequentemente descrita como "semântica". Um exemplo de uma marcação descritiva seria a tag
-    [`<cite>`](/pt-BR/docs/Web/HTML/Element/cite) do HTML, usada para rotular uma citação. Essa marcação incentiva os autores a
+    [`<cite>`](/pt-BR/docs/Web/HTML/Reference/Elements/cite) do HTML, usada para rotular uma citação. Essa marcação incentiva os autores a
     escrever de uma maneira que descreva o material conceitualmente, em vez de apenas visualmente.
 
 Há um borrão considerável das linhas entre os tipos de marcação. Nos sistemas modernos de processamento de texto, a marcação de apresentação é geralmente

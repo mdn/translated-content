@@ -15,7 +15,7 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 要因の代表例としては以下があります。
 
 1. **テーブルの列幅が指定されていない**
-    [display](/ja/docs/Web/CSS/display): table; でテーブルの列幅を指定している場合、Firefox では認識できていません。
+    [display](/ja/docs/Web/CSS/Reference/Properties/display): table; でテーブルの列幅を指定している場合、Firefox では認識できていません。
     列幅を指定していないことで、アイコンが画面の横幅に収まらず、配置崩れを起こしてしまいます。
 
     ```css
@@ -25,7 +25,7 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
     }
     ```
 
-    また、[display](/ja/docs/Web/CSS/display): -moz-box; が指定されている場合も、mobile 版 Firefox では認識できませんので、同様の現象が発生します。
+    また、[display](/ja/docs/Web/CSS/Reference/Properties/display): -moz-box; が指定されている場合も、mobile 版 Firefox では認識できませんので、同様の現象が発生します。
 
     ```css
     .go_contents_btn {
@@ -42,7 +42,7 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 解決策の代表例として以下があります。
 
 1. **テーブルの列幅が指定されていない**
-    Firefox では、[display](/ja/docs/Web/CSS/display): table; の指定(mobile 版 Firefox では「-moz-box」も含む)は動作しないため、テーブルの列幅の指定に[display](/ja/docs/Web/CSS/display): inline-block; や[display](/ja/docs/Web/CSS/display): flex; を追記します。
+    Firefox では、[display](/ja/docs/Web/CSS/Reference/Properties/display): table; の指定(mobile 版 Firefox では「-moz-box」も含む)は動作しないため、テーブルの列幅の指定に[display](/ja/docs/Web/CSS/Reference/Properties/display): inline-block; や[display](/ja/docs/Web/CSS/Reference/Properties/display): flex; を追記します。
 
     display: inline-block; の場合
 
@@ -54,8 +54,8 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
     }
     ```
 
-    また、親要素を[flex](/ja/docs/Web/CSS/flex)設定にした場合、自動的に子要素は[flex](/ja/docs/Web/CSS/flex)アイテムになります。[flex](/ja/docs/Web/CSS/flex)アイテム用に横方向寄せを設定しているプロパティを[justify-content](/ja/docs/Web/CSS/justify-content)プロパティに変更します。
-    縦方向寄せを設定しているプロパティも[align-items](/ja/docs/Web/CSS/align-items)プロパティに変更します。
+    また、親要素を[flex](/ja/docs/Web/CSS/Reference/Properties/flex)設定にした場合、自動的に子要素は[flex](/ja/docs/Web/CSS/Reference/Properties/flex)アイテムになります。[flex](/ja/docs/Web/CSS/Reference/Properties/flex)アイテム用に横方向寄せを設定しているプロパティを[justify-content](/ja/docs/Web/CSS/Reference/Properties/justify-content)プロパティに変更します。
+    縦方向寄せを設定しているプロパティも[align-items](/ja/docs/Web/CSS/Reference/Properties/align-items)プロパティに変更します。
 
     display: flex; の場合
 
@@ -74,4 +74,4 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 
 - 少ない修正で他ブラウザーとの互換性が取れます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

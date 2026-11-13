@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 지정한 탭의 페이지 액션을 보인다. 페이지 액션은 해당 탭이 활성일 때 표시된다.
 
-`show()`는 설정된 URL 패턴과 상관없이 동작한다. 따라서 [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action)와 일치하지 않아도 [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action)여도 표시된다.
+`show()`는 설정된 URL 패턴과 상관없이 동작한다. 따라서 [`show_matches`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)와 일치하지 않아도 [`hide_matches`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)여도 표시된다.
 
 `show()`는 아무런 내용도 없는 탭에는 효과가 없다.
 
@@ -22,9 +22,7 @@ browser.pageAction.show(
 ### 매개변수
 
 - `details`
-
   - : `object`. An object containing the `tabId` to check.
-
     - `tabId`
       - : `integer`. ID of the tab to check.
 
@@ -55,7 +53,8 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 
 {{WebExtExamples}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
 ```
 // Copyright 2015 The Chromium Authors. All rights reserved.

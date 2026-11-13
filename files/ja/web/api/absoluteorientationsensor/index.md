@@ -11,7 +11,7 @@ l10n:
 
 このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'`、`'gyroscope'`、`'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。
 
-この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

@@ -15,7 +15,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 
 1. **ベンダープレフィックス**
     チェックボックスの装飾を webkit 指定で行っている場合、Firefox では認識できないため、正しく表示が行えません。
-    または、Firefox 用に[linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数を記述している場合は、引数の指定方法が-webkit-linear-gradient()関数と異なるため、注意が必要です。
+    または、Firefox 用に[linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数を記述している場合は、引数の指定方法が-webkit-linear-gradient()関数と異なるため、注意が必要です。
 
     ```css
     input[type="checkbox"]:checked {
@@ -29,7 +29,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    \-webkit-linear-gradient()関数の第一引数に「top」が指定されている時に、他ブラウザーとの互換性を維持するために[linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数を使用します。
+    \-webkit-linear-gradient()関数の第一引数に「top」が指定されている時に、他ブラウザーとの互換性を維持するために[linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数を使用します。
     その場合、第一引数には例のように「to top」を指定することで正しく表示されます。
 
     ```css
@@ -43,4 +43,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 
 - プロパティを正しく使用することで各ブラウザーでの表示差異がなくなります。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

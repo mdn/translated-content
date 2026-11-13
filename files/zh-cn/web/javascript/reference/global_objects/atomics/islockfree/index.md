@@ -5,11 +5,19 @@ l10n:
   sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
 ---
 
-{{JSRef}}
-
 **`Atomics.isLockFree()`** 静态方法用于判断 `Atomics` 在将具有给定字节大小的元素应用于类型化数组时是否会使用锁或原子硬件操作。如果给定的大小不是整数类型化数组类型的 [BYTES_PER_ELEMENT](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) 属性之一，则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+
+```js interactive-example
+console.log(Atomics.isLockFree(3));
+// 3 is not one of the BYTES_PER_ELEMENT values
+// Expected output: false
+
+console.log(Atomics.isLockFree(4));
+// 4 is one of the BYTES_PER_ELEMENT values
+// Expected output: true
+```
 
 ## 语法
 

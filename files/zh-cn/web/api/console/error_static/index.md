@@ -18,7 +18,8 @@ error(msg)
 error(msg, subst1, /* …, */ substN)
 ```
 
-> **备注：** `console.exception()` 是 `console.error()` 的别名；它们功能相同。
+> [!NOTE]
+> `console.exception()` 是 `console.error()` 的别名；它们功能相同。
 
 ### 参数
 
@@ -29,7 +30,7 @@ error(msg, subst1, /* …, */ substN)
 - `subst1` ... `substN`
   - : JavaScript 对象可以用此来替换`msg`里的替代字符串。你可以控制输出的格式。
 
-详情请看{{domxref("console")}}文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console) 。
+详情请看{{domxref("console")}}文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/console#outputting_text_to_the_console) 。
 
 ## 规范
 
@@ -41,6 +42,6 @@ error(msg, subst1, /* …, */ substN)
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)
+- [Microsoft Edge 关于 `console.error()` 的文档](https://learn.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/console/api#error)
+- [Node.js 关于 `console.error()` 的文档](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
+- [Google Chrome 关于 `console.error()` 的文档](https://developer.chrome.google.cn/docs/devtools/console/api/#error)

@@ -3,7 +3,7 @@ title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
 
 该例子将演示一个绘制固态颜色的矩形的简单着色器程序。
 
@@ -149,4 +149,4 @@ function getRenderingContext() {
 
 该例子的源代码能在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)获得。
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}

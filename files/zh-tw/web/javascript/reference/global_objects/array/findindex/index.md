@@ -3,11 +3,18 @@ title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
 
-{{JSRef}}
-
 **`findIndex()`** 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 **index**（索引）。如果沒有符合的對象，將返回 -1 。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 另請參見 {{jsxref("Array.find", "find()")}} 方法，它返回陣列中找到的元素的**值**，而不是其索引。
 
@@ -20,9 +27,7 @@ arr.findIndex(callback[, thisArg])
 ### 參數
 
 - `callback`
-
   - : 針對陣列中的每個元素，都會執行該回呼函式，執行時會自動傳入下面三個參數：
-
     - `element`
       - : 當前元素。
     - `index`{{optional_inline}}

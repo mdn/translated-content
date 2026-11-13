@@ -10,7 +10,7 @@ El evento `pointerlockchange` es disparado cuando el cursor del navegador es blo
 ## Información general
 
 - Specification
-  - : [Pointer Lock](http://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events)
+  - : [Pointer Lock](https://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events)
 - Interface
   - : Event
 - Bubbles
@@ -27,7 +27,7 @@ El evento `pointerlockchange` es disparado cuando el cursor del navegador es blo
 | Property                        | Type                       | Description                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
@@ -44,8 +44,8 @@ document.addEventListener("pointerlockchange", function (event) {
 
 ## Eventos relacionados
 
-- [`pointerlockerror`](/es/docs/Mozilla_event_reference/pointerlockerror)
+- [`pointerlockerror`](/es/docs/Web/API/Document/pointerlockerror_event)
 
 ## Véase también
 
-- [Using Pointer Lock API](/es/docs/API/Pointer_Lock_API)
+- [Using Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API)

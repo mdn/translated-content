@@ -3,11 +3,16 @@ title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
 
-{{JSRef}}
-
 **`toString()`** 方法將回傳一個可以表達該陣列及其元素的字串。
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## 語法
 
@@ -53,4 +58,4 @@ console.log(array1.toString());
 ## 參見
 
 - {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

@@ -3,11 +3,20 @@ title: 加法赋值（+=）
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 加法赋值运算符（`+=`）将右操作数的值添加到变量，并将结果分配给该变量。两个操作数的类型决定了加法赋值运算符的行为，可能为加法或拼接。
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## 语法
 

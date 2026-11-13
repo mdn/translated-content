@@ -15,5 +15,5 @@ DOM не был определён изначально — он пришёл к
 
 ### Техническая информация
 
-- [Документация DOM на MDN](/ru/docs/DOM)
-- [Различные спецификации DOM на сайте W3C](http://www.w3.org/DOM/DOMTR)
+- [Документация DOM на MDN](/ru/docs/Web/API/Document_Object_Model)
+- [Различные спецификации DOM на сайте W3C](https://www.w3.org/DOM/DOMTR)

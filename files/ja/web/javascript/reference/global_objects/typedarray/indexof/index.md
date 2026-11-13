@@ -1,15 +1,28 @@
 ---
 title: TypedArray.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`indexOf()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された要素が型付き配列内で見つかった最初のインデックスを返し、存在しなければ -1 を返します。このメソッドは {{jsxref("Array.prototype.indexOf()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.indexOf()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.indexOf(50));
+// 予想される結果: 4
+
+// インデックス 3 から検索
+console.log(uint8.indexOf(20, 3));
+// 予想される結果: -1
+
+console.log(uint8.indexOf(51));
+// 予想される結果: -1
+```
 
 ## 構文
 
@@ -56,7 +69,7 @@ uint8.indexOf(2, -3); // 0
 
 ## 関連情報
 
-- [`TypedArray.prototype.indexOf` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.indexOf` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

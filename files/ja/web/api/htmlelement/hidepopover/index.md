@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("Popover API")}}
 
-**`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/Web/API/Popover_API)要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
+**`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/Web/API/Popover_API)要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
 
-`hidePopover()` が [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
+`hidePopover()` が [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
 
 ## 構文
 

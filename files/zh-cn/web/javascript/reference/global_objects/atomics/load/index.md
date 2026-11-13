@@ -5,11 +5,23 @@ l10n:
   sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
-
 **`Atomics.load()`** 静态方法返回数组中指定位置的值。
 
-{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 + 2 = 7
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## 语法
 

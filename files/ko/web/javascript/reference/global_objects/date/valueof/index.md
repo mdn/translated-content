@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 
 **`valueOf()`** 함수는 {{jsxref("Date")}} 객체의 원시값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+
+console.log(date1.valueOf());
+// Expected output: 823230245000
+
+const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+
+console.log(date2.valueOf());
+// Expected output: 823230245000
+```
 
 ## Syntax
 

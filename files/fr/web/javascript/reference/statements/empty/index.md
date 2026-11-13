@@ -3,11 +3,19 @@ title: vide
 slug: Web/JavaScript/Reference/Statements/Empty
 ---
 
-{{jsSidebar("Statements")}}
-
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
 
-{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Empty")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+// Assign all array values to 0
+for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+
+console.log(array1);
+// Expected output: Array [0, 0, 0]
+```
 
 ## Syntaxe
 
@@ -41,7 +49,7 @@ if (condition); // Attention, ce "if" ne fait rien !
 finDuMonde(); // Cette méthode est donc toujours lancée !!!
 ```
 
-Un autre exemple avec une instruction {{jsxref("Instructions/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
+Un autre exemple avec une instruction {{jsxref("Statements/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
 
 ```js
 if (un) faire1èreEtape();
@@ -63,4 +71,4 @@ else chargerFusée();
 
 ## Voir aussi
 
-- {{jsxref("Instructions/block", "L'instruction de bloc","",1)}}
+- {{jsxref("Statements/block", "L'instruction de bloc","",1)}}

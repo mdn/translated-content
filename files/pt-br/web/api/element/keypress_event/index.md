@@ -12,7 +12,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
 - Especificação
   - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
 - Interface
-  - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/pt-BR/docs/Web/API/KeyboardEvent)
 - Bolhas
   - : sim
 - Cancelável
@@ -134,7 +134,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
       <td>
         O número de referência Unicode da chave; esse atributo é usado apenas
         pelo
-        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Web/API/Element/keypress_event"
           ><code>keypress</code></a
         >evento. Para chaves cujo <code>char</code>atributo contém vários
         caracteres, esse é o valor Unicode do primeiro caractere nesse atributo.
@@ -245,7 +245,7 @@ O Chrome não dispara o `keypress`evento para atalhos de teclado conhecidos ( [r
 
 ## Eventos Relacionados
 
-- {{event ("keydown")}}
-- {{event ("keyup")}}
-- {{event ("keypress")}}
-- {{event ("input")}}
+- [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event)
+- [`keyup`](/pt-BR/docs/Web/API/Element/keyup_event)
+- [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)

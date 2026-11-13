@@ -1,15 +1,28 @@
 ---
 title: Set.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 l10n:
-  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
+**`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、指定された値がまだこの集合に存在していない場合、その値を追加します。
 
-**`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
+{{InteractiveExample("JavaScript デモ: Set.prototype.add()")}}
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+```js interactive-example
+const set = new Set();
+
+set.add(42);
+set.add(42);
+set.add(13);
+
+for (const item of set) {
+  console.log(item);
+  // 予想される結果: 42
+  // 予想される結果: 13
+}
+```
 
 ## 構文
 
@@ -20,15 +33,15 @@ add(value)
 ### 引数
 
 - `value`
-  - : `Set` オブジェクトに追加する要素の値です。
+  - : この `Set` オブジェクトに追加する値。オブジェクトの比較は、値ではなく[参照](/ja/docs/Glossary/Object_reference)によって行われます。
 
 ### 返値
 
-追加された値を持つ `Set` オブジェクトです。
+この `Set` オブジェクトです。
 
 ## 例
 
-### add() メソッドの使用
+### add() の使用
 
 ```js
 const mySet = new Set();

@@ -3,10 +3,10 @@ title: "Request: headers プロパティ"
 short-title: headers
 slug: Web/API/Request/headers
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`headers`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストに関連する {{domxref("Headers")}} オブジェクトを保持します。
 
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています。
+次のスニペットは、 {{domxref("Request.Request", "Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています。
 
 ```js
 const myRequest = new Request("flowers.jpg");
@@ -38,7 +38,7 @@ const myInit = {
 
 const myRequest = new Request("flowers.jpg", myInit);
 
-const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get("Content-Type"); // 'image/jpeg' を返す
 ```
 
 ## 仕様書
@@ -49,8 +49,8 @@ const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/j
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

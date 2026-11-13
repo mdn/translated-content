@@ -1,15 +1,25 @@
 ---
 title: TypedArray.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.entries()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = uint8.entries();
+
+eArr.next();
+eArr.next();
+
+console.log(eArr.next().value);
+// 予想される結果: Array [2, 30]
+```
 
 ## 構文
 
@@ -35,7 +45,7 @@ entries()
 
 ```js
 const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+const arrayEntries = array.entries();
 for (const element of arrayEntries) {
   console.log(element);
 }
@@ -45,7 +55,7 @@ for (const element of arrayEntries) {
 
 ```js
 const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+const arrayEntries = array.entries();
 
 console.log(arrayEntries.next().value); // [0, 10]
 console.log(arrayEntries.next().value); // [1, 20]
@@ -64,11 +74,11 @@ console.log(arrayEntries.next().value); // [4, 50]
 
 ## 関連情報
 
-- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

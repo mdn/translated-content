@@ -19,9 +19,7 @@ L'interface Notification de l'[API Notifications](/fr/docs/Web/API/Notifications
 _Ces propriétés ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
 - {{domxref("Notification.permission")}} {{readonlyinline}}
-
   - : Une chaîne représentant l'autorisation actuelle d'afficher les notifications. Les valeurs possibles sont:
-
     - `denied` — L'utilisateur refuse d'afficher des notifications.
     - `granted` — L'utilisateur accepte d'afficher des notifications.
     - `default` — Le choix de l'utilisateur est inconnu et donc le navigateur agira comme si la valeur était refusée.

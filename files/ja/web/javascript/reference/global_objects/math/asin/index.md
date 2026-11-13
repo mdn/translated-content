@@ -1,34 +1,50 @@
 ---
 title: Math.asin()
+short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+**`Math.asin()`** は静的メソッドで、数値の逆正弦（アークサイン）をラジアン単位で返します。
 
-**`Math.asin()`** 関数は、引数として与えた数値の逆正弦 (アークサイン) をラジアン単位で返します。
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1}, 1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{the unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ such that } \sin(y) = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math>
+{{InteractiveExample("JavaScript デモ: Math.asin()")}}
 
-{{EmbedInteractiveExample("pages/js/math-asin.html")}}
+```js interactive-example
+// 直角三角形の角度をラジアンで計算する
+function calcAngle(opposite, hypotenuse) {
+  return Math.asin(opposite / hypotenuse);
+}
+
+console.log(calcAngle(6, 10));
+// 予想される結果: 0.6435011087932844
+
+console.log(calcAngle(5, 3));
+// 予想される結果: NaN
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.asin(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値です。
+  - : -1 ～ 1 の間で両端を含む数値であり、角度の正弦値（サイン）を表します。
 
 ### 返値
 
-与えられた数値が **-1** から **1** までの場合、その逆正弦 (アークサイン) をラジアン単位で返します。さもなければ、 {{jsxref("NaN")}} を返します。
+`x` の逆正弦（アークサイン）（両端を含む <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> ～ <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>）です。 `x` が -1 未満または 1 を超える場合は {{jsxref("NaN")}} を返します。
 
 ## 解説
-
-`Math.asin()` メソッドは、 `-1` から `1` までの _x_ に対して、 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> から <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> までのラジアンの数値を返します。 _x_ の値がこの範囲を越えている場合、このメソッドは {{jsxref("NaN")}} を返します。
 
 `asin()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.asin()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
@@ -38,14 +54,13 @@ Math.asin(x)
 
 ```js
 Math.asin(-2); // NaN
-Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(-1); // -1.5707963267948966 (-π/2)
+Math.asin(-0); // -0
 Math.asin(0); // 0
-Math.asin(0.5); // 0.5235987755982989
-Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(0.5); // 0.5235987755982989 (π/6)
+Math.asin(1); // 1.5707963267948966 (π/2)
 Math.asin(2); // NaN
 ```
-
-値が -1 未満か 1 より大きい数値の場合、`Math.asin()` は {{jsxref("NaN")}} を返します。
 
 ## 仕様書
 
@@ -63,3 +78,4 @@ Math.asin(2); // NaN
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("asin()")}} 関数

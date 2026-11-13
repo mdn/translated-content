@@ -11,7 +11,7 @@ slug: Glossary/Tag
 
 ### Общие знания
 
-- [HTML Теги на W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+- [HTML Теги на W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### Техническое руководство
 

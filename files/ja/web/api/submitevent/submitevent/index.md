@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`SubmitEvent()`** コンストラクターは、新しい {{domxref("SubmitEvent")}} オブジェクトを作成して返します。これは {{Glossary("HTML")}} [フォーム](/ja/docs/Learn/Forms)で発行された {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを表現するために使用されます。
+**`SubmitEvent()`** コンストラクターは、新しい {{domxref("SubmitEvent")}} オブジェクトを作成して返します。これは {{Glossary("HTML")}} [フォーム](/ja/docs/Learn_web_development/Extensions/Forms)で発行された {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを表現するために使用されます。
 
 ## 構文
 

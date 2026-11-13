@@ -1,15 +1,21 @@
 ---
-title: ビット論理積 (&)
+title: ビット論理積演算子 (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 l10n:
-  sourceCommit: c6a18542128d1743b208c24de2333f61b601f1a9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **ビット論理積 (`&`)** 演算子は、両方のオペランドの対応するビットのいずれもが `1` である位置のビットで `1` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
+{{InteractiveExample("JavaScript デモ: ビット論理積演算子 (&)", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// 予想される結果: 1
+```
 
 ## 構文
 
@@ -19,7 +25,7 @@ x & y
 
 ## 解説
 
-演算子 `&` は数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。まず、[両方のオペランドを数値に変換](/ja/docs/Web/JavaScript/Data_structures#数値変換) して、それらの型をテストします。両方のオペランドが長整数になった場合、長整数の AND を実行します。そうでない場合は、両方のオペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、ビット単位の AND を行います。一方のオペランドが長整数になり、もう一方が数値になると {{jsxref("TypeError")}} が発生します。
+演算子 `&` は数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。まず、[両方のオペランドを数値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換) して、それらの型をテストします。両方のオペランドが長整数になった場合、長整数の AND を実行します。そうでない場合は、両方のオペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、ビット単位の AND を行います。一方のオペランドが長整数になり、もう一方が数値になると {{jsxref("TypeError")}} が発生します。
 
 この演算子は、オペランドのビット表現を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)で演算します。最初のオペランドの各ビットは、2 番目のオペランドの対応するビットとペアになります。第 1 ビットと第 1 ビット、第 2 ビットと第 2 ビットといった具合です。演算子は各ビットのペアに適用され、結果はビットごとに構成されます。
 
@@ -39,16 +45,17 @@ AND演算の真理値表は以下の通りです。
 14 & 9 (10 進数) = 00000000000000000000000000001000 (2 進数) = 8 (10 進数)
 ```
 
-32 ビットを超える数値は、最上位ビットが破棄されます。例えば、以下の 32 ビットを超える整数は 32 ビット整数に変換されます。
+数値が 32 ビットを超える場合、最上位ビットが切り捨てられます。例えば、次の 32 ビットを超える整数は、 32 ビット整数に変換されます。
 
 ```plain
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
 
-長整数では切り捨ては行われません。概念的には、正の長整数は先頭の `0` ビットが無限にあり、負の長整数は先頭の `1` ビットが無限にあると理解してください。
+> [!WARNING]
+> 数値を整数に切り詰めるために、`& -1` を使用する人を目にするかもしれません。任意の数値 `x` と `-1` をビット単位の AND 演算で結合すると、`x` を 32 ビット整数に変換した値が返されますが、値が -2147483648 から 2147483647 の範囲外の場合、先頭のビットが除去されることがあります。代わりに [`Math.trunc()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) を使用してください。
 
-任意の数値 `x` と `-1` とのビットごとの AND 演算は、32 ビット整数に変換された `x` を返します。代わりに [`Math.trunc()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) を使用してください。
+長整数の場合、切り捨ては発生しません。概念的には、正の値の長整数は先頭に無限の `0` ビットがあり、負の値の長整数は先頭に無限の `1` ビットがあるものと理解してください。
 
 ## 例
 

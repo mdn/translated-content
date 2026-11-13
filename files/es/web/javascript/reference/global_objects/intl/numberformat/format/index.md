@@ -5,9 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 {{JSRef}}
 
-El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.
+El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
+
+```js interactive-example
+const amount = 654321.987;
+
+const options1 = { style: "currency", currency: "RUB" };
+const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+
+console.log(numberFormat1.format(amount));
+// Expected output: "654 321,99 ₽"
+
+const options2 = { style: "currency", currency: "USD" };
+const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+
+console.log(numberFormat2.format(amount));
+// Expected output: "$654,321.99"
+```
 
 ## Sintaxis
 
@@ -22,7 +38,7 @@ numberFormat.format(number)
 
 ## Descripción
 
-The `format` getter function formats a number into a string according to the locale and formatting options of this {{jsxref("NumberFormat")}} object.
+The `format` getter function formats a number into a string according to the locale and formatting options of this {{jsxref("Intl/NumberFormat", "NumberFormat")}} object.
 
 ## Ejemplos
 
@@ -39,7 +55,7 @@ console.log(numberFormat.format(654321.987));
 
 ### Usando `format` con `map`
 
-Use the `format` getter function for formatting all numbers in an array. Note that the function is bound to the {{jsxref("NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}.
+Use the `format` getter function for formatting all numbers in an array. Note that the function is bound to the {{jsxref("Intl/NumberFormat", "NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}.
 
 ```js
 var a = [123456.789, 987654.321, 456789.123];
@@ -59,5 +75,5 @@ console.log(formatted.join("; "));
 
 ## See also
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

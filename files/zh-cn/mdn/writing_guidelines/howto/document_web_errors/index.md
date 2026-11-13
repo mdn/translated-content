@@ -3,8 +3,6 @@ title: 如何记录 web 错误
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档中的 [JavaScript 错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)是一个帮助 web 开发人员处理[开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中出现的错误的项目。对于该项目，我们需要在 MDN Web 文档中编写更多的错误文档，以便我们可以在抛出消息的工具中添加更多的链接。本文介绍了如何记录 web 错误。
 
 JavaScript 错误会包含一个“了解更多”的链接，该链接会将你带到 JavaScript 错误参考，其中包含了修复问题的额外建议。为了能够记录 web 错误，你需要知道或能够深入了解 [JavaScript](/zh-CN/docs/Web/JavaScript)。
@@ -30,7 +28,6 @@ JavaScript 错误会包含一个“了解更多”的链接，该链接会将你
 
 - 使用从现有错误文档中复制的结构，或者从头开始。由你决定！
 - 你应该至少包含：
-
   - 包含在不同浏览器中抛出的消息的语法框。
   - 错误类型。
   - 一段解释为什么会发生这种错误以及其后果的文本。应超越抛出的消息本身。

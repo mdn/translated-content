@@ -2,14 +2,22 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`try...catch`** 文は `try` ブロックと、`catch` ブロックか `finally` ブロックか、その両方から構成されます。まず `try` ブロック内のコードが実行され、そこで例外が発生すると、`catch` ブロック内のコードが実行されます。`finally` ブロック内のコードは、制御する流れが構造全体を抜ける前に、常に実行されます。
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript デモ: try...catch 文")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // 予想される結果: ReferenceError: nonExistentFunction is not defined
+  // （注：正確な出力はブラウザーによって異なる場合があります）
+}
+```
 
 ## 構文
 
@@ -42,7 +50,7 @@ try {
 
 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) や [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) などの他の構造とは異なり、`try`、`catch`、`finally` の各ブロックは単一の文ではなく、ブロックでなければなりません。
 
-```js example-bad
+```js-nolint example-bad
 try doSomething(); // SyntaxError
 catch (e) console.log(e);
 ```
@@ -53,15 +61,107 @@ catch (e) console.log(e);
 
 1 つ以上の `try` 文を入れ子にする事ができます。内側の `try` 文が `catch` ブロックを持っていない場合、それを囲んでいる `try` 文の `catch` ブロックに入ります。
 
-`try` を使用して JavaScript の例外を処理することもできます。 JavaScript の例外に関する情報は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)を参照してください。
+`try` を使用して JavaScript の例外を処理することもできます。 JavaScript の例外に関する情報は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)を参照してください。
 
-### 無条件の catch ブロック
+### catch のバインド
+
+`try` ブロック内で例外が発生した場合、`exceptionVar`（つまり `catch (e)` の `e`）が例外値を保持します。この{{Glossary("binding", "バインド")}}を使用して、発生した例外に関する情報を取得できます。この{{Glossary("binding", "バインド")}}は `catch` ブロックの{{Glossary("Scope", "スコープ")}}内でのみ利用可能です。
+
+単一の識別子である必要はありません。複数の識別子を一度に代入するには、[構造分解パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)が使用できます。
+
+```js
+try {
+  throw new TypeError("oops");
+} catch ({ name, message }) {
+  console.log(name); // "TypeError"
+  console.log(message); // "oops"
+}
+```
+
+`catch` 節によって作成されるバインドは `catch` ブロックと同じスコープに存在するため、`catch` ブロック内で宣言される変数は `catch` 節によって作成されるバインドと同じ名前を持つことはできません。（この規則には [1 つの例外があります](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#文)、ただしこれは非推奨の構文です。）
+
+```js-nolint example-bad
+try {
+  throw new TypeError("oops");
+} catch ({ name, message }) {
+  var name; // SyntaxError: Identifier 'name' has already been declared
+  let message; // SyntaxError: Identifier 'message' has already been declared
+}
+```
+
+例外バインドは書き込み可能です。例えば、例外値を正規化して、それが {{jsxref("Error")}} オブジェクトであることを保証したい場合があります。
+
+```js
+try {
+  throw "おっと、これは Error オブジェクトではありません";
+} catch (e) {
+  if (!(e instanceof Error)) {
+    e = new Error(e);
+  }
+  console.error(e.message);
+}
+```
+
+例外値が必要ない場合は、囲む括弧とともに省略できます。
+
+```js
+function isValidJSON(text) {
+  try {
+    JSON.parse(text);
+    return true;
+  } catch {
+    return false;
+  }
+}
+```
+
+### finally ブロック
+
+`finally` ブロックには、`try` ブロックおよび `catch` ブロックを実行した後で、`try...catch...finally` の次の文が実行される前に実行される文が入ります。制御フローは以下のいずれかの場面で、常に `finally` ブロックに入ります。
+
+- `try` ブロックが正常に（例外が発生せずに）終了した直後
+- `catch` ブロックの実行が正常に終了した直後
+- ブロックを出る制御フロー文（`return`、`throw`、`break`、`continue`）が `try` ブロックや `catch` ブロックの中で実行される直前
+
+なお、`finally` ブロックは例外が発生するかどうかにかかわらず実行されます。また、例外が発生した場合、`finally` ブロックは例外を処理する `catch` ブロックがなくても実行されます。
+
+次の例では `finally` ブロックの一つの使用例を示します。このコードはファイルを開き、それからファイルを使用する分を実行します。`finally` ブロックは、例外が発生したとしてもその後で確実にファイルを閉じるよう保証します。
+
+```js
+openMyFile();
+try {
+  // リソースを結び付けます
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // リソースを常に閉じます
+}
+```
+
+制御フロー文（`return`, `throw`, `break`, `continue`）を `finally` ブロック内で使うと、`try` ブロックや `catch` ブロックの完了値を「マスク」します。この例では、`try` ブロックは 1 を返そうとしますが、返す前にまず `finally` ブロックに制御を委ねるので、代わりに `finally` ブロックの返値が返されます。
+
+```js
+function doIt() {
+  try {
+    return 1;
+  } finally {
+    return 2;
+  }
+}
+
+doIt(); // returns 2
+```
+
+一般に、`finally` ブロックの中に制御フロー文を置くのは悪い考えです。クリーンアップのためのコードのみを使用してください。
+
+## 例
+
+### 条件なし catch ブロック
 
 `catch` ブロックが使われている場合、`try` ブロックの中から任意の例外が発生すると、`catch` ブロックが実行されます。例えば、以下のコードで例外が発生すると、制御は `catch` ブロックへ移動します。
 
 ```js
 try {
-  throw "myException"; // 例外を生成
+  throw new Error("My exception"); // 例外を生成
 } catch (e) {
   // 任意の例外を操作するための文
   logMyErrors(e); // エラーハンドラーに例外オブジェクトを渡します
@@ -105,60 +205,16 @@ try {
 }
 ```
 
-### 例外識別子
+これは Java などの他の言語の構文を模倣しているのかもしれません。
 
-例外が `try` ブロックの中で発生したときは、`exceptionVar`（たとえば、`catch (e)` における `e`）が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は `catch` ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。
-
-```js
-function isValidJSON(text) {
-  try {
-    JSON.parse(text);
-    return true;
-  } catch {
-    return false;
-  }
-}
-```
-
-### finally ブロック
-
-`finally` ブロックには、`try` ブロックおよび `catch` ブロックを実行した後で、`try...catch...finally` の次の文が実行される前に実行される文が入ります。制御フローは以下のいずれかの場面で、常に `finally` ブロックに入ります。
-
-- `try` ブロックが正常に（例外が発生せずに）終了する直前
-- `catch` ブロックの実行が正常に終了する直前
-- 制御フロー文（`return`、`throw`、`break`、`continue`）が `try` ブロックや `catch` ブロックの中で実行される直前
-
-なお、`finally` ブロックは例外が発生するかどうかにかかわらず実行されます。また、例外が発生した場合、`finally` ブロックは例外を処理する `catch` ブロックがなくても実行されます。
-
-次の例では `finally` ブロックの一つの使用例を示します。このコードはファイルを開き、それからファイルを使用する分を実行します。`finally` ブロックは、例外が発生したとしてもその後で確実にファイルを閉じるよう保証します。
-
-```js
-openMyFile();
+```java
 try {
-  // リソースを結び付けます
-  writeMyFile(theData);
-} finally {
-  closeMyFile(); // リソースを常に閉じます
+  myRoutine();
+} catch (RangeError e) {
+  // 頻発する想定済みのエラーを処理する文
 }
+// その他のエラーは暗黙的に投げ直される
 ```
-
-制御フロー文（`return`, `throw`, `break`, `continue`）を `finally` ブロック内で使うと、`try` ブロックや `catch` ブロックの完了値を「マスク」します。この例では、`try` ブロックは 1 を返そうとしますが、返す前にまず `finally` ブロックに制御を委ねるので、代わりに `finally` ブロックの返値が返されます。
-
-```js
-function doIt() {
-  try {
-    return 1;
-  } finally {
-    return 2;
-  }
-}
-
-doIt(); // returns 2
-```
-
-一般に、`finally` ブロックの中に制御フロー文を置くのは悪い考えです。クリーンアップのためのコードのみを使用してください。
-
-## 例
 
 ### 入れ子になった try ブロック
 

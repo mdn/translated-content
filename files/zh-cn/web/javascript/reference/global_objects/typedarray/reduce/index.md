@@ -3,9 +3,7 @@ title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 ---
 
-{{JSRef}}
-
-**`reduce()`** 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。_TypedArray_ 是一个 [类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+**`reduce()`** 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。_TypedArray_ 是一个 [类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ## 语法
 

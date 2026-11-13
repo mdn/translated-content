@@ -13,4 +13,4 @@ l10n:
 
 ## 関連情報
 
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading)
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading)

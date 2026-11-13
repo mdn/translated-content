@@ -1,15 +1,25 @@
 ---
 title: TypedArray.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+**`reduce()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、ユーザーが指定した縮小化コールバック関数を型付き配列の各要素に順番に実行し、直前の要素での計算結果を渡します。型付き配列のすべての要素に対して縮小化コールバック関数を実行した結果は、単一の値になります。このメソッドは {{jsxref("Array.prototype.reduce()")}} と同じアルゴリズムです。
 
-**`reduce()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のそれぞれの要素に対して、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。型付き配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。このメソッドは、{{jsxref("Array.prototype.reduce()")}}と同じアルゴリズムです。
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.reduce()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-reduce.html")}}
+```js interactive-example
+const uint8 = new Uint8Array([0, 1, 2, 3]);
+
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue;
+}
+
+console.log(uint8.reduce(sum));
+// 予想される結果: 6
+```
 
 ## 構文
 
@@ -21,14 +31,13 @@ reduce(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
-
-  - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduce()` の返値となります。この関数は以下の引数で呼び出されます。
+  - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出すときの `accumulator` 引数の値になります。最後の呼び出しでは、その返値が `reduce()` の返値になります。この関数は以下の引数で呼び出されます。
     - `accumulator`
-      - : 前回 `callbackFn` を呼び出した結果の値。最初の呼び出しでは、後で `initialValue` を指定した場合はその値になり、指定されなかった場合は `array[0]` になります。
+      - : 前回 `callbackFn` を呼び出した結果の値です。最初の呼び出しでは、`initialValue` が指定されていればその値、指定されていなければ `array[0]` になります。
     - `currentValue`
-      - : 現在の要素の値。最初の呼び出しでは、 `initialValue` を指定した場合は `array[0]` となり、指定しなかった場合は `array[1]` となります。
+      - : 現在の要素の値です。最初の呼び出しでは、`initialValue` が指定されていれば `array[0]`、指定されていなければ `array[1]` になります。
     - `currentIndex`
-      - : 型付き配列の `currentValue` を入力するインデックスの位置。最初の呼び出しで `initialValue` を指定した場合は `0`、そうでない場合は `1` となります。
+      - : 型付き配列内での `currentValue` のインデックスです。最初の呼び出しでは、`initialValue` が指定されていれば `0`、指定されていなければ `1` になります。
     - `array`
       - : `reduce()` が呼び出された型付き配列。
 
@@ -39,7 +48,7 @@ reduce(callbackFn, initialValue)
 
 ### 返値
 
-型付き配列全体にわたって「縮小」コールバック関数を実行した結果の値です。
+型付き配列全体にわたって縮小化コールバック関数を実行した結果の値です。
 
 ### 例外
 
@@ -69,7 +78,7 @@ const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
 
 ## 関連情報
 
-- [`TypedArray.prototype.reduce` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.reduce` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.map()")}}

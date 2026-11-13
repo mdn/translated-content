@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/abort
 
 {{APIRef('XMLHttpRequest')}}
 
-El método **XMLHttpRequest.abort()** aborta la petición si ha sido enviada. Cuando una petición se aborta, readyState se asigna a 0 (UNSENT), pero el evento [readystatechange](/es/docs/Web/Events/readystatechange) no se lanza.
+El método **XMLHttpRequest.abort()** aborta la petición si ha sido enviada. Cuando una petición se aborta, readyState se asigna a 0 (UNSENT), pero el evento [readystatechange](/es/docs/Web/API/Document/readystatechange_event) no se lanza.
 
 ## Sintaxis
 
@@ -44,4 +44,4 @@ xhr.abort();
 
 ## Ver también
 
-- [Uso de XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Uso de XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

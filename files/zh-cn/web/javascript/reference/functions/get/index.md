@@ -3,15 +3,25 @@ title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
 
-{{jsSidebar("Functions")}}
-
 **`get`** 语法将对象属性绑定到查询该属性时将被调用的函数。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 语法
 
-```plain
+```js-nolint
 {get prop() { ... } }
 
 {get [expression]() { ... } }
@@ -33,7 +43,7 @@ slug: Web/JavaScript/Reference/Functions/get
 使用`get`语法时应注意以下问题：
 
 - 可以使用数值或字符串作为标识；
-- 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
 - 它不能与另一个 `get` 或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
 
 ## 示例
@@ -119,7 +129,7 @@ get notifier() {
 
 ### `get` vs. `defineProperty`
 
-当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("classes")}}中使用时，二者有细微的差别。
+当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("Classes")}}中使用时，二者有细微的差别。
 
 当使用 `get` 关键字时，属性将被定义在实例的原型上，当使用{{jsxref("Object.defineProperty()")}}时，属性将被定义在实例自身上。
 
@@ -154,7 +164,7 @@ console.log(
 ## 参见
 
 - [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

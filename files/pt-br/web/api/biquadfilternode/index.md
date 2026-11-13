@@ -50,7 +50,6 @@ _Herda as propriedades de seu pai,_ _{{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
   - : É um [a-rate](/pt-BR/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, um double representando o [gain](http://en.wikipedia.org/wiki/Gain) utilizado no algoritmo de filtragem atual.
 - {{domxref("BiquadFilterNode.type")}}
-
   - : É um valor string que define o tipo de algoritmo de filtragem que o nó está implementando.
 
     | `tipo`      | Descrição                                                                                                                                                                                                                                                                     | `frequência`                                                                                                                                                        | `Q`                                                                                                                           | `ganho`                                                                   |
@@ -73,7 +72,7 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Exemplo
 
-{{page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example") -->
 
 ## Especificações
 
@@ -85,4 +84,4 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Veja também
 
-- [Utilizando a Web Audio API](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utilizando a Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

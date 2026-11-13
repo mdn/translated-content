@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 
 Метод **`Object.getOwnPropertyNames()`** возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Синтаксис
 
@@ -112,7 +123,7 @@ console.log(nonenum_only);
 
 ## Примечания
 
-В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет приведён к объекту.
+В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("TypeError")}}. В ES6 такой аргумент будет приведён к объекту.
 
 ```js
 > Object.getOwnPropertyNames('foo')
@@ -132,7 +143,7 @@ TypeError: "foo" is not an object // код ES5
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

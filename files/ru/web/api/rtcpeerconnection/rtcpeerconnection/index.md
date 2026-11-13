@@ -16,7 +16,7 @@ pc = new RTCPeerConnection([configuration]);
 ### Параметры
 
 - `configuration` {{optional_inline}}
-  - : Объект класса [`RTCConfiguration`](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
+  - : Объект класса [`RTCConfiguration`](#rtcconfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
 
 ### Возвращаемое значение
 
@@ -33,6 +33,6 @@ pc = new RTCPeerConnection([configuration]);
 ## Смотрите также
 
 - [Сигнализированные и видеовызов](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Architecture)
+- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)
 - [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

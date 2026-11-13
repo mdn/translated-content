@@ -48,9 +48,9 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-Здесь мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} для вызова функции `logURL()` перед началом запроса. Функция `logURL()` берёт URL запроса из объекта event и выводит в консоль браузера. [Шаблон](/en-US/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` означает, что мы будем перехватывать HTTP запросы ко всем URL.
+Здесь мы используем {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} для вызова функции `logURL()` перед началом запроса. Функция `logURL()` берёт URL запроса из объекта event и выводит в консоль браузера. [Шаблон](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` означает, что мы будем перехватывать HTTP запросы ко всем URL.
 
-Для проверки [установите WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [откройте консоль браузера](/ru/docs/Tools/Browser_Console) и откройте какую-нибудь веб-страницу. В консоли вы должны увидеть URL для каждого ресурса, который запрашивает браузер:
+Для проверки [установите WebExtension](/ru/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [откройте консоль браузера](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) и откройте какую-нибудь веб-страницу. В консоли вы должны увидеть URL для каждого ресурса, который запрашивает браузер:
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -142,7 +142,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.
 
-The listener function will be called only for requests to URLs matching the `targetPage` [pattern](/en-US/Add-ons/WebExtensions/Match_patterns). Also note that we've again passed `"blocking"` as an option. We've also passed `"requestHeaders"`, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.
+The listener function will be called only for requests to URLs matching the `targetPage` [pattern](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Also note that we've again passed `"blocking"` as an option. We've also passed `"requestHeaders"`, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.
 
 The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array. This modified array will now be sent to the server.
 
@@ -152,4 +152,4 @@ To test it out, open [useragentstring.com](http://useragentstring.com/) and chec
 
 ## Learn more
 
-To learn about all the things you can do with the `webRequest` API, see its [reference documentation](/en-US/Add-ons/WebExtensions/API/WebRequest).
+To learn about all the things you can do with the `webRequest` API, see its [reference documentation](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).

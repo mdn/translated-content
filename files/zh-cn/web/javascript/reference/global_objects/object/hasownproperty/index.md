@@ -3,14 +3,26 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef}}
-
 **`hasOwnProperty()`** 方法返回一个布尔值，表示对象自有属性（而不是继承来的属性）中是否具有指定的属性。
 
 > [!NOTE]
 > 在支持 {{jsxref("Object.hasOwn")}} 的浏览器中，建议使用 {{jsxref("Object.hasOwn()")}}，而非 `hasOwnProperty()`。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## 语法
 
@@ -155,8 +167,8 @@ foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty is not a f
 ## 参见
 
 - {{jsxref("Object.hasOwn()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

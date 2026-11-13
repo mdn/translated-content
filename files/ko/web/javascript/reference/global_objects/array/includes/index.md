@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
@@ -9,7 +10,22 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`includes()`** 메서드는 배열의 항목에 특정 값이 포함되어 있는지를 판단하여 적절히 `true` 또는 `false`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## 구문
 
@@ -34,7 +50,7 @@ includes(searchElement, fromIndex)
 
 ## 설명
 
-`includes()` 메서드는 [SameValueZero](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 사용하여 `searchElement`를 배열의 요소와 비교합니다. 0 값은 부호에 관계없이 모두 동일한 것으로 간주됩니다. (즉, `-0`은 `0`과 같지만), `false`는 `0`과 같은 것으로 간주되지 않습니다. [`NaN`](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN)은 올바르게 검색될 수 있습니다.
+`includes()` 메서드는 [SameValueZero](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 사용하여 `searchElement`를 배열의 요소와 비교합니다. 0 값은 부호에 관계없이 모두 동일한 것으로 간주됩니다. (즉, `-0`은 `0`과 같지만), `false`는 `0`과 같은 것으로 간주되지 않습니다. [`NaN`](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN)은 올바르게 검색될 수 있습니다.
 
 [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)에 사용할 경우, `include()` 메서드는 빈 슬롯을 `undefined`로 간주하고 순회합니다.
 

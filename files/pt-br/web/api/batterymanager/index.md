@@ -25,19 +25,19 @@ A propriedade {{domxref("Navigator.battery","navigator.battery")}} retorna uma i
 ### Eventos
 
 - {{domxref("BatteryManager.onchargingchange")}}
-  - : Tratamento para o evento {{event("chargingchange")}}; Esse evento é enviado quando o status de carregamento da bateria é atualizado.
+  - : Tratamento para o evento [`chargingchange`](/pt-BR/docs/Web/Events/chargingchange); Esse evento é enviado quando o status de carregamento da bateria é atualizado.
 - {{domxref("BatteryManager.onchargingtimechange")}}
-  - : Tratamento para o evento {{event("chargingtimechange")}}; Esse evento é enviado quando o tempo de carregamento da bateria é atualizado.
+  - : Tratamento para o evento [`chargingtimechange`](/pt-BR/docs/Web/Events/chargingtimechange); Esse evento é enviado quando o tempo de carregamento da bateria é atualizado.
 - {{domxref("BatteryManager.ondischargingtimechange")}}
-  - : Tratamento para o evento {{event("dischargingtimechange")}}; Esse evento é enviado quando o tempo de descarregamento da bateria é atualizado.
+  - : Tratamento para o evento [`dischargingtimechange`](/pt-BR/docs/Web/Events/dischargingtimechange); Esse evento é enviado quando o tempo de descarregamento da bateria é atualizado.
 - {{domxref("BatteryManager.onlevelchange")}}
-  - : Tratamento para o evento {{event("levelchange")}}; Esse evento é enviado quando a nível da bateria é atualizado.
+  - : Tratamento para o evento [`levelchange`](/pt-BR/docs/Web/Events/levelchange); Esse evento é enviado quando a nível da bateria é atualizado.
 
 ## Métodos
 
 Herdado de {{domxref("EventTarget")}}:
 
-{{page("/pt-BR/docs/Web/API/EventTarget","Métodos")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/EventTarget","Métodos") -->
 
 ## Especificações
 
@@ -50,4 +50,4 @@ Herdado de {{domxref("EventTarget")}}:
 ## Veja também
 
 - {{ domxref("Navigator.battery","navigator.battery") }}
-- A [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status)
+- A [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API)

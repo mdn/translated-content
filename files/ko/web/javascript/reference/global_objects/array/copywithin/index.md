@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.copyWithin()
+short-title: copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
   sourceCommit: 6e8ca9ecc4bfd14ea5c46d4817f189eecacb8296
@@ -9,7 +10,19 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`copyWithin()`** 메서드는 배열의 일부를 같은 배열의 다른 위치로 얕게 복사하며, 배열의 길이를 수정하지 않고 해당 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.copyWithin()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c", "d", "e"];
+
+// Copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+```
 
 ## 구문
 

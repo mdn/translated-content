@@ -9,11 +9,20 @@ l10n:
 
 El símbolo conocido como **`Symbol.matchAll`** devuelve un iterador, que devuelve las coincidencias de la expresión regular con una cadena. Esta función es llamada por el método {{jsxref("String.prototype.matchAll()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll", "shorter")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## Descripción
 
-Este Symbol se utiliza para {{jsxref("String.prototype.matchAll()")}} y específicamente en {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Los dos ejemplos siguientes devuelven el mismo resultado:
+Este Symbol se utiliza para {{jsxref("String.prototype.matchAll()")}} y específicamente en {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}. Los dos ejemplos siguientes devuelven el mismo resultado:
 
 ```js
 "abc".matchAll(/a/);
@@ -42,7 +51,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para más ejemplos.
+Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}} para más ejemplos.
 
 ## Especificaciones
 
@@ -56,4 +65,4 @@ Ver {{jsxref("String.prototype.matchAll()")}} y {{jsxref("RegExp.@@matchAll", "R
 
 - [Polyfill de `Symbol.matchAll` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxref("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}

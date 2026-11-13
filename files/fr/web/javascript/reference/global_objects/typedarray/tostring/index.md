@@ -3,11 +3,18 @@ title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 ---
 
-{{JSRef}}
+La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+{{InteractiveExample("JavaScript Demo: TypedArray.toString()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-tostring.html")}}
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+const uint8String = uint8.toString();
+
+console.log(uint8String.startsWith("10"));
+// Expected output: true
+```
 
 ## Syntaxe
 

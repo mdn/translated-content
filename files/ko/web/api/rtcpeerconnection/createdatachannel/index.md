@@ -20,7 +20,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `label`
   - : 사람이 읽을 수 있는 채널 이름입니다. 이름의 문자열은 65,535 바이트 보다 작아야합니다.
 - `options` {{optional_inline}}
-  - : [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
+  - : [`RTCDataChannelInit` dictionary](#rtcdatachannelinit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
 
 ### RTCDataChannelInit 딕셔너리
 
@@ -39,7 +39,8 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `id` {{optional_inline}}
   - : 채널에 대한 16bit 숫자형 ID입니다. 허용되는 값은 0에서 65534 사이입니다. 이 값을 지정하지 않으면, 유저 에이전트가 알아서 ID를 지정해줍니다.
 
-> **참고:** `RTCDataChannelInit` 딕셔너리를 사용해서 설정이 가능한 옵션들은 {{domxref("RTCDataChannel")}} 인터페이스에서 설정이 가능한 특성들의 서브 셋을 뜻합니다.
+> [!NOTE]
+> `RTCDataChannelInit` 딕셔너리를 사용해서 설정이 가능한 옵션들은 {{domxref("RTCDataChannel")}} 인터페이스에서 설정이 가능한 특성들의 서브 셋을 뜻합니다.
 
 ### 반환 값
 

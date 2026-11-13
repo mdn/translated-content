@@ -52,7 +52,7 @@ pauseButton.onclick = function (evt) {
 
 ## 같이 보기
 
-- [MediaStream API](/ko/docs/Web/API/Media_Streams_API)
+- [MediaStream API](/ko/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/ko/docs/Web/API/WebRTC_API)

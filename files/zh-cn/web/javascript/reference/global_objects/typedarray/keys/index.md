@@ -3,8 +3,6 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 
-{{JSRef}}
-
 **`keys()`** 方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
 
 ## 语法
@@ -54,7 +52,7 @@ console.log(eArr.next().value); // 4
 ## 参见
 
 - [`core-js` 中 `TypedArray.prototype.keys` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)指南
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}

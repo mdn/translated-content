@@ -5,7 +5,7 @@ slug: Web/API/IDBFactory/open
 
 {{APIRef("IndexedDB")}}
 
-La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/API_IndexedDB#Se_connecter_à_la_base_de_données).
+La méthode **`open()`** de l'interface {{domxref("IDBFactory")}} lance une requête pour ouvrir une [connexion à une base de données](/fr/docs/Web/API/IndexedDB_API#se_connecter_à_la_base_de_données).
 
 La méthode renvoie immédiatement un objet {{domxref("IDBOpenDBRequest")}} puis effectue l'opération d'ouverture de façon asynchrone. Si l'opération réussit, un évènement `success` sera éms sur l'objet `IDBOpenDBRequest` renvoyé par la méthode, et la propriété `result` de l'évènement aura la valeur de l'objet {{domxref("IDBDatabase")}} associé à la connexion.
 
@@ -34,14 +34,13 @@ var IDBOpenDBRequest = indexedDB.open(nom, version);
 #### Objet options expérimental de Gecko
 
 - `options` (`version` et `storage`) {{optional_inline}} {{deprecated_inline}}
-
-  - : Dans Gecko, à partir de [la version 26](/fr/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
+  - : Dans Gecko, à partir de [la version 26](/fr/docs/Mozilla/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
 
     > [!WARNING]
     > L'attribut `storage` est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.
 
 > [!NOTE]
-> Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
+> Vous pouvez consulter l'article [les limites de stockage du navigateur et les critères d'éviction](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.
 
 ### Valeur de retour
 
@@ -113,7 +112,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions&nbsp;: {{domxref("IDBDatabase")}}
 - Manipuler des transactions&nbsp;: {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés&nbsp;: {{domxref("IDBKeyRange")}}

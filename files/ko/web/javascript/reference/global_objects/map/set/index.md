@@ -7,9 +7,20 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Map")}} 인스턴스의 **`set()`** 메서드는 이 Map에서 명시진 키와 값을 추가하거나 갱신합니다.
+{{jsxref("Map")}} 인스턴스의 **`set()`** 메서드는 이 Map에서 명시된 키와 값을 추가하거나 갱신합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## 구문
 
@@ -20,9 +31,9 @@ set(key, value)
 ### 매개변수
 
 - `key`
-  - : `Map` 객체에 추가되는 요소의 키. 이 키는 모든 종류의 [JavaScript 유형](/ko/docs/Web/JavaScript/Data_structures)(모든 [원시형](/ko/docs/Web/JavaScript/Data_structures#primitive_values) 혹은 모든 [Javascript 객체](/ko/docs/Web/JavaScript/Data_structures#objects))가 될 수 있습니다.
+  - : `Map` 객체에 추가되는 요소의 키. 이 키는 모든 종류의 [JavaScript 유형](/ko/docs/Web/JavaScript/Guide/Data_structures)(모든 [원시형](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_values) 혹은 모든 [Javascript 객체](/ko/docs/Web/JavaScript/Guide/Data_structures#objects))가 될 수 있습니다.
 - `value`
-  - : `Map` 객체에 추가되는 요소의 값. 이 값은 모든 종류의 [JavaScript 유형](/ko/docs/Web/JavaScript/Data_structures)(모든 종류의 [원시형](/ko/docs/Web/JavaScript/Data_structures#primitive_values) 혹은 모든 종류의 [Javascript 객체](/ko/docs/Web/JavaScript/Data_structures#objects))가 될 수 있습니다.
+  - : `Map` 객체에 추가되는 요소의 값. 이 값은 모든 종류의 [JavaScript 유형](/ko/docs/Web/JavaScript/Guide/Data_structures)(모든 종류의 [원시형](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_values) 혹은 모든 종류의 [Javascript 객체](/ko/docs/Web/JavaScript/Guide/Data_structures#objects))가 될 수 있습니다.
 
 ### 반환 값
 

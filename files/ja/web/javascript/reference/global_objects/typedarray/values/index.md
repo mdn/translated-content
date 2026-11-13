@@ -1,15 +1,25 @@
 ---
 title: TypedArray.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
-{{JSRef}}
+**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各要素の値を反復処理する新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
 
-**`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対する値を持つ新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.values()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
+```js interactive-example
+const bytes = new Uint8Array([10, 20, 30, 40, 50]);
+const iterator = bytes.values();
+
+iterator.next();
+iterator.next();
+
+console.log(iterator.next().value);
+// 予想される結果: 30
+```
 
 ## 構文
 
@@ -23,7 +33,7 @@ values()
 
 ### 返値
 
-新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトです。
+新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 解説
 
@@ -63,11 +73,11 @@ console.log(values.next().value); // 50
 
 ## 関連情報
 
-- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.values` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
-- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Array.prototype.values()")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

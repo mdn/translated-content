@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Canvas API")}}
 
-[`video`](/ja/docs/Web/HTML/Element/video) 要素の機能を [`canvas`](/ja/docs/Web/HTML/Element/canvas) と組み合わせることで、リアルタイムに動画データを操作し、表示中の動画にさまざまな視覚効果を取り入れることができます。このチュートリアルでは、JavaScript コードでクロマキー処理（「グリーン画面効果」とも呼ばれる）を行う方法を示します。
+[`video`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の機能を [`canvas`](/ja/docs/Web/HTML/Reference/Elements/canvas) と組み合わせることで、リアルタイムに動画データを操作し、表示中の動画にさまざまな視覚効果を取り入れることができます。このチュートリアルでは、JavaScript コードでクロマキー処理（「グリーン画面効果」とも呼ばれる）を行う方法を示します。
 
 {{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
@@ -59,7 +59,7 @@ l10n:
 
 ここから読み取るべき重要なポイントは以下の通りです。
 
-1. この文書では、2つの [`canvas`](/ja/docs/Web/HTML/Element/canvas) 要素を `c1` と `c2` という ID で確立しています。キャンバス `c1` は元動画の現在のフレームを表示するために使用され、`c2` はクロマキー効果を行った後の動画を表示するために使用されます。`c2` には動画の緑の背景を置き換えるために使用する静止画が事前読み込みされます。
+1. この文書では、2つの [`canvas`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素を `c1` と `c2` という ID で確立しています。キャンバス `c1` は元動画の現在のフレームを表示するために使用され、`c2` はクロマキー効果を行った後の動画を表示するために使用されます。`c2` には動画の緑の背景を置き換えるために使用する静止画が事前読み込みされます。
 2. JavaScriptコードは`processor.js`という名前のスクリプトからインポートされます。
 
 ## JavaScript コード
@@ -168,5 +168,5 @@ processor.computeFrame = function () {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
-- [学習領域: 動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
+- [学習領域: 動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

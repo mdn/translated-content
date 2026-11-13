@@ -3,13 +3,25 @@ title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 
-{{JSRef}}
-
-**`Number.MIN_SAFE_INTEGER`** 静态数据属性代表在 JavaScript 中最小的安全整数（-2<sup>53</sup> – 1）。
+**`Number.MIN_SAFE_INTEGER`** 静态数据属性代表在 JavaScript 中最小的安全整数 -(2<sup>53</sup> - 1)。
 
 要表示比这小的整数，请考虑使用 {{jsxref("BigInt")}}。
 
-{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MIN_SAFE_INTEGER - 1;
+const y = Number.MIN_SAFE_INTEGER - 2;
+
+console.log(Number.MIN_SAFE_INTEGER);
+// Expected output: -9007199254740991
+
+console.log(x);
+// Expected output: -9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## 值
 

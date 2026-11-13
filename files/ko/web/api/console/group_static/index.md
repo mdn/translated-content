@@ -5,7 +5,7 @@ slug: Web/API/console/group_static
 
 {{APIRef("Console API")}}
 
-**`console.group()`** 메서드는 [웹 콘솔](/ko/docs/Tools/Web_Console) 로그에 새로운 인라인 그룹을 만듭니다. 이는 {{domxref("console.groupEnd()")}}가 호출될 때까지 모든 다음 출력을 추가 수준으로 들여씁니다.
+**`console.group()`** 메서드는 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) 로그에 새로운 인라인 그룹을 만듭니다. 이는 {{domxref("console.groupEnd()")}}가 호출될 때까지 모든 다음 출력을 추가 수준으로 들여씁니다.
 
 {{AvailableInWorkers}}
 

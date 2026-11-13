@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/concat
 
 El método **`concat()`** combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## Sintaxis
 
@@ -32,7 +43,7 @@ Si los argumentos no son de tipo texto, son convertidos a texto antes de concate
 
 ## Rendimiento
 
-Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operators", "operadores de asignación", "", 1)}} (`+`, `+=`) en lugar del método `concat()`.
+Es altamente recomendado que se utilicen {{jsxref("Operators", "operadores de asignación", "#Assignment_operators", 1)}} (`+`, `+=`) en lugar del método `concat()`.
 
 ## Ejemplos
 
@@ -66,4 +77,4 @@ let greetList = ["Hello", " ", "Venkat", "!"];
 ## Ver también
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}
+- {{jsxref("Operators", "Operadores de asignación", "#Assignment_operators", 1)}}

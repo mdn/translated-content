@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/set
 
 O método **`set()`** adiciona ou atualiza um elemento com a chave especificada e um valor do objeto `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Sintaxe
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在 {{Glossary("JavaScript")}} 中，**原始值**（原始数据类型）是一种既非{{Glossary("object", "对象")}}也无{{glossary("method","方法")}}或[属性](/zh-CN/docs/Glossary/Property/JavaScript)的数据。有 7 种原始数据类型：
 
 - {{Glossary("string")}}
@@ -25,10 +23,9 @@ l10n:
 
 ## 参见
 
-- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - [原始数据类型](https://zh.wikipedia.org/wiki/原始型別)（维基百科）
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

@@ -7,7 +7,7 @@ slug: Web/API/URL/createObjectURL_static
 
 {{APIRef("URL API")}}
 
-O método estático **`URL.createObjectURL()`** cria um {{domxref("DOMString")}} contendo a URL representando o objeto passado como parâmetro.
+O método estático **`URL.createObjectURL()`** cria um {{jsxref("String")}} contendo a URL representando o objeto passado como parâmetro.
 
 O tempo de vida da URL é vinculado ao {{domxref("document")}} da janela onde ele foi criado. O novo objeto URL represenda o objeto {{domxref("File")}} especificado ou o objeto {{domxref("Blob")}}.
 
@@ -31,11 +31,11 @@ const objectURL = URL.createObjectURL(object);
 
 ### Retorno de valor
 
-Uma {{domxref("DOMString")}} contendo o objeto URL e pode ser usado para referenciar o conteúdo especificado na origem do `object`.
+Uma {{jsxref("String")}} contendo o objeto URL e pode ser usado para referenciar o conteúdo especificado na origem do `object`.
 
 ## Exemplos
 
-Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Notas de uso
 
@@ -64,8 +64,8 @@ Em versões antigas da especificação Media Source, anexar stream a um elemento
 
 ## Veja também
 
-- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File/Using_files_from_web_applications)
-- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

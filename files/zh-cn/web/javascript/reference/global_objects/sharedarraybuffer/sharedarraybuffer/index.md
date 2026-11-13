@@ -5,13 +5,20 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
-> **备注：** `SharedArrayBuffer` 构造函数可能并不总是全局可用的，除非满足某些[安全要求](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements)。
+> [!NOTE]
+> `SharedArrayBuffer` 构造函数可能并不总是全局可用的，除非满足某些[安全要求](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements)。
 
 **`SharedArrayBuffer()`** 构造函数创建 {{jsxref("SharedArrayBuffer")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 语法
 
@@ -20,7 +27,8 @@ new SharedArrayBuffer(length)
 new SharedArrayBuffer(length, options)
 ```
 
-> **备注：** `SharedArrayBuffer()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来调用。不带 `new` 调用会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `SharedArrayBuffer()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来调用。不带 `new` 调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

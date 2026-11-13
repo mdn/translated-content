@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-**`featurePolicy`** は {{DOMxRef("HTMLIFrameElement")}} インターフェイスの読み取り専用プロパティで、特定のフレームに適用される[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)をイントロスペクトするための単純な API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
+**`featurePolicy`** は {{DOMxRef("HTMLIFrameElement")}} インターフェイスの読み取り専用プロパティで、特定のフレームに適用される[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)をイントロスペクトするための単純な API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
 
 ## 値
 

@@ -3,13 +3,21 @@ title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 
-{{JSRef}}
-
 **`localeCompare()`** 方法返回一个数字，表示参考字符串在排序顺序中是在给定字符串之前、之后还是与之相同。在支持 [`Intl.Collator` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) 的实现中，该方法仅是调用了 `Intl.Collator` 方法。
 
 当比较大量字符串时，例如对大型数组进行排序，最好创建一个 {{jsxref("Intl.Collator")}} 对象，并使用其 {{jsxref("Intl/Collator/compare", "compare()")}} 方法提供的函数。
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## 语法
 
@@ -28,13 +36,11 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - 与 `referenceStr` 进行比较的字符串。所有值都会[被强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此省略该参数或传入 `undefined` 会导致 `localeCompare()` 与字符串 `"undefined"` 进行比较，这通常不是你想要的。
 - `locales` {{optional_inline}}
-
   - : 表示缩写语言代码（BCP 47 language tag）的字符串，或由此类字符串组成的数组。对应于 `Intl.Collator()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 参数。
 
     在不支持 `Intl.Collator` 的实现中，该参数会被忽略，并且通常会使用主机的区域设置。
 
 - `options` {{optional_inline}}
-
   - : 一个调整输出格式的对象。对应于 `Intl.Collator()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#参数) 参数。
 
     在不支持 `Intl.Collator` 的实现中，该参数会被忽略。

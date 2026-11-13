@@ -33,7 +33,7 @@ l10n:
 transition: all 4s ease;
 ```
 
-코드 베이스에서 위 코드를 발견하면 마지막 줄을 제외하고 모두 안전하게 제거할 수 있습니다. 모든 브라우저는 공급자 접두사 없이 [전환](/ko/docs/Web/CSS/transition#browser_compatibility)을 지원합니다.
+코드 베이스에서 위 코드를 발견하면 마지막 줄을 제외하고 모두 안전하게 제거할 수 있습니다. 모든 브라우저는 공급자 접두사 없이 [전환](/ko/docs/Web/CSS/Reference/Properties/transition#browser_compatibility)을 지원합니다.
 
 ```css
 transition: all 4s ease;
@@ -72,7 +72,7 @@ window.requestAnimationFrame =
   window.msRequestAnimationFrame;
 ```
 
-코드베이스에서 위 코드를 발견하면, 첫 번째 줄을 제외한 모든 줄을 안전하게 제거할 수 있습니다. 모든 브라우저는 공급자 접두사 및 `window` 없이 [`requestAnimationFrame`](/ko/docs/Web/API/window/requestAnimationFrame#browser_compatibility)을 지원합니다.
+코드베이스에서 위 코드를 발견하면, 첫 번째 줄을 제외한 모든 줄을 안전하게 제거할 수 있습니다. 모든 브라우저는 공급자 접두사 및 `window` 없이 [`requestAnimationFrame`](/ko/docs/Web/API/Window/requestAnimationFrame#browser_compatibility)을 지원합니다.
 
 ```js
 requestAnimationFrame(callback);

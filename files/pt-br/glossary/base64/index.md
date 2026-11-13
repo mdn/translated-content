@@ -9,16 +9,16 @@ slug: Glossary/Base64
 
 Os esquemas de codificação Base64 são comumente usados quando há necessidade de codificar dados binários que precisam ser armazenados e transferidos por meio de mídia projetada para lidar com ASCII. Isso é para garantir que os dados permaneçam intactos sem modificação durante o transporte. _Base64_ é comumente usado em vários aplicativos, incluindo e-mail via [MIME](https://pt.wikipedia.org/wiki/MIME) e armazenamento de dados complexos em [XML](/pt-BR/docs/Web/XML)
 
-Uma aplicação comum da codificação Base64 na web é codificar dados binários para que possam ser incluídos em um [data: URL](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+Uma aplicação comum da codificação Base64 na web é codificar dados binários para que possam ser incluídos em um [data: URL](/pt-BR/docs/Web/URI/Schemes/data).
 
 Em JavaScript existem duas funções respectivamente para decodificar e codificar strings Base64:
 
-- [`btoa()`](/pt-BR/docs/Web/API/btoa): cria uma string ASCII codificada em Base64 a partir de uma "string" de dados binários ("btoa" deve ser lido como "binário para ASCII").
-- [`atob()`](/pt-BR/docs/Web/API/atob): decodifica uma string codificada em Base64 ("atob" deve ser lida como "ASCII para binário").
+- [`btoa()`](/pt-BR/docs/Web/API/Window/btoa): cria uma string ASCII codificada em Base64 a partir de uma "string" de dados binários ("btoa" deve ser lido como "binário para ASCII").
+- [`atob()`](/pt-BR/docs/Web/API/Window/atob): decodifica uma string codificada em Base64 ("atob" deve ser lida como "ASCII para binário").
 
 O algoritmo usado por `atob()` e `btoa()` é especificado na [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), seção 4.
 
-Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/btoa).
+Observe que `btoa()` espera receber dados binários e lançará uma exceção se a string fornecida contiver quaisquer caracteres cuja representação UTF-16 ocupe mais de um byte. Para obter mais detalhes, consulte a documentação de [`btoa()`](/pt-BR/docs/Web/API/Window/btoa).
 
 ## Aumento de tamanho codificado
 

@@ -1,19 +1,15 @@
 ---
 title: SOAP
 slug: Glossary/SOAP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**SOAP** (Simple Object Access Protocol) は {{glossary('XML')}} 形式でデータを転送する{{glossary('protocol','プロトコル')}}です。{{glossary('Mozilla Firefox','Firefox')}} は 2008 年に SOAP のサポートを廃止しました。
+**SOAP** (Simple Object Access Protocol) は {{glossary('XML')}} 形式でデータを転送する{{glossary('protocol','プロトコル')}}です。
 
-## 関連項目
+## 関連情報
 
-### 一般知識
-
-- Wikipedia の [SOAP](https://ja.wikipedia.org/wiki/SOAP)
-- [SOAP in Gecko-based Browsers](/ja//docs/SOAP_in_Gecko-based_Browsers)
-
-### 技術リファレンス
-
-- [Specification](http://www.w3.org/TR/soap12-part1/)
+- [SOAP](https://ja.wikipedia.org/wiki/SOAP)（ウィキペディア）
+- [仕様書](https://www.w3.org/TR/soap12-part1/)

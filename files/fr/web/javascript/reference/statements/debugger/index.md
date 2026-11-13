@@ -3,8 +3,6 @@ title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`debugger`** permet de faire appel à un outil de débogage (qui peut par exemple permettre de placer un point d'arrêt). Si cette fonctionnalité de débogage n'est pas disponible, l'instruction n'aura aucun effet.
 
 ## Syntaxe
@@ -39,4 +37,4 @@ Lorsque le débogueur est lancé, l'exécution est interrompue au niveau de l'in
 
 ## Voir aussi
 
-- [Le débogueur des outils de développement Firefox](/fr/docs/Tools/Debugger)
+- [Le débogueur des outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

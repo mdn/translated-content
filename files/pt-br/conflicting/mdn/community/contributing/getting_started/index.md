@@ -7,7 +7,7 @@ slug: conflicting/MDN/Community/Contributing/Getting_started
 
 [Git](https://git-scm.com/) e [GitHub](https://github.com/) são ferramentas desafiadoras para aprender e dominar, mas com alguns poucos comandos simples e alguns bons conselhos, você deve ser capaz de fazer o suficiente para contribuir para o MDN sem muitos problemas. O intuito deste artigo não é te ajudar a dominar Git ou GitHub, mas te dar o bastante para ser produtivo com eles em um nível básico e contribuir para o MDN.
 
-Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Contribute/GitHub_cheatsheet) disponível também, apenas com os comandos e sem as longas explicações.
+Se você já está familiarizado com o básico de Git/GitHub, você provavelmente não vai aprender nada novo aqui, mas você ainda pode achar este artigo útil como uma referência. Existe uma [folha de dicas de GitHub](/pt-BR/docs/MDN/Community/Issues) disponível também, apenas com os comandos e sem as longas explicações.
 
 ## Conceitos essenciais
 
@@ -52,7 +52,7 @@ Se você não fizer isto, você ainda vai ser capaz de contribuir para o MDN, ma
 
 ## Preparando-se para trabalhar em um repo específico
 
-Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Contribute/Where_is_everything)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
+Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/orphaned/MDN/Community/Contributing/Our_repositories)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
 
 ### Bifurcando e clonando
 
@@ -259,7 +259,7 @@ Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizem
 
 ## Adicionando, commitando e subindo
 
-Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute) para mais orientações.
+Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/conflicting/MDN/Community) para mais orientações.
 
 Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
 
@@ -283,7 +283,8 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
     git add README.md
     ```
 
-    > **Nota:** `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
+    > [!NOTE]
+    > `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
 
 4. Se você rodar `git status` de novo, você vai ver isto agora:
 

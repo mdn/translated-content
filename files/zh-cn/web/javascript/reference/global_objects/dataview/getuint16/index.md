@@ -3,11 +3,20 @@ title: DataView.prototype.getUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
 ---
 
-{{JSRef}}
-
 **`getUint16()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (无符号短整型，2 个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint16(1, 65535); // Max unsigned 16-bit integer
+
+console.log(view.getUint16(1));
+// Expected output: 65535
+```
 
 ## 语法
 

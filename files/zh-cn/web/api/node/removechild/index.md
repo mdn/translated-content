@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 只要对被移除的子节点保持引用，它仍然存在于内存中，但不再是 DOM 的一部分。在以后的代码中仍可重复使用。
 >
-> 如果不存储 `removeChild()` 的返回值，也不保留其他引用，该节点将在短时间内在内存中[自动删除](/zh-CN/docs/Web/JavaScript/Memory_management)。
+> 如果不存储 `removeChild()` 的返回值，也不保留其他引用，该节点将在短时间内在内存中[自动删除](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)。
 
 与 {{domxref("Node.cloneNode()")}} 不同，返回值保留了与其关联的 `EventListener` 对象。
 

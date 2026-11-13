@@ -11,7 +11,7 @@ L'API Resize Observer fournit un mécanisme performant par lequel du code peut s
 
 Il y a une multitude de cas d'utilisation pour des techniques de _responsive design_ (et d'autres par ailleurs) qui répondent à des changements de dimensions d'un élément mais, avant, leur implantation était souvent amateures et parfois imparfaites.
 
-Par exemple, les [media queries](/fr/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} sont un bon outil pour mettre à jour une mise en page à des points spécifiques quand la zone d'affichage change de dimensions, mais qu'en est-il si vous désirez changer la mise en page en réponse à un changement spécifique des dimensions d'un élément qui n'est pas le conteneur principal ?
+Par exemple, les [media queries](/fr/docs/Web/CSS/Guides/Media_queries) / {{domxref("window.matchMedia")}} sont un bon outil pour mettre à jour une mise en page à des points spécifiques quand la zone d'affichage change de dimensions, mais qu'en est-il si vous désirez changer la mise en page en réponse à un changement spécifique des dimensions d'un élément qui n'est pas le conteneur principal ?
 
 Pour réaliser ceci, une solution limitée serait d'écouter les changements sur un type d'événement qui convienne à résoudre le problème et qui corresponde à l'élément dont les changements de dimensions vous intéresse (c'est-à-dire l'[événement resize](/fr/docs/Web/API/Window/resize_event) sur window), puis de calculer les nouvelles dimensions ou autres propriétés de l'élément après un redimensionnement au moyen de {{domxref("Element.getBoundingClientRect")}} ou de {{domxref("Window.getComputedStyle")}}, par exemple.
 

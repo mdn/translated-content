@@ -16,7 +16,7 @@ Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案�
 > [!NOTE]
 > worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
 
-基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)。
+基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。
 
 主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxref("Worker/message_event", "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
@@ -89,7 +89,7 @@ myWorker.onmessage = function (e) {
 拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
 
 > [!NOTE]
-> 建構 `Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
+> 建構 `Worker` 的 URI 必須遵從[同源政策](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
 
 > [!NOTE]
 > 在主執行緒中存取 `onmessage` 與 `postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
@@ -140,7 +140,7 @@ importScripts("foo.js"); /* imports just "foo.js" */
 importScripts("foo.js", "bar.js"); /* imports two scripts */
 ```
 
-瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/window.setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
+瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/Window/setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
 
 > [!NOTE]
 > 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
@@ -226,7 +226,7 @@ myWorker.port.onmessage = function (e) {
 
 ## 和 workers 傳遞資料：更多細節
 
-和 workers 傳遞的資料會先被複製一份，而非共享；經過序列化後 (serialized) 傳輸，然後在另一端反序列化 (de-serialized) 取出，大部份的瀏覽器都是以 [結構化複製 (structured cloning)](/zh-TW/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 實作這項特色.
+和 workers 傳遞的資料會先被複製一份，而非共享；經過序列化後 (serialized) 傳輸，然後在另一端反序列化 (de-serialized) 取出，大部份的瀏覽器都是以 [結構化複製 (structured cloning)](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 實作這項特色.
 
 下面的 `emulateMessage()` 會模擬和 worker 傳遞訊息時，複製資料的行為。
 
@@ -294,13 +294,13 @@ onmessage = function (oEvent) {
 };
 ```
 
-[結構化複製（structured cloning）](/zh-TW/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 演算法支援 JSON 以及迴圈參照（circular references）。
+[結構化複製（structured cloning）](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 演算法支援 JSON 以及迴圈參照（circular references）。
 
 ### 資料傳遞範例
 
 #### 範例 1: 非同步 `eval()`
 
-下面透過 [data URL](/zh-TW/docs/Web/HTTP/data_URIs) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
+下面透過 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
 
 ```js
 // Syntax: asyncEval(code[, listener])
@@ -328,7 +328,7 @@ var asyncEval = (function () {
 })();
 ```
 
-[data URL](/zh-TW/docs/Web/HTTP/data_URIs) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
+[data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
 
 ```js
 onmessage = function (oEvent) {
@@ -403,19 +403,20 @@ asyncEval(
         if (fOnError) {
           oWorker.onerror = fOnError;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
-              );
-              return;
-            }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
-            });
-          };
+        this.sendQuery = function (
+          /* queryable function name, argument to pass 1, argument to pass 2, etc. etc */
+        ) {
+          if (arguments.length < 1) {
+            throw new TypeError(
+              "QueryableWorker.sendQuery - not enough arguments",
+            );
+            return;
+          }
+          oWorker.postMessage({
+            bk4e1h0: arguments[0],
+            ktp3fm1: Array.prototype.slice.call(arguments, 1),
+          });
+        };
         this.postMessage = function (vMsg) {
           //I just think there is no need to use call() method
           //how about just oWorker.postMessage(vMsg);
@@ -513,7 +514,9 @@ function defaultQuery(vMsg) {
   // do something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+function reply(
+  /* listener name, argument to pass 1, argument to pass 2, etc. etc */
+) {
   if (arguments.length < 1) {
     throw new TypeError("reply - not enough arguments");
     return;
@@ -539,7 +542,7 @@ onmessage = function (oEvent) {
 
 ### 移轉資料所有權 - 可移轉物件 (transferable objects)
 
-Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。
+Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{jsxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。
 
 ```js
 // Create a 32MB "file" and fill it.
@@ -703,7 +706,7 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 和 worker 溝通則是利用 postMessage。
 
-[範例測試](/samples/workers/fibonacci)。
+[範例測試](https://mdn.dev/archives/media/samples/workers/fibonacci)。
 
 ### 在背景中執行 web I/O
 
@@ -717,31 +720,31 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 除了 dedicated 和 shared web workers，還有其他種類：
 
-- [ServiceWorkers](/zh-TW/docs/Web/API/ServiceWorker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
+- [ServiceWorkers](/zh-TW/docs/Web/API/Service_Worker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
 - Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 [js-ctypes](/zh-TW/js-ctypes)。詳情請見 {{domxref("ChromeWorker")}}。
-- [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) 主要用於音效處理部分。
+- [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#audio_workers) 主要用於音效處理部分。
 
 ## Worker 可存取之函數與介面
 
 大多數 Javascript 的功能 worker 皆可以使用，包含：
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
-- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, 與 {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, 與 {{domxref("WindowTimers.setInterval")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
+- {{jsxref("Array")}}、{{jsxref("Date")}}、{{jsxref("Math")}} 與 {{jsxref("String")}}
+- {{domxref("setTimeout()")}} 與 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。
 
 > [!NOTE]
-> 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/Reference/Functions_and_classes_available_to_workers).
+> 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
-## 標準規範
+## 規範
 
 {{Specifications}}
 
-## 延伸閱讀
+## 參見
 
-- [`Worker`](/zh-TW/docs/Web/API/Worker) interface
-- [`SharedWorker`](/zh-TW/docs/Web/API/SharedWorker) interface
-- [Functions available to workers](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [Advanced concepts and examples](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("Worker")}} 介面
+- {{domxref("SharedWorker")}} 介面
+- [worker 中可用的函數](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- {{domxref("OffscreenCanvas")}} 介面

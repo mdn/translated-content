@@ -7,9 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 
-Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueof", "valueOf()")}}.
+Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueOf", "valueOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## Синтаксис
 
@@ -41,7 +49,7 @@ console.log(copy.setTime(birthday.getTime())); // 1611090000000
 
 ### Пример: замер времени выполнения
 
-Вычитанием двух последовательных вызовов метода `getTime()` на заново сконструированных объектах {{jsxref("Global_Objects/Date", "Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.
+Вычитанием двух последовательных вызовов метода `getTime()` на заново сконструированных объектах {{jsxref("Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.
 
 ```js
 let end, start;

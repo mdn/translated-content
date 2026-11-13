@@ -102,7 +102,7 @@ slug: Web/API/RTCPeerConnection
 
 ### Перечисление RTCIceGatheringState
 
-Перечисление `RTCIceGatheringState` определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменения этого свойства можно подписаться на событие {{event("icegatheringstatechange")}}.
+Перечисление `RTCIceGatheringState` определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменения этого свойства можно подписаться на событие [`icegatheringstatechange`](/ru/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event).
 
 | Константы     | Описание                                                                                                                                                                                                                               |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,7 +131,7 @@ slug: Web/API/RTCPeerConnection
 | `"connected"`    | Соединён. Каждый объект ICE передачи, использующийся соединением либо используется (имеет статус `"connected"` или `"completed"`) , либо закрыт (имеет статус `"closed"`); кроме того, по крайней мере один объект передачи имеет статус либо `"connected"` , либо `"completed"`.                                                                                          |
 | `"disconnected"` | Разъединён. По меньшей мере один из объектов ICE передачи в соединении имеет статус `"disconnected"` и ни один из объекто передачи не находиться в статусе : `"failed"`, `"connecting"`, или `"checking"`.                                                                                                                                                                 |
 | `"failed"`       | Неудачно. Один или несколько объектов передачи могут находиться в статусе `"failed"`.                                                                                                                                                                                                                                                                                      |
-| `"closed"`       | Закрыто. Соединение `RTCPeerConnection` закрыто.Ранее входило в значения перечисления [`RTCSignalingState`](#RTCSignalingState_enum) (и поэтому может быть найдено в свойстве {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) до 13 мая, 2016.                                                                                                          |
+| `"closed"`       | Закрыто. Соединение `RTCPeerConnection` закрыто.Ранее входило в значения перечисления [`RTCSignalingState`](#rtcsignalingstate_enum) (и поэтому может быть найдено в свойстве {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) до 13 мая, 2016.                                                                                                          |
 
 ### Перечисление RTCRtcpMuxPolicy
 

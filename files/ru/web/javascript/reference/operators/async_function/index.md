@@ -17,7 +17,7 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-Согласно спецификации [ES2015](/ru/docs/), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Согласно спецификации [ES2015](/ru/docs/Web), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Параметры
 

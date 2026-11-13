@@ -9,7 +9,22 @@ l10n:
 
 `Symbol.unscopables` 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@unscopables`를 나타냅니다. {{jsxref("Statements/with", "with")}} 문은 범위 객체에서 이 심볼을 조회하여 `with` 환경 내에서 바인딩되지 않아야 하는 속성들의 집합을 포함하는 속성을 찾습니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## 값
 
@@ -31,7 +46,7 @@ l10n:
 
 ### with 문에서 범위 지정하기
 
-다음 코드는 ES5 및 그 이전 버전에서는 잘 작동합니다. 하지만 ECMAScript 2015 이후부터 {{jsxref("Array.prototype.keys()")}} 메서드가 도입되었습니다. 이는 `with` 환경 내에서 "keys"가 변수가 아니라 메서드가 된다는 것을 의미합니다. 이게 바로 `@@unscopables` 심볼이 도입된 이유입니다. 내장 `@@unscopables` 설정은 `with` 문의 범위에 일부 배열 메서드가 들어가는 것을 방지하기 위해 {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}로 구현되었습니다.
+다음 코드는 ES5 및 그 이전 버전에서는 잘 작동합니다. 하지만 ECMAScript 2015 이후부터 {{jsxref("Array.prototype.keys()")}} 메서드가 도입되었습니다. 이는 `with` 환경 내에서 "keys"가 변수가 아니라 메서드가 된다는 것을 의미합니다. 이게 바로 `@@unscopables` 심볼이 도입된 이유입니다. 내장 `@@unscopables` 설정은 `with` 문의 범위에 일부 배열 메서드가 들어가는 것을 방지하기 위해 {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}로 구현되었습니다.
 
 ```js
 var keys = [];
@@ -160,6 +175,6 @@ const character = {
 
 ## 같이 보기
 
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with)
 - [`Element.prototype.append()`](/ko/docs/Web/API/Element/append)

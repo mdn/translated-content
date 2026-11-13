@@ -3,10 +3,8 @@ title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
-> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
+> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).
 
 Convertit un chemin relatif dans le répertoire d'installation d'une extension en une URL complète.
 
@@ -46,9 +44,7 @@ var fullURL = browser.extension.getURL("beasts/frog.html");
 
 > [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

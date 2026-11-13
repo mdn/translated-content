@@ -5,13 +5,27 @@ l10n:
   sourceCommit: aff96926e4be5cfd33572f17e96d770deee13caa
 ---
 
-{{JSRef}}
-
 **`Math.random()`** 静态方法返回一个大于等于 0 且小于 1 的伪随机浮点数，并在该范围内近似均匀分布，然后你可以缩放到所需的范围。其实现将选择随机数生成算法的初始种子；它不能由用户选择或重置。
 
-> **备注：** `Math.random()` *不能*提供密码学安全的随机数。请不要使用它们来处理与安全相关的事情。请使用 Web Crypto API 代替，更具体地来说是 {{domxref("Crypto.getRandomValues()")}} 方法。
+> [!NOTE]
+> `Math.random()` *不能*提供密码学安全的随机数。请不要使用它们来处理与安全相关的事情。请使用 Web Crypto API 代替，更具体地来说是 {{domxref("Crypto.getRandomValues()")}} 方法。
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## 语法
 

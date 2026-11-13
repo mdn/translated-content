@@ -1,28 +1,42 @@
 ---
-title: Intl.Segmenter.prototype.segment()
+title: "Intl.Segmenter : méthode segment()"
+short-title: segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`segment()`** des instances de {{JSxRef("Intl.Segmenter")}} segmente une chaîne de caractères selon la locale et la granularité de cet objet `Intl.Segmenter`.
 
-La méthode **`Intl.Segmenter.prototype.segment()`** segmente une chaîne de caractères selon une locale et une granularité fournies par l'objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) courant.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.Segmenter.prototype.segment()")}}
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
+```js interactive-example
+const string1 = "Que ma joie demeure";
+
+const segmenterFrGrapheme = new Intl.Segmenter("fr", {
+  granularity: "grapheme",
+});
+const graphemeSegments = segmenterFrGrapheme.segment(string1);
+
+console.log(Array.from(graphemeSegments)[0]);
+// Résultat attendu :
+// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+```
 
 ## Syntaxe
 
-```js
-segment(input);
+```js-nolint
+segment(input)
 ```
 
 ### Paramètres
 
 - `input`
-  - : Le texte à segmenter, sous la forme d'une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+  - : Le texte à segmenter sous la forme d'une chaîne de caractères.
 
 ### Valeur de retour
 
-Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
+Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) qui contient les segments de la chaîne de caractères fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
 
 ## Exemples
 

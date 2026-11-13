@@ -3,14 +3,27 @@ title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 
-{{JSRef}}
-
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。
 
 > [!NOTE]
 > 這個方法會直接針對 {{jsxref("Object")}} 呼叫建構子（constructor），而不是 `Object` 型別的實例。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 語法
 
@@ -52,7 +65,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).
     **預設 {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` 則該物件屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}改變其值。
+  - : `true` 則該物件屬性可透過{{jsxref("Operators", "賦予運算子", "#賦值運算子", 1)}}改變其值。
     **預設 `false`**
 
 一個 accessor descriptor 也擁有下述之 optional keys:
@@ -64,7 +77,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : 作為 setter 形式，為屬性存在的函式，如果沒有 setter 的話則回傳 {{jsxref("undefined")}}。 The function will receive as only argument the new value being assigned to the property.
     **預設 {{jsxref("undefined")}}**
 
-請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object.prototype")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("null")}}。
+請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("Operators/null", "null")}}。
 
 ```js
 // using __proto__
@@ -335,7 +348,7 @@ Versions of Chrome which implement `Object.defineProperty()` in some circumstanc
 
 Versions of Safari which implement `Object.defineProperty()` ignore a `length` value different from the array's current {{jsxref("Array.length", "length")}} property, and attempts to change writability execute without error but do not actually change the property's writability.
 
-Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
+Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
 
 ### Internet Explorer 8 specific notes
 
@@ -347,14 +360,14 @@ Internet Explorer 8 implemented a `Object.defineProperty()` method that could [o
 
 ## 參閱
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.prototype.watch()")}}
-- {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/get", "get")}}
-- {{jsxref("Operators/set", "set")}}
+- `Object.prototype.watch()`
+- `Object.prototype.unwatch()`
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - [Additional `Object.defineProperty` examples](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples)
 - {{jsxref("Reflect.defineProperty()")}}

@@ -3,8 +3,6 @@ title: 尾后逗号
 slug: Web/JavaScript/Reference/Trailing_commas
 ---
 
-{{JsSidebar("More")}}
-
 **尾后逗号** （有时叫做“终止逗号”）在向 JavaScript 代码添加元素、参数、属性时十分有用。如果你想要添加新的属性，并且上一行已经使用了尾后逗号，你可以仅仅添加新的一行，而不需要修改上一行。这使得版本控制的代码比较（diff）更加清晰，代码编辑过程中遇到的麻烦更少。
 
 JavaScript 一开始就支持数组字面量中的尾后逗号，随后向对象字面量（ECMAScript 5）中添加了尾后逗号。最近（ECMAScript 2017），又将其添加到函数参数中。
@@ -104,7 +102,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 解构中的尾后逗号
 
-在使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)时，尾后逗号也可以用于左侧：
+[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)模式中也允许使用尾后逗号：
 
 ```js-nolint
 // 带有尾后逗号的数组解构
@@ -118,7 +116,7 @@ const o = {
 const { p, q, } = o;
 ```
 
-同样地，在使用剩余参数时，会抛出 {{jsxref("SyntaxError")}}：
+但是，剩余元素后不允许使用尾后逗号（如果存在）
 
 ```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];

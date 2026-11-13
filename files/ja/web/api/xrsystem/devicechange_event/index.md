@@ -10,7 +10,8 @@ l10n:
 
 **`devicechange`** は {{DOMxRef("XRSystem")}} オブジェクトで発生するイベントで、例えば VR ヘッドセットや AR ゴーグルが接続されたり切断されたりと、没入型 XR 機器の利用できる状況が変化した時に発生します。これは一般的な {{DOMxRef("Event")}} で、プロパティは追加されていません。
 
-> **メモ:** {{domxref("MediaDevices")}} の {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} イベントと混同しないでください。
+> [!NOTE]
+> {{domxref("MediaDevices")}} の {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} イベントと混同しないでください。
 
 ## 構文
 
@@ -22,7 +23,7 @@ addEventListener("devicechange", (event) => {});
 ondevicechange = (event) => {};
 ```
 
-WebXR の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされている場合、 `devicechange` イベントは発行されません。
+WebXR の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされている場合、 `devicechange` イベントは発行されません。
 
 ## イベント型
 

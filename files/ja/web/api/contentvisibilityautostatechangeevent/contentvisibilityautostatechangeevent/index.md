@@ -23,7 +23,7 @@ new ContentVisibilityAutoStateChangeEvent(type, options)
 - `options` {{optional_inline}}
   - : 以下のプロパティを持つオブジェクトです。
     - `skipped`
-      - : 論理値で、 `true` はユーザーエージェントが[要素のコンテンツをスキップ](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)する場合に、 `false` はそれ以外の場合に設定されます。
+      - : 論理値で、 `true` はユーザーエージェントが[要素のコンテンツをスキップ](/ja/docs/Web/CSS/Guides/Containment#skips_its_contents)する場合に、 `false` はそれ以外の場合に設定されます。
 
 ## 例
 
@@ -46,6 +46,6 @@ canvasElem.addEventListener("contentvisibilityautostatechange", (event) => {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

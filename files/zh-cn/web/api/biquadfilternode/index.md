@@ -45,7 +45,6 @@ _继承属性自父级的_ _{{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
   - : Is an [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](http://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
-
   - : 节点实现定义不同过滤算法的一个字符串值。
 
     | `type`      | Description                                                                                                                                                                                                                                                                  | `frequency`                                                                                                                                                                     | `Q`                                                                                                                                        | `gain`                                                                   |
@@ -80,4 +79,4 @@ _继承方法自父级的 {{domxref("AudioNode")}}_.
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

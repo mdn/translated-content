@@ -95,7 +95,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## Смотрите также
 
-- [HTML forms](/ru/docs/Learn/HTML/Forms)
+- [HTML forms](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("form")}} и интерфейс {{domxref("HTMLFormElement")}}
 
 {{APIRef("DOM")}}

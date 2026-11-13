@@ -3,16 +3,14 @@ title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 73 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
-- ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](/ja/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) ([Firefox バグ 1291192](https://bugzil.la/1291192))。
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
+- ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering_and_searching) ([Firefox バグ 1291192](https://bugzil.la/1291192))。
 
 ### HTML
 
@@ -24,7 +22,7 @@ _変更なし。_
 
 #### 廃止
 
-- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を使用してください。
 
 ### SVG
 
@@ -38,17 +36,17 @@ _変更なし。_
 
 ### JavaScript
 
-- The `yearName` および `relatedYear` フィールドが [`DateTimeFormat.prototype.formatToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/formatToParts) メソッドで使用可能になりました。CJK カレンダー向けに役立つフォーマットです ([Firefox バグ 1591664](https://bugzil.la/1591664))。
+- The `yearName` および `relatedYear` フィールドが [`DateTimeFormat.prototype.formatToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts) メソッドで使用可能になりました。CJK カレンダー向けに役立つフォーマットです ([Firefox バグ 1591664](https://bugzil.la/1591664))。
 
 ### API
 
 #### DOM
 
-- {{domxref("Window")}} オブジェクトの {{domxref("Window.innerWidth", "innerWidth")}} および {{domxref("Window.innerHeight", "innerHeight")}} プロパティが、ときどき視覚的なビューポートに基づいて幅や高を返すことなく、常にレイアウトビューポートの幅や高さを返すようになりました。特に、以前は [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) を使用するときに視覚的なビューポートの寸法を返しており、想定とは異なる動作でした ([Firefox バグ 1514429](https://bugzil.la/1514429))。
+- {{domxref("Window")}} オブジェクトの {{domxref("Window.innerWidth", "innerWidth")}} および {{domxref("Window.innerHeight", "innerHeight")}} プロパティが、ときどき視覚的なビューポートに基づいて幅や高を返すことなく、常にレイアウトビューポートの幅や高さを返すようになりました。特に、以前は [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) を使用するときに視覚的なビューポートの寸法を返しており、想定とは異なる動作でした ([Firefox バグ 1514429](https://bugzil.la/1514429))。
 
 #### WebVR
 
-- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [安全なコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#API_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ([Firefox バグ 1381645](https://bugzil.la/1381645))。
+- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [保護されたコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#api_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ([Firefox バグ 1381645](https://bugzil.la/1381645))。
 
 #### 廃止
 

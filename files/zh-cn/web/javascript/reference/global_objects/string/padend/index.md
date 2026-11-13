@@ -3,11 +3,21 @@ title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
 
-{{JSRef}}
-
 **`padEnd()`** 方法会将当前字符串从末尾开始填充给定的字符串（如果需要会重复填充），直到达到给定的长度。填充是从当前字符串的末尾开始的。
 
-{{EmbedInteractiveExample("pages/js/string-padend.html")}}
+{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+
+```js interactive-example
+const str1 = "Breaded Mushrooms";
+
+console.log(str1.padEnd(25, "."));
+// Expected output: "Breaded Mushrooms........"
+
+const str2 = "200";
+
+console.log(str2.padEnd(5));
+// Expected output: "200  "
+```
 
 ## 语法
 

@@ -104,7 +104,7 @@ console.log(square.area); // 100
 
 ### Статические методы и свойства
 
-Ключевое слово [`static`](/ru/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Object_.28Class_Instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
+Ключевое слово [`static`](/ru/docs/Web/JavaScript/Reference/Classes/static), определяет статический метод или свойства для класса. Статические методы и свойства вызываются без [инстанцирования](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_object_.28class_instance.29) их класса, и **не могут** быть вызваны у экземпляров (_instance_) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.
 
 ```js
 class Point {
@@ -220,7 +220,7 @@ class Rectangle {
 
 Как видно из примера, поля могут быть объявлены как со начальным значением, так и без него.
 
-Более подробно об этом написано в [публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Class_fields).
+Более подробно об этом написано в [публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
 #### Приватные поля
 
@@ -413,7 +413,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
 - [Определение классов](/ru/docs/Web/JavaScript/Reference/Statements/class)
 - [Выражение классов](/ru/docs/Web/JavaScript/Reference/Operators/class)
-- [Публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Class_fields)
+- [Публичные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [Приватные поля класса](/ru/docs/Web/JavaScript/Reference/Classes/%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%BD%D1%8B%D0%B5_%D0%BF%D0%BE%D0%BB%D1%8F_%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0)
 - [super](/ru/docs/Web/JavaScript/Reference/Operators/super)
 - [Статья в блоге: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)

@@ -1,95 +1,95 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+{{jsxref("Array")}} 實例的 **`filter()`** 方法會建立一個給定陣列部分的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，過濾掉未通過所提供函式所實作測試的給定陣列元素。
 
-**`filter()`** 方法會建立一個經指定之函式運算後，由原陣列中通過該函式檢驗之元素所構成的新陣列。
+{{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
 
-### ES6 版本
+const result = words.filter((word) => word.length > 6);
 
-```js
-const words = [
-  "spray",
-  "limit",
-  "elite",
-  "exuberant",
-  "destruction",
-  "present",
-  "happy",
-];
-
-let longWords = words.filter((word) => word.length > 6);
-
-// Filtered array longWords is ["exuberant", "destruction", "present"]
+console.log(result);
+// 預期輸出：Array ["exuberant", "destruction", "present"]
 ```
 
 ## 語法
 
-```plain
-var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+```js-nolint
+filter(callbackFn)
+filter(callbackFn, thisArg)
 ```
 
 ### 參數
 
-- `callback`
-
-  - : 此函式為一個斷言，用於測試陣列中的每個元素。回傳值為 `true` 時將當前的元素保留至新陣列中，若為 `false` 則不保留。可傳入三個參數：
-
+- `callbackFn`
+  - : 針對陣列中每個元素執行的函式。它應回傳一個[真值](/zh-TW/docs/Glossary/Truthy)以保留該元素於結果陣列中，否則回傳[偽值](/zh-TW/docs/Glossary/Falsy)。該函式會接收以下引數：
     - `element`
-      - : 原陣列目前所迭代處理中的元素。
-    - `index`{{optional_inline}}
-      - : 原陣列目前所迭代處理中的元素之索引。
-    - `array`{{optional_inline}}
-      - : 呼叫 `filter` 方法的陣列。
-
+      - : 陣列中當前處理的元素。
+    - `index`
+      - : 陣列中當前處理元素的索引。
+    - `array`
+      - : 调用 `filter()` 的陣列。
 - `thisArg` {{optional_inline}}
-  - : 可選的。執行 `callback` 回呼函式的 `this` 值。
+  - : 執行 `callbackFn` 時用作 `this` 的值。請參閱[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 回傳值
 
-一個元素為通過回呼函式檢驗的新陣列。
+一個包含通過測試元素的給定陣列[淺複製](/zh-TW/docs/Glossary/Shallow_copy)。若無元素通過測試，則回傳空陣列。
 
 ## 描述
 
-`filter()` 會將所有陣列中的元素分別傳入一次至 `callback` 函式當中，並將所有傳入此回呼函式並得到回傳值為 [Truthy](/zh-TW/docs/Glossary/Truthy) 的元素建構成一個新的陣列。`callback` 函式只會於陣列目前迭代之索引有指派值時被呼叫，回呼函式不會在該陣列索引已被刪除或從未被賦值時被調用。原始陣列中沒有通過 `callback` 檢驗的元素會被簡單的跳過，且不會被包含在新建立的陣列中。
+`filter()` 方法是一個[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它會對陣列中的每個元素调用一次提供的 `callbackFn` 函式，並根據 `callbackFn` 回傳的[真值](/zh-TW/docs/Glossary/Truthy)來構建一個新陣列。不通過 `callbackFn` 測試的陣列元素不會包含在新陣列中。如需更多關於這些方法運作方式的資訊，請閱讀[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)章節。
 
-`callback` 函式於被調用時會傳入三個參數：
+`callbackFn` 只會針對陣列中已賦值的索引调用，不會對[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)中的空槽调用。
 
-1. 元素值
-2. 元素之索引
-3. 被迭代的陣列物件
-
-若有提供 `thisArg` 參數予 `filter` 方法，`thisArg` 將會被當作回呼函式的 `this` 值，否則 `this` 會是 `undefined`。`callback` 的最終 `this` 值是依據[函式的 `this` 規則](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)來決定。
-
-`filter()` 不會修改呼叫它的原始陣列。
-
-由 `filter()` 方法所回傳之新陣列的範圍，於 `callback` 函式第一次被調用之前就已經被設定。而在呼叫 `filter()` 之後才加至原始陣列中的元素，將不會傳入 `callback` 當中。假如原始陣列中元素的值改變或被刪除了，則 `callback` 得到此元素的值將會是 `filter()` 傳入元素當下的值。而被刪除的原始陣列元素並不會被迭代到。
+`filter()` 方法是[通用的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。它僅期望 `this` 值具有 `length` 屬性及整數鍵屬性。
 
 ## 範例
 
-### 過濾所有的小數字
+### 過濾掉所有較小的值
 
-以下範例會用 `filter()` 建立一個把所有小於 10 的元素都移掉的陣列。
+以下範例使用 `filter()` 建立一個過濾後的陣列，去除所有小於 10 的元素。
 
 ```js
 function isBigEnough(value) {
   return value >= 10;
 }
 
-var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
-// filtered is [12, 130, 44]
+const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// 過濾後為 [12, 130, 44]
 ```
 
-### 從 JSON 過濾無效的項目
+### 找出陣列中的所有質數
 
-以下範例會用 `filter()` 建立一個把非零 numeric `id` 的元素都過濾掉的的 JSON。
+以下範例回傳陣列中的所有質數：
 
 ```js
-var arr = [
+const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+function isPrime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+```
+
+### 從 JSON 中過濾無效條目
+
+以下範例使用 `filter()` 建立一個過濾後的 JSON，僅包含非零且為數值的 `id` 元素。
+
+```js
+const arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -101,96 +101,86 @@ var arr = [
   { id: "undefined" },
 ];
 
-var invalidEntries = 0;
-
-function isNumber(obj) {
-  return obj !== undefined && typeof obj === "number" && !isNaN(obj);
-}
+let invalidEntries = 0;
 
 function filterByID(item) {
-  if (isNumber(item.id)) {
+  if (Number.isFinite(item.id) && item.id !== 0) {
     return true;
   }
   invalidEntries++;
   return false;
 }
 
-var arrByID = arr.filter(filterByID);
+const arrByID = arr.filter(filterByID);
 
-console.log("過濾好的陣列\n", arrByID);
-// 過濾好的陣列
-// [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
+console.log("過濾後的陣列\n", arrByID);
+// 過濾後的陣列
+// [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log("無效的元素數量 = ", invalidEntries);
-// 無效的元素數量 = 4
+console.log("無效條目數量 =", invalidEntries);
+// 無效條目數量 = 5
 ```
 
 ### 在陣列中搜尋
 
-下面範例使用 `filter()` 去過濾符合搜尋條件的陣列內容。
-
-```js
-var fruits = ["apple", "banana", "grapes", "mango", "orange"];
-
-/**
- * 陣列透過搜尋條件（查詢）過濾物件
- */
-function filterItems(query) {
-  return fruits.filter(function (el) {
-    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  });
-}
-
-console.log(filterItems("ap")); // ['apple', 'grapes']
-console.log(filterItems("an")); // ['banana', 'mango', 'orange']
-```
-
-### ES2015 實作方式
+以下範例使用 `filter()` 根據搜尋條件過濾陣列內容。
 
 ```js
 const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
- * 陣列透過搜尋條件（查詢）過濾物件
+ * 根據搜尋條件（查詢）過濾陣列項目
  */
-const filterItems = (query) => {
-  return fruits.filter(
-    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1,
-  );
-};
+function filterItems(arr, query) {
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+}
 
-console.log(filterItems("ap")); // ['apple', 'grapes']
-console.log(filterItems("an")); // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
-## Polyfill
+### 使用 callbackFn 的第三個引數
 
-`filter()` 在 ECMA-262 第五版時被納入標準；它也許不會出現在該標準的所有實作引擎之中。你可以在你的腳本最前面加入下面的程式碼作為替代方案，讓不支援 `filter()` 的 ECMA-262 實作引擎能夠使用它。假設 `fn.call` 是採用 {{jsxref("Function.prototype.bind()")}} 的原始值，這個演算法完全和 ECMA-262 第五版定義的規格相同。
+`array` 引數在你想存取陣列中其他元素時特別有用，尤其是當你沒有現有的變數指向該陣列時。以下範例首先使用 `map()` 從每個名稱中提取數字 ID，然後使用 `filter()` 選出比其鄰居大的 ID。
 
 ```js
-if (!Array.prototype.filter)
-  Array.prototype.filter = function (func, thisArg) {
-    "use strict";
-    if (!(typeof func === "Function" && this)) throw new TypeError();
+const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
+const greatIDs = names
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
+  .filter((id, idx, arr) => {
+    // 若沒有 arr 引數，無法輕鬆存取中間陣列，除非將其儲存到變數中。
+    if (idx > 0 && id <= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && id <= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(greatIDs); // [132, 96]
+```
 
-    var len = this.length >>> 0,
-      res = new Array(len), // 預先配置陣列
-      c = 0,
-      i = -1;
-    if (thisArg === undefined)
-      while (++i !== len)
-        // 確認物件的鍵值i是否有被設置
-        if (i in this)
-          if (func(t[i], i, t)) res[c++] = t[i];
-          else
-            while (++i !== len)
-              // 確認物件的鍵值i是否有被設置
-              if (i in this)
-                if (func.call(thisArg, t[i], i, t)) res[c++] = t[i];
+`array` 引數*不是*正在構建的陣列——在回呼函式中無法存取正在構建的陣列。
 
-    res.length = c; // 將陣列縮至適當大小
-    return res;
-  };
+### 在稀疏陣列上使用 filter()
+
+`filter()` 會跳過空槽。
+
+```js
+console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
+```
+
+### 在非陣列物件上调用 filter()
+
+`filter()` 方法會讀取 `this` 的 `length` 屬性，然後存取每個鍵為小於 `length` 的非負整數的屬性。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: "a", // filter() 忽略此項，因為 length 為 3
+};
+console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+// [ 'a', 'b' ]
 ```
 
 ## 規範
@@ -203,7 +193,13 @@ if (!Array.prototype.filter)
 
 ## 參見
 
+- [`core-js` 中 `Array.prototype.filter` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.filter` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.filter)
+- [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}

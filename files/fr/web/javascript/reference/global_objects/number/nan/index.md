@@ -1,17 +1,52 @@
 ---
-title: Number.NaN
+title: "Number : propriété statique NaN"
+short-title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété statique **`Number.NaN`** représente la valeur <i lang="en">Not-A-Number</i>, ce qui est équivalent à {{JSxRef("NaN")}}. Pour plus d'informations sur le comportement de `NaN`, voir la [description de la propriété native](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 
-La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais «&nbsp;_Not-A-Number_&nbsp;» qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Number.NaN", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/number-nan.html")}}
+```js interactive-example
+function clean(x) {
+  if (x === Number.NaN) {
+    // Ne peut jamais être vrai
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
 
-Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique. Il suffit d'utiliser directement `Number.NaN`.
+console.log(clean(Number.NaN));
+// Résultat attendu : 0
+```
 
-{{js_property_attributes(0,0,0)}}
+## Valeur
+
+La valeur numérique {{JSxRef("NaN")}}.
+
+{{js_property_attributes(0, 0, 0)}}
+
+## Description
+
+Puisque `NaN` est une propriété statique de {{JSxRef("Number")}}, vous l'utilisez toujours comme `Number.NaN`, plutôt que comme propriété d'une valeur numérique.
+
+## Exemples
+
+### Vérifier si les valeurs sont numériques
+
+```js
+function assainir(x) {
+  if (isNaN(x)) {
+    return Number.NaN;
+  }
+  return x;
+}
+```
 
 ## Spécifications
 
@@ -23,5 +58,5 @@ Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder �
 
 ## Voir aussi
 
-- L'objet global {{jsxref("NaN")}}&nbsp;;
-- L'objet {{jsxref("Number")}} auquel appartient cette propriété.
+- La propriété native {{JSxRef("NaN")}}
+- La méthode statique {{JSxRef("Number.isNaN()")}}

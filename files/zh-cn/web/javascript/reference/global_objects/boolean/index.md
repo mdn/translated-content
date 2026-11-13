@@ -3,8 +3,6 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef}}
-
 **`Boolean`** 对象是一个布尔值的对象包装器。
 
 ## 描述
@@ -112,5 +110,5 @@ const bObjProto = new Boolean({});
 ## 参见
 
 - [Boolean](/zh-CN/docs/Glossary/Boolean)
-- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)
+- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#boolean_类型)
 - [布尔类型（维基百科）](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

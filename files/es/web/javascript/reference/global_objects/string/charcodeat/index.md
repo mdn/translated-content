@@ -22,7 +22,7 @@ cadena.charCodeAt(indice);
 
 ## Descripción
 
-El rango del código Unicode va del 0 al 1,114,1110x10FFFF. Los primeros 128 códigos de Unicode encajan directamente con los códigos de caractéres de la codificación ASCII. Para información sobre Unicode, vea la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Valores,_variables_y_literales#Unicode). Observe que `charCodeAt` siempre devolverá un valor menor de 65.536.
+El rango del código Unicode va del 0 al 1,114,1110x10FFFF. Los primeros 128 códigos de Unicode encajan directamente con los códigos de caractéres de la codificación ASCII. Para información sobre Unicode, vea la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). Observe que `charCodeAt` siempre devolverá un valor menor de 65.536.
 
 `charCodeAt` devuelve {{jsxref("NaN")}} si el indice proporcionado no está entre 0 y 1 menos de la longitud de la cadena.
 

@@ -11,7 +11,8 @@ L'interface :
 
 - Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification des <i lang="en">service workers</i> le définit).
 
-  > **Note :** [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
+  > [!NOTE]
+  > [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
 
 - Maintient une correspondance entre les noms des chaînes de caractères et les objets {{domxref("Cache")}} correspondants.
 
@@ -19,12 +20,13 @@ Utilisez {{domxref("CacheStorage.open()")}} pour obtenir une instance {{domxref(
 
 Utilisez {{domxref("CacheStorage.match()")}} pour vérifier si une {{domxref("Request", "Requête")}} donnée est une clé dans l'un des objets {{domxref("Cache")}} que l'objet `CacheStorage` surveille.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
 
 > [!NOTE]
 > CacheStorage échouera systématiquement avec une `SecurityError` sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.
 
-> **Note :** {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.
+> [!NOTE]
+> {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.
 
 ## Méthodes
 
@@ -170,6 +172,6 @@ try {
 
 ## Voir aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/caches)
+- [`caches`](/fr/docs/Web/API/Window/caches)

@@ -145,6 +145,6 @@ gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
 
 정육면체의 각 면이 두 개의 삼각형으로 이루어져 있으므로, 한 면에는 6개의 정점이 있으며, 정육면체 전체로는 총 36개의 정점이 존재합니다. 정점 배열에는 24개의 정점이 있었으므로 36개의 정점을 구성하려면 하나의 정점이 여러번 중복되어 사용 되었을 것 입니다. 비효율적이라고 생각될 수도 있지만, 인덱스 배열은 처리가 단순한 정수형 데이터로만 구성되어 있으므로, 36개의 정수형 배열이 하나의 애니메이션 프레임에서 처리하기에 지나치게 많은 수준의 데이터는 아닙니다.
 
-이제 지금까지 만든 정육면체를 확인 해 보겠습니다. WebGL을 지원하는 브라우저에서는 [여기](/samples/webgl/sample5/index.html)에서 6개의 면이 원색으로 채색된 정육면체를 볼 수 있습니다.
+이제 지금까지 만든 정육면체를 확인 해 보겠습니다. WebGL을 지원하는 브라우저에서는 [여기](http://mdn.github.io/webgl-examples/tutorial/sample5/index.html)에서 6개의 면이 원색으로 채색된 정육면체를 볼 수 있습니다.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

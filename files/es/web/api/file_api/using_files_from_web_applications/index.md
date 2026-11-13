@@ -15,7 +15,7 @@ Seleccionar solo un fichero usando la API File es sencillo:
 <input type="file" id="input" onchange="handleFiles(this.files)">
 ```
 
-Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList`](/en/DOM/FileList)el cual a su vez contiene un objeto [`File`](/en/DOM/File) que representa el fichero elegido por el usuario.
+Cuando el usuario elige el fichero, la función `handleFiles()` es llamada con un objeto [`FileList`](/es/docs/Web/API/FileList)el cual a su vez contiene un objeto [`File`](/es/docs/Web/API/File) que representa el fichero elegido por el usuario.
 
 Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el atributo `multiple` en el elemento `input:`
 
@@ -23,7 +23,7 @@ Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el a
 <input type="file" id="input" multiple="true" onchange="handleFiles(this.files)">
 ```
 
-En este caso, la lista de ficheros pasada a la función `handleFiles()` contiene un objeto [`File`](/en/DOM/File) por cada fichero seleccionado por el usuario.
+En este caso, la lista de ficheros pasada a la función `handleFiles()` contiene un objeto [`File`](/es/docs/Web/API/File) por cada fichero seleccionado por el usuario.
 
 Comenzando en Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()` del elemento {{ HTMLElement("input") }}.
 
@@ -67,15 +67,15 @@ function handleFiles() {
 
 Nota: en este caso, la función `handleFiles()` mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
 
-Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/en/DOM/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
+Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/es/docs/Web/API/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
 
-Cuando tienes un objeto[`File`](/en/DOM/File) te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
+Cuando tienes un objeto[`File`](/es/docs/Web/API/File) te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
 
 ```
 var blobURL = window.createBlobURL(fileObj);
 ```
 
-El blob URL es un string que identifica el objeto[`File`](/en/DOM/File). Cada vez que se llama a {{ domxref("window.createBlobURL()") }}, un único blob URL se crea. Cada vez que esto pasa debe de ser liberado. Cuando el documento se cierra, se libera automáticamente, pero si tu página lo usa dinámicamente deberás liberarlos explicitamente llamando a {{ domxref("window.revokeBlobURL()") }}:
+El blob URL es un string que identifica el objeto[`File`](/es/docs/Web/API/File). Cada vez que se llama a {{ domxref("window.createBlobURL()") }}, un único blob URL se crea. Cada vez que esto pasa debe de ser liberado. Cuando el documento se cierra, se libera automáticamente, pero si tu página lo usa dinámicamente deberás liberarlos explicitamente llamando a {{ domxref("window.revokeBlobURL()") }}:
 
 ```
 window.revokeBlobURL(blobURL);
@@ -130,13 +130,13 @@ Aquí se recupera el campo `dataTransfer` del evento, a partir de ahi se extraen
 
 ## Recuperando la información de los ficheros selecionados
 
-El objeto [`FileList`](/en/DOM/FileList) es dado por el DOM y lista todos los ficheros selecionados por el usuario, cada uno es un objeto [`File`](/en/DOM/File). Para determinar el número de ficheros que han sido seleccionados se comprueba la longitud de la lista con el atributo `length`:
+El objeto [`FileList`](/es/docs/Web/API/FileList) es dado por el DOM y lista todos los ficheros selecionados por el usuario, cada uno es un objeto [`File`](/es/docs/Web/API/File). Para determinar el número de ficheros que han sido seleccionados se comprueba la longitud de la lista con el atributo `length`:
 
 ```
 var numFiles = files.length;
 ```
 
-Al objeto [`File`](/en/DOM/File) se accede de manera sencilla, accediendo a la lista como si fuera un array:
+Al objeto [`File`](/es/docs/Web/API/File) se accede de manera sencilla, accediendo a la lista como si fuera un array:
 
 ```
 for (var i = 0; i < files.length; i++) {
@@ -147,7 +147,7 @@ for (var i = 0; i < files.length; i++) {
 
 El bucle itera por todos los ficheros de la lista.
 
-Cada objeto [`File`](/en/DOM/File) tiene tres atributos que contienen información util sobre el fichero.
+Cada objeto [`File`](/es/docs/Web/API/File) tiene tres atributos que contienen información util sobre el fichero.
 
 - `name`
   - : Es de solo lectura y es el nombre del fichero sin ninguna información sobre el path.
@@ -184,11 +184,11 @@ function handleFiles(files) {
 
 Aquí nuestro bucle recorre los archivos seleccionados por el usuario y mira el atributo `type` de cada archivo para ver si es una imagen (haciendo que una expresión regular coincida con la cadena de texto "image.\*"). Para cada archivo que sea una imagen, creamos un nuevo elemento `img`. Se puede usar CSS para establecer bordes bonitos, sombras, y especificar el tamaño de la imagen, el de manera que ni siquiera necesita hacerse aquí.
 
-Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo `file` a cada imagen especificando el [`Fichero`](/en/DOM/File) para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
+Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo `file` a cada imagen especificando el [`Fichero`](/es/docs/Web/API/File) para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.
 
-A continuación establecemos el [`FileReader`](/en/DOM/FileReader) para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento `img`. Después de crear el nuevo objeto `FileReader`, configuramos su función `onload`, luego llamamos a `readAsDataURL()` para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a `data:` URL, el cuál es pasado al callback `onload`. Nuestra implementación de esta rutina simplemente establece el atributo `src` del elemento `img` cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.
+A continuación establecemos el [`FileReader`](/es/docs/Web/API/FileReader) para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento `img`. Después de crear el nuevo objeto `FileReader`, configuramos su función `onload`, luego llamamos a `readAsDataURL()` para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a `data:` URL, el cuál es pasado al callback `onload`. Nuestra implementación de esta rutina simplemente establece el atributo `src` del elemento `img` cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.
 
-Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes [ver el ejemplo](/samples/domref/file-click-demo.html) (tenga en cuenta que se requiere una versión [Nghtly](http://nightly.mozilla.org/) de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).
+Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes [ver el ejemplo](https://mdn.dev/archives/media/samples/domref/file-click-demo.html) (tenga en cuenta que se requiere una versión [Nghtly](https://nightly.mozilla.org/) de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).
 
 El HTML que representa la interfaz es::
 
@@ -241,7 +241,6 @@ Si el objeto {{ domxref("FileList") }} pasado a `handleFiles()` es `null`, simpl
 1. Un nuevo elemento de lista desordenada ({{ HTMLElement("ul") }} es creado.
 2. El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
 3. Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
-
    1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
    2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
    3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.
@@ -255,7 +254,7 @@ Otra cosa que podrías querer hacer es dejar que el usuario suba el archivo o lo
 
 ### Creando las tareas de subida
 
-Continuando con el código que contruye las miniaturas en el ejemplo anterior, hay que recordar que cada imagen en miniatura se encuentra en la clase CSS "obj", con el correspondiente [`File`](/en/DOM/File) adjunto en un attributo `file`. Vamos a seleccionar todas las imágenes que el usuario ha seleccionado facilmente para subirlas usando {{ domxref("Document.querySelectorAll()") }}, como sigue:
+Continuando con el código que contruye las miniaturas en el ejemplo anterior, hay que recordar que cada imagen en miniatura se encuentra en la clase CSS "obj", con el correspondiente [`File`](/es/docs/Web/API/File) adjunto en un attributo `file`. Vamos a seleccionar todas las imágenes que el usuario ha seleccionado facilmente para subirlas usando {{ domxref("Document.querySelectorAll()") }}, como sigue:
 
 ```
 function sendFiles() {
@@ -299,7 +298,7 @@ function FileUpload(img, file) {
 }
 ```
 
-La función `FileUpload()` mostrada arriba crea un throbber, el cual es usado para mostrar la información del progreso, a continuación se crea un [`XMLHttpRequest`](/en/XMLHttpRequest) para manejar la subida de los datos.
+La función `FileUpload()` mostrada arriba crea un throbber, el cual es usado para mostrar la información del progreso, a continuación se crea un [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) para manejar la subida de los datos.
 
 Antes de subir los datos de hecho, se toman varias medidas preparatorias:
 
@@ -354,8 +353,8 @@ _Esto necesita ser modificado para funcionar con datos binarios también._
 
 ## Ver también
 
-- [`File`](/en/DOM/File)
-- [`FileList`](/en/DOM/FileList)
-- [`FileReader`](/en/DOM/FileReader)
-- [Usando XMLHttpRequest](/En/XMLHttpRequest/Using_XMLHttpRequest)
-- [`XMLHttpRequest`](/en/XMLHttpRequest)
+- [`File`](/es/docs/Web/API/File)
+- [`FileList`](/es/docs/Web/API/FileList)
+- [`FileReader`](/es/docs/Web/API/FileReader)
+- [Usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest)

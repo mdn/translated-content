@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 
 **`Object.getOwnPropertySymbols()`** 메서드는 주어진 객체에서 직접 찾은 모든 심볼 속성들의 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+
+```js interactive-example
+const object1 = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object1[a] = "localSymbol";
+object1[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object1);
+
+console.log(objectSymbols.length);
+// Expected output: 2
+```
 
 ## 구문
 

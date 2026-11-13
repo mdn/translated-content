@@ -1,13 +1,25 @@
 ---
 title: Map.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 {{jsxref("Map")}} 实例的 **`size`** 访问器属性返回此 map 中元素的数量。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
+{{InteractiveExample("JavaScript 演示：Map.prototype.size")}}
+
+```js interactive-example
+const map = new Map();
+
+map.set("a", "alpha");
+map.set("b", "beta");
+map.set("g", "gamma");
+
+console.log(map.size);
+// 预期输出：3
+```
 
 ## 描述
 

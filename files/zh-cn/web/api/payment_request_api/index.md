@@ -24,7 +24,7 @@ slug: Web/API/Payment_Request_API
 你可以在[Using the Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)中查看完整指南。
 
 > [!NOTE]
-> 此 API 只有在设置了[`allowpaymentrequest`](/zh-CN/docs/Web/HTML/Element/iframe#allowpaymentrequest)属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
+> 此 API 只有在设置了[`allowpaymentrequest`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest)属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
 
 ## 接口
 
@@ -78,5 +78,5 @@ slug: Web/API/Payment_Request_API
 - [Using the Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/zh-CN/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
-- [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
+- [Google Pay API PaymentRequest 教程](https://developers.google.cn/pay/api/web/guides/paymentrequest/tutorial)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)

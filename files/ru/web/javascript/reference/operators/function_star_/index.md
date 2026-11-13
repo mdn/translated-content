@@ -50,7 +50,7 @@ var x = function* (y) {
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - Объект {{jsxref("GeneratorFunction")}}
-- [Протоколы перебора: Итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#Протокол_Итератор)
+- [Протоколы перебора: Итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#протокол_итератор)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - Объект {{jsxref("Function")}}

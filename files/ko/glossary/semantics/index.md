@@ -49,7 +49,7 @@ HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 
 
 ## 의미론적 요소들
 
-사용가능한 100개 정도의 의미론적 [요소](/ko/docs/Web/HTML/Element)들이 있습니다.
+사용가능한 100개 정도의 의미론적 [요소](/ko/docs/Web/HTML/Reference/Elements)들이 있습니다.
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -68,9 +68,8 @@ HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 
 
 ## 같이 보기
 
-- MDN의 [HTML 요소 참조](/ko/docs/Web/HTML/Element#Inline_text_semantics)
-- MDN의 [HTML 구역과 윤곽선 사용하기](/ko/docs/Web/HTML/Element/Heading_Elements#usage_notes)
+- MDN의 [HTML 요소 참조](/ko/docs/Web/HTML/Reference/Elements#inline_text_semantics)
+- MDN의 [HTML 구역과 윤곽선 사용하기](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements#usage_notes)
 - 위키백과의 [컴퓨터 과학에서 시맨틱의 의미](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("SEO")}}

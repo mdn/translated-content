@@ -1,48 +1,45 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
+l10n:
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Animations API")}}
+{{APIRef("Web Animations")}}
 
-## 摘要
-
-**`AnimationEvent`** 介面表現提供[動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)相關資訊的事件。
+**`AnimationEvent`** 介面表示提供與[動畫](/zh-TW/docs/Web/CSS/Guides/Animations/Using)相關訊息的事件。
 
 {{InheritanceDiagram}}
 
-## 性能
+## 建構子
 
-_另外從其父 {{domxref("Event")}} 繼承屬性_。
+- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
+  - : 使用給定的參數建立一個 `AnimationEvent` 事件。
 
-- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : 是一個{{domxref("DOMString")}}包含的值 {{cssxref("animation-name")}} CSS 屬性與過渡有關。
-- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : 是一個`float`給予時間的動畫已經運行，以秒為單位，當該事件燒製，不含動畫被暫停的任何時間量。為一個`"animationstart"`事件，`elapsedTime`是`0.0`，除非有一個負值{{cssxref("animation-delay")}}，在這種情況下，該事件將與燒製`elapsedTime`含有 `(-1 * delay)`。
-- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : 是一個{{domxref("DOMString")}}，從`"::"`，包含的名字[虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)的動畫運行。如果動畫上不偽元素，但該元素，一個空字符串上運行`：''。`
+## 實例屬性
 
-## 構造函數
+_也繼承自其父 {{domxref("Event")}} 的屬性_。
 
-- {{domxref("AnimationEvent.AnimationEvent","AnimationEvent()")}}
-  - : 創建一個`AnimationEvent`事件具有給定參數。
+- {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
+  - : 包含產生動畫的 {{cssxref("animation-name")}} 值的字串。
+- {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
+  - : 一個 `float`，表示此事件觸發時動畫已執行的時間（以秒為單位），不包括動畫暫停的時間。對於 `animationstart` 事件，`elapsedTime` 為 `0.0`，除非 {{cssxref("animation-delay")}} 有負值，此時事件將以 `(-1 * delay)` 的 `elapsedTime` 值觸發。
+- {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
+  - : 一個以 `'::'` 開頭的字串，包含動畫運行的[偽元素](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-elements)名稱。如果動畫不是運行在偽元素上，而是運行在元素上，則為空字串：`''`。
 
-## 方法
+## 實例方法
 
-_同時繼承其父{{domxref("事件")}}方法_。
-
-- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : 初始化`AnimationEvent` 使用過時的創建 {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} 方法。
+_繼承自其父 {{domxref("Event")}} 的方法_。
 
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器兼容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 另請參見
+## 參見
 
-- [使用 CSS 動畫](/zh-TW/docs/CSS/Using_CSS_animations)
-- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- [使用 CSS 動畫](/zh-TW/docs/Web/CSS/Guides/Animations/Using)
+- 與動畫相關的 CSS 屬性與 at-規則：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timing-function")}}、{{cssxref("@keyframes")}}。

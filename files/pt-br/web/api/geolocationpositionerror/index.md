@@ -12,7 +12,6 @@ A interface **`PositionError`** representa a rasão de um erro ocorrer quando us
 _A interface `PositionError` não herda nenhuma propriedade_.
 
 - {{domxref("PositionError.code")}} {{readonlyInline}}
-
   - : Retorna um tipo `unsigned short` representando o código de erro. Os valores possíveis são os seguintes:
 
     | Valor | Constante associada    | Descrição                                                                                                                                              |
@@ -22,11 +21,11 @@ _A interface `PositionError` não herda nenhuma propriedade_.
     | `3`   | `TIMEOUT`              | O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação. |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : Retorna um {{domxref("DOMString")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
+  - : Retorna um {{jsxref("String")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
 
 ## Métodos
 
-**A interface `PositionError` não implementa nem herda qualquer método*.***
+_*A interface `PositionError` não implementa nem herda qualquer método*._**
 
 ## Especificações
 
@@ -38,5 +37,5 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
 ## Veja também
 
-- [Usando geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
 - A interface {{domxref("Geolocation")}} que o utiliza.

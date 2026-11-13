@@ -26,11 +26,11 @@ new Error([message[, fileName[, lineNumber]]])
 
 Erros em tempo de execução resultam em novos objetos `Error` sendo criados e lançados.
 
-Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error.prototype")}}.
+Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error")}}.
 
 ### Tipos de erro
 
-Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
+Além do construtor genérico de `Error`, existem outros seis construtores principais de erro no JavaScript. Para exceções em _client-side_, veja [Exceções na captura de Instruções](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
 - {{jsxref("EvalError")}}
   - : Cria uma instância representando um erro que ocorre na função global. {{jsxref("Global_Objects/eval", "eval()")}}.
@@ -45,11 +45,11 @@ Além do construtor genérico de `Error`, existem outros seis construtores princ
 - {{jsxref("TypeError")}}
   - : Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.
 - {{jsxref("URIError")}}
-  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} ou {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}.
+  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("encodeURI()")}} ou {{jsxref("decodeURI()")}}.
 
 ## Propriedades
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
   - : Permite a criação de propriedades para instâncias de `Error`.
 
 ## Métodos
@@ -58,15 +58,15 @@ O objeto `Error` global não contém métodos próprios, entretanto, ele herda a
 
 ## `Instâncias de Error`
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description') -->
 
 ### Propriedades
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('pt-BR/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -84,7 +84,7 @@ try {
 
 ### Capturando um erro específico
 
-Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("Operators/instanceof", "instanceof")}}:
+Você pode escolher por capturar apenas tipos de erro específicos testando o tipo do erro com a propriedade {{jsxref("Object.prototype.constructor", "constructor")}} de erro ou, se você está escrevendo para _engines_ de JavaScript modernas, a palavra-chave {{jsxref("instanceof")}}:
 
 ```js
 try {
@@ -106,7 +106,7 @@ Você pode escolher definir seus próprios tipos de erro derivando de `Error` pa
 > [!WARNING]
 > Note que as instâncias `MeuErro` lançadas vão reportar valores de `lineNumber` e `fileName` incorretos, ao menos no Firefox.
 
-Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
+Veja também ["esta discussão no Stackoverflow (em inglês): What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
 ```js
 // Cria um novo objeto que herda o construtor de Error através do prototype.
@@ -143,6 +143,6 @@ try {
 
 ## Veja também
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

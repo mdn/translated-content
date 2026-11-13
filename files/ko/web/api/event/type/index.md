@@ -9,7 +9,7 @@ slug: Web/API/Event/type
 
 ## 값
 
-{{domxref("Event")}}의 유형을 나타내는 {{jdxref("String")}}입니다.
+{{domxref("Event")}}의 유형을 나타내는 {{jsxref("String")}}입니다.
 
 ## 예제
 

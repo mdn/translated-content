@@ -3,13 +3,25 @@ title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
 
-{{JSRef}}
-
 **`Number.MAX_SAFE_INTEGER`** 静态数据属性表示在 JavaScript 中最大的安全整数（2<sup>53</sup> – 1）。
 
 对于更大的整数，请考虑使用 {{jsxref("BigInt")}}。
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## 值
 

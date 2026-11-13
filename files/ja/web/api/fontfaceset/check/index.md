@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Font Loading API")}}
 
-`check()` は {{domxref("FontFaceSet")}} のメソッドで、まだ完全に読み込まれていない `FontFaceSet` 内のフォントを使用しようとせずに、指定されたフォント指定を使ってテキストをレンダリングすることができれば `true` を返します。すなわち、[フォントスワップ](/ja/docs/Web/CSS/@font-face/font-display#フォント表示の過程)を発生させることなく、フォント指定を使用することができます。
+`check()` は {{domxref("FontFaceSet")}} のメソッドで、まだ完全に読み込まれていない `FontFaceSet` 内のフォントを使用しようとせずに、指定されたフォント指定を使ってテキストをレンダリングすることができれば `true` を返します。すなわち、[フォントスワップ](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-display#フォント表示の過程)を発生させることなく、フォント指定を使用することができます。
 
 ## 構文
 
@@ -20,7 +20,7 @@ check(font, text)
 ### 引数
 
 - `font`
-  - : CSS の [`font`](/ja/docs/Web/CSS/font) プロパティの構文を使用するフォント指定、例えば `"italic bold 16px Roboto"` です。
+  - : CSS の [`font`](/ja/docs/Web/CSS/Reference/Properties/font) プロパティの構文を使用するフォント指定、例えば `"italic bold 16px Roboto"` です。
 - `text`
   - : Unicode 範囲がテキスト中の文字の少なくとも 1 つを含んでいるフォントフェイスに限定します。これは[個々のグリフが網羅されているかどうかは調べません](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
 
@@ -37,15 +37,11 @@ check(font, text)
 次の例では、新しい `FontFace` を作成し、それを `FontFaceSet` に追加します。
 
 ```js
-const font = new FontFace(
-  "molot",
-  "url(https://interactive-examples.mdn.mozilla.net/media/fonts/molot.woff2)",
-  {
-    style: "normal",
-    weight: "400",
-    stretch: "condensed",
-  },
-);
+const font = new FontFace("molot", "url(/shared-assets/fonts/molot.woff2)", {
+  style: "normal",
+  weight: "400",
+  stretch: "condensed",
+});
 
 document.fonts.add(font);
 ```

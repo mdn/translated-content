@@ -5,7 +5,7 @@ slug: Web/API/IDBRequest
 
 {{APIRef("IndexedDB")}}
 
-**`IDBRequest`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、データベースやデータベースオブジェクトへの非同期の要求の結果へのアクセスをイベントハンドラープロパティによって提供します。データベースの読み書きは、それぞれ要求を用いて行います。
+**`IDBRequest`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、データベースやデータベースオブジェクトへの非同期の要求の結果へのアクセスをイベントハンドラープロパティによって提供します。データベースの読み書きは、それぞれ要求を用いて行います。
 
 要求オブジェクトは、最初は操作の結果の情報を何も持っていません。情報が得られるようになると、要求でイベントが発生し、`IDBRequest` のインスタンスのプロパティを通じて情報が得られるようになります。
 
@@ -44,10 +44,10 @@ _メソッドはありませんが、メソッドを {{domxref("EventTarget")}} 
 
 - [`error`](/ja/docs/Web/API/IDBRequest/error_event)
   - : エラーにより要求が失敗した場合に発生します。
-    [`onerror`](/ja/docs/Web/API/IDBRequest/onerror) プロパティ経由でも利用可能です。
+    [`onerror`](/ja/docs/Web/API/IDBRequest/error_event) プロパティ経由でも利用可能です。
 - [`success`](/ja/docs/Web/API/IDBRequest/success_event)
   - : `IDBRequest` が成功した場合に発生します。
-    [`onsuccess`](/ja/docs/Web/API/IDBRequest/onsuccess) プロパティ経由でも利用可能です。
+    [`onsuccess`](/ja/docs/Web/API/IDBRequest/success_event) プロパティ経由でも利用可能です。
 
 ## 例
 

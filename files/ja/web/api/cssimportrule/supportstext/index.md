@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-**`supportsText`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)で指定された supports 条件を返します。
+**`supportsText`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で指定された supports 条件を返します。
 
 ## 値
 
@@ -43,5 +43,5 @@ console.log(myRules[2].supportsText); // `null` を返す
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - {{cssxref("@import")}} and {{cssxref("@supports")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3734941b8a491f3d95741669d68b827602f83954
 ---
 
-{{GlossarySidebar}}
-
 计算机科学中的线程是同时运行多个任务或程序的执行。每个能够执行代码的单元称为**线程**。
 
 [**主线程**](/zh-CN/docs/Glossary/Main_thread)是浏览器用来处理用户事件、渲染和绘制显示以及运行组成典型网页或应用程序的大部分代码的线程。因为这些事情都发生在一个线程中，一个缓慢的网站或者应用程序脚本会减低整个浏览器的速度；更糟糕的是，如果一个网站或者应用程序脚本进入无限循环，整个浏览器将会挂起。这导致了令人沮丧、迟缓（或更糟）的用户体验。
@@ -19,7 +17,7 @@ l10n:
 
 ## 参见
 
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
 - [Web worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [术语表](/zh-CN/docs/Glossary)

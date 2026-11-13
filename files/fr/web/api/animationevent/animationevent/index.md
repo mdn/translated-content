@@ -23,11 +23,11 @@ new AnimationEvent(type, options);
 - `options` {{optional_inline}}
   - : Un objet qui, _en plus des propriétés définies par le constructeur [`Event()`](/fr/docs/Web/API/Event/Event)_, contient les propriétés suivantes&nbsp;:
     - `animationName` {{optional_inline}}
-      - : Une chaîne contenant la valeur de la propriété CSS [`animation-name`](/fr/docs/Web/CSS/animation-name) associée à la transition. La valeur par défaut est `""`.
+      - : Une chaîne contenant la valeur de la propriété CSS [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name) associée à la transition. La valeur par défaut est `""`.
     - `elapsedTime` {{optional_inline}}
-      - : Un nombre à virgule flottante, équivalent à la durée pendant laquelle l'animation s'est déroulée, en secondes, depuis le déclenchement de cet évènement (excluant les temps de pause de l'animation). `elapsedTime` vaudra `0.0` pour un évènement `animationstart`, à moins que [`animation-delay`](/fr/docs/Web/CSS/animation-delay) n'ait une valeur négative. Dans ce cas, l'évènement sera déclenché avec une valeur de `(-1 * délai)` pour `elapsedTime`. La valeur par défaut est `0.0`.
+      - : Un nombre à virgule flottante, équivalent à la durée pendant laquelle l'animation s'est déroulée, en secondes, depuis le déclenchement de cet évènement (excluant les temps de pause de l'animation). `elapsedTime` vaudra `0.0` pour un évènement `animationstart`, à moins que [`animation-delay`](/fr/docs/Web/CSS/Reference/Properties/animation-delay) n'ait une valeur négative. Dans ce cas, l'évènement sera déclenché avec une valeur de `(-1 * délai)` pour `elapsedTime`. La valeur par défaut est `0.0`.
     - `pseudoElement` {{optional_inline}}
-      - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`). La valeur par défaut est `""` (chaîne vide).
+      - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`). La valeur par défaut est `""` (chaîne vide).
 
 ## Spécifications
 
@@ -39,16 +39,16 @@ new AnimationEvent(type, options);
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - Les propriétés CSS et règles @ relatives aux animations&nbsp;:
-  - [`animation`](/fr/docs/Web/CSS/animation)
-  - [`animation-delay`](/fr/docs/Web/CSS/animation-delay)
-  - [`animation-direction`](/fr/docs/Web/CSS/animation-direction)
-  - [`animation-duration`](/fr/docs/Web/CSS/animation-duration)
-  - [`animation-fill-mode`](/fr/docs/Web/CSS/animation-fill-mode)
-  - [`animation-iteration-count`](/fr/docs/Web/CSS/animation-iteration-count)
-  - [`animation-name`](/fr/docs/Web/CSS/animation-name)
-  - [`animation-play-state`](/fr/docs/Web/CSS/animation-play-state)
-  - [`animation-timing-function`](/fr/docs/Web/CSS/animation-timing-function)
-  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
+  - [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation)
+  - [`animation-delay`](/fr/docs/Web/CSS/Reference/Properties/animation-delay)
+  - [`animation-direction`](/fr/docs/Web/CSS/Reference/Properties/animation-direction)
+  - [`animation-duration`](/fr/docs/Web/CSS/Reference/Properties/animation-duration)
+  - [`animation-fill-mode`](/fr/docs/Web/CSS/Reference/Properties/animation-fill-mode)
+  - [`animation-iteration-count`](/fr/docs/Web/CSS/Reference/Properties/animation-iteration-count)
+  - [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name)
+  - [`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state)
+  - [`animation-timing-function`](/fr/docs/Web/CSS/Reference/Properties/animation-timing-function)
+  - [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes)
 - L'interface qui porte ce constructeur, [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)

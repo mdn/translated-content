@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
-컬렉션 내 각 항목 처리는 매우 흔한 연산입니다. JavaScript는 간단한 {{jsxref("Statements/for","for")}} 루프에서 {{jsxref("Global_Objects/Array/map","map()")}} 및 {{jsxref("Global_Objects/Array/filter","filter()")}}에 이르기까지, 컬렉션을 반복하는 많은 방법을 제공합니다. 반복기(iterator) 및 생성기(generator)는 반복 개념을 핵심 언어 내로 바로 가져와 {{jsxref("Statements/for...of","for...of")}} 루프의 동작(behavior)을 사용자 정의하는 메커니즘을 제공합니다.
+컬렉션 내 각 항목 처리는 매우 흔한 연산입니다. JavaScript는 간단한 {{jsxref("Statements/for","for")}} 루프에서 {{jsxref("Array.map","map()")}} 및 {{jsxref("Array.filter","filter()")}}에 이르기까지, 컬렉션을 반복하는 많은 방법을 제공합니다. 반복기(iterator) 및 생성기(generator)는 반복 개념을 핵심 언어 내로 바로 가져와 {{jsxref("Statements/for...of","for...of")}} 루프의 동작(behavior)을 사용자 정의하는 메커니즘을 제공합니다.
 
 자세한 내용은, 다음을 참조하세요:
 
@@ -16,7 +16,7 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 ## 반복자
 
-JavaScript에서 **반복자**(**Iterator**)는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
+JavaScript에서 **반복자**(**Iterator**)는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#반복자_프로토콜)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
 
 반복자를 생성하면 `next()` 메소드를 반복적으로 호출하여 명시적으로 반복시킬 수 있습니다. 반복자를 반복시키는 것은 일반적으로 한 번씩만 할 수 있기 때문에, 반복자를 소모시키는 것이라고 할 수 있습니다. 마지막 값을 산출하고나서 `next()`를 추가적으로 호출하면 `{done: true}`. 가 반환됩니다.
 
@@ -122,7 +122,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 ### iterable을 기대하는 구문
 
-일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","",1)}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","",1)}}.
+일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_syntax","spread syntax","",1)}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring","해체 할당","",1)}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {
@@ -148,7 +148,7 @@ a; // "a"
 
 생성자 함수는 요청에 따라 그 산출된(yielded, yield 식으로 산출된) 값을 계산하고, 계산하기 비싼(힘든) 수열 또는 위에 설명한 대로 무한 수열이라도 효율적으로 나타내게 합니다.
 
-{{jsxref("Global_Objects/Generator/next","next()")}} 메서드는 또한 생성기의 내부 상태를 수정하는 데 쓰일 수 있는 값을 받습니다. `next()`에 전달되는 값은 생성기가 중단된 마지막 `yield` 식의 결과로 처리됩니다.
+{{jsxref("Generator.next","next()")}} 메서드는 또한 생성기의 내부 상태를 수정하는 데 쓰일 수 있는 값을 받습니다. `next()`에 전달되는 값은 생성기가 중단된 마지막 `yield` 식의 결과로 처리됩니다.
 
 여기 sequence(수열)을 재시작하기 위해 `next(x)`를 사용하는 피보나치 생성기가 있습니다:
 
@@ -182,10 +182,10 @@ console.log(sequence.next().value); // 1
 console.log(sequence.next().value); // 2
 ```
 
-제너레이터의 {{jsxref("Global_Objects/Generator/throw","throw()")}} 메서드를 호출하고 throw해야 하는 예외 값을 전달하여 생성자가 예외를 throw하도록 할 수 있습니다. 이 예외는 생성기의 현재 일시 중단된 컨텍스트에서 throw됩니다. 마치 현재 일시 중단된 `yield` 가 대신 `throwvalue` 문인 것처럼 말입니다.
+제너레이터의 {{jsxref("Generator.throw","throw()")}} 메서드를 호출하고 throw해야 하는 예외 값을 전달하여 생성자가 예외를 throw하도록 할 수 있습니다. 이 예외는 생성기의 현재 일시 중단된 컨텍스트에서 throw됩니다. 마치 현재 일시 중단된 `yield` 가 대신 `throwvalue` 문인 것처럼 말입니다.
 
 예외가 생성기 내에서 포착되지 않으면 `throw()` 호출을 통해 전파되고 이후의 `next()` 호출은 `done` 속성이 `true` 가 됩니다.
 
-제너레이터에는 주어진 값을 반환하고 제너레이터 자체를 완료하는 {{jsxref("Global_Objects/Generator/return","return(value)")}} 메서드가 있습니다.
+제너레이터에는 주어진 값을 반환하고 제너레이터 자체를 완료하는 {{jsxref("Generator.return","return(value)")}} 메서드가 있습니다.
 
 {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}

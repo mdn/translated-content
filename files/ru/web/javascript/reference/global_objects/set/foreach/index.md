@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 
 Метод **`forEach()`** выполняет функцию по одному разу для каждого элемента из `Set` в порядке их расположения.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## Синтаксис
 
@@ -18,9 +30,7 @@ mySet.forEach(callback[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция, которая будет выполнена для каждого элемента, принимает три параметра:
-
     - `currentValue`, `currentKey`
       - : Текущий элемент из `Set`. Т.к. в `Set` нет ключей, в каждом будет лежать value.
     - `set`
@@ -43,7 +53,7 @@ mySet.forEach(callback[, thisArg])
 - **ключ элемента**
 - **`Set` объект обхода**
 
-В объектах типа `Set` нет ключей, поэтому оба первых аргумента принимают **значение** содержащееся в {{jsxref("Set")}}. Это делает метод `forEach()` для объекта Set совместимым с методами `forEach()` других объектов, таких как {{jsxref("Map.foreach", "Map")}} и {{jsxref("Array.forEach","Array")}}.
+В объектах типа `Set` нет ключей, поэтому оба первых аргумента принимают **значение** содержащееся в {{jsxref("Set")}}. Это делает метод `forEach()` для объекта Set совместимым с методами `forEach()` других объектов, таких как {{jsxref("Map.forEach", "Map")}} и {{jsxref("Array.forEach","Array")}}.
 
 `Если аргумент thisArg` был передан в `forEach()`, то он будет передан в `callback` , во время исполнения, для использование его в качестве `this`. Иначе в `this` будет хранится значение `undefined`. Значение `this` используемое в `callback` определено согласно [с обычными правилами определения `this` используемого функцией](/ru/docs/Web/JavaScript/Reference/Operators/this)
 

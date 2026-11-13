@@ -5,9 +5,10 @@ slug: Web/API/Document/characterSet
 
 {{ ApiRef("DOM") }}
 
-**`Document.characterSet`** 읽기 전용 속성은 현재 문서가 렌더링에 사용하는 [문자 인코딩](/ko/docs/Glossary/character_encoding)을 반환합니다.
+**`Document.characterSet`** 읽기 전용 속성은 현재 문서가 렌더링에 사용하는 [문자 인코딩](/ko/docs/Glossary/Character_encoding)을 반환합니다.
 
-> **참고:** `Document.charset`과 `Document.inputEncoding` 속성은 `Document.characterSet`의 이전 별칭입니다. 더 이상 사용지 마세요.
+> [!NOTE]
+> `Document.charset`과 `Document.inputEncoding` 속성은 `Document.characterSet`의 이전 별칭입니다. 더 이상 사용지 마세요.
 
 ## 예제
 

@@ -19,7 +19,7 @@ O {{jsxref("ArrayBuffer")}} é um tipo de dado que é utilizado para representar
 
 As views de arrays tipados possuem nomes auto descritivos e fornecem exibições para todos os tipos numéricos habituais, como `Int8`, `Uint32`, `Float64` e assim por diante. Há uma view de array tipado especial, a view `Uint8ClampedArray`. Ela comporta os valores entre `0` e `255`. Isto é útil no [processamento de dados do Canvas](/pt-BR/docs/Web/API/ImageData), por exemplo.
 
-{{page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects") -->
 
 ### DataView
 
@@ -137,8 +137,8 @@ normalArray.constructor === Array;
 
 ## Veja também
 
-- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

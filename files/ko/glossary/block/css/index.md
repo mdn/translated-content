@@ -13,4 +13,4 @@ l10n:
 
 ## 같이 보기
 
-- [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)
+- [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)

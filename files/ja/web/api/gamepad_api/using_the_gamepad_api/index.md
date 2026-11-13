@@ -48,7 +48,7 @@ window.addEventListener("gamepaddisconnected", (e) => {
 });
 ```
 
-ゲームパッドの {{domxref("Gamepad.index", "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} から返される {{jsxref("Array")}} のイデックスとして機能します。
+ゲームパッドの {{domxref("Gamepad.index", "index")}} プロパティは、同じ種類の複数のコントローラーが使用されている場合であっても、システムに接続された機器ごとに固有になります。 `index` プロパティもまた {{ domxref("Navigator.getGamepads()") }} から返される {{jsxref("Array")}} のインデックスとして機能します。
 
 ```js
 const gamepads = {};
@@ -111,7 +111,6 @@ window.addEventListener("gamepadconnected", (e) => {
 - `mapping`: ブラウザーがデバイス上のコントロールを既知のレイアウトに再マップしたかどうかを示す文字列。現在、サポートされている既知のレイアウト - [標準のゲームパッド](https://w3c.github.io/gamepad/gamepad.html#remapping)は 1 つしかありません。ブラウザーがデバイス上のコントロールをそのレイアウトにマッピングできる場合、 `mapping` プロパティは文字列 `standard` に設定されます。
 - `connected`:ゲームパッドがシステムに接続されているかどうかを示すブール値。もし接続されている場合は `True`。接続されていない場合は `False` が設定されます。
 - `buttons`: デバイス上に存在するボタンを表す {{ domxref("GamepadButton") }} オブジェクトの配列。各 {{ domxref("GamepadButton") }} には、`pressed` プロパティと `value` のプロパティがあります。
-
   - `pressed` プロパティは、ボタンが現在押されている (`true`) か押されていない (`false`) かを示すブール値です。>
   - `value` プロパティは、現代の多くのゲームパッドのトリガなど、アナログボタンの表示を有効にするために使用される浮動小数点値です。値は 0.0..1.0 の範囲に正規化され、 0.0 は押されていないボタンを表し、 1.0 は完全に押されたボタンを表します。
 

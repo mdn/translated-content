@@ -13,7 +13,7 @@ El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla
 var row = HTMLTableElement.insertRow(optional index = -1);
 ```
 
-- [`HTMLTableElement`](/es/docs/DOM/HTMLTableElement) es una referencia a un elemento table HTML.
+- [`HTMLTableElement`](/es/docs/Web/API/HTMLTableElement) es una referencia a un elemento table HTML.
 - `index` es el índice de fila de la nueva fila.
 - `row` queda asignada a una referencia a la nueva fila. Una referencia a un [HTMLTableRowElement](/es/docs/Web/API/HTMLTableRowElement).
   Si `index` es -1 o igual al número de filas, la nueva fila es añadida detrás de la última. Si `index` es mayor que el números defilas, es lanzada una excepción IndexSizeError. Si index se omite, se asume por defecto -1.
@@ -51,7 +51,7 @@ var row = HTMLTableElement.insertRow(optional index = -1);
 
 Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.
 
-Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/es/docs/DOM/document.createElement) para crear el nuevo elemento TR.
+Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/es/docs/Web/API/Document/createElement) para crear el nuevo elemento TR.
 
 ## Especificaciones
 

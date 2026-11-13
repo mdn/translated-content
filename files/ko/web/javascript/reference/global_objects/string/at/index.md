@@ -1,13 +1,29 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
+l10n:
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
 {{JSRef}}
 
-**`at()`** 메서드는 정수 값을 받아서 지정된 오프셋에 있는 단일 UTF-16 코드 단위로 구성된 새 {{jsxref('String')}}을 반환합니다. 이 방법은 양의 정수와 음의 정수를 허용합니다. 음의 정수는 문자열의 마지막부터 셉니다.
+{{jsxref("String")}} 값의 **`at()`** 메서드는 정수 값을 받아 지정된 오프셋에 위치한 단일 UTF-16 코드 유닛으로 구성된 새로운 {{jsxref("String")}}을 반환합니다. 이 메서드는 양의 정수와 음의 정수를 모두 허용합니다. 음의 정수는 문자열의 마지막 문자부터 거꾸로 세어 위치를 지정합니다.
 
-{{EmbedInteractiveExample("pages/js/string-at.html")}}
+{{InteractiveExample("JavaScript Demo: String.at()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+let index = 5;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of 5 returns the character u"
+
+index = -4;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of -4 returns the character d"
+```
 
 ## 구문
 
@@ -18,11 +34,11 @@ at(index)
 ### 매개변수
 
 - `index`
-  - : 문자열에서 반환할 문자의 인덱스(위치)입니다. 인덱스로 음수를 전달할 때 문자열의 끝에서 상대적인 색인을 지원합니다. 즉, 음수가 사용되면 반환할 문자는 문자열의 끝에서 역으로 계산하여 찾습니다.
+  - : 반환할 문자열 문자의 인덱스(위치)입니다. 음수 인덱스를 전달하면 문자열 끝에서부터의 상대적 인덱싱을 지원합니다. 즉, 음수가 사용되면 반환되는 문자는 문자열의 끝에서부터 거꾸로 세어 찾아집니다.
 
 ### 반환 값
 
-지정된 위치에 있는 단일 UTF-16 코드 단위로 구성된 새 {{jsxref('String')}}. 만약 주어진 인덱스를 찾을 수 없는 경우 {{jsxref('undefined')}}을 반환합니다.
+지정된 위치에 있는 단일 UTF-16 코드 유닛으로 구성된 {{jsxref("String")}}을 반환합니다. 주어진 인덱스를 찾을 수 없으면 {{jsxref("undefined")}}를 반환합니다.
 
 ## 예제
 
@@ -35,6 +51,7 @@ at(index)
 function returnLast(arr) {
   return arr.at(-1);
 }
+
 let invoiceRef = "myinvoice01";
 
 console.log(returnLast(invoiceRef)); // '1'
@@ -46,7 +63,7 @@ console.log(returnLast(invoiceRef)); // '2'
 
 ### 메서드 비교하기
 
-여기서 {{jsxref('String')}}의 끝에서 두 번째 문자를 선택하는 다양한 방법을 비교하겠습니다. 아래의 모든 방법이 유효하며, 싱대적으로 `at()`의 간결함과 가독성이 돋보입니다.
+여기서는 {{jsxref("String")}}의 끝에서 두 번째(마지막에서 하나 앞) 문자를 선택하는 다양한 방법을 비교합니다. 아래의 모든 방법이 유효하지만, 이는 `at()` 메서드의 간결성과 가독성을 강조합니다.
 
 ```js
 const myString = "Every green bus drives fast.";
@@ -64,7 +81,7 @@ const atWay = myString.at(-2);
 console.log(atWay); // 't'
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -74,8 +91,7 @@ console.log(atWay); // 't'
 
 ## 같이 보기
 
-- [Polyfill of `String.prototype.at` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
+- [`core-js`에서의 `String.prototype.at` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

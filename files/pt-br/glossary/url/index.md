@@ -19,4 +19,4 @@ URLs também podem ser usadas para transferir arquivos por ({{Glossary("FTP")}})
 
 ### Saiba mais
 
-- [Entendendo URLs e sua estrutura](/en-US/Learn/Understanding_URLs)
+- [Entendendo URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

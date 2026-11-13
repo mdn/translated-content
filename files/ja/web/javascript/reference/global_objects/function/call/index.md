@@ -1,58 +1,16 @@
 ---
 title: Function.prototype.call()
+short-title: call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`call()`** は {{jsxref("Function")}} インスタンスのメソッドで、 `this` の値と、独立して提供された引数によって関数を呼び出します。
 
-**`call()`** メソッドは、 `this` の値と、独立して提供された引数によって関数を呼び出します。
+{{InteractiveExample("JavaScript デモ: Function.prototype.call()")}}
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
-
-## 構文
-
-```
-func.call([thisArg[, arg1, arg2, ...argN]])
-```
-
-### 引数
-
-- `thisArg` {{optional_inline}}
-
-  - : `func` が呼び出されたときに `this` として使用される値です。
-
-    > [!NOTE]
-    > 特定の場面では、 `thisArg` はメソッドから見える実際の値でない場合があります。
-    >
-    > もし、そのメソッドが{{jsxref("Strict_mode", "厳格モード", "", 1)}}の関数ではなかった場合、 {{jsxref("Global_Objects/null", "null")}} と {{jsxref("Global_Objects/undefined", "undefined")}} はグローバルオブジェクトで置き換えられ、プリミティブ値はオブジェクトに変換されます。
-
-- `arg1, arg2, ...argN` {{optional_inline}}
-  - : 呼び出し先の関数に渡される引数です。
-
-### 返値
-
-**`this`** の値と引数を指定して関数を呼び出した結果です。
-
-## 解説
-
-`call()` はあるオブジェクトに所属する関数やメソッドを、別なオブジェクトに割り当てて呼び出すことができます。
-
-`call()` は関数やメソッドに `this` の新しい値を提供します。 `call()` によって、いったんメソッドを書いてから、新しいオブジェクトへメソッドを書き直さずに他のオブジェクトへと継承することができます。
-
-> [!NOTE]
-> このメソッドの構文は {{jsxref("Function.prototype.apply", "apply()")}} とほぼ同じですが、基本的な違いは `call()` が**引数リスト**を受け取るのに対して、 `apply()` は**引数の単一の配列**を受け取る点です。
-
-## 例
-
-### call メソッドを使用してオブジェクトのコンストラクターを連鎖させる
-
-`call` を使用して (Java と同様に) オブジェクトのコンストラクターを連鎖させることができます。
-
-下記の例では、 `Product` オブジェクトのコンストラクターは `name` と `price` の二つの引数で定義されています。
-
-他の `Food` と `Toy` の二つの関数は、 `Product` を呼び出して `this` と `name` と `price` を渡します。 `Product` は `name` と `price` プロパティを初期化し、どちらも特化した関数が `category` を定義します。
-
-```js
+```js interactive-example
 function Product(name, price) {
   this.name = name;
   this.price = price;
@@ -63,52 +21,49 @@ function Food(name, price) {
   this.category = "food";
 }
 
-function Toy(name, price) {
-  Product.call(this, name, price);
-  this.category = "toy";
-}
-
-const cheese = new Food("feta", 5);
-const fun = new Toy("robot", 40);
+console.log(new Food("cheese", 5).name);
+// 期待される出力結果: "cheese"
 ```
 
-### call メソッドを使用した無名関数の呼び出し
+## 構文
 
-次の例では、無名関数を作成して `call` を使用して配列内の各オブジェクトに対して呼び出しを行います。
+```js-nolint
+call(thisArg)
+call(thisArg, arg1)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
+```
 
-ここでの無名関数の主な目的は、 print 関数をすべてのオブジェクトに追加することで、配列内のオブジェクトの正しいインデックスを表示できるようにします。実際には `this` の値としてオブジェクトを渡す必要ありませんが、例示の目的で使用しています。
+### 引数
+
+- `thisArg`
+  - : `func` が呼び出されたときに `this` として使用される値です。関数が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) はグローバルオブジェクトに置き換わり、プリミティブ値はオブジェクトに変換されます。
+- `arg1`, …, `argN` {{optional_inline}}
+  - : 呼び出し先の関数に渡される引数です。
+
+### 返値
+
+`this` の値と引数を指定して関数を呼び出した結果です。
+
+## 解説
 
 > [!NOTE]
-> オブジェクトを `this` の値として渡すことは厳密には必要ではありませんが、説明のために使用しました。
+> この関数はほぼ {{jsxref("Function/apply", "apply()")}} と同等ですが、 `call()` では関数の引数がリストとして個別に渡されるのに対し、 `apply()` では 1 つのオブジェクト、通常は配列にまとめられます。例えば、 `func.call(this, "eat", "bananas")` と `func.apply(this, ["eat", "bananas"])` のようになります。
 
-```js
-const animals = [
-  { species: "Lion", name: "King" },
-  { species: "Whale", name: "Fail" },
-];
+通常、関数を呼び出す場合、関数内の [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) の値は、その関数がアクセスされたオブジェクトです。 `call()` を使用すると、既存の関数を呼び出す際に、最初のプロパティとしてオブジェクトにその関数を添付することなく、 `this` に任意の値を割り当てることができます。これにより、あるオブジェクトのメソッドを汎用のユーティリティ関数として使用することができます。
 
-for (let i = 0; i < animals.length; i++) {
-  (function (i) {
-    this.print = function () {
-      console.log("#" + i + " " + this.species + ": " + this.name);
-    };
-    this.print();
-  }).call(animals[i], i);
-}
-```
+> [!WARNING]
+> コンストラクターを連結する（例えば、継承を実装する）ために `call()` を使用しないでください。これは、コンストラクター関数を単なる関数として呼び出すことになり、つまり [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) が `undefined` となり、クラスがエラーを発生します。これは、 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) なしで呼び出されるためです。代わりに {{jsxref("Reflect.construct()")}} または [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) を使用してください。
+
+## 例
 
 ### call を使用した関数を呼び出しと 'this' のコンテキストの指定
 
-次の例では、`greet` メソッドを呼ぶとき、`this` の値を `obj` オブジェクトにバインドしています。
+次の例では、 `greet` メソッドを呼ぶとき、`this` の値を `obj` オブジェクトにバインドしています。
 
 ```js
 function greet() {
-  const reply = [
-    this.animal,
-    "typically sleep between",
-    this.sleepDuration,
-  ].join(" ");
-  console.log(reply);
+  console.log(this.animal, "typically sleep between", this.sleepDuration);
 }
 
 const obj = {
@@ -119,33 +74,58 @@ const obj = {
 greet.call(obj); // cats typically sleep between 12 and 16 hours
 ```
 
-### `call` を使用した最初の引数を指定しない関数の呼び出し
+### call() を使用した最初の引数を指定しない関数の呼び出し
 
-下記の例では、 `display` 関数を、最初の引数を渡さずに呼び出しています。最初の引数が渡されないと、 `this` の値はグローバルオブジェクトに結び付けられます。
+最初の `thisArg` 引数を省略すると、既定では `undefined` となります。 厳格モード以外では、 `this` の値は `globalThis` （グローバルオブジェクトに類似）に置き換えられます。
 
 ```js
-var sData = "Wisen";
+globalThis.globProp = "foo";
 
 function display() {
-  console.log("sData value is %s ", this.sData);
+  console.log(`globProp の値は ${this.globProp}`);
 }
 
-display.call(); // sData value is Wisen
+display.call(); // "globProp の値は foo" と出力
 ```
 
-> [!NOTE]
-> 厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
+厳格モードでは `this` の値は `undefined` になります。以下を参照してください。
 
 ```js
 "use strict";
 
-var sData = "Wisen";
+globalThis.globProp = "foo";
 
 function display() {
-  console.log("sData value is %s ", this.sData);
+  console.log(`globProp の値は ${this.globProp}`);
 }
 
-display.call(); // undefined の 'sData' のプロパティは読めない
+display.call(); // throws TypeError: Cannot read the property of 'globProp' of undefined
+```
+
+### メソッドのユーティリティ関数への変換
+
+`call()` は通常の関数呼び出しとほぼ同様ですが、 `this` が関数のアクセス元の値ではなく、通常の引数として渡される点が異なります。これは、汎用ユーティリティ関数がどのように動作するのかと似ています。 `array.map(callback)` を呼ぶ代わりに、 `map(array, callback)` を使用することで、 `Object.prototype` を変更することなく、配列ではない配列風オブジェクト（例えば [`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments)）に対して `map` を使用することができます。
+
+例えば、配列風のオブジェクトを実際の配列に変換するために使用する {{jsxref("Array.prototype.slice()")}} を例に挙げます。 この例では、次のようなショートカットを作成することができます。
+
+```js
+const slice = Array.prototype.slice;
+
+// …
+
+slice.call(arguments);
+```
+
+なお、 `slice.call` を保存して、それを単なる関数として名付けることはできません。 `call()` メソッドもこの値を読み取るため、呼び出すべき関数が指定されてしまうからです。この場合、 {{jsxref("Function/bind", "bind()")}} を使用すると `this` 値を `call()` にバインドすることができます。次のコードでは、 `slice()` は `Function.prototype.call()` のバインド済みバージョンであり、 `this` 値は `Array.prototype.slice()` にバインドされています。つまり、追加の `call()` 呼び出しを省略できるということです。
+
+```js
+// 前の例の "slice" と同じ
+const unboundSlice = Array.prototype.slice;
+const slice = Function.prototype.call.bind(unboundSlice);
+
+// …
+
+slice(arguments);
 ```
 
 ## 仕様書
@@ -160,4 +140,6 @@ display.call(); // undefined の 'sData' のプロパティは読めない
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [オブジェクト指向 JavaScript 入門](/ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- {{jsxref("Reflect.apply()")}}
+- [スプレッド構文 (`...`)](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [オブジェクト指向 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

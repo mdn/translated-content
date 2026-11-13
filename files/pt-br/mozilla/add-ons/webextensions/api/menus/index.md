@@ -36,7 +36,7 @@ Se você criou mais de um item de menu de contexto ou mais de um item de menu de
 
 ## Ícones
 
-Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/pt-BR/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
+Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
 
 ![](menus-2.png)
 
@@ -168,7 +168,8 @@ browser.menus.create(
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
+> [!NOTE]
+> **Reconhecimentos**Esta API é baseada na API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) do Chromium. Esta documentação é derivada do [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) do código do Chromium .
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

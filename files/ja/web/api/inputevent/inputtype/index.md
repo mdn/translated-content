@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/HTMLElement/input_event) の `inputType` をログ出力します。
+この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/Element/input_event) の `inputType` をログ出力します。
 
 ### HTML
 

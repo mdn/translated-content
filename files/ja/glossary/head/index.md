@@ -12,4 +12,4 @@ slug: Glossary/Head
 ### HTML head
 
 - MDN の {{htmlelement("head")}} 要素のリファレンス
-- MDN Learning Area の [HTML \<head>](/ja/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head)
+- MDN Learning Area の [HTML \<head>](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)

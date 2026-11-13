@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 Глобальное свойство **`globalThis`** содержит значение глобального `this`, который является глобальным объектом.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Синтаксис
 
@@ -19,7 +28,7 @@ globalThis
 
 Исторически, для доступа к глобальному объекту использовался разный синтаксис в разных средах JavaScript. В вебе вы могли использовать {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} или {{domxref("Window.frames", "frames")}}, но в [Worker](/ru/docs/Web/API/Worker) можно использовать только `self`. В Node.js ничего из этого не работает, поэтому вы должны использовать `global`.
 
-Ключевое слово `this` можно использовать внутри функций в нестрогом режиме. Но в строгом режиме внутри функций и в Модулях `this` равняется `undefined`. Вы можете использовать `Function('return this')()`, но среды, которые отключают {{jsxref("eval", "eval()")}}, такие как {{Glossary('CSP')}} в браузерах, препятствуют использованию {{jsxref("Function")}} таким способом.
+Ключевое слово `this` можно использовать внутри функций в нестрогом режиме. Но в строгом режиме внутри функций и в Модулях `this` равняется `undefined`. Вы можете использовать `Function('return this')()`, но среды, которые отключают {{jsxref("Global_Objects/eval", "eval()")}}, такие как {{Glossary('CSP')}} в браузерах, препятствуют использованию {{jsxref("Function")}} таким способом.
 
 Свойство `globalThis` даёт возможность стандартного доступа к глобальному значению `this` (и как следствие, к глобальному объекту) вне зависимости от окружения. В отличии от похожих свойств, таких как `window` и `self`, оно гарантирует работу как в среде, где есть `window`, так и в среде, где его нет. Таким образом вы можете получить доступ к глобальному объекту даже не зная в какой среде будет запущен код. Чтобы помочь запомнить название, просто запомните, что глобальное значение `this` равно `globalThis`.
 
@@ -33,7 +42,7 @@ globalThis
 
 ## Примеры
 
-До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
+До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/Guides/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
 
 ```js
 var getGlobal = function () {
