@@ -174,7 +174,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
 > [!NOTE]
-> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
+> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn_web_development/Core/Version_control).
 
 1. 먼저 [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 fetch할 이미지인 [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) 을 다운받습니다.
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.

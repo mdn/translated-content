@@ -2,7 +2,7 @@
 title: Plantilla de página de función CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template
 l10n:
-  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
+  sourceCommit: 8f0171397993605739530a8d32f24a804d06f882
 ---
 
 > [!NOTE]
@@ -54,7 +54,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}`: Esta macro genera un banner de **Experimental**, que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes rellenar una entrada para ella en la página de [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: Esta macro genera un banner de **Obsoleto (Deprecated)**, que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) el uso de la tecnología.
 > - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar (Non-standard)** que indica que la característica no forma parte de ninguna especificación.
 >
 > No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.

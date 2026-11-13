@@ -2,7 +2,7 @@
 title: Plantilla de página de inicio de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 l10n:
-  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
+  sourceCommit: c44003c788a907ef19e0d766e98f29ffca5b6798
 ---
 
 > [!NOTE]
@@ -32,7 +32,7 @@ l10n:
 >     Es el nombre de la API seguido del texto "API": _NameOfTheAPI_ **API**.
 >     Por ejemplo, [WebXR Device](/es/docs/Web/API/WebXR_Device_API) tiene el título _WebXR Device API_, y [Fetch](/es/docs/Web/API/Fetch_API) tiene el título _Fetch API_.
 > - **slug**
->   - : El final de la ruta URL después de `https://developer.mozilla.org/es/docs/`).
+>   - : El final de la ruta URL después de `https://developer.mozilla.org/es/docs/`.
 >     Tendrá un formato como `Web/API/NameOfTheAPI_API`.
 >     Por ejemplo, el slug de [WebXR Device API](/es/docs/Web/API/WebVR_API) es `Web/API/WebXR_Device_API`.
 > - **page-type**
@@ -50,7 +50,6 @@ l10n:
 >
 > - `\{{SeeCompatTable}}`: genera un aviso de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   Si es experimental y la tecnología está oculta tras una preferencia (`pref`) en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: genera un aviso de **Obsoleto** que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsoleto) el uso de la tecnología.
 > - `\{{Non-standard_Header}}`: genera un aviso de **No estándar** que indica que la característica no forma parte de ninguna especificación.
 >
 > Actualiza o eliminar las siguientes macros según las indicaciones a continuación:
