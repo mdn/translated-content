@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 扩展可以启用的静态规则集的最大数量，即在清单（manifest）键 [`declarative_net_request.rule_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) 中具有 `"enabled"` 设置为 `true` 的值的数量。超过限制的静态规则集将被忽略。
 
 扩展可以使用 {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets", "updateEnabledRulesets")}} 方法更改已启用的规则集的数量。

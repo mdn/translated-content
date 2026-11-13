@@ -2,7 +2,7 @@
 title: ウェブコンポーネント
 slug: Web/API/Web_components
 l10n:
-  sourceCommit: 839b5e82a117678948392e77b81d64a7f6d03811
+  sourceCommit: 56f5609d323467cd08eeaddc57e4490a02be1889
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -58,12 +58,12 @@ l10n:
     - `attributeChangedCallback()`
       - : カスタム要素の属性のひとつが追加、削除、もしくは変更されたときに呼び出されます。
 
-- カスタム組み込み要素を作成するための拡張機能
+- カスタマイズされた組み込み要素を作成するための拡張機能
   - : 以下の拡張機能が定義されています。
     - [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) グローバル HTML 属性
-      - : 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
+      - : 標準の HTML 要素が、カスタマイズされた組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション
-      - : カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
+      - : カスタマイズされた組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
 
 - CSS の擬似クラス
   - : カスタム要素に関連する擬似クラスです。

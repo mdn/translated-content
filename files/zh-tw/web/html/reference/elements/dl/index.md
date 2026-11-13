@@ -3,8 +3,6 @@ title: <dl>：描述清單元素
 slug: Web/HTML/Reference/Elements/dl
 ---
 
-{{HTMLSidebar}}
-
 **`<dl>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個描述清單。該元素包含一組術語（使用 {{HTMLElement("dt")}} 元素指定）和描述（由 {{HTMLElement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的串列）。
 
 {{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}

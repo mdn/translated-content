@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当一个标签页被创建时触发。
 
 请注意，此事件触发时，标签页的 URL 可能尚未设置其最终值。特别是，Firefox 在加载新页面之前会以“about:blank”打开一个新标签页。你可以监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件，以便在设置 URL 时收到通知。

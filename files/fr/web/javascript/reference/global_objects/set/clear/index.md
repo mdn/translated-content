@@ -3,8 +3,6 @@ title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
 
-{{JSRef}}
-
 La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `Set`.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}

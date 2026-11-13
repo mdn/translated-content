@@ -1,21 +1,32 @@
 ---
-title: Window.stop()
+title: "Window : méthode stop()"
+short-title: stop()
 slug: Web/API/Window/stop
+l10n:
+  sourceCommit: 285941521a9a7c2c1b3c443d5f785e5f663a8fc9
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-**`window.stop()`** arrête le chargment des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.
+La méthode **`stop()`** de l'interface {{DOMxRef("Window")}} arrête le chargement des ressources supplémentaires dans le contexte de navigation actuel, ce qui équivaut au bouton d'arrêt dans le navigateur.
 
-En raison de la manière dont les scripts sont exécutés, cette méthode ne peut pas interrompre le chargement de son document parent, mais elle arrêtera ses images, nouvelles fenêtres et autres objets en cours de chargement.
+Puisque les scripts sont exécutés de cette manière, cette méthode ne peut pas interrompre le chargement de son document parent, mais elle arrête ses images, nouvelles fenêtres et autres objets en cours de chargement.
 
 ## Syntaxe
 
-```js
-window.stop();
+```js-nolint
+stop()
 ```
 
-## Exemple
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucun ({{JSxRef("undefined")}}).
+
+## Exemples
 
 ```js
 window.stop();

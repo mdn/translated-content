@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/mask
 original_slug: Web/SVG/Element/mask
 ---
 
-{{SVGRef}}
-
 L'élément **`<mask>`** définit un masque alpha. Ce masque peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("mask")}}.
 
 Le masque permet de rendre des zones de l'élément sur lequel est appliqué (semi-)transparentes. On peut par exemple créer un effet de fondu en utilisant un dégradé, ce que le détourage ({{SVGElement('clipPath')}}) ne permet pas.
@@ -45,7 +43,7 @@ svg {
 
 - {{SVGAttr("height")}}
   - : Définit la hauteur du masque.
-    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 - {{SVGAttr("maskContentUnits")}}
   - : Définit le système de coordonnées pour le contenu du `<mask>`.
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
@@ -54,23 +52,23 @@ svg {
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `objectBoundingBox`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Définit la coordonnée de l'axe x du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Guides/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Définit la coordonnée de l'axe y du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Guides/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Définit la largeur du masque.
-    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
+- [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## Notes d'usage

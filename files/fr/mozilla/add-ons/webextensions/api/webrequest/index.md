@@ -3,8 +3,6 @@ title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
 
-{{AddonSidebar}}
-
 Ajout d'écouteurs d'événements pour les différentes étapes d'une requête HTTP. L'écouteur de l'événement reçoit des informations détaillées sur la demande et peut modifier ou annuler la demande.
 
 Chaque événement est déclenché à un stade particulier de la demande. La séquence typique des événements est la suivante :
@@ -129,8 +127,6 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

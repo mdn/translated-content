@@ -1,12 +1,10 @@
 ---
-title: enterkeyhint
+title: HTML enterkeyhint グローバル属性
+short-title: enterkeyhint
 slug: Web/HTML/Reference/Global_attributes/enterkeyhint
-original_slug: Web/HTML/Global_attributes/enterkeyhint
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`enterkeyhint`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、属性であり、仮想キーボードの \[Enter] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 
@@ -45,38 +43,28 @@ l10n:
     </tr>
     <tr>
       <td><code>enterkeyhint="done"</code></td>
-      <td>
-        通常、それ以上のことは入力できず、インプットメソッドエディター (IME) が閉じられることを意味します。
-      </td>
-      <td><kbd>完了</kbd></td>
+      <td>通常、それ以上のことは入力できず、インプットメソッドエディター (IME) が閉じられることを意味します。</td>
+      <td><kbd>完了</kbd>, <kbd>✅</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="go"</code></td>
-      <td>
-        一般的に、ユーザーが入力したテキストのターゲットに移動することを意味しています。
-      </td>
-      <td><kbd>開く</kbd></td>
+      <td>一般的に、ユーザーが入力したテキストのターゲットに移動することを意味しています。</td>
+      <td><kbd>開く</kbd>, <kbd>🡢</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="next"</code></td>
-      <td>
-        通常、ユーザーをテキストを受け入れる次のフィールドへ導きます。
-      </td>
-      <td><kbd>次へ</kbd></td>
+      <td>通常、ユーザーをテキストを受け入れる次のフィールドへ導きます。</td>
+      <td><kbd>次へ</kbd>, <kbd>⇥</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="previous"</code></td>
-      <td>
-        通常、ユーザーをテキストを受け入れる前のフィールドへ導きます。
-      </td>
-      <td><kbd>前へ</kbd></td>
+      <td>通常、ユーザーをテキストを受け入れる前のフィールドへ導きます。</td>
+      <td><kbd>前へ</kbd>, <kbd>⇤</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="search"</code></td>
-      <td>
-        通常、ユーザーを入力したテキストを検索した結果へ導きます。
-      </td>
-      <td><kbd>検索</kbd></td>
+      <td>通常、ユーザーを入力したテキストを検索した結果へ導きます。</td>
+      <td><kbd>検索</kbd>, <kbd>🔍</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="send"</code></td>

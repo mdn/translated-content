@@ -2,7 +2,7 @@
 title: stroke-linecap
 slug: Web/SVG/Reference/Attribute/stroke-linecap
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 **`stroke-linecap`** 属性は、開いたサブパスの描線（線）が描画されるときに、その末端に使用する形状を定義するプレゼンテーション属性です。
@@ -17,7 +17,6 @@ l10n:
 - {{SVGElement('line')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -32,13 +31,13 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- （既定値である） "butt" の値の効果 -->
+  <!-- （デフォルト値である） "butt" の値の効果 -->
   <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
-  <!-- Effect of the "round" value -->
+  <!-- "round" の値の効果 -->
   <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
 
-  <!-- Effect of the "square" value -->
+  <!-- "square" の値の効果 -->
   <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
   <!--
@@ -59,7 +58,7 @@ svg {
       <td><code>butt</code> | <code>round</code> | <code>square</code></td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>butt</code></td>
     </tr>
     <tr>
@@ -85,10 +84,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "butt" value -->
+  <!-- "butt" の値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
 
-  <!-- Effect of the "butt" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "butt" の値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
 
   <!--
@@ -119,10 +118,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "round" value -->
+  <!-- "round" 値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
 
-  <!-- Effect of the "round" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "round" 値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
 
   <!--
@@ -139,7 +138,7 @@ svg {
 
 ### square
 
-`square` 値は、各サブパスの端において、幅が描線の幅の半分に等しく、高さが描線の幅に等しい長方形によって描線が拡張されることを示します。長さがゼロのサブパスでは、描線は、サブパスのこの点を中心として、幅が描線の幅に等しい正方形となります。
+`square` 値は、各サブパスの端において、幅が描線の幅の半分に等しく、高さが描線の幅に等しい矩形によって描線が拡張されることを示します。長さがゼロのサブパスでは、描線は、サブパスのこの点を中心として、幅が描線の幅に等しい正方形となります。
 
 #### 例
 
@@ -153,10 +152,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "square" value -->
+  <!-- "square" 値の効果 -->
   <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
 
-  <!-- Effect of the "square" value on a zero length path -->
+  <!-- 長さゼロのパスにおける "square" 値の効果 -->
   <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
 
   <!--

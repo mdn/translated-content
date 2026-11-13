@@ -3,20 +3,18 @@ title: <dialog>：对话框元素
 slug: Web/HTML/Reference/Elements/dialog
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<dialog>`** 元素表示一个对话框或其他交互式组件，例如一个可关闭警告、检查器或者窗口。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式元素</a
         >、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_roots"
           >分段内容</a
@@ -26,7 +24,7 @@ slug: Web/HTML/Reference/Elements/dialog
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式元素"
           >流式元素</a
         >
       </td>
@@ -38,7 +36,7 @@ slug: Web/HTML/Reference/Elements/dialog
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式元素</a
         >的元素
       </td>

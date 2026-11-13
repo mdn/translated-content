@@ -2,33 +2,48 @@
 title: ARIA ページテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: da12dd76d4c9863ce4f9c436f5e2373fe541e1c7
 ---
-
-{{MDNSidebar}}
 
 ## ページのフロントマター
 
+ページのメタデータは、次の例のようにフロントマターで記述します。
+
+```md
+---
+title: aria-labelledby
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
+l10n:
+  sourceCommit: 翻訳元コミットID
+---
+```
+
 ### title と slug
 
-ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、`slug` を `ARIA/NameOfTheRole_role` としてください。例えば、[button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、`slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、[aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+
+### Sidebar
+
+`accessibilitysidebar` は、`/Web/Accessibility` 配下のすべてのページで使用できます。（訳注: 翻訳記事では指定しません。）
+
+```yaml
+sidebar: accessibilitysidebar
+```
+
+詳細については、[ページの構成：サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)をご覧ください。
 
 ### 先頭のマクロ
 
 コンテンツ部の上部に多くのマクロ呼び出しが現れます。下記のアドバイスに従って更新または削除してください。
 
-- \\{{ariaref}} — ページに記載されているタ グに応じて、適切な ARIA サイドバーを生成します。
-
 ### 状態
 
-> [!CALLOUT]
-> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
-
-（適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
+**訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
+（適切な）機能状態キーを含めるマクロです。[**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。— [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
 
 ### 仕様書
 
-`spec_urls` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント ID を指すように URL を更新してください。
+`spec-urls` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント ID を指すように URL を更新してください。（訳注: 翻訳記事では指定しません。）
 
 - [ARIA](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
@@ -69,15 +84,15 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
   - : それぞれの説明
 
 > [!NOTE]
-> このロールや属性を使用する意味づけについての注意事項を記載してください。 ARIA 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために ARIA ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
+> このロールや属性を使用する意味づけについての注意事項を記載してください。ARIA 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために ARIA ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、例が 1 つだけのページでも、複数形の "Examples" を使用しています。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -102,12 +117,12 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
 
 ## アクセシビリティの考慮
@@ -129,17 +144,17 @@ Google やモバイル音声認識のような、典型的なスクリーンリ�
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## 関連情報
 
-現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

@@ -1,0 +1,115 @@
+---
+title: corner-bottom-right-shape
+slug: Web/CSS/Reference/Properties/corner-bottom-right-shape
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+---
+
+{{SeeCompatTable}}
+
+**`corner-bottom-right-shape`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの右下の角の {{cssxref("border-radius")}} 領域における形状を指定します。
+
+全体的な角の形状の解説と複数の例については、{{cssxref("corner-shape")}} 一括指定プロパティページを参照してください。
+
+## 構文
+
+```css
+/* キーワード値 */
+corner-bottom-right-shape: notch;
+corner-bottom-right-shape: scoop;
+
+/* superellipse() 関数値 */
+corner-bottom-right-shape: superellipse(1.7);
+corner-bottom-right-shape: superellipse(-3);
+
+/* グローバル値 */
+corner-bottom-right-shape: inherit;
+corner-bottom-right-shape: initial;
+corner-bottom-right-shape: revert;
+corner-bottom-right-shape: revert-layer;
+corner-bottom-right-shape: unset;
+```
+
+### 値
+
+`corner-bottom-right-shape` プロパティは {{cssxref("&lt;corner-shape-value>")}} 値で指定します。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+その他の関連する例は、{{cssxref("corner-shape")}} リファレンスページにあります。
+
+### 基本的な `corner-bottom-right-shape` の使い方
+
+#### HTML
+
+この例のマークアップには、{{htmlelement("div")}} 要素が 1 つあります。
+
+```html live-sample___basic-usage
+<div></div>
+```
+
+#### CSS
+
+ボックスにいくつかの基本的なスタイルを設定していますが、簡略化のため省略します。また、{{cssxref("box-shadow")}} と、`border-radius` を `30% / 20%` に、`corner-bottom-left-shape` を `notch` に適用しています。
+
+```css hidden live-sample___basic-usage
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cyan;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0),
+    rgb(255 255 255 / 0.5)
+  );
+}
+```
+
+```css live-sample___basic-usage
+div {
+  box-shadow: 1px 1px 3px gray;
+  border-radius: 30% / 20%;
+  corner-bottom-right-shape: notch;
+}
+```
+
+#### 結果
+
+表示結果は次のようになります。
+
+{{EmbedLiveSample("basic-usage", "100%", "240")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("corner-shape")}} 一括指定プロパティ
+- {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-top-right-shape")}}, {{cssxref("corner-bottom-left-shape")}}
+- {{cssxref("corner-start-start-shape")}}, {{cssxref("corner-start-end-shape")}}, {{cssxref("corner-end-start-shape")}}, {{cssxref("corner-end-end-shape")}}
+- {{cssxref("border-radius")}} 一括指定プロパティ
+- {{cssxref("border-bottom-right-radius")}}
+- [CSS 境界とボックス装飾](/ja/docs/Web/CSS/Guides/Borders_and_box_decorations)モジュール
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

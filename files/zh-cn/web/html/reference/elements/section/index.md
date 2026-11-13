@@ -3,8 +3,6 @@ title: <section>
 slug: Web/HTML/Reference/Elements/section
 ---
 
-{{HTMLSidebar}}
-
 **HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
 
 {{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
@@ -39,7 +37,7 @@ h2 {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>流式元素，章节元素，短语元素。</td>
     </tr>
@@ -54,7 +52,7 @@ h2 {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（flow_content）">流式元素</a>的任何元素。请注意，<code>&#x3C;section></code> 元素不能是 {{HTMLElement("address")}} 元素的后代。
+        接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式元素（flow_content）">流式元素</a>的任何元素。请注意，<code>&#x3C;section></code> 元素不能是 {{HTMLElement("address")}} 元素的后代。
       </td>
     </tr>
     <tr>

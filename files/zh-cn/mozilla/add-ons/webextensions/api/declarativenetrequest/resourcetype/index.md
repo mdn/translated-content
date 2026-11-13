@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 请求的资源类型。与 {{WebExtAPIRef('webRequest.ResourceType')}} 类似。
 
 ## 类型

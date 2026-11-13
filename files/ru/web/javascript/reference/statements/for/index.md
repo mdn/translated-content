@@ -69,9 +69,9 @@ for (let i = "start" in window ? window.start : 0; i < 9; i++) {
 // SyntaxError: 'for-in' loop variable declaration may not have an initializer.
 ```
 
-```js example-good
+```js-nolint example-good
 // Все выражение инициализации переменной взято в скобки
-for (let i = ("start" in window) ? window.start : 0; i < 9; i++) {
+for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);
 }
 
@@ -165,7 +165,7 @@ showOffsetPos("content");
 - [пустая инструкция](/ru/docs/Web/JavaScript/Reference/Statements/Empty)
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/Empty", "empty")}}
 - {{jsxref("Statements/while", "while")}}
 - [`do...while`](/ru/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)

@@ -21,7 +21,7 @@ element.innerHTML = htmlString;
 
 ### 值
 
-{{domxref("DOMString")}} 包含元素后代的 HTML 序列。设置元素的 `innerHTML` 将会删除所有该元素的后代并以上面给出的 htmlString 替代。
+{{jsxref("String")}} 包含元素后代的 HTML 序列。设置元素的 `innerHTML` 将会删除所有该元素的后代并以上面给出的 htmlString 替代。
 
 ### 例外
 

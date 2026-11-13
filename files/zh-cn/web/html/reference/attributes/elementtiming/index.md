@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b138fb464010633f2d80093211465195cd2d4a28
 ---
 
-{{HTMLSidebar}}
-
 **`elementtiming`** 属性用于表示元素已被标记，以便 {{domxref("PerformanceObserver")}} 对象使用 `"element"` 类型进行跟踪。更多详情，请参见 {{domxref("PerformanceElementTiming")}} 接口。
 
 该属性可应用于 {{htmlelement("img")}}、{{SVGElement("svg")}} 内的 {{SVGElement("image")}} 元素、{{htmlelement("video")}} 元素的海报图像、带有 {{cssxref("background-image")}} 的元素以及包含文本节点（如 {{htmlelement("p")}}）的元素。

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 **`SharedArrayBuffer`** 객체는 제네릭, 고정된 길이의 원시 바이너리 데이터 버퍼를 표현하는데 사용됩니다. {{jsxref("ArrayBuffer")}} 객체와 유사하지만, 공유된 메모리상의 뷰를 생성하는데 사용될 수 있습니다. `ArrayBuffer` 와는 달리, `SharedArrayBuffer` 는 분리될 수 없습니다.
 
-> **참고:** [Spectre](https://meltdownattack.com/) 에대한 응답으로 2018년 1월 5일에 `SharedArrayBuffer` 는 모든 주요 브라우저에서 기본적으로 비활성화되어있음을 참고하세요. Chrome 은 사이트 격리 기능을 사용하여 Spectre 스타일 취약점으로부터 보호될 수 있는 플랫폼상의 [v67 에서 이를 다시 활성화](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)하였습니다.
+> [!NOTE]
+> [Spectre](https://meltdownattack.com/) 에대한 응답으로 2018년 1월 5일에 `SharedArrayBuffer` 는 모든 주요 브라우저에서 기본적으로 비활성화되어있음을 참고하세요. Chrome 은 사이트 격리 기능을 사용하여 Spectre 스타일 취약점으로부터 보호될 수 있는 플랫폼상의 [v67 에서 이를 다시 활성화](https://bugs.chromium.org/p/chromium/issues/detail?id=821270)하였습니다.
 
 {{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor")}}
 
@@ -59,7 +60,7 @@ worker.postMessage(sab);
 
 ### 생성자는 `new` 연산자를 필요로 함
 
-`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("Operators/new", "new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
+`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
 
 ```js example-bad
 var sab = SharedArrayBuffer(1024);
@@ -75,12 +76,12 @@ var sab = new SharedArrayBuffer(1024);
 
 - `SharedArrayBuffer.length`
   - : 값이 1인 `SharedArrayBuffer` 생성자의 length 속성입니다.
-- {{jsxref("SharedArrayBuffer.prototype")}}
+- {{jsxref("SharedArrayBuffer")}}
   - : 모든 `SharedArrayBuffer` 객체에 프로퍼티 추가를 가능하게 해줍니다.
 
 ## `SharedArrayBuffer` prototype 객체
 
-모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer.prototype")}} 를 상속합니다.
+모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer")}} 를 상속합니다.
 
 ### 속성
 

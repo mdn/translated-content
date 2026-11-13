@@ -3,12 +3,12 @@ title: "Element: fullscreenerror イベント"
 short-title: fullscreenerror
 slug: Web/API/Element/fullscreenerror_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}
+{{APIRef("Fullscreen API")}}
 
-`fullscreenerror` イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。
+**`fullscreenerror`** イベントは、ブラウザーが全画面モードに切り替えることができなかったときに発生します。
 
 [`fullscreenchange` イベント](/ja/docs/Web/API/Element/fullscreenchange_event) イベントと同様に、2 つの `fullscreenerror` イベントが発生します。1 つ目はモード切替に失敗した {{domxref("Element")}} に送られ、2 つ目はその要素を含む {{domxref("Document")}} に送られます。
 
@@ -20,10 +20,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("fullscreenchange", (event) => {});
+```js-nolint
+addEventListener("fullscreenerror", (event) => { })
 
-onfullscreenchange = (event) => {};
+onfullscreenerror = (event) => { }
 ```
 
 ## イベント型

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 该方法已被弃用。请使用 {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} 代替。
 

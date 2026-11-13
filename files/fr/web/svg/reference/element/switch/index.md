@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/switch
 original_slug: Web/SVG/Element/switch
 ---
 
-{{SVGRef}}
-
 L'élément `switch` évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient `true`. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.
 
 Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet sur le traitement du `switch`. En particulier, appliquer une propriété `display` à `none` sur l'élément enfant d'un `switch` n'a aucun effet sur le résultat du test `true/false` associé au traitement des éléments par le `switch`.
@@ -18,10 +16,10 @@ Notez que la valeur des propriétés `display` et `visibility` n'ont aucun effet
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Reference/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

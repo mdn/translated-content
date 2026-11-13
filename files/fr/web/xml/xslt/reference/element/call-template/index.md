@@ -4,8 +4,6 @@ slug: Web/XML/XSLT/Reference/Element/call-template
 original_slug: Web/XSLT/Element/call-template
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
-
 L'élément `<xsl:call-template>` invoque un modèle nommé.
 
 ### Syntaxe

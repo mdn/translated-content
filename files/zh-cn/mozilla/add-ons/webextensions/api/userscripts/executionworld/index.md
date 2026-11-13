@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 通过 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}} 注入脚本的执行环境。
 
 ## 类型

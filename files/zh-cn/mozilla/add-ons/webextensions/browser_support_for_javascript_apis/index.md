@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAllCompatTables}}
 
 ## 参见

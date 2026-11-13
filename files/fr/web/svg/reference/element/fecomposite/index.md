@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feComposite
 original_slug: Web/SVG/Element/feComposite
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComposite>`** effectue la combinaison de deux images en entrée, pixel par pixel, en utilisant une des opérations de composition de Porter-Duff: `over`_,_ `in`_,_ `atop`_,_ `out`_,_ `xor`, et `lighter`. Il est également possible d'appliquer une opération de type `arithmetic` (avec un résultat borné entre \[0..1]).
 
 L'opération `arithmetic` est utile pour combiner le résultat de {{SVGElement("feDiffuseLighting")}} et {{SVGElement("feSpecularLighting")}} avec des textures. Si l'opération `arithmetic` est choisie, chaque pixel est calculé à l'aide de la formule suivante:
@@ -27,9 +25,9 @@ où
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation_attributes)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -417,4 +415,4 @@ Cette image affine le résultat désiré.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

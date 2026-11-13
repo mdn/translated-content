@@ -1,11 +1,10 @@
 ---
-title: <script type="importmap">
+title: '`<script type="importmap">` 属性値'
+short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 **`importmap`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性に設定すると、要素の本体がインポートマップであることを示します。
 
@@ -39,25 +38,25 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする場合は、 [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)と [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)のどちらであっても、インポートするモジュールを示す「モジュール指定子」があります。
 ブラウザーは、モジュールをインポートするために、この指定子を絶対的な URL に解決できなければなりません。
 
-例えば、以下の記述では、文書のベース URL からの相対パスであるモジュール指定子 `"./modules/shapes/square.js"` と絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` から要素をインポートします。
+例えば、次の文は、絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` および、文書のベース URL に対する相対パスであるモジュール指定子 `"./modules/shapes/square.js"` から要素をインポートします。
 
 ```js
-import { name as squareName, draw } from "./modules/shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./modules/shapes/square.js";
 ```
 
 インポートマップにより、開発者はモジュール指定子に（ほとんど）好きなテキストを指定することができます。対応表は、モジュール指定子が解決されたときにテキストを置き換える、対応する値を提供します。
 
 ### ベアモジュール
 
-下記のインポートマップは `imports` キーを定義しており、`square` と `circle` というプロパティを持つ「モジュール指定マップ」を持ちます。
+下記のインポートマップは `imports` キーを定義しており、`circle` と `square` というプロパティを持つ「モジュール指定マップ」を持ちます。
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./modules/shapes/square.js"
     }
   }
 </script>
@@ -66,8 +65,8 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 このインポートマップを使えば、上記と同じモジュールをインポートすることができますが、モジュール指定子には「ベアモジュール」を使用します。
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 ### パス接頭辞のマッピング
@@ -115,7 +114,7 @@ import { name as circleName } from "shapes/circle.js";
 
 ### スコープ化されたモジュール指定子の対応表
 
-scopes` キーを使って、モジュールをインポートするスクリプトが特定の URL パスを格納した場合にのみ使用される対応付けを提供することができます。
+`scopes` キーを使って、モジュールをインポートするスクリプトが特定の URL パスを格納した場合にのみ使用される対応付けを提供することができます。
 読み込むスクリプトの URL が指定されたパスに一致する場合、そのスコープに関連付けられたマッピングが使用されます。
 これにより、インポートを行うコードによって異なるバージョンのモジュールを使用することができます。
 
@@ -141,7 +140,7 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 
 ### メタデータマップの整合性
 
-`integrity` キーを使用して、モジュールの[整合性メタデータ](/ja/docs/Web/Security/Subresource_Integrity#サブリソース完全性の使い方)に割り当てられたマップを提供することができます。
+`integrity` キーを使用して、モジュールの[整合性メタデータ](/ja/docs/Web/Security/Defenses/Subresource_Integrity#サブリソース完全性の使い方)に割り当てられたマップを提供することができます。
 これによって、動的または静的にインポートされたモジュールの整合性を確保することができます。
 また、 `integrity` を使用すると、最上位または事前読み込みされたモジュールに、それらがまだ `integrity` 属性を設定していない場合に備えて、代替手段を提供することができます。
 
@@ -164,6 +163,8 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 ```
 
 ### 複数のインポートマップの統合
+
+対応しているブラウザーでは、それらに依存するモジュールが読み込まれる前に定義されていれば、文書内の任意の場所に 1 つ以上のインポートマップを宣言することができます（一部の[バージョンのブラウザー](#ブラウザーの互換性)では、インポートマップの宣言は単一のものとしかできず、その宣言はどのモジュールよりも先に記述する必要があります）。
 
 内部的には、ブラウザーは単一のグローバルインポートマップ表現を維持しています。複数のインポートマップが文書内に含まれている場合、それらの内容は登録時にグローバルインポートマップに統合されます。
 
@@ -306,7 +307,7 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 
 - `integrity` {{optional_inline}}
   - : 有効な JSON オブジェクトを定義し、キーには有効な絶対 URL または相対 URL （`/`、`./`、`../` のいずれかで始めるもの）が含まれている文字列を指定します。
-    対応する値は有効な[整合性メタデータ](/ja/docs/Web/Security/Subresource_Integrity#サブリソース完全性の使い方)です。
+    対応する値は有効な[整合性メタデータ](/ja/docs/Web/Security/Defenses/Subresource_Integrity#サブリソース完全性の使い方)です。
 
     モジュールをインポートまたは事前読み込みするスクリプトの URL が `integrity` オブジェクトのキーと照合される場合、すでに整合性メタデータが添付されていない限り、対応する整合性メタデータがスクリプトのフェッチオプションに適用されます。
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返し案す。
+**`getHighEntropyValues()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、ユーザーエージェントが返す _高エントロピー_ 値を格納した辞書オブジェクトで解決される {{jsxref("Promise")}} を返します。
 
 > [!NOTE]
 > 「高エントロピー」「低エントロピー」という用語は、これらの値がブラウザーについて明らかにする情報の量を示します。
@@ -50,13 +50,13 @@ getHighEntropyValues(hints)
     なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `architecture`
   - : プラットフォームアーキテクチャを格納した文字列。例えば `"x86"` です。
-    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができることができます。
+    なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができます。
 - `bitness`
   - : アーキテクチャのビット数を格納した文字列。例えば `"32"` または `"64"` です。
     なお、この情報は、 {{HTTPHeader("Accept-CH")}} ヘッダーでサーバーが明示的にリクエストした場合、 {{HTTPHeader("Sec-CH-UA-Bitness")}} ヘッダーでサーバーに送ることができます。
 - `formFactor`
   - : 端末のフォームファクターを格納する文字列。例えば、`"Tablet"` または「VR」など。
-    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factor")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
+    サーバーが {{HTTPHeader("Accept-CH")}} ヘッダーで明示的にリクエストした場合、この情報は {{HTTPHeader("Sec-CH-UA-Form-Factors")}} ヘッダーでサーバーに送信される可能性があることに注意してください。
 - `fullVersionList`
   - : `"brand"` と `"version"` というプロパティを持つオブジェクトの配列で、それぞれブラウザー名とフルバージョンを表します。
     例えば、 `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}` です。

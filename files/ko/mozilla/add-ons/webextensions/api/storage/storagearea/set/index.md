@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ## 문법
 
 ```js
-let settingItem = browser.storage.&#x3C;storageType>.set(
+let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )
 ```
@@ -75,4 +75,5 @@ browser.storage.local.get("monster").then(gotMonster, onError);
 
 {{WebExtExamples}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> **Acknowledgements**This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

@@ -1,31 +1,35 @@
 ---
-title: "スキルテスト: サイズ設定"
+title: "確認テスト: サイズ設定"
+short-title: "テスト: サイズ設定"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
-original_slug: Learn_web_development/Core/Styling_basics/Sizing_tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
-このスキルテストの目的は、 [CSS でのアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)の様々な方法を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS でのアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)の様々な方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-## 課題 1
+## サイズ設定 1
 
-この課題では、 2 つのボックスがあります。最初のボックスは、コンテンツの量が少なくてその高さまで達しなくても、高さが少なくとも 100 ピクセルになるようにサイズを決めましょう。ただし、 100 ピクセルに収まるよりも多くのコンテンツがある場合は、コンテンツがはみ出さないようにし てください。 HTML からコンテンツを除去してこのボックスをテストし、コンテンツがなくても高さ 100 ピクセルのボックスが確保されることを確認してください。
+この課題では、 2 つのボックスがあります。
 
-2 つ目のボックスの高さは 100 ピクセルに固定し、コンテンツが多すぎるとはみ出るようにしてください。
+この課題を完成させるには、次のことを行ってください。
 
-![2 つのボックスがあり、 1 つはコンテンツがあふれている](mdn-sizing-height-min-height.png)
+1. 最初のボックスは、高さが少なくとも `100px` になるようにし、コンテンツの量が少なくてその高さに達しない場合でも、その高さになるようにします。ボックスに収まらない場合、コンテンツがあふれないようにしてください。
+2. HTML からコンテンツを削除して、コンテンツがない場合でもボックスの高さが `100px` になることを確認してください。
+3. 2 つ目のボックスの高さは `100px` に固定してください。この場合、コンテンツははみ出します。
 
-下記のライブコードを更新して、完成例を再現してみてください。
+この課題の出発点は次のようなものです。
 
-```html live-sample___height-min-height
+{{EmbedLiveSample("sizing1-start", "", "480px")}}
+
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___sizing1-start live-sample___sizing1-finish
 <div class="box box1">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -43,20 +47,18 @@ l10n:
 </div>
 ```
 
-```css hidden live-sample___height-min-height
+```css live-sample___sizing1-start live-sample___sizing1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
-```
 
-```css live-sample___height-min-height
 .box1 {
   /* ここにスタイルを追加 */
 }
@@ -66,14 +68,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("height-min-height", "", "500px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("sizing1-finish", "", "460px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-2 つのボックスがあり、最初のボックスは最小の高さが与えられ、その場合、追加のコンテンツを展開して収容しますが、コンテンツが除去されると、ボックスは少なくとも `min-height` と同じ高さになります。 2 つ目は修正された高さで指定され、コンテンツがあふれた状態になります。
+ボックスが 2 つあります。1 つ目のボックスには `min-height` が指定されているため、追加されたコンテンツに合わせて拡張されますが、コンテンツが除去されても高さが `100px` を下回ることはありません。2 つ目のボックスは高さが固定されているため、コンテンツがあふれます。
 
-```css
+```css live-sample___sizing1-finish
 .box1 {
   min-height: 100px;
 }
@@ -85,29 +89,35 @@ body {
 
 </details>
 
-## 課題 2
+## サイズ設定 2
 
-この課題では、別のボックスを格納しているボックスがあります。課題は、内側のボックスの幅を外側のボックスの幅の 60% にすることです。 {{cssxref("box-sizing")}} プロパティの値は `border-box` に設定されており、これは全体の幅がパディングと境界線を含んでいることを意味しています。また、幅（またはインラインサイズ）を使用して、内側のボックスに 10% のパディング値を与える必要があります。
+この課題では、別のボックスを格納しているボックスがあります。
 
-最終的には下記画像のようになるはずです。
+この課題を完成させるには、次のことを行ってください。
 
-![別なボックスを内部に含むボックス](mdn-sizing-percentages.png)
+1. 課題は、内側のボックスの幅を外側のボックスの幅の `60%` にすることです。 {{cssxref("box-sizing")}} プロパティの値は `border-box` に設定されており、これは全体の幅が `padding` と `border` を含んでいることを意味しています。
+2. 内側のボックスに `10%` のパディング値を与えてください。
 
-下記のライブコードを更新して、完成例を再現してみてください。
+この課題の出発点は次のようなものです。
 
-```html live-sample___percentages
+{{EmbedLiveSample("sizing2-start", "", "100px")}}
+
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___sizing2-start live-sample___sizing2-finish
 <div class="box">
   <div class="inner">親の 60% の幅にしてください。</div>
 </div>
 ```
 
-```css hidden live-sample___percentages
+```css live-sample___sizing2-start live-sample___sizing2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
 }
+
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
@@ -117,9 +127,7 @@ body {
   color: white;
   border-radius: 5px;
 }
-```
 
-```css live-sample___percentages
 * {
   box-sizing: border-box;
 }
@@ -128,18 +136,17 @@ body {
 }
 ```
 
-{{EmbedLiveSample("percentages", "", "250px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("sizing2-finish", "", "220px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-ボックスをコンテナーの 60% にし、すべての辺に 10% のパディングを与えます。
-すべての要素はすでに `box-sizing: border-box` が設定されており、どの幅を使用しているかについて心配する必要はありません。
+ボックスの `width` を `60%` にし、`padding` の値を `10%` にします。
+すべての要素にはすでに `box-sizing: border-box` が設定されていますので、`60%` の幅の値を計算する手間が省けます。
 
-```css
-* {
-  box-sizing: border-box;
-}
+```css live-sample___sizing2-finish
 .inner {
   width: 60%;
   padding: 10%;
@@ -148,17 +155,19 @@ body {
 
 </details>
 
-## 課題 3
+## サイズ設定 3
 
-この課題では、箱の中に 2 つの画像があります。一方の画像はボックスより小さく、もう一方はボックスからはみ出す大きさです。もしボックスがレスポンシブで、大きくなったり小さくなったりするとしたら、どのプロパティを画像に適用すれば、大きい画像がボックスに収まるように縮む一方で、小さな画像は引き伸ばされないようになるでしょうか。
+この課題では、箱の中に 2 つの画像があります。一方の画像はボックスより小さく、もう一方はボックスからはみ出す大きさです。
 
-最終的には下記画像のようになるはずです。
+この課題を完成させるには、ボックスがレスポンシブであり、伸長したり縮小したりできると想像してください。大きな画像がボックス内に縮小され、小さな画像が伸縮しないように、画像に宣言を適用してください。
 
-![画像の入った 2 つのボックス](mdn-sizing-max-width.png)
+この課題の出発点は次のようなものです。
 
-下記のライブコードを更新して、完成例を再現してみてください。
+{{EmbedLiveSample("sizing3-start", "", "700px")}}
 
-```html live-sample___max-width
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___sizing3-start live-sample___sizing3-finish
 <div class="box">
   <img
     alt="ピンクの星"
@@ -172,32 +181,32 @@ body {
 </div>
 ```
 
-```css hidden live-sample___max-width
+```css live-sample___sizing3-start live-sample___sizing3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
 }
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   margin-bottom: 1em;
   width: 500px;
 }
-```
 
-```css live-sample___max-width
 img {
   /* ここにスタイルを追加 */
 }
 ```
 
-{{EmbedLiveSample("max-width", "", "700px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("sizing3-finish", "", "720px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-この例には、ボックスからはみ出す画像とボックスよりも小さい画像があります。大きな画像がボックスと同じ大きさだけ伸長するように発生させるには、 `max-width` を 100% に設定する必要があります。 `width: 100%` を使用すると、小さな画像が伸長します。
+画像の `max-width` プロパティを `100%` に設定すると、大きな画像がボックス内に収まります。`width: 100%` を指定すると、小さな画像は引き伸ばされます。
 
-```css
+```css live-sample___sizing3-finish
 img {
   max-width: 100%;
 }
@@ -205,6 +214,4 @@ img {
 
 </details>
 
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

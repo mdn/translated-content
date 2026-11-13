@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
 ---
 
-{{HTMLSidebar}}
-
 **`<time>`** [HTML](/zh-CN/docs/Web/HTML) 元素用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
 
 它可以代表以下含义之一：
@@ -151,7 +149,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
       <td>有效的持续时间字符串</td>
       <td>
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
-        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
         <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
         <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />

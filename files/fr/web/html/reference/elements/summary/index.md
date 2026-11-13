@@ -1,22 +1,22 @@
 ---
-title: "<summary> : l'élément de révélation d'un résumé"
+title: "Élément HTML `<summary>` : l'élément de révélation d'un résumé"
+short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
-original_slug: Web/HTML/Element/summary
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
 
-L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
-
-{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;summary&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <details>
   <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
-    leave. What am I?
+    J'ai des clés mais pas de portes. J'ai de l'espace mais pas de pièce. Vous
+    pouvez entrer mais ne pouvez pas sortir. Qui suis-je&nbsp;?
   </summary>
-  A keyboard.
+  Un clavier.
 </details>
 ```
 
@@ -45,42 +45,54 @@ details[open] summary {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
 Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
 
-Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
+Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur·ice clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement {{DOMxRef("HTMLElement/toggle_event", "toggle")}} est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état avec un script).
+
+Le contenu de l'élément `<details>` fournit la {{Glossary("accessible description", "description accessible")}} pour l'élément `<summary>`.
 
 ### Libellé par défaut
 
-Si l'élément `<summary>` est absent au sein d'un élément `<details>`, c'est le titre contenu dans l'élément {{HTMLElement("details")}} qui sera utilisé.
+Si le premier enfant d'un élément `<details>` n'est pas un élément `<summary>`, {{Glossary("user agent", "l'agent utilisateur")}} utilise une chaîne de caractères par défaut (généralement «&nbsp;Détails&nbsp;») comme libellé pour la boîte de révélation.
 
 ### Mise en forme par défaut
 
-La mise en forme par défaut pour `<summary>` est `display: list-item`, tel qu'indiqué dans [le standard HTML](https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements). Cela permet de modifier ou de retirer l'icône affiché pour le contrôle d'affichage/masquage. Par défaut, cette icône est généralement un triangle.
+Conformément à la spécification HTML, le style par défaut pour les éléments `<summary>` inclut `display: list-item`. Cela permet de changer ou de supprimer l'icône affichée comme composant à côté du libellé, qui est généralement un triangle.
 
-Si la mise en forme est surchargée avec `display: block`, l'icône triangulaire qui révèle le contenu sera masquée.
+Vous pouvez aussi changer le style en `display: block` pour supprimer le triangle.
 
-Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car certains navigateurs ne prennent pas en charge tout ces aspects.
+Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails, car tous les navigateurs ne prennent pas encore en charge toutes les fonctionnalités de cet élément.
+
+Pour les navigateurs basés sur WebKit, comme Safari, il est possible de contrôler l'affichage de l'icône avec le pseudo-élément CSS non standard `::-webkit-details-marker`. Pour supprimer le triangle, utilisez `summary::-webkit-details-marker { display: none }`.
 
 ## Exemples
 
+Voici quelques exemples montrant l'utilisation de `<summary>`. Vous pouvez trouver d'autres exemples dans la documentation de l'élément {{HTMLElement("details")}}.
+
 ### Exemple simple
+
+Un exemple simple montrant l'utilisation de `<summary>` dans un élément {{HTMLElement("details")}}&nbsp;:
 
 #### HTML
 
 ```html
 <details open>
   <summary>Détails produit</summary>
-  <p>Ce produit a été fabriqué par ACME et respecte les pandas.</p>
+  <ol>
+    <li>Date de fabrication&nbsp;: 01 janvier 2018</li>
+    <li>Numéro de lot&nbsp;: LMA2542501</li>
+    <li>Date limite de consommation&nbsp;: 31 août 2018</li>
+  </ol>
 </details>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("","100%","160")}}
+{{EmbedLiveSample("Exemple simple", 650, 120)}}
 
 ### Utilisation de titres
 
@@ -92,18 +104,25 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 <details open>
   <summary><h4>Détails produit</h4></summary>
   <ol>
-    <li>Date de fabrication : 01 janvier 2018</li>
-    <li>Numéro de lot : LMA2542501</li>
-    <li>Date limite de consommation : 31 août 2018</li>
+    <li>Date de fabrication&nbsp;: 01 janvier 2018</li>
+    <li>Numéro de lot&nbsp;: LMA2542501</li>
+    <li>Date limite de consommation&nbsp;: 31 août 2018</li>
   </ol>
 </details>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", 650, 120)}}
+{{EmbedLiveSample("Utilisation de titres", 650, 200)}}
 
-### Utiliser avec divers éléments HTML
+Il existe actuellement quelques problèmes d'espacement qui peuvent être corrigés à l'aide de CSS.
+
+> [!WARNING]
+> Le rôle attribué à l'élément `<summary>` varie selon les navigateurs. Certains lui attribuent encore par défaut le rôle [`button`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/button_role), ce qui supprime tous les rôles de ses enfants. Cette incohérence peut poser des problèmes aux utilisateur·ice·s de technologies d'assistance telles que les lecteurs d'écran (`<h4>` dans l'exemple précédent voit son rôle supprimé et n'est pas traité comme un titre pour ces utilisateur·ice·s). Vous devez tester votre implémentation de `<summary>` sur plusieurs plateformes afin de garantir une prise en charge de l'accessibilité cohérente.
+
+### Utiliser des éléments HTML dans un résumé
+
+Cet exemple ajoute une certaine sémantique à l'élément `<summary>` pour indiquer que le libellé est important&nbsp;:
 
 #### HTML
 
@@ -111,16 +130,91 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 <details open>
   <summary><strong>Détails</strong></summary>
   <ol>
-    <li>Date de fabrication : 01 janvier 2018</li>
-    <li>Numéro de lot : LMA2542501</li>
-    <li>Date limite de consommation : 31 août 2018</li>
+    <li>Date de fabrication&nbsp;: 01 janvier 2018</li>
+    <li>Numéro de lot&nbsp;: LMA2542501</li>
+    <li>Date limite de consommation&nbsp;: 31 août 2018</li>
   </ol>
 </details>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", 650, 120)}}
+{{EmbedLiveSample("Utiliser des éléments HTML dans un résumé", 650, 120)}}
+
+### Changer l'icône du résumé
+
+Le marqueur de l'élément `<summary>`, c'est-à-dire le triangle de révélation, peut être personnalisé avec CSS. Le marqueur peut être ciblé à l'aide du pseudo-élément {{CSSxRef("::marker")}}, qui accepte la propriété abrégée {{CSSxRef("list-style")}} ainsi que ses propriétés détaillées, comme {{CSSxRef("list-style-type")}}. Cela permet de remplacer le triangle par une image (généralement avec {{CSSxRef("list-style-image")}}) ou une chaîne de caractères (y compris des émojis). Dans cet exemple, nous remplaçons le contenu d'un composant de révélation et supprimons l'icône d'un autre en appliquant `list-style: none` avant d'ajouter une icône personnalisée avec du contenu généré.
+
+#### CSS
+
+Dans le premier composant de révélation, nous mettons en forme le `::marker`, en modifiant la propriété {{CSSxRef("content")}} selon l'attribut `[open]` de l'élément `<details>`. Pour le second composant, nous supprimons le marqueur avec les propriétés `list-style`, puis nous ajoutons un contenu généré mis en forme avec le pseudo-élément {{CSSxRef("::after")}}. Nous incluons également des styles pour `::-webkit-details-marker` afin de cibler Safari. Le sélecteur pour le pseudo-élément spécifique au navigateur est inclus dans une pseudo-classe {{CSSxRef(":is()")}} afin de ne pas invalider la liste des sélecteurs.
+
+```css
+details {
+  font-size: 1rem;
+  font-family: "Open Sans", Calibri, sans-serif;
+  border: solid;
+  padding: 2px 6px;
+  margin-bottom: 1em;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ ";
+  font-family: monospace;
+  color: red;
+  font-weight: bold;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "− ";
+}
+
+details:last-of-type summary {
+  list-style: none;
+  &::after {
+    content: "+";
+    color: white;
+    background-color: darkgreen;
+    border-radius: 1em;
+    font-weight: bold;
+    padding: 0 5px;
+    margin-inline-start: 5px;
+  }
+  [open] &::after {
+    content: "−";
+  }
+}
+details:last-of-type summary::-webkit-details-marker {
+  display: none;
+}
+```
+
+Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}}, car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs n'est pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Reference/Selectors/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
+
+#### HTML
+
+```html-nolint
+<h1>Citations d'Helen Keller</h1>
+
+<details>
+  <summary>Sur les droits des femmes</summary>
+  <p>
+    <q>Nous avons prié, nous avons supplié, nous avons imploré pour obtenir le droit de vote, dans l'espoir que les hommes, par chevalerie, accordent l'égalité des droits aux femmes et les associent aux affaires de l'État. Nous espérions que leur bon sens l'emporte sur les préjugés et la stupidité. Nous pensions que leur sens tant vanté de la justice surmonte les erreurs qui entravent si souvent l'esprit humain&nbsp;; mais nous sommes toujours reparties les mains vides. Nous ne supplions plus.</q>
+  </p>
+</details>
+
+<details>
+  <summary>Sur l'optimisme</summary>
+  <p>
+    <q>L'optimisme est la foi qui mène à la réussite&nbsp;; rien ne peut être accompli sans espoir.</q>
+  </p>
+</details>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Changer l'icône du résumé", 650, 400)}}
 
 ## Résumé technique
 
@@ -129,11 +223,11 @@ Il est possible d'utiliser des titres au sein d'un résumé.
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >
         ou un élément décrivant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_titre"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_titre"
           >contenu de titre</a
         >.
       </td>
@@ -149,12 +243,16 @@ Il est possible d'utiliser des titres au sein d'un résumé.
       <td>Un élément {{HTMLElement("details")}}.</td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td> <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant <sup>(angl.)</sup></a></td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
+      <td>Aucun <code>role</code> autorisé.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -169,4 +267,4 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 ## Voir aussi
 
-- {{HTMLElement("details")}}
+- L'élément {{HTMLElement("details")}}

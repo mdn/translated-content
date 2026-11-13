@@ -3,8 +3,6 @@ title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 ---
 
-{{HTMLSidebar}}
-
 **`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}

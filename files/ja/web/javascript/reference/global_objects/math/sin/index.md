@@ -1,13 +1,12 @@
 ---
 title: Math.sin()
+short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
-
-**`Math.sin()`** 静的メソッドは、ラジアンの数値の正弦 (サイン) を返します。
+**`Math.sin()`** は静的メソッドで、ラジアン単位で表した数値の正弦（サイン）を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.sin()")}}
 
@@ -17,13 +16,13 @@ function getCircleY(radians, radius) {
 }
 
 console.log(getCircleY(1, 10));
-// Expected output: 8.414709848078965
+// 予想される結果: 8.414709848078965
 
 console.log(getCircleY(2, 10));
-// Expected output: 9.092974268256818
+// 予想される結果: 9.092974268256818
 
 console.log(getCircleY(Math.PI, 10));
-// Expected output: 1.2246467991473533e-15
+// 予想される結果: 1.2246467991473533e-15
 ```
 
 ## 構文
@@ -39,7 +38,7 @@ Math.sin(x)
 
 ### 返値
 
-`x` の正弦（サイン）で、 -1 と 1 の両端を含む範囲です。 `x` が {{jsxref("Infinity")}} であった場合は `-Infinity` となり、 {{jsxref("NaN")}} であった場合は {{jsxref("NaN")}} を返します。
+`x` の正弦で、-1 から 1 まで（両端を含む）です。`x` が {{jsxref("Infinity")}}、`-Infinity`、または {{jsxref("NaN")}} の場合は、{{jsxref("NaN")}} を返します。
 
 ## 解説
 
@@ -74,3 +73,4 @@ Math.sin(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("sin()")}} 関数

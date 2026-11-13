@@ -8,8 +8,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-{{PWASidebar}}
-
 Les <i lang="en">service workers</i>, et par extension les PWA, sont [restreints aux contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Les contextes sécurisés incluent notamment les contextes TLS servis avec le protocole `https://` et les ressources servies localement (par exemple les URL avec l'hôte `127.0.0.1` ou `localhost`, servies avec le protocole `http://`). Dans cette section, nous aborderons les façons de servir une application localement et à distance avec une connexion sécurisée.
 
 Dans l'article précédent, nous avons utilisé HTML et CSS pour créer le squelette de notre application. Dans ce chapitre, nous ouvrirons le contenu statique de CycleTracker dans un navigateur, nous en verrons le contenu depuis un environnement de développement local, mais aussi depuis un serveur distant, avec une connexion sécurisée.
@@ -41,14 +39,14 @@ Le serveur web par défaut du système d'exploitation fournit certes un nom d'h�
 
 Il existe plusieurs extensions d'[IDE](/fr/docs/Glossary/IDE) et paquets propres à certains langages de programmation qui vous permettent de démarrer un environnement de développement à l'aide d'un clic ou d'une commande. Vous pouvez même démarrer plusieurs serveurs locaux, chacun ayant un numéro de port différent.
 
-Vous pouvez lancer un serveur HTTP local à [l'aide d'une extension Visual Studio Code plugin](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), qui permet d'exécuter un serveur local sur un port donné.[L'extension <i lang="en">Preview on Web Server</i>](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) de l'IDE [Visual Studio Code](https://code.visualstudio.com/download) permet de créer un serveur à la racine du répertoire ouvert dans l'éditeur, en utilisant le port `8080` oar défaut. Les extensions peuvent être configurées et on pourra donc changer le paramètre `previewServer.port` pour utiliser un autre port. Par défaut, si on saisit `localhost:8080` dans la barre d'URL du navigateur, on pourra voir la page.
+Vous pouvez lancer un serveur HTTP local à [l'aide d'une extension Visual Studio Code plugin](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), qui permet d'exécuter un serveur local sur un port donné.[L'extension <i lang="en">Preview on Web Server</i>](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) de l'IDE [Visual Studio Code](https://code.visualstudio.com/download) permet de créer un serveur à la racine du répertoire ouvert dans l'éditeur, en utilisant le port `8080` oar défaut. Les extensions peuvent être configurées et on pourra donc changer le paramètre `previewServer.port` pour utiliser un autre port. Par défaut, si on saisit `localhost:8080` dans la barre d'URL du navigateur, on pourra voir la page.
 
 > [!NOTE]
 > L'extension <i lang="en">Preview on Web Server</i> utilise [Browsersync](https://browsersync.io/). Lorsque vous avez un environnement de développement démarré avec cette extension, l'adresse `localhost:3001` vous permet d'accéder à l'interface utilisateur de Browsersync.
 
 Vous pouvez également créer [un serveur local avec l'IDE IntelliJ](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html), qui intègre un [serveur web PHP configurable](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server).
 
-Sur MDN, vous pouvez consulter d'autres guides pour apprendre à [mettre en place un serveur de test local](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) avec [Python](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python) ou avec [un langage de programmation serveur](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) comme PHP.
+Sur MDN, vous pouvez consulter d'autres guides pour apprendre à [mettre en place un serveur de test local](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) avec [Python](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_python) ou avec [un langage de programmation serveur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) comme PHP.
 
 ## `localhost` avec npx
 
@@ -77,7 +75,7 @@ Les options précédentes sont acceptables et nécessaires pour tester une appli
 
 Pour bénéficier des fonctionnalités propres aux PWA comme l'installation rapide, une interface utilisateur dédiée et une éventuelle publication sur un magasin d'application, l'application doit être une PWA, ce qui signifie qu'elle doit utiliser un <i lang="en">service worker</i>, ce qui implique d'utiliser une connexion sécurisée. Pour distribuer votre application et permettre à d'autres de la voir, de l'utiliser et de l'installer, vous aurez besoin que votre contenu soit hébergé et disponible sur un serveur _distant_.
 
-Pour publier officiellement une PWA, vous souhaiterez peut-être investir dans [un nom de domaine et un hébergement web](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hébergement). Pour les projets <i lang="en">open source</i>, où le code est disponible publiquement pour que toutes et tous puissent l'étudier et y contribuer, vous pouvez héberger votre projet sur [GitHub Pages](https://pages.github.com/).
+Pour publier officiellement une PWA, vous souhaiterez peut-être investir dans [un nom de domaine et un hébergement web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hébergement). Pour les projets <i lang="en">open source</i>, où le code est disponible publiquement pour que toutes et tous puissent l'étudier et y contribuer, vous pouvez héberger votre projet sur [GitHub Pages](https://pages.github.com/).
 
 ## GitHub Pages
 
@@ -91,7 +89,8 @@ Si vous ne souhaitez pas que votre PWA soit disponible à la racine de votre pag
 
 Pour le cas de l'application de démonstration CycleTracker au fur et à mesure des différentes étapes du développement, `<nomutilisateur>` sera `mdn` et le dépôt est `pwa-examples`. Comme ce dépôt contient plusieurs exemples de PWA, chacune avec le code correspondant à différentes étapes du processus de développement, les fichiers (et donc les PWA correspondantes) sont disponibles avec des URL ayant plusieurs niveaux de profondeur.
 
-> **Note :** [Vous pouvez configurer un domaine personnalisé pour les sites GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+> [!NOTE]
+> [Vous pouvez configurer un domaine personnalisé pour les sites GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ## Pour la suite
 

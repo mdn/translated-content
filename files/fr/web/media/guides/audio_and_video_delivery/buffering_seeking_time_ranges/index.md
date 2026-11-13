@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
 original_slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant [TimeRanges](/fr/docs/Web/API/TimeRanges), et d'autres fonctionnalités de l'API Media.
 
 ## Buffered
@@ -124,7 +122,8 @@ Bien qu'on ait vu que les parties ne sont pas nécessairement contigues, elles l
 var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
 ```
 
-> **Note :** `myAudio.seekable.end(myAudio.seekable.length - 1)` nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — `audio.seekable` sera l'équivalent de `audio.buffered` — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.
+> [!NOTE]
+> `myAudio.seekable.end(myAudio.seekable.length - 1)` nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — `audio.seekable` sera l'équivalent de `audio.buffered` — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.
 
 Il est peut-être préférable de donner une indication de la quantité de média effectivement téléchargée — c'est ce que les lecteurs natifs du navigateur semblent indiquer.
 

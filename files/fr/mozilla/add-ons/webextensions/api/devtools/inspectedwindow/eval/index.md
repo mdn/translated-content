@@ -3,8 +3,6 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 ---
 
-{{AddonSidebar}}
-
 Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
 
 C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}} pour joindre un script de contenu, mais avec deux différences principales:
@@ -160,8 +158,6 @@ inspectButton.addEventListener("click", () => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

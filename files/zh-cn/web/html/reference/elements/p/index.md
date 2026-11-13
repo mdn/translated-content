@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 736fa0e485243ef1f07395811a9bf397c6509316
 ---
 
-{{HTMLSidebar}}
-
 **`<p>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。
 
 段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。

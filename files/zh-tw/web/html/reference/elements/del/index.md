@@ -3,8 +3,6 @@ title: <del>：刪除的文字元素
 slug: Web/HTML/Reference/Elements/del
 ---
 
-{{HTMLSidebar}}
-
 **`<del>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表從文件中刪除的文字範圍。例如，這可用於渲染「跟踪更改」或源代碼差異信息。{{HTMLElement("ins")}} 元素可用於相反的目的：指示已添加到文檔中的文字。
 
 {{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}

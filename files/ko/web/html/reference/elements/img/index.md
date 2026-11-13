@@ -118,7 +118,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 - `sizes`
   - : 소스 크기를 나타내는, 쉼표로 구분한 하나 이상의 문자열. 각각의 문자열은 다음 구성요소로 이루어집니다.
-    - [미디어 조건](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#구문). 마지막 항목에서는 생략해야 합니다.
+    - [미디어 조건](/ko/docs/Web/CSS/Guides/Media_queries/Using#구문). 마지막 항목에서는 생략해야 합니다.
     - 소스 크기 값.
 
     미디어 조건은 이미지의 속성이 아니라** {{glossary("viewport", "뷰포트")}}** 속성을 가리킵니다. 예를 들어, `(max-height: 500px) 1000px`은 1000px 너비의 소스를 사용하려면 **뷰포트**가 500px 이하여야 한다는 뜻입니다.
@@ -145,7 +145,8 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 - `usemap`
   - : 요소와 연결할 [이미지 맵](/ko/docs/Web/HTML/Reference/Elements/map)의 프래그먼트.
 
-    > **참고:** `<img>` 요소가 {{htmlelement("a")}} 또는 {{HTMLElement("button")}} 요소의 자손이면 사용할 수 없습니다.
+    > [!NOTE]
+    > `<img>` 요소가 {{htmlelement("a")}} 또는 {{HTMLElement("button")}} 요소의 자손이면 사용할 수 없습니다.
 
 ### Deprecated attributes
 
@@ -179,7 +180,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## CSS 스타일링
 
-`<img>`는 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)입니다. 기본적으로 {{cssxref("display")}}는 `inline`이나, 기본 크기는 내장한 이미지의 고유 크기로 정해지므로 마치 `inline-block`처럼 보입니다. {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}} 등의 속성을 이미지에 지정할 수 있습니다.
+`<img>`는 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)입니다. 기본적으로 {{cssxref("display")}}는 `inline`이나, 기본 크기는 내장한 이미지의 고유 크기로 정해지므로 마치 `inline-block`처럼 보입니다. {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}} 등의 속성을 이미지에 지정할 수 있습니다.
 
 `<img>`는 기준선을 갖지 않으므로, {{cssxref("vertical-align")}}`: baseline`을 지정한 인라인 서식 맥락에서는 이미지의 아래쪽 모서리가 텍스트 기준선으로 가게 됩니다.
 
@@ -245,7 +246,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 보안 및 개인정보 고려사항
 
-`<img>` 요소를 사용하는 것에는 문제가 없으나, 의도치 않게 사용자 개인정보와 보안에 악영향을 줄 수 있습니다. [Referer 헤더: 개인정보 및 보안 고려사항](/ko/docs/Web/Security/Referer_header:_privacy_and_security_concerns) 문서를 방문해 더 많은 정보를 알아보세요.
+`<img>` 요소를 사용하는 것에는 문제가 없으나, 의도치 않게 사용자 개인정보와 보안에 악영향을 줄 수 있습니다. [Referer 헤더: 개인정보 및 보안 고려사항](/ko/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) 문서를 방문해 더 많은 정보를 알아보세요.
 
 ## 접근성 고려사항
 
@@ -289,22 +290,22 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#내장_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#내장_콘텐츠"
           >내장 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#뚜렷한_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#뚜렷한_콘텐츠"
           >뚜렷한 콘텐츠</a
         >. `usemap` 특성을 가진 경우
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#대화형_콘텐츠"
           >대화형 콘텐츠</a
         >.
       </td>
@@ -322,7 +323,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#내장_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#내장_콘텐츠"
           >내장 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

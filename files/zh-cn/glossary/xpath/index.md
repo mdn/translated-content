@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{GlossarySidebar}}
-
 **XPath** 是一种可以访问 {{glossary("XML")}} 文件中的节和内容的查询语言。
 
 ## 参见

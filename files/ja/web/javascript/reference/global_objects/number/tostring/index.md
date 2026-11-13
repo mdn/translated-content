@@ -1,29 +1,28 @@
 ---
 title: Number.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("Number")}} 値のメソッドで、この数値を表現する文字列を返します。
 
-{{InteractiveExample("JavaScript デモ: Number.toString()")}}
+{{InteractiveExample("JavaScript デモ: Number.prototype.toString()")}}
 
 ```js interactive-example
-function hexColour(c) {
+function hexColor(c) {
   if (c < 256) {
     return Math.abs(c).toString(16);
   }
   return 0;
 }
 
-console.log(hexColour(233));
-// Expected output: "e9"
+console.log(hexColor(233));
+// 予想される結果: "e9"
 
-console.log(hexColour("11"));
-// Expected output: "b"
+console.log(hexColor("11"));
+// 予想される結果: "b"
 ```
 
 ## 構文

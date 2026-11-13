@@ -15,7 +15,7 @@ var nameObj = self.name;
 
 ### Valeur
 
-Une {{domxref("DOMString")}} (_chaîne de caractères_).
+Une {{jsxref("String")}} (_chaîne de caractères_).
 
 ## Exemple
 

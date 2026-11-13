@@ -3,8 +3,6 @@ title: <dfn>：定義元素
 slug: Web/HTML/Reference/Elements/dfn
 ---
 
-{{HTMLSidebar}}
-
 **`<dfn>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示要定義的術語。`<dfn>` 元素應該在完整的定義語句中使用，其中 `<dfn>` 元素的祖先 {{HTMLElement("p")}} 元素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} 配對或 `<dfn>` 元素的最近 {{HTMLElement("section")}} 祖先被認為是該術語的完整定義。
 
 {{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}

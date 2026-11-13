@@ -3,8 +3,6 @@ title: privacy
 slug: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
 
-{{AddonSidebar}}
-
 Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.
 
 Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "privacy".

@@ -357,7 +357,7 @@ container.addEventListener("click", (event) => {
 ## 参见
 
 - [domevents.dev](https://domevents.dev/)——一个非常有用的交互式游乐场应用程序，能够通过探索来学习 DOM 事件系统的行为。
-- [事件参考](/zh-CN/docs/Web/Events)
+- [事件参考](/zh-CN/docs/Web/API/Document_Object_Model/Events)
 - [事件顺序](https://www.quirksmode.org/js/events_order.html)（探讨了捕获和冒泡）——由 Peter-Paul Koch 撰写的非常详尽的文章。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

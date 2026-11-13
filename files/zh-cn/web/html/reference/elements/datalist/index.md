@@ -3,8 +3,6 @@ title: <datalist>：HTML 数据列表元素
 slug: Web/HTML/Reference/Elements/datalist
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<datalist>`** 元素包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其他表单控件可选值。
 
 {{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}

@@ -20,7 +20,7 @@ l10n:
 - `origin-when-cross-origin`
   - : 执行同源请求时发送完整的 URL，但在其他情况下仅发送文档的源。
 - `same-origin`
-  - : 将[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)发送给引用者，但跨源请求将不包含引用者信息。
+  - : 将[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)发送给引用者，但跨源请求将不包含引用者信息。
 - `strict-origin`
   - : 当协议安全级别保持不变（HTTPS → HTTPS）时仅发送文档的源作为引用者，但不发送到安全性较低的目的地（HTTPS → HTTP）。
 - `strict-origin-when-cross-origin`（默认值）

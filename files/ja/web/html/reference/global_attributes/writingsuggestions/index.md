@@ -1,12 +1,10 @@
 ---
-title: writingsuggestions
+title: HTML writingsuggestions グローバル属性
+short-title: writingsuggestions
 slug: Web/HTML/Reference/Global_attributes/writingsuggestions
-original_slug: Web/HTML/Global_attributes/writingsuggestions
 l10n:
-  sourceCommit: 8d5d18805ad96e1c56d72de5c26de60e86dfa817
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`writingsuggestions`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、{{glossary("enumerated", "列挙型")}}属性であり、ブラウザーが指定した入力補完を要素のスコープで有効にするかどうかを示します。
 

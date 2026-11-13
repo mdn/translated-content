@@ -3,10 +3,10 @@ title: "XMLHttpRequest: open() メソッド"
 short-title: open()
 slug: Web/API/XMLHttpRequest/open
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} の **`open()`** メソッドは、新しく作成されたリクエストを初期化したり、既存のリクエストを再初期化したりします。
 
@@ -53,5 +53,5 @@ open(method, url, async, user, password)
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- 関連する {{domxref("XMLHttpRequest")}} のメソッド: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, {{domxref("XMLHttpRequest.abort", "abort()")}}
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- 関連する {{domxref("XMLHttpRequest")}} のメソッド: {{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, {{domxref("XMLHttpRequest.abort", "abort()")}}

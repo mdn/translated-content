@@ -1,28 +1,23 @@
 ---
-title: WebSocket.bufferedAmount
+title: WebSocket：bufferedAmount 属性
+short-title: bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-**`WebSocket.bufferedAmount`是一个只读属性，用于返回已经被**[`send()`](#send)方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用[`send()`](#send)，则该属性值会持续增长
+**`WebSocket.bufferedAmount`** 只读属性返回已通过 [`send()`](/zh-CN/docs/Web/API/WebSocket/send) 调用排入队列、但尚未发送到网络的数据字节数。当所有排队的数据发送完毕后，该值会重置为零。当连接关闭时，该值不会自动重置为零；如果你继续调用 [`send()`](/zh-CN/docs/Web/API/WebSocket/send)，这个数值会继续增加。
 
-The **`WebSocket.bufferedAmount`** read-only property returns the number of bytes of data that have been queued using calls to [`send()`](#send) but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling [`send()`](#send), this will continue to climb.
+## 值
 
-## Syntax
+一个 `unsigned long`。
 
-```plain
-var bufferedAmount = aWebSocket.bufferedAmount;
-```
-
-## Value
-
-An `unsigned long`.
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

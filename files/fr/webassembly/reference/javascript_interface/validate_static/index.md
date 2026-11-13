@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
-
 La méthode statique **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Guide/Typed_arrays) de <i lang="en">bytecode</i> WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
 
 ## Syntaxe
@@ -55,5 +53,5 @@ fetch("simple.wasm")
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

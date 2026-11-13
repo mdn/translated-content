@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6336af7a3880c350919e5b29f83b938fb1594362
 ---
 
-{{HTMLSidebar}}
-
 **`<header>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示介绍性内容，通常是一组介绍性或导航性辅助内容。它可能包含一些标题元素，也可能包含徽标、搜索表单、作者姓名和其他元素。
 
 {{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}

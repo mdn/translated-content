@@ -6,9 +6,7 @@ l10n:
   sourceCommit: e14e4830bcd43de164623aaf787fbd695be31d91
 ---
 
-{{XsltSidebar}}
-
-[Transformations XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
+[Transformations XML avec XSLT](/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 ## Publications
 

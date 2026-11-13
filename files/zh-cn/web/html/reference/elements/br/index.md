@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<br>`** 元素在文本中生成一个换行（回车）符号。此元素在写诗和地址时很有用，这些地方的换行都非常重要。
 
 {{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
@@ -81,7 +79,7 @@ USA
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。</td>
   </tr>
   <tr>

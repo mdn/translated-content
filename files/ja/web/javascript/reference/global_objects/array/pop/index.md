@@ -1,29 +1,28 @@
 ---
 title: Array.prototype.pop()
+short-title: pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`pop()`** メソッドは、配列から**最後**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変化させます。
 
-{{InteractiveExample("JavaScript デモ: Array.pop()")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.pop()")}}
 
 ```js interactive-example
 const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
 
 console.log(plants.pop());
-// Expected output: "tomato"
+// 予想される結果: "tomato"
 
 console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+// 予想される結果: Array ["broccoli", "cauliflower", "cabbage", "kale"]
 
 plants.pop();
 
 console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+// 予想される結果: Array ["broccoli", "cauliflower", "cabbage"]
 ```
 
 ## 構文

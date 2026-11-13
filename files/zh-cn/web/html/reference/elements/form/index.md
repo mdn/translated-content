@@ -3,8 +3,6 @@ title: <form>：表单元素
 slug: Web/HTML/Reference/Elements/form
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。
 
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}

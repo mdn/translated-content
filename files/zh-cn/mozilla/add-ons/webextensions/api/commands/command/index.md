@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 有关命令的信息。这包含在 [`commands` manifest.json 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中指定的命令信息。
 
 调用 {{WebExtAPIRef('commands.getAll()')}} 将返回包含这些对象的数组。

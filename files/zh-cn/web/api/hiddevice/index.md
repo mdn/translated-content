@@ -16,7 +16,7 @@ l10n:
 _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个 {{jsxref("boolean")}} 值，如果设备已打开连接，则为 `true`。
+  - : 返回一个 {{jsxref("Boolean")}} 值，如果设备已打开连接，则为 `true`。
 - {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回 HID 设备的供应商 ID。
 - {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}

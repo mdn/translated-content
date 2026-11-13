@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 移除一个通过调用 {{WebExtAPIRef("scripting.insertCSS()")}} 注入的 CSS 样式表。
 
 > [!NOTE]

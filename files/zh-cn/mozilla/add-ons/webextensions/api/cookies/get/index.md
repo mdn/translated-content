@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 **`get()`** 方法根据 cookie 的名称和 URL 检索有关单个 cookie 的信息。
 
 如果给定 URL 存在多个具有相同名称的 cookie，将返回路径最长的那个 cookie。对于路径长度相同的 cookie，将返回创建时间最早的那个。如果找不到匹配的 cookie，则返回 `null`。

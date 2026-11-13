@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 **域**是互联网中用于控制其自身的资源的一个权威（authority）。它的“域名”是作为 {{Glossary("URL")}} 层级结构一部分来指向这一权限的方式，通常取最容易记住的部分，比如品牌名称。
 
 完全限定域名（FQDN）包含通过互联网的 {{Glossary("DNS")}} 系统明确查找该权限所需的所有部分。

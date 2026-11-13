@@ -3,8 +3,6 @@ title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 ---
 
-{{AddonSidebar}}
-
 Ceci est une chaîne et représente le type de notification à créer. Il existe quatre types de notification : "basic", "image", "list", "progress".
 
 Ceci est passé dans {{WebExtAPIRef("notifications.create()")}} et {{WebExtAPIRef("notifications.update()")}} comme propriété de `type` {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.
@@ -40,5 +38,3 @@ Actuellement Firefox ne supporte que "basic" ici.
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

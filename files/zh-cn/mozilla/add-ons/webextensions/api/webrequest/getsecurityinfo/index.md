@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8de26f8083cd83e41328147240d94b4da902e987
 ---
 
-{{AddonSidebar}}
-
 使用此函数获取与特定请求相关的 [TLS](/zh-CN/docs/Glossary/TLS) 连接的详细信息。
 
 你需要将相关请求的 `requestId` 和一些可选的额外参数传递给此函数。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象。

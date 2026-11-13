@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`fontcolor()`** 메서드는 해당 문자열을 특정 글꼴 색상으로 표시하게 만드는 {{HTMLElement("font")}} 요소(`<font color="...">str</font>`)에 해당 문자열을 집어넣은 문자열을 생성합니다.
 
@@ -22,7 +22,7 @@ fontcolor(color)
 ### 매개변수
 
 - `color`
-  - : 색상을 16진수 RGB 코드 또는 문자열 리터럴로 표현하는 문자열입니다. 색상 이름에 대한 문자열 리터럴은 [CSS 색상 참고서](/ko/docs/Web/CSS/color_value)에 나열되어 있습니다.
+  - : 색상을 16진수 RGB 코드 또는 문자열 리터럴로 표현하는 문자열입니다. 색상 이름에 대한 문자열 리터럴은 [CSS 색상 참고서](/ko/docs/Web/CSS/Reference/Values/color_value)에 나열되어 있습니다.
 
 ### 반환 값
 

@@ -3,11 +3,9 @@ title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
-{{AddonSidebar}}
-
 Étant donné l'ID d'un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} ou d'un tableau de ces ID, la méthode **`bookmarks.get()`** récupère les nœuds correspondants.
 
-C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.
+C'est une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.
 
 ## Syntaxe
 
@@ -20,11 +18,11 @@ var getBookmarks = browser.bookmarks.get(
 ### Paramètres
 
 - `idOrIdList`
-  - : `string` Une {{jsxref("string")}} ou un {{jsxref("array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.
+  - : `string` Une {{jsxref("String")}} ou un {{jsxref("Array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.
 
 ### Valeur retournée
 
-Une {{jsxref("promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.
+Une {{jsxref("Promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -52,8 +50,6 @@ gettingBookmarks.then(onFulfilled, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

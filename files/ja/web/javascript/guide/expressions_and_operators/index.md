@@ -2,10 +2,10 @@
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 この章では JavaScript の式 (expression) や演算子 (operator) について、代入、比較、算術、ビット、論理、文字列、三項演算子などを説明しています。
 
@@ -83,7 +83,7 @@ JavaScript は _二項演算子_ や _単項演算子_ を実装しており、�
 | [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)         | `x \|= f()`   | `x = x \| f()`     |
 | [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)             | `x &&= f()`   | `x && (x = f())`   |
 | [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)               | `x \|\|= f()` | `x \|\| (x = f())` |
-| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
+| [ヌル値合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)         | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### プロパティへの代入
 
@@ -154,7 +154,7 @@ x = g(); // 変数 x に g() の返値を再代入します。
 この結果の値は通常は使用されませんが、別の式で使用することができます。
 
 代入を連鎖させたり、他の式で代入を入れ子にすると、驚くような動作になることがあります。
-このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)と定めていることがあります。）
+このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)と定めていることがあります。
 とはいえ、代入の連鎖や入れ子が発生することもあるので、それらがどのように動作するのか理解できるようにしておくことは重要です。
 
 代入式を連鎖させたり入れ子にしたりすることで、その結果自体を別の変数に代入することができます。
@@ -250,7 +250,7 @@ x[f()] = g();
 
 `x[f()] = g()` も左から右へ評価されます。
 （この例では `x` には既に何らかのオブジェクトが代入されていると想定してください。
-オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)をお読みください。
+オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)をお読みください。）
 
 1. 代入式 `x[f()] = g()` の評価が始まります。
    1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。
@@ -332,7 +332,7 @@ const var2 = 4;
       </td>
       <td>
         オペランドが等しく、かつ同じ型である場合に <code>true</code> を返します。
-        {{jsxref("Object.is")}} や<a href="/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness">JavsScript での等価</a>も参照してください。
+        {{jsxref("Object.is")}} や<a href="/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness">JavsScript での等価</a>も参照してください。
       </td>
       <td><code>3 === var1</code></td>
     </tr>
@@ -635,7 +635,7 @@ const var2 = 4;
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">Null 合体演算子</a> (<code>??</code>)
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">ヌル値合体演算子</a> (<code>??</code>)
       </td>
       <td><code>expr1 ?? expr2</code></td>
       <td>
@@ -680,7 +680,7 @@ const o6 = false || "Cat"; // f || t は Cat を返す
 const o7 = "Cat" || false; // t || f は Cat を返す
 ```
 
-以下のコードでは、 `??` （NUll 合体）演算子の例を示します。
+以下のコードでは、 `??` （ヌル値合体）演算子の例を示します。
 
 ```js
 const n1 = null ?? 1; // 1
@@ -689,7 +689,7 @@ const n3 = false ?? 3; // false
 const n4 = 0 ?? 4; // 0
 ```
 
-`??` は `||` と似た動作をしますが、最初の式が "[nullish](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) の場合に、 2 番目の式のみを返すことに注意してください。 `null` または `undefined` となる可能性がある値の既定値を設定するには、 `||` よりも `??` の方が適しています。特に、 `''` や `0` のような値が有効な値であり、既定値を適用しない場合です。
+`??` は `||` と似た動作をしますが、最初の式が "[ヌル値](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) の場合に、 2 番目の式のみを返すことに注意してください。 `null` または `undefined` となる可能性がある値の既定値を設定するには、 `||` よりも `??` の方が適しています。特に、 `''` や `0` のような値が有効な値であり、既定値を適用しない場合です。
 
 以下のコードでは、 ! （論理否定）演算子の例を示します。
 
@@ -705,7 +705,7 @@ const n3 = !"Cat"; // !t は false を返す
 
 - `偽値 && 何か` は偽値へと短絡評価されます。
 - `真値 || 何か` は真値へと短絡評価されます。
-- `非 Nullish ?? 何か` は非 Nullish 値へと短絡評価されます。
+- `非ヌル値 ?? 何か` は非ヌル値へと短絡評価されます。
 
 論理的なルールにより、これらの評価が常に正確であることが保証されます。上記の式で`何か`の部分は評価されないため、どのようにしても副作用が生じないことに注意してください。
 
@@ -847,7 +847,7 @@ delete myObj.h; // true を返す（ユーザー定義のプロパティは削�
 以下の変数を定義したとしましょう。
 
 ```js
-const myFun = new Function("5 + 2");
+const myFun = () => 5 + 2;
 const shape = "round";
 const size = 1;
 const foo = ["Apple", "Mango", "Orange"];
@@ -891,7 +891,6 @@ typeof Math.LN2; // "number" を返す
 
 ```js
 typeof blur; // "function" を返す
-typeof eval; // "function" を返す
 typeof parseInt; // "function" を返す
 typeof shape.split; // "function" を返す
 ```
@@ -955,16 +954,16 @@ const myCar = { make: "Honda", model: "Accord", year: 1998 };
 オブジェクト instanceof オブジェクト型
 ```
 
-ここで`オブジェクト`は`オブジェクト型`と比較するオブジェクトであり、`オブジェクト型`は型を表すコンストラクター、例えば {{jsxref("Date")}} や {{jsxref("Array")}} です。
+ここで`オブジェクト`は`オブジェクト型`と比較するオブジェクトであり、`オブジェクト型`は型を表すコンストラクター、例えば {{jsxref("Map")}} や {{jsxref("Array")}} です。
 
 実行時にオブジェクトの型を確認する必要があるときは `instanceof` を使用してください。
 例えば例外を受け取るとき、発生した例外の型に応じて、別々の例外を扱うコードに分岐することができます。
 
-例えば次のコードでは、 `instanceof` を使用して `theDay` が `Date` オブジェクトであるかを判断しています。 `theDay` は `Date` オブジェクトであるため、`if` 文中の文が実行されます。
+例えば次のコードでは、 `instanceof` を使用して `obj` が `Map` オブジェクトであるかを判断しています。 `obj` は `Map` オブジェクトであるため、`if` 文中の文が実行されます。
 
 ```js
-const theDay = new Date(1995, 12, 17);
-if (theDay instanceof Date) {
+const obj = new Map();
+if (obj instanceof Map) {
   // 実行する文
 }
 ```
@@ -975,28 +974,41 @@ if (theDay instanceof Date) {
 
 ### this
 
-[`this` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/this)を使用することで、現在のオブジェクトを参照できます。一般的に `this` は、メソッド内の呼び出しオブジェクトを指します。 `this` は、ドット表記またはブラケット表記で使用します。
+[`this` キーワード](/ja/docs/Web/JavaScript/Reference/Operators/this) は通常、関数内で使用されます。一般的に、関数がオブジェクトのメソッドとして紐付けられている場合、`this` はそのメソッドが呼び出されたオブジェクトを指します。これは、関数に渡される隠れた引数と同様に機能します。`this` はオブジェクトとして評価される式であるため、これまでに紹介したすべてのオブジェクト操作を使用することができます。
 
 ```js
 this["propertyName"];
 this.propertyName;
+doSomething(this);
 ```
 
-`validate` という関数があり、オブジェクトと上限と下限の値を渡すことでオブジェクトの `value` プロパティを検証するものであるとしましょう。
+例えば、関数が次のように定義されているとします。
 
 ```js
-function validate(obj, lowVal, highVal) {
-  if (obj.value < lowVal || obj.value > highVal) {
-    console.log("Invalid Value!");
-  }
+function getFullName() {
+  return `${this.firstName} ${this.lastName}`;
 }
 ```
 
-次の例のように、各フォーム要素の `onChange` イベントハンドラーにおいて `validate` を呼び出し、その関数にフォーム要素を渡すのに `this` を使うことができます。
+この関数をオブジェクトに添付でき、呼び出された際にはそのオブジェクトのプロパティが使用されます。
 
-```html
-<p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
+```js
+const person1 = {
+  firstName: "Chris",
+  lastName: "Martin",
+};
+
+const person2 = {
+  firstName: "Chester",
+  lastName: "Bennington",
+};
+
+// 同じ関数を設定
+person1.getFullName = getFullName;
+person2.getFullName = getFullName;
+
+console.log(person1.getFullName()); // "Chris Martin"
+console.log(person2.getFullName()); // "Chester Bennington"
 ```
 
 ### グループ化演算子
@@ -1009,16 +1021,16 @@ const b = 2;
 const c = 3;
 
 // 既定の優先順位
-a + b * c     // 7
+a + b * c; // 7
 // 既定ではこのように評価される
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // 優先順位を上書きし、
 // 乗算の前に加算を行う
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // この式と同等となる
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ### プロパティアクセサー

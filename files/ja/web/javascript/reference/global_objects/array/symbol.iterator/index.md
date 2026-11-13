@@ -1,11 +1,10 @@
 ---
 title: Array.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`[Symbol.iterator]()`** は {{jsxref("Array")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを期待するほとんどの構文で配列を利用することができます。配列の各インデックスの値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
@@ -14,16 +13,16 @@ l10n:
 {{InteractiveExample("JavaScript デモ: Array.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator1 = array1[Symbol.iterator]();
+const array = ["a", "b", "c"];
+const iterator = array[Symbol.iterator]();
 
-for (const value of iterator1) {
+for (const value of iterator) {
   console.log(value);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
 ```
 
 ## 構文
@@ -44,7 +43,7 @@ array[Symbol.iterator]()
 
 ### for...of ループを用いた反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。 `[Symbol.iterator]() メソッドが存在することで、配列を[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)にすることができ、 `for...of` ループのような反復処理構文では、自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。 `[Symbol.iterator]()` メソッドが存在することで、配列を[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)にすることができ、 `for...of` ループのような反復処理構文では、自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 #### HTML
 
@@ -124,7 +123,7 @@ logIterable(123);
 
 ## 関連情報
 
-- [`Array.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype[Symbol.iterator]` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}

@@ -3,8 +3,6 @@ title: <html>：HTML 文件/根元素
 slug: Web/HTML/Reference/Elements/html
 ---
 
-{{HTMLSidebar}}
-
 **`<html>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表 HTML 文件的根（頂層元素），因此它也被稱為*根元素*。所有其他元素都必須是這個元素的後代。
 
 ## 屬性

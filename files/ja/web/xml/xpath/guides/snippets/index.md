@@ -1,34 +1,30 @@
 ---
 title: XPath スニペット
 slug: Web/XML/XPath/Guides/Snippets
-original_slug: Web/XPath/Guides/Snippets
 l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-{{XsltSidebar}}
+この記事では、複数の**ユーティリティ関数**を実装する方法の例として、いくつかの XPath コードスニペットを紹介します。これらの関数は、XPath の機能を JavaScript コードから利用できるようにする標準インターフェイスに基づいています。これらのスニペットは、実際の現場で自身のコード内で使用できる関数です。
 
-この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する [DOM Level 3 XPath 仕様](https://www.w3.org/TR/DOM-Level-3-XPath/)の標準インターフェイスに基づく簡単な**ユーティリティ関数**の簡単な例です。スニペットは実際に自身のコードの中で使用できる関数です。
-
-### ノード指定の評価関数
+## ノード指定の評価関数
 
 次のカスタムユーティリティ関数を使用して、指定された XML ノードの XPath 式を評価できます。最初の引数は DOM ノードまたは Document オブジェクトで、2 番目の引数は XPath 式を定義する文字列です。
 
-##### 例:ノード指定のカスタム `evaluateXPath()` ユーティリティ関数を定義する
+### 例: ノード指定のカスタムユーティリティ関数 `evaluateXPath()` の定義
 
 ```js
 // 指定された DOM ノードまたは Document オブジェクト (aNode) に対して
-// XPath 式 aExpression を評価し、結果を配列として返します。
+// XPath 式を評価し、結果を配列として返します。
 // 最初の作業をしてくれた morethanwarm dot mail dot com の
 // wanderingstan に感謝します。
-function evaluateXPath(aNode, aExpr) {
+function evaluateXPath(node, expr) {
   const xpe = new XPathEvaluator();
-  const nsResolver = xpe.createNSResolver(
-    aNode.ownerDocument === null
-      ? aNode.documentElement
-      : aNode.ownerDocument.documentElement,
-  );
-  const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
+  const nsResolver =
+    node.ownerDocument === null
+      ? node.documentElement
+      : node.ownerDocument.documentElement;
+  const result = xpe.evaluate(expr, node, nsResolver, 0, null);
   const found = [];
   let res;
   while ((res = result.iterateNext())) found.push(res);
@@ -36,15 +32,13 @@ function evaluateXPath(aNode, aExpr) {
 }
 ```
 
-ただし、`createNSResolver` は、XPath 式の名前空間接頭辞が問い合わせる文書の名前空間接頭辞と一致する（かつ既定の名前空間が使用されていない (回避策については [document.createNSResolver](/ja/docs/Web/API/Document/createNSResolver) を参照)）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
+なお、`documentElement` は、XPath 式内の名前空間接頭辞が、クエリーの対象となる文書内のものであり（かつ、デフォルトの名前空間が使用されていない）、そのことを確実に確認できた場合にのみ使用してください。そうでない場合は、XPathNSResolver の独自の実装を指定する必要があります。
 
-[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) を使用してローカルまたはリモートの XML ファイルを DOM ツリー（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)を参照）に読み込む場合、`evaluateXPath()`の最初の引数は`req.responseXML`である必要があります。
+### 使用例
 
-#### 使用例
+次の XML ドキュメントがあるとします（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）。
 
-次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）があるとします。
-
-##### 例: カスタム `evaluateXPath()` ユーティリティ関数と一緒に使用する XML 文書
+#### 例: カスタム `evaluateXPath()` ユーティリティ関数と一緒に使用する XML 文書
 
 ```xml
 <?xml version="1.0"?>
@@ -67,39 +61,42 @@ XPath 式を使用して文書を「照会」できるようになりました�
 ##### 例: カスタムの `evaluateXPath()` ユーティリティ関数がある JavaScript コード
 
 ```js
-// display the last names of all people in the doc
+// 文書内の人物のすべての姓を表示させる
 let results = evaluateXPath(people, "//person/@last-name");
 for (const i in results)
   console.log(`Person #${i} has the last name ${results[i].value}`);
 
-// get the 2nd person node
+// 2 人目のノードを取得する
 results = evaluateXPath(people, "/people/person[2]");
 
-// get all the person nodes that have addresses in denver
+// denver に住所を持つすべての person ノードを取得する
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
-// get all the addresses that have "south" in the street name
+// 通り名に "south" を持つ住所をすべて取得する
 results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 console.log(results.length);
 ```
 
-### docEvaluateArray
+## docEvaluateArray
 
-以下の例は、名前空間リゾルバーなどの特別な必要があるかどうかに関係なく、XPath の結果を配列に（順序付きで）取得する単純なユーティリティ関数です。これは、 [`document.evaluate()`](/ja/docs/Web/API/Document/evaluate) の複雑な構文が要求されない場合や、 [`XPathResult`](/ja/docs/Web/API/XPathResult) において（代わりに配列を返すことで）特別なイテレーターを使わなければならない状況を避けることができます。
+以下の例は、名前空間リゾルバーなどの特別な必要があるかどうかに関係なく、XPath の結果を配列に（順序付きで）取得するユーティリティ関数です。これは、 [`document.evaluate()`](/ja/docs/Web/API/Document/evaluate) の複雑な構文が要求されない場合や、 [`XPathResult`](/ja/docs/Web/API/XPathResult) において（代わりに配列を返すことで）特別なイテレーターを使わなければならない状況を避けることができます。
 
-##### 例: シンプルな `docEvaluateArray()` ユーティリティ関数を定義する
+### 例: `docEvaluateArray()` ユーティリティ関数の定義
 
 ```js
 // Example usage:
 // const els = docEvaluateArray('//a');
 // console.log(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray(expr, doc, context, resolver) {
+function docEvaluateArray(
+  expr,
+  context,
+  doc = context ? context.ownerDocument : document,
+  resolver = null,
+) {
   let i;
   const a = [];
-  doc = doc || (context ? context.ownerDocument : document);
-  resolver = resolver || null;
-  context = context || doc;
+  context ||= doc;
 
   const result = doc.evaluate(
     expr,
@@ -115,26 +112,26 @@ function docEvaluateArray(expr, doc, context, resolver) {
 }
 ```
 
-### getXPathForElement
+## getXPathForElement
 
 次の関数により、要素と XML 文書を渡して、その要素につながる一意の文字列 XPath 式を検索することができます。
 
-##### 例: `getXPathForElement()` ユーティリティ関数を定義する
+### 例: `getXPathForElement()` ユーティリティ関数の定義
 
 ```js
 function getXPathForElement(el, xml) {
   let xpath = "";
-  let pos, tempitem2;
+  let pos, tempItem2;
 
   while (el !== xml.documentElement) {
     pos = 0;
-    tempitem2 = el;
-    while (tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+    tempItem2 = el;
+    while (tempItem2) {
+      if (tempItem2.nodeType === 1 && tempItem2.nodeName === el.nodeName) {
         // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
-      tempitem2 = tempitem2.previousSibling;
+      tempItem2 = tempItem2.previousSibling;
     }
 
     xpath = `*[name()='${el.nodeName}' and namespace-uri()='${
@@ -151,11 +148,8 @@ function getXPathForElement(el, xml) {
 }
 ```
 
-### 資料
+## 関連情報
 
 - [XPath](/ja/docs/Web/XML/XPath)
 - [このトピックのフォーラムでの議論](https://forums.mozillazine.org/viewtopic.php?t=229106)
-
-## 関連情報
-
 - [JavaScript での XPath の使用](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)

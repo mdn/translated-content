@@ -3,8 +3,6 @@ title: <b>：引起注意元素
 slug: Web/HTML/Reference/Elements/b
 ---
 
-{{HTMLSidebar}}
-
 **`<b>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於引起讀者對其內容的注意，但該內容並非特別重要。這曾被稱為粗體元素，而大多數瀏覽器仍會以粗體顯示其文字。然而，你不應該使用 `<b>` 來設置文字樣式或賦予重要性。如果你希望使文字變成粗體，應該使用 CSS {{cssxref("font-weight")}} 屬性。如果你希望表示某個元素具有特殊重要性，應該使用 {{HTMLElement("strong")}} 元素。
 
 {{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}

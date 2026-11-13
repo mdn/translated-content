@@ -3,7 +3,7 @@ title: "javascript: URL"
 short-title: "javascript:"
 slug: Web/URI/Reference/Schemes/javascript
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
 > [!WARNING]
@@ -13,11 +13,14 @@ l10n:
 
 ## 構文
 
-JavaScript URL は `javascript:` スキームで始め、JavaScript コードが続きます。 コードはスクリプトとして解釈されます。
-
 ```url
 javascript:<script>
 ```
+
+- `javascript:`
+  - : この URL のスキームです。
+- `<script>`
+  - : 実行する JavaScript コード。コードはスクリプトとして解釈されます。
 
 ## 解説
 
@@ -25,7 +28,7 @@ javascript:<script>
 
 - `<a>` または `<area>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性。
 - `<form>` 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性。
-- `<iframe>`要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性。
+- `<iframe>` 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性。
 - JavaScript の [`window.location`](/ja/docs/Web/API/Window/location) プロパティ。
 - ブラウザーのアドレスバー自体。
 

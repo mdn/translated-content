@@ -54,7 +54,7 @@ for (let value of iterable) {
 // 80
 ```
 
-## 関連項目
+## 関連情報
 
 - [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
 - [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) – strict モードでは同様に初期化できない ([SyntaxError: for-in loop head declarations may not have initializers](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))

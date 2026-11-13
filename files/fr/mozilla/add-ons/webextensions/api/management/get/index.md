@@ -3,8 +3,6 @@ title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
 ---
 
-{{AddonSidebar}}
-
 Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant des informations sur l'extension spécifiée.
 
 Cette API requière la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
@@ -52,8 +50,6 @@ getting.then(got);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

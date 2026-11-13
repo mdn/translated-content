@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_manipulation
 original_slug: Web/Media/Audio_and_video_manipulation
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
 
 ## Manipulation Vidéo
@@ -107,7 +105,7 @@ processor.doLoad();
 {{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
 
 > [!NOTE]
-> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
+> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/Guides/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
 
 > [!NOTE]
 > L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
@@ -160,8 +158,7 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+myVideo.playbackRate = 2;</textarea>
 ```
 
 ```js hidden
@@ -192,7 +189,8 @@ window.addEventListener("load", setPlaybackRate);
 > [!NOTE]
 > Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
 
-> **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
+> [!NOTE]
+> `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 
 ## Manipulation Audio
 
@@ -257,8 +255,7 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
->
+filter.gain.value = 25;</textarea>
 ```
 
 ```js hidden
@@ -295,7 +292,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
 > [!NOTE]
-> À moins que [CORS](/fr/docs/Web/HTTP/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> À moins que [CORS](/fr/docs/Web/HTTP/Guides/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 

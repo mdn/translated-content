@@ -3,8 +3,6 @@ title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 ---
 
-{{HTMLSidebar}}
-
 **`radio`** 类型的 {{htmlelement("input")}} 元素通常用于一个**单选组**中，其中包含一组描述一系列相关选项的单选按钮。
 
 在给定单选组中，同时只可以选择一个选项。单选按钮通常渲染为小圆圈，当选中该选项时，圆圈被填充或高亮。

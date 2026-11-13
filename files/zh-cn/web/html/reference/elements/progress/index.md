@@ -3,8 +3,6 @@ title: <progress>：进度指示元素
 slug: Web/HTML/Reference/Elements/progress
 ---
 
-{{HTMLSidebar}}
-
 ## 概述
 
 **HTML**中的 **`<progress>`** 元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
@@ -30,14 +28,14 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
@@ -47,7 +45,7 @@ label {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >，但其后代元素不能有 <code>&#x3C;progress></code> 元素。
       </td>
@@ -59,7 +57,7 @@ label {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+        接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >的任何元素。
       </td>

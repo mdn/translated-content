@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b1699bac6bc35d0958734ff5e982f5f35974f448
 ---
 
-{{HTMLSidebar}}
-
 当 **`readonly`** 布尔属性存在时，元素是不可变的，意味着用户无法编辑控件。
 
 {{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}

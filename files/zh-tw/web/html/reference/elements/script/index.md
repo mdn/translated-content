@@ -3,8 +3,6 @@ title: <script>
 slug: Web/HTML/Reference/Elements/script
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。`<script>` 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
 | [內容類型](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content). |
@@ -43,7 +41,7 @@ slug: Web/HTML/Reference/Elements/script
 - `fetchpriority`
   - : Scripts with the `defer` attribute will execute in the order in which they appear in the document.This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/zh-TW/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/zh-TW/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : 這個布林屬性，會要求支援 [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 的瀏覽器，不執行裡面的程式。這能用來給不支援 JavaScript 模組的老舊瀏覽器，提供用於向下支援的服務。
 - `nonce`

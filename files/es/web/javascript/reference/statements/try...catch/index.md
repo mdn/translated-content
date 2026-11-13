@@ -238,9 +238,9 @@ Si el bloque `finally` retorna un valor, este valor se convierte en el valor de 
 
 El "oops" externo no es lanzado debido al retorno en el bloque finally. Lo mismo aplicaría para cualquier valor retornado del bloque catch.
 
-Vea los ejemplos para {{jsxref("Sentencias/throw", "throw")}}.
+Vea los ejemplos para {{jsxref("Statements/throw", "throw")}}.
 
 ## Vea también
 
 - {{jsxref("Error")}}
-- {{jsxref("Sentencias/throw", "throw")}}
+- {{jsxref("Statements/throw", "throw")}}

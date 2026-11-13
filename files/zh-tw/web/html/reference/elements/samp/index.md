@@ -3,8 +3,6 @@ title: <samp>：樣本輸出元素
 slug: Web/HTML/Reference/Elements/samp
 ---
 
-{{HTMLSidebar}}
-
 **`<samp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於封裝代表電腦程式的樣本（或引用）輸出的內嵌文本。其內容通常使用瀏覽器的預設等寬字體呈現（如 [Courier](https://zh.wikipedia.org/wiki/Courier) 或 Lucida Console）。
 
 {{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}

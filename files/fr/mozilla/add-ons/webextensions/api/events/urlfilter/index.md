@@ -3,8 +3,6 @@ title: events.UrlFilter
 slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 ---
 
-{{AddonSidebar}}
-
 Décrit différents critères de filtrage des URL. Si tous les critères spécifiés dans les propriétés du filtre correspondent à l'URL, le filtre correspond. Les filtres sont souvent fournis aux méthodes API dans un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'UrlFilters. Par exemple, les écouteurs [webNavigation](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) peuvent être ajoutés avec un filtre qui est un objet avec une seule propriété url qui est un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) de UrlFilters, par exemple `{url:[UrlFilter,UrlFilter,...]}`. Si un filtre dans le tableau de UrlFilters correspond, il est considéré comme une correspondance pour le tableau. En effet, les critères spécifiés dans un seul filtre sont associés ensemble, alors que tous les filtres individuels dans un tableau sont où.
 
 Tous les critères sont sensibles à la casse.
@@ -79,8 +77,6 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

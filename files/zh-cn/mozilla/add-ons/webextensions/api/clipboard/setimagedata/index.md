@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 将图像复制到剪贴板。在将图像写入剪贴板之前，会对图像进行重新编码。如果图像无效，则不会修改剪贴板。
 
 图像被作为包含经过编码的图像的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 提供。支持 JPEG 和 PNG 格式。

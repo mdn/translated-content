@@ -1,11 +1,10 @@
 ---
 title: Array[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`Array[Symbol.species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
 
@@ -20,7 +19,7 @@ Array[Symbol.species]
 
 ### 返値
 
-`get Symbol.species` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
+`get [Symbol.species]` が呼び出されたコンストラクター (`this`) の値です。この返値は、新しい配列を作成する配列メソッドの返値を作成するために使用されます。
 
 ## 解説
 
@@ -91,7 +90,7 @@ class MyArray extends Array {
 
 ## 関連情報
 
-- [`Array[Symbol.species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `[Symbol.species]` の対応 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array[Symbol.species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `[Symbol.species]` の対応 (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

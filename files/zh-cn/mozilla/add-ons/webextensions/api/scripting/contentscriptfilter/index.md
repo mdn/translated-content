@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 此对象包含通过 {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} 检索或通过 {{WebExtAPIRef("scripting.unregisterContentScripts()")}} 注销的脚本 ID 的列表。
 
 ## 类型

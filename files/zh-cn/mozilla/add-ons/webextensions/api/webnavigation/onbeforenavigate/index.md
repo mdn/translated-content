@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
-{{AddonSidebar}}
-
 当浏览器即将开始导航事件时触发。
 
 ## 语法

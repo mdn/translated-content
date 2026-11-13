@@ -54,8 +54,8 @@ selectAudioOutput(options)
 
 API へのアクセスは、以下の制約を受けることになります。
 
-- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
-- [一時的なユーザーによる有効化](/ja/docs/Web/Security/User_activation)が必要です。
+- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)で呼び出す必要があります。
+- [一時的なユーザーによる有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。
   この機能が機能するためには、ユーザーがページや UI 要素を操作する必要があります。
 - アクセスは HTTP の [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で制限される可能性があります。
 

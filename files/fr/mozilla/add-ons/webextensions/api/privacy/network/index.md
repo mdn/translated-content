@@ -3,8 +3,6 @@ title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 ---
 
-{{AddonSidebar}}
-
 La propriété {{WebExtAPIRef("privacy.network")}} contient des paramètres de configuration du réseau liés à la vie privée. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 Les valeurs par défaut de ces propriétés peuvent varier selon les navigateurs.
@@ -60,8 +58,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy). Cette documentation est dérivée de [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 original_slug: Learn/Forms/How_to_structure_a_web_form
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
@@ -14,7 +14,7 @@ Les bases vues, nous examinons maintenant plus en détail les éléments utilis�
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs et les
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >connaissances de base du HTML</a
         >.
       </td>
@@ -181,7 +181,7 @@ Au-delà des structures propres aux formulaires HTML,rappelons‑nous que les fo
 
 Comme vous avez pu le voir dans les exemples, il est de pratique courante d'envelopper une étiquette et son widget avec un élément {{HTMLElement("div")}}. Les éléments {{HTMLElement("p")}} sont aussi couramment utilisés, tout comme les listes HTML (ces dernières sont très courantes pour structurer plusieurs cases à cocher ou boutons radio).
 
-En plus de l'élément {{HTMLElement("fieldset")}}, il est habituel d'utiliser des titres HTML (par exemple {{htmlelement("h1")}}, {{htmlelement("h2")}}) et des sections (par exemple {{htmlelement("section")}}) pour structurer un formulaire complexe.
+En plus de l'élément {{HTMLElement("fieldset")}}, il est habituel d'utiliser des titres HTML (par exemple `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}`, `{{htmlelement("Heading_Elements", "&lt;h2&gt;")}}`) et des sections (par exemple {{htmlelement("section")}}) pour structurer un formulaire complexe.
 
 Par-dessus tout, il vous appartient de trouver un style où vous vous sentez à l'aise pour coder, et qui se traduit aussi par des formulaires accessibles et utilisables.
 
@@ -189,7 +189,7 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 ### Apprentissage actif&nbsp;: construire une structure de formulaire
 
-Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
+Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
 1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
 2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
@@ -308,7 +308,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
    </section>
    ```
 
-8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)&nbsp;:
 
    ```html
    </form>
@@ -326,4 +326,4 @@ Nous savons maintenant ce qu'il faut faire pour structurer de manière appropri�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}

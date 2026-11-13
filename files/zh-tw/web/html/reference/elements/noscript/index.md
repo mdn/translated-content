@@ -3,8 +3,6 @@ title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-TW/docs/Web/HTML) **`<noscript>`** 元素定義了一個 HTML 區塊，如果網頁上的腳本類型不支援或瀏覽器當前已關閉腳本，則將插入該區塊。
 
 <table class="properties">

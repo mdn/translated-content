@@ -3,8 +3,6 @@ title: <article>：文章內容元素
 slug: Web/HTML/Reference/Elements/article
 ---
 
-{{HTMLSidebar}}
-
 **`<article>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件、頁面、應用程式或站點中的一個獨立組成部分，該部分旨在獨立分發或重複使用（例如，在聯合編輯中）。例如：論壇帖子、雜誌或報紙文章、部落格文章、產品卡片、用戶提交的評論、互動小工具或小裝置，或任何其他獨立的內容項目。
 
 {{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}

@@ -2,15 +2,12 @@
 title: WebGL のモデル、ビュー、投影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: b9d83ba81dd56671d054e64978eb22c07a96912b
 ---
 
 {{DefaultAPISidebar("WebGL")}}
 
 この記事では、 [WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、投影行列について説明します。
-
-> [!NOTE]
-> この記事は [MDN コンテンツキット](https://github.com/gregtatum/mdn-model-view-projection)としても利用可能です。また、 `MDN` グローバルオブジェクトの下で利用可能な[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
 
 ## モデル、ビュー、投影行列
 
@@ -30,100 +27,353 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 このセクションでは、データをクリップ空間座標系に直接配置する仕組みを説明します。 通常、任意の座標系にあるモデルデータが使用され、その後、行列を使用して変換され、モデル座標がクリップ空間座標系に変換されます。この例では、クリップ空間がどのように機能するかを最も簡単に説明する為、単純に (-1, -1, -1) から (1,1,1) までの範囲のモデル座標を使用します。以下のコードは、画面上に正方形を描く為に 2 つの三角形を作成します。正方形の Z 深度は、正方形が同じ空間を共有するときに何が上に描画されるかを決定します。小さい Z 値は大きい Z 値の上にレンダリングされます。
 
-### WebGLBox の例
+<!-- Shared setup -->
 
-この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+<canvas id="canvas" width="1000" height="1000"></canvas>
+```
 
-> [!NOTE]
-> WebGLBox のそれぞれの例のコードは、この [GitHub リポジトリー](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons)にあり、セクションごとに整理されています。また、各セクションの一番下に JSFiddle へのリンクがあります。
-
-#### WebGLBox コンストラクター
-
-コンストラクターは次のようになります。
-
-```js
-function WebGLBox() {
-  // Setup the canvas and WebGL context
-  this.canvas = document.getElementById("canvas");
-  this.canvas.width = window.innerWidth;
-  this.canvas.height = window.innerHeight;
-  this.gl = MDN.createContext(canvas);
-
-  const gl = this.gl;
-
-  // Setup a WebGL program, anything part of the MDN object is defined outside of this article
-  this.webglProgram = MDN.createWebGLProgramFromIds(
-    gl,
-    "vertex-shader",
-    "fragment-shader",
-  );
-  gl.useProgram(this.webglProgram);
-
-  // Save the attribute and uniform locations
-  this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
-  this.colorLocation = gl.getUniformLocation(this.webglProgram, "color");
-
-  // Tell WebGL to test the depth when drawing, so if a square is behind
-  // another square it won't be drawn
-  gl.enable(gl.DEPTH_TEST);
+```css hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 ```
 
-#### WebGLBox 描画
+```js hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+function createShader(gl, source, type) {
+  // gl.VERTEX_SHADER または gl.FRAGMENT_SHADER 型のシェーダーをコンパイル
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, source);
+  gl.compileShader(shader);
 
-次に、画面上にボックスを描画するメソッドを作成します。
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    const info = gl.getShaderInfoLog(shader);
+    throw new Error(`Could not compile WebGL program.\n\n${info}`);
+  }
 
-```js
-WebGLBox.prototype.draw = function (settings) {
-  // Create some attribute data; these are the triangles that will end being
-  // drawn to the screen. There are two that form a square.
+  return shader;
+}
 
-  const data = new Float32Array([
-    //Triangle 1
-    settings.left,
-    settings.bottom,
-    settings.depth,
-    settings.right,
-    settings.bottom,
-    settings.depth,
-    settings.left,
-    settings.top,
-    settings.depth,
+function linkProgram(gl, vertexShader, fragmentShader) {
+  const program = gl.createProgram();
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+  gl.linkProgram(program);
 
-    //Triangle 2
-    settings.left,
-    settings.top,
-    settings.depth,
-    settings.right,
-    settings.bottom,
-    settings.depth,
-    settings.right,
-    settings.top,
-    settings.depth,
-  ]);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    const info = gl.getProgramInfoLog(program);
+    throw new Error(`Could not compile WebGL program.\n\n${info}`);
+  }
 
-  // Use WebGL to draw this onto the screen.
+  return program;
+}
 
-  // Performance Note: Creating a new array buffer for every draw call is slow.
-  // This function is for illustration purposes only.
+function createWebGLProgram(gl, vertexSource, fragmentSource) {
+  // createShader() と linkProgram() を組み合わせる
+  const vertexShader = createShader(gl, vertexSource, gl.VERTEX_SHADER);
+  const fragmentShader = createShader(gl, fragmentSource, gl.FRAGMENT_SHADER);
+  return linkProgram(gl, vertexShader, fragmentShader);
+}
 
-  const gl = this.gl;
+function createWebGLProgramFromIds(gl, vertexSourceId, fragmentSourceId) {
+  const vertexSourceEl = document.getElementById(vertexSourceId);
+  const fragmentSourceEl = document.getElementById(fragmentSourceId);
 
-  // Create a buffer and bind the data
-  const buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+  return createWebGLProgram(
+    gl,
+    vertexSourceEl.innerHTML,
+    fragmentSourceEl.innerHTML,
+  );
+}
+```
 
-  // Setup the pointer to our attribute data (the triangles)
-  gl.enableVertexAttribArray(this.positionLocation);
-  gl.vertexAttribPointer(this.positionLocation, 3, gl.FLOAT, false, 0, 0);
+```js hidden live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+// 以下の関数は Matrix_math_for_the_web からコピーされている
+// point • matrix
+function multiplyMatrixAndPoint(matrix, point) {
+  // 行列の各要素に、列番号と行番号を用いた単純な変数名を割り当てる
+  const c0r0 = matrix[0],
+    c1r0 = matrix[1],
+    c2r0 = matrix[2],
+    c3r0 = matrix[3];
+  const c0r1 = matrix[4],
+    c1r1 = matrix[5],
+    c2r1 = matrix[6],
+    c3r1 = matrix[7];
+  const c0r2 = matrix[8],
+    c1r2 = matrix[9],
+    c2r2 = matrix[10],
+    c3r2 = matrix[11];
+  const c0r3 = matrix[12],
+    c1r3 = matrix[13],
+    c2r3 = matrix[14],
+    c3r3 = matrix[15];
 
-  // Setup the color uniform that will be shared across all triangles
-  gl.uniform4fv(this.colorLocation, settings.color);
+  // 次に、そのポイントにわかりやすい名前を付ける
+  const x = point[0];
+  const y = point[1];
+  const z = point[2];
+  const w = point[3];
 
-  // Draw the triangles to the screen
-  gl.drawArrays(gl.TRIANGLES, 0, 6);
-};
+  // その値を第 1 列の各要素に掛け、それらを足す
+  const resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
+
+  // その値を第 2 列の各要素に掛け、それらを足す
+  const resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
+
+  // その値を第 3 列の各要素に掛け、それらを足す
+  const resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
+
+  // その値を第 4 列の各要素に掛け、それらを足す
+  const resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
+
+  return [resultX, resultY, resultZ, resultW];
+}
+
+// matrixB • matrixA
+function multiplyMatrices(matrixA, matrixB) {
+  // 2 番目の行列を行ごとに分ける
+  const row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
+  const row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
+  const row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
+  const row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
+
+  // 各行に行列 A を掛ける
+  const result0 = multiplyMatrixAndPoint(matrixA, row0);
+  const result1 = multiplyMatrixAndPoint(matrixA, row1);
+  const result2 = multiplyMatrixAndPoint(matrixA, row2);
+  const result3 = multiplyMatrixAndPoint(matrixA, row3);
+
+  // 結果の行を一つの行列に戻す
+  // prettier-ignore
+  return [
+    result0[0], result0[1], result0[2], result0[3],
+    result1[0], result1[1], result1[2], result1[3],
+    result2[0], result2[1], result2[2], result2[3],
+    result3[0], result3[1], result3[2], result3[3],
+  ];
+}
+
+function multiplyArrayOfMatrices(matrices) {
+  if (matrices.length === 1) {
+    return matrices[0];
+  }
+  return matrices.reduce((result, matrix) => multiplyMatrices(result, matrix));
+}
+
+function translate(x, y, z) {
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    x, y, z, 1,
+  ];
+}
+
+function scale(x, y, z) {
+  // prettier-ignore
+  return [
+    x, 0, 0, 0,
+    0, y, 0, 0,
+    0, 0, z, 0,
+    0, 0, 0, 1,
+  ];
+}
+
+const sin = Math.sin;
+const cos = Math.cos;
+
+function rotateX(a) {
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, cos(a), -sin(a), 0,
+    0, sin(a), cos(a), 0,
+    0, 0, 0, 1,
+  ];
+}
+
+function rotateY(a) {
+  // prettier-ignore
+  return [
+    cos(a), 0, sin(a), 0,
+    0, 1, 0, 0,
+    -sin(a), 0, cos(a), 0,
+    0, 0, 0, 1,
+  ];
+}
+
+function rotateZ(a) {
+  // prettier-ignore
+  return [
+    cos(a), -sin(a), 0, 0,
+    sin(a), cos(a), 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+  ];
+}
+
+// 3 次元の立方体を作るために必要なデータを定義する。
+function createCubeData() {
+  // prettier-ignore
+  const positions = [
+    // Front face
+    -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
+    // Back face
+    -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
+    // Top face
+    -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
+    // Bottom face
+    -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
+    // Right face
+    1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
+    // Left face
+    -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
+  ];
+
+  // prettier-ignore
+  const colorsOfFaces = [
+    [0.3, 1.0, 1.0, 1.0],    // Front face: cyan
+    [1.0, 0.3, 0.3, 1.0],    // Back face: red
+    [0.3, 1.0, 0.3, 1.0],    // Top face: green
+    [0.3, 0.3, 1.0, 1.0],    // Bottom face: blue
+    [1.0, 1.0, 0.3, 1.0],    // Right face: yellow
+    [1.0, 0.3, 1.0, 1.0]     // Left face: purple
+  ];
+
+  let colors = [];
+
+  for (const polygonColor of colorsOfFaces) {
+    for (let i = 0; i < 4; i++) {
+      colors = colors.concat(polygonColor);
+    }
+  }
+
+  // prettier-ignore
+  const elements = [
+    0,  1,  2,   0,  2,  3,    // front
+    4,  5,  6,   4,  6,  7,    // back
+    8,  9,  10,  8,  10, 11,   // top
+    12, 13, 14,  12, 14, 15,   // bottom
+    16, 17, 18,  16, 18, 19,   // right
+    20, 21, 22,  20, 22, 23,   // left
+  ];
+
+  return { positions, elements, colors };
+}
+
+// キューブのデータを得て、それに対応するバッファーをバインド。
+// バッファーのオブジェクトコレクションを返す。
+function createBuffersForCube(gl, cube) {
+  const positions = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, positions);
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(cube.positions),
+    gl.STATIC_DRAW,
+  );
+
+  const colors = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, colors);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cube.colors), gl.STATIC_DRAW);
+
+  const elements = gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, elements);
+  gl.bufferData(
+    gl.ELEMENT_ARRAY_BUFFER,
+    new Uint16Array(cube.elements),
+    gl.STATIC_DRAW,
+  );
+
+  return { positions, elements, colors };
+}
+```
+
+### WebGLBox の例
+
+この例では、画面上に 2 次元のボックスを描画するカスタム `WebGLBox` オブジェクトを作ります。これはクラスとして実装されており、コンストラクターと、画面にボックスを描画するための `draw()` メソッドを備えています。
+
+```js live-sample___clip_space_ex
+class WebGLBox {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  positionLocation;
+  colorLocation;
+  constructor() {
+    const gl = this.gl;
+
+    // WebGL プログラムをセットアップ
+    gl.useProgram(this.webglProgram);
+
+    // 属性とユニフォームの場所を保存
+    this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+    this.colorLocation = gl.getUniformLocation(this.webglProgram, "vColor");
+
+    // 描く時に深度テストするよう WebGL に指示する。
+    // これにより、ある正方形が別の正方形の背後にある場合、その正方形は描かれなくなる。
+    gl.enable(gl.DEPTH_TEST);
+  }
+  draw(settings) {
+    // 属性データを作る。これらは最終的に画面に描画される三角形。
+    // 正方形を形作る 2 つの三角形で作られている。
+
+    // prettier-ignore
+    const data = new Float32Array([
+      // 三角形 1
+      settings.left, settings.bottom, settings.depth,
+      settings.right, settings.bottom, settings.depth,
+      settings.left, settings.top, settings.depth,
+
+      // 三角形 2
+      settings.left, settings.top, settings.depth,
+      settings.right, settings.bottom, settings.depth,
+      settings.right, settings.top, settings.depth,
+    ]);
+
+    // WebGL を使って、これを画面に描く。
+
+    // パフォーマンス上の注意: 描画呼び出し（ドローコール）ごとに新しい配列バッファーを作るのは遅い。
+    // この関数はあくまで説明用。
+
+    const gl = this.gl;
+
+    // バッファーを作り、データをバインド
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+
+    // 頂点データ（三角形）へのポインターを設定
+    gl.enableVertexAttribArray(this.positionLocation);
+    gl.vertexAttribPointer(this.positionLocation, 3, gl.FLOAT, false, 0, 0);
+
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniform4fv(this.colorLocation, settings.color);
+
+    // 三角形を画面に描画
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+}
 ```
 
 シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/gregtatum/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
@@ -131,35 +381,58 @@ WebGLBox.prototype.draw = function (settings) {
 最初に、画面上で頂点を移動させる頂点シェーダーを見てみましょう。
 
 ```glsl
-// The individual position vertex
+// 個別の位置頂点
 attribute vec3 position;
 
 void main() {
-  // the gl_Position is the final position in clip space after the vertex shader modifies it
+  // gl_Position は、頂点シェーダーによる変更後のクリップ空間における最終的な位置
   gl_Position = vec4(position, 1.0);
 }
+```
+
+```html hidden live-sample___clip_space_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // 個別の位置頂点
+  attribute vec3 position;
+
+  void main() {
+    // gl_Position は、頂点シェーダーによる変更後のクリップ空間における最終的な位置
+    gl_Position = vec4(position, 1.0);
+  }
+</script>
 ```
 
 次に、データを実際にピクセルにラスタライズするために、フラグメントシェーダーはピクセルごとに全てを評価し、一つの色を設定します。GPU は、レンダリングする必要があるピクセルごとにシェーダー関数を呼び出します。シェーダーの仕事は、そのピクセルに使用する色を返すことです。
 
 ```glsl
 precision mediump float;
-uniform vec4 color;
+uniform vec4 vColor;
 
 void main() {
-  gl_FragColor = color;
+  gl_FragColor = vColor;
 }
+```
+
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  uniform vec4 vColor;
+
+  void main() {
+    gl_FragColor = vColor;
+  }
+</script>
 ```
 
 これらの設定が含まれているので、クリップ空間座標を使用して画面に直接描画します。
 
-```js
+```js live-sample___clip_space_ex
 const box = new WebGLBox();
 ```
 
 最初に中央に赤いボックスを描きます。
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 0.5, // x
   bottom: -0.5, // x
@@ -173,7 +446,7 @@ box.draw({
 
 次に、緑色のボックスを赤いボックスの上部に描画します。
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 0.9, // x
   bottom: 0, // x
@@ -187,7 +460,7 @@ box.draw({
 
 最後に、クリッピングが実際に行われていることを示すために、このボックスは完全にクリップ空間の外側にあるため、描画されません。深さが -1.0 から 1.0 の範囲外です。
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 1, // x
   bottom: -1, // x
@@ -201,9 +474,87 @@ box.draw({
 
 #### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/mff99yu5/)
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+<!-- The SVG overlay showing clip space -->
+<svg
+  id="clip-space-axis"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 500"
+  preserveAspectRatio="none"></svg>
 
-![The results of drawing to clip space using WebGL.](part1.png)
+<!-- Use a separate SVG for text to avoid scaling -->
+<svg id="clip-space-text" xmlns="http://www.w3.org/2000/svg"></svg>
+```
+
+```js hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+const axisOverlay = document.getElementById("clip-space-axis");
+const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "path");
+const yAxis = document.createElementNS("http://www.w3.org/2000/svg", "path");
+yAxis.setAttribute("fill", "none");
+yAxis.setAttribute("stroke", "black");
+xAxis.setAttribute("fill", "none");
+xAxis.setAttribute("stroke", "black");
+let yAxisPath = "M 249.5 0 L 249.5 500";
+let xAxisPath = "M 0 250.5 L 500 250.5";
+for (let i = -10; i <= 10; i++) {
+  if (i === 0) continue;
+  const length = i % 5 === 0 ? 24 : 12;
+  const loc = 250 + i * 25 - 0.5;
+  yAxisPath += ` M 249.5 ${loc} L ${249.5 + length} ${loc}`;
+  xAxisPath += ` M ${loc} 250.5 L ${loc} ${250.5 - length}`;
+}
+xAxis.setAttribute("d", xAxisPath);
+yAxis.setAttribute("d", yAxisPath);
+axisOverlay.appendChild(xAxis);
+axisOverlay.appendChild(yAxis);
+
+const textOverlay = document.getElementById("clip-space-text");
+for (const label of ["+X", "-X", "+Y", "-Y"]) {
+  const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  let x, y;
+  if (label === "+X") {
+    [x, y] = ["97.5%", "53%"];
+  } else if (label === "-X") {
+    [x, y] = ["2.5%", "53%"];
+  } else if (label === "+Y") {
+    [x, y] = ["47%", "2.5%"];
+  } else if (label === "-Y") {
+    [x, y] = ["47%", "97.5%"];
+  }
+  textEl.setAttribute("x", x);
+  textEl.setAttribute("y", y);
+  textEl.setAttribute("text-anchor", "middle");
+  textEl.setAttribute("font-family", "'Courier New'");
+  textEl.setAttribute("font-size", "16");
+  textEl.setAttribute("font-weight", "bold");
+  textEl.textContent = label;
+  textOverlay.appendChild(textEl);
+}
+for (let i = -1; i <= 1; i += 0.5) {
+  if (i === 0) continue;
+  const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  textEl.setAttribute("x", "58%");
+  textEl.setAttribute("y", `${50 - i * 48}%`);
+  textEl.setAttribute("text-anchor", "end");
+  textEl.setAttribute("font-family", "'Courier New'");
+  textEl.setAttribute("font-size", "11");
+  textEl.textContent = i.toFixed(1);
+  textOverlay.appendChild(textEl);
+  const textEl2 = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "text",
+  );
+  textEl2.setAttribute("x", `${50 + i * 50}%`);
+  textEl2.setAttribute("y", "45%");
+  textEl2.setAttribute("text-anchor", i > 0 ? "end" : "start");
+  textEl2.setAttribute("font-family", "'Courier New'");
+  textEl2.setAttribute("font-size", "11");
+  textEl2.textContent = i.toFixed(1);
+  textOverlay.appendChild(textEl2);
+}
+```
+
+{{EmbedLiveSample("clip_space_ex", "", 600)}}
 
 #### 演習
 
@@ -213,13 +564,13 @@ box.draw({
 
 前のクリップ空間の頂点シェーダのメインラインは、このコードを含んでいました。
 
-```js
+```glsl
 gl_Position = vec4(position, 1.0);
 ```
 
 変数 `position` は、 `draw()` メソッドで定義され、属性としてシェーダーに渡されました。これは三次元の点ですが、パイプラインを介して渡されることになる変数 `gl_Position` は実際には四次元です。すなわち、 `(x, y, z)` の代わりに `(x, y, z, w)` となっています。`z` の後には文字がないため、慣例により、この 4 番目の次元には `w` というラベルが付いています。 上記の例では、 `w` 座標は 1.0 に設定されています。
 
-明らかな疑問は、「なぜ余分な次元があるのか？」です。この追加により、3D データを操作するための多くの優れた手法が可能になることが分かります。この追加された次元により、遠近法の概念が座標系に導入されます。それを配置すると、3D 座標を 2D 空間にマッピングできます。これにより、2 本の平行線が遠くに離れるときに交差するようになります。値 `w` は、座標の他のコンポーネントの除数として使用されるため、 `x`、`y`、`z` の真の値は、`x/w`、`y/w`、`z/w` として計算されます（そして、`w`も `w/w` で 1 になります）。
+明らかな疑問は、「なぜ余分な次元があるのか？」です。この追加により、3D データを操作するための多くの優れた手法が可能になることが分かります。この追加された次元により、遠近法の概念が座標系に導入されます。それを配置すると、3D 座標を 2D 空間にマッピングできます。これにより、2 本の平行線が遠くに離れるときに交差するようになります。値 `w` は、座標の他のコンポーネントの除数として使用されるため、 `x`、`y`、`z` の真の値は、`x/w`、`y/w`、`z/w` として計算されます（そして、`w` も `w/w` で 1 になります）。
 
 三次元の点は、典型的なデカルト座標系で定義されます。四次元目が加わることで、この点は[同次座標](https://en.wikipedia.org/wiki/Homogeneous_coordinates)に変化します。これはまだ 3 次元空間の点を表しており、このような座標をどのように構築するかは、単純な関数の組によって簡単に示せます。
 
@@ -258,42 +609,94 @@ homogeneousToCartesian([10, 4, 5, 0]);
 
 クリップ空間からの点とポリゴンのクリッピングは、同次座標が（w で割ることによって）デカルト座標に変換される前に行われます。この最終空間は**正規化機器座標**または NDC として知られています。
 
-このアイディアを遊び始めるには、前回の例を変更して `w` 成分を使用することができます。
+このアイディアを遊び始めるには、前回の例を変更して `w` 成分を使用することができます。`data` を変えるだけでなく、`vertexAttribPointer()` の呼び出しにおいて、（第 2 引数の `size` で決める）成分数を 3 ではなく 4 に変えるのを忘れないようにしてください。
 
 ```js
-//Redefine the triangles to use the W component
+// W 成分を使うように三角形を再定義
+// prettier-ignore
 const data = new Float32Array([
-  //Triangle 1
-  settings.left,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.left,
-  settings.top,
-  settings.depth,
-  settings.w,
+  // 三角形 1
+  settings.left, settings.bottom, settings.depth, settings.w,
+  settings.right, settings.bottom, settings.depth, settings.w,
+  settings.left, settings.top, settings.depth, settings.w,
 
-  //Triangle 2
-  settings.left,
-  settings.top,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.top,
-  settings.depth,
-  settings.w,
+  // 三角形 2
+  settings.left, settings.top, settings.depth, settings.w,
+  settings.right, settings.bottom, settings.depth, settings.w,
+  settings.right, settings.top, settings.depth, settings.w,
 ]);
 ```
 
-その後、頂点シェーダーは渡された 4 次元目の点を使用します。
+```js hidden live-sample___homogenous_coordinates_ex
+class WebGLBox {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  positionLocation;
+  colorLocation;
+  constructor() {
+    const gl = this.gl;
+
+    // WebGL プログラムをセットアップ
+    gl.useProgram(this.webglProgram);
+
+    // 属性とユニフォームの場所を保存
+    this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+    this.colorLocation = gl.getUniformLocation(this.webglProgram, "vColor");
+
+    // 描く時に深度テストするよう WebGL に指示する。
+    // これにより、ある正方形が別の正方形の背後にある場合、その正方形は描かれなくなる。
+    gl.enable(gl.DEPTH_TEST);
+  }
+  draw(settings) {
+    // 属性データを作る。これらは最終的に画面に描画される三角形。
+    // 正方形を形作る 2 つの三角形で作られている。
+
+    // prettier-ignore
+    const data = new Float32Array([
+      // 三角形 1
+      settings.left, settings.bottom, settings.depth, settings.w,
+      settings.right, settings.bottom, settings.depth, settings.w,
+      settings.left, settings.top, settings.depth, settings.w,
+
+      // 三角形 2
+      settings.left, settings.top, settings.depth, settings.w,
+      settings.right, settings.bottom, settings.depth, settings.w,
+      settings.right, settings.top, settings.depth, settings.w,
+    ]);
+
+    // WebGL を使って、これを画面に描く。
+
+    // パフォーマンス上の注意: 描画呼び出し（ドローコール）ごとに新しい配列バッファーを作るのは遅い。
+    // この関数はあくまで説明用。
+
+    const gl = this.gl;
+
+    // バッファーを作り、データをバインド
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+
+    // 頂点データ（三角形）へのポインターを設定
+    gl.enableVertexAttribArray(this.positionLocation);
+    gl.vertexAttribPointer(this.positionLocation, 4, gl.FLOAT, false, 0, 0);
+
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniform4fv(this.colorLocation, settings.color);
+
+    // 三角形を画面に描画
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+}
+
+const box = new WebGLBox();
+```
+
+その後、頂点シェーダーは渡された 4 次元目の点を使います。
 
 ```glsl
 attribute vec4 position;
@@ -303,15 +706,25 @@ void main() {
 }
 ```
 
-最初に真ん中に赤い枠を描画しますが、 W は 0.7 に設定します。座標が 0.7 で分割されると、すべて拡大されます。
+```html hidden live-sample___homogenous_coordinates_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec4 position;
 
-```js
+  void main() {
+    gl_Position = position;
+  }
+</script>
+```
+
+初めに真ん中に赤い枠を描画しますが、 W は 0.7 に設定します。座標が 0.7 で分割されると、すべて拡大されます。
+
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 0.5, // y
   bottom: -0.5, // y
   left: -0.5, // x
   right: 0.5, // x
-  w: 0.7, // w - enlarge this box
+  w: 0.7, // w - このボックスを拡大する
 
   depth: 0, // z
   color: [1, 0.4, 0.4, 1], // red
@@ -320,13 +733,13 @@ box.draw({
 
 これで上部に緑色のボックスを描画しますが、 w 成分を 1.1 に設定するには縮小します。
 
-```js
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 0.9, // y
   bottom: 0, // y
   left: -0.9, // x
   right: 0.9, // x
-  w: 1.1, // w - shrink this box
+  w: 1.1, // w - このボックスを縮小する
 
   depth: 0.5, // z
   color: [0.4, 1, 0.4, 1], // green
@@ -335,13 +748,13 @@ box.draw({
 
 この最後のボックスはクリップ空間の外なので描画されません。深さは -1.0 から 1.0 の範囲外です。
 
-```js
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 1, // y
   bottom: -1, // y
   left: -1, // x
   right: 1, // x
-  w: 1.5, // w - Bring this box into range
+  w: 1.5, // w - この箱を範囲内に持ってくる
 
   depth: -1.5, // z
   color: [0.4, 0.4, 1, 1], // blue
@@ -350,7 +763,7 @@ box.draw({
 
 ### 結果
 
-![WebGL でボックスを移動させるために同次座標を使用した結果。](part2.png)
+{{EmbedLiveSample("homogenous_coordinates_ex", "", 600)}}
 
 ### 練習問題
 
@@ -359,7 +772,7 @@ box.draw({
 
 ## モデルの座標変換
 
-クリップ空間に点を直接配置しても、使用することには限界があります。実際のアプリケーションでは、すべてのソース座標がクリップ空間座標にすでに収まっているとは限りません。そのため、ほとんどの場合、モデルデータや他の座標をクリップ空間に変換する必要があります。地味な立方体は、この方法の単純な例です。立方体のデータは、頂点位置、立方体の面の色、および個々の多角形を構成する頂点位置の順序（立方体の面を構成する三角形を構成する3つの頂点のグループ）で構成されます。位置と色は GL バッファに格納され、属性としてシェーダに送られ、個別に処理されます。
+クリップ空間に点を直接配置しても、使用することには限界があります。実際のアプリケーションでは、すべてのソース座標がクリップ空間座標にすでに収まっているとは限りません。そのため、ほとんどの場合、モデルデータや他の座標をクリップ空間に変換する必要があります。地味な立方体は、この方法の単純な例です。立方体のデータは、頂点位置、立方体の面の色、および個々の多角形を構成する頂点位置の順序（立方体の面を構成する三角形を構成する 3 つの頂点のグループ）で構成されます。位置と色は GL バッファに格納され、属性としてシェーダに送られ、個別に処理されます。
 
 最後に、単一のモデル行列が計算され、設定されます。この行列は、モデルを構成するすべての点に対して、モデルを正しい空間に移動させ、モデルの各点に対して他にも必要な変換を行うために実行される変換を表します。これは、各頂点だけでなく、モデルのすべての面上の単一の点にも適用されます。
 
@@ -368,27 +781,23 @@ box.draw({
 以下のコードサンプルでは、モデル行列を作成する `CubeDemo` オブジェクトのメソッドを定義します。 [MDN WebGL](https://github.com/gregtatum/mdn-webgl) の共有コードで定義されているように、行列を作成したり乗算したりするカスタム関数を使用しています。新しい関数は次のようになります。
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function (now) {
-  //Scale down by 50%
-  const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
-
-  // Rotate a slight tilt
-  const rotateX = MDN.rotateXMatrix(now * 0.0003);
-
-  // Rotate according to time
-  const rotateY = MDN.rotateYMatrix(now * 0.0005);
-
-  // Move slightly down
-  const position = MDN.translateMatrix(0, -0.1, 0);
-
-  // Multiply together, make sure and read them in opposite order
-  this.transforms.model = MDN.multiplyArrayOfMatrices([
-    position, // step 4
-    rotateY, // step 3
-    rotateX, // step 2
-    scale, // step 1
+function computeModelMatrix(now) {
+  // 20% に縮める
+  const scaleMatrix = scale(0.2, 0.2, 0.2);
+  // わずかに傾ける
+  const rotateXMatrix = rotateX(now * 0.0003);
+  // 時間経過に合わせて回す
+  const rotateYMatrix = rotateY(now * 0.0005);
+  // 少し下に動かす
+  const translateMatrix = translate(0, -0.1, 0);
+  // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+  this.transforms.model = multiplyArrayOfMatrices([
+    translateMatrix, // ステップ 4
+    rotateYMatrix, // ステップ 3
+    rotateXMatrix, // ステップ 2
+    scaleMatrix, // ステップ 1
   ]);
-};
+}
 ```
 
 これをシェーダーで使用するには、ユニフォームの位置に設定する必要があります。ユニフォームの位置は下記に示す `locations` オブジェクトに保存されます。
@@ -407,20 +816,140 @@ gl.uniformMatrix4fv(
 );
 ```
 
-シェーダーでは、各位置の頂点は最初に同次座標（`vec4` オブジェクト）に変換され、次にモデル行列に対して乗算されます。
+```js hidden live-sample___model_transform_ex live-sample___divide_by_w_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // すべての行列変換
+  locations = {}; // すべてのシェーダーのロケーション
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // 属性とユニフォームの場所を保存
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // 描く時に深度テストするよう WebGL に指示
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // 20% に縮める
+    const scaleMatrix = scale(0.2, 0.2, 0.2);
+    // わずかに傾ける
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // 時間経過に合わせて回す
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // 少し下に動かす
+    const translateMatrix = translate(0, -0.1, 0);
+    // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // ステップ 4
+      rotateYMatrix, // ステップ 3
+      rotateXMatrix, // ステップ 2
+      scaleMatrix, // ステップ 1
+    ]);
+
+    // パフォーマンス上の注意: 実際のプロダクションコードでは、
+    // ループ内で新しい配列やオブジェクトを作らない方が望ましい。
+    // この例では、パフォーマンスよりもコードの分かりやすさを優先している。
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // 行列を計算
+    this.computeModelMatrix(now);
+    // GPU に送るデータを更新
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+
+    // 位置属性を設定
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // 色属性を設定
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // 実際に描く
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // 描画をループとして行う
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
+```
+
+シェーダーでは、各位置の頂点は初めに同次座標（`vec4` オブジェクト）に変えられ、次にモデル行列に対して乗算されます。
 
 ```glsl
 gl_Position = model * vec4(position, 1.0);
 ```
 
 > [!NOTE]
-> JavaScript で行列の乗算はカスタム関数を要求されますが、シェーダーでは単純な \* 演算子で言語に組み込まれています。
+> JavaScript で行列の乗算はカスタム関数を要求されますが、シェーダーでは単純な `*` 演算子で言語に組み込まれています。
+
+オーケストレーションコード全体は非表示になっています。興味があれば、このセクションのコードブロックの「再生」をクリックして確かめてください。
+
+```html hidden live-sample___model_transform_ex
+<!-- 頂点シェーダーは、gl_Position を決めることで、モデルデータの個々の頂点に対して処理します -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // 各点は位置と色を持つ
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // 変換行列
+  uniform mat4 model;
+
+  // 色属性をフラグメントシェーダーに渡す
+  varying vec4 vColor;
+
+  void main() {
+    // 色をフラグメントシェーダーに渡す
+    vColor = color;
+    gl_Position = model * vec4(position, 1.0);
+  }
+</script>
+```
+
+```html hidden live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+<!-- The fragment shader determines the color of the final pixel by setting gl_FragColor -->
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  varying vec4 vColor;
+
+  void main() {
+    gl_FragColor = vColor;
+  }
+</script>
+```
 
 ### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/5jofzgsh/)
-
-![モデルマトリックスの使用](part3.png)
+{{EmbedLiveSample("model_transform_ex", "", 600)}}
 
 この時点では、変換点の w 値は 1.0 のままです。立方体にはまだ視点位置がありません。次の章では、この設定をもとに、 w 値を変更して視点を提供します。
 
@@ -438,27 +967,61 @@ gl_Position = model * vec4(position, 1.0);
 シェーダーのコードはこんな感じです。
 
 ```glsl
-// First transform the point
+// まず、頂点位置を変える
 vec4 transformedPosition = model * vec4(position, 1.0);
 
-// How much effect does the perspective have?
+// 遠近法による影響の度合いを設定
 float scaleFactor = 0.5;
 
-// Set w by taking the z value which is typically ranged -1 to 1, then scale
-// it to be from 0 to some number, in this case 0-1.
+// 通常 -1 から 1 の範囲にある z 値を基に w 成分を設定。
+// ここでは z 値をスケーリングして、0 から 1 の範囲の値に変える。
 float w = (1.0 + transformedPosition.z) * scaleFactor;
 
-// Save the new gl_Position with the custom w component
+// カスタムの w 成分を持つ新しい gl_Position を保存
 gl_Position = vec4(transformedPosition.xyz, w);
+```
+
+```html hidden live-sample___divide_by_w_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // 各点は位置と色を持つ
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // 投影行列
+  uniform mat4 model;
+
+  // 色属性をフラグメントシェーダーに渡す
+  varying vec4 vColor;
+
+  void main() {
+    // 色をフラグメントシェーダーに渡す
+    vColor = color;
+
+    // まず、頂点位置を変える
+    vec4 transformedPosition = model * vec4(position, 1.0);
+
+    // 遠近法による影響の度合いを設定
+    float scaleFactor = 0.5;
+
+    // 通常 -1 から 1 の範囲にある z 値を基に w 成分を設定。
+    // ここでは z 値をスケーリングして、0 から 1 の範囲の値に変える。
+    float w = (1.0 + transformedPosition.z) * scaleFactor;
+
+    // カスタムの w 成分を持つ新しい gl_Position を保存
+    gl_Position = vec4(transformedPosition.xyz, w);
+  }
+</script>
 ```
 
 ### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/vk9r8h2c/)
+{{EmbedLiveSample("divide_by_w_ex", "", 600)}}
 
-![W 成分を埋めて、自分のプロジェクトを作成しましょう。](part4.png)
+カメラに面した角にある小さな三角形が見えますか？それが表示された時のスクリーンショットはこちらです。
 
-紺色の小さな三角形が見えますか？これはオブジェクトに追加された面です。図形が回転することによって、その角がクリップ空間の外にはみ出し、角がクリッピングされる現象が発生したからです。より複雑な行列を使用してクリッピングを制御したり防止したりする方法については、下記の[透視投影行列](#perspective_projection_matrix)を参照してください。
+![右上隅に小さな三角形が表示されます](part4.png)
+
+これはオブジェクトに追加された面です。図形が回転することによって、その角がクリップ空間の外にはみ出し、角がクリッピングされる現象が発生したからです。より複雑な行列を使用してクリッピングを制御したり防止したりする方法については、下記の[透視投影行列](#透視投影行列)を参照してください。
 
 ### 練習問題
 
@@ -470,37 +1033,40 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 w 成分を埋める最後の手順は、実は単純な行列で実現できます。始めるには恒等行列を使います。
 
-```js-nolint
+```js
+// prettier-ignore
 const identity = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 0,
-  0, 0, 0, 1
+  0, 0, 0, 1,
 ];
 
-MDN.multiplyPoint(identity, [2, 3, 4, 1]);
-//> [2, 3, 4, 1]
+multiplyPoint(identity, [2, 3, 4, 1]);
+// [2, 3, 4, 1]
 ```
 
 そして最後の列の 1 を 1 つ上に移動します。
 
-```js-nolint
+```js
+// prettier-ignore
 const copyZ = [
   1, 0, 0, 0,
   0, 1, 0, 0,
   0, 0, 1, 1,
-  0, 0, 0, 0
+  0, 0, 0, 0,
 ];
 
-MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
-//> [2, 3, 4, 4]
+multiplyPoint(copyZ, [2, 3, 4, 1]);
+// [2, 3, 4, 4]
 ```
 
 しかし、最後の例では `(z + 1) * scaleFactor` を実行しました。
 
-```js-nolint
+```js
 const scaleFactor = 0.5;
 
+// prettier-ignore
 const simpleProjection = [
   1, 0, 0, 0,
   0, 1, 0, 0,
@@ -508,58 +1074,191 @@ const simpleProjection = [
   0, 0, 0, scaleFactor,
 ];
 
-MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
-//> [2, 3, 4, 2.5]
+multiplyPoint(simpleProjection, [2, 3, 4, 1]);
+// [2, 3, 4, 2.5]
 ```
 
 もう少し詳しく分析すると、これがどのように動作するのかがわかります。
 
 ```js
-let x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
-let y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
-let z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
-let w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
+const x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+const y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+const z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+const w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 最後の行は単純化するとこうなります。
 
 ```js
-w = 4 * scaleFactor + 1 * scaleFactor;
+const w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 そして、 scaleFactor を因数分解すると、このようになります。
 
 ```js
-w = (4 + 1) * scaleFactor;
+const w = (4 + 1) * scaleFactor;
 ```
 
 これは前回の例で使用した `(z + 1) * scaleFactor` と全く同じです。
 
 このデモでは、 `computeSimpleProjectionMatrix()` メソッドが追加されています。これは `draw()` メソッドの中で呼び出され、スケール係数が渡されます。結果は前回の例と同じになるはずです。
 
-```js-nolint
-CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
+```js
+function computeSimpleProjectionMatrix(scaleFactor) {
+  // prettier-ignore
   this.transforms.projection = [
     1, 0, 0, 0,
     0, 1, 0, 0,
     0, 0, 1, scaleFactor,
-    0, 0, 0, scaleFactor
+    0, 0, 0, scaleFactor,
   ];
-};
+}
 ```
 
-結果は同じですが、ここでの重要な手順は頂点シェーダーにあります。頂点を直接変更するのではなく、追加の **[投影行列](#投影行列)** と乗算します。この行列は（その名前が示すように） 3D 点を 2D の描画面に投影します。
+```js hidden live-sample___simple_projection_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // すべての行列変換
+  locations = {}; // すべてのシェーダーのロケーション
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // 属性とユニフォームの場所を保存
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // 描く時に深度テストするよう WebGL に指示
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // 20% に縮める
+    const scaleMatrix = scale(0.2, 0.2, 0.2);
+    // わずかに傾ける
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // 時間経過に合わせて回す
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // 少し下に動かす
+    const translateMatrix = translate(0, -0.1, 0);
+    // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // ステップ 4
+      rotateYMatrix, // ステップ 3
+      rotateXMatrix, // ステップ 2
+      scaleMatrix, // ステップ 1
+    ]);
+
+    // パフォーマンス上の注意: 実際のプロダクションコードでは、
+    // ループ内で新しい配列やオブジェクトを作らない方が望ましい。
+    // この例では、パフォーマンスよりもコードの分かりやすさを優先している。
+  }
+
+  computeSimpleProjectionMatrix(scaleFactor) {
+    // prettier-ignore
+    this.transforms.projection = [
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, scaleFactor, // ここでは、追加のスケール係数に注目。
+      0, 0, 0, scaleFactor,
+    ];
+
+    // この行列は、点をコピーし、W 成分を 1 + (z * scaleFactor) に設定。
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // 行列を計算
+    this.computeModelMatrix(now);
+    this.computeSimpleProjectionMatrix(0.5);
+    // GPU に送るデータを更新
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+
+    // 位置属性を設定
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // 色属性を設定
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // 実際に描く
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // 描画をループとして行う
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
+```
+
+結果は同じですが、ここでの重要な手順は頂点シェーダーにあります。頂点を直接変更するのではなく、追加の **[投影行列](#モデル、ビュー、投影行列)** と乗算します。この行列は（その名前が示すように） 3D 点を 2D の描画面に投影します。
 
 ```glsl
-// Make sure to read the transformations in reverse order
+// 変換は必ず逆順で読む。
 gl_Position = projection * model * vec4(position, 1.0);
+```
+
+```html hidden live-sample___simple_projection_ex live-sample___projection_matrix_ex
+<!-- The vertex shader operates on individual vertices in our model data by setting gl_Position -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // 各点は位置と色を持つ
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // 変換行列
+  uniform mat4 model;
+  uniform mat4 projection;
+
+  // 色属性をフラグメントシェーダーに渡す
+  varying vec4 vColor;
+
+  void main() {
+    // 色をフラグメントシェーダーに渡す
+    vColor = color;
+
+    // 行列の乗算を逆順に読み解くと、元の点はクリップ空間へ移り、
+    // その後、W 成分を埋めることで透視投影（パースペクティブビュー）へと投影される
+    gl_Position = projection * model * vec4(position, 1.0);
+  }
+</script>
 ```
 
 ### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/zwyLLcbw/)
-
-![単純な投影行列](part5.png)
+{{EmbedLiveSample("simple_projection_ex", "", 600)}}
 
 ## 視錐台
 
@@ -589,9 +1288,9 @@ WebGL では、前方および後方クリッピング面は、レンズから�
 
 **透視投影行列**は、これらの要求をすべて達成する投影行列の種類です。数学も少し複雑になり始めるので、この例では十分に説明しません。要するに、（前回例で行ったように） w で割ることと、[相似三角形](https://ja.wikipedia.org/wiki/図形の相似)に基づくいくつかの巧妙な操作を組み合わせたものです。その背後にある数学的に完全な説明を読むには、以下のリンクを調べてください。
 
-- [OpenGL Projection Matrix](https://www.songho.ca/opengl/gl_projectionmatrix.html)
-- [Perspective Projection](https://ogldev.org/)
-- [Trying to understand the math behind the perspective projection matrix in WebGL](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [OpenGL 投影行列](https://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [透視投影](https://ogldev.org/)
+- [WebGL における透視投影行列の数学的背景の理解](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
 下記で使用する視点位置投影行列で注意すべき重要なことは、 z 軸を反転させるということです。クリップ空間では z を増加させると見る人から遠ざかりますが、この行列では見る人の方に来ます。
 
@@ -599,23 +1298,19 @@ z 軸を反転させる理由は、クリップ空間座標系が左手座標系
 
 それでは、透視投影行列を計算する関数 `perspectiveMatrix()` を見ていきましょう。
 
-```js-nolint
-MDN.perspectiveMatrix = function (
-  fieldOfViewInRadians,
-  aspectRatio,
-  near,
-  far,
-) {
+```js live-sample___projection_matrix_ex live-sample___view_matrix_ex
+function perspective(fieldOfViewInRadians, aspectRatio, near, far) {
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
 
+  // prettier-ignore
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio, 0, 0, 0,
+    0, f, 0, 0,
+    0, 0, (near + far) * rangeInv, -1,
+    0, 0, near * far * rangeInv * 2, 0,
   ];
-};
+}
 ```
 
 この関数の 4 つの引数は以下の通りです。
@@ -632,24 +1327,135 @@ MDN.perspectiveMatrix = function (
 このデモの最新バージョンでは、 `computeSimpleProjectionMatrix()` メソッドは `computePerspectiveMatrix()` メソッドに置き換えられています。
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function () {
+function computePerspectiveMatrix() {
   const fieldOfViewInRadians = Math.PI * 0.5;
   const aspectRatio = window.innerWidth / window.innerHeight;
   const nearClippingPlaneDistance = 1;
   const farClippingPlaneDistance = 50;
 
-  this.transforms.projection = MDN.perspectiveMatrix(
+  this.transforms.projection = perspective(
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
     farClippingPlaneDistance,
   );
-};
+}
+```
+
+```js hidden live-sample___projection_matrix_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // すべての行列変換
+  locations = {}; // すべてのシェーダーのロケーション
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // 属性とユニフォームの場所を保存
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // 描く時に深度テストするよう WebGL に指示
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // 拡大
+    const scaleMatrix = scale(5, 5, 5);
+    // わずかに傾ける
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // 時間経過に合わせて回す
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // 少し下に動かす
+    const translateMatrix = translate(0, 0, -20);
+    // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // ステップ 4
+      rotateYMatrix, // ステップ 3
+      rotateXMatrix, // ステップ 2
+      scaleMatrix, // ステップ 1
+    ]);
+
+    // パフォーマンス上の注意: 実際のプロダクションコードでは、
+    // ループ内で新しい配列やオブジェクトを作らない方が望ましい。
+    // この例では、パフォーマンスよりもコードの分かりやすさを優先している。
+  }
+
+  computePerspectiveMatrix(scaleFactor) {
+    const fieldOfViewInRadians = Math.PI * 0.5;
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const nearClippingPlaneDistance = 1;
+    const farClippingPlaneDistance = 50;
+
+    this.transforms.projection = perspective(
+      fieldOfViewInRadians,
+      aspectRatio,
+      nearClippingPlaneDistance,
+      farClippingPlaneDistance,
+    );
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // 行列を計算
+    this.computeModelMatrix(now);
+    this.computePerspectiveMatrix(0.5);
+    // GPU に送るデータを更新
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+
+    // 位置属性を設定
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // 色属性を設定
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // 実際に描く
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // 描画をループとして行う
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
 ```
 
 シェーダーコードは前回の例と同じです。
 
-```js
+```glsl
 gl_Position = projection * model * vec4(position, 1.0);
 ```
 
@@ -657,9 +1463,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 ### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/Lzxw7e1q/)
-
-![真の視点位置行列](part6.png)
+{{EmbedLiveSample("projection_matrix_ex", "", 600)}}
 
 ### 練習問題
 
@@ -672,7 +1476,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 ### カメラのシミュレーション
 
-これは、アインシュタインの特殊相対性理論の基本的な側面の1つを使用しています。参照フレームと相対運動の原理は、閲覧者の視点から、シーン内のオブジェクトに反対の変更を適用することによって、閲覧者の位置と方向を変更することをシミュレーションできると言います。いずれにせよ、その結果は閲覧者には同じに現れます。
+これは、アインシュタインの特殊相対性理論の基本的な側面の 1 つを使用しています。参照フレームと相対運動の原理は、閲覧者の視点から、シーン内のオブジェクトに反対の変更を適用することによって、閲覧者の位置と方向を変更することをシミュレーションできると言います。いずれにせよ、その結果は閲覧者には同じに現れます。
 
 テーブルの上に箱が置いてあり、 1 メートル離れたテーブルの上にカメラが置いてあり、箱の正面をカメラに向けているとします。次に、カメラを箱から 2 メートル離れるまで移動させ（カメラの Z の位置に 1 メートル足す）、 10 センチ左側にスライドさせるとします。箱はカメラからその分遠ざかり、少し右にスライドします。そうすることで、カメラには小さく現れ、カメラには箱の左側が少し公開されます。
 
@@ -689,23 +1493,147 @@ gl_Position = projection * model * vec4(position, 1.0);
 以下の `computeViewMatrix()` メソッドでは、ビュー行列をアニメーションのように内と外、左と右に移動します。
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function (now) {
+function computeViewMatrix(now) {
   const moveInAndOut = 20 * Math.sin(now * 0.002);
   const moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
-  // Move the camera around
-  const position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut);
+  // カメラを動かす
+  const position = translate(moveLeftAndRight, 0, 50 + moveInAndOut);
 
-  // Multiply together, make sure and read them in opposite order
-  const matrix = MDN.multiplyArrayOfMatrices([
-    // Exercise: rotate the camera view
+  // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+  this.transforms.view = multiplyArrayOfMatrices([
+    // 練習問題: カメラの視点を回す
     position,
   ]);
+}
+```
 
-  // Inverse the operation for camera movements, because we are actually
-  // moving the geometry in the scene, not the camera itself.
-  this.transforms.view = MDN.invertMatrix(matrix);
-};
+```js hidden live-sample___view_matrix_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // すべての行列変換
+  locations = {}; // すべてのシェーダーのロケーション
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // 属性とユニフォームの場所を保存
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.view = gl.getUniformLocation(this.webglProgram, "view");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // 描く時に深度テストするよう WebGL に指示
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // 拡大
+    const scaleMatrix = scale(5, 5, 5);
+    // 固定回転
+    const rotateXMatrix = rotateX(Math.PI * 0.2);
+    // 固定回転
+    const rotateYMatrix = rotateY(Math.PI * 0.2);
+    // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+    this.transforms.model = multiplyArrayOfMatrices([
+      rotateYMatrix, // ステップ 3
+      rotateXMatrix, // ステップ 2
+      scaleMatrix, // ステップ 1
+    ]);
+
+    // パフォーマンス上の注意: 実際のプロダクションコードでは、
+    // ループ内で新しい配列やオブジェクトを作らない方が望ましい。
+    // この例では、パフォーマンスよりもコードの分かりやすさを優先している。
+  }
+
+  computeViewMatrix(now) {
+    const zoomInAndOut = 5 * Math.sin(now * 0.002);
+
+    // 少し下に動かす
+    const position = translate(0, 0, -20 + zoomInAndOut);
+
+    // 行列を掛ける（適用順とは逆順で読み込むことに注意）
+    this.transforms.view = multiplyArrayOfMatrices([
+      // 練習問題: カメラの視点を回す
+      position,
+    ]);
+  }
+
+  computePerspectiveMatrix(scaleFactor) {
+    const fieldOfViewInRadians = Math.PI * 0.5;
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const nearClippingPlaneDistance = 1;
+    const farClippingPlaneDistance = 50;
+
+    this.transforms.projection = perspective(
+      fieldOfViewInRadians,
+      aspectRatio,
+      nearClippingPlaneDistance,
+      farClippingPlaneDistance,
+    );
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // 行列を計算
+    this.computeModelMatrix(now);
+    this.computeViewMatrix(now);
+    this.computePerspectiveMatrix(0.5);
+    // GPU に送るデータを更新
+    // すべての三角形で共有されるカラーユニフォームを設定
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.view,
+      false,
+      new Float32Array(this.transforms.view),
+    );
+
+    // 位置属性を設定
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // 色属性を設定
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // 実際に描く
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // 描画をループとして行う
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
 ```
 
 これで、シェーダーは 3 つの行列を使用するようになります。
@@ -714,13 +1642,39 @@ CubeDemo.prototype.computeViewMatrix = function (now) {
 gl_Position = projection * view * model * vec4(position, 1.0);
 ```
 
+```html hidden live-sample___view_matrix_ex
+<!-- 頂点シェーダーは、gl_Position を決めることで、モデルデータの個々の頂点に対して処理します -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // 各点は位置と色を持つ
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // 変換行列
+  uniform mat4 model;
+  uniform mat4 view;
+  uniform mat4 projection;
+
+  // 色属性をフラグメントシェーダーに渡す
+  varying vec4 vColor;
+
+  void main() {
+    // 色をフラグメントシェーダーに渡す
+    vColor = color;
+
+    // 乗算の順序を逆順で読み取る。
+    // 点は元のモデル空間から取得され、ワールド空間へ変えられる。
+    // その後、ホモジニアスな点としてクリップ空間へ投影される。
+    // 一般的に、この処理の最終段階で W の値は 1 以外になる。
+    gl_Position = projection * view * model * vec4(position, 1.0);
+  }
+</script>
+```
+
 この手順の後、 GPU パイプラインは範囲外の頂点をクリップし、ラスタライズのためにモデルをフラグメントシェーダーに送ります。
 
 ### 結果
 
-[JSFiddle で表示](https://jsfiddle.net/tatumcreative/86fd797g/)
-
-![ビュー行列](part7.png)
+{{EmbedLiveSample("view_matrix_ex", "", 600)}}
 
 ### 相対座標系
 
@@ -740,9 +1694,9 @@ gl_Position = projection * view * model * vec4(position, 1.0);
 
 - シーン内でカメラを移動しましょう。
 - ビュー行列に回転行列を追加して、見回しましょう。
-- 最後に、マウスの位置を追跡しましょう。2つの回転行列を使用して、ユーザーのマウスが画面上のどこにあるかに基づいてカメラを上下に向けます。
+- 最後に、マウスの位置を追跡しましょう。2 つの回転行列を使用して、ユーザーのマウスが画面上のどこにあるかに基づいてカメラを上下に向けます。
 
 ## 関連情報
 
 - [WebGL](/ja/docs/Web/API/WebGL_API)
-- [3D projection](https://en.wikipedia.org/wiki/3D_projection)
+- [3D 投影](https://en.wikipedia.org/wiki/3D_projection)

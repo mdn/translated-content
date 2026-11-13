@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a7e014bc1ee2ce53751b47adbe48d3180bc2d54
 ---
 
-{{GlossarySidebar}}
-
 **立即调用函数表达式**（IIFE）是一种 {{glossary("JavaScript")}} {{glossary("function","函数")}}在定义后就会立即执行的习惯用法。它也被称为*自执行匿名函数*。IIFE 这个名字是由 Ben Alman 在[他的博客](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)中提出的。
 
 ```js

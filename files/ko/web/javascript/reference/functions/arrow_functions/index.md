@@ -264,7 +264,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> **참고:** [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler)에서는 `arguments`는 변수를 선언할 수 없으므로 위의 코드는 구문 오류가 됩니다. 이렇게 하면 `arguments`의 범위 지정 효과를 훨씬 더 쉽게 이해할 수 있습니다.
+> [!NOTE]
+> [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler)에서는 `arguments`는 변수를 선언할 수 없으므로 위의 코드는 구문 오류가 됩니다. 이렇게 하면 `arguments`의 범위 지정 효과를 훨씬 더 쉽게 이해할 수 있습니다.
 
 대부분의 경우, [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용하는 것이
 `arguments` 객체를 사용하는 것보다 좋은 대안입니다.

@@ -1,24 +1,23 @@
 ---
 title: String.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`toString()`** は {{jsxref("String")}} 値のメソッドで、指定されたオブジェクトを表す文字列を返します。
 
-**`toString()`** メソッドは指定されたオブジェクトを表す文字列を返します。
-
-{{InteractiveExample("JavaScript デモ: String.toString()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.toString()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");
 
 console.log(stringObj);
-// Expected output: String { "foo" }
+// 予想される結果: String { "foo" }
 
 console.log(stringObj.toString());
-// Expected output: "foo"
+// 予想される結果: "foo"
 ```
 
 ## 構文
@@ -26,6 +25,10 @@ console.log(stringObj.toString());
 ```js-nolint
 toString()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 

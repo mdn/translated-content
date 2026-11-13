@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 指定用户单击浏览器操作图标时以弹窗形式打开的 HTML 文档。没有特定弹窗的标签页将继承全局弹窗，其默认值为清单中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 > [!NOTE]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的徽章文本（徽章将显示在图标上方）。
 
 > [!NOTE]

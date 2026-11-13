@@ -1,13 +1,12 @@
 ---
 title: HTML の画像
+short-title: 画像
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}
 
 当初、ウェブは単なるテキストであり、とてもつまらないものでした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。この記事では、 {{htmlelement("img")}} 要素の使い方について、基本的な使い方、 {{htmlelement("figure")}} を使用したキャプションの注釈、 {{glossary("CSS")}} 背景画像との関連の詳細などを詳しく見ていきます。
 
@@ -29,7 +28,7 @@ l10n:
       <th scope="row">学習成果:</th>
       <td>
         <ul>
-          <li>「置換要素」という耀g。どういう意味でしょう。</li>
+          <li>「置換要素」という用語。どういう意味でしょう。</li>
           <li>基本的な <code>&lt;img&gt;</code> タグの構文</li>
           <li><code>src</code> を使用してリソースを指すこと。</li>
           <li><code>width</code> と <code>height</code> を使用して、例えば、画像の読み込みが完了して表示された後に、 UI が不快でぎこちない動きで更新されるのを避けることができること。</li>
@@ -78,14 +77,14 @@ l10n:
 もし自分で画像を作成していないのであれば、その画像が公開されているライセンスの条件下で使用する許可をあなたが持っていることを確認してください（詳しくは下記の[メディア資産とライセンス](#メディア資産とライセンス)をご覧ください）。
 
 > [!WARNING]
-> 他人のウェブサイトでホスティングされている画像を、**許可なく** src 属性で指しては**いけません**。これは「ホットリンク」と呼ばれます。誰かがページにアクセスしたときに画像を配信するための帯域幅のコストを他の誰かが負担することになるため、一般に倫理的に問題があると考えられています。
+> 他人のウェブサイトでホスティングされている画像を、許可なく `src` 属性で指しては**いけません**。これは「ホットリンク」と呼ばれます。誰かがページにアクセスしたときに画像を配信するための帯域幅のコストを他の誰かが負担することになるため、一般に倫理的に問題があると考えられています。
 
 先のコードスニペットは、絶対 URL でも相対 URL でも、以下のような結果になります。
 
 ![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" と書かれています](basic-image.png)
 
 > [!NOTE]
-> {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)を参照してください。
+> {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは{{ glossary("replaced elements", "置換要素")}}を参照してください。
 
 > [!NOTE]
 > この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。
@@ -118,12 +117,15 @@ l10n:
 - **装飾**。装飾的な画像には [CSS 背景画像](#css_背景画像)を使用すべきですが、 HTML を使用する必要がある場合は、空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは読み上げて時間を浪費すべきではありません。
 - **コンテンツ**。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供してください。それよりもっと良いのは、誰もが見ることができる本文の中で提供することです。冗長な `alt` テキストを書かないでください。すべての段落がメインコンテンツに 2 重に書かれていると、目に見えるユーザーにとってはどれほど迷惑でしょうか？画像が主たる本文で十分に記述されている場合は、単に `alt=""` が使用できます。
 - **リンク**。 {{htmlelement("a")}} タグ内に画像を置いた場合、画像をリンクにすると、[アクセス可能なリンクテキスト](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
-- **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、 [CSS を使用](/ja/docs/Web/CSS/text-shadow)してください。しかし、これが本当に避けられない場合は、 `alt` 属性でテキストを与える必要があります。
+- **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、 [CSS を使用](/ja/docs/Web/CSS/Reference/Properties/text-shadow)してください。しかし、これが本当に避けられない場合は、 `alt` 属性でテキストを与える必要があります。
 
 基本的には、画像が見えないときでも、実用的な使い勝手を提供することが鍵です。これにより、すべてのユーザーにコンテンツが欠落していないことが保証されます。ブラウザーの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかがすぐに理解できます。
 
 > [!NOTE]
 > 詳細については、[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)のガイドや [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照すると、さまざまな状況で画像の `alt` 属性を使用する方法が分かります。
+
+> [!NOTE]
+> [HTML tags](https://scrimba.com/html-css-crash-course-c02l/~0d?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> HTMLタグ MDN 学習パートナー（Scrimba 提供）は、画像に関する情報とミニチャレンジを提供するインタラクティブなレッスンです。
 
 ### 幅と高さ
 
@@ -172,22 +174,25 @@ l10n:
 
 ![画像サイズを指定しない場合の、ブラウザーがページを読み込んでいるときと完了したときのページレイアウトの比較。](no-size.png)
 
-このようにテキストを移動させることは、ユーザー、特にすでに読み始めたユーザーにとって非常にわずらわしいものです。
+このようにテキストが移動すると、特に読み始めたユーザーにとっては非常にわずらわしいものとなります。同時にブラウザーがページを再描画するため、パフォーマンスの低下が発生します。
 
-HTML で `width` 属性と `height` 属性を用いて画像の実際の大きさを指定すると、ブラウザーは画像をダウンロードする前に、その画像のためにどれだけの空間が必要かを知ることができます。
+HTML で `width` 属性と `height` 属性を用いて画像の実際のサイズを指定すると、ブラウザーは画像がダウンロードされる前に、画像用に確保すべき空間を把握できます。
 
-これにより、画像がダウンロードされたとき、ブラウザーは周囲のコンテンツを移動させる必要がなくなります。
+これにより、画像がダウンロードされたとき、ブラウザーは周囲のコンテンツを移動することがなくなります。
 
 ![画像サイズを指定した場合の、ブラウザーがページを読み込んでいるときと完了したときのページレイアウトの比較。](size.png)
 
 この機能の歴史に関する優れた記事は、 [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/) を参照してください。
 
-> [!NOTE]
-> これまでに述べたように、 HTML 属性を使って画像の実際の大きさを指定するのは良い習慣ですが、画像のサイズ変更にこれらを使用するべきではありません。
->
-> 画像サイズを大きく設定しすぎると、画像が粗くなったり、ぼやけたり、小さすぎたりして、ユーザーのニーズに合っていない画像をダウンロードすることになり、帯域幅を浪費することになります。また、正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んでいってしまうかもしれません。ウェブページに画像を掲載する前に、画像エディターを使用して正しいサイズにしましょう。
->
-> 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) を使用しましょう。
+画像の下にコンテンツがない場合、再描画は問題になりません。画像のサイズ変更によって他の要素が移動することがないためです。その場合、画像の `width` のみを設定することも可能です。`width` を設定し `height` を設定しない場合、`height` はデフォルトで `auto` となり、画像の[アスペクト比](/ja/docs/Glossary/Aspect_ratio)を維持する値に設定されます。
+
+#### 画像のサイズ変更
+
+これまでに述べたように、 HTML 属性を使って画像の実際の大きさを指定するのは良い取り組みですが、画像のサイズ変更にこれらを使用するべきではありません。
+
+画像サイズを大きく設定しすぎると、画像が粗くなったり、ぼやけたり、小さすぎたりして、ユーザーのニーズに合っていない画像をダウンロードすることになり、帯域幅を浪費することになります。また、正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んでいってしまうかもしれません。ウェブページに画像を掲載する前に、画像エディターを使用して正しいサイズにしましょう。
+
+画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) を使用しましょう。
 
 ### 画像のタイトル
 
@@ -211,151 +216,47 @@ HTML で `width` 属性と `height` 属性を用いて画像の実際の大き�
 
 画像に添付するのではなく、メインの記事のテキストにそのような補足情報を含めた方がいいでしょう。
 
-### アクティブラーニング: 画像の埋め込み
+### 画像の埋め込みの練習
 
-今度はあなたの番です。このアクティブラーニングの節では、簡単な埋め込み練習をさせていただきます。基本的な {{htmlelement("img")}} タグが提供されています。次の URL の画像を埋め込むようにしてください。
+今度はあなたの番です。この課題では、画像の組み込みを行います。
 
-```url
-https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. 既存の {{htmlelement("img")}} タグを編集し、次のURLにある画像を埋め込むようにしてください。
+
+   ```url
+   https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+   ```
+
+   > [!NOTE]
+   > 以前、許可なく他サーバーの画像をホットリンクしてはいけないと言いましたが、この画像は当社の GitHub リポジトリーにあるため問題ありません。
+
+3. 代替テキストを追加し、画像 URL のスペルを間違えて機能することを確認します。
+4. 画像の正しい `width` と `height` （ヒント: 幅 200 ピクセル、高さ 171 ピクセル）を設定し、他の値を試してその効果を確認します。
+5. 画像に `title` を設定します。
+
+間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
+
+```html live-sample___images-1
+<img />
 ```
 
-以前は他のサーバー上の画像に絶対にホットリンクしないように言っていましたが、これは単に学習目的のためのものです。
+{{ EmbedLiveSample('images-1', "100%", 60) }}
 
-また、次のこともします。
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-- 代替テキストを追加し、画像 URL のスペルを間違えて機能することを確認します。
-- 画像の正しい `width` と `height` （ヒント: 幅 200 ピクセル、高さ 171 ピクセル）を設定し、他の値を試してその効果を確認します。
-- 画像に `title` を設定します。
+最終的な HTML は次のようになります。
 
-間違えた場合は、\[リセット] ボタンを使用してリセットすることができます。あなたが本当に立ち往生した場合は、\[答えを表示] ボタンを押して答えを表示してください。
-
-```html-nolint hidden
-<h2>ライブ出力</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
-</p>
-
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-<img>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
+```html
+<img
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  alt="恐竜の骨格の頭部と胴体。大きな頭部には長く鋭い歯をつけている。"
+  width="200"
+  height="171"
+  title="マンチェスター大学博物館に展示されているティラノサウルス" />
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_embedding_an_image', 700, 350) }}
+</details>
 
 ## メディア資産とライセンス
 
@@ -377,7 +278,7 @@ textarea.onkeyup = function () {
 
 #### 寛容なライセンス
 
-画像が [MIT](https://mit-license.org/) や [BSD](https://opensource.org/license/BSD-3-clause/)、あるいは適切な[クリエイティブ・コモンズ（CC）ライセンス](https://creativecommons.org/choose/)のような寛容なライセンスでリリースされている場合、使用するためにライセンス料を支払ったり、その権限を求めたりする必要はありません。それでも、満たす必要がある様々なライセンス条件があり、それはライセンスによって異なります。
+画像が [MIT](https://mit-license.org/) や [BSD](https://opensource.org/license/BSD-3-clause/)、あるいは適切な[クリエイティブ・コモンズ（CC）ライセンス](https://creativecommons.org/chooser/)のような寛容なライセンスでリリースされている場合、使用するためにライセンス料を支払ったり、その権限を求めたりする必要はありません。それでも、満たす必要がある様々なライセンス条件があり、それはライセンスによって異なります。
 
 例えば、守る必要があるかもしれないことは次の通りです。
 
@@ -466,144 +367,46 @@ textarea.onkeyup = function () {
 
 図表は、いくつかの画像、コードスニペット、音声、動画、方程式、表、または何か他のものであってもよいのです。
 
-### アクティブラーニング: 図表の作成
+### 図表の作成
 
 このアクティブラーニングの節では、以前のアクティブラーニングの節で完成したコードを図表にします。
 
-- {{htmlelement("figure")}} 要素で囲みます。
-- テキストを `title` 属性からコピーし、 `title` 属性を削除し、テキストを画像の下の {{htmlelement("figcaption")}} 要素の中に置きます。
+1. 下記コードブロック内の **"Play"** をクリックして、MDN Playground で例を編集してください。
+2. `<img>` 要素を {{htmlelement("figure")}} 要素で囲みます。
+3. テキストを `title` 属性からコピーし、テキストを `<img>` 要素の下の {{htmlelement("figcaption")}} 要素の中に置いてから、`title` 属性を削除します。
 
-間違えた場合は、\[リセット] ボタンを使用してリセットすることができます。あなたが本当に立ち往生した場合は、\[答えを表示] ボタンを押して答えを表示してください。
+間違えた場合は、MDN Playground の _Reset_ ボタンで作業内容をクリアできます。どうしても行き詰まった場合は、コードブロックの下にある解答を参照してください。
 
-```html-nolint hidden
-<h2>ライブ出力</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
-</p>
-
-<textarea
-  id="code"
-  class="input"
-  style="min-height: 100px; width: 95%"></textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
+```html-nolint live-sample___images-2
+<img
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  alt="恐竜の骨格の頭部と胴体。大きな頭部には長く鋭い歯を付けている。"
+  width="200"
+  height="171"
+  title="マンチェスター大学博物館に展示されているティラノサウルス" />
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('images-2', "100%", 200) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+最終的な HTML は次のようになります。
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<figure>
+  <img
+    src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+    alt="恐竜の骨格の頭部と胴体。大きな頭部には長く鋭い歯を付けている。"
+    width="200"
+    height="171" />
+  <figcaption>
+    マンチェスター大学博物館に展示されているティラノサウルス
+  </figcaption>
+</figure>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_creating_a_figure', 700, 350) }}
+</details>
 
 ## CSS 背景画像
 
@@ -619,12 +422,10 @@ p {
 
 要約: 画像に意味がある場合、すなわちコンテンツであれば、HTML 画像を使用してください。画像が純粋に装飾である場合は、 CSS 背景画像を使用してください。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images) を見てください。
-
 ## まとめ
 
-今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、HTML を使用してウェブページに動画や音声コンテンツを埋め込む方法について見ていきたいと思います。
+今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+次の記事では、HTML 画像に関する情報をどれだけ理解し、記憶できたかを確認するための確認テストを用意しました。
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}

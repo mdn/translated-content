@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a9ee909247680532544008dbc65a9f033fce4b39
 ---
 
-{{HTMLSidebar}}
-
 **`for`** 属性是 {{htmlelement("label")}} 和 {{htmlelement("output")}} 允许使用的属性。当用于 `<label>` 元素时，它表示该标签所描述的表单元素。当用于 `<output>` 元素时，它允许在代表输出中使用的值的元素之间建立明确的关系。
 
 {{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}

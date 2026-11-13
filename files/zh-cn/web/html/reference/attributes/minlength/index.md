@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
 
-{{HTMLSidebar}}
-
 **`minlength`** 属性定义了用户可以在 {{htmlelement('input')}} 或 {{htmlelement('textarea')}} 中输入的[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)的最小值。该属性的值必须是非负整数。
 
 字符串长度是以 UTF-16 码元为单位进行计算的，通常（[对大多数文本而言](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length#长度不等于字符数的字符串)）等同于字符个数。如果未指定 `minlength`，或指定了无效值，则输入将没有最小长度限制。该值必须小于或等于 [maxlength](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength) 的值，否则该值将永远无效，因为不可能同时满足这两个条件。

@@ -3,8 +3,6 @@ title: <pre>：預格式化文本元素
 slug: Web/HTML/Reference/Elements/pre
 ---
 
-{{HTMLSidebar}}
-
 **`<pre>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示預格式化文本，將以 HTML 檔案中的原樣呈現。這段文字通常使用非比例或[等寬字體](https://zh.wikipedia.org/wiki/等宽字体)進行渲染。該元素內的空格會按照原樣呈現。
 
 預設情況下，`<pre>` 是[區塊級](/zh-TW/docs/Glossary/Block-level_content)元素，即其預設的 {{cssxref("display")}} 值為 `block`。

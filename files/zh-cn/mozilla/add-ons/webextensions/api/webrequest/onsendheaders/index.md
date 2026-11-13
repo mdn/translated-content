@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 此事件在发送标头之前触发。如果你的扩展或其他扩展在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了标头，你将在此处得到修改后的标头。
 
 此事件仅用于提供信息。

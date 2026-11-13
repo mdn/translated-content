@@ -3,8 +3,6 @@ title: <footer>：頁尾元素
 slug: Web/HTML/Reference/Elements/footer
 ---
 
-{{HTMLSidebar}}
-
 **`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}

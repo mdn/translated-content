@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<legend>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示其父元素 {{HTMLElement("fieldset")}} 内容的标题。
 
 {{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}

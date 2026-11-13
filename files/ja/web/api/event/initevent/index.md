@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ ApiRef("DOM") }}
 
 **`Event.initEvent()`** メソッドは、 {{domxref("Document.createEvent()")}} を使用して作成されたイベント ({{ domxref("event") }}) の値を初期化するために使用します。
 
@@ -16,7 +16,7 @@ l10n:
 
 > [!NOTE]
 > **このメソッドは廃止されているため、使用しないでください。**
-> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページに、これらの使用方法の詳細が記載されています。
+> 代わりに、 {{domxref("Event.Event", "Event()")}} のような特定のイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)のページに、これらの使用方法の詳細が記載されています。
 
 ## 構文
 

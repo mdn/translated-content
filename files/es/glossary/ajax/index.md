@@ -1,25 +1,23 @@
 ---
-title: AJAX
+title: Ajax
 slug: Glossary/AJAX
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+JavaScript asíncrono y XML (**Ajax** o **AJAX**, por sus siglas en inglés) es una técnica de desarrollo web en la que una aplicación web obtiene contenido del servidor mediante peticiones HTTP asíncronas, y usa ese contenido nuevo para actualizar las partes relevantes de la página, sin necesidad de recargarla por completo. Esto puede hacer que la página responda mejor, porque solo se solicitan las partes que hay que actualizar.
 
-AJAX (de las siglas en Inglés **A**synchronous {{glossary("JavaScript")}} **A**nd {{glossary("XML")}} ) es una práctica de programación utilizada para construir páginas web más complejas y dinámicas, utilizando una tecnología conocida como {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
+Ajax se puede usar para crear {{Glossary("SPA", "aplicaciones de una sola página")}} en las que toda la aplicación web consta de un único documento que usa Ajax para actualizar su contenido según sea necesario.
 
-Lo que AJAX nos permite hacer, es modificar partes específicas del {{Glossary("DOM")}} de una página {{Glossary("HTML")}} sin la necesidad de refrescar la página entera. AJAX tambien nos permite trabajar asincrónicamente; esto significa que tu código seguirá corriendo mientras esa parte de la página de tu sitio web intenta recargarse (en comparación, una carga síncrona bloquearía tu código hasta que esa parte de la página web terminara de recargarse)
+Inicialmente, Ajax se implementó usando la interfaz {{domxref("XMLHttpRequest")}}, pero la API {{domxref("Window/fetch", "fetch()")}} resulta más adecuada para las aplicaciones web modernas: es más potente, más flexible y se integra mejor con las tecnologías fundamentales de las aplicaciones web, como los [service workers](/es/docs/Web/API/Service_Worker_API). Los frameworks web modernos también ofrecen abstracciones para Ajax.
 
-Con los sitios web interactivos y los estándares web modernos, AJAX está siendo reemplazado gradualmente por funciones dentro de frameworks de JavaScript y por la oficial {{domxref("Fetch API")}} Standard.
+Esta técnica está tan extendida en el desarrollo web moderno que el término "Ajax" rara vez se usa.
 
-## Saber más
+## Véase también
 
-### Conocimiento general
-
+- [Aprender: Realizar peticiones de red con JavaScript](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [Fetch API](/es/docs/Web/API/Fetch_API)
+- Términos relacionados del glosario:
+  - {{Glossary("SPA", "Aplicación de una sola página")}}
+- {{DOMxRef("XMLHttpRequest")}}
 - [AJAX](https://es.wikipedia.org/wiki/AJAX) en Wikipedia
-- [Comunicación sincrona vs asincrona](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
-
-### Información técnica
-
-- El objeto {{domxref("XMLHttpRequest")}}.
-- [Documentación AJAX en MDN](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
-- [Fetch API en MDN](/es/docs/Web/API/Fetch_API/Using_Fetch)

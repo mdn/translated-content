@@ -42,7 +42,7 @@ slug: Learn_web_development/Core/Scripting/Events
 - 视频播放、暂停或结束。
 - 发生错误。
 
-你可以从这里（以及从 MDN [事件参考](/zh-CN/docs/Web/Events)文档）中看出，有**相当多**的事件可以被触发。
+你可以从这里（以及从 MDN [事件参考](/zh-CN/docs/Web/API/Document_Object_Model/Events)文档）中看出，有**相当多**的事件可以被触发。
 
 为了对一个事件做出反应，你要给它附加一个**事件处理器**。这是一个代码块（通常是你作为程序员创建的一个 JavaScript 函数），在事件发生时运行。当这样一个代码块被定义为响应一个事件而运行时，我们说我们在**注册一个事件处理器**。注意，事件处理器有时候被叫做**事件监听器**——从我们的用意来看这两个名字是相同的，尽管严格地来说这块代码既监听也处理事件。监听器留意事件是否发生，处理器对事件发生做出回应。
 
@@ -104,7 +104,7 @@ btn.addEventListener("click", () => {
 HTML {{HTMLElement("button")}} 元素将在用户点击按钮时触发一个事件。所以它定义了一个 `addEventListener()` 函数，我们在这里调用它。我们要传入两个参数：
 
 - 字符串 `"click"`，表示我们要监听点击事件。按钮可以触发很多其他的事件，比如当用户将鼠标移到按钮上时（[`"mouseover"`](/zh-CN/docs/Web/API/Element/mouseover_event) 事件），或者当用户按下一个键并且按钮被聚焦时（[`"keydown"`](/zh-CN/docs/Web/API/Element/keydown_event) 事件）。
-- 当事件发生时所调用的函数。在我们的例子中，该函数生成一个随机的 RGB 颜色，并将页面 [`<body>`](/zh-CN/docs/Web/CSS/background-color) 的 [`background-color`](/zh-CN/docs/Web/HTML/Reference/Elements/body) 设置为该颜色。
+- 当事件发生时所调用的函数。在我们的例子中，该函数生成一个随机的 RGB 颜色，并将页面 [`<body>`](/zh-CN/docs/Web/CSS/Reference/Properties/background-color) 的 [`background-color`](/zh-CN/docs/Web/HTML/Reference/Elements/body) 设置为该颜色。
 
 把处理函数作为一个单独的具名函数也是可以的，像这样：
 

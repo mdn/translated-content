@@ -3,8 +3,6 @@ title: <main>
 slug: Web/HTML/Reference/Elements/main
 ---
 
-{{HTMLSidebar}}
-
 HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。
 
 {{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
@@ -90,7 +88,7 @@ header {
 
 向 `<main>` 元素添加 [`id` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)后，该元素可成为直达内容链接的目标。
 
-```plain
+```html
 <body>
   <a href="#main-content">Skip to main content</a>
 

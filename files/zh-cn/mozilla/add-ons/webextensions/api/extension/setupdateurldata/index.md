@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置扩展的更新 URL 的参数。对于托管在浏览器供应商商店中的扩展，该值将被忽略。
 
 ## 语法

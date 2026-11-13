@@ -3,8 +3,6 @@ title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 
-{{JSRef}}
-
 **`Object.entries()`** 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
 
 {{InteractiveExample("JavaScript Demo: Object.entries()")}}

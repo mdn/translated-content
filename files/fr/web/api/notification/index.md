@@ -84,7 +84,7 @@ _Ces méthodes ne sont disponibles que sur l'objet_ `Notification` _lui-même._
 
 ### Méthodes d'instance
 
-_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
+_Ces propriétés ne sont disponibles que sur une instance de l'objet_ `Notification` _ou via son_ [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)_. L'objet_ `Notification` _hérite également de l'interface {{domxref ("EventTarget")}}._
 
 - {{domxref("Notification.close()")}}
   - : Ferme programmatiquement une instance de notification.

@@ -9,14 +9,14 @@ slug: Web/API/HTMLAudioElement/Audio
 
 ## 语法
 
-```plain
+```js-nolint
 audioObj = new Audio(url);
 ```
 
 ### 参数
 
 - `url` {{optional_inline}}
-  - : 一个可选的、包含音频文件 URL 的 {{domxref("DOMString")}}。
+  - : 一个可选的、包含音频文件 URL 的 {{jsxref("String")}}。
 
 ### 返回值
 

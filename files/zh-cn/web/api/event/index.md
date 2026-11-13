@@ -137,7 +137,7 @@ l10n:
 
 ## 参见
 
-- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
+- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/API/Document_Object_Model/Events)
 - [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - [事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)
-- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)

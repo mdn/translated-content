@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 当接收到响应正文的第一个字节时触发。
 
 此事件仅用于提供信息。

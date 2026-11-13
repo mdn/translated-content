@@ -3,8 +3,6 @@ title: <base>：文档根 URL 元素
 slug: Web/HTML/Reference/Elements/base
 ---
 
-{{HTMLSidebar}}
-
 **HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
 
 一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 `<base>` 元素，`baseURI` 默认为 {{domxref("document.location.href")}}。
@@ -73,8 +71,8 @@ slug: Web/HTML/Reference/Elements/base
 
 [Open Graph](https://ogp.me) 标签不接受 `<base>`，并且应该始终具有完整的绝对 URL。例如：
 
-```plain
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+```html
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## 示例

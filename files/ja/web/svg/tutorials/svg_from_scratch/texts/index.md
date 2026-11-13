@@ -1,14 +1,11 @@
 ---
 title: テキスト
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
-original_slug: Web/SVG/Tutorial/Texts
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations") }}
 
 SVG でのテキストについて説明するにあたり、これをほとんど別物である 2 つのトピックに区別しなければなりません。ひとつは画像内へのテキストの収容と表示、もう一つは SVG フォントです。後者はこのチュートリアルの後のセクションで説明することにして、ここでは一つ目の部分「SVG 画像へのテキストの導入」に集中します。
 
@@ -26,7 +23,7 @@ SVG でのテキストについて説明するにあたり、これをほとん�
 
 ## フォントプロパティの設定
 
-テキストにおいて重要なことは、どのフォントで表示するかです。 SVG はフォントを選択可能にするための一連の属性を用意しており、その多くは CSS で対応するプロパティに似ています。属性としてまたは CSS 宣言を通して設定できるのは、{{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("text-decoration")}} の各プロパティです。
+テキストにおいて重要なことは、どのフォントで表示するかです。 SVG はフォントを選択可能にするための一連の属性を用意しており、その多くは CSS で対応するプロパティに似ています。属性としてまたは CSS 宣言を通して設定できるのは、{{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("text-decoration")}} の各プロパティです。
 
 ## 他のテキスト関連要素
 
@@ -42,7 +39,7 @@ SVG でのテキストについて説明するにあたり、これをほとん�
 
   <style>
     <![CDATA[
-      text{
+      text {
         dominant-baseline: hanging;
         font: 28px Verdana, Helvetica, Arial, sans-serif;
       }
@@ -82,7 +79,7 @@ tspan 要素には、以下のカスタム属性があります。
 
   <style>
     <![CDATA[
-      text{
+      text {
         dominant-baseline: hanging;
         font: 28px Verdana, Helvetica, Arial, sans-serif;
       }
@@ -93,4 +90,4 @@ tspan 要素には、以下のカスタム属性があります。
 
 {{ EmbedLiveSample('textPath', '100%', 100) }}
 
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations") }}

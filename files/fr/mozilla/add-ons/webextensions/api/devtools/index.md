@@ -3,8 +3,6 @@ title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 ---
 
-{{AddonSidebar}}
-
 Cette API permet aux extensions d'interagir avec les [outils de développement (<i lang="en">devtools</i>)](/fr/docs/Glossary/Developer_Tools) du navigateur. Elle peut être utilisée pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter la page réseau des outils.
 
 Pour utiliser cette API, [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#les_permissions_api) `"devtools"` doit être spécifiée dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
@@ -24,8 +22,6 @@ Pour utiliser cette API, [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/
 
 > [!NOTE]
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,7 +3,7 @@ title: "ShadowRoot: serializable プロパティ"
 short-title: serializable
 slug: Web/API/ShadowRoot/serializable
 l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -21,13 +21,13 @@ l10n:
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // シリアライズ可能かどうか
-let hostElem = shadow.serializable;
+const hostElem = shadow.serializable;
 ```
 
 ## 仕様書

@@ -3,8 +3,6 @@ title: HTML 屬性參考
 slug: Web/HTML/Reference/Attributes
 ---
 
-{{HTMLSidebar("Attributes")}}
-
 HTML 中的元素具有**屬性**；而這些屬性可以藉由各種方式去設定元素或調整它們的行為，以符合使用者的期待。
 
 ## 屬性列表

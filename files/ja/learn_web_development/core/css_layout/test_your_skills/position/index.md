@@ -1,33 +1,29 @@
 ---
-title: "スキルテスト: 位置指定"
+title: "確認テスト: 位置指定"
+short-title: "テスト: 位置指定"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
-original_slug: Learn_web_development/Core/CSS_layout/Position_skills
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 953bce9928ec0693e419f7c0e1c786f29a7570e9
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
-このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
+この確認テストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
 この課題では、5px のグレーの境界線があるコンテナーの上と右に、`target` というクラスを持つアイテムを配置します。
 
-最終的には下記画像のようになっているはずです。
+最終的にはこの完成例のようになっているはずです。
 
-![緑色のボックスが灰色の枠で囲まれたコンテナーの右上にあります。](position-task1.png)
+{{EmbedLiveSample("position1-finish", "", "250px")}}
 
 **ボーナス問題:** target をテキストの下に表示するように変更できますか？
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
-```html live-sample___position1
+```html live-sample___position1-start live-sample___position1-finish
 <div class="container">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
@@ -42,17 +38,18 @@ l10n:
 </div>
 ```
 
-```css hidden live-sample___position1
+```css live-sample___position1-start live-sample___position1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
 
 .container {
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .target {
@@ -63,25 +60,27 @@ body {
   padding: 1em;
   color: white;
 }
-```
 
-```css live-sample___position1
 .container {
+  /* ここにスタイルを追加 */
 }
 
 .target {
+  /* ここにスタイルを追加 */
 }
 ```
 
-{{EmbedLiveSample("position1", "", "400px")}}
+これが課題の開始状態です。
+
+{{EmbedLiveSample("position1-start", "", "400px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-これには、 `position: relative` と `position: absolute` が必要であり、相対位置指定の観点から、新しい位置指定コンテキストにおいて、両者がどのように関連しているかを理解する必要があります。
-よくある問題は、子要素に `position: absolute` を追加していても、コンテナーに `position: relative` を適用していないということでしょう。その場合、 target はビューポートに従って位置指定されることになります。
+これには、`position: relative` と `position: absolute` が必要であり、相対位置指定の観点から、新しい位置指定コンテキストにおいて、両者がどのように関連しているかを理解する必要があります。
+よくある問題は、子要素に `position: absolute` を追加していても、コンテナーに `position: relative` を適用していないということでしょう。その場合、 target はビューポートから相対的に位置指定されることになります。
 
-```css
+```css live-sample___position1-finish
 .container {
   position: relative;
 }
@@ -99,17 +98,15 @@ body {
 
 ## 課題 2
 
-このタスクでは、下記の例でボックスをスクロールすると、サイドバーがコンテンツと一緒にスクロールします。サイドバーが配置されたまま、コンテンツだけがスクロールするように変更してください。
+この課題の開始状態では、コンテンツをスクロールすると、サイドバーがコンテンツと一緒にスクロールします。この完成例のように、サイドバーが配置されたまま、コンテンツだけがスクロールするように変更してください。
 
-![コンテンツはスクロールしていますが、サイドバーはその場に留まります。](position-task2.png)
+{{EmbedLiveSample("position2-finish", "", "400px")}}
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
-```html live-sample___position2
+```html live-sample___position2-start live-sample___position2-finish
 <div class="container">
   <div class="sidebar">
     <p>
-      This is the sidebar. It should remain in position as the content scrolls.
+      これはサイドバーです。コンテンツがスクロールしても位置を保つ必要があります。
     </p>
   </div>
   <div class="content">
@@ -136,10 +133,11 @@ body {
 </div>
 ```
 
-```css hidden live-sample___position2
+```css live-sample___position2-start live-sample___position2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -147,7 +145,7 @@ body {
 .container {
   height: 400px;
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   overflow: auto;
 }
 
@@ -163,24 +161,22 @@ body {
   padding: 1em;
   margin-left: 160px;
 }
-```
-
-```css live-sample___position2
-.container {
-}
 
 .sidebar {
+  /* ここにスタイルを追加 */
 }
 ```
 
-{{EmbedLiveSample("position2", "", "400px")}}
+これが課題の開始状態です。
+
+{{EmbedLiveSample("position2-start", "", "400px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-ここでは学習素材とは少し異なる方法で、 `position: fixed` の理解をテストしています。
+完成したサイドバーの CSS は次のようになります。
 
-```css
+```css live-sample___position2-finish
 .sidebar {
   position: fixed;
 }
@@ -188,6 +184,4 @@ body {
 
 </details>
 
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

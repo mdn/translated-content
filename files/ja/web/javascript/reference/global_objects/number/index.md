@@ -2,10 +2,8 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number`** （数値）の値は `37` や `-9.25` のような浮動小数点数を表します。
 
@@ -52,7 +50,7 @@ JavaScript の数値 (`Number`) 型は [IEEE 754 の倍精度 64ビットバイ�
 </math>
 <!-- prettier-ignore-end -->
 
-仮数部は 52 ビットで格納され、2 進数の小数でいうところの `1.…` 以降の桁と解釈されます。したがって，仮数部の精度は 2<sup>-52</sup>（{{jsxref("Number.EPSILON")}} で取得可能）、すなわち小数点以下 15 ～ 17 桁程度となります。演算は[丸め誤差](https://ja.wikipedia.org/wiki/浮動小数点数#エラー（誤差）)の影響を受けます。
+仮数部は 52 ビットで格納され、2 進数の小数でいうところの `1.…` 以降の桁と解釈されます。したがって，仮数部の精度は 2<sup>-52</sup>（{{jsxref("Number.EPSILON")}} で取得可能）、すなわち 10 進で 15 ～ 17 桁程度の有効数字となります。演算は[丸め誤差](https://ja.wikipedia.org/wiki/浮動小数点数#エラー（誤差）)の影響を受けます。
 
 数値が保持できる最大の値は 2<sup>1023</sup> × (2 - 2<sup>-52</sup>)（2 進数で指数が 1023、仮数が 0.1111...）であり、これは {{jsxref("Number.MAX_VALUE")}} で取得可能です。それ以上の値は、特殊な数値定数 {{jsxref("Infinity")}} で置き換えられます。
 

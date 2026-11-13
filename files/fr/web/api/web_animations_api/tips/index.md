@@ -4,13 +4,11 @@ slug: Web/API/Web_Animations_API/Tips
 original_slug: Web/CSS/CSS_animations/Tips
 ---
 
-{{CSSRef}}
-
 Les animations CSS permettent de réaliser réaliser des effets incroyables en mainpulant les éléments de vos documents et applications.. Cependant, il est parfois compliqué d'obtenir l'effet désiré. Dans cet article, on explorera différents conseils visant à simplifier la réalisation d'animations.
 
 ## Relancer une animation
 
-La spécifications des [animations CSS](/fr/docs/Web/CSS/CSS_animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
+La spécifications des [animations CSS](/fr/docs/Web/CSS/Guides/Animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
 
 ### CSS
 
@@ -166,6 +164,6 @@ watchme.addEventListener("click", () =>
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Les animations CSS](/fr/docs/Web/CSS/CSS_animations)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
+- [Les animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - {{domxref("Window.requestAnimationFrame()")}}

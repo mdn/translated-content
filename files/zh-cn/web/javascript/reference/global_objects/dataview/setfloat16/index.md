@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
 ---
 
-{{JSRef}}
-
 {{jsxref("DataView")}} 实例的 **`setFloat16()`** 接受一个数字，并将其以 16 位浮点数的形式存储在从当前 `DataView` 的指定偏移位置开始处的 2 字节中。如果没有对齐约束；则可以在边界内的任意偏移位置处存储多字节值。
 
 {{InteractiveExample("JavaScript Demo: DataView.setFloat16()")}}

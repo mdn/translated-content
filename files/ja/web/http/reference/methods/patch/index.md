@@ -1,22 +1,24 @@
 ---
-title: PATCH
+title: PATCH リクエストメソッド
+short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
-original_slug: Web/HTTP/Methods/PATCH
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-**HTTP の `PATCH` リクエストメソッド**は、リソースへの部分的な変更を適用します。
+**`PATCH`** は HTTP のリクエストメソッドで、リソースへの部分的な変更を適用します。
 
 `PATCH` は {{Glossary("CRUD")}} に見られる "update" の概念にやや類似しています（一般的に、 HTTP は {{Glossary("CRUD")}} とは異なり、両者は混同するべきではありません）。
 
-`PATCH` リクエストは、リソースをどのように修正するかの指示のセットと考えられます。これは {{HTTPMethod("PUT")}} がリソースの完全な表現を送るのと対照的です。
+{{HTTPMethod("PUT")}} と比較すると、`PATCH` はリソースを変更するための一連の指示として機能するのに対し、`PUT` はリソースの完全な置き換えを表します。
+`PUT` リクエストは常に{{Glossary("idempotent", "べき等")}}です（同じリクエストを複数回繰り返してもリソースの状態は変わりません）。一方、`PATCH` リクエストには常にべき等性が保証されるとは限りません。
+例えば、自動インクリメントするカウンタフィールドがリソースの不可欠な部分である場合、 `PUT` は自然にそれを上書きしますが（すべてを上書きするので）、 `PATCH` は必ずしもそうとは限りません。
 
-`PATCH` はべき等であるとは限りませんが、そうなる可能性もあります。この点は、常にべき等である {{HTTPMethod("PUT")}} とは対照的です。「べき等」という言葉は、同じリクエストを何度繰り返しても、リソースが同じ状態になることを意味します。 例えば、自動インクリメントするカウンタフィールドがリソースの不可欠な部分である場合、 {{HTTPMethod("PUT")}} は自然にそれを上書きしますが（すべてを上書きするので）、 `PATCH` は必ずしもそうとは限りません。
-
-`PATCH` は（{{HTTPMethod("PUT")}} のように）他のリソースに対して副作用が発生する<em>場合があります</em>。
+{{HTTPMethod("POST")}} と同様に、`PATCH` リクエストは他のリソースに副作用をもたらす可能性があります。
 
 サーバーが `PATCH` に対応しているかどうかを調べるために、サーバーは {{HTTPHeader("Allow")}} または {{HTTPHeader("Access-Control-Allow-Methods")}} （[CORS](/ja/docs/Web/HTTP/Guides/CORS) の場合）レスポンスヘッダーのリストに追加することで対応状況を知らせることができます。
 
-`PATCH` が許可されていることを示すもう1つの（暗黙の）識別方法は、サーバーが受け付けるパッチ文書の形式を指定する {{HTTPHeader("Accept-Patch")}} があることです。
+`PATCH` が対応していることを示すもう一つの暗黙的な指標は、{{HTTPHeader("Accept-Patch")}} ヘッダー（通常、リソースに対する {{HTTPMethod("OPTIONS")}} リクエストの後に送信される）であり、これはサーバーがリソースに対する `PATCH` リクエストで理解可能なメディア種別を掲載しているものである。
 
 <table class="properties">
   <tbody>
@@ -26,7 +28,7 @@ original_slug: Web/HTTP/Methods/PATCH
     </tr>
     <tr>
       <th scope="row">成功時のレスポンスの本文</th>
-      <td>あり</td>
+      <td>可</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "安全性")}}</th>
@@ -42,7 +44,7 @@ original_slug: Web/HTTP/Methods/PATCH
     </tr>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Learn/Forms">HTML フォーム</a>での利用
+        <a href="/ja/docs/Learn_web_development/Extensions/Forms">HTML フォーム</a>での利用
       </th>
       <td>不可</td>
     </tr>
@@ -51,44 +53,81 @@ original_slug: Web/HTTP/Methods/PATCH
 
 ## 構文
 
+```http
+PATCH <request-target>["?"<query>] HTTP/1.1
 ```
-PATCH /file.txt HTTP/1.1
-```
+
+- `<request-target>`
+  - : {{HTTPHeader("Host")}} ヘッダーで提供される情報と組み合わせたときの、リクエストのターゲットリソースを識別します。
+    これは元のサーバーへのリクエストにおいては絶対パス（`/path/to/file.html` など）であり、プロキシーへのリクエストにおいては絶対 URL（`http://www.example.com/path/to/file.html` など）です。
+- `<query>` {{optional_inline}}
+  - : 疑問符 `?` で始まるオプションのクエリー成分。
+    多くの場合、`key=value` の組の形で識別情報を保持するために使用されます。
 
 ## 例
 
-### リクエスト
+### リソースの変更に成功
 
+サーバー上に、数値 ID `123` を持つユーザーを表すリソースが以下の書式で存在すると仮定します。
+
+```json
+{
+  "firstName": "Example",
+  "LastName": "User",
+  "userId": 123,
+  "signupDate": "2024-09-09T21:48:58Z",
+  "status": "active",
+  "registeredDevice": {
+    "id": 1,
+    "name": "personal",
+    "manufacturer": {
+      "name": "Hardware corp"
+    }
+  }
+}
 ```
-PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
 
-[変更の記述]
+リソース全体を上書きする代わりに、`PATCH` リクエストはリソースの特定の部分のみを変更します。
+このリクエストは `status` フィールドを更新します。
+
+```http
+PATCH /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 27
+Authorization: Bearer ABC123
+
+{
+  "status": "suspended"
+}
 ```
 
-### レスポンス
+`PATCH` リクエストの解釈と認証は実装に依存します。
+成功した場合は、[成功したレスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス) のいずれかで示されます。
+この例では、操作に関する追加コンテキストを本体で送信する必要がないため、{{HTTPStatus("204", "204 No Content")}} が使用されています。
+{{HTTPHeader("ETag")}} を指定して、呼び出し側が将来的に[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を実行できるようにしています。
 
-成功レスポンスは [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) ステータスコードで示されます。
-
-この例の場合、本文が含まれていないため {{HTTPStatus("204")}} コードで成功レスポンスが示されます。もし {{HTTPStatus("200")}} コードであれば本文が含まれる可能性があります。
-
-```
+```http
 HTTP/1.1 204 No Content
-Content-Location: /file.txt
+Content-Location: /users/123
 ETag: "e0023aa4f"
 ```
 
 ## 仕様書
 
-| 仕様書                   | 題名                  |
-| ------------------------ | --------------------- |
-| {{RFC("5789", "PATCH")}} | PATCH Method for HTTP |
+{{Specifications}}
+
+## ブラウザーの互換性
+
+ブラウザーはユーザー主導のアクションに `PATCH` メソッドを使用しないため、「ブラウザー互換性」は適用されません。
+開発者は [`fetch()`](/ja/docs/Web/API/Window/fetch) を使ってこのリクエストメソッドを設定することができます。
 
 ## 関連情報
 
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - {{HTTPStatus("204")}}
-- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}} ヘッダー
 - {{HTTPHeader("Accept-Patch")}} – サーバーが受け入れる PATCH 文書の形式を指定します。
+- [JSON Patch Generator](https://jsoning.com/jsonpatch/)

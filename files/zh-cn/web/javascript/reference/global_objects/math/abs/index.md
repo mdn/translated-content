@@ -3,8 +3,6 @@ title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
 
-{{JSRef}}
-
 **`Math.abs(x)`** 函数返回一个数字的绝对值。
 
 {{InteractiveExample("JavaScript Demo: Math.abs()")}}

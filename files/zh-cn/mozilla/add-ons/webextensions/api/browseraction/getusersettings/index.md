@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 05808d3600f3a5b856eaaf89359f1fdc3d255c26
 ---
 
-{{AddonSidebar}}
-
 获取用户为浏览器操作指定的设置。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。

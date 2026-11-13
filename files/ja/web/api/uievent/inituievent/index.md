@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("UI Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 **`UIEvent.initUIEvent()`** メソッドは、一度作成された UI イベントを初期化します。
 
@@ -15,7 +15,7 @@ l10n:
 > [!WARNING]
 > このメソッドは非推奨なので、もう使用しないでください。
 >
-> 代わりに、 {{domxref("UIEvent.UIEvent", "UIEvent()")}} などの具体的なイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページで、これらの使用方法について詳しく説明しています。
+> 代わりに、 {{domxref("UIEvent.UIEvent", "UIEvent()")}} などの具体的なイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)のページで、これらの使用方法について詳しく説明しています。
 
 ## 構文
 

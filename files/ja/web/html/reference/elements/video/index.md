@@ -1,12 +1,10 @@
 ---
-title: "<video>: 動画埋め込み要素"
+title: "`<video>` 動画埋め込み要素"
+short-title: <video>
 slug: Web/HTML/Reference/Elements/video
-original_slug: Web/HTML/Element/video
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: d1aa0dbd7441564e6ce8f6706c2022a2e1912d8c
 ---
-
-{{HTMLSidebar}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
@@ -42,6 +40,9 @@ l10n:
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
+    > [!NOTE]
+    > [`loading="lazy"`](#loading) 属性が設定された動画は、その要素がビューポートの近くまたはビューポート内に表示されるまで、ダウンロードや自動再生が開始されません。
+
 - `controls`
   - : この属性が指定された場合、再生、音量、シーク、ポーズの各機能を制御するコントロールを表示します。
 - `controlslist`
@@ -69,14 +70,40 @@ l10n:
 
 - `height`
   - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
+- `loading` {{experimental_inline}}
+  - : ブラウザーが動画（ポスター画像を含む）をどのように読み込むべきかを指定します。
+    - `eager`
+      - : 動画が現在表示領域内にあるかどうかに関係なく、すぐに動画を読み込みます（これがデフォルト値です）。
+    - `lazy`
+      - : ブラウザーの定義に従い、動画がビューポートから計算された距離に達するまで、動画の読み込みを遅延させます。
+
+        遅延読み込みにより、動画が必要になるとほぼ確実になるまで、その処理に必要なネットワーク帯域幅やストレージ帯域幅を節約できます。これにより、一般的な使用ケースのほとんどにおいてパフォーマンスが向上します。
+
+        レイアウトのずれを防ぐため、すべての動画に対して明示的な [`width`](#width) および [`height`](#height) 属性の使用が推奨されますが、これらは特に遅延読み込みされる動画において重要です。遅延読み込みされる動画は、たとえ読み込みによって表示状態が変化するとしても、要素の表示領域と重ならない限り読み込まれません。これは、読み込まれていない動画の `width` と `height` が `0` であるためです。読み込み中にビューポート内のコンテンツが再配置されると、ユーザー体験にさらに大きな支障をきたすことになります。
+
+        視覚的なビューポート内にある遅延読み込みの動画は、Window の {{domxref("Window.load_event", "load")}} イベントが発生した時点ではまだ表示されていない可能性があります。これは、このイベントが即時読み込みの動画に基づいて発生するためです。つまり、ページの初期読み込み時に視覚的なビューポート内にあったとしても、遅延読み込みの動画は考慮されません。
+
+        読み込みの遅延は、JavaScriptが有効な場合にのみ行われます。これはトラッキング対策の一環です。なぜなら、スクリプトが無効な状態でユーザーエージェントが遅延読み込みに対応していても、サーバーが動画のリクエスト数やタイミングを追跡できるように、ページのマークアップ内に動画を戦略的に配置することで、サイト側がセッション全体を通じてユーザーのスクロール位置のおおよその位置を追跡できてしまう可能性があるからです。
+
+        > [!NOTE]
+        > `loading="lazy"` 属性は、このページの各セクションで説明されているように、[`autoplay`](#autoplay)、[`poster`](#poster)、[`preload`](#preload) の各属性にも影響を与えます。
+
 - `loop`
   - : 論理型の属性です。指定された場合、ブラウザーは動画の末尾に達すると、自動的に先頭に戻ります。
 - `muted`
-  - : 論理型の属性で、動画に含まれる音声を消音するかどうかの既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` であり、動画再生時に音声も再生することを表します。
+  - : 論理型の属性で、動画に含まれる音声を消音するかどうかの既定の設定を示します。この属性を設定すると、初期状態が消音になります。デフォルト値は `false` であり、動画再生時に音声も聞こえることを表します。
+
+    > [!NOTE]
+    > ミュートを解除するには、`muted="false"` を設定しても動作しません。この属性が存在している限り、音声はミュートされたままになります。ミュートを解除するには、この属性を完全に除去しなければなりません。
+
 - `playsinline`
   - : 論理属性で、動画を「インライン」で再生する、すなわち要素の再生領域内で再生するかを指定します。この属性がないことが、動画を常に全画面で再生するという意味*ではない*ことに注意してください。
 - `poster`
   - : 動画のダウンロード中に表示される画像の URL です。この属性が指定されない場合、最初のフレームが利用可能になるまで何も表示されず、その後、最初のフレームをポスターフレームとして表示します。
+
+    > [!NOTE]
+    > [`loading="lazy"`](#loading) 属性が設定された動画は、動画がビューポートの近くまたはビューポート内に表示された時点で初めて `poster` リソースをダウンロードします。
+
 - `preload`
   - : {{Glossary("enumerated", "列挙型")}}の属性で、動画が再生される前に、どのコンテンツを読み込むとユーザーに最高の使い勝手をもたらすかについての作者の考えを、ブラウザーに対するヒントとしてを提供するためのものです。以下の値のうちひとつを持つことができます。
     - `none`: 動画を事前に読み込むべきではないことを示します。
@@ -84,7 +111,7 @@ l10n:
     - `auto`: ユーザーが動画ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
     - _空文字列_: これは `auto` 値と同義です。
 
-    既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
+    デフォルト値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
     > [!NOTE]
     >
@@ -98,172 +125,52 @@ l10n:
 
 ## イベント
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">イベント名</th>
-      <th scope="col">発生する時</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
-      </td>
-      <td>
-        {{DOMxRef("ScriptProcessorNode")}} の入力バッファーが処理可能になった。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
-      </td>
-      <td>
-        ブラウザーがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには、充分なデータが読み込まれていないとみられる。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
-      </td>
-      <td>
-        ブラウザーがコンテンツのバッファリングのために停止することなく最後までメディアを再生することができるとみられる。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("OfflineAudioContext.complete_event", "complete")}}
-      </td>
-      <td>
-        {{DOMxRef("OfflineAudioContext")}} のレンダリングが終了した。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-      </td>
-      <td><code>duration</code> 属性が更新された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
-      </td>
-      <td>
-        メディアが空になった。例えば、メディアがすでに読み込まれた（または部分的に読み込まれた）状態で、再読み込みのために <a href="/ja/docs/Web/API/HTMLMediaElement/load" rel="internal"><code>load()</code></a> メソッドが呼び出された場合などでこのイベントが発行されます。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-      </td>
-      <td>メディアの末尾に達したために再生が停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.error_event", 'error')}}
-      </td>
-      <td>
-        メディアデータの取得中にエラーが発生したか、リソースの型が対応していないメディア形式です。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
-      </td>
-      <td>メディアの最初のフレームが読み込み終わった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
-      </td>
-      <td>メタデータを読み込んだ。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
-      </td>
-      <td>ブラウザーがリソースの読み込みを始めたときに発行されます。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.pause_event", 'pause')}}
-      </td>
-      <td>再生が一時停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.play_event", 'play')}}
-      </td>
-      <td>再生が始まった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
-      </td>
-      <td>
-        データがなくなったために一時停止または待機した後で、再生の再開の準備ができた。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.progress_event", 'progress')}}
-      </td>
-      <td>ブラウザーがリソースを読み込んでいる間に定期的に発生します。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
-      </td>
-      <td>再生レートが変更された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
-      </td>
-      <td><em>シーク</em>操作が完了した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
-      </td>
-      <td><em>シーク</em>操作が始まった。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
-      </td>
-      <td>
-        ユーザーエージェントがメディアを読み込もうとしているが、データが予期せずに入ってこない。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
-      </td>
-      <td>メディアデータの読み込みが停止した。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-      </td>
-      <td>
-        <code>currentTime</code> 属性で示されている時刻が更新された。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
-      </td>
-      <td>音量が変更された。</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
-      </td>
-      <td>一時的なデータの不足により、再生が停止した。</td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("ScriptProcessorNode.audioprocess_event","audioprocess")}} {{Deprecated_Inline}}
+  - : {{DOMxRef("ScriptProcessorNode")}} の入力バッファーが処理可能になった。
+- {{domxref("HTMLMediaElement.canplay_event", 'canplay')}}
+  - : ブラウザーがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには、充分なデータが読み込まれていないとみられる。
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
+  - : ブラウザーがコンテンツのバッファリングのために停止することなく最後までメディアを再生することができるとみられる。
+- {{domxref("OfflineAudioContext.complete_event", "complete")}}
+  - : {{DOMxRef("OfflineAudioContext")}} のレンダリングが終了した。
+- {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
+  - : `duration` 属性が更新された。
+- {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
+  - : メディアが空になった。例えば、メディアがすでに読み込まれた（または部分的に読み込まれた）状態で、再読み込みのために [load()](/ja/docs/Web/API/HTMLMediaElement/load) メソッドが呼び出された場合などでこのイベントが発行されます。
+- {{domxref("HTMLMediaElement.ended_event", 'ended')}}
+  - : メディアの末尾に達したために再生が停止した。
+- {{domxref("HTMLMediaElement.error_event", 'error')}}
+  - : メディアデータの取得中にエラーが発生したか、リソースの型が対応していないメディア形式です。
+- {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
+  - : メディアの最初のフレームが読み込み終わった。
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}}
+  - : メタデータを読み込んだ。
+- {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+  - : ブラウザーがリソースの読み込みを始めたときに発行されます。
+- {{domxref("HTMLMediaElement.pause_event", 'pause')}}
+  - : 再生が一時停止した。
+- {{domxref("HTMLMediaElement.play_event", 'play')}}
+  - : 再生が始まった。
+- {{domxref("HTMLMediaElement.playing_event", 'playing')}}
+  - : データがなくなったために一時停止または待機した後で、再生の再開の準備ができた。
+- {{domxref("HTMLMediaElement.progress_event", 'progress')}}
+  - : ブラウザーがリソースを読み込んでいる間に定期的に発生します。</td>
+- {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
+  - : 再生レートが変更された。
+- {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
+  - : シーク操作が完了した。
+- {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
+  - : シーク操作が始まった。
+- {{domxref("HTMLMediaElement.stalled_event", 'stalled')}}
+  - : ユーザーエージェントがメディアを読み込もうとしているが、データが予期せずに入ってこない。
+- {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
+  - : メディアデータの読み込みが停止した。
+- {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
+  - : `currentTime` 属性で示されている時刻が更新された。
+- {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
+  - : 音量が変更された。
+- {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
+  - : 一時的なデータの不足により、再生が停止した。
 
 ## 使用上の注意
 
@@ -279,11 +186,13 @@ l10n:
 </video>
 ```
 
+{{htmlelement("source")}} 要素を使用する場合、ブラウザーは各ソースを順番に読み込もうとします。あるソースの読み込みに失敗した場合（無効な URL や非対応の形式など）は、次のソースの読み込みが試みられ、その繰り返しとなります。すべてのソースの読み込みに失敗した後、`<video>` 要素に対して `error` イベントが発生します。個々の `<source>` 要素に対しては、`error` イベントは発生しません。
+
 [メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)や、[動画で対応しているコーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)など、実質的かつ徹底したガイドを提供しています。また、[一緒に利用することができる音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)のガイドもあります。
 
 その他の利用上の注意:
 
-- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+- `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 - 動画（および音声）コンテンツを詳細に制御できるよう、 `HTMLMediaElement` はたくさんの種類の[イベント](/ja/docs/Web/API/HTMLMediaElement#events)を発行します。これらのイベントは、制御を可能にするだけでなく、メディアのダウンロードと再生の両方の進行状況や再生状態、再生位置を監視することができます。
 - {{cssxref("object-position")}} プロパティを用いて、要素の枠内での動画の位置を調整することができ、 {{cssxref("object-fit")}} プロパティを用いて動画の寸法がどのように枠内に合わせられるかを制御することができます。
 - 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。
@@ -362,7 +271,7 @@ AddType video/webm .webm
 
 動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです（実装方法について詳しくは [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください）。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
 
-注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の video 領域が使用されるため、 <code>&lt;video&gt;</code> 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
+注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の動画領域が使用されるため、 `<video>` 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
 
 自動字幕サービスが使用されている場合は、生成されたコンテンツが元の動画を正しく表現しているかを確認することが重要です。
 
@@ -403,7 +312,7 @@ AddType video/webm .webm
 #### HTML
 
 ```html
-<!-- Simple video example -->
+<!-- Basic video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
 <video
@@ -459,7 +368,7 @@ AddType video/webm .webm
 
 はじめに AVI を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) を試します。video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
 
-メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Guides/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
+メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。例えば `video/webm; codecs="vp8, vorbis"` の場合、 [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Guides/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
 
 ## 技術的概要
 
@@ -467,10 +376,10 @@ AddType video/webm .webm
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 記述コンテンツ, 埋め込みコンテンツ。 <a href="#controls"><code>controls</code></a> 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>, 記述コンテンツ, 埋め込みコンテンツ。 <a href="#controls"><code>controls</code></a> 属性を持つ場合は、対話型コンテンツおよび知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
@@ -495,7 +404,7 @@ AddType video/webm .webm
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

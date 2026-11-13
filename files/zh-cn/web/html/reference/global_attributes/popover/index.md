@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e492ae4891e1f0a454fd452ee2e67986f8e1150f
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`popover`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)用来指定一个元素为弹出框元素（popover element）。
 
 弹出框元素通过 `display: none` 被隐藏，直到通过调用/控制元素（即带有 [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性的 `<button>` 或 `<input type="button">`）或 {{domxref("HTMLElement.showPopover()")}} 调用打开。
@@ -45,5 +43,5 @@ l10n:
 - {{domxref("Popover API", "Popover API", "", "nocode")}}
 - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML 属性
 - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML 属性
-- [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) CSS 伪元素
-- [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open) CSS 伪类
+- [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) CSS 伪元素
+- [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open) CSS 伪类

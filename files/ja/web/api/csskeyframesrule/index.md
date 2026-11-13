@@ -2,12 +2,12 @@
 title: CSSKeyframesRule
 slug: Web/API/CSSKeyframesRule
 l10n:
-  sourceCommit: 4da6c30730190b55e9b405711fedf6cdc755972d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)全体の内容に対応します。
+**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)全体の内容に対応します。
 
 {{InheritanceDiagram}}
 
@@ -16,9 +16,11 @@ l10n:
 _祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
 - {{domxref("CSSKeyframesRule.name")}}
-  - : キーフレームの名前を表します。 {{cssxref("animation-name")}} プロパティで使用されます。
+  - : キーフレームセットの名前を表します。 {{cssxref("animation-name")}} プロパティで使用されます。
 - {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
-  - : リスト内のキーフレームの {{domxref("CSSRuleList")}} を返します。
+  - : リスト内のキーフレームセットの {{domxref("CSSRuleList")}} を返します。
+- {{domxref("CSSKeyframesRule.length")}} {{ReadOnlyInline}}
+  - : リスト中のキーフレームセットの数を返します。
 
 ## インスタンスメソッド
 
@@ -33,11 +35,13 @@ _祖先である {{domxref("CSSRule")}} からメソッドを継承していま�
 
 ## 例
 
+### CSSKeyframesRule の使用
+
 この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
 `myRules[0]` は `CSSKeyframesRule` オブジェクト 1 つを返します。
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }
@@ -49,8 +53,24 @@ _祖先である {{domxref("CSSRule")}} からメソッドを継承していま�
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // CSSKeyframesRule
+const myRules = document.styleSheets[0].cssRules;
+const keyframes = myRules[0]; // CSSKeyframesRule
+```
+
+### インデックスでのアクセス
+
+`CSSKeyframesRule`は配列のようにインデックス付けすることができ、その {{domxref("CSSKeyframesRule.cssRules", "cssRules")}} プロパティと同様の関数を持つことができます。
+
+```js
+const keyframes = document.styleSheets[0].cssRules[0];
+
+for (let i = 0; i < keyframes.length; i++) {
+  console.log(keyframes[i].keyText);
+}
+
+// 出力結果:
+// 0%
+// 100%
 ```
 
 ## 仕様書

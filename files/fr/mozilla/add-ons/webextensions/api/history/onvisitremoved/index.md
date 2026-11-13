@@ -3,8 +3,6 @@ title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.
 
 - Si toutes les visites d'une seule page sont supprimées (par exemple, en utilisant {{WebExtAPIRef("history.deleteUrl")}}), cet événement est déclenché une fois.
@@ -62,8 +60,6 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

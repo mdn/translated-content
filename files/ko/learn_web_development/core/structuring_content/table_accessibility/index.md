@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bda6da832e5682d6247e1c20790e7b0aa0ec45e1
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 이 과정의 두 번째 기사에서, 우리는 HTML 테이블의 좀 더 고급 기능들을 살펴볼 것입니다. 예를 들어, 캡션/요약과 행을 테이블 헤드, 바디, 푸터 섹션으로 그룹화하는 것과 시각 장애인을 위한 테이블의 접근성을 살펴볼 것입니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML 기초
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 확인하세요).
       </td>
@@ -48,7 +48,8 @@ l10n:
 
 캡션은 `<table>` 태그 바로 아래에 위치합니다.
 
-> **참고:** [`summary`](/ko/docs/Web/HTML/Element/table#summary) 속성은 `<table>` 요소에도 사용할 수 있습니다. 이는 스크린 리더에 의해 읽힙니다. 하지만 `summary`는 더 이상 사용되지 않고, 시각 장애인이 아닌 사용자에게는 보이지 않기 때문에 `<caption>` 요소를 사용하는 것을 권장합니다.
+> [!NOTE]
+> [`summary`](/ko/docs/Web/HTML/Element/table#summary) 속성은 `<table>` 요소에도 사용할 수 있습니다. 이는 스크린 리더에 의해 읽힙니다. 하지만 `summary`는 더 이상 사용되지 않고, 시각 장애인이 아닌 사용자에게는 보이지 않기 때문에 `<caption>` 요소를 사용하는 것을 권장합니다.
 
 ### 능동적으로 학습하기: 캡션 추가하기
 
@@ -73,7 +74,8 @@ l10n:
 - `<tfoot>` 요소는 테이블의 푸터가 되는 부분을 감싸야 합니다. 이는 예를 들어 이전 행의 항목들을 합산한 마지막 행일 수 있습니다. 테이블 푸터를 테이블의 맨 아래에 포함시킬 수도 있고, 테이블 헤더 바로 아래에 포함시킬 수도 있습니다. (브라우저는 테이블의 맨 아래에 렌더링합니다.)
 - `<tbody>` 요소는 테이블 헤더나 푸터에 포함되지 않는 테이블의 다른 부분을 감싸야 합니다. 이는 테이블 헤더 아래에 표시되거나 때로는 푸터에 표시될 수 있습니다.
 
-> **참고:** `<tbody>`는 항상 테이블에 포함되어 있습니다. 코드에서 명시적으로 지정하지 않으면 암시적으로 포함됩니다. 이를 확인하기 위해 `<tbody>`를 포함하지 않는 이전 예제를 열고 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에서 HTML 코드를 확인하세요. 브라우저가 이 요소를 자동으로 추가했을 것입니다. 이것을 왜 포함해야 하는지 궁금할 것입니다. 하지만 이 요소를 포함하는 것이 테이블 구조와 스타일링을 더 잘 제어할 수 있기 때문에 포함하는 것이 좋습니다.
+> [!NOTE]
+> `<tbody>`는 항상 테이블에 포함되어 있습니다. 코드에서 명시적으로 지정하지 않으면 암시적으로 포함됩니다. 이를 확인하기 위해 `<tbody>`를 포함하지 않는 이전 예제를 열고 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에서 HTML 코드를 확인하세요. 브라우저가 이 요소를 자동으로 추가했을 것입니다. 이것을 왜 포함해야 하는지 궁금할 것입니다. 하지만 이 요소를 포함하는 것이 테이블 구조와 스타일링을 더 잘 제어할 수 있기 때문에 포함하는 것이 좋습니다.
 
 ### 능동적으로 학습하기: 테이블 구조 추가하기
 
@@ -226,7 +228,8 @@ th {
 
 그러나 시각적 연관성을 만들 수 없는 경우는 어떻게 해야 할까요? 그런 경우에는 어떻게 테이블을 읽어야 할까요? 시각 장애가 있는 사람들은 종종 웹 페이지의 정보를 읽어주는 스크린 리더를 사용합니다. 이것은 일반 텍스트를 읽을 때는 문제가 되지 않지만, 테이블을 해석하는 것은 시각 장애가 있는 사람에게는 꽤 어려운 일입니다. 그러나 적절한 마크업을 사용하면 시각적 연관성을 프로그램적 연관성으로 대체할 수 있습니다.
 
-> **참고:** [2017년 WHO 데이터](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)에 따르면 시각 장애가 있는 사람은 약 2억 5천 3백만 명입니다.
+> [!NOTE]
+> [2017년 WHO 데이터](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)에 따르면 시각 장애가 있는 사람은 약 2억 5천 3백만 명입니다.
 
 기사의 이 부분에서는 테이블을 가능한 한 접근성 있게 만드는 데 필요한 기술을 제공합니다.
 
@@ -322,4 +325,4 @@ HTML에서 테이블에 대해 알아야 할 몇 가지 다른 것들이 있지�
 
 만약 CSS를 배우고 싶다면, [CSS 학습 영역](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)을 확인하세요!
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

@@ -2,7 +2,7 @@
 title: MDN Web Docs の変更履歴
 slug: MDN/Writing_guidelines/Changelog
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 この文書は MDN コンテンツのプロセス、構造、ベストプラクティスが変更されたこと、いつ変更されたかを記録するものです。これは、定期的に協力する人が、 MDN のコンテンツ作成プロセスで何が変わったかを確認するのに役立ちます。

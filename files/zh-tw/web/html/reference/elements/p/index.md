@@ -3,8 +3,6 @@ title: <p>：段落元素
 slug: Web/HTML/Reference/Elements/p
 ---
 
-{{HTMLSidebar}}
-
 **`<p>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個段落。在視覺媒體中，段落通常被表示為由空白行和/或首行縮排分隔的文本區塊，但 HTML 段落可以是任何相關內容的結構分組，例如圖片或表單字段。
 
 段落是[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)，特別是在解析了結束的 `</p>` 標記之前，如果解析了另一個區塊級元素，則段落會自動關閉。參見下面的「標籤省略」。

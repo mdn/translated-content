@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 返回扩展通过 {{WebExtAPIRef("userScripts.configureWorld()")}} 注册的所有 `USER_SCRIPT` 环境的配置。
 
 ## 语法

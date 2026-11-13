@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
-
 向你的扩展或其他扩展中的事件监听器发送一条消息。
 
 如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中除调用 `runtime.sendMessage` 的页面以外的所有页面都会触发 {{WebExtAPIRef('runtime.onMessage')}} 事件。

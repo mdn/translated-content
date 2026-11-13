@@ -3,8 +3,6 @@ title: Promise[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species
 ---
 
-{{JSRef}}
-
 静态访问器属性 **`Promise[Symbol.species]`** 返回用于构造 Promise 方法返回值的构造函数。
 
 > [!WARNING]

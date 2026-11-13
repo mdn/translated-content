@@ -113,5 +113,5 @@ const response = await fetch(
 
 - [Une prothèse d'émulation pour `URL` avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [L'API URL](/fr/docs/Web/API/URL_API)
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams).

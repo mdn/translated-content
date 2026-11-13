@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `privacy.network` 属性包含了与隐私相关的网络设置。每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
 
 这些属性的默认值在不同的浏览器中可能有所不同。

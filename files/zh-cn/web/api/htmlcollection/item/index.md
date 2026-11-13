@@ -1,33 +1,52 @@
 ---
-title: HTMLCollection.item
+title: HTMLCollection：item() 方法
 slug: Web/API/HTMLCollection/item
+l10n:
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}
 
-`HTMLCollection.item()` 由位置获取元素。
+{{domxref("HTMLCollection")}} 的 `item()` 方法返回集合中位于指定偏移位置的元素。
+
+> [!NOTE]
+> 由于 `HTMLCollection` 的内容是实时的，对底层 DOM 的更改可以且将会导致集合中各个元素的位置发生变化，因此给定元素的索引值不一定保持不变。
+
+## 语法
+
+```js-nolint
+item(index)
+```
 
 ### 参数
 
-- index
-  - : 想要被返回的 Node 的位置。元素在 HTML Collection 中的顺序和他们在源文档的顺序保持一致。
+- `index`
+  - : 要返回的 {{domxref("Element")}} 的位置。元素在 `HTMLCollection` 中出现的顺序与它们在文档源中出现的顺序相同。
 
 ### 返回值
 
-指定的 index 的{{domxref("Node")}} , 如果 index 小于 0 或者不小于它的长度属性则返回 null。
+指定索引处的 {{domxref("Element")}}；若 `index` 小于零，或大于等于 `length` 属性，则返回 `null`。
 
-## Description
+## 用法说明
 
-HTMLCollection 中 `item()` 方法返回一个编号的元素，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
+`item()` 方法从 `HTMLCollection` 中返回带编号的元素。在 JavaScript 中，将 `HTMLCollection` 当作数组并用数组记法进行索引更为简便。参见下方的[示例](#示例)。
 
-## Example
+## 示例
 
 ```js
-var c = document.images; // This is an HTMLCollection
-var img0 = c.item(0); // You can use the item( ) method this way
-var img1 = c[1]; // But this notation is easier and more common
+const images = document.images; // 这是一个 HTMLCollection
+const img0 = images.item(0); // 可以这样使用 item() 方法
+const img1 = images[1]; // 但这种记法更简便也更常见
 ```
 
-## See also
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
 
 - {{domxref("NodeList.item()")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/E
 original_slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
 ---
 
-Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
+Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## JS
 

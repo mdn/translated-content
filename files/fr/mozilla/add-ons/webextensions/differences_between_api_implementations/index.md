@@ -3,8 +3,6 @@ title: Différences entre les implémentations d'API
 slug: Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 ---
 
-{{AddonSidebar}}
-
 L'API d'extension de navigateur est encore un [standard emergent](https://browserext.github.io/browserext/). Par conséquent, bien qu'il soit pris en charge par la plupart des principaux navigateurs, dont Firefox, Chrome, Edge et Opera, il existe des différences entre les différentes implémentations. Cela signifie que certaines modifications peuvent être nécessaires pour implémenter votre extension pour plusieurs navigateurs
 
 Parmi les différents navigateurs supportant l'API d'extension, Firefox est le plus conforme à la norme émergente, et est donc votre meilleur point de départ pour développer des extensions de navigateur.
@@ -49,4 +47,4 @@ Vous trouverez des informations plus détaillées sur les différences entre les
 
 - [Incompatibilités Chrome](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 - [Prise en charge des API Javascript par le navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json)

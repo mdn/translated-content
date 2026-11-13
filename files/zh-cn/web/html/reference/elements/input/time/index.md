@@ -3,8 +3,6 @@ title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 ---
 
-{{HTMLSidebar("Input_types")}}
-
 类型为 **`time`** 的 {{htmlelement("input")}} 元素，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。
 
 控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)。

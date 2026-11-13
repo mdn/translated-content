@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Forms
 original_slug: Learn/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 이 튜토리얼에서 우리는 Django에서 HTML Form 작업 방법을 보여주고 특히 model Instance를 생성,수정,제거 하는 Form을 작성하는 가장 쉬운 방법을 보여줄 것이다. 이 예제의 일부분으로 우리는 도서관직원이 (admin 앱을 이용하기 보다) 우리가 만든 form을 이용하여 책 대여기간을 연장하거나 작가 정보를 생성,수정,제거할 수 있도록 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트를 확장할 것이다.
 
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Django/Forms
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할것
         <a
-          href="/ko/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Authentication"
           >Django 튜토리얼 파트 8: 사용자 인증과 이용권한</a
         >.
       </td>
@@ -103,7 +103,8 @@ Django의 폼 처리 과정은 (모델에 대한 정보를 보여주는데 있�
 
 Django는 위에 설명된 작업을 도와줄 수많은 도구와 접근법을 제공한다. 가장 기초적인 것은 `Form` 클래스 인데 form HTML의 생성과 데이터 정화와 유효성검증을 간단하게 만든다. 다음 단계에서는, 도서관 사서가 책의 대여갱신을 할수 있도록 해주는 페이지의 실제적인 예제를 이용해 폼이 어떻게 동작하는지 살펴보도록 한다.
 
-> **참고:** **참고사항:** `Form` 이 어떻게 사용되는지 이해해두면 Django의 "고급 레벨" 폼 프레임워크 클래스를 논의하는데 도움이 된다.
+> [!NOTE]
+> **참고사항:** `Form` 이 어떻게 사용되는지 이해해두면 Django의 "고급 레벨" 폼 프레임워크 클래스를 논의하는데 도움이 된다.
 
 ## 책 대여갱신 form과 함수 view
 
@@ -182,7 +183,8 @@ class RenewBookForm(forms.Form):
 
 두 번째 지점은 입력값이 지정한 범위를 벗어날 경우 `ValidationError` 에러를 발생시키고, 유효하지 않은 입력값일 때 폼에 보여주고자 하는 에러 문구를 지정하는 부분이다. 위의 예에서는, [Django의 번역 함수들](https://docs.djangoproject.com/en/2.0/topics/i18n/translation/) 중하나인 `ugettext_lazy()` (`_()` 로 import 됨)로 이 문구를 감싸고 있는데, 당신의 사이트를 나중에 번역하고자 한다면 좋은 예제가 된다.
 
-> **참고:** **참고사항:** [폼과 필드 유효성 체크](https://docs.djangoproject.com/en/2.0/ref/forms/validation/) (장고 문서임) 에 폼의 유효성 체크에 대한 수많은 다른메소드및 예제가 있다. 예를 들면, 서로 의존관계에 있는 여러개의 필드가 있을 경우, [Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 함수를 덮어써서, `ValidationError` 를 다시 발생시킬수도 있다.
+> [!NOTE]
+> **참고사항:** [폼과 필드 유효성 체크](https://docs.djangoproject.com/en/2.0/ref/forms/validation/) (장고 문서임) 에 폼의 유효성 체크에 대한 수많은 다른메소드및 예제가 있다. 예를 들면, 서로 의존관계에 있는 여러개의 필드가 있을 경우, [Form.clean()](https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean) 함수를 덮어써서, `ValidationError` 를 다시 발생시킬수도 있다.
 
 여기까지가 본 예제에서 필요한 폼에 대한 모든 내용이다!
 
@@ -198,7 +200,8 @@ urlpatterns += [
 
 위 URL 설정코드는 **/catalog/book/_\<bookinstance id>_/renew/** 형식의 URL을 **views.py** 에 있는 `renew_book_librarian()` 라는 이름의 함수를 호출하고 `BookInstance` id를 `pk`라고 이름지은 매개변수로 전송한다. 위 패턴은 `pk`가 정확히 `uuid`의 형식일때만 일치한다.
 
-> **참고:** **주목할점**: 추출된 URL 데이타 "`pk`" 는 당신 마음대로 이름을 정할 수 있다. 왜냐하면 view 함수에 대해서는 어떤 조작이라도 가능하기 때문이다. ( 특정 이름을 기대하는 매개변수를 가진 Generic detail view 클래스를 사용하지 않고 있다.) 하지만 `pk`는 "primary key"의 약자으로 합리적인 관례상 이름이다 !
+> [!NOTE]
+> **주목할점**: 추출된 URL 데이타 "`pk`" 는 당신 마음대로 이름을 정할 수 있다. 왜냐하면 view 함수에 대해서는 어떤 조작이라도 가능하기 때문이다. ( 특정 이름을 기대하는 매개변수를 가진 Generic detail view 클래스를 사용하지 않고 있다.) 하지만 `pk`는 "primary key"의 약자으로 합리적인 관례상 이름이다 !
 
 ### View 작성하기
 
@@ -307,7 +310,8 @@ def renew_book_librarian(request, pk):
 
 폼의 데이터가 유효하다면, `form.cleaned_data`속성을 통해 데이타 사용을 시작할수 있다(즉, 다음과 같다. `data = form.cleaned_data['renewal_date']`). 여기에서는 단지 폼 데이터를 `BookInstance`객체에 관련된 `due_back`변수에 저장했다.
 
-> **경고:** **중요사항**: 'request'객체를 통해 직접 폼 데이터를 가져올수는 있으나 ( 예를 들면 `request.POST['renewal_date']`나 GET 요청인경우 `request.GET['renewal_date']`처럼), 이 방식은 **절대** 추천하지 않는다. 위 코드에서 깔끔한 데이타(cleaned_data)란 것은 정제되고(sanitised), 유효성체크가되고, 파이썬에서 많이쓰는 타입의 데이타이다.
+> [!WARNING]
+> **중요사항**: 'request'객체를 통해 직접 폼 데이터를 가져올수는 있으나 ( 예를 들면 `request.POST['renewal_date']`나 GET 요청인경우 `request.GET['renewal_date']`처럼), 이 방식은 **절대** 추천하지 않는다. 위 코드에서 깔끔한 데이타(cleaned_data)란 것은 정제되고(sanitised), 유효성체크가되고, 파이썬에서 많이쓰는 타입의 데이타이다.
 
 뷰에서 폼 처리의 마지막 단계는 , 대개는 "Success" 페이지라는 다른 페이지로 주소를 바꾸는 것이다. 여기서는 `'all-borrowed'`라는 뷰( 이 뷰는 [Django 튜토리얼 파트 8: 사용자 인증과 사용권한](/ko/docs/Learn/Server-side/Django/Authentication#challenge_yourself) 파트에서 "도전과제로" 생성했었다) 로 주소를 바꾸기 위해 `HttpResponseRedirect`와 `reverse()`를 사용한다. 당신이 이 페이지를 생성하지 않았다면 URL 주소가 '/'인 홈페이지로 주소를 변경하는 것을 고려해보자.
 
@@ -538,7 +542,8 @@ The class `RenewBookModelForm` below is now functionally equivalent to our origi
 
 The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating [generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) for creating, editing, and deleting views based on models. Not only do these handle the "view" behaviour, but they automatically create the form class (a `ModelForm`) for you from the model.
 
-> **참고:**In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using `FormView` you still need to create your `Form`, but you don't have to implement all of the standard form-handling pattern. Instead you just have to provide an implementation of the function that will be called once the submitted is known to be be valid.
+> [!NOTE]
+> In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs "coding effort". Using `FormView` you still need to create your `Form`, but you don't have to implement all of the standard form-handling pattern. Instead you just have to provide an implementation of the function that will be called once the submitted is known to be be valid.
 
 In this section we're going to use generic editing views to create pages to add functionality to create, edit, and delete `Author` records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way that can be provided by the admin site).
 
@@ -584,7 +589,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
   <form action="" method="post">
     {% csrf_token %}
     <table>
-      {{ form.as_table }}
+      \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
   </form>
@@ -668,4 +673,4 @@ There is a lot more that can be done with forms (check out our See also list bel
 - [Creating forms from models](https://docs.djangoproject.com/en/2.0/topics/forms/modelforms/) (Django docs)
 - [Generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

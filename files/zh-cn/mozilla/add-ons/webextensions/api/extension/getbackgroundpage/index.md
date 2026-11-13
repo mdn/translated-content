@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d82c19fea93f7b36787c6d84af600c955c2732d5
 ---
 
-{{AddonSidebar}}
-
 若后台脚本在运行中，则返回后台页面的 [Window](/zh-CN/docs/Web/API/Window)。若脚本不在运行，则返回 null。
 
 这是一个同步函数。

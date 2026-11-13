@@ -1,14 +1,11 @@
 ---
 title: フィルター効果
 slug: Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
-original_slug: Web/SVG/Tutorial/Filter_effects
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG", "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts") }}
 
 基本的な図形では、ある効果を得るために必要な柔軟性が得られない場合があります。よくある例として、ドロップシャドウはグラデーションの組み合わせでは合理的に作成することができません。フィルターは、 SVG が高度な効果を作り出すための仕組みです。
 
@@ -80,7 +77,7 @@ l10n:
     <path
       fill="#D90000"
       d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
-    <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
+    <g fill="white" stroke="black" font-size="45" font-family="Verdana">
       <text x="52" y="52">SVG</text>
     </g>
   </g>
@@ -184,4 +181,4 @@ l10n:
 
 プリミティブ 6
 
-{{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG", "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts") }}

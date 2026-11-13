@@ -1,11 +1,10 @@
 ---
 title: Date.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 l10n:
-  sourceCommit: e439cd79166dbfd9bbe3a003abaf5898ae165509
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Date.parse()`** は静的メソッドで、日時の文字列表現を解釈し、その日付の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を返します。
 
@@ -43,7 +42,7 @@ Date.parse(dateString)
 
 この関数は、 {{jsxref("Date/setTime", "setTime()")}} メソッドと組み合わせて、文字列値に基づいて日時の値を設定する場合などに便利です。
 
-`parse()` が処理できる書式は明示的に指定されていませんが、いくつかの不変条件があります。
+`parse()` が処理できる書式は明示的に指定されていませんが、いくつかの{{Glossary("invariant", "不変条件")}}があります。
 
 - [日時文字列の書式](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format)（{{jsxref("Date/toISOString", "toISOString()")}} によって生成される）に対応している必要があります。
 - `x` がミリ秒の値が 0 の日付である場合、 `x.valueOf()` は、`Date.parse(x.toString())`、`Date.parse(x.toUTCString())`、`Date.parse(x.toISOString())` のいずれかと同じでなければなりません。これは、 {{jsxref("Date/toString", "toString()")}} および {{jsxref("Date/toUTCString", "toUTCString()")}} によって生成される書式も対応している必要があるということです。
@@ -90,7 +89,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 > [!NOTE]
 > この節には、ブラウザーやブラウザーのバージョンによって不整合が生じる可能性のある、実装固有の動作について記載しています。これは、包括的なブラウザーの互換性表を網羅したものではありません。コードで書式を使用する前に、常に自分自身でテストを行ってください。
 
-実装では通常、日付文字列が標準ではない場合、既定で地方時が使用されます。一貫性を保つため、ここでは、実行時が UTC タイムゾーンを使用すると想定し、特に指定がない限り、出力は端末のタイムゾーンによって異なるものとします。[地方時の夏時間 (DST) も、これに影響を与える可能性があります](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions)。
+実装では通常、日付文字列が標準ではない場合、デフォルトで地方時が使用されます。一貫性を保つため、ここでは、実行時が UTC タイムゾーンを使用すると想定し、特に指定がない限り、出力は端末のタイムゾーンによって異なるものとします。[地方時の夏時間 (DST) も、これに影響を与える可能性があります](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions)。
 
 標準外の日付文字列の例をいくつか挙げます。ブラウザーは日付文字列の解析にとても寛容で、解析できない文字列の部分は破棄する場合があります。互換性の理由から、ブラウザーは互いの動作をコピーすることが多いため、このような処理パターンはブラウザー間で広まる傾向があります。前述のように、次の例はあくまで説明のためのものであり、決して網羅的なものではありません。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当作为浏览器扩展提供的主题被应用或移除时触发。具体情况包括：
 
 - 安装[静态主题](https://extensionworkshop.com/documentation/themes/static-themes/)时

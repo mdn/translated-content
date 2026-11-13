@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 311a791dde7caf8039bbc09bd81347a747f703b2
 ---
 
-{{AddonSidebar}}
-
 WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此扩展程序只需最小的改动即可在任何浏览器上运行。
 
 不过，Chrome 浏览器（以及基于 Chromium 的浏览器）、Firefox 浏览器和 Safari 浏览器之间存在很大差异。特别是：

@@ -42,11 +42,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 where `handleKeyDown` and `handleKeyUp` are the functions implementing the controls about the `keydown` and `keyup` events.
 
 > [!NOTE]
-> Have a look at the [Events reference](/ru/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> Have a look at the [Events reference](/ru/docs/Web/API/Document_Object_Model/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
 #### Mouse
 
-The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), and [`mousedown`](/ru/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/ru/docs/Web/Events).
+The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), and [`mousedown`](/ru/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/ru/docs/Web/API/Document_Object_Model/Events).
 
 When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below).
 
@@ -94,7 +94,7 @@ element.requestPointerLock();
 
 When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
+Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the [`orientation`](/ru/docs/Web/CSS/Guides/Media_queries/Using#orientation) media feature. When `screen.orientation` changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.
 
 > [!NOTE]
 > More information about the Screen Orientation API can be found in [Managing screen orientation](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).

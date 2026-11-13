@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<head>`** 元素包含机器可读的文档相关信息（{{glossary("metadata", "元数据")}}），如文档的[标题](/zh-CN/docs/Web/HTML/Reference/Elements/title)、[脚本](/zh-CN/docs/Web/HTML/Reference/Elements/script)和[样式表](/zh-CN/docs/Web/HTML/Reference/Elements/style)。
 
 > [!NOTE]

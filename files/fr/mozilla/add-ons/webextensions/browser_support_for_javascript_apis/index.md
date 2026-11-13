@@ -1,16 +1,12 @@
 ---
-title: Compatibilité des navigateurs avec les API JavaScript WebExtensions
+title: Compatibilité des navigateurs pour les API JavaScript
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 {{WebExtAllCompatTables}}
 
-> [!NOTE]
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
-
 ## Voir aussi
 
-- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json)

@@ -16,7 +16,7 @@ HTML 5 이전에는 `HTMLFormControlsCollection`을 기반으로 하는 {{domxre
 > [!NOTE]
 > 문서의 {{HTMLElement("form")}} 속성을 사용해도 마찬가지로 주어진 문서에 포함된 모든 컨트롤 폼의 목록을 얻을 수 있습니다.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## 값
 

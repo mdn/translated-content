@@ -1,80 +1,52 @@
 ---
-title: Date.prototype.toISOString()
+title: "Date : méthode toISOString()"
+short-title: toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`toISOString()`** des instances de {{JSxRef("Date")}} retourne une chaîne de caractères représentant cette date au [format chaîne de date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_date-heure), un format _simplifié_ basé sur la [norme ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601), qui fait toujours 24 ou 27 caractères (`YYYY-MM-DDTHH:mm:ss.sssZ` ou `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivement). Le fuseau horaire est toujours UTC, comme indiqué par le suffixe `Z`.
 
-La méthode **`toISOString()`** renvoie une chaîne de caractères au format ISO ([ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)), qui peut être décrite de cette façon : **`YYYY-MM-DDTHH:mm:ss.sssZ`** (toujours longue de 24 caractères) ou de cette façon **`±YYYYYY-MM-DDTHH:mm:ss.sssZ`** (27 caractères). Le fuseau horaire est toujours UTC, comme l'indique le suffixe « Z » (pour zéro décalage avec UTC).
-
-{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.toISOString()")}}
 
 ```js interactive-example
 const event = new Date("05 October 2011 14:48 UTC");
 console.log(event.toString());
-// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+// Résultat attendu : "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Remarque : votre fuseau horaire peut varier
 
 console.log(event.toISOString());
-// Expected output: "2011-10-05T14:48:00.000Z"
+// Résultat attendu : "2011-10-05T14:48:00.000Z"
 ```
 
 ## Syntaxe
 
-```js
-dateObj.toISOString();
+```js-nolint
+toISOString()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant la date indiquée au format [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) selon le temps universel.
+Une chaîne de caractères représentant la date donnée au [format chaîne de date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_date-heure) selon le temps universel. Il s'agit du même format que celui requis pour être reconnu par {{JSxRef("Date.parse()")}}.
+
+### Exceptions
+
+- {{JSxRef("RangeError")}}
+  - : Levée si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) ou si elle correspond à une année qui ne peut pas être représentée dans le format de chaîne de date.
 
 ## Exemples
 
-### Utiliser `toISOString()`
+### Utiliser la méthode `toISOString()`
 
 ```js
-var aujourdhui = new Date("05 October 2011 14:48 UTC");
+const d = new Date(0);
 
-console.log(aujourdhui.toISOString()); // Renvoie "2011-10-05T14:48:00.000Z"
-```
-
-L'exemple ci-dessus analyse une chaîne de caractères non-standard, qui peut donc être incorrectement intérprété par des navigateurs n'utilisant pas Gecko.
-
-## Prothèse d'émulation (_polyfill_)
-
-Cette méthode fut standardisée avec la cinquième édition d'ECMAScript. Afin d'utiliser cette méthode avec les moteurs qui n'en disposent pas nativement, on pourra utiliser ce fragment de code :
-
-```js
-if (!Date.prototype.toISOString) {
-  (function () {
-    function pad(number) {
-      if (number < 10) {
-        return "0" + number;
-      }
-      return number;
-    }
-
-    Date.prototype.toISOString = function () {
-      return (
-        this.getUTCFullYear() +
-        "-" +
-        pad(this.getUTCMonth() + 1) +
-        "-" +
-        pad(this.getUTCDate()) +
-        "T" +
-        pad(this.getUTCHours()) +
-        ":" +
-        pad(this.getUTCMinutes()) +
-        ":" +
-        pad(this.getUTCSeconds()) +
-        "." +
-        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        "Z"
-      );
-    };
-  })();
-}
+console.log(d.toISOString()); // "1970-01-01T00:00:00.000Z"
 ```
 
 ## Spécifications
@@ -87,6 +59,6 @@ if (!Date.prototype.toISOString) {
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- La méthode {{JSxRef("Date.prototype.toLocaleDateString()")}}
+- La méthode {{JSxRef("Date.prototype.toString()")}}
+- La méthode {{JSxRef("Date.prototype.toUTCString()")}}

@@ -3,8 +3,6 @@ title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 ---
 
-{{HTMLSidebar}}
-
 **`image`** 类型的 {{HTMLElement("input")}} 元素用于创建图形化的提交按钮，即采用图像而非文本形式的提交按钮。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}

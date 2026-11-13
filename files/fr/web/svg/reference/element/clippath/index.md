@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/clipPath
 original_slug: Web/SVG/Element/clipPath
 ---
 
-{{SVGRef}}
-
 L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
 
 Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqué sera dessiné. Autrement dit, les parties de l'élément en dehors de la forme créée par le détourage ne seront pas affichées.
@@ -74,13 +72,13 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
+- [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute)
   - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## Notes d'usage

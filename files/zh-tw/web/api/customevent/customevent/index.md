@@ -56,7 +56,7 @@ element.dispatchEvent(dogFound);
 // 控制台會輸出「cat」和「dog」
 ```
 
-更多範例請參見[建立與觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)。
+更多範例請參見[建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)。
 
 ## 規範
 
@@ -69,4 +69,4 @@ element.dispatchEvent(dogFound);
 ## 參見
 
 - {{domxref("CustomEvent")}}
-- [建立與觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- [建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)

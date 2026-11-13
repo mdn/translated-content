@@ -3,8 +3,6 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 ---
 
-{{AddonSidebar}}
-
 Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêtre ou vers une autre fenêtre.
 
 Vous pouvez uniquement déplacer des onglets vers et à partir de fenêtres dont {{WebExtAPIRef('windows.WindowType', 'WindowType')}} est `"normal"`.
@@ -125,8 +123,6 @@ browser.browserAction.onClicked.addListener(function () {
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

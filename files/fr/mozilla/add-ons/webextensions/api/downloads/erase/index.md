@@ -3,8 +3,6 @@ title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 ---
 
-{{AddonSidebar}}
-
 La fonction **`erase()`** de l'API {{WebExtAPIRef("downloads")}} efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur sans supprimer les fichiers téléchargés du disque.
 
 Pour supprimer les fichiers du disque, vous devez utiliser {{WebExtAPIRef("downloads.removeFile()")}}.
@@ -76,8 +74,6 @@ erasing.then(onErased, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

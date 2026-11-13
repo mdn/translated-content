@@ -1,13 +1,12 @@
 ---
 title: Object.freeze()
+short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 l10n:
-  sourceCommit: 588a149a835f8a6e24d6ff5ee9b86323296ada5c
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-{{JSRef}}
-
-**`Object.freeze()`** 静的メソッドは、オブジェクトを**凍結**します。オブジェクトを凍結すると、[拡張ができなくなり](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のプロパティは書き込みも構成も不可能になります。新しいプロパティを追加したり、既存のプロパティを削除したり、列挙可能性、構成可能性、書き込み可能性、値を変更したり、オブジェクトのプロトタイプを再代入したりすることはできません。 `freeze()` は、渡されたオブジェクトと同じものを返します。
+**`Object.freeze()`** は静的メソッドで、オブジェクトを**凍結**します。オブジェクトを凍結すると、[拡張ができなくなり](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のプロパティは書き込みも構成も不可能になります。新しいプロパティを追加したり、既存のプロパティを削除したり、列挙可能性、構成可能性、書き込み可能性、値を変更したり、オブジェクトのプロトタイプを再代入したりすることはできません。 `freeze()` は、渡されたオブジェクトと同じものを返します。
 
 オブジェクトの凍結は JavaScript が提供する最も高い完全性レベルです。
 
@@ -21,10 +20,10 @@ const obj = {
 Object.freeze(obj);
 
 obj.prop = 33;
-// Throws an error in strict mode
+// 厳格モードではエラーが発生する
 
 console.log(obj.prop);
-// Expected output: 42
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -155,9 +154,9 @@ const obj1 = {
 };
 
 Object.freeze(obj1);
-obj1.internal.a = "aValue";
+obj1.internal.a = "value";
 
-obj1.internal.a; // 'aValue'
+obj1.internal.a; // 'value'
 ```
 
 定数オブジェクトになるには、参照のつながり全体（他のオブジェクトへの直接または間接的な参照）が不変で凍結されたオブジェクトのみを参照していなければなりません。凍結されるオブジェクトは、オブジェクト全体の中にあるオブジェクトの*状態*（値と他のオブジェクトへの参照）がすべて固定されているので、不変ということができます。なお、文字列、数値、真偽値はすべて不変となり、関数や配列はオブジェクト扱いです。

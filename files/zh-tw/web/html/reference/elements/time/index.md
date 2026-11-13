@@ -63,5 +63,3 @@ slug: Web/HTML/Reference/Elements/time
 ## 延伸閱讀
 
 - The {{HTMLElement("data")}} element, allowing to signal other kind of values.
-
-{{HTMLSidebar}}

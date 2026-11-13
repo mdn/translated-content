@@ -9,7 +9,7 @@ WebGL API 的 **`WebGLRenderingContext.bindAttribLocation()`** 方法将通用�
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.bindAttribLocation(program, index, name);
 ```
 
@@ -20,7 +20,7 @@ void gl.bindAttribLocation(program, index, name);
 - `index`
   - : {{domxref("GLuint")}} 指定要绑定的通用顶点的索引。
 - `name`
-  - : {{domxref("DOMString")}}指定要绑定到通用顶点索引的变量的名称。该名称不能以“webgl\_”或“\_webgl\_”开头，因为这些名称将保留供 WebGL 使用。
+  - : {{jsxref("String")}}指定要绑定到通用顶点索引的变量的名称。该名称不能以“webgl\_”或“\_webgl\_”开头，因为这些名称将保留供 WebGL 使用。
 
 ### 返回值
 
@@ -28,8 +28,8 @@ void gl.bindAttribLocation(program, index, name);
 
 ## 示例
 
-```plain
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+```js
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## 规范

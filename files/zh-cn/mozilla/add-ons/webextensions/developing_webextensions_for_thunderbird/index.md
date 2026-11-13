@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
-
 你将采用与 Firefox 扩展相同的方式对 Thunderbird 扩展进行代码编写；使用你选择的文本编辑器工具来编写代码。
 
 ## API 差异

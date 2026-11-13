@@ -3,7 +3,7 @@ title: Градиенты
 slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
 
 Возможность создания и использования градиентов, также как заливки и обводки, более интересна, чем просто заливка или обводка.
 
@@ -266,4 +266,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
 Существуют и другие предостережения для работы с
 `gradientUnits="objectBoundingBox"`, когда поле ограничения объекта не является квадратным, но они довольно сложны и им придётся ждать, пока кто-то другой не соизволит объяснить их.
 
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}

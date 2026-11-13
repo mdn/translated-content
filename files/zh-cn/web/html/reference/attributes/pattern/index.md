@@ -3,8 +3,6 @@ title: HTML 属性：pattern
 slug: Web/HTML/Reference/Attributes/pattern
 ---
 
-{{HTMLSidebar}}
-
 **`pattern`** 属性规定了一个表单控件的值应该匹配的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读属性 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 将为 true。
 
 {{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}

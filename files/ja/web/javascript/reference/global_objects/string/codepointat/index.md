@@ -1,21 +1,20 @@
 ---
 title: String.prototype.codePointAt()
+short-title: codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`codePointAt()`** は {{jsxref("String")}} 値のメソッドで、指定されたインデックスから始まる文字の Unicode コードポイント値である非負の整数を返します。インデックスは Unicode コードポイントではなく、UTF-16 コード単位に基づくことに注意してください。
 
-**`codePointAt()`** は {{jsxref("String")}} のメソッドで、指定されたインデックスから始まる文字の Unicode コードポイント値である非負の整数を返します。インデックスは Unicode コードポイントではなく、UTF-16 コード単位に基づくことに注意してください。
-
-{{InteractiveExample("JavaScript デモ: String.codePointAt()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.codePointAt()", "shorter")}}
 
 ```js interactive-example
 const icons = "☃★♲";
 
 console.log(icons.codePointAt(1));
-// Expected output: "9733"
+// 予想される結果: "9733"
 ```
 
 ## 構文
@@ -98,6 +97,7 @@ for (const codePoint of str) {
 ## 関連情報
 
 - [`String.prototype.codePointAt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.codePointAt` のポリフィル](https://www.npmjs.com/package/string.prototype.codepointat)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

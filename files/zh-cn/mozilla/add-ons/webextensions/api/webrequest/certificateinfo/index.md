@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6954b3f1f3b1182f36b5d3f60fb6461be371ef2d
 ---
 
-{{AddonSidebar}}
-
 描述一项 [X.509 证书](https://datatracker.ietf.org/doc/html/rfc5280) 的对象。
 
 {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API 返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象包含该对象数组的 `certificates` 属性。

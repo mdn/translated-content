@@ -3,8 +3,6 @@ title: <audio>：嵌入音訊元素
 slug: Web/HTML/Reference/Elements/audio
 ---
 
-{{HTMLSidebar}}
-
 **`<audio>`** [HTML](/zh-TW/docs/Web/HTML) 元素是用來在文件中嵌入音訊內容。它可以包含一個或多個音訊來源，使用 `src` 屬性或 {{HTMLElement("source")}} 元素來表示：瀏覽器將選擇最適合的音訊來源。它還可以是串流媒體的目的地，使用 {{domxref("MediaStream")}}。
 
 {{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}

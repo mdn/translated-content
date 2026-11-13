@@ -3,8 +3,6 @@ title: <ul>：無序清單元素
 slug: Web/HTML/Reference/Elements/ul
 ---
 
-{{HTMLSidebar}}
-
 **`<ul>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示項目的無序清單，通常呈現為項目符號清單。
 
 {{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
@@ -208,6 +206,6 @@ li li {
 - 其他與清單相關的HTML元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}}、{{HTMLElement("menu")}}
 - 可能對樣式化 `<ul>` 元素特別有用的 CSS 屬性：
   - {{CSSxRef("list-style")}} 屬性，選擇序數的顯示方式。
-  - [CSS 計數器](/zh-TW/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，處理複雜的巢狀清單。
+  - [CSS 計數器](/zh-TW/docs/Web/CSS/Guides/Counter_styles/Using_counters)，處理複雜的巢狀清單。
   - {{CSSxRef("line-height")}} 屬性，模擬已棄用的 [`compact`](#compact) 屬性。
   - {{CSSxRef("margin")}} 屬性，控制清單的縮進。

@@ -3,8 +3,6 @@ title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **translate** 是一种[枚举](/zh-CN/docs/Glossary/Enumerated)属性，用来规定对应元素的*可翻译属性*值及其 {{domxref("Text")}} 子节点内容是否跟随系统语言作出对应的翻译变化。
 
 该属性可以有以下值：

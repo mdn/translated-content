@@ -5,7 +5,7 @@ slug: Web/API/URL/createObjectURL_static
 
 {{ApiRef("URL")}}{{SeeCompatTable}}
 
-El método estático **`URL.createObjectURL()`** crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.
+El método estático **`URL.createObjectURL()`** crea un {{jsxref("String")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.
 
 > [!NOTE]
 > El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, _se debe de evitar usar este método con {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}_.

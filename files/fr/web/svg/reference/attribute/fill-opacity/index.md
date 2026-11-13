@@ -4,11 +4,10 @@ slug: Web/SVG/Reference/Attribute/fill-opacity
 original_slug: Web/SVG/Attribute/fill-opacity
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.
 
-> **Note :** `fill-opacity` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> `fill-opacity` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
@@ -49,7 +48,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint"
             >&#x3C;percentage></a
           ></strong
         >

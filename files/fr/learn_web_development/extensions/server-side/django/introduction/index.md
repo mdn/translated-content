@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Dans ce premier article sur Django, nous allons répondre à la question suivante "Qu'est ce que Django ?", et nous vous montrerons en quoi cette infrastructure d'application (aussi appelée framework) est spéciale. Nous allons ensuite voir les principales fonctionnalités, mais aussi quelques fonctionnalités avancées que nous n'aurons malheureusement pas le temps de voir en détails dans ce module. Nous allons aussi vous montrer comment fonctionne une application Django (bien que nous n'ayons pas d'environnement où le tester) .
 
@@ -15,11 +15,11 @@ Dans ce premier article sur Django, nous allons répondre à la question suivant
       <td>
         Connaissances basiques de programmation. Une compréhension générale de
         la
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation coté serveur</a
         >
         ainsi qu'une
-        <a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >compréhension des interactions client-serveur dans les sites web</a
         >.
       </td>
@@ -53,7 +53,7 @@ Django vous aide à écrire une application qui est:
 
     _Un mot de passé haché est une valeur dont la longueur est fixée, créée en envoyant le mot de passe à travers une [fonction de hachage cryptographique](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Django peut vérifier si un mot de passe entré est correct en l'envoyant dans la fonction de hachage et en comparant le retour avec la valeur stockée dans la base de données. De ce fait, la nature unidirectionnelle de la fonction rend difficile pour un attaquant de retrouver le mot de passe d'origine, même si la valeur hachée est compromise._
 
-    Django active par défaut la protection contre beaucoup de vulnérabilités, comme les injections SQL, le cross-site scripting, le cross-site request forgery et le clickjacking (voir [Website security](/fr/docs/Learn/Server-side/First_steps/Website_security) pour plus de détails sur ce genre d'attaques).
+    Django active par défaut la protection contre beaucoup de vulnérabilités, comme les injections SQL, le cross-site scripting, le cross-site request forgery et le clickjacking (voir [Website security](/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) pour plus de détails sur ce genre d'attaques).
 
 - Scalable
   - : Django utilise une architecture composite "shared-nothing" (chaque composant de l'architecture est indépendant des autres, et peut ainsi être remplacé ou changé si besoin). En ayant des séparations nettes entres les différentes parties, Django peut se scaler lors d'une hausse de trafic en ajoutant du hardware à tous les niveaux : serveurs cache, serveurs de base de données, serveurs d'application. Certains des sites les plus fréquentés ont réussi à scaler Django pour répondre à leur demande (par exemple, Instagram et Disqus pour ne nommer qu'eux deux).
@@ -248,4 +248,4 @@ Félicitations, vous avez atteint la première étape dans votre voyage avec Dja
 
 Vous avez déjà vu un peu de vrai code Django ci-dessus, mais à la différence du code côté client, vous aurez besoin de configurer un environnement de développement pour l'utiliser. C'est notre prochaine étape.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -1,24 +1,22 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "_x_ is (not) _y_" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値があった場合です。
 
 ## エラーメッセージ
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: "x" is (not) "y" (Firefox)
+```plain
+TypeError: Cannot read properties of undefined (reading 'x') (V8 ベース)
+TypeError: "x" is undefined (Firefox)
+TypeError: "undefined" is not an object (Firefox)
+TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
 
-例:
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
+TypeError: "x" is not a symbol (V8 ベース & Firefox)
+TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
 ```
 
 ## エラーの種類
@@ -35,34 +33,41 @@ TypeError: "x" is not a symbol
 
 ### 無効な場合
 
+`undefined` または `null` の変数に対してメソッドを呼び出すことはできません。
+
 ```js example-bad
-// undefined と null の場合、substring メソッドは動作しません。
-var foo = undefined;
+const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
-var foo = null;
-foo.substring(1); // TypeError: foo is null
+const foo2 = null;
+foo2.substring(1); // TypeError: foo2 is null
+```
 
-// ある種のメソッドでは、特定の型が求められることがあります。
-var foo = {};
+ある種のメソッドでは、特定の型が求められることがあります。
+
+```js example-bad
+const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+const foo2 = "bar";
+Object.create(foo2); // TypeError: "foo2" is not an object or null
 ```
 
 ### 問題の修正
 
-null ポインターを `undefined` 値に修正するには、次のように [typeof](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子を用いて行うことができます。
+null ポインターを `undefined` または `null` 値に修正するには、まずその値が `undefined` または `null` であるかどうかを検査してください。
 
-```js
-if (foo !== undefined) {
-  // これで、 foo が定義されていることがわかるので、実行することができます。
+```js example-good
+if (foo !== undefined && foo !== null) {
+  // これで、 foo が定義されていることがわかるので、実行することができる。
 }
+```
 
-if (typeof foo !== "undefined") {
-  // 同じというのは良い考えですが、この実装を使わないでください。 - 本当の
-  // undefined の値と未宣言の変数が混同されて問題が発生する可能性があります。
+あるいは、`foo` が何らかの[偽値](/ja/docs/Glossary/Falsy)（`""` や `0` など）ではないと確信している場合、あるいはそうした場合を除外しても問題にならない場合は、単純に真値であるかどうかを検査するだけで済みます。
+
+```js example-good
+if (foo) {
+  // foo は真値であることが分かるので、おそらく null/undefined ではない。
 }
 ```
 

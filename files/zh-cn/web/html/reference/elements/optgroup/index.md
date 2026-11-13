@@ -3,8 +3,6 @@ title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 ---
 
-{{HTMLSidebar}}
-
 **HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
 
 {{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
@@ -35,7 +33,7 @@ label {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>无</td>
   </tr>
   <tr>

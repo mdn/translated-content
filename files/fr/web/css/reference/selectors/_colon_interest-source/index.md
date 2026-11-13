@@ -1,0 +1,81 @@
+---
+title: Pseudo-classe CSS `:interest-source`
+short-title: :interest-source
+slug: Web/CSS/Reference/Selectors/:interest-source
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+---
+
+{{SeeCompatTable}}
+
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:interest-source`** représente un élément [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers) lorsque l'intérêt est affiché sur celui-ci.
+
+## Syntaxe
+
+```css
+:interest-source {
+  /* ... */
+}
+```
+
+## Exemples
+
+### Sélectionner un élément invocateur d'intérêt
+
+Dans cet exemple, nous montrons comment `:interest-source` peut être utilisé pour appliquer des styles à un élément invocateur d'intérêt lorsque l'intérêt est affiché sur celui-ci.
+
+#### HTML
+
+Le balisage inclut un bouton ({{HTMLElement("button")}}) et un paragraphe ({{HTMLElement("p")}}). Nous définissons le `<button>` comme un invocateur d'intérêt en lui donnant l'attribut `interestfor` dont la valeur correspond à un `id` de l'élément `<p>`, faisant du paragraphe l'élément cible. Le paragraphe est transformé en fenêtre contextuelle en lui donnant l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), ce qui le cache initialement.
+
+```html live-sample___interest-source
+<button interestfor="mafenetrecontextuelle">Bouton</button>
+<p id="mafenetrecontextuelle" popover>Une info-bulle au survol</p>
+```
+
+#### CSS
+
+Dans le CSS, nous définissons une règle avec un sélecteur `:interest-source` pour appliquer une combinaison spécifique de {{CSSxRef("background-color")}} et {{CSSxRef("color")}} au `<button>` lorsque l'intérêt est affiché sur celui-ci. Nous appliquons également d'autres styles au `<button>`, qui sont cachés pour des raisons de concision.
+
+```css hidden live-sample___interest-source
+button {
+  margin: 10px;
+  padding: 5px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1.5em;
+  background-color: #eeeeee;
+
+  cursor: pointer;
+}
+```
+
+```css live-sample___interest-source
+button:interest-source {
+  background-color: hotpink;
+  color: purple;
+}
+```
+
+#### Résultat
+
+Ça s'affiche comme suit&nbsp;:
+
+{{EmbedLiveSample("interest-source", "100%", 100)}}
+
+Essayez de montrer de l'intérêt pour le bouton (par exemple, en le survolant ou en lui donnant la sélection), et notez comment la combinaison de couleurs `hotpink` et `purple` est appliquée uniquement lorsque l'intérêt est affiché.
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- La pseudo-classe {{CSSxRef(":interest-target")}}
+- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [Utiliser les invocateurs d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers)
+- Le module [de sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

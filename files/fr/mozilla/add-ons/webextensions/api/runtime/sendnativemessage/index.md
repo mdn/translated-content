@@ -3,8 +3,6 @@ title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
-{{AddonSidebar}}
-
 Envoie un seul message d'une extension à une application native.
 
 Cela prend deux paramètres obligatoires : le nom de l'application native et un objet JSON qui est le message à envoyer. Le navigateur lancera l'application native et délivrera le message.
@@ -67,8 +65,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

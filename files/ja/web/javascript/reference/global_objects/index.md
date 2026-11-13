@@ -2,16 +2,14 @@
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
 l10n:
-  sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
+  sourceCommit: 1ddd95504b4507beeda0f08bd772eb167922b86a
 ---
-
-{{jsSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。
 
 ここでいう「グローバルオブジェクト (global objects)」 (または標準組み込みオブジェクト) という用語を**グローバルオブジェクト** (the global object) と混同しないでください。ここで、『グローバルオブジェクト』は**グローバルスコープにあるオブジェクト**を指します。 (訳注: 日本語では複数形や the による区別ができないため、ここでは後者の **the global object** を『グローバルオブジェクト』と表記して区別します。)
 
-後者の『グローバルオブジェクト』自体は、グローバルスコープ中で {{jsxref("Operators/this", "this")}} 演算子を使ってアクセスすることができます。実際、グローバルスコープは『グローバルオブジェクト』のプロパティと、もしあれば継承されたプロパティから**構成されています**。
+後者の『グローバルオブジェクト』自体は、グローバルスコープ中で {{jsxref("this")}} 演算子を使ってアクセスすることができます。実際、グローバルスコープは『グローバルオブジェクト』のプロパティと、もしあれば継承されたプロパティから**構成されています**。
 
 グローバルスコープ内のその他のオブジェクトは、[ユーザースクリプトによって作られたり](/ja/docs/Web/JavaScript/Guide/Working_with_objects#新しいオブジェクトの作成)、ホストアプリケーションによって提供されたりします。ブラウザー上で提供されている利用可能なオブジェクトについては、[API リファレンス](/ja/docs/Web/API)で文書化されています。
 
@@ -62,6 +60,7 @@ l10n:
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -75,6 +74,7 @@ l10n:
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### テキスト処理
 
@@ -88,6 +88,7 @@ l10n:
 これらのオブジェクトは、インデックス値で順序付けされたデータのコレクションを表します。これには、(型付けされた) 配列や配列に似た構造体も含まれます。
 
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray")}}
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8ClampedArray")}}
@@ -139,6 +140,8 @@ l10n:
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### リフレクション
 

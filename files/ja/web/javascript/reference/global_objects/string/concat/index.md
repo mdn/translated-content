@@ -1,25 +1,24 @@
 ---
 title: String.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`concat()`** は {{jsxref("String")}} 値のメソッドで、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。
 
-**`concat()`** メソッドは、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。
-
-{{InteractiveExample("JavaScript デモ: String.concat()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.concat()")}}
 
 ```js interactive-example
 const str1 = "Hello";
 const str2 = "World";
 
 console.log(str1.concat(" ", str2));
-// Expected output: "Hello World"
+// 予想される結果: "Hello World"
 
 console.log(str2.concat(", ", str1));
-// Expected output: "World, Hello"
+// 予想される結果: "World, Hello"
 ```
 
 ## 構文
@@ -32,8 +31,8 @@ concat(str1, str2, /* …, */ strN)
 
 ### 引数
 
-- `strN`
-  - : `str` に連結する 1 つ以上の文字列です。
+- `str1`, …, `strN`
+  - : `str` に連結する 1 つ以上の文字列です。引数なしで `String.prototype.concat()` を呼び出すことは技術的には可能ですが、文字列は不変であるため、目に見えるコピーは行われません（{{jsxref("Array.prototype.concat()")}} と同様に）。これは、引数として文字列の配列を[スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)しており、その配列がたまたま空である場合にのみ現れます。
 
 ### 返値
 
@@ -41,7 +40,7 @@ concat(str1, str2, /* …, */ strN)
 
 ## 解説
 
-`concat()` 関数は、文字列引数を呼び出し文字列に連結し、新しい文字列を返します。元の文字列または返された文字列を変更しても、他の文字列には影響しません。
+`concat()` 関数は、文字列引数を呼び出し文字列に連結し、新しい文字列を返します。
 
 引数が文字列型でない場合は、連結前に文字列値に変換されます。
 
@@ -79,4 +78,4 @@ const greetList = ["こんにちは", " ", "佐藤さん", "!"];
 ## 関連情報
 
 - {{jsxref("Array.prototype.concat()")}}
-- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [加算演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Addition)

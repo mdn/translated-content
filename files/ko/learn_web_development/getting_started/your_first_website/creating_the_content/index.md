@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_cont
 original_slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 HTML (**H**yper**t**ext **M**arkup **L**anguage)은 웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드입니다. 예를 들면, 콘텐츠는 여러 개의 문단, 글 머리 목록이 구조화된 것이거나 사진이나 데이터 테이블일 수도 있습니다. 제목과 같이 이 글은 HTML과 그 기능에 대한 기본적인 이해를 제공할 것입니다.
 
@@ -144,7 +144,8 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 <h4>My sub-subheading</h4>
 ```
 
-> **참고:** `<!--` 과 `-->` 사이에 있는 모든 것은 **HTML 주석** 입니다. 코드를 렌더링 할 때 브라우저는 주석을 무시합니다. 다른 의미로, 페이지에 그들은 존재하지 않고 코드에만 존재합니다. HTML 주석은 코드나 로직에 대한 유용한 참고를 적기 위한 방법입니다.
+> [!NOTE]
+> `<!--` 과 `-->` 사이에 있는 모든 것은 **HTML 주석** 입니다. 코드를 렌더링 할 때 브라우저는 주석을 무시합니다. 다른 의미로, 페이지에 그들은 존재하지 않고 코드에만 존재합니다. HTML 주석은 코드나 로직에 대한 유용한 참고를 적기 위한 방법입니다.
 
 지금 한번 해보세요, 여러분의 HTML 페이지에 있는 {{htmlelement("img")}} 요소 위에 적당한 제목을 추가합시다.
 
@@ -237,4 +238,4 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 
 여기서 우리는 HTML 맛보기를 하였습니다. 더 알아보기 위해, [HTML 배우기](/ko/docs/Learn_web_development/Core/Structuring_content) 페이지로 가보세요.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

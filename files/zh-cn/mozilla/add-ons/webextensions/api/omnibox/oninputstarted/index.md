@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当用户开始与扩展交互（在地址栏输入扩展的关键词以及一个空格）时触发。
 
 这个事件将在任何 {{WebExtAPIRef("omnibox.onInputChanged")}} 事件之前发送。

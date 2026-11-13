@@ -16,11 +16,11 @@ var aValue = localStorage.getItem(keyName);
 ### Parâmetros
 
 - _`keyName`_
-  - : Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.
+  - : Um {{jsxref("String")}} contendo o nome da chave cujo valor você quer obter.
 
 ### Retorno
 
-Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, é retornado null.
+Um {{jsxref("String")}} contendo o valor da chave. Se a chave não existe, é retornado null.
 
 ## Exemplo
 

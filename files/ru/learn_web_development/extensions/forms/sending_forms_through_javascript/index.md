@@ -404,4 +404,4 @@ Depending on the browser and the type of data you are dealing with, sending form
 - [How to build custom form widgets](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ru/docs/Learn_web_development/Extensions/Forms)

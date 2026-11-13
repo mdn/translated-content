@@ -21,7 +21,7 @@ formData.getAll(name);
 ### Parametros
 
 - `nome`
-  - : O {{domxref("USVString")}} representa o nome da chave que você quer pegar.
+  - : O {{jsxref("String")}} representa o nome da chave que você quer pegar.
 
 ### Retorno
 

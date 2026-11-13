@@ -3,8 +3,6 @@ title: <audio>
 slug: Web/HTML/Reference/Elements/audio
 ---
 
-{{HTMLSidebar}}
-
 **`<audio>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于在文档中嵌入音频内容。`<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者 {{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
 
 {{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
@@ -119,7 +117,7 @@ figure {
 其他使用说明：
 
 - 如果你没有声明 `controls` 属性，音频播放器不会包含浏览器的默认控件。但你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 创建自己的自定义控件。
-- 为了更精确地控制你的音频内容，`HTMLMediaElement` 会触发多种不同的 [事件](/zh-CN/docs/Web/Events#media)。这也提供了一个查看音频获取过程的方式，你可以查看错误或检测什么时候可以开始播放或操作。
+- 为了更精确地控制你的音频内容，`HTMLMediaElement` 会触发多种不同的 [事件](/zh-CN/docs/Web/API/Document_Object_Model/Events#media)。这也提供了一个查看音频获取过程的方式，你可以查看错误或检测什么时候可以开始播放或操作。
 - 你还可以使用 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 以从 JavaScript 代码直接生成和操纵音频流，而非流式播放已存在的音频文件。
 - `<audio>` 元素不能像 `<video>` 元素一样附加副标题（subtitle）或说明标题（caption）。更多有用的信息和解决方法参见 Ian Devlin 的 [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio)。
 
@@ -213,7 +211,7 @@ elem.audioTrackList.onremovetrack = function (event) {
 
 如果使用自动标题服务，人工检查生成内容是很重要的，这确保了标题能够准确的描述源音频。
 
-如何你的用户代理上的 `<audio>` 元素不直接支持 WebVTT。你必须寻找一个框架来为你提供这种能力，或者自己写代码来展示标题。一个选择是使用 {{HTMLElement("video")}} 元素，它是一定支持 WebVTT 的。
+`<audio>` 元素不直接支持 WebVTT。你必须寻找一个库或框架来为你提供这种能力，或者自己写代码来展示标题。一个选择是使用 {{HTMLElement("video")}} 元素，它是一定支持 WebVTT 的。
 
 进阶的来讲，语音的副标题和转录文字应该同时描述音乐与音效，因为它们也是音频的重要信息，包含了情绪与音调。举例子，在下面的 WebVTT 中，中括号里提供了关于音调与情绪的信息给观看者；通过这种方式（给出音乐，语言之外的声音，以及另一些至关重要的声音的描述）能够帮助建立起音频的氛围。
 
@@ -238,13 +236,12 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Your browser doesn't support HTML5 audio. Here is a
-    <a href="myAudio.mp4">link to download the audio</a> instead.
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
 
-- [MDN Subtitles and closed caption — Plugins](/zh-CN/docs/Glossary/Plugin)
 - [Web Video Text Tracks Format (WebVTT)](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.2_%E2%80%94_Providing_text_alternatives_for_time-based_media)

@@ -3,8 +3,6 @@ title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 ---
 
-{{HTMLSidebar}}
-
 **`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Reference/Elements/p) 元素组合在一起。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
@@ -79,12 +77,12 @@ hgroup p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、标题内容、可感知内容。
       </td>
@@ -105,7 +103,7 @@ hgroup p {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

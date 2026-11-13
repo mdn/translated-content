@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66afe9b59c609043c91e51487cfcecaecbbadb3d
 ---
 
-{{GlossarySidebar}}
-
 **凭证**是一种使系统能够做出{{glossary("authentication", "认证")}}决策的对象：例如，决定是否将用户登录到帐户中。
 
 在 Web 安全中，凭证的类型包括：

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/mpath
 original_slug: Web/SVG/Element/mpath
 ---
 
-{{SVGRef}}
-
 L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion")}}, il permet de référencer un élément {{SVGElement("path")}} pour définir le chemin utilisé par l'animation.
 
 ## Contexte d'utilisation
@@ -16,8 +14,8 @@ L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs Xlink](/fr/docs/Web/SVG/Reference/Attribute#attributs_xlink)
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Attributs spécifiques

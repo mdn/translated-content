@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 77e46a5b43f828fcc6bd30facddc6fc4bfe84f9b
 ---
 
-{{HTMLSidebar}}
-
 **`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
 
 某些输入类型具有默认的最小值。如果输入项没有默认的最小值，且 `min` 指定的值无法转换为有效的数字（或未设置最小值），则输入没有最小值。
@@ -56,12 +54,12 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;input type="number" min="0" step="5" max="100"></code></td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;input type="range" min="60" step="5" max="100"></code></td>
     </tr>
   </tbody>
@@ -90,7 +88,7 @@ l10n:
   <tbody>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/zh-CN/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/zh-CN/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td><code>&#x3C;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100&#x3C;/meter></code></td>
     </tr>
   </tbody>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 移动一个或多个标签页到同一窗口中的新位置或不同窗口中。
 
 只能将标签页移动到 {{WebExtAPIRef('windows.WindowType', 'WindowType')}} 属性为 `"normal"` 的窗口，或在 {{WebExtAPIRef('windows.WindowType', 'WindowType')}} 属性为 `"normal"` 的窗口中移动标签页。

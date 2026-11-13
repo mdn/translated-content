@@ -34,7 +34,7 @@ addEventListener(type, listener, useCapture);
 ### 参数
 
 - `type`
-  - : 表示监听[事件类型](/zh-CN/docs/Web/Events)的大小写敏感的字符串。
+  - : 表示监听[事件类型](/zh-CN/docs/Web/API/Document_Object_Model/Events)的大小写敏感的字符串。
 - `listener`
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - `options` {{optional_inline}}
@@ -467,9 +467,9 @@ addListener();
 
 ### 处理过程中 `this` 的值的问题
 
-通常来说 {{jsxref("Operators/this","this")}} 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。
+通常来说 {{jsxref("this")}} 的值是触发事件的元素的引用，这种特性在多个相似的元素使用同一个通用事件监听器时非常让人满意。
 
-当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("Operators/this","this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
+当使用 `addEventListener()` 为一个元素注册事件的时候，事件处理器里的 {{jsxref("this")}} 值是该元素的引用。其与传递给句柄的 event 参数的 `currentTarget` 属性的值一样。
 
 ```js
 my_element.addEventListener("click", function (e) {
@@ -763,5 +763,5 @@ window.addEventListener(
 ## 参见
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

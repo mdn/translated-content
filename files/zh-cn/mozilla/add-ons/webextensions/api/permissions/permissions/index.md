@@ -5,13 +5,11 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `Permissions` 对象用于表示权限的集合。
 
 ## 类型
 
-一个具有以下属性的 {{jsxref("object")}}：
+一个具有以下属性的 {{jsxref("Object")}}：
 
 - `origins` {{optional_inline}}
   - : 用于表示一系列的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)的[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组。

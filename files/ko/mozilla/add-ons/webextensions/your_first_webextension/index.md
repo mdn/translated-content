@@ -55,7 +55,8 @@ cd borderify
 - [content scripts에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [match patterns에 대해 더 알아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **경고:** [확장에 ID를 지정해야 할 수도 있습니다](/ko/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). 애드온 ID를 지정해야 한다면, `manifest.json` 파일에 `application` 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.```json
+> [!WARNING]
+> [확장에 ID를 지정해야 할 수도 있습니다](/ko/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id). 애드온 ID를 지정해야 한다면, `manifest.json` 파일에 `application` 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.```json
 > "applications": {
 > "gecko": {
 > "id": "borderify@example.com"

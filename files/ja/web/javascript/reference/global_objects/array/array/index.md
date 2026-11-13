@@ -1,11 +1,10 @@
 ---
 title: Array() コンストラクター
+short-title: Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 l10n:
-  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
+  sourceCommit: 06f8ebf948372dfb6c3c22d26d4f672c99cd4e0d
 ---
-
-{{JSRef}}
 
 **`Array()`** コンストラクターは {{jsxref("Array")}} オブジェクトを生成します。
 
@@ -33,12 +32,15 @@ Array(arrayLength)
 - `element1`, …, `elementN`
   - : JavaScript の配列は、与えられた要素で初期化されますが、 `Array` コンストラクターに単一の引数が渡され、その引数が数値であった場合は例外です (下記の `arrayLength` 引数を参照してください)。なお、この特殊な場合は JavaScript の配列が `Array` コンストラクターで生成されたときのみであり、角ブラケット構文で配列リテラルを作成した場合は当てはまりません。
 - `arrayLength`
-  - : `Array` コンストラクターに渡された唯一の引数が 0 から 2<sup>32</sup>-1 の間（両端を含む）の整数であった場合は、新しい JavaScript の配列を返し、その `length` プロパティがその値になります（**メモ:** これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を参照してください）。
+  - : `Array` コンストラクターに渡された唯一の引数が 0 から 2<sup>32</sup>-1 の間（両端を含む）の整数であった場合は、新しい JavaScript の配列を返し、その `length` プロパティがその値になります。
+
+  > [!NOTE]
+  > これは `arrayLength` 個の空のスロットを持つ配列であり、実際に `undefined` の値が入ったスロットではありません。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を参照してください。
 
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : 引数が数値 1 つ (`arrayLength`) だけであるものの、その値が整数でないか、 0 ～ 2<sup>32</sup> - 1 （両端を含む）の範囲内になかった場合に発生します。
+  - : 引数が数値 1 つ (`arrayLength`) だけであるものの、その値が整数でないか、 0 以上 2<sup>32</sup> - 1 以下でなかった場合に発生します。
 
 ## 例
 

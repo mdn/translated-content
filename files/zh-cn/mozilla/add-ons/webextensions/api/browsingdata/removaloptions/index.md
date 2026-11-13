@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 61fd66033bcc197a9d511dc95370ca042623ad5e
 ---
 
-{{AddonSidebar}}
-
 **`browsingData.RemovalOptions`** 类型包含控制浏览数据删除的某些方面的选项。
 
 ## 类型

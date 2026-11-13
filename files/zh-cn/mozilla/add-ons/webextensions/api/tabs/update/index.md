@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 导航到一个新的 URL 或修改标签页的其他属性。
 
 要使用此函数，传递要更新的标签页的 ID，以及一个包含要更新的属性的 `updateProperties` 对象。未在 `updateProperties` 中指定的属性不会被修改。

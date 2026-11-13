@@ -3,7 +3,7 @@ title: 多媒体：图片
 slug: Learn_web_development/Extensions/Performance/Multimedia
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 媒体，即图片和视频，占据了平均网站下载字节的 70% 以上。从下载性能的角度来看，消除媒体和减少文件大小是最容易解决的问题。本文将介绍优化图像和视频以改善网页性能的方法。
 
@@ -151,4 +151,4 @@ img {
 
 本节我们学习了图像优化的方法。你已经大概掌握了如何优化占一般网站带宽总量一半的图像。但这只是影响用户带宽和页面加载速度的媒体类型之一。接下来，我们要看看视频优化，它可以解决带宽消耗的另外 20%。
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

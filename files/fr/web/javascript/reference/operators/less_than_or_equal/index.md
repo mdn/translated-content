@@ -3,8 +3,6 @@ title: Inférieur ou égal (<=)
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur inférieur ou égal (`<=`) renvoie `true` si l'opérande gauche est inférieur ou égal à l'opérande droit et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Less than or equal operator")}}

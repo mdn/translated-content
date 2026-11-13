@@ -3,8 +3,6 @@ title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 ---
 
-{{AddonSidebar}}
-
 Une page Option vous permet de définir des préférences pour votre WebExtension que vos utilisateurs peuvent modifier. Les utilisateurs peuvent accéder à la page d'options de l'extension à partir du gestionnaire des add-ons du navigateur:
 
 {{EmbedYouTube("eODy24csH5M")}}
@@ -51,7 +49,8 @@ Vous devez également inclure une clé [`options_ui`](/fr/docs/Mozilla/Add-ons/W
 },
 ```
 
-> **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
+> [!NOTE]
+> **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
 Voir la page [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) pour les **options de partage** entre votre page d'options et les scripts d'arrière-plan ou de contenu.
 

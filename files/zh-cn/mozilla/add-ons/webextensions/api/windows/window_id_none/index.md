@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 用于表示不存在浏览器窗口的 `windowId`。
 
 ## 浏览器兼容性

@@ -3,8 +3,6 @@ title: HTML 属性：rel
 slug: Web/HTML/Reference/Attributes/rel
 ---
 
-{{HTMLSidebar}}
-
 **`rel`** 属性定义了所链接的资源与当前文档的关系，在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上有效。支持的值取决于拥有该属性的元素。
 
 关系的类型是由 `rel` 属性的值给出的，如果存在的话，它的值必须是一组无序的、唯一的、用空格隔开的关键字。与不表达语义的 `class` 名称不同，`rel` 属性必须使用对机器和人类都有语义的标记。目前关于 `rel` 属性的可能值的注册表是 [IANA 链接关系注册表](https://www.iana.org/assignments/link-relations/link-relations.xhtml)、[HTML 现行标准](https://html.spec.whatwg.org/multipage/links.html#linkTypes)和 microformats wiki 中可自由编辑的 [existing-rel-values 页面](https://microformats.org/wiki/existing-rel-values)（根据现行标准的[建议](https://html.spec.whatwg.org/multipage/links.html#other-link-types)）。如果使用一个不存在于上述三个来源之一的 `rel` 属性，一些 HTML 验证器（如 [W3C Markup Validation Service](https://validator.w3.org/)）会产生一个警告。
@@ -27,8 +25,8 @@ slug: Web/HTML/Reference/Attributes/rel
 | [`modulepreload`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload) | 告知浏览器预先获取该脚本，并将其存储在文档的模块映射中，以便稍后评估。也可以一同获取该模块的依赖关系。                                                                | 外部资源                | 不允许                                          | 不允许                  |
 | [`next`](#next)                                                                | 表示当前文档是一个系列的一部分，被引用的文档是该系列中的下一个文档。                                                                                                  | 链接                    | 链接                                            | 链接                    |
 | [`nofollow`](#nofollow)                                                        | 表示当前文档的原作者或出版商不认可被引用的文件。                                                                                                                      | 不允许                  | 注解                                            | 注解                    |
-| [`noopener`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener)           | 创建一个顶级浏览上下文。如果该超链接一开始就会创建其中之一，则该浏览上下文不是一个辅助浏览上下文（即有一个适当的 `target` 属性值）。                                  | 不允许                  | 不允许                                          | 注解                    |
-| [`noreferrer`](#noreferrer)                                                    | 不会包含 `Referer` 标头。和 `noopener` 效果类似。                                                                                                                     | 不允许                  | 注解                                            | 注解                    |
+| [`noopener`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener)           | 创建一个顶级浏览上下文。如果该超链接一开始就会创建其中之一，则该浏览上下文不是一个辅助浏览上下文（即有一个适当的 `target` 属性值）。                                  | 不允许                  | 注解                                            | 注解                    |
+| [`noreferrer`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noreferrer)       | 不会包含 `Referer` 标头。和 `noopener` 效果类似。                                                                                                                     | 不允许                  | 注解                                            | 注解                    |
 | [`opener`](#opener)                                                            | 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。                                                | 不允许                  | 注解                                            | 注解                    |
 | [`pingback`](#pingback)                                                        | 给出处理当前文档 pingback 的 pingback 服务器的地址。                                                                                                                  | 外部资源                | 不允许                                          | 不允许                  |
 | [`preconnect`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)       | 指定用户代理应预先连接到目标资源的来源。                                                                                                                              | 外部资源                | 不允许                                          | 不允许                  |

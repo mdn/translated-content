@@ -1,24 +1,23 @@
 ---
 title: String.prototype.trimEnd()
+short-title: trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`trimEnd()`** は {{jsxref("String")}} 値のメソッドで、元の文字列を変更せずに、文字列の末尾のホワイトスペースを削除した新しい文字列を返します。`trimRight()` はこのメソッドの別名です。
 
-**`trimEnd()`** メソッドは、元の文字列を変更せずに、文字列の末尾のホワイトスペースを削除した新しい文字列を返します。`trimRight()` はこのメソッドの別名です。
-
-{{InteractiveExample("JavaScript デモ: String.trimEnd()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.trimEnd()")}}
 
 ```js interactive-example
 const greeting = "   Hello world!   ";
 
 console.log(greeting);
-// Expected output: "   Hello world!   ";
+// 予想される結果: "   Hello world!   ";
 
 console.log(greeting.trimEnd());
-// Expected output: "   Hello world!";
+// 予想される結果: "   Hello world!";
 ```
 
 ## 構文
@@ -28,6 +27,10 @@ trimEnd()
 
 trimRight()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -70,5 +73,6 @@ console.log(str); // '   foo'
 ## 関連情報
 
 - [`String.prototype.trimEnd` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims による `String.prototype.trimEnd` のポリフィル](https://www.npmjs.com/package/string.prototype.trimend)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimStart()")}}

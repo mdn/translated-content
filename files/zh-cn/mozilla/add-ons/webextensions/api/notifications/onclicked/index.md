@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当用户点击通知并且点击的并不是通知的按钮时触发（对于点击按钮的事件，参见 {{WebExtAPIRef("notifications.onButtonClicked")}}）。
 
 ## 语法

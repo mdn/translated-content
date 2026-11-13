@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`blink()`** 메서드는 `<blink>`요소(`<blink>str</blink>`)에 해당 문자열을 집어넣은 문자열을 생성하여 해당 문자열을 깜빡이게 만듭니다.
 
@@ -45,7 +45,8 @@ document.body.innerHTML = contentString.blink();
 <blink>Hello, world</blink>
 ```
 
-> **경고:** `blink`는 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
+> [!WARNING]
+> `blink`는 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
 
 또한 깜빡이는 객체 사용을 피해야 합니다.
 

@@ -4,8 +4,6 @@ slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 original_slug: Web/Manifest/theme_color
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Manifest")}}
-
 <table>
   <tbody>
     <tr>

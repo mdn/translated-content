@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
-
 描述特定 Web 请求安全属性的对象。此类型的对象由 {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API 返回。
 
 如果请求未使用 [TLS](/zh-CN/docs/Glossary/TLS) 加密，则此对象将只包含取值为 `"insecure"` 的 `state` 属性。

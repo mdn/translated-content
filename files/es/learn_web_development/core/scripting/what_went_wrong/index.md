@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Cuando construiste el juego "Adivina el número" en el artículo anterior, es posible que hayas descubierto que no funcionó. Tranquilo — este artículo tiene como objetivo evitar que te rasques la cabeza por este tipo de problemas brindándote algunos consejos sobre cómo encontrar y corregir errores en programas JavaScript.
 
@@ -247,4 +247,4 @@ Ahí lo tienes, los conceptos básicos para descubrir errores en programas senci
 - Hay muchos otros tipos de errores que no se enumeran aquí; estamos compilando una referencia que explica lo que significan en detalle; consulta la [referencia de error de JavaScript](/es/docs/Web/JavaScript/Reference/Errors).
 - Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}
