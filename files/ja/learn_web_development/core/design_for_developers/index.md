@@ -64,7 +64,7 @@ l10n:
 リソース:
 
 - [アクセシビリティの概要](/ja/docs/Learn_web_development/Core/Accessibility)
-- [Inclusive design principles](https://inclusivedesignprinciples.org/) (inclusivedesignprinciples.org)
+- [Inclusive design principles](https://inclusivedesignprinciples.info/)
 
 ## デザイン概要
 

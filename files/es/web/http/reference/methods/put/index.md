@@ -32,7 +32,7 @@ La diferencia entre el método `PUT` y el método {{HTTPMethod("POST")}} es que 
     </tr>
     <tr>
       <th scope="row">
-        Permitido en <a href="/es/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Permitido en <a href="/es/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

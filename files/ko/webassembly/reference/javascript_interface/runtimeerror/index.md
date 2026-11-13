@@ -46,7 +46,7 @@ _`RuntimeError` 생성자에는 고유 한 고유 속성이 없지만 프로토 
 
 _`RuntimeError` 생성자에는 자체 메서드가 없지만 프로토 타입 체인을 통해 일부 메서드를 상속합니다._
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toSource()")}}
   - : 동일한 오류로 평가 될 수있는 코드를 반환합니다. {{jsxref ( "Error")}}에서 상속됩니다.
 - {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
   - : 지정된 `Error` 객체를 나타내는 문자열을 반환합니다. {{jsxref ( "Error")}}에서 상속됩니다.

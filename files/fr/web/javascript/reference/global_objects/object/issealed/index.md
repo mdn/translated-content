@@ -1,32 +1,33 @@
 ---
-title: Object.isSealed()
+title: "Object : méthode statique isSealed()"
+short-title: isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode statique **`Object.isSealed()`** permet de déterminer si un objet est [scellé](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
-La méthode **`Object.isSealed()`** permet de déterminer si un objet est scellé.
-
-{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Object.isSealed()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  toto: 42,
 };
 
-console.log(Object.isSealed(object1));
-// Expected output: false
+console.log(Object.isSealed(object));
+// Résultat attendu : false
 
-Object.seal(object1);
+Object.seal(object);
 
-console.log(Object.isSealed(object1));
-// Expected output: true
+console.log(Object.isSealed(object));
+// Résultat attendu : true
 ```
 
 ## Syntaxe
 
-```js
-Object.isSealed(obj);
+```js-nolint
+Object.isSealed(obj)
 ```
 
 ### Paramètres
@@ -36,17 +37,19 @@ Object.isSealed(obj);
 
 ### Valeur de retour
 
-Un booléen indiquant si l'objet est scellé ou non.
+Un booléen ({{JSxRef("Boolean")}}) indiquant si l'objet est scellé ou non.
 
 ## Description
 
-Renvoie `true` si l'objet est scellé, `false` sinon. Un objet scellé est un objet qui n'est pas {{jsxref("Object.isExtensible", "extensible","",1)}} et dont toutes les propriétés sont non-configurables (on ne peut donc pas les retirer, en revanche on peut avoir un droit de modification).
+Retourne `true` si l'objet est scellé, `false` sinon. Un objet est scellé s'il n'est pas {{JSxRef("Object/isExtensible", "extensible", "", 1)}} et si toutes ses propriétés ne sont pas configurables et donc pas supprimables (mais pas nécessairement non modifiables).
 
 ## Exemples
 
+### Utiliser `Object.isSealed()`
+
 ```js
-// Par défaut, les objets ne sont pas scellés
-var vide = {};
+// Les objets ne sont pas scellés par défaut.
+const vide = {};
 Object.isSealed(vide); // false
 
 // Si un objet vide est rendu non-extensible,
@@ -54,53 +57,56 @@ Object.isSealed(vide); // false
 Object.preventExtensions(vide);
 Object.isSealed(vide); // true
 
-// Ce qui n'est pas vrai pour un objet non-vide,
-// sauf si toutes ses propriétés sont non-configurables
-var avecPropriétés = { pif: "paf pouf" };
-Object.preventExtensions(avecPropriétés);
-Object.isSealed(avecPropriétés); // false
+// Ce n'est pas le cas d'un objet non vide,
+// sauf si toutes ses propriétés sont non configurables.
+const hasProp = { fee: "fie foe fum" };
+Object.preventExtensions(hasProp);
+Object.isSealed(hasProp); // false
 
-// Si on rend les propriétés non configurables,
-// l'objet est scellé
-Object.defineProperty(avecPropriétés, "pif", { configurable: false });
-Object.isSealed(avecPropriétés); // true
+// Mais si vous les rendez toutes non configurables,
+// l'objet devient scellé.
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
+});
+Object.isSealed(hasProp); // true
 
-// La méthode la plus simple est d'utiliser Object.seal.
-var scellé = {};
-Object.seal(scellé);
-Object.isSealed(scellé); // true
+// Le moyen le plus simple de sceller un objet, bien sûr,
+// est Object.seal.
+const scelle = {};
+Object.seal(scelle);
+Object.isSealed(scelle); // true
 
-// Un objet scellé est, par définition, non-extensible
-Object.isExtensible(scellé); // false
+// Un objet scellé est, par définition, non-extensible.
+Object.isExtensible(scelle); // false
 
-// Un objet scellé peut être gelé mais ce n'est pas
-// nécessaire. gelé signifie que les propriétés ne
-// peuvent pas être modifiées
-Object.isFrozen(scellé); // true
+// Un objet scellé peut être gelé,
+// mais ce n'est pas obligatoire.
+Object.isFrozen(scelle); // true
+// (toutes les propriétés également non modifiables)
 
-var s2 = Object.seal({ p: 3 });
-Object.isFrozen(s2); // false ("p" est toujours modifiable)
+const s2 = Object.seal({ p: 3 });
+Object.isFrozen(s2); // false
+// ('p' est toujours modifiable)
 
-var s3 = Object.seal({
+const s3 = Object.seal({
   get p() {
     return 0;
   },
 });
-// pour les accesseurs, seule l'accès en
-// configuration est important
 Object.isFrozen(s3); // true
+// (seule la possibilité de configuration compte pour les propriétés d'accès)
 ```
 
-## Notes
+### Argument d'une valeur primitive
 
-Pour ES5, si l'argument passé à la méthode n'est pas un objet mais une valeur d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015, une valeur qui n'est pas un objet sera traitée comme si c'était un objet scellé et la méthode renverra `true`.
+Dans ES5, si l'argument passé à cette méthode n'est pas un objet (un primitif), cela entraîne une exception {{JSxRef("TypeError")}}. Dans ES2015, elle retourne `false` sans aucune erreur si un argument non-objet est passé, puisque les primitifs sont, par définition, immuables.
 
 ```js
 Object.isSealed(1);
-// TypeError: 1 is not an object (ES5 code)
+// TypeError: 1 n'est pas un objet (code ES5)
 
 Object.isSealed(1);
-// true                          (ES2015 code)
+// true                          (code ES2015)
 ```
 
 ## Spécifications
@@ -113,8 +119,8 @@ Object.isSealed(1);
 
 ## Voir aussi
 
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+- La méthode statique {{JSxRef("Object.seal()")}}
+- La méthode statique {{JSxRef("Object.preventExtensions()")}}
+- La méthode statique {{JSxRef("Object.isExtensible()")}}
+- La méthode statique {{JSxRef("Object.freeze()")}}
+- La méthode statique {{JSxRef("Object.isFrozen()")}}

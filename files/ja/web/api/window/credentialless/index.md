@@ -12,7 +12,7 @@ l10n:
 
 このコンテキストは、そのオリジンに関連するネットワーク、クッキー、ストレージデータにアクセスすることはありません。それは最上位の文書の寿命に依存する新しいコンテキストを使用します。返ると、{{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールが解除され、COEP を設定した文書はそうでないサードパーティ文書を埋め込むことができます。
 
-より詳しい説明は、[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
+より詳しい説明は、[無信頼の iframe](/ja/docs/Web/HTTP/Guides/IFrame_credentialless) を参照してください。
 
 ## 値
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef}}{{Deprecated_Header}}
+{{APIRef}}
 
 當裝置的方向改變時，會觸發 `orientationchange` 事件。
 

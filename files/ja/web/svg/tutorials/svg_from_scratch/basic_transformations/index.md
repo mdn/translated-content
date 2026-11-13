@@ -102,7 +102,7 @@ svg {
 </math>
 <!-- prettier-ignore-end -->
 
-[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Reference/Attribute/transform#行列)を参照してください。座標変換の詳細については、[CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)ガイドを調べてください。
+[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Reference/Attribute/transform#行列)を参照してください。座標変換の詳細については、[CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms/Using)ガイドを調べてください。
 
 ## 座標系に与える効果
 

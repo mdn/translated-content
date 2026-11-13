@@ -3,8 +3,6 @@ title: browserAction.getBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeTextColor
 ---
 
-{{AddonSidebar}}
-
 Obtient la couleur du texte du badge de l'action du navigateur.
 
 A partir de Firefox 63, à moins que la couleur du texte du badge ne soit explicitement définie à l'aide de {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}, la couleur du texte du badge sera automatiquement définie en noir ou blanc afin d'optimiser le contraste avec la couleur de fond du badge spécifié. Par exemple, si vous définissez la couleur de fond du badge sur blanc, la couleur par défaut du texte du badge sera définie sur noir, et vice versa.

@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/exsl/node-set
 original_slug: Web/EXSLT/exsl/node-set
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `exsl:node-set()` devuelve un conjunto de nodos (node-set) de un fragmento de árbol resultante, que es lo que obtienes cuando miras en `xsl:variable` en vez de su atributo select para seleccionar el valor de la variable. Esto te permite procesar XML creado dentro de una variable en vez de procesarlo en múltiples pasos.
 

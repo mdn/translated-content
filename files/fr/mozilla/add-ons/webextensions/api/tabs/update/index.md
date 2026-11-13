@@ -3,8 +3,6 @@ title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
 
-{{AddonSidebar}}
-
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 
 Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans `updateProperties` ne sont pas modifiées.

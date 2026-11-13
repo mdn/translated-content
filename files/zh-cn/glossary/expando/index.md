@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 Expando 属性是 {{glossary("JavaScript")}} 添加到 {{glossary("DOM")}} 节点的属性，这类属性不属于{{glossary("object", "对象")}} DOM 规范：
 
 ```js

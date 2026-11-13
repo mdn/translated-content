@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/document
 original_slug: Web/XPath/Functions/document
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `document` 함수는 하나 또는 여러 외부 문서에서 노드 집합을 찾고 결과 노드 집합을 반환합니다.
 

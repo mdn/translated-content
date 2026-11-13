@@ -3,7 +3,7 @@ title: mousewheel
 slug: Web/API/Element/mousewheel_event
 ---
 
-{{APIRef}} {{deprecated_header}} {{ Non-standard_header() }}
+{{APIRef}} {{ Non-standard_header() }}
 
 *过时*且*非标准*的 `mousewheel` 事件在{{ domxref("Element", "元素", "", 1) }}上异步触发，以在操作鼠标滚轮或类似设备时提供更新。`mousewheel` 事件从未成为任何标准的一部分，虽然它被多个浏览器实现，但 Firefox 从未实现过该事件。
 

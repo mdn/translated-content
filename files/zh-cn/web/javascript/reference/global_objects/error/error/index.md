@@ -3,8 +3,6 @@ title: Error() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
 
-{{JSRef}}
-
 **`Error()`** 构造函数能够创建一个包含错误信息的对象。
 
 ## 语法
@@ -42,7 +40,7 @@ Error(message, fileName, lineNumber)
 
 ### 函数调用与构造函数
 
-当 `Error` 作为函数使用，即不包含 {{JSxRef("Operators/new", "new")}} 关键字时，它将返回一个 Error 对象。因此，直接调用 `Error` 函数将产生与使用 `new` 关键字构造 `Error` 对象相同的输出。
+当 `Error` 作为函数使用，即不包含 {{JSxRef("new")}} 关键字时，它将返回一个 Error 对象。因此，直接调用 `Error` 函数将产生与使用 `new` 关键字构造 `Error` 对象相同的输出。
 
 ```js
 const x = Error("I was created using a function call!");

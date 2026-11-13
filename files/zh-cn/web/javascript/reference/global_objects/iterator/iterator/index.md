@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`Iterator()`** 构造函数旨在用作创建迭代器的其他类的[超类](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。它在本身被构造时会抛出错误。
 

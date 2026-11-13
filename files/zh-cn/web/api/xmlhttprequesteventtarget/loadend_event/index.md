@@ -1,7 +1,6 @@
 ---
 title: loadend
 slug: Web/API/XMLHttpRequestEventTarget/loadend_event
-original_slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
 {{APIRef("XMLHttpRequest API")}}
@@ -28,7 +27,7 @@ loadend 事件总是在一个资源的加载进度停止之后被触发 (例如�
 | Property                              | Type                       | Description                                                                                                                                                    |
 | ------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}           | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                         |
-| `type` {{readonlyInline}}             | {{domxref("DOMString")}}   | The type of event.                                                                                                                                             |
+| `type` {{readonlyInline}}             | {{jsxref("String")}}       | The type of event.                                                                                                                                             |
 | `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                     |
 | `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                       |
 | `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |

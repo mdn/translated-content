@@ -121,7 +121,7 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 
 HTTP 请求如下：
 
-```plain
+```http
 GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
@@ -153,7 +153,7 @@ Host: foo.com
 
 当使用`POST`方法提交表单时，没有数据会附加到 URL，HTTP 请求看起来是这样的，而请求主体中包含的数据是这样的：
 
-```plain
+```http
 POST / HTTP/2.0
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -217,7 +217,7 @@ HTTP 请求永远不会显示给用户 (如果你想要看到它们，你需要�
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
 这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
-```plain
+```python
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
@@ -301,7 +301,7 @@ if __name__ == "__main__":
 
 跨站脚本 (XSS) 和跨站点请求伪造 (CSRF) 是常见的攻击类型，它们发生在当你将用户发送的数据显示给这个用户或另一个用户时。
 
-XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
+XSS 允许攻击者将客户端脚本注入到其他用户查看的 Web 页面中。攻击者可以使用跨站点脚本攻击的漏洞来绕过诸如[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)之类的访问控制。这些攻击的影响可能从一个小麻烦到一个重大的安全风险。
 
 CSRF 攻击类似于 XSS 攻击，因为它们以相同的方式开始攻击——向 Web 页面中注入客户端脚本——但它们的目标是不同的。CSRF 攻击者试图将权限升级到特权用户 (比如站点管理员) 的级别，以执行他们不应该执行的操作 (例如，将数据发送给一个不受信任的用户)。
 

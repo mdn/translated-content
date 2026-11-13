@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
 
@@ -14,12 +14,12 @@ Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs,
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >compréhension du HTML</a
-        >, et<a href="/fr/docs/Learn/HTML/Introduction_to_HTML"> </a
+        >, et<a href="/fr/docs/Learn_web_development/Core/Structuring_content"> </a
         >connaissances de base de
-        <a href="/fr/docs/Web/HTTP/Basics_of_HTTP">HTTP </a>et
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Web/HTTP">HTTP </a>et
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation côté serveur.</a
         >
       </td>
@@ -50,7 +50,7 @@ Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et conv
 
 ## Côté client : définition de la méthode d'envoi des données
 
-L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) et [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
+L'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) et [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ### L'attribut action
 
@@ -74,14 +74,14 @@ Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Re
 <form></form>
 ```
 
-De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action) était requis. Il n'y en a donc plus besoin.
+De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action) était requis. Il n'y en a donc plus besoin.
 
 ```html
 <form action="#"></form>
 ```
 
 > [!NOTE]
-> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Reference/Elements/form#action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
 
 ### L'attribut method
 
@@ -134,7 +134,7 @@ Host: foo.com
 
 La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
-Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method).
+Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
+- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#la_méthode_post) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. C'est un modèle [Jinja2](https://jinja.palletsprojects.com/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > [!NOTE]
@@ -268,8 +268,8 @@ Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type
 
 Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
 
-- régler l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
-- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
+- régler l'attribut [`method`](/fr/docs/Web/HTML/Reference/Elements/form#method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
+- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Reference/Elements/form#enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
 - incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
 
 Par exemple :
@@ -301,7 +301,7 @@ Alors, comment combattre ces menaces ? Ce sujet va bien au-delà de ce guide, ma
 
 Toute donnée qui va dans un serveur doit être vérifiée et nettoyée. Toujours. Sans exception.
 
-- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
+- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
 - **Limitez la quantité de données entrantes pour n'autoriser que ce qui est nécessaire**.
 - **Sandbox des fichiers téléchargés**. Stockez-les sur un serveur différent et n'autorisez l'accès au fichier que par un sous-domaine différent ou, mieux encore, par un domaine complètement différent.
 
@@ -319,4 +319,4 @@ Si vous voulez en savoir plus par rapport aux applications web, vous pouvez cons
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) (Projet pour la sécurité des applications dans un Web ouvert)
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
-{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

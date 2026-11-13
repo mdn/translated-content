@@ -48,7 +48,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
   - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Reference/Elements/a#rel) 属性を反映するトークンのリストを返します。
 - {{domxref("HTMLAnchorElement.search")}}
-  - : 参照する URL の検索要素（先頭の疑問符 (`?`) を含む）をがあれば、それを表す文字列です。
+  - : 参照する URL の検索要素（先頭の疑問符 (`?`) を含む）があれば、それを表す文字列です。
 - {{domxref("HTMLAnchorElement.target")}}
   - : 文字列で、リンク先リソースを表示する場所を示す HTML の [`target`](/ja/docs/Web/HTML/Reference/Elements/a#target) 属性を反映します。
 - {{domxref("HTMLAnchorElement.text")}}

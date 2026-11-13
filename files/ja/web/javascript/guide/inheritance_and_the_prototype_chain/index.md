@@ -2,10 +2,8 @@
 title: 継承とプロトタイプチェーン
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 4fc928963dcb04fece336fb3a2f34958fa4bdcb3
 ---
-
-{{jsSidebar("Advanced")}}
 
 プログラミングにおいて、「継承」とは親から子へと特性を渡すことを指し、新しいコードが既存のコードの機能を再利用し、その上に構築できるようにします。 JavaScript では、[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)を用いて継承が実装されています。それぞれのオブジェクトは、プロトタイプと呼ばれる別のオブジェクトへの内部リンクを保持しています。そのプロトタイプオブジェクトは、さらに自身のプロトタイプを持っており、 `null` をプロトタイプとして持つオブジェクトに到達するまで、このプロセスが繰り返されます。定義上、 `null` にはプロトタイプが存在せず、**プロトタイプチェーン**の最終リンクとして機能します。プロトタイプチェーンのメンバーを変更したり、実行時にプロトタイプを入れ替えたりすることも可能であるため、 JavaScript では[静的呼び出し](https://en.wikipedia.org/wiki/Static_dispatch)のような概念は存在しません。
 
@@ -323,7 +321,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 その裏側で何が起こっているのか、もう少し詳しく見てみましょう。
 
-JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://learn.microsoft.com/ja/archive/microsoft-edge/legacy/developer/)を参照してください。
+JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://learn.microsoft.com/ja/archive/microsoft-edge/legacy/developer/)を参照してください。）
 
 ```js
 function doSomething() {}

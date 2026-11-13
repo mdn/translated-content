@@ -2,12 +2,10 @@
 title: Alignment subject (配置対象物)
 slug: Glossary/Alignment_Subject
 l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{GlossarySidebar}}
-
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)では、**配置対象物**はそのプロパティによって{{glossary("alignment container","配置コンテナー")}}内に配置されるものを指します。
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)では、**配置対象物**はそのプロパティによって{{glossary("alignment container","配置コンテナー")}}内に配置されるものを指します。
 
 {{cssxref("justify-self")}} や {{cssxref("align-self")}} が設定されている場合、配置対象物はこれらのプロパティが設定されているボックスのマージンボックスです。そのボックスの書字方向を使用します。{{cssxref("justify-content")}} や {{cssxref("align-content")}} の場合は、ボックスの書字方向も使用されます。
 
@@ -24,6 +22,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
 - 関連用語:
   - {{Glossary("alignment container","配置コンテナー")}}

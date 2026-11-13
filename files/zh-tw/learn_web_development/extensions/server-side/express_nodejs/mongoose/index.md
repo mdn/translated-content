@@ -372,15 +372,17 @@ query.exec(function (err, athletes) {
 
 下面的代碼片段，與我們上面的查詢相同，並有年齡的附加條件。
 
-```plain
-Athlete.
-  find().
-  where('sport').equals('Tennis').
-  where('age').gt(17).lt(50).  //Additional where query
-  limit(5).
-  sort({ age: -1 }).
-  select('name age').
-  exec(callback); // where callback is the name of our callback function.
+```js
+Athlete.find()
+  .where("sport")
+  .equals("Tennis")
+  .where("age")
+  .gt(17)
+  .lt(50) //Additional where query
+  .limit(5)
+  .sort({ age: -1 })
+  .select("name age")
+  .exec(callback); // where callback is the name of our callback function.
 ```
 
 [find()](http://mongoosejs.com/docs/api.html#query_Query-find) 方法獲取所有匹配的記錄，但通常你只想獲得一個匹配。以下方法可以查詢單個記錄：

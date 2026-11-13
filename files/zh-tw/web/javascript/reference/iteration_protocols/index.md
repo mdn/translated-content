@@ -180,7 +180,7 @@ new WeakSet(
 ).has(myObj); // true
 ```
 
-另外可參考 {{jsxref("Promise.all", "Promise.all(iterable)")}}、{{jsxref("Promise.race", "Promise.race(iterable)")}} 以及 {{jsxref("Array.from", "Array.from()")}}。
+另外可參考 {{jsxref("Promise.all", "Promise.all(iterable)")}}、{{jsxref("Promise.race", "Promise.race(iterable)")}} 以及 {{jsxref("Array.from()")}}。
 
 ### 用於可迭代物件的語法
 

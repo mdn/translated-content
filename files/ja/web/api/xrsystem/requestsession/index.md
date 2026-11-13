@@ -97,7 +97,7 @@ requestSession(mode, options)
 | `unbounded`     | 常に必要                         | `xr-spatial-tracking` |
 | `viewer`        | 常に必要                         | —                     |
 
-[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)も参照してください。
+[ユーザーによる一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)も参照してください。
 
 ## 例
 

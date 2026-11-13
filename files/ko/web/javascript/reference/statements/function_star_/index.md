@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 {{jsSidebar("Statements")}}
 
-**`function*`** 선언 (끝에 별표가 있는 `function` keyword) 은 _generator function_ 을 정의하는데, 이 함수는 {{jsxref("Global_Objects/Generator","Generator")}} 객체를 반환합니다.
+**`function*`** 선언 (끝에 별표가 있는 `function` keyword) 은 _generator function_ 을 정의하는데, 이 함수는 {{jsxref("Generator")}} 객체를 반환합니다.
 
 {{InteractiveExample("JavaScript Demo: Statement - Function*")}}
 
@@ -24,7 +24,7 @@ console.log(gen.next().value);
 // Expected output: 20
 ```
 
-generator function 은 {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} 생성자와 {{jsxref("Operators/function*", "function* expression")}} 을 사용해서 정의할 수 있습니다.
+generator function 은 {{jsxref("GeneratorFunction")}} 생성자와 {{jsxref("Operators/function*", "function* expression")}} 을 사용해서 정의할 수 있습니다.
 
 ## 문법
 
@@ -136,7 +136,7 @@ var obj = new f(); // throws "TypeError: f is not a constructor"
 - {{jsxref("Function")}} object
 - {{jsxref("Statements/function", "function declaration")}}
 - {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions", "Functions and function scope")}}
 - Other web resources:
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)

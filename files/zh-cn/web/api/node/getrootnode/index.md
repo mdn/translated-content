@@ -9,7 +9,7 @@ slug: Web/API/Node/getRootNode
 
 ## 语法
 
-```plain
+```js
 var root = node.getRootNode(options);
 ```
 

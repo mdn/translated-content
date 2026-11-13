@@ -1,30 +1,26 @@
 ---
-title: Document.readyState
+title: "Document : propriété readyState"
+short-title: readyState
 slug: Web/API/Document/readyState
+l10n:
+  sourceCommit: e32d6804e733d48e5a0917bc3ae45aee4798613d
 ---
 
 {{APIRef("DOM")}}
 
-La valeur **Document.readyState** est une propriété de {{ domxref("document") }} qui décrit l'état de chargement du document.
+La propriété **`readyState`** de l'interface {{DOMxRef("Document")}} décrit l'état de chargement du document.
+Lorsque la valeur de cette propriété change, un évènement {{DOMxRef("Document/readystatechange_event", "readystatechange")}} est déclenché sur l'objet {{DOMxRef("document")}}.
 
-À chaque évolution de la valeur, un évenement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event) est émis dans l'objet {{ domxref("document") }}.
+## Valeur
 
-## Syntaxe
+L'état `readyState` d'un document peut être l'un des suivants&nbsp;:
 
-```js
-var string = document.readyState;
-```
-
-### Valeurs
-
-La variable `readyState` peut valoir&nbsp;:
-
-- **`loading`**
-  - : Le {{ domxref("document") }} est encore en chargement.
-- **`interactive`**
-  - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) a été émis.
-- **`complete`**
-  - : Le document et toutes les sous-ressources ont été chargés, et [`load`](/fr_docs/Web/API/Window/load_event) a été émis.
+- `loading`
+  - : Le {{DOMxRef("document")}} est encore en cours de chargement (c'est-à-dire que l'analyseur HTML est encore en train de travailler).
+- `interactive`
+  - : Le document a été analysé, mais les sous-ressources telles que les scripts {{DOMxRef("HTMLScriptElement/defer", "différés", "", 1)}} et les scripts de [module](/fr/docs/Web/JavaScript/Guide/Modules), les images, les feuilles de style et les cadres sont encore en cours de chargement. Une fois dans cet état, et après l'exécution des scripts différés et des modules, l'évènement {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}} est déclenché.
+- `complete`
+  - : Le document et toutes les sous-ressources ont été chargés. L'état indique que l'évènement {{DOMxRef("Window/load_event", "load")}} est sur le point de se déclencher.
 
 ## Exemples
 
@@ -35,55 +31,55 @@ switch (document.readyState) {
   case "loading":
     // Encore en chargement.
     break;
-  case "interactive":
-    // Le DOM est construit, on peut y accéder.
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
+  case "interactive": {
+    // Le document a fini de se charger et nous pouvons accéder aux éléments DOM.
+    // Les sous-ressources telles que les scripts, les images, les feuilles de style et les cadres sont encore en cours de chargement.
+    const span = document.createElement("span");
+    span.textContent = "Un élément <span>.";
     document.body.appendChild(span);
     break;
+  }
   case "complete":
     // La page est pleinement chargée.
     console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+      `La première règle CSS est : ${document.styleSheets[0].cssRules[0].cssText}`,
     );
     break;
 }
 ```
 
-### readystatechange comme alternative à DOMContentLoaded
+### `readystatechange` comme alternative à `DOMContentLoaded`
 
 ```js
 // alternative à DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
     initApplication();
   }
 };
 ```
 
-### readystatechange comme alternative à load
+### `readystatechange` comme alternative à `load`
 
 ```js
 // alternative à load
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
+document.onreadystatechange = () => {
+  if (document.readyState === "complete") {
     initApplication();
   }
 };
 ```
 
-### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
+### `readystatechange` comme écouteur d'évènement pour insérer ou modifier le DOM avant `DOMContentLoaded`
 
 ```js
-// Modification du document <body> dès que possible en utilisant un script externe
-var bootstrap = function (evt) {
-  if (evt.target.readyState === "interactive") {
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "interactive") {
     initLoader();
-  } else if (evt.target.readyState === "complete") {
+  } else if (event.target.readyState === "complete") {
     initApp();
   }
-};
-document.addEventListener("readystatechange", bootstrap, false);
+});
 ```
 
 ## Spécifications
@@ -96,6 +92,7 @@ document.addEventListener("readystatechange", bootstrap, false);
 
 ## Voir aussi
 
-- L'événement [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-- L'événement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-- L'événement [`load`](/fr_docs/Web/API/Window/load_event)
+- Les évènements associés&nbsp;:
+  - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
+  - {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{DOMxRef("Window/load_event", "load")}}

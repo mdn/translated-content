@@ -3,8 +3,6 @@ title: String.prototype.isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 值的 **`isWellFormed()`** 方法返回一个表示该字符串是否包含[单独代理项](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)的布尔值。
 
 ## 语法

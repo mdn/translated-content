@@ -24,7 +24,7 @@ Um objeto tornado não-extensível.
 
 ## Descrição
 
-Um objeto é extensível se novas propriedades puderem der adicionadas ao mesmo. `Object.preventExtensions()` marca um objeto como não mais extensível, de forma que este nunca terá novas propriedades além daquelas que o objeto tinha quando foi marcado como não-extensível. Note que as propriedades de um objeto não-extensível, em geral, ainda poderão ser _apagadas_. Tentativas de adicionar novas propriedades a um objeto não-extensível falharão, tanto silenciosamente ou lançando uma exceção {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).
+Um objeto é extensível se novas propriedades puderem der adicionadas ao mesmo. `Object.preventExtensions()` marca um objeto como não mais extensível, de forma que este nunca terá novas propriedades além daquelas que o objeto tinha quando foi marcado como não-extensível. Note que as propriedades de um objeto não-extensível, em geral, ainda poderão ser _apagadas_. Tentativas de adicionar novas propriedades a um objeto não-extensível falharão, tanto silenciosamente ou lançando uma exceção {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em {{jsxref("Strict_mode", "strict mode", "", 1)}}).
 
 `Object.preventExtensions()` evita apenas a adição de novas propriedades diretas. Proprieades ainda poderão ser adicionadas ao protótipo do objeto.
 

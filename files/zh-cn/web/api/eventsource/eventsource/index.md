@@ -16,7 +16,7 @@ pc = new EventSource(url, configuration);
 ### 参数
 
 - `url`
-  - : 一个{{domxref("USVString")}} ，它代表远程资源的位置
+  - : 一个{{jsxref("String")}} ，它代表远程资源的位置
 - `configuration` {{optional_inline}}
   - : 为配置新连接提供选项。可选项是：
     - `withCredentials`，默认为 `false`，指示 CORS 是否应包含凭据 ( credentials )。

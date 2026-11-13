@@ -4,8 +4,6 @@ slug: Learn_web_development/Extensions/Performance
 original_slug: Learn/Performance
 ---
 
-{{LearnSidebar}}
-
 La création de sites Web nécessite HTML, CSS, et JavaScript. Pour créer des sites Web et des applications que les gens veulent utiliser, qui attirent et fidélisent les utilisateurs, vous devez créer une bonne expérience utilisateur. Une bonne expérience utilisateur consiste à s'assurer que le contenu est rapide à charger et réactif à l'interaction de l'utilisateur. Ceci est connu sous le nom de **performance web**, et dans ce module, vous vous concentrerez sur les principes fondamentaux de la création de sites Web performants.
 
 Le reste de notre matériel d'apprentissage pour débutants a essayé de s'en tenir autant que possible aux meilleures pratiques du Web telles que les performances et l'[accessibilité](/fr/docs/Learn_web_development/Core/Accessibility),cependant, il est bon de se concentrer spécifiquement sur ces sujets et de s'assurer que vous les connaissez bien.
@@ -17,7 +15,7 @@ Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre
 Il serait également utile d'approfondir un peu ces sujets, avec des modules tels que:
 
 - [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
-- [Premiers pas avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
+- [Premiers pas avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started)
 - [Premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
 
 Une fois que vous aurez parcouru ce module, vous serez probablement ravi d'approfondir les performances Web — vous pouvez trouver de nombreux autres enseignement dans notre [section principale de performance Web MDN](/fr/docs/Web/Performance), y compris des aperçus des API de performance, des outils de test et d'analyse, et goulots d'étranglement des performances.

@@ -83,7 +83,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 
 ### 定义拖拽数据
 
-应用程序可以在拖拽操作中包含任意数量的数据项。每个数据项都是一个 {{domxref("DOMString","string")}} 类型，典型的 MIME 类型，如：`text/html`。
+应用程序可以在拖拽操作中包含任意数量的数据项。每个数据项都是一个 {{jsxref("String","string")}} 类型，典型的 MIME 类型，如：`text/html`。
 
 每个 {{domxref("DragEvent","drag event")}} 都有一个{{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，其中保存着事件的数据。这个属性（{{domxref("DataTransfer")}} 对象）也有管理拖拽数据的方法。{{domxref("DataTransfer.setData","setData()")}} 方法为拖拽数据添加一个项，如下面的示例代码所示：
 
@@ -99,7 +99,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-查看 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 [拖拽数据](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata) 获取更多有关拖拽数据的信息。
+参见[使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)，以了解更多信息。
 
 ### 定义拖拽图像
 
@@ -233,6 +233,6 @@ function dragstart_handler(ev) {
 ## 参见
 
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [HTML5 Living Standard：HTML5 拖放操作](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [来自 CanIUse 的拖放兼容数据](http://caniuse.com/#search=draganddrop)

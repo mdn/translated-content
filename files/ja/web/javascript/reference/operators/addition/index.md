@@ -69,12 +69,17 @@ false + false; // 0
 1n + 2n; // 3n
 ```
 
-長整数と数値のオペランドを混在させることはできません。
+加算で長整数と数値のオペランドを混在させることはできません。`null`、`undefined` および真偽値は数値に強制変換されるため、使用することはできません。
 
 ```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
-"1" + 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+文字列は他の型よりも優先されるため、文字列と長整数を加算すると `TypeError` ではなく文字列連結が行われます。
+
+```js
+"1" + 2n; // "12"
 ```
 
 長整数と長整数以外で加算を行うには、どちらかのオペランドを変換してください。

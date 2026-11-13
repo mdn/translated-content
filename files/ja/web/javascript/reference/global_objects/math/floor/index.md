@@ -1,11 +1,10 @@
 ---
 title: Math.floor()
+short-title: floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 l10n:
-  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.floor()`** は静的メソッドで、与えられた数値以下の最大の整数を返します。
 
@@ -13,16 +12,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.floor(5.95));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(Math.floor(5.05));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(Math.floor(5));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(Math.floor(-5.05));
-// Expected output: -6
+// 予想される結果: -6
 ```
 
 ## 構文
@@ -69,18 +68,18 @@ Math.floor(Infinity); // Infinity
 
 ```js
 /**
- * Adjusts a number to the specified digit.
+ * 数値を指定された桁数に調整します。
  *
- * @param {"round" | "floor" | "ceil"} type The type of adjustment.
- * @param {number} value The number.
- * @param {number} exp The exponent (the 10 logarithm of the adjustment base).
- * @returns {number} The adjusted value.
+ * @param {"round" | "floor" | "ceil"} type 調整する型。
+ * @param {number} value 数値。
+ * @param {number} exp 指数する（補正の底の10の対数）。
+ * @returns {number} 補正値。
  */
 function decimalAdjust(type, value, exp) {
   type = String(type);
   if (!["round", "floor", "ceil"].includes(type)) {
     throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.",
+      "小数点調整の型は、'round'、'floor'、'ceil' のいずれかである必要があります。",
     );
   }
   exp = Number(exp);
@@ -94,7 +93,7 @@ function decimalAdjust(type, value, exp) {
   const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
   // Shift back
   const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
-  return Number(`${newMagnitude}e${+newExponent + exp}`);
+  return Number(`${newMagnitude}e${Number(newExponent) + exp}`);
 }
 
 // Decimal round

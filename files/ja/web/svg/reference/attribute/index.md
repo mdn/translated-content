@@ -3,10 +3,10 @@ title: SVG 属性リファレンス
 short-title: 属性
 slug: Web/SVG/Reference/Attribute
 l10n:
-  sourceCommit: 594ae0d4ffb6326a9529fe366d30ca633309ee30
+  sourceCommit: 27bb49e1849433e05c964c8a645c448f184380ce
 ---
 
-SVG 要素は、その要素がどのように処理され描画されるべきかの詳細を指定する属性を使用して変更することができます。
+SVG 要素は、その要素の処理や描画方法を変更する属性を使用して変更することができます。
 
 以下は、すべての SVG 属性のリストです。各属性のリンク先のドキュメントでは、どの要素が属性に対応しているか、どのように動作するかを学ぶことができます。
 
@@ -20,6 +20,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("amplitude")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
+- {{SVGAttr("autofocus")}}
 - {{SVGAttr("azimuth")}}
 
 ### B
@@ -85,6 +86,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("fr")}}
 - {{SVGAttr("from")}}
 - {{SVGAttr("fx")}}
@@ -235,6 +237,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("targetY")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
 - {{SVGAttr("to")}}
@@ -256,6 +259,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 ### W
 
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
@@ -268,7 +272,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
@@ -290,36 +294,47 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 ## カテゴリー別の SVG 属性
 
-### 一般属性
+### コア属性
 
-- コア属性
-  - {{SVGAttr("id")}}
-  - {{SVGAttr("class")}}
-  - {{SVGAttr("style")}}
-  - {{SVGAttr("lang")}}
-  - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:lang")}}
-  - {{SVGAttr("xml:space")}}
+コア属性はグローバル属性です。
 
-- 条件処理属性
-  - {{SVGAttr("requiredExtensions")}}
-  - {{SVGAttr("requiredFeatures")}}
-  - {{SVGAttr("systemLanguage")}}
+- {{SVGAttr("autofocus")}}
+- {{SVGAttr("id")}}
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("lang")}}
+- {{SVGAttr("tabindex")}}
+- {{SVGAttr("xml:lang")}}
+- {{SVGAttr("xml:space")}}
+
+### 条件処理属性
+
+条件付き処理属性は、それらが設定された要素が処理されるかどうかを制御します。
+
+- {{SVGAttr("requiredExtensions")}}
+- {{SVGAttr("requiredFeatures")}}
+- {{SVGAttr("systemLanguage")}}
 
 ### XLink 属性
 
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
-- {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xlink:role")}}
-- {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:title")}}
-- {{SVGAttr("xlink:show")}}
-- {{SVGAttr("xlink:actuate")}}
+XLink 属性は、リソースを参照することができます。
+
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:type")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:role")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:arcrole")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:title")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:show")}} {{deprecated_inline}}
+- {{SVGAttr("xlink:actuate")}} {{deprecated_inline}}
 
 ### プレゼンテーション属性
 
-> [!NOTE]
-> すべての SVG プレゼンテーション属性が CSS プロパティとして使用できます。
+SVG のプレゼンテーション属性とは、SVG 要素に対して CSS プロパティとしても使用できる SVG 属性のことです。
+これらは、詳細度 `0` で要素に CSS プロパティの値を設定するため、スタイルシート内の他の作成者スタイルや {{SVGAttr("style")}} 属性によって上書きされる可能性があります。
+プレゼンテーション属性の値は、宣言ではなく CSS 値として構文解析されるため、`!important` を含めることはできません。
+
+ほとんどのプレゼンテーション属性は、CSS プロパティとして使用された場合、継承されます（例えば {{cssxref("fill")}} や {{cssxref("stroke")}}）。
+[幾何プロパティ](#幾何プロパティ)が主な例外です。これらに対応する CSS プロパティは継承されません。
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -349,6 +364,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("height")}}
@@ -362,6 +378,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
+- {{SVGAttr("pathLength")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("r")}}
 - {{SVGAttr("rx")}}
@@ -379,6 +396,7 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -386,14 +404,38 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
 - {{SVGAttr("width")}}
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 
+#### 幾何プロパティ
+
+幾何プロパティは、SVG 図形の位置やサイズを記述します。
+[SVG 2](https://svgwg.org/svg2-draft/geometry.html) において、これらはプレゼンテーション属性の定義されたサブセットであり、対応する CSS プロパティは継承されません。
+
+それぞれの幾何プロパティは、特定の要素に対してのみプレゼンテーション属性として適用されます。
+例えば、{{SVGAttr("r")}} は {{SVGElement("circle")}} の半径を定義しますが、{{SVGElement("rect")}} などの要素には効果がありません。
+
+SVG の幾何プロパティは以下の通りです。
+
+- {{cssxref("cx")}}
+- {{cssxref("cy")}}
+- {{cssxref("d")}}
+- {{cssxref("r")}}
+- {{cssxref("rx")}}
+- {{cssxref("ry")}}
+- {{cssxref("x")}}
+- {{cssxref("y")}}
+- {{cssxref("width")}}
+- {{cssxref("height")}}
+
+要素ごとの適用性については、それぞれのプロパティの属性ページおよび {{SVGElement("g")}} 要素ページの一覧を参照してください。
+
 ### フィルター属性
 
-- フィルタープリミティブ属性
+- フィルタープリミティブ属性（プレゼンテーション属性）
   - : {{SVGAttr("height")}}, {{SVGAttr("result")}}, {{SVGAttr("width")}}, {{SVGAttr("x")}}, {{SVGAttr("y")}}
 - 座標変換関数属性
   - : {{SVGAttr("type")}}, {{SVGAttr("tableValues")}}, {{SVGAttr("slope")}}, {{SVGAttr("intercept")}}, {{SVGAttr("amplitude")}}, {{SVGAttr("exponent")}}, {{SVGAttr("offset")}}
@@ -413,73 +455,11 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 ### イベント属性
 
-- **`onabort`**
-- **`onactivate`**
-- **`onbegin`**
-- **`oncancel`**
-- **`oncanplay`**
-- **`oncanplaythrough`**
-- **`onchange`**
-- **`onclick`**
-- **`onclose`**
-- **`oncuechange`**
-- **`ondblclick`**
-- **`ondrag`**
-- **`ondragend`**
-- **`ondragenter`**
-- **`ondragleave`**
-- **`ondragover`**
-- **`ondragstart`**
-- **`ondrop`**
-- **`ondurationchange`**
-- **`onemptied`**
-- **`onend`**
-- **`onended`**
-- **`onerror`**
-- **`onerror`**
-- **`onfocus`**
-- **`onfocusin`**
-- **`onfocusout`**
-- **`oninput`**
-- **`oninvalid`**
-- **`onkeydown`**
-- **`onkeypress`**
-- **`onkeyup`**
-- **`onload`**
-- **`onloadeddata`**
-- **`onloadedmetadata`**
-- **`onloadstart`**
-- **`onmousedown`**
-- **`onmouseenter`**
-- **`onmouseleave`**
-- **`onmousemove`**
-- **`onmouseout`**
-- **`onmouseover`**
-- **`onmouseup`**
-- **`onmousewheel`**
-- **`onpause`**
-- **`onplay`**
-- **`onplaying`**
-- **`onprogress`**
-- **`onratechange`**
-- **`onrepeat`**
-- **`onreset`**
-- **`onresize`**
-- **`onresize`**
-- **`onscroll`**
-- **`onscroll`**
-- **`onseeked`**
-- **`onseeking`**
-- **`onselect`**
-- **`onshow`**
-- **`onstalled`**
-- **`onsubmit`**
-- **`onsuspend`**
-- **`ontimeupdate`**
-- **`ontoggle`**
-- **`onunload`**
-- **`onvolumechange`**
-- **`onwaiting`**
+HTML および SVG のすべての要素は、[`GlobalEventHandlers`](/ja/docs/Web/HTML/Reference/Global_attributes#list_of_global_event_handler_attributes) ミックスインで定義されたイベントハンドラー属性に対応しています。
+
+イベントハンドラー属性（{{domxref("Element/blur_event", "onblur")}} や {{domxref("Element/auxclick_event", "onauxclick")}} など）はすべての要素に適用されますが、効果がない場合があります。たとえば、{{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}} 属性は任意の要素に適用できますが、{{htmlelement("track")}} 要素にのみ関連します。
+
+イベントハンドラー属性は推奨されず、安全でないと見なされ、[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/Security/Practical_implementation_guides/CSP) によってブロックされる可能性があります。代わりに、{{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッド内でイベント名を使用してください。
 
 ## 関連情報
 

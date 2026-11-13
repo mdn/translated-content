@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`AsyncGenerator`** 对象由{{jsxref("Statements/async_function*", "异步生成器函数", "", 1)}}返回，并且它符合[异步可迭代协议和异步迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
 
 异步生成器方法总是产生 {{jsxref("Promise")}} 对象。

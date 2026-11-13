@@ -79,7 +79,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories"
           >콘텐츠 카테고리</a
         >
       </th>

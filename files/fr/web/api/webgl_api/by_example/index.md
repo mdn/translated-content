@@ -3,7 +3,7 @@ title: WebGL par l'exemple
 slug: Web/API/WebGL_API/By_example
 ---
 
-{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}
 
 _WebGL par l'exemple_ est une série d'articles illustrant les concepts et les possibilités offertes par WebGL. Chaque exemple est accompagné d'explications. Ces démonstrations sont triés par sujet et par niveau de difficulté. Les concepts abordés sont, entre autres, le contexte de rendu, la programmation avec les _shaders_, les textures, la géométrie et l'interaction avec les utilisateurs.
 
@@ -52,4 +52,4 @@ Les exemples sont expliqués, avec des commentaires dans le code et des paragrap
 - [Les textures vidéos](/fr/docs/Web/API/WebGL_API/By_example/Video_textures)
   - : Dans cet exemple, on voit comment utiliser des fichiers vidéos comme des textures.
 
-{{Next("Apprendre/WebGL/Par_exemple/Détecter_WebGL")}}
+{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}

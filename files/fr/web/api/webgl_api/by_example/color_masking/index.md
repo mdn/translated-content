@@ -3,7 +3,7 @@ title: Masque de couleur
 slug: Web/API/WebGL_API/By_example/Color_masking
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée","Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}
 
 Dans cet article, on modifie des couleurs aléatoires grâce à un masque de couleur. Cela permet de limiter la plage de couleurs affichées à certains tons.
 
@@ -122,4 +122,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/color-masking).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée","Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}

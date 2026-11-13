@@ -12,13 +12,13 @@ slug: Web/API/VRDisplayCapabilities
 ## Свойства
 
 - {{domxref("VRDisplayCapabilities.canPresent")}} {{readonlyInline}}
-  - : Возвращает параметр {{domxref ("Boolean")}}, указывающий, способен ли дисплей VR представлять контент (например, через HMD - Наголовный дисплей).
+  - : Возвращает параметр {{jsxref("Boolean")}}, указывающий, способен ли дисплей VR представлять контент (например, через HMD - Наголовный дисплей).
 - {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{readonlyInline}}
-  - : Возвращает параметр {{domxref ("Boolean")}}, указывающий, является ли дисплей VR отдельным от основного дисплея устройства.
+  - : Возвращает параметр {{jsxref("Boolean")}}, указывающий, является ли дисплей VR отдельным от основного дисплея устройства.
 - {{domxref("VRDisplayCapabilities.hasOrientation")}} {{deprecated_inline()}} {{readonlyInline}}
-  - : Возвращает параметр {{domxref ("Boolean")}}, указывающий, может ли дисплей VR отслеживать и возвращать информацию об ориентации в пространстве .
+  - : Возвращает параметр {{jsxref("Boolean")}}, указывающий, может ли дисплей VR отслеживать и возвращать информацию об ориентации в пространстве .
 - {{domxref("VRDisplayCapabilities.hasPosition")}} {{readonlyInline}}
-  - : Возвращает параметр {{domxref ("Boolean")}}, указывающий, может ли дисплей VR отслеживать и возвращать информацию о положении.
+  - : Возвращает параметр {{jsxref("Boolean")}}, указывающий, может ли дисплей VR отслеживать и возвращать информацию о положении.
 - {{domxref("VRDisplayCapabilities.maxLayers")}} {{readonlyInline}}
   - : Возвращает число, указывающее максимальное значение {{domxref ("VRLayer")}}, которое дисплей VR может представить одновременно (например, максимальную длину массива, который {{domxref ("VRDisplay.requestPresent ()")}} может принять.)
 

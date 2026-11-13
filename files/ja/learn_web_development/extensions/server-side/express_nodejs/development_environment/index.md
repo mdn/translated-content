@@ -1,12 +1,12 @@
 ---
 title: Node 開発環境の設定
+short-title: 開発環境の設定
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
-original_slug: Learn/Server-side/Express_Nodejs/development_environment
 l10n:
-  sourceCommit: 96512135176d935cdf209c49bc9eae6025b0a9a5
+  sourceCommit: 6d363614de8a40c33d1afe92e4e846b75beea986
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 [Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#express_の紹介) の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
 
@@ -40,11 +40,11 @@ _npm_ は [MVC パターン](/ja/docs/Glossary/MVC)に従ったスケルトン�
 > [!NOTE]
 > 他のウェブフレームワークとは異なり、開発環境には独立した開発用のウェブサーバーは含まれていません。_Node_/_Express_ では、ウェブアプリケーションが独自のウェブサーバーを作成して実行します。
 
-[テキストエディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)やコード編集用の IDE、コードの異なるバージョンを安全に管理するための [Git](https://git-scm.com/) などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディター) が既にインストールされていると仮定しています。
+[テキストエディター](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)やコード編集用の IDE、コードの異なるバージョンを安全に管理するための [Git](https://git-scm.com/) などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディター) が既にインストールされていると仮定しています。
 
 ### どのオペレーティングシステムがサポートされていますか？
 
-_Node_ は Windows、macOS、Linux の多くの「フレーバー」、Docker などで実行できます (nodejs の[ダウンロード](https://nodejs.org/ja/download/)ページに完全なリストがあります)。ほとんどのパーソナルコンピューターは開発中に Node を実行するのに必要な性能を持っているはずです。_Express_ は _Node_ 環境で実行されるため、_Node_ を実行する任意のプラットフォームで実行できます。
+_Node_ は Windows、macOS、Linux の多くの「フレーバー」、Docker などで実行できます (nodejs の[ダウンロード](https://nodejs.org/ja/download)ページに完全なリストがあります)。ほとんどのパーソナルコンピューターは開発中に Node を実行するのに必要な性能を持っているはずです。_Express_ は _Node_ 環境で実行されるため、_Node_ を実行する任意のプラットフォームで実行できます。
 
 この記事では Windows、macOS、および Ubuntu Linux のセットアップ手順を説明します。
 
@@ -54,7 +54,7 @@ _Node_ は Windows、macOS、Linux の多くの「フレーバー」、Docker �
 
 一般的には最新の _LTS_ (長期サポート) リリースを使用するべきです。比較的最新の機能を持ちながら (そして現在も積極的にメンテナンスされています)、"最新の" リリースより安定しているからです。LTS バージョンに存在しない機能が必要な場合は、*最新版*リリースを使用してください。
 
-_Express_ は常に最新のバージョンを使うべきです。
+_Express_ の場合、常に Node の最新の LTS を使用すべきです。
 
 ### データベースやその他の依存関係について
 
@@ -65,7 +65,8 @@ _Express_ は常に最新のバージョンを使うべきです。
 _Express_ を使用するには、 _Nodejs_ と [Node Package Manager (npm)](https://docs.npmjs.com/) をオペレーティングシステムにインストールする必要があります。
 これを簡単にするために、最初に node バージョンマネージャをインストールし、それを使用して最新の LTS(Long Term Supported) バージョンの node と npm をインストールします。
 
-> [!NOTE] > <https://nodejs.org/en/> で提供されているインストーラーを使って nodejs と npm をインストールすることもできます（「ほとんどのユーザーに推奨」されている LTS ビルドをダウンロードするボタンを選択します）。また、[お使いの OS のパッケージマネージャーを使用してインストールする](https://nodejs.org/ja/download/package-manager/) こともできます。
+> [!NOTE]
+> <https://nodejs.org/en/> で提供されているインストーラーを使って nodejs と npm をインストールすることもできます（「ほとんどのユーザーに推奨」されている LTS ビルドをダウンロードするボタンを選択します）。また、[お使いの OS のパッケージマネージャーを使用してインストールする](https://nodejs.org/ja/download) こともできます。
 > node バージョンマネージャを使用することを強く推奨します。バージョンマネージャを使用することで、 node と npm の具体的なバージョンのインストール、アップグレード、切り替えが簡単になります。
 
 ### Windows
@@ -80,11 +81,11 @@ Windows 用の node バージョン管理ツールは数多くあります。
 nvm install lts
 ```
 
-執筆時点での nodejs の LTS バージョンは 20.11.0 です。
+執筆時点での nodejs の LTS バージョンは 22.17.0 です。
 下記コマンドで使用する現在のバージョンとして設定することができます。
 
 ```bash
-nvm use 20.11.0
+nvm use 22.17.0
 ```
 
 > [!NOTE]
@@ -104,12 +105,12 @@ nvm の最新バージョンをインストールする端末の手順につい�
 nvm install --lts
 ```
 
-執筆時点での nodejs の LTS バージョンは 20.11.0 です。
+執筆時点での nodejs の LTS バージョンは 22.17.0 です。
 コマンド `nvm list` はダウンロードしたバージョンと現在のバージョンを設定します。
 下記コマンドで特定のバージョンを現在のバージョンとして設定することができます（`nvm-windows` の場合と同じです）。
 
 ```bash
-nvm use 20.11.0
+nvm use 22.17.0
 ```
 
 他にもコマンドラインオプションを探すには `nvm --help` コマンドを使用します。
@@ -122,14 +123,14 @@ nvm use 20.11.0
 
 ```bash
 > node -v
-v20.11.0
+v22.17.0
 ```
 
 _Nodejs_ パッケージマネージャー _npm_ もインストールされているはずで、同じ方法でテストできます。
 
 ```bash
 > npm -v
-10.2.4
+10.9.2
 ```
 
 もう少し刺激的なテストとして、ブラウザーで正しい URL にアクセスしたときにブラウザーに単純に "Hello World" を出力する、とても基本的な "純粋な Node" サーバーを作成しましょう。
@@ -137,22 +138,23 @@ _Nodejs_ パッケージマネージャー _npm_ もインストールされて�
 1. 次のテキストを **hellonode.js** というファイルにコピーします。これは純粋な Node の機能を使用します（Express からは何もしません）。
 
    ```js
-   //HTTP モジュールを読み込む
+   // HTTP モジュールを読み込む
    const http = require("http");
+
    const hostname = "127.0.0.1";
    const port = 3000;
 
-   //HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
+   // HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
    const server = http.createServer((req, res) => {
-     //HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
+     // HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
      res.statusCode = 200;
      res.setHeader("Content-Type", "text/plain");
      res.end("Hello World\n");
    });
 
-   //3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
+   // 3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
    server.listen(port, hostname, () => {
-     console.log(`Server running at http://${hostname}:${port}/`);
+     console.log(`サーバーは http://${hostname}:${port}/ で実行中`);
    });
    ```
 
@@ -181,7 +183,7 @@ Node 自体の次に、[npm](https://docs.npmjs.com/) は Node アプリケー�
 `npm` は、アプリケーションが開発、テスト、運用に必要なパッケージ（JavaScript ライブラリー）を取得するために使用されます。また、開発プロセスで使用されるテストやツールを実行するために使用されることもあります。
 
 > [!NOTE]
-> Node の観点からすると、Express は npm を使用してインストールしてから独自のコードで必要とするもう 1 つのパッケージです。
+> Node から見ると、Express は npm を使用してインストールしてから独自のコードで必要とするもう 1 つのパッケージです。
 
 手動で npm を使用して、必要な各パッケージを別々に取り出すことができます。通常、代わりに [package.json](https://docs.npmjs.com/files/package.json) というプレーンテキストの定義ファイルを使用して依存関係を管理します。このファイルにはパッケージの名前、バージョン、説明、実行する初期ファイル、プロダクション依存関係、開発依存関係、それが動作可能な _Node_ のバージョンなど、特定の JavaScript "package" に対するすべての依存関係が一覧表示されます。**package.json** ファイルには、npm がアプリケーションを取得して実行するために必要なものがすべて含まれている必要があります (再利用可能なライブラリーを作成している場合は、この定義を使用してパッケージを npm リポジトリーにアップロードし、他のユーザーが利用できるようにします)。
 
@@ -211,20 +213,20 @@ Node 自体の次に、[npm](https://docs.npmjs.com/) は Node アプリケー�
    {
      "name": "myapp",
      "version": "1.0.0",
-     "description": "",
      "main": "index.js",
      "scripts": {
        "test": "echo \"Error: no test specified\" && exit 1"
      },
      "author": "",
-     "license": "ISC"
+     "license": "ISC",
+     "description": ""
    }
    ```
 
 3. `myapp` ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。
 
    ```bash
-    npm install express
+   npm install express
    ```
 
    **package.json** の依存関係節が **package.json** ファイルの最後に表示され、Express が含まれます。
@@ -241,7 +243,7 @@ Node 自体の次に、[npm](https://docs.npmjs.com/) は Node アプリケー�
      "author": "",
      "license": "ISC",
      "dependencies": {
-       "express": "^4.17.1"
+       "express": "^5.1.0"
      }
    }
    ```
@@ -251,6 +253,7 @@ Node 自体の次に、[npm](https://docs.npmjs.com/) は Node アプリケー�
 
    ```js
    const express = require("express");
+
    const app = express();
    const port = 3000;
 
@@ -296,28 +299,32 @@ npm install eslint --save-dev
 次の項目がアプリケーションの **package.json** に追加されます。
 
 ```json
+{
   "devDependencies": {
-    "eslint": "^7.10.0"
+    "eslint": "^9.30.1"
   }
+}
 ```
 
 > [!NOTE]
-> 「[リンター](<https://en.wikipedia.org/wiki/Lint_(software)>)」は一連のコーディングのベストプラクティスに準拠しているかどうかを認識して報告するために、ソフトウェアで静的分析を実行するツールです。
+> 「[リンター](https://ja.wikipedia.org/wiki/Lint)」は一連のコーディングのベストプラクティスに準拠しているかどうかを認識して報告するために、ソフトウェアで静的分析を実行するツールです。
 
 ### タスクの実行
 
-依存関係の定義と取得に加えて、**package.json** ファイルに名前付きスクリプトを定義し、npm を呼び出してそれらを [run-script](https://docs.npmjs.com/cli/run-script) コマンドで実行することもできます。このアプローチは、実行中のテストや開発の一部を自動化したり、ツールチェーン (たとえば JavaScript の縮小、画像の縮小、コードの LINT/分析などのツールの実行) を構築したりするためによく使用されます。
+依存関係の定義と取得に加えて、**package.json** ファイルに名前付きスクリプトを定義し、npm を呼び出してそれらを [run-script](https://docs.npmjs.com/cli/commands/npm-run/) コマンドで実行することもできます。このアプローチは、実行中のテストや開発の一部を自動化したり、ツールチェーン (たとえば JavaScript の縮小、画像の縮小、コードの LINT/分析などのツールの実行) を構築したりするためによく使用されます。
 
 > [!NOTE]
 > [Gulp](https://gulpjs.com/) や [Grunt](https://gruntjs.com/) のようなタスクランナーもテストや他の外部ツールを実行するために使うことができます。
 
-たとえば、前の節で指定した eslint 開発依存関係を実行するためのスクリプトを定義するには、次のスクリプトブロックを **package.json** ファイルに追加します (アプリケーションソースが /src/js フォルダーにあると仮定します)。
+たとえば、前の節で指定した eslint 開発依存関係を実行するためのスクリプトを定義するには、次のスクリプトブロックを **package.json** ファイルに追加します（アプリケーションソースが `/src/js` フォルダーにあると仮定します）。
 
 ```json
-"scripts": {
-  // …
-  "lint": "eslint src/js"
-  // …
+{
+  "scripts": {
+    // …
+    "lint": "eslint src/js"
+    // …
+  }
 }
 ```
 
@@ -415,7 +422,7 @@ DEBUG コマンドは有用なロギングを作成し、その結果、以下�
 ```bash
 >SET DEBUG=helloworld:* & npm start
 
-> helloworld@0.0.0 start D:\GitHub\expresstests\helloworld
+> helloworld@0.0.0 start D:\GitHub\express-tests\helloworld
 > node ./bin/www
 
   helloworld:server Listening on port 3000 +0ms
@@ -436,9 +443,8 @@ DEBUG コマンドは有用なロギングを作成し、その結果、以下�
 ## 関連情報
 
 - [ダウンロード](https://nodejs.org/ja/download/) ページ (nodejs.org)
-- [パッケージマネージャを利用した Node.js のインストール](https://nodejs.org/ja/download/package-manager/) (nodejs.org)
-- [Express のインストール](http://expressjs.com/ja/starter/installing.html) (expressjs.com)
+- [Express のインストール](https://expressjs.com/ja/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/ja/starter/generator.html) (expressjs.com)
-- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
+- [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

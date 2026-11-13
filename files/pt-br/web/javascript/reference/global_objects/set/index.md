@@ -35,14 +35,14 @@ Como cada valor no Set deve ser único, a igualdade será checada e não é base
 
     Para contar o número de elementos de um `Set`, use {{jsxref("Set.prototype.size")}}.
 
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- {{jsxref("Set/Symbol.species", "get Set[@@species]")}}
   - : A função construtora usada para criar objetos derivados.
-- {{jsxref("Set.prototype")}}
+- {{jsxref("Set")}}
   - : Representa o prototype do constructor do `Set`. Permite a adição de propriedades para todos os objetos do tipo `Set`.
 
 ## Instâncias `Set`
 
-Todas as instâncias de `Set` herdam de {{jsxref("Set.prototype")}}.
+Todas as instâncias de `Set` herdam de {{jsxref("Set")}}.
 
 ### Propriedades
 

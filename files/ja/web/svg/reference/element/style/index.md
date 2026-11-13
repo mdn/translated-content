@@ -21,10 +21,10 @@ l10n:
     値の型: [**`<media-type>`**](/ja/docs/Glossary/MIME_type); 既定値: `text/css`; アニメーション: **不可**
 - {{SVGAttr("media")}}
   - : この属性は、スタイルが適用される{{cssxref('@media', 'メディア')}}を定義します。
-    値の型: [**`<media-query-list>`**](/ja/docs/Web/CSS/@media#syntax); 既定値: `all`; アニメーション: **不可**
+    値の型: [**`<media-query-list>`**](/ja/docs/Web/CSS/Reference/At-rules/@media#syntax); 既定値: `all`; アニメーション: **不可**
 - {{SVGAttr("title")}}
   - : この属性は、[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)を切り替えるために使用できるスタイルシートの表題です。
-    値の型: [**`<string>`**](/ja/docs/Web/CSS/string); 既定値: _none_; アニメーション: **不可**
+    値の型: [**`<string>`**](/ja/docs/Web/CSS/Reference/Values/string); 既定値: _none_; アニメーション: **不可**
 
 ## DOM インターフェイス
 

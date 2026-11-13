@@ -2,7 +2,7 @@
 title: <marker>
 slug: Web/SVG/Reference/Element/marker
 l10n:
-  sourceCommit: da8c3171b7a7ea6694af71fac7a3194d8e9ba869
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 **`<marker>`** は [SVG](/ja/docs/Web/SVG) の要素で、指定された {{SVGElement("path")}}、{{SVGElement("line")}}、{{SVGElement("polyline")}}、{{SVGElement("polygon")}} のいずれかの要素上に矢印の先端やポリマーカーを描画するために使用されるグラフィックを定義します。

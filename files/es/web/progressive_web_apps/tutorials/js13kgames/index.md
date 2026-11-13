@@ -3,7 +3,7 @@ title: Introducción a  aplicaciones web progresivas
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
-{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 Este articulo provee una introducción a las Aplicaciones web progresivas (PWAs), explica qué son, y las ventajas que brindan sobre las aplicaciones web convencionales.
 
@@ -107,7 +107,7 @@ Una de las principales ventajas de las plataformas nativas es la facilidad con l
 
 ### Adaptable
 
-Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
+Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/Guides/Media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
 
 ### Segura
 
@@ -133,6 +133,6 @@ Puedes [ver esta aplicación en acción](https://mdn.github.io/pwa-examples/js13
 
 Por ahora, ve a la segunda parte de esta serie, donde verás la estructura de la aplicación de ejemplo.
 
-{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

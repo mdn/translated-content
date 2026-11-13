@@ -23,6 +23,6 @@ l10n:
 
 ### 더 읽어보기
 
-- CSS Flexbox Guide: [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS Flexbox Guide: [Flexbox의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - CSS Flexbox Guide: [flex items 순서 배열](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
 - CSS Flexbox Guide: [주축을 따라 플렉스 항목의 비율 제어하기](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

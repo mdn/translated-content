@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
 **`HTMLMediaElement.seekToNextFrame()`** メソッドは、非同期に現在の再生位置をメディアの次のフレームに進めます。
 

@@ -2,12 +2,10 @@
 title: メモリー管理
 slug: Web/JavaScript/Guide/Memory_management
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 887d5abd234d91b020daf91838ec63d5328e1fcc
 ---
 
-{{jsSidebar("Advanced")}}
-
-C 言語のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを解放します（_ガベージコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
+C 言語のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを自動的に解放します（_ガベージコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
 
 ## メモリーライフサイクル
 
@@ -26,30 +24,26 @@ C 言語のような低水準言語には、[`malloc()`](https://pubs.opengroup.
 割り当てでプログラマーを悩まさないために、JavaScript では値を宣言したときと同時にメモリーの割り当ても行われます。
 
 ```js
-const n = 123; // 数値を格納するメモリーが割り当てられます
-const s = "string"; // 文字列を格納するメモリーが割り当てられます
+const n = 123; // 数値を格納するメモリーが割り当てられる
+const s = "string"; // 文字列を格納するメモリーが割り当てられる
 
 const o = {
   a: 1,
   b: null,
-}; // オブジェクトとそれに含まれる値を格納するためのメモリーが割り当てられます
+}; // オブジェクトとそれに含まれる値を格納するためのメモリーが割り当てられる
 
 // （オブジェクトの例と同じように）配列とそれに含まれる値を格納するための
-// メモリーが割り当てられます
+// メモリーが割り当てられる
 const a = [1, null, "str2"];
 
 function f(a) {
   return a + 2;
-} // 関数を格納するメモリーが割り当てられます (関数は呼び出し可能なオブジェクトです)
+} // 関数を格納するメモリーが割り当てられる (関数は呼び出し可能なオブジェクト)
 
-// 関数式でもメモリーの割り当てが行われます
-someElement.addEventListener(
-  "click",
-  () => {
-    someElement.style.backgroundColor = "blue";
-  },
-  false,
-);
+// 関数式でもメモリーが割り当てられる
+someElement.addEventListener("click", () => {
+  someElement.style.backgroundColor = "blue";
+});
 ```
 
 #### 関数呼び出しを介して割り当て
@@ -59,17 +53,17 @@ someElement.addEventListener(
 ```js
 const d = new Date(); // Date オブジェクトの割り当て
 
-const e = document.createElement("div"); // DOM要素の割り当て
+const e = document.createElement("div"); // DOM 要素の割り当て
 ```
 
-いくつかのメソッドは、新しい値またはオブジェクトを割り当てます:
+いくつかのメソッドは、新しい値またはオブジェクトを割り当てます。
 
 ```js
 const s = "string";
-const s2 = s.substr(0, 3); // s2 は新しい文字列
+const s2 = s.substring(0, 3); // s2 は新しい文字列
 // JavaScript では文字列は変更不可の値なので、
 // メモリーの割当を行わないと思うかもしれません。
-// しかし実際には [0, 3] の範囲の文字列が割り当てられます。
+// しかし実際には [0, 3] の範囲の文字列が割り当てられる。
 
 const a = ["yeah yeah", "no no"];
 const a2 = ["generation", "no no"];
@@ -95,9 +89,9 @@ const a3 = a.concat(a2);
 
 ### 参照
 
-ガベージコレクションアルゴリズムが依存している主な概念は、参照 (reference) の概念です。メモリー管理の文脈では、あるオブジェクトが別のオブジェクトに（明示的にであれ、暗黙的にであれ）アクセスできるとき、前者が後者を参照していると言います。例えば、JavaScript オブジェクトは自身の [プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)（暗黙的な参照）とプロパティ値（明示的な参照）への参照を持ちます。
+ガベージコレクションアルゴリズムが依存している主な概念は、参照 (reference) の概念です。メモリー管理の文脈では、あるオブジェクトが別のオブジェクトに（明示的にであれ、暗黙的にであれ）アクセスできるとき、前者が後者を参照していると言います。例えば、JavaScript オブジェクトは自身の[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)（暗黙的な参照）とプロパティ値（明示的な参照）への参照を持ちます。
 
-ここでは、「オブジェクト」の概念は通常の JavaScript オブジェクトよりも広い概念として用いられており、また、関数のスコープ（もしくは、グローバルレキシカルスコープ）を含みます。
+ここでは、「オブジェクト」の概念は通常の JavaScript オブジェクトよりも広い概念として用いられており、また、関数のスコープ（もしくは、グローバル字句スコープ）を含みます。
 
 ### 参照カウントのガベージコレクション
 
@@ -180,7 +174,7 @@ JavaScript エンジンは通常、メモリーモデルを公開するフラグ
 node --max-old-space-size=6000 index.js
 ```
 
-また、フラグや [Chrome デバッガー](https://nodejs.org/en/docs/guides/debugging-getting-started/)を用いて、メモリーの問題をデバッグするためにガベージコレクターを公開することができます。
+また、フラグや [Chrome デバッガー](https://nodejs.org/en/learn/getting-started/debugging)を用いて、メモリーの問題をデバッグするためにガベージコレクターを公開することができます。
 
 ```bash
 node --expose-gc --inspect index.js
@@ -196,7 +190,7 @@ JavaScript はガベージコレクター API を直接公開していません�
 
 `WeakMap` と `WeakSet` は、_weakly held_ 値の概念から取った名前です。`x` が `y` によって弱く保持されている場合、`x` の値には `y` を介してアクセスできますが、マークアンドスイープアルゴリズムでは、何か強く保持するものがなければ `x` に到達できるとは考えないということを意味しています。ここで議論するものを除くほとんどのデータ構造は、合格したオブジェクトをいつでも取り出せるように強く保持します。`WeakMap` と `WeakSet` のキーは、プログラム内でそのキーを参照しているものがない限り、ガベージコレクションすることができます（`WeakMap` オブジェクトの場合、値もガベージコレクションの対象となります）。これは、2 つの特徴によって確実に保持されます。
 
-- `WeakMap` と `WeakSet` はオブジェクトまたはシンボルのみを格納することができます。これはオブジェクトのみがガベージコレクションの対象となるためです。プリミティブ値は常に偽造可能であり（つまり、 `1 === 1` だが `{} !== {}`）、それらは永遠に集合内に留まることになります。[登録されたシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)（`Symbol.for("key")` など）も偽造可能であるため、ガベージコレクションの対象にはなりませんが、 `Symbol("key")` で作成されたシンボルはガベージコレクションの対象となります。 `Symbol.iterator` のような[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols)は固定的な集合であり、プログラムの実行期間を通じて一意であるため、`Array.prototype` のような組み込みオブジェクトと同様に、キーとして使用することもできます。
+- `WeakMap` と `WeakSet` はオブジェクトまたはシンボルのみを格納することができます。これはオブジェクトのみがガベージコレクションの対象となるためです。プリミティブ値は常に偽造可能であり（つまり、 `1 === 1` だが `{} !== {}`）、それらは永遠に集合内に留まることになります。[登録されたシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)（`Symbol.for("key")` など）も偽造可能であるため、ガベージコレクションの対象にはなりませんが、 `Symbol("key")` で作成されたシンボルはガベージコレクションの対象となります。 `Symbol.iterator` のような[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)は固定的な集合であり、プログラムの実行期間を通じて一意であるため、`Array.prototype` のような組み込みオブジェクトと同様に、キーとして使用することもできます。
 - `WeakMap` と `WeakSet` は反復可能なオブジェクトではありません。このため、`Array.from(map.keys()).length`を使用してオブジェクトの生存率を監視したり、ガベージコレクションの対象となるような任意のキーを取得することができません。（ガベージコレクションは使用可能な限り不可視であるべきです。）
 
 `WeakMap` や `WeakSet` の典型的な説明（上記のようなもの）では、キーが最初にガベージコレクションされ、値も同様にガベージコレクションのために解放されることが暗示されています。しかし、値をキーに参照する場合を考えてみましょう。
@@ -212,7 +206,7 @@ wm.set(key, { key });
 
 もし `key` が実際の参照として格納されると、循環参照が発生し、他に `key` を参照するものがない場合でも、キーと値の両方をガベージコレクションの対象外にしてしまいます。もし `key` がガベージコレクションされると、具体的なある瞬間に `value.key` が存在しないアドレスを指すことになり、これは不正な状態だからです。これを修正するために、`WeakMap` と `WeakSet` の項目は実際の参照ではなく、マークアンドスイープ機構を強化した[エフェメロン](https://dl.acm.org/doi/pdf/10.1145/263700.263733)です。[Barros ら](https://www.jucs.org/jucs_14_21/eliminating_cycles_in_weak/jucs_14_21_3481_3497_barros.pdf)は、このアルゴリズムの良い概要を提供しています（4 ページ目）。一段落を引用します。
 
-> エフェメロンは弱いペアを改良したもので、鍵も値も弱いとも強いとも分類できません。鍵の接続性は値の接続性を決定しますが、値の接続性は鍵の接続性には影響しません。 […] ガベージコレクションがエフェメロンに対応する場合、2 つのフェーズ（マークとスイープ）ではなく、3 つのフェーズで発生します。）
+> エフェメロンは弱いペアを改良したもので、鍵も値も弱いとも強いとも分類できません。鍵の接続性は値の接続性を決定しますが、値の接続性は鍵の接続性には影響しません。 […] ガベージコレクションがエフェメロンに対応する場合、2 つのフェーズ（マークとスイープ）ではなく、3 つのフェーズで発生します。
 
 大まかなメンタルモデルとして、`WeakMap` は以下のような実装だと考えてください。
 

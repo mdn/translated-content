@@ -1,12 +1,10 @@
 ---
-title: "<output>: 出力要素"
+title: "`<output>` 出力要素"
+short-title: <output>
 slug: Web/HTML/Reference/Elements/output
-original_slug: Web/HTML/Element/output
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 **`<output>`** は [HTML](/ja/docs/Web/HTML) の要素で、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。
 
@@ -14,62 +12,83 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `for`
+- [`for`](/ja/docs/Web/HTML/Reference/Attributes/for)
   - : 他の要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の空白区切りのリストで、入力値が計算に使用される（または何らかの影響を与える）要素を示します。
-- `form`
-  - : この要素に関連付けられた (*フォームオーナー*である) {{HTMLElement("form")}} 要素を指定します。この値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) である必要があります。 (この属性が設定されていない場合、 `<output>` 要素は祖先の `<form>` があれば、その要素に関連づけられます。
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
+  - : この要素に関連付けられた (*フォームオーナー*である) {{HTMLElement("form")}} 要素を指定します。この値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) である必要があります。（この属性が設定されていない場合、 `<output>` 要素は祖先の `<form>` があれば、その要素に関連づけられます。）
 
-    この属性は `<output>` 要素を、包含する `<form>` に限らず文書中のどこにある `<form>` にも結び付けることができます。これは祖先の `<form>` 要素を上書きもします。
+    この属性は `<output>` 要素を、包含する `<form>` に限らず文書中のどこにある `<form>` にも結び付けることができます。これは祖先の `<form>` 要素を上書きもします。フォームが送信されるとき、`<output>` 要素の名前とコンテンツは送信されません。
 
 - `name`
   - : 要素の名前です。 {{domxref("HTMLFormElement.elements", "form.elements")}} API で使用されます。
 
 `<output>` の値、名前、内容はフォーム送信の過程で送信されません。
 
+## アクセシビリティ
+
+多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
+
+ライブ領域の更新は通常、プレーンテキストとして読み上げられるため、`<output>` 内にあるリンク、ボタン、その他の要素のセマンティクスは、読み上げで伝わらないことがあります。
+
 ## 例
 
-以下の例では、フォームに `0` から `100` までの範囲の値を取るスライダーと、第 2 の値を入力できる {{HTMLElement("input")}} 要素があります。どちらかのコントロールの値が変更されるたびに、2 つの値が合計された結果が `<output>` 要素の中に表示されます。
+以下の例では、`0` から `100` までの範囲の値を取るスライダーと、第 2 の値を入力できる {{HTMLElement("input")}} 要素を用意します。2 つの値を加算し、どちらかのコントロールの値が変更されるたびに、その結果を `<output>` 要素に表示します。
 
 ```html
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-  <input type="range" id="b" name="b" value="50" /> +
-  <input type="number" id="a" name="a" value="10" /> =
-  <output name="result" for="a b">60</output>
-</form>
+<input type="range" id="b" name="b" value="50" /> +
+<input type="number" id="a" name="a" value="10" /> =
+<output id="result" for="a b">60</output>
+```
+
+```js
+const a = document.getElementById("a");
+const b = document.getElementById("b");
+const result = document.getElementById("result");
+
+function updateResult() {
+  const aValue = a.valueAsNumber;
+  const bValue = b.valueAsNumber;
+  result.value = aValue + bValue;
+}
+
+a.addEventListener("input", updateResult);
+b.addEventListener("input", updateResult);
+
+updateResult();
 ```
 
 ### 結果
 
 {{ EmbedLiveSample('Examples')}}
 
-## アクセシビリティの考慮
-
-多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リスト化"
           >リスト化</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能"
           >ラベル付け可能</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リセット可能"
           >リセット可能</a
         >
         <a
-          href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フォーム関連コンテンツ"
           >フォーム関連要素</a
         >、知覚可能コンテンツ
       </td>
@@ -77,7 +96,7 @@ l10n:
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -89,7 +108,7 @@ l10n:
     <tr>
       <th scope="row">許可された親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

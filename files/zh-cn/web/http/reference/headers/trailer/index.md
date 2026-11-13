@@ -8,13 +8,13 @@ slug: Web/HTTP/Reference/Headers/Trailer
 > [!NOTE]
 > 请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                             |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | yes                             |
 
 ## 语法
 
-```plain
+```http
 Trailer: header-names
 ```
 

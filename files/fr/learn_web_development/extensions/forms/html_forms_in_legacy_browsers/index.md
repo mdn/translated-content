@@ -4,8 +4,6 @@ slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 original_slug: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
 
-{{LearnSidebar}}
-
 Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](https://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
 
 Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.
@@ -32,7 +30,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 ## Rendre les choses simples
 
-Comme les [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -78,7 +76,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 #### Sélecteurs d'attributs CSS
 
-Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Attribute_selectors) sont très utiles avec les [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
+Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) sont très utiles avec les [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
 <input type="number" class="number" />
@@ -208,4 +206,4 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
-Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Community/Getting_started).
+Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn_web_development/Extensions/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Community/Getting_started).

@@ -3,8 +3,6 @@ title: Symbol.prototype[Symbol.toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
 ---
 
-{{JSRef}}
-
 **`[Symbol.toPrimitive]()`** 方法可将 {{jsxref("Symbol")}} 对象转换为 symbol 值。
 
 ## 语法

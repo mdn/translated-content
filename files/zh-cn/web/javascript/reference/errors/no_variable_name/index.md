@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Errors/No_variable_name
 
 ```plain
 SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)
+SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in parameter list. (Safari)
 ```
 
 ## 错误类型
@@ -23,21 +23,21 @@ SyntaxError: Unexpected token = (Chrome)
 ### 变量名缺失
 
 ```js example-bad
-var = "foo";
+const = "foo";
 ```
 
-为变量起一个合适的明确确实不是一件容易的事情。这种经历每个人都遇到过。
+很容易忘记给变量命名！
 
 ```js example-good
-var ohGodWhy = "foo";
+const description = "foo";
 ```
 
 ### 保留字不能作为变量名
 
-有一些名称是作为[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)而存在的。不好意思，你不能使用！:(
+有一些名称是作为[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)而存在的。不好意思，你不能使用！:(
 
 ```js example-bad
-var debugger = "whoop";
+const debugger = "whoop";
 // SyntaxError: missing variable name
 ```
 
@@ -46,11 +46,11 @@ var debugger = "whoop";
 在一次性声明多个变量的时候要特别留意逗号。看看是否有多余的逗号？以及是否不小心把逗号用作了分号？
 
 ```js example-bad
-var x, y = "foo",
-var x, = "foo"
+let x, y = "foo",
+const z, = "foo"
 
-var first = document.getElementById('one'),
-var second = document.getElementById('two'),
+const first = document.getElementById("one"),
+const second = document.getElementById("two"),
 
 // SyntaxError: missing variable name
 ```
@@ -58,12 +58,12 @@ var second = document.getElementById('two'),
 修复后的代码：
 
 ```js example-good
-var x,
+let x,
   y = "foo";
-var x = "foo";
+const z = "foo";
 
-var first = document.getElementById("one");
-var second = document.getElementById("two");
+const first = document.getElementById("one");
+const second = document.getElementById("two");
 ```
 
 ### 数组
@@ -71,18 +71,18 @@ var second = document.getElementById("two");
 在 JavaScript 中 {{jsxref("Array")}} 字面量需要使用方括号将值包裹起来。下面这样是不对的：
 
 ```js example-bad
-var arr = 1,2,3,4,5;
+const arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
 ```
 
 这样写才是正确的：
 
 ```js example-good
-var arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
 ```
 
-## 相关内容
+## 参见
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
-- [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- {{jsxref("Statements/var", "var")}}
+- [语法与类型](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)指南

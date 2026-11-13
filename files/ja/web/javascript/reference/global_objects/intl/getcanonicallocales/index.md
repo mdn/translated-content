@@ -1,11 +1,10 @@
 ---
 title: Intl.getCanonicalLocales()
+short-title: getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 6356aa3911fe6cf953e0b04c3b285fe95e4b5355
 ---
-
-{{JSRef}}
 
 **`Intl.getCanonicalLocales()`** メソッドは、正規のロケール名を含む配列を返します。重複は省略され、要素は構造的に有効な言語タグとして検証されます。
 
@@ -22,8 +21,7 @@ try {
   Intl.getCanonicalLocales("EN_US");
 } catch (err) {
   console.log(err.toString());
-  // 期待される結果 (Firefox/Safari): RangeError: invalid language tag: "EN_US"
-  // 期待される結果 (Chrome): RangeError: Incorrect locale information provided
+  // 期待される結果: RangeError: invalid language tag: "EN_US"
 }
 ```
 
@@ -51,7 +49,7 @@ Intl.getCanonicalLocales("EN-US"); // ["en-US"]
 Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales("EN_US");
-// RangeError:'EN_US' is not a structurally valid language tag
+// RangeError: invalid language tag: "EN_US"
 ```
 
 ## 仕様書

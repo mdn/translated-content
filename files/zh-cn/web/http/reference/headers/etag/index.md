@@ -7,13 +7,13 @@ slug: Web/HTTP/Reference/Headers/ETag
 
 如果给定 URL 中的资源更改，则*一定*要生成新的 `ETag` 值。比较这些 `ETag` 能快速确定此资源是否变化。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 
-```plain
+```http
 ETag: W/"<etag_value>"
 ETag: "<etag_value>"
 ```
@@ -27,7 +27,7 @@ ETag: "<etag_value>"
 
 ## 示例
 
-```plain
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
@@ -38,13 +38,13 @@ ETag: W/"0815"
 
 例如，当编辑 MDN 时，当前的 wiki 内容被散列，并在响应中放入`Etag`：
 
-```plain
+```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4
 ```
 
 将更改保存到 Wiki 页面（发布数据）时，{{HTTPMethod("POST")}}请求将包含有 ETag 值的{{HTTPHeader("If-Match")}}头来检查是否为最新版本。
 
-```plain
+```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 

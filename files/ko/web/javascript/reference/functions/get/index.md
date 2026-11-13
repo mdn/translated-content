@@ -97,7 +97,7 @@ Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`sta
 
 ### `delete` 연산자로 접근자 제거하기
 
-접근자를 삭제하려면 간단히 {{jsxref("Operators/delete", "delete")}} 연산자를 사용하세요.
+접근자를 삭제하려면 간단히 {{jsxref("delete")}} 연산자를 사용하세요.
 
 ```js
 delete obj.latest;
@@ -154,7 +154,7 @@ console.log(MyConstants.foo); // 'foo', 정적 접근자의 값 변경 불가
 사용하지 않으면 비용을 지불할 일도 없습니다.
 
 속성 값의 계산을 느긋하게 만들거나 미루고, 나중에 접근할 수 있도록 캐시에 저장하는
-추가 최적화 기법은 **똑똑한(_smart_) 또는 메모화([메모이제이션](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98)) 접근자**라고 합니다.
+추가 최적화 기법은 **똑똑한(*smart*) 또는 메모화([메모이제이션](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98)) 접근자**라고 합니다.
 똑똑한 접근자 속성의 값은 접근자를 처음 호출할 때 계산하는 동시에 캐시에 저장됩니다.
 덕분에 속성에 추가 접근 시 캐시에서 값을 즉시 반환하므로 값을 다시 계산하는 수고를 피할 수 있습니다.
 똑똑한 접근자는 다음과 같은 상황에 유용합니다.
@@ -184,7 +184,7 @@ const obj = {
 
 ### get vs. defineProperty
 
-`get` 키워드와 {{jsxref("Object.defineProperty()")}}는 비슷한 결과를 내지만, {{jsxref("classes")}}에 사용할 경우 미묘한 차이가 생깁니다.
+`get` 키워드와 {{jsxref("Object.defineProperty()")}}는 비슷한 결과를 내지만, {{jsxref("Classes")}}에 사용할 경우 미묘한 차이가 생깁니다.
 
 `get`을 사용할 경우, 해당 속성은 인스턴스의 프로토타입에 정의됩니다.
 그러나 {{jsxref("Object.defineProperty()")}}를 사용할 경우 속성을 인스턴스 자체에 직접 정의하게 됩니다.

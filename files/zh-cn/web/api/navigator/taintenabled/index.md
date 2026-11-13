@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 **`Navigator.taintEnabled()`** 方法始终返回 `false`。
 

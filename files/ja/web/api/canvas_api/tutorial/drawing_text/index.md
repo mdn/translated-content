@@ -2,7 +2,7 @@
 title: テキストの描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 l10n:
-  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
+  sourceCommit: 8a10694edf44bde124fa8f18af65651855f632dc
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
@@ -24,14 +24,14 @@ l10n:
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -46,14 +46,14 @@ draw();
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -62,7 +62,7 @@ draw();
 
 {{EmbedLiveSample("A_strokeText_example", 310, 110)}}
 
-## テキストのスタイル付け
+## テキストのスタイル設定
 
 上記の例では、テキストを既定のサイズより若干大きくするため、すでに `font` プロパティを使用していました。キャンバスにテキストを表示する形式を調整できるプロパティは、さらにいくつかあります。
 
@@ -77,52 +77,42 @@ draw();
 
 以前に CSS を扱ったことがあれば、これらのプロパティも見慣れているでしょう。
 
-以下は [WHATWG](https://whatwg.org/) 提供の、`textBaseline` 属性によってサポートされている様々なベースラインを示した図です。![em 矩形の上端はフォントのグリフの上端にほぼ一致し、 hanging baseline は 906 のようないくつかのグリフが固定されているところ、 middle は em 矩形の上端と下端の中間、alphabetic baseline は Á, ÿ, f, Ω などの文字が固定されているところ、ideographic baseline は私や達などのグリフが固定され、em 矩形の底はフォント中のグリフの底にほぼ一致しているところです。グリフが em 矩形の外まで伸びているため、バウンディングボックスの上端と下端はこれらのベースラインから遠く離れていることがあります。](baselines.png)
+以下は [HTML 仕様書](https://html.spec.whatwg.org/multipage/canvas.html#text-styles)にある、`textBaseline` 属性によって対応している様々なベースラインを示した図です。
 
-### textBaseline の例
+![em-over ベースラインはフォントのグリフの上端にほぼ一致し、hanging baseline は आ のようないくつかのグリフが固定されているところ、 middle は em-over と em-under ベースラインの中間、alphabetic ベースラインは Á, ÿ, f, Ω などの文字が固定されているところ、ideographic-under ベースラインは私や達などのグリフが固定され、 em-under ベースラインはフォント中のグリフの下端にほぼ一致しているところです。グリフが em-over と em-under ベースラインの外まで伸びているため、バウンディングボックスの上端と下端はこれらのベースラインから遠く離れていることがあります。](baselines.png)
 
-以下のコードを編集すると、canvas の変更個所をその場で確認できます。
+### `textBaseline` の例
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);
-</textarea>
+この例では、`textBaseline` プロパティのさまざまな値について説明しています。
+詳細や具体的な例については、[`CanvasRenderingContext2D.textBaseline`](/ja/docs/Web/API/CanvasRenderingContext2D/textBaseline) のページをご覧ください。
+
+```html hidden live-sample___textBaseline
+<canvas id="my-canvas" width="400" height="100"></canvas>
 ```
 
-```js hidden
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
+```js live-sample___textBaseline
+function draw() {
+  const ctx = document.getElementById("my-canvas").getContext("2d");
+  ctx.font = "48px serif";
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+  ctx.textBaseline = "hanging";
+  ctx.strokeText("hanging", 10, 50);
+
+  ctx.textBaseline = "middle";
+  ctx.strokeText("middle", 250, 50);
+
+  ctx.beginPath();
+  ctx.moveTo(10, 50);
+  ctx.lineTo(300, 50);
+  ctx.stroke();
 }
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-});
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
+```js hidden live-sample___textBaseline
+draw();
+```
+
+{{EmbedLiveSample('textBaseline', 310, 110)}}
 
 ## 高度なテキスト測定
 
@@ -140,11 +130,5 @@ function draw() {
   text.width; // 16;
 }
 ```
-
-## アクセシビリティの考慮
-
-`<canvas>` 要素は単なるビットマップであり、描画するオブジェクトの情報は提供しません。キャンバス上に書かれたテキストは、画面の拡大を頼りにしているユーザーにとって、読みやすさの問題を発生させる可能性があります。キャンバス要素内のピクセルは変倍しないので、拡大するとぼやけてしまいます。これは、ピクセルがベクターではなく、文字の形をしたピクセルの集合であるためです。拡大するとピクセルが大きくなります。
-
-キャンバスのコンテンツは、意味づけされた HTML のようにアクセシビリティツールに公開されることはありません。一般的に、アクセシビリティのあるウェブサイトやアプリでキャンバスを使用することは避けましょう。キャンバスの代わりに HTML 要素や SVG を使用することもできます。
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

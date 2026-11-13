@@ -1,5 +1,6 @@
 ---
 title: Array.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a

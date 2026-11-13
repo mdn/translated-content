@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Strings
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}
 
 A continuación, centraremos nuestra atención en las cadenas de caracteres (`string`s): así es como se llaman los fragmentos de texto en programación. En este artículo veremos todas las cosas comunes que realmente deberías saber sobre cadenas de caracteres al aprender JavaScript, como crear cadenas, comillas en cadenas y unir cadenas.
 
@@ -251,7 +251,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name` (nombre).
 
@@ -299,4 +299,4 @@ Llegaste al final de este artículo, pero ¿puédes recordar la información má
 
 Esto es lo básico que debes saber sobre las cadenas o `string`s en JavaScript. En el siguiente artículo desarrollaremos más sobre esto, observando métodos de construcción de strings disponibles en JavaScript y cómo podemos usarlos para manipular nuestras cadenas de la forma que queremos.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "conflicting/Learn_web_development/Core/Scripting")}}

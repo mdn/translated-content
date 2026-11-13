@@ -3,10 +3,6 @@ title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`multiline`** 属性表明正则表达式是否使用了 "`m`" 标志。`multiline` 是正则表达式实例的一个只读属性。
 
 {{js_property_attributes(0,0,0)}}

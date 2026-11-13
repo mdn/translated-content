@@ -130,4 +130,4 @@ svg {
 ## 関連情報
 
 - CSS の {{cssxref("clip-path")}} プロパティ
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)

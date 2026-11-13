@@ -3,7 +3,7 @@ title: Array.prototype.map()
 short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`map()`** は {{jsxref("Array")}} インスタンスのメソッドで、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
@@ -265,7 +265,7 @@ console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-この例では、 `querySelectorAll` によって収集されたオブジェクトのコレクションを反復処理する方法を示します。これは `querySelectorAll` が `NodeList` （オブジェクトの集合）を返すためです。この場合、画面に選択されているすべての `option` の値を返します。
+この例では、`querySelectorAll()` で取得したオブジェクトの集合を反復処理し、選択されたすべての `option` 要素の値を含む配列を返す方法を示しています。`querySelectorAll()` は `NodeList` を返すため、これは `map()` メソッドを持たない配列風オブジェクトです。そのため、`Array.prototype.map.call()` を使用し、`elems` を `this` の値として、コールバック関数を第二引数として渡します。
 
 ```js
 const elems = document.querySelectorAll("select option:checked");
@@ -284,7 +284,7 @@ const values = Array.prototype.map.call(elems, ({ value }) => value);
 
 ## 関連情報
 
-- [`Array.prototype.map` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.map` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.map` のポリフィル](https://www.npmjs.com/package/array.prototype.map)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

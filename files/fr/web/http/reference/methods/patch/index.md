@@ -1,46 +1,49 @@
 ---
-title: PATCH
+title: Méthode de requête PATCH
+short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
-original_slug: Web/HTTP/Methods/PATCH
+l10n:
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
-La **méthode `PATCH` d'une requête HTTP** applique des modifications partielles à une ressource.
+La méthode HTTP **`PATCH`** applique des modifications partielles à une ressource.
 
-La méthode HTTP {{HTTPMethod("PUT")}} est déjà définie pour écraser une ressource avec un nouveau corps complet de message, et pour la méthode HTTP {{HTTPMethod("POST")}}, il n'existe aucun moyen standard pour découvrir le support de format de patch. Tout comme `POST`, la méthode HTTP `PATCH` n'est pas listée comme étant idempotent, contrairement à `PUT`. Cela signifie que les requêtes patch identiques et successives auront des effets différents sur l'objet manipulé.
+`PATCH` est en quelque sorte analogue au concept de «&nbsp;mise à jour&nbsp;» que l'on trouve dans {{Glossary("CRUD")}} (en général, HTTP est différent de {{Glossary("CRUD")}}, et il ne faut pas les confondre).
 
-Pour découvrir si un serveur supporte la méthode PATCH, un serveur peut annoncer son support en l'ajoutant à la liste des méthodes autorisées dans les headers de la réponse {{HTTPHeader ("Allow")}} ou encore {{HTTPHeader ("Access-Control-Allow-Methods")}} (pour CORS).
+Par rapport à {{HTTPMethod("PUT")}}, un `PATCH` sert d'instructions pour modifier une ressource, tandis que `PUT` représente un remplacement complet de la ressource.
+Une requête `PUT` est toujours {{Glossary("idempotent", "idempotente")}} (répéter la même requête plusieurs fois résulte en la ressource restant dans le même état), alors qu'une requête `PATCH` n'est pas toujours idempotente.
+Par exemple, si une ressource inclut un compteur auto-incrémenté, une requête `PUT` écrase le compteur (puisqu'elle remplace toute la ressource), mais une requête `PATCH` peut ne pas le faire.
 
-Une autre indication (implicite) que la méthode PATCH est autorisée est la présence du header {{HTTPHeader("Accept-Patch")}}.
+Comme {{HTTPMethod("POST")}}, une requête `PATCH` peut potentiellement avoir des effets secondaires sur d'autres ressources.
+
+Un serveur peut indiquer la prise en charge de `PATCH` en l'ajoutant à la liste dans l'en-tête {{HTTPHeader("Allow")}} ou {{HTTPHeader("Access-Control-Allow-Methods")}} (pour [CORS](/fr/docs/Web/HTTP/Guides/CORS)).
+Une autre indication implicite que `PATCH` est pris en charge est l'en-tête {{HTTPHeader("Accept-Patch")}} (généralement après une requête {{HTTPMethod("OPTIONS")}} sur une ressource), qui liste les types de médias que le serveur peut comprendre dans une requête `PATCH` pour une ressource.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">La requête possède un corps de message (body)</th>
+      <th scope="row">La requête a un corps</th>
       <td>Oui</td>
     </tr>
     <tr>
-      <th scope="row">
-        Une requête traitée avec succès retourne une réponse avec un corps de
-        message (body)
-      </th>
+      <th scope="row">La réponse de succès a un corps</th>
+      <td>Peut-être</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "Sûre")}}</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Safe")}}</th>
+      <th scope="row">{{Glossary("Idempotent", "Idempotente")}}</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>Non</td>
+      <th scope="row">{{Glossary("Cacheable", "Mis en cache")}}</th>
+      <td>Seulement si des informations de fraîcheur sont incluses</td>
     </tr>
     <tr>
       <th scope="row">
-        Utilisation au sein des
-        <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a>
+        Autorisée dans <a href="/fr/docs/Learn_web_development/Extensions/Forms">les formulaires HTML</a>
       </th>
       <td>Non</td>
     </tr>
@@ -49,31 +52,63 @@ Une autre indication (implicite) que la méthode PATCH est autorisée est la pr�
 
 ## Syntaxe
 
-```
-PATCH /file.txt HTTP/1.1
-```
-
-## Exemple
-
-### Requête
-
-```
-PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
-
-[description des changements]
+```http
+PATCH <request-target>["?"<query>] HTTP/1.1
 ```
 
-### Réponse
+- `<request-target>`
+  - : Identifie la ressource cible de la requête, combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
+    Il s'agit d'un chemin absolu (par exemple, `/chemin/vers/fichier.html`) pour les requêtes vers un serveur d'origine, et d'une URL absolue pour les requêtes vers un proxy (par exemple, `http://www.example.com/chemin/vers/fichier.html`).
+- `<query>` {{Optional_Inline}}
+  - : Un composant de requête optionnel précédé d'un point d'interrogation `?`.
+    Souvent utilisé pour transmettre des informations d'identification sous forme de paires `clé=valeur`.
 
-Une requête traitée avec succès retourne une réponse accompagnée d'un code de réponse {{HTTPStatus("204")}}. Dans ce cas-ci, la réponse ne contient un corps de message.
+## Exemples
 
+### Modification réussie d'une ressource
+
+Supposons qu'il existe une ressource sur le serveur représentant un·e utilisateur·ice avec un identifiant numérique `123` au format suivant&nbsp;:
+
+```json
+{
+  "firstName": "Exemple",
+  "LastName": "Utilisateur",
+  "userId": 123,
+  "signupDate": "2024-09-09T21:48:58Z",
+  "status": "actif",
+  "registeredDevice": {
+    "id": 1,
+    "name": "personnel",
+    "manufacturer": {
+      "name": "Matériel corp"
+    }
+  }
+}
 ```
+
+Au lieu d'envoyer un objet JSON pour écraser entièrement une ressource, un `PATCH` ne modifie que certaines parties de la ressource.
+Cette requête met à jour le champ `status`&nbsp;:
+
+```http
+PATCH /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 27
+Authorization: Bearer ABC123
+
+{
+  "status": "suspendu"
+}
+```
+
+L'interprétation et l'authentification de la requête `PATCH` dépendent de l'implémentation.
+Le succès peut être indiqué par n'importe quel [code de réponse réussi](/fr/docs/Web/HTTP/Reference/Status#successful_responses).
+Dans cet exemple, un {{HTTPStatus("204", "204 No Content")}} est utilisé, car il n'est pas nécessaire de transmettre un corps avec des informations supplémentaires sur l'opération.
+Un en-tête {{HTTPHeader("ETag")}} est fourni pour que l'appelant puisse effectuer une [requête conditionnelle](/fr/docs/Web/HTTP/Guides/Conditional_requests) ultérieurement&nbsp;:
+
+```http
 HTTP/1.1 204 No Content
-Content-Location: /file.txt
+Content-Location: /users/123
 ETag: "e0023aa4f"
 ```
 
@@ -83,10 +118,15 @@ ETag: "e0023aa4f"
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Le navigateur n'utilise pas la méthode `PATCH` pour les actions initiées par l'utilisateur·ice, donc la «&nbsp;compatibilité navigateur&nbsp;» ne s'applique pas.
+Les développeur·euse·s peuvent utiliser cette méthode avec {{DOMxRef("Window.fetch", "fetch()")}}.
 
 ## Voir aussi
 
-- {{HTTPStatus("204")}}
-- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}} – spécifie les formats de document de patch acceptés par le serveur.
+- [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+- [Codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- Le code de statut {{HTTPStatus("204")}}
+- Les en-têtes {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}} - définit les formats de document patch acceptés par le serveur
+- [Générateur JSON Patch <sup>(angl.)</sup>](https://jsoning.com/jsonpatch/)

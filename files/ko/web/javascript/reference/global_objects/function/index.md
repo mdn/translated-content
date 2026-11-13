@@ -33,7 +33,7 @@ l10n:
   - : 함수가 요구하는 인수의 숫자가 명시되어 있습니다.
 - {{jsxref("Function/name", "name")}}
   - : 함수의 이름입니다.
-- {{jsxref("Function/prototype", "prototype")}}
+- {{jsxref("Function", "prototype")}}
   - : 함수가 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new) 연산자와 함께 생성자로 사용될 때 사용됩니다. 새 객체의 프로토타입이 됩니다.
 
 ## 인스턴스 메서드

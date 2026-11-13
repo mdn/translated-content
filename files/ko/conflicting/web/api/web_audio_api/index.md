@@ -10,7 +10,8 @@ Web Audio 표준은 [WebKit](https://webkit.org/)에서 처음 구현되었고, 
 
 Web Audio 명세를 구현하는 (Gecko와 같은) 새로운 엔진들은 오직 명세의 공식, 최종 버전만을 구현하는데, 이것이 의미하는 바는 `webkitAudioContext`나 Web Audio 명세에서의 오래된 명명 규칙을 사용하는 코드는 Web Audio 구현을 따르는 것에서 별도의 조작 없이 즉시 작동하지 않을지도 모른다는 것입니다. 이 글은 개발자들이 이런 문제들을 만날 가능성이 있는 영역들을 요약하기를 시도하고 어떻게 그런 코드를 각각 다른 브라우저 엔진들에서 작동할 {{domxref("AudioContext")}}에 기반한 표준으로 이동할지에 대한 예제들을 제공합니다.
 
-> **참고:** [webkitAudioContext monkeypatch](https://github.com/cwilso/webkitAudioContext-MonkeyPatch)라 불리는 라이브러리가 있는데, 이는 `webkitAudioContext`를 겨냥하는 대부분의 코드를 별도의 조작 없이 `AudioContext`에 기반한 표준에서 작동하게 만들기 위해 이 변화들 중 일부를 자동적으로 수정하지만, 이것은 현재 아래의 모든 경우들을 다루지 않고 있습니다. 이것에 의해 자동적으로 다뤄지는 API들의 목록을 보기 위해서는 이 라이브러리의 [README 파일](https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md)을 참고해 보세요.
+> [!NOTE]
+> [webkitAudioContext monkeypatch](https://github.com/cwilso/webkitAudioContext-MonkeyPatch)라 불리는 라이브러리가 있는데, 이는 `webkitAudioContext`를 겨냥하는 대부분의 코드를 별도의 조작 없이 `AudioContext`에 기반한 표준에서 작동하게 만들기 위해 이 변화들 중 일부를 자동적으로 수정하지만, 이것은 현재 아래의 모든 경우들을 다루지 않고 있습니다. 이것에 의해 자동적으로 다뤄지는 API들의 목록을 보기 위해서는 이 라이브러리의 [README 파일](https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md)을 참고해 보세요.
 
 ## 생성자 메서드에서의 변화
 
@@ -70,7 +71,7 @@ src.stop(2);
 
 ## 동기 버퍼 생성 제거
 
-Web Audio의 오래된 WebKit 구현에서, `createBuffer()`의 두 가지 버전이 있었는데, 하나는 초기적으로 빈 버퍼를 생성했고, 하나는 인코드된 오디오를 포함하고 있는 존재하는 {{domxref("ArrayBuffer")}}를 취해, 그것을 디코드해 {{domxref("AudioBuffer")}}의 형태로 결과를 반환했습니다. `createBuffer()`의 후기 버전은 잠재적으로 비용이 많이 들었는데, 왜냐하면 이것은 오디오 버퍼를 동기적으로 디코드하고, 버퍼가 임의적으로 큰 채로, 이 메서드가 작업을 완료하는 데 많은 시간을 취할 수 있었고, 그 동안 웹 페이지의 어떤 다른 부분의 코드도 실행될 수 없었기 때문입니다.
+Web Audio의 오래된 WebKit 구현에서, `createBuffer()`의 두 가지 버전이 있었는데, 하나는 초기적으로 빈 버퍼를 생성했고, 하나는 인코드된 오디오를 포함하고 있는 존재하는 {{jsxref("ArrayBuffer")}}를 취해, 그것을 디코드해 {{domxref("AudioBuffer")}}의 형태로 결과를 반환했습니다. `createBuffer()`의 후기 버전은 잠재적으로 비용이 많이 들었는데, 왜냐하면 이것은 오디오 버퍼를 동기적으로 디코드하고, 버퍼가 임의적으로 큰 채로, 이 메서드가 작업을 완료하는 데 많은 시간을 취할 수 있었고, 그 동안 웹 페이지의 어떤 다른 부분의 코드도 실행될 수 없었기 때문입니다.
 
 이런 문제들 때문에, `createBuffer()` 메서드의 이 버전은 제거되었고, 여러분은 대신 비동기적 `decodeAudioData()` 메서드를 사용해야 합니다.
 

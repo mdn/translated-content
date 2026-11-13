@@ -47,7 +47,8 @@ original_slug: Web/HTML/Element/input/button
 }
 ```
 
-> **참고:** `<input>` 요소의 `button` 유형도 전혀 틀리지 않은 방법이지만, 이후에 생긴 {{HTMLElement("button")}} 요소를 사용하는 것이 선호되는 방식입니다. `<button>`의 레이블 텍스트는 여는 태그와 닫는 태그 사이에 넣기 때문에, 심지어 이미지까지도 포함할 수 있습니다.
+> [!NOTE]
+> `<input>` 요소의 `button` 유형도 전혀 틀리지 않은 방법이지만, 이후에 생긴 {{HTMLElement("button")}} 요소를 사용하는 것이 선호되는 방식입니다. `<button>`의 레이블 텍스트는 여는 태그와 닫는 태그 사이에 넣기 때문에, 심지어 이미지까지도 포함할 수 있습니다.
 
 <table class="properties">
   <tbody>
@@ -55,7 +56,7 @@ original_slug: Web/HTML/Element/input/button
       <td>
         <strong><a href="#값">값</a></strong>
       </td>
-      <td>버튼의 레이블로 사용할 {{domxref("DOMString")}}</td>
+      <td>버튼의 레이블로 사용할 {{jsxref("String")}}</td>
     </tr>
     <tr>
       <td>이벤트</td>
@@ -81,7 +82,7 @@ original_slug: Web/HTML/Element/input/button
 
 ## 값
 
-`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
+`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{jsxref("String")}}을 담습니다.
 
 ```html
 <input type="button" value="클릭하세요" />

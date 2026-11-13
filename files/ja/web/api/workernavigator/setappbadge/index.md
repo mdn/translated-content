@@ -19,7 +19,7 @@ setAppBadge(contents)
 ### 引数
 
 - `contents` {{optional_inline}}
-  - : バッジの値として用いる {{jsxref("number")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
+  - : バッジの値として用いる {{jsxref("Number")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
 
 ### 返値
 
@@ -30,7 +30,7 @@ setAppBadge(contents)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文書が完全にアクティブでないとき投げられます。
 - `SecurityError` {{domxref("DOMException")}}
-  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によりブロックされたとき投げられます。
+  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)によりブロックされたとき投げられます。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
 

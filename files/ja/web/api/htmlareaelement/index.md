@@ -50,7 +50,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLAreaElement.relList")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Reference/Elements/area#rel) 属性を反映し、現在の文書とリンクされたリソースとの関係を、トークンのリストで示したものを返します。
 - {{domxref("HTMLAreaElement.search")}}
-  - : 参照する URL の検索要素（先頭の疑問符 (`'?'`) を含む）をがあれば、それを表す文字列です。
+  - : 参照する URL の検索要素（先頭の疑問符 (`'?'`) を含む）があれば、それを表す文字列です。
 - {{domxref("HTMLAreaElement.shape")}}
   - : 文字列で、 HTML の [`shape`](/ja/docs/Web/HTML/Reference/Elements/area#shape) 属性を反映し、ホットスポットの形状を示します。既知の値に制限されています。
 - {{domxref("HTMLAreaElement.target")}}

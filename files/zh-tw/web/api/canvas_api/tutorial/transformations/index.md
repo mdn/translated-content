@@ -258,4 +258,4 @@ draw();
 
 {{EmbedLiveSample("transform_setTransform_範例", "", "260")}}
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors", "Web/Guide/HTML/Canvas_tutorial/Compositing")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Compositing")}}

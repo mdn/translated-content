@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
@@ -7,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 **`values()`** 메서드는 배열에서 각 인덱스에 대한 값을 순회하는 _array [iterator](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ 객체를 반환합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

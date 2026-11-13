@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctionnent et pourquoi ils sont importants.
 
 <table class="standard-table">
@@ -13,19 +11,18 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable savoir<a
-          href="/fr/docs/Apprendre/Fonctionnement_Internet"
-        >
-          comment Internet fonctionne</a
-        >,
-        <a href="/fr/docs/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
-          >les différences entre une page web, un site web, un serveur web et un
-          moteur de recherche</a
+        Vous devriez déjà savoir
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
+          >comment fonctionne Internet</a
+        >, et
+        <a
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+          >comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
         Vous apprendrez ce qu'est un serveur web et comprendrez son
         fonctionnement général.
@@ -70,7 +67,7 @@ D'un point de vue technique, il serait tout à fait possible de stocker tout ces
 - conserver la même adresse IP au cours du temps (tous les fournisseurs d'accès ne fournissent pas une adresse IP fixe pour les particuliers)
 - être maintenu par un fournisseur tiers.
 
-Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/docs/Apprendre/How_much_does_it_cost#hosting).
+Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hébergement).
 
 Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
 
@@ -96,8 +93,7 @@ Sur un serveur web, le serveur HTTP est responsable du traitement des requêtes 
 1. Une fois qu'il a reçu une requête, le serveur HTTP vérifie que l'URL demandée correspond à un fichier existant.
 2. Si c'est le cas, le serveur envoie le fichier vers le navigateur du client. Sinon, le serveur d'applications génère le fichier nécessaire.
 3. Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté les pages d'erreurs 404 de leurs sites).
-
-![Une page d'erreur HTTP, en l'occurrence la page 404 de MDN](Capture.PNG)
+   ![Une page d'erreur HTTP, en l'occurrence la page 404 de MDN](mdn-404.jpg)
 
 ### Contenu statique et contenu dynamique
 

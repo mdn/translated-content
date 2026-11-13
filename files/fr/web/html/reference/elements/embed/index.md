@@ -1,14 +1,14 @@
 ---
-title: "<embed> : l'élément de contenu externe embarqué"
+title: "Élément HTML `<embed>` : l'élément de contenu externe embarqué"
+short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
+l10n:
+  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<embed>`** intègre du contenu externe au point défini dans le document. Ce contenu est géré par le navigateur ou une application externe.
 
-L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
-
-{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;embed&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <embed
@@ -18,36 +18,72 @@ L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endr
   height="200" />
 ```
 
-> [!NOTE]
-> Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
+## Attributs
 
-Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- `height`
+  - : La hauteur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#px). La valeur est absolue&nbsp;; les pourcentages _ne sont pas_ autorisés.
+- `src`
+  - : L'URL de la ressource à intégrer.
+- `type`
+  - : Le {{Glossary("MIME type", "type MIME")}} de la ressource imbriquée.
+- `width`
+  - : La largeur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#px). La valeur est absolue&nbsp;; les pourcentages _ne sont pas_ autorisés.
+
+## Notes d'utilisation
+
+Les navigateurs modernes ne prennent plus en charge les plugins de navigateur tels que Flash, mais `<embed>` peut toujours afficher du contenu géré par le navigateur lui-même, comme les fichiers PDF dans un visualiseur PDF intégré.
+
+Pour les aperçus de PDF, envisagez d'utiliser {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}. Contrairement à `<object>`, `<embed>` ne peut pas contenir de contenu de repli. Contrairement à `<iframe>`, il n'a aucun attribut qui contrôle le chargement.
+
+Il est possible d'utiliser la propriété CSS {{CSSxRef("object-position")}} afin d'ajuster la position de l'objet embarqué au sein de le cadre et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de le cadre.
+
+> [!NOTE]
+> La propriété {{CSSxRef("object-fit")}} n'a aucun effet sur les éléments `<embed>`.
+
+## Accessibilité
+
+Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) sur un élément `embed` pour étiqueter son contenu afin que les personnes naviguant avec une technologie d'assistance telle qu'un lecteur d'écran puissent comprendre ce qu'il contient. La valeur du titre doit décrire de manière concise le contenu intégré. Sans titre, il se peut qu'elles ne soient pas en mesure de déterminer quel est son contenu intégré. Ce changement de contexte peut être source de confusion et de perte de temps, en particulier si l'élément `embed` contient du contenu interactif comme de la vidéo ou de l'audio.
+
+## Exemples
+
+```html
+<embed
+  type="video/quicktime"
+  src="film.mov"
+  width="640"
+  height="480"
+  title="Titre de ma vidéo" />
+```
+
+## Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories"
+          href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_intégré"
           >contenu intégré</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_interactif"
           >contenu interactif</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -70,68 +106,25 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#application"
-          ><code>application</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#document"><code>document</code></a
-        >, <a href="https://w3c.github.io/aria/#img"><code>img</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
-        >
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLEmbedElement"
-          ><code>HTMLEmbedElement</code></a
-        >
-      </td>
+      <td>{{DOMxRef("HTMLEmbedElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-- `height`
-  - : La hauteur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px). La valeur est absolue, les pourcentages ne sont pas autorisés.
-- `src`
-  - : L'URL de la ressource à intégrer.
-- `type`
-  - : Le type MIME à utiliser pour sélectionner le plugin à instancier.
-- `width`
-  - : La largeur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px). La valeur est absolue, les pourcentages ne sont pas autorisés.
-
-## Notes d'utilisation
-
-Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
-
-## Exemples
-
-```html
-<embed
-  type="video/quicktime"
-  src="film.mov"
-  width="640"
-  height="480"
-  title="Titre de ma vidéo" />
-```
-
-## Accessibilité
-
-Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) sur un élément `embed` pour étiqueter son contenu afin que les personnes naviguant avec une technologie d'assistance telle qu'un lecteur d'écran puissent comprendre ce qu'il contient. La valeur du titre doit décrire de manière concise le contenu intégré. Sans titre, il se peut qu'elles ne soient pas en mesure de déterminer quel est son contenu intégré. Ce changement de contexte peut être source de confusion et de perte de temps, en particulier si l'élément `embed` contient du contenu interactif comme de la vidéo ou de l'audio.
 
 ## Spécifications
 
@@ -143,5 +136,5 @@ Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/titl
 
 ## Voir aussi
 
-- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<math>`](/fr/docs/Web/MathML/Reference/Element/math), [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
-- Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} et {{HTMLElement("video")}}.
+- Positionnement et dimensionnement du contenu intégré dans son cadre&nbsp;: {{CSSxRef("object-position")}} et {{CSSxRef("object-fit")}}

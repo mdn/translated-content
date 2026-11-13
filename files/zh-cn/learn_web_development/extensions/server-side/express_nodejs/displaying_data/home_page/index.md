@@ -3,6 +3,8 @@ title: 主页
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 我们创建的第一个页面，是网站的主页面，可以从网站的根目录 (`'/'`) ，或者 catalog 的根目录 (`catalog/`) 访问。这将呈现一些网站的静态文字描述，以及动态计算数据库中不同记录类型的“计数”。
 
 我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。
@@ -131,7 +133,4 @@ block content
 > [!NOTE]
 > 你将无法使用侧边栏链接，因为这些网页的网址，视图和模板尚未定义。例如，如果你尝试，取决于你点击的链接，你将获取“NOT IMPLEMENTED: Book list”等错误。在“控制器”文件中的不同控制器中，会指定这些字符串文字（将被合适的数据替换）。
 
-## 下一步
-
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 继续阅读教程 5 下个子章节：[书本列表页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

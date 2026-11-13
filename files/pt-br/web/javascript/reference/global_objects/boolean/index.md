@@ -64,7 +64,7 @@ Não use um um objeto `Boolean` no lugar de um primitivo `Boolean`.
 
 - `Boolean.length`
   - : Propriedade Length cujo valor é 1.
-- {{jsxref("Boolean.prototype")}}
+- {{jsxref("Boolean")}}
   - : Representa o protótipo para o construtor `Boolean`.
 
 ## Métodos
@@ -73,7 +73,7 @@ O objeto global `Boolean` contém métodos próprios, entretanto, ele herda algu
 
 ## Instâncias `Boolean`
 
-Todas instâncias `Boolean` herdam de {{jsxref("Boolean.prototype")}}. Assim como todos os construtores, o protótipo do objeto dita as propriedades e métodos herdados.
+Todas instâncias `Boolean` herdam de {{jsxref("Boolean")}}. Assim como todos os construtores, o protótipo do objeto dita as propriedades e métodos herdados.
 
 ### Propriedades
 
@@ -116,6 +116,6 @@ var bObjProto = new Boolean({});
 
 ## Veja também
 
-- {{jsxref("Boolean.prototype")}}
+- {{jsxref("Boolean")}}
 - {{Glossary("Boolean")}}
 - [Boolean data type (Wikipedia)](http://en.wikipedia.org/wiki/Boolean_data_type)

@@ -58,7 +58,7 @@ function name(param0, param1, /* …, */ paramN) {
 
 ## 解説
 
-`function` 式は [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とよく似ており、ほとんど同じ書式ですあります。 `function` 式と `function` 宣言の主な相違点は、*関数名*です。 `function` 式では、*無名*関数を生成するために、関数名を省略できます。 `function` 式は、定義するとすぐに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数）として使用できます。詳細については、[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を参照してください。
+`function` 式は [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とよく似ており、ほとんど同じ書式です。 `function` 式と `function` 宣言の主な相違点は、*関数名*です。 `function` 式では、*無名*関数を生成するために、関数名を省略できます。 `function` 式は、定義するとすぐに実行する [IIFE](/ja/docs/Glossary/IIFE) （即時実行関数）として使用できます。詳細については、[関数](/ja/docs/Web/JavaScript/Reference/Functions)の章を参照してください。
 
 ### 関数式の巻き上げ
 

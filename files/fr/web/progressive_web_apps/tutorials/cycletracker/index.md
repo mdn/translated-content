@@ -7,8 +7,6 @@ l10n:
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}
 
-{{PWASidebar}}
-
 Dans ce tutoriel introductif, nous aborderons les différentes étapes pour construire une application web progressive (<i lang="en">PWA</i> pour <i lang="en">Progressive Web App</i> en anglais). Nous utiliserons ici les technologies web&nbsp;: HTML, CSS et JavaScript, afin de construire une application de suivi menstruel, appelée «&nbsp;CycleTracker&nbsp;». Comme toutes les applications web, CycleTracker sera conçue pour fonctionner sur l'ensemble des navigateurs et l'ensemble des appareils qui accèdent au Web.
 
 Nous commencerons par les étapes pour construire une application web complètement fonctionnelle, puis nous améliorerons CycleTracker afin qu'elle soit installable, et qu'elle fonctionne même lorsque la personne est hors-ligne.

@@ -3,8 +3,6 @@ title: contextualIdentities.get()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 ---
 
-{{AddonSidebar}}
-
 Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

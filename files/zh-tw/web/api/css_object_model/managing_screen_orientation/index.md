@@ -9,7 +9,7 @@ l10n:
 
 *螢幕方向*這個術語是指瀏覽器[視區](/zh-TW/docs/Glossary/Viewport)是處於橫向模式（也就是視區的寬度大於高度），還是直向模式（視區的高度大於寬度）。
 
-CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/@media/orientation) 媒體功能，允許根據螢幕方向調整版面配置。
+CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/Reference/At-rules/@media/orientation) 媒體功能，允許根據螢幕方向調整版面配置。
 
 [Screen Orientation API](/zh-TW/docs/Web/API/Screen_Orientation_API) 提供了一個程式化的 JavaScript API，用於處理螢幕方向，包括將視區鎖定為特定方向的功能。
 
@@ -175,4 +175,4 @@ screen.orientation.lock();
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{domxref("ScreenOrientation")}} 的 {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件
-- [方向媒體查詢](/zh-TW/docs/Web/CSS/@media/orientation)
+- [方向媒體查詢](/zh-TW/docs/Web/CSS/Reference/At-rules/@media/orientation)

@@ -2,7 +2,7 @@
 title: 音声と動画の配信
 slug: Web/Media/Guides/Audio_and_video_delivery
 l10n:
-  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
+  sourceCommit: 3251a58ecf1ded5df0e1aa5d23c8436247252b52
 ---
 
 音声と動画のウェブ配信には、静的なメディアファイルから適応型ライブストリームまで、さまざま手法が存在します。この記事は、ウェブベースの多様なメディア配信の仕組みと主要ブラウザーとの互換性を探るための出発点となるものです。
@@ -72,7 +72,7 @@ l10n:
 > [!NOTE]
 > `autoplay`属性は一部のモバイルブラウザーで無視される場合があります。また、誤用された場合、自動再生機能は問題を引き起こす可能性があります。自動再生を適切に使用する方法については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)を必ず読むことを強く推奨します。
 
-詳細については、 [\<video> 要素](/ja/docs/Web/HTML/Reference/Elements/video)および [クロスブラウザー対応動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+詳細については、 [\<video> 要素](/ja/docs/Web/HTML/Reference/Elements/video)および [ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 
 ### JavaScript オーディオ
 
@@ -190,9 +190,9 @@ if (navigator.mediaDevices) {
 
 詳しくは、 {{domxref("MediaDevices.getUserMedia")}} ページを読んでください。
 
-## MediaStream の収録
+## メディアストリームの収録
 
-新しい標準が展開され、ブラウザーが`getUserMedia`を使用してマイクやカメラからメディアを取得し、新しい MediaStream 収録 API で即座に記録できるようになります。 `getUserMedia` から受け取ったストリームを `MediaRecorder` オブジェクトに渡して、結果の出力を音声と映像のソースに供給します。
+新しい標準が展開され、ブラウザーが `getUserMedia` を使用してマイクやカメラからメディアを取得し、新しい MediaStream 収録 API で即座に記録できるようになります。 `getUserMedia` から受け取ったストリームを `MediaRecorder` オブジェクトに渡して、結果の出力を音声と映像のソースに供給します。
 
 主要なメカニズムは次のような概要です。
 
@@ -225,11 +225,11 @@ navigator.mediaDevices
 
 詳しくは [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) を参照してください。
 
-## Media Source 拡張 (MSE)
+## メディアソース拡張 (MSE)
 
 [メディアソース拡張](https://w3c.github.io/media-source/)は、 {{domxref("HTMLMediaElement")}} を拡張し、 JavaScript による再生用メディアストリームの生成を可能とする W3C 草案です。 JavaScript によるストリーム生成の許可は、適応型ストリーミングやライブストリームのタイムシフトなど、様々な用途を実現します。
 
-### Encrypted Media 拡張 (EME)
+### 暗号化メディア拡張 (EME)
 
 [暗号化メディア拡張](https://w3c.github.io/encrypted-media/)は、保護されたコンテンツの再生を制御する API を指定された形で提供する `HTMLMediaElement` を拡張する W3C の提案です。
 
@@ -288,15 +288,11 @@ function checkKey(e) {
   }
 }
 
-myControl.addEventListener(
-  "click",
-  () => {
-    switchState();
-  },
-  false,
-);
+myControl.addEventListener("click", () => {
+  switchState();
+});
 
-window.addEventListener("keypress", checkKey, false);
+window.addEventListener("keypress", checkKey);
 ```
 
 {{EmbedLiveSample("customizing your media player", "", 200)}}
@@ -367,21 +363,21 @@ mediaElement.played.end(0); // Returns the number of seconds the browser has pla
 ```html
 <video>
   <source
-    id="mp4_src"
+    id="src-mp4"
     src="video.mp4"
     type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
   <source
-    id="3gp_src"
+    id="src-3gp"
     src="video.3gp"
     type='video/3gpp; codecs="mp4v.20.8, samr"' />
   <source
-    id="ogg_src"
+    id="src-ogg"
     src="video.ogv"
     type='video/ogv; codecs="theora, vorbis"' />
 </video>
 ```
 
-Firefox は特許問題のため、一部のプラットフォームで MP4 と 3GP に対応していません。そのため、 ID が "mp4_src" および "3gp_src" の {{ HTMLElement("source") }} 要素は、 Oggリソースが読み込まれる前に `error` イベントを受け取ります。ソースは出現順に試行され、いずれかが正常に読み込まれた後は、残りのソースはまったく試行されません。
+Firefox は特許問題のため、一部のプラットフォームで MP4 と 3GP に対応していません。そのため、 ID が `src-mp4` および `src-3gp` の {{ HTMLElement("source") }} 要素は、 Ogg リソースが読み込まれる前に `error` イベントを受け取ります。ソースは出現順に試行され、いずれかが正常に読み込まれた後は、残りのソースはまったく試行されません。
 
 ### ブラウザーが指定された形式に対応しているか調べる
 
@@ -452,15 +448,11 @@ AddType video/webm webmv
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
 const lastSource = sources[sources.length - 1];
-lastSource.addEventListener(
-  "error",
-  (ev) => {
-    const d = document.createElement("div");
-    d.innerHTML = v.innerHTML;
-    v.parentNode.replaceChild(d, v);
-  },
-  false,
-);
+lastSource.addEventListener("error", (ev) => {
+  const d = document.createElement("div");
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
+});
 ```
 
 ## 音声/動画 JavaScript ライブラリー
@@ -471,15 +463,14 @@ lastSource.addEventListener(
 ### 音声のみ
 
 - [SoundManager](https://www.schillmania.com/projects/soundmanager2/)
-- [AmplitudeJS](https://521dimensions.com/open-source/amplitudejs)
+- [AmplitudeJS](https://serversideup.net/open-source/amplitudejs/)
 - [HowlerJS](https://howlerjs.com/)
 
 ### 動画のみ
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
-- [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
+- [Video.js](https://videojs.org/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### 音声と動画
 
@@ -492,10 +483,12 @@ lastSource.addEventListener(
 
 ## ガイド
 
-- [クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
+- [ブラウザーに依存しない動画プレイヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
   - : {{ htmlelement("video") }} 要素を使用して、基本的なクロスブラウザー動画プレイヤーを作成するガイドです。
 - [動画プレイヤーのスタイル設定の基本](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : 前回の記事でクロスブラウザー対応の動画プレイヤーができたので、この記事はプレイヤーの基本的なレスポンシブスタイル設定を指定していきます。
+- [HTML の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : この記事では HTML の {{ htmlelement("video") }} に、[Web_Video_Text_Tracks_Format](/ja/docs/Web/API/WebVTT_API) および {{ htmlelement("track") }} 要素を使用して、キャプションや字幕を追加する方法について説明します。
 - [クロスブラウザーの音声の基本](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : この記事では、クロスブラウザーで動作する HTML 音声プレーヤーの作成に関する基本ガイドが指定されています。関連付けられたすべての属性、プロパティ、イベントについて説明し、メディア API を使用して生成する独自のコントロールに関するクイックガイドも紹介します。
 - [メディアのバッファリング、シーク、再生範囲](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
@@ -516,8 +509,6 @@ lastSource.addEventListener(
 
 ### 高度なトピック
 
-- [HTML の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : この記事は、[Web_Video_Text_Tracks_Format](/ja/docs/Web/API/WebVTT_API) と {{ htmlelement("track") }} 要素を使用して、HTML の {{ htmlelement("video") }} にキャプションと字幕を追加する方法を説明します。
 - [ウェブオーディオ API のクロスブラウザー対応](/ja/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
   - : クロスブラウザー対応のウェブオーディオ API コード作成ガイド
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)

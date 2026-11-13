@@ -28,7 +28,7 @@ El evento `loadend` es emitido cuando el progreso de la carga de un recurso se h
 | Property                             | Type                       | Description                                                                                                                                                    |
 | ------------------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}          | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                         |
-| `type` {{readonlyInline}}            | {{domxref("DOMString")}}   | The type of event.                                                                                                                                             |
+| `type` {{readonlyInline}}            | {{jsxref("String")}}       | The type of event.                                                                                                                                             |
 | `bubbles` {{readonlyInline}}         | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                     |
 | `cancelable` {{readonlyInline}}      | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                       |
 | `lengthComputable`{{readonlyInline}} | {{jsxref("Boolean")}}      | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
@@ -42,7 +42,7 @@ El evento `loadend` es emitido cuando el progreso de la carga de un recurso se h
 - [`error`](/es/docs/Web/API/HTMLElement/error_event)
 - [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event)
 - [`load`](/es/docs/Web/API/Window/load_event)
-- [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event)
+- [`loadend`](/es/docs/Web/API/XMLHttpRequestEventTarget/loadend_event)
 
 ## Ver También
 

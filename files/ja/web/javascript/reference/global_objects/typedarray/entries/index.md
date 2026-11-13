@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.entries()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.entries()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
@@ -19,7 +18,7 @@ eArr.next();
 eArr.next();
 
 console.log(eArr.next().value);
-// Expected output: Array [2, 30]
+// 予想される結果: Array [2, 30]
 ```
 
 ## 構文
@@ -46,7 +45,7 @@ entries()
 
 ```js
 const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+const arrayEntries = array.entries();
 for (const element of arrayEntries) {
   console.log(element);
 }
@@ -56,7 +55,7 @@ for (const element of arrayEntries) {
 
 ```js
 const array = new Uint8Array([10, 20, 30, 40, 50]);
-const arrayEntries = arr.entries();
+const arrayEntries = array.entries();
 
 console.log(arrayEntries.next().value); // [0, 10]
 console.log(arrayEntries.next().value); // [1, 20]
@@ -75,7 +74,7 @@ console.log(arrayEntries.next().value); // [4, 50]
 
 ## 関連情報
 
-- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.entries` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

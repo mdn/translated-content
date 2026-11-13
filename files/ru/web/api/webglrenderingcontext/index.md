@@ -287,7 +287,7 @@ var gl = canvas.getContext("webgl");
 These methods manage WebGL extensions:
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
+  - : Returns an {{jsxref("Array")}} of {{jsxref("String")}} elements with all the supported WebGL extensions.
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 

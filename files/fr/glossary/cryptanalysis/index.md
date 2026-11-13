@@ -1,14 +1,12 @@
 ---
 title: Cryptanalyse
 slug: Glossary/Cryptanalysis
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-La **cryptanalyse** est la branche de la {{glossary("cryptography","cryptographie")}} qui étudie la manière de casser des codes et des cryptosystèmes. Elle développe des techniques pour casser les {{glossary("cipher","systèmes cryptographiques")}}, en particulier par des méthodes plus efficaces que la [recherche par force brute](http://fr.wikipedia.org/wiki/Recherche_exhaustive). En plus des méthodes traditionnelles comme l'[analyse fréquentielle](http://fr.wikipedia.org/wiki/Analyse_fréquentielle) ou l'[indice de coïncidence](http://fr.wikipedia.org/wiki/Indice_de_coïncidence), la cryptanalyse intègre des méthodes plus récentes, comme la [cryptanalyse linéaire](http://fr.wikipedia.org/wiki/Cryptanalyse_linéaire) our la [cryptanalyse différentielle](http://fr.wikipedia.org/wiki/Cryptanalyse_différentielle) qui peuvent venir à bout de systèmes cryptographiques plus avancés.
+La **cryptanalyse** est la branche de la {{Glossary("cryptography", "cryptographie")}} qui étudie la manière de casser des codes et des cryptosystèmes. Elle développe des techniques pour casser les {{Glossary("cipher", "chiffrements")}}, en particulier par des méthodes plus efficaces que la [recherche par force brute](http://fr.wikipedia.org/wiki/Recherche_exhaustive). En plus des méthodes traditionnelles comme l'[analyse fréquentielle](http://fr.wikipedia.org/wiki/Analyse_fréquentielle) ou l'[indice de coïncidence](http://fr.wikipedia.org/wiki/Indice_de_coïncidence), la cryptanalyse intègre des méthodes plus récentes, comme la [cryptanalyse linéaire](http://fr.wikipedia.org/wiki/Cryptanalyse_linéaire) our la [cryptanalyse différentielle](http://fr.wikipedia.org/wiki/Cryptanalyse_différentielle) qui peuvent venir à bout de systèmes cryptographiques plus avancés.
 
 ## Voir aussi
-
-### Culture générale
 
 - [Cryptanalyse](https://fr.wikipedia.org/wiki/Cryptanalyse) sur Wikipédia

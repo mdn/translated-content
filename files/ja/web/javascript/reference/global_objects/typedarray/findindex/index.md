@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`findIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定されたテスト関数を満たす型付き配列の最初の要素のインデックスを返します。テスト関数を満たす要素がない場合、 -1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findIndex()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.findIndex()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.findIndex()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -19,7 +18,7 @@ function isNegative(element, index, array) {
 const int8 = new Int8Array([10, -20, 30, -40, 50]);
 
 console.log(int8.findIndex(isNegative));
-// Expected output: 1
+// 予想される結果: 1
 ```
 
 ## 構文
@@ -44,7 +43,7 @@ findIndex(callbackFn, thisArg)
 
 ### 返値
 
-テストを通った配列の要素の位置を返します。それ以外の場合は、 `-1` を返します。
+テストに合格した型付き配列の最初の要素のインデックスを返します。それ以外の場合は、 `-1` を返します。
 
 ## 解説
 
@@ -52,27 +51,35 @@ findIndex(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列内の素数の位置を検索する
+### 型付き配列内の最初の素数のインデックスを探す
 
-次の例では、型付き配列の中で素数の入った最初の要素の位置を返し、素数が見つからなかった場合は `-1` を返します。
+次の例では、型付き配列内で最初に見つかった素数のインデックスを返し、素数が見つからなかった場合は `-1` を返します。
 
 ```js
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 const uint8 = new Uint8Array([4, 6, 8, 12]);
 const uint16 = new Uint16Array([4, 6, 7, 12]);
 
-console.log(uint8.findIndex(isPrime)); // -1, not found
+console.log(uint8.findIndex(isPrime)); // -1、見つからない
 console.log(uint16.findIndex(isPrime)); // 2
 ```
+
+> [!NOTE]
+> この `isPrime()` の実装はデモ用です。実際のアプリケーションでは、計算の繰り返しを避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような{{Glossary("Memoization", "メモ化")}}を多用するアルゴリズムを使用するとよいでしょう。
 
 ## 仕様書
 
@@ -84,7 +91,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 
 ## 関連情報
 
-- [`TypedArray.prototype.findIndex` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.findIndex` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

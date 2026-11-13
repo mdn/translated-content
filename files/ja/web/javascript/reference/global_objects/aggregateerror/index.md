@@ -1,25 +1,40 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
+l10n:
+  sourceCommit: 1d2e1875bdfdd2fb8d0806535220bbd56d3a091d
 ---
 
-{{JSRef}}
+**`AggregateError`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{jsxref("Promise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。
 
-**`AggregateError`** オブジェクトは、複数のエラーを 1 つのエラーにまとめる必要があるときのエラーを表します。これは一つの操作で複数のエラーを報告する必要があるときに発生します。例えば {{JSxRef("Promise.any()")}} において、渡されたすべてのプロミスが拒否された場合などです。
+{{jsxref("SuppressedError")}} と比較すると、`AggregateError` は無関係のエラーのリストを表すのに対し、 `SuppressedError` は他のエラーを処理中に発生したエラーを表します。
+
+`AggregateError` は {{jsxref("Error")}} のサブクラスです。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/AggregateError/AggregateError", "AggregateError()")}}
+- {{jsxref("AggregateError/AggregateError", "AggregateError()")}}
   - : 新しい `AggregateError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
-  - : エラーメッセージで、既定値は `""` です。
-- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
-  - : エラー名で、既定値は `AggregateError` です。
-- `AggregateError`: `errors`
-  - : `AggregateError` のインスタンスが作成された反復可能オブジェクトを本質的に反映した配列です。例えば、 `AggregateError` が {{JSxRef("AggregateError/AggregateError", "AggregateError()")}} コンストラクターを用いて生成された場合、最初の引数として渡された反復可能オブジェクトから生成される配列になります。
+_親である {{jsxref("Error")}} から継承したインスタンスプロパティもあります_。
+
+以下のプロパティは `AggregateError.prototype` に定義されており、すべての `AggregateError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "AggregateError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを生成したコンストラクター関数です。`AggregateError` インスタンスでは、初期値は {{jsxref("AggregateError/AggregateError", "AggregateError")}} コンストラクターです。
+- {{jsxref("Error/name", "AggregateError.prototype.name")}}
+  - : エラーの型の名前を表します。`AggregateError.prototype.name` では、初期値は `"AggregateError"` です。
+
+以下のプロパティは、それぞれの `AggregateError` インスタンス自身のプロパティです。
+
+- {{jsxref("AggregateError/errors", "errors")}}
+  - : まとめられたエラーを表す配列です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} からインスタンスメソッドを継承しています_。
 
 ## 例
 
@@ -58,5 +73,6 @@ try {
 ## 関連情報
 
 - [`AggregateError` の `core-js` におけるポリフィル](https://github.com/zloirock/core-js#ecmascript-promise)
-- {{JSxRef("Error")}}
-- {{JSxRef("Promise.any")}}
+- [es-shims による `AggregateError` のポリフィル](https://www.npmjs.com/package/es-aggregate-error)
+- {{jsxref("Error")}}
+- {{jsxref("Promise.any")}}

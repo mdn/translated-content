@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **{{Glossary("CSP")}} 报告指令**用于 {{HTTPHeader("Content-Security-Policy")}} 标头，控制 CSP 违规报告的过程。
 
 详见[报告指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#报告指令)以获取完整列表。

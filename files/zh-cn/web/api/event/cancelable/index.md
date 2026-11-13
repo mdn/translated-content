@@ -19,7 +19,7 @@ slug: Web/API/Event/cancelable
 
 ## 值
 
-为一个{{domxref("Boolean", "布尔值")}}。若事件可以被取消，其值为 `true`。
+为一个{{jsxref("Boolean", "布尔值")}}。若事件可以被取消，其值为 `true`。
 
 ## 示例
 

@@ -31,7 +31,8 @@ new Set()
 new Set(iterable)
 ```
 
-> **참고:** `Set()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 생성할 수 있습니다. `new` 없이 생성을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Set()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 생성할 수 있습니다. `new` 없이 생성을 시도하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 

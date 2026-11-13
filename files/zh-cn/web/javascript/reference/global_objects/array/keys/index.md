@@ -3,8 +3,6 @@ title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
-{{JSRef}}
-
 **`keys()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，其中包含数组中每个索引的键。
 
 {{InteractiveExample("JavaScript Demo: Array.keys()")}}

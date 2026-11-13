@@ -3,7 +3,7 @@ title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Practical_positioning_examples", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 Это новая технология, которая уже имеет достаточно широкую поддержку браузеров. Flexbox предоставляет инструменты для быстрого создания сложных, гибких макетов, и функции, которые были сложны в традиционных методах CSS. В этой статье объясняются все основы данной технологии.
 
@@ -312,4 +312,4 @@ button {
 
 Мы завершаем нашу статью по основам flexbox. Надеемся, что вам понравилось, и вы хорошо развлечётесь, путешествуя дальше и изучая его. Далее мы рассмотрим ещё один важный аспект макетов CSS - grid-системы.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Practical_positioning_examples", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

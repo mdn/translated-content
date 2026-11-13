@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
-在 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)中，**对齐主体**是通过属性在{{glossary("alignment container", "对齐容器")}}中被对齐的事物。
+在 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment)中，**对齐主体**是通过属性在{{glossary("alignment container", "对齐容器")}}中被对齐的事物。
 
 对于 {{cssxref("justify-self")}} 和 {{cssxref("align-self")}}，对齐主体是设置这些属性的盒子的外边距框，并且使用该盒子的书写模式。{{cssxref("justify-content")}}、{{cssxref("align-content")}} 属性也会使用盒子的书写模式。
 
@@ -24,6 +22,6 @@ l10n:
 
 ## 参见
 
-- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)模块
+- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment)模块
 - 相关术语：
   - {{Glossary("alignment container", "对齐容器")}}

@@ -3,7 +3,7 @@ title: Array.prototype.with()
 short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`with()`** は {{jsxref("Array")}} インスタンスのメソッドで、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)に対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、指定された位置の要素を指定された値で置き換えた新しい配列を返します。
@@ -80,7 +80,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
-  3: 3, // length が 3 なので toSorted() からは無視される
+  3: 3, // length が 3 なので with() からは無視される
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
@@ -96,7 +96,7 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 
 ## 関連情報
 
-- [`Array.prototype.with` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`Array.prototype.with` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.with` のポリフィル](https://www.npmjs.com/package/array.prototype.with)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.toReversed()")}}

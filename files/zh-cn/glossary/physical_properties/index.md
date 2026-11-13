@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
 ---
 
-{{GlossarySidebar}}
-
 CSS **物理属性**根据物理方向或元素边界定义位置。例如：
 
 - {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 等 {{Glossary("inset properties", "inset 属性")}}引用视口的物理尺寸。
@@ -16,6 +14,6 @@ CSS **物理属性**根据物理方向或元素边界定义位置。例如：
 
 ## 参见
 
-- [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)模块
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
-- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- [CSS 定位布局](/zh-CN/docs/Web/CSS/Guides/Positioned_layout)模块
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model)模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块

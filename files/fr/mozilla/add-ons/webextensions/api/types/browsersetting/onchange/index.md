@@ -3,8 +3,6 @@ title: onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
 
-{{AddonSidebar}}
-
 L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
 ## Syntaxe
@@ -35,7 +33,7 @@ Les événement ont trois fonctions :
         - `value`
           - : La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
         - `levelOfControl`
-          - : `string`. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+          - : `string`. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
               <tbody>
                 <tr>
                   <td><code>"not_controllable"</code></td>

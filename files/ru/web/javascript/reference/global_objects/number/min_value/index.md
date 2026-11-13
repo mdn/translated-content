@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 
 `MIN_VALUE` имеет значение, приблизительно равное `5e-324`. Значения, меньшие `MIN_VALUE`, преобразуются в 0 (так называемое «исчезновение порядка» или «антипереполнение»).
 
-Поскольку `MIN_VALUE` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MIN_VALUE`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Поскольку `MIN_VALUE` является статическим свойством объекта {{jsxref("Number")}}, вы всегда должны использовать его как `Number.MIN_VALUE`, а не как свойство созданного вами объекта {{jsxref("Number")}}.
 
 ## Примеры
 

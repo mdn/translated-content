@@ -2,7 +2,7 @@
 title: WebAssembly.CompileError
 slug: WebAssembly/Reference/JavaScript_interface/CompileError
 l10n:
-  sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.CompileError`** 对象表示 WebAssembly 解码或验证期间的错误。
@@ -64,6 +64,6 @@ try {
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

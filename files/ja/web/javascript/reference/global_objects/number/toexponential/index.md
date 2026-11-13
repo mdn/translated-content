@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`toExponential()`** は {{jsxref("Number")}} 値のメソッドで、この数値をを指数表記で表した文字列を返します。
+**`toExponential()`** は {{jsxref("Number")}} 値のメソッドで、この数値を指数表記で表した文字列を返します。
 
 {{InteractiveExample("JavaScript デモ: Number.prototype.toExponential()")}}
 
