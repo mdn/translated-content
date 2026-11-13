@@ -1,14 +1,12 @@
 ---
 title: PDF
 slug: Glossary/PDF
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**PDF** (Portable Document Format) は、特定のソフトウェア実装、ハードウェアプラットフォーム、オペレーティングシステムに依存せずに文書を共有するためのファイル形式です。PDF は印刷された文書のデジタル画像を提供し、印刷時も同じ外観を保ちます。
 
-**PDF** (Portable Document Format) は、特定のソフトウェア実装、ハードウェアプラットフォーム、オペレーティングシステムに依存せずにドキュメントを共有するためのファイル形式です。PDF は、印刷文書のデジタル画像を提供し、印刷したとき同じ外観を保ちます。
+## 関連情報
 
-## 詳細情報
-
-### 一般知識
-
-- Wikipedia の [PDF](https://ja.wikipedia.org/wiki/Portable_Document_Format)
+- [PDF](https://ja.wikipedia.org/wiki/Portable_Document_Format) - ウィキペディア

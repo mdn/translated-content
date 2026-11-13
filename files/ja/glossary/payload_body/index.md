@@ -1,34 +1,16 @@
 ---
-title: Payload body
+title: Payload body (ペイロード本文)
 slug: Glossary/Payload_body
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+HTTP メッセージでは、**ペイロード本文**または**ペイロード**とは、メッセージ本文で転送されるリソース表現から[転送エンコーディング](/ja/docs/Web/HTTP/Reference/Headers/Transfer-Encoding)を取り除いたものを指していました。転送エンコーディングがなければ、_ペイロード本文_ と _メッセージ本文_ は同じです。表現データが HTTP ヘッダーで転送されることもありますが、そのようなデータは「ペイロード」とはみなされません。
 
-HTTP メッセージの*ペイロード本文*は、HTTP メッセージ本文があれば、その送信時に送られるデータの {{HTTPHeader("Transfer-Encoding","Transfer-Encoding")}} が適用される前の*情報* ("ペイロード") 部分です。 Transfer-Encoding が使用されない限り、 _ペイロード本文_ と _メッセージ本文_ は同じものです。
+{{RFC("9110")}} 以降、「ペイロード」という語は「コンテンツ」に置き換えられました。[**HTTP コンテンツ**](/ja/docs/Glossary/HTTP_Content)を参照してください。
 
-例えば、このレスポンスではメッセージ本文は "Mozilla Developer Network" というペイロード本文を持っているだけです。
+## 関連情報
 
-```plain
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Mozilla Developer Network
-```
-
-対して、下記レスポンスは _transfer encoding_ を使ってペイロード本文をチャンクに変換しています。ペイロード本文（情報）は同じく "Mozilla Developer Network" を送信しますが、メッセージ本文には、チャンクを分離するための追加のデータが含まれています。
-
-```plain
-HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n
-```
-
-詳しくは、 [RFC 7230, section 3.3: Message Body](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3) と [RFC 7230, section 3.3.1: Transfer-Encoding](https://datatracker.ietf.org/doc/html/rfc7230#section-3.3.1) を参照してください。
+- {{Glossary("Content header")}}
+- [RFC 9110, section 6.4: Content](https://httpwg.org/specs/rfc9110.html#rfc.section.6.4)（[RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3) のペイロードの意味を置き換え）
+  - [Changes from RFC 7231](https://httpwg.org/specs/rfc9110.html#changes.from.rfc.7231)
