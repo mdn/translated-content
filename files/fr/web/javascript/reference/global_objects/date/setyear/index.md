@@ -3,10 +3,8 @@ title: "Date : méthode setYear()"
 short-title: setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{Deprecated_Header}}
 
 La méthode **`setYear()`** des instances de {{JSxRef("Date")}} définit l'année pour une date définie selon l'heure locale.
 
@@ -60,7 +58,7 @@ leGrandJour.setYear(2000);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Date.prototype.setYear` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-date)
+- [Prothèse d'émulation de `Date.prototype.setYear` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/date)
 - La méthode {{JSxRef("Date.prototype.getFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.getUTCFullYear()")}}
 - La méthode {{JSxRef("Date.prototype.setFullYear()")}}

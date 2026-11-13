@@ -3,7 +3,7 @@ title: TypedArray.prototype.toReversed()
 short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
 ---
 
 **`toReversed()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、 {{jsxref("TypedArray/reverse", "reverse()")}} メソッドに対応する[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。このメソッドは、要素を逆順にした新しい型付き配列を返します。このメソッドは {{jsxref("Array.prototype.toReversed()")}} と同じアルゴリズムです。
@@ -47,7 +47,7 @@ console.log(uint8); // Uint8Array [1, 2, 3]
 
 ## 関連情報
 
-- [`TypedArray.prototype.toReversed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [`TypedArray.prototype.toReversed` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray.prototype.reverse()")}}
 - {{jsxref("TypedArray.prototype.toSorted()")}}

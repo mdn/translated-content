@@ -1,11 +1,10 @@
 ---
-title: <input type="tel">
+title: '`<input type="tel">` 属性値'
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Reference/Elements/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
 
@@ -13,8 +12,8 @@ l10n:
 
 ```html interactive-example
 <label for="phone">
-  Enter your phone number:<br />
-  <small>Format: 123-456-7890</small>
+  電話番号を入力してください:<br />
+  <small>形式: 123-456-7890</small>
 </label>
 
 <input
@@ -39,11 +38,6 @@ label {
 }
 ```
 
-`tel` の入力欄は機能的に標準の `text` 入力欄と同じであるという事実にもかかわらず、便利な用途を提供します。もっとも手っ取り早く表れるのは、モバイルブラウザー — 特に携帯電話のもの — では、電話番号の入力に最適化された専用のキーパッドを表示することがあります。電話番号の専用の入力型を使用すると、カスタム検証を追加して電話番号の扱いをもっと便利にすることができます。
-
-> [!NOTE]
-> `tel` 型に対応していないブラウザーでは、通常の {{HTMLElement("input/text", "text")}} 入力欄で代用されます。
-
 ## 値
 
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、電話番号を表す文字列、または空文字列 (`""`) の文字列が入ります。
@@ -58,15 +52,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが電話番号欄に入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
+フィールドに入力された長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### minlength
 
-ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小長が設定されません。
+ユーザーが電話番号欄に入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小長が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
+入力欄のテキストの長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### pattern
 
@@ -97,11 +91,16 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### size
 
-`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
+`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、デフォルト値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
 ## tel 入力欄の使用
+
+`tel` 型の入力欄は機能的には標準の `text` 入力欄と同じですが、便利な用途があります。最も分かりやすいのは、モバイルブラウザー（特に携帯電話のブラウザー）が電話番号の入力に最適化された専用キーパッドを表示する場合があることです。電話番号専用の入力型を使用すると、カスタム検証の追加や電話番号の扱いも便利になります。
+
+> [!NOTE]
+> `tel` 型に対応していないブラウザーでは、通常の {{HTMLElement("input/text", "text")}} 入力欄で代替されます。
 
 ウェブにおいて、電話番号はとてもよく収集されるデータの種類です。例えば、何らかの会員登録や通信販売サイトで、商取引や緊急時連絡の目的でユーザーに電話番号を尋ねることが良くあります。一般的にどのように電話番号が入力されるかを考えれば、残念ながら「1 つのサイズですべてに合う」ような解決策は現実的ではありません。
 
@@ -173,13 +172,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
 > [!NOTE]
-> 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
+> 上記の属性は[検証](#検証)に影響します。上記の例では、値の長さが 9 文字未満、または 14 文字を超える場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
 
-### 既定のオプションの提供
+### デフォルトのオプションの提供
 
-#### value 属性を言使用した単一の既定値の提供
+#### value 属性を言使用した単一のデフォルト値の提供
 
-他と同様に、 `tel` 入力欄に [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することで既定値を指定することができます。
+他と同様に、 `tel` 入力欄に [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することでデフォルト値を指定することができます。
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -189,7 +188,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### 提案値の提供
 
-さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
+さらに一歩進んで、電話番号のデフォルト値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
 
 ```html
 <label for="telNo">電話番号: </label>
@@ -235,6 +234,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 そして、有効な入力をチェックマークで、無効な入力をバッテンで強調するために、以下の CSS を記述してみましょう。
 
 ```css
@@ -255,7 +260,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -296,6 +301,12 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 div {
   margin-bottom: 10px;
@@ -314,7 +325,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -336,55 +347,50 @@ input:valid + span::after {
 それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性があり、スクリーンリーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
 
 ```html
-<form>
-  <div>
-    <label for="country">国を選択してください:</label>
-    <select id="country" name="country">
-      <option>UK</option>
-      <option selected>US</option>
-      <option>Germany</option>
-    </select>
-  </div>
-  <div>
-    <p>電話番号を入力してください:</p>
-    <span class="areaDiv">
-      <input
-        id="areaNo"
-        name="areaNo"
-        type="tel"
-        required
-        placeholder="Area code"
-        pattern="[0-9]{3}"
-        aria-label="Area code" />
-      <span class="validity"></span>
-    </span>
-    <span class="number1Div">
-      <input
-        id="number1"
-        name="number1"
-        type="tel"
-        required
-        placeholder="First part"
-        pattern="[0-9]{3}"
-        aria-label="First part of number" />
-      <span class="validity"></span>
-    </span>
-    <span class="number2Div">
-      <input
-        id="number2"
-        name="number2"
-        type="tel"
-        required
-        placeholder="Second part"
-        pattern="[0-9]{4}"
-        aria-label="Second part of number" />
-      <span class="validity"></span>
-    </span>
-  </div>
-  <div>
-    <button>送信</button>
-  </div>
-</form>
+<div>
+  <label for="country">国を選択してください:</label>
+  <select id="country" name="country">
+    <option value="UK">イギリス</option>
+    <option value="US" selected>アメリカ合衆国</option>
+    <option value="Germany">ドイツ</option>
+  </select>
+</div>
+<div>
+  <p>電話番号を入力してください:</p>
+  <span class="areaDiv">
+    <input
+      id="areaNo"
+      name="areaNo"
+      type="tel"
+      required
+      placeholder="市外局番"
+      pattern="[0-9]{3}"
+      aria-label="市外局番" />
+    <span class="validity"></span>
+  </span>
+  <span class="number1Div">
+    <input
+      id="number1"
+      name="number1"
+      type="tel"
+      required
+      placeholder="前半"
+      pattern="[0-9]{3}"
+      aria-label="電話番号の前半" />
+    <span class="validity"></span>
+  </span>
+  <span class="number2Div">
+    <input
+      id="number2"
+      name="number2"
+      type="tel"
+      required
+      placeholder="後半"
+      pattern="[0-9]{4}"
+      aria-label="電話番号の後半" />
+    <span class="validity"></span>
+  </span>
+</div>
 ```
 
 この JavaScript には {{domxref("HTMLElement.change_event", "onchange")}} イベントハンドラーがあり、 `<select>` の値が変更されると `<input>` 要素の `pattern`, `placeholder`, `aria-label` をその国/地域の電話番号の形式に合わせて更新するようになっています。
@@ -394,45 +400,45 @@ const selectElem = document.querySelector("select");
 const inputElems = document.querySelectorAll("input");
 
 selectElem.onchange = () => {
-  for (let i = 0; i < inputElems.length; i++) {
-    inputElems[i].value = "";
+  for (const e of inputElems) {
+    e.value = "";
   }
 
   if (selectElem.value === "US") {
     inputElems[2].parentNode.style.display = "inline";
 
-    inputElems[0].placeholder = "Area code";
+    inputElems[0].placeholder = "市外局番";
     inputElems[0].pattern = "[0-9]{3}";
 
-    inputElems[1].placeholder = "First part";
+    inputElems[1].placeholder = "前半";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label", "First part of number");
+    inputElems[1].setAttribute("aria-label", "電話番号の前半");
 
-    inputElems[2].placeholder = "Second part";
+    inputElems[2].placeholder = "後半";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label", "Second part of number");
+    inputElems[2].setAttribute("aria-label", "電話番号の後半");
   } else if (selectElem.value === "UK") {
     inputElems[2].parentNode.style.display = "none";
 
-    inputElems[0].placeholder = "Area code";
+    inputElems[0].placeholder = "市外局番";
     inputElems[0].pattern = "[0-9]{3,6}";
 
-    inputElems[1].placeholder = "Local number";
+    inputElems[1].placeholder = "加入者番号";
     inputElems[1].pattern = "[0-9]{4,8}";
-    inputElems[1].setAttribute("aria-label", "Local number");
+    inputElems[1].setAttribute("aria-label", "加入者番号");
   } else if (selectElem.value === "Germany") {
     inputElems[2].parentNode.style.display = "inline";
 
-    inputElems[0].placeholder = "Area code";
+    inputElems[0].placeholder = "市外局番";
     inputElems[0].pattern = "[0-9]{3,5}";
 
-    inputElems[1].placeholder = "First part";
+    inputElems[1].placeholder = "前半";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label", "First part of number");
+    inputElems[1].setAttribute("aria-label", "電話番号の前半");
 
-    inputElems[2].placeholder = "Second part";
+    inputElems[2].placeholder = "後半";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label", "Second part of number");
+    inputElems[2].setAttribute("aria-label", "電話番号の後半");
   }
 };
 ```
@@ -443,7 +449,7 @@ selectElem.onchange = () => {
 
 これは面白いアイデアで、国際電話番号の取り扱いの問題を解決する可能性を示しています。この例を拡張して、潜在的にすべての国に対して正しいパターンを提供しなければなりませんが、これは大変な作業ですし、ユーザーが自分の番号を正しく入力するというフールプルーフの保証もありません。
 
-クライアント側でこれだけ大変なことをするべきなのか、クライアント側ではユーザーが好きな書式で任意の数字を入力し、サーバー側でサニタイズすればよいのではないかとも思うでしょう。しかし、この選択はあなたがすることです。
+クライアント側でこれだけ大変なことをするべきなのか、クライアント側ではユーザーが好きな書式で任意の数字を入力し、サーバー側で無害化すればよいのではないかとも思うでしょう。しかし、この選択はあなたがすることです。
 
 ```css hidden
 div {
@@ -463,7 +469,7 @@ input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
-  color: #8b0000;
+  color: darkred;
 }
 
 input:valid + span::after {
@@ -517,18 +523,12 @@ input:valid + span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><code>list</code> 属性がある場合:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
-      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        <code>list</code> 属性がある場合:
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        <code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

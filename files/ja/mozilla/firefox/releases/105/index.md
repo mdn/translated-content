@@ -1,13 +1,14 @@
 ---
-title: Firefox 105 for developers
+title: Firefox 105 開発者向けリリースノート
+short-title: Firefox 105
 slug: Mozilla/Firefox/Releases/105
 l10n:
-  sourceCommit: f5437ee235fabc5188f6ac45b27e54ce1e22615c
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 このページでは、開発者に影響する Firefox 105 の変更点をまとめています。Firefox 105 は、米国時間 2022 年 9 月 20 日にリリースされました。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 
@@ -29,9 +30,9 @@ l10n:
 - [Encoding API](/ja/docs/Web/API/Encoding_API) の一部である [TextDecoderStream](/ja/docs/Web/API/TextDecoderStream) および [TextEncoderStream](/ja/docs/Web/API/TextEncoderStream) インターフェイスをサポートしました ([Firefox バグ 1486949](https://bugzil.la/1486949))。
 
 - [OffscreenCanvas](/ja/docs/Web/API/OffscreenCanvas) API が、window および [web worker](/ja/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas) のどちらのコンテキストでもオフスクリーンで描画できる canvas を提供するようになりました。
-  これは、`<canvas>` 要素を DOM から分離することを可能にします。このために [OffscreenCanvasRenderingContext2D](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) インターフェイスをサポートして、デフォルトで有効にしました ([Firefox バグ 1746110](https://bugzil.la/1746110))。
+  これは、`<canvas>` 要素を DOM から分離することを可能にします。このために [OffscreenCanvasRenderingContext2D](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) インターフェイスをサポートして、デフォルトで有効にしました ([Firefox バグ 1779009](https://bugzil.la/1779009))。
 
-- [CSS Font Loading API](/ja/docs/Web/API/CSS_Font_Loading_API) を worker スレッドで使用できるようになりました ([Firefox バグ 1072107](https://bugzil.la/1072107))。
+- [CSS フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) をワーカースレッドで使用できるようになりました ([Firefox バグ 1072107](https://bugzil.la/1072107))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -49,7 +50,3 @@ l10n:
 
 - {{WebExtAPIRef("scripting")}} を使用して、永続的なスクリプトを定義する機能を追加しました。{{WebExtAPIRef("scripting.RegisteredContentScript")}} の `persistAcrossSessions` プロパティを使用して、永続的なスクリプトを識別します ([Firefox バグ 1751436](https://bugzil.la/1751436))。
 - デフォルトで、拡張機能のリソースがほかの拡張機能から読み込まれないようになりました。ほかの拡張機能がリソースを読み込むことを可能にするには、拡張機能の [`web_accessible_resources`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) マニフェストキーに列挙しなければなりません ([Firefox バグ 1711168](https://bugzil.la/1711168))。
-
-## 過去のバージョン
-
-{{Firefox_for_developers(104)}}

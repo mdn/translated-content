@@ -1,13 +1,16 @@
 ---
-title: inset
+title: Propriété CSS `inset`
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`inset`** correspond aux propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et/ou {{CSSxRef("left")}}. Elle utilise la même syntaxe à valeurs multiples que la propriété raccourcie {{CSSxRef("margin")}}.
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`inset`** correspond aux propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et/ou {{CSSxRef("left")}}. Elle utilise la même syntaxe à valeurs multiples que la propriété raccourcie {{CSSxRef("margin")}}.
 
 Ces {{Glossary("inset properties", "propriétés d'encart")}}, y compris `inset`, n'ont aucun effet sur les éléments non positionnés.
+
+Bien que faisant partie du module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values), cette propriété ne définit pas de décalages _logiques_. Elle définit des décalages _physiques_, quel que soit le mode d'écriture, la direction ou l'orientation du texte de l'élément.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: inset")}}
 
@@ -64,8 +67,6 @@ inset: 0;
 }
 ```
 
-Bien que faisant partie du module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values), cette propriété ne définit pas de décalages _logiques_. Elle définit des décalages _physiques_, quel que soit le mode d'écriture, la direction ou l'orientation du texte de l'élément.
-
 ## Propriétés constitutives
 
 Cette propriété est une abréviation pour les propriétés CSS suivantes&nbsp;:
@@ -103,7 +104,7 @@ inset: unset;
 
 ### Valeurs
 
-La propriété `inset` prend les mêmes valeurs que la propriété {{CSSxRef("left")}}.
+La propriété `inset` prend les mêmes valeurs que la propriété {{CSSxRef("top")}}.
 
 ## Définition formelle
 

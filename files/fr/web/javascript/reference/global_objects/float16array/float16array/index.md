@@ -22,7 +22,7 @@ new Float16Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> Le constructeur `Float16Array()` ne peut être appelé qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
+> Le constructeur `Float16Array()` ne peut être appelé qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
@@ -77,6 +77,6 @@ console.log(float16DepuisUnIterable);
 ## Voir aussi
 
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("TypedArray")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("TypedArray")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}

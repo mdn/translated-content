@@ -1,21 +1,21 @@
 ---
 title: Certificate authority (認証局)
 slug: Glossary/Certificate_authority
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-認証局 (CA) は、{{Glossary("Digital certificate", "デジタル証明書")}}とそれに関連する{{Glossary("Key", "公開鍵")}}に{{Glossary("Signature/Security", "署名")}}し、含まれる情報と鍵が正しいことを保証する組織です。
+**認証局** (CA) は、{{Glossary("Digital certificate", "デジタル証明書")}}とそれに関連する{{Glossary("Key", "公開鍵")}}に{{Glossary("Signature/Security", "署名")}}し、含まれる情報と鍵が正しいことを保証する組織です。
 
 ウェブサイトのデジタル証明書については、この情報には少なくともデジタル証明書を要求した組織 (例: Mozilla Corporation)、そのサイト (例: mozilla.org)、および認証局が含まれます。
 
-認証局は、インターネットの[公開鍵基盤](https://ja.wikipedia.org/wiki/公開鍵基盤)の一部で、ブラウザーがウェブサイトの身元を確認し、 SSL （および HTTPS）で安全に接続できるようにするものです。
+認証局は、インターネットの[公開鍵基盤](https://ja.wikipedia.org/wiki/公開鍵基盤)の一部で、ブラウザーがウェブサイトの身元を確認し、 TLS（および HTTPS）で安全に接続できるようにするものです。
 
 > [!NOTE]
 > ウェブブラウザーには、あらかじめ「ルート証明書」のリストが搭載されています。ブラウザーはこれらを使って、ウェブサイトの証明書がルート証明書に「チェインバック」する（つまり、ルート証明書の所有者や中間認証局に信頼されている）認証局によって署名されていることを確実にチェックすることができる。最終的に、このプロセスは、すべての認証局が証明書に署名する前に適切な身元確認を行うことに依存しています。
 
 ## 関連情報
 
-- [認証局](https://ja.wikipedia.org/wiki/認証局) (Wikipedia)
-- [公開鍵基盤](https://ja.wikipedia.org/wiki/公開鍵基盤) (Wikipedia)
+- [認証局](https://ja.wikipedia.org/wiki/認証局) - ウィキペディア
+- [公開鍵基盤](https://ja.wikipedia.org/wiki/公開鍵基盤) - ウィキペディア
 - [Mozilla Included CA Certificate List](https://wiki.mozilla.org/CA/Included_Certificates)

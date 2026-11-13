@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Agora estamos prontos para adicionar o código que exibe nossa primeira página completa - uma home page do site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). A página inicial mostrará o número de registros que temos para cada tipo de modelo e fornecerá links de navegação na barra lateral para nossas outras páginas. Ao longo do caminho, obteremos experiência prática ao escrever mapas e visualizações básicos de URL, obter registros do banco de dados e usar modelos.
 
@@ -14,7 +14,7 @@ Agora estamos prontos para adicionar o código que exibe nossa primeira página 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Leia a
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >Introdução ao Django</a
         >. Conclua os tópicos do tutorial anterior (incluindo
         <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
@@ -220,7 +220,7 @@ Usaremos o seguinte snippet de código como modelo básico para o site _LocalLib
 > [!NOTE]
 > Também introduzimos duas template tags adicionais: `url` e `load static`. Essas tags serão explicadas nas próximas seções.
 
-Crie um novo arquivo ***base_generic.html* **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo:
+Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo:
 
 ```django
 <!doctype html>
@@ -271,7 +271,7 @@ O template base também faz referência a um arquivo css local (**styles.css**) 
 
 #### O template index
 
-Crie um novo arquivo HTML ***index.html* **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block `content` para o template.
+Crie um novo arquivo HTML **_index.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block `content` para o template.
 
 ```django
 {% extends "base_generic.html" %}

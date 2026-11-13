@@ -1,8 +1,9 @@
 ---
-title: ::search-text
+title: Pseudo-élément CSS `::search-text`
+short-title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: b3cd597b58940518a7712487ce94efc0881cb549
 ---
 
 {{SeeCompatTable}}
@@ -89,7 +90,7 @@ Cet exemple montre comment utiliser `::search-text` et `:current` pour créer de
 
 #### HTML
 
-Le code HTML se compose d'un paragraphe de texte basique. Nous ne montrerons pas le code source HTML, à la fois pour des raisons de brièveté et pour faciliter la navigation dans les résultats de recherche dans l'exemple rendu.
+Le code HTML se compose d'un paragraphe de texte basique. Nous ne montrons pas le code source HTML, à la fois pour des raisons de brièveté et pour faciliter la navigation dans les résultats de recherche dans l'exemple rendu.
 
 ```html hidden live-sample___custom-search-results
 <p>
@@ -167,7 +168,7 @@ Enfin, nous stylisons le résultat de recherche actuellement sélectionné avec 
 
 L'exemple s'affiche comme suit&nbsp;:
 
-{{EmbedLiveSample("live-sample___custom-search-results", "100%", 300)}}
+{{EmbedLiveSample("custom-search-results", "100%", 300)}}
 
 Essayez d'utiliser la recherche dans la page de votre navigateur pour trouver un mot qui apparaît plusieurs fois dans le texte de l'exemple, comme «&nbsp;aliquam&nbsp;», «&nbsp;amet&nbsp;» ou «&nbsp;tortor&nbsp;». Déplacez-vous entre les résultats précédents et suivants pour voir le style `:current`.
 

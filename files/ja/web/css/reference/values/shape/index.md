@@ -1,12 +1,10 @@
 ---
-title: <shape>
+title: CSS `<shape>` データ型
+short-title: <shape>
 slug: Web/CSS/Reference/Values/shape
-original_slug: Web/CSS/shape
 l10n:
-  sourceCommit: 69f92b8a249a9da025a5b12d98aafd84d417c8d9
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
-
-{{deprecated_header}}
 
 **`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
 

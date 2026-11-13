@@ -1,9 +1,8 @@
 ---
 title: offset-anchor
 slug: Web/CSS/Reference/Properties/offset-anchor
-original_slug: Web/CSS/offset-anchor
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`offset-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。
@@ -31,7 +30,7 @@ offset-anchor: 20% 80%;
   <div class="wrapper">
     <div id="example-element"></div>
   </div>
-  <button id="playback" type="button">Play</button>
+  <button id="playback" type="button">再生</button>
 </section>
 ```
 
@@ -54,11 +53,11 @@ offset-anchor: 20% 80%;
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   width: 90%;
 }
 
@@ -80,19 +79,17 @@ offset-anchor: 20% 80%;
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      example.classList.add("running");
-      button.textContent = "Pause";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    example.classList.add("running");
+    button.textContent = "停止";
+  }
 });
 ```
 
@@ -132,7 +129,7 @@ offset-anchor: unset;
 - `auto`
   - : `offset-anchor` には要素の {{cssxref("transform-origin")}} と同じ値が与えられます。ただし、 {{cssxref("offset-path")}} が `none` の場合は {{cssxref("offset-position")}} から値が取得されます。
 - `<position>`
-  - : {{cssxref("&lt;position&gt;")}} は x/y 座標を定義し、要素のボックスの端から相対的に項目を配置するために使用されます。これは、 1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxref("&lt;position&gt;")}} と {{cssxref("background-position")}} のリファレンスページを参照してください。 3 つの値を持つ position 構文は、`background(-position)`を除いて、`<position>`のどのような使い方でも機能しないことに注意してください。
+  - : {{cssxref("&lt;position&gt;")}} は x/y 座標を定義し、アイテムを要素のボックスの端から相対的に配置するために使用されます。これは、1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxref("&lt;position&gt;")}} と {{cssxref("background-position")}} のリファレンスページを参照してください。なお、3 つの値を持つ位置指定構文は `<position>` のどんな用途でも動作しませんが、`background(-position)` で使用される場合を除きます。
 
 ## 公式定義
 

@@ -15,7 +15,7 @@ ReferenceError: "x" no está definida.
 
 ## ¿Qué está mal?
 
-Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("ámbito")}} actual del script.
+Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("Scope", "ámbito")}} actual del script.
 
 > [!NOTE]
 > Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
@@ -64,6 +64,6 @@ console.log(num1); // 2
 
 ## Temas relacionados
 
-- {{Glossary("Ámbito")}}
+- {{Glossary("Scope", "Ámbito")}}
 - [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#ámbito_de_function)

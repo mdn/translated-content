@@ -3,12 +3,12 @@ title: "Fence : méthode getNestedConfigs()"
 short-title: getNestedConfigs()
 slug: Web/API/Fence/getNestedConfigs
 l10n:
-  sourceCommit: a6c32a2d0add510c95ef74e85bd8e17551d508b6
+  sourceCommit: e316526e520d8163e9151dca8973eb777b5285e0
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
-La méthode **`getNestedConfigs()`** de l'interface {{domxref("Fence")}} retourne les {{domxref("FencedFrameConfig")}} chargés dans les éléments HTML `<fencedframe>` imbriqués à l'intérieur de l'élément HTML `<fencedframe>` courant.
+La méthode **`getNestedConfigs()`** de l'interface {{DOMxRef("Fence")}} retourne les {{DOMxRef("FencedFrameConfig")}} chargés dans les éléments HTML `<fencedframe>` imbriqués à l'intérieur de l'élément HTML `<fencedframe>` courant.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ Aucun.
 
 `getNestedConfigs()` a deux valeurs de retour possibles&nbsp;:
 
-- Un tableau de 20 objets {{domxref("FencedFrameConfig")}}, si la configuration du `<fencedframe>` courant a été créée avec une API qui prend en charge les configs imbriquées (par exemple [Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr)). Parmi ces 20 configs, les N premières sont celles enregistrées via l'API et les autres sont des configs de remplissage qui navigueront vers `about:blank`, afin que le nombre réel de configs soit masqué et ne puisse pas fuiter d'information.
+- Un tableau de 20 objets {{DOMxRef("FencedFrameConfig")}}, si la configuration du `<fencedframe>` courant a été créée avec une API qui prend en charge les configs imbriquées (par exemple [Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience?hl=fr)). Parmi ces 20 configs, les N premières sont celles enregistrées avec l'API et les autres sont des configs de remplissage qui naviguent vers `about:blank`, afin que le nombre réel de configs soit masqué et ne puisse pas fuiter d'information.
 - `null` si la configuration du `<fencedframe>` courant a été créée avec une API qui ne prend pas en charge les configs imbriquées (par exemple [Shared Storage](/fr/docs/Web/API/Shared_Storage_API)).
 
 ## Exemples

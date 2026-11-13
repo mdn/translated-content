@@ -1,11 +1,10 @@
 ---
-title: "<dir> : l'élément de répertoire"
+title: "Élément HTML `<dir>` : l'élément de répertoire"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dir>`** est utilisé comme conteneur pour un répertoire de fichiers et/ou de dossiers, éventuellement avec des styles et des icônes appliqués par {{Glossary("user agent", "l'agent utilisateur")}}. N'utilisez pas cet élément obsolète&nbsp;; utilisez plutôt l'élément {{HTMLElement("ul")}} pour les listes, y compris les listes de fichiers.
 
@@ -20,7 +19,7 @@ Cet élément implémente l'interface `HTMLDirectoryElement`.
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
 
 ## Spécifications

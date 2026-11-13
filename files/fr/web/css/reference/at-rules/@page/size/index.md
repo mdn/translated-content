@@ -1,8 +1,9 @@
 ---
-title: size
+title: Descripteur de règle CSS `size`
+short-title: size
 slug: Web/CSS/Reference/At-rules/@page/size
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size`** associé à la [règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.

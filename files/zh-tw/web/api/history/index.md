@@ -14,11 +14,11 @@ _The `History`_ _interface doesn't inherit any property._
 - {{domxref("History.length")}} {{readOnlyInline}}
   - : Returns an `Integer` representing the number of elements in the session history, including the currently loaded page. For example, for a page loaded in a new tab this property returns `1`.
 - {{domxref("History.current")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the active item of the session history. This property was never available to web content and is no more supported by any browser. Use {{domxref("Location.href")}} instead.
+  - : Returns a {{jsxref("String")}} representing the URL of the active item of the session history. This property was never available to web content and is no more supported by any browser. Use {{domxref("Location.href")}} instead.
 - {{domxref("History.next")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.
+  - : Returns a {{jsxref("String")}} representing the URL of the next item in the session history. This property was never available to web content and is not supported by other browsers.
 - {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{Deprecated_Inline}}
-  - : Returns a {{domxref("DOMString")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.
+  - : Returns a {{jsxref("String")}} representing the URL of the previous item in the session history. This property was never available to web content and is not supported by other browsers.
 - {{domxref("History.scrollRestoration")}} {{experimental_inline}}
   - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
 - {{domxref("History.state")}} {{readOnlyInline}}

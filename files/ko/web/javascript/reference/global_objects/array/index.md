@@ -126,7 +126,7 @@ console.log(fruits.length); // 2
 일부 메서드는 메서드가 호출된 기존 배열을 변경하지 않는 대신, 새 배열을 반환합니다. 이러한 메서드는 먼저 새 배열을 구성한 다음 요소를 채우는 방식으로 수행됩니다. 복사는 항상 [얕게](/ko/docs/Glossary/Shallow_copy) 이루어지며, 메서드는 처음에 생성된 배열 이외에는 아무것도 복사하지 않습니다. 원래 배열의 요소는 다음과 같이 새 배열에 복사됩니다
 
 - 객체: 객체 참조가 새 배열로 복사됩니다. 원래 배열과 새 배열 모두 동일한 객체를 참조합니다. 즉, 참조된 객체가 수정되면 변경 사항이 새 배열과 원래 배열 모두에 표시됩니다.
-- 문자열, 숫자, 불리언과 같은 원시 유형({{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Global_Objects/Boolean", "Boolean")}} 객체 아님): 해당 값이 새 배열에 복사됩니다.
+- 문자열, 숫자, 불리언과 같은 원시 유형({{jsxref("String")}}, {{jsxref("Number")}}, {{jsxref("Boolean")}} 객체 아님): 해당 값이 새 배열에 복사됩니다.
 
 어떤 메서드는 메서드가 호출된 배열을 변경하며, 이 경우 반환값은 메서드에 따라 다릅니다. 때로는 같은 배열에 대한 참조를 반환하고, 때로는 새 배열의 길이를 반환합니다.
 
@@ -266,7 +266,7 @@ f("a", "b"); // 'a+b'
 
 ## 정적 속성
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : `Array` 생성자를 반환합니다.
 
 ## 정적 메서드
@@ -286,7 +286,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : 인스턴스 객체를 생성한 생성자 함수입니다. `Array` 인스턴스의 경우, 초기 값은 {{jsxref("Array/Array", "Array")}} 생성자입니다.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : ES2015 버전 이전의 ECMAScript 표준에 포함되지 않았으며 [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with) 문 바인딩 목적으로 무시되는 속성 이름을 포함합니다.
 
 아래 속성은 각 `Array` 인스턴스의 고유 속성입니다.

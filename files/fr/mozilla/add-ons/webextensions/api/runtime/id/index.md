@@ -3,8 +3,6 @@ title: runtime.id
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
 ---
 
-{{AddonSidebar}}
-
 L'ID de l'extension
 
 ## Syntaxe

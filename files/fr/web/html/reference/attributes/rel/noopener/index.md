@@ -1,8 +1,9 @@
 ---
-title: rel="noopener"
+title: Valeur d'attribut HTML `rel="noopener"`
+short-title: noopener
 slug: Web/HTML/Reference/Attributes/rel/noopener
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`noopener`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) des éléments HTML {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur de naviguer vers la ressource cible sans donner au nouveau contexte de navigation l'accès au document d'origine — en ne définissant pas la propriété {{DOMxRef("Window.opener")}} sur la fenêtre ouverte (elle retourne `null`).

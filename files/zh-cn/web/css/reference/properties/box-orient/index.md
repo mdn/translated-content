@@ -10,13 +10,13 @@ slug: Web/CSS/Reference/Properties/box-orient
 **`box-orient`** [CSS](/zh-CN/docs/Web/CSS) 属性用来设置一个元素是水平还是垂直布局其内容。
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 box-orient: horizontal;
 box-orient: vertical;
 box-orient: inline-axis;
 box-orient: block-axis;
 
-/* Global values */
+/* 全局值 */
 box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
@@ -45,7 +45,7 @@ box-orient: unset;
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`box-orient = horizontal | vertical | inline-axis | block-axis`)}}
 
 ## 示例
 

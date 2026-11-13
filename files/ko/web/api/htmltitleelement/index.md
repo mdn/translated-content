@@ -7,14 +7,14 @@ slug: Web/API/HTMLTitleElement
 
 **`HTMLTitleElement`** 인터페이스는 문서의 제목을 담습니다. {{domxref("HTMLElement")}} 인터페이스의 속성과 메서드를 상속합니다,
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
 _부모인 {{domxref("HTMLElement")}}로부터 상속합니다._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : 문서의 제목을 나타내는 {{domxref("DOMString")}}입니다.
+  - : 문서의 제목을 나타내는 {{jsxref("String")}}입니다.
 
 ## 메서드
 

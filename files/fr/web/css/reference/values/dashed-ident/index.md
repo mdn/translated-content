@@ -1,70 +1,70 @@
 ---
-title: <dashed-ident>
+title: Type CSS `<dashed-ident>`
+short-title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
-original_slug: Web/CSS/dashed-ident
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 35cd8b781219157e42b289364754cff862c2dd1a
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dashed-ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dashed-ident>`** est un {{CSSxRef("&lt;custom-ident&gt;")}} sensible à la casse commençant par deux tirets et désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
 
 ## Syntaxe
 
-La syntaxe de `<dashed-ident>` est similaire à celle des identifiants CSS (comme les noms de propriétés), à l'exception près qu'elle est [sensible à la casse](https://fr.wikipedia.org/wiki/Sensibilit%C3%A9_%C3%A0_la_casse). Elle commence par deux tirets, suivis de l'identifiant défini par l'utilisateur·ice.
+La syntaxe de `<dashed-ident>` est similaire à celle des identifiants CSS (comme les noms de propriétés), à l'exception près qu'elle est sensible à la casse. Il s'agit d'un identifiant défini par l'utilisateur·ice précédé de deux tirets (`--`).
 
 Le double tiret au début permet de les identifier facilement lors de la lecture d'un bloc de code CSS et aide à éviter les conflits de noms avec les mots-clés CSS standards.
 
-Comme pour {{CSSxRef("&lt;custom-ident&gt;")}}, les `<dashed-ident>` sont définis par l'utilisateur·ice, mais contrairement à `<custom-ident>`, [CSS](/fr/docs/Web/CSS) ne définira jamais de `<dashed-ident>`.
+Comme pour {{CSSxRef("&lt;custom-ident&gt;")}}, les `<dashed-ident>` sont définis par l'utilisateur·ice. Cependant, certains `<custom-ident>` sont définis par le langage CSS lui-même&nbsp;; les `<dashed-ident>` ne sont jamais définis dans CSS.
 
 ## Exemples
 
 ### Utiliser les propriétés personnalisées CSS
 
-Lorsque `<dashed-ident>` est utilisé avec les [propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), la propriété est d'abord déclarée puis utilisée dans une [fonction CSS `var()`](/fr/docs/Web/CSS/Reference/Values/var).
+Lorsqu'un `<dashed-ident>` est utilisé comme une [propriété personnalisée CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), la propriété est d'abord déclarée, puis le `<dashed-ident>` est utilisé dans une [fonction CSS `var()`](/fr/docs/Web/CSS/Reference/Values/var).
 
 ```css
 html {
-  --primary-color: red;
-  --secondary-color: blue;
-  --tertiary-color: green;
+  --couleur-primaire: red;
+  --couleur-secondaire: blue;
+  --couleur-tertiaire: green;
 }
 
 h1,
 h4 {
-  color: var(--primary-color);
+  color: var(--couleur-primaire);
 }
 
 h2,
 h5 {
-  color: var(--secondary-color);
+  color: var(--couleur-secondaire);
 }
 
 h3,
 h6 {
-  color: var(--tertiary-color);
+  color: var(--couleur-tertiaire);
 }
 ```
 
 ### Utiliser `@color-profile`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at {{CSSxRef("@color-profile")}}, la règle est d'abord déclarée puis utilisée dans une [fonction CSS `color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
+Lorsqu'un `<dashed-ident>` est utilisé avec la règle {{CSSxRef("@color-profile")}}, la règle est d'abord déclarée, puis le `<dashed-ident>` est utilisé dans une [fonction CSS `color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 ```css
-@color-profile --my-color-profile {
+@color-profile --mon-profil-couleur {
   src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 
 .header {
-  background-color: color(--my-color-profile 0% 70% 20% 0%);
+  background-color: color(--mon-profil-couleur 0% 70% 20% 0%);
 }
 ```
 
 ### Utiliser `@font-palette-values`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at {{CSSxRef("@font-palette-values")}}, la règle est d'abord déclarée puis utilisée comme valeur pour la propriété {{CSSxRef("font-palette")}}.
+Lorsqu'un `<dashed-ident>` est utilisé avec la règle {{CSSxRef("@font-palette-values")}}, la règle est d'abord déclarée, puis le `<dashed-ident>` est utilisé comme valeur pour la propriété {{CSSxRef("font-palette")}}.
 
 ```css
-@font-palette-values --my-palette {
+@font-palette-values --ma-palette {
   font-family: Bixa;
   base-palette: 1;
   override-colors: 0 red;
@@ -74,7 +74,23 @@ h1,
 h2,
 h3,
 h4 {
-  font-palette: --my-palette;
+  font-palette: --ma-palette;
+}
+```
+
+### Utiliser `env()` et `param()`
+
+Lorsqu'un `<dashed-ident>` est utilisé dans une ressource externe dans une fonction CSS {{CSSxRef("env")}}, il peut être mis à jour en utilisant la fonction CSS {{CSSxRef("param")}}.
+
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--couleur, black)" d="..." />
+</svg>
+```
+
+```css
+path:hover {
+  link-parameters: param(--couleur, tomato);
 }
 ```
 

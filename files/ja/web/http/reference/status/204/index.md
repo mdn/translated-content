@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 l10n:
-  sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`204 No Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、クライアントが現在のページから移動する必要がないことを示します。
@@ -42,6 +42,33 @@ Authorization: Bearer 1234abcd
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
+
+### PUT で更新した後にレスポンスを受信
+
+この例では、クライアントがユーザーのプロフィール情報を更新するために `PUT` リクエストを送信します。
+このリクエストには、リクエストを認証するためのトークンを含む {{HTTPHeader("Authorization")}} ヘッダーが含まれています。
+
+```http
+PUT /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Authorization: Bearer 1234abcd
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+```
+
+ユーザープロファイルの更新に成功すると、サーバーは `204` レスポンスを返します。
+{{HTTPHeader("ETag")}} ヘッダーには、更新されたリソースのエンティティタグが含まれています。
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 Server: Apache/2.4.1 (Unix)
 ```
 

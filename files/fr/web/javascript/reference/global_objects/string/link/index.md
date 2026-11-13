@@ -1,43 +1,59 @@
 ---
-title: String.prototype.link()
+title: "String : méthode link()"
+short-title: link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-{{JSRef}}
+La méthode **`link()`** des valeurs {{JSxRef("String")}} crée une chaîne de caractères qui intègre cette chaîne de caractères dans un élément HTML {{HTMLElement("a")}} (`<a href="...">str</a>`), pour être utilisée comme lien hypertexte vers une autre URL.
 
-La méthode **`link()`** permet de créer une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}, ce qui permet d'afficher la chaîne de caractères comme un lien hypertexte vers une URL donnée.
+> [!NOTE]
+> Toutes les [méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html) sont obsolètes et ne sont standardisées que pour des raisons de compatibilité. Utilisez plutôt les [API DOM](/fr/docs/Web/API/Document_Object_Model) telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement).
 
 ## Syntaxe
 
-```js
-str.link(url);
+```js-nolint
+link(url)
 ```
 
 ### Paramètres
 
 - `url`
-  - : Toute chaîne de caractères pouvant être utilisée comme valeur pour l'attribut `href` de la balise `a`. Cette chaîne doit être une URL valide (relative ou absolue) dont les caractères `&` sont échappés en `&amp;`, et dont les doubles quotes (`"`) doivent être échappées avec l'entité `&quot;`.
+  - : Toute chaîne de caractères qui définit l'attribut `href` de l'élément `<a>`&nbsp;; elle doit être une URL valide (relative ou absolue), avec tous les caractères `&` échappés en `&amp;`.
 
 ### Valeur de retour
 
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}.
-
-## Description
-
-La méthode `link` permet de créer un fragment HTML avec un lien hypertexte. Le chaîne renvoyée par la méthode peut ensuite être ajoutée au document grâce aux méthodes {{domxref("document.write()")}} ou {{domxref("element.innerHTML")}}.
-
-Les liens créés avec la méthode `link` deviennent des éléments du tableau `links`, membre de l'objet `document`. Voir {{ Domxref("document.links") }}.
+Une chaîne de caractères commençant par une balise de début `<a href="url">` (les doubles quotes dans `url` sont remplacées par `&quot;`), suivie du texte `str`, puis d'une balise de fin `</a>`.
 
 ## Exemples
 
-L'exemple qui suit affiche le texte "MDN" avec un hyperlien qui envoie l'utilisateur vers le site du Mozilla Developer Network.
+### Utiliser la méthode `link()`
+
+Le code ci-dessous crée une chaîne de caractères HTML, puis remplace le contenu du corps du document par cette chaîne de caractères&nbsp;:
 
 ```js
-var texteAffiché = "MDN";
-var URL = "https://developer.mozilla.org/";
+const contenuChaineCaracteres = "MDN Web Docs";
 
-console.log("Cliquer ici pour revenir sur " + texteAffiché.link(URL));
-// Cliquer ici pour revenir sur <a href="https://developer.mozilla.org/">MDN</a>
+document.body.innerHTML = contenuChaineCaracteres.link(
+  "https://developer.mozilla.org/",
+);
+```
+
+Cela crée au présent le HTML suivant&nbsp;:
+
+```html
+<a href="https://developer.mozilla.org/">MDN Web Docs</a>
+```
+
+Au lieu d'utiliser `link()` et de créer directement du texte HTML, vous devez utiliser les API DOM telles que [`document.createElement()`](/fr/docs/Web/API/Document/createElement). Par exemple&nbsp;:
+
+```js
+const contenuChaineCaracteres = "MDN Web Docs";
+const elem = document.createElement("a");
+elem.href = "https://developer.mozilla.org/";
+elem.innerText = contenuChaineCaracteres;
+document.body.appendChild(elem);
 ```
 
 ## Spécifications
@@ -50,4 +66,7 @@ console.log("Cliquer ici pour revenir sur " + texteAffiché.link(URL));
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.anchor()")}}
+- [La prothèse d'émulation (<i lang=en">polyfill<i> en anglais) de `String.prototype.link` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang=en">polyfill<i> en anglais) es-shims de `String.prototype.link` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-string-html-methods)
+- [Les méthodes d'encapsulation HTML](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#méthodes_dencapsulation_html)
+- L'élément HTML {{HTMLElement("a")}}

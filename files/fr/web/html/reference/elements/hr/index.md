@@ -1,11 +1,12 @@
 ---
-title: "<hr> : l'élément de rupture thématique (règle horizontale)"
+title: "Élément HTML `<hr>` : l'élément de rupture thématique (règle horizontale)"
+short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 l10n:
-  sourceCommit: 479f72f9279246685bcf6eec93527ac3f470f93e
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments de niveau paragraphe&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.
+L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;hr&gt;", "tabbed-shorter")}}
 
@@ -42,10 +43,6 @@ hr::after {
 }
 ```
 
-Historiquement, l'élément `<hr>` a toujours été présenté comme une règle horizontale ou une ligne. Bien qu'il puisse encore être affiché comme une règle horizontale dans les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes présentatifs. Par conséquent, si vous souhaitez tracer une ligne horizontale, faites-le en ajoutant une bordure à un élément existant à l'aide de CSS.
-
-Les propriétés `border-*` (par exemple, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}) vous permettent de personnaliser de manière significative l'apparence d'une ligne, que vous personnalisiez un élément `<hr>` ou la bordure d'un autre élément.
-
 ## Attributs
 
 Cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -57,33 +54,103 @@ Cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Refer
 - `color` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la couleur à utiliser pour la ligne horizontale, grâce à un nom de couleur SVG ou à un code hexadécimal (précédé d'un #).
 - `noshade` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Avec cet attribut, la ligne horizontale n'aura pas d'ombre.
+  - : Avec cet attribut, la ligne horizontale n'a pas d'ombre.
 - `size` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la hauteur de la ligne, exprimée en pixels.
 - `width` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
 
+## Notes d'utilisation
+
+Historiquement, l'élément `<hr>` a toujours été présenté comme une règle horizontale ou une ligne. Bien qu'il puisse encore être affiché comme une règle horizontale dans les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes présentatifs. Par conséquent, si vous souhaitez tracer une ligne horizontale, faites-le en ajoutant une bordure à un élément existant à l'aide de CSS.
+
+Les propriétés `border-*` (par exemple, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}) vous permettent de personnaliser de manière significative l'apparence d'une ligne, que vous personnalisiez un élément `<hr>` ou la bordure d'un autre élément.
+
 ## Exemples
 
-### HTML
+### Rupture thématique entre paragraphes
+
+L'exemple suivant ajoute une rupture thématique entre des éléments de niveau paragraphe.
+
+#### HTML
 
 ```html
-<p>
-  Ceci est le premier paragraphe du texte. Les pandas roux sont géniaux. C'est
-  mignon et c'est tout doux.
-</p>
-
-<hr />
-
-<p>
-  Ceci est le deuxième paragraphe du texte. Les poneys ne sont pas pareils. Ils
-  sont plus grands et moins exotiques.
-</p>
+<article>
+  <p>
+    C'est le premier paragraphe de texte. C'est le premier paragraphe de texte.
+    C'est le premier paragraphe de texte. C'est le premier paragraphe de texte.
+  </p>
+  <hr />
+  <p>
+    C'est le deuxième paragraphe de texte. C'est le deuxième paragraphe de
+    texte. C'est le deuxième paragraphe de texte. C'est le deuxième paragraphe
+    de texte.
+  </p>
+</article>
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Rupture thématique entre paragraphes")}}
+
+### Rupture thématique entre éléments de liste
+
+La balise `<hr>` peut être placée à l'intérieur d'un élément de liste pour une séparation visuelle, afin de créer un séparateur entre les sections d'une liste.
+
+#### HTML
+
+```html
+<ul>
+  <li>Couper</li>
+  <li>Copier</li>
+  <li>Coller</li>
+  <li role="presentation"><hr /></li>
+  <li>Supprimer</li>
+</ul>
+```
+
+```css hidden
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100px;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid lightgrey;
+}
+hr {
+  margin-block: 0.2rem;
+  color: lightgrey;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Rupture thématique entre éléments de liste")}}
+
+### Rupture thématique entre de options de sélecteur
+
+L'élément `<hr>` est autorisé dans un élément `<select>` pour créer une séparation visuelle entre deux éléments `<option>`.
+
+#### HTML
+
+```html
+<select>
+  <option value="">--Choisissez une option--</option>
+  <hr />
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <hr />
+  <option value="option3">Option 3</option>
+  <option value="option4">Option 4</option>
+</select>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Rupture thématique entre de options de sélecteur")}}
 
 ## Résumé technique
 

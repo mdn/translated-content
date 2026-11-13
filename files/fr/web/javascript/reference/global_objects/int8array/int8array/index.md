@@ -3,7 +3,7 @@ title: Constructeur Int8Array()
 short-title: Int8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array/Int8Array
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`Int8Array()`** crée des objets {{JSxRef("Int8Array")}}. Les contenus sont initialisés à `0` sauf si des données d'initialisation sont explicitement fournies.
@@ -22,7 +22,7 @@ new Int8Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> `Int8Array()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
+> `Int8Array()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
@@ -76,8 +76,8 @@ console.log(int8FromIterable);
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Int8Array` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Int8Array` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - Le guide [des tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- L'objet {{JSxRef("TypedArray")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("TypedArray")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}

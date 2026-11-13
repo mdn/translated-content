@@ -22,41 +22,41 @@ Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}
 ## Propriedades
 
 - {{domxref("URL.hash", "hash")}}
-  - : Uma {{domxref("USVString")}} contendo o `'#'` seguido pelo fragmento identificador da URL.
+  - : Uma {{jsxref("String")}} contendo o `'#'` seguido pelo fragmento identificador da URL.
 - {{domxref("URL.host", "host")}}
-  - : Uma {{domxref("USVString")}} contendo o domínio (that is the _hostname_) seguido por (se a porta foi especificada) um `':'` e a _port_ da URL.
+  - : Uma {{jsxref("String")}} contendo o domínio (that is the _hostname_) seguido por (se a porta foi especificada) um `':'` e a _port_ da URL.
 - {{domxref("URL.hostname", "hostname")}}
-  - : Uma {{domxref("USVString")}} contendo o domínio da URL.
+  - : Uma {{jsxref("String")}} contendo o domínio da URL.
 - {{domxref("URL.href", "href")}}
-  - : Uma função {{Glossary("stringifier")}} que retorna uma {{domxref("USVString")}} com toda a URL.
+  - : Uma função {{Glossary("stringifier")}} que retorna uma {{jsxref("String")}} com toda a URL.
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("USVString")}} contendo a origem da URL, este é seu esquema, domínio e sua porta.
+  - : Retorna uma {{jsxref("String")}} contendo a origem da URL, este é seu esquema, domínio e sua porta.
 - {{domxref("URL.password", "password")}}
-  - : Uma {{domxref("USVString")}} com a senha especificada antes do nome do domínio.
+  - : Uma {{jsxref("String")}} com a senha especificada antes do nome do domínio.
 - {{domxref("URL.pathname", "pathname")}}
-  - : Uma {{domxref("USVString")}} contendo a inicial `'/'` seguido pelo caminho da URL, não inclui a query string ou fragmento.
+  - : Uma {{jsxref("String")}} contendo a inicial `'/'` seguido pelo caminho da URL, não inclui a query string ou fragmento.
 - {{domxref("URL.port", "port")}}
-  - : Uma {{domxref("USVString")}} contendo o número da porta da URL.
+  - : Uma {{jsxref("String")}} contendo o número da porta da URL.
 - {{domxref("URL.protocol", "protocol")}}
-  - : Uma {{domxref("USVString")}} contendo o esquema de protocolo da URL, incluindo o final `':'`.
+  - : Uma {{jsxref("String")}} contendo o esquema de protocolo da URL, incluindo o final `':'`.
 - {{domxref("URL.search", "search")}}
-  - : Uma {{domxref("USVString")}} indicando a string de parâmetros de URL's; Se algum parâmetro é disponibilizado, esta string inclui todos eles começando pelo caracter `?`.
+  - : Uma {{jsxref("String")}} indicando a string de parâmetros de URL's; Se algum parâmetro é disponibilizado, esta string inclui todos eles começando pelo caracter `?`.
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : Um objeto {{domxref("URLSearchParams")}} que pode ser utilizado para acessar individualmente os parâmetros encontrados em `search`.
 - {{domxref("URL.username","username")}}
-  - : Uma {{domxref("USVString")}} contendo o nome de usuário especificado antes do nome do domínio.
+  - : Uma {{jsxref("String")}} contendo o nome de usuário especificado antes do nome do domínio.
 
 ## Métodos
 
 - {{domxref("URL.toString", "toString()")}}
-  - : Retorna uma {{domxref("USVString")}} com toda a URL. Isto é um sinônimo para {{domxref("URL.href")}}, embora não pode ser usado para modificar o valor.
+  - : Retorna uma {{jsxref("String")}} com toda a URL. Isto é um sinônimo para {{domxref("URL.href")}}, embora não pode ser usado para modificar o valor.
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : Retorna uma {{domxref("USVString")}} com toda a URL. Ela retorna a mesma string da propriedade `href`.
+  - : Retorna uma {{jsxref("String")}} com toda a URL. Ela retorna a mesma string da propriedade `href`.
 
 ## Métodos estáticos
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Retorna um {{domxref("DOMString")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, seguido de uma string com identificador único do objeto no navegador.
+  - : Retorna um {{jsxref("String")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, seguido de uma string com identificador único do objeto no navegador.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Anula uma URL criada anteriormente utilizando o {{domxref("URL.createObjectURL()")}}.
 

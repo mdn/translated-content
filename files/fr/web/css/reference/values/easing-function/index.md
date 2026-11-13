@@ -1,9 +1,9 @@
 ---
-title: <easing-function>
+title: Type CSS `<easing-function>`
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
-original_slug: Web/CSS/easing-function
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<easing-function>`** représente une fonction mathématique décrivant la vitesse à laquelle la valeur change.
@@ -216,7 +216,7 @@ selectElem.addEventListener("change", () => {
 
 ## Voir aussi
 
-- Le module des [fonctions d'évolution CSS](/fr/docs/Web/CSS/CSS_easing_functions)
+- Le module des [fonctions d'évolution CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
 - Le module des [animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - Le module des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)
 - [Un site pour générer des fonctions d'évolution `linear()` <sup>(angl.)</sup>](https://linear-easing-generator.netlify.app/)

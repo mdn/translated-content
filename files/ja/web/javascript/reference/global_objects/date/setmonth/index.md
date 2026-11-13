@@ -1,11 +1,10 @@
 ---
 title: Date.prototype.setMonth()
+short-title: setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 l10n:
-  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
+  sourceCommit: b3840f6234d24ade72a43171fd6489dd533aaf15
 ---
-
-{{JSRef}}
 
 **`setMonth()`** は {{jsxref("Date")}} インスタンスのメソッドで、現在設定されている年に基づき、指定された日時の「月」を設定します。
 
@@ -21,7 +20,7 @@ console.log(event.getMonth());
 
 console.log(event);
 // 予想される結果: "Sat Apr 19 1975 23:15:30 GMT+0100 (CET)"
-// Note: your timezone may vary
+// メモ: タイムゾーンは変わる可能性があります
 ```
 
 ## 構文
@@ -52,6 +51,10 @@ setMonth(monthValue, dateValue)
 概念上は、その月の日数を、引数として与えた新しい月の初日に加え、新しい日付を返します。
 例えば、現在の値が 2016 年 1 月 31 日である場合、1 を引数として setMonth を呼び出すと 2016 年 3 月 2 日が返ってきます。
 これは、2016 年の 2 月が 29 日間しかないからです。
+
+`setMonth()` は現地時間を基に動作するため、夏時間 (DST) の境界を越えると、予想外の経過時間が算出されることがあります。例えば、日付の設定によって「春の移行期間（1 時間遅れる）」を跨ぐ場合、新しい日付と古い日付のタイムスタンプの差は、名目上の日数の差に24時間を掛けた値よりも 1 時間少なくなります。逆に、夏時間終了（1 時間進む）の移行期間を越えた場合は、1 時間分多く加算されます。日付を一定の時間分調整する必要がある場合は、{{jsxref("Date/setUTCMonth", "setUTCMonth()")}} または {{jsxref("Date/setTime", "setTime()")}} を考えてみることを検討してください。
+
+新しい現地時刻がオフセットの移行期間内に該当する場合、正確な時刻は `Temporal` の [`disambiguation: "compatible"`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#現地時間から協定世界時_utc_への変換に伴う曖昧さや不一致) オプションと同じ動作を使用して算出されます。つまり、現地時刻が 2 つの瞬間に該当する場合は、より早い方が選択されます。現地時刻が存在しない場合（ギャップがある場合）、ギャップの期間分だけ先へ進みます。
 
 ## 例
 

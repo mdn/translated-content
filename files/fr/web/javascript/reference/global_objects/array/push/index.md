@@ -3,7 +3,7 @@ title: "Array : méthode push()"
 short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`push()`** des instances {{JSxRef("Array")}} ajoute les éléments définis à la fin d'un tableau et retourne la nouvelle longueur du tableau.
@@ -48,9 +48,9 @@ La méthode `push()` ajoute des valeurs à un tableau.
 
 {{JSxRef("Array.prototype.unshift()")}} a un comportement similaire à `push()`, mais appliqué au début d'un tableau.
 
-La méthode `push()` est une [méthode de mutation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle modifie la longueur et le contenu de `this`. Si vous souhaitez que la valeur de `this` reste identique mais retourner un nouveau tableau avec des éléments ajoutés à la fin, vous pouvez utiliser [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) à la place. Remarquez que les éléments sont placés dans un tableau supplémentaire — sinon, si l'élément est lui-même un tableau, il serait décomposé au lieu d'être ajouté comme un seul élément à cause du comportement de `concat()`.
+La méthode `push()` est une [méthode de mutation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle modifie la longueur et le contenu de `this`. Si vous souhaitez que la valeur de `this` reste identique mais retourner un nouveau tableau avec des éléments ajoutés à la fin, vous pouvez utiliser [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) à la place. Remarquez que les éléments sont placés dans un tableau supplémentaire — sinon, si l'élément est lui-même un tableau, il est décomposé au lieu d'être ajouté comme un seul élément à cause du comportement de `concat()`.
 
-La méthode `push()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques_de_tableau). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières. Bien que les chaînes de caractères ressemblent aussi à des tableaux, cette méthode ne leur convient pas car elles sont immuables.
+La méthode `push()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques_de_tableau). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clés entières. Bien que les chaînes de caractères ressemblent aussi à des tableaux, cette méthode ne leur convient pas, car elles sont immuables.
 
 ## Exemples
 
@@ -80,7 +80,7 @@ legumes.push(...autresLegumes);
 console.log(legumes); // ['panais', 'pomme de terre', 'céleri', 'betterave']
 ```
 
-La fusion de deux tableaux peut aussi se faire avec la méthode {{JSxRef("Array/concat", "concat()")}}.
+La fusion de deux tableaux peut aussi se faire avec la méthode {{JSxRef("Array/concat", "concat()")}}, ce qui crée un nouveau tableau combiné au lieu d'ajouter au tableau original. La syntaxe de décomposition ne fonctionne que si le nombre d'éléments dans le tableau est inférieur au nombre maximum d'arguments de fonction autorisés par le moteur. Pour les tableaux plus longs, utilisez `concat()` ou appelez `push()` plusieurs fois dans une boucle.
 
 ### Appeler `push()` sur des objets non tableaux
 
@@ -139,11 +139,11 @@ Notez que même si `obj` n'est pas un tableau, la méthode `push` a bien incrém
 ## Voir aussi
 
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.pop()")}}
 - La méthode {{JSxRef("Array.prototype.shift()")}}
 - La méthode {{JSxRef("Array.prototype.unshift()")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.splice()")}}
-- [Prothèse d'émulation de `Array.prototype.push` dans `core-js` avec corrections de cette méthode <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation de `Array.prototype.push` dans `core-js` avec corrections de cette méthode <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
 - [Prothèse d'émulation es-shims de `Array.prototype.push` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.push)

@@ -103,7 +103,7 @@ websocket.addEventListener("message", (e) => {
 });
 ```
 
-Le serveur peut aussi envoyer des données binaires, qui sont exposées aux client·e·s sous forme de {{DOMxRef("Blob")}} ou de {{JSxRef("ArrayBuffer")}}, selon la valeur de la propriété {{DOMxRef("WebSocket.binaryType")}}.
+Le serveur peut aussi envoyer des données binaires, qui sont exposées aux clients sous forme de {{DOMxRef("Blob")}} ou de {{JSxRef("ArrayBuffer")}}, selon la valeur de la propriété {{DOMxRef("WebSocket.binaryType")}}.
 
 Comme nous l'avons vu pour l'envoi de messages, le serveur peut aussi envoyer des chaînes JSON, que le client peut alors analyser en objet&nbsp;:
 

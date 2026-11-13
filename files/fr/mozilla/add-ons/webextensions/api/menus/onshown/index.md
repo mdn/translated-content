@@ -3,8 +3,6 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsque le navigateur a montré un menu.
 
 Une extension peut utiliser cet événement pour mettre à jour ses éléments de menu en utilisant des informations qui ne sont disponibles qu'une fois le menu affiché. Généralement, une extension trouvera la mise à jour dans son gestionnaire `onShown` puis appellera {{WebExtAPIRef("menus.refresh()")}} pour mettre à jour le menu lui-même.

@@ -21,7 +21,7 @@ fun.call(thisArg[, arg1[, arg2[, ...]]])
 ### Parâmetros
 
 - `thisArg`
-  - : O valor de `this` proveu a chamada para _`fun`_. Note que `this` pode não ser o valor atual visto pelo método: se esse método é uma função em {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("Global_Objects/null", "null")}} e {{jsxref("Global_Objects/undefined", "undefined")}} serão reescritos com o objeto global, e valores primitivos serão encaixados.
+  - : O valor de `this` proveu a chamada para _`fun`_. Note que `this` pode não ser o valor atual visto pelo método: se esse método é uma função em {{jsxref("Strict_mode", "non-strict mode", "", 1)}} code, {{jsxref("null")}} e {{jsxref("undefined")}} serão reescritos com o objeto global, e valores primitivos serão encaixados.
 - `arg1, arg2, ...`
   - : Argumentos para o objeto.
 

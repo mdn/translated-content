@@ -3,7 +3,7 @@ title: "HTMLMetaElement : propriété media"
 short-title: media
 slug: Web/API/HTMLMetaElement/media
 l10n:
-  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -23,7 +23,7 @@ Une chaîne de caractères.
 
 L'exemple suivant crée un nouvel élément `<meta>` avec un attribut `name` défini sur [`theme-color`](/fr/docs/Web/HTML/Reference/Elements/meta/name#noms_de_méta_définis_dans_la_spécification_html).
 L'attribut `content` est défini sur `#3c790a`, l'attribut `media` est défini sur `prefers-color-scheme: dark`, et l'élément est ajouté à l'élément `<head>` du document.
-Quand un·e utilisateur·ice a spécifié un mode sombre dans son système d'exploitation, la propriété `media` peut être utilisée pour définir une couleur de thème différente&nbsp;:
+Quand un·e utilisateur·ice a défini un mode sombre dans son système d'exploitation, la propriété `media` peut être utilisée pour définir une couleur de thème différente&nbsp;:
 
 ```js
 const meta = document.createElement("meta");

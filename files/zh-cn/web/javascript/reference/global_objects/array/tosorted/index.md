@@ -17,7 +17,7 @@ toSorted((a, b) => { /* … */ })
 // 传入比较函数
 toSorted(compareFn)
 
-// 內联比较函数
+// 内联比较函数
 toSorted(function compareFn(a, b) { /* … */ })
 ```
 

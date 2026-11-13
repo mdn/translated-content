@@ -16,7 +16,7 @@ original_slug: Web/HTTP/Headers/Retry-After
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -57,6 +57,6 @@ Retry-After: 120
 
 ## 함께 참고할 내용
 
-- [Google Webmaster blog: How to deal with planned site downtime](https://webmasters.googleblog.com/2011/01/how-to-deal-with-planned-site-downtime.html)
+- [Google Webmaster blog: How to deal with planned site downtime](https://developers.google.com/search/blog/2011/01/how-to-deal-with-planned-site-downtime)
 - {{HTTPStatus(503)}} (Service Unavailable)
 - {{HTTPStatus(301)}} (Moved Permanently)

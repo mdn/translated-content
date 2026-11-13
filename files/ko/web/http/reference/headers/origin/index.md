@@ -16,7 +16,7 @@ original_slug: Web/HTTP/Headers/Origin
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

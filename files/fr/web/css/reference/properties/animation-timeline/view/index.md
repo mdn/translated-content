@@ -1,11 +1,10 @@
 ---
-title: view()
+title: Fonction CSS `view()`
+short-title: view()
 slug: Web/CSS/Reference/Properties/animation-timeline/view
 l10n:
-  sourceCommit: 8f7fa9e7aef0399c7a7f8e5a20476a0c2f287640
+  sourceCommit: bf3142e11b227fb3e7c6de298ea9049aa1999d6f
 ---
-
-{{SeeCompatTable}}
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`view()`** est utilisée avec la propriété {{CSSxRef("animation-timeline")}} pour créer une [chronologie de progression de visibilité anonyme](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) basée sur le moment où un élément entre dans la zone visible de son {{Glossary("scroll container", "conteneur de défilement")}} le plus proche. Vous pouvez ajuster l'axe de suivi et les encarts optionnels pour contrôler quand l'élément est considéré comme «&nbsp;visible&nbsp;».
 
@@ -67,9 +66,15 @@ Dans cet exemple, nous créons une chronologie de progression de visibilité ano
 
 #### HTML
 
-Le code HTML de l'exemple est présenté ci-dessous.
+Au milieu du texte, nous incluons le code HTML suivant (notez que le HTML contient beaucoup de contenu que nous avons masqué pour des raisons de concision)&nbsp;:
 
-```html
+```html live-sample__not_included_in_result
+<div class="subject-container">
+  <div class="subject animation"></div>
+</div>
+```
+
+```html hidden
 <div class="content">
   <h1>Contenu</h1>
   <p>
@@ -103,13 +108,18 @@ Le code HTML de l'exemple est présenté ci-dessous.
     scelerisque. Netus et malesuada fames ac.
   </p>
 </div>
+```
+
+Nous incluons également deux superpositions pour visualiser la plage d'animation&nbsp;:
+
+```html
 <div class="overlay top">encart de début 50%</div>
 <div class="overlay bottom">encart de fin 10%</div>
 ```
 
 #### CSS
 
-Les classes `subject` et `content` sont mises en forme de façon minimale, et le texte possède quelques réglages de police de base&nbsp;:
+La mise en forme des éléments `subject` et `subject-container` inclut&nbsp;:
 
 ```css
 .subject {
@@ -118,42 +128,23 @@ Les classes `subject` et `content` sont mises en forme de façon minimale, et le
   background-color: deeppink;
 }
 
-.content {
-  width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-```
-
-Pour illustrer le résultat, quelques classes supplémentaires sont définies. La classe `subject-container` montre les limites de l'animation. Les superpositions semi-transparentes `top` et `bottom` marquent la zone de défilement ajustée par l'encart.
-
-```css
 .subject-container {
   border: 2px dashed black;
   width: 300px;
   margin: 0 auto;
 }
+```
 
+La classe `subject-container` montre les limites de l'animation. Nous définissons des superpositions `top` et `bottom` pour marquer la zone de défilement ajustée par l'encart.
+
+```css
 .overlay {
   position: fixed;
-  width: 100%;
-  background-color: #f5deb3aa;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: red;
-  justify-content: flex-end;
 }
 
 .top {
   top: 0;
   height: 50%;
-  align-items: end;
 }
 
 .bottom {
@@ -162,9 +153,9 @@ Pour illustrer le résultat, quelques classes supplémentaires sont définies. L
 }
 ```
 
-L'élément HTML `<div>` avec la classe `subject` possède aussi la classe `animation`. L'animation `grow` fait grandir ou rétrécir l'élément `subject`. La règle `animation-timeline: view(block 55% 10%)` définit l'élément à animer au fil de la chronologie de progression de visibilité créée par son conteneur de défilement le plus proche (ici, l'élément racine du document).
+L'élément HTML `<div>` avec la classe `subject` possède aussi la classe `animation`. L'animation `grow` fait grandir ou rétrécir l'élément `subject`. La règle `animation-timeline: view(block 50% 10%)` définit l'élément à animer au fil de la chronologie de progression de visibilité créée par son conteneur de défilement le plus proche (ici, l'élément racine du document).
 
-En faisant défiler vers le bas, remarquez comment les valeurs de marge interne `50% 10%` font démarrer l'animation lorsque l'élément est à 10% du bas de la zone de défilement et la terminent lorsqu'il est à 50% du haut. Au fil de la chronologie, l'élément `subject` grandit. À l'inverse, en faisant défiler vers le haut, l'animation se déroule à l'envers, débutant à 50% du haut, parcourant les images clés en sens inverse, et se terminant à 10% du bas. Ainsi, lorsque l'animation s'inverse, l'élément `subject` rétrécit.
+En faisant défiler vers le bas, remarquez comment les valeurs de marge interne `50% 10%` font démarrer l'animation lorsque l'élément est à 10% du bas de la zone de défilement et la terminent lorsqu'il est à 50% du haut. Au fil de la chronologie, l'élément `subject` grandit. En faisant défiler vers le haut, l'animation se déroule dans la direction inverse, débutant à 50% du haut, parcourant les images clés en sens inverse, et se terminant à 10% du bas. Ainsi, lorsque l'animation s'inverse, l'élément `subject` rétrécit.
 
 Il est important de retenir que l'animation dure uniquement tant que l'élément `subject` est dans la zone visible, définie ici par les valeurs de marge interne `50% 10%`.
 
@@ -172,7 +163,6 @@ Il est important de retenir que l'animation dure uniquement tant que l'élément
 .animation {
   animation-timeline: view(block 50% 10%);
   animation-name: grow;
-  animation-duration: 1ms; /* Firefox a besoin de ça pour appliquer l'animation */
   animation-timing-function: linear;
 }
 
@@ -188,6 +178,30 @@ Il est important de retenir que l'animation dure uniquement tant que l'élément
 ```
 
 ```css hidden
+.content {
+  width: 75%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.overlay {
+  width: 100%;
+  background-color: #f5deb3aa;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  justify-content: flex-end;
+}
+.top {
+  align-items: end;
+}
+
 @layer no-support {
   @supports not (animation-timeline: view()) {
     body::before {
@@ -195,17 +209,19 @@ Il est important de retenir que l'animation dure uniquement tant que l'élément
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
 ```
 
+Le reste du CSS est masqué pour des raisons de concision.
+
 #### Résultat
 
-Faites défiler pour voir l'élément avec la classe `subject` s'animer lorsqu'il entre et sort de la zone visible ajustée par l'encart.
+{{EmbedLiveSample("Créer une chronologie de progression de visibilité anonyme avec `view()`", "100%", 480)}}
 
-{{EmbedLiveSample("Examples", "100%", 480)}}
+Faites défiler pour voir l'élément avec la classe `subject` s'animer lorsqu'il entre et sort de la zone visible ajustée par l'encart.
 
 ## Spécifications
 

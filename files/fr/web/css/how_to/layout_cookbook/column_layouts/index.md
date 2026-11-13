@@ -2,10 +2,10 @@
 title: Disposition en colonnes
 slug: Web/CSS/How_to/Layout_cookbook/Column_layouts
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Il vous faudra souvent créer une mise en page comportant plusieurs colonnes, et CSS offre plusieurs moyens d'y parvenir. Le choix entre les dispositions [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ou [grille](/fr/docs/Web/CSS/Guides/Grid_layout) dépendra de l'objectif visé&nbsp;; dans cette recette nous explorons ces options.
+Il vous faut souvent créer une mise en page comportant plusieurs colonnes, et CSS offre plusieurs moyens d'y parvenir. Le choix entre les dispositions [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) ou [grille](/fr/docs/Web/CSS/Guides/Grid_layout) dépend de l'objectif visé&nbsp;; dans cette recette nous explorons ces options.
 
 ![Trois styles de mise en page comportant deux colonnes dans le conteneur.](cookbook-multiple-columns.png)
 
@@ -120,7 +120,7 @@ On peut utiliser des marges ou la propriété `gap` pour créer des espaces entr
 
 {{EmbedLiveSample("columns-flexbox-example", "", 400)}}
 
-Pour créer une mise en page avec des éléments flex qui passent sur de nouvelles lignes, réglez la propriété {{CSSxRef("flex-wrap")}} du conteneur sur `wrap`. Notez que chaque ligne flex répartit l'espace pour cette ligne uniquement. Les éléments d'une ligne ne s'aligneront pas nécessairement avec ceux d'autres lignes, comme le montre l'exemple ci‑dessous. C'est pourquoi flexbox est qualifié d'unidimensionnel&nbsp;: il est conçu pour contrôler la mise en page en ligne ou en colonne, mais pas les deux à la fois.
+Pour créer une mise en page avec des éléments flex qui passent sur de nouvelles lignes, réglez la propriété {{CSSxRef("flex-wrap")}} du conteneur sur `wrap`. Notez que chaque ligne flex répartit l'espace pour cette ligne uniquement. Les éléments d'une ligne ne s'alignent pas nécessairement avec ceux d'autres lignes, comme le montre l'exemple ci‑dessous. C'est pourquoi flexbox est qualifié d'unidimensionnel&nbsp;: il est conçu pour contrôler la mise en page en ligne ou en colonne, mais pas les deux à la fois.
 
 ```html live-sample___columns-flexbox-wrapping-example
 <div class="container">
@@ -231,6 +231,6 @@ Quand utiliser la grille&nbsp;:
 
 ## Voir aussi
 
-- [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout)
-- [Guide pour les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
-- [Guide pour les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
+- Le guide [pour les dispositions multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- Le guide [pour les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- Le guide [pour les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)

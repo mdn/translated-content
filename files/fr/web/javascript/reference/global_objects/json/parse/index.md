@@ -3,7 +3,7 @@ title: "JSON : méthode statique parse()"
 short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`JSON.parse()`** analyse une chaîne de caractères JSON et construit la valeur ou l'objet JavaScript décrit par cette chaîne de caractères. Une fonction <i lang="en">reviver</i> optionnelle peut être fournie pour effectuer une transformation sur l'objet obtenu avant qu'il ne soit retourné.
@@ -38,10 +38,10 @@ JSON.parse(text, reviver)
       - : La clé associée à la valeur.
     - `value`
       - : La valeur produite par l'analyse.
-    - `context` {{Optional_Inline}}
-      - : Un objet contexte qui contient l'état pertinent pour l'expression en cours de restauration. C'est un nouvel objet à chaque appel de la fonction <i lang="en">reviver</i>. Il n'est transmis que lors de la restauration de valeurs primitives, mais pas lorsque `value` est un objet ou un tableau. Il contient la propriété suivante&nbsp;:
-        - `source`
-          - : La chaîne de caractères JSON d'origine représentant cette valeur.
+    - `context`
+      - : Un objet contexte qui contient l'état pertinent pour l'expression en cours de restauration. C'est un nouvel objet à chaque appel de la fonction <i lang="en">reviver</i>.
+        - `source` {{Optional_Inline}}
+          - : La chaîne de caractères JSON d'origine représentant cette valeur. Cette propriété n'est présente que lors de la restauration de valeurs primitives, mais pas lorsque `value` est un objet ou un tableau.
 
 ### Valeur de retour
 
@@ -54,17 +54,17 @@ L'objet ({{JSxRef("Object")}}), le tableau ({{JSxRef("Array")}}), la chaîne de 
 
 ## Description
 
-`JSON.parse()` analyse une chaîne de caractères JSON selon la [grammaire JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON#grammaire_complète_de_json), puis évalue la chaîne comme s'il s'agissait d'une expression JavaScript. La seule situation où un texte JSON représente une valeur différente de la même expression JavaScript concerne la clé `"__proto__"` — voir [Syntaxe des littéraux d'objet et JSON](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#notation_littérale_et_json).
+`JSON.parse()` analyse une chaîne de caractères JSON selon la [grammaire JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON#grammaire_complète_de_json), puis évalue la chaîne de caractères comme s'il s'agit d'une expression JavaScript. La seule situation où un texte JSON représente une valeur différente de la même expression JavaScript concerne la clé `"__proto__"` — voir [Syntaxe des littéraux d'objet et JSON](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#notation_littérale_et_json).
 
 ### Le paramètre `reviver`
 
 Si un `reviver` est défini, la valeur obtenue par l'analyse est _transformée_ avant d'être retournée. Plus précisément, la valeur calculée et toutes ses propriétés (selon un [parcours en profondeur <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Depth-first_search), en commençant par les propriétés les plus imbriquées et en remontant jusqu'à la valeur d'origine) sont passées individuellement au `reviver`.
 
-Le `reviver` est appelé avec l'objet contenant la propriété en cours de traitement comme valeur de `this` (sauf si vous définissez le `reviver` comme une fonction fléchée, auquel cas il n'y a pas de liaison distincte de `this`) et deux arguments&nbsp;: `key` et `value`, représentant respectivement le nom de la propriété sous forme de chaîne de caractères (même pour les tableaux) et la valeur de la propriété. Pour les valeurs primitives, un paramètre supplémentaire `context` est transmis, qui contient le texte source de cette valeur. Si la fonction `reviver` retourne {{JSxRef("undefined")}} (ou ne retourne aucune valeur — par exemple si l'exécution s'arrête à la fin de la fonction), la propriété est supprimée de l'objet. Sinon, la propriété est redéfinie avec la valeur retournée. Si le `reviver` ne transforme que certaines valeurs et pas d'autres, assurez-vous de retourner toutes les valeurs non transformées telles quelles — sinon, elles seront supprimées de l'objet obtenu.
+Le `reviver` est appelé avec l'objet contenant la propriété en cours de traitement comme valeur de `this` (sauf si vous définissez le `reviver` comme une fonction fléchée, auquel cas il n'y a pas de liaison distincte de `this`) et trois arguments&nbsp;: `key`, `value` et `context`. La clé est une chaîne de caractères même pour les tableaux. Pour les valeurs primitives, l'argument `context` comporte un champ appelé `source` qui contient le texte source de cette valeur. Pour les valeurs primitives, un paramètre supplémentaire `context` est transmis, qui contient le texte source de cette valeur. Si la fonction `reviver` retourne {{JSxRef("undefined")}} (ou ne retourne aucune valeur — par exemple si l'exécution s'arrête à la fin de la fonction), la propriété est supprimée de l'objet. Sinon, la propriété est redéfinie avec la valeur retournée. Si le `reviver` ne transforme que certaines valeurs et pas d'autres, assurez-vous de retourner toutes les valeurs non transformées telles quelles — sinon, elles sont supprimées de l'objet obtenu.
 
-De façon similaire au paramètre `replacer` de {{JSxRef("JSON.stringify()")}}, pour les tableaux et objets, `reviver` sera appelé en dernier sur la valeur racine avec une chaîne de caractères vide comme `key` et l'objet racine comme `value`. Pour les autres valeurs JSON valides, `reviver` fonctionne de façon similaire et est appelé une fois avec une chaîne de caractères vide comme `key` et la valeur elle-même comme `value`.
+De façon similaire au paramètre `replacer` de {{JSxRef("JSON.stringify()")}}, pour les tableaux et objets, `reviver` est appelé en dernier sur la valeur racine avec une chaîne de caractères vide comme `key` et l'objet racine comme `value`. Pour les autres valeurs JSON valides, `reviver` fonctionne de façon similaire et est appelé une fois avec une chaîne de caractères vide comme `key` et la valeur elle-même comme `value`.
 
-Si vous retournez une autre valeur depuis `reviver`, cette valeur remplacera complètement la valeur analysée à l'origine. Cela s'applique même à la valeur racine. Par exemple&nbsp;:
+Si vous retournez une autre valeur depuis `reviver`, cette valeur remplace complètement la valeur analysée à l'origine. Cela s'applique même à la valeur racine. Par exemple&nbsp;:
 
 ```js
 const transformedObj = JSON.parse('[1,5,{"s":1}]', (key, value) =>
@@ -76,7 +76,7 @@ console.log(transformedObj); // undefined
 
 Il n'existe aucun moyen de contourner cela de façon générique. Vous ne pouvez pas traiter spécifiquement le cas où `key` est une chaîne de caractères vide, car les objets JSON peuvent aussi contenir des clés qui sont des chaînes de caractères vides. Vous devez savoir très précisément quel type de transformation est nécessaire pour chaque clé lors de l'implémentation du `reviver`.
 
-Notez que `reviver` est exécuté après l'analyse de la valeur. Par exemple, les nombres dans le texte JSON auront déjà été convertis en nombres JavaScript, et peuvent perdre en précision lors du processus. Une façon de transférer de grands nombres sans perte de précision est de les sérialiser en tant que chaînes de caractères, puis de les restaurer en [des `BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), ou dans d'autres formats à précision arbitraire appropriés.
+Notez que `reviver` est exécuté après l'analyse de la valeur. Par exemple, les nombres dans le texte JSON ont déjà été convertis en nombres JavaScript, et peuvent perdre en précision lors du processus. Une façon de transférer de grands nombres sans perte de précision est de les sérialiser en tant que chaînes de caractères, puis de les restaurer en [des `BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), ou dans d'autres formats à précision arbitraire appropriés.
 
 Vous pouvez également utiliser la propriété `context.source` pour accéder au texte source JSON d'origine représentant la valeur, comme illustré ci-dessous&nbsp;:
 
@@ -84,7 +84,7 @@ Vous pouvez également utiliser la propriété `context.source` pour accéder au
 const bigJSON = '{"gross_gdp": 12345678901234567890}';
 const bigObj = JSON.parse(bigJSON, (key, value, context) => {
   if (key === "gross_gdp") {
-    // Ignorer la valeur car elle a déjà perdu en précision
+    // Ignorer la valeur, car elle a déjà perdu en précision
     return BigInt(context.source);
   }
   return value;
@@ -203,4 +203,5 @@ JSON.parse("{\"foo\": 1}"); // OK
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `JSON.parse` (paramètre `context` du reviver) dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/json)
 - La méthode {{JSxRef("JSON.stringify()")}}

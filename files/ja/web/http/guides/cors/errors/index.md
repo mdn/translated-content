@@ -27,7 +27,7 @@ additional information here).
 ```
 
 > [!NOTE]
-> セキュリティ上の理由から、 CORS リクエストで何を失敗したかについては _JavaScript コードからは特定できません_。コードから分かることは、エラーが発生したことだけです。何を失敗したかを特定するための唯一の方法は、詳細をブラウザーのコンソールで見ることです。
+> セキュリティ上の理由から、 CORS リクエストで何が失敗したかは _JavaScript コードからは特定できません_。コードから分かることは、エラーが発生したことだけです。何が失敗したかを特定する唯一の方法は、詳細をブラウザーのコンソールで確認することです。
 
 ## CORS のエラーメッセージ
 
@@ -42,7 +42,7 @@ Firefox のコンソールは、 CORS のためにリクエストが失敗した
 - [Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '\*'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)
 - [Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound)
-- [Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials)
+- [Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials)
 - [Reason: CORS preflight channel did not succeed](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed)
 - [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod)
 - [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader)

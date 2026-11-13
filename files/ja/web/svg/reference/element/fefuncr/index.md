@@ -1,0 +1,35 @@
+---
+title: <feFuncR>
+slug: Web/SVG/Reference/Element/feFuncR
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+---
+
+**`<feFuncR>`** [SVG](/ja/docs/Web/SVG) フィルタープリミティブは、その親要素である {{SVGElement("feComponentTransfer")}} の入力グラフィックの赤成分に対する変換関数を定義します。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGFEFuncRElement")}} インターフェイスを実装しています。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

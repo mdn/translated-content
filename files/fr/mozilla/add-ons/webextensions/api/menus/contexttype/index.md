@@ -3,8 +3,6 @@ title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 ---
 
-{{AddonSidebar}}
-
 Les différents contextes dans lesquels un élément de menu peut apparaître.
 
 ## Type

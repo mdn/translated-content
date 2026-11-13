@@ -38,7 +38,7 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
   </tbody>
 </table>
 
-Maintenant que vous avez [construit une page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML), vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.
+Maintenant que vous avez [construit une page web](/fr/docs/Learn_web_development/Getting_started/Your_first_website), vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.
 
 ## Pédagogie active
 

@@ -25,31 +25,31 @@ Parmi les cas courants d'utilisation des origines opaques figurent&nbsp;:
 
 ## Exemples
 
-Les URL qui suivent partagent la même origine car elles ont le même schéma (`http`), nom d'hôte (`exemple.com`), et que les chemins de fichiers différents n'importent pas&nbsp;:
+Les URL qui suivent partagent la même origine car elles ont le même schéma (`http`), nom d'hôte (`example.com`), et que les chemins de fichiers différents n'importent pas&nbsp;:
 
-- `http://exemple.com/app1/index.html`
-- `http://exemple.com/app2/index.html`
+- `http://example.com/app1/index.html`
+- `http://example.com/app2/index.html`
 
 Il s'agit ici de la même origine car le contenu HTTP est délivré, par défaut, via le port 80&nbsp;:
 
-- `http://exemple.com:80`
-- `http://exemple.com`
+- `http://example.com:80`
+- `http://example.com`
 
 Ici, il ne s'agit pas de la même origine, car ce sont deux schémas différents&nbsp;:
 
-- `http://exemple.com/app1`
-- `https://exemple.com/app2`
+- `http://example.com/app1`
+- `https://example.com/app2`
 
 Ce ne sont pas les mêmes origines pour les exemples qui suivent, car le nom d'hôte est différent&nbsp;:
 
-- `http://exemple.com`
-- `http://www.exemple.com`
-- `http://monapp.exemple.com`
+- `http://example.com`
+- `http://www.example.com`
+- `http://monapp.example.com`
 
 Les deux exemples qui suivent ne sont pas de la même origine, car les ports sont différents&nbsp;:
 
-- `http://exemple.com`
-- `http://exemple.com:8080`
+- `http://example.com`
+- `http://example.com:8080`
 
 ## Voir aussi
 

@@ -136,7 +136,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Ligações podem ser feitas com a função .`call` de {{jsxref("Function.prototype")}} and it can also be reduced using `[].slice.call(arguments)` ao invés de `Array.prototype.slice.call`. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.
+Ligações podem ser feitas com a função .`call` de {{jsxref("Function")}} and it can also be reduced using `[].slice.call(arguments)` ao invés de `Array.prototype.slice.call`. De qualquer forma, ela pode ser simplificada com {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;

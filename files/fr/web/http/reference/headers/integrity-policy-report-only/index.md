@@ -3,15 +3,14 @@ title: En-tête Integrity-Policy-Report-Only
 short-title: Integrity-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 5ab391405a364e5a512b8182c376261ee8a0bf18
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Integrity-Policy-Report-Only`** permet aux administrateur·ice·s de site web de signaler les ressources chargées par l'agent utilisateur qui violeraient les garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) si la politique d'intégrité était appliquée (en utilisant l'en-tête {{HTTPHeader("Integrity-Policy")}}).
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Integrity-Policy-Report-Only`** permet aux administrateur·ice·s de site web de signaler les ressources chargées par l'agent utilisateur qui violent les garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity) si la politique d'intégrité est appliquée (en utilisant l'en-tête {{HTTPHeader("Integrity-Policy")}}).
 
-Des rapports peuvent être générés pour les requêtes sur les [destinations de requête](#blocked-destinations) définies qui omettent les métadonnées d'intégrité, ou qui sont effectuées en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors).
-Pour que les rapports soient envoyés à un point de terminaison de rapport, l'en-tête `Integrity-Policy-Report-Only` doit définir un nom de point de terminaison de rapport valide qui correspond à un point de terminaison déclaré à l'aide de l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
-Les rapports sont générés à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API) et peuvent également être observés dans la page pour laquelle la politique d'intégrité est signalée, à l'aide d'un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver).
-Le format du corps du rapport est donné par le dictionnaire {{DOMxRef("IntegrityViolationReportBody")}} (une forme sérialisée en JSON de ce corps est envoyée en POST aux points de terminaison du serveur de rapport).
+Les violations de la politique peuvent être signalées à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API).
+Les rapports peuvent être observés dans la page pour laquelle la politique est appliquée, à l'aide d'un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver), et envoyés aux points de terminaison du serveur définis dans un en-tête de réponse {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés à l'aide du champ [`endpoints`](#endpoints).
+Pour plus d'informations, voir {{DOMxRef("IntegrityViolationReport")}}.
 
 Cet en-tête permet aux développeur·euse·s de tester les [politiques d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#politiques_dintégrité) et de corriger les problèmes de contenu avant de déployer finalement un en-tête {{HTTPHeader("Integrity-Policy")}} pour appliquer la politique.
 
@@ -50,34 +49,37 @@ Les valeurs de l'en-tête sont définies comme des dictionnaires de champs struc
         Comme il s'agit de la valeur par défaut et de la seule valeur, omettre `sources` équivaut à définir `sources=(inline)`.
 
 - `endpoints` {{Optional_Inline}}
-  - : Une liste de [noms de points de terminaison de rapport](/fr/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) qui indiquent où les rapports seront envoyés.
+  - : Une liste de [noms de points de terminaison de rapport](/fr/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) qui indiquent où les rapports sont envoyés.
     Les points de terminaison de rapport doivent être définis dans un en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
 ## Exemples
 
 ### Signaler lorsque les scripts n'ont pas de métadonnées d'intégrité
 
-Cet exemple montre un document qui signale lorsque l'élément HTML {{HTMLElement("script")}} (ou `HTMLScriptElement`) ne définit pas d'attribut `integrity`, ou lorsqu'une ressource de script est demandée en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors).
+Cet exemple montre un document qui signale à un point de terminaison de serveur lorsque l'élément HTML {{HTMLElement("script")}} (ou `HTMLScriptElement`) ne définit pas d'attribut `integrity`, ou lorsqu'une ressource de script est demandée en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors).
 
 Notez que le `integrity-endpoint` utilisé dans `Integrity-Policy-Report-Only` est défini dans l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
 ```http
-Reporting-Endpoints: integrity-endpoint=https://exemple.com/integrity, backup-integrity-endpoint=https://report-provider.exemple/integrity
-Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, backup-integrity-endpoint)
+Reporting-Endpoints: integrity-endpoint=https://example.com/integrity, backup-integrity-endpoint=https://report-provider.exemple/integrity
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint backup-integrity-endpoint)
 ```
 
-La [charge utile du rapport](/fr/docs/Web/API/Reporting_API#points_de_terminaison_du_serveur_de_rapports) pourrait ressembler à ceci.
+La [charge utile du rapport](/fr/docs/Web/API/Reporting_API#points_de_terminaison_du_serveur_de_rapports) peut ressembler à ceci.
+Notez que la propriété `body.reportOnly` est `true`, car ce rapport a été déclenché par une violation de `Integrity-Policy-Report-Only`.
 
 ```json
 {
+  "age": "176279",
   "type": "integrity-violation",
-  "url": "https://exemple.com",
+  "url": "https://example.com",
   "body": {
-    "documentURL": "https://exemple.com",
-    "blockedURL": "https://exemple.com/main.js",
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
     "destination": "script",
-    "reportOnly": false
-  }
+    "reportOnly": "true"
+  },
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
 }
 ```
 

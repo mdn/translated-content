@@ -1,8 +1,9 @@
 ---
-title: rel="modulepreload"
+title: Valeur d'attribut HTML `rel="modulepreload"`
+short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
+  sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
 ---
 
 Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.
@@ -20,19 +21,19 @@ Si `crossorigin` est défini sur [`anonymous`](/fr/docs/Web/HTML/Reference/Attri
 Si `crossorigin` est défini sur [`use-credentials`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials), alors le mode d'identification est [`include`](/fr/docs/Web/API/Request/credentials#include), et les identifiants sont envoyés pour les requêtes du même domaine et inter-domaines.
 
 L'attribut [`as`](/fr/docs/Web/HTML/Reference/Elements/link#as) est optionnel pour les liens avec `rel="modulepreload"` et sa valeur par défaut est `"script"`.
-Il peut être défini sur `"script"`, `"style"`, `"json"`, ou toute destination similaire à un script, comme `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"` ou `"worker"`.
+Il peut être défini sur `"script"`, `"style"`, `"json"`, `"text"` ou toute destination similaire à un script, comme `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"` ou `"worker"`. L'ensemble complet des valeurs autorisées est défini dans la spécification HTML pour le [module preload destination <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/links.html#module-preload-destination). Pour la liste des destinations similaires à un script, consultez la [spécification Fetch <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#request-destination-script-like).
 Un {{DOMxRef("Event/Event", "Event")}} nommé «&nbsp;error&nbsp;» est déclenché sur l'élément si une autre destination est utilisée.
 
 Un navigateur _peut_ également choisir de récupérer automatiquement les dépendances du module.
-On notera qu'il s'agit d'une optimisation propre à chaque navigateur — la seule façon de garantir que tous les navigateurs préchargeront les dépendances d'un module est de les définir individuellement&nbsp;!
-De plus, les événements nommés `load` ou `error` sont déclenchés immédiatement après le succès ou l'échec du chargement des ressources _définies_.
-Si les dépendances sont récupérées automatiquement, aucun événement supplémentaire n'est déclenché dans le thread principal (mais il est possible de surveiller les requêtes dans un service worker ou sur le serveur).
+Notez qu'il s'agit d'une optimisation propre à chaque navigateur — la seule façon de garantir que tous les navigateurs préchargent les dépendances d'un module est de les définir individuellement&nbsp;!
+De plus, les évènements nommés `load` ou `error` sont déclenchés immédiatement après le succès ou l'échec du chargement des ressources _définies_.
+Si les dépendances sont récupérées automatiquement, aucun évènement supplémentaire n'est déclenché dans le thread principal (mais il est possible de surveiller les requêtes dans un service worker ou sur le serveur).
 
 ## Exemples
 
 Considérez l'exemple [basic-modules <sup>(angl.)</sup>](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) ([version en ligne <sup>(angl.)</sup>](https://mdn.github.io/js-examples/module-examples/basic-modules/)), présenté dans le guide [Modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules#structure_de_lexemple).
 
-La structure de fichiers est la suivante, avec le module principal `main.js` qui importe statiquement deux modules dépendants `modules/canvas.js` et `modules/square.js` via [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import).
+La structure de fichiers est la suivante, avec le module principal `main.js` qui importe statiquement deux modules dépendants `modules/canvas.js` et `modules/square.js` avec [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import).
 
 ```plain
 index.html
@@ -42,7 +43,7 @@ modules/
     square.js
 ```
 
-Le code HTML ci-dessous montre comment `main.js` est récupéré via un élément `<script>`.
+Le code HTML ci-dessous montre comment `main.js` est récupéré avec un élément `<script>`.
 Ce n'est qu'après le chargement de `main.js` que le navigateur découvre et télécharge les deux modules dépendants.
 
 ```html
@@ -58,7 +59,7 @@ Ce n'est qu'après le chargement de `main.js` que le navigateur découvre et té
 ```
 
 Le code HTML suivant met à jour l'exemple pour utiliser des éléments `<link>` avec `rel="modulepreload"` pour le fichier principal et chaque module dépendant.
-C'est bien plus rapide car les trois modules commencent à être téléchargés de façon asynchrone et en parallèle avant d'être nécessaires.
+C'est bien plus rapide, car les trois modules commencent à être téléchargés de façon asynchrone et en parallèle avant d'être nécessaires.
 Au moment où `main.js` est analysé et que ses dépendances sont connues, elles ont déjà été récupérées et téléchargées.
 
 ```html

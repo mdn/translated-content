@@ -1,11 +1,12 @@
 ---
-title: -moz-force-broken-image-icon
+title: Propriété CSS `-moz-force-broken-image-icon`
+short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 La propriété [CSS](/fr/docs/Web/CSS) étendue **`-moz-force-broken-image-icon`** permet d'afficher l'icône d'image brisée même lorsqu'une image brisée possède un attribut `alt`.
 
@@ -25,11 +26,13 @@ La propriété [CSS](/fr/docs/Web/CSS) étendue **`-moz-force-broken-image-icon`
 
 ### Valeurs
 
+Cette propriété est définie comme l'une des valeurs suivantes&nbsp;:
+
 - {{CSSxRef("&lt;integer&gt;")}}
   - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
 
 > [!NOTE]
-> Même si la valeur est `1`, l'attribut `alt` sera affiché. Voir ci-après.
+> Même si la valeur est `1`, l'attribut `alt` est affiché. Voir ci-après.
 
 ## Définition formelle
 
@@ -67,7 +70,7 @@ img {
 ## Notes
 
 - Cette propriété ne fonctionne que sur les navigateurs basés sur Gecko.
-- L'usage de cette propriété n'est pas recommandée. Une propriété `alt` adéquate devrait être utilisée.
+- L'usage de cette propriété n'est pas recommandée. Une propriété `alt` adéquate doit être utilisée.
 
 ## Spécifications
 
@@ -79,4 +82,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Boggue Firefox 58646 <sup>(angl.)</sup>](https://bugzil.la/58646)
+- [Le bogue Firefox 58646 <sup>(angl.)</sup>](https://bugzil.la/58646)

@@ -1,8 +1,9 @@
 ---
-title: border
+title: Propriété CSS `border`
+short-title: border
 slug: Web/CSS/Reference/Properties/border
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 3f221b9845703eb21db70cdc321f843d5c1c072b
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border`** permet de définir la bordure d'un élément. Elle définit les valeurs de {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}, et {{CSSxRef("border-color")}}.
@@ -55,6 +56,16 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 - {{CSSxRef("border-style")}}
 - {{CSSxRef("border-color")}}
 
+### Sous-propriétés qui sont uniquement réinitialisées
+
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
+
+- {{CSSxRef("border-image-outset")}}
+- {{CSSxRef("border-image-repeat")}}
+- {{CSSxRef("border-image-slice")}}
+- {{CSSxRef("border-image-source")}}
+- {{CSSxRef("border-image-width")}}
+
 ## Syntaxe
 
 ```css
@@ -78,23 +89,24 @@ border: revert-layer;
 border: unset;
 ```
 
-La propriété `border` peut être définie en utilisant une, deux ou trois des valeurs listées ci-dessous. L'ordre des valeurs n'a pas d'importance.
-
-> [!NOTE]
-> La bordure pourra être invisible si son style n'est pas défini. En effet, sa valeur par défaut est `none`.
-
 ### Valeurs
+
+Cette propriété est définie comme une liste séparée par des espaces d'une à trois des valeurs suivantes&nbsp;:
 
 - `<line-width>`
   - : Voir {{CSSxRef("border-width")}} (la valeur par défaut est `medium`).
 - `<line-style>`
   - : Voir {{CSSxRef("border-style")}} (la valeur par défaut est `none`).
 - `<color>`
-  - : Voir {{CSSxRef("border-color")}}. Une valeur de type {{CSSxRef("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui sera utilisée sera la valeur de la propriété {{CSSxRef("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
+  - : Voir {{CSSxRef("border-color")}}. Une valeur de type {{CSSxRef("&lt;color&gt;")}} qui indique la couleur de la bordure. La valeur par défaut qui est utilisée est la valeur de la propriété {{CSSxRef("color")}} de l'élément (qui est la couleur du texte de l'élément, pas de son arrière-plan).
 
 ## Description
 
-Comme pour toutes les propriétés raccourcies, toute sous-valeur omise sera définie sur sa [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale). Il est important de noter que `border` ne permet pas de définir une valeur personnalisée pour {{CSSxRef("border-image")}}, mais la ramène à sa valeur initiale, c'est-à-dire `none`.
+La propriété raccourcie `border` définit la largeur, le style et la couleur des quatre côtés de la bordure d'un élément. Elle se définit à l'aide d'une, de deux ou des trois valeurs des propriétés constitutives, dans n'importe quel ordre.
+
+Les sous-valeurs omises prennent leur [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale). Pour afficher une bordure, vous définissez la composante `<line-style>`, car le style prend par défaut la valeur `none`.
+
+Il est important de noter que `border` ne permet pas de définir une valeur personnalisée pour {{CSSxRef("border-image")}}, mais la ramène à sa valeur initiale, c'est-à-dire `none`.
 
 La propriété raccourcie `border` est particulièrement utile lorsque vous souhaitez que les quatre bordures soient identiques. Pour les différencier, vous pouvez utiliser les propriétés longues {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}, qui acceptent des valeurs différentes pour chaque côté. Vous pouvez aussi cibler une bordure à la fois avec les propriétés physiques (par exemple {{CSSxRef("border-top")}}) et logiques (par exemple {{CSSxRef("border-block-start")}}).
 

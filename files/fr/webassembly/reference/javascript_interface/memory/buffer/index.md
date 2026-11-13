@@ -1,32 +1,32 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/Reference/JavaScript_interface/Memory/buffer
-original_slug: WebAssembly/JavaScript_interface/Memory/buffer
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-{{WebAssemblySidebar}}
-
-La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
-
-## Syntaxe
-
-```js
-memory.buffer;
-```
+La propriété en lecture seule **`buffer`** de l'objet [`WebAssembly.Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory) retourne le tampon contenu dans la mémoire. Selon que la mémoire a été construite avec `shared: true` ou non, le tampon est soit un {{JSxRef("ArrayBuffer")}}, soit un {{JSxRef("SharedArrayBuffer")}}.
 
 ## Exemples
 
-Dans l'exemple suivant (cf. le fichier [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère puis on instancie le _bytecode_ `memory.wasm` grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} tout en important la mémoire créée à la ligne précédente. Ensuite, on enregistre certaines valeurs dans cette mémoire puis on exporte une fonction afin de l'utiliser pour additionner certaines valeurs.
+### Utiliser la propriété `buffer`
+
+L'exemple suivant (voir [memory.html <sup>(angl.)</sup>](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) sur GitHub, et [la voir en direct <sup>(angl.)</sup>](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) récupère et instancie le code binaire chargé «&nbsp;memory.wasm&nbsp;» en utilisant la fonction [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static), tout en important la mémoire créée à la ligne ci-dessus. Il stocke ensuite des valeurs dans cette mémoire, exporte une fonction, et utilise la fonction exportée pour additionner ces valeurs.
 
 ```js
+const memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+});
+
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
   js: { mem: memory },
 }).then((obj) => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
+  const summands = new DataView(memory.buffer);
+  for (let i = 0; i < 10; i++) {
+    summands.setUint32(i * 4, i, true); // WebAssembly est petit boutiste
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
+  const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
 });
 ```
@@ -41,6 +41,6 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 
 ## Voir aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- Un aperçu de [WebAssembly](/fr/docs/WebAssembly)
+- [Les concepts associés à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

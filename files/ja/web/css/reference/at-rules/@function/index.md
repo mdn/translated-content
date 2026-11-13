@@ -1,8 +1,9 @@
 ---
-title: "@function"
+title: CSS `@function` アットルール
+short-title: "@function"
 slug: Web/CSS/Reference/At-rules/@function
 l10n:
-  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 {{SeeCompatTable}}
@@ -36,7 +37,7 @@ l10n:
 - `<declaration-rule-list>`
   - : この関数の論理を定義する関数本体を構成する、1 つ以上の CSS 宣言またはアットルールです。中の宣言には以下を含めることができます。
     - 関数本体にローカルにスコープされる CSS カスタムプロパティ。
-    - `result` 記述子は。`@function` アットルール内に直接記述するか、またはネストされたアットルール内に記述します。
+    - `result` 記述子は、`@function` アットルール内に直接記述するか、またはネストされたアットルール内に記述します。
 
 ### 記述子
 

@@ -3,7 +3,7 @@ title: "ShadowRoot: getHTML() メソッド"
 short-title: getHTML()
 slug: Web/API/ShadowRoot/getHTML
 l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 {{APIRef("DOM")}}
@@ -14,10 +14,13 @@ l10n:
 
 引数がない場合、シャドウルートである子ノードはシリアライズされず、このメソッドは {{domxref("Element.innerHTML")}} の値を読み取る場合と同じ動作をします。
 
+なお、一部のブラウザーでは、属性値内に `<` や `>` 文字が現れる場合、これらを `&lt;` や `&gt;` としてシリアライズします（[ブラウザーの互換性](#ブラウザーの互換性)を参照）。
+これは、攻撃者が[無害化関数](/ja/docs/Web/Security/Attacks/XSS#無害化)を迂回するような入力を仕掛けることで、クロスサイトスクリプティング (XSS) 攻撃をすることができる、潜在的なセキュリティ上の脆弱性（[ミューテーション XSS](https://securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)<sup>(英語)</sup>）を防ぐためのものです。
+
 ## 構文
 
 ```js-nolint
-const html = shadowRoot.getHTML(options)
+getHTML(options)
 ```
 
 ### 引数
@@ -26,11 +29,11 @@ const html = shadowRoot.getHTML(options)
   - : 次のオプションのパラメーターを持つオプションオブジェクトです。
     - `serializableShadowRoots`
       - : 論理値で、[シリアライズ可能](/ja/docs/Web/API/ShadowRoot/serializable)なシャドウルートを含めるかどうかを指定します。
-        既定値は `false` です。
+        デフォルト値は `false` です。
     - `shadowRoots`
       - : シリアライズする {{domxref("ShadowRoot")}} オブジェクトの配列です。
         これらは、`serializable` としてマークされているかどうか、または開かれているか閉じられたかに関係なく含まれます。
-        既定値は空の配列です。
+        デフォルト値は空の配列です。
 
 ### 返値
 

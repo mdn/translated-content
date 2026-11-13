@@ -1,8 +1,9 @@
 ---
-title: rel="prefetch"
+title: Valeur d'attribut HTML `rel="prefetch"`
+short-title: prefetch
 slug: Web/HTML/Reference/Attributes/rel/prefetch
 l10n:
-  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`prefetch`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}} indique au navigateur que l'utilisateur·ice aura probablement besoin de la ressource cible lors de navigations futures. Le navigateur peut donc améliorer l'expérience en récupérant et en mettant en cache la ressource de façon anticipée. `<link rel="prefetch">` est utilisé pour les ressources de navigation internes au site ou pour les sous-ressources utilisées par des pages du même site.

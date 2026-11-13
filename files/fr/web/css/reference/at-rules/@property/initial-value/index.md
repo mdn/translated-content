@@ -1,8 +1,9 @@
 ---
-title: initial-value
+title: Descripteur de règle CSS `initial-value`
+short-title: initial-value
 slug: Web/CSS/Reference/At-rules/@property/initial-value
 l10n:
-  sourceCommit: 98bbdcd90e5487539cebe19b12fe3d731fb5a03e
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`initial-value`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} définit la valeur initiale pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée.

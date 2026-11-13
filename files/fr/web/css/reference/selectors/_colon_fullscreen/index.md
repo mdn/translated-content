@@ -1,11 +1,12 @@
 ---
-title: :fullscreen
+title: Pseudo-classe CSS `:fullscreen`
+short-title: :fullscreen
 slug: Web/CSS/Reference/Selectors/:fullscreen
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 8fa3309a76fe8dc4cf5e8eed97ef596a91513fbd
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments sont ciblés.
 
 ## Syntaxe
 
@@ -21,13 +22,13 @@ La pseudo-classe `:fullscreen` permet de configurer la taille, le style ou la di
 
 ## Exemples
 
-### Mise en forme d'un élément en plein écran
+### Mettre en forme un élément en plein écran
 
 Cet exemple applique une couleur d'arrière-plan différente à un élément {{HTMLElement('div')}}, selon qu'il est ou non en mode plein écran. Il comprend un élément {{HTMLElement('button')}} permettant d'activer ou de désactiver le mode plein écran.
 
 ```html
 <div class="element">
-  <h1>Démonstration du MDN Web Docs : la pseudo-classe :fullscreen</h1>
+  <h1>Démonstration du MDN Web Docs&nbsp;: la pseudo-classe :fullscreen</h1>
 
   <p>
     Cette démonstration utilise la pseudo-classe <code>:fullscreen</code> pour
@@ -51,7 +52,7 @@ La pseudo-classe `:fullscreen` est utilisée pour remplacer la [`background-colo
 }
 ```
 
-Le JavaScript suivant fournit une fonction de gestion d'événement qui active ou désactive le mode plein écran lorsque l'utilisateur·ice clique sur le bouton `<button>`.
+Le JavaScript suivant fournit une fonction de gestion d'évènement qui active ou désactive le mode plein écran lorsque l'utilisateur·ice clique sur le bouton `<button>`.
 
 ```js
 document.querySelector(".toggle").addEventListener("click", (event) => {
@@ -76,7 +77,7 @@ document.querySelector(".toggle").addEventListener("click", (event) => {
 }
 ```
 
-{{EmbedLiveSample("Styling a fullscreen element", "", "300", "", "", "", "fullscreen")}}
+{{EmbedLiveSample("Mettre en forme un élément en plein écran", "", "300", "", "", "", "fullscreen")}}
 
 ## Spécifications
 
@@ -88,10 +89,12 @@ document.querySelector(".toggle").addEventListener("click", (event) => {
 
 ## Voir aussi
 
+- Le pseudo-élément {{CSSxRef("::backdrop")}}
+- La pseudo-classe {{CSSxRef(":xr-overlay")}}
+- Le module [des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- Le guide [de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
 - [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
-- [Le guide de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
-- La pseudo-classe {{CSSxRef("::backdrop")}}
-- Les API DOM :
+- Les API DOM&nbsp;:
   - {{DOMxRef("Element.requestFullscreen()")}},
   - {{DOMxRef("Document.exitFullscreen()")}},
   - {{DOMxRef("Document.fullscreenElement")}}

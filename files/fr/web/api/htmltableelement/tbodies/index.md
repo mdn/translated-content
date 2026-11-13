@@ -3,14 +3,14 @@ title: "HTMLTableElement : propriété tBodies"
 short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`tBodies`** de l'interface {{DOMxRef("HTMLTableElement")}} retourne une collection ({{DOMxRef("HTMLCollection")}}) dynamique des corps d'un tableau ({{HTMLElement("table")}}).
+La propriété en lecture seule **`tBodies`** de l'interface {{DOMxRef("HTMLTableElement")}} retourne une {{DOMxRef("HTMLCollection")}} dynamique contenant tous les éléments {{HTMLElement("tbody")}} qui sont des enfants de l'élément {{HTMLElement("table")}} donné.
 
-Bien que la propriété soit en lecture seule, l'objet retourné est dynamique et permet la modification de son contenu.
+Bien que la propriété soit en lecture seule, l'objet retourné est dynamique et est automatiquement mis à jour lorsque le `HTMLTableElement` change.
 
 La collection retournée inclut les éléments HTML {{HTMLElement("tbody")}} implicites. Par exemple&nbsp;:
 
@@ -22,11 +22,11 @@ La collection retournée inclut les éléments HTML {{HTMLElement("tbody")}} imp
 </table>
 ```
 
-Le DOM HTML généré à partir du code ci-dessus comportera un élément {{HTMLElement("tbody")}} même si les balises ne sont pas présentes dans le code source HTML.
+Le DOM HTML généré à partir du code ci-dessus comporte un élément {{HTMLElement("tbody")}} même si les balises ne sont pas présentes dans le code source HTML.
 
 ## Valeur
 
-Une collection ({{DOMxRef("HTMLCollection")}}) dynamique.
+Une collection dynamique ({{DOMxRef("HTMLCollection")}}) d'objets {{DOMxRef("HTMLTableSectionElement")}} (qui sont tous des `tbody`).
 
 ## Exemples
 
@@ -46,5 +46,7 @@ myTable.tBodies.length;
 
 ## Voir aussi
 
-- L'interface {{DOMxRef("HTMLCollection")}}
-- L'élément HTML {{HTMLElement("tbody")}}
+- La propriété {{DOMxRef("HTMLTableElement.caption")}}
+- La propriété {{DOMxRef("HTMLTableElement.tFoot")}}
+- La propriété {{DOMxRef("HTMLTableElement.tHead")}}
+- La méthode {{DOMxRef("HTMLTableElement.createTBody()")}}

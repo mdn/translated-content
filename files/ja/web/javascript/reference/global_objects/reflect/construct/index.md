@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Reflect.construct()`** は静的メソッドで、{{jsxref("Operators/new", "new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。さらに、別の　[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)　値を指定することもすることができます。
+**`Reflect.construct()`** は静的メソッドで、{{jsxref("new")}} 演算子のように、ただし関数として動作します。これは `new target(...args)` の呼び出しと同等です。さらに、別の　[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)　値を指定することもすることができます。
 
 {{InteractiveExample("JavaScript デモ: Reflect.construct()", "taller")}}
 
@@ -230,6 +230,6 @@ OneClass.apply(obj3, args);
 
 - `Reflect.construct` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect) にあります
 - {{jsxref("Reflect")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target)
 - [`handler.construct()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)

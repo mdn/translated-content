@@ -263,8 +263,8 @@ Nas declarações envolvendo outros operadores, JavaScript não converte valores
 
 No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 parseInt irá retornar apenas números inteiros, então seu uso é restrito para a casa dos decimais. Além disso, é uma boa prática ao usar parseInt incluir o parâmetro da base. O parâmetro da base é usado para especificar qual sistema númerico deve ser usado.
 

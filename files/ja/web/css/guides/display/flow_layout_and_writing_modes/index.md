@@ -2,7 +2,7 @@
 title: フローレイアウトと書字方向
 slug: Web/CSS/Guides/Display/Flow_layout_and_writing_modes
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 通常フローの動きについて詳細を説明している CSS 2.1 仕様書は、横書きを想定しています。[レイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)プロパティは縦書きモードでも同様に動作するべきです。このガイドでは、異なる文書の書字方向が使われた場合のフローレイアウトの動作を見てみましょう。
@@ -177,7 +177,7 @@ body {
 
 {{EmbedLiveSample("inline-change-mode", "", "240px")}}
 
-ブロックレベルボックスは新しいブロック整形コンテキストを生成し、つまり内部の display 種別が `flow` であれば、 display 種別の計算値は `flow-root` になります。次の例では、親が新しいブロック整形コンテキストを確立するため、 `horizontal-tb` で表示される浮動ボックスを含むボックスがどこに表示されるかを確認できます。
+ブロックレベルボックスは新しい[ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) を生成し、つまり内部の display 種別が `flow` であれば、 display 種別の計算値は `flow-root` になります。次の例では、親が新しいブロック整形コンテキストを確立するため、 `horizontal-tb` で表示される浮動ボックスを含むボックスがどこに表示されるかを確認できます。
 
 ```html live-sample___block-change-mode
 <div class="box">
@@ -288,7 +288,7 @@ body {
 
 {{EmbedLiveSample("width")}}
 
-従って、新しいプロパティ {{cssxref("block-size")}} および {{cssxref("inline-size")}} ができました。ブロックの `inline-size` を 100px に設定すると、書字方向が横書きか縦書きかに関わらず、 `inline-size` は常にインライン方向の寸法を意味します。
+従って、新しい {{cssxref("block-size")}} および {{cssxref("inline-size")}} プロパティを設定しました。ブロックの `inline-size` を 100px に設定すると、書字方向が横書きか縦書きかに関わらず、 `inline-size` は常にインライン方向の寸法を意味します。
 
 ```html live-sample___inline-size
 <div class="box">
@@ -321,7 +321,7 @@ body {
 
 ## まとめ
 
-多くの場合、フローレイアウトは文書や文書の一部の書字方向を変更したときに、期待通りに動作するでしょう。これはふつう、縦書きの言語や創造的な理由で使用することができます。 CSS は論理的プロパティと値を導入することで、縦書き時にインラインやブロック方向に基づいて寸法を決めやすくしています。これはどの書字方向でも動作するコンポーネントを作成するのに便利です。
+ほとんどの場合、文書全体や個々の節の書き込みモードを変更しても、フローレイアウトは期待通りに機能します。これは、縦書き言語を適切に組版するためや、創造的な目的で使用できます。CSS 論理的プロパティと値を使用することで、縦書きモードでのサイズ設定を、要素のインラインサイズやブロックサイズに基づいて行うことができます。これは、異なる書き込みモードで動作する要素を生成する際に役立ちます。
 
 ## 関連情報
 

@@ -1,8 +1,9 @@
 ---
-title: "<ul> : l'élément de liste non ordonnée"
+title: "Élément HTML `<ul>` : l'élément de liste non ordonnée"
+short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
@@ -49,11 +50,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Si cet attribut n'est pas présent et qu'aucune propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef("list-style-type")}} ne s'applique à l'élément, l'agent utilisateur choisit un type de puce en fonction du niveau d'imbrication de la liste.
 
     > [!WARNING]
-    > Cet attribut a été obsolète et ne doit pas être utilisé&nbsp;; on pourra utiliser la propriété CSS {{CSSxRef("list-style-type")}} à la place.
+    > Cet attribut a été obsolète et ne doit pas être utilisé&nbsp;; on peut utiliser la propriété CSS {{CSSxRef("list-style-type")}} à la place.
 
 ## Notes d'utilisation
 
-- L'élément `<ul>` sert à regrouper une collection d'éléments qui n'ont pas d'ordre numérique, et leur ordre dans la liste n'a pas de signification. Typiquement, les éléments d'une liste non ordonnée sont affichés avec une puce, qui peut prendre plusieurs formes, comme un point, un cercle ou un carré. Le style de la puce n'est pas défini dans la description HTML de la page, mais dans sa CSS associée, via la propriété {{CSSxRef("list-style-type")}}.
+- L'élément `<ul>` sert à regrouper une collection d'éléments qui n'ont pas d'ordre numérique, et leur ordre dans la liste n'a pas de signification. Typiquement, les éléments d'une liste non ordonnée sont affichés avec une puce, qui peut prendre plusieurs formes, comme un point, un cercle ou un carré. Le style de la puce n'est pas défini dans la description HTML de la page, mais dans sa CSS associée, avec la propriété {{CSSxRef("list-style-type")}}.
 - Les éléments `<ul>` et {{HTMLElement("ol")}} peuvent être imbriqués aussi profondément que souhaité. De plus, les listes imbriquées peuvent alterner entre `<ol>` et `<ul>` sans restriction.
 - Les éléments {{HTMLElement("ol")}} et `<ul>` représentent tous deux une liste d'éléments. Ils diffèrent en ce que, pour {{HTMLElement("ol")}}, l'ordre a une signification. Pour déterminer lequel utiliser, essayez de changer l'ordre des éléments de la liste&nbsp;; si le sens change, il faut utiliser {{HTMLElement("ol")}}, sinon vous pouvez utiliser `<ul>`.
 

@@ -30,7 +30,7 @@ new Intl.DisplayNames(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.DisplayNames()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
+> `Intl.DisplayNames()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
@@ -128,6 +128,6 @@ console.log(dnStd.of("en-GB")); // 'English (United Kingdom)'
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DisplayNames")}}
+- L'objet natif {{JSxRef("Intl.DisplayNames")}}
 - La méthode {{JSxRef("Intl.supportedValuesOf()")}}
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

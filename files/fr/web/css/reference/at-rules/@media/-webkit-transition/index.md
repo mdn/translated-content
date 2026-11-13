@@ -1,11 +1,12 @@
 ---
-title: -webkit-transition
+title: Caractéristique média CSS `-webkit-transition`
+short-title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 l10n:
-  sourceCommit: b868534a020a9efb06cba1846cf139f1c8b79aba
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Deprecated_Header}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
@@ -60,7 +61,6 @@ Ne fait partie d'aucun standard.
 - La caractéristique média {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
-- [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - La propriété {{CSSxRef("transition")}} et [utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - La règle {{CSSxRef("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - La règle {{CSSxRef("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

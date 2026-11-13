@@ -1,8 +1,9 @@
 ---
-title: border-bottom-left-radius
+title: Propriété CSS `border-bottom-left-radius`
+short-title: border-bottom-left-radius
 slug: Web/CSS/Reference/Properties/border-bottom-left-radius
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: f78ca75460fbdbc7f17b6e366dad47b9760054b0
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-left-radius`** arrondit le coin inférieur gauche d'un élément en définissant le rayon (ou les rayons des axes semi-majeur et semi-mineur) de l'ellipse qui détermine la courbure du coin.

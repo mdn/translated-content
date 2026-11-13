@@ -1,11 +1,10 @@
 ---
-title: scroll()
+title: Fonction CSS `scroll()`
+short-title: scroll()
 slug: Web/CSS/Reference/Properties/animation-timeline/scroll
 l10n:
-  sourceCommit: b7534af9f369a80fe12556cba781890e87a171d9
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
-
-{{SeeCompatTable}}
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scroll()`** peut être utilisée avec la propriété {{CSSxRef("animation-timeline")}} pour créer une [chronologie de progression de défilement anonyme](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_défilement_anonyme), en définissant l'élément de défilement et l'axe de la chronologie.
 
@@ -48,7 +47,7 @@ animation-timeline: scroll(x self);
 
 ## Description
 
-La fonction CSS `scroll()` peut être utilisée comme valeur unique au sein de la propriété {{CSSxRef("animation-timeline")}} (séparée par des virgules) pour définir une chronologie de progression de défilement pour une animation {{CSSxRef("@keyframes")}}. Elle définit l'élément défilant (_scroller_) et l'axe de la barre de défilement qui fourniront la chronologie de l'animation.
+La fonction CSS `scroll()` peut être utilisée comme valeur unique au sein de la propriété {{CSSxRef("animation-timeline")}} (séparée par des virgules) pour définir une chronologie de progression de défilement pour une animation {{CSSxRef("@keyframes")}}. Elle définit l'élément défilant (<i lang="en">scroller</i> en anglais) et l'axe de la barre de défilement qui fournit la chronologie de l'animation.
 
 Par défaut, `scroll()` fait référence à l'axe `block` de l'ancêtre défilant le plus proche. Les valeurs de l'élément défilant et de l'axe peuvent être indiquées dans n'importe quel ordre.
 
@@ -62,7 +61,7 @@ animation-timeline: scroll(block nearest);
 animation-timeline: scroll(nearest block);
 ```
 
-La chronologie de progression de défilement avance lorsque vous faites défiler l'élément défilant horizontalement ou verticalement, selon la valeur de `<axis>` et le [mode d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes/Writing_mode_systems). Si l'axe indiqué ne contient pas de barre de défilement, alors la chronologie de l'animation sera inactive.
+La chronologie de progression de défilement avance lorsque vous faites défiler l'élément défilant horizontalement ou verticalement, selon la valeur de `<axis>` et le [mode d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes/Writing_mode_systems). Si l'axe indiqué ne contient pas de barre de défilement, alors la chronologie de l'animation est inactive.
 
 ## Syntaxe formelle
 
@@ -89,10 +88,10 @@ Le code HTML de l'exemple est présenté ci-dessous.
 #### CSS
 
 Le CSS ci-dessous définit un carré qui effectue une rotation dans des directions alternées selon la chronologie fournie par la propriété `animation-timeline`.
-Dans ce cas, la chronologie est fournie par `scroll(block nearest)`, ce qui signifie qu'elle sélectionnera la barre de défilement dans la direction de l'axe block de l'élément ancêtre le plus proche qui possède des barres de défilement&nbsp;; dans ce cas, la barre de défilement verticale de l'élément «&nbsp;container&nbsp;».
+Dans ce cas, la chronologie est fournie par `scroll(block nearest)`, ce qui signifie qu'elle sélectionne la barre de défilement dans la direction de l'axe block de l'élément ancêtre le plus proche qui possède des barres de défilement&nbsp;; dans ce cas, la barre de défilement verticale de l'élément «&nbsp;container&nbsp;».
 
 > [!NOTE]
-> `block` et `nearest` sont en réalité les valeurs par défaut des paramètres, donc nous aurions pu simplement utiliser `scroll()`.
+> `block` et `nearest` sont en réalité les valeurs par défaut des paramètres, donc nous avons pu simplement utiliser `scroll()`.
 
 ```css
 #square {
@@ -143,7 +142,7 @@ Ces deux éléments ensemble garantissent que le conteneur possède une barre de
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

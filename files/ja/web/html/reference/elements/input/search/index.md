@@ -1,21 +1,20 @@
 ---
-title: <input type="search">
+title: '`<input type="search">` 属性値'
+short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLSidebar}}
-
-{{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("User agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
+{{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="site-search">Search the site:</label>
+<label for="site-search">サイトを検索:</label>
 <input type="search" id="site-search" name="q" />
 
-<button>Search</button>
+<button>検索</button>
 ```
 
 ```css interactive-example
@@ -52,15 +51,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが検索フィールドに入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドに入力されたテキストの長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### minlength
 
-ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最小文字数が設定されません。
+ユーザーが検索フィールドに入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最小文字数が設定されません。
 
-入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その検索フィールドは[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄のテキスト値の長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `minlength` の長さよりも短いと、その検索フィールドは[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### pattern
 
@@ -77,7 +76,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `placeholder` 属性は文字列で、その欄にどのような種類の情報が求められるかについてのユーザーに対する短いヒントを提供します。これは求められるデータの種類を紹介する一語または短い句であり、説明的なメッセージではありません。テキストには改行を含めることは<em>できません</em>。
 
-コントロールの内容がある書字方向（{{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
+コントロールの内容がある書字方向（{{Glossary("LTR")}} または {{Glossary("RTL")}}）であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
 > [!NOTE]
 > 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Reference/Elements/input#ラベル)を参照してください。
@@ -91,7 +90,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### size
 
-`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
+`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、デフォルト値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
@@ -103,8 +102,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
   - : この要素でスペルチェックを無効にします。
 - `true`
   - : この要素でスペルチェックを有効にします。
-- ""（空文字列) または値なし
-  - : スペルチェックについて、要素の既定の動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
+- ""（空文字列）または値なし
+  - : スペルチェックについて、要素のデフォルトの動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
 
 入力欄では、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
 
@@ -119,7 +118,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
-`incremental` が指定されていない場合、 {{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
+`incremental` が指定されていない場合、 {{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど）送信されます。
 
 `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
@@ -127,28 +126,23 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 `results` 属性は、 Safari のみが対応していますが、数値で {{HTMLElement("input")}} 要素が本来持っている過去の検索クエリーのドロップダウンメニューに表示される項目の最大数を上書きします。
 
-値は非負の10進数でなければなりません。提供されなかった場合、または無効な値が指定された場合、ブラウザー既定の項目の最大数が使用されます。
+値は非負の10進数でなければなりません。提供されなかった場合、または無効な値が指定された場合、ブラウザーデフォルトの項目の最大数が使用されます。
 
 ## 検索入力欄の使用
 
-`search` 型の `<input>` 要素は、 `text` 型ととても似ていますが、検索語を扱うことに特化している点が異なります。どちらも基本的には同じ動作をしますが、ユーザーエージェントによっては既定で異なるスタイルを選択するかもしれません（そしてもちろん、サイトは独自のスタイルを適用することができます）。
+`search` 型の `<input>` 要素は、 `text` 型ととても似ていますが、検索語を扱うことに特化している点が異なります。どちらも基本的には同じ動作をしますが、ユーザーエージェントによってはデフォルトで異なるスタイルを選択するかもしれません（そしてもちろん、サイトは独自のスタイルを適用することができます）。
 
 ### 基本的な例
 
 ```html
-<form>
-  <div>
-    <input type="search" id="mySearch" name="q" />
-    <button>検索</button>
-  </div>
-</form>
+<input type="search" id="mySearch" name="q" />
 ```
 
 次のように表示されます。
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-`q` は検索入力に与えられる最も一般的な `name` ですが、そうする必要があるわけではありません。送信すると、サーバーに送信されるデータの名前と値の組は `q=検索語` となります。
+`q` は検索入力に指定される最も一般的な `name` ですが、必須ではありません。この入力欄をフォームに含めて送信すると、サーバーに送信されるデータの名前と値の組は `q=searchTerm` となります。
 
 > [!NOTE]
 > 入力欄に [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) を設定することを忘れないでください。そうしないと送信されません。
@@ -159,7 +153,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ![フォーカスリング付きの検索入力で、テキストは 'cats'。入力欄の右横に × のアイコンが並んでいます。](chrome-cross-icon.png)
 
-加えて、最近のブラウザーは以前ドメイン内で入力された検索語を自動的に格納し、そのドメインの検索入力欄で従属的な検索が行われたときに、自動補完オプションに上がってくるようにする傾向があります。これは同じ又は似た検索を繰り返して行う傾向があるユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
+加えて、最近のブラウザーは、以前入力された検索語をドメインごとに自動的に保存する傾向があります。同じドメインの検索入力欄で後から検索すると、それらの検索語が自動補完候補として表示されます。これは、同じ検索語や似た検索語を繰り返し検索するユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
 
 ![エラー状態で、フォーカスリングが赤くなっている入力。ユーザーは文字 'h' を入力した。入力ボックスの直下に、 hello と hermansje という 2 つの選択肢を持つポップアップ選択リストが表示されている。](firefox-auto-complete.png)
 
@@ -170,12 +164,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html
-<form>
-  <div>
-    <input type="search" id="mySearch" name="q" placeholder="サイトを検索..." />
-    <button>検索</button>
-  </div>
-</form>
+<input type="search" id="mySearch" name="q" placeholder="サイトを検索..." />
 ```
 
 プレイスホルダーの表示方法を以下で確認できます。
@@ -184,27 +173,24 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 検索フォームのラベルとアクセシビリティ
 
-検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例ではよくあるパターンを示しています](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))。
+検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにラベルを付けません（虫眼鏡のアイコンなどは表示することがあります）。その配置から検索機能の目的が視覚的に明確に分かるためです（[この例は、典型的な視覚的パターンを示しています](#アクセシブルな検索フォーム)）。
 
-しかし、これは、検索入力が何であるかを言葉で示していないため、スクリーンリーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
+ただし、これではスクリーンリーダーのユーザーに検索入力欄の目的が音声で伝わらず、混乱を招く可能性があります。視覚的なデザインに影響を与えずにこの問題を回避する方法の一つとして、[ランドマーク要素](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)を使用できます。
 
-- `<form>` フォームの `role` 属性の値が `search` であると、スクリーンリーダーがフォームが検索フォームであることをアナウンスします。
-- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
+- 検索機能全体を {{HTMLElement("search")}} 要素で囲んでください。これにより、支援技術が読み上げたり、すばやく移動したりできるランドマーク領域が作成されます。もし `<input>` がすでに `<form>` 内に含まれている場合は、代わりに `<form>` 要素に [`role="search"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) を追加することもできます。これにより、`<form>` 自体も検索ランドマークとなります。`<search>` 要素はネイティブな HTML の意味づけを使用しますが、`role="search"` の方がより広く対応しており、すでに `<form>` ラッパーがある場合には、入力が簡潔になることがあります。
+- それだけでは不十分な場合は、{{HTMLElement("input")}} 自身に [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を指定できます。この説明的なテキストラベルはスクリーンリーダーで読み上げられ、視覚的には表示しない `<label>` と同等の役割を果たします。
 
-例を見てみましょう。
+最小限の例を見てみましょう。
 
 ```html
-<form role="search">
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="サイトを検索..."
-      aria-label="Search through site content" />
-    <button>検索</button>
-  </div>
-</form>
+<search>
+  <input
+    type="search"
+    id="mySearch"
+    name="q"
+    placeholder="サイトを検索..."
+    aria-label="サイトコンテンツ内を検索" />
+</search>
 ```
 
 プレイスホルダーがどう表示されるかを以下で確認できます。
@@ -221,17 +207,12 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="サイトを検索..."
-      size="30" />
-    <button>検索</button>
-  </div>
-</form>
+<input
+  type="search"
+  id="mySearch"
+  name="q"
+  placeholder="サイトを検索..."
+  size="30" />
 ```
 
 結果はこの広い入力ボックスになります。
@@ -247,7 +228,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### スタイルにおけるメモ
 
-ユーザーにとって値が妥当かそうでないかが分かりやすくなるように、フォーム要素のスタイル付けに便利な擬似クラスが利用できます。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} です。この節では、以下の CSS を使用して入力欄の値が妥当であれば隣にチェックマークを表示し、妥当な値でなければ隣にバツ（X) マークを表示します。
+ユーザーにとって値が妥当かそうでないかが分かりやすくなるように、フォーム要素のスタイル付けに便利な擬似クラスが利用できます。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} です。この節では、以下の CSS を使用して入力欄の値が妥当であれば隣にチェックマークを表示し、妥当な値でなければ隣にバツ（X）マークを表示します。
 
 ```css
 input:invalid ~ span::after {
@@ -282,6 +263,12 @@ input:valid ~ span::after {
     <span class="validity"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -337,6 +324,12 @@ input:valid ~ span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 input {
   margin-right: 10px;
@@ -355,11 +348,11 @@ input:valid ~ span::after {
 }
 ```
 
-This renders like so:
+これは次のように表示されます。
 
 {{ EmbedLiveSample('Input_value_length', 600, 40) }}
 
-4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります)。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
+4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります）。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
 
 ### パターンの指定
 
@@ -383,6 +376,12 @@ This renders like so:
     <span class="validity"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -409,7 +408,89 @@ input:valid ~ span::after {
 
 ## 例
 
-[website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
+### アクセシブルな検索フォーム
+
+この例は、検索フォームを含む典型的な {{htmlelement("nav")}} メニューを示しています。[WAI-ARIA](/ja/docs/Web/Accessibility/ARIA) の機能を活用することで、支援技術 (AT) を利用するユーザーにとって、このフォームをより利用しやすくしています。
+
+#### HTML
+
+メインナビゲーションのアイテムは、リンクのリストで構成されています。検索機能は {{htmlelement("search")}} 要素で囲み、支援技術 (AT) がその存在を認識できる検索ランドマークにしています。また、`<input type="search">` 要素には [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を指定し、スクリーンリーダーで読み上げられる明確なラベルを設定しています。
+
+```html live-sample___accessible-search
+<nav>
+  <ul>
+    <li><a href="#">ホーム</a></li>
+    <li><a href="#">紹介</a></li>
+    <li><a href="#">連絡先</a></li>
+  </ul>
+  <search>
+    <input
+      type="search"
+      name="q"
+      placeholder="検索クエリー"
+      aria-label="サイトコンテンツ内を検索" />
+  </search>
+</nav>
+```
+
+```css hidden live-sample___accessible-search
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+}
+
+nav search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+input[type="search"] {
+  flex: 3;
+  height: 30px;
+}
+```
+
+HTML を理解する上で関係がないため、簡潔さを期して、この例の CSS は非表示にしています。下記ライブサンプルにある "Play" ボタンを押すと、CSS を確認できます。
+
+#### 結果
+
+{{embedlivesample("accessible-search", "100%", "70")}}
 
 ## 技術的概要
 
@@ -450,17 +531,11 @@ input:valid ~ span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code></td>
-      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        <code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code><br />
+        <code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

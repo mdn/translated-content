@@ -2,10 +2,8 @@
 title: "修飾子: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 l10n:
-  sourceCommit: b7b0b7c096525c24c22d80f79448823c747491e7
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar}}
 
 **修飾子**は、正規表現の特定の部分の[フラグ](/ja/docs/Web/JavaScript/Reference/Regular_expressions#正規表現フラグ)設定を上書きします。これは、特定の正規表現構文要素の意味を変更するフラグを有効または無効にするために使用できます。これらのフラグは [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), [`s`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll) です。
 

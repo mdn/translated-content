@@ -3,7 +3,7 @@ title: "ShadowRoot: getAnimations() メソッド"
 short-title: getAnimations()
 slug: Web/API/ShadowRoot/getAnimations
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}
@@ -49,6 +49,5 @@ shadow.getAnimations().forEach((animation) => {
 - [Web Animations API](/ja/docs/Web/API/Web_Animations_API)
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
 - [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
-- {{domxref("Element.getAnimations()")}} - 単一の
-  {{domxref("Element")}} とその配下のアニメーションのみを読み取ります。
+- {{domxref("Element.getAnimations()")}} - 単一の {{domxref("Element")}} とその配下のアニメーションのみを読み取ります。
 - {{domxref("Animation")}}

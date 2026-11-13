@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/fill
 original_slug: Web/SVG/Attribute/fill
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
 
 Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les formes suivantes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
@@ -64,7 +62,7 @@ Pour {{SVGElement('altGlyph')}}, `fill` est un attribut de présentation qui dé
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -199,7 +197,7 @@ Pour {{SVGElement('circle')}}, `fill` est un attribut de présentation qui défi
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -227,7 +225,7 @@ Pour {{SVGElement('ellipse')}}, `fill` est un attribut de présentation qui déf
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -255,7 +253,7 @@ Pour {{SVGElement('path')}}, `fill` est un attribut de présentation qui défini
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -283,7 +281,7 @@ Pour {{SVGElement('polygon')}}, `fill` est un attribut de présentation qui déf
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -311,7 +309,7 @@ For {{SVGElement('polyline')}}, `fill` est un attribut de présentation qui déf
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -339,7 +337,7 @@ Pour {{SVGElement('rect')}}, `fill` est un attribut de présentation qui défini
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -393,7 +391,7 @@ Pour {{SVGElement('text')}}, `fill` est un attribut de présentation qui défini
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -421,7 +419,7 @@ Pour {{SVGElement('textPath')}}, `fill` est un attribut de présentation qui dé
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -452,7 +450,7 @@ Pour {{SVGElement('tref')}}, `fill` est un attribut de présentation qui défini
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>
@@ -480,7 +478,7 @@ Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui défin
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>

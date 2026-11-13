@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{APIRef("HTML DOM")}}
@@ -45,10 +45,10 @@ _Hérite également des propriétés de son parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.hidden")}}
   - : Une chaîne de caractères ou un booléen reflétant la valeur de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) de l'élément.
 - {{DOMxRef("HTMLElement.inert")}}
-  - : Un booléen indiquant si l'agent utilisateur doit agir comme si le nœud donné était absent pour les évènements d'interaction, les recherches de texte dans la page («&nbsp;rechercher dans la page&nbsp;») et la sélection de texte.
+  - : Un booléen indiquant si l'agent utilisateur doit agir comme si le nœud donné est absent pour les évènements d'interaction, les recherches de texte dans la page («&nbsp;rechercher dans la page&nbsp;») et la sélection de texte.
 - {{DOMxRef("HTMLElement.innerText")}}
   - : Représente le contenu texte rendu d'un nœud et de ses descendants.
-    Comme accesseur, il approxime le texte qu'une personne obtiendrait en surlignant le contenu de l'élément avec le curseur puis en le copiant dans le presse-papier.
+    Comme accesseur, il approxime le texte qu'une personne obtient en surlignant le contenu de l'élément avec le curseur puis en le copiant dans le presse-papier.
     Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en éléments HTML {{HTMLElement("br")}}.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : Une chaîne de caractères reflétant la valeur de l'attribut [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) de l'élément.
@@ -73,7 +73,7 @@ _Hérite également des propriétés de son parent, {{DOMxRef("Element")}}._
     Comme accesseur, il se comporte comme la propriété {{DOMxRef("HTMLElement.innerText")}} (il représente le contenu texte rendu d'un élément et de ses descendants).
     Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant tout saut de ligne en éléments HTML {{HTMLElement("br")}}.
 - {{DOMxRef("HTMLElement.popover")}}
-  - : Obtient et définit l'état de la fenêtre contextuelle (<i lang="en">popover</i> en anglais) d'un élément via JavaScript (`"auto"`, `"hint"` ou `"manual"`), et peut être utilisé pour la détection de fonctionnalité. Reflète la valeur de l'attribut HTML universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover).
+  - : Obtient et définit l'état de la fenêtre contextuelle (<i lang="en">popover</i> en anglais) d'un élément avec JavaScript (`"auto"`, `"hint"` ou `"manual"`), et peut être utilisé pour la détection de fonctionnalité. Reflète la valeur de l'attribut HTML universel [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover).
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : Un booléen reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
 - {{DOMxRef("HTMLElement.style")}}
@@ -117,7 +117,7 @@ _Hérite également des évènements de son parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/change_event", "change")}}
   - : Déclenché lorsque la propriété `value` d'un élément {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} a été modifiée et validée par l'utilisateur·ice. Contrairement à l'évènement {{DOMxRef("Element/input_event", "input")}}, l'évènement `change` n'est pas nécessairement déclenché pour chaque modification de la propriété `value` d'un élément.
 - {{DOMxRef("HTMLElement/command_event", "command")}}
-  - : Déclenché sur un élément contrôlé via un {{DOMxRef("HTMLButtonElement", "bouton")}} avec des valeurs valides pour {{DOMxRef("HTMLButtonElement.commandForElement", "commandForElement")}} et {{DOMxRef("HTMLButtonElement.command", "command")}}, chaque fois que le bouton est utilisé (par exemple, lors d'un clic).
+  - : Déclenché sur un élément contrôlé avec un {{DOMxRef("HTMLButtonElement", "bouton")}} avec des valeurs valides pour {{DOMxRef("HTMLButtonElement.commandForElement", "commandForElement")}} et {{DOMxRef("HTMLButtonElement.command", "command")}}, chaque fois que le bouton est utilisé (par exemple, lors d'un clic).
 - {{DOMxRef("HTMLElement/error_event", "error")}}
   - : Déclenché lorsqu'une ressource n'a pas pu être chargée ou ne peut pas être utilisée.
 - {{DOMxRef("HTMLElement/load_event", "load")}}
@@ -126,19 +126,19 @@ _Hérite également des évènements de son parent, {{DOMxRef("Element")}}._
 ### Évènements de glisser-déposer
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}
-  - : Déclenché lorsqu'un élément ou une sélection de texte est en train d'être déplacé.
+  - : Cet évènement est déclenché de manière répétée lorsqu'un élément ou une sélection de texte est en train d'être déplacé. La fréquence de déclenchement dépend du navigateur, du système d'exploitation et du mouvement du pointeur&nbsp;; ne vous fiez pas à un intervalle fixe.
 - {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
-  - : Déclenché lorsqu'une opération de déplacement se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Échap</kbd>).
+  - : Cet évènement est déclenché lorsqu'une opération de déplacement se termine (en relâchant un bouton de la souris ou en appuyant sur la touche <kbd>Échap</kbd>).
 - {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
-  - : Déclenché lorsqu'un élément ou une sélection de texte déplacé entre dans une cible de dépôt valide.
+  - : Cet évènement est déclenché lorsqu'un élément ou une sélection de texte déplacé entre dans une cible de dépôt valide.
 - {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
-  - : Déclenché lorsqu'un élément ou une sélection de texte déplacé quitte une cible de dépôt valide.
+  - : Cet évènement est déclenché lorsqu'un élément ou une sélection de texte déplacé quitte une cible de dépôt valide.
 - {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
-  - : Déclenché en continu lorsqu'un élément ou une sélection de texte est en train d'être déplacé et que le pointeur de la souris se trouve au‑dessus d'une cible de dépôt valide (toutes les 50 ms lorsque la souris ne bouge pas, sinon beaucoup plus rapidement, environ entre 5 ms (mouvement lent) et 1 ms (mouvement rapide)). Ce schéma de déclenchement est différent de {{DOMxRef("Element/mouseover_event", "mouseover")}}.
+  - : Cet évènement est déclenché de manière répétée lorsqu'un élément ou une sélection de texte est en train d'être déplacé au‑dessus d'une cible de dépôt potentielle. La fréquence de déclenchement dépend du navigateur, du système d'exploitation et du mouvement du pointeur&nbsp;; ne vous fiez pas à un intervalle fixe.
 - {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
-  - : Déclenché lorsque l'utilisateur·ice commence à déplacer un élément ou une sélection de texte.
+  - : Cet évènement est déclenché lorsque l'utilisateur·ice commence à déplacer un élément ou une sélection de texte.
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
-  - : Déclenché lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.
+  - : Cet évènement est déclenché lorsqu'un élément ou une sélection de texte est déposé sur une cible de dépôt valide.
 
 ### Évènements d'initiateur d'intérêt
 

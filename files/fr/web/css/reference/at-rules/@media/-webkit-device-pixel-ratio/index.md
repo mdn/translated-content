@@ -1,8 +1,9 @@
 ---
-title: -webkit-device-pixel-ratio
+title: Caractéristique média CSS `-webkit-device-pixel-ratio`
+short-title: -webkit-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`-webkit-device-pixel-ratio`** est une caractéristique média non-standard, alternative à la caractéristique média standard {{CSSxRef("@media/resolution", "resolution")}}.

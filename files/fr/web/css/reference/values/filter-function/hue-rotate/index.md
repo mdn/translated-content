@@ -1,9 +1,9 @@
 ---
-title: hue-rotate()
+title: Fonction CSS `hue-rotate()`
+short-title: hue-rotate()
 slug: Web/CSS/Reference/Values/filter-function/hue-rotate
-original_slug: Web/CSS/filter-function/hue-rotate
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -65,7 +65,7 @@ hue-rotate(0.5turn)
 
 ### Avec la propriété `backdrop-filter`
 
-Cet exemple applique un filtre `hue-rotate()` via la propriété CSS `backdrop-filter` au paragraphe, ce qui modifie la teinte de la zone située derrière le `<p>`.
+Cet exemple applique un filtre `hue-rotate()` avec la propriété CSS `backdrop-filter` au paragraphe, ce qui modifie la teinte de la zone située derrière le `<p>`.
 
 ```css
 .container {
@@ -100,11 +100,11 @@ p {
 </div>
 ```
 
-{{EmbedLiveSample('Avec la propriété `backdrop-filter`','100%','280')}}
+{{EmbedLiveSample("Avec la propriété `backdrop-filter`", "100%", 280)}}
 
 ### Avec la propriété `filter`
 
-Cet exemple applique un filtre `hue-rotate()` via la propriété CSS `filter`, ce qui modifie la teinte de l'ensemble de l'élément, y compris le contenu, la bordure et l'image d'arrière-plan.
+Cet exemple applique un filtre `hue-rotate()` avec la propriété CSS `filter`, ce qui modifie la teinte de l'ensemble de l'élément, y compris le contenu, la bordure et l'image d'arrière-plan.
 
 ```css
 p {
@@ -132,7 +132,7 @@ p {
 <p>La personne qui a écrit cet exemple n'est pas designer, heureusement.</p>
 ```
 
-{{EmbedLiveSample('Avec la propriété `filter`','100%','220')}}
+{{EmbedLiveSample("Avec la propriété `filter`", "100%", 220)}}
 
 ### Avec `url()` et le filtre SVG `hue-rotate`
 
@@ -206,7 +206,7 @@ svg:not(:root) {
 }
 ```
 
-{{EmbedLiveSample('svg_filter','100%','280')}}
+{{EmbedLiveSample("svg_filter", "100%", 280)}}
 
 ### `hue-rotate()` ne préserve pas la saturation ni la luminosité
 

@@ -1,13 +1,14 @@
 ---
-title: -webkit-border-before
+title: Propriété CSS `-webkit-border-before`
+short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
 {{Non-standard_Header}}
 
-La propriété raccourcie [CSS](/fr/docs/Web/CSS) **`-webkit-border-before`** permet de définir les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`-webkit-border-before`** définit les propriétés de la bordure pour le début d'un élément dans l'axe de bloc (l'axe logique orthogonal à l'axe de lecture).
 
 ## Propriétés constitutives
 
@@ -35,7 +36,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS suiva
 
 ### Valeurs
 
-Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
+Cette propriété est définie comme une liste séparée par des espaces d'une à trois des valeurs suivantes&nbsp;:
 
 - `<border-width>`
   - : Voir {{CSSxRef("border-width")}}.

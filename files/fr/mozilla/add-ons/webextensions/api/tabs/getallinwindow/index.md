@@ -3,8 +3,6 @@ title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 ---
 
-{{AddonSidebar}}
-
 **Deprecated**
 Cette méthode est dépréciée. Utilisez {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} à la place.
 

@@ -3,7 +3,7 @@ title: Math.acosh()
 short-title: acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.acosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックアークコサイン）を返します。
@@ -70,7 +70,7 @@ Math.acosh(Infinity); // 無限大
 
 ## 関連情報
 
-- [`Math.acosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.acosh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.acosh` のポリフィル](https://www.npmjs.com/package/math.acosh)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

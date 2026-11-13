@@ -1,8 +1,9 @@
 ---
-title: font-stretch
+title: Descripteur de règle CSS `font-stretch`
+short-title: font-stretch
 slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
 l10n:
-  sourceCommit: 3c91c067a4d36b532a4bce72e5d8a2c5a9279db5
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 > [!NOTE]

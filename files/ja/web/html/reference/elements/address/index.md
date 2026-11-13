@@ -1,13 +1,12 @@
 ---
-title: "<address>: 連絡先要素"
+title: "`<address>` 連絡先要素"
+short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-{{HTMLSidebar}}
-
-**`<address>`** は [HTML](/ja/docs/Web/HTML) の要素で、この中の HTML が個人、団体、組織の連絡先情報を提供していることを示します。
+**`<address>`** は [HTML](/ja/docs/Web/HTML) の要素で、この中の HTML が個人または複数の人、あるいは組織の連絡先情報を提供していることを示します。
 
 {{InteractiveExample("HTML デモ: &lt;address&gt;", "tabbed-standard")}}
 
@@ -30,23 +29,19 @@ a[href^="tel"]::before {
 }
 ```
 
-`<address>` 要素の内容で提供される連絡先情報は、その文脈で適切であればどのような形でもよく、必要とされるあらゆる形の連絡先情報（住所、 URL、メールアドレス、電話番号、ソーシャルメディアのアカウント、地理上の座標など）を含めることができます。`<address>` には、連絡先情報が参照する個人、団体、組織の名前を含めてください。
-
-`<address>` は様々な文脈で使用することができます。ページヘッダーでビジネスの連絡先を提供したり、`<address>` を {{HTMLElement("article")}} 要素に入れることで、記事の著者を識別したりすることができます。
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
-- `<address>` 要素、直近の {{HTMLElement("article")}} または {{HTMLElement("body")}} 要素の連絡先情報を表すためにのみ使用できます。
-- この要素には、公開日（{{HTMLElement("time")}} によるもの）のような連絡先情報以外の情報を含めるべきではありません。
-- 一般的に、 `<address>` 要素は現在のセクションに {{HTMLElement("footer")}} 要素があれば、その中に配置することができます。
+`<address>` 要素の内容で提供される連絡先情報は、その文脈に適した形式であればどのような形式でもかまいません。住所、URL、メールアドレス、電話番号、ソーシャルメディアのアカウント名、地理座標など、必要な種類の連絡先情報を含めることができます。`<address>` 要素には、連絡先情報の対象となる個人や人々、または組織の名前を含めるべきです。ただし、この要素には、公開日（{{HTMLElement("time")}} 要素に含める情報）のような、連絡先情報以外の情報を含めるべきではありません。
+
+`<address>` は、ページヘッダーにビジネスの連絡先情報を記載する場合や、{{HTMLElement("article")}} 内に `<address>` 要素を含めて記事の著者を示す場合など、さまざまな文脈で使用できます。`<address>` 要素は、最も近い祖先の {{HTMLElement("article")}} 要素または {{HTMLElement("body")}} 要素の連絡先情報を表す場合にのみ使用できます。一般的に、`<address>` 要素は、現在のセクションに {{HTMLElement("footer")}} 要素があれば、その中に配置できます。
 
 ## 例
 
-この例は `<address>` 要素で記事の編集者の連絡先情報を示す使い方を示しています。
+この記事では、`<address>` 要素を使って記事の著者の連絡先情報を示します。
 
 ```html-nolint
 <address>

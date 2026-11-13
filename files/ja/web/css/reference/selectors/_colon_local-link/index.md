@@ -1,9 +1,9 @@
 ---
-title: :local-link
+title: CSS `:local-link` 擬似クラス
+short-title: :local-link
 slug: Web/CSS/Reference/Selectors/:local-link
-original_slug: Web/CSS/:local-link
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

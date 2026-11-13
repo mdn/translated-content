@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : readonly"
+title: "Attribut HTML : `readonly`"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: c9f3d85f24d7839c9fe36a68d8042d088d906147
 ---
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur·ice ne peut pas modifier le contrôle.
@@ -75,7 +75,7 @@ La différence entre [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disable
 
 Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une interaction utilisateur, [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) n'a aucun effet sur les entrées pour lesquelles l'attribut `readonly` est également définit.
 
-La seule façon de modifier dynamiquement la valeur de l'attribut readonly est via un script.
+La seule façon de modifier dynamiquement la valeur de l'attribut `readonly` est avec un script.
 
 > [!NOTE]
 > L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est défini.
@@ -129,6 +129,6 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Voir aussi
 
-- Les pseudo-classses CSS {{CSSxRef(":read-only")}} et {{CSSxRef(":read-write")}}
+- Les pseudo-classes CSS {{CSSxRef(":read-only")}} et {{CSSxRef(":read-write")}}
 - L'élément {{HTMLElement("input")}}
 - L'élément {{HTMLElement("select")}}

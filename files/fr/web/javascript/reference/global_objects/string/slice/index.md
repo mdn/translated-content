@@ -1,100 +1,120 @@
 ---
-title: String.prototype.slice()
+title: "String : méthode slice()"
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`slice()`** des valeurs {{JSxRef("String")}} extrait une section de cette chaîne de caractères et la retourne comme une nouvelle chaîne de caractères, sans modifier la chaîne de caractères originale.
 
-La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
-
-{{InteractiveExample("JavaScript Demo: String.slice()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.slice()", "taller")}}
 
 ```js interactive-example
-const str = "The quick brown fox jumps over the lazy dog.";
+const str = "Le rapide renard brun saute par-dessus le chien paresseux.";
 
-console.log(str.slice(31));
-// Expected output: "the lazy dog."
+console.log(str.slice(39));
+// Résultat attendu : "le chien paresseux."
 
-console.log(str.slice(4, 19));
-// Expected output: "quick brown fox"
+console.log(str.slice(3, 21));
+// Résultat attendu : "rapide renard brun"
 
-console.log(str.slice(-4));
-// Expected output: "dog."
+console.log(str.slice(-10));
+// Résultat attendu : "paresseux."
 
-console.log(str.slice(-9, -5));
-// Expected output: "lazy"
+console.log(str.slice(-16, -11));
+// Résultat attendu : "chien"
 ```
 
 ## Syntaxe
 
-```js
-chn.slice(indiceDebut[, indiceFin])
+```js-nolint
+slice(indexStart)
+slice(indexStart, indexEnd)
 ```
 
 ### Paramètres
 
-- `indiceDebut`
-  - : L'indice base 0 auquel commencer l'extraction. Si négatif, il est traité comme (`longueurSource + indiceDebut`) où `longueurSource` est la longueur de la chaine de caractères (par exemple, si `indiceDebut` est -3, il sera traité comme `longueurSource - 3`). Si `indiceDebut` est supérieur à la longueur de la chaîne, `slice()` renvoie une chaîne vide.
-- `indiceFin`
-  - : Paramètre optionnel. Un indice base 0 _avant_ lequel terminer l'extraction. Le caractère à cet indice ne sera pas inclus. Si `indiceFin` est absent, `slice()` extraira jusqu'à la fin de la chaine de caractères. Si négatif, il sera traité comme (`longueurSource + indiceFin`) où `longueurSource` est la longueur de la chaine de caractères (par exemple s'il vaut `-3`, il sera traité comme `longueurSource - 3`)
+- `indexStart`
+  - : L'indice du premier caractère à inclure dans la sous-chaîne de caractères retournée.
+- `indexEnd` {{Optional_Inline}}
+  - : L'indice du premier caractère à exclure de la sous-chaîne de caractères retournée.
 
 ### Valeur retournée
 
-Une nouvelle chaîne de caractères contenant la section extraite de la chaîne.
+Une nouvelle chaîne de caractères contenant la section extraite de la chaîne de caractères.
 
 ## Description
 
-`slice()` extrait le texte d'une chaine de caractères et retourne une nouvelle chaîne de caractères. Les changements au texte dans une chaine de caractères n'affectent pas l'autre chaîne.
+`slice()` extrait le texte d'une chaîne de caractères et retourne une nouvelle chaîne de caractères.
 
-`slice()` extrait jusqu'à `indiceFin`, mais sans l'inclure. Par exemple, `chn.slice(1, 4)` extrait du second caractère jusqu'au quatrième caractère (caractères d'indices 1, 2 et 3).
+`slice()` extrait jusqu'à, mais sans inclure, `indexEnd`. Par exemple, `str.slice(4, 8)` extrait du cinquième caractère jusqu'au huitième caractère (caractères d'indices `4`, `5`, `6` et `7`)&nbsp;:
 
-Par exemple, `chn.slice(2, -1)` extrait du troisième caractère jusqu'à l'avant-dernier caractère de la chaine de caractères.
+```plain
+              indexStart        indexEnd
+                  ↓               ↓
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| L | e |   | m | i | r | r | o | i | r |
+
+                  i   r   r   o
+                 _______________
+                      ↑
+                    Résultat
+```
+
+- Si `indexStart >= str.length`, une chaîne de caractères vide est retournée.
+- Si `indexStart < 0`, l'indice est compté à partir de la fin de la chaîne de caractères. Plus formellement, dans ce cas, la sous-chaîne de caractères commence à `max(indexStart + str.length, 0)`.
+- Si `indexStart` est omis, `undefined` ou ne peut pas être [converti en nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_numérique), il est traité comme `0`.
+- Si `indexEnd` est omis ou `undefined`, ou si `indexEnd >= str.length`, `slice()` extrait jusqu'à la fin de la chaîne de caractères.
+- Si `indexEnd < 0`, l'indice est compté à partir de la fin de la chaîne de caractères. Plus formellement, dans ce cas, la sous-chaîne de caractères se termine à `max(indexEnd + str.length, 0)`.
+- Si `indexEnd <= indexStart` après normalisation des valeurs négatives (c'est-à-dire que `indexEnd` représente un caractère qui se trouve avant `indexStart`), une chaîne de caractères vide est retournée.
 
 ## Exemples
 
-### Utilisation de `slice()` pour créer une nouvelle chaîne de caractères
+### Utiliser la méthode `slice()` pour créer une nouvelle chaîne de caractères
 
 L'exemple suivant utilise `slice()` pour créer une nouvelle chaîne de caractères.
 
 ```js
-var chn1 = "Le matin est sur nous.", // la longueur de chn1 est de 22
-  chn2 = chn1.slice(1, 8),
-  chn3 = chn1.slice(3, -2),
-  chn4 = chn1.slice(13),
-  chn5 = chn1.slice(30);
-console.log(chn2); // SORTIE : e matin
-console.log(chn3); // SORTIE : matin est sur nou
-console.log(chn4); // SORTIE : sur nous.
-console.log(chn5); // SORTIE : ""
+const chaine1 = "Le matin est déjà là."; // La longueur de chaine1 est de 21.
+const chaine2 = chaine1.slice(1, 8);
+const chaine3 = chaine1.slice(4, -2);
+const chaine4 = chaine1.slice(13);
+const chaine5 = chaine1.slice(30);
+console.log(chaine2); // e matin
+console.log(chaine3); // atin est déjà l
+console.log(chaine4); // déjà là.
+console.log(chaine5); // ""
 ```
 
-### Utilisation de `slice()` avec des indices négatifs
+### Utiliser la méthode `slice()` avec des indices négatifs
 
 L'exemple suivant utilise `slice()` avec des indices négatifs.
 
 ```js
-var chn = "Le matin est sur nous.";
-chn.slice(-3); // retourne "us."
-chn.slice(-3, -1); // retourne "us"
-chn.slice(0, -1); // retourne "Le matin est sur nous"
+const chaine = "Le matin est déjà là.";
+chaine.slice(-3); // 'là.'
+chaine.slice(-3, -1); // 'là'
+chaine.slice(0, -1); // 'Le matin est déjà là'
+chaine.slice(3, -1); // 'matin est déjà là'
 ```
 
-Dans l'exemple qui suit, on commence à chercher l'indice de début à partir de la fin de la chaîne avec l'argument `-11` et on utilise un indice de fin positif avec `16` :
+Cet exemple compte à rebours depuis la fin de la chaîne de caractères de `11` pour trouver l'indice de début et en avant depuis le début de la chaîne de caractères de `16` pour trouver l'indice de fin.
 
 ```js
-console.log(chn.slice(-11, 16)); // "st sur"
+console.log(chaine.slice(-11, 16)); // "st déj"
 ```
 
-On utilise ensuite un indice de début positif (la recherche est effectuée depuis le début de la chaîne) et un indice de fin négatif pour parvenir au même résultat :
+Ici, on compte en avant depuis le début de la chaîne de caractères de `11` pour trouver l'indice de début et en arrière depuis la fin de la chaîne de caractères de `7` pour trouver l'indice de fin.
 
 ```js
-console.log(chn.slice(10, -5)); // "st sur"
+console.log(chaine.slice(11, -7)); // "t d"
 ```
 
-Enfin, on utilise deux indices négatifs : la position de début et la position de fin sont recherchées à parti de la fin de la chaîne :
+Ces arguments comptent à rebours depuis la fin de la chaîne de caractères de `5` pour trouver l'indice de début et à rebours depuis la fin de la chaîne de caractères de `1` pour trouver l'indice de fin.
 
 ```js
-console.log(chn.slice(-11, -5)); // "st sur"
+console.log(chaine.slice(-5, -1)); // "à là"
 ```
 
 ## Spécifications
@@ -107,6 +127,6 @@ console.log(chn.slice(-11, -5)); // "st sur"
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
-- {{jsxref("String.prototype.substring()")}}
-- {{jsxref("Array.prototype.slice()")}}
+- La méthode {{JSxRef("String.prototype.substr()")}}
+- La méthode {{JSxRef("String.prototype.substring()")}}
+- La méthode {{JSxRef("Array.prototype.slice()")}}

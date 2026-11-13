@@ -193,7 +193,7 @@ h2 {
 
 ## 擬似クラスセレクター
 
-[CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュールでは、 60 以上の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態にに基づいて要素をスタイル設定することができます。
+[CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュールでは、 60 以上の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を定義しています。擬似クラスはコロン (`:`) を接頭辞とする[単純セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#単純セレクター)で、文書ツリー内に含まれない状態の情報に基づいて要素を選択できるようにします。{{CSSxRef("pseudo-classes", "擬似クラス")}}を使用することで、状態に基づいて要素をスタイル設定することができます。
 例えば、 {{cssxref(":target")}} 単純セレクターはフラグメント識別子を持つ URL の要素を対象とし、 [`a:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited) [複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)はユーザーが訪問したすべての {{HTMLElement("a")}} 要素に一致します。
 
 擬似クラスは、[要素の表示状態](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#表示状態擬似クラス)、[入力](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#入力擬似クラス)、[言語](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#言語擬似クラス)、[位置](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#位置擬似クラス)、[リソース状態](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#リソース状態擬似クラス)、[時間軸](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#時間軸擬似クラス)、[ツリー構造](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#ツリー構造擬似クラス)、[ユーザー操作](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#ユーザー操作擬似クラス)、[関数](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#関数擬似クラス)に分類することができます。

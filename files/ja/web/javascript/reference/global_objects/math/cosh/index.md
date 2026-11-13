@@ -3,7 +3,7 @@ title: Math.cosh()
 short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.cosh()`** は静的メソッドで、数値の双曲線余弦（ハイパーボリックコサイン）を返します。
@@ -72,7 +72,7 @@ Math.cosh(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.cosh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.cosh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - [es-shims による `Math.cosh` のポリフィル](https://www.npmjs.com/package/math.cosh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

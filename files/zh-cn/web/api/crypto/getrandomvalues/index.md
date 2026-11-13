@@ -11,7 +11,7 @@ slug: Web/API/Crypto/getRandomValues
 
 ## 语法
 
-```plain
+```js-nolint
 cryptoObj.getRandomValues(typedArray);
 ```
 

@@ -57,11 +57,11 @@ browser.devtools.panels
 
 ## 開発パネルのデザイン
 
-開発パネルのウェブページを Firefox のスタイルに適合させる方法の詳細は [Photon Design System](https://design.firefox.com/photon/index.html) の文書を参照してください。
+開発パネルのウェブページを Firefox のスタイルに適合させる方法の詳細は [Acorn Design System](https://acorn.firefox.com/latest) の文書を参照してください。
 
 ## アイコン
 
-開発ツールパネルに使うアイコン作成方法の詳細は [Iconography](https://design.firefox.com/photon/visuals/iconography.html) を [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントで参照してください。
+開発ツールパネルに使うアイコン作成方法の詳細は [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) を [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントで参照してください。
 
 ## 例
 

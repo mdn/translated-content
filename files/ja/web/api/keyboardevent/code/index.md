@@ -3,7 +3,7 @@ title: "KeyboardEvent: code プロパティ"
 short-title: code
 slug: Web/API/KeyboardEvent/code
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
 {{APIRef("UI Events")}}
@@ -14,7 +14,7 @@ l10n:
 
 このプロパティは、キーに関連付けられている文字ではなく、入力機器上の物理的な位置に基づいてキー入力を扱いたいときに役立ちます。これは特に、キーボードをゲームパッドのように使いたい場合などに有用です。ただし、 `KeyboardEvent.code` で報告された値を用いてキー入力で生成される文字を判断するべきではありません。キーコード名がキー上に印刷されている実際の文字や、キーが押されたときにコンピューターが生成する文字と一致するとは限らないからです。
 
-例えば、返ってきた `code` が "`KeyQ`" は QWERTY レイアウトのキーボードでは <kbd>Q</kbd> キーですが、同じ Dvorak キーボードでは同じ `code` の値が <kbd>'</kbd> キーを表し、 AZERTY キーボードでは <kbd>A</kbd> キーを表すものでもあります。したがって、すべてのユーザーが特定のキーボードレイアウトを使用しているわけではないため、 `code` の値を用いてユーザーが認識しているキーの名前が何であるかを特定することはできません。
+例えば、返ってきた `code` が `"KeyQ"` は QWERTY レイアウトのキーボードでは <kbd>Q</kbd> キーですが、同じ Dvorak キーボードでは同じ `code` の値が <kbd>'</kbd> キーを表し、 AZERTY キーボードでは <kbd>A</kbd> キーを表すものでもあります。したがって、すべてのユーザーが特定のキーボードレイアウトを使用しているわけではないため、 `code` の値を用いてユーザーが認識しているキーの名前が何であるかを特定することはできません。
 
 キーイベントに対応する文字が何であるかを判別するには、代わりに {{domxref("KeyboardEvent.key")}} プロパティを使用してください。
 
@@ -39,7 +39,7 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 
 ```css
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: 1px solid black;
   width: 95%;
   margin: auto;
@@ -52,16 +52,12 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 #### JavaScript
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    const p = document.createElement("p");
-    p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-    document.getElementById("output").appendChild(p);
-    window.scrollTo(0, document.body.scrollHeight);
-  },
-  true,
-);
+window.addEventListener("keydown", (event) => {
+  const p = document.createElement("p");
+  p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+  document.getElementById("output").appendChild(p);
+  window.scrollTo(0, document.body.scrollHeight);
+});
 ```
 
 #### 試してみましょう
@@ -171,46 +167,42 @@ refresh();
 最後に、`addEventListener()` メソッドを使用して {{domxref("Element/keydown_event", "keydown")}} イベントの待ち受けを開始します。それぞれのイベントで船の位置と回転角を更新し、 `refresh()` を呼び出して新しい位置と角度で船を描画するように動作します。
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // Do nothing if event already handled
-    }
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // Do nothing if event already handled
+  }
 
-    switch (event.code) {
-      case "KeyS":
-      case "ArrowDown":
-        // Handle "back"
-        updatePosition(-moveRate);
-        break;
-      case "KeyW":
-      case "ArrowUp":
-        // Handle "forward"
-        updatePosition(moveRate);
-        break;
-      case "KeyA":
-      case "ArrowLeft":
-        // Handle "turn left"
-        angle -= turnRate;
-        break;
-      case "KeyD":
-      case "ArrowRight":
-        // Handle "turn right"
-        angle += turnRate;
-        break;
-    }
+  switch (event.code) {
+    case "KeyS":
+    case "ArrowDown":
+      // Handle "back"
+      updatePosition(-moveRate);
+      break;
+    case "KeyW":
+    case "ArrowUp":
+      // Handle "forward"
+      updatePosition(moveRate);
+      break;
+    case "KeyA":
+    case "ArrowLeft":
+      // Handle "turn left"
+      angle -= turnRate;
+      break;
+    case "KeyD":
+    case "ArrowRight":
+      // Handle "turn right"
+      angle += turnRate;
+      break;
+  }
 
-    refresh();
+  refresh();
 
-    if (event.code !== "Tab") {
-      // Consume the event so it doesn't get handled twice,
-      // as long as the user isn't trying to move focus away
-      event.preventDefault();
-    }
-  },
-  true,
-);
+  if (event.code !== "Tab") {
+    // Consume the event so it doesn't get handled twice,
+    // as long as the user isn't trying to move focus away
+    event.preventDefault();
+  }
+});
 ```
 
 #### 試してみましょう

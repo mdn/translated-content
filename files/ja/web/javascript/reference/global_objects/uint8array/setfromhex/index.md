@@ -8,7 +8,7 @@ l10n:
 
 **`setFromHex()`** は {{jsxref("Uint8Array")}} インスタンスのメソッドで、この `Uint8Array` オブジェクトを 16 進エンコードされた文字列のバイト列で埋めて、読み込んだバイト数と書き込んだバイト数を示すオブジェクトを返します。
 
-このメソッドは、文字列をバイト配列に解釈します。文字列を単一の数値に変換するには、代わりに {{jsxref("Global_Objects/parseInt", "parseInt()")}} 関数を、 `radix` を `16` に設定して使用してください。
+このメソッドは、文字列をバイト配列に解釈します。文字列を単一の数値に変換するには、代わりに {{jsxref("parseInt()")}} 関数を、 `radix` を `16` に設定して使用してください。
 
 ## 構文
 
@@ -96,4 +96,4 @@ console.log(uint8Array);
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromHex()")}}
 - {{jsxref("Uint8Array.prototype.toHex()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}

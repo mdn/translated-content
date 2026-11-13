@@ -40,77 +40,77 @@ A diferencia de los demás objetos globales, el objeto `Math` no se puede editar
 > [!NOTE]
 > Tenga en cuenta que muchas de las funciones matemáticas tienen una precisión que es dependiente de la implementación. Esto significa que los diferentes navegadores pueden dar un resultado diferente, e incluso el mismo motor de JS en un sistema operativo o arquitectura diferente puede dar resultados diferentes.
 
-- {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
+- {{jsxref("Math.abs", "Math.abs(x)")}}
   - : Devuelve el valor absoluto de un número.
-- {{jsxref("Global_Objects/Math/acos", "Math.acos(x)")}}
+- {{jsxref("Math.acos", "Math.acos(x)")}}
   - : Devuelve el arco coseno de un número.
-- {{jsxref("Global_Objects/Math/acosh", "Math.acosh(x)")}}
+- {{jsxref("Math.acosh", "Math.acosh(x)")}}
   - : Devuelve el arco coseno hiperbólico de un número.
-- {{jsxref("Global_Objects/Math/asin", "Math.asin(x)")}}
+- {{jsxref("Math.asin", "Math.asin(x)")}}
   - : Devuelve el arco seno de un número.
-- {{jsxref("Global_Objects/Math/asinh", "Math.asinh(x)")}}
+- {{jsxref("Math.asinh", "Math.asinh(x)")}}
   - : Devuelve el arco seno hiperbólico de un número.
-- {{jsxref("Global_Objects/Math/atan", "Math.atan(x)")}}
+- {{jsxref("Math.atan", "Math.atan(x)")}}
   - : Devuelve el arco tangente de un número.
-- {{jsxref("Global_Objects/Math/atanh", "Math.atanh(x)")}}
+- {{jsxref("Math.atanh", "Math.atanh(x)")}}
   - : Devuelve el arco tangente hiperbólico de un número.
-- {{jsxref("Global_Objects/Math/atan2", "Math.atan2(y, x)")}}
+- {{jsxref("Math.atan2", "Math.atan2(y, x)")}}
   - : Devuelve el arco tangente del cuociente de sus argumentos.
-- {{jsxref("Global_Objects/Math/cbrt", "Math.cbrt(x)")}}
+- {{jsxref("Math.cbrt", "Math.cbrt(x)")}}
   - : Devuelve la raíz cúbica de un número.
-- {{jsxref("Global_Objects/Math/ceil", "Math.ceil(x)")}}
+- {{jsxref("Math.ceil", "Math.ceil(x)")}}
   - : Devuelve el entero más pequeño mayor o igual que un número.
-- {{jsxref("Global_Objects/Math/clz32", "Math.clz32(x)")}}
+- {{jsxref("Math.clz32", "Math.clz32(x)")}}
   - : Devuelve el número de ceros iniciales de un entero de 32 bits.
-- {{jsxref("Global_Objects/Math/cos", "Math.cos(x)")}}
+- {{jsxref("Math.cos", "Math.cos(x)")}}
   - : Devuelve el coseno de un número.
-- {{jsxref("Global_Objects/Math/cosh", "Math.cosh(x)")}}
+- {{jsxref("Math.cosh", "Math.cosh(x)")}}
   - : Devuelve el coseno hiperbólico de un número.
-- {{jsxref("Global_Objects/Math/exp", "Math.exp(x)")}}
+- {{jsxref("Math.exp", "Math.exp(x)")}}
   - : Devuelve `Ex`, donde _x_ es el argumento, y `E` es la constante de Euler (2.718...), la base de los logaritmos naturales.
-- {{jsxref("Global_Objects/Math/expm1", "Math.expm1(x)")}}
+- {{jsxref("Math.expm1", "Math.expm1(x)")}}
   - : Devuelve ex - 1.
-- {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
+- {{jsxref("Math.floor", "Math.floor(x)")}}
   - : Devuelve el mayor entero menor que o igual a un número.
-- {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}}
+- {{jsxref("Math.fround", "Math.fround(x)")}}
   - : Devuelve la representación flotante de precisión simple más cercana de un número.
-- {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[, y[, …]]])")}}
+- {{jsxref("Math.hypot", "Math.hypot([x[, y[, …]]])")}}
   - : Devuelve la raíz cuadrada de la suma de los cuadrados de sus argumentos.
-- {{jsxref("Global_Objects/Math/imul", "Math.imul(x, y)")}}
+- {{jsxref("Math.imul", "Math.imul(x, y)")}}
   - : Devuelve el resultado de una multiplicación de enteros de 32 bits.
-- {{jsxref("Global_Objects/Math/log", "Math.log(x)")}}
+- {{jsxref("Math.log", "Math.log(x)")}}
   - : Devuelve el logaritmo natural (log, también ln) de un número.
-- {{jsxref("Global_Objects/Math/log1p", "Math.log1p(x)")}}
+- {{jsxref("Math.log1p", "Math.log1p(x)")}}
   - : Devuelve el logaritmo natural de x + 1 (loge, también ln) de un número.
-- {{jsxref("Global_Objects/Math/log10", "Math.log10(x)")}}
+- {{jsxref("Math.log10", "Math.log10(x)")}}
   - : Devuelve el logaritmo en base 10 de x.
-- {{jsxref("Global_Objects/Math/log2", "Math.log2(x)")}}
+- {{jsxref("Math.log2", "Math.log2(x)")}}
   - : Devuelve el logaritmo en base 2 de x.
-- {{jsxref("Global_Objects/Math/max", "Math.max([x[, y[, …]]])")}}
+- {{jsxref("Math.max", "Math.max([x[, y[, …]]])")}}
   - : Devuelve el mayor de cero o más números.
-- {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
+- {{jsxref("Math.min", "Math.min([x[, y[, …]]])")}}
   - : Devuelve el más pequeño de cero o más números.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x, y)")}}
+- {{jsxref("Math.pow", "Math.pow(x, y)")}}
   - : Las devoluciones de base a la potencia de exponente, que es, baseexponent.
-- {{jsxref("Global_Objects/Math/random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Devuelve un número pseudo-aleatorio entre 0 y 1.
-- {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
+- {{jsxref("Math.round", "Math.round(x)")}}
   - : Devuelve el valor de un número redondeado al número entero más cercano.
-- {{jsxref("Global_Objects/Math/sign", "Math.sign(x)")}}
+- {{jsxref("Math.sign", "Math.sign(x)")}}
   - : Devuelve el signo de la x, que indica si x es positivo, negativo o cero.
-- {{jsxref("Global_Objects/Math/sin", "Math.sin(x)")}}
+- {{jsxref("Math.sin", "Math.sin(x)")}}
   - : Devuelve el seno de un número.
-- {{jsxref("Global_Objects/Math/sinh", "Math.sinh(x)")}}
+- {{jsxref("Math.sinh", "Math.sinh(x)")}}
   - : Devuelve el seno hiperbólico de un número.
-- {{jsxref("Global_Objects/Math/sqrt", "Math.sqrt(x)")}}
+- {{jsxref("Math.sqrt", "Math.sqrt(x)")}}
   - : Devuelve la raíz cuadrada positiva de un número.
-- {{jsxref("Global_Objects/Math/tan", "Math.tan(x)")}}
+- {{jsxref("Math.tan", "Math.tan(x)")}}
   - : Devuelve la tangente de un número.
-- {{jsxref("Global_Objects/Math/tanh", "Math.tanh(x)")}}
+- {{jsxref("Math.tanh", "Math.tanh(x)")}}
   - : Devuelve la tangente hiperbólica de un número.
 - Math.toSource() {{non-standard_inline}}
   - : Devuelve la cadena "`Math`".
-- {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}}
+- {{jsxref("Math.trunc", "Math.trunc(x)")}}
   - : Devuelve la parte entera del número x, la eliminación de los dígitos fraccionarios.
 
 ## Extendiendo el objeto `Math`

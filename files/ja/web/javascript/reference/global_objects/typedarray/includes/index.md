@@ -3,10 +3,10 @@ title: TypedArray.prototype.includes()
 short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`includes()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の項目内に特定の値が含まれているかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。
+**`includes()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素に特定の値が含まれているかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.includes()")}}
 
@@ -16,7 +16,7 @@ const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 console.log(uint8.includes(20));
 // 予想される結果: true
 
-// Check from position 3
+// インデックス 3 から検索
 console.log(uint8.includes(20, 3));
 // 予想される結果: false
 ```
@@ -37,7 +37,7 @@ includes(searchElement, fromIndex)
 
 ### 返値
 
-論理値で、型付き配列（指定する場合はインデックス `fromIndex` で示される型付き配列の一部）内で値 `searchElement` が見つかった場合に `true` なります。
+論理値で、型付き配列（指定する場合はインデックス `fromIndex` で示される型付き配列の一部）内で値 `searchElement` が見つかった場合に `true` になります。
 
 ## 解説
 
@@ -68,7 +68,7 @@ new Float32Array([NaN]).includes(NaN); // true
 
 ## 関連情報
 
-- [`TypedArray.prototype.includes` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.includes` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}

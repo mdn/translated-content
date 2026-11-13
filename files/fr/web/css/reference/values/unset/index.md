@@ -1,43 +1,72 @@
 ---
-title: unset
+title: Mot-clé CSS `unset`
+short-title: unset
 slug: Web/CSS/Reference/Values/unset
-original_slug: Web/CSS/unset
+l10n:
+  sourceCommit: 0aa8517faf9d7d15c745ac94db7014d3a2d2085f
 ---
 
-{{CSSRef}}
+Le mot-clé [CSS](/fr/docs/Web/CSS) **`unset`** réinitialise une propriété à sa valeur héritée si la propriété hérite naturellement de son parent, et à sa [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) sinon. En d'autres termes, il se comporte comme le mot-clé {{CSSxRef("inherit")}} dans le premier cas, lorsque la propriété est une [propriété héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_héritées), et comme le mot-clé {{CSSxRef("initial")}} dans le second cas, lorsque la propriété est une [propriété non héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#propriétés_non_héritées).
 
-Le mot-clé **`unset`** correspond à la combinaison des mots-clés {{cssxref("initial")}} et {{cssxref("inherit")}}. Comme les autres mots-clés globaux à tout CSS, il peut être utilisé pour n'importe quelle propriété CSS, y compris la propriété raccourcie {{cssxref("all")}}. Ce mot-clé _réinitialise_ la propriété afin que sa valeur soit la valeur héritée depuis l'élément parent ou soit la valeur initiale (s'il n'y a pas d'héritage). Autrement dit, s'il y a de l'héritage, ce mot-clé se comporte comme `inherit`, sinon, il se comporte comme `initial`.
+**`unset`** peut être appliqué à n'importe quelle propriété CSS, y compris la propriété raccourcie CSS {{CSSxRef("all")}}.
 
 ## Exemples
 
-### Avec `color`
+### `color`
 
-#### CSS
-
-```css
-p {
-  color: red;
-}
-
-#sidebar p {
-  color: unset;
-}
-```
+[`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) est une propriété héritée.
 
 #### HTML
 
 ```html
-<p>This text is red</p>
-<div id="sidebar">
-  <p>This text has the default color</p>
+<p>Ce texte est rouge.</p>
+<div class="toto">
+  <p>Ce texte est aussi rouge.</p>
 </div>
+<div class="truc">
+  <p>Ce texte est vert (valeur héritée par défaut).</p>
+</div>
+```
+
+#### CSS
+
+```css
+.toto {
+  color: blue;
+}
+
+.truc {
+  color: green;
+}
+
+p {
+  color: red;
+}
+
+.truc p {
+  color: unset;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Avec_color', '100%', '120')}}
+{{EmbedLiveSample("`color`")}}
 
-### Avec `border`
+### `border`
+
+[`border`](/fr/docs/Web/CSS/Reference/Properties/border#définition_formelle) est une propriété non héritée.
+
+#### HTML
+
+```html
+<p>Ce texte a une bordure rouge.</p>
+<div class="toto">
+  <p>Ce texte a une bordure rouge</p>
+</div>
+<div class="truc">
+  <p>Ce texte a une bordure noire (la valeur initiale, non héritée)</p>
+</div>
+```
 
 #### CSS
 
@@ -55,21 +84,9 @@ p {
 }
 ```
 
-#### HTML
-
-```html
-<p>Ce texte a une bordure rouge.</p>
-<div class="toto">
-  <p>Ce texte a une bordure rouge</p>
-</div>
-<div class="truc">
-  <p>Ce texte a une bordure noire (la valeur initiale, non héritée)</p>
-</div>
-```
-
 #### Résultat
 
-{{EmbedLiveSample('Avec_border','100%','200')}}
+{{EmbedLiveSample("`border`", "", 200)}}
 
 ## Spécifications
 
@@ -81,10 +98,9 @@ p {
 
 ## Voir aussi
 
-- Les valeurs globales qui peuvent s'appliquer pour toutes les propriétés CSS :
-  - {{cssxref("initial")}},
-  - {{cssxref("inherit")}},
-  - {{cssxref("unset")}},
-  - {{cssxref("revert")}}.
-
-- La propriété {{cssxref("all")}} est une propriété raccourcie qui permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou indéfinies.
+- Utilisez le mot-clé {{CSSxRef("initial")}} pour définir une propriété à sa valeur initiale.
+- Utilisez le mot-clé {{CSSxRef("inherit")}} pour que la propriété d'un élément soit la même que celle de son parent.
+- Utilisez le mot-clé {{CSSxRef("revert")}} pour réinitialiser une propriété à la valeur établie par la feuille de style de l'agent utilisateur (ou par les styles utilisateur·ice, le cas échéant).
+- Utilisez le mot-clé {{CSSxRef("revert-layer")}} pour réinitialiser une propriété à la valeur établie dans une couche de cascade précédente.
+- Utilisez le mot-clé {{CSSxRef("revert-rule")}} pour réinitialiser une propriété à la valeur d'une règle de style correspondante antérieure.
+- La propriété {{CSSxRef("all")}} permet de réinitialiser toutes les propriétés à leur état initial, hérité, rétabli ou non défini.

@@ -1,8 +1,9 @@
 ---
-title: font-variant-numeric
+title: Propriété CSS `font-variant-numeric`
+short-title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.
@@ -115,12 +116,9 @@ font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
-La valeur de cette propriété peut être définie selon deux formes&nbsp;:
-
-- la première avec le mot-clé `normal`.
-- la seconde avec une ou plusieurs valeurs parmi celles définies ci-après, séparées par des espaces et dans n'importe quel ordre.
-
 ### Valeurs
+
+Cette propriété est définie soit comme `normal`, soit comme une liste d'espaces séparés des valeurs suivantes&nbsp;:
 
 - `normal`
   - : Ce mot-clé désactive l'utilisation des glyphes alternatifs.
@@ -134,7 +132,7 @@ La valeur de cette propriété peut être définie selon deux formes&nbsp;:
 - _`<numeric-figure-values>`_
   - : Ces valeurs contrôlent les chiffres utilisés pour les nombres. Deux valeurs peuvent être utilisées&nbsp;:
     - `lining-nums` permet d'activer l'ensemble de chiffres pour lequel tous les nombres sont apposés sur la ligne de base. Elle correspond aux valeurs OpenType `lnum`.
-    - `oldstyle-nums` permet d'activer l'ensemble de chiffres pour lequel certains nombres, comme 3, 4, 7, 9, ont un jambage. Elle correspond aux valleurs OpenType `onum`.
+    - `oldstyle-nums` permet d'activer l'ensemble de chiffres pour lequel certains nombres, comme 3, 4, 7, 9, ont un jambage. Elle correspond aux valeurs OpenType `onum`.
 
 - _`<numeric-spacing-values>`_
   - : Ces valeurs permettent de contrôler la taille des chiffres utilisés pour les nombres. On peut utiliser deux valeurs&nbsp;:

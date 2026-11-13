@@ -21,7 +21,7 @@ new Number(value)
 `Number` 物件主要的用途：
 
 - 如果參數沒辦法被轉換成數字，則它會回傳 {{jsxref("NaN")}} 。
-- 在不是使用建構式的情境中(即不用 {{jsxref("Operators/new", "new")}} 運算子), `Number` 可以被用來轉換型別.
+- 在不是使用建構式的情境中(即不用 {{jsxref("new")}} 運算子), `Number` 可以被用來轉換型別.
 
 ## 屬性
 
@@ -41,7 +41,7 @@ new Number(value)
   - : 特別用來表示**負無窮**的數值。
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : 特別用來表示**正無窮**的數值。
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : 允許被添加到 `Number` 物件的屬性。
 
 ## 方法
@@ -55,13 +55,13 @@ new Number(value)
 - {{jsxref("Number.isSafeInteger()")}}
   - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
 - {{jsxref("Number.parseFloat()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseFloat()")}} 相同。
 - {{jsxref("Number.parseInt()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseInt()")}} 相同。
 
 ## `Number` 實體
 
-所有 `Number` 實體都會繼承其建構式的 {{jsxref("Number.prototype")}}。`Number` 的原型物件可以被修改並作用在所有 `Number` 實體。
+所有 `Number` 實體都會繼承其建構式的 {{jsxref("Number")}}。`Number` 的原型物件可以被修改並作用在所有 `Number` 實體。
 
 ### 方法
 
@@ -74,9 +74,9 @@ new Number(value)
 - {{jsxref("Number.isSafeInteger()")}}
   - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
 - {{jsxref("Number.parseFloat()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseFloat()")}} 相同。
 - {{jsxref("Number.parseInt()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseInt()")}} 相同。
 
 ## 範例
 

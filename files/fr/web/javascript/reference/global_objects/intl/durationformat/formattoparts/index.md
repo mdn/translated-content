@@ -77,6 +77,6 @@ new Intl.DurationFormat("en", { style: "long" }).formatToParts(duration);
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Intl.DurationFormat")}}
+- L'objet natif {{JSxRef("Intl.DurationFormat")}}
 - La méthode {{JSxRef("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
-- L'objet {{JSxRef("Temporal.Duration")}}
+- L'objet natif {{JSxRef("Temporal.Duration")}}

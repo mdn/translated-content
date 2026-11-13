@@ -1,8 +1,9 @@
 ---
-title: "<time> : l'élément de temps (date)"
+title: "Élément HTML `<time>` : l'élément de temps (date)"
+short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 l10n:
-  sourceCommit: eb9034ead504af00b27a7da3ff9d4f641ade5e59
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<time>`** représente une période précise dans le temps. Il peut inclure l'attribut `datetime` pour traduire les dates dans un format lisible par une machine, permettant d'améliorer les résultats des moteurs de recherche ou d'activer des fonctionnalités personnalisées comme des rappels.
@@ -22,7 +23,7 @@ Il peut représenter l'un des éléments suivants&nbsp;:
 </p>
 
 <p>
-  Le concert commence à <time datetime="20:00">20 h 00</time> et vous pourrez
+  Le concert commence à <time datetime="20:00">20 h 00</time> et vous pouvez
   profiter du groupe pendant au moins <time datetime="PT2H30M">2 h 30</time>.
 </p>
 ```
@@ -269,4 +270,4 @@ La _valeur datetime_ (la valeur exploitable informatiquement de l'attribut datet
 
 ## Voir aussi
 
-- L'élément {{HTMLElement("data")}} qui permet de représenter des valeurs différentes.
+- L'élément {{HTMLElement("data")}} qui vous permet de représenter des valeurs différentes.

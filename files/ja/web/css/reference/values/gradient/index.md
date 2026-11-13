@@ -1,8 +1,9 @@
 ---
-title: <gradient>
+title: CSS <gradient> 型
+short-title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("image")}} です。

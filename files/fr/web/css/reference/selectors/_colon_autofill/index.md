@@ -1,11 +1,12 @@
 ---
-title: :autofill
+title: Pseudo-classe CSS `:autofill`
+short-title: :autofill
 slug: Web/CSS/Reference/Selectors/:autofill
 l10n:
-  sourceCommit: 1c68ccea9621d3b67d9e3bff8f9f2e948e4e7e54
+  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément HTML {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
 
 {{InteractiveExample("DémonstrationCSS&nbsp;: :autofill", "tabbed-shorter")}}
 
@@ -61,14 +62,14 @@ Lorsque l'utilisateur·ice utilise la fonction d'autocomplétion du navigateur p
 
 La spécification inclut la pseudo-classe avec préfixe fournisseur `:-webkit-autofill` comme alias. Celle-ci correspond également aux éléments d'entrée complétés automatiquement par l'agent utilisateur, et ne correspond plus si l'utilisateur·ice modifie le champ complété automatiquement.
 
-Notez que les feuilles de style de l'agent utilisateur de nombreux navigateurs utilisent `!important` dans leurs déclarations de style, rendant certains styles non surchargables. Par exemple, Chrome a le code suivant dans sa feuille de style interne&nbsp;:
+Notez que les feuilles de style de l'agent utilisateur de nombreux navigateurs utilisent `!important` dans leurs déclarations de style, rendant certains styles qui ne peuvent pas être surchargés. Par exemple, Chrome a le code suivant dans sa feuille de style interne&nbsp;:
 
 ```css-nolint
 input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
   background-color:
-    light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    light-dark(rgb(232 240 254), rgb(70 90 126 / 0.4)) !important;
   color: fieldtext !important;
 }
 ```
@@ -77,11 +78,11 @@ Cela signifie que vous ne pouvez pas surcharger les valeurs par défaut de {{CSS
 
 ## Exemples
 
-The following example demonstrates the use of the `:autofill` pseudo-class to change the border of a text field that has been autocompleted by the browser.
+L'exemple suivant montre comment utiliser la pseudo-classe `:autofill` pour modifier la bordure d'un champ de texte que le navigateur a rempli automatiquement.
 
 ### HTML
 
-Nous incluons trois éléments HTML `<input>`, chacun avec un {{HTMLElement("label")}} associé. Les valeurs `name` et `email` seront probablement complétées automatiquement et correspondront à `:autofill`, tandis que la valeur `pet` est peu susceptible de l'être.
+Nous incluons trois éléments HTML `<input>`, chacun avec un {{HTMLElement("label")}} associé. Les valeurs `name` et `email` est probablement complétées automatiquement et correspond à `:autofill`, tandis que la valeur `pet` est peu susceptible de l'être.
 
 ```html
 <form method="post" action="">
@@ -122,9 +123,8 @@ input:autofill {
     content: "Votre navigateur ne prend pas en charge le sélecteur :autofill.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 1rem 0;
   }
 }
 ```

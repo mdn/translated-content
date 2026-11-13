@@ -1,8 +1,9 @@
 ---
-title: var()
+title: CSS `var()` 関数
+short-title: var()
 slug: Web/CSS/Reference/Values/var
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`var()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
@@ -271,4 +272,5 @@ p {
 - {{cssxref("env","env(…)")}} – ユーザーエージェントによって制御される読み取り専用の環境変数
 - [CSS カスタムプロパティ（変数）](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - {{cssxref("@property")}} アットルール
+- [CSS カスタムプロパティの登録](/ja/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
 - [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュール

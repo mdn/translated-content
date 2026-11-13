@@ -241,5 +241,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

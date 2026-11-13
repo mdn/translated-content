@@ -3,8 +3,6 @@ title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) mais sous forme d'une fonction.
 
 {{InteractiveExample("JavaScript Demo: Reflect.has()")}}

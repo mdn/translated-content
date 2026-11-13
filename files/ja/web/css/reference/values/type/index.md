@@ -1,8 +1,9 @@
 ---
-title: type()
+title: CSS `type()` 関数
+short-title: type()
 slug: Web/CSS/Reference/Values/type
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{seecompattable}}

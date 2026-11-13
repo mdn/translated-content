@@ -62,8 +62,7 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
 ctx.direction = 'ltr';
-ctx.strokeText('Hello world', 0, 100);</textarea
->
+ctx.strokeText('Hello world', 0, 100);</textarea>
 ```
 
 ```js hidden

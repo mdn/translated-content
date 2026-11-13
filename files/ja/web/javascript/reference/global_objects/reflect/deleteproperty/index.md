@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-**`Reflect.deleteProperty()`** は静的メソッドで、{{jsxref("Operators/delete", "delete")}} 演算子と同様に実装されていますが、関数として動作します。オブジェクトからプロパティを削除します。
+**`Reflect.deleteProperty()`** は静的メソッドで、{{jsxref("delete")}} 演算子と同様に実装されていますが、関数として動作します。オブジェクトからプロパティを削除します。
 
 {{InteractiveExample("JavaScript デモ: Reflect.deleteProperty()", "taller")}}
 
@@ -36,13 +36,13 @@ Reflect.deleteProperty(target, propertyKey)
 ### 引数
 
 - `target`
-  - : プロパティを定義する対象のオブジェクトです。
+  - : プロパティを削除する対象のオブジェクトです。
 - `propertyKey`
-  - : 定義または修正をするプロパティ名です。
+  - : 削除するプロパティの名前です。
 
 ### 返値
 
-プロパティの定義に成功したかどうかを示す論理値です。
+プロパティの削除に成功したかどうかを示す論理値です。
 
 ### 例外
 

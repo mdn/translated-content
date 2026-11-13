@@ -12,13 +12,13 @@ slug: Web/API/AudioTrack
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : 一个布尔值，用于控制是否启用音轨的声音。设置此值`false`可使音轨的音频静音。
 - {{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("DOMString")}}唯一标识媒体中的曲目。此 ID 可用于通过调用{{domxref("AudioTrackList.getTrackById()")}}来定位音轨列表中的特定轨道。如果媒体支持按媒体片段[URI 规范](https://www.w3.org/TR/media-frags/)按媒体片段搜索，则 ID 也可以用作 URL 的片段部分。
+  - : 一个{{jsxref("String")}}唯一标识媒体中的曲目。此 ID 可用于通过调用{{domxref("AudioTrackList.getTrackById()")}}来定位音轨列表中的特定轨道。如果媒体支持按媒体片段[URI 规范](https://www.w3.org/TR/media-frags/)按媒体片段搜索，则 ID 也可以用作 URL 的片段部分。
 - {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("DOMString")}}指定轨道所属的类别。例如，主音频轨道将有一个`kind`的`"main"`。
+  - : 一个{{jsxref("String")}}指定轨道所属的类别。例如，主音频轨道将有一个`kind`的`"main"`。
 - {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}}为轨道提供人类可读的标签。例如，一个音频评论轨道的电影可以有一个`label`的`"Commentary with director John Q. Public and actors John Doe and Jane Eod."`，如果没有提供标签此字符串是空的。
+  - : A {{jsxref("String")}}为轨道提供人类可读的标签。例如，一个音频评论轨道的电影可以有一个`label`的`"Commentary with director John Q. Public and actors John Doe and Jane Eod."`，如果没有提供标签此字符串是空的。
 - {{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}
-  - : 一个{{domxref("DOMString")}}指定音轨的主要语言，如果未知，则为空字符串。该语言被指定为 BCP 47({{RFC(5646)}}) 语言代码，例如`"en-US"`或`"pt-BR"`。
+  - : 一个{{jsxref("String")}}指定音轨的主要语言，如果未知，则为空字符串。该语言被指定为 BCP 47({{RFC(5646)}}) 语言代码，例如`"en-US"`或`"pt-BR"`。
 - {{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
   - : 创建轨道的{{domxref("SourceBuffer")}}。如果轨道不是由{{domxref("SourceBuffer")}}创建的，或者{{domxref("SourceBuffer")}}已从{{domxref("MediaSource.sourceBuffers")}}属性中删除，则返回 null 其母媒体来源。
 

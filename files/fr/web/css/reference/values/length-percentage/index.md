@@ -1,9 +1,9 @@
 ---
-title: <length-percentage>
+title: Type CSS `<length-percentage>`
+short-title: <length-percentage>
 slug: Web/CSS/Reference/Values/length-percentage
-original_slug: Web/CSS/length-percentage
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<length-percentage>`** représente une valeur qui peut être une valeur de type {{CSSxRef("length")}} ou une valeur de type {{CSSxRef("percentage")}}.

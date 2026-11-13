@@ -1,8 +1,9 @@
 ---
-title: <percentage>
+title: Type CSS `<percentage>`
+short-title: <percentage>
 slug: Web/CSS/Reference/Values/percentage
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<percentage>`** représente une valeur en pourcentage. Il est souvent utilisé pour définir une taille relative à l'objet parent d'un élément. De nombreuses propriétés peuvent utiliser des pourcentages, telles que {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}} et {{CSSxRef("font-size")}}.

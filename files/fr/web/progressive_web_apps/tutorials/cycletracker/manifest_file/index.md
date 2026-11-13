@@ -8,8 +8,6 @@ l10n:
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
-{{PWASidebar}}
-
 Le manifeste d'une PWA est un fichier JSON qui fournit des informations à propos des caractéristiques de l'application afin qu'elle puisse ressembler et se comporter comme une application native une fois installée sur un appareil. Le manifeste contient des métadonnées à propos de l'application comme son nom, ses icônes, ainsi que des directives d'affichage.
 
 Bien que la spécification considère l'ensemble des champs du manifeste comme facultatifs, certains navigateurs, systèmes d'exploitation ou outils de distribution imposent [certains champs obligatoires](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) pour qu'une application web soit une PWA. En incluant un nom ou un nom court, l'URL initiale, une icône respectant certains critères, le type de zone d'affichage dans laquelle l'application devrait être vue, votre application respectera les critères liés au manifeste pour être une PWA.
@@ -44,7 +42,7 @@ Pour identifier notre PWA, le document JSON doit inclure les propriétés `name`
 Lorsque `name` et `short_name` sont tous les deux renseignés, la valeur de `name` est utilisée dans la plupart des cas, tandis que `short_name` est utilisé lorsque l'espace d'affichage est limité.
 
 - [`description`](/fr/docs/Web/Manifest/description)
-  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
+  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
 
 ### Tâche
 

@@ -1,8 +1,9 @@
 ---
-title: "<link> : l'élément de lien vers des ressources externes"
+title: "Élément HTML `<link>` : l'élément de lien vers des ressources externes"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 l10n:
-  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
+  sourceCommit: fc7c0c6df803d5ce26e7b2a72725a7d021ed0694
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers {{Glossary("CSS", "une feuille de style")}}, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
@@ -12,7 +13,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le
 ```html interactive-example
 <link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
 
-<p>Ce texte sera rouge comme défini dans la feuille de style externe.</p>
+<p>Ce texte est rouge comme défini dans la feuille de style externe.</p>
 <p style="color: blue">
   L'attribut <code>style</code> peut cependant le remplacer.
 </p>
@@ -26,7 +27,7 @@ Pour lier une feuille de style externe, on inclut un élément `<link>` de la fo
 
 Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Reference/Attributes/rel).
 
-Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera&nbsp;:
+Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouve&nbsp;:
 
 ```html
 <link rel="icon" href="favicon.ico" />
@@ -44,7 +45,7 @@ Il existe différents types de relations pour préciser les icônes et qui perme
 
 L'attribut `sizes` indique la taille de l'icône tandis que l'attribut `type` contient le type MIME de la ressource qui est liée. Ces attributs permettent alors au navigateur de sélectionner la ressource la plus adéquate.
 
-On peut également fournir l'attribut `media` afin d'utiliser telle ou telle ressource lorsqu'une requête média est vérifiée. Ainsi, on pourra utiliser ce qui suit afin d'avoir une feuille de style utilisée à l'impression et une autre dédiée au mobile&nbsp;:
+On peut également fournir l'attribut `media` afin d'utiliser telle ou telle ressource lorsqu'une requête média est vérifiée. Ainsi, on peut utiliser ce qui suit afin d'avoir une feuille de style utilisée à l'impression et une autre dédiée au mobile&nbsp;:
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
@@ -89,30 +90,25 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     <table class="standard-table">
       <thead>
         <tr>
-          <th scope="col">Valeur</th>
+          <th scope="col">Valeur <code>as</code></th>
+          <th scope="col">Valeur <code>rel</code></th>
           <th scope="col">S'applique à</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>audio</td>
-          <td>Élément <code>&#x3C;audio></code></td>
-        </tr>
-        <tr>
-          <td>document</td>
-          <td>Éléments <code>&#x3C;iframe></code> et <code>&#x3C;frame></code></td>
-        </tr>
-        <tr>
-          <td>embed</td>
-          <td>Élément <code>&#x3C;embed></code></td>
+          <td>audioworklet</td>
+          <td>modulepreload</td>
+          <td>Modules <a href="/fr/docs/Web/API/AudioWorklet">AudioWorklet</a></td>
         </tr>
         <tr>
           <td>fetch</td>
+          <td>preload</td>
           <td>
             <p>fetch, XHR</p>
             <div class="notecard note">
               <p>
-                <strong>Remarque&nbsp;:</strong> Cette valeur nécessite aussi que
+                <strong>Note&nbsp;:</strong> Cette valeur nécessite aussi que
                 <code>&#x3C;link></code> contienne l'attribut <code>crossorigin</code>. Voir <a href="/fr/docs/Web/HTML/Reference/Attributes/rel/preload#cors-enabled_fetches">récupérations compatibles CORS</a>.
               </p>
             </div>
@@ -120,11 +116,12 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         </tr>
         <tr>
           <td>font</td>
+          <td>preload</td>
           <td>
             <p>CSS @font-face</p>
             <div class="notecard note">
               <p>
-                <strong>Remarque&nbsp;:</strong> Cette valeur nécessite aussi que
+                <strong>Note&nbsp;:</strong> Cette valeur nécessite aussi que
                 <code>&#x3C;link></code> contienne l'attribut <code>crossorigin</code>. Voir <a href="/fr/docs/Web/HTML/Reference/Attributes/rel/preload#cors-enabled_fetches">récupérations compatibles CORS</a>.
               </p>
             </div>
@@ -132,6 +129,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         </tr>
         <tr>
           <td>image</td>
+          <td>preload</td>
           <td>
             Éléments <code>&#x3C;img></code> et <code>&#x3C;picture></code> avec les attributs
             <code>srcset</code> ou <code>imageset</code>, éléments SVG <code>&#x3C;image></code>,
@@ -140,38 +138,53 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         </tr>
         <tr>
           <td>json</td>
-          <td>
-            Les destinations <code>modulepreload</code>.
-          </td>
+          <td>modulepreload</td>
+          <td>Fichier JSON supplémentaire</td>
         </tr>
         <tr>
-          <td>object</td>
-          <td>Élément <code>&#x3C;object></code></td>
+          <td>paintworklet</td>
+          <td>modulepreload</td>
+          <td>Modules <a href="/fr/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a></td>
         </tr>
         <tr>
           <td>script</td>
+          <td>preload ou modulepreload</td>
           <td>
             Élément <code>&#x3C;script></code>, Worker <code>importScripts</code>, et destinations <code>modulepreload</code>.
           </td>
         </tr>
         <tr>
+          <td>serviceworker</td>
+          <td>modulepreload</td>
+          <td>Modules <a href="/fr/docs/Web/API/ServiceWorker">ServiceWorker</a></td>
+        </tr>
+        <tr>
+          <td>sharedworker</td>
+          <td>modulepreload</td>
+          <td>Modules <a href="/fr/docs/Web/API/SharedWorker">SharedWorker</a></td>
+        </tr>
+        <tr>
           <td>style</td>
+          <td>preload ou modulepreload</td>
           <td>
             Élément <code>&#x3C;link rel=stylesheet></code>, CSS
             <code>@import</code> et destinations <code>modulepreload</code>.
           </td>
         </tr>
         <tr>
-          <td>track</td>
-          <td>Élément <code>&#x3C;track></code></td>
+          <td>text</td>
+          <td>modulepreload</td>
+          <td>Fichier texte supplémentaire</td>
         </tr>
         <tr>
-          <td>video</td>
-          <td>Élément <code>&#x3C;video></code></td>
+          <td>track</td>
+          <td>preload</td>
+          <td>Éléments <code>&#x3C;track></code> (<a href="/fr/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">WebVTT</a>, type MIME <code>text/vtt</code>)</td>
         </tr>
         <tr>
           <td>worker</td>
-          <td>Worker, SharedWorker</td>
+          <td>modulepreload</td>
+          <td>Modules <a href="/fr/docs/Web/API/Worker">Worker</a></td>
         </tr>
       </tbody>
     </table>
@@ -181,7 +194,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `render`&nbsp;: Le rendu du contenu à l'écran est bloqué.
 
     > [!NOTE]
-    > Seuls les éléments HTML `link` présents dans l'en-tête `<head>` du document peuvent bloquer le rendu. Par défaut, un élément HTML `link` avec `rel="stylesheet"` dans le `<head>` bloque le rendu lorsque le navigateur le découvre lors de l'analyse. Si un tel élément HTML `link` est ajouté dynamiquement via un script, il faut également définir `blocking = "render"` pour qu'il bloque le rendu.
+    > Seuls les éléments HTML `link` présents dans l'en-tête `<head>` du document peuvent bloquer le rendu. Par défaut, un élément HTML `link` avec `rel="stylesheet"` dans le `<head>` bloque le rendu lorsque le navigateur le découvre lors de l'analyse. Si un tel élément HTML `link` est ajouté dynamiquement avec un script, il faut également définir `blocking = "render"` pour qu'il bloque le rendu.
 
 - [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Cet [attribut énuméré](/fr/docs/Glossary/Enumerated) indique si {{Glossary("CORS")}} doit être utilisé lors de la récupération de la ressource.
@@ -189,18 +202,18 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Les valeurs autorisées sont&nbsp;:
     - `anonymous`
       - : Une requête cross-origin (c'est-à-dire avec l'en-tête HTTP {{HTTPHeader("Origin")}}) est effectuée, mais aucune information d'identification n'est envoyée (aucun cookie, certificat X.509 ou authentification HTTP de base).
-        Si le serveur ne fournit pas d'autorisation au site d'origine (en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la ressource sera corrompue et son utilisation restreinte.
+        Si le serveur ne fournit pas d'autorisation au site d'origine (en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la ressource est corrompue et son utilisation restreinte.
     - `use-credentials`
       - : Une requête cross-origin (avec l'en-tête HTTP `Origin`) est effectuée avec des informations d'identification envoyées (cookie, certificat et/ou authentification HTTP de base).
-        Si le serveur ne fournit pas d'autorisation d'identification au site d'origine (via l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}}), la ressource sera _corrompue_ et son utilisation restreinte.
+        Si le serveur ne fournit pas d'autorisation d'identification au site d'origine (avec l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}}), la ressource est _corrompue_ et son utilisation restreinte.
 
     Si l'attribut n'est pas présent, la ressource est récupérée sans requête {{Glossary("CORS")}} (c'est-à-dire sans envoyer l'en-tête `Origin`), ce qui empêche son utilisation non corrompue. Si la valeur est invalide, elle est traitée comme si le mot-clé énuméré **anonymous** était utilisé.
     Voir [attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
 
 - `disabled`
   - : Cet attribut booléen n'est utilisable qu'avec `rel="stylesheet"`. Il indique si la feuille de style référencée doit être chargée et appliquée au document.
-    Si `disabled` est présent dans le HTML lors du chargement, la feuille de style ne sera pas chargée au chargement de la page.
-    Elle ne sera chargée qu'à la demande, si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
+    Si `disabled` est présent dans le HTML lors du chargement, la feuille de style n'est pas chargée au chargement de la page.
+    Elle n'est chargée qu'à la demande, si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` avec un script.
 
     Modifier la propriété `disabled` dans le DOM retire la feuille de style de la liste {{DOMxRef("Document.styleSheets")}} du document.
 
@@ -223,10 +236,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Pour `rel="preload"` et `as="image"` uniquement, l'attribut `imagesizes` utilise une syntaxe et une sémantique similaires à l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes), ce qui permet de précharger la ressource appropriée utilisée par un élément `img` avec des valeurs correspondantes pour ses attributs `srcset` et `sizes`.
 - `imagesrcset`
   - : Pour `rel="preload"` et `as="image"` uniquement, l'attribut `imagesrcset` utilise une syntaxe et une sémantique similaires à l'attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset), ce qui permet de précharger la ressource appropriée utilisée par un élément `img` avec des valeurs correspondantes pour ses attributs `srcset` et `sizes`.
-- `integrity`
-  - : Contient des métadonnées en ligne&nbsp;: une empreinte cryptographique (hachage base64) de la ressource (fichier) que vous demandez au navigateur de récupérer.
-    Le navigateur peut utiliser cette empreinte pour vérifier que la ressource récupérée n'a pas été modifiée de façon inattendue.
-    Cet attribut ne doit être utilisé que lorsque l'attribut `rel` vaut `stylesheet`, `preload` ou `modulepreload`.
+- [`integrity`](/fr/docs/Web/HTML/Reference/Attributes/integrity)
+  - : Cet attribut contient une ou plusieurs {{Glossary("hash function", "hachage")}} de la ressource. Il est utilisé pour s'assurer que le contenu de la ressource est conforme à ce que le·la développeur·euse attend et n'a pas été remplacé par une copie malveillante dans le cadre d'une [attaque de la chaîne d'approvisionnement](/fr/docs/Web/Security/Attacks/Supply_chain_attacks). Cet attribut ne doit être utilisé que lorsque l'attribut `rel` est défini sur `stylesheet`, `preload` ou `modulepreload`.
     Voir [Subresource Integrity](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/Guides/Media_queries).
@@ -237,19 +248,19 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `no-referrer` signifie que l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
     - `no-referrer-when-downgrade` signifie qu'aucun en-tête {{HTTPHeader("Referer")}} n'est envoyé lors d'une navigation vers une origine non protégée par TLS (HTTPS).
       Il s'agit du comportement par défaut de l'agent utilisateur si aucune autre règle n'est précisée.
-    - `origin` signifie que le référent sera l'origine de la page (schéma, hôte et port).
+    - `origin` signifie que le référent est l'origine de la page (schéma, hôte et port).
     - `origin-when-cross-origin` signifie que lors d'une navigation vers d'autres origines, le référent se limite au schéma, à l'hôte et au port, tandis que sur la même origine, le chemin est inclus.
     - `same-origin` signifie que le référent (origine, chemin et chaîne de requête) est envoyé pour les requêtes de même origine, mais qu'aucun référent n'est envoyé pour les requêtes inter-origines.
-    - `strict-origin` signifie que seule l'origine est envoyée lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS). Aucun référent n'est envoyé vers des destinations moins sécurisées (HTTPS→HTTP). Ceci est important pour les pages HTTPS car cela empêche la fuite d'informations de référent vers des origines non sécurisées.
+    - `strict-origin` signifie que seule l'origine est envoyée lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS). Aucun référent n'est envoyé vers des destinations moins sécurisées (HTTPS→HTTP). Ceci est important pour les pages HTTPS, car cela empêche la fuite d'informations de référent vers des origines non sécurisées.
     - `strict-origin-when-cross-origin` signifie que le référent complet est envoyé pour les requêtes de même origine. Pour les requêtes inter-origines, seule l'origine est envoyée lorsque le protocole reste le même (HTTPS→HTTPS), et aucun référent n'est envoyé lors d'une dégradation vers HTTP. Il s'agit de la valeur par défaut, qui équilibre fonctionnalité, confidentialité et sécurité pour les sites HTTPS.
     - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur·ice).
-      Ce cas n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non sécurisées.
+      Ce cas n'est pas sécurisé, car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non sécurisées.
 
 - `rel`
   - : Cet attribut indique la relation qui existe entre le document lié et le document courant. L'attribut doit être une liste, séparée par des espaces, de [types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
   - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes&nbsp;:
-    - `any`&nbsp;: l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
+    - `any`&nbsp;: l'icône peut être redimensionnée à volonté, car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
     > [!NOTE]
@@ -269,7 +280,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ### Attributs non-standard
 
 - `target` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Cet attribut définit le nom de la _frame_ ou de la fenêtre qui contient la ressource liée ou qui affichera la ressource liée.
+  - : Cet attribut définit le nom de la _frame_ ou de la fenêtre qui contient la ressource liée ou qui affiche la ressource liée.
 
 ### Attributs obsolètes
 
@@ -277,7 +288,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans le {{RFC(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
     > [!NOTE]
-    > Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{HTTPHeader("Content-Type")}} pour la ressource liée.
+    > Pour obtenir l'effet escompté, on utilise l'en-tête HTTP {{HTTPHeader("Content-Type")}} pour la ressource liée.
 
 - `rev` {{Deprecated_Inline}}
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Reference/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
@@ -290,7 +301,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ### Associer une feuille de style
 
-Pour associer une feuille de style à la page courante, on utilisera la syntaxe suivante&nbsp;:
+Pour associer une feuille de style à la page courante, on utilise la syntaxe suivante&nbsp;:
 
 ```html
 <link href="style.css" rel="stylesheet" />
@@ -300,7 +311,7 @@ Pour associer une feuille de style à la page courante, on utilisera la syntaxe 
 
 Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
-L'utilisateur·ice pourra choisir parmi ces feuilles de style via le menu «&nbsp;Affichage > Style de la page&nbsp;». Ainsi, un·e utilisateur·ice pourra voir différentes versions d'une même page.
+L'utilisateur·ice peut choisir parmi ces feuilles de style avec le menu «&nbsp;Affichage > Style de la page&nbsp;». Ainsi, un·e utilisateur·ice peut voir différentes versions d'une même page.
 
 ```html
 <link href="default.css" rel="stylesheet" title="Mise en forme par défaut" />
@@ -310,7 +321,7 @@ L'utilisateur·ice pourra choisir parmi ces feuilles de style via le menu «&nbs
 
 ### Fournir des icônes pour différents contextes d'usage
 
-Vous pouvez inclure des liens vers plusieurs icônes sur la même page, et le navigateur choisira celle qui convient le mieux à son contexte particulier en utilisant les valeurs `rel` et `sizes` comme indications.
+Vous pouvez inclure des liens vers plusieurs icônes sur la même page, et le navigateur choisit celle qui convient le mieux à son contexte particulier en utilisant les valeurs `rel` et `sizes` comme indications.
 
 ```html
 <!-- iPad Pro avec écran Retina haute résolution : -->
@@ -334,14 +345,14 @@ Vous pouvez inclure des liens vers plusieurs icônes sur la même page, et le na
 <link rel="icon" href="/favicon.ico" />
 ```
 
-Pour savoir quelles valeurs de `sizes` choisir pour les icônes Apple, consultez [la documentation Apple sur la configuration des applications web <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et les [Apple human interface guidelines <sup>(angl.)</sup>](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) référencées. En général, il suffit de fournir une grande image, comme 192x192, et de laisser le navigateur la redimensionner selon les besoins, mais vous pouvez fournir des images avec différents niveaux de détail pour différentes tailles, comme le recommande le guide Apple. Fournir des icônes plus petites pour les basses résolutions permet aussi d'économiser de la bande passante.
+Pour savoir quelles valeurs de `sizes` choisir pour les icônes Apple, consultez [la documentation Apple sur la configuration des applications web <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et les [règles d'interface humaine Apple <sup>(angl.)</sup>](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) référencées. En général, il suffit de fournir une grande image, comme 192x192, et de laisser le navigateur la redimensionner selon les besoins, mais vous pouvez fournir des images avec différents niveaux de détail pour différentes tailles, comme le recommande le guide Apple. Fournir des icônes plus petites pour les basses résolutions permet aussi d'économiser de la bande passante.
 
 Il n'est pas toujours nécessaire de fournir des éléments `<link>`. Par exemple, les navigateurs demandent automatiquement `/favicon.ico` à la racine d'un site, et Apple demande aussi automatiquement `/apple-touch-icon-[size].png`, `/apple-touch-icon.png`, etc. Cependant, fournir des liens explicites vous protège contre les changements de ces conventions.
 
 ### Charger conditionnellement des ressources avec des requêtes média
 
 Vous pouvez fournir un type ou une requête média dans un attribut `media`&nbsp;;
-la ressource ne sera alors chargée que si la condition média est vérifiée. Par exemple&nbsp;:
+la ressource n'est alors chargée que si la condition média est vérifiée. Par exemple&nbsp;:
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
@@ -385,7 +396,7 @@ Vous pouvez trouver plusieurs exemples de `<link rel="preload">` dans [Précharg
 ### Bloquer le rendu jusqu'à ce qu'une ressource soit récupérée
 
 Vous pouvez inclure le jeton `render` dans un attribut `blocking`&nbsp;;
-le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressources critiques soient récupérées et appliquées au document. Par exemple&nbsp;:
+le rendu de la page est bloqué jusqu'à ce que la ressource et ses sous-ressources critiques soient récupérées et appliquées au document. Par exemple&nbsp;:
 
 ```html
 <link blocking="render" rel="stylesheet" href="exemple.css" crossorigin />

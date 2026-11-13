@@ -59,7 +59,7 @@ WebGL コンテンツを描画するときに実行される 2 つのシェー�
 
 シェーダーは必要に応じて{{Glossary("texel", "テクセル")}}の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて [varying](/ja/docs/Web/API/WebGL_API/Data#varying) または[属性](/ja/docs/Web/API/WebGL_API/Data#属性)に保存することができます。
 
-以下の頂点シェーダーは、 `aVertexPosition` と呼ばれる定義した属性から頂点の位置の値を受け取ります。次に、その位置に `uProjectionMatrix` （投影行列）および `uModelViewMatrix` モデルビュー行列）という 2 つの 4 x 4 行列を乗算します。結果は `gl_Position` に設定されます。投影行列およびその他の行列の詳細については、[この記事が役立つ場合があります](https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html)。
+以下の頂点シェーダーは、 `aVertexPosition` と呼ばれる定義した属性から頂点の位置の値を受け取ります。次に、その位置に `uProjectionMatrix` （投影行列）および `uModelViewMatrix` （モデルビュー行列）という 2 つの 4 x 4 行列を乗算します。結果は `gl_Position` に設定されます。投影行列およびその他の行列の詳細については、[この記事が役立つ場合があります](https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html)。
 
 > [!NOTE]
 > このコードを `main()` 関数に追加してください。

@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Operators
 
 기본 키워드 및 JavaScript의 일반 식.
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
   - : `this` 키워드는 실행 문맥의 특별한 속성을 가리킵니다.
 - {{JSxRef("Operators/function", "function")}}
   - : `function` 키워드는 함수를 정의합니다.
@@ -31,11 +31,11 @@ slug: Web/JavaScript/Reference/Operators
   - : `async function`은 비동기 함수 표현식을 정의합니다.
 - {{JSxRef("Operators/await", "await")}}
   - : 비동기 함수를 일시 중지했다가 다시 시작하고 promise의 resolution/rejection을 기다립니다.
-- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Array", "[]")}}
   - : 배열 초기자 및 리터럴 구문.
 - {{JSxRef("Operators/Object_initializer", "{}")}}
   - : 객체 초기자 및 리터럴 구문.
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("RegExp", "/ab+c/i")}}
   - : 정규식 리터럴 구문.
 - {{JSxRef("Operators/Grouping", "( )")}}
   - : 그룹 연산자.
@@ -47,10 +47,10 @@ slug: Web/JavaScript/Reference/Operators
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
   - : 속성 접근자는 객체의 속성 또는 메서드에 대한 접근 방법을 제공합니다.
     (`object.property`, `object["property"]`)
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
   - : `new` 연산자는 생성자의 인스턴스를 만듭니다.
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-  - : 생성자 문맥에서, `new.target`은 {{jsxref("Operators/new", "new")}}에 의해 호출된 생성자를 말합니다.
+- {{JSxRef("Operators/new.target", "new.target")}}
+  - : 생성자 문맥에서, `new.target`은 {{jsxref("new")}}에 의해 호출된 생성자를 말합니다.
 - {{JSxRef("Operators/super", "super")}}
   - : `super` 키워드는 부모 생성자를 호출합니다.
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
@@ -73,7 +73,7 @@ slug: Web/JavaScript/Reference/Operators
 
 단항 연산은 피연산자가 하나뿐인 연산입니다.
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
   - : `delete` 연산자는 객체에서 속성을 지웁니다.
 - {{JSxRef("Operators/void", "void")}}
   - : `void` 연산자는 식의 반환값을 버립니다.
@@ -114,7 +114,7 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{JSxRef("Operators/in", "in")}}
   - : `in` 연산자는 객체에 주어진 속성이 있는지를 결정합니다.
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
   - : `instanceof` 연산자는 객체가 다른 객체의 인스턴스인지 판별합니다.
 - {{JSxRef("Operators/Less_than", "&lt;")}}
   - : 작음 연산자.
@@ -170,12 +170,12 @@ slug: Web/JavaScript/Reference/Operators
   - : 논리 AND.
 - {{JSxRef("Operators/Logical_OR", "||")}}
   - : 논리 OR.
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
   - : Nullish 통합 연산자.
 
 ### 조건부(삼항) 연산자
 
-<dl><dt>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</dt></dl>
+<dl><dt>{{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}</dt></dl>
 
 조건부 연산자는 조건의 논리값에 따라 두 값 중 하나를 반환합니다.
 
@@ -218,15 +218,15 @@ slug: Web/JavaScript/Reference/Operators
   - : 논리적 AND 할당.
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
   - : 논리적 OR 할당.
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
   - : 논리적 nullish 할당.
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+  {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
   - : 구조 분해 할당은 배열 또는 객체의 속성을 배열 또는 객체 리터럴과 비슷해 보이는 구문을 사용하여 변수에 할당할 수 있게 합니다.
 
 ### 쉼표 연산자
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : 쉼표 연산자는 여러 식을 단문으로 평가되게 하고 마지막 식의 결과를 반환합니다.
 
 ## 명세

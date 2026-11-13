@@ -23,7 +23,7 @@ generatorInstance.throw(exception)
 
 ### 返値
 
-2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。
+2 つのプロパティを持つ {{jsxref("Object")}} です。
 
 - `done`
   - : 論理値です。

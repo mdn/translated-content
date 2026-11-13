@@ -3,8 +3,6 @@ title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 ---
 
-{{AddonSidebar}}
-
 Recharge une extension.
 
 S'il y a des mises à jour en attente pour l'extension, qu'elles ont été différées en écoutant {{WebExtAPIRef("runtime.onUpdateAvailable")}}, elles seront appliquées en reload.

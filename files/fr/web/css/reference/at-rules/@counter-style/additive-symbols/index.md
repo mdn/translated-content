@@ -1,8 +1,9 @@
 ---
-title: additive-symbols
+title: Descripteur de règle CSS `additive-symbols`
+short-title: additive-symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/additive-symbols
 l10n:
-  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`additive-symbols`** de la règle {{CSSxRef('@counter-style')}} est utilisé pour définir les symboles du compteur lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} de `@counter-style` est définie sur `additive`. Le système additif permet de construire des systèmes de numérotation à valeur de signe (<i lang="en">sign-value numbering</i>) comme les chiffres romains.
@@ -41,10 +42,10 @@ Ce descripteur accepte une liste de _tuples additifs_ (ensemble d'éléments) s�
   - : Un entier positif ou nul qui indique le poids entier associé au symbole du tuple.
 
 - [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
-  - : Spécifie le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
+  - : Définit le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
 
 > [!NOTE]
-> Les tuples additifs doivent être définis dans l'ordre décroissant des poids&nbsp;; sinon, la déclaration du descripteur n'est pas valide et sera ignorée.
+> Les tuples additifs doivent être définis dans l'ordre décroissant des poids&nbsp;; sinon, la déclaration du descripteur n'est pas valide et est ignorée.
 
 ## Description
 

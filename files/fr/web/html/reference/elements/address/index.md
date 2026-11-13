@@ -1,8 +1,9 @@
 ---
-title: "<address> : l'élément d'adresse de contact"
+title: "Élément HTML `<address>` : l'élément d'adresse de contact"
+short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<address>`** indique que le HTML inclus fournit des informations de contact pour une personne, des personnes ou une organisation.
@@ -28,25 +29,21 @@ a[href^="tel"]::before {
 }
 ```
 
-L'information de contact fournie par le contenu d'un élément `<address>` peut prendre la forme la plus appropriée au contexte, et peut inclure tout type d'information de contact nécessaire, comme une adresse physique, une URL, une adresse électronique, un numéro de téléphone, un identifiant de réseau social, des coordonnées géographiques, etc. L'élément `<address>` doit inclure le nom de la personne, des personnes ou de l'organisation à laquelle l'information de contact fait référence.
-
-`<address>` peut être utilisé dans divers contextes, par exemple pour fournir les informations de contact d'une entreprise dans l'en-tête de la page, ou pour indiquer l'auteur·ice d'un article en incluant un élément `<address>` dans {{HTMLElement("article")}}.
-
 ## Attributs
 
 Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- L'élément `<address>` ne peut être utilisé que pour représenter les informations de contact de son ancêtre le plus proche de type {{HTMLElement("article")}} ou {{HTMLElement("body")}}.
-- Cet élément ne doit pas contenir plus d'informations que les informations de contact, comme une date de publication (qui appartient à un élément {{HTMLElement("time")}}).
-- Typiquement, un élément `<address>` peut être placé dans l'élément {{HTMLElement("footer")}} de la section courante, s'il y en a une.
+L'information de contact fournie par le contenu d'un élément `<address>` peut prendre la forme la plus appropriée au contexte, et peut inclure tout type d'information de contact nécessaire, comme une adresse physique, une URL, une adresse électronique, un numéro de téléphone, un identifiant de réseau social, des coordonnées géographiques, etc. L'élément `<address>` doit inclure le nom de la personne, des personnes ou de l'organisation à laquelle l'information de contact fait référence. Cependant, cet élément ne doit pas contenir plus d'informations que les informations de contact, comme une date de publication (qui appartient à un élément HTML {{HTMLElement("time")}}).
+
+L'élément `<address>` peut être utilisé dans divers contextes, par exemple pour fournir les informations de contact d'une entreprise dans l'en-tête de la page, ou pour indiquer l'auteur·ice d'un article en incluant un élément `<address>` dans {{HTMLElement("article")}}. L'élément `<address>` ne peut être utilisé que pour représenter les informations de contact de son ancêtre le plus proche de type {{HTMLElement("article")}} ou {{HTMLElement("body")}}. Typiquement, un élément `<address>` peut être placé dans l'élément HTML {{HTMLElement("footer")}} de la section courante, s'il y en a une.
 
 ## Exemples
 
 ```html
 <address>
-  Vous pouvez contacter l'auteur à l'adresse
+  Vous pouvez contacter l'auteur·ice à l'adresse
   <a href="http://www.undomaine.com/contact">www.undomaine.com</a>.<br />
   Si vous relevez quelques bogues que ce soient, merci de contacter
   <a href="mailto:webmaster@somedomain.com">le webmaster</a>.<br />
@@ -152,5 +149,5 @@ Bien qu'il affiche le texte avec le même style par défaut que les éléments H
 
 ## Voir aussi
 
-- Les autres éléments liés aux sections d'un document&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
+- Les autres éléments liés aux sections d'un document&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h2&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h3&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h4&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h5&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h6&gt;")}}`, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
 - [Sections et titres d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

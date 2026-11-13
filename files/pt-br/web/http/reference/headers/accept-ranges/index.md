@@ -15,7 +15,7 @@ Na presença do cabeçalho `Accept-Ranges`, o navegador pode tentar retomar um _
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

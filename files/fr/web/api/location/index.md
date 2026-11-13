@@ -117,27 +117,27 @@ body {
 _L'interface `Location` n'hérite d'aucune propriété, mais implémente celles de {{domxref("URLUtils")}}._
 
 - {{domxref("Location.href")}}
-  - : Une {{domxref("DOMString")}} contenant l'URL entière.
+  - : Une {{jsxref("String")}} contenant l'URL entière.
 - {{domxref("Location.protocol")}}
-  - : Une {{domxref("DOMString")}} contenant le schéma de protocole de l'URL, incluant le `':'` final.
+  - : Une {{jsxref("String")}} contenant le schéma de protocole de l'URL, incluant le `':'` final.
 - {{domxref("Location.host")}}
-  - : Une {{domxref("DOMString")}} contenant l'hôte, c'est-à-dire le _domaine_, un `':'`, et le _numéro de port_ de l'URL.
+  - : Une {{jsxref("String")}} contenant l'hôte, c'est-à-dire le _domaine_, un `':'`, et le _numéro de port_ de l'URL.
 - {{domxref("Location.hostname")}}
-  - : Une {{domxref("DOMString")}} contenant le domaine de l'URL.
+  - : Une {{jsxref("String")}} contenant le domaine de l'URL.
 - {{domxref("Location.port")}}
-  - : Une {{domxref("DOMString")}} contenant le numéro de port de l'URL.
+  - : Une {{jsxref("String")}} contenant le numéro de port de l'URL.
 - {{domxref("Location.pathname")}}
-  - : Une {{domxref("DOMString")}} contenant un `'/'` initial suivi du chemin de l'URL.
+  - : Une {{jsxref("String")}} contenant un `'/'` initial suivi du chemin de l'URL.
 - {{domxref("Location.search")}}
-  - : Une {{domxref("DOMString")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/fr/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/fr/docs/Web/API/URL/searchParams#example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
+  - : Une {{jsxref("String")}} contenant un `'?'` suivi des paramètres de l'URL. Les navigateurs moderne fournissent [URLSearchParams](/fr/docs/Web/API/URLSearchParams/get#Example) et [URL.searchParams](/fr/docs/Web/API/URL/searchParams#example) pour faciliter l'analyse des paramètres de la chaîne de requête (querystring).
 - {{domxref("Location.hash")}}
-  - : Une {{domxref("DOMString")}} contenant un `'#'` suivi de _l'identifiant de fragment_ de l'URL.
+  - : Une {{jsxref("String")}} contenant un `'#'` suivi de _l'identifiant de fragment_ de l'URL.
 - {{domxref("Location.username")}} {{deprecated_inline}}
-  - : Une {{domxref("DOMString")}} contenant le nom d'utilisateur spécifié avant le nom de domaine.
+  - : Une {{jsxref("String")}} contenant le nom d'utilisateur spécifié avant le nom de domaine.
 - {{domxref("Location.password")}} {{deprecated_inline}}
-  - : Une {{domxref("DOMString")}} contenant le mot de passe spécifié avant le nom de domaine.
+  - : Une {{jsxref("String")}} contenant le mot de passe spécifié avant le nom de domaine.
 - {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} contenant la forme canonique de l'origine de la location.
+  - : Retourne une {{jsxref("String")}} contenant la forme canonique de l'origine de la location.
 
 ## Méthodes
 
@@ -150,7 +150,7 @@ _L'interface `Location` n'hérite d'aucune méthode, mais implémente celles de 
 - {{domxref("Location.replace()")}}
   - : Remplace la ressource actuelle par celle à l'URL passée en paramètre. la différence avec la méthode `assign()` est que, après avoir utilisé `replace()`, la page actuelle ne sera pas enregistrée dans l'historique de session {{domxref("History")}}, ce qui signifie que l'utilisateur ne pourra pas utiliser le bouton _précédent_ pour y revenir.
 - {{domxref("Location.toString()")}}
-  - : Retourne une {{domxref("DOMString")}} contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, sauf que `toString()` ne peut être utilisée pour modifier la valeur.
+  - : Retourne une {{jsxref("String")}} contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, sauf que `toString()` ne peut être utilisée pour modifier la valeur.
 
 ## Exemples
 

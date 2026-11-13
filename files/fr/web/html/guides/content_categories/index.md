@@ -2,10 +2,10 @@
 title: Catégories de contenu
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
+  sourceCommit: ba3c8980510073ee92674aa71cb2c8c5b71294ab
 ---
 
-La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains [éléments ne fassent partie d'_aucune_ de ces catégories](#élément_sans_catégorie).
+La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains [éléments ne fassent partie _d'aucune_ de ces catégories](#élément_sans_catégorie).
 
 Les catégories de contenu servent à définir le _modèle de contenu_ des éléments, c'est-à-dire ce que chaque élément peut avoir comme descendants. Par exemple, l'élément `<p>` ne peut contenir que du _contenu phrasé_, tandis que l'élément `<div>` peut contenir du _contenu de flux_. Certains éléments, comme `<ins>`, ont un [_modèle de contenu transparent_](#modèle_de_contenu_transparent).
 
@@ -35,7 +35,7 @@ Quelques-uns de ces éléments appartiennent à plus d'une catégorie de contenu
 
 ## Contenu de flux
 
-Le contenu de flux est une catégorie large qui englobe la plupart des éléments pouvant se trouver à l'intérieur de l'élément {{HTMLElement("body")}}, y compris les éléments d'en-tête, les éléments sectionnants, les éléments phrasés, les éléments d'intégration, les éléments interactifs et les éléments liés aux formulaires. Il inclut aussi les noeuds de texte (mais pas ceux qui ne contiennent que des caractères d'espacement).
+Le contenu de flux est une catégorie large qui englobe la plupart des éléments pouvant se trouver à l'intérieur de l'élément {{HTMLElement("body")}}, y compris les éléments d'en-tête, les éléments sectionnant, les éléments phrasés, les éléments d'intégration, les éléments interactifs et les éléments liés aux formulaires. Il inclut aussi les nœuds de texte (mais pas ceux qui ne contiennent que des caractères d'espacement).
 
 Les éléments de flux sont&nbsp;:
 
@@ -337,7 +337,7 @@ Certains éléments appartiennent à cette catégorie seulement sous certaines c
 
 ## Éléments sans catégorie
 
-Certains éléments ne font partie d'_aucune_ catégorie de contenu. Ceux-ci incluent&nbsp;:
+Certains éléments ne font partie _d'aucune_ catégorie de contenu. Ceux-ci incluent&nbsp;:
 
 - {{HTMLElement("caption")}}
 - {{HTMLElement("col")}}
@@ -366,7 +366,7 @@ Certains éléments ne font partie d'_aucune_ catégorie de contenu. Ceux-ci inc
 
 ## Éléments supports de script
 
-Les **éléments supports de script** sont des éléments qui ne contribuent pas directement à la sortie rendue d'un document. Ils servent plutôt à prendre en charge les scripts, soit en contenant ou en définissant directement du code de script, soit en définissant des données qui seront utilisées par des scripts. Presque tous les éléments, y compris ceux qui n'acceptent que des éléments spécifiques (comme {{HTMLElement("ul")}}, qui accepte des éléments {{HTMLElement("li")}}), peuvent contenir des éléments supports de script.
+Les **éléments supports de script** sont des éléments qui ne contribuent pas directement à la sortie rendue d'un document. Ils servent plutôt à prendre en charge les scripts, soit en contenant ou en définissant directement du code de script, soit en définissant des données qui sont utilisées par des scripts. Presque tous les éléments, y compris ceux qui n'acceptent que des éléments spécifiques (comme {{HTMLElement("ul")}}, qui accepte des éléments {{HTMLElement("li")}}), peuvent contenir des éléments supports de script.
 
 Les éléments supports de script sont&nbsp;:
 
@@ -375,7 +375,7 @@ Les éléments supports de script sont&nbsp;:
 
 ## Contenu associé aux formulaires
 
-Le contenu associé aux formulaires est un sous-ensemble du contenu de flux comprenant des éléments qui ont un propriétaire de formulaire et qui peuvent être utilisés partout où du contenu de flux est attendu. Un propriétaire de formulaire est soit l'élément {{HTMLElement("form")}} englobant, soit le `<form>` dont l'`id` est indiqué dans l'attribut `form` de l'élément.
+Le contenu associé aux formulaires est un sous-ensemble du contenu de flux comprenant des éléments qui ont un propriétaire de formulaire et qui peuvent être utilisés partout où du contenu de flux est attendu. Un propriétaire de formulaire est soit l'élément {{HTMLElement("form")}} englobant, soit le `<form>` dont un `id` est indiqué dans l'attribut `form` de l'élément.
 
 Les éléments associés aux formulaires sont&nbsp;:
 

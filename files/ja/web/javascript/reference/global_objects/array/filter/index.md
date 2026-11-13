@@ -3,7 +3,7 @@ title: Array.prototype.filter()
 short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`filter()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列の中から指定された関数で実装されているテストに合格した要素だけを抽出した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を作成します。
@@ -93,11 +93,11 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
 
 > [!NOTE]
-> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、高度に最適化されたアルゴリズムを使用することをお勧めします。
+> `isPrime()` の実装は、説明のみを目的としています。実際のアプリケーションでは、繰り返し計算を避けるために、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)などの、{{Glossary("Memoization", "メモ化")}}を多用したアルゴリズムを使用することをお勧めします。
 
-### JSON の不正な内容を取り除く
+### オブジェクトの配列から無効なオブジェクトをフィルタリングする
 
-次の例では、`filter()` を使って `id` の数値が 0 以外の要素だけに絞った JSON を生成します。
+次の例では、`filter()` を使用して、`id` が 0 以外の数値であるすべてのオブジェクトを含む、フィルタリングされた配列を作成しています。
 
 ```js
 const arr = [
@@ -205,7 +205,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 
 ## 関連情報
 
-- [`Array.prototype.filter` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.filter` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.filter` のポリフィル](https://www.npmjs.com/package/array.prototype.filter)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}

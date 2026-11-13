@@ -1,8 +1,9 @@
 ---
-title: :lang()
+title: Pseudo-classe CSS `:lang()`
+short-title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
 l10n:
-  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:lang()`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.

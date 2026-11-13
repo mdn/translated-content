@@ -119,4 +119,4 @@ console.log(
 ## Voir aussi
 
 - [Prothèse d'émulation de `Intl.ListFormat` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-listformat/)
-- L'objet {{JSxRef("Intl")}}
+- L'objet natif {{JSxRef("Intl")}}

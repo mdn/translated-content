@@ -37,7 +37,7 @@ alert(document.body.id); // "nouvelElementBody"
 
 Bien que la propriété `body` soit modifiable, affecter un nouveau body à un document supprimera effectivement tous les enfants actuels de l'élément `<body>` existant.
 
-## Spécification
+## Spécifications
 
 {{Specifications}}
 

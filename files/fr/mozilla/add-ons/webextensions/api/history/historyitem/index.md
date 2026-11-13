@@ -3,8 +3,6 @@ title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
 
-{{AddonSidebar}}
-
 Un objet `HistoryItem` fournit des informations sur une page dans l'historique du navigateur.
 
 ## Type

@@ -3,7 +3,7 @@ title: "Iterator : méthode statique from()"
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 l10n:
-  sourceCommit: dc02b8a490ea0ff4ac1236546f32270ca0cc0aa5
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Iterator.from()`** crée un nouvel objet {{JSxRef("Iterator")}} à partir d'un itérateur ou d'un objet itérable.
@@ -21,7 +21,7 @@ Iterator.from(object)
 
 ### Valeur de retour
 
-Si `object` est un itérable, sa méthode `[Symbol.iterator]()` est appelée pour obtenir l'itérateur. Sinon, `object` est supposé être un itérateur. Si l'itérateur est déjà {{JSxRef("Operators/instanceof", "instanceof")}} {{JSxRef("Iterator")}} (ce qui signifie qu'il a `Iterator.prototype` dans sa chaîne de prototypes), il est retourné directement. Sinon, un nouvel objet {{JSxRef("Iterator")}} est créé pour envelopper l'itérateur original.
+Si `object` est un itérable, sa méthode `[Symbol.iterator]()` est appelée pour obtenir l'itérateur. Sinon, `object` est supposé être un itérateur. Si l'itérateur est déjà {{JSxRef("instanceof")}} {{JSxRef("Iterator")}} (ce qui signifie qu'il a `Iterator.prototype` dans sa chaîne de prototypes), il est retourné directement. Sinon, un nouvel objet {{JSxRef("Iterator")}} est créé pour envelopper l'itérateur original.
 
 ## Description
 
@@ -118,7 +118,7 @@ console.log(obj2.next()); // { valeur: 1, fait: false }
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.from` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
-- L'objet {{JSxRef("Iterator")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.from` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Array.from()")}}

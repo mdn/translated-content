@@ -1,8 +1,9 @@
 ---
-title: rel="me"
+title: Valeur d'attribut HTML `rel="me"`
+short-title: me
 slug: Web/HTML/Reference/Attributes/rel/me
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`me`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) des éléments {{HTMLElement("link")}} et {{HTMLElement("a")}} indique que la ressource courante est représentée par la partie liée. La valeur `me` a été introduite dans la [spécification XHTML Friends Network (XFN) <sup>(angl.)</sup>](https://gmpg.org/xfn/).

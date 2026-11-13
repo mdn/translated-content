@@ -1,9 +1,9 @@
 ---
-title: <integer>
+title: Type CSS `<integer>`
+short-title: <integer>
 slug: Web/CSS/Reference/Values/integer
-original_slug: Web/CSS/integer
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{CSSxRef("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{CSSxRef("column-count")}}, {{CSSxRef("counter-increment")}}, {{CSSxRef("grid-column")}}, {{CSSxRef("grid-row")}}, {{CSSxRef("z-index")}} et le descripteur {{CSSxRef("@counter-style/range", "range")}}.

@@ -1,12 +1,11 @@
 ---
 title: margin-block
 slug: Web/CSS/Reference/Properties/margin-block
-original_slug: Web/CSS/margin-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: c3c0f615b9b35e1ce3c799927eb21732b2f05926
 ---
 
-The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
+**`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
 {{InteractiveExample("CSS デモ: margin-block")}}
 
@@ -55,7 +54,7 @@ writing-mode: vertical-lr;
   display: inline-block;
   border: solid #ce7777 10px;
   background-color: #2b3a55;
-  color: #ffffff;
+  color: white;
   flex-shrink: 0;
 }
 
@@ -103,11 +102,11 @@ margin-block: unset;
 
 ### 値
 
-`margin-block` プロパティは、 {{CSSxRef("margin", "", "#値")}} プロパティと同じ値を取ります。
+`margin-block` プロパティは、 {{CSSxRef("margin-top", "", "#値")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -119,7 +118,7 @@ margin-block: unset;
 
 #### CSS
 
-```css live-sample___setting_block_start_and_end_margins
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -140,7 +139,7 @@ p {
 
 #### HTML
 
-```html live-sample___setting_block_start_and_end_margins
+```html
 <div>
   <p>テキストの例</p>
 </div>
@@ -151,7 +150,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}
+{{EmbedLiveSample("ブロック方向の先頭と末尾のマージンを設定", 140, 200)}}
 
 ## 仕様書
 

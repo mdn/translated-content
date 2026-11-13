@@ -23,7 +23,11 @@ input:indeterminate {
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:indeterminate {
+  /* ... */
+}
+```
 
 ## Примеры
 

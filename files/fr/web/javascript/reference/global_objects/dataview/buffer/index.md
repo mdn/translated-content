@@ -45,6 +45,6 @@ dataview.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## Voir aussi
 
-- L'objet {{JSxRef("DataView")}}
-- L'objet {{JSxRef("ArrayBuffer")}}
-- L'objet {{JSxRef("SharedArrayBuffer")}}
+- L'objet natif {{JSxRef("DataView")}}
+- L'objet natif {{JSxRef("ArrayBuffer")}}
+- L'objet natif {{JSxRef("SharedArrayBuffer")}}

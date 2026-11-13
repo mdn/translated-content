@@ -3,8 +3,6 @@ title: history.deleteUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 ---
 
-{{AddonSidebar}}
-
 Supprime toutes les visites à l'URL donnée de l'historique du navigateur.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

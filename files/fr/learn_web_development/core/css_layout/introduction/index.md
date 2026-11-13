@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a déjà côtoyées dans les modules précédents — telles que les différentes valeurs de {{cssxref("display")}} — et en introduit de nouveaux que nous aborderons dans ce module.
 
@@ -13,12 +13,11 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction au HTML</a
-        >) et avoir une idée de la manière dont la CSS fonctionne (étudiez
-        <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a
-        >).
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
+          >Structurer le contenu avec HTML</a
+        >,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Mises en forme CSS de base</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals">Mise en forme de base du texte et de la police</a>.
       </td>
     </tr>
     <tr>
@@ -776,4 +775,4 @@ body {
 
 Cet article donne un bref résumé de toutes les techniques de mise en page à connaître. Poursuivez la lecture pour en savoir plus à propos de chaque technique !
 
-{{NextMenu("Apprendre/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

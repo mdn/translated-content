@@ -1,5 +1,6 @@
 ---
 title: Apprendre le développement web
+short-title: Apprendre
 slug: Learn_web_development
 l10n:
   sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
@@ -49,11 +50,11 @@ Si vous faites une erreur, vous pouvez réinitialiser votre travail à l'aide du
 > [!NOTE]
 > Si vous préférez travailler dans votre propre éditeur ou dans un éditeur en ligne (comme [CodePen](https://codepen.io/) ou [JSFiddle](https://jsfiddle.net/)), vous pouvez copier le code du MDN Playground dans l'environnement de votre choix.
 
-Certaines questions ne comportent pas de blocs de code de départ et vous demandent plutôt de télécharger des fichiers de démarrage pour travailler sur votre machine locale. Parfois, cela est dû à la complexité de la question, parfois c'est simplement pour varier les approches.
+Certaines questions ne comportent pas de blocs de code de départ et vous demandent plutôt de télécharger des fichiers de démarrage pour travailler sur votre machine locale. Parfois, c'est dû à la complexité de la question, parfois c'est simplement pour varier les approches.
 
 ## Récupérer nos exemples de code
 
-Tous les exemples de code que vous rencontrerez dans la zone d'apprentissage sont [disponibles sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/learning-area/)&nbsp;:
+Tous les exemples de code que vous rencontrez dans la zone d'apprentissage sont [disponibles sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/learning-area/)&nbsp;:
 
 - Le moyen le plus simple de les obtenir est de [télécharger un ZIP de la dernière branche principale du code <sup>(angl.)</sup>](https://codeload.github.com/mdn/learning-area/zip/main).
 - Si vous êtes à l'aise avec Git et GitHub, vous pouvez aussi choisir de cloner le dépôt.
@@ -62,7 +63,7 @@ Tous les exemples de code que vous rencontrerez dans la zone d'apprentissage son
 
 Si vous souhaitez nous contacter pour quelque raison que ce soit, utilisez les [canaux de communication](/fr/docs/MDN/Community/Communication_channels). Nous serions ravi·e·s d'avoir votre retour sur tout ce que vous pensez être erroné ou manquant sur le site, vos suggestions de nouveaux sujets d'apprentissage, vos demandes d'aide sur des points que vous ne comprenez pas, ou toute autre question ou préoccupation.
 
-Si vous souhaitez contribuer à l'amélioration du contenu, consultez [comment vous pouvez aider](/fr/docs/MDN/Community) et contactez-nous&nbsp;! Nous serons ravi·e·s d'échanger avec vous, que vous soyez apprenant·e, enseignant·e, développeur·euse web expérimenté·e ou toute autre personne souhaitant améliorer l'expérience d'apprentissage.
+Si vous souhaitez contribuer à l'amélioration du contenu, consultez [comment vous pouvez aider](/fr/docs/MDN/Community) et contactez-nous&nbsp;! Nous sommes ravi·e·s d'échanger avec vous, que vous soyez apprenant·e, enseignant·e, développeur·euse web expérimenté·e ou toute autre personne souhaitant améliorer l'expérience d'apprentissage.
 
 ## Voir aussi
 

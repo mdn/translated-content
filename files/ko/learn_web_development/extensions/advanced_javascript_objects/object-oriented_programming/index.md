@@ -22,11 +22,11 @@ l10n:
       <td>
         JavaScript 함수 이해, JavaScript 기본 사항
         (
-        <a href="/ko/docs/Learn/JavaScript/First_steps">첫 번째 단계</a> 및
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">첫 번째 단계</a> 및
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >빌딩 블록</a
         > 참조) 및 OOJS 기본 사항 (
-        <a href="/ko/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting/Object_basics"
           >객체 소개</a
         > 및 <a href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">객체 프로토타입</a> 참조).
       </td>

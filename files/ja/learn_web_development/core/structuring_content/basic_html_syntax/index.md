@@ -72,7 +72,7 @@ HTML は、**HTML 文書**、あるいは単に**文書**と呼ばれるテキ�
 - **終了タグ (Closing tag):** 開始タグと同じですが、要素名の前にスラッシュを記載します。これは、要素の終わりを示すものです。終了タグを記載し忘れるのは、初心者にありがちなミスで、おかしな結果を生むことがあります。
 
 > [!NOTE]
-> 学習パートナーである Scrimba の [HTML タグ](https://scrimba.com/learn-html-and-css-c0p/~02?via=MDN) <sup> [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> すくリムで HTML タグのインタラクティブな解説をご覧ください。
+> 学習パートナーである Scrimba の [HTML タグ](https://scrimba.com/learn-html-and-css-c0p/~02?via=MDN) <sup> [_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> すくリムで HTML タグのインタラクティブな解説をご覧ください。
 
 ### 最初の HTML 要素を作ってみる
 
@@ -195,7 +195,7 @@ This is my text.
 
 ### 論理属性
 
-属性値のない HTML 属性を見かけることがあるでしょう。これらは[論理属性](/ja/docs/Glossary/Boolean/HTML)」と呼ばれています。論理属性が追加された場合、その値は、代入された値（値が指定されていない場合も含む）にかかわらず、`true` に設定されます。HTML タグに属性が含まれていない場合、その値は `false` に設定されます。
+属性値のない HTML 属性を見かけることがあるでしょう。これらは[論理属性](/ja/docs/Glossary/Boolean/HTML)と呼ばれています。論理属性が追加された場合、その値は、代入された値（値が指定されていない場合も含む）にかかわらず、`true` に設定されます。HTML タグに属性が含まれていない場合、その値は `false` に設定されます。
 
 例えば、 [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) 属性を見ると、フォームの {{htmlelement("input")}} 要素に指定することができ、ユーザーが中にデータを入力することを阻止します。例を示します。
 
@@ -326,7 +326,7 @@ The above HTML snippets render like so:
 
 #### 例のセットアップ
 
-- ローカルマシンで行うので行うのであれば、次のようにします。
+- ローカルマシンで行うのであれば、次のようにします。
   1. 前の節で挙げた HTML ページの例をコピーし、コードエディター内の新しいファイルに貼り付けてください。この[基本的な HTML テンプレート](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)は、GitHub リポジトリーにもあります。
   2. [手順](#例の手順)に記載されている変更をページに加えましょう。
   3. ファイルを`index.html`として保存し、新しいブラウザーのタブで読み込んで結果を確認しましょう。

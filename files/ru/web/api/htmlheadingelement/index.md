@@ -7,14 +7,14 @@ slug: Web/API/HTMLHeadingElement
 
 **`HTMLHeadingElement`** интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
 _Наследует свойства родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLHeadingElement.align")}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+  - : Is a {{jsxref("String")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
 ## Методы
 

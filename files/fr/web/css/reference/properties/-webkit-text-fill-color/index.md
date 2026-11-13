@@ -1,11 +1,12 @@
 ---
-title: -webkit-text-fill-color
+title: Propriété CSS `-webkit-text-fill-color`
+short-title: -webkit-text-fill-color
 slug: Web/CSS/Reference/Properties/-webkit-text-fill-color
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-fill-color`** définit la couleur de remplissage {{CSSxRef("color_value", "&lt;color&gt;")}} des caractères du texte. Si cette propriété n'est pas définie, la valeur de la propriété {{CSSxRef("color")}} est utilisée.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-fill-color`** définit la couleur de remplissage {{CSSxRef("&lt;color&gt;")}} des caractères du texte. Si cette propriété n'est pas définie, la valeur de la propriété {{CSSxRef("color")}} est utilisée.
 
 ## Syntaxe
 
@@ -25,7 +26,9 @@ La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-text-fill-color`** définit la
 
 ### Valeurs
 
-- {{CSSxRef("color_value", "&lt;color&gt;")}}
+Cette propriété est définie comme une seule valeur `<color>`&nbsp;:
+
+- {{CSSxRef("&lt;color&gt;")}}
   - : La couleur utilisée pour colorer les lettres du texte.
 
 ## Définition formelle

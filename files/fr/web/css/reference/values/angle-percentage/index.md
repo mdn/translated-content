@@ -1,9 +1,9 @@
 ---
-title: <angle-percentage>
+title: Type CSS `<angle-percentage>`
+short-title: <angle-percentage>
 slug: Web/CSS/Reference/Values/angle-percentage
-original_slug: Web/CSS/angle-percentage
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle-percentage>`** représente une valeur qui peut être soit un {{CSSxRef("angle")}} soit un {{CSSxRef("percentage")}}.

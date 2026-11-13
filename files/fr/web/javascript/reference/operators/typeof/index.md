@@ -243,5 +243,5 @@ Pour vérifier des variables potentiellement inexistantes qui autrement déclenc
 
 ## Voir aussi
 
-- L'opérateur {{JSxRef("Operators/instanceof", "instanceof")}}
+- L'opérateur {{JSxRef("instanceof")}}
 - [La violation délibérée de la norme par `document.all` <sup>(angl.)</sup>](https://github.com/tc39/ecma262/issues/668)

@@ -38,7 +38,7 @@ prepend(param1, param2, /* …, */ paramN)
 
 ### 文書にルート要素を前置
 
-既存の HTML 文書に要素を追加しようとすると、{{HTMLElement("html")}} 要素が既に存在する場合は `HierarchyRequestError' {{domxref("DOMException")}} が発生するかもしれません。
+既存の HTML 文書に要素を追加しようとすると、{{HTMLElement("html")}} 要素が既に存在する場合は `HierarchyRequestError` {{domxref("DOMException")}} が発生するかもしれません。
 
 ```js
 let html = document.createElement("html");

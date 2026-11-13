@@ -1,16 +1,14 @@
 ---
-title: ServiceWorkerRegistration.update()
+title: "ServiceWorkerRegistration: update() メソッド"
+short-title: update()
 slug: Web/API/ServiceWorkerRegistration/update
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 **`update()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、サービスワーカーの更新を試みます。 ワーカーのスクリプト URL を読み取り、新しいワーカーが現在のワーカーとバイト単位で同一でない場合は、新しいワーカーをインストールします。 前回の読み取りが 24 時間以上前であった場合、ワーカーの読み取り時にブラウザーのキャッシュをバイパスします。
-
-> [!NOTE]
-> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
 ## 構文
 
@@ -59,7 +57,5 @@ if ("serviceWorker" in navigator) {
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) <sup>(英語)</sup>
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

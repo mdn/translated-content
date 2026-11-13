@@ -3,10 +3,10 @@ title: En-tête Proxy-Authorization
 short-title: Proxy-Authorization
 slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Proxy-Authorization`** contient les identifiants permettant d'authentifier un·e client·e auprès d'un serveur mandataire, généralement après que le serveur a répondu avec le statut {{HTTPStatus("407", "407 Proxy Authentication Required")}} et l'en-tête {{HTTPHeader("Proxy-Authenticate")}}.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Proxy-Authorization`** contient les identifiants permettant d'authentifier un client auprès d'un serveur mandataire, généralement après que le serveur a répondu avec le statut {{HTTPStatus("407", "407 Proxy Authentication Required")}} et l'en-tête {{HTTPHeader("Proxy-Authenticate")}}.
 
 <table class="properties">
   <tbody>
@@ -30,9 +30,9 @@ Proxy-Authorization: <auth-scheme> <credentials>
 ## Directives
 
 - `<auth-scheme>`
-  - : Un jeton insensible à la casse indiquant le [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#authentication_schemes) utilisé.
-    Parmi les types les plus courants sont [`Basic`](/fr/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` et `AWS4-HMAC-SHA256`.
-    L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais il existe d'autres schémas proposés par les services hôtes.
+  - : Un jeton insensible à la casse indiquant le [schéma d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#schémas_dauthentification) utilisé.
+    Parmi les types les plus courants sont [`Basic`](/fr/docs/Web/HTTP/Guides/Authentication#schémas_dauthentification_basic), `Digest`, `Negotiate` et `AWS4-HMAC-SHA256`.
+    L'IANA maintient une [liste des schémas d'authentification <sup>(angl.)</sup>](https://www.iana.org/assignments/http-authschemes), mais il existe d'autres schémas proposés par les services hôtes.
 - `<credentials>`
   - : Identifiants utilisés pour le schéma d'authentification.
     En général, il faut consulter les spécifications pertinentes pour connaître le format.
@@ -68,7 +68,7 @@ Proxy-Authorization: Bearer kNTktNTA1My00YzLT1234
 
 ## Voir aussi
 
-- [Authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
+- [L'authentification HTTP](/fr/docs/Web/HTTP/Guides/Authentication)
 - L'en-tête {{HTTPHeader("Proxy-Authenticate")}}
 - L'en-tête {{HTTPHeader("WWW-Authenticate")}}
 - L'en-tête {{HTTPHeader("Authorization")}}

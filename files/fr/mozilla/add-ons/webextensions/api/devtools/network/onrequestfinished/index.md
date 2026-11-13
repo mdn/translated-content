@@ -3,8 +3,6 @@ title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
 ---
 
-{{AddonSidebar}}
-
 Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.
 
 La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.

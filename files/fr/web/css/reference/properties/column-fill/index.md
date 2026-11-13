@@ -1,8 +1,9 @@
 ---
-title: column-fill
+title: Propriété CSS `column-fill`
+short-title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-fill`** contrôle la manière dont le contenu d'un élément est équilibré lorsqu'il est réparti en colonnes.
@@ -50,14 +51,14 @@ column-fill: revert-layer;
 column-fill: unset;
 ```
 
-La propriété `column-fill` est définie par l'un des mots-clés listés ci-dessous. La valeur initiale est `balance`, de sorte que le contenu est équilibré entre les colonnes.
-
 ### Valeurs
 
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
+
 - `auto`
-  - : Un mot-clé indiquant que les colonnes sont remplies dans l'ordre.
+  - : Les colonnes sont remplies séquentiellement. Le contenu occupe uniquement l'espace dont il a besoin, ce qui peut entraîner certaines colonnes restant vides.
 - `balance`
-  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les médias paginés, seule la dernière page est équilibrée.
+  - : Le contenu est réparti également entre les colonnes. Dans des contextes fragmentés, tels que [les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media), seule la dernière fraction est équilibrée. Par conséquent, dans les médias paginés, seule la dernière page est équilibrée. C'est la valeur par défaut.
 
 La spécification définit la valeur `balance-all`, dans laquelle le contenu est réparti également entre les colonnes dans des contextes fragmentés, tels que [les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media). Cette valeur n'est pas encore prise en charge par les navigateurs.
 

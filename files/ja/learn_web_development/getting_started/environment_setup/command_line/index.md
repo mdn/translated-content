@@ -1,11 +1,10 @@
 ---
 title: コマンドライン短期集中講座
+short-title: コマンドライン
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -36,7 +35,7 @@ l10n:
 
 ## ターミナルへようこそ
 
-ターミナルは、テキストベースのプログラムを実行するためのテキストインターフェイスです。ウェブ開発用のツールを実行している場合、選択したツールを使用するために、コマンドラインを開いていくつかのコマンドを実行する必要がある可能性がほぼ保証されています (**CLI ツール** — コマンドラインインターフェイスツールと呼ばれるツールをよく見かけます）。
+ターミナルは、テキストベースのプログラムを実行するためのテキストインターフェイスです。ウェブ開発用のツールを実行している場合、選択したツールを使用するために、コマンドラインを開いていくつかのコマンドを実行する必要がある可能性がほぼ保証されています (**CLI ツール** — コマンドラインインターフェイスツールと呼ばれるツールをよく見かけます)。
 
 コマンドラインにコマンドを入力すると、多数のツールを使用できます。多くはシステムにプリインストールされており、その他の膨大な数はパッケージレジストリーからインストールできます。
 パッケージレジストリーはアプリストアに似ていますが、(ほとんどの場合) コマンドラインベースのツールとソフトウェア用です。
@@ -88,9 +87,9 @@ macOS には、グラフィカルユーザーインターフェイスの下に�
 
 他のプログラミングツールと同様に、Windows でターミナル (またはコマンドライン) を使用することは、従来、他のオペレーティングシステムほど単純でも簡単でもありませんでした。しかし、状況は良くなっています。
 
-Windows には伝統的に `cmd` (「コマンドプロンプト」) と呼ばれる独自のターミナルのようなプログラムがありましたが、これは Unix コマンドとは著しく異なっており、古いスタイルの Windows DOS プロンプトと同等です。
+Windows には伝統的に `cmd` (「コマンドプロンプト」) と呼ばれる独自のターミナルのようなプログラムがありましたが、これは Unix コマンドとは異なっており、古いスタイルの Windows DOS プロンプトと同等です。
 
-Windows でターミナルの操作を提供するための優れたプログラムが存在します。たとえば、 PowerShell ([インストーラーを見つけるにはこちらをご覧ください](https://github.com/PowerShell/PowerShell)) や Gitbash （[git for Windows](https://gitforwindows.org/) ツールセットの一部として提供されます）があります。
+Windows でターミナルの操作を提供するための優れたプログラムが存在します。たとえば、 PowerShell ([インストーラーを見つけるにはこちらをご覧ください](https://github.com/PowerShell/PowerShell)) や Git Bash （[git for Windows](https://gitforwindows.org/) ツールセットの一部として提供されます）があります。
 
 ただし、現代の Windows に最適なオプションは、 Windows Subsystem for Linux (WSL) です。これは、Linux オペレーティングシステムを Windows 10 内から直接実行するための互換性レイヤーであり、仮想マシンを必要とせずに、Windows 上で直接「真のターミナル」を実行できます。
 
@@ -113,7 +112,7 @@ Windows で選択するオプションに関しては、WSL をインストー�
 説明はもう十分です — いくつかのターミナルコマンドを見てみましょう。コマンドラインですぐに実行できることのほんの一部を、それぞれの場合に関連するツールの名前とともに以下に示します。
 
 - 作成、コピー、名前変更、削除などの基本レベルのタスクとともに、コンピューターのファイルシステムをナビゲートします。
-  - ディレクトリーを移動: `cd`
+  - ディレクトリー（フォルダー）構造内で移動: `cd`
   - ディレクトリーの作成: `mkdir`
   - ファイルを作成 (およびそのメタデータを変更): `touch`
   - ファイルやディレクトリーのコピー: `cp`
@@ -132,32 +131,35 @@ Windows で選択するオプションに関しては、WSL をインストー�
 
 ### コマンドラインでの移動
 
-コマンドラインにアクセスすると、必然的に特定のディレクトリーに移動して「何かをする」必要があります。すべてのオペレーティングシステム（既定のセットアップを想定）では、ターミナルプログラムが「ホーム」ディレクトリーで起動するので、そこから別の場所に移動したくなるでしょう。
+コマンドラインにアクセスすると、必然的に特定のディレクトリーに移動して「何かをする」必要があります。すべてのオペレーティングシステム（既定のセットアップを想定）では、ターミナルプログラムがホームディレクトリーで起動するので、そこから別の場所に移動したくなるでしょう。
+
+> [!NOTE]
+> 「ディレクトリー」とは、前回の記事で「フォルダー」と呼んでいたものの専門用語です。ユーザーインターフェイス (UI) 上でファイル構造を確認する際には、表示されるアイコンが昔ながらの物理的な収納フォルダに似ているため、「フォルダー」という呼び方がより直感的です。しかし、特にコマンドラインを使ってファイルを操作する話になると、「ディレクトリー」という用語も頻繁に使用されている傾向があります。微妙な違いはありますが、基本的にこの 2 つの用語は同じ意味です。
 
 `cd` コマンドを使用すると、ディレクトリーへ移動できます。技術的には、cd はプログラムではなく組み込みコマンドです。これは、オペレーティングシステムがすぐに使用できることを意味し、誤って削除することはできません。コマンドが組み込みかどうかについてあまり心配する必要はありませんが、組み込みはすべての Unix ベースのシステムに表示されることに注意してください。
 
-あるディレクトリーへ移動するには、ターミナルに `cd` と入力し、その後に移動先のディレクトリーを入力します。ディレクトリーがホームディレクトリー内にある場合は、`cd Desktop` を使用することができます（以下のスクリーンショットを参照）。
+1. あるディレクトリーへ移動するには、ターミナルに `cd` と入力し、その後に移動先のディレクトリーを入力します。ディレクトリーがホームディレクトリー内にある場合は、`cd Desktop` を使用することができます（次のスクリーンショットを参照）。
 
-![cd Desktop コマンドをさまざまな Windows ターミナルで実行した結果 - ターミナルの場所がデスクトップに移されます。](win-terminals-cd.png)
+   ![cd Desktop コマンドをさまざまな Windows ターミナルで実行した結果 - ターミナルの場所がデスクトップに移されます。](win-terminals-cd.png)
 
-これをシステムのターミナルに入力してみてください。
+2. これをシステムのターミナルに入力してみてください。
 
-```bash
-cd Desktop
-```
+   ```bash
+   cd Desktop
+   ```
 
-前のディレクトリーに戻りたい場合は、2 つのドットを使用します。
+3. 前のディレクトリーに戻りたい場合は、2 つのドットを使用します。次のように入力してみてください。
 
-```bash
-cd ..
-```
+   ```bash
+   cd ..
+   ```
 
 > [!NOTE]
 > 存在することがわかっている名前をすべて入力するのではなく、<kbd>tab</kbd> キーを使用して自動補完することは、非常に便利なターミナルのショートカットです。たとえば、上記の 2 つのコマンドを入力した後、 `cd D` と入力して <kbd>tab</kbd> を押してみてください。現在のディレクトリーに存在する場合、ディレクトリー名 `Desktop` が自動補完されます。前進するときは、このことを念頭に置いてください。
 
-行きたいディレクトリーが深くネストされている場合、そこに到達するためのパスを知る必要があります。これは通常、ファイルシステムの構造に慣れるにつれて簡単になりますが、パスがわからない場合は、通常、`ls` コマンド (以下を参照) を組み合わせて、パスをクリックして見つけることができます。Explorer/Finder ウィンドウを使用して、現在の場所に関連するディレクトリーの場所を確認します。
+行きたいディレクトリーが深くネストされている場合、そこに到達するためのパスを知る必要があります。これは通常、ファイルシステムの構造に慣れるにつれて簡単になりますが、パスがわからない場合は、通常、`ls` コマンド（以下を参照）を組み合わせて、パスをクリックして見つけることができます。Explorer/Finder ウィンドウを使用して、現在の場所に関連するディレクトリーの場所を確認します。
 
-たとえば、`Desktop` にある `project` というディレクトリー内にある `src` というディレクトリーに移動する場合は、次の 3 つのコマンドを入力して、ホーム フォルダーからそこに移動できます。
+たとえば、デスクトップにある `project` というディレクトリー内にある `src` というディレクトリーに移動する場合は、次の 3 つのコマンドを入力して、ホームディレクトリーからそこに移動できます。
 
 ```bash
 cd Desktop
@@ -221,7 +223,7 @@ ls -l
 - `mkdir` — 現在のディレクトリー内に新しいディレクトリーを作成し、コマンド名の後に指定した名前が付けられます。たとえば、 `mkdir my-awesome-website` は `my-awesome-website` という名前の新しいディレクトリーを作成します。
 - `rmdir` — 指定されたディレクトリーを削除しますが、空の場合のみです。たとえば、 `rmdir my-awesome-website` は上で作成したディレクトリーを削除します。空ではないディレクトリーを削除したい場合（およびそこに含まれるすべてのものも削除したい場合）、代わりに `rm -r` を使用することができますが、これは危険です。ディレクトリー内に後で必要になる可能性があるものがないことを確認してください。永久に消去されますので。
 - `touch` — 現在のディレクトリー内に新しい空のファイルを作成します。たとえば、`touch mdn-example.md` は `mdn-example.md` という新しい空のファイルを作成します。
-- `mv` — 最初に指定されたファイルの場所から 2 番目に指定されたファイルの場所にファイルを移動します。たとえば、 `mv mdn-example.md mdn-example.txt` （場所はファイルパスとして書き込まれます）。このコマンドは、`mdn-example.md` 現在のディレクトリーにあるファイルに `mdn-example.txt` 現在のディレクトリーに。技術的にはファイルは移動されていますが、実用的な観点から見ると、このコマンドは実際にはファイルの名前を変更しています。
+- `mv` — 最初に指定されたファイルの場所から 2 番目に指定されたファイルの場所にファイルを移動します。たとえば、 `mv mdn-example.md mdn-example.txt` （場所はファイルパスとして書き込まれます）。このコマンドは、現在のディレクトリーにある `mdn-example.md` というファイルを、同じく現在のディレクトリーの `mdn-example.txt` というファイルに移動します。技術的にはファイルは移動されていますが、実用的な観点から見ると、このコマンドは実際にはファイルの名前を変更しています。
 - `cp` — 使い方は `mv` と似ていますが、`cp` は指定された最初の場所と 2 番目に指定された場所にファイルのコピーを作成します。たとえば、`cp mdn-example.txt mdn-example.txt.bak` は、`mdn-example.txt.bak` という名前の `mdn-example.txt` のコピーを作成します（もちろん、必要に応じて別の名前にすることもできます）。
 - `rm` — 指定されたファイルを削除します。たとえば、 `rm mdn-example.txt` は `mdn-example.txt` という単一のファイルを削除します。この削除は永続的であり、デスクトップユーザーインターフェイスにあるごみ箱から元に戻すことはできないことに注意してください。
 
@@ -235,9 +237,10 @@ ls -l
 ディレクトリーに 1000 個のテキストファイルがあり、それらすべてを調べて、ファイル名の中に特定の部分文字列を含むものだけを削除したいとします。注意しないと、重要なものを削除してしまい、その過程で作業が失われる可能性があります。
 良い習慣の 1 つは、ターミナルコマンドをテキストエディター内に書き出し、それがどのように表示されるかを考え、ディレクトリーのバックアップコピーを作成し、最初にそのコマンドを実行してテストすることです。
 
-もう 1 つのヒント — 自分のマシンでターミナルコマンドを試すのが苦手な場合は、 [Glitch.com](https://glitch.com/) で安全に試すことができます。プロジェクトは、ウェブ開発コードを試すのに最適な場所であるだけでなく、ターミナルへのアクセスも提供するため、これらすべてのコマンドをそのターミナルで直接実行できます。自分のマシンを壊すことはないので安全です。
+自分のマシンでターミナルコマンドを試すのが不安な場合は、オンラインで使えるターミナルがあります。自分のマシンを壊す心配なく、コマンドの入力を安全に練習できます。
 
-![glitch.com のホームページと glitch ターミナルエミュレーターを示す 2 つのスクリーンショット](glitch.png)
+- MDN の学習パートナーである [Scrimba](https://scrimba.com/home?via=mdn) の学習環境には、コマンドを入力できるターミナルがあります。実際に試すには、[Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup> コースがおすすめです。このコースでは、ターミナルを使ってファイルツリーを移動したり、ファイルやディレクトリーを操作したりする方法を、楽しく対話的に学べます。
+- sandbox.bio の [Command-line playground](https://sandbox.bio/playgrounds/terminal) は、ターミナルコマンドを試すのに最適な場所であり、コマンドラインインターフェイスや Bash などの一般的なシェルに慣れることができます。
 
 [tldr.sh](https://tldr.sh/) は、特定のターミナルコマンドの概要をすばやく把握するための優れたリソースです。これはコミュニティ主導のドキュメンテーションサービスで、MDN に似ていますが、ターミナルコマンドに固有です。
 
@@ -277,43 +280,37 @@ ls | wc -l
 
 もう少し複雑なことを見てみましょう。
 
-最初に、MDN の "fetch" ページ `https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド（URL からコンテンツを要求するために使用できる）を使用してコンテンツを取得します。
-やってみよう:
+1. 最初に、MDN の "fetch" ページ `https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド（URL からコンテンツを要求するために使用できる）を使用してコンテンツを取得します。やってみましょう。
 
-```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-```
+   ```bash
+   curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+   ```
 
-ページが（[/Web/API/fetch](/ja/docs/Web/API/Window/fetch) に）リダイレクトされているため、出力は得られません。
-`-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
+   ページが（[/Web/API/fetch](/ja/docs/Web/API/Window/fetch) に）リダイレクトされているため、出力は得られません。
+   `-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
-また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーションリダイレクトを出力します。("location" という単語を含むすべての行を返すように `grep` に依頼します)。
+2. また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーションリダイレクトを出力します。("location" という単語を含むすべての行を返すように `grep` に依頼します)。以下を実行してみてください（最終ページに到達する前にリダイレクトが 1 つだけあることがわかります）。
 
-以下を実行してみてください（最終ページに到達する前にリダイレクトが 1 つだけあることがわかります）。
+   ```bash
+   curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+   ```
 
-```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
-```
+   出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
 
-出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
+   ```bash
+   location: /ja/docs/Web/API/Window/fetch
+   ```
 
-```bash
-location: /en-US/docs/Web/API/fetch
-```
+3. 人為的ではありますが、この結果をもう少し進めて `location:` 行の内容を変換し、それぞれの先頭に基本オリジンを追加して、完全な URL を出力できるようにすることができます。そのため、 `awk` を追加します（これは JavaScript、Ruby、Python に似たプログラミング言語で、かなり古いものです）。これを実行してみてください。
 
-人為的ではありますが、この結果をもう少し進めて `location:` 行の内容を変換し、それぞれの先頭に基本オリジンを追加して、完全な URL を出力できるようにすることができます。
-そのため、 `awk` を追加します（これは JavaScript、Ruby、Python に似たプログラミング言語で、かなり古いものです）。
-
-これを実行してみてください。
-
-```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
-```
+   ```bash
+   curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+   ```
 
 最終的な出力は次のようになります。
 
 ```bash
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
+https://developer.mozilla.org/ja/docs/Web/API/Window/fetch
 ```
 
 これらのコマンドを組み合わせることで、`/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL をリクエストしたときに Mozilla サーバーがリダイレクトしている完全な URL を表示するように出力をカスタマイズしました。
@@ -326,16 +323,16 @@ https://developer.mozilla.org/en-US/docs/Web/API/fetch
 フロントエンドウェブ開発用のインストール可能なツールの広大なエコシステムは現在、主に [npm](https://www.npmjs.com) 内に存在します。これは、Node.js と密接に連携する個人所有のパッケージホスティングサービスです。
 これは徐々に拡大しています — 時間が経つにつれて、より多くのパッケージ プロバイダーが表示されることが期待できます。
 
-[Node.js](https://nodejs.org/en/) をインストールすると、 追加のコマンドラインツールをインストールするためのゲートウェイを提供する npm コマンドラインツール (および npx と呼ばれる補助的な npm 中心のツール) もインストールされます。Node.js と npm は、macOS、Windows、および Linux のすべてのシステムで同じように機能します。
+[Node.js をインストール](https://nodejs.org/en/)すると、 追加のコマンドラインツールをインストールするためのゲートウェイを提供する npm コマンドラインツール (および npx と呼ばれる補助的な npm 中心のツール) もインストールされます。Node.js と npm は、macOS、Windows、および Linux のすべてのシステムで同じように機能します。
 
 上記の URL にアクセスし、お使いのオペレーティングシステムに適した Node.js インストーラーをダウンロードして実行することにより、今すぐシステムに npm をインストールします。プロンプトが表示されたら、必ず npm をインストールの一部として含めてください。
 
 ![Windwos の Node.js インストーラーで、 npm を含めるオプションを示しています。](npm-install-option.png)
 
-次の記事以降ではさまざまなツールを見ていきますが、[Prettier](https://prettier.io/) について詳しく説明します。
-Prettier は、「オプションがわずか」しかない独自のコードフォーマッターです。
-オプションが少ないほど、シンプルになる傾向があります。
-複雑さの点でツールが手に負えなくなることがあることを考えると、「選択肢が少ない」ことは非常に魅力的です。
+ここでは、再び [Prettier](https://prettier.io/) を例として使用します。[コードエディター](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions)の記事では、VS Codeの拡張機能としてインストールする方法を示しました。ここでは、コマンドラインツールとしてインストールする方法をご紹介します。
+
+> [!NOTE]
+> Prettier は、「オプションがわずか」しかない独自のコードフォーマッターです。オプションが少ないほど、シンプルになる傾向があります。複雑さの点でツールが手に負えなくなることがあることを考えると、「選択肢が少ない」ことは非常に魅力的です。
 
 ### CLI ツールをどこにインストールするか
 
@@ -375,19 +372,17 @@ Prettier のできることは、次の通りです。
 
 この記事では、[Prettier インストールガイド](https://prettier.io/docs/en/install.html) で提案されているように、Prettier をローカルにインストールします。
 
-ノードをインストールしたらターミナルを開き、次のコマンドを実行して Prettier をインストールします（`--save-dev` が何をするかは、次の記事で説明します）。
+1. ノードをインストールしたらターミナルを開き、次のコマンドを実行して Prettier をインストールします（`--save-dev` が何をするかは、次の記事で説明します）。
 
-```bash
-npm install --save-dev prettier
-```
+   ```bash
+   npm install --save-dev prettier
+   ```
 
-[npx](https://docs.npmjs.com/cli/commands/npx) ツールを使用して、ファイルをローカルで実行できるようになりました。
-他の多くのコマンドと同様に、引数を指定せずにコマンドを実行すると、使用方法とヘルプ情報が表示されます。
-すぐに試してみましょう。
+2. [npx](https://docs.npmjs.com/cli/commands/npx) ツールを使用して、ファイルをローカルで実行できるようになりました。他の多くのコマンドと同様に、引数を指定せずにコマンドを実行すると、使用方法とヘルプ情報が表示されます。すぐに試してみましょう。
 
-```bash
-npx prettier
-```
+   ```bash
+   npx prettier
+   ```
 
 出力は次のようになります。
 
@@ -410,61 +405,59 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ### Prettier を始める
 
-Prettier で簡単に実行して、どのように機能するかを見てみましょう。
+Prettier を軽く実行して、どのように機能するかを見てみましょう。
 
-まず、ファイルシステムの見つけやすい場所に新しいディレクトリーを作成します。`Desktop` の `prettier-test` というディレクトリーかもしれません。
+1. まず、ファイルシステムの見つけやすい場所に新しいディレクトリーを作成します。`Desktop` の `prettier-test` というディレクトリーかもしれません。
 
-次のコードを test ディレクトリー内の `index.js` という名前の新しいファイルに保存します。
+2. 次のコードを test ディレクトリー内の `index.js` という名前の新しいファイルに保存します。
 
-```js-nolint
-const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
-```
+   ```js-nolint
+   const myObj = {
+   a:1,b:{c:2}}
+   function printMe(obj){console.log(obj.b.c)}
+   printMe(myObj)
+   ```
 
-コードベースに対して Prettier を実行して、コードの調整が必要かどうかを確認できます。ディレクトリーに `cd` して、次のコマンドを実行してみてください。
+3. コードベースに対して Prettier を実行して、コードの調整が必要かどうかを確認できます。ディレクトリーに `cd` して、次のコマンドを実行してみてください。
 
-```bash
-npx prettier --check index.js
-```
+   ```bash
+   npx prettier --check index.js
+   ```
 
-次の行に沿って出力されるはずです。
+   次の行に沿って出力されるはずです。
 
-```bash
-Checking formatting...
-index.js
-Code style issues found in the above file(s). Forgot to run Prettier?
-```
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues found in the above file(s). Forgot to run Prettier?
+   ```
 
-それで修正できるコードスタイルがいくつかあります。大丈夫です。`prettier` コマンドに `--write` オプションを追加すると、これらの問題が修正され、有用なコードを実際に書くことに集中できるようになります。
+4. それで修正できるコードスタイルがいくつかあります。大丈夫です。`prettier` コマンドに `--write` オプションを追加すると、これらの問題が修正され、有用なコードを実際に書くことに集中できるようになります。次のバージョンのコマンドを実行してみてください。
 
-次のバージョンのコマンドを実行してみてください。
+   ```bash
+   npx prettier --write index.js
+   ```
 
-```bash
-npx prettier --write index.js
-```
+   このような出力が得られます。
 
-このような出力が得られます。
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues fixed in the above file(s).
+   ```
 
-```bash
-Checking formatting...
-index.js
-Code style issues fixed in the above file(s).
-```
+   しかしもっと重要なことは、JavaScript ファイルを振り返ると、次のように再整形されていることがわかります。
 
-しかしもっと重要なことは、JavaScript ファイルを振り返ると、次のように再整形されていることがわかります。
-
-```js
-const myObj = {
-  a: 1,
-  b: { c: 2 },
-};
-function printMe(obj) {
-  console.log(obj.b.c);
-}
-printMe(myObj);
-```
+   ```js
+   const myObj = {
+     a: 1,
+     b: { c: 2 },
+   };
+   function printMe(obj) {
+     console.log(obj.b.c);
+   }
+   printMe(myObj);
+   ```
 
 ワークフロー (または選択したワークフロー) によっては、これをプロセスの自動化することができます。自動化は、ツールが優れているところです。私たちの個人的な好みは、何も構成する必要なく「ただ起こる」ような自動化です。
 
@@ -472,7 +465,7 @@ Prettier を使用すると、自動化を実現する方法がいくつかあ�
 
 - git リポジトリーにコミットする前に [Husky](https://github.com/typicode/husky) を使用します。
 - コードエディターで「保存」をクリックするたびに使用します。[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) または [Sublime Text](https://packagecontrol.io/packages/JsPrettier)。
-- [GitHub Actions](https://github.com/features/actions) などのツールを使用した継続的な統合チェックの一環として使用します。
+- [GitHub Actions](https://github.com/features/actions) などのツールを使用した{{glossary("continuous integration", "継続的な統合")}}チェックの一環として使用します。
 
 私たちの個人的な好みは 2 番目のものです。たとえば、VS Code を使用しているときに、Prettier が起動し、保存するたびに必要なフォーマットをクリーンアップします。[Prettier docs](https://prettier.io/docs/en/) で、さまざまな方法で Prettier を使用する方法についてさらに多くの情報を見つけることができます。
 

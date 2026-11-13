@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Syntax/Comments
 original_slug: Web/CSS/CSS_syntax/Comments
 ---
 
-{{CSSRef}}
-
 Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour empêcher le navigateur d'interpréter certaines parties de la feuille de style. Les commentaires n'ont donc aucun impact sur la disposition d'un document.
 
 ## Syntaxe

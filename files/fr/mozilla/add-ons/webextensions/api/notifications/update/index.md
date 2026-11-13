@@ -3,8 +3,6 @@ title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 
-{{AddonSidebar}}
-
 Met à jour une notification, compte tenu de son identifiant
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

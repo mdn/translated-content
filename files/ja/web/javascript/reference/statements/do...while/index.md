@@ -33,7 +33,7 @@ while (condition);
 - `statement`
   - : 少なくとも 1 回は実行され、条件が真と評価されるたびに再実行される文。[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)を使用して複数の文を実行することができます。
 - `condition`
-  - : ループを通過した後に毎回評価される式。もしこの条件が[真に評価された](/ja/docs/Glossary/Truthy)場合は、`statement` は再度実行されます。条件がが[偽に評価された](/ja/docs/Glossary/Falsy)場合は、制御が `do...while` に続く文へ渡ります。
+  - : ループを通過した後に毎回評価される式。もしこの条件が[真に評価された](/ja/docs/Glossary/Truthy)場合は、`statement` は再度実行されます。条件が[偽に評価された](/ja/docs/Glossary/Falsy)場合は、制御が `do...while` に続く文へ渡ります。
 
 ## 解説
 

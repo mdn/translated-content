@@ -1,11 +1,12 @@
 ---
-title: container
+title: Propriété CSS `container`
+short-title: container
 slug: Web/CSS/Reference/Properties/container
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
 ---
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`container`** établit l'élément comme conteneur de requêtes et précise le nom et le type du [contexte de compartimentation](/fr/docs/Web/CSS/Guides/Containment/Container_queries#contexte_de_compartimentation_nommé) utilisé dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
+La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`container`** établit l'élément comme conteneur de requêtes et précise le nom et le type du [contexte de compartimentation](/fr/docs/Web/CSS/Guides/Containment/Container_queries#contexte_de_compartimentation_nommé) utilisé dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
 
 ## Propriétés constituantes
 
@@ -50,7 +51,7 @@ container: unset;
 
 ## Exemples
 
-### Établir la compartimentation de la taille en ligne
+### Établir la compartimentation de la taille en incise
 
 L'exemple HTML ci-dessous est un composant de type carte contenant une image, un titre et du texte&nbsp;:
 
@@ -72,7 +73,7 @@ La manière explicite de créer un contexte de conteneur consiste à déclarer u
 }
 ```
 
-La propriété raccourcie `container` permet de définir cela plus simplement en une seule déclaration&nbsp;:
+La propriété raccourcie `container` est destiné à rendre cela définissable dans une seule déclaration&nbsp;:
 
 ```css
 .poste {

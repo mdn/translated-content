@@ -1,8 +1,9 @@
 ---
-title: flex-basis
+title: Propriété CSS `flex-basis`
+short-title: flex-basis
 slug: Web/CSS/Reference/Properties/flex-basis
 l10n:
-  sourceCommit: c4614bbe613c54975666cf8897ffc2a2ea7f8040
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété **`flex-basis`** [CSS](/fr/docs/Web/CSS) définit la taille principale initiale d'un {{Glossary("flex item", "élément flexible")}}. Elle définit la taille de la boîte de contenu sauf si elle est modifiée par {{CSSxRef("box-sizing")}}.
@@ -210,7 +211,7 @@ Cet exemple montre la différence entre une valeur de `flex-basis` de `0` et une
 
 #### HTML
 
-Nous incluons deux conteneurs flexibles de même structure, qui seront mis en forme de façon similaire à l'exception de leur valeur de `flex-basis`. Chaque conteneur possède deux enfants&nbsp;: un en-tête `<div>` et une balise `<section>`. L'élément `<section>` contient un enfant `<div>` de contenu, qui ne sera pas défini comme élément flexible mais auquel une hauteur sera attribuée.
+Nous incluons deux conteneurs flexibles de même structure, qui sont mis en forme de façon similaire à l'exception de leur valeur de `flex-basis`. Chaque conteneur possède deux enfants&nbsp;: un en-tête `<div>` et une balise `<section>`. L'élément `<section>` contient un enfant `<div>` de contenu, qui n'est pas défini comme élément flexible mais auquel une hauteur est attribuée.
 
 ```html
 <div class="container basis-0">
@@ -229,7 +230,7 @@ Nous incluons deux conteneurs flexibles de même structure, qui seront mis en fo
 
 #### CSS
 
-Nous appliquons une mise en forme aux conteneurs pour qu'ils soient des conteneurs flexibles en ligne qui apparaissent côte à côte afin de faciliter leur comparaison. Nous définissons la propriété `flex-direction` à `column`. Les éléments flexibles du premier conteneur ont une valeur de `flex-basis` de `0`, tandis que ceux du second conteneur ont une valeur de `flex-basis` de `0%`. Ni les conteneurs flexibles ni leurs éléments flexibles n'ont de hauteur explicitement définie&nbsp;; cependant, la hauteur des éléments `section` doit être d'au moins `200px`, et celle de leurs enfants est de `300px`.
+Nous appliquons une mise en forme aux conteneurs pour qu'ils soient des conteneurs flexibles en incise (<i lang="en">inline</i> en anglais) qui apparaissent côte à côte afin de faciliter leur comparaison. Nous définissons la propriété `flex-direction` à `column`. Les éléments flexibles du premier conteneur ont une valeur de `flex-basis` de `0`, tandis que ceux du second conteneur ont une valeur de `flex-basis` de `0%`. Ni les conteneurs flexibles ni leurs éléments flexibles n'ont de hauteur explicitement définie&nbsp;; cependant, la hauteur des éléments `section` doit être d'au moins `200px`, et celle de leurs enfants est de `300px`.
 
 ```css
 .container {

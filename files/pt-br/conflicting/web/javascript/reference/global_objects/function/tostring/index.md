@@ -44,4 +44,4 @@ Não faz parte de nenhum padrão. Implementado no JavaScript 1.3.
 
 ## Veja Também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

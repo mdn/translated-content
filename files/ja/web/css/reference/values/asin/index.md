@@ -1,8 +1,9 @@
 ---
-title: asin()
+title: CSS `asin()` 関数
+short-title: asin()
 slug: Web/CSS/Reference/Values/asin
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`asin()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`-1` から `1` までの数値の逆正弦を返す三角関数です。この関数には、 `-90deg` から `90deg` までの {{cssxref("angle")}} を返す単一の計算が含まれています。

@@ -3,8 +3,6 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
-{{AddonSidebar}}
-
 Lancé quand l'icône de la page action est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.
 
 Pour définir une action de clic droit, utilisez l'API {{WebExtAPIRef('contextMenus')}} avec l'élément "page_action" {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}.

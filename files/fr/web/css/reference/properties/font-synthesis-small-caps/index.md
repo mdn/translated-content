@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-small-caps
+title: Propriété CSS `font-synthesis-small-caps`
+short-title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-synthesis-small-caps`** permet de définir si le navigateur peut synthétiser la variante petite capitale lorsqu'elle n'est pas définie dans la famille de polices. Les glyphes en petites capitales utilisent généralement la forme des lettres majuscules mais sont réduits à la taille des lettres minuscules.
@@ -25,6 +26,8 @@ font-synthesis-small-caps: unset;
 ```
 
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `auto`
   - : Indique que la variante petite capitale manquante peut être synthétisée par le navigateur si besoin.

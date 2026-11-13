@@ -3,8 +3,6 @@ title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 ---
 
-{{Deprecated_header}}
-
 ## 概述
 
 `<frame>` 是 HTML 元素，它定义了一个特定区域，另一个 HTML 文档可以在里面展示。帧应该在 {{HTMLElement("frameset")}} 中使用。
