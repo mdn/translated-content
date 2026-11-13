@@ -25,7 +25,7 @@ Firefox の拡張機能に関する技術は、Chromium ベースのブラウザ
 
 ## 始めましょう
 
-[拡張機能で何ができるか](/ja/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)を確認してから、[初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)を作成し、[2 つ目の拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)を作成する前に。[拡張機能の構造](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)について学び、[Firefox スタイルの拡張機能開発および公開ワークフロー](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)の概要を取得しましょう。Firefox 上で直接実行可能な[拡張機能のサンプル](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)の充実した選択を、さらに詳しく探ってみましょう。学習を続けるには、[参考になるリソースの一覧](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next)をご覧ください。
+[拡張機能で何ができるか](/ja/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)を確認してから、[初めての拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)を作成し、[2 つ目の拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)を作成する前に、[拡張機能の構造](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)について学び、[Firefox スタイルの拡張機能開発および公開ワークフロー](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)の概要を取得しましょう。Firefox 上で直接実行可能な[拡張機能のサンプル](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)の充実した選択を、さらに詳しく探ってみましょう。学習を続けるには、[参考になるリソースの一覧](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next)をご覧ください。
 
 ## 概念
 

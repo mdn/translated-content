@@ -3,12 +3,15 @@ title: "FormData : méthode entries()"
 short-title: entries()
 slug: Web/API/FormData/entries
 l10n:
-  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
+  sourceCommit: b264328c7abee284014e09d5bfe1bab88898b27a
 ---
 
 {{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
 La méthode **`entries()`** de l'interface {{DOMxRef("FormData")}} retourne un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui parcourt toutes les paires clé/valeur contenues dans le {{DOMxRef("FormData")}}. La clé de chaque paire est une chaîne de caractères, et la valeur est soit une chaîne de caractères, soit un {{DOMxRef("Blob")}}.
+
+> [!NOTE]
+> Contrairement aux entrées de {{JSxRef("Map")}}, les entrées de `FormData` ne sont pas nécessairement uniques par clé. Un formulaire peut contenir plusieurs éléments portant le même nom, de sorte que la même clé peut apparaître dans plusieurs paires lors de l'itération. Après la première entrée, la valeur peut différer de la valeur de retour de {{DOMxRef("FormData.get()", "get()")}} qui retourne la première valeur associée à la clé.
 
 ## Syntaxe
 

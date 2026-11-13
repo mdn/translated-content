@@ -21,7 +21,7 @@ slug: Web/HTTP/Reference/Headers/Referer
 
 ## 语法
 
-```plain
+```http
 Referer: <url>
 ```
 

@@ -2,7 +2,7 @@
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 l10n:
-  sourceCommit: bbd7dfff9f34ca8cb851adfec767e2e17f24ea6e
+  sourceCommit: 52aca3c51ce0ff04036a13d4db471c9844d07b00
 ---
 
 La fonction **`isNaN()`** détermine si une valeur est {{JSxRef("NaN")}}, en convertissant d'abord la valeur en nombre si nécessaire. Comme la contrainte à l'intérieur de la fonction `isNaN()` peut être [surprenante](#description), vous pouvez préférer utiliser {{JSxRef("Number.isNaN()")}}.
@@ -37,15 +37,21 @@ isNaN(value)
 
 ### Valeur de retour
 
-`true` si la valeur donnée est {{JSxRef("NaN")}} après avoir été [convertie en nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre)&nbsp;; sinon, `false`.
+`true` si la valeur donnée est {{JSxRef("NaN")}} après avoir été [convertie en nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_nombre).
 
 ## Description
 
 `isNaN()` est une propriété fonction de l'objet global.
 
-Pour les valeurs numériques, `isNaN()` teste si le nombre vaut [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN). Lorsque l'argument passé à la fonction `isNaN()` n'est pas de type [nombre](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_nombre), la valeur est d'abord contrainte à un nombre, puis la valeur résultante est comparée à {{JSxRef("NaN")}}.
+Pour les valeurs numériques, `isNaN()` teste si le nombre vaut [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN). Lorsque l'argument passé à la fonction `isNaN()` n'est pas de type [nombre](/fr/docs/Web/JavaScript/Guide/Data_structures#le_type_nombre), la valeur est d'abord [convertie en nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_nombre), puis la valeur résultante est comparée à {{JSxRef("NaN")}}.
 
-Ce comportement de `isNaN()` pour les arguments non numériques peut prêter à confusion&nbsp;! Par exemple, une chaîne de caractères vide est convertie en 0, tandis qu'une valeur booléenne est convertie en 0 ou 1&nbsp;; ces deux valeurs ne sont intuitivement «&nbsp;pas des nombres&nbsp;», mais elles ne valent pas `NaN`, donc `isNaN()` retourne `false`. Ainsi, `isNaN()` ne répond ni à la question «&nbsp;l'entrée est-elle la valeur flottante {{JSxRef("NaN")}}&nbsp;» ni à la question «&nbsp;l'entrée n'est-elle pas un nombre&nbsp;».
+Ce comportement de `isNaN()` pour les arguments non numériques peut prêter à confusion&nbsp;! Par exemple&nbsp;:
+
+- [`null`](/fr/docs/Web/JavaScript/Guide/Data_structures#null_type) est convertit en 0
+- une chaîne de caractères vide est convertie en 0
+- un booléen est convertit en 0 ou 1
+
+Ces valeurs ne sont intuitivement «&nbsp;pas des nombres&nbsp;», mais elles ne valent pas `NaN`, donc `isNaN()` retourne `false`. Ainsi, `isNaN()` ne répond ni à la question «&nbsp;l'entrée est-elle la valeur flottante {{JSxRef("NaN")}}&nbsp;» ni à la question «&nbsp;l'entrée n'est-elle pas un nombre&nbsp;».
 
 {{JSxRef("Number.isNaN()")}} est une façon plus fiable de tester si une valeur est la valeur numérique `NaN` ou non. Alternativement, l'expression `x !== x` peut être utilisée, et aucune de ces solutions n'est sujette aux faux positifs qui rendent le `isNaN()` global peu fiable. Pour tester si une valeur est un nombre, utilisez [`typeof x === "number"`](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
 

@@ -1,5 +1,5 @@
 ---
-title: HTML `<center>` 中央揃えテキスト要素
+title: "`<center>` 中央揃えテキスト要素"
 short-title: <center>
 slug: Web/HTML/Reference/Elements/center
 l10n:

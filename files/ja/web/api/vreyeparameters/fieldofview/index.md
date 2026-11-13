@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`fieldOfView`** は{{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、現在の眼の視野角を表します．この値は瞳孔間距離 (IPD) をユーザーが調整すると、それに応じて変化します。
 

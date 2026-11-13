@@ -1,5 +1,5 @@
 ---
-title: HTML `<link>` 外部リソースへのリンク要素
+title: "`<link>` 外部リソースへのリンク要素"
 short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 l10n:

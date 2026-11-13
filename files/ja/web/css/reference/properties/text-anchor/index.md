@@ -1,5 +1,5 @@
 ---
-title: CSS `text-anchor` プロパティ
+title: "`text-anchor` プロパティ (CSS)"
 short-title: text-anchor
 slug: Web/CSS/Reference/Properties/text-anchor
 l10n:

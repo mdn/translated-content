@@ -226,7 +226,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
 
 プロミスを待つ代わりに、イベントを使用してフォントの読み込み処理を追跡することもできます。
 下記のコードは `loading` イベントと `loadingerror` イベントを待ち受け、それぞれの場合のフォントフェイスの数をログ出力しています。
-loadingdone`イベントリスナーでは、さらにフォントフェイスを反復処理し、ファミリー名をログ出力しています。
+`loadingdone`イベントリスナーでは、さらにフォントフェイスを反復処理し、ファミリー名をログ出力しています。
 
 ```js
 document.fonts.addEventListener("loading", (event) => {

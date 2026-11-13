@@ -3,12 +3,14 @@ title: Valeur d'attribut HTML `<input type="range">`
 short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 100cf25d92d3953f3c70ecaa2af637d5e42179d8
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`range`** permettent à l'utilisateur·ice d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de `{{HTMLElement("input/number", "number")}}` par exemple).
 
 Ce genre de composant n'étant pas précis, ce type ne doit pas être utilisé lorsque la valeur exacte fournie est importante.
+
+Si le navigateur de l'utilisateur·ice ne prend pas en charge le type `range`, il utilise le type `{{HTMLElement("input/text", "text")}}` à la place.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
@@ -45,8 +47,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-Si le navigateur de l'utilisateur·ice ne prend pas en charge le type `range`, il utilise le type `{{HTMLElement('input/text', 'text')}}` à la place.
 
 ## Valeur
 

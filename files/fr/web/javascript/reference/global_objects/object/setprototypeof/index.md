@@ -3,7 +3,7 @@ title: "Object : méthode statique setPrototypeOf()"
 short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 l10n:
-  sourceCommit: 00c3b9fb6ead031e43863460add87321f262696c
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.setPrototypeOf()`** définit le prototype (c'est-à-dire la propriété `[[Prototype]]` interne) de l'objet défini par un autre objet ou {{JSxRef("null")}}.
@@ -11,7 +11,7 @@ La méthode statique **`Object.setPrototypeOf()`** définit le prototype (c'est-
 > [!WARNING]
 > Changer le `[[Prototype]]` d'un objet est, par la nature des moteurs JavaScript modernes et la façon dont ils optimisent les accès aux propriétés, actuellement une opération très lente dans tous les navigateurs et moteurs JavaScript. De plus, les effets de la modification de l'héritage sont subtils et étendus, et ne se limitent pas au temps passé dans l'instruction `Object.setPrototypeOf(...)`, mais peuvent s'étendre à **_tout_** code ayant accès à un objet dont le `[[Prototype]]` a été modifié. Vous pouvez en lire davantage dans [Fondamentaux des moteurs JavaScript&nbsp;: optimisation des prototypes <sup>(angl.)</sup>](https://mathiasbynens.be/notes/prototypes).
 >
-> Parce que cette fonctionnalité fait partie du langage, il incombe toujours aux développeur·euse·s de moteurs de l'implémenter de manière performante (idéalement). Jusqu'à ce que les développeur·euse·s de moteurs résolvent ce problème, si vous vous souciez des performances, vous devez éviter de définir le `[[Prototype]]` d'un objet. À la place, créez un nouvel objet avec le `[[Prototype]]` souhaité en utilisant {{jsxref("Object.create()")}}.
+> Parce que cette fonctionnalité fait partie du langage, il incombe toujours aux développeur·euse·s de moteurs de l'implémenter de manière performante (idéalement). Jusqu'à ce que les développeur·euse·s de moteurs résolvent ce problème, si vous vous souciez des performances, vous devez éviter de définir le `[[Prototype]]` d'un objet. À la place, créez un nouvel objet avec le `[[Prototype]]` souhaité en utilisant {{JSxRef("Object.create()")}}.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Object.setPrototypeOf()")}}
 
@@ -47,10 +47,10 @@ L'objet défini.
 
 ### Exceptions
 
-- {{jsxref("TypeError")}}
+- {{JSxRef("TypeError")}}
   - : Une exception est levée dans l'un des cas suivants&nbsp;:
     - Le paramètres `obj` est `undefined` ou `null`.
-    - Le paramètre `obj` n'est [pas extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), ou c'est un [objet exotique à prototype immuable <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), tel que `Object.prototype` ou {{domxref("window")}}. Cependant, l'erreur n'est pas levée si le nouveau prototype est la même valeur que le prototype original de `obj`.
+    - Le paramètre `obj` n'est [pas extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), ou c'est un [objet exotique à prototype immuable <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), tel que `Object.prototype` ou {{DOMxRef("window")}}. Cependant, l'erreur n'est pas levée si le nouveau prototype est la même valeur que le prototype original de `obj`.
     - Le paramètre `prototype` n'est pas un objet ou {{JSxRef("null")}}.
 
 ## Description
@@ -146,10 +146,10 @@ L'héritage sans `extends` est mentionné dans [le sous-classement ES-6 <sup>(an
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.setPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- La méthode statique {{jsxref("Reflect.setPrototypeOf()")}}
-- La méthode {{jsxref("Object.prototype.isPrototypeOf()")}}
-- La méthode statique {{jsxref("Object.getPrototypeOf()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.setPrototypeOf` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- La méthode statique {{JSxRef("Reflect.setPrototypeOf()")}}
+- La méthode {{JSxRef("Object.prototype.isPrototypeOf()")}}
+- La méthode statique {{JSxRef("Object.getPrototypeOf()")}}
 - La propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - [Chaînes d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#construire_de_longues_chaînes_dhéritage)
 - [ES6 en profondeur&nbsp;: sous-classement <sup>(angl.)</sup>](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) sur hacks.mozilla.org (2015)

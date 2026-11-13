@@ -3,7 +3,7 @@ title: Propriété CSS `fill-rule`
 short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill-rule`** définit la règle utilisée pour déterminer quelles parties de la zone de dessin d'une forme SVG sont incluses à l'intérieur d'une forme à remplir. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill-rule")}} de l'élément.

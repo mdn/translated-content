@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
 >
-> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
+> **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。
 >
 > ---
 >
@@ -27,21 +27,21 @@ l10n:
 > ```
 >
 > - **title**
->   - : タイトルの見出しは、ページの最上部に表示されます。これはインターフェイスの名前だけです。例えば、 [Request](/ja/docs/Web/API/Request) インターフェイスのページには _Request_ というタイトルを付けます。
+>   - : タイトルの見出しは、ページの最上部に表示されます。これはインターフェイスの名前だけです。例えば、[Request](/ja/docs/Web/API/Request) インターフェイスのページには _Request_ というタイトルを付けます。
 > - **slug**
->   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/API/インターフェイス名` のような形式になります。例えば、 [Request](/ja/docs/Web/API/Request) のスラッグは "Web/API/Request" になります。
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/API/インターフェイス名` のような形式になります。例えば、[Request](/ja/docs/Web/API/Request) のスラッグは "Web/API/Request" になります。
 > - **sourceCommit**
->   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
+>   - : （翻訳記事のみ）翻訳元の英語版記事の GitHub コミット ID を記述します。GitHub 上で英語版記事のコミット ID を確認してください。
 >
 > ---
 >
 > **ページ先頭のマクロ**
 >
-> 既定では、テンプレートの先頭に 5 つのマクロ呼び出しがあります。以下のアドバイスに従って、これらを更新または削除する必要があります。
+> デフォルトでは、テンプレートの先頭に 5 つのマクロ呼び出しがあります。以下のアドバイスに従って、これらを更新または削除する必要があります。
 >
-> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
+> **訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
 >
-> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
+> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、[Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術が[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
@@ -53,21 +53,21 @@ l10n:
 > - `\{{AvailableInWorkers}}` — これにより、**ウェブワーカーで利用可能**というメモが生成され、その技術が [ウェブワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API) で利用可能であることを示します。
 >   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
 >   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
-> - `\{{APIRef("GroupDataName")}}` — これにより、現在のページに関連するクイックリファレンスリンクを表示する左側のサイドバーが生成されます。例えば、[WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、API 内の他のページへのリンクが掲載されています。この API 用に正しいサイドバーを生成するには、 GroupData 項目を追加し、マクロ呼び出し内の _GroupDataName_ の代わりにその項目名を記載する必要があります。この方法についての情報は、[API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドをご覧ください。
+> - `\{{APIRef("GroupDataName")}}` — これにより、現在のページに関連するクイックリファレンスリンクを表示する左側のサイドバーが生成されます。例えば、[WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、API 内の他のページへのリンクが掲載されています。この API 用に正しいサイドバーを生成するには、GroupData 項目を追加し、マクロ呼び出し内の _GroupDataName_ の代わりにその項目名を記載する必要があります。この方法についての情報は、[API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドをご覧ください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
 > **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
-> _公開前に、忘れずにこの説明文全体を削除してください。_
+> _この説明文全体を削除してから公開してください。_
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 概要の段落 - まず、インターフェイスの名前、それがどのインターフェイスに属しているか、そしてそれが何をするものなのかを述べます。これはできれば 1、2 の短い文にすべきです。対応する API ランディングページのインターフェイスの概要から、この大部分をコピーすることができます。
 
 `\{{InheritanceDiagram}}`
 
-_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
+_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## コンストラクター
 
@@ -122,7 +122,7 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` から継承したイベントもあります。_ （注: このインターフェイスが他のインターフェイスを継承していない場合は、この行全体を削除してください。）
 
-これらのイベントを待ち受けするには、 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入するかしてください。
+これらのイベントを待ち受けするには、{{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入するかしてください。
 
 - `\{{DOMxRef("NameOfTheInterface.event1", "event1")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : ～時に発生します（イベントがいつ発行されるかの説明を記載する）。
@@ -135,11 +135,11 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用しています。
+英語版では、例が 1 つだけのページでも、複数形の "Examples" を使用しています。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -164,29 +164,29 @@ _親インターフェイスである `\{{DOMxRef("NameOfParentInterface")}}` �
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
 >
-> この API の例については、 [fetch() のページ](https://example.org/)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
 
 ## 仕様書
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## 関連情報
 
-現在の API に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在の API に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2

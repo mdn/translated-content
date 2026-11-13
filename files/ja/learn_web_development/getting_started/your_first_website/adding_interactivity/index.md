@@ -88,7 +88,7 @@ listItems.forEach((item) => {
 
 ## "Hello world!" の手順を追って説明
 
-JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を順を追って追ってみましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
+JavaScript で記述を始めるにあたって、サンプルウェブサイトに _Hello world!_ の例を追加する手順を、順を追って見ていきましょう。（[_Hello world!_](https://ja.wikipedia.org/wiki/Hello_world) は、プログラミング入門の標準例です。）
 
 > [!WARNING]
 > これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/main)作業を進めてください。
@@ -230,7 +230,7 @@ JavaScript を使用して、見出しのテキストを `Hello world!` に変�
 
 この例を実行してユーザー名を入力するダイアログボックスが出たとき、*キャンセル*ボタンを押してみてください。結果として "null さん、Mozilla はかっこいいよ。" というタイトルが表示されるでしょう。これはプロンプトをキャンセルしたときに、値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定されるためです。JavaScriptでは、_null_ は値が存在しないことを表す特殊な値です。
 
-また、名前を入力せずに _OK_ を押してみてください。結果として " さん、Mozilla はかっこいいよ。" というタイトルが表示されます。これは `myName` を空文字列の設定したからです。
+また、名前を入力せずに _OK_ を押してみてください。結果として " さん、Mozilla はかっこいいよ。" というタイトルが表示されます。これは `myName` を空文字列に設定したからです。
 
 これらの問題を避けるために、ユーザーが名前を空白で入力していないことを調べる条件分岐を追加します。`setUserName()` 関数を次のように更新してください。
 
@@ -256,11 +256,11 @@ function setUserName() {
 
 行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js)と比べてみてください。
 
-この記事では、JavaScript に少し触れただけです。このコースの後半で学ぶコアモジュール [JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)」は、さらに多くのことを学べるでしょう。
+この記事では、JavaScript に少し触れただけです。このコースの後半にあるコアモジュール「[JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)」で、さらに多くのことを学べます。
 
 ## 関連情報
 
-- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) の _Learn JavaScript_ コースでは、140 以上の対話的なコーディング課題に取り組み、ゲームやブラウザー拡張機能、さらにはモバイルアプリなどのプロジェクトを構築しながら、JavaScript を学べます。Scrimba では、知識豊富な講師陣による楽しい対話的なレッスンが提供されています。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す方に最適な教材です! 対話的な環境で、短いレッスンと対話的なテスト、自動評価によるガイドで、 JavaScript を学ぶことができます。最初の 40 レッスンは無料です。全コースは少額の一括払いでご利用いただけます。

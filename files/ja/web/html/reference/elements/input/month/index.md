@@ -1,9 +1,9 @@
 ---
-title: HTML `<input type="month">` 属性値
+title: '`<input type="month">` 属性値'
 short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`month`** 型は、ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。
@@ -12,7 +12,7 @@ l10n:
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="start">Start month:</label>
+<label for="start">開始月:</label>
 
 <input type="month" id="start" name="start" min="2018-03" value="2018-05" />
 ```
@@ -31,18 +31,6 @@ label {
 }
 ```
 
-コントロールのユーザーインターフェイスは、一般にブラウザーによって異なります。現時点では対応が不安定であり、デスクトップ版の Chrome/Opera と Edge — および最新のバージョンのモバイルブラウザー — のみに利用可能な実装があります。
-`month` 入力欄に対応していないブラウザーでは、コントロールは [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) に格下げされますが、入力されたテキストが期待されている形式であることを保証するための自動検証が行われることもあります。
-
-`month` に対応していないブラウザーを使用している場合のために、このスクリーンショットで Chrome と Opera でどのように見えるかを示します。
-右端にある下向き矢印をクリックすると、年と月を選択できる日付選択が表示されます。
-
-![Chrome ブラウザーでの month コントロール](month-control-chrome.png)
-
-Microsoft Edge では、 `month` コントロールはこのように表示されます。
-
-![Edge ブラウザーの month コントロール](month-control-edge.png)
-
 ## 値
 
 文字列で、入力欄に入力された年と月の値を YYYY-MM（4 桁以上の年に続いてハイフン (`-`)、続いて 2 桁の月）の形式で表します。
@@ -50,7 +38,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ### デフォルト値の設定
 
-入力コントロールのデフォルト値は、次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に年と月を入れることで設定することができます。
+この入力コントロールのデフォルト値は、次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に年と月を入れることで設定することができます。
 
 ```html
 <label for="bday-month">生まれた月は？</label>
@@ -59,7 +47,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
 
-一点気を付けなければならないことは、表示される日付の書式は実際の `value` とは異なるということです。多くの{{Glossary("User agent", "ユーザーエージェント")}}は、年と月をユーザーのオペレーティングシステムに設定されたロケールに適した形式で表示しますが、日付の `value` は常に `yyyy-MM` の書式です。
+一点気を付けなければならないことは、表示される日付の書式は実際の `value` とは異なるということです。多くの{{Glossary("user agent", "ユーザーエージェント")}}は、年と月をユーザーのオペレーティングシステムに設定されたロケールに適した形式で表示しますが、日付の `value` は常に `yyyy-MM` の書式です。
 
 上記の値がサーバーへ送信された場合は、例えば、 `bday-month=1978-06` のようになります。
 
@@ -94,7 +82,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 最新の年月で、上記の[値](#値)で説明した文字列の書式です。
 要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。
-`max` 属性の値が `yyyy-MM` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+`max` 属性の値が、有効な `yyyy-MM` の書式に従う文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年月を指定する必要があります。
 
@@ -102,7 +90,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 受け付ける最古の年月で、前述と同じ `yyyy-MM` の書式です。
 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれより前の場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。
-`min` 属性の値が "`yyyy-MM-dd`" の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
+`min` 属性の値が、有効な年月の文字列でなかった場合、入力欄は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年月を指定する必要があります。
 
@@ -130,17 +118,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 日付に関する入力欄は (`month` を含め) 一見すると便利に見えます。日付の選択に簡単なユーザーインターフェイスを提供し、サーバーに送信するデータの書式をユーザーのロケールに関係なく正規化してくれます。
 しかし、現時点ではブラウザーの対応が限定されているため、 `<input type="month">` には問題があります。
 
-`<input type="month">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ([ブラウザーの互換性の扱い](#ブラウザーの互換性の扱い) を参照してください)。
+`<input type="month">` の基本的な使い方と少し複雑な使い方を見てから、[ブラウザーの互換性の扱い](#ブラウザーの互換性の扱い)で、ブラウザーの互換性の問題を緩和する方法を説明します。
 
 ### 月入力の基本的な使用
 
 もっとも基本的な `<input type="month">` の使用方法は、次のように基本的な {{HTMLElement("input")}} と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
-<form>
-  <label for="bday-month">生まれた月を入力してください。</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
+<label for="bday-month">生まれた月を入力してください。</label>
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
@@ -151,15 +137,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 次の例では、日付の最小値を `1900-01` に、日付の最大値を `2013-12` に指定しています。
 
 ```html
-<form>
-  <label for="bday-month">生まれた月を入力してください。</label>
-  <input
-    id="bday-month"
-    type="month"
-    name="bday-month"
-    min="1900-01"
-    max="2013-12" />
-</form>
+<label for="bday-month">生まれた月を入力してください。</label>
+<input
+  id="bday-month"
+  type="month"
+  name="bday-month"
+  min="1900-01"
+  max="2013-12" />
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -167,7 +151,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 次のような結果になります。
 
 - 1900 年 1 月から 2013 年 12 月までの間の月のみが選択できます。この範囲から外れた月は、コントロール内でスクロールできません。
-- 使用しているブラウザーによりますが、指定された範囲外の月が月選択で選択できないか (Edge など)、無効になるものの ([検証](#検証) を参照) 選択できるか (Chrome など) だということが分かるでしょう。
+- 使用しているブラウザーによりますが、指定された範囲外の月が月選択で選択できないか（Edge など）、無効になるものの（[検証](#検証)を参照）選択できるか（Chrome など）だということが分かるでしょう。
 
 ### 入力欄の寸法の制御
 
@@ -179,7 +163,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 デフォルトで、 `<input type="month">` は入力された値の検証を行いません。
 ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも `month` 入力欄を空のまま、または無効な日付 (例えば 4 月 32 日など) を入力してフォームを送信することが可能です。
 
-これを防ぐために、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を用いて利用可能な日を制限することができ ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定) を参照)、加えて [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を用いて、日付を入力することを必須にすることができます。
+これを防ぐために、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を用いて利用可能な日を制限することができ（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、加えて [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を用いて、日付を入力することを必須にすることができます。
 結果として、対応しているブラウザーは、範囲外の日付や空の日付フィールドを送信しようとするとエラーを表示します。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
@@ -205,14 +189,16 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 年と月を指定せずに（または設定した範囲を外れた日付を）送信しようとすると、ブラウザーはエラーを表示します。
 例を実行してみましょう。
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
-
-対応しているブラウザーで入力しなかった場合のスクリーンショットです。
-
-![Chrome ブラウザーでの月が必要とするプロンプト](month-required.png)
 
 上記の例の CSS です。
 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} プロパティを使用して、現在の値が有効かどうかに基づいてスタイルを設定しています。
@@ -253,15 +239,14 @@ input:valid + span::after {
 
 ## ブラウザーの互換性の扱い
 
-前述のように、現時点で日付入力を書く上で一番の問題は、多くの主要なブラウザーがまだすべてを実装している訳ではないということです。デスクトップでは Chrome/Opera と Edge のみが対応しており、モバイルでは多くの最新のブラウザーが対応しています。
-例えば、 `month` の選択画面は Android 版 Chrome ではこのように表示されます。
+コントロールの UI は一般にブラウザーによって異なります。現時点では対応が不十分で、デスクトップの Chromium 系ブラウザーとモバイルブラウザーのみが実用的な実装に対応しています。コントロールは通常、カレンダーのようなグリッドか、2 つのホイール式ピッカーとして表示されます。
 
-![Chrome for Android での月ピッカー](month-android.png)
+`month` 入力欄に対応していないブラウザーでは、コントロールは [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) に格下げされますが、入力されたテキストが期待される形式であることを確認する自動検証が行われる場合もあります。しかし、これはユーザーインターフェイスの一貫性（表示されるコントロールが異なること）とデータの扱いの両方で問題を引き起こします。
 
-対応していないブラウザーでは、テキスト入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
-
-2 番目の問題はより深刻です。すでに述べたように、 `month` 入力欄では、実際の値が常に `yyyy-mm` の書式で正規化されます。
+2 番目の問題はより深刻です。
+すでに述べたように、 `month` 入力欄では、実際の値が常に `yyyy-mm` の書式で正規化されます。
 一方、デフォルトの設定では、 `text` 入力欄ではどの書式で入力されるかの認識がなく、以下のように人間が日付を書く様々な方法で入力される可能性があります。
+例を示します。
 
 - `mmyyyy` (072022)
 - `mm/yyyy` (07/2022)
@@ -271,7 +256,7 @@ input:valid + span::after {
 - ... などなど。
 
 これを回避する方法の一つは、 `month` 入力欄に [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性を付けることです。
-`month` 入力欄はこれを使用しないので、 `text` 入力欄などとして扱うようフォールバックされたときに、このパターンを使用します。
+`month` 入力欄はこれを使用しないので、 `text` 入力欄などで代替される場合に、このパターンを使用します。
 例えば、次の例を `month` 入力欄に未対応のブラウザーで見てみてください。
 
 ```html-nolint
@@ -296,10 +281,16 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
-`nnnn-nn` のパターン (`n` は数字の0から9) に一致しない文字列を入力して送信しようとすると、エラーメッセージが表示される (そして入力欄が無効として強調表示される) のが分かるでしょう。
-もちろん、これでユーザーが無効な日付を入力したり (`0000-42` など)、パターンに合わない誤った書式の日付が入力されたりすることを止めることはできません。
+`nnnn-nn` のパターン（`n` は数字の0から9）に一致しない文字列を入力して送信しようとすると、エラーメッセージが表示される (そして入力欄が無効として強調表示される) のが分かるでしょう。
+もちろん、これでユーザーが無効な日付を入力したり（`0000-42` など）、パターンに合わない誤った書式の日付が入力されたりすることを止めることはできません。
 
 また、ユーザーが数ある日付形式の中で期待されるものがどれであるかを知らない可能性もあります。
 後はその分の作業が残っています。
@@ -342,42 +333,40 @@ input:valid + span::after {
 
 ### HTML
 
-年と月を入力するフォームはこのようになります。
+年と月を入力する HTML はこのようになります。
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="month-visit">何月にいらっしゃいますか？</label>
-    <input type="month" id="month-visit" name="month-visit" />
-    <span class="validity"></span>
+<div class="nativeDatePicker">
+  <label for="month-visit">何月にいらっしゃいますか？</label>
+  <input type="month" id="month-visit" name="month-visit" />
+  <span class="validity"></span>
+</div>
+<p class="fallbackLabel">何月にいらっしゃいますか？</p>
+<div class="fallbackDatePicker">
+  <div>
+    <span>
+      <select id="year" name="year"></select>
+      <label for="year">年</label>
+    </span>
+    <span>
+      <select id="month" name="month">
+        <option selected>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+      <label for="month">月</label>
+    </span>
   </div>
-  <p class="fallbackLabel">何月にいらっしゃいますか？</p>
-  <div class="fallbackDatePicker">
-    <div>
-      <span>
-        <select id="year" name="year"></select>
-        <label for="year">年</label>
-      </span>
-      <span>
-        <select id="month" name="month">
-          <option selected>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
-        </select>
-        <label for="month">月</label>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 `nativeDatePicker` の ID がついた {{HTMLElement("div")}} は、年と月をリクエストするために `month` 入力欄を用いるのに対し、 `fallbackDatePicker` の ID がついた `<div>` は代わりに一対の `<select>` 要素を使用します。
@@ -419,8 +408,8 @@ input:valid + span::after {
 
 この例の面白いもう一つの部分は、機能の検出コードです。
 ブラウザーが `<input type="month">` に対応しているかどうかを検出するために、新たな {{htmlelement("input")}} 要素を生成し、その `type` を `month` に設定して、すぐに type に何が設定されたかをチェックします。
-対応していないブラウザーでは、`month` が フォールバックされて `text` が返されます。
-`<input type="month">` に対応していない場合は、ネイティブの日付選択を非表示にしてフォールバック用の選択ユーザーインターフェイスを表示します。
+対応していないブラウザーでは、`month` が `text` で代替されて返されます。
+`<input type="month">` に対応していない場合は、ネイティブの日付選択を非表示にして代替の選択ユーザーインターフェイスを表示します。
 
 ```js
 // UI 要素の取得
@@ -431,11 +420,11 @@ const fallbackLabel = document.querySelector(".fallbackLabel");
 const yearSelect = document.querySelector("#year");
 const monthSelect = document.querySelector("#month");
 
-// Hide fallback initially
+// 最初は代替 UI を非表示にする
 fallbackPicker.style.display = "none";
 fallbackLabel.style.display = "none";
 
-// Test whether a new date input falls back to a text input or not
+// 新しい日付入力欄がテキスト入力欄で代替されるか確認する
 const test = document.createElement("input");
 
 try {
@@ -444,24 +433,24 @@ try {
   console.log(e.description);
 }
 
-// If it does, run the code inside the if () {} block
+// テキスト入力欄で代替される場合は、if ブロック内のコードを実行する
 if (test.type === "text") {
-  // Hide the native picker and show the fallback
+  // ネイティブのピッカーを非表示にして、代替 UI を表示する
   nativePicker.style.display = "none";
   fallbackPicker.style.display = "block";
   fallbackLabel.style.display = "block";
 
-  // Populate the years dynamically
-  // (the months are always the same, therefore hardcoded)
+  // 年を動的に設定する
+  // (月は常に同じなので、ハードコードする)
   populateYears();
 }
 
 function populateYears() {
-  // Get the current year as a number
+  // 現在の年を数値として取得する
   const date = new Date();
   const year = date.getFullYear();
 
-  // Make this year, and the 100 years before it available in the year <select>
+  // 現在の年とその 100 年前までの年を year <select> で選択できるようにする
   for (let i = 0; i <= 100; i++) {
     const option = document.createElement("option");
     option.textContent = year - i;
@@ -511,14 +500,6 @@ function populateYears() {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

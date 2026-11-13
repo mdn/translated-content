@@ -52,7 +52,7 @@ user-select: unset;
 ```
 
 > [!NOTE]
-> `user-select` n'est pas une propriété héritée, bien que la valeur initiale `auto` fasse qu'elle se comporte comme si elle était héritée la plupart du temps. Les navigateurs basés sur WebKit/Chromium _implémentent_ la propriété comme héritée, ce qui viole le comportement décrit dans la spécification, et cela entraînera certains problèmes. Jusqu'à présent, Chromium a choisi de [corriger les problèmes <sup>(ang.)</sup>](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) pour que le comportement final respecte les spécifications.
+> `user-select` n'est pas une propriété héritée, bien que la valeur initiale `auto` fasse qu'elle se comporte comme si elle était héritée la plupart du temps. Les navigateurs basés sur WebKit/Chromium _implémentent_ la propriété comme héritée, ce qui transgresse le comportement décrit dans la spécification, et cela entraîne certains problèmes. Jusqu'à présent, Chromium a choisi de [corriger les problèmes <sup>(ang.)</sup>](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) pour que le comportement final respecte les spécifications.
 
 ### Valeurs
 
@@ -68,7 +68,7 @@ user-select: unset;
 - `text`
   - : Le texte peut être sélectionné par l'utilisateur·ice.
 - `all`
-  - : Le contenu de l'élément doit être sélectionné de manière atomique&nbsp;: si une sélection contient une partie de l'élément, alors la sélection doit contenir l'intégralité de l'élément, y compris tous ses descendants. Si un double-clic ou un clic contextuel se produit dans des sous-éléments, l'ancêtre le plus élevé avec cette valeur sera sélectionné.
+  - : Le contenu de l'élément doit être sélectionné de manière atomique&nbsp;: si une sélection contient une partie de l'élément, alors la sélection doit contenir l'intégralité de l'élément, y compris tous ses descendants. Si un double-clic ou un clic contextuel se produit dans des sous-éléments, l'ancêtre le plus élevé avec cette valeur est sélectionné.
 
 > [!NOTE]
 > Le module [d'interface utilisateur de base CSS](/fr/docs/Web/CSS/Guides/Basic_user_interface) définit une valeur `contain` pour la propriété `user-select` afin de permettre à la sélection de commencer à l'intérieur de l'élément pour être contenue dans les limites de cet élément, cependant, cela n'est pris en charge dans aucun navigateur.
@@ -86,22 +86,22 @@ user-select: unset;
 ### HTML
 
 ```html
-<p>Vous devriez pouvoir sélectionner ce texte.</p>
-<p class="unselectable">Hop, vous ne pouvez pas sélectionner ce texte !</p>
-<p class="all">
-  Cliquer une fois permettra de sélectionner l'ensemble du texte.
+<p>Vous devez pouvoir sélectionner ce texte.</p>
+<p class="non-selectionnable">
+  Hop, vous ne pouvez pas sélectionner ce texte !
 </p>
+<p class="tout">Cliquer une fois permet de sélectionner l'ensemble du texte.</p>
 ```
 
 ### CSS
 
 ```css
-.unselectable {
+.non-selectionnable {
   -webkit-user-select: none; /* Safari */
   user-select: none;
 }
 
-.all {
+.tout {
   -webkit-user-select: all;
   user-select: all;
 }

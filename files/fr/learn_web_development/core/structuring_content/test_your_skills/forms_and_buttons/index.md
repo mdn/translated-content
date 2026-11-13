@@ -3,7 +3,7 @@ title: "Testez vos compétences : Formulaires et boutons"
 short-title: "Test : Formulaires et boutons"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 l10n:
-  sourceCommit: 3cd2de993df83bd5e738abe0a28bd5702af78c11
+  sourceCommit: bfead5c281d92a213f0191746fd98a6bdc4dc457
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Structuring_content")}}
@@ -57,6 +57,14 @@ Voici le code sous-jacent pour ce point de départ&nbsp;:
 </form>
 ```
 
+```js hidden live-sample___forms-buttons-1-finished live-sample___forms-buttons-6 live-sample___forms-buttons-6-finished
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 Le formulaire mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("forms-buttons-1-finished", "100%", 150)}}
@@ -104,34 +112,32 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___forms-buttons-2
-<form>
-  <fieldset>
-    <legend>Quel est votre poney préféré ?</legend>
-    <ul>
-      <li>
-        <label for="licorne">La petite licorne</label>
-      </li>
-      <li>
-        <label for="soleil">Rayon de soleil</label>
-      </li>
-      <li>
-        <label for="crepuscule">Étoile du crépuscule</label>
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Préférences de hot-dog</legend>
-    <ul>
-      <li>
-        <label for="vegan">Végan</label>
-      </li>
-      <li>
-        <label for="onions">Oignons</label>
-      </li>
-    </ul>
-  </fieldset>
-  <button>Envoyer</button>
-</form>
+<fieldset>
+  <legend>Quel est votre poney préféré ?</legend>
+  <ul>
+    <li>
+      <label for="licorne">La petite licorne</label>
+    </li>
+    <li>
+      <label for="soleil">Rayon de soleil</label>
+    </li>
+    <li>
+      <label for="crepuscule">Étoile du crépuscule</label>
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Préférences de hot-dog</legend>
+  <ul>
+    <li>
+      <label for="vegan">Végan</label>
+    </li>
+    <li>
+      <label for="onions">Oignons</label>
+    </li>
+  </ul>
+</fieldset>
+<button>Envoyer</button>
 ```
 
 Le formulaire mis à jour doit ressembler à ceci&nbsp;:
@@ -144,48 +150,46 @@ Le formulaire mis à jour doit ressembler à ceci&nbsp;:
 Votre code HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___forms-buttons-2-finished
-<form>
-  <fieldset>
-    <legend>Quel est votre poney préféré ?</legend>
-    <ul>
-      <li>
-        <label for="licorne">La petite licorne</label>
-        <input type="radio" id="licorne" name="pony" value="licorne" checked />
-      </li>
-      <li>
-        <label for="soleil">Rayon de soleil</label>
-        <input type="radio" id="soleil" name="pony" value="soleil" />
-      </li>
-      <li>
-        <label for="crepuscule">Étoile du crépuscule</label>
-        <input type="radio" id="crepuscule" name="pony" value="crepuscule" />
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Préférences de hot-dog</legend>
-    <ul>
-      <li>
-        <label for="vegan">Végan</label>
-        <input type="checkbox" id="vegan" name="hotdog_vegan" />
-      </li>
-      <li>
-        <label for="ognions">Oignons</label>
-        <input type="checkbox" id="ognions" name="hotdog_ognions" />
-      </li>
-      <li>
-        <label for="moutarde">Moutarde</label>
-        <input type="checkbox" id="moutarde" name="hotdog_moutarde" />
-      </li>
+<fieldset>
+  <legend>Quel est votre poney préféré ?</legend>
+  <ul>
+    <li>
+      <label for="licorne">La petite licorne</label>
+      <input type="radio" id="licorne" name="pony" value="licorne" checked />
+    </li>
+    <li>
+      <label for="soleil">Rayon de soleil</label>
+      <input type="radio" id="soleil" name="pony" value="soleil" />
+    </li>
+    <li>
+      <label for="crepuscule">Étoile du crépuscule</label>
+      <input type="radio" id="crepuscule" name="pony" value="crepuscule" />
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Préférences de hot-dog</legend>
+  <ul>
+    <li>
+      <label for="vegan">Végan</label>
+      <input type="checkbox" id="vegan" name="hotdog_vegan" />
+    </li>
+    <li>
+      <label for="ognions">Oignons</label>
+      <input type="checkbox" id="ognions" name="hotdog_ognions" />
+    </li>
+    <li>
+      <label for="moutarde">Moutarde</label>
+      <input type="checkbox" id="moutarde" name="hotdog_moutarde" />
+    </li>
 
-      <li>
-        <label for="ketchup">Ketchup</label>
-        <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
-      </li>
-    </ul>
-  </fieldset>
-  <button>Envoyer</button>
-</form>
+    <li>
+      <label for="ketchup">Ketchup</label>
+      <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
+    </li>
+  </ul>
+</fieldset>
+<button>Envoyer</button>
 ```
 
 </details>
@@ -206,29 +210,27 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___forms-buttons-3
-<form>
-  <h2>Modifier vos préférences</h2>
-  <ul>
-    <li>
-      <label for="courriel">Courriel</label>
-    </li>
-    <li>
-      <label for="site-web">Site web</label>
-    </li>
-    <li>
-      <label for="telephone">Numéro de téléphone</label>
-    </li>
-    <li>
-      <label for="couleur-fav">Couleur préférée</label>
-    </li>
-    <li>
-      <button>Mettre à jour les préférences</button>
-    </li>
-  </ul>
-</form>
+<h2>Modifier vos préférences</h2>
+<ul>
+  <li>
+    <label for="courriel">Courriel</label>
+  </li>
+  <li>
+    <label for="site-web">Site web</label>
+  </li>
+  <li>
+    <label for="telephone">Numéro de téléphone</label>
+  </li>
+  <li>
+    <label for="couleur-fav">Couleur préférée</label>
+  </li>
+  <li>
+    <button>Mettre à jour les préférences</button>
+  </li>
+</ul>
 ```
 
-Le formulaire mis à jour doit ressembler à ceci&nbsp;:
+Le contrôle mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("forms-buttons-3-finished", "100%", 250)}}
 
@@ -238,30 +240,25 @@ Le formulaire mis à jour doit ressembler à ceci&nbsp;:
 Votre code HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___forms-buttons-3-finished
-<form>
-  <h2>Modifier vos préférences</h2>
-  <ul>
-    <li>
-      <label for="courriel">Courriel</label>
-      <input type="email" id="courriel" name="courriel" />
-    </li>
-    <li>
-      <label for="site-web">Site web</label>
-      <input type="url" id="site-web" name="site-web" />
-    </li>
-    <li>
-      <label for="telephone">Numéro de téléphone</label>
-      <input type="tel" id="telephone" name="telephone" />
-    </li>
-    <li>
-      <label for="couleur-fav">Couleur préférée</label>
-      <input type="color" id="couleur-fav" name="couleur-fav" />
-    </li>
-    <li>
-      <button>Mettre à jour les préférences</button>
-    </li>
-  </ul>
-</form>
+<h2>Modifier vos préférences</h2>
+<ul>
+  <li>
+    <label for="courriel">Courriel</label>
+    <input type="email" id="courriel" name="courriel" />
+  </li>
+  <li>
+    <label for="site-web">Site web</label>
+    <input type="url" id="site-web" name="site-web" />
+  </li>
+  <li>
+    <label for="telephone">Numéro de téléphone</label>
+    <input type="tel" id="telephone" name="telephone" />
+  </li>
+  <li>
+    <label for="couleur-fav">Couleur préférée</label>
+    <input type="color" id="couleur-fav" name="couleur-fav" />
+  </li>
+</ul>
 ```
 
 </details>
@@ -283,21 +280,16 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___forms-buttons-4
-<form>
-  <ul>
-    <li>
-      <label for="nourriture">Choisissez votre nourriture préférée :</label>
+<ul>
+  <li>
+    <label for="nourriture">Choisissez votre nourriture préférée :</label>
 
-      Salade Curry Pizza Fajitas Biscuits Chips Fruit Bâtonnets de pain
-    </li>
-    <li>
-      <button>Envoyer le choix</button>
-    </li>
-  </ul>
-</form>
+    Salade Curry Pizza Fajitas Biscuits Chips Fruit Bâtonnets de pain
+  </li>
+</ul>
 ```
 
-Le formulaire mis à jour doit ressembler à ceci&nbsp;:
+Le contrôle mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("forms-buttons-4-finished", "100%", 120)}}
 
@@ -307,41 +299,36 @@ Le formulaire mis à jour doit ressembler à ceci&nbsp;:
 Votre code HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___forms-buttons-4-finished
-<form>
-  <ul>
-    <li>
-      <label for="nourriture">Choisissez votre nourriture préférée :</label>
-      <select name="nourriture" id="nourriture">
-        <optgroup label="plats principaux">
-          <option>Salade</option>
-          <option>Curry</option>
-          <option>Pizza</option>
-          <option>Fajitas</option>
-        </optgroup>
-        <optgroup label="snacks">
-          <option>Biscuits</option>
-          <option>Chips</option>
-          <option>Fruit</option>
-          <option>Bâtonnets de pain</option>
-        </optgroup>
-      </select>
-    </li>
-    <li>
-      <button>Envoyer le choix</button>
-    </li>
-  </ul>
-</form>
+<ul>
+  <li>
+    <label for="nourriture">Choisissez votre nourriture préférée :</label>
+    <select name="nourriture" id="nourriture">
+      <optgroup label="plats principaux">
+        <option>Salade</option>
+        <option>Curry</option>
+        <option>Pizza</option>
+        <option>Fajitas</option>
+      </optgroup>
+      <optgroup label="snacks">
+        <option>Biscuits</option>
+        <option>Chips</option>
+        <option>Fruit</option>
+        <option>Bâtonnets de pain</option>
+      </optgroup>
+    </select>
+  </li>
+</ul>
 ```
 
 </details>
 
 ## Formulaires et boutons n°5
 
-Dans cette tâche, nous voulons que vous structuriez les fonctionnalités de formulaire fournies.
+Dans cette tâche, nous voulons que vous structurez les fonctionnalités de formulaire fournies.
 
 Pour compléter la tâche&nbsp;:
 
-1. Séparez les deux premiers champs de formulaire et les deux derniers en deux conteneurs distincts, chacun avec une légende descriptive (utilisez "Détails personnels" pour les deux premiers, et "Informations sur le commentaire" pour les deux derniers).
+1. Séparez les deux premiers champs de formulaire et les deux derniers en deux conteneurs distincts, chacun avec une légende descriptive (utilisez «&nbsp;Détails personnels&nbsp;» pour les deux premiers, et «&nbsp;Informations sur le commentaire&nbsp;» pour les deux derniers).
 2. Marquez chaque étiquette de texte avec un élément approprié afin qu'elle soit sémantiquement associée à son champ de formulaire respectif.
 3. Ajoutez un ensemble approprié d'éléments structurels autour des paires étiquette/champ pour les séparer.
 
@@ -352,22 +339,20 @@ Le point de départ de la tâche ressemble à ceci&nbsp;:
 Voici le code sous-jacent pour ce point de départ&nbsp;:
 
 ```html live-sample___forms-buttons-5
-<form>
-  Nom :
-  <input type="text" id="nom" name="nom" />
+Nom :
+<input type="text" id="nom" name="nom" />
 
-  Âge :
-  <input type="number" id="age" name="age" />
+Âge :
+<input type="number" id="age" name="age" />
 
-  Commentaire :
-  <input type="text" id="commentaire" name="commentaire" />
+Commentaire :
+<input type="text" id="commentaire" name="commentaire" />
 
-  Courriel :
-  <input type="email" id="courriel" name="courriel" />
-</form>
+Courriel :
+<input type="email" id="courriel" name="courriel" />
 ```
 
-Le formulaire mis à jour doit ressembler à ceci&nbsp;:
+Le contrôle mis à jour doit ressembler à ceci&nbsp;:
 
 {{EmbedLiveSample("forms-buttons-5-finished", "100%", 300)}}
 
@@ -377,34 +362,32 @@ Le formulaire mis à jour doit ressembler à ceci&nbsp;:
 Votre code HTML final doit ressembler à ceci&nbsp;:
 
 ```html live-sample___forms-buttons-5-finished
-<form>
-  <fieldset>
-    <legend>Détails personnels</legend>
-    <ul>
-      <li>
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" />
-      </li>
-      <li>
-        <label for="age">Âge :</label>
-        <input type="number" id="age" name="age" />
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Informations sur le commentaire</legend>
-    <ul>
-      <li>
-        <label for="commentaire">Commentaire :</label>
-        <input type="text" id="commentaire" name="commentaire" />
-      </li>
-      <li>
-        <label for="courriel">Courriel :</label>
-        <input type="email" id="courriel" name="courriel" />
-      </li>
-    </ul>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Détails personnels</legend>
+  <ul>
+    <li>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" />
+    </li>
+    <li>
+      <label for="age">Âge :</label>
+      <input type="number" id="age" name="age" />
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Informations sur le commentaire</legend>
+  <ul>
+    <li>
+      <label for="commentaire">Commentaire :</label>
+      <input type="text" id="commentaire" name="commentaire" />
+    </li>
+    <li>
+      <label for="courriel">Courriel :</label>
+      <input type="email" id="courriel" name="courriel" />
+    </li>
+  </ul>
+</fieldset>
 ```
 
 </details>

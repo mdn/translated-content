@@ -3,7 +3,7 @@ title: En-tête Content-Disposition
 short-title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: d8a98813a991199d24cf40bc74298850d8b41e37
 ---
 
 L'en-tête HTTP **`Content-Disposition`** indique si le contenu doit être affiché _en incise_ (<i lang="en">inline</i> en anglais) dans le navigateur en tant que page Web ou partie de page Web, ou téléchargé en tant que _pièce jointe_ localement.
@@ -37,12 +37,16 @@ Le premier paramètre dans le contexte HTTP est soit `inline` (valeur par défau
 
 ```http
 Content-Disposition: inline
+Content-Disposition: inline; filename="file name.jpg"
+Content-Disposition: inline; filename*=UTF-8''nom%20de%20fichier.jpg
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="nom de fichier.jpg"
 Content-Disposition: attachment; filename*=UTF-8''nom%20de%20fichier.jpg
 ```
 
 Les guillemets autour du nom de fichier sont optionnels, mais nécessaires si vous utilisez des caractères spéciaux dans le nom, comme des espaces.
+
+Un paramètre `filename` peut également être fourni avec `Content-Disposition: inline`. Les navigateurs peuvent l'utiliser comme nom par défaut lorsque l'utilisateur·ice enregistre la ressource, par exemple avec la commande «&nbsp;Enregistrer sous&nbsp;».
 
 Les paramètres `filename` et `filename*` diffèrent uniquement en ce que `filename*` utilise l'encodage défini dans la {{RFC("5987", "", "3.2")}}.
 Lorsque `filename` et `filename*` sont présents dans une même valeur de champ d'en-tête, `filename*` est préféré à `filename` lorsque les deux sont compris. Il est recommandé d'inclure les deux pour une compatibilité maximale, et vous pouvez convertir `filename*` en `filename` en remplaçant les caractères non-ASCII par des équivalents ASCII (par exemple, convertir `é` en `e`).
@@ -51,7 +55,7 @@ Il est conseillé d'éviter les séquences d'échappement en pourcentage dans `f
 Les navigateurs peuvent appliquer des transformations pour respecter les exigences du système de fichiers, comme convertir les séparateurs de chemin (`/` et `\`) en tirets bas (`_`).
 
 > [!NOTE]
-> Chrome, et Firefox 82 et versions ultérieures, privilégient l'attribut `download` de [l'élément HTML `<a>`](/fr/docs/Web/HTML/Reference/Elements/a) par rapport au paramètre `Content-Disposition: inline` (pour les [URL de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy)). Les versions antérieures de Firefox privilégient l'en-tête et affichent le contenu en incise.
+> L'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download) de l'élément HTML `<a>`, lorsqu'il est respecté, remplace le comportement `Content-Disposition: inline`, mais le paramètre `filename` de `Content-Disposition` remplace le nom dans l'attribut `download`.
 
 ### En tant qu'en-tête pour un corps à plusieurs parties
 
@@ -71,7 +75,7 @@ name="nomFichier"; filename="nomfichier.jpg"
 ## Directives
 
 - `name`
-  - : Est suivie d'une chaîne de caractères contenant le nom du champ HTML dans le formulaire auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) d'un élément {{HTMLElement("input","&lt;input type=\"file\"&gt;")}}), il peut y avoir plusieurs sous-parties portant le même nom.
+  - : Est suivie d'une chaîne de caractères contenant le nom du champ HTML dans le formulaire auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) d'un élément HTML {{HTMLElement("input", "&lt;input type=\"file\"&gt;")}}), il peut y avoir plusieurs sous-parties portant le même nom.
 
     Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les parties sans information de charset explicite.
 

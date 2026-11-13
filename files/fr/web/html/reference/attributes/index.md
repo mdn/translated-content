@@ -3,7 +3,7 @@ title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: b8ffa5128ed5afe5f76b8936723f91d86b8fc7df
+  sourceCommit: 2e0b9415ed31484a4830e214eff9e06e408c7261
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -1072,7 +1072,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>Cet attribut indique si l'élément peut être édité.</td>
     </tr>
     <tr>
-      <td><code>referrerpolicy</code></td>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
       <td>
         {{HTMLElement("a")}}, {{HTMLElement("area")}},
         {{HTMLElement("iframe")}}, {{HTMLElement("img")}},

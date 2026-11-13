@@ -62,19 +62,19 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 _Inherits methods from its parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
+  - : Copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
 
 <!---->
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
+  - : Copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
 <!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.
+  - : Copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copies the current waveform, or time-domain, data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
+  - : Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
 ## Examples
 

@@ -3,7 +3,7 @@ title: Fonction CSS `shape()`
 short-title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 l10n:
-  sourceCommit: cd0970bc03cf30a9a8089954cc542a17dbe9eba3
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{CSSxRef("border-shape")}}, {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
@@ -67,7 +67,7 @@ clip-path: shape(
     > `<fill-rule>` n'est pas pris en charge dans {{CSSxRef("offset-path")}} et son utilisation invalide la propriété.
 
 - `from <coordinate-pair>`
-  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box). Les coordonnées sont définies comme des valeurs `<x> <y>` {{CSSxRef("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
+  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#la_boîte_de_référence). Les coordonnées sont définies comme des valeurs `<x> <y>` {{CSSxRef("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
 
 - `<shape-command>`
   - : Définit une liste d'une ou plusieurs commandes séparées par des virgules qui décrivent la forme, en utilisant une syntaxe similaire aux [commandes de chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d#commandes_de_tracé). Les commandes incluent `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>` et `close`. Le point de départ de chaque commande est le point d'arrivée de la commande précédente, le premier point étant défini par le paramètre [`from <coordinate-pair>`](#from_coordinate-pair).
@@ -155,7 +155,7 @@ Les `<shape-command>` suivantes peuvent être définies&nbsp;:
 
 ## Description
 
-La fonction `shape()` permet de définir des formes complexes. Elle est similaire à la fonction de forme {{CSSxRef("basic-shape/path","path()")}} à plusieurs égards&nbsp;:
+La fonction `shape()` permet de définir des formes complexes. Elle est similaire à la fonction de forme {{CSSxRef("basic-shape/path", "path()")}} à plusieurs égards&nbsp;:
 
 - Le paramètre `<fill-rule>` fonctionne exactement comme dans la fonction `path()`.
 - La fonction `shape()` exige une ou plusieurs `<shape-command>`, chacune utilisant une [commande de chemin](/fr/docs/Web/SVG/Reference/Attribute/d#commandes_de_tracé) sous-jacente, comme [MoveTo](/fr/docs/Web/SVG/Reference/Attribute/d#commande_moveto_path), [LineTo](/fr/docs/Web/SVG/Reference/Attribute/d#commande_lineto_path) et [ClosePath](/fr/docs/Web/SVG/Reference/Attribute/d#closepath).

@@ -35,7 +35,7 @@ Pour une liste d'exemples de jeux, voir nos [tutoriels](/fr/docs/Games/Tutorials
 - [HTML5 Gamedev Starter <sup>(angl.)</sup>](https://html5devstarter.enclavegames.com/)
   - : Ressource de démarrage pour les nouveaux développeur·euse·s de jeux, une liste sélectionnée de liens vers diverses ressources utiles sur le web.
 - [js13kGames <sup>(angl.)</sup>](https://js13kgames.com/)
-  - : Concours de programmation JavaScript pour développeur·euse·s de jeux HTML avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux soumis sont disponibles dans un format lisible sur GitHub.
+  - : Concours de programmation JavaScript pour développeur·euse·s de jeux HTML avec une limite de taille de fichier fixée à 13 kilo-octets. Tous les jeux envoyés sont disponibles dans un format lisible sur GitHub.
 - [Mozilla Hacks Blog <sup>(angl.)</sup>](https://hacks.mozilla.org/category/games/)
   - : Catégorie «&nbsp;Jeux&nbsp;» du blog Mozilla Hacks contenant des articles intéressants liés au développement de jeux.
 - [Games section on wiki.mozilla.org <sup>(angl.)</sup>](https://wiki.mozilla.org/Platform/Games)

@@ -3,7 +3,7 @@ title: "Array : méthode filter()"
 short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 9f46f08d20b21498293cbf6b84f508103272ec6f
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`filter()`** des instances de {{JSxRef("Array")}} crée une [copie superficielle](/fr/docs/Glossary/Shallow_copy) d'une portion d'un tableau donné, filtrée pour ne contenir que les éléments du tableau d'origine qui passent le test implémenté par la fonction fournie.
@@ -206,6 +206,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.filter` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
@@ -214,5 +216,3 @@ console.log(
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - La méthode {{JSxRef("TypedArray.prototype.filter()")}}
-- [La prothèse d'émulation de `Array.prototype.filter` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [La prothèse d'émulation es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)

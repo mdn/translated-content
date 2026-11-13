@@ -3,7 +3,7 @@ title: "DisposableStack : méthode adopt()"
 short-title: adopt()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/adopt
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`adopt()`** des instances de {{JSxRef("DisposableStack")}} enregistre une valeur qui n'implémente pas le protocole de libération dans la pile en fournissant une fonction de libération personnalisée.
@@ -19,7 +19,7 @@ adopt(value, onDispose)
 - `value`
   - : Toute valeur à enregistrer dans la pile.
 - `onDispose`
-  - : Une fonction qui sera appelée lors de la libération de la pile. La fonction reçoit `value` comme seul argument.
+  - : Une fonction qui est appelée lors de la libération de la pile. La fonction reçoit `value` comme seul argument.
 
 ### Valeur de retour
 
@@ -36,7 +36,7 @@ La même valeur `value` qui a été passée en argument.
 
 L'objectif principal de `adopt()` est d'enregistrer une valeur qui n'implémente pas le protocole de libération dans la pile. Si la valeur est déjà libérable, vous pouvez utiliser {{JSxRef("DisposableStack/use", "use()")}} à la place, ce qui utilise automatiquement la méthode `[Symbol.dispose]()` de la valeur comme fonction de libération.
 
-`adopt(value, onDispose)` est presque identique à `defer(() => onDispose(value))`, mais elle permet de déclarer la ressource et de l'enregistrer sur la même ligne. Ainsi, il y a peu de chances qu'une erreur survienne entre la création et l'enregistrement de la ressource, ce qui pourrait entraîner une fuite de la ressource.
+`adopt(value, onDispose)` est presque identique à `defer(() => onDispose(value))`, mais elle permet de déclarer la ressource et de l'enregistrer sur la même ligne. Ainsi, il y a peu de chances qu'une erreur survienne entre la création et l'enregistrement de la ressource, ce qui peut entraîner une fuite de la ressource.
 
 ```js example-good
 using disposer = new DisposableStack();
@@ -49,7 +49,7 @@ const reader = disposer.adopt(stream.getReader(), (reader) =>
 using disposer = new DisposableStack();
 const reader = stream.getReader();
 // Si quelqu'un ajoute du code entre ces lignes et qu'une erreur
-// survient, le flux restera verrouillé indéfiniment.
+// survient, le flux reste verrouillé indéfiniment.
 disposer.defer(() => reader.close());
 ```
 
@@ -65,7 +65,7 @@ disposer.adopt(reader, (reader) => reader.close());
 
 ### Utiliser la méthode `adopt()`
 
-Ce code consomme un {{DOMxRef("ReadableStream")}} via un {{DOMxRef("ReadableStreamDefaultReader")}}. Le lecteur n'implémente pas le protocole de libération, donc nous utilisons `adopt()` pour l'enregistrer dans la pile.
+Ce code consomme un {{DOMxRef("ReadableStream")}} avec un {{DOMxRef("ReadableStreamDefaultReader")}}. Le lecteur n'implémente pas le protocole de libération, donc nous utilisons `adopt()` pour l'enregistrer dans la pile.
 
 ```js
 {
@@ -91,6 +91,7 @@ Ce code consomme un {{DOMxRef("ReadableStream")}} via un {{DOMxRef("ReadableStre
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack.prototype.adopt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - L'objet natif {{JSxRef("DisposableStack")}}
 - La méthode {{JSxRef("DisposableStack.prototype.defer()")}}

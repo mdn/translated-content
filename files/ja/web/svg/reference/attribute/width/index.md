@@ -630,7 +630,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">デフォルト値</th>
-      <td><code>auto</code> (treated as <code>0</code>)</td>
+      <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -804,7 +804,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">デフォルト値</th>
-      <td><code>auto</code> (treated as <code>100%</code>)</td>
+      <td><code>auto</code>（<code>100%</code> として扱われる）</td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

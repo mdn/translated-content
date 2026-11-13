@@ -22,7 +22,7 @@ l10n:
 
 名前付き後方参照は、通常の後方参照とよく似ています。キャプチャグループによって照合されたテキストを参照し、同じテキストに一致します。異なる点は、キャプチャグループを番号ではなく名前で参照することです。これにより、正規表現がより読み取りやすくなり、 リファクタリングや保守が簡単になります。
 
-[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、正規表現が少なくとも 1 つの名前付きキャプチャグループを格納している場合にのみ、シーケンス `\k` は名前付き後方参照を開始します。それ以外の場合、これは [ID エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)であり、リテラル文字 `k`` と同じです。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
+[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、正規表現が少なくとも 1 つの名前付きキャプチャグループを格納している場合にのみ、シーケンス `\k` は名前付き後方参照を開始します。それ以外の場合、これは [ID エスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)であり、リテラル文字 `k` と同じです。これは[ウェブの互換性のための非推奨構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)としてのみ認められており、頼ってはいけません。
 
 ```js
 /\k/.test("k"); // true

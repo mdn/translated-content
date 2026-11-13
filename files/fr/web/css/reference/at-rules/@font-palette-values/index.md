@@ -3,7 +3,7 @@ title: Règle CSS `@font-palette-values`
 short-title: "@font-palette-values"
 slug: Web/CSS/Reference/At-rules/@font-palette-values
 l10n:
-  sourceCommit: e328268bb418551ab451881845881b5837c9da83
+  sourceCommit: d571e753a6e1aa3f37c775f0308690bc738cdbe6
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-palette-values`** permet de personnaliser les valeurs par défaut de la [palette de police](/fr/docs/Web/CSS/Reference/Properties/font-palette) créée par le·la créateur·ice de la police.
@@ -68,11 +68,11 @@ p {
 
 #### Résultat
 
-Lorsque vous remplacez les couleurs de la palette normale ou de la palette de base à l'index 0, il n'est pas nécessaire de déclarer quelle palette de base utiliser. Cela ne doit être fait que si vous remplacez une autre palette de base. Si vous remplacez toutes les couleurs, il n'est pas non plus nécessaire de spécifier la palette de base à utiliser.
+Lorsque vous remplacez les couleurs de la palette normale ou de la palette de base à l'index 0, il n'est pas nécessaire de déclarer quelle palette de base utiliser. Cela ne doit être fait que si vous remplacez une autre palette de base. Si vous remplacez toutes les couleurs, il n'est pas non plus nécessaire de définir la palette de base à utiliser.
 
 {{EmbedLiveSample("remplacer_les_couleurs_dune_palette_existante")}}
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

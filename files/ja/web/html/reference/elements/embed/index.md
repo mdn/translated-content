@@ -1,5 +1,5 @@
 ---
-title: HTML `<embed>` 埋め込み外部コンテンツ要素
+title: "`<embed>` 埋め込み外部コンテンツ要素"
 short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 l10n:

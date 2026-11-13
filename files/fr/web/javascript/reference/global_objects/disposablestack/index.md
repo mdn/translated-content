@@ -2,7 +2,7 @@
 title: DisposableStack
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 L'objet **`DisposableStack`** représente une pile [de libérateurs (<i lang="en">disposals</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Statements/using) à exécuter lorsque la pile elle-même est libérée (<i lang="en">disposed</i> en anglais). Les fonctions de libération sont exécutées dans l'ordre inverse de leur enregistrement, avec de solides garanties de gestion des erreurs. L'appel de sa méthode `move()` transfère la responsabilité d'appeler les fonctions de libération actuellement enregistrées vers une nouvelle `DisposableStack` et empêche l'enregistrement de fonctions de libération supplémentaires.
@@ -71,7 +71,7 @@ Ces propriétés sont définies sur `DisposableStack.prototype` et partagées pa
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `DisposableStack` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#explicit-resource-management)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DisposableStack` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/explicit-resource-management)
 - [Gestion des ressources JavaScript](/fr/docs/Web/JavaScript/Guide/Resource_management)
 - Le symbole {{JSxRef("Symbol.dispose")}}
 - La déclaration {{JSxRef("Statements/using", "using")}}

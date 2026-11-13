@@ -22,7 +22,7 @@ En conséquence, nous visons à limiter strictement le périmètre de _Apprendre
 - Les technologies fondamentales nécessaires au début du parcours d'un·e développeur·euse web dans nos [modules de base](/fr/docs/Learn_web_development/Core).
 - Les sujets de «&nbsp;seconde vague&nbsp;» qui représentent les prochaines étapes utiles pour les débutant·e·s ayant maîtrisé les modules de base, dans nos [modules d'extension](/fr/docs/Learn_web_development/Extensions).
 
-_Apprendre_ n'est pas destiné à accueillir sur MDN du contenu introductif sur _tous_ les sujets. Cela signifie que les sujets de niche comme MathML et les jeux web, ainsi que les sujets avancés ou spécialisés comme les expressions régulières, les tests de performance, WebRTC et WebGPU, n'ont pas leur place dans _Apprendre_.
+_Apprendre_ n'est pas destiné à accueillir sur MDN du contenu introductif sur _tous_ les sujets. Cela signifie que les sujets de niche comme MathML et les jeux web, ainsi que les sujets avancés ou spécialisés comme les expressions rationnelles, les tests de performance, WebRTC et WebGPU, n'ont pas leur place dans _Apprendre_.
 
 Si vous ne voyez pas un sujet traité dans _Apprendre_ et que vous pensez qu'il doit l'être, ne l'ajoutez pas directement&nbsp;: discutez-en d'abord avec nous (voir [Suggérer du contenu](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus)).
 

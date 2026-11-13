@@ -1,5 +1,5 @@
 ---
-title: HTML `<meta name>` 属性
+title: "`<meta name>` 属性"
 short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:

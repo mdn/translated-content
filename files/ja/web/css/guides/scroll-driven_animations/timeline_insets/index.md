@@ -127,7 +127,7 @@ article {
 
 ### 名前付き範囲が長さのオフセットに及ぼす効果
 
-オフセット距離は、常に関連付けられたアニメーション範囲の先頭からの距離となります。この例では、`animation-range-start` をデフォルトの `normal` 範囲の先頭から `50px` の位置に設定し、`animation-range-end` を明示的に設定された `entry` 範囲の先頭から `100px` の位置をに設定しています。
+オフセット距離は、常に関連付けられたアニメーション範囲の先頭からの距離となります。この例では、`animation-range-start` をデフォルトの `normal` 範囲の先頭から `50px` の位置に設定し、`animation-range-end` を明示的に設定された `entry` 範囲の先頭から `100px` の位置に設定しています。
 
 ```css live-sample___different_length
 .animated_element {

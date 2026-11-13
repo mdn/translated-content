@@ -3,7 +3,7 @@ title: Propriété CSS `background-attachment`
 short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 l10n:
-  sourceCommit: d4dc9d899ebec0e9c22a5bb9229f39f33457d8df
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-attachment`** définit si la position d'une image d'arrière-plan est fixe par rapport à la {{Glossary("viewport", "zone d'affichage")}}, ou si elle défile avec son bloc englobant.
@@ -111,7 +111,7 @@ Cette propriété est définie par un ou plusieurs mots-clés séparés par une 
 
 #### HTML
 
-Nous incluons une liste non ordonnée ({{HTMLElement("ul")}}) avec quelques éléments de liste ({{HTMLElement("li")}}).
+Nous incluons une liste non ordonnée ({{HTMLElement("ul")}}) avec quelques éléments de liste {{HTMLElement("li")}}.
 
 ```html
 <ul>

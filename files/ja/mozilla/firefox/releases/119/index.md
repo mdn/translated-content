@@ -70,4 +70,4 @@ l10n:
 
 #### Marionette
 
-- `Addon:Install` コマンドを使用して WebExtension のインスストールを試みたときに発生する可能性があるエラーコードのリストを、最新の Firefox のエラーコードに合うように更新しました ([Firefox bug 1852537](https://bugzil.la/1852537))。
+- `Addon:Install` コマンドを使用して WebExtension のインストールを試みたときに発生する可能性があるエラーコードのリストを、最新の Firefox のエラーコードに合うように更新しました ([Firefox bug 1852537](https://bugzil.la/1852537))。

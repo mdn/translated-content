@@ -3,7 +3,7 @@ title: Propriété CSS `display`
 short-title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: b02c4fe0f8c485fa3fd0af10005310aaecef64ca
+  sourceCommit: 1017b716a13c17fb4afcc2aefc904692fa670460
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en incise](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
@@ -30,6 +30,10 @@ display: flex;
 
 ```css interactive-example-choice
 display: grid;
+```
+
+```css interactive-example-choice
+display: grid-lanes;
 ```
 
 ```html interactive-example
@@ -105,6 +109,8 @@ display: block flex;
 display: inline flex;
 display: block grid;
 display: inline grid;
+display: block grid-lanes;
+display: inline grid-lanes;
 display: block table;
 display: inline table;
 
@@ -162,14 +168,11 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
     - `table`
       - : Ces éléments se comportent comme les éléments HTML {{HTMLElement("table")}}. Cela définit une boîte de niveau bloc.
     - `flex`
-      - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
+      - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle de boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
     - `grid`
       - : L'élément se comporte comme un élément de niveau bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes`
       - : L'élément se comporte comme un élément de niveau bloc et organise son contenu selon une disposition de type grilles en incises. Les colonnes sont définies par {{CSSxRef("grid-template-columns")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens des blocs afin de combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
-
-    - `inline-grid-lanes`
-      - : L'élément se comporte comme un élément de niveau en incise et organise son contenu selon une mise en page de grilles en incises. Les lignes sont définies par {{CSSxRef("grid-template-rows")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens en incise pour combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
     - `ruby`
       - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
@@ -228,7 +231,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
       - : Ces éléments ne produisent pas de boîte spécifique par eux-mêmes. Ils sont remplacés par leur pseudo-boîte et les boîtes de leurs enfants. Veuillez noter que la spécification <i lang="en">CSS Display Level 3</i> définit comment la valeur `contents` doit affecter les «&nbsp;éléments inhabituels&nbsp;» — des éléments qui ne sont pas rendus uniquement par les concepts de boîte CSS, comme les éléments remplacés. Voir [Annexe B&nbsp;: Effets de display&nbsp;: contents sur les éléments inhabituels <sup>(angl.)</sup>](https://drafts.csswg.org/css-display/#unbox) pour plus de détails.
 
     - `none`
-      - : Désactive l'affichage d'un élément afin qu'il n'ait aucun effet sur la mise en page (le document est rendu comme si l'élément n'existait pas). Tous les éléments descendants ont également leur affichage désactivé.
+      - : Désactive l'affichage d'un élément afin qu'il n'ait aucun effet sur la mise en page (le document est rendu comme si l'élément n'existe pas). Tous les éléments descendants ont également leur affichage désactivé.
         Pour qu'un élément occupe l'espace qu'il prend normalement, mais sans rien afficher, utilisez plutôt la propriété {{CSSxRef("visibility")}}.
 
 ### Précomposées
@@ -236,7 +239,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 - {{CSSxRef("&lt;display-legacy&gt;")}}
   - : CSS 2 utilise une syntaxe précomposée à mot-clé unique pour la propriété `display`, nécessitant des mots-clés distincts pour les variantes de mode de disposition de niveau bloc et de niveau en incise.
     - `inline-block`
-      - : L'élément génère une boîte de bloc qui s'écoule avec le contenu environnant comme s'il s'agissait d'une seule boîte en incise (se comportant comme le ferait un élément remplacé).
+      - : L'élément génère une boîte de bloc qui s'écoule avec le contenu environnant comme s'il s'agit d'une seule boîte en incise (se comportant comme le fait un élément remplacé).
 
         Cela équivaut à `inline flow-root`.
 
@@ -246,7 +249,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
         Cela équivaut à `inline table`.
 
     - `inline-flex`
-      - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle flexbox.
+      - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle de boîtes flexibles.
 
         Cela équivaut à `inline flex`.
 
@@ -254,6 +257,11 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
       - : L'élément se comporte comme un élément de niveau en incise et dispose son contenu selon le modèle de grille.
 
         Cela équivaut à `inline grid`.
+
+    - `inline-grid-lanes`
+      - : L'élément se comporte comme un élément de niveau en incise et organise son contenu selon une mise en page de grilles en incises. Les lignes sont définies par {{CSSxRef("grid-template-rows")}} et se comportent comme une grille stricte, tandis que les éléments sont regroupés dans le sens en incise pour combler les espaces entre les éléments de tailles différentes. Voir [la disposition des lignes de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) pour plus de détails.
+
+        Cela équivaut à `inline grid-lanes`.
 
 ### Quelle syntaxe utiliser ?
 
@@ -361,7 +369,7 @@ Modifier la valeur de `display` pour un élément HTML {{HTMLElement("table")}} 
 
 - [Du contenu masqué avec une meilleure accessibilité - Go Make Things <sup>(angl.)</sup>](https://gomakethings.com/articles/hidden-content-for-better-a11y/)
 - [Explications sur la règle 1.3 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
-- [Comprendre le critère de succès 1.3.1, W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Comprendre le critère de succès 1.3.1, Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle
 
@@ -410,6 +418,8 @@ Nous avons ajouté {{CSSxRef("padding")}} et {{CSSxRef("background-color")}} sur
     <option>block flex</option>
     <option>grid</option>
     <option>block grid</option>
+    <option>grid-lanes</option>
+    <option>block grid-lanes</option>
     <option>list-item</option>
     <option>block flow list-item</option>
     <option>inline flow list-item</option>
@@ -425,6 +435,8 @@ Nous avons ajouté {{CSSxRef("padding")}} et {{CSSxRef("background-color")}} sur
     <option>inline flex</option>
     <option>inline-grid</option>
     <option>inline grid</option>
+    <option>inline-grid-lanes</option>
+    <option>inline grid-lanes</option>
   </select>
 </div>
 ```

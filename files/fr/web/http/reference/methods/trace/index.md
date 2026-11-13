@@ -3,12 +3,12 @@ title: Méthode de requête TRACE
 short-title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 13ef67a4ffbdb929415dfa1b3d65ab1aa9ebe5da
 ---
 
 La méthode HTTP **`TRACE`** effectue un test de boucle de message le long du chemin vers la ressource cible.
 
-Le destinataire final de la requête doit renvoyer le message tel qu'il a été reçu (en excluant tout champ susceptible de contenir des données sensibles) au client, comme corps de la réponse {{HTTPStatus("200", "200 OK")}} avec un {{HTTPHeader("Content-Type")}} de `message/http`.
+Le destinataire final de la requête doit retourner le message tel qu'il a été reçu (en excluant tout champ susceptible de contenir des données sensibles) au client, comme corps de la réponse {{HTTPStatus("200", "200 OK")}} avec un {{HTTPHeader("Content-Type")}} de `message/http`.
 Le destinataire final est soit le serveur d'origine, soit le premier serveur à recevoir une valeur {{HTTPHeader("Max-Forwards")}} de `0` dans la requête.
 
 Le client ne doit pas envoyer de {{Glossary("HTTP Content", "contenu")}} dans la requête, ni générer d'en-têtes susceptibles de contenir des données sensibles comme des identifiants utilisateur·ice ou des cookies.
@@ -78,7 +78,7 @@ User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-Une réponse {{HTTPStatus("200", "200 OK")}} contenant les en-têtes de la requête dans le corps de la réponse est renvoyée au client&nbsp;:
+Une réponse {{HTTPStatus("200", "200 OK")}} contenant les en-têtes de la requête dans le corps de la réponse est retournée au client&nbsp;:
 
 ```http
 HTTP/1.1 200 OK
@@ -106,4 +106,4 @@ Le navigateur n'utilise pas la méthode `TRACE` pour les actions initiées par l
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
-- [Traçage inter-sites (XST) <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Cross_Site_Tracing)
+- [Traçage inter-sites (XST) <sup>(angl.)</sup>](https://community.owasp.org/attacks/Cross_Site_Tracing)

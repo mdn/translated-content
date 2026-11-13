@@ -2,7 +2,7 @@
 title: Plantilla de subpágina de evento de API
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: 1d08cee771feea858e4fdb594bac036b9cd210a6
+  sourceCommit: 88e4ba556d3a475dc4d60937f7db5178b2a1d54b
 ---
 
 > [!NOTE]
@@ -38,7 +38,7 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para los eventos de Web/API es siempre `web-api-event`.
 > - **status**
->   - : Indicadores que describen el estado de esta característica. Es un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se establece automáticamente en función de los valores de los datos de compatibilidad del navegador para dicha característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características).
+>   - : Indicadores que describen el estado de esta característica. Es un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se establece automáticamente en función de los valores de los datos de compatibilidad del navegador para dicha característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características).
 > - **browser-compat**
 >   - : Reemplaza el marcador de posición `path.to.feature.NameOfTheEvent_event` con la cadena de consulta del evento en el [Repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas usa automáticamente esta clave para completar las secciones de compatibilidad y especificaciones (sustituyendo las macros `\{{Compat}}` y `\{{Specifications}}`).
@@ -55,8 +55,7 @@ l10n:
 > La cadena de herramientas añade estas macros automáticamente (no es necesario añadirlas ni eliminarlas):
 >
 > - `\{{SeeCompatTable}}`: genera un aviso de **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si es experimental y la tecnología está oculta tras una preferencia (`pref`) en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}`: genera un aviso de **Obsoleto** que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#obsoleto) el uso de la tecnología.
+>   Si es experimental y la tecnología está oculta tras una preferencia (`pref`) en Firefox, también debes completar una entrada para ella en la página [Funciones experimentales de Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Non-standard_Header}}`: genera un aviso de **No estándar** que indica que la característica no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros según las indicaciones a continuación:
@@ -66,13 +65,13 @@ l10n:
 >   Si es así, también debes completar una entrada para ella en la página [Características restringidas a contextos seguros](/es/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts).
 > - `\{{AvailableInWorkers}}`: genera una nota de **Disponible en workers** que indica que la tecnología está disponible en un [contexto de worker](/es/docs/Web/API/Web_Workers_API).
 >   Si solo está disponible en el contexto de ventana (`window`), puedes eliminar la llamada a la macro.
->   Si también está disponible, o solo está disponible en el contexto de worker, es posible que también debas pasarle un parámetro debido a su disponibilidad (consulta el [código fuente de la macro \\{{AvailableInWorkers}}](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) para ver todos los valores disponibles); también es posible que debas completar una entrada para ella en la página [API web disponibles en workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers).
+>   Si también está disponible, o solo está disponible en el contexto de worker, es posible que también debas pasarle un parámetro debido a su disponibilidad (consulta el [código fuente de la macro \\{{AvailableInWorkers}}](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) para ver todos los valores disponibles); también es posible que debas completar una entrada para ella en la página [API web disponibles en workers](/es/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 > - `\{{APIRef("GroupDataName")}}`: esto genera la barra lateral de referencia de la izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, todas las páginas de la [WebVR API](/es/docs/Web/API/WebVR_API) tienen la misma barra lateral, que apunta a las demás páginas de la API.
 >   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de esa entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
 >   Consulta nuestra guía [Barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo.
 >
-> No añadas manualmente las macros de encabezado de estado. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#¿cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
+> No añadas manualmente las macros de encabezado de estado. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#cómo_se_agregan_o_actualizan_los_estados_de_las_características) para añadir estos estados a la página.
 >
 > Justo después de este bloque de nota se muestran ejemplos de los avisos de **Contexto seguro**, **Disponible en workers**, **Experimental**, **Obsoleto** y **No estándar**.
 >
@@ -81,10 +80,10 @@ l10n:
 > **Enlace al objeto padre**
 >
 > Añade un enlace a esta nueva página desde la sección _Eventos_ de su objeto padre.
-> Por ejemplo, [Element: wheel event](/es/docs/Web/API/Element/wheel_event) está enlazado desde [`Element` Eventos](/es/docs/Web/API/Element#eventos).
+> Por ejemplo, [Element: wheel event](/es/docs/Web/API/Element/wheel_event) está enlazado desde [Eventos de `Element`](/es/docs/Web/API/Element#eventos).
 >
 > Si el objeto padre no tiene una sección _Eventos_, añade una.
-> Si se trata de una nueva "clase" de evento, entonces debes añadir un enlace a esta sección del padre desde la guía [Eventos del DOM](/es/docs/Web/API/Document_Object_Model/Events#event_index).
+> Si se trata de una nueva "clase" de evento, entonces debes añadir un enlace a esta sección del padre desde la guía [Eventos del DOM](/es/docs/Web/API/Document_Object_Model/Events#índice_de_eventos).
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
@@ -96,11 +95,15 @@ Puedes copiar la mayor parte de este texto del resumen de la propiedad en la pá
 
 ## Sintaxis
 
-Usa el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establece una propiedad de manejador de eventos.
+Usa el nombre del evento en {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js-nolint
 addEventListener("NameOfTheEvent", (event) => { })
+```
 
+También puedes asignarlo a la [propiedad de manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events#usar_las_propiedades_onevent) de la interfaz:
+
+```js-nolint
 onNameOfTheEvent = (event) => { }
 ```
 
@@ -138,6 +141,8 @@ Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene sol
 Cada ejemplo debe tener un encabezado H3 (`###`) que lo identifique. El encabezado debe describir qué hace el ejemplo. Por ejemplo, "Un ejemplo sencillo" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo posterior al encabezado.
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+
+Si quieres mostrar tanto `addEventListener` como `onEvent`, evita afirmar o dar a entender que los dos ejemplos son equivalentes. Lo ideal es añadir siempre un paréntesis explícito que diga «pero ten en cuenta que esto reemplaza otros manejadores de eventos añadidos con `onEvent`, si los hay».
 
 > [!NOTE]
 > A veces querrás enlazar a ejemplos que se encuentran en otra página.

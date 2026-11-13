@@ -2,16 +2,16 @@
 title: Temporal.Instant
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.Instant`** représente un point unique dans le temps, avec une précision à la nanoseconde. Il est fondamentalement représenté comme le nombre de nanosecondes écoulées depuis l'époque Unix (minuit au début du 1er janvier 1970, UTC), sans fuseau horaire ni système de calendrier.
 
 ## Description
 
-`Temporal.Instant` est sémantiquement identique à {{JSxRef("Date")}}. Les deux encapsulent un point unique dans le temps, mais `Temporal.Instant` est plus précis car il stocke les nanosecondes plutôt que les millisecondes. `Temporal.Instant` évite également les pièges de `Date` car il ne suppose aucune information de calendrier ou de fuseau horaire—si vous souhaitez lire des informations de date ou d'heure telles que l'année ou le mois, vous devez d'abord le convertir en {{JSxRef("Temporal.ZonedDateTime")}}, en utilisant {{JSxRef("Temporal/Instant/toZonedDateTimeISO()", "toZonedDateTimeISO()")}}.
+`Temporal.Instant` est sémantiquement identique à {{JSxRef("Date")}}. Les deux encapsulent un point unique dans le temps, mais `Temporal.Instant` est plus précis, car il stocke les nanosecondes plutôt que les millisecondes. `Temporal.Instant` évite également les pièges de `Date`, car il ne suppose aucune information de calendrier ou de fuseau horaire—si vous souhaitez lire des informations de date ou d'heure telles que l'année ou le mois, vous devez d'abord le convertir en {{JSxRef("Temporal.ZonedDateTime")}}, en utilisant {{JSxRef("Temporal/Instant/toZonedDateTimeISO()", "toZonedDateTimeISO()")}}.
 
-Vous pouvez convertir un objet `Date` en `Temporal.Instant` en utilisant la méthode {{JSxRef("Date.prototype.toTemporalInstant()")}}, qui doit être préférée à d'autres méthodes telles que {{JSxRef("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}} car elle implique moins de code utilisateur·ice et peut être plus optimisée. Vous pouvez également convertir un `Temporal.Instant` en `Date` en utilisant ses millisecondes depuis l'époque, par exemple `new Date(instant.epochMilliseconds)`.
+Vous pouvez convertir un objet `Date` en `Temporal.Instant` en utilisant la méthode {{JSxRef("Date.prototype.toTemporalInstant()")}}, qui doit être préférée à d'autres méthodes telles que {{JSxRef("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}, car elle implique moins de code utilisateur·ice et peut être plus optimisée. Vous pouvez également convertir un `Temporal.Instant` en `Date` en utilisant ses millisecondes depuis l'époque, par exemple `new Date(instant.epochMilliseconds)`.
 
 ### Format RFC 9557
 
@@ -36,15 +36,15 @@ YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm
 - `ss.sssssssss` {{Optional_Inline}}
   - : Un nombre à deux chiffres de `00` à `59`. Peut être suivi optionnellement par un `.` ou `,` et un à neuf chiffres. Par défaut `00`. Les composants `HH`, `mm` et `ss` peuvent être séparés par `:` ou rien. Vous pouvez omettre soit `ss` seul, soit `ss` et `mm`, donc l'heure peut être sous trois formes&nbsp;: `HH`, `HH:mm` ou `HH:mm:ss.sssssssss`.
 - `Z/±HH:mm`
-  - : Soit le désignateur UTC `Z` ou `z`, soit un décalage par rapport à l'UTC sous la forme `+` ou `-` suivi du même format que le composant horaire. Notez que la précision subminute (`:ss.sssssssss`) peut ne pas être prise en charge par d'autres systèmes, et est acceptée mais jamais affichée. Si un décalage est fourni, l'heure est interprétée dans le décalage défini.
+  - : Soit le désignateur UTC `Z` ou `z`, soit un décalage par rapport à l'UTC sous la forme `+` ou `-` suivi du même format que le composant horaire. Notez que la précision inférieure à la minute (`:ss.sssssssss`) peut ne pas être prise en charge par d'autres systèmes, et est acceptée mais jamais affichée. Si un décalage est fourni, l'heure est interprétée dans le décalage défini.
 
-En entrée, vous pouvez éventuellement inclure l'identifiant de fuseau horaire et le calendrier, dans le même format que [`ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format), mais ils seront ignorés. D'autres annotations au format `[key=value]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
+En entrée, vous pouvez éventuellement inclure l'identifiant de fuseau horaire et le calendrier, dans le même format que [`ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format), mais ils sont ignorés. D'autres annotations au format `[key=value]` sont également ignorées, et elles ne doivent pas avoir le drapeau critique.
 
 Lors de la sérialisation, vous pouvez configurer les chiffres fractionnaires des secondes et le décalage.
 
 ## Constructeur
 
-- {{JSxRef("Temporal/Instant/Instant", "Temporal.Instant()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/Instant/Instant", "Temporal.Instant()")}}
   - : Crée un nouvel objet `Temporal.Instant` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques

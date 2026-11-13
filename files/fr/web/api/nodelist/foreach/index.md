@@ -1,80 +1,65 @@
 ---
-title: NodeList.prototype.forEach()
+title: "NodeList : méthode forEach()"
+short-title: forEach()
 slug: Web/API/NodeList/forEach
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
+La méthode **`forEach()`** de l'interface {{DOMxRef("NodeList")}} appelle le rappel donné en paramètre une fois pour chaque paire de valeurs dans la liste, dans l'ordre d'insertion.
 
 ## Syntaxe
 
-```js
-nodeList.forEach(callback[, thisArg]);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Paramètres
 
 - `callback`
-  - : Fonction à exécuter pour chaque élément, contenant éventuellement 3 arguments :
-    - _`currentValue`_
-      - : L'élément en cours de traitement dans la NodeList.
-    - `currentIndex`
-      - : L'index de l'élément en cours de traitement dans la NodeList.
-    - _`listObj`_
-      - : L'objet NodeList auquel `forEach()` est appliqué.
+  - : Une fonction à exécuter sur chaque élément de `someNodeList`. Elle accepte 3 paramètres&nbsp;:
+    - `currentValue`
+      - : L'élément en cours de traitement dans `someNodeList`.
+    - `currentIndex` {{Optional_Inline}}
+      - : L'index de l'élément `currentValue` en cours de traitement dans `someNodeList`.
+    - `listObj` {{Optional_Inline}}
+      - : Le `someNodeList` auquel `forEach()` est appliqué.
 
-- `thisArg` {{Optional_inline}}
-  - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
+- `thisArg` {{Optional_Inline}}
+  - : Valeur à utiliser comme [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) lors de l'exécution du `callback`.
 
-### Valeur retournée
+### Valeur de retour
 
-{{jsxref('undefined')}} (_indéfini_).
+Aucune ({{JSxRef("undefined")}}).
 
-## Exceptions
-
-_Aucune_.
-
-## Exemple
+## Exemples
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const noeud = document.createElement("div");
+const enfant1 = document.createElement("p");
+const enfant2 = document.createTextNode("hey");
+const enfant3 = document.createElement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+noeud.appendChild(enfant1);
+noeud.appendChild(enfant2);
+noeud.appendChild(enfant3);
 
-var list = node.childNodes;
+const liste = noeud.childNodes;
 
-list.forEach(function (currentValue, currentIndex, listObj) {
-  console.log(currentValue + ", " + currentIndex + ", " + this);
+liste.forEach(function (valeurActuelle, indexActuel, listObj) {
+  console.log(`${valeurActuelle}, ${indexActuel}, ${this}`);
 }, "myThisArg");
 ```
 
-résultat :
+Le code ci-dessus produit le résultat suivant&nbsp;:
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg
-```
-
-## Polyfill
-
-Ce {{Glossary("Polyfill","polyfill")}} ajoute une compatibilité à tous les navigateurs prenant en charge [ES5](https://caniuse.com/#search=es5) :
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
-  };
-}
 ```
 
 ## Spécifications
@@ -87,5 +72,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## Voir aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [La prothèse d'émulation de `NodeList.prototype.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterable-dom-collections)
+- L'interface {{DOMxRef("Node")}}
+- L'interface {{DOMxRef("NodeList")}}

@@ -3,7 +3,7 @@ title: Primeros pasos en React
 short-title: Primeros pasos con React
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 l10n:
-  sourceCommit: 52a81d8138473b6ac4bec77d0be4261cb0b76d41
+  sourceCommit: 9e69ea9db9ec62df101e83cbc07d447e1984c57e
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
@@ -191,7 +191,7 @@ El directorio **`public`** contiene archivos estáticos que se servirán directa
 
 El directorio **`src`** es donde pasaremos la mayor parte de nuestro tiempo, ya que es donde vive el código fuente de nuestra aplicación. Notarás que algunos archivos JavaScript en este directorio terminan con la extensión `.jsx`. Esta extensión es necesaria para cualquier archivo que contenga JSX — le dice a Vite que convierta la sintaxis JSX en JavaScript que tu navegador pueda entender. El directorio `src/assets` contiene el logotipo de React que viste en el navegador.
 
-Los archivos `package.json` y `package-lock.json` contienen metadatos sobre nuestro proyecto. Estos archivos no son exclusivos de las aplicaciones React: Vite completó `package.json` por nosotros, y npm creó `package-lock.json` cuando instalamos las dependencias de la aplicación. No necesitas entender estos archivos en absoluto para completar este tutorial. Sin embargo, si quieres aprender más sobre ellos, puedes leer sobre [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) y [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json/) en la documentación de npm. También hablamos sobre `package.json` en nuestro tutorial [Conceptos básicos de administración de paquetes](/es/docs/Learn_web_development/Extensions/Client-side_tools/Package_management).
+Los archivos `package.json` y `package-lock.json` contienen metadatos sobre nuestro proyecto. Estos archivos no son exclusivos de las aplicaciones React: Vite completó `package.json` por nosotros, y npm creó `package-lock.json` cuando instalamos las dependencias de la aplicación. No necesitas entender estos archivos en absoluto para completar este tutorial. Sin embargo, si quieres aprender más sobre ellos, puedes leer sobre [`package.json`](https://docs.npmjs.com/cli/configuring-npm/package-json/) y [`package-lock.json`](https://docs.npmjs.com/cli/configuring-npm/package-lock-json/) en la documentación de npm. También hablamos sobre `package.json` en nuestro tutorial [Conceptos básicos de administración de paquetes](/es/docs/Learn_web_development/Extensions/Client-side_tools/Package_management).
 
 ### Personalizando nuestro script de desarrollo
 

@@ -26,7 +26,7 @@ l10n:
 ### E
 
 - {{MathMLElement("menclose")}} {{non-standard_inline}} （囲みコンテンツ）
-- {{MathMLElement("merror")}} ）（囲み構文エラーメッセージ）
+- {{MathMLElement("merror")}} （囲み構文エラーメッセージ）
 
 ### F
 
@@ -102,7 +102,7 @@ l10n:
 ### 一般レイアウト
 
 - {{MathMLElement("menclose")}} {{non-standard_inline}} （囲みコンテンツ）
-- {{MathMLElement("merror")}} ）（囲み構文エラーメッセージ）
+- {{MathMLElement("merror")}} （囲み構文エラーメッセージ）
 - {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}} （括弧）
 - {{MathMLElement("mfrac")}} （分数）
 - {{MathMLElement("mpadded")}} （コンテンツまわりの空白）

@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleDeclaration/setProperty
 
 ## 语法
 
-```plain
+```js
 style.setProperty(propertyName, value, priority);
 ```
 

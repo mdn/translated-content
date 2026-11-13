@@ -3,7 +3,7 @@ title: Propriété CSS `contain-intrinsic-block-size`
 short-title: contain-intrinsic-block-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-block-size
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La [propriété logique](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-block-size`** définit la taille de bloc d'un élément que le navigateur peut utiliser pour la mise en page lorsque l'élément est envoyé à la [compartimentation de la taille](/fr/docs/Web/CSS/Guides/Containment/Using#compartimentation_de_la_taille).
@@ -68,26 +68,26 @@ La valeur mémorisée n'est pas utilisée si les éléments enfants sont en cour
 
 ### Définir la taille de bloc intrinsèque
 
-Le HTML ci‑dessous définit un élément «&nbsp;contained_element&nbsp;» qui est envoyé à une contrainte de taille, et qui contient un élément enfant.
+Le HTML ci‑dessous définit un élément «&nbsp;element_conteneur&nbsp;» qui est envoyé à une contrainte de taille, et qui contient un élément enfant.
 
 ```html
-<div id="contained_element">
-  <div class="child_element"></div>
+<div id="element_conteneur">
+  <div class="element_enfant"></div>
 </div>
 ```
 
-Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `contained_element` sur `auto`, donc si l'élément est masqué il est contraint en taille.
+Le CSS ci‑dessous règle {{CSSxRef("content-visibility")}} de `element_conteneur` sur `auto`, donc si l'élément est masqué il est contraint en taille.
 La taille de bloc intrinsèque et la taille en incise (<i lang="en">inline</i> en anglais) utilisées lorsque l'élément est contraint sont définies simultanément à l'aide de `contain-intrinsic-block-size` et `contain-intrinsic-inline-size`, respectivement.
 
 ```css
-#contained_element {
+#element_conteneur {
   border: 2px solid green;
   inline-size: 151px;
   content-visibility: auto;
   contain-intrinsic-inline-size: 152px;
   contain-intrinsic-block-size: 52px;
 }
-.child_element {
+.element_enfant {
   border: 1px solid red;
   background: blue;
   block-size: 50px;

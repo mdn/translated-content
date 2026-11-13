@@ -3,7 +3,7 @@ title: Propriété CSS `flex-line-count`
 short-title: flex-line-count
 slug: Web/CSS/Reference/Properties/flex-line-count
 l10n:
-  sourceCommit: e5cd1cab36e2fdcf5dfe28e10b0a7cb235354e62
+  sourceCommit: d78544a841b0e266a6efc169c044573f5e0b4e7d
 ---
 
 {{SeeCompatTable}}
@@ -206,7 +206,7 @@ Nous incluons quatre conteneurs {{HTMLElement("div")}}, chacun avec une `class` 
 }
 ```
 
-Nous appliquons `display: flex` à toutes les boîtes pour en faire des conteneurs flexibles, puis nous leur donnons une valeur `flex-wrap` de `wrap balance` pour que tous leurs enfants flex se répartissent sur plusieurs lignes équilibrées.
+Nous appliquons `display: flex` à toutes les boîtes pour en faire des conteneurs flexibles, puis nous leur donnons une valeur `flex-wrap` de `wrap balance` pour que tous leurs enfants flexibles se répartissent sur plusieurs lignes équilibrées.
 
 ```css live-sample___flex-line-count
 .boite {

@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: type プロパティ"
+short-title: type
 slug: Web/API/MutationRecord/type
 l10n:
   sourceCommit: ba88d88fed7c8868bec7c51e70f841586cffbaea

@@ -2,10 +2,10 @@
 title: Script inter-site (XSS)
 slug: Web/Security/Attacks/XSS
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: dd70ed064388b0fac4338321f727c8840a508b64
 ---
 
-Une attaque de script inter-site (<abbr lang="en">XSS</abbr> pour <i lang="en">cross-site scripting</i>) est une attaque dans laquelle un·e attaquant·e parvient à faire exécuter du code malveillant par un site cible comme s'il faisait partie du site web.
+Une attaque de script inter-site (<abbr lang="en">XSS</abbr> pour <i lang="en">cross-site scripting</i>) est une attaque dans laquelle un·e attaquant·e parvient à faire exécuter du code malveillant par un site cible comme s'il fait partie du site web.
 
 ## Vue d'ensemble
 
@@ -13,12 +13,12 @@ Un navigateur web télécharge du code depuis de nombreux sites web différents 
 
 ![Diagramme de 2 sites dans les navigateurs, dans des mondes séparés](same-origin.svg)
 
-Dans une attaque XSS réussie, l'attaquant·e est capable de contourner la politique de même origine en trompant le site cible pour qu'il exécute du code malveillant dans son propre contexte, comme s'il était de la même origine. Le code peut alors faire tout ce que le code du site peut faire, y compris, par exemple&nbsp;:
+Dans une attaque XSS réussie, l'attaquant·e est capable de contourner la politique de même origine en trompant le site cible pour qu'il exécute du code malveillant dans son propre contexte, comme s'il est de la même origine. Le code peut alors faire tout ce que le code du site peut faire, y compris, par exemple&nbsp;:
 
 - Accéder et/ou modifier tout le contenu des pages chargées par le site, ainsi que tout contenu dans le stockage local
 - Effectuer des requêtes HTTP avec les identifiants de l'utilisateur·ice, lui permettant de se faire passer pour l'utilisateur·ice ou d'accéder à des données sensibles
 
-![Diagramme du code de l'attaquant s'exécutant sur le site cible](xss.svg)
+![Diagramme du code de l'attaquant·e s'exécutant sur le site cible](xss.svg)
 
 Toutes les attaques XSS dépendent du fait qu'un site web fasse deux choses&nbsp;:
 
@@ -150,7 +150,7 @@ Si vous devez inclure une entrée externe dans les pages de votre site, vous dis
 
 Le processus appelé _encodage de sortie_ consiste à échapper les caractères de la chaîne de caractères d'entrée susceptibles de la rendre dangereuse, afin qu'ils soient traités comme du texte plutôt que comme des éléments d'un langage comme HTML.
 
-C'est le choix approprié lorsque vous voulez traiter l'entrée comme du texte, par exemple parce que votre site utilise des modèles qui interpolent l'entrée dans le contenu, comme dans cet extrait de [modèle Django <sup>(angl.)</sup>](https://docs.djangoproject.com/en/5.1/ref/templates/language/)&nbsp;:
+C'est le choix approprié lorsque vous voulez traiter l'entrée comme du texte, par exemple parce que votre site utilise des modèles qui interpolent l'entrée dans le contenu, comme dans cet extrait de [modèle Django <sup>(angl.)</sup>](https://docs.djangoproject.com/en/stable/ref/templates/language/)&nbsp;:
 
 ```django
 <p>Vous avez recherché \{{ search_term }}.</p>

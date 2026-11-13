@@ -3,10 +3,10 @@ title: En-tête Accept-Ranges
 short-title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Accept-Ranges`** est utilisé par le serveur pour indiquer sa prise en charge des [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests), permettant aux clients de demander une partie ou plusieurs parties d'une ressource.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Accept-Ranges`** est utilisé par le serveur pour indiquer sa prise en charge des [requêtes de plage](/fr/docs/Web/HTTP/Guides/Range_requests), permettant aux clients de demander une partie ou plusieurs parties d'une ressource.
 La valeur de cet en-tête indique l'unité qui peut être utilisée pour définir une plage.
 
 Par exemple, une réponse avec un en-tête `Accept-Ranges` indique que le serveur est capable de _reprendre_ un téléchargement interrompu au lieu que le client doive recommencer le transfert en entier.
@@ -31,7 +31,7 @@ Accept-Ranges: none
 
 - `<range-unit>`
   - : L'unité de plage que le serveur prend en charge, bien que `bytes` soit la seule unité de plage formellement définie par {{RFC("7233")}}.
-    Les unités de plage sont enregistrées dans le [registre des unités de plage HTTP <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
+    Les unités de plage sont enregistrées dans le [registre des unités de plage HTTP <sup>(angl.)</sup>](https://www.iana.org/assignments/http-parameters#range-units).
 - `none`
   - : Aucune unité de plage n'est prise en charge.
     Cela équivaut à omettre l'en-tête et est donc rarement utilisé.

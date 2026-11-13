@@ -3,7 +3,7 @@ title: Propriété CSS `-moz-user-focus`
 short-title: -moz-user-focus
 slug: Web/CSS/Reference/Properties/-moz-user-focus
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 {{Non-standard_Header}}
@@ -11,6 +11,7 @@ l10n:
 La propriété [CSS](/fr/docs/Web/CSS) **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir la sélection.
 
 En utilisant la valeur `ignore`, on peut désactiver la prise de sélection sur l'élément (l'utilisateur·ice ne peut pas activer l'élément) et l'élément est sauté lors de la navigation à la tabulation.
+La valeur par défaut est `none`, qui désactive la prise de sélection sur l'élément et retire la sélection des autres éléments s'il y a une tentative de sélectionner l'élément.
 
 ## Syntaxe
 
@@ -28,10 +29,15 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de sélection sur 
 
 ### Valeurs
 
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `ignore`
   - : L'élément n'accepte pas la sélection (au clavier ou au pointeur) et est sauté lors de la navigation à la tabulation.
 - `normal`
   - : L'élément peut recevoir la sélection normalement.
+- `none`
+  - : L'élément n'accepte pas la sélection au clavier.
+    Toute tentative de sélectionner l'élément retire la sélection des autres éléments.
 
 ## Définition formelle
 
@@ -47,14 +53,14 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de sélection sur 
 
 ```html
 <input
-  class="ignored"
+  class="ignore"
   value="L'utilisateur·ice ne peut pas placer la sélection sur cet élément." />
 ```
 
 ### CSS
 
 ```css
-.ignored {
+.ignore {
   -moz-user-focus: ignore;
 }
 ```

@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/428
 
 ## 状态
 
-```plain
+```http
 428 Precondition Required
 ```
 

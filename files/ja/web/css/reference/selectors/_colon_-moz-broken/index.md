@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}
 
 **`:-moz-broken`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) です。壊れた画像リンクを表している要素に一致します。
 

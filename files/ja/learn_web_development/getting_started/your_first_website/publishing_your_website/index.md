@@ -11,7 +11,7 @@ l10n:
 ウェブサイトを構成するコードやファイルの整理が終わったら、それをオンラインで公開して、人々が見つけられるようにする必要があります。この記事では、簡単なサンプルコードを手軽にオンラインに公開する方法を説明します。
 
 > [!NOTE]
-> この記事に沿って進めるには、ローカルコンピューター上にサンプルウェブサイトが利用できる必要があります。少なくとも有効な `index.html` ファイルが含まれている必要があります。まだ作成していない場合は、このモジュールの前回の記事（[ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)から順に学習しながら、ウェブサイトを作成することをお勧めします。
+> この記事に沿って進めるには、ローカルコンピューター上にサンプルウェブサイトが利用できる必要があります。少なくとも有効な `index.html` ファイルが含まれている必要があります。まだ作成していない場合は、このモジュールのこれまでの記事を[ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)から順に学習して、ウェブサイトを作成することをお勧めします。
 
 <table>
   <tbody>
@@ -78,7 +78,7 @@ l10n:
 
 これらを試してみて、一番合ったものを見つけてみましょう。
 
-- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
 - [JSFiddle](https://jsfiddle.net/)
 - [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
@@ -113,7 +113,7 @@ l10n:
 
 - [ウェブサーバーとは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [ドメイン名を理解する](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [ウェブサイトで何かするのにいくらかかるか?](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): Codecademy の良いチュートリアルで、もう少し詳しく追加のテクニック含めて示しています。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

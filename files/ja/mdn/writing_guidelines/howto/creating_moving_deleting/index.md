@@ -3,7 +3,7 @@ title: ページの作成、編集、移動、削除方法
 short-title: ページの作成、編集、移動、削除
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 l10n:
-  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
+  sourceCommit: ca0b474bb2e153ce72718cb304306e540065a888
 ---
 
 この記事はページを作成、移動、削除、編集する方法を記述しています。
@@ -102,6 +102,9 @@ npm run content move <from-slug> <to-slug> [locale]
 ## ページの削除
 
 MDN Web Docs から文書を除去されるべきなのは、特別な事情がある場合だけです。ページの削除を考えている場合は、最初に [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#チャットルーム)で MDN Web Docs チームと相談してください。
+
+> [!NOTE]
+> この節では、個々のページまたはページツリーの削除について説明します。MDN コンテンツのセクション全体を掲載終了する必要がある場合は、[コンテンツの掲載終了](/ja/docs/MDN/Writing_guidelines/Howto/Retiring_content)ガイドを参照してください。
 
 ページの移動と同じように、 1 つまたは複数の文書、あるいは文書のツリー全体を削除するのも簡単です。
 

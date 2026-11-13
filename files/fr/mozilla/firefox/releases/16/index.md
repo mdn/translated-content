@@ -3,7 +3,7 @@ title: Firefox 16 note de version pour les développeurs
 short-title: Firefox 16
 slug: Mozilla/Firefox/Releases/16
 l10n:
-  sourceCommit: 83f4e64da466670c3700110da364546253eae127
+  sourceCommit: e3a2272d272f21ea38e5fff9bd6ccec2d0dfb1a8
 ---
 
 Firefox 16 est sorti le 9 octobre 2012. Cet article répertorie les principaux changements qui sont utiles non seulement aux développeur·euse·s Web, mais aussi aux développeur·euse·s de Firefox et Gecko ainsi qu'aux développeur·euse·s de modules complémentaires.
@@ -36,7 +36,7 @@ Firefox 16 est sorti le 9 octobre 2012. Cet article répertorie les principaux c
 - Le type de données de {{CSSxRef("&lt;resolution&gt;")}} a été étendu et prend en charge le `dppx`. ([bogue Firefox 741644 <sup>(angl.)</sup>](https://bugzil.la/741644))
 - Sur l'écran, pour les [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using), `dppx`, `dpi` et `dpcm` représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ([bogue Firefox 771390 <sup>(angl.)</sup>](https://bugzil.la/771390))
 - Trois nouvelles pseudo-classes, `:-moz-meter-optimum`, `:-moz-meter-sub-optimum` et `:-moz-meter-sub-sub-optimum`, ont été ajoutées pour accéder à/mettre en forme un élément {{HTMLElement("meter")}} dans un état particulier. ([bogue Firefox 660238 <sup>(angl.)</sup>](https://bugzil.la/660238))
-- La propriété {{CSSxRef("-moz-appearance")}} gagnes deux nouvelles valeurs : `meterbar` et `meterchunk`. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ([bogue Firefox 659999 <sup>(angl.)</sup>](https://bugzil.la/659999))
+- La propriété {{CSSxRef("-moz-appearance")}} gagnes deux nouvelles valeurs&nbsp;: `meterbar` et `meterchunk`. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ([bogue Firefox 659999 <sup>(angl.)</sup>](https://bugzil.la/659999))
 - {{CSSxRef("min-width")}} et {{CSSxRef("min-height")}} prennent désormais en charge le mot-clé `auto` pour les articles flexibles (et règlent les autres articles à `0`). ([bogue Firefox 763689 <sup>(angl.)</sup>](https://bugzil.la/763689))
 
 ### DOM

@@ -13,7 +13,7 @@ slug: Web/API/DocumentFragment/querySelector
 
 ## 语法
 
-```plain
+```js
 element = documentfragment.querySelector(selectors);
 ```
 

@@ -35,7 +35,7 @@ Les **informations personnelles** sont toutes les informations qui décrivent un
 - Numéro de passeport, compte bancaire, carte de crédit, numéro de sécurité sociale ou autres identifiants officiels
 - Attributs physiques tels que la taille, l'expression de genre, le poids, la couleur des cheveux ou l'âge
 - Des informations sur la santé telles que les antécédents médicaux, les allergies ou les conditions en cours
-- Noms d'utilisateur, lorsqu'ils peuvent être liés à un individu
+- Noms d'utilisateur·ice, lorsqu'ils peuvent être liés à un individu
 - Passe-temps, intérêts ou autres préférences personnelles
 - Des données biométriques telles que les empreintes digitales ou les données de reconnaissance faciale
 
@@ -58,7 +58,7 @@ Les données de suivi peuvent être utilisées pour établir le profil d'un·e u
 
 - **Annonces ciblées**&nbsp;: tout le monde a déjà vécu l'expérience désagréable de rechercher des articles à acheter sur un appareil, puis d'être soudainement bombardé de publicités pour ces mêmes produits sur tous ses autres appareils.
 - **Vendre ou partager des données**&nbsp;: certains tiers sont connus pour compiler des données de suivi, puis les vendre ou les partager avec d'autres à des fins diverses, comme les publicités ciblées. Cette pratique est manifestement contraire à l'éthique et peut également être illégale, selon le pays où elle est exercée.
-- **Préjugés liés aux données**&nbsp;: dans le pire des cas, le partage de données peut entraîner un désavantage injustifié pour l'utilisateur·ice. Imaginons, par exemple, qu'une compagnie d'assurance découvre des données sur un client potentiel que celui-ci n'a pas accepté de partager, et qu'elle les utilise pour justifier une augmentation des primes d'assurance.
+- **Préjugés liés aux données**&nbsp;: dans le pire des cas, le partage de données peut entraîner un désavantage injustifié pour l'utilisateur·ice. Imaginons, par exemple, qu'une compagnie d'assurance découvre des données sur un·e client·e potentiel·le que ceux-ci n'ont pas accepté de partager, et qu'elle les utilise pour justifier une augmentation des primes d'assurance.
 
 ### Empreinte digitale
 
@@ -86,7 +86,7 @@ Les rubriques connexes sont les suivantes&nbsp;:
 - [Transparence des certificats](/fr/docs/Web/Security/Defenses/Certificate_Transparency)
   - : Un standard ouvert pour surveiller et auditer les certificats, créant une base de données de journaux publics qui peut être utilisée pour aider à identifier les certificats incorrects ou malveillants.
 - [HTTP Strict Transport Security (HSTS)](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
-  - : HSTS est utilisé par les serveurs pour se protéger contre les attaques de rétrogradation de protocole et de détournement de cookies en permettant aux sites de dire aux clients qu'ils ne peuvent utiliser HTTPS que pour communiquer avec le serveur.
+  - : HSTS est utilisé par les serveurs pour se protéger contre les attaques de rétrogradation de protocole et de détournement de cookies en permettant aux sites de dire aux client·e·s qu'ils ne peuvent utiliser HTTPS que pour communiquer avec le serveur.
 - [HTTP/2](/fr/docs/Glossary/HTTP_2)
   - : Bien que HTTP/2 _n'ait_ techniquement pas besoin d'utiliser le chiffrement, la plupart des développeur·euse·s de navigateurs ne le prennent en charge que lorsqu'il est utilisé avec HTTPS&nbsp;; à cet égard, il peut être considéré comme une fonctionnalité visant à améliorer la sécurité et la confidentialité.
 
@@ -112,13 +112,13 @@ Il existe plusieurs actions que les développeur·euse·s Web peuvent et doivent
 
 Les entreprises collectent de nombreuses données différentes auprès de leurs utilisateur·ice·s pour diverses raisons&nbsp;:
 
-- Noms d'utilisateur, mots de passe, e-mails, etc. à des fins d'authentification.
+- Noms d'utilisateur·ice·s, mots de passe, e-mails, etc. à des fins d'authentification.
 - E-mails, adresses postales et numéros de téléphone pour la communication.
 - Âge, sexe, localisation géographique, passe-temps préférés et une multitude d'autres informations personnelles identifiables (PII) pour tout, de la personnalisation du site aux enquêtes de satisfaction client.
 - Habitudes de navigation sur leurs sites et d'autres sites, pour mesurer le succès des pages et des fonctionnalités.
 - Et bien plus encore.
 
-Lorsque vous collectez des données auprès de vos clients, vous avez l'occasion d'agir avec intégrité, de leur montrer que vous êtes digne de confiance et de construire une excellente relation avec eux, améliorant ainsi votre marque et vos chances de succès.
+Lorsque vous collectez des données auprès de vos client·e·s, vous avez l'occasion d'agir avec intégrité, de leur montrer que vous êtes digne de confiance et de construire une excellente relation avec eux, améliorant ainsi votre marque et vos chances de succès.
 
 L'éthique de la collecte de données peut être décomposée en trois principes simples&nbsp;:
 
@@ -168,14 +168,14 @@ Rappelez-vous également qu'auparavant, tous les navigateurs commencent à bloqu
 
 ## Gérer soigneusement les ressources tierces
 
-Bien sûr, il est facile de gérer la confidentialité si vous ne vous préoccupiez que des ressources que vous avez créées (code, cookies, sites, etc.). Le véritable défi vient du fait que votre site utilise probablement des ressources tierces. Cela peut inclure du contenu tiers intégré dans des `<iframe>`, des bibliothèques, des frameworks, des API, des ressources hébergées à l'extérieur telles que des images et des vidéos, etc.
+Bien sûr, il est facile de gérer la confidentialité si vous ne vous préoccupiez que des ressources que vous avez créées (code, cookies, sites, etc.). Le véritable défi vient du fait que votre site utilise probablement des ressources tierces. Cela peut inclure du contenu tiers intégré dans des `<iframe>`, des bibliothèques, des cadriciels, des API, des ressources hébergées à l'extérieur telles que des images et des vidéos, etc.
 
 Les ressources tierces sont une partie essentielle du développement web moderne, elles offrent beaucoup de puissance. Cependant, toute ressource tierce que vous autorisez sur votre site a potentiellement les mêmes autorisations que vos propres ressources&nbsp;; tout dépend de la manière dont elle est incluse sur votre site&nbsp;:
 
 - JavaScript exécuté à l'intérieur du contenu tiers intégré dans votre site par le biais d'un `<iframe>` est séparé par la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ce qui signifie qu'il n'a pas accès à d'autres scripts et données inclus dans le contexte de navigation de niveau supérieur.
 - Cependant, un script tiers inclus directement dans votre page par le biais d'un élément {{HTMLElement("script")}} _a_ accès à vos autres scripts et données, qu'il soit hébergé sur votre site ou sur un autre site. C'est effectivement du code de première partie. Un script malveillant inclus de cette manière peut secrètement voler les données de vos utilisateur·ice·s, par exemple en les envoyant à un serveur tiers.
 
-Il est important d'auditer toutes les ressources tierces que vous utilisez sur votre site. Assurez-vous de savoir quelles données elles collectent, quelles requêtes elles effectuent et à qui, et quelles sont leurs politiques de confidentialité. Votre politique de confidentialité soigneusement conçue est inutile si vous utilisez un script tiers qui la viole.
+Il est important d'auditer toutes les ressources tierces que vous utilisez sur votre site. Assurez-vous de savoir quelles données elles collectent, quelles requêtes elles effectuent et à qui, et quelles sont leurs politiques de confidentialité. Votre politique de confidentialité soigneusement conçue est inutile si vous utilisez un script tiers qui la transgresse.
 
 > [!NOTE]
 > Il existe divers outils qui peuvent vous aider à dresser un tableau des requêtes effectuées par un site, par exemple le [Request Map Generator <sup>(angl.)</sup>](https://requestmap.webperf.tools/).
@@ -211,8 +211,8 @@ Vous devez vous assurer que les données des utilisateur·ice·s sont transmises
 Les conseils ci-dessous offrent quelques orientations sur la protection des données de vos utilisateur·ice·s&nbsp;:
 
 - La sécurité est difficile à mettre en œuvre correctement. Lors de la mise en œuvre d'une solution sécurisée impliquant la collecte de données — en particulier s'il s'agit de données sensibles telles que des identifiants de connexion — il est judicieux d'utiliser une solution réputée d'un fournisseur bien respecté. Par exemple, tout cadre côté serveur respectable dispose de fonctionnalités intégrées pour se protéger contre les vulnérabilités courantes. Vous pouvez également envisager d'utiliser un produit spécialisé à cette fin — par exemple, une solution de fournisseur d'identité ou un fournisseur d'enquête en ligne sécurisé.
-- Si vous souhaitez déployer votre propre solution pour collecter des données utilisateur, assurez-vous de comprendre ce que vous faites. Engagez un·e développeur·euse côté serveur expérimenté et/ou un ingénieur en sécurité pour mettre en œuvre le système, et assurez-vous qu'il est testé en profondeur. Utilisez {{Glossary("multi-factor authentication", "l'authentification à multi-facteurs")}} (MFA) pour offrir une meilleure protection. Envisagez d'utiliser une API dédiée telle que [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API) ou [l'API de gestion des identifiants fédérés](/fr/docs/Web/API/FedCM_API) pour rationaliser le côté client de l'application.
-- Lors de la collecte d'informations d'inscription des utilisateur·ice·s, appliquez des mots de passe forts afin que les détails du compte de vos utilisateur·ice·s ne puissent pas être facilement devinés. Les mots de passe faibles sont l'une des principales causes des violations de sécurité. Encouragez vos utilisateur·ice·s à utiliser un gestionnaire de mots de passe pour générer et stocker des mots de passe complexes&nbsp;; ainsi, ils ne s'inquiétent pas de les mémoriser ou de créer un risque de sécurité en les écrivant.
+- Si vous souhaitez déployer votre propre solution pour collecter des données utilisateur·ice·s, assurez-vous de comprendre ce que vous faites. Engagez un·e développeur·euse côté serveur expérimenté et/ou un ingénieur en sécurité pour mettre en œuvre le système, et assurez-vous qu'il est testé en profondeur. Utilisez {{Glossary("multi-factor authentication", "l'authentification à multi-facteurs")}} (MFA) pour offrir une meilleure protection. Envisagez d'utiliser une API dédiée telle que [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API) ou [l'API de gestion des identifiants fédérés](/fr/docs/Web/API/FedCM_API) pour rationaliser le côté client de l'application.
+- Lors de la collecte d'informations d'inscription des utilisateur·ice·s, appliquez des mots de passe forts afin que les détails du compte de vos utilisateur·ice·s ne puissent pas être facilement devinés. Les mots de passe faibles sont l'une des principales causes des violations de sécurité. Encouragez vos utilisateur·ice·s à utiliser un gestionnaire de mots de passe pour générer et stocker des mots de passe complexes&nbsp;; ainsi, ils ne s'inquiètent pas de les mémoriser ou de créer un risque de sécurité en les écrivant.
 - N'incluez pas de données sensibles dans les URL — si un tiers intercepte l'URL (par exemple avec l'en-tête {{HTTPHeader("Referer")}}), il peut voler ces informations. Utilisez des requêtes `POST` plutôt que des requêtes `GET` pour éviter cela.
 - Envisagez d'utiliser des outils tels que [Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP) et [Permissions Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) pour appliquer un ensemble d'utilisations de fonctionnalités sur votre site qui rend plus difficile l'introduction de vulnérabilités. Soyez prudent lorsque vous faites cela — si vous bloquez l'utilisation d'une fonctionnalité dont un script tiers a besoin pour fonctionner, vous risquez de casser la fonctionnalité de votre site. C'est quelque chose que vous pouvez examiner lors de l'audit de vos ressources tierces (voir [Gérer soigneusement les ressources tierces](#gérer_soigneusement_les_ressources_tierces)).
 

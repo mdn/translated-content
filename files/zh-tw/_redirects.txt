@@ -86,10 +86,11 @@
 /zh-TW/docs/Firefox_3_Online_and_Offline_Events	/en-US/docs/Web/API/Navigator/onLine
 /zh-TW/docs/Firefox_3_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_3_技術文件	/zh-TW/docs/Mozilla/Firefox/Releases/3
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball	/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas
+/zh-TW/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball	/zh-TW/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Reference/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Reference/Status/502
 /zh-TW/docs/Glossary/DOS_attack	/zh-TW/docs/Glossary/Denial_of_Service
@@ -376,7 +377,7 @@
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
 /zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
@@ -423,6 +424,7 @@
 /zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started	/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries
 /zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 /zh-TW/docs/MDN/About	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Community/Contributing/Getting_started	/zh-TW/docs/MDN/Community/Getting_started
 /zh-TW/docs/MDN/Community/Contributing/Translated_content	/zh-TW/docs/MDN/Community/Translated_content
@@ -783,7 +785,8 @@
 /zh-TW/docs/Web/HTTP/CORS	/zh-TW/docs/Web/HTTP/Guides/CORS
 /zh-TW/docs/Web/HTTP/Caching	/zh-TW/docs/Web/HTTP/Guides/Caching
 /zh-TW/docs/Web/HTTP/Cookies	/zh-TW/docs/Web/HTTP/Guides/Cookies
-/zh-TW/docs/Web/HTTP/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy
+/zh-TW/docs/Web/HTTP/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/Security/Practical_implementation_guides/CORP
+/zh-TW/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy	/zh-TW/docs/Web/Security/Practical_implementation_guides/CORP
 /zh-TW/docs/Web/HTTP/Headers/Accept	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept
 /zh-TW/docs/Web/HTTP/Headers/Accept-CH	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept-CH
 /zh-TW/docs/Web/HTTP/Headers/Accept-Encoding	/zh-TW/docs/Web/HTTP/Reference/Headers/Accept-Encoding

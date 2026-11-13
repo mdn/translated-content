@@ -3,7 +3,7 @@ title: "KeyboardEvent: KeyboardEvent() コンストラクター"
 short-title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: db18e806c3b6d3db340c94e69739fbef966cba01
 ---
 
 {{APIRef("UI Events")}}
@@ -25,29 +25,29 @@ new KeyboardEvent(type, options)
 - `options` {{optional_inline}}
   - : オブジェクトで、_{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されているものに加え_、以下のプロパティを持つことができます。
     - `key` {{optional_inline}}
-      - : 文字列で、既定値は `""` であり、 {{domxref("KeyboardEvent.key")}} の値を設定します。
+      - : 文字列で、デフォルト値は `""` であり、 {{domxref("KeyboardEvent.key")}} の値を設定します。
     - `code` {{optional_inline}}
-      - : 文字列で、既定値は `""` であり、 {{domxref("KeyboardEvent.code")}} の値を設定します。
+      - : 文字列で、デフォルト値は `""` であり、 {{domxref("KeyboardEvent.code")}} の値を設定します。
     - `location` {{optional_inline}}
-      - : 文字列で、既定値は `0` であり、 {{domxref("KeyboardEvent.location")}} の値を設定します。
+      - : 数値で、デフォルト値は `0` であり、 {{domxref("KeyboardEvent.location")}} の値を設定します。
     - `repeat` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.repeat")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.repeat")}} の値を設定します。
     - `isComposing` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.isComposing")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.isComposing")}} の値を設定します。
     - `charCode` {{optional_inline}} {{deprecated_inline}}
-      - : 数値で、既定値は `0` であり、非推奨の {{domxref("KeyboardEvent.charCode")}} の値を設定します。
+      - : 数値で、デフォルト値は `0` であり、非推奨の {{domxref("KeyboardEvent.charCode")}} の値を設定します。
     - `keyCode` {{optional_inline}} {{deprecated_inline}}
-      - : 数値で、既定値は `0` であり、非推奨の {{domxref("KeyboardEvent.keyCode")}} の値を設定します。
+      - : 数値で、デフォルト値は `0` であり、非推奨の {{domxref("KeyboardEvent.keyCode")}} の値を設定します。
     - `which` {{optional_inline}} {{deprecated_inline}}
-      - : 数値で、既定値は `0` であり、非推奨の {{domxref("UIEvent.which")}} の値を設定します。
+      - : 数値で、デフォルト値は `0` であり、非推奨の {{domxref("UIEvent.which")}} の値を設定します。
     - `ctrlKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.ctrlKey")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.ctrlKey")}} の値を設定します。
     - `shiftKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.shiftKey")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.shiftKey")}} の値を設定します。
     - `altKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.altKey")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.altKey")}} の値を設定します。
     - `metaKey` {{optional_inline}}
-      - : 論理値で、既定値は `false` であり、 {{domxref("KeyboardEvent.metaKey")}} の値を設定します。
+      - : 論理値で、デフォルト値は `false` であり、 {{domxref("KeyboardEvent.metaKey")}} の値を設定します。
 
 ### 返値
 

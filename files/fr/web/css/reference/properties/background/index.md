@@ -3,7 +3,7 @@ title: Propriété CSS `background`
 short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 8c21ceeff860d7b9f64b177115e3897543e7fcab
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.
@@ -60,6 +60,12 @@ Cette propriété est une propriété raccourcie qui regroupe les propriétés C
 - {{CSSxRef("background-position")}}
 - {{CSSxRef("background-repeat")}}
 - {{CSSxRef("background-size")}}
+
+### Sous-propriétés qui sont uniquement réinitialisées
+
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
+
+- {{CSSxRef("background-blend-mode")}}
 
 ## Syntaxe
 
@@ -179,7 +185,6 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
   Dans le ciel.
 </p>
 <p class="attention">Voici un paragraphe&nbsp;!</p>
-<p></p>
 ```
 
 #### CSS

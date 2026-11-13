@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Access-Control-Allow-Headers`** est utilisé en réponse à une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer les en-têtes HTTP qui peuvent être utilisés lors de la requête réelle.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Access-Control-Allow-Headers`** est utilisé en réponse à une {{Glossary("preflight request", "requête préliminaire")}} pour indiquer les en-têtes HTTP qui peuvent être utilisés lors de la requête réelle.
 Cet en-tête est requis si la requête préliminaire contient {{HTTPHeader("Access-Control-Request-Headers")}}.
 
 > [!NOTE]
@@ -85,7 +85,7 @@ Origin: https://www.example.com
 
 #### Réponse
 
-Si la requête CORS indiquée par la requête préliminaire est autorisée, le serveur répondra à la requête préliminaire avec un message indiquant l'origine, les méthodes et les en-têtes autorisés. Ci-dessous, on voit que `Access-Control-Allow-Headers` inclut les en-têtes demandés.
+Si la requête CORS indiquée par la requête préliminaire est autorisée, le serveur répond à la requête préliminaire avec un message indiquant l'origine, les méthodes et les en-têtes autorisés. Ci-dessous, on voit que `Access-Control-Allow-Headers` inclut les en-têtes demandés.
 
 ```http
 HTTP/1.1 200 OK
@@ -97,7 +97,7 @@ Access-Control-Allow-Headers: Content-Type, x-requested-with
 Access-Control-Max-Age: 86400
 ```
 
-Si la méthode demandée n'est pas prise en charge, le serveur répondra avec une erreur.
+Si la méthode demandée n'est pas prise en charge, le serveur répond avec une erreur.
 
 ## Spécifications
 

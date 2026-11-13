@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="radio">`
 short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`radio`** sont généralement utilisés dans des **groupes de boutons radio** — des ensembles de boutons radio décrivant un ensemble d'options liées.
@@ -46,13 +46,6 @@ input {
 }
 ```
 
-On les appelle boutons radio, car ils ressemblent et fonctionnent de manière similaire aux boutons-poussoirs des anciennes radios, comme celle illustrée ci-dessous.
-
-![Illustration de l'apparence des boutons radio sur les anciens appareils.](old-radio.jpg)
-
-> [!NOTE]
-> [Les cases à cocher](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ressemblent aux boutons radio. Toutefois, il existe une différence fondamentale&nbsp;: les boutons radio servent à sélectionner une seule valeur parmi un ensemble, tandis que les cases à cocher permettent d'activer ou de désactiver individuellement plusieurs valeurs. Lorsqu'il y a plusieurs contrôles, les boutons radio n'autorisent qu'une seule sélection, alors que les cases à cocher permettent d'en sélectionner plusieurs.
-
 ## Valeur
 
 L'attribut `value` est une chaîne de caractères qui contient la valeur du bouton radio. Cette valeur n'est jamais affichée à l'utilisateur·ice par son {{Glossary("user agent", "agent utilisateur")}}. Elle sert à identifier quel bouton radio d'un groupe est sélectionné.
@@ -68,22 +61,17 @@ Par exemple, si votre formulaire doit demander à l'utilisateur·ice sa méthode
 Voici le fragment de code HTML correspondant à cet exemple&nbsp;:
 
 ```html
-<form>
-  <p>Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:</p>
-  <div>
-    <input type="radio" id="contactChoice1" name="contact" value="email" />
-    <label for="contactChoice1">Adresse électronique</label>
+<p>Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:</p>
+<div>
+  <input type="radio" id="contactChoice1" name="contact" value="email" />
+  <label for="contactChoice1">Adresse électronique</label>
 
-    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
-    <label for="contactChoice2">Téléphone</label>
+  <input type="radio" id="contactChoice2" name="contact" value="telephone" />
+  <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-    <label for="contactChoice3">Courrier</label>
-  </div>
-  <div>
-    <button type="submit">Envoyer</button>
-  </div>
-</form>
+  <input type="radio" id="contactChoice3" name="contact" value="courrier" />
+  <label for="contactChoice3">Courrier</label>
+</div>
 ```
 
 On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{DOMxRef("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} avec l'attribut [`for`](/fr/docs/Web/HTML/Reference/Elements/label#for).
@@ -94,7 +82,7 @@ Voici le résultat obtenu&nbsp;:
 
 ### La représentation des données d'un groupe de boutons radio
 
-Lorsqu'on envoie le formulaire ci-dessus avec un bouton radio sélectionné, les données du formulaire contiennent une entrée sous la forme `contact=valeur`. Par exemple, si l'utilisateur·ice clique sur le bouton radio «&nbsp;Téléphone&nbsp;» puis envoie le formulaire, les données du formulaire contiennent la ligne `contact=telephone`.
+Lorsque le formulaire contenant les contrôles ci-dessus est envoyé avec un bouton radio sélectionné, les données du formulaire incluent une entrée sous la forme `contact=valeur`. Par exemple, si l'utilisateur·ice clique sur le bouton radio «&nbsp;Téléphone&nbsp;» puis envoie le formulaire, `contact=telephone` est inclus dans les données envoyées du formulaire.
 
 Si vous omettez l'attribut `value` dans le HTML, les données envoyées par le formulaire attribuent la valeur `on` au groupe. Dans ce cas, si l'utilisateur·ice clique sur l'option «&nbsp;Téléphone&nbsp;» et envoie le formulaire, les données envoyées sont `contact=on`, ce qui n'est pas utile. N'oubliez donc pas de définir vos attributs `value`&nbsp;!
 
@@ -103,7 +91,7 @@ Si vous omettez l'attribut `value` dans le HTML, les données envoyées par le f
 
 Il est assez rare de vouloir permettre l'envoi du formulaire sans qu'aucun bouton radio d'un groupe ne soit sélectionné, il est donc généralement judicieux d'en avoir un par défaut avec l'état `checked`. Voir [Sélectionner un bouton radio par défaut](#sélectionner_un_bouton_radio_par_défaut) ci-dessous.
 
-Ajoutons un peu de code à notre exemple pour examiner les données générées par ce formulaire. Le HTML est modifié pour ajouter un bloc {{HTMLElement("pre")}} qui affiche les données du formulaire&nbsp;:
+Ajoutons un peu de code à notre exemple afin de pouvoir examiner les données générées par ces contrôles. Le code HTML est modifié pour encapsuler les contrôles dans un élément {{HTMLElement("form")}}, ajouter un bouton d'envoi et insérer un bloc {{HTMLElement("pre")}} dans lequel les données du formulaire sont affichées&nbsp;:
 
 ```html
 <form>
@@ -163,6 +151,13 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 ## Utiliser les boutons radio
 
+On les appelle boutons radio, car ils ressemblent et fonctionnent de manière similaire aux boutons-poussoirs des anciennes radios, comme celle illustrée ci-dessous.
+
+![Illustration de l'apparence des boutons radio sur les anciens appareils.](old-radio.jpg)
+
+> [!NOTE]
+> [Les cases à cocher](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ressemblent aux boutons radio. Toutefois, il existe une différence fondamentale&nbsp;: les boutons radio servent à sélectionner une seule valeur parmi un ensemble, tandis que les cases à cocher permettent d'activer ou de désactiver individuellement plusieurs valeurs. Lorsqu'il y a plusieurs contrôles, les boutons radio n'autorisent qu'une seule sélection, alors que les cases à cocher permettent d'en sélectionner plusieurs.
+
 Nous avons déjà vu certaines techniques ci-avant. Voyons désormais d'autres fonctionnalités fréquemment utilisées avec ces boutons.
 
 ### Sélectionner un bouton radio par défaut
@@ -170,27 +165,22 @@ Nous avons déjà vu certaines techniques ci-avant. Voyons désormais d'autres f
 Pour qu'un bouton radio soit sélectionné par défaut, on ajoute l'attribut booléen `checked`. Voici ce que ça donne pour l'exemple précédent, légèrement modifié&nbsp;:
 
 ```html
-<form>
-  <p>Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:</p>
-  <div>
-    <input
-      type="radio"
-      id="contactChoice1"
-      name="contact"
-      value="email"
-      checked />
-    <label for="contactChoice1">Adresse électronique</label>
+<p>Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:</p>
+<div>
+  <input
+    type="radio"
+    id="contactChoice1"
+    name="contact"
+    value="email"
+    checked />
+  <label for="contactChoice1">Adresse électronique</label>
 
-    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
-    <label for="contactChoice2">Téléphone</label>
+  <input type="radio" id="contactChoice2" name="contact" value="telephone" />
+  <label for="contactChoice2">Téléphone</label>
 
-    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-    <label for="contactChoice3">Courrier</label>
-  </div>
-  <div>
-    <button type="submit">Envoyer</button>
-  </div>
-</form>
+  <input type="radio" id="contactChoice3" name="contact" value="courrier" />
+  <label for="contactChoice3">Courrier</label>
+</div>
 ```
 
 {{EmbedLiveSample("Sélectionner un bouton radio par défaut", 600, 130)}}
@@ -215,35 +205,26 @@ Dans le cas d'un bouton radio avec l'attribut [`required`](/fr/docs/Web/HTML/Ref
 L'exemple qui suit est une version légèrement plus détaillée de l'exemple précédent qui contient une mise en forme et une meilleure sémantique grâce aux éléments HTML utilisés&nbsp;:
 
 ```html
-<form>
-  <fieldset>
-    <legend>
-      Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:
-    </legend>
-    <div>
-      <input
-        type="radio"
-        id="contactChoice1"
-        name="contact"
-        value="email"
-        checked />
-      <label for="contactChoice1">Adresse électronique</label>
+<fieldset>
+  <legend>
+    Veuillez choisir la meilleure méthode pour vous contacter&nbsp;:
+  </legend>
+  <div>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
+    <label for="contactChoice1">Adresse électronique</label>
 
-      <input
-        type="radio"
-        id="contactChoice2"
-        name="contact"
-        value="telephone" />
-      <label for="contactChoice2">Téléphone</label>
+    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
+    <label for="contactChoice2">Téléphone</label>
 
-      <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-      <label for="contactChoice3">Courrier</label>
-    </div>
-    <div>
-      <button type="submit">Envoyer</button>
-    </div>
-  </fieldset>
-</form>
+    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
+    <label for="contactChoice3">Courrier</label>
+  </div>
+</fieldset>
 ```
 
 La feuille de style CSS utilisée est la suivante&nbsp;:
@@ -283,7 +264,6 @@ input:checked {
   border: 6px solid black;
 }
 
-button,
 legend {
   color: white;
   background-color: black;
@@ -291,17 +271,6 @@ legend {
   border-radius: 0;
   border: 0;
   font-size: 14px;
-}
-
-button:hover,
-button:focus {
-  color: #999999;
-}
-
-button:active {
-  background-color: white;
-  color: black;
-  outline: 1px solid black;
 }
 ```
 
@@ -312,7 +281,7 @@ Ce qui est le plus notable ici est l'utilisation de la propriété CSS {{CSSxRef
 
 {{EmbedLiveSample("Mettre en forme les boutons radio", 600, 120)}}
 
-Remarquez qu'en cliquant sur un bouton radio, il y a un bel effet de fondu lors du changement d'état entre les boutons. De plus, le style et la couleur de la légende et du bouton d'envoi sont personnalisés pour offrir un contraste marqué. Ce n'est peut-être pas l'apparence que vous souhaitez dans une vraie application web, mais cela illustre bien les possibilités.
+Remarquez qu'en cliquant sur un bouton radio, il y a un bel effet de fondu lors du changement d'état entre les boutons. De plus, le style et la couleur de la légende sont personnalisés pour offrir un contraste marqué. Ce n'est peut-être pas l'apparence que vous souhaitez dans une vraie application web, mais cela illustre bien les possibilités.
 
 ## Résumé technique
 

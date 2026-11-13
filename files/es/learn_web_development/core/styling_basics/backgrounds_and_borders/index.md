@@ -23,7 +23,7 @@ En este artículo, veremos algunas de las cosas creativas que puedes hacer con l
           href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de CSS (véase
         <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).

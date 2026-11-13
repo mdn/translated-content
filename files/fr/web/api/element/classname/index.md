@@ -3,12 +3,12 @@ title: "Element : propriété className"
 short-title: className
 slug: Web/API/Element/className
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 88c33ab5f4ccd88d13a0a5272de45d4d33f9f636
 ---
 
 {{APIRef("DOM")}}
 
-La propriété **`className`** de l'interface {{DOMxRef("Element")}} récupère et définit la valeur de [l'attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) de l'élément défini.
+La propriété **`className`** de l'interface {{DOMxRef("Element")}} reflète le contenu de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) de l'élément.
 
 ## Valeur
 

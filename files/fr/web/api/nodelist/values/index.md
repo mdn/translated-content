@@ -1,47 +1,54 @@
 ---
-title: NodeList.values()
+title: "NodeList : méthode values()"
+short-title: values()
 slug: Web/API/NodeList/values
+l10n:
+  sourceCommit: 56f3d7018159127dbe92842413fb45d0aa7e8193
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`NodeList.values()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("Node")}} (_noeud_).
+La méthode **`NodeList.values()`** retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}} permettant de parcourir toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{DOMxRef("Node")}}.
 
 ## Syntaxe
 
-```js
-nodeList.values();
+```js-nolint
+values()
 ```
 
-### Valeur retournée
+### Paramètres
 
-Renvoie un {{jsxref("Iteration_protocols","itérateur")}}.
+Aucun.
 
-## Exemple
+### Valeur de retour
+
+Retourne un {{JSxRef("Iteration_protocols", "itérateur",,1)}}.
+
+## Exemples
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const noeud = document.createElement("div");
+const enfant1 = document.createElement("p");
+const enfant2 = document.createTextNode("salut");
+const enfant3 = document.createElement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+noeud.appendChild(enfant1);
+noeud.appendChild(enfant2);
+noeud.appendChild(enfant3);
 
-var list = node.childNodes;
+const liste = noeud.childNodes;
 
-// Utilisation de for..of
-for (var value of list.values()) {
-  console.log(value);
+// Utiliser for...of
+for (const valeur of liste.values()) {
+  console.log(valeur);
 }
 ```
 
-Le résultat est :
+Le résultat est&nbsp;:
 
-```
+```plain
 <p>
-#text "hey"
+#text "salut"
 <span>
 ```
 
@@ -55,5 +62,6 @@ Le résultat est :
 
 ## Voir aussi
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [La prothèse d'émulation de `NodeList.prototype.entries` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterable-dom-collections)
+- L'interface {{DOMxRef("Node")}}
+- L'interface {{DOMxRef("NodeList")}}

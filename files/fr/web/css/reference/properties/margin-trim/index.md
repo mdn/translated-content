@@ -3,10 +3,8 @@ title: Propriété CSS `margin-trim`
 short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 l10n:
-  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
+  sourceCommit: bf7ff749b987d530e9a6c07f23ac66f94d968e57
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
 
@@ -33,25 +31,25 @@ margin-trim: unset;
 
 Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
 
-- `none` {{Experimental_Inline}}
+- `none`
   - : Les marges ne sont pas rognées par le conteneur.
 
-- `block` {{Experimental_Inline}}
+- `block`
   - : Les marges des enfants de type bloc qui sont adjacentes aux bords du conteneur sont rognées à zéro sans affecter les marges du conteneur lui-même.
 
-- `block-start` {{Experimental_Inline}}
+- `block-start`
   - : La marge du premier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
-- `block-end` {{Experimental_Inline}}
+- `block-end`
   - : La marge du dernier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
-- `inline` {{Experimental_Inline}}
+- `inline`
   - : Les marges des enfants en incise (<i lang="en">inline</i> en anglais) qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
 
-- `inline-start` {{Experimental_Inline}}
+- `inline-start`
   - : La marge entre le bord du conteneur et le premier enfant en incise est rognée à zéro.
 
-- `inline-end` {{Experimental_Inline}}
+- `inline-end`
   - : La marge entre le bord du conteneur et le dernier enfant en incise est rognée à zéro.
 
 ## Définition formelle

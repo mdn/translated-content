@@ -1,5 +1,5 @@
 ---
-title: CSS `text-rendering` プロパティ
+title: "`text-rendering` プロパティ (CSS)"
 short-title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 l10n:

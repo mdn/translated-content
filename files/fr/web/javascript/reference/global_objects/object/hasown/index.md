@@ -3,7 +3,7 @@ title: "Object : méthode statique hasOwn()"
 short-title: hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.hasOwn()`** retourne `true` si l'objet défini possède la propriété indiquée comme propriété _propre_. Si la propriété est héritée ou n'existe pas, la méthode retourne `false`.
@@ -161,8 +161,8 @@ console.log(Object.hasOwn(toto, "prop")); // true
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.hasOwn` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.hasOwn` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.hasown)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.hasOwn` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.hasOwn` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.hasown)
 - La méthode {{JSxRef("Object.prototype.hasOwnProperty()")}}
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.getOwnPropertyNames()")}}

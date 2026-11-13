@@ -1,14 +1,14 @@
 ---
-title: HTML `<a>` アンカー要素
+title: "`<a>` アンカー要素"
 short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 94172439968170ab04c730b4f93a699688f7f367
 ---
 
 **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、[`href` 属性](#href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 
-`<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
+`<a>` のコンテンツは、リンク先を示すものであるべきです。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
 {{InteractiveExample("HTML デモ: &lt;a&gt;", "tabbed-shorter")}}
 
@@ -33,12 +33,12 @@ li {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
-  - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
+  - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースの帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
 
-    ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納します。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+    ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースの帰属ソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納します。詳細は[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
-    この属性には設定することができる 2 つのバージョンがあります：
-    - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーでアトリビューションソースの登録を処理している場合は、これで問題ありません。
+    この属性には設定することができる 2 つのバージョンがあります。
+    - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーで帰属ソースの登録を処理している場合は、これで問題ありません。
     - 1 つ以上の URL を格納する値。例えば、以下のようなものです。
 
       ```html
@@ -46,12 +46,12 @@ li {
       https://b.example/register-source"
       ```
 
-      これは、リクエストされたリソースが制御するサーバーにない場合や、属性ソースを別のサーバーに登録する処理だけをしたい場合に有益です。この場合、`attributionsrc` の値として 1 つ以上の URL を指定します。リソースリクエストが発生すると、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーはリソース元に加えて `attributionsrc` を指定したURLにも送信されます。これらの URL は {{httpheader("Attribution-Reporting-Register-Source")}} で応答し、登録を完了することができます。
+      これは、リクエストされたリソースが制御するサーバーにない場合や、帰属ソースを別のサーバーに登録する処理だけをしたい場合に有益です。この場合、`attributionsrc` の値として 1 つ以上の URL を指定します。リソースリクエストが発生すると、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーはリソース元に加えて `attributionsrc` を指定したURLにも送信されます。これらの URL は {{httpheader("Attribution-Reporting-Register-Source")}} で応答し、登録を完了することができます。
 
       > [!NOTE]
-      > 複数のURLを指定するということは、同じ機能に複数の属性ソースを登録できるということを意味しています。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータで異なるレポートを生成する必要があるかもしれません。
+      > 複数の URL を指定するということは、同じ機能に複数の帰属ソースを登録できるということです。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータで異なるレポートを生成する必要があるかもしれません。
 
-    `<a>` 要素はアトリビューショントリガーとして使用することはできず、ソースとしてのみです。
+    `<a>` 要素は帰属トリガーとして使用することはできず、ソースとしてのみです。
 
 - `download`
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。`filename` 値があってもなくても構いません。
@@ -60,15 +60,13 @@ li {
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
       - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/URI/Reference/Schemes/blob) の {{domxref("Blob.type")}} から）
 
-    - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
+    - `filename` 値を定義すると、ファイル名として提案します。`/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれないため、ブラウザーは必要に応じてファイル名を調整します。この調整はダウンロードが開始されたときに行われ、{{domxref("HTMLAnchorElement.download")}} プロパティから確認することはできません。
 
     > [!NOTE]
     >
-    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
+    > - `download` 属性は[同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy)、同一オリジンの [`blob:`](/ja/docs/Web/URI/Reference/Schemes/blob)、および [`data:`](/ja/docs/Web/URI/Reference/Schemes/data) の各スキームでのみ動作します。他の URL では `download` 属性は無視され、通常のナビゲーションが行われます。ただし、遷移先のページが `Content-Disposition` を使用してダウンロードを指示する場合があります。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
-    > - `Content-Disposition` ヘッダーが `download` とは異なる情報を持っていた場合、動作結果は様々です。
-    >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
-    >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
+    > - `download` 属性が適用される場合、`Content-Disposition: inline` の動作より優先されます。ただし、`Content-Disposition` の `filename` パラメーターは、`download` 属性で指定された名前より優先されます。
 
 - `href`
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
@@ -90,7 +88,7 @@ li {
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
-  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
+  - : リンク先のリソースを取得するときに送信する[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)情報の量です。
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
     - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。

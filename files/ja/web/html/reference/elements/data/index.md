@@ -1,5 +1,5 @@
 ---
-title: HTML `<data>` データ要素
+title: "`<data>` データ要素"
 short-title: <data>
 slug: Web/HTML/Reference/Elements/data
 l10n:

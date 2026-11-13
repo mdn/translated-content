@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 21fddb9643fae34dce16aec8eb5dd86cc29e0b7c
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLTableCellElement.bgColor`** property is used to set the background color of a cell or get the value of the obsolete [`bgColor`](/ja/docs/Web/HTML/Reference/Elements/td#bgcolor) attribute, if present.
 

@@ -3,12 +3,12 @@ title: Constructeur Temporal.PlainTime()
 short-title: Temporal.PlainTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/PlainTime
 l10n:
-  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
+  sourceCommit: 4c5b1bd7b5f9142c4c53ab6321e19bfdfaf1ddda
 ---
 
 Le constructeur **`Temporal.PlainTime()`** crée des objets {{JSxRef("Temporal.PlainTime")}}.
 
-Ce constructeur vous permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devriez généralement construire des objets `Temporal.PlainTime` en utilisant la méthode statique {{JSxRef("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}, qui peut gérer une variété de types d'entrée.
+Ce constructeur vous permet de créer des instances en fournissant directement les données sous-jacentes. Comme pour toutes les autres classes `Temporal`, vous devez généralement construire des objets `Temporal.PlainTime` en utilisant la méthode statique {{JSxRef("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}, qui peut gérer une variété de types d'entrée.
 
 ## Syntaxe
 

@@ -1,12 +1,10 @@
 ---
-title: CSS `page-break-after` プロパティ
+title: "`page-break-after` プロパティ (CSS)"
 short-title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > このプロパティは {{cssxref("break-after")}} プロパティによって置き換えられました。

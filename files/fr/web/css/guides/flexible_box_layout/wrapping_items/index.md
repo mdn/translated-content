@@ -1,94 +1,475 @@
 ---
 title: Maîtriser le passage à la ligne des éléments flexibles
+short-title: Passer à la ligne des éléments flexibles
 slug: Web/CSS/Guides/Flexible_box_layout/Wrapping_items
-original_slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 l10n:
-  sourceCommit: ec9d2eb49c0916c394842d5caa923e1d86ed47ed
+  sourceCommit: ae836b44d9faa0e9f581631ed1dcccd2a502b618
 ---
 
-Les boîtes flexibles ont été conçues comme une méthode de disposition unidimensionnelle. Autrement dit, elles permettent de disposer des éléments en lignes ou en colonnes mais pas en lignes et en colonnes en même temps. Il existe toutefois la possibilité de passer des éléments flexibles à la ligne pour créer de nouvelles lignes horizontales si [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) vaut `row` ou de nouvelles colonnes si `flex-direction` vaut `column`. Dans ce guide, nous verrons comment cela fonctionne, les cas pour lesquels cela a été prévu et les situations qui nécessitent plutôt d'utiliser [une disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout).
+Les boîtes flexibles ont été conçues comme un outil de mise en page unidimensionnel — elles permettent de disposer des éléments en incise ou en colonne — mais pas les deux à la fois. Il est toutefois possible de faire passer les éléments flexibles à la ligne, créant ainsi de nouvelles lignes si {{CSSxRef("flex-direction")}} est défini sur `row`, et de nouvelles colonnes si `flex-direction` est défini sur `column`. Ce guide explique le passage à la ligne dans les boîtes flexibles, à quoi il sert et dans quelles situations il est préférable d'utiliser la [disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout) plutôt que les boîtes flexibles.
 
 ## Créer des passages à la ligne
 
-La valeur initiale de la propriété [`flex-wrap`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap) est `nowrap`. Cela signifie que si on a un ensemble d'éléments flexibles trop larges pour tenir dans le conteneur, ces éléments dépasseront. Si on souhaite que ces éléments créent une nouvelle ligne lorsque la largeur du conteneur est dépassée, on peut ajouter la propriété `flex-wrap` avec la valeur `wrap`, ou utiliser la propriété raccourcie [`flex-flow`](/fr/docs/Web/CSS/Reference/Properties/flex-flow) avec les valeurs `row wrap` ou `column wrap`.
+La valeur initiale de la propriété {{CSSxRef("flex-wrap")}} est `nowrap`. Cela signifie que si un ensemble d'éléments flexibles est trop large pour leur conteneur flexible, ils le dépassent. Pour les faire passer à la ligne une fois qu'ils sont trop larges, ajoutez la propriété `flex-wrap` avec une valeur de `wrap`, ou utilisez le raccourci {{CSSxRef("flex-flow")}} avec des valeurs de `row wrap` ou `column wrap`. Les éléments passent alors à la ligne suivante lorsqu'ils dépassent leur conteneur.
 
-Les éléments passeront alors à la ligne dans le conteneur. Dans l'exemple qui suit, on dispose de 10 éléments pour lesquels `flex-basis` vaut `160px` et qui peuvent grandir/rétrécir. Une fois que la première ligne est composée de suffisamment d'éléments et qu'il n'y a plus d'espace suffisant pour placer un autre objet de 160 pixels, une nouvelle ligne flexible est créée dans laquelle on place les éléments suivants et ainsi de suite. Les éléments pouvant grandir, ils s'étireront sur plus de 160 pixels afin de remplir chaque ligne complètement. S'il n'y a qu'un seul élément sur la dernière ligne, cet élément s'étirera pour remplir toute la ligne.
+Dans cet exemple, il y a dix éléments flexibles avec une `flex-basis` de `160px` qui peuvent grandir et rétrécir. Une fois qu'il n'y a plus assez d'espace pour placer un autre élément de 160 pixels dans une ligne, une nouvelle ligne flexible est créée. De nouvelles lignes sont créées au besoin jusqu'à ce que tous les éléments soient placés. Comme les éléments peuvent grandir, ils s'étendent pour remplir complètement chaque ligne. S'il n'y a qu'un seul élément sur la dernière ligne, il s'étend pour remplir toute la ligne.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}
+```html live-sample___row-wrap
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
 
-On peut avoir le même effet en colonnes. Ici le conteneur devra avoir une hauteur afin que les éléments créent de nouvelles colonnes et s'étirent en hauteur pour remplir chaque colonne.
+```css live-sample___row-wrap
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/column-wrap.html", '100%', 810)}}
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+{{EmbedLiveSample("row-wrap")}}
+
+La même chose se produit avec les colonnes flexibles. Pour passer à la ligne et créer de nouvelles colonnes, le conteneur doit avoir une hauteur. Dans le cas des colonnes, les éléments s'étendent verticalement pour remplir complètement chaque colonne.
+
+```html live-sample___column-wrap
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
+
+```css live-sample___column-wrap
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 80px;
+}
+```
+
+{{EmbedLiveSample("column-wrap", "", 320)}}
 
 ## Le retour à la ligne et `flex-direction`
 
-Le retour à la ligne fonctionne comme on pourrait s'y attendre lorsqu'on manipule `flex-direction`. Si `flex-direction` vaut `row-reverse`, les éléments commenceront à créer une nouvelle ligne à partir de la ligne de fin du conteneur et rempliront les lignes dans l'ordre inverse.
+Le passage à la ligne fonctionne comme prévu lorsqu'il est combiné avec `flex-direction`. Si `flex-direction` est défini sur `row-reverse`, les éléments commencent au bord final du conteneur et se disposent sur des lignes dans l'ordre inverse.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 700)}}
+```html live-sample___row-reverse-wrap
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
 
-On notera que l'inversion a uniquement lieu dans le sens de la ligne. On démarre à droite puis on passe à la deuxième ligne pour laquelle on démarre également à droite. On n'inverse pas les deux directions et on ne commence donc pas à partir du bas du conteneur pour le remplir vers le haut.
+```css live-sample___row-reverse-wrap
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
 
-## Des explications sur cette disposition unidimensionnelle
+{{EmbedLiveSample("row-reverse-wrap")}}
 
-Comme nous avons pu le voir dans les exemples précédents, si les éléments peuvent grandir et rétrécir, lorsqu'il y a moins d'éléments dans la dernière ligne ou colonne, ces éléments grandissent pour occuper tout l'espace disponible.
+Notez que l'inversion se produit uniquement dans la direction en incise, celle des rangées. Nous commençons à droite, puis passons à la deuxième ligne et recommençons à droite. Nous n'inversons pas les deux directions en commençant par le bas pour remonter dans le conteneur&nbsp;!
 
-Il n'existe pas de méthode, avec les boîtes flexibles, qui permettent d'aligner les éléments d'une ligne avec ceux de la ligne du dessus&nbsp;: chaque ligne flexible agit comme un nouveau conteneur, décorrélé du précédent et gère la distribution de l'espace sur l'axe principal pour cette ligne uniquement. S'il n'y a qu'un seul élément et que celui-ci peut grandir, il remplira alors tout l'espace, comme si on avait un conteneur flexible avec un seul élément flexible.
+## Équilibrer le passage à la ligne
 
-Si on souhaite organiser du contenu sur deux dimensions, mieux vaut utiliser les grilles CSS. On peut comparer notre exemple précédent avec la version utilisant une disposition en grille pour observer les différences. Dans l'exemple qui suit, on utilise une grille CSS composée d'autant de colonnes de 160 pixels de large que possible et on distribue l'espace restant entre chaque colonne. Toutefois, les éléments restent ici sur la grille et ne s'étirent pas s'il y en a moins sur la dernière ligne.
+Un problème possible du passage à la ligne avec les boîtes flexibles est que, par défaut, les éléments flexibles ne se répartissent pas uniformément entre les lignes. Dans l'exemple précédent, nous avons trois éléments sur les trois premières lignes, mais un seul sur la dernière ligne. Nous pouvons répartir les éléments flexibles plus uniformément sur les quatre lignes flexibles en incluant le mot-clé [`balance`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap#balance) dans la valeur de `flex-wrap`, avec le mot-clé `wrap` ou `wrap-reverse`.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 580)}}
+Cet exemple utilise le même HTML que l'exemple précédent et presque le même CSS, sauf que la valeur de `flex-wrap` passe de `wrap` à `wrap balance`.
 
-C'est la différence entre une disposition unidimensionnelle et une disposition bidimensionnelle. Avec une méthode unidimensionnelle comme les boîtes flexibles, on ne contrôle que la ligne ou la colonne. Avec une méthode bidimensionnelle, on contrôle les deux axes simultanément. Aussi, si vous souhaitez organiser l'espace ligne par ligne ou colonne par colonne, vous pouvez utiliser les boîtes flexibles mais sinon, utilisez les grilles CSS.
+```html hidden live-sample___balanced-wrap live-sample___line-count
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
 
-## Comment fonctionnent les systèmes de grilles basés sur les boîtes flexibles ?
+```css hidden live-sample___balanced-wrap
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
 
-La plupart du temps, les systèmes de grilles basés sur les boîtes flexibles fonctionnent en combinant les boîtes flexibles et les dispositions avec les flottements (<i lang="en">floats</i>). Si on affecte des largeurs en pourcentage aux éléments flexibles (via `flex-basis` ou avec une largeur sur l'élément et avec `flex-basis` en `auto`), on peut obtenir l'impression d'une disposition organisée sur deux dimensions, comme on peut voir dans l'exemple ci-après.
+```css hidden live-sample___balanced-wrap live-sample___line-count
+@supports not (flex-wrap: balance) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge flex-wrap: balance.";
+    background-color: wheat;
+    text-align: center;
+    padding: 1rem 0;
 
-Dans cet exemple, on a `flex-grow` et `flex-shrink` qui valent `0` afin que les éléments ne soient pas flexibles et que leur flexibilité puisse être maîtrisée avec des pourcentages, comme on pouvait le faire avec des dispositions flottantes.
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
+```css
+flex-wrap: wrap balance;
+```
 
-Si on souhaite que les éléments flexibles s'alignent le long de l'axe secondaire, on pourra ajuster les largeurs avec ces pourcentages. Dans la plupart des cas, cet ajout de largeur aux éléments flexibles témoigne plutôt d'un scénario où les grilles CSS seraient plus pertinentes.
+Cette ligne peut aussi s'écrire simplement `flex-wrap: balance`. Si `balance` est défini comme seul mot-clé de la valeur de `flex-wrap`, l'autre mot-clé prend par défaut la valeur `wrap`. Nous l'écrivons explicitement afin de rendre le fonctionnement plus clair. Notez que l'inclusion du mot-clé `balance` avec la valeur `nowrap` est invalide et que la déclaration est ignorée.
+
+Le rendu mis à jour est le suivant&nbsp;:
+
+{{EmbedLiveSample("balanced-wrap")}}
+
+Notez que les éléments se répartissent maintenant plus uniformément, ou sont «&nbsp;équilibrés&nbsp;», avec deux lignes de trois éléments et deux lignes de deux éléments.
+
+Pour répartir les éléments flexibles équilibrés sur un plus grand nombre de lignes, utilisez la propriété {{CSSxRef("flex-line-count")}}. Cette propriété définit un nombre minimal de lignes. Si nous ajoutons ce qui suit à l'exemple précédent&nbsp;:
+
+```css hidden live-sample___line-count
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-line-count: 5;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+```css
+flex-line-count: 5;
+```
+
+Nous obtenons le résultat suivant&nbsp;:
+
+{{EmbedLiveSample("line-count")}}
+
+Nous avons maintenant cinq lignes de deux éléments flexibles.
+
+La propriété `flex-line-count` n'a aucun effet sur les conteneurs flexibles dont les valeurs de la propriété `flex-wrap` n'incluent pas le mot-clé `balance`.
+
+## Expliquer la disposition unidimensionnelle
+
+Comme nous l'avons vu dans les exemples précédents, si nos éléments peuvent grandir et rétrécir, lorsqu'il y a moins d'éléments dans la dernière ligne ou colonne, ces éléments grandissent pour remplir l'espace disponible.
+
+Les boîtes flexibles ne possèdent aucune fonctionnalité permettant d'aligner les éléments d'une ligne sur ceux de la ligne supérieure — chaque ligne flexible se comporte comme un nouveau conteneur flexible. La disposition répartit l'espace sur l'axe principal. S'il n'y a qu'un seul élément et que cet élément peut grandir, il remplit l'axe comme dans un conteneur flexible à élément unique. Pour une disposition en deux dimensions, utilisez probablement la disposition en grille.
+
+Cet exemple montre la différence en utilisant la disposition en grille CSS pour créer une disposition avec autant de colonnes d'au moins `160px` que possible, en répartissant l'espace supplémentaire entre toutes les colonnes. Nous utilisons le même HTML que dans [l'exemple de ligne flexible avec passage à la ligne](#créer_des_passages_à_la_ligne) ci-dessus, mais nous lui attribuons `display: grid`. Au lieu du raccourci {{CSSxRef("flex")}}, qui n'a aucun effet en dehors des boîtes flexibles, nous définissons directement sur le conteneur la largeur minimale de l'élément et sa capacité à grandir avec {{CSSxRef("grid-template-columns")}}. Avec la grille CSS, le dernier élément reste dans sa cellule de grille&nbsp;; les éléments de grille ne s'étirent pas lorsqu'ils sont moins nombreux sur la dernière ligne.
+
+```html live-sample___grid-example
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
+
+```css live-sample___grid-example
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  width: 500px;
+}
+
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("grid-example")}}
+
+Voilà la différence entre les dispositions unidimensionnelles et bidimensionnelles. Avec une méthode de disposition unidimensionnelle comme les boîtes flexibles, nous contrôlons uniquement la ligne ou la colonne. Avec une disposition en grille bidimensionnelle, nous contrôlons les deux simultanément. Pour répartir l'espace ligne par ligne, utilisez les boîtes flexibles. Sinon, utilisez la grille CSS.
+
+## Comment fonctionnent les systèmes de grille basés sur les boîtes flexibles?
+
+Les dispositions fondées sur les boîtes flexibles peuvent être forcées à s'aligner comme des systèmes de grille, mais ce n'est pas le but prévu des boîtes flexibles. Si vous attribuez des largeurs en pourcentage aux éléments flexibles — soit en utilisant `flex-basis`, soit en ajoutant une largeur à l'élément lui-même et en laissant la valeur de `flex-basis` à `auto` — vous pouvez donner l'impression d'une disposition bidimensionnelle.
+
+Dans cet exemple, `flex-grow` et `flex-shrink` sont définis sur `0` pour rendre les éléments flexibles inflexibles. La flexibilité est contrôlée au moyen de pourcentages.
+
+```html live-sample___flex-grid
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+</div>
+```
+
+```css live-sample___flex-grid
+* {
+  box-sizing: border-box;
+}
+
+.boite {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boite > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 33.3333%;
+}
+```
+
+{{EmbedLiveSample("flex-grid")}}
+
+Cette technique vous permet d'aligner les éléments flexibles sur l'axe transversal. Toutefois, si vous ajoutez des largeurs aux éléments flexibles de cette manière ou si vous ajoutez des éléments flexibles vides pour occuper l'espace, cela indique probablement qu'il vaut mieux utiliser la disposition en grille CSS pour ce composant.
 
 ## Créer des gouttières entre les éléments
 
-Pour créer des espaces ou des gouttières entre les éléments flexibles, utilisez la propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap).
+Pour créer des espaces ou des gouttières entre les éléments flexibles, utilisez directement la propriété {{CSSxRef("gap")}} sur le conteneur flexible afin de créer un espace fixe entre les éléments flexibles adjacents. La propriété `gap` est un raccourci pour `row-gap` et `column-gap`. Ces propriétés définissent la taille des gouttières entre les lignes et les colonnes dans les dispositions en grille, flexibles et à plusieurs colonnes.
 
-La propriété `gap` en CSS est une abréviation pour `row-gap` et `column-gap`, spécifiant la taille des gouttières, c'est-à-dire l'espace entre les lignes et les colonnes dans les mises en page de type grille, boîtes flexibles et multi-colonnes.
+La propriété `gap` n'est pas le seul moyen d'ajouter de l'espace entre les éléments. Les marges, les remplissages, `justify-content` et `align-content` peuvent aussi augmenter la taille de la gouttière et modifier la taille réelle de l'espace.
 
-Avec les boîtes flexibles, la propriété `gap` est appliquée au conteneur flexible. Elle crée un espace fixe entre les éléments flexibles adjacents. Cependant, la propriété `gap` n'est pas la seule à pouvoir créer de l'espace entre les éléments. Les marges, le remplissage (<i lang="en">padding</i>), `justify-content` et `align-content` peuvent également augmenter la taille de la gouttière, ce qui influe sur la taille réelle de l'espace.
+Pour voir en quoi la propriété `gap` diffère de `margin` sur les deux axes, modifiez la valeur de `gap` dans la boîte `.boite` et ajoutez une valeur de `margin` à la règle `.boite > *` dans la feuille de style ci-dessous. Cliquez sur le bouton «&nbsp;Réinitialiser&nbsp;» pour rétablir les valeurs précédentes.
 
-Pour voir comment la propriété `gap` diffère de `margin` dans les deux axes, essayez de modifier la valeur de `gap` dans le conteneur `.box` et d'ajouter une valeur de `margin` à la règle `.box > *` dans la feuille de style ci-dessous. Cliquez sur le bouton «&nbsp;Reset&nbsp;» pour revenir aux valeurs précédentes.
+```html live-sample___gaps
+<div class="enveloppe">
+  <div class="boite">
+    <div>Un</div>
+    <div>Deux</div>
+    <div>Trois</div>
+    <div>Quatre</div>
+    <div>Cinq</div>
+    <div>Six</div>
+    <div>Sept</div>
+    <div>Huit</div>
+    <div>Neuf</div>
+    <div>Dix</div>
+  </div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
+```css live-sample___gaps
+.enveloppe {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+}
+.boite {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.boite > * {
+  flex: 1 1 160px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
 
-## L'impact de `visibility: collapse`
+{{EmbedLiveSample("gaps", "", 220)}}
 
-La spécification sur les boîtes flexibles détaille la façon dont un élément flexible est replié lorsqu'on lui applique `visibility: collapse` (voir la documentation de [`visibility`](/fr/docs/Web/CSS/Reference/Properties/visibility)). La spécification décrit le comportement standard comme suit&nbsp;:
+## Réduire les éléments
 
-> "Indiquer `visibility: collapse` sur un élément flexible le transforme en un élément flexible replié et produit un effet similaire à l'application de `visibility: collapse` sur une ligne ou colonne de tableau. L'élément flexible replié est intégralement retiré du rendu mais laisse une toise qui permet de conserver la taille de la ligne flexible selon l'axe secondaire. Ainsi, si un conteneur flexible ne possède qu'une ligne flexible, replier ou déplier des éléments flexibles pourra modifier la dimension principale du conteneur mais n'aura aucun effet sur l'axe secondaire et empêchera ainsi le reste de la page d'osciller. Le passage à la ligne est réappliqué après le repliage des éléments et il se peut donc que la dimension secondaire d'un conteneur flexible sur plusieurs lignes puisse évoluer." — [Éléments repliés (spécification en anglais)](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+La spécification des boîtes flexibles détaille ce qui se produit lorsqu'un élément flexible est réduit en définissant `visibility: collapse` sur un élément. Consultez la documentation MDN de la propriété {{CSSxRef("visibility")}}. La spécification décrit le comportement comme suit&nbsp;:
 
-Ce comportement s'avère utile lorsqu'on souhaite cibler certains éléments flexibles avec JavaScript afin d'afficher/masquer leur contenu. Un des exemples de la spécification illustre un tel scénario.
+> «&nbsp;Définir `visibility: collapse` sur un élément flexible le transforme en _élément flexible réduit_ et produit un effet similaire à `visibility: collapse` sur une ligne ou une colonne de tableau&nbsp;: l'élément flexible réduit est entièrement retiré du rendu, mais laisse une «&nbsp;entretoise&nbsp;» qui maintient la taille de l'axe transversal de la ligne flexible. Ainsi, si un conteneur flexible ne comporte qu'une seule ligne flexible, réduire ou développer dynamiquement des éléments peut modifier la taille de l'axe principal du conteneur flexible, mais ne modifie pas sa taille sur l'axe transversal et ne provoque pas de «&nbsp;vacillement&nbsp;» dans la disposition du reste de la page. Le passage des lignes flexibles à la ligne _est_ toutefois recalculé après la réduction, donc la taille de l'axe transversal d'un conteneur flexible à plusieurs lignes peut changer ou non.&nbsp;» - [Éléments réduits <sup>(angl.)</sup>](https://drafts.csswg.org/css-flexbox-1/#visibility-collapse)
 
-Dans l'exemple qui suit, on a un conteneur flexible sans passage à la ligne. Le troisième élément possède plus de contenu que les autres mais est paramétré avec `visibility: collapse` et le conteneur flexible conserve donc une toise pour la hauteur nécessaire à l'affichage de cet élément. Si on retire `visibility: collapse` ou qu'on modifie la valeur de `visible`, on pourra voir l'élément disparaître et l'espace être redistribué entre les éléments qui ne sont pas repliés. La hauteur du conteneur flexible ne devrait pas changer.
+Ce comportement est utile si vous ciblez des éléments flexibles avec JavaScript pour afficher et masquer du contenu, par exemple. L'exemple de la spécification montre un tel modèle.
+
+Dans l'exemple interactif suivant, le conteneur flexible sans passage à la ligne contient une rangée de trois éléments flexibles configurés pour avoir des tailles égales. Le troisième élément comporte plusieurs lignes de contenu, ce qui agrandit le conteneur. La valeur par défaut de `align-items` est `normal`&nbsp;; pour les éléments flexibles, `normal` se comporte comme `stretch`, donc tous les éléments s'étirent par défaut et remplissent la hauteur de l'axe transversal du conteneur.
+
+L'élément qui crée la taille de l'axe transversal reçoit `visibility: collapse`, ce qui réduit ou masque l'élément flexible selon le navigateur. Dans les deux cas, le conteneur flexible conserve une _entretoise_ de la taille de l'axe transversal, même si elle n'est pas visible. Ainsi, si l'élément devient visible, la taille de l'axe transversal du conteneur flexible à une seule ligne ne change pas. Si vous supprimez `visibility: collapse` du CSS ou remplacez la valeur par `visible`, l'élément apparaît et l'espace de l'axe principal se redistribue entre les éléments non réduits, tandis que la taille de l'axe transversal reste inchangée.
 
 > [!NOTE]
-> Il est nécessaire d'utiliser Firefox pour les deux exemples présentés ensuite, car Chrome et Safari considèrent `collapse` comme équivalent à `hidden`.
+> Utilisez Firefox pour l'exemple ci-dessous, car les autres navigateurs courants traitent `collapse` comme `hidden`.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
+```html hidden live-sample___visibility-collapse
+<p>
+  <label
+    ><input type="checkbox" /> Modifier la valeur de
+    <code>visibility</code></label
+  >
+</p>
+```
 
-Lorsqu'on manipule des conteneurs flexibles qui sont composés de plusieurs lignes flexibles, il faut être conscient que le passage à la ligne est réappliqué après le repliage des éléments. Ainsi, le navigateur doit réappliquer les mécanismes de passage à la ligne afin de tenir compte de l'espace libéré par l'élément plié dans la direction principale.
+```html live-sample___visibility-collapse
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div class="masque">Trois <br />a <br />du texte <br />supplémentaire</div>
+</div>
+```
 
-Cela signifie qu'un ou plusieurs éléments pourraient être déplacés sur une autre ligne que leur ligne initiale.
+```css live-sample___visibility-collapse
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  width: 600px;
+}
+.boite > * {
+  flex: 1 1 200px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.masque {
+  visibility: collapse;
+}
+```
 
-Vous pouvez observer ce comportement dans l'exemple qui suit. On peut voir comment la composition des lignes varie en fonction de l'élément qui est replié. Si vous ajoutez plus de contenu au deuxième élément, il changera de ligne s'il est suffisamment grand. La ligne du haut sera alors aussi haute qu'une seule ligne de texte.
+```css hidden live-sample___visibility-collapse
+p:has(:checked) + div .masque {
+  visibility: visible;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
+{{EmbedLiveSample("visibility-collapse")}}
 
-Si cela pose problème dans votre structure, il peut être nécessaire de revoir son organisation et, par exemple, de placer chaque ligne de contenu dans un conteneur flexible séparé afin que le contenu ne puisse pas changer de ligne.
+Nous avons vu ci-dessus un conteneur flexible à une seule ligne, sans retour à la ligne, dont la taille est fixée à `600px` donc, que l'élément soit visible ou réduit, la largeur est la même. Il est important de comprendre que, bien que le conteneur conserve une entretoise de la taille de l'axe transversal de l'élément réduit, la taille principale n'est pas conservée. Les conteneurs flexibles à plusieurs lignes redisposent leurs éléments après le retrait des éléments réduits du rendu. Le nouvel espace qu'un élément réduit laisse dans la direction principale peut placer les éléments non réduits sur une ligne différente de celle où ils se trouvent si l'élément n'est pas réduit. Comme chaque ligne est disposée comme un conteneur flexible indépendant à une seule ligne et que sa composition peut changer après la réduction, sa taille sur l'axe transversal peut aussi changer.
+
+L'exemple suivant montre ce comportement. Le troisième élément flexible est réduit et occupe donc un espace nul sur l'axe principal, car sa taille en incise vaut `0`. Lorsqu'il est réduit, son entretoise se trouve sur la première rangée après le quatrième élément, et la première rangée est assez haute pour contenir les trois lignes de texte que le troisième élément a eues. Ensuite, si vous développez l'élément, par exemple en supprimant la classe `masque`, l'espace horizontal ne suffit plus pour le cinquième élément sur la première rangée et celui-ci passe sur la deuxième. La deuxième rangée grandit alors pour contenir les deux lignes de texte de son nouveau membre, et le dernier élément flexible passe sur une nouvelle rangée. Avec une deuxième rangée plus haute et une nouvelle troisième rangée, le conteneur flexible est beaucoup plus haut qu'auparavant.
+
+> [!NOTE]
+> Utilisez Firefox pour l'exemple ci-dessous, car les autres navigateurs courants traitent `collapse` comme `hidden`.
+
+```html hidden live-sample___wrapped-visibility-collapse
+<p>
+  <label
+    ><input type="checkbox" /> Modifier la valeur de
+    <code>visibility</code></label
+  >
+</p>
+```
+
+```html live-sample___wrapped-visibility-collapse
+<div class="boite">
+  <div>Un</div>
+  <div>Deux a la largeur de cette phrase.</div>
+  <div class="masque">
+    Trois <br />a <br />cinq <br />lignes <br />de hauteur.
+  </div>
+  <div>Quatre</div>
+  <div>Cinq<br />Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
+  <div>Neuf</div>
+  <div>Dix</div>
+  <div>Onze est plus long</div>
+</div>
+```
+
+```css live-sample___wrapped-visibility-collapse
+.boite {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.boite > * {
+  padding: 10px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+  min-width: 50px;
+}
+.masque {
+  visibility: collapse;
+}
+```
+
+```css hidden live-sample___wrapped-visibility-collapse
+p:has(:checked) + div .masque {
+  visibility: visible;
+}
+```
+
+{{EmbedLiveSample("wrapped-visibility-collapse", "", 300)}}
+
+Si cela pose un problème pour votre disposition, vous devez peut-être repenser la structure, par exemple en plaçant chaque rangée dans un conteneur flexible distinct afin qu'elles ne puissent pas changer de rangée.
 
 ### Utiliser `visibility: hidden` et `display: none`
 
-Dans l'exemple précédent, essayez d'utiliser `visibility: hidden` ou `display: none` au lieu de `visiblity: collapse`. En utilisant `visibility: hidden`, l'élément est rendu invisible mais la boîte est conservée dans l'architecture de la page, de sorte qu'elle se comporte toujours comme si elle faisait partie de la mise en page.
-
-Lorsque vous utilisez `display: none`, l'élément est complètement supprimé de l'architecture de la page. Non seulement il est invisible, mais la structure est également supprimée. Cela signifie que les compteurs l'ignorent et que les transitions ne s'exécutent pas.
+Dans les exemples interactifs précédents, essayez d'utiliser `visibility: hidden` ou `display: none` au lieu de `visibility: collapse`. Avec `visibility: hidden`, l'élément devient invisible, mais la boîte reste dans la structure de mise en forme et se comporte donc toujours comme si elle fait partie de la disposition.
+Avec `display: none`, l'élément est complètement retiré de la structure de mise en forme. Il devient non seulement invisible, mais sa structure est aussi supprimée. Les compteurs l'ignorent donc et les transitions, par exemple, ne s'exécutent pas.

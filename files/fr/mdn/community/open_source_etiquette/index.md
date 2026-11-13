@@ -2,7 +2,7 @@
 title: Étiquette pour les projets open source
 slug: MDN/Community/Open_source_etiquette
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: da7287ff61b6ea4db7f9a5e07be11263b525b7d0
 ---
 
 Si vous n'avez jamais travaillé sur un projet open source (<abbr lang="en">OSP</abbr> pour «&nbsp;<i lang="en">Open Source Project</i>&nbsp;») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN Web Docs et à d'autres projets open source.
@@ -12,7 +12,7 @@ Cet article ne vous apprend pas tout ce qu'il faut savoir sur la contribution à
 ## Réfléchissez à la raison pour laquelle vous contribuez à un OSP
 
 Avant de commencer à contribuer à un projet open source, demandez-vous pourquoi vous voulez le faire.
-Si la réponse à cette question est simplement «&nbsp;Je veux quelque chose à faire avec mon temps libre&nbsp;», c'est bien, mais des raisons encore meilleures pourraient être&nbsp;:
+Si la réponse à cette question est simplement «&nbsp;Je veux quelque chose à faire avec mon temps libre&nbsp;», c'est bien, mais des raisons encore meilleures peuvent être&nbsp;:
 
 - Je veux améliorer mes compétences.
 - J'utilise cet outil en permanence et j'ai trouvé un bogue dans celui-ci ou je veux contribuer à son amélioration.
@@ -27,11 +27,11 @@ Avoir un ensemble clair de raisons pour contribuer vous rend plus productif et f
 
 Nous pourrions résumer cela par «&nbsp;soyez aimables&nbsp;».
 C'est notre principal conseil pour toute personne débutant dans les contributions open source.
-Soyez aimables avec les autres contributeur·ice·s du projet, et l'ambiance y sera plus agréable et plus productive.
+Soyez aimables avec les autres contributeur·ice·s du projet, et l'ambiance y est plus agréable et plus productive.
 
 - Remerciez les personnes si elles vous aident.
 - Félicitez les personnes lorsque c'est approprié, par exemple si elles réussissent une demande de tirage ou corrigent un bogue difficile.
-- Répondez toujours avec respect, même si vous pensez que la réponse à une question était évidente ou que quelqu'un a fait une erreur stupide.
+- Répondez toujours avec respect, même si vous pensez que la réponse à une question est évidente ou que quelqu'un a fait une erreur bête.
 
 Les contributeur·ice·s sont ici parce qu'ils veulent avoir un impact positif sur le projet.
 Au-delà de cela, ne faites pas d'hypothèses, telles que&nbsp;:
@@ -63,7 +63,7 @@ Réfléchissez à ce que vous souhaitez faire dans le cadre de ce projet. Par ex
 Vous pouvez également contribuer en ouvrant des [demandes de tirage](/fr/docs/MDN/Community/Pull_requests) pour résoudre les problèmes que vous rencontrez en lisant les articles du site MDN.
 
 Une grande partie du travail sur MDN consiste à rédiger de la documentation et des exemples de code, mais il existe d'autres façons de contribuer&nbsp;:
-Cela pourrait inclure aider à trier les problèmes qui arrivent, corriger des fautes de frappe, améliorer la grammaire pour rendre les pages plus compréhensibles, ou encadrer les personnes qui essaient de corriger les problèmes.
+Cela peut inclure aider à trier les problèmes qui arrivent, corriger des fautes de frappe, améliorer la grammaire pour rendre les pages plus compréhensibles, ou encadrer les personnes qui essaient de corriger les problèmes.
 Chaque correction est utile, aussi petite soit-elle, et nous n'en refusons aucune.
 Cela dit, veillez à ce que vos corrections soient productives. Nous vous déconseillons ce genre de contributions&nbsp;:
 
@@ -75,7 +75,7 @@ Cela dit, veillez à ce que vos corrections soient productives. Nous vous décon
 > Pour les contenus traduits, nous vous recommandons de respecter le contenu écrit dans les pages anglaises, c'est ce contenu qui doit se retrouver dans la version traduite. De ce fait, si vous souhaitez changer le sens d'une phrase, ou ajouter un nouvel exemple&nbsp;; il faut le faire en premier lieu **sur la page anglaise** avant de proposer une traduction.
 
 Dans de nombreux cas, les choses sont ainsi sur les OSP pour une raison.
-Vous devriez lire les guides de style s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours d'abord&nbsp;!
+Vous devez lire les guides de style s'ils en ont un, et en cas de doute sur la productivité de quelque chose, demandez toujours d'abord&nbsp;!
 
 ## Suivez le guide
 
@@ -91,7 +91,7 @@ Découvrez où il est préférable de poser des questions. Les bons OSP le préc
 
 ## Faites des progrès, pas du bruit
 
-Réfléchissez bien à la manière dont vous gérez la communication au sein du projet — assurez-vous qu'elle soit utile et qu'elle ne complique pas la tâche des autres contributeur·ice·s. Soumettre des requêtes de tirage pour corriger des bogues, c'est très bien, mais veillez à ce qu'elles soient utiles ou faciles à examiner.
+Réfléchissez bien à la manière dont vous gérez la communication au sein du projet — assurez-vous qu'elle soit utile et qu'elle ne complique pas la tâche des autres contributeur·ice·s. Envoyer des requêtes de tirage pour corriger des bogues, c'est très bien, mais veillez à ce qu'elles soient utiles ou faciles à examiner.
 Signaler des problèmes et participer à d'autres discussions est tout à fait acceptable, mais vos signalements et vos commentaires sont-ils pertinents, ou ne font-ils qu'ajouter du bruit&nbsp;?
 
 En règle générale, faites ceci&nbsp;:
@@ -105,13 +105,13 @@ En règle générale, faites ceci&nbsp;:
 Ne faites pas&nbsp;:
 
 - Compliquer les problèmes en essayant de discuter de plusieurs sujets à la fois, ou en faisant des commentaires hors sujet.
-- Essayer de regrouper plusieurs corrections dans une seule pull request. Cela rend la révision beaucoup plus difficile et suscite des soupçons (certaines personnes pourraient penser que vous essayez de cacher du code malveillant entre les modifications valides).
+- Essayer de regrouper plusieurs corrections dans une seule requête de tirage. Cela rend la révision beaucoup plus difficile et suscite des soupçons (certaines personnes peuvent penser que vous essayez de cacher du code malveillant entre les modifications valides).
 - Ouvrir de nombreux problèmes en posant des questions vagues.
 - Poser des questions sans essayer de résoudre le problème par vous-même d'abord.
 
-## Les OSP sont une démocratie (ou presque)
+## Les POS sont une démocratie (ou presque)
 
-Les OSP sont assez démocratiques — de nombreuses décisions font l'objet d'un vote, et vous êtes largement libre de contribuer comme vous le souhaitez, tant que vous n'empêchez personne d'autre de contribuer.
+Les <abbr title="Projets Open Source">POS</abbr> sont assez démocratiques — de nombreuses décisions font l'objet d'un vote, et vous êtes largement libre de contribuer comme vous le souhaitez, tant que vous n'empêchez personne d'autre de contribuer.
 
 Cependant, certaines choses sont en grande partie décidées par un petit groupe de contributeur·ice·s principaux. Vous êtes libre de contester n'importe quelle décision, mais il arrive parfois qu'un·e modérateur·ice prenne une décision qui va à l'encontre de votre opinion. Vous devez respecter et accepter ces décisions.
 
@@ -119,13 +119,13 @@ Il est utile de faire connaissance avec les modérateur·ice·s de chaque projet
 
 ## Soyez patient·e, soyez ponctuel·le
 
-Gardez à l'esprit que de nombreuses personnes travaillant sur les OSP le font pendant leur temps libre, sans rémunération, et que toutes les personnes travaillant sur les OSP sont généralement très occupées. Si vous attendez une réponse, par exemple à une requête de tirage ou à une question, soyez patient.
+Gardez à l'esprit que de nombreuses personnes travaillant sur les POS le font pendant leur temps libre, sans rémunération, et que toutes les personnes travaillant sur les POS sont généralement très occupées. Si vous attendez une réponse, par exemple à une requête de tirage ou à une question, soyez patient.
 
 Il est raisonnable d'attendre quelques jours, puis de relancer poliment la personne pour lui demander si elle a eu le temps d'y jeter un œil. Si elle est trop occupée, il vaut peut-être mieux attendre une semaine de plus et essayer de la relancer à ce moment-là.
 
 Il n'est **pas** raisonnable ni poli d'exiger une réponse rapide.
 
-Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devriez lui accorder la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, informez-les et demandez aux mainteneur·euse·s de vous aider à trouver quelqu'un d'autre pour accomplir la tâche.
+Si quelqu'un attend que vous fassiez quelque chose pour lui, vous devez lui accorder la même courtoisie, mais en même temps, essayez de répondre aussi rapidement que possible. Si vous ne pouvez vraiment pas trouver le temps, informez-les et demandez aux mainteneur·euse·s de vous aider à trouver quelqu'un d'autre pour accomplir la tâche.
 
 ## Voir aussi
 

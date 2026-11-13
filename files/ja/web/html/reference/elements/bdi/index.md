@@ -1,5 +1,5 @@
 ---
-title: HTML `<bdi>` 書字方向分離要素
+title: "`<bdi>` 書字方向分離要素"
 short-title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 l10n:

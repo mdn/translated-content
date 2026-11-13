@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`rotate`** vous permet de définir des transformations de rotation individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela correspond mieux à l'utilisation typique de l'interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformation à spécifier dans la propriété `transform`.
+La propriété [CSS](/fr/docs/Web/CSS) **`rotate`** vous permet de définir des transformations de rotation individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela correspond mieux à l'utilisation typique de l'interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformation à définir dans la propriété `transform`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rotate")}}
 
@@ -158,15 +158,15 @@ La première boîte pivote de 90 degrés sur l'axe Z au survol, la deuxième piv
 #### HTML
 
 ```html
-<div class="box" id="box1">rotation en Z</div>
-<div class="box" id="box2">rotation en Y</div>
-<div class="box" id="box3">vecteur et angle</div>
+<div class="boite" id="boite1">rotation en Z</div>
+<div class="boite" id="boite2">rotation en Y</div>
+<div class="boite" id="boite3">vecteur et angle</div>
 ```
 
 #### CSS
 
 ```css
-.box {
+.boite {
   display: inline-block;
   margin: 1em;
   min-width: 6.5em;
@@ -176,15 +176,15 @@ La première boîte pivote de 90 degrés sur l'axe Z au survol, la deuxième piv
   border: 0.25em dotted;
 }
 
-#box1:hover {
+#boite1:hover {
   rotate: 90deg;
 }
 
-#box2:hover {
+#boite2:hover {
   rotate: y 180deg;
 }
 
-#box3:hover {
+#boite3:hover {
   rotate: 1 2 1 360deg;
 }
 ```

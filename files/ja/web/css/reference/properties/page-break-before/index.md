@@ -1,12 +1,10 @@
 ---
-title: CSS `page-break-before` プロパティ
+title: "`page-break-before` プロパティ (CSS)"
 short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{deprecated_header}}
 
 > [!WARNING]
 > このプロパティは {{cssxref("break-before")}} プロパティによって置き換えられました。

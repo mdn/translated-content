@@ -1,5 +1,6 @@
 ---
 title: "MutationRecord: previousSibling プロパティ"
+short-title: previousSibling
 slug: Web/API/MutationRecord/previousSibling
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48

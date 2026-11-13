@@ -3,7 +3,7 @@ title: "Content-Security-Policy : directive report-uri"
 short-title: report-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri
 l10n:
-  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
+  sourceCommit: 8f567ac62deb241e61b525d36088d626fc6a8a84
 ---
 
 > [!WARNING]
@@ -50,10 +50,10 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 ### Syntaxe du rapport de violation
 
-L'objet JSON du rapport est envoyé via une opération HTTP `POST` avec un {{HTTPHeader("Content-Type")}} de type `application/csp-report`.
+L'objet JSON du rapport est envoyé par une opération HTTP `POST` avec un {{HTTPHeader("Content-Type")}} de type `application/csp-report`.
 
 > [!NOTE]
-> Les rapports de violation doivent être considérés comme des données contrôlées par un attaquant.
+> Les rapports de violation doivent être considérés comme des données contrôlées par un·e attaquant·e.
 > Le contenu doit être correctement assaini avant d'être stocké ou affiché.
 > Cela est particulièrement vrai pour la propriété [`script-sample`](#script-sample), si elle est fournie.
 
@@ -68,13 +68,13 @@ L'objet JSON du rapport a une seule propriété de niveau supérieur, `"csp-repo
   - : L'URI du document dans lequel la violation s'est produite.
 - `effective-directive`
   - : La directive dont l'application a causé la violation.
-    Certains navigateurs peuvent fournir des valeurs différentes, comme Chrome fournissant `style-src-elem`/`style-src-attr`, même lorsque la directive appliquée était `style-src`.
+    Certains navigateurs peuvent fournir des valeurs différentes, comme Chrome fournissant `style-src-elem`/`style-src-attr`, même lorsque la directive appliquée est `style-src`.
 - `original-policy`
   - : La politique originale telle que définie par l'en-tête HTTP `Content-Security-Policy`.
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Le référent du document dans lequel la violation s'est produite.
 - `script-sample`
-  - : Les 40 premiers caractères du script en ligne, du gestionnaire d'évènements ou du style qui a causé la violation.
+  - : Les 40 premiers caractères du script en incise, du gestionnaire d'évènements ou du style qui a causé la violation.
     Les violations provenant de fichiers externes ne sont pas incluses dans le rapport.
 
     Cela ne s'applique qu'aux violations [`script-src*`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) et [`style-src*`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src), lorsque la directive `Content-Security-Policy` correspondante contient le mot-clé [`'report-sample'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample).
@@ -112,13 +112,13 @@ Le HTML de `signup.html` ressemble à ceci&nbsp;:
 ```
 
 Pouvez-vous repérer l'erreur&nbsp;? Les feuilles de style ne peuvent être chargées que depuis `cdn.example.com`, mais le site essaie d'en charger une depuis sa propre origine (`http://example.com`).
-Un navigateur capable d'appliquer la CSP enverrait le rapport de violation suivant en tant que requête `POST` à `http://example.com/_/csp-reports` lorsque le document est consulté&nbsp;:
+Un navigateur capable d'appliquer la CSP envoie le rapport de violation suivant en tant que requête `POST` à `http://example.com/_/csp-reports` lorsque le document est consulté&nbsp;:
 
 ```json
 {
   "csp-report": {
     "blocked-uri": "http://example.com/css/style.css",
-    "disposition": "report",
+    "disposition": "enforce",
     "document-uri": "http://example.com/signup.html",
     "effective-directive": "style-src-elem",
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
@@ -131,7 +131,7 @@ Un navigateur capable d'appliquer la CSP enverrait le rapport de violation suiva
 
 Comme vous pouvez le voir, le rapport inclut le chemin complet vers la ressource violant la politique dans `blocked-uri`.
 Ce n'est pas toujours le cas.
-Par exemple, si `signup.html` tentait de charger du CSS depuis `http://unautrecdn.example.com/stylesheet.css`, le navigateur n'inclurait _pas_ le chemin complet, seulement l'origine,
+Par exemple, si `signup.html` tente de charger du CSS depuis `http://unautrecdn.example.com/stylesheet.css`, le navigateur n'inclut _pas_ le chemin complet, seulement l'origine,
 (`http://unautrecdn.example.com`) afin d'éviter de divulguer des informations sensibles sur les ressources cross-origin.
 La spécification CSP [donne une explication <sup>(angl.)</sup>](https://w3c.github.io/webappsec-csp/#security-violation-reports) de ce comportement.
 
@@ -140,13 +140,13 @@ La spécification CSP [donne une explication <sup>(angl.)</sup>](https://w3c.git
 La directive `report-uri` peut également être utilisée avec l'en-tête de réponse {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 Cet en-tête permet au navigateur de signaler les violations sans les bloquer lors des tests.
 
-L'en-tête HTTP serait à peu près le même.
+L'en-tête HTTP est à peu près le même.
 
 ```http
 Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
 ```
 
-Le rapport serait le même, sauf pour la disposition `"report"` et bien sûr la `"original-policy"`&nbsp;:
+Le rapport est le même, sauf pour la disposition `"report"` et bien sûr la `"original-policy"`&nbsp;:
 
 ```json
 {
@@ -171,7 +171,7 @@ Le rapport serait le même, sauf pour la disposition `"report"` et bien sûr la 
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-`/csp-violation-report-endpoint/` pourrait par exemple exécuter un script PHP comme celui-ci, qui enregistre le JSON détaillant la violation et, si la violation est la première ajoutée au fichier journal, envoie un e-mail à un·e administrateur·ice&nbsp;:
+`/csp-violation-report-endpoint/` peut par exemple exécuter un script PHP comme celui-ci, qui enregistre le JSON détaillant la violation et, si la violation est la première ajoutée au fichier journal, envoie un e-mail à un·e administrateur·ice&nbsp;:
 
 ```php
 <?php
@@ -203,7 +203,7 @@ if (($json_data = json_decode($json_data))) {
       "La violation suivante de la Content-Security-Policy s'est produite sur " .
       $current_domain . ":\n\n" .
       $json_data .
-      "\n\nLes violations CSP suivantes seront enregistrées dans le fichier journal suivant, mais aucune notification par e-mail supplémentaire ne sera envoyée tant que ce fichier journal n'est pas supprimé :\n\n" .
+      "\n\nLes violations CSP suivantes sont enregistrées dans le fichier journal suivant, mais aucune notification par e-mail supplémentaire n'est envoyée tant que ce fichier journal n'est pas supprimé :\n\n" .
       $log_file;
     mail(
       $email_address,

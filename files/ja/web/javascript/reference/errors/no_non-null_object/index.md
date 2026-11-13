@@ -1,22 +1,21 @@
 ---
 title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{JSSidebar("Errors")}}
 
 JavaScript の例外 "is not a non-null object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトではなく、動作しません。
 
 ## エラーメッセージ
 
-```js
-TypeError: Invalid descriptor for property {x} (Edge)
-TypeError: "x" is not a non-null object (Firefox)
-TypeError: Property description must be an object: "x" (Chrome)
-TypeError: Invalid value used in weak set (Chrome)
+```plain
+TypeError: Property description must be an object: x (V8-based)
+TypeError: Property descriptor must be an object, got "x" (Firefox)
+TypeError: Property description must be an object. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("TypeError")}}
 
@@ -44,25 +43,8 @@ Object.defineProperty({}, "key", null);
 Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
-## `WeakMap` および `WeakSet` オブジェクトにはオブジェクトキーが必要
-
-{{jsxref("WeakMap")}} および {{jsxref("WeakSet")}} オブジェクトはオブジェクトをキーとして保持します。そのほかの型をキーとして使用できません。
-
-```js example-bad
-var ws = new WeakSet();
-ws.add("foo");
-// TypeError: "foo" is not a non-null object
-```
-
-代わりにオブジェクトを使用してください。
-
-```js example-good
-ws.add({ foo: "bar" });
-ws.add(window);
-```
-
 ## 関連情報
 
 - {{jsxref("Object.create()")}}
-- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
-- {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}

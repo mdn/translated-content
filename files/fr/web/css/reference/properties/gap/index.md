@@ -3,7 +3,7 @@ title: Propriété CSS `gap`
 short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`gap`** définit les espaces (également appelés {{Glossary("gutters", "gouttières")}}) entre les lignes et les colonnes sur les conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout).
@@ -68,16 +68,15 @@ Cette propriété est une version abrégée pour les propriétés CSS suivantes&
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-gap: normal;
-
 /* Une valeur */
+gap: normal;
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 gap: 16%;
 gap: 100%;
+gap: thick;
 gap: calc(10% + 20px);
 
 /* Deux valeurs */
@@ -87,7 +86,10 @@ gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 gap: 16% 100%;
 gap: 21px 82%;
+gap: normal thin;
+gap: thin thick;
 gap: calc(20px + 10%) calc(10% - 5px);
+gap: calc(20px + 10%) medium;
 
 /* Valeurs globales */
 gap: inherit;
@@ -99,18 +101,20 @@ gap: unset;
 
 ### Valeurs
 
+Cette propriété est définie avec une ou deux valeurs parmi la liste suivante&nbsp;:
+
 - `normal`
-  - : Une valeur de `1em` pour les conteneurs multi-colonnes et `0` dans tous les autres contextes.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : La taille de l'espace comme une valeur non négative de type {{CSSxRef("&lt;length&gt;")}}.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : La taille de l'espace comme une valeur non négative de type {{CSSxRef("&lt;percentage&gt;")}} relative à la taille de la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'élément conteneur dans cette dimension.
+  - : Définit l'espace à `1em` dans les mises en page multi-colonnes et à `0` dans tous les autres contextes. C'est la valeur par défaut.
+- {{CSSxRef("&lt;line-width&gt;")}}
+  - : Définit la taille de l'espace en utilisant les mots-clés `thin`, `medium` ou `thick`, ou une valeur positive de type {{CSSxRef("&lt;length&gt;")}}.
+- {{CSSxRef("&lt;length-percentage&gt;")}}
+  - : Définit l'espace comme une valeur non négative de type {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}}.
 
 ## Description
 
-La propriété `gap` définit les espaces entre les colonnes et les lignes, l'effet de la définition dépendant du type de conteneur de grille, flexible ou mise en page multi-colonnes.
+La propriété `gap` définit les espaces entre les colonnes et les lignes, l'effet de la définition dépendant du type de conteneur de grille, flexible ou disposition à plusieurs colonnes. Voir [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps) pour plus d'informations sur les espaces selon le type de mise en page.
 
-La propriété raccourcie est définie comme une valeur pour `<'row-gap'>`, suivie éventuellement d'une valeur pour `<'column-gap'>`. Alors que la valeur par défaut est `normal` pour les deux sous-propriétés, si une seule valeur est déclarée, cette valeur s'applique aux deux. Les deux `<'row-gap'>` et `<'column-gap'>` peuvent chacun être définis comme une longueur (`<length>`), un pourcentage (`<percentage>`), ou le mot-clé `normal`.
+La propriété raccourcie accepte une ou deux valeurs. Une seule valeur définit à la fois le `row-gap` et le `column-gap`. Deux valeurs définissent d'abord le `row-gap`, puis le `column-gap`. La valeur par défaut est `normal` pour les deux sous-propriétés&nbsp;; mais si vous ne déclarez qu'une seule valeur, elle s'applique aux deux.
 
 Les valeurs d'espace en pourcentage sont toujours calculées par rapport à la taille de la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'élément conteneur. Le comportement est bien défini et cohérent dans tous les modes de mise en page lorsque la taille du conteneur est déterminée.
 
@@ -120,7 +124,7 @@ Les espaces peuvent contenir des séparateurs visibles en tant qu'ornements d'es
 
 ### Dans les dispositions en grille
 
-Dans [la disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), la propriété `gap` définit l'espace entre les lignes et les colonnes. La première valeur définit les gouttières entre les lignes, et la seconde définit les gouttières entre les colonnes. Si une seule valeur est incluse, cette valeur est utilisée pour les deux dimensions.
+Dans [la disposition en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), la propriété `gap` définit l'espace entre les lignes et les colonnes. Si deux valeurs sont incluses, la première valeur définit la gouttière entre les lignes, et la seconde définit la gouttière entre les colonnes.
 
 Les valeurs en pourcentage sont calculées par rapport à la [boîte de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu) de l'élément conteneur. Les tailles en pourcentage cycliques se résolvent par rapport à zéro pour déterminer les contributions de {{Glossary("intrinsic size", "taille intrinsèque")}}, mais se résolvent par rapport à la boîte de contenu du conteneur de grille lors de la mise en page du contenu. Les deux exemples ci-dessous démontrent les valeurs de gap en pourcentage avec [taille de conteneur explicite](#percentage_gap_value_and_explicit_container_size) et [taille de conteneur implicite](#percentage_gap_value_and_implicit_container_size) dans la section des exemples.
 
@@ -157,7 +161,7 @@ Dans [la disposition multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout
 #### HTML
 
 ```html
-<div id="flexbox">
+<div id="boite-flexible">
   <div></div>
   <div></div>
   <div></div>
@@ -170,14 +174,14 @@ Dans [la disposition multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout
 #### CSS
 
 ```css
-#flexbox {
+#boite-flexible {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   gap: 20px 5px;
 }
 
-#flexbox > div {
+#boite-flexible > div {
   border: 1px solid green;
   background-color: lime;
   flex: 1 1 auto;
@@ -195,7 +199,7 @@ Dans [la disposition multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout
 #### HTML
 
 ```html
-<div id="grid">
+<div id="grille">
   <div></div>
   <div></div>
   <div></div>
@@ -211,14 +215,14 @@ Dans [la disposition multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout
 #### CSS
 
 ```css
-#grid {
+#grille {
   display: grid;
   height: 200px;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 20px 5px;
 }
 
-#grid > div {
+#grille > div {
   border: 1px solid green;
   background-color: lime;
 }
@@ -255,19 +259,19 @@ Dans [la disposition multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout
 
 ### Taille explicite du conteneur
 
-Si le conteneur a une taille fixe, le calcul de la valeur d'espace en pourcentage se fait sur la taille du conteneur. Ainsi, le comportement de l'espace est cohérent dans toutes les mises en page. Dans l'exemple suivant, il y a deux conteneurs, l'un en mise en page grille et l'autre en mise en page flexible. Les conteneurs ont cinq enfants rouges de 20x20px. Les deux conteneurs ont une hauteur explicitement définie à 200px avec `height: 200px` et l'espace est défini avec `gap: 12.5% 0`.
+Si le conteneur a une taille fixe, le calcul de la valeur d'espace en pourcentage se fait sur la taille du conteneur. Ainsi, le comportement de l'espace est cohérent dans toutes les mises en page. Dans l'exemple suivant, il y a deux conteneurs, l'un en mise en page grille et l'autre en mise en page flexible. Les conteneurs ont cinq enfants rouges de 20x20px. Les deux conteneurs ont une hauteur explicitement définie à 200px avec `height: 200px` et l'espace est défini avec `gap: 12.5% 0`. Voir [Définir les valeurs d'espacement avec des pourcentages](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps#définir_les_valeurs_despacement_avec_des_pourcentages) pour plus d'information.
 
 ```html
-<span>Grid</span>
-<div id="grid">
+<span>Grille</span>
+<div id="grille">
   <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
-<span>Flex</span>
-<div id="flex">
+<span>Flexible</span>
+<div id="flexible">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -285,20 +289,20 @@ body > div {
 ```
 
 ```css
-#grid {
+#grille {
   display: inline-grid;
   height: 200px;
   gap: 12.5% 0;
 }
 
-#flex {
+#flexible {
   display: inline-flex;
   height: 200px;
   gap: 12.5% 0;
 }
 
-#grid > div,
-#flex > div {
+#grille > div,
+#flexible > div {
   background-color: coral;
   width: 20px;
   height: 20px;
@@ -307,23 +311,23 @@ body > div {
 
 {{EmbedLiveSample("Taille explicite du conteneur", "auto", 200)}}
 
-Inspectez maintenant les éléments grille et flexibles en utilisant [l'onglet Inspecteur dans les outils de développement Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). Pour voir les espaces réels, survolez les balises `<div id="grid">` et `<div id="flex">` dans l'inspecteur. Vous pouvez remarquer que l'espace est identique dans les deux cas, soit 25px.
+Inspectez maintenant les éléments grille et flexibles en utilisant [l'onglet Inspecteur dans les outils de développement Web <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html). Pour voir les espaces réels, survolez les balises `<div id="grille">` et `<div id="flexible">` dans l'inspecteur. Vous pouvez remarquer que l'espace est identique dans les deux cas, soit 25px.
 
 ### Taille implicite du conteneur
 
 Si la taille n'est pas explicitement définie sur le conteneur, alors l'espace en pourcentage se comporte différemment selon la mise en page grille ou flexible. Dans l'exemple suivant, les conteneurs n'ont pas de hauteur explicitement définie.
 
 ```html hidden
-<span>Grid</span>
-<div id="grid">
+<span>Grille</span>
+<div id="grille">
   <div>1</div>
   <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>
 </div>
-<span>Flex</span>
-<div id="flex">
+<span>Flexible</span>
+<div id="flexible">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -338,19 +342,19 @@ body > div {
   width: 200px;
 }
 
-#grid {
+#grille {
   display: inline-grid;
   gap: 12.5% 0;
 }
 
-#flex {
+#flexible {
   display: inline-flex;
   gap: 12.5% 0;
   flex-flow: column;
 }
 
-#grid > div,
-#flex > div {
+#grille > div,
+#flexible > div {
   background-color: coral;
   width: 20px;
   height: 20px;
@@ -375,8 +379,11 @@ Dans le cas de la mise en page flexible, l'espace en pourcentage donne toujours 
 
 - La propriété {{CSSxRef("row-gap")}}
 - La propriété {{CSSxRef("column-gap")}}
+- La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_gouttières)
+- Le module [des espaces CSS](/fr/docs/Web/CSS/Guides/Gaps)
 - Le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
 - Le module [de mise en page flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - Le module [de mise en page en grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
-- Le module [de mise en page multi-colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)
+- Le module [de disposition à plusieurs colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)

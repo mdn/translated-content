@@ -38,5 +38,5 @@ l10n:
 
 ## 関連情報
 
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN カリキュラムパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#パートナーリンクと埋め込み)</sup>
   - : [Scrimba's](https://scrimba.com/?via=mdn) のフロントエンド開発者キャリアパスは、楽しい対話型のレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを教えてくれます。ゼロから最初のフロントエンドの仕事に就くまで。このコースの多くの部分は、無料版として単独で利用できます。

@@ -3,7 +3,7 @@ title: "Iterator : méthode statique zipKeyed()"
 short-title: zipKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed
 l10n:
-  sourceCommit: 5b9e4bb67e5cb4bb2b780e7338a6560463e5a1a7
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 {{SeeCompatTable}}
@@ -108,8 +108,8 @@ La plupart des cas d'utilisation de `Iterator.zipKeyed()` sont identiques à ceu
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.zipKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/proposals/joint-iteration)
-- [Prothèse d'émulation es-shims de `Iterator.zipKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.zipKeyed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.zipKeyed` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.zip()")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}

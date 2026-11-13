@@ -33,7 +33,7 @@ Promise<Response> fetch(input[, init]);
 - _init_ {{optional_inline}}
   - : Objeto de opciones que contiene configuraciones para personalizar la solicitud. Estas opciones pueden ser:
     - `method`: El método de solicitud, p.ej., `GET`, `POST`.
-    - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{domxref("ByteString")}}.
+    - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{jsxref("String")}}.
     - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{jsxref("String")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.
     - `mode`: El modo a usar en la solicitud, p.ej., `cors`, `no-cors`, o `same-origin`.
     - `credentials`: Las credenciales que se quieran utilizar para la solicitud: `omit`, `same-origin`, o `include`. Para enviar automáticamente las cookies del dominio actual, debe indicarse esta opción. Desde Chrome 50, esta propiedad también acepta una instancia de {{domxref("FederatedCredential")}} o de {{domxref("PasswordCredential")}}.
@@ -47,7 +47,7 @@ Promise<Response> fetch(input[, init]);
 
 ### Return value
 
-Una {{domxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
+Una {{jsxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
 
 ### Excepciones
 

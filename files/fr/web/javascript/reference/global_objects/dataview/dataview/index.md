@@ -3,7 +3,7 @@ title: Constructeur DataView()
 short-title: DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 Le constructeur **`DataView()`** permet de construire des objets {{JSxRef("DataView")}}.
@@ -37,11 +37,11 @@ new DataView(buffer, byteOffset, byteLength)
 ### Paramètres
 
 - `buffer`
-  - : Un objet {{JSxRef("ArrayBuffer")}} ou {{JSxRef("SharedArrayBuffer")}} existant à utiliser comme tampon de mémoire sur lequel portera la vue formée par le nouvel objet `DataView`.
+  - : Un objet {{JSxRef("ArrayBuffer")}} ou {{JSxRef("SharedArrayBuffer")}} existant à utiliser comme tampon de mémoire sur lequel porte la vue formée par le nouvel objet `DataView`.
 - `byteOffset` {{Optional_Inline}}
   - : Le décalage, exprimé en octets, du premier octet référencé par la vue par rapport au tampon de mémoire. Par défaut, la vue commence au premier octet du tampon de mémoire.
 - `byteLength` {{Optional_Inline}}
-  - : Le nombre d'éléments dans le tableau des octets de la vue. Par défaut, la longueur de la vue correspondra à celle du tampon.
+  - : Le nombre d'éléments dans le tableau des octets de la vue. Par défaut, la longueur de la vue correspond à celle du tampon.
 
 ### Valeur de retour
 
@@ -74,5 +74,5 @@ view.getInt16(1); // 42
 
 ## Voir aussi
 
-- [Une prothèse d'émulation pour `DataView` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `DataView` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - L'objet natif {{JSxRef("DataView")}}

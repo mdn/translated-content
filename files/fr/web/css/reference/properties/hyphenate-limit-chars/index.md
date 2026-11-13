@@ -3,12 +3,10 @@ title: Propriété CSS `hyphenate-limit-chars`
 short-title: hyphenate-limit-chars
 slug: Web/CSS/Reference/Properties/hyphenate-limit-chars
 l10n:
-  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
+  sourceCommit: 367f942b096f97d4c3063e31a0dc5002736db81b
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`hyphenate-limit-chars`** définit la longueur minimale d'un mot pour permettre la coupure par trait d'union, ainsi que le nombre minimal de caractères avant et après le trait d'union.
-
-Cette propriété vous offre un contrôle précis sur la coupure des mots dans le texte. Ce contrôle permet d'éviter des coupures maladroites et d'adapter la coupure selon les langues, ce qui améliore la typographie.
 
 ## Syntaxe
 
@@ -38,16 +36,24 @@ hyphenate-limit-chars: unset;
 
 ### Valeurs
 
-Cette propriété est définie avec une à trois valeurs numériques ou `auto`&nbsp;:
+Cette propriété est définie avec une à trois valeurs parmi la liste suivante&nbsp;:
 
-- `<number> <number> <number>`
-  - : La première valeur est la longueur minimale d'un mot pour permettre la coupure. La seconde valeur est le nombre minimal de caractères avant le trait d'union. La troisième valeur est le nombre minimal de caractères après le trait d'union.
-- `<number> <number>`
-  - : La première valeur est la longueur minimale d'un mot pour permettre la coupure. La seconde valeur est le nombre minimal de caractères avant le trait d'union. Le nombre minimal de caractères après le trait d'union est égal à la seconde valeur.
-- `<number>`
-  - : La valeur est la longueur minimale d'un mot pour permettre la coupure. Le nombre minimal de caractères avant et après le trait d'union est défini sur `auto`.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Définit soit le nombre de caractères pour la longueur minimale d'un mot pour la césure, soit le nombre minimal de caractères avant le trait d'union, soit le nombre minimal de caractères après le trait d'union.
+- `auto`
+  - : Définit que l'agent utilisateur choisit des valeurs appropriées pour la disposition actuelle. C'est la valeur par défaut.
 
-Si `auto` est défini pour l'une des valeurs, l'agent utilisateur choisit une valeur adaptée à la disposition actuelle. Sauf si l'agent utilisateur peut calculer une meilleure valeur, les valeurs par défaut suivantes sont utilisées&nbsp;:
+## Description
+
+La propriété `hyphenate-limit-chars` permet un contrôle précis de la césure dans le texte. Ce contrôle vous permet d'éviter les césures maladroites et de définir une césure appropriée pour différentes langues, ce qui, à son tour, permet une meilleure typographie.
+
+La propriété accepte une à trois valeurs, chacune étant un `<integer>` ou le mot-clé `auto`, définissant respectivement le nombre de caractères pour la longueur minimale d'un mot pour la césure, le nombre minimal de caractères avant le trait d'union et le nombre minimal de caractères après le trait d'union&nbsp;:
+
+- Si un entier (`<integer>`) est défini, il définit la longueur minimale d'un mot pour la césure, tandis que le nombre minimal de caractères avant et après le trait d'union est défini sur `auto`.
+- Si deux valeurs sont définies, la première valeur définit la longueur minimale d'un mot et la seconde définit le nombre minimal de caractères avant et après le trait d'union&nbsp;; la troisième valeur omise prend par défaut la valeur de la seconde.
+- Si trois valeurs sont définies, elles définissent respectivement la longueur minimale d'un mot, le nombre minimal de caractères avant le trait d'union et le nombre minimal de caractères après le trait d'union.
+
+Pour `auto`, l'agent utilisateur choisit une valeur adaptée à la disposition actuelle. Sauf si l'agent utilisateur peut calculer une meilleure valeur, les valeurs par défaut suivantes sont utilisées&nbsp;:
 
 - Longueur minimale d'un mot pour permettre la coupure&nbsp;: 5
 - Nombre minimal de caractères avant le trait d'union&nbsp;: 2

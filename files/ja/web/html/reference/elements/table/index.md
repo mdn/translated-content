@@ -1,5 +1,5 @@
 ---
-title: HTML `<table>` 表要素
+title: "`<table>` 表要素"
 short-title: <table>
 slug: Web/HTML/Reference/Elements/table
 l10n:

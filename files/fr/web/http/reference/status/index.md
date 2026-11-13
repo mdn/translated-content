@@ -2,7 +2,7 @@
 title: Codes de statut de réponse HTTP
 slug: Web/HTTP/Reference/Status
 l10n:
-  sourceCommit: cd8ed9bfa89d5ced4fd6c2083d7d90bcda41e441
+  sourceCommit: a4c63d2855b2f557e7d1ee821dee65011d569a41
 ---
 
 Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes&nbsp;:
@@ -177,4 +177,4 @@ Les codes de statut listés ci-dessous sont définis par la [RFC 9110 <sup>(angl
 ## Voir aussi
 
 - [Liste des codes de statut HTTP sur Wikipédia](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
-- [Registre officiel des codes de statut HTTP par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [Registre officiel des codes de statut HTTP par l'IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/http-status-codes)

@@ -20,7 +20,7 @@ console.log(date2.getUTCDate());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCDate()
 ```
 

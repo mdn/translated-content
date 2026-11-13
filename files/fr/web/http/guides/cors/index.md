@@ -1,11 +1,11 @@
 ---
-title: Cross-Origin Resource Sharing (CORS)
+title: Partage des ressources entre origines (CORS)
 slug: Web/HTTP/Guides/CORS
 l10n:
   sourceCommit: f4c14731a1a157fc8d8f7357ac4d74d14a7d7fb5
 ---
 
-Le **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) (ou «&nbsp;partage des ressources entre origines multiples&nbsp;» en français, moins usité) est un mécanisme basé sur les en-têtes {{Glossary("HTTP")}} qui permet à un serveur d'indiquer toute {{Glossary("origin", "origine")}} (domaine, schéma ou port) autre que la sienne à partir de laquelle un navigateur doit autoriser le chargement des ressources. CORS repose également sur un mécanisme par lequel les navigateurs effectuent une requête «&nbsp;préliminaire&nbsp;» (<i lang="en">preflight</i> en anglais) au serveur hébergeant la ressource cross-origin, afin de vérifier que le serveur autorise la requête réelle. Dans cette pré-requête, le navigateur envoie des en-têtes indiquant la méthode HTTP et les en-têtes qui sont utilisés dans la requête réelle.
+Le **partage des ressources inter-origines** ({{Glossary("CORS")}}, <i lang="en">Cross-Origin Resource Sharing</i> en anglais) (ou «&nbsp;partage des ressources entre origines multiples&nbsp;» en français, moins usité) est un mécanisme basé sur les en-têtes {{Glossary("HTTP")}} qui permet à un serveur d'indiquer toute {{Glossary("origin", "origine")}} (domaine, schéma ou port) autre que la sienne à partir de laquelle un navigateur doit autoriser le chargement des ressources. CORS repose également sur un mécanisme par lequel les navigateurs effectuent une requête «&nbsp;préliminaire&nbsp;» (<i lang="en">preflight</i> en anglais) au serveur hébergeant la ressource inter-origine, afin de vérifier que le serveur autorise la requête réelle. Dans cette pré-requête, le navigateur envoie des en-têtes indiquant la méthode HTTP et les en-têtes qui sont utilisés dans la requête réelle.
 
 Par exemple, une requête inter-origine&nbsp;: le code JavaScript côté client servi depuis `https://domaine-a.com` utilise {{DOMxRef("Window/fetch", "fetch()")}} pour effectuer une requête vers `https://domaine-b.com/data.json`.
 
@@ -340,7 +340,7 @@ Les requêtes de pré-validation CORS ne doivent jamais inclure d'informations d
 >
 > Firefox 87 permet d'activer ce comportement non conforme en définissant la préférence&nbsp;: `network.cors_preflight.allow_client_cert` sur `true` [bogue Firefox 1511151 <sup>(angl.)</sup>](https://bugzil.la/1511151). Les navigateurs basés sur Chromium envoient actuellement toujours des certificats client TLS dans les requêtes de pré-vérification CORS [bogue Chrome 775438 <sup>(angl.)</sup>](https://crbug.com/775438).
 
-#### Requêtes authentifiées et jokers (_wildcards_)
+#### Requêtes authentifiées et jokers
 
 Lors de la réponse à une requête avec informations d'authentification&nbsp;:
 
@@ -474,7 +474,7 @@ Des exemples d'utilisation se trouvent [ci‑dessus.](#requêtes_préliminaires)
 L'en‑tête {{HTTPHeader("Access-Control-Request-Headers")}} est utilisé lors de l'envoi d'une requête préliminaire pour indiquer au serveur quels en‑têtes HTTP sont utilisés lors de la requête réelle (par exemple, en les passant par l'option [`headers`](/fr/docs/Web/API/RequestInit#headers)). Cet en‑tête côté client reçoit une réponse correspondante côté serveur dans l'en‑tête {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 ```http
-Access-Control-Request-Headers: <field-name>[,<field-name>]*
+Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
 Des exemples d'utilisation se trouvent [ci‑dessus](#requêtes_préliminaires).

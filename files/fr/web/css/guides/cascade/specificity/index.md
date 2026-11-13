@@ -2,7 +2,7 @@
 title: Spécificité
 slug: Web/CSS/Guides/Cascade/Specificity
 l10n:
-  sourceCommit: 3fbc8b2ba17c1cf331fb67ce2e6561b15bf4f197
+  sourceCommit: 298079b550c76f20de6611c4ecdde4c30dc68b2b
 ---
 
 La **Spécificité** est le poids que les navigateurs utilisent dans l'algorithme de cascade pour déterminer la [déclaration CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#syntaxe_css_de_base) la plus pertinente pour un élément, ce qui, à son tour, détermine la valeur de la propriété à appliquer à l'élément. L'algorithme de spécificité calcule ce poids à partir d'un [sélecteur CSS](/fr/docs/Web/CSS/Reference#sélecteurs) et compare les valeurs résultantes pour décider quelle règle, parmi les déclarations CSS concurrentes au sein de la même origine et couche, est appliquée à un élément.

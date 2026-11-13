@@ -3,10 +3,10 @@ title: "Élément HTML `<embed>` : l'élément de contenu externe embarqué"
 short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 456c370394c0cd8869feb60c4e9926f35422beaf
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<embed>`** intègre du contenu externe au point défini dans le document. Ce contenu est fourni par une application externe ou une autre source de contenu interactif, comme un plugin de navigateur.
+L'élément [HTML](/fr/docs/Web/HTML) **`<embed>`** intègre du contenu externe au point défini dans le document. Ce contenu est géré par le navigateur ou une application externe.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;embed&gt;", "tabbed-standard")}}
 
@@ -18,11 +18,6 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<embed>`** intègre du contenu externe 
   height="200" />
 ```
 
-> [!NOTE]
-> Ce sujet documente uniquement l'élément tel qu'il est défini dans la [HTML Living Standard <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element). Il n'aborde pas les implémentations antérieures non standardisées de cet élément.
-
-Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
-
 ## Attributs
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -32,13 +27,17 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `src`
   - : L'URL de la ressource à intégrer.
 - `type`
-  - : Le {{Glossary("MIME type", "type MIME")}} à utiliser pour sélectionner le plugin à instancier.
+  - : Le {{Glossary("MIME type", "type MIME")}} de la ressource imbriquée.
 - `width`
   - : La largeur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#px). La valeur est absolue&nbsp;; les pourcentages _ne sont pas_ autorisés.
 
 ## Notes d'utilisation
 
-Il est possible d'utiliser la propriété CSS {{CSSxRef("object-position")}} afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
+Les navigateurs modernes ne prennent plus en charge les plugins de navigateur tels que Flash, mais `<embed>` peut toujours afficher du contenu géré par le navigateur lui-même, comme les fichiers PDF dans un visualiseur PDF intégré.
+
+Pour les aperçus de PDF, envisagez d'utiliser {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}. Contrairement à `<object>`, `<embed>` ne peut pas contenir de contenu de repli. Contrairement à `<iframe>`, il n'a aucun attribut qui contrôle le chargement.
+
+Il est possible d'utiliser la propriété CSS {{CSSxRef("object-position")}} afin d'ajuster la position de l'objet embarqué au sein de le cadre et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de le cadre.
 
 > [!NOTE]
 > La propriété {{CSSxRef("object-fit")}} n'a aucun effet sur les éléments `<embed>`.

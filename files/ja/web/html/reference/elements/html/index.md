@@ -1,5 +1,5 @@
 ---
-title: HTML `<html>` 文書ルート要素
+title: "`<html>` 文書ルート要素"
 short-title: <html>
 slug: Web/HTML/Reference/Elements/html
 l10n:

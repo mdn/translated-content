@@ -3,7 +3,7 @@ title: "Attribut HTML universel : `dir`"
 short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 l10n:
-  sourceCommit: da275ce3eae1d8d250f1079b4643213a7a2bbb90
+  sourceCommit: 8ed465762d06fa17f7cc6adb3e2be9b57df03e9b
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`dir`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui définit la _direction de texte de base_ de l'élément et isole la direction du contenu provenant du texte environnant.
@@ -36,7 +36,7 @@ Il peut prendre les valeurs suivantes&nbsp;:
 - `auto`, qui permet à l'agent utilisateur de déterminer la direction de base à partir du texte, en utilisant généralement le premier caractère ayant une direction forte (en ignorant `<bdi>`, `<script>`, `<style>`, `<textarea>` et les éléments avec des attributs `dir` valides). Pour {{HTMLElement("textarea")}} et {{HTMLElement("pre")}}, la direction de rendu est déterminée séparément pour chaque paragraphe de texte.
 
 > [!NOTE]
-> La valeur `auto` doit être utilisée pour des données dont la direction est inconnue, par exemple des saisies utilisateur ou des données externes.
+> La valeur `auto` doit être utilisée pour des données dont la direction est inconnue, par exemple des saisies utilisateur·ice ou des données externes.
 >
 > Si l'attribut [`dirname`](/fr/docs/Web/HTML/Reference/Attributes/dirname) est utilisé lors de l'envoi de données par les utilisateur·ice·s, il est possible d'afficher les données avec une direction définie plutôt que de s'appuyer sur la détection automatique.
 
@@ -44,7 +44,7 @@ Si la direction n'est pas définie ou n'est pas valide, elle est généralement 
 
 ### Héritage
 
-Si un élément ne possède pas d'attribut `dir`, il hérite généralement de la direction de son [élément parent](/fr/docs/Web/API/Node/parentElement). Si aucun élément ancêtre ne définit de direction, la direction par défaut est de gauche à droite.
+Si un élément ne possède pas d'attribut `dir`, il hérite généralement de la direction de son [élément parent](/fr/docs/Web/API/Node/parentElement), ou d'un hôte ({{DOMxRef("ShadowRoot/host", "host")}}) si le nœud parent est une racine d'ombre ({{DOMxRef("ShadowRoot")}}). Si aucun élément ancêtre ne définit de direction, la direction par défaut est de gauche à droite.
 
 Il existe des exceptions&nbsp;:
 

@@ -1,5 +1,5 @@
 ---
-title: HTML `<article>` 記事コンテンツ要素
+title: "`<article>` 記事コンテンツ要素"
 short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 l10n:

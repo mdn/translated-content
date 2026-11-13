@@ -2,7 +2,7 @@
 title: Transport du dictionnaire de compression
 slug: Web/HTTP/Guides/Compression_dictionary_transport
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 57d3803b2ba01a8ac6cf51e796d6871e4e411ff1
 ---
 
 {{SeeCompatTable}}
@@ -38,7 +38,7 @@ function a() {
 [0:9]b[10:20]Je suis ici[42:46]
 ```
 
-Dans cet exemple, `[0:9]` fait référence à la copie des 9 caractères à partir du caractère 0. Notez qu'il s'agit d'un exemple simplifié pour démontrer le concept et que les algorithmes réels sont plus complexes que cela.
+Dans cet exemple, `[0:9]` fait référence à la copie des 9 caractères à partir du caractère 0. Notez qu'il s'agit d'un exemple simplifié pour démontrer le concept&nbsp;; les algorithmes réels sont plus complexes.
 
 Les clients peuvent ensuite inverser la compression après le téléchargement pour recréer la ressource originale non compressée.
 
@@ -55,24 +55,24 @@ En supposant que les références de l'exemple précédent soient incluses dans 
 [d0:9]b[d10:20]Je suis ici[d42:46]
 ```
 
-Le dictionnaire peut être soit une ressource distincte qui n'est requise que pour le transport du dictionnaire de compression, soit une ressource dont le site Web a besoin de toute façon.
+Le dictionnaire peut être une ressource distincte qui n'est requise que pour le transport du dictionnaire de compression, ou une ressource dont le site Web a besoin de toute façon.
 
 Par exemple, supposons que votre site Web utilise une bibliothèque JavaScript. Vous chargez généralement une version spécifique de la bibliothèque et pouvez inclure le nom de la version dans le nom de la bibliothèque, comme `<script src="ma-bibliotheque.v1.js">`. Lorsque le navigateur charge votre page, il récupère une copie de la bibliothèque en tant que sous-ressource.
 
-Si vous mettez ensuite à jour vers la version v2 de la bibliothèque, la majeure partie du code de la bibliothèque est probablement restée la même. Ainsi, les sites peuvent réduire considérablement la taille du téléchargement pour `ma-bibliotheque.v2.js` en indiquant au navigateur d'utiliser `ma-bibliotheque.v1.js` comme dictionnaire de compression pour `ma-bibliotheque.v2.js`. Toutes les chaînes de caractères communes entre v1 et v2 n'ont donc pas besoin d'être incluses dans le téléchargement de v2, car le navigateur les possède déjà. La majeure partie de la taille du téléchargement de `ma-bibliotheque.v2.js` correspond alors simplement au delta entre les deux versions.
+Si vous mettez ensuite à jour vers la version v2 de la bibliothèque, la majeure partie du code de la bibliothèque est le même. Les sites peuvent réduire considérablement la taille du téléchargement pour `ma-bibliotheque.v2.js` en indiquant au navigateur d'utiliser `ma-bibliotheque.v1.js` comme dictionnaire de compression pour `ma-bibliotheque.v2.js`. Toutes les chaînes de caractères communes entre v1 et v2 n'ont donc pas besoin d'être incluses dans le téléchargement de v2, car le navigateur les possède déjà. La majeure partie de la taille du téléchargement de `ma-bibliotheque.v2.js` correspond alors simplement au delta entre les deux versions.
 
 Le transport du dictionnaire de compression peut atteindre un ordre de grandeur de compression supérieur à celui de la compression utilisant un dictionnaire intégré par défaut&nbsp;: voir [Exemples de transport de dictionnaire de compression <sup>(angl.)</sup>](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md) pour quelques résultats réels.
 
 ## Format du dictionnaire
 
-Un dictionnaire de compression ne suit aucun format spécifique, ni n'a de {{Glossary("MIME type", "type MIME")}} spécifique. Ce sont des fichiers ordinaires qui peuvent être utilisés dans la compression d'autres fichiers ayant un contenu similaire.
+Un dictionnaire de compression ne suit aucun format spécifique, ni n'a de {{Glossary("MIME type", "type MIME")}} spécifique. Ce sont des fichiers ordinaires.
 
 Les versions précédentes des fichiers ont généralement beaucoup de contenu similaire, ce qui en fait d'excellents dictionnaires.
 Utiliser une version précédente d'un fichier comme dictionnaire permet à l'algorithme de compression de référencer efficacement tout le contenu inchangé et de ne capturer que les différences relativement petites dans la nouvelle version. Cette approche est appelée compression delta.
 
 Une autre approche consiste à lister les chaînes de caractères communes (par exemple vos modèles HTML) dans un nouveau fichier `dictionnaire.txt` afin qu'il puisse être utilisé pour compresser les pages HTML du site Web. Vous pouvez optimiser cela davantage en utilisant des outils spécialisés, par exemple [le générateur de dictionnaire de Brotli <sup>(angl.)</sup>](https://github.com/google/brotli/blob/master/research/dictionary_generator.cc), qui réduit les dictionnaires à leur taille minimale avec un chevauchement minimal.
 
-Les dictionnaires peuvent également être utilisés pour compresser efficacement les formats binaires. Par exemple, les fichiers binaires [WASM](/fr/docs/WebAssembly) sont de grandes ressources qui peuvent également bénéficier de la compression delta.
+Les dictionnaires peuvent également compresser les formats binaires efficacement. Par exemple, les fichiers binaires [WASM](/fr/docs/WebAssembly) sont de grandes ressources qui peuvent également bénéficier de la compression delta.
 
 ## Ressource existante comme dictionnaire
 
@@ -121,7 +121,7 @@ Le serveur doit toujours vérifier le hachage de l'en-tête `Available-Dictionar
 
 ## Dictionnaire séparé
 
-Un document HTML peut également fournir un dictionnaire de compression au navigateur qui n'est pas une ressource que le navigateur télécharge de toute façon avec un élément tel qu'un {{HTMLElement("script")}}. Il existe deux méthodes pour le faire&nbsp;:
+Un document HTML peut également fournir un dictionnaire de compression au navigateur. Un tel dictionnaire ne doit pas être une ressource que le navigateur télécharge déjà avec un élément HTML tel qu'un {{HTMLElement("script")}}. Il existe deux méthodes pour le faire&nbsp;:
 
 - Inclure un élément HTML {{HTMLElement("link")}} dont l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) est défini sur `compression-dictionary`&nbsp;:
 
@@ -135,7 +135,7 @@ Un document HTML peut également fournir un dictionnaire de compression au navig
   Link: </dictionnaire.dat>; rel="compression-dictionary"
   ```
 
-Ce dictionnaire est ensuite téléchargé par le navigateur pendant les périodes d'inactivité, et cette réponse doit inclure l'en-tête {{HTTPHeader("Use-As-Dictionary")}}&nbsp;:
+Le navigateur télécharge ce dictionnaire pendant les périodes d'inactivité, et cette réponse doit inclure l'en-tête {{HTTPHeader("Use-As-Dictionary")}}&nbsp;:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js"
@@ -143,11 +143,24 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 À partir de là, le processus est similaire à l'exemple précédent lorsqu'une ressource correspondante est demandée.
 
+## Fraîcheur du dictionnaire
+
+La réponse qui contient l'en-tête {{HTTPHeader("Use-As-Dictionary")}} décide également, par son en-tête {{HTTPHeader("Cache-Control")}}, si le navigateur stocke le dictionnaire et pendant combien de temps. Le navigateur n'utilise un dictionnaire stocké que tant que cette réponse est encore [fraîche](/fr/docs/Web/HTTP/Guides/Caching#fraîcheur_et_obsolescence_basées_sur_lâge), ou tant que la directive [`stale-while-revalidate`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#stale-while-revalidate) permet encore de servir la réponse périmée. En pratique&nbsp;:
+
+- Définir [`no-store`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store) empêche le navigateur de stocker la réponse, tandis que [`no-cache`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) permet de la stocker mais exige une revalidation avant chaque réutilisation. Dans les deux cas, le navigateur n'utilise jamais la réponse comme dictionnaire, quelle que soit la présence d'autres directives.
+- Définir `max-age=0` combiné avec `stale-while-revalidate=<seconds>` permet toujours au navigateur de stocker le dictionnaire, qui dure alors aussi longtemps que la fenêtre `stale-while-revalidate`.
+- Définir [`must-revalidate`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate) annule toute fenêtre `stale-while-revalidate`, donc le dictionnaire ne dure que tant que `max-age`. Avec `max-age=0`, le navigateur ne le stocke jamais.
+- La directive [`s-maxage`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) ne s'applique pas, car le navigateur est un cache privé.
+
+Les documents HTML sont plus affectés que les autres ressources, car les serveurs les envoient souvent avec `no-cache` ou `max-age=0, must-revalidate`, de sorte que le navigateur les revalide toujours. Un tel document ne peut pas s'offrir comme dictionnaire pour sa prochaine version, quel que soit le motif `match` utilisé.
+
+Dans de tels cas, le navigateur abandonne silencieusement le dictionnaire. Il accepte l'en-tête `Use-As-Dictionary` sans erreur, mais une requête ultérieure correspondant au motif ne comporte aucun en-tête {{HTTPHeader("Available-Dictionary")}}. Les outils de développement peuvent mettre en évidence ce problème&nbsp;; par exemple, Chrome signale la raison dans le [panneau Problèmes <sup>(angl.)</sup>](https://developer.chrome.com/docs/devtools/issues). Le problème indique "La réponse ne peut pas être utilisée comme dictionnaire, car sa fraîcheur est expirée", ainsi que le nom de la réponse qui offre le dictionnaire.
+
 ## Créer des réponses compressées avec dictionnaire
 
 Les réponses compressées avec dictionnaire peuvent utiliser soit les algorithmes Brotli, soit ZStandard, avec deux exigences supplémentaires&nbsp;: elles doivent également inclure un en-tête magique et un hachage de dictionnaire intégré.
 
-Les ressources compressées avec dictionnaire peuvent être créées dynamiquement, mais pour les ressources statiques, il peut être préférable de les créer à l'avance lors de la compilation. Lors de l'utilisation de versions précédentes comme dictionnaires, il faut décider combien de versions delta-compressées créer — pour la dernière version uniquement, ou pour les X dernières versions pour une certaine valeur de X.
+Les ressources compressées avec dictionnaire peuvent être créées dynamiquement, mais pour les ressources statiques, il peut être préférable de les créer à l'avance lors de la compilation. Lors de l'utilisation de versions précédentes comme dictionnaires, vous devez décider combien de versions delta-compressées créer — pour la dernière version uniquement, ou pour les X dernières versions pour une certaine valeur de X.
 
 Étant donné un fichier de dictionnaire nommé `dictionnaire.txt` et un fichier à compresser nommé `data.txt`, la commande Bash suivante compresse le fichier en utilisant Brotli, produisant un fichier compressé nommé `data.txt.dcb`&nbsp;:
 
@@ -166,11 +179,11 @@ zstd -D dictionnaire.txt -f -o tmp.zstd data.txt && \
 cat tmp.zstd >> data.txt.dcz
 ```
 
-Notez que vous avez besoin de {{Glossary("OpenSSL")}} installé localement ainsi que de Brotli ou ZStandard.
+Pour que cela fonctionne, vous avez besoin de {{Glossary("OpenSSL")}} installé localement ainsi que de Brotli ou ZStandard.
 
 ## Restrictions
 
-Les algorithmes de compression sont exposés à des risques d'attaques de sécurité, il existe donc un certain nombre de restrictions pour le Transport de Dictionnaire de Compression, notamment&nbsp;:
+Les algorithmes de compression sont exposés à des risques d'attaques de sécurité, il existe donc quelques restrictions pour le Transport de Dictionnaire de Compression, notamment&nbsp;:
 
 - Les dictionnaires doivent être de la même origine que la ressource utilisant le dictionnaire.
 - Les ressources compressées avec dictionnaire doivent être de la même origine que l'origine du document, ou suivre les règles de [CORS](/fr/docs/Web/HTTP/Guides/CORS), et donc être demandées avec l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) et servies avec un en-tête {{HTTPHeader("Access-Control-Allow-Origin")}} approprié.

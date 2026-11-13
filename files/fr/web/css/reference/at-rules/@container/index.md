@@ -3,14 +3,14 @@ title: Règle CSS `@container`
 short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 2ce88199869b63f8da3bbeafd899400f7579cce9
+  sourceCommit: dc6f92b8877c1c53c187ad6cb6ba677db3ab179a
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées aux élément à l'intérieur du conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
-La condition doit définir un ou les deux de {{CSSxRef("container-name")}} et `<container-query>`, ou les deux.
+La condition doit définir un ou les deux de {{CSSxRef("container-name")}}, `<container-query>`, ou les deux.
 
 La propriété {{CSSxRef("container-name")}} définit une liste de noms de conteneurs de requête, qui sont utilisés pour filtrer les conteneurs ciblés par les règles `@container`. Si seule une valeur `container-name` est incluse (une [requête de conteneur uniquement par nom](/fr/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries)), les règles contenues sont appliquées à tous les conteneurs ayant une ou plusieurs de ces valeurs `container-name` définies.
 
@@ -165,7 +165,7 @@ Les détails sur l'utilisation et les restrictions de nommage sont décrits dans
 
 ### Descripteurs
 
-Les requêtes `<container-condition>` incluent les descripteurs de conteneur [size](#descripteurs_de_taille_de_conteneur), [scroll-state](#descripteurs_détat_de_défilement_du_conteneur) et [anchored](#descripteurs_dancrage_du_conteneur).
+Les requêtes `<container-condition>` incluent les descripteurs de conteneur [de taille](#descripteurs_de_taille_de_conteneur), [d'état du défilement](#descripteurs_détat_de_défilement_du_conteneur) et [d'ancrage](#descripteurs_dancrage_du_conteneur).
 
 #### Descripteurs de taille de conteneur
 
@@ -567,7 +567,7 @@ En plus de la forme simple `<style-feature-name>: <value>` décrite ci-dessus, u
 
 Pour évaluer une plage, le navigateur&nbsp;:
 
-1. Résout chaque côté (les noms de propriétés personnalisées sont recherchés comme s'ils étaient utilisés avec {{CSSxRef("var()")}}).
+1. Résout chaque côté (les noms de propriétés personnalisées sont recherchés comme s'ils sont utilisés avec {{CSSxRef("var()")}}).
 2. Analyse chaque côté comme un {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, ou {{CSSxRef("&lt;resolution&gt;")}}. Si l'un des côtés ne peut pas être analysé comme l'un de ces types, ou si les deux côtés n'ont pas le même type, la requête est fausse.
 3. Calcule chaque côté (en évaluant toutes les expressions `calc()`) et effectue la comparaison numérique.
 

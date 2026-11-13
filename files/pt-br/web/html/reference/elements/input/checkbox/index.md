@@ -48,7 +48,7 @@ input {
         <strong><a href="#valor">Valor</a></strong>
       </td>
       <td>
-        Um {{domxref ("DOMString")}} representando o valor da caixa de
+        Um {{jsxref("String")}} representando o valor da caixa de
         seleção.
       </td>
     </tr>
@@ -75,7 +75,7 @@ input {
 
 ## Valor
 
-Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o `value` atribuído aos dados enviados com o `name` da caixa de seleção. Tome o seguinte exemplo:
+Um {{jsxref("String")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o `value` atribuído aos dados enviados com o `name` da caixa de seleção. Tome o seguinte exemplo:
 
 ```html
 <form>

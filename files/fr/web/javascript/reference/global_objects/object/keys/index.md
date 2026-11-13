@@ -3,7 +3,7 @@ title: "Object : méthode statique keys()"
 short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.keys()`** retourne un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées par la chaîne de prototypes) et qui sont énumérables.
@@ -44,7 +44,7 @@ Si vous avez besoin des valeurs des propriétés, utilisez plutôt {{JSxRef("Obj
 
 ## Exemples
 
-### Utiliser `Object.keys()`
+### Utiliser la méthode `Object.keys()`
 
 ```js
 // Tableau simple
@@ -82,7 +82,7 @@ Les arguments qui ne sont pas des objets sont [convertis en objets](/fr/docs/Web
 
 ```js
 // Les chaînes de caractères ont des indices comme propriétés propres énumérables
-console.log(Object.keys("foo")); // ['0', '1', '2']
+console.log(Object.keys("toto")); // ['0', '1', '2']
 
 // Les autres types primitifs, à l'exception de undefined et null, n'ont pas de propriétés propres
 console.log(Object.keys(100)); // []
@@ -101,8 +101,8 @@ console.log(Object.keys(100)); // []
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.keys` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.keys` <sup>(angl.)</sup>](https://www.npmjs.com/package/object-key)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.keys` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.keys` <sup>(angl.)</sup>](https://www.npmjs.com/package/object-key)
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - La méthode statique {{JSxRef("Object.entries()")}}
 - La méthode statique {{JSxRef("Object.values()")}}

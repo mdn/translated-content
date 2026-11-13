@@ -1,5 +1,5 @@
 ---
-title: CSS `-webkit-text-stroke-width` プロパティ
+title: "`-webkit-text-stroke-width` プロパティ (CSS)"
 short-title: -webkit-text-stroke-width
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-width
 l10n:

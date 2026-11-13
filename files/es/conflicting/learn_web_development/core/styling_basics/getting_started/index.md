@@ -21,7 +21,7 @@ Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de p
         <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajo con archivos</a
         >, conceptos básicos de HTML (véase
-        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y una idea de
         <a href="/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"

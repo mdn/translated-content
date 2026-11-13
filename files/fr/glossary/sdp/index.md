@@ -2,10 +2,10 @@
 title: SDP
 slug: Glossary/SDP
 l10n:
-  sourceCommit: c991fefbc489687770643d743ca04abc40d7ae1f
+  sourceCommit: 6c2954d3490bd0f445547e1ec359684c5cb36712
 ---
 
-**SDP** (Session Description {{Glossary("Protocol")}}) est une norme permettant de décrire des sessions multimédias. Il contient des informations telles que les types de médias, les adresses de transport, la synchronisation et les {{Glossary("codec", "codecs")}}.
+**SDP** (<i lang="en">Session Description {{Glossary("Protocol")}}</i> en anglais) est une norme permettant de décrire des sessions multimédias. Il contient des informations telles que les types de médias, les adresses de transport, la synchronisation et les {{Glossary("codec", "codecs")}}.
 
 Voici un message SDP typique&nbsp;:
 
@@ -23,7 +23,7 @@ m=video 53000 RTP/AVP 32
 a=rtpmap:32 MPV/90000
 ```
 
-SDP est utilisé conjointement avec des protocoles tels que {{Glossary("RTP")}} et {{Glossary("RTSP")}}. Il est également utilisé par le {{Glossary("WebRTC")}} pour décrire les sessions multimédias.
+SDP est utilisé conjointement avec des protocoles tels que {{Glossary("RTP")}} et {{Glossary("RTSP")}}. Lors de la [négociation de session](/fr/docs/Web/API/WebRTC_API/Session_lifetime) WebRTC, un pair envoie une _offre_ décrivant la connexion qu'il souhaite, et l'autre répond avec une _réponse_ décrivant ce qu'il accepte. Les deux sont des descriptions de session au format SDP, échangées par un canal de signalisation et appliquées avec {{DOMxRef("RTCPeerConnection.setLocalDescription()")}} et {{DOMxRef("RTCPeerConnection.setRemoteDescription()")}}.
 
 ## Voir aussi
 

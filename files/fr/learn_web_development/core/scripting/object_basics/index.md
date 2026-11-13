@@ -2,7 +2,7 @@
 title: Les bases de JavaScript, orienté objet
 slug: Learn_web_development/Core/Scripting/Object_basics
 l10n:
-  sourceCommit: ce12c10364f35c64184dec44be85537b7e10d91f
+  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
@@ -36,9 +36,36 @@ Dans cet article, nous examinons la syntaxe fondamentale des objets JavaScript e
 
 Un objet est une collection de données et/ou de fonctionnalités connexes. Ceux-ci se composent généralement de plusieurs variables et fonctions (qui sont appelées propriétés et méthodes lorsqu'elles sont à l'intérieur des objets). Passons à un exemple pour comprendre à quoi ils ressemblent.
 
-Pour commencer, faites une copie locale de notre fichier [`oojs.html` <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses&nbsp;: un élément HTML {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utilisons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cet exemple, vous devez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, créez un nouveau fichier HTML sur votre système local et ajoutez-y le code suivant&nbsp;:
 
-Comme pour beaucoup de choses dans JavaScript, la création d'un objet commence souvent par définir et initialiser une variable. Essayez de saisir la ligne suivante sous le code JavaScript qui est déjà dans votre fichier, puis enregistrer et rafraîchissez la page&nbsp;:
+```html
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exemple de JavaScript orienté objet</title>
+  </head>
+
+  <body>
+    <p>
+      Cet exemple nécessite que vous saisissiez des commandes dans la console
+      JavaScript de votre navigateur (voir
+      <a
+        href="https://developer.mozilla.org/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+        >Outils de développement du navigateur</a
+      >
+      pour plus d'informations).
+    </p>
+
+    <script></script>
+  </body>
+</html>
+```
+
+Il contient peu de choses — un élément HTML {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utilisons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cet exemple, vous devez avoir [la console JavaScript des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
+
+Comme pour beaucoup de choses dans JavaScript, la création d'un objet commence souvent par définir et initialiser une variable. Essayez de saisir la ligne suivante entre vos balises `<script></script>`, puis enregistrez et actualisez&nbsp;:
 
 ```js
 const personne = {};

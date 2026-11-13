@@ -3,7 +3,7 @@ title: Propriété CSS `animation`
 short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
-  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
+  sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation`** permet d'appliquer une animation entre des styles. Il s'agit d'une propriété raccourcie pour {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}.
@@ -66,17 +66,30 @@ C'est une propriété qui synthétise les propriétés suivantes&nbsp;:
 - {{CSSxRef("animation-play-state")}}
 - {{CSSxRef("animation-timeline")}}
 
+### Sous-propriétés qui sont uniquement réinitialisées
+
+Cette propriété réinitialise les propriétés CSS suivantes à leurs valeurs initiales&nbsp;:
+
+- {{CSSxRef("animation-range-end")}}
+- {{CSSxRef("animation-range-start")}}
+- {{CSSxRef("animation-delay-end")}}
+- {{CSSxRef("animation-composition")}}
+- {{CSSxRef("animation-trigger")}}
+
 ## Syntaxe
 
 ```css
-/* @keyframes duration | timing-function | delay |
+/* Duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slide-in;
 
-/* @keyframes duration | timing-function | delay | name */
+/* Duration | timing-function | delay | name */
 animation: 3s linear 1s slide-in;
 
-/* deux animations */
+/* Duration | name */
+animation: 3s slide-in;
+
+/* Plusieurs animations */
 animation:
   3s linear slide-in,
   3s ease-out 5s slide-out;
@@ -84,7 +97,7 @@ animation:
 
 ### Valeurs
 
-Une ou plusieurs déclarations `<animation>`, séparées par des virgules, chaque `<animation>` incluant&nbsp;:
+Cette propriété est définie comme une liste séparée par des virgules de valeurs `<animation>`, chaque valeur étant une liste séparée par des espaces des valeurs suivantes&nbsp;:
 
 - `<keyframes-name>` ou `none`
   - : Le nom d'une règle {{CSSxRef("@keyframes")}} qui définit l'animation à appliquer à un élément. La valeur initiale pour {{CSSxRef("animation-name")}} est `none`.
@@ -109,6 +122,9 @@ Une ou plusieurs déclarations `<animation>`, séparées par des virgules, chaqu
 
 La propriété `animation` est définie sous la forme d'une ou plusieurs animations distinctes, séparées par des virgules. Chaque `animation` de la liste d'animations séparées par des virgules définit {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}. Si l'une des composantes n'est pas incluse dans une déclaration `animation`, la valeur de la composante est définie sur la valeur initiale de la composante.
 
+> [!NOTE]
+> La propriété raccourcie `animation` réinitialise les propriétés {{CSSxRef("animation-range-start")}}, {{CSSxRef("animation-range-end")}} et {{CSSxRef("animation-trigger")}} à leurs valeurs initiales&nbsp;: `normal`, `normal` et `none`, respectivement. Ces sous-propriétés pouvant uniquement être réinitialisées ne peuvent pas être définies dans la notation raccourcie `animation`, et les inclure invalide l'ensemble de la déclaration. Comme la déclaration `animation` définit chacune de ces propriétés sur leurs valeurs initiales, elles doivent soit être déclarées après toute déclaration raccourcie `animation`, soit avec une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) plus grande.
+
 ### `animation-name`
 
 Le composant `<animation-name>` de chaque animation correspond au nom de l'animation, qui peut être `none`, un {{CSSxRef("&lt;custom-ident&gt;")}}, ou un {{CSSxRef("&lt;string&gt;")}}. La valeur initiale de `animation-name` est `none`, ce qui signifie que si aucune valeur `animation-name` n'est déclarée dans la propriété raccourcie `animation`, aucune animation n'est appliquée à aucune des propriétés.
@@ -131,17 +147,17 @@ D'une autre manière, la chronologie d'animation (`<animation-timeline>`) peut �
 
 ```css
 @supports (animation: view()) {
-  /* CSS pour les navigateurs prennant en charge la définition de <animation-timeline> dans la notation raccourcie `animation` */
+  /* CSS pour les navigateurs prenant en charge la définition de <animation-timeline> dans la notation raccourcie `animation` */
 }
 ```
 
 ### `animation-fill-mode` et nouveaux contextes d'empilement
 
-Dans le cas de la valeur [`forwards`](/fr/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) pour `animation-fill-mode`, les propriétés animées se comportent comme si elles étaient incluses dans une propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement est créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
+Dans le cas de la valeur [`forwards`](/fr/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) pour `animation-fill-mode`, les propriétés animées se comportent comme si elles sont incluses dans une propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement est créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
 
 ## Accessibilité
 
-Les animations qui clignotent ou scintillent sont problématiques, notamment pour les personnes souffrant de troubles cognitifs comme le trouble du déficit de l'attention avec ou sans hyperactivité (TDAH). De plus, certains types de mouvements peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
+Les animations qui clignotent ou scintillent sont problématiques, notamment pour les personnes souffrant de troubles cognitifs comme le trouble du déficit de l'attention avec ou sans hyperactivité (<abbr>TDAH</abbr>). De plus, certains types de mouvements peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
 
 Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [la requête `@media` de réduction des animations](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour offrir une expérience complémentaire aux utilisateur·ice·s qui ont exprimé une préférence pour la réduction des animations.
 
@@ -353,4 +369,6 @@ Le soleil rebondit entre les côtés gauche et droit de la fenêtre. Le soleil r
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
+- Le module [des animations CSS](/fr/docs/Web/CSS/Guides/Animations) module
+- Le module [des animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - L'interface API {{DOMxRef("AnimationEvent")}}

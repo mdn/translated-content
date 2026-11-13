@@ -2,7 +2,7 @@
 title: Types de pages
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: 7ed7b730bf88307cc6cf34b82bb1d735b9a1aa1f
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 Il existe plusieurs types de pages qui sont utilisés de façon répétée sur MDN.
@@ -68,6 +68,20 @@ Vous pouvez trouver ci-dessous des exemples des différents types de pages prés
 - [Page de référence de fonctionnalité CSS](#page_de_référence_de_fonctionnalité_css)
 - [Page de module CSS](#page_de_module_css)
 - [Page de glossaire](#page_de_glossaire)
+- [Page de classe JavaScript](#page_de_classe_javascript)
+- [Page de constructeur JavaScript](#page_de_constructeur_javascript)
+- [Page d'erreur JavaScript](#page_derreur_javascript)
+- [Page de fonction JavaScript](#page_de_fonction_javascript)
+- [Page de propriété globale JavaScript](#page_de_propriété_globale_javascript)
+- [Page de propriété d'accesseur d'instance JavaScript](#page_de_propriété_daccesseur_dinstance_javascript)
+- [Page de propriété de données d'instance JavaScript](#page_de_propriété_de_données_dinstance_javascript)
+- [Page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript)
+- [Page d'espace de noms JavaScript](#page_despace_de_noms_javascript)
+- [Page d'opérateur JavaScript](#page_dopérateur_javascript)
+- [Page d'instruction JavaScript](#page_dinstruction_javascript)
+- [Page de propriété d'accesseur statique JavaScript](#page_de_propriété_daccesseur_statique_javascript)
+- [Page de propriété de données statique JavaScript](#page_de_propriété_de_données_statique_javascript)
+- [Page de méthode statique JavaScript](#page_de_méthode_statique_javascript)
 - [Page de référence d'élément HTML](#page_de_référence_délément_html)
 - [Page de référence d'attribut HTML](#page_de_référence_dattribut_html)
 - [Page de référence d'en-tête HTTP](#page_de_référence_den-tête_http)
@@ -233,6 +247,214 @@ Une **page de référence ARIA** décrit un [rôle](/fr/docs/Web/Accessibility/A
 #### Modèles
 
 - [Modèle de page ARIA](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
+
+### Page de classe JavaScript
+
+Une **page de classe JavaScript** fournit un aperçu d'une classe JavaScript, y compris son objectif et son utilisation, et répertorie toutes les méthodes et propriétés, statiques ou d'instance, de la classe. Une classe JavaScript est définie comme un objet fonction intrinsèque avec une propriété `prototype` qui est partagée par toutes les instances de la classe. Selon cette définition, `BigInt` est également une classe, bien qu'elle ne puisse pas être appelée avec `new`.
+
+#### Exemples
+
+- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Temporal.ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime)
+
+#### Modèles
+
+- [Modèle de page de classe JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_class_page_template)
+
+### Page de constructeur JavaScript
+
+Une **page de constructeur JavaScript** fournit des informations sur le constructeur d'une classe JavaScript. Elle fournit des informations sur la façon de l'appeler. Le constructeur d'une classe est simplement défini comme l'objet fonction lui-même&nbsp;: par exemple, `BigInt()` est un constructeur, bien qu'il ne puisse pas être appelé avec `new`. Toutes les classes n'ont pas un constructeur qui mérite d'être documenté&nbsp;: la classe {{JSxRef("TypedArray")}}, par exemple, est une classe abstraite qui lève toujours une exception lorsqu'elle est appelée, et ne possède donc pas sa propre page.
+
+#### Exemples
+
+- [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
+- [`Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+- [`Temporal.ZonedDateTime()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime)
+
+#### Modèles
+
+- [Modèle de page de constructeur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template)
+
+### Page d'erreur JavaScript
+
+Une **page d'erreur JavaScript** fournit des informations sur les situations dans lesquelles une erreur JavaScript se produit et sur la façon de la corriger. Elle est principalement destinée à être utilisée comme référence par les outils de développement. Ces références d'erreurs sont principalement indexées par les messages d'erreur de Firefox — un message d'erreur par page. Consultez également le guide [Comment documenter les erreurs](/fr/docs/MDN/Writing_guidelines/Howto/Document_web_errors).
+
+#### Exemples
+
+- [ReferenceError: "x" is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)
+
+#### Modèles
+
+- [Modèle de page d'erreur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_error_page_template)
+
+### Page de fonction JavaScript
+
+Une **page de fonction JavaScript** fournit des informations sur une fonction JavaScript qui n'est rattachée à aucune classe ni à aucun espace de noms. Elle fournit des informations sur l'objectif, les paramètres et la valeur de retour de la fonction.
+
+Si la fonction est disponible statiquement sur une classe ou un espace de noms, utilisez plutôt le modèle de [page de méthode statique JavaScript](#page_de_méthode_statique_javascript). Si la fonction peut être considérée comme une classe (parce qu'elle possède une propriété `prototype`), utilisez plutôt le modèle de [page de classe JavaScript](#page_de_classe_javascript). Le principal indice qui permet d'utiliser le modèle de page de fonction native est que la propriété possède une valeur de type fonction et commence par une lettre minuscule.
+
+#### Exemples
+
+- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+#### Modèles
+
+- [Modèle de page de fonction JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_function_page_template)
+
+### Page de propriété globale JavaScript
+
+Une **page de propriété globale JavaScript** fournit des informations sur une propriété globale JavaScript qui n'est rattachée à aucune classe ni à aucun espace de noms. Elle fournit des informations sur l'objectif et l'utilisation de la propriété.
+
+Si la propriété est disponible statiquement sur une classe ou un espace de noms, utilisez plutôt le modèle de [page de propriété de données statique JavaScript](#page_de_propriété_de_données_statique_javascript). Si la propriété est une fonction, utilisez plutôt le modèle de [page de fonction JavaScript](#page_de_fonction_javascript). Si la propriété est un objet simple dont l'objectif principal est d'héberger d'autres propriétés, utilisez plutôt le modèle de [page d'espace de noms JavaScript](#page_despace_de_noms_javascript). Le principal indice qui permet d'utiliser le modèle de page de propriété globale est que la propriété possède soit une valeur primitive, soit un nom commençant par une lettre minuscule, et qu'elle n'est pas une fonction.
+
+#### Exemples
+
+- [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+#### Modèles
+
+- [Modèle de page de propriété globale JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_global_property_page_template)
+
+### Page de propriété d'accesseur d'instance JavaScript
+
+Une **page de propriété d'accesseur d'instance JavaScript** fournit des informations sur une propriété d'accesseur d'une instance de classe JavaScript. Une propriété d'accesseur comprend un accesseur et parfois un mutateur, et elle est presque toujours définie sur le prototype de l'instance. La spécification utilise la syntaxe `get Constructor.prototype.propertyName` pour définir une propriété d'accesseur. Presque toutes les propriétés d'accesseur d'instance non historiques du langage JavaScript principal ne possèdent qu'un accesseur, ce qui les rend accessibles en lecture seule.
+
+Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript).
+
+#### Exemples
+
+- [`Map.prototype.size`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
+
+#### Modèles
+
+- [Modèle de page de propriété d'accesseur d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_accessor_property_page_template)
+
+### Page de propriété de données d'instance JavaScript
+
+Une **page de propriété de données d'instance JavaScript** fournit des informations sur une propriété de données d'une instance de classe JavaScript. Une propriété de données comprend une valeur et un indicateur d'écriture, et peut être définie sur le prototype de l'instance ou directement sur l'instance elle-même.
+
+Chaque instance possède une propriété de données appelée [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui pointe vers la fonction constructeur ayant créé l'instance. Cette propriété de données est mentionnée dans la page principale de la classe, mais elle n'est pas documentée dans une page distincte pour chaque classe.
+
+Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript).
+
+#### Exemples
+
+- [`Array`: `length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`Error.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+
+#### Modèles
+
+- [Modèle de page de propriété de données d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_data_property_page_template)
+
+### Page de méthode d'instance JavaScript
+
+Une **page de méthode d'instance JavaScript** fournit des informations sur une méthode d'une instance de classe JavaScript. Une méthode est une propriété de fonction de l'instance. En général, une méthode est une propriété de données définie sur le prototype de l'instance, mais il existe quelques exceptions historiques, comme [`Intl.DateTimeFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), qui est une propriété d'accesseur retournant une fonction liée. Pour faciliter la compréhension, nous les traitons comme des méthodes normales.
+
+#### Exemples
+
+- [`Array.prototype.push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
+#### Modèles
+
+- [Modèle de page de méthode d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_method_page_template)
+
+### Page d'espace de noms JavaScript
+
+Une **page d'espace de noms JavaScript** donne un aperçu d'un espace de noms JavaScript, notamment de son objectif et de son utilisation, et répertorie toutes les méthodes et propriétés de l'espace de noms. Un espace de noms JavaScript est défini comme un objet simple qui héberge d'autres propriétés.
+
+#### Exemples
+
+- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [`Temporal`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+- [`Temporal.Now`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now)
+
+#### Modèles
+
+- [Modèle de page d'espace de noms JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_namespace_page_template)
+
+### Page d'opérateur JavaScript
+
+Une **page d'opérateur JavaScript** fournit des informations sur un opérateur JavaScript, notamment sur son objectif et son utilisation. Le terme _opérateur_ ne fait pas l'objet d'un consensus universel. Pour MDN, nous le définissons comme une syntaxe paramétrée par un ou plusieurs opérandes, généralement sous la forme d'expressions ou de constructions assimilables à des expressions.
+
+#### Exemples
+
+- [Addition (`+`)](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
+- [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await)
+- [`class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
+
+#### Modèles
+
+- [Modèle de page d'opérateur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_operator_page_template)
+
+### Page d'instruction JavaScript
+
+Une **page d'instruction JavaScript** fournit des informations sur une instruction ou une déclaration JavaScript, notamment sur son objectif, sa syntaxe et son utilisation. Elle décrit les composants syntaxiques de l'instruction et la façon dont elle affecte l'exécution du programme ou introduit des liaisons.
+
+Pour les formes d'expression, comme une expression de fonction ou une expression de classe, utilisez plutôt le modèle de [page d'opérateur JavaScript](#page_dopérateur_javascript).
+
+#### Exemples
+
+- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+
+#### Modèles
+
+- [Modèle de page d'instruction JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_statement_page_template)
+
+### Page de propriété d'accesseur statique JavaScript
+
+Une **page de propriété d'accesseur statique JavaScript** fournit des informations sur une propriété d'accesseur accessible directement sur une classe ou un espace de noms JavaScript. Elle décrit la valeur retournée par l'accesseur et, lorsqu'un mutateur est présent, les valeurs qu'il accepte ainsi que l'effet de l'affectation.
+
+Pour une propriété d'accesseur d'une instance, utilisez plutôt le modèle de [page de propriété d'accesseur d'instance JavaScript](#page_de_propriété_daccesseur_dinstance_javascript).
+
+#### Exemples
+
+- [`Array[Symbol.species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`RegExp.input`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+
+#### Modèles
+
+- [Modèle de page de propriété d'accesseur statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_accessor_property_page_template)
+
+### Page de propriété de données statique JavaScript
+
+Une **page de propriété de données statique JavaScript** fournit des informations sur une propriété de données accessible directement sur une classe ou un espace de noms JavaScript. Elle décrit la valeur, les attributs, l'objectif et l'utilisation de la propriété.
+
+Si la propriété est une propriété d'accesseur, utilisez plutôt le modèle de [page de propriété d'accesseur statique JavaScript](#page_de_propriété_daccesseur_statique_javascript). Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode statique JavaScript](#page_de_méthode_statique_javascript). Les classes et les espaces de noms exposés comme des propriétés possèdent leurs propres [pages de classe](#page_de_classe_javascript) ou [pages d'espace de noms](#page_despace_de_noms_javascript).
+
+#### Exemples
+
+- [`Math.PI`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+- [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+#### Modèles
+
+- [Modèle de page de propriété de données statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_data_property_page_template)
+
+### Page de méthode statique JavaScript
+
+Une **page de méthode statique JavaScript** fournit des informations sur une méthode appelée directement sur une classe ou un espace de noms JavaScript. Elle décrit l'objectif, la syntaxe, les paramètres, la valeur de retour et les exceptions de la méthode.
+
+Pour une méthode d'instance, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript). Pour une fonction native, utilisez plutôt le modèle de [page de fonction JavaScript](#page_de_fonction_javascript).
+
+#### Exemples
+
+- [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- [`Temporal.Now.instant()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant)
+
+#### Modèles
+
+- [Modèle de page de méthode statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_method_page_template)
 
 ### Page conceptuelle
 

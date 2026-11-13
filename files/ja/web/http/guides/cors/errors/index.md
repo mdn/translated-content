@@ -42,7 +42,7 @@ Firefox のコンソールは、 CORS のためにリクエストが失敗した
 - [Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '\*'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)
 - [Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound)
-- [Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials)
+- [Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowCredentials)
 - [Reason: CORS preflight channel did not succeed](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed)
 - [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod)
 - [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader)

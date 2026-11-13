@@ -3,7 +3,7 @@ title: "Array : méthode reduceRight()"
 short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`reduceRight()`** des instances {{JSxRef("Array")}} applique une fonction à un accumulateur et à chaque valeur du tableau (de droite à gauche) pour les réduire à une seule valeur.
@@ -47,7 +47,7 @@ reduceRight(callbackFn, initialValue)
     - `array`
       - : Le tableau sur lequel `reduceRight()` a été appelé.
 - `initialValue` {{Optional_Inline}}
-  - : La valeur à utiliser comme accumulateur lors du premier appel de la fonction `callbackFn`. Si aucune valeur initiale n'est fournie, le dernier élément du tableau sera utilisé et ignoré. Appeler `reduceRight()` sur un tableau vide sans valeur initiale lève une exception `TypeError`.
+  - : La valeur à utiliser comme accumulateur lors du premier appel de la fonction `callbackFn`. Si aucune valeur initiale n'est fournie, le dernier élément du tableau est utilisé et ignoré. Appeler `reduceRight()` sur un tableau vide sans valeur initiale lève une exception `TypeError`.
 
 ### Valeur de retour
 
@@ -69,7 +69,7 @@ Toutes les mises en garde concernant `reduce` évoquées dans [Quand ne pas util
 
 ### Fonctionnement de `reduceRight()` sans valeur initiale
 
-L'appel à la fonction de rappel `callbackFn` de `reduceRight` ressemblerait à ceci&nbsp;:
+L'appel à la fonction de rappel `callbackFn` de `reduceRight` ressemble à ceci&nbsp;:
 
 ```js
 arr.reduceRight((accumulator, currentValue, index, array) => {
@@ -77,9 +77,9 @@ arr.reduceRight((accumulator, currentValue, index, array) => {
 });
 ```
 
-La première fois que la fonction est appelée, `accumulator` et `currentValue` peuvent prendre deux valeurs différentes. Si une `initialValue` est fournie lors de l'appel à `reduceRight`, alors `accumulator` sera égal à `initialValue` et `currentValue` sera égal à la dernière valeur du tableau. Si aucune `initialValue` n'est fournie, alors `accumulator` sera égal à la dernière valeur du tableau et `currentValue` sera égal à l'avant-dernière valeur.
+La première fois que la fonction est appelée, `accumulator` et `currentValue` peuvent prendre deux valeurs différentes. Si une `initialValue` est fournie lors de l'appel à `reduceRight`, alors `accumulator` est égal à `initialValue` et `currentValue` est égal à la dernière valeur du tableau. Si aucune `initialValue` n'est fournie, alors `accumulator` est égal à la dernière valeur du tableau et `currentValue` est égal à l'avant-dernière valeur.
 
-Si le tableau est vide et qu'aucune `initialValue` n'est fournie, {{JSxRef("TypeError")}} sera levée. Si le tableau ne contient qu'un seul élément (peu importe sa position) et qu'aucune `initialValue` n'est fournie, ou si `initialValue` est fournie mais que le tableau est vide, la valeur unique sera retournée _sans_ appeler `callbackFn`.
+Si le tableau est vide et qu'aucune `initialValue` n'est fournie, {{JSxRef("TypeError")}} est levée. Si le tableau ne contient qu'un seul élément (peu importe sa position) et qu'aucune `initialValue` n'est fournie, ou si `initialValue` est fournie mais que le tableau est vide, la valeur unique est retournée _sans_ appeler `callbackFn`.
 
 Voici quelques exemples d'exécution de la fonction&nbsp;:
 
@@ -89,7 +89,7 @@ Voici quelques exemples d'exécution de la fonction&nbsp;:
 );
 ```
 
-La fonction de rappel sera appelée quatre fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
+La fonction de rappel est appelée quatre fois, avec les arguments et valeurs de retour suivants à chaque appel&nbsp;:
 
 |                 | `accumulator` | `currentValue` | `index` | Valeur retournée |
 | --------------- | ------------- | -------------- | ------- | ---------------- |
@@ -98,7 +98,7 @@ La fonction de rappel sera appelée quatre fois, avec les arguments et valeurs d
 | Troisième appel | `9`           | `1`            | `1`     | `10`             |
 | Quatrième appel | `10`          | `0`            | `0`     | `10`             |
 
-Le paramètre `array` ne change jamais pendant le processus&nbsp;: il reste toujours `[0, 1, 2, 3, 4]`. La valeur retournée par `reduceRight` sera celle du dernier appel de la fonction de rappel (`10`).
+Le paramètre `array` ne change jamais pendant le processus&nbsp;: il reste toujours `[0, 1, 2, 3, 4]`. La valeur retournée par `reduceRight` est celle du dernier appel de la fonction de rappel (`10`).
 
 ### Fonctionnement de `reduceRight()` avec une valeur initiale
 
@@ -119,7 +119,7 @@ Ici, on réduit le même tableau avec le même algorithme, mais en passant une `
 | Quatrième appel | `19`          | `1`            | `1`     | `20`             |
 | Cinquième appel | `20`          | `0`            | `0`     | `20`             |
 
-La valeur retournée par `reduceRight` dans ce cas sera bien sûr `20`.
+La valeur retournée par `reduceRight` dans ce cas est bien sûr `20`.
 
 ### Additionner toutes les valeurs d'un tableau
 
@@ -232,7 +232,7 @@ const objetSimilaireTableau = {
   0: 2,
   1: 3,
   2: 4,
-  3: 99, // ignoré par reduceRight() car length vaut 3
+  3: 99, // ignoré par reduceRight(), car length vaut 3
 };
 console.log(
   Array.prototype.reduceRight.call(objetSimilaireTableau, (x, y) => x - y),
@@ -250,6 +250,8 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.reduceRight` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.reduceRight` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reduceright)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
@@ -259,5 +261,3 @@ console.log(
 - La méthode {{JSxRef("TypedArray.prototype.reduceRight()")}}
 - La méthode {{JSxRef("Object.groupBy()")}}
 - La méthode {{JSxRef("Map.groupBy()")}}
-- [Prothèse d'émulation de `Array.prototype.reduceRight` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.reduceRight` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.reduceright)

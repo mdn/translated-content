@@ -2,7 +2,7 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 l10n:
-  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
+  sourceCommit: 03e93e0948768ea78474e77a53795698ebca5836
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`226 IM Used`** indique que le serveur retourne un {{Glossary("delta")}} en réponse à une requête {{HTTPMethod("GET")}}.
@@ -62,4 +62,4 @@ Delta-Base: abcd123
 - Le code de statut HTTP {{HTTPStatus("200")}}
 - [Les méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Les codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
-- [Les deltas de flux de syndication aident à réduire les coûts de bande passante des abonnements <sup>(angl.)</sup>](https://www.ctrl.blog/entry/feed-delta-updates.html) (2017)
+- [Les deltas de flux de syndication aident à réduire les coûts de bande passante des abonnements <sup>(angl.)</sup>](https://www.ctrl.blog/entry/feed-delta-updates/) (2017)

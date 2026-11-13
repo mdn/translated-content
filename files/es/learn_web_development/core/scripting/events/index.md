@@ -3,7 +3,7 @@ title: Introducción a los eventos
 short-title: Eventos
 slug: Learn_web_development/Core/Scripting/Events
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: c529f2672b3541cc28ea687ff9266f98b1734191
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
@@ -128,10 +128,44 @@ btn.addEventListener("click", changeBackground);
 
 ### Detectar otros eventos
 
-Existen muchos eventos diferentes que puede lanzar un elemento de tipo botón. Experimentemos.
+Existen muchos eventos diferentes que puede lanzar un elemento `<button>`. Experimentemos.
 
-Primero, haz una copia local de [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html) y ábrelo en tu navegador.
-Es solo una copia del ejemplo sencillo del color aleatorio con el que ya hemos trabajado antes. Ahora intenta cambiar `click` por cada uno de los siguientes valores, y observa los resultados en el ejemplo:
+Primero, crea un archivo HTML nuevo en tu sistema de archivos local y añádele el siguiente código:
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ejemplo de color aleatorio: addEventListener()</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Cambiar el color</button>
+    <script>
+      const btn = document.querySelector("button");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+      });
+    </script>
+  </body>
+</html>
+```
+
+Ábrelo en tu navegador y juega con él. Es solo una copia del ejemplo sencillo del color aleatorio con el que ya has trabajado antes.
+
+Ahora intenta cambiar `click` por cada uno de los siguientes valores, y observa los resultados en el navegador:
 
 - [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón se enfoca y se desenfoca; intenta presionar la tecla Tabulador para enfocar el botón, y presiónala de nuevo para desenfocarlo.
   Estos eventos se utilizan a menudo para mostrar información al completar campos de un formulario, o para mostrar un mensaje de error si un campo recibe un valor incorrecto.
@@ -261,7 +295,19 @@ A veces, dentro de una función manejadora de eventos, verás un parámetro espe
 A esto se le conoce como el **objeto evento**, y se pasa automáticamente a los manejadores de eventos para proporcionarles características e información adicionales.
 Por ejemplo, vamos a reescribir nuestro ejemplo de color aleatorio para incluir un objeto evento:
 
-```js
+```html hidden live-sample___event-object
+<button>Cambiar el color</button>
+```
+
+```css hidden live-sample___event-object
+button {
+  margin: 10px;
+  font-size: 300%;
+  padding: 30px;
+}
+```
+
+```js live-sample___event-object
 const btn = document.querySelector("button");
 
 function random(number) {
@@ -277,10 +323,11 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> [!NOTE]
-> Puedes encontrar el [código fuente completo](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) de este ejemplo en GitHub (además, [verlo funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+Mira este ejemplo funcionando en vivo a continuación. ¡Sí, hemos hecho el `<button>` muy grande!
 
-Aquí puedes ver que estamos incluyendo un objeto evento, **e**, en la función, y en la función estamos estableciendo un estilo de color de fondo en `e.target`, que es el botón en sí.
+{{embedlivesample("event-object", "100%", 150)}}
+
+Incluimos un objeto evento, **e**, en la función, y establecemos un estilo de color de fondo en `e.target`, que es el botón en sí.
 La propiedad `target` del objeto evento siempre es una referencia al elemento sobre el que se produjo el evento.
 Por lo tanto, en este ejemplo estamos estableciendo un color de fondo aleatorio en el botón, no en la página.
 
@@ -372,7 +419,7 @@ form.addEventListener("submit", (e) => {
 
 Obviamente, esta es una validación de formulario bastante débil —no evitaría, por ejemplo, que el usuario validara el formulario con espacios en blanco o números en los campos—, pero sirve a modo de ejemplo.
 
-Puedes ver el ejemplo completo [funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html); pruébalo ahí. Para consultar el código fuente completo, visita [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html).
+Puedes ver el ejemplo completo [funcionando en vivo](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/); pruébalo ahí. Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/preventdefault/).
 
 ## No es solo en páginas web
 
@@ -385,7 +432,7 @@ La [documentación sobre el evento connect de HTTP en Node.js](https://nodejs.or
 
 También puedes usar JavaScript para crear complementos multinavegador —mejoras de funcionalidad del navegador— utilizando una tecnología llamada [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).
 El modelo de eventos es similar al modelo de eventos web, pero un poco diferente: las propiedades de los detectores de eventos se escriben en {{Glossary("camel_case", "camel case")}} (por ejemplo, `onMessage` en lugar de `onmessage`), y deben combinarse con la función `addListener`.
-Consulta la página de [`runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) para ver un ejemplo.
+Consulta la página de [`runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) para ver un ejemplo.
 
 No necesitas entender nada sobre estos otros entornos en esta etapa de tu aprendizaje; solo queríamos dejar claro que los eventos pueden variar según el entorno de programación.
 

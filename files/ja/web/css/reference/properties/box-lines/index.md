@@ -1,12 +1,12 @@
 ---
-title: CSS `box-lines` プロパティ
+title: "`box-lines` プロパティ (CSS)"
 short-title: box-lines
 slug: Web/CSS/Reference/Properties/box-lines
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。

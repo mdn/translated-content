@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Retry-After`** indique pendant combien de temps l'agent utilisateur doit attendre avant d'effectuer une requête de suivi.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Retry-After`** indique pendant combien de temps l'agent utilisateur doit attendre avant d'effectuer une requête de suivi.
 Il existe trois cas principaux d'utilisation de cet en-tête&nbsp;:
 
 - Dans une réponse {{HTTPStatus("503", "503 Service Unavailable")}}, il indique pendant combien de temps le service est censé être indisponible.

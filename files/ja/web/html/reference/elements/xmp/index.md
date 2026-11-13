@@ -1,12 +1,10 @@
 ---
-title: HTML `<xmp>` プレーンテキストレンダリング要素
+title: "`<xmp>` プレーンテキストレンダリング要素"
 short-title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 l10n:
   sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{deprecated_header}}
 
 ## 概要
 

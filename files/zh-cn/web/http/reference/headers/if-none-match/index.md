@@ -22,7 +22,7 @@ slug: Web/HTTP/Reference/Headers/If-None-Match
 
 ## 语法
 
-```plain
+```http
 If-None-Match: <etag_value>
 If-None-Match: <etag_value>, <etag_value>, …
 If-None-Match: *
@@ -37,7 +37,7 @@ If-None-Match: *
 
 ## 示例
 
-```plain
+```http
 If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
 If-None-Match: W/"67ab43", "54ed21", "7892dd"

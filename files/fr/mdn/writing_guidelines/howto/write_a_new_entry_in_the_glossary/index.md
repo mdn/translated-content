@@ -3,7 +3,7 @@ title: Comment ajouter une entrée de glossaire
 short-title: Ajouter une entrée de glossaire
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 l10n:
-  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 Dans cet article, nous allons voir comment ajouter des entrées au [glossaire MDN Web Docs](/fr/docs/Glossary) et comment y faire référence.
@@ -25,7 +25,7 @@ Les entrées du glossaire sont conçues pour être simples et concises.
 Tout d'abord, choisissez un sujet pour lequel vous souhaitez écrire une entrée dans le glossaire.
 Si vous recherchez des sujets nécessitant une entrée dans le glossaire, consultez la liste des termes dans la barre latérale de la [page d'accueil du glossaire](/fr/docs/Glossary).
 
-Si vous avez une idée pour une nouvelle entrée, [créez une nouvelle page](https://github.com/mdn/content#adding-a-new-document) pour ce terme, sous [la page du glossaire](https://github.com/mdn/content/tree/main/files/en-us/glossary).
+Si vous avez une idée pour une nouvelle entrée, [créez une nouvelle page <sup>(angl.)</sup>](https://github.com/mdn/content#adding-a-new-document) pour ce terme, sous [la page du glossaire <sup>(angl.)</sup>](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
 ### Écrire un résumé
 

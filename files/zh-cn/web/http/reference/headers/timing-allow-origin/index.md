@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 
 ## 语法
 
-```plain
+```http
 Timing-Allow-Origin: *
 Timing-Allow-Origin: <origin>[, <origin>]*
 ```
@@ -27,13 +27,13 @@ Timing-Allow-Origin: <origin>[, <origin>]*
 
 如需允许任何资源都可以看到的计时 (timing) 信息，你可以如此设置：
 
-```plain
+```http
 Timing-Allow-Origin: *
 ```
 
 如需允许`https://developer.mozilla.org`查看你的计时信息，你可以设置：
 
-```plain
+```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 

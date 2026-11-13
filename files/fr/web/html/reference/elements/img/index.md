@@ -3,7 +3,7 @@ title: "Élément HTML `<img>` : l'élément d'image embarquée"
 short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 l10n:
-  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
+  sourceCommit: 74a39db9d03ec63426b0740dc0bd3cb85e5461a4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
@@ -23,47 +23,6 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image d
 }
 ```
 
-L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
-
-- L'attribut `src` contient le chemin vers l'image à intégrer. Il n'est pas obligatoire si l'attribut [srcset](/fr/docs/Web/API/HTMLImageElement/srcset) est disponible. Cependant, au moins un des attributs `src` ou `srcset` doit être fourni.
-- L'attribut `alt` contient un texte de remplacement pour l'image, qui est obligatoire et **extrêmement utile** pour l'accessibilité&nbsp;: les lecteurs d'écran lisent la valeur de cet attribut à leurs utilisateur·ice·s afin qu'ils·elles sachent ce que signifie l'image. Le texte alternatif est également affiché sur la page si l'image ne peut pas être chargée pour une raison quelconque&nbsp;: par exemple, erreurs réseau, blocage de contenu ou lien rompu.
-
-Il existe de nombreux autres attributs pour répondre à divers besoins&nbsp;:
-
-- Contrôle du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{Glossary("CORS")}} pour la sécurité et la vie privée&nbsp;: voir [`crossorigin`](#crossorigin) et [`referrerpolicy`](#referrerpolicy).
-- Utilisez à la fois [`width`](#width) et [`height`](#height) pour définir la taille intrinsèque de l'image, ce qui lui permet de prendre de la place avant son chargement et de limiter les décalages de mise en page.
-- Indices pour les images adaptatives avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir aussi l'élément {{HTMLElement("picture")}} et notre tutoriel [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)).
-
-## Formats d'image pris en charge
-
-Le standard HTML n'indique pas les formats d'image qui doivent être pris en charge, les {{Glossary("user agent","agents utilisateurs")}} peuvent prendre en charge différents formats.
-
-> [!NOTE] [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Guides/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
-
-Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
-
-- [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
-- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#avif) pour les images et les images animées avec de hautes performances
-- [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
-- [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
-- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) pour une compression sans perte d'images statiques, de meilleure qualité que le JPEG
-- [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
-- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Guides/Formats/Image_types#webp) pour les images statiques et animées
-
-Les formats comme [WebP](/fr/docs/Web/Media/Guides/Formats/Image_types#webp) et [AVIF](/fr/docs/Web/Media/Guides/Formats/Image_types#avif) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
-
-SVG reste le format recommandé pour les images qui doivent être dessinées avec précision quelle que soit la taille.
-
-## Erreur de chargement d'une image
-
-Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}, le gestionnaire est appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
-
-- L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
-- L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
-- L'image est corrompue et ne peut être chargée ainsi.
-- Les métadonnées associées à l'image sont corrompues de telle façon qu'il est impossible de connaître ses dimensions et qu'aucune dimension n'a été fournie pour les attributs de l'élément `<img>`.
-- Le format de l'image n'est pas pris en charge par l'agent utilisateur (généralement le navigateur).
-
 ## Attributs
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -76,7 +35,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     >
     > - Le navigateur n'est pas doté d'une interface visuelle
     > - La personne a configuré son navigateur pour ne pas afficher les images (afin d'économiser de la bande passante ou pour des raisons de vie privée)
-    > - L'image est invalide ou son format n'est [pas pris en charge](#formats_dimage_pris_en_charge)
+    > - L'image est invalide ou son format n'est [pas pris en charge](/fr/docs/Web/Media/Guides/Formats/Image_types)
     >
     > Dans ces situations, le navigateur peut remplacer l'image avec le texte fourni par cet attribut. Aussi, il est grandement préférable de fournir une valeur utile pour `alt` dès que possible.
 
@@ -314,7 +273,32 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `vspace` {{Deprecated_Inline}}
   - : Le nombre de pixels d'espace blanc en haut et en bas de l'image. La propriété CSS {{CSSxRef("margin")}} doit être utilisée à la place.
 
-## Mettre en forme avec CSS
+## Notes d'utilisation
+
+Vous avez besoin d'au moins deux attributs pour chaque élément `<img>`. Le plus souvent, ce sont `src` et `alt`.
+
+- L'attribut `src` contient le chemin vers l'image à intégrer. Il n'est pas obligatoire si l'attribut [srcset](/fr/docs/Web/API/HTMLImageElement/srcset) est disponible. Cependant, au moins un des attributs `src` ou `srcset` doit être fourni.
+- L'attribut `alt` contient un texte de remplacement pour l'image, qui est obligatoire et **extrêmement utile** pour l'accessibilité&nbsp;: les lecteurs d'écran lisent la valeur de cet attribut à leurs utilisateur·ice·s afin qu'ils·elles sachent ce que signifie l'image. Le texte alternatif est également affiché sur la page si l'image ne peut pas être chargée pour une raison quelconque&nbsp;: par exemple, erreurs réseau, blocage de contenu ou lien rompu.
+
+Il existe de nombreux autres attributs pour répondre à divers besoins&nbsp;:
+
+- Contrôle du [référent](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{Glossary("CORS")}} pour la sécurité et la vie privée&nbsp;: voir [`crossorigin`](#crossorigin) et [`referrerpolicy`](#referrerpolicy).
+- Utilisez à la fois [`width`](#width) et [`height`](#height) pour définir la taille intrinsèque de l'image, ce qui lui permet de prendre de la place avant son chargement et de limiter les décalages de mise en page.
+- Indices pour les images adaptatives avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir aussi l'élément {{HTMLElement("picture")}} et notre tutoriel [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)).
+
+Le guide [Types et formats de fichiers image](/fr/docs/Web/Media/Guides/Formats/Image_types) fournit des informations sur les formats d'image pris en charge et des recommandations générales sur leur utilisation.
+
+### Erreur de chargement d'une image
+
+Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}, le gestionnaire est appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
+
+- L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
+- L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
+- L'image est corrompue et ne peut être chargée ainsi.
+- Les métadonnées associées à l'image sont corrompues de telle façon qu'il est impossible de connaître ses dimensions et qu'aucune dimension n'a été fournie pour les attributs de l'élément `<img>`.
+- Le format de l'image n'est pas pris en charge par l'agent utilisateur (généralement le navigateur).
+
+### Mettre en forme avec CSS
 
 `<img>` est {{Glossary("replaced elements", "un élément remplacé")}}. Sa propriété {{CSSxRef("display")}} par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés {{CSSxRef("border")}}/{{CSSxRef("border-radius")}}, {{CSSxRef("padding")}}/{{CSSxRef("margin")}}, {{CSSxRef("width")}}, {{CSSxRef("height")}}, etc, sur une image.
 

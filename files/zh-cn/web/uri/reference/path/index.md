@@ -12,7 +12,7 @@ URI 的**路径**是位于[权威](/zh-CN/docs/Web/URI/Reference/Authority)之�
 
 路径由一系列路径段组成，以斜线（`/`）字符分隔：
 
-```plain
+```url
 http://example.com:80<path>
 urn:<path>
 ```

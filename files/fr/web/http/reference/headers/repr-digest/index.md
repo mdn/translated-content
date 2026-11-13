@@ -3,7 +3,7 @@ title: En-tête Repr-Digest
 short-title: Repr-Digest
 slug: Web/HTTP/Reference/Headers/Repr-Digest
 l10n:
-  sourceCommit: e5a63f8d002dcac9654be79bd03bfda262dd4d89
+  sourceCommit: f4174abd45aefde55b6d45144c57ec3c2dc037a1
 ---
 
 L'HTTP{{Glossary("Request header", "en-tête de requête")}} et {{Glossary("Response header", "de réponse")}} **`Repr-Digest`** fournit une {{Glossary("hash function", "fonction de hachage")}} de la représentation sélectionnée de la ressource cible.
@@ -202,4 +202,4 @@ Les développeur·euse·s peuvent définir et récupérer des en-têtes HTTP en 
 - Les en-têtes {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - L'en-tête {{HTTPHeader("ETag")}}
 - L'en-tête {{HTTPHeader("Content-Encoding")}}
-- [Signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) guide SDK utilisant des `Content-Digest` pour des signatures numériques dans des appels HTTP (developer.ebay.com)
+- [Signatures numériques pour les API <sup>(angl.)</sup>](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) guide SDK utilisant des `Content-Digest` pour des signatures numériques dans des appels HTTP (developer.ebay.com)

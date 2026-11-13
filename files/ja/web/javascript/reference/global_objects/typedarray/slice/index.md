@@ -3,7 +3,7 @@ title: TypedArray.prototype.slice()
 short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
@@ -43,7 +43,7 @@ slice(start, end)
 
 ## 例
 
-### 例: 既存の配列の一部を返す
+### 既存の型付き配列の一部を返す
 
 ```js
 const bytes = new Uint8Array([1, 2, 3]);
@@ -63,7 +63,7 @@ bytes.slice(0, 1); // Uint8Array [ 1 ]
 
 ## 関連情報
 
-- [`TypedArray.prototype.slice` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.slice` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [es-shims による `TypedArray.prototype.slice` のポリフィル](https://www.npmjs.com/package/typedarray.prototype.slice)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}

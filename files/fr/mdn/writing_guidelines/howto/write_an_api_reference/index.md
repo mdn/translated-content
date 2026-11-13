@@ -3,7 +3,7 @@ title: Comment rédiger une référence API
 short-title: Rédiger une référence API
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 l10n:
-  sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
+  sourceCommit: 7eefecdba3b25dde52437ebff7d60ed2dbbd82db
 ---
 
 Ce guide vous explique tout ce que vous devez savoir pour rédiger une référence API sur MDN.
@@ -41,7 +41,7 @@ Avant de commencer à documenter une API, vous devez avoir à disposition&nbsp;:
 
 ### Prenez le temps de jouer avec l'API
 
-Vous viendrez construire des démonstrations de nombreuses fois au cours de la documentation d'une API, mais il est utile de commencer par passer du temps à se familiariser avec le fonctionnement de l'API — apprendre quelles sont les principales interfaces/propriétés/méthodes, quels sont les cas d'utilisation principaux et comment écrire des fonctionnalités simples avec elle.
+Vous venez construire des démonstrations de nombreuses fois au cours de la documentation d'une API, mais il est utile de commencer par passer du temps à se familiariser avec le fonctionnement de l'API — apprendre quelles sont les principales interfaces/propriétés/méthodes, quels sont les cas d'utilisation principaux et comment écrire des fonctionnalités simples avec elle.
 
 Lorsque qu'une API a changé, vous devez faire attention à ce que les démonstrations existantes auxquelles vous vous référez ou que vous utilisez pour apprendre ne soient pas obsolètes. Vérifiez les principaux éléments utilisés dans la démonstration pour voir s'ils correspondent à la dernière spécification. Ils peuvent également ne pas fonctionner dans les navigateurs à jour, mais ce n'est pas un test très fiable, car souvent les anciennes fonctionnalités continuent d'être prises en charge pour la compatibilité ascendante.
 
@@ -240,7 +240,7 @@ Vous devez maintenant être prêt·e à commencer à rédiger vos pages d'interf
    - _Cette interface hérite également des méthodes de \\{{DOMxRef("XYZ")}}, et \\{{DOMxRef("XYZ2")}}._
 
    > [!NOTE]
-   > Les propriétés en lecture seule doivent utiliser la macro \\{{ReadOnlyInline}}, qui crée un petit badge «&nbsp;Lecture seule&nbsp;», inclus sur la même ligne que leurs liens \\{{DOMxRef}} (après l'utilisation des macros \\{{Experimental_Inline}}, \\{{Non-standard_Inline}} et \\{{Deprecated_Inline}}, si certaines de ces macros sont nécessaires).
+   > Les propriétés en lecture seule doivent utiliser la macro \\{{ReadOnlyInline}}, qui crée un petit badge «&nbsp;Lecture seule&nbsp;», inclus sur la même ligne que leurs liens \\{{DOMxRef}} (avant l'utilisation des macros \\{{Experimental_Inline}}, \\{{Non-standard_Inline}} et \\{{Deprecated_Inline}}, si certaines de ces macros sont nécessaires).
 
 6. **Exemples**&nbsp;: Incluez une liste de code pour montrer l'utilisation typique d'une fonctionnalité majeure de l'API. Plutôt que de lister TOUT le code, vous devez lister un sous-ensemble intéressant. Pour une liste complète de code, vous pouvez référencer un dépôt [GitHub <sup>(angl.)</sup>](https://github.com/) contenant l'exemple complet, et vous pouvez également créer un lien vers un exemple en direct utilisant la fonctionnalité [GitHub gh-pages <sup>(angl.)</sup>](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) (à condition qu'il utilise uniquement du code côté client, bien sûr). Si l'exemple est visuel, vous pouvez également utiliser la fonctionnalité MDN [Live Sample](/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples) pour le rendre interactif et jouable dans la page.
 7. **Tableau des spécifications**&nbsp;: À ce stade, vous devez inclure un tableau des spécifications — voir la section «&nbsp;Créer un tableau de référence des spécifications&nbsp;» pour plus de détails.

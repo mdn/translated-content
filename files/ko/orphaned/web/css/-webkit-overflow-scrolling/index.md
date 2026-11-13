@@ -17,10 +17,6 @@ original_slug: Web/CSS/-webkit-overflow-scrolling
 - `touch`
   - : 모멘텀 기반 스크롤을 사용합니다. 스크롤 제스쳐가 끝나고 손가락을 터치 화면에서 떼어도 잠시 스크롤이 지속됩니다. 지속 속도와 시간은 스크롤 제스쳐의 세기에 따라 달라집니다. 또한 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성합니다.
 
-### 형식 구문
-
-{{csssyntax}}
-
 ## 예제
 
 ### HTML

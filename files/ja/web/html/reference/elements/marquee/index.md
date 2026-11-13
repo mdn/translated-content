@@ -1,12 +1,10 @@
 ---
-title: HTML `<marquee>` マーキー要素
+title: "`<marquee>` マーキー要素"
 short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
-
-{{Deprecated_Header}}
 
 **`<marquee>`** は [HTML](/ja/docs/Web/HTML) の要素で、テキストがスクロールする領域を挿入します。要素の属性を使用して、テキストがコンテンツ領域の端に達したときにどうするかを制御できます。
 

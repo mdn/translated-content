@@ -18,7 +18,7 @@ Sin embargo, el manejador no puede _leer_ los datos del portapapeles.
 
 Es posible construir y lanzar un evento `copy` [sintético](/es/docs/Web/API/Document_Object_Model/Events), pero esto no afectará al portapapeles del sistema.
 
-La [burbuja](/es/docs/Learn/JavaScript/Building_blocks/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
+La [burbuja](/es/docs/Learn_web_development/Core/Scripting/Event_bubbling) del evento, es [cancelable](/es/docs/Web/API/Event/cancelable) y [compuesta](/es/docs/Web/API/Event/composed).
 
 ## Sintaxis
 

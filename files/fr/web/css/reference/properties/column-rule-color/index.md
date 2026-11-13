@@ -3,10 +3,10 @@ title: Propriété CSS `column-rule-color`
 short-title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
 l10n:
-  sourceCommit: b6de98eb9cd52ce7e37f22a340352f0af4c9d597
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-color`** définit la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et multi-colonnes.
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-color`** définit la couleur des lignes tracées entre les colonnes des dispositions en grille, flexible et à plusieurs colonnes.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: column-rule-color")}}
 
@@ -84,11 +84,11 @@ La propriété `column-rule-color` accepte une liste de valeurs séparées par d
   - : La fonction {{CSSxRef("repeat()")}}, avec un entier ({{CSSxRef("&lt;integer&gt;")}}) de `1` ou plus comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. L'entier ({{CSSxRef("&lt;integer&gt;")}}) définit combien de fois les valeurs `<color>` doivent être répétées.
 
 - `<auto-repeat-line-color>`
-  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. Les valeurs `<color>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas spécifiées explicitement par d'autres composants de la valeur de la propriété.
+  - : La fonction {{CSSxRef("repeat()")}}, avec `auto` comme premier argument et une ou plusieurs valeurs `<color>` comme arguments suivants. Les valeurs `<color>` fournies sont répétées autant de fois que nécessaire pour remplir les valeurs de toutes les règles de colonne qui ne sont pas définies explicitement par d'autres composants de la valeur de la propriété.
 
 ## Description
 
-La propriété `column-rule-color` définit les couleurs des lignes tracées dans les gouttières entre les colonnes des conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plusieurs colonnes.
+La propriété `column-rule-color` définit les couleurs des lignes tracées dans les gouttières entre les colonnes des conteneurs [à plusieurs colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout) comportant plusieurs colonnes.
 
 La valeur est une liste de composants séparés par des virgules, qui peut inclure des types `<line-color>`, `<repeat-line-color>` et `<auto-repeat-line-color>`.
 
@@ -141,7 +141,7 @@ Le mot-clé `auto` dans la fonction `repeat()` crée un répéteur automatique q
 
 ### Exemple simple
 
-Dans cet exemple, nous définissons une seule couleur pour les lignes tracées entre les colonnes dans une mise en page multi-colonnes.
+Dans cet exemple, nous définissons une seule couleur pour les lignes tracées entre les colonnes dans une disposition à plusieurs colonnes.
 
 #### HTML
 
@@ -157,7 +157,7 @@ Nous incluons un paragraphe de texte.
 
 #### CSS
 
-Nous définissons l'élément HTML {{HTMLElement("p")}} comme un conteneur multi-colonnes. Nous incluons un {{CSSxRef("gap")}} de `7px` pour fournir un espacement pour la règle en pointillés de `3px` tracée entre les colonnes&nbsp;:
+Nous définissons l'élément HTML {{HTMLElement("p")}} comme un conteneur à plusieurs colonnes. Nous incluons un {{CSSxRef("gap")}} de `7px` pour fournir un espacement pour la règle en pointillés de `3px` tracée entre les colonnes&nbsp;:
 
 ```css
 p {
@@ -325,4 +325,5 @@ ul {
 - La propriété raccourcie {{CSSxRef("column-rule")}}
 - La propriété raccourcie {{CSSxRef("rule-color")}}
 - La propriété raccourcie {{CSSxRef("rule")}}
+- [Définir les espaces CSS](/fr/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - Le module [d'espacement CSS](/fr/docs/Web/CSS/Guides/Gaps)

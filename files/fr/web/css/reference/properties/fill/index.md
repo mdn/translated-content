@@ -3,7 +3,7 @@ title: Propriété CSS `fill`
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
-  sourceCommit: 9505c8d1370343fb65affa01657f27751ab59103
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill`** définit comment le contenu textuel SVG et l'intérieur des formes SVG sont remplis ou peints. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill")}} de l'élément.

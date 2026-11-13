@@ -3,7 +3,7 @@ title: "Élément HTML `<hr>` : l'élément de rupture thématique (règle horiz
 short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 l10n:
-  sourceCommit: 1fc07c825d3f214516420cf0e986853a66deb426
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.
@@ -43,10 +43,6 @@ hr::after {
 }
 ```
 
-Historiquement, l'élément `<hr>` a toujours été présenté comme une règle horizontale ou une ligne. Bien qu'il puisse encore être affiché comme une règle horizontale dans les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes présentatifs. Par conséquent, si vous souhaitez tracer une ligne horizontale, faites-le en ajoutant une bordure à un élément existant à l'aide de CSS.
-
-Les propriétés `border-*` (par exemple, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}) vous permettent de personnaliser de manière significative l'apparence d'une ligne, que vous personnalisiez un élément `<hr>` ou la bordure d'un autre élément.
-
 ## Attributs
 
 Cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -63,6 +59,12 @@ Cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Refer
   - : Définit la hauteur de la ligne, exprimée en pixels.
 - `width` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
+
+## Notes d'utilisation
+
+Historiquement, l'élément `<hr>` a toujours été présenté comme une règle horizontale ou une ligne. Bien qu'il puisse encore être affiché comme une règle horizontale dans les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes présentatifs. Par conséquent, si vous souhaitez tracer une ligne horizontale, faites-le en ajoutant une bordure à un élément existant à l'aide de CSS.
+
+Les propriétés `border-*` (par exemple, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}) vous permettent de personnaliser de manière significative l'apparence d'une ligne, que vous personnalisiez un élément `<hr>` ou la bordure d'un autre élément.
 
 ## Exemples
 

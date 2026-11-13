@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="week">`
 short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`week`** créent des champs de saisie permettant de saisir facilement une année ainsi que le [numéro de semaine ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Semaine) correspondant à cette année (c'est-à-dire de la semaine 1 à la semaine [52 ou 53](https://fr.wikipedia.org/wiki/ISO_8601#Semaine)).
@@ -100,19 +100,15 @@ Une valeur de chaîne de caractères `any` signifie qu'aucun pas n'est implicite
 
 Ces contrôles peuvent être pratiques selon certains aspects&nbsp;: ils permettent de sélectionner une semaine de façon simple, les données envoyées au serveur sont normalisées quelle que soit la langue ou le navigateur de la personne saisissant dans le champ. Toutefois, en raison de la prise en charge des navigateurs actuellement limitée, `<input type="week">` pose quelques défis.
 
-Nous verrons par la suite quelques cas d'utilisation simples puis complexes avant de voir comment gérer l'hétérogénéité des différents navigateurs (cf. [Gérer la prise en charge des navigateurs](#gérer_la_prise_en_charge_des_navigateurs)).
+Nous voyons par la suite quelques cas d'utilisation simples puis complexes avant de voir comment gérer l'hétérogénéité des différents navigateurs (cf. [Gérer la prise en charge des navigateurs](#gérer_la_prise_en_charge_des_navigateurs)).
 
 ### Utilisation simple
 
 La forme la plus simple de `<input type="week">` se compose d'un élément `<input>` et d'un élément {{HTMLElement("label")}}&nbsp;:
 
 ```html
-<form>
-  <label for="semaine">
-    À quelle semaine souhaitez-vous commencer&nbsp;?
-  </label>
-  <input id="semaine" type="week" name="semaine" />
-</form>
+<label for="semaine"> À quelle semaine souhaitez-vous commencer&nbsp;? </label>
+<input id="semaine" type="week" name="semaine" />
 ```
 
 {{EmbedLiveSample("Utilisation simple", 600, 40)}}
@@ -134,18 +130,9 @@ Par défaut, `<input type="week">` n'applique aucune validation aux valeurs sais
 Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) peuvent être utilisés afin de restreindre les semaines qui peuvent être sélectionnées par l'utilisateur·ice. Dans l'exemple qui suit, on indique une valeur minimale correspondant à la première semaine de 2017 et une valeur maximale correspondant à la dernière semaine de 2017&nbsp;:
 
 ```html
-<form>
-  <label for="semaine">
-    À quelle semaine souhaitez-vous commencer&nbsp;?
-  </label>
-  <input
-    id="semaine"
-    type="week"
-    name="semaine"
-    min="2017-W01"
-    max="2017-W52" />
-  <span class="validite"></span>
-</form>
+<label for="semaine"> À quelle semaine souhaitez-vous commencer&nbsp;? </label>
+<input id="semaine" type="week" name="semaine" min="2017-W01" max="2017-W52" />
+<span class="validite"></span>
 ```
 
 {{EmbedLiveSample("Paramétrer des semaines minimum et maximum", 600, 40)}}
@@ -208,6 +195,12 @@ Prenons un autre exemple (où la période a été restreinte comme précédemmen
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 Si vous essayez d'envoyer le formulaire sans aucune valeur, le navigateur affiche une erreur. Vous pouvez tester avec l'exemple qui suit&nbsp;:
 
 {{EmbedLiveSample("Rendre la valeur obligatoire", 600, 120)}}
@@ -247,37 +240,35 @@ Dans l'exemple qui suit, on construit deux ensembles d'éléments pour sélectio
 Voici le code HTML utilisé&nbsp;:
 
 ```html
-<form>
-  <div class="selectSemaineNatif">
-    <label for="semaine">
-      À quelle semaine souhaitez-vous commencer&nbsp;?
-    </label>
-    <input
-      id="semaine"
-      type="week"
-      name="semaine"
-      min="2017-W01"
-      max="2018-W52"
-      required />
-    <span class="validite"></span>
+<div class="selectSemaineNatif">
+  <label for="semaine">
+    À quelle semaine souhaitez-vous commencer&nbsp;?
+  </label>
+  <input
+    id="semaine"
+    type="week"
+    name="semaine"
+    min="2017-W01"
+    max="2018-W52"
+    required />
+  <span class="validite"></span>
+</div>
+<p class="etiquetteRepli">À quelle semaine souhaitez-vous commencer&nbsp;?</p>
+<div class="selectSemaineRepli">
+  <div>
+    <span>
+      <label for="semaine">Semaine&nbsp;:</label>
+      <select id="semaineRepli" name="semaine"></select>
+    </span>
+    <span>
+      <label for="annee">Année&nbsp;:</label>
+      <select id="annee" name="annee">
+        <option value="2017" selected>2017</option>
+        <option value="2018">2018</option>
+      </select>
+    </span>
   </div>
-  <p class="etiquetteRepli">À quelle semaine souhaitez-vous commencer&nbsp;?</p>
-  <div class="selectSemaineRepli">
-    <div>
-      <span>
-        <label for="semaine">Semaine&nbsp;:</label>
-        <select id="semaineRepli" name="semaine"></select>
-      </span>
-      <span>
-        <label for="annee">Année&nbsp;:</label>
-        <select id="annee" name="annee">
-          <option value="2017" selected>2017</option>
-          <option value="2018">2018</option>
-        </select>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 On génère les valeurs des semaines dynamiquement.

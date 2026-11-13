@@ -1,11 +1,12 @@
 ---
-title: font-variant-caps
+title: "`font-variant-caps` プロパティ (CSS)"
+short-title: font-variant-caps
 slug: Web/CSS/Reference/Properties/font-variant-caps
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
-**`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャップやタイトルに使われる代替グリフの使用を制御します。
+**`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャピタル（小ぶりの大文字）やプチキャピタル（小さな大文字）、タイトル用として使用される代替字形の使用を制御します。
 
 {{InteractiveExample("CSS デモ: font-variant-caps")}}
 
@@ -66,9 +67,9 @@ font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 
-`font-variant-caps` プロパティは、以下のリスト内にある単一のキーワード値を使用して指定します。どの場合も、フォントが OpenType 値に対応していなければ、字形は合成によって生成されます。
-
 ### 値
+
+このプロパティは、以下のキーワード値のいずれかで指定します。
 
 - `normal`
   - : 代替字形の使用を無効にします。
@@ -77,19 +78,21 @@ font-variant-caps: unset;
 - `all-small-caps`
   - : 大文字と小文字の両方でスモールキャピタルの表示を有効にします (OpenType 機能: `c2sc`, `smcp`)。
 - `petite-caps`
-  - : petite capital の表示を有効にします (OpenType 特性: `pcap`)。
+  - : プチキャピタルの表示を有効にします (OpenType 特性: `pcap`)。
 - `all-petite-caps`
-  - : 大文字と小文字の両方で petite capital の表示を有効にします (OpenType 特性: `c2pc`, `pcap`)。
+  - : 大文字と小文字の両方でプチキャピタルの表示を有効にします (OpenType 特性: `c2pc`, `pcap`)。
 - `unicase`
-  - : 大文字のスモールキャピタルと通常の小文字の混合表示を有効にします (OpenType 特性: `unic`).
+  - : 大文字のスモールキャピタルと通常の小文字の混合表示を有効にします (OpenType 特性: `unic`)。
 - `titling-caps`
   - : タイトルキャピタルの表示を有効化します (OpenType 特性: `titl`)。大文字の字形は、ふつう小文字と一緒に使用するためにデザインされています。すべて大文字のタイトル文字列で使用された場合、太くなりすぎることがあります。タイトルキャピタルはこの場合に専用のデザインが行われたものです。
 
 ## 解説
 
-指定されたフォントに複数の異なる大きさで大文字の字形が含まれている場合、このプロパティは最適なものを選択します。 petite capital (小さな大文字) の字形が利用できない場合は、スモールキャピタル (小ぶりの大文字) の字形を使用して表示します。これらが存在しない場合、ブラウザーは大文字の字形から合成します。
+`font-variant-caps` プロパティは、スモールキャピタルやプチキャピタル、あるいはタイトル用として使用される代替字形の使用を制御します。
 
-フォントには、様々な大文字小文字の区別がない文字の特殊な字形が含まれていることがあり (発音記号など)、これらが大文字の文字により一致することがあります。しかし、小さな大文字の字形は大文字小文字の区別がない文字のために合成されることはありません。
+指定されたフォントに複数の異なる大きさで大文字の字形が含まれている場合、このプロパティは最適なものを選択します。プチキャピタルの字形が利用できない場合は、スモールキャピタルの字形を使用して表示します。これらが存在しない場合、ブラウザーは大文字の字形から合成します。
+
+値は単一のキーワードです。それぞれの値について、フォントが OpenType 値に対応していない場合、字体は合成されます。フォントには、様々な大文字小文字の区別がない文字の特殊な字形が含まれていることがあり（発音記号など）、これらが大文字の文字により一致することがあります。しかし、スモールキャピタルの字形は大文字小文字の区別がない文字のために合成されることはありません。
 
 ### 言語特有の規則
 
@@ -103,7 +106,7 @@ font-variant-caps: unset;
 
 長い区間のテキストに対して `font-variant` の値を `all-small-caps` や `all-petite-caps` を設定すると、失読症のような認知障害を抱えた人にとって読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG を理解する ― ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## 公式定義

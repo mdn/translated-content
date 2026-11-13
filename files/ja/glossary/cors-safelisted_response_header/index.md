@@ -1,13 +1,13 @@
 ---
 title: CORS-safelisted response header (CORS セーフリストレスポンスヘッダー)
 slug: Glossary/CORS-safelisted_response_header
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**CORS セーフリストレスポンスヘッダー**は、[CORS](/ja/docs/Web/HTTP/Guides/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)で、クライアントスクリプトに公開しても安全であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 
-_CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/Guides/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
-
-既定では以下のレスポンスヘッダーがセーフリストに含まれます。
+デフォルトでは、以下のレスポンスヘッダーがセーフリストに含まれます。
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Content-Language")}}
@@ -19,23 +19,20 @@ _CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/H
 
 {{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
 
-> [!NOTE]
-> {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
-
 ## 例
 
 ### セーフリストの拡張
 
 {{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して、CORS セーフリストレスポンスヘッダーのリストを拡張することができます。
 
-```plain
+```http
 Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ```
 
 ## 関連情報
 
 - [HTTP](/ja/docs/Web/HTTP)
-- [HTTP headers](/ja/docs/Web/HTTP/Reference/Headers)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - 関連用語:
   - {{Glossary("CORS")}}

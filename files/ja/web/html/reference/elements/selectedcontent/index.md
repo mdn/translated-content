@@ -1,5 +1,5 @@
 ---
-title: HTML `<selectedcontent>` 選択中選択肢表示要素
+title: "`<selectedcontent>` 選択中選択肢表示要素"
 short-title: <selectedcontent>
 slug: Web/HTML/Reference/Elements/selectedcontent
 l10n:

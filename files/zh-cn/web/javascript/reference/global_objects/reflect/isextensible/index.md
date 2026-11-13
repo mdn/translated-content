@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 
 ## 语法
 
-```plain
+```js-nolint
 Reflect.isExtensible(target)
 ```
 

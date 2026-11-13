@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<input type="month">`
 short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 l10n:
-  sourceCommit: 3944506d4afeeed774687cf3fd950878c6229bbc
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisateur·ice peut saisir un mois et année.
@@ -30,18 +30,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-L'interface du contrôle varie généralement d'un navigateur à l'autre&nbsp;; actuellement, la prise en charge est incomplète, seuls Chrome/Opera et Edge sur ordinateur — ainsi que la plupart des versions récentes de navigateurs mobiles — proposent des implémentations utilisables.
-Dans les navigateurs qui ne prennent pas en charge les champs `month`, le contrôle revient à [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text), bien qu'il puisse y avoir une validation automatique du texte saisi pour s'assurer qu'il est au format attendu.
-
-Pour celles et ceux qui utilisent un navigateur ne prenant pas en charge `month`, la capture d'écran ci-dessous montre l'apparence du contrôle dans Chrome et Opera.
-Un clic sur la flèche vers le bas à droite fait apparaître un sélecteur de date permettant de choisir le mois et l'année.
-
-![Le contrôle pour un champ mois sur Chrome](month-control-chrome.png)
-
-Voici un aperçu du contrôle sous Edge&nbsp;:
-
-![Le contrôle pour un champ mois sur Edge](month-control-edge.png)
 
 ## Valeur
 
@@ -137,10 +125,8 @@ Nous allons examiner des utilisations simples puis plus complexes de `<input typ
 L'utilisation la plus simple de `<input type="month">` consiste en une combinaison élémentaire d'un élément {{HTMLElement("input")}} et d'un élément {{HTMLElement("label")}}, comme illustré ci-dessous&nbsp;:
 
 ```html
-<form>
-  <label for="bday-month">Quel est le mois de votre naissance&nbsp;?</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
+<label for="bday-month">Quel est le mois de votre naissance&nbsp;?</label>
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 {{EmbedLiveSample("Utilisation simple du mois", 600, 40)}}
@@ -150,15 +136,13 @@ L'utilisation la plus simple de `<input type="month">` consiste en une combinais
 On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) afin de restreindre la période pendant laquelle l'utilisateur·ice peut choisir un mois. Dans l'exemple qui suit, on définit une date au plus tôt avec `1900-01` et une date au plus tard avec `2017-08`&nbsp;:
 
 ```html
-<form>
-  <label for="bday-month">Quel est le mois de votre naissance&nbsp;?</label>
-  <input
-    id="bday-month"
-    type="month"
-    name="bday-month"
-    min="1900-01"
-    max="2017-08" />
-</form>
+<label for="bday-month">Quel est le mois de votre naissance&nbsp;?</label>
+<input
+  id="bday-month"
+  type="month"
+  name="bday-month"
+  min="1900-01"
+  max="2017-08" />
 ```
 
 {{EmbedLiveSample("Indiquer une date maximale et une date minimale", 600, 40)}}
@@ -201,13 +185,15 @@ Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 Si vous tentez d'envoyer le formulaire avec une date incomplète ou en dehors de cette période, le navigateur doit afficher un message d'erreur. Voici le résultat en direct&nbsp;:
 
 {{EmbedLiveSample("Validation", 600, 120)}}
-
-Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur prenant en charge cette fonctionnalité&nbsp;:
-
-![Le champ mois, lorsqu'il est requis, dans Chrome](month-required.png)
 
 Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent.
 On utilise {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} afin de mettre en forme le contrôle selon que la valeur saisie est invalide.
@@ -248,12 +234,9 @@ input:valid + span::after {
 
 ## Gérer la prise en charge des navigateurs
 
-Comme évoqué plus haut, le problème principal relatif à ces contrôles est l'absence partielle de prise en charge des navigateurs. Seuls Chrome, Opera et Edge supportent ce type de contrôle sur ordinateurs et la plupart des navigateurs mobiles le prennent en charge.
-À titre d'exemple, le sélecteur `month` sur Chrome pour Android ressemble à ceci&nbsp;:
+L'interface utilisateur de ce contrôle varie généralement d'un navigateur à l'autre&nbsp;; pour l'instant, sa prise en charge est inégale, seuls les navigateurs Chromium sur ordinateur et les navigateurs mobiles proposent des implémentations fonctionnelles. Le contrôle se présente généralement sous la forme d'une grille de type calendrier ou de deux sélecteurs circulaires.
 
-![Sélecteur de mois sur Chrome pour Android](month-android.png)
-
-Les navigateurs ne prenant pas en charge basculent gracieusement vers un champ de type texte, mais cela pose des problèmes à la fois en termes de cohérence de l'interface utilisateur (le contrôle présenté est différent), et de gestion des données.
+Dans les navigateurs qui ne prennent pas en charge les champs de saisie de type `month`, le contrôle se replie gracieusement sur [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text), bien qu'une validation automatique du texte saisi puisse être effectuée pour s'assurer qu'il est formaté comme prévu. Mais cela pose des problèmes à la fois en termes de cohérence de l'interface utilisateur (le contrôle présenté est différent), et de gestion des données.
 
 Le second problème est le plus grave des deux.
 Comme indiqué plus haut, pour un champ `month` la valeur réelle est toujours normalisée au format `yyyy-mm`.
@@ -291,6 +274,12 @@ Par exemple, essayez d'afficher la démonstration suivante dans un navigateur qu
     <input type="submit" value="Envoyer le formulaire" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("Gérer la prise en charge des navigateurs", 600, 100)}}
@@ -339,44 +328,42 @@ Le premier est un champ natif de type month, et l'autre est une paire d'élémen
 
 ### HTML
 
-Voici le fragment de code HTML utilisé&nbsp;:
+Le code HTML qui demande le mois et l'année se présente comme suit&nbsp;:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="month-visit">
-      À quel mois souhaitez-vous venir cet été&nbsp;?
-    </label>
-    <input type="month" id="month-visit" name="month-visit" />
-    <span class="validity"></span>
+<div class="nativeDatePicker">
+  <label for="month-visit">
+    À quel mois souhaitez-vous venir cet été&nbsp;?
+  </label>
+  <input type="month" id="month-visit" name="month-visit" />
+  <span class="validity"></span>
+</div>
+<p class="fallbackLabel">À quel mois souhaitez-vous venir cet été&nbsp;?</p>
+<div class="fallbackDatePicker">
+  <div>
+    <span>
+      <label for="month">Mois&nbsp;:</label>
+      <select id="month" name="month">
+        <option selected>Janvier</option>
+        <option>Février</option>
+        <option>Mars</option>
+        <option>Avril</option>
+        <option>Mai</option>
+        <option>Juin</option>
+        <option>Juillet</option>
+        <option>Août</option>
+        <option>Septembre</option>
+        <option>Octobre</option>
+        <option>Novembre</option>
+        <option>Décembre</option>
+      </select>
+    </span>
+    <span>
+      <label for="year">Année&nbsp;:</label>
+      <select id="year" name="year"></select>
+    </span>
   </div>
-  <p class="fallbackLabel">À quel mois souhaitez-vous venir cet été&nbsp;?</p>
-  <div class="fallbackDatePicker">
-    <div>
-      <span>
-        <label for="month">Mois&nbsp;:</label>
-        <select id="month" name="month">
-          <option selected>Janvier</option>
-          <option>Février</option>
-          <option>Mars</option>
-          <option>Avril</option>
-          <option>Mai</option>
-          <option>Juin</option>
-          <option>Juillet</option>
-          <option>Août</option>
-          <option>Septembre</option>
-          <option>Octobre</option>
-          <option>Novembre</option>
-          <option>Décembre</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Année&nbsp;:</label>
-        <select id="year" name="year"></select>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 Le {{HTMLElement("div")}} avec l'identifiant `nativeDatePicker` utilise le type de champ month pour demander le mois et l'année, tandis que le `<div>` avec l'identifiant `fallbackDatePicker` utilise une paire d'éléments `<select>`.

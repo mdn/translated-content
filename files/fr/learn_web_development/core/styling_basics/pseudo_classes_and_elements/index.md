@@ -3,7 +3,7 @@ title: Pseudo-classes et pseudo-éléments
 short-title: Pseudo-classes et éléments
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 l10n:
-  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
+  sourceCommit: 3fbc8b2ba17c1cf331fb67ce2e6561b15bf4f197
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
@@ -106,7 +106,7 @@ Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les 
 
 ### Pseudo-classes d'action utilisateur
 
-Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur·ice interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées _pseudo-classes dynamiques_, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur·ice interagit avec lui. Par exemple&nbsp;:
+Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur·ice interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées _pseudo-classes dynamiques_, agissent comme si une classe est ajoutée à l'élément lorsque l'utilisateur·ice interagit avec lui. Par exemple&nbsp;:
 
 - {{CSSxRef(":hover")}} — mentionné ci-dessus&nbsp;; s'applique quand l'utilisateur·ice déplace son pointeur sur un élément, généralement un lien.
 - {{CSSxRef(":focus")}} — s'applique uniquement si l'utilisateur·ice concentre l'élément à l'aide des commandes du clavier.
@@ -147,7 +147,7 @@ Les pseudo-éléments commencent avec un double deux-points `::`. `::before` est
 > [!NOTE]
 > Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.
 
-Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément `<span>` et utiliser un sélecteur d'éléments&nbsp;; cependant, cela échoue si le nombre de mots que vous avez entourés était plus long ou plus court que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiennent sur une ligne — étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change — il est impossible de le faire de manière robuste en ajoutant du HTML.
+Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément `<span>` et utiliser un sélecteur d'éléments&nbsp;; cependant, cela échoue si les mots que vous avez entourés sont plus longs ou plus courts que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiennent sur une ligne — étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change — il est impossible de le faire de manière robuste en ajoutant du HTML.
 
 Le pseudo-sélecteur d'éléments `::first-line` le fait pour vous de manière fiable — même si le nombre de mots augmente ou diminue, il ne sélectionne que la première ligne.
 
@@ -177,7 +177,7 @@ article p::first-line {
 
 {{EmbedLiveSample("first-line")}}
 
-Il agit comme si un `<span>` était comme par magie placé autour de cette première ligne formatée, et était mis à jour à chaque fois que la longueur de la ligne changeait.
+Il agit comme si un `<span>` est comme par magie placé autour de cette première ligne formatée, et est mis à jour à chaque fois que la longueur de la ligne change.
 
 Vous pouvez voir que cela sélectionne la première ligne des deux paragraphes.
 
@@ -186,7 +186,7 @@ Vous pouvez voir que cela sélectionne la première ligne des deux paragraphes.
 Modifiez le CSS de l'exemple précédent en utilisant le terrain de jeu MDN&nbsp;:
 
 1. Ajoutez une règle qui donne à la portion de texte sélectionnée avec le curseur de la souris un `background-color` rouge (vous avez besoin du pseudo-élément {{CSSxRef("::selection")}} pour cela). Sélectionnez du texte pour le tester.
-2. Ajoutez une règle qui donne à la première lettre de chaque `<p>` à l'intérieur de l'`<article>` :
+2. Ajoutez une règle qui donne à la première lettre de chaque `<p>` à l'intérieur d'un `<article>`&nbsp;:
 
 - Un `background-color` `yellow`.
 - Une `border` `1px solid black`.
@@ -219,7 +219,7 @@ Vous pouvez les utiliser pour insérer une chaîne de caractères textuelle, com
 
 ```css live-sample___before
 .box::before {
-  content: "Ce texte doit apparaître avant le reste du contenu. ";
+  content: "Ce texte doit apparaître avant le reste du contenu.";
   background-color: yellow;
 }
 ```
@@ -251,7 +251,7 @@ L'exemple ci-dessus est un CSS valide. Cependant, insérer des chaînes de carac
 
 ### Formes générées
 
-Le contenu généré est également fréquemment utilisé pour insérer une chaîne de caractères vide, qui peut ensuite être stylisée comme n'importe quel élément de la page.
+Le contenu généré est également fréquemment utilisé pour insérer une chaîne de caractères vide, qui peut ensuite être mise en forme comme n'importe quel élément de la page.
 
 Dans cet exemple suivant, nous avons ajouté une chaîne de caractères vide en utilisant le pseudo-élément `::before`. Nous l'avons défini sur `display: block` afin de pouvoir le mettre en forme avec une largeur et une hauteur, créant ainsi une forme carrée. Nous utilisons ensuite le CSS pour le mettre en forme comme n'importe quel élément.
 
@@ -274,7 +274,7 @@ Dans cet exemple suivant, nous avons ajouté une chaîne de caractères vide en 
 
 Essayez de modifier le CSS ci-dessus pour changer l'apparence et le comportement de la forme générée.
 
-Vous pouvez régulièrement voir du contenu généré utilisé pour diverses autres tâches. Un excellent exemple est le site [CSS Arrow Please](https://cssarrowplease.com/), qui vous aide à générer une flèche avec CSS. Regardez le CSS pendant que vous créez votre flèche et vous allez voir les pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}} en action. Chaque fois que vous voyez ces sélecteurs, regardez la propriété {{CSSxRef("content")}} pour voir ce qui est ajouté à l'élément HTML.
+Vous pouvez régulièrement voir du contenu généré utilisé pour diverses autres tâches. Un excellent exemple est le site [CSS Arrow Please <sup>(angl.)</sup>](https://cssarrowplease.com/), qui vous aide à générer une flèche avec CSS. Regardez le CSS pendant que vous créez votre flèche et vous allez voir les pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}} en action. Chaque fois que vous voyez ces sélecteurs, regardez la propriété {{CSSxRef("content")}} pour voir ce qui est ajouté à l'élément HTML.
 
 ## Résumé
 
@@ -282,7 +282,7 @@ Dans cet article, nous avons présenté les pseudo-classes et les pseudo-éléme
 
 Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le mettre en forme. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document en utilisant le CSS.
 
-Dans le prochain article, nous aborderons les combinateurs.
+Dans le prochain article, nous abordons les combinateurs.
 
 ## Voir aussi
 

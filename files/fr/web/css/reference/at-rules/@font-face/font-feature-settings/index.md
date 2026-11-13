@@ -24,7 +24,7 @@ font-feature-settings: "swsh" 2;
 
 ### Valeurs
 
-Ce descripteur se spécifie soit par le mot-clé `normal`, soit par une liste de valeurs `<feature-tag-value>` séparées par des virgules. Lors du rendu du texte, la liste des valeurs OpenType `<feature-tag-value>` est transmise au moteur de mise en page pour activer ou désactiver des fonctionnalités de la police.
+Ce descripteur se définit soit par le mot-clé `normal`, soit par une liste de valeurs `<feature-tag-value>` séparées par des virgules. Lors du rendu du texte, la liste des valeurs OpenType `<feature-tag-value>` est transmise au moteur de mise en page pour activer ou désactiver des fonctionnalités de la police.
 
 - `normal`
   - : Indique que le texte est mis en page avec les réglages par défaut de la police. C'est la valeur par défaut.
@@ -86,7 +86,7 @@ p {
 
 La première ligne montre le design orné par défaut de la police [MonteCarlo <sup>(angl.)</sup>](https://github.com/googlefonts/monte-carlo), et la seconde ligne montre les glyphes par défaut remplacés par des glyphes [ornés <sup>(angl.)</sup>](https://learn.microsoft.com/fr-fr/typography/opentype/spec/features_pt#tag-swsh).
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

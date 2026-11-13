@@ -3,10 +3,13 @@ title: "Attribut HTML universel : `style`"
 short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
 l10n:
-  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`style`** contient des déclarations [CSS](/fr/docs/Web/CSS) afin de mettre en forme l'élément. Notez qu'il est recommandé de définir les règles de mise en forme dans un ou plusieurs fichiers séparés. Cet attribut, ainsi que l'élément {{HTMLElement("style")}} ont simplement pour but de permettre une mise en forme rapide, notamment pour tester.
+
+> [!NOTE]
+> Cet attribut ne doit pas être utilisé pour transmettre des informations sémantiques. Même si tous les styles sont supprimés, une page doit rester sémantiquement correcte. En règle générale, il ne doit pas être utilisé pour masquer des informations non pertinentes&nbsp;; cela doit être fait à l'aide de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: style", "tabbed-shorter")}}
 
@@ -18,9 +21,6 @@ l10n:
   </p>
 </div>
 ```
-
-> [!NOTE]
-> Cet attribut ne doit pas être utilisé pour transmettre des informations sémantiques. Même si tous les styles sont supprimés, une page doit rester sémantiquement correcte. En règle générale, il ne doit pas être utilisé pour masquer des informations non pertinentes&nbsp;; cela doit être fait à l'aide de l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden).
 
 ## Spécifications
 

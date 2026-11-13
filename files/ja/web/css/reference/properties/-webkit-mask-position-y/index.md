@@ -1,5 +1,5 @@
 ---
-title: CSS `-webkit-mask-position-y` プロパティ
+title: "`-webkit-mask-position-y` プロパティ (CSS)"
 short-title: -webkit-mask-position-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-y
 l10n:

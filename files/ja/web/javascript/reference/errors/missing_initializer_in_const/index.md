@@ -1,25 +1,25 @@
 ---
 title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
+l10n:
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の例外 "missing = in const declaration" は、 const 宣言が同じ文内で値を与えられなかった場合 (`const RED_FLAG;` など) に発生します。値を設定する必要があります (`const RED_FLAG = '#ff0'`)。
+JavaScript の例外 "missing = in const declaration" は、 const 宣言が同じ文内で値を与えられなかった場合 (`const RED_FLAG;` など) に発生します。値を設定する必要があります (`const RED_FLAG = true`)。
 
 ## エラーメッセージ
 
-```js
-SyntaxError: Const must be initialized (Edge)
+```plain
+SyntaxError: Missing initializer in const declaration (V8-based)
 SyntaxError: missing = in const declaration (Firefox)
-SyntaxError: Missing initializer in const declaration (Chrome)
+SyntaxError: Unexpected token ';'. const declared variable 'x' must have an initializer. (Safari)
 ```
 
-## エラータイプ
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
-## 何がうまくいかなかったのか？
+## エラーの原因
 
 定数は、通常の実行中にプログラムによって変更できない値です。これは、再代入で変更できず、再宣言もできません。 JavaScript では、定数は [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) キーワードで宣言します。定数の初期化子が必要です。つまり、宣言と同じ文で値を指定する必要があります (後で変更できないため、これには意味があります)。
 
@@ -29,7 +29,7 @@ SyntaxError: Missing initializer in const declaration (Chrome)
 
 `var` や `let` と異なり、`const` 宣言では値を指定する必要があります。エラーが発生する例です。
 
-```js example-bad
+```js-nolint example-bad
 const COLUMNS;
 // SyntaxError: missing = in const declaration
 ```

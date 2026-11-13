@@ -2,7 +2,7 @@
 title: Utiliser les cookies HTTP
 slug: Web/HTTP/Guides/Cookies
 l10n:
-  sourceCommit: 487e626006534b7f5ddcecb833f5a5aa007c3059
+  sourceCommit: 13ef67a4ffbdb929415dfa1b3d65ab1aa9ebe5da
 ---
 
 Un **cookie** (également appelé cookie web ou cookie de navigateur) est un petit morceau de données qu'un serveur envoie au navigateur web d'un·e utilisateur·ice. Le navigateur peut stocker des cookies, créer de nouveaux cookies, modifier ceux existants et les retourner au même serveur lors de requêtes ultérieures. Les cookies permettent aux applications web de stocker des quantités limitées de données et de se souvenir des informations d'état&nbsp;; par défaut, le protocole HTTP est [sans état](/fr/docs/Web/HTTP/Guides/Overview#http_est_sans_état_mais_pas_sans_session).
@@ -90,7 +90,7 @@ Vous pouvez définir une date d'expiration ou une période après laquelle le co
 - _Session_ cookies — cookies sans attribut `Max-Age` ou `Expires` — sont supprimés lorsque la session en cours se termine. Le navigateur définit quand la «&nbsp;session en cours&nbsp;» se termine, et certains navigateurs utilisent la _restauration de session_ lors du redémarrage. Cela peut entraîner la persistance indéfinie des cookies de session.
 
   > [!NOTE]
-  > Si votre site authentifie des utilisateur·ice·s, il doit régénérer et retourner les cookies de session, même ceux qui existent déjà, chaque fois qu'un·e utilisateur·ice s'authentifie. Cette approche aide à prévenir les attaques de [fixation de session <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Session_fixation), où un tiers peut réutiliser la session d'un·e utilisateur·ice.
+  > Si votre site authentifie des utilisateur·ice·s, il doit régénérer et retourner les cookies de session, même ceux qui existent déjà, chaque fois qu'un·e utilisateur·ice s'authentifie. Cette approche aide à prévenir les attaques de [fixation de session <sup>(angl.)</sup>](https://community.owasp.org/attacks/Session_fixation), où un tiers peut réutiliser la session d'un·e utilisateur·ice.
 
 Pour supprimer immédiatement un cookie, définissez à nouveau le cookie avec le même nom, chemin et domaine (si défini), et définissez son attribut `Expires` à une date passée ou son attribut `Max-Age` à `0` ou négatif. Cela indique au navigateur de supprimer le cookie immédiatement. Par exemple&nbsp;:
 
@@ -232,7 +232,7 @@ Si aucun attribut `SameSite` n'est défini, le cookie est traité comme `Lax` pa
 
 En raison de la conception du mécanisme des cookies, un serveur ne peut pas confirmer qu'un cookie a été défini à partir d'une origine sécurisée ni même indiquer _où_ un cookie a été initialement défini.
 
-Une application sur un sous-domaine peut définir un cookie avec l'attribut `Domain`, ce qui donne accès à ce cookie sur tous les autres sous-domaines. Ce mécanisme peut être abusé dans une attaque de [fixation de session <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Session_fixation).
+Une application sur un sous-domaine peut définir un cookie avec l'attribut `Domain`, ce qui donne accès à ce cookie sur tous les autres sous-domaines. Ce mécanisme peut être abusé dans une attaque de [fixation de session <sup>(angl.)</sup>](https://community.owasp.org/attacks/Session_fixation).
 
 En tant que [mesure de défense en profondeur <sup>(angl.)</sup>](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>), vous pouvez utiliser des _préfixes de cookie_ pour imposer des restrictions spécifiques sur les attributs d'un cookie dans les agents utilisateurs compatibles. Tous les préfixes de cookie commencent par un double underscore (`__`) et se terminent par un tiret (`-`). Quatre préfixes sont disponibles&nbsp;:
 
@@ -241,7 +241,7 @@ En tant que [mesure de défense en profondeur <sup>(angl.)</sup>](<https://en.wi
 - **`__Http-`**&nbsp;: Les cookies dont le nom commence par `__Http-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS) et doivent en outre avoir l'attribut `HttpOnly` défini pour prouver qu'ils ont été définis par l'en-tête `Set-Cookie` (ils ne peuvent pas être définis ou modifiés avec des fonctionnalités JavaScript telles que {{DOMxRef("Document.cookie")}} ou [l'API Cookie Store](/fr/docs/Web/API/Cookie_Store_API)).
 - **`__Host-Http-`**&nbsp;: Les cookies dont le nom commence par `__Host-Http-` doivent être définis avec l'attribut `Secure` par une page sécurisée (HTTPS) et doivent avoir l'attribut `HttpOnly` défini pour prouver qu'ils ont été définis par l'en-tête `Set-Cookie`. De plus, ils ont également les mêmes restrictions que les cookies préfixés `__Host-`. Cette combinaison produit un cookie qui est aussi proche que possible de traiter l'origine comme une frontière de sécurité tout en garantissant aux développeur·euse·s et aux opérateur·ice·s de serveur que sa portée est limitée aux requêtes HTTP.
 
-Le navigateur rejette les cookies avec ces préfixes qui ne respectent pas leurs restrictions. Comme le serveur d'application ne vérifie qu'un nom de cookie spécifique pour déterminer si l'utilisateur·ice est authentifié·e ou si un jeton CSRF est correct, cela agit effectivement comme une mesure de défense contre la [fixation de session <sup>(angl.)</sup>](https://owasp.org/www-community/attacks/Session_fixation).
+Le navigateur rejette les cookies avec ces préfixes qui ne respectent pas leurs restrictions. Comme le serveur d'application ne vérifie qu'un nom de cookie spécifique pour déterminer si l'utilisateur·ice est authentifié·e ou si un jeton CSRF est correct, cela agit effectivement comme une mesure de défense contre la [fixation de session <sup>(angl.)</sup>](https://community.owasp.org/attacks/Session_fixation).
 
 > [!NOTE]
 > Sur le serveur, l'application web _doit_ vérifier le nom complet du cookie, y compris le préfixe. Les agents utilisateurs _ne_ suppriment pas le préfixe du cookie avant de l'envoyer dans l'en-tête {{HTTPHeader("Cookie")}} d'une requête.
