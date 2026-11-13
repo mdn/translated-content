@@ -3,7 +3,7 @@ title: TypedArray.prototype[Symbol.iterator]()
 short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`[Symbol.iterator]()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにします。このメソッドは、型付き配列の各インデックスの値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
@@ -54,7 +54,7 @@ for (const n of arr) {
 
 ### イテレーターを手動で操作する
 
-反復処理を最大限に制御するために、返すイテレーターオブジェクトの `next()` メソッドを手動で呼び出すことができます。
+反復処理を最大限に制御するには、このメソッドが返すイテレーターオブジェクトの `next()` メソッドを手動で呼び出すこともできます。
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
