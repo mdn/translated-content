@@ -21,7 +21,7 @@ formData.get(name);
 ### Parameters
 
 - `name`
-  - : 검색하고 싶은 키의 이름을 나타내는 {{domxref("USVString")}} 입니다.
+  - : 검색하고 싶은 키의 이름을 나타내는 {{jsxref("String")}} 입니다.
 
 ### Return value
 

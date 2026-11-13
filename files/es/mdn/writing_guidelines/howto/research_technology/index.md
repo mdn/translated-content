@@ -3,7 +3,7 @@ title: Cómo investigar una tecnología
 short-title: Investiga una tecnología
 slug: MDN/Writing_guidelines/Howto/Research_technology
 l10n:
-  sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
+  sourceCommit: c9c2a211595d962118504b599debbf39d6aaad3f
 ---
 
 Este artículo te brinda información útil sobre cómo abordar la documentación de tecnologías.
@@ -25,8 +25,13 @@ Los recursos útiles para redactar cualquier documentación incluyen:
 
 1. Las [Guías prácticas](/es/docs/MDN/Writing_guidelines/Howto) para MDN Web Docs: ya estás aquí, pero es bueno navegar por todos los artículos y familiarizarte con nuestro estilo de escritura, los diferentes tipos de páginas y qué secciones se incluyen en ellas, y las diferentes formas en que incluimos diferentes partes de la página (como especificaciones y compatibilidad con navegadores).
 2. La última especificación: Diferentes organismos de estandarización crean especificaciones para tecnologías que están documentadas en MDN Web Docs. Por ejemplo, [TC39](https://tc39.es/) para JavaScript, la [WHATWG](https://whatwg.org/) para HTML, [W3C](https://www.w3.org/) para XML, CSS y APIs web. Las especificaciones están vinculadas desde páginas de referencia en MDN Web Docs (consulta la sección "Especificaciones"). Alternativamente, normalmente puedes hacer una búsqueda en la web. Trabaja siempre con las especificaciones más recientes y actualizadas.
-3. Los últimos navegadores web modernos: Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.mozilla.org/es/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/es/chrome/canary/) que tienen más probabilidades de admitir las funciones que estás documentando. Esto es especialmente pertinente si estás documentando una función que está en "camino" (upcoming).
+3. Los últimos navegadores web modernos: Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), [Chrome Canary](https://www.google.com/intl/es/chrome/canary/) o [Safari Technology Preview](https://webkit.org/downloads/) que tienen más probabilidades de admitir las funciones que estás documentando. Esto es especialmente pertinente si estás documentando una función que está en "camino" (upcoming).
 4. Demostraciones/publicaciones de blog/otra información: busca tanta información como puedas. Si estás actualizando una tecnología porque ha cambiado, asegúrate de que los recursos que estás utilizando para aprender no estén desactualizados. Por eso los dos primeros puntos anteriores son importantes.
+
+> [!WARNING]
+> No te fíes de las respuestas de las herramientas de IA cuando investigues una tecnología.
+> Pueden presentar como hechos detalles inventados o desactualizados, como propiedades, métodos o compatibilidad con navegadores que no existen.
+> Comprueba siempre los detalles con la especificación y pruébalos en los navegadores.
 
 También puede ser aconsejable intentar encontrar a alguien que te ayude a responder tus preguntas. Pueden ser los autores de las especificaciones o los ingenieros que implementan las características del navegador.
 

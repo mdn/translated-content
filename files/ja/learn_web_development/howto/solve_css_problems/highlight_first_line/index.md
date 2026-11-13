@@ -1,11 +1,10 @@
 ---
 title: 段落の最初の行を強調するには
+short-title: 段落の最初の行を強調
 slug: Learn_web_development/Howto/Solve_CSS_problems/Highlight_first_line
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、段落の最初の行の長さがわからない場合でも、その行をハイライトする方法をご紹介します。
 
@@ -22,14 +21,12 @@ l10n:
 ```html live-sample___highlight_first_line
 <div class="wrapper">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    野菜は体に良いものです。だから、コールラビ、青ネギ、大根、アマランサス、タアサイ、トマティーヨ、メロン、小豆、ニンニクをもっと食べましょう。
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    フダンソウ、ビートの葉、コーン、サトイモの葉、エンダイブ、ウリ。パセリ、エシャロット、ズッキーニ、タアサイ、エンドウの芽、ソラマメ、コラードグリーン、タンポポ、オクラ、ワカメ、トマト。
+    タンポポ、キュウリ、アースナッツ、ピーナッツ、サトイモの葉、ズッキーニ。
   </p>
 </div>
 ```
@@ -44,7 +41,7 @@ l10n:
 {{EmbedLiveSample("highlight_first_line")}}
 
 > [!NOTE]
-> すべての擬似要素はこのように動作します。それらは、文書内に要素を挿入したかのように振る舞いますが、実行時に表示されるコンテンツに基づいて行われます。
+> すべての擬似要素はこのように動作します。擬似要素は文書内に要素を挿入したかのように振る舞いますが、どのコンテンツが選択されるかは実行時に決まります。
 
 ## 擬似要素と他のセレクターの組み合わせ
 
@@ -53,14 +50,12 @@ l10n:
 ```html live-sample___highlight_first_line2
 <div class="wrapper">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    野菜は体に良いものです。だから、コールラビ、青ネギ、大根、アマランサス、タアサイ、トマティーヨ、メロン、小豆、ニンニクをもっと食べましょう。
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    フダンソウ、ビートの葉、コーン、サトイモの葉、エンダイブ、ウリ。パセリ、エシャロット、ズッキーニ、タアサイ、エンドウの芽、ソラマメ、コラードグリーン、タンポポ、オクラ、ワカメ、トマト。
+    タンポポ、キュウリ、アースナッツ、ピーナッツ、サトイモの葉、ズッキーニ。
   </p>
 </div>
 ```
@@ -75,7 +70,7 @@ l10n:
 {{EmbedLiveSample("highlight_first_line2")}}
 
 > [!NOTE]
-> 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素はセレクターの中で、他のすべての要素の後に置かなければなりません。
+> 擬似要素を[複雑セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)または[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)で他のセレクターと組み合わせた場合、擬似要素は、その擬似要素を含むセレクター内で他のすべての要素の後に置かなければなりません。
 
 ## 関連情報
 

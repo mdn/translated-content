@@ -14,13 +14,13 @@ l10n:
 title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 l10n:
->   sourceCommit: 翻訳元コミットID
+  sourceCommit: 翻訳元コミットID
 ---
 ```
 
 ### title と slug
 
-ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、`slug` を `ARIA/NameOfTheRole_role` としてください。例えば、[button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、`slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、[aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
 
 ### Sidebar
 
@@ -38,8 +38,8 @@ sidebar: accessibilitysidebar
 
 ### 状態
 
-**訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
-（適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
+**訳注:** 英語版では以下のマクロは自動的に追加・更新されますが、翻訳記事には自動的に反映されません。翻訳時に英語版に合わせて手動で追加、更新、削除してください。
+（適切な）機能状態キーを含めるマクロです。[**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。— [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
 
 ### 仕様書
 
@@ -84,15 +84,15 @@ sidebar: accessibilitysidebar
   - : それぞれの説明
 
 > [!NOTE]
-> このロールや属性を使用する意味づけについての注意事項を記載してください。 ARIA 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために ARIA ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
+> このロールや属性を使用する意味づけについての注意事項を記載してください。ARIA 使用の最初のルールは、要素を再利用し、それをアクセシビリティにするために ARIA ロール、状態、プロパティを**追加**する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブ機能を使用することができるということです。そして、下記のベストプラクティスの節に詳細を紹介してください。
 
 ## 例
 
-英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
+英語版では、例が 1 つだけのページでも、複数形の "Examples" を使用しています。
 
 ### 説明的な見出し
 
-それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
+それぞれの例には、その例の内容を説明する H3 見出し (`###`) が必要です。見出しには例で何を行うかを具体的に記述してください。「単純な例」のような、何を示すのか分からない見出しは避けてください。見出しは簡潔にし、詳しい説明は見出しの後の段落に記載してください。
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
@@ -117,7 +117,7 @@ sidebar: accessibilitysidebar
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
-> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+> H3 の見出しは追加せず、H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
 > ```md
 > ## 例
@@ -144,17 +144,17 @@ Google やモバイル音声認識のような、典型的なスクリーンリ�
 
 `\{{Specifications}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## ブラウザーの互換性
 
 `\{{Compat}}`
 
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、Markdown ファイルから逆引用符とバックスラッシュを削除してください。_
 
 ## 関連情報
 
-現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在のロールや属性に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、執筆スタイルガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2
