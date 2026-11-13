@@ -1,28 +1,32 @@
 ---
-title: Window.screen
+title: Window：screen 属性
 slug: Web/API/Window/screen
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("CSSOM View")}}
+{{APIRef("CSSOM")}}
 
-返回当前 window 的 screen 对象。screen 对象实现了{{domxref("Screen")}}接口，它是个特殊的对象，返回当前渲染窗口中和屏幕有关的属性。
+{{DOMxRef("Window")}} 的 **`screen`** 属性返回一个与该窗口关联的屏幕对象引用。`screen` 对象实现了 {{DOMxRef("Screen")}} 接口，是一个用于检查当前窗口所渲染屏幕属性的特殊对象。
 
-## 语法
+## 值
 
-```plain
-screenObj = window.screen;
-```
+{{DOMxRef("Screen")}} 对象。
 
 ## 示例
 
 ```js
 if (screen.pixelDepth < 8) {
-  // use low-color version of page
+  // 使用低色彩版本的页面
 } else {
-  // use regular, colorful page
+  // 使用正常的彩色页面
 }
 ```
 
-## Specification
+## 规范
 
-TBD
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

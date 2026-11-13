@@ -215,13 +215,13 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)允许客户端�
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}（COOP）
   - : 防止其他域打开/控制窗口。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}（CORP）
-  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)。
+  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/Security/Practical_implementation_guides/CORP)。
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制用户代理可以为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI。
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
-  - : 允许网站选择报告和执行[证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，以检测该网站使用的错误颁发的证书。
+  - : 允许网站选择报告和执行[证书透明度](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)要求，以检测该网站使用的错误颁发的证书。
 - {{HTTPHeader("Permissions-Policy")}}
   - : 提供一种机制来允许和拒绝在网站自己的框架和它嵌入的 {{htmlelement("iframe")}} 中使用浏览器特性。
 - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
@@ -235,7 +235,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)允许客户端�
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : 指示是否应允许浏览器在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}} 中呈现页面。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex 等，处理跨域数据的权限，否则这些客户端将因[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
+  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex 等，处理跨域数据的权限，否则这些客户端将因[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
 - {{HTTPHeader("X-Powered-By")}}
   - : 可能由托管环境或其他框架设置，并包含有关它们的信息，但不会为应用程序或其访问者提供任何用处。取消设置此标头以避免暴露潜在的漏洞。
 - {{HTTPHeader("X-XSS-Protection")}}

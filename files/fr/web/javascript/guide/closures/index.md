@@ -4,8 +4,6 @@ slug: Web/JavaScript/Guide/Closures
 original_slug: Web/JavaScript/Closures
 ---
 
-{{jsSidebar("Intermediate")}}
-
 Une **fermeture** est la paire formée d'une fonction et des références à son état environnant (**l'environnement lexical**). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction «&nbsp;capture son environnement&nbsp;»). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.
 
 ## Portée
@@ -359,7 +357,7 @@ Dans ce fragment de code, nous avons utilisé `let` au lieu de `var` afin que ch
 
 Vous pouvez essayer ce code sur [JSFiddle](https://jsfiddle.net/v7gjv/9573/).
 
-Autrement, on aurait pu utiliser `forEach()` afin de parcourir le tableau `texteAide` et attacher un gestionnaire d'évènement sur chaque [`<div>`](/fr/docs/Web/HTML/Element/div)&nbsp;:
+Autrement, on aurait pu utiliser `forEach()` afin de parcourir le tableau `texteAide` et attacher un gestionnaire d'évènement sur chaque [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div)&nbsp;:
 
 ```js
 function afficheAide(aide) {
@@ -437,4 +435,4 @@ MonObjet.prototype.getMessage = function () {
 };
 ```
 
-Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) pour plus d'informations.
+Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) pour plus d'informations.

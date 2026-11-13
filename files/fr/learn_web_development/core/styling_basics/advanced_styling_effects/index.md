@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
-{{LearnSidebar}}
-
 Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
 
 <table class="standard-table">
@@ -14,10 +12,10 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
       <th scope="row">Prérequis :</th>
       <td>
         Notions de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >) et idées sur le fonctionnement des CSS (voir
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction aux CSS</a
         >).
       </td>
     </tr>
@@ -33,7 +31,7 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
 
 ## Ombres des boîtes
 
-Revenons au module [Styling text](/fr/docs/Learn/CSS/Styling_text) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
+Revenons au module [Styling text](/fr/docs/Learn_web_development/Core/Text_styling) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
 
 Vous trouverez les exemples de cet article dans le fichier [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) également).
 
@@ -344,7 +342,7 @@ Nous obtenons le résultat suivant :
 Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
 
 > [!NOTE]
-> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
+> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn_web_development/Core/CSS_layout).
 
 ## -webkit-background-clip: text
 
@@ -380,8 +378,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
     class="html-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
 <div class="style-me">
-</div></textarea
-  >
+</div></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea
@@ -397,8 +394,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea
-  >
+} </textarea>
 
   <h2>Zone de rendu</h2>
   <div

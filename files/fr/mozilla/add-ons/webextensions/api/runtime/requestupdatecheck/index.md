@@ -3,8 +3,6 @@ title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
 
-{{AddonSidebar}}
-
 Vérifie de voir si un mise à jour de l'extension est disponible.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -59,8 +57,6 @@ requestingCheck.then(onRequested, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

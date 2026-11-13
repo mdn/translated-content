@@ -19,7 +19,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 ### Nivel introductorio
 
-- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content)
+- [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
 - [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
@@ -30,9 +30,9 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 ### Nivel intermedio
 
-- [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
+- [Multimedia e inserción](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo explora cómo usar HTML para incluir multimedia en sus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo incrustar video, audio e incluso otras páginas web completas.
-- [Tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [Tablas HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Representar datos tabulares en una página web de una manera {{glossary("Accessibility", "accesible")}} y comprensible puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con funciones más complejas, como la implementación de subtítulos y resúmenes.
 
 ### Nivel avanzado
@@ -58,7 +58,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 - [Selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
   - : Apunte a elementos HTML, incluso según el estado del elemento, con CSS.
 
-- [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
+- [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity)
   - : Comprender el algoritmo del navegador para determinar qué declaraciones CSS se aplican a un elemento cuando hay declaraciones compitiendo, con un [cuestionario de especificidad](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
 
 - [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
@@ -82,9 +82,9 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 ### Nivel avanzado
 
-- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Uso de CSS transforms](/es/docs/Web/CSS/Guides/Transforms/Using)
   - : Aplique rotación, inclinación, escala y traducción usando CSS.
-- [Transiciones de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Transiciones de CSS](/es/docs/Web/CSS/Guides/Transitions/Using)
   - : Las transiciones CSS proporcionan una forma de animar los cambios en las propiedades CSS, en lugar de que los cambios surtan efecto instantáneamente.
 - [Tutorial Canvas](/es/docs/Web/API/Canvas_API/Tutorial)
   - : Aprenda a dibujar gráficos mediante secuencias de comandos utilizando el elemento lienzo (_canvas_).

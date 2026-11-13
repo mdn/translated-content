@@ -2,7 +2,7 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -53,14 +53,10 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 
 ### 標準外のプロパティ
 
-- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
-  - : リクエストの実行の際にオブジェクトによって使われるチャンネルです。
-- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
+- `XMLHttpRequest.mozAnon` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 論理値です。 true の場合、リクエストを Cookie や認証ヘッダーを伴わずに送信します。
-- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
+- `XMLHttpRequest.mozSystem` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 論理値です。 true の場合、リクエストで同一オリジンポリシーは適用されません。
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : 論理値です。このオブジェクトがバックグラウンドサービスのリクエストを表しているかどうかを示します。
 
 ## インスタンスメソッド
 
@@ -83,30 +79,11 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 
 ## イベント
 
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-  - : 例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発生します。
-    `onabort` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-  - : リクエストでエラーが発生したときに発生します。
-    `onerror` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-  - : `XMLHttpRequest` のトランザクションが成功裏に完了したときに発生します。
-    `onload` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-  - : リクエストが完了したときに、成功した場合（{{domxref("XMLHttpRequest/load_event", "load")}} の後）、成功しなかった場合（{{domxref("XMLHttpRequest/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後）のどちらでも発生します。
-    `onloadend` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-  - : リクエストがデータを読み込み始めたときに発生します。
-    `onloadstart` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-  - : リクエストがもっとデータを受信した際に定期的に発生します。
-    `onprogress` イベントハンドラープロパティを通して利用することもできます。
+_このインターフェイスには、 {{domxref("XMLHttpRequestEventTarget")}} から継承したイベントもあります。_
+
 - {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
   - : {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
     `onreadystatechange` イベントハンドラープロパティを通して利用することもできます。
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-  - : プリセット時間が過ぎたために進行が終了したときに発生します。
-    `ontimeout` イベントハンドラープロパティを通して利用することもできます。
 
 ## 仕様書
 
@@ -119,5 +96,5 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 ## 関連情報
 
 - {{domxref("XMLSerializer")}}: DOM ツリーの XML へのシリアライズ
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest の使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)

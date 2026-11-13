@@ -49,7 +49,7 @@ Firefox Android 57 では、ポップアップは新規タブの通常ページ�
 
 ## ポップアップのデザイン
 
-Firefox のスタイルに適合するポップアップのウェブページをデザインする方法は、 [Photon Design System](https://design.firefox.com/photon/index.html) のドキュメントを見てください。
+Firefox のスタイルに適合するポップアップのウェブページをデザインする方法は、 [Acorn Design System](https://acorn.firefox.com/latest) のドキュメントを見てください。
 
 ## 例
 

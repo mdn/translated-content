@@ -1,11 +1,13 @@
 ---
 title: Attr
 slug: Web/API/Attr
+l10n:
+  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
 {{APIRef("DOM")}}
 
-**`Attr`** 接口将一个元素的属性（attribute）表示为一个对象。在大多数情况下，你可以直接以字符串形式检索属性值（例如 {{domxref("Element.getAttribute()")}}），但某些函数（例如 {{domxref("Element.getAttributeNode()")}}）或迭代方法则返回 `Attr` 实例。
+**`Attr`** 接口将一个元素的属性（attribute）表示为一个对象。在大多数情况下，你可以直接以字符串形式检索属性值（例如 {{domxref("Element.getAttribute()")}}），但有些情况下则需要与 `Attr` 实例进行交互（例如 {{domxref("Element.getAttributeNode()")}}）。
 
 {{InheritanceDiagram}}
 
@@ -24,7 +26,7 @@ slug: Web/API/Attr
 
 ## 实例属性
 
-_此接口还从其父接口 {{domxref("Node")}}、{{domxref("EventTarget")}} 基础属性。_
+_此接口还从其父接口 {{domxref("Node")}}、{{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("Attr.localName", "localName")}} {{ReadOnlyInline}}
   - : 一个表示属性限定名的本地部分的字符串。
@@ -39,7 +41,7 @@ _此接口还从其父接口 {{domxref("Node")}}、{{domxref("EventTarget")}} �
 - {{domxref("Attr.specified", "specified")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 该属性总是返回 `true`。
 - {{domxref("Attr.value", "value")}}
-  - : 属性的值，其为一个可以通过接口属性进行设置和获取的字符串。
+  - : 属性的值，其为一个可以通过此属性进行设置和获取的字符串。
 
 ## 实例方法
 

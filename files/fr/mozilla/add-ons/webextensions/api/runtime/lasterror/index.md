@@ -3,7 +3,7 @@ title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
-{{AddonSidebar}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
+Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
 
 ```js
 var gettingCookies = browser.cookies.getAll();
@@ -56,7 +56,8 @@ var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
-> **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
+> [!NOTE]
+> `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
 ## Compatibilité des navigateurs
 
@@ -67,8 +68,6 @@ setCookie.then(logCookie, logError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

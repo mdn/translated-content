@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
-{{jsSidebar("Statements")}}
-
 L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
 
 {{InteractiveExample("JavaScript Demo: Statement - While")}}

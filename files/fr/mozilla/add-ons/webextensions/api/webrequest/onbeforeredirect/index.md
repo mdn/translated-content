@@ -3,8 +3,6 @@ title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 ---
 
-{{AddonSidebar}}
-
 Déclenché lorsqu'une redirection initiée par le serveur est sur le point de se produire.
 
 Notez que vous ne pouvez pas passer le `"blockage"` pour cet événement, donc vous ne pouvez pas modifier ou annuler la demande de cet événement : c'est uniquement à titre d'information.
@@ -136,8 +134,6 @@ browser.webRequest.onBeforeRedirect.addListener(logResponse, {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

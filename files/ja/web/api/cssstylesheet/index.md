@@ -2,7 +2,7 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+  sourceCommit: dfc2f2fe483e5aaac785cc8d32064b925667aed2
 ---
 
 {{APIRef("CSSOM")}}
@@ -26,6 +26,8 @@ h2 {
 
 [スタイルシートの取得](#スタイルシートの取得)の節で `CSSStyleSheet` オブジェクトを取得するための様々な方法について説明しています。`CSSStyleSheet` オブジェクトは直接構築することもできます。コンストラクターと {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}} メソッドは新しい追加仕様で、スタイルシートの構築を行うことができます。
 
+文書またはシャドウルートに `CSSStyleSheet` を適用するには、それぞれ {{domxref("Document.adoptedStyleSheets")}} または {{domxref("ShadowRoot.adoptedStyleSheets")}} プロパティに代入します。
+
 ## コンストラクター
 
 - {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
@@ -33,7 +35,7 @@ h2 {
 
 ## インスタンスプロパティ
 
-_親である {{domxref("StyleSheet")}} からプロパティを継承しています。_
+_親である {{domxref("StyleSheet")}} から継承したプロパティがあります。_
 
 - {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
   - : 生きた {{domxref("CSSRuleList")}} を返します。これは、スタイルシートを構成する {{domxref("CSSRule")}} オブジェクトの最新リストを維持します。
@@ -46,7 +48,7 @@ _親である {{domxref("StyleSheet")}} からプロパティを継承してい�
 
 ## インスタンスメソッド
 
-_親である {{domxref("Stylesheet")}} からメソッドを継承しています。_
+_親である {{domxref("StyleSheet")}} から継承したメソッドがあります。_
 
 - {{domxref("CSSStyleSheet.deleteRule()")}}
   - : スタイルシートから、指定した位置のルールを削除します。
@@ -119,7 +121,6 @@ _これらのメソッドは、Microsoft が導入した古いメソッドであ
     <tr>
       <td>
         文書に適用された他のスタイルシート内の CSS {{cssxref("@import")}} ルール
-        the document
       </td>
       <td>はい</td>
       <td>
@@ -142,6 +143,15 @@ _これらのメソッドは、Microsoft が導入した古いメソッドであ
       </td>
     </tr>
     <tr>
+      <td>
+        JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Statements/import/with"><code>import ... with { type: "css" }</code></a>
+      </td>
+      <td>いいえ</td>
+      <td>なし</td>
+      <td>なし</td>
+      <td>なし</td>
+    </tr>
+    <tr>
       <td>HTTP の Link ヘッダー</td>
       <td>はい</td>
       <td><em>なし</em></td>
@@ -149,7 +159,7 @@ _これらのメソッドは、Microsoft が導入した古いメソッドであ
       <td>なし</td>
     </tr>
     <tr>
-      <td>（既定の）ユーザーエージェントスタイルシート</td>
+      <td>（デフォルトの）ユーザーエージェントスタイルシート</td>
       <td>いいえ</td>
       <td>なし</td>
       <td>なし</td>

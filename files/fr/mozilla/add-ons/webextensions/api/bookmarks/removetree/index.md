@@ -3,8 +3,6 @@ title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
 
-{{AddonSidebar}}
-
 La méthode **`bookmarks.removeTree()`** supprime récursivement un dossier de signets et tout son contenu.
 
 > [!WARNING]
@@ -23,7 +21,7 @@ var removingTree = browser.bookmarks.removeTree(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
+  - : Un {{jsxref("String")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
 
 ### Valeur retournée
 
@@ -62,8 +60,6 @@ searchingBookmarks.then(removeMDN, onRejected);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

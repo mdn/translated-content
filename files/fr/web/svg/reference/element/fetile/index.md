@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feTile
 original_slug: Web/SVG/Element/feTile
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTile>`** permet de remplir un rectangle cible avec un motif en mosaïque qui répète une image en entrée. L'effet est similaire à ce que l'on obtient avec {{SVGElement("pattern")}}.
 
 ## Contexte d'utilisation
@@ -16,9 +14,9 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTile>`** permet de remplir 
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -89,4 +87,4 @@ Cet élément implémente l'interface {{domxref("SVGFETileElement")}}.
 - {{SVGElement("feOffset")}}
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG tutorial: Filter effects](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

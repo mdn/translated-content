@@ -3,10 +3,6 @@ title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`lastIndex`** 是正则表达式的一个可读可写的整型属性，用来指定下一次匹配的起始索引。
 
 {{js_property_attributes(1,0,0)}}

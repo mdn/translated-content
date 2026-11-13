@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
-{{JSRef}}
-
 {{jsxref("TypedArray")}} 实例的 **`length`** 访问器属性返回该类型化数组的长度（以元素为单位）。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}

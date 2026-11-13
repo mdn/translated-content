@@ -38,7 +38,7 @@ const arr3 = [element0, element1, /* … ,*/ elementN];
 해당 값을 배열의 요소로 초기화됩니다. 배열의 `length` 속성은 인수의 수로 설정됩니다.
 
 대괄호 구문을 "배열 리터럴" 또는 "배열 초기자(array initializer)"라고 합니다.
-배열 성성을 위한 다른 형태보다 짧아서 일반적으로 선호하는 방법입니다. 자세한 내용은 [배열 리터럴](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)을 참조하세요.
+배열 성성을 위한 다른 형태보다 짧아서 일반적으로 선호하는 방법입니다. 자세한 내용은 [배열 리터럴](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#배열_리터럴)을 참조하세요.
 
 길이가 0이 아니지만 요소가 없는 배열을 만들려면 다음 중 하나를 사용할 수 있습니다.
 
@@ -112,7 +112,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 배열의 첫번째 요소는 `myArray[0]`로 참조할 수 있고 두번째 요소는 `myArray[1]`로 참조할 수 있습니다.
 배열의 인덱스 값은 0부터 시작합니다.
 
-> **참고:** [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 객체처럼 배열의 다른 속성에 접근하기 위해 사용할 수도 있습니다.
+> [!NOTE]
+> [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 객체처럼 배열의 다른 속성에 접근하기 위해 사용할 수도 있습니다.
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -608,7 +609,7 @@ for (const key in arr) {
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
 
-배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots)를 참조하세요.
+배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#배열_메서드와_빈_슬롯)를 참조하세요.
 
 ## 다차원 배열
 
@@ -651,7 +652,7 @@ console.log(arr.property); // "value"
 
 ## 유사 배열 객체 다루기
 
-[`document.getElementsByTagName()`](/ko/docs/Web/API/Document/getElementsByTagName)에서 반환되는 [`NodeList`](/ko/docs/Web/API/NodeList) 또는 함수 본문 내에서 사용할 수 있는 {{jsxref("Functions/arguments","arguments")}} 객체와 같은 일부 JavaScript 객체는 표면적으로는 배열처럼 보이고 동작하지만 모든 메서드를 공유하지는 않습니다. `arguments` 객체는 {{jsxref("Global_Objects/Function/length","length")}} 속성을 제공하지만 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)와 같은 배열 메서드는 구현하지 않습니다.
+[`document.getElementsByTagName()`](/ko/docs/Web/API/Document/getElementsByTagName)에서 반환되는 [`NodeList`](/ko/docs/Web/API/NodeList) 또는 함수 본문 내에서 사용할 수 있는 {{jsxref("Functions/arguments","arguments")}} 객체와 같은 일부 JavaScript 객체는 표면적으로는 배열처럼 보이고 동작하지만 모든 메서드를 공유하지는 않습니다. `arguments` 객체는 {{jsxref("Function.length","length")}} 속성을 제공하지만 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)와 같은 배열 메서드는 구현하지 않습니다.
 
 배열 메서드는 유사 배열 객체에서 직접적으로 호출할 수 없습니다.
 
@@ -663,7 +664,7 @@ function printArguments() {
 }
 ```
 
-하지만 {{jsxref("Global_Objects/Function/call","Function.prototype.call()")}}을 사용하여 간접적으로 호출할 수 있습니다.
+하지만 {{jsxref("Function.call","Function.prototype.call()")}}을 사용하여 간접적으로 호출할 수 있습니다.
 
 ```js example-good
 function printArguments() {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&nbsp;: **les valeurs de retour**. Certaines fonctions ne renvoient pas de valeur significative, mais d'autres le font. Il est important de comprendre quelles sont leurs valeurs, comment les utiliser dans votre code et comment faire en sorte que les fonctions renvoient des valeurs utiles. Nous allons aborder ces différents sujets dans cet article.
 
@@ -15,7 +15,7 @@ Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions de base en informatique, compréhension élémentaire de HTML et CSS, avoir lu <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas en JavaScript</a>, et <a href="/fr/docs/Learn/JavaScript/Building_blocks/Functions">Fonctions — blocs de code réutilisable</a>.
+        Notions de base en informatique, compréhension élémentaire de HTML et CSS, avoir lu <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas en JavaScript</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks/Functions">Fonctions — blocs de code réutilisable</a>.
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&
 
 Les **valeurs de retour** sont, comme leur nom l'indique, les valeurs retournées par une fonction après son exécution. Vous en avez déjà rencontré plusieurs fois sans forcément y avoir pensé explicitement.
 
-Revenons à un exemple déjà vu (tiré d'un [article précédent](/fr/docs/Learn/JavaScript/Building_blocks/Functions#les_fonctions_intégrées_du_navigateur) de cette série)&nbsp;:
+Revenons à un exemple déjà vu (tiré d'un [article précédent](/fr/docs/Learn_web_development/Core/Scripting/Functions#les_fonctions_intégrées_du_navigateur) de cette série)&nbsp;:
 
 ```js
 const monTexte = "Il fait froid";
@@ -55,7 +55,7 @@ Généralement, une valeur de retour est utilisée lorsque la fonction est une �
 
 ### Utiliser des valeurs de retour dans vos fonctions
 
-Pour retourner une valeur d'une fonction que vous avez créée, vous devez utiliser le mot-clef [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return). Nous avons vu son utilisation dans l'exemple [`random-canvas-circles.html`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html). La fonction `draw()` dessine 100 cercles aléatoires dans un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas)&nbsp;:
+Pour retourner une valeur d'une fonction que vous avez créée, vous devez utiliser le mot-clef [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return). Nous avons vu son utilisation dans l'exemple [`random-canvas-circles.html`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html). La fonction `draw()` dessine 100 cercles aléatoires dans un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)&nbsp;:
 
 ```js
 function draw() {
@@ -106,7 +106,7 @@ Les appels de fonctions qui sont imbriqués dans d'autres appels sont exécutés
 
 Écrivons nos propres fonctions avec des valeurs de retour.
 
-1. Pour commencer, faites une copie locale du fichier [`function-library.html`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte [`<input>`](/fr/docs/Web/HTML/Element/input) et un paragraphe. Il y a également un élément [`<script>`](/fr/docs/Web/HTML/Element/script) qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera différents nombres en lien avec celui saisi dans l'espace en dessous.
+1. Pour commencer, faites une copie locale du fichier [`function-library.html`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et un paragraphe. Il y a également un élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera différents nombres en lien avec celui saisi dans l'espace en dessous.
 
 2. Ajoutons quelques fonctions dans `<script>`. Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes&nbsp;:
 
@@ -172,13 +172,13 @@ Voici quelques conseils supplémentaires à propos des fonctions&nbsp;:
 
 ## Évaluez vos compétences&nbsp;!
 
-Vous voici à la fin de cet article. Avez-vous bien retenu les informations importantes&nbsp;? Pour le vérifier avant d'aller plus loin, vous pouvez [vous évaluer sur les fonctions JavaScript](/fr/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions).
+Vous voici à la fin de cet article. Avez-vous bien retenu les informations importantes&nbsp;? Pour le vérifier avant d'aller plus loin, vous pouvez [vous évaluer sur les fonctions JavaScript](/fr/docs/Learn_web_development/Core/Scripting/Building_blocks/Test_your_skills:_Functions).
 
 ## Conclusion
 
 Nous avons vu que les fonctions pouvaient s'avérer utiles et qu'il y avait beaucoup à dire sur leur syntaxe et leurs fonctionnalités.
 
-Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou [contactez-nous](/fr/docs/Learn#nous_contacter) pour obtenir de l'aide.
+Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou [contactez-nous](/fr/docs/Learn_web_development#nous_contacter) pour obtenir de l'aide.
 
 ## Voir aussi
 
@@ -187,4 +187,4 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 - [La page du glossaire sur les fonctions de rappel (<i lang="en">callbacks</i> en anglais)](/fr/docs/Glossary/Callback_function)
   - : Il arrive souvent en JavaScript de passer une fonction à une autre fonction _comme argument_. Cet argument est alors appelé au sein de la deuxième fonction. Ce concept va au-delà de ce premier guide, mais n'hésitez pas à vous familiariser avec cette notion.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b8fba1439f6069a90a16023e89e0f8bf363a957
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{APIRef("Web Audio API")}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 
@@ -35,7 +35,7 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 > Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
 > [!NOTE]
-> numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
+> `numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 

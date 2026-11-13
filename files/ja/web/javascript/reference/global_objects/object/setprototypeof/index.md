@@ -1,16 +1,15 @@
 ---
 title: Object.setPrototypeOf()
+short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Object.setPrototypeOf()`** 静的メソッドは、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
+**`Object.setPrototypeOf()`** は静的メソッドで、指定されたオブジェクトのプロトタイプ（つまり、内部の `[[Prototype]]` プロパティ）を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
 
 > [!WARNING]
-> オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) をお読みください。
+> オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ***すべて***のコードに影響する可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) をお読みください。
 >
 > この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
 
@@ -21,12 +20,12 @@ const obj = {};
 const parent = { foo: "bar" };
 
 console.log(obj.foo);
-// Expected output: undefined
+// 予想される結果: undefined
 
 Object.setPrototypeOf(obj, parent);
 
 console.log(obj.foo);
-// Expected output: "bar"
+// 予想される結果: "bar"
 ```
 
 ## 構文
@@ -60,7 +59,7 @@ Object.setPrototypeOf(obj, prototype)
 
 もし引数 `obj` がオブジェクト（例えば、数値、文字列など）でない場合、このメソッドは何もせず、オブジェクトに変換したり、プロトタイプを設定することなく、直接 `obj` をプリミティブ値として返します。もし `prototype` が `obj` のプロトタイプと同じ値であれば、 `obj` のプロトタイプが不変であっても `TypeError` は発生せずに `obj` が直接返されます。
 
-セキュリティの観点から、プロトタイプが不変であるように設計された組み込みオブジェクトがあります。これにより、プロトタイプ汚染攻撃、特に[ブロキシー関連の攻撃](https://github.com/tc39/ecma262/issues/272)を防ぐことができます。コア言語では、不変のプロトタイプを持つエキゾチックオブジェクトとして `Object.prototype` のみを指定しており、そのプロトタイプは常に `null` です。ブラウザーでは、 [`window`](/ja/docs/Web/API/Window) や [`location`](/ja/docs/Web/API/Window/location) の 2 つがとても一般的な例です。
+セキュリティの観点から、プロトタイプが不変であるように設計された組み込みオブジェクトがあります。これにより、プロトタイプ汚染攻撃、特に[プロキシー関連の攻撃](https://github.com/tc39/ecma262/issues/272)を防ぐことができます。コア言語では、不変のプロトタイプを持つエキゾチックオブジェクトとして `Object.prototype` のみを指定しており、そのプロトタイプは常に `null` です。ブラウザーでは、 [`window`](/ja/docs/Web/API/Window) や [`location`](/ja/docs/Web/API/Window/location) の 2 つがとても一般的な例です。
 
 ```js
 Object.isExtensible(Object.prototype); // true。プロパティを追加できる

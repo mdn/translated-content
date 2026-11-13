@@ -1,29 +1,20 @@
 ---
 title: Object.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 l10n:
-  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
 
 {{InteractiveExample("JavaScript デモ: Object.prototype.toString()")}}
 
 ```js interactive-example
-function Dog(name) {
-  this.name = name;
-}
+const map = new Map();
 
-const dog1 = new Dog("Gabby");
-
-Dog.prototype.toString = function dogToString() {
-  return `${this.name}`;
-};
-
-console.log(dog1.toString());
-// Expected output: "Gabby"
+console.log(map.toString());
+// 予想される結果: "[object Map]"
 ```
 
 ## 構文

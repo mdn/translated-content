@@ -15,7 +15,7 @@ O cabeçalho `Age` é normalmente perto de zero. Se `Age: 0`, é provável que e
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

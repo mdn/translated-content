@@ -2,12 +2,10 @@
 title: クラス
 slug: Web/JavaScript/Reference/Classes
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Classes")}}
-
-クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
+クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに独特のものです。
 
 例や説明については、[クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイドを参照してください。
 
@@ -73,7 +71,7 @@ const Rectangle = class Rectangle2 {
   - : プライベートなものすべて
 
 > [!NOTE]
-> プライベート要素には、同じクラスで宣言するプロパティ名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
+> プライベート要素には、同じクラスで宣言するプライベート名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
 
 さらに、特別なクラス要素の構文として、 [`constructor`](#コンストラクター) と[静的初期化ブロック](#静的初期化ブロック)の 2 つがあり、自分自身で参照します。
 
@@ -206,6 +204,8 @@ class Rectangle {
 
 プライベートフィールドは、フィールド宣言でのみ宣言できます。通常のプロパティのように、後から割り当てることで作成することはできません。
 
+プライベートメソッドとアクセサーも、パブリックメソッドやアクセサーと同じ構文を使用して定義することができますが、識別子は `#` で 始める必要があります。
+
 詳細情報については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 
 ### 継承
@@ -284,7 +284,7 @@ l.speak();
 
 ### インスタンスメソッドと静的メソッドのバインド
 
-静的メソッドやインスタンスメソッドを {{jsxref("Operators/this", "this")}} の値なしで呼び出した場合、例えばメソッドを変数に割り当ててから呼び出すと、メソッド内部では `this` の値が `undefined` になります。この動作は、 [`"use strict"`](/ja/docs/Web/JavaScript/Reference/Strict_mode) ディレクティブが存在しない場合でも同じです。 `class` 本体の中のコードは常に厳格モードで実行されるからです。
+静的メソッドやインスタンスメソッドを {{jsxref("this")}} の値なしで呼び出した場合、例えばメソッドを変数に割り当ててから呼び出すと、メソッド内部では `this` の値が `undefined` になります。この動作は、 [`"use strict"`](/ja/docs/Web/JavaScript/Reference/Strict_mode) ディレクティブが存在しない場合でも同じです。 `class` 本体の中のコードは常に厳格モードで実行されるからです。
 
 ```js
 class Animal {

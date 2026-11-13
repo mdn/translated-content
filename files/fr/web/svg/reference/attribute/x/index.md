@@ -4,51 +4,49 @@ slug: Web/SVG/Reference/Attribute/x
 original_slug: Web/SVG/Attribute/x
 ---
 
-{{SVGRef}}
-
 L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisatrice ou l'utilisateur.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
 - [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<cursor>`](/fr/docs/Web/SVG/Element/cursor)
-- [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood)
-- [`<feFuncA>`](/fr/docs/Web/SVG/Element/feFuncA)
-- [`<feFuncB>`](/fr/docs/Web/SVG/Element/feFuncB)
-- [`<feFuncG>`](/fr/docs/Web/SVG/Element/feFuncG)
-- [`<feFuncR>`](/fr/docs/Web/SVG/Element/feFuncR)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge)
-- [`<feMergeNode>`](/fr/docs/Web/SVG/Element/feMergeNode)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset)
-- [`<fePointLight>`](/fr/docs/Web/SVG/Element/fePointLight)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting)
-- [`<feSpotLight>`](/fr/docs/Web/SVG/Element/feSpotLight)
-- [`<feTile>`](/fr/docs/Web/SVG/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject)
-- [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef)
-- [`<image>`](/fr/docs/Web/SVG/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Element/svg)
-- [`<symbol>`](/fr/docs/Web/SVG/Element/symbol)
-- [`<text>`](/fr/docs/Web/SVG/Element/text)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
-- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
-- [`<use>`](/fr/docs/Web/SVG/Element/use)
+- [`<cursor>`](/fr/docs/Web/CSS/Reference/Properties/cursor)
+- [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
+- [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
+- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
+- [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite)
+- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix)
+- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting)
+- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap)
+- [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow)
+- [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood)
+- [`<feFuncA>`](/fr/docs/Web/SVG/Reference/Element/feFuncA)
+- [`<feFuncB>`](/fr/docs/Web/SVG/Reference/Element/feFuncB)
+- [`<feFuncG>`](/fr/docs/Web/SVG/Reference/Element/feFuncG)
+- [`<feFuncR>`](/fr/docs/Web/SVG/Reference/Element/feFuncR)
+- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur)
+- [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage)
+- [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge)
+- [`<feMergeNode>`](/fr/docs/Web/SVG/Reference/Element/feMergeNode)
+- [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology)
+- [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset)
+- [`<fePointLight>`](/fr/docs/Web/SVG/Reference/Element/fePointLight)
+- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting)
+- [`<feSpotLight>`](/fr/docs/Web/SVG/Reference/Element/feSpotLight)
+- [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile)
+- [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
+- [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
+- [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
+- [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
+- [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
+- [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
+- [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
+- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
+- [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
+- [`<symbol>`](/fr/docs/Web/SVG/Reference/Element/symbol)
+- [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
+- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
+- [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
+- [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
 
 ## Exemple
 
@@ -82,7 +80,7 @@ Pour [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph), `x` définit l'abscisse 
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        Une liste de valeurs <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        Une liste de valeurs <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -98,14 +96,14 @@ Pour [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph), `x` définit l'abscisse 
 
 ## `<feBlend>`
 
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -121,14 +119,14 @@ Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `x` définit l'abscisse mi
 
 ## `<feColorMatrix>`
 
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -144,14 +142,14 @@ Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `x` définit l
 
 ## `<feComponentTransfer>`
 
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -167,14 +165,14 @@ Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `x
 
 ## `<feComposite>`
 
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feComposite>`](/fr/docs/Web/SVG/Reference/Element/feComposite), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -190,14 +188,14 @@ Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `x` définit l'abs
 
 ## `<feConvolveMatrix>`
 
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Reference/Element/feConvolveMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -213,14 +211,14 @@ Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `x` déf
 
 ## `<feDiffuseLighting>`
 
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Reference/Element/feDiffuseLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -236,14 +234,14 @@ Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `x` d�
 
 ## `<feDisplacementMap>`
 
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Reference/Element/feDisplacementMap), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -259,14 +257,14 @@ Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `x` d�
 
 ## `<feDropShadow>`
 
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Reference/Element/feDropShadow), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -282,14 +280,14 @@ Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `x` définit l'a
 
 ## `<feFlood>`
 
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feFlood>`](/fr/docs/Web/SVG/Reference/Element/feFlood), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -305,14 +303,14 @@ Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `x` définit l'abscisse mi
 
 ## `<feFuncA>`
 
-Pour [`<feFuncA>`](/fr/docs/Web/SVG/Element/feFuncA), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feFuncA>`](/fr/docs/Web/SVG/Reference/Element/feFuncA), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -328,14 +326,14 @@ Pour [`<feFuncA>`](/fr/docs/Web/SVG/Element/feFuncA), `x` définit l'abscisse mi
 
 ## `<feFuncB>`
 
-Pour [`<feFuncB>`](/fr/docs/Web/SVG/Element/feFuncB), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feFuncB>`](/fr/docs/Web/SVG/Reference/Element/feFuncB), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -351,14 +349,14 @@ Pour [`<feFuncB>`](/fr/docs/Web/SVG/Element/feFuncB), `x` définit l'abscisse mi
 
 ## `<feFuncG>`
 
-Pour [`<feFuncG>`](/fr/docs/Web/SVG/Element/feFuncG), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feFuncG>`](/fr/docs/Web/SVG/Reference/Element/feFuncG), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -374,14 +372,14 @@ Pour [`<feFuncG>`](/fr/docs/Web/SVG/Element/feFuncG), `x` définit l'abscisse mi
 
 ## `<feFuncR>`
 
-Pour [`<feFuncR>`](/fr/docs/Web/SVG/Element/feFuncR), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feFuncR>`](/fr/docs/Web/SVG/Reference/Element/feFuncR), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -397,14 +395,14 @@ Pour [`<feFuncR>`](/fr/docs/Web/SVG/Element/feFuncR), `x` définit l'abscisse mi
 
 ## `<feGaussianBlur>`
 
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Reference/Element/feGaussianBlur), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -420,14 +418,14 @@ Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `x` définit
 
 ## `<feImage>`
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feImage>`](/fr/docs/Web/SVG/Reference/Element/feImage), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -443,14 +441,14 @@ Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `x` définit l'abscisse mi
 
 ## `<feMerge>`
 
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feMerge>`](/fr/docs/Web/SVG/Reference/Element/feMerge), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -466,14 +464,14 @@ Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `x` définit l'abscisse mi
 
 ## `<feMergeNode>`
 
-Pour [`<feMergeNode>`](/fr/docs/Web/SVG/Element/feMergeNode), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feMergeNode>`](/fr/docs/Web/SVG/Reference/Element/feMergeNode), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -489,14 +487,14 @@ Pour [`<feMergeNode>`](/fr/docs/Web/SVG/Element/feMergeNode), `x` définit l'abs
 
 ## `<feMorphology>`
 
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feMorphology>`](/fr/docs/Web/SVG/Reference/Element/feMorphology), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -512,14 +510,14 @@ Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `x` définit l'a
 
 ## `<feOffset>`
 
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feOffset>`](/fr/docs/Web/SVG/Reference/Element/feOffset), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -535,14 +533,14 @@ Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `x` définit l'abscisse 
 
 ## `<fePointLight>`
 
-Pour [`<fePointLight>`](/fr/docs/Web/SVG/Element/fePointLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Element/filter).
+Pour [`<fePointLight>`](/fr/docs/Web/SVG/Reference/Element/fePointLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -558,14 +556,14 @@ Pour [`<fePointLight>`](/fr/docs/Web/SVG/Element/fePointLight), `x` définit l'e
 
 ## `<feSpecularLighting>`
 
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Reference/Element/feSpecularLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -581,14 +579,14 @@ Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `x` 
 
 ## `<feSpotLight>`
 
-Pour [`<feSpotLight>`](/fr/docs/Web/SVG/Element/feSpotLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Element/filter).
+Pour [`<feSpotLight>`](/fr/docs/Web/SVG/Reference/Element/feSpotLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -604,14 +602,14 @@ Pour [`<feSpotLight>`](/fr/docs/Web/SVG/Element/feSpotLight), `x` définit l'emp
 
 ## `<feTile>`
 
-Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feTile>`](/fr/docs/Web/SVG/Reference/Element/feTile), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -627,14 +625,14 @@ Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `x` définit l'abscisse mini
 
 ## `<feTurbulence>`
 
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -650,14 +648,14 @@ Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `x` définit l'a
 
 ## `<filter>`
 
-Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `x` définit l'abscisse du coin supérieur gauche de la zone de rendu du filtre.
+Pour [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), `x` définit l'abscisse du coin supérieur gauche de la zone de rendu du filtre.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -673,14 +671,14 @@ Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `x` définit l'abscisse du c
 
 ## `<foreignObject>`
 
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `x` définit l'abscisse du coin supérieur gauche de sa zone d'affichage (<i lang="en">viewport</i>).
+Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `x` définit l'abscisse du coin supérieur gauche de sa zone d'affichage (<i lang="en">viewport</i>).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -700,16 +698,16 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `x` définit l
 ## `<glyphRef>`
 
 > [!WARNING]
-> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
+> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait pas être utilisé.
 
-Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse du glyphe.
+Pour [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `x` définit l'abscisse du glyphe.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#number">&lt;number&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -727,14 +725,14 @@ Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse 
 
 ## `<image>`
 
-Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `x` définit l'abscisse du coin supérieur gauche de l'image.
+Pour [`<image>`](/fr/docs/Web/SVG/Reference/Element/image), `x` définit l'abscisse du coin supérieur gauche de l'image.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -753,14 +751,14 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `x` définit l'abscisse du coi
 
 ## `<mask>`
 
-Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `x` définit l'abscisse du coin supérieur gauche de sa zone d'effet. L'effet exact de cet attribut est influencé par la valeur de l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
+Pour [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask), `x` définit l'abscisse du coin supérieur gauche de sa zone d'effet. L'effet exact de cet attribut est influencé par la valeur de l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -776,14 +774,14 @@ Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `x` définit l'abscisse du coin 
 
 ## `<pattern>`
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `x` définit l'abscisse du coin supérieur gauche de la tuile du motif. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
+Pour [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern), `x` définit l'abscisse du coin supérieur gauche de la tuile du motif. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -799,14 +797,14 @@ Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `x` définit l'abscisse du
 
 ## `<rect>`
 
-Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `x` définit l'abscisse du coin supérieur gauche de la forme.
+Pour [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect), `x` définit l'abscisse du coin supérieur gauche de la forme.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -825,14 +823,14 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `x` définit l'abscisse du coin 
 
 ## `<svg>`
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin supérieur gauche de la zone d'affichage (<i lang="en">viewport</i>).
+Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `x` définit l'abscisse du coin supérieur gauche de la zone d'affichage (<i lang="en">viewport</i>).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>
@@ -851,7 +849,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin su
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<text>`](/fr/docs/Web/SVG/Reference/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -859,7 +857,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -918,9 +916,9 @@ line {
 ## `<tref>`
 
 > [!WARNING]
-> Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
+> Avec SVG2, [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -928,7 +926,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -944,7 +942,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -952,7 +950,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>)
       </td>
     </tr>
     <tr>
@@ -1012,14 +1010,14 @@ line {
 
 ## `<use>`
 
-Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `x` définit l'abscisse du coin supérieur gauche de l'élément référencé.
+Pour [`<use>`](/fr/docs/Web/SVG/Reference/Element/use), `x` définit l'abscisse du coin supérieur gauche de l'élément référencé.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <strong><a href="/fr/docs/Web/SVG/Guides/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Guides/Content_type#percentage">&lt;percentage&gt;</a></strong>
       </td>
     </tr>
     <tr>

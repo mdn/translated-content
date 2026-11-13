@@ -2,7 +2,7 @@
 title: 417 Expectation Failed
 slug: Web/HTTP/Reference/Status/417
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`417 Expectation Failed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示無法滿足請求的 {{HTTPHeader("Expect")}} 標頭中給定的期望。在收到 417 回應後，用戶端應該移除 `Expect` 標頭並重新發送請求，直接在請求主體中包含檔案，而不必等待 {{HTTPStatus("100")}} 回應。詳細資訊請參見 {{HTTPHeader("Expect")}} 標頭的文件。

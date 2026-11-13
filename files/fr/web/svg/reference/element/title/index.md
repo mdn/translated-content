@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/title
 original_slug: Web/SVG/Element/title
 ---
 
-{{SVGRef}}
-
 Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément **`<title>`**, ce titre ne peut contenir que du texte.
 
 Quand l'élément contenant un titre apparaît à l'utilisateur sous forme d'image, l'élément `<title>` n'est pas affiché. Néanmoins, quelques moteurs de rendu peuvent, par exemple, l'afficher sous forme d'infobulle. Des représentations alternatives sont possibles, visuelles ou auditives, en renplacement des éléments graphiques. De manière générale, cet élément améliore l'accessibilité des documents SVG.
@@ -20,7 +18,7 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;»
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

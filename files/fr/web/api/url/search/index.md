@@ -5,7 +5,7 @@ slug: Web/API/URL/search
 
 {{ApiRef("URL API")}}
 
-La propriété **`search`** de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{domxref("USVString")}} contenant le caractère `'?'` suivi des paramètres de l'URL.
+La propriété **`search`** de l'interface {{domxref("URL")}} est une chaine d'interrogation, aussi appellée une chaine de recherche, c'est un {{jsxref("String")}} contenant le caractère `'?'` suivi des paramètres de l'URL.
 
 Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams")}} qui permet d'analyser plus facilement les paramètres passés à la chaîne de recherche.
 
@@ -20,7 +20,7 @@ object.search = chaineDeCaractere;
 
 ### Valeur
 
-Un {{domxref("USVString")}}.
+Un {{jsxref("String")}}.
 
 ## Exemples
 

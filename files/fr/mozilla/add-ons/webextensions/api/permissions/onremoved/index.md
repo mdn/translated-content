@@ -3,8 +3,6 @@ title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 
-{{AddonSidebar}}
-
 Activé lorsque certaines permissions sont supprimés de l'extension.
 
 ## Syntaxe
@@ -53,5 +51,3 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

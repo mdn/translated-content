@@ -25,7 +25,7 @@ browser.browserAction.setBadgeBackgroundColor(
   - : 一个包含以下属性的对象：
     - `color`
       - : 颜色，可以是以下几种之一：
-        - 字符串：任何 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。如果字符串不是有效颜色，返回的 Promise 将被拒绝，背景颜色不会改变。
+        - 字符串：任何 CSS [\<color>](/zh-CN/docs/Web/CSS/Reference/Values/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。如果字符串不是有效颜色，返回的 Promise 将被拒绝，背景颜色不会改变。
         - 一个 {{WebExtAPIRef('browserAction.ColorArray')}} 对象。
         - `null`。如果指定了 `tabId`，则移除特定标签页的徽章背景颜色，使标签页继承全局徽章背景颜色。否则，将全局徽章背景颜色恢复为默认值。
 

@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/feDisplacementMap
 original_slug: Web/SVG/Element/feDisplacementMap
 ---
 
-{{SVGRef}}
-
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDisplacementMap>`** utilise les valeurs de pixel de l'image de {{SVGAttr("in2")}} pour déplacer spatialement l'image de {{SVGAttr("in")}}.
 
 La formule utilisée pour la transformation est comme suit:
@@ -24,9 +22,9 @@ où `P(x,y)` est l'image en entrée, {{SVGAttr("in")}}, et `P'(x,y)` est la dest
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -98,4 +96,4 @@ Cet élément implémente l'interface {{domxref("SVGFEDisplacementMapElement")}}
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

@@ -3,8 +3,6 @@ title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
 
-{{AddonSidebar}}
-
 Met à jour un élément de menu précédemment créé.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.

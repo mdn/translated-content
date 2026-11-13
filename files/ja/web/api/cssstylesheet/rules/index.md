@@ -1,17 +1,18 @@
 ---
 title: "CSSStyleSheet: rules プロパティ"
+short-title: rules
 slug: Web/API/CSSStyleSheet/rules
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: 118909727d715a42a27e3d368379bf959feca4af
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
-**`rules`** は {{domxref("CSSStyleSheet")}} インターフェイスの非推奨の古いプロパティです。機能的には推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} プロパティと同じで、
+**`rules`** は {{domxref("CSSStyleSheet")}} インターフェイスの読み取り専用プロパティで、非推奨の古いプロパティです。機能的には推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} プロパティと同じで、
 スタイルシートを構成する CSS ルールのライブ更新されるリストにアクセスすることができます。
 
 > [!NOTE]
-> 古いプロパティなので、`rules`は使用せず、代わりに推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} を使用しましょう。
+> 古いプロパティなので、`rules` は使用せず、代わりに推奨される {{domxref("CSSStyleSheet.cssRules", "cssRules")}} を使用しましょう。
 > `rules` がすぐに削除される可能性は低いですが、利用できる範囲はそれほど広くなく、これを使用するとサイトやアプリの互換性に問題が発生します。
 
 ## 値

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 409978ee3d2edd2b045adfbe39769b2dae6f31ea
 ---
 
-{{GlossarySidebar}}
-
 JavaScript（JS）是一种程序设计语言，通常用于客户端（client-side）的网页动态脚本，不过，也常通过像 [Node.js](https://nodejs.org/) 这样的运行时，用于{{Glossary("Server","服务器")}}端。
 
 **不应该**把 JavaScript 和 [Java](https://zh.wikipedia.org/wiki/Java) 混淆。“_Java_”和“_JavaScript_”都是 Oracle 公司在美国和其他国家注册的商标，但是这两种程序设计语言在语法、语义和使用方面都明显不同。

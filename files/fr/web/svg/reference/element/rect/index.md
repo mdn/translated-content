@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/rect
 original_slug: Web/SVG/Element/rect
 ---
 
-{{SVGRef}}
-
 L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner des rectangles à partir de la position d'un angle, de largeur et de la hauteur. Il peut aussi être utilisé avec des arrondis.
 
 ## Usage
@@ -38,10 +36,10 @@ svg {
 
 ### Attributs Globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
+- [Attributs conditionnels](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs centraux](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -58,7 +56,7 @@ svg {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/DOM/SVGRectElement) .
+Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/Web/API/SVGRectElement) .
 
 ## Compatibilité des navigateurs
 

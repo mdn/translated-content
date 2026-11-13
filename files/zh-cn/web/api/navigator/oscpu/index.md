@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
+{{ ApiRef("HTML DOM") }}
 
 **`Navigator.oscpu`** 属性返回一个字符串，用于标识当前操作系统。
 

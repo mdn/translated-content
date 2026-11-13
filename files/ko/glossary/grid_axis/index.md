@@ -23,6 +23,6 @@ CSS에서 '블록 또는 열 방향의 축'은 텍스트 블록을 배치할 때
 
 ## 같이 보기
 
-- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - CSS 그리드 레이아웃 안내서: [그리드 레이아웃의 상자 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - CSS 그리드 레이아웃 안내서: [그리드, 논리값 및 쓰기 모드](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)

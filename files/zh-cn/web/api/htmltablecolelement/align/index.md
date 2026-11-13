@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableColElement")}} 接口的 **`align`** 属性是一个指示如何在表格 {{htmlelement("col")}} 列元素中水平对齐文本的字符串。
 
@@ -27,9 +27,9 @@ l10n:
 
 ## 示例
 
-在 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上使用 CSS `text-align`。由于列的 {{htmlelement("td")}} 元素不是 {{htmlelement("col")}} 的子元素，在 HTML 中设置 `align` 属性或在 CSS 中对 {{HTMLElement("col")}} 元素设置 `text-align` 属性将不起作用。相反，使用 [`:is(td, tr):nth-child(n)`](/zh-CN/docs/Web/CSS/:nth-child) 选择列的单元格，其中 `n` 是列号，或类似值。
+在 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上使用 CSS `text-align`。由于列的 {{htmlelement("td")}} 元素不是 {{htmlelement("col")}} 的子元素，在 HTML 中设置 `align` 属性或在 CSS 中对 {{HTMLElement("col")}} 元素设置 `text-align` 属性将不起作用。相反，使用 [`:is(td, tr):nth-child(n)`](/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-child) 选择列的单元格，其中 `n` 是列号，或类似值。
 
-{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/:nth-child#为表格列添加样式)。
+{{cssxref(":nth-child()")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-child#为表格列添加样式)。
 
 ## 规范
 

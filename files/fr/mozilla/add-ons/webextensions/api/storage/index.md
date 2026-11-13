@@ -3,8 +3,6 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
-{{AddonSidebar}}
-
 Permet aux extensions de stocker et de récupérer des données et d'écouter les modifications apportées aux éléments stockés.
 
 Le mécanisme de stockage est basé sur l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), à quelques différences près. Elles incluent entre autres&nbsp;:
@@ -55,8 +53,6 @@ Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est c
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

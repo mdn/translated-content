@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 803a7a460338dab4900fd44cf7ab569e3bf5799a
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Cet article aborde les <i lang="en">Uniform Resource Locators</i> (URL) (qu'on peut traduire en français par «&nbsp;localisateurs uniformes de ressources&nbsp;»), et explique leur rôle et leur structure.
 
 <table>
@@ -15,7 +13,7 @@ Cet article aborde les <i lang="en">Uniform Resource Locators</i> (URL) (qu'on p
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Comprendre <a href="/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">le fonctionnement général d'Internet</a>, <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ce qu'est un serveur web</a>, et <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">les concepts derrière les liens sur le Web</a>.
+        Comprendre <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">le fonctionnement général d'Internet</a>, <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">ce qu'est un serveur web</a>, et <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks">les concepts derrière les liens sur le Web</a>.
       </td>
     </tr>
     <tr>
@@ -65,7 +63,7 @@ _Le schéma_ est la première partie d'une URL et indique le protocole que le na
 
 Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`. Si elle est présente, l'autorité inclut _le domaine_ (par exemple `www.example.com`) et _le port_ (`80`), séparés par un double-point&nbsp;:
 
-- Le domaine indique le serveur web auquel s'adresse la requête. Il s'agit généralement [d'un nom de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name), mais on peut aussi trouver [une adresse IP](/fr/docs/Glossary/IP_Address) (ce qui est plus rare, car moins pratique).
+- Le domaine indique le serveur web auquel s'adresse la requête. Il s'agit généralement [d'un nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name), mais on peut aussi trouver [une adresse IP](/fr/docs/Glossary/IP_Address) (ce qui est plus rare, car moins pratique).
 - Le port indique la «&nbsp;porte&nbsp;» technique utilisée pour accéder aux ressources sur le serveur web. Cette information est généralement omise si le serveur web utilise les ports standard du protocole HTTP (80 pour HTTP, et 443 pour HTTPS) pour permettre l'accès aux ressources. Si le port utilisé n'est pas standard, il doit nécessairement être précisé.
 
 > [!NOTE]
@@ -95,15 +93,15 @@ Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`
 
 N'importe quelle URL peut être saisie dans la barre d'adresse du navigateur pour récupérer la ressource correspondante, mais ce n'est que la partie visible de l'iceberg&nbsp;!
 
-Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/Learn/HTML/Introduction_to_HTML) utilise énormément les URL&nbsp;:
+Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/Learn_web_development/Core/Structuring_content) utilise énormément les URL&nbsp;:
 
-- Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Element/a)&nbsp;;
-- Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ou [`<script>`](/fr/docs/Web/HTML/Element/script)&nbsp;;
-- Pour afficher des médias comme des images (avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img)), des vidéos (grâce à l'élément [`<video>`](/fr/docs/Web/HTML/Element/video)), des sons et de la musique (avec l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio)), etc.&nbsp;;
-- Pour afficher d'autres documents HTML à l'aide de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+- Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)&nbsp;;
+- Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) ou [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)&nbsp;;
+- Pour afficher des médias comme des images (avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img)), des vidéos (grâce à l'élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)), des sons et de la musique (avec l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio)), etc.&nbsp;;
+- Pour afficher d'autres documents HTML à l'aide de l'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 > [!NOTE]
-> Lorsqu'on fournit une URL pour charger des ressources au sein d'une page (par exemple en utilisant les éléments `<script>`, `<audio>`, `<img>`, `<video>` ou autre), on utilise généralement uniquement des URL HTTP et HTTPS, sauf exception (notamment pour les [URL de données](/fr/docs/Web/URI/Schemes/data) qui utilisent le protocole `data:`). Ainsi, le protocole FTP, par exemple, n'est pas sécurisé et n'est plus pris en charge par les navigateurs récents.
+> Lorsqu'on fournit une URL pour charger des ressources au sein d'une page (par exemple en utilisant les éléments `<script>`, `<audio>`, `<img>`, `<video>` ou autre), on utilise généralement uniquement des URL HTTP et HTTPS, sauf exception (notamment pour les [URL de données](/fr/docs/Web/URI/Reference/Schemes/data) qui utilisent le protocole `data:`). Ainsi, le protocole FTP, par exemple, n'est pas sécurisé et n'est plus pris en charge par les navigateurs récents.
 
 D'autres technologies comme [CSS](/fr/docs/Glossary/CSS) ou [JavaScript](/fr/docs/Glossary/JavaScript) utilisent également fréquemment les URL et constituent les briques de base du Web.
 
@@ -117,20 +115,20 @@ Les composantes obligatoires d'une URL dépendent grandement du contexte dans le
 
 Lorsqu'on utilise une URL au sein d'un document, comme dans une page HTML, la situation est différente. En effet, le navigateur dispose déjà de l'URL du document et peut utiliser cette information pour déduire les parties manquantes des URL utilisées dans le document. On peut distinguer une _URL absolue_ d'une _URL relative_ en examinant le _chemin_. Si le chemin de l'URL commence par une barre oblique (`/`), le navigateur récupèrera la ressource à la racine du serveur, sans faire référence au contexte fourni par le document courant.
 
-Prenons quelques exemples pour illustrer cela. Dans ces exemples, nous considèrerons que les URL sont écrites dans un document lui-même situé à l'URL&nbsp;: `https://developer.mozilla.org/fr/docs/Learn`.
+Prenons quelques exemples pour illustrer cela. Dans ces exemples, nous considèrerons que les URL sont écrites dans un document lui-même situé à l'URL&nbsp;: `https://developer.mozilla.org/fr/docs/Learn_web_development`.
 
-`https://developer.mozilla.org/fr/docs/Learn` est une URL absolue. Elle contient toutes les composantes nécessaires à la localisation de la ressource.
+`https://developer.mozilla.org/fr/docs/Learn_web_development` est une URL absolue. Elle contient toutes les composantes nécessaires à la localisation de la ressource.
 
 Toutes les URL suivantes sont des URL relatives&nbsp;:
 
-- URL relative par rapport au schéma&nbsp;: `//developer.mozilla.org/fr/docs/Learn`
+- URL relative par rapport au schéma&nbsp;: `//developer.mozilla.org/fr/docs/Learn_web_development`
   - : Ici, seul le protocole manque. Le navigateur utilisera alors le même protocole que celui utilisé pour charger le document contenant cette URL.
-- URL relative par rapport au domaine&nbsp;: `/fr/docs/Learn`
+- URL relative par rapport au domaine&nbsp;: `/fr/docs/Learn_web_development`
   - : Le protocole et le nom de domaine sont manquants. Le navigateur utiliser le même protocole et le même nom de domaine que ceux utilisés pour charger le document contenant cette URL.
-- Sous-ressources&nbsp;: `Common_questions/Web_mechanics/What_is_a_URL`
-  - : Le protocole et le nom de domaine sont manquants, et le chemin ne commence pas par `/`. Le navigateur tentera de trouver le document dans un sous-répertoire de celui contenant la ressource courante. Dans ce cas, cette URL relative correspond à l'URL absolue `https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL`.
+- Sous-ressources&nbsp;: `Howto/Web_mechanics/What_is_a_URL`
+  - : Le protocole et le nom de domaine sont manquants, et le chemin ne commence pas par `/`. Le navigateur tentera de trouver le document dans un sous-répertoire de celui contenant la ressource courante. Dans ce cas, cette URL relative correspond à l'URL absolue `https://developer.mozilla.org/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL`.
 - Remonter dans l'arborescence&nbsp;: `../CSS/display`
-  - : Le protocole et le nom de domaine sont manquants, et le chemin commence par `..`. Cette écriture suit celle du monde des systèmes de fichier UNIX qui indique de remonter d'un niveau dans l'arborescence. L'URL absolue correspondant à cet exemple est `https://developer.mozilla.org/fr/docs/Learn/../CSS/display`, qu'on peut simplifier en `https://developer.mozilla.org/fr/docs/CSS/display`.
+  - : Le protocole et le nom de domaine sont manquants, et le chemin commence par `..`. Cette écriture suit celle du monde des systèmes de fichier UNIX qui indique de remonter d'un niveau dans l'arborescence. L'URL absolue correspondant à cet exemple est `https://developer.mozilla.org/fr/docs/Learn_web_development/../CSS/display`, qu'on peut simplifier en `https://developer.mozilla.org/fr/docs/CSS/display`.
 - Ancre uniquement&nbsp;: `#url_sémantiques`
   - : Toutes les composantes sont absentes exceptée l'ancre. Le navigateur utilisera l'URL du document courant et remplacera ou ajoutera l'ancre à celle-ci. Cela s'avère utile quand on veut faire pointer un lien vers une partie spécifique du document courant.
 
@@ -146,4 +144,4 @@ Les ordinateurs et serveurs se fichent bien des sémantiques linguistiques et vo
 
 ## Voir aussi
 
-[Les URL de données](/fr/docs/Web/URI/Schemes/data) sont des URL préfixées par le schéma `data:` qui permettent d'embarquer de petits fichiers à même le document.
+[Les URL de données](/fr/docs/Web/URI/Reference/Schemes/data) sont des URL préfixées par le schéma `data:` qui permettent d'embarquer de petits fichiers à même le document.

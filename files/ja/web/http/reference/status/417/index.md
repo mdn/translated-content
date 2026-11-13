@@ -2,7 +2,7 @@
 title: 417 Expectation Failed
 slug: Web/HTTP/Reference/Status/417
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP の **`417 Expectation Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。

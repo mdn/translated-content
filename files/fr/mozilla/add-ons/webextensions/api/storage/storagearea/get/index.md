@@ -3,8 +3,6 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
 
-{{AddonSidebar}}
-
 Récupère un ou plusieurs éléments de la zone de stockage.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -138,5 +136,3 @@ chrome.storage.local.get("kitten", (items) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

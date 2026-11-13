@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.
 
 <table class="standard-table">
@@ -14,10 +12,10 @@ Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment i
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Pour commencer, vous devez comprendre
-        <a href="/fr/Apprendre/Fonctionnement_Internet"
+        <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >comment Internet fonctionne</a
         >
-        et ce que sont les <a href="/fr/Learn/Understanding_URLs">URL</a>.
+        et ce que sont les <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">URL</a>.
       </td>
     </tr>
     <tr>
@@ -32,11 +30,11 @@ Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment i
 
 Les noms de domaine jouent un rôle clé dans l'infrastructure d'Internet. Ils fournissent des adresses, humainement compréhensibles pour retrouver des serveurs web connectés sur Internet.
 
-Tout ordinateur relié à Internet peut être contacté via une adresse {{Glossary("IP")}} publique. En IPv4, cette adresse est constituée de 32 bits, souvent exprimés avec quatre groupes de chiffes, compris entre 0 et 225, séparés par des points (par exemple `173.194.121.32`). Avec IPv6, on a 128 bits, soit huit groupes de quatre chiffres hexadécimaux séparés par deux points (par exemple `2001:0db8:85a3:0042:1000:8a2e:0370:7334`). Les ordinateurs n'ont aucun problème pour mémoriser ces adresses mais ça peut être difficile pour quelqu'un de faire le rapprochement entre un site web/service et cette adresse. De plus, le site peut « déménager » sur un autre ordinateur, l'ordinateur peut changer d'adresse... Dans ces cas, l'adresse correspondante à un site sera modifiée au cours du temps : il faudra alors utiliser la nouvelle adresse pour l'atteindre. Afin de résoudre ces problèmes (mémorisation et stabilité), on utilise des adresses compréhensibles appelée noms de domaine.
+Tout ordinateur relié à Internet peut être contacté via une {{Glossary("IP Address", "adresse IP")}} publique. En IPv4, cette adresse est constituée de 32 bits, souvent exprimés avec quatre groupes de chiffes, compris entre 0 et 225, séparés par des points (par exemple `173.194.121.32`). Avec IPv6, on a 128 bits, soit huit groupes de quatre chiffres hexadécimaux séparés par deux points (par exemple `2001:0db8:85a3:0042:1000:8a2e:0370:7334`). Les ordinateurs n'ont aucun problème pour mémoriser ces adresses mais ça peut être difficile pour quelqu'un de faire le rapprochement entre un site web/service et cette adresse. De plus, le site peut « déménager » sur un autre ordinateur, l'ordinateur peut changer d'adresse... Dans ces cas, l'adresse correspondante à un site sera modifiée au cours du temps : il faudra alors utiliser la nouvelle adresse pour l'atteindre. Afin de résoudre ces problèmes (mémorisation et stabilité), on utilise des adresses compréhensibles appelée noms de domaine.
 
 ## Pédagogie active
 
-_Ce contenu a besoin d'être enrichi, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
+_Ce contenu a besoin d'être enrichi, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Getting_started)_
 
 - [Qu'est-ce qu'un nom de domaine](http://www.afnic.fr/fr/votre-nom-de-domaine/qu-est-ce-qu-un-nom-de-domaine/) sur le site de l'AFNIC
 - [Le DNS](https://www.youtube.com/watch?v=QHVK666TFUI), présentation de Stéphane Bortzmeyer réalisée dans le cadre de « Il était une fois Internet » (CC BY-SA)
@@ -47,7 +45,7 @@ _Ce contenu a besoin d'être enrichi, [n'hésitez pas à contribuer !](/fr/docs/
 
 Un nom de domaine est composé de plusieurs parties, séparées par des points. Ces différents composants sont lus **de droite à gauche** :
 
-![Anatomy of the MDN domain name](structure_fr.png)
+![Anatomie du nom de domaine MDN](structure.png)
 
 Chacune de ces parties fournit des informations sur le nom de domaine dans son ensemble.
 
@@ -148,6 +146,6 @@ Comme nous l'avons mentionné au début, quand on souhaite se rendre sur un site
 
 Dans ces articles, nous avons beaucoup discuté des processus et de l'infrastructure. Nous allons maintenant passer à la suite :
 
-- Si vous souhaitez commencer, débutez en explorant les différents design possibles décrit sur [concevoir une page web](/fr/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
-- Construire un site web peut coûter de l'argent. Vous trouverez les différentes informations sur [combien coûte la construction d'un site web](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost).
+- Si vous souhaitez commencer, débutez en explorant les différents design possibles décrit sur [concevoir une page web](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
+- Construire un site web peut coûter de l'argent. Vous trouverez les différentes informations sur [combien coûte la construction d'un site web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - Vous pouvez aussi approfondir en consultant l'article sur [les noms de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia.

@@ -3,8 +3,6 @@ title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 ---
 
-{{AddonSidebar}}
-
 La fonction **`resume()`** de l'API {{WebExtAPIRef("downloads")}} reprend un téléchargement suspendu. Si la demande a abouti, le téléchargement ne sera pas interrompu et la progression reprendra. L'appel `resume()` échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -52,8 +50,6 @@ resuming.then(onResumed, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,7 +3,7 @@ title: Функции
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 ## Функции в JavaScript
 
@@ -551,7 +551,8 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **Примечание:** `arguments` является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство `length`. Однако он не обладает всеми методами массивов.
+> [!NOTE]
+> `arguments` является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство `length`. Однако он не обладает всеми методами массивов.
 
 Рассмотрите объект [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript-справочнике для большей информации.
 
@@ -689,4 +690,4 @@ var p = new Person();
 - [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html#sec-ecmascript-function-objects)
 - [Учебник по Javascript - замыкания](https://learn.javascript.ru/closures)
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

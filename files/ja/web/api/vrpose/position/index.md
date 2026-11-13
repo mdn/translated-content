@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`position`** は {{domxref("VRPose")}} インターフェイスの読み取り専用プロパティで、 現在の {{domxref("VRPose.timestamp")}} の位置を 3D ベクトルで返します。
 

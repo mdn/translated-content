@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/stroke-dasharray
 original_slug: Web/SVG/Attribute/stroke-dasharray
 ---
 
-{{SVGRef}}
-
 L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit le motif des traits et des espaces utilisés pour dessiner le contour de la forme.
 
 > [!NOTE]
@@ -14,17 +12,17 @@ L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
 - [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<circle>`](/fr/docs/Web/SVG/Element/circle)
-- [`<ellipse>`](/fr/docs/Web/SVG/Element/ellipse)
-- [`<path>`](/fr/docs/Web/SVG/Element/path)
-- [`<line>`](/fr/docs/Web/SVG/Element/line)
-- [`<polygon>`](/fr/docs/Web/SVG/Element/polygon)
-- [`<polyline>`](/fr/docs/Web/SVG/Element/polyline)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<text>`](/fr/docs/Web/SVG/Element/text)
+- [`<circle>`](/fr/docs/Web/SVG/Reference/Element/circle)
+- [`<ellipse>`](/fr/docs/Web/SVG/Reference/Element/ellipse)
+- [`<path>`](/fr/docs/Web/SVG/Reference/Element/path)
+- [`<line>`](/fr/docs/Web/SVG/Reference/Element/line)
+- [`<polygon>`](/fr/docs/Web/SVG/Reference/Element/polygon)
+- [`<polyline>`](/fr/docs/Web/SVG/Reference/Element/polyline)
+- [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect)
+- [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
 - [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
-- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
+- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
+- [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
 
 ## Exemple
 
@@ -92,7 +90,7 @@ svg {
 </table>
 
 - `<dasharray>`
-  - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
+  - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Guides/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Guides/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
 
     Si un nombre impair de valeurs est fourni, la liste est répétée afin d'obtenir un nombre pair de valeur. Ainsi, `5,3,2` sera équivalent à `5,3,2,5,3,2`.
 

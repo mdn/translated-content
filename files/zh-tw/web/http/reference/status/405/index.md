@@ -2,7 +2,7 @@
 title: 405 Method Not Allowed
 slug: Web/HTTP/Reference/Status/405
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`405 Method Not Allowed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求方法，但目標資源不支援此方法。伺服器**必須**在 405 回應中產生一個 {{HTTPHeader("Allow")}} 標頭，列出目標資源目前支援的方法。

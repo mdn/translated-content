@@ -50,7 +50,7 @@ Object.defineProperties(obj, props);
   - : 이 속성에 설정할 값. 올바른 JavaScript 값(숫자, 객체, 함수 등)이면 무엇이든 설정할 수 있다.
     **기본값은 {{jsxref("undefined")}}이다.**
 - `writable`
-  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 수정할 수 있다.
+  - : `true`일 경우 이 속성에 설정된 값을 {{jsxref("Operators", "할당 연산자", "#Assignment_operators", 1)}}로 수정할 수 있다.
     **기본값은 `false`이다.**
     접근자 서술자의 경우 다음 키를 추가로 포함할 수 있다.
 - `get`
@@ -98,54 +98,49 @@ function defineProperties(obj, properties) {
 
     function isCallable(v) {
       // NB: 함수가 아닌 값이 호출가능할 경우 필요할 시 수정할 것
-      return typeof v === 'function';
+      return typeof v === "function";
     }
 
-    if (typeof desc !== 'object' || desc === null)
-      throw new TypeError('bad desc');
+    if (typeof desc !== "object" || desc === null)
+      throw new TypeError("bad desc");
 
     var d = {};
 
-    if (hasProperty(desc, 'enumerable'))
-      d.enumerable = !!desc.enumerable;
-    if (hasProperty(desc, 'configurable'))
-      d.configurable = !!desc.configurable;
-    if (hasProperty(desc, 'value'))
-      d.value = desc.value;
-    if (hasProperty(desc, 'writable'))
-      d.writable = !!desc.writable;
-    if (hasProperty(desc, 'get')) {
+    if (hasProperty(desc, "enumerable")) d.enumerable = !!desc.enumerable;
+    if (hasProperty(desc, "configurable")) d.configurable = !!desc.configurable;
+    if (hasProperty(desc, "value")) d.value = desc.value;
+    if (hasProperty(desc, "writable")) d.writable = !!desc.writable;
+    if (hasProperty(desc, "get")) {
       var g = desc.get;
 
-      if (!isCallable(g) &#x26;&#x26; typeof g !== 'undefined')
-        throw new TypeError('bad get');
+      if (!isCallable(g) && typeof g !== "undefined")
+        throw new TypeError("bad get");
       d.get = g;
     }
-    if (hasProperty(desc, 'set')) {
+    if (hasProperty(desc, "set")) {
       var s = desc.set;
-      if (!isCallable(s) &#x26;&#x26; typeof s !== 'undefined')
-        throw new TypeError('bad set');
+      if (!isCallable(s) && typeof s !== "undefined")
+        throw new TypeError("bad set");
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &#x26;&#x26; ('value' in d || 'writable' in d))
-      throw new TypeError('identity-confused descriptor');
+    if (("get" in d || "set" in d) && ("value" in d || "writable" in d))
+      throw new TypeError("identity-confused descriptor");
 
     return d;
   }
 
-  if (typeof obj !== 'object' || obj === null)
-    throw new TypeError('bad obj');
+  if (typeof obj !== "object" || obj === null) throw new TypeError("bad obj");
 
   properties = Object(properties);
 
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &#x3C; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &#x3C; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;

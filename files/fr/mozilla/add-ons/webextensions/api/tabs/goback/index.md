@@ -3,8 +3,6 @@ title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
-{{AddonSidebar}}
-
 Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -55,8 +53,6 @@ goingBack.then(onGoBack, onError);
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getZoomSettings) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
->
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

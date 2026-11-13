@@ -3,8 +3,6 @@ title: RegExp.prototype.dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 ---
 
-{{JSRef}}
-
 **`dotAll`** 属性表明是否在正则表达式中一起使用"`s`"修饰符（引入/s 修饰符，使得。可以匹配任意单个字符）。`dotAll` 是一个只读的属性，属于单个正则表达式实例。
 
 {{JS_Property_Attributes(0, 0, 1)}}

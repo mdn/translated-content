@@ -1,28 +1,27 @@
 ---
 title: Object.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 l10n:
-  sourceCommit: 4ce6b9526bfa5b44a518e8ecb21a9894973136bd
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
-
-{{JSRef}}
 
 **`Object.entries()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
 
 {{InteractiveExample("JavaScript デモ: Object.entries()")}}
 
 ```js interactive-example
-const object1 = {
-  a: "somestring",
+const object = {
+  a: "some string",
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
+for (const [key, value] of Object.entries(object)) {
   console.log(`${key}: ${value}`);
 }
 
-// Expected output:
-// "a: somestring"
+// 予想される結果:
+// "a: some string"
 // "b: 42"
 ```
 
@@ -126,6 +125,7 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 関連情報
 
 - [`Object.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.entries` のポリフィル](https://www.npmjs.com/package/object.entries)
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

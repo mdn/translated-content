@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 
 ## Примеры
 
-Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения `with`, "ключи" будут методом, а не переменной. Вот где теперь встроенные свойства символа {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор `with`.
+Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения `with`, "ключи" будут методом, а не переменной. Вот где теперь встроенные свойства символа {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор `with`.
 
 ```js
 var keys = [];
@@ -60,5 +60,5 @@ with (obj) {
 
 ## Смотрите также
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
 - оператор [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with) (не доступен в [режиме Strict](/ru/docs/Web/JavaScript/Reference/Strict_mode))

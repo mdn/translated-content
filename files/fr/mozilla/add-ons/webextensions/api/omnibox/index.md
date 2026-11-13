@@ -3,8 +3,6 @@ title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
 
-{{AddonSidebar}}
-
 Permet aux extensions d'implémenter un comportement personnalisé lorsque l'utilisateur tape dans la barre d'adresse du navigateur.
 
 Lorsque l'utilisateur se concentre sur la barre d'adresse du navigateur et commence à taper, le navigateur affiche une liste déroulante contenant des pages suggérées, en fonction de ce qu'ils ont tapé. Cela permet à l'utilisateur d'accéder rapidement, par exemple, aux pages de son historique ou de ses favoris.
@@ -50,5 +48,3 @@ L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions a
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

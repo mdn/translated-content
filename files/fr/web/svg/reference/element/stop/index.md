@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/stop
 original_slug: Web/SVG/Element/stop
 ---
 
-{{SVGRef}}
-
 L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémentaire dans une palette à utiliser pour un dégradé, et est contenu dans un élément {{SVGElement("linearGradient")}} ou {{SVGElement("radialGradient")}}.
 
 ## Contexte d'utilisation
@@ -16,8 +14,8 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémen
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core_attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation_attributes)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

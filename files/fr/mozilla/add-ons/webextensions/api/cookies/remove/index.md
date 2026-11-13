@@ -3,8 +3,6 @@ title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
 
-{{AddonSidebar}}
-
 La méthode **`remove()`** de l'API {{WebExtAPIRef("cookies")}} supprime un cookie, compte tenu de son nom et de son URL.
 
 L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'URL indiquée dans son manifest.
@@ -70,8 +68,6 @@ getActive.then(removeCookie);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

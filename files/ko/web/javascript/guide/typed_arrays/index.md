@@ -107,7 +107,7 @@ int16View[0] = 32;
 console.log("Entry 0 in the 32-bit array is now " + int32View[0]);
 ```
 
-이로부터 출력은 "Entry 0 in the 32-bit array is now 32"입니다. 즉, 두 배열은 확실히 그저 같은 데이터 버퍼 상의 뷰입니다, 버퍼를 서로 다른 형식으로 다루는. 모든 [뷰 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)으로 이를 할 수 있습니다.
+이로부터 출력은 "Entry 0 in the 32-bit array is now 32"입니다. 즉, 두 배열은 확실히 그저 같은 데이터 버퍼 상의 뷰입니다, 버퍼를 서로 다른 형식으로 다루는. 모든 [뷰 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_객체)으로 이를 할 수 있습니다.
 
 ### 복잡한 데이터 구조(체)와 작업하기
 

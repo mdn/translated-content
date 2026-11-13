@@ -3,8 +3,6 @@ title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
-{{AddonSidebar}}
-
 Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
 
 Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).
@@ -68,8 +66,6 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mo
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

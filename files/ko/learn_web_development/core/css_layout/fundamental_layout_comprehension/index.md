@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenu("Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers", "Learn_web_development/Core/CSS_layout")}}
 
 이 과정을 학습했다면 현재 CSS 레이아웃을 만들고 이전 CSS로 작업하기 위해 알아야 할 기본 사항을 이미 다루었을 것입니다. 이 과제는 다양한 기법을 사용하여 간단한 웹 페이지 레이아웃을 개발하는 방식으로 지식을 테스트할 것입니다.
 
@@ -85,4 +85,4 @@ HTML 문서와 스타일시트를 컴퓨터의 디렉터리에 저장하고, 이
    - (위 1단계에서 언급한 대로) 온라인 공유 가능한 편집기에서 평가받거나 도움이 필요한 예제에 대한 링크를 준비합니다. 코드를 볼 수 없다면 코딩 문제가 있는 사람을 도와 주기가 매우 어렵기 때문에 이 방법을 사용하는 것이 좋습니다.
    - 실제 작업 또는 평가 페이지로 연결되는 링크를 통해 도움을 원하는 문제를 찾을 수 있습니다.
 
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenu("Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers", "Learn_web_development/Core/CSS_layout")}}

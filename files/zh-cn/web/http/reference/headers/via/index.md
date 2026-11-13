@@ -5,13 +5,13 @@ slug: Web/HTTP/Reference/Headers/Via
 
 **`Via`** 是一个通用首部，是由代理服务器添加的，适用于正向和反向代理，在请求和响应首部中均可出现。这个消息首部可以用来追踪消息转发情况，防止循环请求，以及识别在请求或响应传递链中消息发送者对于协议的支持能力。
 
-| Header type                           | {{Glossary("General header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| Header type                              | {{Glossary("General header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | yes                            |
 
 ## 语法
 
-```plain
+```http
 Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
 or
 Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
@@ -30,7 +30,7 @@ Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 
 ## 示例
 
-```plain
+```http
 Via: 1.1 vegur
 Via: HTTP/1.1 GWA
 Via: 1.0 fred, 1.1 p.example.net

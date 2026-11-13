@@ -286,7 +286,7 @@ switch (true) {
 switch (true) {
   case isSquare(shape):
     console.log("该形状是一个正方形。");
-  // 失败，因为正方形也是矩形的一种！
+  // 穿透，因为正方形也是矩形的一种！
   case isRectangle(shape):
     console.log("该形状是一个矩形。");
   case isQuadrilateral(shape):

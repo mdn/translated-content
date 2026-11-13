@@ -2,17 +2,15 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Function`** オブジェクトは[関数](/ja/docs/Web/JavaScript/Reference/Functions)についてのメソッドを提供します。 JavaScript では、すべての関数が実際には `Function` オブジェクトです。
 
 ## コンストラクター
 
 - {{jsxref("Function/Function", "Function()")}}
-  - : 新しい `Function` オブジェクトを生成します。コンストラクターを直接呼び出すと関数を動的に生成することができますが、セキュリティや、 {{jsxref("Global_Objects/eval", "eval()")}} と似た性能の (ただし、はるかに重要性の低い) 問題を抱えます。ただし `eval()` とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
+  - : 新しい `Function` オブジェクトを生成します。コンストラクターを直接呼び出すと関数を動的に生成できますが、{{jsxref("Global_Objects/eval", "eval()")}} と同様のセキュリティ上の問題や、それに似たパフォーマンス上の問題（ただし、重要性ははるかに低い）があります。ただし `eval()` とは異なり、`Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
 
 ## インスタンスプロパティ
 
@@ -21,7 +19,7 @@ l10n:
 - {{jsxref("Function.prototype.arguments")}} {{deprecated_inline}} {{non-standard_inline}}
   - : この関数に渡された引数を表します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。代わりに関数のクロージャ内で {{jsxref("Functions/arguments", "arguments")}} オブジェクトを使用してください。
 - {{jsxref("Function.prototype.caller")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 現在実行している関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
+  - : 現在実行している関数を呼び出した関数を表します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、`caller` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 - {{jsxref("Object/constructor", "Function.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。 `Function` のインスタンスの場合、初期値は {{jsxref("Function/Function", "Function")}} コンストラクターです。
 
@@ -48,13 +46,13 @@ l10n:
   - : 関数のソースコードを表す文字列を返します。
     {{jsxref("Object.prototype.toString")}} メソッドを上書きします。
 - [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
-  - : コンストラクター関数が、オブジェクトをコンストラクターのインスタンスの 1 つとして認識するかどうかを判断するための、既定の手順を指定します。 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子によって呼び出されます。
+  - : コンストラクター関数が、オブジェクトをコンストラクターのインスタンスの 1 つとして認識するかどうかを判断するための、デフォルトの手順を指定します。[`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子によって呼び出されます。
 
 ## 例
 
-### Funciton コンストラクターと関数宣言の違い
+### Function コンストラクターと関数宣言の違い
 
-`Function` コンストラクターで生成された関数は、生成コンテキストにクロージャを作りません。つまり常にグローバルスコープで生成されます。これを実行すると、 `Function` コンストラクターの呼び出し元のスコープは入らず、自身のローカル変数とグローバル変数だけにアクセスできます。これは関数式のコードに {{jsxref("Global_Objects/eval", "eval()")}} を使うのとは異なります。
+`Function` コンストラクターで生成された関数は、生成コンテキストにクロージャを作りません。つまり常にグローバルスコープで生成されます。これを実行すると、`Function` コンストラクターが呼び出されたスコープの変数にはアクセスできず、自身のローカル変数とグローバル変数だけにアクセスできます。これは関数式のコードに {{jsxref("Global_Objects/eval", "eval()")}} を使うのとは異なります。
 
 ```js
 // `var` でグローバルプロパティを作成

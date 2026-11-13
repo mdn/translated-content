@@ -20,7 +20,7 @@ while (condicion)
   - : Una expresión que se evalúa antes de cada paso del bucle. Si esta condición se evalúa como verdadera, se ejecuta `sentencia`. Cuando la condición se evalúa como false, la ejecución continúa con la `sentencia` posterior al bucle `while`.
 
 - `sentencia`
-  - : Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia {{jsxref("Sentencias/block", "block")}} (`{ ... }`) para agrupar esas sentencias.
+  - : Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia {{jsxref("Statements/block", "block")}} (`{ ... }`) para agrupar esas sentencias.
 
 ## Ejemplos
 
@@ -45,5 +45,5 @@ Después de completar el tercer pase, la condición `n` < 3 no será verdadera m
 
 ## Vea También
 
-- {{jsxref("Sentencias/do...while", "do...while")}}
-- {{jsxref("Sentencias/for", "for")}}
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for", "for")}}

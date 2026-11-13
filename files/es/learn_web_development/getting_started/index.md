@@ -2,7 +2,7 @@
 title: Módulos de Introducción
 slug: Learn_web_development/Getting_started
 l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+  sourceCommit: 6a5c619dfad295ca9a9d317a4088908cfd33e686
 ---
 
 {{LearnSidebar}}
@@ -25,3 +25,6 @@ No se requiere ningún conocimiento previo para comenzar este curso. También te
   - : Este módulo proporciona recomendaciones de habilidades blandas en las que puedes intentar mejorar mientras aprendes desarrollo web, y que constituyen buenos rasgos para tener al ingresar a la industria. Te ayudarán enormemente a desarrollar las actitudes correctas para aprender, investigar y colaborar, y aumentarán las posibilidades de ser contratado.
 
 ## Véase también
+
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : La _Frontend Developer Career Path_ de [Scrimba](https://scrimba.com?via=mdn) enseña todo lo que necesitas saber para ser un desarrollador web front-end competente, con lecciones y desafíos interactivos divertidos, profesores expertos y una comunidad de apoyo. ¡Pasa de cero a conseguir tu primer trabajo front-end! Muchos de los componentes del curso están disponibles como versiones gratuitas independientes.

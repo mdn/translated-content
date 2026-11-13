@@ -228,7 +228,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 此示例包括使用 `<iframe>` 所需的基本要素：
 
-- [`border: none`](/zh-CN/docs/Web/CSS/border)
+- [`border: none`](/zh-CN/docs/Web/CSS/Reference/Properties/border)
   - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
 - [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。
@@ -271,7 +271,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
 > [!NOTE]
-> [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
+> [Github pages](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#使用在线发布工具) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 
@@ -358,7 +358,7 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。
+你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video)。
 
 ## 总结
 

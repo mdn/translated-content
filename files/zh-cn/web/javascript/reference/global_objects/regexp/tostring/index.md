@@ -3,16 +3,12 @@ title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`toString()`** 返回一个表示该正则表达式的字符串。
 
 ## 语法
 
-```plain
-regexObj.toString()
+```js
+regexObj.toString();
 ```
 
 ### 参数

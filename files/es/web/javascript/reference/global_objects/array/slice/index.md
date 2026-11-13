@@ -44,7 +44,7 @@ Un nuevo array con los valores extraídos.
 `slice` **no modifica** el array original. Devuelve una copia plana (_shallow copy_) de los elementos especificados del array original. Los elementos del array original son copiados en el array devuelto de la siguiente manera:
 
 - Para referencias de objeto ( **no** el objeto en sí ), `slice copia la referencia dentro del nuevo array`. Ambos, el array original y el nuevo, referencian al mismo objeto. Si un objeto referenciado cambia, los cambios son visibles para ambos arrays.
-- Para strings, numbers y boolean (**no** objetos {{jsxref("Global_Objects/String", "String")}} y {{jsxref("Global_Objects/Number", "Number")}}), `slice` copia los valores en el nuevo array. Los cambios a los string, numbers y boolean en un array no afectan a los del otro array.
+- Para strings, numbers y boolean (**no** objetos {{jsxref("String")}} y {{jsxref("Number")}}), `slice` copia los valores en el nuevo array. Los cambios a los string, numbers y boolean en un array no afectan a los del otro array.
 
 Si un nuevo elemento es agregado a cualquiera de los arrays, el otro array no es afectado.
 
@@ -111,7 +111,7 @@ nuevoCoche[0].color = azul
 > [!NOTE]
 > Se dice que un objeto es **array-like** ( similar o que se asemeja a un array) cuando entre sus propiedades existen algunas cuyos nombres son **números** y en particular tiene una propiedad llamada **length**. Este hecho hace suponer que el objeto es algún tipo de colección de elementos indexados por números. Es conveniente, a veces, convertir estos objetos a arrays para otorgarles la funcionalidad que de serie se incorpora en todos los arrays a través de su prototipo.
 
-El método `slice` puede ser usado para convertir objetos parecidos a arrays o colecciones a un nuevo Array. Simplemente debe enlazar el método al objeto. El {{jsxref("Functions_and_function_scope/arguments", "arguments")}} dentro de una función es un ejemplo de un objeto parecido a arrays.
+El método `slice` puede ser usado para convertir objetos parecidos a arrays o colecciones a un nuevo Array. Simplemente debe enlazar el método al objeto. El {{jsxref("Functions/arguments", "arguments")}} dentro de una función es un ejemplo de un objeto parecido a arrays.
 
 ```js
 function list() {
@@ -121,7 +121,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-El enlazado puede realizarse con la función `.call` de {{jsxref("Function.prototype")}} y puede ser abreviado también usando `[].slice.call(arguments)` en lugar de `Array.prototype.slice.call`. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.
+El enlazado puede realizarse con la función `.call` de {{jsxref("Function")}} y puede ser abreviado también usando `[].slice.call(arguments)` en lugar de `Array.prototype.slice.call`. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;
@@ -138,7 +138,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 La especificación permite a los objetos del host ( entre ellos los objetos del DOM ) ser dependientes de la implementación. Esta **NO** obligatoriedad, origina diferencias en el comportamiento entre aquellos comprometidos con los estándares, como Mozilla, y los que no. En lo que concierne a `Array.prototype.slice` , por lo tanto, existen importantes incompatibilidades en IE < 9 . Versiones de IE a partir de la 9 permiten un comportamiento compatible más fiable. Se puede recurrir al "_shimming_" para alcanzar la compatibilidad en otros casos. Mientras otros navegadores modernos continúan mejorando para soportar esta habilidad, en la forma en que actualmente lo hacen Mozilla, Chrome, Safari, Opera e IE, los desarrolladores de código preocupados por el soporte DOM que confíen en este _shim_ no deben dejarse engañar por la semántica, deben confiar de forma segura en ella para proporcionar el comportamiento estándar que aparentemente ahora es la norma.
 
-El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo argumento de `slice()` pueda ser un valor {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} explícito. Esto era un problema en versiones anteriores de IE, pero todos los navegadores modernos, incluído IE >= 9, lo hacen actualmente.
+El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo argumento de `slice()` pueda ser un valor {{jsxref("null")}}/{{jsxref("undefined")}} explícito. Esto era un problema en versiones anteriores de IE, pero todos los navegadores modernos, incluído IE >= 9, lo hacen actualmente.
 
 ```js
 /**

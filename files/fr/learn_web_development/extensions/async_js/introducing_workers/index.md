@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
 Dans ce dernier article de notre module sur le JavaScript asynchrone, nous présenterons les <i lang="en">workers</i> (qu'on pourrait traduire en français par _travailleurs_, moins usité), qui permettent d'exécuter certaines tâches dans un [fil d'exécution](/fr/docs/Glossary/Thread) séparé.
 
@@ -119,8 +119,7 @@ Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
     <button id="reload">Recharger</button>
 
     <textarea id="user-input" rows="5" cols="62">
-Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea
-    >
+Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea>
 
     <div id="output"></div>
   </body>
@@ -227,7 +226,7 @@ Le <i lang="en">worker</i> commence par écouter les messages provenant du scrip
 La fonction `generatePrimes()` utilise le même algorithme que la version synchrone, sauf qu'au lieu de renvoyer une valeur, nous envoyons un message au script principal lorsque le calcul est terminé. Nous utilisons la fonction [`postMessage()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) pour cela. Comme `addEventListener()`, il s'agit d'une fonction globale dans le contexte d'un <i lang="en">worker</i>. Comme nous l'avons déjà vu, le script principal écoute ce message et mettra à jour le DOM lorsque le message sera reçu.
 
 > [!NOTE]
-> Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
+> Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
 >
 > Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished> et l'essayer en direct sur <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished>.
 
@@ -252,4 +251,4 @@ Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a acc
 - [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}

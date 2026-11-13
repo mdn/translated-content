@@ -17,7 +17,7 @@ slug: Web/HTTP/Reference/Headers/Host
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name")}} Неизменяемый
+        {{Glossary("Forbidden request header")}} Неизменяемый
       </th>
       <td>да</td>
     </tr>

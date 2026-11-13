@@ -59,17 +59,17 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 > [!NOTE]
 > Los tutoriales de Ember se probaron por última vez en mayo de 2020, con Ember/Ember CLI versión 3.18.0.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Ember en nuestro [repositorio ember-todomvc-tutorial](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). Para una versión en vivo, consulta <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (esto también incluye algunas características adicionales que no se cubren en este tutorial).
 
-- [1. Primeros pasos en Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [1. Primeros pasos en Ember](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En nuestro primer artículo de Ember veremos cómo funciona Ember y para qué resulta útil, instalaremos la cadena de herramientas de Ember de manera local, crearemos una aplicación de muestra, y luego realizaremos una configuración inicial para prepararla para el desarrollo.
-- [2. Estructura de una aplicación Ember y cómo se basa en componentes](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [2. Estructura de una aplicación Ember y cómo se basa en componentes](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En este artículo, continuaremos planificando la estructura de nuestra aplicación Ember TodoMVC, agregando el HTML necesario y luego dividiendo esa estructura HTML en componentes.
-- [3. Interactividad de Ember: eventos, clases, y estado](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [3. Interactividad de Ember: eventos, clases, y estado](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En este punto, comenzaremos a agregar un poco de interactividad a nuestra aplicación, dándole la capacidad de agregar y mostrar nuevos elementos de tareas por hacer. A medida que avanzamos, veremos el uso de eventos en Ember, la creación de clases de componentes para contener código JavaScript que controle las funciones interactivas, y la configuración de un servicio para hacer seguimiento del estado de los datos de nuestra aplicación.
-- [4. Interactividad de Ember: funcionalidad del footer, renderizado condicional](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [4. Interactividad de Ember: funcionalidad del footer, renderizado condicional](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ahora es momento de comenzar a abordar la funcionalidad del footer en nuestra aplicación. Aquí haremos que el contador de tareas pendientes se actualice de manera que muestre el número correcto de tareas pendientes por completar, y aplicaremos correctamente los estilos a las tareas completadas (es decir, aquellos donde la casilla de verificación ha sido marcada). También conectaremos nuestro botón "Borrar completados". A lo largo del capítulo, aprenderemos sobre el uso de la renderización condicional en nuestras plantillas.
-- [5. Enrutamiento en Ember](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [5. Enrutamiento en Ember](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En este artículo aprendemos sobre enrutamiento o el filtrado basado en URL, como a veces se lo denomina. Lo usaremos para proporcionar una URL única para cada una de las tres vistas de tareas: "Todas", "Activas" y "Completadas".
-- [6. Recursos sobre y solución de problemas](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [6. Recursos sobre y solución de problemas](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En nuestro artículo final sobre Ember, te proporcionamos una lista de recursos que puedes utilizar para avanzar más en tu aprendizaje, además de información útil para la solución problemas y otra información.
 
 ## Tutoriales de Vue
@@ -77,23 +77,23 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 > [!NOTE]
 > Los tutoriales de Vue se probaron por última vez en mayo de 2020, con Vue 2.6.11.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación Vue en nuestro [repositorio todo-vue](https://github.com/mdn/todo-vue). Para una verisón en vivo, consulta <https://mdn.github.io/todo-vue/dist/>.
 
-- [1. Primeros pasos en Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. Primeros pasos en Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : A continuación, presentamos Vue, el tercero de nuestros frameworks. En este artículo, veremos un poco sobre el origen de Vue, aprenderemos cómo instalarlo y crear un nuevo proyecto, estudiaremos la estructura de alto nivel de todo el proyecto y de un componente individual, veremos cómo ejecutar el proyecto localmente y prepararlo para comenzar a construir nuestro ejemplo.
-- [2. Creando nuestro primer componente de Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [2. Creando nuestro primer componente de Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ahora es momento de profundizar en Vue y crear nuestro propio componente personalizado: comenzaremos creando un componente para representar cada elemento en la lista de tareas. Durante el artículo, aprenderemos sobre algunos conceptos importantes, como llamar a componentes dentro de otros componentes, pasarles datos a través de props y guardar el estado de los datos.
-- [3. Renderizando una lista de componentes de Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [3. Renderizando una lista de componentes de Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En este punto, tenemos un componente completamente funcional; ahora estamos listos para agregar varios componentes `ToDoItem` a nuestra aplicación. En este artículo, veremos cómo agregar un conjunto de datos de elementos de tareas a nuestro componente `App.vue`, el cual luego repasaremos en bucle, mostrando dentro de los componentes de `ToDoItem` mediante el uso de la directiva `v-for`.
-- [4. Agregar una nueva forma de tareas pendientes: eventos, métodos y modelos de Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+- [4. Agregar una nueva forma de tareas pendientes: eventos, métodos y modelos de Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ahora tenemos datos de muestra listos y un ciclo que toma cada bit de datos y lo renderiza dentro de un `ToDoItem` en nuestra aplicación. Lo que realmente necesitamos a continuación es la capacidad de permitirle a nuestros usuarios que introuduzcan sus propios elementos de tareas pendientes en la aplicación, y para ello, necesitaremos un `<input>` de texto, un evento para efectuar una vez se envíen los datos, un método por accionar al momento del envío para agregar los datos y volver a renderizar la lista, y un modelo para controlar los datos. Esto es lo que cubriremos en este artículo.
-- [5. Agregando estilos a los componentes de Vue con CSS](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [5. Agregando estilos a los componentes de Vue con CSS](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Por fin ha llegado el momento de hacer que nuestra aplicación luzca un poco mejor. En este artículo, exploraremos las diferentes formas de agregar estilos a los componentes de Vue con CSS.
-- [6. Usando propiedades calculadas de Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [6. Usando propiedades calculadas de Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : En este artículo, agregaremos un contador que muestre el número de tareas completadas, utilizando una función de Vue llamada propiedades calculadas. Estos funcionan de manera similar a los métodos, pero solo se vuelven a ejecutar cuando cambia una de sus dependencias.
-- [7. Renderización condicional en Vue: editando tareas existentes](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [7. Renderización condicional en Vue: editando tareas existentes](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ahora es momento de agregar una de las principales piezas de la funcionalidad que aún nos falta: la capacidad de editar tareas existentes. Para hacer esto, aprovecharemos las capacidades de renderizado condicional de Vue, es decir, `v-if` y `v-else`, los cuales nos permiten alternar entre la vista de una tarea existente y una vista de edición donde podremos actualizar las etiquetas de las tareas. También veremos cómo agregar funcionalidad para eliminar tareas.
-- [8. Gestión de enfoque con Vue refs](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. Gestión de enfoque con Vue refs](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ya estamos cerca de terminar con Vue. La última funcionalidad a considerar es la gestión del enfoque, o dicho de otra manera, cómo podemos mejorar la accesibilidad de nuestra aplicación desde el teclado. Veremos el uso de Vue refs para manejar esto, una característica avanzada que nos permite tener acceso directo a los nodos DOM subyacentes debajo del DOM virtual, o acceso directo desde un componente a la estructura DOM interna de un componente interno.
-- [9. Recursos sobre Vue](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [9. Recursos sobre Vue](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Ahora, completaremos nuestro estudio de Vue brindándote una lista de recursos que podrás utilizar para avanzar en tu aprendizaje, además de algunos otros consejos útiles.
 
 ## ¿Cuales frameworks hemos escogido?

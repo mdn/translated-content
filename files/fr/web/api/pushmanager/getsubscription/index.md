@@ -1,5 +1,5 @@
 ---
-title: "PushManager : la méthode getSubscription()"
+title: "PushManager : méthode getSubscription()"
 short-title: getSubscription()
 slug: Web/API/PushManager/getSubscription
 l10n:

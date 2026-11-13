@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5a2cea779777daaff451f21ca3b7f4c28a68de9e
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{JSRef}}
 
 {{jsxref("String")}} 값의 **`strike()`** 메서드는 문자열을 취소선 처리된 텍스트로 표시하게 만드는 {{HTMLElement("strike")}} 요소(`<strike>str</strike>`)에 포함하는 문자열을 생성합니다.
 
@@ -44,7 +44,8 @@ document.body.innerHTML = contentString.strike();
 <strike>Hello, world</strike>
 ```
 
-> **경고:** `strike`가 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
+> [!WARNING]
+> `strike`가 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
 
 `strike()`를 사용하여 HTML 텍스트를 직접 작성하는 대신 [`document.createElement()`](/ko/docs/Web/API/Document/createElement)와 같은 DOM API를 사용해야 합니다. 아래의 예를 참고하세요.
 

@@ -3,7 +3,7 @@ title: event.initEvent
 slug: Web/API/Event/initEvent
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 La méthode **`Event.initEvent()`** est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.
 
@@ -12,7 +12,7 @@ Les évènements initialisés par ce moyen ont été créés par la méthode {{d
 > [!NOTE]
 > Ne pas utiliser cette méthode qui est dépréciée.
 >
-> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
+> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/API/Document_Object_Model/Events) vous donne plus d'informations sur la manière de les utiliser.
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ event.initEvent(type, bubbles, cancelable);
 ```
 
 - `type`
-  - : est une {{domxref("DOMString")}} qui définit le type d'évènement.
+  - : est une {{jsxref("String")}} qui définit le type d'évènement.
 - `bubbles`
   - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule {{domxref("Event.bubbles")}} donnera sa valeur.
 - `cancelable`

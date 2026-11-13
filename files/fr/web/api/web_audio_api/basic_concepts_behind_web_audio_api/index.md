@@ -65,7 +65,8 @@ var contexte = new AudioContext();
 var memoireTampon = contexte.createBuffer(2, 22050, 44100);
 ```
 
-> **Note :** **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (que l'on peut aussi écrire **44.1 kHz**) est un [taux d'échantillonage](https://en.wikipedia.org/wiki/Sampling_frequency) couramment utilisé. Pourquoi 44.1kHz ?
+> [!NOTE]
+> **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (que l'on peut aussi écrire **44.1 kHz**) est un [taux d'échantillonage](https://en.wikipedia.org/wiki/Sampling_frequency) couramment utilisé. Pourquoi 44.1kHz ?
 >
 > D'abord, parce ce que le [champ auditif](https://en.wikipedia.org/wiki/Hearing_range) qui peut être perçu par des oreilles humaines se situe à peu près entre 20 Hz et 20,000 Hz, et que selon le [théorème d'échantillonage de Nyquist–Shannon](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) la fréquence d'échantillonage doit être supérieure à deux fois la fréquence maximum que l'on souhaite reproduire; le taux d'échantillonage doit donc être supérieur à 40 kHz.
 >
@@ -373,19 +374,19 @@ Une visualisation audio consiste en général à utiliser un flux de données au
 On peut accéder aux données en utilisant les méthodes suivantes:
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : Copie les données de fréquence dans le tableau {{domxref("Float32Array")}} passé en argument.
+  - : Copie les données de fréquence dans le tableau {{jsxref("Float32Array")}} passé en argument.
 
 <!---->
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : Copies les données de fréquence dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+  - : Copies les données de fréquence dans le tableau d'octets non signés {{jsxref("Uint8Array")}} passé en argument.
 
 <!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{domxref("Float32Array")}} passé en argument.
+  - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{jsxref("Float32Array")}} passé en argument.
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
+  - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{jsxref("Uint8Array")}} passé en argument.
 
 > [!NOTE]
 > Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).

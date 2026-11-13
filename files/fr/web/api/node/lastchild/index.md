@@ -1,23 +1,29 @@
 ---
-title: element.lastChild
+title: "Node : propriété lastChild"
+short-title: lastChild
 slug: Web/API/Node/lastChild
+l10n:
+  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
 ---
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.lastChild`** renvoie le dernier enfant du noeud. Si son parent est un élément, l'enfant est généralement un noeud élément, texte ou commentaire. Elle renvoie `null` s'il n'y a aucun enfant.
+La propriété en lecture seule **`lastChild`** de l'interface {{DOMxRef("Node")}} retourne le dernier enfant du nœud, ou `null` s'il n'y a pas de nœuds enfants.
 
-## Syntaxe
+> [!NOTE]
+> Cette propriété retourne n'importe quel type de nœud qui est le dernier enfant de ce nœud.
+> Il peut s'agir d'un nœud {{DOMxRef("Text")}} ou {{DOMxRef("Comment")}}.
+> Si vous souhaitez obtenir le dernier {{DOMxRef("Element")}} qui est un enfant d'un autre élément, utilisez plutôt {{DOMxRef("Element.lastElementChild")}}.
+
+## Valeur
+
+Un objet {{DOMxRef("Node")}} qui est le dernier enfant du nœud, ou `null` s'il n'y a pas de nœuds enfants.
+
+## Exemples
 
 ```js
-var childNode = node.lastChild;
-```
-
-## Exemple
-
-```js
-var tr = document.getElementById("row1");
-var corner_td = tr.lastChild;
+const tr = document.getElementById("row1");
+const cornerTd = tr.lastChild;
 ```
 
 ## Spécifications
@@ -27,3 +33,8 @@ var corner_td = tr.lastChild;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("Node.firstChild")}}
+- La propriété {{DOMxRef("Element.lastElementChild")}}

@@ -304,7 +304,7 @@ Le code HTML de cet exemple est très court. L'élément principal est la boîte
 
 ### CSS
 
-Le CSS n'est pas extrêmement important dans le cadre de cet exemple ; il met en place l'élément et établit que les attributs {{cssxref("background-color")}} et {{cssxref("border")}} peuvent participer à des [transitions CSS](/fr/docs/Web/CSS/CSS_transitions). Nous utiliserons ces transitions pour faire évoluer l'élément de telle sorte qu'il devienne plus ou moins obscur.
+Le CSS n'est pas extrêmement important dans le cadre de cet exemple ; il met en place l'élément et établit que les attributs {{cssxref("background-color")}} et {{cssxref("border")}} peuvent participer à des [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions). Nous utiliserons ces transitions pour faire évoluer l'élément de telle sorte qu'il devienne plus ou moins obscur.
 
 ```css
 #box {

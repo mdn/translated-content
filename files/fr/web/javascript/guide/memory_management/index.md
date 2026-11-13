@@ -4,8 +4,6 @@ slug: Web/JavaScript/Guide/Memory_management
 original_slug: Web/JavaScript/Memory_management
 ---
 
-{{JsSidebar("Advanced")}}
-
 Les langages de bas niveau, tels que C, possèdent des primitives permettant de gérer la mémoire : [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) et [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) par exemple. En revanche, lorsqu'on utilise JavaScript, la mémoire est allouée lors de la création des objets puis libérée « automatiquement » lorsque ceux-ci ne sont plus utilisés. Cette libération automatique est appelée _garbage collection_ en anglais ou ramasse-miettes. Le fait que ce processus soit automatique est souvent source de confusion et donne parfois l'impression que JavaScript (ou d'autres langages de haut niveau) ne permet pas de gérer la mémoire : nous allons voir que ce n'est pas le cas.
 
 ## Le cycle de vie de la mémoire
@@ -99,7 +97,7 @@ Comme on vient de le voir, savoir si de la mémoire peut être libérée demeure
 
 ### Références
 
-Le concept principal utilisé par les algorithmes de ramasse-miettes est celui de _référence_. Dans ce contexte, un objet en référence un autre lorsqu'il a accès à lui (implicitement ou explicitement). Ainsi, un objet JavaScript référencera son [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (référence implicite) et ses propriétés (référence explicite).
+Le concept principal utilisé par les algorithmes de ramasse-miettes est celui de _référence_. Dans ce contexte, un objet en référence un autre lorsqu'il a accès à lui (implicitement ou explicitement). Ainsi, un objet JavaScript référencera son [prototype](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (référence implicite) et ses propriétés (référence explicite).
 
 Dans ce contexte, la notion d'objet s'étend et dépasse celle utilisée pour décrire les objets JavaScript, elle contiendra notamment les portées de fonctions (ou la portée globale).
 

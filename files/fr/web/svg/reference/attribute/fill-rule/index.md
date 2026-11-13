@@ -4,11 +4,10 @@ slug: Web/SVG/Reference/Attribute/fill-rule
 original_slug: Web/SVG/Attribute/fill-rule
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
 
-> **Note :** `fill-rule` est un attribut de présentation et peut donc être utilisé comme propriété CSS.
+> [!NOTE]
+> `fill-rule` est un attribut de présentation et peut donc être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 

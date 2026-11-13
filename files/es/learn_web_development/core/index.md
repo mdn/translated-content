@@ -2,7 +2,7 @@
 title: Módulos centrales de aprendizaje
 slug: Learn_web_development/Core
 l10n:
-  sourceCommit: 427efbee9e0da53517f45420af87a66a2a6b6e19
+  sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
 ---
 
 Nuestros **Módulos centrales** cubren temas que consideramos que todo desarrollador web debe conocer a fondo. Esto incluye toda la información que necesitan para diseñar y construir una aplicación web básica y accesible que siga las mejores prácticas modernas, y gestionar e implementar su código utilizando las herramientas adecuadas.
@@ -34,7 +34,10 @@ En particular, si nunca antes has programado, te recomendamos el módulo [Tu pri
 - [Control de versiones](/es/docs/Learn_web_development/Core/Version_control)
   - : Las herramientas de control de versiones son una parte esencial de los flujos de trabajo modernos, para realizar copias de seguridad y colaborar en bases de código. Este módulo te guía a través de los elementos esenciales del control de versiones utilizando Git y GitHub.
 
-## Véase también
-
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
-  - : La _Frontend Developer Career Path_ de [Scrimba](https://scrimba.com/?via=mdn) enseña todo lo que necesitas saber para ser un desarrollador web front-end competente, con lecciones y desafíos interactivos divertidos, profesores expertos y una comunidad de apoyo. ¡Pasa de cero a conseguir tu primer trabajo front-end! Muchos de los componentes del curso están disponibles como versiones gratuitas independientes.
+> [!CALLOUT]
+>
+> ### Prueba los cursos en video de nuestro socio
+>
+> ¿Te interesa un curso interactivo en video que complemente nuestros artículos? La [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_socio de aprendizaje de MDN_](/es/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> de Scrimba también enseña los temas de los módulos principales de MDN, ¡y más!
+>
+> <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></scrim-inline>

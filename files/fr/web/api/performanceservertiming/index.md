@@ -5,9 +5,9 @@ slug: Web/API/PerformanceServerTiming
 
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 
-L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing) dans l'en-tête HTTP.
+L'interface **`PerformanceServerTiming`** présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Reference/Headers/Server-Timing) dans l'en-tête HTTP.
 
-Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin) pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.
+Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.
 
 {{AvailableInWorkers}}
 
@@ -27,7 +27,7 @@ Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en
 
 ## Exemple
 
-Étant donné un serveur qui envoie l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing), par exemple un serveur node.js comme celui-ci :
+Étant donné un serveur qui envoie l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Reference/Headers/Server-Timing), par exemple un serveur node.js comme celui-ci :
 
 ```js
 const http = require("http");
@@ -70,5 +70,5 @@ console.log(entries[0].serverTiming);
 
 ## Voir aussi
 
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
+- [`Server-Timing`](/fr/docs/Web/HTTP/Reference/Headers/Server-Timing)
 - [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming)

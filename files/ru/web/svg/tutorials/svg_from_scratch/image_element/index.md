@@ -3,7 +3,7 @@ title: SVG image element
 slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 SVG тег {{ SVGElement("image") }} позволяет выводить растровые изображения внутри SVG-объектов.
 
@@ -26,4 +26,4 @@ SVG тег {{ SVGElement("image") }} позволяет выводить рас�
 - Если параметры **height** или **width** не заданы, то им будут присвоены значения равные **0**.
 - Если значение любого из параметров изображения **height** или **width** равны **0**, то отображение отключено.
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}

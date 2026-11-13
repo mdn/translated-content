@@ -1,13 +1,12 @@
 ---
 title: Date.prototype.getFullYear()
+short-title: getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`getFullYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の年を返します。
+**`getFullYear()`** は {{jsxref("Date")}} インスタンスのメソッドで、現地時間に基づき、指定された日時の年を返します。
 
 {{jsxref("Date/getYear", "getYear()")}} メソッドの代わりに、このメソッドを使用してください。
 
@@ -32,11 +31,11 @@ getFullYear()
 
 ### 返値
 
-地方時に基づき、指定された日時の年に相当する数値です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+現地時間に基づき、指定された日時の年に相当する数値です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 
-{{jsxref("Date/getYear", "getYear()")}} をは異なり、 `getFullYear()` が返す値は絶対的な値です。 1000 年から 9999 年までの日付に対して、`getFullYear()` は 1995 のような 4 桁の数字を返します。 2000 年以降の年について正しい値を得るには、この関数を使用してください。
+{{jsxref("Date/getYear", "getYear()")}} は異なり、 `getFullYear()` が返す値は絶対的な値です。 1000 年から 9999 年までの日付に対して、`getFullYear()` は 1995 のような 4 桁の数字を返します。 2000 年以降の年について正しい値を得るには、この関数を使用してください。
 
 ## 例
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
 ---
 
-{{JSRef}}
-
 La méthode **`slice()`** des instances de [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) renvoie une copie d'un fragment du tableau typé courant dans un nouveau tableau typé. La portion est prise entre les paramètres `début` (inclus) et `fin` (non-inclus) qui correspondent aux indices des éléments du tableau typé courant. Le tableau typé original ne sera pas modifié. Cette méthode utilise le même algorithme que [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
 {{InteractiveExample("JavaScript Demo: TypedArray.slice()", "shorter")}}
@@ -30,9 +28,9 @@ slice(début, fin)
 ## Paramètres
 
 - `début` {{optional_inline}}
-  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière), à partir duquel commencer le fragment.
+  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier), à partir duquel commencer le fragment.
 - `fin` {{optional_inline}}
-  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière), jusqu'auquel extraire le fragment. Le fragment obtenu n'inclura pas l'élément situé à l'indice `fin`.
+  - : L'indice (compté à partir de zéro), [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_en_entier), jusqu'auquel extraire le fragment. Le fragment obtenu n'inclura pas l'élément situé à l'indice `fin`.
 
 ### Valeur de retour
 

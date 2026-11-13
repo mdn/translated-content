@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/path
 original_slug: Web/SVG/Element/path
 ---
 
-{{SVGRef}}
-
 L'élément `path` est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de `path`.
 
 ## Usage
@@ -30,10 +28,10 @@ L'élément `path` est l'élément générique pour définir une forme. Toutes l
 
 ### Attributs Globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
+- [Attributs conditionnels](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs centraux](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -60,4 +58,4 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/docs/DOM/SVGPathEle
 - {{ SVGElement("polygon") }}
 - {{ SVGElement("polyline") }}
 - {{ SVGElement("rect") }}
-- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

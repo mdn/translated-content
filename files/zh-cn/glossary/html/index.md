@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **HTML**（HyperText Markup Language，超文本标记语言）是一种用于定义网页结构的描述语言。
 
 ## 发展史

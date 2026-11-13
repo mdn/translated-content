@@ -7,7 +7,8 @@ slug: Web/API/Element/innerHTML
 
 {{domxref("Element")}} 속성(property) **`innerHTML`** 은 요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정합니다.
 
-> **경고:** {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
+> [!WARNING]
+> {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} 노드가 (&), (<), (>) 문자를 포함하는 텍스트 노드를 자식으로 가지고 있다면, `innerHTML`은 이러한 문자들을 각각 `"&amp;"`, `"&lt;"` ,`"&gt;"`로 반환합니다. {{domxref("Node.textContent")}}를 사용하여 이러한 텍스트 노드 내용의 원본을 복사할 수 있습니다.
 
 요소(element)의 내용을 변경하는 대신 HTML을 문서(document)에 삽입하려면, {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 메서드를 사용하십시오.
 
@@ -21,7 +22,7 @@ element.innerHTML = htmlString;
 
 ### Value
 
-요소(element)의 자손의 HTML 직렬화를 포함하는 {{domxref("DOMString")}} 입니다. Setting the value of `innerHTML` 의 값을 설정(대입)하면 요소의 모든 자손이 제거되고, 문자열 htmlString에 지정된 HTML을 파싱하고, 생성된 노드로 대체합니다.
+요소(element)의 자손의 HTML 직렬화를 포함하는 {{jsxref("String")}} 입니다. Setting the value of `innerHTML` 의 값을 설정(대입)하면 요소의 모든 자손이 제거되고, 문자열 htmlString에 지정된 HTML을 파싱하고, 생성된 노드로 대체합니다.
 
 ### Exceptions
 

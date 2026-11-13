@@ -2,22 +2,20 @@
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 l10n:
-  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Objects")}}
 
 **`encodeURIComponent()`** 関数は {{Glossary("URI")}} を、特定の文字の各インスタンスを、その文字の {{Glossary("UTF-8")}} エンコード方式を表す 1 つから 4 つのエスケープシーケンスで置き換えることでエンコードします (2 つのサロゲート文字で構成される文字の場合は 4 つのエスケープシーケンスになります)。 {{jsxref("encodeURI()")}} と比較すると、この関数は URI 構文の一部を含むより多くの文字をエンコードします。
 
-{{InteractiveExample("JavaScript デモ: Standard built-in objects - encodeURIComponent()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: encodeURIComponent()", "shorter")}}
 
 ```js interactive-example
 // Encodes characters such as ?,=,/,&,:
 console.log(`?x=${encodeURIComponent("test?")}`);
-// Expected output: "?x=test%3F"
+// 予想される結果: "?x=test%3F"
 
 console.log(`?x=${encodeURIComponent("шеллы")}`);
-// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+// 予想される結果: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
 ```
 
 ## 構文
@@ -50,7 +48,7 @@ encodeURIComponent(uriComponent)
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-{{jsxref("encodeURI()")}} と比較すると、 `encodeURIComponent()` はより多くの文字セットをエスケープします。 `encodeURIComponent()` は、サーバーに {{HTTPMethod("POST")}} されたフォームからユーザーが入力した項目に対して使用します。これは、{{glossary("character reference", "文字参照")}}やその他エンコード/デコードを要求される文字について、 データ入力中に不用意に発生する可能性のある記号をエンコードします。例えば、ユーザーが `Jack & Jill` と入力した場合、テキストは `Jack &amp; Jill` とエンコードされる可能性があります。`encodeURIComponent()` を使用しない場合は "&" が新しいフィールドの始まりとしてサーバー上で解釈され、データの完全性が損なわれる可能性があります。
+{{jsxref("encodeURI()")}} と比較すると、 `encodeURIComponent()` はより多くの文字セットをエスケープします。サーバーに送信されるフォームのユーザー入力フィールドには `encodeURIComponent()` を使用してください。これにより、{{glossary("character reference", "文字参照")}}のデータ入力中に不注意で生成される可能性のある `&` 記号や、エンコード/デコードが要求されるその他の文字がエンコードされます。例えば、ユーザーが `Jack & Jill` と入力した場合、`encodeURIComponent()` を使用しないと、アンパサンドはサーバー上で新しいフィールドの開始として解釈され、データの整合性が損なわれるおそれがあります。
 
 [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm) では、スペースは `+` に置換されます。そのため、`encodeURIComponent()` による置換に加えて `%20` を `+` に置き換えることが望まれるかもしれません。
 

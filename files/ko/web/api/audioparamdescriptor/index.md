@@ -12,7 +12,7 @@ slug: Web/API/AudioParamDescriptor
 ## 속성
 
 - `name`
-  - : `AudioParam` 의 이름을 나타내는 {{domxref("DOMString")}}. 이 이름 아래에서 `AudioParam` 은 AudioWorkletNode의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성에서 사용 가능하게 될 것이고, 이 이름 아래에서 {{domxref("AudioWorkletProcessor.process")}} 메서드가 이 `AudioParam` 의 계산된 값을 획득할 것입니다.
+  - : `AudioParam` 의 이름을 나타내는 {{jsxref("String")}}. 이 이름 아래에서 `AudioParam` 은 AudioWorkletNode의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성에서 사용 가능하게 될 것이고, 이 이름 아래에서 {{domxref("AudioWorkletProcessor.process")}} 메서드가 이 `AudioParam` 의 계산된 값을 획득할 것입니다.
 - `automationRate` {{optional_inline}}
   - : 이 `AudioParam` 의 자동화율(automation rate)을 나타내는 string인데, [`"a-rate"`](/ko/docs/Web/API/AudioParam#a-rate) 또는 [`"k-rate"`](/ko/docs/Web/API/AudioParam#k-rate)입니다. 기본값은 `"a-rate"` 입니다.
 - `minValue` {{optional_inline}}

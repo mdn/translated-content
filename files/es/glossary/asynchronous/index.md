@@ -1,27 +1,30 @@
 ---
 title: Asíncrono
 slug: Glossary/Asynchronous
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+El término **asíncrono** se refiere a dos o más objetos o eventos que no existen o no ocurren al mismo tiempo; es decir, **no** son {{glossary("synchronous", "síncronos")}}. Cuando varias cosas relacionadas suceden sin que ninguna dependa de que las anteriores hayan terminado, se dice que son asíncronas.
 
-El término **asíncrono** se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado. En informática, la palabra "asíncrono" se usa en los siguientes contextos:
+En informática, la palabra "asíncrono" se usa principalmente en dos contextos, que se explican a continuación.
 
-- Redes y comunicaciones
-  - : La comunicación asíncrona es un método de intercambio de mensajes entre dos o más partes, en la que cada parte recibe y procesa el mensaje cuando sea conveniente o posible de realizar, en vez de hacerlo inmediatamente al recibirlo. Adicionalmente, los mensajes pueden ser enviados sin esperar el acuse de recibo de los mismos, bajo el entendimiento de que si ocurre algún problema, quien los recibe solicitará las correcciones o manejara la situación.
+## En redes y comunicaciones
 
-    Para los humanos, el correo electrónico es un método de comunicación asíncrono: el emisor envía el correo y el receptor lo leerá y responderá cuando le sea conveniente en vez de hacerlo de una vez. Ambos lados pueden continuar enviando y recibiendo mensajes cuando quiera que ellos deseen, en lugar de tener que programarse uno alrededor del otro.
+La comunicación asíncrona es un método de intercambio de mensajes en el que el envío, la recepción y el procesamiento de cada mensaje no dependen del envío, la recepción ni el procesamiento de otros mensajes. En la comunicación asíncrona, cada parte recibe y procesa los mensajes cuando le resulta conveniente o posible, en lugar de hacerlo en cuanto los recibe. Además, los mensajes pueden enviarse sin esperar una confirmación, dando por sentado que, si surge algún problema, el destinatario pedirá correcciones o se encargará de la situación de otra manera.
 
-    Cuando el software se comunica de manera asíncrona, un programa puede realizar una solicitud de información a otra pieza de software (un servidor, por ejemplo), y continuar haciendo otras tareas mientras espera por la respuesta. Por ejemplo,la técnica de programación {{Glossary("AJAX")}} (Asynchronus JavaScript and {{Glossary("XML")}}) - usualmente llamada simplemente "Ajax", incluso a pesar de que usualmente en las aplicaciones modernas se utilice {{Glossary("JSON")}} en vez de XML - es un mecanismo por el que se solicitan tamaños relativamente pequeños de datos al servidor usando {{Glossary("HTTP")}} , siendo los resultados devueltos cuando estén disponibles más que de inmediato.
+El correo electrónico es un tipo de comunicación humana asíncrona. Una persona envía un correo; el destinatario lo lee y responde (o no) cuando le resulta conveniente, no necesariamente de inmediato. Todas las partes pueden seguir enviando y recibiendo mensajes en cualquier momento. Los correos electrónicos no requieren una secuencia temporal específica.
 
-- Diseño de Software
-  - : El diseño de software asíncrono amplía el concepto al construir código que permita a un programa solicitar que una tarea se realice al mismo tiempo que la tarea (o tareas) original, sin detenerse a esperar a que la primera se haya completado. Cuando la tarea secundaria se completa, la original es notificada usando un mecanismo acordado, de tal forma que sepa que el trabajo se ha completado y que el resultado, si es que existe, está disponible.
+En el software asíncrono, hacer una solicitud (por ejemplo, a un servidor) no bloquea otros procesos mientras se espera la respuesta. El software puede seguir realizando otras tareas. Por ejemplo, en las [APIs basadas en promesas](/es/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API), se crean objetos {{JSxRef("Promise")}} para las operaciones largas. Una vez completada la operación, la promesa se procesa. Con las promesas, el software no tiene que esperar a que la operación finalice.
 
-    Existen diversas técnicas de programación para implementar software asíncrono. Vea el artículo [JavaScript Asíncrono](/es/docs/Learn_web_development/Extensions/Async_JS) para terner una introducción a ellos.
+## En el diseño de software
 
-## Saber más
+El diseño de software asíncrono amplía este concepto construyendo código que permite a un programa pedir que una tarea se realice a la par de la tarea (o tareas) original, sin detenerse a esperar a que esa tarea termine. Cuando la tarea secundaria finaliza, se notifica a la tarea original mediante un mecanismo acordado, de modo que sepa que el trabajo ha terminado y que el resultado, si lo hay, está disponible.
 
-### Referencia técnica
+Hay varias técnicas de programación para implementar software asíncrono. Consulta el artículo [JavaScript asíncrono](/es/docs/Learn_web_development/Extensions/Async_JS) para ver una introducción a ellas.
 
-- [Obteniendo datos del servidor](/es/docs/Learn_web_development/Core/Scripting/Network_requests) (Área de aprendizaje)
-- {{glossary("Synchronous","Sincrónico")}}
+## Véase también
+
+- [Aprender: Hacer solicitudes de red con JavaScript](/es/docs/Learn_web_development/Core/Scripting/Network_requests) (Área de aprendizaje)
+- Términos relacionados del glosario:
+  - {{glossary("Synchronous", "Síncrono")}}

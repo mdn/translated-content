@@ -3,8 +3,6 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
 
-{{AddonSidebar}}
-
 ## Type
 
 Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les quatres couleurs spécifient les canaux suivants :
@@ -25,8 +23,6 @@ Par exemple , le rouge opaque est `[255, 0, 0, 255]`.
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -105,7 +105,8 @@ fetch("https://example.com", {
 });
 ```
 
-> **참고:** `credentials: 'include'`를 추가한 경우, `Access-Control-Allow-Origin`에 와일드카드를 사용할 수 없습니다. 자격 증명을 포함하려는 경우에는 반드시 정확한 출처를 지정해야 합니다. CORS 해제 확장 프로그램을 사용하더라도 와일드카드를 지정한 요청은 실패할 것입니다.
+> [!NOTE]
+> `credentials: 'include'`를 추가한 경우, `Access-Control-Allow-Origin`에 와일드카드를 사용할 수 없습니다. 자격 증명을 포함하려는 경우에는 반드시 정확한 출처를 지정해야 합니다. CORS 해제 확장 프로그램을 사용하더라도 와일드카드를 지정한 요청은 실패할 것입니다.
 
 > [!NOTE]
 > 자격 증명 옵션의 값에 상관 없이, 브라우저는 프리플라이트 요청에는 자격 증명을 전송하지 않아야 합니다. 자세한 정보는 [자격 증명을 포함한 CORS 요청](/ko/docs/Web/HTTP/Guides/CORS#자격_증명을_포함한_요청)을 참고하세요.
@@ -427,7 +428,8 @@ addEventListener("fetch", function (event) {
 
 {{domxref("Response.Response","Response()")}} 생성자는 두 개의 선택적 인자를 받습니다. 하나는 응답 본문으로 쓰고, 다른 하나는{{domxref("Request.Request","Request()")}}가 받는 것과 비슷한 옵션 객체입니다.
 
-> **참고:** {{domxref("Response.error","error()")}} 정적 메서드는 오류 응답을 반환합니다. 마찬가지로, {{domxref("Response.redirect","redirect()")}}는 지정한 URL로 리다이렉트를 유발하는 응답을 생성합니다. 이 두 메서드 역시 서비스 워커에서만 의미가 있습니다.
+> [!NOTE]
+> {{domxref("Response.error","error()")}} 정적 메서드는 오류 응답을 반환합니다. 마찬가지로, {{domxref("Response.redirect","redirect()")}}는 지정한 URL로 리다이렉트를 유발하는 응답을 생성합니다. 이 두 메서드 역시 서비스 워커에서만 의미가 있습니다.
 
 ## 본문
 

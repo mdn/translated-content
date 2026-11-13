@@ -1,18 +1,19 @@
 ---
-title: "<sup> : l'élément de mise en exposant"
+title: "Élément HTML `<sup>` : l'élément de mise en exposant"
+short-title: <sup>
 slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+L'élément HTML **`<sup>`** permet d'afficher du texte en exposant, uniquement pour des raisons typographiques. Le texte est alors positionné plus haut que la ligne de base et généralement en plus petit.
 
-L'élément HTML **`<sup>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant.
-
-{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;sup&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+  Le <em>théorème de Pythagore</em> est souvent exprimé sous la forme d'équation
+  suivante&nbsp;:
 </p>
 
 <p>
@@ -30,48 +31,38 @@ p {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-Cet élément devrait uniquement être utilisé pour des raisons typographiques lorsque la position du texte est liée à la signification de ce texte (par exemple pour une formule mathématiques) ou aux règles typographiques (par exemple en français pour M<sup>lle</sup>, M<sup>me</sup> ou C<sup>ie</sup>).
+L'élément `<sup>` doit être utilisé uniquement pour des raisons typographiques&nbsp;: il sert à modifier la position du texte afin de respecter les conventions ou normes typographiques, et non simplement pour des raisons de présentation ou d'apparence.
 
-Ainsi, on n'utilisera pas `<sup>` afin d'obtenir un effet visuel d'un logo par exemple. Pour un simple effet de mise en forme (hors typographie), on utilisera plutôt la propriété {{cssxref("vertical-align")}}, utilisée avec la valeur `super` (voire avec une valeur numérique si on souhaite être plus précis).
+Par exemple, la mise en forme d'une [marque verbale <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Wordmark) d'entreprise ou de produit qui utilise une ligne de base surélevée doit être réalisée avec du CSS (généralement {{CSSxRef("vertical-align")}}) plutôt qu'avec `<sup>`. On utilise par exemple `vertical-align: super` ou, pour décaler la ligne de base de 50&nbsp;%, `vertical-align: 50%`.
 
-Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
+Les cas d'utilisation appropriés de `<sup>` incluent (sans s'y limiter)&nbsp;:
 
-- L'utilisation d'exposants dans une formule mathématique : x
-
-  <sup>2</sup>
-
-  .
-  - Dans le cadre de formules complexes, [MathML](/fr/docs/Web/MathML) peut s'avérer plus pertinent que l'enchaînement d'éléments {{HTMLElement("sub")}} et `<sup>`.
-
-- L'affichage de lettres supérieures pour respecter certaines conventions typographiques (ex. M
-
-  <sup>lle</sup>
-
-  ).
-
-- La représentation de nombres ordinaux : 7
-
-  <sup>e</sup>
-
-  art.
+- Affichage d'exposants, comme «&nbsp;x<sup>3</sup>&nbsp;». Il peut être pertinent d'utiliser [MathML](/fr/docs/Web/MathML) pour ces cas, surtout s'ils sont complexes. Voir [Exposants](#exposants) dans la section [Exemples](#exemples) ci-dessous.
+- Affichage de [lettres supérieures <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Superior_letter), utilisées dans certaines langues pour certaines abréviations. Par exemple, en français, «&nbsp;mademoiselle&nbsp;» peut s'abréger en «&nbsp;M<sup>lle</sup>&nbsp;»&nbsp;: c'est un usage approprié. Voir [Lettres supérieures](#lettres_supérieures) pour des exemples.
+- Représentation de nombres ordinaux, comme «&nbsp;4<sup>e</sup>&nbsp;» au lieu de «&nbsp;quatrième&nbsp;». Voir [Nombres ordinaux](#nombres_ordinaux) pour des exemples.
 
 ## Exemples
 
-### Puissance mathématique
+### Exposants
+
+Les exposants, ou puissances d'un nombre, sont parmi les utilisations les plus courantes du texte en exposant. Par exemple&nbsp;:
 
 #### HTML
 
 ```html
-<p>Voici la fonction exponentielle : e<sup>x</sup>.</p>
+<p>
+  Une des équations les plus courantes en physique est <var>E</var>=<var>m</var
+  ><var>c</var><sup>2</sup>.
+</p>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("","100%","120")}}
+{{EmbedLiveSample("exposants", 650, 80)}}
 
 ### Lettres supérieures
 
@@ -85,9 +76,11 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 #### Résultat
 
-{{EmbedLiveSample("","650","80")}}
+{{EmbedLiveSample("lettres_supérieures","650","80")}}
 
 ### Nombres ordinaux
+
+Les nombres ordinaux, comme «&nbsp;quatrième&nbsp;» en français, «&nbsp;<i lang="en">fourth</i>&nbsp;» en anglais ou «&nbsp;<i lang="es">quinto</i>&nbsp;» en espagnol, peuvent être abrégés à l'aide de chiffres et de texte spécifique à la langue affiché en exposant&nbsp;:
 
 #### HTML
 
@@ -96,14 +89,14 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
   Voici comment le nombre ordinal cinquième est écrit dans différentes langues
 </p>
 <ul>
-  <li>en français : 5<sup>e</sup></li>
-  <li>en anglais : 5<sup>th</sup></li>
+  <li>en français&nbsp;: 5<sup>e</sup></li>
+  <li>en anglais&nbsp;: 5<sup>th</sup></li>
 </ul>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", 650, 160)}}
+{{EmbedLiveSample("nombres_ordinaux", 650, 160)}}
 
 ## Résumé technique
 
@@ -111,27 +104,25 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -145,9 +136,18 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#rôles_structurels_avec_équivalents_html">superscript</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -156,7 +156,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -171,6 +171,6 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- L'élément {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faut utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
 - Les éléments MathML {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}}.
-- La propriété CSS {{cssxref("vertical-align")}}.
+- La propriété CSS {{CSSxRef("vertical-align")}}.

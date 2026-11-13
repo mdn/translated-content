@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{Deprecated_Header}}
-
 **`fontcolor()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("font")}} 要素に埋め込み (`<font color="...">str</font>`)、この文字列が指定されたフォント色で表示されるようにする文字列を生成します。
 
 > [!NOTE]
@@ -22,7 +20,7 @@ fontcolor(color)
 ### 引数
 
 - `color`
-  - : 16 進数の RGB 値または文字列リテラルで色を表す文字列です。 [CSS 色リファレンス](/ja/docs/Web/CSS/color_value)に、色名の文字列リテラルの一覧があります。
+  - : 16 進数の RGB 値または文字列リテラルで色を表す文字列です。 [CSS 色リファレンス](/ja/docs/Web/CSS/Reference/Values/color_value)に、色名の文字列リテラルの一覧があります。
 
 ### 返値
 

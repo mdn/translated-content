@@ -85,6 +85,6 @@ Firefox는 ndata를 지원하기 위해 현재 구현단계에 있습니다. 일
 
 ## 보안(Security)
 
-WebRTC로 전송되는 모든 데이터는 암호화됩니다. `RTCDataChannel` 의 암호화는[Transport Layer Security](/ko/docs/Web/Security/Transport_Layer_Security) (TLS)를 바탕으로 하는 Datagram Transport Layer Security (DTLS)를 사용합니다. TLS는 모든 암호화된 HTTPS 통신에 사용되기 때문에 data channel에 사용되는 모든 데이터는 사용자의 브라우저가 데이터를 주고받는 만큼의 보안이 보장됩니다.
+WebRTC로 전송되는 모든 데이터는 암호화됩니다. `RTCDataChannel` 의 암호화는[Transport Layer Security](/ko/docs/Web/Security/Defenses/Transport_Layer_Security) (TLS)를 바탕으로 하는 Datagram Transport Layer Security (DTLS)를 사용합니다. TLS는 모든 암호화된 HTTPS 통신에 사용되기 때문에 data channel에 사용되는 모든 데이터는 사용자의 브라우저가 데이터를 주고받는 만큼의 보안이 보장됩니다.
 
 조금더 근본적으로 WebRTC는 두 사용자간의 peer-to-peer 연결이기때문에 데이터가 어떠한 다른 웹이나 어플리케이션 서버를 경유하지 않습니다. 이러한 통신방식으로 인해 데이터가 중간에 가로채어질 가능성이 줄어듭니다.

@@ -1,13 +1,13 @@
 ---
-title: <meta name="color-scheme">
+title: '`<meta name="color-scheme">` 属性値'
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 **`color-scheme`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、ユーザーエージェントがページに使用すべき提案としての配色を示します。
-指定した場合、配色は `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性に、 CSS の有効な {{cssxref("color-scheme")}} 値を使用して定義します。
+指定した場合、配色は `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性に、 CSS の有効な {{cssxref("color-scheme")}} 値を使用して定義します。
 
 文書レベルの配色は、CSS の {{cssxref("color-scheme")}} プロパティで個々の要素で推奨され受け入れられる配色を指定するのと同じように、文書レベルで機能します。
 `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
@@ -23,7 +23,7 @@ CSS の {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メ�
 
 `<meta name="color-scheme">` 要素には、次の追加属性があります。
 
-- [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content)
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
   - : `<meta>` 要素で`name=color-scheme` を指定した場合は、 `content` 属性を指定して配色を CSS の {{cssxref("color-scheme")}} の値として定義しなければなりません。
     `content` 属性は、次のいずれかになります。
     - `normal`
@@ -63,4 +63,4 @@ CSS の {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メ�
 ## 関連情報
 
 - CSS の {{cssxref("color-scheme")}} プロパティ
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリー
+- {{cssxref("@media/prefers-color-scheme")}} メディアクエリー

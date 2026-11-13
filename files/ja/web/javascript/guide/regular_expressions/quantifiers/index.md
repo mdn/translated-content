@@ -2,35 +2,33 @@
 title: 数量子
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 数量子は、一致させる文字や式の数を示します。
 
-{{InteractiveExample("JavaScript デモ: RegExp quantifiers", "taller")}}
+{{InteractiveExample("JavaScript デモ: 正規表現の数量子", "taller")}}
 
 ```js interactive-example
 const ghostSpeak = "booh boooooooh";
 const regexpSpooky = /bo{3,}h/;
 console.log(ghostSpeak.match(regexpSpooky));
-// Expected output: Array ["boooooooh"]
+// 予想される結果: Array ["boooooooh"]
 
 const modifiedQuote = "[He] ha[s] to go read this novel [Alice in Wonderland].";
 const regexpModifications = /\[.*?\]/g;
 console.log(modifiedQuote.match(regexpModifications));
-// Expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+// 予想される結果: Array ["[He]", "[s]", "[Alice in Wonderland]"]
 
 const regexpTooGreedy = /\[.*\]/g;
 console.log(modifiedQuote.match(regexpTooGreedy));
-// Expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+// 予想される結果: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
 ```
 
 ## 種類
 
 > [!NOTE]
-> 以下の表の中で、*アイテム*は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)と[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を示すこともあります。
+> 以下の表の中で、「アイテム」は単一の文字だけでなく、[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)と[グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を示すこともあります。
 
 <table class="standard-table">
   <thead>
@@ -169,6 +167,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 
 この例では、 "our" または "or" で終わる単語を検索します。
 
+<!-- cSpell:ignore neighbour -->
+
 ```js
 const britishText = "He asked his neighbour a favour.";
 const americanText = "He asked his neighbor a favor.";
@@ -188,7 +188,7 @@ console.table(americanText.match(regexpEnding));
 
 ### 貪欲と非貪欲
 
-この例では、 1 つ以上の単語文字または空白文字を `[\w ]+` と `[\w ]+? で検索します。 1 つ目は貪欲で、 2 つ目は貪欲ではありません。 2 つ目は最小要件を満たすとすぐに停止することに注意してください。
+この例では、 1 つ以上の単語文字または空白文字を `[\w ]+` と `[\w ]+?` で検索します。 1 つ目は貪欲で、 2 つ目は貪欲ではありません。 2 つ目は最小要件を満たすとすぐに停止することに注意してください。
 
 ```js
 const text = "I must be getting somewhere near the center of the earth.";

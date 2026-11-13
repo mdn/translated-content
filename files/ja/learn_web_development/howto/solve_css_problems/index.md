@@ -1,11 +1,10 @@
 ---
 title: よくある CSS の問題の解決
+short-title: よくある CSS の問題
 slug: Learn_web_development/Howto/Solve_CSS_problems
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{LearnSidebar}}
 
 このページでは、CSS の一般的な問題を解決するのに役立つ質問と回答、MDN サイトで公開されている他の素材について扱っています。
 
@@ -50,10 +49,10 @@ l10n:
 
 ### レイアウトガイド
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [CSS 段組みレイアウトの使用](/ja/docs/Web/CSS/Guides/Multicol_layout/Using)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [CSS 生成コンテンツ](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
 > [!NOTE]
-> [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。また、[実践的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)では、位置指定を使用してタブ付きの情報ボックスやスライド式の隠しパネルを作成することができますので、調べてみてください。
+> [CSS レイアウトの問題解決](/ja/docs/Web/CSS/How_to/Layout_cookbook)に向けた料理帳があり、よくあるレイアウトのタスクについて、完全に動作する例と説明を掲載しています。また、[実践的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)では、位置指定を使用してタブ付きの情報ボックスやスライド式の隠しパネルを作成する方法を紹介しています。
