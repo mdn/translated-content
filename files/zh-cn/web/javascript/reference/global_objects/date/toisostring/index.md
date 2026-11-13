@@ -19,7 +19,7 @@ console.log(event.toISOString());
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.toISOString()
 ```
 

@@ -21,15 +21,15 @@ Un «&nbsp;élément propriétaire&nbsp;» est tout ancêtre DOM d'un élément.
 La référence à l'ID d'un ou plusieurs éléments permet à n'importe quel élément de «&nbsp;posséder&nbsp;» n'importe quel autre élément avec une déclaration `aria-owns`. La valeur de l'attribut `aria-owns` est une liste d'identifiants séparés par des espaces qui référence les identifiants d'un ou plusieurs éléments dans le document.
 
 > [!NOTE]
-> Un élément «&nbsp;possédé&nbsp;» est tout descendant DOM de l'élément, tout élément définit comme enfant via `aria-owns`, ou tout descendant DOM de l'enfant possédé. L'élément possédé par `aria-owns` devrait être un élément appartenant à un arbre parent séparé dans le DOM mais devant être traité comme un enfant de l'élément courant.
+> Un élément «&nbsp;possédé&nbsp;» est tout descendant DOM de l'élément, tout élément définit comme enfant avec `aria-owns`, ou tout descendant DOM de l'enfant possédé. L'élément possédé par `aria-owns` devrait être un élément appartenant à un arbre parent séparé dans le DOM mais devant être traité comme un enfant de l'élément courant.
 
 N'utilisez pas `aria-owns` comme substitut de la hiérarchie DOM. Si la relation est représentée dans le DOM, n'utilisez pas `aria-owns`.
 
 Un élément enfant est, par défaut, la propriété de son parent DOM&nbsp;: dans ce cas, `aria-owns` ne doit pas être utilisé. Évitez d'utiliser l'attribut `aria-owns` pour réorganiser des éléments enfants existants dans un ordre différent.
 
-Lors de l'utilisation de `aria-owns`, assurez-vous de [gérer l'ordre du focus <sup>(angl.)</sup>](https://css-tricks.com/focus-management-and-inert/). Assurez-vous que l'ordre visuel du focus correspond à cet ordre de lecture pour les technologies d'assistance.
+Lors de l'utilisation de `aria-owns`, assurez-vous de [gérer l'ordre de la sélection <sup>(angl.)</sup>](https://css-tricks.com/focus-management-and-inert/). Assurez-vous que l'ordre visuel de la sélection correspond à cet ordre de lecture pour les technologies d'assistance.
 
-Un exemple d'utilisation de `aria-owns` inclut les sous-menus contextuels qui apparaissent visuellement positionnés près d'un menu parent, mais qui ne peuvent pas être imbriqués dans le DOM à l'intérieur du menu parent car cela affecterait la présentation visuelle. Dans ce cas, utilisez `aria-owns` pour présenter le sous-menu comme un enfant du menu parent pour un lecteur d'écran.
+Un exemple d'utilisation de `aria-owns` inclut les sous-menus contextuels qui apparaissent visuellement positionnés près d'un menu parent, mais qui ne peuvent pas être imbriqués dans le DOM à l'intérieur du menu parent, car cela affecterait la présentation visuelle. Dans ce cas, utilisez `aria-owns` pour présenter le sous-menu comme un enfant du menu parent pour un lecteur d'écran.
 
 > [!NOTE]
 > L'attribut `aria-owns` ne doit être utilisé que lorsque la relation parent/enfant ne peut pas être déterminée à partir du DOM.
@@ -41,9 +41,9 @@ Si un élément possède à la fois `aria-owns` et des enfants dans le DOM, l'or
 
 Cet ordre peut être modifié en incluant les références d'ID des enfants DOM courant dans la valeur `aria-owns`.
 
-La propriété {{CSSxRef('order')}}, faisant partie des mises en page flex ou grid, peut être utilisée pour modifier l'ordre des éléments flex et grid, les faisant apparaître dans un ordre différent de leur ordre dans le document source, créant une divergence de l'ordre logique des éléments. Bien qu'il puisse être tentant d'ordonner la couche d'accessibilité afin de correspondre aux changements d'ordre créés avec la propriété CSS {{CSSxRef('order')}}, éviter à la fois la propriété `order` et l'attribut `aria-owns` est la meilleure option.
+La propriété {{CSSxRef('order')}}, faisant partie des dispositions flexibles ou de grilles, peut être utilisée pour modifier l'ordre des éléments flexibles et grilles, les faisant apparaître dans un ordre différent de leur ordre dans le document source, créant une divergence de l'ordre logique des éléments. Bien qu'il puisse être tentant d'ordonner la couche d'accessibilité afin de correspondre aux changements d'ordre créés avec la propriété CSS {{CSSxRef('order')}}, éviter à la fois la propriété `order` et l'attribut `aria-owns` est la meilleure option.
 
-Assurez-vous que vos éléments possédés n'ont qu'un seul propriétaire. Ne spécifiez pas l'`id` d'un élément dans l'attribut `aria-owns` de plus d'un autre élément. Un élément ne peut avoir qu'un seul propriétaire.
+Assurez-vous que vos éléments possédés n'ont qu'un seul propriétaire. Ne définissez pas un `id` d'un élément dans l'attribut `aria-owns` de plus d'un autre élément. Un élément ne peut avoir qu'un seul propriétaire.
 
 > [!WARNING]
 > Bien que [`aria-owns` soit maintenant pris en charge <sup>(angl.)</sup>](https://a11ysupport.io/tech/aria/aria-owns_attribute) dans tous les navigateurs modernes, `aria-owns` peut ne pas être exposé aux utilisateur·ice·s de macOS et iOS utilisant VoiceOver avant iOS 17.3 et macOS 14.3.

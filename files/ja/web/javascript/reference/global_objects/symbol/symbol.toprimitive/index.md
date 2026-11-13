@@ -1,11 +1,10 @@
 ---
 title: Symbol.prototype[Symbol.toPrimitive]()
+short-title: "[Symbol.toPrimitive]()"
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.toPrimitive]()`** メソッドは、{{jsxref("Symbol")}} オブジェクトをプリミティブ値に変換します。
 

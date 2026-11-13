@@ -3,8 +3,6 @@ title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 
-{{JSRef}}
-
 > [!WARNING]
 > Bien que `String.prototype.substr(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui définit l'ensemble des fonctionnalités historiques qui doivent être évitées autant que possible. On utilisera la méthode {{jsxref("String.prototype.substring()")}} à la place.
 

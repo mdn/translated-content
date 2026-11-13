@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`sittingToStandingTransform`** は {{domxref("VRStageParameters")}} インターフェイスの読み取り専用プロパティで、 {{domxref("VRFrameData")}} の座位空間ビュー行列を立位空間に変換する行列です。
 

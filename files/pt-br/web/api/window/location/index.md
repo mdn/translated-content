@@ -7,7 +7,7 @@ slug: Web/API/Window/location
 
 O **`Window.location`**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.
 
-Embora `Window.location` seja apenas um objeto de leitura de localização, você pode também atribuir uma {{domxref("DOMString")}} para ele. Isto significa que você pode trabalhar com `location` como se fosse uma string na maioria dos casos: `location = 'http://www.exemplo.com'` é um sinônimo de `location.href = 'http://www.exemplo.com'`.
+Embora `Window.location` seja apenas um objeto de leitura de localização, você pode também atribuir uma {{jsxref("String")}} para ele. Isto significa que você pode trabalhar com `location` como se fosse uma string na maioria dos casos: `location = 'http://www.exemplo.com'` é um sinônimo de `location.href = 'http://www.exemplo.com'`.
 
 ## Sintaxe
 
@@ -470,5 +470,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the {{Glossary("browsing context")}}, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/pt-BR/docs/DOM/Manipulating_the_browser_history)
+- [Manipulating the browser history](/pt-BR/docs/Web/API/History_API)
 - [hashchange](/pt-BR/docs/Web/API/Window/hashchange_event)

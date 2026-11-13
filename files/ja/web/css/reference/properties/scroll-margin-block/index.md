@@ -1,12 +1,11 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/Reference/Properties/scroll-margin-block
-original_slug: Web/CSS/scroll-margin-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
+`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-margin-block")}}
 
@@ -56,7 +55,7 @@ scroll-margin-block: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,7 +64,7 @@ scroll-margin-block: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -74,8 +73,8 @@ scroll-margin-block: 2em;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-block-end`](/ja/docs/Web/CSS/scroll-margin-block-end)
-- [`scroll-margin-block-start`](/ja/docs/Web/CSS/scroll-margin-block-start)
+- {{cssxref("scroll-margin-block-end")}}
+- {{cssxref("scroll-margin-block-start")}}
 
 ## 構文
 
@@ -119,5 +118,5 @@ scroll-margin 系のプロパティは、このボックスを[スナップポ�
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

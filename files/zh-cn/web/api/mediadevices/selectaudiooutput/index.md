@@ -51,8 +51,8 @@ selectAudioOutput(options)
 
 对此 API 的访问受以下约束：
 
-- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
-- 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。
+- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中调用。
+- 需要[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)。
   用户必须与页面或 UI 元素进行交互，才能使用此特性。
 - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的控制。
 

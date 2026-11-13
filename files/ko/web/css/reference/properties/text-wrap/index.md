@@ -182,6 +182,6 @@ h2 {
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS 택스트 모듈](/ko/docs/Web/CSS/CSS_text)
+- [CSS 택스트 모듈](/ko/docs/Web/CSS/Guides/Text)
 - developer.chrome.com의 [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance)
 - developer.chrome.com의 [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/)

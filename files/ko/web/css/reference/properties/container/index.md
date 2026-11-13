@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
-**container** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 해당 요소를 쿼리 컨테이너로 설정하고, [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 사용되는 [컨테인먼트 맥락](/ko/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)의 이름과 유형을 지정합니다.
+**container** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 해당 요소를 쿼리 컨테이너로 설정하고, [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 사용되는 [컨테인먼트 맥락](/ko/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)의 이름과 유형을 지정합니다.
 
 ## 구성 속성
 

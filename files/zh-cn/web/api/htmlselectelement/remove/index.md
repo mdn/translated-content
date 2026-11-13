@@ -1,11 +1,14 @@
 ---
-title: HTMLSelectElement.remove()
+title: HTMLSelectElement：remove() 方法
+short-title: remove()
 slug: Web/API/HTMLSelectElement/remove
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLSelectElement.remove()`** 方法从一个 select 元素中删除指定序数的 option 元素。没有传参时为删除当前元素本身：[ChildNode.remove()](/zh-CN/docs/Web/API/Element/remove)。
+**`HTMLSelectElement.remove()`** 方法会从 select 元素的 options 集合中移除指定索引处的元素。
 
 ## 语法
 
@@ -15,33 +18,38 @@ remove(index)
 
 ### 参数
 
-- `index` 是从 option {{ domxref("HTMLOptionElement") }} 集合中要移除元素的序数。如果序数对应的元素不存在，调用这个方法就没有任何效果。
+- `index`
+  - : 一个从零开始的整数，表示要从集合中移除的 {{ domxref("HTMLOptionElement") }} 的索引。如果未找到该索引，则此方法不会产生任何效果。
 
-## 例子
+### 返回值
 
-```js
-var sel = document.getElementById("existingList");
-sel.remove(1);
+无（{{jsxref("undefined")}}）。
 
-/*
-  上面的代码会将下面的 select 元素结构：
+## 示例
 
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-
-  变成这样：
-
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-*/
+```html
+<select id="existingList" name="existingList">
+  <option value="1">选项：值 1</option>
+  <option value="2">选项：值 2</option>
+  <option value="3">选项：值 3</option>
+</select>
 ```
 
-## Specifications
+```js
+let sel = document.getElementById("existingList");
+sel.remove(1);
+```
+
+现在的 HTML 是：
+
+```html
+<select id="existingList" name="existingList">
+  <option value="1">选项：值 1</option>
+  <option value="3">选项：值 3</option>
+</select>
+```
+
+## 规范
 
 {{Specifications}}
 
@@ -49,7 +57,7 @@ sel.remove(1);
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- {{ domxref("ChildNode.remove") }}，当没有参数时 {{ domxref("HTMLSelectElement") }} 调用的是这个方法
-- {{domxref("HTMLSelectElement") }} 实现了这个方法。
+- {{ domxref("Element.remove") }}，当在 {{ domxref("HTMLSelectElement") }} 上调用无参数的 remove 时，会调用的对应方法。
+- 实现该接口的 {{domxref("HTMLSelectElement") }}。

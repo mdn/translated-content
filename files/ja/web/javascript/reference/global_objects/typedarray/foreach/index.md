@@ -1,24 +1,23 @@
 ---
 title: TypedArray.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
-
-{{JSRef}}
 
 **`forEach()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素ごとに一度与えられた関数を実行します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.forEach()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.forEach()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.forEach()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);
 
 uint8.forEach((element) => console.log(element));
 
-// Expected output: 10
-// Expected output: 20
-// Expected output: 30
+// 予想される結果: 10
+// 予想される結果: 20
+// 予想される結果: 30
 ```
 
 ## 構文
@@ -78,7 +77,7 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 ## 関連情報
 
-- [`TypedArray.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [`TypedArray.prototype.forEach` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
 - [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}

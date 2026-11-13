@@ -1,9 +1,8 @@
 ---
 title: mask-origin
 slug: Web/CSS/Reference/Properties/mask-origin
-original_slug: Web/CSS/mask-origin
 l10n:
-  sourceCommit: 19895ee6410d39f293a06c19a641925206eece73
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクの原点を設定します。このプロパティは、マスクの位置決め領域、つまりマスク画像が配置される領域を決定します。 HTML 要素は、コンテンツの境界ボックス、パディングボックス、またはコンテンツボックス内にマスクを含めることができますが、 SVG 要素（関連付けられた CSS レイアウトボックスを持たないもの）は、塗りつぶし、ストローク、またはビューボックス内にマスクを含めることができます。
@@ -37,11 +36,11 @@ mask-origin: unset;
 `mask-origin` プロパティは、 `<coord-box>` キーワードの値のカンマで区切られたリストで、以下のものが含まれます。
 
 - `content-box`
-  - : 位置が[コンテンツボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#content-box)からの相対位置になります。
+  - : 位置が[コンテンツボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)からの相対位置になります。
 - `padding-box`
-  - : 位置が[パディングボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#padding-box)からの相対位置になります。
+  - : 位置が[パディングボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box)からの相対位置になります。
 - `border-box`
-  - : 位置が[境界ボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#border-box)からの相対位置になります。
+  - : 位置が[境界ボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#border-box)からの相対位置になります。
 - `fill-box`
   - : 位置がオブジェクトの囲みボックスからの相対位置になります。
 - `stroke-box`
@@ -63,7 +62,7 @@ mask-origin: unset;
 
 単一のボックスとしてレンダリングされる要素の場合、このプロパティは、`mask-image` プロパティによって参照される画像のマスクの位置指定領域、つまり原点の位置を指定します。
 
-複数の行にまたがるインラインボックスなど、複数のボックスとしてレンダリングされる要素の場合、 `mask-origin` プロパティは、 {{cssxref("box-decoration-break")}} プロパティがマスクの位置指定領域を決定するために。作用するボックスを指定します。
+複数の行にまたがるインラインボックスなど、複数のボックスとしてレンダリングされる要素の場合、 `mask-origin` プロパティは、 {{cssxref("box-decoration-break")}} プロパティがマスクの位置指定領域を決定するために作用するボックスを指定します。
 
 `mask-origin` は、マスクレイヤーの画像をクリップさせる場合があります。例えば、 {{cssxref("mask-clip")}} プロパティが `padding-box` に設定され、 `mask-origin` が `border-box` に設定され、 {{cssxref("mask-position")}} が `top left` の隅に設定され、要素が境界線を持つ場合、マスクレイヤー画像は左上端で切り取られます。
 
@@ -112,7 +111,7 @@ div {
   border: 10px solid blue;
   background-color: #8cffa0;
   padding: 10px;
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 section {
   border: 1px solid black;
@@ -194,9 +193,9 @@ div {
   background-color: #8cffa0;
   padding: 10px;
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-position:
     top left,
     top right,
@@ -222,9 +221,13 @@ div {
 
 ## 関連情報
 
+- {{cssxref("background-origin")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-position")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} 一括指定
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

@@ -2,7 +2,7 @@
 title: Types de pages
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 l10n:
-  sourceCommit: c68f51255b41e080f34f27aafc6fcd3aafa52114
+  sourceCommit: 964ab8ae30c5ce0a343cc6d0f28c1b94389bae89
 ---
 
 Il existe plusieurs types de pages qui sont utilisés de façon répétée sur MDN.
@@ -28,15 +28,15 @@ Quelques points à garder à l'esprit&nbsp;:
 
 Lorsque vous créez une nouvelle page, vous pouvez vous assurer d'utiliser la bonne structure et le bon contenu en consultant l'un de nos modèles de page — voir les sections ci-dessous.
 Vous pouvez trouver le code source exact de chaque modèle (si vous souhaitez le copier) en suivant le lien «&nbsp;Source sur **GitHub**&nbsp;» en bas de chaque modèle.
-Ces modèles de page n'ont pas beaucoup de sens en tant que pages publiées, mais si vous consultez leur code source, vous verrez qu'ils contiennent de nombreux commentaires utiles, des espaces réservés et des conseils détaillant comment remplir les informations manquantes et créer votre page.
+Ces modèles de page n'ont pas beaucoup de sens en tant que pages publiées, mais si vous consultez leur code source, vous pouvez voir qu'ils contiennent de nombreux commentaires utiles, des espaces réservés et des conseils détaillant comment remplir les informations manquantes et créer votre page.
 
-En haut de chaque modèle, vous trouverez une section intitulée _À supprimer avant publication_ — elle contient des informations sur la façon de remplir le titre de la page, le slug, le menu latéral et les tags (par exemple, des informations qui n'apparaissent pas dans le corps de l'article).
+En haut de chaque modèle, vous pouvez trouver une section intitulée _À supprimer avant publication_ — elle contient des informations sur la façon de remplir le titre de la page, le slug, le menu latéral et les tags (par exemple, des informations qui n'apparaissent pas dans le corps de l'article).
 Vous devez supprimer cette section après avoir suivi les instructions, avant que la page ne soit considérée comme terminée.
 
 ## Anciennes mises en page
 
 Il arrive parfois de tomber sur d'anciennes pages de référence qui sont très différentes des modèles présentés ici.
-Par exemple, les anciennes pages d'interface regroupaient tous les membres d'une interface sur une seule page, et il n'existait pas de pages individuelles pour chaque méthode/propriété/constructeur/écouteur d'événement.
+Par exemple, les anciennes pages d'interface regroupaient tous les membres d'une interface sur une seule page, et il n'existait pas de pages individuelles pour chaque méthode/propriété/constructeur/écouteur d'évènement.
 
 Si vous tombez sur un ensemble de pages au format ancien, nous serions ravi·e·s que vous les mettiez à jour au nouveau format&nbsp;!
 Cependant, nous comprenons que cela puisse représenter beaucoup de travail.
@@ -50,7 +50,7 @@ Si le travail est plus conséquent, vous devez prendre en compte quelques facteu
 
 Si vous souhaitez constituer une équipe pour travailler sur une mise à jour, ou simplement signaler ou discuter d'un contenu à mettre à jour, n'hésitez pas à [ouvrir un ticket de contenu <sup>(angl.)</sup>](https://github.com/mdn/content/issues) ou à [nous demander de l'aide](/fr/docs/MDN/Community/Communication_channels).
 
-## Clé front-matter « page-type »
+## Clé front-matter `page-type`
 
 Nous avons défini une clé front-matter `page-type` pour identifier clairement le type de page MDN. Les modèles ci-dessous indiquent quelle valeur de `page-type` utiliser pour chaque type de page.
 
@@ -58,7 +58,7 @@ Pour la liste complète des types de pages, voir [La clé front-matter page-type
 
 ## Modèles de page
 
-Vous trouverez ci-dessous des exemples des différents types de pages présents sur MDN, ainsi que des modèles à utiliser pour créer de nouveaux contenus selon le type de contenu à présenter, notamment&nbsp;:
+Vous pouvez trouver ci-dessous des exemples des différents types de pages présents sur MDN, ainsi que des modèles à utiliser pour créer de nouveaux contenus selon le type de contenu à présenter, notamment&nbsp;:
 
 - [Page d'accueil d'API](#page_daccueil_dapi)
 - [Page de référence d'API](#page_de_référence_dapi)
@@ -66,8 +66,22 @@ Vous trouverez ci-dessous des exemples des différents types de pages présents 
 - [Page de référence ARIA](#page_de_référence_aria)
 - [Page conceptuelle](#page_conceptuelle)
 - [Page de référence de fonctionnalité CSS](#page_de_référence_de_fonctionnalité_css)
-- [Page d'accueil de module CSS](#page_daccueil_de_module_css)
+- [Page de module CSS](#page_de_module_css)
 - [Page de glossaire](#page_de_glossaire)
+- [Page de classe JavaScript](#page_de_classe_javascript)
+- [Page de constructeur JavaScript](#page_de_constructeur_javascript)
+- [Page d'erreur JavaScript](#page_derreur_javascript)
+- [Page de fonction JavaScript](#page_de_fonction_javascript)
+- [Page de propriété globale JavaScript](#page_de_propriété_globale_javascript)
+- [Page de propriété d'accesseur d'instance JavaScript](#page_de_propriété_daccesseur_dinstance_javascript)
+- [Page de propriété de données d'instance JavaScript](#page_de_propriété_de_données_dinstance_javascript)
+- [Page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript)
+- [Page d'espace de noms JavaScript](#page_despace_de_noms_javascript)
+- [Page d'opérateur JavaScript](#page_dopérateur_javascript)
+- [Page d'instruction JavaScript](#page_dinstruction_javascript)
+- [Page de propriété d'accesseur statique JavaScript](#page_de_propriété_daccesseur_statique_javascript)
+- [Page de propriété de données statique JavaScript](#page_de_propriété_de_données_statique_javascript)
+- [Page de méthode statique JavaScript](#page_de_méthode_statique_javascript)
 - [Page de référence d'élément HTML](#page_de_référence_délément_html)
 - [Page de référence d'attribut HTML](#page_de_référence_dattribut_html)
 - [Page de référence d'en-tête HTTP](#page_de_référence_den-tête_http)
@@ -84,13 +98,13 @@ Elle ne lie pas directement vers des méthodes ou propriétés spécifiques des 
 Il s'agit principalement d'une page de _navigation_, mais elle sert aussi de page de _référence_ synthétique pour l'API.
 
 Il existe des cas où plusieurs API distinctes sont définies dans leurs propres spécifications, mais sont étroitement liées et il est donc pertinent de les regrouper sur une seule page d'accueil d'API.
-Par exemple, la [Generic Sensor API](https://w3c.github.io/sensors/) couvre les aspects généraux des capteurs, mais des aspects plus spécifiques sont couverts dans d'autres API comme [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
+Par exemple, [l'API Generic Sensor <sup>(angl.)</sup>](https://w3c.github.io/sensors/) couvre les aspects généraux des capteurs, mais des aspects plus spécifiques sont couverts dans d'autres API comme [Ambient Light Sensor <sup>(angl.)</sup>](https://w3c.github.io/ambient-light/), [Motion Sensor <sup>(angl.)</sup>](https://w3c.github.io/motion-sensors/), etc.
 Dans ces cas, de nombreux concepts de haut niveau sont identiques, il n'est donc pas pertinent de les répéter sur plusieurs pages d'accueil.
 Il est alors préférable, pour éviter la répétition et améliorer la recherche, de tout regrouper sous une seule page d'accueil «&nbsp;Web sensors&nbsp;».
 
 #### Exemple
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [API WebVR](/fr/docs/Web/API/WebVR_API)
 
 #### Modèle
 
@@ -101,7 +115,7 @@ Il est alors préférable, pour éviter la répétition et améliorer la recherc
 > [!NOTE]
 > Aussi appelée _page d'accueil d'interface_.
 
-Une **page de référence d'API** liste toutes les méthodes, propriétés, événements, etc. qui sont membres d'une interface ou classe donnée.
+Une **page de référence d'API** liste toutes les méthodes, propriétés, évènements, etc. qui sont membres d'une interface ou classe donnée.
 Elle donne un aperçu de ce que fait la classe ou l'interface, ou de son usage, et fournit des liens vers la documentation de chacun de ses membres.
 Elle est plus détaillée qu'une page d'accueil d'API, qui lie généralement vers plusieurs pages de référence d'API.
 
@@ -109,9 +123,9 @@ Elle est plus détaillée qu'une page d'accueil d'API, qui lie généralement ve
 
 - [L'interface de requête](/fr/docs/Web/API/Request) de [L'API Fetch](/fr/docs/Web/API/Fetch_API).
 
-#### Templates
+#### Modèles
 
-- [API reference page template](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
+- [Modèle de page de référence d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
 ### Sous-page de référence d'API
 
@@ -120,17 +134,17 @@ Elle documente en détail un seul membre d'interface.
 
 #### Exemples
 
-- [Méthode `count()`](/fr/docs/Web/API/IDBIndex/count) de l'interface [IDBIndex](/fr/docs/Web/API/IDBIndex) (faisant partie de l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API))
-- [Propriété `capabilities`](/fr/docs/Web/API/VRDisplay/capabilities) de l'interface [VRDisplay](/fr/docs/Web/API/VRDisplay) (faisant partie de l'[API WebVR](/fr/docs/Web/API/WebVR_API))
-- [Constructeur `Request()`](/fr/docs/Web/API/Request/Request) de l'interface [Request](/fr/docs/Web/API/Request) (faisant partie de l'[API Fetch](/fr/docs/Web/API/Fetch_API))
-- [Événement `vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) (faisant partie de l'[API WebVR](/fr/docs/Web/API/WebVR_API), rattaché à l'interface [Window](/fr/docs/Web/API/Window))
+- [La méthode `count()`](/fr/docs/Web/API/IDBIndex/count) de l'interface [IDBIndex](/fr/docs/Web/API/IDBIndex) (faisant partie de [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API))
+- [La propriété `capabilities`](/fr/docs/Web/API/VRDisplay/capabilities) de l'interface [VRDisplay](/fr/docs/Web/API/VRDisplay) (faisant partie de [l'API WebVR](/fr/docs/Web/API/WebVR_API))
+- [Le constructeur `Request()`](/fr/docs/Web/API/Request/Request) de l'interface [Request](/fr/docs/Web/API/Request) (faisant partie de [l'API Fetch](/fr/docs/Web/API/Fetch_API))
+- [L'évènement `vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) (faisant partie de [l'API WebVR](/fr/docs/Web/API/WebVR_API), rattaché à l'interface [Window](/fr/docs/Web/API/Window))
 
 #### Modèles
 
 - [Modèle de sous-page de méthode d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
 - [Modèle de sous-page de propriété d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
 - [Modèle de sous-page de constructeur d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
-- [Modèle de sous-page d'événement d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
+- [Modèle de sous-page d'évènement d'API](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
 ### Page de référence d'élément HTML
 
@@ -138,7 +152,7 @@ Une **page de référence HTML** liste tous les attributs disponibles sur un él
 
 #### Exemple
 
-- [Élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
+- [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
 
 #### Modèles
 
@@ -153,7 +167,7 @@ Une page de référence d'attribut HTML liste toutes les valeurs existantes pour
 
 #### Exemple
 
-- [Attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
+- [L'attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
 
 #### Modèles
 
@@ -165,32 +179,32 @@ Une **page de référence SVG** liste tous les attributs disponibles sur un él�
 
 #### Exemple
 
-- [Élément \<g>](/fr/docs/Web/SVG/Reference/Element/g)
+- [L'élément `<g>`](/fr/docs/Web/SVG/Reference/Element/g)
 
 #### Modèles
 
 - [Modèle de page d'élément SVG](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
-### Page d'accueil de module CSS
+### Page de module CSS
 
-Chaque **module [CSS](/fr/docs/Web/CSS)** représente une spécification CSS qui fournit la prise en charge de certaines fonctionnalités et implémentations en CSS. Par exemple, le module [Modèle de boîte CSS](/fr/docs/Web/CSS/CSS_box_model) représente la [spécification](/fr/docs/Web/CSS/CSS_box_model#spécifications) qui décrit les propriétés de marge et de remplissage permettant de créer des espacements dans et autour d'une boîte CSS.
+Chaque **module [CSS](/fr/docs/Web/CSS)** représente une spécification CSS qui fournit la prise en charge de certaines fonctionnalités et implémentations en CSS. Par exemple, le module [Modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model) représente la [spécification](/fr/docs/Web/CSS/Guides/Box_model#spécifications) qui décrit les propriétés de marge et de remplissage permettant de créer des espacements dans et autour d'une boîte CSS.
 
-Une **page d'accueil de module CSS** donne un aperçu des fonctionnalités offertes par le module et liste toutes les propriétés, types de données, fonctions CSS, etc. proposés par le module. Lorsque c'est possible, la page d'accueil du module CSS propose une démonstration rapide de ce qu'il est possible de réaliser avec les propriétés du module via un exemple interactif.
-La page d'accueil du module sert principalement de page de _navigation_, mais fait aussi office de page de _référence_ synthétique pour le module.
+Une **page de module CSS** donne un aperçu des fonctionnalités offertes par le module et liste toutes les propriétés, types de données, fonctions CSS, etc. proposés par le module. Lorsque c'est possible, la page du module CSS propose une démonstration rapide de ce qu'il est possible de réaliser avec les propriétés du module avec un exemple interactif.
+La page du module sert principalement de page de _navigation_, mais fait aussi office de page de _référence_ synthétique pour le module.
 
 Certaines propriétés et fonctionnalités associées qui appartiennent à d'autres modules, mais qui sont étroitement liées à la fonctionnalité offerte par le module que vous documentez, peuvent aussi être abordées dans une section _Concepts associés_.
-Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/CSS_animations#concepts_associés) de la page d'accueil du module CSS animations.
+Par exemple, le type de données `<easing-function>` et la media query `prefers-reduced-motion` ne sont pas couverts dans le module CSS animations, mais comme ils sont étroitement liés aux animations CSS, il est pertinent de les mettre en avant dans la section [Concepts associés](/fr/docs/Web/CSS/Guides/Animations#concepts_associés) de la page du module CSS animations.
 
 #### Exemples
 
-- [Animations CSS](/fr/docs/Web/CSS/CSS_animations)
-- [Interface utilisateur CSS de base](/fr/docs/Web/CSS/CSS_basic_user_interface)
-- [Effets de filtre CSS](/fr/docs/Web/CSS/CSS_filter_effects)
-- [Alignement du défilement CSS](/fr/docs/Web/CSS/CSS_scroll_snap)
+- [Animations CSS](/fr/docs/Web/CSS/Guides/Animations)
+- [Interface utilisateur CSS de base](/fr/docs/Web/CSS/Guides/Basic_user_interface)
+- [Effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects)
+- [Alignement du défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
 
 #### Modèles
 
-- [Modèle de page d'accueil de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [Modèle de page de module CSS](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### Page de référence de fonctionnalité CSS
 
@@ -199,8 +213,8 @@ Une **page de référence CSS** liste toutes les syntaxes disponibles pour une f
 #### Exemples
 
 - [Propriété `background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
-- [Pseudo-classe `:hover`](/fr/docs/Web/CSS/:hover)
-- [Règle @media](/fr/docs/Web/CSS/@media)
+- [Pseudo-classe `:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover)
+- [Règle @media](/fr/docs/Web/CSS/Reference/At-rules/@media)
 
 #### Modèles
 
@@ -234,11 +248,219 @@ Une **page de référence ARIA** décrit un [rôle](/fr/docs/Web/Accessibility/A
 
 - [Modèle de page ARIA](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
 
+### Page de classe JavaScript
+
+Une **page de classe JavaScript** fournit un aperçu d'une classe JavaScript, y compris son objectif et son utilisation, et répertorie toutes les méthodes et propriétés, statiques ou d'instance, de la classe. Une classe JavaScript est définie comme un objet fonction intrinsèque avec une propriété `prototype` qui est partagée par toutes les instances de la classe. Selon cette définition, `BigInt` est également une classe, bien qu'elle ne puisse pas être appelée avec `new`.
+
+#### Exemples
+
+- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Temporal.ZonedDateTime`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime)
+
+#### Modèles
+
+- [Modèle de page de classe JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_class_page_template)
+
+### Page de constructeur JavaScript
+
+Une **page de constructeur JavaScript** fournit des informations sur le constructeur d'une classe JavaScript. Elle fournit des informations sur la façon de l'appeler. Le constructeur d'une classe est simplement défini comme l'objet fonction lui-même&nbsp;: par exemple, `BigInt()` est un constructeur, bien qu'il ne puisse pas être appelé avec `new`. Toutes les classes n'ont pas un constructeur qui mérite d'être documenté&nbsp;: la classe {{JSxRef("TypedArray")}}, par exemple, est une classe abstraite qui lève toujours une exception lorsqu'elle est appelée, et ne possède donc pas sa propre page.
+
+#### Exemples
+
+- [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
+- [`Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+- [`Temporal.ZonedDateTime()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime)
+
+#### Modèles
+
+- [Modèle de page de constructeur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template)
+
+### Page d'erreur JavaScript
+
+Une **page d'erreur JavaScript** fournit des informations sur les situations dans lesquelles une erreur JavaScript se produit et sur la façon de la corriger. Elle est principalement destinée à être utilisée comme référence par les outils de développement. Ces références d'erreurs sont principalement indexées par les messages d'erreur de Firefox — un message d'erreur par page. Consultez également le guide [Comment documenter les erreurs](/fr/docs/MDN/Writing_guidelines/Howto/Document_web_errors).
+
+#### Exemples
+
+- [ReferenceError: "x" is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)
+
+#### Modèles
+
+- [Modèle de page d'erreur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_error_page_template)
+
+### Page de fonction JavaScript
+
+Une **page de fonction JavaScript** fournit des informations sur une fonction JavaScript qui n'est rattachée à aucune classe ni à aucun espace de noms. Elle fournit des informations sur l'objectif, les paramètres et la valeur de retour de la fonction.
+
+Si la fonction est disponible statiquement sur une classe ou un espace de noms, utilisez plutôt le modèle de [page de méthode statique JavaScript](#page_de_méthode_statique_javascript). Si la fonction peut être considérée comme une classe (parce qu'elle possède une propriété `prototype`), utilisez plutôt le modèle de [page de classe JavaScript](#page_de_classe_javascript). Le principal indice qui permet d'utiliser le modèle de page de fonction native est que la propriété possède une valeur de type fonction et commence par une lettre minuscule.
+
+#### Exemples
+
+- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+#### Modèles
+
+- [Modèle de page de fonction JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_function_page_template)
+
+### Page de propriété globale JavaScript
+
+Une **page de propriété globale JavaScript** fournit des informations sur une propriété globale JavaScript qui n'est rattachée à aucune classe ni à aucun espace de noms. Elle fournit des informations sur l'objectif et l'utilisation de la propriété.
+
+Si la propriété est disponible statiquement sur une classe ou un espace de noms, utilisez plutôt le modèle de [page de propriété de données statique JavaScript](#page_de_propriété_de_données_statique_javascript). Si la propriété est une fonction, utilisez plutôt le modèle de [page de fonction JavaScript](#page_de_fonction_javascript). Si la propriété est un objet simple dont l'objectif principal est d'héberger d'autres propriétés, utilisez plutôt le modèle de [page d'espace de noms JavaScript](#page_despace_de_noms_javascript). Le principal indice qui permet d'utiliser le modèle de page de propriété globale est que la propriété possède soit une valeur primitive, soit un nom commençant par une lettre minuscule, et qu'elle n'est pas une fonction.
+
+#### Exemples
+
+- [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`globalThis`](/fr/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+#### Modèles
+
+- [Modèle de page de propriété globale JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_global_property_page_template)
+
+### Page de propriété d'accesseur d'instance JavaScript
+
+Une **page de propriété d'accesseur d'instance JavaScript** fournit des informations sur une propriété d'accesseur d'une instance de classe JavaScript. Une propriété d'accesseur comprend un accesseur et parfois un mutateur, et elle est presque toujours définie sur le prototype de l'instance. La spécification utilise la syntaxe `get Constructor.prototype.propertyName` pour définir une propriété d'accesseur. Presque toutes les propriétés d'accesseur d'instance non historiques du langage JavaScript principal ne possèdent qu'un accesseur, ce qui les rend accessibles en lecture seule.
+
+Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript).
+
+#### Exemples
+
+- [`Map.prototype.size`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
+
+#### Modèles
+
+- [Modèle de page de propriété d'accesseur d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_accessor_property_page_template)
+
+### Page de propriété de données d'instance JavaScript
+
+Une **page de propriété de données d'instance JavaScript** fournit des informations sur une propriété de données d'une instance de classe JavaScript. Une propriété de données comprend une valeur et un indicateur d'écriture, et peut être définie sur le prototype de l'instance ou directement sur l'instance elle-même.
+
+Chaque instance possède une propriété de données appelée [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui pointe vers la fonction constructeur ayant créé l'instance. Cette propriété de données est mentionnée dans la page principale de la classe, mais elle n'est pas documentée dans une page distincte pour chaque classe.
+
+Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript).
+
+#### Exemples
+
+- [`Array`: `length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`Error.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+
+#### Modèles
+
+- [Modèle de page de propriété de données d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_data_property_page_template)
+
+### Page de méthode d'instance JavaScript
+
+Une **page de méthode d'instance JavaScript** fournit des informations sur une méthode d'une instance de classe JavaScript. Une méthode est une propriété de fonction de l'instance. En général, une méthode est une propriété de données définie sur le prototype de l'instance, mais il existe quelques exceptions historiques, comme [`Intl.DateTimeFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), qui est une propriété d'accesseur retournant une fonction liée. Pour faciliter la compréhension, nous les traitons comme des méthodes normales.
+
+#### Exemples
+
+- [`Array.prototype.push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
+#### Modèles
+
+- [Modèle de page de méthode d'instance JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_method_page_template)
+
+### Page d'espace de noms JavaScript
+
+Une **page d'espace de noms JavaScript** donne un aperçu d'un espace de noms JavaScript, notamment de son objectif et de son utilisation, et répertorie toutes les méthodes et propriétés de l'espace de noms. Un espace de noms JavaScript est défini comme un objet simple qui héberge d'autres propriétés.
+
+#### Exemples
+
+- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [`Temporal`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+- [`Temporal.Now`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now)
+
+#### Modèles
+
+- [Modèle de page d'espace de noms JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_namespace_page_template)
+
+### Page d'opérateur JavaScript
+
+Une **page d'opérateur JavaScript** fournit des informations sur un opérateur JavaScript, notamment sur son objectif et son utilisation. Le terme _opérateur_ ne fait pas l'objet d'un consensus universel. Pour MDN, nous le définissons comme une syntaxe paramétrée par un ou plusieurs opérandes, généralement sous la forme d'expressions ou de constructions assimilables à des expressions.
+
+#### Exemples
+
+- [Addition (`+`)](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
+- [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await)
+- [`class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
+
+#### Modèles
+
+- [Modèle de page d'opérateur JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_operator_page_template)
+
+### Page d'instruction JavaScript
+
+Une **page d'instruction JavaScript** fournit des informations sur une instruction ou une déclaration JavaScript, notamment sur son objectif, sa syntaxe et son utilisation. Elle décrit les composants syntaxiques de l'instruction et la façon dont elle affecte l'exécution du programme ou introduit des liaisons.
+
+Pour les formes d'expression, comme une expression de fonction ou une expression de classe, utilisez plutôt le modèle de [page d'opérateur JavaScript](#page_dopérateur_javascript).
+
+#### Exemples
+
+- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
+
+#### Modèles
+
+- [Modèle de page d'instruction JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_statement_page_template)
+
+### Page de propriété d'accesseur statique JavaScript
+
+Une **page de propriété d'accesseur statique JavaScript** fournit des informations sur une propriété d'accesseur accessible directement sur une classe ou un espace de noms JavaScript. Elle décrit la valeur retournée par l'accesseur et, lorsqu'un mutateur est présent, les valeurs qu'il accepte ainsi que l'effet de l'affectation.
+
+Pour une propriété d'accesseur d'une instance, utilisez plutôt le modèle de [page de propriété d'accesseur d'instance JavaScript](#page_de_propriété_daccesseur_dinstance_javascript).
+
+#### Exemples
+
+- [`Array[Symbol.species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`RegExp.input`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+
+#### Modèles
+
+- [Modèle de page de propriété d'accesseur statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_accessor_property_page_template)
+
+### Page de propriété de données statique JavaScript
+
+Une **page de propriété de données statique JavaScript** fournit des informations sur une propriété de données accessible directement sur une classe ou un espace de noms JavaScript. Elle décrit la valeur, les attributs, l'objectif et l'utilisation de la propriété.
+
+Si la propriété est une propriété d'accesseur, utilisez plutôt le modèle de [page de propriété d'accesseur statique JavaScript](#page_de_propriété_daccesseur_statique_javascript). Si la propriété possède une valeur de type fonction, utilisez plutôt le modèle de [page de méthode statique JavaScript](#page_de_méthode_statique_javascript). Les classes et les espaces de noms exposés comme des propriétés possèdent leurs propres [pages de classe](#page_de_classe_javascript) ou [pages d'espace de noms](#page_despace_de_noms_javascript).
+
+#### Exemples
+
+- [`Math.PI`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+- [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+#### Modèles
+
+- [Modèle de page de propriété de données statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_data_property_page_template)
+
+### Page de méthode statique JavaScript
+
+Une **page de méthode statique JavaScript** fournit des informations sur une méthode appelée directement sur une classe ou un espace de noms JavaScript. Elle décrit l'objectif, la syntaxe, les paramètres, la valeur de retour et les exceptions de la méthode.
+
+Pour une méthode d'instance, utilisez plutôt le modèle de [page de méthode d'instance JavaScript](#page_de_méthode_dinstance_javascript). Pour une fonction native, utilisez plutôt le modèle de [page de fonction JavaScript](#page_de_fonction_javascript).
+
+#### Exemples
+
+- [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- [`Temporal.Now.instant()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant)
+
+#### Modèles
+
+- [Modèle de page de méthode statique JavaScript](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_method_page_template)
+
 ### Page conceptuelle
 
 Une **page conceptuelle** est une page de _guide_ qui explique ou enseigne quelque chose.
 En général, si une page contient principalement du texte explicatif et ne correspond à aucun autre type de page, il s'agit probablement d'une page conceptuelle.
-Une discussion approfondie sur un sujet peut être répartie sur plusieurs pages conceptuelles, reliées entre elles à l'aide des macros [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) et [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs).
+Une discussion approfondie sur un sujet peut être répartie sur plusieurs pages conceptuelles, reliées entre elles à l'aide des macros [Next <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) et [Previous <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs).
 
 #### Exemples
 
@@ -273,7 +495,7 @@ La liste des sous-pages peut être générée automatiquement à l'aide du modè
 
 ### Pages « Apprendre le développement web »
 
-La section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN s'adresse spécifiquement aux personnes qui apprennent les bases du développement web, et nécessite donc une approche différente du reste du contenu MDN. Vous trouverez plus de conseils dans [Règles de rédaction pour Apprendre le développement web](/fr/docs/MDN/Writing_guidelines/Learning_content).
+La section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN s'adresse spécifiquement aux personnes qui apprennent les bases du développement web, et nécessite donc une approche différente du reste du contenu MDN. Vous pouvez trouver plus de conseils dans [Règles de rédaction pour Apprendre le développement web](/fr/docs/MDN/Writing_guidelines/Learning_content).
 
 Il n'existe que quelques types de pages dans «&nbsp;Apprendre le développement web&nbsp;»&nbsp;:
 

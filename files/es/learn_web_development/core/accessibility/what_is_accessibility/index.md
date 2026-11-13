@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 En este artículo se inicia el módulo con una explicación ampliada sobre qué es la accesibilidad. Esta visión general incluye qué grupos de personas necesitamos tener en cuenta y por qué, qué herramientas utilizan estas personas para interactuar con la web y cómo podemos hacer que la accesibilidad sea parte de nuestro flujo de trabajo de desarrollo web.
 
@@ -96,8 +96,8 @@ Una buena base de accesibilidad para personas con deficiencias cognitivas incluy
 
 ### Observaciones
 
-- Diseñar para la [accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility) proporcionará buenas prácticas de diseño que beneficiarán a todo el mundo.
-- Muchas personas con discapacidades cognitivas también tienen discapacidades físicas. Los sitios web deben cumplir con las directrices de accesibilidad a los contenidos web [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) de W3C, que incluyen las [directrices de accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility#Guidelines).
+- Diseñar para la [accesibilidad cognitiva](/es/docs/Web/Accessibility/Guides/Cognitive_accessibility) proporcionará buenas prácticas de diseño que beneficiarán a todo el mundo.
+- Muchas personas con discapacidades cognitivas también tienen discapacidades físicas. Los sitios web deben cumplir con las directrices de accesibilidad a los contenidos web [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) de W3C, que incluyen las [directrices de accesibilidad cognitiva](/es/docs/Web/Accessibility/Guides/Cognitive_accessibility#Guidelines).
 - El apartado [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) de W3C aporta pautas de accesibilidad web para personas con discapacidades cognitivas.
 - WebAIM tiene una [página cognitiva](https://webaim.org/articles/cognitive/) con la información y los recursos correspondientes.
 - Los Centros para el Control de Enfermedades estimaron que, en 2018, 1 de cada 4 ciudadanos de Estados Unidos presentaba alguna discapacidad y que la discapacidad cognitiva es la más común entre los jóvenes.
@@ -164,7 +164,7 @@ Cuando la información semántica nativa proporcionada por los elementos HTML de
 
 Este artículo debería haber dado una descripción detallada sobre la accesibilidad, mostrar por qué es importante y enseñar cómo puede encajar en tu flujo de trabajo. Ahora también deberías tener sed de conocimientos sobre los detalles de implementación que hacen que los sitios sean accesibles. Comenzaremos con esto en la sección siguiente, observando por qué HTML es una buena base para la accesibilidad.
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 ## Véase también
 

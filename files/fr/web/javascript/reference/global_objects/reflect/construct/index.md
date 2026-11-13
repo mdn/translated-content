@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 488e1953f44909cbeb419f0e2133cc28ca069f84
 ---
 
-{{JSRef}}
-
 La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) sous la forme d'une fonction. Elle est équivalente à `new cible(...args)` et permet d'indiquer une valeur différente pour [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target).
 
 {{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}

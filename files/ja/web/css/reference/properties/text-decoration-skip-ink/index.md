@@ -1,9 +1,8 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/Reference/Properties/text-decoration-skip-ink
-original_slug: Web/CSS/text-decoration-skip-ink
 l10n:
-  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
@@ -29,7 +28,7 @@ text-decoration-skip-ink: none;
 ```css interactive-example
 p {
   font:
-    1.9em Georgia,
+    1.9em "Georgia",
     serif;
   text-decoration: underline;
 }

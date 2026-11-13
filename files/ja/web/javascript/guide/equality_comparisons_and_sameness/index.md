@@ -2,10 +2,8 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 99cfd882b48968c7678dba22b6da00643614503b
 ---
-
-{{jsSidebar("Intermediate")}}
 
 JavaScript には、異なる値の比較演算が 3 つあります。
 
@@ -27,6 +25,8 @@ JavaScript には、異なる値の比較演算が 3 つあります。
 - [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero): 多くの組み込み操作で使用される
 
 なお、これらの区別はプリミティブ値の扱いについてのことです。いずれの場合も引数が概念的に似た構造を持つかどうかを比較する訳ではありません。プリミティブ値ではない `x` および `y` オブジェクトが同一の構造を持っていてもオブジェクトが異なれば、上記のいずれの形でも `false` と評価されます。
+
+異なるオブジェクトや配列の内容を再帰的に比較することを{{glossary("deep equality", "深い比較")}}と呼びます。JavaScript には汎用的な深部等値演算子は指定されていませんが、ライブラリやホスト API によっては、さまざまなルールに基づく比較ユーティリティが提供される場合があります。
 
 ## === による厳密な等価性
 
@@ -206,7 +206,7 @@ function sameValueZero(x, y) {
 
 ### 注意: Object.is() と NaN
 
-{{jsxref("Object.is")}} の仕様書では、すべての {{jsxref("NaN")}} のインスタンスを同じオブジェクトとして扱っています。しかし、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)が利用でき、インスタンスを区別することができるので、次の例のようにすべてのコンテキストで同じ動作をするとは限りません。
+{{jsxref("Object.is()")}} では、すべての {{jsxref("NaN")}} のインスタンスを同じ値として扱っています。しかし、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を利用して、すべてのコンテキストで同じように動作しない、`NaN` の異なる浮動小数点表現を持つことが可能になりました。例を示します。
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -214,14 +214,17 @@ const b2f = (x) => new Float64Array(x.buffer)[0];
 // NaN のバイト表現を取得
 const n = f2b(NaN);
 // 最初のビットを変更する。これは符号ビットであり、NaN には関係ない
-n[0] = 1;
+n[7] |= 0x80;
 const nan2 = b2f(n);
 console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
-console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 255]
 ```
+
+> [!NOTE]
+> 実装によっては、`NaN` のビット表現を正規化することができ、`nan2` を浮動小数点数に戻した際、元の `NaN` と同じビット表現になる場合があります。
 
 ## 関連情報
 
-- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/) ([dorey](https://github.com/dorey))
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/) - [dorey](https://github.com/dorey)

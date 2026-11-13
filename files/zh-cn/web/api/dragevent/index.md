@@ -1,63 +1,50 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
+l10n:
+  sourceCommit: 3385bda58637833eedc9b8dc41a2804e653208a7
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent`** 是一个表示拖、放交互的一个{{domxref("Event","DOM event")}} 接口。用户通过将指针设备（例如鼠标）放置在触摸表面上并且然后将指针拖动到新位置（诸如另一个 DOM 元素）来发起拖动。应用程序可以按应用程序特定的方式自由解释拖放交互。
+**`DragEvent`** 接口是表示拖放交互的 [DOM 事件](/zh-CN/docs/Web/API/Event)。用户将指针设备（如鼠标）放在触摸表面上，然后将指针拖到新位置（如另一个 DOM 元素），从而开始拖拽。应用程序可以按自身特定的方式解释拖放交互。
 
-这个接口继承 {{domxref("MouseEvent")}} 和{{domxref("Event")}}属性
+此接口继承 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 的属性。
 
-## 属性
+{{InheritanceDiagram}}
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
-  - : 在拖放交互期间传输的数据。
+## 实例属性
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : 拖放交互期间传输的数据。
 
 ## 构造函数
 
-虽然这个接口有一个构造函数，但不可能从脚本创建一个有用的 DataTransfer 对象，因为在拖放期间，有一个由浏览器分配的一个处理中和安全模式的{{domxref("DataTransfer")}}对象。
+虽然此接口有构造函数，但无法通过脚本创建有用的 DataTransfer 对象，因为 {{domxref("DataTransfer")}} 对象的处理和安全模型由浏览器在拖放过程中协调。
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
-  - : 创建合成和不可信的 DragEvent.
+  - : 创建合成的、不受信任的 DragEvent。
 
 ## 事件类型
 
-- [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)
-  - : 拖动元素或选择文本时触发此事件。
-- [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)
-  - : 当拖动操作结束时（释放鼠标按钮或按下退出键），会触发此事件。
-- [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
-  - : 当拖动的元素或选择文本输入有效的放置目标时，会触发此事件。
-- [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
-  - : 当拖动的元素或文本选择离开有效的放置目标时，会触发此事件。
-- [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
-  - : 当将元素或文本选择拖动到有效放置目标（每几百毫秒）上时，会触发此事件。
-- [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)
-  - : 当用户开始拖动元素或选择文本时触发此事件。
-- [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)
-  - : 当在有效放置目标上放置元素或选择文本时触发此事件。
-
-## 全局事件处理
-
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragexit')}}
-  - : [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
+- {{domxref("HTMLElement/drag_event", "drag")}}
+  - : 该事件在元素或选中的文本被拖拽时反复触发。触发频率取决于浏览器、操作系统和指针移动；不要依赖固定间隔。
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+  - : 该事件在拖拽操作结束时触发（松开鼠标按钮或按下 Esc 键）。
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+  - : 该事件在被拖拽的元素或选中的文本进入有效放置目标时触发。
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+  - : 该事件在被拖拽的元素或选中的文本离开有效放置目标时触发。
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+  - : 该事件在元素或选中的文本被拖过潜在放置目标时反复触发。触发频率取决于浏览器、操作系统和指针移动；不要依赖固定间隔。
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+  - : 该事件在用户开始拖拽元素或选中的文本时触发。
+- {{domxref("HTMLElement/drop_event", "drop")}}
+  - : 该事件在元素或选中的文本被放到有效放置目标上时触发。
 
 ## 示例
 
-每个属性，构造函数，事件类型和全局事件处理程序的示例都包含在它们各自的参考页中。
+各属性、构造函数、事件类型和全局事件处理器的示例见各自的参考页。
 
 ## 规范
 
@@ -66,3 +53,9 @@ slug: Web/API/DragEvent
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [使用拖放数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

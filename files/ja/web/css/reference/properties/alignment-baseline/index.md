@@ -1,9 +1,8 @@
 ---
 title: alignment-baseline
 slug: Web/CSS/Reference/Properties/alignment-baseline
-original_slug: Web/CSS/alignment-baseline
 l10n:
-  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`alignment-baseline`** は [CSS](/ja/docs/Web/CSS) のプロパティは、ボックスのテキストおよびインラインレベルのコンテンツの配置に使用する特定の[ベースライン](/ja/docs/Glossary/Baseline/Typography)を指定します。**ベースライン配置**とは、配置コンテキスト内の複数の配置対象物のベースライン間の関係です。ベースライン配置を実行する場合、 `alignment-baseline` プロパティの値は、ボックスのどのベースラインが、その配置コンテキストの対応するベースラインに配置されるかを指定します。
@@ -64,7 +63,7 @@ alignment-baseline: unset;
   - : ボックスの数式ベースラインを、その親ボックスの数式ベースラインと一致させます。これは、数式文字が設計されている中心のベースラインに対応します。
 
 - `middle`
-  - : ボックスの垂直方向の中心を、親ボックスのベースラインと親ボックスの x 高さの半分を加えた位置に揃えます。 x-middle ベースラインを使用します。ただし、 [`text-orientation: upright;`](/ja/docs/Web/CSS/text-orientation) （アルファベットと x 高さのベースラインが本質的に意味を持たない場合）の場合は、代わりに `central` ベースラインを使用します。
+  - : ボックスの垂直方向の中心を、親ボックスのベースラインと親ボックスの x 高さの半分を加えた位置に揃えます。 x-middle ベースラインを使用します。ただし、 [`text-orientation: upright;`](/ja/docs/Web/CSS/Reference/Properties/text-orientation) （アルファベットと x 高さのベースラインが本質的に意味を持たない場合）の場合は、代わりに `central` ベースラインを使用します。
 
 - `text-bottom`
   - : インラインコンテンツボックスの下端を使用して、ボックスの下端を親コンテンツ領域の上端に一致させます。
@@ -153,5 +152,5 @@ text:nth-of-type(8) {
 
 - {{cssxref("dominant-baseline")}}
 - SVG の {{SVGAttr("alignment-baseline")}} 属性
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

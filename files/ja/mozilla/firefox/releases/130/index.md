@@ -16,7 +16,7 @@ l10n:
 
 ### CSS
 
-- [`hyphens`](/ja/docs/Web/CSS/hyphens) CSS プロパティで、チェコ語とスロバキア語を適切にサポートしました。
+- [`hyphens`](/ja/docs/Web/CSS/Reference/Properties/hyphens) CSS プロパティで、チェコ語とスロバキア語を適切にサポートしました。
   特に、単語が音節で分けられることがなくなりました ([Firefox bug 1908931](https://bugzil.la/1908931))。
 
 ### API

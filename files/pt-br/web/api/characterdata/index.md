@@ -14,7 +14,7 @@ A interface abstrata **CharacterData** representa um objeto {{domxref("Node")}} 
 _Herda propriedades de seu pai, {{domxref("Node")}}, e implementa as interfaces {{domxref("ChildNode")}} e {{domxref("NonDocumentTypeChildNode")}}._
 
 - {{domxref("CharacterData.data")}}
-  - : É um {{domxref("DOMString")}} representando os dados textuais contidos neste objeto.
+  - : É um {{jsxref("String")}} representando os dados textuais contidos neste objeto.
 - {{domxref("CharacterData.length")}} {{readonlyInline}}
   - : Retorna um `unsigned long` representando o tamanho da string contida em `CharacterData.data`.
 - {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
@@ -27,17 +27,17 @@ _Herda propriedades de seu pai, {{domxref("Node")}}, e implementa as interfaces 
 _Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}}_ interface.
 
 - {{domxref("CharacterData.appendData()")}}
-  - : Appends the given {{domxref("DOMString")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.
+  - : Appends the given {{jsxref("String")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{jsxref("String")}}.
 - {{domxref("CharacterData.deleteData()")}}
-  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened {{domxref("DOMString")}}.
+  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened {{jsxref("String")}}.
 - {{domxref("CharacterData.insertData()")}}
-  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{jsxref("String")}}.
 - {{domxref("ChildNode.remove()")}} {{experimental_inline}}
   - : Removes the object from its parent children list.
 - {{domxref("CharacterData.replaceData()")}}
-  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{jsxref("String")}}; when this method returns, `data` contains the modified {{jsxref("String")}}.
 - {{domxref("CharacterData.substringData()")}}
-  - : Returns a {{domxref("DOMString")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
+  - : Returns a {{jsxref("String")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
 
 ## Specifications
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-image-slice
 original_slug: Web/CSS/border-image-slice
 ---
 
-**`border-image-slice`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("border-image-source")}}로 설정한 이미지를 여러 개의 영역으로 나눕니다. 이렇게 나눠진 영역이 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image)를 이룹니다.
+**`border-image-slice`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("border-image-source")}}로 설정한 이미지를 여러 개의 영역으로 나눕니다. 이렇게 나눠진 영역이 요소의 [테두리 이미지](/ko/docs/Web/CSS/Reference/Properties/border-image)를 이룹니다.
 
 {{InteractiveExample("CSS Demo: border-image-slice")}}
 
@@ -65,7 +65,7 @@ border-image-width: 30px 48px;
 
   모서리 영역
 
-  입니다. 모서리 영역은 최종 테두리 이미지의 크기에 맞도록 [반복하여 그리거나 크기를 조정하는 등 변형](/ko/docs/Web/CSS/border-image-repeat)됩니다.
+  입니다. 모서리 영역은 최종 테두리 이미지의 크기에 맞도록 [반복하여 그리거나 크기를 조정하는 등 변형](/ko/docs/Web/CSS/Reference/Properties/border-image-repeat)됩니다.
 
 - 9번 구역은
 

@@ -2,7 +2,7 @@
 title: Navigation segmentée
 slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La **navigation segmentée** est un motif de navigation où un ou plusieurs éléments sont séparés du reste des éléments de navigation.
@@ -60,6 +60,6 @@ Dans ce cas, la marge automatique à gauche prend tout l'espace disponible et po
 
 ## Voir aussi
 
-- [Mise en page flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Mise en page flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - La propriété {{CSSxRef("display")}}
 - La propriété {{CSSxRef("margin")}}

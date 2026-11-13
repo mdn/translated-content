@@ -3,8 +3,6 @@ title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
 ---
 
-{{AddonSidebar}}
-
 Affiche un objet JSON dans le volet de la barre latérale de l'extension.
 
 L'objet est affiché en tant qu'arborescence extensible, comme dans le [JSON viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.

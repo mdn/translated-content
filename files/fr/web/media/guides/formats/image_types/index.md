@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Image_types
 original_slug: Web/Media/Formats/Image_types
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
-
 Dans ce guide, nous aborderons les types de fichiers d'images généralement pris en charge par les navigateurs web, et nous vous donnerons des indications qui vous aideront à sélectionner les formats les plus appropriés pour l'imagerie de votre site.
 
 ## Types de fichiers d'images communs
@@ -46,7 +44,7 @@ Il existe de nombreux formats de fichiers d'images dans le monde. Toutefois, ceu
         meilleure compression que PNG et JPEG et une meilleure profondeur de
         couleur. Il est préférable d'utiliser des formats alternatifs via
         l'élément
-        <a href="/fr/docs/Web/HTML/Element/picture"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/picture"
           ><code>&#x3C;picture></code></a
         >
         pour s'adapter aux différentes prises en charge des navigateurs.
@@ -1137,7 +1135,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
             </tr>
             <tr>
               <th scope="row">
-                SVG comme image (<a href="/fr/docs/Web/HTML/Element/Img"
+                SVG comme image (<a href="/fr/docs/Web/HTML/Reference/Elements/img"
                   ><code>&#x3C;img></code></a
                 >
                 etc)
@@ -1161,7 +1159,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
       <th scope="row">Modes de couleur pris en charge</th>
       <td>
         Les couleurs en SVG sont spécifiées à l'aide de
-        <a href="/fr/docs/Web/CSS/color_value">syntaxe de couleur CSS</a>.
+        <a href="/fr/docs/Web/CSS/Reference/Values/color_value">syntaxe de couleur CSS</a>.
       </td>
     </tr>
     <tr>
@@ -1169,7 +1167,7 @@ Le SVG est un choix idéal pour les images qui peuvent être représentées à l
       <td>
         La source SVG peut être compressée pendant le transit en utilisant les
         techniques de
-        <a href="/fr/docs/Web/HTTP/Compression">compression HTTP</a>, ou sur
+        <a href="/fr/docs/Web/HTTP/Guides/Compression">compression HTTP</a>, ou sur
         disque en tant que fichier <code>.svgz</code>.
       </td>
     </tr>
@@ -1591,7 +1589,7 @@ Pour toute image pouvant être représentée par des graphiques vectoriels, le S
 
 ## Fournir des solutions de repli en matière d'image
 
-Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
+Alors que l'élément HTML standard [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ne supporte pas les retours de compatibilité pour les images, l'élément [`<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture) le fait. `<picture>` est utilisé comme enveloppe pour un certain nombre d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source), chacun spécifiant une version de l'image dans un format différent ou sous des [conditions @media](/fr/docs/Web/CSS/Reference/At-rules/@media), ainsi qu'un élément `<img>` qui définit où afficher l'image et le retour à la version par défaut ou "la plus compatible".
 
 Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vous souhaitez offrir une solution de rechange à un PNG ou GIF du diagramme, vous feriez quelque chose comme ceci :
 

@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : content"
+title: "Attribut HTML : `content`"
 short-title: content
 slug: Web/HTML/Reference/Attributes/content
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`content`** définit la valeur d'un nom de métadonnée — défini par l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) — de l'élément HTML `<meta>`.

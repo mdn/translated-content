@@ -1,5 +1,6 @@
 ---
-title: nop
+title: nop：Wasm 文本指令
+short-title: nop
 slug: WebAssembly/Reference/Control_flow/nop
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -7,7 +8,7 @@ l10n:
 
 **`nop`** 代表没有操作（no-operation）。就是字面意思什么也不做。
 
-{{InteractiveExample("Wat Demo: nop", "tabbed-shorter")}}
+{{InteractiveExample("Wat 演示：nop", "tabbed-shorter")}}
 
 ```wat interactive-example
 (module

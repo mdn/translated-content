@@ -1,9 +1,8 @@
 ---
 title: text-overflow
 slug: Web/CSS/Reference/Properties/text-overflow
-original_slug: Web/CSS/text-overflow
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
@@ -26,10 +25,10 @@ text-overflow: "-";
 text-overflow: "";
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div id="example-element-container">
-    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+    <p id="example-element">「この宇宙船にお茶はありますか？」と彼は尋ねた。</p>
   </div>
 </section>
 ```
@@ -80,11 +79,11 @@ text-overflow: unset;
 ### 値
 
 - `clip`
-  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
+  - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
 - `ellipsis`
-  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
+  - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
 - `<string>`
-  - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
+  - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
 
 ## 公式定義
 

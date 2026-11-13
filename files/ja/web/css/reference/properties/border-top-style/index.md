@@ -1,12 +1,15 @@
 ---
-title: border-top-style
+title: "`border-top-style` プロパティ (CSS)"
+short-title: border-top-style
 slug: Web/CSS/Reference/Properties/border-top-style
-original_slug: Web/CSS/border-top-style
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界線 ({{CSSxRef("border")}}) のスタイルを設定します。
+
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 {{InteractiveExample("CSS デモ: border-top-style")}}
 
@@ -37,15 +40,15 @@ border-top-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +56,9 @@ border-top-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 
@@ -99,30 +99,32 @@ border-top-style: unset;
 
 #### HTML
 
-```html live-sample___examples
+```html
 <table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### CSS
 
-```css live-sample___examples
+```css
 /* 表の外見を定義 */
 table {
   border-width: 2px;
@@ -168,7 +170,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample('Examples', 300, 200)}}
+{{EmbedLiveSample('例', 300, 200)}}
 
 ## 仕様書
 
@@ -180,5 +182,5 @@ td {
 
 ## 関連情報
 
-- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
-- その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}
+- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}、{{CSSxRef("border-right-style")}}、{{CSSxRef("border-bottom-style")}}、{{CSSxRef("border-style")}}
+- その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}、{{CSSxRef("border-top-color")}}、{{CSSxRef("border-top-width")}}

@@ -1,9 +1,8 @@
 ---
 title: dominant-baseline
 slug: Web/CSS/Reference/Properties/dominant-baseline
-original_slug: Web/CSS/dominant-baseline
 l10n:
-  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`dominant-baseline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックス内のテキストとインラインレベルのコンテンツを整列させるために使用される特定の[ベースライン](/ja/docs/Glossary/Baseline/Typography)（主要ベースライン）を指定します。また、ボックスの整列コンテキストでベースライン揃えに参加するすべてのボックスの既定の整列ベースラインも示します。存在する場合、シェイプの {{SVGAttr("dominant-baseline")}} 属性を上書きします。

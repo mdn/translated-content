@@ -14,7 +14,7 @@ slug: Web/API/Window/sessionStorage
 
 `sessionStorage`에 저장한 자료는 **페이지 프로토콜별로 구분**합니다. 특히 HTTP(<http://example.com>)로 방문한 페이지에서 저장한 데이터는 같은 페이지의 HTTPS(<https://example.com>)와는 다른 `sessionStorage`에 저장됩니다.
 
-키와 값은 **항상** 각 문자에 2바이트를 할당하는 UTF-16 {{domxref("DOMString")}}의 형태로 저장합니다. 객체와 마찬가지로 정수 키는 자동으로 문자열로 변환합니다.
+키와 값은 **항상** 각 문자에 2바이트를 할당하는 UTF-16 {{jsxref("String")}}의 형태로 저장합니다. 객체와 마찬가지로 정수 키는 자동으로 문자열로 변환합니다.
 
 ## 구문
 
@@ -29,7 +29,7 @@ myStorage = window.sessionStorage;
 ### 예외
 
 - `SecurityError`
-  - : 요청이 정책의 결정을 위반했거나, 출처가 [유효한 스킴/호스트/포트 튜플](/ko/docs/Web/Security/Same-origin_policy#출처의_정의)이 아닌 경우. 유효하지 않은 튜플은 출처가 `file:`이나 `data:` 스킴을 사용했을 때 발생할 수 있습니다. 예외의 예를 들자면 사용자가 특정 출처의 지속성 데이터를 거부하도록 브라우저를 설정하는 경우가 있습니다.
+  - : 요청이 정책의 결정을 위반했거나, 출처가 [유효한 스킴/호스트/포트 튜플](/ko/docs/Web/Security/Defenses/Same-origin_policy#출처의_정의)이 아닌 경우. 유효하지 않은 튜플은 출처가 `file:`이나 `data:` 스킴을 사용했을 때 발생할 수 있습니다. 예외의 예를 들자면 사용자가 특정 출처의 지속성 데이터를 거부하도록 브라우저를 설정하는 경우가 있습니다.
 
 ## 예제
 

@@ -3,7 +3,7 @@ title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}}
 
 O método `small()` cria um elemento HTML [`<small>`](/pt-BR/docs/Web/HTML/Element/small) que faz com que uma string seja exibida em uma fonte pequena.
 

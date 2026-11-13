@@ -1,12 +1,11 @@
 ---
 title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
-original_slug: Web/CSS/counter-increment
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値を増加または減少させたり、すべてのカウンターまたはここのカウンターが変化することを防いだりするためのプロパティです。
+**`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値を増加または減少させたり、すべてのカウンターまたは個々のカウンターが変化することを防いだりするためのプロパティです。
 
 空白で区切られたカウンターと値のリストに掲載されている名前付きカウンターが存在しない場合、作成されます。カウンターのリストでカウンターに値が指定されていない場合、カウンターは `1` だけ増加します。
 
@@ -32,7 +31,7 @@ counter-increment: example-counter -5;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Counter value:</div>
+  <div class="transition-all" id="example-element">カウンター値:</div>
 </section>
 ```
 
@@ -115,7 +114,7 @@ counter-increment: unset;
 
 `sevens` という名前のカウンターの初期値を `100` にするために、{{cssxref("counter-reset")}} を使用します。次に、それぞれの {{HTMLElement("i")}} に対して、カウンターを `7`ずつ減らします。
 
-最初の値を `100` に設定するには、 {{cssxref(":first-of-type")}} 擬似クラスを使用して最初の `<i>` 要素を特定し、 `counter-increment: none;` を設定します。さらに、 {{cssxref("content")}} プロパティを {{cssxref("::before")}} 擬似要素で使用して、 [`counter()`](/ja/docs/Web/CSS/counter) 関数を使用してカウンターの値を表示します。
+最初の値を `100` に設定するには、 {{cssxref(":first-of-type")}} 擬似クラスを使用して最初の `<i>` 要素を特定し、 `counter-increment: none;` を設定します。さらに、 {{cssxref("content")}} プロパティを {{cssxref("::before")}} 擬似要素で使用して、 [`counter()`](/ja/docs/Web/CSS/Reference/Values/counter) 関数を使用してカウンターの値を表示します。
 
 ```css
 div {
@@ -163,7 +162,7 @@ i {
 
 - カウンターのプロパティ: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - カウンターのアットルール: {{cssxref("@counter-style")}}
-- カウンターの関数: {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}}
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)ガイド
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- カウンターの関数: {{cssxref("counter()")}} および {{cssxref("counters()")}}
+- [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)ガイド
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

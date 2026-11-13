@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 **`isPrototypeOf()`** 方法用于检查一个对象是否存在于另一个对象的原型链中。
 
 > [!NOTE]
-> `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 `object instanceof AFunction` 中，会检查 `object` 的原型链是否与 `AFunction.prototype` 匹配，而不是与 `AFunction`本身匹配。
+> `isPrototypeOf()` 与 {{jsxref("instanceof")}} 运算符不同。在表达式 `object instanceof AFunction` 中，会检查 `object` 的原型链是否与 `AFunction.prototype` 匹配，而不是与 `AFunction`本身匹配。
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
 
@@ -77,7 +77,7 @@ console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-`isPrototypeOf()` 方法以及 {{jsxref("Operators/instanceof", "instanceof")}} 运算符在处理从特定原型链继承的对象时非常有用，例如，为了保证该对象上存在特定的方法或属性。
+`isPrototypeOf()` 方法以及 {{jsxref("instanceof")}} 运算符在处理从特定原型链继承的对象时非常有用，例如，为了保证该对象上存在特定的方法或属性。
 
 例如，如果只有当 `baz` 对象的原型链中包含 `Foo.prototype` 时才能执行某些代码，可以这样实现：
 
@@ -104,7 +104,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-对于 {{jsxref("Operators/instanceof", "instanceof")}} 也是同样的情况。如果你需要以安全的方式读取私有属性，可以提供一个使用 {{jsxref("Operators/in", "in")}} 运算符的特定类型检查（branded check）方法。
+对于 {{jsxref("instanceof")}} 也是同样的情况。如果你需要以安全的方式读取私有属性，可以提供一个使用 {{jsxref("Operators/in", "in")}} 运算符的特定类型检查（branded check）方法。
 
 ```js
 class Foo {
@@ -135,7 +135,7 @@ if (Foo.isFoo(baz)) {
 
 ## 参见
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

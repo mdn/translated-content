@@ -185,7 +185,7 @@ slug: Web/HTML/Reference/Elements/button
 
 ### Firefox
 
-Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框是在瀏覽器樣式表中通過 CSS 聲明的，但你可以覆蓋它以添加自己的焦點樣式，使用 [`button::-moz-focus-inner { }`](/zh-TW/docs/Web/CSS/::-moz-focus-inner)。
+Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框是在瀏覽器樣式表中通過 CSS 聲明的，但你可以覆蓋它以添加自己的焦點樣式，使用 [`button::-moz-focus-inner { }`](/zh-TW/docs/Web/CSS/Reference/Selectors/::-moz-focus-inner)。
 
 如果覆蓋了它，**確保當焦點移動到按鈕上時的狀態變化足夠明顯**，以便視力受損的人能夠感知它。
 

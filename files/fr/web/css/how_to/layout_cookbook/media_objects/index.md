@@ -2,7 +2,7 @@
 title: Objets avec média
 slug: Web/CSS/How_to/Layout_cookbook/Media_objects
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le motif _Media Object_ («&nbsp;objet média&nbsp;») est un modèle que l'on retrouve partout sur le Web. Il s'agit d'une boîte à deux colonnes avec une image d'un côté et un texte descriptif de l'autre, par exemple dans une publication sur un réseau social.
@@ -171,7 +171,7 @@ p {
 
 ## Choix effectués
 
-J'ai choisi d'utiliser la [mise en page par grille](/fr/docs/Web/CSS/CSS_grid_layout) pour l'objet média, car elle permet de contrôler la disposition sur deux axes lorsque c'est nécessaire. Ainsi, lorsqu'il y a un pied de page avec un contenu court au-dessus, le pied de page peut être repoussé en bas de l'objet média.
+J'ai choisi d'utiliser la [mise en page par grille](/fr/docs/Web/CSS/Guides/Grid_layout) pour l'objet média, car elle permet de contrôler la disposition sur deux axes lorsque c'est nécessaire. Ainsi, lorsqu'il y a un pied de page avec un contenu court au-dessus, le pied de page peut être repoussé en bas de l'objet média.
 
 Une autre raison d'utiliser la grille est de pouvoir utiliser {{CSSxRef("fit-content")}} pour la taille de la piste de l'image. En utilisant `fit-content` avec une taille maximale de 200 pixels, lorsqu'on a une petite image comme l'icône, la piste ne prend que la taille de cette image — la taille `max-content`. Si l'image est plus grande, la piste s'arrête à 200 pixels et comme l'image a un {{CSSxRef("max-width")}} de 100 % appliqué, elle est réduite pour continuer à tenir dans la colonne.
 
@@ -184,5 +184,5 @@ Quand on imbrique un objet média dans un autre, il faut le placer dans la deuxi
 ## Voir aussi
 
 - La propriété {{CSSxRef("fit-content")}}
-- [Utiliser les zones de grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Mise en page par grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Utiliser les zones de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [Mise en page par grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)

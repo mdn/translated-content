@@ -2,10 +2,10 @@
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Guide/Typed_arrays
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 JavaScript の型付き配列は配列風のオブジェクトであり、メモリーバッファー内の生のバイナリーデータを読み書きする手段を提供します。
 
@@ -248,11 +248,11 @@ console.log(text); // "你好"
 
 以下の C 構造体について考えてみましょう。
 
-```cpp
+```c
 struct someStruct {
-  unsigned long id;
-  char username[16];
-  float amountDue;
+    unsigned long id;
+    char username[16];
+    float amountDue;
 };
 ```
 

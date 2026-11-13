@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Attribute/fill-opacity
 original_slug: Web/SVG/Attribute/fill-opacity
 ---
 
-{{SVGRef}}
-
 L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.
 
 > [!NOTE]
@@ -50,7 +48,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint"
             >&#x3C;percentage></a
           ></strong
         >

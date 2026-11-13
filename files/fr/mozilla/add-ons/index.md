@@ -1,91 +1,57 @@
 ---
 title: Modules
 slug: Mozilla/Add-ons
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-{{AddonSidebar}}
+Les modules complémentaires (<i lang="en">add-ons</i> en anglais) permettent aux développeur·euse·s d'étendre et de modifier les fonctionnalités de Firefox. Ils s'écrivent avec les technologies Web standard — JavaScript, HTML et CSS — ainsi qu'avec quelques API JavaScript dédiées.
 
-Les modules complémentaires (_add-ons_) permettent aux développeurs d'ajouter et de modifier les fonctionnalités de Firefox. Les modules sont écrits à l'aide de technologies web standard : JavaScript, HTML, et CSS - et d'API JavaScript spécifiques à ces modules. Un module complémentaire peut, par exemple, être utilisé pour :
+Entre autres, un module complémentaire peut&nbsp;:
 
 - Modifier l'apparence ou le contenu de certains sites web
 - Modifier l'interface utilisateur de Firefox
 - Ajouter de nouvelles fonctionnalités à Firefox
 
-Il y a plusieurs types de modules complémentaires _(add-ons)_, mais le plus courant est l'extension.
+Il existe plusieurs types de modules complémentaires, mais le type le plus courant est celui des extensions.
 
 ## Développer des modules complémentaires
 
-Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
+Plusieurs ensembles d'outils servent à développer des extensions Firefox, mais depuis novembre 2017, les extensions doivent être conçues avec les [API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions). Les autres ensembles d'outils, comme les modules complémentaires avec superposition, les modules complémentaires amorçables et le SDK des modules complémentaires, ne sont plus pris en charge.
 
-[En savoir plus à propos des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+Les extensions écrites avec les API WebExtensions pour Firefox sont conçues pour être compatibles entre les navigateurs. Dans la plupart des cas, elles fonctionnent dans Chrome, Edge et Opera avec peu de modifications, voire aucune. Elles sont également entièrement compatibles avec Firefox utilisant plusieurs processus. Consultez [les API actuellement prises en charge dans Firefox et les autres navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
-Si vous développez un nouveau module complémentaire, nous vous recommandons d'utiliser WebExtension.
+### Atelier des extensions
 
-Les extensions qui respectent le format WebExtensions de Firefox sont conçues pour pouvoir être utilisées sur différents navigateurs. Les extensions WebExtensions écrites pour Firefox fonctionneront pour la plupart dans Chrome, Edge et Opera, nécessitant peu, si ce n'est aucun changements. Elles sont également compatibles avec le mode multi-processus de Firefox.
+[L'atelier d'extensions Firefox <sup>(angl.)</sup>](https://extensionworkshop.com/) vous aide à développer des extensions pour Firefox et offre à vos utilisateur·ice·s des moyens simples mais puissants de personnaliser leur expérience de navigation. Vous y trouvez&nbsp;:
 
-[Voici la liste des API actuellement prises en charge par Firefox et les autres navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Nous continuons à concevoir et à implémenter de nouvelles API afin de répondre aux besoins des développeurs.
-
-La plupart des API utilisées pour WebExtension sont également disponibles pour Firefox pour Android.
-
-### L'atelier des extensions Firefox _(Extension Workshop)_
-
-L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver&nbsp;:
-
-- [Une vue d'ensemble des fonctionnalités des extensions Firefox](https://extensionworkshop.com/#about)
-- [Les outils et les procédés pour développer et tester son application](https://extensionworkshop.com/documentation/develop/)
-- [Comment publier son extensions sur addons.mozilla.org et la distribuer](https://extensionworkshop.com/documentation/publish/)
-- [Comment gérer son extension, une fois celle-ci publiée](https://extensionworkshop.com/documentation/manage/)
-- [Guide pour développer et utiliser une extension pour les entreprises](https://extensionworkshop.com/documentation/enterprise/)
-- [Comment développer un thème pour Firefox](https://extensionworkshop.com/documentation/themes/)
-- [La communauté de Firefox (Firefox Community)](https://extensionworkshop.com/community/)
+- [Présentation des fonctionnalités des extensions Firefox <sup>(angl.)</sup>](https://extensionworkshop.com/#about)
+- [Outils et processus de développement et de test <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/develop/)
+- [Publier votre extension sur addons.mozilla.org ou la distribuer vous-même <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/publish/)
+- [Gérer votre extension publiée <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/manage/)
+- [Guide destiné aux entreprises pour développer et utiliser des extensions <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/enterprise/)
+- [Développer des thèmes pour Firefox <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/themes/)
+- [Communautés de développement Firefox <sup>(angl.)</sup>](https://extensionworkshop.com/community/)
 
 ### Les extensions pour Firefox pour Android
 
-En 2020, Mozilla sortira une nouvelle expérience Firefox pour Android. Le nouveau Firefox ultra-performant pour Android a été entièrement repensé avec [GeckoView](https://mozilla.github.io/geckoview/), le nouveau moteur de rendu pour mobiles de Mozilla. Nous travaillons actuellement à la création d'un support pour WebExtensions sur GeckoView.
+En 2020, Mozilla propose une nouvelle expérience Firefox pour Android. Ce navigateur Android hautes performances est entièrement reconstruit avec GeckoView, le moteur de navigateur mobile de Mozilla. Nous développons actuellement la prise en charge de l'API WebExtensions dans GeckoView.
 
-### Migrer un module existant
+## Publier des modules complémentaires
 
-Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+[Addons.mozilla.org <sup>(angl.)</sup>](https://addons.mozilla.org/), communément appelé «&nbsp;AMO&nbsp;», est le site officiel de Mozilla qui permet aux développeur·euse·s de répertorier leurs modules complémentaires et aux utilisateur·ice·s de les découvrir. En téléversant votre module complémentaire sur AMO, vous participez à notre communauté d'utilisateur·ice·s et de créateur·ice·s et trouvez un public pour votre module complémentaire.
 
-Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup](https://compatibility-lookup.services.mozilla.com/) afin de détecter si votre module complémentaire est impacté.
+Vous n'êtes pas obligé·e de répertorier votre module complémentaire sur AMO, mais Mozilla doit le signer, sinon les utilisateur·ice·s ne peuvent pas l'installer.
 
-## Publier des modules
+Pour une présentation du processus de publication de votre module complémentaire, consultez [Signer et distribuer votre module complémentaire <sup>(angl.)</sup>](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/).
 
-[addons.mozilla.org](https://addons.mozilla.org), aussi appelé AMO, est le site officiel de Mozilla sur lequel sont publiés les modules complémentaires et que les utilisateurs peuvent parcourir pour découvrir de nouveaux modules. Publier un module complémentaire sur AMO permet d'entretenir la communauté d'utilisateurs et de créateurs de modules. C'est également une ressource essentielle pour qu'un module puisse être découvert.
+## Autres types de modules complémentaires
 
-Il n'est pas nécessaire que votre module soit publié sur AMO. En revanche, votre module doit être signé par Mozilla afin que les utilisateurs puissent l'installer.
+En plus des extensions, quelques autres types de modules complémentaires permettent aux utilisateur·ice·s de personnaliser Firefox. Ces modules complémentaires comprennent&nbsp;:
 
-[Dans cet article](/fr/docs/Mozilla/Add-ons/Distribution), vous trouverez différentes informations relatives au processus de publication de son module.
-
-## Les autres types de modules
-
-Généralement, lorsqu'on évoque les modules complémentaires, on parle des extensions. Ceci étant dit, il existe d'autres types de modules qui permettent aux utilisateurs de personnaliser Firefox. Ces modules peuvent être :
-
-- [Des thèmes légers](/fr/docs/Mozilla/Add-ons/Thèmes/Fond) : un outil simple qui permet de personnaliser Firefox de façon limitée
-- [Les modules mobiles](/fr/docs/Extensions/Mobile) : des modules complémentaires destinés à Firefox pour Android. Attention, certaines des API utilisées pour ces modules sont dépréciées (ou le seront dans un avenir proche). Par la suite, Firefox pour Android prendra pleinement en charge le format WebExtension
-- [Des plugins pour les moteurs de recherche](/fr/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox) qui permettent d'ajouter de nouveaux moteurs de recherche à la barre de recherche du navigateur
-- [Des dictionnaires utilisateur](/fr/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) qui permettent d'utiliser la vérification orthographique dans différentes langues
-- [Des packs de langues](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) qui permettent de traduire l'interface de Firefox dans plus de langues.
+- [Dictionnaires utilisateur <sup>(angl.)</sup>](https://support.mozilla.org/en-US/kb/how-do-i-use-firefox-spell-checker) permettent d'effectuer une vérification orthographique dans différentes langues.
+- [Les modules linguistiques <sup>(angl.)</sup>](https://support.mozilla.org/en-US/kb/use-firefox-another-language) permettent de disposer de davantage de langues dans l'interface utilisateur de Firefox.
 
 ## Nous contacter
 
-Vous pouvez utiliser les liens qui suivent pour demander de l'aide, être tenu-e informé-e des actualités concernant les modules complémentaires et nous fournir vos retours.
-
-### Forum
-
-[Le forum Discourse dédié aux modules complémentaires](https://discourse.mozilla-community.org/c/add-ons) est un lieu où discuter du développement de modules complémentaires et où demander de l'aide.
-
-### Liste de diffusion
-
-La liste de diffusion **dev-addons** (anglophone) est utilisée afin de discuter du développement des modules complémentaires et de leur environnement. Les thèmes abordés incluent le format WebExtensions et AMO (<https://addons.mozilla.org>) :
-
-- [Informations sur la liste dev-addons](https://mail.mozilla.org/pipermail/dev-addons/)
-- [Archives de la liste dev-addons](https://mail.mozilla.org/pipermail/dev-addons/)
-
-### IRC
-
-Si vous utilisez IRC, vous pouvez utiliser ces canaux (anglophones) :
-
-- [#addons](irc://irc.mozilla.org/addons) (discussions sur l'écosystème des modules complémentaires)
-- [#extdev](irc://irc.mozilla.org/extdev) (discussions sur le développement des modules complémentaires)
-- [#webextensions](irc://irc.mozilla.org/webextensions) (discussion sur les modules de type WebExtensions)
+Consultez la page [nous contacter](/fr/docs/Mozilla/Add-ons/Contact_us) pour découvrir comment obtenir de l'aide, rester au courant de l'actualité des modules complémentaires et nous transmettre vos commentaires.

@@ -14,24 +14,24 @@ L'attribut `aria-invalid` est utilisé pour indiquer que la valeur saisie dans u
 
 L'attribut `aria-invalid` peut être utilisé avec n'importe quel élément de formulaire HTML classique, et n'est pas limité aux éléments ayant un rôle ARIA attribué.
 
-L'attribut doit être défini avec JavaScript à la suite d'un processus de validation. Si une valeur est jugée invalide ou hors plage, définissez `aria-invalid="true"` **et** informez l'utilisateur·ice qu'il y a une erreur. Pour une meilleure expérience, fournissez des suggestions pour corriger l'erreur. Ne définissez pas `aria-invalid="true"` sur les éléments obligatoires vides tant que l'utilisateur·ice n'a pas tenté de soumettre le formulaire. Il·Elle peut encore être en train de le remplir.
+L'attribut doit être défini avec JavaScript à la suite d'un processus de validation. Si une valeur est jugée invalide ou hors plage, définissez `aria-invalid="true"` **et** informez l'utilisateur·ice qu'il y a une erreur. Pour une meilleure expérience, fournissez des suggestions pour corriger l'erreur. Ne définissez pas `aria-invalid="true"` sur les éléments obligatoires vides tant que l'utilisateur·ice n'a pas tenté d'envoyer le formulaire. Il·Elle peut encore être en train de le remplir.
 
 > [!NOTE]
 > Lorsque `aria-invalid` est utilisé avec l'attribut `aria-required`, `aria-invalid` ne doit pas être défini à true avant la soumission du formulaire — uniquement en réponse à la validation.
 
-Il existe actuellement quatre valeurs&nbsp;: en plus de `true` et `false`, on trouve `grammar` pour une erreur grammaticale détectée et `spelling` pour une erreur d'orthographe. Si l'attribut n'est pas présent, ou que sa valeur est `false` ou une chaîne de caractères vide, la valeur par défaut est `false`. Toute autre valeur est traitée comme si `true` était défini.
+Il existe actuellement quatre valeurs&nbsp;: en plus de `true` et `false`, on trouve `grammar` pour une erreur grammaticale détectée et `spelling` pour une erreur d'orthographe. Si l'attribut n'est pas présent, ou que sa valeur est `false` ou une chaîne de caractères vide, la valeur par défaut est `false`. Toute autre valeur est traitée comme si `true` est défini.
 
 ### Validation native HTML
 
-HTML propose une validation native des formulaires. Lorsqu'un·e utilisateur·ice soumet un formulaire avec un contrôle contenant des erreurs, le premier contrôle de formulaire avec une valeur invalide affiche un message d'erreur, nativement.
+HTML propose une validation native des formulaires. Lorsqu'un·e utilisateur·ice envoie un formulaire avec un contrôle contenant des erreurs, le premier contrôle de formulaire avec une valeur invalide affiche un message d'erreur, nativement.
 
-S'il y a un attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) sur un contrôle de formulaire non rempli, le formulaire ne sera pas soumis et un message d'erreur s'affichera, du type «&nbsp;Veuillez remplir ce champ&nbsp;» ou similaire. Le message de validation natif varie selon le navigateur et ne peut pas être mis en forme.
+S'il y a un attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) sur un contrôle de formulaire non rempli, le formulaire n'est pas envoyé et un message d'erreur s'affiche, du type «&nbsp;Veuillez remplir ce champ&nbsp;» ou similaire. Le message de validation natif varie selon le navigateur et ne peut pas être mis en forme.
 
 ```html
 <input type="number" step="2" min="0" max="100" required />
 ```
 
-Si l'utilisateur·ice saisit une valeur supérieure au maximum, inférieure au minimum, ou qui ne correspond pas à l'incrément, un message d'erreur s'affichera. Si l'utilisateur·ice saisit «&nbsp;3&nbsp;», le message d'erreur natif sera du type «&nbsp;Veuillez saisir une valeur valide&nbsp;».
+Si l'utilisateur·ice saisit une valeur supérieure au maximum, inférieure au minimum, ou qui ne correspond pas à l'incrément, un message d'erreur s'affiche. Si l'utilisateur·ice saisit «&nbsp;3&nbsp;», le message d'erreur natif est du type «&nbsp;Veuillez saisir une valeur valide&nbsp;».
 
 Si vous créez vos propres scripts de validation de formulaire, veillez à inclure `aria-invalid` sur les contrôles invalides, ainsi que du style (utilisez le sélecteur d'attribut `[aria-invalid="true"]`) et des messages (avec [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)) pour aider les utilisateur·ice·s à comprendre où se trouve l'erreur et comment la corriger.
 
@@ -46,11 +46,11 @@ Si vous créez vos propres scripts de validation de formulaire, veillez à inclu
 - `true`
   - : La valeur saisie par l'utilisateur·ice n'a pas passé la validation.
 
-Toute valeur non présente dans cette liste sera traitée comme `true`.
+Toute valeur non présente dans cette liste est traitée comme `true`.
 
 ## Exemple
 
-L'extrait suivant montre une version simplifiée de deux champs de formulaire avec une fonction de validation attachée à l'événement blur. Notez que, puisque la valeur par défaut de `aria-invalid` est `false`, il n'est pas strictement nécessaire d'ajouter l'attribut à l'entrée.
+L'extrait suivant montre une version simplifiée de deux champs de formulaire avec une fonction de validation attachée à l'évènement `blur`. Notez que, puisque la valeur par défaut de `aria-invalid` est `false`, il n'est pas strictement nécessaire d'ajouter l'attribut à l'entrée.
 
 ```html
 <ul>
@@ -85,9 +85,9 @@ document.getElementById("email").addEventListener("blur", () => {
 });
 ```
 
-Notez qu'il n'est pas nécessaire de valider les champs immédiatement à la désélection&nbsp;; l'application peut attendre la soumission du formulaire (ce qui n'est pas forcément recommandé).
+Notez qu'il n'est pas nécessaire de valider les champs immédiatement à la dé-sélection&nbsp;; l'application peut attendre l'envoi du formulaire (ce qui n'est pas forcément recommandé).
 
-L'extrait ci-dessous montre une fonction de validation, qui ne vérifie que la présence d'un caractère particulier (dans la réalité, la validation sera probablement plus sophistiquée)&nbsp;:
+L'extrait ci-dessous montre une fonction de validation, qui ne vérifie que la présence d'un caractère particulier (dans la réalité, la validation est probablement plus sophistiquée)&nbsp;:
 
 ```js
 function checkValidity(id, searchTerm, msg) {
@@ -126,10 +126,10 @@ Notez que l'alerte possède l'attribut de rôle ARIA [`alert`](/fr/docs/Web/Acce
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaInvalid")}}
-  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/Element/ariaInvalid), qui fait partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-invalid`, qui indique si l'élément est exposé à une API d'accessibilité.
-- {{domxref("ElementInternals.ariaInvalid")}}
-  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/ElementInternals/ariaInvalid), qui fait partie de l'interface {{domxref("ElementInternals")}}, reflète la valeur de l'attribut `aria-invalid`.
+- {{DOMxRef("Element.ariaInvalid")}}
+  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/Element/ariaInvalid), qui fait partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-invalid`, qui indique si l'élément est exposé à une API d'accessibilité.
+- {{DOMxRef("ElementInternals.ariaInvalid")}}
+  - : La propriété [`ariaInvalid`](/fr/docs/Web/API/ElementInternals/ariaInvalid), qui fait partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-invalid`.
 
 ## Rôles associés
 
@@ -161,6 +161,6 @@ Hérité dans le rôle&nbsp;:
 ## Voir aussi
 
 - L'attribut ARIA [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-- La pseudo-classe CSS {{CSSXRef(':valid')}}
-- La pseudo-classe CSS {{CSSXRef(':invalid')}}
+- La pseudo-classe CSS {{CSSxRef(':valid')}}
+- La pseudo-classe CSS {{CSSxRef(':invalid')}}
 - [Validation de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

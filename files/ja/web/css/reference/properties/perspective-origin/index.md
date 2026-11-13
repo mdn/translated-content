@@ -1,12 +1,11 @@
 ---
 title: perspective-origin
 slug: Web/CSS/Reference/Properties/perspective-origin
-original_slug: Web/CSS/perspective-origin
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
+**`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって「消点」として使われます。
 
 {{InteractiveExample("CSS デモ: perspective-origin")}}
 
@@ -69,37 +68,37 @@ perspective-origin: 500% 200%;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
 
-**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 変換関数とは異なります。
+**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/Reference/Values/transform-function/perspective) 変換関数とは異なります。
 
 ## 構文
 
@@ -125,14 +124,14 @@ perspective-origin: unset;
 ### 値
 
 - _x-position_
-  - : *消失点*の横座標上の位置を示します。次のいずれかの値です。
+  - : 消点の横座標上の位置を示します。次のいずれかの値です。
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の幅に対する相対値で位置を示します。負の数も使えます。
     - `left` キーワードは、length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
     - `right` キーワードは、パーセント値 `100%` を示すショートカットです。
 
 - _y-position_
-  - : *消失点*の縦座標上の位置を示します。次のいずれかの値です。
+  - : 消点の縦座標上の位置を示します。次のいずれかの値です。
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の高さに対する相対値で位置を示します。負の数も使えます。
     - `top` キーワードは、 length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
@@ -150,7 +149,7 @@ perspective-origin: unset;
 
 ### 視点の原点の変更
 
-`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#視点の変更)にあります。
+`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/Guides/Transforms/Using#視点の変更)にあります。
 
 ## 仕様書
 
@@ -162,8 +161,8 @@ perspective-origin: unset;
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 関数
+- [`transform: perspective()`](/ja/docs/Web/CSS/Reference/Values/transform-function/perspective) 関数

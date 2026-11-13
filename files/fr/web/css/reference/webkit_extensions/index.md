@@ -2,10 +2,10 @@
 title: Extensions CSS préfixées par le vendeur WebKit (-webkit-)
 slug: Web/CSS/Reference/Webkit_extensions
 l10n:
-  sourceCommit: 1f6d5b39a5883789ece6b570227648113c7021a1
+  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
 ---
 
-Un {{glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
+Un {{Glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
 Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) prennent en charge plusieurs extensions de [CSS](/fr/docs/Web/CSS), qui sont préfixées par `-webkit-`.
 
 ## Propriétés préfixées par -webkit sans équivalents standard
@@ -16,7 +16,7 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 
 ### A - C
 
-- `-webkit-app-region` {{deprecated_inline}}&nbsp;: N'est plus pris en charge dans Safari.
+- `-webkit-app-region` {{Deprecated_Inline}}&nbsp;: N'est plus pris en charge dans Safari.
 - `-webkit-border-horizontal-spacing`
 - `-webkit-border-vertical-spacing`
 - {{CSSxRef("-webkit-box-reflect")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
@@ -40,19 +40,17 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 
 ### M
 
-- `-webkit-margin-after`
-- `-webkit-margin-before`
-- {{CSSxRef("-webkit-mask-box-image")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-composite")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-composite")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
 - {{CSSxRef("-webkit-mask-position-x")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
 - {{CSSxRef("-webkit-mask-position-y")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
-- {{CSSxRef("-webkit-mask-repeat-x")}} {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
-- {{CSSxRef("-webkit-mask-repeat-y")}} {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
+- {{CSSxRef("-webkit-mask-repeat-x")}} {{Deprecated_Inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
+- {{CSSxRef("-webkit-mask-repeat-y")}} {{Deprecated_Inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
 - `-webkit-mask-source-type`: N'est pas pris en charge dans Chrome.
 - `-webkit-max-logical-height`
 - `-webkit-max-logical-width`
@@ -74,7 +72,7 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 - {{CSSxRef("-webkit-text-stroke-color")}}
 - {{CSSxRef("-webkit-text-stroke-width")}}
 - `-webkit-text-zoom`&nbsp;: N'est pas pris en charge dans Chrome.
-- {{CSSxRef("-webkit-touch-callout")}} {{deprecated_inline}}: N'est pris en charge que dans Safari sur iOS.
+- {{CSSxRef("-webkit-touch-callout")}} {{Deprecated_Inline}}: N'est pris en charge que dans Safari sur iOS.
 - `-webkit-transform-origin-x`
 - `-webkit-transform-origin-y`
 - `-webkit-transform-origin-z`
@@ -105,21 +103,21 @@ Pour chacune des propriétés ci-dessous, utilisez les équivalents standard.
 - `-webkit-border-start-color`&nbsp;: Utilisez {{CSSxRef("border-inline-start-color")}}.
 - `-webkit-border-start-style`&nbsp;: Utilisez {{CSSxRef("border-inline-start-style")}}.
 - `-webkit-border-start-width`&nbsp;: Utilisez {{CSSxRef("border-inline-start-width")}}.
-- `-webkit-box-align`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("align-items")}}.
-- `-webkit-box-direction`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}} et {{CSSxRef("flex-shrink")}}.
-- `-webkit-box-flex`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
-- `-webkit-box-lines`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-flow")}}.
-- `-webkit-box-ordinal-group`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("order")}}.
-- `-webkit-box-orient`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-webkit-box-pack`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("justify-content")}}.
+- `-webkit-box-align`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("align-items")}}.
+- `-webkit-box-direction`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}} et {{CSSxRef("flex-shrink")}}.
+- `-webkit-box-flex`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
+- `-webkit-box-lines`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-flow")}}.
+- `-webkit-box-ordinal-group`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("order")}}.
+- `-webkit-box-orient`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-webkit-box-pack`&nbsp;: Utilisez les [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("justify-content")}}.
 - {{CSSxRef("-webkit-box-reflect")}}&nbsp;: Utilisez la fonction CSS {{CSSxRef("element", "element()")}}.
 
 ### C-I
 
-- `-webkit-column-break-after`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-after")}}.
-- `-webkit-column-break-before`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-before")}}.
-- `-webkit-column-break-inside`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout) avec {{CSSxRef("break-inside")}}.
+- `-webkit-column-break-after`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-after")}}.
+- `-webkit-column-break-before`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-before")}}.
+- `-webkit-column-break-inside`&nbsp;: Utilisez la [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout) avec {{CSSxRef("break-inside")}}.
 - `-webkit-font-feature-settings`&nbsp;: Utilisez {{CSSxRef("font-feature-settings")}} (la version préfixée n'est pas prise en charge dans Safari).
 - `-webkit-hyphenate-character`&nbsp;: Utilisez {{CSSxRef("hyphenate-character")}}.
 - `-webkit-initial-letter`&nbsp;: Utilisez {{CSSxRef("initial-letter")}}.
@@ -127,8 +125,10 @@ Pour chacune des propriétés ci-dessous, utilisez les équivalents standard.
 ### J-Z
 
 - `-webkit-line-clamp`&nbsp;: Utilisez {{CSSxRef("line-clamp")}}.
-- `-webkit-margin-end`&nbsp;: Utilisez {{CSSxRef("margin-block-end")}}.
-- `-webkit-margin-start`&nbsp;: Utilisez {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-after`&nbsp;: Utilisez {{CSSxRef("margin-block-end")}}.
+- `-webkit-margin-before`&nbsp;: Utilisez {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-end`&nbsp;: Utilisez {{CSSxRef("margin-inline-end")}}.
+- `-webkit-margin-start`&nbsp;: Utilisez {{CSSxRef("margin-inline-start")}}.
 - `-webkit-padding-after`&nbsp;: Utilisez {{CSSxRef("padding-block-end")}}.
 - `-webkit-padding-before`&nbsp;: Utilisez {{CSSxRef("padding-block-start")}}.
 - `-webkit-padding-end`&nbsp;: Utilisez {{CSSxRef("padding-inline-end")}}.
@@ -159,7 +159,7 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 - `::-webkit-file-upload-button`&nbsp;: Utilisez {{CSSxRef("::file-selector-button")}}
 - {{CSSxRef("::-webkit-inner-spin-button")}}
 - `::-webkit-input-placeholder`&nbsp;: Utilisez {{CSSxRef("::placeholder")}}
-- {{CSSxRef("::-webkit-meter-bar")}} {{deprecated_inline}}
+- {{CSSxRef("::-webkit-meter-bar")}} {{Deprecated_Inline}}
 - {{CSSxRef("::-webkit-meter-even-less-good-value")}}
 - {{CSSxRef("::-webkit-meter-inner-element")}}
 - {{CSSxRef("::-webkit-meter-optimum-value")}}
@@ -174,14 +174,13 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 ## Fonctionnalités multimédias
 
-- {{CSSxRef("@media/-webkit-animation")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-animation")}} {{Deprecated_Inline}}
 - {{CSSxRef("@media/-webkit-device-pixel-ratio")}}&nbsp;: Prise en charge multiplateforme
-- {{CSSxRef("@media/-webkit-transform-2d")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-transform-2d")}} {{Deprecated_Inline}}
 - {{CSSxRef("@media/-webkit-transform-3d")}}&nbsp;: Prise en charge multiplateforme
-- {{CSSxRef("@media/-webkit-transition")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-transition")}} {{Deprecated_Inline}}
 
 ## Voir aussi
 
 - [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
-- [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
+- L'entrée du glossaire {{Glossary("Vendor Prefix", "Préfixe vendeur")}}.

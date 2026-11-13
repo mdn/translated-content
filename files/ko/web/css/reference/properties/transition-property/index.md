@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-**`transition-property`** [CSS](/ko/docs/Web/CSS) 속성은 [transition effect](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 을 적용해야 하는 CSS 속성을 명시합니다.
+**`transition-property`** [CSS](/ko/docs/Web/CSS) 속성은 [transition effect](/ko/docs/Web/CSS/Guides/Transitions/Using) 을 적용해야 하는 CSS 속성을 명시합니다.
 
 {{InteractiveExample("CSS Demo: transition-property")}}
 
@@ -101,7 +101,7 @@ transition-property: unset;
 
 ### 기본 예제
 
-버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/background-color)입니다.
+버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/Reference/Properties/background-color)입니다.
 
 #### HTML
 
@@ -140,7 +140,7 @@ button {
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
-더 많은 `transition-property` 예제는 [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)에서 확인할 수 있습니다.
+더 많은 `transition-property` 예제는 [Using CSS transitions](/ko/docs/Web/CSS/Guides/Transitions/Using)에서 확인할 수 있습니다.
 
 ## 명세서
 
@@ -152,7 +152,7 @@ button {
 
 ## 같이 보기
 
-- [Using CSS transitions](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/ko/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

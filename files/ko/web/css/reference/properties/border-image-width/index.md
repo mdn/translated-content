@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-image-width
 original_slug: Web/CSS/border-image-width
 ---
 
-**`border-image-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 너비를 설정합니다.
+**`border-image-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소 [테두리 이미지](/ko/docs/Web/CSS/Reference/Properties/border-image)의 너비를 설정합니다.
 
 {{InteractiveExample("CSS Demo: border-image-width")}}
 

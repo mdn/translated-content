@@ -1,9 +1,9 @@
 ---
-title: font-synthesis-weight
+title: "`font-synthesis-weight` プロパティ (CSS)"
+short-title: font-synthesis-weight
 slug: Web/CSS/Reference/Properties/font-synthesis-weight
-original_slug: Web/CSS/font-synthesis-weight
 l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 **`font-synthesis-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに太字書体がない場合に、ブラウザーが合成するかどうかを指定します。
@@ -26,6 +26,8 @@ font-synthesis-weight: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のどちらかとして指定します。
 
 - `auto`
   - : 不足している太字書体は、必要に応じてブラウザーが合成する可能性があることを示します。
@@ -50,7 +52,7 @@ font-synthesis-weight: unset;
 
 ```html-nolint
 <p class="english">
-  これは既定の <strong>bold typeface</strong> と <em>oblique typeface</em> です。
+  これはデフォルトの <strong>bold typeface</strong> と <em>oblique typeface</em> です。
 </p>
 
 <p class="english no-syn">
@@ -61,7 +63,7 @@ font-synthesis-weight: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;
@@ -85,5 +87,5 @@ font-synthesis-weight: unset;
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) 一括指定, [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps), [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style)
+- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) 一括指定, [font-synthesis-small-caps](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-small-caps), [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style)
 - {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}

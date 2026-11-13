@@ -1,12 +1,11 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
-original_slug: Web/CSS/scroll-padding-inline
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-`scroll-padding-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、インライン方向のスクロールパディングを設定します。
+`scroll-padding-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のインライン方向のスクロールパディングを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-padding-inline")}}
 
@@ -59,7 +58,7 @@ scroll-padding-inline: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ scroll-padding-inline: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -77,10 +76,10 @@ scroll-padding 系のプロパティは、スクロールポートの*最適表�
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは次の CSS プロパティの一括指定です。
 
-- [`scroll-padding-inline-end`](/ja/docs/Web/CSS/scroll-padding-inline-end)
-- [`scroll-padding-inline-start`](/ja/docs/Web/CSS/scroll-padding-inline-start)
+- {{cssxref("scroll-padding-inline-end")}}
+- {{cssxref("scroll-padding-inline-start")}}
 
 ## 構文
 
@@ -106,7 +105,7 @@ scroll-padding-inline: unset;
 - `<length-percentage>`
   - : スクロールポートの対応する辺からのオフセットで、有効な長さまたはパーセント値です。
 - `auto`
-  - : オフセットはユーザーエージェントによって特定されます。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合を検出して他のことを行うことができます。
+  - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
 
 ## 公式定義
 
@@ -126,5 +125,5 @@ scroll-padding-inline: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

@@ -1,9 +1,8 @@
 ---
 title: scroll-margin-inline-end
 slug: Web/CSS/Reference/Properties/scroll-margin-inline-end
-original_slug: Web/CSS/scroll-margin-inline-end
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 `scroll-margin-inline-end` プロパティは、スクロールスナップ領域のインライン方向における末尾側のマージンを定義し、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
@@ -59,7 +58,7 @@ scroll-margin-inline-end: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ scroll-margin-inline-end: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -134,7 +133,7 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
   overflow-x: scroll;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid black;
   scroll-snap-type: x mandatory;
 }
 ```
@@ -147,8 +146,8 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 .scroller > div {
   flex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  background-color: rebeccapurple;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -157,12 +156,12 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 }
 
 .scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+  background-color: white;
+  color: rebeccapurple;
 }
 ```
 
-ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端 (ここでは x 軸に沿った「末尾」) をスナップ点として指定するものです。
+ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端（ここでは X 軸方向の「末尾」）をスナップ点として指定するものです。
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 
@@ -194,5 +193,5 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

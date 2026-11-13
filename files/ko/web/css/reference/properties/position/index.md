@@ -111,22 +111,22 @@ section {
 - `relative`
   - : 요소를 일반적인 문서 흐름에 따라 배치하고, 자기 자신을 기준으로 `top`, `right`, `bottom`, `left`의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다. 따라서 페이지 레이아웃에서 요소가 차지하는 공간은 `static`일 때와 같습니다.
 
-    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` 요소에 적용했을 때의 작동 방식은 정의되지 않았습니다.
+    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다. `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` 요소에 적용했을 때의 작동 방식은 정의되지 않았습니다.
 
 - `absolute`
-  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치합니다. 단, 조상 중 위치 지정 요소가 없다면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)을 기준으로 삼습니다. 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
+  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치합니다. 단, 조상 중 위치 지정 요소가 없다면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)을 기준으로 삼습니다. 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
 
-    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. 절대 위치 지정 요소의 바깥 여백은 서로 [상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)되지 않습니다.
+    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다. 절대 위치 지정 요소의 바깥 여백은 서로 [상쇄](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)되지 않습니다.
 
 - `fixed`
-  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 {{glossary("viewport", "뷰포트")}}의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)을 기준으로 삼아 배치합니다. 단, 요소의 조상 중 하나가 `transform`, `perspective`, `filter` 속성 중 어느 하나라도 `none`이 아니라면 ([CSS Transforms 명세](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조) 뷰포트 대신 그 조상을 컨테이닝 블록으로 삼습니다. (`perspective`와 `filter`의 경우 브라우저별로 결과가 다름에 유의) 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
+  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 {{glossary("viewport", "뷰포트")}}의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)을 기준으로 삼아 배치합니다. 단, 요소의 조상 중 하나가 `transform`, `perspective`, `filter` 속성 중 어느 하나라도 `none`이 아니라면 ([CSS Transforms 명세](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조) 뷰포트 대신 그 조상을 컨테이닝 블록으로 삼습니다. (`perspective`와 `filter`의 경우 브라우저별로 결과가 다름에 유의) 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
 
-    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. 문서를 인쇄할 때는 해당 요소가 모든 페이지의 같은 위치에 출력됩니다.
+    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다. 문서를 인쇄할 때는 해당 요소가 모든 페이지의 같은 위치에 출력됩니다.
 
 - `sticky`
-  - : 요소를 일반적인 문서 흐름에 따라 배치하고, 테이블 관련 요소를 포함해 가장 가까운, 스크롤 되는 조상과, 표 관련 요소를 포함한 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)(가장 가까운 블록 레벨 조상) 을 기준으로 `top`, `right`, `bottom`, `left`의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다.
+  - : 요소를 일반적인 문서 흐름에 따라 배치하고, 테이블 관련 요소를 포함해 가장 가까운, 스크롤 되는 조상과, 표 관련 요소를 포함한 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)(가장 가까운 블록 레벨 조상) 을 기준으로 `top`, `right`, `bottom`, `left`의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다.
 
-    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. 끈끈한 요소는 "스크롤 동작"(`overflow`가 `hidden`, `scroll`, `auto` 혹은 `overlay`)이 존재하는 가장 가까운 조상에 달라붙으며, 사실 그 조상은 스크롤 불가하며 실제로 스크롤 가능한 조상이 따로 존재할 경우 "끈끈한" 동작을 보이지 않는 점에 주의하세요. ([W3C CSSWG의 Github 이슈](https://github.com/w3c/csswg-drafts/issues/865) 참조)
+    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)을 생성합니다. 끈끈한 요소는 "스크롤 동작"(`overflow`가 `hidden`, `scroll`, `auto` 혹은 `overlay`)이 존재하는 가장 가까운 조상에 달라붙으며, 사실 그 조상은 스크롤 불가하며 실제로 스크롤 가능한 조상이 따로 존재할 경우 "끈끈한" 동작을 보이지 않는 점에 주의하세요. ([W3C CSSWG의 Github 이슈](https://github.com/w3c/csswg-drafts/issues/865) 참조)
 
 ## 설명
 
@@ -134,10 +134,10 @@ section {
 
 - **위치 지정 요소**란 `position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `relative`, `absolute`, `fixed`, `sticky` 중 하나인 요소입니다. 즉, 값이 `static`이 아닌 모든 요소를 말합니다.
 - **상대 위치 지정 요소**는`position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `relative`인 요소입니다. {{cssxref("top")}}과 {{cssxref("bottom")}}은 원래 위치에서의 세로축 거리를, {{cssxref("left")}}와 {{cssxref("right")}}은 원래 위치에서의 가로축 거리를 지정합니다.
-- **절대 위치 지정 요소**는`position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `absolute` 또는 `fixed`인 요소입니다.{{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}는 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)(위치의 기준점이 되는 조상 요소) 모서리로부터의 거리를 지정합니다. 요소가 바깥 여백을 가진다면 거리에 더합니다. 절대 위치 지정 요소는 새로운 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 생성합니다.
-- **끈끈한 위치 지정 요소**는 `position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `sticky`인 요소입니다. 평소에는 상대 위치 지정 요소로 처리하지만, [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)이 자신의 플로우 루트(또는, 스크롤 컨테이너)에서 지정한 임계값({{cssxref("top")}} 등으로 지정)을 넘으면 마치 `fixed`처럼 화면에 고정합니다. 고정 상태는 컨테이닝 블록의 반대편 모서리를 만나면 해제됩니다.
+- **절대 위치 지정 요소**는`position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `absolute` 또는 `fixed`인 요소입니다.{{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}는 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)(위치의 기준점이 되는 조상 요소) 모서리로부터의 거리를 지정합니다. 요소가 바깥 여백을 가진다면 거리에 더합니다. 절대 위치 지정 요소는 새로운 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 생성합니다.
+- **끈끈한 위치 지정 요소**는 `position`의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `sticky`인 요소입니다. 평소에는 상대 위치 지정 요소로 처리하지만, [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)이 자신의 플로우 루트(또는, 스크롤 컨테이너)에서 지정한 임계값({{cssxref("top")}} 등으로 지정)을 넘으면 마치 `fixed`처럼 화면에 고정합니다. 고정 상태는 컨테이닝 블록의 반대편 모서리를 만나면 해제됩니다.
 
-대부분의 경우, {{cssxref("height")}}와 {{cssxref("width")}}가 `auto`로 지정된 절대 위치 지정 요소는 자신의 콘텐츠에 맞춰 크기가 바뀝니다. 반면 [비대체](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties) 절대 위치 지정 요소는 {{Cssxref("top")}}과 {{Cssxref("bottom")}}을 지정하고 {{Cssxref("height")}}는 지정하지 않으면 (즉, `auto`로 두면) 사용 가능한 수직 공간을 가득 채웁니다. 마찬가지로 {{Cssxref("left")}}와 {{Cssxref("right")}}을 지정하고, {{Cssxref("width")}}는 `auto`로 두면 사용 가능한 수평 공간을 가득 채웁니다.
+대부분의 경우, {{cssxref("height")}}와 {{cssxref("width")}}가 `auto`로 지정된 절대 위치 지정 요소는 자신의 콘텐츠에 맞춰 크기가 바뀝니다. 반면 [비대체](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties) 절대 위치 지정 요소는 {{Cssxref("top")}}과 {{Cssxref("bottom")}}을 지정하고 {{Cssxref("height")}}는 지정하지 않으면 (즉, `auto`로 두면) 사용 가능한 수직 공간을 가득 채웁니다. 마찬가지로 {{Cssxref("left")}}와 {{Cssxref("right")}}을 지정하고, {{Cssxref("width")}}는 `auto`로 두면 사용 가능한 수평 공간을 가득 채웁니다.
 
 위에서 설명한 경우(공간을 꽉 채우는 경우)가 아니라면 다음 규칙을 따릅니다.
 
@@ -235,7 +235,7 @@ section {
 
 ### 고정 위치 지정
 
-고정 위치 지정은 절대 위치 지정과 비슷하지만, `fixed`는 요소의 컨테이닝 블록이 *뷰포트*의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)이라는 점에서 다릅니다(`transform`, `perspective`, `filter` 속성이 `none`이 아닌 조상이 있다면 그 조상이 컨테이닝 블록이 됩니다. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조). 따라서 스크롤에 관계 없이 화면의 특정 지점에 고정되는, "떠다니는"(floating) 요소를 생성할 수 있습니다. 아래 예제에서, "One" 상자는 페이지 위에서 80픽셀, 왼쪽에서 10픽셀 떨어진 위치에 고정됩니다. 스크롤을 하더라도, 뷰포트를 기준으로 같은 위치에 고정된 채로 유지됩니다.
+고정 위치 지정은 절대 위치 지정과 비슷하지만, `fixed`는 요소의 컨테이닝 블록이 *뷰포트*의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block)이라는 점에서 다릅니다(`transform`, `perspective`, `filter` 속성이 `none`이 아닌 조상이 있다면 그 조상이 컨테이닝 블록이 됩니다. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조). 따라서 스크롤에 관계 없이 화면의 특정 지점에 고정되는, "떠다니는"(floating) 요소를 생성할 수 있습니다. 아래 예제에서, "One" 상자는 페이지 위에서 80픽셀, 왼쪽에서 10픽셀 떨어진 위치에 고정됩니다. 스크롤을 하더라도, 뷰포트를 기준으로 같은 위치에 고정된 채로 유지됩니다.
 
 #### HTML
 

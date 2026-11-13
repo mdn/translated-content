@@ -3,7 +3,7 @@ title: Math.tanh()
 short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.tanh()`** は静的メソッドで、数値のハイパーボリックタンジェントを返します。
@@ -71,7 +71,7 @@ Math.tanh(Infinity); // 1
 
 ## 関連情報
 
-- [`Math.tanh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.tanh` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

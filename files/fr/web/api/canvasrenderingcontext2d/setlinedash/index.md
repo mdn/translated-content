@@ -77,8 +77,7 @@ ctx.beginPath();
 ctx.setLineDash([]);
 ctx.moveTo(0, 150);
 ctx.lineTo(400, 150);
-ctx.stroke();</textarea
->
+ctx.stroke();</textarea>
 ```
 
 ```js hidden

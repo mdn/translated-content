@@ -1,9 +1,8 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/Reference/Properties/scrollbar-width
-original_slug: Web/CSS/scrollbar-width
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。
@@ -101,8 +100,8 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 
 ## 関連情報
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/Guides/Scrollbars_styling)モジュール
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-color")}}

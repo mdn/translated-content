@@ -1,10 +1,12 @@
 ---
-title: font-synthesis-position
+title: "`font-synthesis-position` プロパティ (CSS)"
+short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
-original_slug: Web/CSS/font-synthesis-position
 l10n:
-  sourceCommit: a6cac9db700637ac004a3608a7b5003c1c0ef8f8
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
+
+{{SeeCompatTable}}
 
 **`font-synthesis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下付き文字と上付き文字の「位置」の書体がフォントファミリーになく、 {{cssxref("font-variant-position")}} を使用して位置を設定する場合に、ブラウザーが合成するかどうかを指定することができます。
 
@@ -28,6 +30,8 @@ font-synthesis-position: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のどちらかとして指定します。
 
 - `auto`
   - : 不足している位置の書体は、必要に応じてブラウザーが合成する可能性があることを示します。
@@ -68,7 +72,7 @@ font-synthesis-position: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 * {
   font-family: "Montserrat", sans-serif;

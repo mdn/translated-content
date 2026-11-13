@@ -3,7 +3,7 @@ title: Функции — Переиспользуемые блоки кода
 slug: Learn_web_development/Core/Scripting/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 Другая важная концепция в кодировании — **функции** — позволяют хранить фрагмент кода, который выполняет одну задачу внутри определённого блока, а затем вызывать этот код всякий раз, когда вам это нужно, используя одну короткую команду, вместо того, чтобы вводить один и тот же код несколько раз.
 
@@ -433,4 +433,4 @@ function subFunction3(value) {
 
 <!---->
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

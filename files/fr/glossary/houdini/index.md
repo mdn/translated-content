@@ -2,12 +2,16 @@
 title: Houdini
 slug: Glossary/Houdini
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 60df76d616a9986e92e86939782b7cf6f7f52d56
 ---
 
-Houdini est un ensemble d'API de bas niveau qui donnent aux développeur·euse·s la possibilité d'étendre le CSS, offrant la possibilité de se connecter au processus de style et de mise en page du moteur de rendu d'un navigateur. Houdini donne aux développeur·euse·s l'accès au [modèle d'objet CSS](/fr/docs/Web/API/CSS_Object_Model) ({{Glossary("CSSOM")}}), permettant d'écrire du code que le navigateur peut analyser en CSS. L'avantage de Houdini est que les développeur·euse·s peuvent créer des fonctionnalités CSS sans attendre les spécifications des normes Web pour les définir et sans attendre que chaque navigateur implémente complètement les fonctionnalités.
+Houdini est le nom abrégé de la [CSS-TAG Houdini Task Force <sup>(angl.)</sup>](https://github.com/w3c/css-houdini-drafts/wiki/), qui s'est réunie de 2015 à 2019, et le nom de l'ensemble des [API JavaScript CSS de bas niveau et des spécifications proposées <sup>(angl.)</sup>](https://drafts.css-houdini.org/) qui ont émergé de ce groupe de travail, dont certaines ont été mises en œuvre.
 
-Bien que de nombreuses fonctionnalités activées par Houdini puissent être créées avec JavaScript, l'interaction directe avec le CSSOM avant l'activation de JavaScript permet des temps d'analyse plus rapides. Les navigateurs créent le CSSOM — y compris les processus de mise en page, de peinture et de composition — avant d'appliquer les mises à jour de style trouvées dans les scripts&nbsp;: les processus de mise en page, de peinture et de composition sont répétés pour que les styles JavaScript mis à jour soient implémentés. Le code Houdini n'attend pas la fin de ce premier cycle de rendu. Il est plutôt inclus dans ce premier cycle, créant des styles rendables et compréhensibles.
+L'objectif de la Houdini Task Force était de permettre aux développeur·euse·s de créer de nouvelles fonctionnalités CSS sans avoir à attendre que les spécifications des standards web soient définies et que les navigateurs les implémentent. Cela a été réalisé en proposant des fonctionnalités pour étendre le CSS en s'intégrant dans le processus de style et de mise en page du moteur de rendu d'un navigateur. Les propositions de Houdini ont donné aux développeur·euse·s l'accès au [modèle d'objet CSS](/fr/docs/Web/API/CSS_Object_Model) ({{Glossary("CSSOM")}}), leur permettant d'écrire du code que le navigateur peut analyser comme du CSS.
+
+Un des principaux objectifs des fonctionnalités de Houdini est de fournir de meilleures performances que les fonctionnalités JavaScript équivalentes en permettant aux navigateurs de créer directement le CSSOM, y compris les processus de mise en page, de peinture et de composition.
+
+Les API Houdini incluent [l'API de peinture CSS](/fr/docs/Web/API/CSS_Painting_API), [l'API des propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API), [l'API du modèle d'objet typé CSS](/fr/docs/Web/API/CSS_Typed_OM_API), et les [Worklets](/fr/docs/Web/API/Worklet).
 
 ## Voir aussi
 

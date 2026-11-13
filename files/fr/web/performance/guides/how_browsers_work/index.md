@@ -4,8 +4,6 @@ slug: Web/Performance/Guides/How_browsers_work
 original_slug: Web/Performance/How_browsers_work
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
-
 Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
 
 Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.
@@ -92,8 +90,6 @@ Le premier paquet de réponse sera de 14 Kb. Cela fait partie de {{glossary('TCP
 
 Avec un {{glossary('TCP slow start')}}, après la réception du paquet initial, le serveur double la taille du paquet suivant, pour atteindre environ 28 Kb. La taille des paquets suivants augmente jusqu'à atteindre un seuil prédéterminé ou jusqu'à ce qu'un encombrement se produise.
 
-![](congestioncontrol.jpg)
-
 Si vous avez déjà entendu parler de la règle de 14 Kb pour le chargement de page initial, c'est le démarrage lent de TCP qui explique pourquoi la réponse initiale est de 14 Ko et pourquoi l'optimisation des performances Web appelle à l'optimisation de la focalisation avec cette réponse initiale à l'esprit. Le démarrage lent TCP augmente progressivement les vitesses de transmission en fonction des capacités du réseau afin d'éviter les encombrements.
 
 ### Contrôle congestion
@@ -149,7 +145,7 @@ La construction du CSSOM est très, très rapide et n'est pas affiché dans une 
 
 #### Compilation JavaScript
 
-Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notamment des fichiers JavaScript, sont en cours de téléchargement (grâce au scanner de préchargement). JavaScript est interprété, compilé, analysé et exécuté. Les scripts sont analysés dans des arbres à syntaxe abstraite. Certains moteurs de navigateur utilisent le {{glossary('Abstract Syntax Tree','Arbre de syntaxe abstraite')}} et le transmettent à un interpréteur, générant le code binaire exécuté sur le thread principal. Ceci est connu sous le nom de compilation JavaScript.
+Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notamment des fichiers JavaScript, sont en cours de téléchargement (grâce au scanner de préchargement). JavaScript est interprété, compilé, analysé et exécuté. Les scripts sont analysés dans des arbres à syntaxe abstraite. Certains moteurs de navigateur utilisent [l'arbre de syntaxe abstraite <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree) et le transmettent à un interpréteur, générant le code binaire exécuté sur le thread principal. Ceci est connu sous le nom de compilation JavaScript.
 
 #### Construire l'arbre d'accessibilité
 
@@ -193,7 +189,7 @@ Pour assurer un défilement et une animation fluides, tout ce qui occupe le fil 
 
 La peinture peut diviser les éléments de l'arborescence en couches. La promotion du contenu en couches sur le GPU (au lieu du thread principal sur le CPU) améliore la performances de la peinture originale et chaque la performances de repeinte supplémentaire.
 
-Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/Reference/Properties/opacity), de [transformation 3D](/fr/docs/Web/CSS/CSS_transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change), [`isolation`](/fr/docs/Web/CSS/Reference/Properties/isolation) et [`contain`](/fr/docs/Web/CSS/Reference/Properties/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
+Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/Reference/Properties/opacity), de [transformation 3D](/fr/docs/Web/CSS/Guides/Transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change), [`isolation`](/fr/docs/Web/CSS/Reference/Properties/isolation) et [`contain`](/fr/docs/Web/CSS/Reference/Properties/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
 
 Les couches améliorent les performances, mais sont coûteuses en termes de gestion de la mémoire et ne doivent donc pas être utilisées de manière excessive dans les stratégies d'optimisation des performances Web.
 

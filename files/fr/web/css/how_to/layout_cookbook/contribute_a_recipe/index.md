@@ -2,7 +2,7 @@
 title: Contribuer à une recette
 slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans cette section de MDN, nous vous expliquons ici quelles étapes suivre pour que vos exemples soient publiés.
@@ -20,7 +20,7 @@ Une recette se décompose comme suit&nbsp;:
   2. Exigences
   3. Recette
   4. Décisions
-  5. Solutions de repli utiles ou méthodes alternatives (si cela est pertinent)
+  5. Solutions de repli utiles ou méthodes alternatives (si c'est pertinent)
   6. Problèmes d'accessibilité
   7. Compatibilité des navigateurs (uniquement pour les propriétés CSS non entièrement prises en charge)
   8. Ressources supplémentaires
@@ -47,9 +47,9 @@ Vérifiez que l'HTML et le CSS fonctionnent dans plusieurs navigateurs, tailles 
 
 ### 2. Créer un exemple interactif
 
-Les exemples interactifs présents sur les pages du Livre de recettes, comme pour [Centrer un élément](/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element), permettent aux lecteur·ice·s de jouer avec le code et de modifier les parties pertinentes sans être submergé·e·s par l'ensemble du code. Votre recette sera illustrée par un ou plusieurs exemples.
+Les exemples interactifs présents sur les pages du Livre de recettes, comme pour [Centrer un élément](/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element), permettent aux lecteur·ice·s de jouer avec le code et de modifier les parties pertinentes sans être submergé·e·s par l'ensemble du code. Votre recette est illustrée par un ou plusieurs exemples.
 
-Clonnez (<i lang="en">fork</i> en anglais) le [dépôt CSS Examples <sup>(angl.)</sup>](https://github.com/mdn/css-examples), puis regardez dans le dossier `css-cookbook`. Vous y trouverez un fichier [cookbook-template.html <sup>(angl.)</sup>](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html). Copiez ce fichier et utilisez-le comme point de départ. Enregistrez-le dans le répertoire `css-cookbook` avec un nom pertinent pour votre motif. Le modèle contient des commentaires pour vous guider dans l'ajout des différentes parties aux bons endroits.
+Clonnez (<i lang="en">fork</i> en anglais) le [dépôt CSS Examples <sup>(angl.)</sup>](https://github.com/mdn/css-examples), puis regardez dans le dossier `css-cookbook`. Vous y trouvez un fichier [cookbook-template.html <sup>(angl.)</sup>](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html). Copiez ce fichier et utilisez-le comme point de départ. Enregistrez-le dans le répertoire `css-cookbook` avec un nom pertinent pour votre motif. Le modèle contient des commentaires pour vous guider dans l'ajout des différentes parties aux bons endroits.
 
 Les éléments importants de ce modèle sont les suivants&nbsp;:
 
@@ -63,17 +63,17 @@ Les éléments importants de ce modèle sont les suivants&nbsp;:
 
 Un exemple fonctionnel est [center.html <sup>(angl.)</sup>](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), qui est intégré à la page [Centrer un élément](/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element). Vous pouvez vous en inspirer pour voir comment ajouter correctement les différentes parties.
 
-Si vous avez cloné le dépôt et ajouté nos fichiers CSS et JavaScript à votre exemple, l'ouverture de l'exemple dans un navigateur devrait afficher le résultat exactement comme sur une page MDN.
+Si vous avez cloné le dépôt et ajouté nos fichiers CSS et JavaScript à votre exemple, l'ouverture de l'exemple dans un navigateur doit afficher le résultat exactement comme sur une page MDN.
 
 #### Quelques conseils
 
-- N'indentez pas le CSS et le HTML à l'intérieur des zones de texte&nbsp;; alignez plutôt le code au début des lignes. Cela rendra l'affichage plus propre.
+- N'indentez pas le CSS et le HTML à l'intérieur des zones de texte&nbsp;; alignez plutôt le code au début des lignes. Cela rend l'affichage plus propre.
 - Si des images sont nécessaires, placez-les dans le répertoire de l'exemple. Vous pouvez utiliser les images déjà présentes.
 - Vous pouvez ajuster la hauteur des zones de texte en modifiant la hauteur dans les styles en ligne (<i lang="en">inline styles</i> en anglais).
 
 ### 3. Créer une version téléchargeable
 
-Comme les exemples interactifs contiennent l'intégralité du code, nous souhaitons fournir aux lecteur·ice·s uniquement le code nécessaire pour reproduire l'exemple, en omettant les éléments superflus. Créez une copie de votre exemple interactif et ajoutez `--download` à son nom. Par exemple, la version téléchargeable de `center.html` s'appelle `center--download.html`. Ce fichier ressemblera à votre exemple initial, mais il doit être une version basique du motif sur une seule page HTML.
+Comme les exemples interactifs contiennent l'intégralité du code, nous souhaitons fournir aux lecteur·ice·s uniquement le code nécessaire pour reproduire l'exemple, en omettant les éléments superflus. Créez une copie de votre exemple interactif et ajoutez `--download` à son nom. Par exemple, la version téléchargeable de `center.html` s'appelle `center--download.html`. Ce fichier ressemble à votre exemple initial, mais il doit être une version basique du motif sur une seule page HTML.
 
 Il peut être utile d'inclure les règles CSS du corps de page issues de notre feuille de style fournie. Consultez [`cookbook-template--download.html` <sup>(angl.)</sup>](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html) comme guide&nbsp;: ces règles sont fournies comme point de départ.
 
@@ -89,7 +89,7 @@ Le modèle explique les exigences de chaque section, et vous pouvez consulter d'
 
 N'oubliez pas d'ajouter un lien vers votre nouvelle recette sur la page principale du [Livre de recettes](/fr/docs/Web/CSS/How_to/Layout_cookbook).
 
-Si vous avez des questions ou souhaitez qu'une personne vérifie votre page, contactez-nous via l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
+Si vous avez des questions ou souhaitez qu'une personne vérifie votre page, contactez-nous par l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
 ## Voir aussi
 

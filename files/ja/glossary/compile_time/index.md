@@ -1,14 +1,12 @@
 ---
-title: Compile time (コンパイル時間)
+title: Compile time (コンパイル時)
 slug: Glossary/Compile_time
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+**コンパイル時**は、プログラムが最初に読み込まれてからプログラムが{{Glossary("parse","解析")}}されるまでの時間です。
 
-コンパイル時間は、プログラムが最初にロードされてからプログラムが{{Glossary("parse","解析")}}されるまでの時間です。
+## 関連情報
 
-## より詳しく知る
-
-### 一般知識
-
-- Wikipedia 上の [Compile time](https://en.wikipedia.org/wiki/Compile_time)（英語）
+- [コンパイル時](https://ja.wikipedia.org/wiki/コンパイル時) - ウィキペディア

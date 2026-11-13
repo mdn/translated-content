@@ -1,12 +1,11 @@
 ---
 title: scroll-margin
 slug: Web/CSS/Reference/Properties/scroll-margin
-original_slug: Web/CSS/scroll-margin
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど [`margin`](/ja/docs/Web/CSS/margin) プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
+**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、ちょうど {{cssxref("margin")}} プロパティが要素のマージンを値を割り当てるように、要素のすべてのスクロールマージンを一度に値を割り当てます。
 
 {{InteractiveExample("CSS デモ: scroll-margin")}}
 
@@ -56,7 +55,7 @@ scroll-margin: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,7 +64,7 @@ scroll-margin: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -74,10 +73,10 @@ scroll-margin: 2em;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-bottom`](/ja/docs/Web/CSS/scroll-margin-bottom)
-- [`scroll-margin-left`](/ja/docs/Web/CSS/scroll-margin-left)
-- [`scroll-margin-right`](/ja/docs/Web/CSS/scroll-margin-right)
-- [`scroll-margin-top`](/ja/docs/Web/CSS/scroll-margin-top)
+- {{cssxref("scroll-margin-bottom")}}
+- {{cssxref("scroll-margin-left")}}
+- {{cssxref("scroll-margin-right")}}
+- {{cssxref("scroll-margin-top")}}
 
 ## 構文
 
@@ -146,7 +145,7 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
   overflow-x: scroll;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid black;
   scroll-snap-type: x mandatory;
 }
 ```
@@ -159,8 +158,8 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 .scroller > div {
   flex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  background-color: rebeccapurple;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -169,8 +168,8 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 }
 
 .scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+  background-color: white;
+  color: rebeccapurple;
 }
 ```
 
@@ -209,5 +208,5 @@ CSS を一通り見てみましょう。外側のコンテナーは次のよう�
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

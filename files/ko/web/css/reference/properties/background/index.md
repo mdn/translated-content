@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/background
 original_slug: Web/CSS/background
 ---
 
-[CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
+[CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
 
 {{InteractiveExample("CSS Demo: background")}}
 
@@ -165,5 +165,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 같이 보기
 
 - {{cssxref("box-decoration-break")}}
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/Guides/Images/Using_gradients)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

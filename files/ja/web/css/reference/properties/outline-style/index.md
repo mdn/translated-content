@@ -1,12 +1,11 @@
 ---
 title: outline-style
 slug: Web/CSS/Reference/Properties/outline-style
-original_slug: Web/CSS/outline-style
 l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`outline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
+**`outline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、{{cssxref("border")}} よりも外側です。
 
 {{InteractiveExample("CSS デモ: outline-style")}}
 
@@ -33,7 +32,7 @@ outline-style: inset;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    これは周囲に輪郭線があるボックスです。
   </div>
 </section>
 ```
@@ -109,7 +108,7 @@ outline-style: unset;
 
 ### 輪郭線のスタイルを auto に設定
 
-`auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://www.w3.org/TR/css-ui-3/#outline-style)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、CSS で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
+`auto` の値は、輪郭線のスタイルが独自のものであることを表します。[仕様書](https://drafts.csswg.org/css-ui/#outline-style)によれば、「典型的には、プラットフォーム用のユーザーインターフェイスの既定のスタイル、または、CSS で詳細に記述できるスタイルよりも表現豊かなスタイル 、例えば、輝いて見える半透明の外郭を持つ、輪郭の丸い輪郭線」となっています。
 
 #### HTML
 

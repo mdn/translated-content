@@ -1,14 +1,16 @@
 ---
-title: max-inline-size
+title: Propriété CSS `max-inline-size`
+short-title: max-inline-size
 slug: Web/CSS/Reference/Properties/max-inline-size
-original_slug: Web/CSS/max-inline-size
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`max-inline-size`** définit la taille maximale horizontale ou verticale d'un élément en fonction de son mode d'écriture. Elle correspond à la propriété {{CSSxRef("max-width")}} ou {{CSSxRef("max-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`max-inline-size`** définit la taille maximale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Elle correspond à la propriété {{cssxref("max-width")}} ou {{cssxref("max-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}. Si le mode d'écriture est orienté verticalement, `max-inline-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément. La propriété {{cssxref("max-block-size")}} peut être utilisée pour les blocs.
+Si le mode d'écriture est orienté verticalement, la valeur de `max-inline-size` correspond à la hauteur maximale de l'élément&nbsp;; sinon, elle correspond à la largeur maximale de l'élément. Une propriété associée est {{CSSxRef("max-block-size")}}, qui définit l'autre dimension de l'élément.
 
-{{InteractiveExample("CSS Demo: max-inline-size")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: max-inline-size")}}
 
 ```css interactive-example-choice
 max-inline-size: 150px;
@@ -33,7 +35,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the max-inline-size.
+    Ceci est une boîte où vous pouvez changer la valeur de max-inline-size.
   </div>
 </section>
 ```
@@ -45,20 +47,20 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 max-inline-size: 300px;
 max-inline-size: 25em;
+max-inline-size: anchor-size(width);
+max-inline-size: anchor-size(--my-anchor self-block, 200px);
 
-/* Valeurs proportionnelles */
-/* Type <percentage> */
+/* Valeurs de type <percentage> */
 max-inline-size: 75%;
 
 /* Valeurs avec un mot-clé */
@@ -66,17 +68,19 @@ max-inline-size: none;
 max-inline-size: max-content;
 max-inline-size: min-content;
 max-inline-size: fit-content;
-max-inline-size: fill-available;
+max-inline-size: fit-content(20em);
 
 /* Valeurs globales */
 max-inline-size: inherit;
 max-inline-size: initial;
+max-inline-size: revert;
+max-inline-size: revert-layer;
 max-inline-size: unset;
 ```
 
 ### Valeurs
 
-La propriété `max-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("max-width")}} ou {{cssxref("max-height")}}.
+La propriété `max-inline-size` peut prendre les mêmes valeurs que les propriétés {{CSSxRef("max-width")}} ou {{CSSxRef("max-height")}}.
 
 ## Définition formelle
 
@@ -86,12 +90,20 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 
 {{CSSSyntax}}
 
-## Exemple
+## Exemples
 
-### CSS
+### Définir la taille maximale en incise en pixels
+
+#### HTML
+
+```html
+<p class="texteExemple">Texte d'exemple</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
+.texteExemple {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 100%;
@@ -99,15 +111,9 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">Texte d'exemple</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemple")}}
+{{EmbedLiveSample("Définir la taille maximale en incise en pixels")}}
 
 ## Spécifications
 
@@ -119,5 +125,5 @@ La propriété `max-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("max-width")}} et {{cssxref("max-height")}}
-- {{cssxref("writing-mode")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("max-width")}} et {{CSSxRef("max-height")}}
+- La propriété {{CSSxRef("writing-mode")}}

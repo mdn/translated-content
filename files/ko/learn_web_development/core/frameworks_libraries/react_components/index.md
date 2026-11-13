@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이 시점에서 우리의 앱은 모놀리식입니다. 우리는 이를 작동시키기 전에, 관리 가능하고, 기술적인 컴포넌트로 나눌 필요가 있습니다. React는 컴포넌트로 무엇이고 무엇이 아닌지에 대한 엄격한 규칙은 없으며, 당신에게 달려 있습니다! 이 글에서는 우리의 앱을 컴포넌트로 나누는 합리적인 방법을 보여줄 것입니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         <p>
-        코어 <a href="/ko/docs/Learn/HTML">HTML</a>, <a href="/ko/docs/Learn/CSS">CSS</a>, 및 <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.
+        코어 <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및 <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.
         </p>
       </td>
     </tr>
@@ -441,4 +441,4 @@ export default App;
 
 이 문서는 여기까지입니다. 앱을 컴포넌트로 잘 나누고 효율적으로 렌더링하는 방법에 대해 자세히 알아보았습니다. 이제 React에서 이벤트를 처리하는 방법을 살펴보고 상호 작용을 추가해 보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -1,12 +1,11 @@
 ---
 title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
-original_slug: Web/CSS/padding-inline
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: f28f4c26a3d95e41d01a505af3388881abd6e49c
 ---
 
-**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに対応づけられます。
 
 {{InteractiveExample("CSS デモ: padding-inline")}}
 
@@ -54,8 +53,8 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`padding-inline-end`](/ja/docs/Web/CSS/padding-inline-end)
-- [`padding-inline-start`](/ja/docs/Web/CSS/padding-inline-start)
+- [`padding-inline-end`](/ja/docs/Web/CSS/Reference/Properties/padding-inline-end)
+- [`padding-inline-start`](/ja/docs/Web/CSS/Reference/Properties/padding-inline-start)
 
 ## 構文
 
@@ -83,7 +82,7 @@ padding-inline: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -139,6 +138,6 @@ div {
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - 対応する物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

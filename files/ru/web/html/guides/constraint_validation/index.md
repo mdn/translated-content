@@ -49,14 +49,14 @@ slug: Web/HTML/Guides/Constraint_validation
   <tbody>
     <tr>
       <td>
-        <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a href="/ru/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>
       </td>
       <td>
-        <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/ru/docs/Web/JavaScript/Guide/Regular_expressions"
           >Регулярное выражение JavaScript</a
         >
         (без
@@ -429,7 +429,7 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :required и :optional
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
 
 #### CSS-псевдокласс :placeholder-shown
 
@@ -437,13 +437,13 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :valid и :invalid
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
+[Псевдоклассы](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов \<input>, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.
 
 ### Управление текстом нарушения ограничений
 
 Следующее может помочь с управлением текстом нарушения ограничений:
 
-- Метод [element.setCustomValidity(message)](</ru/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)>) для элементов:
+- Метод [element.setCustomValidity(message)](</ru/docs/Learn_web_development/Extensions/Forms/Form_validation#element.setcustomvalidity(message)>) для элементов:
   - {{HTMLElement("fieldset")}}. Примечание: Добавление кастомного сообщения валидации на элемент fieldset не предотвращает отправку формы в большинстве браузеров.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

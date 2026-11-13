@@ -2,7 +2,7 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 HTTP の **`511 Network Authentication Required`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、コードは、クライアントがネットワークにアクセスするには認証が必要であることを示します。
@@ -35,7 +35,7 @@ Host: example.com
 HTTP/1.1 511 Network Authentication Required
 Content-Type: text/html
 
-<html>
+<html lang="en-US">
   <head>
     <title>Network Authentication Required</title>
     <meta http-equiv="refresh" content="10; url=https://login.example.net/">

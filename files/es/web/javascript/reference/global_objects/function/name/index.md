@@ -46,7 +46,7 @@ var f = function () {};
 console.log(f.name); // "f"
 ```
 
-Se puede definir una función con un nombre en un {{jsxref("Operators/Function", "function expression", "", 1)}}:
+Se puede definir una función con un nombre en un {{jsxref("Operators/function", "function expression", "", 1)}}:
 
 ```js
 var object = {

@@ -21,6 +21,6 @@ l10n:
 
 ### 延伸阅读
 
-- CSS 弹性布局指南：_[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 弹性布局指南：_[弹性项目排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- CSS 弹性布局指南：_[控制弹性项目在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- CSS 弹性布局指南：_[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS 弹性布局指南：_[弹性项目排序](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_
+- CSS 弹性布局指南：_[控制弹性项目在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)_

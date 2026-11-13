@@ -1,7 +1,6 @@
 ---
 title: 推荐拖动类型
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_data_store
-original_slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -82,7 +81,7 @@ dt.setData("text/plain", "你好，陌生人");
 
 ### 更新 DataTransfer.types
 
-Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
+Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} should return a frozen array of {{jsxref("String")}}s rather than a {{domxref("DOMStringList")}} (this is supported in Firefox 52 and above).
 
 As a result, the [contains](/zh-CN/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 

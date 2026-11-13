@@ -37,4 +37,4 @@ _图片来源：[图标与浏览器颜色](https://web.developers.google.cn/arti
 ## 参见
 
 - {{cssxref("color-scheme")}} CSS 属性
-- [`prefers-color-scheme`](/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) 媒体查询
+- [`prefers-color-scheme`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) 媒体查询

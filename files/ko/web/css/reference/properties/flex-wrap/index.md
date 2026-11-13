@@ -165,5 +165,5 @@ flex-wrap: unset;
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS Flexbox Guide: _[Mastering wrapping of flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

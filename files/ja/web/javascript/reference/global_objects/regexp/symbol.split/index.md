@@ -1,11 +1,10 @@
 ---
 title: RegExp.prototype[Symbol.split]()
+short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.split]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) にセパレーターとして正規表現が渡されたときにどのように動作するのかを指定します。
 
@@ -20,10 +19,10 @@ class RegExp1 extends RegExp {
 }
 
 console.log("2016-01-02".split(new RegExp1("-")));
-// Expected output: Array ["(2016)", "(01)", "(02)"]
+// 予想される結果: Array ["(2016)", "(01)", "(02)"]
 
-console.log("2016-01-02".split(new RegExp("-")));
-// Expected output: Array ["2016", "01", "02"]
+console.log("2016-01-02".split(/-/));
+// 予想される結果: Array ["2016", "01", "02"]
 ```
 
 ## 構文

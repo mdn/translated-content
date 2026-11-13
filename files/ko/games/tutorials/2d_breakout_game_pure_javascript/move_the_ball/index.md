@@ -1,13 +1,13 @@
 ---
 title: 공 움직이기
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
 l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 두 번째 과정입니다. [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
+이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)의 10단계 중 두 번째 과정입니다. [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
 여러분은 이전 과정에서 어떻게 공이 그려지는지 배웠습니다. 이젠 공을 움직이게 만들어보죠! 기술적으로는 화면에 공을 그렸다가 지우는 과정을 반복하게 되는데, 매 프레임마다 공의 위치를 조금씩 다르게 해서 그리면 공이 움직이는것 처럼 보이게 됩니다. 마치 영화 화면이 움직이는 방식처럼 말이죠!
 
@@ -132,12 +132,63 @@ function draw() {
 
 아래의 라이브 데모에서 이 강의의 완성된 코드를 확인할 수 있습니다. 어떻게 작동하는지 더 잘 이해하기 위해 플레이 해보세요.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
+> [!NOTE]
+> 라이브 샘플이 자동으로 실행되지 않도록 "게임 시작" 버튼을 추가했습니다. 게임이 자동으로 시작되면서 알림 등의 이벤트가 과도하게 발생하는 것을 방지하기 위해서입니다.
+
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">게임 시작</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{EmbedLiveSample("여러분의 코드와 비교해보세요", 600, 350)}}
 
 연습해보기: 움직이는 공의 속도를 바꾸거나, 움직이는 방향을 바꿔보세요.
 
 ## 다음 단계로
 
-우리는 공을 그리고 움직이게 만들었지만, 캔버스 모서리 밖으로 사라져버립니다. 세 번째 챕터에서는 공이 [벽으로부터 튕겨 나오기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls) 위한 방법을 알아볼 것입니다.
+우리는 공을 그리고 움직이게 만들었지만, 캔버스 모서리 밖으로 사라져버립니다. 세 번째 챕터에서는 공이 [벽으로부터 튕겨 나오기](/ko/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls) 위한 방법을 알아볼 것입니다.
 
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

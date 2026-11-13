@@ -2,7 +2,7 @@
 title: En-tête de métadonnées de requête de récupération
 slug: Glossary/Fetch_metadata_request_header
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 81bf621759d3a52fdf737c2d75f186a0073d1406
 ---
 
 Un **en-tête de métadonnées de requête de récupération** (<i lang="en">fetch metadata request header</i> en anglais) est un {{Glossary("Request header", "en-tête de requête HTTP")}} qui fournit des informations supplémentaires sur le contexte d'origine de la requête. Cela permet au serveur de décider si une requête doit être autorisée selon son emplacement d'origine et la façon dont la ressource sera utilisée.
@@ -26,6 +26,7 @@ Un serveur peut les utiliser pour modifier son comportement de mise en cache ou 
 
 ## Voir aussi
 
+- [Récupération des métadonnées](/fr/docs/Web/HTTP/Guides/Fetch_metadata)
 - [Liste des en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
 - [En-têtes HTTP > En-têtes de métadonnées de requête](/fr/docs/Web/HTTP/Reference/Headers#en-têtes_de_requêtes_de_métadonnées)
 - Termes associés du glossaire&nbsp;:

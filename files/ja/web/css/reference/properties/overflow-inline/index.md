@@ -1,9 +1,9 @@
 ---
-title: overflow-inline
+title: "`overflow-inline` プロパティ (CSS)"
+short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
-original_slug: Web/CSS/overflow-inline
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツがボックスのインライン方向の先頭および末尾方向の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
@@ -29,9 +29,9 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-`overflow-inline` プロパティは、単一の {{cSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
-
 ### 値
+
+`overflow-inline` プロパティは、単一の {{cSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
 
 - `visible`
   - : コンテンツは切り取られず、パディングボックスのインライン方向の先頭と末尾の端よりも外側に表示される可能性があります。
@@ -131,7 +131,7 @@ div {
 ## 関連情報
 
 - {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

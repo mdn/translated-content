@@ -1,9 +1,8 @@
 ---
 title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
-original_slug: Web/CSS/hyphens
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
@@ -78,7 +77,7 @@ hyphens: unset;
 > `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
 
 > [!NOTE]
-> [`word-break: break-all`](/ja/docs/Web/CSS/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
+> [`word-break: break-all`](/ja/docs/Web/CSS/Reference/Properties/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
 
 ## 改行候補位置の提案
 
@@ -156,4 +155,4 @@ dd.auto {
 - {{Cssxref("content")}}
 - {{cssxref("overflow-wrap")}} （以前の `word-wrap`）
 - {{cssxref("word-break")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

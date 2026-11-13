@@ -5,8 +5,6 @@ slug: Web/API/Element/DOMActivate_event
 
 {{APIRef}}
 
-{{Deprecated_Header}}
-
 当元素被激活时发生，例如点击鼠标或键盘按键。
 
 当元素被激活，如使用鼠标点击或使用键盘导航并激活至这个元素时， **`DOMActivate`** 事件被触发。

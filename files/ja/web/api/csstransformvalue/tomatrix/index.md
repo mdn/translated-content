@@ -1,11 +1,12 @@
 ---
-title: CSSTransformValue.toMatrix()
+title: "CSSTransformValue: toMatrix() メソッド"
+short-title: toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 **`toMatrix()`** は {{domxref("CSSTransformValue")}} インターフェイスのメソッドで、 {{domxref('DOMMatrix')}} オブジェクトを返します。
 

@@ -1,9 +1,9 @@
 ---
-title: font-weight
+title: "`font-weight` プロパティ (CSS)"
+short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
-original_slug: Web/CSS/font-weight
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a5531a7b1fa30ab1de952ffff619a9830eb1c1a9
 ---
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
@@ -82,9 +82,9 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-`font-weight` プロパティは、`<font-weight-absolute>` 値または以下の一覧にある相対的な太さの値で指定します。
-
 ### 値
+
+このプロパティは、以下のリストのいずれか一つの値として指定します。
 
 - `normal`
   - : 通常のフォントの太さです。 `400` と同じです。
@@ -105,7 +105,7 @@ font-weight: unset;
 
 正確に一致する太さが利用できない場合、実際に表示される太さを定めるために以下の規則が使用されます。
 
-- 対象となる太さがが `400`～`500` で指定された場合
+- 対象となる太さが `400`～`500` で指定された場合
   - 利用できる太さを、対象値から `500` までの間で昇順で探します。
   - 一致するものがなければ、対象値未満の利用できる太さを降順で探します。
   - 一致するものがなければ、 `500` より大きい太さを昇順で探します。
@@ -223,9 +223,8 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 .sample {
   text-transform: uppercase;
   font-weight: 500;
-  font:
-    1.5rem "MutatorSans",
-    sans-serif;
+  font-size: 1.5rem;
+  font-family: "MutatorSans", sans-serif;
 }
 ```
 
@@ -233,7 +232,7 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 ## アクセシビリティ
 
-弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/color#アクセシビリティ)は、テキストを読むのが難しくなることがあります。
+弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/Reference/Properties/color#アクセシビリティ)は、テキストを読むのが難しくなることがあります。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
@@ -303,5 +302,6 @@ span {
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
+- SVG の {{SVGAttr("font-weight")}} 属性
 - [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

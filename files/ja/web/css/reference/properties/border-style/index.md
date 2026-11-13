@@ -1,12 +1,12 @@
 ---
-title: border-style
+title: "`border-style` プロパティ (CSS)"
+short-title: border-style
 slug: Web/CSS/Reference/Properties/border-style
-original_slug: Web/CSS/border-style
 l10n:
-  sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
-**`border-style`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
+**`border-style`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
 {{InteractiveExample("CSS デモ: border-style")}}
 
@@ -37,15 +37,15 @@ border-style: dashed groove none dotted;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,7 +53,7 @@ border-style: dashed groove none dotted;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -61,10 +61,10 @@ body {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-style`](/ja/docs/Web/CSS/border-bottom-style)
-- [`border-left-style`](/ja/docs/Web/CSS/border-left-style)
-- [`border-right-style`](/ja/docs/Web/CSS/border-right-style)
-- [`border-top-style`](/ja/docs/Web/CSS/border-top-style)
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-top-style")}}
 
 ## 構文
 
@@ -112,9 +112,9 @@ border-style: unset;
 - `<line-style>`
   - : 境界のスタイルを記述します。以下の値を使用することができます。
     - `none`
-      - : `hidden` キーワードと同様に、境界線を表示しません。 {{cssxref("background-image")}} を設定している場合を除き、プロパティで別に指定していても {{cssxref("border-width")}} の同じ辺の計算値は `0` になります。テーブルのセルで境界線が collasped 形式である場合は、 `none` 値はもっとも低い優先度になります。ほかに競合する境界線が設定されている場合も、そちらが表示されます。
+      - : `hidden` キーワードと同様に、境界線を表示しません。 {{cssxref("background-image")}} を設定している場合を除き、プロパティで別に指定していても {{cssxref("border-width")}} の同じ辺の[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)は `0` になります。テーブルのセルで境界線が collasped 形式である場合は、 `none` 値はもっとも低い優先度になります。ほかに競合する境界線が設定されている場合も、そちらが表示されます。
     - `hidden`
-      - : `none` キーワードと同様に、境界線を表示しません。 {{cssxref("background-image")}} を設定している場合を除き、プロパティで別に指定していても {{cssxref("border-width")}} の同じ辺の計算値は `0` になります。テーブルのセルで境界線が collasped 形式である場合は、 `hidden` 値はもっとも高い優先度になります。ほかに競合する境界線が設定されている場合も、非表示になります。
+      - : `none` キーワードと同様に、境界線を表示しません。 {{cssxref("background-image")}} を設定している場合を除き、プロパティで別に指定していても {{cssxref("border-width")}} の同じ辺の[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)は `0` になります。テーブルのセルで境界線が collasped 形式である場合は、 `hidden` 値はもっとも高い優先度になります。ほかに競合する境界線が設定されている場合も、非表示になります。
     - `dotted`
       - : 連続した丸い点を表示します。点の間の空白の量は仕様書で定義されておらず、実装依存です。点の半径は、同じ辺の {{cssxref("border-width")}} の計算値の半分です。
     - `dashed`

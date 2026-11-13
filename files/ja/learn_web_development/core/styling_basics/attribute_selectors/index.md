@@ -2,10 +2,8 @@
 title: 属性セレクター
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: c9f602a26092661130a031b7148d696a3ac9802e
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
@@ -19,7 +17,7 @@ HTML の学習で学んだように、要素はマークアップについてさ
         HTML の基本（
         <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >基本的な HTML の構文</a
-        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター<a>。
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター</a>。
       </td>
     </tr>
     <tr>
@@ -81,6 +79,8 @@ li[class~="a"] {
 
 {{EmbedLiveSample("attribute", "", "200px")}}
 
+上記の CSS を編集して、`class` 属性の値が `ab` であるリストアイテムのみを選択するルールを追加し、それらに `white` のテキスト `color` と `purple` の `background-color` を適用してみてください。
+
 ## 部分文字列照合セレクター
 
 これらのセレクターは、属性の値の中の部分文字列をより高度に照合させることができます。例えば、 `box-warning` と `box-error` のクラスがあり、文字列 "box-" で始まるものを全て一致させたい場合、 `[class^="box-"]` を使用して両方を選択することができます（上記の通り、 `[class|="box"]` でもできます）。
@@ -90,8 +90,6 @@ li[class~="a"] {
 | `[attr^=value]` | `li[class^="box-"]` | _attr_ 属性の値が _value_ で始まる要素に一致します。                   |
 | `[attr$=value]` | `li[class$="-box"]` | _attr_ 属性の値が _value_ で終わる要素に一致します。                   |
 | `[attr*=value]` | `li[class*="box"]`  | _attr_ 属性の文字列内のどこかに _value_ を含むを持つ要素に一致します。 |
-
-（参考: 長い間 `^` と `$` は正規表現において、それぞれ _先頭_ と _末尾_ を意味する _アンカー_ として使用されてきたことに注意すると有用かもしれません。）
 
 次の例は、これらのセレクターの使用法を示しています。
 
@@ -127,6 +125,8 @@ li[class*="a"] {
 ```
 
 {{EmbedLiveSample("attribute-substring", "", "200px")}}
+
+上記の CSS を編集して、`class` 属性の値の末尾が `b` または `c` で終わるリストアイテムのみを選択し、それらに `2px` 幅の `solid`、`black` の `border` を適用するルールを追加してみてください。この問題を解決するには、[セレクターリスト](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selector_lists)を使用する必要があるかもしれません。
 
 ## まとめ
 

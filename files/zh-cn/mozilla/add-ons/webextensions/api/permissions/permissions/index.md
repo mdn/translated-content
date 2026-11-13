@@ -9,7 +9,7 @@ l10n:
 
 ## 类型
 
-一个具有以下属性的 {{jsxref("object")}}：
+一个具有以下属性的 {{jsxref("Object")}}：
 
 - `origins` {{optional_inline}}
   - : 用于表示一系列的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)的[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组。

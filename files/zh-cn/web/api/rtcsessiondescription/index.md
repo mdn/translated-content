@@ -16,7 +16,7 @@ _`RTCSessionDescription` 接口不继承任何属性_
 - {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
   - : [`RTCSdpType`](#rtcsdptype) 会话描述类型的原型枚举。
 - {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("DOMString")}} 包含会话的{{Glossary("SDP")}}协议描述。
+  - : 一个 {{jsxref("String")}} 包含会话的{{Glossary("SDP")}}协议描述。
 
 ## 常数
 

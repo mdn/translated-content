@@ -1,18 +1,18 @@
 ---
 title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
-original_slug: Web/CSS/position-anchor
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
 ---
 
-**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティをで設定された要素）のアンカー名を指定します。
+**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティで設定された要素）のアンカー名を指定します。
 
 ## 構文
 
 ```css
 /* 単一の値 */
 position-anchor: auto;
+position-anchor: none;
 position-anchor: --anchor-name;
 
 /* グローバル値 */
@@ -28,6 +28,9 @@ position-anchor: unset;
 - `auto`
   - : 位置指定要素を、暗黙のアンカー要素（存在する場合）に関連付けます。例えば、標準外の HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性で設定されたものなどです。
 
+- `none`
+  - : 初期値（デフォルト値）。位置指定要素をアンカー要素に関連付けません。
+
 - {{cssxref("dashed-ident")}}
   - : 位置指定要素を関連付けるアンカー要素の名前。アンカー要素の {{cssxref("anchor-name")}} プロパティに掲載されているもの。これは**既定のアンカー指定子**として知られています。
 
@@ -41,13 +44,15 @@ position-anchor: unset;
 
 `position-anchor` プロパティに記載されているアンカー名を持つアンカー要素が複数ある場合、位置指定要素はそのアンカー名を持つソース順序における最後のアンカー要素に関連付けられます。
 
+アンカー位置指定要素とアンカーの間に以前設定された関連付けを取り消すには、アンカー位置指定要素の `position-anchor` 値を `none` に設定します。
+
 位置指定要素をアンカーに固定するには、アンカー要素に対して相対的に配置しなければなりません。これにはアンカー位置指定機能（例: {{cssxref("anchor()")}} 関数（{{glossary("inset properties", "インセットプロパティ")}}の値として設定）や {{cssxref("position-area")}} プロパティ）を使用します。
 
-関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
+関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
 
-`position-anchor` プロパティは、位置指定されたすべての要素と、それに加えて[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、例えば {{cssxref("::before")}} や {{cssxref("::after")}} などで対応しています。擬似要素は、特に指定しない限り、その擬似要素の元の要素と同じ要素に暗黙的にアンカーされます。
+`position-anchor` プロパティは、位置指定されたすべての要素と、それに加えて[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、例えば {{cssxref("::before")}} や {{cssxref("::after")}} などで対応しています。擬似要素は、特に指定しない限り、その擬似要素の元の要素と同じ要素に暗黙的にアンカーされます。
 
-アンカー機能の詳細な情報とアンカーを使用する方法は、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイドを参照してください。
+アンカー機能の詳細な情報とアンカーを使用する方法は、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイドを参照してください。
 
 ## 公式定義
 
@@ -59,79 +64,7 @@ position-anchor: unset;
 
 ## 例
 
-`anchor-name` の基本使用法については[基本的な使い方](/ja/docs/Web/CSS/anchor-name#基本的な使い方)を、追加の [`position-anchor` の例](/ja/docs/Web/CSS/anchor-name#例)については、それぞれの記事を参照してください。
-
-### スライダーのつまみをアンカーとして使用
-
-この例では {{htmlelement("output")}} が、範囲スライダーのつまみであるアンカーを基準に相対位置指定されています。
-
-#### HTML
-
-[`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) 要素と [`<output>`](/ja/docs/Web/HTML/Reference/Elements/output) 要素を記載して、範囲の値を表示させます。`<output>` 要素に表示される値は、スライダーの値が変化するにつれて JavaScript を介して更新されます。
-
-```html
-<label for="slider">値を変更してください:</label>
-<input type="range" min="0" max="100" value="25" id="slider" />
-<output>25</output>
-```
-
-#### CSS
-
-[`::-webkit-slider-thumb`](/ja/docs/Web/CSS/::-webkit-slider-thumb) 擬似要素で表されるつまみに、`--thumb` というアンカー名を与えました。次に、その名前を `<output>` 要素の `position-anchor` プロパティの値として設定し、 {{cssxref("position")}} で `fixed` の値を指定します。これらの段階により、`<output>` がつまみと関連付けられました。
-
-最後に、{{cssxref("left")}} および {{cssxref("top")}} プロパティに {{cssxref("anchor()")}} の値を使用して、`<output>` をつまみに対して相対的に位置指定します。
-
-```css hidden
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  font-size: 1.4rem;
-  font-family: sans-serif;
-}
-input {
-  width: 33vw;
-}
-output {
-  background: cyan;
-  border: 2px solid darkblue;
-  padding: 3px 6px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-}
-```
-
-```css
-input::-webkit-slider-thumb {
-  anchor-name: --thumb;
-}
-
-output {
-  position-anchor: --thumb;
-  position: absolute;
-  left: anchor(right);
-  bottom: anchor(top);
-}
-```
-
-#### JavaScript
-
-`<input>` の値が変更された際に `<output>` 要素のコンテンツを更新するイベントリスナーを記述します。
-
-```js
-const input = document.querySelector("input");
-const output = document.querySelector("output");
-
-input.addEventListener("input", (event) => {
-  output.innerText = `${input.value}`;
-});
-```
-
-#### 結果
-
-出力はつまみに固定されています。値を変更してください。 ブラウザーがアンカー位置指定に対応している場合、値はスライダー上の位置に関係なく、つまみの右上に表示されます。
-
-{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+`anchor-name` の基本使用法については[基本的な使い方](/ja/docs/Web/CSS/Reference/Properties/anchor-name#基本的な使い方)を、追加の [`position-anchor` の例](/ja/docs/Web/CSS/Reference/Properties/anchor-name#例)については、それぞれの記事を参照してください。
 
 ### 複数の位置指定要素とアンカー
 
@@ -287,6 +220,85 @@ function updateAnchorNames() {
 
 {{ EmbedLiveSample("Multiple positioned elements and anchors", "100%", "400") }}
 
+### スライダーのつまみをアンカーとして使用
+
+この例では {{htmlelement("output")}} が、範囲スライダーのつまみであるアンカーを基準に相対位置指定されています。
+
+#### HTML
+
+[`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) 要素と [`<output>`](/ja/docs/Web/HTML/Reference/Elements/output) 要素を記載して、範囲の値を表示させます。`<output>` 要素に表示される値は、スライダーの値が変化するにつれて JavaScript を介して更新されます。
+
+```html
+<label for="slider">値を変更してください:</label>
+<input type="range" min="0" max="100" value="25" id="slider" />
+<output>25</output>
+```
+
+#### CSS
+
+[`::-webkit-slider-thumb`](/ja/docs/Web/CSS/Reference/Selectors/::-webkit-slider-thumb) 擬似要素で表されるつまみに、`--thumb` というアンカー名を与えました。次に、その名前を `<output>` 要素の `position-anchor` プロパティの値として設定し、 {{cssxref("position")}} で `fixed` の値を指定します。これらの段階により、`<output>` がつまみと関連付けられました。
+
+最後に、{{cssxref("left")}} および {{cssxref("top")}} プロパティに {{cssxref("anchor()")}} の値を使用して、`<output>` をつまみに対して相対的に位置指定します。
+
+```css hidden
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+input {
+  width: 33vw;
+}
+output {
+  background: cyan;
+  border: 2px solid darkblue;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+```
+
+```css
+input::-webkit-slider-thumb {
+  anchor-name: --thumb;
+}
+
+input::-moz-range-thumb {
+  anchor-name: --thumb;
+}
+
+output {
+  position-anchor: --thumb;
+  position: absolute;
+  left: anchor(right);
+  bottom: anchor(top);
+}
+```
+
+#### JavaScript
+
+`<input>` の値が変更された際に `<output>` 要素のコンテンツを更新するイベントリスナーを記述します。
+
+```js
+const input = document.querySelector("input");
+const output = document.querySelector("output");
+
+input.addEventListener("input", (event) => {
+  output.innerText = `${input.value}`;
+});
+```
+
+#### 結果
+
+出力はつまみに固定されています。値を変更してください。 ブラウザーがアンカー位置指定に対応している場合、値はスライダー上の位置に関係なく、つまみの右上に表示されます。
+
+{{ EmbedLiveSample("A range thumb as anchor", "100%", "225") }}
+
+> [!NOTE]
+> このデモのアンカー位置指定 CSS は現在 Firefox では動作しません。Firefox ではスライダーのつまみを {{cssxref("::-moz-range-thumb")}} 擬似要素で対象にできますが、現在アンカーとして利用できません（[Firefox バグ 1993699](https://bugzil.la/1993699) 参照）。
+
 ## 仕様書
 
 {{Specifications}}
@@ -298,6 +310,7 @@ function updateAnchorNames() {
 ## 関連情報
 
 - {{cssxref("anchor-name")}}
+- {{cssxref("anchor-scope")}}
 - HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド

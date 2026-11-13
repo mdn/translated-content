@@ -1,14 +1,14 @@
 ---
-title: transform-origin
+title: Propriété CSS `transform-origin`
+short-title: transform-origin
 slug: Web/CSS/Reference/Properties/transform-origin
-original_slug: Web/CSS/transform-origin
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.
 
-La propriété **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.
-
-{{InteractiveExample("CSS Demo: transform-origin")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: transform-origin")}}
 
 ```css interactive-example-choice
 transform-origin: center;
@@ -23,7 +23,7 @@ transform-origin: 50px 50px;
 ```
 
 ```css interactive-example-choice
-/* 3D rotation with z-axis origin */
+/* Rotation 3D avec origine sur l'axe z */
 transform-origin: bottom right 60px;
 ```
 
@@ -54,7 +54,7 @@ transform-origin: bottom right 60px;
 
 @keyframes rotate3d {
   from {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   to {
@@ -76,7 +76,7 @@ transform-origin: bottom right 60px;
   align-items: center;
   justify-content: center;
   background: #f7ebee;
-  color: #000000;
+  color: black;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
@@ -105,131 +105,135 @@ transform-origin: bottom right 60px;
 ```
 
 ```js interactive-example
-"use strict";
+const crosshair = document.getElementById("crosshair");
+const el = document.getElementById("example-element");
 
-window.addEventListener("load", () => {
-  function update() {
-    const selected = document.querySelector(".selected");
+function update() {
+  const selected = document.querySelector(".selected");
 
-    /* Restart the animation
-           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
-    el.className = "";
+  /* Redémarrer l'animation
+     https://developer.mozilla.org/fr/docs/Web/API/Web_Animations_API/Tips */
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className =
-          el.style.transformOrigin.split(" ")[2] === "60px"
-            ? "rotate3d"
-            : "rotate";
-      });
+      el.className =
+        el.style.transformOrigin.split(" ")[2] === "60px"
+          ? "rotate3d"
+          : "rotate";
     });
-
-    const transformOrigin = getComputedStyle(el).transformOrigin;
-    const pos = transformOrigin.split(/\s+/);
-    crosshair.style.left = `calc(${pos[0]} - 12px)`;
-    crosshair.style.top = `calc(${pos[1]} - 12px)`;
-  }
-
-  const crosshair = document.getElementById("crosshair");
-  const el = document.getElementById("example-element");
-
-  const observer = new MutationObserver(() => {
-    update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
+  const transformOrigin = getComputedStyle(el).transformOrigin;
+  const pos = transformOrigin.split(/\s+/);
+  crosshair.style.left = `calc(${pos[0]} - 12px)`;
+  crosshair.style.top = `calc(${pos[1]} - 12px)`;
+}
 
+const observer = new MutationObserver(() => {
   update();
-  crosshair.style.opacity = "1";
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+crosshair.style.opacity = "1";
 ```
 
-Par exemple, l'origine par défaut pour la fonction `rotate()` est le centre de la rotation. Cette propriété est utilisée en :
+L'origine de transformation est le point autour duquel une transformation est appliquée. Par exemple, l'origine de transformation de la fonction [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate) est le centre de rotation.
 
-1. Translatant l'élément avec l'opposé de la valeur fournie
-2. Appliquant la transformation souhaitée sur l'élément
-3. Translatant l'élément avec la valeur fournie pour cette propriété.
+En pratique, cette propriété enveloppe une paire de translations autour des autres transformations de l'élément. La première translation déplace l'origine de transformation vers la véritable origine en <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Ensuite, les autres transformations sont appliquées et, parce que l'origine de transformation est en <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, ces transformations s'effectuent autour de cette origine. Enfin, la translation inverse est appliquée, ramenant l'origine de transformation à sa position initiale. Par conséquent, cette définition
 
-Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.
+```css
+transform-origin: -100% 50%;
+transform: rotate(45deg);
+```
+
+donne la même transformation que
+
+```css
+transform-origin: 0 0;
+transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);
+```
+
+En lisant de droite à gauche, `translate(100%, -50%)` est la translation qui amène l'origine de transformation à la véritable origine, `rotate(45deg)` est la transformation d'origine, et `translate(-100%, 50%)` est la translation qui restaure l'origine de transformation à sa position initiale.
 
 Par défaut, l'origine d'une transformation est `center`.
 
 ## Syntaxe
 
 ```css
-/* Utilisation d'une seule valeur */
+/* Syntaxe avec une valeur */
 transform-origin: 2px;
 transform-origin: bottom;
 
-/* x-offset y-offset */
+/* x-offset | y-offset */
 transform-origin: 3cm 2px;
 
-/* y-offset x-offset-keyword */
-transform-origin: 2px left;
-
-/* x-offset-keyword y-offset */
+/* x-offset-keyword | y-offset */
 transform-origin: left 2px;
 
-/* x-offset-keyword y-offset-keyword */
+/* x-offset-keyword | y-offset-keyword */
 transform-origin: right top;
 
-/* y-offset-keyword x-offset-keyword */
+/* y-offset-keyword | x-offset-keyword */
 transform-origin: top right;
 
-/* x-offset y-offset z-offset */
+/* x-offset | y-offset | z-offset */
 transform-origin: 2px 30% 10px;
 
-/* y-offset x-offset-keyword z-offset */
-transform-origin: 2px left 10px;
-
-/* x-offset-keyword y-offset z-offset */
+/* x-offset-keyword | y-offset | z-offset */
 transform-origin: left 5px -3px;
 
-/* x-offset-keyword y-offset-keyword z-offset */
+/* x-offset-keyword | y-offset-keyword | z-offset */
 transform-origin: right bottom 2cm;
 
-/* y-offset-keyword x-offset-keyword z-offset */
+/* y-offset-keyword | x-offset-keyword | z-offset */
 transform-origin: bottom right 2cm;
 
 /* Valeurs globales */
 transform-origin: inherit;
 transform-origin: initial;
+transform-origin: revert;
+transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-La propriété `transform-origin` peut être définie en utiisant une, deux ou trois valeurs.
+La propriété `transform-origin` peut être définie en utilisant une, deux ou trois valeurs, chaque valeur représentant un décalage. Les décalages qui ne sont pas explicitement définis sont réinitialisés à leurs [valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) correspondantes.
 
-- Avec une valeur, celle-ci doit être :
-  - Une longueur (type {{cssxref("&lt;length&gt;")}})
-  - Un pourcentage (type {{cssxref("&lt;percentage&gt;")}}
-  - Un mot-clé parmi `left`, `center`, `right`, `top`, `bottom`.
+Si une seule valeur {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}} est définie, elle représente le décalage horizontal.
 
-- Avec deux valeurs
-  - La première valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `left`, `center`, `right`
-  - La seconde valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `top`, `center`, `bottom`.
+Si deux valeurs ou plus sont définies et qu'aucune valeur n'est un mot-clé, ou que le seul mot-clé utilisé est `center`, alors la première valeur représente le décalage horizontal et la seconde représente le décalage vertical.
 
-- Avec trois valeurs
-  - Les deux premières valeurs doivent être structurées comme la syntaxe avec deux valeurs
-  - La troisième valeur doit être une longueur (type {{cssxref("length")}}
+- Syntaxe à une valeur&nbsp;:
+  - La valeur doit être une longueur ({{CSSxRef("&lt;length&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), ou l'un des mots-clés `left`, `center`, `right`, `top` et `bottom`.
+
+- Syntaxe à deux valeurs&nbsp;:
+  - Une valeur doit être une longueur ({{CSSxRef("&lt;length&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), ou l'un des mots-clés `left`, `center` et `right`.
+  - L'autre valeur doit être une longueur ({{CSSxRef("&lt;length&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), ou l'un des mots-clés `top`, `center` et `bottom`.
+
+- Syntaxe à trois valeurs&nbsp;:
+  - Les deux premières valeurs sont les mêmes que pour la syntaxe à deux valeurs.
+  - La troisième valeur doit être une {{CSSxRef("&lt;length&gt;")}}. Elle représente toujours le décalage sur l'axe Z.
 
 ### Valeur
 
 - `x-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
+  - : Une valeur du type {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
 - `offset-keyword`
   - : Un mot-clé parmi `left`, `right`, `top`, `bottom` ou `center` qui décrit le décalage correspondant.
 - `y-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
+  - : Une valeur du type {{CSSxRef("&lt;length&gt;")}} ou {{CSSxRef("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
 - `x-offset-keyword`
   - : Un mot-clé parmi `left`, `right` ou `center` qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
 - `y-offset-keyword`
   - : Un mot-clé parmi `top`, `bottom` ou `center` qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
 - `z-offset`
-  - : Une valeur du type {{cssxref("&lt;length&gt;")}} (et jamais une valeur du type {{cssxref("&lt;percentage&gt;")}}, sinon la déclaration serait invalide) qui décrit la distance, depuis l'œil de l'utilisateur, de l'origine de la transformation sur l'axe de profondeur (z)..
+  - : Est une longueur {{CSSxRef("&lt;length&gt;")}} (et jamais un {{CSSxRef("&lt;percentage&gt;")}}, ce qui rendrait la déclaration invalide) décrivant la distance depuis l'œil de l'utilisateur à laquelle l'origine z=0 est placée.
 
-Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;percentage&gt;")}} suivantes :
+Les mots-clés sont des raccourcis qui correspondent aux valeurs {{CSSxRef("&lt;percentage&gt;")}} suivantes&nbsp;:
 
 | Mot-clé  | Valeur |
 | -------- | ------ |
@@ -243,13 +247,14 @@ Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;
 
 {{CSSInfo}}
 
+> [!NOTE]
+> La valeur initiale de `transform-origin` est `0 0` pour tous les éléments SVG, sauf pour les éléments `<svg>` racine et les éléments `<svg>` qui sont un enfant direct d'un [`foreignObject`](/fr/docs/Web/SVG/Reference/Element/foreignObject), et dont le `transform-origin` est `50% 50%`, comme pour les autres éléments CSS. Voir l'attribut [SVG `transform-origin`](/fr/docs/Web/SVG/Reference/Attribute/transform-origin) pour plus d'informations.
+
 ## Syntaxe formelle
 
 {{CSSSyntax}}
 
 ## Exemples
-
-Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) pour des exemples supplémentaires.
 
 ### Illustrations des différentes valeurs de transform
 
@@ -264,8 +269,7 @@ Cet exemple illustre ce que donnent les différentes valeurs de `transform-origi
 
   <pre>
 transform: none;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box2">&nbsp;</div>
@@ -274,8 +278,7 @@ transform: none;
 
   <pre>
 transform: rotate(30deg);
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box3">&nbsp;</div>
@@ -285,8 +288,7 @@ transform: rotate(30deg);
   <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box4">&nbsp;</div>
@@ -296,8 +298,7 @@ transform-origin: 0 0;
   <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box5">&nbsp;</div>
@@ -307,8 +308,7 @@ transform-origin: 100% 100%;
   <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box6">&nbsp;</div>
@@ -317,8 +317,7 @@ transform-origin: -1em -3em;
 
   <pre>
 transform: scale(1.7);
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box7">&nbsp;</div>
@@ -328,8 +327,7 @@ transform: scale(1.7);
   <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box8">&nbsp;</div>
@@ -339,8 +337,7 @@ transform-origin: 0 0;
   <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box9">&nbsp;</div>
@@ -350,8 +347,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 
   <div class="example">
     <div class="box box10">&nbsp;</div>
@@ -361,8 +357,7 @@ transform-origin: 100% -30%;
   <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-</pre
-  >
+  </pre>
 </div>
 ```
 
@@ -440,7 +435,7 @@ transform-origin: 100% -30%;
 }
 ```
 
-{{EmbedLiveSample('Exemples', '', 1350) }}
+{{EmbedLiveSample("Illustrations des différentes valeurs de transform", "", 1350)}}
 
 ## Spécifications
 
@@ -452,5 +447,6 @@ transform-origin: 100% -30%;
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
+- L'attribut SVG {{SVGAttr("transform-origin")}}
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

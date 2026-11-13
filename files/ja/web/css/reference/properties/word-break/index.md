@@ -1,9 +1,8 @@
 ---
 title: word-break
 slug: Web/CSS/Reference/Properties/word-break
-original_slug: Web/CSS/word-break
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
@@ -193,4 +192,4 @@ word-break: unset;
 - {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

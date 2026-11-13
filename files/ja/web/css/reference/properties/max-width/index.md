@@ -1,12 +1,11 @@
 ---
 title: max-width
 slug: Web/CSS/Reference/Properties/max-width
-original_slug: Web/CSS/max-width
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、 `max-width` で指定した値を上回ることを防ぎます。
+**`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)が、 `max-width` で指定した値を上回ることを防ぎます。
 
 {{InteractiveExample("CSS デモ: max-width")}}
 
@@ -29,7 +28,7 @@ max-width: 20ch;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    Change the maximum width.
+    最大幅を変更してください。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ max-width: 20ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -52,7 +51,7 @@ max-width: 20ch;
 ```css
 /* <length> 値 */
 max-width: 3.5em;
-max-width: anchor-size(--myAnchor inline, 245px);
+max-width: anchor-size(--my-anchor inline, 245px);
 max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> 値 */
@@ -82,16 +81,16 @@ max-width: unset;
   - : `max-width` を包含ブロックの幅に対するパーセント値で定義します。
 - `none`
   - : ボックスの寸法を制限しません。
-- `max-content`
+- {{cssxref("max-content")}}
   - : 内容物が推奨する `max-width` です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : 内容物の最小の `max-width` です。
-- `fit-content`
-  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- {{cssxref("fit-content")}}
+  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 - `stretch`
-  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最大の幅を、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の幅に設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最大の幅を、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の幅に設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
     > [!NOTE]
     > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -113,7 +112,7 @@ max-width: unset;
 
 ## 例
 
-<h3 id="Setting_max_width_in_pixels">最大幅をピクセル単位で設定</h3>
+### 最大幅をピクセル単位で設定
 
 この例では、 "child" の幅が 150 ピクセルか "parent" の幅のどちらか小さい方になります。
 
@@ -161,5 +160,5 @@ max-width: unset;
 - {{cssxref("max-inline-size")}}
 - {{cssxref("max-block-size")}}
 - {{cssxref("box-sizing")}}
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

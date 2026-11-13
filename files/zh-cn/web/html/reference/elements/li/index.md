@@ -163,5 +163,5 @@ p {
 - 其他与列表相关的 HTML 元素：{{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}} 和过时的 {{HTMLElement("dir")}}；
 - 特别适用于为 `<li>` 元素添加样式的 CSS 属性：
   - {{cssxref("list-style")}} 属性，用于选择显示序号的方式；
-  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于处理复杂的嵌套列表；
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)，用于处理复杂的嵌套列表；
   - {{cssxref("margin")}} 属性，用于控制列表项的缩进。

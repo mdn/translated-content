@@ -82,4 +82,4 @@ function logValue(e) {
 
 - HTML {{HtmlElement("form")}} 元素
 - 相关事件：[`submit`](/zh-CN/docs/Web/API/HTMLFormElement/submit_event)
-- [CSS `:invalid` 伪类](/zh-CN/docs/Web/CSS/:invalid)
+- [CSS `:invalid` 伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/:invalid)

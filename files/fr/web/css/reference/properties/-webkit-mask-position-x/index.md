@@ -1,14 +1,14 @@
 ---
-title: -webkit-mask-position-x
+title: Propriété CSS `-webkit-mask-position-x`
+short-title: -webkit-mask-position-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-x
-original_slug: Web/CSS/-webkit-mask-position-x
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
 
 ## Syntaxe
 
@@ -44,13 +44,15 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 
 ### Valeurs
 
+Cette propriété est définie par une ou plusieurs valeurs séparées par une virgule&nbsp;:
+
 - `<length-percentage>`
-  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit de la boîte de remplissage).
-- **`left`**
+  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage. Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit de la boîte de remplissage).
+- `left`
   - : Un mot-clé équivalent à `0%`.
-- **`right`**
+- `right`
   - : Un mot-clé équivalent à `100%`.
-- **`center`**
+- `center`
   - : Un mot-clé équivalent à `50%`.
 
 ## Définition formelle
@@ -63,14 +65,16 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 
 ## Exemples
 
+### Positionner horizontalement une image de masque
+
 ```css
 .exempleUn {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: right;
 }
 
 .exempleDeux {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: 25%;
 }
 ```
@@ -85,6 +89,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("mask-position", "-webkit-mask-position")}}
-- {{cssxref("-webkit-mask-position-y")}}
-- {{cssxref("mask-origin", "-webkit-mask-origin")}}
+- La propriété {{CSSxRef("mask-position", "-webkit-mask-position")}}
+- La propriété {{CSSxRef("-webkit-mask-position-y")}}
+- La propriété {{CSSxRef("mask-origin", "-webkit-mask-origin")}}

@@ -3,7 +3,7 @@ title: От <object> к <iframe> - другие технологии внедр�
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content")}}
 
 К настоящему моменту вы уже должны уметь прикреплять вложения на свои веб-страницы, включая изображения, видео и аудио. На этом этапе мы хотели бы сделать шаг в сторону, рассматривая некоторые элементы, которые позволяют встраивать в ваши веб-страницы самые разнообразные типы контента: {{htmlelement ("iframe")}}, {{htmlelement ( "embed")}} и {{htmlelement ("object")}}. \<iframe> предназначен для встраивания других веб-страниц, а два других позволяют встраивать PDF-файлы, SVG и даже Flash - устаревшую технологию, которую вы всё равно иногда увидите.
 
@@ -232,7 +232,7 @@ textarea.onkeyup = function () {
 Использование HTTPS требует сертификат безопасности, что может обходиться в копеечку (хотя есть [Let's Encrypt](https://letsencrypt.org/), что облегчает задачу). Если вы не можете его получить, вы можете отдавать свой родительский документ с помощью HTTP. Однако, из-за второго преимущества HTTPS _во что бы то ни стало_ вы не должны внедрять сторонний контент с HTTP. (В лучшем случае ваш браузер выдаст угрожающее предупреждение.) Все уважаемые компании, которые делают контент доступным для внедрения через \<iframe>, доступны через HTTPS - посмотрите URL-адреса внутри \<iframe> src при встраивании, например, содержимого из Карт Google или Youtube.
 
 > [!NOTE]
-> [Github pages](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) позволяют предоставлять контент через HTTPS по умолчанию, поэтому это полезно для размещения контента. Если вы используете другой хостинг и не уверены, спросите хостинг-провайдера об этом.
+> [Github pages](/ru/docs/Learn_web_development/Core/Version_control) позволяют предоставлять контент через HTTPS по умолчанию, поэтому это полезно для размещения контента. Если вы используете другой хостинг и не уверены, спросите хостинг-провайдера об этом.
 
 #### Всегда используйте атрибут `sandbox`
 
@@ -327,4 +327,4 @@ PDF-файлы были необходимой ступенью между бу�
 
 Существует много других технологий, которые включают в себя внедрение внешнего контента, помимо тех, которые мы обсуждали здесь. Мы видели некоторые из них в предыдущих статьях, например {{htmlelement ("video")}}, {{htmlelement ("audio")}} и {{htmlelement ("img")}}, но есть и другие. Например, {{htmlelement ("canvas")}} для 2D-и 3D-графики, сгенерированной JavaScript, и {{SVGElement ("svg")}} для встраивания векторной графики. Мы рассмотрим SVG в следующей статье модуля.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content")}}

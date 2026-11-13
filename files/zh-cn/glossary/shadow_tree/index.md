@@ -12,7 +12,7 @@ l10n:
 影子树的隐藏 DOM 节点通常不受影子树外部应用的影响，反之亦然。**影子边界**是影子 DOM 结束且常规 DOM 开始的地方，可以穿越（但只能有意为之）：
 
 - 从外部脚本访问影子树节点需要使用特殊的[影子 DOM API](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)。
-- 从外部样式化影子树可以通过 [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)和 [CSS 影子部件](/zh-CN/docs/Web/CSS/CSS_shadow_parts)来实现。
+- 从外部样式化影子树可以通过 [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)和 [CSS 影子部件](/zh-CN/docs/Web/CSS/Guides/Shadow_parts)来实现。
 
 ## 参见
 

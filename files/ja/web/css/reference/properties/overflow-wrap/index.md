@@ -1,9 +1,9 @@
 ---
-title: overflow-wrap
+title: "`overflow-wrap` プロパティ (CSS)"
+short-title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
-original_slug: Web/CSS/overflow-wrap
 l10n:
-  sourceCommit: 1db74391e637d69ede247bb4e4a4f0585a2f11c6
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 **`overflow-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インライン要素に対して、テキストが行ボックスをあふれないように、ブラウザーが分割できない文字列の途中で改行を入れるかどうかの設定を適用します。
@@ -25,22 +25,22 @@ overflow-wrap: anywhere;
 overflow-wrap: break-word;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    Most words are short &amp; don't need to break. But
+    多くの単語は短く、折り返す必要はありません。しかし、
     <strong class="transition-all" id="example-element"
       >Antidisestablishmentarianism</strong
     >
-    is long. The width is set to min-content, with a max-width of 11em.
+    は長い単語です。幅は min-content と指定しており、max-width は 11em です。
   </div>
 </section>
 ```
 
 ```css interactive-example
 .example-container {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid #663399;
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
   padding: 0.75em;
   width: min-content;
   max-width: 11em;
@@ -67,9 +67,9 @@ overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
-`overflow-wrap` プロパティは、以下のうちの一つのキーワードで指定します。
-
 ### 値
+
+`overflow-wrap` プロパティは、以下のいずれかのキーワード値で指定します。
 
 - `normal`
   - : 通常の単語の分割位置 (2 つの単語の間の空白など) でのみ改行することを示します。
@@ -177,4 +177,4 @@ p {
 - {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

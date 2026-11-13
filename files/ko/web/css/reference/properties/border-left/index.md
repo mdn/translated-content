@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-left
 original_slug: Web/CSS/border-left
 ---
 
-**`border-left`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 왼쪽 테두리를 설정합니다. {{cssxref("border-left-width")}}, {{cssxref("border-left-style")}}, {{cssxref("border-left-color")}}의 값을 지정합니다.
+**`border-left`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)은 요소의 왼쪽 테두리를 설정합니다. {{cssxref("border-left-width")}}, {{cssxref("border-left-style")}}, {{cssxref("border-left-color")}}의 값을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-left")}}
 

@@ -44,7 +44,7 @@ regexp[Symbol.split](str, limit)
 
 ## 描述
 
-当 `RegExp` 作为分隔符传入时，{{jsxref("String.prototype.split()")}} 会在内部调用此方法。例如，下面的两个示例返回相同的结果。
+此方法用于在 `RegExp` 子类中自定义 `split()` 的行为。当 `RegExp` 作为分隔符传入时，{{jsxref("String.prototype.split()")}} 会在内部调用此方法。例如，下面的两个示例返回相同的结果。
 
 ```js
 "a-b-c".split(/-/);
@@ -52,18 +52,20 @@ regexp[Symbol.split](str, limit)
 /-/[Symbol.split]("a-b-c");
 ```
 
-此方法用于在自定义 `RegExp` 子类中 `split()` 方法的行为。
+与 [`[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) 类似，[`[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) 首先使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) 构造一个新的正则表达式，从而避免以任何方式修改原始正则表达式。构造函数接收 `this` 和原始标志；如果原始标志中没有 `y`（“粘性”）标志，还会添加该标志。`g`（“全局”）标志与此方法的行为无关。由于 `RegExp()` 构造函数的行为，[`lastIndex`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) 默认从 0 开始。
 
-`RegExp.prototype[Symbol.split]()` 基础方法具有以下行为：
+如果目标字符串是空字符串，且正则表达式可以匹配空字符串（例如 `/a?/`），则返回空数组。否则，如果正则表达式无法匹配空字符串，则返回 `[""]`。
 
-- 它首先使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) 构造一个新的正则表达式，从而避免对原始正则表达式进行任何修改。
-- 该正则表达式的 `g`（“全局”）标志会被忽略，而 `y`（“粘性”）标志则始终会被应用，即使它最初并未设置。
-- 如果目标字符串是空字符串，且正则表达式可以匹配空字符串（例如 `/a?/`），则返回空数组。否则，如果正则表达式无法匹配空字符串，则返回 `[""]`。
-- 匹配过程通过不断调用 `this.exec()`。由于正则表达式始终带有粘性标志，每次调用都会沿字符串向前推进，返回匹配的字符串、匹配位置索引以及任何捕获组。
-- 对于每一次匹配，首先将上一个匹配结束位置与当前匹配开始位置之间的子字符串添加到结果数组中。然后，将当前匹配中的捕获组值逐个添加进去。
-- 如果当前匹配是空字符串，或者正则表达式（由于启用了粘性）在当前位置无法匹配，那么 `lastIndex` 仍会被推进——如果正则是 [Unicode 感知](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)的，则推进一个 Unicode 码位；否则，推进一个 UTF-16 码元。
-- 如果正则表达式无法匹配目标字符串，则返回原始字符串本身，并将其包裹在一个数组中。
-- 返回的数组长度不会超过提供的 `limit` 参数（如果有的话），同时会尽可能接近该限制。因此，如果数组已满，最后一个匹配项及其捕获组可能不会全部出现在返回的数组中。
+正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法会被重复调用，每次调用都会推进 `lastIndex`，直到到达字符串末尾。如果当前匹配为空字符串，或者正则表达式（由于启用了粘性）在当前位置无法匹配，那么 `lastIndex` 仍会被推进——如果正则是[支持 Unicode](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式) 的，则推进一个 Unicode 码位；否则，推进一个 UTF-16 码元。
+
+```js
+console.log("😄".split(/(?:)/g)); // [ '\ud83d', '\ude04' ]
+console.log("😄".split(/(?:)/gu)); // [ '😄' ]
+```
+
+对于每一次匹配，首先将上一个匹配结束位置与当前匹配开始位置之间的子字符串添加到结果数组中。然后，将当前匹配中的捕获组值逐个添加进去。返回的数组长度不会超过提供的 `limit` 参数（如果有的话），同时会尽可能接近该限制。因此，如果数组已满，最后一个匹配项及其捕获组可能不会全部出现在返回的数组中。
+
+如果整个字符串中没有成功匹配，则返回原始字符串本身，并将其包裹在一个数组中。
 
 ## 示例
 

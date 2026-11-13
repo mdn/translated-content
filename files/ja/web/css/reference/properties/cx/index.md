@@ -1,9 +1,8 @@
 ---
 title: cx
 slug: Web/CSS/Reference/Properties/cx
-original_slug: Web/CSS/cx
 l10n:
-  sourceCommit: c5f403bb08c91ae77ddfe47f937438fb5e6fcae5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`cx`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{SVGElement("circle")}} または {{SVGElement("ellipse")}} 要素の中心の X 座標を定義します。存在する場合、その要素の {{SVGAttr("cx")}} 属性を上書きします。

@@ -111,7 +111,7 @@ svg {
 以下の変換関数は、 `transform` 属性の `<transform-list>` で使用することができます。
 
 > [!WARNING]
-> 仕様書によれば、 CSS の[座標変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
+> 仕様書によれば、 CSS の[座標変換関数](/ja/docs/Web/CSS/Reference/Values/transform-function)も使用することができます。しかし、互換性は保証されていません。
 
 ### matrix
 

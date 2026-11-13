@@ -3,8 +3,6 @@ title: browserAction.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
 ---
 
-{{AddonSidebar}}
-
 Définit la couleur de fond du badge. Les onglets sans couleur de fond de badge spécifique hériteront de la couleur de fond de badge globale, qui par défaut est `[217, 0, 0, 255]` dans Firefox.
 
 A partir de Firefox 63, à moins que la couleur du texte du badge ne soit explicitement définie à l'aide de {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}, la couleur du texte du badge sera automatiquement définie en noir ou blanc afin d'optimiser le contraste avec la couleur de fond du badge spécifié. Par exemple, si vous définissez la couleur de fond du badge sur blanc, la couleur par défaut du texte du badge sera définie sur noir, et vice versa.
@@ -25,7 +23,7 @@ browser.browserAction.setBadgeBackgroundColor(
   - : `object`
     - `color`
       - : La couleur, spécifiée comme l'un des suivants :
-        - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/color_value) , par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.
+        - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/Reference/Values/color_value) , par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.
         - Un objet `{{WebExtAPIRef('browserAction.ColorArray')}}`.
         - `null`. Si un `tabId` est spécifié, il supprime la couleur d'arrière-plan du badge spécifique à l'onglet pour que l'onglet hérite de la couleur d'arrière-plan du badge global. Sinon, la couleur d'arrière-plan du badge global revient à la valeur par défaut.
 

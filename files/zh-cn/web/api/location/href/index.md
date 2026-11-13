@@ -5,7 +5,7 @@ slug: Web/API/Location/href
 
 {{ApiRef("Location")}}
 
-{{domxref("Location")}} 接口的 **`href`** 属性是一个字符串化转换器 (stringifier), 返回一个包含了完整 URL 的 {{domxref("USVString")}} 值，且允许 href 的更新。
+{{domxref("Location")}} 接口的 **`href`** 属性是一个字符串化转换器 (stringifier), 返回一个包含了完整 URL 的 {{jsxref("String")}} 值，且允许 href 的更新。
 
 ## 语法
 

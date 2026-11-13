@@ -1,7 +1,8 @@
 ---
 title: レシピを投稿する
 slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
-original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
+l10n:
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 レイアウト料理帳の例を提供したい場合、このページでは、例を公開するための手順について説明します。
@@ -10,44 +11,58 @@ original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 
 **あらゆる便利なウェブデザインのパターンの最も単純なバージョンです**。 含まれている CSS の各行は、パターンを示すのを助けるためにそこにあるべきですので、例をきれいに見せるためだけのものは省略してください。アイデアは、誰かがパターンを手に取り、自分のスタイルでサイトでそれを使用できるということです。
 
-## レシピを公開する手順
-
 レシピは以下で構成されています。
 
-1. ライブサンプル（live example）は、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
-2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
-3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
-   1. 要件 (Requirements)
-   2. レシピ (Recipe)
-   3. 行った選択 (Choices made)
-   4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
-   5. アクセシビリティの考慮 (Accessibility concerns)
-   6. ブラウザーの互換性 (Browser compatibility)
-   7. 関連資料 (Additional resources)
+- ライブサンプルは、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
+- その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
+- [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)内のページの詳細は次のとおりです。
+  1. はじめに
+  2. 要件
+  3. レシピ
+  4. 選択したもの
+  5. 有用な代替策または代替方法
+  6. アクセシビリティの考慮
+  7. ブラウザーの互換性（CSS プロパティが完全に対応されていない場合）
+  8. 関連資料
+
+> [!NOTE]
+> 日本語版のレシピを単独で投稿することはできません。必ず英語版を先に投稿してください。英語版の投稿については英語版ページをご覧ください。
+
+## レシピの投稿の手順
+
+レシピを作成し、CSS レイアウト料理帳に追加するには、以下の手順に従ってください。
+
+- [何が良いレシピになるのか](#何が良いレシピになるのか)
+- [レシピの投稿の手順](#レシピの投稿の手順)
+  - [1. パターンの作成](#1._パターンの作成)
+  - [2. ライブサンプルの作成](#2._ライブサンプルの作成)
+  - [3. ダウンロード版の作成](#3._ダウンロード版の作成)
+  - [4. 例をプルリクエストをする](#4._例をプルリクエストをする)
+  - [5. ページを作成する](#5._ページを作成する)
 
 ### 1. パターンの作成
 
-例をレシピに変える前に、まずパターンを単純な HTML ページとして作成します。 何を示そうとしているのかを考え、できるだけ単純にします。 BEM のような特殊な CSS 規約の使用は避けてください。誰もが知っているわけではありませんし、必要以上に複雑に見える可能性があります。
+例をレシピに変える前に、まずパターンを単純な HTML ページとして作成します。 何を示そうとしているのかを考え、できるだけ単純にします。クラス名を追加する場合は、 "container" や "item" といった説明的な言葉を使用してください。
 
-HTML と CSS が有効であることを確認し、複数のブラウザーでテストしてください。すべてが対応しているわけではない CSS プロパティを使用していても、それは問題ありません。ページを作成するときにブラウザーの対応情報を含めることができます。 場合によっては、代替の対応を含む、例の 2 番目のバージョンを作成すると便利な場合があります。
+HTML と CSS については、複数のブラウザー、ビューポートサイズ、および端末で必ずテストを行ってください。また、CSS のスタイル設定がアクセシビリティガイドラインに準拠していることも確実に確認してください。対応が限定的な CSS プロパティを使用しても問題はありませんが、ページを生成する際には、特に「ブラウザーの互換性」の節において、必ずブラウザーの対応情報を記載するようにしてください。場合によっては、代替機能に対応したサンプルを別途作成しておくと役立つことがあります。
 
 ### 2. ライブサンプルの作成
 
-料理帳のページや MDN の他の場所で見ることができるライブサンプルは、訪問者が必要なすべてのコードに圧倒されることなく、コードで遊び、関連する部分を変更することを可能にします。レシピは 1 つ以上の例として示します。
+料理帳のページにあるライブサンプル（例えば、[要素の中央揃え](/ja/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)など）や、MDN で他の場所にあるライブサンプルでは、読者はコード全体に圧倒されることなく、コードを操作して関連する部分を変更することができます。あなたのレシピも、1つ以上のライブサンプルを用いて解説します。
 
 [CSS Examples リポジトリー](https://github.com/mdn/css-examples)をフォークして（右上の Fork ボタンを押すと自分のアカウントにコピーが作られます）、`css-cookbook` フォルダーを調べてください。 出発点としてコピーできる [cookbook-template.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template.html) ファイルがあります。 これを `css-cookbook` ディレクトリーにパターンにとって意味のある名前で保存してください。 テンプレート (template) は、さまざまなパーツを適切な場所に追加するのに役立つようにコメントされています。
 
 このための重要な部分は次のとおりです。
 
-エディターパネルのスタイル用のスタイルシート、基本的な body のスタイル、およびエディター機能用の JavaScript ファイルがあります。 これらのファイルはそのままにしておきます。
+- エディターパネルのスタイル用のスタイルシート、基本的な body のスタイル、およびエディター機能用の JavaScript ファイルがあります。 これらのファイルはそのままにしておきます。
 
-head の中には 2 つのスタイルのブロックがあります。 1 つ目は、ページの訪問者がこの例で遊ぶために変更する必要がないものです。 2 つ目は、ライブサンプルで遊びたい項目のどれかです。 通常、 1 つ目のブロックにライブサンプルの CSS をすべて追加してから、 2 番目のブロックに移動する必要があるルールのセットを選択します。 2 番目のブロックのルールは、パターンの基本となるルール、おそらくユーザーが CSS の値を変更してパターンの更新を確認できるようなルールにする必要があります。
+- `<head>` の中には 2 つのスタイルのブロックがあります。 1 つ目は、ページの訪問者がこの例で遊ぶために変更する必要がないものです。 2 つ目は、ライブサンプルで遊びたい項目のどれかです。 通常、 1 つ目のブロックにライブサンプルの CSS をすべて追加してから、 2 番目のブロックに移動する必要があるルールのセットを選択します。 2 番目のブロックのルールは、パターンの基本となるルール、おそらくユーザーが CSS の値を変更してパターンの更新を確認できるようなルールにする必要があります。
 
-コンポーネント用の HTML を 2 回追加する必要があります。 最初に `preview` クラスの `section` の中に、次に `playable-html` クラスの `textarea` の中にです。
+- コンポーネント用の HTML を 2 回追加する必要があります。 最初に `preview` クラスの `section` の中に、次に `playable-html` クラスの `textarea` の中にです。
 
-head の中の 2 番目のブロックからの `editable` クラスの CSS も、`playable-css` クラスの `textarea` にコピーする必要があります。
+- head の中の 2 番目のブロックからの `editable` クラスの CSS も、`playable-css` クラスの `textarea` にコピーする必要があります。
 
-単純な例は [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) で、これは[要素を中央に配置](/ja/docs/Web/CSS/Layout_cookbook/Center_an_element)のページに埋め込まれています。これを使用して、さまざまな細部を正しく追加する方法を確認できます。
+実例は [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html) で、これは[要素を中央に配置](/ja/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)のページに埋め込まれています。これを使用して、さまざまな細部を正しく追加する方法を確認できます。
 
 リポジトリーをフォークした場合、私たちの CSS と JavaScript ファイルを例と一緒に持っているのであれば、ブラウザーでライブサンプルを開くと、ページに含まれている時と全く同じように動くのが分かるでしょう。
 
@@ -59,23 +74,25 @@ head の中の 2 番目のブロックからの `editable` クラスの CSS も�
 
 ### 3. ダウンロード版の作成
 
-ライブサンプルにはすべてのライブサンプルコードが含まれているので、そのすべてを含まない簡単な例を訪問者に提供したいと思います。 ライブサンプルを --download を付けてコピーしてください。 例えば、`center.html` には `center--download.html` という名前のダウンロードバージョンがあります。 このファイルはあなたの最初の例と似ています。 これは単一の HTML ページとしてのパターンの基本バージョンです。 含まれたスタイルシートにある body の CSS ルールを含めると便利かもしれません。 [cookbook-template--download.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/cookbook-template--download.html) を見てみると、これらが出発点として含まれています。
+サンプルにはすべてのライブサンプルコードが記載されているため、読者の皆様には、不要なアイテムを省略し、そのサンプルに必要なコードのみを提供したいと考えています。ライブサンプルのコピーを生成し、その名前に `--download` を追加してください。例えば、`center.html` のダウンロード版は `center--download.html` となります。このファイルは、最初のサンプルと似たようなものになります。これは、単一の HTML ページとして構成された、パターンの基本バージョンとなるはずです。
+
+組み込みのスタイルシートにある本体用のCSSルールを含めることができると便利です。ガイドとして [`cookbook-template--download.html`](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template--download.html) をご覧ください。これらのルールは、作成の出発点として提供されています。
 
 ### 4. 例をプルリクエストをする
 
-[CSS Examples リポジトリー](https://github.com/mdn/css-examples)でプルリクエスト (Pull Request, PR) を作成してください。 このようにして、ページを作成する前に必要になる可能性のある例の変更を手助けすることができます。 さらに、この例は実際のものである必要があり、最初に作成するのが理にかなっています。 プルリクエストにパターンの説明とあなたが何を示しているかを含めてください。
+[CSS Examples リポジトリー](https://github.com/mdn/css-examples)でプルリクエスト (Pull Request, PR) を作成してください。これにより、ページを作成する前に、サンプルに必要な変更について役立つサポートを提供することができます。さらに、サンプルは公開されている必要があります。そのため、まずサンプルコードを作成し、その後で解説ガイドを作成するのが理にかなっています。プルリクエスト (PR) では、そのパターンと、何を示そうとしているのかを説明してください。[プルリクエストを開くためのガイドライン](/ja/docs/MDN/Community/Pull_requests#open_a_pull_request)をご参照ください。
 
 ### 5. ページを作成する
 
-例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
+サンプルPRがマージされた後、[Layout Cookbook ディレクトリー](https://github.com/mdn/content/tree/main/files/en-us/web/css/how_to/layout_cookbook)内に新しいページを作成するためのプルリクエストを開いてください。
+[料理帳ページのテンプレート](https://github.com/mdn/content/blob/main/files/en-us/web/css/how_to/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1)をご利用ください。
+テンプレートにはそれぞれの節の要件が記載されています。さらに詳しい情報が必要な場合は、他の料理帳の例を参照してください。
 
-テンプレートは各セクションの一部になるべきものを説明し、より多くの助けを得るために他の料理帳の例を参照することができます。 これらのページのいずれかの編集ボタンをクリックすると、互換性データを埋め込むために使用されるマクロやライブサンプルなどが表示されます。
+新しいレシピへのリンクを、メインの [レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook) ページに追加することをお忘れなく。
 
-MDN Wiki の使用に関する一般的なガイダンスが必要な場合は、こちらのヘルプページを参照してください。
-
-質問をする必要がある場合、または誰かにあなたのページを見てもらいたい場合は、[Discourse の MDN フォーラム](https://discourse.mozilla.org/c/mdn)を利用するか、[Matrix でチャット](/ja/docs/MDN/Community/Conversations#synchronous_chat)してください。
+質問がある場合や、ページの確認を依頼したい場合は、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを通じてご連絡ください。
 
 ## 関連情報
 
-- [料理帳ページのテンプレート](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
+- [料理帳ページのテンプレート](/ja/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
 - [CSS Examples リポジトリー](https://github.com/mdn/css-examples)

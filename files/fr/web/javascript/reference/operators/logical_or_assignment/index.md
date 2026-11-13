@@ -3,8 +3,6 @@ title: Affectation après OU logique (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 L'opérateur d'affectation après OU logique (`x ||= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à faux (_falsy_)](/fr/docs/Glossary/Falsy).
 
 {{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/object-fit
 original_slug: Web/CSS/object-fit
 ---
 
-[CSS](/ko/docs/Web/CSS) **`object-fit`** 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.
+[CSS](/ko/docs/Web/CSS) **`object-fit`** 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.
 
 {{cssxref("object-position")}} 속성을 사용해 대체 요소 콘텐츠가 콘텐츠 박스 내에 위치할 지점을 바꿀 수 있습니다.
 

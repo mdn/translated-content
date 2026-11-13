@@ -1,9 +1,8 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/Reference/Properties/text-decoration-style
-original_slug: Web/CSS/text-decoration-style
 l10n:
-  sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-decoration-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。

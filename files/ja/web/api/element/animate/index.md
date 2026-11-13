@@ -3,10 +3,10 @@ title: "Element: animate() メソッド"
 short-title: animate()
 slug: Web/API/Element/animate
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
-{{APIRef('Web Animations')}}
+{{APIRef("Web Animations")}}
 
 {{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} を生成し、この要素へ適用し、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。
 
@@ -29,30 +29,13 @@ animate(keyframes, options)
       - : `animate()` の固有のプロパティです。このアニメーションを参照する文字列です。
     - `rangeEnd` {{optional_inline}}
       - : タイムラインに沿ったアニメーションの適用範囲の終わり、つまりタイムラインのどこでアニメーションが終わるかを指定します。CSS の {{cssxref("animation-range-end")}} プロパティに相当します。`rangeEnd` は以下のように、様々な値を取ることができます。
-        - 文字列で、`normal`（アニメーションの範囲に変更がないことを意味します）、オフセットを表す CSS の {{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかと、それに続く `<length-percentage>` です。例えば次のようになります。
+        - 文字列で、`normal`（アニメーションの適用範囲に変更がないことを意味します）、オフセットを表す CSS の {{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかと、それに続く `<length-percentage>` です。例えば、`"normal"`、`"entry"`、`"cover 100%"` などです。
 
-          ```
-          "normal"
-          "entry"
-          "cover 100%"
-          ```
+          利用できる値の詳細については {{cssxref("animation-range")}} を参照してください。また、[View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) も確認してください。このツールでは、様々な値の意味を分かりやすく視覚的に確認できます。
 
-          利用できる値の詳細については [`animation-range`](/ja/docs/Web/CSS/animation-range) を参照してください。また、[View Timeline Ranges Visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/) も調べてみてください。様々な値が意味していることを、視覚的な形式で簡単に示すことができます。
+        - 前の箇所で記述されている `<timeline-range-name>` と `<length-percentage>` を表す `rangeName`（文字列）と `offset` ({{domxref("CSSNumericValue")}}) プロパティを格納したオブジェクト。例えば、`{ rangeName: "entry", offset: CSS.percent("100") }` です。
 
-        - 前の箇所で記述されている `<timeline-range-name>` と `<length-percentage>` を表す `rangeName`（文字列）と `offset` ({{domxref("CSSNumericValue")}}) プロパティを格納したオブジェクト。例えば、次のようなものです。
-
-          ```js
-          {
-            rangeName: 'entry',
-            offset: CSS.percent('100'),
-          }
-          ```
-
-        - {{domxref("CSSNumericValue")}} で、オフセットを表すもの。例えば、次のようなものです。
-
-          ```js
-          CSS.percent("100");
-          ```
+        - オフセットを表す {{domxref("CSSNumericValue")}}。例えば、`CSS.percent("100")` です。
 
     - `rangeStart` {{optional_inline}}
       - : タイムラインに沿ったアニメーションの適用範囲、つまりタイムラインのどこからアニメーションが始まるかを指定します。CSS の {{cssxref("animation-range-start")}} プロパティに相当します。`rangeStart` は `rangeEnd` と同じ種類の値を取ります。
@@ -125,7 +108,7 @@ newspaper.addEventListener("click", () => {
 
 ### ウサギの穴を下るデモ
 
-[Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010) のデモでは、上に向かって永遠に流れ続けるアニメーションが `#tunnel` 要素に施されています。ここでは、アニメーションを素早く作成して再生できる `animate()` メソッドが用いられています。キーフレームとして渡されているオブジェクト配列と、タイミングオプションとして渡されているオブジェクトに注目してください。
+[Down the Rabbit Hole (with the Web Animation API)](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#javascript_への移行) のデモでは、上に向かって永遠に流れ続けるアニメーションが `#tunnel` 要素に施されています。ここでは、アニメーションを素早く作成して再生できる `animate()` メソッドが用いられています。キーフレームとして渡されているオブジェクト配列と、タイミングオプションとして渡されているオブジェクトに注目してください。
 
 ```js
 document.getElementById("tunnel").animate(
@@ -144,13 +127,47 @@ document.getElementById("tunnel").animate(
 
 ### 暗黙の開始/終了キーフレーム
 
-新しいバージョンのブラウザーでは、アニメーションの開始または終了状態のみ（つまり、単一のキーフレーム）で設定することができ、可能であればブラウザーがアニメーションのもう一方を推測します。例えば、[この簡単なアニメーション](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) を考えてみましょう。 Keyframe オブジェクトは次のようなものです。
+ブラウザーは現在の状態を使用して、アニメーションの開始状態や終了状態を推測できます。デフォルトでは、単一のキーフレームを指定すると、それは終了状態として扱われ、開始状態は要素の現在の計算済みスタイルから推測されます。ただし、`offset` を指定して、指定したキーフレームをアニメーションのタイムライン上のどこに配置するかを示すことができます。
 
-```js
-let rotate360 = [{ transform: "rotate(360deg)" }];
+```html hidden
+<div>
+  <img
+    id="logo"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    alt="Firefox のロゴ" />
+</div>
+<button id="run">アニメーション - 現在の状態を開始状態として使用</button>
+<button id="run2">アニメーション - 現在の状態を終了状態として使用</button>
+<button id="run3">アニメーション - 現在の状態を両方の状態として使用</button>
 ```
 
-アニメーションの終了状態を指定しただけで、開始状態は暗黙になっています。
+```css hidden
+div {
+  width: 100%;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+}
+```
+
+```js
+const logo = document.getElementById("logo");
+document.getElementById("run").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)" }, 1000);
+});
+document.getElementById("run2").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)", offset: 0 }, 1000);
+});
+document.getElementById("run3").addEventListener("click", () => {
+  logo.animate({ transform: "translateX(300px)", offset: 0.5 }, 1000);
+});
+```
+
+タイムライン内で単一のフレームを指定しました。完全なアニメーションを作成するために、開始状態や終了状態を補完できます。
+
+{{EmbedLiveSample("Implicit to/from keyframes", "", 300)}}
 
 ### timeline, rangeStart, rangeEnd
 
@@ -192,5 +209,5 @@ img.animate(
 - {{domxref("Animation")}}
 - {{domxref("Element.getAnimations()")}}
 - {{cssxref("animation-range-end")}}, {{cssxref("animation-range-start")}}, {{cssxref("animation-timeline")}}
-- [CSS スクロール駆動型アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)

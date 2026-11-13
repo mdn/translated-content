@@ -1,12 +1,11 @@
 ---
 title: place-content
 slug: Web/CSS/Reference/Properties/place-content
-original_slug: Web/CSS/place-content
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
+**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
 
 {{InteractiveExample("CSS デモ: place-content")}}
 
@@ -53,7 +52,7 @@ place-content: end;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -62,8 +61,8 @@ place-content: end;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-content`](/ja/docs/Web/CSS/align-content)
-- [`justify-content`](/ja/docs/Web/CSS/justify-content)
+- {{cssxref("align-content")}}
+- {{cssxref("justify-content")}}
 
 ## 構文
 
@@ -247,9 +246,9 @@ direction.addEventListener("change", (evt) => {
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
-  writing-mode: horizontal-tb; /* Can be changed in the live sample */
-  direction: ltr; /* Can be changed in the live sample */
-  place-content: flex-end center; /* Can be changed in the live sample */
+  writing-mode: horizontal-tb; /* このライブサンプルで変更可能 */
+  direction: ltr; /* このライブサンプルで変更可能 */
+  place-content: flex-end center; /* このライブサンプルで変更可能 */
 }
 
 div > div {
@@ -285,7 +284,7 @@ div > div {
 
 - {{cssxref("align-content")}}
 - {{cssxref("justify-content")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

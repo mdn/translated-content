@@ -1,15 +1,15 @@
 ---
-title: flex-shrink
+title: "`flex-shrink` プロパティ (CSS)"
+short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
-original_slug: Web/CSS/flex-shrink
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: efbef0da1dbe29be125eb7db0b831a4e4bd9220d
 ---
 
-**`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムは `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
+**`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムはそれに合わせるため、 `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
 
 > [!NOTE]
-> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-shrink`、{{cssxref("flex-grow")}}、{{cssxref("flex-basis")}} の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-shrink` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> `flex-shrink` を単独で設定するのではなく、{{cssxref("flex")}} の一括指定を `auto` や `initial` などのキーワードを付けて使用することを推奨します。[キーワード値](/ja/docs/Web/CSS/Reference/Properties/flex#値) は、{{cssxref("flex-grow")}}、`flex-shrink`、{{cssxref("flex-basis")}} の信頼性の高い組み合わせに展開され、一般的に望まれる柔軟な動作を実現するのに役立ちます。
 
 {{InteractiveExample("CSS デモ: flex-shrink")}}
 
@@ -27,7 +27,7 @@ flex-shrink: 2;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I shrink</div>
+  <div class="transition-all" id="example-element">縮みます</div>
   <div>Item Two</div>
   <div>Item Three</div>
 </section>
@@ -42,7 +42,7 @@ flex-shrink: 2;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -66,6 +66,13 @@ flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
+### 値
+
+このプロパティは次の値で指定します。
+
+- `<number>`
+  - : {{cssxref("&lt;number&gt;")}} を参照してください。負の値は無効です。デフォルト値は 1 です。
+
 ## 解説
 
 `flex-shrink` プロパティはフレックス縮小係数を指定します。これは、フレックスコンテナー内でフレックスアイテムに負の余白が配分されたときに、そのフレックスアイテムが他のフレックスアイテムに対して相対的にどれだけ縮小するかを決定します。
@@ -75,13 +82,6 @@ flex-shrink: unset;
 `flex-grow` プロパティは、各アイテムのフレックス伸長係数に比例して、利用できる正の余白を指定するプロパティで、 `flex-grow` プロパティの値のみを考慮します。 `flex-shrink` プロパティは、ボックスがあふれることなくコンテナー内で収まるように、負の余白を除去することを管理します。余白の除去は余白を追加するよりも少し複雑です。フレックス縮小係数はフレックス基本サイズに掛け合わされ、アイテムがどれだけ縮小できるかに比例して負の空間を分配します。これにより、大きなアイテムが顕著に縮小する前に、小さなアイテムが `0px` まで縮小してしまうことを防ぎます。
 
 一般的に、 `flex-shrink` は {{cssxref("flex-grow")}} や {{cssxref("flex-basis")}} プロパティと一緒に使用します。 `flex` 一括指定では、フレックス縮小係数は常に 2 つ目の `<number>` になります。一括指定に 1 つの数値しか記載されていない場合、その値は `flex-grow` 値であると想定されます。
-
-### 値
-
-`flex-shrink` プロパティは単一の `<number>` で指定します。
-
-- `<number>`
-  - : {{cssxref("&lt;number&gt;")}} を参照してください。負の値は無効です。既定値は 1 です。
 
 ## 公式定義
 
@@ -101,17 +101,17 @@ flex-shrink: unset;
 
 ```html live-sample___setting_flex_item_shrink_factor
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box4" style="background-color:lightsalmon;">D</div>
-  <div class="box5" style="background-color:lightgreen;">E</div>
+  <div class="box1">A</div>
+  <div class="box2">B</div>
+  <div class="box3">C</div>
+  <div class="box4">D</div>
+  <div class="box5">E</div>
 </div>
 ```
 
 #### CSS
 
-各フレックスアイテムの {{cssxref("width")}} は `200px` です。 {{cssxref("flex-basis")}} プロパティは既定で `auto` なので、各アイテムの flex-basis は `200px` になります。これにより、フレックスアイテムの合計幅は `1000px` となり、コンテナー内で使用するサイズの 2 倍になります。すべてのフレックスアイテムは縮小可能で、 `flex-shrink` 値が `0` より大きく設定しています。 最後の 2 つのアイテムはより縮小されるように `flex-shrink` 値が大きく設定されています。
+各フレックスアイテムの {{cssxref("width")}} は `200px` です。 {{cssxref("flex-basis")}} プロパティはデフォルトで `auto` なので、各アイテムの flex-basis は `200px` になります。これにより、フレックスアイテムの合計幅は `1000px` となり、コンテナー内で使用するサイズの 2 倍になります。すべてのフレックスアイテムは縮小可能で、 `flex-shrink` 値が `0` より大きく設定しています。 最後の 2 つのアイテムはより縮小されるように `flex-shrink` 値が大きく設定されています。
 
 ```css live-sample___setting_flex_item_shrink_factor
 #content {
@@ -123,7 +123,9 @@ flex-shrink: unset;
   width: 200px;
 }
 
-.box {
+.box1,
+.box2,
+.box3 {
   flex-shrink: 1;
 }
 
@@ -146,13 +148,28 @@ div {
   line-height: 4em;
   text-align: center;
 }
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: lightblue;
+}
+.box3 {
+  background-color: yellow;
+}
+.box4 {
+  background-color: lightsalmon;
+}
+.box5 {
+  background-color: lightgreen;
+}
 ```
 
 #### 結果
 
 {{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 100)}}
 
-フレックスアイテムは縮小できるので、コンテナー内であふれることはありません。 `500px` の負の余白は、 `flex-shrink` の値に基づいて 5 つのアイテムに分配されます。最初の 3 つのアイテムには `flex-shrink: 1` が設定されています。 D は `flex-shrink: 1.5`、 E は `flex-shrink: 2` を設定しています。 D と E の最終的な幅は他よりも小さくなり、 E は D より小さくなります。
+フレックスアイテムは縮小可能であるため、コンテナーからはみ出しません。`500px` の負の余白は、各アイテムの `flex-shrink` 値に基づいて 5 つのアイテムに分配されます。5 つのアイテムの縮小値の合計は `1 + 1 + 1 + 1.5 + 2` = `6.5` です。その結果、`flex-shrink: 1` のアイテムの幅は `1/6.5 * 500px` = `76.92px` だけ縮小され、`flex-shrink: 1.5` が設定されたアイテムの幅は `1.5/6.5 * 500px` = `115.38px` だけ縮小され、`flex-shrink: 2` を付けているアイテムの幅は `2/6.5 * 500px` = `153.85px` だけ縮小されます。
 
 ## 仕様書
 
@@ -164,6 +181,6 @@ div {
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

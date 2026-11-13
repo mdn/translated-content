@@ -1,10 +1,11 @@
 ---
 title: isolation
 slug: Web/CSS/Reference/Properties/isolation
-original_slug: Web/CSS/isolation
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
+**`isolation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。
 
 {{InteractiveExample("CSS デモ: isolation")}}
 
@@ -57,6 +58,7 @@ isolation: isolate;
 isolation: inherit;
 isolation: initial;
 isolation: revert;
+isolation: revert-layer;
 isolation: unset;
 ```
 
@@ -79,17 +81,17 @@ isolation: unset;
 
 ## 例
 
-<h3 id="Forcing_a_new_stacking_context_for_an_element">要素で強制的に新しい重ね合わせコンテキストを生成</h3>
+### 要素で強制的に新しい重ね合わせコンテキストを生成
 
 #### HTML
 
 ```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
+<div class="big-square">
+  <div class="isolation-auto">
+    <div class="small-square">auto</div>
   </div>
-  <div id="e">
-    <div class="a c">isolate</div>
+  <div class="isolation-isolate">
+    <div class="small-square">isolate</div>
   </div>
 </div>
 ```
@@ -97,25 +99,27 @@ isolation: unset;
 #### CSS
 
 ```css
-.a {
-  background-color: rgb(0, 255, 0);
+.isolation-auto {
+  isolation: auto;
 }
-#b {
+
+.isolation-isolate {
+  isolation: isolate;
+}
+
+.big-square {
+  background-color: lime;
   width: 200px;
   height: 210px;
 }
-.c {
+
+.small-square {
+  background-color: lime;
   width: 100px;
   height: 100px;
   border: 1px solid black;
   padding: 2px;
   mix-blend-mode: difference;
-}
-#d {
-  isolation: auto;
-}
-#e {
-  isolation: isolate;
 }
 ```
 

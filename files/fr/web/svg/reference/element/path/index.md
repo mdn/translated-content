@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/path
 original_slug: Web/SVG/Element/path
 ---
 
-{{SVGRef}}
-
 L'élément `path` est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de `path`.
 
 ## Usage
@@ -60,4 +58,4 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/docs/DOM/SVGPathEle
 - {{ SVGElement("polygon") }}
 - {{ SVGElement("polyline") }}
 - {{ SVGElement("rect") }}
-- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

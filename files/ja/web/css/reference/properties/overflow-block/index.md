@@ -1,9 +1,9 @@
 ---
-title: overflow-block
+title: "`overflow-block` プロパティ (CSS)"
+short-title: overflow-block
 slug: Web/CSS/Reference/Properties/overflow-block
-original_slug: Web/CSS/overflow-block
 l10n:
-  sourceCommit: 737125e41bb99b0cf1c733aac13f79f806f7f296
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、コンテンツがブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
@@ -158,8 +158,8 @@ div {
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
-- [書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/Guides/Scrollbars_styling)モジュール
+- [書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

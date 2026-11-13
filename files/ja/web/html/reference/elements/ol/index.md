@@ -1,8 +1,9 @@
 ---
-title: "<ol>: 順序付きリスト要素"
+title: "`<ol>` 順序付きリスト要素"
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
@@ -53,7 +54,7 @@ li {
 
 ## 使用上の注意
 
-ふつう、順序付きリストの項目は、先頭に数字や文字などの[マーカー](/ja/docs/Web/CSS/::marker)が表示されます。
+ふつう、順序付きリストの項目は、先頭に数字や文字などの[マーカー](/ja/docs/Web/CSS/Reference/Selectors/::marker)が表示されます。
 
 `<ol>` 要素と {{HTMLElement("ul")}} 要素（または同義語である {{HTMLElement("menu")}}）は、必要なだけ深く入れ子にすることができ、 `<ol>` と `<ul>` （または `<menu>`）を好きなだけ変更することもできます。
 
@@ -229,6 +230,6 @@ li {
 - 他のリスト関連の HTML 要素: {{HTMLElement("ul")}}、 {{HTMLElement("li")}}、 {{HTMLElement("menu")}}
 - `<ol>` 要素のスタイル付けに役立つ CSS プロパティ:
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
+  - [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)は、複雑な入れ子のリストを扱うのに便利です。
   - {{CSSxRef("line-height")}} プロパティは、非推奨の `compact` 属性をシミュレートするのに役立ちます。
   - {{CSSxRef("margin")}} プロパティは、リストの字下げを制御するのに役立ちます。

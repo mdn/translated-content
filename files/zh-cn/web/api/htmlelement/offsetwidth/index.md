@@ -1,37 +1,41 @@
 ---
-title: HTMLElement.offsetWidth
+title: HTMLElement：offsetWidth 属性
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetWidth`** 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的 offsetWidth 可能有所不同）offsetWidth 是测量包含元素的边框 (border)、水平线上的内边距 (padding)、竖直方向滚动条 (scrollbar)（如果存在的话）、以及 CSS 设置的宽度 (width) 的值。
+{{domxref("HTMLElement")}} 接口的 **`offsetWidth`** 只读属性以整数形式返回元素的布局宽度。
 
-## 语法
+通常，`offsetWidth` 是元素 CSS 宽度的像素测量值，包括任何边框、内边距和垂直滚动条（如果已渲染）。它不包括伪元素（如 `::before` 或 `::after`）的宽度。
 
-```plain
-var offsetWidth =element.offsetWidth;
-```
+如果元素被隐藏（例如，将元素或其某个祖先元素的 `style.display` 设置为 `"none"`），则返回 `0`。
 
-`intElemOffsetWidth` is a variable storing an integer corresponding to the `offsetWidth` pixel value of the element. `offsetWidth` 是一个只读属性。
+## 值
 
-> [!NOTE]
-> 这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
+一个整数。
 
 ## 示例
 
-![Image:Dimensions-offset.png](dimensions-offset.png)
+![一个具有较大内边距、边框和外边距的示例元素。`offsetWidth` 是元素的布局宽度，包括其内边距和边框，但不包括其外边距。](dimensions-offset.png)
 
 ## 规范
 
 {{Specifications}}
 
-### 备注
+## 浏览器兼容性
 
-`offsetWidth` 是一个 DHTML 对象模型中的属性，由微软 IE 浏览器首次引入。有时候它也可以称为一个元素的物理或图形尺寸，或者 border-box（译者注：即 CSS3 中的 border-box 模型）的宽度。
+{{Compat}}
 
 ## 参见
 
+- [确定元素的尺寸](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

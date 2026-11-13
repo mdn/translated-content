@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 Um dos principais objetivos do HTML é dar estrutura de texto e significado, também conhecido como {{glossary("semantics", "semântica")}}), para que um navegador possa exibi-lo corretamente. Este artigo explica a forma como {{glossary("HTML")}} pode ser usado para estruturar uma página de texto, adicionar títulos e parágrafos, enfatizar palavras, criar listas e muito mais.
 
@@ -14,7 +14,7 @@ Um dos principais objetivos do HTML é dar estrutura de texto e significado, tam
       <th scope="row">Pré-requisitos:</th>
       <td>
         Familiaridade básica em HTML, tal como coberto
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Iniciando com o HTML.</a
         >
       </td>
@@ -124,8 +124,7 @@ Se você cometer um erro, você sempre pode reiniciar usando o botão _Resetar_.
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Minha pequena história: sou policial e meu nome é Trish.
 
-Minhas pernas são feitas de papelão e sou casada com um peixe.</textarea
->
+Minhas pernas são feitas de papelão e sou casada com um peixe.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Resetar" />
@@ -319,8 +318,7 @@ Tente editar a amostra, ao vivo, abaixo para criar sua própria lista não orden
 leite
 ovos
 pão
-hummus</textarea
->
+hummus</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Resetar" />
@@ -480,8 +478,7 @@ Dirija até o final da estrada
 Vire à direita
 Vá em frente nas duas primeiras rotatórias
 Vire à esquerda na terceira rotatória
-A escola fica à sua direita, a 300 metros da estrada</textarea
->
+A escola fica à sua direita, a 300 metros da estrada</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Resetar" />
@@ -644,8 +641,7 @@ Receita rápida de hummus
 
   Leve à geladeira o hummus processado em um recipiente fechado. Você poderá usá-lo por cerca de uma semana depois de fazer isso. Se começar a ficar borbulhante, você definitivamente deve descartá-lo.
 
-  Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</textarea
->
+  Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Resetar" />
@@ -874,8 +870,7 @@ Nesta seção de aprendizado ativo, fornecemos um exemplo editável. Nele, gosta
    todos vestindo macacões verdes e chapéus bobos, que
    pareciam ter a forma de uma baleia. Se alguém
    tiver alguma informação sobre este incidente, por favor
-   entre em contato com a polícia.</p></textarea
->
+   entre em contato com a polícia.</p></textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Resetar" />
@@ -1040,10 +1035,10 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Resumo
 
 Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links), possivelmente o elemento mais importante na Web.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

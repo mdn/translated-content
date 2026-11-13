@@ -1,9 +1,8 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
-original_slug: Web/CSS/text-decoration-color
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。
@@ -21,11 +20,11 @@ text-decoration-color: #21ff21;
 ```
 
 ```css interactive-example-choice
-text-decoration-color: rgb(255, 90, 255);
+text-decoration-color: rgb(255 90 255);
 ```
 
 ```css interactive-example-choice
-text-decoration-color: hsl(70, 100%, 40%);
+text-decoration-color: hsl(70 100% 40%);
 ```
 
 ```css interactive-example-choice
@@ -58,7 +57,7 @@ CSS はそれぞれの線種ごとに固有の色を指定する仕組みを直�
 
 ```css
 /* <color> 値 */
-text-decoration-color: currentcolor;
+text-decoration-color: currentColor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
 text-decoration-color: rgb(255 128 128 / 50%);

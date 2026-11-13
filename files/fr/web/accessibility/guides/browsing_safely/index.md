@@ -3,7 +3,7 @@ title: "Accessibilité : Quelle personnalisation aide à naviguer plus en sécur
 short-title: Personnalisation pour une navigation sécurisée
 slug: Web/Accessibility/Guides/Browsing_safely
 l10n:
-  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
+  sourceCommit: 813a03e3affaad31a6c975628a1b705fa568f095
 ---
 
 Cet article explique comment rendre le contenu web accessible aux personnes souffrant de troubles vestibulaires, ainsi qu'à celles qui les accompagnent, en tirant parti des options de personnalisation et d'accessibilité intégrées aux systèmes d'exploitation. Utiliser ces réglages permet d'éviter l'exposition à des contenus pouvant provoquer des crises ou d'autres réactions physiques.
@@ -20,7 +20,7 @@ L'utilisateur·ice peut se protéger en apprenant à utiliser son système d'exp
 
 ### Utilisez des navigateurs modernes et apprenez les réglages d'accessibilité
 
-Les navigateurs modernes prennent en charge la fonctionnalité CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion). Ils peuvent détecter si l'utilisateur·ice a demandé une expérience avec moins d'animations, via une interface d'accessibilité comme illustré ci-dessous.
+Les navigateurs modernes prennent en charge la fonctionnalité CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion). Ils peuvent détecter si l'utilisateur·ice a demandé une expérience avec moins d'animations, via une interface d'accessibilité comme illustré ci-dessous.
 
 ![Capture d'écran montrant comment désactiver les animations sur Android.](android-remove-animations.png)
 
@@ -90,4 +90,4 @@ La plupart des systèmes d'exploitation permettent d'activer ce réglage sur le 
 
 ### Remerciements
 
-Un grand merci à Eric Eggert de [Knowbility](https://knowbility.org/) pour ses échanges et son aide précieuse sur ce sujet.
+Un grand merci à Eric Eggert de [Knowbility <sup>(angl.)</sup>](https://knowbility.org/) pour ses échanges et son aide précieuse sur ce sujet.

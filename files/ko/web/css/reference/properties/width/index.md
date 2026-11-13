@@ -80,7 +80,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 너비의 절댓값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 너비의 백분율. 컨테이닝 블록이 요소 너비에 영향을 받는 경우의 결과 레이아웃은 정해지지 않습니다.
 - `auto`
   - : 요소의 너비를 브라우저가 계산해 지정합니다.
 - `max-content`
@@ -209,4 +209,4 @@ p.minblue {
 
 ## 같이 보기
 
-- [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [박스 모델](/ko/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

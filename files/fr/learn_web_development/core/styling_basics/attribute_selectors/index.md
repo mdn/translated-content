@@ -1,24 +1,34 @@
 ---
 title: Sélecteurs d'attribut
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 l10n:
-  sourceCommit: b580c9fe8f354fb00dfe55d9d1fc4083bb49fab8
+  sourceCommit: c9f602a26092661130a031b7148d696a3ac9802e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
-En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, qui leur fournissent des détails supplémentaires. En CSS, on peut utiliser les sélecteurs d'attribut afin de cibler les éléments qui possèdent certains attributs. Dans cet article, nous verrons comment utiliser ces sélecteurs.
+Comme vous l'avez appris en étudiant le HTML, les éléments peuvent posséder des attributs qui fournissent des informations supplémentaires sur l'élément balisé. En CSS, vous pouvez utiliser des sélecteurs d'attributs pour cibler des éléments dotés de certains attributs. Cette leçon vous apprend à utiliser ces sélecteurs très utiles.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td><a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>.)</td>
+      <td>
+        Les bases de HTML (étudier
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe de base HTML</a
+        >), <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Sélecteurs CSS de base</a>.
+      </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Apprendre ce que sont les sélecteurs d'attributs et comment les utiliser.</td>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Le concept de base des sélecteurs d'attributs.</li>
+          <li>Sélecteurs d'attributs basés sur la présence et la valeur.</li>
+          <li>Sélecteurs d'attributs basés sur la correspondance de sous-chaînes de caractères.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -27,39 +37,12 @@ En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, 
 
 Ces sélecteurs permettent de cibler un élément selon la simple présence d'un attribut (par exemple `href`), ou selon certains critères sur la valeur de l'attribut.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Sélecteur</th>
-      <th scope="col">Exemple</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>[<em>attr</em>]</code></td>
-      <td><code>a[title]</code></td>
-      <td> Cible les éléments avec un attribut <code><em>attr</em></code> (le nom de l'attribut est indiqué entre crochets).</td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>=<em>valeur</em>]</code></td>
-      <td><code>a[href="https://example.com"]</code></td>
-      <td> Cible les éléments avec un attribut <code><em>attr</em></code> qui vaut exactement <code><em>valeur</em></code>. La valeur attendue est alors indiquée entre doubles quotes.</td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>~=<em>valeur</em>]</code></td>
-      <td><code>p[class~="special"]</code></td>
-      <td>Cible les éléments avec un attribut <code><em>attr</em></code> qui vaut exactement <code><em>valeur</em></code>, ou qui contient <code><em>valeur</em></code> dans sa liste de valeurs (séparées par des espaces).
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>|=<em>valeur</em>]</code></td>
-      <td><code>div[lang|="zh"]</code></td>
-      <td>Cible les éléments avec un attribut <em>attr</em> qui vaut exactement <code><em>valeur</em></code>, ou qui commence par <code><em>valeur</em></code> suivie immédiatement d'un tiret.</td>
-    </tr>
-  </tbody>
-</table>
+| Sélecteur         | Exemple                         | Description                                                                                                                                                |
+| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`          | `a[title]`                      | Cible les éléments avec un attribut _`attr`_ (le nom de l'attribut est indiqué entre crochets).                                                            |
+| `[attr=valeur]`   | `a[href="https://example.com"]` | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_. La valeur attendue est alors indiquée entre doubles quotes.                    |
+| `[attr~=valeur]`  | `p[class~="special"]`           | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui contient _`value`_ dans sa liste de valeurs (séparées par des espaces). |
+| `[attr\|=valeur]` | `div[lang\|="zh"]`              | Cible les éléments avec un attribut _`attr`_ qui vaut exactement _`value`_, ou qui commence par _`value`_ suivie immédiatement d'un tiret.                 |
 
 Voyons un cas d'usage de ces sélecteurs avec un exemple.
 
@@ -67,20 +50,46 @@ Voyons un cas d'usage de ces sélecteurs avec un exemple.
 - `li[class="a"]` cible ceux qui ont une classe `a`, mais pas les éléments dont la classe contient `a` parmi une liste de valeurs. Dans notre exemple, ce sélecteur cible le deuxième élément de la liste.
 - `li[class~="a"]` cible les éléments de liste avec une classe qui vaut `a` et ceux dont la classe contient `a` parmi la liste des valeurs. Dans notre exemple, le deuxième et le troisième élément sont ciblés.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 950)}}
+```html live-sample___attribute
+<h1>Présence d'attributs et sélecteurs de valeur</h1>
+<ul>
+  <li>Élément 1</li>
+  <li class="a">Élément 2</li>
+  <li class="a b">Élément 3</li>
+  <li class="ab">Élément 4</li>
+</ul>
+```
 
-## Cibler en fonction d'une sous-chaîne
+```css live-sample___attribute
+body {
+  font-family: sans-serif;
+}
+li[class] {
+  font-size: 120%;
+}
 
-Les sélecteurs suivant permettent de cibler un élément en fonction de la valeur de l'attribut et d'une sous-chaîne donnée. Par exemple, si on utilise deux classes `box-warning` et `box-error` et qu'on souhaite cibler tous les éléments avec une classe commençant par `box-`, on pourra utiliser `[class^="box-"]` afin de cibler les deux (ou `[class|="box"]` comme décrite ci-dessus).
+li[class="a"] {
+  background-color: yellow;
+}
 
-| Sélecteur        | Exemple             | Description                                                                                  |
-| ---------------- | ------------------- | -------------------------------------------------------------------------------------------- |
-| `[attr^=valeur]` | `li[class^="box-"]` | Cible les éléments où la valeur de l'attribut `attr` commence par `valeur`.                  |
-| `[attr$=valeur]` | `li[class$="-box"]` | Cible les éléments où la valeur de l'attribut `attr` finit par `valeur`.                     |
-| `[attr*=valeur]` | `li[class*="box"]`  | Cible les éléments où la valeur de l'attribut `attr` contient `valeur` au sein de la chaîne. |
+li[class~="a"] {
+  color: red;
+}
+```
 
-> [!NOTE]
-> Les caractères `^` et `$` sont également utilisés comme ancres au sein des [expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour signifier respectivement _commence par_ et _finit par_.
+{{EmbedLiveSample("attribute", "", 200)}}
+
+Essayez de modifier le CSS ci-dessus pour ajouter une règle qui sélectionne uniquement les éléments de liste avec une valeur d'attribut `class` de `ab`, et leur donne une `color` de texte `white` et un `background-color` `purple`.
+
+## Cibler en fonction d'une sous-chaîne de caractères
+
+Les sélecteurs suivant permettent de cibler un élément en fonction de la valeur de l'attribut et d'une sous-chaîne de caractères donnée. Par exemple, si on utilise deux classes `box-warning` et `box-error` et qu'on souhaite cibler tous les éléments avec une classe commençant par `box-`, on peut utiliser `[class^="box-"]` afin de cibler les deux (ou `[class|="box"]` comme décrite ci-dessus).
+
+| Sélecteur        | Exemple             | Description                                                                                                |
+| ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `[attr^=valeur]` | `li[class^="box-"]` | Cible les éléments où la valeur de l'attribut `attr` commence par `valeur`.                                |
+| `[attr$=valeur]` | `li[class$="-box"]` | Cible les éléments où la valeur de l'attribut `attr` finit par `valeur`.                                   |
+| `[attr*=valeur]` | `li[class*="box"]`  | Cible les éléments où la valeur de l'attribut `attr` contient `valeur` au sein de la chaîne de caractères. |
 
 Dans l'exemple qui suit, on illustre ces sélecteurs&nbsp;:
 
@@ -88,21 +97,39 @@ Dans l'exemple qui suit, on illustre ces sélecteurs&nbsp;:
 - `li[class$="a"]` cible tout élément de liste avec un attribut `class` dont la valeur finit par `a`. Dans notre exemple, cela correspond au premier et troisième éléments de la liste.
 - `li[class*="a"]` cible tout élément de liste avec un attribut `class` contient `a`, n'importe où dans la valeur. Dans notre exemple, cela correspond à tous les éléments de la liste.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 950)}}
+```html live-sample___attribute-substring
+<h1>Sélecteurs de correspondance de sous-chaîne de caractères d'attribut</h1>
+<ul>
+  <li class="a">Élément 1</li>
+  <li class="ab">Élément 2</li>
+  <li class="bca">Élément 3</li>
+  <li class="bcabc">Élément 4</li>
+</ul>
+```
 
-## Sensibilité à la casse
+```css live-sample___attribute-substring
+body {
+  font-family: sans-serif;
+}
+li[class^="a"] {
+  font-size: 120%;
+}
 
-Si on souhaite cibler les éléments sans tenir compte de la casse pour les valeurs de l'attribut, on pourra utiliser le marqueur `i` avant le crochet fermant. Ce marqueur indique au navigateur de ne pas tenir compte de la casse (c'est-à-dire majuscule/minuscule). Sans ce marqueur, les correspondances seront considérées selon la sensibilité à la casse propre au langage du document&nbsp;; pour le langage HTML, la casse est importante.
+li[class$="a"] {
+  background-color: yellow;
+}
 
-Dans l'exemple qui suit, le premier sélecteur cible l'élément dont la valeur de la classe commence par `a`. Dans l'exemple cela correspond au premier élément, car la valeur des deux suivants commence par un A majuscules. Le deuxième sélecteur utilise le marqueur `i` pour ne pas tenir compte de la casse, et permet dans l'exemple de cibler tous les éléments de la liste.
+li[class*="a"] {
+  color: red;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
+{{EmbedLiveSample("attribute-substring", "", 220)}}
 
-> [!NOTE]
-> Il existe également un marqueur plus récent&nbsp;: `s`, qui forcera une sensibilité à la casse pour les contextes où la casse est normalement ignorée. Toutefois, ce marqueur est moins pris en charge dans les navigateurs et s'avère peu utile dans le cas du HTML.
+Essayez de modifier le CSS ci-dessus pour ajouter une règle qui sélectionne uniquement les éléments de liste dont la valeur de l'attribut `class` se termine par `b` ou `c`, et leur donne une `border` de `2px`, `solid`, `black`. Vous devez peut-être utiliser une [liste de sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#listes_de_sélecteurs) pour résoudre cet exercice.
 
 ## Résumé
 
-Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
+Maintenant que nous avons terminé avec les sélecteurs d'attribut, vous pouvez continuer avec le prochain article et lire sur les sélecteurs de pseudo-classe et de pseudo-élément.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

@@ -1,13 +1,14 @@
 ---
-title: <input type="email">
+title: '`<input type="email">` 属性値'
+short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLSidebar}}
-
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
+
+入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス（またはメールアドレスのリスト）であることが確認されます。{{cssxref(":valid")}} および {{cssxref(":invalid")}} CSS 擬似クラスが適切に自動適用され、入力欄の現在の値が有効なメールアドレスかどうかが視覚的に示されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -30,8 +31,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス (またはメールアドレスのリスト) のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当なメールアドレスであるかどうかを視覚的に示します。
 
 ## 値
 
@@ -56,15 +55,15 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが `email` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `email` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが `email` 入力欄に入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `email` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドのメールアドレスの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドのメールアドレスの長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### minlength
 
-ユーザーが `email` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `email` 入力欄には最小文字数が設定されません。
+ユーザーが `email` 入力欄に入力することができる（{{glossary("UTF-16", "UTF-16 コード単位")}}での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `email` 入力欄には最小文字数が設定されません。
 
-入力欄のメールアドレスの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄のメールアドレスの長さが {{glossary("UTF-16", "UTF-16 コード単位")}}で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### multiple
 
@@ -102,7 +101,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `size`
 
-`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
+`size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、デフォルト値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
@@ -195,11 +194,11 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-### 既定のオプションの提供
+### デフォルトのオプションの提供
 
-#### 単一の既定値を value 属性を使用して提供
+#### 単一のデフォルト値を value 属性を使用して提供
 
-これまでどおり、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することで `email` 入力欄に既定値を指定することができます。
+これまでどおり、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することで `email` 入力欄にデフォルト値を指定することができます。
 
 ```html
 <input type="email" value="default@example.com" />
@@ -209,7 +208,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### 提案値の提供
 
-さらに、[`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を指定することにより、既定の選択肢のリストを提供し、そこからユーザーが選択できるようにすることができます。これは、ユーザーがこれらの選択肢しか選べないようにするものではありませんが、よく使われるメールアドレスをより迅速に選択できるようになります。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} の ID を指定しており、これが 1 つの提案値あたり 1 つの {{HTMLElement("option")}} 要素を含んでいます。それぞれの `option` の `value` は、 email 入力ボックスに対する対応する提案値です。
+さらに、[`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を指定することにより、デフォルトの選択肢のリストを提供し、そこからユーザーが選択できるようにすることができます。これは、ユーザーがこれらの選択肢しか選べないようにするものではありませんが、よく使われるメールアドレスをより迅速に選択できるようになります。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} の ID を指定しており、これが 1 つの提案値あたり 1 つの {{HTMLElement("option")}} 要素を含んでいます。それぞれの `option` の `value` は、 email 入力ボックスに対する対応する提案値です。
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -239,13 +238,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ブラウザーは自動的に検証を行い、インターネットのメールアドレスの標準の書式に一致するテキストのみが入力ボックスに入力されることを保証します。ブラウザーは、以下の正規表現に相当するアルゴリズムを使用します。
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+/^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)*$/i;
 ```
 
 フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を参照してください。
 
 > [!NOTE]
-> 国際ドメイン名と HTML でのメールアドレスの検証については、仕様上の問題があることが知られています。詳しくは [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) を参照してください。
+> 国際ドメイン名と HTML でのメールアドレスの検証については、仕様上の問題があることが知られています。詳しくは [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) および [whatwg/html#4562](https://github.com/whatwg/html/issues/4562) を参照してください。
 
 ### パターンによる検証
 
@@ -303,6 +302,12 @@ label::after {
   </div>
   <input type="submit" value="要望を送信" />
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("Pattern_validation", 700, 300)}}
@@ -397,12 +402,6 @@ label::after {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

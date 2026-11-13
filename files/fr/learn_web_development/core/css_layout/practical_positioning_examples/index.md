@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 
-{{LearnSidebar}}
-
 Cet article illustre comment construire quelques exemples concrets de ce qu'on peut réaliser avec le positionnement.
 
 <table class="standard-table">
@@ -14,10 +12,10 @@ Cet article illustre comment construire quelques exemples concrets de ce qu'on p
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux en HTML (étudier
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Une introduction au HTML</a
         >), et une idée du fonctionnement du CSS (étudier
-        <a href="/fr/docs/Learn/CSS/First_steps">Une introduction à CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Une introduction à CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -439,7 +437,7 @@ input[type="checkbox"]:checked + aside {
 }
 ```
 
-Le sélecteur utilisé ici est plutôt complexe&nbsp;: on sélectionne l'élément `<aside>` adjacent à l'élément `<input>`, uniquement lorsque ce dernier est coché (grâce à la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked)). Lorsque c'est le cas, on définit la propriété [`right`](/fr/docs/Web/CSS/Reference/Properties/right) de l'élément `<aside>` à `0px`, ce qui fait que le panneau apparaît à l'écran (progressivement grâce à la transition). Cliquer sur le libellé à nouveau permettra de décocher la case et de masquer le panneau à nouveau.
+Le sélecteur utilisé ici est plutôt complexe&nbsp;: on sélectionne l'élément `<aside>` adjacent à l'élément `<input>`, uniquement lorsque ce dernier est coché (grâce à la pseudo-classe [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked)). Lorsque c'est le cas, on définit la propriété [`right`](/fr/docs/Web/CSS/Reference/Properties/right) de l'élément `<aside>` à `0px`, ce qui fait que le panneau apparaît à l'écran (progressivement grâce à la transition). Cliquer sur le libellé à nouveau permettra de décocher la case et de masquer le panneau à nouveau.
 
 Et voilà, une astuce sans JavaScript pour créer un interrupteur. Cela fonctionnera à partir de IE9 (les transitions fonctionneront à partir de IE10). Ce n'est pas totalement idéal&nbsp;: les éléments de formulaire n'ont pas été conçus pour ça&nbsp;; l'accessibilité n'est pas au rendez-vous non plus&nbsp;: le libellé ne peut pas recevoir le focus par défaut et on utilise des éléments de formulaire de façon non sémantique, ce qui pourrait causer des problèmes avec les lecteurs d'écran. Pour affiner cela, utiliser du JavaScript avec un lien ou un bouton serait sans doute plus approprié. Quoi qu'il en soit, cela permet d'avoir un exemple fonctionnel avec quelques astuces pour expérimenter.
 

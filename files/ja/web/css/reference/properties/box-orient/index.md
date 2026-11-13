@@ -1,15 +1,19 @@
 ---
-title: box-orient
+title: "`box-orient` プロパティ (CSS)"
+short-title: box-orient
 slug: Web/CSS/Reference/Properties/box-orient
-original_slug: Web/CSS/box-orient
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) を参照してください。
 
 **`box-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその中身をレイアウトする方向が、水平か垂直かを指定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -23,8 +27,6 @@ box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
 ```
-
-## 構文
 
 `box-orient` プロパティは以下の列挙されたキーワード値のうちの一つで指定します。
 
@@ -51,7 +53,7 @@ HTML DOM 要素は既定で中身をインライン軸に沿ってレイアウ�
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`box-orient = horizontal | vertical | inline-axis | block-axis`)}}
 
 ## 例
 

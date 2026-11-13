@@ -2,7 +2,7 @@
 title: Carte
 slug: Web/CSS/How_to/Layout_cookbook/Card
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Ce modèle est une liste de composants «&nbsp;carte&nbsp;» (<i lang="en">card</i> en anglais) avec des pieds de page optionnels. Une carte contient un titre, une image, une description ou autre contenu, ainsi qu'une attribution ou un pied de page. Les cartes sont généralement affichées au sein d'un groupe ou d'une collection.
@@ -135,11 +135,11 @@ img {
 }
 ```
 
-{{EmbedLiveSample("card-example", "", "950px")}}
+{{EmbedLiveSample("card-example", "", 950)}}
 
 ## Choix effectués
 
-Chaque carte est agencée en utilisant la [mise en page CSS Grid](/fr/docs/Web/CSS/CSS_grid_layout) malgré le fait que la disposition soit unidimensionnelle. Cela permet d'utiliser le dimensionnement du contenu pour les pistes (<i lang="en">tracks</i>) de la grille. Pour configurer une grille à une seule colonne, vous pouvez utiliser&nbsp;:
+Chaque carte est agencée en utilisant la [mise en page CSS Grid](/fr/docs/Web/CSS/Guides/Grid_layout) malgré le fait que la disposition soit unidimensionnelle. Cela permet d'utiliser le dimensionnement du contenu pour les pistes (<i lang="en">tracks</i>) de la grille. Pour configurer une grille à une seule colonne, vous pouvez utiliser&nbsp;:
 
 ```css
 .card {
@@ -152,7 +152,7 @@ Chaque carte est agencée en utilisant la [mise en page CSS Grid](/fr/docs/Web/C
 
 Chaque `card` contient un HTML {{HTMLElement("header")}}, une {{HTMLElement("img")}} et un {{HTMLElement("div")}}, dans cet ordre, certaines contenant également un {{HTMLElement("footer")}}.
 
-La piste du titre est réglée sur {{CSSxRef("max-content")}}, ce qui l'empêche de s'étendre. La piste de l'image est fixée à 200 pixels de hauteur. La troisième piste, où se trouve le contenu, est réglée sur `1fr`. Cela signifie qu'elle occupera tout l'espace supplémentaire.
+La piste du titre est réglée sur {{CSSxRef("max-content")}}, ce qui l'empêche de s'étendre. La piste de l'image est fixée à 200 pixels de hauteur. La troisième piste, où se trouve le contenu, est réglée sur `1fr`. Cela signifie qu'elle occupe tout l'espace supplémentaire.
 
 Tout enfant au‑delà des trois ayant des tailles explicitement définies crée des lignes dans la grille implicite, lesquelles s'adaptent au contenu. Celles‑ci sont dimensionnées automatiquement par défaut. Si une carte contient un pied de page, celui‑ci est dimensionné automatiquement. Le pied de page, quand il est présent, reste collé au bas de la grille. Le pied de page est redimensionné pour tenir son contenu&nbsp;; la `<div>` de contenu s'étire ensuite pour occuper l'espace additionnel.
 
@@ -169,11 +169,11 @@ Le jeu de règles suivant crée la grille de cartes&nbsp;:
 La propriété {{CSSxRef("grid-template-columns")}} définit la largeur des colonnes de la grille. Dans ce cas, nous réglons la grille en mode auto-fill, avec des colonnes répétées qui font au minimum `230px` mais peuvent s'agrandir pour remplir l'espace disponible. La propriété {{CSSxRef("gap")}} définit un espacement de `20px` entre les lignes adjacentes et les colonnes adjacentes.
 
 > [!NOTE]
-> Les différents éléments dans des cartes séparées ne s'alignent pas entre eux, puisque chaque carte est une grille indépendante. Aligner les composants d'une carte avec ceux des cartes adjacentes peut se faire avec une [sous-grille](/fr/docs/Web/CSS/CSS_grid_layout/Subgrid).
+> Les différents éléments dans des cartes séparées ne s'alignent pas entre eux, puisque chaque carte est une grille indépendante. Aligner les composants d'une carte avec ceux des cartes adjacentes peut se faire avec une [sous-grille](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid).
 
 ## Méthodes alternatives
 
-La disposition [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) peut également être utilisée pour disposer chaque carte. Avec flexbox, les dimensions des rangées de chaque carte sont définies avec la propriété {{CSSxRef("flex")}} sur chaque rangée, plutôt que sur le conteneur de la carte.
+La disposition [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) peut également être utilisée pour disposer chaque carte. Avec flexbox, les dimensions des rangées de chaque carte sont définies avec la propriété {{CSSxRef("flex")}} sur chaque rangée, plutôt que sur le conteneur de la carte.
 
 Avec flexbox, les dimensions des éléments `flex` sont définies sur les enfants plutôt que sur le parent. Le choix entre grid et flexbox dépend de votre préférence&nbsp;: préférez‑vous contrôler les pistes depuis le conteneur ou ajouter des règles aux éléments&nbsp;?
 
@@ -188,5 +188,5 @@ Selon le contenu de votre carte, il peut exister des actions à entreprendre pou
 - {{CSSxRef("grid-template-columns")}}
 - {{CSSxRef("grid-template-rows")}}
 - {{CSSxRef("gap")}}
-- Le module de [mise en page de grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- Le module de [mise en page de grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
 - [_Inclusive Components: Card_ <sup>(angl.)</sup>](https://inclusive-components.design/cards/)

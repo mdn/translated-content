@@ -27,7 +27,7 @@ Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la m
 - Principiante
   - : Si eres un principiante en el desarrollo web, te recomendamos que empieces trabajando con nuestro módulo [Cómo empezar con la web](/es/docs/Learn_web_development/Getting_started/Your_first_website), que proporciona una introducción práctica al desarrollo web.
 - Mas allá de lo básico
-  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
+  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/Learn_web_development/Core/Structuring_content) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 - Pasando al código
   - : Si ya te sientes cómodo con HTML y CSS, o si estás principalmente interesado en la codificación, querrá pasar a {{glossary("JavaScript")}} o al desarrollo del lado del servidor. Comience con nuestros módulos [Primeros pasos de JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Primeros pasos del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps).
 - _Frameworks_ y herramientas
@@ -54,7 +54,7 @@ La siguiente es una lista de todos los temas que cubrimos en el área de aprendi
   - : La accesibilidad es la práctica de hacer que el contenido web esté disponible para la mayor cantidad de personas posible, independientemente de la discapacidad, el dispositivo, el lugar u otros factores diferenciadores. Este tema te brinda todo lo que necesitas saber.
 - [Rendimiento web: Hacer que los sitios web sean rápidos y responsivos](/es/docs/Learn_web_development/Extensions/Performance)
   - : El rendimiento web es el arte de garantizar que las aplicaciones web se descarguen rápidamente y respondan a la interacción del usuario, independientemente del ancho de banda, el tamaño de la pantalla, la red o las capacidades del dispositivo del usuario.
-- [MathML](/es/docs/Learn/MathML)
+- [MathML](/es/docs/Web/MathML)
   - : MathML es el lenguaje que podemos usar para escribir fórmulas matemáticas en páginas web usando fracciones, scripts, radicales, matrices, integrales, series, etc. Este tema cubre MathML.
 - [Herramientas y pruebas](/es/docs/conflicting/Learn_web_development/Extensions/Testing)
   - : Este tema cubre las herramientas que usan los desarrolladores para facilitar su trabajo, como herramientas de prueba entre navegadores, _linters_, formateadores, herramientas de transformación, sistemas de control de versiones, herramientas de implementación y _frameworks_ JavaScript del lado del cliente.

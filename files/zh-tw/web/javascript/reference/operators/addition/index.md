@@ -2,7 +2,7 @@
 title: 加法（+）
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 **加法**（**`+`**）運算子會產生數值運算元的總和或字串串接的結果。

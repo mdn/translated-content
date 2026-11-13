@@ -1,11 +1,14 @@
 ---
-title: indexedDB
+title: "Window: indexedDB プロパティ"
+short-title: indexedDB
 slug: Web/API/Window/indexedDB
+l10n:
+  sourceCommit: 9912dd7cc583fc938cc73152dccdb94c3bb79ce4
 ---
 
-{{ APIRef() }}
+{{APIRef("IndexedDB")}}
 
-グローバルの **`indexedDB`** は読み取り専用プロパティで、アプリケーションが indexed データベースの機能に非同期でアクセスするための機構を提供します。
+**`indexedDB`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、アプリケーションが indexed データベースの機能に非同期でアクセスするための機構を提供します。
 
 ### 値
 

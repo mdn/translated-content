@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 **`VRDisplayCapabilities`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、 {{domxref("VRDisplay")}} の利用可能な機能を示しています。この機能は，例えば位置情報を返すことが可能か、といった VR 機器の動作可能テストに使うことができます。
 

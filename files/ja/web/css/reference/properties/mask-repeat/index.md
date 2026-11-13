@@ -1,9 +1,8 @@
 ---
 title: mask-repeat
 slug: Web/CSS/Reference/Properties/mask-repeat
-original_slug: Web/CSS/mask-repeat
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-repeat`** は [CSS](/ja/docs/Web/CSS) プロパティで、マスク画像をどのように繰り返すかを設定します。マスク画像は水平軸、垂直軸、両方の軸で繰り返すか、まったく繰り返さないようにすることができます。
@@ -51,7 +50,7 @@ mask-repeat: unset;
 `<repeat-style>` 値には、次のようなものがあります。
 
 - `repeat`
-  - : 画像は、マスクの描画領域全体に応じた回数だけ繰り返されます。マスクの[基準ボックス](/ja/docs/Web/CSS/mask-origin)のサイズが、マスク画像のサイズの正確な倍数でない場合、端の部分の画像は切り取られます。
+  - : 画像は、マスクの描画領域全体に応じた回数だけ繰り返されます。マスクの[基準ボックス](/ja/docs/Web/CSS/Reference/Properties/mask-origin)のサイズが、マスク画像のサイズの正確な倍数でない場合、端の部分の画像は切り取られます。
 
 - `space`
   - : マスク画像は、切り取られることなく、できるだけ多くの回数だけ繰り返されます。要素の原点サイズが、関連付けられた寸法のマスク画像のサイズの 2 倍以上である場合、 {{cssxref("mask-position")}} プロパティは無視され、最初と最後の画像はマスクの原点コンテナーの端に配置されます。マスクの基準ボックスがマスク画像のサイズの正確な倍数でない場合、余白は繰り返されるマスク画像の間に均等に分配されます。
@@ -119,7 +118,7 @@ mask-repeat: unset;
 
 ### サイズ変更と位置指定
 
-`mask-repeat` プロパティの値は、マスク画像が[サイズ指定](/ja/docs/Web/CSS/mask-size)および[位置指定](/ja/docs/Web/CSS/mask-position)された後に、どのようにタイル化されるかを定義します。最初の（そしておそらく唯一の）マスク画像の繰り返しは、{{cssxref("mask-position")}} プロパティによって位置指定されます。このプロパティの既定値は、基準ボックスの左上隅である `0% 0%` です。サイズは、{{cssxref("mask-size")}} プロパティによって定義されます。このプロパティの既定値は `auto` です。繰り返されるマスクの位置は、この最初のマスクインスタンスに基づいて決定されます。
+`mask-repeat` プロパティの値は、マスク画像が[サイズ指定](/ja/docs/Web/CSS/Reference/Properties/mask-size)および[位置指定](/ja/docs/Web/CSS/Reference/Properties/mask-position)された後に、どのようにタイル化されるかを定義します。最初の（そしておそらく唯一の）マスク画像の繰り返しは、{{cssxref("mask-position")}} プロパティによって位置指定されます。このプロパティの既定値は、基準ボックスの左上隅である `0% 0%` です。サイズは、{{cssxref("mask-size")}} プロパティによって定義されます。このプロパティの既定値は `auto` です。繰り返されるマスクの位置は、この最初のマスクインスタンスに基づいて決定されます。
 
 ### クリップ
 
@@ -173,7 +172,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -193,7 +192,7 @@ div {
 ```html hidden
 <div></div>
 <label
-  >width: <output></output><br />
+  >width: <span></span><br />
   <input type="range" min="0" max="400" value="250" id="width" />
 </label>
 ```
@@ -204,7 +203,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -218,7 +217,7 @@ input {
 ```js hidden
 const div = document.querySelector("div");
 const range = document.getElementById("width");
-const output = document.querySelector("output");
+const output = document.querySelector("span");
 
 range.addEventListener("change", () => {
   const value = `${range.value}px`;
@@ -270,7 +269,7 @@ div {
   height: 180px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 
   mask-size: 50px 50px;
   mask-position: bottom right;
@@ -322,7 +321,7 @@ section {
 
 {{EmbedLiveSample("The shorthand values", "", "450px")}}
 
-最初の（および、`no-repeat` の場合、唯一の）星形のマスクは、 50px × 50px のサイズに[サイズ指定](/ja/docs/Web/CSS/mask-size)され、描画領域の右下に[位置指定](/ja/docs/Web/CSS/mask-position)され、その上および左に、最上部および最左部の星の上部と左部が切り取られるように、星が繰り返し配置されます。すべての星は、 `round` を除き、同じサイズおよび形状であることに注意してください。`round` では、4 つの完全なマスクが各方向に収まるように、すべてのマスクが 45px x 45px に縮小されています。コンテナーが 174px であった場合、4 つではなく 3 つの星が各方向に存在し、各星は引き伸ばされていたでしょう。
+最初の（および、`no-repeat` の場合、唯一の）星形のマスクは、 50px × 50px のサイズに[サイズ指定](/ja/docs/Web/CSS/Reference/Properties/mask-size)され、描画領域の右下に[位置指定](/ja/docs/Web/CSS/Reference/Properties/mask-position)され、その上および左に、最上部および最左部の星の上部と左部が切り取られるように、星が繰り返し配置されます。すべての星は、 `round` を除き、同じサイズおよび形状であることに注意してください。`round` では、4 つの完全なマスクが各方向に収まるように、すべてのマスクが 45px x 45px に縮小されています。コンテナーが 174px であった場合、4 つではなく 3 つの星が各方向に存在し、各星は引き伸ばされていたでしょう。
 
 ### 複数のマスク画像と繰り返し
 
@@ -357,4 +356,9 @@ section {
 
 ## 関連情報
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("background-repeat")}}
+- {{cssxref("mask-border-repeat")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

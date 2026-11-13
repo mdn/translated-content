@@ -1,9 +1,9 @@
 ---
-title: overscroll-behavior-block
+title: "`overscroll-behavior-block` CSS プロパティ"
+short-title: overscroll-behavior-block
 slug: Web/CSS/Reference/Properties/overscroll-behavior-block
-original_slug: Web/CSS/overscroll-behavior-block
 l10n:
-  sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`overscroll-behavior-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール領域のブロック方向の境界に達したときのブラウザーの挙動を設定します。
@@ -135,4 +135,4 @@ p {
 - {{cssxref("overscroll-behavior-x")}}
 - {{cssxref("overscroll-behavior-y")}}
 - {{cssxref("overscroll-behavior-inline")}}
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール

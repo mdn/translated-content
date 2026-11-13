@@ -1,12 +1,14 @@
 ---
-title: text-decoration
+title: "`text-decoration` プロパティ (CSS)"
+short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
-original_slug: Web/CSS/text-decoration
 l10n:
-  sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
+  sourceCommit: 3fb9ea0187429234b47cb0385a9515a69757fe63
 ---
 
-**`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
+**`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
+
+テキストの装飾は、子孫のテキスト要素に適用されます。つまり、要素にテキスト装飾が指定されていると、子要素では装飾を外すことができません。例えば、`<p>This text has <em>some emphasized words</em> in it.</p>` というマークアップと、 `p { text-decoration: underline; }` のスタイルルールでは、段落全体に下線が引かれます。 `em { text-decoration: none; }` のスタイルルールを適用しても変化せず、段落全体に下線が引かれたままになります。しかし、 `em { text-decoration: overline; }` のルールで "some emphasized words" に第二の装飾が施されます。
 
 {{InteractiveExample("CSS デモ: text-decoration")}}
 
@@ -46,16 +48,14 @@ p {
 }
 ```
 
-文字列の装飾は、子孫の文字列要素に適用されます。つまり、要素に文字列装飾が指定されれば、子要素では装飾を外すことができません。例えば、`<p>This text has <em>some emphasized words</em> in it.</p>` というマークアップと、 `p { text-decoration: underline; }` のスタイル規則では、段落全体に下線が引かれます。 `em { text-decoration: none; }` のスタイル規則を適用しても変化せず、段落全体に下線が引かれたままになります。しかし、 `em { text-decoration: overline; }` の規則で "some emphasized words" に第二の装飾が施されます。
-
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness)
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
 
 ## 構文
 
@@ -93,7 +93,7 @@ text-decoration: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### text-decoration の値のデモ
 
@@ -160,4 +160,5 @@ text-decoration: unset;
 
 - text-decoration の個別指定プロパティは、 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}}、 {{cssxref("text-decoration-thickness")}} です。
 - {{cssxref("text-decoration-skip-ink")}}、 {{cssxref("text-underline-offset")}}、 {{cssxref("text-underline-position")}} 属性もテキストの装飾に影響しますが、一括指定プロパティには含まれません。
-- {{cssxref("list-style")}} 属性は HTML の {{HTMLElement("ol")}} および {{HTMLElement("ul")}} のリストの表示方法を制御します。
+- {{cssxref("list-style")}} プロパティは HTML の {{HTMLElement("ol")}} および {{HTMLElement("ul")}} のリストの表示方法を制御します。
+- SVG の {{SVGAttr("text-decoration")}} 属性

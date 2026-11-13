@@ -3,7 +3,7 @@ title: Array.prototype.reverse()
 short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`reverse()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で反転させ、その配列への参照を返します。最初の要素が最後の要素に、最後の要素が最初の要素になります。言い換えれば、配列内の要素順序を、先に述べた方向とは逆に向かわせます。
@@ -120,7 +120,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 
 ## 関連情報
 
-- [`Array.prototype.reverse` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.reverse` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [es-shims による `Array.prototype.reverse` のポリフィル](https://www.npmjs.com/package/array.prototype.reverse)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}

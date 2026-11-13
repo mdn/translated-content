@@ -3,11 +3,11 @@ title: CSS プロパティ
 short-title: プロパティ
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
+  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
 ---
 
-[CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
-例えば、 {{CSSxRef("opacity")}} プロパティは、選択した要素の不透明度を設定するために使用し、その要素の背後のコンテンツを表示するかどうかをコントロールすることができます。
+[CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
+例えば、{{CSSxRef("opacity")}} プロパティは、選択した要素の不透明度を設定するために使用し、その要素の背後のコンテンツを表示するかどうかをコントロールすることができます。
 
 ```css
 /* 0.8 の opacity を <img> 要素に設定 */
@@ -52,6 +52,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("alignment-baseline")}}
 - {{CSSxRef("all")}} （一括指定）
 - {{CSSxRef("anchor-name")}}
+- {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
@@ -82,9 +83,13 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}}
+- {{CSSxRef("background-repeat")}} （一括指定）
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} （一括指定）
+- {{CSSxRef("baseline-shift")}}
+- {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -169,7 +174,10 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("break-before")}}
 - {{CSSxRef("break-inside")}}
 - {{CSSxRef("caption-side")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret")}} （一括指定）
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -181,12 +189,14 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("column-count")}}
 - {{CSSxRef("column-fill")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-height")}}
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
 - {{CSSxRef("column-rule")}} （一括指定）
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
+- {{CSSxRef("column-wrap")}}
 - {{CSSxRef("columns")}} （一括指定）
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
@@ -199,6 +209,23 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("container")}} （一括指定）
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
+- {{CSSxRef("corner-block-end-shape")}}
+- {{CSSxRef("corner-block-start-shape")}}
+- {{CSSxRef("corner-bottom-left-shape")}}
+- {{CSSxRef("corner-bottom-right-shape")}}
+- {{CSSxRef("corner-bottom-shape")}} （一括指定）
+- {{CSSxRef("corner-end-end-shape")}}
+- {{CSSxRef("corner-end-start-shape")}}
+- {{CSSxRef("corner-inline-end-shape")}}
+- {{CSSxRef("corner-inline-start-shape")}}
+- {{CSSxRef("corner-left-shape")}} （一括指定）
+- {{CSSxRef("corner-right-shape")}} （一括指定）
+- {{CSSxRef("corner-shape")}} （一括指定）
+- {{CSSxRef("corner-start-end-shape")}}
+- {{CSSxRef("corner-start-start-shape")}}
+- {{CSSxRef("corner-top-left-shape")}}
+- {{CSSxRef("corner-top-right-shape")}}
+- {{CSSxRef("corner-top-shape")}} （一括指定）
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -212,6 +239,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("direction")}}
 - {{CSSxRef("display")}}
 - {{CSSxRef("dominant-baseline")}}
+- {{CSSxRef("dynamic-range-limit")}}
 - {{CSSxRef("empty-cells")}}
 - {{CSSxRef("field-sizing")}}
 - {{CSSxRef("fill-opacity")}}
@@ -254,6 +282,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("font-variant")}} （一括指定）
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
+- {{CSSxRef("font-width")}}
 - {{CSSxRef("font")}} （一括指定）
 - {{CSSxRef("forced-color-adjust")}}
 
@@ -295,6 +324,10 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("inset-inline")}} （一括指定）
 - {{CSSxRef("inset")}} （一括指定）
 - {{CSSxRef("inset")}} （一括指定）
+- {{CSSxRef("interactivity")}}
+- {{CSSxRef("interest-delay")}}
+- {{CSSxRef("interest-delay-end")}}
+- {{CSSxRef("interest-delay-start")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -365,6 +398,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{CSSxRef("object-view-box")}}
 - {{CSSxRef("offset-anchor")}}
 - {{CSSxRef("offset-distance")}}
 - {{CSSxRef("offset-path")}}
@@ -435,11 +469,13 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("rotate")}}
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("ruby-align")}}
+- {{CSSxRef("ruby-overhang")}}
 - {{CSSxRef("ruby-position")}}
 - {{CSSxRef("rx")}}
 - {{CSSxRef("ry")}}
 - {{CSSxRef("scale")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
 - {{CSSxRef("scroll-margin-block")}} （一括指定）
@@ -466,6 +502,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
+- {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
 - {{CSSxRef("scroll-timeline")}} （一括指定）
@@ -495,11 +532,13 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("text-align-last")}}
 - {{CSSxRef("text-align")}}
 - {{CSSxRef("text-anchor")}}
+- {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
 - {{CSSxRef("text-box")}} （一括指定）
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}
@@ -542,7 +581,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}}
+- {{CSSxRef("vertical-align")}} （一括指定）
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}
@@ -565,7 +604,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 ### 標準外のプロパティ
 
-標準外のプロパティや、ベンダー接頭辞の付いたプロパティには次のようなものがあります。
+ベンダー接頭辞の付いた標準外のプロパティには、次のようなものがあります。
 
 #### `-moz-` の接頭辞
 
@@ -599,8 +638,8 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 ## 関連情報
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
 - [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "ベンダー接頭辞")}}

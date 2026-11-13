@@ -7,7 +7,7 @@ l10n:
 
 Esta página contiene una serie de tutoriales donde se destacan diferentes flujos de trabajo para crear de forma eficaz diferentes tipos de juegos web.
 
-- [Famoso juego 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+- [Famoso juego 2D usando JavaScript puro](/es/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript)
   - : En este tutorial paso a paso implementarás un clon simple del juego breakout utilizando JavaScript puro. Por el camino aprenderás los conceptos básicos en el uso del elemento {{htmlelement("canvas")}} para implementar mecánicas de juego fundamentales como la renderización y el movimiento de imágenes, la detección de colisiones, los mecanismos de control y los estados de victoria y derrota.
 - [Juego breakout en 2D usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser)
   - : En este tutorial paso a paso implementarás el mismo clon de breakout que en la serie de tutoriales anterior, excepto que esta vez lo harás usando el framework para juegos HTML [phaser](https://phaser.io/). La idea aquí es enseñar algunos de los fundamentos y ventajas de trabajar con frameworks, junto con la mecánica fundamental del juego.

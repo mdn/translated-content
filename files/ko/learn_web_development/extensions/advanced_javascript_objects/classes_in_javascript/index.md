@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_Ja
 original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에서 자식 클래스를 상속하는 방법을 알아봅니다. 덤으로 OOJS를 구현하는데 몇 가지 참고사항도 있습니다.
 
@@ -15,10 +15,10 @@ OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에�
       <td>
         컴퓨터 기본지식, HTML과 CSS에 대한 기본적인 이해,JavaScript에 어느
         정도 익숙할 것 (see
-        <a href="/ko/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks">Building blocks</a
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">First steps</a> and
+        <a href="/ko/docs/Learn_web_development/Core/Scripting">Building blocks</a
         >). OOJS 기초 지식 (see
-        <a href="/ko/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >).
       </td>
@@ -428,4 +428,4 @@ console.log(snape._subject) // Returns "Balloon animals"
 - [Secrets of the JavaScript Ninja](https://www.amazon.com/gp/product/193398869X/), Chapter 6 — A good book on advanced JavaScript concepts and techniques, by John Resig and Bear Bibeault. Chapter 6 covers aspects of prototypes and inheritance really well; you can probably track down a print or online copy fairly easily.
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Part of Kyle Simpson's excellent series of JavaScript manuals, Chapter 5 in particular looks at prototypes in much more detail than we do here. We've presented a simplified view in this series of articles aimed at beginners, whereas Kyle goes into great depth and provides a more complex but more accurate picture.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

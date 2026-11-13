@@ -3,7 +3,7 @@ title: Веб-безопасность
 slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Безопасность сайта требует бдительности во всех аспектах дизайна и использования сайта. Эта вводная статья не сделает из вас гуру безопасности веб-сайта, но она поможет вам понять, откуда приходят угрозы, и что вы можете сделать, чтобы укрепить своё веб-приложение против наиболее распространённых атак.
 
@@ -136,4 +136,4 @@ CSRF-атаки позволяют злоумышленнику выполнят
 
 Этой статьёй вы подошли к концу [этого модуля](/ru/docs/Learn_web_development/Extensions/Server-side/First_steps), охватывающего ваши первые шаги в программировании на стороне сервера. Мы надеемся, что вам понравилось изучать эти фундаментальные концепции, и теперь вы готовы выбрать веб-платформу и начать программировать.
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

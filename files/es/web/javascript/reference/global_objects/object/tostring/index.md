@@ -64,5 +64,5 @@ Perro Gabby es femenino chocolate Laboratorio
 
 ## Vea También
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("Object.prototype.valueOf()")}}

@@ -34,10 +34,10 @@ l10n:
 
 - '[CSS 플렉시블 상자 레이아웃 모듈 레벨 1 명세서](https://www.w3.org/TR/css-flexbox-1/)'
 - CSS 플렉스박스 안내서:
-  - [플렉스 박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [플렉스 박스의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - [플렉스박스와 다른 레이아웃 메소드와의 관계](/ko/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
   - [플렉스 컨테이너 요소 정렬](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - [플렉스 요소 순서](/ko/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
   - [주축을 따른 플렉스 요소의 비율 제어](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - [플렉스 요소의 래핑 마스터하기](/ko/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-  - [플렉스박스의 일반적인 사용 사례](/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+  - [플렉스박스의 일반적인 사용 사례](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)

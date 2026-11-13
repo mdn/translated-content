@@ -3,8 +3,6 @@ title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
-{{AddonSidebar}}
-
 Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

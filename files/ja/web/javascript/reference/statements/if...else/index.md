@@ -2,28 +2,26 @@
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`if...else`** 文は、指定された条件が{{Glossary("truthy", "真値")}}ならば文を実行します。条件が{{Glossary("falsy", "偽値")}}なら、オプションの `else` 節にあるもう一方の文を実行します。
 
-{{InteractiveExample("JavaScript デモ: Statement - If...Else")}}
+{{InteractiveExample("JavaScript デモ: if...else 文")}}
 
 ```js interactive-example
 function testNum(a) {
   let result;
   if (a > 0) {
-    result = "positive";
+    result = "正の数";
   } else {
-    result = "NOT positive";
+    result = "正の数ではない";
   }
   return result;
 }
 
 console.log(testNum(-5));
-// Expected output: "NOT positive"
+// 予想される結果: "正の数ではない"
 ```
 
 ## 構文
@@ -124,13 +122,12 @@ function checkValue(a, b) {
 }
 ```
 
-プリミティブの論理値である `true` および `false` を {{jsxref("Global_Objects/Boolean", "Boolean")}} オブジェクトの真性や偽性と混同しないでください。 `false`, `undefined`, `null`, `0`, `-0`, `NaN`, 空文字列 (`""`) のいずれでもない値、および任意のオブジェクトは（
-`false` の値を持つ Boolean オブジェクトを含め）、条件として使用されたときに{{Glossary("truthy", "真値")}}と解釈されます。例えば以下のような場合です。
+プリミティブの論理値である `true` および `false` を {{jsxref("Boolean")}} オブジェクトの真性や偽性と混同しないでください。 `false`, `undefined`, `null`, `0`, `-0`, `NaN`, 空文字列 (`""`) のいずれでもない値、および任意のオブジェクトは（`false` の値を持つ Boolean オブジェクトを含め）、条件として使用されたときに{{Glossary("truthy", "真値")}}と解釈されます。例えば以下のような場合です。
 
 ```js
 const b = new Boolean(false);
 if (b) {
-  console.log("b is truthy"); // この条件式は truthy です
+  console.log("b is truthy"); // "b is truthy"
 }
 ```
 
@@ -163,15 +160,24 @@ if (x > 50) {
 
 ### 条件式の中での代入
 
-`x = y` のように代入を条件とする `if...else` を持つことは、稀であるはずです。
+`if...else` の条件式として `x = y` のような代入式を持たせることは、ほぼ絶対に避けるべきです。
 
-```js-nolint example-bad
-if (x = y) {
-  /* 何かを行う */
+```js example-bad
+if ((x = y)) {
+  // …
 }
 ```
 
-しかし、稀にそのようなことをしたくなった場合、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) のドキュメントの[代入を条件として使用](/ja/docs/Web/JavaScript/Reference/Statements/while#代入を条件として使用)の節に、知っていて従うべき、一般的に良い実践を示した例を紹介しています。
+{{jsxref("Statements/while", "while")}} ループとは異なり、条件は 1 回だけしか評価されないので、代入は 1 回しか行われません。上記のコードは次のものと等価です。
+
+```js example-good
+x = y;
+if (x) {
+  // …
+}
+```
+
+これははるかに明確です。しかし、稀にそのようなことをしたくなった場合、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) のドキュメントの[代入を条件として使用](/ja/docs/Web/JavaScript/Reference/Statements/while#代入を条件として使用)の節に、推奨事項が書かれています。
 
 ## 仕様書
 

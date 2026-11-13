@@ -1,12 +1,11 @@
 ---
 title: grid
 slug: Web/CSS/Reference/Properties/grid
-original_slug: Web/CSS/grid
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
@@ -45,19 +44,19 @@ grid: repeat(3, 80px) / auto-flow;
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-column: auto / span 3;
   grid-row: auto / span 2;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-column: auto / span 2;
 }
@@ -70,12 +69,12 @@ grid: repeat(3, 80px) / auto-flow;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-auto-columns`](/ja/docs/Web/CSS/grid-auto-columns)
-- [`grid-auto-flow`](/ja/docs/Web/CSS/grid-auto-flow)
-- [`grid-auto-rows`](/ja/docs/Web/CSS/grid-auto-rows)
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
 
 ## 構文
 
@@ -188,5 +187,5 @@ grid: unset;
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-flow")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#グリッド定義の一括指定)

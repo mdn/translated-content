@@ -1,9 +1,8 @@
 ---
 title: text-box
 slug: Web/CSS/Reference/Properties/text-box
-original_slug: Web/CSS/text-box
 l10n:
-  sourceCommit: 95b3a7c3d7c854feddb769922818f9d5a3abd500
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`text-box`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("text-box-trim")}} および {{cssxref("text-box-edge")}} プロパティに対応する一括指定プロパティで、テキスト要素のブロックコンテナーのブロック先頭端とブロック末尾端から切り取る空間の大きさを指定します。
@@ -129,5 +128,5 @@ p {
 
 - {{cssxref("text-box-edge")}}, {{cssxref("text-box-trim")}}
 - {{cssxref("&lt;text-edge&gt;")}} データ型
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
 - [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-trim) (developer.chrome.com, 2025)

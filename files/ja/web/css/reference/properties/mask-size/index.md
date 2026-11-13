@@ -1,9 +1,8 @@
 ---
 title: mask-size
 slug: Web/CSS/Reference/Properties/mask-size
-original_slug: Web/CSS/mask-size
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したマスク画像のサイズを指定します。マスク画像のサイズは、その{{glossary("aspect ratio", "アスペクト比")}}を維持するために、完全にまたは部分的に制約することができます。
@@ -87,7 +86,7 @@ mask-size: unset;
 
 - `mask-size` の両方の要素が指定され、 `auto` ではない場合、マスク画像は指定された寸法で描画されます。
 - `mask-size` が `contain` または `cover` であった場合、画像は、マスク配置領域に含まれる、またはマスク配置領域を覆う最大の寸法で、その固有の縦横比を維持して描画されます。画像が固有の縦横比を持たない場合は、マスク配置領域の大きさで描画されます。
-- `mask-size` が `auto` である場合（これは `auto auto` に解決されます）、レンダリングを変更する CSS が適用されていない場合にマスクが表示されるサイズでレンダリングされます。これがその {{glossary("intrinsic size", "内在サイズ")}}です。 [CSS グラデーション](/ja/docs/Web/CSS/gradient) の場合のように、内在的な寸法も内在的な比率も指定されていない場合、マスクの位置指定領域のサイズでレンダリングされます。このサイズは、{{cssxref("mask-origin")}}（既定では `border-box`）で定義されます。
+- `mask-size` が `auto` である場合（これは `auto auto` に解決されます）、レンダリングを変更する CSS が適用されていない場合にマスクが表示されるサイズでレンダリングされます。これがその {{glossary("intrinsic size", "内在サイズ")}}です。 [CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient) の場合のように、内在的な寸法も内在的な比率も指定されていない場合、マスクの位置指定領域のサイズでレンダリングされます。このサイズは、{{cssxref("mask-origin")}}（既定では `border-box`）で定義されます。
   マスクソースに寸法がなく、比率（アスペクト比）がある場合、値 `auto` を指定すると、`contain` が指定された場合と同じようにレンダリングされます。画像に 1 つの内在サイズと比率が指定されている場合、その 1 つの寸法と比率によって決定されるサイズでレンダリングされます。画像に 1 つの内在サイズが指定されているが、比率が指定されていない場合、内在サイズとマスクの位置指定領域の対応する寸法を使用してレンダリングされます。
 - `mask-size` の一方が `auto` 成分でもう一方が `auto` 成分ではなく、それらがすべての単一の値に適用される場合、マスクソースに内在的な比率があるのであれば、アスペクト比が維持されます。内在的な比率がない場合、 `auto` 値はマスクの位置指定領域のサイズと見なされます。
 
@@ -125,7 +124,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("/shared-assets/images/examples/mdn.svg");
 }
 ```
 
@@ -184,7 +183,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -204,7 +203,7 @@ div {
 }
 ```
 
-プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して表示されます。
+プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)を使用して表示されます。
 
 ```css
 section::before {
@@ -230,7 +229,7 @@ section {
 
 {{EmbedLiveSample("Cover and contain", "", "430px")}}
 
-`auto` を使用すると、星は内在サイズである `100px` × `100px` で表示されます。`cover` では、星は基準ボックス全体を覆うように高さ `400px` まで伸長します。`contain` では、星は、その一辺の長さが[基準ボックス](/ja/docs/Web/CSS/mask-origin)と同じになるまで伸長します。これは、星は可能な限り大きく（幅 `200px`）なるが、基準ボックス内に収まることを意味しています。
+`auto` を使用すると、星は内在サイズである `100px` × `100px` で表示されます。`cover` では、星は基準ボックス全体を覆うように高さ `400px` まで伸長します。`contain` では、星は、その一辺の長さが[基準ボックス](/ja/docs/Web/CSS/Reference/Properties/mask-origin)と同じになるまで伸長します。これは、星は可能な限り大きく（幅 `200px`）なるが、基準ボックス内に収まることを意味しています。
 
 ### マスクがコンテナーよりも大きい場合
 
@@ -251,7 +250,7 @@ section {
 ```css hidden
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 
 .auto div {
@@ -306,6 +305,7 @@ div {
 
 ## 関連情報
 
+- {{cssxref("background-size")}}
 - {{cssxref("mask")}} 一括指定
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-origin")}}
@@ -314,4 +314,8 @@ div {
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("background-size")}}
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- {{cssxref("mask-border-width")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
