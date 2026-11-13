@@ -3,8 +3,6 @@ title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.getChildren()`** récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -20,7 +18,7 @@ var gettingChildren = browser.bookmarks.getChildren(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
+  - : Un {{jsxref("String")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
 
 ### Valeur retournée
 

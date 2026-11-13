@@ -1,8 +1,9 @@
 ---
-title: rotateX()
+title: CSS `rotateX()` 関数
+short-title: rotateX()
 slug: Web/CSS/Reference/Values/transform-function/rotateX
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`rotateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -41,7 +42,7 @@ transform: rotateX(3.142rad);
 > `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
 
 > [!NOTE]
-> 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 
@@ -66,7 +67,7 @@ rotateX(a)
   <tbody>
     <tr>
       <td colspan="2">
-        この変換は 3D 空間に適用され、平面で表すことはできません。
+        この変換は三次元空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math display="block">

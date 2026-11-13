@@ -1,13 +1,14 @@
 ---
-title: MediaRecorder.state
+title: "MediaRecorder: state プロパティ"
+short-title: state
 slug: Web/API/MediaRecorder/state
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 78039f57d12515cd2f97af490a5ec736d228c431
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.state`** は読み取り専用プロパティで、現在の `MediaRecorder` オブジェクトの現在の状態を返します。
+**`state`** は {{domxref("MediaRecorder")}} インターフェイスの読み取り専用プロパティで、現在の `MediaRecorder` オブジェクトの現在の状態を返します。
 
 ## 値
 
@@ -42,6 +43,6 @@ record.onclick = () => {
 ## 関連情報
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("MediaDevices.getUserMedia")}}
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://github.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone/)）。<sup>(英語)</sup>
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://github.com/samdutton) 著。<sup>(英語)</sup>
+- {{domxref("Navigator.getUserMedia()")}}

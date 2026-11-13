@@ -2,19 +2,17 @@
 title: 国際化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 l10n:
-  sourceCommit: e0de864abf4c85888c0a790058e0d6f46462ca3a
+  sourceCommit: e81cf36acffe197d01b1ad282c3582ebd7b0b54d
 ---
 
-{{AddonSidebar}}
-
-[WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの実例を提供します。WebExtensions API を使った拡張機能用の i18n システムは、[i18n.js](http://i18njs.com/) のような、よくある i10n 用 JavaScript ライブラリーと同様です。
+[WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの例を提供します。
 
 > [!NOTE]
-> この記事の見本の拡張機能— [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — は GitHub で入手できます。以下の節を進んでいくのに合わせてコードを追ってください。
+> この記事の見本の拡張機能— [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) — は GitHub で入手できます。以下の節を進んでいくのに合わせてコードを追ってください。
 
 ## 国際化拡張機能の中身
 
-国際化された拡張機能は、他の拡張機能と同じ機能 — [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)、[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)など — を含む他、さまざまなロケールに切り替えられるような追加の部分もあります。これは下記のディレクトリーツリーのように要約されます:
+国際化された拡張機能は、他の拡張機能と同じ機能 — [バックグラウンド文字体系](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)、[コンテンツ文字体系](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)など — を含む他、さまざまなロケールに切り替えられるような追加の部分もあります。これは下記のディレクトリーツリーのように要約されます:
 
 - extension-root-directory/
   - \_locales
@@ -41,15 +39,16 @@ l10n:
 
 ## \_locales 内にローカライズ済み文字列を提供する
 
-言語のサブタグを探すには、[Language subtag lookup page](https://r12a.github.io/app-subtags/) の検索ツールを使います。注意点としては言語の名前の英語で探す必要があります。
+> [!NOTE]
+> 言語のサブタグを探すには、[Language subtag lookup page](https://r12a.github.io/app-subtags/) の検索ツールを使います。注意点としては言語の名前の英語で探す必要があります。
 
 すべての i18n システムはサポートする全ロケールに翻訳済みの文字列が要ります。拡張機能では、これは拡張機能のルート内に置かれる `_locales` と呼ばれるディレクトリーに入っています。各ロケールはそれぞれの文字列 (メッセージとも呼ばれる) を `messages.json` というファイル内に入れていて、これは `_locales` のサブディレクトリー内に置かれており、そこはロケール言語の言語サブタグを使った名前になっています。
 
 サブタグには基本的な言語に加えて、地域の変化形があるのに注意してください。ここで言語と変化形は伝統的に "en-US" のようにハイフンで区切られます。しかし、`_locales` 内のディレクトリーでは、**区切り文字はアンダースコアでなければならず**、 "en_US" となります。
 
-[例えば、見本のアプリでは](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) "en" (英語), "de" (ドイツ語), "nl" (オランダ語), "ja" (日本語) のフォルダーがあります。それぞれの中に `messages.json` ファイルがあります。
+[例えば、見本のアプリでは](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales) "en" (英語), "de" (ドイツ語), "nl" (オランダ語), "ja" (日本語) のフォルダーがあります。それぞれの中に `messages.json` ファイルがあります。
 
-このファイル ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)) の構造を見てみます。
+このファイル ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/_locales/en/messages.json)) の構造を見てみます。
 
 ```json
 {
@@ -92,7 +91,7 @@ manifest.json の国際化を実行するにはいくつかの異なるタスク
 
 ### マニフェスト内のローカライズ済み文字列を取得する
 
-[manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) にはユーザーに表示される文字列が入っています、例えば拡張機能の名前や説明です。この文字列を国際化して messages.json に適切な訳を置くと、現在のロケールなどに基づき、正しく翻訳された文字列がユーザーに表示されます。
+[manifest.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/manifest.json) にはユーザーに表示される文字列が入っています、例えば拡張機能の名前や説明です。この文字列を国際化して messages.json に適切な訳を置くと、現在のロケールなどに基づき、正しく翻訳された文字列がユーザーに表示されます。
 
 文字列を国際化するには、このように指定します。
 
@@ -111,7 +110,7 @@ manifest.json の国際化を実行するにはいくつかの異なるタスク
 4. `messages.json` で定義した呼び出しのメッセージ名に続いて
 5. 2 つのアンダースコア
 
-```
+```plain
 __MSG_ + messageName + __
 ```
 
@@ -131,7 +130,7 @@ manifest.json にて指定すべきフィールドは [default_locale](/ja/docs/
 
 ```css
 header {
-  background-image: url(../images/__MSG_extensionName__/header.png);
+  background-image: url("../images/__MSG_extensionName__/header.png");
 }
 ```
 
@@ -145,7 +144,7 @@ header {
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}} と{{WebExtAPIRef("i18n.getUILanguage()")}} メソッドはロケールに応じて UI をカスタマイズする場合に使います。たぶんユーザーの好みの言語に応じて設定リストの上の方に表示したり、特定言語だけに関連する文化的情報を表示したり、ブラウザーロケールに従って日付表示を整形したりすると良いでしょう。
 - {{WebExtAPIRef("i18n.detectLanguage()")}} メソッドはユーザーが投稿したコンテンツの言語を特定したり、それを適切に整形したりするのに使います。
 
-[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) の見本の中で、[バックグラウンドスクリプト](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js)に下記の行があります。
+[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) の見本の中で、[バックグラウンド文字体系](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/background-script.js)に下記の行があります。
 
 ```js
 let title = browser.i18n.getMessage("notificationTitle");
@@ -167,17 +166,17 @@ let content = browser.i18n.getMessage("notificationContent", message.url);
 }
 ```
 
-`"placeholders"` メンバーはプレースホルダーを定義し、ここから取得します。`"url"` プレースホルダーは $1、つまり 2 つ目の引数の `getMessage()`.の最初の値から取ってきたコンテンツを指定します。プレースホルダーは`"url"` と呼ばれるため、実際のメッセージ文字列の中で呼び出すのに `$URL$` を使います (なので `"name"` には `$NAME$`などを使う)。複数のプレースホルダーがある場合、{{WebExtAPIRef("i18n.getMessage()")}} の 2 つ目の引数として渡す配列の中で提供できます — `messages.json`内部で`[a, b, c]` は`$1`, `$2`, `$3`, として使われる、など。
+`"placeholders"` メンバーはプレースホルダーを定義し、ここから取得します。`"url"` プレースホルダーは `$1`、つまり 2 つ目の引数の `getMessage()`.の最初の値から取ってきたコンテンツを指定します。プレースホルダーは`"url"` と呼ばれるため、実際のメッセージ文字列の中で呼び出すのに `$URL$` を使います (なので `"name"` には `$NAME$`などを使う)。複数のプレースホルダーがある場合、{{WebExtAPIRef("i18n.getMessage()")}} の 2 つ目の引数として渡す配列の中で提供できます — `messages.json`内部で`[a, b, c]` は`$1`, `$2`, `$3`, として使われる、など。
 
 例をざっと見ましょう。 `en/messages.json` ファイル内のオリジナルの `notificationContent` メッセージ文字列はこうです
 
-```
+```plain
 You clicked $URL$.
 ```
 
 `https://developer.mozilla.org` を指すリンクがクリックされたとします。{{WebExtAPIRef("i18n.getMessage()")}} を呼び出した後、2 つ目の引数のコンテンツは messages.json 内で `$1` として利用できて、これは `"url"` プレースホルダー内で定義された `$URL$` プレースホルダーを置換します。よって最終のメッセージ文字列はこうなります
 
-```
+```plain
 You clicked https://developer.mozilla.org.
 ```
 
@@ -216,14 +215,16 @@ You clicked https://developer.mozilla.org.
 
 ## ローカライズ済みの文字列の選択
 
-ロケールは `fr` や `en` のような言語コードによってのみ指定されるか、さらに `en_US` や `en_GB` といった地域コードつきで (これは同じ言語の地域的な変形を記述します) 認証されます。i18n に文字列を問い合わせた時、次のアルゴリズムで文字列を選択します。
+ロケールは、`fr` や `en` といった言語コードを使用して指定します。これには、`en-US` や `zh-Hans-CN` のような文字体系や地域コードを付加することもできます。拡張機能がローカライズされた文字列を要求すると、i18n システムは `messages.json` ファイルから、以下の優先順位に従って文字列を返します。
 
-1. 現在のロケールと全く同じ `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
-2. それ以外で、現在のロケールが地域つきで認証されて（例えば `en_US`）、そのロケールの地域になし版の `messages.json` ファイルがあって（例えば `en`）、そこに文字列が入っている場合、それを返します
-3. それ以外で、`manifest.json` 内に定義された `default_locale` 用の `messages.json` ファイルがあって、そこに文字列が入っている場合、それを返します
-4. それ以外は空文字を返します
+1. ブラウザーのロケールに対応するファイル（例：`zh-Hans-CN`）。
+2. ブラウザーのロケールに文字体系または地域が指定されている場合、地域指定なしのバージョンのファイル（例：`zh-Hans`）。
+3. ブラウザーのロケールに文字体系または地域が指定されている場合、文字体系指定なしのバージョンのファイル（例：`zh`）。
+4. `manifest.json` ファイルで定義された `default_locale` に対応するファイル。
 
-下記の例を見てみます。
+リクエストされた文字列がこれらのファイルのいずれにも存在しない場合、空文字列が返されます。
+
+この例を見てみましょう。
 
 - extension-root-directory/
   - \_locales
@@ -234,27 +235,38 @@ You clicked https://developer.mozilla.org.
       en
       - messages.json
         - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
+        - `{ "colorBlue": { "message": "Blue", "description": "Blue." }, /* … */ }`
 
     - fr
       - messages.json
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
+        - `{ "colorBlue": { "message": "Bleu", "description": "Blue." }, /* … */ }`
 
-`default_locale` が `fr` にセットされ、ブラウザーの現在のロケールが `en_GB` と仮定します:
+`default_locale` を `fr` に設定している場合。
 
-- 拡張機能が `getMessage("colorLocalized")`を呼び出すと、 "colour" を返します
-- `en_GB` に "colorLocalized" がなかったとしたら、 `getMessage("colorLocalized")` は "couleur" でなく "color" を返します
+- ブラウザーのロケールが `en-GB` の場合、
+  - `getMessage("colorLocalized")` は、`_locales/en_GB/messages.json` に `colorLocalized` メッセージが含まれているため、「colour」を返します。
+  - `getMessage("colorBlue")` は、`_locales/en/messages.json` 内の `colorBlue` メッセージで代替されるため、"blue" を返します。
+- ブラウザーのロケールが `en-US` の場合、
+  - `getMessage("colorLocalized")` は "color" を返します。これは、`_locales/en_US/messages.json` ファイルがないため、`_locales/en/messages.json` に存在するメッセージで代替されるからです。
+  - `getMessage("colorBlue")` は、`_locales/en/messages.json` 内の `colorBlue` メッセージで代替されるため、"blue" を返します。
+- ブラウザーのロケールが `zh-Hans-CN` の場合、
+  - `getMessage("colorLocalized")` は "couleur" を返します。これは、`zh-Hans-CN` ロケールに一致する地域、文字体系、言語がないためです（つまり、`zh-Hans-CN`、`zh-Hans`、`zh` フォルダー内に `messages.json` ファイルがないためです）。
+  - `getMessage("colorBlue")` は、`zh-Hans-CN` ロケールに一致する地域、文字体系、言語がないため、"bleu" を返します。
+
+この拡張機能が `getMessage("colorRed")` を呼び出した場合、どの言語ファイルにも `"colorRed"` というプロパティがないため、空文字列が返されます。
 
 ## 事前定義されたメッセージ
 
 i18n モジュールでは、事前定義されたメッセージを提供しており、これまで見てきた[マニフェスト内のローカライズ済み文字列を取得する](#マニフェスト内のローカライズ済み文字列を取得する)や[ロケールに依存しない CSS](#ロケールに依存しない_css)と同じ方法で呼び出すことができます。例えばこのようにします。
 
-```
+```plain
 __MSG_extensionName__
 ```
 
 事前定義されたメッセージでも全く同じ文法を使っていますが、メッセージ名の前に `@@` をつけるのが異なります。例えば、
 
-```
+```plain
 __MSG_@@ui_locale__
 ```
 
@@ -279,7 +291,7 @@ __MSG_@@ui_locale__
           もう一つの注意点として、この ID は {{WebExtAPIRef("runtime.id")}} から返される、manifest.json 内の
           <a
             href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
+            >browser_specific_settings</a
           >
           キーを用いてセットされるアドオン ID とは異なっています。これはアドオンの URL 内にある生成された UUID です。つまりこの値を {{WebExtAPIRef("runtime.sendMessage()")}} の <code>extensionId</code> 引数の値として使うことはできず、{{WebExtAPIRef("runtime.MessageSender")}} オブジェクトの <code>id</code> プロパティの値のチェックに使うこともできません。
         </p>
@@ -322,7 +334,7 @@ __MSG_@@ui_locale__
 
 ```css
 header {
-  background-image: url(../images/__MSG_@@ui_locale__/header.png);
+  background-image: url("../images/__MSG_@@ui_locale__/header.png");
 }
 ```
 
@@ -363,10 +375,7 @@ padding-left: 1.5em;
 
 ## 拡張機能をテストする
 
-拡張機能のローカライズをテストするには、言語パックをインストールすることができる [Firefox](https://www.mozilla.org/en-US/firefox/new/) または [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/) を使用します。
+ローカライズの検査に使用するツールや手順に関する情報については、以下をご覧ください。
 
-次に、テストしたい拡張機能で対応している各ロケールについて、 Firefox の UI 言語を切り替えるために、[別の言語で Firefox を使用する](https://support.mozilla.org/en-US/kb/use-firefox-another-language)ための指示に従います。（設定を使用した場合、「言語」の下にある「代替言語の設定」を使用します。）
-
-Firefoxがテスト言語で実行されたら、[拡張機能を一時的にインストールします](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)。拡張機能をインストールした後、 `about:debugging` で、拡張機能を正しく設定した場合、選択した言語で拡張機能がアイコン、名前、説明とともに掲載されているのが確認できます。ローカライズされた拡張機能の詳細は、 `about:addons` でも見ることができます。これで拡張機能の機能を使い、必要な翻訳が配置されていることを確認してください。
-
-このプロセスを試したい場合は、[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 拡張機能を使用することができます。この例で対応している言語（ドイツ語、オランダ語、日本語）のいずれかを表示するように、 Firefox を設定してください。拡張機能を読み込んで、あるウェブサイトにアクセスします。リンクをクリックすると、リンクの URL を報告する通知の翻訳版が表示されます。
+- Firefox: [Testing Localizations](https://extensionworkshop.com/documentation/develop/test-localizations/) - Extension Workshop
+- Chrome: [ブラウザのロケールを設定する](https://developer.chrome.com/docs/extensions/reference/api/i18n#how-to-set-browsers-locale)

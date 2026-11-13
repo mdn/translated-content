@@ -150,19 +150,19 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#대화형_콘텐츠"
           >대화형 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#양식_관련_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#양식_관련_콘텐츠"
           >양식 관련 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -170,11 +170,11 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >. 단, 다른 <code>&#x3C;label></code> 요소는 자손으로 올 수 없습니다.
         레이블을 지정한 컨트롤 외의 다른
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능"
           >레이블 가능</a
         >
         요소는 자손으로 사용할 수 없습니다.
@@ -187,7 +187,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

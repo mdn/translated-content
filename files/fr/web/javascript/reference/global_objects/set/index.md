@@ -3,8 +3,6 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef}}
-
 Un objet **`Set`** permet de stocker un ensemble de valeurs uniques de n'importe quel type, qu'il s'agisse de [valeurs primitives](/fr/docs/Glossary/Primitive) ou d'objets.
 
 ## Description

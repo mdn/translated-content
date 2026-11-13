@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 
 {{jsSidebar("JavaScript Guide")}}
 
-Los **escapes de propiedad Unicode** en las {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}} permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.
+Los **escapes de propiedad Unicode** en las [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) permiten la coincidencia de caracteres según sus propiedades Unicode. Un caracter se describe mediante varias propiedades que, o bien, son binarias ("tipo booleano") o, no binarias. Por ejemplo, puedes usar escapes de propiedades Unicode para reconocer emojis, signos de puntuación, letras (incluso letras de idiomas específicos o scripts), etc.
 
 {{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
 
@@ -26,14 +26,14 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 ```
 
 > [!NOTE]
-> Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.
+> Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar [la bandera <code>u</code>](/es/docs/Web/JavaScript/Guide/Regular_expressions#Busqueda_avanzada_con_banderas) que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("RegExp.unicode", "RegExp.prototype.unicode")}}.
 
 > [!NOTE]
-> Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
+> Algunas propiedades Unicode abarcan muchos más caracteres que algunas [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
 
 ## Sintaxis
 
-La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!
+La siguiente sección también está duplicada en [esta hoja de trucos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 ```js
 // Valores no binarios
@@ -130,7 +130,7 @@ Si se usa un carácter en un conjunto limitado de scripts, la propiedad `Script`
 
 ### Escapes de propiedades Unicode versus Clases de caracteres
 
-Con las expresiones regulares de JavaScript, también es posible utilizar {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "clases de caracteres")}} y especialmente `\w` o `\d` para hacer coincidir letras o dígitos. Sin embargo, estos formularios solo coinciden con caracteres de la escritura _latina_ (en otras palabras, de la `a` a la `z` y `A` a `Z` para `\w` y `0` a `9` para `\d`). Como se muestra en {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "este ejemplo", "#Busca_una_palabra_de_caracteres_Unicode")}}, puede ser un poco torpe trabajar con textos no latinos.
+Con las expresiones regulares de JavaScript, también es posible utilizar [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) y especialmente `\w` o `\d` para hacer coincidir letras o dígitos. Sin embargo, estos formularios solo coinciden con caracteres de la escritura _latina_ (en otras palabras, de la `a` a la `z` y `A` a `Z` para `\w` y `0` a `9` para `\d`). Como se muestra en [este ejemplo](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#Busca_una_palabra_de_caracteres_Unicode), puede ser un poco torpe trabajar con textos no latinos.
 
 Las categorías de escape de propiedad Unicode abarcan muchos más caracteres y `\p{Letter}` o `\p{Number}` funcionarán para cualquier script.
 
@@ -154,18 +154,18 @@ console.table(textoNoEs.match(regexpEPU));
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
-- {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp.unicode", "RegExp.prototype.unicode")}}
 - [Propiedades de caracteres unicode — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [Una entrada en el blog de Axel Rauschmayer sobre los escapes de propiedades Unicode](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
 - [El documento Unicode para las propiedades Unicode](https://unicode.org/reports/tr18/#Categories)

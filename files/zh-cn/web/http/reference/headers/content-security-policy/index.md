@@ -328,7 +328,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 - [`'self'`](#self)
 - [`'unsafe-inline'`](#unsafe-inline)
 
-有关更多用法信息，请参阅 CSP 指南中的 [`strict-dynamic` 关键字](/zh-CN/docs/Web/HTTP/Guides/CSP#the_strict-dynamic_keyword)。
+有关更多用法信息，请参阅 CSP 指南中的 [`strict-dynamic` 关键字](/zh-CN/docs/Web/HTTP/Guides/CSP#strict-dynamic_关键字)。
 
 ### 'report-sample'
 

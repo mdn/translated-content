@@ -1,128 +1,165 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+L'objet espace de noms **`Math`** contient des propriétés et des méthodes statiques pour les constantes et fonctions mathématiques.
 
-L'objet **`Math`** est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.
-
-> [!WARNING]
-> `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
+`Math` fonctionne avec le type {{JSxRef("Number")}}. Il ne fonctionne pas avec {{JSxRef("BigInt")}}.
 
 ## Description
 
-Contrairement aux autres objets globaux, `Math` n'est pas un constructeur. Toutes les propriétés et les méthodes de `Math` sont statiques (pour éventuellement étendre cette API, ce qui est fortement déconseillé, on n'utilisera donc pas `Math.prototype`).
-
-Pour accéder à la constante PI, on utilise `Math.PI`.
-Pour accéder à la fonction _sinus_, on utilise `Math.sin(x)` où `x` est l'argument de cette méthode.
-
-Les constantes sont définies avec la précision des nombres réels en JavaScript.
-
-## Propriétés
-
-- {{jsxref("Math.E")}}
-  - : Nombre d'Euler, la base des logarithmes naturels, environ 2,718.
-- {{jsxref("Math.LN2")}}
-  - : Logarithme naturel de 2, environ 0,693.
-- {{jsxref("Math.LN10")}}
-  - : Logarithme naturel de 10, environ 2,302.
-- {{jsxref("Math.LOG2E")}}
-  - : Logarithme de base 2 de E, environ 1,442.
-- {{jsxref("Math.LOG10E")}}
-  - : Logarithme de base 10 de E, environ 0,434.
-- {{jsxref("Math.PI")}}
-  - : Quotient de la circonférence d'un cercle par son diamètre, environ 3,14159.
-- {{jsxref("Math.SQRT1_2")}}
-  - : Racine carrée de 1/2 ; équivalent de 1 sur la racine carrée de 2, environ 0,707.
-- {{jsxref("Math.SQRT2")}}
-  - : Racine carrée de 2, environ 1,414.
-
-## Méthodes
+Contrairement à la plupart des objets natifs standards, `Math` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec [l'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new) ni invoquer l'objet `Math` comme une fonction. Toutes les propriétés et méthodes de `Math` sont statiques.
 
 > [!NOTE]
-> Les fonctions trigonométriques (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) acceptent ou retournent des angles en radians. Pour convertir des degrés en radians, multipliez la valeur en degrés par (`Math.PI / 180`). Pour passer des radians en degrés, divisez la valeur en radians par (`Math.PI / 180`).
+> De nombreuses fonctions de `Math` ont une précision qui dépend de l'implémentation.
+>
+> Cela signifie que différents navigateurs peuvent donner des résultats différents. Même un même moteur JavaScript, sur un autre système d'exploitation ou une autre architecture, peut donner des résultats différents&nbsp;!
 
-> [!NOTE]
-> La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.
+## Propriétés statiques
 
-- {{jsxref("Objets_globaux/Math/abs", "Math.abs(x)")}}
-  - : Retourne la valeur absolue d'un nombre.
-- {{jsxref("Objets_globaux/Math/acos", "Math.acos(x)")}}
-  - : Retourne l'arc cosinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/acosh", "Math.acosh(x)")}}
-  - : Retourne l'arc cosinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/asin", "Math.asin(x)")}}
-  - : Retourne l'arc sinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/asinh", "Math.asinh(x)")}}
-  - : Retourne l'arc sinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/atan", "Math.atan(x)")}}
-  - : Retourne l'arc tangente d'un nombre.
-- {{jsxref("Objets_globaux/Math/atanh", "Math.atanh(x)")}}
-  - : Retourne l'arc tangente hyperbolique d'un nombre
-- {{jsxref("Objets_globaux/Math/atan2", "Math.atan2(y, x)")}}
+- {{JSxRef("Math.E")}}
+  - : Nombre d'Euler, la base des logarithmes naturels&nbsp;; environ `2,718`.
+- {{JSxRef("Math.LN10")}}
+  - : Logarithme naturel de `10`&nbsp;; environ `2,303`.
+- {{JSxRef("Math.LN2")}}
+  - : Logarithme naturel de `2`&nbsp;; environ `0,693`.
+- {{JSxRef("Math.LOG10E")}}
+  - : Logarithme en base 10 de `E`&nbsp;; environ `0,434`.
+- {{JSxRef("Math.LOG2E")}}
+  - : Logarithme en base 2 de `E`&nbsp;; environ `1,443`.
+- {{JSxRef("Math.PI")}}
+  - : Quotient de la circonférence d'un cercle par son diamètre&nbsp;; environ `3,14159`.
+- {{JSxRef("Math.SQRT1_2")}}
+  - : Racine carrée de ½&nbsp;; environ `0,707`.
+- {{JSxRef("Math.SQRT2")}}
+  - : Racine carrée de `2`&nbsp;; environ `1,414`.
+- `Math[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Math"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+
+## Méthodes statiques
+
+- {{JSxRef("Math.abs()")}}
+  - : Retourne la valeur absolue de l'argument.
+- {{JSxRef("Math.acos()")}}
+  - : Retourne l'arc cosinus de l'argument.
+- {{JSxRef("Math.acosh()")}}
+  - : Retourne l'arc cosinus hyperbolique de l'argument.
+- {{JSxRef("Math.asin()")}}
+  - : Retourne l'arc sinus de l'argument.
+- {{JSxRef("Math.asinh()")}}
+  - : Retourne l'arc sinus hyperbolique de l'argument.
+- {{JSxRef("Math.atan()")}}
+  - : Retourne l'arc tangente de l'argument.
+- {{JSxRef("Math.atan2()")}}
   - : Retourne l'arc tangente du quotient de ses arguments.
-- {{jsxref("Objets_globaux/Math/cbrt", "Math.cbrt(x)")}}
-  - : Renvoie la racine cubique d'un nombre.
-- {{jsxref("Objets_globaux/Math/ceil", "Math.ceil(x)")}}
-  - : Retourne le plus petit entier supérieur ou égal à la valeur passée en paramètre.
-- {{jsxref("Objets_globaux/Math/clz32", "Math.clz32(x)")}}
-  - : Renvoie le nombre de zéros qui préfixent un entier sur 32 bits.
-- {{jsxref("Objets_globaux/Math/cos", "Math.cos(x)")}}
-  - : Retourne le cosinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/cosh", "Math.cosh(x)")}}
-  - : Renvoie le cosinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/exp", "Math.exp(x)")}}
-  - : Renvoie l'exponentielle d'un nombre (soit E^nombre) avec E la constante d'Euler (2,718...).
-- {{jsxref("Objets_globaux/Math/expm1", "Math.expm1(x)")}}
-  - : Renvoie le résultat de 1 moins l'exponentielle d'un nombre.
-- {{jsxref("Objets_globaux/Math/floor", "Math.floor(x)")}}
-  - : Retourne le plus grand entier inférieur ou égal à la valeur passée en paramètre.
-- {{jsxref("Objets_globaux/Math/fround", "Math.fround(x)")}}
-  - : Renvoie le nombre flottant exprimé sur 32 bits le plus proche de l'argument.
-- {{jsxref("Objets_globaux/Math/hypot", "Math.hypot([x[,y[,…]]])")}}
-  - : Retourne la racine carré de la somme des carrés des arguments.
-- {{jsxref("Objets_globaux/Math/imul", "Math.imul(x, y)")}}
-  - : Retourne le résultat de la multiplication d'entiers sur 32 bits.
-- {{jsxref("Objets_globaux/Math/log", "Math.log(x)")}}
-  - : Retourne le logarithme naturel (log
+- {{JSxRef("Math.atanh()")}}
+  - : Retourne l'arc tangente hyperbolique de l'argument.
+- {{JSxRef("Math.cbrt()")}}
+  - : Retourne la racine cubique de l'argument.
+- {{JSxRef("Math.ceil()")}}
+  - : Retourne le plus petit entier supérieur ou égal à l'argument.
+- {{JSxRef("Math.clz32()")}}
+  - : Retourne le nombre de zéros de tête dans la représentation binaire sur 32 bits de l'argument.
+- {{JSxRef("Math.cos()")}}
+  - : Retourne le cosinus de l'argument.
+- {{JSxRef("Math.cosh()")}}
+  - : Retourne le cosinus hyperbolique de l'argument.
+- {{JSxRef("Math.exp()")}}
+  - : Retourne e<sup>x</sup>, où x est l'argument, et e est le nombre d'Euler (`2,718`…, la base du logarithme naturel).
+- {{JSxRef("Math.expm1()")}}
+  - : Retourne le résultat de `exp(x)` moins `1`.
+- {{JSxRef("Math.floor()")}}
+  - : Retourne le plus grand entier inférieur ou égal à l'argument.
+- {{JSxRef("Math.f16round()")}}
+  - : Retourne la représentation flottante en [demi-précision <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) la plus proche de l'argument.
+- {{JSxRef("Math.fround()")}}
+  - : Retourne la représentation flottante en [simple précision <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) la plus proche de l'argument.
+- {{JSxRef("Math.hypot()")}}
+  - : Retourne la racine carrée de la somme des carrés de ses arguments.
+- {{JSxRef("Math.imul()")}}
+  - : Retourne le résultat de la multiplication d'entiers sur 32 bits de ses arguments.
+- {{JSxRef("Math.log()")}}
+  - : Retourne le logarithme naturel (㏒<sub>e</sub>&nbsp;; aussi, ㏑) de l'argument.
+- {{JSxRef("Math.log10()")}}
+  - : Retourne le logarithme en base 10 de l'argument.
+- {{JSxRef("Math.log1p()")}}
+  - : Retourne le logarithme naturel (㏒<sub>e</sub>&nbsp;; aussi ㏑) de `1 + x` pour le nombre `x`.
+- {{JSxRef("Math.log2()")}}
+  - : Retourne le logarithme en base 2 de l'argument.
+- {{JSxRef("Math.max()")}}
+  - : Retourne la plus grande valeur parmi zéro ou plusieurs nombres.
+- {{JSxRef("Math.min()")}}
+  - : Retourne la plus petite valeur parmi zéro ou plusieurs nombres.
+- {{JSxRef("Math.pow()")}}
+  - : Retourne la base `x` élevée à la puissance `y` (c'est-à-dire `x`<sup><code>y</code></sup>).
+- {{JSxRef("Math.random()")}}
+  - : Retourne un nombre pseudo-aléatoire compris entre `0` et `1`.
+- {{JSxRef("Math.round()")}}
+  - : Retourne la valeur de l'argument arrondie à l'entier le plus proche.
+- {{JSxRef("Math.sign()")}}
+  - : Retourne le signe de l'argument, indiquant s'il est positif, négatif ou nul.
+- {{JSxRef("Math.sin()")}}
+  - : Retourne le sinus de l'argument.
+- {{JSxRef("Math.sinh()")}}
+  - : Retourne le sinus hyperbolique de l'argument.
+- {{JSxRef("Math.sqrt()")}}
+  - : Retourne la racine carrée positive de l'argument.
+- {{JSxRef("Math.sumPrecise()")}}
+  - : Retourne la somme d'un itérable de nombres passé en argument, en évitant la perte de précision en virgule flottante lors des résultats intermédiaires.
+- {{JSxRef("Math.tan()")}}
+  - : Retourne la tangente de l'argument.
+- {{JSxRef("Math.tanh()")}}
+  - : Retourne la tangente hyperbolique de l'argument.
+- {{JSxRef("Math.trunc()")}}
+  - : Retourne la partie entière de l'argument, en supprimant toute partie fractionnaire.
 
-    <sub>e</sub>
+## Exemples
 
-    ) d'un nombre.
+### Convertir entre degrés et radians
 
-- {{jsxref("Objets_globaux/Math/log1p", "Math.log1p(x)")}}
-  - : Retourne le logarithme naturel de 1 + un nombre.
-- {{jsxref("Objets_globaux/Math/log10", "Math.log10(x)")}}
-  - : Retourne le logarithme en base 10 d'un nombre.
-- {{jsxref("Objets_globaux/Math/log2", "Math.log2(x)")}}
-  - : Retourne le logarithme en base 2 d'un nombre.
-- {{jsxref("Objets_globaux/Math/max", "Math.max([x[,y[,…]]])")}}
-  - : Retourne la plus grande valeur d'une liste de nombres.
-- {{jsxref("Objets_globaux/Math/min", "Math.min([x[,y[,…]]])")}}
-  - : Retourne la plus petite valeur d'une liste de nombres.
-- {{jsxref("Objets_globaux/Math/pow", "Math.pow(x,y)")}}
-  - : Retourne le calcul de x à la puissance y (x correspond à la base et y à l'exposant).
-- {{jsxref("Objets_globaux/Math/random", "Math.random()")}}
-  - : Retourne un nombre pseudo-aléatoire compris entre 0 (inclus) et 1 (exclu).
-- {{jsxref("Objets_globaux/Math/round", "Math.round(x)")}}
-  - : Retourne l'arrondi d'un nombre.
-- {{jsxref("Objets_globaux/Math/sign", "Math.sign(x)")}}
-  - : Retourne le signe d'un nombre, indiquant s'il est positif, négatif ou égal à zéro.
-- {{jsxref("Objets_globaux/Math/sin", "Math.sin(x)")}}
-  - : Retourne le sinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/sinh", "Math.sinh(x)")}}
-  - : Retourne le sinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/sqrt", "Math.sqrt(x)")}}
-  - : Retourne la racine carrée d'un nombre.
-- {{jsxref("Objets_globaux/Math/tan", "Math.tan(x)")}}
-  - : Retourne la tangente d'un nombre.
-- {{jsxref("Objets_globaux/Math/tanh", "Math.tanh(x)")}}
-  - : Retourne la tangente hyperbolique d'un nombre
-- `Math.toSource()` {{Non-standard_inline}}
-  - : Renvoie la chaîne de caractères `"Math"`.
-- {{jsxref("Objets_globaux/Math/trunc", "Math.trunc(x)")}}
-  - : Retourne la partie entière d'un nombre (la partie décimale est retirée).
+Les fonctions trigonométriques `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()` et `atan2()` attendent (et retournent) des angles en _radians_.
+
+Comme les humain·e·s ont tendance à penser en degrés, et que certaines fonctions (comme les transformations CSS) peuvent accepter des degrés, il est utile d'avoir des fonctions à portée de main pour convertir entre les deux&nbsp;:
+
+```js
+function degToRad(degrees) {
+  return degrees * (Math.PI / 180);
+}
+
+function radToDeg(rad) {
+  return rad / (Math.PI / 180);
+}
+```
+
+### Calculer la hauteur d'un triangle équilatéral
+
+Si nous voulons calculer la hauteur d'un triangle équilatéral et que nous savons que la longueur de ses côtés est de 100, nous pouvons utiliser la formule _longueur de l'adjacent multipliée par la tangente de l'angle est égale à l'opposé_.
+
+![Un triangle équilatéral où une perpendiculaire à un côté est tracée depuis le sommet opposé, formant un triangle rectangle avec trois côtés marqués « adjacent », « opposé » et « hypoténuse ». L'angle entre les côtés « adjacent » et « hypoténuse » est de 60 degrés.](trigonometry.png)
+
+En JavaScript, on peut faire cela avec&nbsp;:
+
+```js
+50 * Math.tan(degToRad(60));
+```
+
+Nous utilisons notre fonction `degToRad()` pour convertir 60 degrés en radians, car {{JSxRef("Math.tan()")}} attend une valeur d'entrée en radians.
+
+### Retourner un entier aléatoire entre deux bornes
+
+Cela peut être réalisé avec une combinaison de {{JSxRef("Math.random()")}} et {{JSxRef("Math.floor()")}}&nbsp;:
+
+```js
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+random(1, 10);
+```
 
 ## Spécifications
 
@@ -134,4 +171,4 @@ Les constantes sont définies avec la précision des nombres réels en JavaScrip
 
 ## Voir aussi
 
-- {{jsxref("Number")}}
+- {{JSxRef("Number")}}

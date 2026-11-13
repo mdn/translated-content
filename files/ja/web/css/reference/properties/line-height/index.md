@@ -1,12 +1,11 @@
 ---
 title: line-height
 slug: Web/CSS/Reference/Properties/line-height
-original_slug: Web/CSS/line-height
 l10n:
-  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Glossary/Replaced_elements)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
+**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/Reference/Properties/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、[置換](/ja/docs/Glossary/Replaced_elements)ではないインライン要素では、行ボックスの高さの計算に使われる高さを指定します。
 
 {{InteractiveExample("CSS デモ: line-height")}}
 
@@ -41,7 +40,7 @@ line-height: 32px;
 
 ```css interactive-example
 #example-element {
-  font-family: Georgia, sans-serif;
+  font-family: "Georgia", serif;
   max-width: 200px;
 }
 ```
@@ -92,7 +91,7 @@ line-height: unset;
 
 主要な段落コンテンツでは、 `line-height` の値が `1.5` 以上になるようにしてください。これは弱視の人や、認知障碍を負った人に有用です。ページがテキストの寸法が大きくなるように拡大した場合、単位なしの値を使用すれば行の高さも同じ割合で拡大します。
 
-[W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+[W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## 公式定義
 
@@ -130,8 +129,8 @@ div {
 /* font 一括指定 */
 div {
   font:
-    10pt/1.2 Georgia,
-    "Bitstream Charter",
+    10pt/1.2 "Bitstream Charter",
+    "Georgia",
     serif;
 }
 ```

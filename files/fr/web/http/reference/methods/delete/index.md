@@ -3,18 +3,22 @@ title: Méthode de requête DELETE
 short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 La méthode HTTP **`DELETE`** demande au serveur de supprimer une ressource donnée.
 
-La méthode `DELETE` n'a pas de sémantique définie pour le corps du message, qui devrait donc être vide.
+Les requêtes utilisant `DELETE` ne doivent être utilisées que pour supprimer des données et ne doivent pas contenir de corps.
+
+> [!NOTE]
+> La sémantique de l'envoi d'un corps de message dans les requêtes `DELETE` n'est pas définie.
+> Certains serveurs peuvent rejeter la requête avec une réponse [d'erreur 4XX côté client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client).
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">La requête a un corps</th>
-      <td>Elle peut</td>
+      <td>Non</td>
     </tr>
     <tr>
       <th scope="row">La réponse de succès a un corps</th>
@@ -112,7 +116,7 @@ Content-Length: 1234
 
 ## Voir aussi
 
-- Codes de statut HTTP&nbsp;: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- Les codes de statut&nbsp;: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
 - [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)

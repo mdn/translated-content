@@ -1,14 +1,14 @@
 ---
-title: margin-bottom
+title: Propriété CSS `margin-bottom`
+short-title: margin-bottom
 slug: Web/CSS/Reference/Properties/margin-bottom
-original_slug: Web/CSS/margin-bottom
+l10n:
+  sourceCommit: 880c2c4b113c6fe127ca3ae3603a56ef7a2eb9a6
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-bottom`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) en bas d'un élément. Une valeur positive l'éloigne de ses voisins, tandis qu'une valeur négative la rapproche.
 
-La propriété **`margin-bottom`** définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..
-
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: margin-bottom")}}
 
 ```css interactive-example-choice
 margin-bottom: 1em;
@@ -60,17 +60,19 @@ margin-bottom: 0;
 }
 ```
 
-Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
+![Effet de la propriété CSS margin-bottom sur la boîte de l'élément](margin-bottom.svg)
+
+Cette propriété n'a aucun effet sur les éléments en incise (<i lang="en">inline</i> en anglais) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>     */
+/* Valeurs de type <length> */
 margin-bottom: 10px; /* Une longueur absolue */
 margin-bottom: 1em; /* Une longueur relative à la taille du texte */
-margin-bottom: 5%; /* Une longueur relative à la
-                 largeur du bloc englobant */
+margin-bottom: 5%; /* Une longueur relative à la largeur du bloc englobant */
+margin-bottom: anchor-size(width);
+margin-bottom: calc(anchor-size(--my-anchor self-block, 20px) / 3);
 
 /* Valeurs avec un mot-clé */
 margin-bottom: auto;
@@ -78,19 +80,23 @@ margin-bottom: auto;
 /* Valeurs globales*/
 margin-bottom: inherit;
 margin-bottom: initial;
+margin-bottom: revert;
+margin-bottom: revert-layer;
 margin-bottom: unset;
 ```
 
-La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). Cette valeur peut être nulle, positive ou négative.
+La valeur de la propriété `margin-bottom` peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (`<percentage>`). Cette valeur peut être nulle, positive ou négative.
 
 ### Valeurs
 
-- `<length>`
-  - : Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.
-- `<percentage>`
-  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la **largeur** du bloc englobant.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille de la marge en valeur fixe.
+    - Pour les éléments positionnés par une ancre, la fonction {{CSSxRef("anchor-size()")}} donne une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou la hauteur de l'élément ancre associé (voir [Définir la marge d'un élément selon la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_marge_dun_élément_selon_la_taille_de_lancre)).
+
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille de la marge en pourcentage, relative à la taille en incise (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
-  - : Voir {{cssxref("margin")}}.
+  - : Le navigateur choisit une valeur adaptée. Voir {{CSSxRef("margin")}}.
 
 ## Définition formelle
 
@@ -102,9 +108,21 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ## Exemples
 
-### CSS
+### Définir des marges basses positives et négatives
 
-Grâce à la feuille de style on définit la marge basse et la hauteur des différentes `div` :
+#### HTML
+
+```html
+<div class="container">
+  <div class="box0">Boîte 0</div>
+  <div class="box1">Boîte 1</div>
+  <div class="box2">La marge négative de 1 m'attire vers le haut</div>
+</div>
+```
+
+#### CSS
+
+CSS pour les div afin de définir `margin-bottom` et la hauteur&nbsp;:
 
 ```css
 .box0 {
@@ -122,7 +140,7 @@ Grâce à la feuille de style on définit la marge basse et la hauteur des diff�
 }
 ```
 
-On ajoute quelques règles afin de mieux visualiser les effets obtenus :
+On ajoute quelques règles afin de mieux visualiser les effets obtenus&nbsp;:
 
 ```css
 .container {
@@ -136,19 +154,9 @@ div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div class="container">
-  <div class="box0">Boîte 0</div>
-  <div class="box1">Boîte 1</div>
-  <div class="box2">La marge négative de 1 m'attire vers le haut</div>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples',350,200)}}
+{{EmbedLiveSample("Définir des marges basses positives et négatives", 350, 200)}}
 
 ## Spécifications
 
@@ -157,3 +165,11 @@ div {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Les propriétés {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}} et {{CSSxRef("margin-left")}}
+- La propriété raccourcie {{CSSxRef("margin")}}
+- Les propriétés {{CSSxRef("margin-block-start")}}, {{CSSxRef("margin-block-end")}}, {{CSSxRef("margin-inline-start")}} et {{CSSxRef("margin-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("margin-block")}} et {{CSSxRef("margin-inline")}}
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

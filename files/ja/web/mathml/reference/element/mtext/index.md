@@ -1,12 +1,9 @@
 ---
 title: <mtext>
 slug: Web/MathML/Reference/Element/mtext
-original_slug: Web/MathML/Element/mtext
 l10n:
-  sourceCommit: 0fb5d5d5579d459f58ab52d0e6e94fc4634a9fe0
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
-
-{{MathMLRef}}
 
 **`<mtext>`** は [MathML](/ja/docs/Web/MathML) の要素で、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。
 
@@ -29,6 +26,19 @@ l10n:
 ```
 
 {{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
+
+## 技術的概要
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles">暗黙の ARIA ロール</a>
+    </th>
+    <td>
+      なし
+    </td>
+  </tr>
+</table>
 
 ## 仕様書
 

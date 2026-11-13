@@ -1,8 +1,9 @@
 ---
-title: "<details> : l'élément de divulgation des détails"
+title: "Élément HTML `<details>` : l'élément de divulgation des détails"
+short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 l10n:
-  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
+  sourceCommit: 44a1a0348720bbd1b1085c7d92b93b4fd311a3dd
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<details>`** crée un composant de divulgation dans lequel l'information n'est visible que lorsque le composant est ouvert. Un résumé ou une étiquette doit être fourni·e à l'aide de l'élément HTML {{HTMLElement("summary")}}.
@@ -41,16 +42,6 @@ details[open] summary {
 }
 ```
 
-Un composant `<details>` peut être dans l'un des deux états. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur de `<summary>` (ou une chaîne par défaut définie par {{Glossary("user agent", "agent utilisateur")}} si aucun `<summary>` n'est présent).
-
-Lorsque l'utilisateur·ice clique sur le composant ou le sélectionne puis appuie sur la barre d'espace, il s'ouvre par «&nbsp;torsion&nbsp;», révélant son contenu. L'utilisation courante d'un triangle qui pivote ou se tord pour représenter l'ouverture ou la fermeture du composant explique pourquoi on les appelle parfois «&nbsp;twisty&nbsp;» en anglais.
-
-Vous pouvez utiliser du CSS pour mettre en forme le composant de divulgation, et vous pouvez l'ouvrir ou le fermer de façon programmatique en définissant ou en supprimant son attribut [`open`](#open). Malheureusement, il n'existe actuellement aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
-
-Par défaut, lorsqu'il est fermé, le composant n'est assez haut que pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.
-
-Les implémentations entièrement conformes aux normes appliquent automatiquement le CSS `{{CSSxRef("display")}}: list-item` à l'élément {{HTMLElement("summary")}}. Vous pouvez utiliser cela ou le pseudo-élément {{CSSxRef("::marker")}} pour [personnaliser le composant de divulgation](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
-
 ## Attributs
 
 Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
@@ -64,12 +55,28 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 - `name`
   - : Cet attribut permet de relier plusieurs éléments `<details>` pour qu'un seul soit ouvert à la fois. Cela permet aux développeur·euse·s de créer facilement des composants d'interface comme des accordéons sans script.
 
-    L'attribut `name` définit un nom de groupe — donnez la même valeur `name` à plusieurs éléments `<details>` pour les regrouper. Un seul des éléments `<details>` du groupe peut être ouvert à la fois — ouvrir l'un fermera l'autre. Si plusieurs éléments `<details>` du groupe ont l'attribut `open`, seul le premier dans l'ordre du code source sera affiché ouvert.
+    L'attribut `name` définit un nom de groupe — donnez la même valeur `name` à plusieurs éléments `<details>` pour les regrouper. Un seul des éléments `<details>` du groupe peut être ouvert à la fois — ouvrir l'un ferme l'autre. Si plusieurs éléments `<details>` du groupe ont l'attribut `open`, seul le premier dans l'ordre du code source est affiché ouvert.
 
     > [!NOTE]
     > Les éléments `<details>` n'ont pas besoin d'être adjacents dans le code source pour faire partie du même groupe.
 
-## Évènements
+## Notes d'utilisation
+
+Un composant `<details>` peut être dans l'un des deux états. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur de `<summary>` (ou une chaîne de caractères par défaut définie par {{Glossary("user agent", "agent utilisateur")}} si aucun `<summary>` n'est présent).
+
+Lorsque l'utilisateur·ice clique sur le composant ou le sélectionne (<i lang="en">focus</i> en anglais) puis appuie sur la barre d'espace, il s'ouvre par «&nbsp;torsion&nbsp;», révélant son contenu. L'utilisation courante d'un triangle qui pivote ou se tord pour représenter l'ouverture ou la fermeture du composant explique pourquoi on les appelle parfois «&nbsp;twisty&nbsp;» en anglais.
+
+Vous pouvez également ouvrir et fermer le composant de façon programmatique en définissant ou en supprimant son attribut [`open`](#open).
+
+### Mettre en forme l'élément `<details>`
+
+L'élément `<details>` peut être considéré comme un conteneur de deux éléments&nbsp;: l'élément `<summary>`, qui est visible à la fois lorsqu'il est développé et réduit&nbsp;; et le pseudo-élément CSS {{CSSxRef("::details-content")}}, dont le contenu est masqué lorsqu'il est réduit.
+
+L'élément `<summary>` se voit automatiquement attribuer une valeur {{CSSxRef("display")}} de `list-item`. Vous pouvez mettre en forme le marqueur comme un marqueur de liste, en utilisant {{CSSxRef("list-style-type")}}, {{CSSxRef("list-style-position")}}, {{CSSxRef("::marker")}}, etc. Voir aussi [Changer l'icône du résumé](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
+
+Le pseudo-élément {{CSSxRef("::details-content")}} permet d'animer la transition entre l'état ouvert et fermé. Voir la [page de référence `::details-content`](/fr/docs/Web/CSS/Reference/Selectors/::details-content#exemple_de_transition) pour un exemple.
+
+### Évènements
 
 En plus des évènements classiques pris en charge par les éléments HTML, l'élément `<details>` prend en charge l'évènement {{DOMxRef("HTMLElement/toggle_event", "toggle")}}, qui est envoyé à l'élément `<details>` chaque fois que son état change entre ouvert et fermé. Il est envoyé _après_ que l'état a changé, mais si l'état change plusieurs fois avant que le navigateur puisse envoyer l'évènement, les évènements sont regroupés et un seul est envoyé.
 
@@ -163,7 +170,7 @@ Voici plusieurs boîtes `<details>`, toutes avec le même nom pour qu'une seule 
 
 {{EmbedLiveSample("Plusieurs boîtes de divulgation nommées", 650, 150)}}
 
-Essayez d'ouvrir tous les widgets de divulgation. Lorsque vous en ouvrez un, tous les autres se ferment automatiquement.
+Essayez d'ouvrir tous les composants de divulgation. Lorsque vous en ouvrez un, tous les autres se ferment automatiquement.
 
 ### Personnaliser l'apparence
 
@@ -224,7 +231,7 @@ Ce CSS crée une apparence similaire à une interface à onglets, où cliquer su
 
 {{EmbedLiveSample("Personnaliser l'apparence", 650, 150)}}
 
-Voir la page {{HTMLElement("summary")}} pour [un exemple de personnalisation du widget de divulgation](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
+Voir la page {{HTMLElement("summary")}} pour [un exemple de personnalisation du composant de divulgation](/fr/docs/Web/HTML/Reference/Elements/summary#changer_licône_du_résumé).
 
 ## Résumé technique
 

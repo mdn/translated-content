@@ -1,11 +1,12 @@
 ---
-title: "<wbr> : l'élément d'opportunité de saut de ligne"
+title: "Élément HTML `<wbr>` : l'élément d'opportunité de saut de ligne"
+short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: b7de5fa065848c0d703b6763df7a15d1eb908c91
 ---
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur pourra alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.
+L'élément [HTML](/fr/docs/Web/HTML) **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur peut alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;wbr&gt;", "tabbed-shorter")}}
 
@@ -33,7 +34,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes
 
-Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code `U+200B ZERO-WIDTH SPACE`. En particulier, il agit comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre {{Glossary("bidi")}}&nbsp;: `<div dir=rtl>123,<wbr>456</div>` affiche, si la ligne n'est pas coupée, `123,456` et non `456,123`.
+`<wbr>` se comporte comme le point de code `U+200B ZERO-WIDTH SPACE`. En particulier, il agit comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre {{Glossary("bidi")}}&nbsp;: `<div dir=rtl>123,<wbr>456</div>` affiche, si la ligne n'est pas coupée, `123,456` et non `456,123`.
 
 Pour la même raison, l'élément `<wbr>` n'introduit pas de trait d'union au point de coupure de ligne. Pour faire apparaître un trait d'union uniquement en fin de ligne, utilisez plutôt l'entité de caractère tiret conditionnel (`&shy;`).
 

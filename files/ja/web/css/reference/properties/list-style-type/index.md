@@ -165,7 +165,7 @@ list-style-type: unset;
 - `upper-alpha`, `upper-latin`
   - : 大文字の ASCII 文字です。
 - `arabic-indic`, `-moz-arabic-indic`
-  - : アラビア－インド数字です。
+  - : アラビア・インド数字です。
 - `armenian`
   - : 伝統的なアルメニア語の数値表記です。
 - `bengali`, `-moz-bengali`

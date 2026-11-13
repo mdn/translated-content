@@ -14,7 +14,11 @@ original_slug: Web/CSS/:default
 
 ## 구문
 
-{{csssyntax}}
+```css
+:default {
+  /* ... */
+}
+```
 
 ## 예제
 

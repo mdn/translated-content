@@ -1,13 +1,12 @@
 ---
-title: ユーザー入力方法とコントロール
+title: ユーザーの入力方法とコントロール
+short-title: UI の方法とコントロール
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-{{LearnSidebar}}
-
-ウェブフォームでは、ユーザーの入力が要求されます。ウェブフォームを設計する際、あるいは実にあらゆるウェブコンテンツを設計する際には、ユーザーが端末やブラウザーをどのように操作するかを考慮することが重要です。ウェブユーザーの入力は、単純なマウスやキーボード操作にとどまりません。例えばパネルを考えてみてください。
+ウェブフォームでは、ユーザーの入力が必要です。ウェブフォームを設計する際、あるいは実にあらゆるウェブコンテンツを設計する際には、ユーザーが端末やブラウザーをどのように操作するかを考慮することが重要です。ウェブユーザーの入力は、単純なマウスやキーボード操作にとどまりません。例えばパネルを考えてみてください。
 
 この記事では、ユーザーがフォームや他のウェブコンテンツを操作する方法について、さまざまな方法を見ていきます。また、ユーザー入力の管理方法、現実世界の例、さらに詳しい情報へのリンクを指定します。
 
@@ -36,18 +35,18 @@ l10n:
 特定のキーが押されたときに、あるフォームコントロールを検証するなど、キーボード操作を追加したい場合は、イベントリスナーを使用してキーボードイベントを捕捉し、対応する動作をすることができます。例えば、任意のキーが押されたときにコントロールを追加したい場合は、 window オブジェクトにイベントリスナーを追加する必要があります。
 
 ```js
-window.addEventListener("keydown", handleKeyDown, true);
-window.addEventListener("keyup", handleKeyUp, true);
+window.addEventListener("keydown", handleKeyDown);
+window.addEventListener("keyup", handleKeyUp);
 ```
 
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
 > [!NOTE]
-> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> キーボードイベントの詳細を探すには、[DOM イベント](/ja/docs/Web/API/Document_Object_Model/Events)ガイドと {{domxref("KeyboardEvent")}} リファレンスを参照してください。
 
 ### マウス
 
-マウスや他のポインターイベントも捕捉できます。ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントには、[`click`](/ja/docs/Web/API/Element/click_event)、[`dblclick`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup`](/ja/docs/Web/API/Element/mouseup_event)、[`mousedown`](/ja/docs/Web/API/Element/mousedown_event) などのイベントがあります。マウスイベントインターフェイスが使用しているすべてのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)にあります。
+マウスや他のポインターイベントも捕捉できます。ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントには、[`click`](/ja/docs/Web/API/Element/click_event)、[`dblclick`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup`](/ja/docs/Web/API/Element/mouseup_event)、[`mousedown`](/ja/docs/Web/API/Element/mousedown_event) などのイベントがあります。マウスイベントインターフェイスが使用しているすべてのイベントの一覧は、[DOM イベント](/ja/docs/Web/API/Document_Object_Model/Events#イベント索引)ガイドにあります。
 
 入力機器がマウスの場合、ユーザー入力をポインターロック API や、ドラッグ＆ドロップ API を実装することでも制御できます（下記を参照してください）。 [CSS を使用して、ポインティングデバイスの対応を調べる](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries#ポインティングデバイスの使用)こともできます。
 
@@ -58,10 +57,10 @@ window.addEventListener("keyup", handleKeyUp, true);
 タッチイベントを使用したい場合は、イベントリスナーを追加し、イベントが発生したときに呼び出されるハンドラー関数を指定する必要があります。
 
 ```js
-element.addEventListener("touchstart", handleStart, false);
-element.addEventListener("touchcancel", handleCancel, false);
-element.addEventListener("touchend", handleEnd, false);
-element.addEventListener("touchmove", handleMove, false);
+element.addEventListener("touchstart", handleStart);
+element.addEventListener("touchcancel", handleCancel);
+element.addEventListener("touchend", handleEnd);
+element.addEventListener("touchmove", handleMove);
 ```
 
 ここでの `element` は、あなたがタッチイベントを登録したい DOM 要素です。
@@ -83,7 +82,7 @@ element.addEventListener("touchmove", handleMove, false);
 
 画面方向がフォームにとって影響がある場合、[画面方向 API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して画面方向の状態を読み取ったり、この状態が変更された際に通知を受け取ったり、画面方向を特定の状態（通常は縦長または横長）に固定したりすることができます。
 
-- 方向のデータは、 {{domxref("ScreenOrientation.type")}} を通じて、または CSS で [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディア特性を通じて取得できます。
+- 方向のデータは、 {{domxref("screenOrientation.type")}} を通じて、または CSS で [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディア特性を通じて取得できます。
 - 画面の方向が変更されると、 {{domxref("ScreenOrientation.change_event", "change")}} イベントが画面オブジェクトに発行されます。
 - 画面の方向を固定することは、 {{domxref("ScreenOrientation.lock()")}} メソッドを呼び出すことで可能です。
 - {{domxref("ScreenOrientation.unlock()")}} メソッドは、過去に設定されていた画面ロックがすべて除去されます。
@@ -114,20 +113,22 @@ if (elem.requestFullscreen) {
 こちらは、コンテンツの一部分をドラッグできる例です。
 
 ```html
-<div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'このテキストはドラッグできます。')">
-  このテキストはドラッグ<strong>できます</strong>。
-</div>
+<div draggable="true">このテキストはドラッグ<strong>できます</strong>。</div>
 ```
 
-私たちが実装する点は以下です:
+```js
+document.querySelector("div").addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "このテキストはドラッグできます。");
+});
+```
+
+私たちが実装する点は以下です。
 
 - ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > [!NOTE]
-> [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
+> [MDN のドラッグ＆ドロップのドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
 ### contentEditable
 

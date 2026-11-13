@@ -36,7 +36,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 
 - `Object.length`
   - : Tem um valor de 1.
-- {{jsxref("Object.prototype")}}
+- {{jsxref("Object")}}
   - : Permite a adição de propriedades a todos os objetos do tipo Object.
 
 ## Métodos do construtor `Object`
@@ -86,7 +86,7 @@ Veja também [object initializer / literal syntax](/pt-BR/docs/Web/JavaScript/Re
 
 ## Instâncias de `Object` e `Object` de protótipo de objeto
 
-Todos os objetos em JavaScript são descendentes do `Object`; todos os objetos herdam métodos e propriedades de {{jsxref("Object.prototype")}}, embora eles possam ser substituídos. Por exemplo, protótipos de outros construtores substituem a propriedade `constructor` e fornecer seus próprios métodos `toString()`. As alterações no objeto de protótipo `Object` são propagadas para todos os objetos, a menos que as propriedades e os métodos sujeitos a essas alterações sejam substituídos na cadeia de protótipos.
+Todos os objetos em JavaScript são descendentes do `Object`; todos os objetos herdam métodos e propriedades de {{jsxref("Object")}}, embora eles possam ser substituídos. Por exemplo, protótipos de outros construtores substituem a propriedade `constructor` e fornecer seus próprios métodos `toString()`. As alterações no objeto de protótipo `Object` são propagadas para todos os objetos, a menos que as propriedades e os métodos sujeitos a essas alterações sejam substituídos na cadeia de protótipos.
 
 ### Propriedades (enUS)
 

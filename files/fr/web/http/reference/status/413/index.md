@@ -21,11 +21,11 @@ Ce message reste largement utilisé.
 
 ### Limite de téléversement de fichier dépassée
 
-L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) inclut une image lors de la soumission d'un formulaire avec `method="post"`&nbsp;:
+L'exemple suivant montre ce qu'un client peut envoyer lorsqu'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) inclut une image lors de l'envoi d'un formulaire avec `method="post"`&nbsp;:
 
 ```http
 POST /upload HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Type: multipart/form-data; boundary=----Boundary1234
 Content-Length: 4012345
 

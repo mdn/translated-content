@@ -3,8 +3,6 @@ title: Constructeur SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 ---
 
-{{JSRef}}
-
 > [!NOTE]
 > `SharedArrayBuffer` a été désactivé par défaut pour l'ensemble des navigateurs principaux le 5 janvier 2018 en réponse à la faille [Spectre](https://meltdownattack.com/). Chrome [a réactivé cette fonctionnalité à partir de la version 67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270) sur les plateformes où la fonctionnalité d'isolation des sites est activée et protège des vulnérabilités analogues à Spectre.
 

@@ -3,7 +3,7 @@ title: Array.prototype.sort()
 short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`sort()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
@@ -338,7 +338,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 
 ## 関連情報
 
-- [`Array.prototype.sort` の安定性などを含んだ現代の実装 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.sort` の安定性などを含んだ現代の実装 (`core-js`)](https://core-js.io/docs/features/ecmascript/array)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}

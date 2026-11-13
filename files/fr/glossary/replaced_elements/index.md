@@ -1,5 +1,5 @@
 ---
-title: Éléments remplacés (Replaced elements)
+title: Éléments remplacés
 slug: Glossary/Replaced_elements
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
@@ -22,13 +22,13 @@ Les éléments suivants sont considérés comme remplacés uniquement dans des c
 - {{HTMLElement("object")}}
 - {{HTMLElement("input")}} (uniquement pour les types d'entrée `image`)
 
-Les éléments remplacés possèdent souvent des {{glossary("intrinsic size", "dimensions intrinsèques")}} et un {{glossary("aspect ratio", "rapport d'aspect intrinsèque")}}. Par exemple, le contenu d'un élément `<img>` est généralement remplacé par l'image définie par son attribut `src`. Cette image possède une largeur intrinsèque et une hauteur intrinsèque spécifiées en unités absolues, ce qui détermine le rapport d'aspect.
+Les éléments remplacés possèdent souvent des {{Glossary("intrinsic size", "dimensions intrinsèques")}} et un {{Glossary("aspect ratio", "rapport d'aspect intrinsèque")}}. Par exemple, le contenu d'un élément `<img>` est généralement remplacé par l'image définie par son attribut `src`. Cette image possède une largeur intrinsèque et une hauteur intrinsèque définies en unités absolues, ce qui détermine le rapport d'aspect.
 
-Les contrôles de formulaire sont généralement des _widgets_ non remplacés, sauf pour `<input type="image">`, qui est remplacé par une image. Les objets insérés à l'aide de la propriété CSS {{cssxref("content")}} sont des _éléments remplacés anonymes_. Ils sont «&nbsp;anonymes&nbsp;» car ils n'existent pas dans le balisage HTML.
+Les contrôles de formulaire sont généralement des _composants_ qui ne sont pas remplacés, sauf pour `<input type="image">`, qui est remplacé par une image. Les objets insérés à l'aide de la propriété CSS {{CSSxRef("content")}} sont des _éléments remplacés anonymes_. Ils sont «&nbsp;anonymes&nbsp;», car ils n'existent pas dans le balisage HTML.
 
 ## Voir aussi
 
-- {{glossary("void element", "Éléments vides")}}
-- {{glossary("Inline-level content", "Contenu de niveau en ligne")}}
+- {{Glossary("void element", "Éléments vides")}}
+- {{Glossary("Inline-level content", "Contenu de niveau en incise")}}
 - [Éléments remplacés dans la spécification CSS display <sup>(angl.)</sup>](https://drafts.csswg.org/css-display/#replaced-element)
 - [Éléments remplacés dans la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)

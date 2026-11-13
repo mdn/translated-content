@@ -1,8 +1,9 @@
 ---
-title: border-color
+title: Propriété CSS `border-color`
+short-title: border-color
 slug: Web/CSS/Reference/Properties/border-color
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 5381238460a48ff323a93e652d15cb62598f0262
 ---
 
 La propriété [raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-color`** définit la couleur de la bordure d'un élément.
@@ -82,10 +83,10 @@ border-color: unset;
 
 La propriété `border-color` peut être définie avec une, deux, trois ou quatre valeurs.
 
-- Lorsqu'**une** valeur est définie, elle applique la même couleur aux **quatre côtés**.
-- Lorsqu'**il y a deux** valeurs, la première couleur s'applique au **haut et au bas**, la seconde à la **gauche et à la droite**.
-- Lorsqu'**il y a trois** valeurs, la première couleur s'applique au **haut**, la seconde à la **gauche et à la droite**, la troisième au **bas**.
-- Lorsqu'**il y a quatre** valeurs, les couleurs s'appliquent au **haut**, à la **droite**, au **bas** et à la **gauche** dans cet ordre (dans le sens des aiguilles d'une montre).
+- **Lorsqu'une** valeur est définie, elle applique la même couleur aux **quatre côtés**.
+- **Lorsqu'il y a deux** valeurs, la première couleur s'applique au **haut et au bas**, la seconde à la **gauche et à la droite**.
+- **Lorsqu'il y a trois** valeurs, la première couleur s'applique au **haut**, la seconde à la **gauche et à la droite**, la troisième au **bas**.
+- **Lorsqu'il y a quatre** valeurs, les couleurs s'appliquent au **haut**, à la **droite**, au **bas** et à la **gauche** dans cet ordre (dans le sens des aiguilles d'une montre).
 
 ### Valeurs
 

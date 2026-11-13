@@ -1,8 +1,9 @@
 ---
-title: hwb()
+title: CSS `hwb()` 関数
+short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
@@ -64,7 +65,7 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 ### 値
 
-下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に対してすることができる値の説明です。
+下記は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方に使える値の説明です。
 
 #### 絶対的な値の構文
 

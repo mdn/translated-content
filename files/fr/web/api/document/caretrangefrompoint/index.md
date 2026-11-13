@@ -1,90 +1,51 @@
 ---
-title: Document.caretRangeFromPoint()
+title: "Document : méthode caretRangeFromPoint()"
+short-title: caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
+l10n:
+  sourceCommit: 1c7b8308c11efc3468214b997eb1ac4150f76c18
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
-La méthode **`caretRangeFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Range`](/fr/docs/Web/API/Range) correspondant au fragment de document situé aux coordonnées indiquées.
+La méthode **`caretRangeFromPoint()`** de l'interface {{DOMxRef("Document")}} retourne un objet {{DOMxRef("Range")}} pour le fragment de document situé aux coordonnées définies.
+
+Cette méthode précède le concept de shadow DOM et retourne des résultats imprévisibles et spécifiques à l'implémentation dans un document contenant des objets {{DOMxRef("ShadowRoot")}}.
+
+Utilisez {{DOMxRef("Document/caretPositionFromPoint", "caretPositionFromPoint()")}} à la place sur les navigateurs compatibles, car il s'agit d'une méthode standard qui peut retourner la position du caret à l'intérieur des instances de {{DOMxRef("ShadowRoot")}}, à condition que les shadow roots pertinents soient passés dans son paramètre `options`.
 
 ## Syntaxe
 
-```js
-caretRangeFromPoint(x, y);
+```js-nolint
+caretRangeFromPoint(x, y)
 ```
 
 ### Paramètres
 
 - `x`
-  - : L'abscisse de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
+  - : Une position horizontale dans la zone d'affichage (<i lang="en">viewport</i> en anglais) actuelle.
 - `y`
-  - : L'ordonnée de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
+  - : Une position verticale dans la zone d'affichage (<i lang="en">viewport</i> en anglais) actuelle.
 
 ### Valeur de retour
 
 La valeur de retour peut être&nbsp;:
 
-- Un objet [`Range`](/fr/docs/Web/API/Range)
-- Ou `null`, si `x` ou `y` sont négatifs, situés en dehors de la zone d'affichage ou s'il n'y a pas de nœud texte correspondant.
+- Un objet {{DOMxRef("Range")}}.
+- Ou `null`, si _x_ ou _y_ sont négatifs, situés en dehors de la zone d'affichage ou s'il n'y a pas de nœud texte correspondant.
 
 ## Exemples
 
-Cliquez n'importe où dans le paragraphe **Démo** ci-après pour ajouter un saut de ligne à l'endroit du clic. Le code utilisé est décrit après.
+Consultez la page {{DOMxRef("Document/caretPositionFromPoint#exemples", "Document.caretPositionFromPoint()")}} pour voir un exemple interactif de cette méthode.
 
-### Démo
+## Spécifications
 
-{{EmbedLiveSample('')}}
-
-Le code qui suit commence par vérifier la prise en charge de `document.caretRangeFromPoint`. Si le navigateur ne prend pas en charge cette méthode, le code vérifie si [`document.caretPositionFromPoint`](/fr/docs/Web/API/Document/caretPositionFromPoint) est disponible et l'utilise le cas échéant.
-
-### JavaScript
-
-```js
-function insertBreakAtPoint(e) {
-  let range;
-  let textNode;
-  let offset;
-
-  if (document.caretRangeFromPoint) {
-    range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    textNode = range.startContainer;
-    offset = range.startOffset;
-  } else if (document.caretPositionFromPoint) {
-    range = document.caretPositionFromPoint(e.clientX, e.clientY);
-    textNode = range.offsetNode;
-    offset = range.offset;
-  } else {
-    document.body.textContent =
-      "[Ce navigateur ne supporte ni" +
-      " document.caretRangeFromPoint" +
-      " ni document.caretPositionFromPoint.]";
-    return;
-  }
-  // On opère uniquement sur le texte
-  if (textNode && textNode.nodeType == 3) {
-    let replacement = textNode.splitText(offset);
-    let br = document.createElement("br");
-    textNode.parentNode.insertBefore(br, replacement);
-  }
-}
-
-let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
-}
-```
-
-### HTML
-
-```html
-<p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
-```
+Ne fait pas partie d'une spécification.
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La méthode {{DOMxRef("Document.caretPositionFromPoint()")}}

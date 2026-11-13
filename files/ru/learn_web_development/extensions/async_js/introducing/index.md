@@ -3,7 +3,7 @@ title: Введение в асинхронный JavaScript
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.
 
@@ -227,13 +227,13 @@ console.log("all done");
 Чтобы увидеть это в действии попробуйте изменить третий вызов `console.log ()` следующим образом:
 
 ```js
-console.log("All done! " + image + "displayed.");
+console.log("All done! " + image + " displayed.");
 ```
 
-Теперь вместо третьего сообщения должна возникнуть следующая ошибка:
+Теперь вы увидете сообщение:
 
 ```
-TypeError: image is undefined; can't access its "src" property
+All done! undefined displayed.
 ```
 
 Это происходит потому, что в то же время браузер пытается запустить третий `console.log()`, блок `fetch()` ещё не закончил выполнение, поэтому переменная `image` ещё не имеет значения.
@@ -255,4 +255,4 @@ TypeError: image is undefined; can't access its "src" property
 
 Если мы выполняем операцию, которая требует времени, например, запрос к базе данных и использование полученных результатов для заполнения шаблонов, лучше вытолкнуть это из основного потока и выполнить задачу асинхронно. Со временем вы узнаете, когда имеет смысл выбирать асинхронную технику вместо синхронной.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

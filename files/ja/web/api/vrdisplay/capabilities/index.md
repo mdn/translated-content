@@ -3,7 +3,7 @@ title: VRDisplay.capabilities
 slug: Web/API/VRDisplay/capabilities
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}
 
 **`capabilities`** は {{domxref("VRDisplay")}} インターフェイスの読み取り専用プロパティで、 `VRDisplay` の様々な利用可能な機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
 

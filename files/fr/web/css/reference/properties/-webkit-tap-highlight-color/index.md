@@ -1,12 +1,14 @@
 ---
-title: -webkit-tap-highlight-color
+title: Propriété CSS `-webkit-tap-highlight-color`
+short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
-original_slug: Web/CSS/-webkit-tap-highlight-color
+l10n:
+  sourceCommit: 6354422058e438a2599e4eab71eaec8eb40850fa
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-tap-highlight-color`** est une propriété non-standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur.
+La propriété non standard [CSS](/fr/docs/Web/CSS) **`-webkit-tap-highlight-color`** permet de définir la couleur du surlignage qui apparaît sur un lien lorsqu'il est touché. Le surlignage indique à l'utilisateur·ice que son toucher a été correctement reconnu et montre quel élément il·elle est en train de toucher.
 
 ## Syntaxe
 
@@ -24,8 +26,10 @@ La propriété **`-webkit-tap-highlight-color`** est une propriété non-standar
 
 ### Valeurs
 
-- {{Cssxref("&lt;color&gt;")}}
-  - : La couleur utilisée pour surligner le lien lorsqu'il est touché.
+Cette propriété est définie avec la valeur suivante&nbsp;:
+
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Définit la couleur du surlignage.
 
 ## Définition formelle
 
@@ -37,7 +41,7 @@ La propriété **`-webkit-tap-highlight-color`** est une propriété non-standar
 
 ## Spécifications
 
-Cette propriété ne fait partie d'aucun standard.
+Cette propriété ne fait partie d'aucun standard. Apple fournit [une description dans le guide de contenu web de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
 
 ## Compatibilité des navigateurs
 
@@ -47,6 +51,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 - [Extensions WebKit CSS](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - Pseudo-classes CSS associées&nbsp;:
-  - [`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover)
-  - [`:active`](/fr/docs/Web/CSS/Reference/Selectors/:active)
-  - [`:visited`](/fr/docs/Web/CSS/Reference/Selectors/:visited)
+  - {{CSSxRef(":hover")}}
+  - {{CSSxRef(":active")}}
+  - {{CSSxRef(":visited")}}

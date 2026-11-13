@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
 original_slug: Learn/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Uma grande parte do conteúdo presente na internet pode se tornar acessível apenas com a utilização correta dos elementos HTML. Esse artigo mostra em detalhes como o HTML pode ser utilizado para garantir o máximo de acessibilidade.
 
@@ -15,7 +15,7 @@ Uma grande parte do conteúdo presente na internet pode se tornar acessível ape
       <td>
         <p>
           Conceitos básicos de computadores, entendimento básico de HTML (veja
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
             >Introdução ao HTML</a
           >), e entendimento do
           <a href="/pt-BR/docs/Learn/Accessibility/What_is_accessibility"
@@ -261,7 +261,7 @@ Você pode verificar essas reivindicações ao comparar a última experiência c
 
 Se você experimentar ler esse exemplo de estrutura mais moderna com um leitor de tela, você vai perceber que o layout feito por marcação não atrapalha na hora de retornar o conteúdo do site. Também é muito mais limpo e pequeno em termos de tamanho de código, o que significa um código mais fácil de se dar manutenção e menos uso de banda para o usuário fazer o download (particularmente prevalente para as pessoas com conexão lenta).
 
-Outra consideração que pode ser feita é criar layouts utilizando a semântica HTML5 nos elementos, como visto no exemplo (veja [content sectioning](/pt-BR/docs/Web/HTML/Element#content_sectioning)) — você pode criar um layout utilizando apenas elementos aninhados {{htmlelement("div")}}, mas é melhor e mais apropriado seccionar elementos de uma forma que eles envelopem a navegação principal ({{htmlelement("nav")}}), rodapé({{htmlelement("footer")}}), unidades de conteúdo repetidas({{htmlelement("article")}}), etc. Eles trazem semânticas extras para os leitores de tela(e outras ferramentas) para dar aos usuários mais dicas sobre o conteúdo no qual eles estão navegando (veja [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para uma ideia do que é suporte de leitor de tela).
+Outra consideração que pode ser feita é criar layouts utilizando a semântica HTML5 nos elementos, como visto no exemplo (veja [content sectioning](/pt-BR/docs/Web/HTML/Reference/Elements#content_sectioning)) — você pode criar um layout utilizando apenas elementos aninhados {{htmlelement("div")}}, mas é melhor e mais apropriado seccionar elementos de uma forma que eles envelopem a navegação principal ({{htmlelement("nav")}}), rodapé({{htmlelement("footer")}}), unidades de conteúdo repetidas({{htmlelement("article")}}), etc. Eles trazem semânticas extras para os leitores de tela(e outras ferramentas) para dar aos usuários mais dicas sobre o conteúdo no qual eles estão navegando (veja [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para uma ideia do que é suporte de leitor de tela).
 
 > [!NOTE]
 > Ao mesmo tempo que seu conteúdo deve ter boa semântica e um layout bonito, deve-se fazer sentido que em sua ordem de fonte — você poderá sempre movimentá-la utilizando CSS depois, mas você deve colocar a ordem de fonte de forma correta desde o começo, para que os usuários que utilizam de leitores de tela possam receber uma leitura que faz sentido.
@@ -346,7 +346,7 @@ Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um e
 <div data-message="Esse é do terceiro botão" tabindex="0">E em mim!</div>
 ```
 
-Basicamente, o atributo [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes#tabindex) destina-se principalmente a permitir que elementos tabulares tenham uma ordem de tabulação personalizada (especificada em ordem numérica positiva), em vez de apenas serem tabulados em sua ordem de origem padrão. Isso é quase sempre uma má ideia, pois pode causar grandes confusões. Use-o somente se você realmente precisar, por exemplo, se o layout mostrar coisas em uma ordem visual muito diferente do código-fonte, e você quiser fazer as coisas funcionarem mais logicamente. Existem duas outras opções para `tabindex`:
+Basicamente, o atributo [`tabindex`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#tabindex) destina-se principalmente a permitir que elementos tabulares tenham uma ordem de tabulação personalizada (especificada em ordem numérica positiva), em vez de apenas serem tabulados em sua ordem de origem padrão. Isso é quase sempre uma má ideia, pois pode causar grandes confusões. Use-o somente se você realmente precisar, por exemplo, se o layout mostrar coisas em uma ordem visual muito diferente do código-fonte, e você quiser fazer as coisas funcionarem mais logicamente. Existem duas outras opções para `tabindex`:
 
 - `tabindex="0"` — conforme indicado acima, esse valor permite que elementos que normalmente não podem ser tabulados se tornem tabeláveis. Este é o valor mais útil do `tabindex`.
 - `tabindex="-1"` — isso permite que elementos normalmente não tabuláveis recebam foco de maneira programática, por exemplo, via JavaScript, ou como alvo de links.
@@ -494,7 +494,7 @@ Isso destaca a importância de não apenas usar nomes de arquivos significativos
 Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.
 
 > [!NOTE]
-> Leia [Imagens em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images) e [Imagens Responsivas](/pt-BR/docs/Web/HTML/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
+> Leia [Imagens em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images) e [Imagens Responsivas](/pt-BR/docs/Web/HTML/Guides/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
 
 Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (`title`), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.
 
@@ -557,4 +557,4 @@ A razão para usar um `alt` vazio ao invés de não incluí-lo é porque muitos 
 
 Agora você deve estar familiarizado com a escrita de HTML acessível para a maioria das ocasiões. Nosso artigo básico do WAI-ARIA também preencherá algumas lacunas nesse conhecimento, mas este artigo cuidou do básico. Em seguida, exploraremos CSS e JavaScript e como a acessibilidade é afetada por seu uso bom ou ruim.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

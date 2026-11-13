@@ -1,8 +1,9 @@
 ---
-title: column-span
+title: Propriété CSS `column-span`
+short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: c0c85c3dc0d6ff4247c85b0144149e584d74b625
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-span`** permet à un élément de s'étendre sur l'ensemble des colonnes lorsque sa valeur est `all`.
@@ -69,9 +70,9 @@ column-span: revert-layer;
 column-span: unset;
 ```
 
-La propriété `column-span` est définie par l'une des valeurs listées ci‑dessous.
-
 ### Valeurs
+
+Cette propriété est définie par l'un des mots-clés suivants&nbsp;:
 
 - `none`
   - : L'élément ne s'étend pas sur plusieurs colonnes.
@@ -147,5 +148,5 @@ h2 {
 ## Voir aussi
 
 - [Étendre et équilibrer les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
-- [Éléments en ligne](/fr/docs/Glossary/Inline-level_content)
+- [Éléments en incise](/fr/docs/Glossary/Inline-level_content)
 - L'interface API {{DOMxRef("HTMLSpanElement")}}

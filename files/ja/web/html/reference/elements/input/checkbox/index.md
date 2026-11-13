@@ -1,28 +1,27 @@
 ---
-title: <input type="checkbox">
+title: '`<input type="checkbox">` 属性値'
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
-{{HTMLSidebar}}
-
-{{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
+{{htmlelement("input")}} 要素の **`checkbox`** 型は、デフォルトでボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>
-  <legend>Choose your monster's features:</legend>
+  <legend>モンスターの特徴を選んでください:</legend>
 
   <div>
     <input type="checkbox" id="scales" name="scales" checked />
-    <label for="scales">Scales</label>
+    <label for="scales">大きさ</label>
   </div>
 
   <div>
     <input type="checkbox" id="horns" name="horns" />
-    <label for="horns">Horns</label>
+    <label for="horns">角</label>
   </div>
 </fieldset>
 ```
@@ -40,9 +39,6 @@ input {
 }
 ```
 
-> [!NOTE]
-> [ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)はチェックボックスと似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio#ラジオグループの定義)はグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
-
 ## 値
 
 チェックボックスの値を表す文字列です。これはクライアント側には表示されませんが、サーバー上ではチェックボックスの `name` と共に送信されるデータに与えられる `value` になります。次の例を見てください。
@@ -55,37 +51,46 @@ input {
       id="subscribeNews"
       name="subscribe"
       value="newsletter" />
-    <label for="subscribeNews">Subscribe to newsletter?</label>
+    <label for="subscribeNews">ニュースレターを購読しますか？</label>
   </div>
   <div>
-    <button type="submit">Subscribe</button>
+    <button type="submit">購読</button>
   </div>
 </form>
 ```
 
-この例では、 `name` を `subscribe` に、 `value` を `newsletter` に設定しました。フォームが送信されると、データの名前と値の組み合わせは `subscribe=newsletter` となります。
+この例では、name を `subscribe` に、 value を `newsletter` に設定しました。フォームが送信されると、データの名前と値の組み合わせは `subscribe=newsletter` となります。
 
-`value` 属性が省略された場合は、チェックボックスの既定値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
+`value` 属性が省略された場合は、チェックボックスのデフォルト値は `on` ですので、その場合の送信されるデータは `subscribe=on` となります。
 
 > [!NOTE]
-> フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときの既定値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
+> フォームが送信されたとき、チェックボックスがチェックされていない場合、名前も値もサーバーに送信されません。HTML のみでチェックボックスがチェックされていない状態を表す方法（`value=unchecked` のように）はありません。チェックボックスがチェックされていないときのデフォルト値を送信したい場合は、JavaScript を記述して、フォーム内にチェックされていない状態を示す値を持つ {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} を作成することで実現できます。
 
 ## 追加の属性
 
 すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Reference/Elements/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
 - `checked`
-  - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスが既定で（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
+  - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスがデフォルトで（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
     > [!NOTE]
     > 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値、または `value` が設定されていない場合は `on` が入力欄の値として報告されます。
-    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
+    > 他のブラウザーとは異なり、 Firefox はデフォルトでページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
 
 - `value`
-  - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
+  - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、デフォルトで `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
+
+- `switch`
+  - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、`checkbox` 入力にのみ適用されます。この属性が存在する場合、その `checkbox` は通常の `checkbox` ではなく、オン/オフを切り替えるスイッチ (`switch`) であることを示します。これにより `checkbox` コントロールの外観は変化しますが、基本的な動作は通常の `checkbox` と同じです。
+
+    > [!NOTE]
+    > この属性により、ユーザーエージェントは、文書で `role="switch"` を明示的に指定する必要なく、支援技術に対して `switch` の ARIA 意味づけを公開することができる。マークアップと API はチェックボックスの場合と似ていますが、`:indeterminate` 擬似クラスが一致しない点が異なります。
+
+    > [!WARNING]
+    > この属性はまだ実験段階であり、ブラウザーの対応状況は限られています。対応していないブラウザーでは、この属性は無視されます。
 
 ## チェックボックスの使用
 
-上記で最も基本的なチェックボックスの使用を見てきました。他に必要になりそうなチェックボックスに関するよく使われる機能や技術を見てみましょう。
+チェックボックスは[ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)と似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio#ラジオグループの定義)はグループ化され、同時に 1 つしか選択できません。一方、チェックボックスでは個々の値をオンまたはオフにできます。同じ名前のコントロールが複数ある場合、ラジオボタンではその中から 1 つだけを選択できますが、チェックボックスでは複数の値を選択できます。
 
 ### 複数チェックボックスの扱い
 
@@ -111,9 +116,9 @@ input {
 
 この例では、両方のチェックボックスに同じ `name` を設定しました。両方のチェックボックスがチェックされてフォームが送信されると、名前/値の組み合わせの文字列は `interest=coding&interest=music` のように送信されます。データがサーバー側に届いたときには、連想配列以外の方法で解析して、 `interest` の値を持つ値を、最後の値だけでなくすべて拾う必要があります。 Python を使用したやり方としては、例えば、[単一のサーバー側の変数で複数のチェックボックスを扱う](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable)を参照してください。
 
-### 既定のチェックボックス
+### デフォルトのチェックボックス
 
-チェックボックスを既定でチェック状態にするには、 `checked` 属性を設定するだけです。次の例を見てください。
+チェックボックスをデフォルトでチェック状態にするには、 `checked` 属性を設定するだけです。次の例を見てください。
 
 ```html
 <fieldset>
@@ -130,6 +135,29 @@ input {
 ```
 
 {{EmbedLiveSample('Checking_boxes_by_default', 600, 100)}}
+
+### チェックボックスとしてのスイッチ
+
+次の例では、チェックボックスをオン／オフスイッチのように見せて動作させる方法をご紹介します。
+
+```html
+<fieldset>
+  <legend>設定を変更</legend>
+  <div>
+    <label for="theme">ダークモード</label>
+    <input type="checkbox" name="theme" id="theme" switch checked />
+  </div>
+  <div>
+    <label for="notifications">通知</label>
+    <input type="checkbox" name="notifications" id="notifications" switch />
+  </div>
+</fieldset>
+```
+
+> [!NOTE]
+> チェックボックスをスイッチとして表示するのは一部のブラウザーに限られますが、その動作はすべてのブラウザーで同じです。
+
+{{EmbedLiveSample('Switch_as_a_checkbox', 600, 100)}}
 
 ### チェックボックスの当たり判定領域を広げる
 
@@ -160,7 +188,7 @@ inputInstance.indeterminate = true;
 
 ですからこの場合は、材料を集め始めているものの、製作が完成していない状態に `indeterminate` が使われます。
 
-```js
+```js live-sample___indeterminate_state
 const overall = document.querySelector("#enchantment");
 const ingredients = document.querySelectorAll("ul input");
 
@@ -193,7 +221,39 @@ function updateDisplay() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
+```html live-sample___indeterminate_state
+<fieldset>
+  <legend>レシピを完成させる</legend>
+  <div>
+    <input type="checkbox" id="enchantment" name="enchantment" />
+    <label for="enchantment">魔法一覧表</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="book" name="ingredient" value="book" />
+        <label for="book">本</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="diamonds"
+          name="ingredient"
+          value="diamonds" />
+        <label for="diamonds">ダイヤモンド (x2)</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="obsidian"
+          name="ingredient"
+          value="obsidian" />
+        <label for="obsidian">黒曜石 (x4)</label>
+      </li>
+    </ul>
+  </div>
+</fieldset>
+```
+
+{{EmbedLiveSample("indeterminate_state", "", 200)}}
 
 ## 検証
 
@@ -206,55 +266,50 @@ function updateDisplay() {
 ### HTML
 
 ```html live-sample___examples
-<form>
-  <fieldset>
-    <legend>興味のあるものを選択してください</legend>
-    <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        コーディング
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        音楽
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        美術
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        スポーツ
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        料理
-      </label>
-    </div>
-    <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        その他
-      </label>
-      <input
-        type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Other interest" />
-    </div>
-    <div>
-      <button type="submit">フォームを送信</button>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>興味のあるものを選択してください</legend>
+  <div>
+    <label>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      コーディング
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      音楽
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="art" name="interest" value="art" />
+      美術
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      スポーツ
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="cooking" name="interest" value="cooking" />
+      料理
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" id="other" name="interest" value="other" />
+      その他
+    </label>
+    <input
+      type="text"
+      id="otherValue"
+      name="other"
+      aria-label="その他の関心事" />
+  </div>
+</fieldset>
 ```
 
 ### CSS
@@ -264,16 +319,13 @@ html {
   font-family: sans-serif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
 div {
   margin-bottom: 10px;
 }
 
 fieldset {
+  width: 600px;
+  margin: 0 auto;
   background: cyan;
   border: 5px solid blue;
 }
@@ -320,7 +372,9 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>
-      <td><code><a href="#checked">checked</a></code></td>
+      <td>
+        <code><a href="#checked">checked</a></code> および <code><a href="#switch">switch</a></code>
+      </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
@@ -331,12 +385,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

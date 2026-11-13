@@ -1,8 +1,9 @@
 ---
-title: "<hgroup> : l'élément de regroupement de titres"
+title: "Élément HTML `<hgroup>` : l'élément de regroupement de titres"
+short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un seul élément [`<h1>—<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) avec un ou plusieurs éléments {{HTMLElement("p")}}.
@@ -46,7 +47,7 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 
 ## Notes d'utilisation
 
-L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec du contenu secondaire associé, tel que son (ou ses) sous-titre(s), un titre alternatif ou un slogan. Chaque contenu de ce type sera représenté par un élément `<p>` au sein de l'élément `<hgroup>`.
+L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec du contenu secondaire associé, tel que son (ou ses) sous-titre(s), un titre alternatif ou un slogan. Chaque contenu de ce type est représenté par un élément `<p>` au sein de l'élément `<hgroup>`.
 
 L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en">outline</i>) d'une page web. C'est le titre intégré au sein de l'élément `<hgroup>` qui contribue au plan du document.
 

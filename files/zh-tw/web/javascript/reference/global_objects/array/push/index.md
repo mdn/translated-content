@@ -42,7 +42,7 @@ arr.push(element1[, ...[, elementN]])
 
 `push` 方法被刻意設計為具通用性；此方法可以藉由 {{jsxref("Function.call", "call()")}} 或 {{jsxref("Function.apply", "apply()")}} 應用於類似陣列的物件上。`push` 方法憑借著物件的 `length` 屬性來判斷從何處開始插入給定的值。如果 `length` 屬性無法被轉為數字，則索引值會使用 0。這包括了 `length` 可能不存在的狀況，在這個情況下 `length` 屬性也將被建立於物件中。
 
-唯一的原生類陣列（array-like）物件為{{jsxref("Global_Objects/String", "字串", "", 1)}}，但他們不適合用於此方法，因為字串是不可變的（immutable）。
+唯一的原生類陣列（array-like）物件為{{jsxref("String", "字串", "", 1)}}，但他們不適合用於此方法，因為字串是不可變的（immutable）。
 
 ## 範例
 

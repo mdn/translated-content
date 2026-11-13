@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">사전 지식</th>
       <td>
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 설명하는 기본적인 HTML 숙련도.
         <a

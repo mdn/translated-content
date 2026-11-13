@@ -3,10 +3,10 @@ title: "HTMLInputElement : propriété colorSpace"
 short-title: colorSpace
 slug: Web/API/HTMLInputElement/colorSpace
 l10n:
-  sourceCommit: 6d4ac4a04fd5c01adc690b9c95de3d9261570212
+  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 La propriété **`colorSpace`** de l'interface {{DOMxRef("HTMLInputElement")}} reflète l'attribut [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace) de l'élément HTML {{HTMLElement("input")}}. Cet attribut indique si l'{{Glossary("color space", "espace colorimétrique")}} de la couleur CSS sérialisée est `sRGB` (la valeur par défaut) ou `display-p3`. Cela ne concerne que les contrôles de type [couleur](/fr/docs/Web/HTML/Reference/Elements/input/color).
 

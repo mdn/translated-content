@@ -3,8 +3,6 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
 ---
 
-{{AddonSidebar}}
-
 Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Types

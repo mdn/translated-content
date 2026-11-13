@@ -1,8 +1,9 @@
 ---
-title: border-image-source
+title: Propriété CSS `border-image-source`
+short-title: border-image-source
 slug: Web/CSS/Reference/Properties/border-image-source
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-source`** définit l'image source utilisée pour créer [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.

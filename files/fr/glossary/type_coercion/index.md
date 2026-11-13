@@ -19,7 +19,7 @@ console.log(somme);
 
 Dans l'exemple ci-dessus, Javascript a _coercé_ le nombre `9` en une string, et a concaténé les deux valeurs, ce qui donne comme résultat la string `59`. JavaScript avait le choix entre une string et un nombre et a décidé d'utiliser une string.
 
-Le compilateur aurait pu coercer le `5` en un nombre et retourner la somme de `14`, mais ce n'est pas ce qu'il a fait. Pour pouvoir retourner `14`, il aurait fallu explicitement convertir le 5 en un nombre grâce à la méthode {{JSxRef("Global_Objects/Number", "Number()")}}&nbsp;
+Le compilateur aurait pu coercer le `5` en un nombre et retourner la somme de `14`, mais ce n'est pas ce qu'il a fait. Pour pouvoir retourner `14`, il aurait fallu explicitement convertir le 5 en un nombre grâce à la méthode {{JSxRef("Number()")}}&nbsp;
 
 ```js
 somme = Number(valeur1) + valeur2;

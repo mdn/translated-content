@@ -3,7 +3,7 @@ title: "Array : méthode flat()"
 short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`flat()`** des instances de {{JSxRef("Array")}} crée un nouveau tableau dans lequel tous les éléments des sous-tableaux sont concaténés récursivement jusqu'à la profondeur définie.
@@ -14,18 +14,18 @@ La méthode **`flat()`** des instances de {{JSxRef("Array")}} crée un nouveau t
 const arr1 = [0, 1, 2, [3, 4]];
 
 console.log(arr1.flat());
-// sortie attendue : Array [0, 1, 2, 3, 4]
+// Résultat attendu : Array [0, 1, 2, 3, 4]
 
 const arr2 = [0, 1, [2, [3, [4, 5]]]];
 
 console.log(arr2.flat());
-// sortie attendue : Array [0, 1, 2, Array [3, Array [4, 5]]]
+// Résultat attendu : Array [0, 1, 2, Array [3, Array [4, 5]]]
 
 console.log(arr2.flat(2));
-// sortie attendue : Array [0, 1, 2, 3, Array [4, 5]]
+// Résultat attendu : Array [0, 1, 2, 3, Array [4, 5]]
 
 console.log(arr2.flat(Infinity));
-// sortie attendue : Array [0, 1, 2, 3, 4, 5]
+// Résultat attendu : Array [0, 1, 2, 3, 4, 5]
 ```
 
 ## Syntaxe
@@ -117,11 +117,11 @@ console.log(Array.prototype.flat.call(objetSimilaireTableau));
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.flat` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.flat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flat)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
 - La méthode {{JSxRef("Array.prototype.flatMap()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
-- [Prothèse d'émulation de `Array.prototype.flat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.flat` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.flat)

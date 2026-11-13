@@ -16,7 +16,7 @@ slug: Web/API/Window/requestAnimationFrame
 
 ## 語法
 
-```plain
+```js-nolint
 window.requestAnimationFrame(callback);
 ```
 

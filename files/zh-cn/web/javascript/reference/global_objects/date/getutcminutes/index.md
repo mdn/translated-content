@@ -20,7 +20,7 @@ console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
 
 ## 语法
 
-```plain
+```js-nolint
 dateObj.getUTCMinutes()
 ```
 

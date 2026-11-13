@@ -1,8 +1,9 @@
 ---
-title: <system-color>
+title: CSS `<system-color>` データ型
+short-title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
@@ -13,7 +14,7 @@ l10n:
 
 作者は [`forced-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) メディア特性を使用して、強制色モードを検出することができます。
 
-`<system-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を使用できる場所であればどこでも使用することができます。
+`<system-color>` 値は、 {{cssxref("&lt;color&gt;")}} を使用できる場所であればどこでも使用することができます。
 
 ## 構文
 

@@ -1,8 +1,9 @@
 ---
-title: "@import"
+title: CSS `@import` アットルール
+short-title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
@@ -29,7 +30,7 @@ l10n:
 - _メディアクエリーリスト_
   - : [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
 - _レイヤー名_
-  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/@import/layer_function) を参照してください。
+  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import/layer_function) を参照してください。
 - _対応条件_
   - : このスタイルシートをインポートするために、ブラウザーが対応している必要がある特性を示します。
     ブラウザーが _対応条件_ で指定された条件に適合しない場合、リンクされたスタイルシートを取得しないことがあり、他にもパスを通してダウンロードしても読み込むことはできません。

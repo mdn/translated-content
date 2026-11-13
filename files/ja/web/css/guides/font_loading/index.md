@@ -1,9 +1,9 @@
 ---
 title: CSS フォント読み込み
+short-title: フォント読み込み
 slug: Web/CSS/Guides/Font_loading
-original_slug: Web/CSS/CSS_font_loading
 l10n:
-  sourceCommit: fe5361c29eab373c0b60d07bb86dbf0048220110
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS フォント読み込み**モジュールは、フォントリソースを動的に読み込むために使用するイベントとインターフェイスを記述します。

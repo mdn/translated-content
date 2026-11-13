@@ -1,10 +1,12 @@
 ---
-title: :root
+title: CSS `:root` 擬似クラス
+short-title: :root
 slug: Web/CSS/Reference/Selectors/:root
-original_slug: Web/CSS/:root
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が高いことを除けば `html` セレクターと同等です。
+**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が高い (0-1-0) ことを除けば `html` セレクター (0-0-1) と同等です。
 
 ```css
 /* 文書のルート要素（HTML の場合は <html>）を選択 */
@@ -15,8 +17,10 @@ original_slug: Web/CSS/:root
 
 ## 構文
 
-```
-:root
+```css
+:root {
+  /* ... */
+}
 ```
 
 ## 例

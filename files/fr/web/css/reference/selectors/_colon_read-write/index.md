@@ -1,8 +1,9 @@
 ---
-title: :read-write
+title: Pseudo-classe CSS `:read-write`
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf3b0f3217d5d5a6957e9e17f863ece19d939d20
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-write`** représente un élément (tel que `input` ou `textarea`) qui peut être modifié par l'utilisateur·ice.
@@ -10,8 +11,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 {{InteractiveExample("Démonstration CSS&nbsp;: :read-write", "tabbed-shorter")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 1em;
 }
@@ -26,34 +26,30 @@ input[type="submit"] {
 ```html interactive-example
 <p>Veuillez remplir vos coordonnées&nbsp;:</p>
 
-<form>
-  <label for="email">Adresse e-mail&nbsp;:</label>
-  <input id="email" name="email" type="email" value="test@example.com" />
+<label for="email">Adresse e-mail&nbsp;:</label>
+<input id="email" name="email" type="email" value="test@example.com" />
 
-  <label for="note">Courte note à propos de vous&nbsp;:</label>
-  <textarea id="note" name="note">N'ayez pas peur</textarea>
+<label for="note">Courte note à propos de vous&nbsp;:</label>
+<textarea id="note" name="note">N'ayez pas peur</textarea>
 
-  <label for="pic">Votre photo&nbsp;:</label>
-  <input id="pic" name="pic" type="file" />
-
-  <input type="submit" value="Soumettre le formulaire" />
-</form>
+<label for="pic">Votre photo&nbsp;:</label>
+<input id="pic" name="pic" type="file" />
 ```
 
 ## Syntaxe
 
 ```css
 :read-write {
-  /* ... */
+  /* … */
 }
 ```
 
 ## Exemples
 
-### Confirmation des détails du formulaire à l'aide de contrôles en lecture seule
+### Confirmer les détails du formulaire à l'aide de contrôles en lecture seule
 
-Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez soumettre avec de nouvelles données dans des contrôles en lecture-écriture.
-Dans l'exemple ci-dessous, la pseudo-classe {{CSSxRef(":read-only")}} est utilisée pour faire en sorte que le {{HTMLElement("textarea")}} (l'adresse d'un utilisateur) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
+Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez envoyer avec de nouvelles données dans des contrôles en lecture-écriture.
+Dans l'exemple ci-dessous, la pseudo-classe {{CSSxRef(":read-only")}} est utilisée pour faire en sorte que la zone de texte ({{HTMLElement("textarea")}}, l'adresse d'un·e utilisateur·ice) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
 
 ```css hidden
 body {
@@ -73,7 +69,6 @@ fieldset > div {
   justify-content: space-between;
 }
 
-button,
 label,
 textarea {
   display: block;
@@ -111,31 +106,27 @@ textarea:read-write {
 ```
 
 ```html
-<form>
-  <fieldset>
-    <legend>Confirmer les détails d'expédition</legend>
-    <div>
-      <label for="address">Adresse&nbsp;:</label>
-      <textarea id="address" name="address" readonly>
+<fieldset>
+  <legend>Confirmer les détails d'expédition</legend>
+  <div>
+    <label for="address">Adresse&nbsp;:</label>
+    <textarea id="address" name="address" readonly>
 16 Rue des Blagues,
 Blagues en Cascades,
-France</textarea
-      >
-    </div>
-    <div>
-      <label for="instructions">Instructions de livraison&nbsp;:</label>
-      <textarea id="instructions" name="instructions"></textarea>
-    </div>
-  </fieldset>
-  <button type="submit">Confirmer</button>
-</form>
+France</textarea>
+  </div>
+  <div>
+    <label for="instructions">Instructions de livraison&nbsp;:</label>
+    <textarea id="instructions" name="instructions"></textarea>
+  </div>
+</fieldset>
 ```
 
-{{EmbedLiveSample("confirmation_des_détails_du_formulaire_à_laide_de_contrôles_en_lecture_seule", , "300")}}
+{{EmbedLiveSample("Confirmer les détails du formulaire à l'aide de contrôles en lecture seule", "", 300)}}
 
 ### Mise en forme des contrôles non-formulaires en lecture-écriture
 
-Ce sélecteur ne sélectionne pas seulement les éléments {{HTMLElement("input")}}/{{HTMLElement("textarea")}} — il sélectionnera _tout_ élément qui peut être modifié par l'utilisateur, comme un élément {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
+Ce sélecteur ne sélectionne pas seulement les éléments HTML {{HTMLElement("input")}}/{{HTMLElement("textarea")}} — il sélectionne _tout_ élément qui peut être modifié par l'utilisateur·ice, comme un élément HTML {{HTMLElement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
 
 #### HTML
 
@@ -172,7 +163,7 @@ p:read-write {
 
 #### Résultat
 
-{{EmbedLiveSample("mise_en_forme_des_contrôles_non-formulaires_en_lecture-écriture", '100%', 200)}}
+{{EmbedLiveSample("Mise en forme des contrôles non-formulaires en lecture-écriture", "100%", 200)}}
 
 ## Spécifications
 

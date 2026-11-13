@@ -1,8 +1,9 @@
 ---
-title: ::-moz-color-swatch
+title: Pseudo-élément CSS `::-moz-color-swatch`
+short-title: ::-moz-color-swatch
 slug: Web/CSS/Reference/Selectors/::-moz-color-swatch
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}
@@ -41,7 +42,7 @@ input[type="color"]::-moz-color-swatch {
 
 {{EmbedLiveSample("Exemples", 300, 50)}}
 
-## Specifications
+## Spécifications
 
 Ce pseudo-élément ne fait partie d'aucun standard.
 
@@ -52,4 +53,4 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 ## Voir aussi
 
 - Les pseudo-éléments semblables utilisés par les autres navigateurs&nbsp;:
-  - {{CSSxRef("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)
+  - `::-webkit-color-swatch` pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)

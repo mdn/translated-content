@@ -24,7 +24,7 @@ l10n:
 CORS セーフリストリクエストヘッダーとなるためには、次の要件も満たさなければなりません。
 
 - {{HTTPHeader("Accept-Language")}} と {{HTTPHeader("Content-Language")}} については、値が `0-9`・`A-Z`・`a-z`・空白・`*,-.;=` のみで構成されていなければなりません。
-- {{HTTPHeader("Accept")}} と {{HTTPHeader("Content-Type")}} については、 *CORS アンセーフリクエストヘッダーバイト*と呼ばれる `0x00-0x1F` (ただし、`0x09 (HT)` は含めても良い)・`"():<>?@[\]{}`・`0x7F (DEL)` ををめてはいけません。
+- {{HTTPHeader("Accept")}} と {{HTTPHeader("Content-Type")}} については、 *CORS アンセーフリクエストヘッダーバイト*と呼ばれる `0x00-0x1F` (ただし、`0x09 (HT)` は含めても良い)・`"():<>?@[\]{}`・`0x7F (DEL)` を含めてはいけません。
 - {{HTTPHeader("Content-Type")}} は、値が解釈された結果の MIME タイプ（引数を除く）が、`application/x-www-form-urlencoded`、`multipart/form-data`、`text/plain` のいずれかでなければなりません。
 - {{HTTPHeader("Range")}} は単一バイトの範囲の値で、 `bytes=[0-9]+-[0-9]*` の形でなければなりません。
   詳しくは {{HTTPHeader("Range")}} ヘッダーのドキュメントをご覧ください。

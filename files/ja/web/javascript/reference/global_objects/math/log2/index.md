@@ -3,7 +3,7 @@ title: Math.log2()
 short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`Math.log2()`** は静的メソッドで、数値の 2 を底とした対数を返します。
@@ -76,7 +76,7 @@ Math.log2(Infinity); // Infinity
 
 ## 関連情報
 
-- [`Math.log2` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.log2` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/math)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log10()")}}

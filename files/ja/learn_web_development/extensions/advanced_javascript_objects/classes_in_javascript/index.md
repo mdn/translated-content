@@ -207,9 +207,9 @@ myExample.somePublicMethod(); // 'You called me?'
 myExample.#somePrivateMethod(); // SyntaxError
 ```
 
-## スキルをテストしましょう
+## 確認テスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オブジェクト指向 JavaScript](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript) を参照してください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[確認テスト: オブジェクト指向 JavaScript](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript) を参照してください。
 
 ## まとめ
 

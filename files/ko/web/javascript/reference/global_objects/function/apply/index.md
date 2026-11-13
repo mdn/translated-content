@@ -186,7 +186,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
-**알림:** 네이티브가 아닌 `Function.construct` 메소드는 {{jsxref("Date")}} 와 같은 일부 네이티브 생성자와 동작하지 않을 것입니다. 그런 경우, {{jsxref("Function.prototype.bind")}} 메소드를 사용해야 합니다. 예를 들어, 다음과 같은 배열이 있다고 할 때, {{jsxref("Global_Objects/Date", "Date")}} 생성자: `[2012, 11, 4]` 와 함께 사용되려면 다음과 같이 작성해야 합니다: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`. 이는 가장 좋은 방법이 아니며, 어떤 상용 환경에서도 사용되지 않을 수 있습니다.
+**알림:** 네이티브가 아닌 `Function.construct` 메소드는 {{jsxref("Date")}} 와 같은 일부 네이티브 생성자와 동작하지 않을 것입니다. 그런 경우, {{jsxref("Function.prototype.bind")}} 메소드를 사용해야 합니다. 예를 들어, 다음과 같은 배열이 있다고 할 때, {{jsxref("Date")}} 생성자: `[2012, 11, 4]` 와 함께 사용되려면 다음과 같이 작성해야 합니다: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()`. 이는 가장 좋은 방법이 아니며, 어떤 상용 환경에서도 사용되지 않을 수 있습니다.
 
 ## 명세
 

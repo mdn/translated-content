@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns
 original_slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 ---
 
-{{CSSRef}}
-
 Dans ce guide, nous verrons comment répartir les éléments sur plusieurs colonnes et comment contrôler le remplissage des colonnes.
 
 > [!NOTE]

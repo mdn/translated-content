@@ -18,7 +18,7 @@ var elements = element.getElementsByClassName(names);
 ### Parameters
 
 - `names`
-  - : 검색할 클래스 혹은 클래스들을 띄어쓰기로 구분한 {{domxref("DOMString")}}
+  - : 검색할 클래스 혹은 클래스들을 띄어쓰기로 구분한 {{jsxref("String")}}
 
 ### Return value
 
@@ -85,7 +85,7 @@ while (matches.length > 0) {
 
 ### 배열 함수를 이용해 결과값을 필터링하기
 
-{{domxref("HTMLCollection")}}을 `this` 로 사용하면 {{jsxref("Array.prototype")}} 을 어떤 {{ domxref("HTMLCollection") }}에서든 사용할 수 있습니다. 아래의 예제에서는 `test` 클래스를 가진 모든 {{HTMLElement("div")}} 요소를 찾아봅니다 :
+{{domxref("HTMLCollection")}}을 `this` 로 사용하면 {{jsxref("Array")}} 을 어떤 {{ domxref("HTMLCollection") }}에서든 사용할 수 있습니다. 아래의 예제에서는 `test` 클래스를 가진 모든 {{HTMLElement("div")}} 요소를 찾아봅니다 :
 
 ```js
 var testElements = document.getElementsByClassName("test");

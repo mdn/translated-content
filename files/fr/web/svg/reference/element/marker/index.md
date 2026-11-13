@@ -4,8 +4,6 @@ slug: Web/SVG/Reference/Element/marker
 original_slug: Web/SVG/Element/marker
 ---
 
-{{SVGRef}}
-
 L'élément **`<marker>`** définit un élément graphique qui pourra être utilisé pour dessiner des pointes de flèches ou des polymarqueurs sur un élément {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} ou {{SVGElement("polygon")}}.
 
 Les marqueurs sont attachés aux formes à l'aide des propriétés {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, et {{SVGAttr("marker-end")}}.
@@ -53,28 +51,28 @@ svg {
 
 - {{SVGAttr("markerHeight")}}
   - : Définit la hauteur du viewport du marqueur.
-    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
+    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Guides/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("markerUnits")}}
   - : Définit le système de coordnnées pour les attributs `markerWidth`, `markerHeight` et le contenu du `<marker>`.
     _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
 - {{SVGAttr("markerWidth")}}
   - : Définit la largeur du viewport du marqueur.
-    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
+    _Valeur_: **[\<length>](/fr/docs/Web/SVG/Guides/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("orient")}}
   - : Définit l'orientation du marqueur relativement à la forme à laquelle il est attaché.
-    _Valeur_: `auto`|`auto-start-reverse`|**[\<angle>](/fr/docs/Web/SVG/Content_type#Angle)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `auto`|`auto-start-reverse`|**[\<angle>](/fr/docs/Web/SVG/Guides/Content_type#Angle)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("preserveAspectRatio")}}
   - : Définit comment le fragment svg doit être déformé s'il est incorporé dans un conteneur avec un rapport hauteur:largeur différent de celui du marqueur.
     _Valeur_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_: `xMidYMid meet`; _Animation_: **oui**
 - {{SVGAttr("refX")}}
   - : Définit la coordonnées x du point de référence du marqueur.
-    _Valeur_: `left`|`center`|`right`|**[\<coordinate>](/fr/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `left`|`center`|`right`|**[\<coordinate>](/fr/docs/Web/SVG/Guides/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("refY")}}
   - : Définit la coordonnées y du point de référence du marqueur.
-    _Valeur_: `top`|`center`|`bottom`|**[\<coordinate>](/fr/docs/Web/SVG/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Valeur_: `top`|`center`|`bottom`|**[\<coordinate>](/fr/docs/Web/SVG/Guides/Content_type#Coordinate)** ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("viewBox")}}
   - : Définit la limite de la zone de dessin pour le fragment SVG.
-    _Valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: none; _Animation_: **oui**
+    _Valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Guides/Content_type#List-of-Ts)** ; _Valeur par défaut_: none; _Animation_: **oui**
 
 ### Attributs globaux
 

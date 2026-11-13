@@ -191,9 +191,7 @@ if (window.PaymentRequest) {
 // The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
-const supportedPaymentMethods = [
-  /* supported methods */
-];
+const supportedPaymentMethods = [/* supported methods */];
 
 let shouldCallPaymentRequest = true;
 let fallbackToLegacyOnPaymentRequestFailure = false;

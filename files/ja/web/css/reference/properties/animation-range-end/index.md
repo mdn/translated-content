@@ -1,8 +1,9 @@
 ---
-title: animation-range-end
+title: "`animation-range-end` プロパティ (CSS)"
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 22c0b3059ff71d769af670478cc41605581108d1
 ---
 
 **`animation-range-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが終了するタイムライン上の点を設定します。
@@ -21,6 +22,11 @@ animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
 
+/* 複数の値 */
+animation-range-end:
+  cover 80%,
+  contain 700px;
+
 /* グローバル値 */
 animation-range-end: inherit;
 animation-range-end: initial;
@@ -31,12 +37,14 @@ animation-range-end: unset;
 
 ### 値
 
+このプロパティは、カンマ区切りの値のリストとして指定されます。それぞれの値は、以下のいずれかになります。
+
 - `normal`
   - : タイムラインの末尾を表します。これがデフォルト値です。
 - {{cssxref("length-percentage")}}
   - : タイムラインの開始点から測定した長さまたはパーセント値を指定します。
 - {{cssxref("timeline-range-name")}}
-  - : 全体タイムライン内の名前付きタイムライン範囲を指定します。範囲は `0%` から始まります。
+  - : 全体タイムライン内の名前付きタイムライン範囲を指定します。範囲は `100%` から始まります。
 - `<timeline-range-name> <length-percentage>`
   - : 指定された名前付きタイムライン範囲の開始点から測定される長さまたはパーセント値を指定します。
 
@@ -45,6 +53,8 @@ animation-range-end: unset;
 `animation-range-end` プロパティは、アニメーションの添付範囲の終了点を指定します。添付範囲の終了点を変更すると、アニメーションの終了点、つまり反復回数が `1` のときに `100%` の進行度に割り当てられたキーフレームが到達する点をシフトさせることが可能で、同時にアニメーションの実効的な継続時間を短縮することもできます。
 
 プロパティ値は `normal`、`<length-percentage>`、またはオプションの `<length-percentage>` を含む {{cssxref("timeline-range-name")}} です。`<timeline-range-name>` の値に `<length-percentage>` が含まれない場合、パーセント値はデフォルトで `100%` になります。
+
+カンマ区切りで複数の値を指定する場合、それらの値は {{cssxref("animation-name")}} の値が現れる順序でアニメーションに適用されます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定) を参照してください。
 
 `animation-range-end` はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-end` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-end` を宣言しないと、その効果を得ることができません。
 
@@ -225,5 +235,6 @@ p {
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` プロパティ
 - [スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [タイムライン範囲名を理解する](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

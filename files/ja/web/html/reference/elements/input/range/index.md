@@ -1,11 +1,10 @@
 ---
-title: <input type="range">
+title: '`<input type="range">` 属性値'
+short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`range`** 型は、指定された値より小さくなく、別に指定された値より大きくない値をユーザーに指定させるために使用します。しかし、厳密な値は重要とはされません。これは通常、 {{HTMLElement('input/number', 'number')}} 入力型のようなテキスト入力ボックスではなく、スライダーやダイアルコントロールを用いて表現されます。
 
@@ -49,18 +48,9 @@ input {
 
 ユーザーのブラウザーが `range` 型に対応していない場合は、 `{{HTMLElement('input/text', 'text')}}` 入力で代替されて扱われます。
 
-### 検証
-
-利用可能なパターン検証はありません。しかし、以下の形で自動検証が行われます。
-
-- [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が何かに設定されており、妥当な浮動小数点数に変換できない場合、入力が不正な入力になるので検証に失敗します。
-- 値は [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) より小さくはなりません。この既定値は 0 です。
-- 値は [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) より大きくはなりません。この既定値は 100 です。
-- 値は [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の倍数になります。この既定値は 1 です。
-
 ### 値
 
-[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、選択された数値を文字列で格納します。値は空文字列 (`""`) になることはありません。既定値は指定した最小値と最大値の中間の値です。ただし、最大値が最小値より小さい場合は、`min` 属性の値が既定値に設定されます。既定値を決定するアルゴリズムは次の通りです。
+`<input type="range">` 要素の値は、[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を使用して、選択された数値を表す文字列を指定することで設定されます。値は空文字列 (`""`) になることはありません。デフォルト値は指定した最小値と最大値の中間の値です。ただし、最大値が最小値より小さい場合は、`min` 属性の値がデフォルト値に設定されます。デフォルト値を決定するアルゴリズムは次の通りです。
 
 ```js
 defaultValue =
@@ -70,6 +60,15 @@ defaultValue =
 ```
 
 最小値よりも小さな値を設定しようとすると、最小値に設定されます。同様に、最大値よりも大きな値を設定しようとすると、最大値に設定される結果になります。
+
+### 検証
+
+利用可能なパターン検証はありません。しかし、以下の形で自動検証が行われます。
+
+- [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が何かに設定されており、有効な浮動小数点数に変換できない場合、入力が不正な入力になるので検証に失敗します。
+- 値は [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) より小さくはなりません。このデフォルト値は 0 です。
+- 値は [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) より大きくはなりません。このデフォルト値は 100 です。
+- 値は [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の倍数になります。このデフォルト値は 1 です。
 
 ## 追加の属性
 
@@ -101,14 +100,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値です。指定した刻み間隔（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、それ以外の場合は適切な既定値）に一致する値のみが有効となります。
+`step` 属性は値が準拠する粒度を指定する数値、または後述する特殊な値 `any` です。段階の基準値から整数倍の値のみが有効です。段階の基準値は（指定されていれば）[`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも提供されていなければ `0` です。
 
-`step` 属性には文字列値 `any` を設定することもできます。この `step` 値は、刻み間隔を意味せず、指定した範囲内で任意の値が許されることを意味します（他にも [`min`](#min) や [`max`](#max) のような制約がある場合は除きます）。対応しているブラウザーでこのように動作するのかについては、[step を `any` に設定](#step_を_any_に設定)の例を参照してください。
+`range` 入力欄のデフォルトの段階値は `1` であり、段階の基準値が整数ではない場合を除き、整数の入力のみを許可します。
+
+文字列値の `any` は段階がないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。対応しているブラウザーでこのように動作するのかについては、[step を `any` に設定](#step_を_any_に設定)の例を参照してください。
 
 > [!NOTE]
-> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
-
-`range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,… など、負の方向に -0.5, -1.5, -2.5,… などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Reference/Attributes/step)を参照してください。</p>
+> ユーザーが入力した値が段階の設定に従っていない場合、{{Glossary("user agent", "ユーザーエージェント")}}は、その値を最も近い有効な値に丸めることがあります。また、2 つの選択肢が同等に近接している場合は、数値を切り上げることを優先します。
 
 ## 標準外の属性
 
@@ -131,7 +130,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ### 最小値と最大値の指定
 
-既定では、最小値は 0 で最大値は 100 です。これが望むものでないのであれば、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性の値を変更することで、簡単に範囲を変更することができます。浮動小数点値にすることもできます。
+デフォルトでは、最小値は 0 で最大値は 100 です。これが望むものでないのであれば、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性の値を変更することで、簡単に範囲を変更することができます。浮動小数点値にすることもできます。
 
 例えば、ユーザーに -10 から 10 までの値を尋ねるのであれば、次のようにすることができます。
 
@@ -143,7 +142,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ### 値の粒度の設定
 
-既定では、粒度は 1 であり、値は常に整数であることを意味します。粒度は、[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を変更することで制御することができます。例えば、 5 から 10 の中間値が必要であれば、`step` の値を 0.5 に設定してください。
+デフォルトでは、粒度は 1 であり、値は常に整数であることを意味します。粒度は、[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を変更することで制御することができます。例えば、 5 から 10 の中間値が必要であれば、`step` の値を 0.5 に設定してください。
 
 #### step 属性の設定
 
@@ -243,7 +242,7 @@ input.addEventListener("input", (event) => {
 
 ### ラベルの追加
 
-目盛には `<option>` 要素に `label` 属性を与えることで、ラベル付けをすることができます。ただし、既定では、ラベルのコンテンツは表示されません。このラベルを表示したり、ラベルを正しい位置に配置するためには CSS を使用してください。以下はその方法の一つです。
+目盛には `<option>` 要素に `label` 属性を与えることで、ラベル付けをすることができます。ただし、デフォルトでは、ラベルのコンテンツは表示されません。このラベルを表示したり、ラベルを正しい位置に配置するためには CSS を使用してください。以下はその方法の一つです。
 
 #### HTML
 
@@ -287,7 +286,7 @@ input[type="range"] {
 
 ### 垂直の範囲コントロールの作成
 
-既定では、ブラウザーは範囲入力を、つまみが左右にスライドするスライダーとして描画します。
+デフォルトでは、ブラウザーは範囲入力を、つまみが左右にスライドするスライダーとして描画します。
 
 つまみが上下にスライドする垂直方向の範囲を作成するには、CSS の {{cssxref("writing-mode")}} プロパティを `vertical-rl` または `vertical-lr` に設定してください。
 
@@ -377,7 +376,7 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
 - [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} およびそれに基づく {{domxref("HTMLInputElement")}} インターフェイス
 - [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number)
-- {{domxref('ValidityState.rangeOverflow')}} および {{domxref('ValidityState.rangeUnderflow')}}
+- {{domxref('validityState.rangeOverflow')}} および {{domxref('validityState.rangeUnderflow')}}
 - [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
-- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
+- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)

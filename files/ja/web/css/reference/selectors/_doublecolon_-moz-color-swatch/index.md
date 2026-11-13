@@ -1,7 +1,9 @@
 ---
-title: ::-moz-color-swatch
+title: CSS `::-moz-color-swatch` 擬似要素
+short-title: ::-moz-color-swatch
 slug: Web/CSS/Reference/Selectors/::-moz-color-swatch
-original_slug: Web/CSS/::-moz-color-swatch
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_header}}
@@ -9,11 +11,15 @@ original_slug: Web/CSS/::-moz-color-swatch
 **`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。
 
 > [!NOTE]
-> `::-moz-color-swatch` を `<input type="color">` 以外に何も一致せず、何も効果がありません。
+> `::-moz-color-swatch` を `<input type="color">` 以外で使うと、何にも一致せず、効果がありません。
 
 ## 構文
 
-{{csssyntax}}
+```css
+::-moz-color-swatch {
+  /* ... */
+}
+```
 
 ## 例
 
@@ -38,7 +44,7 @@ input[type="color"]::-moz-color-swatch {
 
 ## 仕様書
 
-どの仕様書でも定義されていません。これは Gecko に固有の専用の擬似要素です。
+どの仕様書にも含まれていません。
 
 ## ブラウザーの互換性
 
@@ -46,5 +52,5 @@ input[type="color"]::-moz-color-swatch {
 
 ## 関連情報
 
-- 他のブラウザーで使用される似た擬似要素
-  - {{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) で対応している擬似要素
+- 他のブラウザーで使われる似た擬似要素:
+  - {{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素

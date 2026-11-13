@@ -18,7 +18,7 @@ OfflineAudioContext.suspend(suspendTime).then(function() { ... });
 ### 参数
 
 - 暂停时间
-  - : A {{jsxref("double")}} 指定暂停的时间。
+  - : A `double` 指定暂停的时间。
 
 ### 返回值
 

@@ -16,7 +16,7 @@ L'interface **`HTMLDivElement`** fournit certaines propriétés spécifiques (en
 _Cette interface hérite des propriétés de son parent {{DOMxRef("HTMLElement")}}._
 
 - `HTMLDivElement.align` {{Deprecated_Inline}}
-  - : Une chaîne de caractères {{DOMxRef("DOMString")}} qui représente une propriété à valeur contrainte indiquant l'alignement du contenu de l'élément par rapport à son contexte. Les valeurs possibles pour cette propriété sont `"left"`, `"right"`, `"justify"` et `"center"`.
+  - : Une chaîne de caractères {{jsxref("String")}} qui représente une propriété à valeur contrainte indiquant l'alignement du contenu de l'élément par rapport à son contexte. Les valeurs possibles pour cette propriété sont `"left"`, `"right"`, `"justify"` et `"center"`.
 
 ## Méthodes d'instance
 

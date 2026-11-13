@@ -20,7 +20,7 @@ Quand `aria-relevant` n'est pas défini, la valeur est héritée du plus proche 
 
 Bien que non supportée, si la valeur `none` est la plus logique, la zone ne doit pas être une région dynamique.
 
-Les valeurs `removals` et `all` doivent être utilisées avec parcimonie. Par exemple, lorsqu'un but est marqué lors de la Coupe du monde, le nouveau score (l'ajout) est important, l'ancien score (la suppression) ne l'est pas. Les technologies d'assistance n'ont besoin d'être informées d'une suppression de contenu que si celle-ci représente un changement important, comme lorsqu'un·e joueur·euse est retiré·e du jeu.
+Les valeurs `removals` et `all` doivent être utilisées avec parcimonie. Par exemple, lorsqu'un but est marqué lors de la Coupe du monde, le nouveau score (l'ajout) est important, l'ancien score (la suppression) ne l'est pas. Les technologies d'assistance n'ont besoin d'être informées d'une suppression de contenu que si celle-ci représente un changement important, comme lorsqu'un·e joueur·se est retiré·e du jeu.
 
 ## Valeurs
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 O primeiro artigo da nossa série de tutoriais práticos explica o que você irá aprender, e fornece uma visão do site de exemplo "biblioteca local" que estaremos trabalhando e evoluindo em artigos seguintes.
 
@@ -14,7 +14,7 @@ O primeiro artigo da nossa série de tutoriais práticos explica o que você ir�
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler a
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >introdução ao Django</a
         >. Para os próximos artigos você também necessitará ter montando o
         <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"

@@ -1,8 +1,9 @@
 ---
-title: "<select> : l'élément de liste déroulante"
+title: "Élément HTML `<select>` : l'élément de liste déroulante"
+short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 26fb7eaa7b398a35c2463fa15ab6ccfa46a9e06d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.
@@ -36,9 +37,38 @@ select {
 }
 ```
 
-L'exemple ci-avant illustre une utilisation typique de `<select>`. Il reçoit un attribut `id` pour pouvoir être associé à un élément {{HTMLElement("label")}} à des fins d'accessibilité, ainsi qu'un attribut `name` pour représenter le nom de la donnée envoyée au serveur. Chaque option du menu est définie par un élément {{HTMLElement("option")}} imbriqué dans l'élément `<select>`.
+## Attributs
 
-Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut sera le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` sera sélectionné par défaut.
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+- [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete)
+  - : Une chaîne de caractères qui fournit une indication à {{Glossary("user agent", "l'agent utilisateur")}} pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
+- `autofocus`
+  - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire doit recevoir la sélection au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
+- [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
+  - : Cet attribut booléen indique que l'utilisateur·ice ne peut pas interagir avec le contrôle. Si cet attribut n'est pas utilisé, le contrôle hérite de l'état paramétré selon son conteneur (par exemple, par son élément parent {{HTMLElement("fieldset")}}). Si aucun élément parent n'a l'attribut `disabled` activé, le contrôle est actif.
+    [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
+  - : L'élément {{HTMLElement("form")}} auquel associer le `<select>` (son _propriétaire de formulaire_). La valeur de cet attribut doit être un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, le `<select>` est associé à son élément `<form>` ancêtre, s'il existe.)
+
+    Cet attribut permet de définir l'association d'éléments `<select>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi définir une association différente de celle d'un ancêtre `<form>`.
+
+- [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple)
+  - : Cet attribut booléen indique que zéro ou plusieurs options peuvent être sélectionnées dans la liste. S'il n'est pas défini, une seule option peut être sélectionnée à la fois. Les options sélectionnées multiples sont envoyées en utilisant la convention de tableau {{DOMxRef("URLSearchParams")}}, c'est-à-dire `name=value1&name=value2`. Si `multiple` est défini, `size` par défaut est `4` au lieu de `1`.
+- `name`
+  - : Le nom associé au contrôle.
+- [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)
+  - : Cet attribut booléen indique que l'utilisateur·ice doit sélectionner au moins une option avant de pouvoir envoyer le formulaire. Le `<select>` n'a aucune option sélectionnée s'il n'a pas d'options, si `multiple` est défini et que l'utilisateur·ice désélectionne toutes les options, si la valeur du `<select>` est définie par programme à `""`, ou si seule _l'option étiquette de remplacement_ est sélectionnée. Toute option autre que l'option étiquette de remplacement est considérée comme valide, même si sa valeur est également vide.
+
+    L'option étiquette de remplacement est le texte affiché dans la boîte avant que l'utilisateur·ice ne fasse un choix, comme le «&nbsp;--Veuillez choisir une option--&nbsp;» dans la démo [Essayez-le](#try_it) ci-dessus. Sémantiquement, elle est considérée comme équivalente à l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Attributes/placeholder) et n'est pas considérée comme une option réelle. Elle est définie comme la première option de la liste des options qui est un enfant direct du `<select>` (pas à l'intérieur d'un `<optgroup>`) et dont la valeur est une chaîne de caractères vide. Elle n'est pertinente que lorsque `size` est `1` et que `multiple` n'est pas défini&nbsp;; dans tous les autres cas, un tel `<option>` est simplement une option normale en raison de la façon dont le `<select>` est rendu.
+
+- [`size`](/fr/docs/Web/HTML/Reference/Attributes/size)
+  - : Cet attribut représente le nombre d'options à afficher à la fois et doit être un entier positif. Si la valeur est `1`, les navigateurs affichent une liste déroulante. Si la valeur est supérieure à `1`, les navigateurs affichent une zone de liste défilante avec le nombre de lignes visibles défini. Si l'attribut n'est pas défini, la valeur par défaut est `1`. Si l'attribut `multiple` est défini, la valeur par défaut est `4`. Cependant, pour des raisons de compatibilité descendante, la propriété {{DOMxRef("HTMLSelectElement.size","size")}} retourne toujours `0` comme valeur par défaut.
+
+## Notes d'utilisation
+
+Comme pour les autres contrôles de formulaire, un élément `<select>` est associé à un {{HTMLElement("label")}} à des fins d'accessibilité, ainsi qu'à un attribut `name` pour représenter le nom du point de données associé envoyé au serveur. Chaque option de menu est définie par un élément {{HTMLElement("option")}} imbriqué à l'intérieur du `<select>`.
+
+Chaque élément `<option>` doit avoir un attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/option#value) pour définir la valeur à envoyer au serveur lorsque cette option est sélectionnée. Si aucun attribut `value` n'est défini, la valeur par défaut est le texte contenu dans l'élément. Vous pouvez définir un attribut [`selected`](/fr/docs/Web/HTML/Reference/Elements/option#selected) sur un élément `<option>` pour qu'il soit sélectionné par défaut au chargement de la page. Si aucun attribut `selected` n'est défini, le premier élément `<option>` est sélectionné par défaut.
 
 Un élément `<select>` est représenté en JavaScript par un objet {{DOMxRef("HTMLSelectElement")}}, et cet objet possède une propriété {{DOMxRef("HTMLSelectElement.value", "value")}} qui contient la valeur de l'option sélectionnée.
 
@@ -48,61 +78,48 @@ Vous pouvez également imbriquer des éléments {{HTMLElement("option")}} à l'i
 
 Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#contenu_déroulant).
 
-## Attributs
+### Options dans des éléments conteneurs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+L'élément `<select>` construit sa liste d'options à partir de tous les descendants `<option>`, pas seulement de ses enfants directs.
+Cela signifie que les options peuvent être enveloppées dans d'autres éléments, tels que des éléments {{HTMLElement("div")}}, et qu'elles apparaissent toujours comme des options sélectionnables dans le menu déroulant et sont incluses dans l'envoi du formulaire.
+Les éléments d'encapsulation sont utiles pour le style dans les [éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select) mais n'ont aucun effet sur le comportement du sélecteur&nbsp;: ils ne créent pas de groupes, d'étiquettes ou de séparateurs.
+Pour regrouper des options sous un en-tête, utilisez un {{HTMLElement("optgroup")}}&nbsp;; une {{HTMLElement("option")}} compte comme faisant partie d'un `<optgroup>` si le groupe est un ancêtre, donc les éléments d'encapsulation peuvent également être utilisés à l'intérieur d'un groupe sans rompre l'association.
 
-- [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete)
-  - : Une chaîne de caractères qui fournit une indication à {{Glossary("user agent", "l'agent utilisateur")}} pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
-- `autofocus`
-  - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
-- [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled)
-  - : Cet attribut booléen indique que l'utilisateur·ice ne peut pas intéragir avec le contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état paramétré selon son conteneur (par exemple, via son élément parent {{HTMLElement("fieldset")}}. Si aucun élément parent n'a l'attribut `disabled` activé, le contrôle sera actif.
-    [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
-  - : L'élément {{HTMLElement("form")}} auquel associer le `<select>` (son _propriétaire de formulaire_). La valeur de cet attribut doit être l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un `<form>` dans le même document. (Si cet attribut n'est pas défini, le `<select>` est associé à son élément `<form>` ancêtre, s'il existe.)
-
-    Cet attribut permet de définir l'association d'éléments `<select>` à des `<form>` n'importe où dans le document, pas seulement à l'intérieur d'un `<form>`. Il peut aussi définir une association différente de celle d'un ancêtre `<form>`.
-
-- [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple)
-  - : Cet attribut booléen indique qu'on peut sélectionner plusieurs options parmi celles offertes dans le contrôle. Par défaut, si cet attribut n'est pas utilisé, seule une option peut être sélectionnée.
-- `name`
-  - : Le nom associé au contrôle.
-- [`required`](/fr/docs/Web/HTML/Reference/Attributes/required)
-  - : Un attribut booléen qui indique qu'une option dont la valeur est une chaîne de caractères non-vide doit être sélectionnée.
-- [`size`](/fr/docs/Web/HTML/Reference/Attributes/size)
-  - : Si le contrôle est affiché comme une liste déroulante à défilement (par exemple, lorsque `multiple` est défini), cet attribut permet de définir le nombre de lignes de la liste qui doivent être visibles en même temps. Les navigateurs ne sont pas obligés d'afficher un élément select sous forme de liste à défilement. La valeur par défaut est `0`.
-
-    > [!NOTE]
-    > Selon la spécification HTML, la valeur par défaut de size doit être `1`&nbsp;; cependant, en pratique, cela a été constaté comme cassant certains sites web, et aucun autre navigateur ne fait cela actuellement, donc Mozilla a choisi de continuer à retourner `0` pour le moment avec Firefox.
-
-## Notes d'utilisation
+> [!NOTE]
+> Les navigateurs avec un comportement d'analyse moderne conservent tous les éléments écrits à l'intérieur d'un `<select>` dans le DOM — y compris les éléments d'encapsulation, {{HTMLElement("button")}} et {{HTMLElement("selectedcontent")}}.
+> Les anciens navigateurs, en revanche, suppriment les éléments non autorisés lors de l'analyse, ne conservant que la structure `<option>`, `<optgroup>` et `<hr>`.
+> En conséquence, le style, le balisage ou le script qui dépendent des éléments supprimés ne fonctionnent pas sur les anciens navigateurs.
 
 ### Sélectionner plusieurs options
 
-Sur un ordinateur de bureau, il existe différentes façons de sélectionner plusieurs options pour un élément `<select>` utilisant un attribut `multiple`.
+Sur un ordinateur de bureau, il existe différentes façons de sélectionner plusieurs options pour un élément `<select>` utilisant un attribut `multiple` et un attribut `size` supérieur à `1`.
 
-Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Maj</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/déselectionner.
+Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Maj</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/désélectionner.
 
 > [!WARNING]
 > Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox.
 >
-> Sous macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Flèche vers le haut</kbd> et <kbd>Ctrl</kbd> + <kbd>Flèche vers le bas</kbd> sont en conflit avec les raccourcis système par défaut pour _Mission Control_ et _Fenêtres d'application_, il faudra donc les désactiver pour que cela fonctionne.
+> Sous macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Flèche vers le haut</kbd> et <kbd>Ctrl</kbd> + <kbd>Flèche vers le bas</kbd> sont en conflit avec les raccourcis système par défaut pour _Mission Control_ et _Fenêtres d'application_, il faut donc les désactiver pour que cela fonctionne.
 
-Les utilisateur·ice·s du clavier pourront sélectionner des options contigües de la façon suivante&nbsp;:
+Les utilisateur·ice·s du clavier peuvent sélectionner des options contigües de la façon suivante&nbsp;:
 
-- Placer le focus sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
+- Placer la sélection sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
 - Sélectionner une option en haut ou en bas de l'intervalle en se déplaçant avec les touches <kbd>Haut</kbd> et <kbd>Bas</kbd>.
 - Maintenir la touche <kbd>Shift</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour augmenter ou réduire le nombre d'options sélectionnées.
 
-Les utilisateur·ice·s du clavier pourront sélectionner des options non-contigües de la façon suivante&nbsp;:
+Les utilisateur·ice·s du clavier peuvent sélectionner des options non-contigües de la façon suivante&nbsp;:
 
-- Placer le focus sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
-- Maintenir la touche <kbd>Ctrl</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour modifier le focus sur l'option qu'on souhaite choisir ou rejeter. L'option avec le focus sera entourée par un contour en pointillé.
-- Appuyer sur <kbd>Espace</kbd> pour sélectionner/déselectionner les options avec le focus et ainsi de suite pour les différentes options.
+- Placer la sélection sur l'élément `<select>` (avec la touche <kbd>Tab</kbd> par exemple).
+- Maintenir la touche <kbd>Ctrl</kbd> puis utiliser les touches <kbd>Haut</kbd> et <kbd>Bas</kbd> pour modifier la sélection sur l'option qu'on souhaite choisir ou rejeter. L'option avec la sélection est entourée par un contour en pointillé.
+- Appuyer sur <kbd>Espace</kbd> pour sélectionner/désélectionner les options avec la sélection et ainsi de suite pour les différentes options.
 
 ## Mise en forme avec CSS
 
-L'élément `<select>` a historiquement été réputé difficile à mettre en forme efficacement avec CSS, d'où l'introduction de fonctionnalités permettant de créer des [éléments de sélection entièrement personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select).
+L'élément `<select>` a historiquement été réputé difficile à mettre en forme efficacement avec CSS.
+Les guides suivants contiennent des informations sur les fonctionnalités plus récentes qui ont été introduites pour permettre des éléments de sélection entièrement personnalisables&nbsp;:
+
+- [Éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [Listes de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
 
 ### Mise en forme héritée des select
 
@@ -126,10 +143,9 @@ L'élément `<hr>` à l'intérieur d'un `<select>` doit être considéré comme 
 
 ### Sélecteur simple
 
-#### HTML
+L'exemple suivant crée un menu déroulant à trois valeurs. La deuxième option inclut l'attribut `selected`, ce qui fait que cette option est sélectionnée par défaut.
 
 ```html
-<!-- C'est la deuxième valeur qui sera initialement sélectionnée -->
 <select id="monselect">
   <option value="valeur1">Valeur 1</option>
   <option value="valeur2" selected>Valeur 2</option>
@@ -187,6 +203,11 @@ L'exemple suivant crée un menu déroulant avec des groupes à l'aide de {{HTMLE
 
 L'exemple qui suit est légèrement plus complexe et illustre certaines fonctionnalités qui peuvent être utilisées avec un élément `<select>`&nbsp;:
 
+- L'attribut `multiple` permet de sélectionner plusieurs options.
+- L'attribut `size` est défini sur `4`, ce qui signifie que 4 lignes sont affichées à la fois. Les utilisateur·ice·s peuvent faire défiler pour voir toutes les options.
+- Deux éléments {{HTMLElement("optgroup")}} sont inclus, créant deux regroupements visuels, généralement avec le nom du groupe en gras et les options imbriquées étant indentées.
+- L'attribut `disabled` est inclus sur l'option «&nbsp;Hamster&nbsp;», ce qui rend cette option non sélectionnable.
+
 ```html
 <label
   >Veuillez choisir un ou plusieurs animaux&nbsp;:
@@ -208,13 +229,6 @@ L'exemple qui suit est légèrement plus complexe et illustre certaines fonction
 #### Résultat
 
 {{EmbedLiveSample("Sélecteur avancé avec multi-sélection", "", 100)}}
-
-Vous pourrez voir que&nbsp;:
-
-- Plusieurs options peuvent être sélectionnées grâce à l'attribut `multiple`.
-- L'attribut `size` permet d'afficher uniquement 4 lignes simultanément et qu'il faut faire défiler le contenu.
-- Les éléments {{HTMLElement("optgroup")}} ont été utilisés pour diviser les choix en différents groupes. Cela applique un effet simplement visuel (avec le nom en gras et les options indentées).
-- Le choix "Hamster" est présent avec l'attribut `disabled` et ne peut donc pas être sélectionné.
 
 ## Résumé technique
 
@@ -256,11 +270,9 @@ Vous pourrez voir que&nbsp;:
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Zéro ou plusieurs éléments {{HTMLElement("option")}},
-        {{HTMLElement("optgroup")}}, ou {{HTMLElement("hr")}} dans les éléments <code>&lt;select&gt;</code> traditionnels. Dans les <a href="/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select">éléments de sélection personnalisables</a>&nbsp;:
         <ul>
-          <li>Le bouton de sélection {{HTMLElement("button")}} peut être inclus en tant qu'enfant <code>&lt;button&gt;</code> avec un élément {{HTMLElement("selectedcontent")}} imbriqué.</li>
-          <li>Le sélecteur déroulant est défini comme n'importe quel autre contenu, ce qui peut inclure zéro ou plusieurs éléments <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;hr&gt;</code>, {{HTMLElement("div")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} et {{HTMLElement("noscript")}}.</li>
+          <li>Les éléments {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("hr")}}, éventuellement précédés d'un élément {{HTMLElement("button")}} avec un élément {{HTMLElement("selectedcontent")}} imbriqué si c'est une boîte déroulante.</li>
+          <li>Les éléments {{HTMLElement("div")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} et {{HTMLElement("noscript")}}.</li>
         </ul>
       </td>
     </tr>
@@ -283,7 +295,7 @@ Vous pourrez voir que&nbsp;:
         <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> avec <strong>aucun</strong> attribut
         <code>multiple</code> et <strong>aucun</strong> attribut
         <code>size</code> supérieur à 1, sinon
-        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>.
       </td>
     </tr>
     <tr>
@@ -291,8 +303,8 @@ Vous pourrez voir que&nbsp;:
       <td>
         <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> avec <strong>aucun</strong> attribut
         <code>multiple</code> et <strong>aucun</strong> attribut
-        <code>size</code> supérieur à 1, sinon aucun
-        <code>role</code> autorisé
+        <code>size</code> supérieur à 1, sinon <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+        est autorisé mais n'est pas recommandé.
       </td>
     </tr>
     </tr>
@@ -313,7 +325,7 @@ Vous pourrez voir que&nbsp;:
 
 ## Voir aussi
 
-- Événements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}
 - L'élément {{HTMLElement("option")}}
 - L'élément {{HTMLElement("optgroup")}}
 - [Les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- Évènements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}

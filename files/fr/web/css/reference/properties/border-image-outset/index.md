@@ -1,8 +1,9 @@
 ---
-title: border-image-outset
+title: Propriété CSS `border-image-outset`
+short-title: border-image-outset
 slug: Web/CSS/Reference/Properties/border-image-outset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-outset`** définit la distance de dépassement de l'[image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément par rapport à sa boîte de bordure.

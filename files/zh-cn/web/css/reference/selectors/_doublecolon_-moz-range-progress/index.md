@@ -12,7 +12,11 @@ The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/do
 
 ## 语法
 
-{{csssyntax}}
+```css
+::-moz-range-progress {
+  /* ... */
+}
+```
 
 ## 示例
 

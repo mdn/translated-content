@@ -36,7 +36,7 @@ Promise는 어떤 작업의 중간상태를 나타내는 오브젝트 입니다.
 
 그 버튼은 사용자 컴퓨터의 카메라와 마이크를 사용하기 위해 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 를 호출합니다. `getUserMedia()` 는 사용자가 이러한 장치를 사용할 수 있는 권한을 가지고 있는지 확인해야 하고, 어떤 마이크와 카메라를 사용할 것인지 (혹은 음성 통화인지, 아니면 다른 옵션들이 있는지)를 체크해야하기 때문에 모든 결정이 내려질 때 까지 다음 작업을 차단할 수 있습니다. 또한 카메라와 마이크가 작동하기 전 까지 다음 작업을 차단할수도 있습니다.
 
-`getUserMedia()` 는 브라우저의 main thread에서 실행되므로 `getUserMedia()` 결과가 반환되기 전 까지 후행 작업이 모두 차단됩니다. 이러한 blocking은 우리가 바라는게 아닙니다. Promise가 없으면 이러한 결정이 내려지기 전 까지 브라우저의 모든 것을 사용할 수 없게됩니다. 따라서 사용자가 선택한 장치를 활성화하고 소스에서 선택된 스트림에 대해{{domxref("MediaStream")}} 직접 반환하는 대신 `getUserMedia()` 는 모든 장치가 사용 가능한 상태가 되면 {{domxref("MediaStream")}}이 포함된 {{jsxref("promise")}}를 반환합니다.
+`getUserMedia()` 는 브라우저의 main thread에서 실행되므로 `getUserMedia()` 결과가 반환되기 전 까지 후행 작업이 모두 차단됩니다. 이러한 blocking은 우리가 바라는게 아닙니다. Promise가 없으면 이러한 결정이 내려지기 전 까지 브라우저의 모든 것을 사용할 수 없게됩니다. 따라서 사용자가 선택한 장치를 활성화하고 소스에서 선택된 스트림에 대해{{domxref("MediaStream")}} 직접 반환하는 대신 `getUserMedia()` 는 모든 장치가 사용 가능한 상태가 되면 {{domxref("MediaStream")}}이 포함된 {{jsxref("Promise")}}를 반환합니다.
 
 비디오 채팅 애플리케이션의 코드는 아래처럼 작성할 수 있습니다.
 
@@ -174,7 +174,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
 > [!NOTE]
-> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
+> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn_web_development/Core/Version_control).
 
 1. 먼저 [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 fetch할 이미지인 [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) 을 다운받습니다.
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.
@@ -228,7 +228,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
    document.body.appendChild(image);
    ```
 
-   여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
+   여기서 우리는 두 번째 Promise가 fulfills일 때 반환된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
 
 방금 만든 HTML 파일을 저장하고 브라우저에서 불러오면, 이미지가 예상대로 페이지에 표시되는 것을 볼 수 있습니다. 잘 하셨습니다!
 

@@ -92,7 +92,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 - `2.5cm bold`
 - `3vh bold`
 
-次の値には一致します。
+次の値には一致しません。
 
 - `bold`。どちらの成分も出現しなければなりません。
 - `bold 1em bold`。どちらの成分も 1 度だけ出現しなければなりません。
@@ -241,23 +241,23 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 {{CSSSyntaxRaw(`example = bold smaller#{1,3}`)}}
 
-この例は次の値と一致します。
+この例は次の値に一致します。
 
 - `bold smaller`
 - `bold smaller, smaller`
 - `bold smaller, smaller, smaller`
 
-次の値とは一致しません。
+次の値には一致しません。
 
 - `bold smaller, smaller, smaller, smaller`。 `smaller` は最大で 3 回しか出現できません。
 
 {{CSSSyntaxRaw(`example = bold smaller#{2}`)}}
 
-この例は次の値と一致します。
+この例は次の値に一致します。
 
 - `bold smaller, smaller`
 
-次の値とは一致しません。
+次の値には一致しません。
 
 - `bold smaller`。 `smaller` は正確に 2 回出現しなければなりません。
 

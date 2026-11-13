@@ -1,8 +1,9 @@
 ---
-title: shape()
+title: CSS `shape()` 関数
+short-title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 **`shape()`** は [CSS の関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティの図形を定義するために使用されます。これは、図形のパスを定義する一連のシェイプコマンドと起点を組み合わせたものです。`shape()` 関数は、{{cssxref("basic-shape")}} データ型のメンバーです。
@@ -211,11 +212,12 @@ body {
 }
 
 @supports not (offset-path: shape(from 0 0, move to 0 0)) {
-  .container {
-    display: none;
-  }
   body::after {
     content: "このブラウザーはまだ `shape()` 関数に対応していません。";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -297,11 +299,12 @@ body {
 }
 
 @supports not (clip-path: shape(from 0 0, move to 0 0)) {
-  .container {
-    display: none;
-  }
   body::after {
     content: "このブラウザーはまだ `shape()` 関数に対応していません。";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -375,11 +378,12 @@ body {
       close
     )
 ) {
-  .container {
-    display: none;
-  }
   body::after {
-    content: "Your browser doesn't support `shape()` relative control points.";
+    content: "このブラウザーはまだ `shape()` 関数に対応していません。";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

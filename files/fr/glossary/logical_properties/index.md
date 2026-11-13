@@ -2,7 +2,7 @@
 title: Propriétés logiques
 slug: Glossary/Logical_properties
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Les **propriétés logiques** CSS offrent un moyen de disposer le contenu en fonction du mode d'écriture et de la direction du document, plutôt que des dimensions physiques de la zone d'affichage (<i lang="en">viewport</i> en anglais). Cela permet des conceptions plus flexibles et plus faciles à maintenir, en particulier pour les sites prenant en charge plusieurs langues.

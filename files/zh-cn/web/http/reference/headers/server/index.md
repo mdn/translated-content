@@ -56,4 +56,4 @@ Server: Apache/2.4.1 (Unix)
 
 - {{HTTPHeader("Allow")}}
 - [HTTP 观测站](/zh-CN/observatory)
-- [防止信息通过 HTTP 标头泄露](https://owasp.org/www-project-secure-headers/index.html#prevent-information-disclosure-via-http-headers)——OWASP 安全标头项目
+- [防止信息通过 HTTP 标头泄露](https://secure-headers-project.owasp.org/best-practices/#prevent-information-disclosure-via-http-headers)——OWASP 安全标头项目

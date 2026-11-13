@@ -23,7 +23,7 @@ l10n:
 
 ### キャッシュがヒットしたかどうかをチェック
 
-{{domxref("PerformanceResourceTiming.responseStatus", "responseStatus")}} プロパティに対応していない環境では、`transferSize` プロパティを使用してキャッシュヒットを判定することができます。transferSize` がゼロで、リソースがゼロ以外のデコード本体サイズを持っている場合（リソースがsame-originであるか、{{HTTPHeader("Timing-Allow-Origin")}}があるという意味）、リソースはローカルキャッシュからフェッチされたものであることを示します。
+{{domxref("PerformanceResourceTiming.responseStatus", "responseStatus")}} プロパティに対応していない環境では、`transferSize` プロパティを使用してキャッシュヒットを判定することができます。`transferSize` がゼロで、リソースがゼロ以外のデコード本体サイズを持っている場合（リソースがsame-originであるか、{{HTTPHeader("Timing-Allow-Origin")}}があるという意味）、リソースはローカルキャッシュからフェッチされたものであることを示します。
 
 ブラウザーのパフォーマンスタイムラインに記録された新しい `resource` パフォーマンス項目を通知する {{domxref("PerformanceObserver")}} を使用した例です。オブザーバーが作成される前の項目にアクセスするには、`buffered` オプションを使用します。
 

@@ -3,17 +3,16 @@ title: "HTMLTableElement : méthode insertRow()"
 short-title: insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`insertRow()`** de l'interface {{DOMxRef("HTMLTableElement")}} insère une nouvelle ligne ({{HTMLElement("tr")}}) dans un tableau ({{HTMLElement("table")}}) donné et retourne une référence vers la nouvelle ligne.
+La méthode **`insertRow()`** de l'interface {{DOMxRef("HTMLTableElement")}} crée un élément {{HTMLElement("tr")}}, l'insère à la position définie dans la collection {{DOMxRef("HTMLTableElement.rows", "rows")}} et le retourne. Si la collection `rows` est vide et que le tableau ne possède également aucun élément HTML {{HTMLElement("tbody")}}, un élément `<tbody>` est d'abord créé et inséré.
 
-Si une table possède plusieurs éléments HTML {{HTMLElement("tbody")}}, par défaut, la nouvelle ligne est insérée dans le dernier `<tbody>`. Pour insérer la ligne dans une section spécifique, utilisez {{DOMxRef("HTMLTableSectionElement.insertRow()")}}.
+Cette méthode crée et insère l'élément directement, sans nécessiter d'appels séparés à des méthodes telles que {{DOMxRef("Document.createElement()")}}, {{DOMxRef("Node.insertBefore()")}}, et {{DOMxRef("Node.appendChild()")}}.
 
-> [!NOTE]
-> `insertRow()` insère la ligne directement dans la table. La ligne n'a pas besoin d'être ajoutée séparément comme cela aurait été le cas si {{DOMxRef("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<tr>`.
+Pour insérer explicitement une ligne dans une section spécifique, utilisez {{DOMxRef("HTMLTableSectionElement.insertRow()")}}.
 
 ## Syntaxe
 
@@ -22,12 +21,12 @@ insertRow()
 insertRow(index)
 ```
 
-{{DOMxRef("HTMLTableElement")}} est une référence à un élément HTML {{HTMLElement("table")}}.
-
 ### Paramètres
 
 - `index` {{Optional_Inline}}
-  - : L'indice de la nouvelle ligne. Si `index` vaut `-1` ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `index` est omis, sa valeur par défaut est `-1`.
+  - : L'indice de la nouvelle ligne dans la collection {{DOMxRef("HTMLTableElement.rows", "rows")}}. Si `index` vaut `-1` ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `index` est omis, sa valeur par défaut est `-1`.
+
+    Si `rows` est vide, la nouvelle ligne est ajoutée au dernier élément `<tbody>` (un élément est créé s'il n'en existe pas). Sinon, la nouvelle ligne est insérée immédiatement avant la ligne à `index`, ou ajoutée au parent de la dernière ligne si la nouvelle ligne doit devenir la dernière ligne. La nouvelle ligne est insérée dans le même parent que la ligne de référence, elle peut donc être insérée directement dans le `<table>` ou dans n'importe quel élément de section de tableau (`<thead>`, `<tbody>` ou `<tfoot>`).
 
 ### Valeur de retour
 
@@ -36,13 +35,13 @@ Un objet {{DOMxRef("HTMLTableRowElement")}} qui référence la nouvelle ligne.
 ### Exceptions
 
 - `IndexSizeError` {{DOMxRef("DOMException")}}
-  - : Levée si `index` est supérieur au nombre de lignes.
+  - : Levée si `index` est supérieur au nombre de lignes ou inférieur à `-1`.
 
 ## Exemples
 
 Cet exemple utilise `insertRow(-1)` pour ajouter une nouvelle ligne à un tableau.
 
-On utilise ensuite {{DOMxRef("HTMLTableRowElement.insertCell()")}} pour insérer une nouvelle cellule dans la nouvelle ligne. (Pour être valide en HTML, un `<tr>` doit avoir au moins un élément `<td>`.) Enfin, on ajoute du texte à la cellule avec {{DOMxRef("Document.createTextNode()")}} et {{DOMxRef("Node.appendChild()")}}.
+On utilise ensuite {{DOMxRef("HTMLTableRowElement.insertCell()")}} pour insérer une nouvelle cellule dans la nouvelle ligne. Enfin, on ajoute du texte à la cellule avec {{DOMxRef("Document.createTextNode()")}} et {{DOMxRef("Node.appendChild()")}}.
 
 ### HTML
 
@@ -67,16 +66,16 @@ On utilise ensuite {{DOMxRef("HTMLTableRowElement.insertCell()")}} pour insérer
 ```js
 function addRow(tableID) {
   // Récupérer une référence à la table
-  let tableRef = document.getElementById(tableID);
+  const tableRef = document.getElementById(tableID);
 
   // Insérer une ligne à la fin du tableau
-  let newRow = tableRef.insertRow(-1);
+  const newRow = tableRef.insertRow(-1);
 
   // Insérer une cellule dans la ligne à l'indice 0
-  let newCell = newRow.insertCell(0);
+  const newCell = newRow.insertCell(0);
 
   // Ajouter un nœud texte à la cellule
-  let newText = document.createTextNode("Nouvelle ligne inférieure");
+  const newText = document.createTextNode("Nouvelle ligne inférieure");
   newCell.appendChild(newText);
 }
 
@@ -99,3 +98,4 @@ addRow("mon-tableau");
 ## Voir aussi
 
 - La méthode {{DOMxRef("HTMLTableRowElement.insertCell()")}}
+- La méthode {{DOMxRef("HTMLTableSectionElement.insertRow()")}}

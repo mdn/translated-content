@@ -1,33 +1,36 @@
 ---
-title: clearInterval()
+title: "Window : méthode clearInterval()"
+short-title: clearInterval()
 slug: Web/API/Window/clearInterval
-original_slug: Web/API/clearInterval
+l10n:
+  sourceCommit: 1c858224f09f1c9c85b9e3f7bd535e72137ea1a6
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode globale **`clearInterval()`** permet d'annuler une action répétée minutée initiée via un appel à [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Si le paramètre fourni ne permet pas d'identifier une action lancée précédemment, cette méthode n'a aucun effet.
+La méthode **`clearInterval()`** de l'interface {{DOMxRef("Window")}} annule une action répétée programmée qui a été précédemment établie par un appel à {{DOMxRef("Window.setInterval", "setInterval()")}}. Si le paramètre fourni n'identifie pas une action précédemment établie, cette méthode ne fait rien.
 
 ## Syntaxe
 
-```js
-clearInterval(intervalID);
+```js-nolint
+clearInterval(intervalID)
 ```
 
 ### Paramètres
 
 - `intervalID`
-  - : L'identifiant de l'intervalle de répétition qu'on souhaite annuler. Cet identifiant est renvoyé lorsqu'on appelle `setInterval()` pour définir l'intervalle de répétition.
+  - : L'identifiant de l'action répétée que vous souhaitez annuler. Cet identifiant a été retourné par l'appel correspondant à `setInterval()`.
 
-On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par [`setInterval()`](/fr/docs/Web/API/Window/setInterval) et ceux fournis par [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout). Cela signifie qu'on peut, techniquement, utiliser `clearInterval()` et [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout) de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.
+Il est utile de noter que le pool d'identifiants utilisé par {{DOMxRef("Window.setInterval", "setInterval()")}} et {{DOMxRef("Window.setTimeout", "setTimeout()")}} est partagé, ce qui signifie que vous pouvez techniquement utiliser `clearInterval()` et {{DOMxRef("Window.clearTimeout", "clearTimeout()")}} de façon interchangeable.
+Cependant, pour plus de clarté, il est préférable d'éviter de le faire.
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
-Voir [l'exemple `setInterval()`](/fr/docs/Web/API/Window/setInterval#exemples).
+Voir {{DOMxRef("Window.setInterval", "setInterval()")}} pour des exemples.
 
 ## Spécifications
 
@@ -39,7 +42,7 @@ Voir [l'exemple `setInterval()`](/fr/docs/Web/API/Window/setInterval#exemples).
 
 ## Voir aussi
 
-- [`setTimeout`](/fr/docs/Web/API/Window/setTimeout)
-- [`setInterval`](/fr/docs/Web/API/Window/setInterval)
-- [`clearTimeout`](/fr/docs/Web/API/Window/clearTimeout)
-- [`Window.requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame)
+- La méthode {{DOMxRef("Window.setInterval()")}}
+- La méthode {{DOMxRef("WorkerGlobalScope.clearInterval()")}}
+- La méthode {{DOMxRef("Window.clearTimeout()")}}
+- La méthode {{DOMxRef("Window.cancelAnimationFrame()")}}

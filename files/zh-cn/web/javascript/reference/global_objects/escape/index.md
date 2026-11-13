@@ -3,15 +3,13 @@ title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 ---
 
-{{deprecated_header}}
-
 ## 概览
 
 废弃的 **`escape()`** 方法生成新的由十六进制转义序列替换的字符串。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 代替。
 
 ## 语法
 
-```plain
+```js-nolint
 escape(str)
 ```
 

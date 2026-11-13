@@ -1,37 +1,32 @@
 ---
 title: WebAssembly.Table.prototype.length
 slug: WebAssembly/Reference/JavaScript_interface/Table/length
-original_slug: WebAssembly/JavaScript_interface/Table/length
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-{{WebAssemblySidebar}}
-
-La propriété **`length`**, rattachée au prototype de l'objet {{jsxref("WebAssembly.Table")}}, renvoie la longueur du tableau WebAssembly, c'est-à-dire le nombre d'éléments qui y sont stockées.
-
-## Syntaxe
-
-```js
-table.length;
-```
+La propriété en lecture seule **`length`** de l'objet [`WebAssembly.Table`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table) retourne la longueur du tableau, c'est-à-dire le nombre d'éléments dans le tableau.
 
 ## Exemples
 
-Avec l'instruction qui suit, on crée un tableau WebAssembly avec une taille initiale de 2 éléments et avec une taille maximale de 10.
+### Utiliser la propriété `length`
+
+L'exemple suivant crée une nouvelle instance de tableau WebAssembly avec une taille initiale de 2 et une taille maximale de 10&nbsp;:
 
 ```js
-var table = new WebAssembly.Table({
+const tableau = new WebAssembly.Table({
   element: "anyfunc",
   initial: 2,
   maximum: 10,
 });
 ```
 
-On peut ensuite étendre le tableau d'un élément :
+On agrandit le tableau d'un élément en utilisant `WebAssembly.grow()`&nbsp;:
 
 ```js
-console.log(table.length); // "2"
-console.log(table.grow(1)); // "2"
-console.log(table.length); // "3"
+console.log(tableau.length); // 2
+tableau.grow(1);
+console.log(tableau.length); // 3
 ```
 
 ## Spécifications
@@ -44,6 +39,6 @@ console.log(table.length); // "3"
 
 ## Voir aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- Un aperçu de [WebAssembly](/fr/docs/WebAssembly)
+- [Les concepts associés à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

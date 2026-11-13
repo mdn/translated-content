@@ -290,8 +290,7 @@ textarea.onkeyup = function () {
 ```html hidden
 <h2>Input</h2>
 <textarea id="code" class="input">
-&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea
->
+&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">

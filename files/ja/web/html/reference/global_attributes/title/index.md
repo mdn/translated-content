@@ -1,12 +1,12 @@
 ---
-title: HTML title グローバル属性
+title: "`title` グローバル属性"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bcb7d4dde9f0a43664c64587d9d70b8835286eb7
 ---
 
-**`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
+**`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関する注意事項の情報を表すテキストを含みます。
 
 {{InteractiveExample("HTML デモ: title", "tabbed-shorter")}}
 
@@ -31,9 +31,11 @@ iframe {
 }
 ```
 
-`title` 属性の主な用途は、 {{HTMLElement("iframe")}} 要素の支援技術のためのラベル付けです。
+## 解説
 
-`title` 属性は、[データ表](/ja/docs/Web/HTML/Reference/Elements/table)内のコントロールのラベル付けに使用することもできます。
+`title` 属性の主な用途は、支援技術のために {{HTMLElement("iframe")}} 要素にラベルを付けることです。
+
+`title` 属性は、[データ表](/ja/docs/Web/HTML/Reference/Elements/table)内のコントロールにラベルを付けるために使用することもできます。
 
 `title` 属性は、[`<link rel="stylesheet">`](/ja/docs/Web/HTML/Reference/Elements/link) に追加すると、代替のスタイルシートを作成することができます。代替スタイルシートを `<link rel="alternate">` で定義する場合、この属性は必須であり、空でない文字列を設定する必要があります。
 
@@ -49,13 +51,26 @@ iframe {
 
 ```html
 <p>
-  Newlines in <code>title</code> should be taken into account, like
+  Newlines in <code>title</code> should be taken into account. This
   <span
     title="This is a
-multiline title"
-    >example</span
-  >.
+multiline title">
+    example span
+  </span>
+  has a title attribute with a newline.
 </p>
+<hr />
+<pre id="output"></pre>
+```
+
+### JavaScript
+
+次のようにして、`title` 属性を取得し、空の `<pre>` 要素内に表示させることができます：
+
+```js
+const span = document.querySelector("span");
+const output = document.querySelector("#output");
+output.textContent = span.title;
 ```
 
 ### 結果
@@ -72,8 +87,8 @@ multiline title"
 
 ```html
 <div title="CoolTip">
-  <p>Hovering here will show "CoolTip".</p>
-  <p title="">Hovering here will show nothing.</p>
+  <p>ここにポインターをかざすと "CoolTip" と表示されます。</p>
+  <p title="">ここにポインターをかざしても何も表示されません。</p>
 </div>
 ```
 
@@ -81,7 +96,7 @@ multiline title"
 
 {{EmbedLiveSample('Title_attribute_inheritance')}}
 
-## アクセシビリティの考慮
+## アクセシビリティの注意事項
 
 `title` 属性を使用することは、次のような人々にとって大きな問題になります。
 
@@ -94,7 +109,7 @@ multiline title"
 これは、ブラウザーが表示するページを追加支援技術が解釈することによる複合性について、ブラウザーの互換性に一貫性がないためです。ツールチップ効果が必要であれば、上記の閲覧方法でもアクセスできる[もっとアクセシブルな技術を使用する](https://inclusive-components.design/tooltips-toggletips/)方が効果的です。
 
 - [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute)
-- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [Using the HTML title attribute – updated | Vispero](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 - [Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)
 - [The Trials and Tribulations of the Title Attribute - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 

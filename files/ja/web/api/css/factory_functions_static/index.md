@@ -2,7 +2,7 @@
 title: CSS 数値ファクトリー関数
 slug: Web/API/CSS/factory_functions_static
 l10n:
-  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
+  sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
 ---
 
 {{APIRef("CSSOM")}}
@@ -59,6 +59,15 @@ CSS.dppx(number)
 // <flex>
 CSS.fr(number)
 ```
+
+### 引数
+
+- `number`
+  - : CSS 単位値で使用される数値です。
+
+### 返値
+
+指定された値と単位をつけて {{domxref("CSSUnitValue")}} オブジェクトです。
 
 ## 例
 

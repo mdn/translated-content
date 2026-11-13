@@ -1,8 +1,9 @@
 ---
-title: display
+title: "`display` プロパティ (CSS)"
+short-title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: afcdfa050626bb7eb05ee693df8997020db9ff2e
 ---
 
 **`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/Guides/Display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)などを設定します。
@@ -16,7 +17,7 @@ display: block;
 ```
 
 ```css interactive-example-choice
-display: inline-block;
+display: inline flow-root;
 ```
 
 ```css interactive-example-choice
@@ -74,34 +75,35 @@ code {
 ## 構文
 
 ```css
-/* 構成済みの値 */
+/* 短縮表示値 */
+display: none;
+display: contents;
 display: block;
+display: flow-root;
 display: inline;
 display: inline-block;
+display: list-item;
+display: inline list-item;
 display: flex;
 display: inline-flex;
 display: grid;
 display: inline-grid;
-display: flow-root;
+display: table;
+display: inline-table;
 
-/* ボックスの抑制 */
-display: none;
-display: contents;
-
-/* 複数キーワードの構文 */
-display: block flex;
+/* 完全表示値 */
 display: block flow;
 display: block flow-root;
-display: block grid;
-display: inline flex;
 display: inline flow;
 display: inline flow-root;
+display: block flow list-item;
+display: inline flow list-item;
+display: block flex;
+display: inline flex;
+display: block grid;
 display: inline grid;
-
-/* その他の値 */
-display: table;
-display: table-row; /* すべての表の要素が同等の CSS display 値を持っています */
-display: list-item;
+display: block table;
+display: inline table;
 
 /* グローバル値 */
 display: inherit;
@@ -127,10 +129,10 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
       - : この要素は、自身の前後に改行を生成しない 1 つ以上のインラインボックスを生成します。通常のフローでは、次の要素は、空間があれば同じ行になります。
 
 > [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーでは、**外側**の値のみがあるのを見つけると（`display: block` や `display: inline` が指定されている場合など）、内側の値を `flow` に設定します。（例えば、 `display: block flow` や `display: inline flow` のように。）
+> display プロパティを**外側**の値のみで指定すると（`display: block` や `display: inline` など）、内側の値はデフォルトで `flow` になります（例えば、 `display: block flow` や `display: inline flow`）。
 
 > [!NOTE]
-> 古いブラウザーでも確実にレイアウトが機能するように、 1 つの値の構文を使用することができます。例えば、 `display: inline flex` には次のように代替を指定することができます。
+> 単一の値の構文を、複数キーワードの構文のフォールバックとして使用することができます。例えば、 `display: inline flex` には次のようにフォールバックを指定することができます。
 >
 > ```css
 > .container {
@@ -164,7 +166,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
       - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) 整形モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
 > [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示型のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示型を `block` に設定します（`display: block flex` や `display: block grid` など）。
+> display プロパティを**内側**の値のみで指定すると（`display: flex` や `display: grid` など）、外側の値はデフォルトで `block` になります（`display: block flex` や `display: block grid` など）。
 
 ### リストアイテム
 
@@ -176,8 +178,8 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
 > [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーでは、内側の表示型がないと既定で `flow` になります。
-> 外側の表示型が指定されないと、基本ボックスは外側の表示型が `block` になります。
+> 内側の値を指定しなかった場合は、デフォルトで `flow` になります。
+> 外側の値が指定されないと、基本ボックスは外側の表示型が `block` になります。
 
 ### 内部
 
@@ -269,7 +271,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ## 解説
 
-`display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例をを設定しています。 — [構文](#構文)の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
+`display` に設定できる様々な種類の値の個々のページでは、それらの値が動作する機能の複数の例を設定しています。 — [構文](#構文)の節を参照してください。なお、 display の様々な値については、以下の資料で詳しく解説していますので、ご覧ください。
 
 ### 複数キーワード値
 
@@ -347,8 +349,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
 
-- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/articles/hidden-content-for-better-a11y/)
 - [MDN WCAG を理解する ― ガイドライン 1.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -499,6 +500,7 @@ updateDisplay();
 
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール
 - SVG の {{SVGAttr("display")}} 属性
 - [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [整形コンテキストの紹介](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)

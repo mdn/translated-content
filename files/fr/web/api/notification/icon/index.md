@@ -15,7 +15,7 @@ Notification.icon;
 
 ### Valeur
 
-Une {{domxref("USVString")}}.
+Une {{jsxref("String")}}.
 
 ## Spécifications
 

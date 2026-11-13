@@ -15,9 +15,9 @@ l10n:
     <tr>
       <th scope="row">전제조건:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML">HTML</a>,
-        <a href="/ko/docs/Learn/CSS">CSS</a>, 및
-        <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어 핵심에 대한 친숙도
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어 핵심에 대한 친숙도
       </td>
     </tr>
     <tr>
@@ -323,9 +323,9 @@ it("Increments the count when clicked", () => {
 프레임워크를 사용하여 애플리케이션을 만들 때, 사용할 실제 언어, 기능 및 도구에 대해 아이디어가 좀 더 떠올랐나요? 지금부터 열정적으로 시작하고 실제로 코딩해보세요. 지금 학습을 시작할 프레임워크를 선택해보세요.
 
 - [React](/ko/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-- [Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-- [Vue](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
-- [Svelte](/ko/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
-- [Angular](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+- [Ember](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
+- [Vue](/ko/docs/conflicting/Learn_web_development/Core/Frameworks_libraries)
+- [Svelte](/ko/docs/conflicting/Learn_web_development/Core/Frameworks_libraries_55929fef48d3a16d971374ad30a0fdfc4ca3ceb66be71d227faa78978cc54705)
+- [Angular](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

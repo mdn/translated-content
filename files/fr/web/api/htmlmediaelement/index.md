@@ -2,7 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 l10n:
-  sourceCommit: 2406bfdc031740afbd500a1fc953a76a4b7f8484
+  sourceCommit: 3d7c7d4e151ff1b578bef4eff10c201b761a9d7d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -49,6 +49,8 @@ _Cette interface hérite également des propriétés de ses ancêtres {{DOMxRef(
   - : Retourne un booléen qui indique si l'élément média a terminé la lecture.
 - {{DOMxRef("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("MediaError")}} pour la dernière erreur rencontrée, ou `null` s'il n'y a pas eu d'erreur.
+- {{DOMxRef("HTMLMediaElement.loading")}} {{Experimental_Inline}}
+  - : Une chaîne de caractères indiquant si le navigateur doit charger le média immédiatement (`eager`) ou lorsqu'il est nécessaire (`lazy`). Voir les attributs HTML [`<video loading>`](/fr/docs/Web/HTML/Reference/Elements/video#loading) et [`<audio loading>`](/fr/docs/Web/HTML/Reference/Elements/audio#loading) pour plus d'informations.
 - {{DOMxRef("HTMLMediaElement.loop")}}
   - : Un booléen qui reflète l'attribut HTML [`loop`](/fr/docs/Web/HTML/Reference/Elements/video#loop), qui indique si l'élément média doit recommencer la lecture lorsqu'il arrive à la fin.
 - {{DOMxRef("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -113,6 +115,8 @@ _Cette interface hérite également des méthodes de ses ancêtres {{DOMxRef("HT
   - : Étant donné une chaîne de caractères définissant un type MIME de média (éventuellement avec le [paramètre `codecs`](/fr/docs/Web/Media/Guides/Formats/codecs_parameter) inclus), `canPlayType()` retourne la chaîne de caractères `probably` si le média doit pouvoir être lu, `maybe` s'il n'y a pas assez d'informations pour déterminer si le média sera lu ou non, ou une chaîne vide si le média ne peut pas être lu.
 - {{DOMxRef("HTMLMediaElement.fastSeek()")}}
   - : Effectue rapidement un déplacement à l'instant donné avec une faible précision.
+- {{DOMxRef("HTMLMediaElement.getStartDate()")}}
+  - : Retourne un objet {{JSxRef("Date")}} représentant la date et l'heure réelles correspondant au début du média. Pour les flux en direct, il s'agit de l'heure à laquelle la diffusion a commencé sur le serveur, ce qui peut être avant que l'utilisateur·ice ne commence à regarder.
 - {{DOMxRef("HTMLMediaElement.load()")}}
   - : Réinitialise le média au début et sélectionne la meilleure source disponible parmi celles fournies à l'aide de l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/video#src) ou de l'élément HTML {{HTMLElement("source")}}.
 - {{DOMxRef("HTMLMediaElement.pause()")}}
@@ -124,7 +128,7 @@ _Cette interface hérite également des méthodes de ses ancêtres {{DOMxRef("HT
 - {{DOMxRef("HTMLMediaElement.setMediaKeys()")}} {{SecureContext_Inline}}
   - : Retourne un objet {{JSxRef("Promise")}}. Définit les clés {{DOMxRef("MediaKeys")}} à utiliser lors du déchiffrement du média pendant la lecture.
 - {{DOMxRef("HTMLMediaElement.setSinkId()")}} {{SecureContext_Inline}}
-  - : Définit l'identifiant du périphérique audio à utiliser pour la sortie et retourne un objet {{JSxRef("Promise")}}. Ceci ne fonctionne que lorsque l'application est autorisée à utiliser le périphérique spécifié.
+  - : Définit l'identifiant du périphérique audio à utiliser pour la sortie et retourne un objet {{JSxRef("Promise")}}. Ceci ne fonctionne que lorsque l'application est autorisée à utiliser le périphérique défini.
 
 ## Méthodes obsolètes
 

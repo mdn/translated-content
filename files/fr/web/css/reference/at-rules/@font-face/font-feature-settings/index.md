@@ -1,8 +1,9 @@
 ---
-title: font-feature-settings
+title: Descripteur de règle CSS `font-feature-settings`
+short-title: font-feature-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-feature-settings
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de définir les réglages initiaux à utiliser pour la police définie par la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}. Vous pouvez également utiliser ce descripteur pour contrôler les fonctionnalités typographiques de la police, telles que les ligatures, petites capitales et ornements, pour la police définie par `@font-face`. Les valeurs de ce descripteur sont identiques à celles de la propriété {{CSSxRef("font-feature-settings")}}, à l'exception des mots-clés globaux.
@@ -23,7 +24,7 @@ font-feature-settings: "swsh" 2;
 
 ### Valeurs
 
-Ce descripteur se spécifie soit par le mot-clé `normal`, soit par une liste de valeurs `<feature-tag-value>` séparées par des virgules. Lors du rendu du texte, la liste des valeurs OpenType `<feature-tag-value>` est transmise au moteur de mise en page pour activer ou désactiver des fonctionnalités de la police.
+Ce descripteur se définit soit par le mot-clé `normal`, soit par une liste de valeurs `<feature-tag-value>` séparées par des virgules. Lors du rendu du texte, la liste des valeurs OpenType `<feature-tag-value>` est transmise au moteur de mise en page pour activer ou désactiver des fonctionnalités de la police.
 
 - `normal`
   - : Indique que le texte est mis en page avec les réglages par défaut de la police. C'est la valeur par défaut.
@@ -85,7 +86,7 @@ p {
 
 La première ligne montre le design orné par défaut de la police [MonteCarlo <sup>(angl.)</sup>](https://github.com/googlefonts/monte-carlo), et la seconde ligne montre les glyphes par défaut remplacés par des glyphes [ornés <sup>(angl.)</sup>](https://learn.microsoft.com/fr-fr/typography/opentype/spec/features_pt#tag-swsh).
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 

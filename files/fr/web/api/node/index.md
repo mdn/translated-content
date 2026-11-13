@@ -5,13 +5,13 @@ l10n:
   sourceCommit: 5cfd038b0d37452042461cfe169c0c9ab87be94d
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-L'interface abstraite **`Node`** du {{Glossary("DOM")}} est une classe commune sur laquelle se basent de nombreux autres objets de l'API DOM, permettant ainsi d'utiliser ces types d'objets de manière similaire et souvent interchangeable. En tant que classe abstraite, il n'existe pas d'objet `Node` simple. Tous les objets qui implémentent la fonctionnalité `Node` sont basés sur l'une de ses sous-classes. Les plus notables sont {{domxref("Document")}}, {{domxref("Element")}} et {{domxref("DocumentFragment")}}.
+L'interface abstraite **`Node`** du {{Glossary("DOM")}} est une classe commune sur laquelle se basent de nombreux autres objets de l'API DOM, permettant ainsi d'utiliser ces types d'objets de manière similaire et souvent interchangeable. En tant que classe abstraite, il n'existe pas d'objet `Node` simple. Tous les objets qui implémentent la fonctionnalité `Node` sont basés sur l'une de ses sous-classes. Les plus notables sont {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("DocumentFragment")}}.
 
 De plus, chaque type de nœud DOM est représenté par une interface basée sur `Node`. Cela inclut {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (sur laquelle se basent {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}} et {{DOMxRef("ProcessingInstruction")}}) ainsi que {{DOMxRef("DocumentType")}}.
 
-Dans certains cas, une fonctionnalité particulière de l'interface de base `Node` peut ne pas s'appliquer à l'une de ses interfaces enfants&nbsp;; dans ce cas, le nœud héritant peut retourner `null` ou lever une exception, selon les circonstances. Par exemple, tenter d'ajouter des enfants à un type de nœud qui ne peut pas avoir d'enfants lèvera une exception.
+Dans certains cas, une fonctionnalité particulière de l'interface de base `Node` peut ne pas s'appliquer à l'une de ses interfaces enfants&nbsp;; dans ce cas, le nœud héritant peut retourner `null` ou lever une exception, selon les circonstances. Par exemple, tenter d'ajouter des enfants à un type de nœud qui ne peut pas avoir d'enfants lève une exception.
 
 {{InheritanceDiagram}}
 
@@ -32,7 +32,7 @@ _En plus des propriétés ci-dessous, `Node` hérite des propriétés de son par
 - {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
   - : Retourne un objet `Node` représentant le nœud suivant dans l'arbre, ou `null` s'il n'y a pas de tel nœud.
 - {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
-  - : Retourne une chaîne de caractères contenant le nom du objet `Node`. La structure du nom diffère selon le type de nœud. Par exemple, un {{DOMxRef("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'AUDIO'` pour un {{DOMxRef("HTMLAudioElement")}}, un nœud {{DOMxRef("Text")}} aura la chaîne `'#text'`, ou un nœud {{DOMxRef("Document")}} aura la chaîne `'#document'`.
+  - : Retourne une chaîne de caractères contenant le nom du objet `Node`. La structure du nom diffère selon le type de nœud. Par exemple, un {{DOMxRef("HTMLElement")}} contient le nom de la balise correspondante, comme `'AUDIO'` pour un {{DOMxRef("HTMLAudioElement")}}, un nœud {{DOMxRef("Text")}} a la chaîne de caractères `'#text'`, ou un nœud {{DOMxRef("Document")}} a la chaîne de caractères `'#document'`.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
   - : Retourne un `unsigned short` représentant le type du nœud. Les valeurs possibles sont&nbsp;:
 
@@ -67,7 +67,7 @@ _En plus des méthodes ci-dessous, `Node` hérite des méthodes de son parent, {
 
 - {{DOMxRef("Node.appendChild()")}}
   - : Ajoute l'argument `childNode` définit comme dernier enfant au nœud actuel.
-    Si l'argument fait référence à un nœud existant sur l'arborescence DOM, le nœud sera détaché de sa position actuelle et attaché à la nouvelle position.
+    Si l'argument fait référence à un nœud existant sur l'arborescence DOM, le nœud est détaché de sa position actuelle et attaché à la nouvelle position.
 - {{DOMxRef("Node.cloneNode()")}}
   - : Clone un objet `Node`, et éventuellement, tout son contenu. Par défaut, cette méthode clone le contenu du nœud.
 - {{DOMxRef("Node.compareDocumentPosition()")}}
@@ -89,7 +89,7 @@ _En plus des méthodes ci-dessous, `Node` hérite des méthodes de son parent, {
 - {{DOMxRef("Node.lookupPrefix()")}}
   - : Retourne une chaîne de caractères contenant le préfixe pour une URI d'espace de noms donnée, s'il est présent, ou `null` dans le cas contraire. Lorsque plusieurs préfixes sont possibles, le résultat dépend de l'implémentation.
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
-  - : Accepte un préfixe et retourne l'URI d'espace de noms qui lui est associée sur le nœud donné si elle est trouvée (et `null` sinon). Fournir `null` pour le préfixe retournera l'espace de noms par défaut.
+  - : Accepte un préfixe et retourne l'URI d'espace de noms qui lui est associée sur le nœud donné si elle est trouvée (et `null` sinon). Fournir `null` pour le préfixe retourne l'espace de noms par défaut.
 - {{DOMxRef("Node.normalize()")}}
   - : Nettoie tous les nœuds de texte sous cet élément (fusionne les adjacents, supprime les vides).
 - {{DOMxRef("Node.removeChild()")}}
@@ -97,9 +97,9 @@ _En plus des méthodes ci-dessous, `Node` hérite des méthodes de son parent, {
 - {{DOMxRef("Node.replaceChild()")}}
   - : Remplace un objet `Node` enfant du nœud actuel par le second donné en paramètre.
 
-## Événements
+## Évènements
 
-- {{domxref("Node/selectstart_event", "selectstart")}}
+- {{DOMxRef("Node/selectstart_event", "selectstart")}}
   - : Se déclenche quand l'utilisateur·ice commence une nouvelle sélection dans ce nœud.
 
 ## Exemples
@@ -122,7 +122,7 @@ L'utilisation de cette fonction se fait en un seul appel. Ici, nous vidons le co
 removeAllChildren(document.body);
 ```
 
-Une alternative pourrait être de définir le textContent comme une chaîne de caractères vide&nbsp;: `document.body.textContent = ""`.
+Une alternative peut être de définir le textContent comme une chaîne de caractères vide&nbsp;: `document.body.textContent = ""`.
 
 ### Parcourir récursivement les nœuds enfants
 
@@ -154,16 +154,16 @@ function eachNode(rootNode, callback) {
 
 La fonction appelle récursivement une fonction pour chaque nœud descendant de `rootNode` (y compris la racine elle-même).
 
-Si `callback` est omis, la fonction retourne un tableau ({{jsxref("Array")}}) à la place, qui contient `rootNode` et tous les nœuds contenus à l'intérieur.
+Si `callback` est omis, la fonction retourne un tableau ({{JSxRef("Array")}}) à la place, qui contient `rootNode` et tous les nœuds contenus à l'intérieur.
 
 Si `callback` est fourni et qu'il retourne `false` quand il est appelé, le niveau de récursion actuel est interrompu, et la fonction reprend l'exécution au niveau du dernier parent. Ceci peut être utilisé pour interrompre les boucles une fois qu'un nœud a été trouvé (comme rechercher un nœud de texte qui contient une certaine chaîne de caractères).
 
 La fonction a deux paramètres&nbsp;:
 
 - `rootNode`
-  - : L'objet `Node` dont les descendants seront parcourus récursivement.
-- `callback` {{optional_inline}}
-  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) de rappel optionnelle qui reçoit un objet `Node` comme seul argument. Si elle est omise, `eachNode` retourne un tableau ({{jsxref("Array")}}) de tous les nœuds contenus dans `rootNode` (y compris la racine elle-même).
+  - : L'objet `Node` dont les descendants sont parcourus récursivement.
+- `callback` {{Optional_Inline}}
+  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) de rappel optionnelle qui reçoit un objet `Node` comme seul argument. Si elle est omise, `eachNode` retourne un tableau ({{JSxRef("Array")}}) de tous les nœuds contenus dans `rootNode` (y compris la racine elle-même).
 
 Ce qui suit démontre une utilisation concrète de la fonction `eachNode()`&nbsp;: rechercher du texte sur une page web.
 

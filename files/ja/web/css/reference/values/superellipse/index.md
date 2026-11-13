@@ -1,8 +1,9 @@
 ---
-title: superellipse()
+title: CSS `superellipse()` 関数
+short-title: superellipse()
 slug: Web/CSS/Reference/Values/superellipse
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}
@@ -124,7 +125,7 @@ superellipse(-infinity)
 負または正の値を持つ超楕円は、その反対の値を持つる超楕円に対して対称に現れます。
 
 > [!NOTE]
-> 引数 `K` にどのような値が渡されても、`superellipse()` 関数の返値はその `K` 値に対して常に同じになります。この値を 2 つの要素に適用した場合、ボックスサイズや {{cssxref("border-radius")}} の値が異なると、角の形状の外観が異なる可能性ががあります。
+> 引数 `K` にどのような値が渡されても、`superellipse()` 関数の返値はその `K` 値に対して常に同じになります。この値を 2 つの要素に適用した場合、ボックスサイズや {{cssxref("border-radius")}} の値が異なると、角の形状の外観が異なる可能性があります。
 
 ## 形式文法
 

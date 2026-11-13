@@ -1,8 +1,9 @@
 ---
-title: font-synthesis-position
+title: "`font-synthesis-position` プロパティ (CSS)"
+short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 071fd0613b1b5728d2d83845ea11512cb615067a
 ---
 
 {{SeeCompatTable}}
@@ -29,6 +30,8 @@ font-synthesis-position: unset;
 ```
 
 ### 値
+
+このプロパティは、以下のキーワード値のどちらかとして指定します。
 
 - `auto`
   - : 不足している位置の書体は、必要に応じてブラウザーが合成する可能性があることを示します。

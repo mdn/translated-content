@@ -15,12 +15,12 @@ Protótipos são o mecanismo pelo qual objetos JavaScript herdam recursos uns do
       <td>
         Entender como funções em JavaScript funcionam, familiaridade com o
         básico de JavaScript (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros Passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros Passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Elementos Construtivos</a
         >), e o básico de Orientação a Objetos em JavaScript (veja
-        <a href="/pt-BR/docs/Aprender/JavaScript/Objetos"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects"
           >Introdução a Objetos</a
         >).
       </td>

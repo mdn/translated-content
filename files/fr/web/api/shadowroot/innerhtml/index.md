@@ -16,7 +16,7 @@ shadowRoot.innerHTML = domString;
 
 ### Valeur
 
-Une chaîne de caractères {{domxref("DOMString")}}.
+Une chaîne de caractères {{jsxref("String")}}.
 
 ## Exemples
 

@@ -3,12 +3,12 @@ title: "Défi : Structurer une page de contenu"
 short-title: "Défi : Un site d'observation des oiseaux"
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 l10n:
-  sourceCommit: 2e427c5c185433c5a6612c63bf877753a5fedc99
+  sourceCommit: e91043ed51d5ae2232912c1ae24bc94ffe254674
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}
 
-Structurer une page de contenu en vue de la mettre en page avec du CSS est une compétence très importante à maîtriser. Dans ce défi, vous serez mis·e à l'épreuve sur votre capacité à imaginer l'apparence finale d'une page et à choisir la sémantique structurelle appropriée pour construire une mise en page dessus.
+Structurer une page de contenu en vue de la mettre en page avec du CSS est une compétence très importante à maîtriser. Dans ce défi, vous êtes mis·e à l'épreuve sur votre capacité à imaginer l'apparence finale d'une page et à choisir la sémantique structurelle appropriée pour construire une mise en page dessus.
 
 ## Point de départ
 
@@ -37,10 +37,10 @@ Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de si
 
        <p>
          Bienvenue sur notre faux site d'observation des oiseaux. S'il
-         s'agissait d'un vrai site, ce serait l'endroit idéal pour en apprendre
-         plus sur l'observation des oiseaux, que vous soyez débutant·e
-         souhaitant découvrir l'ornithologie ou expert·e voulant partager idées,
-         astuces et photos avec d'autres passionné·e·s.
+         s'agissait d'un vrai site, c'est l'endroit idéal pour en apprendre plus
+         sur l'observation des oiseaux, que vous soyez débutant·e souhaitant
+         découvrir l'ornithologie ou expert·e voulant partager idées, astuces et
+         photos avec d'autres passionné·e·s.
        </p>
 
        <p>
@@ -201,7 +201,7 @@ Pour résoudre ce défi, nous attendons de vous que vous créiez un projet de si
    }
    ```
 
-Par la suite, vous devrez inclure les URLs suivantes dans votre page.
+Par la suite, vous devez inclure les URLs suivantes dans votre page.
 
 - `dove.png`&nbsp;: [Logo du site](https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png)
 - `favorite-bird-1.jpg`&nbsp;: [Version grand format de la première image de la barre latérale](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg)
@@ -215,7 +215,7 @@ Par la suite, vous devrez inclure les URLs suivantes dans votre page.
 
 ## Cahier des charges du projet
 
-Pour ce projet, votre tâche consiste à prendre le contenu de la page d'accueil d'un site d'observation des oiseaux et à y ajouter des éléments structurels afin qu'une mise en page puisse lui être appliquée. Vous devrez également apporter quelques ajouts au contenu.
+Pour ce projet, votre tâche consiste à prendre le contenu de la page d'accueil d'un site d'observation des oiseaux et à y ajouter des éléments structurels afin qu'une mise en page puisse lui être appliquée. Vous devez également apporter quelques ajouts au contenu.
 
 ### Ajouts de contenu
 
@@ -232,7 +232,7 @@ La structure du site doit comprendre les éléments suivants&nbsp;:
 1. Un en-tête qui englobe le titre principal de la page et la liste du menu de navigation.
 2. Un conteneur supplémentaire autour de la liste du menu de navigation.
 3. Une zone de contenu principale contenant deux colonnes — un article principal pour le texte de bienvenue, et une barre latérale (aside) pour les vignettes d'images.
-4. Un pied de page contenant les informations de droits d'auteur et les crédits.
+4. Un pied de page contenant les informations de droits d'auteur·ice·s et les crédits.
 
 Autrement dit, vous devez ajouter un conteneur adapté pour&nbsp;:
 
@@ -251,18 +251,18 @@ Si nécessaire, appliquez la feuille de styles CSS fournie à la page en ajoutan
 
 - Utilisez le [validateur HTML du W3C <sup>(angl.)</sup>](https://validator.w3.org/) pour détecter les erreurs involontaires dans votre HTML — afin de pouvoir les corriger.
 - Vous n'avez pas besoin de connaître le CSS pour relever ce défi&nbsp;; il vous suffit d'appliquer le CSS fourni à votre HTML.
-- Si vous êtes bloqué·e et que vous ne voyez pas quels éléments placer où, dessinez un simple schéma en blocs de la mise en page, et notez les éléments que vous pensez devoir englober chaque bloc. Cela est extrêmement utile.
+- Si vous êtes bloqué·e et que vous ne voyez pas quels éléments placer où, dessinez un simple schéma en blocs de la mise en page, et notez les éléments que vous pensez devoir englober chaque bloc. C'est extrêmement utile.
 
 ## Exemple
 
-La capture d'écran suivante montre un exemple de ce à quoi pourrait ressembler la page d'accueil une fois balisée. Si vous avez du mal à réaliser certains points, consultez la solution sous l'exemple interactif.
+La capture d'écran suivante montre un exemple de ce à quoi peut ressembler la page d'accueil une fois balisée. Si vous avez du mal à réaliser certains points, consultez la solution sous l'exemple interactif.
 
 ![L'exemple final pour le défi ; une page web simple sur l'observation des oiseaux, comprenant un titre « Birdwatching », des photos d'oiseaux et un message de bienvenue](example-page.png)
 
 <details>
 <summary>Cliquez ici pour afficher la solution</summary>
 
-Votre HTML final devrait ressembler à ceci&nbsp;:
+Votre HTML final doit ressembler à ceci&nbsp;:
 
 ```html
 <!doctype html>
@@ -282,7 +282,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
         Observation des oiseaux
         <img
           src="https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png"
-          alt="logo colombe simple" />
+          alt="" />
       </h1>
 
       <nav>
@@ -302,7 +302,7 @@ Votre HTML final devrait ressembler à ceci&nbsp;:
 
         <p>
           Bienvenue sur notre faux site d'observation des oiseaux. S'il
-          s'agissait d'un vrai site, ce serait l'endroit idéal pour en apprendre
+          s'agissait d'un vrai site, c'est l'endroit idéal pour en apprendre
           plus sur l'observation des oiseaux, que vous soyez débutant·e
           souhaitant découvrir l'ornithologie ou expert·e voulant partager
           idées, astuces et photos avec d'autres passionné·e·s.

@@ -3,7 +3,7 @@ title: "Document: exitFullscreen() メソッド"
 short-title: exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("Fullscreen API")}}

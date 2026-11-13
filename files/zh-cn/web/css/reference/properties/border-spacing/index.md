@@ -13,7 +13,7 @@ slug: Web/CSS/Reference/Properties/border-spacing
 
 ## 语法
 
-```plain
+```css
 /* <length> */
 border-spacing: 2px;
 

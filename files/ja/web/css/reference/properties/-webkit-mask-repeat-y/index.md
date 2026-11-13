@@ -1,12 +1,16 @@
 ---
-title: -webkit-mask-repeat-y
+title: "`-webkit-mask-repeat-y` プロパティ (CSS)"
+short-title: -webkit-mask-repeat-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-y
-original_slug: Web/CSS/-webkit-mask-repeat-y
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向に反復 (タイル) するかどうか、どのように反復するかを設定します。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -21,10 +25,10 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 /* グローバル値 */
 -webkit-mask-repeat-y: inherit;
 -webkit-mask-repeat-y: initial;
+-webkit-mask-repeat-y: revert;
+-webkit-mask-repeat-y: revert-layer;
 -webkit-mask-repeat-y: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -45,19 +49,19 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-mask-repeat-y = [ repeat | no-repeat | space | round ]#`)}}
 
 ## 例
 
 ### 反復あり・反復なしのマスク画像の使用
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
-.exampletwo {
+.example-two {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
@@ -68,7 +72,7 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 マスク画像ごとに異なる `<repeat-style>` の値を、カンマで区切って指定することができます。
 
 ```css
-.examplethree {
+.example-three {
   -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
@@ -86,4 +90,4 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 
 ## 関連情報
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}

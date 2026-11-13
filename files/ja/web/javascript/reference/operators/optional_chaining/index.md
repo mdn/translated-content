@@ -125,7 +125,7 @@ String?.raw`Hello, world!`;
 String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
-{{jsxref("Operators/new", "new")}} 式のコンストラクターはオプショナルチェーンを使用できません（[SyntaxError: new keyword cannot be used with an optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_new_optional) を参照）。
+{{jsxref("new")}} 式のコンストラクターはオプショナルチェーンを使用できません（[SyntaxError: new keyword cannot be used with an optional chain](/ja/docs/Web/JavaScript/Reference/Errors/Bad_new_optional) を参照）。
 
 ```js-nolint example-bad
 new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression

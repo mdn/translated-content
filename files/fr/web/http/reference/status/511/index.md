@@ -2,7 +2,7 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 87ca9db1ebe56eb20c1f20b91fca43955d8f0e26
 ---
 
 Le code de statut de [réponse d'erreur serveur](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_serveur) HTTP **`511 Network Authentication Required`** indique que le client doit s'authentifier pour obtenir l'accès au réseau.
@@ -22,13 +22,13 @@ Ils identifient souvent les clients qui ne l'ont pas fait à l'aide de leur adre
 ### Réponse 511 pour une requête GET
 
 Dans l'exemple suivant, un client tente d'accéder à une ressource sur un réseau.
-La requête n'est pas authentifiée, et un serveur mandataire envoie un code d'état `511` pour inviter le visiteur à se connecter.
-Le code `511` garantit que les clients non-navigateurs n'interpréteront pas la réponse comme provenant du serveur d'origine.
-Les navigateurs sont redirigés automatiquement via la balise {{HTMLElement("meta")}} après 10 secondes, ou en cliquant sur le lien dans le corps de la réponse&nbsp;:
+La requête n'est pas authentifiée, et un serveur mandataire envoie un code d'état `511` pour inviter le·la visiteur·euse à se connecter.
+Le code `511` garantit que les clients non-navigateurs n'interprètent pas la réponse comme provenant du serveur d'origine.
+Les navigateurs sont redirigés automatiquement avec la balise {{HTMLElement("meta")}} après 10 secondes, ou en cliquant sur le lien dans le corps de la réponse&nbsp;:
 
 ```http
 GET /document HTTP/1.1
-Host: exemple.com
+Host: example.com
 ```
 
 ```http

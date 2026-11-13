@@ -1,19 +1,20 @@
 ---
-title: ::-webkit-meter-bar
+title: Pseudo-élément CSS `::-webkit-meter-bar`
+short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 l10n:
-  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
+  sourceCommit: bf7ff749b987d530e9a6c07f23ac66f94d968e57
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'arrière-plan d'un élément {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'arrière-plan d'un élément HTML {{HTMLElement("meter")}}. Elle est utilisée pour sélectionner et appliquer des styles au conteneur d'un indicateur de mesure.
 
 ## Syntaxe
 
 ```css
 ::-webkit-meter-bar {
-  /* ... */
+  /* … */
 }
 ```
 
@@ -82,10 +83,9 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{HTMLElement("meter")}}&nbsp;:
+- Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément HTML {{HTMLElement("meter")}}&nbsp;:
   - {{CSSxRef("::-webkit-meter-inner-element")}}
   - {{CSSxRef("::-webkit-meter-even-less-good-value")}}
   - {{CSSxRef("::-webkit-meter-optimum-value")}}
   - {{CSSxRef("::-webkit-meter-suboptimum-value")}}
-
 - [Les extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)

@@ -3,16 +3,18 @@ title: "HTMLTableElement : propriété caption"
 short-title: caption
 slug: Web/API/HTMLTableElement/caption
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: ea061caed30f127a79157d07c538d26f01b8702b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`caption`** de l'interface {{DOMxRef("HTMLTableElement")}} représente la légende du tableau. Si aucun élément de légende n'est associé au tableau, cette propriété vaut `null`.
+La propriété **`caption`** de l'interface {{DOMxRef("HTMLTableElement")}} représente le premier élément {{HTMLElement("caption")}} enfant du tableau ({{HTMLElement("table")}}) donné, ou `null` si aucun élément de ce type n'existe.
 
 ## Valeur
 
-Une chaîne de caractères.
+Un objet {{DOMxRef("HTMLTableCaptionElement")}} ou `null`.
+
+Cette propriété peut être assignée, ce qui entraîne la suppression du premier élément {{HTMLElement("caption")}} enfant existant, le cas échéant, et l'insertion de la valeur donnée, si elle n'est pas `null`, comme premier enfant. Par conséquent, définir `null` a le même effet que d'appeler {{DOMxRef("HTMLTableElement.deleteCaption", "deleteCaption()")}}. Si la valeur assignée n'est pas un {{DOMxRef("HTMLTableCaptionElement")}} ou `null`, une {{JSxRef("TypeError")}} est levée.
 
 ## Exemples
 
@@ -32,4 +34,8 @@ if (table.caption) {
 
 ## Voir aussi
 
-- L'interface qui implémente cette propriété&nbsp;: {{DOMxRef("HTMLTableElement")}}.
+- La propriété {{DOMxRef("HTMLTableElement.tBodies")}}
+- La propriété {{DOMxRef("HTMLTableElement.tFoot")}}
+- La propriété {{DOMxRef("HTMLTableElement.tHead")}}
+- La méthode {{DOMxRef("HTMLTableElement.createCaption()")}}
+- La méthode {{DOMxRef("HTMLTableElement.deleteCaption()")}}
