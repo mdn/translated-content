@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} の **`currentSrc`** プロパティは読み取り専用で、表す {{HTMLElement("img")}} 要素で現在表示されている画像の URL を表します。
+{{domxref("HTMLImageElement")}} の **`currentSrc`** プロパティは読み取り専用で、表している {{HTMLElement("img")}} 要素で現在表示されている画像の URL を表します。
 
 ## 値
 
-`HTMLImageElement` で表される {{HTMLElement("img")}} 要素の中で、現在表示されている画像の完全な URL を示す文字列です。これは、{{domxref("HTMLImageElement.sizes", "sizes")}} や {{domxref("HTMLImageElement.srcset")}} 属性を用いて複数の画像オプションを提供する場合に有用です。`currentSrc` を使用すると、提供された画像セットの中からブラウザーがどの画像を選択したかを判断することができます。
+`HTMLImageElement` で表される {{HTMLElement("img")}} 要素の中で、現在表示されている画像の完全な URL を示す文字列です。これは、{{domxref("HTMLImageElement.sizes", "sizes")}} や {{domxref("HTMLImageElement.srcset")}} 属性を用いて複数の画像オプションを提供する場合に有用です。 `currentSrc` を使用すると、提供された画像セットの中からブラウザーがどの画像を選択したかを判断することができます。
 
 ## 例
 
@@ -22,11 +22,11 @@ l10n:
 
 ```html
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
-  alt="Clock"
+  src="/ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png"
+  alt="時計"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /ja/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
   sizes="(max-width: 400px) 50%, 90%" />
 ```
@@ -38,8 +38,8 @@ const clockImage = document.querySelector("img");
 const p = document.createElement("p");
 
 p.textContent = clockImage.currentSrc.endsWith("200px.png")
-  ? "Using the 400px image!"
-  : "Using the 200px image.";
+  ? "200px の画像を使っています!"
+  : "400px の画像を使っています。";
 document.body.appendChild(p);
 ```
 

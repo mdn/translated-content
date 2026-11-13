@@ -3,8 +3,6 @@ title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 ---
 
-{{jsSidebar("Operators")}}
-
 L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
 
 {{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
@@ -141,5 +139,5 @@ Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pour
 
 ## Voir aussi
 
-- {{jsxref("Opérateurs/L_opérateur_typeof","typeof")}}
+- {{jsxref("Operators/typeof","typeof")}}
 - {{jsxref("Symbol.hasInstance")}}

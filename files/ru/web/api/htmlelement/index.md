@@ -14,19 +14,19 @@ slug: Web/API/HTMLElement
 _Наследует свойства родителя, {{domxref("Element")}}, и реализует их через {{domxref("GlobalEventHandlers")}} и {{domxref("TouchEventHandlers")}}._
 
 - {{domxref("HTMLElement.accessKey")}} — ключ доступа
-  - : Эта строковая переменная {{domxref("DOMString")}} отображает ключ доступа, сопоставленный элементу _{{domxref("Element")}}_.
+  - : Эта строковая переменная {{jsxref("String")}} отображает ключ доступа, сопоставленный элементу _{{domxref("Element")}}_.
 - {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
-  - : Возвращает {{domxref ("DOMString")}}, содержащий назначенный ключ доступа элемента.
+  - : Возвращает {{jsxref("String")}}, содержащий назначенный ключ доступа элемента.
 - {{domxref("HTMLElement.contentEditable")}}
-  - : Является {{domxref ("DOMString")}}, где значение" true "означает, что элемент доступен для редактирования, а значение" false " означает, что это не так.
+  - : Является {{jsxref("String")}}, где значение" true "означает, что элемент доступен для редактирования, а значение" false " означает, что это не так.
 - {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}
-  - : Возвращает {{domxref ("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
+  - : Возвращает {{jsxref("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Является {{domxref ("HTMLMenuElement")}}, представляющим контекстное меню, связанное с элементом. Может быть null
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}} — набор данных
   - : Возвращает {{domxref("domstringmap")}}, который позволяет получить доступ к чтению и записи атрибутов пользовательских данных элемента (data-\*) .
 - {{domxref("HTMLElement.dir")}}
-  - : Is a {{domxref("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
+  - : Is a {{jsxref("String")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{domxref("HTMLElement.draggable")}}
   - : Is a {{jsxref("Boolean")}} indicating if the element can be dragged.
 - {{domxref("HTMLElement.dropzone")}} {{readonlyInline}}
@@ -38,7 +38,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 - {{domxref("HTMLElement.itemType")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("DOMSettableTokenList")}}…
 - {{domxref("HTMLElement.itemId")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}}…
+  - : Is a {{jsxref("String")}}…
 - {{domxref("HTMLElement.itemRef")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("DOMSettableTokenList")}}…
 - {{domxref("HTMLElement.itemProp")}} {{readonlyInline}}{{experimental_inline}}
@@ -46,7 +46,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 - {{domxref("HTMLElement.itemValue")}} {{experimental_inline}}
   - : Returns an {{jsxref("Object")}}…
 - {{domxref("HTMLElement.lang")}}
-  - : Is a {{domxref("DOMString")}} representing the language of an element's attributes, text, and element contents.
+  - : Is a {{jsxref("String")}} representing the language of an element's attributes, text, and element contents.
 - {{domxref("HTMLElement.offsetHeight")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a `double` containing the height of an element, relative to the layout.
 - {{domxref("HTMLElement.offsetLeft")}}{{readonlyInline}}{{experimental_inline}}
@@ -66,7 +66,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
 - {{domxref("HTMLElement.tabIndex")}}
   - : Is a `long` representing the position of the element in the tabbing order.
 - {{domxref("HTMLElement.title")}}
-  - : Is a {{domxref("DOMString")}} containing the text that appears in a popup box when mouse is over the element.
+  - : Is a {{jsxref("String")}} containing the text that appears in a popup box when mouse is over the element.
 - {{domxref("HTMLElement.translate")}} {{experimental_inline}}
   - : Is a {{jsxref("Boolean")}}
 

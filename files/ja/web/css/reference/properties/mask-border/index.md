@@ -1,9 +1,8 @@
 ---
 title: mask-border
 slug: Web/CSS/Reference/Properties/mask-border
-original_slug: Web/CSS/mask-border
 l10n:
-  sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`mask-border`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素の境界の縁に沿ったマスクを生成することができます。
@@ -12,12 +11,12 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`mask-border-mode`](/ja/docs/Web/CSS/Reference/Properties/mask-border-mode)
-- [`mask-border-outset`](/ja/docs/Web/CSS/Reference/Properties/mask-border-outset)
-- [`mask-border-repeat`](/ja/docs/Web/CSS/Reference/Properties/mask-border-repeat)
-- [`mask-border-slice`](/ja/docs/Web/CSS/Reference/Properties/mask-border-slice)
-- [`mask-border-source`](/ja/docs/Web/CSS/Reference/Properties/mask-border-source)
-- [`mask-border-width`](/ja/docs/Web/CSS/Reference/Properties/mask-border-width)
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-slice")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}
 
 ## 構文
 

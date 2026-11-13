@@ -1,15 +1,19 @@
 ---
-title: :picture-in-picture
+title: CSS `:picture-in-picture` 擬似クラス
+short-title: :picture-in-picture
 slug: Web/CSS/Reference/Selectors/:picture-in-picture
-original_slug: Web/CSS/:picture-in-picture
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。
 
 ## 構文
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## 使用上のメモ
@@ -24,12 +28,11 @@ original_slug: Web/CSS/:picture-in-picture
 
 このページの HTML は次のようになります。
 
-```html
-<h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
+```html-nolint
+<h1>MDN Web Docs デモ: :picture-in-picture 擬似クラス</h1>
 
 <p>
-  This demo uses the <code>:picture-in-picture</code> pseudo-class to
-  automatically change the style of a video entirely using CSS.
+  このデモでは、<code>:picture-in-picture</code> 擬似クラスを使用して、CSS だけで動画のスタイルを自動的に変更しています。
 </p>
 
 <video id="pip-video"></video>
@@ -39,7 +42,7 @@ ID が `"pip-video"` の {{HTMLElement("video")}} は、ピクチャインピク
 
 ### CSS
 
-The magic happens in the CSS.
+その秘密は CSS に現れます。
 
 ```css
 :picture-in-picture {
@@ -59,7 +62,6 @@ The magic happens in the CSS.
 
 - [Picture-in-picture API](/ja/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

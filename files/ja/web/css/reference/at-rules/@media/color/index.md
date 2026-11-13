@@ -1,9 +1,9 @@
 ---
-title: color
+title: CSS `color` メディア特性
+short-title: color
 slug: Web/CSS/Reference/At-rules/@media/color
-original_slug: Web/CSS/@media/color
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 **`color`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器の色成分（赤、緑、青）当たりのビット数を調べるために使用します。

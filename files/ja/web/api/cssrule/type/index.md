@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06dbf9ce9982a3053823c14298fd83fabc6d90d9
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}
 
 **`type`** は {{domxref("CSSRule")}} インターフェイスの読み取り専用プロパティで、非推奨です。この {{domxref("CSSRule")}} が表すルールの型を示す整数を返します。
 

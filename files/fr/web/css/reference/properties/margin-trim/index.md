@@ -1,28 +1,117 @@
 ---
-title: margin-trim
+title: Propriété CSS `margin-trim`
+short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
-original_slug: Web/CSS/margin-trim
+l10n:
+  sourceCommit: bf7ff749b987d530e9a6c07f23ac66f94d968e57
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La propriété **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
+La propriété [CSS](/fr/docs/Web/CSS) **`margin-trim`** permet à un conteneur de rogner les marges de ses éléments enfants qui sont adjacentes aux bords du conteneur.
 
 ## Syntaxe
 
+```css
+margin-trim: none;
+margin-trim: block;
+margin-trim: block-start;
+margin-trim: block-end;
+margin-trim: inline;
+margin-trim: inline-start;
+margin-trim: inline-end;
+
+/* Valeurs globales */
+margin-trim: inherit;
+margin-trim: initial;
+margin-trim: revert;
+margin-trim: revert-layer;
+margin-trim: unset;
+```
+
+### Valeurs
+
+Cette propriété est définie comme l'un des mots-clés suivants&nbsp;:
+
 - `none`
   - : Les marges ne sont pas rognées par le conteneur.
-- `in-flow`
-  - : Pour les boîtes du conteneur et qui sont dans le flux, les marges sur l'axe de bloc et qui sont adjacentes aux bords du conteneur sont tronquées.
 
-    Les marges fusionnées avec de telles marges sont également tronquées.
+- `block`
+  - : Les marges des enfants de type bloc qui sont adjacentes aux bords du conteneur sont rognées à zéro sans affecter les marges du conteneur lui-même.
 
-- `all`
-  - : Les marges des boîtes qui sont dans le flux et des boîtes flottantes coincidant avec le bord du conteneur sont tronquées.
+- `block-start`
+  - : La marge du premier enfant de type bloc avec le bord du conteneur est rognée à zéro.
 
-### Syntaxe formelle
+- `block-end`
+  - : La marge du dernier enfant de type bloc avec le bord du conteneur est rognée à zéro.
+
+- `inline`
+  - : Les marges des enfants en incise (<i lang="en">inline</i> en anglais) qui sont adjacentes aux bords du conteneur sont rognées à zéro, sans affecter l'espacement au début et à la fin de la ligne.
+
+- `inline-start`
+  - : La marge entre le bord du conteneur et le premier enfant en incise est rognée à zéro.
+
+- `inline-end`
+  - : La marge entre le bord du conteneur et le dernier enfant en incise est rognée à zéro.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
+
+## Exemples
+
+### Utilisation simple
+
+Une fois la prise en charge de cette propriété implémentée, elle fonctionne probablement ainsi&nbsp;:
+
+Lorsque vous avez un conteneur avec des enfants en incise et que vous souhaitez mettre une marge entre chaque enfant sans que cela n'interfère avec l'espacement à la fin de la ligne, vous pouvez faire quelque chose comme ceci&nbsp;:
+
+```css
+article {
+  background-color: red;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+}
+
+article > span {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+```
+
+Le problème ici est que vous vous retrouvez avec 20px de trop à droite de la ligne, donc vous pouvez faire ceci pour corriger&nbsp;:
+
+```css
+span:last-child {
+  margin-right: 0;
+  margin-left: 0;
+}
+```
+
+C'est pénible d'avoir à écrire une autre règle pour obtenir ce résultat, et ce n'est pas très flexible. À la place, `margin-trim` peut corriger cela&nbsp;:
+
+```css
+article {
+  margin-trim: inline-end;
+  /* … */
+}
+```
+
+De même, pour supprimer la marge gauche avec le bord du conteneur&nbsp;:
+
+```css
+article {
+  margin-trim: inline-start;
+  /* … */
+}
+```
 
 ## Spécifications
 
@@ -34,4 +123,4 @@ La propriété **`margin-trim`** permet à un conteneur de rogner les marges de 
 
 ## Voir aussi
 
-- {{CSSxRef("margin")}}
+- La propriété {{CSSxRef("margin")}}

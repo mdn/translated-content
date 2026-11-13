@@ -3,8 +3,6 @@ title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 ---
 
-{{AddonSidebar}}
-
 Lancé quand un onglet est fermé.
 
 ## Syntaxe

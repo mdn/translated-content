@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ce second article de la série [didactique Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
 
@@ -13,7 +13,7 @@ Ce second article de la série [didactique Django](/fr/docs/Learn_web_developmen
     <tr>
       <th scope="row">Prérequis:</th>
       <td>
-        <a href="/fr/docs/Learn/Server-side/Django/development_environment"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >Set up a Django development environment</a
         >. Avoir pris connaissance de
         <a

@@ -3,7 +3,7 @@ title: "Animation: playbackRate プロパティ"
 short-title: playbackRate
 slug: Web/API/Animation/playbackRate
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("Web Animations")}}
@@ -17,7 +17,7 @@ l10n:
 0、負、正の値を取ります。負の値ではアニメーションが反転します。この値は変倍率で、例えば 2 の値を指定すると再生速度が 2 倍になります。
 
 > [!NOTE]
-> アニメーションの `playbackRate` を `0` に設定すると、アニメーションは一時停止します（ただし、{{domxref("Animation.playstate", "playstate")}} は必ずしも `paused` にはなりません）。
+> アニメーションの `playbackRate` を `0` に設定すると、アニメーションは一時停止します（ただし、{{domxref("Animation.playState", "playState")}} は必ずしも `paused` にはなりません）。
 
 ## 例
 
@@ -30,8 +30,8 @@ const shrinkAlice = () => {
 };
 
 // タップまたはクリックすると、アリスは縮小する
-bottle.addEventListener("mousedown", shrinkAlice, false);
-bottle.addEventListener("touchstart", shrinkAlice, false);
+bottle.addEventListener("mousedown", shrinkAlice);
+bottle.addEventListener("touchstart", shrinkAlice);
 ```
 
 反対に、ケーキをクリックすると、彼女は「成長」し、 `aliceChange` を再び前方に再生します。
@@ -43,18 +43,17 @@ const growAlice = () => {
 };
 
 // タップまたはクリックすると、アリスが成長する
-cake.addEventListener("mousedown", growAlice, false);
-cake.addEventListener("touchstart", growAlice, false);
+cake.addEventListener("mousedown", growAlice);
+cake.addEventListener("touchstart", growAlice);
 ```
 
-別の例として、[赤の女王のレースゲーム](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010)では、アリスと赤の女王は常に減速しています。
+別の例として、[赤の女王のレースゲーム](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#その他の便利なメソッド)では、アリスと赤の女王は常に減速しています。
 
 ```js
 setInterval(() => {
-  // 再生レートが 0.4 を下回らないことを確認
-
-  if (redQueen_alice.playbackRate > 0.4) {
-    redQueen_alice.playbackRate *= 0.9;
+  // 再生レートが 0.4 を下回らないようにする
+  if (redQueenAlice.playbackRate > 0.4) {
+    redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 0.9);
   }
 }, 3000);
 ```
@@ -63,7 +62,7 @@ setInterval(() => {
 
 ```js
 const goFaster = () => {
-  redQueen_alice.playbackRate *= 1.1;
+  redQueenAlice.updatePlaybackRate(redQueenAlice.playbackRate * 1.1);
 };
 
 document.addEventListener("click", goFaster);

@@ -33,8 +33,6 @@ getDirectoryHandle(name, options)
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果句柄的 {{domxref('PermissionStatus.state')}} 在 `readwrite` 模式下不是 `'granted'`（如果 `create` 选项设置为 `true`），或在 `read` 模式下不是 `'granted'`（如果 `create` 选项设置为 `false`）。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus')}} 不为“granted”则抛出此异常。
 - {{jsxref("TypeError")}}
   - : 如果指定的名称不是一个合法的字符串或者包含会干扰本地文件系统的字符则抛出此异常。
 - `TypeMismatchError` {{domxref("DOMException")}}

@@ -6,25 +6,25 @@ l10n:
   sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
-La méthode `window.prompt()` demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
+La méthode **`prompt()`** de l'interface {{DOMxRef("Window")}} demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
 
 Dans certaines conditions (par exemple si l'utilisateur·ice change d'onglet), le navigateur peut ne pas afficher de boîte de dialogue ou ne pas attendre la saisie ou l'annulation par l'utilisateur·ice.
 
 ## Syntaxe
 
-```js
-prompt();
-prompt(message);
-prompt(message, defaultValue);
+```js-nolint
+prompt()
+prompt(message)
+prompt(message, defaultValue)
 ```
 
 ### Paramètres
 
-- `message` {{optional_inline}}
+- `message` {{Optional_Inline}}
   - : Une chaîne de caractères affichée pour l'utilisateur·ice. Peut être omise s'il n'y a rien à afficher dans la fenêtre de saisie.
-- `defaultValue` {{optional_inline}}
+- `defaultValue` {{Optional_Inline}}
   - : Une chaîne de caractères contenant la valeur par défaut affichée dans le champ de saisie.
 
 ### Valeur de retour
@@ -85,7 +85,7 @@ signe = prompt("Vous sentez-vous chanceux ?", "sûr");
 
 Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur·ice d'accéder au reste de l'interface du programme tant que la boîte de dialogue n'est pas fermée.
 Pour cette raison, il vaut mieux ne pas abuser des fonctions qui créent ce type de fenêtre.
-On peut aussi utiliser l'élément {{HTMLElement("dialog")}} pour les confirmations.
+On peut aussi utiliser l'élément HTML {{HTMLElement("dialog")}} pour les confirmations.
 
 Une boîte de dialogue de type prompt contient un champ de saisie sur une ligne, un bouton Annuler et un bouton OK, et renvoie le texte (éventuellement vide) saisi par l'utilisateur·ice.
 Le résultat est une chaîne de caractères, il peut donc être nécessaire de convertir la valeur fournie par l'utilisateur·ice.
@@ -106,6 +106,6 @@ const unNombre = Number(window.prompt("Veuillez saisir un nombre.", ""));
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("dialog")}}
-- La méthode {{domxref("window.alert", "alert")}}
-- La méthode {{domxref("window.confirm", "confirm")}}
+- La méthode {{DOMxRef("window.alert", "alert")}}
+- La méthode {{DOMxRef("window.confirm", "confirm")}}
 - [Ne jamais utiliser un avertissement quand il faut proposer une annulation <sup>(angl.)</sup>](https://alistapart.com/article/neveruseawarning/) sur A List Apart (2017)

@@ -3,7 +3,7 @@ title: Modules d'apprentissage fondamentaux
 short-title: Modules fondamentaux
 slug: Learn_web_development/Core
 l10n:
-  sourceCommit: 427efbee9e0da53517f45420af87a66a2a6b6e19
+  sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
 ---
 
 Nos **modules fondamentaux** couvrent des sujets que nous estimons essentiels pour tout·e développeur·euse web. Cela inclut toutes les informations nécessaires pour concevoir et créer une application web basique et accessible, respectant les bonnes pratiques modernes, ainsi que pour gérer et déployer leur code à l'aide d'outils appropriés.
@@ -25,17 +25,20 @@ En particulier, si vous n'avez jamais codé auparavant, nous vous recommandons l
 - [Mise en page CSS](/fr/docs/Learn_web_development/Core/CSS_layout)
   - : Dans les modules précédents, nous avons vu comment mettre en forme et manipuler les boîtes qui contiennent votre contenu. Il est maintenant temps de voir comment disposer correctement ces boîtes les unes par rapport aux autres et par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais) du navigateur. Ce module aborde les flottants, le positionnement, d'autres outils de mise en page modernes, et la création de designs adaptatifs qui s'ajustent à différents appareils, tailles et résolutions d'écran.
 - [Scripts dynamiques avec JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
-  - : JavaScript est un vaste sujet, avec de nombreuses fonctionnalités, styles et techniques à apprendre, ainsi que de nombreuses API et outils construits dessus. Ce module se concentre principalement sur l'essentiel du langage de base, ainsi que sur quelques sujets clés autour — apprendre ces notions vous donnera une base solide.
+  - : JavaScript est un vaste sujet, avec de nombreuses fonctionnalités, styles et techniques à apprendre, ainsi que de nombreuses API et outils construits dessus. Ce module se concentre principalement sur l'essentiel du langage de base, ainsi que sur quelques sujets clés autour — apprendre ces notions vous donne une base solide.
 - [Frameworks et bibliothèques JavaScript](/fr/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Les frameworks JavaScript sont une composante essentielle du développement web moderne côté client, fournissant aux développeur·euse·s des outils éprouvés pour créer des applications web interactives et évolutives. De nombreuses entreprises modernes utilisent les frameworks comme standard, et de nombreux emplois en développement exigent désormais une expérience avec ces outils. Cette série d'articles vise à vous donner un point de départ confortable pour débuter avec les frameworks.
 - [Accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)
   - : L'accès au contenu web, comme les services publics, l'éducation, le commerce en ligne et le divertissement, est un droit humain. Personne ne doit être exclu en raison d'un handicap, d'une origine, d'une localisation géographique ou d'autres caractéristiques humaines. Ce module présente les bonnes pratiques et techniques à connaître pour rendre vos sites aussi accessibles que possible.
 - [Design pour les développeur·euse·s](/fr/docs/Learn_web_development/Core/Design_for_developers)
-  - : L'objectif de ce module est de (re)présenter la pensée design aux développeur·euse·s. Même si vous ne souhaitez pas devenir designer, avoir quelques bases en expérience utilisateur et en théorie du design est bénéfique pour toute personne impliquée dans la création de sites web, quel que soit son rôle. Au minimum, même le·la développeur·euse le plus technique et « non-designer » devrait comprendre les briefs de design, pourquoi les choses sont conçues ainsi, et être capable d'adopter la perspective de l'utilisateur·rice. Et cela aidera à améliorer l'apparence de leur portfolio.
+  - : L'objectif de ce module est de (re)présenter la pensée design aux développeur·euse·s. Même si vous ne souhaitez pas devenir designer, avoir quelques bases en expérience utilisateur et en théorie du design est bénéfique pour toute personne impliquée dans la création de sites web, quel que soit son rôle. Au minimum, même un·e développeur·euse plus technique et «&nbsp;non-designer&nbsp;» doit comprendre les présentations de design, pourquoi les choses sont conçues ainsi, et être capable d'adopter la perspective de l'utilisateur·ice. Et ça aide à améliorer l'apparence de leur portfolio.
 - [Gestion de versions](/fr/docs/Learn_web_development/Core/Version_control)
-  - : Les outils de gestion de versions sont essentiels dans les workflows modernes, pour sauvegarder et collaborer sur des bases de code. Ce module vous présente les bases de la gestion de versions avec Git et GitHub.
+  - : Les outils de gestion de versions sont essentiels dans les flux de travail modernes, pour sauvegarder et collaborer sur des bases de code. Ce module vous présente les bases de la gestion de versions avec Git et GitHub.
 
-## Voir aussi
-
-- [Le parcours de développeur·euse front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
-  - : Le _Frontend Developer Career Path_ de [Scrimba <sup>(angl.)</sup>](https://scrimba.com/?via=mdn) vous enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse web front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de débutant·e à votre premier emploi front-end&nbsp;! De nombreux éléments du cours sont disponibles gratuitement en version autonome.
+> [!CALLOUT]
+>
+> ### Essayez nos cours vidéo partenaires
+>
+> Vous souhaitez un cours vidéo interactif pour compléter nos articles&nbsp;? Le [parcours de développeur·euse front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) de Scrimba<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> enseigne également les sujets contenus dans les modules fondamentaux de MDN et bien plus encore&nbsp;!
+>
+> <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></mdn-scrim-inline>

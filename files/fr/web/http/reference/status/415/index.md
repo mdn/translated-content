@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`415 Unsupported Media Type`** indique que le serveur a refusé d'accepter la requête car le format du {{Glossary("HTTP Content", "contenu")}} du message n'est pas pris en charge.
+Le code de statut de [réponse d'erreur client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client) HTTP **`415 Unsupported Media Type`** indique que le serveur a refusé d'accepter la requête, car le format du {{Glossary("HTTP Content", "contenu")}} du message n'est pas pris en charge.
 
 Le problème de format peut provenir de l'en-tête {{HTTPHeader("Content-Type")}} ou {{HTTPHeader("Content-Encoding")}} indiqué dans la requête, ou résulter du traitement du contenu du message de la requête.
 Certains serveurs peuvent être stricts sur le `Content-Type` attendu des requêtes.
@@ -25,7 +25,7 @@ Dans l'exemple suivant, l'en-tête {{HTTPHeader("Content-Type")}} est totalement
 
 ```http
 POST /comments HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Length: 23
 
 {
@@ -50,7 +50,7 @@ Dans l'exemple suivant, l'en-tête {{HTTPHeader("Content-Type")}} est incorrecte
 
 ```http
 POST /comments HTTP/1.1
-Host: exemple.com
+Host: example.com
 Content-Length: 23
 Content-Type: application/x-www-form-urlencoded
 

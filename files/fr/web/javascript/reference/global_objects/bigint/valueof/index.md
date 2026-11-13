@@ -12,10 +12,10 @@ La méthode **`valueOf()`** des valeurs {{JSxRef("BigInt")}} retourne la valeur 
 
 ```js interactive-example
 console.log(typeof Object(1n));
-// Sortie attendue : "object"
+// Résultat attendu : "object"
 
 console.log(typeof Object(1n).valueOf());
-// Sortie attendue : "bigint"
+// Résultat attendu : "bigint"
 ```
 
 ## Syntaxe

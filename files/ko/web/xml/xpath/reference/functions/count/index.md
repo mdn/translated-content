@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/count
 original_slug: Web/XPath/Functions/count
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `count` 함수는 노드 집합의 노드 수를 세고 나서 정수로 반환합니다.
 

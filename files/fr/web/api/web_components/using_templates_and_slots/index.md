@@ -193,7 +193,7 @@ Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elem
 Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template)&nbsp;:
 
 - Ce [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) contient un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) avec un ensemble de règles CSS dont la portée est celle du fragment de document créé par l'élément [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template).
-- Ce [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/slot#attr-name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Reference/Elements/slot#named-slot)&nbsp;:
+- Ce [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/slot#name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Reference/Elements/slot#named-slot)&nbsp;:
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`

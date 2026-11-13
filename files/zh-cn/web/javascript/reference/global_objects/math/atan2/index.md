@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 
 ## 语法
 
-```plain
+```js-nolint
 Math.atan2(y, x)
 ```
 

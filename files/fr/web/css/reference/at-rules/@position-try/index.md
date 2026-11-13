@@ -1,17 +1,16 @@
 ---
-title: "@position-try"
+title: Règle CSS `@position-try`
+short-title: "@position-try"
 slug: Web/CSS/Reference/At-rules/@position-try
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
-{{SeeCompatTable}}
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@position-try`** permet de définir une option personnalisée de repli de position, utilisée pour définir le positionnement et l'alignement des éléments ancrés. Un ou plusieurs ensembles d'options de repli peuvent être appliqués à l'élément ancré avec la propriété {{CSSxRef("position-try-fallbacks")}} ou le raccourci {{CSSxRef("position-try")}}. Lorsque l'élément positionné est déplacé à un endroit où il commence à déborder de son bloc conteneur ou de la zone d'affichage (<i lang="en">viewport</i> en anglais), le navigateur sélectionne la première option de repli qui permet de replacer l'élément entièrement à l'écran.
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@position-try`** permet de définir une option personnalisée de repli de position, utilisée pour définir le positionnement et l'alignement des éléments ancrés. Un ou plusieurs ensembles d'options de repli peuvent être appliqués à l'élément ancré via la propriété {{CSSxRef("position-try-fallbacks")}} ou le raccourci {{CSSxRef("position-try")}}. Lorsque l'élément positionné est déplacé à un endroit où il commence à déborder de son bloc conteneur ou de la zone d'affichage (<i lang="en">viewport</i> en anglais), le navigateur sélectionne la première option de repli qui permet de replacer l'élément entièrement à l'écran.
+Chaque option de position est nommée avec un {{CSSxRef("dashed-ident")}} et contient une liste de descripteurs définissant des déclarations qui définissent des informations telles que la position d'insertion, la marge, la taille et l'auto-alignement. Le `<dashed-ident>` est utilisé pour référencer l'option personnalisée dans la propriété {{CSSxRef("position-try-fallbacks")}} et le raccourci {{CSSxRef("position-try")}}.
 
-Chaque option de position est nommée avec un {{CSSxRef("dashed-ident")}} et contient une liste de descripteurs spécifiant des déclarations qui définissent des informations telles que la position d'insertion, la marge, la taille et l'auto-alignement. Le `<dashed-ident>` est utilisé pour référencer l'option personnalisée dans la propriété {{CSSxRef("position-try-fallbacks")}} et le raccourci {{CSSxRef("position-try")}}.
-
-Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli, consultez la page du module [Positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning) et le guide [Options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli, consultez la page du module [de positionnement par une ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [d'options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
 ## Syntaxe
 
@@ -26,11 +25,11 @@ Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utili
 
 ### Descripteurs
 
-Les descripteurs définissent les valeurs des propriétés qui déterminent le comportement de l'option de position personnalisée, c'est-à-dire l'endroit où l'élément positionné sera placé.
+Les descripteurs définissent les valeurs des propriétés qui déterminent le comportement de l'option de position personnalisée, c'est-à-dire l'endroit où l'élément positionné est placé.
 
-- `position-anchor`&nbsp;: Définit la valeur de la propriété {{CSSxRef("position-anchor")}} qui indique l'élément d'ancrage auquel l'élément positionné est attaché, en spécifiant une valeur {{CSSxRef("dashed-ident")}} identique à la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage.
+- `position-anchor`&nbsp;: Définit la valeur de la propriété {{CSSxRef("position-anchor")}} qui indique l'élément d'ancrage auquel l'élément positionné est attaché, en définissant une valeur {{CSSxRef("dashed-ident")}} identique à la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage.
 - `position-area`&nbsp;: Définit la valeur de la propriété {{CSSxRef("position-area")}} qui indique la position de l'élément positionné par rapport à l'ancre.
-- Descripteurs des propriétés d'insertion&nbsp;: Spécifient des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
+- Descripteurs des propriétés d'insertion&nbsp;: Définit des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/Reference/Values/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
   - {{CSSxRef("top")}}
   - {{CSSxRef("left")}}
   - {{CSSxRef("bottom")}}
@@ -42,7 +41,7 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
   - {{CSSxRef("inset-block")}}
   - {{CSSxRef("inset-inline")}}
   - {{CSSxRef("inset")}}
-- Descripteurs de marge&nbsp;: Spécifient la marge appliquée à l'élément positionné. Les descripteurs de marge peuvent représenter les propriétés suivantes&nbsp;:
+- Descripteurs de marge&nbsp;: Définit la marge appliquée à l'élément positionné. Les descripteurs de marge peuvent représenter les propriétés suivantes&nbsp;:
   - {{CSSxRef("margin-top")}}
   - {{CSSxRef("margin-left")}}
   - {{CSSxRef("margin-bottom")}}
@@ -54,7 +53,7 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
   - {{CSSxRef("margin")}}
   - {{CSSxRef("margin-block")}}
   - {{CSSxRef("margin-inline")}}
-- Descripteurs de taille&nbsp;: Spécifient des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
+- Descripteurs de taille&nbsp;: Définit des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/Reference/Values/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
   - {{CSSxRef("width")}}
   - {{CSSxRef("height")}}
   - {{CSSxRef("min-width")}}
@@ -67,10 +66,10 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
   - {{CSSxRef("min-inline-size")}}
   - {{CSSxRef("max-block-size")}}
   - {{CSSxRef("max-inline-size")}}
-- Descripteurs d'auto-alignement&nbsp;: Spécifient la valeur [`anchor-center`](/fr/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} peuvent prendre la valeur `anchor-center`.
+- Descripteurs d'auto-alignement&nbsp;: Définit la valeur [`anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_à_laide_de_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} peuvent prendre la valeur `anchor-center`.
 
 > [!NOTE]
-> Lorsqu'une option de position personnalisée est appliquée à un élément, les valeurs définies dans le descripteur de la règle `@position-try` prennent le dessus sur celles définies sur l'élément via les propriétés CSS standard.
+> Lorsqu'une option de position personnalisée est appliquée à un élément, les valeurs définies dans le descripteur de la règle `@position-try` prennent le dessus sur celles définies sur l'élément avec les propriétés CSS standard.
 
 ## Syntaxe formelle
 
@@ -78,25 +77,25 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
 
 ## Exemples
 
-### Utilisation d'une option de position personnalisée
+### Utiliser une option de position personnalisée
 
 Dans cet exemple, on définit un élément d'ancrage et un élément positionné, puis on crée quatre options de repli nommées. Ces options sont appliquées à l'élément positionné pour garantir que son contenu reste toujours visible, peu importe la position de l'ancre dans la zone d'affichage.
 
 #### HTML
 
-On inclut deux éléments {{HTMLElement("div")}} qui deviendront une ancre et un élément positionné&nbsp;:
+On inclut deux éléments HTML {{HTMLElement("div")}} qui deviendront une ancre et un élément positionné&nbsp;:
 
 ```html
-<div class="anchor">⚓︎</div>
+<div class="ancre">⚓︎</div>
 
-<div class="infobox">
+<div class="boite-information">
   <p>Ceci est une boîte d'information.</p>
 </div>
 ```
 
 #### CSS
 
-On commence par styliser l'élément `<body>` pour qu'il soit très grand, afin de pouvoir faire défiler l'ancre et l'élément positionné dans la zone d'affichage, horizontalement et verticalement&nbsp;:
+On commence par mettre en forme l'élément `<body>` pour qu'il soit très grand, afin de pouvoir faire défiler l'ancre et l'élément positionné dans la zone d'affichage, horizontalement et verticalement&nbsp;:
 
 ```css
 body {
@@ -106,7 +105,7 @@ body {
 ```
 
 ```css hidden
-.anchor {
+.ancre {
   font-size: 1.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -121,8 +120,8 @@ body {
 L'ancre reçoit un {{CSSxRef("anchor-name")}} et une valeur {{CSSxRef("position")}} de `absolute`. On la positionne ensuite près du centre du rendu initial du `<body>` avec les valeurs {{CSSxRef("top")}} et {{CSSxRef("left")}}&nbsp;:
 
 ```css
-.anchor {
-  anchor-name: --my-anchor;
+.ancre {
+  anchor-name: --mon-ancre;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -130,7 +129,7 @@ L'ancre reçoit un {{CSSxRef("anchor-name")}} et une valeur {{CSSxRef("position"
 ```
 
 ```css hidden
-.infobox {
+.boite-information {
   color: darkblue;
   background-color: azure;
   border: 1px solid #dddddd;
@@ -175,12 +174,12 @@ Enfin, les options gauche et droite reçoivent une valeur de {{CSSxRef("width")}
 }
 ```
 
-La boîte d'information reçoit un positionnement fixe, une propriété {{CSSxRef("position-anchor")}} qui référence le `anchor-name` de l'ancre pour les associer, et elle est attachée au bord supérieur de l'ancre via {{CSSxRef("position-area")}}. On lui donne aussi une largeur fixe {{CSSxRef("width")}} et une marge inférieure {{CSSxRef("margin")}}. Les options de position personnalisées sont ensuite référencées dans la propriété {{CSSxRef("position-try-fallbacks")}} pour éviter que l'élément positionné ne déborde ou ne soit masqué lors du défilement, lorsque l'ancre s'approche du bord de la zone d'affichage.
+La boîte d'information reçoit un positionnement fixe, une propriété {{CSSxRef("position-anchor")}} qui référence le `anchor-name` de l'ancre pour les associer, et elle est attachée au bord supérieur de l'ancre avec {{CSSxRef("position-area")}}. On lui donne aussi une largeur fixe {{CSSxRef("width")}} et une marge inférieure {{CSSxRef("margin")}}. Les options de position personnalisées sont ensuite référencées dans la propriété {{CSSxRef("position-try-fallbacks")}} pour éviter que l'élément positionné ne déborde ou ne soit masqué lors du défilement, lorsque l'ancre s'approche du bord de la zone d'affichage.
 
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --my-anchor;
+  position-anchor: --mon-ancre;
   position-area: top;
   width: 200px;
   margin-bottom: 10px;
@@ -193,7 +192,7 @@ La boîte d'information reçoit un positionnement fixe, une propriété {{CSSxRe
 
 Faites défiler la page et observez le changement de placement de l'élément positionné lorsque l'ancre s'approche des différents bords de la zone d'affichage. Cela est dû à l'application des différentes options de repli.
 
-{{ EmbedLiveSample("utilisation_dune_option_de_position_personnalisée", "100%", "250") }}
+{{EmbedLiveSample("Utiliser une option de position personnalisée", "100%", 250)}}
 
 Explication du fonctionnement des options de position&nbsp;:
 
@@ -223,7 +222,7 @@ Dans certains cas, il faut désactiver les valeurs initiales à l'intérieur des
 - La propriété {{CSSxRef("position-try")}}
 - La fonction {{CSSxRef("anchor()")}}
 - La fonction {{CSSxRef("anchor-size()")}}
-- Le module de [positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
-- [Guide pour utiliser le positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Guide pour les options de repli et le masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- Le module[de positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- [Guide pour utiliser le positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- [Guide pour les options de repli et le masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
 - L'interface API {{DOMxRef("CSSPositionTryRule")}}

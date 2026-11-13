@@ -1,10 +1,9 @@
 ---
-title: "Attribut HTML : for"
+title: "Attribut HTML : `for`"
 short-title: for
 slug: Web/HTML/Reference/Attributes/for
-original_slug: Web/HTML/Attributes/for
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`for`** est un attribut autorisé pour les éléments HTML {{HTMLElement("label")}} et {{HTMLElement("output")}}. Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.

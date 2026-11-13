@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-progress-value
+title: Pseudo-élément CSS `::-webkit-progress-value`
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{Non-standard_Header}}
@@ -44,7 +45,7 @@ progress {
 
 {{EmbedLiveSample("Exemples", 200, 50)}}
 
-Une barre de progression avec la mise en forme ci-avant sera affichée de cette façon&nbsp;:
+Une barre de progression avec la mise en forme ci-avant est affichée de cette façon&nbsp;:
 
 ![Une longue boîte orange et grise. Les 20 % de gauche sont orange. Les 80 % de droite sont gris.](progress-value.png)
 

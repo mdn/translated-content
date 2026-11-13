@@ -1,12 +1,12 @@
 ---
-title: "Attribut HTML universel : class"
+title: "Attribut HTML universel : `class`"
 short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** est une liste des classes de l'élément, séparées par des [espaces ASCII](/fr/docs/Glossary/Whitespace#en_html).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** est une liste des classes de l'élément, séparées par des [espaces ASCII](/fr/docs/Glossary/Whitespace#en_html).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: class", "tabbed-standard")}}
 
@@ -65,6 +65,6 @@ Bien que la spécification n'impose aucune exigence sur le nom des classes, il e
 ## Voir aussi
 
 - [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- La propriété DOM {{DOMxRef('Element.className')}}
-- La propriété DOM {{DOMxRef('Element.classList')}}
+- La propriété DOM {{DOMxRef("Element.className")}}
+- La propriété DOM {{DOMxRef("Element.classList")}}
 - [Introduction au CSS](/fr/docs/Learn_web_development/Core/Styling_basics)

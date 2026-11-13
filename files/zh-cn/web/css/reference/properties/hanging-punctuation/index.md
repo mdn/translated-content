@@ -1,91 +1,133 @@
 ---
-title: hanging-punctuation
+title: "`hanging-punctuation` CSS 属性"
+short-title: hanging-punctuation
 slug: Web/CSS/Reference/Properties/hanging-punctuation
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`hanging-punctuation`** CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
-
-```css
-/* Keyword values */
-hanging-punctuation: none;
-hanging-punctuation: first;
-hanging-punctuation: last;
-hanging-punctuation: force-end;
-hanging-punctuation: allow-end;
-
-/* Two keywords */
-hanging-punctuation: first force-end;
-hanging-punctuation: first allow-end;
-hanging-punctuation: first last;
-hanging-punctuation: last force-end;
-hanging-punctuation: last allow-end;
-
-/* Three keywords */
-hanging-punctuation: first force-end last;
-hanging-punctuation: first allow-end last;
-
-/* Global values */
-hanging-punctuation: inherit;
-hanging-punctuation: initial;
-hanging-punctuation: unset;
-```
-
-{{cssinfo}}
+**`hanging-punctuation`** [CSS](/zh-CN/docs/Web/CSS) 属性指定标点符号是否应悬挂在文本行的开头或末尾。悬挂的标点可以放在行框外侧。
 
 ## 语法
 
-这个属性可被指定多个值，可以是一个值，也可以是两个值，或者是三个值。
+```css
+/* 关键字值 */
+hanging-punctuation: none;
+hanging-punctuation: first;
+hanging-punctuation: last;
+hanging-punctuation: allow-end;
 
-- 一个值 语法：在下面列表中的任意一个值。
-- 两个值 语法：
-  - 或者与以下任何一个一起使用，并以它们结尾：last，allow-end 或 force-end
-  - 或者与以下任何一个一起使用，并以它们开头：first，allow-end 或 force-end。
+/* 两个关键字 */
+hanging-punctuation: first allow-end;
+hanging-punctuation: first last;
+hanging-punctuation: last allow-end;
 
-- 三个值 语法：
-  - 或者`first`, `allow-end`, 和`last`
-  - 或者 `first`, `force-end`, 和 `last`.
+/* 三个关键字 */
+hanging-punctuation: first allow-end last;
 
-### 取值
+/* 全局值 */
+hanging-punctuation: inherit;
+hanging-punctuation: initial;
+hanging-punctuation: revert;
+hanging-punctuation: revert-layer;
+hanging-punctuation: unset;
+```
+
+`hanging-punctuation` 属性可以用一个、两个或三个以空格分隔的值来指定。
+
+### 值
 
 - `none`
-  - : 无悬挂字符。
+  - : 不悬挂任何字符。
 - `first`
-  - : 显示元素的第一个格式化行开头的括号或引号。
-- `last`
-  - : 显示元素的最后一个格式化行结尾的括号或引号。
-- `force-end`
-  - : 显示行结尾处的句号或逗号。
-- `allow-end`
-  - : 如果预先没有其他适合的来适应的，则在行尾显示句号或逗号。
+  - : 元素第一条已格式化行开头的开括号或引号会悬挂。这适用于：
+    - Unicode 类别 [Ps](https://unicodeplus.com/category/Ps)、[Pf](https://unicodeplus.com/category/Pf)、[Pi](https://unicodeplus.com/category/Pi) 中的所有字符
+    - 引号 `U+0027` 撇号（`'`）和 `U+0022` 引号（`"`）。
 
-### 正式语法
+- `last`
+  - : 元素最后一条已格式化行末尾的闭括号或引号会悬挂。这适用于：
+    - Unicode 类别 [Pe](https://unicodeplus.com/category/Pe)、[Pf](https://unicodeplus.com/category/Pf)、[Pi](https://unicodeplus.com/category/Pi) 中的所有字符
+    - 引号 `U+0027` 撇号（`'`）和 `U+0022` 引号（`"`）。
+- `allow-end`
+  - : 若行末的句号或逗号在两端对齐之前无法放入，则将其悬挂。
+
+允许悬挂的句号和逗号包括：
+
+- `U+002C`，逗号
+- `U+002E`，句号
+- `U+060C`，阿拉伯逗号
+- `U+06D4`，阿拉伯句号
+- `U+3001`，表意逗号
+- `U+3002`，表意句号
+- `U+FF0C`，全角逗号
+- `U+FF0E`，全角句号
+- `U+FE50`，小型逗号
+- `U+FE51`，小型表意逗号
+- `U+FE52`，小型句号
+- `U+FF61`，半角表意句号
+- `U+FF64`，半角表意逗号
+
+用户代理可以包含其他字符。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### 设置开引号和闭引号悬挂
+
+#### HTML
 
 ```html
-<p>
-  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
-  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
-  massa, sit amet vulputate nulla pharetra ut.”
+<p>«片刻之间，什么也没有发生。然后，大约过了一秒钟，什么也没有继续发生。»</p>
+
+<p class="hanging">
+  «片刻之间，什么也没有发生。然后，大约过了一秒钟，什么也没有继续发生。»
+</p>
+
+<p class="hanging right">
+  «片刻之间，什么也没有发生。然后，大约过了一秒钟，什么也没有继续发生。»
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
-  hanging-punctuation: first;
-  margin: 0.5rem;
+  width: 15em;
+  border: 1px solid #cccccc;
+  font-size: 2rem;
+  font-style: italic;
+  margin: 1em;
+}
+
+p.hanging {
+  hanging-punctuation: first last;
+}
+
+p.right {
+  text-align: right;
 }
 ```
 
-### Result
+#### 结果
 
-## Specifications
+{{EmbedLiveSample("设置开引号和闭引号悬挂", "", 500)}}
 
-- [CSS Text Module Level 3 (Working Draft, 10-Oct-2013)](https://www.w3.org/TR/css-text-3/#hanging-punctuation-property)
-- [CSS Text Module Level 3 (Editor’s Draft, 03-May-2017)](https://drafts.csswg.org/css-text-3/#hanging-punctuation-property)
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{cssxref('text-indent')}}
+- [CSS Tricks：悬挂标点](https://css-tricks.com/almanac/properties/h/hanging-punctuation/)

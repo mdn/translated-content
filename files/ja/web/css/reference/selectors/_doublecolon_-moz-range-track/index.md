@@ -1,7 +1,9 @@
 ---
-title: ::-moz-range-track
+title: CSS `::-moz-range-track` 擬似要素
+short-title: ::-moz-range-track
 slug: Web/CSS/Reference/Selectors/::-moz-range-track
-original_slug: Web/CSS/::-moz-range-track
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_header}}
@@ -9,11 +11,15 @@ original_slug: Web/CSS/::-moz-range-track
 **`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
 > [!NOTE]
-> `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
+> `::-moz-range-track` を `<input type="range">` 以外で使うと、何にも一致せず、効果がありません。
 
 ## 構文
 
-{{csssyntax}}
+```css
+::-moz-range-track {
+  /* ... */
+}
+```
 
 ## 例
 
@@ -41,7 +47,7 @@ input[type="range"]::-moz-range-track {
 
 ## 仕様書
 
-標準の一部ではありません。
+どの標準にも含まれていません。
 
 ## ブラウザーの互換性
 
@@ -55,7 +61,6 @@ input[type="range"]::-moz-range-track {
 
 - 他のブラウザーで使われる同様の擬似要素:
   - {{cssxref("::-webkit-slider-runnable-track")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素
-  - {{cssxref("::-ms-track")}} Internet Explorer および Edge が対応している擬似要素
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

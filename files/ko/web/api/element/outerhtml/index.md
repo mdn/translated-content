@@ -19,7 +19,7 @@ element.outerHTML = htmlString;
 
 ### 값
 
-`outerHTML`로 값을 읽어올 때는 요소와 요소의 자식 요소가 직렬화된 HTML이 포함된 {{domxref("DOMString")}}을 반환합니다. `outerHTML`로 값을 설정할 때는 요소와 요소의 모든 자식 요소를 `htmlString` 형태로 파싱된 새로운 DOM 트리 구조로 대체합니다.
+`outerHTML`로 값을 읽어올 때는 요소와 요소의 자식 요소가 직렬화된 HTML이 포함된 {{jsxref("String")}}을 반환합니다. `outerHTML`로 값을 설정할 때는 요소와 요소의 모든 자식 요소를 `htmlString` 형태로 파싱된 새로운 DOM 트리 구조로 대체합니다.
 
 ### 예외
 

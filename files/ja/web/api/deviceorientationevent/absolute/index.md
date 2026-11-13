@@ -9,7 +9,7 @@ l10n:
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 **`absolute`** は {{domxref("DeviceOrientationEvent")}} インターフェイスの読み取り専用プロパティで、端末が絶対的に（つまり、地球の座標フレームを参照して）方向データを提供しているのか、それとも端末が決定した任意のフレームを使用しているのかを示します。
-詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
+詳しくは[方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
 
 ## 値
 
@@ -28,5 +28,5 @@ l10n:
 
 - {{ domxref("DeviceOrientationEvent") }}
 - [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} イベント

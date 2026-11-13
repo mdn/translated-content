@@ -15,7 +15,7 @@ Toda función en JavaScript es un objeto Function. Ver {{jsxref("Function")}} pa
 
 Las funciones no son lo mismo que los procedimientos. Una función siempre devuelve un valor, pero un procedimiento, puede o no puede devolver un valor.
 
-Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Sentencias/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
+Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Statements/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
 
 Los parámetros en la llamada a una función son los argumentos de la función. Los argumentos se pasan a las funciones _por valor_. Si la función cambia el valor de un argumento, este cambio no se refleja globalmente ni en la llamada de la función. Sin embargo, las referencias a objetos también son valores, y son especiales: si la función cambia las propiedades del objeto referenciado, ese cambio es visible fuera de la función, tal y como se muestra en el siguiente ejemplo:
 
@@ -57,7 +57,7 @@ Hay varias formas de definir funciones:
 
 ### Declaración de una función (La instrucción `function`)
 
-Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Sentencias/function","function")}} para más detalles):
+Hay una sintaxis especial para declarar funciones (ver la instrucción {{jsxref("Statements/function","function")}} para más detalles):
 
 ```js-nolint
 function nombre([param[, param[, ...param]]]) {
@@ -80,7 +80,7 @@ function nombre([param[, param[, ...param]]]) {
 
 ### Expresión de una función (El operador `function`)
 
-Una expresión function es similar y tiene la misma sintaxis que una declaración de función (ver operador {{jsxref("Operadores/function", "function")}} para más detalles):
+Una expresión function es similar y tiene la misma sintaxis que una declaración de función (ver operador {{jsxref("Operators/function", "function")}} para más detalles):
 
 ```js-nolint
 function [nombre]([param[, param[, ...param]]]) {
@@ -106,7 +106,7 @@ function [nombre]([param[, param[, ...param]]]) {
 > [!NOTE]
 > Las expresiones de función Flecha son una tecnología experimental, parte de la proposición Harmony (EcmaScript 6) y no son ampliamente implementadas por los navegadores.
 
-Una expresión de función flecha tiene una sintaxis más corta y su léxico se une a este valor (ver {{jsxref("Funciones/Arrow_functions", "arrow functions", "", 1)}} para más detalles):
+Una expresión de función flecha tiene una sintaxis más corta y su léxico se une a este valor (ver {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} para más detalles):
 
 ```js-nolint
 ([param] [, param]) => { instrucciones }
@@ -141,7 +141,7 @@ Llamar al contructor Function como una función, sin el operador new, tiene el m
 
 ## El objeto `arguments`
 
-Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functiones/argument", "Function")}}.
+Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functions/arguments", "Function")}}.
 
 ## Ámbito de ejecución y pila de funciones
 
@@ -152,7 +152,7 @@ some section about scope and functions calling other functions
 Una función puede referirse y llamarse a sí misma. Hay tres maneras en la que una función puede referirse a sí misma.
 
 1. El nombre de la función
-2. {{jsxref("arguments.callee")}}
+2. {{jsxref("Functions/arguments/callee", "arguments.callee")}}
 3. una función dentro del ambito de ejecución que refiere a la función
 
 Por ejemplo, considere la siguiente definición de función:

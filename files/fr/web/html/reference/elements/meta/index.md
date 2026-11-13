@@ -1,9 +1,9 @@
 ---
-title: "<meta> : l'élément de métadonnées"
+title: "Élément HTML `<meta>` : l'élément de métadonnées"
+short-title: <meta>
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information de {{Glossary("Metadata","métadonnées")}} qui ne peut pas être représentée par un des autres éléments de métadonnées, tels que {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}.
@@ -11,13 +11,13 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<meta>`** représente toute information
 `<meta>` peut fournir différents types de métadonnées&nbsp;:
 
 - Si l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) est défini, l'élément `<meta>` fournit des _métadonnées au niveau du document_ qui s'appliquent à toute la page.
-- Si l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv) est défini, l'élément `<meta>` agit comme une _directive pragma_ pour simuler des directives qui pourraient autrement être données par un en-tête HTTP.
+- Si l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta/http-equiv) est défini, l'élément `<meta>` agit comme une _directive pragma_ pour simuler des directives qui peuvent autrement être données par un en-tête HTTP.
 - Si l'attribut [`charset`](#charset) est défini, l'élément `<meta>` est une _déclaration d'encodage_, indiquant l'encodage des caractères utilisé dans le document.
 - Si l'attribut [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop) est défini, l'élément `<meta>` fournit des _métadonnées définies par l'utilisateur·ice_.
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) possède une signification spécifique pour l'élément `<meta>`.
@@ -49,7 +49,7 @@ La balise `<meta>` suivante fournit une `description` comme métadonnée pour la
 ### Définir une redirection de page
 
 L'exemple suivant utilise `http-equiv="refresh"` pour demander au navigateur d'effectuer une redirection.
-L'attribut `content="3;url=https://www.mozilla.org"` redirigera la page vers `https://www.mozilla.org` après 3 secondes&nbsp;:
+L'attribut `content="3;url=https://www.mozilla.org"` redirige la page vers `https://www.mozilla.org` après 3 secondes&nbsp;:
 
 ```html
 <meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />

@@ -9,7 +9,7 @@ slug: Web/API/CSSConditionRule/conditionText
 
 ## 値
 
-{{domxref('CSSOMString')}} です。
+{{jsxref("String")}} です。
 
 ## 例
 

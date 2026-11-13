@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}
 
-Ce module propose des recommandations sur les compétences générales à développer lors de l'apprentissage du développement web, et qui constituent de précieuses qualités pour entrer dans le secteur. Elles vous aideront grandement à adopter les bonnes attitudes pour apprendre, faire de la recherche, collaborer, et augmenter vos chances d'être recruté·e.
+Ce module propose des recommandations sur les compétences générales à développer lors de l'apprentissage du développement web, et qui constituent de précieuses qualités pour entrer dans le secteur. Elles vous aident grandement à adopter les bonnes attitudes pour apprendre, faire de la recherche, collaborer, et augmenter vos chances d'être recruté·e.
 
 ## Prérequis
 
@@ -18,7 +18,7 @@ Ce module est principalement théorique et ne suppose aucune connaissance pratiq
 - [Recherche et apprentissage](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)
   - : Il y a beaucoup à savoir en tant que développeur·euse web, et vous apprenez en permanence. Mais comment trouver ce qu'il faut savoir de la manière la plus efficace&nbsp;? Cet article donne des conseils utiles sur la recherche et l'apprentissage.
 - [Collaboration et travail en équipe](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork)
-  - : En tant que professionnel·le du secteur web, vous devrez travailler avec d'autres personnes sur des projets à différentes étapes&nbsp;: génération d'idées, rédaction de propositions, implémentation du code, etc. Cet article explique comment collaborer efficacement.
+  - : En tant que professionnel·le du secteur web, vous devez travailler avec d'autres personnes sur des projets à différentes étapes&nbsp;: génération d'idées, rédaction de propositions, implémentation du code, etc. Cet article explique comment collaborer efficacement.
 - [Flux de travail et processus](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes)
   - : Les débutant·e·s se concentrent souvent sur des aspects techniques isolés, mais négligent la vision globale d'un projet. Cet article apporte ce contexte d'ensemble.
 - [Trouver un emploi](/fr/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job)

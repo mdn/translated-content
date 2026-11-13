@@ -1,13 +1,18 @@
 ---
 title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
-original_slug: Web/CSS/text-decoration-skip
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
+
+{{SeeCompatTable}}
 
 **`text-decoration-skip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に影響する要素の内容に対するテキスト装飾のどの部分をスキップする必要があるかを設定します。これは要素によって描かれたテキスト装飾の行、および祖先によって描かれたすべてのテキスト装飾を制御します。
 
 > [!NOTE]
-> 他の多くのブラウザーでは、より単純な {{cssxref("text-decoration-skip-ink")}} プロパティへの対応に集中しています。
+> 他の多くのブラウザーでは、より単純な {{cssxref("text-decoration-skip-ink")}} プロパティへの対応に収束しつつあります。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -26,10 +31,9 @@ text-decoration-skip: objects edges box-decoration;
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: revert;
+text-decoration-skip: revert-layer;
 text-decoration-skip: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -49,7 +53,7 @@ text-decoration-skip: unset;
     !["text-decoration-skip: edges;" の例です。](decoration-skip-edges.png)
 
 - `box-decoration`
-  - : テキストの装飾はボックスのマージン、境界、パディング領域をスキップします。これは祖先により重ねられた装飾の効果のみを持ちます。*装飾ボックス*はボックスの装飾の上に描画を行いません。
+  - : テキストの装飾はボックスのマージン、境界、パディング領域をスキップします。これは祖先により重ねられた装飾の効果のみを持ちます。装飾ボックスはボックスの装飾の上に描画を行いません。
 
 ## 公式定義
 
@@ -61,7 +65,7 @@ text-decoration-skip: unset;
 
 ## 例
 
-<h3 id="Skipping_edges">エッジをスキップ</h3>
+### エッジをスキップ
 
 #### HTML
 
@@ -94,4 +98,4 @@ p {
 
 ## 関連情報
 
-- [`text-decoration-skip-ink`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-skip-ink)
+- {{cssxref("text-decoration-skip-ink")}}

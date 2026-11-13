@@ -3,7 +3,7 @@ title: "Array : méthode filter()"
 short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`filter()`** des instances de {{JSxRef("Array")}} crée une [copie superficielle](/fr/docs/Glossary/Shallow_copy) d'une portion d'un tableau donné, filtrée pour ne contenir que les éléments du tableau d'origine qui passent le test implémenté par la fonction fournie.
@@ -41,7 +41,7 @@ filter(callbackFn, thisArg)
 
 ### Valeur de retour
 
-Une [copie superficielle](/fr/docs/Glossary/Shallow_copy) du tableau donné contenant uniquement les éléments qui passent le test. Si aucun élément ne passe le test, un tableau vide est renvoyé.
+Une [copie superficielle](/fr/docs/Glossary/Shallow_copy) du tableau donné contenant uniquement les éléments qui passent le test. Si aucun élément ne passe le test, un tableau vide est retourné.
 
 ## Description
 
@@ -92,11 +92,11 @@ console.log(tableau.filter(estPremier)); // [2, 3, 5, 7, 11, 13]
 ```
 
 > [!NOTE]
-> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il serait préférable d'utiliser un algorithme fortement mémoïsé comme le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
+> L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement {{Glossary("Memoization", "mémoïsé")}} comme le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
 
-### Filtrer les entrées invalides d'un JSON
+### Filtrer les objets invalides d'un tableau d'objets
 
-L'exemple suivant utilise `filter()` pour créer un JSON filtré contenant tous les éléments dont l'`id` est numérique et non nul.
+L'exemple suivant utilise `filter()` pour créer un tableau filtré contenant tous les objets sont différents de zéro, et des `id` numériques.
 
 ```js
 const arr = [
@@ -206,13 +206,13 @@ console.log(
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.prototype.filter` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- L'objet global {{JSxRef("Array")}}
+- L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.forEach()")}}
 - La méthode {{JSxRef("Array.prototype.every()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("Array.prototype.some()")}}
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - La méthode {{JSxRef("TypedArray.prototype.filter()")}}
-- [Prothèse d'émulation de `Array.prototype.filter` dans core-js <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.prototype.filter` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.filter)

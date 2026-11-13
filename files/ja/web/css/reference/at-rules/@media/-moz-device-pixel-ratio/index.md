@@ -1,12 +1,12 @@
 ---
-title: -moz-device-pixel-ratio
+title: CSS `-moz-device-pixel-ratio` メディア特性
+short-title: -moz-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio
-original_slug: Web/CSS/@media/-moz-device-pixel-ratio
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
 
-{{Non-standard_header}} {{Deprecated_header}}
+{{Non-standard_header}}
 
 **`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 

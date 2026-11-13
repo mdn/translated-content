@@ -1,8 +1,9 @@
 ---
-title: "<caption> : l'élément de légende d'un tableau"
+title: "Élément HTML `<caption>` : l'élément de légende d'un tableau"
+short-title: <caption>
 slug: Web/HTML/Reference/Elements/caption
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<caption>`** définit la légende (ou le titre) d'un tableau, fournissant à ce dernier un {{Glossary("accessible name", "nom accessible")}} ou une {{Glossary("accessible description", "description accessible")}}.
@@ -110,7 +111,7 @@ Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils so
 ## Notes d'utilisation
 
 - Si présent, l'élément `<caption>` doit être le premier enfant de son élément parent {{HTMLElement("table")}}.
-- Lorsqu'un tableau (`<table>`) est imbriqué dans un élément HTML {{HTMLElement("figure")}} comme unique contenu de la figure, il doit être légendé via un {{HTMLElement("figcaption")}} pour le `<figure>` au lieu d'un `<caption>` imbriqué dans le `<table>`.
+- Lorsqu'un tableau (`<table>`) est imbriqué dans un élément HTML {{HTMLElement("figure")}} comme unique contenu de la figure, il doit être légendé avec un {{HTMLElement("figcaption")}} pour le `<figure>` au lieu d'un `<caption>` imbriqué dans le `<table>`.
 - Toute couleur {{CSSxRef("background-color")}} appliquée à un tableau ne s'applique pas à sa légende. Ajoutez aussi un `background-color` à l'élément `<caption>` si vous souhaitez que la même couleur soit appliquée aux deux.
 
 ## Exemples
@@ -135,7 +136,7 @@ Un élément `<caption>` est utilisé comme premier enfant du tableau ({{HTMLEle
   <thead>
     <tr>
       <th>Connexion</th>
-      <th>Courriel :</th>
+      <th>Courriel&nbsp;:</th>
     </tr>
   </thead>
   <tbody>
@@ -190,7 +191,7 @@ td {
 
 ### Résultat
 
-{{EmbedLiveSample('Tableau avec légende', 650, 140)}}
+{{EmbedLiveSample("Tableau avec légende", 650, 140)}}
 
 ## Résumé technique
 

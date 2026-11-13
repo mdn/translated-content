@@ -1,8 +1,9 @@
 ---
-title: white-space-collapse
+title: "`white-space-collapse` CSS プロパティ"
+short-title: white-space-collapse
 slug: Web/CSS/Reference/Properties/white-space-collapse
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}を統合する方法を制御します。
@@ -126,4 +127,4 @@ h2 {
 
 - `white-space-collapse` と {{CSSxRef("text-wrap")}} の一括指定: {{CSSxRef("white-space")}} プロパティ
 - [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)
-- [CSS でのホワイトスペースの扱い](/ja/docs/Web/CSS/Guides/Text/Whitespace)
+- [CSS でのホワイトスペースの処理](/ja/docs/Web/CSS/Guides/Text/Whitespace)

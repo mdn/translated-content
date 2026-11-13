@@ -16,7 +16,7 @@ canvas.getContext(contextType, contextAttributes);
 ### Parámetros
 
 - contextType
-  - : Es una {{domxref("DOMString")}} que contiene el identificador del contexto que define el contexto de dibujo asociado a el lienzo. Los posibles valores son:
+  - : Es una {{jsxref("String")}} que contiene el identificador del contexto que define el contexto de dibujo asociado a el lienzo. Los posibles valores son:
     - `"2d`", dando lugar a la creación de un objeto {{domxref("CanvasRenderingContext2D")}} que representa un contexto de renderizado de dos dimensiones.
     - `"webgl"` (o `"experimental-webgl"`) el cual creará un objeto {{domxref("WebGLRenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
     - "`webgl2`" (o "`experimental-webgl2`") el cual creará un objeto {{domxref("WebGL2RenderingContext")}} que representa un contexto de renderizado de tres dimensiones. Este contexto sólo está disponible en navegadores que implementan [WebGL](/es/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0). {{experimental_inline}}

@@ -1,9 +1,9 @@
 ---
 title: CSS クリップ入門
+short-title: クリップ
 slug: Web/CSS/Guides/Masking/Clipping
-original_slug: Web/CSS/CSS_masking/Clipping
 l10n:
-  sourceCommit: 611edf6335e4a833a6f394d0d98b117e7b0a36bf
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS クリップを使用すると、要素の表示部分を定義し、他の部分を非表示にして、コンテンツを特定の形状や領域内に「切り取る」ことができます。クリップを使用すると、要素は長方形に表示されることに制限されず、視覚的に興味深いデザインにすることができます。このガイドでは、 {{cssxref("clip-path")}} プロパティについて、いくつかの例を挙げて説明します。
@@ -36,13 +36,13 @@ clip-pathプロパティは、クリップを適用します。このプロパ�
 
 ### `clip-path` プロパティの値
 
-要素を視覚的にクリップするには、 `clip-path` プロパティを {{cssxref("geometry-box")}}、{{cssxref("url_value", "url")}}、{{svgElement("clipPath")}} クリップソース、[shape 関数](/ja/docs/Web/CSS/Reference/Values/Functions#shape_functions)で作成した {{cssxref("basic-shape")}} のいずれかに設定します。
+要素を視覚的にクリップするには、 `clip-path` プロパティを [`<geometry-box>`](/ja/docs/Web/CSS/Reference/Properties/clip-path#geometry-box)、{{cssxref("url_value", "url")}}、{{svgElement("clipPath")}} クリップソース、[shape 関数](/ja/docs/Web/CSS/Reference/Values/Functions#shape_functions)で作成した {{cssxref("basic-shape")}} のいずれかに設定します。
 
 ### 形状ボックス
 
 `clip-path` は、クリップされた領域の外側をすべて非表示にします。最も基本的なクリップは、形状ボックスを使用して行います。要素は、そのマージン、境界線、パディング、コンテンツに基づいてクリップすることができます。これらの視覚的なボックスの値の効果は、 {{cssxref("border-color")}} を透明に設定したり、 {{cssxref("background-origin")}} を目的の視覚的なボックスに設定したりするなど、他の CSS プロパティを使用して実現できます。これらの値を見ていくのは、主に、これらの値が、後で説明するシェイプ関数と組み合わせて、シェイプクリップパスの原点を定義するために使用されているためです。
 
-CSS シェイプで使用されている[参照ボックスを理解する](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box)ことは、 `clip-path` を使用する場合、特に[基本シェイプ](#基本シェイプへのクリップ)を使用する場合に重要です。参照ボックスは、シェイプの座標系を定義するからです。
+CSS シェイプで使用されている[参照ボックスを理解する](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参照ボックス)ことは、 `clip-path` を使用する場合、特に[基本シェイプ](#基本シェイプへのクリップ)を使用する場合に重要です。参照ボックスは、シェイプの座標系を定義するからです。
 
 #### 視覚的ボックス値
 
@@ -419,7 +419,7 @@ SVG の {{svgattr("d")}} 属性の文字列を `path()` 関数の引数として
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
-  clip-path: url(#heart);
+  clip-path: url("#heart");
 }
 ```
 
@@ -542,5 +542,7 @@ cite {
 - {{cssxref("shape-margin")}}
 - [シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS の `mask` プロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール

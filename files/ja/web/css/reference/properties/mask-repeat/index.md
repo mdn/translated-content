@@ -1,9 +1,8 @@
 ---
 title: mask-repeat
 slug: Web/CSS/Reference/Properties/mask-repeat
-original_slug: Web/CSS/mask-repeat
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-repeat`** は [CSS](/ja/docs/Web/CSS) プロパティで、マスク画像をどのように繰り返すかを設定します。マスク画像は水平軸、垂直軸、両方の軸で繰り返すか、まったく繰り返さないようにすることができます。
@@ -173,7 +172,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -193,7 +192,7 @@ div {
 ```html hidden
 <div></div>
 <label
-  >width: <output></output><br />
+  >width: <span></span><br />
   <input type="range" min="0" max="400" value="250" id="width" />
 </label>
 ```
@@ -204,7 +203,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -218,7 +217,7 @@ input {
 ```js hidden
 const div = document.querySelector("div");
 const range = document.getElementById("width");
-const output = document.querySelector("output");
+const output = document.querySelector("span");
 
 range.addEventListener("change", () => {
   const value = `${range.value}px`;
@@ -270,7 +269,7 @@ div {
   height: 180px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 
   mask-size: 50px 50px;
   mask-position: bottom right;
@@ -357,4 +356,9 @@ section {
 
 ## 関連情報
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("background-repeat")}}
+- {{cssxref("mask-border-repeat")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

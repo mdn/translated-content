@@ -3,10 +3,10 @@ title: "BigInt : méthode statique asIntN()"
 short-title: asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: c7424294e2e85922c9af80b2b557ece47654604c
 ---
 
-La méthode statique **`asIntN()`** des valeurs {{JSxRef("BigInt")}} tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier signé.
+La méthode statique **`BigInt.asIntN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier signé.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: BigInt.asIntN()")}}
 
@@ -14,7 +14,7 @@ La méthode statique **`asIntN()`** des valeurs {{JSxRef("BigInt")}} tronque une
 const I64_CEIL = 2n ** 63n;
 
 console.log(BigInt.asIntN(64, I64_CEIL - 1n));
-// 9223372036854775807n (2n ** 64n - 1n, le maximum sans dépassement)
+// 9223372036854775807n (2n ** 63n - 1n, le maximum sans dépassement)
 console.log(BigInt.asIntN(64, I64_CEIL));
 // -9223372036854775808n (dépassement vers la valeur minimale)
 console.log(BigInt.asIntN(64, I64_CEIL + 1n));
@@ -40,7 +40,7 @@ BigInt.asIntN(bits, bigint)
 
 ### Valeur de retour
 
-La valeur de `bigint` modulo `2 ** bits` comme entier signé.
+Un BigInt contenant la représentation binaire de `bigint` tronquée à `bits` bits, interprétée comme un entier signé.
 
 ### Exceptions
 
@@ -68,7 +68,7 @@ Si le bit de poids fort du nombre restant est `1`, le résultat est négatif. Pa
 > [!NOTE]
 > Les valeurs `BigInt` sont toujours codées en binaire selon le complément à deux.
 
-Contrairement aux API de langages similaires comme {{JSxRef("Number.prototype.toExponential()")}}, `asIntN` est une propriété statique de {{JSxRef("BigInt")}}, donc vous l'utilisez toujours comme `BigInt.asIntN()`, plutôt que comme une méthode d'une valeur `BigInt`. Exposer `asIntN()` comme « fonction de la bibliothèque standard » permet [l'interopérabilité avec asm.js <sup>(angl.)</sup>](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
+Contrairement aux API de langages similaires comme {{JSxRef("Number.prototype.toExponential()")}}, `asIntN` est une propriété statique de {{JSxRef("BigInt")}}, donc vous l'utilisez toujours comme `BigInt.asIntN()`, plutôt que comme une méthode d'une valeur `BigInt`. Exposer `asIntN()` comme «&nbsp;fonction de la bibliothèque standard&nbsp;» permet [l'interopérabilité avec asm.js <sup>(angl.)</sup>](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 
 ## Exemples
 
@@ -82,7 +82,7 @@ const max = 2n ** (64n - 1n) - 1n;
 BigInt.asIntN(64, max); // 9223372036854775807n
 
 BigInt.asIntN(64, max + 1n); // -9223372036854775807n
-// négatif car dépassement sur le nombre de bits
+// négatif, car dépassement sur le nombre de bits
 ```
 
 ## Spécifications

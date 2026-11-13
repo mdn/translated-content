@@ -19,7 +19,7 @@ clearMeasures(name)
 ### 参数
 
 - name {{optional_inline}}
-  - : 用于表述时间戳名称的 {{domxref("DOMString")}}。如果没有提供这个参数，则所有 {{domxref("PerformanceEntry.entryType","entry type")}} 标记值为"`measure`" 的{{domxref("PerformanceEntry","性能实体")}}将被移除。
+  - : 用于表述时间戳名称的 {{jsxref("String")}}。如果没有提供这个参数，则所有 {{domxref("PerformanceEntry.entryType","entry type")}} 标记值为"`measure`" 的{{domxref("PerformanceEntry","性能实体")}}将被移除。
 
 ### 返回值
 

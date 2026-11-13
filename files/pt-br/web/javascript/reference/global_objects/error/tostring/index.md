@@ -78,4 +78,4 @@ console.log(e.toString()); // 'hello'
 
 ## Veja também
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxref("Error.prototype.toString()", "Error.prototype.toSource()")}}

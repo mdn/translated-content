@@ -3,7 +3,7 @@ title: Введение в серверную часть
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Добро пожаловать на курс для начинающих по программированию серверной части сайта! В этой первой статье мы рассмотрим программирование на стороне сервера с высокого уровня, отвечая на такие вопросы, как «что это»?, «как это отличается от программирования на стороне клиента»? и «почему это так полезно»? После прочтения этой статьи вы поймёте дополнительные возможности, доступные веб-сайтам посредством программирования на стороне сервера.
 
@@ -63,7 +63,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 
 Код, который выполняется в браузере, известный как **код клиентской части**, прежде всего связан с улучшением внешнего вида и поведения отображаемой веб-страницы. Это включает в себя выбор и стилизацию компонентов пользовательского интерфейса, создание макетов, навигацию, проверку форм и т. д. Напротив, программирование веб-сайта на стороне сервера в основном включает выбор содержимого, которое возвращается браузеру в ответ на запросы. Код на стороне сервера обрабатывает такие задачи, как проверка отправленных данных и запросов, использование баз данных для хранения и извлечения данных и отправка правильных данных клиенту по мере необходимости.
 
-Код клиентской части написан с использованием [HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Splash_page), [CSS](/ru/docs/Learn/CSS) и [JavaScript](/ru/docs/Learn/JavaScript) — он запускается в веб-браузере и практически не имеет доступа к базовой операционной системе (включая ограниченный доступ к файловой системе).
+Код клиентской части написан с использованием [HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Splash_page), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics) и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting) — он запускается в веб-браузере и практически не имеет доступа к базовой операционной системе (включая ограниченный доступ к файловой системе).
 
 Веб-разработчики не могут контролировать, какой браузер может использовать каждый пользователь для просмотра веб-сайта — браузеры обеспечивают противоречивые уровни совместимости с функциями кода на стороне клиента, и одной из задач программирования на стороне клиента является изящная обработка различий в поддержке браузера.
 
@@ -175,4 +175,4 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 
 В следующей статье мы поможем вам выбрать лучший фреймворк для вашего первого сайта; затем мы изучим несколько основных взаимодействий с клиентской частью более подробно.
 
-{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}

@@ -1,12 +1,15 @@
 ---
 title: Intl.Locale.prototype.getWeekInfo()
+short-title: getWeekInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Intl.Locale")}} インスタンスの **`getWeekInfo()`** メソッドは、このロケールに対して `firstDay`、`weekend`、`minimalDays` プロパティを持つ `weekInfo` オブジェクトを返します。
+**`getWeekInfo()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、このロケールに対して `firstDay`、`weekend`、`minimalDays` プロパティを持つ `weekInfo` オブジェクトを返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `weekInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.weekInfo === locale.weekInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
+> 一部のブラウザーの一部のバージョンでは、このメソッドが `weekInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.weekInfo === locale.weekInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 

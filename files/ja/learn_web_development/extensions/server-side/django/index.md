@@ -2,7 +2,7 @@
 title: Django ウェブフレームワーク (Python)
 slug: Learn_web_development/Extensions/Server-side/Django
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 815f1a18f44059500b337719295c6eda14b6228e
 ---
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side")}}
@@ -11,7 +11,7 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 
 ## 前提条件
 
-このモジュールを進める前に、Django を知る必要はありません。理想は、[サーバーサイドのウェブサイトプログラミング第一歩](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps) を読んで、サーバーサイドのウェブプログラミングとウェブフレームワークについて理解しておくことです。
+このモジュールを進める前に、Django についての知識を持っている必要はありません。理想は、[サーバーサイドのウェブサイトプログラミング第一歩](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)を読んで、サーバーサイドのウェブプログラミングとウェブフレームワークについて理解しておくことです。
 
 プログラミングの概念と [Python](/ja/docs/Glossary/Python) に関する一般的な知識はあるとよいですが、主要概念を理解していることは必須ではありません。
 
@@ -23,7 +23,7 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 - [Django の紹介](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)
   - : この最初の Django の記事では、「Django とは何か」という問いに答え、このウェブフレームワークの特徴と概要を説明します。主な機能の概要と、このモジュールで詳しく説明しない高度な機能などを紹介します。また、Django アプリケーションの主要な構成部品のいくつかを示して、使いはじめる前にどのように使うのか、何ができるのかを知っておきます。
 - [Django 開発環境の設定](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)
-  - : Django がどのようなものか知ったので、次は Windows、Linux (Ubuntu)、Mac OS X で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、この記事で Django アプリケーションの開発を始められるでしょう。
+  - : Django がどのようなものか分かったので、次は Windows、Linux (Ubuntu)、Mac OS X で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、この記事で Django アプリケーションの開発を始められるでしょう。
 - [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)
   - : 最初の記事は、実践的なチュートリアルで学習する内容を説明し、「地域図書館ウェブサイト」の概要を示します。このウェブサイトの例は、後の記事で作り進めていきます。
 - [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)
@@ -41,7 +41,7 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 - [Django チュートリアル Part 8: ユーザー認証と権限](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Authentication)
   - : このチュートリアルでは、ユーザーが自分のアカウントで自分のサイトにログインできるようにする方法と、ログインできるかどうかを制御する方法、ログインしているかどうか、アクセス許可によって表示する方法について説明します。このデモンストレーションの一環として、地域図書館ウェブサイトを拡張し、ログインページとログアウトページを追加し、貸し出された本を表示するためのユーザーとスタッフのページを追加します。
 - [Django チュートリアル Part 9: フォームの操作](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Forms)
-  - : このチュートリアルでは、Django で [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Forms)を扱う方法、特にモデルインスタンスを作成、更新、削除するためのフォームを書く最も簡単な方法を紹介します。このデモンストレーションの一環として、図書館員が書籍を更新したり、管理アプリケーションを使用するのではなく独自のフォームを使用して著者の作成、更新、削除を行えるように、地域図書館ウェブサイトを拡張します。
+  - : このチュートリアルでは、Django で [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を扱う方法、特にモデルインスタンスを作成、更新、削除するためのフォームを書く最も簡単な方法を紹介します。このデモンストレーションの一環として、図書館員が書籍を更新したり、管理アプリケーションを使用するのではなく独自のフォームを使用して著者の作成、更新、削除を行えるように、地域図書館ウェブサイトを拡張します。
 - [Django チュートリアル Part 10: Django ウェブアプリケーションのテスト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Testing)
   - : ウェブサイトが成長するにつれて、手動でテストするのが困難になります。コンポーネント間のやりとりが複雑になるにつれて、ある領域の小さな変更が、他の領域へ影響がないか検証するためのテストの追加が多く必要になります。これらの問題を軽減する 1 つの方法は、変更を行うたびに簡単かつ確実に実行できる自動テストを作成することです。このチュートリアルでは、Django のテストフレームワークを使用して、あなたのウェブサイトの単体テストを自動化する方法を示します。
 - [Django チュートリアル Part 11: Django を本番環境にデプロイする](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Deployment)

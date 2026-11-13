@@ -3,8 +3,6 @@ title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 
-{{AddonSidebar}}
-
 Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).

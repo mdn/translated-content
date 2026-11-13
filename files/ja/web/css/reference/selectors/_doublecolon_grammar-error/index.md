@@ -1,12 +1,14 @@
 ---
-title: ::grammar-error
+title: CSS `::grammar-error` 擬似要素
+short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
-original_slug: Web/CSS/::grammar-error
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{SeeCompatTable}}
+**`::grammar-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("user agent", "ユーザーエージェント")}}が文法的に正しくないとしたテキストの部分を示します。
 
-**`::grammar-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("user agent", "ユーザーエージェント")}}が文法的に正しくないとしたテキストの区間を示します。
+`::grammar-error` 擬似要素は、すべての表示強調擬似要素に共通する特別な継承モデルに従います。この継承の仕組みの詳細については、[表示強調擬似要素の継承](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance)の節を参照してください。
 
 ## 利用できるプロパティ
 
@@ -23,8 +25,10 @@ original_slug: Web/CSS/::grammar-error
 
 ## 構文
 
-```css-nolint
-::grammar-error {}
+```css
+::grammar-error {
+  /* ... */
+}
 ```
 
 ## 例
@@ -36,7 +40,9 @@ original_slug: Web/CSS/::grammar-error
 #### HTML
 
 ```html
-<p>My friends is coming to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends is coming to the party tonight.
+</p>
 ```
 
 #### CSS
@@ -50,7 +56,7 @@ original_slug: Web/CSS/::grammar-error
 
 #### 結果
 
-{{EmbedLiveSample('Simple_document_grammar_check', '100%', 60)}}
+{{EmbedLiveSample('Basic_document_grammar_check', '100%', 60)}}
 
 ## 仕様書
 

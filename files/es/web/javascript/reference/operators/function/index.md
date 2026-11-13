@@ -30,7 +30,7 @@ function [name]([param1, param2, ..., paramN]) {
 
 ## Descripción
 
-La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Reference/Functions) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
+La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Statements/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Reference/Functions) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
 
 ## Ejemplos
 
@@ -44,7 +44,7 @@ var x = function (y) {
 
 ### Expresión de función nombrada
 
-Si quiere referirse a la función actual dentro del cuerpo de la función, debe crear una expresión de función nombrada. Luego, este nombre será local solo para el cuerpo de la función (alcance). Esto también evita usar la propiedad no estándar {{jsxref("Funciones/arguments/callee", "arguments.callee")}}.
+Si quiere referirse a la función actual dentro del cuerpo de la función, debe crear una expresión de función nombrada. Luego, este nombre será local solo para el cuerpo de la función (alcance). Esto también evita usar la propiedad no estándar {{jsxref("Functions/arguments/callee", "arguments.callee")}}.
 
 ```js
 var math = {
@@ -59,4 +59,4 @@ var math = {
 
 - [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
-- Sentencias {{jsxref("Sentencias/function", "function")}}
+- Sentencias {{jsxref("Statements/function", "function")}}

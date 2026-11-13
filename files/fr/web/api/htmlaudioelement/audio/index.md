@@ -35,10 +35,10 @@ Vous pouvez également utiliser d'autres méthodes de création d'éléments, co
 Il existe trois façons de savoir quand suffisamment de données audio ont été chargées pour permettre la lecture&nbsp;:
 
 - Vérifier la valeur de la propriété {{DOMxRef("HTMLMediaElement.readyState", "readyState")}}. Si elle vaut `HTMLMediaElement.HAVE_FUTURE_DATA`, il y a suffisamment de données pour commencer la lecture et lire au moins un court instant. Si elle vaut `HTMLMediaElement.HAVE_ENOUGH_DATA`, il y a assez de données pour que, compte tenu du débit actuel, la lecture puisse se faire jusqu'à la fin sans interruption.
-- Écouter l'événement {{DOMxRef("HTMLMediaElement.canplay_event", "canplay")}}. Il est envoyé à l'élément `<audio>` lorsqu'il y a assez d'audio pour commencer la lecture, même si des interruptions peuvent survenir.
-- Écouter l'événement {{DOMxRef("HTMLMediaElement.canplaythrough_event", "canplaythrough")}}. Il est envoyé lorsqu'il est estimé que l'audio pourra être lu jusqu'à la fin sans interruption.
+- Écouter l'évènement {{DOMxRef("HTMLMediaElement.canplay_event", "canplay")}}. Il est envoyé à l'élément `<audio>` lorsqu'il y a assez d'audio pour commencer la lecture, même si des interruptions peuvent survenir.
+- Écouter l'évènement {{DOMxRef("HTMLMediaElement.canplaythrough_event", "canplaythrough")}}. Il est envoyé lorsqu'il est estimé que l'audio pourra être lu jusqu'à la fin sans interruption.
 
-L'approche basée sur les événements est la meilleure&nbsp;:
+L'approche basée sur les évènements est la meilleure&nbsp;:
 
 ```js
 myAudioElement.addEventListener("canplaythrough", (event) => {

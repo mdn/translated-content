@@ -149,7 +149,7 @@ git push
 
 - [Что такое веб-сервер?](/ru/docs/Learn/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_%D0%B2%D0%B5%D0%B1_%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80)
 - [Что такое доменные имена?](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
-- [Сколько стоит сделать что-то в Интернете?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [Сколько стоит сделать что-то в Интернете?](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 - [Развёртывание сайта](https://www.codecademy.com/learn/deploy-a-website): хороший курс от Codecademy, который забегает немного вперёд и показывает некоторые дополнительные техники.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting), статья написанная Скоттом Мюрреем содержит некоторые полезные идеи о доступных сервисах.
 

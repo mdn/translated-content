@@ -1,9 +1,8 @@
 ---
 title: :host
 slug: Web/CSS/Reference/Selectors/:host
-original_slug: Web/CSS/:host
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`:host`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、その CSS を含む[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。 — 言い換えれば、シャドウ DOM の中からカスタム要素を選択できるようにします。
@@ -14,7 +13,7 @@ l10n:
 {{InteractiveExample("CSS デモ: :host", "tabbed-shorter")}}
 
 ```css interactive-example
-/* This CSS is being applied inside the shadow DOM. */
+/* この CSS はシャドウ DOM の内部に適用されます。 */
 
 :host {
   background-color: aqua;
@@ -28,12 +27,12 @@ l10n:
 ```js interactive-example
 const shadowDom = init();
 
-// add a <span> element in the shadow DOM
+// シャドウ DOM に <span> 要素を追加
 const span = document.createElement("span");
-span.textContent = "Inside shadow DOM";
+span.textContent = "シャドウ DOM の内部";
 shadowDom.appendChild(span);
 
-// attach shadow DOM to the #shadow-dom-host element
+// シャドウ DOM を #shadow-dom-host 要素に添付する
 function init() {
   const host = document.getElementById("shadow-dom-host");
   const shadowDom = host.attachShadow({ mode: "open" });
@@ -69,9 +68,9 @@ function init() {
 
 ### シャドウホストのスタイル付け
 
-以下のスニペットは、 [host セレクターの例](https://github.com/mdn/web-components-examples/tree/main/host-selectors)（[ライブでも参照](https://mdn.github.io/web-components-examples/host-selectors/)）から取りました。
+以下のスニペットは、 [host セレクターの例](https://github.com/mdn/web-components-examples/tree/main/host-selectors)（[ライブでも参照](https://mdn.github.io/web-components-examples/host-selectors/)）から引用したものです。
 
-この例では、テキストの周りを囲むことができる簡単なカスタム要素 — `<context-span>` — を使います。
+この例では、テキストの周りを囲むことができるカスタム要素、`<context-span>` を使います。
 
 ```html
 <h1>
@@ -93,7 +92,7 @@ shadowRoot.appendChild(span);
 style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ':host-context(h1)::after { content: " - no links in headers!" }' +
   ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
   ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
@@ -112,7 +111,8 @@ style.textContent =
 ## 関連情報
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
-- {{CSSXref("::slotted")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
+- {{CSSxref("::slotted")}}
+- {{CSSxRef(":state",":state()")}}
 - [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール

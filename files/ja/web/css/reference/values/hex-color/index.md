@@ -1,14 +1,13 @@
 ---
 title: <hex-color>
 slug: Web/CSS/Reference/Values/hex-color
-original_slug: Web/CSS/hex-color
 l10n:
-  sourceCommit: ea76241c56cb4cc61dbd2898866f47cf60c745c1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<hex-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、[sRGB](/ja/docs/Glossary/RGB) 色の原色成分（赤、緑、青）を 16 進数で記述し、その透明度も記述する記法です。
 
-`<hex-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) が使用できるところならどこでも使用することができます。
+`<hex-color>` 値は、{{cssxref("&lt;color&gt;")}} が使用できるところならどこでも使用することができます。
 
 ## 構文
 
@@ -35,40 +34,51 @@ l10n:
 
 ## 例
 
-### 完全に不透明なホットピンクの 16 進構文
+### ホットピンクの 16 進構文
+
+この例には 4 つのホットピンクの四角形が含まれており、それぞれ異なる長さの大文字と小文字を区別しない 16 進色構文を使用して生成された完全不透明または半透明の背景が設定されています。
 
 #### HTML
 
 ```html
-<span>
-  #f09
-  <div class="c1"></div>
-</span>
-<span>
+<div>
   #F09
+  <div class="c1"></div>
+</div>
+<div>
+  #f09a
   <div class="c2"></div>
-</span>
-<span>
+</div>
+<div>
   #ff0099
   <div class="c3"></div>
-</span>
-<span>
-  #FF0099
+</div>
+<div>
+  #FF0099AA
   <div class="c4"></div>
-</span>
+</div>
 ```
 
 #### CSS
+
+ホットピンクの背景色が、3 値、4 値、6 値、8 値の 16 進表記を用いて作成され、大文字と小文字の両方が使用されています。
 
 ```css hidden
 body {
   display: flex;
   justify-content: space-evenly;
+  font-family: monospace;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 ```
 
 ```css
-div {
+[class] {
   width: 40px;
   height: 40px;
 }
@@ -76,19 +86,19 @@ div {
   background: #f09;
 }
 .c2 {
-  background: #f09;
+  background: #f09a;
 }
 .c3 {
   background: #ff0099;
 }
 .c4 {
-  background: #ff0099;
+  background: #ff0099aa;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("完全に不透明なホットピンクの_16_進構文", "100%", 100)}}
+{{EmbedLiveSample("ホットピンクの_16_進構文", "100%", 100)}}
 
 ## 仕様書
 
@@ -100,6 +110,7 @@ div {
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): 色のデータ型
-- [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb): 色の 3 成分および透明度を 10 進数で使用するように設定する関数
+- {{cssxref("&lt;color&gt;")}} データ型
+- {{cssxref("named-color")}} データ型
+- [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 色関数
 - [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール

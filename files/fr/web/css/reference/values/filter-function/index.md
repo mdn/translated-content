@@ -1,9 +1,9 @@
 ---
-title: <filter-function>
+title: Type CSS `<filter-function>`
+short-title: <filter-function>
 slug: Web/CSS/Reference/Values/filter-function
-original_slug: Web/CSS/filter-function
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}}.

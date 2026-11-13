@@ -25,9 +25,9 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Возвращает числовое значение размера элемента. `4` в случае с `Int32Array`.
 - Int32Array.length
   - : Свойство статического размера, значение которого равно 3. Для актуального размера (количества элементов), смотрите {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int32Array.name")}}
+- {{jsxref("Function.name", "Int32Array.name")}}
   - : Возвращает строковое значение названия конструктора. В случае с типом `Int32Array`: "Int32Array".
-- {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
+- {{jsxref("TypedArray", "Int32Array.prototype")}}
   - : Прототип для _TypedArray_ объектов.
 
 ## Методы
@@ -39,7 +39,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
 
 ## `Int32Array` прототип
 
-All `Int32Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Int32Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Свойства
 
@@ -106,7 +106,7 @@ All `Int32Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedAr
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int32Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Int32Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Примеры
@@ -152,7 +152,7 @@ var int32 = new Int32Array(iterable);
 
 ## Compatibility notes
 
-Начиная с ECMAScript 2015, конструкторы `Int32Array` требуют оператор {{jsxref("Operators/new", "new")}}. Вызов `Int32Array` конструктора как функцию без оператора `new`, вызовет ошибку {{jsxref("TypeError")}}.
+Начиная с ECMAScript 2015, конструкторы `Int32Array` требуют оператор {{jsxref("new")}}. Вызов `Int32Array` конструктора как функцию без оператора `new`, вызовет ошибку {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int32Array([1, 2, 3]);

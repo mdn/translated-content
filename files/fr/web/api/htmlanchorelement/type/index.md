@@ -19,7 +19,7 @@ Une chaîne de caractères.
 ## Exemple
 
 ```html
-<a id="exampleLink" href="https://exemple.fr" type="text/html"
+<a id="exampleLink" href="https://example.com" type="text/html"
   >Lien d'exemple</a
 >
 <p class="type"></p>

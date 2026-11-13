@@ -38,7 +38,7 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 
 ### Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-moz-user-input = auto | none`)}}
 
 ## Examples
 

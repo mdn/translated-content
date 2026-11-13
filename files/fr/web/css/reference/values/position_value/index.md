@@ -1,8 +1,9 @@
 ---
-title: <position>
+title: Type CSS `<position>`
+short-title: <position>
 slug: Web/CSS/Reference/Values/position_value
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<position>`** désigne une paire de coordonnées utilisée pour définir un emplacement par rapport à une boîte d'élément. Elle est utilisée dans les propriétés {{CSSxRef("background-position")}}, {{CSSxRef("object-position")}}, {{CSSxRef("mask-position")}}, {{CSSxRef("offset-position")}}, {{CSSxRef("offset-anchor")}} et {{CSSxRef("transform-origin")}}.

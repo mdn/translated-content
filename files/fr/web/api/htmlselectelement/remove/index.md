@@ -1,46 +1,52 @@
 ---
-title: HTMLSelectElement.remove()
+title: "HTMLSelectElement : méthode remove()"
+short-title: remove()
 slug: Web/API/HTMLSelectElement/remove
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-La méthode **`HTMLSelectElement.remove()`** enlève l'option à l'index choisi dans la liste des options de cet objet select.
+La méthode **`remove()`** de l'interface {{DOMxRef("HTMLSelectElement")}} enlève l'élément à l'indice défini de la collection d'options pour cet élément de sélection.
 
 ## Syntaxe
 
-```js
-collection.remove(index);
+```js-nolint
+remove(index)
 ```
 
 ### Paramètre
 
-- _index est_ un entier long définissant la position du {{ domxref("HTMLOptionElement") }} à enlever de la collection. Si rien n'est trouvé à cette position dans la liste, la méthode n'a aucun effet.
+- `index`
+  - : Un entier basé sur zéro correspondant à l'indice du {{DOMxRef("HTMLOptionElement")}} à enlever de la collection. Si l'indice n'est pas trouvé, la méthode n'a aucun effet.
 
-<!---->
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemple
 
+```html
+<select id="maListe" name="maListe">
+  <option value="1">Option : Valeur 1</option>
+  <option value="2">Option : Valeur 2</option>
+  <option value="3">Option : Valeur 3</option>
+</select>
+```
+
 ```js
-var sel = document.getElementById("maListe");
+let sel = document.getElementById("maListe");
 sel.remove(1);
+```
 
-/*
-  Prend l'objet select existant suivant :
+Le HTML résultant sera&nbsp;:
 
-  <select id="maListe" name="maListe">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-
-  Et le transforme en:
-
-  <select id="maListe" name="maListe">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-*/
+```html
+<select id="maListe" name="maListe">
+  <option value="1">Option : Valeur 1</option>
+  <option value="3">Option : Valeur 3</option>
+</select>
 ```
 
 ## Spécifications
@@ -53,5 +59,5 @@ sel.remove(1);
 
 ## Voir aussi
 
-- {{ domxref("ChildNode.remove") }}, la méthode appelée quand remove est créé sans argument pour un {{ domxref("HTMLSelectElement") }}.
-- {{domxref("HTMLSelectElement") }} qui possède cette méthode.
+- {{DOMxRef("Element.remove")}}, la méthode appelée quand `remove` est appelé sans argument pour un objet {{DOMxRef("HTMLSelectElement")}}.
+- {{DOMxRef("HTMLSelectElement")}} qui possède cette méthode.

@@ -1,11 +1,10 @@
 ---
-title: device-height
+title: Caractéristique média CSS `device-height`
+short-title: device-height
 slug: Web/CSS/Reference/At-rules/@media/device-height
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: ca6052779ddca9f6d99665f12c39aa2d85d85733
 ---
-
-{{Deprecated_Header}}
 
 > [!NOTE]
 > Pour interroger la hauteur de la zone d'affichage, il faut utiliser la caractéristique média {{CSSxRef("@media/height", "height")}}.

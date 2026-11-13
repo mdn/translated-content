@@ -1,17 +1,22 @@
 ---
-title: Selection.focusOffset
+title: Selection：focusOffset 属性
+short-title: focusOffset
 slug: Web/API/Selection/focusOffset
+l10n:
+  sourceCommit: eea0f3e4950c73b3f648e86a96ab245f4bc958e7
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
-只读属性 **`Selection.focusOffset`** 返回选区终点（鼠标松开瞬间所记录的那个点）在焦点（{{domxref("Selection.focusNode")}}）中的偏移量。返回值从零开始计数，如果选区（{{domxref("Selection")}}）在焦点（{{domxref("Selection.focusNode")}}）的第一个字符前结束，返回值为 0。
+**`Selection.focusOffset`** 只读属性用于返回当 {{domxref("Selection.focusNode")}} 是 {{domxref("Text")}}、{{domxref("CDATASection")}} 或 {{domxref("Comment")}} 类型节点时，选区焦点在该节点内偏移的字符数量。
 
-## 语法
+如果 {{domxref("Selection.focusNode")}} 是其他类型的节点，**`Selection.focusOffset`** 会返回选区焦点在 {{domxref("Selection.focusNode")}} 中相对于其 {{domxref("Node.childNodes")}} 的偏移数量。
 
-```plain
-offset = sel.focusOffset
-```
+这个数值是从零开始计数的。如果选区在 {{domxref("Selection.focusNode")}} 的第一个字符处结束，则返回 `0`。
+
+## 值
+
+一个数字。
 
 ## 规范
 
@@ -21,6 +26,6 @@ offset = sel.focusOffset
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}, 这个属性所属的接口。
+- 所属的 {{domxref("Selection")}} 接口。

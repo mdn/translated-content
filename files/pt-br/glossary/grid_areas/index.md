@@ -72,6 +72,6 @@ No exemplo abaixo temos um grid contêiner com dois items de grid, nomeamos esse
 
 ### Further reading
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_
 - CSS Grid Layout Guide: _[Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
 - [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

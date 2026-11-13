@@ -3,7 +3,7 @@ title: 書字方向の概要
 short-title: 概要
 slug: Web/CSS/Guides/Writing_modes/Writing_mode_systems
 l10n:
-  sourceCommit: f55fe660c4bb5cc2216190751d4ad9a3bbcc9300
+  sourceCommit: 5bbfe12789861f4352cf0e63643bd329c56d7821
 ---
 
 CSS は、右書き、左書き、縦書きなど様々なコンテンツの**書字方向** (writing modes) に対応しています。このガイドでは、書字方向とその方向について簡潔に概説します。

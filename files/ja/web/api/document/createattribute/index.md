@@ -30,7 +30,7 @@ createAttribute(name)
 ### 例外
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : [`name`](#name) が無効な [XML name](https://www.w3.org/TR/REC-xml/#dt-name) である場合、例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
+  - : [`name`](#name) が無効な [XML name](https://www.w3.org/TR/REC-xml/#dt-name) である場合（例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
 
 ## 例
 

@@ -1,32 +1,35 @@
 ---
-title: Element.prepend()
+title: "Element : méthode prepend()"
+short-title: prepend()
 slug: Web/API/Element/prepend
+l10n:
+  sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`Element.prepend()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou des chaînes de caractères avant le premier élément enfant de l'élément courant. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).
+La méthode **`prepend()`** de l'interface {{DOMxRef("Element")}} insère un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères avant le premier enfant de l'élément. Les chaînes de caractères sont insérées comme des nœuds {{DOMxRef("Text")}} équivalents.
 
 ## Syntaxe
 
-```js
-prepend(param1);
-prepend(param1, param2);
-prepend(param1, param2, /* ... ,*/ paramN);
+```js-nolint
+prepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Paramètres
 
 - `param1`, …, `paramN`
-  - : Un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères à insérer.
+  - : Un ensemble d'objets {{DOMxRef("Node")}} ou de chaînes de caractères à insérer.
 
 ### Valeur de retour
 
-`undefined`.
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- [`DOMException`](/fr/docs/Web/API/DOMException) `HierarchyRequestError`
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Levée lorsque le nœud ne peut pas être inséré à l'endroit indiqué dans la hiérarchie.
 
 ## Exemples
@@ -63,9 +66,10 @@ div.prepend("Du texte", p);
 console.log(div.childNodes); // NodeList [ #text "Du texte", <p> ]
 ```
 
-### `prepend()` n'est pas disponible dans la portée créée par `with`
+### La méthode `prepend()` est inaccessible dans la portée
 
-La méthode `prepend()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
+La méthode `prepend()` ne fait pas partie de la portée créée par une instruction `with`.
+Voir {{JSxRef("Symbol.unscopables")}} pour plus d'informations.
 
 ```js
 let div = document.createElement("div");
@@ -86,9 +90,9 @@ with (div) {
 
 ## Voir aussi
 
-- [`Element.append()`](/fr/docs/Web/API/Element/append)
-- [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)
-- [`Node.insertBefore()`](/fr/docs/Web/API/Node/insertBefore)
-- [`Element.before()`](/fr/docs/Web/API/Element/before)
-- [`Element.insertAdjacentElement()`](/fr/docs/Web/API/Element/insertAdjacentElement)
-- [`NodeList`](/fr/docs/Web/API/NodeList)
+- La méthode {{DOMxRef("Element.append()")}}
+- La méthode {{DOMxRef("Node.appendChild()")}}
+- La méthode {{DOMxRef("Node.insertBefore()")}}
+- La méthode {{DOMxRef("Element.before()")}}
+- La méthode {{DOMxRef("Element.insertAdjacentElement()")}}
+- L'interface {{DOMxRef("NodeList")}}

@@ -1,9 +1,9 @@
 ---
 title: CSS スクロール固定
+short-title: スクロール固定
 slug: Web/CSS/Guides/Scroll_anchoring
-original_slug: Web/CSS/CSS_scroll_anchoring
 l10n:
-  sourceCommit: 6b52c3a6f18dc5c3f316b9935a0e1c80736409fe
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS スクロール固定**モジュールは、ユーザーが可視コンテンツを利用している間、スクロールボックスの可視領域より上の DOM の変更によってページが動くことを防ぐ仕組みを定義します。
@@ -18,14 +18,14 @@ l10n:
 
 - {{cssxref("overflow-anchor")}}
 
-## 用語集と定義
+## 用語集の用語
 
 - {{glossary("Scroll container", "スクロールコンテナー")}}
 - {{glossary("Scroll snap", "スクロールスナップ")}}
 
 ## ガイド
 
-- [スクロール固定のガイド](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [スクロール固定の概要](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
   - : スクロール固定と抑制トリガーを有効化および無効化する方法、そして、いつ、なぜそれらを使用するべきなのかを説明します。
 
 ## 関連概念

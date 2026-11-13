@@ -1,10 +1,11 @@
 ---
 title: CSS Houdini
 slug: Web/CSS/Guides/Properties_and_values_API/Houdini
-original_slug: Web/CSS/CSS_properties_and_values_API/Houdini
+l10n:
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
-**CSS Houdini** は、 CSS エンジンの一部を公開する一連の API です。これにより、開発者は CSS の拡張機能を簡単に作成することができます。これらの拡張機能は、ブラウザーでまだ利用できない機能を代替したり、レイアウトの新しい方法を試したり、クリエイティブな境界線やその他の効果を追加したりするものです。
+**CSS Houdini** は、 CSS エンジンの一部を公開する一連の API であり、開発者は CSS の拡張機能を作成することができます。これらの拡張機能は、ブラウザーでまだ利用できる機能が少ないため、それらの機能を補完したり、新しいレイアウト手法を試したり、創造的な境界線やその他の効果を追加したりすることが可能です。
 
 多くの Houdini の例では、 API の創造的な可能性が紹介されていますが、実用的な使用例もたくさんあります。例えば、 Houdini を使って、型のチェックや既定値を持つ高度なカスタムプロパティを作成することができます。
 
@@ -42,9 +43,9 @@ Houdini の機能の一つにワークレット ({{domxref("Worklet")}}) があ�
 
 ## リファレンス
 
-### CSS アット規則と記述子
+### CSS アットルールと記述子
 
-{{CSSxRef("@property")}} アット規則で高度なカスタムプロパティを登録することができます。
+{{CSSxRef("@property")}} アットルールで高度なカスタムプロパティを登録することができます。
 
 - {{CSSxRef("@property")}}
 - {{CSSxRef("@property/inherits","inherits")}}

@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/bindRenderbuffer
 
 ## 语法
 
-```plain
+```js-nolint
 void gl.bindRenderbuffer(target, renderbuffer);
 ```
 

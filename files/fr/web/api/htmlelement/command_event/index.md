@@ -3,16 +3,16 @@ title: "HTMLElement : évènement command"
 short-title: command
 slug: Web/API/HTMLElement/command_event
 l10n:
-  sourceCommit: 4819e24c1df3522f49350f6146689a3ce37af4cf
+  sourceCommit: 65692fd4d256d5647749b7c7005dcf53d425a533
 ---
 
 {{APIRef("Invoker Commands API")}}
 
-L'évènement **`command`** de l'interface {{DOMxRef("HTMLElement")}} est déclenché sur un élément contrôlé via un {{DOMxRef("HTMLButtonElement", "button")}} disposant de valeurs valides pour {{DOMxRef("HTMLButtonElement.commandForElement", "commandForElement")}} et {{DOMxRef("HTMLButtonElement.command", "command")}}, chaque fois que le bouton est actionné (par exemple lorsqu'il est cliqué).
+L'évènement **`command`** de l'interface {{DOMxRef("HTMLElement")}} est déclenché sur un élément contrôlé avec un {{DOMxRef("HTMLButtonElement", "button")}} disposant de valeurs valides pour {{DOMxRef("HTMLButtonElement.commandForElement", "commandForElement")}} et {{DOMxRef("HTMLButtonElement.command", "command")}}, chaque fois que le bouton est actionné (par exemple lorsqu'il est cliqué).
 
 ## Syntaxe
 
-On utilisera le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définira une propriété gestionnaire d'évènements.
+On utilise le nom de l'évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou on définit une propriété gestionnaire d'évènements.
 
 ```js-nolint
 addEventListener("command", (event) => { })
@@ -31,7 +31,7 @@ Un objet {{DOMxRef("CommandEvent")}}. Hérite de l'objet {{DOMxRef("Event")}}.
 ### Exemple simple
 
 ```js
-const fenetreContextuelle = document.getElementById("mafenetre");
+const fenetreContextuelle = document.getElementById("ma-fenetre");
 
 // …
 
@@ -51,7 +51,7 @@ Par exemple&nbsp;:
 
 ```js
 button.addEventListener("click", (event) => {
-  event.preventDefault(); // l'évènement `command` ne sera jamais déclenché
+  event.preventDefault(); // l'évènement `command` n'est jamais déclenché
 });
 ```
 
@@ -71,6 +71,6 @@ element.addEventListener("command", (event) => {
 
 ## Voir aussi
 
-- {{DOMxRef("Invoker Commands API", "L'API Invoker Commands", "", "nocode")}}
+- {{DOMxRef("Invoker Commands API", "L'API Invoker Commands", "", 1)}}
 - La propriété {{DOMxRef("HTMLButtonElement.command")}}
 - La propriété {{DOMxRef("HTMLButtonElement.commandForElement")}}

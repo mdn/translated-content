@@ -1,14 +1,13 @@
 ---
 title: counter()
 slug: Web/CSS/Reference/Values/counter
-original_slug: Web/CSS/counter
 l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`counter()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された名前付きカウンターの現在値があれば、その文字列を返します。
 
-`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/Reference/Values/string) に対応するすべての箇所で用いることができます。
+`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には {{cssxref("string")}} に対応するすべての箇所で用いることができます。
 
 {{InteractiveExample("CSS デモ: counter()", "tabbed-shorter")}}
 
@@ -27,7 +26,7 @@ l10n:
 ```
 
 ```html interactive-example
-<p>Best Dynamic Duos in Sports:</p>
+<p>スポーツ界で最強のコンビ:</p>
 <ol class="double-list">
   <li>Simone Biles + Jonathan Owens</li>
   <li>Serena Williams + Venus Williams</li>
@@ -40,14 +39,15 @@ l10n:
 ## 構文
 
 ```css
-/* 単純な使用法 */
+/* 基本的な使用法 */
 counter(counter-name);
 
 /* カウンターの表示の変更 */
 counter(counter-name, upper-roman)
 ```
 
-[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters", "counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
+[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)自身には視覚的効果が何もありません。
+`counter()` 関数および {{cssxref("counters()")}} 関数は、開発者が定義した文字列（または画像）を返すことでカウンターは利用価値が生まれます。
 
 ### 値
 
@@ -56,10 +56,10 @@ counter(counter-name, upper-roman)
 - `<counter-name>`
   - : カウンターを識別する {{cssxref("&lt;custom-ident&gt;")}} であり、{{cssxref("counter-reset")}} および {{cssxref("counter-increment")}} に用いた名前と同じもので、大文字小文字を区別します。カウンター名は名前をダッシュ 2 つで始めることはできず、また `none`, `unset`, `initial`, `inherit` という名前にすることはできません。
 - `<counter-style>`
-  - : {{cssxref("&lt;list-style-type&gt;")}} 名、 {{cssxref("&lt;@counter-style&gt;")}} 名、 {{cssxref("symbols()")}} 関数の何れかです。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)があります。省略された場合は、既定で `decimal` になります。
+  {{cssxref("&lt;list-style-type&gt;")}} 名、 {{cssxref("&lt;@counter-style&gt;")}} 名、 {{cssxref("symbols()")}} 関数の何れかです。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)があります。省略された場合は、既定で `decimal` になります。
 
 > [!NOTE]
-> 入れ子になったカウンターの値を結合する場合は、 {{cssxref("counters", "counters()")}} 関数を使用します。こちらは追加の {{cssxref("string")}} 引数があります。
+> 入れ子になったカウンターの値を結合する場合は、 {{cssxref("counters()")}} 関数を使用します。こちらは追加の {{cssxref("string")}} 引数があります。
 
 ### 形式文法
 

@@ -1,27 +1,29 @@
 ---
-title: document.documentElement
+title: "Document: documentElement property"
+short-title: documentElement
 slug: Web/API/Document/documentElement
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-**`Document.documentElement`** renvoie l'[`Element`](/fr/docs/Web/API/Element) qui est l'élément racine du [document](/fr/docs/Web/API/Document) (par exemple, l'élément `<html>` pour les documents HTML).
+La propriété en lecture seule **`documentElement`** de l'interface {{DOMxRef("Document")}} retourne l'élément {{DOMxRef("Element")}} qui est l'élément racine du {{DOMxRef("document")}} (par exemple, l'élément {{HTMLElement("html")}} pour les documents HTML).
 
-### Syntaxe
+## Valeur
 
-```js
-var element = document.documentElement;
-```
+Un objet {{DOMxRef("Element")}}.
 
-## Exemple
+## Exemples
 
 ```js
-var racine = document.documentElement;
-var premierNiveau = racine.childNodes;
+const elementRacine = document.documentElement;
+const premierNiveau = elementRacine.childNodes;
 // premierNiveau est une NodeList des enfants directs de l'élément racine
-for (var i = 0; i < premierNiveau.length; i++) {
+// tels que <head> et <body>
+
+for (const enfant of premierNiveau) {
   // fait quelque chose avec chaque enfant direct de l'élément racine
-  // en tant que premierNiveau[i]
 }
 ```
 

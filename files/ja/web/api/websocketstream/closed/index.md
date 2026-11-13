@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`closed`** は {{domxref("WebSocketStream")}} インターフェースの読み取り専用プロパティで、ソケット接続が閉じられた際にオブジェクトで解決するプロミス ({{jsxref("Promise")}}) を返します。このオブジェクトには、接続を閉じたコードと理由が含まれています。
+**`closed`** は {{domxref("WebSocketStream")}} インターフェイスの読み取り専用プロパティで、ソケット接続が閉じられた際にオブジェクトで解決するプロミス ({{jsxref("Promise")}}) を返します。このオブジェクトには、接続を閉じたコードと理由が含まれています。
 
 ## 値
 

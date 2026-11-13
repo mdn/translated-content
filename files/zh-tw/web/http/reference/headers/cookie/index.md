@@ -7,9 +7,9 @@ slug: Web/HTTP/Reference/Headers/Cookie
 
 `Cookie` 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | yes                            |
 
 ## Syntax
 
@@ -24,7 +24,7 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## 範例
 
-```plain
+```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
 

@@ -26,7 +26,7 @@ console.log(str);
 
 ## 語法
 
-```plain
+```js-nolint
 label :
    statement
 ```

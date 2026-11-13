@@ -3,10 +3,10 @@ title: "Atomics : méthode statique waitAsync()"
 short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`waitAsync()`** de l'objet {{JSxRef("Atomics")}} vérifie qu'un emplacement de mémoire partagée contient une valeur donnée, retournant immédiatement un objet dont la propriété `value` contient la chaîne de caractères `"not-equal"` si l'emplacement de mémoire ne correspond pas à la valeur donnée, ou `"timed-out"` si le délai d'attente a été fixé à zéro. Sinon, la méthode renvoie un objet dont la propriété `value` est une {{JSxRef("Promise")}} qui s'exécute avec `"ok"` lorsque {{JSxRef("Atomics.notify()")}} est appelée, ou `"timed-out"` si le délai d'attente a expiré.
+La méthode statique **`Atomics.waitAsync()`** vérifie qu'un emplacement de mémoire partagée contient une valeur donnée, retournant immédiatement un objet dont la propriété `value` contient la chaîne de caractères `"not-equal"` si l'emplacement de mémoire ne correspond pas à la valeur donnée, ou `"timed-out"` si le délai d'attente a été fixé à zéro. Sinon, la méthode renvoie un objet dont la propriété `value` est une {{JSxRef("Promise")}} qui s'exécute avec `"ok"` lorsque {{JSxRef("Atomics.notify()")}} est appelée, ou `"timed-out"` si le délai d'attente a expiré.
 
 `Atomics.waitAsync()` et {{JSxRef("Atomics.notify()")}} sont utilisés ensemble pour permettre la synchronisation des processus basée sur une valeur en mémoire partagée. Un processus peut continuer immédiatement si la valeur de synchronisation a changé, ou attendre la notification d'un autre processus lorsqu'il atteint le point de synchronisation.
 
@@ -48,11 +48,14 @@ Un objet ({{JSxRef("Object")}}) avec les propriétés suivantes&nbsp;:
 
 ## Exemples
 
-### Utilisation de `waitAsync()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-Soit un tableau de mémoire partagée `Int32Array`.
+### Utiliser la méthode `Atomics.waitAsync()`
+
+Soit un tableau de mémoire partagée `Int32Array`&nbsp;:
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
@@ -84,6 +87,6 @@ Si elle ne se résout pas en `"ok"`, la valeur dans la mémoire partagée n'éta
 
 ## Voir aussi
 
-- L'objet {{JSxRef("Atomics")}}
+- L'objet natif {{JSxRef("Atomics")}}
 - La méthode {{JSxRef("Atomics.wait()")}}
 - La méthode {{JSxRef("Atomics.notify()")}}

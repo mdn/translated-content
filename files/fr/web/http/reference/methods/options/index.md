@@ -3,7 +3,7 @@ title: Méthode de requête OPTIONS
 short-title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ac65ac98266cab02b9c9c8ced28c282e41a0b648
 ---
 
 La méthode HTTP **`OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.
@@ -54,7 +54,7 @@ La cible de la requête peut être soit sous «&nbsp;la forme d'une astérisque&
   - : Indique que le client souhaite demander `OPTIONS` pour le serveur dans sa globalité, par opposition à une ressource nommée spécifique de ce serveur.
 - `<request-target>`
   - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
-    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
 - `<query>` {{Optional_Inline}}
   - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
     Souvent utilisé pour transmettre des informations sous la forme de paires `clé=valeur`.
@@ -73,27 +73,26 @@ Cela génère la requête HTTP suivante&nbsp;:
 
 ```http
 OPTIONS / HTTP/2
-Host: exemple.org
+Host: httpbin.org
 User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-La réponse contient un en-tête {{HTTPHeader("Allow")}} qui liste les méthodes autorisées&nbsp;:
+Une réponse type contient un en-tête {{HTTPHeader("Allow")}} qui répertorie les méthodes autorisées (les en-têtes de réponse exacts peuvent varier)&nbsp;:
 
 ```http
-HTTP/1.1 204 No Content
-Allow: OPTIONS, GET, HEAD, POST
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
+HTTP/2 200
+content-type: text/html; charset=utf-8
+content-length: 0
+allow: HEAD, OPTIONS, GET
 ```
 
 ### Requêtes de pré-vérification en CORS
 
-En [CORS](/fr/docs/Web/HTTP/Guides/CORS), une {{Glossary("Preflight_request", "requête de pré-vérification")}} est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. Dans cet exemple, nous demandons l'autorisation pour ces paramètres&nbsp;:
+En [CORS](/fr/docs/Web/HTTP/Guides/CORS), une {{Glossary("Preflight_request", "requête de pré-vérification")}} est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres définis. Dans cet exemple, nous demandons l'autorisation pour ces paramètres&nbsp;:
 
-- L'en-tête {{HTTPHeader("Access-Control-Request-Method")}} envoyé dans la requête de pré-vérification indique au serveur que lorsque la véritable requête sera envoyée, elle utilisera la méthode {{HTTPMethod("POST")}}.
-- L'en-tête {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la véritable requête sera envoyée, elle comportera les en-têtes `X-PINGOTHER` et `Content-Type`.
+- L'en-tête {{HTTPHeader("Access-Control-Request-Method")}} envoyé dans la requête de pré-vérification indique au serveur que lorsque la véritable requête est envoyée, elle utilise la méthode {{HTTPMethod("POST")}}.
+- L'en-tête {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la véritable requête est envoyée, elle comporte les en-têtes `X-PINGOTHER` et `Content-Type`.
 
 ```http
 OPTIONS /resources/post-here/ HTTP/1.1

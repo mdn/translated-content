@@ -1,28 +1,28 @@
 ---
-title: WebDriver の能力
-short-title: 能力
+title: WebDriver のキャパビリティ
+short-title: キャパビリティ
 slug: Web/WebDriver/Reference/Capabilities
 l10n:
-  sourceCommit: 394a1aff10d20ba51dbd00252ce481769298001c
+  sourceCommit: fbf733732bf531a1be40a0c646bcbc4b31618476
 ---
 
-WebDriver の**能力**は、[セッション](/ja/docs/Web/WebDriver)が提供する機能を伝えるために使用されます。クライアントはまた、[新しいセッションの作成](/ja/docs/Web/WebDriver/Reference/Commands/NewSession)時に、ドライバーが満たすべき機能を定義するためにも能力が使用できます。
+WebDriver classic のキャパビリティは、[セッション](/ja/docs/Web/WebDriver)が提供する機能を伝えるために使用されます。クライアントはまた、[新しいセッションの作成](/ja/docs/Web/WebDriver/Reference/Classic/Commands/NewSession)時に、ドライバーが満たすべき機能を定義するためにもキャパビリティが使用できます。
 
-WebDriver セッションが作成されると、そのセッションでネゴシエーションされ有効となっている能力の一覧が返されます。この一覧に含まれる能力の一部は[標準であり全ブラウザーで共通です](#能力の一覧)が、一覧には[ブラウザー固有の機能](#ベンダー独自の能力)も含まれる場合があり、これらには常に接頭辞が付与されます。
+WebDriver セッションが作成されると、そのセッションでネゴシエーションされ有効となっているキャパビリティの一覧が返されます。この一覧に含まれるキャパビリティの一部は[標準であり全ブラウザーで共通です](#キャパビリティの一覧)が、一覧には[ブラウザー固有の機能](#ベンダー独自のキャパビリティ)も含まれる場合があり、これらには常に接頭辞が付与されます。
 
-## 能力ネゴシエーション
+## キャパビリティネゴシエーション
 
-能力を使用することにより、特定の機能サブセットに対応するドライバーを要求することができます。これにより、[ウィンドウのサイズ変更機能](/ja/docs/Web/WebDriver/Reference/Capabilities/setWindowRect)などの特定のブラウザー機能を要求できるほか、分散環境において選択肢のマトリクスから特定のブラウザー構成を選択するためにも使用されます。
+キャパビリティを使用することにより、特定の機能サブセットに対応するドライバーを要求することができます。これにより、[ウィンドウのサイズ変更機能](/ja/docs/Web/WebDriver/Reference/Classic/Capabilities/setWindowRect)などの特定のブラウザー機能を要求できるほか、分散環境において選択肢のマトリクスから特定のブラウザー構成を選択するためにも使用されます。
 
 特定のウェブブラウザーやプラットフォームを選択するのは、リモート WebDriver を使用する場合にのみ意味があります。この場合、クライアントは 1 つ以上の仲介ノードを介して WebDriver と接続し、そのノードが受信した機能に基づいて、どのドライバーを返すかを決定します。
 
-能力オブジェクトは、サーバーが返すドライバー構成を制限する選択メカニズムです。`browserName` を使用して Firefox インスタンスを要求した場合、リモートに Firefox がインストールされていないと、あるいは Linux にしか対応していないリモートから macOS を要求すると、期待通りにはいかないかもしれません。しかし、セッションがどの特定のオペレーティングシステムやウェブブラウザーを備えているかは気にせず、単に特定の能力を持つセッションが欲しい場合もあるでしょう。
+キャパビリティオブジェクトは、サーバーが返すドライバー構成を制限する選択メカニズムです。`browserName` を使用して Firefox インスタンスを要求した場合、リモートに Firefox がインストールされていないと、あるいは Linux にしか対応していないリモートから macOS を要求すると、期待通りにはいかないかもしれません。しかし、セッションがどの特定のオペレーティングシステムやウェブブラウザーを備えているかは気にせず、単に特定のキャパビリティを持つセッションが欲しい場合もあるでしょう。
 
-選択プロセス、すなわち能力ネゴシエーションは、`alwaysMatch` と `firstMatch` を通じて行うのが最適です。
+選択プロセス、すなわちキャパビリティネゴシエーションは、`alwaysMatch` と `firstMatch` を通じて行うのが最適です。
 
 ### `alwaysMatch`
 
-その名が示す通り、`alwaysMatch` 能力オブジェクト内で記述される機能は、セッションが要求される機能です。サーバーが要求する機能を提供できない場合、セッションは失敗します。
+その名が示す通り、`alwaysMatch` キャパビリティオブジェクト内で記述される機能は、セッションが要求される機能です。サーバーが要求する機能を提供できない場合、セッションは失敗します。
 
 例えば、Firefox 60 しかインストールされていないシステムで Firefox 62 を要求した場合、セッションの作成に失敗します。
 
@@ -39,7 +39,7 @@ WebDriver セッションが作成されると、そのセッションでネゴ�
 
 ### `firstMatch`
 
-`firstMatch` フィールドは能力オブジェクトの配列を受け付けます。サーバーが提供可能なものと一致するまで順次照合され、一致しない場合は失敗となります。
+`firstMatch` フィールドはキャパビリティオブジェクトの配列を受け付けます。サーバーが提供可能なものと一致するまで順次照合され、一致しない場合は失敗となります。
 
 これは、macOS や Linux 上で動作するが、Windows では動作しないドライバーが必要な場合に有用です。
 
@@ -98,12 +98,12 @@ WebDriver セッションが作成されると、そのセッションでネゴ�
 }
 ```
 
-## 能力の一覧
+## キャパビリティの一覧
 
 - [`browserName`](/ja/docs/Web/WebDriver/Reference/Capabilities/browserName)
 - [`browserVersion`](/ja/docs/Web/WebDriver/Reference/Capabilities/browserVersion)
 - [`platformName`](/ja/docs/Web/WebDriver/Reference/Capabilities/platformName)
-- [`acceptInsecureCerts`](/ja/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts): この能力は、[ナビゲーション](/ja/docs/Web/WebDriver/Reference/Commands/NavigateTo)時に期限切れまたは無効な [TLS 証明書](/ja/docs/Glossary/TLS)をチェックするかどうかを示します。この能力が false の場合、証明書に問題のあるドメインに遭遇すると、[安全でない証明書](/ja/docs/Web/WebDriver/Reference/Errors/InsecureCertificate)のエラーが返されます。そうでない場合、自己署名またはその他の無効な証明書は、ナビゲーション時にブラウザーが暗黙的に信頼します。この能力はセッションの存続期間中有効です。
+- [`acceptInsecureCerts`](/ja/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts)
 - [`pageLoadStrategy`](/ja/docs/Web/WebDriver/Reference/Capabilities/pageLoadStrategy)
 - [`proxy`](/ja/docs/Web/WebDriver/Reference/Capabilities/proxy)
 - [`setWindowRect`](/ja/docs/Web/WebDriver/Reference/Capabilities/setWindowRect)
@@ -111,20 +111,20 @@ WebDriver セッションが作成されると、そのセッションでネゴ�
 - [`unhandledPromptBehavior`](/ja/docs/Web/WebDriver/Reference/Capabilities/unhandledPromptBehavior)
 - [`webSocketUrl`](/ja/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl)
 
-## ベンダー独自の能力
+### ベンダー独自のキャパビリティ
 
-[標準の能力](#能力の一覧)に加え、WebDriver はサードパーティが自身のニーズに合わせて機能セットを拡張することが可能です。ブラウザーのベンダーやドライバーの提供者は通常、ブラウザーへの設定提供のために拡張機能を利用しますが、仲介者による任意の情報の伝達にも使用することが可能です。
+[標準のキャパビリティ](#キャパビリティの一覧)に加え、WebDriver はサードパーティが自身のニーズに合わせて機能セットを拡張することが可能です。ブラウザーのベンダーやドライバーの提供者は通常、ブラウザーへの設定提供のために拡張機能を利用しますが、仲介者による任意の情報の伝達にも使用することが可能です。
 
-- [Firefox の能力](/ja/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
-- [Chrome の能力](/ja/docs/Web/WebDriver/Reference/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)
+- [Firefox のキャパビリティ](/ja/docs/Web/WebDriver/Reference/Capabilities/firefoxOptions) (`moz:firefoxOptions`)
+- [Chrome のキャパビリティ](/ja/docs/Web/WebDriver/Reference/Capabilities/goog/chromeOptions) (`goog:chromeOptions`)
 
-## 古い能力
+### 古いキャパビリティ
 
 Selenium クライアントの多くは、新しいセッションを設定するために `desiredCapabilities` と `requiredCapabilities` を使用します。これらは、前述の `firstMatch` および `alwaysMatch` ととても似ています。一部のドライバーはこれらの古い機能に対応していますが、これらは非推奨となっており、使用を避けるべきです。
 
-古い能力オブジェクトを新しい形式に変換するのは簡単です。まず知っておくべきことは、`alwaysMatch`/`firstMatch` は常に `capabilities` JSON オブジェクト内にラップされているのに対し、`desiredCapabilities`/`requiredCapabilities` は最上位レベルに存在することです。一般的に、これまで `desiredCapabilities` 内に記述されていた内容は、同じ効果を得るために `firstMatch` の枝に記述する必要があります。
+古いキャパビリティオブジェクトを新しい形式に変換するのは簡単です。まず知っておくべきことは、`alwaysMatch`/`firstMatch` は常に `capabilities` JSON オブジェクト内にラップされているのに対し、`desiredCapabilities`/`requiredCapabilities` は最上位レベルに存在することです。一般的に、これまで `desiredCapabilities` 内に記述されていた内容は、同じ効果を得るために `firstMatch` の枝に記述する必要があります。
 
-この非推奨の能力オブジェクトを見てみましょう。
+この非推奨のキャパビリティオブジェクトを見てみましょう。
 
 ```json
 { "desiredCapabilities": { "browserName": "firefox" } }

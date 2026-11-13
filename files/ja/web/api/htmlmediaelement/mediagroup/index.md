@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 **`HTMLMediaElement.mediaGroup`** プロパティは HTML の `mediagroup` 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
 

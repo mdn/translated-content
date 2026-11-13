@@ -1,8 +1,9 @@
 ---
 title: "CSSStyleSheet: replaceSync() メソッド"
+short-title: replaceSync()
 slug: Web/API/CSSStyleSheet/replaceSync
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("CSSOM")}}
@@ -54,5 +55,5 @@ stylesheet.replaceSync("body { font-size: 1.4em; } p { color: red; }");
 
 ## 関連情報
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)

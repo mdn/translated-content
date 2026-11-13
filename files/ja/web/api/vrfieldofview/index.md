@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 **`VRFieldOfView`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、中心点からの視野を示す 4 つの角度で定義される視界を表現します。
 

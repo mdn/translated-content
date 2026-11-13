@@ -3,8 +3,6 @@ title: webRequest.SecurityInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 ---
 
-{{AddonSidebar}}
-
 Objet décrivant les propriétés de sécurité d'une requête Web particulière. Un objet de ce type est retourné depuis l'API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}.
 
 Si la requête n'est pas sécurisée par [TLS](/fr/docs/Glossary/TLS), alors cet objet ne contiendra que l'état de la propriété `state`, dont la valeur sera `"insecure"`.

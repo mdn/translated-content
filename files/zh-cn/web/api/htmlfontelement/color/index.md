@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-{{deprecated_header}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 已过时的 **`HTMLFontElement.color`** 属性是一个反映 [`color`](/zh-CN/docs/Web/HTML/Reference/Elements/font#color) HTML 属性的字符串，包含命名颜色或以十六进制 #RRGGBB 格式指定的颜色。
 

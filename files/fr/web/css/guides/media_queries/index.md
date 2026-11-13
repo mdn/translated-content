@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 50e215d730cd173d93b9bf75785c0d8ed2f67cb0
 ---
 
-{{CSSRef}}
-
 Les **requêtes média CSS**, plus souvent appelées **<i lang="en">media queries</i>**, sont un outil de [<i lang="en">responsive design</i>](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) qui permet d'adapter la feuille de styles CSS en fonction de différents paramètres ou caractéristiques de l'appareil.
 
 Par exemple, on pourra appliquer différentes mises en forme selon la taille de [la zone d'affichage](/fr/docs/Glossary/Viewport) pour que la disposition soit correcte selon les tailles d'écran des appareils.
@@ -18,7 +16,7 @@ Par exemple, on pourra utiliser une police de caractères plus petite pour les a
 
 C'est [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) qui est utilisée en [CSS](/fr/docs/Web/CSS) pour appliquer de façon conditionnelle un fragment d'une feuille de styles selon le résultat d'une requête média. Si on souhaite appliquer de façon conditionnelle une feuille de styles entière, on utilisera [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
 
-Lorsqu'on conçoit des composants HTML réutilisables, on peut également utiliser [les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries) qui permettent d'appliquer des mises en forme selon la taille de l'élément englobant plutôt que par rapport à la zone d'affichage ou aux caractéristiques de l'appareil.
+Lorsqu'on conçoit des composants HTML réutilisables, on peut également utiliser [les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries) qui permettent d'appliquer des mises en forme selon la taille de l'élément englobant plutôt que par rapport à la zone d'affichage ou aux caractéristiques de l'appareil.
 
 ### Les requêtes média en HTML
 
@@ -56,5 +54,5 @@ Pour en savoir plus sur les tests des requêtes média dans des programmes, voir
 
 ## Voir aussi
 
-- [Les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries)
+- [Les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - La règle @ [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) afin d'appliquer une mise en forme selon que l'agent utilisateur prend ou non en charge certaines technologies CSS.

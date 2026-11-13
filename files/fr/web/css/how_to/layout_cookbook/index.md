@@ -2,13 +2,13 @@
 title: Livre de recettes CSS
 slug: Web/CSS/How_to/Layout_cookbook
 l10n:
-  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
+  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
-Le livre de recettes CSS vise à rassembler des recettes pour les motifs de mise en page courants, que vous pourriez avoir besoin d'implémenter sur vos propres sites. En plus de fournir du code que vous pouvez utiliser comme point de départ dans vos projets, ces recettes mettent en avant les différentes façons d'utiliser les spécifications de mise en page, ainsi que les choix que vous pouvez faire en tant que développeur·euse.
+Le livre de recettes CSS vise à rassembler des recettes pour les motifs de mise en page courants, que vous pouvez avoir besoin d'implémenter sur vos propres sites. En plus de fournir du code que vous pouvez utiliser comme point de départ dans vos projets, ces recettes mettent en avant les différentes façons d'utiliser les spécifications de mise en page, ainsi que les choix que vous pouvez faire en tant que développeur·euse.
 
 > [!NOTE]
-> Si vous débutez avec la mise en forme CSS, vous pouvez d'abord consulter notre [module d'apprentissage de la mise en page CSS](/fr/docs/Learn_web_development/Core/CSS_layout), qui vous donnera les bases nécessaires pour profiter pleinement des recettes proposées ici.
+> Si vous débutez avec la mise en forme CSS, vous pouvez d'abord consulter notre [module d'apprentissage de la mise en page CSS](/fr/docs/Learn_web_development/Core/CSS_layout), qui vous donne les bases nécessaires pour profiter pleinement des recettes proposées ici.
 
 ## Recettes
 
@@ -35,10 +35,10 @@ Le livre de recettes CSS vise à rassembler des recettes pour les motifs de mise
 [pagination]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Pagination
 [card]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Card
 [grid-wrapper]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
-[css-grid]: /fr/docs/Web/CSS/Guides/Grid_layout
-[multicol]: /fr/docs/Web/CSS/Guides/Multicol_layout
-[flexbox]: /fr/docs/Web/CSS/Guides/Flexible_box_layout
-[box-alignment]: /fr/docs/Web/CSS/Guides/Box_alignment
+[css-grid]: /en-US/docs/Web/CSS/Guides/Grid_layout
+[multicol]: /en-US/docs/Web/CSS/Guides/Multicol_layout
+[flexbox]: /en-US/docs/Web/CSS/Guides/Flexible_box_layout
+[box-alignment]: /en-US/docs/Web/CSS/Guides/Box_alignment
 
 ## Contribuer une recette
 

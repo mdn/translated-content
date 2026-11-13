@@ -3,10 +3,10 @@ title: "TransformStreamDefaultController: error() メソッド"
 short-title: error()
 slug: Web/API/TransformStreamDefaultController/error
 l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`error()`** は {{domxref("TransformStreamDefaultController")}} インターフェイスのメソッドで、両側のストリームをエラーにします。これ以上何か操作をすると、指定されたエラーメッセージとともに失敗するようになり、キュー内のチャンクは破棄されます。
 

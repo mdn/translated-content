@@ -35,7 +35,7 @@ controlTransferIn(setup, length)
 
 ### 返値
 
-{{domxref("USBInTransferResult")}} で解決する {{jsxref("promise")}} です。
+{{domxref("USBInTransferResult")}} で解決する {{jsxref("Promise")}} です。
 
 ## 仕様書
 

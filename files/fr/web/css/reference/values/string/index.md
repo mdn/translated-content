@@ -1,8 +1,9 @@
 ---
-title: <string>
+title: Type CSS `<string>`
+short-title: <string>
 slug: Web/CSS/Reference/Values/string
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<string>`** représente une suite de caractères. Les chaînes de caractères sont utilisées dans de nombreuses propriétés CSS, telles que {{CSSxRef("content")}}, {{CSSxRef("font-family")}} et {{CSSxRef("quotes")}}.

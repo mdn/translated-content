@@ -1,9 +1,8 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/Reference/Properties/mask-border-outset
-original_slug: Web/CSS/mask-border-outset
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`mask-border-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の境界ボックスからの距離を指定します。
@@ -38,7 +37,7 @@ mask-border-outset: unset;
 
 - 位置が **1 つ**指定された場合、**全 4 辺**に同じ距離が適用されます。
 - 位置が **2 つ**指定された場合、1 つ目の距離は**上下**に、2 つ目は**左右**に適用されます。
-- 位置が **3 つ**指定された場合、1 つ目の距離はを**上**に、2 つ目は**左右**に、3 つ目は**下**に適用されます。
+- 位置が **3 つ**指定された場合、1 つ目の距離は**上**に、2 つ目は**左右**に、3 つ目は**下**に適用されます。
 - 位置が **4 つ**指定された場合、**上**、**右**、**下**、**左**の順 (時計回り) で適用されます。
 
 ### 値
@@ -73,7 +72,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> {{cssxref("mask-border")}} ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

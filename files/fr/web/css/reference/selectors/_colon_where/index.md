@@ -1,15 +1,16 @@
 ---
-title: :where()
+title: Pseudo-classe CSS `:where()`
+short-title: :where()
 slug: Web/CSS/Reference/Selectors/:where
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
 La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} réside dans le fait que `:where()` a toujours une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) de 0, tandis que `:is()` prend la spécificité du sélecteur le plus spécifique parmi ses arguments.
 
-{{InteractiveExample("Démonstration CSS&nbsp;: :where", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :where()", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {
@@ -64,11 +65,11 @@ ol {
 
 ## Paramètres
 
-La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
+La pseudo-classe `:where()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs, comme argument.
 
 ### Analyse permissive de la liste des sélecteurs
 
-`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
+La spécification définit `:is()` et `:where()` comme acceptant une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante).
 
 En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient intégralement invalide dès que l'un des sélecteurs est invalide. En utilisant `:is()` ou `:where()`, si la liste contient un sélecteur incorrect ou qui n'est pas pris en charge, celui-ci sera ignoré et les autres seront utilisés.
 
@@ -181,7 +182,7 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 > [!NOTE]
 > Vous pouvez également consulter [cet exemple sur GitHub <sup>(angl.)</sup>](https://mdn.github.io/css-examples/is-where/).
 
-{{EmbedLiveSample('comparer_where_et_is', '100%', 600)}}
+{{EmbedLiveSample("Comparer `:where()` et `:is()`", "100%", 600)}}
 
 ## Spécifications
 
@@ -193,6 +194,7 @@ Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité �
 
 ## Voir aussi
 
-- {{CSSxRef(":is()")}}
+- La fonction de pseudo-classe {{CSSxRef(":is()")}}
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)
+- [Liste de sélecteurs tolérante <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list) sur csswg.org.
