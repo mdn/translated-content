@@ -3,7 +3,7 @@ title: "Number : méthode statique isFinite()"
 short-title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini — c'est-à-dire qu'elle vérifie qu'une valeur donnée est un nombre, et que ce nombre n'est ni `Infinity` positif, ni `Infinity` négatif, ni `NaN`.
@@ -38,7 +38,7 @@ La valeur booléenne `true` si la valeur donnée est un nombre fini. Sinon `fals
 
 ## Exemples
 
-### Utiliser `isFinite()`
+### Utiliser la méthode `isFinite()`
 
 ```js
 Number.isFinite(Infinity); // false
@@ -70,7 +70,7 @@ Number.isFinite(null); // false
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isFinite` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isFinite` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isfinite)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isFinite()")}}

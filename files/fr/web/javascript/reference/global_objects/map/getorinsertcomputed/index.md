@@ -3,7 +3,7 @@ title: "Map : méthode getOrInsertComputed()"
 short-title: getOrInsertComputed()
 slug: Web/JavaScript/Reference/Global_Objects/Map/getOrInsertComputed
 l10n:
-  sourceCommit: af88df72d0ee1da6fd1be412f615e8b4caf98e70
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`getOrInsertComputed()`** des instances de {{JSxRef("Map")}} retourne la valeur correspondant à la clé définie dans cette `Map`. Si la clé n'est pas présente, elle insère une nouvelle entrée avec la clé et une valeur par défaut calculée à partir d'une fonction de rappel donnée, puis retourne la valeur insérée.
@@ -51,7 +51,7 @@ La valeur associée à la clé définie dans l'objet `Map`. Si la clé n'est pas
 
 ### Éviter le calcul inutile de la valeur par défaut
 
-Lors de l'utilisation de {{JSxRef("Map.prototype.getOrInsert()")}}, la valeur par défaut est calculée à chaque fois, même si elle n'est pas nécessaire. Avec `getOrInsertComputed()`, la valeur par défaut n'est calculée que lorsque cela est nécessaire.
+Lors de l'utilisation de {{JSxRef("Map.prototype.getOrInsert()")}}, la valeur par défaut est calculée à chaque fois, même si elle n'est pas nécessaire. Avec `getOrInsertComputed()`, la valeur par défaut n'est calculée que lorsque c'est nécessaire.
 
 ```js
 const map = new Map([["toto", "truc"]]);
@@ -74,8 +74,8 @@ map.getOrInsertComputed("toto", createurParDefaut); // N'affiche rien
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map.prototype.getOrInsertComputed` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map-upsert)
-- [Prothèse d'émulation es-shims de `Map.prototype.getOrInsertComputed` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Map.prototype.getOrInsertComputed` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/collections#h-map)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Map.prototype.getOrInsertComputed` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.prototype.getorinsertcomputed)
 - L'objet natif {{JSxRef("Map")}}
 - La méthode {{JSxRef("Map.prototype.get()")}}
 - La méthode {{JSxRef("Map.prototype.set()")}}

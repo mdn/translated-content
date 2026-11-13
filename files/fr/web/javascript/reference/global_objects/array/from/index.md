@@ -3,10 +3,10 @@ title: "Array : méthode statique from()"
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode statique **`Array.from()`** crée une nouvelle instance d'`Array` (copie superficielle) à partir d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
+La méthode statique **`Array.from()`** crée une nouvelle instance de `Array` (copie superficielle) à partir d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.from()", "shorter")}}
 
@@ -57,9 +57,9 @@ Pour convertir un objet ordinaire qui n'est ni itérable ni semblable à un tabl
 `Array.from()` possède un paramètre optionnel `mapFn`, qui permet d'exécuter une fonction sur chaque élément du tableau en cours de création, de façon similaire à {{JSxRef("Array/map", "map()")}}. Plus précisément, `Array.from(obj, mapFn, thisArg)` a le même résultat que `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il ne crée pas de tableau intermédiaire, et `mapFn` ne reçoit que deux arguments (`element`, `index`) sans le tableau complet, car celui-ci est encore en construction.
 
 > [!NOTE]
-> Ce comportement est particulièrement important pour les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays), car le tableau intermédiaire aurait nécessairement des valeurs tronquées pour correspondre au type approprié. `Array.from()` est implémenté pour avoir la même signature que {{JSxRef("TypedArray.from()")}}.
+> Ce comportement est particulièrement important pour les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays), car le tableau intermédiaire a nécessairement des valeurs tronquées pour correspondre au type approprié. `Array.from()` est implémenté pour avoir la même signature que {{JSxRef("TypedArray.from()")}}.
 
-La méthode `Array.from()` est une méthode de fabrique générique. Par exemple, si une sous-classe d'`Array` hérite de la méthode `from()`, la méthode héritée retournera de nouvelles instances de la sous-classe au lieu d'instances d'`Array`. En fait, la valeur de `this` peut être n'importe quelle fonction constructeur qui accepte un seul argument représentant la longueur du nouveau tableau. Lorsqu'un objet itérable est passé comme `items`, le constructeur est appelé sans argument&nbsp;; lorsqu'un objet semblable à un tableau est passé, le constructeur est appelé avec la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) de l'objet. La longueur finale sera à nouveau définie à la fin de l'itération. Si la valeur de `this` n'est pas une fonction constructeur, le constructeur natif `Array` est utilisé à la place.
+La méthode `Array.from()` est une méthode de fabrique générique. Par exemple, si une sous-classe de `Array` hérite de la méthode `from()`, la méthode héritée retourne de nouvelles instances de la sous-classe au lieu d'instances de `Array`. En fait, la valeur de `this` peut être n'importe quelle fonction constructeur qui accepte un seul argument représentant la longueur du nouveau tableau. Lorsqu'un objet itérable est passé comme `items`, le constructeur est appelé sans argument&nbsp;; lorsqu'un objet semblable à un tableau est passé, le constructeur est appelé avec la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) de l'objet. La longueur finale est à nouveau définie à la fin de l'itération. Si la valeur de `this` n'est pas une fonction constructeur, le constructeur natif `Array` est utilisé à la place.
 
 ## Exemples
 
@@ -131,7 +131,7 @@ Array.from([1, 2, 3], (x) => x + x);
 
 // Générer une séquence de nombres
 // Comme le tableau est initialisé avec `undefined` à chaque position,
-// la valeur de `v` ci-dessous sera `undefined`
+// la valeur de `v` ci-dessous est `undefined`
 Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
@@ -197,6 +197,8 @@ console.log(Array.from.call({}, { length: 1, 0: "toto" })); // [ 'toto' ]
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Array.from` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/array)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Array.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.from)
 - [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet natif {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array/Array", "Array()")}}
@@ -204,5 +206,3 @@ console.log(Array.from.call({}, { length: 1, 0: "toto" })); // [ 'toto' ]
 - La méthode {{JSxRef("Array.fromAsync()")}}
 - La méthode {{JSxRef("Array.prototype.map()")}}
 - La méthode {{JSxRef("TypedArray.from()")}}
-- [Prothèse d'émulation de `Array.from` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
-- [Prothèse d'émulation es-shims de `Array.from` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.from)

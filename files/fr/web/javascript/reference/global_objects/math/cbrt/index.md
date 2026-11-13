@@ -3,7 +3,7 @@ title: "Math : méthode statique cbrt()"
 short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.cbrt()`** retourne la racine cubique d'un nombre. C'est-à-dire,
@@ -45,7 +45,7 @@ La racine cubique de `x`.
 
 ## Description
 
-Parce que `cbrt()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cbrt()`, et non comme méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
+Parce que `cbrt()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.cbrt()`, et non comme méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -71,7 +71,7 @@ Math.cbrt(Infinity); // Infinity
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.cbrt` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.cbrt` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cbrt)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.cbrt` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.cbrt` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.cbrt)
 - La méthode statique {{JSxRef("Math.pow()")}}
 - La méthode statique {{JSxRef("Math.sqrt()")}}

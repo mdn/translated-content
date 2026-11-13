@@ -3,7 +3,7 @@ title: "RegExp : propriété sticky"
 short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La propriété d'accesseur **`sticky`** des instances de {{JSxRef("RegExp")}} retourne que l'indicateur `y` est utilisé ou non avec cette expression rationnelle.
@@ -107,7 +107,7 @@ regex2.test(".\ntoto"); // true - index 2 est le début d'une ligne
 
 ## Voir aussi
 
-- [La prothèse d'émulation de l'indicateur `sticky` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de l'indicateur `sticky` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La propriété {{JSxRef("RegExp.prototype.lastIndex")}}
 - La propriété {{JSxRef("RegExp.prototype.dotAll")}}
 - La propriété {{JSxRef("RegExp.prototype.global")}}

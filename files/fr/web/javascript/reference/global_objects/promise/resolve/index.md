@@ -3,7 +3,7 @@ title: "Promise : méthode statique resolve()"
 short-title: resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: a6a2daec3965d85ef6dfc06cfd3507c1b2f886e2
 ---
 
 La méthode statique **`Promise.resolve()`** «&nbsp;résout&nbsp;» une valeur donnée en une {{JSxRef("Promise")}}. Si la valeur est une promesse, cette promesse est retournée&nbsp;; si la valeur est une [semi-promesse (<i lang="en">thenable</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#semi-promesse), `Promise.resolve()` appelle la méthode `then()` avec deux fonctions de rappel qu'elle a préparées&nbsp;; sinon, la promesse retournée est complétée (<i lang="en">fulfilled</i> en anglais) avec la valeur.
@@ -195,9 +195,12 @@ class PasUnePromesse {
       (raison) => console.log("Rompue", raison),
     );
   }
+
+  static reject = Promise.reject;
 }
 
-Promise.resolve.call(PasUnePromesse, "toto"); // Journalise "Résolue toto"
+const p = PasUnePromesse.resolve("toto"); // Logs "Résolue toto"
+// p est une instance de PasUnePromesse
 ```
 
 La capacité à aplatir les semi-promesses imbriquées est implémentée par la fonction `resolve` du constructeur `Promise()`, donc si vous l'appelez sur un autre constructeur, les semi-promesses imbriquées peuvent ne pas être aplaties, selon la manière dont ce constructeur implémente sa fonction `resolve`.

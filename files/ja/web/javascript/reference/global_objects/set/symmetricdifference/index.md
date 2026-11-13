@@ -3,7 +3,7 @@ title: Set.prototype.symmetricDifference()
 short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`symmetricDifference()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この Set と与えられた集合のどちらかにあるが、両方にはない要素の入った新しい Set を返します。
@@ -63,7 +63,7 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 
 ## 関連情報
 
-- [`Set.prototype.symmetricDifference` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [`Set.prototype.symmetricDifference` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/collections#h-set)
 - [es-shims による `Set.prototype.symmetricDifference` のポリフィル](https://www.npmjs.com/package/set.prototype.symmetricdifference)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}

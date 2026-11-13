@@ -3,7 +3,7 @@ title: "Math : méthode statique clz32()"
 short-title: clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.clz32()`** retourne le nombre de bits à zéro en tête de la représentation binaire sur 32 bits d'un nombre.
@@ -43,9 +43,9 @@ Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits de
 
 `clz32` est un raccourci pour **C**ount**L**eading**Z**eros**32**.
 
-Si `x` n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
+Si `x` n'est pas un nombre, il est d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
 
-Si l'entier non signé sur 32 bits résultant vaut `0`, la fonction retourne `32`, car tous les bits valent `0`. Si le bit le plus significatif est `1` (c'est-à-dire que le nombre est supérieur ou égal à 2<sup>31</sup>), `0` est renvoyé.
+Si l'entier non signé sur 32 bits résultant vaut `0`, la fonction retourne `32`, car tous les bits valent `0`. Si le bit le plus significatif est `1` (c'est-à-dire que le nombre est supérieur ou égal à 2<sup>31</sup>), `0` est retourné.
 
 Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme [Emscripten <sup>(angl.)</sup>](https://emscripten.org/).
 
@@ -79,7 +79,7 @@ Math.clz32(3.5); // 30
 
 ### Implémenter le comptage des uns en tête et au-delà
 
-Actuellement, il n'existe pas de `Math.clon` pour «&nbsp;Count Leading Ones&nbsp;» (nommé «&nbsp;clon&nbsp;», et non «&nbsp;clo&nbsp;», car «&nbsp;clo&nbsp;» et «&nbsp;clz&nbsp;» sont trop similaires, surtout pour les personnes non anglophones). Cependant, une fonction `clon` peut facilement être créée en inversant les bits d'un nombre et en passant le résultat à `Math.clz32`. Cela fonctionne car l'inverse de 1 est 0 et inversement. Ainsi, inverser les bits inverse la quantité mesurée de 0 (par `Math.clz32`), ce qui permet à `Math.clz32` de compter le nombre de uns au lieu de compter le nombre de zéros.
+Actuellement, il n'existe pas de `Math.clon` pour «&nbsp;Count Leading Ones&nbsp;» (nommé «&nbsp;clon&nbsp;», et non «&nbsp;clo&nbsp;», car «&nbsp;clo&nbsp;» et «&nbsp;clz&nbsp;» sont trop similaires, surtout pour les personnes non anglophones). Cependant, une fonction `clon` peut facilement être créée en inversant les bits d'un nombre et en passant le résultat à `Math.clz32`. Cela fonctionne, car l'inverse de 1 est 0 et inversement. Ainsi, inverser les bits inverse la quantité mesurée de 0 (par `Math.clz32`), ce qui permet à `Math.clz32` de compter le nombre de uns au lieu de compter le nombre de zéros.
 
 Considérez le mot de 32 bits suivant&nbsp;:
 
@@ -101,13 +101,13 @@ function clon(integer) {
 }
 ```
 
-De plus, cette technique peut être étendue pour créer une fonction «&nbsp;Count Trailing Zeros&nbsp;» sans saut, comme illustré ci-dessous. La fonction `ctrz` effectue un ET binaire entre l'entier et son complément à deux. Avec le fonctionnement du complément à deux, tous les zéros de fin seront convertis en uns, puis lors de l'ajout de 1, la retenue se propage jusqu'au premier `0` (qui était initialement un `1`). Tous les bits plus élevés restent identiques et sont les inverses des bits de l'entier original. Ainsi, lors de l'opération ET binaire avec l'entier original, tous les bits plus élevés deviennent `0`, ce qui peut être compté avec `clz`. Le nombre de zéros de fin, plus le premier bit à `1`, plus les bits de tête comptés par `clz`, donnent un total de 32.
+De plus, cette technique peut être étendue pour créer une fonction «&nbsp;Count Trailing Zeros&nbsp;» sans saut, comme illustré ci-dessous. La fonction `ctrz` effectue un ET binaire entre l'entier et son complément à deux. Avec le fonctionnement du complément à deux, tous les zéros de fin sont convertis en uns, puis lors de l'ajout de 1, la retenue se propage jusqu'au premier `0` (qui est initialement un `1`). Tous les bits plus élevés restent identiques et sont les inverses des bits de l'entier original. Ainsi, lors de l'opération ET binaire avec l'entier original, tous les bits plus élevés deviennent `0`, ce qui peut être compté avec `clz`. Le nombre de zéros de fin, plus le premier bit à `1`, plus les bits de tête comptés par `clz`, donnent un total de 32.
 
 ```js
 function ctrz(integer) {
   integer >>>= 0; // conversion en Uint32
   if (integer === 0) {
-    // en sautant cette étape, cela retournerait -1
+    // en sautant cette étape, cela retourne -1
     return 32;
   }
   integer &= -integer; // équivalent à `int = int & (~int + 1)`
@@ -134,7 +134,7 @@ const compterBitsFinMethodes = (function (stdlib, foreign, heap) {
   function ctrz(entier) {
     entier = entier | 0; // conversion en entier
     if ((entier | 0) == 0) {
-      // en sautant cette étape, cela retournerait -1
+      // en sautant cette étape, cela retourne -1
       return 32;
     }
     // Remarque&nbsp;: asm.js ne possède pas d'opérateurs d'affectation composés comme &=
@@ -165,7 +165,7 @@ const { ctrz, ctron } = compterBitsFinMethodes;
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.clz32` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.clz32` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.clz32)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.clz32` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.clz32` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.clz32)
 - L'objet natif {{JSxRef("Math")}}
 - La méthode statique {{JSxRef("Math.imul()")}}

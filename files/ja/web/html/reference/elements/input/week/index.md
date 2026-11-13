@@ -3,7 +3,7 @@ title: '`<input type="week">` 属性値'
 short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
 ---
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
@@ -107,17 +107,15 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 もっとも基本的な `<input type="week">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
-<form>
-  <label for="week">どの週から始めますか。</label>
-  <input id="week" type="week" name="week" />
-</form>
+<label for="week">どの週から始めますか。</label>
+<input id="week" type="week" name="week" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_week', 600, 40)}}
 
 ### 入力欄のサイズの制御
 
-`<input type="week">` は、時刻が常にほぼ同じ文字数であるため、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) などのフォームのサイズ指定属性に対応していません。サイズ調整が必要な場合は、[CSS](/ja/docs/Web/CSS) を利用する必要があります。
+`<input type="week">` は、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) などのフォームのサイズ指定属性に対応していません。サイズを調整するには、[CSS](/ja/docs/Web/CSS) を使用してください。
 
 ### step 属性の使用
 
@@ -132,11 +130,9 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択することができる有効な週を制限することができます。以下の例では、最小値を `2017 年第 1 週` に、最大値を `2017 年第 52 週` に設定しています。
 
 ```html
-<form>
-  <label for="week">どの週から始めますか。</label>
-  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
-  <span class="validity"></span>
-</form>
+<label for="week">どの週から始めますか。</label>
+<input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
+<span class="validity"></span>
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_weeks', 600, 40)}}
@@ -197,6 +193,12 @@ input:valid + span::after {
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 フォームに値を設定せずに送信しようとすると、ブラウザーはエラーを表示します。例を実行してみてください。
 
 {{EmbedLiveSample('Making_week_values_required', 600, 120)}}
@@ -236,35 +238,33 @@ Android や iOS のようなモバイルプラットフォームは、このよ�
 HTML は次のようになります。
 
 ```html
-<form>
-  <div class="nativeWeekPicker">
-    <label for="week">どの週から始めますか。</label>
-    <input
-      id="week"
-      type="week"
-      name="week"
-      min="2017-W01"
-      max="2018-W52"
-      required />
-    <span class="validity"></span>
+<div class="nativeWeekPicker">
+  <label for="week">どの週から始めますか。</label>
+  <input
+    id="week"
+    type="week"
+    name="week"
+    min="2017-W01"
+    max="2018-W52"
+    required />
+  <span class="validity"></span>
+</div>
+<p class="fallbackLabel">どの週から始めますか。</p>
+<div class="fallbackWeekPicker">
+  <div>
+    <span>
+      <label for="fallbackWeek">週:</label>
+      <select id="fallbackWeek" name="week"></select>
+    </span>
+    <span>
+      <label for="year">年:</label>
+      <select id="year" name="year">
+        <option value="2017" selected>2017</option>
+        <option value="2018">2018</option>
+      </select>
+    </span>
   </div>
-  <p class="fallbackLabel">どの週から始めますか。</p>
-  <div class="fallbackWeekPicker">
-    <div>
-      <span>
-        <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week"></select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-          <option value="2017" selected>2017</option>
-          <option value="2018">2018</option>
-        </select>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 週の値は以下の JavaScript のコードで動的に生成されます。
@@ -296,7 +296,7 @@ input:valid + span::after {
 }
 ```
 
-もう一つの面白い部分は、機能の検出コードです。ブラウザーが `<input type="week">` に対応しているかどうかを検出するために、新たな {{htmlelement("input")}} 要素を生成し、その `type` を `week` に設定てみて、すぐに `type` に何が設定されたかをチェックします。対応していないブラウザーでは、 `week` 型が `text` 型へ代替されます。 `<input type="week">` に対応していない場合は、ネイティブの日時入力欄を非表示にして代替用の ({{htmlelement("select")}}) による選択ユーザーインターフェイスを表示します。
+もう一つ注目すべき部分は、機能検出のコードです。ブラウザーが `<input type="week">` に対応しているかどうかを調べるため、新しい {{htmlelement("input")}} 要素を作成して `type` を `week` に設定し、その直後に `type` の値を確認します。対応していないブラウザーでは、`week` 型は `text` 型に代替されるため、`text` が返されます。`<input type="week">` に対応していない場合は、ネイティブの週選択欄を非表示にし、代替の {{htmlelement("select")}} による選択 UI を表示します。
 
 ```js
 // 変数を定義
@@ -382,14 +382,6 @@ function populateWeeks() {
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>

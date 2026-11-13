@@ -66,7 +66,7 @@ Técnicamente, podrías alojar todos esos archivos en tu propia computadora, per
 
 Por todas estas razones, encontrar un buen proveedor de hospedaje es una parte clave para construir tu sitio web. Examina los distintos servicios que ofrecen las empresas. Elige uno que se ajuste a tus necesidades y presupuesto. (Los servicios van desde gratuitos hasta miles de dólares al mes.) Puedes encontrar más detalles [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#alojamiento).
 
-Una vez que tengas un servicio de hospedaje web, debes [subir tus archivos a tu servidor web](/es/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
+Una vez que tengas un servicio de hospedaje web, debes [subir tus archivos a tu servidor web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
 ### Comunicación a través de HTTP
 
@@ -113,5 +113,5 @@ Si te gustaría experimentar creando un servidor, echa un vistazo a los recursos
 Ahora que ya conoces los servidores web, podrías:
 
 - leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
-- aprender más sobre [los diversos programas que necesitas para crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
-- pasar a algo práctico como [cómo subir archivos a un servidor web](/es/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
+- aprender más sobre [los diversos programas que necesitas para crear un sitio web](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
+- pasar a algo práctico como [cómo subir archivos a un servidor web](/es/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).

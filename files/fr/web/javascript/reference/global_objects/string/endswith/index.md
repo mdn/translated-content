@@ -1,79 +1,67 @@
 ---
-title: String.prototype.endsWith()
+title: "String : méthode endsWith()"
+short-title: endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+l10n:
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.
+La méthode **`endsWith()`** des valeurs {{JSxRef("String")}} détermine si une chaîne de caractères se termine par les caractères de cette chaîne de caractères, renvoyant `true` ou `false` selon le cas.
 
-{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: String.prototype.endsWith()")}}
 
 ```js interactive-example
-const str1 = "Cats are the best!";
+const str1 = "Les chats sont les meilleurs !";
 
-console.log(str1.endsWith("best!"));
-// Expected output: true
+console.log(str1.endsWith("meilleurs !"));
+// Résultat attendu : true
 
-console.log(str1.endsWith("best", 17));
-// Expected output: true
+console.log(str1.endsWith("meilleurs", 28));
+// Résultat attendu : true
 
-const str2 = "Is this a question?";
+const str2 = "Est-ce une question ?";
 
 console.log(str2.endsWith("question"));
-// Expected output: false
+// Résultat attendu : false
 ```
 
 ## Syntaxe
 
-```js
-str.endsWith(chaîneRecherchée[, position]);
+```js-nolint
+endsWith(searchString)
+endsWith(searchString, endPosition)
 ```
 
 ### Paramètres
 
-- `chaîneRecherchée`
-  - : Les caractères à rechercher à la fin de la chaine de caractères.
-- `position` {{optional_inline}}
-  - : Paramètre optionnel. Permet de rechercher dans la chaine de caractères comme si elle faisait cette longueur ; par défaut il s'agit de la longueur de la chaine de caractères `chaîneRecherchée`. Si la valeur fournie est supérieure à la longueur de la chaine de caractères, elle ne sera pas prise en compte.
+- `searchString`
+  - : Les caractères à rechercher à la fin de `str`. Ne peut pas [être une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles). Toutes les valeurs qui ne sont pas des expressions rationnelles sont [converties en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères), donc l'omission de ce paramètre ou le passage de `undefined` amène `endsWith()` à rechercher la chaîne de caractères `"undefined"`, ce qui est rarement ce que vous voulez.
+- `endPosition` {{Optional_Inline}}
+  - : La position de fin à laquelle `searchString` est censé être trouvé (l'indice du dernier caractère de `searchString` plus 1). Par défaut, il s'agit de `str.length`.
 
 ### Valeur de retour
 
-`true` si la chaîne de caractères se termine par la sous-chaîne indiquée, `false` sinon.
+**`true`** si les caractères donnés se trouvent à la fin de la chaîne de caractères, y compris lorsque `searchString` est une chaîne de caractères vide&nbsp;; sinon, **`false`**.
+
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si `searchString` [est une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gestion_spéciale_pour_les_expressions_rationnelles).
 
 ## Description
 
-Cette méthode permet de savoir si une chaine de caractères se termine avec une certaine chaine de caractères (comme les autres méthodes fonctionnant avec des chaînes de caractères, cette méthode est sensible à la casse).
+Cette méthode permet de déterminer si une chaîne de caractères se termine ou non par une autre chaîne de caractères. Cette méthode est sensible à la casse.
 
 ## Exemples
 
-```js
-var str = "Être, ou ne pas être : telle est la question.";
-
-console.log(str.endsWith("question.")); // true
-console.log(str.endsWith("pas être")); // false
-console.log(str.endsWith("pas être", 20)); // true
-```
-
-## Prothèse d'émulation (_polyfill_)
-
-Cette méthode a été ajoutée dans la spécification ECMAScript 6 et peut ne pas être disponible dans toutes les implémentations de JavaScript. Cependant, il est possible d'émuler le comportement de `String.prototype.endsWith` avec le fragment de code suivant :
+### Utiliser la méthode `endsWith()`
 
 ```js
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function (searchString, position) {
-    var subjectString = this.toString();
-    if (
-      typeof position !== "number" ||
-      !isFinite(position) ||
-      Math.floor(position) !== position ||
-      position > subjectString.length
-    ) {
-      position = subjectString.length;
-    }
-    position -= searchString.length;
-    var lastIndex = subjectString.lastIndexOf(searchString, position);
-    return lastIndex !== -1 && lastIndex === position;
-  };
-}
+const chaine = "Être, ou ne pas être, telle est la question.";
+
+console.log(chaine.endsWith("question.")); // true
+console.log(chaine.endsWith("Être")); // false
+console.log(chaine.endsWith("pas être", 19)); // true
 ```
 
 ## Spécifications
@@ -86,7 +74,9 @@ if (!String.prototype.endsWith) {
 
 ## Voir aussi
 
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `String.prototype.endsWith` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `String.prototype.endsWith` <sup>(angl.)</sup>](https://www.npmjs.com/package/string.prototype.endswith)
+- La méthode {{JSxRef("String.prototype.startsWith()")}}
+- La méthode {{JSxRef("String.prototype.includes()")}}
+- La méthode {{JSxRef("String.prototype.indexOf()")}}
+- La méthode {{JSxRef("String.prototype.lastIndexOf()")}}

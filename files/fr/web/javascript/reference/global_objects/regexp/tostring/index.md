@@ -3,7 +3,7 @@ title: "RegExp : méthode toString()"
 short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 l10n:
-  sourceCommit: 939067a53bb5bb3787f2d536b83df2252d4e838e
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toString()`** des instances de {{JSxRef("RegExp")}} retourne une chaîne de caractères représentant cette expression rationnelle.
@@ -49,7 +49,7 @@ En pratique, elle lit les propriétés [`source`](/fr/docs/Web/JavaScript/Refere
 
 ## Exemples
 
-### Utiliser `toString()`
+### Utiliser la méthode `toString()`
 
 L'exemple qui suit affiche la chaîne de caractères correspondant à la valeur de l'objet {{JSxRef("RegExp")}}&nbsp;:
 
@@ -81,4 +81,5 @@ new RegExp("\n").toString() === "/\\n/"; // true
 
 ## Voir aussi
 
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) du comportement moderne de `RegExp.prototype.toString` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/string-regexp)
 - La méthode {{JSxRef("Object.prototype.toString()")}}

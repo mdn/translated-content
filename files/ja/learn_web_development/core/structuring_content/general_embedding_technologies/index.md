@@ -140,7 +140,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
 > [!NOTE]
-> [GitHub ページ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できます。
+> [GitHub ページ](/ja/docs/Learn_web_development/Core/Version_control)では、既定で HTTPS 経由でコンテンツを提供できます。
 > 別のホスティングプロバイダーを使用している場合は、 HTTPS でコンテンツを提供するためにどのような対応をしているかを調べる必要があります。
 
 #### 常に `sandbox` 属性を使用する

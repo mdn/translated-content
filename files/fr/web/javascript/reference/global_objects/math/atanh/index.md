@@ -3,7 +3,7 @@ title: "Math : méthode statique atanh()"
 short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Math.atanh()`** retourne l'arc tangente hyperbolique d'un nombre. C'est-à-dire,
@@ -45,7 +45,7 @@ La tangente hyperbolique inverse de `x`. Si `x` est 1, retourne {{JSxRef("Infini
 
 ## Description
 
-Parce que `atanh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.atanh()`, et non comme méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
+Parce que `atanh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.atanh()`, et non comme méthode d'un objet `Math` que vous avez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -71,8 +71,8 @@ Math.atanh(2); // NaN
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Math.atanh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
-- [Prothèse d'émulation es-shims de `Math.atanh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.atanh)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Math.atanh` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/math)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Math.atanh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.atanh)
 - La méthode statique {{JSxRef("Math.acosh()")}}
 - La méthode statique {{JSxRef("Math.asinh()")}}
 - La méthode statique {{JSxRef("Math.cosh()")}}

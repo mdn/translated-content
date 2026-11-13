@@ -3,7 +3,7 @@ title: Fonction CSS `image()`
 short-title: image()
 slug: Web/CSS/Reference/Values/image/image
 l10n:
-  sourceCommit: 61f27416f7cfa79bd102042eeb3e44fe629d9c95
+  sourceCommit: 3a4e7cc6b2104a8b8e64bfece1924ef065328784
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la direction, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
@@ -116,14 +116,14 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 ### Afficher une section de l'image
 
 ```html
-<div class="box">
+<div class="boite">
   Vous pouvez survoler cet élément pour voir un autre curseur
 </div>
 ```
 
 ```css
-.box:hover {
-  cursor: image("sprite.png#xywh=32,64,16,16");
+.boite:hover {
+  cursor: image("sprite.png#xywh=32,64,16,16"), auto;
 }
 ```
 
@@ -134,7 +134,7 @@ Lorsqu'on survole la boîte, le curseur change pour afficher une section d'un <i
 ### Placer une couleur sur une image en arrière-plan
 
 ```css hidden
-.quarter-logo {
+.quart-logo {
   height: 200px;
   width: 200px;
   border: 1px solid;
@@ -142,7 +142,7 @@ Lorsqu'on survole la boîte, le curseur change pour afficher une section d'un <i
 ```
 
 ```css
-.quarter-logo {
+.quart-logo {
   background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
@@ -150,12 +150,12 @@ Lorsqu'on survole la boîte, le curseur change pour afficher une section d'un <i
 ```
 
 ```html
-<div class="quarter-logo">
+<div class="quart-logo">
   Si pris en charge, un quart de ce div a un logo assombri
 </div>
 ```
 
-Dans l'exemple précédent, on place un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété {{CSSxRef("background-color")}} à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et {{CSSxRef("background-size")}} (tout en empêchant l'image de se répéter grâce à {{CSSxRef("background-repeat")}}), le voile noir ne couvre qu'un quart du conteneur.
+Dans l'exemple précédent, on place un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on utilise la propriété {{CSSxRef("background-color")}} à la place, la couleur est placée sous le logo et non sur lui. De plus, le conteneur entier a cette couleur en arrière-plan. Avec `image()` et {{CSSxRef("background-size")}} (tout en empêchant l'image de se répéter grâce à {{CSSxRef("background-repeat")}}), le voile noir ne couvre qu'un quart du conteneur.
 
 {{EmbedLiveSample("Placer une couleur sur une image en arrière-plan", "100%", 220)}}
 

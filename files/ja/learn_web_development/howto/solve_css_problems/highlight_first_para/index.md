@@ -1,11 +1,10 @@
 ---
 title: 最初の段落を強調表示するには
+short-title: 最初の段落を強調表示
 slug: Learn_web_development/Howto/Solve_CSS_problems/Highlight_first_para
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{LearnSidebar}}
 
 このガイドでは、コンテナーの中にある最初の段落を強調表示する方法について説明します。
 
@@ -20,14 +19,12 @@ l10n:
 ```html live-sample___highlight_first_para
 <div class="wrapper">
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    野菜は体に良いものです。だから、コールラビ、青ネギ、大根、アマランサス、タアサイ、トマティーヨ、メロン、小豆、ニンニクをもっと食べましょう。
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    フダンソウ、ビートの葉、コーン、サトイモの葉、エンダイブ、ウリ。パセリ、エシャロット、ズッキーニ、タアサイ、エンドウの芽、ソラマメ、コラードグリーン、タンポポ、オクラ、ワカメ、トマト。
+    タンポポ、キュウリ、アースナッツ、ピーナッツ、サトイモの葉、ズッキーニ。
   </p>
 </div>
 ```

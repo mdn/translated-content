@@ -3,7 +3,7 @@ title: "Object : méthode statique assign()"
 short-title: assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Object.assign()`** copie toutes les {{JSxRef("Object/hasOwn", "propriétés propres", "", 1)}} et {{JSxRef("Object/propertyIsEnumerable", "énumérables", "", 1)}} d'un ou plusieurs _objets sources_ vers un _objet cible_. Elle retourne l'objet cible modifié.
@@ -260,8 +260,8 @@ console.log(copie);
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Object.assign` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-object)
-- [La prothèse d'émulation es-shims de `Object.assign` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.assign)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Object.assign` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/object)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Object.assign` <sup>(angl.)</sup>](https://www.npmjs.com/package/object.assign)
 - La méthode {{JSxRef("Object.defineProperties()")}}
 - [Énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Décomposition dans les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#décomposition_dans_les_littéraux_dobjets)

@@ -2,7 +2,7 @@
 title: Temporal.PlainDate
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate
 l10n:
-  sourceCommit: 88a6dfa8e29de9517b6f5d40b845ce8dc2dce218
+  sourceCommit: 76c2e04d720aa8260ba7d75788ed96776aac35c6
 ---
 
 L'objet **`Temporal.PlainDate`** représente une date du calendrier (une date sans heure ni fuseau horaire)&nbsp;; par exemple, un évènement sur un calendrier qui se produit pendant toute la journée, quel que soit le fuseau horaire. Il est fondamentalement représenté comme une date du calendrier ISO 8601, avec des champs pour l'année, le mois et le jour, et un système de calendrier associé.
@@ -43,7 +43,7 @@ Les méthodes {{JSxRef("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
 
 ## Constructeur
 
-- {{JSxRef("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}} {{Experimental_Inline}}
+- {{JSxRef("Temporal/PlainDate/PlainDate", "Temporal.PlainDate()")}}
   - : Crée un nouvel objet `Temporal.PlainDate` en fournissant directement les données sous-jacentes.
 
 ## Méthodes statiques

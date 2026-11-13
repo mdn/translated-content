@@ -50,7 +50,7 @@ link-parameters:
   <img
     class="updated"
     src="square.svg"
-    alt="赤い境界線とトマト色の塗りつぶしをつけている正方形。" />
+    alt="赤い境界線とトマト色の塗りつぶしがある正方形。" />
 </div>
 ```
 

@@ -3,7 +3,7 @@ title: "Iterator : méthode toArray()"
 short-title: toArray()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/toArray
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode **`toArray()`** des instances de {{JSxRef("Iterator")}} crée une nouvelle instance de {{JSxRef("Array")}} remplie avec les éléments produits par l'itérateur.
@@ -58,7 +58,7 @@ Notez qu'il est conseillé d'appeler `toArray()` en dernière étape de votre tr
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.prototype.toArray` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-helpers)
-- [Prothèse d'émulation es-shims de `Iterator.prototype.toArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.prototype.toArray` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.prototype.toArray` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Array.from()")}}

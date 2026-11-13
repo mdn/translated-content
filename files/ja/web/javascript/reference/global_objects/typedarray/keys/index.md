@@ -3,7 +3,7 @@ title: TypedArray.prototype.keys()
 short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`keys()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対するキーを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.keys()")}} と同じです。
@@ -73,8 +73,8 @@ console.log(arrKeys.next().value); // 4
 
 ## 関連情報
 
-- [`TypedArray.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- [`TypedArray.prototype.keys` のポリフィル (`core-js`)](https://core-js.io/docs/features/ecmascript/typed-arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}

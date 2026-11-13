@@ -3,7 +3,7 @@ title: "BigInt : méthode statique asIntN()"
 short-title: asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 l10n:
-  sourceCommit: f542ed344953b3312fc92150bba11536667e288a
+  sourceCommit: c7424294e2e85922c9af80b2b557ece47654604c
 ---
 
 La méthode statique **`BigInt.asIntN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier signé.
@@ -14,7 +14,7 @@ La méthode statique **`BigInt.asIntN()`** tronque une valeur `BigInt` au nombre
 const I64_CEIL = 2n ** 63n;
 
 console.log(BigInt.asIntN(64, I64_CEIL - 1n));
-// 9223372036854775807n (2n ** 64n - 1n, le maximum sans dépassement)
+// 9223372036854775807n (2n ** 63n - 1n, le maximum sans dépassement)
 console.log(BigInt.asIntN(64, I64_CEIL));
 // -9223372036854775808n (dépassement vers la valeur minimale)
 console.log(BigInt.asIntN(64, I64_CEIL + 1n));

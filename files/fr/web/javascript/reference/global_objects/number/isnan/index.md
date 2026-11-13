@@ -3,7 +3,7 @@ title: "Number : méthode statique isNaN()"
 short-title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Number.isNaN()`** détermine si la valeur passée est la valeur numérique {{JSxRef("NaN")}}, et retourne `false` si l'entrée n'est pas de type `Number`. C'est une version plus robuste de la fonction native {{JSxRef("isNaN()")}}.
@@ -52,7 +52,7 @@ Contrairement à la fonction globale {{JSxRef("isNaN()")}}, la méthode `Number.
 
 ## Exemples
 
-### Utiliser `isNaN()`
+### Utiliser la méthode `isNaN()`
 
 ```js
 Number.isNaN(NaN); // true
@@ -103,7 +103,7 @@ isNaN(" "); // false, c'est converti en 0
 
 ## Voir aussi
 
-- [La prothèse d'émulation de `Number.isNaN` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-number)
-- [La prothèse d'émulation es-shims de `Number.isNaN` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isnan)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Number.isNaN` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/number)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Number.isNaN` <sup>(angl.)</sup>](https://www.npmjs.com/package/number.isnan)
 - L'objet natif {{JSxRef("Number")}}
 - La fonction native {{JSxRef("isNaN()")}}

@@ -3,7 +3,7 @@ title: "Iterator : méthode statique concat()"
 short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/concat
 l10n:
-  sourceCommit: 1474534461893381d54c502e655f334b5568e597
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 La méthode statique **`Iterator.concat()`** crée un nouvel objet {{JSxRef("Iterator")}} à partir d'une liste d'objets itérables. Le nouvel itérateur produit les valeurs de chacun des objets itérables d'entrée, en séquence.
@@ -199,8 +199,8 @@ Lorsque vous implémentez vos propres itérateurs, pensez à les rendre itérabl
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Iterator.concat` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#iterator-sequencing)
-- [Prothèse d'émulation es-shims de `Iterator.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) de `Iterator.concat` dans `core-js` <sup>(angl.)</sup>](https://core-js.io/docs/features/ecmascript/iterator)
+- [La prothèse d'émulation (<i lang="en">polyfill</i> en anglais) es-shims de `Iterator.concat` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-iterator-helpers)
 - L'objet natif {{JSxRef("Iterator")}}
 - La méthode statique {{JSxRef("Iterator.from()")}}
 - La méthode {{JSxRef("Array.prototype.concat()")}}
