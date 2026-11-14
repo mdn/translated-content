@@ -6,18 +6,18 @@ l10n:
   sourceCommit: 4aba58b4ad2745a73054f60b6d649d8e29b7b44d
 ---
 
-**CSS アニメーション** (CSS animations) モジュールを使用すると、キーフレームを使用して、background-position や transform などの CSS プロパティの値を、時間に応じてアニメーションさせることができます。各キーフレームは、アニメーションシーケンスの指定された時間に、アニメーションする要素をどのようにレンダリングするかを記述します。アニメーションモジュールでは、アニメーションの再生時間、繰り返し回数、開始の遅延、その他のアニメーションの要素を制御するためのプロパティを使用することができます。
+**CSS アニメーション** (CSS animations) モジュールを使用すると、キーフレームを使って、background-position や transform などの CSS プロパティの値を時間に応じてアニメーションさせることができます。各キーフレームは、アニメーションシーケンスの指定された時点で、アニメーションする要素をどのように描画するかを記述します。アニメーションモジュールのプロパティを使うと、アニメーションの再生時間、繰り返し回数、開始の遅延などを制御できます。
 
 ## アニメーションの実際
 
-下のボックスでアニメーションを見るには、 'Play the animation' チェックボックスをクリックするか、ボックスにカーソルを当てるかしてください。アニメーションが有効になると、上部の雲の図形が変わり、雪片が降り、下部の雪の高さが高くなります。アニメーションを一時停止するには、チェックボックスのチェックを外すか、ボックスからカーソルを離してください。
+下のボックスでアニメーションを見るには、「アニメーションを再生」チェックボックスをクリックするか、ボックスにポインターを合わせてください。アニメーションが再生されると、上部の雲の形が変わり、雪片が降り、下部の雪が積もっていきます。一時停止するには、チェックボックスのチェックを外すか、ボックスからポインターを離してください。
 
 ```html hidden live-sample___animation
 <!-- See aria-label: https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label -->
 <input
   type="checkbox"
   id="animate"
-  aria-label="アニメーションの再生状態をトグル切り替え" />
+  aria-label="アニメーションの再生状態を切り替え" />
 <label for="animate">アニメーション</label>
 <div class="root">
   <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
@@ -45,7 +45,7 @@ i {
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);
 }
 i:nth-of-type(4n) {
-  /* 木構造擬似クラスを用いたランダム性の生成 - https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Selectors/:nth-of-type */
+  /* ツリー構造擬似クラスを用いたランダム性の生成 - https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Selectors/:nth-of-type */
   height: 30px;
   width: 30px;
   transform-origin: right -30px;
@@ -211,7 +211,7 @@ input:checked ~ div * {
   animation-play-state: running;
 }
 
-/* 入力の直後に表示されるラベルの内容を変更する。アクセシビリティ向上のため、ラベルに aria-label を付与。 */
+/* 入力の直後にあるラベルの内容を変更する。アクセシビリティ向上のため、入力に aria-label を設定している。 */
 input + label::after {
   content: "を再生";
 }
@@ -222,15 +222,15 @@ input:checked + label::after {
 
 {{EmbedLiveSample("animation", "", "610px")}}
 
-このサンプルアニメーションでは、 {{cssxref("animation-iteration-count")}} を使用して雪片を繰り返し降らせ、 {{cssxref("animation-direction")}} を使用して雲を前後に移動させ、 {{cssxref("animation-fill-mode")}} を使用して雲の動きに応じて雪の高さを上げ、 {{cssxref("animation-play-state")}} を使用してアニメーションを一時停止しています。
+このサンプルアニメーションでは、{{cssxref("animation-iteration-count")}} を使用して雪片を繰り返し降らせ、{{cssxref("animation-direction")}} を使用して雲を前後に動かし、{{cssxref("animation-fill-mode")}} を使用して雲の動きに応じて雪の高さを上げ、{{cssxref("animation-play-state")}} を使用してアニメーションを一時停止しています。
 
-上記の例で "Play" をクリックすると、 MDN Playground でアニメーションのコードを表示または編集できます。
+上記の例で "Play" をクリックすると、MDN Playground でアニメーションのコードを表示または編集できます。
 
 ## リファレンス
 
 ### CSS プロパティ
 
-- {{cssxref("animation")}} 一括指定
+- {{cssxref("animation")}} 一括指定プロパティ
 - {{cssxref("animation-composition")}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}

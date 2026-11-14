@@ -3,14 +3,14 @@ title: CSS フレックスボックスレイアウト
 short-title: フレックスボックスレイアウト
 slug: Web/CSS/Guides/Flexible_box_layout
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 04dfe418f2942ae739d41592c22fafa3679fc03c
 ---
 
-**CSS フレックスボックスレイアウト** (CSS flexible box layout) は、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、あるいは親のあふれることを避けるために収縮したりと、そのサイズを「伸縮」することができます。子の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
+**CSS フレックスボックスレイアウト** (CSS flexible box layout) は、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、親からはみ出さないように縮小したりと、そのサイズを「伸縮」することができます。子要素の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
 
 ## フレックスボックスレイアウトの実際
 
-以下の例では、コンテナーに `display: flex` に設定されており、 3 つの子がフレックスアイテムであることを意味しています。 `justify-content` の値は、主軸上に均等に配置するため、 `space-between` に設定されています。それぞれのアイテムと、その左右のアイテムとの間は等しい間隔で配置され、フレックスコンテナーの両端に揃えられます。また、 `align-items` の既定値は `stretch` なので、アイテムが交差軸方向に引き伸ばされていることが分かります。アイテムはフレックスコンテナーの高さまで引き伸ばされ、最も高さが大きいアイテムと同じ高さで表示されます。
+以下の例では、コンテナーに `display: flex` が設定されており、3 つの子要素がフレックスアイテムであることを意味しています。 `justify-content` の値は、主軸上に均等に配置するため、 `space-between` に設定されています。それぞれのアイテムと、その左右のアイテムとの間は等しい間隔で配置され、フレックスコンテナーの両端に揃えられます。また、 `align-items` のデフォルト値は `stretch` なので、アイテムが交差軸方向に引き伸ばされていることが分かります。アイテムはフレックスコンテナーの高さまで引き伸ばされ、最も高さが大きいアイテムと同じ高さで表示されます。
 
 ```html live-sample___simple-example
 <div class="box">
@@ -53,6 +53,7 @@ body {
 - {{cssxref("flex-direction")}}
 - {{cssxref("flex-flow")}}
 - {{cssxref("flex-grow")}}
+- {{cssxref("flex-line-count")}}
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}
@@ -86,6 +87,8 @@ body {
   - : フレックスボックスレイアウトを使用してウェブレイアウトを作成する方法を学びます。
 - [フレックスボックスのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
   - : [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)の詳細機能のうち、フレックスボックスに特有のものです。
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : グリッド、フレックスボックス、段組みレイアウトにおける隙間の理解と定義、およびパーセント値の解決方法を説明します。
 
 ## 関連概念
 
@@ -99,12 +102,23 @@ body {
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
+
+[CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
+
+- {{cssxref("column-gap")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
+- {{cssxref("row-rule")}}
+- {{cssxref("rule")}}
+- {{cssxref("rule-color")}}
+- {{cssxref("rule-inset")}}
+- {{cssxref("rule-overlap")}}
+- {{cssxref("rule-style")}}
+- {{cssxref("rule-width")}}
 
 [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
 

@@ -2,7 +2,7 @@
 title: ウェブフォームへのスタイル設定
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 0daae80dae181e8156f76439b0df5749f1501bb3
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
@@ -60,6 +60,8 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)のような日時関連コントロール
 - [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
+  > [!NOTE]
+  > ファイル選択ダイアログを開くボタンは、{{cssxref("::file-selector-button")}} を使ってスタイル設定できます。選択したファイル名を表示する横のテキストはスタイル設定できません。
 - ドロップダウンウィジェットの作成に含まれる要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む。
   > [!NOTE]
   > 一部のブラウザーでは、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)に対応するようになりました。これは、HTML と CSS の機能群であり、これらを組み合わせることで、`<select>` 要素とそのコンテンツを、通常の DOM 要素と同様に完全にカスタマイズできるようになります。
@@ -282,41 +284,47 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn_web_development/Extensio
 ここからが面白いところです。コードを書き始める前に、ここでは 3 つの追加要素が必要です。
 
 1. [はがきの背景](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — この画像をダウンロードして作業している HTML ファイルと同じディレクトリーに保存してください。
-2. タイプライター風フォント: [dafont.com の "Mom's Typewriter" フォント](https://www.dafont.com/moms-typewriter.font?back=theme)、TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
-3. 手書き風フォント: [fontsquirrel.com の "Journal"](https://www.dafont.com/journal.font) — TTF ファイルを上記と同じディレクトリーにダウンロードしてください。
+2. タイプライター風フォント: [dafont.com の "Veteran Typewriter" フォント](https://www.dafont.com/veteran-typewriter.font) — ZIP ファイルをダウンロードして展開し、TTF ファイルを上記と同じディレクトリーにコピーしてください。
+3. 手書き風フォント: [dafont.com の "Journal" フォント](https://www.dafont.com/journal.font) — ZIP ファイルをダウンロードして展開し、TTF ファイルを上記と同じディレクトリーにコピーしてください。
 
 始める前にフォントの処理が必要です。
 
-1. fontsquirrel.com の [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
-2. フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
-3. zip ファイルを展開します。
-4. 展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts) の記事を見てください。
+1. [Transfonter Webfont generator](https://transfonter.org/) に移動します。
+2. "Add fonts" ボタンを押して、両方の TTF ファイルをアップロードします。
+3. アップロードしたら、"Convert" ボタンを押してウェブフォントキットを生成します。
+4. "Download" リンクを使ってキットをコンピューターにダウンロードします。
+5. ZIP ファイルを展開します。
+6. 展開したファイルの中に、いくつかのフォントファイルがあります（執筆時点では、2 つの `.woff` ファイルと 2 つの `.woff2` ファイルですが、今後変わる可能性があります）。これらのファイルを、先ほどと同じディレクトリー内に `fonts` というディレクトリーを作成してコピーします。ブラウザー互換性を最大化するため、各フォントにつき 2 種類のファイルを使います。詳しくは[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)の記事を参照してください。
 
 ### CSS
 
-ここから例の CSS を見ていきましょう。{{htmlelement("style")}} 要素の中にすべてのコードブロックを一つ一つ追加します。
+ここから例の CSS を見ていきましょう。用意されている {{htmlelement("style")}} 要素の中に、以下のコードブロックを順番に追加します。
 
 #### 全体レイアウト
 
-まず、 {{cssxref("@font-face")}} アットルールと、すべての {{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。 fontsquirrel の出力が上記で述べたものと異なる場合、 `stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます（下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります）。
+まず、{{cssxref("@font-face")}} ルールと、{{HTMLElement("body")}} 要素および {{HTMLElement("form")}} 要素に設定する基本的なスタイルを定義します。
+
+ダウンロードしたウェブフォントキットの `stylesheet.css` ファイルから `@font-face` ブロックを探し、以下の `@font-face` ブロックと置き換えてください。フォントファイルへのパスを更新し、Journal と Veteran Typewriter の `font-family` 名がそれぞれ `handwriting` と `typewriter` になっていることを確認してください。Transfonter の出力はここに示したものと少し異なる場合がありますが、必要な変更を行えば問題ありません。
 
 ```css
 @font-face {
   font-family: "handwriting";
   src:
-    url("fonts/journal-webfont.woff2") format("woff2"),
-    url("fonts/journal-webfont.woff") format("woff");
+    url("fonts/Journal.woff2") format("woff2"),
+    url("fonts/Journal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "typewriter";
   src:
-    url("fonts/momot___-webfont.woff2") format("woff2"),
-    url("fonts/momot___-webfont.woff") format("woff");
+    url("fonts/VeteranTypewriter.woff2") format("woff2"),
+    url("fonts/VeteranTypewriter.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -337,7 +345,7 @@ form {
 
   /* 独自のグリッドを作成 */
   display: grid;
-  grid-gap: 20px;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 10em 1em 1em 1em;
 }
@@ -406,7 +414,7 @@ textarea:focus {
 
 #### テキストエリアの微調整
 
-{{HTMLElement("textarea")}} 要素はデフォルトでブロック要素としてレンダリングされるようにします。ここで重要なことは、 {{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように `resize` プロパティを使用します。 {{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これのデフォルト値が `auto` であるブラウザーと `scroll` であるブラウザーが存在します。この例では、すべてのブラウザーが `auto` になるようにするのがよいでしょう。
+{{HTMLElement("textarea")}} 要素はデフォルトでインラインブロック要素としてレンダリングされます。ここで重要なのは、{{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。この例のデザインは固定サイズですが、ユーザーが望む場合にテキストエリアをリサイズできないようにするのは避けるのがよいでしょう。{{cssxref("overflow")}} プロパティは、ブラウザー間でフィールドの表示をより一貫させるために使用します。デフォルト値が `auto` のブラウザーもあれば、`scroll` のブラウザーもあります。この例では、すべてのブラウザーで `auto` が使われるようにするのがよいでしょう。
 
 ```css
 textarea {

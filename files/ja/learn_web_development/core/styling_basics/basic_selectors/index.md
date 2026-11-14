@@ -3,7 +3,7 @@ title: 基本的な CSS セレクター
 short-title: 基本的なセレクター
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 l10n:
-  sourceCommit: bb4be34c00686ddc46a1cef3123cdf825e9495ec
+  sourceCommit: 28f5f3b9b463fa842fa686ccc73c9e1d9b06282b
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
@@ -30,7 +30,7 @@ l10n:
           <li>それぞれの要素に複数のクラスを指定することができ、必要に応じてスタイルのレイヤーとして使用することができること。</li>
           <li>セレクターリスト。</li>
           <li>全称セレクター。</li>
-        <ul>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -399,7 +399,7 @@ article :first-child {
 }
 ```
 
-しかし、この記事のセレクターは `article:first-child`、すうなわち他の要素の最初の子であるすべての `<article>` 要素を選択するセレクターと混同される可能性があります。
+しかし、このセレクターは `article:first-child`、すなわち他の要素の最初の子であるすべての `<article>` 要素を選択するセレクターと混同される可能性があります。
 
 この混乱を避けるために、全称セレクターを `:first-child` 擬似クラスに追加すると、セレクターが何をしているのかがより明確になるようにします。これは、 `<article>` 要素の最初の子である、または `<article>` の任意の子孫要素の最初の子である、任意の要素を選択します。
 

@@ -1,6 +1,7 @@
 ---
 title: 열 레이아웃
-slug: Web/CSS/Layout_cookbook/Column_layouts
+slug: Web/CSS/How_to/Layout_cookbook/Column_layouts
+original_slug: Web/CSS/Layout_cookbook/Column_layouts
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
