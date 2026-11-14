@@ -48,7 +48,7 @@ Se você construiu uma página web básica (veja [HTML basics](/pt-BR/docs/Learn
 Existem vários clientes SFTP . Nossa demo cobre o FileZilla, já que é gratuito e está disponível para Windows, macOS e Linux. Para instalar o FileZilla, vá para a página de downloads do FileZilla, clique no botão Download grande e instale a partir do arquivo de instalação da maneira usual.
 
 > [!NOTE]
-> Claro que existem outras opções. Consulte [Publishing tools](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#publishing_tools.3a_ftp_client) para mais informações.
+> Claro que existem outras opções. Consulte [Publishing tools](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website#publishing_tools.3a_ftp_client) para mais informações.
 
 Abra o FileZilla, você verá algo semelhante a isso:
 

@@ -36,10 +36,10 @@ Esta seção cobre a mecânica da Web —questões relacionadas a conhecimentos 
 
 Questions related to the tools/software you can use to build websites.
 
-- [How much does it cost to do something on the Web?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [How much does it cost to do something on the Web?](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we discuss how much everything costs and what you get for what you pay (or don't pay).
 
-- [What software do I need to build a website?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [What software do I need to build a website?](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
   - : In this article we explain which software components you need when you're editing, uploading, or viewing a website.
 
 - [What text editors are available?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)
@@ -51,10 +51,10 @@ Questions related to the tools/software you can use to build websites.
 - [What are browser developer tools?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : Every browser features a set of devtools for debugging HTML, CSS, and other web code. This article explains how to use the basic functions of your browser's devtools.
 
-- [How do you make sure your website works properly?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
+- [How do you make sure your website works properly?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
   - : So you've published your website online — very good! But are you sure it works properly? This article provides some basic troubleshooting steps.
 
-- [How do you upload files to a web server?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
+- [How do you upload files to a web server?](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
   - : This article shows how to publish your site online with [FTP](/pt-BR/docs/Glossary/FTP) tools — one fo the most common ways to get a website online so others can access it from their computers.
 
 - [How do I use GitHub Pages?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)
