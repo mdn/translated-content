@@ -3,7 +3,7 @@ title: TypedArray.prototype.sort()
 short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **`sort()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を[その場 (in-place)](https://en.wikipedia.org/wiki/In-place_algorithm) でソートし、その型付き配列を返します。このメソッドは {{jsxref("Array.prototype.sort()")}} と同じアルゴリズムですが、デフォルトで文字列としてではなく数値として値をソートする点が異なります。

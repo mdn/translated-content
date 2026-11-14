@@ -3,10 +3,10 @@ title: TypedArray.prototype.subarray()
 short-title: subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
-**`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
+**`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアを共有し、この型付き配列と同じ要素型を持つ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
 
 {{InteractiveExample("JavaScript デモ: TypedArray.prototype.subarray()")}}
 
@@ -31,9 +31,9 @@ subarray(begin, end)
 ### 引数
 
 - `begin` {{optional_inline}}
-  - : 開始位置の要素です。このオフセットは範囲に含まれます。この値が指定されていない場合、配列全体が新しいビューに含まれます。
+  - : 先頭の要素です。このオフセットは範囲に含まれます。この値が指定されていない場合、配列全体が新しいビューに含まれます。
 - `end` {{optional_inline}}
-  - : 終了位置の要素です。このオフセットは範囲に含まれません。この値が指定されていない場合、 `begin` によって指定された要素から配列の最後まで、すべての要素が新しいビューに含まれます。
+  - : 末尾の要素です。このオフセットは範囲に含まれません。この値が指定されていない場合、`begin` によって指定された要素から配列の最後まで、すべての要素が新しいビューに含まれます。
 
 ### 返値
 

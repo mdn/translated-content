@@ -2,14 +2,14 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 l10n:
-  sourceCommit: 05b21c9303964f221febe77f053e5636f230afe9
+  sourceCommit: 9de14917b151f7db567a65d44c2685cea754b12a
 ---
 
 **_TypedArray_** オブジェクトは、基盤となる[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)を配列のように参照するビューです。`TypedArray` という名前のグローバルプロパティや、直接参照できる `TypedArray` コンストラクターはありません。代わりに、特定の要素型に対応する型付き配列コンストラクターが、複数のグローバルプロパティとして用意されています。以下のページでは、要素型を問わず、型付き配列で共通して使用できるプロパティやメソッドを説明します。
 
 ## 解説
 
-`TypedArray` コンストラクター（JavaScript プログラムに公開されるグローバルオブジェクトに対応するものではないため、内部組み込みオブジェクトであることを示して `%TypedArray%` と表記されることがあります）は、すべての `TypedArray` サブクラスに共通するスーパークラスとして機能します。`%TypedArray%` は、すべての型付き配列サブクラスに共通のユーティリティメソッドのインターフェイスを提供する「抽象クラス」と考えることができます。このコンストラクターは直接公開されておらず、グローバルプロパティ `TypedArray` も存在しません。`Object.getPrototypeOf(Int8Array)` などを通じてのみアクセスできます。
+`TypedArray` コンストラクター（JavaScript プログラムに公開されるグローバルオブジェクトに対応するものがないため、「内在的」であることを示す `%TypedArray%` と表記されることがあります）は、すべての `TypedArray` サブクラスに共通するスーパークラスとして機能します。`%TypedArray%` は、すべての型付き配列サブクラスに共通のユーティリティメソッドのインターフェイスを提供する「抽象クラス」と考えることができます。このコンストラクターは直接公開されておらず、グローバルプロパティ `TypedArray` も存在しません。`Object.getPrototypeOf(Int8Array)` などを通じてのみアクセスできます。
 
 `TypedArray` のサブクラス（例えば `Int8Array`）のインスタンスを作成すると、メモリー内に配列バッファーが作成されます。コンストラクターの引数に `ArrayBuffer` オブジェクトを指定した場合は、その `ArrayBuffer` が代わりに使用されます。バッファーのアドレスはインスタンスの内部プロパティとして保存され、`%TypedArray%.prototype` のすべてのメソッドはそのアドレスに基づいて値を設定したり取得したりします。
 
@@ -231,9 +231,9 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.filter()")}}
   - : 与えられたフィルタリング関数が `true` を返す配列のすべての要素をもつ新しい配列を生成します。 {{jsxref("Array.prototype.filter()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.find()")}}
-  - : 配列要素が与えられたテスト関数を満足したら、配列の値を返します。満足しなかった場合、 `undefined` を返します。 {{jsxref("Array.prototype.find()")}} も参照してください。
+  - : 与えられたテスト関数を満たす最初の配列要素の値を返します。条件を満たす要素がない場合は `undefined` を返します。{{jsxref("Array.prototype.find()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.findIndex()")}}
-  - : 配列要素が与えられたテスト関数を満足したら、配列のインデックスを返します。満足しなかった場合は `-1` を返します。{{jsxref("Array.prototype.findIndex()")}} も参照してください。
+  - : 与えられたテスト関数を満たす最初の配列要素のインデックスを返します。条件を満たす要素がない場合は `-1` を返します。{{jsxref("Array.prototype.findIndex()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.findLast()")}}
   - : 指定されたテスト関数を満たす配列の最後の要素の値を返し、適切な要素が得られなかった場合は `undefined` を返します。{{jsxref("Array.prototype.findLast()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.findLastIndex()")}}
@@ -265,7 +265,7 @@ new TypedArray(buffer, byteOffset, length)
 - {{jsxref("TypedArray.prototype.some()")}}
   - : 配列内に、指定されたテスト関数を満たす要素が見つかった場合は `true` を返します。それ以外の場合は `false` を返します。{{jsxref("Array.prototype.some()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.sort()")}}
-  - : 配列の要素をソートし、その結果を返します。 {{jsxref("Array.prototype.sort()")}} も参照してください。
+  - : 配列の要素をその場でソートし、その配列を返します。{{jsxref("Array.prototype.sort()")}} も参照してください。
 - {{jsxref("TypedArray.prototype.subarray()")}}
   - : 与えられた開始位置と終了位置の要素インデックスから、新しい `TypedArray` を返します。
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
