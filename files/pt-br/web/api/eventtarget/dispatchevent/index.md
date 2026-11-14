@@ -14,7 +14,7 @@ cancelled = !target.dispatchEvent(event)
 ```
 
 - `event` é o objeto {{domxref("Event")}} a ser disparado.
-- `target` é utilizado para inicializar o {{domxref("Event", "", "target")}} e determinar quais event listeners serão invocados.
+- `target` é utilizado para inicializar o {{domxref("Event", "", "#target")}} e determinar quais event listeners serão invocados.
 - O valor retornado é `false` se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna `true`.
 
 O método `dispatchEvent joga` `UNSPECIFIED_EVENT_TYPE_ERR` se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is `null` ou uma string vazia. Exceções jogadas por event handlers são reportadas como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.
