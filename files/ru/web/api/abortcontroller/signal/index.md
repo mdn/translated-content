@@ -3,7 +3,7 @@ title: AbortController.signal
 slug: Web/API/AbortController/signal
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 > [!NOTE]
 > Это свойство только для чтения.
