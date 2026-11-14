@@ -3,9 +3,9 @@ title: Window.blur()
 slug: Web/API/Window/blur
 ---
 
-{{APIRef}}
+{{ ApiRef() }}{{Deprecated_Header}}
 
-ウィンドウからフォーカスを外します。
+**`Window.blur()`**は何も実行しません。
 
 ## 構文
 
@@ -26,10 +26,6 @@ blur();
 ```js
 window.blur();
 ```
-
-## メモ
-
-window\.blur() メソッドは、プログラム的にユーザーが現在のウィンドウからフォーカスを移した場合に等価です。
 
 ## 仕様書
 
