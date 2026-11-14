@@ -1,6 +1,7 @@
 ---
 title: Какое программное обеспечение необходимо для создания веб-сайта?
-slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software
+original_slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 ---
 
 {{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
