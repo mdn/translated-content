@@ -1,12 +1,12 @@
 ---
-title: "`column-rule-width` プロパティ (CSS)"
+title: "`column-rule-width` プロパティ"
 short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
 l10n:
-  sourceCommit: e9c03ba87f9ff4123150d8f7dc457bd546bdab83
+  sourceCommit: edc9ab5479d1253d9edd93bfe90dd1d100605c26
 ---
 
-**`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックス、段組みレイアウトで列・段の間に引かれる罫線の太さを設定します。
+**`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数列のグリッド、フレックスボックス、段組みレイアウトで列や段の間に引かれる罫線の太さを設定します。
 
 {{InteractiveExample("CSS デモ: column-rule-width")}}
 
@@ -112,7 +112,7 @@ column-rule-width: thick, 0.25rem;
 
 ### 反復される罫線の太さ
 
-`repeat()` 関数は、最初の引数として `1` 以上の整数を指定することで、その後の引数として渡された有効な CSS {{cssxref("&lt;line-width&gt;")}} 値のリストを、指定された回数だけ繰り返すことができます。これにより、同じ値を繰り返し使用することなく、同じ `<line-width>` を指定した回数だけ繰り返すことができます。次の宣言は同等です。
+`repeat()` 関数は、最初の引数として `1` 以上の整数を指定することで、その後の引数として渡された有効な CSS {{cssxref("&lt;line-width&gt;")}} 値のリストを、指定された回数だけ繰り返すことができます。これにより、同じ `<line-width>` を何度も個別に記述せずに、指定した回数だけ繰り返すことができます。次の宣言は同等です。
 
 ```css
 column-rule-width: 1rem, thick, thin, thick, thin, thick, thin;
@@ -140,7 +140,7 @@ column-rule-width:
 
 これにより、12 の太さのリストが作成されます。`column-rule-width` の値に含まれる太さのリストにある太さの数が、列・段間の数を超えた場合、余分な太さの値は無視されます。コンテナーが 3 列の場合、1 つ目の溝に適用される罫線は `1rem` の太さ、2 つ目の溝に適用される罫線は {{cssxref("min()")}} 関数で判断されます。
 
-溝の数の方が太さの数より多い場合、太さのリストが繰り返されます。コンテナーの列・段数が 13 または 25 の場合、この太さの並びははそれぞれ 1 回または 2 回繰り返され、最後の罫線は `thin` となります。25 列までのその他の列数については、最後の罫線は `thin` にはなりません。
+溝の数の方が太さの数より多い場合、太さのリストが繰り返されます。コンテナーが 13 列の場合はこの太さの並びが 1 回、25 列の場合は 2 回繰り返され、最後の罫線は `thin` になります。25 列までのその他の列数では、最後の罫線は `thin` になりません。
 
 ### 自動反復される罫線の太さ
 
@@ -150,7 +150,7 @@ column-rule-width:
 column-rule-width: 10px, repeat(auto, thin), 10px;
 ```
 
-この場合、最初の列・段の罫線は `10px`、最後の列は `10px`、それ以外のすべての列は `thin` になります。コンテナーの列数が 3、6、11、16、21 であっても、最初と最後の列は常に `10px` になります。つまり、列が 2 つまたは 3 つしかない場合は、`thin` サイズの列の罫線は現れません。
+この場合、最初と最後の列間罫・段間罫は `10px`、それ以外は `thin` になります。コンテナーの列数が 3、6、11、16、21 のいずれでも、最初と最後の列間罫は常に `10px` です。そのため、列が 2 つまたは 3 つしかない場合、`thin` の列間罫はありません。
 
 `auto` キーワードを`repeat()` 関数内で使用すると、リストの他の部分から値を受け取らない列間罫の太さの値を設定する自動リピーターを作成し、リストが繰り返されるのを防ぎます。`column-rule-width` の値内で、`repeat(auto, <line-width>)` を指定することができるのは 1 つだけです。
 
@@ -199,7 +199,7 @@ p {
 
 ### 複数の値
 
-この例では、`column-rule-width` プロパティに複数の値を使用する方法を示しています。また、オーバーフローした隙間がコンテンツの背後に描画される様子も示しています。
+この例では、`column-rule-width` プロパティに複数の値を使用する方法を示しています。また、隙間からはみ出す罫線がコンテンツの背後に描画される様子も示しています。
 
 #### HTML
 
@@ -261,9 +261,9 @@ ul {
 
 ### `repeat()` 関数の使用
 
-この例では、`repeat()` 関数を `column-rule-width` プロパティの値内で使用する方法と、この関数が値の宣言を縮小するのに役立つことを示しています。
+この例では、`repeat()` 関数を `column-rule-width` プロパティの値内で使用する方法と、この関数によって値の宣言を簡潔にできることを示しています。
 
-前回の例と同じ HTML と CSS を使用します。値が冗長になり得ることや、`repeat()` 関数の有用性を示すために、2 つのカスタムプロパティを宣言し、それらを `repeat()` 関数の宣言で使用します。`repeat()` 関数は、2 つの `<line-width>` 値のリストを 3 回繰り返すように設定します。
+前回の例と同じ HTML と CSS を使用します。値が冗長になり得ることや、`repeat()` 関数の有用性を示すために、2 つのカスタムプロパティを宣言し、それらを `repeat()` 関数の宣言で使用します。`repeat()` 関数は、2 つの `<line-width>` 値のリストを 4 回繰り返すように設定します。
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -306,7 +306,7 @@ ul {
 @layer no-support {
   @supports not (column-rule-width: thin, thick) {
     body::before {
-      content: "このブラウザーは column-rule-width プロパティに対応していません";
+      content: "このブラウザーは column-rule-width プロパティでの複数の値の使用に対応していません。";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -332,4 +332,5 @@ ul {
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule-width")}} 一括指定
 - {{cssxref("rule")}} 一括指定
+- [CSS 隙間の定義](/ja/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS 隙間](/ja/docs/Web/CSS/Guides/Gaps)モジュール
