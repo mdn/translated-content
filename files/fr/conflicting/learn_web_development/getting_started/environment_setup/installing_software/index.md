@@ -1,7 +1,7 @@
 ---
 title: De quels logiciels ai-je besoin pour construire un site web ?
-slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+slug: conflicting/Learn_web_development/Getting_started/Environment_setup/Installing_software
+original_slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 l10n:
   sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
 ---
