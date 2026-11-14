@@ -2,7 +2,7 @@
 title: パス
 slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: c956b5fc0c588115bc8e5972952fff985d4bd335
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
@@ -15,7 +15,7 @@ SVG を描画する際には、パスをよく理解しておくことが重要�
 
 `<path>` 要素の形状は、1 つの引数である {{ SVGAttr("d") }} によって定義されます (詳細は[基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)を参照してください)。 `d` 属性はこれらのコマンドで使用される一連のコマンドと引数を含みます。
 
-それぞれのコマンドは、特定の文字でインスタンス化されています (例えば、クラスを作成したり、名前を付けたり、位置を特定したりします)。例えば、 x と y の座標 (`10`, `10`) に移動してみましょう。 "Move to" コマンドは `M` という文字で呼び出されます。パーサーはこの文字に遭遇したとき、ある点に移動する必要があることを知っています。したがって、 (`10`, `10`) に移動するためのコマンドは `M 10 10` となります。その後、パーサーは次のコマンドを読み始めます。
+各コマンドは特定の文字で呼び出されます。たとえば、"Move to" コマンドは `M` で表されます。座標 (`10`, `10`) に移動するには、コマンドを `M 10 10` で開始します。パーサーはこの文字に遭遇すると、まず接続線を描かずにその点へ移動する必要があると認識します。
 
 すべてのコマンドは 2 つの種類があります。**大文字**はページ上の絶対座標を指定し、**小文字**は相対座標 (例えば、 _直前の点から上に 10px、左に 7px 移動_) を指定します。
 
@@ -23,13 +23,25 @@ SVG を描画する際には、パスをよく理解しておくことが重要�
 
 ## 直線コマンド
 
-{{SVGElement("path")}} ノードには、直線のコマンドが 5 つあります。1 つ目のコマンドは "Move To" すなわち `M` で、前述したものです。これは 2 つの引数、移動先の座標 (`x`) と座標 (`y`) を取ります。カーソルがすでにページ上のどこかにあった場合は、2 つの位置を結ぶ線は描画されません。 "Move To" コマンドは、どこから描画を始めるかを指定するパスの始点に見られます。
+{{SVGElement("path")}} ノードには、直線のコマンドが 5 つあります。1 つ目のコマンドは "Move To" すなわち `M` で、前述したものです。これは少なくとも 2 つの引数を取り、最初の 2 つは移動先の `x` 座標と `y` 座標です。カーソルがすでにページ上のどこかにあった場合は、2 つの位置を結ぶ線は描画されません。 "Move To" コマンドは、どこから描画を始めるかを指定するパスの始点に見られます。
 
 ```plain
 M x y
 (または)
 m dx dy
 ```
+
+"Move To" コマンドの後には、複数の座標ペアを続けることができます。カーソルを移動するのは最初のペアだけで、それ以降の各ペアは "Line To" コマンドを使用した場合と同じように線を描画します。たとえば、`M 10 10 90 10 90 90` は `M 10 10 L 90 10 L 90 90` と同じです。`m` の後に続くペアも同様に線を描画しますが、現在の位置からの相対座標になります。
+
+たとえば、次のパスは 1 つの `M` コマンドと 3 つの座標ペアを使って、つながった 2 本の線分を描画します。
+
+```html live-sample___move-to-multiple
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 10 90 10 90 90" stroke="black" fill="none" />
+</svg>
+```
+
+{{ EmbedLiveSample('move-to-multiple', 100, 130) }}
 
 以下の例では点 (`10`, `10`) だけがある状態になります。ただし、パスだけを描画してもこれらの点が表示されないことに注意してください。
 
@@ -122,7 +134,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('rectangle-lines', 100, 130) }}
 
-上記パス宣言は、`Z` で呼び出される「パスを閉じる」コマンドを使用することで、少し短縮することができます。このコマンドは、現在の位置から最初の閉じられていない点（最後の `Z` コマンドの後の最初の点、またはそれがない場合はパスの最初の点）まで直線を描き、そのパスを線接合で閉じます。これは、常にそうであるとは限りませんが、多くの場合、パスノードの終わりに配置されます。大文字と小文字のコマンドに違いはありません。
+上記のパス宣言は、`Z` で呼び出される「パスを閉じる」コマンドを使用することで、少し短縮することができます。このコマンドは、現在の位置から最初の未閉鎖の点（最後の `Z` コマンドの後にある最初の点、またはそれがない場合はパスの最初の点）まで直線を描き、線の接合でパスを閉じます。このコマンドは、多くの場合、パスノードの末尾に置かれますが、常にそうとは限りません。大文字と小文字のコマンドに違いはありません。
 
 ```plain
 Z
@@ -133,13 +145,13 @@ z
 したがって、上記のパスは次のように簡単に書くことができます。
 
 ```xml
-<path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black" />
+<path d="M 10 10 H 90 V 90 H 10 Z" fill="none" stroke="black" />
 ```
 
 同じ画像を描画するために、これらコマンドの相対形式を用いることもできます。前に述べたとおり相対形式のコマンドは小文字を用いて表記され、厳密な座標でカーソルを移動するのではなく直前の位置から相対的に移動します。例えば、ここで描いた四角形のサイズは 80x80 であるので、 `<path>` 要素は以下のように書くことができます:
 
 ```xml
-<path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black" />
+<path d="M 10 10 h 80 v 80 h -80 Z" fill="none" stroke="black" />
 ```
 
 パスは点 (`10`, `10`) に移動した後、右へ水平に点 80 個分、下に点 80 個分、左に点 80 個分、そして始点へ戻るように移動します。
@@ -148,11 +160,11 @@ z
 
 ## 曲線コマンド
 
-なめらかな曲線を作成するために使うコマンドは 3 種類あります。 2 つは[ベジェ曲線](/ja/docs/Glossary/Bezier_curve)、3 つめは「円弧」すなわち円の一部です。すでに Inkscape, Illustrator, Photoshop などのパスツールを使用して、ベジェ曲線の実体験をしているかもしれません。ベジェ曲線には無数の種類がありますが、 `<path>` 要素では 2 種類だけが使用可能です。 3 次ベジェ曲線の `C` と、 2 次ベジェ曲線の `Q` です。
+なめらかな曲線を作成するために使うコマンドは 3 種類あります。 2 つは[ベジェ曲線](/ja/docs/Glossary/Bezier_curve)、3 つめは「円弧」すなわち円の一部です。すでに Inkscape, Illustrator, Photoshop などのパスツールを使用して、ベジェ曲線の実体験をしているかもしれません。ベジェ曲線には無数の種類がありますが、 `<path>` 要素では 2 種類だけが使用可能です。三次ベジェ曲線の `C` と、二次ベジェ曲線の `Q` です。
 
 ### ベジェ曲線
 
-3 次ベジェ曲線 `C` は、やや複雑な曲線です。 3 次ベジェ曲線は、各々の点に対する 2 つの制御点をとります。従って、 3 次ベジェ曲線を作成したいときは 3 組の座標を指定しなければなりません。
+三次ベジェ曲線 `C` は、やや複雑な曲線です。三次ベジェ曲線は、各々の点に対する 2 つの制御点をとります。従って、三次ベジェ曲線を作成したいときは 3 組の座標を指定しなければなりません。
 
 ```plain
 C x1 y1, x2 y2, x y
@@ -257,9 +269,9 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('cubic_bezier_curves', 190, 190) }}
 
-上の例では 9 つのベジェ曲線を作成しています。曲線が左側へ移動するにつれて、制御点は水平方向に離れていきます。また曲線が右側へ移動するにつれて、制御点は終点から遠く離れていきます。ここで特筆することは、曲線は 1 番目の制御点に向かって出発し、そして 2 番目の制御点の方向に沿って到着するということです。
+上の例では 9 つのベジェ曲線を作成しています。曲線が右へ進むにつれて、制御点は水平方向に離れていきます。また曲線が下へ進むにつれて、制御点は終点から遠く離れていきます。ここで特筆することは、曲線は 1 番目の制御点の方向へ出発し、2 番目の制御点の方向に沿って到着するということです。
 
-長いなめらかな図形を描くために、複数のベジェ曲線をつなぐことができます。この場合はたいてい、ある点の片方の制御点はもう一方で使われる制御点の対向になるでしょう (傾斜を一定に保つ場合)。この場合はコマンド `S` (または `s`) で示される、 3 次ベジェ曲線の短縮版を用いることができます。
+長いなめらかな図形を描くために、複数のベジェ曲線をつなぐことができます。この場合はたいてい、ある点の片方の制御点はもう一方で使われる制御点の対向になるでしょう (傾斜を一定に保つ場合)。この場合はコマンド `S` (または `s`) で示される、三次ベジェ曲線の短縮版を用いることができます。
 
 ```plain
 S x2 y2, x y
@@ -316,7 +328,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('shortcut_cubic_bezier', 190, 190) }}
 
-もう一つの種類のベジェ曲線は 2 次ベジェ曲線 `Q` であり、こちらは 3 次ベジェ曲線よりシンプルな曲線です。基本的に制御点を 1 つだけ必要とし、それは始点側と終点側両方の曲線の傾斜を定義します。このコマンドは制御点と曲線の終点を示す 2 つの引数を持ちます。
+もう一つの種類のベジェ曲線は二次ベジェ曲線 `Q` であり、こちらは三次ベジェ曲線よりシンプルな曲線です。基本的に制御点を 1 つだけ必要とし、それは始点側と終点側両方の曲線の傾斜を定義します。このコマンドは制御点と曲線の終点を示す 2 つの引数を持ちます。
 
 > [!NOTE]
 > `q` コマンドにおける座標の差分は、どちらも前回の点からの相対座標です (すなわち `dx` と `dy` は `dx1` と `dy1` に対する相対座標ではありません)。
@@ -363,7 +375,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('quadratic_bezier', 190, 190) }}
 
-3 次ベジェ曲線の場合と同様に、 2 次ベジェ曲線のセットをつなぎ合わせるためのショートカットである `T` があります。
+三次ベジェ曲線の場合と同様に、二次ベジェ曲線のセットをつなぎ合わせるためのショートカットである `T` があります。
 
 ```plain
 T x y
@@ -418,7 +430,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('shortcut_quadratic_bezier', 190, 190) }}
 
-3 次ベジェ曲線はどのような曲線を描きたいかについて自由度が高いにもかかわらず、どちらの曲線もかなり似た結果になります。どちらの曲線を用いるかはたいてい、そのときの状況や曲線の対称度に依存します。
+三次ベジェ曲線は描きたい曲線の形状をより自由に指定できますが、どちらの曲線もかなり似た結果になります。どちらの曲線を用いるかはたいてい、そのときの状況や曲線の対称度に依存します。
 
 ### 円弧
 
@@ -494,9 +506,9 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('arcs_axis_rotation', 320, 350) }}
 
-この例ではページを斜めに渡る `<path>` 要素を示しています。その中間で、2 つの楕円弧 (X 軸方向の半径 = `30`、Y 軸方向の半径 = `50`) が切り抜かれています。1 番目の円弧は x-axis-rotation が `0` であるので、円弧が通る楕円 (灰色で示しています) は直立しています。一方 2 番目の円弧では、 x-axis-rotation が `-45` 度になっています。これは円弧を回転させるので、例の図にあるとおり 2 番目の楕円の短半径がパスの方向に沿うよう一直線に並びます。
+この例では、ページを斜めに横切る `<path>` 要素を示しています。その中央では、2 つの楕円弧（X 軸方向の半径 = `30`、Y 軸方向の半径 = `50`）が切り抜かれています。1 つ目の円弧では x-axis-rotation が `0` なので、円弧が通る楕円（赤色で表示）は垂直になっています。一方、2 つ目の円弧では x-axis-rotation が `-45` 度です。これにより楕円が回転し、例の図にあるとおり、短半径がパスの方向に沿うように並びます。
 
-上の画像の回転していない楕円については、円弧の始点と終点から引かれた線が楕円の中心を通るので、 2 つの異なる円弧があるだけで、 4 つの円弧から選択できるわけではありません。少し修正した例では、 4 つの異なる円弧を形成する 2 つの楕円を見ることができます。
+上の図の回転していない楕円については、円弧の始点と終点から引かれた線が楕円の中心を通るので、選べる円弧は 4 つではなく 2 つだけです。少し修正した例では、4 つの異なる円弧を形成する 2 つの楕円を見ることができます。
 
 ```html live-sample___arcs_axis_rotation_2
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
@@ -555,11 +567,11 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('arcs_axis_rotation_2', 320, 350) }}
 
-青い楕円は、時計回りか反時計回りかによって、2 つの円弧を描いていることに注意してください。それぞれの楕円には、短い円弧と長い円弧があります。2 つの楕円は互いに鏡像になっています。これらの楕円は、開始点 → 終了点から形成された線に沿って反転しています。
+それぞれの楕円は、時計回りまたは反時計回りに進む 2 つの円弧で構成されていることに注意してください。各楕円には短い円弧と長い円弧があります。2 つの楕円は互いに鏡像で、始点から終点へ引いた線を軸に反転しています。
 
-開始点 → 終了点が楕円の `x`, `y` 半径が到達できる距離よりも遠い場合、楕円の半径は最小に拡大され、開始点 → 終了点に到達できるようになります。このページの一番下にあるインタラクティブなコードペンがこのことをよく示しています。楕円の半径が拡大を必要とするほど大きいかどうかを判断するには、[このような方程式系](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1>)を解く必要があります。この計算は、開始 → 終了 (`110`, `215`)→(`150.71`, `170.29`) の非回転楕円についてのものです。解 (x, y) は楕円の中心である．楕円の半径が小さすぎると、解は[虚数](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1>)になります。この 2 番目の計算は、開始 → 終了 (`110`, `215`)→(`162.55`, `162.45`) の非回転楕円の場合です。楕円がかろうじて拡大されただけなので、この解には小さな虚数成分が含まれています。
+始点と終点の間隔が楕円の `x` 半径と `y` 半径で届く距離を超えると、楕円の半径は始点と終点に届くように必要最小限だけ拡大されます。このページ下部の対話型デモで、この動作を確認できます。楕円の半径を拡大する必要があるかどうかを判断するには、[このような方程式系](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1>)を解く必要があります。この計算は、始点 (`110`, `215`) と終点 (`150.71`, `170.29`) の非回転楕円についてのものです。解 (`x`, `y`) は楕円の中心です。楕円の半径が小さすぎると、解は[虚数](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1>)になります。この 2 番目の計算は、始点 (`110`, `215`) と終点 (`162.55`, `162.45`) の非回転楕円についてのものです。楕円はわずかに拡大されただけなので、この解には小さな虚数成分が含まれています。
 
-前述した 4 つの異なるパスは、次の 2 つの引数フラグによって決定されます。前述したように、パスが移動する楕円にはまだ 2 つの可能性があり、両方の楕円上には 2 つの異なる可能性のあるパスがあり、4 つの可能性のあるパスが与えられます。最初の引数は `large-arc-flag` です。これは単純に円弧が 180 度より大きいか小さいかを決定します。2 番目の引数は `sweep-flag` フラグです。これは、円弧が正の角度で動き始めるか負の角度で動き始めるかを決定します。以下の例は、4 つの可能性のあるすべての組み合わせと、それぞれの場合の 2 つの円を示しています。
+前述した 4 つの異なるパスは、次の 2 つの引数フラグによって決まります。パスが通る楕円には 2 つの候補があり、それぞれの楕円上にも 2 つのパスの候補があるため、合計 4 つのパスが考えられます。最初の引数は `large-arc-flag` です。円弧が 180 度より大きいか小さいかを決め、最終的には指定した円の周りを円弧がどちら向きに進むかを決定します。2 番目の引数は `sweep-flag` です。円弧が正または負の角度で描き始めるかを決め、基本的にはどちらの円に沿って進むかを選びます。以下の例では、4 つの組み合わせと、それぞれに対応する 2 つの円を示しています。
 
 ```html live-sample___arcs_flags
 <svg width="360" height="360" xmlns="http://www.w3.org/2000/svg">
@@ -650,7 +662,7 @@ button.addEventListener("click", () => {
 {{HTMLElement("canvas")}} から SVG に移行する場合、弧は学ぶのが最も難しいことかもしれませんが、その一方で、より強力な機能でもあります。SVG の弧が描画できない唯一の図形は、完全な円と楕円です。円を囲むパスは、その開始点と終了点が同じ点であるため、選択できる円の数は無限であり、実際のパスは未定義になります。パスの開始点と終了点をわずかにずらし、別のパス区間でつなぐことで、円に近づけることができます。例えば、半円ごとに弧を描いて円を作成することができます。この点では、実際の {{SVGElement("circle")}} や {{SVGElement("ellipse")}} ノードを使用するほうが簡単な場合が多いでしょう。この対話型デモは、SVG の弧の概念を理解するのに役立つかもしれません。
 
 ```html hidden live-sample___arcs_interactive
-<script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lingtalfi/simpledrag@2.2.0/simpledrag.js"></script>
 <div class="ui">
   <div class="controls">
     半径 X: <input id="rx" type="range" min="0" max="500" /><br />
@@ -662,7 +674,7 @@ button.addEventListener("click", () => {
     弧コマンド: <span id="arc-value"></span><br />
   </div>
   <div class="results">
-    mouse: pageX <span id="page-x"></span>, pageY <span id="page-y"></span
+    マウス: pageX <span id="page-x"></span>, pageY <span id="page-y"></span
     ><br />
     A: <span id="ax-value"></span>, <span id="ay-value"></span><br />
     B: <span id="bx-value"></span>, <span id="by-value"></span><br />
@@ -765,7 +777,7 @@ svg {
 
 ```js hidden live-sample___arcs_interactive
 const svgContext = document.getElementById("svg-context");
-let rect = svgContext.getBoundingClientRect(); // helper to enclose mouse coordinates into svg box
+let rect = svgContext.getBoundingClientRect(); // マウス座標を SVG のボックス内に収めるための補助情報
 
 const pageXEl = document.getElementById("page-x");
 const pageYEl = document.getElementById("page-y");
@@ -797,7 +809,7 @@ function updatePaths(pageX, pageY) {
   pageXEl.textContent = pageX;
   pageYEl.textContent = pageY;
 
-  // line between two points
+  // 2 点を結ぶ線
   line.setAttribute("x1", circle1.getAttribute("cx"));
   line.setAttribute("y1", circle1.getAttribute("cy"));
   line.setAttribute("x2", circle2.getAttribute("cx"));
@@ -809,7 +821,7 @@ function updatePaths(pageX, pageY) {
   byEl.textContent = circle2.getAttribute("cy");
 
   // y = mx + b
-  let m, b, run; // m = rise/run = (y2-y1) / (x2-x1)
+  let m, b, run; // m = 上昇量 / 横方向の移動量 = (y2-y1) / (x2-x1)
   if (circle1.getAttribute("cx") <= circle2.getAttribute("cx")) {
     run = circle2.getAttribute("cx") - circle1.getAttribute("cx");
     if (run !== 0) {
@@ -830,7 +842,7 @@ function updatePaths(pageX, pageY) {
     bbEl.textContent = b2;
     mEl.textContent = m;
 
-    // draw segment from the left vertical axis (x=0) to the left most point (A or B).
+    // 左端の点 (A または B) から左の垂直軸 (x=0) までの線分を描画
     // x=0 ----> y = b
     let leftMost, rightMost;
     if (circle1.getAttribute("cx") <= circle2.getAttribute("cx")) {
@@ -846,8 +858,7 @@ function updatePaths(pageX, pageY) {
     line0.setAttribute("x2", leftMost.getAttribute("cx"));
     line0.setAttribute("y2", leftMost.getAttribute("cy"));
 
-    // draw segment from point B to the right vertical axis (x=rect.width)
-    // representing the end of the svg box.
+    // 点 B から SVG ボックスの右端を表す垂直軸 (x=rect.width) までの線分を描画
     // y = mx + b
     const y = m * rect.width + b;
     line2.setAttribute("x1", rightMost.getAttribute("cx"));
@@ -855,7 +866,7 @@ function updatePaths(pageX, pageY) {
     line2.setAttribute("x2", rect.width);
     line2.setAttribute("y2", y);
 
-    // now update the arc
+    // 円弧を更新
     const arcCmd = getArcCommand(
       leftMost,
       rightMost,
@@ -865,7 +876,7 @@ function updatePaths(pageX, pageY) {
     arcCmdEl.textContent = arcCmd;
     arcEl.setAttribute("d", arcCmd);
 
-    // now update the other helper arcs
+    // ほかの補助円弧を更新
     const combo = [
       [true, true],
       [true, false],
@@ -918,14 +929,14 @@ circle2.sdrag((el, pageX, startX, pageY, startY) => {
 
 window.addEventListener("resize", updateScreen);
 
-// sliders
+// スライダー
 ["rx", "ry", "rot"].forEach((id) => {
   document.getElementById(id).addEventListener("input", (e) => {
     updatePaths();
   });
 });
 
-// checkboxes
+// チェックボックス
 ["laf", "sf"].forEach((id) => {
   document.getElementById(id).addEventListener("change", (e) => {
     updatePaths();
