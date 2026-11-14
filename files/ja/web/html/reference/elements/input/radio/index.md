@@ -3,32 +3,32 @@ title: '`<input type="radio">` 属性値'
 short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 l10n:
-  sourceCommit: 46afd57950146568819d0bf98175a2ffdbe079d7
+  sourceCommit: 29f7a9f90986462f6b3df9ee8e25cf4ecf3a12f7
 ---
 
-{{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。
+{{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連する一連の選択肢を示すラジオボタンの集まりに使用されます。
 
-グループ内でラジオボタンは同時に 1 つしか選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
+グループ内で選択できるラジオボタンは、同時に 1 つだけです。ラジオボタンは通常、小さな円で表示され、選択されると塗りつぶされるか、強調表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>
-  <legend>Select a maintenance drone:</legend>
+  <legend>メンテナンス用ドローンを選択してください:</legend>
 
   <div>
     <input type="radio" id="huey" name="drone" value="huey" checked />
-    <label for="huey">Huey</label>
+    <label for="huey">ヒューイ</label>
   </div>
 
   <div>
     <input type="radio" id="dewey" name="drone" value="dewey" />
-    <label for="dewey">Dewey</label>
+    <label for="dewey">デューイ</label>
   </div>
 
   <div>
     <input type="radio" id="louie" name="drone" value="louie" />
-    <label for="louie">Louie</label>
+    <label for="louie">ルーイ</label>
   </div>
 </fieldset>
 ```
@@ -52,11 +52,11 @@ input {
 
 ### ラジオグループの定義
 
-ラジオグループは、グループ内のそれぞれのラジオボタンに同じ [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) を設定することで定義します。ラジオグループが確立されると、グループ内のラジオボタンを選択すると、同じグループの現在選択されているラジオボタンが自動的に選択解除されます。
+ラジオグループは、グループ内のすべてのラジオボタンに同じ [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) を設定して定義します。ラジオグループができると、グループ内のラジオボタンを選択したとき、同じグループで現在選択されている別のラジオボタンは自動的に選択解除されます。
 
-ページ内には、固有の `name` を持っている限り、好きなだけの数のラジオグループを作成することができます。
+ページ内には、グループごとに固有の `name` を付ければ、いくつでもラジオグループを作成できます。
 
-例えば、フォームでユーザーに希望する問い合わせ方法を尋ねる必要がある場合、3 つのラジオボタンを作成し、それぞれの `name` プロパティに `contact` を設定しますが、1 つは [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を `email` に、1 つは value を `phone` に、1 つは value を `mail` に設定します。ユーザーは `value` または `name` を見ることはありません（表示させるコードを追加しない限り）。
+例えば、フォームでユーザーに希望する連絡方法を尋ねる場合、3 つのラジオボタンを作成し、それぞれの `name` 属性に `contact` を設定します。また、それぞれの [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、`email`、`phone`、`mail` を設定します。ユーザーは、表示するコードを追加しない限り、`value` や `name` を見ることはありません。
 
 最終的な HTML はこのようになります。
 
@@ -76,9 +76,9 @@ input {
 </fieldset>
 ```
 
-ここでは三つのラジオボタンがあり、それぞれの `name` が `contact` に設定されており、それぞれのラジオボタンを個別に識別するための固有の `value` を持っています。それぞれは固有の {{domxref("Element.id", "id")}} も持っており、 {{HTMLElement("label")}} 要素の [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) 属性でラジオボタンにラベルを結びつけるために使われます。
+ここには 3 つのラジオボタンがあり、それぞれの `name` は `contact` に設定されています。また、各ラジオボタンを個別に識別するための固有の `value` と、固有の {{domxref("Element.id", "id")}} もあります。`id` は、{{HTMLElement("label")}} 要素の [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) 属性を使って、ラベルとラジオボタンを関連付けるために使用されます。
 
-この例をこちらで試すことができます。
+この例を試してみてください。
 
 {{EmbedLiveSample('Defining_a_radio_group', 600, 130)}}
 
@@ -132,7 +132,7 @@ form.addEventListener("submit", (event) => {
 });
 ```
 
-この例を試してみて、 `contact` グループに 2 つ以上の結果が出ないことを確認してください。
+この例を試して、`contact` グループの項目が 2 つ以上含まれないことを確認してください。
 
 {{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}
 
@@ -141,12 +141,12 @@ form.addEventListener("submit", (event) => {
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `radio` 型の入力は次の属性にも対応しています。
 
 - `checked`
-  - : 論理属性で、もしあれば、このラジオボタンがラジオグループ内で現在選択されているものであることを示します。
+  - : 論理属性で、存在する場合、このラジオボタンがラジオグループ内でデフォルトで選択されることを示します。
 
     Firefox は他のブラウザーとは異なり、デフォルトでページ読み込みをまたがって `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
 
 - `value`
-  `value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、`radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、デフォルトで `on` という文字列になります。これは以前に[値](#value)の節で説明した通りです。
+  - : `value` 属性はすべての {{HTMLElement("input")}} 要素に共通しますが、`radio` 型の入力では特別な役割があります。フォームの送信時には、現在チェックされているラジオボタンだけがサーバーに送信され、その値には `value` 属性の値が使われます。`value` が指定されていない場合、デフォルト値は文字列 `on` です。これは前述の[値](#value)の節で説明したとおりです。
 
 - [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
   - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループのいずれかに `required` 属性がある場合、そのグループのラジオボタンのいずれかをチェックする必要がありますが、その属性が適用されているラジオボタンをチェックする必要があるわけではありません。
@@ -197,7 +197,7 @@ form.addEventListener("submit", (event) => {
 
 上記の例では、ラジオボタンそのものだけでなく、関連する {{htmlelement("label")}} 要素をクリックすることで、ラジオボタンを選択できることにお気づきでしょうか。これは HTML フォームのラベルの実に便利な機能で、特にスマートフォンのような画面の小さな機器では、ユーザーが望む選択肢をクリックしやすくなります。
 
-アクセシビリティを越えて、このこともフォームに `<label>` 要素を適切に設定する良い理由です。
+アクセシビリティ上の利点に加えて、フォームで `<label>` 要素を適切に設定する理由がもう 1 つあります。
 
 ## 検証
 
@@ -205,7 +205,7 @@ form.addEventListener("submit", (event) => {
 
 ## ラジオボタンのスタイル設定
 
-次の例は、この記事全体で見てきた例を少し詳しくしたもので、いくつかの追加のスタイル設定と、専門要素を使用することでより適切な意味づけがなされています。 HTML はこのようになっています。
+次の例は、この記事で見てきた例を少し詳しくしたものです。スタイルを追加し、専用の要素を使ってより適切な意味付けをしています。HTML は次のようになります。
 
 ```html
 <fieldset>
@@ -228,7 +228,7 @@ form.addEventListener("submit", (event) => {
 </fieldset>
 ```
 
-この例では、 CSS が絡んでいるのが少し特徴的です。
+この例では、CSS のコードが少し多くなっています。
 
 ```css
 html {
@@ -275,14 +275,14 @@ legend {
 }
 ```
 
-ここで最も注目すべきは、{{cssxref("appearance")}} プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。デフォルトで、ラジオボタン（と[チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appearance: none` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxref("border")}} と {{cssxref("border-radius")}} と {{cssxref("transition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxref(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
+ここで特に注目すべきなのは、{{cssxref("appearance")}} プロパティ（一部のブラウザーへの対応に必要なベンダー接頭辞付き）を使用している点です。デフォルトでは、ラジオボタン（と[チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)）には、オペレーティングシステムの標準スタイルが適用されます。`appearance: none` を指定すると、標準スタイルを完全に削除して、独自のスタイルを作成できます。ここでは、{{cssxref("border")}}、{{cssxref("border-radius")}}、{{cssxref("transition")}} を使って、選択状態がアニメーションするラジオボタンを作成しています。また、選択時のラジオボタンの外観の指定に {{cssxref(":checked")}} 擬似クラスを使用しています。
 
 > [!NOTE]
-> もし {{cssxref("appearance")}} プロパティを使用したい場合は、とても慎重にテストする必要があります。このプロパティはほとんどの現代のブラウザーで対応していますが、その実装は大きく異なっています。古いブラウザーでは、キーワード `none` でさえ異なる形で同じ効果を持たず、まったく対応していないブラウザーもあります。最新のブラウザーでは、そのような違いは小さくなっています。
+> {{cssxref("appearance")}} プロパティを使用する場合は、十分にテストしてください。このプロパティはほとんどの最新ブラウザーで対応していますが、実装には大きな違いがあります。古いブラウザーでは、`none` キーワードの効果もブラウザーによって異なり、このプロパティにまったく対応していないものもあります。最新ブラウザーでは、その違いは小さくなっています。
 
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
-ラジオボタンをクリックすると、 2 つのボタンの状態が変わるときに、きれいで滑らかなフェードアウト/イン効果があることに注目してください。さらに、凡例のスタイルと色は強いコントラストになるようにカスタマイズされています。これは、実際のウェブアプリケーションで使用したい外観ではないかもしれませんが、その可能性を示しています。
+ラジオボタンをクリックすると、2 つのボタンの状態が変わるときに、滑らかなフェードアウト／フェードイン効果が現れます。また、凡例のスタイルと色は、コントラストが強くなるように変更されています。実際のウェブアプリケーションでは使わない外観かもしれませんが、実現できることを示しています。
 
 ## 技術的概要
 
