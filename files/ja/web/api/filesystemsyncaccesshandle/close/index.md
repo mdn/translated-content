@@ -1,13 +1,17 @@
 ---
-title: FileSystemSyncAccessHandle.close()
+title: "FileSystemSyncAccessHandle: close() メソッド"
+short-title: close()
 slug: Web/API/FileSystemSyncAccessHandle/close
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} インターフェイスの **`close()`** メソッドは、開かれている同期式ファイルハンドルを閉じます。これ以降操作はできなくなり、ファイルハンドルに対応するファイルにかけた排他的ロックを解除します。
+**`close()`** は {{domxref("FileSystemSyncAccessHandle")}} インターフェイスのメソッドで、開かれている同期式ファイルハンドルを閉じます。これ以降操作はできなくなり、ファイルハンドルに対応するファイルにかけた排他的ロックを解除します。
+
+> [!NOTE]
+> 仕様書の以前のバージョンでは、`close()`、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}、{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとして規定されていました。一部のブラウザーの古いバージョンでは、これらのメソッドがそのように実装されています。しかし、これらのメソッドに対応する現行のブラウザーでは、すべて同期メソッドとして実装されています。
 
 ## 構文
 
@@ -17,19 +21,19 @@ close()
 
 ### 引数
 
-なし
+なし。
 
 ### 返値
 
-`undefined` で解決する {{jsxref('Promise')}} を返します。
+なし ({{jsxref('undefined')}})。
 
 ### 例外
 
-なし
+なし。
 
 ## 例
 
-以下の非同期のイベントハンドラー関数は、Web Worker の中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
+以下の非同期のイベントハンドラー関数は、ウェブワーカーの中にあります。メインスレッドからメッセージを受信すると、以下の動作をします。
 
 - 同期式ファイルアクセスハンドルを作成します。
 - ファイルのサイズを取得し、格納用の {{jsxref("ArrayBuffer")}} を作成します。
@@ -42,7 +46,7 @@ onmessage = async (e) => {
   // メインスクリプトからの処理対象のメッセージを取得する
   const message = e.data;
 
-  // draft ファイルのハンドルを取得する
+  // 下書きファイルのハンドルを取得する
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
   // 同期式アクセスハンドルを取得する
@@ -67,9 +71,6 @@ onmessage = async (e) => {
 };
 ```
 
-> [!NOTE]
-> 仕様書の以前のバージョンでは、`close()`・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
-
 ## 仕様書
 
 {{Specifications}}
@@ -80,5 +81,5 @@ onmessage = async (e) => {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [ファイルシステム API](/ja/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) <sup>(英語)</sup>
