@@ -1,6 +1,7 @@
 ---
 title: Форматирование даты при помощи moment
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
+slug: conflicting/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
+original_slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
 
 По умолчанию отображение дат наших моделей некрасиво: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. В этом разделе мы покажем, как можно обновить страницу списка _BookInstance List_ из предыдущего раздела, чтобы представить поле `due_date` в более удобном формате: December 6th, 2016.
