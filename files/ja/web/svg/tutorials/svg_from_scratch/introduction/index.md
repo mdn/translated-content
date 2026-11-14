@@ -2,7 +2,7 @@
 title: 概要
 slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
@@ -11,7 +11,7 @@ l10n:
 
 ![Mozilla dino ロゴ](dino.svg)
 
-SVGは、いくつかの競合する形式が [W3C](https://www.w3.org) に申請され、完全に承認されなかった後、 1999 年に決まりました。 SVG は主要なすべての[ブラウザー](https://caniuse.com/#search=svg)で対応しています。欠点は SVG の読み込みが遅いことです。 SVG には、 [DOM インターフェイス](/ja/docs/Web/API)が利用可能であること、サードパーティによる拡張が要求されないことなどの利点が挙げられます。 SVG を使用するかどうかは、ふつうは具体的な用途に依存します。
+SVG は、いくつかの競合する形式が [W3C](https://www.w3.org) に申請され、完全に承認されなかった後、 1999 年に決まりました。 SVG は主要なすべての[ブラウザー](https://caniuse.com/#search=svg)で対応しています。欠点は SVG の読み込みが遅いことです。 SVG には、 [DOM インターフェイス](/ja/docs/Web/API)が利用可能であること、サードパーティによる拡張が要求されないことなどの利点が挙げられます。 SVG を使用するかどうかは、ふつうは具体的な用途に依存します。
 
 ## 基本的な構成要素
 
@@ -34,7 +34,7 @@ SVG は巨大な仕様です。このチュートリアルは基本に応じた�
 
 ## SVG の種類
 
-2003 年に勧告が成立して以降、最新の「完全な」 SVG バージョンは 1.1 です。これは SVG 1.0 の上に構築したものですが、実装を容易にするためにモジュール化が進みました。 [SVG 1.1 第 2 版](https://www.w3.org/TR/SVG11/)は 2011 年に勧告となりました。「完全な」 SVG 1.2 は SVG の次のメジャーリリースを意味していました。これは現在開発が進められている [SVG 2.0](https://svgwg.org/svg2-draft/) のために破棄されたもので、これは構成要素をいくつかの緩く結合した仕様に分割する、CSS 3 と似た手法をとっています。
+2003 年に勧告が成立して以降、最新の「完全な」 SVG バージョンは 1.1 です。これは SVG 1.0 の上に構築したものですが、実装を容易にするためにモジュール化が進みました。[SVG 1.1 第 2 版](https://www.w3.org/TR/SVG11/)は 2011 年に勧告となりました。「完全な」SVG 1.2 は SVG の次のメジャーリリースとなる予定でしたが、計画は取りやめられ、代わって [SVG 2.0](https://w3c.github.io/svgwg/svg2-draft/) 仕様が策定されました。SVG 2.0 は 2018 年に勧告候補となり、現在の標準です。SVG 2.0 は CSS と同様に、構成要素を [SVG strokes](https://svgwg.org/specs/strokes/)、[SVG paths](https://svgwg.org/specs/paths/)、[SVG markers](https://svgwg.org/specs/markers/)など、相互に疎結合な複数の仕様に分割する方式を採っています。
 
 完全な SVG 勧告からは離れて、W3C のワーキンググループは 2003 年に SVG Tiny と SVG Basic を導入しました。これら 2 つのプロファイルは、主にモバイル端末を対象にしています。 SVG Tiny は、性能が低い小型端末向けに基本的な図形を提供します。 SVG Basic は完全な SVG が持つ機能の多くを提供しますが、実装が難しい機能や描画負荷の高い機能（アニメーションなど）は含みません。 2008 年に、 SVG Tiny 1.2 が W3C 勧告になりました。
 
