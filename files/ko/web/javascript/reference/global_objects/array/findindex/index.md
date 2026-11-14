@@ -64,8 +64,11 @@ findIndex(callbackFn, thisArg)
 
 ```js
 function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+  if (element < 2) {
     return false;
+  }
+  if (element % 2 === 0) {
+    return element === 2;
   }
   for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
     if (element % factor === 0) {
