@@ -1,9 +1,9 @@
 ---
-title: CSS `:target` 擬似クラス
+title: "`:target` 擬似クラス"
 short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: 42f8ef9d26f9a76723a0379a2e7c946db496f27e
 ---
 
 **`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書内のターゲット要素を選択します。文書が読み込まれたとき、ターゲット要素は文書の [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して導出されます。
@@ -37,12 +37,12 @@ http://www.example.com/help/#setup
 
 ## 解説
 
-HTML 文書が読み込まれると、ブラウザーはそのターゲット要素を設定します。要素は URL フラグメント識別子を使用して識別されます。 URL フラグメント識別子がない場合、文書にはターゲット要素はありません。擬似クラス `:target` を使用すると、文書のターゲット要素のスタイルを設定することができます。要素にフォーカスを合わせたり、強調表示したり、アニメーションさせたりすることができます。
+HTML 文書が読み込まれると、ブラウザーはそのターゲット要素を設定します。要素は URL フラグメント識別子を使用して識別されます。URL フラグメント識別子がない場合、文書にはターゲット要素はありません。擬似クラス `:target` を使用すると、文書のターゲット要素のスタイルを設定することができます。要素にフォーカスを合わせたり、強調表示したり、アニメーションさせたりすることができます。
 
-ターゲット要素は、文書が読み込まれたとき、および [`history.back()`](/ja/docs/Web/API/History/back)、[`history.forward()`](/ja/docs/Web/API/History/forward)、[`history.go()`](/ja/docs/Web/API/History/forward) メソッドが呼び出されたときに設定されます。しかし、[`history.pushState()`](/ja/docs/Web/API/History/pushState) および [`history.replaceState()`](/ja/docs/Web/API/History/replaceState) メソッドが呼び出されても、変更は行われません。
+ターゲット要素は、文書が読み込まれたとき、および [`history.back()`](/ja/docs/Web/API/History/back)、[`history.forward()`](/ja/docs/Web/API/History/forward)、[`history.go()`](/ja/docs/Web/API/History/go) メソッドが呼び出されたときに設定されます。しかし、[`history.pushState()`](/ja/docs/Web/API/History/pushState) および [`history.replaceState()`](/ja/docs/Web/API/History/replaceState) メソッドが呼び出されても、変更は行われません。
 
 > [!NOTE]
-> [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
+> [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
 
 ## 例
 
@@ -66,10 +66,10 @@ HTML 文書が読み込まれると、ブラウザーはそのターゲット要
 
 <h3>面白い記事</h3>
 <p id="p1">
-  URL フラグメントを使うと<i>この段落</i>をターゲットにすることができます。上記のリンクをクリックして試してみてください。
+  URL フラグメントを使うと<i>この段落</i>をターゲットにすることができます。上記の最初のリンクをクリックして試してみてください。
 </p>
 <p id="p2">
-  これは<i>別な段落</i>であり、やはり上記のリンクからアクセスできます。喜ばしいことだと思いませんか。
+  これは<i>別の段落</i>であり、上記の 2 番目のリンクからもアクセスできます。喜ばしいことだと思いませんか。
 </p>
 ```
 
